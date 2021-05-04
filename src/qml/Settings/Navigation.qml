@@ -70,6 +70,11 @@ Kirigami.Page
             iconName: "input-mouse"
             page: "qrc:/Mouse.qml"
         }
+        ListElement {
+            name: "Custom properties"
+            iconName: "configure"
+            page: "qrc:/CustomProperties.qml"
+        }
     }
 
     ListView {
@@ -80,7 +85,7 @@ Kirigami.Page
         delegate: Kirigami.BasicListItem {
             text: qsTr(name)
             icon: iconName
-            onClicked: applicationWindow().pageStack.push(model.page)
+            onClicked: applicationWindow().pageStack.replace(model.page)
         }
     }
 }
