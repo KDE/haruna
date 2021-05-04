@@ -44,6 +44,7 @@
 #include <QThread>
 #include <QQmlEngine>
 #include <QMimeDatabase>
+#include <custompropertiesmodel.h>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -226,6 +227,9 @@ void Application::setupQmlContextProperties()
                                             QStringLiteral("LockManager should not be created in QML"));
 
     m_engine->rootContext()->setContextProperty(QStringLiteral("subsFoldersModel"), subsFoldersModel.release());
+
+    auto customPropsModel = new CustomPropertiesModel();
+    m_engine->rootContext()->setContextProperty(QStringLiteral("customPropsModel"), customPropsModel);
 }
 
 QUrl Application::configFilePath()

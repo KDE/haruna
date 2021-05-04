@@ -18,6 +18,15 @@ SettingsBasePage {
     hasHelp: false
     helpFile: ""
 
+    ListView {
+
+        model: customPropsModel
+        delegate: Kirigami.BasicListItem {
+            text: model.command
+            subtitle: model.osdMessage
+        }
+    }
+
     footer: ToolBar {
         RowLayout {
             anchors.fill: parent

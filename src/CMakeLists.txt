@@ -14,6 +14,7 @@ target_sources(haruna
     haction.cpp
     lockmanager.cpp
     main.cpp
+    models/custompropertiesmodel.cpp
     models/subtitlesfoldersmodel.cpp
     models/tracksmodel.cpp
     models/playlistmodel.cpp
