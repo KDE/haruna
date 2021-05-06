@@ -24,6 +24,8 @@ SettingsBasePage {
         }
 
         TextField {
+            id: commandTextField
+
             placeholderText: "command"
             Layout.fillWidth: true
         }
@@ -34,25 +36,10 @@ SettingsBasePage {
         }
 
         TextField {
+            id: osdMsgTextField
+
             placeholderText: "osd message"
             Layout.fillWidth: true
-        }
-
-        CheckBox {
-            id: setAtStartUp
-
-            text: i18n("Set at start up")
-            Layout.columnSpan: 2
-            Layout.row: 2
-            Layout.column: 1
-        }
-
-        Button {
-            text: i18n("Set shortcut")
-            enabled: !setAtStartUp.checked
-            Layout.columnSpan: 2
-            Layout.row: 3
-            Layout.column: 1
         }
     }
 
@@ -64,6 +51,7 @@ SettingsBasePage {
                 text: i18n("&Save")
                 icon.name: "document-save"
                 onClicked: applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
+
                 Layout.alignment: Qt.AlignRight
             }
         }

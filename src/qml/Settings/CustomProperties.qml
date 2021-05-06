@@ -22,8 +22,28 @@ SettingsBasePage {
 
         model: customPropsModel
         delegate: Kirigami.BasicListItem {
-            text: model.command
-            subtitle: model.osdMessage
+            height: Kirigami.Units.gridUnit * 3
+            padding: 0
+
+            contentItem: RowLayout {
+                anchors.fill: parent
+                spacing: 0
+
+                Label {
+                    text: model.command
+
+                    Layout.alignment: Qt.AlignVCenter
+                    Layout.margins: Kirigami.Units.largeSpacing
+                }
+
+                Button {
+                    text: i18n("Shortcut")
+                    icon.name: "configure-shortcuts"
+
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                    Layout.margins: Kirigami.Units.largeSpacing
+                }
+            }
         }
     }
 
