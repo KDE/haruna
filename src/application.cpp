@@ -230,6 +230,8 @@ void Application::setupQmlContextProperties()
 
     auto customPropsModel = new CustomPropertiesModel();
     m_engine->rootContext()->setContextProperty(QStringLiteral("customPropsModel"), customPropsModel);
+
+    m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
 }
 
 QUrl Application::configFilePath()

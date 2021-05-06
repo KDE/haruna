@@ -10,14 +10,14 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&View")
+    title: i18n("&View")
 
     MenuItem {
         action: actions["toggleMenuBarAction"]
-        text: menuBar.visible ? qsTr("Hide Menu Bar") : qsTr("Show Menu Bar")
+        text: menuBar.visible ? i18n("Hide Menu Bar") : i18n("Show Menu Bar")
     }
     MenuItem {
         action: actions["toggleHeaderAction"]
-        text: header.visible ? qsTr("Hide Header") : qsTr("Show Header")
+        text: header.visible ? i18n("Hide Header") : i18n("Show Header")
     }
 }

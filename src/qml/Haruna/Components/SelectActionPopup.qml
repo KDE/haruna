@@ -43,7 +43,7 @@ Popup {
         }
 
         Label {
-            text: qsTr("Double click to set action")
+            text: i18n("Double click to set action")
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
         }
@@ -51,7 +51,7 @@ Popup {
         TextField {
             id: filterActionsField
 
-            placeholderText: qsTr("Type to filter...")
+            placeholderText: i18n("Type to filter...")
             focus: true
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
@@ -67,7 +67,7 @@ Popup {
             id: clearActionButton
 
             Layout.fillWidth: true
-            text: qsTr("Clear current action")
+            text: i18n("Clear current action")
             KeyNavigation.up: filterActionsField
             KeyNavigation.down: actionsListView
             onClicked: actionSelected("")

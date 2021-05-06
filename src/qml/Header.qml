@@ -64,7 +64,7 @@ ToolBar {
 
             property var model: 0
 
-            text: qsTr("Subtitles")
+            text: i18n("Subtitles")
             icon.name: "media-view-subtitles-symbolic"
             focusPolicy: Qt.NoFocus
 
@@ -84,7 +84,7 @@ ToolBar {
                 Menu {
                     id: secondarySubtitleMenu
 
-                    title: qsTr("Secondary Subtitle")
+                    title: i18n("Secondary Subtitle")
 
                     Instantiator {
                         id: secondarySubtitleMenuInstantiator
@@ -104,7 +104,7 @@ ToolBar {
                 MenuSeparator {}
 
                 MenuItem {
-                    text: qsTr("Primary Subtitle")
+                    text: i18n("Primary Subtitle")
                     hoverEnabled: false
                 }
 
@@ -125,7 +125,7 @@ ToolBar {
         }
 
         ToolButton {
-            text: qsTr("Audio")
+            text: i18n("Audio")
             icon.name: "audio-volume-high"
             focusPolicy: Qt.NoFocus
 

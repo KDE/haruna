@@ -31,7 +31,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Preferred language")
+            text: i18n("Preferred language")
             Layout.alignment: Qt.AlignRight
         }
         TextField {
@@ -45,12 +45,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: qsTr("Do not use spaces.")
+                text: i18n("Do not use spaces.")
             }
         }
 
         Label {
-            text: qsTr("Preferred track")
+            text: i18n("Preferred track")
             Layout.alignment: Qt.AlignRight
         }
         SpinBox {

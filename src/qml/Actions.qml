@@ -86,7 +86,7 @@ QtObject {
         onTriggered: {
             mpv.setProperty("mute", !mpv.getProperty("mute"))
             if (mpv.getProperty("mute")) {
-                text = qsTr("Unmute")
+                text = i18n("Unmute")
                 icon.name = "player-volume-muted"
             } else {
                 text = qaction.text
@@ -397,7 +397,7 @@ QtObject {
 
     property Action playPauseAction: Action {
         id: playPauseAction
-        text: qsTr("Play/Pause")
+        text: i18n("Play/Pause")
         icon.name: "media-playback-pause"
         shortcut: "Space"
 
@@ -981,7 +981,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "sub-scale", "+0.1"])
-            osd.message(qsTr("Subtitle scale: " + mpv.getProperty("sub-scale").toFixed(1)))
+            osd.message(i18n("Subtitle scale: " + mpv.getProperty("sub-scale").toFixed(1)))
         }
     }
 
@@ -996,7 +996,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "sub-scale", "-0.1"])
-            osd.message(qsTr("Subtitle scale: " + mpv.getProperty("sub-scale").toFixed(1)))
+            osd.message(i18n("Subtitle scale: " + mpv.getProperty("sub-scale").toFixed(1)))
         }
     }
 

@@ -20,20 +20,20 @@ Kirigami.ScrollablePage {
     actions {
         contextualActions: [
             Kirigami.Action {
-                text: qsTr("Help!")
+                text: i18n("Help!")
                 iconName: "system-help"
                 enabled: root.hasHelp
                 onTriggered: root.hasHelp ? helpWindow.show() : undefined
             },
             Kirigami.Action {
-                text: qsTr("Open config ...")
+                text: i18n("Open config ...")
                 iconName: "folder"
                 Kirigami.Action {
-                    text: qsTr("File")
+                    text: i18n("File")
                     onTriggered: Qt.openUrlExternally(app.configFilePath)
                 }
                 Kirigami.Action {
-                    text: qsTr("Folder")
+                    text: i18n("Folder")
                     onTriggered: Qt.openUrlExternally(app.configFolderPath)
                 }
             }

@@ -10,7 +10,7 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&Settings")
+    title: i18n("&Settings")
 
     MenuItem { action: actions["configureAction"] }
     MenuItem { action: actions["configureShortcutsAction"] }

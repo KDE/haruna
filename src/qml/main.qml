@@ -26,7 +26,7 @@ Kirigami.ApplicationWindow {
     property var appActions: actions.list
 
     visible: true
-    title: mpv.mediaTitle || qsTr("Haruna")
+    title: mpv.mediaTitle || i18n("Haruna")
     width: 1200
     minimumWidth: 700
     height: 720
@@ -126,7 +126,7 @@ Kirigami.ApplicationWindow {
             anchors.fill: parent
 
             Label {
-                text: qsTr("<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found.")
+                text: i18n("<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found.")
                 visible: !app.hasYoutubeDl()
                 onLinkActivated: Qt.openUrlExternally(link)
             }
@@ -153,7 +153,7 @@ Kirigami.ApplicationWindow {
                 id: openUrlButton
 
                 visible: app.hasYoutubeDl()
-                text: qsTr("Open")
+                text: i18n("Open")
 
                 onClicked: {
                     openFile(openUrlTextField.text, true, false)

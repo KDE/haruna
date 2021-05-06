@@ -11,12 +11,12 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&Audio")
+    title: i18n("&Audio")
 
     Menu {
         id: audioMenu
 
-        title: qsTr("&Primary Track")
+        title: i18n("&Primary Track")
 
         Instantiator {
             id: audioMenuInstantiator

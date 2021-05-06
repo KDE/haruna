@@ -25,7 +25,7 @@ Kirigami.Page
             anchors.fill: parent
 
             ToolButton {
-                text: qsTr("Configure shortcuts")
+                text: i18n("Configure shortcuts")
                 icon.name: "configure-shortcuts"
                 onClicked: appActions.configureShortcutsAction.trigger()
                 Layout.fillWidth: true
@@ -83,7 +83,7 @@ Kirigami.Page
         anchors.fill: parent
         model: settingsPagesModel
         delegate: Kirigami.BasicListItem {
-            text: qsTr(name)
+            text: i18n(name)
             icon: iconName
             onClicked: applicationWindow().pageStack.replace(model.page)
         }

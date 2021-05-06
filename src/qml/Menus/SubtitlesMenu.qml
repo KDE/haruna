@@ -11,12 +11,12 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&Subtitles")
+    title: i18n("&Subtitles")
 
     Menu {
         id: primarySubtitleMenu
 
-        title: qsTr("Primary Subtitle")
+        title: i18n("Primary Subtitle")
         onOpened: primarySubtitleMenuInstantiator.model = mpv.subtitleTracksModel
 
         Instantiator {
@@ -37,7 +37,7 @@ Menu {
     Menu {
         id: secondarySubtitleMenu
 
-        title: qsTr("Secondary Subtitle")
+        title: i18n("Secondary Subtitle")
         onOpened: secondarySubtitleMenuInstantiator.model = mpv.subtitleTracksModel
 
         Instantiator {

@@ -25,7 +25,7 @@ SettingsBasePage {
 
         CheckBox {
             id: hwDecodingCheckBox
-            text: qsTr("Use hardware decoding")
+            text: i18n("Use hardware decoding")
             checked: PlaybackSettings.useHWDecoding
             onCheckedChanged: {
                 mpv.hwDecoding = checked
@@ -83,7 +83,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Remember time position")
+            text: i18n("Remember time position")
         }
 
         RowLayout {
@@ -102,13 +102,13 @@ SettingsBasePage {
             LabelWithTooltip {
                 text: {
                     if (timePositionSaving.value === -1) {
-                        return qsTr("Disabled")
+                        return i18n("Disabled")
                     } else if (timePositionSaving.value === 0) {
-                        return qsTr("For all files")
+                        return i18n("For all files")
                     } else if (timePositionSaving.value === 1) {
-                        return qsTr("For files longer than %1 minute").arg(timePositionSaving.value)
+                        return i18n("For files longer than %1 minute").arg(timePositionSaving.value)
                     } else {
-                        return qsTr("For files longer than %1 minutes").arg(timePositionSaving.value)
+                        return i18n("For files longer than %1 minutes").arg(timePositionSaving.value)
                     }
                 }
                 elide: Text.ElideRight
@@ -118,7 +118,7 @@ SettingsBasePage {
 
         CheckBox {
             id: skipChaptersCheckBox
-            text: qsTr("Skip chapters")
+            text: i18n("Skip chapters")
             checked: PlaybackSettings.skipChapters
             onCheckedChanged: {
                 PlaybackSettings.skipChapters = checked
@@ -128,7 +128,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Skip chapters containing the following words")
+            text: i18n("Skip chapters containing the following words")
             enabled: skipChaptersCheckBox.checked
             Layout.columnSpan: 2
         }
@@ -145,12 +145,12 @@ SettingsBasePage {
             Layout.columnSpan: 2
 
             ToolTip {
-                text: qsTr("Separate words with a comma")
+                text: i18n("Separate words with a comma")
             }
         }
 
         CheckBox {
-            text: qsTr("Show an osd message when skipping chapters")
+            text: i18n("Show an osd message when skipping chapters")
             enabled: skipChaptersCheckBox.checked
             checked: PlaybackSettings.showOsdOnSkipChapters
             onCheckedChanged: {
@@ -165,13 +165,13 @@ SettingsBasePage {
         // ------------------------------------
 
         SettingsHeader {
-            text: qsTr("Youtube-dl")
+            text: i18n("Youtube-dl")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
 
         Label {
-            text: qsTr("Format selection")
+            text: i18n("Format selection")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -191,7 +191,7 @@ SettingsBasePage {
                     ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
                 }
                 ToolTip {
-                    text: qsTr("Selects the best video with a height lower than or equal to the selected value.")
+                    text: i18n("Selects the best video with a height lower than or equal to the selected value.")
                 }
 
                 onActivated: {
@@ -242,7 +242,7 @@ SettingsBasePage {
                 PlaybackSettings.ytdlFormat = text
                 PlaybackSettings.save()
             }
-            placeholderText: qsTr("bestvideo+bestaudio/best")
+            placeholderText: i18n("bestvideo+bestaudio/best")
 
             onTextChanged: {
                 if (ytdlFormatComboBox.hCurrentvalue !== ytdlFormatField.text) {
@@ -259,7 +259,7 @@ SettingsBasePage {
             Layout.columnSpan: 2
         }
         TextEdit {
-            text: qsTr("Leave empty for default value: <i>bestvideo+bestaudio/best</i>")
+            text: i18n("Leave empty for default value: <i>bestvideo+bestaudio/best</i>")
             color: Kirigami.Theme.textColor
             readOnly: true
             wrapMode: Text.WordWrap

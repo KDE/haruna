@@ -10,7 +10,7 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&File")
+    title: i18n("&File")
 
     MenuItem { action: actions["openAction"] }
     MenuItem { action: actions["openUrlAction"] }

@@ -117,7 +117,7 @@ MpvObject {
             if (chapters[mpv.chapter] && chapters[mpv.chapter].title.toLowerCase().includes(words[i].trim())) {
                 actions.seekNextChapterAction.trigger()
                 if (PlaybackSettings.showOsdOnSkipChapters) {
-                    osd.message(qsTr("Skipped chapter: %1").arg(chapters[mpv.chapter-1].title))
+                    osd.message(i18n("Skipped chapter: %1").arg(chapters[mpv.chapter-1].title))
                 }
                 // a chapter title can match multiple words
                 // return to prevent skipping multiple chapters
@@ -133,7 +133,7 @@ MpvObject {
             }
 
             const title = playlistModel.getItem(playlistModel.getPlayingVideo()).mediaTitle()
-            osd.message(qsTr("Could not play: %1").arg(title))
+            osd.message(i18n("Could not play: %1").arg(title))
             // only skip to next video if it's a youtube playList
             // to do: figure out why playback fails and act accordingly
             if (!playList.isYouTubePlaylist) {

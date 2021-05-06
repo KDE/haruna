@@ -10,7 +10,7 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&Help")
+    title: i18n("&Help")
 
     MenuItem { action: actions["aboutHarunaAction"] }
 }

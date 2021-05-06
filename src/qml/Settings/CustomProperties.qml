@@ -32,7 +32,7 @@ SettingsBasePage {
             anchors.fill: parent
 
             ToolButton {
-                text: qsTr("&Add")
+                text: i18n("&Add")
                 icon.name: "list-add"
                 onClicked: applicationWindow().pageStack.replace("qrc:/AddNewCustomProperty.qml")
                 Layout.alignment: Qt.AlignRight

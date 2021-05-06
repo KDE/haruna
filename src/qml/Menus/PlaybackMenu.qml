@@ -10,7 +10,7 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: qsTr("&Playback")
+    title: i18n("&Playback")
 
     MenuItem { action: actions["playPauseAction"] }
     MenuItem { action: actions["playNextAction"] }

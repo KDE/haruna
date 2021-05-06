@@ -24,7 +24,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: qsTr("Position")
+            text: i18n("Position")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -50,7 +50,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Row height")
+            text: i18n("Row height")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -68,7 +68,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Playlist style")
+            text: i18n("Playlist style")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -96,21 +96,21 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.overlayVideo
-            text: qsTr("Overlay video")
+            text: i18n("Overlay video")
             onCheckStateChanged: {
                 PlaylistSettings.overlayVideo = checked
                 PlaylistSettings.save()
             }
 
             ToolTip {
-                text: qsTr("When checked the playlist goes on top of the video\nWhen unchecked the video is resized")
+                text: i18n("When checked the playlist goes on top of the video\nWhen unchecked the video is resized")
             }
         }
 
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.showMediaTitle
-            text: qsTr("Show media title instead of file name")
+            text: i18n("Show media title instead of file name")
             onCheckStateChanged: {
                 PlaylistSettings.showMediaTitle = checked
                 PlaylistSettings.save()
@@ -120,7 +120,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.loadSiblings
-            text: qsTr("Auto load videos from same folder")
+            text: i18n("Auto load videos from same folder")
             onCheckStateChanged: {
                 PlaylistSettings.loadSiblings = checked
                 PlaylistSettings.save()
@@ -130,7 +130,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.repeat
-            text: qsTr("Repeat")
+            text: i18n("Repeat")
             onCheckStateChanged: {
                 PlaylistSettings.repeat = checked
                 PlaylistSettings.save()
@@ -140,7 +140,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.showRowNumber
-            text: qsTr("Show row number")
+            text: i18n("Show row number")
             onCheckStateChanged: {
                 PlaylistSettings.showRowNumber = checked
                 PlaylistSettings.save()
@@ -150,7 +150,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.canToggleWithMouse
-            text: qsTr("Toggle with mouse")
+            text: i18n("Toggle with mouse")
             onCheckStateChanged: {
                 PlaylistSettings.canToggleWithMouse = checked
                 PlaylistSettings.save()
@@ -160,7 +160,7 @@ SettingsBasePage {
 
         Item { width: 1; height: 1 }
         CheckBox {
-            text: qsTr("Increase font size when fullscreen")
+            text: i18n("Increase font size when fullscreen")
             checked: PlaylistSettings.bigFontFullscreen
             enabled: PlaylistSettings.style === "compact" ? false : true
             onCheckStateChanged: {

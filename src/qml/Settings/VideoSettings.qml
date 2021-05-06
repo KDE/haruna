@@ -24,7 +24,7 @@ SettingsBasePage {
         columns: 2
 
         SettingsHeader {
-            text: qsTr("Screenshots")
+            text: i18n("Screenshots")
             topMargin: 0
             Layout.columnSpan: 2
             Layout.fillWidth: true
@@ -34,7 +34,7 @@ SettingsBasePage {
         // Screenshot Format
         // ------------------------------------
         Label {
-            text: qsTr("Format")
+            text: i18n("Format")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -74,7 +74,7 @@ SettingsBasePage {
         // Screenshot template
         // ------------------------------------
         Label {
-            text: qsTr("Template")
+            text: i18n("Template")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -93,7 +93,7 @@ SettingsBasePage {
         }
 
         SettingsHeader {
-            text: qsTr("Image adjustments")
+            text: i18n("Image adjustments")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -103,7 +103,7 @@ SettingsBasePage {
         // CONTRAST
         // ------------------------------------
         Label {
-            text: qsTr("Contrast")
+            text: i18n("Contrast")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -120,7 +120,7 @@ SettingsBasePage {
         // BRIGHTNESS
         // ------------------------------------
         Label {
-            text: qsTr("Brightness")
+            text: i18n("Brightness")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -137,7 +137,7 @@ SettingsBasePage {
         // GAMMA
         // ------------------------------------
         Label {
-            text: qsTr("Gamma")
+            text: i18n("Gamma")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -154,7 +154,7 @@ SettingsBasePage {
         // SATURATION
         // ------------------------------------
         Label {
-            text: qsTr("Saturation")
+            text: i18n("Saturation")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -168,7 +168,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Middle click on the sliders to reset them")
+            text: i18n("Middle click on the sliders to reset them")
             Layout.columnSpan: 2
             Layout.topMargin: Kirigami.Units.largeSpacing
         }

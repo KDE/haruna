@@ -19,7 +19,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: qsTr("Command")
+            text: i18n("Command")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -29,7 +29,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("OSD message")
+            text: i18n("OSD message")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -41,14 +41,14 @@ SettingsBasePage {
         CheckBox {
             id: setAtStartUp
 
-            text: qsTr("Set at start up")
+            text: i18n("Set at start up")
             Layout.columnSpan: 2
             Layout.row: 2
             Layout.column: 1
         }
 
         Button {
-            text: qsTr("Set shortcut")
+            text: i18n("Set shortcut")
             enabled: !setAtStartUp.checked
             Layout.columnSpan: 2
             Layout.row: 3
@@ -61,7 +61,7 @@ SettingsBasePage {
             anchors.fill: parent
 
             ToolButton {
-                text: qsTr("&Save")
+                text: i18n("&Save")
                 icon.name: "document-save"
                 onClicked: applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
                 Layout.alignment: Qt.AlignRight

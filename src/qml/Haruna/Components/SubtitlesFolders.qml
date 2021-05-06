@@ -24,7 +24,7 @@ Item {
     Label {
         id: sectionTitle
 
-        text: qsTr("Load subtitles from")
+        text: i18n("Load subtitles from")
         bottomPadding: 10
     }
 
@@ -99,7 +99,7 @@ Item {
                         flat: true
                         onClicked: {
                             if (!canDelete) {
-                                text = qsTr("Confirm deletion")
+                                text = i18n("Confirm deletion")
                                 canDelete = true
                                 return
                             }
@@ -115,7 +115,7 @@ Item {
 
                         }
                         ToolTip {
-                            text: qsTr("Delete this folder from list")
+                            text: i18n("Delete this folder from list")
                         }
                     }
 
@@ -131,7 +131,7 @@ Item {
                             }
                         }
                         ToolTip {
-                            text: qsTr("Save changes")
+                            text: i18n("Save changes")
                         }
                     }
 
@@ -151,7 +151,7 @@ Item {
         id: sfAddFolder
         anchors.top: spacer.bottom
         icon.name: "list-add"
-        text: qsTr("Add new folder")
+        text: i18n("Add new folder")
         enabled: root.canAddFolder
         onClicked: {
             subsFoldersModel.addFolder()

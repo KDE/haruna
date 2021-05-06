@@ -26,7 +26,7 @@ SettingsBasePage {
 
         // OSD Font Size
         Label {
-            text: qsTr("Osd font size")
+            text: i18n("Osd font size")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -57,7 +57,7 @@ SettingsBasePage {
 
         // Volume Step
         Label {
-            text: qsTr("Volume step")
+            text: i18n("Volume step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -81,7 +81,7 @@ SettingsBasePage {
 
         // Seek Small Step
         Label {
-            text: qsTr("Seek small step")
+            text: i18n("Seek small step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -103,7 +103,7 @@ SettingsBasePage {
 
         // Seek Medium Step
         Label {
-            text: qsTr("Seek medium step")
+            text: i18n("Seek medium step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -125,7 +125,7 @@ SettingsBasePage {
 
         // Seek Big Step
         Label {
-            text: qsTr("Seek big step")
+            text: i18n("Seek big step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -146,7 +146,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("File dialog location")
+            text: i18n("File dialog location")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -164,19 +164,19 @@ SettingsBasePage {
                 }
 
                 ToolTip {
-                    text: qsTr("If empty the file dialog will remember the last opened location.")
+                    text: i18n("If empty the file dialog will remember the last opened location.")
                 }
             }
         }
 
         SettingsHeader {
-            text: qsTr("Interface")
+            text: i18n("Interface")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
 
         CheckBox {
-            text: qsTr("Show MenuBar")
+            text: i18n("Show MenuBar")
             checked: GeneralSettings.showMenuBar
             onCheckedChanged: {
                 GeneralSettings.showMenuBar = checked
@@ -187,7 +187,7 @@ SettingsBasePage {
         }
 
         CheckBox {
-            text: qsTr("Show Header")
+            text: i18n("Show Header")
             checked: GeneralSettings.showHeader
             onCheckedChanged: {
                 GeneralSettings.showHeader = checked
@@ -198,7 +198,7 @@ SettingsBasePage {
         }
 
         CheckBox {
-            text: qsTr("Show chapter markers")
+            text: i18n("Show chapter markers")
             checked: GeneralSettings.showChapterMarkers
             onCheckedChanged: {
                 GeneralSettings.showChapterMarkers = checked
@@ -209,7 +209,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("Color scheme")
+            text: i18n("Color scheme")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -246,7 +246,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: qsTr("GUI Style")
+            text: i18n("GUI Style")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -295,7 +295,7 @@ SettingsBasePage {
         }
 
         CheckBox {
-            text: qsTr("Use Breeze icon theme")
+            text: i18n("Use Breeze icon theme")
             checked: GeneralSettings.useBreezeIconTheme
             onCheckedChanged: {
                 GeneralSettings.useBreezeIconTheme = checked
@@ -305,7 +305,7 @@ SettingsBasePage {
             Layout.column: 1
 
             ToolTip {
-                text: qsTr("Sets the icon theme to breeze.\nRequires restart.")
+                text: i18n("Sets the icon theme to breeze.\nRequires restart.")
             }
         }
 
