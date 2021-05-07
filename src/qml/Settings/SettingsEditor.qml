@@ -18,7 +18,7 @@ Kirigami.ApplicationWindow {
 
     width: 800
     height: 600
-    title: qsTr("Haruna Settings")
+    title: i18n("Haruna Settings")
     visible: false
     pageStack.initialPage: "qrc:/Navigation.qml"
 
@@ -29,7 +29,7 @@ Kirigami.ApplicationWindow {
 
         width: 700
         height: 600
-        title: qsTr("Help")
+        title: i18n("Help")
         color: Kirigami.Theme.backgroundColor
         onVisibleChanged: info.text = app.getFileContent(applicationWindow().pageStack.currentItem.helpFile)
 
