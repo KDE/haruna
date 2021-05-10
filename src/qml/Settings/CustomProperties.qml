@@ -18,16 +18,23 @@ SettingsBasePage {
     hasHelp: false
     helpFile: ""
 
-    ListView {
+    Component {
+        id: customPropDelegate
 
-        model: customPropsModel
-        delegate: Kirigami.BasicListItem {
+        Kirigami.AbstractListItem {
+            id: customPropItem
             height: Kirigami.Units.gridUnit * 3
             padding: 0
 
             contentItem: RowLayout {
                 anchors.fill: parent
                 spacing: 0
+
+                Kirigami.ListItemDragHandle {
+                    listItem: customPropItem
+                    listView: customPropsView
+                    onMoveRequested: customPropsModel.moveRows(oldIndex, newIndex)
+                }
 
                 Label {
                     text: model.command
@@ -44,6 +51,16 @@ SettingsBasePage {
                     Layout.margins: Kirigami.Units.largeSpacing
                 }
             }
+        }
+    }
+
+    ListView {
+        id: customPropsView
+
+        model: customPropsModel
+        delegate: Kirigami.DelegateRecycler {
+            width: customPropsView.width
+            sourceComponent: customPropDelegate
         }
     }
 

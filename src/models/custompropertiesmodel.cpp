@@ -62,3 +62,13 @@ QHash<int, QByteArray> CustomPropertiesModel::roleNames() const
     roles[SetAtStartUp] = "setAtStartUp";
     return roles;
 }
+
+void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
+{
+    if (oldIndex < newIndex) {
+        beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex + 1);
+    } else {
+        beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex);
+    }
+    endMoveRows();
+}

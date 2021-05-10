@@ -31,6 +31,8 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const;
 
+    Q_INVOKABLE void moveRows(int oldIndex, int newIndex);
+
 private:
     KSharedConfig::Ptr m_customPropsConfig;
     QList<Property> m_customProperties;
