@@ -41,7 +41,7 @@ SettingsBasePage {
                     toolTipText: text
                     elide: Text.ElideRight
 
-                    Layout.alignment: Qt.AlignLeft| Qt.AlignVCenter
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                     Layout.fillWidth: true
                     Layout.margins: Kirigami.Units.largeSpacing
                 }
