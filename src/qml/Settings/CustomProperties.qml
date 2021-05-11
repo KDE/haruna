@@ -36,10 +36,13 @@ SettingsBasePage {
                     onMoveRequested: customPropsModel.moveRows(oldIndex, newIndex)
                 }
 
-                Label {
+                LabelWithTooltip {
                     text: model.command
+                    toolTipText: text
+                    elide: Text.ElideRight
 
-                    Layout.alignment: Qt.AlignVCenter
+                    Layout.alignment: Qt.AlignLeft| Qt.AlignVCenter
+                    Layout.fillWidth: true
                     Layout.margins: Kirigami.Units.largeSpacing
                 }
 
