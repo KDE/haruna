@@ -3,16 +3,28 @@
 #include "_debug.h"
 
 #include <KConfigGroup>
+#include <QCollator>
 
 CustomPropertiesModel::CustomPropertiesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     m_customPropsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-properties.conf",
                                                     KConfig::SimpleConfig);
-    const QStringList groups = m_customPropsConfig->groupList();
+    getProperties();
+}
+
+void CustomPropertiesModel::getProperties()
+{
+    m_customProperties.clear();
+
+    QStringList groups = m_customPropsConfig->groupList();
+
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::sort(groups.begin(), groups.end(), collator);
 
     beginInsertRows(QModelIndex(), 0, groups.size());
-    for (const QString &_group : groups) {
+    for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customPropsConfig->group(_group);
         Property p;
         p.command = configGroup.readEntry("Command", QString());
@@ -71,4 +83,19 @@ void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
         beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex);
     }
     endMoveRows();
+}
+
+void CustomPropertiesModel::saveCustomProperty(
+        const QString &groupName,
+        const QString &command,
+        const QString &osdMessage,
+        bool setAtStartUp)
+{
+    if (!m_customPropsConfig->group(groupName).exists()) {
+        return;
+    }
+    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
+    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
+    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("SetAtStartUp"), setAtStartUp);
+    m_customPropsConfig->sync();
 }

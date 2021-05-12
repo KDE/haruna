@@ -15,6 +15,9 @@ import Haruna.Components 1.0
 SettingsBasePage {
     id: root
 
+    property bool isAction: true
+    property int id: customPropsModel.rowCount() + 1
+
     GridLayout {
         columns: 2
 
@@ -32,12 +35,14 @@ SettingsBasePage {
 
         Label {
             text: i18n("OSD message")
+            visible: root.isAction
             Layout.alignment: Qt.AlignRight
         }
 
         TextField {
             id: osdMsgTextField
 
+            visible: root.isAction
             placeholderText: "osd message"
             Layout.fillWidth: true
         }
@@ -50,7 +55,17 @@ SettingsBasePage {
             ToolButton {
                 text: i18n("&Save")
                 icon.name: "document-save"
-                onClicked: applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
+                enabled: commandTextField.text !== ""
+                onClicked: {
+                    if (commandTextField.text !== "") {
+                        customPropsModel.saveCustomProperty("Command_" + root.id,
+                                                            commandTextField.text,
+                                                            osdMsgTextField.text,
+                                                            root.isAction)
+                        customPropsModel.getProperties()
+                    }
+                    applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
+                }
 
                 Layout.alignment: Qt.AlignRight
             }
