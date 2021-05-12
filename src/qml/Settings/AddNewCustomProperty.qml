@@ -32,6 +32,36 @@ SettingsBasePage {
             placeholderText: "command"
             Layout.fillWidth: true
         }
+
+        Label {
+            text: i18n("Type")
+            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+        }
+
+        ButtonGroup {
+            id: typeGroup
+            buttons: typeGroupItems.children
+        }
+
+        Column {
+            id: typeGroupItems
+
+            spacing: Kirigami.Units.largeSpacing
+
+            RadioButton {
+                property string optionName: "shortcut"
+
+                checked: true
+                text: i18n("Keyboard shortcut")
+            }
+
+            RadioButton {
+                property string optionName: "startup"
+
+                text: i18n("Run at startup")
+            }
+        }
+
     }
 
     footer: ToolBar {
@@ -46,7 +76,7 @@ SettingsBasePage {
                     if (commandTextField.text !== "") {
                         customPropsModel.saveCustomProperty("Command_" + root.id,
                                                             commandTextField.text,
-                                                            root.isAction)
+                                                            typeGroup.checkedButton.optionName)
                         customPropsModel.getProperties()
                     }
                     applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")

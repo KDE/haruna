@@ -76,42 +76,8 @@ SettingsBasePage {
 
                 text: i18n("&Add")
                 icon.name: "list-add"
-                checkable: true
-                checked: false
-                onClicked: addMenu.toggleMenu()
+                onClicked: applicationWindow().pageStack.replace("qrc:/AddNewCustomProperty.qml")
                 Layout.alignment: Qt.AlignRight
-
-                Menu {
-                    id: addMenu
-
-                    property bool isOpen: false
-
-                    visible: isOpen
-                    x: 0
-                    y: -1
-
-                    MenuItem {
-                        text: i18n("Add start up property")
-                        onTriggered: applicationWindow().pageStack.replace("qrc:/AddNewCustomProperty.qml",
-                                                                           {isAction: false})
-                    }
-
-                    MenuItem {
-                        text: i18n("Add action")
-                        onTriggered: applicationWindow().pageStack.replace("qrc:/AddNewCustomProperty.qml",
-                                                                           {isAction: true})
-                    }
-
-                    function toggleMenu() {
-                        if (!addButton.checked) {
-                            return
-                        }
-
-                        addMenu.visible = !addMenu.visible
-                        const menuHeight = addMenu.count * addMenu.itemAt(0).implicitHeight
-                        addMenu.popup(addButton, 0, -menuHeight)
-                    }
-                }
             }
         }
     }

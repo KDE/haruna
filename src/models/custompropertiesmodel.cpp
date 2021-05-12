@@ -29,7 +29,7 @@ void CustomPropertiesModel::getProperties()
         Property p;
         p.commandId = _group;
         p.command = configGroup.readEntry("Command", QString());
-        p.setAtStartUp = configGroup.readEntry("SetAtStartUp", false);
+        p.type = configGroup.readEntry("Type", QString());
         m_customProperties << p;
     }
     endInsertRows();
@@ -55,8 +55,8 @@ QVariant CustomPropertiesModel::data(const QModelIndex &index, int role) const
         return QVariant(prop.commandId);
     case CommandRole:
         return QVariant(prop.command);
-    case SetAtStartUpRole:
-        return QVariant(prop.setAtStartUp);
+    case TypeRole:
+        return QVariant(prop.type);
     }
 
     return QVariant();
@@ -67,7 +67,7 @@ QHash<int, QByteArray> CustomPropertiesModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[CommandIdRole] = "commandId";
     roles[CommandRole] = "command";
-    roles[SetAtStartUpRole] = "setAtStartUp";
+    roles[TypeRole] = "type";
     return roles;
 }
 
@@ -84,12 +84,12 @@ void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
 void CustomPropertiesModel::saveCustomProperty(
         const QString &groupName,
         const QString &command,
-        bool setAtStartUp)
+        const QString &type)
 {
     if (!m_customPropsConfig->group(groupName).exists()) {
         return;
     }
     m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
-    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("SetAtStartUp"), setAtStartUp);
+    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
     m_customPropsConfig->sync();
 }

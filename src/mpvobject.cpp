@@ -142,8 +142,8 @@ MpvObject::MpvObject(QQuickItem * parent)
     QStringList groups = m_customPropsConfig->groupList();
     for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customPropsConfig->group(_group);
-        bool setAtStartUp = configGroup.readEntry("SetAtStartUp", false);
-        if (setAtStartUp) {
+        QString type = configGroup.readEntry("Type", QString());
+        if (type == "startup") {
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
