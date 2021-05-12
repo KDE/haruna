@@ -172,6 +172,7 @@ public:
     Q_INVOKABLE void saveTimePosition();
     Q_INVOKABLE double loadTimePosition();
     Q_INVOKABLE void resetTimePosition();
+    Q_INVOKABLE void userCommand(const QString &commandString);
 
 public slots:
     static void mpvEvents(void *ctx);

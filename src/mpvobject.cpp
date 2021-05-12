@@ -27,6 +27,8 @@
 #include <QStandardPaths>
 #include <QtGlobal>
 
+#include <KShell>
+
 void on_mpv_redraw(void *ctx)
 {
     QMetaObject::invokeMethod(static_cast<MpvObject*>(ctx), "update", Qt::QueuedConnection);
@@ -131,6 +133,20 @@ MpvObject::MpvObject(QQuickItem * parent)
 
     if (mpv_initialize(mpv) < 0)
         throw std::runtime_error("could not initialize mpv context");
+
+
+    // run user commands
+    KSharedConfig::Ptr m_customPropsConfig;
+    m_customPropsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-properties.conf",
+                                                    KConfig::SimpleConfig);
+    QStringList groups = m_customPropsConfig->groupList();
+    for (const QString &_group : qAsConst((groups))) {
+        auto configGroup = m_customPropsConfig->group(_group);
+        bool setAtStartUp = configGroup.readEntry("SetAtStartUp", false);
+        if (setAtStartUp) {
+            userCommand(configGroup.readEntry("Command", QString()));
+        }
+    }
 
     mpv_set_wakeup_callback(mpv, MpvObject::mpvEvents, this);
 
@@ -673,6 +689,12 @@ void MpvObject::resetTimePosition()
     if (f.exists()) {
         f.remove();
     }
+}
+
+void MpvObject::userCommand(const QString &commandString)
+{
+    QStringList args = KShell::splitArgs(commandString);
+    command(args);
 }
 
 QString MpvObject::md5(const QString &str)
