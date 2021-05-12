@@ -64,6 +64,7 @@ private:
     void setupQmlContextProperties();
     void aboutApplication();
     void setupActions(const QString &actionName);
+    void setupUserActions();
     QAbstractItemModel *colorSchemesModel();
     QApplication *m_app;
     QQmlApplicationEngine *m_engine;

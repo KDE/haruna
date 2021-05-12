@@ -27,9 +27,8 @@ void CustomPropertiesModel::getProperties()
     for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customPropsConfig->group(_group);
         Property p;
+        p.commandId = _group;
         p.command = configGroup.readEntry("Command", QString());
-        p.osdMessage = configGroup.readEntry("OsdMessage", QString());
-        p.shortcut = configGroup.readEntry("Shortcut", QString());
         p.setAtStartUp = configGroup.readEntry("SetAtStartUp", false);
         m_customProperties << p;
     }
@@ -52,13 +51,11 @@ QVariant CustomPropertiesModel::data(const QModelIndex &index, int role) const
     Property prop = m_customProperties[index.row()];
 
     switch (role) {
+    case CommandIdRole:
+        return QVariant(prop.commandId);
     case CommandRole:
         return QVariant(prop.command);
-    case OsdMessageRole:
-        return QVariant(prop.osdMessage);
-    case ShortcutRole:
-        return QVariant(prop.shortcut);
-    case SetAtStartUp:
+    case SetAtStartUpRole:
         return QVariant(prop.setAtStartUp);
     }
 
@@ -68,10 +65,9 @@ QVariant CustomPropertiesModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> CustomPropertiesModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
+    roles[CommandIdRole] = "commandId";
     roles[CommandRole] = "command";
-    roles[OsdMessageRole] = "osdMessage";
-    roles[ShortcutRole] = "shortcut";
-    roles[SetAtStartUp] = "setAtStartUp";
+    roles[SetAtStartUpRole] = "setAtStartUp";
     return roles;
 }
 
@@ -88,14 +84,12 @@ void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
 void CustomPropertiesModel::saveCustomProperty(
         const QString &groupName,
         const QString &command,
-        const QString &osdMessage,
         bool setAtStartUp)
 {
     if (!m_customPropsConfig->group(groupName).exists()) {
         return;
     }
     m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
-    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
     m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("SetAtStartUp"), setAtStartUp);
     m_customPropsConfig->sync();
 }

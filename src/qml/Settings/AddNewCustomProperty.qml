@@ -32,20 +32,6 @@ SettingsBasePage {
             placeholderText: "command"
             Layout.fillWidth: true
         }
-
-        Label {
-            text: i18n("OSD message")
-            visible: root.isAction
-            Layout.alignment: Qt.AlignRight
-        }
-
-        TextField {
-            id: osdMsgTextField
-
-            visible: root.isAction
-            placeholderText: "osd message"
-            Layout.fillWidth: true
-        }
     }
 
     footer: ToolBar {
@@ -60,7 +46,6 @@ SettingsBasePage {
                     if (commandTextField.text !== "") {
                         customPropsModel.saveCustomProperty("Command_" + root.id,
                                                             commandTextField.text,
-                                                            osdMsgTextField.text,
                                                             root.isAction)
                         customPropsModel.getProperties()
                     }

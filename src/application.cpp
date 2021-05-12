@@ -88,6 +88,8 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     m_schemes = new KColorSchemeManager(this);
     m_systemDefaultStyle = m_app->style()->objectName();
 
+    setupUserActions();
+
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
     QDBusConnection::sessionBus().registerService(mspris2Name);
@@ -838,6 +840,23 @@ void Application::setupActions(const QString &actionName)
         action->setText(i18n("Toggle deinterlacing"));
         m_collection.setDefaultShortcut(action, Qt::Key_D);
         m_collection.addAction(actionName, action);
+    }
+    m_collection.readSettings(m_shortcuts);
+}
+
+void Application::setupUserActions()
+{
+    KSharedConfig::Ptr m_customPropsConfig;
+    m_customPropsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-properties.conf",
+                                                    KConfig::SimpleConfig);
+    QStringList groups = m_customPropsConfig->groupList();
+    for (const QString &_group : qAsConst((groups))) {
+        auto configGroup = m_customPropsConfig->group(_group);
+        QString command = configGroup.readEntry("Command", QString());
+
+        auto action = new HAction();
+        action->setText(command);
+        m_collection.addAction(_group, action);
     }
     m_collection.readSettings(m_shortcuts);
 }
