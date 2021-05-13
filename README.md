@@ -35,6 +35,9 @@ flatpak run --branch=beta com.georgefb.haruna
     * run as executable
   * Alternatively, use [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher) (optional)
 
+
+  #### NOTE : Latest Fedora / Redhat users may need to install `libnsl` (`sudo dnf install libnsl`)
+
 # Features
 
 these are just some features that set Haruna apart from others players
