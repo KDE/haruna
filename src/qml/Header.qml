@@ -65,7 +65,7 @@ ToolBar {
             property var model: 0
 
             text: i18n("Subtitles")
-            icon.name: "media-view-subtitles-symbolic"
+            icon.name: "add-subtitle"
             focusPolicy: Qt.NoFocus
 
             onClicked: {

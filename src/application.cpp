@@ -463,7 +463,7 @@ void Application::setupActions(const QString &actionName)
     if (actionName == QStringLiteral("openFile")) {
         auto action = new HAction();
         action->setText(i18n("Open File"));
-        action->setIcon(QIcon::fromTheme("folder-videos-symbolic"));
+        action->setIcon(QIcon::fromTheme("folder-videos"));
         m_collection.setDefaultShortcut(action, Qt::CTRL + Qt::Key_O);
         m_collection.addAction(actionName, action);
     }
@@ -479,7 +479,7 @@ void Application::setupActions(const QString &actionName)
     if (actionName == QStringLiteral("aboutHaruna")) {
         auto action = new HAction();
         action->setText(i18n("About Haruna"));
-        action->setIcon(QIcon::fromTheme("help-about-symbolic"));
+        action->setIcon(QIcon::fromTheme("help-about"));
         m_collection.setDefaultShortcut(action, Qt::Key_F1);
         m_collection.addAction(actionName, action);
         connect(action, &QAction::triggered, this, &Application::aboutApplication);

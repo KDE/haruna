@@ -52,12 +52,12 @@ Kirigami.Page
         }
         ListElement {
             name: "Audio"
-            iconName: "audio-speakers-symbolic"
+            iconName: "player-volume"
             page: "qrc:/Audio.qml"
         }
         ListElement {
             name: "Subtitles"
-            iconName: "media-view-subtitles-symbolic"
+            iconName: "add-subtitle"
             page: "qrc:/Subtitles.qml"
         }
         ListElement {
