@@ -10,6 +10,9 @@ SPDX-License-Identifier: CC-BY-4.0
 
 Haruna is an open source video player built with Qt/QML and libmpv.
 
+![Haruna main window](./data/screenshots/haruna-dark.png)
+[More Screenshots](./Screenshots.md)
+
 # Install
 
 https://flathub.org/apps/details/com.georgefb.haruna
@@ -31,12 +34,10 @@ flatpak run --branch=beta com.georgefb.haruna
 # AppImage
 
 * Download appimage from [Releases](https://github.com/g-fb/haruna/releases)
-  * make executable with `chmod +x Haruna*.AppImage`
-    * run as executable
-  * Alternatively, use [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher) (optional)
-
-
-  #### NOTE : Latest Fedora / Redhat users may need to install `libnsl` (`sudo dnf install libnsl`)
+* Make executable `chmod +x Haruna*.AppImage`
+* Run
+* Optional, use [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher)
+* Note: On Fedora/Redhat users may need to install `libnsl` (`sudo dnf install libnsl`)
 
 # Features
 
@@ -51,13 +52,6 @@ these are just some features that set Haruna apart from others players
 - configurable shortcuts and mouse buttons
 
 - quick jump to next chapter by middle click on progress bar
-
-# Screenshots
-
-Main Window
-![Haruna main window](./data/screenshots/haruna-dark.png)
-
-#### [More Screenshots](./Screenshots.md)
 
 # Dependencies
 
