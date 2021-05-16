@@ -23,6 +23,7 @@ SettingsBasePage {
 
         Kirigami.AbstractListItem {
             id: customPropItem
+
             height: Kirigami.Units.gridUnit * 3
             padding: 0
 
@@ -34,6 +35,12 @@ SettingsBasePage {
                     listItem: customPropItem
                     listView: customPropsView
                     onMoveRequested: customPropsModel.moveRows(oldIndex, newIndex)
+                }
+
+                Kirigami.Icon {
+                    source: model.type === "shortcut" ? "configure-shortcuts" : "code-context"
+                    width: Kirigami.Units.iconSizes.small
+                    height: Kirigami.Units.iconSizes.small
                 }
 
                 LabelWithTooltip {
@@ -49,6 +56,7 @@ SettingsBasePage {
                 Button {
                     text: i18n("Shortcut")
                     icon.name: "configure-shortcuts"
+                    visible: model.type === "shortcut"
 
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                     Layout.margins: Kirigami.Units.largeSpacing
