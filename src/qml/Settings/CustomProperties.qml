@@ -57,6 +57,7 @@ SettingsBasePage {
                     text: i18n("Shortcut")
                     icon.name: "configure-shortcuts"
                     visible: model.type === "shortcut"
+                    onClicked: app.configureShortcuts(model.command)
 
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                     Layout.margins: Kirigami.Units.largeSpacing

@@ -46,7 +46,7 @@ public:
     Q_INVOKABLE QStringList availableGuiStyles();
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
-    Q_INVOKABLE void configureShortcuts();
+    Q_INVOKABLE void configureShortcuts(const QString &name = QString());
     Q_INVOKABLE void createUserShortcut(const QString &name, const QString &text);
 
     static QString version();

@@ -47,6 +47,7 @@
 #include <QQmlEngine>
 #include <QMimeDatabase>
 #include <custompropertiesmodel.h>
+#include <KTreeWidgetSearchLine>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -381,13 +382,21 @@ void Application::activateColorScheme(const QString &name)
     m_schemes->activateScheme(m_schemes->indexForScheme(name));
 }
 
-void Application::configureShortcuts()
+void Application::configureShortcuts(const QString &name)
 {
     KShortcutsDialog dlg(KShortcutsEditor::ApplicationAction, KShortcutsEditor::LetterShortcutsAllowed, nullptr);
     connect(&dlg, &KShortcutsDialog::accepted, this, [ = ](){
         m_collection.writeSettings(m_shortcuts);
         m_config->sync();
     });
+
+    if (!name.isEmpty()) {
+        auto searchLine = dlg.findChild<KTreeWidgetSearchLine *>();
+        if (searchLine != nullptr) {
+            searchLine->setText(name);
+        }
+    }
+
     dlg.setModal(true);
     dlg.addCollection(&m_collection);
     dlg.configure(false);
@@ -424,7 +433,7 @@ void Application::setupActions(const QString &actionName)
         auto action = new HAction();
         action->setText(i18n("Configure Keyboard Shortcuts"));
         action->setIcon(QIcon::fromTheme("configure-shortcuts"));
-        connect(action, &QAction::triggered, this, &Application::configureShortcuts);
+        connect(action, &QAction::triggered, this, [=]() { configureShortcuts(); });
         m_collection.setDefaultShortcut(action, Qt::CTRL + Qt::SHIFT + Qt::Key_S);
         m_collection.addAction(actionName, action);
     }
