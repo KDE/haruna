@@ -99,3 +99,12 @@ void CustomPropertiesModel::saveCustomProperty(
     m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
     m_customPropsConfig->sync();
 }
+
+ProxyCustomPropertiesModel::ProxyCustomPropertiesModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+{
+    setDynamicSortFilter(true);
+    setFilterRole(CustomPropertiesModel::TypeRole);
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+    setFilterFixedString(QStringLiteral("shortcut"));
+}

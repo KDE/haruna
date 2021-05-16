@@ -235,6 +235,8 @@ void Application::setupQmlContextProperties()
 
     auto customPropsModel = new CustomPropertiesModel();
     m_engine->rootContext()->setContextProperty(QStringLiteral("customPropsModel"), customPropsModel);
+    auto proxyCustomPropsModel = new ProxyCustomPropertiesModel();
+    m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomPropsModel"), proxyCustomPropsModel);
 
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
 }
@@ -871,9 +873,11 @@ void Application::setupUserActions()
         auto configGroup = m_customPropsConfig->group(_group);
         QString command = configGroup.readEntry("Command", QString());
 
-        auto action = new HAction();
-        action->setText(command);
-        m_collection.addAction(_group, action);
+        if (configGroup.readEntry("Type", QString()) == "shortcut") {
+            auto action = new HAction();
+            action->setText(command);
+            m_collection.addAction(_group, action);
+        }
     }
     m_collection.readSettings(m_shortcuts);
 }

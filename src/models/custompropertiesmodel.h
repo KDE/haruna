@@ -2,7 +2,16 @@
 #define CUSTOMPROPERTIESMODEL_H
 
 #include <QAbstractListModel>
+#include <QSortFilterProxyModel>
 #include <KSharedConfig>
+
+class ProxyCustomPropertiesModel : public QSortFilterProxyModel
+{
+    Q_OBJECT
+
+public:
+    explicit ProxyCustomPropertiesModel(QObject *parent = nullptr);
+};
 
 class CustomPropertiesModel : public QAbstractListModel
 {
@@ -15,15 +24,15 @@ class CustomPropertiesModel : public QAbstractListModel
         QString type;
     };
 
+public:
+    explicit CustomPropertiesModel(QObject *parent = nullptr);
+
     enum Roles {
         CommandIdRole = Qt::UserRole + 1,
         CommandRole,
         OsdMessageRole,
         TypeRole,
     };
-
-public:
-    explicit CustomPropertiesModel(QObject *parent = nullptr);
 
     // Basic functionality:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

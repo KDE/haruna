@@ -10,6 +10,7 @@ import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
 import Qt.labs.platform 1.0 as Platform
+import QtQml 2.12
 
 import org.kde.kirigami 2.11 as Kirigami
 import com.georgefb.haruna 1.0
@@ -87,6 +88,19 @@ Kirigami.ApplicationWindow {
     PlayList { id: playList }
 
     Footer { id: footer }
+
+    Instantiator {
+        model: proxyCustomPropsModel
+        delegate: Action {
+            property var qaction: app.action(model.commandId)
+            text: qaction.text
+            shortcut: qaction.shortcutName()
+            onTriggered: {
+                mpv.userCommand(model.command)
+                osd.message(mpv.command(["expand-text", model.osdMessage]))
+            }
+        }
+    }
 
     Platform.FileDialog {
         id: fileDialog
