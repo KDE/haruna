@@ -11,12 +11,14 @@ class CustomPropertiesModel : public QAbstractListModel
     struct Property {
         QString commandId;
         QString command;
+        QString osdMessage;
         QString type;
     };
 
     enum Roles {
         CommandIdRole = Qt::UserRole + 1,
         CommandRole,
+        OsdMessageRole,
         TypeRole,
     };
 
@@ -33,6 +35,7 @@ public:
     Q_INVOKABLE void moveRows(int oldIndex, int newIndex);
     Q_INVOKABLE void saveCustomProperty(const QString &groupName,
                                         const QString &command,
+                                        const QString &osdMessage,
                                         const QString &type);
 
 private:

@@ -29,6 +29,7 @@ void CustomPropertiesModel::getProperties()
         Property p;
         p.commandId = _group;
         p.command = configGroup.readEntry("Command", QString());
+        p.osdMessage = configGroup.readEntry("OsdMessage", QString()),
         p.type = configGroup.readEntry("Type", QString());
         m_customProperties << p;
     }
@@ -55,6 +56,8 @@ QVariant CustomPropertiesModel::data(const QModelIndex &index, int role) const
         return QVariant(prop.commandId);
     case CommandRole:
         return QVariant(prop.command);
+    case OsdMessageRole:
+        return QVariant(prop.osdMessage);
     case TypeRole:
         return QVariant(prop.type);
     }
@@ -66,6 +69,7 @@ QHash<int, QByteArray> CustomPropertiesModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[CommandIdRole] = "commandId";
+    roles[OsdMessageRole] = "osdMessage";
     roles[CommandRole] = "command";
     roles[TypeRole] = "type";
     return roles;
@@ -84,12 +88,14 @@ void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
 void CustomPropertiesModel::saveCustomProperty(
         const QString &groupName,
         const QString &command,
+        const QString &osdMessage,
         const QString &type)
 {
-    if (!m_customPropsConfig->group(groupName).exists()) {
+    if (m_customPropsConfig->group(groupName).exists()) {
         return;
     }
     m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
+    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
     m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
     m_customPropsConfig->sync();
 }

@@ -844,6 +844,14 @@ void Application::setupActions(const QString &actionName)
     m_collection.readSettings(m_shortcuts);
 }
 
+void Application::createUserShortcut(const QString &name, const QString &text)
+{
+    auto action = new HAction();
+    action->setText(text);
+    m_collection.addAction(name, action);
+    m_collection.readSettings(m_shortcuts);
+}
+
 void Application::setupUserActions()
 {
     KSharedConfig::Ptr m_customPropsConfig;

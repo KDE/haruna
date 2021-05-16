@@ -47,6 +47,7 @@ public:
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
     Q_INVOKABLE void configureShortcuts();
+    Q_INVOKABLE void createUserShortcut(const QString &name, const QString &text);
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();

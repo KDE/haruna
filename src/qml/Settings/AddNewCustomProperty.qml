@@ -29,7 +29,20 @@ SettingsBasePage {
         TextField {
             id: commandTextField
 
-            placeholderText: "command"
+            placeholderText: "add volume +10"
+            Layout.fillWidth: true
+        }
+
+        Label {
+            text: i18n("OSD Message")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        TextField {
+            id: osdMessageTextField
+
+            enabled: typeGroup.checkedButton.optionName === "shortcut"
+            placeholderText: "Filename: ${filename}"
             Layout.fillWidth: true
         }
 
@@ -40,6 +53,7 @@ SettingsBasePage {
 
         ButtonGroup {
             id: typeGroup
+
             buttons: typeGroupItems.children
         }
 
@@ -76,7 +90,9 @@ SettingsBasePage {
                     if (commandTextField.text !== "") {
                         customPropsModel.saveCustomProperty("Command_" + root.id,
                                                             commandTextField.text,
+                                                            osdMessageTextField.text,
                                                             typeGroup.checkedButton.optionName)
+                        app.createUserShortcut("Command_" + root.id, commandTextField.text)
                         customPropsModel.getProperties()
                     }
                     applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
