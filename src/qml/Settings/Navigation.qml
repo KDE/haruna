@@ -85,7 +85,7 @@ Kirigami.Page
         delegate: Kirigami.BasicListItem {
             text: i18n(name)
             icon: iconName
-            onClicked: applicationWindow().pageStack.replace(model.page)
+            onClicked: applicationWindow().pageStack.push(model.page)
         }
     }
 }
