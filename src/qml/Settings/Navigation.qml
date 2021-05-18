@@ -73,7 +73,7 @@ Kirigami.Page
         ListElement {
             name: "Custom properties"
             iconName: "configure"
-            page: "qrc:/CustomProperties.qml"
+            page: "qrc:/CustomCommands.qml"
         }
     }
 

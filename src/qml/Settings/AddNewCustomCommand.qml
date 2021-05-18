@@ -16,7 +16,7 @@ SettingsBasePage {
     id: root
 
     property bool isAction: true
-    property int id: customPropsModel.rowCount() + 1
+    property int id: customCommandsModel.rowCount() + 1
 
     GridLayout {
         columns: 2
@@ -91,7 +91,7 @@ SettingsBasePage {
                         return
                     }
                     // save command to config file
-                    customPropsModel.saveCustomProperty("Command_" + root.id,
+                    customCommandsModel.saveCustomCommand("Command_" + root.id,
                                                         commandTextField.text,
                                                         osdMessageTextField.text,
                                                         typeGroup.checkedButton.optionName)
@@ -104,8 +104,8 @@ SettingsBasePage {
                         mpv.userCommand(commandTextField.text)
                     }
 
-                    customPropsModel.getProperties()
-                    applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
+                    customCommandsModel.getCommands()
+                    applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
                 }
 
                 Layout.alignment: Qt.AlignRight

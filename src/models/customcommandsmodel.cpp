@@ -1,23 +1,23 @@
-#include "custompropertiesmodel.h"
+#include "customcommandsmodel.h"
 
 #include "_debug.h"
 
 #include <KConfigGroup>
 #include <QCollator>
 
-CustomPropertiesModel::CustomPropertiesModel(QObject *parent)
+CustomCommandsModel::CustomCommandsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_customPropsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-properties.conf",
+    m_customCommandsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-commands.conf",
                                                     KConfig::SimpleConfig);
-    getProperties();
+    getCommands();
 }
 
-void CustomPropertiesModel::getProperties()
+void CustomCommandsModel::getCommands()
 {
-    m_customProperties.clear();
+    m_customCommands.clear();
 
-    QStringList groups = m_customPropsConfig->groupList();
+    QStringList groups = m_customCommandsConfig->groupList();
 
     QCollator collator;
     collator.setNumericMode(true);
@@ -25,47 +25,47 @@ void CustomPropertiesModel::getProperties()
 
     beginInsertRows(QModelIndex(), 0, groups.size());
     for (const QString &_group : qAsConst((groups))) {
-        auto configGroup = m_customPropsConfig->group(_group);
-        Property p;
+        auto configGroup = m_customCommandsConfig->group(_group);
+        Command p;
         p.commandId = _group;
         p.command = configGroup.readEntry("Command", QString());
         p.osdMessage = configGroup.readEntry("OsdMessage", QString()),
         p.type = configGroup.readEntry("Type", QString());
-        m_customProperties << p;
+        m_customCommands << p;
     }
     endInsertRows();
 }
 
-int CustomPropertiesModel::rowCount(const QModelIndex &parent) const
+int CustomCommandsModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid())
         return 0;
 
-    return m_customProperties.size();
+    return m_customCommands.size();
 }
 
-QVariant CustomPropertiesModel::data(const QModelIndex &index, int role) const
+QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
         return QVariant();
 
-    Property prop = m_customProperties[index.row()];
+    Command command = m_customCommands[index.row()];
 
     switch (role) {
     case CommandIdRole:
-        return QVariant(prop.commandId);
+        return QVariant(command.commandId);
     case CommandRole:
-        return QVariant(prop.command);
+        return QVariant(command.command);
     case OsdMessageRole:
-        return QVariant(prop.osdMessage);
+        return QVariant(command.osdMessage);
     case TypeRole:
-        return QVariant(prop.type);
+        return QVariant(command.type);
     }
 
     return QVariant();
 }
 
-QHash<int, QByteArray> CustomPropertiesModel::roleNames() const
+QHash<int, QByteArray> CustomCommandsModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[CommandIdRole] = "commandId";
@@ -75,7 +75,7 @@ QHash<int, QByteArray> CustomPropertiesModel::roleNames() const
     return roles;
 }
 
-void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
+void CustomCommandsModel::moveRows(int oldIndex, int newIndex)
 {
     if (oldIndex < newIndex) {
         beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex + 1);
@@ -85,26 +85,26 @@ void CustomPropertiesModel::moveRows(int oldIndex, int newIndex)
     endMoveRows();
 }
 
-void CustomPropertiesModel::saveCustomProperty(
+void CustomCommandsModel::saveCustomCommand(
         const QString &groupName,
         const QString &command,
         const QString &osdMessage,
         const QString &type)
 {
-    if (m_customPropsConfig->group(groupName).exists()) {
+    if (m_customCommandsConfig->group(groupName).exists()) {
         return;
     }
-    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
-    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
-    m_customPropsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
-    m_customPropsConfig->sync();
+    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
+    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
+    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
+    m_customCommandsConfig->sync();
 }
 
-ProxyCustomPropertiesModel::ProxyCustomPropertiesModel(QObject *parent)
+ProxyCustomCommandsModel::ProxyCustomCommandsModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setDynamicSortFilter(true);
-    setFilterRole(CustomPropertiesModel::TypeRole);
+    setFilterRole(CustomCommandsModel::TypeRole);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
     setFilterFixedString(QStringLiteral("shortcut"));
 }

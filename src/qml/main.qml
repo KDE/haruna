@@ -90,7 +90,7 @@ Kirigami.ApplicationWindow {
     Footer { id: footer }
 
     Instantiator {
-        model: proxyCustomPropsModel
+        model: proxyCustomCommandsModel
         delegate: Action {
             property var qaction: app.action(model.commandId)
             text: qaction.text

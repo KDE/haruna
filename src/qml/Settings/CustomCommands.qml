@@ -19,10 +19,10 @@ SettingsBasePage {
     helpFile: ""
 
     Component {
-        id: customPropDelegate
+        id: customCommandDelegate
 
         Kirigami.AbstractListItem {
-            id: customPropItem
+            id: customCommandItem
 
             height: Kirigami.Units.gridUnit * 3
             padding: 0
@@ -32,9 +32,9 @@ SettingsBasePage {
                 spacing: 0
 
                 Kirigami.ListItemDragHandle {
-                    listItem: customPropItem
-                    listView: customPropsView
-                    onMoveRequested: customPropsModel.moveRows(oldIndex, newIndex)
+                    listItem: customCommandItem
+                    listView: customCommandsView
+                    onMoveRequested: customCommandsModel.moveRows(oldIndex, newIndex)
                 }
 
                 Kirigami.Icon {
@@ -67,12 +67,12 @@ SettingsBasePage {
     }
 
     ListView {
-        id: customPropsView
+        id: customCommandsView
 
-        model: customPropsModel
+        model: customCommandsModel
         delegate: Kirigami.DelegateRecycler {
-            width: customPropsView.width
-            sourceComponent: customPropDelegate
+            width: customCommandsView.width
+            sourceComponent: customCommandDelegate
         }
     }
 
@@ -85,7 +85,7 @@ SettingsBasePage {
 
                 text: i18n("&Add")
                 icon.name: "list-add"
-                onClicked: applicationWindow().pageStack.replace("qrc:/AddNewCustomProperty.qml")
+                onClicked: applicationWindow().pageStack.replace("qrc:/AddNewCustomCommand.qml")
                 Layout.alignment: Qt.AlignRight
             }
         }

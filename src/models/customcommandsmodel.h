@@ -1,23 +1,23 @@
-#ifndef CUSTOMPROPERTIESMODEL_H
-#define CUSTOMPROPERTIESMODEL_H
+#ifndef CUSTOMCOMMANDSMODEL_H
+#define CUSTOMCOMMANDSMODEL_H
 
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 #include <KSharedConfig>
 
-class ProxyCustomPropertiesModel : public QSortFilterProxyModel
+class ProxyCustomCommandsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
 public:
-    explicit ProxyCustomPropertiesModel(QObject *parent = nullptr);
+    explicit ProxyCustomCommandsModel(QObject *parent = nullptr);
 };
 
-class CustomPropertiesModel : public QAbstractListModel
+class CustomCommandsModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    struct Property {
+    struct Command {
         QString commandId;
         QString command;
         QString osdMessage;
@@ -25,7 +25,7 @@ class CustomPropertiesModel : public QAbstractListModel
     };
 
 public:
-    explicit CustomPropertiesModel(QObject *parent = nullptr);
+    explicit CustomCommandsModel(QObject *parent = nullptr);
 
     enum Roles {
         CommandIdRole = Qt::UserRole + 1,
@@ -40,16 +40,16 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const;
 
-    Q_INVOKABLE void getProperties();
+    Q_INVOKABLE void getCommands();
     Q_INVOKABLE void moveRows(int oldIndex, int newIndex);
-    Q_INVOKABLE void saveCustomProperty(const QString &groupName,
+    Q_INVOKABLE void saveCustomCommand(const QString &groupName,
                                         const QString &command,
                                         const QString &osdMessage,
                                         const QString &type);
 
 private:
-    KSharedConfig::Ptr m_customPropsConfig;
-    QList<Property> m_customProperties;
+    KSharedConfig::Ptr m_customCommandsConfig;
+    QList<Command> m_customCommands;
 };
 
-#endif // CUSTOMPROPERTIESMODEL_H
+#endif // CUSTOMCOMMANDSMODEL_H

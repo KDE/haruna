@@ -46,7 +46,7 @@
 #include <QThread>
 #include <QQmlEngine>
 #include <QMimeDatabase>
-#include <custompropertiesmodel.h>
+#include <customcommandsmodel.h>
 #include <KTreeWidgetSearchLine>
 
 #include <KAboutApplicationDialog>
@@ -233,11 +233,11 @@ void Application::setupQmlContextProperties()
 
     m_engine->rootContext()->setContextProperty(QStringLiteral("subsFoldersModel"), subsFoldersModel.release());
 
-    auto customPropsModel = new CustomPropertiesModel();
-    m_engine->rootContext()->setContextProperty(QStringLiteral("customPropsModel"), customPropsModel);
-    auto proxyCustomPropsModel = new ProxyCustomPropertiesModel();
-    proxyCustomPropsModel->setSourceModel(customPropsModel);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomPropsModel"), proxyCustomPropsModel);
+    auto customCommandsModel = new CustomCommandsModel();
+    m_engine->rootContext()->setContextProperty(QStringLiteral("customCommandsModel"), customCommandsModel);
+    auto proxyCustomCommandsModel = new ProxyCustomCommandsModel();
+    proxyCustomCommandsModel->setSourceModel(customCommandsModel);
+    m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomCommandsModel"), proxyCustomCommandsModel);
 
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
 }
