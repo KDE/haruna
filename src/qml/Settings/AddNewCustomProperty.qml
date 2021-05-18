@@ -87,14 +87,24 @@ SettingsBasePage {
                 icon.name: "document-save"
                 enabled: commandTextField.text !== ""
                 onClicked: {
-                    if (commandTextField.text !== "") {
-                        customPropsModel.saveCustomProperty("Command_" + root.id,
-                                                            commandTextField.text,
-                                                            osdMessageTextField.text,
-                                                            typeGroup.checkedButton.optionName)
-                        app.createUserShortcut("Command_" + root.id, commandTextField.text)
-                        customPropsModel.getProperties()
+                    if (commandTextField.text === "") {
+                        return
                     }
+                    // save command to config file
+                    customPropsModel.saveCustomProperty("Command_" + root.id,
+                                                        commandTextField.text,
+                                                        osdMessageTextField.text,
+                                                        typeGroup.checkedButton.optionName)
+                    if (typeGroup.checkedButton.optionName === "shortcut") {
+                        // creates action and adds it to the action collection
+                        // so that its shortcut can be set by the user
+                        app.createUserShortcut("Command_" + root.id, commandTextField.text)
+                    } else {
+                        // execute the user command
+                        mpv.userCommand(commandTextField.text)
+                    }
+
+                    customPropsModel.getProperties()
                     applicationWindow().pageStack.replace("qrc:/CustomProperties.qml")
                 }
 
