@@ -236,6 +236,7 @@ void Application::setupQmlContextProperties()
     auto customPropsModel = new CustomPropertiesModel();
     m_engine->rootContext()->setContextProperty(QStringLiteral("customPropsModel"), customPropsModel);
     auto proxyCustomPropsModel = new ProxyCustomPropertiesModel();
+    proxyCustomPropsModel->setSourceModel(customPropsModel);
     m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomPropsModel"), proxyCustomPropsModel);
 
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
