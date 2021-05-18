@@ -866,12 +866,12 @@ void Application::createUserShortcut(const QString &name, const QString &text)
 
 void Application::setupUserActions()
 {
-    KSharedConfig::Ptr m_customPropsConfig;
-    m_customPropsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-properties.conf",
+    KSharedConfig::Ptr m_customCommandsConfig;
+    m_customCommandsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-commands.conf",
                                                     KConfig::SimpleConfig);
-    QStringList groups = m_customPropsConfig->groupList();
+    QStringList groups = m_customCommandsConfig->groupList();
     for (const QString &_group : qAsConst((groups))) {
-        auto configGroup = m_customPropsConfig->group(_group);
+        auto configGroup = m_customCommandsConfig->group(_group);
         QString command = configGroup.readEntry("Command", QString());
 
         if (configGroup.readEntry("Type", QString()) == "shortcut") {
