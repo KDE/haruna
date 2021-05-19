@@ -97,10 +97,23 @@ SettingsBasePage {
             ToolButton {
                 text: i18n("Delete")
                 icon.name: "delete"
+                visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
                     customCommandsModel.deleteCustomCommand(root.commandId, root.index)
                     applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
                 }
+            }
+
+            Item {
+
+                Layout.fillWidth: true
+            }
+
+            ToolButton {
+                text: i18n("Cancel")
+                icon.name: "dialog-cancel"
+                onClicked: applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+                Layout.alignment: Qt.AlignRight
             }
 
             ToolButton {
