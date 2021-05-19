@@ -69,6 +69,7 @@ SettingsBasePage {
                                                                          command: model.command,
                                                                          osdMessage: model.osdMessage,
                                                                          type: model.type,
+                                                                         commandId: model.commandId,
                                                                          index: model.index,
                                                                          mode: EditCustomCommand.Mode.Edit
                                                                      })

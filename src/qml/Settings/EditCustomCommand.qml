@@ -88,12 +88,20 @@ SettingsBasePage {
                 text: i18n("Run at startup")
             }
         }
-
     }
 
     footer: ToolBar {
         RowLayout {
             anchors.fill: parent
+
+            ToolButton {
+                text: i18n("Delete")
+                icon.name: "delete"
+                onClicked: {
+                    customCommandsModel.deleteCustomCommand(root.commandId, root.index)
+                    applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+                }
+            }
 
             ToolButton {
                 text: i18n("&Save")

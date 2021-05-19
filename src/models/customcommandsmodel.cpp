@@ -121,6 +121,15 @@ void CustomCommandsModel::editCustomCommand(int row, const QString &command,
     emit dataChanged(index(row, 0), index(row, 0));
 }
 
+void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
+{
+    beginRemoveRows(QModelIndex(), row, row);
+    m_customCommandsConfig->deleteGroup(groupName);
+    m_customCommandsConfig->sync();
+    m_customCommands.removeAt(row);
+    endRemoveRows();
+}
+
 ProxyCustomCommandsModel::ProxyCustomCommandsModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {

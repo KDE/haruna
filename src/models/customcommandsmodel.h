@@ -48,6 +48,7 @@ public:
                                        const QString &command,
                                        const QString &osdMessage,
                                        const QString &type);
+    Q_INVOKABLE void deleteCustomCommand(const QString &groupName, int row);
 
 private:
     KSharedConfig::Ptr m_customCommandsConfig;
