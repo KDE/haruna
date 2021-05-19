@@ -856,8 +856,14 @@ void Application::setupActions(const QString &actionName)
     m_collection.readSettings(m_shortcuts);
 }
 
-void Application::createUserShortcut(const QString &name, const QString &text)
+void Application::createUserAction(const QString &text)
 {
+    KSharedConfig::Ptr m_customCommandsConfig;
+    m_customCommandsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-commands.conf",
+                                                    KConfig::SimpleConfig);
+    int counter = m_customCommandsConfig->group(QString()).readEntry("Counter", 0);
+    const QString &name = QString("Command_%1").arg(counter);
+
     auto action = new HAction();
     action->setText(text);
     m_collection.addAction(name, action);

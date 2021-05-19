@@ -45,7 +45,6 @@ SettingsBasePage {
 
                 LabelWithTooltip {
                     text: model.command
-                    toolTipText: text
                     elide: Text.ElideRight
 
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
@@ -53,14 +52,26 @@ SettingsBasePage {
                     Layout.margins: Kirigami.Units.largeSpacing
                 }
 
-                Button {
+                ToolButton {
                     text: i18n("Shortcut")
                     icon.name: "configure-shortcuts"
                     visible: model.type === "shortcut"
                     onClicked: app.configureShortcuts(model.command)
 
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    Layout.margins: Kirigami.Units.largeSpacing
+                }
+
+                ToolButton {
+                    icon.name: "edit-entry"
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml",
+                                                                     {
+                                                                         command: model.command,
+                                                                         osdMessage: model.osdMessage,
+                                                                         type: model.type,
+                                                                         index: model.index,
+                                                                         mode: EditCustomCommand.Mode.Edit
+                                                                     })
                 }
             }
         }
@@ -85,7 +96,7 @@ SettingsBasePage {
 
                 text: i18n("&Add")
                 icon.name: "list-add"
-                onClicked: applicationWindow().pageStack.replace("qrc:/AddNewCustomCommand.qml")
+                onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
                 Layout.alignment: Qt.AlignRight
             }
         }

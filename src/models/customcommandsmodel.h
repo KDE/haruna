@@ -40,16 +40,18 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const;
 
-    Q_INVOKABLE void getCommands();
     Q_INVOKABLE void moveRows(int oldIndex, int newIndex);
-    Q_INVOKABLE void saveCustomCommand(const QString &groupName,
-                                        const QString &command,
-                                        const QString &osdMessage,
-                                        const QString &type);
+    Q_INVOKABLE void saveCustomCommand(const QString &command,
+                                       const QString &osdMessage,
+                                       const QString &type);
+    Q_INVOKABLE void editCustomCommand(int row,
+                                       const QString &command,
+                                       const QString &osdMessage,
+                                       const QString &type);
 
 private:
     KSharedConfig::Ptr m_customCommandsConfig;
-    QList<Command> m_customCommands;
+    QList<Command *> m_customCommands;
 };
 
 #endif // CUSTOMCOMMANDSMODEL_H

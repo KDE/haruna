@@ -15,8 +15,17 @@ import Haruna.Components 1.0
 SettingsBasePage {
     id: root
 
-    property bool isAction: true
-    property int id: customCommandsModel.rowCount() + 1
+    property string command: ""
+    property string osdMessage: ""
+    property string type: "shortcut"
+    property string commandId: ""
+    property int index: -1
+    property int mode: EditCustomCommand.Mode.Create
+
+    enum Mode {
+        Create = 0,
+        Edit
+    }
 
     GridLayout {
         columns: 2
@@ -29,8 +38,10 @@ SettingsBasePage {
         TextField {
             id: commandTextField
 
+            text: root.command
             placeholderText: "add volume +10"
             Layout.fillWidth: true
+            Component.onCompleted: forceActiveFocus()
         }
 
         Label {
@@ -41,6 +52,7 @@ SettingsBasePage {
         TextField {
             id: osdMessageTextField
 
+            text: root.osdMessage
             enabled: typeGroup.checkedButton.optionName === "shortcut"
             placeholderText: "Filename: ${filename}"
             Layout.fillWidth: true
@@ -65,13 +77,14 @@ SettingsBasePage {
             RadioButton {
                 property string optionName: "shortcut"
 
-                checked: true
+                checked: optionName === root.type
                 text: i18n("Keyboard shortcut")
             }
 
             RadioButton {
                 property string optionName: "startup"
 
+                checked: optionName === root.type
                 text: i18n("Run at startup")
             }
         }
@@ -86,29 +99,40 @@ SettingsBasePage {
                 text: i18n("&Save")
                 icon.name: "document-save"
                 enabled: commandTextField.text !== ""
-                onClicked: {
+                onClicked: saveCustomCommand()
+
+                Layout.alignment: Qt.AlignRight
+
+                function saveCustomCommand() {
                     if (commandTextField.text === "") {
                         return
                     }
-                    // save command to config file
-                    customCommandsModel.saveCustomCommand("Command_" + root.id,
-                                                        commandTextField.text,
-                                                        osdMessageTextField.text,
-                                                        typeGroup.checkedButton.optionName)
                     if (typeGroup.checkedButton.optionName === "shortcut") {
                         // creates action and adds it to the action collection
                         // so that its shortcut can be set by the user
-                        app.createUserShortcut("Command_" + root.id, commandTextField.text)
+                        app.createUserAction(commandTextField.text)
                     } else {
                         // execute the user command
                         mpv.userCommand(commandTextField.text)
                     }
-
-                    customCommandsModel.getCommands()
+                    switch (root.mode) {
+                    case EditCustomCommand.Mode.Create:
+                        // save new command to config file
+                        customCommandsModel.saveCustomCommand(commandTextField.text,
+                                                              osdMessageTextField.text,
+                                                              typeGroup.checkedButton.optionName)
+                        break
+                    case EditCustomCommand.Mode.Edit:
+                        // update existing command
+                        customCommandsModel.editCustomCommand(root.index,
+                                                              commandTextField.text,
+                                                              osdMessageTextField.text,
+                                                              typeGroup.checkedButton.optionName)
+                        break
+                    }
                     applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
                 }
 
-                Layout.alignment: Qt.AlignRight
             }
         }
     }
