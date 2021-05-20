@@ -22,6 +22,7 @@ class CustomCommandsModel : public QAbstractListModel
         QString command;
         QString osdMessage;
         QString type;
+        int order;
     };
 
 public:

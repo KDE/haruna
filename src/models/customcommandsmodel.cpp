@@ -12,21 +12,31 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
                                                     KConfig::SimpleConfig);
     QStringList groups = m_customCommandsConfig->groupList();
 
-    QCollator collator;
-    collator.setNumericMode(true);
-    std::sort(groups.begin(), groups.end(), collator);
-
     beginInsertRows(QModelIndex(), 0, groups.size());
-    for (const QString &_group : qAsConst((groups))) {
-        auto configGroup = m_customCommandsConfig->group(_group);
-        auto p = new Command();
-        p->commandId = _group;
-        p->command = configGroup.readEntry("Command", QString());
-        p->osdMessage = configGroup.readEntry("OsdMessage", QString()),
-        p->type = configGroup.readEntry("Type", QString());
-        m_customCommands << p;
+    for (const QString &groupName : qAsConst((groups))) {
+        auto configGroup = m_customCommandsConfig->group(groupName);
+        auto c = new Command();
+        c->commandId = groupName;
+        c->command = configGroup.readEntry("Command", QString());
+        c->osdMessage = configGroup.readEntry("OsdMessage", QString());
+        c->type = configGroup.readEntry("Type", QString());
+        c->order = configGroup.readEntry("Order", 0);
+        m_customCommands << c;
     }
+
+    std::sort(m_customCommands.begin(), m_customCommands.end(), [=](Command *c1, Command *c2) {
+        return c1->order < c2->order;
+    });
+
     endInsertRows();
+
+    connect(this, &QAbstractListModel::rowsMoved, this, [=]() {
+        for (int i = 0; i < m_customCommands.size(); ++i) {
+            auto configGroup = m_customCommandsConfig->group(m_customCommands[i]->commandId);
+            configGroup.writeEntry("Order", i);
+            configGroup.sync();
+        }
+    });
 }
 
 int CustomCommandsModel::rowCount(const QModelIndex &parent) const
@@ -92,6 +102,7 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
+    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Order"), rowCount());
     m_customCommandsConfig->group(QString()).writeEntry(QStringLiteral("Counter"), counter + 1);
     m_customCommandsConfig->sync();
 
