@@ -27,6 +27,11 @@ SettingsBasePage {
         Edit
     }
 
+    Action {
+        shortcut: "esc"
+        onTriggered: applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+    }
+
     GridLayout {
         columns: 2
 
