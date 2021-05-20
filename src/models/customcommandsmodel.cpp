@@ -3,7 +3,6 @@
 #include "_debug.h"
 
 #include <KConfigGroup>
-#include <QCollator>
 
 CustomCommandsModel::CustomCommandsModel(QObject *parent)
     : QAbstractListModel(parent)
