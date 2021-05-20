@@ -75,6 +75,8 @@ void CustomCommandsModel::moveRows(int oldIndex, int newIndex)
     } else {
         beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex);
     }
+    Command *c = m_customCommands.takeAt(oldIndex);
+    m_customCommands.insert(newIndex, c);
     endMoveRows();
 }
 
