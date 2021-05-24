@@ -109,17 +109,35 @@ SettingsBasePage {
 
         Item {
             height: seekMediumStep.height
-            SpinBox {
-                id: seekMediumStep
-                editable: true
-                from: 0
-                to: 100
-                value: GeneralSettings.seekMediumStep
-                onValueChanged: {
-                    GeneralSettings.seekMediumStep = seekMediumStep.value
-                    GeneralSettings.save()
+            RowLayout {
+
+                SpinBox {
+                    id: seekMediumStep
+                    editable: true
+                    from: 0
+                    to: 100
+                    value: GeneralSettings.seekMediumStep
+                    onValueChanged: {
+                        GeneralSettings.seekMediumStep = seekMediumStep.value
+                        GeneralSettings.save()
+                    }
+                }
+
+                ToolButton {
+                    icon.name: "documentinfo"
+                    checkable: true
+                    checked: false
+
+                    ToolTip {
+                        text: i18n("This is also used for mouse wheel seeking, when mouse is over the progress bar")
+                        visible: parent.checked
+                        delay: 0
+                        timeout: -1
+                        closePolicy: Popup.NoAutoClose
+                    }
                 }
             }
+
             Layout.fillWidth: true
         }
 

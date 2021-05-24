@@ -95,6 +95,14 @@ Slider {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
                 progressBarToolTip.y = root.height
             }
+
+            onWheel: {
+                if (wheel.angleDelta.y > 0) {
+                    actions["seekForwardMediumAction"].trigger()
+                } else if (wheel.angleDelta.y) {
+                    actions["seekBackwardMediumAction"].trigger()
+                }
+            }
         }
     }
 
