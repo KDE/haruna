@@ -6,23 +6,24 @@
 
 #include "_debug.h"
 #include "application.h"
+#include "audiosettings.h"
+#include "customcommandsmodel.h"
+#include "generalsettings.h"
 #include "haction.h"
 #include "lockmanager.h"
-#include "mpvobject.h"
-#include "audiosettings.h"
-#include "generalsettings.h"
-#include "mousesettings.h"
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
+#include "mousesettings.h"
+#include "mpvobject.h"
 #include "playbacksettings.h"
-#include "playlistsettings.h"
-#include "subtitlessettings.h"
-#include "videosettings.h"
 #include "playlistitem.h"
 #include "playlistmodel.h"
+#include "playlistsettings.h"
 #include "subtitlesfoldersmodel.h"
+#include "subtitlessettings.h"
 #include "thumbnailimageprovider.h"
 #include "tracksmodel.h"
+#include "videosettings.h"
 #include "worker.h"
 
 #include <clocale>
@@ -30,24 +31,22 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCoreApplication>
-#include <QGuiApplication>
 #include <QDir>
 #include <QDBusConnection>
 #include <QFileInfo>
+#include <QGuiApplication>
+#include <QMimeDatabase>
 #include <QPointer>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickStyle>
 #include <QQuickView>
 #include <QStandardPaths>
-#include <QStyleFactory>
 #include <QStyle>
+#include <QStyleFactory>
 #include <QThread>
-#include <QQmlEngine>
-#include <QMimeDatabase>
-#include <customcommandsmodel.h>
-#include <KTreeWidgetSearchLine>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -55,9 +54,10 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KFileMetaData/Properties>
-#include <KI18n/KLocalizedString>
+#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KShortcutsDialog>
+#include <KTreeWidgetSearchLine>
 
 static QApplication *createApplication(int &argc, char **argv, const QString &applicationName)
 {
