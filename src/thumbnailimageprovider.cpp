@@ -47,8 +47,20 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
         }, Qt::QueuedConnection);
 
         connect(job, &KIO::PreviewJob::failed, this, [=] (const KFileItem &item) {
-            Q_UNUSED(item);
-            DEBUG << "Failed to create thumbnail";
+            DEBUG << "Failed to create thumbnail" << item.name();
+
+            QString iconName;
+            if (mimetype.startsWith("video/")) {
+                iconName = QStringLiteral("video-x-generic");
+            } else if (mimetype.startsWith("audio/")) {
+                iconName = QStringLiteral("audio-x-generic");
+            } else {
+                return;
+            }
+            auto icon = QIcon::fromTheme(iconName).pixmap(requestedSize);
+            m_texture = QQuickTextureFactory::textureFactoryForImage(icon.toImage());
+
+            emit finished();
         });
     }
     if (QUrl(id).scheme() == "http" || QUrl(id).scheme() == "https") {

@@ -94,7 +94,7 @@ void PlayListModel::getVideos(QString path)
             QFileInfo fileInfo(file);
             QMimeDatabase db;
             QMimeType type = db.mimeTypeForFile(file);
-            if (fileInfo.exists() && type.name().startsWith("video/")) {
+            if (fileInfo.exists() && (type.name().startsWith("video/") || type.name().startsWith("audio/"))) {
                 videoFiles.append(fileInfo.absoluteFilePath());
             }
         }

@@ -288,7 +288,7 @@ MpvObject {
                 command(["sub-add", drop.urls[0], "select"])
             }
 
-            if (app.mimeType(drop.urls[0]).startsWith("video/")) {
+            if (app.mimeType(drop.urls[0]).startsWith("video/") || app.mimeType(drop.urls[0]).startsWith("audio/")) {
                 window.openFile(drop.urls[0], true, PlaylistSettings.loadSiblings)
             }
         }
