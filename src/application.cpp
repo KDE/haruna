@@ -157,8 +157,8 @@ void Application::setupAboutData()
     m_aboutData.setShortDescription(i18n("A configurable video player."));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
     m_aboutData.setCopyrightStatement(i18n("(c) 2019-2021"));
-    m_aboutData.setHomepage(QStringLiteral("https://github.com/g-fb/haruna"));
-    m_aboutData.setBugAddress(QStringLiteral("https://github.com/g-fb/haruna/issues").toUtf8());
+    m_aboutData.setHomepage(QStringLiteral("https://invent.kde.org/multimedia/haruna"));
+    m_aboutData.setBugAddress(QStringLiteral("https://bugs.kde.org").toUtf8());
     m_aboutData.setDesktopFileName("org.kde.haruna");
 
     m_aboutData.addAuthor(i18n("George Florea Bănuș"),
