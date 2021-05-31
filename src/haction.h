@@ -9,9 +9,14 @@
 
 #include <QAction>
 
+/*
+ * Needed because QAction fails to trigger for non english languages
+ */
+
 class HAction : public QAction
 {
     Q_OBJECT
+    Q_PROPERTY(QString shortcutName READ shortcutName NOTIFY changed)
 public:
     explicit HAction(QObject *parent = nullptr);
 

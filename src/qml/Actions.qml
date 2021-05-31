@@ -18,7 +18,7 @@ QtObject {
         id: openContextMenuAction
         property var qaction: app.action("openContextMenu")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["openContextMenuAction"] = openContextMenuAction
@@ -30,7 +30,7 @@ QtObject {
         id: togglePlaylistAction
         property var qaction: app.action("togglePlaylist")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["togglePlaylistAction"] = togglePlaylistAction
@@ -48,7 +48,7 @@ QtObject {
         id: volumeUpAction
         property var qaction: app.action("volumeUp")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["volumeUpAction"] = volumeUpAction
@@ -63,7 +63,7 @@ QtObject {
         id: volumeDownAction
         property var qaction: app.action("volumeDown")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["volumeDownAction"] = volumeDownAction
@@ -78,7 +78,7 @@ QtObject {
         id: muteAction
         property var qaction: app.action("mute")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["muteAction"] = muteAction
@@ -99,7 +99,7 @@ QtObject {
         id: playNextAction
         property var qaction: app.action("playNext")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["playNextAction"] = playNextAction
@@ -125,7 +125,7 @@ QtObject {
         id: playPreviousAction
         property var qaction: app.action("playPrevious")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["playPreviousAction"] = playPreviousAction
@@ -145,7 +145,7 @@ QtObject {
         id: openAction
         property var qaction: app.action("openFile")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["openAction"] = openAction
@@ -157,7 +157,7 @@ QtObject {
         id: openUrlAction
         property var qaction: app.action("openUrl")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["openUrlAction"] = openUrlAction
@@ -175,7 +175,7 @@ QtObject {
         id: aboutHarunaAction
         property var qaction: app.action("aboutHaruna")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["aboutHarunaAction"] = aboutHarunaAction
@@ -187,7 +187,7 @@ QtObject {
         id: seekForwardSmallAction
         property var qaction: app.action("seekForwardSmall")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekForwardSmallAction"] = seekForwardSmallAction
@@ -199,7 +199,7 @@ QtObject {
         id: seekBackwardSmallAction
         property var qaction: app.action("seekBackwardSmall")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekBackwardSmallAction"] = seekBackwardSmallAction
@@ -211,7 +211,7 @@ QtObject {
         id: seekForwardMediumAction
         property var qaction: app.action("seekForwardMedium")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekForwardMediumAction"] = seekForwardMediumAction
@@ -223,7 +223,7 @@ QtObject {
         id: seekBackwardMediumAction
         property var qaction: app.action("seekBackwardMedium")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekBackwardMediumAction"] = seekBackwardMediumAction
@@ -235,7 +235,7 @@ QtObject {
         id: seekForwardBigAction
         property var qaction: app.action("seekForwardBig")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekForwardBigAction"] = seekForwardBigAction
@@ -247,7 +247,7 @@ QtObject {
         id: seekBackwardBigAction
         property var qaction: app.action("seekBackwardBig")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekBackwardBigAction"] = seekBackwardBigAction
@@ -259,7 +259,7 @@ QtObject {
         id: seekPreviousChapterAction
         property var qaction: app.action("seekPreviousChapter")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekPreviousChapterAction"] = seekPreviousChapterAction
@@ -273,7 +273,7 @@ QtObject {
         id: seekNextChapterAction
         property var qaction: app.action("seekNextChapter")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekNextChapterAction"] = seekNextChapterAction
@@ -294,7 +294,7 @@ QtObject {
         id: seekNextSubtitleAction
         property var qaction: app.action("seekNextSubtitle")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekNextSubtitleAction"] = seekNextSubtitleAction
@@ -312,7 +312,7 @@ QtObject {
         id: seekPrevSubtitleAction
         property var qaction: app.action("seekPreviousSubtitle")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["seekPrevSubtitleAction"] = seekPrevSubtitleAction
@@ -330,7 +330,7 @@ QtObject {
         id: frameStepAction
         property var qaction: app.action("frameStep")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["frameStepAction"] = frameStepAction
@@ -342,7 +342,7 @@ QtObject {
         id: frameBackStepAction
         property var qaction: app.action("frameBackStep")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["frameBackStepAction"] = frameBackStepAction
@@ -354,7 +354,7 @@ QtObject {
         id: increasePlayBackSpeedAction
         property var qaction: app.action("increasePlayBackSpeed")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["increasePlayBackSpeedAction"] = increasePlayBackSpeedAction
@@ -369,7 +369,7 @@ QtObject {
         id: decreasePlayBackSpeedAction
         property var qaction: app.action("decreasePlayBackSpeed")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["decreasePlayBackSpeedAction"] = decreasePlayBackSpeedAction
@@ -384,7 +384,7 @@ QtObject {
         id: resetPlayBackSpeedAction
         property var qaction: app.action("resetPlayBackSpeed")
         text: qaction.text
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
 
         Component.onCompleted: list["resetPlayBackSpeedAction"] = resetPlayBackSpeedAction
@@ -411,7 +411,7 @@ QtObject {
         property var qaction: app.action("options_configure_keybinding")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["configureShortcutsAction"] = configureShortcutsAction
 
@@ -423,7 +423,7 @@ QtObject {
         property var qaction: app.action("file_quit")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["quitApplicationAction"] = quitApplicationAction
 
@@ -438,7 +438,7 @@ QtObject {
         property var qaction: app.action("configure")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["configureAction"] = configureAction
 
@@ -452,7 +452,7 @@ QtObject {
         property var qaction: app.action("subtitleQuicken")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitleQuickenAction"] = subtitleQuickenAction
 
@@ -467,7 +467,7 @@ QtObject {
         property var qaction: app.action("subtitleDelay")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitleDelayAction"] = subtitleDelayAction
 
@@ -482,7 +482,7 @@ QtObject {
         property var qaction: app.action("subtitleToggle")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitleToggleAction"] = subtitleToggleAction
 
@@ -499,7 +499,7 @@ QtObject {
         property var qaction: app.action("audioCycleUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["audioCycleUpAction"] = audioCycleUpAction
 
@@ -528,7 +528,7 @@ QtObject {
         property var qaction: app.action("audioCycleDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["audioCycleDownAction"] = audioCycleDownAction
 
@@ -557,7 +557,7 @@ QtObject {
         property var qaction: app.action("subtitleCycleUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitleCycleUpAction"] = subtitleCycleUpAction
 
@@ -581,7 +581,7 @@ QtObject {
         property var qaction: app.action("subtitleCycleDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitleCycleDownAction"] = subtitleCycleDownAction
 
@@ -605,7 +605,7 @@ QtObject {
         property var qaction: app.action("contrastUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["contrastUpAction"] = contrastUpAction
 
@@ -620,7 +620,7 @@ QtObject {
         property var qaction: app.action("contrastDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["contrastDownAction"] = contrastDownAction
 
@@ -635,7 +635,7 @@ QtObject {
         property var qaction: app.action("contrastReset")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["contrastResetAction"] = contrastResetAction
 
@@ -650,7 +650,7 @@ QtObject {
         property var qaction: app.action("brightnessUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["brightnessUpAction"] = brightnessUpAction
 
@@ -665,7 +665,7 @@ QtObject {
         property var qaction: app.action("brightnessDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["brightnessDownAction"] = brightnessDownAction
 
@@ -680,7 +680,7 @@ QtObject {
         property var qaction: app.action("brightnessReset")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["brightnessResetAction"] = brightnessResetAction
 
@@ -694,7 +694,7 @@ QtObject {
         property var qaction: app.action("gammaUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["gammaUpAction"] = gammaUpAction
 
@@ -709,7 +709,7 @@ QtObject {
         property var qaction: app.action("gammaDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["gammaDownAction"] = gammaDownAction
 
@@ -724,7 +724,7 @@ QtObject {
         property var qaction: app.action("gammaReset")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["gammaResetAction"] = gammaResetAction
 
@@ -738,7 +738,7 @@ QtObject {
         property var qaction: app.action("saturationUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["saturationUpAction"] = saturationUpAction
 
@@ -753,7 +753,7 @@ QtObject {
         property var qaction: app.action("saturationDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["saturationDownAction"] = saturationDownAction
 
@@ -768,7 +768,7 @@ QtObject {
         property var qaction: app.action("saturationReset")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["saturationResetAction"] = saturationResetAction
 
@@ -783,7 +783,7 @@ QtObject {
         property var qaction: app.action("zoomIn")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["zoomInAction"] = zoomInAction
 
@@ -799,7 +799,7 @@ QtObject {
         property var qaction: app.action("zoomOut")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["zoomOutAction"] = zoomOutAction
 
@@ -814,7 +814,7 @@ QtObject {
         property var qaction: app.action("zoomReset")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["zoomResetAction"] = zoomResetAction
 
@@ -830,7 +830,7 @@ QtObject {
         property var qaction: app.action("videoPanXLeft")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["videoPanXLeftAction"] = videoPanXLeftAction
 
@@ -845,7 +845,7 @@ QtObject {
         property var qaction: app.action("videoPanXRight")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["videoPanXRightAction"] = videoPanXRightAction
 
@@ -860,7 +860,7 @@ QtObject {
         property var qaction: app.action("videoPanYUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["videoPanYUpAction"] = videoPanYUpAction
 
@@ -875,7 +875,7 @@ QtObject {
         property var qaction: app.action("videoPanYDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["videoPanYDownAction"] = videoPanYDownAction
 
@@ -891,7 +891,7 @@ QtObject {
         property var qaction: app.action("toggleFullscreen")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["toggleFullscreenAction"] = toggleFullscreenAction
 
@@ -905,7 +905,7 @@ QtObject {
         property var qaction: app.action("toggleMenuBar")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["toggleMenuBarAction"] = toggleMenuBarAction
 
@@ -917,7 +917,7 @@ QtObject {
         property var qaction: app.action("toggleHeader")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["toggleHeaderAction"] = toggleHeaderAction
 
@@ -929,7 +929,7 @@ QtObject {
         property var qaction: app.action("screenshot")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["screenshotAction"] = screenshotAction
 
@@ -941,7 +941,7 @@ QtObject {
         property var qaction: app.action("setLoop")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["setLoopAction"] = setLoopAction
 
@@ -975,7 +975,7 @@ QtObject {
         property var qaction: app.action("increaseSubtitleFontSize")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["increaseSubtitleFontSizeAction"] = increaseSubtitleFontSizeAction
 
@@ -990,7 +990,7 @@ QtObject {
         property var qaction: app.action("decreaseSubtitleFontSize")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["decreaseSubtitleFontSizeAction"] = decreaseSubtitleFontSizeAction
 
@@ -1005,7 +1005,7 @@ QtObject {
         property var qaction: app.action("subtitlePositionUp")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitlePositionUpAction"] = subtitlePositionUpAction
 
@@ -1019,7 +1019,7 @@ QtObject {
         property var qaction: app.action("subtitlePositionDown")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["subtitlePositionDownAction"] = subtitlePositionDownAction
 
@@ -1033,7 +1033,7 @@ QtObject {
         property var qaction: app.action("toggleDeinterlacing")
         text: qaction.text
         icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName()
+        shortcut: qaction.shortcutName
 
         Component.onCompleted: list["toggleDeinterlacingAction"] = toggleDeinterlacingAction
 

@@ -94,7 +94,7 @@ Kirigami.ApplicationWindow {
         delegate: Action {
             property var qaction: app.action(model.commandId)
             text: qaction.text
-            shortcut: qaction.shortcutName()
+            shortcut: qaction.shortcutName
             onTriggered: {
                 mpv.userCommand(model.command)
                 osd.message(mpv.command(["expand-text", model.osdMessage]))
