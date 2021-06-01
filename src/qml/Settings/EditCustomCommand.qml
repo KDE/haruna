@@ -27,6 +27,9 @@ SettingsBasePage {
         Edit
     }
 
+    hasHelp: true
+    helpFile: ":/CustomCommandsSettings.html"
+
     Action {
         shortcut: "esc"
         onTriggered: applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")

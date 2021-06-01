@@ -15,8 +15,8 @@ import Haruna.Components 1.0
 SettingsBasePage {
     id: root
 
-    hasHelp: false
-    helpFile: ""
+    hasHelp: true
+    helpFile: ":/CustomCommandsSettings.html"
 
     Component {
         id: customCommandDelegate
