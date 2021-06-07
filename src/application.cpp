@@ -64,7 +64,7 @@ static QApplication *createApplication(int &argc, char **argv, const QString &ap
     QApplication::setOrganizationDomain("georgefb.com");
     QApplication::setApplicationDisplayName("Haruna - Video Player");
     QApplication::setApplicationVersion(Application::version());
-    QApplication::setWindowIcon(QIcon::fromTheme("com.georgefb.haruna"));
+    QApplication::setWindowIcon(QIcon::fromTheme("org.kde.haruna"));
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
     QQuickStyle::setFallbackStyle(QStringLiteral("Fusion"));
@@ -153,7 +153,7 @@ void Application::setupAboutData()
     m_aboutData.setCopyrightStatement(i18n("(c) 2019-2021"));
     m_aboutData.setHomepage(QStringLiteral("https://github.com/g-fb/haruna"));
     m_aboutData.setBugAddress(QStringLiteral("https://github.com/g-fb/haruna/issues").toUtf8());
-    m_aboutData.setDesktopFileName("com.georgefb.haruna");
+    m_aboutData.setDesktopFileName("org.kde.haruna");
 
     m_aboutData.addAuthor(i18n("George Florea Bănuș"),
                         i18n("Developer"),
@@ -189,25 +189,25 @@ void Application::registerQmlTypes()
 void Application::setupQmlSettingsTypes()
 {
     auto audioProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return AudioSettings::self(); };
-    qmlRegisterSingletonType<AudioSettings>("com.georgefb.haruna", 1, 0, "AudioSettings", audioProvider);
+    qmlRegisterSingletonType<AudioSettings>("org.kde.haruna", 1, 0, "AudioSettings", audioProvider);
 
     auto generalProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return GeneralSettings::self(); };
-    qmlRegisterSingletonType<GeneralSettings>("com.georgefb.haruna", 1, 0, "GeneralSettings", generalProvider);
+    qmlRegisterSingletonType<GeneralSettings>("org.kde.haruna", 1, 0, "GeneralSettings", generalProvider);
 
     auto mouseProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return MouseSettings::self(); };
-    qmlRegisterSingletonType<MouseSettings>("com.georgefb.haruna", 1, 0, "MouseSettings", mouseProvider);
+    qmlRegisterSingletonType<MouseSettings>("org.kde.haruna", 1, 0, "MouseSettings", mouseProvider);
 
     auto playbackProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return PlaybackSettings::self(); };
-    qmlRegisterSingletonType<PlaybackSettings>("com.georgefb.haruna", 1, 0, "PlaybackSettings", playbackProvider);
+    qmlRegisterSingletonType<PlaybackSettings>("org.kde.haruna", 1, 0, "PlaybackSettings", playbackProvider);
 
     auto playlistProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return PlaylistSettings::self(); };
-    qmlRegisterSingletonType<PlaylistSettings>("com.georgefb.haruna", 1, 0, "PlaylistSettings", playlistProvider);
+    qmlRegisterSingletonType<PlaylistSettings>("org.kde.haruna", 1, 0, "PlaylistSettings", playlistProvider);
 
     auto subtitlesProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return SubtitlesSettings::self(); };
-    qmlRegisterSingletonType<SubtitlesSettings>("com.georgefb.haruna", 1, 0, "SubtitlesSettings", subtitlesProvider);
+    qmlRegisterSingletonType<SubtitlesSettings>("org.kde.haruna", 1, 0, "SubtitlesSettings", subtitlesProvider);
 
     auto videoProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return VideoSettings::self(); };
-    qmlRegisterSingletonType<VideoSettings>("com.georgefb.haruna", 1, 0, "VideoSettings", videoProvider);
+    qmlRegisterSingletonType<VideoSettings>("org.kde.haruna", 1, 0, "VideoSettings", videoProvider);
 }
 
 void Application::setupQmlContextProperties()

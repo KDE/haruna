@@ -12,7 +12,7 @@ import QtGraphicalEffects 1.12
 import Qt.labs.platform 1.0 as Platform
 
 import org.kde.kirigami 2.11 as Kirigami
-import com.georgefb.haruna 1.0
+import org.kde.haruna 1.0
 
 import mpv 1.0
 import "Menus"

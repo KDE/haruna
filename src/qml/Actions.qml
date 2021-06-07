@@ -7,7 +7,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-import com.georgefb.haruna 1.0
+import org.kde.haruna 1.0
 
 QtObject {
     id: root

@@ -9,7 +9,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 import org.kde.kirigami 2.11 as Kirigami
-import com.georgefb.haruna 1.0
+import org.kde.haruna 1.0
 import Haruna.Components 1.0
 
 ToolBar {
