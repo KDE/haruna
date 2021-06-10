@@ -82,7 +82,7 @@ these are just some features that set Haruna apart from others players
 # Build
 
 ```
-git clone https://github.com/g-fb/haruna
+git clone https://invent.kde.org/multimedia/haruna.git
 cd haruna && mkdir build && cd build
 cmake ..
 cmake --build .
