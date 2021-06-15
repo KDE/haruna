@@ -71,7 +71,7 @@ Kirigami.Page
             page: "qrc:/Mouse.qml"
         }
         ListElement {
-            name: "Custom properties"
+            name: "Custom commands"
             iconName: "configure"
             page: "qrc:/CustomCommands.qml"
         }
