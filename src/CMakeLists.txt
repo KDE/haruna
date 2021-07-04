@@ -53,6 +53,7 @@ target_link_libraries(haruna PRIVATE
     KF5::ConfigCore
     KF5::ConfigGui
     KF5::CoreAddons
+    KF5::DocTools
     KF5::FileMetaData
     KF5::I18n
     KF5::IconThemes

@@ -17,6 +17,7 @@ SettingsBasePage {
 
     hasHelp: true
     helpFile: ":/CustomCommandsSettings.html"
+    docPage: "help:/haruna/CustomCommandsSettings.html"
 
     Component {
         id: customCommandDelegate

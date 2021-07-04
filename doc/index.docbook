@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY haruna "<application>Haruna</application>">
+<!ENTITY i18n-translatable-entity "<application>Haruna</application>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE">
+]>
+
+<book id="haruna" lang="&language;">
+
+    <bookinfo>
+        <title>The &haruna; Handbook</title>
+
+        <authorgroup>
+            <author>
+                <personname>
+                    <firstname>George</firstname>
+                    <surname>Florea Bănuș</surname>
+                </personname>
+                <email>georgefb899@gmail.com</email>
+            </author>
+        </authorgroup>
+
+        <copyright>
+            <year>2019-2021</year>
+            <holder>George Florea Bănuș</holder>
+        </copyright>
+
+        <legalnotice>&CCBYSA4Notice;</legalnotice>
+        <date>2021-06-12</date>
+        <releaseinfo>Haruna 0.6.3</releaseinfo>
+
+        <abstract>
+            <para>Haruna is an open source video player built with Qt/QML and libmpv.</para>
+        </abstract>
+
+        <keywordset>
+            <keyword>Haruna</keyword>
+            <keyword>KDE</keyword>
+            <keyword>kdemultimedia</keyword>
+            <keyword>video</keyword>
+            <keyword>movie</keyword>
+        </keywordset>
+    </bookinfo>
+
+    <chapter id="settings">
+        <title>Settings</title>
+        <para>Explains some of the more complex settings of Haruna.</para>
+        <section><title></title><para></para></section>
+
+        <section id="GeneralSettings">
+            <title>General</title>
+            <section>
+                <title>Breeze icon theme</title>
+                <para>When checked the application uses the Breeze icon theme.</para>
+                <para>When unchecked the application uses the system icon theme. Doesn't always work as expected.</para>
+            </section>
+
+            <section>
+                <title>GUI style</title>
+                <para>
+                    Allows to change the style of Qt Quick Controls (buttons, checkboxes etc.), to styles available on the system.
+                </para>
+            </section>
+        </section>
+
+        <section id="PlaybackSettings">
+            <title>Playback</title>
+            <section>
+                <title>Hardware decoding</title>
+                <para>It's recommended leave hardware decoding disabled.</para>
+                <para>If you want to enable it read <ulink url="https://mpv.io/manual/stable/#options-hwdec">https://mpv.io/manual/stable/#options-hwdec</ulink>
+                to understand which option is best for you.</para>
+            </section>
+
+            <section>
+                <title>Remember time position</title>
+                <para>Determines when to save and restore the position of previously played files.</para>
+                <itemizedlist>
+                    <listitem><para>-1: feature is disabled</para></listitem>
+                    <listitem><para>0: save for all files</para></listitem>
+                    <listitem><para>1-9999: save for files longer than the set value, in minutes</para></listitem>
+                </itemizedlist>
+            </section>
+
+            <section>
+                <title>Skip chapters</title>
+                <para>When enabled it automatically skips chapters containing certain words/characters.</para>
+                <para>The words/characters to skip are defined as a comma separated string.</para>
+                <para>The match is not exact, meaning <emphasis>op</emphasis> will match
+                words containing it like <emphasis>opening</emphasis>.</para>
+            </section>
+
+            <section>
+                <title>Youtube-dl format selection</title>
+                <para>
+                Haruna uses youtube-dl to play online videos. Some sites offer multiple versions of the video/audio (different codecs, resolution). This setting allows you to configure what version of the video/audio youtube-dl selects.
+                More info: <ulink url="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection">https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection</ulink>
+                </para>
+            </section>
+        </section>
+
+        <section id="VideoSettings">
+            <title>Video</title>
+            <section>
+                <title>Screenshot Template</title>
+                <para><ulink url="https://mpv.io/manual/stable/#screenshot">https://mpv.io/manual/stable/#screenshot</ulink></para>
+                <para>Specify the filename template used to save screenshots.
+                The template specifies the filename without file extension,
+                and can contain format specifiers, which will be substituted when taking a screenshot.
+                By default, the template is mpv-shot%n, which results in filenames like mpv-shot0012.png for example.</para>
+                <para>The template can start with a relative or absolute path, in order to specify a directory location where screenshots should be saved.</para>
+                <para>If the final screenshot filename points to an already existing file, the file will not be overwritten. The screenshot will either not be saved, or if the template contains %n, saved using different, newly generated filename.</para>
+                <para>Allowed format specifiers:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>%[#][0X]n</para>
+                        <para>A sequence number, padded with zeros to length X (default: 04). E.g. passing the format %04n will yield 0012 on the 12th screenshot. The number is incremented every time a screenshot is taken or if the file already exists. The length X must be in the range 0-9. With the optional # sign, mpv will use the lowest available number. For example, if you take three screenshots--0001, 0002, 0003--and delete the first two, the next two screenshots will not be 0004 and 0005, but 0001 and 0002 again.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%f</para>
+                        <para>Filename of the currently played video.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%F</para>
+                        <para>Same as %f, but strip the file extension, including the dot.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%x</para>
+                        <para>Directory path of the currently played video. If the video is not on the filesystem (but e.g. http://), this expand to an empty string.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%X{fallback}</para>
+                        <para>Same as %x, but if the video file is not on the filesystem, return the fallback string inside the {...}.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%p</para>
+                        <para>Current playback time, in the same format as used in the OSD. The result is a string of the form "HH:MM:SS". For example, if the video is at the time position 5 minutes and 34 seconds, %p will be replaced with "00:05:34".</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%P</para>
+                        <para>Similar to %p, but extended with the playback time in milliseconds. It is formatted as "HH:MM:SS.mmm", with "mmm" being the millisecond part of the playback time.</para>
+                        <para>Note</para>
+                        <para>This is a simple way for getting unique per-frame timestamps. (Frame numbers would be more intuitive, but are not easily implementable because container formats usually use time stamps for identifying frames.)</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%wX</para>
+                        <para>Specify the current playback time using the format string X. %p is like %wH:%wM:%wS, and %P is like %wH:%wM:%wS.%wT.</para>
+                        <para>Valid format specifiers:</para>
+                        <itemizedlist>
+                        <listitem>
+                            <para>%wH</para>
+                            <para>hour (padded with 0 to two digits)</para>
+                        </listitem>
+                        <listitem>
+                            <para>%wh</para>
+                            <para>hour (not padded)</para>
+                        </listitem>
+                        <listitem>
+                            <para>%wM</para>
+                            <para>minutes (00-59)</para>
+                        </listitem>
+                        <listitem>
+                            <para>%wm</para>
+                            <para>total minutes (includes hours, unlike %wM)</para>
+                        </listitem>
+                        <listitem>
+                            <para>%wS</para>
+                            <para>seconds (00-59)</para>
+                        </listitem>
+                        <listitem>
+                            <para>%ws</para>
+                            <para>total seconds (includes hours and minutes)</para>
+                        </listitem>
+                        <listitem>
+                            <para>%wf</para>
+                            <para>like %ws, but as float</para>
+                        </listitem>
+                        <listitem>
+                            <para>%wT</para>
+                            <para>milliseconds (000-999)</para>
+                        </listitem>
+                        </itemizedlist>
+                    </listitem>
+
+                    <listitem>
+                        <para>%tX</para>
+                        <para>Specify the current local date/time using the format X. This format specifier uses the UNIX strftime() function internally, and inserts the result of passing "%X" to strftime. For example, %tm will insert the number of the current month as number. You have to use multiple %tX specifiers to build a full date/time string.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%{prop[:fallback text]}</para>
+                        <para>Insert the value of the input property 'prop'. E.g. %{filename} is the same as %f. If the property does not exist or is not available, an error text is inserted, unless a fallback is specified.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para>%%</para>
+                        <para>Replaced with the % character itself.</para>
+                    </listitem>
+
+                </itemizedlist>
+            </section>
+        </section>
+
+        <section id="CustomCommandsSettings">
+            <title>Custom commands</title>
+            <section>
+                <title>Command</title>
+                <para>What mpv command to run, see <ulink url="https://mpv.io/manual/stable/#list-of-input-commands">MPV Commands</ulink> for a list of available commands.</para>
+                <para>Not all commands will work as some are specific for mpv.</para>
+                <para>Most useful are the commands to manipulate properties, like set, add, cycle.</para>
+                <para><emphasis>set</emphasis>: sets the value of a property <code>set volume-max 150</code>.</para>
+                <para><emphasis>add</emphasis>: increases/decreases the value of a property <code>add volume 15</code>, increases volume by 15. To decrease the value use <code>add volume -15</code>.</para>
+                <para><emphasis>cycle</emphasis>: cycle through the values of a property <code>cycle aid up</code>.</para>
+            </section>
+            <section>
+                <title>OSD message</title>
+                <para>An OSD message to display when triggering an action type custom command.</para>
+                <para>Use ${property_name} to display the value of a property Volume: ${volume}.</para>
+            </section>
+            <section>
+                <title>Keyboard shortcut</title>
+                <para>The command will be triggered with a shortcut. The shortcut can be set after saving.</para>
+            </section>
+            <section>
+                <title>Run at startup</title>
+                <para>The command will be run at application startup.</para>
+            </section>
+        </section>
+    </chapter>
+
+    <chapter id="credits">
+        <title>Credits and License</title>
+        <para>&haruna;</para>
+        <para>Program copyright 2019-2021 George Florea Bănuș</para>
+        <para>
+            Contributors:
+            <itemizedlist>
+                <listitem>
+                    <para>George Florea Bănuș <email>georgefb899@gmail.com</email></para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <para>
+            Documentation Copyright &copy; 2019-2021 George Florea Bănuș <email>georgefb899@gmail.com</email>
+        </para>
+
+    <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+    &underCCBYSA4; <!-- CC BY-SA 4.0: do not remove -->
+    &underGPL;     <!-- GPL License -->
+    </chapter>
+
+</book>
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

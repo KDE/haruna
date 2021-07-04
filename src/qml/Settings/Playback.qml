@@ -17,6 +17,7 @@ SettingsBasePage {
 
     hasHelp: true
     helpFile: ":/PlaybackSettings.html"
+    docPage: "help:/haruna/PlaybackSettings.html"
 
     GridLayout {
         id: content

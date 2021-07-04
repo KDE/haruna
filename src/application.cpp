@@ -31,6 +31,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCoreApplication>
+#include <QDesktopServices>
 #include <QDir>
 #include <QDBusConnection>
 #include <QFileInfo>
@@ -868,6 +869,11 @@ void Application::createUserAction(const QString &text)
     action->setText(text);
     m_collection.addAction(name, action);
     m_collection.readSettings(m_shortcuts);
+}
+
+void Application::openDocs(const QString &page)
+{
+    QDesktopServices::openUrl(QUrl(page));
 }
 
 void Application::setupUserActions()

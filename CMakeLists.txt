@@ -52,6 +52,10 @@ find_package(KF5CoreAddons)
 set_package_properties(KF5CoreAddons PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcoreaddons/html/index.html")
 
+find_package(KF5DocTools)
+set_package_properties(KF5DocTools PROPERTIES
+    DESCRIPTION "https://api.kde.org/frameworks/kdoctools/html/index.html")
+
 find_package(KF5FileMetaData)
 set_package_properties(KF5FileMetaData PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kfilemetadata/html/index.html")
@@ -82,3 +86,4 @@ feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 add_subdirectory(data)
 add_subdirectory(src)
+add_subdirectory(doc)

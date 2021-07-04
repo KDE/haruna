@@ -48,6 +48,7 @@ public:
     Q_INVOKABLE void activateColorScheme(const QString &name);
     Q_INVOKABLE void configureShortcuts(const QString &name = QString());
     Q_INVOKABLE void createUserAction(const QString &text);
+    Q_INVOKABLE void openDocs(const QString &page);
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();
