@@ -9,6 +9,7 @@
 #include "audiosettings.h"
 #include "customcommandsmodel.h"
 #include "generalsettings.h"
+#include "global.h"
 #include "haction.h"
 #include "lockmanager.h"
 #include "mediaplayer2.h"
@@ -85,7 +86,7 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     : m_app(createApplication(argc, argv, applicationName))
     , m_collection(this)
 {
-    m_config = KSharedConfig::openConfig("georgefb/haruna.conf");
+    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     m_shortcuts = new KConfigGroup(m_config, "Shortcuts");
     m_schemes = new KColorSchemeManager(this);
     m_systemDefaultStyle = m_app->style()->objectName();
@@ -866,8 +867,8 @@ void Application::setupActions(const QString &actionName)
 void Application::createUserAction(const QString &text)
 {
     KSharedConfig::Ptr m_customCommandsConfig;
-    m_customCommandsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-commands.conf",
-                                                    KConfig::SimpleConfig);
+    QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    m_customCommandsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     int counter = m_customCommandsConfig->group(QString()).readEntry("Counter", 0);
     const QString &name = QString("Command_%1").arg(counter);
 
@@ -885,8 +886,8 @@ void Application::openDocs(const QString &page)
 void Application::setupUserActions()
 {
     KSharedConfig::Ptr m_customCommandsConfig;
-    m_customCommandsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-commands.conf",
-                                                    KConfig::SimpleConfig);
+    QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    m_customCommandsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customCommandsConfig->groupList();
     for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customCommandsConfig->group(_group);

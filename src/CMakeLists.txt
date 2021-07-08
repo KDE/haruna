@@ -11,6 +11,7 @@ add_executable(haruna)
 target_sources(haruna
     PRIVATE
     application.cpp
+    global.cpp
     haction.cpp
     lockmanager.cpp
     main.cpp

@@ -3,12 +3,13 @@
 #include "_debug.h"
 
 #include <KConfigGroup>
+#include <global.h>
 
 CustomCommandsModel::CustomCommandsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_customCommandsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-commands.conf",
-                                                    KConfig::SimpleConfig);
+    QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    m_customCommandsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customCommandsConfig->groupList();
 
     beginInsertRows(QModelIndex(), 0, groups.size());

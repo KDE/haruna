@@ -13,6 +13,7 @@
 #include "playlistitem.h"
 #include "track.h"
 #include "tracksmodel.h"
+#include "global.h"
 
 #include <QCryptographicHash>
 #include <QDir>
@@ -137,8 +138,8 @@ MpvObject::MpvObject(QQuickItem * parent)
 
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
-    m_customPropsConfig = KSharedConfig::openConfig("georgefb/haruna-custom-properties.conf",
-                                                    KConfig::SimpleConfig);
+    QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    m_customPropsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customPropsConfig->groupList();
     for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customPropsConfig->group(_group);
@@ -653,8 +654,8 @@ void MpvObject::saveTimePosition()
 
     auto hash = md5(getProperty("path").toString());
     auto timePosition = getProperty("time-pos");
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
-    KConfig *config = new KConfig(configPath.append("/georgefb/watch-later/").append(hash));
+    auto configPath = Global::instance()->appConfigDirPath();
+    KConfig *config = new KConfig(configPath.append("/watch-later/").append(hash));
     config->group("").writeEntry("TimePosition", timePosition);
     config->sync();
 }
@@ -673,8 +674,8 @@ double MpvObject::loadTimePosition()
     }
 
     auto hash = md5(getProperty("path").toString());
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
-    KConfig *config = new KConfig(configPath.append("/georgefb/watch-later/").append(hash));
+    auto configPath = Global::instance()->appConfigDirPath();
+    KConfig *config = new KConfig(configPath.append("/watch-later/").append(hash));
     int position = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
 
     return position;
@@ -683,8 +684,8 @@ double MpvObject::loadTimePosition()
 void MpvObject::resetTimePosition()
 {
     auto hash = md5(getProperty("path").toString());
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
-    QFile f(configPath.append("/georgefb/watch-later/").append(hash));
+    auto configPath = Global::instance()->appConfigDirPath();
+    QFile f(configPath.append("/watch-later/").append(hash));
 
     if (f.exists()) {
         f.remove();

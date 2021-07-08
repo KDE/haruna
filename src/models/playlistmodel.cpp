@@ -15,11 +15,12 @@
 #include <QFileInfo>
 #include <QMimeDatabase>
 #include <QUrl>
+#include <global.h>
 
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_config = KSharedConfig::openConfig("georgefb/haruna.conf");
+    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     connect(this, &PlayListModel::videoAdded,
             Worker::instance(), &Worker::getMetaData);
 

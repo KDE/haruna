@@ -11,11 +11,12 @@
 #include <KConfig>
 #include <KConfigDialog>
 #include <KConfigGroup>
+#include <global.h>
 
 SubtitlesFoldersModel::SubtitlesFoldersModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_config = KSharedConfig::openConfig("georgefb/haruna.conf");
+    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     m_list = m_config->group("Subtitles").readPathEntry("Folders", QStringList());
 }
 
