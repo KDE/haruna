@@ -854,6 +854,12 @@ void Application::setupActions(const QString &actionName)
         m_collection.setDefaultShortcut(action, Qt::Key_D);
         m_collection.addAction(actionName, action);
     }
+    if (actionName == QStringLiteral("exitFullscreen")) {
+        auto action = new HAction();
+        action->setText(i18n("Exit Fullscreen"));
+        m_collection.setDefaultShortcut(action, Qt::Key_Escape);
+        m_collection.addAction(actionName, action);
+    }
     m_collection.readSettings(m_shortcuts);
 }
 

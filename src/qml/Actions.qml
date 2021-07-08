@@ -1042,4 +1042,18 @@ QtObject {
             osd.message(`Deinterlace: ${mpv.getProperty("deinterlace")}`)
         }
     }
+
+    property Action exitFullscreenAction: Action {
+        id: exitFullscreenAction
+        property var qaction: app.action("exitFullscreen")
+        text: qaction.text
+        icon.name: qaction.iconName()
+        shortcut: qaction.shortcutName
+
+        Component.onCompleted: list["exitFullscreenAction"] = exitFullscreenAction
+
+        onTriggered: {
+            window.toggleFullScreen()
+        }
+    }
 }
