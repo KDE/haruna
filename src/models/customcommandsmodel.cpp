@@ -141,6 +141,10 @@ void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
     m_customCommandsConfig->sync();
     m_customCommands.removeAt(row);
     endRemoveRows();
+
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
+    config->group("Shortcuts").deleteEntry(groupName);
+    config->sync();
 }
 
 ProxyCustomCommandsModel::ProxyCustomCommandsModel(QObject *parent)
