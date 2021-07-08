@@ -122,12 +122,16 @@ QVariantMap MediaPlayer2Player::Metadata()
         return QVariantMap();
     }
     QVariantMap metadata;
-    metadata[QStringLiteral("mpris:length")] = m_mpv->getProperty("duration").toDouble() * 1000 * 1000;
-    metadata[QStringLiteral("mpris:trackid")] = QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath("/com/georgefb/haruna"));
-    metadata[QStringLiteral("xesam:title")] = m_mpv->getProperty("filename").toString();
+    metadata.insert(QStringLiteral("mpris:length"),
+                    m_mpv->getProperty("duration").toDouble() * 1000 * 1000);
+    metadata.insert(QStringLiteral("mpris:trackid"),
+                    QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath("/org/kde/haruna")));
+    metadata.insert(QStringLiteral("xesam:title"),
+                    m_mpv->getProperty("filename").toString());
     QUrl url(m_mpv->getProperty("path").toString());
     url.setScheme("file");
-    metadata[QStringLiteral("xesam:url")] = url.toString();
+    metadata.insert(QStringLiteral("xesam:url"),
+                    url.toString());
 
     return metadata;
 }
