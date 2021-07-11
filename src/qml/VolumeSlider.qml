@@ -18,7 +18,7 @@ Slider {
     id: root
 
     from: 0
-    to: 100
+    to: mpv.getProperty("volume-max")
     value: mpv.volume
     implicitWidth: 100
     implicitHeight: 25
