@@ -22,6 +22,25 @@ class KConfigDialog;
 class KColorSchemeManager;
 class QAction;
 
+class ApplicationEventFilter : public QObject
+{
+    Q_OBJECT
+
+signals:
+    void applicationMouseLeave();
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) {
+        if (event->type() == QEvent::Leave) {
+            emit applicationMouseLeave();
+            return true;
+        } else {
+            // standard event processing
+            return QObject::eventFilter(obj, event);
+        }
+    }
+};
+
 class Application : public QObject
 {
     Q_OBJECT
@@ -56,6 +75,9 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static void hideCursor();
     Q_INVOKABLE static void showCursor();
+
+signals:
+    void qmlApplicationMouseLeave();
 
 private:
     void setupWorkerThread();

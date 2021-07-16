@@ -102,6 +102,15 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    Connections {
+        target: app
+        onQmlApplicationMouseLeave: {
+            if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
+                playList.state = "hidden"
+            }
+        }
+    }
+
     Platform.FileDialog {
         id: fileDialog
 

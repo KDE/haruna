@@ -91,6 +91,14 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     m_schemes = new KColorSchemeManager(this);
     m_systemDefaultStyle = m_app->style()->objectName();
 
+    // used to hide playlist when mouse leaves the application
+    // while moving between monitors while in fullscreen
+    auto *appEventFilter = new ApplicationEventFilter();
+    m_app->installEventFilter(appEventFilter);
+    QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave,
+                     this, &Application::qmlApplicationMouseLeave);
+
+
     setupUserActions();
 
     // register mpris dbus service
