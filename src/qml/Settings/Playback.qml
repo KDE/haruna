@@ -107,9 +107,9 @@ SettingsBasePage {
                     } else if (timePositionSaving.value === 0) {
                         return i18n("For all files")
                     } else if (timePositionSaving.value === 1) {
-                        return i18n("For files longer than %1 minute").arg(timePositionSaving.value)
+                        return i18n("For files longer than %1 minute", timePositionSaving.value)
                     } else {
-                        return i18n("For files longer than %1 minutes").arg(timePositionSaving.value)
+                        return i18n("For files longer than %1 minutes", timePositionSaving.value)
                     }
                 }
                 elide: Text.ElideRight
