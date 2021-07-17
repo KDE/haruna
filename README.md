@@ -4,6 +4,11 @@ SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
+### ⚠ Bugs and feature requests go to https://bugs.kde.org
+ℹ Issues are for tracking and discussing confirmed bugs/features. Non conforming issues will be closed.
+
+----
+
 #### Donate: [GitHub Sponsors](https://github.com/sponsors/g-fb) | [Liberapay](https://liberapay.com/gfb/) | [PayPal](https://paypal.me/georgefloreabanus) | [Patreon](https://www.patreon.com/georgefb)
 
 # Haruna Video Player
