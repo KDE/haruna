@@ -55,7 +55,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "volume", GeneralSettings.volumeStep])
-            osd.message(`Volume: ${parseInt(mpv.getProperty("volume"))}`)
+            osd.message(i18n("Volume: %1", parseInt(mpv.getProperty("volume"))))
         }
     }
 
@@ -70,7 +70,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "volume", -GeneralSettings.volumeStep])
-            osd.message(`Volume: ${parseInt(mpv.getProperty("volume"))}`)
+            osd.message(i18n("Volume: %1", parseInt(mpv.getProperty("volume"))))
         }
     }
 
@@ -361,7 +361,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "speed", "0.1"])
-            osd.message(`Speed: ${mpv.getProperty("speed").toFixed(2)}`)
+            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
         }
     }
 
@@ -376,7 +376,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "speed", "-0.1"])
-            osd.message(`Speed: ${mpv.getProperty("speed").toFixed(2)}`)
+            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
         }
     }
 
@@ -391,7 +391,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("speed", 1.0)
-            osd.message(`Speed: ${mpv.getProperty("speed").toFixed(2)}`)
+            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
          }
     }
 
@@ -458,7 +458,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") - 0.1)
-            osd.message(`Subtitle timing: ${mpv.getProperty("sub-delay").toFixed(2)}`)
+            osd.message(i18n("Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
         }
     }
 
@@ -473,7 +473,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") + 0.1)
-            osd.message(`Subtitle timing: ${mpv.getProperty("sub-delay").toFixed(2)}`)
+            osd.message(i18n("Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
         }
     }
 
@@ -488,7 +488,7 @@ QtObject {
 
         onTriggered: {
             const visible = mpv.getProperty("sub-visibility")
-            const message = visible ? "Subtitles off" : "Subtitles on"
+            const message = visible ? i18n("Subtitles off") : i18n("Subtitles on")
             mpv.setProperty("sub-visibility", !visible)
             osd.message(message)
         }
@@ -517,8 +517,7 @@ QtObject {
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                const message = `Audio: ${currentTrackId} (${track.lang})`
-                osd.message(message)
+                osd.message(i18n("Audio: %1 %2", currentTrackId, track.lang))
             }
         }
     }
@@ -546,8 +545,7 @@ QtObject {
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                const message = `Audio: ${currentTrackId} (${track.lang})`
-                osd.message(message)
+                osd.message(i18n("Audio: %1 %2", currentTrackId, track.lang))
             }
         }
     }
@@ -564,15 +562,14 @@ QtObject {
         onTriggered: {
             mpv.command(["cycle", "sid", "up"])
             const currentTrackId = mpv.getProperty("sid")
-            let message;
             if (currentTrackId === false) {
                 message = `Subtitle: None`
+                osd.message(i18n("Subtitle: None"))
             } else {
                 const tracks = mpv.getProperty("track-list")
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                message = `Subtitle: ${currentTrackId} (${track.lang})`
+                osd.message(i18n("Subtitle: %1 %2", currentTrackId, track.lang))
             }
-            osd.message(message)
         }
     }
 
@@ -588,15 +585,13 @@ QtObject {
         onTriggered: {
             mpv.command(["cycle", "sid", "down"])
             const currentTrackId = mpv.getProperty("sid")
-            let message;
             if (currentTrackId === false) {
-                message = `Subtitle: None`
+                osd.message(i18n("Subtitle: None"))
             } else {
                 const tracks = mpv.getProperty("track-list")
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                message = `Subtitle: ${currentTrackId} (${track.lang})`
+                osd.message(i18n("Subtitle: %1 %2", currentTrackId, track.lang))
             }
-            osd.message(message)
         }
     }
 
@@ -612,7 +607,7 @@ QtObject {
         onTriggered: {
             const contrast = parseInt(mpv.getProperty("contrast")) + 1
             mpv.setProperty("contrast", `${contrast}`)
-            osd.message(`Contrast: ${contrast}`)
+            osd.message(i18n("Contrast: %1", contrast))
         }
     }
     property Action contrastDownAction: Action {
@@ -627,7 +622,7 @@ QtObject {
         onTriggered: {
             const contrast = parseInt(mpv.getProperty("contrast")) - 1
             mpv.setProperty("contrast", `${contrast}`)
-            osd.message(`Contrast: ${contrast}`)
+            osd.message(i18n("Contrast: %1", contrast))
         }
     }
     property Action contrastResetAction: Action {
@@ -641,7 +636,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("contrast", `0`)
-            osd.message(`Contrast: 0`)
+            osd.message(i18n("Contrast: 0"))
         }
     }
 
@@ -657,7 +652,7 @@ QtObject {
         onTriggered: {
             const brightness = parseInt(mpv.getProperty("brightness")) + 1
             mpv.setProperty("brightness", `${brightness}`)
-            osd.message(`Brightness: ${brightness}`)
+            osd.message(i18n("Brightness: %1", brightness))
         }
     }
     property Action brightnessDownAction: Action {
@@ -672,7 +667,7 @@ QtObject {
         onTriggered: {
             const brightness = parseInt(mpv.getProperty("brightness")) - 1
             mpv.setProperty("brightness", `${brightness}`)
-            osd.message(`Brightness: ${brightness}`)
+            osd.message(i18n("Brightness: %1", brightness))
         }
     }
     property Action brightnessResetAction: Action {
@@ -686,7 +681,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("brightness", `0`)
-            osd.message(`Brightness: 0`)
+            osd.message(i18n("Brightness: 0"))
         }
     }
     property Action gammaUpAction: Action {
@@ -701,7 +696,7 @@ QtObject {
         onTriggered: {
             const gamma = parseInt(mpv.getProperty("gamma")) + 1
             mpv.setProperty("gamma", `${gamma}`)
-            osd.message(`Gamma: ${gamma}`)
+            osd.message(i18n("Gamma: %1", gamma))
         }
     }
     property Action gammaDownAction: Action {
@@ -716,7 +711,7 @@ QtObject {
         onTriggered: {
             const gamma = parseInt(mpv.getProperty("gamma")) - 1
             mpv.setProperty("gamma", `${gamma}`)
-            osd.message(`Gamma: ${gamma}`)
+            osd.message(i18n("Gamma: %1", gamma))
         }
     }
     property Action gammaResetAction: Action {
@@ -730,7 +725,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("gamma", `0`)
-            osd.message(`Gamma: 0`)
+            osd.message(i18n("Gamma: 0"))
         }
     }
     property Action saturationUpAction: Action {
@@ -745,7 +740,7 @@ QtObject {
         onTriggered: {
             const saturation = parseInt(mpv.getProperty("saturation")) + 1
             mpv.setProperty("saturation", `${saturation}`)
-            osd.message(`Saturation: ${saturation}`)
+            osd.message(i18n("Saturation: %1", saturation))
         }
     }
     property Action saturationDownAction: Action {
@@ -760,7 +755,7 @@ QtObject {
         onTriggered: {
             const saturation = parseInt(mpv.getProperty("saturation")) - 1
             mpv.setProperty("saturation", `${saturation}`)
-            osd.message(`Saturation: ${saturation}`)
+            osd.message(i18n("Saturation: %1", saturation))
         }
     }
     property Action saturationResetAction: Action {
@@ -774,7 +769,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("saturation", `0`)
-            osd.message(`Saturation: 0`)
+            osd.message(i18n("Saturation: 0"))
         }
     }
 
@@ -790,7 +785,7 @@ QtObject {
         onTriggered: {
             const zoom = mpv.getProperty("video-zoom") + 0.1
             mpv.setProperty("video-zoom", zoom)
-            osd.message(`Zoom: ${zoom.toFixed(2)}`)
+            osd.message(i18n("Zoom: %1", zoom.toFixed(2)))
         }
     }
 
@@ -806,7 +801,7 @@ QtObject {
         onTriggered: {
             const zoom = mpv.getProperty("video-zoom") - 0.1
             mpv.setProperty("video-zoom", zoom)
-            osd.message(`Zoom: ${zoom.toFixed(2)}`)
+            osd.message(i18n("Zoom: %1", zoom.toFixed(2)))
         }
     }
     property Action zoomResetAction: Action {
@@ -820,7 +815,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("video-zoom", 0)
-            osd.message(`Zoom: 0`)
+            osd.message(i18n("Zoom: 0"))
         }
     }
 
@@ -837,7 +832,7 @@ QtObject {
         onTriggered: {
             const pan = mpv.getProperty("video-pan-x") - 0.01
             mpv.setProperty("video-pan-x", pan)
-            osd.message(`Video pan x: ${pan.toFixed(2)}`)
+            osd.message(i18n("Video pan x: %1", pan.toFixed(2)))
         }
     }
     property Action videoPanXRightAction: Action {
@@ -852,7 +847,7 @@ QtObject {
         onTriggered: {
             const pan = mpv.getProperty("video-pan-x") + 0.01
             mpv.setProperty("video-pan-x", pan)
-            osd.message(`Video pan x: ${pan.toFixed(2)}`)
+            osd.message(i18n("Video pan x: %1", pan.toFixed(2)))
         }
     }
     property Action videoPanYUpAction: Action {
@@ -867,7 +862,7 @@ QtObject {
         onTriggered: {
             const pan = mpv.getProperty("video-pan-y") - 0.01
             mpv.setProperty("video-pan-y", pan)
-            osd.message(`Video pan x: ${pan.toFixed(2)}`)
+            osd.message(i18n("Video pan y: %1", pan.toFixed(2)))
         }
     }
     property Action videoPanYDownAction: Action {
@@ -882,7 +877,7 @@ QtObject {
         onTriggered: {
             const pan = mpv.getProperty("video-pan-y") + 0.01
             mpv.setProperty("video-pan-y", pan)
-            osd.message(`Video pan x: ${pan.toFixed(2)}`)
+            osd.message(i18n("Video pan y: %1", pan.toFixed(2)))
         }
     }
 
@@ -955,17 +950,17 @@ QtObject {
             if (!aIsSet && !bIsSet) {
                 mpv.setProperty("ab-loop-a", mpv.position)
                 footer.progressBar.loopIndicator.startPosition = mpv.position
-                osd.message("Loop start: " + app.formatTime(mpv.position))
+                osd.message(i18n("Loop start: %1", app.formatTime(mpv.position)))
             } else if (aIsSet && !bIsSet) {
                 mpv.setProperty("ab-loop-b", mpv.position)
                 footer.progressBar.loopIndicator.endPosition = mpv.position
-                osd.message(`Loop: ${app.formatTime(a)} - ${app.formatTime(mpv.position)}`)
+                osd.message(i18n("Loop: %1 - %2", app.formatTime(a), app.formatTime(mpv.position)))
             } else if (aIsSet && bIsSet) {
                 mpv.setProperty("ab-loop-a", "no")
                 mpv.setProperty("ab-loop-b", "no")
                 footer.progressBar.loopIndicator.startPosition = -1
                 footer.progressBar.loopIndicator.endPosition = -1
-                osd.message("Loop cleared")
+                osd.message(i18n("Loop cleared"))
             }
         }
     }
@@ -981,7 +976,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "sub-scale", "+0.1"])
-            osd.message(i18n("Subtitle scale: " + mpv.getProperty("sub-scale").toFixed(1)))
+            osd.message(i18n("Subtitle scale: %1", mpv.getProperty("sub-scale").toFixed(1)))
         }
     }
 
@@ -996,7 +991,7 @@ QtObject {
 
         onTriggered: {
             mpv.command(["add", "sub-scale", "-0.1"])
-            osd.message(i18n("Subtitle scale: " + mpv.getProperty("sub-scale").toFixed(1)))
+            osd.message(i18n("Subtitle scale: %1", mpv.getProperty("sub-scale").toFixed(1)))
         }
     }
 
@@ -1039,7 +1034,7 @@ QtObject {
 
         onTriggered: {
             mpv.setProperty("deinterlace", !mpv.getProperty("deinterlace"))
-            osd.message(`Deinterlace: ${mpv.getProperty("deinterlace")}`)
+            osd.message(i18n("Deinterlace: %1", mpv.getProperty("deinterlace")))
         }
     }
 
