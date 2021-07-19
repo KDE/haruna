@@ -117,7 +117,7 @@
                 and can contain format specifiers, which will be substituted when taking a screenshot.
                 By default, the template is mpv-shot%n, which results in filenames like mpv-shot0012.png for example.</para>
                 <para>The template can start with a relative or absolute path, in order to specify a directory location where screenshots should be saved.</para>
-                <para>If the final screenshot filename points to an already existing file, the file will not be overwritten. The screenshot will either not be saved, or if the template contains %n, saved using different, newly generated filename.</para>
+                <para>If the final screenshot filename points to an already existing file, the file will not be overwritten. The screenshot will either not be saved, or if the template contains %n, saved using a different, newly generated filename.</para>
                 <para>Allowed format specifiers:</para>
                 <itemizedlist>
                     <listitem>
@@ -137,7 +137,7 @@
 
                     <listitem>
                         <para>%x</para>
-                        <para>Directory path of the currently played video. If the video is not on the filesystem (but e.g. http://), this expand to an empty string.</para>
+                        <para>Directory path of the currently played video. If the video is not on the filesystem (but e.g. http://), this expands to an empty string.</para>
                     </listitem>
 
                     <listitem>
@@ -154,7 +154,7 @@
                         <para>%P</para>
                         <para>Similar to %p, but extended with the playback time in milliseconds. It is formatted as "HH:MM:SS.mmm", with "mmm" being the millisecond part of the playback time.</para>
                         <para>Note</para>
-                        <para>This is a simple way for getting unique per-frame timestamps. (Frame numbers would be more intuitive, but are not easily implementable because container formats usually use time stamps for identifying frames.)</para>
+                        <para>This is a simple way for getting unique per-frame timestamps. (Frame numbers would be more intuitive, but are not easily implementable because container formats usually use timestamps for identifying frames.)</para>
                     </listitem>
 
                     <listitem>
@@ -199,7 +199,7 @@
 
                     <listitem>
                         <para>%tX</para>
-                        <para>Specify the current local date/time using the format X. This format specifier uses the UNIX strftime() function internally, and inserts the result of passing "%X" to strftime. For example, %tm will insert the number of the current month as number. You have to use multiple %tX specifiers to build a full date/time string.</para>
+                        <para>Specify the current local date/time using the format X. This format specifier uses the UNIX strftime() function internally, and inserts the result of passing "%X" to strftime. For example, %tm will insert the number of the current month as a number. You have to use multiple %tX specifiers to build a full date/time string.</para>
                     </listitem>
 
                     <listitem>
