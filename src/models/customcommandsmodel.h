@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2021 George Florea Bănuș <georgefb899@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 #ifndef CUSTOMCOMMANDSMODEL_H
 #define CUSTOMCOMMANDSMODEL_H
 
