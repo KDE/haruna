@@ -19,6 +19,24 @@ SettingsBasePage {
     helpFile: ":/CustomCommandsSettings.html"
     docPage: "help:/haruna/CustomCommandsSettings.html"
 
+    ColumnLayout {
+        id: centerLayout
+
+        visible: customCommandsView.count === 0
+        anchors.centerIn: parent
+
+        Label {
+            text: i18n("No custom commands yet")
+            Layout.alignment: Qt.AlignCenter
+        }
+
+        Button {
+            text: i18n("&Add command")
+            onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
+            Layout.alignment: Qt.AlignCenter
+        }
+    }
+
     Component {
         id: customCommandDelegate
 
@@ -90,6 +108,8 @@ SettingsBasePage {
     }
 
     footer: ToolBar {
+        visible: customCommandsView.count > 0
+
         RowLayout {
             anchors.fill: parent
 
