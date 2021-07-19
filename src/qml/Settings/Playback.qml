@@ -24,9 +24,14 @@ SettingsBasePage {
 
         columns: 2
 
+        Label {
+            text: i18n("Hardware decoding")
+            Layout.alignment: Qt.AlignRight
+        }
+
         CheckBox {
             id: hwDecodingCheckBox
-            text: i18n("Use hardware decoding")
+            text: checked ? i18n("Enabled") : i18n("Disabled")
             checked: PlaybackSettings.useHWDecoding
             onCheckedChanged: {
                 mpv.hwDecoding = checked
@@ -34,6 +39,8 @@ SettingsBasePage {
                 PlaybackSettings.save()
             }
         }
+
+        Item { width: 1 }
 
         ComboBox {
             id: hwDecodingComboBox
@@ -117,21 +124,36 @@ SettingsBasePage {
             }
         }
 
+        Label {
+            text: i18n("Skip chapters")
+            Layout.alignment: Qt.AlignRight
+        }
+
         CheckBox {
             id: skipChaptersCheckBox
-            text: i18n("Skip chapters")
+            text: checked ? i18n("Enabled") : i18n("Disabled")
             checked: PlaybackSettings.skipChapters
             onCheckedChanged: {
                 PlaybackSettings.skipChapters = checked
                 PlaybackSettings.save()
             }
-            Layout.columnSpan: 2
+        }
+
+        Item { width: 1 }
+        CheckBox {
+            text: i18n("Show osd message on skip")
+            enabled: skipChaptersCheckBox.checked
+            checked: PlaybackSettings.showOsdOnSkipChapters
+            onCheckedChanged: {
+                PlaybackSettings.showOsdOnSkipChapters = checked
+                PlaybackSettings.save()
+            }
         }
 
         Label {
-            text: i18n("Skip chapters containing the following words")
+            text: i18n("Skip words")
             enabled: skipChaptersCheckBox.checked
-            Layout.columnSpan: 2
+            Layout.alignment: Qt.AlignRight
         }
 
         TextField {
@@ -143,22 +165,10 @@ SettingsBasePage {
                 PlaybackSettings.chaptersToSkip = text
                 PlaybackSettings.save()
             }
-            Layout.columnSpan: 2
 
             ToolTip {
-                text: i18n("Separate words with a comma")
+                text: i18n("Skip chapters containing these words. Comma separated list.")
             }
-        }
-
-        CheckBox {
-            text: i18n("Show an osd message when skipping chapters")
-            enabled: skipChaptersCheckBox.checked
-            checked: PlaybackSettings.showOsdOnSkipChapters
-            onCheckedChanged: {
-                PlaybackSettings.showOsdOnSkipChapters = checked
-                PlaybackSettings.save()
-            }
-            Layout.columnSpan: 2
         }
 
         // ------------------------------------
@@ -236,6 +246,7 @@ SettingsBasePage {
             Layout.fillWidth: true
         }
 
+        Item { width: 1 }
         TextField {
             id: ytdlFormatField
             text: PlaybackSettings.ytdlFormat
@@ -257,8 +268,9 @@ SettingsBasePage {
             }
 
             Layout.fillWidth: true
-            Layout.columnSpan: 2
         }
+
+        Item { width: 1 }
         TextEdit {
             text: i18n("Leave empty for default value: <i>bestvideo+bestaudio/best</i>")
             color: Kirigami.Theme.textColor
@@ -267,7 +279,6 @@ SettingsBasePage {
             textFormat: TextEdit.RichText
             selectByMouse: true
             Layout.fillWidth: true
-            Layout.columnSpan: 2
         }
         // ------------------------------------
         // END - Youtube-dl format settings
