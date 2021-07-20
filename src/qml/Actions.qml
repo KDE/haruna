@@ -1048,7 +1048,9 @@ QtObject {
         Component.onCompleted: list["exitFullscreenAction"] = exitFullscreenAction
 
         onTriggered: {
-            window.toggleFullScreen()
+            window.exitFullscreen()
+            app.showCursor()
+            playList.scrollPositionTimer.start()
         }
     }
 }

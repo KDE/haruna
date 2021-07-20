@@ -218,16 +218,19 @@ Kirigami.ApplicationWindow {
         if (!isFullScreen()) {
             window.showFullScreen()
         } else {
-            if (window.preFullScreenVisibility === Window.Windowed) {
-                window.showNormal()
-            }
-            if (window.preFullScreenVisibility === Window.Maximized) {
-                window.show()
-                window.showMaximized()
-            }
+            exitFullscreen()
         }
         app.showCursor()
         playList.scrollPositionTimer.start()
     }
 
+    function exitFullscreen() {
+        if (window.preFullScreenVisibility === Window.Windowed) {
+            window.showNormal()
+        }
+        if (window.preFullScreenVisibility === Window.Maximized) {
+            window.show()
+            window.showMaximized()
+        }
+    }
 }
