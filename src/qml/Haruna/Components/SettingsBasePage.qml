@@ -22,7 +22,7 @@ Kirigami.ScrollablePage {
     actions {
         contextualActions: [
             Kirigami.Action {
-                text: i18n("Help!")
+                text: i18n("Help")
                 iconName: "system-help"
                 Kirigami.Action {
                     text: i18n("Haruna help window (english only)")
@@ -30,7 +30,7 @@ Kirigami.ScrollablePage {
                     onTriggered: root.hasHelp ? helpWindow.show() : undefined
                 }
                 Kirigami.Action {
-                    text: i18n("KHelpCenter")
+                    text: i18n("Haruna handbook")
                     enabled: root.docPage !== ""
                     onTriggered: enabled ? app.openDocs(root.docPage) : undefined
                 }
