@@ -79,6 +79,7 @@ static QApplication *createApplication(int &argc, char **argv, const QString &ap
     }
 
     QApplication *app = new QApplication(argc, argv);
+    KLocalizedString::setApplicationDomain("haruna");
     return app;
 }
 
