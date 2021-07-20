@@ -255,19 +255,14 @@ void Application::setupQmlContextProperties()
 
 QUrl Application::configFilePath()
 {
-    auto configPath = QStandardPaths::writableLocation(m_config->locationType());
-    auto configFilePath = configPath.append(QStringLiteral("/")).append(m_config->name());
-    QUrl url(configFilePath);
+    QUrl url(Global::instance()->appConfigFilePath());
     url.setScheme("file");
     return url;
 }
 
 QUrl Application::configFolderPath()
 {
-    auto configPath = QStandardPaths::writableLocation(m_config->locationType());
-    auto configFilePath = configPath.append(QStringLiteral("/")).append(m_config->name());
-    QFileInfo fileInfo(configFilePath);
-    QUrl url(fileInfo.absolutePath());
+    QUrl url(Global::instance()->appConfigDirPath());
     url.setScheme("file");
     return url;
 }
