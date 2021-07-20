@@ -267,6 +267,12 @@ QUrl Application::configFolderPath()
     return url;
 }
 
+bool Application::configFolderExists()
+{
+    QFileInfo fi(Global::instance()->appConfigDirPath());
+    return fi.exists();
+}
+
 QString Application::version()
 {
     return QStringLiteral("0.6.3");

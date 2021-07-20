@@ -38,6 +38,8 @@ Kirigami.ScrollablePage {
             Kirigami.Action {
                 text: i18n("Open config ...")
                 iconName: "folder"
+                visible: app.configFolderExists()
+
                 Kirigami.Action {
                     text: i18n("File")
                     onTriggered: Qt.openUrlExternally(app.configFilePath)

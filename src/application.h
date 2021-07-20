@@ -55,6 +55,7 @@ public:
     int run();
     QUrl configFilePath();
     QUrl configFolderPath();
+    Q_INVOKABLE bool configFolderExists();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE QString argument(int key);
