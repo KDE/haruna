@@ -87,10 +87,11 @@ these are just some features that set Haruna apart from others players
 
 # Build
 
-```
+```bash
 git clone https://invent.kde.org/multimedia/haruna.git
-cd haruna && mkdir build && cd build
-cmake ..
-cmake --build .
-./src/haruna
+cd haruna
+# append `-D CMAKE_INSTALL_PREFIX:PATH=/your/custom/path` to install to a custom location
+cmake -B build -G Ninja
+cmake --build build
+cmake --install build
 ```
