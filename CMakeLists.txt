@@ -80,6 +80,9 @@ find_package(KF5XmlGui)
 set_package_properties(KF5XmlGui PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kxmlgui/html/index.html")
 
+find_package(YouTubeDl)
+set_package_properties(YouTubeDl PROPERTIES TYPE RUNTIME)
+
 #option(InstallColorSchemes "Installs breeze color schemes." OFF)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
