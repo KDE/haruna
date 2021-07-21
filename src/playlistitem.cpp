@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "_debug.h"
 #include "playlistitem.h"
 
 #include <QFileInfo>

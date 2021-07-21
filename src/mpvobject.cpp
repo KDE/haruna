@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "_debug.h"
 #include "mpvobject.h"
 #include "application.h"
 #include "generalsettings.h"
@@ -622,7 +621,7 @@ int MpvObject::setProperty(const QString &name, const QVariant &value, bool debu
 {
     auto result = mpv::qt::set_property(mpv, name, value);
     if (debug) {
-        DEBUG << mpv::qt::get_error(result);
+        qDebug() << mpv::qt::get_error(result);
     }
     return result;
 }
@@ -631,7 +630,7 @@ QVariant MpvObject::getProperty(const QString &name, bool debug)
 {
     auto result = mpv::qt::get_property(mpv, name);
     if (debug) {
-        DEBUG << mpv::qt::get_error(result);
+        qDebug() << mpv::qt::get_error(result);
     }
     return result;
 }

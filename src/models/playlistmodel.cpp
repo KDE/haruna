@@ -6,7 +6,6 @@
 
 #include "playlistmodel.h"
 #include "playlistitem.h"
-#include "_debug.h"
 #include "application.h"
 #include "worker.h"
 

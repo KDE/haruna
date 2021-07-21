@@ -5,7 +5,6 @@
  */
 
 #include "mediaplayer2player.h"
-#include "_debug.h"
 #include "mpvobject.h"
 
 #include <QDBusConnection>

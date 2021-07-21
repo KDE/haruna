@@ -6,8 +6,6 @@
 
 #include "customcommandsmodel.h"
 
-#include "_debug.h"
-
 #include <KConfigGroup>
 #include <global.h>
 

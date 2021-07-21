@@ -6,8 +6,6 @@
 
 #include "global.h"
 
-#include "_debug.h"
-
 #include <QFileInfo>
 
 Global* Global::sm_instance = nullptr;

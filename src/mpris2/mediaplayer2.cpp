@@ -5,7 +5,6 @@
  */
 
 #include "mediaplayer2.h"
-#include "_debug.h"
 
 #include <KAboutData>
 #include <QApplication>

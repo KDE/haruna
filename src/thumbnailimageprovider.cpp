@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "_debug.h"
 #include "thumbnailimageprovider.h"
 
 #include <KIO/PreviewJob>
@@ -47,7 +46,7 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
         }, Qt::QueuedConnection);
 
         connect(job, &KIO::PreviewJob::failed, this, [=] (const KFileItem &item) {
-            DEBUG << "Failed to create thumbnail" << item.name();
+            qDebug() << "Failed to create thumbnail" << item.name();
 
             QString iconName;
             if (mimetype.startsWith("video/")) {

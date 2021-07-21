@@ -8,6 +8,7 @@
 
 int main(int argc, char *argv[])
 {
+    qSetMessagePattern(QStringLiteral("%{function}() : %{message}\n"));
     Application app(argc, argv, "Haruna");
 
     return app.run();
