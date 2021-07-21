@@ -251,6 +251,8 @@ void Application::setupQmlContextProperties()
     m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomCommandsModel"), proxyCustomCommandsModel);
 
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
+    m_engine->rootContext()->setContextProperty(QStringLiteral("harunaAboutData"),
+                                                QVariant::fromValue(KAboutData::applicationData()));
 }
 
 QUrl Application::configFilePath()
@@ -506,7 +508,6 @@ void Application::setupActions(const QString &actionName)
         action->setIcon(QIcon::fromTheme("help-about"));
         m_collection.setDefaultShortcut(action, Qt::Key_F1);
         m_collection.addAction(actionName, action);
-        connect(action, &QAction::triggered, this, &Application::aboutApplication);
     }
 
     // mpv actions

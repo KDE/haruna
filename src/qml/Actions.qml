@@ -180,7 +180,7 @@ QtObject {
 
         Component.onCompleted: list["aboutHarunaAction"] = aboutHarunaAction
 
-        onTriggered: qaction.trigger()
+        onTriggered: aboutPage.show()
     }
 
     property Action seekForwardSmallAction: Action {

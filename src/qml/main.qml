@@ -102,6 +102,19 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    Window {
+        id: aboutPage
+
+        width: 600
+        height: 500
+
+        Kirigami.AboutPage
+        {
+            aboutData: harunaAboutData
+            anchors.fill: parent
+        }
+    }
+
     Connections {
         target: app
         onQmlApplicationMouseLeave: {
