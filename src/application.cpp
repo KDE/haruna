@@ -48,6 +48,7 @@
 #include <QStyle>
 #include <QStyleFactory>
 #include <QThread>
+#include <KFileItem>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -370,8 +371,13 @@ QString Application::getFileContent(const QString &file)
 QString Application::mimeType(const QString &file)
 {
     QMimeDatabase db;
-    QMimeType mime = db.mimeTypeForFile(file);
-    return mime.name();
+    QMimeType mimeType;
+    if(KFileItem(file).isSlow()) {
+        mimeType = db.mimeTypeForFile(file, QMimeDatabase::MatchExtension);
+    } else {
+        mimeType = db.mimeTypeForFile(file);
+    }
+    return mimeType.name();
 }
 
 QStringList Application::availableGuiStyles()

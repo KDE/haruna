@@ -6,7 +6,9 @@
 
 #include "worker.h"
 
-#include <QMimeDatabase>
+#include "application.h"
+
+#include <KFileItem>
 #include <QThread>
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
@@ -19,11 +21,10 @@ Worker* Worker::instance()
 
 void Worker::getMetaData(int index, const QString &path)
 {
-    QMimeDatabase db;
-    QMimeType type = db.mimeTypeForFile(path);
+    QString mimeType = Application::mimeType(path);
     KFileMetaData::ExtractorCollection exCol;
-    QList<KFileMetaData::Extractor*> extractors = exCol.fetchExtractors(type.name());
-    KFileMetaData::SimpleExtractionResult result(path, type.name(),
+    QList<KFileMetaData::Extractor*> extractors = exCol.fetchExtractors(mimeType);
+    KFileMetaData::SimpleExtractionResult result(path, mimeType,
                                                  KFileMetaData::ExtractionResult::ExtractMetaData);
     if (extractors.size() == 0) {
         return;

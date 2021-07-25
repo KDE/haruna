@@ -6,9 +6,10 @@
 
 #include "thumbnailimageprovider.h"
 
+#include "application.h"
+
 #include <KIO/PreviewJob>
 #include <QIcon>
-#include <QMimeDatabase>
 
 ThumbnailImageProvider::ThumbnailImageProvider()
 {
@@ -31,11 +32,10 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
 {
     auto file = QUrl::fromPercentEncoding(id.toUtf8()).toUtf8();
     if(QFile(file).exists()) {
-        QMimeDatabase db;
-        QString mimetype = db.mimeTypeForFile(file).name();
+        QString mimeType = Application::mimeType(file);
 
         QStringList allPlugins{KIO::PreviewJob::availablePlugins()};
-        auto list = KFileItemList() << KFileItem(QUrl::fromLocalFile(file), mimetype);
+        auto list = KFileItemList() << KFileItem(QUrl::fromLocalFile(file), mimeType);
         auto job = new KIO::PreviewJob(list, requestedSize, &allPlugins);
 
         connect(job, &KIO::PreviewJob::gotPreview, this,
@@ -49,9 +49,9 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
             qDebug() << "Failed to create thumbnail" << item.name();
 
             QString iconName;
-            if (mimetype.startsWith("video/")) {
+            if (mimeType.startsWith("video/")) {
                 iconName = QStringLiteral("video-x-generic");
-            } else if (mimetype.startsWith("audio/")) {
+            } else if (mimeType.startsWith("audio/")) {
                 iconName = QStringLiteral("audio-x-generic");
             } else {
                 return;

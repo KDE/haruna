@@ -62,7 +62,6 @@ public:
     Q_INVOKABLE void addArgument(int key, const QString &value);
     Q_INVOKABLE QAction *action(const QString &name);
     Q_INVOKABLE QString getFileContent(const QString &file);
-    Q_INVOKABLE QString mimeType(const QString &file);
     Q_INVOKABLE QStringList availableGuiStyles();
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
@@ -76,6 +75,7 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static void hideCursor();
     Q_INVOKABLE static void showCursor();
+    Q_INVOKABLE static QString mimeType(const QString &file);
 
 signals:
     void qmlApplicationMouseLeave();

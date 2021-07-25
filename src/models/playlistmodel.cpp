@@ -7,14 +7,14 @@
 #include "playlistmodel.h"
 #include "playlistitem.h"
 #include "application.h"
+#include "global.h"
 #include "worker.h"
 
+#include <KFileItem>
 #include <QCollator>
 #include <QDirIterator>
 #include <QFileInfo>
-#include <QMimeDatabase>
 #include <QUrl>
-#include <global.h>
 
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -92,9 +92,8 @@ void PlayListModel::getVideos(QString path)
         while (it.hasNext()) {
             QString file = it.next();
             QFileInfo fileInfo(file);
-            QMimeDatabase db;
-            QMimeType type = db.mimeTypeForFile(file);
-            if (fileInfo.exists() && (type.name().startsWith("video/") || type.name().startsWith("audio/"))) {
+            QString mimeType = Application::mimeType(file);
+            if (fileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/"))) {
                 videoFiles.append(fileInfo.absoluteFilePath());
             }
         }
