@@ -14,9 +14,6 @@ class Worker : public QObject
 {
     Q_OBJECT
 public:
-    Worker() = default;
-    ~Worker() = default;
-
     static Worker* instance();
 
 signals:
@@ -26,7 +23,9 @@ public slots:
     void getMetaData(int index, const QString &path);
 
 private:
-    static Worker *sm_worker;
+    Q_DISABLE_COPY_MOVE(Worker)
+    Worker() = default;
+    ~Worker() = default;
 };
 
 #endif // WORKER_H

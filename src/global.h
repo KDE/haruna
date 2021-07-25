@@ -13,7 +13,7 @@
 class Global
 {
 public:
-    Global();
+    static Global *instance();
 
     enum ConfigFile {
         Main,
@@ -24,12 +24,12 @@ public:
     const QString appConfigDirPath();
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
 
-    static Global *instance();
-
 private:
+    Q_DISABLE_COPY_MOVE(Global)
+    Global();
+    ~Global() = default;
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;
-    static Global *sm_instance;
 };
 
 #endif // GLOBALS_H

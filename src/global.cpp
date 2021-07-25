@@ -8,14 +8,10 @@
 
 #include <QFileInfo>
 
-Global* Global::sm_instance = nullptr;
-
 Global *Global::instance()
 {
-    if (!sm_instance) {
-        sm_instance = new Global();
-    }
-    return sm_instance;
+    static Global g;
+    return &g;
 }
 
 Global::Global()

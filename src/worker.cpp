@@ -11,14 +11,10 @@
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 
-Worker* Worker::sm_worker = nullptr;
-
 Worker* Worker::instance()
 {
-    if (!sm_worker) {
-        sm_worker = new Worker();
-    }
-    return sm_worker;
+    static Worker w;
+    return &w;
 }
 
 void Worker::getMetaData(int index, const QString &path)
