@@ -14,10 +14,10 @@ Menu {
 
     MenuItem {
         action: actions["toggleMenuBarAction"]
-        text: menuBar.visible ? i18n("Hide Menu Bar") : i18n("Show Menu Bar")
+        text: menuBar.visible ? i18n("Hide Menubar") : i18n("Show Menubar")
     }
     MenuItem {
         action: actions["toggleHeaderAction"]
-        text: header.visible ? i18n("Hide Header") : i18n("Show Header")
+        text: header.visible ? i18n("Hide Toolbar") : i18n("Show Toolbar")
     }
 }

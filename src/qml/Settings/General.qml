@@ -195,7 +195,7 @@ SettingsBasePage {
         }
 
         CheckBox {
-            text: i18n("Show MenuBar")
+            text: i18n("Show Menubar")
             checked: GeneralSettings.showMenuBar
             onCheckedChanged: {
                 GeneralSettings.showMenuBar = checked
@@ -206,7 +206,7 @@ SettingsBasePage {
         }
 
         CheckBox {
-            text: i18n("Show Header")
+            text: i18n("Show Toolbar")
             checked: GeneralSettings.showHeader
             onCheckedChanged: {
                 GeneralSettings.showHeader = checked
