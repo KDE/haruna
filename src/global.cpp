@@ -38,6 +38,8 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
         return QString(systemConfigPath()).append(m_config->name());
     case ConfigFile::CustomCommands:
         return QString(systemConfigPath()).append(m_ccConfig->name());
+    default:
+        return QString();
     }
 }
 
