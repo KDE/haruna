@@ -10,6 +10,7 @@
 
 #include <KIO/PreviewJob>
 #include <QIcon>
+#include <QDebug>
 
 ThumbnailImageProvider::ThumbnailImageProvider()
 {
