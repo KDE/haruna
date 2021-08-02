@@ -62,17 +62,11 @@ ToolBar {
         ToolButton {
             id: subtitleMenuButton
 
-            property var model: 0
-
             text: i18n("Subtitles")
             icon.name: "add-subtitle"
             focusPolicy: Qt.NoFocus
 
             onClicked: {
-                if (subtitleMenuButton.model === 0) {
-                    subtitleMenuButton.model = mpv.subtitleTracksModel
-                }
-
                 subtitleMenu.visible = !subtitleMenu.visible
             }
 
@@ -81,36 +75,9 @@ ToolBar {
 
                 y: parent.height
 
-                Menu {
-                    id: secondarySubtitleMenu
-
-                    title: i18n("Secondary Subtitle")
-
-                    Instantiator {
-                        id: secondarySubtitleMenuInstantiator
-                        model: subtitleMenuButton.model
-                        onObjectAdded: secondarySubtitleMenu.insertItem( index, object )
-                        onObjectRemoved: secondarySubtitleMenu.removeItem( object )
-                        delegate: MenuItem {
-                            enabled: model.id !== mpv.subtitleId || model.id === 0
-                            checkable: true
-                            checked: model.id === mpv.secondarySubtitleId
-                            text: model.text
-                            onTriggered: mpv.secondarySubtitleId = model.id
-                        }
-                    }
-                }
-
-                MenuSeparator {}
-
-                MenuItem {
-                    text: i18n("Primary Subtitle")
-                    hoverEnabled: false
-                }
-
                 Instantiator {
                     id: primarySubtitleMenuInstantiator
-                    model: subtitleMenuButton.model
+                    model: mpv.subtitleTracksModel
                     onObjectAdded: subtitleMenu.addItem( object )
                     onObjectRemoved: subtitleMenu.removeItem( object )
                     delegate: MenuItem {
@@ -169,7 +136,7 @@ ToolBar {
 
         ToolButton {
             // using `action: actions.quitApplicationAction` breaks the action
-            // doens't work on the first try in certain circumstances
+            // doesn't work on the first try in certain circumstances
             text: actions.quitApplicationAction.text
             icon: actions.quitApplicationAction.icon
             focusPolicy: Qt.NoFocus
