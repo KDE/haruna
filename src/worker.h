@@ -23,9 +23,13 @@ public slots:
     void getMetaData(int index, const QString &path);
 
 private:
-    Q_DISABLE_COPY_MOVE(Worker)
     Worker() = default;
     ~Worker() = default;
+
+    Worker(const Worker &) = delete;
+    Worker &operator=(const Worker &) = delete;
+    Worker(Worker &&) = delete;
+    Worker &operator=(Worker &&) = delete;
 };
 
 #endif // WORKER_H

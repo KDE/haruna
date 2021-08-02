@@ -25,9 +25,14 @@ public:
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
 
 private:
-    Q_DISABLE_COPY_MOVE(Global)
     Global();
     ~Global() = default;
+
+    Global(const Global &) = delete;
+    Global &operator=(const Global &) = delete;
+    Global(Global &&) = delete;
+    Global &operator=(Global &&) = delete;
+
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;
 };
