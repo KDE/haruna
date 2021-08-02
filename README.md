@@ -5,7 +5,6 @@ SPDX-License-Identifier: CC-BY-4.0
 -->
 
 ### ⚠ Bugs and feature requests go to https://bugs.kde.org
-ℹ Issues are for tracking and discussing confirmed bugs/features. Non conforming issues will be closed.
 
 ----
 
