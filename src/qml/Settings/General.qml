@@ -261,7 +261,12 @@ SettingsBasePage {
                 app.activateColorScheme(GeneralSettings.colorScheme)
             }
 
-            Component.onCompleted: currentIndex = find(GeneralSettings.colorScheme)
+            Component.onCompleted: {
+                currentIndex = find(GeneralSettings.colorScheme)
+                if (currentIndex === -1) {
+                    currentIndex = find("Default")
+                }
+            }
         }
 
         Label {
