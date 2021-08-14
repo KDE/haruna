@@ -8,10 +8,6 @@
 #define THUMBNAILIMAGEPROVIDER_H
 
 #include <QQuickAsyncImageProvider>
-#include <QDir>
-
-class KFileItem;
-class KJob;
 
 class ThumbnailImageProvider : public QQuickAsyncImageProvider
 {
@@ -23,14 +19,13 @@ public:
 
 class ThumbnailResponse : public QQuickImageResponse
 {
-    public:
-        ThumbnailResponse(const QString &id, const QSize &requestedSize);
+public:
+    ThumbnailResponse(const QString &id, const QSize &requestedSize);
 
-        QQuickTextureFactory *textureFactory() const override;
+    QQuickTextureFactory *textureFactory() const override;
+    void getPreview(const QString &id, const QSize &requestedSize);
 
-        QImage m_image;
-        QQuickTextureFactory *m_texture {nullptr};
-        void getPreview(const QString &id, const QSize &requestedSize);
+    QQuickTextureFactory *m_texture {nullptr};
 };
 
 #endif // THUMBNAILIMAGEPROVIDER_H

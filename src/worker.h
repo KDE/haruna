@@ -18,9 +18,12 @@ public:
 
 signals:
     void metaDataReady(int index, KFileMetaData::PropertyMap metadata);
+    void thumbnailSuccess(const QImage &image);
+    void thumbnailFail();
 
 public slots:
     void getMetaData(int index, const QString &path);
+    void makePlaylistThumbnail(const QString &id, int width);
 
 private:
     Worker() = default;

@@ -7,11 +7,17 @@
 #include "worker.h"
 
 #include "application.h"
+#include "framedecoder.h"
 
-#include <KFileItem>
+#include <QCryptographicHash>
+#include <QDir>
+#include <QFileInfo>
 #include <QThread>
+
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
+
+#include <filesystem>
 
 Worker* Worker::instance()
 {
@@ -33,5 +39,58 @@ void Worker::getMetaData(int index, const QString &path)
     ex->extract(&result);
     auto properties = result.properties();
 
-    emit metaDataReady(index, properties);
+    Q_EMIT metaDataReady(index, properties);
+}
+
+void Worker::makePlaylistThumbnail(const QString &id, int width)
+{
+    QImage image;
+
+    QUrl file(id);
+    file.setScheme(QStringLiteral("file"));
+
+    // figure out absolute path of the thumbnail
+    auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
+    namespace fs = std::filesystem;
+    fs::path cacheDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation).toStdString());
+    fs::path appDir("haruna");
+    fs::path fileDir(md5Hash.toHex().toStdString());
+    fs::path filename(QString(md5Hash.toHex()).append(".png").toStdString());
+    QString cachedFilePath = QString::fromStdString(cacheDir / appDir / fileDir / filename);
+
+    // load existing thumbnail if there is one
+    if (QFileInfo(cachedFilePath).exists() && image.load(cachedFilePath)) {
+        Q_EMIT thumbnailSuccess(image);
+        return;
+    }
+
+    FrameDecoder frameDecoder(file.toLocalFile(), nullptr);
+    if (!frameDecoder.getInitialized()) {
+        return;
+    }
+    //before seeking, a frame has to be decoded
+    if (!frameDecoder.decodeVideoFrame()) {
+        return;
+    }
+
+    int secondToSeekTo = frameDecoder.getDuration() * 20 / 100;
+    frameDecoder.seek(secondToSeekTo);
+
+    VideoFrame videoFrame;
+    frameDecoder.getScaledVideoFrame(width, true, videoFrame);
+    frameDecoder.writeFrame(videoFrame, image);
+
+    if (image.isNull()) {
+        qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(id);
+        return;
+    }
+    Q_EMIT thumbnailSuccess(image);
+
+    QFileInfo fi(cachedFilePath);
+    // create folders where the file will be saved
+    if (QDir().mkpath(fi.absolutePath())) {
+        if (!image.save(cachedFilePath)) {
+            qDebug() << QStringLiteral("Failed to save thumbnail for file: %1").arg(id);
+        }
+    }
 }

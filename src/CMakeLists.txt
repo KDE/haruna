@@ -11,6 +11,7 @@ add_executable(haruna)
 target_sources(haruna
     PRIVATE
     application.cpp
+    framedecoder.cpp
     global.cpp
     haction.cpp
     lockmanager.cpp
@@ -40,7 +41,7 @@ kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
 
-target_include_directories(haruna PRIVATE models mpris2)
+target_include_directories(haruna PRIVATE models mpris2 ${FFMPEG_INCLUDE_DIRS})
 
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
@@ -66,6 +67,11 @@ target_link_libraries(haruna PRIVATE
     KF5::XmlGui
 
     Libmpv::Libmpv
+    ${AVUTIL_LIBRARIES}
+    ${AVFILTER_LIBRARIES}
+    ${AVFORMAT_LIBRARIES}
+    ${AVCODEC_LIBRARIES}
+    ${SWSCALE_LIBRARIES}
 )
 
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -40,6 +40,9 @@ find_package(Libmpv)
 set_package_properties(Libmpv PROPERTIES TYPE REQUIRED
     URL "https://mpv.io")
 
+find_package(FFmpeg)
+set_package_properties(FFmpeg PROPERTIES TYPE REQUIRED)
+
 find_package(Breeze)
 set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
     URL "https://api.kde.org/frameworks/breeze-icons/html/index.html")
