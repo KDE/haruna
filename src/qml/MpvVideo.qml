@@ -61,6 +61,9 @@ MpvObject {
         if (app.argument(0) !== "") {
             window.openFile(app.argument(0), true, PlaylistSettings.loadSiblings)
         } else {
+            if (!PlaybackSettings.resumePlayback) {
+                return
+            }
             // open last played file
             if (app.isYoutubePlaylist(GeneralSettings.lastPlayedFile)) {
                 getYouTubePlaylist(GeneralSettings.lastPlayedFile)

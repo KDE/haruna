@@ -24,6 +24,21 @@ SettingsBasePage {
 
         columns: 2
 
+        Item { width: 1; height: 1 }
+        CheckBox {
+            id: resumePlaybackCheckBox
+            text: i18n("Resume playback")
+            checked: PlaybackSettings.resumePlayback
+            onCheckedChanged: {
+                PlaybackSettings.resumePlayback = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18n("Open last played file on startup")
+            }
+        }
+
         Label {
             text: i18n("Hardware decoding")
             Layout.alignment: Qt.AlignRight
