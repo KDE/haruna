@@ -135,7 +135,7 @@ void CustomCommandsModel::editCustomCommand(int row, const QString &command,
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
     m_customCommandsConfig->sync();
 
-    emit dataChanged(index(row, 0), index(row, 0));
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)

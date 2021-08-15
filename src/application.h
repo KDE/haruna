@@ -32,7 +32,7 @@ signals:
 protected:
     bool eventFilter(QObject *obj, QEvent *event) {
         if (event->type() == QEvent::Leave) {
-            emit applicationMouseLeave();
+            Q_EMIT applicationMouseLeave();
             return true;
         } else {
             // standard event processing

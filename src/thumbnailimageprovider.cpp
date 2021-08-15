@@ -26,7 +26,7 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
 {
     connect(Worker::instance(), &Worker::thumbnailSuccess, this, [=](const QImage &image) {
         m_texture = QQuickTextureFactory::textureFactoryForImage(image);
-        emit finished();
+        Q_EMIT finished();
     }, Qt::QueuedConnection);
 
     connect(Worker::instance(), &Worker::thumbnailFail, this, [=]() {
@@ -42,7 +42,7 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
         auto icon = QIcon::fromTheme(iconName).pixmap(requestedSize);
         m_texture = QQuickTextureFactory::textureFactoryForImage(icon.toImage());
 
-        emit finished();
+        Q_EMIT finished();
     }, Qt::QueuedConnection);
     getPreview(id, requestedSize);
 }
@@ -56,7 +56,7 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
     if (QUrl(id).scheme() == "http" || QUrl(id).scheme() == "https") {
         auto icon = QIcon::fromTheme("im-youtube", QIcon::fromTheme("video-x-generic"));
         m_texture = QQuickTextureFactory::textureFactoryForImage(icon.pixmap(requestedSize).toImage());
-        emit finished();
+        Q_EMIT finished();
     }
 }
 

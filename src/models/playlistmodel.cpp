@@ -30,7 +30,7 @@ PlayListModel::PlayListModel(QObject *parent)
         m_playList[i]->setDuration(Application::formatTime(duration));
         m_playList[i]->setMediaTitle(title);
 
-        emit dataChanged(index(i, 0), index(i, 0));
+        Q_EMIT dataChanged(index(i, 0), index(i, 0));
 
     });
 }
@@ -110,7 +110,7 @@ void PlayListModel::getVideos(QString path)
         if (path == videoFiles.at(i)) {
             setPlayingVideo(i);
         }
-        emit videoAdded(i, video->filePath());
+        Q_EMIT videoAdded(i, video->filePath());
     }
 
     endInsertRows();
@@ -182,12 +182,12 @@ void PlayListModel::setPlayingVideo(int playingVideo)
 {
     // unset current playing video
     m_playList[m_playingVideo]->setIsPlaying(false);
-    emit dataChanged(index(m_playingVideo, 0), index(m_playingVideo, 0));
+    Q_EMIT dataChanged(index(m_playingVideo, 0), index(m_playingVideo, 0));
 
     // set new playing video
     m_playList[playingVideo]->setIsPlaying(true);
-    emit dataChanged(index(playingVideo, 0), index(playingVideo, 0));
+    Q_EMIT dataChanged(index(playingVideo, 0), index(playingVideo, 0));
 
     m_playingVideo = playingVideo;
-    emit playingVideoChanged();
+    Q_EMIT playingVideoChanged();
 }

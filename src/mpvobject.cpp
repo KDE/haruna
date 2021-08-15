@@ -89,7 +89,7 @@ QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &siz
         if (mpv_render_context_create(&obj->mpv_gl, obj->mpv, params) < 0)
             throw std::runtime_error("failed to initialize mpv GL context");
         mpv_render_context_set_update_callback(obj->mpv_gl, on_mpv_redraw, obj);
-        emit obj->ready();
+        Q_EMIT obj->ready();
     }
 
     return QQuickFramebufferObject::Renderer::createFramebufferObject(size);
@@ -197,7 +197,7 @@ void MpvObject::setPosition(double value)
         return;
     }
     setProperty("time-pos", value);
-    emit positionChanged();
+    Q_EMIT positionChanged();
 }
 
 double MpvObject::remaining()
@@ -221,7 +221,7 @@ void MpvObject::setPause(bool value)
         return;
     }
     setProperty("pause", value);
-    emit pauseChanged();
+    Q_EMIT pauseChanged();
 }
 
 int MpvObject::volume()
@@ -235,7 +235,7 @@ void MpvObject::setVolume(int value)
         return;
     }
     setProperty("volume", value);
-    emit volumeChanged();
+    Q_EMIT volumeChanged();
 }
 
 int MpvObject::chapter()
@@ -249,7 +249,7 @@ void MpvObject::setChapter(int value)
         return;
     }
     setProperty("chapter", value);
-    emit chapterChanged();
+    Q_EMIT chapterChanged();
 }
 
 int MpvObject::audioId()
@@ -263,7 +263,7 @@ void MpvObject::setAudioId(int value)
         return;
     }
     setProperty("aid", value);
-    emit audioIdChanged();
+    Q_EMIT audioIdChanged();
 }
 
 int MpvObject::subtitleId()
@@ -277,7 +277,7 @@ void MpvObject::setSubtitleId(int value)
         return;
     }
     setProperty("sid", value);
-    emit subtitleIdChanged();
+    Q_EMIT subtitleIdChanged();
 }
 
 int MpvObject::secondarySubtitleId()
@@ -291,7 +291,7 @@ void MpvObject::setSecondarySubtitleId(int value)
         return;
     }
     setProperty("secondary-sid", value);
-    emit secondarySubtitleIdChanged();
+    Q_EMIT secondarySubtitleIdChanged();
 }
 
 int MpvObject::contrast()
@@ -305,7 +305,7 @@ void MpvObject::setContrast(int value)
         return;
     }
     setProperty("contrast", value);
-    emit contrastChanged();
+    Q_EMIT contrastChanged();
 }
 
 int MpvObject::brightness()
@@ -319,7 +319,7 @@ void MpvObject::setBrightness(int value)
         return;
     }
     setProperty("brightness", value);
-    emit brightnessChanged();
+    Q_EMIT brightnessChanged();
 }
 
 int MpvObject::gamma()
@@ -333,7 +333,7 @@ void MpvObject::setGamma(int value)
         return;
     }
     setProperty("gamma", value);
-    emit gammaChanged();
+    Q_EMIT gammaChanged();
 }
 
 int MpvObject::saturation()
@@ -347,7 +347,7 @@ void MpvObject::setSaturation(int value)
         return;
     }
     setProperty("saturation", value);
-    emit saturationChanged();
+    Q_EMIT saturationChanged();
 }
 
 double MpvObject::watchPercentage()
@@ -361,7 +361,7 @@ void MpvObject::setWatchPercentage(double value)
         return;
     }
     m_watchPercentage = value;
-    emit watchPercentageChanged();
+    Q_EMIT watchPercentageChanged();
 }
 
 bool MpvObject::hwDecoding()
@@ -380,7 +380,7 @@ void MpvObject::setHWDecoding(bool value)
     } else  {
         setProperty("hwdec", "no");
     }
-    emit hwDecodingChanged();
+    Q_EMIT hwDecodingChanged();
 }
 
 QQuickFramebufferObject::Renderer *MpvObject::createRenderer() const
@@ -418,19 +418,19 @@ void MpvObject::eventHandler()
         }
         switch (event->event_id) {
         case MPV_EVENT_START_FILE: {
-            emit fileStarted();
+            Q_EMIT fileStarted();
             break;
         }
         case MPV_EVENT_FILE_LOADED: {
-            emit fileLoaded();
+            Q_EMIT fileLoaded();
             break;
         }
         case MPV_EVENT_END_FILE: {
             auto prop = (mpv_event_end_file *)event->data;
             if (prop->reason == MPV_END_FILE_REASON_EOF) {
-                emit endFile("eof");
+                Q_EMIT endFile("eof");
             } else if(prop->reason == MPV_END_FILE_REASON_ERROR) {
-                emit endFile("error");
+                Q_EMIT endFile("error");
             }
             break;
         }
@@ -439,59 +439,59 @@ void MpvObject::eventHandler()
 
             if (strcmp(prop->name, "time-pos") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    emit positionChanged();
+                    Q_EMIT positionChanged();
                 }
             } else if (strcmp(prop->name, "media-title") == 0) {
                 if (prop->format == MPV_FORMAT_STRING) {
-                    emit mediaTitleChanged();
+                    Q_EMIT mediaTitleChanged();
                 }
             } else if (strcmp(prop->name, "time-remaining") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    emit remainingChanged();
+                    Q_EMIT remainingChanged();
                 }
             } else if (strcmp(prop->name, "duration") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    emit durationChanged();
+                    Q_EMIT durationChanged();
                 }
             } else if (strcmp(prop->name, "volume") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit volumeChanged();
+                    Q_EMIT volumeChanged();
                 }
             } else if (strcmp(prop->name, "pause") == 0) {
                 if (prop->format == MPV_FORMAT_FLAG) {
-                    emit pauseChanged();
+                    Q_EMIT pauseChanged();
                 }
             } else if (strcmp(prop->name, "chapter") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit chapterChanged();
+                    Q_EMIT chapterChanged();
                 }
             } else if (strcmp(prop->name, "aid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit audioIdChanged();
+                    Q_EMIT audioIdChanged();
                 }
             } else if (strcmp(prop->name, "sid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit subtitleIdChanged();
+                    Q_EMIT subtitleIdChanged();
                 }
             } else if (strcmp(prop->name, "secondary-sid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit secondarySubtitleIdChanged();
+                    Q_EMIT secondarySubtitleIdChanged();
                 }
             } else if (strcmp(prop->name, "contrast") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit contrastChanged();
+                    Q_EMIT contrastChanged();
                 }
             } else if (strcmp(prop->name, "brightness") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit brightnessChanged();
+                    Q_EMIT brightnessChanged();
                 }
             } else if (strcmp(prop->name, "gamma") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit gammaChanged();
+                    Q_EMIT gammaChanged();
                 }
             } else if (strcmp(prop->name, "saturation") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit saturationChanged();
+                    Q_EMIT saturationChanged();
                 }
             } else if (strcmp(prop->name, "track-list") == 0) {
                 if (prop->format == MPV_FORMAT_NODE) {
@@ -559,8 +559,8 @@ void MpvObject::loadTracks()
     m_subtitleTracksModel->setTracks(m_subtitleTracks);
     m_audioTracksModel->setTracks(m_audioTracks);
 
-    emit audioTracksModelChanged();
-    emit subtitleTracksModelChanged();
+    Q_EMIT audioTracksModelChanged();
+    Q_EMIT subtitleTracksModelChanged();
 }
 
 TracksModel *MpvObject::subtitleTracksModel() const
@@ -613,7 +613,7 @@ void MpvObject::getYouTubePlaylist(const QString &path)
         // save playlist to disk
         m_playlistModel->setPlayList(m_playList);
 
-        emit youtubePlaylistLoaded();
+        Q_EMIT youtubePlaylistLoaded();
     });
 }
 
