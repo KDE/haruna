@@ -17,8 +17,6 @@
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 
-#include <filesystem>
-
 Worker* Worker::instance()
 {
     static Worker w;
@@ -51,12 +49,11 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
 
     // figure out absolute path of the thumbnail
     auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
-    namespace fs = std::filesystem;
-    fs::path cacheDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation).toStdString());
-    fs::path appDir("haruna");
-    fs::path fileDir(md5Hash.toHex().toStdString());
-    fs::path filename(QString(md5Hash.toHex()).append(".png").toStdString());
-    QString cachedFilePath = QString::fromStdString(cacheDir / appDir / fileDir / filename);
+    QString cacheDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation));
+    QString appDir("haruna");
+    QString fileDir(md5Hash.toHex());
+    QString filename(QString(md5Hash.toHex()).append(".png"));
+    QString cachedFilePath = cacheDir + "/" + appDir + "/" + fileDir + "/" + filename;
 
     // load existing thumbnail if there is one
     if (QFileInfo(cachedFilePath).exists() && image.load(cachedFilePath)) {
