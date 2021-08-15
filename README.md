@@ -60,12 +60,13 @@ these are just some features that set Haruna apart from others players
 # Dependencies
 
 ### Build time
+- Libmpv
+- FFmpeg
 - Qt5Core
 - Qt5DBus
 - Qt5Qml
 - Qt5Quick
 - Qt5QuickControls2
-- Libmpv
 - ExtraCmakeModules
 - KF5Config
 - KF5CoreAddons
@@ -78,7 +79,6 @@ these are just some features that set Haruna apart from others players
 - KF5DocTools
 
 ### Runtime
-- Kio-extras
 - Breeze icons
 - Breeze widgets style
 - QQC2-Desktop-Style
