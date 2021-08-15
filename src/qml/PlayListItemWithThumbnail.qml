@@ -79,6 +79,7 @@ Kirigami.BasicListItem {
                     source: "image://thumbnail/" + model.path
                     sourceSize.width: parent.width
                     sourceSize.height: parent.height
+                    asynchronous: true
                     fillMode: Image.PreserveAspectFit
 
                     Rectangle {
