@@ -69,6 +69,6 @@ void SubtitlesFoldersModel::deleteFolder(int row)
 void SubtitlesFoldersModel::addFolder()
 {
     beginInsertRows(QModelIndex(), m_list.size(), m_list.size());
-    m_list.append(QStringLiteral());
+    m_list.append(QString());
     endInsertRows();
 }

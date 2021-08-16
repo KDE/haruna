@@ -56,7 +56,7 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
     QString cachedFilePath = cacheDir + "/" + appDir + "/" + fileDir + "/" + filename;
 
     // load existing thumbnail if there is one
-    if (QFileInfo(cachedFilePath).exists() && image.load(cachedFilePath)) {
+    if (QFileInfo::exists(cachedFilePath) && image.load(cachedFilePath)) {
         Q_EMIT thumbnailSuccess(image);
         return;
     }

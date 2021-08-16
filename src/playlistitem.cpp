@@ -16,8 +16,8 @@ PlayListItem::PlayListItem(const QString &path, int i, QObject *parent)
 
     if (url.scheme().startsWith("http")) {
         setFilePath(url.toString());
-        setFileName(QStringLiteral());
-        setFolderPath(QStringLiteral());
+        setFileName(QString());
+        setFolderPath(QString());
     } else {
         QFileInfo fileInfo(path);
         setFileName(fileInfo.fileName());
