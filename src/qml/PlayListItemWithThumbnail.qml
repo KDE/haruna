@@ -138,17 +138,6 @@ Kirigami.BasicListItem {
                 Layout.bottomMargin: Kirigami.Units.largeSpacing
                 Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : Kirigami.Units.largeSpacing
             }
-
-            Label {
-                visible: !thumbnail.visible
-                text: model.duration
-                horizontalAlignment: Qt.AlignCenter
-                font.pointSize: (window.isFullScreen() && playList.bigFont)
-                                ? Kirigami.Units.gridUnit
-                                : Kirigami.Units.gridUnit - 6
-
-                Layout.margins: Kirigami.Units.largeSpacing
-            }
         }
     }
 }
