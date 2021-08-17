@@ -1,5 +1,6 @@
 #
 # SPDX-FileCopyrightText: 2021 Alexis Lopez Zubieta <contact@azubieta.net>
+# SPDX-FileContributor: 2021 Shriraj Hegde <shriraj.hegde@gmail.com>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
@@ -21,7 +22,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qt5-default qtdeclarative5-dev gettext build-essential extra-cmake-modules \
             kirigami2-dev mpv libmpv-dev libkf5xmlgui-dev qtquickcontrols2-5-dev libkf5kio-dev libkf5iconthemes-dev \
-            libkf5filemetadata-dev libkf5config-dev breeze-dev qtquickcontrols2-5-dev cmake g++ libkf5doctools-dev
+            libkf5filemetadata-dev libkf5config-dev breeze-dev qtquickcontrols2-5-dev cmake g++ libkf5doctools-dev \
+          libavcodec-dev libavfilter-dev libavformat-dev libavdevice-dev libavutil-dev libswscale-dev libpostproc-dev
       - name: configure
         run: cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
       - name: build
