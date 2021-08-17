@@ -65,9 +65,9 @@ static QApplication *createApplication(int &argc, char **argv, const QString &ap
 {
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-    QApplication::setOrganizationName("georgefb");
+    QApplication::setOrganizationName("kde");
     QApplication::setApplicationName(applicationName);
-    QApplication::setOrganizationDomain("georgefb.com");
+    QApplication::setOrganizationDomain("kde.org");
     QApplication::setApplicationDisplayName("Haruna - Video Player");
     QApplication::setApplicationVersion(Application::version());
     QApplication::setWindowIcon(QIcon::fromTheme("org.kde.haruna"));
