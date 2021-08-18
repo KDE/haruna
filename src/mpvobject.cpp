@@ -621,7 +621,7 @@ int MpvObject::setProperty(const QString &name, const QVariant &value, bool debu
 {
     auto result = mpv::qt::set_property(mpv, name, value);
     if (debug) {
-        qDebug() << mpv::qt::get_error(result);
+        qDebug() << name << mpv::qt::get_error(result);
     }
     return result;
 }
@@ -630,14 +630,18 @@ QVariant MpvObject::getProperty(const QString &name, bool debug)
 {
     auto result = mpv::qt::get_property(mpv, name);
     if (debug) {
-        qDebug() << mpv::qt::get_error(result);
+        qDebug() << name << mpv::qt::get_error(result);
     }
     return result;
 }
 
-QVariant MpvObject::command(const QVariant &params)
+QVariant MpvObject::command(const QVariant &params, bool debug)
 {
-    return mpv::qt::command(mpv, params);
+    auto result = mpv::qt::command(mpv, params);
+    if (debug) {
+        qDebug() << mpv::qt::get_error(result);
+    }
+    return result;
 }
 
 void MpvObject::saveTimePosition()
