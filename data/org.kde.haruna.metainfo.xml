@@ -190,6 +190,23 @@
     </ul>
   </description>
   <releases>
+    <release version="0.7.0" date="2021-08-20">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added custom commands. They can be used to run mpv commands, like setting properties.</li>
+          <li>Added option to toggle the opening of last played file on start up.</li>
+          <li>Added mouse scroll seeking when mouse is over the seek bar.</li>
+          <li>Added action to exit the fullscreen.</li>
+          <li>Made playback settings page more consistent with the other settings pages.</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed playlist staying open when mouse moves to another screen while the app is in fullscreen mode.</li>
+          <li>Fixed not loading audio files from same folder when opening an audio file.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.6.3" date="2021-04-28">
       <description>
         <p>Bugfixes:</p>
