@@ -10,6 +10,7 @@
 #include "generalsettings.h"
 #include "global.h"
 #include "haction.h"
+#include "haruna-version.h"
 #include "lockmanager.h"
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
@@ -277,7 +278,7 @@ bool Application::configFolderExists()
 
 QString Application::version()
 {
-    return QStringLiteral("0.6.3");
+    return QStringLiteral(HARUNA_VERSION_STRING);
 }
 
 bool Application::hasYoutubeDl()

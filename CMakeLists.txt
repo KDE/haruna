@@ -6,7 +6,8 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-project(haruna LANGUAGES CXX)
+cmake_policy(SET CMP0048 NEW)
+project(haruna VERSION 0.7.0 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -19,7 +20,13 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_S
 
 include(KDEInstallDirs)
 include(ECMInstallIcons)
+include(ECMSetupVersion)
 include(FeatureSummary)
+
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX HARUNA
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/haruna-version.h"
+)
 
 find_package(Qt5Core)
 set_package_properties(Qt5Core PROPERTIES TYPE REQUIRED)
