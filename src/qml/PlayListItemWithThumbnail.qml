@@ -42,8 +42,6 @@ Kirigami.BasicListItem {
             spacing: Kirigami.Units.largeSpacing
 
             Label {
-                id: rowNumberLabel
-
                 text: pad(root.rowNumber, playlistView.count.toString().length)
                 visible: PlaylistSettings.showRowNumber
                 font.pointSize: (window.isFullScreen() && playList.bigFont)
@@ -60,7 +58,6 @@ Kirigami.BasicListItem {
             }
 
             Rectangle {
-                id: separator
 
                 width: 1
                 color: Kirigami.Theme.alternateBackgroundColor
@@ -69,8 +66,6 @@ Kirigami.BasicListItem {
             }
 
             Item {
-                id: thumbnail
-
                 width: (root.height - 20) * 1.33333
                 height: root.height - 20
 
@@ -118,10 +113,8 @@ Kirigami.BasicListItem {
             }
 
             LabelWithTooltip {
-                id: label
-
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
-                toolTipFontSize: label.font.pointSize + 2
+                toolTipFontSize: font.pointSize + 2
                 color: Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter

@@ -20,7 +20,6 @@ Kirigami.BasicListItem {
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
-    height: label.font.pointSize * 3 + PlaylistSettings.rowHeight
     padding: 0
     backgroundColor: {
         let color = model.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
@@ -68,7 +67,7 @@ Kirigami.BasicListItem {
             LabelWithTooltip {
                 id: label
 
-                toolTipFontSize: label.font.pointSize + 2
+                toolTipFontSize: font.pointSize + 2
 
                 color: Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
@@ -82,6 +81,11 @@ Kirigami.BasicListItem {
                 layer.enabled: true
                 Layout.fillWidth: true
                 Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : Kirigami.Units.largeSpacing
+                Binding {
+                    target: root
+                    property: "height"
+                    value: font.pointSize * 3 + PlaylistSettings.rowHeight
+                }
             }
 
             Label {
