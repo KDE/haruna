@@ -58,7 +58,6 @@ Kirigami.BasicListItem {
             }
 
             Rectangle {
-
                 width: 1
                 color: Kirigami.Theme.alternateBackgroundColor
                 visible: PlaylistSettings.showRowNumber

@@ -65,8 +65,6 @@ Kirigami.BasicListItem {
             }
 
             LabelWithTooltip {
-                id: label
-
                 toolTipFontSize: font.pointSize + 2
 
                 color: Kirigami.Theme.textColor
