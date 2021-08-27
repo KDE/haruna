@@ -24,10 +24,28 @@ SettingsBasePage {
 
         columns: 2
 
+        Label {
+            text: i18n("Startup")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        CheckBox {
+            id: loadLastPlayedFileCheckBox
+
+            text: i18n("Open last played file")
+            checked: PlaybackSettings.openLastPlayedFile
+            onCheckedChanged: {
+                PlaybackSettings.openLastPlayedFile = checked
+                PlaybackSettings.save()
+            }
+        }
+
         Item { width: 1; height: 1 }
+
         CheckBox {
             id: resumePlaybackCheckBox
-            text: i18n("Resume playback")
+
+            text: i18n("Remember time position")
             checked: PlaybackSettings.resumePlayback
             onCheckedChanged: {
                 PlaybackSettings.resumePlayback = checked
@@ -35,9 +53,11 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Open last played file on startup")
+                text: i18n("When opening a file that was played before it will start at the position it was when playback stopped.")
             }
         }
+
+        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
 
         Label {
             text: i18n("Hardware decoding")
@@ -105,6 +125,8 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
+
         Label {
             text: i18n("Remember time position")
         }
@@ -138,6 +160,8 @@ SettingsBasePage {
                 Layout.fillWidth: true
             }
         }
+
+        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
 
         Label {
             text: i18n("Skip chapters")

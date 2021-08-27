@@ -61,7 +61,7 @@ MpvObject {
         if (app.argument(0) !== "") {
             window.openFile(app.argument(0), true, PlaylistSettings.loadSiblings)
         } else {
-            if (!PlaybackSettings.resumePlayback) {
+            if (!PlaybackSettings.openLastPlayedFile) {
                 return
             }
             // open last played file
@@ -100,8 +100,12 @@ MpvObject {
         setProperty("ab-loop-a", "no")
         setProperty("ab-loop-b", "no")
 
-        mpv.pause = loadTimePosition() !== 0
-        position = loadTimePosition()
+        mpv.pause = false
+        position = 0
+        if (PlaybackSettings.resumePlayback) {
+            mpv.pause = loadTimePosition() !== 0
+            position = loadTimePosition()
+        }
     }
 
     onChapterChanged: {
