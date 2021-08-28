@@ -133,14 +133,5 @@ ToolBar {
             action: actions.configureAction
             focusPolicy: Qt.NoFocus
         }
-
-        ToolButton {
-            // using `action: actions.quitApplicationAction` breaks the action
-            // doesn't work on the first try in certain circumstances
-            text: actions.quitApplicationAction.text
-            icon: actions.quitApplicationAction.icon
-            focusPolicy: Qt.NoFocus
-            onClicked: actions.quitApplicationAction.trigger()
-        }
     }
 }
