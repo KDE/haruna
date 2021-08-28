@@ -67,7 +67,7 @@ ToolBar {
             text: ""
             icon.name: "media-playback-start"
             focusPolicy: Qt.NoFocus
-            enabled: playList.playlistView.count !== 0
+            enabled: mpv.duration !== 0
 
             ToolTip {
                 id: playPauseButtonToolTip
