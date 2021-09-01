@@ -93,7 +93,7 @@ MpvObject {
         header.audioTracks = getProperty("track-list").filter(track => track["type"] === "audio")
         header.subtitleTracks = getProperty("track-list").filter(track => track["type"] === "sub")
 
-        if (playList.playlistView.count <= 1) {
+        if (playList.playlistView.count <= 1 && PlaylistSettings.repeat) {
             setProperty("loop-file", "inf")
         }
 
