@@ -16,7 +16,7 @@ import org.kde.haruna 1.0 as Haruna
 Kirigami.ApplicationWindow {
     id: root
 
-    width: Kirigami.Units.gridUnit * 50
+    width: Kirigami.Units.gridUnit * 45
     height: Kirigami.Units.gridUnit * 35
     title: i18n("Haruna Settings")
     visible: true
