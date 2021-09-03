@@ -17,7 +17,7 @@ Kirigami.Page
     rightPadding: 0
     bottomPadding: 0
 
-    Component.onCompleted: applicationWindow().pageStack.columnView.columnWidth = 250
+    Component.onCompleted: applicationWindow().pageStack.columnView.columnWidth = Kirigami.Units.gridUnit * 15
 
 
     footer: ToolBar {

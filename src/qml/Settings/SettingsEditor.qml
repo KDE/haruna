@@ -16,10 +16,10 @@ import org.kde.haruna 1.0 as Haruna
 Kirigami.ApplicationWindow {
     id: root
 
-    width: 800
-    height: 600
+    width: Kirigami.Units.gridUnit * 50
+    height: Kirigami.Units.gridUnit * 35
     title: i18n("Haruna Settings")
-    visible: false
+    visible: true
     pageStack.initialPage: "qrc:/Navigation.qml"
 
     Component.onCompleted: pageStack.push("qrc:/General.qml")
@@ -27,8 +27,8 @@ Kirigami.ApplicationWindow {
     Window {
         id: helpWindow
 
-        width: 700
-        height: 600
+        width: Kirigami.Units.gridUnit * 40
+        height: Kirigami.Units.gridUnit * 35
         title: i18n("Help")
         color: Kirigami.Theme.backgroundColor
         onVisibleChanged: info.text = app.getFileContent(applicationWindow().pageStack.currentItem.helpFile)
