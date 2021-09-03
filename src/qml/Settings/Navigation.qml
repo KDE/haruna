@@ -85,7 +85,10 @@ Kirigami.Page
         delegate: Kirigami.BasicListItem {
             text: i18n(name)
             icon: iconName
-            onClicked: applicationWindow().pageStack.push(model.page)
+            onClicked: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push(model.page)
+            }
         }
     }
 }
