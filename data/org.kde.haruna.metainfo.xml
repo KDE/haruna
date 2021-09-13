@@ -201,6 +201,19 @@
     </ul>
   </description>
   <releases>
+    <release version="0.7.1" date="2021-09-13">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed crash on systems with older versions of Qt.</li>
+          <li>Fixed play/pause button being disabled when it shouldn't.</li>
+          <li>Removed quit button from toolbar.</li>
+          <li>Fixed video repeating when repeat is turned off.</li>
+          <li>Fixed settings window loading wrong pages.</li>
+          <li>Fixed settings window not showing the sidebar when system fonts where increased.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.0" date="2021-08-20">
       <description>
         <p>Features:</p>
