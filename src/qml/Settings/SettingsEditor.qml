@@ -19,7 +19,7 @@ Kirigami.ApplicationWindow {
     width: Kirigami.Units.gridUnit * 45
     height: Kirigami.Units.gridUnit * 35
     title: i18n("Haruna Settings")
-    visible: true
+    visible: false
     pageStack.initialPage: "qrc:/Navigation.qml"
 
     Component.onCompleted: pageStack.push("qrc:/General.qml")
