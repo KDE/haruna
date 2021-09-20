@@ -184,37 +184,26 @@ MpvObject {
     Timer {
         id: hideCursorTimer
 
-        property double tx: mouseArea.mouseX
-        property double ty: mouseArea.mouseY
-        property int timeNotMoved: 0
-
         running: window.isFullScreen() && mouseArea.containsMouse
         repeat: true
-        interval: 50
-
-        onTriggered: {
-            if (mouseArea.mouseX === tx && mouseArea.mouseY === ty) {
-                if (timeNotMoved > 2000) {
-                    app.hideCursor()
-                }
-            } else {
-                app.showCursor()
-                timeNotMoved = 0
-            }
-            tx = mouseArea.mouseX
-            ty = mouseArea.mouseY
-            timeNotMoved += interval
-        }
+        interval: 2000
+        onTriggered: mouseArea.hideCursor = true
     }
 
     MouseArea {
         id: mouseArea
 
+        property bool hideCursor: false
+
         acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
         anchors.fill: parent
         hoverEnabled: true
+        cursorShape: hideCursor && window.isFullScreen() ? Qt.BlankCursor : Qt.ArrowCursor
 
         onPositionChanged: {
+            hideCursor = false
+            hideCursorTimer.restart()
+
             if (!playList.canToggleWithMouse || playList.playlistView.count <= 1) {
                 return
             }

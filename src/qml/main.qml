@@ -233,7 +233,6 @@ Kirigami.ApplicationWindow {
         } else {
             exitFullscreen()
         }
-        app.showCursor()
         playList.scrollPositionTimer.start()
     }
 

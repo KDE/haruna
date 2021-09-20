@@ -1049,7 +1049,6 @@ QtObject {
 
         onTriggered: {
             window.exitFullscreen()
-            app.showCursor()
             playList.scrollPositionTimer.start()
         }
     }
