@@ -60,7 +60,7 @@ Popup {
 
             onTextChanged: {
                 const menuModel = actionsListView.actionsList
-                actionsListView.model = menuModel.filter(action => action.toLowerCase().includes(text))
+                actionsListView.model = menuModel.filter(action => action.toLowerCase().includes(text.toLowerCase()))
             }
         }
         Button {
