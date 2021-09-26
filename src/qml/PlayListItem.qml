@@ -19,6 +19,9 @@ Kirigami.BasicListItem {
     property bool isPlaying: model.isPlaying
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
+    property int fontSize: (window.isFullScreen() && playList.bigFont)
+                           ? Kirigami.Units.gridUnit
+                           : Kirigami.Units.gridUnit - 6
 
     padding: 0
     backgroundColor: {
@@ -35,9 +38,7 @@ Kirigami.BasicListItem {
             Label {
                 text: pad(root.rowNumber, playlistView.count.toString().length)
                 visible: PlaylistSettings.showRowNumber
-                font.pointSize: (window.isFullScreen() && playList.bigFont)
-                                ? Kirigami.Units.gridUnit
-                                : Kirigami.Units.gridUnit - 6
+                font.pointSize: root.fontSize
                 horizontalAlignment: Qt.AlignCenter
                 Layout.leftMargin: Kirigami.Units.largeSpacing
 
@@ -71,9 +72,7 @@ Kirigami.BasicListItem {
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
-                font.pointSize: (window.isFullScreen() && playList.bigFont)
-                                ? Kirigami.Units.gridUnit
-                                : Kirigami.Units.gridUnit - 6
+                font.pointSize: root.fontSize
                 font.weight: isPlaying ? Font.ExtraBold : Font.Normal
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
                 layer.enabled: true
@@ -82,16 +81,14 @@ Kirigami.BasicListItem {
                 Binding {
                     target: root
                     property: "height"
-                    value: font.pointSize * 3 + PlaylistSettings.rowHeight
+                    value: root.fontSize * 3 + PlaylistSettings.rowHeight
                 }
             }
 
             Label {
                 text: model.duration
                 visible: model.duration.length > 0
-                font.pointSize: (window.isFullScreen() && playList.bigFont)
-                                ? Kirigami.Units.gridUnit
-                                : Kirigami.Units.gridUnit - 6
+                font.pointSize: root.fontSize
                 horizontalAlignment: Qt.AlignCenter
                 Layout.margins: Kirigami.Units.largeSpacing
             }
