@@ -33,62 +33,81 @@ Kirigami.Page
         }
     }
 
-    ListModel {
-        id: settingsPagesModel
-        ListElement {
-            name: "General"
-            iconName: "configure"
-            page: "qrc:/General.qml"
+    property list<Kirigami.Action> actions: [
+        Kirigami.Action {
+            text: i18n("General")
+            icon.name: "configure"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/Playback.qml")
+
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Playback")
+            icon.name: "media-playback-start"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/Playback.qml")
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Video")
+            icon.name: "video-x-generic"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/VideoSettings.qml")
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Audio")
+            icon.name: "player-volume"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/Audio.qml")
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Subtitles")
+            icon.name: "add-subtitle"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/Subtitles.qml")
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Playlist")
+            icon.name: "view-media-playlist"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/Playlist.qml")
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Mouse")
+            icon.name: "input-mouse"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/Mouse.qml")
+            }
+        },
+        Kirigami.Action {
+            text: i18n("Custom commands")
+            icon.name: "configure"
+            onTriggered: {
+                applicationWindow().pageStack.removePage(1)
+                applicationWindow().pageStack.push("qrc:/CustomCommands.qml")
+            }
         }
-        ListElement {
-            name: "Playback"
-            iconName: "media-playback-start"
-            page: "qrc:/Playback.qml"
-        }
-        ListElement {
-            name: "Video"
-            iconName: "video-x-generic"
-            page: "qrc:/VideoSettings.qml"
-        }
-        ListElement {
-            name: "Audio"
-            iconName: "player-volume"
-            page: "qrc:/Audio.qml"
-        }
-        ListElement {
-            name: "Subtitles"
-            iconName: "add-subtitle"
-            page: "qrc:/Subtitles.qml"
-        }
-        ListElement {
-            name: "Playlist"
-            iconName: "view-media-playlist"
-            page: "qrc:/Playlist.qml"
-        }
-        ListElement {
-            name: "Mouse"
-            iconName: "input-mouse"
-            page: "qrc:/Mouse.qml"
-        }
-        ListElement {
-            name: "Custom commands"
-            iconName: "configure"
-            page: "qrc:/CustomCommands.qml"
-        }
-    }
+    ]
 
     ListView {
         id: settingsPagesList
 
         anchors.fill: parent
-        model: settingsPagesModel
+        model: actions
         delegate: Kirigami.BasicListItem {
-            text: i18n(name)
-            icon: iconName
-            onClicked: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push(model.page)
-            }
+            action: modelData
         }
     }
 }
