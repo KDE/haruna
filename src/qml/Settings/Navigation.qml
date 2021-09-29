@@ -19,7 +19,6 @@ Kirigami.Page
 
     Component.onCompleted: applicationWindow().pageStack.columnView.columnWidth = Kirigami.Units.gridUnit * 15
 
-
     footer: ToolBar {
         RowLayout {
             anchors.fill: parent
@@ -33,76 +32,75 @@ Kirigami.Page
         }
     }
 
-    property list<Kirigami.Action> actions: [
-        Kirigami.Action {
-            text: i18n("General")
-            icon.name: "configure"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/Playback.qml")
-
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Playback")
-            icon.name: "media-playback-start"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/Playback.qml")
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Video")
-            icon.name: "video-x-generic"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/VideoSettings.qml")
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Audio")
-            icon.name: "player-volume"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/Audio.qml")
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Subtitles")
-            icon.name: "add-subtitle"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/Subtitles.qml")
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Playlist")
-            icon.name: "view-media-playlist"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/Playlist.qml")
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Mouse")
-            icon.name: "input-mouse"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/Mouse.qml")
-            }
-        },
-        Kirigami.Action {
-            text: i18n("Custom commands")
-            icon.name: "configure"
-            onTriggered: {
-                applicationWindow().pageStack.removePage(1)
-                applicationWindow().pageStack.push("qrc:/CustomCommands.qml")
-            }
-        }
-    ]
-
     ListView {
         id: settingsPagesList
+
+        property list<Kirigami.Action> actions: [
+            Kirigami.Action {
+                text: i18n("General")
+                icon.name: "configure"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/Playback.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Playback")
+                icon.name: "media-playback-start"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/Playback.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Video")
+                icon.name: "video-x-generic"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/VideoSettings.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Audio")
+                icon.name: "player-volume"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/Audio.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Subtitles")
+                icon.name: "add-subtitle"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/Subtitles.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Playlist")
+                icon.name: "view-media-playlist"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/Playlist.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Mouse")
+                icon.name: "input-mouse"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/Mouse.qml")
+                }
+            },
+            Kirigami.Action {
+                text: i18n("Custom commands")
+                icon.name: "configure"
+                onTriggered: {
+                    applicationWindow().pageStack.removePage(1)
+                    applicationWindow().pageStack.push("qrc:/CustomCommands.qml")
+                }
+            }
+        ]
 
         anchors.fill: parent
         model: actions
