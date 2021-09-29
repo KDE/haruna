@@ -35,14 +35,6 @@ flatpak run --branch=beta org.kde.haruna
 
 [Flatpak setup guide](https://flatpak.org/setup/)
 
-# AppImage
-
-* Download appimage from [Releases](https://github.com/g-fb/haruna/releases)
-* Make executable `chmod +x Haruna*.AppImage`
-* Run
-* Optional, use [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher)
-* Note: On Fedora/Redhat users may need to install `libnsl` (`sudo dnf install libnsl`)
-
 # Features
 
 these are just some features that set Haruna apart from others players
