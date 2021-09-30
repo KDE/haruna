@@ -125,12 +125,15 @@ QVariantMap MediaPlayer2Player::Metadata()
                     m_mpv->getProperty("duration").toDouble() * 1000 * 1000);
     metadata.insert(QStringLiteral("mpris:trackid"),
                     QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath("/org/kde/haruna")));
-    metadata.insert(QStringLiteral("xesam:title"),
-                    m_mpv->getProperty("filename").toString());
+
+    auto mpvMediaTitle = m_mpv->getProperty("media-title").toString();
+    auto mpvFilename = m_mpv->getProperty("filename").toString();
+    auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvMediaTitle;
+    metadata.insert(QStringLiteral("xesam:title"), title);
+
     QUrl url(m_mpv->getProperty("path").toString());
     url.setScheme("file");
-    metadata.insert(QStringLiteral("xesam:url"),
-                    url.toString());
+    metadata.insert(QStringLiteral("xesam:url"), url.toString());
 
     return metadata;
 }
