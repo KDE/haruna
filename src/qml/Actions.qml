@@ -8,6 +8,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 
 import org.kde.haruna 1.0
+import "Settings"
 
 QtObject {
     id: root
@@ -180,7 +181,10 @@ QtObject {
 
         Component.onCompleted: list["aboutHarunaAction"] = aboutHarunaAction
 
-        onTriggered: aboutPage.show()
+        onTriggered: {
+            settingsEditor.page = SettingsEditor.Page.About
+            configureAction.trigger()
+        }
     }
 
     property Action seekForwardSmallAction: Action {
