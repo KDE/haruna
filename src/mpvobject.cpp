@@ -114,6 +114,8 @@ MpvObject::MpvObject(QQuickItem * parent)
     setProperty("screenshot-template", VideoSettings::screenshotTemplate());
     setProperty("sub-auto", "exact");
     setProperty("volume-max", "100");
+    // set ytdl_path to yt-dlp or fallback to youtube-dl
+    setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
 
     mpv_observe_property(mpv, 0, "media-title", MPV_FORMAT_STRING);
     mpv_observe_property(mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
@@ -579,7 +581,7 @@ void MpvObject::getYouTubePlaylist(const QString &path)
 
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = new QProcess();
-    ytdlProcess->setProgram("youtube-dl");
+    ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(QStringList() << "-J" << "--flat-playlist" << path);
     ytdlProcess->start();
 

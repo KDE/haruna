@@ -283,8 +283,23 @@ QString Application::version()
 
 bool Application::hasYoutubeDl()
 {
-    return !QStandardPaths::findExecutable(QStringLiteral("youtube-dl")).isEmpty();
+    return !youtubeDlExecutable().isEmpty();
 
+}
+
+QString Application::youtubeDlExecutable()
+{
+    auto ytDlp = QStandardPaths::findExecutable(QStringLiteral("yt-dlp"));
+    if (!ytDlp.isEmpty()) {
+        return ytDlp;
+    }
+
+    auto youtubeDl = QStandardPaths::findExecutable(QStringLiteral("youtube-dl"));
+    if (!youtubeDl.isEmpty()) {
+        return youtubeDl;
+    }
+
+    return QString();
 }
 
 QUrl Application::parentUrl(const QString &path)
