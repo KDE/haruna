@@ -114,6 +114,7 @@ MpvObject::MpvObject(QQuickItem * parent)
     setProperty("screenshot-template", VideoSettings::screenshotTemplate());
     setProperty("sub-auto", "exact");
     setProperty("volume-max", "100");
+    setProperty("keep-open", "yes");
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
 
