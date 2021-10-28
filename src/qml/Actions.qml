@@ -447,7 +447,11 @@ QtObject {
         Component.onCompleted: list["configureAction"] = configureAction
 
         onTriggered: {
-            settingsEditor.visible = true
+            if (settingsEditor.visible) {
+                settingsEditor.raise()
+            } else {
+                settingsEditor.visible = true
+            }
         }
     }
 
