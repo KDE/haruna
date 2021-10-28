@@ -67,7 +67,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Playback.qml")
+                        applicationWindow().pageStack.push("qrc:/General.qml")
                     }
                 },
                 Kirigami.Action {
