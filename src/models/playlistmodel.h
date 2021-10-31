@@ -46,6 +46,7 @@ public:
     Q_INVOKABLE void setPlayingVideo(int playingVideo);
     Q_INVOKABLE int getPlayingVideo() const;
     Q_INVOKABLE void getVideos(QString path);
+    Q_INVOKABLE void appendVideo(QString videoPath);
     Q_INVOKABLE void clear();
 
     Playlist getPlayList() const;

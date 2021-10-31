@@ -116,6 +116,33 @@ void PlayListModel::getVideos(QString path)
     endInsertRows();
 }
 
+void PlayListModel::appendVideo(QString videoPath)
+{
+    videoPath = QUrl(videoPath).toLocalFile().isEmpty() ? videoPath : QUrl(videoPath).toLocalFile();
+    QFileInfo videoPathInfo(videoPath);
+    QStringList videoFiles;
+    if (videoPathInfo.exists() && videoPathInfo.isFile()) {
+        QString mimeType = Application::mimeType(videoPathInfo.absoluteFilePath());
+        if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
+            videoFiles.append(videoPathInfo.absoluteFilePath());
+        }
+    }
+
+    if (videoFiles.isEmpty()) {
+        return;
+    }
+
+    int row {m_playList.count()};
+    beginInsertRows(QModelIndex(), row, m_playList.count());
+
+    auto video = new PlayListItem(videoFiles.at(row), row, this);
+    m_playList.append(video);
+    setPlayingVideo(row);
+    Q_EMIT videoAdded(row, video->filePath());
+
+    endInsertRows();
+}
+
 Playlist PlayListModel::items() const
 {
     return m_playList;
