@@ -19,6 +19,11 @@ MpvObject {
     property int mouseX: mouseArea.mouseX
     property int mouseY: mouseArea.mouseY
 
+    // when playlist repeat is turned off
+    // the last file in the playlist is reloaded
+    // this property is used to pause the player
+    property bool isFileReloaded: false
+
     signal setSubtitle(int id)
     signal setSecondarySubtitle(int id)
     signal setAudio(int id)
@@ -100,6 +105,13 @@ MpvObject {
         setProperty("ab-loop-a", "no")
         setProperty("ab-loop-b", "no")
 
+        if (isFileReloaded) {
+            mpv.pause = true
+            position = 0
+            isFileReloaded = false
+            return
+        }
+
         mpv.pause = false
         position = 0
         if (PlaybackSettings.resumePlayback) {
@@ -157,6 +169,9 @@ MpvObject {
             if (PlaylistSettings.repeat) {
                 playlistModel.setPlayingVideo(0)
                 loadFile(playlistModel.getPath(0), !playList.isYouTubePlaylist)
+            } else {
+                loadFile(playlistModel.getPath(playlistModel.getPlayingVideo()), !playList.isYouTubePlaylist)
+                isFileReloaded = true
             }
         }
     }

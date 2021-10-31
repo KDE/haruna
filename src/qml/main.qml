@@ -206,7 +206,10 @@ Kirigami.ApplicationWindow {
         if (loadSiblings) {
             // get video files from same folder as the opened file
             mpv.playlistModel.getVideos(path)
+        } else {
+            mpv.playlistModel.appendVideo(path)
         }
+
         mpv.loadFile(path)
     }
 
