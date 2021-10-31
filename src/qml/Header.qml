@@ -66,7 +66,7 @@ ToolBar {
             icon.name: "add-subtitle"
             focusPolicy: Qt.NoFocus
 
-            onClicked: {
+            onReleased: {
                 subtitleMenu.visible = !subtitleMenu.visible
             }
 
@@ -74,6 +74,7 @@ ToolBar {
                 id: subtitleMenu
 
                 y: parent.height
+                closePolicy: Popup.CloseOnReleaseOutsideParent
 
                 Instantiator {
                     id: primarySubtitleMenuInstantiator
@@ -96,10 +97,7 @@ ToolBar {
             icon.name: "audio-volume-high"
             focusPolicy: Qt.NoFocus
 
-            onClicked: {
-                if (audioMenuInstantiator.model === 0) {
-                    audioMenuInstantiator.model = mpv.audioTracksModel
-                }
+            onReleased: {
                 audioMenu.visible = !audioMenu.visible
             }
 
@@ -107,11 +105,12 @@ ToolBar {
                 id: audioMenu
 
                 y: parent.height
+                closePolicy: Popup.CloseOnReleaseOutsideParent
 
                 Instantiator {
                     id: audioMenuInstantiator
 
-                    model: 0
+                    model: mpv.audioTracksModel
                     onObjectAdded: audioMenu.insertItem( index, object )
                     onObjectRemoved: audioMenu.removeItem( object )
                     delegate: MenuItem {
