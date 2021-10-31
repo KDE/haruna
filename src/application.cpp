@@ -71,7 +71,7 @@ static QApplication *createApplication(int &argc, char **argv, const QString &ap
     QApplication::setOrganizationDomain("kde.org");
     QApplication::setApplicationDisplayName("Haruna - Video Player");
     QApplication::setApplicationVersion(Application::version());
-    QApplication::setWindowIcon(QIcon::fromTheme("org.kde.haruna"));
+    QApplication::setWindowIcon(QIcon::fromTheme("haruna"));
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
     QQuickStyle::setFallbackStyle(QStringLiteral("Fusion"));
