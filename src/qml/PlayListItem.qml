@@ -66,8 +66,6 @@ Kirigami.BasicListItem {
             }
 
             LabelWithTooltip {
-                toolTipFontSize: font.pointSize + 2
-
                 color: Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter

@@ -113,7 +113,6 @@ Kirigami.BasicListItem {
 
             LabelWithTooltip {
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
-                toolTipFontSize: font.pointSize + 2
                 color: Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter

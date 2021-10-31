@@ -110,7 +110,6 @@ ToolBar {
             text: app.formatTime(mpv.position) + " / " + app.formatTime(mpv.duration)
             font.pointSize: Kirigami.Units.gridUnit - 4
             toolTipText: i18n("Remaining: %1", app.formatTime(mpv.remaining))
-            toolTipFontSize: timeInfo.font.pointSize + 2
             alwaysShowToolTip: true
             horizontalAlignment: Qt.AlignHCenter
         }

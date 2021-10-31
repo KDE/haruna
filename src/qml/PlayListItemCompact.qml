@@ -38,7 +38,6 @@ Kirigami.BasicListItem {
     ToolTip {
         text: (PlaylistSettings.showMediaTitle ? model.title : model.name)
         visible: root.containsMouse
-        font.pointSize: Kirigami.Units.gridUnit - 5
     }
 
     function mainText() {
