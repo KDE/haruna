@@ -15,8 +15,7 @@
 SubtitlesFoldersModel::SubtitlesFoldersModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
-    m_list = m_config->group("Subtitles").readPathEntry("Folders", QStringList());
+    m_list = SubtitlesSettings::subtitlesFolders();
 }
 
 int SubtitlesFoldersModel::rowCount(const QModelIndex &parent) const
@@ -62,8 +61,9 @@ void SubtitlesFoldersModel::deleteFolder(int row)
     beginRemoveRows(QModelIndex(), row, row);
     m_list.removeAt(row);
     endRemoveRows();
-    m_config->group("Subtitles").writePathEntry("Folders", m_list);
-    m_config->sync();
+
+    SubtitlesSettings::setSubtitlesFolders(m_list);
+    SubtitlesSettings::self()->save();
 }
 
 void SubtitlesFoldersModel::addFolder()
