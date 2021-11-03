@@ -12,11 +12,9 @@
   <include>QStandardPaths</include>
   <group name="Video">
     <entry name="ScreenshotFormat" type="String">
-      <label>Screenshot format</label>
       <default>jpg</default>
     </entry>
     <entry name="ScreenshotTemplate" type="String">
-      <label>Screenshot template</label>
       <code>
         QString screenshotsFolder = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
         screenshotsFolder.append("/Haruna screenshots/%F-%n");

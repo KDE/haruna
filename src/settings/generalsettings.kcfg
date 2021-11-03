@@ -12,40 +12,30 @@
   <include>QStandardPaths</include>
   <group name="General">
     <entry name="OsdFontSize" type="Int">
-      <label>Osd font size</label>
       <default>25</default>
     </entry>
     <entry name="VolumeStep" type="Int">
-      <label>Volume step</label>
       <default>5</default>
     </entry>
     <entry name="SeekSmallStep" type="Int">
-      <label>Seek small step</label>
       <default>5</default>
     </entry>
     <entry name="SeekMediumStep" type="Int">
-      <label>Seek medium step</label>
       <default>15</default>
     </entry>
     <entry name="SeekBigStep" type="Int">
-      <label>Seek big step</label>
       <default>30</default>
     </entry>
     <entry name="ShowMenuBar" type="bool">
-      <label>Show menu bar</label>
       <default>true</default>
     </entry>
     <entry name="ShowHeader" type="bool">
-      <label>Show header</label>
       <default>true</default>
     </entry>
     <entry name="ShowChapterMarkers" type="bool">
-      <label>Show chapter markers</label>
       <default>true</default>
     </entry>
-    <entry name="ColorScheme" type="String">
-      <label>Color scheme</label>
-    </entry>
+    <entry name="ColorScheme" type="String"></entry>
     <entry name="UseBreezeIconTheme" type="bool">
       <default>false</default>
     </entry>
@@ -53,27 +43,19 @@
         <default>Default</default>
     </entry>
     <entry name="Volume" type="Int">
-      <label>Volume</label>
       <default>80</default>
     </entry>
-    <entry name="LastPlayedFile" type="String">
-      <label>Last played file</label>
-    </entry>
+    <entry name="LastPlayedFile" type="String"></entry>
     <entry name="LastPlaylistIndex" type="Int">
       <default>0</default>
     </entry>
-    <entry name="FileDialogLocation" type="String">
-      <label>File default dialog location</label>
-    </entry>
+    <entry name="FileDialogLocation" type="String"></entry>
     <entry name="FileDialogLastLocation" type="String">
-      <label>File dialog last location</label>
       <code>
         QString videoFolder = QStandardPaths::writableLocation(QStandardPaths::MoviesLocation);
       </code>
       <default code="true">videoFolder</default>
     </entry>
-    <entry name="LastUrl" type="String">
-      <label>Last url</label>
-    </entry>
+    <entry name="LastUrl" type="String"></entry>
   </group>
 </kcfg>
