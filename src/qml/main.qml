@@ -23,7 +23,7 @@ Kirigami.ApplicationWindow {
     id: window
 
     property var configure: app.action("configure")
-    property int preFullScreenVisibility
+    property int previousVisibility: Window.Windowed
     property var appActions: actions.list
 
     visible: true
@@ -35,9 +35,17 @@ Kirigami.ApplicationWindow {
     color: Kirigami.Theme.backgroundColor
 
     onVisibilityChanged: {
-        if (!window.isFullScreen()) {
-            preFullScreenVisibility = visibility
+        if (PlaybackSettings.pauseWhileMinimized) {
+            if (visibility === Window.Minimized) {
+                mpv.pause = true
+            }
+            if (previousVisibility === Window.Minimized
+                    && visibility === Window.Windowed | Window.Maximized | Window.FullScreen) {
+                mpv.pause = false
+            }
         }
+
+        previousVisibility = visibility
     }
 
     header: Header { id: header }
@@ -227,12 +235,11 @@ Kirigami.ApplicationWindow {
     }
 
     function exitFullscreen() {
-        if (window.preFullScreenVisibility === Window.Windowed) {
-            window.showNormal()
-        }
-        if (window.preFullScreenVisibility === Window.Maximized) {
+        if (window.previousVisibility === Window.Maximized) {
             window.show()
             window.showMaximized()
+        } else {
+            window.showNormal()
         }
     }
 }

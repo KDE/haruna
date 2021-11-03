@@ -58,6 +58,24 @@ SettingsBasePage {
         }
 
         Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
+        Item { width: 1; height: 1 }
+
+        CheckBox {
+            id: pauseOnMinimizeCheckBox
+
+            text: i18n("Pause on minimize")
+            checked: PlaybackSettings.pauseWhileMinimized
+            onCheckedChanged: {
+                PlaybackSettings.pauseWhileMinimized = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18n("Pauses the player while the window is minimized, playback resumes when restored.")
+            }
+        }
+
+        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
 
         Label {
             text: i18n("Hardware decoding")
