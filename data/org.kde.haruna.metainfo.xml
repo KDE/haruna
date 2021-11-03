@@ -224,6 +224,23 @@
     </ul>
   </description>
   <releases>
+    <release version="0.7.3" date="2021-10-03">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Made settings sidebar text translatable.</li>
+          <li>Moved about page inside the settings window.</li>
+          <li>Show title instead of filename in MPRIS2.</li>
+          <li>Fixed icon not showing in about page.</li>
+          <li>Fixed report bug button not working in the about page.</li>
+          <li>Added support for yt-dlp.</li>
+          <li>When last file in the playlist ends and repeat setting is disabled the file can be played again by unpausing the player.</li>
+          <li>Opening the settings window now brings the window on top of the main window even if already open.</li>
+          <li>Fixed subtitles and audio toolbuttons not properly closing their menu.</li>
+          <li>Decreased the font size of some tooltips.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.2" date="2021-09-26">
       <description>
         <p>Bugfixes:</p>
