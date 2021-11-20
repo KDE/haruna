@@ -25,7 +25,7 @@ Menu {
     MenuSeparator {}
 
     Menu {
-        title: "Seek"
+        title: i18n("Seek")
         MenuItem { action: actions["seekForwardSmallAction"] }
         MenuItem { action: actions["seekBackwardSmallAction"] }
 

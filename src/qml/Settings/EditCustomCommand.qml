@@ -47,7 +47,7 @@ SettingsBasePage {
             id: commandTextField
 
             text: root.command
-            placeholderText: "add volume +10"
+            placeholderText: i18n("add volume +10")
             Layout.fillWidth: true
             Component.onCompleted: forceActiveFocus()
         }
@@ -62,7 +62,7 @@ SettingsBasePage {
 
             text: root.osdMessage
             enabled: typeGroup.checkedButton.optionName === "shortcut"
-            placeholderText: "Filename: ${filename}"
+            placeholderText: i18n("Filename: ${filename}")
             Layout.fillWidth: true
         }
 

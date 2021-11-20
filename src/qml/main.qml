@@ -127,7 +127,7 @@ Kirigami.ApplicationWindow {
                                : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
 
         folder: location
-        title: "Select file"
+        title: i18n("Select file")
         fileMode: Platform.FileDialog.OpenFile
 
         onAccepted: {

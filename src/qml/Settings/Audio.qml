@@ -29,7 +29,7 @@ SettingsBasePage {
         }
         TextField {
             text: AudioSettings.preferredLanguage
-            placeholderText: "eng,ger etc."
+            placeholderText: i18n("eng,ger etc.")
             Layout.fillWidth: true
             onTextEdited: {
                 AudioSettings.preferredLanguage = text

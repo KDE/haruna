@@ -215,7 +215,7 @@ SettingsBasePage {
 
         TextField {
             text: PlaybackSettings.chaptersToSkip
-            placeholderText: "op, ed, chapter 1"
+            placeholderText: i18n("op, ed, chapter 1")
             enabled: skipChaptersCheckBox.checked
             Layout.fillWidth: true
             onEditingFinished: {
