@@ -93,6 +93,9 @@ set_package_properties(KF5XmlGui PROPERTIES TYPE REQUIRED
 find_package(YouTubeDl)
 set_package_properties(YouTubeDl PROPERTIES TYPE RUNTIME)
 
+find_package(Ytdlp)
+set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME)
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 add_subdirectory(data)
