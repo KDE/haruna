@@ -50,6 +50,7 @@
 #include <QStyleFactory>
 #include <QThread>
 #include <KFileItem>
+#include <recentfilesmodel.h>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -99,7 +100,6 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     m_app->installEventFilter(appEventFilter);
     QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave,
                      this, &Application::qmlApplicationMouseLeave);
-
 
     setupUserActions();
 
@@ -251,6 +251,10 @@ void Application::setupQmlContextProperties()
     auto proxyCustomCommandsModel = new ProxyCustomCommandsModel();
     proxyCustomCommandsModel->setSourceModel(customCommandsModel);
     m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomCommandsModel"), proxyCustomCommandsModel);
+
+
+    auto recentFilesModel = new RecentFilesModel();
+    m_engine->rootContext()->setContextProperty(QStringLiteral("recentFilesModel"), recentFilesModel);
 
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
     m_engine->rootContext()->setContextProperty(QStringLiteral("harunaAboutData"),

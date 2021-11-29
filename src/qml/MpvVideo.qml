@@ -64,7 +64,7 @@ MpvObject {
         setProperty("sub-file-paths", SubtitlesSettings.subtitlesFolders.join(":"))
 
         if (app.argument(0) !== "") {
-            window.openFile(app.argument(0), true, PlaylistSettings.loadSiblings)
+            window.openFile(app.argument(0), true, PlaylistSettings.loadSiblings, true)
         } else {
             if (!PlaybackSettings.openLastPlayedFile) {
                 return
@@ -300,7 +300,7 @@ MpvObject {
             }
 
             if (app.mimeType(drop.urls[0]).startsWith("video/") || app.mimeType(drop.urls[0]).startsWith("audio/")) {
-                window.openFile(drop.urls[0], true, PlaylistSettings.loadSiblings)
+                window.openFile(drop.urls[0], true, PlaylistSettings.loadSiblings, true)
             }
         }
     }

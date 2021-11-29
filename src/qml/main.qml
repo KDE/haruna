@@ -131,7 +131,7 @@ Kirigami.ApplicationWindow {
         fileMode: Platform.FileDialog.OpenFile
 
         onAccepted: {
-            openFile(fileDialog.file.toString(), true, PlaylistSettings.loadSiblings)
+            openFile(fileDialog.file.toString(), true, PlaylistSettings.loadSiblings, true)
             // the timer scrolls the playlist to the playing file
             // once the table view rows are loaded
             playList.scrollPositionTimer.start()
@@ -187,7 +187,7 @@ Kirigami.ApplicationWindow {
                 text: i18n("Open")
 
                 onClicked: {
-                    openFile(openUrlTextField.text, true, false)
+                    openFile(openUrlTextField.text, true, false, true)
                     GeneralSettings.lastUrl = openUrlTextField.text
                     // in case the url is a playList, it opens the first video
                     GeneralSettings.lastPlaylistIndex = 0
@@ -200,7 +200,11 @@ Kirigami.ApplicationWindow {
 
     Component.onCompleted: app.activateColorScheme(GeneralSettings.colorScheme)
 
-    function openFile(path, startPlayback, loadSiblings) {
+    function openFile(path, startPlayback, loadSiblings, addToRecentFiles = false) {
+
+        if (addToRecentFiles) {
+            recentFilesModel.addUrl(path)
+        }
 
         if (app.isYoutubePlaylist(path)) {
             mpv.getYouTubePlaylist(path);
