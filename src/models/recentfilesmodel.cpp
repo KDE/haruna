@@ -85,12 +85,8 @@ void RecentFilesModel::addUrl(const QString &path)
     beginResetModel();
     auto result = std::find_if(m_urls.begin(), m_urls.end(), exists);
     if (result != m_urls.end()) {
-        qDebug() << "found" << *result;
         m_urls.removeAll(*result);
-        qDebug() << "found" << *result;
     }
     m_urls.prepend(url);
     endResetModel();
-
-    Q_EMIT dataChanged(index(0, 0), index(m_recentFilesAction->maxItems(), 0));
 }
