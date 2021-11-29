@@ -10,25 +10,25 @@ add_executable(haruna)
 
 target_sources(haruna
     PRIVATE
-    application.cpp
-    framedecoder.cpp
-    global.cpp
-    haction.cpp
-    lockmanager.cpp
+    application.h application.cpp
+    framedecoder.h framedecoder.cpp
+    global.h global.cpp
+    haction.h haction.cpp
+    lockmanager.h lockmanager.cpp
     main.cpp
-    models/customcommandsmodel.cpp
-    models/recentfilesmodel.cpp
-    models/subtitlesfoldersmodel.cpp
-    models/tracksmodel.cpp
-    models/playlistmodel.cpp
-    mpris2/mediaplayer2.cpp
-    mpris2/mediaplayer2player.cpp
-    mpvobject.cpp
+    models/customcommandsmodel.h models/customcommandsmodel.cpp
+    models/recentfilesmodel.h models/recentfilesmodel.cpp
+    models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp
+    models/tracksmodel.h models/tracksmodel.cpp
+    models/playlistmodel.h models/playlistmodel.cpp
+    mpris2/mediaplayer2.h mpris2/mediaplayer2.cpp
+    mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
+    mpvobject.h mpvobject.cpp
     qthelper.h
-    playlistitem.cpp
-    thumbnailimageprovider.cpp
-    track.cpp
-    worker.cpp
+    playlistitem.h playlistitem.cpp
+    thumbnailimageprovider.h thumbnailimageprovider.cpp
+    track.h track.cpp
+    worker.h worker.cpp
     qml.qrc
     ../help/help.qrc
     ${haruna_screensaver_inhibit_SRCS}
