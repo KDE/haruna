@@ -21,7 +21,6 @@ Menu {
         title: i18n("Recent Files")
 
         Repeater {
-            id: repeater
             model: recentFilesModel
             delegate: MenuItem {
                 text: model.name
