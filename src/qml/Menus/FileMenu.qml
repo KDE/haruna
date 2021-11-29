@@ -26,7 +26,6 @@ Menu {
                 text: model.name
                 onClicked: window.openFile(model.path, true, PlaylistSettings.loadSiblings)
             }
-            onModelChanged: update()
         }
     }
 
