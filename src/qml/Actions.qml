@@ -571,7 +571,6 @@ QtObject {
             mpv.command(["cycle", "sid", "up"])
             const currentTrackId = mpv.getProperty("sid")
             if (currentTrackId === false) {
-                message = `Subtitle: None`
                 osd.message(i18n("Subtitle: None"))
             } else {
                 const tracks = mpv.getProperty("track-list")

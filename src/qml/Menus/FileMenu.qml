@@ -14,8 +14,8 @@ Menu {
 
     title: i18n("&File")
 
-    MenuItem { action: actions["openAction"] }
-    MenuItem { action: actions["openUrlAction"] }
+    MenuItem { action: actions.openAction }
+    MenuItem { action: actions.openUrlAction }
 
     Menu {
         title: i18n("Recent Files")
@@ -32,5 +32,5 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: actions["quitApplicationAction"] }
+    MenuItem { action: actions.quitApplicationAction }
 }

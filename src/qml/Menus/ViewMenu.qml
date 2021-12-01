@@ -12,12 +12,14 @@ Menu {
 
     title: i18n("&View")
 
+    MenuItem { action: actions.toggleFullscreenAction }
+
     MenuItem {
-        action: actions["toggleMenuBarAction"]
+        action: actions.toggleMenuBarAction
         text: menuBar.visible ? i18n("Hide Menubar") : i18n("Show Menubar")
     }
     MenuItem {
-        action: actions["toggleHeaderAction"]
+        action: actions.toggleHeaderAction
         text: header.visible ? i18n("Hide Toolbar") : i18n("Show Toolbar")
     }
 }

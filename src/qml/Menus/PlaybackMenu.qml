@@ -12,46 +12,48 @@ Menu {
 
     title: i18n("&Playback")
 
-    MenuItem { action: actions["playPauseAction"] }
-    MenuItem { action: actions["playNextAction"] }
-    MenuItem { action: actions["playPreviousAction"] }
+    MenuItem { action: actions.playPauseAction }
+    MenuItem { action: actions.playNextAction }
+    MenuItem { action: actions.playPreviousAction }
+
+    MenuItem { action: actions.setLoopAction }
 
     MenuSeparator {}
 
-    MenuItem { action: actions["increasePlayBackSpeedAction"] }
-    MenuItem { action: actions["decreasePlayBackSpeedAction"] }
-    MenuItem { action: actions["resetPlayBackSpeedAction"] }
+    MenuItem { action: actions.increasePlayBackSpeedAction }
+    MenuItem { action: actions.decreasePlayBackSpeedAction }
+    MenuItem { action: actions.resetPlayBackSpeedAction }
 
     MenuSeparator {}
 
     Menu {
         title: i18n("Seek")
-        MenuItem { action: actions["seekForwardSmallAction"] }
-        MenuItem { action: actions["seekBackwardSmallAction"] }
+        MenuItem { action: actions.seekForwardSmallAction }
+        MenuItem { action: actions.seekBackwardSmallAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions["seekForwardMediumAction"] }
-        MenuItem { action: actions["seekBackwardMediumAction"] }
+        MenuItem { action: actions.seekForwardMediumAction }
+        MenuItem { action: actions.seekBackwardMediumAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions["seekForwardBigAction"] }
-        MenuItem { action: actions["seekBackwardBigAction"] }
+        MenuItem { action: actions.seekForwardBigAction }
+        MenuItem { action: actions.seekBackwardBigAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions["seekNextSubtitleAction"] }
-        MenuItem { action: actions["seekPrevSubtitleAction"] }
+        MenuItem { action: actions.seekNextSubtitleAction }
+        MenuItem { action: actions.seekPrevSubtitleAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions["seekPreviousChapterAction"] }
-        MenuItem { action: actions["seekNextChapterAction"] }
+        MenuItem { action: actions.seekPreviousChapterAction }
+        MenuItem { action: actions.seekNextChapterAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions["frameStepAction"] }
-        MenuItem { action: actions["frameBackStepAction"] }
+        MenuItem { action: actions.frameStepAction }
+        MenuItem { action: actions.frameBackStepAction }
     }
 }
