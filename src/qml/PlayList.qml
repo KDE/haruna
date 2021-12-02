@@ -19,7 +19,7 @@ Item {
     property alias playlistView: playlistView
     property bool isYouTubePlaylist: false
 
-    height: parent.height
+    height: mpv.height
     width: {
         if (PlaylistSettings.style === "compact") {
             return Kirigami.Units.gridUnit * 21
