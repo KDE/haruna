@@ -219,21 +219,19 @@ MpvObject {
             hideCursor = false
             hideCursorTimer.restart()
 
-            if (!playList.canToggleWithMouse || playList.playlistView.count <= 1) {
+            if (!PlaylistSettings.canToggleWithMouse || playList.playlistView.count <= 1) {
                 return
             }
             if (playList.position === "right") {
                 if (mouseX > width - 50) {
                     playList.state = "visible"
-                }
-                if (mouseX < width - playList.width - 20) {
+                } else {
                     playList.state = "hidden"
                 }
             } else {
                 if (mouseX < 50) {
                     playList.state = "visible"
-                }
-                if (mouseX > playList.width + 20) {
+                } else {
                     playList.state = "hidden"
                 }
             }
