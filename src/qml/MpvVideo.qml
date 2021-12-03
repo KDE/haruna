@@ -222,7 +222,7 @@ MpvObject {
             if (!PlaylistSettings.canToggleWithMouse || playList.playlistView.count <= 1) {
                 return
             }
-            if (playList.position === "right") {
+            if (PlaylistSettings.position === "right") {
                 if (mouseX > width - 50) {
                     playList.state = "visible"
                 } else {
