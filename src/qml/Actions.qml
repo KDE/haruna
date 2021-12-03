@@ -17,7 +17,7 @@ QtObject {
 
     property Action openContextMenuAction: Action {
         id: openContextMenuAction
-        property var qaction: app.action("openContextMenu")
+        property var qaction: actionsManager.action("openContextMenu")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -29,7 +29,7 @@ QtObject {
 
     property Action togglePlaylistAction: Action {
         id: togglePlaylistAction
-        property var qaction: app.action("togglePlaylist")
+        property var qaction: actionsManager.action("togglePlaylist")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -47,7 +47,7 @@ QtObject {
 
     property Action volumeUpAction: Action {
         id: volumeUpAction
-        property var qaction: app.action("volumeUp")
+        property var qaction: actionsManager.action("volumeUp")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -62,7 +62,7 @@ QtObject {
 
     property Action volumeDownAction: Action {
         id: volumeDownAction
-        property var qaction: app.action("volumeDown")
+        property var qaction: actionsManager.action("volumeDown")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -77,7 +77,7 @@ QtObject {
 
     property Action muteAction: Action {
         id: muteAction
-        property var qaction: app.action("mute")
+        property var qaction: actionsManager.action("mute")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -98,7 +98,7 @@ QtObject {
 
     property Action playNextAction: Action {
         id: playNextAction
-        property var qaction: app.action("playNext")
+        property var qaction: actionsManager.action("playNext")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -124,7 +124,7 @@ QtObject {
 
     property Action playPreviousAction: Action {
         id: playPreviousAction
-        property var qaction: app.action("playPrevious")
+        property var qaction: actionsManager.action("playPrevious")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -144,7 +144,7 @@ QtObject {
 
     property Action openAction: Action {
         id: openAction
-        property var qaction: app.action("openFile")
+        property var qaction: actionsManager.action("openFile")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -156,7 +156,7 @@ QtObject {
 
     property Action openUrlAction: Action {
         id: openUrlAction
-        property var qaction: app.action("openUrl")
+        property var qaction: actionsManager.action("openUrl")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -174,7 +174,7 @@ QtObject {
 
     property Action aboutHarunaAction: Action {
         id: aboutHarunaAction
-        property var qaction: app.action("aboutHaruna")
+        property var qaction: actionsManager.action("aboutHaruna")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -189,7 +189,7 @@ QtObject {
 
     property Action seekForwardSmallAction: Action {
         id: seekForwardSmallAction
-        property var qaction: app.action("seekForwardSmall")
+        property var qaction: actionsManager.action("seekForwardSmall")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -201,7 +201,7 @@ QtObject {
 
     property Action seekBackwardSmallAction: Action {
         id: seekBackwardSmallAction
-        property var qaction: app.action("seekBackwardSmall")
+        property var qaction: actionsManager.action("seekBackwardSmall")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -213,7 +213,7 @@ QtObject {
 
     property Action seekForwardMediumAction: Action {
         id: seekForwardMediumAction
-        property var qaction: app.action("seekForwardMedium")
+        property var qaction: actionsManager.action("seekForwardMedium")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -225,7 +225,7 @@ QtObject {
 
     property Action seekBackwardMediumAction: Action {
         id: seekBackwardMediumAction
-        property var qaction: app.action("seekBackwardMedium")
+        property var qaction: actionsManager.action("seekBackwardMedium")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -237,7 +237,7 @@ QtObject {
 
     property Action seekForwardBigAction: Action {
         id: seekForwardBigAction
-        property var qaction: app.action("seekForwardBig")
+        property var qaction: actionsManager.action("seekForwardBig")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -249,7 +249,7 @@ QtObject {
 
     property Action seekBackwardBigAction: Action {
         id: seekBackwardBigAction
-        property var qaction: app.action("seekBackwardBig")
+        property var qaction: actionsManager.action("seekBackwardBig")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -261,7 +261,7 @@ QtObject {
 
     property Action seekPreviousChapterAction: Action {
         id: seekPreviousChapterAction
-        property var qaction: app.action("seekPreviousChapter")
+        property var qaction: actionsManager.action("seekPreviousChapter")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -275,7 +275,7 @@ QtObject {
 
     property Action seekNextChapterAction: Action {
         id: seekNextChapterAction
-        property var qaction: app.action("seekNextChapter")
+        property var qaction: actionsManager.action("seekNextChapter")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -296,7 +296,7 @@ QtObject {
 
     property Action seekNextSubtitleAction: Action {
         id: seekNextSubtitleAction
-        property var qaction: app.action("seekNextSubtitle")
+        property var qaction: actionsManager.action("seekNextSubtitle")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -314,7 +314,7 @@ QtObject {
 
     property Action seekPrevSubtitleAction: Action {
         id: seekPrevSubtitleAction
-        property var qaction: app.action("seekPreviousSubtitle")
+        property var qaction: actionsManager.action("seekPreviousSubtitle")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -332,7 +332,7 @@ QtObject {
 
     property Action frameStepAction: Action {
         id: frameStepAction
-        property var qaction: app.action("frameStep")
+        property var qaction: actionsManager.action("frameStep")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -344,7 +344,7 @@ QtObject {
 
     property Action frameBackStepAction: Action {
         id: frameBackStepAction
-        property var qaction: app.action("frameBackStep")
+        property var qaction: actionsManager.action("frameBackStep")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -356,7 +356,7 @@ QtObject {
 
     property Action increasePlayBackSpeedAction: Action {
         id: increasePlayBackSpeedAction
-        property var qaction: app.action("increasePlayBackSpeed")
+        property var qaction: actionsManager.action("increasePlayBackSpeed")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -371,7 +371,7 @@ QtObject {
 
     property Action decreasePlayBackSpeedAction: Action {
         id: decreasePlayBackSpeedAction
-        property var qaction: app.action("decreasePlayBackSpeed")
+        property var qaction: actionsManager.action("decreasePlayBackSpeed")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -386,7 +386,7 @@ QtObject {
 
     property Action resetPlayBackSpeedAction: Action {
         id: resetPlayBackSpeedAction
-        property var qaction: app.action("resetPlayBackSpeed")
+        property var qaction: actionsManager.action("resetPlayBackSpeed")
         text: qaction.text
         shortcut: qaction.shortcutName
         icon.name: qaction.iconName()
@@ -412,7 +412,7 @@ QtObject {
 
     property Action configureShortcutsAction: Action {
         id: configureShortcutsAction
-        property var qaction: app.action("options_configure_keybinding")
+        property var qaction: actionsManager.action("options_configure_keybinding")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -424,7 +424,7 @@ QtObject {
 
     property Action quitApplicationAction: Action {
         id: quitApplicationAction
-        property var qaction: app.action("file_quit")
+        property var qaction: actionsManager.action("file_quit")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -439,7 +439,7 @@ QtObject {
 
     property Action configureAction: Action {
         id: configureAction
-        property var qaction: app.action("configure")
+        property var qaction: actionsManager.action("configure")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -457,7 +457,7 @@ QtObject {
 
     property Action subtitleQuickenAction: Action {
         id: subtitleQuickenAction
-        property var qaction: app.action("subtitleQuicken")
+        property var qaction: actionsManager.action("subtitleQuicken")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -472,7 +472,7 @@ QtObject {
 
     property Action subtitleDelayAction: Action {
         id: subtitleDelayAction
-        property var qaction: app.action("subtitleDelay")
+        property var qaction: actionsManager.action("subtitleDelay")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -487,7 +487,7 @@ QtObject {
 
     property Action subtitleToggleAction: Action {
         id: subtitleToggleAction
-        property var qaction: app.action("subtitleToggle")
+        property var qaction: actionsManager.action("subtitleToggle")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -504,7 +504,7 @@ QtObject {
 
     property Action audioCycleUpAction: Action {
         id: audioCycleUpAction
-        property var qaction: app.action("audioCycleUp")
+        property var qaction: actionsManager.action("audioCycleUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -532,7 +532,7 @@ QtObject {
 
     property Action audioCycleDownAction: Action {
         id: audioCycleDownAction
-        property var qaction: app.action("audioCycleDown")
+        property var qaction: actionsManager.action("audioCycleDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -560,7 +560,7 @@ QtObject {
 
     property Action subtitleCycleUpAction: Action {
         id: subtitleCycleUpAction
-        property var qaction: app.action("subtitleCycleUp")
+        property var qaction: actionsManager.action("subtitleCycleUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -582,7 +582,7 @@ QtObject {
 
     property Action subtitleCycleDownAction: Action {
         id: subtitleCycleDownAction
-        property var qaction: app.action("subtitleCycleDown")
+        property var qaction: actionsManager.action("subtitleCycleDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -604,7 +604,7 @@ QtObject {
 
     property Action contrastUpAction: Action {
         id: contrastUpAction
-        property var qaction: app.action("contrastUp")
+        property var qaction: actionsManager.action("contrastUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -619,7 +619,7 @@ QtObject {
     }
     property Action contrastDownAction: Action {
         id: contrastDownAction
-        property var qaction: app.action("contrastDown")
+        property var qaction: actionsManager.action("contrastDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -634,7 +634,7 @@ QtObject {
     }
     property Action contrastResetAction: Action {
         id: contrastResetAction
-        property var qaction: app.action("contrastReset")
+        property var qaction: actionsManager.action("contrastReset")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -649,7 +649,7 @@ QtObject {
 
     property Action brightnessUpAction: Action {
         id: brightnessUpAction
-        property var qaction: app.action("brightnessUp")
+        property var qaction: actionsManager.action("brightnessUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -664,7 +664,7 @@ QtObject {
     }
     property Action brightnessDownAction: Action {
         id: brightnessDownAction
-        property var qaction: app.action("brightnessDown")
+        property var qaction: actionsManager.action("brightnessDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -679,7 +679,7 @@ QtObject {
     }
     property Action brightnessResetAction: Action {
         id: brightnessResetAction
-        property var qaction: app.action("brightnessReset")
+        property var qaction: actionsManager.action("brightnessReset")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -693,7 +693,7 @@ QtObject {
     }
     property Action gammaUpAction: Action {
         id: gammaUpAction
-        property var qaction: app.action("gammaUp")
+        property var qaction: actionsManager.action("gammaUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -708,7 +708,7 @@ QtObject {
     }
     property Action gammaDownAction: Action {
         id: gammaDownAction
-        property var qaction: app.action("gammaDown")
+        property var qaction: actionsManager.action("gammaDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -723,7 +723,7 @@ QtObject {
     }
     property Action gammaResetAction: Action {
         id: gammaResetAction
-        property var qaction: app.action("gammaReset")
+        property var qaction: actionsManager.action("gammaReset")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -737,7 +737,7 @@ QtObject {
     }
     property Action saturationUpAction: Action {
         id: saturationUpAction
-        property var qaction: app.action("saturationUp")
+        property var qaction: actionsManager.action("saturationUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -752,7 +752,7 @@ QtObject {
     }
     property Action saturationDownAction: Action {
         id: saturationDownAction
-        property var qaction: app.action("saturationDown")
+        property var qaction: actionsManager.action("saturationDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -767,7 +767,7 @@ QtObject {
     }
     property Action saturationResetAction: Action {
         id: saturationResetAction
-        property var qaction: app.action("saturationReset")
+        property var qaction: actionsManager.action("saturationReset")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -782,7 +782,7 @@ QtObject {
 
     property Action zoomInAction: Action {
         id: zoomInAction
-        property var qaction: app.action("zoomIn")
+        property var qaction: actionsManager.action("zoomIn")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -798,7 +798,7 @@ QtObject {
 
     property Action zoomOutAction: Action {
         id: zoomOutAction
-        property var qaction: app.action("zoomOut")
+        property var qaction: actionsManager.action("zoomOut")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -813,7 +813,7 @@ QtObject {
     }
     property Action zoomResetAction: Action {
         id: zoomResetAction
-        property var qaction: app.action("zoomReset")
+        property var qaction: actionsManager.action("zoomReset")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -829,7 +829,7 @@ QtObject {
 
     property Action videoPanXLeftAction: Action {
         id: videoPanXLeftAction
-        property var qaction: app.action("videoPanXLeft")
+        property var qaction: actionsManager.action("videoPanXLeft")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -844,7 +844,7 @@ QtObject {
     }
     property Action videoPanXRightAction: Action {
         id: videoPanXRightAction
-        property var qaction: app.action("videoPanXRight")
+        property var qaction: actionsManager.action("videoPanXRight")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -859,7 +859,7 @@ QtObject {
     }
     property Action videoPanYUpAction: Action {
         id: videoPanYUpAction
-        property var qaction: app.action("videoPanYUp")
+        property var qaction: actionsManager.action("videoPanYUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -874,7 +874,7 @@ QtObject {
     }
     property Action videoPanYDownAction: Action {
         id: videoPanYDownAction
-        property var qaction: app.action("videoPanYDown")
+        property var qaction: actionsManager.action("videoPanYDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -890,7 +890,7 @@ QtObject {
 
     property Action toggleFullscreenAction: Action {
         id: toggleFullscreenAction
-        property var qaction: app.action("toggleFullscreen")
+        property var qaction: actionsManager.action("toggleFullscreen")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -904,7 +904,7 @@ QtObject {
 
     property Action toggleMenuBarAction: Action {
         id: toggleMenuBarAction
-        property var qaction: app.action("toggleMenuBar")
+        property var qaction: actionsManager.action("toggleMenuBar")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -916,7 +916,7 @@ QtObject {
 
     property Action toggleHeaderAction: Action {
         id: toggleHeaderAction
-        property var qaction: app.action("toggleHeader")
+        property var qaction: actionsManager.action("toggleHeader")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -928,7 +928,7 @@ QtObject {
 
     property Action screenshotAction: Action {
         id: screenshotAction
-        property var qaction: app.action("screenshot")
+        property var qaction: actionsManager.action("screenshot")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -940,7 +940,7 @@ QtObject {
 
     property Action setLoopAction: Action {
         id: setLoopAction
-        property var qaction: app.action("setLoop")
+        property var qaction: actionsManager.action("setLoop")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -974,7 +974,7 @@ QtObject {
 
     property Action increaseSubtitleFontSizeAction: Action {
         id: increaseSubtitleFontSizeAction
-        property var qaction: app.action("increaseSubtitleFontSize")
+        property var qaction: actionsManager.action("increaseSubtitleFontSize")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -989,7 +989,7 @@ QtObject {
 
     property Action decreaseSubtitleFontSizeAction: Action {
         id: decreaseSubtitleFontSizeAction
-        property var qaction: app.action("decreaseSubtitleFontSize")
+        property var qaction: actionsManager.action("decreaseSubtitleFontSize")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -1004,7 +1004,7 @@ QtObject {
 
     property Action subtitlePositionUpAction: Action {
         id: subtitlePositionUpAction
-        property var qaction: app.action("subtitlePositionUp")
+        property var qaction: actionsManager.action("subtitlePositionUp")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -1018,7 +1018,7 @@ QtObject {
 
     property Action subtitlePositionDownAction: Action {
         id: subtitlePositionDownAction
-        property var qaction: app.action("subtitlePositionDown")
+        property var qaction: actionsManager.action("subtitlePositionDown")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -1032,7 +1032,7 @@ QtObject {
 
     property Action toggleDeinterlacingAction: Action {
         id: toggleDeinterlacingAction
-        property var qaction: app.action("toggleDeinterlacing")
+        property var qaction: actionsManager.action("toggleDeinterlacing")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
@@ -1047,7 +1047,7 @@ QtObject {
 
     property Action exitFullscreenAction: Action {
         id: exitFullscreenAction
-        property var qaction: app.action("exitFullscreen")
+        property var qaction: actionsManager.action("exitFullscreen")
         text: qaction.text
         icon.name: qaction.iconName()
         shortcut: qaction.shortcutName
