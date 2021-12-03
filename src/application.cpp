@@ -348,16 +348,6 @@ QString Application::formatTime(const double time)
     return formattedTime;
 }
 
-void Application::hideCursor()
-{
-    QApplication::setOverrideCursor(Qt::BlankCursor);
-}
-
-void Application::showCursor()
-{
-    QApplication::setOverrideCursor(Qt::ArrowCursor);
-}
-
 QString Application::argument(int key)
 {
     return m_args[key];
