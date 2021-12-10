@@ -22,7 +22,7 @@ import "Settings"
 Kirigami.ApplicationWindow {
     id: window
 
-    property var configure: app.action("configure")
+    property var configure: actionsManager.action("configure")
     property int previousVisibility: Window.Windowed
     property var appActions: actions.list
 
@@ -102,7 +102,7 @@ Kirigami.ApplicationWindow {
     Instantiator {
         model: proxyCustomCommandsModel
         delegate: Action {
-            property var qaction: app.action(model.commandId)
+            property var qaction: actionsManager.action(model.commandId)
             text: qaction.text
             shortcut: qaction.shortcutName
             onTriggered: {
