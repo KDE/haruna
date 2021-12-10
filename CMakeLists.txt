@@ -21,7 +21,11 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_S
 include(KDEInstallDirs)
 include(ECMInstallIcons)
 include(ECMSetupVersion)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
+
+kde_enable_exceptions()
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX HARUNA
