@@ -183,7 +183,7 @@ QtObject {
 
         onTriggered: {
             settingsLoader.active = true
-            settingsLoader.item.page = SettingsEditor.Page.About
+            settingsLoader.item.page = SettingsWindow.Page.About
             configureAction.trigger()
         }
     }

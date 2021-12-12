@@ -89,7 +89,7 @@ Kirigami.ApplicationWindow {
         id: settingsLoader
 
         active: false
-        sourceComponent: SettingsEditor {}
+        sourceComponent: SettingsWindow {}
     }
 
     Actions { id: actions }
