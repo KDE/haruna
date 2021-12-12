@@ -67,7 +67,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/General.qml")
+                        applicationWindow().pageStack.push("qrc:/GeneralSettings.qml")
                     }
                 },
                 Kirigami.Action {
@@ -75,7 +75,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "media-playback-start"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Playback.qml")
+                        applicationWindow().pageStack.push("qrc:/PlaybackSettings.qml")
                     }
                 },
                 Kirigami.Action {
@@ -91,7 +91,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "player-volume"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Audio.qml")
+                        applicationWindow().pageStack.push("qrc:/AudioSettings.qml")
                     }
                 },
                 Kirigami.Action {
@@ -99,7 +99,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "add-subtitle"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Subtitles.qml")
+                        applicationWindow().pageStack.push("qrc:/SubtitlesSettings.qml")
                     }
                 },
                 Kirigami.Action {
@@ -107,7 +107,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "view-media-playlist"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Playlist.qml")
+                        applicationWindow().pageStack.push("qrc:/PlaylistSettings.qml")
                     }
                 },
                 Kirigami.Action {
@@ -115,7 +115,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "input-mouse"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Mouse.qml")
+                        applicationWindow().pageStack.push("qrc:/MouseSettings.qml")
                     }
                 },
                 Kirigami.Action {
@@ -123,7 +123,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/CustomCommands.qml")
+                        applicationWindow().pageStack.push("qrc:/CustomCommandsSettings.qml")
                     }
                 },
                 Kirigami.Action {
