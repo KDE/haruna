@@ -85,7 +85,12 @@ Kirigami.ApplicationWindow {
 
     SystemPalette { id: systemPalette; colorGroup: SystemPalette.Active }
 
-    SettingsEditor { id: settingsEditor }
+    Loader {
+        id: settingsLoader
+
+        active: false
+        sourceComponent: SettingsEditor {}
+    }
 
     Actions { id: actions }
 

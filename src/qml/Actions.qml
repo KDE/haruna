@@ -182,7 +182,8 @@ QtObject {
         Component.onCompleted: list["aboutHarunaAction"] = aboutHarunaAction
 
         onTriggered: {
-            settingsEditor.page = SettingsEditor.Page.About
+            settingsLoader.active = true
+            settingsLoader.item.page = SettingsEditor.Page.About
             configureAction.trigger()
         }
     }
@@ -447,10 +448,11 @@ QtObject {
         Component.onCompleted: list["configureAction"] = configureAction
 
         onTriggered: {
-            if (settingsEditor.visible) {
-                settingsEditor.raise()
+            settingsLoader.active = true
+            if (settingsLoader.item.visible) {
+                settingsLoader.item.raise()
             } else {
-                settingsEditor.visible = true
+                settingsLoader.item.visible = true
             }
         }
     }
