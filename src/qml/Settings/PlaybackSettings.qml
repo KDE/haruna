@@ -40,7 +40,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1; height: 1 }
+        Item { width: 1 }
 
         CheckBox {
             id: resumePlaybackCheckBox
@@ -58,7 +58,7 @@ SettingsBasePage {
         }
 
         Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
-        Item { width: 1; height: 1 }
+        Item { width: 1 }
 
         CheckBox {
             id: pauseOnMinimizeCheckBox
@@ -147,6 +147,7 @@ SettingsBasePage {
 
         Label {
             text: i18n("Remember time position")
+            Layout.alignment: Qt.AlignRight
         }
 
         RowLayout {
@@ -174,6 +175,31 @@ SettingsBasePage {
                                      timePositionSaving.value)
                     }
                 }
+                elide: Text.ElideRight
+                Layout.fillWidth: true
+            }
+        }
+
+        Item { width: 1 }
+
+        RowLayout {
+            enabled: timePositionSaving.value >= 0
+            SpinBox {
+                id: timePositionSaveInterval
+                from: 1
+                to: 300
+                value: PlaybackSettings.savePositionInterval
+
+                onValueChanged: {
+                    PlaybackSettings.savePositionInterval = value
+                    PlaybackSettings.save()
+                }
+            }
+
+            LabelWithTooltip {
+                text: i18np("Save position every %1 second",
+                            "Save position every %1 seconds",
+                            timePositionSaveInterval.value)
                 elide: Text.ElideRight
                 Layout.fillWidth: true
             }

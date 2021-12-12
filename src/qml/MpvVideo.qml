@@ -189,7 +189,7 @@ MpvObject {
     Timer {
         id: saveWatchLaterFileTimer
 
-        interval: 1000
+        interval: PlaybackSettings.savePositionInterval * 1000
         running: !mpv.pause
         repeat: true
 
