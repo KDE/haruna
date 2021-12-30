@@ -20,6 +20,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_S
 
 include(KDEInstallDirs)
 include(ECMInstallIcons)
+include(ECMAddAppIcon)
 include(ECMSetupVersion)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)

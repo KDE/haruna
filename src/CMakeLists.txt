@@ -6,6 +6,9 @@
 
 qt5_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
 
+# DATA_ICONS is defined in data/CMakeLists.txt
+ecm_add_app_icon(ICONS_SRCS ICONS ${DATA_ICONS})
+
 add_executable(haruna)
 
 target_sources(haruna
@@ -33,6 +36,7 @@ target_sources(haruna
     qml.qrc
     ../help/help.qrc
     ${haruna_screensaver_inhibit_SRCS}
+    ${ICONS_SRCS}
 )
 
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)
