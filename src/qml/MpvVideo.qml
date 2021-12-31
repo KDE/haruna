@@ -151,7 +151,8 @@ MpvObject {
                 return
             }
 
-            const title = playlistModel.getItem(playlistModel.getPlayingVideo()).mediaTitle()
+            const item = playlistModel.getItem(playlistModel.getPlayingVideo())
+            const title = item.mediaTitle() || item.fileName()
             osd.message(i18n("Could not play: %1", title))
             // only skip to next video if it's a youtube playList
             // to do: figure out why playback fails and act accordingly
