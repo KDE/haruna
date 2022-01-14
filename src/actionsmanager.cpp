@@ -308,6 +308,13 @@ void ActionsManager::setupActions(const QString &actionName)
         m_collection.setDefaultShortcut(action, Qt::Key_F5);
         m_collection.addAction(actionName, action);
     }
+    if (actionName == QStringLiteral("seekToWatchLaterPosition")) {
+        auto action = new HAction();
+        action->setText(i18n("Seek To Watch Later Position"));
+        action->setIcon(QIcon::fromTheme("pin"));
+        m_collection.setDefaultShortcut(action, Qt::CTRL + Qt::SHIFT + Qt::Key_P);
+        m_collection.addAction(actionName, action);
+    }
     if (actionName == QStringLiteral("seekForwardSmall")) {
         auto action = new HAction();
         action->setText(i18n("Seek Small Step Forward"));

@@ -212,6 +212,23 @@ QtObject {
         onTriggered: mpv.command(["seek", 0, "absolute"])
     }
 
+    property Action seekToWatchLaterPositionAction: Action {
+        id: seekToWatchLaterPositionAction
+        property var qaction: actionsManager.action("seekToWatchLaterPosition")
+        text: qaction.text
+        shortcut: qaction.shortcutName
+        icon.name: qaction.iconName()
+
+        Component.onCompleted: list["seekToWatchLaterPositionAction"] = seekToWatchLaterPositionAction
+
+        onTriggered: {
+            if (mpv.watchLaterPosition === -1) {
+                return
+            }
+            mpv.command(["seek", mpv.watchLaterPosition - 1, "absolute"])
+        }
+    }
+
     property Action seekForwardSmallAction: Action {
         id: seekForwardSmallAction
         property var qaction: actionsManager.action("seekForwardSmall")
