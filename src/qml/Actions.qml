@@ -200,6 +200,18 @@ QtObject {
         onTriggered: window.openFile(GeneralSettings.lastPlayedFile, true, true, true)
     }
 
+    property Action restartPlaybackAction: Action {
+        id: restartPlaybackAction
+        property var qaction: actionsManager.action("restartPlayback")
+        text: qaction.text
+        shortcut: qaction.shortcutName
+        icon.name: qaction.iconName()
+
+        Component.onCompleted: list["restartPlaybackAction"] = restartPlaybackAction
+
+        onTriggered: mpv.command(["seek", 0, "absolute"])
+    }
+
     property Action seekForwardSmallAction: Action {
         id: seekForwardSmallAction
         property var qaction: actionsManager.action("seekForwardSmall")
