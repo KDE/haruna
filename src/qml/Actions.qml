@@ -188,6 +188,18 @@ QtObject {
         }
     }
 
+    property Action loadLastPlayedFileAction: Action {
+        id: loadLastPlayedFileAction
+        property var qaction: actionsManager.action("loadLastPlayedFile")
+        text: qaction.text
+        shortcut: qaction.shortcutName
+        icon.name: qaction.iconName()
+
+        Component.onCompleted: list["loadLastPlayedFileAction"] = loadLastPlayedFileAction
+
+        onTriggered: window.openFile(GeneralSettings.lastPlayedFile, true, true, true)
+    }
+
     property Action seekForwardSmallAction: Action {
         id: seekForwardSmallAction
         property var qaction: actionsManager.action("seekForwardSmall")

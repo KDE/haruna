@@ -294,6 +294,13 @@ void ActionsManager::setupActions(const QString &actionName)
         m_collection.setDefaultShortcut(action, Qt::Key_M);
         m_collection.addAction(actionName, action);
     }
+    if (actionName == QStringLiteral("loadLastPlayedFile")) {
+        auto action = new HAction();
+        action->setText(i18n("Load Last Played File"));
+        action->setIcon(QIcon::fromTheme("document-open-recent"));
+        m_collection.setDefaultShortcut(action, Qt::CTRL + Qt::SHIFT + Qt::Key_L);
+        m_collection.addAction(actionName, action);
+    }
     if (actionName == QStringLiteral("seekForwardSmall")) {
         auto action = new HAction();
         action->setText(i18n("Seek Small Step Forward"));
