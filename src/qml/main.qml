@@ -17,6 +17,7 @@ import org.kde.haruna 1.0
 
 import mpv 1.0
 import "Menus"
+import "Menus/Global"
 import "Settings"
 
 Kirigami.ApplicationWindow {
@@ -50,22 +51,49 @@ Kirigami.ApplicationWindow {
 
     header: Header { id: header }
 
-    menuBar: MenuBar {
-        hoverEnabled: true
-        visible: !window.isFullScreen() && GeneralSettings.showMenuBar
-        background: Rectangle {
-            color: Kirigami.Theme.backgroundColor
-        }
-        Kirigami.Theme.colorSet: Kirigami.Theme.Header
+    menuBar: Loader {
+        id: menuBarLoader
 
-        FileMenu {}
-        ViewMenu {}
-        PlaybackMenu {}
-        VideoMenu {}
-        SubtitlesMenu {}
-        AudioMenu {}
-        SettingsMenu {}
-        HelpMenu {}
+        property bool showGlobalMenu: Kirigami.Settings.hasPlatformMenuBar && !Kirigami.Settings.isMobile
+
+        sourceComponent: showGlobalMenu ? globalMenuBar : menuBar
+    }
+
+    Component {
+        id: menuBar
+
+        MenuBar {
+            hoverEnabled: true
+            visible: !window.isFullScreen() && GeneralSettings.showMenuBar
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+            }
+            Kirigami.Theme.colorSet: Kirigami.Theme.Header
+
+            FileMenu {}
+            ViewMenu {}
+            PlaybackMenu {}
+            VideoMenu {}
+            SubtitlesMenu {}
+            AudioMenu {}
+            SettingsMenu {}
+            HelpMenu {}
+        }
+    }
+
+    Component {
+        id: globalMenuBar
+
+        Platform.MenuBar {
+            GlobalFileMenu {}
+            GlobalViewMenu {}
+            GlobalPlaybackMenu {}
+            GlobalVideoMenu {}
+            GlobalSubtitlesMenu {}
+            GlobalAudioMenu {}
+            GlobalSettingsMenu {}
+            GlobalHelpMenu {}
+        }
     }
 
     Menu {
