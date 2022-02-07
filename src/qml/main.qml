@@ -56,6 +56,7 @@ Kirigami.ApplicationWindow {
 
         property bool showGlobalMenu: Kirigami.Settings.hasPlatformMenuBar && !Kirigami.Settings.isMobile
 
+        visible: !window.isFullScreen() && GeneralSettings.showMenuBar
         sourceComponent: showGlobalMenu ? globalMenuBar : menuBar
     }
 
@@ -64,7 +65,6 @@ Kirigami.ApplicationWindow {
 
         MenuBar {
             hoverEnabled: true
-            visible: !window.isFullScreen() && GeneralSettings.showMenuBar
             background: Rectangle {
                 color: Kirigami.Theme.backgroundColor
             }
