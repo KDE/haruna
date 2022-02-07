@@ -8,7 +8,8 @@
 #define MOVIEDECODER_H
 
 #include <QString>
-#include <QImage>
+
+class QImage;
 
 extern "C" {
 #include <libavcodec/avcodec.h>
@@ -17,20 +18,6 @@ extern "C" {
 #include <libavfilter/buffersrc.h>
 #include <libavfilter/buffersink.h>
 }
-
-struct VideoFrame {
-    VideoFrame()
-            : width(0), height(0), lineSize(0) {}
-
-    VideoFrame(int width, int height, int lineSize)
-            : width(width), height(height), lineSize(lineSize) {}
-
-    quint32 width;
-    quint32 height;
-    quint32 lineSize;
-
-    std::vector<quint8> frameData;
-};
 
 class FrameDecoder
 {
@@ -41,7 +28,7 @@ public:
     QString getCodec();
     void seek(int timeInSeconds);
     bool decodeVideoFrame();
-    void getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, VideoFrame& videoFrame);
+    void getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, QImage &videoFrame);
 
     int getWidth();
     int getHeight();
@@ -50,7 +37,6 @@ public:
     void initialize(const QString& filename);
     void destroy();
     bool getInitialized();
-    void writeFrame(VideoFrame& frame, QImage& image);
 
 private:
     bool initializeVideo();

@@ -8,6 +8,7 @@
 
 #include <QDebug>
 #include <QFileInfo>
+#include <QImage>
 
 extern "C" {
 #include <libswscale/swscale.h>
@@ -21,7 +22,6 @@ FrameDecoder::FrameDecoder(const QString& filename, AVFormatContext* pavContext)
         , m_pFormatContext(pavContext)
         , m_pVideoCodecContext(nullptr)
         , m_pVideoCodec(nullptr)
-        , m_pVideoStream(nullptr)
         , m_pFrame(nullptr)
         , m_pFrameBuffer(nullptr)
         , m_pPacket(nullptr)
@@ -70,7 +70,7 @@ void FrameDecoder::initialize(const QString& filename)
     m_pFrame = av_frame_alloc();
 
     if (m_pFrame) {
-        m_initialized=true;
+        m_initialized = true;
     }
 }
 
@@ -85,6 +85,7 @@ void FrameDecoder::destroy()
     deleteFilterGraph();
     if (m_pVideoCodecContext) {
         avcodec_close(m_pVideoCodecContext);
+        avcodec_free_context(&m_pVideoCodecContext);
         m_pVideoCodecContext = nullptr;
     }
 
@@ -360,7 +361,7 @@ bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src,
     return true;
 }
 
-void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, VideoFrame& videoFrame)
+void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, QImage &videoFrame)
 {
     if (m_pFrame->interlaced_frame) {
         processFilterGraph((AVFrame*) m_pFrame, (AVFrame*) m_pFrame, m_pVideoCodecContext->pix_fmt,
@@ -369,14 +370,10 @@ void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio,
 
     int scaledWidth, scaledHeight;
     convertAndScaleFrame(AV_PIX_FMT_RGB24, scaledSize, maintainAspectRatio, scaledWidth, scaledHeight);
-
-    videoFrame.width = scaledWidth;
-    videoFrame.height = scaledHeight;
-    videoFrame.lineSize = m_pFrame->linesize[0];
-
-    videoFrame.frameData.clear();
-    videoFrame.frameData.resize(videoFrame.lineSize * videoFrame.height);
-    memcpy((&(videoFrame.frameData.front())), m_pFrame->data[0], videoFrame.lineSize * videoFrame.height);
+    // .copy() since QImage otherwise assumes the memory will continue to be available.
+    // We could instead pass a custom deleter, but meh.
+    videoFrame = QImage(m_pFrame->data[0], scaledWidth, scaledHeight,
+            m_pFrame->linesize[0], QImage::Format_RGB888).copy();
 }
 
 void FrameDecoder::convertAndScaleFrame(AVPixelFormat format, int scaledSize, bool maintainAspectRatio, int& scaledWidth, int& scaledHeight)
@@ -424,9 +421,9 @@ void FrameDecoder::calculateDimensions(int squareSize, bool maintainAspectRatio,
 
         if (srcWidth > srcHeight) {
             destWidth  = squareSize;
-            destHeight = static_cast<int>(static_cast<float>(squareSize) / srcWidth * srcHeight);
+            destHeight = int(float(squareSize) / srcWidth * srcHeight);
         } else {
-            destWidth  = static_cast<int>(static_cast<float>(squareSize) / srcHeight * srcWidth);
+            destWidth  = int(float(squareSize) / srcHeight * srcWidth);
             destHeight = squareSize;
         }
     }
@@ -441,13 +438,3 @@ void FrameDecoder::createAVFrame(AVFrame** avFrame, quint8** frameBuffer, int wi
     av_image_fill_arrays ((*avFrame)->data, (*avFrame)->linesize, *frameBuffer, format, width, height, 1);
 }
 
-void FrameDecoder::writeFrame(VideoFrame& frame,  QImage& image)
-{
-    QImage previewImage(frame.width, frame.height, QImage::Format_RGB888);
-    for (quint32 y = 0; y < frame.height; y++) {
-        // Copy each line ..
-        memcpy(previewImage.scanLine(y), &frame.frameData[y*frame.lineSize], frame.width*3);
-    }
-
-    image = previewImage;
-}

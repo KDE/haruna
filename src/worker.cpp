@@ -74,9 +74,7 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
     int secondToSeekTo = frameDecoder.getDuration() * 20 / 100;
     frameDecoder.seek(secondToSeekTo);
 
-    VideoFrame videoFrame;
-    frameDecoder.getScaledVideoFrame(width, true, videoFrame);
-    frameDecoder.writeFrame(videoFrame, image);
+    frameDecoder.getScaledVideoFrame(width, true, image);
 
     if (image.isNull()) {
         qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(id);
