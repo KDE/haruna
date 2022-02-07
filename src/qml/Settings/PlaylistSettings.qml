@@ -154,7 +154,6 @@ SettingsBasePage {
             onCheckStateChanged: {
                 PlaylistSettings.canToggleWithMouse = checked
                 PlaylistSettings.save()
-                playList.canToggleWithMouse = checked
             }
         }
 
@@ -166,7 +165,6 @@ SettingsBasePage {
             onCheckStateChanged: {
                 PlaylistSettings.bigFontFullscreen = checked
                 PlaylistSettings.save()
-                playList.bigFont = checked
                 playList.playlistView.forceLayout()
             }
         }
