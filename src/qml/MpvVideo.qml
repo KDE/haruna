@@ -349,7 +349,7 @@ MpvObject {
                 to: 360;
                 duration: 1500
                 loops: Animation.Infinite
-                running: true
+                running: loadingIndicatorParent.visible
             }
 
             Component.onCompleted: {
