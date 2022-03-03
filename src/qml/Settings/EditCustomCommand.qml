@@ -32,7 +32,7 @@ SettingsBasePage {
 
     Action {
         shortcut: "esc"
-        onTriggered: applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+        onTriggered: applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
     }
 
     GridLayout {
@@ -108,7 +108,7 @@ SettingsBasePage {
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
                     customCommandsModel.deleteCustomCommand(root.commandId, root.index)
-                    applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+                    applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
                 }
             }
 
@@ -120,7 +120,7 @@ SettingsBasePage {
             ToolButton {
                 text: i18n("Cancel")
                 icon.name: "dialog-cancel"
-                onClicked: applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+                onClicked: applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
                 Layout.alignment: Qt.AlignRight
             }
 
@@ -139,7 +139,7 @@ SettingsBasePage {
                     if (typeGroup.checkedButton.optionName === "shortcut") {
                         // creates action and adds it to the action collection
                         // so that its shortcut can be set by the user
-                        app.createUserAction(commandTextField.text)
+                        actionsManager.createUserAction(commandTextField.text)
                     } else {
                         // execute the user command
                         mpv.userCommand(commandTextField.text)
@@ -159,7 +159,7 @@ SettingsBasePage {
                                                               typeGroup.checkedButton.optionName)
                         break
                     }
-                    applicationWindow().pageStack.replace("qrc:/CustomCommands.qml")
+                    applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
                 }
 
             }

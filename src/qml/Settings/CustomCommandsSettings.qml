@@ -75,7 +75,7 @@ SettingsBasePage {
                     text: i18n("Shortcut")
                     icon.name: "configure-shortcuts"
                     visible: model.type === "shortcut"
-                    onClicked: app.configureShortcuts(model.command)
+                    onClicked: actionsManager.configureShortcuts(model.command)
 
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 }
