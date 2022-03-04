@@ -62,7 +62,6 @@ SettingsBasePage {
             onValueChanged: {
                 PlaylistSettings.rowHeight = value
                 PlaylistSettings.save()
-                playList.rowHeight = value
                 playList.playlistView.forceLayout()
             }
         }
