@@ -162,7 +162,7 @@ class MpvObject : public QQuickFramebufferObject
 public:
     MpvObject(QQuickItem * parent = 0);
     virtual ~MpvObject();
-    virtual Renderer *createRenderer() const;
+    virtual Renderer *createRenderer() const override;
 
     Q_INVOKABLE void loadFile(const QString &file, bool updateLastPlayedFile = true);
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);
@@ -230,9 +230,9 @@ public:
 
     // This function is called when a new FBO is needed.
     // This happens on the initial frame.
-    QOpenGLFramebufferObject * createFramebufferObject(const QSize &size);
+    QOpenGLFramebufferObject * createFramebufferObject(const QSize &size) override;
 
-    void render();
+    void render() override;
 };
 
 #endif // MPVOBJECT_H

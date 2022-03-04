@@ -29,7 +29,7 @@ signals:
     void applicationMouseLeave();
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) {
+    bool eventFilter(QObject *obj, QEvent *event) override {
         if (event->type() == QEvent::Leave) {
             Q_EMIT applicationMouseLeave();
             return true;
