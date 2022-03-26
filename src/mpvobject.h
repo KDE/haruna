@@ -162,7 +162,7 @@ class MpvObject : public QQuickFramebufferObject
 public:
     MpvObject(QQuickItem * parent = 0);
     virtual ~MpvObject();
-    virtual Renderer *createRenderer() const override;
+    Renderer *createRenderer() const override;
 
     Q_INVOKABLE void loadFile(const QString &file, bool updateLastPlayedFile = true);
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);

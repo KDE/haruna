@@ -36,7 +36,11 @@ void Worker::getMetaData(int index, const QString &path)
     }
     KFileMetaData::Extractor* ex = extractors.first();
     ex->extract(&result);
+#if KFILEMETADATA_ENABLE_DEPRECATED_SINCE(5, 89)
+    auto properties = result.properties(KFileMetaData::MultiMap);
+#else
     auto properties = result.properties();
+#endif
 
     Q_EMIT metaDataReady(index, properties);
 }
