@@ -15,6 +15,9 @@
 #include <QFileInfo>
 #include <QThread>
 
+#include <KConfig>
+#include <KConfigGroup>
+
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 
@@ -93,4 +96,14 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
             qDebug() << QStringLiteral("Failed to save thumbnail for file: %1").arg(id);
         }
     }
+}
+
+void Worker::syncConfigValue(QString path, QString group, QString key, QVariant value)
+{
+    if (!m_cachedConf || m_cachedConf->name() != path) {
+        m_cachedConf.reset(new KConfig(path));
+    }
+
+    m_cachedConf->group(group).writeEntry(key, value);
+    m_cachedConf->sync();
 }

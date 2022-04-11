@@ -13,6 +13,7 @@
 #include "track.h"
 #include "tracksmodel.h"
 #include "global.h"
+#include "worker.h"
 
 #include <QCryptographicHash>
 #include <QDir>
@@ -167,6 +168,8 @@ MpvObject::MpvObject(QQuickItem * parent)
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
         }
     });
+
+    connect(this, &MpvObject::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
 }
 
 MpvObject::~MpvObject()
@@ -664,9 +667,9 @@ void MpvObject::saveTimePosition()
     auto hash = md5(getProperty("path").toString());
     auto timePosition = getProperty("time-pos");
     auto configPath = Global::instance()->appConfigDirPath();
-    KConfig *config = new KConfig(configPath.append("/watch-later/").append(hash));
-    config->group("").writeEntry("TimePosition", timePosition);
-    config->sync();
+    configPath.append("/watch-later/").append(hash);
+
+    Q_EMIT syncConfigValue(configPath, "", "TimePosition", getProperty("time-pos"));
 }
 
 double MpvObject::loadTimePosition()

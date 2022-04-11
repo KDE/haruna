@@ -9,6 +9,9 @@
 
 #include <QObject>
 #include <KFileMetaData/Properties>
+#include <memory>
+
+class KConfig;
 
 class Worker : public QObject
 {
@@ -24,6 +27,7 @@ signals:
 public slots:
     void getMetaData(int index, const QString &path);
     void makePlaylistThumbnail(const QString &id, int width);
+    void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
 private:
     Worker() = default;
@@ -33,6 +37,9 @@ private:
     Worker &operator=(const Worker &) = delete;
     Worker(Worker &&) = delete;
     Worker &operator=(Worker &&) = delete;
+
+private:
+    std::unique_ptr<KConfig> m_cachedConf;
 };
 
 #endif // WORKER_H

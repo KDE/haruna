@@ -203,6 +203,7 @@ signals:
     void hwDecodingChanged();
     void playlistModelChanged();
     void youtubePlaylistLoaded();
+    void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
 private:
     TracksModel *audioTracksModel() const;
