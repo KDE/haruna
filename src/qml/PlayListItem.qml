@@ -78,7 +78,7 @@ Kirigami.BasicListItem {
                 Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : Kirigami.Units.largeSpacing
                 Binding {
                     target: root
-                    property: "height"
+                    property: "implicitHeight"
                     value: root.fontSize * 3 + PlaylistSettings.rowHeight
                 }
             }

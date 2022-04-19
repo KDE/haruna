@@ -20,7 +20,7 @@ Kirigami.BasicListItem {
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
-    height: (Kirigami.Units.gridUnit - 6) * 8 + PlaylistSettings.rowHeight
+    implicitHeight: (Kirigami.Units.gridUnit - 6) * 8 + PlaylistSettings.rowHeight
     padding: 0
     backgroundColor: {
         let color = model.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
