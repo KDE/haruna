@@ -252,6 +252,29 @@
     </ul>
   </description>
   <releases>
+    <release version="0.8.0" date="2022-04-20">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Support for global menu</li>
+          <li>Setting to pause playback when minimized</li>
+          <li>Setting to set the "time-position" saving interval</li>
+          <li>Recent files menu inside the file menu</li>
+          <li>More actions to the menubar</li>
+          <li>Action to load last played file (Ctrl+Shift+L), usefull when loading last played file on startup is disabled</li>
+          <li>Action to restart playback/seek to beginning (F5 key)</li>
+          <li>Action to seek to watch later position (Ctrl+Shift+P), usefull when resume playback on startup is disabled</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>There were two "remember time position" settings, doing different things, renamed the startup one to "resume playback"</li>
+          <li>Fixed a case where the playlist could not be closed with mouse hover anymore</li>
+          <li>OSD: When file can't be played show filename if there's no title</li>
+          <li>Stuttering caused by slow disks</li>
+          <li>Playlist items collapsing into each other</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.3" date="2021-11-03">
       <description>
         <p>Bugfixes:</p>
