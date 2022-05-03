@@ -83,12 +83,6 @@ Kirigami.ApplicationWindow {
     }
 
     Component {
-        id: hamburgerMenuComponent
-
-        HamburgerMenu { id: hamburgerMenu }
-    }
-
-    Component {
         id: globalMenuBarComponent
 
         Platform.MenuBar {
@@ -102,6 +96,8 @@ Kirigami.ApplicationWindow {
             GlobalHelpMenu {}
         }
     }
+
+    HamburgerMenu { id: hamburgerMenu }
 
     SystemPalette { id: systemPalette; colorGroup: SystemPalette.Active }
 

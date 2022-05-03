@@ -31,7 +31,9 @@ ToolBar {
         Loader {
             active: !menuBarComponent.visible && header.visible
             visible: active
-            sourceComponent: hamburgerMenuComponent
+            sourceComponent: HamburgerMenu {
+                position: HamburgerMenu.Position.Header
+            }
         }
 
         ToolButton {

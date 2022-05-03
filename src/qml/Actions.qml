@@ -24,7 +24,7 @@ QtObject {
 
         Component.onCompleted: list["openContextMenuAction"] = openContextMenuAction
 
-        onTriggered: mpvContextMenu.popup()
+        onTriggered: hamburgerMenu.menu.popup()
     }
 
     property Action togglePlaylistAction: Action {

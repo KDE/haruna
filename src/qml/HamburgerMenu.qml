@@ -12,19 +12,30 @@ import org.kde.kirigami 2.11 as Kirigami
 import "Menus"
 
 ToolButton {
-    id: hamburgerMenu
+    id: root
+
+    property alias menu: menu
+    property int position: HamburgerMenu.Position.Header
+
+    enum Position {
+        Header = 0,
+        Footer
+    }
 
     icon.name: "application-menu"
     focusPolicy: Qt.NoFocus
 
     onReleased: {
-        hamburgerMenuItem.visible = !hamburgerMenuItem.visible
+        menu.visible = !menu.visible
     }
 
     Menu {
-        id: hamburgerMenuItem
+        id: menu
 
-        y: parent.height
+        y: root.position === HamburgerMenu.Position.Header
+           ? parent.height + Kirigami.Units.smallSpacing
+           : -height - Kirigami.Units.smallSpacing
+        closePolicy: Popup.CloseOnReleaseOutsideParent
 
         FileMenu {}
         ViewMenu {}
