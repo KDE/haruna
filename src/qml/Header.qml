@@ -28,6 +28,11 @@ ToolBar {
 
         width: parent.width
 
+        Loader {
+            visible: !menuBar.visible && header.visible
+            sourceComponent: hamburgerMenuComponent
+        }
+
         ToolButton {
             action: actions.openAction
             focusPolicy: Qt.NoFocus
