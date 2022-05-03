@@ -17,9 +17,9 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
+#include <kconfig_version.h>
 
 Worker* Worker::instance()
 {
@@ -39,7 +39,7 @@ void Worker::getMetaData(int index, const QString &path)
     }
     KFileMetaData::Extractor* ex = extractors.first();
     ex->extract(&result);
-#if KFILEMETADATA_ENABLE_DEPRECATED_SINCE(5, 89)
+#if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
     auto properties = result.properties(KFileMetaData::MultiMap);
 #else
     auto properties = result.properties();
