@@ -56,9 +56,8 @@ Kirigami.ApplicationWindow {
 
         property bool showGlobalMenu: Kirigami.Settings.hasPlatformMenuBar && !Kirigami.Settings.isMobile
 
-        visible: !window.isFullScreen() && GeneralSettings.showMenuBar && !Kirigami.Settings.hasPlatformMenuBar
-
-        sourceComponent: menuBarComponent
+        visible: !window.isFullScreen() && GeneralSettings.showMenuBar
+        sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent
     }
 
     Component {
@@ -89,15 +88,19 @@ Kirigami.ApplicationWindow {
         HamburgerMenu { id: hamburgerMenu }
     }
 
-    Platform.MenuBar {
-        GlobalFileMenu {}
-        GlobalViewMenu {}
-        GlobalPlaybackMenu {}
-        GlobalVideoMenu {}
-        GlobalSubtitlesMenu {}
-        GlobalAudioMenu {}
-        GlobalSettingsMenu {}
-        GlobalHelpMenu {}
+    Component {
+        id: globalMenuBarComponent
+
+        Platform.MenuBar {
+            GlobalFileMenu {}
+            GlobalViewMenu {}
+            GlobalPlaybackMenu {}
+            GlobalVideoMenu {}
+            GlobalSubtitlesMenu {}
+            GlobalAudioMenu {}
+            GlobalSettingsMenu {}
+            GlobalHelpMenu {}
+        }
     }
 
     SystemPalette { id: systemPalette; colorGroup: SystemPalette.Active }

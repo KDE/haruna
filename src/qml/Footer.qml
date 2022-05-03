@@ -42,7 +42,8 @@ ToolBar {
         anchors.fill: parent
 
         Loader {
-            visible: !menuBar.visible && !header.visible
+            active: !menuBarComponent.visible && !header.visible
+            visible: active
             sourceComponent: hamburgerMenuComponent
         }
 

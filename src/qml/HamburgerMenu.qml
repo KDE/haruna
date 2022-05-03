@@ -25,9 +25,6 @@ ToolButton {
         id: hamburgerMenuItem
 
         y: parent.height
-        closePolicy: Popup.CloseOnReleaseOutsideParent
-
-        modal: true
 
         FileMenu {}
         ViewMenu {}
