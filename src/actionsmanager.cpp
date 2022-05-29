@@ -546,7 +546,7 @@ void ActionsManager::setupActions(const QString &actionName)
     }
     if (actionName == QStringLiteral("toggleDeinterlacing")) {
         auto action = new HAction();
-        action->setText(i18n("Toggle deinterlacing"));
+        action->setText(i18n("Toggle Deinterlacing"));
         m_collection.setDefaultShortcut(action, Qt::Key_D);
         m_collection.addAction(actionName, action);
     }

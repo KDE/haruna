@@ -42,7 +42,7 @@ ToolBar {
         anchors.fill: parent
 
         Loader {
-            active: !menuBarComponent.visible && !header.visible
+            active: !menuBarLoader.visible && !header.visible
             visible: active
             sourceComponent: HamburgerMenu {
                 position: HamburgerMenu.Position.Footer

@@ -9,6 +9,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.haruna 1.0
 import "Menus"
 
 ToolButton {
@@ -37,13 +38,55 @@ ToolButton {
            : -height - Kirigami.Units.smallSpacing
         closePolicy: Popup.CloseOnReleaseOutsideParent
 
-        FileMenu {}
-        ViewMenu {}
-        PlaybackMenu {}
-        VideoMenu {}
-        SubtitlesMenu {}
-        AudioMenu {}
-        SettingsMenu {}
-        HelpMenu {}
+        MenuItem {
+            action: actions.openAction
+            visible: root.position === HamburgerMenu.Position.Footer
+        }
+        MenuItem {
+            action: actions.openUrlAction
+            visible: root.position === HamburgerMenu.Position.Footer
+        }
+
+        Menu {
+            title: i18n("Recent Files")
+
+            Repeater {
+                model: recentFilesModel
+                delegate: MenuItem {
+                    text: model.name
+                    onClicked: window.openFile(model.path, true, PlaylistSettings.loadSiblings)
+                }
+            }
+        }
+
+        MenuSeparator {}
+
+        MenuItem { action: actions.toggleFullscreenAction }
+        MenuItem { action: actions.toggleDeinterlacingAction }
+        MenuItem { action: actions.screenshotAction }
+
+        MenuSeparator {}
+
+        MenuItem {
+            action: actions.configureAction
+            visible: root.position === HamburgerMenu.Position.Footer
+        }
+        MenuItem { action: actions.configureShortcutsAction }
+        MenuItem { action: actions.aboutHarunaAction }
+
+        MenuSeparator {}
+
+        Menu {
+            title: i18n("&More")
+
+            FileMenu {}
+            ViewMenu {}
+            PlaybackMenu {}
+            VideoMenu {}
+            SubtitlesMenu {}
+            AudioMenu {}
+            SettingsMenu {}
+            HelpMenu {}
+        }
     }
 }

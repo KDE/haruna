@@ -29,7 +29,7 @@ ToolBar {
         width: parent.width
 
         Loader {
-            active: !menuBarComponent.visible && header.visible
+            active: !menuBarLoader.visible && header.visible
             visible: active
             sourceComponent: HamburgerMenu {
                 position: HamburgerMenu.Position.Header
