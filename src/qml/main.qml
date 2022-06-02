@@ -97,6 +97,15 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    Loader {
+        id: mpvContextMenuLoader
+
+        active: false
+        sourceComponent: ContextMenu {
+            onClosed: mpvContextMenuLoader.active = false
+        }
+    }
+
     HamburgerMenu { id: hamburgerMenu }
 
     SystemPalette { id: systemPalette; colorGroup: SystemPalette.Active }
