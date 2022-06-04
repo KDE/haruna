@@ -363,10 +363,13 @@ MpvObject {
     }
 
     function handleTimePosition() {
-        if (mpv.position < mpv.duration - 10) {
-            saveTimePosition()
-        } else {
-            resetTimePosition()
+        // need to check duration > 0 for youtube videos
+        if (mpv.duration > 0) {
+            if (mpv.position < mpv.duration - 10) {
+                saveTimePosition()
+            } else {
+                resetTimePosition()
+            }
         }
     }
 }
