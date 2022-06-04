@@ -30,13 +30,16 @@
     <entry name="HWDecoding" type="String">
       <default>auto</default>
     </entry>
-    <entry name="ResumePlayback" type="bool">
+    <entry name="SeekToLastPosition" type="bool">
       <default>false</default>
     </entry>
     <entry name="OpenLastPlayedFile" type="bool">
       <default>false</default>
     </entry>
     <entry name="PauseWhileMinimized" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="PlayOnResume" type="bool">
       <default>false</default>
     </entry>
   </group>

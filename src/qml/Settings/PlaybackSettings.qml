@@ -24,15 +24,12 @@ SettingsBasePage {
 
         columns: 2
 
-        Label {
-            text: i18n("Startup")
-            Layout.alignment: Qt.AlignRight
-        }
+        Item { width: 1 }
 
         CheckBox {
             id: loadLastPlayedFileCheckBox
 
-            text: i18n("Open last played file")
+            text: i18n("Open last played file on startup")
             checked: PlaybackSettings.openLastPlayedFile
             onCheckedChanged: {
                 PlaybackSettings.openLastPlayedFile = checked
@@ -40,20 +37,39 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
         Item { width: 1 }
 
         CheckBox {
-            id: resumePlaybackCheckBox
+            id: seekToLastPositionCheckBox
 
-            text: i18n("Resume playback")
-            checked: PlaybackSettings.resumePlayback
+            text: i18n("Seek to last playback position")
+            checked: PlaybackSettings.seekToLastPosition
             onCheckedChanged: {
-                PlaybackSettings.resumePlayback = checked
+                PlaybackSettings.seekToLastPosition = checked
                 PlaybackSettings.save()
             }
 
             ToolTip {
-                text: i18n("When opening a file that was played before it will start at the position it was when playback stopped.")
+                text: i18n("When opening a file that was played before, seek at the position it was last time.")
+            }
+        }
+
+        Item { width: 1 }
+
+        CheckBox {
+            id: playOnResumeCheckBox
+
+            text: i18n("Start playing")
+            checked: PlaybackSettings.playOnResume
+            enabled: seekToLastPositionCheckBox.checked
+            onCheckedChanged: {
+                PlaybackSettings.playOnResume = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18n("When opening a file that was played before, start playing it automaticaly.")
             }
         }
 

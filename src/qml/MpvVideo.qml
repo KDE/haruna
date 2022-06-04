@@ -78,7 +78,7 @@ MpvObject {
                 playList.isYouTubePlaylist = true
             } else {
                 // file is local, open normally
-                window.openFile(GeneralSettings.lastPlayedFile, false, PlaylistSettings.loadSiblings)
+                window.openFile(GeneralSettings.lastPlayedFile, true, PlaylistSettings.loadSiblings)
             }
         }
     }
@@ -117,10 +117,9 @@ MpvObject {
             return
         }
 
-        mpv.pause = false
         position = 0
-        if (PlaybackSettings.resumePlayback) {
-            mpv.pause = loadTimePosition() !== 0
+        if (PlaybackSettings.seekToLastPosition) {
+            mpv.pause = !PlaybackSettings.playOnResume
             position = loadTimePosition()
         }
     }
