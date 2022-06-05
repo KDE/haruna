@@ -69,7 +69,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("When opening a file that was played before, start playing it automaticaly.")
+                text: i18n("When opening a file that was played before, start playing it automatically.")
             }
         }
 
