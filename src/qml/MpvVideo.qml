@@ -97,7 +97,7 @@ MpvObject {
     }
 
     onFileLoaded: {
-        root.watchLaterPosition = loadTimePosition() > 0 ? loadTimePosition() : -1
+        root.watchLaterPosition = loadTimePosition()
 
         loadingIndicatorParent.visible = false
         header.audioTracks = getProperty("track-list").filter(track => track["type"] === "audio")
@@ -119,8 +119,8 @@ MpvObject {
 
         position = 0
         if (PlaybackSettings.seekToLastPosition) {
-            mpv.pause = !PlaybackSettings.playOnResume
-            position = loadTimePosition()
+            mpv.pause = !PlaybackSettings.playOnResume && root.watchLaterPosition > 0
+            position = root.watchLaterPosition
         }
     }
 
