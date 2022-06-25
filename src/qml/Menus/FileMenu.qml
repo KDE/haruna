@@ -27,6 +27,12 @@ Menu {
                 onClicked: window.openFile(model.path, true, PlaylistSettings.loadSiblings)
             }
         }
+
+        MenuSeparator {}
+        MenuItem {
+            text: i18n("Clear List")
+            onClicked: recentFilesModel.clear()
+        }
     }
 
 

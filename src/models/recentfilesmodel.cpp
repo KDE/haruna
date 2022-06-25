@@ -90,3 +90,15 @@ void RecentFilesModel::addUrl(const QString &path)
     m_urls.prepend(url);
     endResetModel();
 }
+
+void RecentFilesModel::clear()
+{
+    beginResetModel();
+    for (const auto &url : m_recentFilesAction->urls()) {
+        m_recentFilesAction->removeUrl(url);
+    }
+    m_recentFilesAction->saveEntries(m_recentFilesConfigGroup);
+    m_recentFilesConfigGroup.sync();
+    m_urls.clear();
+    endResetModel();
+}
