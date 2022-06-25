@@ -188,6 +188,32 @@ SettingsBasePage {
             }
         }
 
+        Label {
+            text: i18n("Maximum recent files")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        Item {
+            height: maxRecentFiles.height
+            Layout.fillWidth: true
+
+            SpinBox {
+                id: maxRecentFiles
+
+                from: 0
+                to: 100
+                value: GeneralSettings.maxRecentFiles
+                onValueChanged: {
+                    GeneralSettings.maxRecentFiles = maxRecentFiles.value
+                    GeneralSettings.save()
+                    recentFilesModel.populate()
+                }
+
+                ToolTip {
+                    text: i18n("How many recent files to store. Enter 0 (zero) to disable.")
+                }
+            }
+        }
         SettingsHeader {
             text: i18n("Interface")
             Layout.columnSpan: 2

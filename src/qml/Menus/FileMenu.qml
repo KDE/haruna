@@ -18,14 +18,18 @@ Menu {
     MenuItem { action: actions.openUrlAction }
 
     Menu {
+        id: recentFilesMenu
+
         title: i18n("Recent Files")
 
-        Repeater {
+        Instantiator {
             model: recentFilesModel
             delegate: MenuItem {
                 text: model.name
                 onClicked: window.openFile(model.path, true, PlaylistSettings.loadSiblings)
             }
+            onObjectAdded: recentFilesMenu.insertItem(index, object)
+            onObjectRemoved: recentFilesMenu.removeItem(object)
         }
 
         MenuSeparator {}

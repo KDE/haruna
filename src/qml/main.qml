@@ -234,7 +234,7 @@ Kirigami.ApplicationWindow {
 
     function openFile(path, startPlayback, loadSiblings, addToRecentFiles = false) {
 
-        if (addToRecentFiles) {
+        if (addToRecentFiles && GeneralSettings.maxRecentFiles > 0) {
             recentFilesModel.addUrl(path)
         }
 

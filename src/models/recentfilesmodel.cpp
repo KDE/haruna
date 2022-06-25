@@ -6,6 +6,7 @@
 
 #include "recentfilesmodel.h"
 
+#include "generalsettings.h"
 #include <global.h>
 
 #include <QDebug>
@@ -20,17 +21,10 @@ RecentFilesModel::RecentFilesModel(QObject *parent)
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     m_recentFilesConfigGroup = config->group(QStringLiteral("RecentFiles"));
     m_recentFilesAction = new KRecentFilesAction(this);
+    m_recentFilesAction->setMaxItems(GeneralSettings::maxRecentFiles());
     m_recentFilesAction->loadEntries(m_recentFilesConfigGroup);
 
-    beginInsertRows(QModelIndex(), 0, m_recentFilesAction->urls().count()-1);
-    for (int i = 0; i < m_recentFilesAction->maxItems(); i++) {
-        auto file = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("File%1").arg(i+1), QString());
-        if (file.isEmpty()) {
-            break;
-        }
-        m_urls.prepend(file);
-    }
-    endInsertRows();
+    populate();
 }
 
 int RecentFilesModel::rowCount(const QModelIndex &parent) const
@@ -65,6 +59,24 @@ QHash<int, QByteArray> RecentFilesModel::roleNames() const
     roles[NameRole] = "name";
 
     return roles;
+}
+
+void RecentFilesModel::populate()
+{
+    beginResetModel();
+    m_urls.clear();
+    endResetModel();
+
+    m_recentFilesAction->setMaxItems(GeneralSettings::maxRecentFiles());
+    for (int i = 0; i < m_recentFilesAction->maxItems(); i++) {
+        auto file = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("File%1").arg(i + 1), QString());
+        if (file.isEmpty()) {
+            break;
+        }
+        beginInsertRows(QModelIndex(), 0, 0);
+        m_urls.prepend(file);
+        endInsertRows();
+    }
 }
 
 void RecentFilesModel::addUrl(const QString &path)

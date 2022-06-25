@@ -27,6 +27,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     Q_INVOKABLE void addUrl(const QString &path);
     Q_INVOKABLE void clear();
+    Q_INVOKABLE void populate();
 
 private:
     KRecentFilesAction *m_recentFilesAction;
