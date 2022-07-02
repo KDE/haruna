@@ -110,6 +110,18 @@ class MpvObject : public QQuickFramebufferObject
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
 
+    Q_PROPERTY(QString playlistTitle
+               READ playlistTitle
+               WRITE setPlaylistTitle
+               NOTIFY playlistTitleChanged)
+
+    QString playlistTitle();
+    void setPlaylistTitle(const QString &title);
+
+    Q_PROPERTY(QString playlistUrl READ playlistUrl WRITE setPlaylistUrl NOTIFY playlistUrlChanged)
+    const QString &playlistUrl() const;
+    void setPlaylistUrl(const QString &_playlistUrl);
+
     QString mediaTitle();
 
     double position();
@@ -202,8 +214,11 @@ signals:
     void subtitleTracksModelChanged();
     void hwDecodingChanged();
     void playlistModelChanged();
+    void playlistTitleChanged();
     void youtubePlaylistLoaded();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
+
+    void playlistUrlChanged();
 
 private:
     TracksModel *audioTracksModel() const;
@@ -215,6 +230,8 @@ private:
     QList<int> m_secondsWatched;
     double m_watchPercentage;
     PlayListModel *m_playlistModel;
+    QString m_playlistTitle;
+    QString m_playlistUrl;
     QString m_file;
 
     void loadTracks();

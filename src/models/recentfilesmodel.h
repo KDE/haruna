@@ -9,8 +9,15 @@
 
 #include <KConfigGroup>
 #include <QAbstractListModel>
+#include <QUrl>
 
 class KRecentFilesAction;
+
+struct RecentFile {
+    QUrl url;
+    QString name;
+};
+
 class RecentFilesModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -25,13 +32,13 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
-    Q_INVOKABLE void addUrl(const QString &path);
+    Q_INVOKABLE void addUrl(const QString &path, const QString &name = QString());
     Q_INVOKABLE void clear();
     Q_INVOKABLE void populate();
 
 private:
     KRecentFilesAction *m_recentFilesAction;
-    QList<QUrl> m_urls;
+    QList<RecentFile> m_urls;
     KConfigGroup m_recentFilesConfigGroup;
 };
 

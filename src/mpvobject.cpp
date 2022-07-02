@@ -191,6 +191,33 @@ void MpvObject::setPlaylistModel(PlayListModel *model)
     m_playlistModel = model;
 }
 
+QString MpvObject::playlistTitle()
+{
+    return m_playlistTitle;
+}
+
+void MpvObject::setPlaylistTitle(const QString &title)
+{
+    if (title == playlistTitle()) {
+        return;
+    }
+    m_playlistTitle = title;
+    Q_EMIT positionChanged();
+}
+
+const QString &MpvObject::playlistUrl() const
+{
+    return m_playlistUrl;
+}
+
+void MpvObject::setPlaylistUrl(const QString &_playlistUrl)
+{
+    if (m_playlistUrl == _playlistUrl)
+        return;
+    m_playlistUrl = _playlistUrl;
+    emit playlistUrlChanged();
+}
+
 QString MpvObject::mediaTitle()
 {
     return getProperty("media-title").toString();
@@ -599,8 +626,10 @@ void MpvObject::getYouTubePlaylist(const QString &path)
         Playlist m_playList;
 
         QString json = ytdlProcess->readAllStandardOutput();
-        QJsonObject obj;
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
+
+        setPlaylistTitle(QJsonDocument::fromJson(json.toUtf8())["title"].toString());
+        setPlaylistUrl(path);
 
         QString playlistFileContent;
 

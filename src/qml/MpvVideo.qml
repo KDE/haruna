@@ -88,6 +88,7 @@ MpvObject {
         playlistModel.setPlayingVideo(GeneralSettings.lastPlaylistIndex)
 
         playList.setPlayListScrollPosition()
+        recentFilesModel.addUrl(playlistUrl, playlistTitle)
     }
 
     onFileStarted: {

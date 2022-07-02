@@ -234,15 +234,17 @@ Kirigami.ApplicationWindow {
 
     function openFile(path, startPlayback, loadSiblings, addToRecentFiles = false) {
 
-        if (addToRecentFiles && GeneralSettings.maxRecentFiles > 0) {
-            recentFilesModel.addUrl(path)
-        }
-
         if (app.isYoutubePlaylist(path)) {
             mpv.getYouTubePlaylist(path);
             playList.isYouTubePlaylist = true
         } else {
             playList.isYouTubePlaylist = false
+        }
+
+        if (addToRecentFiles && GeneralSettings.maxRecentFiles > 0) {
+            if (!playList.isYouTubePlaylist) {
+                recentFilesModel.addUrl(path)
+            }
         }
 
         mpv.playlistModel.clear()

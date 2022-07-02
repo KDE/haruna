@@ -40,13 +40,13 @@ QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    QUrl url = m_urls.at(index.row());
+    RecentFile recentFile = m_urls.at(index.row());
 
     switch (role) {
     case PathRole:
-        return QVariant(url.path());
+        return QVariant(recentFile.url);
     case NameRole:
-        return QVariant(url.fileName());
+        return QVariant(recentFile.name);
     }
 
     return QVariant();
@@ -70,16 +70,20 @@ void RecentFilesModel::populate()
     m_recentFilesAction->setMaxItems(GeneralSettings::maxRecentFiles());
     for (int i = 0; i < m_recentFilesAction->maxItems(); i++) {
         auto file = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("File%1").arg(i + 1), QString());
+        auto name = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("Name%1").arg(i + 1), QString());
         if (file.isEmpty()) {
             break;
         }
         beginInsertRows(QModelIndex(), 0, 0);
-        m_urls.prepend(file);
+        RecentFile recentFile;
+        recentFile.url = QUrl(file);
+        recentFile.name = name;
+        m_urls.prepend(recentFile);
         endInsertRows();
     }
 }
 
-void RecentFilesModel::addUrl(const QString &path)
+void RecentFilesModel::addUrl(const QString &path, const QString &name)
 {
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     QUrl url(path);
@@ -87,20 +91,12 @@ void RecentFilesModel::addUrl(const QString &path)
         url.setScheme("file");
     }
 
-    m_recentFilesAction->addUrl(url, url.fileName());
+    auto _name = name == QString() ? url.fileName() : name;
+    m_recentFilesAction->addUrl(url, _name);
     m_recentFilesAction->saveEntries(m_recentFilesConfigGroup);
     m_recentFilesConfigGroup.sync();
 
-    auto exists = [url](const QUrl &_url) {
-        return _url.path() == url.path();
-    };
-    beginResetModel();
-    auto result = std::find_if(m_urls.begin(), m_urls.end(), exists);
-    if (result != m_urls.end()) {
-        m_urls.removeAll(*result);
-    }
-    m_urls.prepend(url);
-    endResetModel();
+    populate();
 }
 
 void RecentFilesModel::clear()
