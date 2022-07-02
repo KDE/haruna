@@ -16,6 +16,7 @@ Menu {
     MenuItem { action: actions.playNextAction }
     MenuItem { action: actions.playPreviousAction }
 
+    MenuItem { action: actions.restartPlaybackAction }
     MenuItem { action: actions.setLoopAction }
 
     MenuSeparator {}
@@ -55,5 +56,6 @@ Menu {
 
         MenuItem { action: actions.frameStepAction }
         MenuItem { action: actions.frameBackStepAction }
+        MenuItem { action: actions.seekToWatchLaterPositionAction }
     }
 }

@@ -16,6 +16,7 @@ Menu {
 
     MenuItem { action: actions.openAction }
     MenuItem { action: actions.openUrlAction }
+    MenuItem { action: actions.loadLastPlayedFileAction }
 
     Menu {
         id: recentFilesMenu
