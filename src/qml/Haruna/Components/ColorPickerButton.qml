@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2022 George Florea Bănuș <georgefb899@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 import QtQuick 2.0
 import QtQuick.Controls 2.12
 import QtQuick.Dialogs 1.3
