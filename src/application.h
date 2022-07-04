@@ -55,6 +55,9 @@ public:
     QUrl configFilePath();
     QUrl configFolderPath();
     Q_INVOKABLE bool configFolderExists();
+    Q_INVOKABLE QString getDefaultSubColor();
+    Q_INVOKABLE QString getDefaultSubShadowColor();
+    Q_INVOKABLE QString getDefaultSubBorderColor();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE QString argument(int key);

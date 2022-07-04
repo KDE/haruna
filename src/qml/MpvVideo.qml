@@ -55,6 +55,14 @@ MpvObject {
     }
 
     onReady: {
+        setProperty("sub-color", SubtitlesSettings.subtitleColor)
+        setProperty("sub-shadow-color", SubtitlesSettings.shadowColor)
+        setProperty("sub-shadow-offset", SubtitlesSettings.shadowOffset)
+        setProperty("sub-border-color", SubtitlesSettings.borderColor)
+        setProperty("sub-border-size", SubtitlesSettings.borderSize)
+        setProperty("sub-bold", SubtitlesSettings.bold)
+        setProperty("sub-italic", SubtitlesSettings.italic)
+
         setProperty("screenshot-template", VideoSettings.screenshotTemplate)
         setProperty("screenshot-format", VideoSettings.screenshotFormat)
         const preferredAudioTrack = AudioSettings.preferredTrack

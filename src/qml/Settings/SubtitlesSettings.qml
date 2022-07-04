@@ -69,6 +69,168 @@ SettingsBasePage {
             }
         }
 
+        SettingsHeader {
+            text: i18n("Styling")
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+        }
+
+        Label {
+            text: i18n("Subtitle color")
+            Layout.alignment: Qt.AlignRight
+        }
+        RowLayout {
+            Layout.fillWidth: true
+
+
+            ColorPickerButton {
+                id: subtitleColorPicker
+
+                onColorChosen: subtitleColor.text = color
+            }
+
+            TextField {
+                id: subtitleColor
+
+                text: SubtitlesSettings.subtitleColor
+                onTextChanged: {
+                    subtitleColorPicker.color = text
+                    SubtitlesSettings.subtitleColor = text
+                    SubtitlesSettings.save()
+                    mpv.setProperty("sub-color", text)
+                }
+            }
+
+            Button {
+                icon.name: "edit-clear-all"
+                onClicked: subtitleColor.text = app.getDefaultSubColor()
+            }
+        }
+
+        Label {
+            text: i18n("Shadow color")
+            Layout.alignment: Qt.AlignRight
+        }
+        RowLayout {
+            Layout.fillWidth: true
+
+            ColorPickerButton {
+                id: shadowColorPicker
+
+                onColorChosen: shadowColor.text = color
+            }
+            TextField {
+                id: shadowColor
+
+                text: SubtitlesSettings.shadowColor
+                onTextChanged: {
+                    shadowColorPicker.color = text
+                    SubtitlesSettings.shadowColor = text
+                    SubtitlesSettings.save()
+                    mpv.setProperty("sub-shadow-color", text)
+                }
+            }
+
+            Button {
+                icon.name: "edit-clear-all"
+                onClicked: shadowColor.text = app.getDefaultSubShadowColor()
+            }
+        }
+
+        Label {
+            text: i18n("Shadow offset")
+            Layout.alignment: Qt.AlignRight
+        }
+        SpinBox {
+            from: 0
+            to: 25
+            value: SubtitlesSettings.shadowOffset
+            editable: true
+            onValueChanged: {
+                SubtitlesSettings.shadowOffset = value
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-shadow-offset", value)
+            }
+
+            ToolTip {
+                text: i18n("Set to 0 (zero) to disable.")
+            }
+        }
+
+        Label {
+            text: i18n("Border color")
+            Layout.alignment: Qt.AlignRight
+        }
+        RowLayout {
+            Layout.fillWidth: true
+
+            ColorPickerButton {
+                id: borderColorPicker
+
+                color: SubtitlesSettings.borderColor
+                onColorChosen: borderColor.text = color
+            }
+
+            TextField {
+                id: borderColor
+
+                text: SubtitlesSettings.borderColor
+                onTextChanged: {
+                    borderColorPicker.color = text
+                    SubtitlesSettings.borderColor = text
+                    SubtitlesSettings.save()
+                    mpv.setProperty("sub-border-color", text)
+                }
+            }
+
+            Button {
+                icon.name: "edit-clear-all"
+                onClicked: borderColor.text = app.getDefaultSubBorderColor()
+            }
+        }
+
+        Label {
+            text: i18n("Border width")
+            Layout.alignment: Qt.AlignRight
+        }
+        SpinBox {
+            from: 0
+            to: 25
+            value: SubtitlesSettings.borderSize
+            editable: true
+            onValueChanged: {
+                SubtitlesSettings.borderSize = value
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-border-size", value)
+            }
+
+            ToolTip {
+                text: i18n("Set to 0 (zero) to disable.")
+            }
+        }
+
+        Item { width: 1 }
+        CheckBox {
+            text: i18n("Bold")
+            checked: SubtitlesSettings.isBold
+            onCheckedChanged: {
+                SubtitlesSettings.isBold = checked
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-bold", checked)
+            }
+        }
+
+        Item { width: 1 }
+        CheckBox {
+            text: i18n("Italic")
+            checked: SubtitlesSettings.isItalic
+            onCheckedChanged: {
+                SubtitlesSettings.isItalic = checked
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-italic", checked)
+            }
+        }
+
         Item {
             width: Kirigami.Units.gridUnit
             height: Kirigami.Units.gridUnit
