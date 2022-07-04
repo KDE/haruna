@@ -104,6 +104,10 @@ SettingsBasePage {
             Button {
                 icon.name: "edit-clear-all"
                 onClicked: subtitleColor.text = app.getDefaultSubColor()
+
+                ToolTip {
+                    text: i18n("Set default value")
+                }
             }
         }
 
@@ -119,6 +123,7 @@ SettingsBasePage {
 
                 onColorChosen: shadowColor.text = color
             }
+
             TextField {
                 id: shadowColor
 
@@ -134,6 +139,10 @@ SettingsBasePage {
             Button {
                 icon.name: "edit-clear-all"
                 onClicked: shadowColor.text = app.getDefaultSubShadowColor()
+
+                ToolTip {
+                    text: i18n("Set default value")
+                }
             }
         }
 
@@ -186,6 +195,10 @@ SettingsBasePage {
             Button {
                 icon.name: "edit-clear-all"
                 onClicked: borderColor.text = app.getDefaultSubBorderColor()
+
+                ToolTip {
+                    text: i18n("Set default value")
+                }
             }
         }
 

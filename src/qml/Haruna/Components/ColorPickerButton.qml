@@ -30,6 +30,11 @@ Rectangle {
         cursorShape: containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
     }
 
+    ToolTip {
+        text: i18n("Select a color")
+        visible: ma.containsMouse
+    }
+
     ColorDialog {
         id: colorPicker
 
