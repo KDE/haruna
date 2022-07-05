@@ -42,4 +42,9 @@ Rectangle {
         onAccepted: colorChosen(colorPicker.color)
         color: root.color
     }
+
+    Connections {
+        target: window
+        onClosing: colorPicker.close()
+    }
 }
