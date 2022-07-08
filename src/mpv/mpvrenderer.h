@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2022 George Florea Bănuș <georgefb899@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 #ifndef MPVRENDERER_H
 #define MPVRENDERER_H
 
