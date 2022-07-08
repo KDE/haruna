@@ -55,25 +55,6 @@ MpvObject {
     }
 
     onReady: {
-        setProperty("sub-color", SubtitlesSettings.subtitleColor)
-        setProperty("sub-shadow-color", SubtitlesSettings.shadowColor)
-        setProperty("sub-shadow-offset", SubtitlesSettings.shadowOffset)
-        setProperty("sub-border-color", SubtitlesSettings.borderColor)
-        setProperty("sub-border-size", SubtitlesSettings.borderSize)
-        setProperty("sub-bold", SubtitlesSettings.bold)
-        setProperty("sub-italic", SubtitlesSettings.italic)
-
-        setProperty("screenshot-template", VideoSettings.screenshotTemplate)
-        setProperty("screenshot-format", VideoSettings.screenshotFormat)
-        const preferredAudioTrack = AudioSettings.preferredTrack
-        setProperty("aid", preferredAudioTrack === 0 ? "auto" : preferredAudioTrack)
-        setProperty("alang", AudioSettings.preferredLanguage)
-
-        const preferredSubTrack = SubtitlesSettings.preferredTrack
-        setProperty("sid", preferredSubTrack === 0 ? "auto" : preferredSubTrack)
-        setProperty("slang", SubtitlesSettings.preferredLanguage)
-        setProperty("sub-file-paths", SubtitlesSettings.subtitlesFolders.join(":"))
-
         if (app.argument(0) !== "") {
             window.openFile(app.argument(0), true, PlaylistSettings.loadSiblings, true)
         } else {

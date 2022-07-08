@@ -7,13 +7,15 @@
 #include "mpvobject.h"
 #include "mpvrenderer.h"
 #include "application.h"
+#include "audiosettings.h"
 #include "generalsettings.h"
 #include "playbacksettings.h"
-#include "videosettings.h"
 #include "playlistitem.h"
 #include "track.h"
 #include "tracksmodel.h"
 #include "global.h"
+#include "subtitlessettings.h"
+#include "videosettings.h"
 #include "worker.h"
 
 #include <QCryptographicHash>
@@ -39,18 +41,6 @@ MpvObject::MpvObject(QQuickItem * parent)
     if (!mpv)
         throw std::runtime_error("could not create mpv context");
 
-//    setProperty("terminal", "yes");
-//    setProperty("msg-level", "all=v");
-    mpv_set_option_string(mpv, "vo", "libmpv");
-
-    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
-    setProperty("hwdec", hwdec);
-    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
-    setProperty("sub-auto", "exact");
-    setProperty("volume-max", "100");
-    // set ytdl_path to yt-dlp or fallback to youtube-dl
-    setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
-
     mpv_observe_property(mpv, 0, "media-title", MPV_FORMAT_STRING);
     mpv_observe_property(mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
     mpv_observe_property(mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
@@ -67,9 +57,9 @@ MpvObject::MpvObject(QQuickItem * parent)
     mpv_observe_property(mpv, 0, "saturation", MPV_FORMAT_INT64);
     mpv_observe_property(mpv, 0, "track-list", MPV_FORMAT_NODE);
 
-    if (mpv_initialize(mpv) < 0)
+    if (mpv_initialize(mpv) < 0) {
         throw std::runtime_error("could not initialize mpv context");
-
+    }
 
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
@@ -108,6 +98,42 @@ MpvObject::~MpvObject()
         mpv_render_context_free(mpv_gl);
     }
     mpv_terminate_destroy(mpv);
+}
+
+void MpvObject::initProperties()
+{
+    //    setProperty("terminal", "yes");
+    //    setProperty("msg-level", "all=v");
+    mpv_set_option_string(mpv, "vo", "libmpv");
+
+    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
+    setProperty("hwdec", hwdec);
+    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
+    setProperty("sub-auto", "exact");
+    setProperty("volume-max", "100");
+    // set ytdl_path to yt-dlp or fallback to youtube-dl
+    setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
+
+
+    setProperty("sub-color", SubtitlesSettings::subtitleColor());
+    setProperty("sub-shadow-color", SubtitlesSettings::shadowColor());
+    setProperty("sub-shadow-offset", SubtitlesSettings::shadowOffset());
+    setProperty("sub-border-color", SubtitlesSettings::borderColor());
+    setProperty("sub-border-size", SubtitlesSettings::borderSize());
+    setProperty("sub-bold", SubtitlesSettings::isBold());
+    setProperty("sub-italic", SubtitlesSettings::isItalic());
+
+    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
+    setProperty("screenshot-format", VideoSettings::screenshotFormat());
+
+    const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
+    setProperty("aid", preferredAudioTrack == 0 ? "auto" : preferredAudioTrack);
+    setProperty("alang", AudioSettings::preferredLanguage());
+
+    const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
+    setProperty("sid", preferredSubTrack == 0 ? "auto" : preferredSubTrack);
+    setProperty("slang", SubtitlesSettings::preferredLanguage());
+    setProperty("sub-file-paths", SubtitlesSettings::subtitlesFolders().join(":"));
 }
 
 PlayListModel *MpvObject::playlistModel()

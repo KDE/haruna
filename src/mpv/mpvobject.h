@@ -234,6 +234,7 @@ private:
     QString m_playlistUrl;
     QString m_file;
 
+    void initProperties();
     void loadTracks();
     QString md5(const QString &str);
 };
