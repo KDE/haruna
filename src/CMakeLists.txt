@@ -27,8 +27,8 @@ target_sources(haruna
     models/playlistmodel.h models/playlistmodel.cpp
     mpris2/mediaplayer2.h mpris2/mediaplayer2.cpp
     mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
-    mpvobject.h mpvobject.cpp
-    qthelper.h
+    mpv/mpvobject.h mpv/mpvobject.cpp
+    mpv/mpvqthelper.h
     playlistitem.h playlistitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     track.h track.cpp
@@ -47,7 +47,7 @@ kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
 
-target_include_directories(haruna PRIVATE models mpris2 ${FFMPEG_INCLUDE_DIRS})
+target_include_directories(haruna PRIVATE models mpris2 mpv ${FFMPEG_INCLUDE_DIRS})
 
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
