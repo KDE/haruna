@@ -28,6 +28,7 @@ target_sources(haruna
     mpris2/mediaplayer2.h mpris2/mediaplayer2.cpp
     mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
     mpv/mpvobject.h mpv/mpvobject.cpp
+    mpv/mpvrenderer.h mpv/mpvrenderer.cpp
     mpv/mpvqthelper.h
     playlistitem.h playlistitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
