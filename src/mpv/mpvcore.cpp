@@ -19,6 +19,7 @@ MpvCore::MpvCore(QQuickItem *parent)
     if (mpv_initialize(m_mpv) < 0) {
         qFatal("could not initialize mpv context");
     }
+    mpv_set_wakeup_callback(m_mpv, MpvObject::mpvEvents, this);
 }
 
 MpvCore::~MpvCore()

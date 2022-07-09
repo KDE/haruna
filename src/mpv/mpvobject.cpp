@@ -67,7 +67,6 @@ MpvObject::MpvObject(QQuickItem * parent)
         }
     }
 
-    mpv_set_wakeup_callback(m_mpv, MpvObject::mpvEvents, this);
 
     connect(this, &MpvObject::fileLoaded,
             this, &MpvObject::loadTracks);
