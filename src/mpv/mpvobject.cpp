@@ -61,6 +61,8 @@ MpvObject::MpvObject(QQuickItem * parent)
         throw std::runtime_error("could not initialize mpv context");
     }
 
+    initProperties();
+
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
     QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
