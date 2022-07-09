@@ -30,7 +30,6 @@ target_sources(haruna
     mpv/mpvcore.h mpv/mpvcore.cpp
     mpv/mpvobject.h mpv/mpvobject.cpp
     mpv/mpvrenderer.h mpv/mpvrenderer.cpp
-    mpv/mpvqthelper.h
     playlistitem.h playlistitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     track.h track.cpp

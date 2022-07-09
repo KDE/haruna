@@ -11,7 +11,34 @@
 
 #include <mpv/client.h>
 #include <mpv/render_gl.h>
-#include "mpvqthelper.h"
+
+/**
+ * RAII wrapper that calls mpv_free_node_contents() on the pointer.
+ */
+struct node_autofree {
+    mpv_node *ptr;
+    node_autofree(mpv_node *a_ptr) : ptr(a_ptr) {}
+    ~node_autofree() { mpv_free_node_contents(ptr); }
+};
+
+/**
+ * This is used to return error codes wrapped in QVariant for functions which
+ * return QVariant.
+ *
+ * You can use get_error() or is_error() to extract the error status from a
+ * QVariant value.
+ */
+struct ErrorReturn
+{
+    /**
+     * enum mpv_error value (or a value outside of it if ABI was extended)
+     */
+    int error;
+
+    ErrorReturn() : error(0) {}
+    explicit ErrorReturn(int err) : error(err) {}
+};
+Q_DECLARE_METATYPE(ErrorReturn)
 
 class MpvCore : public QQuickFramebufferObject
 {
@@ -56,7 +83,22 @@ signals:
 protected:
     mpv_handle *m_mpv {nullptr};
     mpv_render_context *m_mpv_gl {nullptr};
+    mpv_node_list *create_list(mpv_node *dst, bool is_map, int num);
+    void setNode(mpv_node *dst, const QVariant &src);
+    bool test_type(const QVariant &v, QMetaType::Type t);
+    char *dup_qstring(const QString &s);
+    void free_node(mpv_node *dst);
 
+private:
+    QVariant node_to_variant(const mpv_node *node);
+
+    /**
+     * Return the mpv error code packed into a QVariant, or 0 (success) if it's not
+     * an error value.
+     *
+     * @return error code (<0) or success (>=0)
+     */
+    int get_error(const QVariant &v);
 };
 
 #endif // MPVCORE_H
