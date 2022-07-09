@@ -86,7 +86,6 @@ protected:
     mpv_node_list *create_list(mpv_node *dst, bool is_map, int num);
     void setNode(mpv_node *dst, const QVariant &src);
     bool test_type(const QVariant &v, QMetaType::Type t);
-    char *dup_qstring(const QString &s);
     void free_node(mpv_node *dst);
 
 private:

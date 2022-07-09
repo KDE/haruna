@@ -64,7 +64,7 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
 {
     if (test_type(src, QMetaType::QString)) {
         dst->format = MPV_FORMAT_STRING;
-        dst->u.string = dup_qstring(src.toString());
+        dst->u.string = src.toString().toUtf8().data();
         if (!dst->u.string)
             dst->format = MPV_FORMAT_NONE;
     } else if (test_type(src, QMetaType::Bool)) {
@@ -96,7 +96,7 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
         list->num = qmap.size();
         int n = 0;
         for (auto it = qmap.constKeyValueBegin(); it != qmap.constKeyValueEnd(); ++it) {
-            list->keys[n] = dup_qstring(it.operator*().first);
+            list->keys[n] = it.operator*().first.toUtf8().data();
             if (!list->keys[n]) {
                 free_node(dst);
                 dst->format = MPV_FORMAT_NONE;
@@ -116,15 +116,6 @@ bool MpvCore::test_type(const QVariant &v, QMetaType::Type t)
     // QVariant::Type(obsolete), the return value should be interpreted
     // as QMetaType::Type." So a cast is needed to avoid warnings.
     return static_cast<int>(v.type()) == static_cast<int>(t);
-}
-
-char *MpvCore::dup_qstring(const QString &s)
-{
-    QByteArray b = s.toUtf8();
-    char *r = new char[b.size() + 1];
-    if (r)
-        std::memcpy(r, b.data(), b.size() + 1);
-    return r;
 }
 
 void MpvCore::free_node(mpv_node *dst)
