@@ -65,7 +65,7 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
 {
     if (test_type(src, QMetaType::QString)) {
         dst->format = MPV_FORMAT_STRING;
-        dst->u.string = src.toString().toUtf8().data();
+        dst->u.string = qstrdup(src.toString().toUtf8().data());
         if (!dst->u.string)
             dst->format = MPV_FORMAT_NONE;
     } else if (test_type(src, QMetaType::Bool)) {
@@ -97,7 +97,7 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
         list->num = qmap.size();
         int n = 0;
         for (auto it = qmap.constKeyValueBegin(); it != qmap.constKeyValueEnd(); ++it) {
-            list->keys[n] = it.operator*().first.toUtf8().data();
+            list->keys[n] = qstrdup(it.operator*().first.toUtf8().data());
             if (!list->keys[n]) {
                 free_node(dst);
                 dst->format = MPV_FORMAT_NONE;
@@ -150,13 +150,13 @@ int MpvCore::setProperty(const QString &name, const QVariant &value)
 {
     mpv_node node;
     setNode(&node, value);
-    return mpv_set_property(m_mpv, name.toUtf8().data(), MPV_FORMAT_NODE, &node);
+    return mpv_set_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
 }
 
 QVariant MpvCore::getProperty(const QString &name)
 {
     mpv_node node;
-    int err = mpv_get_property(m_mpv, name.toUtf8().data(), MPV_FORMAT_NODE, &node);
+    int err = mpv_get_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
     if (err < 0) {
         return QVariant::fromValue(ErrorReturn(err));
     }
