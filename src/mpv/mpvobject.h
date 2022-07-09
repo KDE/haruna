@@ -9,10 +9,7 @@
 
 #include <QtQuick/QQuickFramebufferObject>
 
-#include <mpv/client.h>
-#include <mpv/render_gl.h>
 #include "mpvcore.h"
-#include "mpvqthelper.h"
 #include "playlistmodel.h"
 #include "tracksmodel.h"
 
