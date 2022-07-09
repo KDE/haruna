@@ -27,6 +27,7 @@ target_sources(haruna
     models/playlistmodel.h models/playlistmodel.cpp
     mpris2/mediaplayer2.h mpris2/mediaplayer2.cpp
     mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
+    mpv/mpvcore.h mpv/mpvcore.cpp
     mpv/mpvobject.h mpv/mpvobject.cpp
     mpv/mpvrenderer.h mpv/mpvrenderer.cpp
     mpv/mpvqthelper.h

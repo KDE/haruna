@@ -25,16 +25,16 @@ void on_mpv_redraw(void *ctx)
     QMetaObject::invokeMethod(static_cast<MpvObject*>(ctx), "update", Qt::QueuedConnection);
 }
 
-MpvRenderer::MpvRenderer(MpvObject *new_obj)
-    : obj{new_obj}
+MpvRenderer::MpvRenderer(MpvCore *new_obj)
+    : m_mpv_core{new_obj}
 {
-    obj->window()->setPersistentOpenGLContext(true);
-    obj->window()->setPersistentSceneGraph(true);
+    m_mpv_core->window()->setPersistentOpenGLContext(true);
+    m_mpv_core->window()->setPersistentSceneGraph(true);
 }
 
 void MpvRenderer::render()
 {
-    obj->window()->resetOpenGLState();
+    m_mpv_core->window()->resetOpenGLState();
 
     QOpenGLFramebufferObject *fbo = framebufferObject();
     mpv_opengl_fbo mpfbo;
@@ -53,15 +53,15 @@ void MpvRenderer::render()
     };
     // See render_gl.h on what OpenGL environment mpv expects, and
     // other API details.
-    mpv_render_context_render(obj->mpv_gl, params);
+    mpv_render_context_render(m_mpv_core->m_mpv_gl, params);
 
-    obj->window()->resetOpenGLState();
+    m_mpv_core->window()->resetOpenGLState();
 }
 
 QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size)
 {
     // init mpv_gl:
-    if (!obj->mpv_gl)
+    if (!m_mpv_core->m_mpv_gl)
     {
 #if MPV_CLIENT_API_VERSION < MPV_MAKE_VERSION(2, 0)
         mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr, nullptr};
@@ -74,12 +74,12 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
             {MPV_RENDER_PARAM_INVALID, nullptr}
         };
 
-        if (mpv_render_context_create(&obj->mpv_gl, obj->mpv, params) < 0) {
+        if (mpv_render_context_create(&m_mpv_core->m_mpv_gl, m_mpv_core->m_mpv, params) < 0) {
             throw std::runtime_error("failed to initialize mpv GL context");
         }
 
-        mpv_render_context_set_update_callback(obj->mpv_gl, on_mpv_redraw, obj);
-        Q_EMIT obj->ready();
+        mpv_render_context_set_update_callback(m_mpv_core->m_mpv_gl, on_mpv_redraw, m_mpv_core);
+        Q_EMIT m_mpv_core->ready();
     }
 
     return QQuickFramebufferObject::Renderer::createFramebufferObject(size);

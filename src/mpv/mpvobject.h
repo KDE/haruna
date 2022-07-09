@@ -11,6 +11,7 @@
 
 #include <mpv/client.h>
 #include <mpv/render_gl.h>
+#include "mpvcore.h"
 #include "mpvqthelper.h"
 #include "playlistmodel.h"
 #include "tracksmodel.h"
@@ -18,7 +19,7 @@
 class MpvRenderer;
 class Track;
 
-class MpvObject : public QQuickFramebufferObject
+class MpvObject : public MpvCore
 {
     Q_OBJECT
     Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
@@ -166,29 +167,17 @@ class MpvObject : public QQuickFramebufferObject
     bool hwDecoding();
     void setHWDecoding(bool value);
 
-    mpv_handle *mpv;
-    mpv_render_context *mpv_gl;
-
-    friend class MpvRenderer;
-
 public:
-    MpvObject(QQuickItem * parent = 0);
-    virtual ~MpvObject();
-    Renderer *createRenderer() const override;
+    MpvObject(QQuickItem * parent = nullptr);
+    ~MpvObject() = default;
 
     Q_INVOKABLE void loadFile(const QString &file, bool updateLastPlayedFile = true);
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);
-    Q_INVOKABLE QVariant command(const QVariant &params, bool debug = false);
-    Q_INVOKABLE QVariant getProperty(const QString &name, bool debug = false);
-    Q_INVOKABLE int setProperty(const QString &name, const QVariant &value, bool debug = false);
     Q_INVOKABLE void saveTimePosition();
     Q_INVOKABLE double loadTimePosition();
     Q_INVOKABLE void resetTimePosition();
     Q_INVOKABLE void userCommand(const QString &commandString);
-
-public slots:
-    static void mpvEvents(void *ctx);
-    void eventHandler();
+    void eventHandler() override;
 
 signals:
     void mediaTitleChanged();
@@ -209,7 +198,6 @@ signals:
     void fileLoaded();
     void endFile(QString reason);
     void watchPercentageChanged();
-    void ready();
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
     void hwDecodingChanged();

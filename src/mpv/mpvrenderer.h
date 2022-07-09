@@ -12,10 +12,10 @@
 class MpvRenderer : public QQuickFramebufferObject::Renderer
 {
 public:
-    MpvRenderer(MpvObject *new_obj);
+    MpvRenderer(MpvCore *new_obj);
     ~MpvRenderer() = default;
 
-    MpvObject *obj;
+    MpvCore *m_mpv_core;
 
     // This function is called when a new FBO is needed.
     // This happens on the initial frame.

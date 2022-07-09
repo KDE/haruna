@@ -31,35 +31,26 @@
 #include <KShell>
 
 MpvObject::MpvObject(QQuickItem * parent)
-    : QQuickFramebufferObject(parent)
-    , mpv{mpv_create()}
-    , mpv_gl(nullptr)
+    : MpvCore(parent)
     , m_audioTracksModel(new TracksModel)
     , m_subtitleTracksModel(new TracksModel)
     , m_playlistModel(new PlayListModel)
 {
-    if (!mpv)
-        throw std::runtime_error("could not create mpv context");
-
-    mpv_observe_property(mpv, 0, "media-title", MPV_FORMAT_STRING);
-    mpv_observe_property(mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(mpv, 0, "duration", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(mpv, 0, "volume", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "pause", MPV_FORMAT_FLAG);
-    mpv_observe_property(mpv, 0, "chapter", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "aid", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "sid", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "secondary-sid", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "contrast", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "brightness", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "gamma", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "saturation", MPV_FORMAT_INT64);
-    mpv_observe_property(mpv, 0, "track-list", MPV_FORMAT_NODE);
-
-    if (mpv_initialize(mpv) < 0) {
-        throw std::runtime_error("could not initialize mpv context");
-    }
+    mpv_observe_property(m_mpv, 0, "media-title",    MPV_FORMAT_STRING);
+    mpv_observe_property(m_mpv, 0, "time-pos",       MPV_FORMAT_DOUBLE);
+    mpv_observe_property(m_mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
+    mpv_observe_property(m_mpv, 0, "duration",       MPV_FORMAT_DOUBLE);
+    mpv_observe_property(m_mpv, 0, "pause",          MPV_FORMAT_FLAG);
+    mpv_observe_property(m_mpv, 0, "volume",         MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "aid",            MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "sid",            MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "chapter",        MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "secondary-sid",  MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "contrast",       MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "brightness",     MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "gamma",          MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "saturation",     MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "track-list",     MPV_FORMAT_NODE);
 
     initProperties();
 
@@ -76,7 +67,7 @@ MpvObject::MpvObject(QQuickItem * parent)
         }
     }
 
-    mpv_set_wakeup_callback(mpv, MpvObject::mpvEvents, this);
+    mpv_set_wakeup_callback(m_mpv, MpvObject::mpvEvents, this);
 
     connect(this, &MpvObject::fileLoaded,
             this, &MpvObject::loadTracks);
@@ -93,20 +84,10 @@ MpvObject::MpvObject(QQuickItem * parent)
     connect(this, &MpvObject::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
 }
 
-MpvObject::~MpvObject()
-{
-    // only initialized if something got drawn
-    if (mpv_gl) {
-        mpv_render_context_free(mpv_gl);
-    }
-    mpv_terminate_destroy(mpv);
-}
-
 void MpvObject::initProperties()
 {
     //    setProperty("terminal", "yes");
     //    setProperty("msg-level", "all=v");
-    mpv_set_option_string(mpv, "vo", "libmpv");
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
     setProperty("hwdec", hwdec);
@@ -376,11 +357,6 @@ void MpvObject::setHWDecoding(bool value)
     Q_EMIT hwDecodingChanged();
 }
 
-QQuickFramebufferObject::Renderer *MpvObject::createRenderer() const
-{
-    return new MpvRenderer(const_cast<MpvObject *>(this));
-}
-
 void MpvObject::loadFile(const QString &file, bool updateLastPlayedFile)
 {
     setProperty("ytdl-format", PlaybackSettings::ytdlFormat());
@@ -395,15 +371,10 @@ void MpvObject::loadFile(const QString &file, bool updateLastPlayedFile)
     }
 }
 
-void MpvObject::mpvEvents(void *ctx)
-{
-    QMetaObject::invokeMethod(static_cast<MpvObject*>(ctx), "eventHandler", Qt::QueuedConnection);
-}
-
 void MpvObject::eventHandler()
 {
-    while (mpv) {
-        mpv_event *event = mpv_wait_event(mpv, 0);
+    while (m_mpv) {
+        mpv_event *event = mpv_wait_event(m_mpv, 0);
         if (event->event_id == MPV_EVENT_NONE) {
             break;
         }
@@ -608,33 +579,6 @@ void MpvObject::getYouTubePlaylist(const QString &path)
 
         Q_EMIT youtubePlaylistLoaded();
     });
-}
-
-int MpvObject::setProperty(const QString &name, const QVariant &value, bool debug)
-{
-    auto result = mpv::qt::set_property(mpv, name, value);
-    if (debug) {
-        qDebug() << name << mpv::qt::get_error(result);
-    }
-    return result;
-}
-
-QVariant MpvObject::getProperty(const QString &name, bool debug)
-{
-    auto result = mpv::qt::get_property(mpv, name);
-    if (debug) {
-        qDebug() << name << mpv::qt::get_error(result);
-    }
-    return result;
-}
-
-QVariant MpvObject::command(const QVariant &params, bool debug)
-{
-    auto result = mpv::qt::command(mpv, params);
-    if (debug) {
-        qDebug() << mpv::qt::get_error(result);
-    }
-    return result;
 }
 
 void MpvObject::saveTimePosition()
