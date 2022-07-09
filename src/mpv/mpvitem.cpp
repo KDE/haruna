@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "mpvobject.h"
+#include "mpvitem.h"
 #include "mpvrenderer.h"
 #include "application.h"
 #include "audiosettings.h"
@@ -30,7 +30,7 @@
 
 #include <KShell>
 
-MpvObject::MpvObject(QQuickItem * parent)
+MpvItem::MpvItem(QQuickItem * parent)
     : MpvCore(parent)
     , m_audioTracksModel(new TracksModel)
     , m_subtitleTracksModel(new TracksModel)
@@ -68,10 +68,10 @@ MpvObject::MpvObject(QQuickItem * parent)
     }
 
 
-    connect(this, &MpvObject::fileLoaded,
-            this, &MpvObject::loadTracks);
+    connect(this, &MpvItem::fileLoaded,
+            this, &MpvItem::loadTracks);
 
-    connect(this, &MpvObject::positionChanged, this, [this]() {
+    connect(this, &MpvItem::positionChanged, this, [this]() {
         int pos = getProperty("time-pos").toInt();
         double duration = getProperty("duration").toDouble();
         if (!m_secondsWatched.contains(pos)) {
@@ -80,10 +80,10 @@ MpvObject::MpvObject(QQuickItem * parent)
         }
     });
 
-    connect(this, &MpvObject::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
+    connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
 }
 
-void MpvObject::initProperties()
+void MpvItem::initProperties()
 {
     //    setProperty("terminal", "yes");
     //    setProperty("msg-level", "all=v");
@@ -118,22 +118,22 @@ void MpvObject::initProperties()
     setProperty("sub-file-paths", SubtitlesSettings::subtitlesFolders().join(":"));
 }
 
-PlayListModel *MpvObject::playlistModel()
+PlayListModel *MpvItem::playlistModel()
 {
     return m_playlistModel;
 }
 
-void MpvObject::setPlaylistModel(PlayListModel *model)
+void MpvItem::setPlaylistModel(PlayListModel *model)
 {
     m_playlistModel = model;
 }
 
-QString MpvObject::playlistTitle()
+QString MpvItem::playlistTitle()
 {
     return m_playlistTitle;
 }
 
-void MpvObject::setPlaylistTitle(const QString &title)
+void MpvItem::setPlaylistTitle(const QString &title)
 {
     if (title == playlistTitle()) {
         return;
@@ -142,12 +142,12 @@ void MpvObject::setPlaylistTitle(const QString &title)
     Q_EMIT positionChanged();
 }
 
-const QString &MpvObject::playlistUrl() const
+const QString &MpvItem::playlistUrl() const
 {
     return m_playlistUrl;
 }
 
-void MpvObject::setPlaylistUrl(const QString &_playlistUrl)
+void MpvItem::setPlaylistUrl(const QString &_playlistUrl)
 {
     if (m_playlistUrl == _playlistUrl)
         return;
@@ -155,16 +155,16 @@ void MpvObject::setPlaylistUrl(const QString &_playlistUrl)
     emit playlistUrlChanged();
 }
 
-QString MpvObject::mediaTitle()
+QString MpvItem::mediaTitle()
 {
     return getProperty("media-title").toString();
 }
-double MpvObject::position()
+double MpvItem::position()
 {
     return getProperty("time-pos").toDouble();
 }
 
-void MpvObject::setPosition(double value)
+void MpvItem::setPosition(double value)
 {
     if (value == position()) {
         return;
@@ -173,22 +173,22 @@ void MpvObject::setPosition(double value)
     Q_EMIT positionChanged();
 }
 
-double MpvObject::remaining()
+double MpvItem::remaining()
 {
     return getProperty("time-remaining").toDouble();
 }
 
-double MpvObject::duration()
+double MpvItem::duration()
 {
     return getProperty("duration").toDouble();
 }
 
-bool MpvObject::pause()
+bool MpvItem::pause()
 {
     return getProperty("pause").toBool();
 }
 
-void MpvObject::setPause(bool value)
+void MpvItem::setPause(bool value)
 {
     if (value == pause()) {
         return;
@@ -197,12 +197,12 @@ void MpvObject::setPause(bool value)
     Q_EMIT pauseChanged();
 }
 
-int MpvObject::volume()
+int MpvItem::volume()
 {
     return getProperty("volume").toInt();
 }
 
-void MpvObject::setVolume(int value)
+void MpvItem::setVolume(int value)
 {
     if (value == volume()) {
         return;
@@ -211,12 +211,12 @@ void MpvObject::setVolume(int value)
     Q_EMIT volumeChanged();
 }
 
-int MpvObject::chapter()
+int MpvItem::chapter()
 {
     return getProperty("chapter").toInt();
 }
 
-void MpvObject::setChapter(int value)
+void MpvItem::setChapter(int value)
 {
     if (value == chapter()) {
         return;
@@ -225,12 +225,12 @@ void MpvObject::setChapter(int value)
     Q_EMIT chapterChanged();
 }
 
-int MpvObject::audioId()
+int MpvItem::audioId()
 {
     return getProperty("aid").toInt();
 }
 
-void MpvObject::setAudioId(int value)
+void MpvItem::setAudioId(int value)
 {
     if (value == audioId()) {
         return;
@@ -239,12 +239,12 @@ void MpvObject::setAudioId(int value)
     Q_EMIT audioIdChanged();
 }
 
-int MpvObject::subtitleId()
+int MpvItem::subtitleId()
 {
     return getProperty("sid").toInt();
 }
 
-void MpvObject::setSubtitleId(int value)
+void MpvItem::setSubtitleId(int value)
 {
     if (value == subtitleId()) {
         return;
@@ -253,12 +253,12 @@ void MpvObject::setSubtitleId(int value)
     Q_EMIT subtitleIdChanged();
 }
 
-int MpvObject::secondarySubtitleId()
+int MpvItem::secondarySubtitleId()
 {
     return getProperty("secondary-sid").toInt();
 }
 
-void MpvObject::setSecondarySubtitleId(int value)
+void MpvItem::setSecondarySubtitleId(int value)
 {
     if (value == secondarySubtitleId()) {
         return;
@@ -267,12 +267,12 @@ void MpvObject::setSecondarySubtitleId(int value)
     Q_EMIT secondarySubtitleIdChanged();
 }
 
-int MpvObject::contrast()
+int MpvItem::contrast()
 {
     return getProperty("contrast").toInt();
 }
 
-void MpvObject::setContrast(int value)
+void MpvItem::setContrast(int value)
 {
     if (value == contrast()) {
         return;
@@ -281,12 +281,12 @@ void MpvObject::setContrast(int value)
     Q_EMIT contrastChanged();
 }
 
-int MpvObject::brightness()
+int MpvItem::brightness()
 {
     return getProperty("brightness").toInt();
 }
 
-void MpvObject::setBrightness(int value)
+void MpvItem::setBrightness(int value)
 {
     if (value == brightness()) {
         return;
@@ -295,12 +295,12 @@ void MpvObject::setBrightness(int value)
     Q_EMIT brightnessChanged();
 }
 
-int MpvObject::gamma()
+int MpvItem::gamma()
 {
     return getProperty("gamma").toInt();
 }
 
-void MpvObject::setGamma(int value)
+void MpvItem::setGamma(int value)
 {
     if (value == gamma()) {
         return;
@@ -309,12 +309,12 @@ void MpvObject::setGamma(int value)
     Q_EMIT gammaChanged();
 }
 
-int MpvObject::saturation()
+int MpvItem::saturation()
 {
     return getProperty("saturation").toInt();
 }
 
-void MpvObject::setSaturation(int value)
+void MpvItem::setSaturation(int value)
 {
     if (value == saturation()) {
         return;
@@ -323,12 +323,12 @@ void MpvObject::setSaturation(int value)
     Q_EMIT saturationChanged();
 }
 
-double MpvObject::watchPercentage()
+double MpvItem::watchPercentage()
 {
     return m_watchPercentage;
 }
 
-void MpvObject::setWatchPercentage(double value)
+void MpvItem::setWatchPercentage(double value)
 {
     if (m_watchPercentage == value) {
         return;
@@ -337,7 +337,7 @@ void MpvObject::setWatchPercentage(double value)
     Q_EMIT watchPercentageChanged();
 }
 
-bool MpvObject::hwDecoding()
+bool MpvItem::hwDecoding()
 {
     if (getProperty("hwdec") == "yes") {
         return true;
@@ -346,7 +346,7 @@ bool MpvObject::hwDecoding()
     }
 }
 
-void MpvObject::setHWDecoding(bool value)
+void MpvItem::setHWDecoding(bool value)
 {
     if (value) {
         setProperty("hwdec", "yes");
@@ -356,7 +356,7 @@ void MpvObject::setHWDecoding(bool value)
     Q_EMIT hwDecodingChanged();
 }
 
-void MpvObject::loadFile(const QString &file, bool updateLastPlayedFile)
+void MpvItem::loadFile(const QString &file, bool updateLastPlayedFile)
 {
     setProperty("ytdl-format", PlaybackSettings::ytdlFormat());
     command(QStringList() << "loadfile" << file);
@@ -370,7 +370,7 @@ void MpvObject::loadFile(const QString &file, bool updateLastPlayedFile)
     }
 }
 
-void MpvObject::eventHandler()
+void MpvItem::eventHandler()
 {
     while (m_mpv) {
         mpv_event *event = mpv_wait_event(m_mpv, 0);
@@ -467,7 +467,7 @@ void MpvObject::eventHandler()
     }
 }
 
-void MpvObject::loadTracks()
+void MpvItem::loadTracks()
 {
     m_subtitleTracks.clear();
     m_audioTracks.clear();
@@ -524,17 +524,17 @@ void MpvObject::loadTracks()
     Q_EMIT subtitleTracksModelChanged();
 }
 
-TracksModel *MpvObject::subtitleTracksModel() const
+TracksModel *MpvItem::subtitleTracksModel() const
 {
     return m_subtitleTracksModel;
 }
 
-TracksModel *MpvObject::audioTracksModel() const
+TracksModel *MpvItem::audioTracksModel() const
 {
     return m_audioTracksModel;
 }
 
-void MpvObject::getYouTubePlaylist(const QString &path)
+void MpvItem::getYouTubePlaylist(const QString &path)
 {
     m_playlistModel->clear();
 
@@ -580,7 +580,7 @@ void MpvObject::getYouTubePlaylist(const QString &path)
     });
 }
 
-void MpvObject::saveTimePosition()
+void MpvItem::saveTimePosition()
 {
     // saving position is disabled
     if (PlaybackSettings::minDurationToSavePosition() == -1) {
@@ -599,7 +599,7 @@ void MpvObject::saveTimePosition()
     Q_EMIT syncConfigValue(configPath, "", "TimePosition", getProperty("time-pos"));
 }
 
-double MpvObject::loadTimePosition()
+double MpvItem::loadTimePosition()
 {
     // saving position is disabled
     if (PlaybackSettings::minDurationToSavePosition() == -1) {
@@ -620,7 +620,7 @@ double MpvObject::loadTimePosition()
     return position;
 }
 
-void MpvObject::resetTimePosition()
+void MpvItem::resetTimePosition()
 {
     auto hash = md5(getProperty("path").toString());
     auto configPath = Global::instance()->appConfigDirPath();
@@ -631,13 +631,13 @@ void MpvObject::resetTimePosition()
     }
 }
 
-void MpvObject::userCommand(const QString &commandString)
+void MpvItem::userCommand(const QString &commandString)
 {
     QStringList args = KShell::splitArgs(commandString);
     command(args);
 }
 
-QString MpvObject::md5(const QString &str)
+QString MpvItem::md5(const QString &str)
 {
     auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
 

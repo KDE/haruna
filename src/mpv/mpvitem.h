@@ -16,7 +16,7 @@
 class MpvRenderer;
 class Track;
 
-class MpvObject : public MpvCore
+class MpvItem : public MpvCore
 {
     Q_OBJECT
     Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
@@ -165,8 +165,8 @@ class MpvObject : public MpvCore
     void setHWDecoding(bool value);
 
 public:
-    MpvObject(QQuickItem * parent = nullptr);
-    ~MpvObject() = default;
+    MpvItem(QQuickItem * parent = nullptr);
+    ~MpvItem() = default;
 
     Q_INVOKABLE void loadFile(const QString &file, bool updateLastPlayedFile = true);
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);

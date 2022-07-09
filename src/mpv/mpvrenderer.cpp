@@ -22,7 +22,7 @@ static void *get_proc_address_mpv(void *ctx, const char *name)
 
 void on_mpv_redraw(void *ctx)
 {
-    QMetaObject::invokeMethod(static_cast<MpvObject*>(ctx), &MpvObject::update, Qt::QueuedConnection);
+    QMetaObject::invokeMethod(static_cast<MpvItem*>(ctx), &MpvItem::update, Qt::QueuedConnection);
 }
 
 MpvRenderer::MpvRenderer(MpvCore *new_obj)

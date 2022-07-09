@@ -7,7 +7,7 @@
 #ifndef MPVRENDERER_H
 #define MPVRENDERER_H
 
-#include "mpvobject.h"
+#include "mpvitem.h"
 
 class MpvRenderer : public QQuickFramebufferObject::Renderer
 {

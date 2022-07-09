@@ -16,7 +16,7 @@
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
 #include "mousesettings.h"
-#include "mpvobject.h"
+#include "mpvitem.h"
 #include "playbacksettings.h"
 #include "playlistitem.h"
 #include "playlistmodel.h"
@@ -192,7 +192,7 @@ void Application::setupCommandLineParser()
 
 void Application::registerQmlTypes()
 {
-    qmlRegisterType<MpvObject>("mpv", 1, 0, "MpvObject");
+    qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
     qRegisterMetaType<PlayListModel*>();
     qRegisterMetaType<PlayListItem*>();
     qRegisterMetaType<QAction*>();

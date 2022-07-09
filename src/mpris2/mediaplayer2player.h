@@ -9,7 +9,7 @@
 
 #include <QDBusAbstractAdaptor>
 
-class MpvObject;
+class MpvItem;
 class QDBusObjectPath;
 
 class MediaPlayer2Player : public QDBusAbstractAdaptor
@@ -27,7 +27,7 @@ class MediaPlayer2Player : public QDBusAbstractAdaptor
     Q_PROPERTY(bool CanPause READ CanPause CONSTANT)
     Q_PROPERTY(bool CanSeek READ CanSeek CONSTANT)
     Q_PROPERTY(bool CanControl READ CanControl CONSTANT)
-    Q_PROPERTY(MpvObject *mpv READ mpv WRITE setMpv NOTIFY mpvChanged)
+    Q_PROPERTY(MpvItem *mpv READ mpv WRITE setMpv NOTIFY mpvChanged)
 
 public:
     explicit MediaPlayer2Player(QObject *parent = nullptr);
@@ -74,10 +74,10 @@ Q_SIGNALS:
     void mpvChanged();
 
 private:
-    MpvObject *mpv() const;
-    void setMpv(MpvObject *mpv);
+    MpvItem *mpv() const;
+    void setMpv(MpvItem *mpv);
 
-    MpvObject *m_mpv;
+    MpvItem *m_mpv;
 };
 
 #endif // MEDIAPLAYER2PLAYER_H

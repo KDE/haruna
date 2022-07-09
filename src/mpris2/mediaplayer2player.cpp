@@ -5,7 +5,7 @@
  */
 
 #include "mediaplayer2player.h"
-#include "mpvobject.h"
+#include "mpvitem.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -24,19 +24,19 @@ void MediaPlayer2Player::setupConnections()
         return;
     }
 
-    connect(m_mpv, &MpvObject::pauseChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::pauseChanged, this, [=]() {
         propertiesChanged("PlaybackStatus", PlaybackStatus());
         Q_EMIT playbackStatusChanged();
     });
-    connect(m_mpv, &MpvObject::positionChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::positionChanged, this, [=]() {
         propertiesChanged("PlaybackStatus", PlaybackStatus());
         Q_EMIT playbackStatusChanged();
     });
-    connect(m_mpv, &MpvObject::volumeChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
         propertiesChanged("Volume", Volume());
         Q_EMIT volumeChanged();
     });
-    connect(m_mpv, &MpvObject::fileLoaded, this, [=]() {
+    connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
         propertiesChanged("Metadata", Metadata());
         Q_EMIT metadataChanged();
     });
@@ -201,12 +201,12 @@ void MediaPlayer2Player::setVolume(double vol)
     m_mpv->setProperty("volume", vol*100);
 }
 
-MpvObject *MediaPlayer2Player::mpv() const
+MpvItem *MediaPlayer2Player::mpv() const
 {
     return m_mpv;
 }
 
-void MediaPlayer2Player::setMpv(MpvObject *mpv)
+void MediaPlayer2Player::setMpv(MpvItem *mpv)
 {
     if (m_mpv == mpv) {
         return;
