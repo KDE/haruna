@@ -67,10 +67,6 @@ MpvItem::MpvItem(QQuickItem * parent)
         }
     }
 
-
-    connect(this, &MpvItem::fileLoaded,
-            this, &MpvItem::loadTracks);
-
     connect(this, &MpvItem::positionChanged, this, [this]() {
         int pos = getProperty("time-pos").toInt();
         double duration = getProperty("duration").toDouble();
