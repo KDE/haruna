@@ -25,6 +25,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
         c->osdMessage = configGroup.readEntry("OsdMessage", QString());
         c->type = configGroup.readEntry("Type", QString());
         c->order = configGroup.readEntry("Order", 0);
+        c->loadOnStartup = configGroup.readEntry("LoadOnStartup", true);
         m_customCommands << c;
     }
 
@@ -67,6 +68,8 @@ QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
         return QVariant(command->osdMessage);
     case TypeRole:
         return QVariant(command->type);
+    case LoadOnStartupRole:
+        return QVariant(command->loadOnStartup);
     }
 
     return QVariant();
@@ -79,6 +82,7 @@ QHash<int, QByteArray> CustomCommandsModel::roleNames() const
     roles[OsdMessageRole] = "osdMessage";
     roles[CommandRole] = "command";
     roles[TypeRole] = "type";
+    roles[LoadOnStartupRole] = "loadOnStartup";
     return roles;
 }
 
@@ -133,6 +137,21 @@ void CustomCommandsModel::editCustomCommand(int row, const QString &command,
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
+    m_customCommandsConfig->sync();
+
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
+}
+
+void CustomCommandsModel::toggleCustomCommand(const QString &groupName, int row, bool loadOnStartup)
+{
+    auto group = m_customCommandsConfig->group(groupName);
+    if (loadOnStartup == group.readEntry("LoadOnStartup", true)) {
+        return;
+    }
+    auto customCommand = m_customCommands[row];
+    customCommand->loadOnStartup = loadOnStartup;
+
+    group.writeEntry("LoadOnStartup", loadOnStartup);
     m_customCommandsConfig->sync();
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));

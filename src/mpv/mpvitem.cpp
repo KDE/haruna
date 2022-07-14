@@ -62,7 +62,8 @@ MpvItem::MpvItem(QQuickItem * parent)
     for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customPropsConfig->group(_group);
         QString type = configGroup.readEntry("Type", QString());
-        if (type == "startup") {
+        bool loadOnStartup = configGroup.readEntry("LoadOnStartup", true);
+        if (type == "startup" && loadOnStartup) {
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
@@ -91,7 +92,6 @@ void MpvItem::initProperties()
     setProperty("volume-max", "100");
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
-
 
     setProperty("sub-color", SubtitlesSettings::subtitleColor());
     setProperty("sub-shadow-color", SubtitlesSettings::shadowColor());

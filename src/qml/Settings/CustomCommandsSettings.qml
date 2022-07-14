@@ -56,15 +56,30 @@ SettingsBasePage {
                     onMoveRequested: customCommandsModel.moveRows(oldIndex, newIndex)
                 }
 
+                CheckBox {
+                    visible: model.type === "startup"
+                    checked: model.loadOnStartup
+                    onCheckStateChanged: {
+                        customCommandsModel.toggleCustomCommand(model.commandId, model.index, checked)
+                    }
+
+                    ToolTip {
+                        text: i18n("Don't set on next startup")
+                        delay: 0
+                    }
+                }
+
                 Kirigami.Icon {
                     source: model.type === "shortcut" ? "configure-shortcuts" : "code-context"
                     width: Kirigami.Units.iconSizes.small
                     height: Kirigami.Units.iconSizes.small
+                    enabled: model.loadOnStartup
                 }
 
                 LabelWithTooltip {
                     text: model.command
                     elide: Text.ElideRight
+                    enabled: model.loadOnStartup
 
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                     Layout.fillWidth: true
@@ -82,6 +97,7 @@ SettingsBasePage {
 
                 ToolButton {
                     icon.name: "edit-entry"
+                    enabled: model.loadOnStartup
                     Layout.rightMargin: Kirigami.Units.largeSpacing
                     onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml",
                                                                      {

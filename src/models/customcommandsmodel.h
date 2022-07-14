@@ -28,7 +28,8 @@ class CustomCommandsModel : public QAbstractListModel
         QString command;
         QString osdMessage;
         QString type;
-        int order;
+        bool loadOnStartup {true};
+        int order {-1};
     };
 
 public:
@@ -39,6 +40,7 @@ public:
         CommandRole,
         OsdMessageRole,
         TypeRole,
+        LoadOnStartupRole,
     };
 
     // Basic functionality:
@@ -55,6 +57,7 @@ public:
                                        const QString &command,
                                        const QString &osdMessage,
                                        const QString &type);
+    Q_INVOKABLE void toggleCustomCommand(const QString &groupName, int row, bool loadOnStartup);
     Q_INVOKABLE void deleteCustomCommand(const QString &groupName, int row);
 
 private:
