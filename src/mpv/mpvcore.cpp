@@ -158,7 +158,7 @@ QVariant MpvCore::getProperty(const QString &name)
     mpv_node node;
     int err = mpv_get_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
     if (err < 0) {
-        return QVariant::fromValue(ErrorReturn(err));
+        return QVariant::fromValue(err);
     }
     node_autofree f(&node);
     return node_to_variant(&node);
@@ -171,7 +171,7 @@ QVariant MpvCore::command(const QVariant &params)
     mpv_node result;
     int err = mpv_command_node(m_mpv, &node, &result);
     if (err < 0) {
-        return QVariant::fromValue(ErrorReturn(err));
+        return QVariant::fromValue(err);
     }
     node_autofree f(&result);
     return node_to_variant(&result);
@@ -207,11 +207,4 @@ inline QVariant MpvCore::node_to_variant(const mpv_node *node)
     default: // MPV_FORMAT_NONE, unknown values (e.g. future extensions)
         return QVariant();
     }
-}
-
-inline int MpvCore::get_error(const QVariant &v)
-{
-    if (!v.canConvert<ErrorReturn>())
-        return 0;
-    return v.value<ErrorReturn>().error;
 }

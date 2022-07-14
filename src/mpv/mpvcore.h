@@ -21,25 +21,6 @@ struct node_autofree {
     ~node_autofree() { mpv_free_node_contents(ptr); }
 };
 
-/**
- * This is used to return error codes wrapped in QVariant for functions which
- * return QVariant.
- *
- * You can use get_error() or is_error() to extract the error status from a
- * QVariant value.
- */
-struct ErrorReturn
-{
-    /**
-     * enum mpv_error value (or a value outside of it if ABI was extended)
-     */
-    int error;
-
-    ErrorReturn() : error(0) {}
-    explicit ErrorReturn(int err) : error(err) {}
-};
-Q_DECLARE_METATYPE(ErrorReturn)
-
 class MpvCore : public QQuickFramebufferObject
 {
     Q_OBJECT
