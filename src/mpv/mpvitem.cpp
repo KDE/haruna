@@ -28,6 +28,7 @@
 #include <QStandardPaths>
 #include <QtGlobal>
 
+#include <KLocalizedString>
 #include <KShell>
 
 MpvItem::MpvItem(QQuickItem * parent)
@@ -548,8 +549,13 @@ void MpvItem::getYouTubePlaylist(const QString &path)
 
         QString json = ytdlProcess->readAllStandardOutput();
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
+        QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
+        if (entries.toArray().isEmpty()) {
+            Q_EMIT Global::instance()->error(i18n("Playlist is empty", title));
+            return;
+        }
 
-        setPlaylistTitle(QJsonDocument::fromJson(json.toUtf8())["title"].toString());
+        setPlaylistTitle(title);
         setPlaylistUrl(path);
 
         QString playlistFileContent;
