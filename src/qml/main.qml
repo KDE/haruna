@@ -141,12 +141,32 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    RowLayout {
+        width: window.width * 0.8 > Kirigami.Units.gridUnit * 50
+               ? Kirigami.Units.gridUnit * 50
+               : window.width * 0.8
+        anchors.centerIn: parent
+
+        Kirigami.InlineMessage {
+            id: messageBox
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            type: Kirigami.MessageType.Error
+            showCloseButton: true
+        }
+    }
+
     Connections {
         target: app
         onQmlApplicationMouseLeave: {
             if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
                 playList.state = "hidden"
             }
+        }
+        onError: {
+            messageBox.visible = true
+            messageBox.text = message
         }
     }
 
