@@ -132,6 +132,8 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     m_engine->addImageProvider("thumbnail", new ThumbnailImageProvider());
     setupQmlContextProperties();
     m_engine->load(url);
+
+    connect(Global::instance(), &Global::error, this, &Application::error);
 }
 
 Application::~Application()

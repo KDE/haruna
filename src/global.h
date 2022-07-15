@@ -10,8 +10,9 @@
 #include <QStandardPaths>
 #include <KSharedConfig>
 
-class Global
+class Global : public QObject
 {
+    Q_OBJECT
 public:
     static Global *instance();
 
@@ -23,6 +24,9 @@ public:
     const QString systemConfigPath();
     const QString appConfigDirPath();
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
+
+signals:
+    void error(const QString &message);
 
 private:
     Global();

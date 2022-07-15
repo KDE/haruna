@@ -77,6 +77,7 @@ public:
 
 signals:
     void qmlApplicationMouseLeave();
+    void error(const QString &message);
 
 private:
     void setupWorkerThread();
