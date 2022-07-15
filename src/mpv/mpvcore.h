@@ -21,6 +21,25 @@ struct node_autofree {
     ~node_autofree() { mpv_free_node_contents(ptr); }
 };
 
+/**
+ * This is used to return error codes wrapped in QVariant for functions which
+ * return QVariant.
+ *
+ * You can use get_error() or is_error() to extract the error status from a
+ * QVariant value.
+ */
+struct ErrorReturn
+{
+    /**
+     * enum mpv_error value (or a value outside of it if ABI was extended)
+     */
+    int error;
+
+    ErrorReturn() : error(0) {}
+    explicit ErrorReturn(int err) : error(err) {}
+};
+Q_DECLARE_METATYPE(ErrorReturn)
+
 class MpvCore : public QQuickFramebufferObject
 {
     Q_OBJECT
@@ -39,8 +58,8 @@ public:
     Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
 
     /**
-     * Return the given property as mpv_node converted to QVariant, or QVariant()
-     * on error.
+     * Return the given property as mpv_node converted to QVariant,
+     * or QVariant() on error.
      *
      * @param `name` the property name
      * @return the property value, or an ErrorReturn with the error code
@@ -55,7 +74,10 @@ public:
      */
     Q_INVOKABLE QVariant command(const QVariant &params);
 
-    QString errorString(int err);
+    /**
+     * Return an error string from an ErrorReturn.
+     */
+    QString getError(const QVariant &err);
 
     static void mpvEvents(void *ctx);
     virtual void eventHandler() = 0;
@@ -73,14 +95,6 @@ protected:
 
 private:
     QVariant node_to_variant(const mpv_node *node);
-
-    /**
-     * Return the mpv error code packed into a QVariant, or 0 (success) if it's not
-     * an error value.
-     *
-     * @return error code (<0) or success (>=0)
-     */
-    int get_error(const QVariant &v);
 };
 
 #endif // MPVCORE_H
