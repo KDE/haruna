@@ -25,7 +25,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
         c->osdMessage = configGroup.readEntry("OsdMessage", QString());
         c->type = configGroup.readEntry("Type", QString());
         c->order = configGroup.readEntry("Order", 0);
-        c->loadOnStartup = configGroup.readEntry("LoadOnStartup", true);
+        c->setOnStartup = configGroup.readEntry("SetOnStartup", true);
         m_customCommands << c;
     }
 
@@ -68,8 +68,8 @@ QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
         return QVariant(command->osdMessage);
     case TypeRole:
         return QVariant(command->type);
-    case LoadOnStartupRole:
-        return QVariant(command->loadOnStartup);
+    case SetOnStartupRole:
+        return QVariant(command->setOnStartup);
     }
 
     return QVariant();
@@ -82,7 +82,7 @@ QHash<int, QByteArray> CustomCommandsModel::roleNames() const
     roles[OsdMessageRole] = "osdMessage";
     roles[CommandRole] = "command";
     roles[TypeRole] = "type";
-    roles[LoadOnStartupRole] = "loadOnStartup";
+    roles[SetOnStartupRole] = "setOnStartup";
     return roles;
 }
 
@@ -142,16 +142,16 @@ void CustomCommandsModel::editCustomCommand(int row, const QString &command,
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
-void CustomCommandsModel::toggleCustomCommand(const QString &groupName, int row, bool loadOnStartup)
+void CustomCommandsModel::toggleCustomCommand(const QString &groupName, int row, bool setOnStartup)
 {
     auto group = m_customCommandsConfig->group(groupName);
-    if (loadOnStartup == group.readEntry("LoadOnStartup", true)) {
+    if (setOnStartup == group.readEntry("SetOnStartup", true)) {
         return;
     }
     auto customCommand = m_customCommands[row];
-    customCommand->loadOnStartup = loadOnStartup;
+    customCommand->setOnStartup = setOnStartup;
 
-    group.writeEntry("LoadOnStartup", loadOnStartup);
+    group.writeEntry("SetOnStartup", setOnStartup);
     m_customCommandsConfig->sync();
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));

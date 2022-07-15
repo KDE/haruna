@@ -62,8 +62,8 @@ MpvItem::MpvItem(QQuickItem * parent)
     for (const QString &_group : qAsConst((groups))) {
         auto configGroup = m_customPropsConfig->group(_group);
         QString type = configGroup.readEntry("Type", QString());
-        bool loadOnStartup = configGroup.readEntry("LoadOnStartup", true);
-        if (type == "startup" && loadOnStartup) {
+        bool setOnStartup = configGroup.readEntry("SetOnStartup", true);
+        if (type == "startup" && setOnStartup) {
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
