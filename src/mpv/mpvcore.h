@@ -55,6 +55,8 @@ public:
      */
     Q_INVOKABLE QVariant command(const QVariant &params);
 
+    QString errorString(int err);
+
     static void mpvEvents(void *ctx);
     virtual void eventHandler() = 0;
 
