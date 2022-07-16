@@ -86,16 +86,22 @@ SettingsBasePage {
                     Layout.margins: Kirigami.Units.largeSpacing
                 }
 
-                ToolButton {
-                    text: i18n("Shortcut")
-                    icon.name: "configure-shortcuts"
-                    visible: model.type === "shortcut"
-                    onClicked: actionsManager.configureShortcuts(model.command)
-
+                Loader {
+                    active: model.type === "shortcut"
+                    sourceComponent: Button {
+                        property var qaction: actionsManager.action(model.commandId)
+                        text: qaction.shortcutName || i18n("None")
+                        icon.name: "configure"
+                        onClicked: actionsManager.configureShortcuts(model.command)
+                    }
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 }
 
-                ToolButton {
+
+
+                Item { width: Kirigami.Units.smallSpacing }
+
+                Button {
                     icon.name: "edit-entry"
                     enabled: model.setOnStartup
                     Layout.rightMargin: Kirigami.Units.largeSpacing
