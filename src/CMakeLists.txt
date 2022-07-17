@@ -48,16 +48,18 @@ kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
 
-target_include_directories(haruna PRIVATE models mpris2 mpv ${FFMPEG_INCLUDE_DIRS})
+target_include_directories(haruna PRIVATE models mpris2 mpv ${FFMPEG_INCLUDE_DIRS} ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
     Qt5::Core
     Qt5::DBus
+    Qt5::Gui
     Qt5::Qml
     Qt5::Quick
     Qt5::QuickControls2
+    Qt5::X11Extras
 
     KF5::ConfigCore
     KF5::ConfigGui

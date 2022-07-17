@@ -9,6 +9,9 @@
 #include <QQuickWindow>
 #include <QOpenGLContext>
 #include <QOpenGLFramebufferObject>
+#include <QX11Info>
+#include <QGuiApplication>
+#include <qpa/qplatformnativeinterface.h>
 
 static void *get_proc_address_mpv(void *ctx, const char *name)
 {
@@ -43,12 +46,15 @@ void MpvRenderer::render()
     mpfbo.h = fbo->height();
     mpfbo.internal_format = 0;
 
+    int flip_y{0};
+
     mpv_render_param params[] = {
         // Specify the default framebuffer (0) as target. This will
         // render onto the entire screen. If you want to show the video
         // in a smaller rectangle or apply fancy transformations, you'll
         // need to render into a separate FBO and draw it manually.
         {MPV_RENDER_PARAM_OPENGL_FBO, &mpfbo},
+        {MPV_RENDER_PARAM_FLIP_Y, &flip_y},
         {MPV_RENDER_PARAM_INVALID, nullptr}
     };
     // See render_gl.h on what OpenGL environment mpv expects, and
@@ -68,9 +74,20 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
 #else
         mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr};
 #endif
+        mpv_render_param display{MPV_RENDER_PARAM_INVALID, nullptr};
+        if(QX11Info::isPlatformX11()) {
+            display.type = MPV_RENDER_PARAM_X11_DISPLAY;
+            display.data = QX11Info::display();
+        }
+        if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+            display.type = MPV_RENDER_PARAM_WL_DISPLAY;
+            display.data = (struct wl_display*)QGuiApplication::platformNativeInterface()
+                    ->nativeResourceForWindow("display", nullptr);
+        }
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
             {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &gl_init_params},
+            display,
             {MPV_RENDER_PARAM_INVALID, nullptr}
         };
 

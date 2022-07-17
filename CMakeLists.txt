@@ -39,6 +39,9 @@ set_package_properties(Qt5Core PROPERTIES TYPE REQUIRED)
 find_package(Qt5DBus)
 set_package_properties(Qt5DBus PROPERTIES TYPE REQUIRED)
 
+find_package(Qt5Gui)
+set_package_properties(Qt5Gui PROPERTIES TYPE REQUIRED)
+
 find_package(Qt5Qml)
 set_package_properties(Qt5Qml PROPERTIES TYPE REQUIRED)
 
@@ -47,6 +50,9 @@ set_package_properties(Qt5Quick PROPERTIES TYPE REQUIRED)
 
 find_package(Qt5QuickControls2)
 set_package_properties(Qt5QuickControls2 PROPERTIES TYPE REQUIRED)
+
+find_package(Qt5X11Extras)
+set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
 
 find_package(Libmpv)
 set_package_properties(Libmpv PROPERTIES TYPE REQUIRED
