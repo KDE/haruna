@@ -129,6 +129,8 @@ SettingsBasePage {
                     checkable: true
                     checked: false
 
+                    Layout.preferredHeight: seekMediumStep.height
+
                     ToolTip {
                         text: i18n("This is also used for mouse wheel seeking, when mouse is over the progress bar")
                         visible: parent.checked
