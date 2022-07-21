@@ -18,6 +18,10 @@ Rectangle {
 
     implicitWidth: Kirigami.Units.gridUnit * 1.5
     implicitHeight: Kirigami.Units.gridUnit * 1.5
+    border.width: 1
+    border.color: ma.containsMouse
+                  ? Kirigami.Theme.highlightColor
+                  : Kirigami.Theme.alternateBackgroundColor
 
     onColorChosen: color = colorPicker.color
 
