@@ -45,7 +45,6 @@ SettingsBasePage {
             onActivated: {
                 PlaylistSettings.position = model.get(index).value
                 PlaylistSettings.save()
-                playList.position = model.get(index).value
             }
         }
 
