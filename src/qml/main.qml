@@ -24,7 +24,7 @@ Kirigami.ApplicationWindow {
 
     property var configure: actionsManager.action("configure")
     property int previousVisibility: Window.Windowed
-    property var appActions: actions.list
+    property alias actions: actions
 
     visible: true
     title: mpv.mediaTitle || i18n("Haruna")
