@@ -6,7 +6,6 @@
 
 #include "application.h"
 
-#include "actionsmanager.h"
 #include "audiosettings.h"
 #include "customcommandsmodel.h"
 #include "generalsettings.h"
@@ -229,9 +228,6 @@ void Application::setupQmlSettingsTypes()
 
 void Application::setupQmlContextProperties()
 {
-    auto  actionsManager = new ActionsManager(this);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("actionsManager"), actionsManager);
-
     std::unique_ptr<LockManager> lockManager = std::make_unique<LockManager>();
     std::unique_ptr<SubtitlesFoldersModel> subsFoldersModel = std::make_unique<SubtitlesFoldersModel>();
 
