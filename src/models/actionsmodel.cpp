@@ -613,6 +613,7 @@ bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
             // user chose reassign, remove shortcut from action holding it
             result->shortcut = "";
             group.writeEntry(result->name, result->shortcut);
+            Q_EMIT shortcutChanged(result->name, result->shortcut);
             Q_EMIT dataChanged(index(i, 0), index(i, 0));
         } else {
             // user chose cancel

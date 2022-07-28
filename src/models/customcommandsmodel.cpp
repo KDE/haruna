@@ -26,6 +26,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
         c->command = configGroup.readEntry("Command", QString());
         c->osdMessage = configGroup.readEntry("OsdMessage", QString());
         c->type = configGroup.readEntry("Type", QString());
+        c->shortcut = actionsModel->getShortcut(c->commandId, QString());
         c->order = configGroup.readEntry("Order", 0);
         c->setOnStartup = configGroup.readEntry("SetOnStartup", true);
         m_customCommands << c;
@@ -34,7 +35,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
             action.name = c->commandId;
             action.text = c->command;
             action.description = c->osdMessage;
-            action.shortcut = actionsModel->getShortcut(action.name, QString());
+            action.shortcut = c->shortcut;
             action.type = QStringLiteral("CustomAction");
             actionsModel->actions().append(action);
         }
@@ -52,6 +53,16 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
             configGroup.writeEntry("Order", i);
             configGroup.sync();
         }
+    });
+
+    connect(actionsModel, &ActionsModel::shortcutChanged, this, [=](const QString &name, const QString &shortcut) {
+        for (int i {0}; i < m_customCommands.count(); ++i) {
+             if (m_customCommands[i]->commandId == name) {
+                 m_customCommands[i]->shortcut = shortcut;
+                 Q_EMIT dataChanged(index(i, 0), index(i, 0));
+                 return;
+             }
+         }
     });
 }
 
@@ -79,6 +90,8 @@ QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
         return QVariant(command->osdMessage);
     case TypeRole:
         return QVariant(command->type);
+    case ShortcutRole:
+        return QVariant(command->shortcut);
     case SetOnStartupRole:
         return QVariant(command->setOnStartup);
     }
@@ -93,6 +106,7 @@ QHash<int, QByteArray> CustomCommandsModel::roleNames() const
     roles[OsdMessageRole] = "osdMessage";
     roles[CommandRole] = "command";
     roles[TypeRole] = "type";
+    roles[ShortcutRole] = "shortcut";
     roles[SetOnStartupRole] = "setOnStartup";
     return roles;
 }

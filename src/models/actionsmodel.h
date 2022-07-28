@@ -66,6 +66,7 @@ public:
     QList<Action> &actions();
 
 Q_SIGNALS:
+    void shortcutChanged(const QString &actionName, const QString &actionShortcut);
     void aboutHarunaAction();
     void audioCycleUpAction();
     void audioCycleDownAction();

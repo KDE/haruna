@@ -28,6 +28,7 @@ class CustomCommandsModel : public QAbstractListModel
         QString commandId;
         QString command;
         QString osdMessage;
+        QString shortcut;
         QString type;
         bool setOnStartup {true};
         int order {-1};
@@ -41,6 +42,7 @@ public:
         CommandRole,
         OsdMessageRole,
         TypeRole,
+        ShortcutRole,
         SetOnStartupRole,
     };
 

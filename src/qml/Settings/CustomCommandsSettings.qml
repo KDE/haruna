@@ -90,18 +90,31 @@ SettingsBasePage {
                 Loader {
                     active: model.type === "shortcut"
                     sourceComponent: KeySequenceItem {
-                        property var oldKeySequence: actionsModel.getShortcut(model.commandId, "")
+                        property var oldKeySequence
+                        property var shortcut: model.shortcut
 
-                        keySequence: actionsModel.getShortcut(model.commandId, "")
                         checkForConflictsAgainst: ShortcutType.None
                         modifierlessAllowed: true
+                        onShortcutChanged: {
+                            keySequence = shortcut
+                            oldKeySequence = shortcut
+                        }
 
                         onCaptureFinished: {
                             if (!actionsModel.saveShortcut(model.commandId, keySequence)) {
                                 keySequence = oldKeySequence
+                            } else {
+                                // the keySequence only changes for the edited command
+                                // if there is a conflict with another command then
+                                // the conflicting command is not update
+                                // check if there is a shortcut conflict and update accordingly
                             }
                         }
-//                        Component.onCompleted: keySequence = oldKeySequence
+                        Component.onCompleted: {
+                            oldKeySequence = model.shortcut
+                            keySequence = model.shortcut
+                        }
+
                     }
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 }
