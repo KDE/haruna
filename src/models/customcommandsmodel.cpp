@@ -127,30 +127,45 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
 
     beginInsertRows(QModelIndex(), rowCount(), rowCount());
     auto configGroup = m_customCommandsConfig->group(groupName);
-    auto p = new Command();
-    p->commandId = groupName;
-    p->command = configGroup.readEntry("Command", QString());
-    p->osdMessage = configGroup.readEntry("OsdMessage", QString()),
-    p->type = configGroup.readEntry("Type", QString());
-    m_customCommands << p;
+    auto c = new Command();
+    c->commandId = groupName;
+    c->command = configGroup.readEntry("Command", QString());
+    c->osdMessage = configGroup.readEntry("OsdMessage", QString()),
+    c->type = configGroup.readEntry("Type", QString());
+    m_customCommands << c;
     endInsertRows();
+
+    if (c->type == QStringLiteral("shortcut")) {
+        auto *actionsModel = qobject_cast<ActionsModel*>(parent());
+        Action action;
+        action.name = c->commandId;
+        action.text = c->command;
+        action.description = c->osdMessage;
+        action.shortcut = actionsModel->getShortcut(action.name, QString());
+        action.type = QStringLiteral("CustomAction");
+        actionsModel->appendCustomAction(action);
+    }
 }
 
 void CustomCommandsModel::editCustomCommand(int row, const QString &command,
                                             const QString &osdMessage, const QString &type)
 {
-    auto customCommand = m_customCommands[row];
-    customCommand->command = command;
-    customCommand->osdMessage = osdMessage;
-    customCommand->type = type;
+    auto c = m_customCommands[row];
+    c->command = command;
+    c->osdMessage = osdMessage;
+    c->type = type;
 
-    QString groupName = customCommand->commandId;
+    QString groupName = c->commandId;
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
     m_customCommandsConfig->sync();
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
+    if (c->type == QStringLiteral("shortcut")) {
+        auto *actionsModel = qobject_cast<ActionsModel*>(parent());
+        actionsModel->editCustomAction(c->commandId, c->command, c->osdMessage);
+    }
 }
 
 void CustomCommandsModel::toggleCustomCommand(const QString &groupName, int row, bool setOnStartup)

@@ -54,6 +54,8 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
+    void appendCustomAction(const Action &action);
+    void editCustomAction(const QString &name, const QString &text, const QString &description);
     Q_INVOKABLE bool saveShortcut(const QString &name, const QVariant &shortcut);
     Q_INVOKABLE bool saveShortcut(int row, const QVariant &shortcut);
     Q_INVOKABLE QString getShortcut(const QString &key, const QKeySequence &defaultValue) const;

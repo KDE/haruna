@@ -557,10 +557,28 @@ QHash<int, QByteArray> ActionsModel::roleNames() const
     return roles;
 }
 
+void ActionsModel::appendCustomAction(const Action &action)
+{
+    beginInsertRows(QModelIndex(), rowCount(), rowCount());
+    m_actions.append(action);
+    endInsertRows();
+}
+
+void ActionsModel::editCustomAction(const QString &name, const QString &text, const QString &description)
+{
+    for (int i {0}; i < m_actions.count(); ++i) {
+         if (m_actions[i].name == name) {
+             m_actions[i].text = text;
+             m_actions[i].description = description;
+             Q_EMIT dataChanged(index(i, 0), index(i, 0));
+             return;
+         }
+     }
+}
+
 bool ActionsModel::saveShortcut(const QString &name, const QVariant &shortcut)
 {
-    int i {0};
-    for (; i < m_actions.count(); ++i) {
+    for (int i {0}; i < m_actions.count(); ++i) {
         if (m_actions[i].name == name) {
             return saveShortcut(i, shortcut);
         }

@@ -68,6 +68,7 @@ SettingsBasePage {
 
         Label {
             text: i18n("Type")
+            visible: root.mode === EditCustomCommand.Mode.Create
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
         }
 
@@ -81,6 +82,7 @@ SettingsBasePage {
             id: typeGroupItems
 
             spacing: Kirigami.Units.largeSpacing
+            visible: root.mode === EditCustomCommand.Mode.Create
 
             RadioButton {
                 property string optionName: "shortcut"
@@ -136,11 +138,7 @@ SettingsBasePage {
                     if (commandTextField.text === "") {
                         return
                     }
-                    if (typeGroup.checkedButton.optionName === "shortcut") {
-                        // creates action and adds it to the action collection
-                        // so that its shortcut can be set by the user
-                        actionsManager.createUserAction(commandTextField.text)
-                    } else {
+                    if (typeGroup.checkedButton.optionName === "startup") {
                         // execute the user command
                         mpv.userCommand(commandTextField.text)
                     }
