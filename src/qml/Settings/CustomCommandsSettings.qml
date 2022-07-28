@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kquickcontrols 2.0
 import org.kde.haruna 1.0
 import Haruna.Components 1.0
 
@@ -88,11 +89,19 @@ SettingsBasePage {
 
                 Loader {
                     active: model.type === "shortcut"
-                    sourceComponent: Button {
-                        property var qaction: actionsManager.action(model.commandId)
-                        text: qaction.shortcutName || i18n("None")
-                        icon.name: "configure"
-                        onClicked: actionsManager.configureShortcuts(model.command)
+                    sourceComponent: KeySequenceItem {
+                        property var oldKeySequence: actionsModel.getShortcut(model.commandId, "")
+
+                        keySequence: actionsModel.getShortcut(model.commandId, "")
+                        checkForConflictsAgainst: ShortcutType.None
+                        modifierlessAllowed: true
+
+                        onCaptureFinished: {
+                            if (!actionsModel.saveShortcut(model.commandId, keySequence)) {
+                                keySequence = oldKeySequence
+                            }
+                        }
+//                        Component.onCompleted: keySequence = oldKeySequence
                     }
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 }

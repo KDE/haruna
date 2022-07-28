@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include "actionsmodel.h"
 #include "customcommandsmodel.h"
 
 #include <KConfigGroup>
@@ -16,6 +17,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
     m_customCommandsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customCommandsConfig->groupList();
 
+    auto *actionsModel = qobject_cast<ActionsModel*>(parent);
     beginInsertRows(QModelIndex(), 0, groups.size());
     for (const QString &groupName : qAsConst((groups))) {
         auto configGroup = m_customCommandsConfig->group(groupName);
@@ -27,6 +29,15 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
         c->order = configGroup.readEntry("Order", 0);
         c->setOnStartup = configGroup.readEntry("SetOnStartup", true);
         m_customCommands << c;
+        if (c->type == QStringLiteral("shortcut")) {
+            Action action;
+            action.name = c->commandId;
+            action.text = c->command;
+            action.description = c->osdMessage;
+            action.shortcut = actionsModel->getShortcut(action.name, QString());
+            action.type = QStringLiteral("CustomAction");
+            actionsModel->actions().append(action);
+        }
     }
 
     std::sort(m_customCommands.begin(), m_customCommands.end(), [=](Command *c1, Command *c2) {

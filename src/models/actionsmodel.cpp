@@ -537,6 +537,8 @@ QVariant ActionsModel::data(const QModelIndex &index, int role) const
         return QVariant(action.defaultShortcut);
     case DescriptionRole:
         return QVariant(action.description);
+    case TypeRole:
+        return QVariant(action.type);
     }
 
     return QVariant();
@@ -551,7 +553,19 @@ QHash<int, QByteArray> ActionsModel::roleNames() const
     roles[ShortcutRole] = "shortcut";
     roles[DefaultShortcutRole] = "defaultShortcut";
     roles[DescriptionRole] = "description";
+    roles[TypeRole] = "type";
     return roles;
+}
+
+bool ActionsModel::saveShortcut(const QString &name, const QVariant &shortcut)
+{
+    int i {0};
+    for (; i < m_actions.count(); ++i) {
+        if (m_actions[i].name == name) {
+            return saveShortcut(i, shortcut);
+        }
+    }
+    return false;
 }
 
 bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
@@ -619,6 +633,11 @@ bool ActionsModel::keyConflictMessageBox(const QString &actionText)
     return false;
 }
 
+QList<Action> &ActionsModel::actions()
+{
+    return m_actions;
+}
+
 void ActionsModel::signalEmitter(const QString &actionName)
 {
     QMetaObject::invokeMethod(this, actionName.toUtf8());
@@ -628,7 +647,7 @@ ProxyActionsModel::ProxyActionsModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setDynamicSortFilter(true);
-    setFilterRole(ActionsModel::TextRole);
+    setFilterRole(ActionsModel::TypeRole);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
 }
 

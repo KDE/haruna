@@ -22,6 +22,7 @@ struct Action {
     QString shortcut;
     QKeySequence defaultShortcut;
     QString description;
+    QString type = QStringLiteral("NormalAction");
 };
 
 class ProxyActionsModel : public QSortFilterProxyModel
@@ -47,16 +48,20 @@ public:
         ShortcutRole,
         DefaultShortcutRole,
         DescriptionRole,
+        TypeRole,
     };
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
+    Q_INVOKABLE bool saveShortcut(const QString &name, const QVariant &shortcut);
     Q_INVOKABLE bool saveShortcut(int row, const QVariant &shortcut);
-
+    Q_INVOKABLE QString getShortcut(const QString &key, const QKeySequence &defaultValue) const;
     Q_INVOKABLE void signalEmitter(const QString &actionName);
 
     QQmlPropertyMap propertyMap;
+
+    QList<Action> &actions();
 
 Q_SIGNALS:
     void aboutHarunaAction();
@@ -131,7 +136,6 @@ Q_SIGNALS:
     void saturationResetAction();
 
 private:
-    QString getShortcut(const QString &key, const QKeySequence &defaultValue) const;
     bool keyConflictMessageBox(const QString &actionText);
     KSharedConfig::Ptr m_config;
     QList<Action>  m_actions;

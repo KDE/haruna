@@ -22,7 +22,6 @@ import "Settings"
 Kirigami.ApplicationWindow {
     id: window
 
-    property var configure: actionsManager.action("configure")
     property int previousVisibility: Window.Windowed
 
     visible: true
@@ -126,19 +125,6 @@ Kirigami.ApplicationWindow {
     Footer { id: footer }
 
     Actions {}
-
-    Instantiator {
-        model: proxyCustomCommandsModel
-        delegate: Action {
-            property var qaction: actionsManager.action(model.commandId)
-            text: qaction.text
-            shortcut: qaction.shortcutName
-            onTriggered: {
-                mpv.userCommand(model.command)
-                osd.message(mpv.command(["expand-text", model.osdMessage]))
-            }
-        }
-    }
 
     RowLayout {
         width: window.width * 0.8 > Kirigami.Units.gridUnit * 50

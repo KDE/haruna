@@ -11,6 +11,7 @@
 #include <QSortFilterProxyModel>
 #include <KSharedConfig>
 
+class ActionsModel;
 class ProxyCustomCommandsModel : public QSortFilterProxyModel
 {
     Q_OBJECT

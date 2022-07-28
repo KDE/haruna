@@ -22,7 +22,15 @@ Item {
             text: model.text
             shortcut: model.shortcut
             icon.name: model.icon
-            onTriggered: actionsModel.signalEmitter(objectName)
+            onTriggered: {
+                if (model.type === "NormalAction") {
+                    actionsModel.signalEmitter(objectName)
+                }
+                if (model.type === "CustomAction") {
+                    mpv.userCommand(model.text)
+                    osd.message(mpv.command(["expand-text", model.description]))
+                }
+            }
 
             Component.onCompleted: actions[objectName] = this
         }
