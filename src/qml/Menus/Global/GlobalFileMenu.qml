@@ -16,15 +16,21 @@ Labs.Menu {
     title: i18n("&File")
 
     Labs.MenuItem {
-        icon.name: actions.openAction.icon.name
-        text: actions.openAction.text
-        onTriggered: actions.openAction.trigger()
+        icon.name: appActions.openFileAction.icon.name
+        text: appActions.openFileAction.text
+        onTriggered: appActions.openFileAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.openUrlAction.icon.name
-        text: actions.openUrlAction.text
-        onTriggered: actions.openUrlAction.trigger()
+        icon.name: appActions.openUrlAction.icon.name
+        text: appActions.openUrlAction.text
+        onTriggered: appActions.openUrlAction.trigger()
+    }
+
+    Labs.MenuItem {
+        icon.name: appActions.loadLastPlayedFileAction.icon.name
+        text: appActions.loadLastPlayedFileAction.text
+        onTriggered: appActions.loadLastPlayedFileAction.trigger()
     }
 
     Labs.Menu {
@@ -50,8 +56,8 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: actions.quitApplicationAction.icon.name
-        text: actions.quitApplicationAction.text
-        onTriggered: actions.quitApplicationAction.trigger()
+        icon.name: appActions.quitApplicationAction.icon.name
+        text: appActions.quitApplicationAction.text
+        onTriggered: appActions.quitApplicationAction.trigger()
     }
 }

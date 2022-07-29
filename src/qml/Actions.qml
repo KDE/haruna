@@ -32,7 +32,7 @@ Item {
                 }
             }
 
-            Component.onCompleted: actions[objectName] = this
+            Component.onCompleted: appActions[objectName] = this
         }
     }
 

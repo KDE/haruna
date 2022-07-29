@@ -12,5 +12,5 @@ Menu {
 
     title: i18n("&Help")
 
-    MenuItem { action: actions.aboutHarunaAction }
+    MenuItem { action: appActions.aboutHarunaAction }
 }

@@ -246,7 +246,7 @@ void Application::setupQmlContextProperties()
 
     auto actionsModel = new ActionsModel();
     m_engine->rootContext()->setContextProperty(QStringLiteral("actionsModel"), actionsModel);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("actions"), &actionsModel->propertyMap);
+    m_engine->rootContext()->setContextProperty(QStringLiteral("appActions"), &actionsModel->propertyMap);
     auto proxyActionsModel = new ProxyActionsModel();
     proxyActionsModel->setSourceModel(actionsModel);
     m_engine->rootContext()->setContextProperty(QStringLiteral("proxyActionsModel"), proxyActionsModel);

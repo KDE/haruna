@@ -14,130 +14,130 @@ Labs.Menu {
     title: i18n("&Video")
 
     Labs.MenuItem {
-        icon.name: actions.toggleDeinterlacingAction.icon.name
-        text: actions.toggleDeinterlacingAction.text
-        onTriggered: actions.toggleDeinterlacingAction.trigger()
+        icon.name: appActions.toggleDeinterlacingAction.icon.name
+        text: appActions.toggleDeinterlacingAction.text
+        onTriggered: appActions.toggleDeinterlacingAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.zoomInAction.icon.name
-        text: actions.zoomInAction.text
-        onTriggered: actions.zoomInAction.trigger()
+        icon.name: appActions.zoomInAction.icon.name
+        text: appActions.zoomInAction.text
+        onTriggered: appActions.zoomInAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.zoomOutAction.icon.name
-        text: actions.zoomOutAction.text
-        onTriggered: actions.zoomOutAction.trigger()
+        icon.name: appActions.zoomOutAction.icon.name
+        text: appActions.zoomOutAction.text
+        onTriggered: appActions.zoomOutAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.zoomResetAction.icon.name
-        text: actions.zoomResetAction.text
-        onTriggered: actions.zoomResetAction.trigger()
+        icon.name: appActions.zoomResetAction.icon.name
+        text: appActions.zoomResetAction.text
+        onTriggered: appActions.zoomResetAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.screenshotAction.icon.name
-        text: actions.screenshotAction.text
-        onTriggered: actions.screenshotAction.trigger()
+        icon.name: appActions.screenshotAction.icon.name
+        text: appActions.screenshotAction.text
+        onTriggered: appActions.screenshotAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.videoPanXLeftAction.icon.name
-        text: actions.videoPanXLeftAction.text
-        onTriggered: actions.videoPanXLeftAction.trigger()
+        icon.name: appActions.videoPanXLeftAction.icon.name
+        text: appActions.videoPanXLeftAction.text
+        onTriggered: appActions.videoPanXLeftAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.videoPanXRightAction.icon.name
-        text: actions.videoPanXRightAction.text
-        onTriggered: actions.videoPanXRightAction.trigger()
+        icon.name: appActions.videoPanXRightAction.icon.name
+        text: appActions.videoPanXRightAction.text
+        onTriggered: appActions.videoPanXRightAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.videoPanYUpAction.icon.name
-        text: actions.videoPanYUpAction.text
-        onTriggered: actions.videoPanYUpAction.trigger()
+        icon.name: appActions.videoPanYUpAction.icon.name
+        text: appActions.videoPanYUpAction.text
+        onTriggered: appActions.videoPanYUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.videoPanYDownAction.icon.name
-        text: actions.videoPanYDownAction.text
-        onTriggered: actions.videoPanYDownAction.trigger()
+        icon.name: appActions.videoPanYDownAction.icon.name
+        text: appActions.videoPanYDownAction.text
+        onTriggered: appActions.videoPanYDownAction.trigger()
     }
 
     Labs.Menu {
         title: i18n("Adjustments")
 
         Labs.MenuItem {
-            icon.name: actions.contrastUpAction.icon.name
-            text: actions.contrastUpAction.text
-            onTriggered: actions.contrastUpAction.trigger()
+            icon.name: appActions.contrastUpAction.icon.name
+            text: appActions.contrastUpAction.text
+            onTriggered: appActions.contrastUpAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.contrastDownAction.icon.name
-            text: actions.contrastDownAction.text
-            onTriggered: actions.contrastDownAction.trigger()
+            icon.name: appActions.contrastDownAction.icon.name
+            text: appActions.contrastDownAction.text
+            onTriggered: appActions.contrastDownAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.contrastResetAction.icon.name
-            text: actions.contrastResetAction.text
-            onTriggered: actions.contrastResetAction.trigger()
+            icon.name: appActions.contrastResetAction.icon.name
+            text: appActions.contrastResetAction.text
+            onTriggered: appActions.contrastResetAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.brightnessUpAction.icon.name
-            text: actions.brightnessUpAction.text
-            onTriggered: actions.brightnessUpAction.trigger()
+            icon.name: appActions.brightnessUpAction.icon.name
+            text: appActions.brightnessUpAction.text
+            onTriggered: appActions.brightnessUpAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.brightnessDownAction.icon.name
-            text: actions.brightnessDownAction.text
-            onTriggered: actions.brightnessDownAction.trigger()
+            icon.name: appActions.brightnessDownAction.icon.name
+            text: appActions.brightnessDownAction.text
+            onTriggered: appActions.brightnessDownAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.brightnessResetAction.icon.name
-            text: actions.brightnessResetAction.text
-            onTriggered: actions.brightnessResetAction.trigger()
+            icon.name: appActions.brightnessResetAction.icon.name
+            text: appActions.brightnessResetAction.text
+            onTriggered: appActions.brightnessResetAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.gammaUpAction.icon.name
-            text: actions.gammaUpAction.text
-            onTriggered: actions.gammaUpAction.trigger()
+            icon.name: appActions.gammaUpAction.icon.name
+            text: appActions.gammaUpAction.text
+            onTriggered: appActions.gammaUpAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.gammaDownAction.icon.name
-            text: actions.gammaDownAction.text
-            onTriggered: actions.gammaDownAction.trigger()
+            icon.name: appActions.gammaDownAction.icon.name
+            text: appActions.gammaDownAction.text
+            onTriggered: appActions.gammaDownAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.gammaResetAction.icon.name
-            text: actions.gammaResetAction.text
-            onTriggered: actions.gammaResetAction.trigger()
+            icon.name: appActions.gammaResetAction.icon.name
+            text: appActions.gammaResetAction.text
+            onTriggered: appActions.gammaResetAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.saturationUpAction.icon.name
-            text: actions.saturationUpAction.text
-            onTriggered: actions.saturationUpAction.trigger()
+            icon.name: appActions.saturationUpAction.icon.name
+            text: appActions.saturationUpAction.text
+            onTriggered: appActions.saturationUpAction.trigger()
         }
         Labs.MenuItem {
-            icon.name: actions.saturationDownAction.icon.name
-            text: actions.saturationDownAction.text
-            onTriggered: actions.saturationDownAction.trigger()
+            icon.name: appActions.saturationDownAction.icon.name
+            text: appActions.saturationDownAction.text
+            onTriggered: appActions.saturationDownAction.trigger()
         }
         Labs.MenuItem {
-            icon.name: actions.saturationResetAction.icon.name
-            text: actions.saturationResetAction.text
-            onTriggered: actions.saturationResetAction.trigger()
+            icon.name: appActions.saturationResetAction.icon.name
+            text: appActions.saturationResetAction.text
+            onTriggered: appActions.saturationResetAction.trigger()
         }
     }
 }

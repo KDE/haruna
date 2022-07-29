@@ -12,20 +12,20 @@ import org.kde.haruna 1.0
 Menu {
     id: root
 
-    MenuItem { action: actions.playPauseAction }
-    MenuItem { action: actions.playNextAction }
-    MenuItem { action: actions.playPreviousAction }
+    MenuItem { action: appActions.playPauseAction }
+    MenuItem { action: appActions.playNextAction }
+    MenuItem { action: appActions.playPreviousAction }
     Menu {
         title: i18n("Playback speed")
-        MenuItem { action: actions.increasePlayBackSpeedAction }
-        MenuItem { action: actions.decreasePlayBackSpeedAction }
-        MenuItem { action: actions.resetPlayBackSpeedAction }
+        MenuItem { action: appActions.increasePlayBackSpeedAction }
+        MenuItem { action: appActions.decreasePlayBackSpeedAction }
+        MenuItem { action: appActions.resetPlayBackSpeedAction }
     }
 
     MenuSeparator {}
 
-    MenuItem { action: actions.openAction }
-    MenuItem { action: actions.openUrlAction }
+    MenuItem { action: appActions.openAction }
+    MenuItem { action: appActions.openUrlAction }
 
     MenuSeparator {}
 
@@ -35,5 +35,5 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: actions.configureAction }
+    MenuItem { action: appActions.configureAction }
 }

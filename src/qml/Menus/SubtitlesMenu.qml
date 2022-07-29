@@ -57,13 +57,13 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: actions.subtitleIncreaseFontSizeAction }
-    MenuItem { action: actions.subtitleDecreaseFontSizeAction }
-    MenuItem { action: actions.subtitleMoveUpAction }
-    MenuItem { action: actions.subtitleMoveDownAction }
-    MenuItem { action: actions.subtitleQuickenAction }
-    MenuItem { action: actions.subtitleDelayAction }
-    MenuItem { action: actions.subtitleToggleAction }
-    MenuItem { action: actions.subtitleCycleUpAction }
-    MenuItem { action: actions.subtitleCycleDownAction }
+    MenuItem { action: appActions.subtitleIncreaseFontSizeAction }
+    MenuItem { action: appActions.subtitleDecreaseFontSizeAction }
+    MenuItem { action: appActions.subtitleMoveUpAction }
+    MenuItem { action: appActions.subtitleMoveDownAction }
+    MenuItem { action: appActions.subtitleQuickenAction }
+    MenuItem { action: appActions.subtitleDelayAction }
+    MenuItem { action: appActions.subtitleToggleAction }
+    MenuItem { action: appActions.subtitleCycleUpAction }
+    MenuItem { action: appActions.subtitleCycleDownAction }
 }

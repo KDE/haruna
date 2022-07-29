@@ -14,47 +14,53 @@ Labs.Menu {
     title: i18n("&Playback")
 
     Labs.MenuItem {
-        icon.name: actions.playPauseAction.icon.name
-        text: actions.playPauseAction.text
-        onTriggered: actions.playPauseAction.trigger()
+        icon.name: appActions.playPauseAction.icon.name
+        text: appActions.playPauseAction.text
+        onTriggered: appActions.playPauseAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.playNextAction.icon.name
-        text: actions.playNextAction.text
-        onTriggered: actions.playNextAction.trigger()
+        icon.name: appActions.playNextAction.icon.name
+        text: appActions.playNextAction.text
+        onTriggered: appActions.playNextAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.playPreviousAction.icon.name
-        text: actions.playPreviousAction.text
-        onTriggered: actions.playPreviousAction.trigger()
+        icon.name: appActions.playPreviousAction.icon.name
+        text: appActions.playPreviousAction.text
+        onTriggered: appActions.playPreviousAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.setLoopAction.icon.name
-        text: actions.setLoopAction.text
-        onTriggered: actions.setLoopAction.trigger()
+        icon.name: appActions.restartPlaybackAction.icon.name
+        text: appActions.restartPlaybackAction.text
+        onTriggered: appActions.restartPlaybackAction.trigger()
+    }
+
+    Labs.MenuItem {
+        icon.name: appActions.setLoopAction.icon.name
+        text: appActions.setLoopAction.text
+        onTriggered: appActions.setLoopAction.trigger()
     }
 
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: actions.increasePlayBackSpeedAction.icon.name
-        text: actions.increasePlayBackSpeedAction.text
-        onTriggered: actions.increasePlayBackSpeedAction.trigger()
+        icon.name: appActions.playbackSpeedIncreaseAction.icon.name
+        text: appActions.playbackSpeedIncreaseAction.text
+        onTriggered: appActions.playbackSpeedIncreaseAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.decreasePlayBackSpeedAction.icon.name
-        text: actions.decreasePlayBackSpeedAction.text
-        onTriggered: actions.decreasePlayBackSpeedAction.trigger()
+        icon.name: appActions.playbackSpeedDecreaseAction.icon.name
+        text: appActions.playbackSpeedDecreaseAction.text
+        onTriggered: appActions.playbackSpeedDecreaseAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.resetPlayBackSpeedAction.icon.name
-        text: actions.resetPlayBackSpeedAction.text
-        onTriggered: actions.resetPlayBackSpeedAction.trigger()
+        icon.name: appActions.playbackSpeedResetAction.icon.name
+        text: appActions.playbackSpeedResetAction.text
+        onTriggered: appActions.playbackSpeedResetAction.trigger()
     }
 
     Labs.MenuSeparator {}
@@ -62,84 +68,90 @@ Labs.Menu {
     Labs.Menu {
         title: i18n("Seek")
         Labs.MenuItem {
-            icon.name: actions.seekForwardSmallAction.icon.name
-            text: actions.seekForwardSmallAction.text
-            onTriggered: actions.seekForwardSmallAction.trigger()
+            icon.name: appActions.seekForwardSmallAction.icon.name
+            text: appActions.seekForwardSmallAction.text
+            onTriggered: appActions.seekForwardSmallAction.trigger()
         }
         Labs.MenuItem {
-            icon.name: actions.seekBackwardSmallAction.icon.name
-            text: actions.seekBackwardSmallAction.text
-            onTriggered: actions.seekBackwardSmallAction.trigger()
-        }
-
-        Labs.MenuSeparator {}
-
-        Labs.MenuItem {
-            icon.name: actions.seekForwardMediumAction.icon.name
-            text: actions.seekForwardMediumAction.text
-            onTriggered: actions.seekForwardMediumAction.trigger()
-        }
-
-        Labs.MenuItem {
-            icon.name: actions.seekBackwardMediumAction.icon.name
-            text: actions.seekBackwardMediumAction.text
-            onTriggered: actions.seekBackwardMediumAction.trigger()
+            icon.name: appActions.seekBackwardSmallAction.icon.name
+            text: appActions.seekBackwardSmallAction.text
+            onTriggered: appActions.seekBackwardSmallAction.trigger()
         }
 
         Labs.MenuSeparator {}
 
         Labs.MenuItem {
-            icon.name: actions.seekForwardBigAction.icon.name
-            text: actions.seekForwardBigAction.text
-            onTriggered: actions.seekForwardBigAction.trigger()
+            icon.name: appActions.seekForwardMediumAction.icon.name
+            text: appActions.seekForwardMediumAction.text
+            onTriggered: appActions.seekForwardMediumAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.seekBackwardBigAction.icon.name
-            text: actions.seekBackwardBigAction.text
-            onTriggered: actions.seekBackwardBigAction.trigger()
-        }
-
-        Labs.MenuSeparator {}
-
-        Labs.MenuItem {
-            icon.name: actions.seekNextSubtitleAction.icon.name
-            text: actions.seekNextSubtitleAction.text
-            onTriggered: actions.seekNextSubtitleAction.trigger()
-        }
-
-        Labs.MenuItem {
-            icon.name: actions.seekPrevSubtitleAction.icon.name
-            text: actions.seekPrevSubtitleAction.text
-            onTriggered: actions.seekPrevSubtitleAction.trigger()
+            icon.name: appActions.seekBackwardMediumAction.icon.name
+            text: appActions.seekBackwardMediumAction.text
+            onTriggered: appActions.seekBackwardMediumAction.trigger()
         }
 
         Labs.MenuSeparator {}
 
         Labs.MenuItem {
-            icon.name: actions.seekPreviousChapterAction.icon.name
-            text: actions.seekPreviousChapterAction.text
-            onTriggered: actions.seekPreviousChapterAction.trigger()
+            icon.name: appActions.seekForwardBigAction.icon.name
+            text: appActions.seekForwardBigAction.text
+            onTriggered: appActions.seekForwardBigAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.seekNextChapterAction.icon.name
-            text: actions.seekNextChapterAction.text
-            onTriggered: actions.seekNextChapterAction.trigger()
+            icon.name: appActions.seekBackwardBigAction.icon.name
+            text: appActions.seekBackwardBigAction.text
+            onTriggered: appActions.seekBackwardBigAction.trigger()
         }
 
         Labs.MenuSeparator {}
 
         Labs.MenuItem {
-            icon.name: actions.frameStepAction.icon.name
-            text: actions.frameStepAction.text
-            onTriggered: actions.frameStepAction.trigger()
+            icon.name: appActions.seekNextSubtitleAction.icon.name
+            text: appActions.seekNextSubtitleAction.text
+            onTriggered: appActions.seekNextSubtitleAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: actions.frameBackStepAction.icon.name
-            text: actions.frameBackStepAction.text
-            onTriggered: actions.frameBackStepAction.trigger()
+            icon.name: appActions.seekPrevSubtitleAction.icon.name
+            text: appActions.seekPrevSubtitleAction.text
+            onTriggered: appActions.seekPrevSubtitleAction.trigger()
+        }
+
+        Labs.MenuSeparator {}
+
+        Labs.MenuItem {
+            icon.name: appActions.seekNextChapterAction.icon.name
+            text: appActions.seekNextChapterAction.text
+            onTriggered: appActions.seekNextChapterAction.trigger()
+        }
+
+        Labs.MenuItem {
+            icon.name: appActions.seekPreviousChapterAction.icon.name
+            text: appActions.seekPreviousChapterAction.text
+            onTriggered: appActions.seekPreviousChapterAction.trigger()
+        }
+
+        Labs.MenuSeparator {}
+
+        Labs.MenuItem {
+            icon.name: appActions.frameStepForwardAction.icon.name
+            text: appActions.frameStepForwardAction.text
+            onTriggered: appActions.frameStepForwardAction.trigger()
+        }
+
+        Labs.MenuItem {
+            icon.name: appActions.frameStepBackwardAction.icon.name
+            text: appActions.frameStepBackwardAction.text
+            onTriggered: appActions.frameStepBackwardAction.trigger()
+        }
+
+        Labs.MenuItem {
+            icon.name: appActions.seekToWatchLaterPositionAction.icon.name
+            text: appActions.seekToWatchLaterPositionAction.text
+            onTriggered: appActions.seekToWatchLaterPositionAction.trigger()
         }
     }
 }

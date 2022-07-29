@@ -43,32 +43,32 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: actions.muteAction.icon.name
-        text: actions.muteAction.text
-        onTriggered: actions.muteAction.trigger()
+        icon.name: appActions.muteAction.icon.name
+        text: appActions.muteAction.text
+        onTriggered: appActions.muteAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.volumeUpAction.icon.name
-        text: actions.volumeUpAction.text
-        onTriggered: actions.volumeUpAction.trigger()
+        icon.name: appActions.volumeUpAction.icon.name
+        text: appActions.volumeUpAction.text
+        onTriggered: appActions.volumeUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.volumeDownAction.icon.name
-        text: actions.volumeDownAction.text
-        onTriggered: actions.volumeDownAction.trigger()
+        icon.name: appActions.volumeDownAction.icon.name
+        text: appActions.volumeDownAction.text
+        onTriggered: appActions.volumeDownAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.audioCycleUpAction.icon.name
-        text: actions.audioCycleUpAction.text
-        onTriggered: actions.audioCycleUpAction.trigger()
+        icon.name: appActions.audioCycleUpAction.icon.name
+        text: appActions.audioCycleUpAction.text
+        onTriggered: appActions.audioCycleUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.audioCycleDownAction.icon.name
-        text: actions.audioCycleDownAction.text
-        onTriggered: actions.audioCycleDownAction.trigger()
+        icon.name: appActions.audioCycleDownAction.icon.name
+        text: appActions.audioCycleDownAction.text
+        onTriggered: appActions.audioCycleDownAction.trigger()
     }
 }

@@ -37,12 +37,12 @@ ToolBar {
         }
 
         ToolButton {
-            action: actions.openFileAction
+            action: appActions.openFileAction
             focusPolicy: Qt.NoFocus
         }
 
         ToolButton {
-            action: actions.openUrlAction
+            action: appActions.openUrlAction
             focusPolicy: Qt.NoFocus
             MouseArea {
                 anchors.fill: parent
@@ -137,7 +137,7 @@ ToolBar {
         }
 
         ToolButton {
-            action: actions["configureAction"]
+            action: appActions.configureAction
             focusPolicy: Qt.NoFocus
         }
     }

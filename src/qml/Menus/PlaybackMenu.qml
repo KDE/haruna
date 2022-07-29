@@ -12,50 +12,50 @@ Menu {
 
     title: i18n("&Playback")
 
-    MenuItem { action: actions.playPauseAction }
-    MenuItem { action: actions.playNextAction }
-    MenuItem { action: actions.playPreviousAction }
+    MenuItem { action: appActions.playPauseAction }
+    MenuItem { action: appActions.playNextAction }
+    MenuItem { action: appActions.playPreviousAction }
 
-    MenuItem { action: actions.restartPlaybackAction }
-    MenuItem { action: actions.setLoopAction }
+    MenuItem { action: appActions.restartPlaybackAction }
+    MenuItem { action: appActions.setLoopAction }
 
     MenuSeparator {}
 
-    MenuItem { action: actions.playbackSpeedIncreaseAction }
-    MenuItem { action: actions.playbackSpeedDecreaseAction }
-    MenuItem { action: actions.playbackSpeedResetAction }
+    MenuItem { action: appActions.playbackSpeedIncreaseAction }
+    MenuItem { action: appActions.playbackSpeedDecreaseAction }
+    MenuItem { action: appActions.playbackSpeedResetAction }
 
     MenuSeparator {}
 
     Menu {
         title: i18n("Seek")
-        MenuItem { action: actions.seekForwardSmallAction }
-        MenuItem { action: actions.seekBackwardSmallAction }
+        MenuItem { action: appActions.seekForwardSmallAction }
+        MenuItem { action: appActions.seekBackwardSmallAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions.seekForwardMediumAction }
-        MenuItem { action: actions.seekBackwardMediumAction }
+        MenuItem { action: appActions.seekForwardMediumAction }
+        MenuItem { action: appActions.seekBackwardMediumAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions.seekForwardBigAction }
-        MenuItem { action: actions.seekBackwardBigAction }
+        MenuItem { action: appActions.seekForwardBigAction }
+        MenuItem { action: appActions.seekBackwardBigAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions.seekNextSubtitleAction }
-        MenuItem { action: actions.seekPreviousSubtitleAction }
+        MenuItem { action: appActions.seekNextSubtitleAction }
+        MenuItem { action: appActions.seekPreviousSubtitleAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions.seekPreviousChapterAction }
-        MenuItem { action: actions.seekNextChapterAction }
+        MenuItem { action: appActions.seekNextChapterAction }
+        MenuItem { action: appActions.seekPreviousChapterAction }
 
         MenuSeparator {}
 
-        MenuItem { action: actions.frameStepForwardAction }
-        MenuItem { action: actions.frameStepBackwardAction }
-        MenuItem { action: actions.seekToWatchLaterPositionAction }
+        MenuItem { action: appActions.frameStepForwardAction }
+        MenuItem { action: appActions.frameStepBackwardAction }
+        MenuItem { action: appActions.seekToWatchLaterPositionAction }
     }
 }

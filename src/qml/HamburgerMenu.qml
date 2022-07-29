@@ -39,11 +39,11 @@ ToolButton {
         closePolicy: Popup.CloseOnReleaseOutsideParent
 
         MenuItem {
-            action: actions.openFileAction
+            action: appActions.openFileAction
             visible: root.position === HamburgerMenu.Position.Footer
         }
         MenuItem {
-            action: actions.openUrlAction
+            action: appActions.openUrlAction
             visible: root.position === HamburgerMenu.Position.Footer
         }
 
@@ -61,18 +61,18 @@ ToolButton {
 
         MenuSeparator {}
 
-        MenuItem { action: actions.toggleFullscreenAction }
-        MenuItem { action: actions.toggleDeinterlacingAction }
-        MenuItem { action: actions.screenshotAction }
+        MenuItem { action: appActions.toggleFullscreenAction }
+        MenuItem { action: appActions.toggleDeinterlacingAction }
+        MenuItem { action: appActions.screenshotAction }
 
         MenuSeparator {}
 
         MenuItem {
-            action: actions.configureAction
+            action: appActions.configureAction
             visible: root.position === HamburgerMenu.Position.Footer
         }
-        MenuItem { action: actions.configureShortcutsAction }
-        MenuItem { action: actions.aboutHarunaAction }
+        MenuItem { action: appActions.configureShortcutsAction }
+        MenuItem { action: appActions.aboutHarunaAction }
 
         MenuSeparator {}
 

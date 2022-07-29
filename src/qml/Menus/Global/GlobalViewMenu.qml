@@ -14,20 +14,20 @@ Labs.Menu {
     title: i18n("&View")
 
     Labs.MenuItem {
-        icon.name: actions.toggleFullscreenAction.icon.name
-        text: actions.toggleFullscreenAction.text
-        onTriggered: actions.toggleFullscreenAction.trigger()
+        icon.name: appActions.toggleFullscreenAction.icon.name
+        text: appActions.toggleFullscreenAction.text
+        onTriggered: appActions.toggleFullscreenAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.toggleMenuBarAction.icon.name
+        icon.name: appActions.toggleMenuBarAction.icon.name
         text: menuBar.visible ? i18n("Hide Menubar") : i18n("Show Menubar")
-        onTriggered: actions.toggleMenuBarAction.trigger()
+        onTriggered: appActions.toggleMenuBarAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.toggleHeaderAction.icon.name
+        icon.name: appActions.toggleHeaderAction.icon.name
         text: header.visible ? i18n("Hide Toolbar") : i18n("Show Toolbar")
-        onTriggered: actions.toggleHeaderAction.trigger()
+        onTriggered: appActions.toggleHeaderAction.trigger()
     }
 }

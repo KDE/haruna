@@ -41,9 +41,9 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: actions.muteAction }
-    MenuItem { action: actions.volumeUpAction }
-    MenuItem { action: actions.volumeDownAction }
-    MenuItem { action: actions.audioCycleUpAction }
-    MenuItem { action: actions.audioCycleDownAction }
+    MenuItem { action: appActions.muteAction }
+    MenuItem { action: appActions.volumeUpAction }
+    MenuItem { action: appActions.volumeDownAction }
+    MenuItem { action: appActions.audioCycleUpAction }
+    MenuItem { action: appActions.audioCycleDownAction }
 }

@@ -14,8 +14,8 @@ Labs.Menu {
     title: i18n("&Help")
 
     Labs.MenuItem {
-        icon.name: actions.aboutHarunaAction.icon.name
-        text: actions.aboutHarunaAction.text
-        onTriggered: actions.aboutHarunaAction.trigger()
+        icon.name: appActions.aboutHarunaAction.icon.name
+        text: appActions.aboutHarunaAction.text
+        onTriggered: appActions.aboutHarunaAction.trigger()
     }
 }

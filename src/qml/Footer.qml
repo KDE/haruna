@@ -33,7 +33,7 @@ ToolBar {
         id: togglePlaylistButton
 
         ToolButton {
-            action: actions.togglePlaylistAction
+            action: appActions.togglePlaylistAction
         }
     }
 
@@ -56,7 +56,7 @@ ToolBar {
 
         ToolButton {
             id: playPauseButton
-            action: actions.playPauseAction
+            action: appActions.playPauseAction
             text: ""
             icon.name: mpv.pause ? "media-playback-start" : "media-playback-pause"
             focusPolicy: Qt.NoFocus
@@ -70,7 +70,7 @@ ToolBar {
 
         ToolButton {
             id: playPreviousFile
-            action: actions.playPreviousAction
+            action: appActions.playPreviousAction
             text: ""
             focusPolicy: Qt.NoFocus
             enabled: playList.playlistView.count > 1
@@ -82,7 +82,7 @@ ToolBar {
 
         ToolButton {
             id: playNextFile
-            action: actions.playNextAction
+            action: appActions.playNextAction
             text: ""
             focusPolicy: Qt.NoFocus
             enabled: playList.playlistView.count > 1
@@ -109,13 +109,13 @@ ToolBar {
 
         ToolButton {
             id: mute
-            action: actions.muteAction
+            action: appActions.muteAction
             icon.name: mpv.mute || mpv.volume === 0 ? "player-volume-muted" : "player-volume"
             text: ""
             focusPolicy: Qt.NoFocus
 
             ToolTip {
-                text: actions.muteAction.text
+                text: appActions.muteAction.text
             }
         }
 

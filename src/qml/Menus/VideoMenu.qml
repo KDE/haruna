@@ -12,30 +12,30 @@ Menu {
 
     title: i18n("&Video")
 
-    MenuItem { action: actions.toggleDeinterlacingAction }
-    MenuItem { action: actions.zoomInAction }
-    MenuItem { action: actions.zoomOutAction }
-    MenuItem { action: actions.zoomResetAction }
-    MenuItem { action: actions.screenshotAction }
-    MenuItem { action: actions.videoPanXLeftAction }
-    MenuItem { action: actions.videoPanXRightAction }
-    MenuItem { action: actions.videoPanYUpAction }
-    MenuItem { action: actions.videoPanYDownAction }
+    MenuItem { action: appActions.toggleDeinterlacingAction }
+    MenuItem { action: appActions.zoomInAction }
+    MenuItem { action: appActions.zoomOutAction }
+    MenuItem { action: appActions.zoomResetAction }
+    MenuItem { action: appActions.screenshotAction }
+    MenuItem { action: appActions.videoPanXLeftAction }
+    MenuItem { action: appActions.videoPanXRightAction }
+    MenuItem { action: appActions.videoPanYUpAction }
+    MenuItem { action: appActions.videoPanYDownAction }
 
     Menu {
         title: i18n("Adjustments")
 
-        MenuItem { action: actions.contrastUpAction }
-        MenuItem { action: actions.contrastDownAction }
-        MenuItem { action: actions.contrastResetAction }
-        MenuItem { action: actions.brightnessUpAction }
-        MenuItem { action: actions.brightnessDownAction }
-        MenuItem { action: actions.brightnessResetAction }
-        MenuItem { action: actions.gammaUpAction }
-        MenuItem { action: actions.gammaDownAction }
-        MenuItem { action: actions.gammaResetAction }
-        MenuItem { action: actions.saturationUpAction }
-        MenuItem { action: actions.saturationDownAction }
-        MenuItem { action: actions.saturationResetAction }
+        MenuItem { action: appActions.contrastUpAction }
+        MenuItem { action: appActions.contrastDownAction }
+        MenuItem { action: appActions.contrastResetAction }
+        MenuItem { action: appActions.brightnessUpAction }
+        MenuItem { action: appActions.brightnessDownAction }
+        MenuItem { action: appActions.brightnessResetAction }
+        MenuItem { action: appActions.gammaUpAction }
+        MenuItem { action: appActions.gammaDownAction }
+        MenuItem { action: appActions.gammaResetAction }
+        MenuItem { action: appActions.saturationUpAction }
+        MenuItem { action: appActions.saturationDownAction }
+        MenuItem { action: appActions.saturationResetAction }
     }
 }

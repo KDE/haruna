@@ -59,57 +59,57 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: actions.increaseSubtitleFontSizeAction.icon.name
-        text: actions.increaseSubtitleFontSizeAction.text
-        onTriggered: actions.increaseSubtitleFontSizeAction.trigger()
+        icon.name: appActions.subtitleIncreaseFontSizeAction.icon.name
+        text: appActions.subtitleIncreaseFontSizeAction.text
+        onTriggered: appActions.subtitleIncreaseFontSizeAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.decreaseSubtitleFontSizeAction.icon.name
-        text: actions.decreaseSubtitleFontSizeAction.text
-        onTriggered: actions.decreaseSubtitleFontSizeAction.trigger()
+        icon.name: appActions.subtitleDecreaseFontSizeAction.icon.name
+        text: appActions.subtitleDecreaseFontSizeAction.text
+        onTriggered: appActions.subtitleDecreaseFontSizeAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitlePositionUpAction.icon.name
-        text: actions.subtitlePositionUpAction.text
-        onTriggered: actions.subtitlePositionUpAction.trigger()
+        icon.name: appActions.subtitleMoveUpAction.icon.name
+        text: appActions.subtitleMoveUpAction.text
+        onTriggered: appActions.subtitleMoveUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitlePositionDownAction.icon.name
-        text: actions.subtitlePositionDownAction.text
-        onTriggered: actions.subtitlePositionDownAction.trigger()
+        icon.name: appActions.subtitleMoveDownAction.icon.name
+        text: appActions.subtitleMoveDownAction.text
+        onTriggered: appActions.subtitleMoveDownAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitleQuickenAction.icon.name
-        text: actions.subtitleQuickenAction.text
-        onTriggered: actions.subtitleQuickenAction.trigger()
+        icon.name: appActions.subtitleQuickenAction.icon.name
+        text: appActions.subtitleQuickenAction.text
+        onTriggered: appActions.subtitleQuickenAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitleDelayAction.icon.name
-        text: actions.subtitleDelayAction.text
-        onTriggered: actions.subtitleDelayAction.trigger()
+        icon.name: appActions.subtitleDelayAction.icon.name
+        text: appActions.subtitleDelayAction.text
+        onTriggered: appActions.subtitleDelayAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitleToggleAction.icon.name
-        text: actions.subtitleToggleAction.text
-        onTriggered: actions.subtitleToggleAction.trigger()
+        icon.name: appActions.subtitleToggleAction.icon.name
+        text: appActions.subtitleToggleAction.text
+        onTriggered: appActions.subtitleToggleAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitleCycleUpAction.icon.name
-        text: actions.subtitleCycleUpAction.text
-        onTriggered: actions.subtitleCycleUpAction.trigger()
+        icon.name: appActions.subtitleCycleUpAction.icon.name
+        text: appActions.subtitleCycleUpAction.text
+        onTriggered: appActions.subtitleCycleUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: actions.subtitleCycleDownAction.icon.name
-        text: actions.subtitleCycleDownAction.text
-        onTriggered: actions.subtitleCycleDownAction.trigger()
+        icon.name: appActions.subtitleCycleDownAction.icon.name
+        text: appActions.subtitleCycleDownAction.text
+        onTriggered: appActions.subtitleCycleDownAction.trigger()
     }
 
 }

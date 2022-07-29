@@ -14,13 +14,13 @@ Labs.Menu {
     title: i18n("&Settings")
 
     Labs.MenuItem {
-        icon.name: actions.configureAction.icon.name
-        text: actions.configureAction.text
-        onTriggered: actions.configureAction.trigger()
+        icon.name: appActions.configureAction.icon.name
+        text: appActions.configureAction.text
+        onTriggered: appActions.configureAction.trigger()
     }
     Labs.MenuItem {
-        icon.name: actions.configureShortcutsAction.icon.name
-        text: actions.configureShortcutsAction.text
-        onTriggered: actions.configureShortcutsAction.trigger()
+        icon.name: appActions.configureShortcutsAction.icon.name
+        text: appActions.configureShortcutsAction.text
+        onTriggered: appActions.configureShortcutsAction.trigger()
     }
 }
