@@ -16,7 +16,7 @@ import org.kde.haruna 1.0 as Haruna
 Kirigami.ApplicationWindow {
     id: root
 
-    property int page: SettingsWindow.Page.Shortcuts
+    property int page: SettingsWindow.Page.General
     enum Page {
         General = 0,
         Playback,
