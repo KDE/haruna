@@ -592,37 +592,42 @@ bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
     auto shortcutString = shortcut.value<QKeySequence>().toString(QKeySequence::PortableText);
     // action whose shortcut is changed
     auto action = &m_actions[row];
-    // if shortcut is used, this is the action holding the shortcut
-    Action *result = nullptr;
-    int i {0};
-    for (; i < m_actions.count(); ++i) {
-        if (m_actions[i].shortcut == shortcutString) {
-            result = &m_actions[i];
-            break;
+
+    // if shortcut is being cleared, no need to search for a conflict
+    if (!shortcut.toString().isEmpty()) {
+        // if shortcut is used, this is the action holding the shortcut
+        Action *result = nullptr;
+        int i {0};
+        for (; i < m_actions.count(); ++i) {
+            if (m_actions[i].shortcut == shortcutString) {
+                result = &m_actions[i];
+                break;
+            }
         }
-    }
 
-    if (result != nullptr && action->name == result->name) {
-        return false;
-    }
-
-    if (result != nullptr) {
-        // shortcut is used by an action
-        // ask user what whether to reassign or to cancel
-        if (keyConflictMessageBox(result->text)) {
-            // user chose reassign, remove shortcut from action holding it
-            result->shortcut = "";
-            group.writeEntry(result->name, result->shortcut);
-            Q_EMIT shortcutChanged(result->name, result->shortcut);
-            Q_EMIT dataChanged(index(i, 0), index(i, 0));
-        } else {
-            // user chose cancel
+        if (result != nullptr && action->name == result->name) {
             return false;
+        }
+
+        if (result != nullptr) {
+            // shortcut is used by an action
+            // ask user what whether to reassign or to cancel
+            if (keyConflictMessageBox(result->text)) {
+                // user chose reassign, remove shortcut from action holding it
+                result->shortcut = "";
+                group.writeEntry(result->name, result->shortcut);
+                Q_EMIT shortcutChanged(result->name, result->shortcut);
+                Q_EMIT dataChanged(index(i, 0), index(i, 0));
+            } else {
+                // user chose cancel
+                return false;
+            }
         }
     }
     // set shortcut on the action being changed
     action->shortcut = shortcutString;
     group.writeEntry(action->name, action->shortcut);
+    Q_EMIT shortcutChanged(action->name, action->shortcut);
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
 
     return group.sync();

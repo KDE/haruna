@@ -100,16 +100,15 @@ SettingsBasePage {
                             oldKeySequence = shortcut
                         }
 
-                        onCaptureFinished: {
-                            if (!actionsModel.saveShortcut(model.commandId, keySequence)) {
-                                keySequence = oldKeySequence
-                            } else {
-                                // the keySequence only changes for the edited command
-                                // if there is a conflict with another command then
-                                // the conflicting command is not update
-                                // check if there is a shortcut conflict and update accordingly
+                        onKeySequenceChanged: {
+                            if (keySequence !== model.shortcut) {
+                                // use action name (commandId) since this changes the actionsModel
+                                if (!actionsModel.saveShortcut(model.commandId, keySequence)) {
+                                    keySequence = oldKeySequence
+                                }
                             }
                         }
+
                         Component.onCompleted: {
                             oldKeySequence = model.shortcut
                             keySequence = model.shortcut

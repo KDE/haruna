@@ -64,11 +64,14 @@ SettingsBasePage {
                     oldKeySequence = shortcut
                 }
 
-                onCaptureFinished: {
-                    if (!actionsModel.saveShortcut(model.index, keySequence)) {
-                        keySequence = oldKeySequence
+                onKeySequenceChanged: {
+                    if (keySequence !== model.shortcut) {
+                        if (!actionsModel.saveShortcut(model.index, keySequence)) {
+                            keySequence = oldKeySequence
+                        }
                     }
                 }
+
                 Component.onCompleted: {
                     oldKeySequence = model.shortcut
                     keySequence = model.shortcut
