@@ -41,7 +41,7 @@ Item {
 
         onAboutHarunaAction: {
             settingsLoader.active = true
-            settingsLoader.item.page = SettingsWindow.Page.About
+            settingsLoader.item.currentPage = SettingsWindow.Page.About
             actionsModel.signalEmitter("configureAction")
         }
 
@@ -92,7 +92,7 @@ Item {
 
         onConfigureShortcutsAction: {
             settingsLoader.active = true
-            settingsLoader.item.page = SettingsWindow.Page.Shortcuts
+            settingsLoader.item.currentPage = SettingsWindow.Page.Shortcuts
             actionsModel.signalEmitter("configureAction")
         }
 

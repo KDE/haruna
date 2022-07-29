@@ -16,7 +16,7 @@ import org.kde.haruna 1.0 as Haruna
 Kirigami.ApplicationWindow {
     id: root
 
-    property int page: SettingsWindow.Page.General
+    property int currentPage: SettingsWindow.Page.General
     enum Page {
         General = 0,
         Playback,
@@ -58,8 +58,8 @@ Kirigami.ApplicationWindow {
             id: settingsPagesList
 
             Component.onCompleted: {
-                pages[root.page].trigger()
-                currentIndex = root.page
+                pages[root.currentPage].trigger()
+                currentIndex = root.currentPage
             }
 
             property list<Kirigami.Action> pages: [
@@ -161,11 +161,10 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    onVisibleChanged: {
-        if (visible) {
-            settingsPagesList.pages[root.page].trigger()
-            settingsPagesList.currentIndex = root.page
-        }
+
+    onCurrentPageChanged: {
+        settingsPagesList.pages[root.currentPage].trigger()
+        settingsPagesList.currentIndex = root.currentPage
     }
 
     Component.onCompleted: pageStack.columnView.columnWidth = Kirigami.Units.gridUnit * 15
