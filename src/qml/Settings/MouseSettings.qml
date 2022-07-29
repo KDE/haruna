@@ -73,7 +73,7 @@ SettingsBasePage {
                 id: delegate
 
                 label: model.label
-                subtitle: MouseSettings[model.key] ? MouseSettings[model.key] : "No action set"
+                subtitle: MouseSettings[model.key] ? appActions[MouseSettings[model.key]].text : "No action set"
                 icon: MouseSettings[model.key] ? "checkmark" : ""
                 reserveSpaceForIcon: true
                 width: content.width
