@@ -101,7 +101,8 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
     QDBusConnection::sessionBus().registerService(mspris2Name);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"), this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"),
+                                                 this, QDBusConnection::ExportAdaptors);
     // org.mpris.MediaPlayer2 mpris2 interface
     new MediaPlayer2(this);
 
@@ -253,10 +254,6 @@ void Application::setupQmlContextProperties()
 
     auto customCommandsModel = new CustomCommandsModel(actionsModel);
     m_engine->rootContext()->setContextProperty(QStringLiteral("customCommandsModel"), customCommandsModel);
-    auto proxyCustomCommandsModel = new ProxyCustomCommandsModel();
-    proxyCustomCommandsModel->setSourceModel(customCommandsModel);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomCommandsModel"), proxyCustomCommandsModel);
-
 
     auto recentFilesModel = new RecentFilesModel();
     m_engine->rootContext()->setContextProperty(QStringLiteral("recentFilesModel"), recentFilesModel);

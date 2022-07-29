@@ -209,12 +209,3 @@ void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
     config->group("Shortcuts").deleteEntry(groupName);
     config->sync();
 }
-
-ProxyCustomCommandsModel::ProxyCustomCommandsModel(QObject *parent)
-    : QSortFilterProxyModel(parent)
-{
-    setDynamicSortFilter(true);
-    setFilterRole(CustomCommandsModel::TypeRole);
-    setFilterCaseSensitivity(Qt::CaseInsensitive);
-    setFilterFixedString(QStringLiteral("shortcut"));
-}

@@ -12,13 +12,6 @@
 #include <KSharedConfig>
 
 class ActionsModel;
-class ProxyCustomCommandsModel : public QSortFilterProxyModel
-{
-    Q_OBJECT
-
-public:
-    explicit ProxyCustomCommandsModel(QObject *parent = nullptr);
-};
 
 class CustomCommandsModel : public QAbstractListModel
 {
