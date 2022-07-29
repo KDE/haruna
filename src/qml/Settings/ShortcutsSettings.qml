@@ -31,7 +31,7 @@ SettingsBasePage {
                 id: searchField
 
                 focus: true
-                onAccepted: proxyActionsModel.filter(text)
+                onAccepted: proxyActionsModel.setNameFilter(text)
                 Layout.fillWidth: true
                 KeyNavigation.up: actionsListView
                 KeyNavigation.down: actionsListView

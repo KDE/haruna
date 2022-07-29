@@ -671,11 +671,33 @@ ProxyActionsModel::ProxyActionsModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setDynamicSortFilter(true);
-    setFilterRole(ActionsModel::TypeRole);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
+
+    nameRegExp.setCaseSensitivity(Qt::CaseInsensitive);
+    nameRegExp.setPatternSyntax(QRegExp::RegExp);
+    typeRegExp.setCaseSensitivity(Qt::CaseInsensitive);
+    typeRegExp.setPatternSyntax(QRegExp::RegExp);
 }
 
-void ProxyActionsModel::filter(const QString &_filter)
+bool ProxyActionsModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    setFilterFixedString(_filter);
+    QModelIndex nameIndex = sourceModel()->index(sourceRow, 0, sourceParent);
+    QModelIndex typeIndex = sourceModel()->index(sourceRow, 0, sourceParent);
+
+    QString name = sourceModel()->data(nameIndex, ActionsModel::NameRole).toString();
+    QString type = sourceModel()->data(typeIndex, ActionsModel::TypeRole).toString();
+
+    return (name.contains(nameRegExp) && type.contains(typeRegExp));
+}
+
+void ProxyActionsModel::setNameFilter(const QString &regExp)
+{
+    nameRegExp.setPattern(regExp);
+    invalidateFilter();
+}
+
+void ProxyActionsModel::setTypeFilter(const QString &regExp)
+{
+    typeRegExp.setPattern(regExp);
+    invalidateFilter();
 }

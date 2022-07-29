@@ -30,9 +30,15 @@ class ProxyActionsModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit ProxyActionsModel(QObject *parent = nullptr);
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const  override;
 
 public slots:
-    void filter(const QString& _filter);
+    void setNameFilter(const QString& regExp);
+    void setTypeFilter(const QString& regExp);
+
+private:
+    QRegExp nameRegExp;
+    QRegExp typeRegExp;
 };
 
 class ActionsModel : public QAbstractListModel
