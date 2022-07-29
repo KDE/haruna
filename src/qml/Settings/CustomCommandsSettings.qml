@@ -126,15 +126,17 @@ SettingsBasePage {
                     icon.name: "edit-entry"
                     enabled: model.setOnStartup
                     Layout.rightMargin: Kirigami.Units.largeSpacing
-                    onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml",
-                                                                     {
-                                                                         command: model.command,
-                                                                         osdMessage: model.osdMessage,
-                                                                         type: model.type,
-                                                                         commandId: model.commandId,
-                                                                         index: model.index,
-                                                                         mode: EditCustomCommand.Mode.Edit
-                                                                     })
+                    onClicked: {
+                        const properties = {
+                            command: model.command,
+                            osdMessage: model.osdMessage,
+                            type: model.type,
+                            commandId: model.commandId,
+                            index: model.index,
+                            mode: EditCustomCommand.Mode.Edit
+                        }
+                        applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml", properties)
+                    }
                 }
             }
         }
