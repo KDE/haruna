@@ -21,6 +21,12 @@ SettingsBasePage {
     hasHelp: false
     helpFile: ""
 
+    onVisibleChanged: {
+        if (!visible) {
+            proxyActionsModel.setNameFilter("")
+        }
+    }
+
     header: ToolBar {
         width: parent.width
 
@@ -35,6 +41,7 @@ SettingsBasePage {
                 Layout.fillWidth: true
                 KeyNavigation.up: actionsListView
                 KeyNavigation.down: actionsListView
+                Component.onCompleted: forceActiveFocus()
             }
         }
     }

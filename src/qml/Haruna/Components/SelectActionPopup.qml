@@ -48,20 +48,15 @@ Popup {
             Layout.alignment: Qt.AlignTop
         }
 
-        TextField {
+        Kirigami.SearchField {
             id: filterActionsField
 
-            placeholderText: i18n("Type to filter...")
             focus: true
+            onAccepted: proxyActionsModel.setNameFilter(text)
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
             KeyNavigation.up: actionsListView
             KeyNavigation.down: clearActionButton
-
-            onTextChanged: {
-                const menuModel = actionsListView.actionsList
-                actionsListView.model = menuModel.filter(action => action.toLowerCase().includes(text.toLowerCase()))
-            }
         }
         Button {
             id: clearActionButton
@@ -78,21 +73,19 @@ Popup {
         ListView {
             id: actionsListView
 
-            property var actionsList: Object.keys(window.actions).sort()
-
             implicitHeight: 30 * model.count
-            model: actionsList
+            model: proxyActionsModel
             spacing: 1
             clip: true
             currentIndex: focus ? 0 : -1
             delegate: Kirigami.BasicListItem {
                 height: 30
                 width: root.width
-                label: modelData
+                label: model.text
                 reserveSpaceForIcon: false
-                onDoubleClicked: actionSelected(modelData)
-                Keys.onEnterPressed: actionSelected(modelData)
-                Keys.onReturnPressed: actionSelected(modelData)
+                onDoubleClicked: actionSelected(model.name)
+                Keys.onEnterPressed: actionSelected(model.name)
+                Keys.onReturnPressed: actionSelected(model.name)
             }
 
             Layout.fillWidth: true
