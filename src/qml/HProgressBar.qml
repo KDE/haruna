@@ -98,9 +98,9 @@ Slider {
 
             onWheel: {
                 if (wheel.angleDelta.y > 0) {
-                    actions["seekForwardMediumAction"].trigger()
+                    appActions.seekForwardMediumAction.trigger()
                 } else if (wheel.angleDelta.y) {
-                    actions["seekBackwardMediumAction"].trigger()
+                    appActions.seekBackwardMediumAction.trigger()
                 }
             }
         }

@@ -127,7 +127,7 @@ MpvItem {
         const words = chaptersToSkip.split(",")
         for (let i = 0; i < words.length; ++i) {
             if (chapters[mpv.chapter] && chapters[mpv.chapter].title.toLowerCase().includes(words[i].trim())) {
-                actions.seekNextChapterAction.trigger()
+                appActions.seekNextChapterAction.trigger()
                 if (PlaybackSettings.showOsdOnSkipChapters) {
                     osd.message(i18n("Skipped chapter: %1", chapters[mpv.chapter-1].title))
                 }
@@ -232,11 +232,11 @@ MpvItem {
         onWheel: {
             if (wheel.angleDelta.y > 0) {
                 if (MouseSettings.scrollUp) {
-                    actions[MouseSettings.scrollUp].trigger()
+                    appActions[MouseSettings.scrollUp].trigger()
                 }
             } else if (wheel.angleDelta.y) {
                 if (MouseSettings.scrollDown) {
-                    actions[MouseSettings.scrollDown].trigger()
+                    appActions[MouseSettings.scrollDown].trigger()
                 }
             }
         }
@@ -245,15 +245,15 @@ MpvItem {
             focus = true
             if (mouse.button === Qt.LeftButton) {
                 if (MouseSettings.left) {
-                    actions[MouseSettings.left].trigger()
+                    appActions[MouseSettings.left].trigger()
                 }
             } else if (mouse.button === Qt.MiddleButton) {
                 if (MouseSettings.middle) {
-                    actions[MouseSettings.middle].trigger()
+                    appActions[MouseSettings.middle].trigger()
                 }
             } else if (mouse.button === Qt.RightButton) {
                 if (MouseSettings.right) {
-                    actions[MouseSettings.right].trigger()
+                    appActions[MouseSettings.right].trigger()
                 }
             }
         }
@@ -261,15 +261,15 @@ MpvItem {
         onDoubleClicked: {
             if (mouse.button === Qt.LeftButton) {
                 if (MouseSettings.leftx2) {
-                    actions[MouseSettings.leftx2].trigger()
+                    appActions[MouseSettings.leftx2].trigger()
                 }
             } else if (mouse.button === Qt.MiddleButton) {
                 if (MouseSettings.middlex2) {
-                    actions[MouseSettings.middlex2].trigger()
+                    appActions[MouseSettings.middlex2].trigger()
                 }
             } else if (mouse.button === Qt.RightButton) {
                 if (MouseSettings.rightx2) {
-                    actions[MouseSettings.rightx2].trigger()
+                    appActions[MouseSettings.rightx2].trigger()
                 }
             }
         }
@@ -298,15 +298,15 @@ MpvItem {
     Connections {
         target: mediaPlayer2Player
 
-        onPlaypause: actions.playPauseAction.trigger()
+        onPlaypause: appActions.playPauseAction.trigger()
         onPlay: root.pause = false
         onPause: root.pause = true
         onStop: {
             root.position = 0
             root.pause = true
         }
-        onNext: actions.playNextAction.trigger()
-        onPrevious: actions.playPreviousAction.trigger()
+        onNext: appActions.playNextAction.trigger()
+        onPrevious: appActions.playPreviousAction.trigger()
         onSeek: root.command(["add", "time-pos", offset])
         onOpenUri: openFile(uri, false, false)
     }
