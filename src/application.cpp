@@ -52,6 +52,7 @@
 #include <QThread>
 #include <KFileItem>
 #include <recentfilesmodel.h>
+#include <actionsmodel.h>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -251,6 +252,15 @@ void Application::setupQmlContextProperties()
     auto proxyCustomCommandsModel = new ProxyCustomCommandsModel();
     proxyCustomCommandsModel->setSourceModel(customCommandsModel);
     m_engine->rootContext()->setContextProperty(QStringLiteral("proxyCustomCommandsModel"), proxyCustomCommandsModel);
+
+
+    auto actionsModel = new ActionsModel();
+    m_engine->rootContext()->setContextProperty(QStringLiteral("actionsModel"), actionsModel);
+    m_engine->rootContext()->setContextProperty(QStringLiteral("actions"), &actionsModel->propertyMap);
+
+    auto proxyActionsModel = new ProxyActionsModel();
+    proxyActionsModel->setSourceModel(actionsModel);
+    m_engine->rootContext()->setContextProperty(QStringLiteral("proxyActionsModel"), proxyActionsModel);
 
 
     auto recentFilesModel = new RecentFilesModel();

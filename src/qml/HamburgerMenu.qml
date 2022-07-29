@@ -39,7 +39,7 @@ ToolButton {
         closePolicy: Popup.CloseOnReleaseOutsideParent
 
         MenuItem {
-            action: actions.openAction
+            action: actions.openFileAction
             visible: root.position === HamburgerMenu.Position.Footer
         }
         MenuItem {

@@ -57,10 +57,10 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: actions.increaseSubtitleFontSizeAction }
-    MenuItem { action: actions.decreaseSubtitleFontSizeAction }
-    MenuItem { action: actions.subtitlePositionUpAction }
-    MenuItem { action: actions.subtitlePositionDownAction }
+    MenuItem { action: actions.subtitleIncreaseFontSizeAction }
+    MenuItem { action: actions.subtitleDecreaseFontSizeAction }
+    MenuItem { action: actions.subtitleMoveUpAction }
+    MenuItem { action: actions.subtitleMoveDownAction }
     MenuItem { action: actions.subtitleQuickenAction }
     MenuItem { action: actions.subtitleDelayAction }
     MenuItem { action: actions.subtitleToggleAction }

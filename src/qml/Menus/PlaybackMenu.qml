@@ -21,9 +21,9 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: actions.increasePlayBackSpeedAction }
-    MenuItem { action: actions.decreasePlayBackSpeedAction }
-    MenuItem { action: actions.resetPlayBackSpeedAction }
+    MenuItem { action: actions.playbackSpeedIncreaseAction }
+    MenuItem { action: actions.playbackSpeedDecreaseAction }
+    MenuItem { action: actions.playbackSpeedResetAction }
 
     MenuSeparator {}
 
@@ -45,7 +45,7 @@ Menu {
         MenuSeparator {}
 
         MenuItem { action: actions.seekNextSubtitleAction }
-        MenuItem { action: actions.seekPrevSubtitleAction }
+        MenuItem { action: actions.seekPreviousSubtitleAction }
 
         MenuSeparator {}
 
@@ -54,8 +54,8 @@ Menu {
 
         MenuSeparator {}
 
-        MenuItem { action: actions.frameStepAction }
-        MenuItem { action: actions.frameBackStepAction }
+        MenuItem { action: actions.frameStepForwardAction }
+        MenuItem { action: actions.frameStepBackwardAction }
         MenuItem { action: actions.seekToWatchLaterPositionAction }
     }
 }

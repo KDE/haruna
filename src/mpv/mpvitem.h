@@ -49,6 +49,8 @@ class MpvItem : public MpvCore
                WRITE setVolume
                NOTIFY volumeChanged)
 
+    Q_PROPERTY(bool mute READ mute WRITE setMute NOTIFY muteChanged)
+
     Q_PROPERTY(int chapter
                READ chapter
                WRITE setChapter
@@ -134,6 +136,9 @@ class MpvItem : public MpvCore
     int volume();
     void setVolume(int value);
 
+    bool mute();
+    void setMute(bool value);
+
     int chapter();
     void setChapter(int value);
 
@@ -182,6 +187,7 @@ signals:
     void durationChanged();
     void remainingChanged();
     void volumeChanged();
+    void muteChanged();
     void pauseChanged();
     void chapterChanged();
     void audioIdChanged();
@@ -222,6 +228,7 @@ private:
     void initProperties();
     void loadTracks();
     QString md5(const QString &str);
+    int m_mute;
 };
 
 #endif // MPVOBJECT_H

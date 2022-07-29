@@ -24,7 +24,6 @@ Kirigami.ApplicationWindow {
 
     property var configure: actionsManager.action("configure")
     property int previousVisibility: Window.Windowed
-    property alias actions: actions
 
     visible: true
     title: mpv.mediaTitle || i18n("Haruna")
@@ -116,8 +115,6 @@ Kirigami.ApplicationWindow {
         sourceComponent: SettingsWindow {}
     }
 
-    Actions { id: actions }
-
     MpvVideo {
         id: mpv
 
@@ -127,6 +124,8 @@ Kirigami.ApplicationWindow {
     PlayList { id: playList }
 
     Footer { id: footer }
+
+    Actions {}
 
     Instantiator {
         model: proxyCustomCommandsModel

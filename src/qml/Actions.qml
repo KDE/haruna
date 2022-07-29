@@ -10,554 +10,34 @@ import QtQuick.Controls 2.12
 import org.kde.haruna 1.0
 import "Settings"
 
-QtObject {
+Item {
     id: root
 
     property var list: ({})
 
-    property Action openContextMenuAction: Action {
-        id: openContextMenuAction
-        property var qaction: actionsManager.action("openContextMenu")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
+    Instantiator {
+        model: actionsModel
+        delegate: Action {
+            objectName: model.name
+            text: model.text
+            shortcut: model.shortcut
+            icon.name: model.icon
+            onTriggered: actionsModel.signalEmitter(objectName)
 
-        Component.onCompleted: list["openContextMenuAction"] = openContextMenuAction
-
-        onTriggered: {
-            mpvContextMenuLoader.active = true
-            mpvContextMenuLoader.item.popup()
+            Component.onCompleted: actions[objectName] = this
         }
     }
 
-    property Action togglePlaylistAction: Action {
-        id: togglePlaylistAction
-        property var qaction: actionsManager.action("togglePlaylist")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
+    Connections {
+        target: actionsModel
 
-        Component.onCompleted: list["togglePlaylistAction"] = togglePlaylistAction
-
-        onTriggered: {
-            if (playList.state === "visible") {
-                playList.state = "hidden"
-            } else {
-                playList.state = "visible"
-            }
-        }
-    }
-
-    property Action volumeUpAction: Action {
-        id: volumeUpAction
-        property var qaction: actionsManager.action("volumeUp")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["volumeUpAction"] = volumeUpAction
-
-        onTriggered: {
-            mpv.command(["add", "volume", GeneralSettings.volumeStep])
-            osd.message(i18n("Volume: %1", parseInt(mpv.getProperty("volume"))))
-        }
-    }
-
-    property Action volumeDownAction: Action {
-        id: volumeDownAction
-        property var qaction: actionsManager.action("volumeDown")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["volumeDownAction"] = volumeDownAction
-
-        onTriggered: {
-            mpv.command(["add", "volume", -GeneralSettings.volumeStep])
-            osd.message(i18n("Volume: %1", parseInt(mpv.getProperty("volume"))))
-        }
-    }
-
-    property Action muteAction: Action {
-        id: muteAction
-        property var qaction: actionsManager.action("mute")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["muteAction"] = muteAction
-
-        onTriggered: {
-            mpv.setProperty("mute", !mpv.getProperty("mute"))
-            if (mpv.getProperty("mute")) {
-                text = i18n("Unmute")
-                icon.name = "player-volume-muted"
-            } else {
-                text = qaction.text
-                icon.name = qaction.iconName()
-            }
-        }
-    }
-
-    property Action playNextAction: Action {
-        id: playNextAction
-        property var qaction: actionsManager.action("playNext")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["playNextAction"] = playNextAction
-
-        onTriggered: {
-            const nextFileRow = mpv.playlistModel.getPlayingVideo() + 1
-            const updateLastPlayedFile = !playList.isYouTubePlaylist
-            if (nextFileRow < playList.playlistView.count) {
-                const nextFile = mpv.playlistModel.getPath(nextFileRow)
-                mpv.playlistModel.setPlayingVideo(nextFileRow)
-                mpv.loadFile(nextFile, updateLastPlayedFile)
-            } else {
-                // Last file in playlist
-                if (PlaylistSettings.repeat) {
-                    mpv.playlistModel.setPlayingVideo(0)
-                    mpv.loadFile(mpv.playlistModel.getPath(0), updateLastPlayedFile)
-                }
-            }
-        }
-    }
-
-    property Action playPreviousAction: Action {
-        id: playPreviousAction
-        property var qaction: actionsManager.action("playPrevious")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["playPreviousAction"] = playPreviousAction
-
-        onTriggered: {
-            if (mpv.playlistModel.getPlayingVideo() !== 0) {
-                const previousFileRow = mpv.playlistModel.getPlayingVideo() - 1
-                const previousFile = mpv.playlistModel.getPath(previousFileRow)
-                const updateLastPlayedFile = !playList.isYouTubePlaylist
-                mpv.playlistModel.setPlayingVideo(previousFileRow)
-                mpv.loadFile(previousFile, updateLastPlayedFile)
-            }
-        }
-    }
-
-    property Action openAction: Action {
-        id: openAction
-        property var qaction: actionsManager.action("openFile")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["openAction"] = openAction
-
-        onTriggered: fileDialog.open()
-    }
-
-    property Action openUrlAction: Action {
-        id: openUrlAction
-        property var qaction: actionsManager.action("openUrl")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["openUrlAction"] = openUrlAction
-
-        onTriggered: {
-            if (openUrlPopup.visible) {
-                openUrlPopup.close()
-            } else {
-                openUrlPopup.open()
-            }
-        }
-    }
-
-    property Action aboutHarunaAction: Action {
-        id: aboutHarunaAction
-        property var qaction: actionsManager.action("aboutHaruna")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["aboutHarunaAction"] = aboutHarunaAction
-
-        onTriggered: {
+        onAboutHarunaAction: {
             settingsLoader.active = true
             settingsLoader.item.page = SettingsWindow.Page.About
-            configureAction.trigger()
+            actionsModel.signalEmitter("configureAction")
         }
-    }
 
-    property Action loadLastPlayedFileAction: Action {
-        id: loadLastPlayedFileAction
-        property var qaction: actionsManager.action("loadLastPlayedFile")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["loadLastPlayedFileAction"] = loadLastPlayedFileAction
-
-        onTriggered: window.openFile(GeneralSettings.lastPlayedFile, true, true, true)
-    }
-
-    property Action restartPlaybackAction: Action {
-        id: restartPlaybackAction
-        property var qaction: actionsManager.action("restartPlayback")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["restartPlaybackAction"] = restartPlaybackAction
-
-        onTriggered: mpv.command(["seek", 0, "absolute"])
-    }
-
-    property Action seekToWatchLaterPositionAction: Action {
-        id: seekToWatchLaterPositionAction
-        property var qaction: actionsManager.action("seekToWatchLaterPosition")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekToWatchLaterPositionAction"] = seekToWatchLaterPositionAction
-
-        onTriggered: {
-            if (mpv.watchLaterPosition === -1) {
-                return
-            }
-            mpv.command(["seek", mpv.watchLaterPosition - 1, "absolute"])
-        }
-    }
-
-    property Action seekForwardSmallAction: Action {
-        id: seekForwardSmallAction
-        property var qaction: actionsManager.action("seekForwardSmall")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekForwardSmallAction"] = seekForwardSmallAction
-
-        onTriggered: mpv.command(["seek", GeneralSettings.seekSmallStep, "exact"])
-    }
-
-    property Action seekBackwardSmallAction: Action {
-        id: seekBackwardSmallAction
-        property var qaction: actionsManager.action("seekBackwardSmall")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekBackwardSmallAction"] = seekBackwardSmallAction
-
-        onTriggered: mpv.command(["seek", -GeneralSettings.seekSmallStep, "exact"])
-    }
-
-    property Action seekForwardMediumAction: Action {
-        id: seekForwardMediumAction
-        property var qaction: actionsManager.action("seekForwardMedium")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekForwardMediumAction"] = seekForwardMediumAction
-
-        onTriggered: mpv.command(["seek", GeneralSettings.seekMediumStep, "exact"])
-    }
-
-    property Action seekBackwardMediumAction: Action {
-        id: seekBackwardMediumAction
-        property var qaction: actionsManager.action("seekBackwardMedium")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekBackwardMediumAction"] = seekBackwardMediumAction
-
-        onTriggered: mpv.command(["seek", -GeneralSettings.seekMediumStep, "exact"])
-    }
-
-    property Action seekForwardBigAction: Action {
-        id: seekForwardBigAction
-        property var qaction: actionsManager.action("seekForwardBig")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekForwardBigAction"] = seekForwardBigAction
-
-        onTriggered: mpv.command(["seek", GeneralSettings.seekBigStep, "exact"])
-    }
-
-    property Action seekBackwardBigAction: Action {
-        id: seekBackwardBigAction
-        property var qaction: actionsManager.action("seekBackwardBig")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekBackwardBigAction"] = seekBackwardBigAction
-
-        onTriggered: mpv.command(["seek", -GeneralSettings.seekBigStep, "exact"])
-    }
-
-    property Action seekPreviousChapterAction: Action {
-        id: seekPreviousChapterAction
-        property var qaction: actionsManager.action("seekPreviousChapter")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekPreviousChapterAction"] = seekPreviousChapterAction
-
-        onTriggered: {
-            mpv.command(["add", "chapter", "-1"])
-        }
-    }
-
-    property Action seekNextChapterAction: Action {
-        id: seekNextChapterAction
-        property var qaction: actionsManager.action("seekNextChapter")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekNextChapterAction"] = seekNextChapterAction
-
-        onTriggered: {
-            const chapters = mpv.getProperty("chapter-list")
-            const currentChapter = mpv.getProperty("chapter")
-            const nextChapter = currentChapter + 1
-            if (nextChapter === chapters.length) {
-                playNextAction.trigger()
-                return
-            }
-            mpv.command(["add", "chapter", "1"])
-        }
-    }
-
-    property Action seekNextSubtitleAction: Action {
-        id: seekNextSubtitleAction
-        property var qaction: actionsManager.action("seekNextSubtitle")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekNextSubtitleAction"] = seekNextSubtitleAction
-
-        onTriggered: {
-            if (mpv.getProperty("sid") !== false) {
-                mpv.command(["sub-seek", "1"])
-            } else {
-                seekForwardSmallAction.trigger()
-            }
-        }
-    }
-
-    property Action seekPrevSubtitleAction: Action {
-        id: seekPrevSubtitleAction
-        property var qaction: actionsManager.action("seekPreviousSubtitle")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["seekPrevSubtitleAction"] = seekPrevSubtitleAction
-
-        onTriggered: {
-             if (mpv.getProperty("sid") !== false) {
-                 mpv.command(["sub-seek", "-1"])
-             } else {
-                 seekBackwardSmallAction.trigger()
-             }
-         }
-    }
-
-    property Action frameStepAction: Action {
-        id: frameStepAction
-        property var qaction: actionsManager.action("frameStep")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["frameStepAction"] = frameStepAction
-
-        onTriggered: mpv.command(["frame-step"])
-    }
-
-    property Action frameBackStepAction: Action {
-        id: frameBackStepAction
-        property var qaction: actionsManager.action("frameBackStep")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["frameBackStepAction"] = frameBackStepAction
-
-        onTriggered: mpv.command(["frame-back-step"])
-    }
-
-    property Action increasePlayBackSpeedAction: Action {
-        id: increasePlayBackSpeedAction
-        property var qaction: actionsManager.action("increasePlayBackSpeed")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["increasePlayBackSpeedAction"] = increasePlayBackSpeedAction
-
-        onTriggered: {
-            mpv.command(["add", "speed", "0.1"])
-            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
-        }
-    }
-
-    property Action decreasePlayBackSpeedAction: Action {
-        id: decreasePlayBackSpeedAction
-        property var qaction: actionsManager.action("decreasePlayBackSpeed")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["decreasePlayBackSpeedAction"] = decreasePlayBackSpeedAction
-
-        onTriggered: {
-            mpv.command(["add", "speed", "-0.1"])
-            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
-        }
-    }
-
-    property Action resetPlayBackSpeedAction: Action {
-        id: resetPlayBackSpeedAction
-        property var qaction: actionsManager.action("resetPlayBackSpeed")
-        text: qaction.text
-        shortcut: qaction.shortcutName
-        icon.name: qaction.iconName()
-
-        Component.onCompleted: list["resetPlayBackSpeedAction"] = resetPlayBackSpeedAction
-
-        onTriggered: {
-            mpv.setProperty("speed", 1.0)
-            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
-         }
-    }
-
-    property Action playPauseAction: Action {
-        id: playPauseAction
-        text: i18n("Play/Pause")
-        icon.name: "media-playback-pause"
-        shortcut: "Space"
-
-        Component.onCompleted: list["playPauseAction"] = playPauseAction
-
-        onTriggered: mpv.setProperty("pause", !mpv.getProperty("pause"))
-    }
-
-    property Action configureShortcutsAction: Action {
-        id: configureShortcutsAction
-        property var qaction: actionsManager.action("options_configure_keybinding")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["configureShortcutsAction"] = configureShortcutsAction
-
-        onTriggered: qaction.trigger()
-    }
-
-    property Action quitApplicationAction: Action {
-        id: quitApplicationAction
-        property var qaction: actionsManager.action("file_quit")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["quitApplicationAction"] = quitApplicationAction
-
-        onTriggered: {
-            mpv.handleTimePosition()
-            qaction.trigger()
-        }
-    }
-
-    property Action configureAction: Action {
-        id: configureAction
-        property var qaction: actionsManager.action("configure")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["configureAction"] = configureAction
-
-        onTriggered: {
-            settingsLoader.active = true
-            if (settingsLoader.item.visible) {
-                settingsLoader.item.raise()
-            } else {
-                settingsLoader.item.visible = true
-            }
-        }
-    }
-
-    property Action subtitleQuickenAction: Action {
-        id: subtitleQuickenAction
-        property var qaction: actionsManager.action("subtitleQuicken")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["subtitleQuickenAction"] = subtitleQuickenAction
-
-        onTriggered: {
-            mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") - 0.1)
-            osd.message(i18n("Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
-        }
-    }
-
-    property Action subtitleDelayAction: Action {
-        id: subtitleDelayAction
-        property var qaction: actionsManager.action("subtitleDelay")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["subtitleDelayAction"] = subtitleDelayAction
-
-        onTriggered: {
-            mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") + 0.1)
-            osd.message(i18n("Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
-        }
-    }
-
-    property Action subtitleToggleAction: Action {
-        id: subtitleToggleAction
-        property var qaction: actionsManager.action("subtitleToggle")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["subtitleToggleAction"] = subtitleToggleAction
-
-        onTriggered: {
-            const visible = mpv.getProperty("sub-visibility")
-            const message = visible ? i18n("Subtitles off") : i18n("Subtitles on")
-            mpv.setProperty("sub-visibility", !visible)
-            osd.message(message)
-        }
-    }
-
-    property Action audioCycleUpAction: Action {
-        id: audioCycleUpAction
-        property var qaction: actionsManager.action("audioCycleUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["audioCycleUpAction"] = audioCycleUpAction
-
-        onTriggered: {
+        onAudioCycleUpAction: {
             const tracks = mpv.getProperty("track-list")
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
@@ -574,18 +54,8 @@ QtObject {
                 osd.message(i18n("Audio: %1 %2", currentTrackId, track.lang))
             }
         }
-    }
 
-    property Action audioCycleDownAction: Action {
-        id: audioCycleDownAction
-        property var qaction: actionsManager.action("audioCycleDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["audioCycleDownAction"] = audioCycleDownAction
-
-        onTriggered: {
+        onAudioCycleDownAction: {
             const tracks = mpv.getProperty("track-list")
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
@@ -602,404 +72,149 @@ QtObject {
                 osd.message(i18n("Audio: %1 %2", currentTrackId, track.lang))
             }
         }
-    }
 
-    property Action subtitleCycleUpAction: Action {
-        id: subtitleCycleUpAction
-        property var qaction: actionsManager.action("subtitleCycleUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["subtitleCycleUpAction"] = subtitleCycleUpAction
-
-        onTriggered: {
-            mpv.command(["cycle", "sid", "up"])
-            const currentTrackId = mpv.getProperty("sid")
-            if (currentTrackId === false) {
-                osd.message(i18n("Subtitle: None"))
+        onConfigureAction: {
+            settingsLoader.active = true
+            if (settingsLoader.item.visible) {
+                settingsLoader.item.raise()
             } else {
-                const tracks = mpv.getProperty("track-list")
-                const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                osd.message(i18n("Subtitle: %1 %2", currentTrackId, track.lang))
+                settingsLoader.item.visible = true
             }
         }
-    }
 
-    property Action subtitleCycleDownAction: Action {
-        id: subtitleCycleDownAction
-        property var qaction: actionsManager.action("subtitleCycleDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
+        onConfigureShortcutsAction: {
+            settingsLoader.active = true
+            settingsLoader.item.page = SettingsWindow.Page.Shortcuts
+            actionsModel.signalEmitter("configureAction")
+        }
 
-        Component.onCompleted: list["subtitleCycleDownAction"] = subtitleCycleDownAction
+        onExitFullscreenAction: {
+            window.exitFullscreen()
+            playList.scrollPositionTimer.start()
+        }
 
-        onTriggered: {
-            mpv.command(["cycle", "sid", "down"])
-            const currentTrackId = mpv.getProperty("sid")
-            if (currentTrackId === false) {
-                osd.message(i18n("Subtitle: None"))
+        onFrameStepForwardAction: mpv.command(["frame-step"])
+
+        onFrameStepBackwardAction: mpv.command(["frame-back-step"])
+
+        onLoadLastPlayedFileAction: window.openFile(GeneralSettings.lastPlayedFile, true, true, true)
+
+        onMuteAction: mpv.mute = !mpv.mute
+
+        onOpenContextMenuAction: {
+            mpvContextMenuLoader.active = true
+            mpvContextMenuLoader.item.popup()
+        }
+
+        onOpenFileAction: fileDialog.open()
+
+        onOpenUrlAction: {
+            if (openUrlPopup.visible) {
+                openUrlPopup.close()
             } else {
-                const tracks = mpv.getProperty("track-list")
-                const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                osd.message(i18n("Subtitle: %1 %2", currentTrackId, track.lang))
+                openUrlPopup.open()
             }
         }
-    }
 
-    property Action contrastUpAction: Action {
-        id: contrastUpAction
-        property var qaction: actionsManager.action("contrastUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["contrastUpAction"] = contrastUpAction
-
-        onTriggered: {
-            const contrast = parseInt(mpv.getProperty("contrast")) + 1
-            mpv.setProperty("contrast", `${contrast}`)
-            osd.message(i18n("Contrast: %1", contrast))
+        onPlaybackSpeedIncreaseAction: {
+            mpv.command(["add", "speed", "0.1"])
+            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
         }
-    }
-    property Action contrastDownAction: Action {
-        id: contrastDownAction
-        property var qaction: actionsManager.action("contrastDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["contrastDownAction"] = contrastDownAction
-
-        onTriggered: {
-            const contrast = parseInt(mpv.getProperty("contrast")) - 1
-            mpv.setProperty("contrast", `${contrast}`)
-            osd.message(i18n("Contrast: %1", contrast))
+        onPlaybackSpeedDecreaseAction: {
+            mpv.command(["add", "speed", "-0.1"])
+            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
         }
-    }
-    property Action contrastResetAction: Action {
-        id: contrastResetAction
-        property var qaction: actionsManager.action("contrastReset")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["contrastResetAction"] = contrastResetAction
-
-        onTriggered: {
-            mpv.setProperty("contrast", `0`)
-            osd.message(i18n("Contrast: 0"))
+        onPlaybackSpeedResetAction: {
+            mpv.setProperty("speed", 1.0)
+            osd.message(i18n("Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
         }
-    }
 
-    property Action brightnessUpAction: Action {
-        id: brightnessUpAction
-        property var qaction: actionsManager.action("brightnessUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
+        onPlayPauseAction: mpv.pause = !mpv.pause
 
-        Component.onCompleted: list["brightnessUpAction"] = brightnessUpAction
-
-        onTriggered: {
-            const brightness = parseInt(mpv.getProperty("brightness")) + 1
-            mpv.setProperty("brightness", `${brightness}`)
-            osd.message(i18n("Brightness: %1", brightness))
+        onPlayNextAction: {
+            const nextFileRow = mpv.playlistModel.getPlayingVideo() + 1
+            const updateLastPlayedFile = !playList.isYouTubePlaylist
+            if (nextFileRow < playList.playlistView.count) {
+                const nextFile = mpv.playlistModel.getPath(nextFileRow)
+                mpv.playlistModel.setPlayingVideo(nextFileRow)
+                mpv.loadFile(nextFile, updateLastPlayedFile)
+            } else {
+                // Last file in playlist
+                if (PlaylistSettings.repeat) {
+                    mpv.playlistModel.setPlayingVideo(0)
+                    mpv.loadFile(mpv.playlistModel.getPath(0), updateLastPlayedFile)
+                }
+            }
         }
-    }
-    property Action brightnessDownAction: Action {
-        id: brightnessDownAction
-        property var qaction: actionsManager.action("brightnessDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["brightnessDownAction"] = brightnessDownAction
-
-        onTriggered: {
-            const brightness = parseInt(mpv.getProperty("brightness")) - 1
-            mpv.setProperty("brightness", `${brightness}`)
-            osd.message(i18n("Brightness: %1", brightness))
+        onPlayPreviousAction: {
+            if (mpv.playlistModel.getPlayingVideo() !== 0) {
+                const previousFileRow = mpv.playlistModel.getPlayingVideo() - 1
+                const previousFile = mpv.playlistModel.getPath(previousFileRow)
+                const updateLastPlayedFile = !playList.isYouTubePlaylist
+                mpv.playlistModel.setPlayingVideo(previousFileRow)
+                mpv.loadFile(previousFile, updateLastPlayedFile)
+            }
         }
-    }
-    property Action brightnessResetAction: Action {
-        id: brightnessResetAction
-        property var qaction: actionsManager.action("brightnessReset")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["brightnessResetAction"] = brightnessResetAction
-
-        onTriggered: {
-            mpv.setProperty("brightness", `0`)
-            osd.message(i18n("Brightness: 0"))
+        onQuitApplicationAction: {
+            mpv.handleTimePosition()
+            Qt.quit()
         }
-    }
-    property Action gammaUpAction: Action {
-        id: gammaUpAction
-        property var qaction: actionsManager.action("gammaUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["gammaUpAction"] = gammaUpAction
+        onRestartPlaybackAction: mpv.command(["seek", 0, "absolute"])
 
-        onTriggered: {
-            const gamma = parseInt(mpv.getProperty("gamma")) + 1
-            mpv.setProperty("gamma", `${gamma}`)
-            osd.message(i18n("Gamma: %1", gamma))
+        onSeekForwardSmallAction: mpv.command(["seek", GeneralSettings.seekSmallStep, "exact"])
+
+        onSeekBackwardSmallAction: mpv.command(["seek", -GeneralSettings.seekSmallStep, "exact"])
+
+        onSeekForwardMediumAction: mpv.command(["seek", GeneralSettings.seekMediumStep, "exact"])
+
+        onSeekBackwardMediumAction: mpv.command(["seek", -GeneralSettings.seekMediumStep, "exact"])
+
+        onSeekForwardBigAction: mpv.command(["seek", GeneralSettings.seekBigStep, "exact"])
+
+        onSeekBackwardBigAction: mpv.command(["seek", -GeneralSettings.seekBigStep, "exact"])
+
+        onSeekNextChapterAction: {
+            const chapters = mpv.getProperty("chapter-list")
+            const currentChapter = mpv.getProperty("chapter")
+            const nextChapter = currentChapter + 1
+            if (nextChapter === chapters.length) {
+                actionsModel.signalEmitter("playNextAction")
+                return
+            }
+            mpv.command(["add", "chapter", "1"])
         }
-    }
-    property Action gammaDownAction: Action {
-        id: gammaDownAction
-        property var qaction: actionsManager.action("gammaDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["gammaDownAction"] = gammaDownAction
+        onSeekPreviousChapterAction: mpv.command(["add", "chapter", "-1"])
 
-        onTriggered: {
-            const gamma = parseInt(mpv.getProperty("gamma")) - 1
-            mpv.setProperty("gamma", `${gamma}`)
-            osd.message(i18n("Gamma: %1", gamma))
+        onSeekNextSubtitleAction: {
+            if (mpv.getProperty("sid") !== false) {
+                mpv.command(["sub-seek", "1"])
+            } else {
+                actionsModel.signalEmitter("seekForwardSmallAction")
+            }
         }
-    }
-    property Action gammaResetAction: Action {
-        id: gammaResetAction
-        property var qaction: actionsManager.action("gammaReset")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["gammaResetAction"] = gammaResetAction
-
-        onTriggered: {
-            mpv.setProperty("gamma", `0`)
-            osd.message(i18n("Gamma: 0"))
+        onSeekPreviousSubtitleAction: {
+            if (mpv.getProperty("sid") !== false) {
+                mpv.command(["sub-seek", "-1"])
+            } else {
+                actionsModel.signalEmitter("seekBackwardSmallAction")
+            }
         }
-    }
-    property Action saturationUpAction: Action {
-        id: saturationUpAction
-        property var qaction: actionsManager.action("saturationUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["saturationUpAction"] = saturationUpAction
-
-        onTriggered: {
-            const saturation = parseInt(mpv.getProperty("saturation")) + 1
-            mpv.setProperty("saturation", `${saturation}`)
-            osd.message(i18n("Saturation: %1", saturation))
+        onSeekToWatchLaterPositionAction: {
+            if (mpv.watchLaterPosition === -1) {
+                return
+            }
+            mpv.command(["seek", mpv.watchLaterPosition - 1, "absolute"])
         }
-    }
-    property Action saturationDownAction: Action {
-        id: saturationDownAction
-        property var qaction: actionsManager.action("saturationDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
 
-        Component.onCompleted: list["saturationDownAction"] = saturationDownAction
-
-        onTriggered: {
-            const saturation = parseInt(mpv.getProperty("saturation")) - 1
-            mpv.setProperty("saturation", `${saturation}`)
-            osd.message(i18n("Saturation: %1", saturation))
-        }
-    }
-    property Action saturationResetAction: Action {
-        id: saturationResetAction
-        property var qaction: actionsManager.action("saturationReset")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["saturationResetAction"] = saturationResetAction
-
-        onTriggered: {
-            mpv.setProperty("saturation", `0`)
-            osd.message(i18n("Saturation: 0"))
-        }
-    }
-
-    property Action zoomInAction: Action {
-        id: zoomInAction
-        property var qaction: actionsManager.action("zoomIn")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["zoomInAction"] = zoomInAction
-
-        onTriggered: {
-            const zoom = mpv.getProperty("video-zoom") + 0.1
-            mpv.setProperty("video-zoom", zoom)
-            osd.message(i18n("Zoom: %1", zoom.toFixed(2)))
-        }
-    }
-
-    property Action zoomOutAction: Action {
-        id: zoomOutAction
-        property var qaction: actionsManager.action("zoomOut")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["zoomOutAction"] = zoomOutAction
-
-        onTriggered: {
-            const zoom = mpv.getProperty("video-zoom") - 0.1
-            mpv.setProperty("video-zoom", zoom)
-            osd.message(i18n("Zoom: %1", zoom.toFixed(2)))
-        }
-    }
-    property Action zoomResetAction: Action {
-        id: zoomResetAction
-        property var qaction: actionsManager.action("zoomReset")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["zoomResetAction"] = zoomResetAction
-
-        onTriggered: {
-            mpv.setProperty("video-zoom", 0)
-            osd.message(i18n("Zoom: 0"))
-        }
-    }
-
-
-    property Action videoPanXLeftAction: Action {
-        id: videoPanXLeftAction
-        property var qaction: actionsManager.action("videoPanXLeft")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["videoPanXLeftAction"] = videoPanXLeftAction
-
-        onTriggered: {
-            const pan = mpv.getProperty("video-pan-x") - 0.01
-            mpv.setProperty("video-pan-x", pan)
-            osd.message(i18n("Video pan x: %1", pan.toFixed(2)))
-        }
-    }
-    property Action videoPanXRightAction: Action {
-        id: videoPanXRightAction
-        property var qaction: actionsManager.action("videoPanXRight")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["videoPanXRightAction"] = videoPanXRightAction
-
-        onTriggered: {
-            const pan = mpv.getProperty("video-pan-x") + 0.01
-            mpv.setProperty("video-pan-x", pan)
-            osd.message(i18n("Video pan x: %1", pan.toFixed(2)))
-        }
-    }
-    property Action videoPanYUpAction: Action {
-        id: videoPanYUpAction
-        property var qaction: actionsManager.action("videoPanYUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["videoPanYUpAction"] = videoPanYUpAction
-
-        onTriggered: {
-            const pan = mpv.getProperty("video-pan-y") - 0.01
-            mpv.setProperty("video-pan-y", pan)
-            osd.message(i18n("Video pan y: %1", pan.toFixed(2)))
-        }
-    }
-    property Action videoPanYDownAction: Action {
-        id: videoPanYDownAction
-        property var qaction: actionsManager.action("videoPanYDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["videoPanYDownAction"] = videoPanYDownAction
-
-        onTriggered: {
-            const pan = mpv.getProperty("video-pan-y") + 0.01
-            mpv.setProperty("video-pan-y", pan)
-            osd.message(i18n("Video pan y: %1", pan.toFixed(2)))
-        }
-    }
-
-    property Action toggleFullscreenAction: Action {
-        id: toggleFullscreenAction
-        property var qaction: actionsManager.action("toggleFullscreen")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["toggleFullscreenAction"] = toggleFullscreenAction
-
-        onTriggered: {
-            window.toggleFullScreen()
-        }
-    }
-
-    property Action toggleMenuBarAction: Action {
-        id: toggleMenuBarAction
-        property var qaction: actionsManager.action("toggleMenuBar")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["toggleMenuBarAction"] = toggleMenuBarAction
-
-        onTriggered: {
-            GeneralSettings.showMenuBar = !GeneralSettings.showMenuBar
-            GeneralSettings.save()
-        }
-    }
-
-    property Action toggleHeaderAction: Action {
-        id: toggleHeaderAction
-        property var qaction: actionsManager.action("toggleHeader")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["toggleHeaderAction"] = toggleHeaderAction
-
-        onTriggered: {
-            GeneralSettings.showHeader = !GeneralSettings.showHeader
-            GeneralSettings.save()
-        }
-    }
-
-    property Action screenshotAction: Action {
-        id: screenshotAction
-        property var qaction: actionsManager.action("screenshot")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["screenshotAction"] = screenshotAction
-
-        onTriggered: mpv.command(["screenshot"])
-    }
-
-    property Action setLoopAction: Action {
-        id: setLoopAction
-        property var qaction: actionsManager.action("setLoop")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["setLoopAction"] = setLoopAction
-
-        onTriggered: {
+        onSetLoopAction: {
             var a = mpv.getProperty("ab-loop-a")
             var b = mpv.getProperty("ab-loop-b")
 
@@ -1022,93 +237,203 @@ QtObject {
                 osd.message(i18n("Loop cleared"))
             }
         }
-    }
 
-    property Action increaseSubtitleFontSizeAction: Action {
-        id: increaseSubtitleFontSizeAction
-        property var qaction: actionsManager.action("increaseSubtitleFontSize")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
+        onScreenshotAction: mpv.command(["screenshot"])
 
-        Component.onCompleted: list["increaseSubtitleFontSizeAction"] = increaseSubtitleFontSizeAction
+        onSubtitleQuickenAction: {
+            mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") - 0.1)
+            osd.message(i18n("Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
+        }
 
-        onTriggered: {
+        onSubtitleDelayAction: {
+            mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") + 0.1)
+            osd.message(i18n("Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
+        }
+
+        onSubtitleToggleAction: {
+            const visible = mpv.getProperty("sub-visibility")
+            const message = visible ? i18n("Subtitles off") : i18n("Subtitles on")
+            mpv.setProperty("sub-visibility", !visible)
+            osd.message(message)
+        }
+
+        onSubtitleCycleUpAction: {
+            mpv.command(["cycle", "sid", "up"])
+            const currentTrackId = mpv.getProperty("sid")
+            if (currentTrackId === false) {
+                osd.message(i18n("Subtitle: None"))
+            } else {
+                const tracks = mpv.getProperty("track-list")
+                const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
+                osd.message(i18n("Subtitle: %1 %2", currentTrackId, track.lang))
+            }
+        }
+
+        onSubtitleCycleDownAction: {
+            mpv.command(["cycle", "sid", "down"])
+            const currentTrackId = mpv.getProperty("sid")
+            if (currentTrackId === false) {
+                osd.message(i18n("Subtitle: None"))
+            } else {
+                const tracks = mpv.getProperty("track-list")
+                const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
+                osd.message(i18n("Subtitle: %1 %2", currentTrackId, track.lang))
+            }
+        }
+
+        onSubtitleIncreaseFontSizeAction: {
             mpv.command(["add", "sub-scale", "+0.1"])
             osd.message(i18n("Subtitle scale: %1", mpv.getProperty("sub-scale").toFixed(1)))
         }
-    }
 
-    property Action decreaseSubtitleFontSizeAction: Action {
-        id: decreaseSubtitleFontSizeAction
-        property var qaction: actionsManager.action("decreaseSubtitleFontSize")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["decreaseSubtitleFontSizeAction"] = decreaseSubtitleFontSizeAction
-
-        onTriggered: {
+        onSubtitleDecreaseFontSizeAction: {
             mpv.command(["add", "sub-scale", "-0.1"])
             osd.message(i18n("Subtitle scale: %1", mpv.getProperty("sub-scale").toFixed(1)))
         }
-    }
 
-    property Action subtitlePositionUpAction: Action {
-        id: subtitlePositionUpAction
-        property var qaction: actionsManager.action("subtitlePositionUp")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
+        onSubtitleMoveUpAction: mpv.command(["add", "sub-pos", "-1"])
 
-        Component.onCompleted: list["subtitlePositionUpAction"] = subtitlePositionUpAction
+        onSubtitleMoveDownAction: mpv.command(["add", "sub-pos", "+1"])
 
-        onTriggered: {
-            mpv.command(["add", "sub-pos", "-1"])
-        }
-    }
-
-    property Action subtitlePositionDownAction: Action {
-        id: subtitlePositionDownAction
-        property var qaction: actionsManager.action("subtitlePositionDown")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["subtitlePositionDownAction"] = subtitlePositionDownAction
-
-        onTriggered: {
-            mpv.command(["add", "sub-pos", "+1"])
-        }
-    }
-
-    property Action toggleDeinterlacingAction: Action {
-        id: toggleDeinterlacingAction
-        property var qaction: actionsManager.action("toggleDeinterlacing")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
-
-        Component.onCompleted: list["toggleDeinterlacingAction"] = toggleDeinterlacingAction
-
-        onTriggered: {
+        onToggleDeinterlacingAction: {
             mpv.setProperty("deinterlace", !mpv.getProperty("deinterlace"))
             osd.message(i18n("Deinterlace: %1", mpv.getProperty("deinterlace")))
         }
-    }
 
-    property Action exitFullscreenAction: Action {
-        id: exitFullscreenAction
-        property var qaction: actionsManager.action("exitFullscreen")
-        text: qaction.text
-        icon.name: qaction.iconName()
-        shortcut: qaction.shortcutName
+        onToggleFullscreenAction: window.toggleFullScreen()
 
-        Component.onCompleted: list["exitFullscreenAction"] = exitFullscreenAction
+        onToggleMenuBarAction: {
+            GeneralSettings.showMenuBar = !GeneralSettings.showMenuBar
+            GeneralSettings.save()
+        }
 
-        onTriggered: {
-            window.exitFullscreen()
-            playList.scrollPositionTimer.start()
+        onToggleHeaderAction: {
+            GeneralSettings.showHeader = !GeneralSettings.showHeader
+            GeneralSettings.save()
+        }
+
+        onTogglePlaylistAction: {
+            if (playList.state === "visible") {
+                playList.state = "hidden"
+            } else {
+                playList.state = "visible"
+            }
+        }
+
+        onVideoPanXLeftAction: {
+            const pan = mpv.getProperty("video-pan-x") - 0.01
+            mpv.setProperty("video-pan-x", pan)
+        }
+
+        onVideoPanXRightAction: {
+            const pan = mpv.getProperty("video-pan-x") + 0.01
+            mpv.setProperty("video-pan-x", pan)
+        }
+
+        onVideoPanYUpAction: {
+            const pan = mpv.getProperty("video-pan-y") - 0.01
+            mpv.setProperty("video-pan-y", pan)
+        }
+
+        onVideoPanYDownAction: {
+            const pan = mpv.getProperty("video-pan-y") + 0.01
+            mpv.setProperty("video-pan-y", pan)
+        }
+
+        onVolumeUpAction: {
+            mpv.command(["add", "volume", GeneralSettings.volumeStep])
+            osd.message(i18n("Volume: %1", parseInt(mpv.getProperty("volume"))))
+        }
+
+        onVolumeDownAction: {
+            mpv.command(["add", "volume", -GeneralSettings.volumeStep])
+            osd.message(i18n("Volume: %1", parseInt(mpv.getProperty("volume"))))
+        }
+
+        onZoomInAction: {
+            const zoom = mpv.getProperty("video-zoom") + 0.1
+            mpv.setProperty("video-zoom", zoom)
+            osd.message(i18n("Zoom: %1", zoom.toFixed(2)))
+        }
+
+        onZoomOutAction: {
+            const zoom = mpv.getProperty("video-zoom") - 0.1
+            mpv.setProperty("video-zoom", zoom)
+            osd.message(i18n("Zoom: %1", zoom.toFixed(2)))
+        }
+
+        onZoomResetAction: {
+            mpv.setProperty("video-zoom", 0)
+            osd.message(i18n("Zoom: 0"))
+        }
+
+
+        onContrastUpAction: {
+            const contrast = parseInt(mpv.getProperty("contrast")) + 1
+            mpv.setProperty("contrast", `${contrast}`)
+            osd.message(i18n("Contrast: %1", contrast))
+        }
+
+        onContrastDownAction: {
+            const contrast = parseInt(mpv.getProperty("contrast")) - 1
+            mpv.setProperty("contrast", `${contrast}`)
+            osd.message(i18n("Contrast: %1", contrast))
+        }
+
+        onContrastResetAction: {
+            mpv.setProperty("contrast", 0)
+            osd.message(i18n("Contrast: 0"))
+        }
+
+        onBrightnessUpAction: {
+            const brightness = parseInt(mpv.getProperty("brightness")) + 1
+            mpv.setProperty("brightness", `${brightness}`)
+            osd.message(i18n("Brightness: %1", brightness))
+        }
+
+        onBrightnessDownAction: {
+            const brightness = parseInt(mpv.getProperty("brightness")) - 1
+            mpv.setProperty("brightness", `${brightness}`)
+            osd.message(i18n("Brightness: %1", brightness))
+        }
+
+        onBrightnessResetAction: {
+            mpv.setProperty("brightness", 0)
+            osd.message(i18n("Brightness: 0"))
+        }
+
+        onGammaUpAction: {
+            const gamma = parseInt(mpv.getProperty("gamma")) + 1
+            mpv.setProperty("gamma", `${gamma}`)
+            osd.message(i18n("Gamma: %1", gamma))
+        }
+
+        onGammaDownAction: {
+            const gamma = parseInt(mpv.getProperty("gamma")) - 1
+            mpv.setProperty("gamma", `${gamma}`)
+            osd.message(i18n("Gamma: %1", gamma))
+        }
+
+        onGammaResetAction: {
+            mpv.setProperty("gamma", 0)
+            osd.message(i18n("Gamma: 0"))
+        }
+
+        onSaturationUpAction: {
+            const saturation = parseInt(mpv.getProperty("saturation")) + 1
+            mpv.setProperty("saturation", `${saturation}`)
+            osd.message(i18n("Saturation: %1", saturation))
+        }
+
+        onSaturationDownAction: {
+            const saturation = parseInt(mpv.getProperty("saturation")) - 1
+            mpv.setProperty("saturation", `${saturation}`)
+            osd.message(i18n("Saturation: %1", saturation))
+        }
+
+        onSaturationResetAction: {
+            mpv.setProperty("saturation", 0)
+            osd.message(i18n("Saturation: 0"))
         }
     }
 }

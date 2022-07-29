@@ -43,6 +43,7 @@ MpvItem::MpvItem(QQuickItem * parent)
     mpv_observe_property(m_mpv, 0, "duration",       MPV_FORMAT_DOUBLE);
     mpv_observe_property(m_mpv, 0, "pause",          MPV_FORMAT_FLAG);
     mpv_observe_property(m_mpv, 0, "volume",         MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "mute",           MPV_FORMAT_FLAG);
     mpv_observe_property(m_mpv, 0, "aid",            MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "sid",            MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "chapter",        MPV_FORMAT_INT64);
@@ -206,6 +207,20 @@ void MpvItem::setVolume(int value)
     }
     setProperty("volume", value);
     Q_EMIT volumeChanged();
+}
+
+bool MpvItem::mute()
+{
+    return getProperty("mute").toBool();
+}
+
+void MpvItem::setMute(bool value)
+{
+    if (value == mute()) {
+        return;
+    }
+    setProperty("mute", value);
+    emit muteChanged();
 }
 
 int MpvItem::chapter()

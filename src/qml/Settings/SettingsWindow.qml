@@ -16,7 +16,7 @@ import org.kde.haruna 1.0 as Haruna
 Kirigami.ApplicationWindow {
     id: root
 
-    property int page: SettingsWindow.Page.General
+    property int page: SettingsWindow.Page.Shortcuts
     enum Page {
         General = 0,
         Playback,
@@ -25,6 +25,7 @@ Kirigami.ApplicationWindow {
         Subtitles,
         Playlist,
         Mouse,
+        Shortcuts,
         CusomCommands,
         About
     }
@@ -116,6 +117,14 @@ Kirigami.ApplicationWindow {
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
                         applicationWindow().pageStack.push("qrc:/MouseSettings.qml")
+                    }
+                },
+                Kirigami.Action {
+                    text: i18n("Shortcuts")
+                    icon.name: "configure-shortcuts"
+                    onTriggered: {
+                        applicationWindow().pageStack.removePage(1)
+                        applicationWindow().pageStack.push("qrc:/ShortcutsSettings.qml")
                     }
                 },
                 Kirigami.Action {

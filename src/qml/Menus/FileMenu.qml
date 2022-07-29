@@ -14,7 +14,7 @@ Menu {
 
     title: i18n("&File")
 
-    MenuItem { action: actions.openAction }
+    MenuItem { action: actions.openFileAction }
     MenuItem { action: actions.openUrlAction }
     MenuItem { action: actions.loadLastPlayedFileAction }
 

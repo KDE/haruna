@@ -58,7 +58,7 @@ ToolBar {
             id: playPauseButton
             action: actions.playPauseAction
             text: ""
-            icon.name: "media-playback-start"
+            icon.name: mpv.pause ? "media-playback-start" : "media-playback-pause"
             focusPolicy: Qt.NoFocus
             enabled: mpv.duration !== 0
 
@@ -110,6 +110,7 @@ ToolBar {
         ToolButton {
             id: mute
             action: actions.muteAction
+            icon.name: mpv.mute || mpv.volume === 0 ? "player-volume-muted" : "player-volume"
             text: ""
             focusPolicy: Qt.NoFocus
 

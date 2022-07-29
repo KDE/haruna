@@ -20,6 +20,7 @@ target_sources(haruna
     haction.h haction.cpp
     lockmanager.h lockmanager.cpp
     main.cpp
+    models/actionsmodel.h models/actionsmodel.cpp
     models/customcommandsmodel.h models/customcommandsmodel.cpp
     models/recentfilesmodel.h models/recentfilesmodel.cpp
     models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp

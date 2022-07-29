@@ -37,7 +37,7 @@ ToolBar {
         }
 
         ToolButton {
-            action: actions.openAction
+            action: actions.openFileAction
             focusPolicy: Qt.NoFocus
         }
 
@@ -137,7 +137,7 @@ ToolBar {
         }
 
         ToolButton {
-            action: actions.configureAction
+            action: actions["configureAction"]
             focusPolicy: Qt.NoFocus
         }
     }
