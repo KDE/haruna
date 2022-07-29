@@ -16,7 +16,6 @@ target_sources(haruna
     application.h application.cpp
     framedecoder.h framedecoder.cpp
     global.h global.cpp
-    haction.h haction.cpp
     lockmanager.h lockmanager.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp

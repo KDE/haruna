@@ -198,7 +198,6 @@ void Application::registerQmlTypes()
     qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
     qRegisterMetaType<PlayListModel*>();
     qRegisterMetaType<PlayListItem*>();
-    qRegisterMetaType<QAction*>();
     qRegisterMetaType<TracksModel*>();
     qRegisterMetaType<KFileMetaData::PropertyMap>("KFileMetaData::PropertyMap");
 }

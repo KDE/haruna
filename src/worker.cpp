@@ -13,6 +13,7 @@
 #include <QDebug>
 #include <QDir>
 #include <QFileInfo>
+#include <QImage>
 #include <QThread>
 
 #include <KConfig>

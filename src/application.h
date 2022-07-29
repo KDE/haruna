@@ -8,7 +8,6 @@
 #define APPLICATION_H
 
 #include <QAbstractItemModel>
-#include <QAction>
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QObject>
@@ -19,7 +18,6 @@
 class KActionCollection;
 class KConfigDialog;
 class KColorSchemeManager;
-class QAction;
 
 class ApplicationEventFilter : public QObject
 {
