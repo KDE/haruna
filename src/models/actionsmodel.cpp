@@ -701,3 +701,9 @@ void ProxyActionsModel::setTypeFilter(const QString &regExp)
     typeRegExp.setPattern(regExp);
     invalidateFilter();
 }
+
+bool ProxyActionsModel::saveShortcut(int row, const QVariant &shortcut)
+{
+    auto actionsModel = qobject_cast<ActionsModel*>(sourceModel());
+    return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), shortcut);
+}

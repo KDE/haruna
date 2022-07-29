@@ -35,6 +35,7 @@ public:
 public slots:
     void setNameFilter(const QString& regExp);
     void setTypeFilter(const QString& regExp);
+    bool saveShortcut(int row, const QVariant &shortcut);
 
 private:
     QRegExp nameRegExp;

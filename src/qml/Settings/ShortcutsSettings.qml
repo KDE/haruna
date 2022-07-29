@@ -66,7 +66,7 @@ SettingsBasePage {
 
                 onKeySequenceChanged: {
                     if (keySequence !== model.shortcut) {
-                        if (!actionsModel.saveShortcut(model.index, keySequence)) {
+                        if (!proxyActionsModel.saveShortcut(model.index, keySequence)) {
                             keySequence = oldKeySequence
                         }
                     }
