@@ -24,6 +24,92 @@ SettingsBasePage {
 
         columns: 2
 
+        // Seek Small Step
+        Label {
+            text: i18n("Seek small step")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        Item {
+            height: seekSmallStep.height
+            SpinBox {
+                id: seekSmallStep
+                editable: true
+                from: 0
+                to: 100
+                value: GeneralSettings.seekSmallStep
+                onValueChanged: {
+                    GeneralSettings.seekSmallStep = seekSmallStep.value
+                    GeneralSettings.save()
+                }
+            }
+            Layout.fillWidth: true
+        }
+
+        // Seek Medium Step
+        Label {
+            text: i18n("Seek medium step")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        Item {
+            height: seekMediumStep.height
+            RowLayout {
+
+                SpinBox {
+                    id: seekMediumStep
+                    editable: true
+                    from: 0
+                    to: 100
+                    value: GeneralSettings.seekMediumStep
+                    onValueChanged: {
+                        GeneralSettings.seekMediumStep = seekMediumStep.value
+                        GeneralSettings.save()
+                    }
+                }
+
+                ToolButton {
+                    icon.name: "documentinfo"
+                    checkable: true
+                    checked: false
+
+                    Layout.preferredHeight: seekMediumStep.height
+
+                    ToolTip {
+                        text: i18n("This is also used for mouse wheel seeking, when mouse is over the progress bar")
+                        visible: parent.checked
+                        delay: 0
+                        timeout: -1
+                        closePolicy: Popup.NoAutoClose
+                    }
+                }
+            }
+
+            Layout.fillWidth: true
+        }
+
+        // Seek Big Step
+        Label {
+            text: i18n("Seek big step")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        Item {
+            height: seekBigStep.height
+            SpinBox {
+                id: seekBigStep
+                editable: true
+                from: 0
+                to: 100
+                value: GeneralSettings.seekBigStep
+                onValueChanged: {
+                    GeneralSettings.seekBigStep = seekBigStep.value
+                    GeneralSettings.save()
+                }
+            }
+            Layout.fillWidth: true
+        }
+
         Item { width: 1 }
 
         CheckBox {
@@ -37,7 +123,6 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
         Item { width: 1 }
 
         CheckBox {
@@ -73,7 +158,6 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
         Item { width: 1 }
 
         CheckBox {
@@ -90,8 +174,6 @@ SettingsBasePage {
                 text: i18n("Pauses the player while the window is minimized, playback resumes when restored.")
             }
         }
-
-        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
 
         Label {
             text: i18n("Hardware decoding")
@@ -159,8 +241,6 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
-
         Label {
             text: i18n("Remember time position")
             Layout.alignment: Qt.AlignRight
@@ -221,8 +301,6 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1; height: Kirigami.Units.largeSpacing; Layout.columnSpan: 2 }
-
         Label {
             text: i18n("Skip chapters")
             Layout.alignment: Qt.AlignRight
@@ -239,6 +317,7 @@ SettingsBasePage {
         }
 
         Item { width: 1 }
+
         CheckBox {
             text: i18n("Show osd message on skip")
             enabled: skipChaptersCheckBox.checked
@@ -346,6 +425,7 @@ SettingsBasePage {
         }
 
         Item { width: 1 }
+
         TextField {
             id: ytdlFormatField
             text: PlaybackSettings.ytdlFormat
@@ -370,6 +450,7 @@ SettingsBasePage {
         }
 
         Item { width: 1 }
+
         TextEdit {
             text: i18n("Leave empty for default value: <i>bestvideo+bestaudio/best</i>")
             color: Kirigami.Theme.textColor
