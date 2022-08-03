@@ -15,6 +15,7 @@
 #include <KAboutData>
 #include <KSharedConfig>
 
+class QQuickWindow;
 class KActionCollection;
 class KConfigDialog;
 class KColorSchemeManager;
@@ -52,6 +53,8 @@ public:
     int run();
     QUrl configFilePath();
     QUrl configFolderPath();
+    Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
+    Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE bool configFolderExists();
     Q_INVOKABLE QString getDefaultSubColor();
     Q_INVOKABLE QString getDefaultSubShadowColor();

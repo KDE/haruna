@@ -216,11 +216,25 @@ SettingsBasePage {
                 }
             }
         }
+
+        Item { width: 1 }
+
+        CheckBox {
+            text: i18n("Remember window size and position")
+            checked: GeneralSettings.rememberWindowGeometry
+            onCheckedChanged: {
+                GeneralSettings.rememberWindowGeometry = checked
+                GeneralSettings.save()
+            }
+        }
+
         SettingsHeader {
             text: i18n("Interface")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
+
+        Item { width: 1 }
 
         CheckBox {
             text: i18n("Show Menubar")
@@ -229,9 +243,9 @@ SettingsBasePage {
                 GeneralSettings.showMenuBar = checked
                 GeneralSettings.save()
             }
-            Layout.row: 8
-            Layout.column: 1
         }
+
+        Item { width: 1 }
 
         CheckBox {
             text: i18n("Show Toolbar")
@@ -240,9 +254,9 @@ SettingsBasePage {
                 GeneralSettings.showHeader = checked
                 GeneralSettings.save()
             }
-            Layout.row: 9
-            Layout.column: 1
         }
+
+        Item { width: 1 }
 
         CheckBox {
             text: i18n("Show chapter markers")
@@ -251,8 +265,6 @@ SettingsBasePage {
                 GeneralSettings.showChapterMarkers = checked
                 GeneralSettings.save()
             }
-            Layout.row: 10
-            Layout.column: 1
         }
 
         Label {

@@ -61,12 +61,13 @@
 #include <KFileMetaData/Properties>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#include <KWindowConfig>
 
 static QApplication *createApplication(int &argc, char **argv, const QString &applicationName)
 {
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-    QApplication::setOrganizationName("kde");
+    QApplication::setOrganizationName("KDE");
     QApplication::setApplicationName(applicationName);
     QApplication::setOrganizationDomain("kde.org");
     QApplication::setApplicationDisplayName("Haruna - Video Player");
@@ -169,7 +170,7 @@ void Application::setupAboutData()
     m_aboutData.setCopyrightStatement(i18n("(c) 2019-2021"));
     m_aboutData.setHomepage(QStringLiteral("https://invent.kde.org/multimedia/haruna"));
     m_aboutData.setBugAddress(QStringLiteral("https://bugs.kde.org/enter_bug.cgi?product=Haruna").toUtf8());
-    m_aboutData.setComponentName(QStringLiteral("generic"));
+    m_aboutData.setComponentName(QStringLiteral("haruna"));
     m_aboutData.setDesktopFileName("org.kde.haruna");
 
     m_aboutData.addAuthor(i18n("George Florea Bănuș"),
@@ -260,6 +261,29 @@ void Application::setupQmlContextProperties()
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
     m_engine->rootContext()->setContextProperty(QStringLiteral("harunaAboutData"),
                                                 QVariant::fromValue(KAboutData::applicationData()));
+}
+
+void Application::restoreWindowGeometry(QQuickWindow *window) const
+{
+    if(!GeneralSettings::rememberWindowGeometry()) {
+        return;
+    }
+    KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
+    KConfigGroup windowGroup(&dataResource, QStringLiteral("Window"));
+    KWindowConfig::restoreWindowSize(window, windowGroup);
+    KWindowConfig::restoreWindowPosition(window, windowGroup);
+}
+
+void Application::saveWindowGeometry(QQuickWindow *window) const
+{
+    if(!GeneralSettings::rememberWindowGeometry()) {
+        return;
+    }
+    KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
+    KConfigGroup windowGroup(&dataResource, QStringLiteral("Window"));
+    KWindowConfig::saveWindowPosition(window, windowGroup);
+    KWindowConfig::saveWindowSize(window, windowGroup);
+    dataResource.sync();
 }
 
 QUrl Application::configFilePath()

@@ -32,6 +32,12 @@ Kirigami.ApplicationWindow {
     minimumHeight: 450
     color: Kirigami.Theme.backgroundColor
 
+    onClosing: app.saveWindowGeometry(window)
+    onWidthChanged: saveWindowGeometryTimer.restart()
+    onHeightChanged: saveWindowGeometryTimer.restart()
+    onXChanged: saveWindowGeometryTimer.restart()
+    onYChanged: saveWindowGeometryTimer.restart()
+
     onVisibilityChanged: {
         if (PlaybackSettings.pauseWhileMinimized) {
             if (visibility === Window.Minimized) {
@@ -234,7 +240,20 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    Component.onCompleted: app.activateColorScheme(GeneralSettings.colorScheme)
+    // This timer allows to batch update the window size change to reduce
+    // the io load and also work around the fact that x/y/width/height are
+    // changed when loading the page and overwrite the saved geometry from
+    // the previous session.
+    Timer {
+        id: saveWindowGeometryTimer
+        interval: 1000
+        onTriggered: app.saveWindowGeometry(window)
+    }
+
+    Component.onCompleted: {
+        app.restoreWindowGeometry(window)
+        app.activateColorScheme(GeneralSettings.colorScheme)
+    }
 
     function openFile(path, startPlayback, loadSiblings, addToRecentFiles = false) {
 
