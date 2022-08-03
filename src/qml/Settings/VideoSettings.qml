@@ -84,13 +84,14 @@ SettingsBasePage {
             TextField {
                 id: screenshotTemplate
                 text: VideoSettings.screenshotTemplate
+                width: parent.width
                 onEditingFinished: {
                     VideoSettings.screenshotTemplate = text
                     VideoSettings.save()
                     mpv.setProperty("screenshot-template", VideoSettings.screenshotTemplate)
                 }
-                Layout.fillWidth: true
             }
+            Layout.fillWidth: true
         }
 
         SettingsHeader {
