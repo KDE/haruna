@@ -27,6 +27,7 @@ SettingsBasePage {
             text: i18n("Preferred language")
             Layout.alignment: Qt.AlignRight
         }
+
         TextField {
             text: AudioSettings.preferredLanguage
             placeholderText: i18n("eng,ger etc.")
@@ -42,11 +43,11 @@ SettingsBasePage {
             }
         }
 
-
         Label {
             text: i18n("Preferred track")
             Layout.alignment: Qt.AlignRight
         }
+
         SpinBox {
             from: 0
             to: 100
@@ -61,6 +62,30 @@ SettingsBasePage {
                     mpv.setProperty("aid", value)
                 }
             }
+        }
+
+        // Volume Step
+        Label {
+            text: i18n("Volume step")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        Item {
+            height: volumeStep.height
+            SpinBox {
+                id: volumeStep
+                editable: true
+                from: 0
+                to: 100
+                value: GeneralSettings.volumeStep
+                onValueChanged: {
+                    if (root.visible) {
+                        GeneralSettings.volumeStep = volumeStep.value
+                        GeneralSettings.save()
+                    }
+                }
+            }
+            Layout.fillWidth: true
         }
 
         Item {

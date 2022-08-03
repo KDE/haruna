@@ -56,30 +56,6 @@ SettingsBasePage {
             Layout.fillWidth: true
         }
 
-        // Volume Step
-        Label {
-            text: i18n("Volume step")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        Item {
-            height: volumeStep.height
-            SpinBox {
-                id: volumeStep
-                editable: true
-                from: 0
-                to: 100
-                value: GeneralSettings.volumeStep
-                onValueChanged: {
-                    if (root.visible) {
-                        GeneralSettings.volumeStep = volumeStep.value
-                        GeneralSettings.save()
-                    }
-                }
-            }
-            Layout.fillWidth: true
-        }
-
         Label {
             text: i18n("File dialog location")
             Layout.alignment: Qt.AlignRight
