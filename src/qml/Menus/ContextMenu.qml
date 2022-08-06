@@ -17,14 +17,14 @@ Menu {
     MenuItem { action: appActions.playPreviousAction }
     Menu {
         title: i18n("Playback speed")
-        MenuItem { action: appActions.increasePlayBackSpeedAction }
-        MenuItem { action: appActions.decreasePlayBackSpeedAction }
-        MenuItem { action: appActions.resetPlayBackSpeedAction }
+        MenuItem { action: appActions.playbackSpeedIncreaseAction }
+        MenuItem { action: appActions.playbackSpeedDecreaseAction }
+        MenuItem { action: appActions.playbackSpeedResetAction }
     }
 
     MenuSeparator {}
 
-    MenuItem { action: appActions.openAction }
+    MenuItem { action: appActions.openFileAction }
     MenuItem { action: appActions.openUrlAction }
 
     MenuSeparator {}
