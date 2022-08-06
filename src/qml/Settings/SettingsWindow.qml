@@ -41,19 +41,6 @@ Kirigami.ApplicationWindow {
         topPadding: 0
         Kirigami.Theme.colorSet: Kirigami.Theme.View
 
-        footer: ToolBar {
-            RowLayout {
-                anchors.fill: parent
-
-                ToolButton {
-                    text: i18n("Configure shortcuts")
-                    icon.name: "configure-shortcuts"
-                    onClicked: appActions.configureShortcutsAction.trigger()
-                    Layout.fillWidth: true
-                }
-            }
-        }
-
         ListView {
             id: settingsPagesList
 
