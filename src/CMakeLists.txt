@@ -73,7 +73,6 @@ target_link_libraries(haruna PRIVATE
     KF5::KIONTLM
     KF5::Kirigami2
     KF5::ConfigWidgets
-    KF5::XmlGui
 
     Libmpv::Libmpv
     ${AVUTIL_LIBRARIES}

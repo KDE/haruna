@@ -67,7 +67,6 @@ these are just some features that set Haruna apart from others players
 - KF5IconThemes
 - KF5KIO
 - KF5Kirigami2
-- KF5XmlGui
 - KF5DocTools
 
 ### Runtime
