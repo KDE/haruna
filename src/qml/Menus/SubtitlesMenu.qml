@@ -17,11 +17,10 @@ Menu {
         id: primarySubtitleMenu
 
         title: i18n("Primary Subtitle")
-        onOpened: primarySubtitleMenuInstantiator.model = mpv.subtitleTracksModel
 
         Instantiator {
             id: primarySubtitleMenuInstantiator
-            model: 0
+            model: mpv.subtitleTracksModel
             onObjectAdded: primarySubtitleMenu.insertItem( index, object )
             onObjectRemoved: primarySubtitleMenu.removeItem( object )
             delegate: MenuItem {
@@ -38,11 +37,10 @@ Menu {
         id: secondarySubtitleMenu
 
         title: i18n("Secondary Subtitle")
-        onOpened: secondarySubtitleMenuInstantiator.model = mpv.subtitleTracksModel
 
         Instantiator {
             id: secondarySubtitleMenuInstantiator
-            model: 0
+            model: mpv.subtitleTracksModel
             onObjectAdded: secondarySubtitleMenu.insertItem( index, object )
             onObjectRemoved: secondarySubtitleMenu.removeItem( object )
             delegate: MenuItem {

@@ -20,7 +20,7 @@ Menu {
 
         Instantiator {
             id: audioMenuInstantiator
-            model: 0
+            model: mpv.audioTracksModel
             onObjectAdded: audioMenu.insertItem( index, object )
             onObjectRemoved: audioMenu.removeItem( object )
             delegate: MenuItem {
@@ -29,12 +29,6 @@ Menu {
                 checked: model.id === mpv.audioId
                 text: model.text
                 onTriggered: mpv.audioId = model.id
-            }
-        }
-        Connections {
-            target: mpv
-            onFileLoaded: {
-                audioMenuInstantiator.model = mpv.audioTracksModel
             }
         }
     }
