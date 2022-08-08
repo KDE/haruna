@@ -141,7 +141,6 @@ signals:
     void youtubePlaylistLoaded();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
-
 private:
     TracksModel *audioTracksModel() const;
     TracksModel *subtitleTracksModel() const;

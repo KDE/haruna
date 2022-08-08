@@ -5,7 +5,6 @@
  */
 
 #include "mpvitem.h"
-#include "mpvrenderer.h"
 #include "application.h"
 #include "audiosettings.h"
 #include "generalsettings.h"
@@ -608,7 +607,6 @@ void MpvItem::saveTimePosition()
     }
 
     auto hash = md5(getProperty("path").toString());
-    auto timePosition = getProperty("time-pos");
     auto configPath = Global::instance()->appConfigDirPath();
     configPath.append("/watch-later/").append(hash);
 
