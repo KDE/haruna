@@ -17,6 +17,7 @@ Menu {
         id: audioMenu
 
         title: i18n("&Primary Track")
+        enabled: mpv.audioTracksModel.rowCount() > 0
 
         Instantiator {
             id: audioMenuInstantiator
