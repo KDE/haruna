@@ -26,8 +26,6 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
-kde_enable_exceptions()
-
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX HARUNA
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/haruna-version.h"

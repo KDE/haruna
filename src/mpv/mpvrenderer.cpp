@@ -98,7 +98,7 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
         };
 
         if (mpv_render_context_create(&m_mpv_core->m_mpv_gl, m_mpv_core->m_mpv, params) < 0) {
-            throw std::runtime_error("failed to initialize mpv GL context");
+            qFatal("failed to initialize mpv GL context");
         }
 
         mpv_render_context_set_update_callback(m_mpv_core->m_mpv_gl, on_mpv_redraw, m_mpv_core);
