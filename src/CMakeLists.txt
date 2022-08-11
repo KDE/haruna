@@ -81,7 +81,7 @@ target_link_libraries(haruna PRIVATE
     ${SWSCALE_LIBRARIES}
 )
 
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     target_link_libraries(haruna PRIVATE Qt5::X11Extras)
 endif ()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

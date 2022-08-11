@@ -33,6 +33,8 @@ ecm_setup_version(${PROJECT_VERSION}
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/haruna-version.h"
 )
 
+set(X11_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
+
 find_package(Qt5Core)
 set_package_properties(Qt5Core PROPERTIES TYPE REQUIRED)
 
@@ -51,7 +53,7 @@ set_package_properties(Qt5Quick PROPERTIES TYPE REQUIRED)
 find_package(Qt5QuickControls2)
 set_package_properties(Qt5QuickControls2 PROPERTIES TYPE REQUIRED)
 
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     find_package(Qt5X11Extras)
     set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
 endif ()
