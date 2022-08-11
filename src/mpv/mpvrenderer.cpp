@@ -9,9 +9,12 @@
 #include <QQuickWindow>
 #include <QOpenGLContext>
 #include <QOpenGLFramebufferObject>
-#include <QX11Info>
 #include <QGuiApplication>
+
+#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
+#include <QtX11Extras/QX11Info>
 #include <qpa/qplatformnativeinterface.h>
+#endif
 
 static void *get_proc_address_mpv(void *ctx, const char *name)
 {
@@ -74,7 +77,9 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
 #else
         mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr};
 #endif
+
         mpv_render_param display{MPV_RENDER_PARAM_INVALID, nullptr};
+#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
         if(QX11Info::isPlatformX11()) {
             display.type = MPV_RENDER_PARAM_X11_DISPLAY;
             display.data = QX11Info::display();
@@ -84,6 +89,7 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
             display.data = (struct wl_display*)QGuiApplication::platformNativeInterface()
                     ->nativeResourceForWindow("display", nullptr);
         }
+#endif
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
             {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &gl_init_params},

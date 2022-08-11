@@ -51,8 +51,10 @@ set_package_properties(Qt5Quick PROPERTIES TYPE REQUIRED)
 find_package(Qt5QuickControls2)
 set_package_properties(Qt5QuickControls2 PROPERTIES TYPE REQUIRED)
 
-find_package(Qt5X11Extras)
-set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
+if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+    find_package(Qt5X11Extras)
+    set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
+endif ()
 
 find_package(Libmpv)
 set_package_properties(Libmpv PROPERTIES TYPE REQUIRED

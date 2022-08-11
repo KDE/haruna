@@ -58,7 +58,6 @@ target_link_libraries(haruna PRIVATE
     Qt5::Qml
     Qt5::Quick
     Qt5::QuickControls2
-    Qt5::X11Extras
 
     KF5::ConfigCore
     KF5::ConfigGui
@@ -82,4 +81,7 @@ target_link_libraries(haruna PRIVATE
     ${SWSCALE_LIBRARIES}
 )
 
+if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+    target_link_libraries(haruna PRIVATE Qt5::X11Extras)
+endif ()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
