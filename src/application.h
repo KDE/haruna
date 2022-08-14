@@ -57,9 +57,6 @@ public:
     Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE bool configFolderExists();
-    Q_INVOKABLE QString getDefaultFontColor();
-    Q_INVOKABLE QString getDefaultSubShadowColor();
-    Q_INVOKABLE QString getDefaultSubBorderColor();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE QString argument(int key);

@@ -88,6 +88,8 @@ SettingsBasePage {
             ComboBox {
                 id: subtitleFont
 
+                property string defaultFamily: "Sans Serif"
+
                 model: app.getFonts()
                 onActivated: {
                     SubtitlesSettings.fontFamily = currentText
@@ -100,7 +102,10 @@ SettingsBasePage {
 
             Button {
                 icon.name: "edit-clear-all"
-                onClicked: subtitleFont.clear()
+                onClicked: {
+                    const index = subtitleFont.find(subtitleFont.defaultFamily)
+                    subtitleFont.currentIndex = index
+                }
             }
         }
 
@@ -165,6 +170,8 @@ SettingsBasePage {
             TextField {
                 id: subtitleColor
 
+                property string defaultColor: "#FFFFFFFF"
+
                 text: SubtitlesSettings.fontColor
                 onTextChanged: {
                     subtitleColorPicker.color = text
@@ -176,7 +183,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "edit-clear-all"
-                onClicked: subtitleColor.text = app.getDefaultFontColor()
+                onClicked: subtitleColor.text = subtitleColor.defaultColor
 
                 ToolTip {
                     text: i18n("Set default value")
@@ -201,6 +208,8 @@ SettingsBasePage {
             TextField {
                 id: shadowColor
 
+                property string defaultColor: "#80F0F0F0"
+
                 text: SubtitlesSettings.shadowColor
                 onTextChanged: {
                     shadowColorPicker.color = text
@@ -212,7 +221,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "edit-clear-all"
-                onClicked: shadowColor.text = app.getDefaultSubShadowColor()
+                onClicked: shadowColor.text = shadowColor.defaultColor
 
                 ToolTip {
                     text: i18n("Set default value")
@@ -259,6 +268,8 @@ SettingsBasePage {
             TextField {
                 id: borderColor
 
+                property string defaultColor: "#FF000000"
+
                 text: SubtitlesSettings.borderColor
                 onTextChanged: {
                     borderColorPicker.color = text
@@ -270,7 +281,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "edit-clear-all"
-                onClicked: borderColor.text = app.getDefaultSubBorderColor()
+                onClicked: borderColor.text = borderColor.defaultColor
 
                 ToolTip {
                     text: i18n("Set default value")

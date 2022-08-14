@@ -307,21 +307,6 @@ bool Application::configFolderExists()
     return fi.exists();
 }
 
-QString Application::getDefaultFontColor()
-{
-    return SubtitlesSettings::self()->defaultFontColorValue();
-}
-
-QString Application::getDefaultSubShadowColor()
-{
-    return SubtitlesSettings::self()->defaultShadowColorValue();
-}
-
-QString Application::getDefaultSubBorderColor()
-{
-    return SubtitlesSettings::self()->defaultBorderColorValue();
-}
-
 QString Application::version()
 {
     return QStringLiteral(HARUNA_VERSION_STRING);
