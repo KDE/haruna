@@ -279,6 +279,33 @@
     </ul>
   </description>
   <releases>
+    <release version="0.9.0" date="2022-08-14">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Refactored the shortcuts configuration, now it's available in the settings window with the other settings, instead of opening another window</li>
+          <li>Hamburger menu now only show a few actions, the rest are available in a submenu</li>
+          <li>When menubar is hidden the hamburger menu will be shown in the header/toolbar and when the header is hidden it's shown in the footer</li>
+          <li>Added a proper context menu for the video</li>
+          <li>Added setting to start playback when resuming playback of a file</li>
+          <li>Added setting to set maximum number of recent files</li>
+          <li>Added option to clear recent files</li>
+          <li>Added setting to restore window size and position</li>
+          <li>Added settings to customize the subtitle font family, size, style (bold, italic), color, shadow color, shadow offset, border color, border width</li>
+          <li>Moved seek settings to playback settings page</li>
+          <li>Moved volume step setting to audio settings page</li>
+          <li>Custom commands that run on startup can be turned off so they are not set on next run</li>
+          <li>In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Toggling menubar and header/toolbar through actions remembers the state on next run</li>
+          <li>Restore time position for youtube videos</li>
+          <li>Improve mpv initialization to allow better hardware decoding support</li>
+          <li>Ytdl-format property can be overwritten by a custom command action</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.8.0" date="2022-04-20">
       <description>
         <p>Features:</p>
