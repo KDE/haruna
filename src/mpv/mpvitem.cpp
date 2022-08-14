@@ -93,6 +93,7 @@ void MpvItem::initProperties()
     setProperty("volume-max", "100");
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
+    setProperty("ytdl-format", PlaybackSettings::ytdlFormat());
 
     setProperty("sub-font", SubtitlesSettings::fontFamily());
     setProperty("sub-font-size", SubtitlesSettings::fontSize());
