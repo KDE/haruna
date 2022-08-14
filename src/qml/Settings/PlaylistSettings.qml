@@ -74,7 +74,7 @@ SettingsBasePage {
             textRole: "display"
             model: ListModel {
                 ListElement { display: "Default"; value: "default" }
-                ListElement { display: "WithThumbnails"; value: "withThumbnails" }
+                ListElement { display: "With thumbnails"; value: "withThumbnails" }
                 ListElement { display: "Compact"; value: "compact" }
             }
             Component.onCompleted: {

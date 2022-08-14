@@ -148,7 +148,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Font Color")
+            text: i18n("Font color")
             Layout.alignment: Qt.AlignRight
         }
 

@@ -52,11 +52,11 @@ SettingsBasePage {
                 key: "middlex2"
             }
             ListElement {
-                label: "ScrollUp"
+                label: "Scroll up"
                 key: "scrollUp"
             }
             ListElement {
-                label: "ScrollDown"
+                label: "Scroll down"
                 key: "scrollDown"
             }
         }

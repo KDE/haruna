@@ -127,7 +127,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Show Menubar")
+            text: i18n("Show menubar")
             checked: GeneralSettings.showMenuBar
             onCheckedChanged: {
                 GeneralSettings.showMenuBar = checked
@@ -138,7 +138,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Show Toolbar")
+            text: i18n("Show toolbar")
             checked: GeneralSettings.showHeader
             onCheckedChanged: {
                 GeneralSettings.showHeader = checked
@@ -200,7 +200,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("GUI Style")
+            text: i18n("GUI style")
             Layout.alignment: Qt.AlignRight
         }
 
