@@ -4,20 +4,53 @@ SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
+<h2>Seek steps</h2>
+<div>
+    <p>How much to seek when triggering the coresponding action. Seek mode is <b>exact</b>
+    <a href="https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]">
+    https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]</a></p>
+</div>
+
+<h2>Open last played file on startup</h2>
+<div>
+    <p>On startup it opens the file that was playing when the application was closed.</p>
+</div>
+
+<h2>Seek to last playback position</h2>
+<div>
+    <p>When opening a file that was played before it will seek to the position it was when playback stopped.</p>
+</div>
+
+<h2>Start playing</h2>
+<div>
+    <p>This applies only when resuming playback (seeking to last playback position)
+    of a file that was played before.</p>
+</div>
+
+<h2>Pause on minimize</h2>
+<div>
+    <p>Pauses the player while the window is minimized, playback resumes when restored.</p>
+</div>
+
 <h2>Hardware decoding</h2>
 <div>
-    <p>It's recommended leave hardware decoding disabled.</p>
-    <p>If you want to enable it read <a href="https://mpv.io/manual/stable/#options-hwdec">https://mpv.io/manual/stable/#options-hwdec</a> to understand which option is best for you.</p>
+    <p>If you enable hardware decoding it's recommended to use the auto-safe or auto options.</p>
+    <p>You can read more about each option here:
+    <a href="https://mpv.io/manual/stable/#options-hwdec">https://mpv.io/manual/stable/#options-hwdec</a>.</p>
+    <p>If you want to use vaapi on X11, you must set the
+    environment variable <b>QT_XCB_GL_INTEGRATION</b> to <b>xcb_egl</b>.</p>
 </div>
 
 <h2>Remember time position</h2>
 <div>
     <p>Determines when to save and restore the position of previously played files.</p>
+    <p>First field controls for which files to save the position:</p>
     <ul>
         <li>-1: feature is disabled</li>
         <li>0: save for all files</li>
         <li>1-9999: save for files longer than the set value, in minutes</li>
     </ul>
+    <p>Second field controls how often to save the position.</p>
 </div>
 
 <h2>Skip chapters</h2>

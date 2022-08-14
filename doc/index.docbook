@@ -29,13 +29,13 @@
         </authorgroup>
 
         <copyright>
-            <year>2019-2021</year>
+            <year>2019-2022</year>
             <holder>George Florea Bănuș</holder>
         </copyright>
 
         <legalnotice>&CCBYSA4Notice;</legalnotice>
         <date>2021-06-12</date>
-        <releaseinfo>Haruna 0.6.3</releaseinfo>
+        <releaseinfo>Haruna 0.8.0</releaseinfo>
 
         <abstract>
             <para>Haruna is an open source video player built with Qt/QML and libmpv.</para>
@@ -58,6 +58,22 @@
         <section id="GeneralSettings">
             <title>General</title>
             <section>
+                <title>File dialog location</title>
+                <para>The folder the file dialog will load when used to open a file.
+    If empty it will remember the last folder from which a file was opened.</para>
+            </section>
+
+            <section>
+                <title>Maximum recent files</title>
+                <para>How many recent files to save and display in the recent files menu.</para>
+            </section>
+
+            <section>
+                <title>Remember window size and position</title>
+                <para>Restores the size and position the window had when it was closed. On <emphasis>Wayland</emphasis> only size is restored.</para>
+            </section>
+
+            <section>
                 <title>Breeze icon theme</title>
                 <para>When checked the application uses the Breeze icon theme.</para>
                 <para>When unchecked the application uses the system icon theme. Doesn't always work as expected.</para>
@@ -74,20 +90,48 @@
         <section id="PlaybackSettings">
             <title>Playback</title>
             <section>
+                <title>Seek steps</title>
+                <para>How much to seek when triggering the coresponding action. Seek mode is <emphasis>exact</emphasis> <ulink url="https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]">
+    https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]</ulink>.</para>
+            </section>
+
+            <section>
+                <title>Open last played file on startup</title>
+                <para>On startup it opens the file that was playing when the application was closed.</para>
+            </section>
+
+            <section>
+                <title>Seek to last playback position</title>
+                <para>When opening a file that was played before it will seek to the position it was when playback stopped.</para>
+            </section>
+
+            <section>
+                <title>Start playing</title>
+                <para>This applies only when resuming playback (seeking to last playback position) of a file that was played before.</para>
+            </section>
+
+            <section>
+                <title>Pause on minimize</title>
+                <para>Pauses the player while the window is minimized, playback resumes when restored.</para>
+            </section>
+
+            <section>
                 <title>Hardware decoding</title>
-                <para>It's recommended leave hardware decoding disabled.</para>
-                <para>If you want to enable it read <ulink url="https://mpv.io/manual/stable/#options-hwdec">https://mpv.io/manual/stable/#options-hwdec</ulink>
-                to understand which option is best for you.</para>
+                <para>If you enable hardware decoding it's recommended to use the auto-safe or auto options.</para>
+                <para>You can read more about each option here: <ulink url="https://mpv.io/manual/stable/#options-hwdec">https://mpv.io/manual/stable/#options-hwdec</ulink>.</para>
+                <para>If you want to use vaapi on X11, you must set the environment variable <emphasis>QT_XCB_GL_INTEGRATION</emphasis> to <emphasis>xcb_egl</emphasis>.</para>
             </section>
 
             <section>
                 <title>Remember time position</title>
                 <para>Determines when to save and restore the position of previously played files.</para>
+                <para>First field controls for which files to save the position:</para>
                 <itemizedlist>
                     <listitem><para>-1: feature is disabled</para></listitem>
                     <listitem><para>0: save for all files</para></listitem>
                     <listitem><para>1-9999: save for files longer than the set value, in minutes</para></listitem>
                 </itemizedlist>
+                <para>Second field controls how often to save the position.</para>
             </section>
 
             <section>
@@ -238,7 +282,7 @@
             </section>
             <section>
                 <title>Run at startup</title>
-                <para>The command will be run at application startup.</para>
+                <para>The command will be run at application startup. Startup commands can be toggled, meaning you can choose whether they are set on startup or not, this is available after saving.</para>
             </section>
         </section>
     </chapter>
