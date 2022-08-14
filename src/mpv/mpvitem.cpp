@@ -94,7 +94,9 @@ void MpvItem::initProperties()
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
 
-    setProperty("sub-color", SubtitlesSettings::subtitleColor());
+    setProperty("sub-font", SubtitlesSettings::fontFamily());
+    setProperty("sub-font-size", SubtitlesSettings::fontSize());
+    setProperty("sub-color", SubtitlesSettings::fontColor());
     setProperty("sub-shadow-color", SubtitlesSettings::shadowColor());
     setProperty("sub-shadow-offset", SubtitlesSettings::shadowOffset());
     setProperty("sub-border-color", SubtitlesSettings::borderColor());

@@ -9,6 +9,7 @@
 
 #include <QAbstractItemModel>
 #include <QApplication>
+#include <QFont>
 #include <QQmlApplicationEngine>
 #include <QObject>
 
@@ -56,7 +57,7 @@ public:
     Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE bool configFolderExists();
-    Q_INVOKABLE QString getDefaultSubColor();
+    Q_INVOKABLE QString getDefaultFontColor();
     Q_INVOKABLE QString getDefaultSubShadowColor();
     Q_INVOKABLE QString getDefaultSubBorderColor();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
@@ -68,6 +69,7 @@ public:
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
     Q_INVOKABLE void openDocs(const QString &page);
+    Q_INVOKABLE QStringList getFonts();
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();

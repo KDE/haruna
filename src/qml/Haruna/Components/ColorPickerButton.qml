@@ -16,8 +16,8 @@ Rectangle {
     // using onColorChanged causes a binding loop
     signal colorChosen(string color)
 
-    implicitWidth: Kirigami.Units.gridUnit * 1.5
-    implicitHeight: Kirigami.Units.gridUnit * 1.5
+    implicitWidth: Math.ceil(Kirigami.Units.gridUnit * 1.7)
+    implicitHeight: Math.ceil(Kirigami.Units.gridUnit * 1.7)
     border.width: 1
     border.color: ma.containsMouse
                   ? Kirigami.Theme.highlightColor

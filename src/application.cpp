@@ -36,6 +36,7 @@
 #include <QDir>
 #include <QDBusConnection>
 #include <QFileInfo>
+#include <QFontDatabase>
 #include <QGuiApplication>
 #include <QMimeDatabase>
 #include <QPointer>
@@ -306,9 +307,9 @@ bool Application::configFolderExists()
     return fi.exists();
 }
 
-QString Application::getDefaultSubColor()
+QString Application::getDefaultFontColor()
 {
-    return SubtitlesSettings::self()->defaultSubtitleColorValue();
+    return SubtitlesSettings::self()->defaultFontColorValue();
 }
 
 QString Application::getDefaultSubShadowColor()
@@ -456,4 +457,10 @@ void Application::aboutApplication()
 void Application::openDocs(const QString &page)
 {
     QDesktopServices::openUrl(QUrl(page));
+}
+
+QStringList Application::getFonts()
+{
+    static QFontDatabase *fontDB = new QFontDatabase();
+    return fontDB->families();
 }

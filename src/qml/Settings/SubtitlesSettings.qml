@@ -34,6 +34,7 @@ SettingsBasePage {
             text: i18n("Preferred language")
             Layout.alignment: Qt.AlignRight
         }
+
         TextField {
             text: SubtitlesSettings.preferredLanguage
             placeholderText: i18n("eng,ger etc.")
@@ -53,6 +54,7 @@ SettingsBasePage {
             text: i18n("Preferred track")
             Layout.alignment: Qt.AlignRight
         }
+
         SpinBox {
             from: 0
             to: 100
@@ -76,9 +78,80 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Subtitle color")
+            text: i18n("Font family")
             Layout.alignment: Qt.AlignRight
         }
+
+        RowLayout {
+            Layout.fillWidth: true
+
+            ComboBox {
+                id: subtitleFont
+
+                model: app.getFonts()
+                onActivated: {
+                    SubtitlesSettings.fontFamily = currentText
+                    SubtitlesSettings.save()
+                    mpv.setProperty("sub-font", currentText)
+                }
+
+                Component.onCompleted: currentIndex = indexOfValue(SubtitlesSettings.fontFamily)
+            }
+
+            Button {
+                icon.name: "edit-clear-all"
+                onClicked: subtitleFont.clear()
+            }
+        }
+
+        Label {
+            text: i18n("Font size")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        SpinBox {
+            from: 0
+            to: 1000
+            value: 55
+            onValueChanged: {
+                SubtitlesSettings.fontSize = value
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-font-size", value)
+            }
+        }
+
+        Label {
+            text: i18n("Font style")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        CheckBox {
+            text: i18n("Bold")
+            checked: SubtitlesSettings.isBold
+            onCheckedChanged: {
+                SubtitlesSettings.isBold = checked
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-bold", checked)
+            }
+        }
+
+        Item { width: 1 }
+
+        CheckBox {
+            text: i18n("Italic")
+            checked: SubtitlesSettings.isItalic
+            onCheckedChanged: {
+                SubtitlesSettings.isItalic = checked
+                SubtitlesSettings.save()
+                mpv.setProperty("sub-italic", checked)
+            }
+        }
+
+        Label {
+            text: i18n("Font Color")
+            Layout.alignment: Qt.AlignRight
+        }
+
         RowLayout {
             Layout.fillWidth: true
 
@@ -92,10 +165,10 @@ SettingsBasePage {
             TextField {
                 id: subtitleColor
 
-                text: SubtitlesSettings.subtitleColor
+                text: SubtitlesSettings.fontColor
                 onTextChanged: {
                     subtitleColorPicker.color = text
-                    SubtitlesSettings.subtitleColor = text
+                    SubtitlesSettings.fontColor = text
                     SubtitlesSettings.save()
                     mpv.setProperty("sub-color", text)
                 }
@@ -103,7 +176,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "edit-clear-all"
-                onClicked: subtitleColor.text = app.getDefaultSubColor()
+                onClicked: subtitleColor.text = app.getDefaultFontColor()
 
                 ToolTip {
                     text: i18n("Set default value")
@@ -115,6 +188,7 @@ SettingsBasePage {
             text: i18n("Shadow color")
             Layout.alignment: Qt.AlignRight
         }
+
         RowLayout {
             Layout.fillWidth: true
 
@@ -150,6 +224,7 @@ SettingsBasePage {
             text: i18n("Shadow offset")
             Layout.alignment: Qt.AlignRight
         }
+
         SpinBox {
             from: 0
             to: 25
@@ -170,6 +245,7 @@ SettingsBasePage {
             text: i18n("Border color")
             Layout.alignment: Qt.AlignRight
         }
+
         RowLayout {
             Layout.fillWidth: true
 
@@ -206,6 +282,7 @@ SettingsBasePage {
             text: i18n("Border width")
             Layout.alignment: Qt.AlignRight
         }
+
         SpinBox {
             from: 0
             to: 25
@@ -219,28 +296,6 @@ SettingsBasePage {
 
             ToolTip {
                 text: i18n("Set to 0 (zero) to disable.")
-            }
-        }
-
-        Item { width: 1 }
-        CheckBox {
-            text: i18n("Bold")
-            checked: SubtitlesSettings.isBold
-            onCheckedChanged: {
-                SubtitlesSettings.isBold = checked
-                SubtitlesSettings.save()
-                mpv.setProperty("sub-bold", checked)
-            }
-        }
-
-        Item { width: 1 }
-        CheckBox {
-            text: i18n("Italic")
-            checked: SubtitlesSettings.isItalic
-            onCheckedChanged: {
-                SubtitlesSettings.isItalic = checked
-                SubtitlesSettings.save()
-                mpv.setProperty("sub-italic", checked)
             }
         }
 
