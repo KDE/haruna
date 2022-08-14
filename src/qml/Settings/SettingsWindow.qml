@@ -33,7 +33,6 @@ Kirigami.ApplicationWindow {
     width: Kirigami.Units.gridUnit * 45
     height: Kirigami.Units.gridUnit * 35
     title: i18n("Settings")
-    visible: false
     pageStack.initialPage: Kirigami.ScrollablePage {
         bottomPadding: 0
         leftPadding: 0
