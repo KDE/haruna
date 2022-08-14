@@ -373,6 +373,7 @@ SettingsBasePage {
                 model: ListModel {
                     id: leftButtonModel
                     ListElement { key: "Custom"; value: "" }
+                    ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
                     ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
                     ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
                     ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
@@ -403,20 +404,19 @@ SettingsBasePage {
                 }
 
                 function hIndexOfValue(value) {
-                    if (value === "bestvideo[height<=2160]+bestaudio/best") {
+                    switch(value) {
+                    case "bestvideo+bestaudio/best":
                         return 1
-                    }
-                    if (value === "bestvideo[height<=1440]+bestaudio/best") {
+                    case "bestvideo[height<=2160]+bestaudio/best":
                         return 2
-                    }
-                    if (value === "bestvideo[height<=1080]+bestaudio/best") {
+                    case "bestvideo[height<=1440]+bestaudio/best":
                         return 3
-                    }
-                    if (value === "bestvideo[height<=720]+bestaudio/best") {
+                    case "bestvideo[height<=1080]+bestaudio/best":
                         return 4
-                    }
-                    if (value === "bestvideo[height<=480]+bestaudio/best") {
+                    case "bestvideo[height<=720]+bestaudio/best":
                         return 5
+                    case "bestvideo[height<=480]+bestaudio/best":
+                        return 6
                     }
                     return 0
                 }
@@ -449,17 +449,6 @@ SettingsBasePage {
             Layout.fillWidth: true
         }
 
-        Item { width: 1 }
-
-        TextEdit {
-            text: i18n("Leave empty for default value: <i>bestvideo+bestaudio/best</i>")
-            color: Kirigami.Theme.textColor
-            readOnly: true
-            wrapMode: Text.WordWrap
-            textFormat: TextEdit.RichText
-            selectByMouse: true
-            Layout.fillWidth: true
-        }
         // ------------------------------------
         // END - Youtube-dl format settings
         // ------------------------------------
