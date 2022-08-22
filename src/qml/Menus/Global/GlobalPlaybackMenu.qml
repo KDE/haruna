@@ -115,9 +115,9 @@ Labs.Menu {
         }
 
         Labs.MenuItem {
-            icon.name: appActions.seekPrevSubtitleAction.icon.name
-            text: appActions.seekPrevSubtitleAction.text
-            onTriggered: appActions.seekPrevSubtitleAction.trigger()
+            icon.name: appActions.seekPreviousSubtitleAction.icon.name
+            text: appActions.seekPreviousSubtitleAction.text
+            onTriggered: appActions.seekPreviousSubtitleAction.trigger()
         }
 
         Labs.MenuSeparator {}
