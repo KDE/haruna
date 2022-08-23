@@ -17,6 +17,8 @@ class CustomCommandsModel : public QAbstractListModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(ActionsModel* appActionsModel READ appActionsModel WRITE setAppActionsModel NOTIFY appActionsModelChanged)
+
     struct Command {
         QString commandId;
         QString command;
@@ -45,6 +47,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    Q_INVOKABLE void init();
     Q_INVOKABLE void moveRows(int oldIndex, int newIndex);
     Q_INVOKABLE void saveCustomCommand(const QString &command,
                                        const QString &osdMessage,
@@ -56,9 +59,16 @@ public:
     Q_INVOKABLE void toggleCustomCommand(const QString &groupName, int row, bool setOnStartup);
     Q_INVOKABLE void deleteCustomCommand(const QString &groupName, int row);
 
+    ActionsModel *appActionsModel();
+    void setAppActionsModel(ActionsModel *_appActionsModel);
+
+signals:
+    void appActionsModelChanged();
+
 private:
     KSharedConfig::Ptr m_customCommandsConfig;
     QList<Command *> m_customCommands;
+    ActionsModel *m_appActionsModel = nullptr;
 };
 
 #endif // CUSTOMCOMMANDSMODEL_H

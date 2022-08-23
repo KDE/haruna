@@ -196,6 +196,13 @@ void Application::registerQmlTypes()
     qRegisterMetaType<PlayListItem*>();
     qRegisterMetaType<TracksModel*>();
     qRegisterMetaType<KFileMetaData::PropertyMap>("KFileMetaData::PropertyMap");
+    // models
+    qmlRegisterType<SubtitlesFoldersModel>("org.kde.haruna.models", 1, 0, "SubtitlesFoldersModel");
+    qmlRegisterType<ActionsModel>("org.kde.haruna.models",          1, 0, "ActionsModel");
+    qmlRegisterType<ProxyActionsModel>("org.kde.haruna.models",     1, 0, "ProxyActionsModel");
+    qmlRegisterType<CustomCommandsModel>("org.kde.haruna.models",   1, 0, "CustomCommandsModel");
+    qmlRegisterType<RecentFilesModel>("org.kde.haruna.models",      1, 0, "RecentFilesModel");
+
 }
 
 void Application::setupQmlSettingsTypes()
@@ -225,34 +232,10 @@ void Application::setupQmlSettingsTypes()
 void Application::setupQmlContextProperties()
 {
     std::unique_ptr<LockManager> lockManager = std::make_unique<LockManager>();
-    std::unique_ptr<SubtitlesFoldersModel> subsFoldersModel = std::make_unique<SubtitlesFoldersModel>();
-
-    m_engine->rootContext()->setContextProperty(QStringLiteral("app"), this);
-    qmlRegisterUncreatableType<Application>("Application", 1, 0, "Application",
-                                            QStringLiteral("Application should not be created in QML"));
-
-    m_engine->rootContext()->setContextProperty(QStringLiteral("mediaPlayer2Player"), new MediaPlayer2Player(this));
-
     m_engine->rootContext()->setContextProperty(QStringLiteral("lockManager"), lockManager.release());
-    qmlRegisterUncreatableType<LockManager>("LockManager", 1, 0, "LockManager",
-                                            QStringLiteral("LockManager should not be created in QML"));
-
-    m_engine->rootContext()->setContextProperty(QStringLiteral("subsFoldersModel"), subsFoldersModel.release());
-
-
-    auto actionsModel = new ActionsModel();
-    m_engine->rootContext()->setContextProperty(QStringLiteral("actionsModel"), actionsModel);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("appActions"), &actionsModel->propertyMap);
-    auto proxyActionsModel = new ProxyActionsModel();
-    proxyActionsModel->setSourceModel(actionsModel);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("proxyActionsModel"), proxyActionsModel);
-
-    auto customCommandsModel = new CustomCommandsModel(actionsModel);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("customCommandsModel"), customCommandsModel);
-
-    auto recentFilesModel = new RecentFilesModel();
-    m_engine->rootContext()->setContextProperty(QStringLiteral("recentFilesModel"), recentFilesModel);
-
+    m_engine->rootContext()->setContextProperty(QStringLiteral("app"), this);
+    m_engine->rootContext()->setContextProperty(QStringLiteral("mediaPlayer2Player"), new MediaPlayer2Player(this));
+    m_engine->rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
     m_engine->rootContext()->setContextProperty(QStringLiteral("harunaAboutData"),
                                                 QVariant::fromValue(KAboutData::applicationData()));

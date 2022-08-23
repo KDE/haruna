@@ -14,6 +14,7 @@ import QtQml 2.12
 
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
+import org.kde.haruna.models 1.0
 
 import "Menus"
 import "Menus/Global"
@@ -131,6 +132,31 @@ Kirigami.ApplicationWindow {
     Footer { id: footer }
 
     Actions {}
+
+    ActionsModel {
+        id: actionsModel
+    }
+
+    ProxyActionsModel {
+        id: proxyActionsModel
+
+        sourceModel: actionsModel
+    }
+
+    CustomCommandsModel {
+        id: customCommandsModel
+
+        appActionsModel: actionsModel
+        Component.onCompleted: init()
+    }
+
+    RecentFilesModel {
+        id: recentFilesModel
+    }
+
+    SubtitlesFoldersModel {
+        id: subtitlesFoldersModel
+    }
 
     RowLayout {
         width: window.width * 0.8 > Kirigami.Units.gridUnit * 50
