@@ -10,6 +10,10 @@
 MpvCore::MpvCore(QQuickItem *parent)
     : QQuickFramebufferObject(parent)
 {
+    // Qt sets the locale in the QGuiApplication constructor, but libmpv
+    // requires the LC_NUMERIC category to be set to "C", so change it back.
+    std::setlocale(LC_NUMERIC, "C");
+
     m_mpv = mpv_create();
     if (!m_mpv) {
         qFatal("could not create mpv context");

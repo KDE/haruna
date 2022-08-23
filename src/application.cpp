@@ -112,10 +112,6 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
         QApplication::setStyle(GeneralSettings::guiStyle());
     }
 
-    // Qt sets the locale in the QGuiApplication constructor, but libmpv
-    // requires the LC_NUMERIC category to be set to "C", so change it back.
-    std::setlocale(LC_NUMERIC, "C");
-
     setupWorkerThread();
     setupAboutData();
     setupCommandLineParser();
