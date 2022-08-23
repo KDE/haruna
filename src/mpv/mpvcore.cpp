@@ -7,6 +7,8 @@
 #include "mpvcore.h"
 #include "mpvrenderer.h"
 
+#include <clocale>
+
 MpvCore::MpvCore(QQuickItem *parent)
     : QQuickFramebufferObject(parent)
 {

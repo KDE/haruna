@@ -27,8 +27,6 @@
 #include "videosettings.h"
 #include "worker.h"
 
-#include <clocale>
-
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCoreApplication>
