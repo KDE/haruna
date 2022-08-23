@@ -232,12 +232,12 @@ void Application::setupQmlSettingsTypes()
 void Application::setupQmlContextProperties()
 {
     std::unique_ptr<LockManager> lockManager = std::make_unique<LockManager>();
-    m_engine->rootContext()->setContextProperty(QStringLiteral("lockManager"), lockManager.release());
-    m_engine->rootContext()->setContextProperty(QStringLiteral("app"), this);
-    m_engine->rootContext()->setContextProperty(QStringLiteral("mediaPlayer2Player"), new MediaPlayer2Player(this));
+    m_engine->rootContext()->setContextProperty("lockManager", lockManager.release());
+    m_engine->rootContext()->setContextProperty("app", this);
+    m_engine->rootContext()->setContextProperty("mediaPlayer2Player", new MediaPlayer2Player(this));
     m_engine->rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
-    m_engine->rootContext()->setContextProperty(QStringLiteral("harunaAboutData"),
+    m_engine->rootContext()->setContextProperty("harunaAboutData",
                                                 QVariant::fromValue(KAboutData::applicationData()));
 }
 
