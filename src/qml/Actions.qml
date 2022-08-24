@@ -55,7 +55,7 @@ Item {
                 const currentTrackId = mpv.getProperty("aid")
 
                 if (currentTrackId === false) {
-                    audioCycleUpAction.trigger()
+                    actionsModel.signalEmitter("audioCycleUpAction")
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
@@ -73,7 +73,7 @@ Item {
                 const currentTrackId = mpv.getProperty("aid")
 
                 if (currentTrackId === false) {
-                    audioCycleDownAction.trigger()
+                    actionsModel.signalEmitter("audioCycleDownAction")
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
