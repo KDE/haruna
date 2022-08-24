@@ -102,7 +102,7 @@ void CustomCommandsModel::init()
             action.description = c->osdMessage;
             action.shortcut = c->shortcut;
             action.type = QStringLiteral("CustomAction");
-            appActionsModel()->actions().append(action);
+            appActionsModel()->appendCustomAction(action);
         }
     }
 
