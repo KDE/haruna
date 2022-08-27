@@ -88,7 +88,6 @@ void MpvItem::initProperties()
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
     setProperty("hwdec", hwdec);
-    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
     setProperty("sub-auto", "exact");
     setProperty("volume-max", "100");
     // set ytdl_path to yt-dlp or fallback to youtube-dl
