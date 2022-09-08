@@ -8,7 +8,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kquickcontrols 2.0
 import org.kde.haruna 1.0
 import Haruna.Components 1.0
@@ -20,21 +20,22 @@ SettingsBasePage {
     helpFile: ":/CustomCommandsSettings.html"
     docPage: "help:/haruna/CustomCommandsSettings.html"
 
-    ColumnLayout {
-        id: centerLayout
+    ListView {
+        id: customCommandsView
 
-        visible: customCommandsView.count === 0
-        anchors.centerIn: parent
-
-        Label {
-            text: i18n("No custom commands yet")
-            Layout.alignment: Qt.AlignCenter
+        model: customCommandsModel
+        delegate: Kirigami.DelegateRecycler {
+            width: customCommandsView.width
+            sourceComponent: customCommandDelegate
         }
-
-        Button {
-            text: i18n("&Add command")
-            onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
-            Layout.alignment: Qt.AlignCenter
+        Kirigami.PlaceholderMessage {
+            anchors.centerIn: parent
+            visible: customCommandsView.count === 0
+            text: i18n("No custom commands yet")
+            helpfulAction: Action {
+                text: i18n("&Add command")
+                onTriggered: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
+            }
         }
     }
 
@@ -139,16 +140,6 @@ SettingsBasePage {
                     }
                 }
             }
-        }
-    }
-
-    ListView {
-        id: customCommandsView
-
-        model: customCommandsModel
-        delegate: Kirigami.DelegateRecycler {
-            width: customCommandsView.width
-            sourceComponent: customCommandDelegate
         }
     }
 
