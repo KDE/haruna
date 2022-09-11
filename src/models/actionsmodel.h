@@ -86,6 +86,7 @@ Q_SIGNALS:
     void muteAction();
     void openContextMenuAction();
     void openFileAction();
+    void openSubtitlesFileAction();
     void openUrlAction();
     void playbackSpeedIncreaseAction();
     void playbackSpeedDecreaseAction();

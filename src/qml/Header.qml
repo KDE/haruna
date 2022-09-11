@@ -84,6 +84,8 @@ ToolBar {
                 y: parent.height
                 closePolicy: Popup.CloseOnReleaseOutsideParent
 
+                MenuItem { action: appActions.openSubtitlesFileAction }
+
                 Instantiator {
                     id: primarySubtitleMenuInstantiator
                     model: mpv.subtitleTracksModel

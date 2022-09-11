@@ -278,8 +278,6 @@ MpvItem {
     DropArea {
         id: dropArea
 
-        property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
-
         anchors.fill: parent
         keys: ["text/uri-list"]
 

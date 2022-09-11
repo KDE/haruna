@@ -106,6 +106,13 @@ ActionsModel::ActionsModel(QObject *parent)
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
+    action.name = QStringLiteral("openSubtitlesFileAction");
+    action.text = i18n("Add external subtitle…");
+    action.iconName = QStringLiteral("add-subtitle");
+    action.defaultShortcut = Qt::ALT + Qt::Key_S;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    m_actions << action;
+
     action.name = QStringLiteral("openUrlAction");
     action.text = i18n("Open Url");
     action.iconName = QStringLiteral("internet-services");

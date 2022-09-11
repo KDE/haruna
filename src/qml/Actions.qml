@@ -116,6 +116,8 @@ Item {
 
         onOpenFileAction: fileDialog.open()
 
+        onOpenSubtitlesFileAction: subtitlesFileDialog.open()
+
         onOpenUrlAction: {
             if (openUrlPopup.visible) {
                 openUrlPopup.close()

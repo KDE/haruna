@@ -24,6 +24,7 @@ Kirigami.ApplicationWindow {
     id: window
 
     property int previousVisibility: Window.Windowed
+    property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
 
     visible: true
     title: mpv.mediaTitle || i18n("Haruna")
@@ -207,6 +208,33 @@ Kirigami.ApplicationWindow {
 
             GeneralSettings.fileDialogLastLocation = app.parentUrl(fileDialog.file)
             GeneralSettings.save()
+        }
+        onRejected: mpv.focus = true
+    }
+
+    Platform.FileDialog {
+        id: subtitlesFileDialog
+
+        property url location: {
+            if (mpv.playlistModel.length > 0) {
+                const item = mpv.playlistModel.getItem(mpv.playlistModel.getPlayingVideo())
+                return app.pathToUrl(item.folderPath())
+            } else {
+                return (GeneralSettings.fileDialogLocation
+                ? app.pathToUrl(GeneralSettings.fileDialogLocation)
+                : app.pathToUrl(GeneralSettings.fileDialogLastLocation))
+            }
+        }
+
+        folder: location
+        title: i18n("Select subtitles file")
+        fileMode: Platform.FileDialog.OpenFile
+        nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]
+
+        onAccepted: {
+            if (acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.file))) {
+                mpv.command(["sub-add", subtitlesFileDialog.file.toString(), "select"])
+            }
         }
         onRejected: mpv.focus = true
     }

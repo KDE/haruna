@@ -59,6 +59,12 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
+        icon.name: appActions.openSubtitlesFileAction.icon.name
+        text: appActions.openSubtitlesFileAction.text
+        onTriggered: appActions.openSubtitlesFileAction.trigger()
+    }
+
+    Labs.MenuItem {
         icon.name: appActions.subtitleIncreaseFontSizeAction.icon.name
         text: appActions.subtitleIncreaseFontSizeAction.text
         onTriggered: appActions.subtitleIncreaseFontSizeAction.trigger()

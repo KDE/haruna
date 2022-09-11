@@ -55,6 +55,7 @@ Menu {
 
     MenuSeparator {}
 
+    MenuItem { action: appActions.openSubtitlesFileAction }
     MenuItem { action: appActions.subtitleIncreaseFontSizeAction }
     MenuItem { action: appActions.subtitleDecreaseFontSizeAction }
     MenuItem { action: appActions.subtitleMoveUpAction }
