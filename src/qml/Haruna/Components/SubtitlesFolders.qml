@@ -40,7 +40,7 @@ Item {
                 : count * sfListView.sfDelegateHeight + (sfListView.spacing * (count - 1))
         spacing: 5
         clip: true
-        model: subsFoldersModel
+        model: subtitlesFoldersModel
         Layout.fillWidth: true
         ScrollBar.vertical: ScrollBar { id: scrollBar }
         delegate: Rectangle {
@@ -107,7 +107,7 @@ Item {
                             if (model.row === sfListView.count - 1) {
                                 root.canAddFolder = true
                             }
-                            subsFoldersModel.deleteFolder(model.row)
+                            subtitlesFoldersModel.deleteFolder(model.row)
                             const rows = sfListView.count
                             sfListView.implicitHeight = rows > 5
                                     ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
@@ -124,7 +124,7 @@ Item {
                         flat: true
                         enabled: editField.text !== "" ? true : false
                         onClicked: {
-                            subsFoldersModel.updateFolder(editField.text, model.row)
+                            subtitlesFoldersModel.updateFolder(editField.text, model.row)
                             sfLoader.sourceComponent = sfDisplayComponent
                             if (model.row === sfListView.count - 1) {
                                 root.canAddFolder = true
@@ -154,7 +154,7 @@ Item {
         text: i18n("Add new folder")
         enabled: root.canAddFolder
         onClicked: {
-            subsFoldersModel.addFolder()
+            subtitlesFoldersModel.addFolder()
             const rows = sfListView.count
             sfListView.implicitHeight = rows > 5
                     ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
