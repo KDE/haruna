@@ -207,26 +207,13 @@ void Application::registerQmlTypes()
 
 void Application::setupQmlSettingsTypes()
 {
-    auto audioProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return AudioSettings::self(); };
-    qmlRegisterSingletonType<AudioSettings>("org.kde.haruna", 1, 0, "AudioSettings", audioProvider);
-
-    auto generalProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return GeneralSettings::self(); };
-    qmlRegisterSingletonType<GeneralSettings>("org.kde.haruna", 1, 0, "GeneralSettings", generalProvider);
-
-    auto mouseProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return MouseSettings::self(); };
-    qmlRegisterSingletonType<MouseSettings>("org.kde.haruna", 1, 0, "MouseSettings", mouseProvider);
-
-    auto playbackProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return PlaybackSettings::self(); };
-    qmlRegisterSingletonType<PlaybackSettings>("org.kde.haruna", 1, 0, "PlaybackSettings", playbackProvider);
-
-    auto playlistProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return PlaylistSettings::self(); };
-    qmlRegisterSingletonType<PlaylistSettings>("org.kde.haruna", 1, 0, "PlaylistSettings", playlistProvider);
-
-    auto subtitlesProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return SubtitlesSettings::self(); };
-    qmlRegisterSingletonType<SubtitlesSettings>("org.kde.haruna", 1, 0, "SubtitlesSettings", subtitlesProvider);
-
-    auto videoProvider = [](QQmlEngine *, QJSEngine *) -> QObject * { return VideoSettings::self(); };
-    qmlRegisterSingletonType<VideoSettings>("org.kde.haruna", 1, 0, "VideoSettings", videoProvider);
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "AudioSettings",     AudioSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "GeneralSettings",   GeneralSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MouseSettings",     MouseSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaybackSettings",  PlaybackSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaylistSettings",  PlaylistSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "VideoSettings",     VideoSettings::self());
 }
 
 void Application::setupQmlContextProperties()
