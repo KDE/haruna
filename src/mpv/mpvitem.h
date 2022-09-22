@@ -7,8 +7,6 @@
 #ifndef MPVOBJECT_H
 #define MPVOBJECT_H
 
-#include <QtQuick/QQuickFramebufferObject>
-
 #include "mpvcore.h"
 #include "playlistmodel.h"
 #include "tracksmodel.h"
