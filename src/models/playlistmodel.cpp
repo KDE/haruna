@@ -84,36 +84,37 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
 void PlayListModel::getVideos(QString path)
 {
     clear();
-    path = QUrl(path).toLocalFile().isEmpty() ? path : QUrl(path).toLocalFile();
-    QFileInfo pathInfo(path);
-    QStringList videoFiles;
-    if (pathInfo.exists() && pathInfo.isFile()) {
-        QDirIterator it(pathInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
+    QUrl openedUrl(path);
+    QFileInfo openedFileInfo(openedUrl.toLocalFile());
+    QStringList siblingFiles;
+    if (openedFileInfo.exists() && openedFileInfo.isFile()) {
+        QDirIterator it(openedFileInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
         while (it.hasNext()) {
-            QString file = it.next();
-            QFileInfo fileInfo(file);
-            QString mimeType = Application::mimeType(file);
-            if (fileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/"))) {
-                videoFiles.append(fileInfo.absoluteFilePath());
+            QString siblingFile = it.next();
+            QFileInfo siblingFileInfo(siblingFile);
+            QUrl siblingUrl(siblingFile);
+            siblingUrl.setScheme(openedUrl.scheme());
+            QString mimeType = Application::mimeType(siblingUrl);
+            if (siblingFileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/"))) {
+                siblingFiles.append(siblingFileInfo.absoluteFilePath());
             }
         }
-    }
-    QCollator collator;
-    collator.setNumericMode(true);
-    std::sort(videoFiles.begin(), videoFiles.end(), collator);
 
-    beginInsertRows(QModelIndex(), 0, videoFiles.count() - 1);
+        QCollator collator;
+        collator.setNumericMode(true);
+        std::sort(siblingFiles.begin(), siblingFiles.end(), collator);
 
-    for (int i = 0; i < videoFiles.count(); ++i) {
-        auto video = new PlayListItem(videoFiles.at(i), i, this);
-        m_playList.append(video);
-        if (path == videoFiles.at(i)) {
-            setPlayingVideo(i);
+        beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
+        for (int i = 0; i < siblingFiles.count(); ++i) {
+            auto video = new PlayListItem(siblingFiles.at(i), i, this);
+            m_playList.append(video);
+            if (path == siblingFiles.at(i)) {
+                setPlayingVideo(i);
+            }
+            Q_EMIT videoAdded(i, video->filePath());
         }
-        Q_EMIT videoAdded(i, video->filePath());
+        endInsertRows();
     }
-
-    endInsertRows();
 }
 
 void PlayListModel::appendVideo(QString videoPath)

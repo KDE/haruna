@@ -357,16 +357,10 @@ QString Application::getFileContent(const QString &file)
     return content;
 }
 
-QString Application::mimeType(const QString &file)
+QString Application::mimeType(const QUrl &url)
 {
-    QMimeDatabase db;
-    QMimeType mimeType;
-    if(KFileItem(file).isSlow()) {
-        mimeType = db.mimeTypeForFile(file, QMimeDatabase::MatchExtension);
-    } else {
-        mimeType = db.mimeTypeForFile(file);
-    }
-    return mimeType.name();
+    KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
+    return fileItem.mimetype();
 }
 
 QStringList Application::availableGuiStyles()
