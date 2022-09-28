@@ -71,6 +71,7 @@ ToolBar {
         ToolButton {
             id: playPreviousFile
             action: appActions.playPreviousAction
+            icon.name: root.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             text: ""
             focusPolicy: Qt.NoFocus
             enabled: playList.playlistView.count > 1
@@ -83,6 +84,7 @@ ToolBar {
         ToolButton {
             id: playNextFile
             action: appActions.playNextAction
+            icon.name: root.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             text: ""
             focusPolicy: Qt.NoFocus
             enabled: playList.playlistView.count > 1
