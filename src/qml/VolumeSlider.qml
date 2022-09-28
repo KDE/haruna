@@ -28,16 +28,14 @@ Slider {
     rightPadding: 0
 
     handle: Item { visible: false }
-
     background: Rectangle {
-        id: harunaSliderBG
         color: Kirigami.Theme.alternateBackgroundColor
+        scale: root.mirrored ? -1 : 1
 
         Rectangle {
-            width: visualPosition * parent.width
+            width: root.position * parent.width
             height: parent.height
             color: Kirigami.Theme.highlightColor
-            radius: 0
         }
     }
 

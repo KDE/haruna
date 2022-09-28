@@ -30,23 +30,24 @@ Slider {
     handle: Item { visible: false }
 
     background: Rectangle {
-        id: progressBarBackground
+        id: progressBarBG
         color: Kirigami.Theme.alternateBackgroundColor
+        scale: root.mirrored ? -1 : 1
 
         Rectangle {
             id: loopIndicator
             property double startPosition: -1
             property double endPosition: -1
-            width: endPosition === -1 ? 1 : (endPosition / mpv.duration * progressBarBackground.width) - x
+            width: endPosition === -1 ? 1 : (endPosition / mpv.duration * progressBarBG.width) - x
             height: parent.height
             color: Qt.hsla(0, 0, 0, 0.4)
             visible: startPosition !== -1
-            x: startPosition / mpv.duration * progressBarBackground.width
+            x: startPosition / mpv.duration * progressBarBG.width
             z: 110
         }
 
         Rectangle {
-            width: visualPosition * parent.width
+            width: root.position * parent.width
             height: parent.height
             color: Kirigami.Theme.highlightColor
         }
@@ -72,7 +73,7 @@ Slider {
                         return
                     }
 
-                    const time = mouseX * 100 / progressBarBackground.width * root.to / 100
+                    const time = mouseX * 100 / progressBarBG.width * root.to / 100
                     const chapters = mpv.getProperty("chapter-list")
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
                     mpv.chapter = nextChapter
@@ -87,7 +88,7 @@ Slider {
             onMouseXChanged: {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
 
-                const time = mouseX * 100 / progressBarBackground.width * root.to / 100
+                const time = mouseX * 100 / progressBarBG.width * root.to / 100
                 progressBarToolTip.text = app.formatTime(time)
             }
 
@@ -114,7 +115,9 @@ Slider {
             id: chapterMarkerShape
 
             // where the chapter marker shoud be positioned on the progress bar
-            property int position: modelData.time / mpv.duration * progressBarBackground.width
+            property int position: root.mirrored
+                                   ? progressBarBG.width - (modelData.time / mpv.duration * progressBarBG.width)
+                                   : modelData.time / mpv.duration * progressBarBG.width
 
             antialiasing: true
             ShapePath {
