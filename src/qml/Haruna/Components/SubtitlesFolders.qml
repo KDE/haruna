@@ -149,6 +149,8 @@ Item {
 
     Button {
         id: sfAddFolder
+
+        anchors.left: parent.left
         anchors.top: spacer.bottom
         icon.name: "list-add"
         text: i18n("Add new folder")

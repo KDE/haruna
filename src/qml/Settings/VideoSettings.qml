@@ -39,36 +39,32 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: screenshotFormat.height
-            ComboBox {
-                id: screenshotFormat
-                textRole: "key"
-                model: ListModel {
-                    ListElement { key: "PNG"; }
-                    ListElement { key: "JPG"; }
-                    ListElement { key: "WebP"; }
-                }
+        ComboBox {
+            id: screenshotFormat
+            textRole: "key"
+            model: ListModel {
+                ListElement { key: "PNG"; }
+                ListElement { key: "JPG"; }
+                ListElement { key: "WebP"; }
+            }
 
-                onActivated: {
-                    VideoSettings.screenshotFormat = model.get(index).key
-                    VideoSettings.save()
-                    mpv.setProperty("screenshot-format", VideoSettings.screenshotFormat)
-                }
+            onActivated: {
+                VideoSettings.screenshotFormat = model.get(index).key
+                VideoSettings.save()
+                mpv.setProperty("screenshot-format", VideoSettings.screenshotFormat)
+            }
 
-                Component.onCompleted: {
-                    if (VideoSettings.screenshotFormat === "PNG") {
-                        currentIndex = 0
-                    }
-                    if (VideoSettings.screenshotFormat === "JPG") {
-                        currentIndex = 1
-                    }
-                    if (VideoSettings.screenshotFormat === "WebP") {
-                        currentIndex = 2
-                    }
+            Component.onCompleted: {
+                if (VideoSettings.screenshotFormat === "PNG") {
+                    currentIndex = 0
+                }
+                if (VideoSettings.screenshotFormat === "JPG") {
+                    currentIndex = 1
+                }
+                if (VideoSettings.screenshotFormat === "WebP") {
+                    currentIndex = 2
                 }
             }
-            Layout.fillWidth: true
         }
 
         // ------------------------------------
@@ -79,19 +75,15 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: screenshotTemplate.height
-            TextField {
-                id: screenshotTemplate
-                text: VideoSettings.screenshotTemplate
-                width: parent.width
-                onEditingFinished: {
-                    VideoSettings.screenshotTemplate = text
-                    VideoSettings.save()
-                    mpv.setProperty("screenshot-template", VideoSettings.screenshotTemplate)
-                }
-            }
+        TextField {
+            id: screenshotTemplate
+            text: VideoSettings.screenshotTemplate
             Layout.fillWidth: true
+            onEditingFinished: {
+                VideoSettings.screenshotTemplate = text
+                VideoSettings.save()
+                mpv.setProperty("screenshot-template", VideoSettings.screenshotTemplate)
+            }
         }
 
         SettingsHeader {

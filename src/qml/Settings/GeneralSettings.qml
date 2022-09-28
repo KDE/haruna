@@ -31,29 +31,25 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: osdFontSize.height
-            SpinBox {
-                id: osdFontSize
+        SpinBox {
+            id: osdFontSize
 
-                // used to prevent osd showing when opening the page
-                property bool completed: false
+            // used to prevent osd showing when opening the page
+            property bool completed: false
 
-                editable: true
-                from: 0
-                to: 100
-                value: GeneralSettings.osdFontSize
-                onValueChanged: {
-                    if (completed) {
-                        osd.label.font.pointSize = osdFontSize.value
-                        osd.message("Test osd font size")
-                        GeneralSettings.osdFontSize = osdFontSize.value
-                        GeneralSettings.save()
-                    }
+            editable: true
+            from: 0
+            to: 100
+            value: GeneralSettings.osdFontSize
+            onValueChanged: {
+                if (completed) {
+                    osd.label.font.pointSize = osdFontSize.value
+                    osd.message("Test osd font size")
+                    GeneralSettings.osdFontSize = osdFontSize.value
+                    GeneralSettings.save()
                 }
-                Component.onCompleted: completed = true
             }
-            Layout.fillWidth: true
+            Component.onCompleted: completed = true
         }
 
         Label {
@@ -61,22 +57,18 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: fileDialogLocation.height
+        TextField {
+            id: fileDialogLocation
+
+            text: GeneralSettings.fileDialogLocation
             Layout.fillWidth: true
+            onEditingFinished: {
+                GeneralSettings.fileDialogLocation = fileDialogLocation.text
+                GeneralSettings.save()
+            }
 
-            TextField {
-                id: fileDialogLocation
-
-                text: GeneralSettings.fileDialogLocation
-                onEditingFinished: {
-                    GeneralSettings.fileDialogLocation = fileDialogLocation.text
-                    GeneralSettings.save()
-                }
-
-                ToolTip {
-                    text: i18n("If empty the file dialog will remember the last opened location.")
-                }
+            ToolTip {
+                text: i18n("If empty the file dialog will remember the last opened location.")
             }
         }
 
@@ -85,25 +77,20 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: maxRecentFiles.height
-            Layout.fillWidth: true
+        SpinBox {
+            id: maxRecentFiles
 
-            SpinBox {
-                id: maxRecentFiles
+            from: 0
+            to: 100
+            value: GeneralSettings.maxRecentFiles
+            onValueChanged: {
+                GeneralSettings.maxRecentFiles = maxRecentFiles.value
+                GeneralSettings.save()
+                recentFilesModel.populate()
+            }
 
-                from: 0
-                to: 100
-                value: GeneralSettings.maxRecentFiles
-                onValueChanged: {
-                    GeneralSettings.maxRecentFiles = maxRecentFiles.value
-                    GeneralSettings.save()
-                    recentFilesModel.populate()
-                }
-
-                ToolTip {
-                    text: i18n("How many recent files to store. Enter 0 (zero) to disable.")
-                }
+            ToolTip {
+                text: i18n("How many recent files to store. Enter 0 (zero) to disable.")
             }
         }
 

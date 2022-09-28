@@ -30,20 +30,16 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: seekSmallStep.height
-            SpinBox {
-                id: seekSmallStep
-                editable: true
-                from: 0
-                to: 100
-                value: GeneralSettings.seekSmallStep
-                onValueChanged: {
-                    GeneralSettings.seekSmallStep = seekSmallStep.value
-                    GeneralSettings.save()
-                }
+        SpinBox {
+            id: seekSmallStep
+            editable: true
+            from: 0
+            to: 100
+            value: GeneralSettings.seekSmallStep
+            onValueChanged: {
+                GeneralSettings.seekSmallStep = seekSmallStep.value
+                GeneralSettings.save()
             }
-            Layout.fillWidth: true
         }
 
         // Seek Medium Step
@@ -52,40 +48,35 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: seekMediumStep.height
-            RowLayout {
+        RowLayout {
 
-                SpinBox {
-                    id: seekMediumStep
-                    editable: true
-                    from: 0
-                    to: 100
-                    value: GeneralSettings.seekMediumStep
-                    onValueChanged: {
-                        GeneralSettings.seekMediumStep = seekMediumStep.value
-                        GeneralSettings.save()
-                    }
-                }
-
-                ToolButton {
-                    icon.name: "documentinfo"
-                    checkable: true
-                    checked: false
-
-                    Layout.preferredHeight: seekMediumStep.height
-
-                    ToolTip {
-                        text: i18n("This is also used for mouse wheel seeking, when mouse is over the progress bar")
-                        visible: parent.checked
-                        delay: 0
-                        timeout: -1
-                        closePolicy: Popup.NoAutoClose
-                    }
+            SpinBox {
+                id: seekMediumStep
+                editable: true
+                from: 0
+                to: 100
+                value: GeneralSettings.seekMediumStep
+                onValueChanged: {
+                    GeneralSettings.seekMediumStep = seekMediumStep.value
+                    GeneralSettings.save()
                 }
             }
 
-            Layout.fillWidth: true
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+
+                Layout.preferredHeight: seekMediumStep.height
+
+                ToolTip {
+                    text: i18n("This is also used for mouse wheel seeking, when mouse is over the progress bar")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
+            }
         }
 
         // Seek Big Step
@@ -94,20 +85,16 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: seekBigStep.height
-            SpinBox {
-                id: seekBigStep
-                editable: true
-                from: 0
-                to: 100
-                value: GeneralSettings.seekBigStep
-                onValueChanged: {
-                    GeneralSettings.seekBigStep = seekBigStep.value
-                    GeneralSettings.save()
-                }
+        SpinBox {
+            id: seekBigStep
+            editable: true
+            from: 0
+            to: 100
+            value: GeneralSettings.seekBigStep
+            onValueChanged: {
+                GeneralSettings.seekBigStep = seekBigStep.value
+                GeneralSettings.save()
             }
-            Layout.fillWidth: true
         }
 
         Item { width: 1 }
@@ -364,64 +351,60 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: ytdlFormatComboBox.height
-            ComboBox {
-                id: ytdlFormatComboBox
-                property string hCurrentvalue: ""
-                textRole: "key"
-                model: ListModel {
-                    id: leftButtonModel
-                    ListElement { key: "Custom"; value: "" }
-                    ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
-                    ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
-                    ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
-                    ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
-                    ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
-                    ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
-                }
-                ToolTip {
-                    text: i18n("Selects the best video with a height lower than or equal to the selected value.")
-                }
-
-                onActivated: {
-                    hCurrentvalue = model.get(index).value
-                    if (index === 0) {
-                        ytdlFormatField.text = PlaybackSettings.ytdlFormat
-                    }
-                    if(index > 0) {
-                        ytdlFormatField.focus = true
-                        ytdlFormatField.text = model.get(index).value
-                    }
-                    PlaybackSettings.ytdlFormat = ytdlFormatField.text
-                    PlaybackSettings.save()
-                    mpv.setProperty("ytdl-format", PlaybackSettings.ytdlFormat)
-                }
-
-                Component.onCompleted: {
-                    let i = hIndexOfValue(PlaybackSettings.ytdlFormat)
-                    currentIndex = (i === -1) ? 0 : i
-                }
-
-                function hIndexOfValue(value) {
-                    switch(value) {
-                    case "bestvideo+bestaudio/best":
-                        return 1
-                    case "bestvideo[height<=2160]+bestaudio/best":
-                        return 2
-                    case "bestvideo[height<=1440]+bestaudio/best":
-                        return 3
-                    case "bestvideo[height<=1080]+bestaudio/best":
-                        return 4
-                    case "bestvideo[height<=720]+bestaudio/best":
-                        return 5
-                    case "bestvideo[height<=480]+bestaudio/best":
-                        return 6
-                    }
-                    return 0
-                }
+        ComboBox {
+            id: ytdlFormatComboBox
+            property string hCurrentvalue: ""
+            textRole: "key"
+            model: ListModel {
+                id: leftButtonModel
+                ListElement { key: "Custom"; value: "" }
+                ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
+                ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
+                ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
+                ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
+                ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
+                ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
             }
-            Layout.fillWidth: true
+            ToolTip {
+                text: i18n("Selects the best video with a height lower than or equal to the selected value.")
+            }
+
+            onActivated: {
+                hCurrentvalue = model.get(index).value
+                if (index === 0) {
+                    ytdlFormatField.text = PlaybackSettings.ytdlFormat
+                }
+                if(index > 0) {
+                    ytdlFormatField.focus = true
+                    ytdlFormatField.text = model.get(index).value
+                }
+                PlaybackSettings.ytdlFormat = ytdlFormatField.text
+                PlaybackSettings.save()
+                mpv.setProperty("ytdl-format", PlaybackSettings.ytdlFormat)
+            }
+
+            Component.onCompleted: {
+                let i = hIndexOfValue(PlaybackSettings.ytdlFormat)
+                currentIndex = (i === -1) ? 0 : i
+            }
+
+            function hIndexOfValue(value) {
+                switch(value) {
+                case "bestvideo+bestaudio/best":
+                    return 1
+                case "bestvideo[height<=2160]+bestaudio/best":
+                    return 2
+                case "bestvideo[height<=1440]+bestaudio/best":
+                    return 3
+                case "bestvideo[height<=1080]+bestaudio/best":
+                    return 4
+                case "bestvideo[height<=720]+bestaudio/best":
+                    return 5
+                case "bestvideo[height<=480]+bestaudio/best":
+                    return 6
+                }
+                return 0
+            }
         }
 
         Item { width: 1 }

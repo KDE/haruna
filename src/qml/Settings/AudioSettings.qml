@@ -70,22 +70,18 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        Item {
-            height: volumeStep.height
-            SpinBox {
-                id: volumeStep
-                editable: true
-                from: 0
-                to: 100
-                value: GeneralSettings.volumeStep
-                onValueChanged: {
-                    if (root.visible) {
-                        GeneralSettings.volumeStep = volumeStep.value
-                        GeneralSettings.save()
-                    }
+        SpinBox {
+            id: volumeStep
+            editable: true
+            from: 0
+            to: 100
+            value: GeneralSettings.volumeStep
+            onValueChanged: {
+                if (root.visible) {
+                    GeneralSettings.volumeStep = volumeStep.value
+                    GeneralSettings.save()
                 }
             }
-            Layout.fillWidth: true
         }
 
         Item {
