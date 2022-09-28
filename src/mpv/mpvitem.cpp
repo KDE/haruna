@@ -30,6 +30,10 @@
 #include <KLocalizedString>
 #include <KShell>
 
+#if defined(Q_OS_UNIX)
+#include "lockmanager.h"
+#endif
+
 MpvItem::MpvItem(QQuickItem * parent)
     : MpvCore(parent)
     , m_audioTracksModel(new TracksModel)
@@ -77,6 +81,17 @@ MpvItem::MpvItem(QQuickItem * parent)
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
         }
     });
+
+#if defined(Q_OS_UNIX)
+    auto lockManager = new LockManager(this);
+    connect(this, &MpvItem::pauseChanged, this, [=]() {
+        if (pause()) {
+            lockManager->setInhibitionOff();
+        } else {
+            lockManager->setInhibitionOn();
+        }
+    });
+#endif
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
 }

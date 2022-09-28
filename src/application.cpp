@@ -11,9 +11,6 @@
 #include "generalsettings.h"
 #include "global.h"
 #include "haruna-version.h"
-#include "lockmanager.h"
-#include "mediaplayer2.h"
-#include "mediaplayer2player.h"
 #include "mousesettings.h"
 #include "mpvitem.h"
 #include "playbacksettings.h"
@@ -32,7 +29,6 @@
 #include <QCoreApplication>
 #include <QDesktopServices>
 #include <QDir>
-#include <QDBusConnection>
 #include <QFileInfo>
 #include <QFontDatabase>
 #include <QGuiApplication>
@@ -61,6 +57,12 @@
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KWindowConfig>
+
+#if defined(Q_OS_UNIX)
+#include "mediaplayer2.h"
+#include "mediaplayer2player.h"
+#include <QDBusConnection>
+#endif
 
 static QApplication *createApplication(int &argc, char **argv, const QString &applicationName)
 {
@@ -98,6 +100,7 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave,
                      this, &Application::qmlApplicationMouseLeave);
 
+#if defined(Q_OS_UNIX)
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
     QDBusConnection::sessionBus().registerService(mspris2Name);
@@ -105,6 +108,7 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
                                                  this, QDBusConnection::ExportAdaptors);
     // org.mpris.MediaPlayer2 mpris2 interface
     new MediaPlayer2(this);
+#endif
 
     if (GeneralSettings::guiStyle() != QStringLiteral("System")) {
         QApplication::setStyle(GeneralSettings::guiStyle());
@@ -218,10 +222,10 @@ void Application::setupQmlSettingsTypes()
 
 void Application::setupQmlContextProperties()
 {
-    std::unique_ptr<LockManager> lockManager = std::make_unique<LockManager>();
-    m_engine->rootContext()->setContextProperty("lockManager", lockManager.release());
     m_engine->rootContext()->setContextProperty("app", this);
+#if defined(Q_OS_UNIX)
     m_engine->rootContext()->setContextProperty("mediaPlayer2Player", new MediaPlayer2Player(this));
+#endif
     m_engine->rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
     m_engine->rootContext()->setContextProperty("harunaAboutData",

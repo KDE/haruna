@@ -170,14 +170,6 @@ MpvItem {
         }
     }
 
-    onPauseChanged: {
-        if (pause) {
-            lockManager.setInhibitionOff()
-        } else {
-            lockManager.setInhibitionOn()
-        }
-    }
-
     Timer {
         id: saveWatchLaterFileTimer
 
