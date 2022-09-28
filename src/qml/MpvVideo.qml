@@ -170,6 +170,10 @@ MpvItem {
         }
     }
 
+    onPlayNext: { appActions.playNextAction.trigger() }
+    onPlayPrevious: { appActions.playPreviousAction.trigger() }
+    onOpenUri: { window.openFile(uri) }
+
     Timer {
         id: saveWatchLaterFileTimer
 
@@ -285,22 +289,6 @@ MpvItem {
         }
     }
 
-    Connections {
-        target: mediaPlayer2Player
-
-        onPlaypause: appActions.playPauseAction.trigger()
-        onPlay: root.pause = false
-        onPause: root.pause = true
-        onStop: {
-            root.position = 0
-            root.pause = true
-        }
-        onNext: appActions.playNextAction.trigger()
-        onPrevious: appActions.playPreviousAction.trigger()
-        onSeek: root.command(["add", "time-pos", offset])
-        onOpenUri: openFile(uri, false, false)
-    }
-
     Rectangle {
         id: loadingIndicatorParent
 
@@ -333,10 +321,6 @@ MpvItem {
                 parent.height = height + 10
             }
         }
-    }
-
-    Component.onCompleted: {
-        mediaPlayer2Player.mpv = root
     }
 
     function handleTimePosition() {

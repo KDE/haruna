@@ -58,6 +58,8 @@ public Q_SLOTS:
     bool CanControl();
     void setPosition(int pos);
     void setVolume(double vol);
+    MpvItem *mpv() const;
+    void setMpv(MpvItem *mpv);
 
 Q_SIGNALS:
     void next();
@@ -74,9 +76,6 @@ Q_SIGNALS:
     void mpvChanged();
 
 private:
-    MpvItem *mpv() const;
-    void setMpv(MpvItem *mpv);
-
     MpvItem *m_mpv;
 };
 

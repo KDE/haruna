@@ -58,12 +58,6 @@
 #include <KLocalizedString>
 #include <KWindowConfig>
 
-#if defined(Q_OS_UNIX)
-#include "mediaplayer2.h"
-#include "mediaplayer2player.h"
-#include <QDBusConnection>
-#endif
-
 static QApplication *createApplication(int &argc, char **argv, const QString &applicationName)
 {
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -99,16 +93,6 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     m_app->installEventFilter(appEventFilter);
     QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave,
                      this, &Application::qmlApplicationMouseLeave);
-
-#if defined(Q_OS_UNIX)
-    // register mpris dbus service
-    QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
-    QDBusConnection::sessionBus().registerService(mspris2Name);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"),
-                                                 this, QDBusConnection::ExportAdaptors);
-    // org.mpris.MediaPlayer2 mpris2 interface
-    new MediaPlayer2(this);
-#endif
 
     if (GeneralSettings::guiStyle() != QStringLiteral("System")) {
         QApplication::setStyle(GeneralSettings::guiStyle());
@@ -223,9 +207,6 @@ void Application::setupQmlSettingsTypes()
 void Application::setupQmlContextProperties()
 {
     m_engine->rootContext()->setContextProperty("app", this);
-#if defined(Q_OS_UNIX)
-    m_engine->rootContext()->setContextProperty("mediaPlayer2Player", new MediaPlayer2Player(this));
-#endif
     m_engine->rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
     m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
     m_engine->rootContext()->setContextProperty("harunaAboutData",

@@ -31,7 +31,10 @@
 #include <KShell>
 
 #if defined(Q_OS_UNIX)
+#include <QDBusConnection>
 #include "lockmanager.h"
+#include "mediaplayer2.h"
+#include "mediaplayer2player.h"
 #endif
 
 MpvItem::MpvItem(QQuickItem * parent)
@@ -81,6 +84,43 @@ MpvItem::MpvItem(QQuickItem * parent)
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
         }
     });
+
+#if defined(Q_OS_UNIX)
+    // register mpris dbus service
+    QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
+    QDBusConnection::sessionBus().registerService(mspris2Name);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"),
+                                                 this, QDBusConnection::ExportAdaptors);
+    // org.mpris.MediaPlayer2 mpris2 interface
+    new MediaPlayer2(this);
+    auto mp2Player = new MediaPlayer2Player(this);
+    mp2Player->setMpv(this);
+    connect(mp2Player, &MediaPlayer2Player::playpause, this, [=]() {
+        setPause(!pause());
+    });
+    connect(mp2Player, &MediaPlayer2Player::play, this, [=]() {
+        setPause(false);
+    });
+    connect(mp2Player, &MediaPlayer2Player::pause, this, [=]() {
+        setPause(true);
+    });
+    connect(mp2Player, &MediaPlayer2Player::stop, this, [=]() {
+        setPosition(0);
+        setPause(true);
+    });
+    connect(mp2Player, &MediaPlayer2Player::next, this, [=]() {
+        Q_EMIT playNext();
+    });
+    connect(mp2Player, &MediaPlayer2Player::previous, this, [=]() {
+        Q_EMIT playPrevious();
+    });
+    connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
+        command(QStringList() << "add" << "time-pos" << QString::number(offset));
+    });
+    connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
+        Q_EMIT openUri(uri);
+    });
+#endif
 
 #if defined(Q_OS_UNIX)
     auto lockManager = new LockManager(this);
