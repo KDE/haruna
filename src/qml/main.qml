@@ -28,10 +28,10 @@ Kirigami.ApplicationWindow {
 
     visible: true
     title: mpv.mediaTitle || i18n("Haruna")
-    width: 1200
-    minimumWidth: 700
-    height: 720
-    minimumHeight: 450
+    width: Kirigami.Units.gridUnit * 66
+    minimumWidth: Kirigami.Units.gridUnit * 36
+    height: Kirigami.Units.gridUnit * 40
+    minimumHeight: Kirigami.Units.gridUnit * 22
     color: Kirigami.Theme.backgroundColor
 
     onClosing: app.saveWindowGeometry(window)
