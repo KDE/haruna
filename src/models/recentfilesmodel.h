@@ -36,10 +36,13 @@ public:
     Q_INVOKABLE void clear();
     Q_INVOKABLE void populate();
 
+    int maxRecentFiles() const;
+    void setMaxRecentFiles(int _maxRecentFiles);
+
 private:
-    KRecentFilesAction *m_recentFilesAction;
     QList<RecentFile> m_urls;
     KConfigGroup m_recentFilesConfigGroup;
+    int m_maxRecentFiles {10};
 };
 
 #endif // RECENTFILESMODEL_H

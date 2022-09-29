@@ -12,7 +12,6 @@
 #include <QDebug>
 #include <QMenu>
 
-#include <KRecentFilesAction>
 #include <KSharedConfig>
 
 RecentFilesModel::RecentFilesModel(QObject *parent)
@@ -20,10 +19,7 @@ RecentFilesModel::RecentFilesModel(QObject *parent)
 {
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     m_recentFilesConfigGroup = config->group(QStringLiteral("RecentFiles"));
-    m_recentFilesAction = new KRecentFilesAction(this);
-    m_recentFilesAction->setMaxItems(GeneralSettings::maxRecentFiles());
-    m_recentFilesAction->loadEntries(m_recentFilesConfigGroup);
-
+    setMaxRecentFiles(GeneralSettings::maxRecentFiles());
     populate();
 }
 
@@ -63,21 +59,19 @@ QHash<int, QByteArray> RecentFilesModel::roleNames() const
 
 void RecentFilesModel::populate()
 {
-    beginResetModel();
-    m_urls.clear();
-    endResetModel();
+    clear();
+    setMaxRecentFiles(GeneralSettings::maxRecentFiles());
 
-    m_recentFilesAction->setMaxItems(GeneralSettings::maxRecentFiles());
-    for (int i = 0; i < m_recentFilesAction->maxItems(); i++) {
+    for (int i = 0; i < maxRecentFiles(); i++) {
         auto file = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("File%1").arg(i + 1), QString());
         auto name = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("Name%1").arg(i + 1), QString());
         if (file.isEmpty()) {
             break;
         }
-        beginInsertRows(QModelIndex(), 0, 0);
         RecentFile recentFile;
         recentFile.url = QUrl(file);
         recentFile.name = name;
+        beginInsertRows(QModelIndex(), 0, 0);
         m_urls.prepend(recentFile);
         endInsertRows();
     }
@@ -92,21 +86,32 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     }
 
     auto _name = name == QString() ? url.fileName() : name;
-    m_recentFilesAction->addUrl(url, _name);
-    m_recentFilesAction->saveEntries(m_recentFilesConfigGroup);
-    m_recentFilesConfigGroup.sync();
+    RecentFile recentFile;
+    recentFile.url = url;
+    recentFile.name = _name;
+    beginInsertRows(QModelIndex(), 0, 0);
+    m_urls.prepend(recentFile);
+    endInsertRows();
 
-    populate();
+    m_recentFilesConfigGroup.writePathEntry(QStringLiteral("File%1").arg(m_urls.count()),
+                                            url.toDisplayString(QUrl::PreferLocalFile));
+    m_recentFilesConfigGroup.writePathEntry(QStringLiteral("Name%1").arg(m_urls.count()), _name);
+    m_recentFilesConfigGroup.sync();
 }
 
 void RecentFilesModel::clear()
 {
     beginResetModel();
-    for (const auto &url : m_recentFilesAction->urls()) {
-        m_recentFilesAction->removeUrl(url);
-    }
-    m_recentFilesAction->saveEntries(m_recentFilesConfigGroup);
-    m_recentFilesConfigGroup.sync();
     m_urls.clear();
     endResetModel();
+}
+
+int RecentFilesModel::maxRecentFiles() const
+{
+    return m_maxRecentFiles;
+}
+
+void RecentFilesModel::setMaxRecentFiles(int _maxRecentFiles)
+{
+    m_maxRecentFiles = _maxRecentFiles;
 }
