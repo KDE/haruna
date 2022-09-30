@@ -279,6 +279,24 @@
     </ul>
   </description>
   <releases>
+    <release version="0.9.2" date="2022-09-30">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added action to load a subtitle from a file dialog</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Improved right to left layout</li>
+          <li>The window now scales when changing the system font size</li>
+          <li>Fixed a crash when changing the maximum recent files setting to 0</li>
+          <li>Fixed subtitles folders setting (these folders are used to search for subtitles)</li>
+          <li>Improved duration info font size scaling in footer, now its size should be closer to that of other components in the footer</li>
+          <li>Fixed an issue with determining mime types, which caused .ts video files to be treated as text files</li>
+          <li>Fixed not being able to click the add custom command button when there are no custom commands</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.1" date="2022-08-24">
       <description>
         <p>Bugfixes:</p>
