@@ -1,0 +1,1513 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the haruna package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: haruna\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:47+0000\n"
+"PO-Revision-Date: 2021-10-10 11:22+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Łukasz Wojniłowicz"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lukasz.wojnilowicz@gmail.com"
+
+#: src/application.cpp:149
+#, kde-format
+msgid "Haruna Video Player"
+msgstr "Odtwarzacz filmów Haruna"
+
+#: src/application.cpp:151
+#, kde-format
+msgid "A configurable video player."
+msgstr "Odtwarzacz filmów z ustawieniami."
+
+#: src/application.cpp:153
+#, kde-format
+msgid "(c) 2019-2021"
+msgstr "(c) 2019-2021"
+
+#: src/application.cpp:159
+#, kde-format
+msgid "George Florea Bănuș"
+msgstr "George Florea Bănuș"
+
+#: src/application.cpp:160
+#, kde-format
+msgid "Developer"
+msgstr "Programista"
+
+#: src/application.cpp:171
+#, kde-format
+msgid "File to open"
+msgstr "Plik do otwarcia"
+
+#: src/lockmanager.cpp:34
+#, kde-format
+msgid "Playing video."
+msgstr "Odtwarzanie filmu."
+
+#: src/models/actionsmodel.cpp:23
+#, kde-format
+msgid "About Haruna"
+msgstr "O Harunie"
+
+#: src/models/actionsmodel.cpp:30
+#, kde-format
+msgid "Audio Cycle Up"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:37
+#, fuzzy, kde-format
+#| msgid "Cycle Audio Down"
+msgid "Audio Cycle Down"
+msgstr "Zapętl dźwięk w dół"
+
+#: src/models/actionsmodel.cpp:44
+#, kde-format
+msgid "Configure"
+msgstr "Ustawienia"
+
+#: src/models/actionsmodel.cpp:51
+#, kde-format
+msgid "Configure Keyboard Shortcuts"
+msgstr "Ustawienia skrótów klawiszowych"
+
+#: src/models/actionsmodel.cpp:58
+#, kde-format
+msgid "Exit Fullscreen"
+msgstr "Wyłącz tryb pełnoekranowy"
+
+#: src/models/actionsmodel.cpp:65
+#, fuzzy, kde-format
+#| msgid "Seek Big Step Forward"
+msgid "Frame Step Forward"
+msgstr "Przewiń duży krok wprzód"
+
+#: src/models/actionsmodel.cpp:73
+#, fuzzy, kde-format
+#| msgid "Seek Big Step Backward"
+msgid "Frame Step Backward"
+msgstr "Przewiń duży krok wstecz"
+
+#: src/models/actionsmodel.cpp:81
+#, fuzzy, kde-format
+#| msgid "Last played file"
+msgid "Load Last Played File"
+msgstr "Ostatnio odtwarzany plik"
+
+#: src/models/actionsmodel.cpp:88
+#, kde-format
+msgid "Mute"
+msgstr "Wycisz"
+
+#: src/models/actionsmodel.cpp:95
+#, kde-format
+msgid "Open Context Menu"
+msgstr "Otwórz menu podręczne"
+
+#: src/models/actionsmodel.cpp:99
+#, kde-format
+msgid "Opens and closes the context menu at the position of the mouse pointer"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:103
+#, kde-format
+msgid "Open File"
+msgstr "Otwórz plik"
+
+#: src/models/actionsmodel.cpp:110
+#, kde-format
+msgid "Add external subtitle…"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:117
+#, kde-format
+msgid "Open Url"
+msgstr "Otwórz adres URL"
+
+#: src/models/actionsmodel.cpp:124
+#, kde-format
+msgid "Playback speed increase"
+msgstr "Zwiększ szybkość odtwarzania"
+
+#: src/models/actionsmodel.cpp:131
+#, kde-format
+msgid "Playback speed decrease"
+msgstr "Zmniejsz szybkość odtwarzania"
+
+#: src/models/actionsmodel.cpp:138
+#, kde-format
+msgid "Playback speed reset"
+msgstr "Wyzeruj szybkość odtwarzania"
+
+#: src/models/actionsmodel.cpp:145
+#, kde-format
+msgid "Play/Pause"
+msgstr "Odtwórz/wstrzymaj"
+
+#: src/models/actionsmodel.cpp:152
+#, kde-format
+msgid "Play Next"
+msgstr "Odtwórz następny"
+
+#: src/models/actionsmodel.cpp:159
+#, kde-format
+msgid "Play Previous"
+msgstr "Odtwórz poprzedni"
+
+#: src/models/actionsmodel.cpp:166
+#, kde-format
+msgid "Quit"
+msgstr "Zakończ"
+
+#: src/models/actionsmodel.cpp:173
+#, fuzzy, kde-format
+#| msgid "Start Playback"
+msgid "Restart Playback"
+msgstr "Rozpocznij odtwarzanie"
+
+#: src/models/actionsmodel.cpp:180
+#, kde-format
+msgid "Seek Small Step Forward"
+msgstr "Przewiń mały krok wprzód"
+
+#: src/models/actionsmodel.cpp:187
+#, kde-format
+msgid "Seek Small Step Backward"
+msgstr "Przewiń mały krok wstecz"
+
+#: src/models/actionsmodel.cpp:194
+#, kde-format
+msgid "Seek Medium Step Forward"
+msgstr "Przewiń średni krok wprzód"
+
+#: src/models/actionsmodel.cpp:201
+#, kde-format
+msgid "Seek Medium Step Backward"
+msgstr "Przewiń średni krok wstecz"
+
+#: src/models/actionsmodel.cpp:208
+#, kde-format
+msgid "Seek Big Step Forward"
+msgstr "Przewiń duży krok wprzód"
+
+#: src/models/actionsmodel.cpp:215
+#, kde-format
+msgid "Seek Big Step Backward"
+msgstr "Przewiń duży krok wstecz"
+
+#: src/models/actionsmodel.cpp:222
+#, kde-format
+msgid "Seek Next Chapter"
+msgstr "Przewiń do następnego rozdziału"
+
+#: src/models/actionsmodel.cpp:229
+#, kde-format
+msgid "Seek Previous Chapter"
+msgstr "Przewiń do poprzedniego rozdziału"
+
+#: src/models/actionsmodel.cpp:236
+#, kde-format
+msgid "Seek To Next Subtitle"
+msgstr "Przewiń do następnego napisu"
+
+#: src/models/actionsmodel.cpp:243
+#, kde-format
+msgid "Seek To Previous Subtitle"
+msgstr "Przewiń do poprzedniego napisu"
+
+#: src/models/actionsmodel.cpp:250
+#, kde-format
+msgid "Seek To Watch Later Position"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:257
+#, kde-format
+msgid "Set Loop"
+msgstr "Ustaw zapętlenie"
+
+#: src/models/actionsmodel.cpp:264
+#, kde-format
+msgid "Screenshot"
+msgstr "Zrzut ekranu"
+
+#: src/models/actionsmodel.cpp:271
+#, kde-format
+msgid "Subtitle Toggle"
+msgstr "Przełącz napis"
+
+#: src/models/actionsmodel.cpp:278
+#, fuzzy, kde-format
+#| msgid "Increase Subtitle Font Size"
+msgid "Subtitle Increase Font Size"
+msgstr "Zwiększ rozmiar czcionki napisów"
+
+#: src/models/actionsmodel.cpp:285
+#, fuzzy, kde-format
+#| msgid "Decrease Subtitle Font Size"
+msgid "Subtitle Decrease Font Size"
+msgstr "Zmniejsz rozmiar czcionki napisów"
+
+#: src/models/actionsmodel.cpp:292
+#, fuzzy, kde-format
+#| msgid "Subtitle: None"
+msgid "Subtitle Move Up"
+msgstr "Napis: Brak"
+
+#: src/models/actionsmodel.cpp:299
+#, fuzzy, kde-format
+#| msgid "Subtitles on"
+msgid "Subtitle Move Down"
+msgstr "Włącz napisy"
+
+#: src/models/actionsmodel.cpp:306
+#, kde-format
+msgid "Subtitle Quicken"
+msgstr "Przyspieszenie napisu"
+
+#: src/models/actionsmodel.cpp:313
+#, kde-format
+msgid "Subtitle Delay"
+msgstr "Opóźnienie napisu"
+
+#: src/models/actionsmodel.cpp:320
+#, fuzzy, kde-format
+#| msgid "Subtitle scale: %1"
+msgid "Subtitle Cycle Up"
+msgstr "Skala napisu: %1"
+
+#: src/models/actionsmodel.cpp:327
+#, fuzzy, kde-format
+#| msgid "Subtitles folders"
+msgid "Subtitle Cycle Down"
+msgstr "Katalog napisów"
+
+#: src/models/actionsmodel.cpp:334
+#, fuzzy, kde-format
+#| msgid "Toggle deinterlacing"
+msgid "Toggle Deinterlacing"
+msgstr "Przełącz usuwanie przeplot"
+
+#: src/models/actionsmodel.cpp:341
+#, kde-format
+msgid "Toggle Fullscreen"
+msgstr "Przełącz tryb pełnoekranowy"
+
+#: src/models/actionsmodel.cpp:348
+#, kde-format
+msgid "Toggle Menu Bar"
+msgstr "Przełącz pasek menu"
+
+#: src/models/actionsmodel.cpp:355
+#, kde-format
+msgid "Toggle Header"
+msgstr "Przełącz nagłówek"
+
+#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
+#, kde-format
+msgid "Playlist"
+msgstr "Lista odtwarzania"
+
+#: src/models/actionsmodel.cpp:369
+#, kde-format
+msgid "Video pan x left"
+msgstr "Przesunięcie film w osi 'x' w lewo"
+
+#: src/models/actionsmodel.cpp:376
+#, kde-format
+msgid "Video pan x right"
+msgstr "Przesunięcie film w osi 'x' w prawo"
+
+#: src/models/actionsmodel.cpp:383
+#, kde-format
+msgid "Video pan y up"
+msgstr "Przesunięcie film w osi 'y' w górę"
+
+#: src/models/actionsmodel.cpp:390
+#, kde-format
+msgid "Video pan y down"
+msgstr "Przesunięcie film w osi 'y' w dół"
+
+#: src/models/actionsmodel.cpp:397
+#, kde-format
+msgid "Volume Up"
+msgstr "Zwiększ głośność"
+
+#: src/models/actionsmodel.cpp:404
+#, kde-format
+msgid "Volume Down"
+msgstr "Zmniejsz głośność"
+
+#: src/models/actionsmodel.cpp:411
+#, kde-format
+msgid "Zoom In"
+msgstr "Powiększ"
+
+#: src/models/actionsmodel.cpp:418
+#, kde-format
+msgid "Zoom Out"
+msgstr "Pomniejsz"
+
+#: src/models/actionsmodel.cpp:425
+#, kde-format
+msgid "Zoom Reset"
+msgstr "Zerowanie powiększenia"
+
+#: src/models/actionsmodel.cpp:433
+#, kde-format
+msgid "Contrast Up"
+msgstr "Zwiększ kontrast"
+
+#: src/models/actionsmodel.cpp:440
+#, kde-format
+msgid "Contrast Down"
+msgstr "Zmniejsz kontrast"
+
+#: src/models/actionsmodel.cpp:447
+#, kde-format
+msgid "Contrast Reset"
+msgstr "Zerowanie kontrastu"
+
+#: src/models/actionsmodel.cpp:454
+#, kde-format
+msgid "Brightness Up"
+msgstr "Zwiększ jasność"
+
+#: src/models/actionsmodel.cpp:461
+#, kde-format
+msgid "Brightness Down"
+msgstr "Zmniejsz jasność"
+
+#: src/models/actionsmodel.cpp:468
+#, kde-format
+msgid "Brightness Reset"
+msgstr "Zerowanie jasności"
+
+#: src/models/actionsmodel.cpp:475
+#, kde-format
+msgid "Gamma Up"
+msgstr "Zwiększ gammę"
+
+#: src/models/actionsmodel.cpp:482
+#, kde-format
+msgid "Gamma Down"
+msgstr "Zmniejsz gammę"
+
+#: src/models/actionsmodel.cpp:489
+#, kde-format
+msgid "Gamma Reset"
+msgstr "Zerowanie gammy"
+
+#: src/models/actionsmodel.cpp:496
+#, kde-format
+msgid "Saturation Up"
+msgstr "Zwiększ nasycenie"
+
+#: src/models/actionsmodel.cpp:503
+#, kde-format
+msgid "Saturation Down"
+msgstr "Zmniejsz nasycenie"
+
+#: src/models/actionsmodel.cpp:510
+#, kde-format
+msgid "Saturation Reset"
+msgstr "Zerowanie nasycenia"
+
+#: src/models/actionsmodel.cpp:652
+#, kde-format
+msgid ""
+"The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
+"<br><br>Do you want to reassign the shortcut?"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:657
+#, kde-format
+msgid "Reassign"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:624
+#, fuzzy, kde-format
+#| msgid "Playlist style"
+msgid "Playlist is empty"
+msgstr "Wygląd listy odtwarzania"
+
+#: src/qml/Actions.qml:62 src/qml/Actions.qml:80
+#, kde-format
+msgid "Audio: %1 %2"
+msgstr "Dźwięk: %1 %2"
+
+#: src/qml/Actions.qml:131 src/qml/Actions.qml:136 src/qml/Actions.qml:141
+#, kde-format
+msgid "Playback speed: %1"
+msgstr "Szybkość odtwarzania: %1"
+
+#: src/qml/Actions.qml:237
+#, kde-format
+msgid "Loop start: %1"
+msgstr "Zapętlij początek: %1"
+
+#: src/qml/Actions.qml:241
+#, kde-format
+msgid "Loop: %1 - %2"
+msgstr "Zapętlij: %1 - %2"
+
+#: src/qml/Actions.qml:247
+#, kde-format
+msgid "Loop cleared"
+msgstr "Wyczyszczono pętlę"
+
+#: src/qml/Actions.qml:255 src/qml/Actions.qml:260
+#, kde-format
+msgid "Subtitle timing: %1"
+msgstr "Czas napisu: %1"
+
+#: src/qml/Actions.qml:265
+#, kde-format
+msgid "Subtitles off"
+msgstr "Wyłącz napisy"
+
+#: src/qml/Actions.qml:265
+#, kde-format
+msgid "Subtitles on"
+msgstr "Włącz napisy"
+
+#: src/qml/Actions.qml:274 src/qml/Actions.qml:286
+#, kde-format
+msgid "Subtitle: None"
+msgstr "Napis: Brak"
+
+#: src/qml/Actions.qml:278 src/qml/Actions.qml:290
+#, kde-format
+msgid "Subtitle: %1 %2"
+msgstr "Napis: %1 %2"
+
+#: src/qml/Actions.qml:296 src/qml/Actions.qml:301
+#, kde-format
+msgid "Subtitle scale: %1"
+msgstr "Skala napisu: %1"
+
+#: src/qml/Actions.qml:310
+#, kde-format
+msgid "Deinterlace: %1"
+msgstr "Usuwanie przeplotu: %1"
+
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:360
+#, kde-format
+msgid "Volume: %1"
+msgstr "Głośność: %1"
+
+#: src/qml/Actions.qml:366 src/qml/Actions.qml:372
+#, kde-format
+msgid "Zoom: %1"
+msgstr "Powiększenie: %1"
+
+#: src/qml/Actions.qml:377
+#, kde-format
+msgid "Zoom: 0"
+msgstr "Powiększenie: 0"
+
+#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
+#, kde-format
+msgid "Contrast: %1"
+msgstr "Kontrast: %1"
+
+#: src/qml/Actions.qml:395
+#, kde-format
+msgid "Contrast: 0"
+msgstr "Kontrast: 0"
+
+#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
+#, kde-format
+msgid "Brightness: %1"
+msgstr "Jasność: %1"
+
+#: src/qml/Actions.qml:412
+#, kde-format
+msgid "Brightness: 0"
+msgstr "Jasność: 0"
+
+#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
+#, kde-format
+msgid "Gamma: %1"
+msgstr "Gamma: %1"
+
+#: src/qml/Actions.qml:429
+#, kde-format
+msgid "Gamma: 0"
+msgstr "Gamma: 0"
+
+#: src/qml/Actions.qml:435 src/qml/Actions.qml:441
+#, kde-format
+msgid "Saturation: %1"
+msgstr "Nasycenie: %1"
+
+#: src/qml/Actions.qml:446
+#, kde-format
+msgid "Saturation: 0"
+msgstr "Nasycenie: 0"
+
+#: src/qml/Footer.qml:67
+#, kde-format
+msgid "Start Playback"
+msgstr "Rozpocznij odtwarzanie"
+
+#: src/qml/Footer.qml:67
+#, kde-format
+msgid "Pause Playback"
+msgstr "Wstrzymaj odtwarzanie"
+
+#: src/qml/Footer.qml:80
+#, kde-format
+msgid "Play previous file"
+msgstr "Odtwórz poprzedni plik"
+
+#: src/qml/Footer.qml:93
+#, kde-format
+msgid "Play next file"
+msgstr "Odtwórz następny plik"
+
+#: src/qml/Footer.qml:107
+#, kde-format
+msgid "Remaining: %1"
+msgstr "Pozostało: %1"
+
+#: src/qml/HamburgerMenu.qml:51 src/qml/Menus/FileMenu.qml:24
+#: src/qml/Menus/Global/GlobalFileMenu.qml:39
+#, fuzzy, kde-format
+#| msgid "Open File"
+msgid "Recent Files"
+msgstr "Otwórz plik"
+
+#: src/qml/HamburgerMenu.qml:80
+#, kde-format
+msgid "&More"
+msgstr ""
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:38
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgid "Select a color"
+msgstr "Odtwórz następny plik"
+
+#: src/qml/Haruna/Components/SelectActionPopup.qml:46
+#, kde-format
+msgid "Double click to set action"
+msgstr "Naciśnij dwukrotnie, aby ustawić działanie"
+
+#: src/qml/Haruna/Components/SelectActionPopup.qml:65
+#, kde-format
+msgid "Clear current action"
+msgstr "Wyczyść bieżące działanie"
+
+#: src/qml/Haruna/Components/SettingsBasePage.qml:25
+#: src/qml/Settings/SettingsWindow.qml:163
+#, kde-format
+msgid "Help"
+msgstr "Pomoc"
+
+#: src/qml/Haruna/Components/SettingsBasePage.qml:28
+#, kde-format
+msgid "Haruna help window (english only)"
+msgstr "Okno pomocy Haruna (tylko po angielsku)"
+
+#: src/qml/Haruna/Components/SettingsBasePage.qml:33
+#, kde-format
+msgid "Haruna handbook"
+msgstr "Podręcznik Haruna"
+
+#: src/qml/Haruna/Components/SettingsBasePage.qml:39
+#, kde-format
+msgid "Open config ..."
+msgstr "Otwórz ustawienia..."
+
+#: src/qml/Haruna/Components/SettingsBasePage.qml:44
+#, kde-format
+msgid "File"
+msgstr "Plik"
+
+#: src/qml/Haruna/Components/SettingsBasePage.qml:48
+#, kde-format
+msgid "Folder"
+msgstr "Katalog"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:27
+#, kde-format
+msgid "Load subtitles from"
+msgstr "Wczytaj napisy z"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:102
+#, kde-format
+msgid "Confirm deletion"
+msgstr "Potwierdź usunięcie"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:118
+#, kde-format
+msgid "Delete this folder from list"
+msgstr "Usuń ten katalog z listy"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:134
+#, kde-format
+msgid "Save changes"
+msgstr "Zapisz zmiany"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:156
+#, kde-format
+msgid "Add new folder"
+msgstr "Dodaj nowy katalog"
+
+#: src/qml/Header.qml:73 src/qml/Settings/SettingsWindow.qml:85
+#, kde-format
+msgid "Subtitles"
+msgstr "Napisy"
+
+#: src/qml/Header.qml:106 src/qml/Settings/SettingsWindow.qml:77
+#, kde-format
+msgid "Audio"
+msgstr "Dźwięk"
+
+#: src/qml/HProgressBar.qml:182
+#, kde-format
+msgid "Skip Chapters"
+msgstr "Pomiń rozdziały"
+
+#: src/qml/main.qml:30
+#, kde-format
+msgid "Haruna"
+msgstr "Haruna"
+
+#: src/qml/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgid "Select file"
+msgstr "Odtwórz następny plik"
+
+#: src/qml/main.qml:230
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgid "Select subtitles file"
+msgstr "Odtwórz następny plik"
+
+#: src/qml/main.qml:256
+#, kde-format
+msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgstr "Nie znaleziono <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
+
+#: src/qml/main.qml:283
+#, kde-format
+msgid "Open"
+msgstr "Otwórz"
+
+#: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
+#, kde-format
+msgid "&Audio"
+msgstr "&Dźwięk"
+
+#: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
+#, kde-format
+msgid "&Primary Track"
+msgstr "&Główna ścieżka"
+
+#: src/qml/Menus/ContextMenu.qml:19
+#, fuzzy, kde-format
+#| msgid "Playback speed: %1"
+msgid "Playback speed"
+msgstr "Szybkość odtwarzania: %1"
+
+#: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
+#, kde-format
+msgid "&File"
+msgstr "&Plik"
+
+#: src/qml/Menus/FileMenu.qml:38
+#, kde-format
+msgid "Clear List"
+msgstr ""
+
+#: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
+#, kde-format
+msgid "&Help"
+msgstr "&Pomoc"
+
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
+#: src/qml/Menus/PlaybackMenu.qml:13
+#, kde-format
+msgid "&Playback"
+msgstr "&Odtwarzanie"
+
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
+#: src/qml/Menus/PlaybackMenu.qml:31
+#, kde-format
+msgid "Seek"
+msgstr ""
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
+#: src/qml/Menus/SettingsMenu.qml:13
+#, kde-format
+msgid "&Settings"
+msgstr "U&stawienia"
+
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
+#: src/qml/Menus/SubtitlesMenu.qml:14
+#, kde-format
+msgid "&Subtitles"
+msgstr "Napi&sy"
+
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
+#: src/qml/Menus/SubtitlesMenu.qml:19
+#, kde-format
+msgid "Primary Subtitle"
+msgstr "Główny napis"
+
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
+#: src/qml/Menus/SubtitlesMenu.qml:39
+#, kde-format
+msgid "Secondary Subtitle"
+msgstr "Poboczny napis"
+
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
+#, fuzzy, kde-format
+#| msgid "Video"
+msgid "&Video"
+msgstr "Wideo"
+
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
+#, fuzzy, kde-format
+#| msgid "Image adjustments"
+msgid "Adjustments"
+msgstr "Dostosowanie obrazu"
+
+#: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
+#, kde-format
+msgid "&View"
+msgstr "&Widok"
+
+#: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
+#, kde-format
+msgid "Hide Menubar"
+msgstr "Ukryj pasek menu"
+
+#: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
+#, kde-format
+msgid "Show Menubar"
+msgstr "Pokaż pasek menu"
+
+#: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
+#, kde-format
+msgid "Hide Toolbar"
+msgstr "Schowaj pasek narzędzi"
+
+#: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
+#, kde-format
+msgid "Show Toolbar"
+msgstr "Pokaż pasek narzędzi"
+
+#: src/qml/MpvVideo.qml:132
+#, kde-format
+msgid "Skipped chapter: %1"
+msgstr "Pominięty rozdział: %1"
+
+#: src/qml/MpvVideo.qml:149
+#, kde-format
+msgid "Could not play: %1"
+msgstr "Nie można odtworzyć: %1"
+
+#: src/qml/Settings/AudioSettings.qml:27
+#: src/qml/Settings/SubtitlesSettings.qml:34
+#, kde-format
+msgid "Preferred language"
+msgstr "Domyślny język"
+
+#: src/qml/Settings/AudioSettings.qml:33
+#: src/qml/Settings/SubtitlesSettings.qml:40
+#, kde-format
+msgid "eng,ger etc."
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:42
+#: src/qml/Settings/SubtitlesSettings.qml:49
+#, kde-format
+msgid "Do not use spaces."
+msgstr "Nie używaj odstępów."
+
+#: src/qml/Settings/AudioSettings.qml:47
+#: src/qml/Settings/SubtitlesSettings.qml:54
+#, kde-format
+msgid "Preferred track"
+msgstr "Domyślna ścieżka"
+
+#: src/qml/Settings/AudioSettings.qml:69
+#, kde-format
+msgid "Volume step"
+msgstr "Krok głośności"
+
+#: src/qml/Settings/CustomCommandsSettings.qml:34
+#, kde-format
+msgid "No custom commands yet"
+msgstr "Nie ma jeszcze żadnego własnego polecenia"
+
+#: src/qml/Settings/CustomCommandsSettings.qml:36
+#, kde-format
+msgid "&Add command"
+msgstr "Dod&aj polecenie"
+
+#: src/qml/Settings/CustomCommandsSettings.qml:69
+#, kde-format
+msgid "Don't set on next startup"
+msgstr ""
+
+#: src/qml/Settings/CustomCommandsSettings.qml:155
+#, kde-format
+msgid "&Add"
+msgstr "Dod&aj"
+
+#: src/qml/Settings/EditCustomCommand.qml:42
+#, kde-format
+msgid "Command"
+msgstr "Polecenie"
+
+#: src/qml/Settings/EditCustomCommand.qml:50
+#, kde-format
+msgid "add volume +10"
+msgstr ""
+
+#: src/qml/Settings/EditCustomCommand.qml:56
+#, kde-format
+msgid "OSD Message"
+msgstr "Wiadomość OSD"
+
+#: src/qml/Settings/EditCustomCommand.qml:65
+#, kde-format
+msgid "Filename: ${filename}"
+msgstr ""
+
+#: src/qml/Settings/EditCustomCommand.qml:70
+#, kde-format
+msgid "Type"
+msgstr "Rodzaj"
+
+#: src/qml/Settings/EditCustomCommand.qml:91
+#, kde-format
+msgid "Keyboard shortcut"
+msgstr "Skrót klawiszowy"
+
+#: src/qml/Settings/EditCustomCommand.qml:98
+#, kde-format
+msgid "Run at startup"
+msgstr "Uruchom na początku"
+
+#: src/qml/Settings/EditCustomCommand.qml:108
+#, kde-format
+msgid "Delete"
+msgstr "Usuń"
+
+#: src/qml/Settings/EditCustomCommand.qml:123
+#, kde-format
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: src/qml/Settings/EditCustomCommand.qml:130
+#, kde-format
+msgid "&Save"
+msgstr "Zapi&sz"
+
+#: src/qml/Settings/GeneralSettings.qml:30
+#, kde-format
+msgid "Osd font size"
+msgstr "Rozmiar czcionki OSD"
+
+#: src/qml/Settings/GeneralSettings.qml:56
+#, kde-format
+msgid "File dialog location"
+msgstr "Położenie okna pliku"
+
+#: src/qml/Settings/GeneralSettings.qml:71
+#, kde-format
+msgid "If empty the file dialog will remember the last opened location."
+msgstr "Jeśli puste, to okno pliku zapamięta ostatnio otwierane miejsce."
+
+#: src/qml/Settings/GeneralSettings.qml:76
+#, fuzzy, kde-format
+#| msgid "Open File"
+msgid "Maximum recent files"
+msgstr "Otwórz plik"
+
+#: src/qml/Settings/GeneralSettings.qml:93
+#, kde-format
+msgid "How many recent files to store. Enter 0 (zero) to disable."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:100
+#, fuzzy, kde-format
+#| msgid "Remember time position"
+msgid "Remember window size and position"
+msgstr "Zapamiętaj położenie w czasie"
+
+#: src/qml/Settings/GeneralSettings.qml:109
+#, kde-format
+msgid "Interface"
+msgstr "Interfejs"
+
+#: src/qml/Settings/GeneralSettings.qml:117
+#, fuzzy, kde-format
+#| msgid "Show menu bar"
+msgid "Show menubar"
+msgstr "Pokaż pasek menu"
+
+#: src/qml/Settings/GeneralSettings.qml:128
+#, fuzzy, kde-format
+#| msgid "Show Toolbar"
+msgid "Show toolbar"
+msgstr "Pokaż pasek narzędzi"
+
+#: src/qml/Settings/GeneralSettings.qml:139
+#, kde-format
+msgid "Show chapter markers"
+msgstr "Pokaż znaczniki rozdziałów"
+
+#: src/qml/Settings/GeneralSettings.qml:148
+#, kde-format
+msgid "Color scheme"
+msgstr "Zestaw barw"
+
+#: src/qml/Settings/GeneralSettings.qml:190
+#, fuzzy, kde-format
+#| msgid "GUI Style"
+msgid "GUI style"
+msgstr "Wygląd interfejsu"
+
+#: src/qml/Settings/GeneralSettings.qml:239
+#, kde-format
+msgid "Use Breeze icon theme"
+msgstr "Użyj zestawu ikon Bryzy"
+
+#: src/qml/Settings/GeneralSettings.qml:249
+#, kde-format
+msgid ""
+"Sets the icon theme to breeze.\n"
+"Requires restart."
+msgstr ""
+"Ustawia zestaw ikon na Bryzę.\n"
+"Wymaga ponownego uruchomienia."
+
+#: src/qml/Settings/PlaybackSettings.qml:29
+#, kde-format
+msgid "Seek small step"
+msgstr "Przewiń mały krok"
+
+#: src/qml/Settings/PlaybackSettings.qml:47
+#, kde-format
+msgid "Seek medium step"
+msgstr "Przewiń średni krok"
+
+#: src/qml/Settings/PlaybackSettings.qml:73
+#, kde-format
+msgid ""
+"This is also used for mouse wheel seeking, when mouse is over the progress "
+"bar"
+msgstr ""
+"Używa się tego także do przewijania myszą, gdy jej wskaźnik znajduje się na "
+"pasku postępu"
+
+#: src/qml/Settings/PlaybackSettings.qml:84
+#, kde-format
+msgid "Seek big step"
+msgstr "Przewiń duży krok"
+
+#: src/qml/Settings/PlaybackSettings.qml:105
+#, fuzzy, kde-format
+#| msgid "Open last played file"
+msgid "Open last played file on startup"
+msgstr "Otwórz ostatnio odtwarzany plik"
+
+#: src/qml/Settings/PlaybackSettings.qml:118
+#, kde-format
+msgid "Seek to last playback position"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "When opening a file that was played before it will start at the position "
+#| "it was when playback stopped."
+msgid ""
+"When opening a file that was played before, seek at the position it was last "
+"time."
+msgstr ""
+"Po otwarciu pliku, który był odtwarzany wcześniej, zacznie on od miejsca, w "
+"którym poprzednio zatrzymano odtwarzanie."
+
+#: src/qml/Settings/PlaybackSettings.qml:135
+#, fuzzy, kde-format
+#| msgid "Start Playback"
+msgid "Start playing"
+msgstr "Rozpocznij odtwarzanie"
+
+#: src/qml/Settings/PlaybackSettings.qml:144
+#, fuzzy, kde-format
+#| msgid ""
+#| "When opening a file that was played before it will start at the position "
+#| "it was when playback stopped."
+msgid ""
+"When opening a file that was played before, start playing it automatically."
+msgstr ""
+"Po otwarciu pliku, który był odtwarzany wcześniej, zacznie on od miejsca, w "
+"którym poprzednio zatrzymano odtwarzanie."
+
+#: src/qml/Settings/PlaybackSettings.qml:153
+#, kde-format
+msgid "Pause on minimize"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:161
+#, kde-format
+msgid ""
+"Pauses the player while the window is minimized, playback resumes when "
+"restored."
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:166
+#, kde-format
+msgid "Hardware decoding"
+msgstr "Dekodowanie sprzętowe"
+
+#: src/qml/Settings/PlaybackSettings.qml:172
+#: src/qml/Settings/PlaybackSettings.qml:298
+#, kde-format
+msgid "Enabled"
+msgstr "Włączone"
+
+#: src/qml/Settings/PlaybackSettings.qml:172
+#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:298
+#, kde-format
+msgid "Disabled"
+msgstr "Wyłączone"
+
+#: src/qml/Settings/PlaybackSettings.qml:232
+#, kde-format
+msgid "Remember time position"
+msgstr "Zapamiętaj położenie w czasie"
+
+#: src/qml/Settings/PlaybackSettings.qml:254
+#, kde-format
+msgid "For all files"
+msgstr "Dla wszystkich plików"
+
+#: src/qml/Settings/PlaybackSettings.qml:256
+#, fuzzy, kde-format
+#| msgid "For files longer than %1 minute"
+msgid "For files longer than %1 minute"
+msgid_plural "For files longer than %1 minutes"
+msgstr[0] "Dla plików dłuższych niż %1 minut"
+msgstr[1] "Dla plików dłuższych niż %1 minut"
+msgstr[2] "Dla plików dłuższych niż %1 minut"
+
+#: src/qml/Settings/PlaybackSettings.qml:283
+#, kde-format
+msgid "Save position every %1 second"
+msgid_plural "Save position every %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/qml/Settings/PlaybackSettings.qml:292
+#, kde-format
+msgid "Skip chapters"
+msgstr "Pomiń rozdziały"
+
+#: src/qml/Settings/PlaybackSettings.qml:309
+#, kde-format
+msgid "Show osd message on skip"
+msgstr "Pokaż wiadomość OSD przy pomijaniu"
+
+#: src/qml/Settings/PlaybackSettings.qml:319
+#, kde-format
+msgid "Skip words"
+msgstr "Pomiń słowa"
+
+#: src/qml/Settings/PlaybackSettings.qml:326
+#, fuzzy, kde-format
+#| msgid "Skipped chapter: %1"
+msgid "op, ed, chapter 1"
+msgstr "Pominięty rozdział: %1"
+
+#: src/qml/Settings/PlaybackSettings.qml:335
+#, kde-format
+msgid "Skip chapters containing these words. Comma separated list."
+msgstr "Pomiń rozdziały zawierające te słowa. Lista oddzielona przecinkami."
+
+#: src/qml/Settings/PlaybackSettings.qml:344
+#, kde-format
+msgid "Youtube-dl"
+msgstr "Youtube-dl"
+
+#: src/qml/Settings/PlaybackSettings.qml:350
+#, kde-format
+msgid "Format selection"
+msgstr "Wybór formatu"
+
+#: src/qml/Settings/PlaybackSettings.qml:369
+#, kde-format
+msgid ""
+"Selects the best video with a height lower than or equal to the selected "
+"value."
+msgstr ""
+"Wybiera najlepszy film o wysokości niższej lub równej wpisanej wartości."
+
+#: src/qml/Settings/PlaybackSettings.qml:419
+#, kde-format
+msgid "bestvideo+bestaudio/best"
+msgstr "bestvideo+bestaudio/best"
+
+#: src/qml/Settings/PlaylistSettings.qml:27
+#, kde-format
+msgid "Position"
+msgstr "Położenie"
+
+#: src/qml/Settings/PlaylistSettings.qml:52
+#, kde-format
+msgid "Row height"
+msgstr "Wysokość wiersza"
+
+#: src/qml/Settings/PlaylistSettings.qml:69
+#, kde-format
+msgid "Playlist style"
+msgstr "Wygląd listy odtwarzania"
+
+#: src/qml/Settings/PlaylistSettings.qml:97
+#, kde-format
+msgid "Overlay video"
+msgstr "Nakładka na film"
+
+#: src/qml/Settings/PlaylistSettings.qml:104
+#, kde-format
+msgid ""
+"When checked the playlist goes on top of the video\n"
+"When unchecked the video is resized"
+msgstr ""
+"Po zaznaczeniu, lista odtwarzania przechodzi na górę filmu\n"
+"Po odznaczeniu, zmieniany jest rozmiar filmu"
+
+#: src/qml/Settings/PlaylistSettings.qml:111
+#, kde-format
+msgid "Show media title instead of file name"
+msgstr "Pokaż tytuł treści pliku zamiast jego nazwy"
+
+#: src/qml/Settings/PlaylistSettings.qml:121
+#, kde-format
+msgid "Auto load videos from same folder"
+msgstr "Sam wczytuj filmy z tego samego katalogu"
+
+#: src/qml/Settings/PlaylistSettings.qml:131
+#, kde-format
+msgid "Repeat"
+msgstr "Powtórz"
+
+#: src/qml/Settings/PlaylistSettings.qml:141
+#, kde-format
+msgid "Show row number"
+msgstr "Pokaż numer wiersza"
+
+#: src/qml/Settings/PlaylistSettings.qml:151
+#, kde-format
+msgid "Toggle with mouse"
+msgstr "Przełącz przy użyciu myszy"
+
+#: src/qml/Settings/PlaylistSettings.qml:160
+#, kde-format
+msgid "Increase font size when fullscreen"
+msgstr "Zwiększ rozmiar czcionki w trybie pełnoekranowym"
+
+#: src/qml/Settings/SettingsWindow.qml:35
+#, kde-format
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/qml/Settings/SettingsWindow.qml:53
+#, kde-format
+msgid "General"
+msgstr "Ogólne"
+
+#: src/qml/Settings/SettingsWindow.qml:61
+#, kde-format
+msgid "Playback"
+msgstr "Odtwarzanie"
+
+#: src/qml/Settings/SettingsWindow.qml:69
+#, kde-format
+msgid "Video"
+msgstr "Wideo"
+
+#: src/qml/Settings/SettingsWindow.qml:101
+#, kde-format
+msgid "Mouse"
+msgstr "Mysz"
+
+#: src/qml/Settings/SettingsWindow.qml:109
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgid "Shortcuts"
+msgstr "Skrót"
+
+#: src/qml/Settings/SettingsWindow.qml:117
+#, kde-format
+msgid "Custom commands"
+msgstr "Własne polecenia"
+
+#: src/qml/Settings/SettingsWindow.qml:125
+#, kde-format
+msgid "About"
+msgstr "O programie"
+
+#: src/qml/Settings/SubtitlesSettings.qml:75
+#, kde-format
+msgid "Styling"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:81
+#, kde-format
+msgid "Font family"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:113
+#, fuzzy, kde-format
+#| msgid "Osd font size"
+msgid "Font size"
+msgstr "Rozmiar czcionki OSD"
+
+#: src/qml/Settings/SubtitlesSettings.qml:129
+#, kde-format
+msgid "Font style"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:134
+#, kde-format
+msgid "Bold"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:146
+#, kde-format
+msgid "Italic"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:156
+#, kde-format
+msgid "Font color"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:189
+#: src/qml/Settings/SubtitlesSettings.qml:227
+#: src/qml/Settings/SubtitlesSettings.qml:287
+#, kde-format
+msgid "Set default value"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:195
+#, kde-format
+msgid "Shadow color"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:233
+#, kde-format
+msgid "Shadow offset"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:249
+#: src/qml/Settings/SubtitlesSettings.qml:309
+#, kde-format
+msgid "Set to 0 (zero) to disable."
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:254
+#, kde-format
+msgid "Border color"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:293
+#, kde-format
+msgid "Border width"
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:28
+#, kde-format
+msgid "Screenshots"
+msgstr "Zrzuty ekranu"
+
+#: src/qml/Settings/VideoSettings.qml:38
+#, kde-format
+msgid "Format"
+msgstr "Format"
+
+#: src/qml/Settings/VideoSettings.qml:74
+#, kde-format
+msgid "Template"
+msgstr "Szablon"
+
+#: src/qml/Settings/VideoSettings.qml:90
+#, kde-format
+msgid "Image adjustments"
+msgstr "Dostosowanie obrazu"
+
+#: src/qml/Settings/VideoSettings.qml:100
+#, kde-format
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: src/qml/Settings/VideoSettings.qml:117
+#, kde-format
+msgid "Brightness"
+msgstr "Jasność"
+
+#: src/qml/Settings/VideoSettings.qml:134
+#, kde-format
+msgid "Gamma"
+msgstr "Gamma"
+
+#: src/qml/Settings/VideoSettings.qml:151
+#, kde-format
+msgid "Saturation"
+msgstr "Nasycenie"
+
+#: src/qml/Settings/VideoSettings.qml:165
+#, kde-format
+msgid "Middle click on the sliders to reset them"
+msgstr "Naciśnięcie środkowym na suwaku zeruje go"
+
+#, fuzzy
+#~| msgid "Playlist"
+#~ msgid "Toggle Playlist"
+#~ msgstr "Lista odtwarzania"
+
+#~ msgid "Leave empty for default value: <i>bestvideo+bestaudio/best</i>"
+#~ msgstr ""
+#~ "Pozostaw puste, aby użyć wartości domyślnej: <i>bestvideo+bestaudio/best</"
+#~ "i>"
+
+#, fuzzy
+#~| msgid "Subtitles folders"
+#~ msgid "Subtitle color"
+#~ msgstr "Katalog napisów"
+
+#~ msgid "Configure shortcuts"
+#~ msgstr "Ustawienia skrótów"
+
+#~ msgid "Move one frame forward, then pause"
+#~ msgstr "Przewiń jedną klatkę wprzód i wstrzymaj odtwarzanie"
+
+#~ msgid "Move one frame backward, then pause"
+#~ msgstr "Przewiń jedną klatkę wstecz i wstrzymaj odtwarzanie"
+
+#~ msgid "Cycle Audio Up"
+#~ msgstr "Zapętl dźwięk w górę"
+
+#~ msgid "Cycle Subtitle Up"
+#~ msgstr "Zapętl napis w górę"
+
+#~ msgid "Cycle Subtitle Down"
+#~ msgstr "Zapętl napis w dół"
+
+#~ msgid "Move Subtitle Up"
+#~ msgstr "Przesuń napis w górę"
+
+#~ msgid "Move Subtitle Down"
+#~ msgstr "Przesuń napis w dół"
+
+#~ msgid "Unmute"
+#~ msgstr "Wyłącz wyciszenie"
+
+#~ msgid "Video pan x: %1"
+#~ msgstr "Przesunięcie film w osi 'x': %1"
+
+#~ msgid "Video pan y: %1"
+#~ msgstr "Przesunięcie film w osi 'y': %1"
+
+#~ msgid "Type to filter..."
+#~ msgstr "Zacznij pisać, aby zacząć filtrować..."
+
+#~ msgid "Startup"
+#~ msgstr "Rozruch"
+
+#, fuzzy
+#~| msgid "Pause Playback"
+#~ msgid "Resume playback"
+#~ msgstr "Wstrzymaj odtwarzanie"
+
+#~ msgid "For files longer than %1 minutes"
+#~ msgstr "Dla plików dłuższych niż %1 minut"
+
+#~ msgid "Show header"
+#~ msgstr "Pokaż nagłówek"
+
+#~ msgid "Volume"
+#~ msgstr "Głośność"
+
+#~ msgid "File default dialog location"
+#~ msgstr "Domyślne położenie okna pliku"
+
+#~ msgid "File dialog last location"
+#~ msgstr "Ostatnie położenie okna pliku"
+
+#~ msgid "Last url"
+#~ msgstr "Ostatni adres URL"
+
+#~ msgid "Action for left click"
+#~ msgstr "Działanie na naciśnięcie lewym"
+
+#~ msgid "Action for left double click"
+#~ msgstr "Działanie na dwukrotne naciśnięcie lewym"
+
+#~ msgid "Action for middle click"
+#~ msgstr "Działanie na naciśnięcie środkowym"
+
+#~ msgid "Action for middle double click"
+#~ msgstr "Działanie na dwukrotne naciśnięcie środkowym"
+
+#~ msgid "Action for right click"
+#~ msgstr "Działanie na naciśnięcie prawym"
+
+#~ msgid "Action for right double click"
+#~ msgstr "Działanie na dwukrotne naciśnięcie prawym"
+
+#~ msgid "Action for scroll up"
+#~ msgstr "Działanie na przewinięcie w górę"
+
+#~ msgid "Action for scroll down"
+#~ msgstr "Działanie na przewinięcie w dół"
+
+#~ msgid "Chapters to skip"
+#~ msgstr "Rozdziały do pomięcia"
+
+#~ msgid "Show osd on skip chapters"
+#~ msgstr "Pokaż OSD na pomiętych rozdziałach"
+
+#~ msgid "Ytdl format selection"
+#~ msgstr "Wybór formatu Ytdl"
+
+#~ msgid "Show thumbnails"
+#~ msgstr "Pokaż miniatury"
+
+#~ msgid "Screenshot format"
+#~ msgstr "Format zrzutu ekranu"
+
+#~ msgid "Screenshot template"
+#~ msgstr "Szablon zrzutu ekranu"
+
+#~ msgid "Haruna Settings"
+#~ msgstr "Ustawienia Haruny"
