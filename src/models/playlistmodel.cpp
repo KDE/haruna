@@ -123,7 +123,7 @@ void PlayListModel::appendVideo(QString videoPath)
     QFileInfo videoPathInfo(videoPath);
     QStringList videoFiles;
     if (videoPathInfo.exists() && videoPathInfo.isFile()) {
-        QString mimeType = Application::mimeType(videoPathInfo.absoluteFilePath());
+        QString mimeType = Application::mimeType(QUrl(videoPathInfo.absoluteFilePath()));
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
             videoFiles.append(videoPathInfo.absoluteFilePath());
         }

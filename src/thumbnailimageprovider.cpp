@@ -30,7 +30,7 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
     }, Qt::QueuedConnection);
 
     connect(Worker::instance(), &Worker::thumbnailFail, this, [=]() {
-        QString mimeType = Application::mimeType(id);
+        QString mimeType = Application::mimeType(QUrl(id));
         QString iconName;
         if (mimeType.startsWith("video/")) {
             iconName = QStringLiteral("video-x-generic");

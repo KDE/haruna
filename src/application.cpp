@@ -286,7 +286,7 @@ QUrl Application::parentUrl(const QString &path)
 {
     QUrl url(path);
     if (!url.isValid()) {
-        return QStandardPaths::writableLocation(QStandardPaths::MoviesLocation);
+        return QUrl(QStandardPaths::writableLocation(QStandardPaths::MoviesLocation));
     }
     QFileInfo fileInfo;
     if (url.isLocalFile()) {
