@@ -52,7 +52,7 @@ public:
     Playlist getPlayList() const;
     void setPlayList(const Playlist &playList);
 
-signals:
+Q_SIGNALS:
     void videoAdded(int index, QString path);
     void playingVideoChanged();
 

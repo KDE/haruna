@@ -25,7 +25,7 @@ class ApplicationEventFilter : public QObject
 {
     Q_OBJECT
 
-signals:
+Q_SIGNALS:
     void applicationMouseLeave();
 
 protected:
@@ -75,7 +75,7 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(const QUrl &url);
 
-signals:
+Q_SIGNALS:
     void qmlApplicationMouseLeave();
     void error(const QString &message);
 

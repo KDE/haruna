@@ -82,7 +82,7 @@ public:
     static void mpvEvents(void *ctx);
     virtual void eventHandler() = 0;
 
-signals:
+Q_SIGNALS:
     void ready();
 
 protected:

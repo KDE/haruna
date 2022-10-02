@@ -110,7 +110,7 @@ public:
     Q_INVOKABLE void userCommand(const QString &commandString);
     void eventHandler() override;
 
-signals:
+Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
     void playlistModelChanged();

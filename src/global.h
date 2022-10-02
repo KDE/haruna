@@ -25,7 +25,7 @@ public:
     const QString appConfigDirPath();
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
 
-signals:
+Q_SIGNALS:
     void error(const QString &message);
 
 private:

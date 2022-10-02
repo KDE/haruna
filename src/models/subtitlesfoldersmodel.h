@@ -21,7 +21,7 @@ public:
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-public slots:
+public Q_SLOTS:
     void updateFolder(const QString &folder, int row);
     void deleteFolder(int row);
     void addFolder();

@@ -62,7 +62,7 @@ public:
     ActionsModel *appActionsModel();
     void setAppActionsModel(ActionsModel *_appActionsModel);
 
-signals:
+Q_SIGNALS:
     void appActionsModelChanged();
 
 private:

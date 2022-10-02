@@ -32,7 +32,7 @@ public:
     explicit ProxyActionsModel(QObject *parent = nullptr);
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const  override;
 
-public slots:
+public Q_SLOTS:
     void setNameFilter(const QString& regExp);
     void setTypeFilter(const QString& regExp);
     bool saveShortcut(int row, const QVariant &shortcut);

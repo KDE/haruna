@@ -19,12 +19,12 @@ class Worker : public QObject
 public:
     static Worker* instance();
 
-signals:
+Q_SIGNALS:
     void metaDataReady(int index, KFileMetaData::PropertyMap metadata);
     void thumbnailSuccess(const QImage &image);
     void thumbnailFail();
 
-public slots:
+public Q_SLOTS:
     void getMetaData(int index, const QString &path);
     void makePlaylistThumbnail(const QString &id, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
