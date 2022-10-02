@@ -38,8 +38,8 @@ public Q_SLOTS:
     bool saveShortcut(int row, const QVariant &shortcut);
 
 private:
-    QRegExp nameRegExp;
-    QRegExp typeRegExp;
+    QRegularExpression nameRegExp;
+    QRegularExpression typeRegExp;
 };
 
 class ActionsModel : public QAbstractListModel

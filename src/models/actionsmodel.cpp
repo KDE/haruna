@@ -680,10 +680,8 @@ ProxyActionsModel::ProxyActionsModel(QObject *parent)
     setDynamicSortFilter(true);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
 
-    nameRegExp.setCaseSensitivity(Qt::CaseInsensitive);
-    nameRegExp.setPatternSyntax(QRegExp::RegExp);
-    typeRegExp.setCaseSensitivity(Qt::CaseInsensitive);
-    typeRegExp.setPatternSyntax(QRegExp::RegExp);
+    nameRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+    typeRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
 }
 
 bool ProxyActionsModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
