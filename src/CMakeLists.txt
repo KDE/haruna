@@ -58,11 +58,11 @@ target_include_directories(haruna PRIVATE models mpv ${FFMPEG_INCLUDE_DIRS} ${Qt
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
-    Qt5::Core
-    Qt5::Gui
-    Qt5::Qml
-    Qt5::Quick
-    Qt5::QuickControls2
+    Qt${QT_MAJOR_VERSION}::Core
+    Qt${QT_MAJOR_VERSION}::Gui
+    Qt${QT_MAJOR_VERSION}::Qml
+    Qt${QT_MAJOR_VERSION}::Quick
+    Qt${QT_MAJOR_VERSION}::QuickControls2
 
     KF5::ConfigCore
     KF5::ConfigGui
@@ -88,8 +88,8 @@ target_link_libraries(haruna PRIVATE
 
 if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     target_link_libraries(haruna PRIVATE
-        Qt5::DBus
-        Qt5::X11Extras
+        Qt${QT_MAJOR_VERSION}::DBus
+        Qt${QT_MAJOR_VERSION}::X11Extras
     )
 endif ()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

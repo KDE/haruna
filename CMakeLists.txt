@@ -33,27 +33,31 @@ ecm_setup_version(${PROJECT_VERSION}
 
 set(X11_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 
-find_package(Qt5Core)
-set_package_properties(Qt5Core PROPERTIES TYPE REQUIRED)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
 
-find_package(Qt5Gui)
-set_package_properties(Qt5Gui PROPERTIES TYPE REQUIRED)
+find_package(Qt${QT_MAJOR_VERSION}Core)
+set_package_properties(Qt${QT_MAJOR_VERSION}Core PROPERTIES TYPE REQUIRED)
 
-find_package(Qt5Qml)
-set_package_properties(Qt5Qml PROPERTIES TYPE REQUIRED)
+find_package(Qt${QT_MAJOR_VERSION}Gui)
+set_package_properties(Qt${QT_MAJOR_VERSION}Gui PROPERTIES TYPE REQUIRED)
 
-find_package(Qt5Quick)
-set_package_properties(Qt5Quick PROPERTIES TYPE REQUIRED)
+find_package(Qt${QT_MAJOR_VERSION}Qml)
+set_package_properties(Qt${QT_MAJOR_VERSION}Qml PROPERTIES TYPE REQUIRED)
 
-find_package(Qt5QuickControls2)
-set_package_properties(Qt5QuickControls2 PROPERTIES TYPE REQUIRED)
+find_package(Qt${QT_MAJOR_VERSION}Quick)
+set_package_properties(Qt${QT_MAJOR_VERSION}Quick PROPERTIES TYPE REQUIRED)
+
+find_package(Qt${QT_MAJOR_VERSION}QuickControls2)
+set_package_properties(Qt${QT_MAJOR_VERSION}QuickControls2 PROPERTIES TYPE REQUIRED)
 
 if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
-    find_package(Qt5DBus)
-    set_package_properties(Qt5DBus PROPERTIES TYPE REQUIRED)
+    find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS DBus X11Extras)
 
-    find_package(Qt5X11Extras)
-    set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
+    find_package(Qt${QT_MAJOR_VERSION}DBus)
+    set_package_properties(Qt${QT_MAJOR_VERSION}DBus PROPERTIES TYPE REQUIRED)
+
+    find_package(Qt${QT_MAJOR_VERSION}X11Extras)
+    set_package_properties(Qt${QT_MAJOR_VERSION}X11Extras PROPERTIES TYPE REQUIRED)
 endif ()
 
 find_package(Libmpv)
