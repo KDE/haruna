@@ -56,8 +56,10 @@ if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     find_package(Qt${QT_MAJOR_VERSION}DBus)
     set_package_properties(Qt${QT_MAJOR_VERSION}DBus PROPERTIES TYPE REQUIRED)
 
-    find_package(Qt${QT_MAJOR_VERSION}X11Extras)
-    set_package_properties(Qt${QT_MAJOR_VERSION}X11Extras PROPERTIES TYPE REQUIRED)
+    if (QT_MAJOR_VERSION STREQUAL "5")
+        find_package(Qt5X11Extras)
+        set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
+    endif ()
 endif ()
 
 find_package(Libmpv)

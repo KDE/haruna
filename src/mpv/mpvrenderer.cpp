@@ -11,7 +11,7 @@
 #include <QOpenGLFramebufferObject>
 #include <QGuiApplication>
 
-#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
+#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN) && QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QtX11Extras/QX11Info>
 #include <qpa/qplatformnativeinterface.h>
 #endif
@@ -80,10 +80,17 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
 
         mpv_render_param display{MPV_RENDER_PARAM_INVALID, nullptr};
 #if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         if(QX11Info::isPlatformX11()) {
             display.type = MPV_RENDER_PARAM_X11_DISPLAY;
             display.data = QX11Info::display();
         }
+#else
+        if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
+            display.type = MPV_RENDER_PARAM_X11_DISPLAY;
+            display.data = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
+        }
+#endif
         if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
             display.type = MPV_RENDER_PARAM_WL_DISPLAY;
             display.data = (struct wl_display*)QGuiApplication::platformNativeInterface()
