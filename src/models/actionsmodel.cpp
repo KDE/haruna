@@ -671,7 +671,7 @@ QList<Action> &ActionsModel::actions()
 
 void ActionsModel::signalEmitter(const QString &actionName)
 {
-    QMetaObject::invokeMethod(this, actionName.toUtf8());
+    QMetaObject::invokeMethod(this, actionName.toUtf8().data());
 }
 
 ProxyActionsModel::ProxyActionsModel(QObject *parent)
