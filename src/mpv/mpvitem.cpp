@@ -206,7 +206,7 @@ void MpvItem::setPlaylistUrl(const QString &_playlistUrl)
     if (m_playlistUrl == _playlistUrl)
         return;
     m_playlistUrl = _playlistUrl;
-    emit playlistUrlChanged();
+    Q_EMIT playlistUrlChanged();
 }
 
 QString MpvItem::mediaTitle()
@@ -276,7 +276,7 @@ void MpvItem::setMute(bool value)
         return;
     }
     setProperty("mute", value);
-    emit muteChanged();
+    Q_EMIT muteChanged();
 }
 
 int MpvItem::chapter()

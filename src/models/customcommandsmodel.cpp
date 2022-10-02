@@ -221,5 +221,5 @@ void CustomCommandsModel::setAppActionsModel(ActionsModel *_appActionsModel)
         return;
     }
     m_appActionsModel = _appActionsModel;
-    emit appActionsModelChanged();
+    Q_EMIT appActionsModelChanged();
 }
