@@ -85,6 +85,9 @@ void PlayListModel::getVideos(QString path)
 {
     clear();
     QUrl openedUrl(path);
+    if (openedUrl.scheme().isEmpty()) {
+        openedUrl.setScheme("file");
+    }
     QFileInfo openedFileInfo(openedUrl.toLocalFile());
     QStringList siblingFiles;
     if (openedFileInfo.exists() && openedFileInfo.isFile()) {
