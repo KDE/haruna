@@ -117,6 +117,8 @@ set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
+ki18n_install(po)
+
 add_subdirectory(data)
 add_subdirectory(src)
 add_subdirectory(doc)
