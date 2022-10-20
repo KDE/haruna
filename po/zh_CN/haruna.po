@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-01 00:47+0000\n"
-"PO-Revision-Date: 2022-10-02 15:50\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -132,7 +132,7 @@ msgstr "打开文件"
 #: src/models/actionsmodel.cpp:110
 #, kde-format
 msgid "Add external subtitle…"
-msgstr ""
+msgstr "添加外置字幕"
 
 #: src/models/actionsmodel.cpp:117
 #, kde-format
@@ -252,22 +252,22 @@ msgstr "字幕显示/隐藏"
 #: src/models/actionsmodel.cpp:278
 #, kde-format
 msgid "Subtitle Increase Font Size"
-msgstr ""
+msgstr "增加字幕字体大小"
 
 #: src/models/actionsmodel.cpp:285
 #, kde-format
 msgid "Subtitle Decrease Font Size"
-msgstr ""
+msgstr "减小字幕字体大小"
 
 #: src/models/actionsmodel.cpp:292
 #, kde-format
 msgid "Subtitle Move Up"
-msgstr ""
+msgstr "字幕上移"
 
 #: src/models/actionsmodel.cpp:299
 #, kde-format
 msgid "Subtitle Move Down"
-msgstr ""
+msgstr "字幕下移"
 
 #: src/models/actionsmodel.cpp:306
 #, kde-format
@@ -434,7 +434,7 @@ msgstr ""
 #: src/mpv/mpvitem.cpp:624
 #, kde-format
 msgid "Playlist is empty"
-msgstr ""
+msgstr "播放列表为空"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
 #, kde-format
@@ -580,7 +580,7 @@ msgstr "剩余: %1"
 #: src/qml/Menus/Global/GlobalFileMenu.qml:39
 #, kde-format
 msgid "Recent Files"
-msgstr ""
+msgstr "最近的文件"
 
 #: src/qml/HamburgerMenu.qml:80
 #, kde-format
@@ -590,7 +590,7 @@ msgstr ""
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
 #, kde-format
 msgid "Select a color"
-msgstr ""
+msgstr "选择颜色"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 #, kde-format
@@ -686,7 +686,7 @@ msgstr "选择文件"
 #: src/qml/main.qml:230
 #, kde-format
 msgid "Select subtitles file"
-msgstr ""
+msgstr "选择字幕文件"
 
 #: src/qml/main.qml:256
 #, kde-format
@@ -711,7 +711,7 @@ msgstr "主音轨(&P)"
 #: src/qml/Menus/ContextMenu.qml:19
 #, kde-format
 msgid "Playback speed"
-msgstr ""
+msgstr "播放速度"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
 #, kde-format
@@ -721,7 +721,7 @@ msgstr "文件(&F)"
 #: src/qml/Menus/FileMenu.qml:38
 #, kde-format
 msgid "Clear List"
-msgstr ""
+msgstr "清空列表"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
 #, kde-format
@@ -767,12 +767,12 @@ msgstr "副字幕:"
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
 #, kde-format
 msgid "&Video"
-msgstr ""
+msgstr "视频(&V)"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
 #, kde-format
 msgid "Adjustments"
-msgstr ""
+msgstr "调整"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
 #, kde-format
@@ -926,17 +926,17 @@ msgstr "如果路径为空，对话框将记住最后打开的位置。"
 #: src/qml/Settings/GeneralSettings.qml:76
 #, kde-format
 msgid "Maximum recent files"
-msgstr ""
+msgstr "保存的\"最近的文件\"的最大值"
 
 #: src/qml/Settings/GeneralSettings.qml:93
 #, kde-format
 msgid "How many recent files to store. Enter 0 (zero) to disable."
-msgstr ""
+msgstr "保存的\"最近的文件\"的数量。输入 0 以禁用。"
 
 #: src/qml/Settings/GeneralSettings.qml:100
 #, kde-format
 msgid "Remember window size and position"
-msgstr ""
+msgstr "记住窗口大小和位置"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 #, kde-format
@@ -946,12 +946,12 @@ msgstr "界面"
 #: src/qml/Settings/GeneralSettings.qml:117
 #, kde-format
 msgid "Show menubar"
-msgstr ""
+msgstr "显示菜单栏"
 
 #: src/qml/Settings/GeneralSettings.qml:128
 #, kde-format
 msgid "Show toolbar"
-msgstr ""
+msgstr "显示工具栏"
 
 #: src/qml/Settings/GeneralSettings.qml:139
 #, kde-format
@@ -966,7 +966,7 @@ msgstr "配色方案"
 #: src/qml/Settings/GeneralSettings.qml:190
 #, kde-format
 msgid "GUI style"
-msgstr ""
+msgstr "界面样式"
 
 #: src/qml/Settings/GeneralSettings.qml:239
 #, kde-format
@@ -1007,30 +1007,30 @@ msgstr "快进/快退一大步的步长"
 #: src/qml/Settings/PlaybackSettings.qml:105
 #, kde-format
 msgid "Open last played file on startup"
-msgstr ""
+msgstr "启动时打开上次播放的文件"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
 #, kde-format
 msgid "Seek to last playback position"
-msgstr ""
+msgstr "播放时自动恢复上次播放进度"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
 #, kde-format
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
-msgstr ""
+msgstr "当打开以前播放过的文件时，它将从播放停止时的位置开始。"
 
 #: src/qml/Settings/PlaybackSettings.qml:135
 #, kde-format
 msgid "Start playing"
-msgstr ""
+msgstr "开始播放"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
 #, kde-format
 msgid ""
 "When opening a file that was played before, start playing it automatically."
-msgstr ""
+msgstr "当打开以前播放过的文件时，开始自动播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:153
 #, kde-format
@@ -1082,7 +1082,7 @@ msgstr[0] "应用于长于 %1 分钟的文件"
 #, kde-format
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] ""
+msgstr[0] "每 %1 秒保存时间位置"
 
 #: src/qml/Settings/PlaybackSettings.qml:292
 #, kde-format
@@ -1218,7 +1218,7 @@ msgstr "鼠标"
 #: src/qml/Settings/SettingsWindow.qml:109
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: src/qml/Settings/SettingsWindow.qml:117
 #, kde-format
@@ -1233,70 +1233,70 @@ msgstr "关于"
 #: src/qml/Settings/SubtitlesSettings.qml:75
 #, kde-format
 msgid "Styling"
-msgstr ""
+msgstr "样式"
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
 #, kde-format
 msgid "Font family"
-msgstr ""
+msgstr "字体"
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
 #, kde-format
 msgid "Font size"
-msgstr ""
+msgstr "字体大小"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
 #, kde-format
 msgid "Font style"
-msgstr ""
+msgstr "字体样式"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
 #, kde-format
 msgid "Bold"
-msgstr ""
+msgstr "粗体"
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
 #, kde-format
 msgid "Italic"
-msgstr ""
+msgstr "斜体"
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
 #, kde-format
 msgid "Font color"
-msgstr ""
+msgstr "字体颜色"
 
 #: src/qml/Settings/SubtitlesSettings.qml:189
 #: src/qml/Settings/SubtitlesSettings.qml:227
 #: src/qml/Settings/SubtitlesSettings.qml:287
 #, kde-format
 msgid "Set default value"
-msgstr ""
+msgstr "重置为默认值"
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
 #, kde-format
 msgid "Shadow color"
-msgstr ""
+msgstr "阴影颜色"
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
 #, kde-format
 msgid "Shadow offset"
-msgstr ""
+msgstr "阴影偏移"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
 #, kde-format
 msgid "Set to 0 (zero) to disable."
-msgstr ""
+msgstr "设置为 0 以禁用。"
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
 #, kde-format
 msgid "Border color"
-msgstr ""
+msgstr "边框颜色"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #, kde-format
 msgid "Border width"
-msgstr ""
+msgstr "边框宽度"
 
 #: src/qml/Settings/VideoSettings.qml:28
 #, kde-format

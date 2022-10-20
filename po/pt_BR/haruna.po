@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-01 00:47+0000\n"
-"PO-Revision-Date: 2022-07-13 11:54-0300\n"
+"PO-Revision-Date: 2022-10-19 14:55-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Patrick"
+msgstr "Patrick, Igor Moreira"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "dosreisdolorespatrick@gmail.com"
+msgstr "dosreisdolorespatrick@gmail.com, igormoreiraa@vivaldi.net"
 
 #: src/application.cpp:149
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "Sobre Haruna"
 #: src/models/actionsmodel.cpp:30
 #, kde-format
 msgid "Audio Cycle Up"
-msgstr ""
+msgstr "Aumentar ciclo de áudio"
 
 #: src/models/actionsmodel.cpp:37
 #, fuzzy, kde-format
@@ -96,12 +96,12 @@ msgstr "Sair da tela cheia"
 #: src/models/actionsmodel.cpp:65
 #, kde-format
 msgid "Frame Step Forward"
-msgstr ""
+msgstr "Avançar um frame"
 
 #: src/models/actionsmodel.cpp:73
 #, kde-format
 msgid "Frame Step Backward"
-msgstr ""
+msgstr "Voltar um frame"
 
 #: src/models/actionsmodel.cpp:81
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Abrir menu de contexto"
 #: src/models/actionsmodel.cpp:99
 #, kde-format
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr ""
+msgstr "Abrir e fechar o menu de contexto na posição do ponteiro do mouse"
 
 #: src/models/actionsmodel.cpp:103
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Abrir arquivo"
 #: src/models/actionsmodel.cpp:110
 #, kde-format
 msgid "Add external subtitle…"
-msgstr ""
+msgstr "Adicionar legenda externa..."
 
 #: src/models/actionsmodel.cpp:117
 #, kde-format
@@ -181,57 +181,57 @@ msgstr "Recomeçar reprodução"
 #: src/models/actionsmodel.cpp:180
 #, kde-format
 msgid "Seek Small Step Forward"
-msgstr ""
+msgstr "Busque um pequeno passo à frente"
 
 #: src/models/actionsmodel.cpp:187
 #, kde-format
 msgid "Seek Small Step Backward"
-msgstr ""
+msgstr "Busque um pequeno passo para trás"
 
 #: src/models/actionsmodel.cpp:194
 #, kde-format
 msgid "Seek Medium Step Forward"
-msgstr ""
+msgstr "Buscar um passo médio à frente"
 
 #: src/models/actionsmodel.cpp:201
 #, kde-format
 msgid "Seek Medium Step Backward"
-msgstr ""
+msgstr "Buscar um passo médio para trás"
 
 #: src/models/actionsmodel.cpp:208
 #, kde-format
 msgid "Seek Big Step Forward"
-msgstr ""
+msgstr "Buscar um passo grande para frente"
 
 #: src/models/actionsmodel.cpp:215
 #, kde-format
 msgid "Seek Big Step Backward"
-msgstr ""
+msgstr "Buscar um passo grande para trás"
 
 #: src/models/actionsmodel.cpp:222
 #, kde-format
 msgid "Seek Next Chapter"
-msgstr ""
+msgstr "Procurar o próximo capítulo"
 
 #: src/models/actionsmodel.cpp:229
 #, kde-format
 msgid "Seek Previous Chapter"
-msgstr ""
+msgstr "Procurar capítulo anterior"
 
 #: src/models/actionsmodel.cpp:236
 #, kde-format
 msgid "Seek To Next Subtitle"
-msgstr ""
+msgstr "Procurar a próxima legenda"
 
 #: src/models/actionsmodel.cpp:243
 #, kde-format
 msgid "Seek To Previous Subtitle"
-msgstr ""
+msgstr "Procurar a legenda anterior"
 
 #: src/models/actionsmodel.cpp:250
 #, kde-format
 msgid "Seek To Watch Later Position"
-msgstr ""
+msgstr "Procure assistir a posição posterior"
 
 #: src/models/actionsmodel.cpp:257
 #, kde-format
@@ -249,28 +249,24 @@ msgid "Subtitle Toggle"
 msgstr "Alternar legenda"
 
 #: src/models/actionsmodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "Increase Subtitle Font Size"
+#, kde-format
 msgid "Subtitle Increase Font Size"
 msgstr "Aumentar o tamanho da fonte da legenda"
 
 #: src/models/actionsmodel.cpp:285
-#, fuzzy, kde-format
-#| msgid "Decrease Subtitle Font Size"
+#, kde-format
 msgid "Subtitle Decrease Font Size"
 msgstr "Diminuir o tamanho da fonte da legenda"
 
 #: src/models/actionsmodel.cpp:292
-#, fuzzy, kde-format
-#| msgid "Subtitle: None"
+#, kde-format
 msgid "Subtitle Move Up"
-msgstr "Legenda: nenhuma"
+msgstr "Mover legenda para cima"
 
 #: src/models/actionsmodel.cpp:299
-#, fuzzy, kde-format
-#| msgid "Subtitles on"
+#, kde-format
 msgid "Subtitle Move Down"
-msgstr "Legendas ligadas"
+msgstr "Mover legenda para baixo"
 
 #: src/models/actionsmodel.cpp:306
 #, kde-format
@@ -430,17 +426,18 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
+"O atalho escolhido está em conflito com o atalho do <b>%1</b>. <br><br>Você "
+"deseja reatribuir o atalho?"
 
 #: src/models/actionsmodel.cpp:657
 #, kde-format
 msgid "Reassign"
-msgstr ""
+msgstr "Reatribuir"
 
 #: src/mpv/mpvitem.cpp:624
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist is empty"
-msgstr "Lista de reprodução"
+msgstr "A lista de reprodução está vazia"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
 #, kde-format
@@ -460,7 +457,7 @@ msgstr "Começo do loop: %1"
 #: src/qml/Actions.qml:241
 #, kde-format
 msgid "Loop: %1 - %2"
-msgstr ""
+msgstr "Loop: %1 - %2"
 
 #: src/qml/Actions.qml:247
 #, kde-format
@@ -495,7 +492,7 @@ msgstr "Legenda: %1 %2"
 #: src/qml/Actions.qml:296 src/qml/Actions.qml:301
 #, kde-format
 msgid "Subtitle scale: %1"
-msgstr ""
+msgstr "Escala da legenda: %1"
 
 #: src/qml/Actions.qml:310
 #, kde-format
@@ -677,7 +674,7 @@ msgstr "Áudio"
 #: src/qml/HProgressBar.qml:182
 #, kde-format
 msgid "Skip Chapters"
-msgstr ""
+msgstr "Pular capítulos"
 
 #: src/qml/main.qml:30
 #, kde-format
@@ -690,10 +687,9 @@ msgid "Select file"
 msgstr "Selecionar arquivo"
 
 #: src/qml/main.qml:230
-#, fuzzy, kde-format
-#| msgid "Select file"
+#, kde-format
 msgid "Select subtitles file"
-msgstr "Selecionar arquivo"
+msgstr "Selecionar arquivo de legenda"
 
 #: src/qml/main.qml:256
 #, kde-format
@@ -713,12 +709,12 @@ msgstr "Á&udio"
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 #, kde-format
 msgid "&Primary Track"
-msgstr ""
+msgstr "&Faixa principal"
 
 #: src/qml/Menus/ContextMenu.qml:19
 #, kde-format
 msgid "Playback speed"
-msgstr ""
+msgstr "Velocidade de reprodução"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
 #, kde-format
@@ -745,7 +741,7 @@ msgstr "&Reprodução"
 #: src/qml/Menus/PlaybackMenu.qml:31
 #, kde-format
 msgid "Seek"
-msgstr ""
+msgstr "Procurar"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
@@ -784,7 +780,7 @@ msgstr "Ajustes"
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
 #, kde-format
 msgid "&View"
-msgstr ""
+msgstr "&Exibir"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
 #, kde-format
@@ -809,18 +805,18 @@ msgstr "Mostrar barra de ferramentas"
 #: src/qml/MpvVideo.qml:132
 #, kde-format
 msgid "Skipped chapter: %1"
-msgstr ""
+msgstr "Capítulo ignorado: %1"
 
 #: src/qml/MpvVideo.qml:149
 #, kde-format
 msgid "Could not play: %1"
-msgstr ""
+msgstr "Não foi possível reproduzir: %1"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
 #, kde-format
 msgid "Preferred language"
-msgstr ""
+msgstr "Idioma preferido"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
@@ -838,17 +834,17 @@ msgstr "Não use espaços."
 #: src/qml/Settings/SubtitlesSettings.qml:54
 #, kde-format
 msgid "Preferred track"
-msgstr ""
+msgstr "Faixa preferida"
 
 #: src/qml/Settings/AudioSettings.qml:69
 #, kde-format
 msgid "Volume step"
-msgstr ""
+msgstr "Etapa de volume"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
 #, kde-format
 msgid "No custom commands yet"
-msgstr ""
+msgstr "Ainda não há comandos personalizados"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
 #, kde-format
@@ -858,7 +854,7 @@ msgstr "&Adicionar comando"
 #: src/qml/Settings/CustomCommandsSettings.qml:69
 #, kde-format
 msgid "Don't set on next startup"
-msgstr ""
+msgstr "Não defina na próxima inicialização"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:155
 #, kde-format
@@ -873,17 +869,17 @@ msgstr "Comando"
 #: src/qml/Settings/EditCustomCommand.qml:50
 #, kde-format
 msgid "add volume +10"
-msgstr ""
+msgstr "adicionar +10 ao volume"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
 #, kde-format
 msgid "OSD Message"
-msgstr ""
+msgstr "Mensagem OSD"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
 #, kde-format
 msgid "Filename: ${filename}"
-msgstr ""
+msgstr "Nome do arquivo: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
 #, kde-format
@@ -898,7 +894,7 @@ msgstr "Atalho de teclado"
 #: src/qml/Settings/EditCustomCommand.qml:98
 #, kde-format
 msgid "Run at startup"
-msgstr ""
+msgstr "Funcionar na inicialização"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
 #, kde-format
@@ -918,69 +914,69 @@ msgstr "&Salvar"
 #: src/qml/Settings/GeneralSettings.qml:30
 #, kde-format
 msgid "Osd font size"
-msgstr ""
+msgstr "Tamanho de letra OSD"
 
 #: src/qml/Settings/GeneralSettings.qml:56
 #, kde-format
 msgid "File dialog location"
-msgstr ""
+msgstr "Local da caixa de diálogo Arquivo"
 
 #: src/qml/Settings/GeneralSettings.qml:71
 #, kde-format
 msgid "If empty the file dialog will remember the last opened location."
 msgstr ""
+"Se estiver vazio, a caixa de diálogo do arquivo lembrará o último local "
+"aberto."
 
 #: src/qml/Settings/GeneralSettings.qml:76
 #, kde-format
 msgid "Maximum recent files"
-msgstr ""
+msgstr "Máximo de arquivos recentes"
 
 #: src/qml/Settings/GeneralSettings.qml:93
 #, kde-format
 msgid "How many recent files to store. Enter 0 (zero) to disable."
-msgstr ""
+msgstr "Quantos arquivos recentes a armazenar. Digite 0 (zero) para desativar."
 
 #: src/qml/Settings/GeneralSettings.qml:100
 #, kde-format
 msgid "Remember window size and position"
-msgstr ""
+msgstr "Lembrar a última posição da janela"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 #, kde-format
 msgid "Interface"
-msgstr ""
+msgstr "Interface"
 
 #: src/qml/Settings/GeneralSettings.qml:117
-#, fuzzy, kde-format
-#| msgid "Show Menubar"
+#, kde-format
 msgid "Show menubar"
 msgstr "Mostrar barra de menus"
 
 #: src/qml/Settings/GeneralSettings.qml:128
-#, fuzzy, kde-format
-#| msgid "Show Toolbar"
+#, kde-format
 msgid "Show toolbar"
 msgstr "Mostrar barra de ferramentas"
 
 #: src/qml/Settings/GeneralSettings.qml:139
 #, kde-format
 msgid "Show chapter markers"
-msgstr ""
+msgstr "Mostrar marcadores de capítulo"
 
 #: src/qml/Settings/GeneralSettings.qml:148
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Esquema de cores"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 #, kde-format
 msgid "GUI style"
-msgstr ""
+msgstr "Estilo da interface"
 
 #: src/qml/Settings/GeneralSettings.qml:239
 #, kde-format
 msgid "Use Breeze icon theme"
-msgstr ""
+msgstr "Usa o tema dos ícones do Breeze"
 
 #: src/qml/Settings/GeneralSettings.qml:249
 #, kde-format
@@ -988,16 +984,18 @@ msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
 msgstr ""
+"Define o tema do ícone para breeze.\n"
+"Requer reinicialização."
 
 #: src/qml/Settings/PlaybackSettings.qml:29
 #, kde-format
 msgid "Seek small step"
-msgstr ""
+msgstr "Procurar um pequeno passo"
 
 #: src/qml/Settings/PlaybackSettings.qml:47
 #, kde-format
 msgid "Seek medium step"
-msgstr ""
+msgstr "Procurar um médio passo"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
 #, kde-format
@@ -1005,21 +1003,23 @@ msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
 "bar"
 msgstr ""
+"Isso também é usado para procura da roda do mouse, quando o mouse está acima "
+"da barra de progresso"
 
 #: src/qml/Settings/PlaybackSettings.qml:84
 #, kde-format
 msgid "Seek big step"
-msgstr ""
+msgstr "Procurar um grande passo"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 #, kde-format
 msgid "Open last played file on startup"
-msgstr ""
+msgstr "Abrir o último arquivo na inicialização"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
 #, kde-format
 msgid "Seek to last playback position"
-msgstr ""
+msgstr "Buscar a última posição de reprodução"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
 #, kde-format
@@ -1027,22 +1027,26 @@ msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr ""
+"Ao abrir um arquivo que foi reproduzido antes, procure a posição em que "
+"estava da última vez."
 
 #: src/qml/Settings/PlaybackSettings.qml:135
 #, kde-format
 msgid "Start playing"
-msgstr ""
+msgstr "Inicializar reproduzindo"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
 #, kde-format
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr ""
+"Ao abrir um arquivo que foi reproduzido antes, comece a reproduzi-lo "
+"automaticamente."
 
 #: src/qml/Settings/PlaybackSettings.qml:153
 #, kde-format
 msgid "Pause on minimize"
-msgstr ""
+msgstr "Pausar ao minimizar"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
 #, kde-format
@@ -1050,83 +1054,86 @@ msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
+"Pausa o player enquanto a janela é minimizada, a reprodução é retomada "
+"quando restaurada."
 
 #: src/qml/Settings/PlaybackSettings.qml:166
 #, kde-format
 msgid "Hardware decoding"
-msgstr ""
+msgstr "Decodificação por hardware"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:298
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitar"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:252
 #: src/qml/Settings/PlaybackSettings.qml:298
 #, kde-format
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitar"
 
 #: src/qml/Settings/PlaybackSettings.qml:232
 #, kde-format
 msgid "Remember time position"
-msgstr ""
+msgstr "Lembrar a última posição"
 
 #: src/qml/Settings/PlaybackSettings.qml:254
 #, kde-format
 msgid "For all files"
-msgstr ""
+msgstr "Para todos os arquivos"
 
 #: src/qml/Settings/PlaybackSettings.qml:256
 #, kde-format
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Para arquivos com mais de %1 minuto"
+msgstr[1] "Para arquivos com mais de %1 minutos"
 
 #: src/qml/Settings/PlaybackSettings.qml:283
 #, kde-format
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Salvar posição a cada %1 segundo"
+msgstr[1] "Salvar posição a cada %1 segundos"
 
 #: src/qml/Settings/PlaybackSettings.qml:292
 #, kde-format
 msgid "Skip chapters"
-msgstr ""
+msgstr "Pular capítulos"
 
 #: src/qml/Settings/PlaybackSettings.qml:309
 #, kde-format
 msgid "Show osd message on skip"
-msgstr ""
+msgstr "Mostrar mensagem OSD ao pular"
 
 #: src/qml/Settings/PlaybackSettings.qml:319
 #, kde-format
 msgid "Skip words"
-msgstr ""
+msgstr "Pular palavras"
 
 #: src/qml/Settings/PlaybackSettings.qml:326
 #, kde-format
 msgid "op, ed, chapter 1"
-msgstr ""
+msgstr "inicio, fim, capítulo 1"
 
 #: src/qml/Settings/PlaybackSettings.qml:335
 #, kde-format
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
+"Pule capítulos que contenham essas palavras. Lista separada por vírgulas."
 
 #: src/qml/Settings/PlaybackSettings.qml:344
 #, kde-format
 msgid "Youtube-dl"
-msgstr ""
+msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:350
 #, kde-format
 msgid "Format selection"
-msgstr ""
+msgstr "Seleção do formato"
 
 #: src/qml/Settings/PlaybackSettings.qml:369
 #, kde-format
@@ -1134,31 +1141,32 @@ msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr ""
+"Seleciona o melhor vídeo com uma altura menor ou igual ao valor selecionado."
 
 #: src/qml/Settings/PlaybackSettings.qml:419
 #, kde-format
 msgid "bestvideo+bestaudio/best"
-msgstr ""
+msgstr "melhorvideo+melhoraudio/melhor"
 
 #: src/qml/Settings/PlaylistSettings.qml:27
 #, kde-format
 msgid "Position"
-msgstr ""
+msgstr "Posição"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 #, kde-format
 msgid "Row height"
-msgstr ""
+msgstr "Altura da linha"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
 #, kde-format
 msgid "Playlist style"
-msgstr ""
+msgstr "Estilo da playlist"
 
 #: src/qml/Settings/PlaylistSettings.qml:97
 #, kde-format
 msgid "Overlay video"
-msgstr ""
+msgstr "Sobreposição de vídeo"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
 #, kde-format
@@ -1166,190 +1174,191 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
+"Quando verificada, a lista de reprodução vai para o topo do vídeo\n"
+"Quando desmarcado, o vídeo é redimensionado"
 
 #: src/qml/Settings/PlaylistSettings.qml:111
 #, kde-format
 msgid "Show media title instead of file name"
-msgstr ""
+msgstr "Mostrar o título da mídia em vez do nome do arquivo"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 #, kde-format
 msgid "Auto load videos from same folder"
-msgstr ""
+msgstr "Carregue automaticamente vídeos da mesma pasta"
 
 #: src/qml/Settings/PlaylistSettings.qml:131
 #, kde-format
 msgid "Repeat"
-msgstr ""
+msgstr "Repetir"
 
 #: src/qml/Settings/PlaylistSettings.qml:141
 #, kde-format
 msgid "Show row number"
-msgstr ""
+msgstr "Mostrar número da linha"
 
 #: src/qml/Settings/PlaylistSettings.qml:151
 #, kde-format
 msgid "Toggle with mouse"
-msgstr ""
+msgstr "Alternar com o mouse"
 
 #: src/qml/Settings/PlaylistSettings.qml:160
 #, kde-format
 msgid "Increase font size when fullscreen"
-msgstr ""
+msgstr "Aumente o tamanho da fonte em tela cheia"
 
 #: src/qml/Settings/SettingsWindow.qml:35
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: src/qml/Settings/SettingsWindow.qml:53
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Geral"
 
 #: src/qml/Settings/SettingsWindow.qml:61
 #, kde-format
 msgid "Playback"
-msgstr ""
+msgstr "Reprodução"
 
 #: src/qml/Settings/SettingsWindow.qml:69
 #, kde-format
 msgid "Video"
-msgstr ""
+msgstr "Vídeo"
 
 #: src/qml/Settings/SettingsWindow.qml:101
 #, kde-format
 msgid "Mouse"
-msgstr ""
+msgstr "Mouse"
 
 #: src/qml/Settings/SettingsWindow.qml:109
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Atalho"
+msgstr "Atalhos"
 
 #: src/qml/Settings/SettingsWindow.qml:117
 #, kde-format
 msgid "Custom commands"
-msgstr ""
+msgstr "Comando customizado"
 
 #: src/qml/Settings/SettingsWindow.qml:125
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 #: src/qml/Settings/SubtitlesSettings.qml:75
 #, kde-format
 msgid "Styling"
-msgstr ""
+msgstr "Estilo"
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
 #, kde-format
 msgid "Font family"
-msgstr ""
+msgstr "Família da fonte"
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
 #, kde-format
 msgid "Font size"
-msgstr ""
+msgstr "Tamanho da fonte"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
 #, kde-format
 msgid "Font style"
-msgstr ""
+msgstr "Estilo da fonte"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
 #, kde-format
 msgid "Bold"
-msgstr ""
+msgstr "Bold"
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
 #, kde-format
 msgid "Italic"
-msgstr ""
+msgstr "Italic"
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
 #, kde-format
 msgid "Font color"
-msgstr ""
+msgstr "Cor da fonte"
 
 #: src/qml/Settings/SubtitlesSettings.qml:189
 #: src/qml/Settings/SubtitlesSettings.qml:227
 #: src/qml/Settings/SubtitlesSettings.qml:287
 #, kde-format
 msgid "Set default value"
-msgstr ""
+msgstr "Definir valor padrão"
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
 #, kde-format
 msgid "Shadow color"
-msgstr ""
+msgstr "Cor da sobra"
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
 #, kde-format
 msgid "Shadow offset"
-msgstr ""
+msgstr "Deslocamento de sombra"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
 #, kde-format
 msgid "Set to 0 (zero) to disable."
-msgstr ""
+msgstr "Defina como 0 (zero) para desabilitar."
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
 #, kde-format
 msgid "Border color"
-msgstr ""
+msgstr "Cor da borda"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #, kde-format
 msgid "Border width"
-msgstr ""
+msgstr "Largura da borda"
 
 #: src/qml/Settings/VideoSettings.qml:28
 #, kde-format
 msgid "Screenshots"
-msgstr ""
+msgstr "Captura de tela"
 
 #: src/qml/Settings/VideoSettings.qml:38
 #, kde-format
 msgid "Format"
-msgstr ""
+msgstr "Formato"
 
 #: src/qml/Settings/VideoSettings.qml:74
 #, kde-format
 msgid "Template"
-msgstr ""
+msgstr "Modelo"
 
 #: src/qml/Settings/VideoSettings.qml:90
 #, kde-format
 msgid "Image adjustments"
-msgstr ""
+msgstr "Ajuste de imagem"
 
 #: src/qml/Settings/VideoSettings.qml:100
 #, kde-format
 msgid "Contrast"
-msgstr ""
+msgstr "Contraste"
 
 #: src/qml/Settings/VideoSettings.qml:117
 #, kde-format
 msgid "Brightness"
-msgstr ""
+msgstr "Brilho"
 
 #: src/qml/Settings/VideoSettings.qml:134
 #, kde-format
 msgid "Gamma"
-msgstr ""
+msgstr "Gama"
 
 #: src/qml/Settings/VideoSettings.qml:151
 #, kde-format
 msgid "Saturation"
-msgstr ""
+msgstr "Saturação"
 
 #: src/qml/Settings/VideoSettings.qml:165
 #, kde-format
 msgid "Middle click on the sliders to reset them"
-msgstr ""
+msgstr "Clique com o botão do meio nos controles deslizantes para redefini-los"
 
 #, fuzzy
 #~| msgid "Playlist"
