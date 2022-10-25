@@ -77,7 +77,7 @@ public:
     /**
      * Return an error string from an ErrorReturn.
      */
-    QString getError(const QVariant &err);
+    Q_INVOKABLE QString getError(int error);
 
     static void mpvEvents(void *ctx);
     virtual void eventHandler() = 0;

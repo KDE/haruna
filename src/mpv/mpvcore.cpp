@@ -75,9 +75,10 @@ QVariant MpvCore::command(const QVariant &params)
     return node_to_variant(&result);
 }
 
-QString MpvCore::getError(const QVariant &err)
+QString MpvCore::getError(int error)
 {
-    switch (err.value<ErrorReturn>().error) {
+    ErrorReturn err {error};
+    switch (err.error) {
     case MPV_ERROR_SUCCESS:
         return QStringLiteral("MPV_ERROR_SUCCESS");
     case MPV_ERROR_EVENT_QUEUE_FULL:
