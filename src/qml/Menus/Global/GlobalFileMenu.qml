@@ -47,7 +47,7 @@ Labs.Menu {
             onObjectRemoved: recentFilesMenu.removeItem( object )
             delegate: Labs.MenuItem {
                 text: model.name
-                onTriggered: window.openFile(model.path, true, PlaylistSettings.loadSiblings)
+                onTriggered: window.openFile(model.path, PlaylistSettings.loadSiblings)
             }
         }
     }

@@ -54,7 +54,7 @@ ToolButton {
                 model: recentFilesModel
                 delegate: MenuItem {
                     text: model.name
-                    onClicked: window.openFile(model.path, true, PlaylistSettings.loadSiblings)
+                    onClicked: window.openFile(model.path, PlaylistSettings.loadSiblings)
                 }
             }
         }

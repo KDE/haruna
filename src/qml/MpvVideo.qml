@@ -55,7 +55,7 @@ MpvItem {
 
     onReady: {
         if (app.argument(0) !== "") {
-            window.openFile(app.argument(0), true, PlaylistSettings.loadSiblings, true)
+            window.openFile(app.argument(0), PlaylistSettings.loadSiblings, true)
         } else {
             if (!PlaybackSettings.openLastPlayedFile) {
                 return
@@ -66,7 +66,7 @@ MpvItem {
                 playList.isYouTubePlaylist = true
             } else {
                 // file is local, open normally
-                window.openFile(GeneralSettings.lastPlayedFile, true, PlaylistSettings.loadSiblings)
+                window.openFile(GeneralSettings.lastPlayedFile, PlaylistSettings.loadSiblings)
             }
         }
     }
@@ -284,7 +284,7 @@ MpvItem {
             }
 
             if (app.mimeType(drop.urls[0]).startsWith("video/") || app.mimeType(drop.urls[0]).startsWith("audio/")) {
-                window.openFile(drop.urls[0], true, PlaylistSettings.loadSiblings, true)
+                window.openFile(drop.urls[0], PlaylistSettings.loadSiblings, true)
             }
         }
     }
