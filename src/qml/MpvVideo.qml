@@ -106,7 +106,6 @@ MpvItem {
             return
         }
 
-        position = 0
         if (PlaybackSettings.seekToLastPosition) {
             mpv.pause = !PlaybackSettings.playOnResume && root.watchLaterPosition > 0
             position = root.watchLaterPosition
