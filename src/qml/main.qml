@@ -201,9 +201,6 @@ Kirigami.ApplicationWindow {
 
         onAccepted: {
             openFile(fileDialog.file.toString(), true)
-            // the timer scrolls the playlist to the playing file
-            // once the table view rows are loaded
-            playList.scrollPositionTimer.start()
             mpv.focus = true
 
             GeneralSettings.fileDialogLastLocation = app.parentUrl(fileDialog.file)
@@ -327,6 +324,7 @@ Kirigami.ApplicationWindow {
         mpv.playlistModel.getVideos(path)
 
         mpv.loadFile(path)
+        playList.scrollPositionTimer.start()
     }
 
     function isFullScreen() {
@@ -339,7 +337,6 @@ Kirigami.ApplicationWindow {
         } else {
             exitFullscreen()
         }
-        playList.scrollPositionTimer.start()
     }
 
     function exitFullscreen() {

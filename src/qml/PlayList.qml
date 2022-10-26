@@ -87,13 +87,16 @@ Item {
             PlayListItemCompact {}
         }
 
+        // without a timer the scroll position is incorrect
         Timer {
             id: scrollPositionTimer
-            interval: 50; running: true; repeat: true
+
+            interval: 100
+            running: false
+            repeat: false
 
             onTriggered: {
-                setPlayListScrollPosition()
-                scrollPositionTimer.stop()
+                playlistView.positionViewAtIndex(playlistView.model.playingVideo, ListView.Beginning)
             }
         }
 
@@ -187,9 +190,4 @@ Item {
             }
         }
     ]
-
-    function setPlayListScrollPosition() {
-        playlistView.positionViewAtIndex(playlistView.model.playingVideo, ListView.Beginning)
-    }
-
 }

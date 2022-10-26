@@ -98,7 +98,6 @@ Item {
 
         onExitFullscreenAction: {
             window.exitFullscreen()
-            playList.scrollPositionTimer.start()
         }
 
         onFrameStepForwardAction: mpv.command(["frame-step"])
