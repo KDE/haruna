@@ -50,7 +50,7 @@ ToolBar {
                 onClicked: {
                     openUrlTextField.clear()
                     openUrlTextField.paste()
-                    window.openFile(openUrlTextField.text, false)
+                    window.openFile(openUrlTextField.text)
                 }
             }
         }

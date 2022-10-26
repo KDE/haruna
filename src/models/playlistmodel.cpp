@@ -8,6 +8,7 @@
 #include "playlistitem.h"
 #include "application.h"
 #include "global.h"
+#include "playlistsettings.h"
 #include "worker.h"
 
 #include <KFileItem>
@@ -84,6 +85,13 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
 void PlayListModel::getVideos(QString path)
 {
     clear();
+    QUrl url {path};
+    bool isUrl = url.scheme().startsWith(QStringLiteral("http"));
+    if (!PlaylistSettings::loadSiblings() || isUrl) {
+        appendVideo(path);
+        return;
+    }
+
     QUrl openedUrl(path);
     if (openedUrl.scheme().isEmpty()) {
         openedUrl.setScheme("file");
