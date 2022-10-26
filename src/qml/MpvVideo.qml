@@ -72,7 +72,7 @@ MpvItem {
     }
 
     onYoutubePlaylistLoaded: {
-        mpv.command(["loadfile", playlistModel.getPath(GeneralSettings.lastPlaylistIndex)])
+        command(["loadfile", playlistModel.getPath(GeneralSettings.lastPlaylistIndex)])
         playlistModel.setPlayingVideo(GeneralSettings.lastPlaylistIndex)
 
         playList.setPlayListScrollPosition()
@@ -86,7 +86,7 @@ MpvItem {
     }
 
     onFileLoaded: {
-        root.watchLaterPosition = loadTimePosition()
+        watchLaterPosition = loadTimePosition()
 
         loadingIndicatorParent.visible = false
         header.audioTracks = getProperty("track-list").filter(track => track["type"] === "audio")
@@ -100,15 +100,15 @@ MpvItem {
         setProperty("ab-loop-b", "no")
 
         if (isFileReloaded) {
-            mpv.pause = true
+            pause = true
             position = 0
             isFileReloaded = false
             return
         }
 
         if (PlaybackSettings.seekToLastPosition) {
-            mpv.pause = !PlaybackSettings.playOnResume && root.watchLaterPosition > 0
-            position = root.watchLaterPosition
+            pause = !PlaybackSettings.playOnResume && watchLaterPosition > 0
+            position = watchLaterPosition
         }
     }
 
@@ -117,7 +117,7 @@ MpvItem {
             return
         }
 
-        const chapters = mpv.getProperty("chapter-list")
+        const chapters = getProperty("chapter-list")
         const chaptersToSkip = PlaybackSettings.chaptersToSkip
         if (chapters.length === 0 || chaptersToSkip === "") {
             return
@@ -125,10 +125,10 @@ MpvItem {
 
         const words = chaptersToSkip.split(",")
         for (let i = 0; i < words.length; ++i) {
-            if (chapters[mpv.chapter] && chapters[mpv.chapter].title.toLowerCase().includes(words[i].trim())) {
+            if (chapters[chapter] && chapters[chapter].title.toLowerCase().includes(words[i].trim())) {
                 appActions.seekNextChapterAction.trigger()
                 if (PlaybackSettings.showOsdOnSkipChapters) {
-                    osd.message(i18n("Skipped chapter: %1", chapters[mpv.chapter-1].title))
+                    osd.message(i18n("Skipped chapter: %1", chapters[chapter-1].title))
                 }
                 // a chapter title can match multiple words
                 // return to prevent skipping multiple chapters
@@ -177,7 +177,7 @@ MpvItem {
         id: saveWatchLaterFileTimer
 
         interval: PlaybackSettings.savePositionInterval * 1000
-        running: mpv.duration > 0 && !mpv.pause
+        running: root.duration > 0 && !root.pause
         repeat: true
 
         onTriggered: handleTimePosition()
@@ -324,8 +324,8 @@ MpvItem {
 
     function handleTimePosition() {
         // need to check duration > 0 for youtube videos
-        if (mpv.duration > 0) {
-            if (mpv.position < mpv.duration - 10) {
+        if (duration > 0) {
+            if (position < duration - 10) {
                 saveTimePosition()
             } else {
                 resetTimePosition()
