@@ -11,7 +11,7 @@ import Qt.labs.platform 1.1 as Labs
 Labs.Menu {
     id: root
 
-    title: i18n("&Settings")
+    title: i18nc("@title:menu", "&Settings")
 
     Labs.MenuItem {
         icon.name: appActions.configureAction.icon.name

@@ -11,7 +11,7 @@ import Qt.labs.platform 1.1 as Labs
 Labs.Menu {
     id: root
 
-    title: i18n("&View")
+    title: i18nc("@title:menu", "&View")
 
     Labs.MenuItem {
         icon.name: appActions.toggleFullscreenAction.icon.name
@@ -21,13 +21,13 @@ Labs.Menu {
 
     Labs.MenuItem {
         icon.name: appActions.toggleMenuBarAction.icon.name
-        text: menuBar.visible ? i18n("Hide Menubar") : i18n("Show Menubar")
+        text: menuBar.visible ? i18nc("@action:inmenu", "Hide Menubar") : i18nc("@action:inmenu", "Show Menubar")
         onTriggered: appActions.toggleMenuBarAction.trigger()
     }
 
     Labs.MenuItem {
         icon.name: appActions.toggleHeaderAction.icon.name
-        text: header.visible ? i18n("Hide Toolbar") : i18n("Show Toolbar")
+        text: header.visible ? i18nc("@action:inmenu", "Hide Toolbar") : i18nc("@action:inmenu", "Show Toolbar")
         onTriggered: appActions.toggleHeaderAction.trigger()
     }
 }

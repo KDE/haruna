@@ -64,7 +64,7 @@ ToolBar {
 
             ToolTip {
                 id: playPauseButtonToolTip
-                text: mpv.pause ? i18n("Start Playback") : i18n("Pause Playback")
+                text: mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
             }
         }
 
@@ -77,7 +77,7 @@ ToolBar {
             enabled: playList.playlistView.count > 1
 
             ToolTip {
-                text: i18n("Play previous file")
+                text: i18nc("@info:tooltip", "Play previous file")
             }
         }
 
@@ -90,7 +90,7 @@ ToolBar {
             enabled: playList.playlistView.count > 1
 
             ToolTip {
-                text: i18n("Play next file")
+                text: i18nc("@info:tooltip", "Play next file")
             }
         }
 
@@ -104,7 +104,7 @@ ToolBar {
 
             text: app.formatTime(mpv.position) + " / " + app.formatTime(mpv.duration)
             font.pointSize: Math.round(Kirigami.Units.gridUnit * 0.7)
-            toolTipText: i18n("Remaining: %1", app.formatTime(mpv.remaining))
+            toolTipText: i18nc("@info:tooltip", "Remaining: %1", app.formatTime(mpv.remaining))
             alwaysShowToolTip: true
             horizontalAlignment: Qt.AlignHCenter
         }

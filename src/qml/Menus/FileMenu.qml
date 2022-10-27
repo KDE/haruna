@@ -12,7 +12,7 @@ import org.kde.haruna 1.0
 Menu {
     id: root
 
-    title: i18n("&File")
+    title: i18nc("@title:menu", "&File")
 
     MenuItem { action: appActions.openFileAction }
     MenuItem { action: appActions.openUrlAction }
@@ -21,7 +21,7 @@ Menu {
     Menu {
         id: recentFilesMenu
 
-        title: i18n("Recent Files")
+        title: i18nc("@title:menu", "Recent Files")
 
         Instantiator {
             model: recentFilesModel
@@ -35,7 +35,7 @@ Menu {
 
         MenuSeparator {}
         MenuItem {
-            text: i18n("Clear List")
+            text: i18nc("@action:inmenu", "Clear List")
             onClicked: recentFilesModel.clear()
         }
     }

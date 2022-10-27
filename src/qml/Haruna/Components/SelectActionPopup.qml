@@ -43,7 +43,7 @@ Popup {
         }
 
         Label {
-            text: i18n("Double click to set action")
+            text: i18nc("@title", "Double click to set action")
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
         }
@@ -62,7 +62,7 @@ Popup {
             id: clearActionButton
 
             Layout.fillWidth: true
-            text: i18n("Clear current action")
+            text: i18nc("@action:button", "Clear current action")
             KeyNavigation.up: filterActionsField
             KeyNavigation.down: actionsListView
             onClicked: actionSelected("")

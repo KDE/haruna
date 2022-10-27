@@ -27,7 +27,7 @@ SettingsBasePage {
 
         // OSD Font Size
         Label {
-            text: i18n("Osd font size")
+            text: i18nc("@label:spinbox", "Osd font size")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -53,7 +53,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("File dialog location")
+            text: i18nc("@label:textbox", "File dialog location")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -68,12 +68,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("If empty the file dialog will remember the last opened location.")
+                text: i18nc("@info:tooltip", "If empty the file dialog will remember the last opened location.")
             }
         }
 
         Label {
-            text: i18n("Maximum recent files")
+            text: i18nc("@label:spinbox", "Maximum recent files")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -90,14 +90,14 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("How many recent files to store. Enter 0 (zero) to disable.")
+                text: i18nc("@info:tooltip", "How many recent files to store. Enter 0 (zero) to disable.")
             }
         }
 
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Remember window size and position")
+            text: i18nc("@option:check", "Remember window size and position")
             checked: GeneralSettings.rememberWindowGeometry
             onCheckedChanged: {
                 GeneralSettings.rememberWindowGeometry = checked
@@ -106,7 +106,7 @@ SettingsBasePage {
         }
 
         SettingsHeader {
-            text: i18n("Interface")
+            text: i18nc("@title", "Interface")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -114,7 +114,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Show menubar")
+            text: i18nc("@option:check", "Show menubar")
             checked: GeneralSettings.showMenuBar
             onCheckedChanged: {
                 GeneralSettings.showMenuBar = checked
@@ -125,7 +125,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Show toolbar")
+            text: i18nc("@option:check", "Show toolbar")
             checked: GeneralSettings.showHeader
             onCheckedChanged: {
                 GeneralSettings.showHeader = checked
@@ -136,7 +136,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Show chapter markers")
+            text: i18nc("@option:check", "Show chapter markers")
             checked: GeneralSettings.showChapterMarkers
             onCheckedChanged: {
                 GeneralSettings.showChapterMarkers = checked
@@ -145,7 +145,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Color scheme")
+            text: i18nc("@label:listbox", "Color scheme")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -187,7 +187,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("GUI style")
+            text: i18nc("@label:listbox", "GUI style")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -236,7 +236,7 @@ SettingsBasePage {
         }
 
         CheckBox {
-            text: i18n("Use Breeze icon theme")
+            text: i18nc("@option:check", "Use Breeze icon theme")
             checked: GeneralSettings.useBreezeIconTheme
             onCheckedChanged: {
                 GeneralSettings.useBreezeIconTheme = checked
@@ -246,7 +246,7 @@ SettingsBasePage {
             Layout.column: 1
 
             ToolTip {
-                text: i18n("Sets the icon theme to breeze.\nRequires restart.")
+                text: i18nc("@info:tooltip", "Sets the icon theme to breeze.\nRequires restart.")
             }
         }
 

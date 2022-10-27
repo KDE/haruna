@@ -10,7 +10,7 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: i18n("&Playback")
+    title: i18nc("@title:menu", "&Playback")
 
     MenuItem { action: appActions.playPauseAction }
     MenuItem { action: appActions.playNextAction }
@@ -28,7 +28,7 @@ Menu {
     MenuSeparator {}
 
     Menu {
-        title: i18n("Seek")
+        title: i18nc("@title:menu", "Seek")
         MenuItem { action: appActions.seekForwardSmallAction }
         MenuItem { action: appActions.seekBackwardSmallAction }
 

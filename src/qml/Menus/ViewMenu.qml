@@ -10,16 +10,16 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: i18n("&View")
+    title: i18nc("@title:menu", "&View")
 
     MenuItem { action: appActions.toggleFullscreenAction }
 
     MenuItem {
         action: appActions.toggleMenuBarAction
-        text: menuBar.visible ? i18n("Hide Menubar") : i18n("Show Menubar")
+        text: menuBar.visible ? i18nc("@action:inmenu", "Hide Menubar") : i18nc("@action:inmenu", "Show Menubar")
     }
     MenuItem {
         action: appActions.toggleHeaderAction
-        text: header.visible ? i18n("Hide Toolbar") : i18n("Show Toolbar")
+        text: header.visible ? i18nc("@action:inmenu", "Hide Toolbar") : i18nc("@action:inmenu", "Show Toolbar")
     }
 }

@@ -11,7 +11,7 @@ import Qt.labs.platform 1.1 as Labs
 Labs.Menu {
     id: root
 
-    title: i18n("&Video")
+    title: i18nc("@title:menu", "&Video")
 
     Labs.MenuItem {
         icon.name: appActions.toggleDeinterlacingAction.icon.name
@@ -68,7 +68,7 @@ Labs.Menu {
     }
 
     Labs.Menu {
-        title: i18n("Adjustments")
+        title: i18nc("@title:menu", "Adjustments")
 
         Labs.MenuItem {
             icon.name: appActions.contrastUpAction.icon.name

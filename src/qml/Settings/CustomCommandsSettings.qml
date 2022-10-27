@@ -31,9 +31,9 @@ SettingsBasePage {
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
             visible: customCommandsView.count === 0
-            text: i18n("No custom commands yet")
+            text: i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
-                text: i18n("&Add command")
+                text: i18nc("@action:button", "&Add command")
                 onTriggered: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
             }
         }
@@ -66,7 +66,7 @@ SettingsBasePage {
                     }
 
                     ToolTip {
-                        text: i18n("Don't set on next startup")
+                        text: i18nc("@info:tooltip", "Don't set on next startup")
                         delay: 0
                     }
                 }
@@ -152,7 +152,7 @@ SettingsBasePage {
             ToolButton {
                 id: addButton
 
-                text: i18n("&Add")
+                text: i18nc("@action:intoolbar", "&Add")
                 icon.name: "list-add"
                 onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
                 Layout.alignment: Qt.AlignRight

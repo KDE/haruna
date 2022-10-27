@@ -11,7 +11,7 @@ import Qt.labs.platform 1.1 as Labs
 Labs.Menu {
     id: root
 
-    title: i18n("&Help")
+    title: i18nc("@title:menu", "&Help")
 
     Labs.MenuItem {
         icon.name: appActions.aboutHarunaAction.icon.name

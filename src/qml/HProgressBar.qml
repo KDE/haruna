@@ -179,7 +179,7 @@ Slider {
 
         MenuItem {
             id: skipChaptersMenuItem
-            text: i18n("Skip Chapters")
+            text: i18nc("@action:inmenu", "Skip Chapters")
             checkable: true
             checked: PlaybackSettings.skipChapters
             onCheckedChanged: {

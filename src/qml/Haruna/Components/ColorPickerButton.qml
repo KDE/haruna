@@ -35,7 +35,7 @@ Rectangle {
     }
 
     ToolTip {
-        text: i18n("Select a color")
+        text: i18nc("@info:tooltip", "Select a color")
         visible: ma.containsMouse
     }
 

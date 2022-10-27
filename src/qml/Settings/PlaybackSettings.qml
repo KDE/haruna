@@ -26,7 +26,7 @@ SettingsBasePage {
 
         // Seek Small Step
         Label {
-            text: i18n("Seek small step")
+            text: i18nc("@label:spinbox", "Seek small step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -44,7 +44,7 @@ SettingsBasePage {
 
         // Seek Medium Step
         Label {
-            text: i18n("Seek medium step")
+            text: i18nc("@label:spinbox", "Seek medium step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -70,7 +70,7 @@ SettingsBasePage {
                 Layout.preferredHeight: seekMediumStep.height
 
                 ToolTip {
-                    text: i18n("This is also used for mouse wheel seeking, when mouse is over the progress bar")
+                    text: i18nc("@info:tooltip", "This is also used for mouse wheel seeking, when mouse is over the progress bar")
                     visible: parent.checked
                     delay: 0
                     timeout: -1
@@ -81,7 +81,7 @@ SettingsBasePage {
 
         // Seek Big Step
         Label {
-            text: i18n("Seek big step")
+            text: i18nc("@label:spinbox", "Seek big step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -102,7 +102,7 @@ SettingsBasePage {
         CheckBox {
             id: loadLastPlayedFileCheckBox
 
-            text: i18n("Open last played file on startup")
+            text: i18nc("@option:check", "Open last played file on startup")
             checked: PlaybackSettings.openLastPlayedFile
             onCheckedChanged: {
                 PlaybackSettings.openLastPlayedFile = checked
@@ -115,7 +115,7 @@ SettingsBasePage {
         CheckBox {
             id: seekToLastPositionCheckBox
 
-            text: i18n("Seek to last playback position")
+            text: i18nc("@option:check", "Seek to last playback position")
             checked: PlaybackSettings.seekToLastPosition
             onCheckedChanged: {
                 PlaybackSettings.seekToLastPosition = checked
@@ -123,7 +123,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("When opening a file that was played before, seek at the position it was last time.")
+                text: i18nc("@info:tooltip", "When opening a file that was played before, seek at the position it was last time.")
             }
         }
 
@@ -132,7 +132,7 @@ SettingsBasePage {
         CheckBox {
             id: playOnResumeCheckBox
 
-            text: i18n("Start playing")
+            text: i18nc("@option:check", "Start playing")
             checked: PlaybackSettings.playOnResume
             enabled: seekToLastPositionCheckBox.checked
             onCheckedChanged: {
@@ -141,7 +141,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("When opening a file that was played before, start playing it automatically.")
+                text: i18nc("@info:tooltip", "When opening a file that was played before, start playing it automatically.")
             }
         }
 
@@ -150,7 +150,7 @@ SettingsBasePage {
         CheckBox {
             id: pauseOnMinimizeCheckBox
 
-            text: i18n("Pause on minimize")
+            text: i18nc("@option:check", "Pause on minimize")
             checked: PlaybackSettings.pauseWhileMinimized
             onCheckedChanged: {
                 PlaybackSettings.pauseWhileMinimized = checked
@@ -158,18 +158,18 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Pauses the player while the window is minimized, playback resumes when restored.")
+                text: i18nc("@info:tooltip", "Pauses the player while the window is minimized, playback resumes when restored.")
             }
         }
 
         Label {
-            text: i18n("Hardware decoding")
+            text: i18nc("@label", "Hardware decoding")
             Layout.alignment: Qt.AlignRight
         }
 
         CheckBox {
             id: hwDecodingCheckBox
-            text: checked ? i18n("Enabled") : i18n("Disabled")
+            text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
             checked: PlaybackSettings.useHWDecoding
             onCheckedChanged: {
                 mpv.hwDecoding = checked
@@ -229,7 +229,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Remember time position")
+            text: i18nc("@label:spinbox", "Remember time position")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -249,13 +249,14 @@ SettingsBasePage {
             LabelWithTooltip {
                 text: {
                     if (timePositionSaving.value === -1) {
-                        return i18n("Disabled")
+                        return i18nc("@info", "Disabled")
                     } else if (timePositionSaving.value === 0) {
-                        return i18n("For all files")
+                        return i18nc("@info", "For all files")
                     } else {
-                        return i18np("For files longer than %1 minute",
-                                     "For files longer than %1 minutes",
-                                     timePositionSaving.value)
+                        return i18ncp("@info",
+                                      "For files longer than %1 minute",
+                                      "For files longer than %1 minutes",
+                                      timePositionSaving.value)
                     }
                 }
                 elide: Text.ElideRight
@@ -280,22 +281,23 @@ SettingsBasePage {
             }
 
             LabelWithTooltip {
-                text: i18np("Save position every %1 second",
-                            "Save position every %1 seconds",
-                            timePositionSaveInterval.value)
+                text: i18ncp("@info",
+                             "Save position every %1 second",
+                             "Save position every %1 seconds",
+                             timePositionSaveInterval.value)
                 elide: Text.ElideRight
                 Layout.fillWidth: true
             }
         }
 
         Label {
-            text: i18n("Skip chapters")
+            text: i18nc("@label", "Skip chapters")
             Layout.alignment: Qt.AlignRight
         }
 
         CheckBox {
             id: skipChaptersCheckBox
-            text: checked ? i18n("Enabled") : i18n("Disabled")
+            text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
             checked: PlaybackSettings.skipChapters
             onCheckedChanged: {
                 PlaybackSettings.skipChapters = checked
@@ -306,7 +308,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Show osd message on skip")
+            text: i18nc("@option:check", "Show osd message on skip")
             enabled: skipChaptersCheckBox.checked
             checked: PlaybackSettings.showOsdOnSkipChapters
             onCheckedChanged: {
@@ -316,14 +318,14 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Skip words")
+            text: i18nc("@label:textbox", "Skip words")
             enabled: skipChaptersCheckBox.checked
             Layout.alignment: Qt.AlignRight
         }
 
         TextField {
             text: PlaybackSettings.chaptersToSkip
-            placeholderText: i18n("op, ed, chapter 1")
+            placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
             enabled: skipChaptersCheckBox.checked
             Layout.fillWidth: true
             onEditingFinished: {
@@ -332,7 +334,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Skip chapters containing these words. Comma separated list.")
+                text: i18nc("@info:tooltip", "Skip chapters containing these words. Comma separated list.")
             }
         }
 
@@ -341,7 +343,7 @@ SettingsBasePage {
         // ------------------------------------
 
         SettingsHeader {
-            text: i18n("Youtube-dl")
+            text: i18nc("@title", "Youtube-dl")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -366,7 +368,7 @@ SettingsBasePage {
                 ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
             }
             ToolTip {
-                text: i18n("Selects the best video with a height lower than or equal to the selected value.")
+                text: i18nc("@info:tooltip", "Selects the best video with a height lower than or equal to the selected value.")
             }
 
             onActivated: {
@@ -416,7 +418,7 @@ SettingsBasePage {
                 PlaybackSettings.ytdlFormat = text
                 PlaybackSettings.save()
             }
-            placeholderText: i18n("bestvideo+bestaudio/best")
+            placeholderText: i18nc("placeholder text", "bestvideo+bestaudio/best")
 
             onTextChanged: {
                 if (ytdlFormatComboBox.hCurrentvalue !== ytdlFormatField.text) {

@@ -10,7 +10,7 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: i18n("&Video")
+    title: i18nc("@title:menu", "&Video")
 
     MenuItem { action: appActions.toggleDeinterlacingAction }
     MenuItem { action: appActions.zoomInAction }
@@ -23,7 +23,7 @@ Menu {
     MenuItem { action: appActions.videoPanYDownAction }
 
     Menu {
-        title: i18n("Adjustments")
+        title: i18nc("@title:menu", "Adjustments")
 
         MenuItem { action: appActions.contrastUpAction }
         MenuItem { action: appActions.contrastDownAction }

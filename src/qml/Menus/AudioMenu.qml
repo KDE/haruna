@@ -11,12 +11,12 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: i18n("&Audio")
+    title: i18nc("@title:menu", "&Audio")
 
     Menu {
         id: audioMenu
 
-        title: i18n("&Primary Track")
+        title: i18nc("@title:menu", "&Primary Track")
         enabled: mpv.audioTracksModel.rowCount() > 0
 
         Instantiator {

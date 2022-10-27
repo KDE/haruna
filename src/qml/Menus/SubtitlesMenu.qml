@@ -11,12 +11,12 @@ import QtQuick.Controls 2.12
 Menu {
     id: root
 
-    title: i18n("&Subtitles")
+    title: i18nc("@title:menu", "&Subtitles")
 
     Menu {
         id: primarySubtitleMenu
 
-        title: i18n("Primary Subtitle")
+        title: i18nc("@title:menu", "Primary Subtitle")
 
         Instantiator {
             id: primarySubtitleMenuInstantiator
@@ -36,7 +36,7 @@ Menu {
     Menu {
         id: secondarySubtitleMenu
 
-        title: i18n("Secondary Subtitle")
+        title: i18nc("@title:menu", "Secondary Subtitle")
 
         Instantiator {
             id: secondarySubtitleMenuInstantiator

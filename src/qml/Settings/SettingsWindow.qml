@@ -32,7 +32,7 @@ Kirigami.ApplicationWindow {
 
     width: Kirigami.Units.gridUnit * 45
     height: Kirigami.Units.gridUnit * 35
-    title: i18n("Settings")
+    title: i18nc("@title:window", "Settings")
     pageStack.initialPage: Kirigami.ScrollablePage {
         bottomPadding: 0
         leftPadding: 0
@@ -50,7 +50,7 @@ Kirigami.ApplicationWindow {
 
             property list<Kirigami.Action> pages: [
                 Kirigami.Action {
-                    text: i18n("General")
+                    text: i18nc("@action", "General")
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -58,7 +58,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Playback")
+                    text: i18nc("@action", "Playback")
                     icon.name: "media-playback-start"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -66,7 +66,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Video")
+                    text: i18nc("@action", "Video")
                     icon.name: "video-x-generic"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -74,7 +74,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Audio")
+                    text: i18nc("@action", "Audio")
                     icon.name: "player-volume"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -82,7 +82,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Subtitles")
+                    text: i18nc("@action", "Subtitles")
                     icon.name: "add-subtitle"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -90,7 +90,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Playlist")
+                    text: i18nc("@action", "Playlist")
                     icon.name: "view-media-playlist"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -98,7 +98,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Mouse")
+                    text: i18nc("@action", "Mouse")
                     icon.name: "input-mouse"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -106,7 +106,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Shortcuts")
+                    text: i18nc("@action", "Shortcuts")
                     icon.name: "configure-shortcuts"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -114,7 +114,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("Custom commands")
+                    text: i18nc("@action", "Custom commands")
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -122,7 +122,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18n("About")
+                    text: i18nc("@action", "About")
                     icon.name: "help-about"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
@@ -160,7 +160,7 @@ Kirigami.ApplicationWindow {
 
         width: Kirigami.Units.gridUnit * 40
         height: Kirigami.Units.gridUnit * 35
-        title: i18n("Help")
+        title: i18nc("@title:window", "Help")
         color: Kirigami.Theme.backgroundColor
         onVisibleChanged: info.text = app.getFileContent(applicationWindow().pageStack.currentItem.helpFile)
 

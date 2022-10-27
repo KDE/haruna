@@ -12,12 +12,12 @@ import Qt.labs.platform 1.1 as Labs
 Labs.Menu {
     id: root
 
-    title: i18n("&Audio")
+    title: i18nc("@title:menu", "&Audio")
 
     Labs.Menu {
         id: audioMenu
 
-        title: i18n("&Primary Track")
+        title: i18nc("@title:menu", "&Primary Track")
 
         Instantiator {
             id: audioMenuInstantiator

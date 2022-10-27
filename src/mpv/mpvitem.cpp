@@ -621,7 +621,7 @@ void MpvItem::getYouTubePlaylist(const QString &path)
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
         QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
         if (entries.toArray().isEmpty()) {
-            Q_EMIT Global::instance()->error(i18n("Playlist is empty", title));
+            Q_EMIT Global::instance()->error(i18nc("@info", "Playlist is empty", title));
             return;
         }
 

@@ -48,7 +48,7 @@ ToolButton {
         }
 
         Menu {
-            title: i18n("Recent Files")
+            title: i18nc("@action:inmenu", "Recent Files")
 
             Repeater {
                 model: recentFilesModel
@@ -77,7 +77,7 @@ ToolButton {
         MenuSeparator {}
 
         Menu {
-            title: i18n("&More")
+            title: i18nc("@action:inmenu", "&More")
 
             FileMenu {}
             ViewMenu {}

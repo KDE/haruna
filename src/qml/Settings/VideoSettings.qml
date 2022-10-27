@@ -25,7 +25,7 @@ SettingsBasePage {
         columns: 2
 
         SettingsHeader {
-            text: i18n("Screenshots")
+            text: i18nc("@title", "Screenshots")
             topMargin: 0
             Layout.columnSpan: 2
             Layout.fillWidth: true
@@ -35,7 +35,7 @@ SettingsBasePage {
         // Screenshot Format
         // ------------------------------------
         Label {
-            text: i18n("Format")
+            text: i18nc("@label:listbox", "Format")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -71,7 +71,7 @@ SettingsBasePage {
         // Screenshot template
         // ------------------------------------
         Label {
-            text: i18n("Template")
+            text: i18nc("@label:textbox", "Template")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -87,7 +87,7 @@ SettingsBasePage {
         }
 
         SettingsHeader {
-            text: i18n("Image adjustments")
+            text: i18nc("@title", "Image adjustments")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -97,7 +97,7 @@ SettingsBasePage {
         // CONTRAST
         // ------------------------------------
         Label {
-            text: i18n("Contrast")
+            text: i18nc("@label:slider", "Contrast")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -114,7 +114,7 @@ SettingsBasePage {
         // BRIGHTNESS
         // ------------------------------------
         Label {
-            text: i18n("Brightness")
+            text: i18nc("@label:slider", "Brightness")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -131,7 +131,7 @@ SettingsBasePage {
         // GAMMA
         // ------------------------------------
         Label {
-            text: i18n("Gamma")
+            text: i18nc("@label:slider", "Gamma")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -148,7 +148,7 @@ SettingsBasePage {
         // SATURATION
         // ------------------------------------
         Label {
-            text: i18n("Saturation")
+            text: i18nc("@label:slider", "Saturation")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -162,7 +162,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Middle click on the sliders to reset them")
+            text: i18nc("@info", "Middle click on the sliders to reset them")
             Layout.columnSpan: 2
             Layout.topMargin: Kirigami.Units.largeSpacing
         }

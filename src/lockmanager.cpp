@@ -31,5 +31,5 @@ void LockManager::setInhibitionOn()
 {
     m_cookie = m_iface->Inhibit(
                 QStringLiteral("Haruna Video Player"),
-                i18n("Playing video."));
+                i18nc("@info reason for blocking sleep and screen slocking", "Playing video"));
 }

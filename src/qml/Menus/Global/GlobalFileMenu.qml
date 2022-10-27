@@ -13,7 +13,7 @@ import org.kde.haruna 1.0
 Labs.Menu {
     id: root
 
-    title: i18n("&File")
+    title: i18nc("@title:menu", "&File")
 
     Labs.MenuItem {
         icon.name: appActions.openFileAction.icon.name
@@ -36,7 +36,7 @@ Labs.Menu {
     Labs.Menu {
         id: recentFilesMenu
 
-        title: i18n("Recent Files")
+        title: i18nc("@title:menu", "Recent Files")
         onAboutToShow: recentFilesInstantiator.model = recentFilesModel
 
         Instantiator {

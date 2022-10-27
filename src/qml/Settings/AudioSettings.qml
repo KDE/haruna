@@ -24,13 +24,13 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: i18n("Preferred language")
+            text: i18nc("@label:textbox", "Preferred language")
             Layout.alignment: Qt.AlignRight
         }
 
         TextField {
             text: AudioSettings.preferredLanguage
-            placeholderText: i18n("eng,ger etc.")
+            placeholderText: i18nc("placeholder text", "eng,ger etc.")
             Layout.fillWidth: true
             onTextEdited: {
                 AudioSettings.preferredLanguage = text
@@ -39,12 +39,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Do not use spaces.")
+                text: i18nc("@info:tooltip", "Do not use spaces.")
             }
         }
 
         Label {
-            text: i18n("Preferred track")
+            text: i18nc("@label:spinbox", "Preferred track")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -66,7 +66,7 @@ SettingsBasePage {
 
         // Volume Step
         Label {
-            text: i18n("Volume step")
+            text: i18nc("@label:spinbox", "Volume step")
             Layout.alignment: Qt.AlignRight
         }
 

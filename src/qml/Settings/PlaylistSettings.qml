@@ -24,7 +24,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: i18n("Position")
+            text: i18nc("@label:listbox", "Position")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -49,7 +49,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Row height")
+            text: i18nc("@label:spinbox", "Row height")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -66,7 +66,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Playlist style")
+            text: i18nc("@label:listbox", "Playlist style")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -94,21 +94,21 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.overlayVideo
-            text: i18n("Overlay video")
+            text: i18nc("@option:check", "Overlay video")
             onCheckStateChanged: {
                 PlaylistSettings.overlayVideo = checked
                 PlaylistSettings.save()
             }
 
             ToolTip {
-                text: i18n("When checked the playlist goes on top of the video\nWhen unchecked the video is resized")
+                text: i18nc("@info:tooltip", "When checked the playlist goes on top of the video\nWhen unchecked the video is resized")
             }
         }
 
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.showMediaTitle
-            text: i18n("Show media title instead of file name")
+            text: i18nc("@option:check", "Show media title instead of file name")
             onCheckStateChanged: {
                 PlaylistSettings.showMediaTitle = checked
                 PlaylistSettings.save()
@@ -118,7 +118,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.loadSiblings
-            text: i18n("Auto load videos from same folder")
+            text: i18nc("@option:check", "Auto load videos from same folder")
             onCheckStateChanged: {
                 PlaylistSettings.loadSiblings = checked
                 PlaylistSettings.save()
@@ -128,7 +128,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.repeat
-            text: i18n("Repeat")
+            text: i18nc("@option:check", "Repeat")
             onCheckStateChanged: {
                 PlaylistSettings.repeat = checked
                 PlaylistSettings.save()
@@ -138,7 +138,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.showRowNumber
-            text: i18n("Show row number")
+            text: i18nc("@option:check", "Show row number")
             onCheckStateChanged: {
                 PlaylistSettings.showRowNumber = checked
                 PlaylistSettings.save()
@@ -148,7 +148,7 @@ SettingsBasePage {
         Item { width: 1; height: 1 }
         CheckBox {
             checked: PlaylistSettings.canToggleWithMouse
-            text: i18n("Toggle with mouse")
+            text: i18nc("@option:check", "Toggle with mouse")
             onCheckStateChanged: {
                 PlaylistSettings.canToggleWithMouse = checked
                 PlaylistSettings.save()
@@ -157,7 +157,7 @@ SettingsBasePage {
 
         Item { width: 1; height: 1 }
         CheckBox {
-            text: i18n("Increase font size when fullscreen")
+            text: i18nc("@option:check", "Increase font size when fullscreen")
             checked: PlaylistSettings.bigFontFullscreen
             enabled: PlaylistSettings.style === "compact" ? false : true
             onCheckStateChanged: {

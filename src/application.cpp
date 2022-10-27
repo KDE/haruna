@@ -146,18 +146,18 @@ void Application::setupWorkerThread()
 void Application::setupAboutData()
 {
     m_aboutData = KAboutData(QStringLiteral("haruna"),
-                             i18n("Haruna Video Player"),
+                             i18nc("application title/display name", "Haruna Video Player"),
                              Application::version());
-    m_aboutData.setShortDescription(i18n("A configurable video player."));
+    m_aboutData.setShortDescription(i18nc("@title", "A configurable video player."));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
-    m_aboutData.setCopyrightStatement(i18n("(c) 2019-2021"));
+    m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2021"));
     m_aboutData.setHomepage(QStringLiteral("https://invent.kde.org/multimedia/haruna"));
     m_aboutData.setBugAddress(QStringLiteral("https://bugs.kde.org/enter_bug.cgi?product=Haruna").toUtf8());
     m_aboutData.setComponentName(QStringLiteral("haruna"));
     m_aboutData.setDesktopFileName("org.kde.haruna");
 
-    m_aboutData.addAuthor(i18n("George Florea Bănuș"),
-                        i18n("Developer"),
+    m_aboutData.addAuthor(i18nc("@info:credit", "George Florea Bănuș"),
+                        i18nc("@info:credit", "Developer"),
                         QStringLiteral("georgefb899@gmail.com"),
                         QStringLiteral("https://georgefb.com"));
 
@@ -168,7 +168,7 @@ void Application::setupCommandLineParser()
 {
     QCommandLineParser parser;
     m_aboutData.setupCommandLine(&parser);
-    parser.addPositionalArgument(QStringLiteral("file"), i18n("File to open"));
+    parser.addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
     parser.process(*m_app);
     m_aboutData.processCommandLine(&parser);
 

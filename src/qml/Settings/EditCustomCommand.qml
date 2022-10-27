@@ -39,7 +39,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: i18n("Command")
+            text: i18nc("@label:textbox", "Command")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -47,13 +47,13 @@ SettingsBasePage {
             id: commandTextField
 
             text: root.command
-            placeholderText: i18n("add volume +10")
+            placeholderText: i18nc("placeholder text", "add volume +10")
             Layout.fillWidth: true
             Component.onCompleted: forceActiveFocus()
         }
 
         Label {
-            text: i18n("OSD Message")
+            text: i18nc("@label:textbox", "OSD Message")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -62,12 +62,12 @@ SettingsBasePage {
 
             text: root.osdMessage
             enabled: typeGroup.checkedButton.optionName === "shortcut"
-            placeholderText: i18n("Filename: ${filename}")
+            placeholderText: i18nc("placeholder text", "Filename: ${filename}")
             Layout.fillWidth: true
         }
 
         Label {
-            text: i18n("Type")
+            text: i18nc("@label", "Type")
             visible: root.mode === EditCustomCommand.Mode.Create
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
         }
@@ -88,14 +88,14 @@ SettingsBasePage {
                 property string optionName: "shortcut"
 
                 checked: optionName === root.type
-                text: i18n("Keyboard shortcut")
+                text: i18nc("@option:radio", "Keyboard shortcut")
             }
 
             RadioButton {
                 property string optionName: "startup"
 
                 checked: optionName === root.type
-                text: i18n("Run at startup")
+                text: i18nc("@option:radio", "Run at startup")
             }
         }
     }
@@ -105,7 +105,7 @@ SettingsBasePage {
             anchors.fill: parent
 
             ToolButton {
-                text: i18n("Delete")
+                text: i18nc("@action:intoolbar", "Delete")
                 icon.name: "delete"
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
@@ -120,14 +120,14 @@ SettingsBasePage {
             }
 
             ToolButton {
-                text: i18n("Cancel")
+                text: i18nc("@action:intoolbar", "Cancel")
                 icon.name: "dialog-cancel"
                 onClicked: applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
                 Layout.alignment: Qt.AlignRight
             }
 
             ToolButton {
-                text: i18n("&Save")
+                text: i18nc("@action:intoolbar", "&Save")
                 icon.name: "document-save"
                 enabled: commandTextField.text !== ""
                 onClicked: saveCustomCommand()

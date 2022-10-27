@@ -22,30 +22,30 @@ Kirigami.ScrollablePage {
     actions {
         contextualActions: [
             Kirigami.Action {
-                text: i18n("Help")
+                text: i18nc("@action:intoolbar", "Help")
                 iconName: "system-help"
                 Kirigami.Action {
-                    text: i18n("Haruna help window (english only)")
+                    text: i18nc("@action:inmenu", "Haruna help window (english only)")
                     enabled: root.hasHelp
                     onTriggered: root.hasHelp ? helpWindow.show() : undefined
                 }
                 Kirigami.Action {
-                    text: i18n("Haruna handbook")
+                    text: i18nc("@action:inmenu", "Haruna handbook")
                     enabled: root.docPage !== ""
                     onTriggered: enabled ? app.openDocs(root.docPage) : undefined
                 }
             },
             Kirigami.Action {
-                text: i18n("Open config ...")
+                text: i18nc("@action:intoolbar", "Open config ...")
                 iconName: "folder"
                 visible: app.configFolderExists()
 
                 Kirigami.Action {
-                    text: i18n("File")
+                    text: i18nc("@action:inmenu", "File")
                     onTriggered: Qt.openUrlExternally(app.configFilePath)
                 }
                 Kirigami.Action {
-                    text: i18n("Folder")
+                    text: i18nc("@action:inmenu", "Folder")
                     onTriggered: Qt.openUrlExternally(app.configFolderPath)
                 }
             }

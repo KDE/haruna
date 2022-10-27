@@ -70,7 +70,7 @@ ToolBar {
         ToolButton {
             id: subtitleMenuButton
 
-            text: i18n("Subtitles")
+            text: i18nc("@action:intoolbar", "Subtitles")
             icon.name: "add-subtitle"
             focusPolicy: Qt.NoFocus
 
@@ -103,7 +103,7 @@ ToolBar {
         }
 
         ToolButton {
-            text: i18n("Audio")
+            text: i18nc("@action:intoolbar", "Audio")
             icon.name: "audio-volume-high"
             focusPolicy: Qt.NoFocus
 

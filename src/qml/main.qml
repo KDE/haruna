@@ -27,7 +27,7 @@ Kirigami.ApplicationWindow {
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
 
     visible: true
-    title: mpv.mediaTitle || i18n("Haruna")
+    title: mpv.mediaTitle || i18nc("@title:window", "Haruna")
     width: Kirigami.Units.gridUnit * 66
     minimumWidth: Kirigami.Units.gridUnit * 36
     height: Kirigami.Units.gridUnit * 40
@@ -196,7 +196,7 @@ Kirigami.ApplicationWindow {
                                : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
 
         folder: location
-        title: i18n("Select file")
+        title: i18nc("@title:window", "Select file")
         fileMode: Platform.FileDialog.OpenFile
 
         onAccepted: {
@@ -224,7 +224,7 @@ Kirigami.ApplicationWindow {
         }
 
         folder: location
-        title: i18n("Select subtitles file")
+        title: i18nc("@title:window", "Select subtitles file")
         fileMode: Platform.FileDialog.OpenFile
         nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]
 
@@ -250,7 +250,7 @@ Kirigami.ApplicationWindow {
             anchors.fill: parent
 
             Label {
-                text: i18n("<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found.")
+                text: i18nc("@info", "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found.")
                 visible: !app.hasYoutubeDl()
                 onLinkActivated: Qt.openUrlExternally(link)
             }
@@ -277,7 +277,7 @@ Kirigami.ApplicationWindow {
                 id: openUrlButton
 
                 visible: app.hasYoutubeDl()
-                text: i18n("Open")
+                text: i18nc("@action:button", "Open")
 
                 onClicked: {
                     openFile(openUrlTextField.text, true)

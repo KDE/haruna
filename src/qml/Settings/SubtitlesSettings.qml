@@ -31,13 +31,13 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Preferred language")
+            text: i18nc("@label:textbox", "Preferred language")
             Layout.alignment: Qt.AlignRight
         }
 
         TextField {
             text: SubtitlesSettings.preferredLanguage
-            placeholderText: i18n("eng,ger etc.")
+            placeholderText: i18nc("placeholder text", "eng,ger etc.")
             Layout.fillWidth: true
             onTextEdited: {
                 SubtitlesSettings.preferredLanguage = text
@@ -46,12 +46,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Do not use spaces.")
+                text: i18nc("@info:tooltip", "Do not use spaces.")
             }
         }
 
         Label {
-            text: i18n("Preferred track")
+            text: i18nc("@label:spinbox", "Preferred track")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -72,13 +72,13 @@ SettingsBasePage {
         }
 
         SettingsHeader {
-            text: i18n("Styling")
+            text: i18nc("@title", "Styling")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
 
         Label {
-            text: i18n("Font family")
+            text: i18nc("@label:listbox", "Font family")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -110,7 +110,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Font size")
+            text: i18nc("@label:spinbox", "Font size")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -126,12 +126,12 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Font style")
+            text: i18nc("@label", "Font style")
             Layout.alignment: Qt.AlignRight
         }
 
         CheckBox {
-            text: i18n("Bold")
+            text: i18nc("@option:check", "Bold")
             checked: SubtitlesSettings.isBold
             onCheckedChanged: {
                 SubtitlesSettings.isBold = checked
@@ -143,7 +143,7 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
-            text: i18n("Italic")
+            text: i18nc("@option:check", "Italic")
             checked: SubtitlesSettings.isItalic
             onCheckedChanged: {
                 SubtitlesSettings.isItalic = checked
@@ -153,7 +153,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18n("Font color")
+            text: i18nc("@label:textbox", "Font color")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -186,13 +186,13 @@ SettingsBasePage {
                 onClicked: subtitleColor.text = subtitleColor.defaultColor
 
                 ToolTip {
-                    text: i18n("Set default value")
+                    text: i18nc("@info:tooltip", "Set default value")
                 }
             }
         }
 
         Label {
-            text: i18n("Shadow color")
+            text: i18nc("@label:textbox", "Shadow color")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -224,13 +224,13 @@ SettingsBasePage {
                 onClicked: shadowColor.text = shadowColor.defaultColor
 
                 ToolTip {
-                    text: i18n("Set default value")
+                    text: i18nc("@info:tooltip", "Set default value")
                 }
             }
         }
 
         Label {
-            text: i18n("Shadow offset")
+            text: i18nc("@label:spinbox", "Shadow offset")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -246,12 +246,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Set to 0 (zero) to disable.")
+                text: i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
             }
         }
 
         Label {
-            text: i18n("Border color")
+            text: i18nc("@label:textbox", "Border color")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -284,13 +284,13 @@ SettingsBasePage {
                 onClicked: borderColor.text = borderColor.defaultColor
 
                 ToolTip {
-                    text: i18n("Set default value")
+                    text: i18nc("@info:tooltip", "Set default value")
                 }
             }
         }
 
         Label {
-            text: i18n("Border width")
+            text: i18nc("@label:spinbox", "Border width")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -306,7 +306,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18n("Set to 0 (zero) to disable.")
+                text: i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
             }
         }
 

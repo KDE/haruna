@@ -24,7 +24,7 @@ Item {
     Label {
         id: sectionTitle
 
-        text: i18n("Load subtitles from")
+        text: i18nc("@title", "Load subtitles from")
         bottomPadding: 10
     }
 
@@ -99,7 +99,7 @@ Item {
                         flat: true
                         onClicked: {
                             if (!canDelete) {
-                                text = i18n("Confirm deletion")
+                                text = i18nc("@action:button", "Confirm deletion")
                                 canDelete = true
                                 return
                             }
@@ -115,7 +115,7 @@ Item {
 
                         }
                         ToolTip {
-                            text: i18n("Delete this folder from list")
+                            text: i18nc("@info:tooltip", "Delete this folder from list")
                         }
                     }
 
@@ -131,7 +131,7 @@ Item {
                             }
                         }
                         ToolTip {
-                            text: i18n("Save changes")
+                            text: i18nc("@info:tooltip", "Save changes")
                         }
                     }
 
@@ -153,7 +153,7 @@ Item {
         anchors.left: parent.left
         anchors.top: spacer.bottom
         icon.name: "list-add"
-        text: i18n("Add new folder")
+        text: i18nc("@action:button", "Add new folder")
         enabled: root.canAddFolder
         onClicked: {
             subtitlesFoldersModel.addFolder()

@@ -11,7 +11,7 @@ import Qt.labs.platform 1.1 as Labs
 Labs.Menu {
     id: root
 
-    title: i18n("&Playback")
+    title: i18nc("@title:menu", "&Playback")
 
     Labs.MenuItem {
         icon.name: appActions.playPauseAction.icon.name
@@ -66,7 +66,7 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.Menu {
-        title: i18n("Seek")
+        title: i18nc("@title:menu", "Seek")
         Labs.MenuItem {
             icon.name: appActions.seekForwardSmallAction.icon.name
             text: appActions.seekForwardSmallAction.text
