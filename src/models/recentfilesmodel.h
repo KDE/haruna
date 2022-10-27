@@ -40,6 +40,7 @@ public:
     void setMaxRecentFiles(int _maxRecentFiles);
 
 private:
+    void saveEntries();
     QList<RecentFile> m_urls;
     KConfigGroup m_recentFilesConfigGroup;
     int m_maxRecentFiles {10};

@@ -68,11 +68,15 @@ void RecentFilesModel::populate()
         if (file.isEmpty()) {
             break;
         }
+        QUrl url(file);
+        if (!url.isLocalFile() && url.scheme().isEmpty()) {
+            url.setScheme("file");
+        }
         RecentFile recentFile;
-        recentFile.url = QUrl(file);
+        recentFile.url = url;
         recentFile.name = name;
         beginInsertRows(QModelIndex(), 0, 0);
-        m_urls.prepend(recentFile);
+        m_urls.append(recentFile);
         endInsertRows();
     }
 }
@@ -86,17 +90,23 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     }
 
     auto _name = name == QString() ? url.fileName() : name;
+    for (int i {0}; i < m_urls.count(); ++i) {
+        if (url == m_urls[i].url) {
+            beginRemoveRows(QModelIndex(), i, i);
+            m_urls.takeAt(i);
+            endRemoveRows();
+            break;
+        }
+    }
     RecentFile recentFile;
     recentFile.url = url;
     recentFile.name = _name;
+
     beginInsertRows(QModelIndex(), 0, 0);
     m_urls.prepend(recentFile);
     endInsertRows();
 
-    m_recentFilesConfigGroup.writePathEntry(QStringLiteral("File%1").arg(m_urls.count()),
-                                            url.toDisplayString(QUrl::PreferLocalFile));
-    m_recentFilesConfigGroup.writePathEntry(QStringLiteral("Name%1").arg(m_urls.count()), _name);
-    m_recentFilesConfigGroup.sync();
+    saveEntries();
 }
 
 void RecentFilesModel::clear()
@@ -105,6 +115,20 @@ void RecentFilesModel::clear()
     m_urls.clear();
     endResetModel();
 }
+
+void RecentFilesModel::saveEntries()
+{
+     m_recentFilesConfigGroup.deleteGroup();
+     int i = 1;
+     for (const auto &[url, name] : std::as_const(m_urls)) {
+         m_recentFilesConfigGroup.writePathEntry(QStringLiteral("File%1").arg(i),
+                                                 url.toDisplayString(QUrl::PreferLocalFile));
+         m_recentFilesConfigGroup.writePathEntry(QStringLiteral("Name%1").arg(i), name);
+
+         ++i;
+     }
+     m_recentFilesConfigGroup.sync();
+ }
 
 int RecentFilesModel::maxRecentFiles() const
 {
