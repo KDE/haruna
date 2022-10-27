@@ -10,6 +10,8 @@
 #include <QStandardPaths>
 #include <KSharedConfig>
 
+class QCommandLineParser;
+
 class Global : public QObject
 {
     Q_OBJECT
@@ -25,6 +27,9 @@ public:
     const QString appConfigDirPath();
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
 
+    QCommandLineParser *parser() const;
+    void setParser(QCommandLineParser *_parser);
+
 Q_SIGNALS:
     void error(const QString &message);
 
@@ -37,6 +42,7 @@ private:
     Global(Global &&) = delete;
     Global &operator=(Global &&) = delete;
 
+    QCommandLineParser *m_parser {nullptr};
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;
 };

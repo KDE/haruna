@@ -92,6 +92,7 @@ private:
     QQmlApplicationEngine *m_engine;
     KAboutData m_aboutData;
     KSharedConfig::Ptr m_config;
+    QCommandLineParser *m_parser;
     QMap<int, QString> m_args;
     KColorSchemeManager *m_schemes;
     QString m_systemDefaultStyle;

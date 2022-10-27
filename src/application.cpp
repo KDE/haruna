@@ -101,6 +101,7 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     setupWorkerThread();
     setupAboutData();
     setupCommandLineParser();
+    Global::instance()->setParser(m_parser);
     registerQmlTypes();
     setupQmlSettingsTypes();
 
@@ -166,14 +167,22 @@ void Application::setupAboutData()
 
 void Application::setupCommandLineParser()
 {
-    QCommandLineParser parser;
-    m_aboutData.setupCommandLine(&parser);
-    parser.addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
-    parser.process(*m_app);
-    m_aboutData.processCommandLine(&parser);
+    m_parser = new QCommandLineParser();
+    m_aboutData.setupCommandLine(m_parser);
+    m_parser->addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
 
-    for (auto i = 0; i < parser.positionalArguments().size(); ++i) {
-        addArgument(i, parser.positionalArguments().at(i));
+    QCommandLineOption ytdlFormatSelectionOption(
+                QStringList() << "ytdl-format-selection" << "ytdlfs",
+                i18nc("@info:shell", "Allows to temporarily override the ytdl format selection setting. "
+                                     "Will be overwritten if the setting is changed through the GUI"),
+                i18nc("@info:shell", "bestvideo+bestaudio/best"), QString());
+    m_parser->addOption(ytdlFormatSelectionOption);
+
+    m_parser->process(*m_app);
+    m_aboutData.processCommandLine(m_parser);
+
+    for (auto i = 0; i < m_parser->positionalArguments().size(); ++i) {
+        addArgument(i, m_parser->positionalArguments().at(i));
     }
 }
 

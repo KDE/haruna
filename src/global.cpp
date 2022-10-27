@@ -20,6 +20,16 @@ Global::Global()
     m_ccConfig = KSharedConfig::openConfig("haruna/haruna-custom-commands.conf");
 }
 
+QCommandLineParser *Global::parser() const
+{
+    return m_parser;
+}
+
+void Global::setParser(QCommandLineParser *_parser)
+{
+    m_parser = _parser;
+}
+
 const QString Global::systemConfigPath()
 {
     return QStandardPaths::writableLocation(m_config->locationType()).append("/");

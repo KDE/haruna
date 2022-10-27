@@ -29,6 +29,7 @@
 
 #include <KLocalizedString>
 #include <KShell>
+#include <QCommandLineParser>
 
 #if defined(Q_OS_UNIX)
 #include <QDBusConnection>
@@ -147,7 +148,13 @@ void MpvItem::initProperties()
     setProperty("volume-max", "100");
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
-    setProperty("ytdl-format", PlaybackSettings::ytdlFormat());
+
+    QCommandLineParser *cmdParser = Global::instance()->parser();
+    QString ytdlFormat = PlaybackSettings::ytdlFormat();
+    if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
+        ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));
+    }
+    setProperty("ytdl-format", ytdlFormat);
 
     setProperty("sub-font", SubtitlesSettings::fontFamily());
     setProperty("sub-font-size", SubtitlesSettings::fontSize());
