@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-27 00:45+0000\n"
+"POT-Creation-Date: 2022-10-28 00:44+0000\n"
 "PO-Revision-Date: 2022-10-22 05:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,398 +29,566 @@ msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com, "
 "zhouwenqing655@gmail.com"
 
-#: src/application.cpp:149
-#, kde-format
+#: src/application.cpp:150
+#, fuzzy, kde-format
+#| msgid "Haruna Video Player"
+msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "Haruna 视频播放器"
 
-#: src/application.cpp:151
-#, kde-format
+#: src/application.cpp:152
+#, fuzzy, kde-format
+#| msgid "A configurable video player."
+msgctxt "@title"
 msgid "A configurable video player."
 msgstr "可自定义的视频播放器。"
 
-#: src/application.cpp:153
-#, kde-format
+#: src/application.cpp:154
+#, fuzzy, kde-format
+#| msgid "(c) 2019-2021"
+msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:159
-#, kde-format
+#: src/application.cpp:160
+#, fuzzy, kde-format
+#| msgid "George Florea Bănuș"
+msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:160
-#, kde-format
+#: src/application.cpp:161
+#, fuzzy, kde-format
+#| msgid "Developer"
+msgctxt "@info:credit"
 msgid "Developer"
 msgstr "开发者"
 
-#: src/application.cpp:171
-#, kde-format
+#: src/application.cpp:172
+#, fuzzy, kde-format
+#| msgid "File to open"
+msgctxt "@info:shell"
 msgid "File to open"
 msgstr "要打开的文件"
 
-#: src/lockmanager.cpp:34
+#: src/application.cpp:176
 #, kde-format
-msgid "Playing video."
+msgctxt "@info:shell"
+msgid ""
+"Allows to temporarily override the ytdl format selection setting. Will be "
+"overwritten if the setting is changed through the GUI"
+msgstr ""
+
+#: src/application.cpp:178
+#, kde-format
+msgctxt "@info:shell"
+msgid "bestvideo+bestaudio/best"
+msgstr ""
+
+#: src/lockmanager.cpp:34
+#, fuzzy, kde-format
+#| msgid "Playing video."
+msgctxt "@info reason for blocking sleep and screen slocking"
+msgid "Playing video"
 msgstr "播放视频."
 
 #: src/models/actionsmodel.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "About Haruna"
+msgctxt "@action"
 msgid "About Haruna"
 msgstr "关于 Haruna"
 
 #: src/models/actionsmodel.cpp:30
 #, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:37
 #, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action"
 msgid "Configure"
 msgstr "配置"
 
 #: src/models/actionsmodel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Keyboard Shortcuts"
+msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "配置键盘快捷键"
 
 #: src/models/actionsmodel.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Exit Fullscreen"
+msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "退出全屏"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Big Step Forward"
+msgctxt "@action"
 msgid "Frame Step Forward"
-msgstr ""
+msgstr "向前快进一大步"
 
 #: src/models/actionsmodel.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Big Step Backward"
+msgctxt "@action"
 msgid "Frame Step Backward"
-msgstr ""
+msgstr "向后快退一大步"
 
 #: src/models/actionsmodel.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Last Played File"
+msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "加载上次播放的文件"
 
 #: src/models/actionsmodel.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@action"
 msgid "Mute"
 msgstr "静音"
 
 #: src/models/actionsmodel.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Context Menu"
+msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "打开右键菜单"
 
 #: src/models/actionsmodel.cpp:99
 #, kde-format
+msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open File"
+msgctxt "@action"
 msgid "Open File"
 msgstr "打开文件"
 
 #: src/models/actionsmodel.cpp:110
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add external subtitle…"
+msgctxt "@action"
 msgid "Add external subtitle…"
 msgstr "添加外置字幕"
 
 #: src/models/actionsmodel.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Url"
+msgctxt "@action"
 msgid "Open Url"
 msgstr "打开链接"
 
 #: src/models/actionsmodel.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed increase"
+msgctxt "@action"
 msgid "Playback speed increase"
 msgstr "增加播放速度"
 
 #: src/models/actionsmodel.cpp:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed decrease"
+msgctxt "@action"
 msgid "Playback speed decrease"
 msgstr "降低播放速度"
 
 #: src/models/actionsmodel.cpp:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed reset"
+msgctxt "@action"
 msgid "Playback speed reset"
 msgstr "重置播放速度"
 
 #: src/models/actionsmodel.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play/Pause"
+msgctxt "@action"
 msgid "Play/Pause"
 msgstr "播放/暂停"
 
 #: src/models/actionsmodel.cpp:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play Next"
+msgctxt "@action"
 msgid "Play Next"
 msgstr "播放下一个"
 
 #: src/models/actionsmodel.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play Previous"
+msgctxt "@action"
 msgid "Play Previous"
 msgstr "播放上一个"
 
 #: src/models/actionsmodel.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Quit"
+msgctxt "@action"
 msgid "Quit"
 msgstr "退出"
 
 #: src/models/actionsmodel.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Playback"
+msgctxt "@action"
 msgid "Restart Playback"
 msgstr "重新开始播放"
 
 #: src/models/actionsmodel.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Small Step Forward"
+msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "向前快进一小步"
 
 #: src/models/actionsmodel.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Small Step Backward"
+msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "向后快退一小步"
 
 #: src/models/actionsmodel.cpp:194
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Medium Step Forward"
+msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "向前快进中等长度"
 
 #: src/models/actionsmodel.cpp:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Medium Step Backward"
+msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "向后快退中等长度"
 
 #: src/models/actionsmodel.cpp:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Big Step Forward"
+msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "向前快进一大步"
 
 #: src/models/actionsmodel.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Big Step Backward"
+msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "向后快退一大步"
 
 #: src/models/actionsmodel.cpp:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Next Chapter"
+msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "快进到下一章"
 
 #: src/models/actionsmodel.cpp:229
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Previous Chapter"
+msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "快退到上一章"
 
 #: src/models/actionsmodel.cpp:236
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek To Next Subtitle"
+msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "快进到下一个字幕"
 
 #: src/models/actionsmodel.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek To Previous Subtitle"
+msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "快退到上一个字幕"
 
 #: src/models/actionsmodel.cpp:250
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek To Watch Later Position"
+msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "跳转到稍后观看的位置"
 
 #: src/models/actionsmodel.cpp:257
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set Loop"
+msgctxt "@action"
 msgid "Set Loop"
 msgstr "设置循环"
 
 #: src/models/actionsmodel.cpp:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Screenshot"
+msgctxt "@action"
 msgid "Screenshot"
 msgstr "截屏"
 
 #: src/models/actionsmodel.cpp:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Toggle"
+msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "字幕显示/隐藏"
 
 #: src/models/actionsmodel.cpp:278
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Increase Font Size"
+msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "增加字幕字体大小"
 
 #: src/models/actionsmodel.cpp:285
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Decrease Font Size"
+msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "减小字幕字体大小"
 
 #: src/models/actionsmodel.cpp:292
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Move Up"
+msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "字幕上移"
 
 #: src/models/actionsmodel.cpp:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Move Down"
+msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "字幕下移"
 
 #: src/models/actionsmodel.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Quicken"
+msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "字幕快进"
 
 #: src/models/actionsmodel.cpp:313
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Delay"
+msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "字幕延迟"
 
 #: src/models/actionsmodel.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Move Up"
+msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr ""
+msgstr "字幕上移"
 
 #: src/models/actionsmodel.cpp:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle Move Down"
+msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr ""
+msgstr "字幕下移"
 
 #: src/models/actionsmodel.cpp:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Header"
+msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr ""
+msgstr "显示/隐藏标题"
 
 #: src/models/actionsmodel.cpp:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Fullscreen"
+msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "进入/退出全屏模式"
 
 #: src/models/actionsmodel.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Menu Bar"
+msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "显示/隐藏菜单栏"
 
 #: src/models/actionsmodel.cpp:355
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Header"
+msgctxt "@action"
 msgid "Toggle Header"
 msgstr "显示/隐藏标题"
 
 #: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playlist"
+msgctxt "@action"
 msgid "Playlist"
 msgstr "播放列表"
 
 #: src/models/actionsmodel.cpp:369
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Video pan x left"
+msgctxt "@action"
 msgid "Video pan x left"
 msgstr "沿 X 轴向左平移画面"
 
 #: src/models/actionsmodel.cpp:376
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Video pan x right"
+msgctxt "@action"
 msgid "Video pan x right"
 msgstr "沿 X 轴向右平移画面"
 
 #: src/models/actionsmodel.cpp:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Video pan y up"
+msgctxt "@action"
 msgid "Video pan y up"
 msgstr "沿 Y 轴向上平移画面"
 
 #: src/models/actionsmodel.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Video pan y down"
+msgctxt "@action"
 msgid "Video pan y down"
 msgstr "沿 Y 轴向下平移画面"
 
 #: src/models/actionsmodel.cpp:397
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume Up"
+msgctxt "@action"
 msgid "Volume Up"
 msgstr "增大音量"
 
 #: src/models/actionsmodel.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume Down"
+msgctxt "@action"
 msgid "Volume Down"
 msgstr "减小音量"
 
 #: src/models/actionsmodel.cpp:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom In"
+msgctxt "@action"
 msgid "Zoom In"
 msgstr "放大"
 
 #: src/models/actionsmodel.cpp:418
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom Out"
+msgctxt "@action"
 msgid "Zoom Out"
 msgstr "缩小"
 
 #: src/models/actionsmodel.cpp:425
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom Reset"
+msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "缩放重置"
 
 #: src/models/actionsmodel.cpp:433
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Up"
+msgctxt "@action"
 msgid "Contrast Up"
 msgstr "提高对比度"
 
 #: src/models/actionsmodel.cpp:440
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Down"
+msgctxt "@action"
 msgid "Contrast Down"
 msgstr "降低对比度"
 
 #: src/models/actionsmodel.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Reset"
+msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "重置对比度"
 
 #: src/models/actionsmodel.cpp:454
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Up"
+msgctxt "@action"
 msgid "Brightness Up"
 msgstr "提高亮度"
 
 #: src/models/actionsmodel.cpp:461
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Down"
+msgctxt "@action"
 msgid "Brightness Down"
 msgstr "降低亮度"
 
 #: src/models/actionsmodel.cpp:468
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Reset"
+msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "重置亮度"
 
 #: src/models/actionsmodel.cpp:475
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Up"
+msgctxt "@action"
 msgid "Gamma Up"
 msgstr "提高伽玛值"
 
 #: src/models/actionsmodel.cpp:482
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Down"
+msgctxt "@action"
 msgid "Gamma Down"
 msgstr "降低伽玛值"
 
 #: src/models/actionsmodel.cpp:489
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Reset"
+msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "重置伽玛值"
 
 #: src/models/actionsmodel.cpp:496
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Saturation Up"
+msgctxt "@action"
 msgid "Saturation Up"
 msgstr "增加饱和度"
 
 #: src/models/actionsmodel.cpp:503
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Saturation Down"
+msgctxt "@action"
 msgid "Saturation Down"
 msgstr "降低饱和度"
 
 #: src/models/actionsmodel.cpp:510
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Saturation Reset"
+msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "重置饱和度"
 
 #: src/models/actionsmodel.cpp:652
 #, kde-format
+msgctxt "@info"
 msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
@@ -428,553 +596,773 @@ msgstr ""
 
 #: src/models/actionsmodel.cpp:657
 #, kde-format
+msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:624
-#, kde-format
+#: src/mpv/mpvitem.cpp:631
+#, fuzzy, kde-format
+#| msgid "Playlist is empty"
+msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "播放列表为空"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "音频: %1 %2"
 
 #: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed: %1"
+msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度: %1"
 
 #: src/qml/Actions.qml:236
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Loop start: %1"
+msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "循环开始: %1"
 
 #: src/qml/Actions.qml:240
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Loop: %1 - %2"
+msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "循环: %1 - %2"
 
 #: src/qml/Actions.qml:246
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Loop cleared"
+msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "循环已清除"
 
 #: src/qml/Actions.qml:254 src/qml/Actions.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle timing: %1"
+msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "字幕时间差: %1"
 
 #: src/qml/Actions.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitles off"
+msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "关闭字幕"
 
 #: src/qml/Actions.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitles on"
+msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "打开字幕"
 
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:285
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle: None"
+msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "字幕: 无"
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle: %1 %2"
+msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "字幕: %1 %2"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:300
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Subtitle scale: %1"
+msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕缩放: %1"
 
 #: src/qml/Actions.qml:309
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deinterlace: %1"
+msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "反交错: %1"
 
 #: src/qml/Actions.qml:354 src/qml/Actions.qml:359
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume: %1"
+msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "音量: %1"
 
 #: src/qml/Actions.qml:365 src/qml/Actions.qml:371
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom: %1"
+msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "缩放: %1"
 
 #: src/qml/Actions.qml:376
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom: 0"
+msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "缩放: 0"
 
 #: src/qml/Actions.qml:383 src/qml/Actions.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast: %1"
+msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "对比度: %1"
 
 #: src/qml/Actions.qml:394
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast: 0"
+msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "对比度: 0"
 
 #: src/qml/Actions.qml:400 src/qml/Actions.qml:406
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness: %1"
+msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度: %1"
 
 #: src/qml/Actions.qml:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness: 0"
+msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度: 0"
 
 #: src/qml/Actions.qml:417 src/qml/Actions.qml:423
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma: %1"
+msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "伽玛值: %1"
 
 #: src/qml/Actions.qml:428
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma: 0"
+msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "伽玛值: 0"
 
 #: src/qml/Actions.qml:434 src/qml/Actions.qml:440
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Saturation: %1"
+msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "饱和度: %1"
 
 #: src/qml/Actions.qml:445
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Saturation: 0"
+msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "饱和度: 0"
 
 #: src/qml/Footer.qml:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start Playback"
+msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "开始播放"
 
 #: src/qml/Footer.qml:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause Playback"
+msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "暂停播放"
 
 #: src/qml/Footer.qml:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play previous file"
+msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "播放上一个文件"
 
 #: src/qml/Footer.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "播放下一个文件"
 
 #: src/qml/Footer.qml:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remaining: %1"
+msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "剩余: %1"
 
-#: src/qml/HamburgerMenu.qml:51 src/qml/Menus/FileMenu.qml:24
-#: src/qml/Menus/Global/GlobalFileMenu.qml:39
-#, kde-format
+#: src/qml/HamburgerMenu.qml:51
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "最近的文件"
 
 #: src/qml/HamburgerMenu.qml:80
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "&More"
 msgstr ""
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a color"
+msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "选择颜色"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Double click to set action"
+msgctxt "@title"
 msgid "Double click to set action"
 msgstr "双击设置操作"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear current action"
+msgctxt "@action:button"
 msgid "Clear current action"
 msgstr "清除当前的操作"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#: src/qml/Settings/SettingsWindow.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Help"
+msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "帮助"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna help window (english only)"
+msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
 msgstr "Haruna 帮助窗口 (仅英文)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna handbook"
+msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Haruna 手册"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open config ..."
+msgctxt "@action:intoolbar"
 msgid "Open config ..."
 msgstr "打开配置..."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File"
+msgctxt "@action:inmenu"
 msgid "File"
 msgstr "文件"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgctxt "@action:inmenu"
 msgid "Folder"
 msgstr "文件夹"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load subtitles from"
+msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "从...加载字幕"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm deletion"
+msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "确认删除"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete this folder from list"
+msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "从列表中删除这个文件夹"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save changes"
+msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "保存更改"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add new folder"
+msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "添加新文件夹"
 
-#: src/qml/Header.qml:73 src/qml/Settings/SettingsWindow.qml:85
-#, kde-format
+#: src/qml/Header.qml:73
+#, fuzzy, kde-format
+#| msgid "Subtitles"
+msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "字幕"
 
-#: src/qml/Header.qml:106 src/qml/Settings/SettingsWindow.qml:77
-#, kde-format
+#: src/qml/Header.qml:106
+#, fuzzy, kde-format
+#| msgid "Audio"
+msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "音频"
 
 #: src/qml/HProgressBar.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Skip Chapters"
+msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "跳过章节"
 
 #: src/qml/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna"
+msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/main.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select file"
+msgctxt "@title:window"
 msgid "Select file"
 msgstr "选择文件"
 
 #: src/qml/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select subtitles file"
+msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "选择字幕文件"
 
 #: src/qml/main.qml:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "未找到 <a href=\"https://youtube-dl.org\">Youtube-dl</a>"
 
 #: src/qml/main.qml:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open"
+msgctxt "@action:button"
 msgid "Open"
 msgstr "打开"
 
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Audio"
+msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "音频(&A)"
 
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Primary Track"
+msgctxt "@title:menu"
 msgid "&Primary Track"
 msgstr "主音轨(&P)"
 
 #: src/qml/Menus/ContextMenu.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed"
+msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "播放速度"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&File"
+msgctxt "@title:menu"
 msgid "&File"
 msgstr "文件(&F)"
 
+#: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@title:menu"
+msgid "Recent Files"
+msgstr "最近的文件"
+
 #: src/qml/Menus/FileMenu.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear List"
+msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "清空列表"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Help"
+msgctxt "@title:menu"
 msgid "&Help"
 msgstr "帮助(&H)"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Playback"
+msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "播放(&P)"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek"
+msgctxt "@title:menu"
 msgid "Seek"
 msgstr "跳转"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Settings"
+msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "设置(&S)"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Subtitles"
+msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "字幕(&S)"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Primary Subtitle"
+msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "主字幕"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Secondary Subtitle"
+msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "副字幕:"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Video"
+msgctxt "@title:menu"
 msgid "&Video"
 msgstr "视频(&V)"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Adjustments"
+msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "调整"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&View"
+msgctxt "@title:menu"
 msgid "&View"
 msgstr "视图(&V)"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Menubar"
+msgctxt "@action:inmenu"
 msgid "Hide Menubar"
 msgstr "隐藏菜单栏"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Menubar"
+msgctxt "@action:inmenu"
 msgid "Show Menubar"
 msgstr "显示菜单栏"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Toolbar"
+msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
 msgstr "隐藏工具栏"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Toolbar"
+msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "显示工具栏"
 
 #: src/qml/MpvVideo.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Skipped chapter: %1"
+msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "跳过的章节: %1"
 
 #: src/qml/MpvVideo.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Could not play: %1"
+msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "无法播放: %1"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred language"
+msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "首选语言"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "eng,ger etc."
+msgctxt "placeholder text"
 msgid "eng,ger etc."
 msgstr "eng,ger 等"
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do not use spaces."
+msgctxt "@info:tooltip"
 msgid "Do not use spaces."
 msgstr "不可有空隔"
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred track"
+msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "首选音轨"
 
 #: src/qml/Settings/AudioSettings.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume step"
+msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "音量调整步长"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No custom commands yet"
+msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "尚无自定义命令"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add command"
+msgctxt "@action:button"
 msgid "&Add command"
 msgstr "添加命令(&A)"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:69
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:155
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "添加(&A)"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Command"
+msgctxt "@label:textbox"
 msgid "Command"
 msgstr "命令"
 
 #: src/qml/Settings/EditCustomCommand.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "add volume +10"
+msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "音量 +10"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "OSD Message"
+msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "OSD 消息"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filename: ${filename}"
+msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "文件名: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@label"
 msgid "Type"
 msgstr "类型"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keyboard shortcut"
+msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "键盘快捷键"
 
 #: src/qml/Settings/EditCustomCommand.qml:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Run at startup"
+msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "开机启动"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete"
+msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "删除"
 
 #: src/qml/Settings/EditCustomCommand.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "取消"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Save"
+msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "保存(&S)"
 
 #: src/qml/Settings/GeneralSettings.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Osd font size"
+msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "OSD 字体大小"
 
 #: src/qml/Settings/GeneralSettings.qml:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File dialog location"
+msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "文件对话框位置"
 
 #: src/qml/Settings/GeneralSettings.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "If empty the file dialog will remember the last opened location."
+msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr "如果路径为空，对话框将记住最后打开的位置。"
 
 #: src/qml/Settings/GeneralSettings.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Maximum recent files"
+msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "保存的\"最近的文件\"的最大值"
 
 #: src/qml/Settings/GeneralSettings.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "How many recent files to store. Enter 0 (zero) to disable."
+msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr "保存的\"最近的文件\"的数量。输入 0 以禁用。"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remember window size and position"
+msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
 #: src/qml/Settings/GeneralSettings.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Interface"
+msgctxt "@title"
 msgid "Interface"
 msgstr "界面"
 
 #: src/qml/Settings/GeneralSettings.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show menubar"
+msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
 #: src/qml/Settings/GeneralSettings.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show toolbar"
+msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show chapter markers"
+msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
 #: src/qml/Settings/GeneralSettings.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color scheme"
+msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
 #: src/qml/Settings/GeneralSettings.qml:190
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "GUI style"
+msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面样式"
 
 #: src/qml/Settings/GeneralSettings.qml:239
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Breeze icon theme"
+msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "使用微风图标主题"
 
 #: src/qml/Settings/GeneralSettings.qml:249
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Sets the icon theme to breeze.\n"
+#| "Requires restart."
+msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
@@ -983,176 +1371,257 @@ msgstr ""
 "需要重启。"
 
 #: src/qml/Settings/PlaybackSettings.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek small step"
+msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "快进/快退一小步的步长"
 
 #: src/qml/Settings/PlaybackSettings.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek medium step"
+msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "快进/快退中等长度的步长"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This is also used for mouse wheel seeking, when mouse is over the "
+#| "progress bar"
+msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
 "bar"
 msgstr "当鼠标放置在进度条上时，这个设置也用于鼠标滚轮的快进/快退操作"
 
 #: src/qml/Settings/PlaybackSettings.qml:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek big step"
+msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "快进/快退一大步的步长"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open last played file on startup"
+msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "启动时打开上次播放的文件"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "播放时自动恢复上次播放进度"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "When opening a file that was played before, seek at the position it was "
+#| "last time."
+msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr "当打开以前播放过的文件时，它将从播放停止时的位置开始。"
 
 #: src/qml/Settings/PlaybackSettings.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start playing"
+msgctxt "@option:check"
 msgid "Start playing"
 msgstr "开始播放"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "When opening a file that was played before, start playing it "
+#| "automatically."
+msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr "当打开以前播放过的文件时，开始自动播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause on minimize"
+msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "最小化时暂停"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Pauses the player while the window is minimized, playback resumes when "
+#| "restored."
+msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr "在最小化窗口时暂停播放，还原时恢复播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hardware decoding"
+msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "硬件解码"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:298
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:300
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr "启用"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:252
-#: src/qml/Settings/PlaybackSettings.qml:298
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:300
+#, fuzzy, kde-format
+#| msgid "Disabled"
+msgctxt "@option:check"
 msgid "Disabled"
 msgstr "禁用"
 
 #: src/qml/Settings/PlaybackSettings.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remember time position"
+msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "记住时间位置"
 
+#: src/qml/Settings/PlaybackSettings.qml:252
+#, fuzzy, kde-format
+#| msgid "Disabled"
+msgctxt "@info"
+msgid "Disabled"
+msgstr "禁用"
+
 #: src/qml/Settings/PlaybackSettings.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "For all files"
+msgctxt "@info"
 msgid "For all files"
 msgstr "应用于所有文件"
 
-#: src/qml/Settings/PlaybackSettings.qml:256
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:257
+#, fuzzy, kde-format
+#| msgid "For files longer than %1 minute"
+#| msgid_plural "For files longer than %1 minutes"
+msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "应用于长于 %1 分钟的文件"
 
-#: src/qml/Settings/PlaybackSettings.qml:283
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:285
+#, fuzzy, kde-format
+#| msgid "Save position every %1 second"
+#| msgid_plural "Save position every %1 seconds"
+msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "每 %1 秒保存时间位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:292
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:294
+#, fuzzy, kde-format
+#| msgid "Skip chapters"
+msgctxt "@label"
 msgid "Skip chapters"
 msgstr "跳过章节"
 
-#: src/qml/Settings/PlaybackSettings.qml:309
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:311
+#, fuzzy, kde-format
+#| msgid "Show osd message on skip"
+msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "跳过时显示 OSD 消息"
 
-#: src/qml/Settings/PlaybackSettings.qml:319
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:321
+#, fuzzy, kde-format
+#| msgid "Skip words"
+msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "跳过单词"
 
-#: src/qml/Settings/PlaybackSettings.qml:326
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:328
+#, fuzzy, kde-format
+#| msgid "op, ed, chapter 1"
+msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "开场曲, 结尾曲, 章节 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:335
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:337
+#, fuzzy, kde-format
+#| msgid "Skip chapters containing these words. Comma separated list."
+msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "跳过包含这些单词的章节。列表中的单词用逗号分隔。"
 
-#: src/qml/Settings/PlaybackSettings.qml:344
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:346
+#, fuzzy, kde-format
+#| msgid "Youtube-dl"
+msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:350
+#: src/qml/Settings/PlaybackSettings.qml:352
 #, kde-format
 msgid "Format selection"
 msgstr "格式选择"
 
-#: src/qml/Settings/PlaybackSettings.qml:369
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:371
+#, fuzzy, kde-format
+#| msgid ""
+#| "Selects the best video with a height lower than or equal to the selected "
+#| "value."
+msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr "选择高度低于或等于选定值的最佳视频。"
 
-#: src/qml/Settings/PlaybackSettings.qml:419
+#: src/qml/Settings/PlaybackSettings.qml:421
 #, kde-format
+msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Position"
+msgctxt "@label:listbox"
 msgid "Position"
 msgstr "位置"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Row height"
+msgctxt "@label:spinbox"
 msgid "Row height"
 msgstr "行高"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playlist style"
+msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "播放列表样式"
 
 #: src/qml/Settings/PlaylistSettings.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Overlay video"
+msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "悬浮视频"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "When checked the playlist goes on top of the video\n"
+#| "When unchecked the video is resized"
+msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
@@ -1161,184 +1630,277 @@ msgstr ""
 "当未选中时，视频大小会被调整"
 
 #: src/qml/Settings/PlaylistSettings.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show media title instead of file name"
+msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "显示媒体文件标题，而非文件名称"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Auto load videos from same folder"
+msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "自动从同一文件夹中加载视频"
 
 #: src/qml/Settings/PlaylistSettings.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Repeat"
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr "重复"
 
 #: src/qml/Settings/PlaylistSettings.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show row number"
+msgctxt "@option:check"
 msgid "Show row number"
 msgstr "显示行号"
 
 #: src/qml/Settings/PlaylistSettings.qml:151
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle with mouse"
+msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "用鼠标切换"
 
 #: src/qml/Settings/PlaylistSettings.qml:160
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Increase font size when fullscreen"
+msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "全屏时增加字体大小"
 
 #: src/qml/Settings/SettingsWindow.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgctxt "@title:window"
 msgid "Settings"
 msgstr "设置"
 
 #: src/qml/Settings/SettingsWindow.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@action"
 msgid "General"
 msgstr "常规"
 
 #: src/qml/Settings/SettingsWindow.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback"
+msgctxt "@action"
 msgid "Playback"
 msgstr "播放"
 
 #: src/qml/Settings/SettingsWindow.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Video"
+msgctxt "@action"
 msgid "Video"
 msgstr "视频"
 
+#: src/qml/Settings/SettingsWindow.qml:77
+#, fuzzy, kde-format
+#| msgid "Audio"
+msgctxt "@action"
+msgid "Audio"
+msgstr "音频"
+
+#: src/qml/Settings/SettingsWindow.qml:85
+#, fuzzy, kde-format
+#| msgid "Subtitles"
+msgctxt "@action"
+msgid "Subtitles"
+msgstr "字幕"
+
 #: src/qml/Settings/SettingsWindow.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mouse"
+msgctxt "@action"
 msgid "Mouse"
 msgstr "鼠标"
 
 #: src/qml/Settings/SettingsWindow.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@action"
 msgid "Shortcuts"
 msgstr "快捷键"
 
 #: src/qml/Settings/SettingsWindow.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom commands"
+msgctxt "@action"
 msgid "Custom commands"
 msgstr "自定义命令"
 
 #: src/qml/Settings/SettingsWindow.qml:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "About"
+msgctxt "@action"
 msgid "About"
 msgstr "关于"
 
+#: src/qml/Settings/SettingsWindow.qml:163
+#, fuzzy, kde-format
+#| msgid "Help"
+msgctxt "@title:window"
+msgid "Help"
+msgstr "帮助"
+
 #: src/qml/Settings/SubtitlesSettings.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Styling"
+msgctxt "@title"
 msgid "Styling"
 msgstr "样式"
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Font family"
+msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "字体"
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Font size"
+msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "字体大小"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Font style"
+msgctxt "@label"
 msgid "Font style"
 msgstr "字体样式"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bold"
+msgctxt "@option:check"
 msgid "Bold"
 msgstr "粗体"
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Italic"
+msgctxt "@option:check"
 msgid "Italic"
 msgstr "斜体"
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Font color"
+msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "字体颜色"
 
 #: src/qml/Settings/SubtitlesSettings.qml:189
 #: src/qml/Settings/SubtitlesSettings.qml:227
 #: src/qml/Settings/SubtitlesSettings.qml:287
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set default value"
+msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "重置为默认值"
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shadow color"
+msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "阴影颜色"
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shadow offset"
+msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "阴影偏移"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set to 0 (zero) to disable."
+msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "设置为 0 以禁用。"
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Border color"
+msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "边框颜色"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Border width"
+msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "边框宽度"
 
 #: src/qml/Settings/VideoSettings.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Screenshots"
+msgctxt "@title"
 msgid "Screenshots"
 msgstr "截屏"
 
 #: src/qml/Settings/VideoSettings.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Format"
+msgctxt "@label:listbox"
 msgid "Format"
 msgstr "格式"
 
 #: src/qml/Settings/VideoSettings.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Template"
+msgctxt "@label:textbox"
 msgid "Template"
 msgstr "模板"
 
 #: src/qml/Settings/VideoSettings.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Image adjustments"
+msgctxt "@title"
 msgid "Image adjustments"
 msgstr "图像调节"
 
 #: src/qml/Settings/VideoSettings.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast"
+msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "对比度"
 
 #: src/qml/Settings/VideoSettings.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness"
+msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "亮度"
 
 #: src/qml/Settings/VideoSettings.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma"
+msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "伽玛"
 
 #: src/qml/Settings/VideoSettings.qml:151
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Saturation"
+msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "饱和度"
 
 #: src/qml/Settings/VideoSettings.qml:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle click on the sliders to reset them"
+msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键单击滑块以重置它们。"

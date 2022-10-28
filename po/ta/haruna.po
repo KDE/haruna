@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-27 00:45+0000\n"
+"POT-Creation-Date: 2022-10-28 00:44+0000\n"
 "PO-Revision-Date: 2022-09-13 21:10+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,398 +27,543 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: src/application.cpp:149
-#, kde-format
+#: src/application.cpp:150
+#, fuzzy, kde-format
+#| msgid "Haruna Video Player"
+msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "ஹருணா நிகழ்பட இயக்கி"
 
-#: src/application.cpp:151
-#, kde-format
+#: src/application.cpp:152
+#, fuzzy, kde-format
+#| msgid "A configurable video player."
+msgctxt "@title"
 msgid "A configurable video player."
 msgstr "தனிப்பயனாக்கக்கூடிய நிகழ்பட இயக்கி."
 
-#: src/application.cpp:153
-#, kde-format
+#: src/application.cpp:154
+#, fuzzy, kde-format
+#| msgid "(c) 2019-2021"
+msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:159
-#, kde-format
+#: src/application.cpp:160
+#, fuzzy, kde-format
+#| msgid "George Florea Bănuș"
+msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "ஜார்ஜ் ஃபுலோரியா பானுசு"
 
-#: src/application.cpp:160
-#, kde-format
+#: src/application.cpp:161
+#, fuzzy, kde-format
+#| msgid "Developer"
+msgctxt "@info:credit"
 msgid "Developer"
 msgstr "நிரலாளர்"
 
-#: src/application.cpp:171
-#, kde-format
+#: src/application.cpp:172
+#, fuzzy, kde-format
+#| msgid "File to open"
+msgctxt "@info:shell"
 msgid "File to open"
 msgstr "திறக்க வேண்டிய கோப்பு"
 
-#: src/lockmanager.cpp:34
+#: src/application.cpp:176
 #, kde-format
-msgid "Playing video."
+msgctxt "@info:shell"
+msgid ""
+"Allows to temporarily override the ytdl format selection setting. Will be "
+"overwritten if the setting is changed through the GUI"
+msgstr ""
+
+#: src/application.cpp:178
+#, kde-format
+msgctxt "@info:shell"
+msgid "bestvideo+bestaudio/best"
+msgstr ""
+
+#: src/lockmanager.cpp:34
+#, fuzzy, kde-format
+#| msgid "Playing video."
+msgctxt "@info reason for blocking sleep and screen slocking"
+msgid "Playing video"
 msgstr "நிகழ்படம் இயக்கப்படுகிறது."
 
 #: src/models/actionsmodel.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "About Haruna"
+msgctxt "@action"
 msgid "About Haruna"
 msgstr "ஹருணா பற்றி"
 
 #: src/models/actionsmodel.cpp:30
 #, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:37
 #, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action"
 msgid "Configure"
 msgstr "அமை"
 
 #: src/models/actionsmodel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Keyboard Shortcuts"
+msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "விசை சுருக்குவழிகளை அமை"
 
 #: src/models/actionsmodel.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Exit Fullscreen"
+msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "முழுத்திரை பயன்முறையிலிருந்து வெளியேறு"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
+msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:73
 #, kde-format
+msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Last Played File"
+msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "கடைசியாக இயக்கிய கோப்பை ஏற்று"
 
 #: src/models/actionsmodel.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@action"
 msgid "Mute"
 msgstr "ஒலியை அடக்கு"
 
 #: src/models/actionsmodel.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Context Menu"
+msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "வலது-க்ளிக் பட்டியை திற"
 
 #: src/models/actionsmodel.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Opens and closes the context menu at the position of the mouse pointer"
+msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "சுட்டிக்குறியின் இருப்பிடத்தில் வலது-க்ளிக் பட்டியை திறக்கும் அல்லது மூடும்"
 
 #: src/models/actionsmodel.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open File"
+msgctxt "@action"
 msgid "Open File"
 msgstr "கோப்பை திற"
 
 #: src/models/actionsmodel.cpp:110
 #, kde-format
+msgctxt "@action"
 msgid "Add external subtitle…"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Url"
+msgctxt "@action"
 msgid "Open Url"
 msgstr "முகவரியை திற"
 
 #: src/models/actionsmodel.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed increase"
+msgctxt "@action"
 msgid "Playback speed increase"
 msgstr "வேகமாக இயக்கு"
 
 #: src/models/actionsmodel.cpp:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed decrease"
+msgctxt "@action"
 msgid "Playback speed decrease"
 msgstr "மெதுவாக இயக்கு"
 
 #: src/models/actionsmodel.cpp:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed reset"
+msgctxt "@action"
 msgid "Playback speed reset"
 msgstr "இயக்கவேகத்தை மீட்டமை"
 
 #: src/models/actionsmodel.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play/Pause"
+msgctxt "@action"
 msgid "Play/Pause"
 msgstr "இயக்கு/பொறு"
 
 #: src/models/actionsmodel.cpp:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play Next"
+msgctxt "@action"
 msgid "Play Next"
 msgstr "அடுத்த‍தை இயக்கு"
 
 #: src/models/actionsmodel.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play Previous"
+msgctxt "@action"
 msgid "Play Previous"
 msgstr "முந்தையதை இயக்கு"
 
 #: src/models/actionsmodel.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Quit"
+msgctxt "@action"
 msgid "Quit"
 msgstr "வெளியேறு"
 
 #: src/models/actionsmodel.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Playback"
+msgctxt "@action"
 msgid "Restart Playback"
 msgstr "இயக்குவதை மீள்துவக்கு"
 
 #: src/models/actionsmodel.cpp:180
 #, kde-format
+msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:187
 #, kde-format
+msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:194
 #, kde-format
+msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:201
 #, kde-format
+msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:208
 #, kde-format
+msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:215
 #, kde-format
+msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Next Chapter"
+msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "அடுத்த பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:229
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Previous Chapter"
+msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "முந்தைய பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:236
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Next Chapter"
+msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr ""
+msgstr "அடுத்த பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seek Previous Chapter"
+msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr ""
+msgstr "முந்தைய பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:250
 #, kde-format
+msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:257
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set Loop"
+msgctxt "@action"
 msgid "Set Loop"
 msgstr "சுழற்சியை அமை"
 
 #: src/models/actionsmodel.cpp:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Screenshot"
+msgctxt "@action"
 msgid "Screenshot"
 msgstr "திரைப்பிடிப்பு"
 
 #: src/models/actionsmodel.cpp:271
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:278
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:285
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:292
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:299
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:306
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:313
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:320
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:327
 #, kde-format
+msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:334
 #, kde-format
+msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Fullscreen"
+msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "முழுத்திரை பயன்முறையை நிலைமாற்று"
 
 #: src/models/actionsmodel.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Menu Bar"
+msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "பட்டிப் பட்டையை நிலைமாற்று"
 
 #: src/models/actionsmodel.cpp:355
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Menu Bar"
+msgctxt "@action"
 msgid "Toggle Header"
-msgstr ""
+msgstr "பட்டிப் பட்டையை நிலைமாற்று"
 
 #: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Fullscreen"
+msgctxt "@action"
 msgid "Playlist"
-msgstr ""
+msgstr "முழுத்திரை பயன்முறையை நிலைமாற்று"
 
 #: src/models/actionsmodel.cpp:369
 #, kde-format
+msgctxt "@action"
 msgid "Video pan x left"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:376
 #, kde-format
+msgctxt "@action"
 msgid "Video pan x right"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:383
 #, kde-format
+msgctxt "@action"
 msgid "Video pan y up"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:390
 #, kde-format
+msgctxt "@action"
 msgid "Video pan y down"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:397
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume Up"
+msgctxt "@action"
 msgid "Volume Up"
 msgstr "ஒலி அளவை கூட்டு"
 
 #: src/models/actionsmodel.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume Down"
+msgctxt "@action"
 msgid "Volume Down"
 msgstr "ஒலி அளவை குறை"
 
 #: src/models/actionsmodel.cpp:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom In"
+msgctxt "@action"
 msgid "Zoom In"
 msgstr "பெரிதாக்கு"
 
 #: src/models/actionsmodel.cpp:418
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom Out"
+msgctxt "@action"
 msgid "Zoom Out"
 msgstr "சிறிதாக்கு"
 
 #: src/models/actionsmodel.cpp:425
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom Reset"
+msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "உருப்பெருக்கத்தை மீட்டமை"
 
 #: src/models/actionsmodel.cpp:433
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Up"
+msgctxt "@action"
 msgid "Contrast Up"
 msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/models/actionsmodel.cpp:440
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Down"
+msgctxt "@action"
 msgid "Contrast Down"
 msgstr "நிறமாறுபாட்டை குறை"
 
 #: src/models/actionsmodel.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Reset"
+msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "நிறமாறுபாட்டை மீட்டமை"
 
 #: src/models/actionsmodel.cpp:454
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Up"
+msgctxt "@action"
 msgid "Brightness Up"
 msgstr "பிரகாசத்தை கூட்டு"
 
 #: src/models/actionsmodel.cpp:461
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Down"
+msgctxt "@action"
 msgid "Brightness Down"
 msgstr "பிரகாசத்தை குறை"
 
 #: src/models/actionsmodel.cpp:468
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Reset"
+msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "பிரகாசத்தை மீட்டமை"
 
 #: src/models/actionsmodel.cpp:475
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Up"
+msgctxt "@action"
 msgid "Gamma Up"
 msgstr "காமாவை கூட்டு"
 
 #: src/models/actionsmodel.cpp:482
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Down"
+msgctxt "@action"
 msgid "Gamma Down"
 msgstr "காமாவை குறை"
 
 #: src/models/actionsmodel.cpp:489
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Reset"
+msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "காமாவை மீட்டமை"
 
 #: src/models/actionsmodel.cpp:496
 #, kde-format
+msgctxt "@action"
 msgid "Saturation Up"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:503
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Down"
+msgctxt "@action"
 msgid "Saturation Down"
-msgstr ""
+msgstr "நிறமாறுபாட்டை குறை"
 
 #: src/models/actionsmodel.cpp:510
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Reset"
+msgctxt "@action"
 msgid "Saturation Reset"
-msgstr ""
+msgstr "நிறமாறுபாட்டை மீட்டமை"
 
 #: src/models/actionsmodel.cpp:652
 #, kde-format
+msgctxt "@info"
 msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
@@ -426,559 +571,739 @@ msgstr ""
 
 #: src/models/actionsmodel.cpp:657
 #, kde-format
+msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:631
 #, kde-format
+msgctxt "@info"
 msgid "Playlist is empty"
 msgstr ""
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "ஒலி: %1 %2"
 
 #: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback speed: %1"
+msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "இயக்கும் வேகம்: %1"
 
 #: src/qml/Actions.qml:236
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr ""
 
 #: src/qml/Actions.qml:240
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
-msgstr ""
+msgstr "ஒலி: %1 %2"
 
 #: src/qml/Actions.qml:246
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr ""
 
 #: src/qml/Actions.qml:254 src/qml/Actions.qml:259
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr ""
 
 #: src/qml/Actions.qml:264
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr ""
 
 #: src/qml/Actions.qml:264
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr ""
 
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:285
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr ""
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr ""
+msgstr "ஒலி: %1 %2"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:300
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr ""
 
 #: src/qml/Actions.qml:309
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr ""
 
 #: src/qml/Actions.qml:354 src/qml/Actions.qml:359
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume: %1"
+msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "ஒலி அளவு: %1"
 
 #: src/qml/Actions.qml:365 src/qml/Actions.qml:371
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom: %1"
+msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "உருப்பெருக்கம்: %1"
 
 #: src/qml/Actions.qml:376
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Zoom: 0"
+msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "உருப்பெருக்கம்: 0"
 
 #: src/qml/Actions.qml:383 src/qml/Actions.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Up"
+msgctxt "@info:tooltip"
 msgid "Contrast: %1"
-msgstr ""
+msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/qml/Actions.qml:394
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Up"
+msgctxt "@info:tooltip"
 msgid "Contrast: 0"
-msgstr ""
+msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/qml/Actions.qml:400 src/qml/Actions.qml:406
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness: %1"
+msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "பிரகாசம்: %1"
 
 #: src/qml/Actions.qml:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness: 0"
+msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "பிரகாசம்: 0"
 
 #: src/qml/Actions.qml:417 src/qml/Actions.qml:423
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Up"
+msgctxt "@info:tooltip"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "காமாவை கூட்டு"
 
 #: src/qml/Actions.qml:428
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Up"
+msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr ""
+msgstr "காமாவை கூட்டு"
 
 #: src/qml/Actions.qml:434 src/qml/Actions.qml:440
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr ""
 
 #: src/qml/Actions.qml:445
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr ""
 
 #: src/qml/Footer.qml:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Playback"
+msgctxt "@info:tooltip"
 msgid "Start Playback"
-msgstr ""
+msgstr "இயக்குவதை மீள்துவக்கு"
 
 #: src/qml/Footer.qml:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback"
+msgctxt "@info:tooltip"
 msgid "Pause Playback"
-msgstr ""
+msgstr "இயக்குதல்"
 
 #: src/qml/Footer.qml:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play previous file"
+msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "முந்தைய கோப்பை இயக்கு"
 
 #: src/qml/Footer.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "அடுத்த கோப்பை இயக்கு"
 
 #: src/qml/Footer.qml:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remaining: %1"
+msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "மீதம்: %1"
 
-#: src/qml/HamburgerMenu.qml:51 src/qml/Menus/FileMenu.qml:24
-#: src/qml/Menus/Global/GlobalFileMenu.qml:39
-#, kde-format
+#: src/qml/HamburgerMenu.qml:51
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "சமீப கோப்புகள்"
 
 #: src/qml/HamburgerMenu.qml:80
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&More"
+msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&மேலும்"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr ""
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 #, kde-format
+msgctxt "@title"
 msgid "Double click to set action"
 msgstr ""
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear current action"
+msgctxt "@action:button"
 msgid "Clear current action"
 msgstr "தற்போதைய செயலை நீக்கு"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#: src/qml/Settings/SettingsWindow.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Help"
+msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "உதவி"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna help window (english only)"
+msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
 msgstr "ஹருணா உதவி சாளரம் (ஆங்கிலம் மட்டும்)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna handbook"
+msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "ஹருணா கையேடு"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open config ..."
+msgctxt "@action:intoolbar"
 msgid "Open config ..."
 msgstr "அமைப்புகளை திற ..."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File"
+msgctxt "@action:inmenu"
 msgid "File"
 msgstr "கோப்பு"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgctxt "@action:inmenu"
 msgid "Folder"
 msgstr "அடைவு"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:27
 #, kde-format
+msgctxt "@title"
 msgid "Load subtitles from"
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm deletion"
+msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "நீக்குவதை உறுதி செய்"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete this folder from list"
+msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "பட்டியலிலிருந்து இந்த அடைவை நீக்கு"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save changes"
+msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "மாற்றங்களை சேமி"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add new folder"
+msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "புதிய அடைவை சேர்"
 
-#: src/qml/Header.qml:73 src/qml/Settings/SettingsWindow.qml:85
+#: src/qml/Header.qml:73
 #, kde-format
+msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr ""
 
-#: src/qml/Header.qml:106 src/qml/Settings/SettingsWindow.qml:77
-#, kde-format
+#: src/qml/Header.qml:106
+#, fuzzy, kde-format
+#| msgid "Audio"
+msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "ஒலி"
 
 #: src/qml/HProgressBar.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Skip Chapters"
+msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "பகுதிகளை தவிர்"
 
 #: src/qml/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna"
+msgctxt "@title:window"
 msgid "Haruna"
 msgstr "ஹருணா"
 
 #: src/qml/main.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgctxt "@title:window"
 msgid "Select file"
-msgstr ""
+msgstr "அடுத்த கோப்பை இயக்கு"
 
 #: src/qml/main.qml:227
 #, kde-format
+msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr ""
 
 #: src/qml/main.qml:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> கண்டுபிடிக்கப்படவில்லை."
 
 #: src/qml/main.qml:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open"
+msgctxt "@action:button"
 msgid "Open"
 msgstr "திற"
 
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Audio"
+msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&ஒலி"
 
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 #, kde-format
+msgctxt "@title:menu"
 msgid "&Primary Track"
 msgstr ""
 
 #: src/qml/Menus/ContextMenu.qml:19
 #, fuzzy, kde-format
 #| msgid "Playback"
+msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "இயக்குதல்"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&File"
+msgctxt "@title:menu"
 msgid "&File"
 msgstr "&கோப்பு"
 
+#: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@title:menu"
+msgid "Recent Files"
+msgstr "சமீப கோப்புகள்"
+
 #: src/qml/Menus/FileMenu.qml:38
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr ""
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Help"
+msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&உதவி"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Playback"
+msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "&இயக்குதல்"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
 #, kde-format
+msgctxt "@title:menu"
 msgid "Seek"
 msgstr ""
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Settings"
+msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "&அமைப்புகள்"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
 #, kde-format
+msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr ""
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:19
 #, kde-format
+msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr ""
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:39
 #, kde-format
+msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr ""
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Video"
+msgctxt "@title:menu"
 msgid "&Video"
 msgstr "&நிகழ்படம்"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
 #, kde-format
+msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr ""
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&View"
+msgctxt "@title:menu"
 msgid "&View"
 msgstr "&பார்வை"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Menubar"
+msgctxt "@action:inmenu"
 msgid "Hide Menubar"
 msgstr "பட்டிப் பட்டையை மறை"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Menubar"
+msgctxt "@action:inmenu"
 msgid "Show Menubar"
 msgstr "பட்டிப் பட்டையை காட்டு"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Toolbar"
+msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
 msgstr "கருவிப்பட்டையை மறை"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Toolbar"
+msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "கருவிப்பட்டையை காட்டு"
 
 #: src/qml/MpvVideo.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Skipped chapter: %1"
+msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "பகுதி தவிர்க்கப்பட்டது: %1"
 
 #: src/qml/MpvVideo.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Could not play: %1"
+msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "இதனை இயக்க முடியவில்லை: %1"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred language"
+msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "முதன்மையான மொழி"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
 #, kde-format
+msgctxt "placeholder text"
 msgid "eng,ger etc."
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do not use spaces."
+msgctxt "@info:tooltip"
 msgid "Do not use spaces."
 msgstr "இடைவெளிகளை பயன்படுத்தாதீர்கள்."
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred language"
+msgctxt "@label:spinbox"
 msgid "Preferred track"
-msgstr ""
+msgstr "முதன்மையான மொழி"
 
 #: src/qml/Settings/AudioSettings.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Volume Up"
+msgctxt "@label:spinbox"
 msgid "Volume step"
-msgstr ""
+msgstr "ஒலி அளவை கூட்டு"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom commands"
+msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr ""
+msgstr "தனிப்பட்ட கட்டளைகள்"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Command"
+msgctxt "@action:button"
 msgid "&Add command"
-msgstr ""
+msgstr "கட்டளை"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:69
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:155
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&சேர்"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Command"
+msgctxt "@label:textbox"
 msgid "Command"
 msgstr "கட்டளை"
 
 #: src/qml/Settings/EditCustomCommand.qml:50
 #, kde-format
+msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "OSD Message"
+msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "திரையில் காட்டப்படும் தகவல்"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
 #, kde-format
+msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@label"
 msgid "Type"
 msgstr "வகை"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keyboard shortcut"
+msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "விசைப்பலகை சுருக்குவழி"
 
 #: src/qml/Settings/EditCustomCommand.qml:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Run at startup"
+msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "துவங்கும்போது இயக்கு"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete"
+msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "நீக்கு"
 
 #: src/qml/Settings/EditCustomCommand.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Save"
+msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&சேமி"
 
 #: src/qml/Settings/GeneralSettings.qml:30
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:56
 #, kde-format
+msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:71
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:76
 #, fuzzy, kde-format
 #| msgid "Open File"
+msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "கோப்பை திற"
 
 #: src/qml/Settings/GeneralSettings.qml:93
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:100
 #, fuzzy, kde-format
 #| msgid "Remember time position"
+msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "இருப்பிடத்தை நினைவில் கொள்"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 #, kde-format
+msgctxt "@title"
 msgid "Interface"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:117
 #, fuzzy, kde-format
 #| msgid "Show Menubar"
+msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "பட்டிப் பட்டையை காட்டு"
 
 #: src/qml/Settings/GeneralSettings.qml:128
 #, fuzzy, kde-format
 #| msgid "Show Toolbar"
+msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "கருவிப்பட்டையை காட்டு"
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Menubar"
+msgctxt "@option:check"
 msgid "Show chapter markers"
-msgstr ""
+msgstr "பட்டிப் பட்டையை காட்டு"
 
 #: src/qml/Settings/GeneralSettings.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color scheme"
+msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "நிறத்திட்டம்"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 #, fuzzy, kde-format
 #| msgid "GUI Style"
+msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "இடைமுகப்பின் பாங்கு"
 
 #: src/qml/Settings/GeneralSettings.qml:239
 #, kde-format
+msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:249
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
@@ -986,16 +1311,19 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:29
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:47
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:73
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
 "bar"
@@ -1003,22 +1331,26 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:84
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 #, fuzzy, kde-format
 #| msgid "Open last played file"
+msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "கடைசியாக இயக்கிய கோப்பை திற"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
 #, kde-format
+msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:126
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
@@ -1027,22 +1359,26 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:135
 #, fuzzy, kde-format
 #| msgid "Startup"
+msgctxt "@option:check"
 msgid "Start playing"
 msgstr "துவக்கம்"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:153
 #, kde-format
+msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:161
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
@@ -1050,117 +1386,152 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:166
 #, kde-format
+msgctxt "@label"
 msgid "Hardware decoding"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:298
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:300
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr "இயக்கப்பட்டது"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:252
-#: src/qml/Settings/PlaybackSettings.qml:298
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:300
+#, fuzzy, kde-format
+#| msgid "Disabled"
+msgctxt "@option:check"
 msgid "Disabled"
 msgstr "முடக்கப்பட்டது"
 
 #: src/qml/Settings/PlaybackSettings.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remember time position"
+msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "இருப்பிடத்தை நினைவில் கொள்"
 
+#: src/qml/Settings/PlaybackSettings.qml:252
+#, fuzzy, kde-format
+#| msgid "Disabled"
+msgctxt "@info"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
+
 #: src/qml/Settings/PlaybackSettings.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "For all files"
+msgctxt "@info"
 msgid "For all files"
 msgstr "அனைத்து கோப்புகளுக்கும்"
 
-#: src/qml/Settings/PlaybackSettings.qml:256
+#: src/qml/Settings/PlaybackSettings.qml:257
 #, fuzzy, kde-format
 #| msgid "For files longer than %1 minute"
+msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "%1 நிமிடங்களைவிட நீளமான கோப்பு"
 msgstr[1] "%1 நிமிடங்களைவிட நீளமான கோப்பு"
 
-#: src/qml/Settings/PlaybackSettings.qml:283
+#: src/qml/Settings/PlaybackSettings.qml:285
 #, kde-format
+msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/Settings/PlaybackSettings.qml:292
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:294
+#, fuzzy, kde-format
+#| msgid "Skip chapters"
+msgctxt "@label"
 msgid "Skip chapters"
 msgstr "பகுதிகளை தவிர்"
 
-#: src/qml/Settings/PlaybackSettings.qml:309
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:311
+#, fuzzy, kde-format
+#| msgid "Show osd message on skip"
+msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "தவிர்க்கும்போது திரையில் தகவல் காட்டு"
 
-#: src/qml/Settings/PlaybackSettings.qml:319
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:321
+#, fuzzy, kde-format
+#| msgid "Skip words"
+msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "சொற்களை தவிர்"
 
-#: src/qml/Settings/PlaybackSettings.qml:326
+#: src/qml/Settings/PlaybackSettings.qml:328
 #, fuzzy, kde-format
 #| msgid "Skipped chapter: %1"
+msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "பகுதி தவிர்க்கப்பட்டது: %1"
 
-#: src/qml/Settings/PlaybackSettings.qml:335
-#, kde-format
+#: src/qml/Settings/PlaybackSettings.qml:337
+#, fuzzy, kde-format
+#| msgid "Skip chapters containing these words. Comma separated list."
+msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "இச்சொற்களை கொண்ட பகுதிகளை தவிர். காற்புள்ளிகளால் பிரிக்கப்பட்ட பட்டியல்."
 
-#: src/qml/Settings/PlaybackSettings.qml:344
+#: src/qml/Settings/PlaybackSettings.qml:346
 #, kde-format
+msgctxt "@title"
 msgid "Youtube-dl"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:350
+#: src/qml/Settings/PlaybackSettings.qml:352
 #, kde-format
 msgid "Format selection"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:369
+#: src/qml/Settings/PlaybackSettings.qml:371
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:419
+#: src/qml/Settings/PlaybackSettings.qml:421
 #, kde-format
+msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:27
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Position"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Row height"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:69
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playing video."
+msgctxt "@option:check"
 msgid "Overlay video"
-msgstr ""
+msgstr "நிகழ்படம் இயக்கப்படுகிறது."
 
 #: src/qml/Settings/PlaylistSettings.qml:104
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
@@ -1168,108 +1539,156 @@ msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:111
 #, kde-format
+msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 #, kde-format
+msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:131
 #, kde-format
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Menubar"
+msgctxt "@option:check"
 msgid "Show row number"
-msgstr ""
+msgstr "பட்டிப் பட்டையை காட்டு"
 
 #: src/qml/Settings/PlaylistSettings.qml:151
 #, kde-format
+msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:160
 #, kde-format
+msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:35
 #, fuzzy, kde-format
 #| msgid "&Settings"
+msgctxt "@title:window"
 msgid "Settings"
 msgstr "&அமைப்புகள்"
 
 #: src/qml/Settings/SettingsWindow.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@action"
 msgid "General"
 msgstr "பொதுவானவை"
 
 #: src/qml/Settings/SettingsWindow.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Playback"
+msgctxt "@action"
 msgid "Playback"
 msgstr "இயக்குதல்"
 
 #: src/qml/Settings/SettingsWindow.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Video"
+msgctxt "@action"
 msgid "Video"
 msgstr "நிகழ்படம்"
 
-#: src/qml/Settings/SettingsWindow.qml:101
+#: src/qml/Settings/SettingsWindow.qml:77
+#, fuzzy, kde-format
+#| msgid "Audio"
+msgctxt "@action"
+msgid "Audio"
+msgstr "ஒலி"
+
+#: src/qml/Settings/SettingsWindow.qml:85
 #, kde-format
+msgctxt "@action"
+msgid "Subtitles"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:101
+#, fuzzy, kde-format
+#| msgid "Mouse"
+msgctxt "@action"
 msgid "Mouse"
 msgstr "சுட்டி"
 
 #: src/qml/Settings/SettingsWindow.qml:109
 #, fuzzy, kde-format
 #| msgid "Shortcut"
+msgctxt "@action"
 msgid "Shortcuts"
 msgstr "சுருக்குவழி"
 
 #: src/qml/Settings/SettingsWindow.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom commands"
+msgctxt "@action"
 msgid "Custom commands"
 msgstr "தனிப்பட்ட கட்டளைகள்"
 
 #: src/qml/Settings/SettingsWindow.qml:125
 #, kde-format
+msgctxt "@action"
 msgid "About"
 msgstr ""
 
+#: src/qml/Settings/SettingsWindow.qml:163
+#, fuzzy, kde-format
+#| msgid "Help"
+msgctxt "@title:window"
+msgid "Help"
+msgstr "உதவி"
+
 #: src/qml/Settings/SubtitlesSettings.qml:75
 #, kde-format
+msgctxt "@title"
 msgid "Styling"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Font family"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "GUI Style"
+msgctxt "@label"
 msgid "Font style"
-msgstr ""
+msgstr "இடைமுகப்பின் பாங்கு"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
 #, kde-format
+msgctxt "@option:check"
 msgid "Bold"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
 #, kde-format
+msgctxt "@option:check"
 msgid "Italic"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Font color"
 msgstr ""
 
@@ -1277,84 +1696,98 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:227
 #: src/qml/Settings/SubtitlesSettings.qml:287
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Border color"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Screenshots"
+msgctxt "@title"
 msgid "Screenshots"
 msgstr "திரைப்பிடிப்புகள்"
 
 #: src/qml/Settings/VideoSettings.qml:38
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Format"
 msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:74
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Template"
 msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:90
 #, kde-format
+msgctxt "@title"
 msgid "Image adjustments"
 msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contrast Up"
+msgctxt "@label:slider"
 msgid "Contrast"
-msgstr ""
+msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/qml/Settings/VideoSettings.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brightness Up"
+msgctxt "@label:slider"
 msgid "Brightness"
-msgstr ""
+msgstr "பிரகாசத்தை கூட்டு"
 
 #: src/qml/Settings/VideoSettings.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gamma Up"
+msgctxt "@label:slider"
 msgid "Gamma"
-msgstr ""
+msgstr "காமாவை கூட்டு"
 
 #: src/qml/Settings/VideoSettings.qml:151
 #, kde-format
+msgctxt "@label:slider"
 msgid "Saturation"
 msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:165
 #, kde-format
+msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Toggle Fullscreen"
-#~ msgid "Toggle Playlist"
-#~ msgstr "முழுத்திரை பயன்முறையை நிலைமாற்று"
 
 #~ msgid "Configure shortcuts"
 #~ msgstr "சுருக்குவழிகளை அமை"
@@ -1372,11 +1805,6 @@ msgstr ""
 
 #~ msgid "For files longer than %1 minutes"
 #~ msgstr "%1 நிமிடங்களைவிட நீளமான கோப்புகள்"
-
-#, fuzzy
-#~| msgid "Show Menubar"
-#~ msgid "Show header"
-#~ msgstr "பட்டிப் பட்டையை காட்டு"
 
 #, fuzzy
 #~| msgid "Volume Up"
