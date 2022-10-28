@@ -36,7 +36,7 @@ Menu {
         MenuSeparator {}
         MenuItem {
             text: i18nc("@action:inmenu", "Clear List")
-            onClicked: recentFilesModel.clear()
+            onClicked: recentFilesModel.deleteEntries()
         }
     }
 

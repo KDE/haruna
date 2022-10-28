@@ -75,7 +75,8 @@ void RecentFilesModel::populate()
         RecentFile recentFile;
         recentFile.url = url;
         recentFile.name = name;
-        beginInsertRows(QModelIndex(), 0, 0);
+
+        beginInsertRows(QModelIndex(), i, i);
         m_urls.append(recentFile);
         endInsertRows();
     }
@@ -102,6 +103,11 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     recentFile.url = url;
     recentFile.name = _name;
 
+    if (m_urls.count() == maxRecentFiles()) {
+        beginRemoveRows(QModelIndex(), m_urls.count() - 1, m_urls.count() - 1);
+        m_urls.removeLast();
+        endRemoveRows();
+    }
     beginInsertRows(QModelIndex(), 0, 0);
     m_urls.prepend(recentFile);
     endInsertRows();
@@ -114,6 +120,13 @@ void RecentFilesModel::clear()
     beginResetModel();
     m_urls.clear();
     endResetModel();
+}
+
+void RecentFilesModel::deleteEntries()
+{
+    clear();
+    m_recentFilesConfigGroup.deleteGroup();
+    m_recentFilesConfigGroup.sync();
 }
 
 void RecentFilesModel::saveEntries()

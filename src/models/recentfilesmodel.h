@@ -34,6 +34,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     Q_INVOKABLE void addUrl(const QString &path, const QString &name = QString());
     Q_INVOKABLE void clear();
+    Q_INVOKABLE void deleteEntries();
     Q_INVOKABLE void populate();
 
     int maxRecentFiles() const;
