@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-28 00:44+0000\n"
-"PO-Revision-Date: 2022-10-12 14:22+0300\n"
+"PO-Revision-Date: 2022-10-28 13:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,43 +28,37 @@ msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
 #: src/application.cpp:150
-#, fuzzy, kde-format
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "Haruna Video Oynatıcı"
 
 #: src/application.cpp:152
-#, fuzzy, kde-format
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable video player."
 msgstr "Yapılandırılabilir bir video oynatıcı."
 
 #: src/application.cpp:154
-#, fuzzy, kde-format
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
 #: src/application.cpp:160
-#, fuzzy, kde-format
-#| msgid "George Florea Bănuș"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
 #: src/application.cpp:161
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Geliştirici"
 
 #: src/application.cpp:172
-#, fuzzy, kde-format
-#| msgid "File to open"
+#, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Açılacak dosya"
@@ -76,524 +70,449 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"ytdl biçim seçim ayarını geçici olarak geçersiz kılmaya izin verir. Ayar, "
+"kullanıcı arayüzü üzerinden değiştirilmişse üzerine yazılacaktır."
 
 #: src/application.cpp:178
-#, fuzzy, kde-format
-#| msgid "bestvideo+bestaudio/best"
+#, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "en iyi video + en iyi ses / en iyi"
 
 #: src/lockmanager.cpp:34
-#, fuzzy, kde-format
-#| msgid "Playing video."
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing video"
-msgstr "Video oynatılıyor."
+msgstr "Video oynatılıyor"
 
 #: src/models/actionsmodel.cpp:23
-#, fuzzy, kde-format
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "Haruna Hakkında"
 
 #: src/models/actionsmodel.cpp:30
-#, fuzzy, kde-format
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "Ses Yukarı Çevir"
 
 #: src/models/actionsmodel.cpp:37
-#, fuzzy, kde-format
-#| msgid "Audio Cycle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "Ses Aşağı Çevir"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "Yapılandır"
 
 #: src/models/actionsmodel.cpp:51
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Klavye Kısayollarını Yapılandır"
 
 #: src/models/actionsmodel.cpp:58
-#, fuzzy, kde-format
-#| msgid "Exit Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Tam Ekrandan Çık"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "Kare İleri Git"
 
 #: src/models/actionsmodel.cpp:73
-#, fuzzy, kde-format
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "Kare Geri Git"
 
 #: src/models/actionsmodel.cpp:81
-#, fuzzy, kde-format
-#| msgid "Load Last Played File"
+#, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "Son Oynatılan Dosyayı Yükle"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Sessize Al"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgid "Open Context Menu"
+#, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "Bağlam Menüsünü Aç"
 
 #: src/models/actionsmodel.cpp:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Opens and closes the context menu at the position of the mouse pointer"
+#, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "Bağlam menüsünü fare imleci konumunda açar ve kapatır"
 
 #: src/models/actionsmodel.cpp:103
-#, fuzzy, kde-format
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Dosya Aç"
 
 #: src/models/actionsmodel.cpp:110
-#, fuzzy, kde-format
-#| msgid "Add external subtitle…"
+#, kde-format
 msgctxt "@action"
 msgid "Add external subtitle…"
-msgstr "Dış altyazı ekle…"
+msgstr "Dış Altyazı Ekle…"
 
 #: src/models/actionsmodel.cpp:117
-#, fuzzy, kde-format
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "URL Aç"
 
 #: src/models/actionsmodel.cpp:124
-#, fuzzy, kde-format
-#| msgid "Playback speed increase"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed increase"
-msgstr "Oynatma hızı artır"
+msgstr "Oynatma Hızını Artır"
 
 #: src/models/actionsmodel.cpp:131
-#, fuzzy, kde-format
-#| msgid "Playback speed decrease"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed decrease"
-msgstr "Oynatma hızı azalt"
+msgstr "Oynatma Hızını Azalt"
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgid "Playback speed reset"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed reset"
-msgstr "Oynatma hızı sıfırla"
+msgstr "Oynatma Hızını Sıfırla"
 
 #: src/models/actionsmodel.cpp:145
-#, fuzzy, kde-format
-#| msgid "Play/Pause"
+#, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "Oynat/Duraklat"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "Sonrakini Oynat"
 
 #: src/models/actionsmodel.cpp:159
-#, fuzzy, kde-format
-#| msgid "Play Previous"
+#, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Öncekini Oynat"
 
 #: src/models/actionsmodel.cpp:166
-#, fuzzy, kde-format
-#| msgid "Quit"
+#, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Çık"
 
 #: src/models/actionsmodel.cpp:173
-#, fuzzy, kde-format
-#| msgid "Restart Playback"
+#, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
-msgstr "Oynatma Listesini Yeniden Başlat"
+msgstr "Oynatmayı Yeniden Başlat"
 
 #: src/models/actionsmodel.cpp:180
-#, fuzzy, kde-format
-#| msgid "Seek Small Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "İleri Kısa Adım At"
 
 #: src/models/actionsmodel.cpp:187
-#, fuzzy, kde-format
-#| msgid "Seek Small Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Geri Kısa Adım At"
 
 #: src/models/actionsmodel.cpp:194
-#, fuzzy, kde-format
-#| msgid "Seek Medium Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "İleri Orta Adım At"
 
 #: src/models/actionsmodel.cpp:201
-#, fuzzy, kde-format
-#| msgid "Seek Medium Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Geri Orta Adım At"
 
 #: src/models/actionsmodel.cpp:208
-#, fuzzy, kde-format
-#| msgid "Seek Big Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "İleri Uzun Adım At"
 
 #: src/models/actionsmodel.cpp:215
-#, fuzzy, kde-format
-#| msgid "Seek Big Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Geri Uzun Adım At"
 
 #: src/models/actionsmodel.cpp:222
-#, fuzzy, kde-format
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
-msgstr "Sonraki Bölüme Git"
+msgstr "Sonraki Fasıla Git"
 
 #: src/models/actionsmodel.cpp:229
-#, fuzzy, kde-format
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
-msgstr "Önceki Bölüme Git"
+msgstr "Önceki Fasıla Git"
 
 #: src/models/actionsmodel.cpp:236
-#, fuzzy, kde-format
-#| msgid "Seek To Next Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Sonraki Altyazıya Git"
 
 #: src/models/actionsmodel.cpp:243
-#, fuzzy, kde-format
-#| msgid "Seek To Previous Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Önceki Altyazıya Git"
 
 #: src/models/actionsmodel.cpp:250
-#, fuzzy, kde-format
-#| msgid "Seek To Watch Later Position"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Sonra İzlenecek Konuma Git"
 
 #: src/models/actionsmodel.cpp:257
-#, fuzzy, kde-format
-#| msgid "Set Loop"
+#, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Döngü Ayarla"
 
 #: src/models/actionsmodel.cpp:264
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Ekran Görüntüsü"
 
 #: src/models/actionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgid "Subtitle Toggle"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "Altyazı Aç/Kapat"
 
 #: src/models/actionsmodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "Altyazı Yazıtipi Boyutunu Artır"
 
 #: src/models/actionsmodel.cpp:285
-#, fuzzy, kde-format
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "Altyazı Yazıtipi Boyutunu Azalt"
 
 #: src/models/actionsmodel.cpp:292
-#, fuzzy, kde-format
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "Altyazı Yukarı Taşı"
 
 #: src/models/actionsmodel.cpp:299
-#, fuzzy, kde-format
-#| msgid "Subtitle Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "Altyazı Aşağı Taşı"
 
 #: src/models/actionsmodel.cpp:306
-#, fuzzy, kde-format
-#| msgid "Subtitle Quicken"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "Altyazı Hızlandır"
 
 #: src/models/actionsmodel.cpp:313
-#, fuzzy, kde-format
-#| msgid "Subtitle Delay"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "Altyazı Geciktir"
 
 #: src/models/actionsmodel.cpp:320
-#, fuzzy, kde-format
-#| msgid "Subtitle Cycle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "Altyazı Yukarı Çevir"
 
 #: src/models/actionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgid "Subtitle Cycle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "Altyazı Aşağı Çevir"
 
 #: src/models/actionsmodel.cpp:334
-#, fuzzy, kde-format
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Görüntü Ayrıştırmayı Aç/Kapat"
 
 #: src/models/actionsmodel.cpp:341
-#, fuzzy, kde-format
-#| msgid "Toggle Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Tam Ekran Aç/Kapat"
 
 #: src/models/actionsmodel.cpp:348
-#, fuzzy, kde-format
-#| msgid "Toggle Menu Bar"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Menü Çubuğunu Aç/Kapat"
 
 #: src/models/actionsmodel.cpp:355
-#, fuzzy, kde-format
-#| msgid "Toggle Header"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Üstbilgiyi Aç/Kapat"
 
 #: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Oynatma Listesi"
 
 #: src/models/actionsmodel.cpp:369
-#, fuzzy, kde-format
-#| msgid "Video pan x left"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan x left"
-msgstr "Videoyu x ekseninde sola kaydır"
+msgstr "Videoyu X Ekseninde Sola Kaydır"
 
 #: src/models/actionsmodel.cpp:376
-#, fuzzy, kde-format
-#| msgid "Video pan x right"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan x right"
-msgstr "Videoyu x ekseninde sağa kaydır"
+msgstr "Videoyu X Ekseninde Sağa Kaydır"
 
 #: src/models/actionsmodel.cpp:383
-#, fuzzy, kde-format
-#| msgid "Video pan y up"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan y up"
-msgstr "Videeoyu y ekseninde yukarı kaydır"
+msgstr "Videoyu Y Ekseninde Yukarı Kaydır"
 
 #: src/models/actionsmodel.cpp:390
-#, fuzzy, kde-format
-#| msgid "Video pan y down"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan y down"
-msgstr "Videoyu y ekseninde aşağı kaydır"
+msgstr "Videoyu Y Ekseninde Aşağı Kaydır"
 
 #: src/models/actionsmodel.cpp:397
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Sesi Aç"
 
 #: src/models/actionsmodel.cpp:404
-#, fuzzy, kde-format
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Sesi Kıs"
 
 #: src/models/actionsmodel.cpp:411
-#, fuzzy, kde-format
-#| msgid "Zoom In"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Yakınlaştır"
 
 #: src/models/actionsmodel.cpp:418
-#, fuzzy, kde-format
-#| msgid "Zoom Out"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Uzaklaştır"
 
 #: src/models/actionsmodel.cpp:425
-#, fuzzy, kde-format
-#| msgid "Zoom Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "Yakınlaştırmayı Sıfırla"
 
 #: src/models/actionsmodel.cpp:433
-#, fuzzy, kde-format
-#| msgid "Contrast Up"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "Karşıtlığı Yükselt"
 
 #: src/models/actionsmodel.cpp:440
-#, fuzzy, kde-format
-#| msgid "Contrast Down"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "Karşıtlığı Düşür"
 
 #: src/models/actionsmodel.cpp:447
-#, fuzzy, kde-format
-#| msgid "Contrast Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "Karşıtlığı Sıfırla"
 
 #: src/models/actionsmodel.cpp:454
-#, fuzzy, kde-format
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "Parlaklığı Yükselt"
 
 #: src/models/actionsmodel.cpp:461
-#, fuzzy, kde-format
-#| msgid "Brightness Down"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "Parlaklığı Düşür"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgid "Brightness Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "Parlaklığı Sıfırla"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgid "Gamma Up"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "Gama Yükselt"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgid "Gamma Down"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "Gama Düşür"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgid "Gamma Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "Gama Sıfırla"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "Doygunluğu Yükselt"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgid "Saturation Down"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "Doygunluğu Düşür"
 
 #: src/models/actionsmodel.cpp:510
-#, fuzzy, kde-format
-#| msgid "Saturation Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "Doygunluğu Sıfırla"
 
 #: src/models/actionsmodel.cpp:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
-#| "<br><br>Do you want to reassign the shortcut?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
@@ -603,711 +522,611 @@ msgstr ""
 "yeniden atamak istiyor musunuz?"
 
 #: src/models/actionsmodel.cpp:657
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Yeniden Ata"
 
 #: src/mpv/mpvitem.cpp:631
-#, fuzzy, kde-format
-#| msgid "Playlist is empty"
+#, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Oynatma listesi boş"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
-#, fuzzy, kde-format
-#| msgid "Audio: %1 %2"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Ses: %1 %2"
 
 #: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
-#, fuzzy, kde-format
-#| msgid "Playback speed: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Oynatma hızı: %1"
 
 #: src/qml/Actions.qml:236
-#, fuzzy, kde-format
-#| msgid "Loop start: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Döngü başlangıcı: %1"
 
 #: src/qml/Actions.qml:240
-#, fuzzy, kde-format
-#| msgid "Loop: %1 - %2"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Döngü: %1 - %2"
 
 #: src/qml/Actions.qml:246
-#, fuzzy, kde-format
-#| msgid "Loop cleared"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Döngü temizlendi"
 
 #: src/qml/Actions.qml:254 src/qml/Actions.qml:259
-#, fuzzy, kde-format
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Altyazı zamanlaması: %1"
 
 #: src/qml/Actions.qml:264
-#, fuzzy, kde-format
-#| msgid "Subtitles off"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Altyazılar kapalı"
 
 #: src/qml/Actions.qml:264
-#, fuzzy, kde-format
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Altyazılar açık"
 
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:285
-#, fuzzy, kde-format
-#| msgid "Subtitle: None"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Altyazı: Yok"
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:289
-#, fuzzy, kde-format
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Altyazı: %1 %2"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:300
-#, fuzzy, kde-format
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Altyazı ölçeği: %1"
 
 #: src/qml/Actions.qml:309
-#, fuzzy, kde-format
-#| msgid "Deinterlace: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Görüntü ayrıştırma: %1"
 
 #: src/qml/Actions.qml:354 src/qml/Actions.qml:359
-#, fuzzy, kde-format
-#| msgid "Volume: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Ses düzeyi: %1"
 
 #: src/qml/Actions.qml:365 src/qml/Actions.qml:371
-#, fuzzy, kde-format
-#| msgid "Zoom: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Yakınlaştırma: %1"
 
 #: src/qml/Actions.qml:376
-#, fuzzy, kde-format
-#| msgid "Zoom: 0"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Yakınlaştırma: 0"
 
 #: src/qml/Actions.qml:383 src/qml/Actions.qml:389
-#, fuzzy, kde-format
-#| msgid "Contrast: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Karşıtlık: %1"
 
 #: src/qml/Actions.qml:394
-#, fuzzy, kde-format
-#| msgid "Contrast: 0"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Karşıtlık: 0"
 
 #: src/qml/Actions.qml:400 src/qml/Actions.qml:406
-#, fuzzy, kde-format
-#| msgid "Brightness: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Parlaklık: %1"
 
 #: src/qml/Actions.qml:411
-#, fuzzy, kde-format
-#| msgid "Brightness: 0"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Parlaklık: 0"
 
 #: src/qml/Actions.qml:417 src/qml/Actions.qml:423
-#, fuzzy, kde-format
-#| msgid "Gamma: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
 #: src/qml/Actions.qml:428
-#, fuzzy, kde-format
-#| msgid "Gamma: 0"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
 #: src/qml/Actions.qml:434 src/qml/Actions.qml:440
-#, fuzzy, kde-format
-#| msgid "Saturation: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Doygunluk: %1"
 
 #: src/qml/Actions.qml:445
-#, fuzzy, kde-format
-#| msgid "Saturation: 0"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Doygunluk: 0"
 
 #: src/qml/Footer.qml:67
-#, fuzzy, kde-format
-#| msgid "Start Playback"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Oynatmayı Başlat"
 
 #: src/qml/Footer.qml:67
-#, fuzzy, kde-format
-#| msgid "Pause Playback"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Oynatmayı Duraklat"
 
 #: src/qml/Footer.qml:80
-#, fuzzy, kde-format
-#| msgid "Play previous file"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Önceki dosyayı oynat"
 
 #: src/qml/Footer.qml:93
-#, fuzzy, kde-format
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Sonraki dosyayı oynat"
 
 #: src/qml/Footer.qml:107
-#, fuzzy, kde-format
-#| msgid "Remaining: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Kalan: %1"
 
 #: src/qml/HamburgerMenu.qml:51
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Son Kullanılan Dosyalar"
 
 #: src/qml/HamburgerMenu.qml:80
-#, fuzzy, kde-format
-#| msgid "&More"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Daha Fazla"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
-#, fuzzy, kde-format
-#| msgid "Select a color"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Bir renk seç"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
-#, fuzzy, kde-format
-#| msgid "Double click to set action"
+#, kde-format
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Eylem ayarlamak için çift tıklayın"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:65
-#, fuzzy, kde-format
-#| msgid "Clear current action"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear current action"
 msgstr "Geçerli eylemi temizle"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#, fuzzy, kde-format
-#| msgid "Help"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "Yardım"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
-#, fuzzy, kde-format
-#| msgid "Haruna help window (english only)"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
 msgstr "Haruna yardım penceresi (yalnızca İngilizce)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
-#, fuzzy, kde-format
-#| msgid "Haruna handbook"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Haruna el kitabı"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:39
-#, fuzzy, kde-format
-#| msgid "Open config ..."
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Open config ..."
 msgstr "Yapılandırmayı aç..."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "File"
 msgstr "Dosya"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Folder"
 msgstr "Klasör"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:27
-#, fuzzy, kde-format
-#| msgid "Load subtitles from"
+#, kde-format
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Altyazı yükleme konumu"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:102
-#, fuzzy, kde-format
-#| msgid "Confirm deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Silmeyi onayla"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
-#, fuzzy, kde-format
-#| msgid "Delete this folder from list"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Bu klasörü listeden sil"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:134
-#, fuzzy, kde-format
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Değişiklikleri kaydet"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:156
-#, fuzzy, kde-format
-#| msgid "Add new folder"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Yeni klasör aç"
 
 #: src/qml/Header.qml:73
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Altyazılar"
 
 #: src/qml/Header.qml:106
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Ses"
 
 #: src/qml/HProgressBar.qml:182
-#, fuzzy, kde-format
-#| msgid "Skip Chapters"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
-msgstr "Bölümleri Atla"
+msgstr "Fasılları Atla"
 
 #: src/qml/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Haruna"
+#, kde-format
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya seç"
 
 #: src/qml/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Altyazı dosyası seç"
 
 #: src/qml/main.qml:253
-#, fuzzy, kde-format
-#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+#, kde-format
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> bulunamadı."
 
 #: src/qml/main.qml:280
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aç"
 
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
-#, fuzzy, kde-format
-#| msgid "&Audio"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&Ses"
 
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
-#, fuzzy, kde-format
-#| msgid "&Primary Track"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Primary Track"
 msgstr "&Birincil Parça"
 
 #: src/qml/Menus/ContextMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "Oynatma hızı"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, fuzzy, kde-format
-#| msgid "&File"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&Dosya"
 
 #: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Son Kullanılan Dosyalar"
 
 #: src/qml/Menus/FileMenu.qml:38
-#, fuzzy, kde-format
-#| msgid "Clear List"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Listeyi Temizle"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Help"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&Yardım"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Playback"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "&Oynatma"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
-#, fuzzy, kde-format
-#| msgid "Seek"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Git"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "&Ayarlar"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
-#, fuzzy, kde-format
-#| msgid "&Subtitles"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "A&ltyazılar"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Primary Subtitle"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Birincil Altyazı"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "İkincil Altyazı"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Video"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "&Video"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
-#, fuzzy, kde-format
-#| msgid "Adjustments"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "İnce Ayarlar"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&View"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "&Görünüm"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Hide Menubar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
 msgstr "Menü Çubuğunu Gizle"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Show Menubar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
 msgstr "Menü Çubuğunu Göster"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy, kde-format
-#| msgid "Hide Toolbar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
 msgstr "Araç Çubuğunu Gizle"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy, kde-format
-#| msgid "Show Toolbar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Araç Çubuğunu Göster"
 
 #: src/qml/MpvVideo.qml:131
-#, fuzzy, kde-format
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
-msgstr "Atlanan bölüm: %1"
+msgstr "Atlanan fasıl: %1"
 
 #: src/qml/MpvVideo.qml:148
-#, fuzzy, kde-format
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Oynatılamadı: %1"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
-#, fuzzy, kde-format
-#| msgid "Preferred language"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Yeğlenen dil"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
-#, fuzzy, kde-format
-#| msgid "eng,ger etc."
+#, kde-format
 msgctxt "placeholder text"
 msgid "eng,ger etc."
 msgstr "ing., alm., vb."
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
-#, fuzzy, kde-format
-#| msgid "Do not use spaces."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
 msgstr "Boşluklar kullanma."
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
-#, fuzzy, kde-format
-#| msgid "Preferred track"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Yeğlenen parça"
 
 #: src/qml/Settings/AudioSettings.qml:69
-#, fuzzy, kde-format
-#| msgid "Volume step"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Ses düzeyi çentiği"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
-#, fuzzy, kde-format
-#| msgid "No custom commands yet"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Henüz özel komut yok"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
-#, fuzzy, kde-format
-#| msgid "&Add command"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "&Komut ekle"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:69
-#, fuzzy, kde-format
-#| msgid "Don't set on next startup"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "Bir sonraki başlangıçta ayarlama"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:155
-#, fuzzy, kde-format
-#| msgid "&Add"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Ekle"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Komut"
 
 #: src/qml/Settings/EditCustomCommand.qml:50
-#, fuzzy, kde-format
-#| msgid "add volume +10"
+#, kde-format
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "+10 ses aç"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
-#, fuzzy, kde-format
-#| msgid "OSD Message"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "Ekran Üzeri İleti"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
-#, fuzzy, kde-format
-#| msgid "Filename: ${filename}"
+#, kde-format
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "Dosya adı: ${dosyaadı}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@label"
 msgid "Type"
 msgstr "Tür"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
-#, fuzzy, kde-format
-#| msgid "Keyboard shortcut"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "Klavye kısayolu"
 
 #: src/qml/Settings/EditCustomCommand.qml:98
-#, fuzzy, kde-format
-#| msgid "Run at startup"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "Başlangıçta çalıştır"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
-#, fuzzy, kde-format
-#| msgid "Delete"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "Sil"
 
 #: src/qml/Settings/EditCustomCommand.qml:123
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "İptal"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, fuzzy, kde-format
-#| msgid "&Save"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&Kaydet"
 
 #: src/qml/Settings/GeneralSettings.qml:30
-#, fuzzy, kde-format
-#| msgid "Osd font size"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "Ekran üzeri iletisi yazıtipi büyüklüğü"
 
 #: src/qml/Settings/GeneralSettings.qml:56
-#, fuzzy, kde-format
-#| msgid "File dialog location"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "Dosya penceresi konumu"
 
 #: src/qml/Settings/GeneralSettings.qml:71
-#, fuzzy, kde-format
-#| msgid "If empty the file dialog will remember the last opened location."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr "Boşsa dosya penceresi son açılan konumu anımsayacaktır."
 
 #: src/qml/Settings/GeneralSettings.qml:76
-#, fuzzy, kde-format
-#| msgid "Maximum recent files"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "En çok son kullanılan dosya sayısı"
 
 #: src/qml/Settings/GeneralSettings.qml:93
-#, fuzzy, kde-format
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
@@ -1315,66 +1134,55 @@ msgstr ""
 "(sıfır) girin."
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy, kde-format
-#| msgid "Remember window size and position"
+#, kde-format
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Pencere boyutunu ve konumunu anımsa"
 
 #: src/qml/Settings/GeneralSettings.qml:109
-#, fuzzy, kde-format
-#| msgid "Interface"
+#, kde-format
 msgctxt "@title"
 msgid "Interface"
 msgstr "Arayüz"
 
 #: src/qml/Settings/GeneralSettings.qml:117
-#, fuzzy, kde-format
-#| msgid "Show menubar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Menü çubuğunu göster"
 
 #: src/qml/Settings/GeneralSettings.qml:128
-#, fuzzy, kde-format
-#| msgid "Show toolbar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Araç çubuğunu göster"
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, fuzzy, kde-format
-#| msgid "Show chapter markers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show chapter markers"
-msgstr "Bölüm imlerini göster"
+msgstr "Fasıl imlerini göster"
 
 #: src/qml/Settings/GeneralSettings.qml:148
-#, fuzzy, kde-format
-#| msgid "Color scheme"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Renk şeması"
 
 #: src/qml/Settings/GeneralSettings.qml:190
-#, fuzzy, kde-format
-#| msgid "GUI style"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Grafk arabirim biçemi"
 
 #: src/qml/Settings/GeneralSettings.qml:239
-#, fuzzy, kde-format
-#| msgid "Use Breeze icon theme"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Esinti simge temasını kullan"
 
 #: src/qml/Settings/GeneralSettings.qml:249
-#, fuzzy, kde-format
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1384,24 +1192,19 @@ msgstr ""
 "Yeniden başlatma gerektirir."
 
 #: src/qml/Settings/PlaybackSettings.qml:29
-#, fuzzy, kde-format
-#| msgid "Seek small step"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "Ufak adım at"
 
 #: src/qml/Settings/PlaybackSettings.qml:47
-#, fuzzy, kde-format
-#| msgid "Seek medium step"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "Orta adım at"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is also used for mouse wheel seeking, when mouse is over the "
-#| "progress bar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
@@ -1411,31 +1214,25 @@ msgstr ""
 "ilerlemek için de kullanılır"
 
 #: src/qml/Settings/PlaybackSettings.qml:84
-#, fuzzy, kde-format
-#| msgid "Seek big step"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "Büyük adım at"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
-#, fuzzy, kde-format
-#| msgid "Open last played file on startup"
+#, kde-format
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Başlangıçta son oynatılan dosyayı aç"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy, kde-format
-#| msgid "Seek to last playback position"
+#, kde-format
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "Son oynatma konumuna git"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1443,17 +1240,13 @@ msgid ""
 msgstr "Daha önce oynatılan bir dosya açılırken kaldığı konumdan başlat."
 
 #: src/qml/Settings/PlaybackSettings.qml:135
-#, fuzzy, kde-format
-#| msgid "Start playing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Start playing"
-msgstr "Oynatmaya başlat"
+msgstr "Oynatmayı başlat"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
-#, fuzzy, kde-format
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
@@ -1461,17 +1254,13 @@ msgstr ""
 "Daha önce oynatılan bir dosya açılırken onu kendiliğinden oynatmaya başlat."
 
 #: src/qml/Settings/PlaybackSettings.qml:153
-#, fuzzy, kde-format
-#| msgid "Pause on minimize"
+#, kde-format
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Simge durumuna küçültüldüğünde duraklat"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1481,53 +1270,45 @@ msgstr ""
 "açıldığında oynatma sürer."
 
 #: src/qml/Settings/PlaybackSettings.qml:166
-#, fuzzy, kde-format
-#| msgid "Hardware decoding"
+#, kde-format
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Donanım kod çözümü"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Etkin"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy, kde-format
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Devre dışı"
 
 #: src/qml/Settings/PlaybackSettings.qml:232
-#, fuzzy, kde-format
-#| msgid "Remember time position"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Zaman konumunu anımsa"
 
 #: src/qml/Settings/PlaybackSettings.qml:252
-#, fuzzy, kde-format
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Devre dışı"
 
 #: src/qml/Settings/PlaybackSettings.qml:254
-#, fuzzy, kde-format
-#| msgid "For all files"
+#, kde-format
 msgctxt "@info"
 msgid "For all files"
 msgstr "Tüm dosyalar için"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy, kde-format
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
+#, kde-format
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
@@ -1535,9 +1316,7 @@ msgstr[0] "%1 dakikadan daha uzun dosyalar için"
 msgstr[1] "%1 dakikadan daha uzun dosyalar için"
 
 #: src/qml/Settings/PlaybackSettings.qml:285
-#, fuzzy, kde-format
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
+#, kde-format
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1545,43 +1324,37 @@ msgstr[0] "Her %1 saniyede konumu kaydet"
 msgstr[1] "Her %1 saniyede konumu kaydet"
 
 #: src/qml/Settings/PlaybackSettings.qml:294
-#, fuzzy, kde-format
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@label"
 msgid "Skip chapters"
-msgstr "Bölümleri atla"
+msgstr "Fasılları atla"
 
 #: src/qml/Settings/PlaybackSettings.qml:311
-#, fuzzy, kde-format
-#| msgid "Show osd message on skip"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Atlamada ekran üzeri iletiyi göster"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
-#, fuzzy, kde-format
-#| msgid "Skip words"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Sözcükleri atla"
 
 #: src/qml/Settings/PlaybackSettings.qml:328
-#, fuzzy, kde-format
-#| msgid "op, ed, chapter 1"
+#, kde-format
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
-msgstr "op., ed., bölüm 1"
+msgstr "op., ed., fasıl 1"
 
 #: src/qml/Settings/PlaybackSettings.qml:337
-#, fuzzy, kde-format
-#| msgid "Skip chapters containing these words. Comma separated list."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
-msgstr "Bu sözcükleri içeren bölümleri atla. Virgülle ayrılan listedir."
+msgstr "Bu sözcükleri içeren fasılları atla. Virgülle ayrılan listedir."
 
 #: src/qml/Settings/PlaybackSettings.qml:346
-#, fuzzy, kde-format
-#| msgid "Youtube-dl"
+#, kde-format
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
@@ -1592,10 +1365,7 @@ msgid "Format selection"
 msgstr "Seçimi biçimlendir"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
-#, fuzzy, kde-format
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1603,45 +1373,37 @@ msgid ""
 msgstr "Seçili değerden düşük veya eşit en iyi videoyu seçer."
 
 #: src/qml/Settings/PlaybackSettings.qml:421
-#, fuzzy, kde-format
-#| msgid "bestvideo+bestaudio/best"
+#, kde-format
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "en iyi video + en iyi ses / en iyi"
 
 #: src/qml/Settings/PlaylistSettings.qml:27
-#, fuzzy, kde-format
-#| msgid "Position"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Position"
 msgstr "Konum"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
-#, fuzzy, kde-format
-#| msgid "Row height"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Row height"
 msgstr "Satır yüksekliği"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy, kde-format
-#| msgid "Playlist style"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Oynatma listesi biçemi"
 
 #: src/qml/Settings/PlaylistSettings.qml:97
-#, fuzzy, kde-format
-#| msgid "Overlay video"
+#, kde-format
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Video üzerine getir"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "When checked the playlist goes on top of the video\n"
-#| "When unchecked the video is resized"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1651,169 +1413,145 @@ msgstr ""
 "İmlenmediğinde, video yeniden boyutlandırılır"
 
 #: src/qml/Settings/PlaylistSettings.qml:111
-#, fuzzy, kde-format
-#| msgid "Show media title instead of file name"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Dosya adı yerine ortam başlığını göster"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, fuzzy, kde-format
-#| msgid "Auto load videos from same folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Aynı klasördeki videoları kendiliğinden yükle"
 
 #: src/qml/Settings/PlaylistSettings.qml:131
-#, fuzzy, kde-format
-#| msgid "Repeat"
+#, kde-format
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Yinele"
 
 #: src/qml/Settings/PlaylistSettings.qml:141
-#, fuzzy, kde-format
-#| msgid "Show row number"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Satır numarasını göster"
 
 #: src/qml/Settings/PlaylistSettings.qml:151
-#, fuzzy, kde-format
-#| msgid "Toggle with mouse"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Fare ile aç/kapat"
 
 #: src/qml/Settings/PlaylistSettings.qml:160
-#, fuzzy, kde-format
-#| msgid "Increase font size when fullscreen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Tam ekranken yazıtipi boyutunu artır"
 
 #: src/qml/Settings/SettingsWindow.qml:35
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Ayarlar"
 
 #: src/qml/Settings/SettingsWindow.qml:53
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@action"
 msgid "General"
 msgstr "Genel"
 
 #: src/qml/Settings/SettingsWindow.qml:61
-#, fuzzy, kde-format
-#| msgid "Playback"
+#, kde-format
 msgctxt "@action"
 msgid "Playback"
 msgstr "Oynatma"
 
 #: src/qml/Settings/SettingsWindow.qml:69
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
 #: src/qml/Settings/SettingsWindow.qml:77
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgctxt "@action"
 msgid "Audio"
 msgstr "Ses"
 
 #: src/qml/Settings/SettingsWindow.qml:85
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Altyazılar"
 
 #: src/qml/Settings/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Mouse"
+#, kde-format
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Fare"
 
 #: src/qml/Settings/SettingsWindow.qml:109
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
 #: src/qml/Settings/SettingsWindow.qml:117
-#, fuzzy, kde-format
-#| msgid "Custom commands"
+#, kde-format
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Özel komutlar"
 
 #: src/qml/Settings/SettingsWindow.qml:125
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@action"
 msgid "About"
 msgstr "Hakkında"
 
 #: src/qml/Settings/SettingsWindow.qml:163
-#, fuzzy, kde-format
-#| msgid "Help"
+#, kde-format
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Yardım"
 
 #: src/qml/Settings/SubtitlesSettings.qml:75
-#, fuzzy, kde-format
-#| msgid "Styling"
+#, kde-format
 msgctxt "@title"
 msgid "Styling"
 msgstr "Biçemleme"
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
-#, fuzzy, kde-format
-#| msgid "Font family"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Yazıtipi ailesi"
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
-#, fuzzy, kde-format
-#| msgid "Font size"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Yazıtipi boyutu"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
-#, fuzzy, kde-format
-#| msgid "Font style"
+#, kde-format
 msgctxt "@label"
 msgid "Font style"
 msgstr "Yazıtipi biçemi"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
-#, fuzzy, kde-format
-#| msgid "Bold"
+#, kde-format
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Kalın"
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
-#, fuzzy, kde-format
-#| msgid "Italic"
+#, kde-format
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Yatık"
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
-#, fuzzy, kde-format
-#| msgid "Font color"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Yazıtipi rengi"
@@ -1821,110 +1559,95 @@ msgstr "Yazıtipi rengi"
 #: src/qml/Settings/SubtitlesSettings.qml:189
 #: src/qml/Settings/SubtitlesSettings.qml:227
 #: src/qml/Settings/SubtitlesSettings.qml:287
-#, fuzzy, kde-format
-#| msgid "Set default value"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Öntanımlı değeri ayarla"
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
-#, fuzzy, kde-format
-#| msgid "Shadow color"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Gölge rengi"
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
-#, fuzzy, kde-format
-#| msgid "Shadow offset"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Gölge ofseti"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
-#, fuzzy, kde-format
-#| msgid "Set to 0 (zero) to disable."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Devre dışı bırakmak için 0 (sıfır) girin."
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
-#, fuzzy, kde-format
-#| msgid "Border color"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Kenarlık rengi"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
-#, fuzzy, kde-format
-#| msgid "Border width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Kenarlık genişliği"
 
 #: src/qml/Settings/VideoSettings.qml:28
-#, fuzzy, kde-format
-#| msgid "Screenshots"
+#, kde-format
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Ekran görüntüleri"
 
 #: src/qml/Settings/VideoSettings.qml:38
-#, fuzzy, kde-format
-#| msgid "Format"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Biçim"
 
 #: src/qml/Settings/VideoSettings.qml:74
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Şablon"
 
 #: src/qml/Settings/VideoSettings.qml:90
-#, fuzzy, kde-format
-#| msgid "Image adjustments"
+#, kde-format
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Görsel ince ayarları"
 
 #: src/qml/Settings/VideoSettings.qml:100
-#, fuzzy, kde-format
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Karşıtlık"
 
 #: src/qml/Settings/VideoSettings.qml:117
-#, fuzzy, kde-format
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Parlaklık"
 
 #: src/qml/Settings/VideoSettings.qml:134
-#, fuzzy, kde-format
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
 #: src/qml/Settings/VideoSettings.qml:151
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Doygunluk"
 
 #: src/qml/Settings/VideoSettings.qml:165
-#, fuzzy, kde-format
-#| msgid "Middle click on the sliders to reset them"
+#, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
-msgstr "Sııfırlamak için kaydırıcılarda orta tıklayın"
+msgstr "Sıfırlamak için kaydırıcılarda orta tıklayın"
 
 #~ msgid "Toggle Playlist"
 #~ msgstr "Oynatma Listesini Aç/Kapat"
