@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-28 00:44+0000\n"
-"PO-Revision-Date: 2022-10-09 04:31+0200\n"
+"PO-Revision-Date: 2022-10-29 05:13+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,43 +29,37 @@ msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
 #: src/application.cpp:150
-#, fuzzy, kde-format
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "ვიდეო დამკვრელი Haruna"
 
 #: src/application.cpp:152
-#, fuzzy, kde-format
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable video player."
-msgstr "აუდიო და ვიდეო დამკვრელი."
+msgstr "მორგებადი ვიდეო დამკვრელი."
 
 #: src/application.cpp:154
-#, fuzzy, kde-format
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
 #: src/application.cpp:160
-#, fuzzy, kde-format
-#| msgid "George Florea Bănuș"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
 #: src/application.cpp:161
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "პროგრამისტი"
 
 #: src/application.cpp:172
-#, fuzzy, kde-format
-#| msgid "File to open"
+#, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "გასახსნელი ფაილი"
@@ -85,15 +79,13 @@ msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/lockmanager.cpp:34
-#, fuzzy, kde-format
-#| msgid "Playing video."
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing video"
-msgstr "მიმდინარეობს ვიდეოს დაკვრა."
+msgstr "მიმდინარეობს ვიდეოს დაკვრა"
 
 #: src/models/actionsmodel.cpp:23
-#, fuzzy, kde-format
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "Haruna-ის შესახებ"
@@ -102,31 +94,28 @@ msgstr "Haruna-ის შესახებ"
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
-msgstr ""
+msgstr "აუდიოს ციკლის აწევა"
 
 #: src/models/actionsmodel.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
-msgstr ""
+msgstr "აუდიოს ციკლის დაწევა"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "მორგება"
 
 #: src/models/actionsmodel.cpp:51
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
-msgstr "კლავიატურის მალსახმობების კონფიგურაცია"
+msgstr "კლავიატურის მალსახმობების მორგება"
 
 #: src/models/actionsmodel.cpp:58
-#, fuzzy, kde-format
-#| msgid "Exit Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "სრული ეკრანიდან გასვლა"
@@ -135,30 +124,28 @@ msgstr "სრული ეკრანიდან გასვლა"
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
-msgstr ""
+msgstr "კადრის ბიჯი წინ"
 
 #: src/models/actionsmodel.cpp:73
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
-msgstr ""
+msgstr "კადრის ბიჯი უკან"
 
 #: src/models/actionsmodel.cpp:81
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
-msgstr ""
+msgstr "ბოლოს დაკრული ფაილის ჩატვირთვა"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "დადუმება"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgid "Open Context Menu"
+#, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "კონტექსტური მენიუს გახსნა"
@@ -167,11 +154,10 @@ msgstr "კონტექსტური მენიუს გახსნა"
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr ""
+msgstr "თაგუნას კურსორთან კონტექსტური მენიუს გახსნა და დახურვა"
 
 #: src/models/actionsmodel.cpp:103
-#, fuzzy, kde-format
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "ფაილის გახსნა"
@@ -180,11 +166,10 @@ msgstr "ფაილის გახსნა"
 #, kde-format
 msgctxt "@action"
 msgid "Add external subtitle…"
-msgstr ""
+msgstr "გარე სუბტიტრების დამატება…"
 
 #: src/models/actionsmodel.cpp:117
-#, fuzzy, kde-format
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "URL-ის გახსნა"
@@ -193,51 +178,46 @@ msgstr "URL-ის გახსნა"
 #, kde-format
 msgctxt "@action"
 msgid "Playback speed increase"
-msgstr ""
+msgstr "დაკვრის სიჩქარის გაზრდა"
 
 #: src/models/actionsmodel.cpp:131
 #, kde-format
 msgctxt "@action"
 msgid "Playback speed decrease"
-msgstr ""
+msgstr "დაკვრის სიჩქარის შემცირება"
 
 #: src/models/actionsmodel.cpp:138
 #, kde-format
 msgctxt "@action"
 msgid "Playback speed reset"
-msgstr ""
+msgstr "დაკვრის სიჩქარის დაბრუნება"
 
 #: src/models/actionsmodel.cpp:145
-#, fuzzy, kde-format
-#| msgid "Play/Pause"
+#, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
-msgstr "დაკვრა/პაუზა"
+msgstr "დაკვრა/შეჩერება"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "შემდეგის დაკვრა"
 
 #: src/models/actionsmodel.cpp:159
-#, fuzzy, kde-format
-#| msgid "Play Previous"
+#, kde-format
 msgctxt "@action"
 msgid "Play Previous"
-msgstr "წინა დაკვრა"
+msgstr "წინას დაკვრა"
 
 #: src/models/actionsmodel.cpp:166
-#, fuzzy, kde-format
-#| msgid "Quit"
+#, kde-format
 msgctxt "@action"
 msgid "Quit"
-msgstr "&გასვლა"
+msgstr "გასვლა"
 
 #: src/models/actionsmodel.cpp:173
-#, fuzzy, kde-format
-#| msgid "Restart Playback"
+#, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "დაკვრის თავიდან დაწყება"
@@ -246,139 +226,133 @@ msgstr "დაკვრის თავიდან დაწყება"
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
-msgstr ""
+msgstr "პატარა ბიჯით წინ გადახვევა"
 
 #: src/models/actionsmodel.cpp:187
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
-msgstr ""
+msgstr "პატარა ბიჯით უკან გადახვევა"
 
 #: src/models/actionsmodel.cpp:194
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
-msgstr ""
+msgstr "საშუალო ბიჯით წინ გადახვევა"
 
 #: src/models/actionsmodel.cpp:201
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
-msgstr ""
+msgstr "საშუალო ბიჯით უკან გადახვევა"
 
 #: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
-msgstr ""
+msgstr "დიდი ბიჯით წინ გადახვევა"
 
 #: src/models/actionsmodel.cpp:215
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
-msgstr ""
+msgstr "დიდი ბიჯით უკან გადახვევა"
 
 #: src/models/actionsmodel.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
-msgstr ""
+msgstr "შემდეგ თავზე გადახვევა"
 
 #: src/models/actionsmodel.cpp:229
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
-msgstr ""
+msgstr "წინა თავზე გადახვევა"
 
 #: src/models/actionsmodel.cpp:236
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr ""
+msgstr "შემდეგ სუბტიტრამდე გადახვევა"
 
 #: src/models/actionsmodel.cpp:243
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr ""
+msgstr "წინა სუბტიტრამდე გადახვევა"
 
 #: src/models/actionsmodel.cpp:250
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr ""
+msgstr "მოგვიანებით საყურებელ მდებარეობაზე გადახვევა"
 
 #: src/models/actionsmodel.cpp:257
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
-msgstr ""
+msgstr "მარყუჟის დაყენება"
 
 #: src/models/actionsmodel.cpp:264
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "ეკრანის ანაბეჭდი"
 
 #: src/models/actionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრების გადართვა"
 
 #: src/models/actionsmodel.cpp:278
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
-msgstr ""
+msgstr "სუბტიტრის ფონტის ზომის გაზრდა"
 
 #: src/models/actionsmodel.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
-msgstr ""
+msgstr "სუბტიტრის ფონტის ზომის შემცირება"
 
 #: src/models/actionsmodel.cpp:292
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრების აწევა"
 
 #: src/models/actionsmodel.cpp:299
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
-msgstr ""
+msgstr "სუბტიტრების ჩამოწევა"
 
 #: src/models/actionsmodel.cpp:306
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრების გაჩქარება"
 
 #: src/models/actionsmodel.cpp:313
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრების დაყოვნება"
 
 #: src/models/actionsmodel.cpp:320
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრების ციკლის აწევა"
 
 #: src/models/actionsmodel.cpp:327
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr ""
+msgstr "სუბტიტრების ციკლის დაწევა"
 
 #: src/models/actionsmodel.cpp:334
 #, kde-format
@@ -387,28 +361,25 @@ msgid "Toggle Deinterlacing"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:341
-#, fuzzy, kde-format
-#| msgid "Toggle Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
-msgstr "მთელ ეკრანზე გატანის ჩართ/გამორთ"
+msgstr "მთელ ეკრანზე გატანის გადართვა"
 
 #: src/models/actionsmodel.cpp:348
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
-msgstr ""
+msgstr "მენიუს ზოლის გადართვა"
 
 #: src/models/actionsmodel.cpp:355
-#, fuzzy, kde-format
-#| msgid "Toggle Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
-msgstr "მთელ ეკრანზე გატანის ჩართ/გამორთ"
+msgstr "თავსართის გადართვა"
 
 #: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "დასაკრავი სია"
@@ -417,144 +388,127 @@ msgstr "დასაკრავი სია"
 #, kde-format
 msgctxt "@action"
 msgid "Video pan x left"
-msgstr ""
+msgstr "ვიდეოს პანელის X მარცხნივ"
 
 #: src/models/actionsmodel.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Video pan x right"
-msgstr ""
+msgstr "ვიდეოს პანელის X მარჯვნივ"
 
 #: src/models/actionsmodel.cpp:383
 #, kde-format
 msgctxt "@action"
 msgid "Video pan y up"
-msgstr ""
+msgstr "ვიდეოს პანელის Y მაღლა"
 
 #: src/models/actionsmodel.cpp:390
 #, kde-format
 msgctxt "@action"
 msgid "Video pan y down"
-msgstr ""
+msgstr "ვიდეოს პანელის Y დაბლა"
 
 #: src/models/actionsmodel.cpp:397
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "ხმის აწევა"
 
 #: src/models/actionsmodel.cpp:404
-#, fuzzy, kde-format
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "ხმის დაწევა"
 
 #: src/models/actionsmodel.cpp:411
-#, fuzzy, kde-format
-#| msgid "Zoom In"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "გადიდება"
 
 #: src/models/actionsmodel.cpp:418
-#, fuzzy, kde-format
-#| msgid "Zoom Out"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
-msgstr "და_პატარავება"
+msgstr "დაპატარავება"
 
 #: src/models/actionsmodel.cpp:425
-#, fuzzy, kde-format
-#| msgid "Zoom Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "გადიდების გაუქმება"
 
 #: src/models/actionsmodel.cpp:433
-#, fuzzy, kde-format
-#| msgid "Contrast Up"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "კონტრასტის გადიდება"
 
 #: src/models/actionsmodel.cpp:440
-#, fuzzy, kde-format
-#| msgid "Contrast Down"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "კონტრასტის შემცირება"
 
 #: src/models/actionsmodel.cpp:447
-#, fuzzy, kde-format
-#| msgid "Contrast Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "კონტრასტის დაბრუნება"
 
 #: src/models/actionsmodel.cpp:454
-#, fuzzy, kde-format
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "სიკაშკაშის აწევა"
 
 #: src/models/actionsmodel.cpp:461
-#, fuzzy, kde-format
-#| msgid "Brightness Down"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "სიკაშკაშის დაწევა"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgid "Brightness Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "სიკაშკაშის დაბრუნება"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgid "Gamma Up"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "გამის აწევა"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgid "Gamma Down"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "გამის დაწევა"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgid "Gamma Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "გამის დაბრუნება"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
-msgstr "გაჯერებულობა"
+msgstr "გაჯერებულობის აწევა"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
-msgstr "გაჯერებულობა"
+msgstr "გაჯერებულობის დაწევა"
 
 #: src/models/actionsmodel.cpp:510
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
-msgstr "გაჯერებულობა"
+msgstr "გაჯერებულობის დაბრუნება"
 
 #: src/models/actionsmodel.cpp:652
 #, kde-format
@@ -565,15 +519,13 @@ msgid ""
 msgstr ""
 
 #: src/models/actionsmodel.cpp:657
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "მალსახმობის თავიდან მინიჭება"
+msgstr "თავიდან მინიჭება"
 
 #: src/mpv/mpvitem.cpp:631
-#, fuzzy, kde-format
-#| msgid "Playlist is empty"
+#, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "დასაკრავი სია ცარიელია"
@@ -582,73 +534,67 @@ msgstr "დასაკრავი სია ცარიელია"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
-msgstr ""
+msgstr "აუდიო: %1 %2"
 
 #: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
-#, fuzzy, kde-format
-#| msgid "Playback"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
-msgstr "დაკვრა"
+msgstr "დაკვრის სიჩქარე: %1"
 
 #: src/qml/Actions.qml:236
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
-msgstr ""
+msgstr "მარყუჟის დასაწყისი: %1"
 
 #: src/qml/Actions.qml:240
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
-msgstr ""
+msgstr "მარყუჟი: %1 - %2"
 
 #: src/qml/Actions.qml:246
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
-msgstr ""
+msgstr "მარყუჟი წაიშალა"
 
 #: src/qml/Actions.qml:254 src/qml/Actions.qml:259
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
-msgstr ""
+msgstr "სუბტიტრების დრო: %1"
 
 #: src/qml/Actions.qml:264
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრები გამორთულია"
 
 #: src/qml/Actions.qml:264
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრები ჩართულია"
 
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:285
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრები: არაფერი"
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:289
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრები: %1 %2"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:300
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr "სუბტიტრები"
+msgstr "სუბტიტრების მასშტაბი: %1"
 
 #: src/qml/Actions.qml:309
 #, kde-format
@@ -657,153 +603,133 @@ msgid "Deinterlace: %1"
 msgstr ""
 
 #: src/qml/Actions.qml:354 src/qml/Actions.qml:359
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
-msgstr "ხმის აწევა"
+msgstr "ხმა: %1"
 
 #: src/qml/Actions.qml:365 src/qml/Actions.qml:371
-#, fuzzy, kde-format
-#| msgid "Zoom: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "გადიდება: %1"
 
 #: src/qml/Actions.qml:376
-#, fuzzy, kde-format
-#| msgid "Zoom: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
-msgstr "გადიდება: %1"
+msgstr "გადიდება: 0"
 
 #: src/qml/Actions.qml:383 src/qml/Actions.qml:389
-#, fuzzy, kde-format
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
-msgstr "კონტრასტი"
+msgstr "კონტრასტი: %1"
 
 #: src/qml/Actions.qml:394
-#, fuzzy, kde-format
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
-msgstr "კონტრასტი"
+msgstr "კონტრასტი: 0"
 
 #: src/qml/Actions.qml:400 src/qml/Actions.qml:406
-#, fuzzy, kde-format
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
-msgstr "სიკაშკაშე"
+msgstr "სიკაშკაშე: %1"
 
 #: src/qml/Actions.qml:411
-#, fuzzy, kde-format
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
-msgstr "სიკაშკაშე"
+msgstr "სიკაშკაშე: 0"
 
 #: src/qml/Actions.qml:417 src/qml/Actions.qml:423
-#, fuzzy, kde-format
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
-msgstr "გამა"
+msgstr "გამა: %1"
 
 #: src/qml/Actions.qml:428
-#, fuzzy, kde-format
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr "გამა"
+msgstr "გამა: 0"
 
 #: src/qml/Actions.qml:434 src/qml/Actions.qml:440
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
-msgstr "გაჯერებულობა"
+msgstr "გაჯერებულობა: %1"
 
 #: src/qml/Actions.qml:445
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
-msgstr "გაჯერებულობა"
+msgstr "გაჯერებულობა: 0"
 
 #: src/qml/Footer.qml:67
-#, fuzzy, kde-format
-#| msgid "Restart Playback"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start Playback"
-msgstr "დაკვრის თავიდან დაწყება"
+msgstr "დაკვრის დაწყება"
 
 #: src/qml/Footer.qml:67
-#, fuzzy, kde-format
-#| msgid "Playback"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
-msgstr "დაკვრა"
+msgstr "დაკვრის შეჩერება"
 
 #: src/qml/Footer.qml:80
-#, fuzzy, kde-format
-#| msgid "Play Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Play previous file"
-msgstr "წინა დაკვრა"
+msgstr "წინა ფაილის დაკვრა"
 
 #: src/qml/Footer.qml:93
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Play next file"
-msgstr "შემდეგის დაკვრა"
+msgstr "შემდეგი ფაილის დაკვრა"
 
 #: src/qml/Footer.qml:107
-#, fuzzy, kde-format
-#| msgid "Remaining: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "დარჩენილი: %1"
 
 #: src/qml/HamburgerMenu.qml:51
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Recent Files"
-msgstr "ბოლო ფაილები"
+msgstr "უახლესი ფაილები"
 
 #: src/qml/HamburgerMenu.qml:80
-#, fuzzy, kde-format
-#| msgid "&More"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&მეტი"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
-#, fuzzy, kde-format
-#| msgid "Select file"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr "აირჩიეთ ფაილი"
+msgstr "ფერის არჩევა"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 #, kde-format
 msgctxt "@title"
 msgid "Double click to set action"
-msgstr ""
+msgstr "ორმაგი წკაპი ქმედების დასაყენებლად"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear current action"
-msgstr ""
+msgstr "მიმდინარე ქმედების გასუფთავება"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#, fuzzy, kde-format
-#| msgid "Help"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "დახმარება"
@@ -812,30 +738,28 @@ msgstr "დახმარება"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
-msgstr ""
+msgstr "Haruna-ის დახმარების ფანჯარა (მხოლოდ ინგლისური)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
-msgstr ""
+msgstr "Haruna-ის სახელმძღვანელო"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:39
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Open config ..."
-msgstr ""
+msgstr "კონფიგურაციის გახსნა ..."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "File"
 msgstr "ფაილი"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Folder"
 msgstr "საქაღალდე"
@@ -844,11 +768,10 @@ msgstr "საქაღალდე"
 #, kde-format
 msgctxt "@title"
 msgid "Load subtitles from"
-msgstr ""
+msgstr "სუბტიტრების წყარო"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:102
-#, fuzzy, kde-format
-#| msgid "Confirm deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "წაშლის დადასტურება"
@@ -857,11 +780,10 @@ msgstr "წაშლის დადასტურება"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
-msgstr ""
+msgstr "ამ საქაღალდის სიიდან წაშლა"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:134
-#, fuzzy, kde-format
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "ცვლილებების შენახვა"
@@ -870,18 +792,16 @@ msgstr "ცვლილებების შენახვა"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add new folder"
-msgstr ""
+msgstr "ახალი საქაღალდის დამატება"
 
 #: src/qml/Header.qml:73
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "სუბტიტრები"
 
 #: src/qml/Header.qml:106
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "აუდიო"
@@ -890,45 +810,40 @@ msgstr "აუდიო"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
-msgstr ""
+msgstr "თავების გამოტოვება"
 
 #: src/qml/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Haruna"
+#, kde-format
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
 
 #: src/qml/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select subtitles file"
-msgstr "აირჩიეთ ფაილი"
+msgstr "აირჩიეთ სუბტიტრების ფაილი"
 
 #: src/qml/main.qml:253
 #, kde-format
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr ""
+msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> ვერ ვიპოვე."
 
 #: src/qml/main.qml:280
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open"
 msgstr "გახსნა"
 
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
-#, fuzzy, kde-format
-#| msgid "&Audio"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&აუდიო"
@@ -937,214 +852,194 @@ msgstr "&აუდიო"
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Primary Track"
-msgstr ""
+msgstr "&ძირითადი ტრეკი"
 
 #: src/qml/Menus/ContextMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Playback"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Playback speed"
-msgstr "დაკვრა"
+msgstr "დაკვრის სიჩქარე"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, fuzzy, kde-format
-#| msgid "&File"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&ფაილი"
 
 #: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Recent Files"
-msgstr "ბოლო ფაილები"
+msgstr "უახლესი ფაილები"
 
 #: src/qml/Menus/FileMenu.qml:38
-#, fuzzy, kde-format
-#| msgid "Clear List"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "სიის გასუფთავება"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Help"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&დახმარება"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "Playback"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Playback"
-msgstr "დაკვრა"
+msgstr "&დაკვრა"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
-#, fuzzy, kde-format
-#| msgid "Seek"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "გადახვევა"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "&მორგება"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
-#, fuzzy, kde-format
-#| msgid "&Subtitles"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "&სუბტიტრები"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
-msgstr "სუბტიტრები"
+msgstr "ძირითადი სუბტიტრები"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:39
 #, kde-format
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
-msgstr ""
+msgstr "დამხმარე სუბტიტრი"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Video"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "&ვიდეო"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
-#, fuzzy, kde-format
-#| msgid "Adjustments"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "მორგება"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&View"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "&ხედი"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Hide Menubar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
 msgstr "მენიუს ზოლის დამალვა"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy, kde-format
-#| msgid "Show Menubar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
-msgstr "მენიუს ზოლის ჩვნება"
+msgstr "მენიუს ზოლის ჩვენება"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy, kde-format
-#| msgid "Show Toolbar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
-msgstr "პანელის ჩვენება"
+msgstr "ხელსაწყოთა ზოლის დამალვა"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy, kde-format
-#| msgid "Show Toolbar"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
-msgstr "პანელის ჩვენება"
+msgstr "ხელსაწყოთა ზოლის ჩვენება"
 
 #: src/qml/MpvVideo.qml:131
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
-msgstr ""
+msgstr "გამოტოვებული თავი: %1"
 
 #: src/qml/MpvVideo.qml:148
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
-msgstr ""
+msgstr "ვერ ვუკრავ: %1"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred language"
-msgstr ""
+msgstr "სასურველი ენა"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
 #, kde-format
 msgctxt "placeholder text"
 msgid "eng,ger etc."
-msgstr ""
+msgstr "eng, ger და ა.შ."
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
-msgstr ""
+msgstr "გამოტოვებების გამოყენების გარეშე."
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Preferred track"
-msgstr ""
+msgstr "სასურველი ტრეკი"
 
 #: src/qml/Settings/AudioSettings.qml:69
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Volume step"
-msgstr "ხმის აწევა"
+msgstr "ხმის ბიჯი"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
 #, kde-format
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr ""
+msgstr "ბრძანებები ჯერ მითითებული არაა"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add command"
-msgstr "ბრძანება"
+msgstr "ბრძანების &დამატება"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:69
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
-msgstr ""
+msgstr "შემდეგი გაშვებისას დაყენებული არ იქნება"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:155
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "&Add"
-msgstr ""
+msgstr "&დამატება"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "ბრძანება"
@@ -1153,145 +1048,133 @@ msgstr "ბრძანება"
 #, kde-format
 msgctxt "placeholder text"
 msgid "add volume +10"
-msgstr ""
+msgstr "ხმის დამატება +10"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr ""
+msgstr "OSD შეტყობინება"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
 #, kde-format
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
-msgstr ""
+msgstr "ფაილის სახელი: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@label"
 msgid "Type"
-msgstr "ტიპით"
+msgstr "ტიპი"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard Shortcuts"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
-msgstr "კლავიატურის მალსახმობების კონფიგურაცია"
+msgstr "კლავიატურის მალსახმობი"
 
 #: src/qml/Settings/EditCustomCommand.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Run at startup"
-msgstr ""
+msgstr "ჩატვირთვისას გაშვება"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
-#, fuzzy, kde-format
-#| msgid "Delete"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "წაშლა"
 
 #: src/qml/Settings/EditCustomCommand.qml:123
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Cancel"
-msgstr "შეწყვეტა"
+msgstr "გაუქმება"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, fuzzy, kde-format
-#| msgid "&Save"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&შენახვა"
 
 #: src/qml/Settings/GeneralSettings.qml:30
-#, fuzzy, kde-format
-#| msgid "Font size"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Osd font size"
-msgstr "ფონტის ზომა"
+msgstr "OSD ფონტის ზომა"
 
 #: src/qml/Settings/GeneralSettings.qml:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "File dialog location"
-msgstr ""
+msgstr "ფაილის ფანჯრის მდებარეობა"
 
 #: src/qml/Settings/GeneralSettings.qml:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
-msgstr ""
+msgstr "დაიმახსოვრებს თუ არა ფაილის ფანჯარა ბოლოს გახსნილ მდებარეობას."
 
 #: src/qml/Settings/GeneralSettings.qml:76
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
-msgstr "ბოლო ფაილები"
+msgstr "მაქსიმალური უახლესი ფაილები"
 
 #: src/qml/Settings/GeneralSettings.qml:93
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
-msgstr ""
+msgstr "რამდენი ახალი ფაილი ქნება დამახსოვრებული. გასათიშად დააყენეთ 0(ნული)."
 
 #: src/qml/Settings/GeneralSettings.qml:100
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember window size and position"
-msgstr ""
+msgstr "ფანჯრის ზომისა და მდებარეობის დამახსოვრება"
 
 #: src/qml/Settings/GeneralSettings.qml:109
-#, fuzzy, kde-format
-#| msgid "Interface"
+#, kde-format
 msgctxt "@title"
 msgid "Interface"
 msgstr "ინტერფეისი"
 
 #: src/qml/Settings/GeneralSettings.qml:117
-#, fuzzy, kde-format
-#| msgid "Show menubar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menubar"
-msgstr "მენიუს ზოლის ჩვნება"
+msgstr "მენიუს ზოლის ჩვენება"
 
 #: src/qml/Settings/GeneralSettings.qml:128
-#, fuzzy, kde-format
-#| msgid "Show toolbar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show toolbar"
-msgstr "პანელის ჩვენება"
+msgstr "ხელსაწყოთა ზოლის ჩვენება"
 
 #: src/qml/Settings/GeneralSettings.qml:139
 #, kde-format
 msgctxt "@option:check"
 msgid "Show chapter markers"
-msgstr ""
+msgstr "თავის სანიშნების ჩვენება"
 
 #: src/qml/Settings/GeneralSettings.qml:148
-#, fuzzy, kde-format
-#| msgid "Color scheme"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "ფერების სქემა"
 
 #: src/qml/Settings/GeneralSettings.qml:190
-#, fuzzy, kde-format
-#| msgid "Font style"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "GUI style"
-msgstr "ფონტის სტილი"
+msgstr "ინტერფეისის სტილი"
 
 #: src/qml/Settings/GeneralSettings.qml:239
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
-msgstr ""
+msgstr "Breeze ხატულების თემის გამოყენება"
 
 #: src/qml/Settings/GeneralSettings.qml:249
 #, kde-format
@@ -1300,18 +1183,20 @@ msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
 msgstr ""
+"ხატულების თემის Breeze-ზე დაყენება.\n"
+"თავიდან გაშვება აუცილებელია."
 
 #: src/qml/Settings/PlaybackSettings.qml:29
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Seek small step"
-msgstr ""
+msgstr "პატარა ბიჯით გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:47
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
-msgstr ""
+msgstr "საშუალო ბიჯით გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
 #, kde-format
@@ -1325,19 +1210,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Seek big step"
-msgstr ""
+msgstr "დიდი ბიჯით გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 #, kde-format
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr ""
+msgstr "გაშვებისას ბოლოს დაკრული ფაილის ჩატვირთვა"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Seek to last playback position"
-msgstr ""
+msgstr "ბოლოს დაკრულ ადგილას გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
 #, kde-format
@@ -1351,7 +1236,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Start playing"
-msgstr ""
+msgstr "დაკვრის დაწყება"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
 #, kde-format
@@ -1364,7 +1249,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Pause on minimize"
-msgstr ""
+msgstr "შეჩერება ჩაკეცვისას"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
 #, kde-format
@@ -1378,20 +1263,18 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Hardware decoding"
-msgstr ""
+msgstr "აპარატურული დეკოდერი"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "ჩართულია"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy, kde-format
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "გამორთულია"
@@ -1400,11 +1283,10 @@ msgstr "გამორთულია"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Remember time position"
-msgstr ""
+msgstr "დროის მდებარეობის დამახსოვრება"
 
 #: src/qml/Settings/PlaybackSettings.qml:252
-#, fuzzy, kde-format
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@info"
 msgid "Disabled"
 msgstr "გამორთულია"
@@ -1413,41 +1295,41 @@ msgstr "გამორთულია"
 #, kde-format
 msgctxt "@info"
 msgid "For all files"
-msgstr ""
+msgstr "ყველა ფაილისთვის"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
 #, kde-format
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ფაილისთვის, რომელიც %1 წუთზე გრძელია"
+msgstr[1] "ფაილისთვის, რომელიც %1 წუთზე გრძელია"
 
 #: src/qml/Settings/PlaybackSettings.qml:285
 #, kde-format
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "პოზიციის ყოველ %1 წამში დამახსოვრება"
+msgstr[1] "პოზიციის ყოველ %1 წამში დამახსოვრება"
 
 #: src/qml/Settings/PlaybackSettings.qml:294
 #, kde-format
 msgctxt "@label"
 msgid "Skip chapters"
-msgstr ""
+msgstr "თავების გამოტოვება"
 
 #: src/qml/Settings/PlaybackSettings.qml:311
 #, kde-format
 msgctxt "@option:check"
 msgid "Show osd message on skip"
-msgstr ""
+msgstr "გამოტოვებისას OSD შეტყობინებების ჩვენება"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Skip words"
-msgstr ""
+msgstr "სიტყვების გამოტოვება"
 
 #: src/qml/Settings/PlaybackSettings.qml:328
 #, kde-format
@@ -1465,12 +1347,12 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Youtube-dl"
-msgstr ""
+msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:352
 #, kde-format
 msgid "Format selection"
-msgstr ""
+msgstr "ფორმატის არჩევანი"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 #, kde-format
@@ -1487,8 +1369,7 @@ msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:27
-#, fuzzy, kde-format
-#| msgid "Position"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Position"
 msgstr "მდებარეობა"
@@ -1497,21 +1378,19 @@ msgstr "მდებარეობა"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Row height"
-msgstr ""
+msgstr "მწკრივის სიგანე"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy, kde-format
-#| msgid "Playlist is empty"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Playlist style"
-msgstr "დასაკრავი სია ცარიელია"
+msgstr "დასაკრავი სიის სტილი"
 
 #: src/qml/Settings/PlaylistSettings.qml:97
-#, fuzzy, kde-format
-#| msgid "Playing video."
+#, kde-format
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr "მიმდინარეობს ვიდეოს დაკვრა."
+msgstr "ვიდეოს გადადება"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
 #, kde-format
@@ -1525,113 +1404,100 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
-msgstr ""
+msgstr "ფაილის სახელის მაგიერ მედიის სათაურის ჩვენება"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 #, kde-format
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
-msgstr ""
+msgstr "აუდიოს ვიდეოსთან ერთად, იგივე საქაღალდიდან ჩატვირთვა"
 
 #: src/qml/Settings/PlaylistSettings.qml:131
-#, fuzzy, kde-format
-#| msgid "Repeat"
+#, kde-format
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "გამეორება"
 
 #: src/qml/Settings/PlaylistSettings.qml:141
-#, fuzzy, kde-format
-#| msgid "Show Menubar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show row number"
-msgstr "მენიუს ზოლის ჩვნება"
+msgstr "მწკრივების რაოდენობის ჩვენება"
 
 #: src/qml/Settings/PlaylistSettings.qml:151
 #, kde-format
 msgctxt "@option:check"
 msgid "Toggle with mouse"
-msgstr ""
+msgstr "თაგუნით გადართვა"
 
 #: src/qml/Settings/PlaylistSettings.qml:160
 #, kde-format
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
-msgstr ""
+msgstr "ფონტის გადიდება სრულ ეკრანზე გაშლისას"
 
 #: src/qml/Settings/SettingsWindow.qml:35
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr "პარამეტრები"
+msgstr "მორგება"
 
 #: src/qml/Settings/SettingsWindow.qml:53
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@action"
 msgid "General"
 msgstr "საერთო"
 
 #: src/qml/Settings/SettingsWindow.qml:61
-#, fuzzy, kde-format
-#| msgid "Playback"
+#, kde-format
 msgctxt "@action"
 msgid "Playback"
 msgstr "დაკვრა"
 
 #: src/qml/Settings/SettingsWindow.qml:69
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgctxt "@action"
 msgid "Video"
 msgstr "ვიდეო"
 
 #: src/qml/Settings/SettingsWindow.qml:77
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgctxt "@action"
 msgid "Audio"
 msgstr "აუდიო"
 
 #: src/qml/Settings/SettingsWindow.qml:85
-#, fuzzy, kde-format
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "სუბტიტრები"
 
 #: src/qml/Settings/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Mouse"
+#, kde-format
 msgctxt "@action"
 msgid "Mouse"
 msgstr "თაგუნა"
 
 #: src/qml/Settings/SettingsWindow.qml:109
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
 #: src/qml/Settings/SettingsWindow.qml:117
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgctxt "@action"
 msgid "Custom commands"
-msgstr "ბრძანება"
+msgstr "ხელით მითითებული ბრძანებები"
 
 #: src/qml/Settings/SettingsWindow.qml:125
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@action"
 msgid "About"
 msgstr "შესახებ"
 
 #: src/qml/Settings/SettingsWindow.qml:163
-#, fuzzy, kde-format
-#| msgid "Help"
+#, kde-format
 msgctxt "@title:window"
 msgid "Help"
 msgstr "დახმარება"
@@ -1640,49 +1506,43 @@ msgstr "დახმარება"
 #, kde-format
 msgctxt "@title"
 msgid "Styling"
-msgstr ""
+msgstr "სტლი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
-#, fuzzy, kde-format
-#| msgid "Font family"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "ფონტების ოჯახი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
-#, fuzzy, kde-format
-#| msgid "Font size"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "ფონტის ზომა"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
-#, fuzzy, kde-format
-#| msgid "Font style"
+#, kde-format
 msgctxt "@label"
 msgid "Font style"
 msgstr "ფონტის სტილი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
-#, fuzzy, kde-format
-#| msgid "Bold"
+#, kde-format
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "გასქელება"
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
-#, fuzzy, kde-format
-#| msgid "Italic"
+#, kde-format
 msgctxt "@option:check"
 msgid "Italic"
-msgstr "დახრა"
+msgstr "დახრილი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
-#, fuzzy, kde-format
-#| msgid "Shadow color"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Font color"
-msgstr "ჩრდილის ფერი"
+msgstr "ფონტის ფერი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:189
 #: src/qml/Settings/SubtitlesSettings.qml:227
@@ -1690,93 +1550,83 @@ msgstr "ჩრდილის ფერი"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr ""
+msgstr "ნაგულისხმები მნიშვნელობის დაყენება"
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
-#, fuzzy, kde-format
-#| msgid "Shadow color"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "ჩრდილის ფერი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
-#, fuzzy, kde-format
-#| msgid "Shadow color"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
-msgstr "ჩრდილის ფერი"
+msgstr "ჩრდილის წანაცვლება"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
-msgstr ""
+msgstr "გამოსართავად დააყენეთ მნიშვნელობა 0."
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Border color"
-msgstr ""
+msgstr "საზღვრის ფერი"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Border width"
-msgstr ""
+msgstr "საზღვრის სიგანე"
 
 #: src/qml/Settings/VideoSettings.qml:28
-#, fuzzy, kde-format
-#| msgid "Screenshots"
+#, kde-format
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "ეკრანის ანაბეჭდები"
 
 #: src/qml/Settings/VideoSettings.qml:38
-#, fuzzy, kde-format
-#| msgid "Format"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "ფორმატი"
 
 #: src/qml/Settings/VideoSettings.qml:74
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "შაბლონი"
 
 #: src/qml/Settings/VideoSettings.qml:90
-#, fuzzy, kde-format
-#| msgid "Adjustments"
+#, kde-format
 msgctxt "@title"
 msgid "Image adjustments"
-msgstr "მორგება"
+msgstr "გამოსახულების მორგება"
 
 #: src/qml/Settings/VideoSettings.qml:100
-#, fuzzy, kde-format
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "კონტრასტი"
 
 #: src/qml/Settings/VideoSettings.qml:117
-#, fuzzy, kde-format
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "სიკაშკაშე"
 
 #: src/qml/Settings/VideoSettings.qml:134
-#, fuzzy, kde-format
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "გამა"
 
 #: src/qml/Settings/VideoSettings.qml:151
-#, fuzzy, kde-format
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "გაჯერებულობა"
