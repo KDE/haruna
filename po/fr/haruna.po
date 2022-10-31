@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-28 00:44+0000\n"
-"PO-Revision-Date: 2022-09-13 13:16+0200\n"
+"PO-Revision-Date: 2022-10-30 17:07+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -73,6 +73,9 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"Permet de remplacer temporairement le paramètre de sélection de format "
+"« ytdl ». Sera écrasé si le paramètre est modifié grâce à l’interface "
+"utilisateur graphique"
 
 #: src/application.cpp:178
 #, fuzzy, kde-format
@@ -152,8 +155,7 @@ msgid "Load Last Played File"
 msgstr "Charger le dernier fichier lu"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Couper le son"
@@ -237,8 +239,7 @@ msgid "Play Previous"
 msgstr "Lire le précédent"
 
 #: src/models/actionsmodel.cpp:166
-#, fuzzy, kde-format
-#| msgid "Quit"
+#, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Quitter"
@@ -817,8 +818,7 @@ msgid "Recent Files"
 msgstr "Fichiers récents"
 
 #: src/qml/HamburgerMenu.qml:80
-#, fuzzy, kde-format
-#| msgid "&More"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Plus"
@@ -845,8 +845,7 @@ msgid "Clear current action"
 msgstr "Effacer l'action courante"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#, fuzzy, kde-format
-#| msgid "Help"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "Aide"
@@ -873,8 +872,7 @@ msgid "Open config ..."
 msgstr "Ouvrir la configuration..."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "File"
 msgstr "Fichier"
@@ -929,8 +927,7 @@ msgid "Subtitles"
 msgstr "Sous-titres"
 
 #: src/qml/Header.qml:106
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
@@ -971,8 +968,7 @@ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> est introuvable."
 
 #: src/qml/main.qml:280
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ouvrir"
@@ -999,8 +995,7 @@ msgid "Playback speed"
 msgstr "Vitesse de lecture"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, fuzzy, kde-format
-#| msgid "&File"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&Fichier"
@@ -1020,8 +1015,7 @@ msgid "Clear List"
 msgstr "Effacer la liste"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&Help"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&Aide"
@@ -1036,8 +1030,7 @@ msgstr "&Lire"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
-#, fuzzy, kde-format
-#| msgid "Seek"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Rechercher"
@@ -1089,8 +1082,7 @@ msgid "Adjustments"
 msgstr "Ajustements"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, fuzzy, kde-format
-#| msgid "&View"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "&Affichage"
@@ -1233,11 +1225,10 @@ msgid "Filename: ${filename}"
 msgstr "Noms de fichier : ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@label"
 msgid "Type"
-msgstr "Type"
+msgstr "Saisir"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 #, fuzzy, kde-format
@@ -1268,8 +1259,7 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, fuzzy, kde-format
-#| msgid "&Save"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "Enregi&strer"
@@ -1673,8 +1663,7 @@ msgid "Auto load videos from same folder"
 msgstr "Charger automatiquement les vidéos à partir du même dossier"
 
 #: src/qml/Settings/PlaylistSettings.qml:131
-#, fuzzy, kde-format
-#| msgid "Repeat"
+#, kde-format
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Répéter"
@@ -1722,8 +1711,7 @@ msgid "Playback"
 msgstr "Lecture"
 
 #: src/qml/Settings/SettingsWindow.qml:69
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgctxt "@action"
 msgid "Video"
 msgstr "Vidéo"
@@ -1771,8 +1759,7 @@ msgid "About"
 msgstr "À propos"
 
 #: src/qml/Settings/SettingsWindow.qml:163
-#, fuzzy, kde-format
-#| msgid "Help"
+#, kde-format
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Aide"
@@ -1806,8 +1793,7 @@ msgid "Font style"
 msgstr "Style de la police"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
-#, fuzzy, kde-format
-#| msgid "Bold"
+#, kde-format
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Gras"
@@ -1914,8 +1900,7 @@ msgid "Brightness"
 msgstr "Luminosité"
 
 #: src/qml/Settings/VideoSettings.qml:134
-#, fuzzy, kde-format
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
