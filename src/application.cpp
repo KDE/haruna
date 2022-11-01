@@ -79,7 +79,6 @@ Application::Application()
     setupWorkerThread();
     setupAboutData();
     setupCommandLineParser();
-    Global::instance()->setParser(m_parser);
     registerQmlTypes();
     setupQmlSettingsTypes();
 
@@ -319,6 +318,11 @@ void Application::setGuiStyle(const QString &style)
 QAbstractItemModel *Application::colorSchemesModel()
 {
     return m_schemes->model();
+}
+
+QCommandLineParser *Application::parser() const
+{
+    return m_parser;
 }
 
 void Application::activateColorScheme(const QString &name)

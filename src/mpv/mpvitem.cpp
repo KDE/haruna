@@ -149,7 +149,7 @@ void MpvItem::initProperties()
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
 
-    QCommandLineParser *cmdParser = Global::instance()->parser();
+    QCommandLineParser *cmdParser = Application::instance()->parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
     if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
         ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));

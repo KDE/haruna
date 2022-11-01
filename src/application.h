@@ -73,6 +73,8 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(const QUrl &url);
 
+    QCommandLineParser *parser() const;
+
 Q_SIGNALS:
     void qmlApplicationMouseLeave();
     void error(const QString &message);
