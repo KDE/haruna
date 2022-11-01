@@ -6,6 +6,7 @@
 
 #include "application.h"
 
+#include "actionsmodel.h"
 #include "audiosettings.h"
 #include "customcommandsmodel.h"
 #include "generalsettings.h"
@@ -17,9 +18,9 @@
 #include "playlistitem.h"
 #include "playlistmodel.h"
 #include "playlistsettings.h"
+#include "recentfilesmodel.h"
 #include "subtitlesfoldersmodel.h"
 #include "subtitlessettings.h"
-#include "thumbnailimageprovider.h"
 #include "tracksmodel.h"
 #include "videosettings.h"
 #include "worker.h"
@@ -34,54 +35,31 @@
 #include <QGuiApplication>
 #include <QMimeDatabase>
 #include <QPointer>
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
-#include <QQmlEngine>
 #include <QQuickItem>
-#include <QQuickStyle>
 #include <QQuickView>
 #include <QStandardPaths>
 #include <QStyle>
 #include <QStyleFactory>
 #include <QThread>
-#include <KFileItem>
-#include <recentfilesmodel.h>
-#include <actionsmodel.h>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
 #include <KColorSchemeManager>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KFileItem>
 #include <KFileMetaData/Properties>
-#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KWindowConfig>
 
-static QApplication *createApplication(int &argc, char **argv, const QString &applicationName)
+Application *Application::instance()
 {
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-    QApplication::setOrganizationName("KDE");
-    QApplication::setApplicationName(applicationName);
-    QApplication::setOrganizationDomain("kde.org");
-    QApplication::setApplicationDisplayName("Haruna - Video Player");
-    QApplication::setApplicationVersion(Application::version());
-
-    QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
-    QQuickStyle::setFallbackStyle(QStringLiteral("Fusion"));
-    if (GeneralSettings::useBreezeIconTheme()) {
-        QIcon::setThemeName(QStringLiteral("breeze"));
-    }
-
-    QApplication *app = new QApplication(argc, argv);
-    QApplication::setWindowIcon(QIcon::fromTheme("haruna"));
-    KLocalizedString::setApplicationDomain("haruna");
-    return app;
+    static Application app;
+    return &app;
 }
 
-Application::Application(int &argc, char **argv, const QString &applicationName)
-    : m_app(createApplication(argc, argv, applicationName))
+Application::Application()
+    : m_app(qApp)
 {
     m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     m_schemes = new KColorSchemeManager(this);
@@ -105,31 +83,7 @@ Application::Application(int &argc, char **argv, const QString &applicationName)
     registerQmlTypes();
     setupQmlSettingsTypes();
 
-    m_engine = new QQmlApplicationEngine(this);
-    const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
-    auto onObjectCreated = [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl) {
-            QCoreApplication::exit(-1);
-        }
-    };
-    QObject::connect(m_engine, &QQmlApplicationEngine::objectCreated,
-                     m_app, onObjectCreated, Qt::QueuedConnection);
-    m_engine->addImportPath("qrc:/qml");
-    m_engine->addImageProvider("thumbnail", new ThumbnailImageProvider());
-    setupQmlContextProperties();
-    m_engine->load(url);
-
     connect(Global::instance(), &Global::error, this, &Application::error);
-}
-
-Application::~Application()
-{
-    delete m_engine;
-}
-
-int Application::run()
-{
-    return m_app->exec();
 }
 
 void Application::setupWorkerThread()
@@ -211,15 +165,6 @@ void Application::setupQmlSettingsTypes()
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaylistSettings",  PlaylistSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "VideoSettings",     VideoSettings::self());
-}
-
-void Application::setupQmlContextProperties()
-{
-    m_engine->rootContext()->setContextProperty("app", this);
-    m_engine->rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
-    m_engine->rootContext()->setContextObject(new KLocalizedContext(this));
-    m_engine->rootContext()->setContextProperty("harunaAboutData",
-                                                QVariant::fromValue(KAboutData::applicationData()));
 }
 
 void Application::restoreWindowGeometry(QQuickWindow *window) const

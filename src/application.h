@@ -48,10 +48,8 @@ class Application : public QObject
     Q_PROPERTY(QUrl configFolderPath READ configFolderPath CONSTANT)
 
 public:
-    explicit Application(int &argc, char **argv, const QString &applicationName);
-    ~Application();
+    static Application *instance();
 
-    int run();
     QUrl configFilePath();
     QUrl configFolderPath();
     Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
@@ -80,16 +78,22 @@ Q_SIGNALS:
     void error(const QString &message);
 
 private:
+    explicit Application();
+    ~Application() = default;
+
+    Application(const Application &) = delete;
+    Application &operator=(const Application &) = delete;
+    Application(Application &&) = delete;
+    Application &operator=(Application &&) = delete;
+
     void setupWorkerThread();
     void setupAboutData();
     void setupCommandLineParser();
     void registerQmlTypes();
     void setupQmlSettingsTypes();
-    void setupQmlContextProperties();
     void aboutApplication();
     QAbstractItemModel *colorSchemesModel();
     QApplication *m_app;
-    QQmlApplicationEngine *m_engine;
     KAboutData m_aboutData;
     KSharedConfig::Ptr m_config;
     QCommandLineParser *m_parser;
