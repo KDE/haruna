@@ -58,10 +58,8 @@ Q_SIGNALS:
 
 private:
     Playlist items() const;
-    QString configFolder();
     Playlist m_playList;
     int m_playingVideo = 0;
-    KSharedConfig::Ptr m_config;
 };
 
 #endif // PLAYLISTMODEL_H

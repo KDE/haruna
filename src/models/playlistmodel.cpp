@@ -20,7 +20,6 @@
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     connect(this, &PlayListModel::videoAdded,
             Worker::instance(), &Worker::getMetaData);
 
@@ -158,16 +157,6 @@ void PlayListModel::appendVideo(QString videoPath)
 Playlist PlayListModel::items() const
 {
     return m_playList;
-}
-
-QString PlayListModel::configFolder()
-{
-
-    auto configPath = QStandardPaths::writableLocation(m_config->locationType());
-    auto configFilePath = configPath.append(QStringLiteral("/")).append(m_config->name());
-    QFileInfo fileInfo(configFilePath);
-
-    return fileInfo.absolutePath();
 }
 
 Playlist PlayListModel::getPlayList() const
