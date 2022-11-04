@@ -55,7 +55,7 @@ SettingsBasePage {
             Platform.FileDialog {
                 id: fileDialog
 
-                folder: Platform.ColorDialogStandardPaths.PicturesLocation
+                folder: Platform.StandardPaths.writableLocation(Platform.StandardPaths.PicturesLocation)
                 title: i18nc("@title:window", "Select file")
                 fileMode: Platform.FileDialog.OpenFile
 
