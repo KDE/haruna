@@ -30,7 +30,14 @@ Item {
     }
     x: PlaylistSettings.position === "right" ? parent.width : -width
     y: 0
-    state: "hidden"
+    state: PlaylistSettings.rememberState
+           ? (PlaylistSettings.visible ? "visible" : "hidden")
+           : "hidden"
+
+    onStateChanged: {
+        PlaylistSettings.visible = state === "visible" ? true : false
+        PlaylistSettings.save()
+    }
 
     MouseArea {
         anchors.fill: parent

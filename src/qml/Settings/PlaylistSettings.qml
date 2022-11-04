@@ -167,6 +167,22 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1; height: 1 }
+        CheckBox {
+            checked: PlaylistSettings.rememberState
+            text: i18nc("@option:check", "Remember last playlist state")
+            onCheckStateChanged: {
+                PlaylistSettings.rememberState = checked
+                PlaylistSettings.save()
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip", "When checked the playlist state (visible/hidden) "
+                            + "is remembered across launches")
+            }
+        }
+
+
         Item {
             width: Kirigami.Units.gridUnit
             height: Kirigami.Units.gridUnit
