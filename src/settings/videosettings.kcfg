@@ -11,9 +11,10 @@
   <kcfgfile name="haruna/haruna.conf" />
   <include>QStandardPaths</include>
   <group name="Video">
-    <entry name="ScreenshotFormat" type="String">
-      <default>jpg</default>
-    </entry>
+  <entry name="DefaultCover" type="String"></entry>
+  <entry name="ScreenshotFormat" type="String">
+    <default>jpg</default>
+  </entry>
     <entry name="ScreenshotTemplate" type="String">
       <code>
         QString screenshotsFolder = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);

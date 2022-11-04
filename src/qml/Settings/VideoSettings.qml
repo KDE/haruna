@@ -7,6 +7,7 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
+import Qt.labs.platform 1.0 as Platform
 
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
@@ -23,6 +24,47 @@ SettingsBasePage {
         id: content
 
         columns: 2
+
+        Label {
+            text: i18nc("@label:listbox", "Default cover")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        RowLayout {
+            TextField {
+                text: VideoSettings.defaultCover
+                placeholderText: i18nc("placeholder text", "path to image")
+                Layout.fillWidth: true
+                onEditingFinished: {
+                    VideoSettings.defaultCover = text
+                    VideoSettings.save()
+                }
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "Used for music files that don't have a video track, "
+                                + "an embedded cover image or a cover/folder image "
+                                + "in the same folder as the played file.")
+                }
+            }
+
+            Button {
+                icon.name: "folder"
+                onClicked: fileDialog.open()
+            }
+
+            Platform.FileDialog {
+                id: fileDialog
+
+                folder: Platform.ColorDialogStandardPaths.PicturesLocation
+                title: i18nc("@title:window", "Select file")
+                fileMode: Platform.FileDialog.OpenFile
+
+                onAccepted: {
+                    VideoSettings.defaultCover = fileDialog.file
+                }
+                onRejected: mpv.focus = true
+            }
+        }
 
         SettingsHeader {
             text: i18nc("@title", "Screenshots")

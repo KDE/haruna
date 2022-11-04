@@ -86,6 +86,10 @@ MpvItem {
     }
 
     onFileLoaded: {
+        if (!getProperty("vid")) {
+            command(["video-add", VideoSettings.defaultCover])
+        }
+
         watchLaterPosition = loadTimePosition()
 
         loadingIndicatorParent.visible = false
