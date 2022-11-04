@@ -40,8 +40,13 @@ Item {
     Rectangle {
 
         anchors.fill: parent
-        anchors.leftMargin: PlaylistSettings.position === "right" ? Kirigami.Units.largeSpacing * 3 : 0
-        anchors.rightMargin: PlaylistSettings.position === "left" ? Kirigami.Units.largeSpacing * 3 : 0
+        // margins are used to prevent closing the playlist, with the mouse, by accident
+        anchors.leftMargin: PlaylistSettings.position === "right" && PlaylistSettings.overlayVideo
+                            ? Kirigami.Units.largeSpacing * 5
+                            : 0
+        anchors.rightMargin: PlaylistSettings.position === "left" && PlaylistSettings.overlayVideo
+                             ? Kirigami.Units.largeSpacing * 5
+                             : 0
         color: Kirigami.Theme.backgroundColor
 
         ScrollView {
