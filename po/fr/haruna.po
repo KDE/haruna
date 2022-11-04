@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-28 00:44+0000\n"
-"PO-Revision-Date: 2022-10-30 20:27+0100\n"
+"PO-Revision-Date: 2022-11-03 18:02+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -31,8 +31,7 @@ msgid "Haruna Video Player"
 msgstr "Lecteur vidéo Haruna"
 
 #: src/application.cpp:152
-#, fuzzy, kde-format
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable video player."
 msgstr "Un lecteur configurable de vidéos."
@@ -111,8 +110,7 @@ msgid "Configure"
 msgstr "Configurer"
 
 #: src/models/actionsmodel.cpp:51
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Configurer les raccourcis de clavier"
@@ -156,9 +154,7 @@ msgid "Open Context Menu"
 msgstr "Ouvrir un menu contextuel"
 
 #: src/models/actionsmodel.cpp:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Opens and closes the context menu at the position of the mouse pointer"
+#, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "Ouvre et ferme le menu contextuel à l'endroit du curseur de souris"
@@ -294,18 +290,16 @@ msgid "Seek To Next Subtitle"
 msgstr "Rechercher le prochain sous-titre"
 
 #: src/models/actionsmodel.cpp:243
-#, fuzzy, kde-format
-#| msgid "Seek To Previous Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "Rechercher le sous-titre précédent"
+msgstr "Se placer sur le sous-titre précédent"
 
 #: src/models/actionsmodel.cpp:250
-#, fuzzy, kde-format
-#| msgid "Seek To Watch Later Position"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr "Rechercher pour regarder la dernière position"
+msgstr "Se placer pour regarder la dernière position"
 
 #: src/models/actionsmodel.cpp:257
 #, kde-format
@@ -535,16 +529,13 @@ msgid "Saturation Reset"
 msgstr "Ré-initialiser la saturation"
 
 #: src/models/actionsmodel.cpp:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
-#| "<br><br>Do you want to reassign the shortcut?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
-"Le raccouci choisi est en conflit avec le raccourci pour l'action<b>%1</b> "
+"Le raccourci choisi est en conflit avec le raccourci pour l'action<b>%1</b> "
 "action.<br><br> Voulez-vous vraiment ré-assigner le raccourci ?"
 
 #: src/models/actionsmodel.cpp:657
@@ -656,8 +647,7 @@ msgid "Contrast: %1"
 msgstr "Contraste : %1"
 
 #: src/qml/Actions.qml:394
-#, fuzzy, kde-format
-#| msgid "Contrast: 0"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contraste : 0"
@@ -765,11 +755,10 @@ msgid "Help"
 msgstr "Aide"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
-#, fuzzy, kde-format
-#| msgid "Haruna help window (english only)"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
-msgstr "Fenêtre d'aide de Haruna (uniquement en anglais)"
+msgstr "Fenêtre d'aide de Haruna (Uniquement en anglais)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
 #, kde-format
@@ -808,8 +797,7 @@ msgid "Confirm deletion"
 msgstr "Confirmer la suppression"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
-#, fuzzy, kde-format
-#| msgid "Delete this folder from list"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Supprimer ce dossier de la liste"
@@ -863,11 +851,12 @@ msgid "Select subtitles file"
 msgstr "Sélectionnez un fichier de sous-titres"
 
 #: src/qml/main.qml:253
-#, fuzzy, kde-format
-#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+#, kde-format
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> est introuvable."
+msgstr ""
+"Le logiciel <a href=\"https://youtube-dl.org\">Youtube-dl</a> est "
+"introuvable."
 
 #: src/qml/main.qml:280
 #, kde-format
@@ -1048,8 +1037,7 @@ msgid "Volume step"
 msgstr "Pas de volume"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
-#, fuzzy, kde-format
-#| msgid "No custom commands yet"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Aucun commande personnalisée pour l'instant"
@@ -1146,13 +1134,12 @@ msgid "File dialog location"
 msgstr "Emplacement de la boîte de dialogue de fichiers"
 
 #: src/qml/Settings/GeneralSettings.qml:71
-#, fuzzy, kde-format
-#| msgid "If empty the file dialog will remember the last opened location."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr ""
 "Si la valeur est vide, la boîte de dialogue de fichiers se souviendra de "
-"l'emplacement le plus récemment ouvert."
+"l'emplacement ouvert le plus récemment."
 
 #: src/qml/Settings/GeneralSettings.qml:76
 #, kde-format
@@ -1161,17 +1148,15 @@ msgid "Maximum recent files"
 msgstr "Nombre maximum de fichiers récents"
 
 #: src/qml/Settings/GeneralSettings.qml:93
-#, fuzzy, kde-format
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 "Le nombre de fichiers récents à enregistrer. Saisissez 0 (Zéro) pour "
-"désactiver"
+"désactiver."
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy, kde-format
-#| msgid "Remember window size and position"
+#, kde-format
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Se souvenir de la position et de la taille de la fenêtre"
@@ -1220,10 +1205,7 @@ msgid "Use Breeze icon theme"
 msgstr "Utiliser le thème d'icônes « Breeze »"
 
 #: src/qml/Settings/GeneralSettings.qml:249
-#, fuzzy, kde-format
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1245,10 +1227,7 @@ msgid "Seek medium step"
 msgstr "Rechercher avec un pas moyen"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is also used for mouse wheel seeking, when mouse is over the "
-#| "progress bar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
@@ -1264,31 +1243,26 @@ msgid "Seek big step"
 msgstr "Rechercher avec pas important"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
-#, fuzzy, kde-format
-#| msgid "Open last played file on startup"
+#, kde-format
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Ouvrir au démarrage le dernier fichier lu"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy, kde-format
-#| msgid "Seek to last playback position"
+#, kde-format
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "Se placer à la dernière position de lecture"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr ""
-"Lors de l'ouverture d'un fichier joué antérieurement, se placer "
-"automatiquement à sa dernière position de lecture."
+"Lors de l'ouverture d'un fichier précédemment joué, se placer à sa dernière "
+"position de lecture."
 
 #: src/qml/Settings/PlaybackSettings.qml:135
 #, kde-format
@@ -1297,15 +1271,12 @@ msgid "Start playing"
 msgstr "Démarrer la lecture"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
-#, fuzzy, kde-format
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr ""
-"Lors de l'ouverture d'un fichier joué antérieurement, lancez automatiquement "
+"Lors de l'ouverture d'un fichier précédemment joué, lancez automatiquement "
 "sa lecture."
 
 #: src/qml/Settings/PlaybackSettings.qml:153
@@ -1315,17 +1286,14 @@ msgid "Pause on minimize"
 msgstr "Pause lors d'un passage en icône"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
 "Met le lecteur en pause lorsque la fenêtre se réduit en une icône. La "
-"lecture est relancée lors du retour en mode fenêtre."
+"lecture est relancée lors du retour en mode normal."
 
 #: src/qml/Settings/PlaybackSettings.qml:166
 #, kde-format
@@ -1367,19 +1335,15 @@ msgid "For all files"
 msgstr "Pour tous les fichiers"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy, kde-format
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
+#, kde-format
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
-msgstr[0] "Pour les fichiers avec plus de %1 minute de lecture"
-msgstr[1] "Pour les fichiers avec plus de %1 minutes de lecture"
+msgstr[0] "Pour les fichiers de plus de %1 minutes de lecture"
+msgstr[1] "Pour les fichiers de plus de %1 minutes de lecture"
 
 #: src/qml/Settings/PlaybackSettings.qml:285
-#, fuzzy, kde-format
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
+#, kde-format
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1414,8 +1378,7 @@ msgid "op, ed, chapter 1"
 msgstr "op, ed, chapitre 1"
 
 #: src/qml/Settings/PlaybackSettings.qml:337
-#, fuzzy, kde-format
-#| msgid "Skip chapters containing these words. Comma separated list."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
@@ -1434,10 +1397,7 @@ msgid "Format selection"
 msgstr "Sélection du format"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
-#, fuzzy, kde-format
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1478,10 +1438,7 @@ msgid "Overlay video"
 msgstr "Superposer une vidéo"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "When checked the playlist goes on top of the video\n"
-#| "When unchecked the video is resized"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1489,18 +1446,16 @@ msgid ""
 msgstr ""
 "Lorsque cette option est sélectionnée, la liste de lecture s'affiche au-"
 "dessus de la vidéo.\n"
-"Lorsque non sélectionnée, la vidéo est redimensionnée."
+"Lorsque celle-ci est non sélectionnée, la vidéo est redimensionnée."
 
 #: src/qml/Settings/PlaylistSettings.qml:111
-#, fuzzy, kde-format
-#| msgid "Show media title instead of file name"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Afficher le titre du média à la place du nom de fichier"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, fuzzy, kde-format
-#| msgid "Auto load videos from same folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Charger automatiquement les vidéos à partir du même dossier"
@@ -1524,11 +1479,10 @@ msgid "Toggle with mouse"
 msgstr "Basculer avec la souris"
 
 #: src/qml/Settings/PlaylistSettings.qml:160
-#, fuzzy, kde-format
-#| msgid "Increase font size when fullscreen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
-msgstr "Augmenter la taille de la police en mode plein écran"
+msgstr "Augmenter la taille de la police lorsque en mode « Plein écran »"
 
 #: src/qml/Settings/SettingsWindow.qml:35
 #, kde-format
@@ -1726,11 +1680,10 @@ msgid "Saturation"
 msgstr "Saturation"
 
 #: src/qml/Settings/VideoSettings.qml:165
-#, fuzzy, kde-format
-#| msgid "Middle click on the sliders to reset them"
+#, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
-msgstr "Faire un clic central sur les curseurs pour le ré-initialiser"
+msgstr "Effectuer un clic central sur les curseurs pour le ré-initialiser"
 
 #~ msgid "Toggle Playlist"
 #~ msgstr "Afficher / Masquer la liste de lecture"
