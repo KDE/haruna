@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:44+0000\n"
+"POT-Creation-Date: 2022-11-05 00:45+0000\n"
 "PO-Revision-Date: 2022-06-28 10:39+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -27,49 +27,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org"
 
-#: src/application.cpp:150
+#: src/application.cpp:103
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "Přehrávač videa Haruna"
 
-#: src/application.cpp:152
+#: src/application.cpp:105
 #, fuzzy, kde-format
 #| msgid "A configurable video player."
 msgctxt "@title"
 msgid "A configurable video player."
 msgstr "Nastavitelný přehrávač videa"
 
-#: src/application.cpp:154
+#: src/application.cpp:107
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:160
+#: src/application.cpp:113
 #, fuzzy, kde-format
 #| msgid "George Florea Bănuș"
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:161
+#: src/application.cpp:114
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Vývojář"
 
-#: src/application.cpp:172
+#: src/application.cpp:125
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Soubor k otevření"
 
-#: src/application.cpp:176
+#: src/application.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:178
+#: src/application.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -932,7 +932,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199
+#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
 #, fuzzy, kde-format
 #| msgid "Select file"
 msgctxt "@title:window"
@@ -1105,14 +1105,14 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Zobrazit panel nástrojů"
 
-#: src/qml/MpvVideo.qml:131
+#: src/qml/MpvVideo.qml:135
 #, fuzzy, kde-format
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Přeskočena kapitola: %1"
 
-#: src/qml/MpvVideo.qml:148
+#: src/qml/MpvVideo.qml:152
 #, fuzzy, kde-format
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
@@ -1632,6 +1632,18 @@ msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr ""
 
+#: src/qml/Settings/PlaylistSettings.qml:173
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember last playlist state"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:180
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "When checked the playlist state (visible/hidden) "
+msgstr ""
+
 #: src/qml/Settings/SettingsWindow.qml:35
 #, fuzzy, kde-format
 #| msgid "Settings"
@@ -1798,63 +1810,81 @@ msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Šířka čáry"
 
-#: src/qml/Settings/VideoSettings.qml:28
+#: src/qml/Settings/VideoSettings.qml:29
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Default cover"
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:36
+#, kde-format
+msgctxt "placeholder text"
+msgid "path to image"
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Used for music files that don't have a video track, "
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:70
 #, fuzzy, kde-format
 #| msgid "Screenshots"
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Obrázky"
 
-#: src/qml/Settings/VideoSettings.qml:38
+#: src/qml/Settings/VideoSettings.qml:80
 #, fuzzy, kde-format
 #| msgid "Format"
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Formát"
 
-#: src/qml/Settings/VideoSettings.qml:74
+#: src/qml/Settings/VideoSettings.qml:116
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Šablona"
 
-#: src/qml/Settings/VideoSettings.qml:90
+#: src/qml/Settings/VideoSettings.qml:132
 #, fuzzy, kde-format
 #| msgid "Adjustments"
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Přizpůsobení"
 
-#: src/qml/Settings/VideoSettings.qml:100
+#: src/qml/Settings/VideoSettings.qml:142
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
-#: src/qml/Settings/VideoSettings.qml:117
+#: src/qml/Settings/VideoSettings.qml:159
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Jas"
 
-#: src/qml/Settings/VideoSettings.qml:134
+#: src/qml/Settings/VideoSettings.qml:176
 #, fuzzy, kde-format
 #| msgid "Gamma"
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:151
+#: src/qml/Settings/VideoSettings.qml:193
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Nasycení"
 
-#: src/qml/Settings/VideoSettings.qml:165
+#: src/qml/Settings/VideoSettings.qml:207
 #, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"

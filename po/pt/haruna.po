@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:44+0000\n"
+"POT-Creation-Date: 2022-11-05 00:45+0000\n"
 "PO-Revision-Date: 2022-10-28 11:41+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -29,43 +29,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: src/application.cpp:150
+#: src/application.cpp:103
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "Leitor de Vídeo Haruna"
 
-#: src/application.cpp:152
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "A configurable video player."
 msgstr "Um leitor de vídeo configurável."
 
-#: src/application.cpp:154
+#: src/application.cpp:107
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:160
+#: src/application.cpp:113
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:161
+#: src/application.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "desenvolvimento"
 
-#: src/application.cpp:172
+#: src/application.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "O ficheiro a abrir"
 
-#: src/application.cpp:176
+#: src/application.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -75,7 +75,7 @@ msgstr ""
 "Permite substituir temporariamente a configuração da selecção do formato "
 "YTDL. Será substituída se a opção for mudada através da interface"
 
-#: src/application.cpp:178
+#: src/application.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -823,7 +823,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199
+#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
 #, kde-format
 msgctxt "@title:window"
 msgid "Select file"
@@ -974,13 +974,13 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Mostrar a Barra de Ferramentas"
 
-#: src/qml/MpvVideo.qml:131
+#: src/qml/MpvVideo.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Saltou-se o capítulo: %1"
 
-#: src/qml/MpvVideo.qml:148
+#: src/qml/MpvVideo.qml:152
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
@@ -1457,6 +1457,18 @@ msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Aumentar o tamanho do texto com o ecrã completo"
 
+#: src/qml/Settings/PlaylistSettings.qml:173
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember last playlist state"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:180
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "When checked the playlist state (visible/hidden) "
+msgstr ""
+
 #: src/qml/Settings/SettingsWindow.qml:35
 #, kde-format
 msgctxt "@title:window"
@@ -1604,55 +1616,73 @@ msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Espessura do contorno"
 
-#: src/qml/Settings/VideoSettings.qml:28
+#: src/qml/Settings/VideoSettings.qml:29
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Default cover"
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:36
+#, kde-format
+msgctxt "placeholder text"
+msgid "path to image"
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Used for music files that don't have a video track, "
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:70
 #, kde-format
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Imagens"
 
-#: src/qml/Settings/VideoSettings.qml:38
+#: src/qml/Settings/VideoSettings.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Formato"
 
-#: src/qml/Settings/VideoSettings.qml:74
+#: src/qml/Settings/VideoSettings.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Modelo"
 
-#: src/qml/Settings/VideoSettings.qml:90
+#: src/qml/Settings/VideoSettings.qml:132
 #, kde-format
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Ajustes da imagem"
 
-#: src/qml/Settings/VideoSettings.qml:100
+#: src/qml/Settings/VideoSettings.qml:142
 #, kde-format
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Contraste"
 
-#: src/qml/Settings/VideoSettings.qml:117
+#: src/qml/Settings/VideoSettings.qml:159
 #, kde-format
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Brilho"
 
-#: src/qml/Settings/VideoSettings.qml:134
+#: src/qml/Settings/VideoSettings.qml:176
 #, kde-format
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:151
+#: src/qml/Settings/VideoSettings.qml:193
 #, kde-format
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Saturação"
 
-#: src/qml/Settings/VideoSettings.qml:165
+#: src/qml/Settings/VideoSettings.qml:207
 #, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
