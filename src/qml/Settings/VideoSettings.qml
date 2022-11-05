@@ -41,9 +41,7 @@ SettingsBasePage {
                 }
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Used for music files that don't have a video track, "
-                                + "an embedded cover image or a cover/folder image "
-                                + "in the same folder as the played file.")
+                    text: i18nc("@info:tooltip", "Used for music files that don't have a video track, an embedded cover image or a cover/folder image in the same folder as the played file.")
                 }
             }
 
