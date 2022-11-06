@@ -177,7 +177,8 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "When checked the playlist state (visible/hidden) is remembered across launches")
+                text: i18nc("@info:tooltip", "When checked the playlist state (visible/hidden) "
+                            + "is remembered across launches")
             }
         }
 
