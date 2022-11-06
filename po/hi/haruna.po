@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:45+0000\n"
+"POT-Creation-Date: 2022-11-06 00:46+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -916,7 +916,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:57
 #, fuzzy, kde-format
 #| msgid "Select file"
 msgctxt "@title:window"
@@ -1597,7 +1597,9 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:180
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "When checked the playlist state (visible/hidden) "
+msgid ""
+"When checked the playlist state (visible/hidden) is remembered across "
+"launches"
 msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:35
@@ -1777,66 +1779,68 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:44
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Used for music files that don't have a video track, "
+msgid ""
+"Used for music files that don't have a video track, an embedded cover image "
+"or a cover/folder image in the same folder as the played file."
 msgstr ""
 
-#: src/qml/Settings/VideoSettings.qml:70
+#: src/qml/Settings/VideoSettings.qml:68
 #, fuzzy, kde-format
 #| msgid "Screenshots"
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "स्क्रीनशॉट्स"
 
-#: src/qml/Settings/VideoSettings.qml:80
+#: src/qml/Settings/VideoSettings.qml:78
 #, fuzzy, kde-format
 #| msgid "Format"
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "फॉर्मेट"
 
-#: src/qml/Settings/VideoSettings.qml:116
+#: src/qml/Settings/VideoSettings.qml:114
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "नमूना"
 
-#: src/qml/Settings/VideoSettings.qml:132
+#: src/qml/Settings/VideoSettings.qml:130
 #, fuzzy, kde-format
 #| msgid "Adjustments"
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "समायोजन"
 
-#: src/qml/Settings/VideoSettings.qml:142
+#: src/qml/Settings/VideoSettings.qml:140
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "व्यतिरेक"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:157
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "चमकीलापन"
 
-#: src/qml/Settings/VideoSettings.qml:176
+#: src/qml/Settings/VideoSettings.qml:174
 #, fuzzy, kde-format
 #| msgid "Gamma"
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "गामा"
 
-#: src/qml/Settings/VideoSettings.qml:193
+#: src/qml/Settings/VideoSettings.qml:191
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "संतृप्ति"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:205
 #, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"

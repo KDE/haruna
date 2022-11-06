@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:45+0000\n"
-"PO-Revision-Date: 2022-10-28 11:41+0100\n"
+"POT-Creation-Date: 2022-11-06 00:46+0000\n"
+"PO-Revision-Date: 2022-11-05 13:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -823,7 +823,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:57
 #, kde-format
 msgctxt "@title:window"
 msgid "Select file"
@@ -1461,13 +1461,19 @@ msgstr "Aumentar o tamanho do texto com o ecrã completo"
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr ""
+msgstr "Recordar o último estado da lista de reprodução"
 
 #: src/qml/Settings/PlaylistSettings.qml:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "When checked the playlist state (visible/hidden) "
 msgctxt "@info:tooltip"
-msgid "When checked the playlist state (visible/hidden) "
+msgid ""
+"When checked the playlist state (visible/hidden) is remembered across "
+"launches"
 msgstr ""
+"Quando assinalado, o estado (visível/escondido) da lista de reprodução é "
+"guardado"
 
 #: src/qml/Settings/SettingsWindow.qml:35
 #, kde-format
@@ -1620,70 +1626,76 @@ msgstr "Espessura do contorno"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "Capa predefinida"
 
 #: src/qml/Settings/VideoSettings.qml:36
 #, kde-format
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr ""
+msgstr "localização da imagem"
 
 #: src/qml/Settings/VideoSettings.qml:44
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Used for music files that don't have a video track, "
+msgid ""
+"Used for music files that don't have a video track, an embedded cover image "
+"or a cover/folder image in the same folder as the played file."
 msgstr ""
 
-#: src/qml/Settings/VideoSettings.qml:70
+#: src/qml/Settings/VideoSettings.qml:68
 #, kde-format
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Imagens"
 
-#: src/qml/Settings/VideoSettings.qml:80
+#: src/qml/Settings/VideoSettings.qml:78
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Formato"
 
-#: src/qml/Settings/VideoSettings.qml:116
+#: src/qml/Settings/VideoSettings.qml:114
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Modelo"
 
-#: src/qml/Settings/VideoSettings.qml:132
+#: src/qml/Settings/VideoSettings.qml:130
 #, kde-format
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Ajustes da imagem"
 
-#: src/qml/Settings/VideoSettings.qml:142
+#: src/qml/Settings/VideoSettings.qml:140
 #, kde-format
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Contraste"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:157
 #, kde-format
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Brilho"
 
-#: src/qml/Settings/VideoSettings.qml:176
+#: src/qml/Settings/VideoSettings.qml:174
 #, kde-format
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:193
+#: src/qml/Settings/VideoSettings.qml:191
 #, kde-format
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Saturação"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:205
 #, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Botão do meio nas barras para as repor"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Used for music files that don't have a video track, "
+#~ msgstr "Usado para ficheiros de música que não têm uma faixa de vídeo, "

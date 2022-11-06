@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:45+0000\n"
-"PO-Revision-Date: 2022-10-28 21:00+0300\n"
+"POT-Creation-Date: 2022-11-06 00:46+0000\n"
+"PO-Revision-Date: 2022-11-05 19:29+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -822,7 +822,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:57
 #, kde-format
 msgctxt "@title:window"
 msgid "Select file"
@@ -1465,13 +1465,17 @@ msgstr "Збільшити розмір шрифту у повноекранно
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr ""
+msgstr "Запам'ятовувати останній стан списку відтворення"
 
 #: src/qml/Settings/PlaylistSettings.qml:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "When checked the playlist state (visible/hidden) "
 msgctxt "@info:tooltip"
-msgid "When checked the playlist state (visible/hidden) "
-msgstr ""
+msgid ""
+"When checked the playlist state (visible/hidden) is remembered across "
+"launches"
+msgstr "Якщо позначено, стан списку відтворення (видимий/прихований)"
 
 #: src/qml/Settings/SettingsWindow.qml:35
 #, kde-format
@@ -1624,74 +1628,80 @@ msgstr "Ширина рамки"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "Типова обкладинка"
 
 #: src/qml/Settings/VideoSettings.qml:36
 #, kde-format
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr ""
+msgstr "шлях до зображення"
 
 #: src/qml/Settings/VideoSettings.qml:44
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Used for music files that don't have a video track, "
+msgid ""
+"Used for music files that don't have a video track, an embedded cover image "
+"or a cover/folder image in the same folder as the played file."
 msgstr ""
 
-#: src/qml/Settings/VideoSettings.qml:70
+#: src/qml/Settings/VideoSettings.qml:68
 #, kde-format
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Знімки екрана"
 
-#: src/qml/Settings/VideoSettings.qml:80
+#: src/qml/Settings/VideoSettings.qml:78
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Формат"
 
-#: src/qml/Settings/VideoSettings.qml:116
+#: src/qml/Settings/VideoSettings.qml:114
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Шаблон"
 
-#: src/qml/Settings/VideoSettings.qml:132
+#: src/qml/Settings/VideoSettings.qml:130
 #, kde-format
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Коригування зображення"
 
-#: src/qml/Settings/VideoSettings.qml:142
+#: src/qml/Settings/VideoSettings.qml:140
 #, kde-format
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Контрастність"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:157
 #, kde-format
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Яскравість"
 
-#: src/qml/Settings/VideoSettings.qml:176
+#: src/qml/Settings/VideoSettings.qml:174
 #, kde-format
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Гамма"
 
-#: src/qml/Settings/VideoSettings.qml:193
+#: src/qml/Settings/VideoSettings.qml:191
 #, kde-format
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Насиченість"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:205
 #, kde-format
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
 "Клацніть середньою кнопкою миші на повзунках, щоб відновити типові значення"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Used for music files that don't have a video track, "
+#~ msgstr "Буде використано для музичних файлів, у яких немає відеодоріжки, "
 
 #~ msgid "Toggle Playlist"
 #~ msgstr "Перемкнути список відтворення"
