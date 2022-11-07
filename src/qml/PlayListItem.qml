@@ -79,7 +79,7 @@ Kirigami.BasicListItem {
                 Binding {
                     target: root
                     property: "implicitHeight"
-                    value: root.fontSize * 3 + PlaylistSettings.rowHeight
+                    value: root.fontSize * 3
                 }
             }
 

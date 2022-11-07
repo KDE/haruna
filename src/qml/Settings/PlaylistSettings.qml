@@ -49,23 +49,6 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Row height")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        SpinBox {
-            from: 0
-            to: 100
-            value: PlaylistSettings.rowHeight
-            enabled: PlaylistSettings.style === "compact" ? false : true
-            onValueChanged: {
-                PlaylistSettings.rowHeight = value
-                PlaylistSettings.save()
-                playList.playlistView.forceLayout()
-            }
-        }
-
-        Label {
             text: i18nc("@label:listbox", "Playlist style")
             Layout.alignment: Qt.AlignRight
         }
