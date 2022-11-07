@@ -19,7 +19,7 @@ Kirigami.BasicListItem {
     property bool isPlaying: model.isPlaying
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
-    property int fontSize: (window.isFullScreen() && playList.bigFont)
+    property int fontSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
                            ? Kirigami.Units.gridUnit
                            : Kirigami.Units.gridUnit - 6
 
