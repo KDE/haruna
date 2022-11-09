@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-07 00:44+0000\n"
-"PO-Revision-Date: 2022-11-03 21:52+0530\n"
+"PO-Revision-Date: 2022-11-08 21:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -165,7 +165,7 @@ msgstr "கோப்பை திற"
 #, kde-format
 msgctxt "@action"
 msgid "Add external subtitle…"
-msgstr ""
+msgstr "துணை உரையை வேறு கோப்பிலிருந்து சேர்…"
 
 #: src/models/actionsmodel.cpp:117
 #, kde-format
@@ -270,18 +270,16 @@ msgid "Seek Previous Chapter"
 msgstr "முந்தைய பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:236
-#, fuzzy, kde-format
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr "அடுத்த பகுதிக்கு செல்"
+msgstr "அடுத்த துணையுரைக்குச் செல்"
 
 #: src/models/actionsmodel.cpp:243
-#, fuzzy, kde-format
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "முந்தைய பகுதிக்கு செல்"
+msgstr "முந்தைய துணையுரைக்குச் செல்"
 
 #: src/models/actionsmodel.cpp:250
 #, kde-format
@@ -305,43 +303,43 @@ msgstr "திரைப்பிடிப்பு"
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
-msgstr ""
+msgstr "துணையுரையைக் காட்டு/மறை"
 
 #: src/models/actionsmodel.cpp:278
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
-msgstr ""
+msgstr "துணையுரையைப் பெரிதாக்கு"
 
 #: src/models/actionsmodel.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
-msgstr ""
+msgstr "துணையுரையை சிறிதாக்கு"
 
 #: src/models/actionsmodel.cpp:292
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
-msgstr ""
+msgstr "துணையுரையை மேலே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:299
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
-msgstr ""
+msgstr "துணையுரையை கீழே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
-msgstr ""
+msgstr "துணையுரையை வேகப்படுத்து"
 
 #: src/models/actionsmodel.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
-msgstr ""
+msgstr "துணையுரையைத் தாமதமாக்கு"
 
 #: src/models/actionsmodel.cpp:320
 #, kde-format
@@ -525,13 +523,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "இதற்கே அமர்த்து"
 
 #: src/mpv/mpvitem.cpp:631
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
-msgstr ""
+msgstr "பாடல்வரிசை காலியாக உள்ளது"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
 msgctxt "@info:tooltip"
@@ -546,7 +544,7 @@ msgstr "இயக்கும் வேகம்: %1"
 #: src/qml/Actions.qml:236
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
-msgstr ""
+msgstr "சுழற்சியின் துவக்கம்: %1"
 
 #: src/qml/Actions.qml:240
 msgctxt "@info:tooltip"
@@ -556,7 +554,7 @@ msgstr "சுழற்சி: %1 - %2"
 #: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
-msgstr ""
+msgstr "சுழற்சி நீக்கப்பட்டது"
 
 #: src/qml/Actions.qml:254 src/qml/Actions.qml:259
 msgctxt "@info:tooltip"
@@ -576,14 +574,12 @@ msgstr ""
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:285
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
-msgstr ""
+msgstr "துணையுரை: ஏதுமில்லை"
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:289
-#, fuzzy
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr "ஒலி: %1 %2"
+msgstr "துணையுரை: %1 %2"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
