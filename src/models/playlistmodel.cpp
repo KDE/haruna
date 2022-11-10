@@ -23,9 +23,13 @@ PlayListModel::PlayListModel(QObject *parent)
     connect(this, &PlayListModel::videoAdded,
             Worker::instance(), &Worker::getMetaData);
 
-    connect(Worker::instance(), &Worker::metaDataReady, this, [ = ](int i, KFileMetaData::PropertyMap metaData) {
-        auto duration = metaData[KFileMetaData::Property::Duration].toInt();
-        auto title = metaData[KFileMetaData::Property::Title].toString();
+#if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
+    connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, KFileMetaData::PropertyMultiMap metaData) {
+#else
+    connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, KFileMetaData::PropertyMap metaData) {
+#endif
+        auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
+        auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
         m_playList[i]->setDuration(Application::formatTime(duration));
         m_playList[i]->setMediaTitle(title);

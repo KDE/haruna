@@ -20,7 +20,6 @@
 #include <KConfigGroup>
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
-#include <kconfig_version.h>
 
 Worker* Worker::instance()
 {

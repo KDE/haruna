@@ -10,6 +10,7 @@
 #include <QObject>
 #include <KFileMetaData/Properties>
 #include <memory>
+#include <kconfig_version.h>
 
 class KConfig;
 
@@ -20,7 +21,11 @@ public:
     static Worker* instance();
 
 Q_SIGNALS:
+#if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
+    void metaDataReady(int index, KFileMetaData::PropertyMultiMap metadata);
+#else
     void metaDataReady(int index, KFileMetaData::PropertyMap metadata);
+#endif
     void thumbnailSuccess(const QImage &image);
     void thumbnailFail();
 

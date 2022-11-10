@@ -145,7 +145,12 @@ void Application::registerQmlTypes()
     qRegisterMetaType<PlayListModel*>();
     qRegisterMetaType<PlayListItem*>();
     qRegisterMetaType<TracksModel*>();
+
+#if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
+    qRegisterMetaType<KFileMetaData::PropertyMap>("KFileMetaData::PropertyMultiMap");
+#else
     qRegisterMetaType<KFileMetaData::PropertyMap>("KFileMetaData::PropertyMap");
+#endif
     // models
     qmlRegisterType<SubtitlesFoldersModel>("org.kde.haruna.models", 1, 0, "SubtitlesFoldersModel");
     qmlRegisterType<ActionsModel>("org.kde.haruna.models",          1, 0, "ActionsModel");
