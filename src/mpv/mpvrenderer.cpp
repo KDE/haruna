@@ -34,13 +34,17 @@ void on_mpv_redraw(void *ctx)
 MpvRenderer::MpvRenderer(MpvCore *new_obj)
     : m_mpv_core{new_obj}
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     m_mpv_core->window()->setPersistentOpenGLContext(true);
+#endif
     m_mpv_core->window()->setPersistentSceneGraph(true);
 }
 
 void MpvRenderer::render()
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     m_mpv_core->window()->resetOpenGLState();
+#endif
 
     QOpenGLFramebufferObject *fbo = framebufferObject();
     mpv_opengl_fbo mpfbo;
@@ -64,7 +68,9 @@ void MpvRenderer::render()
     // other API details.
     mpv_render_context_render(m_mpv_core->m_mpv_gl, params);
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     m_mpv_core->window()->resetOpenGLState();
+#endif
 }
 
 QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size)
@@ -79,23 +85,22 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
 #endif
 
         mpv_render_param display{MPV_RENDER_PARAM_INVALID, nullptr};
-#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN) && QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         if(QX11Info::isPlatformX11()) {
             display.type = MPV_RENDER_PARAM_X11_DISPLAY;
             display.data = QX11Info::display();
+        }
+        if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+            display.type = MPV_RENDER_PARAM_WL_DISPLAY;
+            display.data = (struct wl_display*)QGuiApplication::platformNativeInterface()
+                    ->nativeResourceForWindow("display", nullptr);
         }
 #else
         if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
             display.type = MPV_RENDER_PARAM_X11_DISPLAY;
             display.data = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
         }
-#endif
-        if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
-            display.type = MPV_RENDER_PARAM_WL_DISPLAY;
-            display.data = (struct wl_display*)QGuiApplication::platformNativeInterface()
-                    ->nativeResourceForWindow("display", nullptr);
-        }
+        // TODO: figure out qt6 alternative for the wayland part
 #endif
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
