@@ -10,9 +10,9 @@
 #include "mpvcore.h"
 #include "playlistmodel.h"
 #include "tracksmodel.h"
+#include "track.h"
 
 class MpvRenderer;
-class Track;
 
 class MpvItem : public MpvCore
 {

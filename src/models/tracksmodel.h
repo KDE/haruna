@@ -10,7 +10,7 @@
 #include <QAbstractListModel>
 #include <QObject>
 
-class Track;
+#include "track.h"
 
 class TracksModel : public QAbstractListModel
 {
