@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:44+0000\n"
+"POT-Creation-Date: 2022-11-11 00:45+0000\n"
 "PO-Revision-Date: 2022-06-28 10:39+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -428,7 +428,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Přepnout deinterlace"
 
-#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
+#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:92
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
@@ -921,35 +921,35 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/main.qml:30
+#: src/qml/main.qml:29
 #, fuzzy
 #| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vybrat soubor"
 
-#: src/qml/main.qml:227
+#: src/qml/main.qml:226
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Vybrat soubor"
 
-#: src/qml/main.qml:253
+#: src/qml/main.qml:252
 #, fuzzy
 #| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> nebylo nalezeno."
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:279
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1544,149 +1544,142 @@ msgstr "Pozice"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 #, fuzzy
-#| msgid "Row height"
-msgctxt "@label:spinbox"
-msgid "Row height"
-msgstr "Výška řady"
-
-#: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
 #| msgid "Playlist style"
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Styl seznamu skladeb"
 
-#: src/qml/Settings/PlaylistSettings.qml:97
+#: src/qml/Settings/PlaylistSettings.qml:80
 #, fuzzy
 #| msgid "Playing video."
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Přehrává video."
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:114
 #, fuzzy
 #| msgid "Repeat"
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Opakovat"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:124
 #, fuzzy
 #| msgid "Show row number"
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Zobrazit číslo řady"
 
-#: src/qml/Settings/PlaylistSettings.qml:151
+#: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:160
+#: src/qml/Settings/PlaylistSettings.qml:143
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:173
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:180
+#: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:35
+#: src/qml/Settings/SettingsWindow.qml:34
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: src/qml/Settings/SettingsWindow.qml:53
+#: src/qml/Settings/SettingsWindow.qml:52
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "Obecné"
 
-#: src/qml/Settings/SettingsWindow.qml:61
+#: src/qml/Settings/SettingsWindow.qml:60
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "Přehrávání"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:68
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:76
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/qml/Settings/SettingsWindow.qml:85
+#: src/qml/Settings/SettingsWindow.qml:84
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Titulky"
 
-#: src/qml/Settings/SettingsWindow.qml:101
+#: src/qml/Settings/SettingsWindow.qml:100
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Myš"
 
-#: src/qml/Settings/SettingsWindow.qml:109
+#: src/qml/Settings/SettingsWindow.qml:108
 #, fuzzy
 #| msgid "Shortcuts"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Zkratky"
 
-#: src/qml/Settings/SettingsWindow.qml:117
+#: src/qml/Settings/SettingsWindow.qml:116
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Vlastní příkazy"
 
-#: src/qml/Settings/SettingsWindow.qml:125
+#: src/qml/Settings/SettingsWindow.qml:124
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "O aplikaci"
 
-#: src/qml/Settings/SettingsWindow.qml:163
+#: src/qml/Settings/SettingsWindow.qml:162
 #, fuzzy
 #| msgid "Help"
 msgctxt "@title:window"
@@ -1854,3 +1847,9 @@ msgstr "Nasycení"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Row height"
+#~ msgctxt "@label:spinbox"
+#~ msgid "Row height"
+#~ msgstr "Výška řady"

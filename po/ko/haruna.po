@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:44+0000\n"
+"POT-Creation-Date: 2022-11-11 00:45+0000\n"
 "PO-Revision-Date: 2022-08-09 13:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -434,7 +434,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "머리글 전환"
 
-#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
+#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:92
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
@@ -944,35 +944,35 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/main.qml:30
+#: src/qml/main.qml:29
 #, fuzzy
 #| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: src/qml/main.qml:227
+#: src/qml/main.qml:226
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "파일 선택"
 
-#: src/qml/main.qml:253
+#: src/qml/main.qml:252
 #, fuzzy
 #| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a>을 찾을 수 없습니다."
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:279
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1608,26 +1608,19 @@ msgstr "위치"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 #, fuzzy
-#| msgid "Row height"
-msgctxt "@label:spinbox"
-msgid "Row height"
-msgstr "줄 높이"
-
-#: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
 #| msgid "Playlist style"
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "재생 목록 스타일"
 
-#: src/qml/Settings/PlaylistSettings.qml:97
+#: src/qml/Settings/PlaylistSettings.qml:80
 #, fuzzy
 #| msgid "Overlay video"
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "동영상 오버레이"
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:87
 #, fuzzy
 #| msgid ""
 #| "When checked the playlist goes on top of the video\n"
@@ -1640,131 +1633,131 @@ msgstr ""
 "이 옵션을 사용하면 재생 목록을 동영상 위에 표시합니다\n"
 "이 옵션을 사용하지 않으면 동영상의 크기를 조절합니다"
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:94
 #, fuzzy
 #| msgid "Show media title instead of file name"
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "파일 이름 대신 미디어 제목 표시"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:104
 #, fuzzy
 #| msgid "Auto load videos from same folder"
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "같은 폴더의 동영상 자동으로 불러오기"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:114
 #, fuzzy
 #| msgid "Repeat"
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "반복"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:124
 #, fuzzy
 #| msgid "Show row number"
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "줄 번호 표시"
 
-#: src/qml/Settings/PlaylistSettings.qml:151
+#: src/qml/Settings/PlaylistSettings.qml:134
 #, fuzzy
 #| msgid "Toggle with mouse"
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "마우스로 전환"
 
-#: src/qml/Settings/PlaylistSettings.qml:160
+#: src/qml/Settings/PlaylistSettings.qml:143
 #, fuzzy
 #| msgid "Increase font size when fullscreen"
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "전체 화면에서 글꼴 크기 증가"
 
-#: src/qml/Settings/PlaylistSettings.qml:173
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:180
+#: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:35
+#: src/qml/Settings/SettingsWindow.qml:34
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "설정"
 
-#: src/qml/Settings/SettingsWindow.qml:53
+#: src/qml/Settings/SettingsWindow.qml:52
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "일반"
 
-#: src/qml/Settings/SettingsWindow.qml:61
+#: src/qml/Settings/SettingsWindow.qml:60
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "재생"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:68
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "비디오"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:76
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/Settings/SettingsWindow.qml:85
+#: src/qml/Settings/SettingsWindow.qml:84
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "자막"
 
-#: src/qml/Settings/SettingsWindow.qml:101
+#: src/qml/Settings/SettingsWindow.qml:100
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "마우스"
 
-#: src/qml/Settings/SettingsWindow.qml:109
+#: src/qml/Settings/SettingsWindow.qml:108
 #, fuzzy
 #| msgid "Shortcuts"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: src/qml/Settings/SettingsWindow.qml:117
+#: src/qml/Settings/SettingsWindow.qml:116
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "사용자 정의 명령"
 
-#: src/qml/Settings/SettingsWindow.qml:125
+#: src/qml/Settings/SettingsWindow.qml:124
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "정보"
 
-#: src/qml/Settings/SettingsWindow.qml:163
+#: src/qml/Settings/SettingsWindow.qml:162
 #, fuzzy
 #| msgid "Help"
 msgctxt "@title:window"
@@ -1944,6 +1937,12 @@ msgstr "채도"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
+
+#, fuzzy
+#~| msgid "Row height"
+#~ msgctxt "@label:spinbox"
+#~ msgid "Row height"
+#~ msgstr "줄 높이"
 
 #~ msgid "Toggle Playlist"
 #~ msgstr "재생 목록 전환"

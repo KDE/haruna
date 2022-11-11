@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:44+0000\n"
+"POT-Creation-Date: 2022-11-11 00:45+0000\n"
 "PO-Revision-Date: 2021-10-10 11:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -432,7 +432,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Przełącz nagłówek"
 
-#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
+#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:92
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
@@ -934,35 +934,35 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Pomiń rozdziały"
 
-#: src/qml/main.qml:30
+#: src/qml/main.qml:29
 #, fuzzy
 #| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Odtwórz następny plik"
 
-#: src/qml/main.qml:227
+#: src/qml/main.qml:226
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Odtwórz następny plik"
 
-#: src/qml/main.qml:253
+#: src/qml/main.qml:252
 #, fuzzy
 #| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "Nie znaleziono <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:279
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1582,26 +1582,19 @@ msgstr "Położenie"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 #, fuzzy
-#| msgid "Row height"
-msgctxt "@label:spinbox"
-msgid "Row height"
-msgstr "Wysokość wiersza"
-
-#: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
 #| msgid "Playlist style"
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Wygląd listy odtwarzania"
 
-#: src/qml/Settings/PlaylistSettings.qml:97
+#: src/qml/Settings/PlaylistSettings.qml:80
 #, fuzzy
 #| msgid "Overlay video"
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Nakładka na film"
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:87
 #, fuzzy
 #| msgid ""
 #| "When checked the playlist goes on top of the video\n"
@@ -1614,131 +1607,131 @@ msgstr ""
 "Po zaznaczeniu, lista odtwarzania przechodzi na górę filmu\n"
 "Po odznaczeniu, zmieniany jest rozmiar filmu"
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:94
 #, fuzzy
 #| msgid "Show media title instead of file name"
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Pokaż tytuł treści pliku zamiast jego nazwy"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:104
 #, fuzzy
 #| msgid "Auto load videos from same folder"
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Sam wczytuj filmy z tego samego katalogu"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:114
 #, fuzzy
 #| msgid "Repeat"
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Powtórz"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:124
 #, fuzzy
 #| msgid "Show row number"
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Pokaż numer wiersza"
 
-#: src/qml/Settings/PlaylistSettings.qml:151
+#: src/qml/Settings/PlaylistSettings.qml:134
 #, fuzzy
 #| msgid "Toggle with mouse"
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Przełącz przy użyciu myszy"
 
-#: src/qml/Settings/PlaylistSettings.qml:160
+#: src/qml/Settings/PlaylistSettings.qml:143
 #, fuzzy
 #| msgid "Increase font size when fullscreen"
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Zwiększ rozmiar czcionki w trybie pełnoekranowym"
 
-#: src/qml/Settings/PlaylistSettings.qml:173
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:180
+#: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:35
+#: src/qml/Settings/SettingsWindow.qml:34
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: src/qml/Settings/SettingsWindow.qml:53
+#: src/qml/Settings/SettingsWindow.qml:52
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "Ogólne"
 
-#: src/qml/Settings/SettingsWindow.qml:61
+#: src/qml/Settings/SettingsWindow.qml:60
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "Odtwarzanie"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:68
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "Wideo"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:76
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "Dźwięk"
 
-#: src/qml/Settings/SettingsWindow.qml:85
+#: src/qml/Settings/SettingsWindow.qml:84
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Napisy"
 
-#: src/qml/Settings/SettingsWindow.qml:101
+#: src/qml/Settings/SettingsWindow.qml:100
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Mysz"
 
-#: src/qml/Settings/SettingsWindow.qml:109
+#: src/qml/Settings/SettingsWindow.qml:108
 #, fuzzy
 #| msgid "Shortcut"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Skrót"
 
-#: src/qml/Settings/SettingsWindow.qml:117
+#: src/qml/Settings/SettingsWindow.qml:116
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Własne polecenia"
 
-#: src/qml/Settings/SettingsWindow.qml:125
+#: src/qml/Settings/SettingsWindow.qml:124
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "O programie"
 
-#: src/qml/Settings/SettingsWindow.qml:163
+#: src/qml/Settings/SettingsWindow.qml:162
 #, fuzzy
 #| msgid "Help"
 msgctxt "@title:window"
@@ -1900,6 +1893,12 @@ msgstr "Nasycenie"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Naciśnięcie środkowym na suwaku zeruje go"
+
+#, fuzzy
+#~| msgid "Row height"
+#~ msgctxt "@label:spinbox"
+#~ msgid "Row height"
+#~ msgstr "Wysokość wiersza"
 
 #, fuzzy
 #~| msgid "Playlist"

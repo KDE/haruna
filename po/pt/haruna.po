@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:44+0000\n"
+"POT-Creation-Date: 2022-11-11 00:45+0000\n"
 "PO-Revision-Date: 2022-11-06 11:46+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -381,7 +381,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Comutar o Cabeçalho"
 
-#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:93
+#: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:92
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -770,28 +770,28 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Saltar os Capítulos"
 
-#: src/qml/main.qml:30
+#: src/qml/main.qml:29
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:199 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccionar o ficheiro"
 
-#: src/qml/main.qml:227
+#: src/qml/main.qml:226
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccionar o ficheiro de legendas"
 
-#: src/qml/main.qml:253
+#: src/qml/main.qml:252
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr ""
 "O <a href=\"https://youtube-dl.org\">Youtube-dl</a> não foi encontrado."
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:279
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"
@@ -1258,21 +1258,16 @@ msgid "Position"
 msgstr "Posição"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
-msgctxt "@label:spinbox"
-msgid "Row height"
-msgstr "Altura da linha"
-
-#: src/qml/Settings/PlaylistSettings.qml:69
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Estilo da lista de reprodução"
 
-#: src/qml/Settings/PlaylistSettings.qml:97
+#: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Sobreposição ao vídeo"
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1281,42 +1276,42 @@ msgstr ""
 "Quando estiver assinalada, a lista de reprodução sobrepõe-se ao vídeo\n"
 "Quando estiver desligada, o vídeo é dimensionado de novo"
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Mostrar o título do conteúdo em vez do nome do ficheiro"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Carregar automaticamente os vídeos da mesma pasta"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Repetir"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Mostrar o número da linha"
 
-#: src/qml/Settings/PlaylistSettings.qml:151
+#: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Comutar com o rato"
 
-#: src/qml/Settings/PlaylistSettings.qml:160
+#: src/qml/Settings/PlaylistSettings.qml:143
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Aumentar o tamanho do texto com o ecrã completo"
 
-#: src/qml/Settings/PlaylistSettings.qml:173
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Recordar o último estado da lista de reprodução"
 
-#: src/qml/Settings/PlaylistSettings.qml:180
+#: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -1325,57 +1320,57 @@ msgstr ""
 "Quando assinalado, o estado (visível/escondido) da lista de reprodução é "
 "guardado entre sessões"
 
-#: src/qml/Settings/SettingsWindow.qml:35
+#: src/qml/Settings/SettingsWindow.qml:34
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Configuração"
 
-#: src/qml/Settings/SettingsWindow.qml:53
+#: src/qml/Settings/SettingsWindow.qml:52
 msgctxt "@action"
 msgid "General"
 msgstr "Geral"
 
-#: src/qml/Settings/SettingsWindow.qml:61
+#: src/qml/Settings/SettingsWindow.qml:60
 msgctxt "@action"
 msgid "Playback"
 msgstr "Reprodução"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:68
 msgctxt "@action"
 msgid "Video"
 msgstr "Vídeo"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:76
 msgctxt "@action"
 msgid "Audio"
 msgstr "Áudio"
 
-#: src/qml/Settings/SettingsWindow.qml:85
+#: src/qml/Settings/SettingsWindow.qml:84
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Legendas"
 
-#: src/qml/Settings/SettingsWindow.qml:101
+#: src/qml/Settings/SettingsWindow.qml:100
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Rato"
 
-#: src/qml/Settings/SettingsWindow.qml:109
+#: src/qml/Settings/SettingsWindow.qml:108
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: src/qml/Settings/SettingsWindow.qml:117
+#: src/qml/Settings/SettingsWindow.qml:116
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Comandos personalizados"
 
-#: src/qml/Settings/SettingsWindow.qml:125
+#: src/qml/Settings/SettingsWindow.qml:124
 msgctxt "@action"
 msgid "About"
 msgstr "Acerca"
 
-#: src/qml/Settings/SettingsWindow.qml:163
+#: src/qml/Settings/SettingsWindow.qml:162
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Ajuda"
@@ -1512,6 +1507,10 @@ msgstr "Saturação"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Botão do meio nas barras para as repor"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Row height"
+#~ msgstr "Altura da linha"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Used for music files that don't have a video track, "
