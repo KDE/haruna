@@ -31,14 +31,23 @@ modules:
           - /include
           - /lib/pkgconfig
           - /share/man
-        buildsystem: meson
-        config-opts:
-          - '-Dlua=enabled'
-          - '-Dlibmpv=true'
+        # buildsystem: meson
+        # config-opts:
+        #   - '-Dlua=enabled'
+        #   - '-Dlibmpv=true'
+        buildsystem: simple
+        build-commands:
+          - python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa
+          - python3 waf build
+          - python3 waf install
         sources:
           - type: archive
             url: 'https://github.com/mpv-player/mpv/archive/refs/tags/v0.35.0.tar.gz'
             sha256: 'dc411c899a64548250c142bf1fa1aa7528f1b4398a24c86b816093999049ec00'
+          - type: file
+            url: 'https://waf.io/waf-2.0.24'
+            sha256: '93909bca823a675f9f40af7c65b24887c3a3c0efdf411ff1978ba827194bdeb0'
+            dest-filename: waf
         modules:
           - name: luajit
             no-autogen: true
