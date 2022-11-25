@@ -25,7 +25,7 @@ Kirigami.ApplicationWindow {
         Playlist,
         Mouse,
         Shortcuts,
-        CusomCommands,
+        CustomCommands,
         About
     }
 
