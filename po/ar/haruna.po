@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-11 00:45+0000\n"
-"PO-Revision-Date: 2022-09-12 20:48+0400\n"
+"PO-Revision-Date: 2022-11-24 09:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -29,43 +29,37 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: src/application.cpp:103
-#, fuzzy, kde-format
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Video Player"
 msgstr "مشغل فيديو هارونا"
 
 #: src/application.cpp:105
-#, fuzzy, kde-format
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable video player."
 msgstr "مشغل فيديو قابل للتخصيص"
 
 #: src/application.cpp:107
-#, fuzzy, kde-format
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2021"
 msgstr "(c) 2019-2021"
 
 #: src/application.cpp:113
-#, fuzzy, kde-format
-#| msgid "George Florea Bănuș"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "جورج فلوريا بونوي"
 
 #: src/application.cpp:114
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "مطوّر"
 
 #: src/application.cpp:125
-#, fuzzy, kde-format
-#| msgid "File to open"
+#, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "الملف المراد فتحه"
@@ -77,524 +71,449 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"يسمح بتجاوز مؤقتًا لإعداد اختيار تنسيق YTDL. سيستبدل إذا غُيّر الإعداد من خلال "
+"واجهة المستخدم الرسومية"
 
 #: src/application.cpp:131
-#, fuzzy, kde-format
-#| msgid "bestvideo+bestaudio/best"
+#, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:34
-#, fuzzy, kde-format
-#| msgid "Playing video."
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing video"
-msgstr "يشغل فيديو."
+msgstr "يشغل فيديو"
 
 #: src/models/actionsmodel.cpp:23
-#, fuzzy, kde-format
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "عن هارونا"
 
 #: src/models/actionsmodel.cpp:30
-#, fuzzy, kde-format
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "دور الصوت للأعلى"
 
 #: src/models/actionsmodel.cpp:37
-#, fuzzy, kde-format
-#| msgid "Audio Cycle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "دور الصوت للأسفل"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "اضبط"
 
 #: src/models/actionsmodel.cpp:51
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "اضبط اختصارات لوحة المفاتيح"
 
 #: src/models/actionsmodel.cpp:58
-#, fuzzy, kde-format
-#| msgid "Exit Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "أخرج من ملء الشّاشة"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "اسعَ بخطوة للأمام"
 
 #: src/models/actionsmodel.cpp:73
-#, fuzzy, kde-format
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "اسعَ بخطوة للخلف"
 
 #: src/models/actionsmodel.cpp:81
-#, fuzzy, kde-format
-#| msgid "Load Last Played File"
+#, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "حمّل أخر ملف مشغل"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "اكتم"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgid "Open Context Menu"
+#, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "افتح قائمة السياق"
 
 #: src/models/actionsmodel.cpp:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Opens and closes the context menu at the position of the mouse pointer"
+#, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "يفتح ويغلق قائمة السياق في موضع مؤشر الفأرة"
 
 #: src/models/actionsmodel.cpp:103
-#, fuzzy, kde-format
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open File"
-msgstr "افتح الملف"
+msgstr "افتح ملفًّا"
 
 #: src/models/actionsmodel.cpp:110
-#, fuzzy, kde-format
-#| msgid "Add external subtitle…"
+#, kde-format
 msgctxt "@action"
 msgid "Add external subtitle…"
 msgstr "أضف ترجمات خارجية…"
 
 #: src/models/actionsmodel.cpp:117
-#, fuzzy, kde-format
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "افتح المسار"
 
 #: src/models/actionsmodel.cpp:124
-#, fuzzy, kde-format
-#| msgid "Playback speed increase"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed increase"
 msgstr "زيادة سرعة التشغيل"
 
 #: src/models/actionsmodel.cpp:131
-#, fuzzy, kde-format
-#| msgid "Playback speed decrease"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed decrease"
 msgstr "خفض سرعة التشغيل"
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgid "Playback speed reset"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed reset"
 msgstr "صفّر سرعة التشغيل"
 
 #: src/models/actionsmodel.cpp:145
-#, fuzzy, kde-format
-#| msgid "Play/Pause"
+#, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "شغّل/ألبث"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "شغل التالي"
 
 #: src/models/actionsmodel.cpp:159
-#, fuzzy, kde-format
-#| msgid "Play Previous"
+#, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "شغل السابق"
 
 #: src/models/actionsmodel.cpp:166
-#, fuzzy, kde-format
-#| msgid "Quit"
+#, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "أنهِ"
 
 #: src/models/actionsmodel.cpp:173
-#, fuzzy, kde-format
-#| msgid "Restart Playback"
+#, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "أعد تشغيل"
 
 #: src/models/actionsmodel.cpp:180
-#, fuzzy, kde-format
-#| msgid "Seek Small Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "اسعَ بخطوة صغيرة للأمام"
 
 #: src/models/actionsmodel.cpp:187
-#, fuzzy, kde-format
-#| msgid "Seek Small Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "اسعَ بخطوة صغيرة للخلف"
 
 #: src/models/actionsmodel.cpp:194
-#, fuzzy, kde-format
-#| msgid "Seek Medium Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "اسعَ بخطوة متوسطة للأمام"
 
 #: src/models/actionsmodel.cpp:201
-#, fuzzy, kde-format
-#| msgid "Seek Medium Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "اسعَ بخطوة متوسطة للخلف"
 
 #: src/models/actionsmodel.cpp:208
-#, fuzzy, kde-format
-#| msgid "Seek Big Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "اسعَ بخطوة كبيرة للأمام"
 
 #: src/models/actionsmodel.cpp:215
-#, fuzzy, kde-format
-#| msgid "Seek Big Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "اسعَ بخطوة كبيرة للخلف"
 
 #: src/models/actionsmodel.cpp:222
-#, fuzzy, kde-format
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "اسعَ للفصل التالي"
 
 #: src/models/actionsmodel.cpp:229
-#, fuzzy, kde-format
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "اسعَ للفصل السابق"
 
 #: src/models/actionsmodel.cpp:236
-#, fuzzy, kde-format
-#| msgid "Seek To Next Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "اسعَ للترجمة التالية"
 
 #: src/models/actionsmodel.cpp:243
-#, fuzzy, kde-format
-#| msgid "Seek To Previous Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "اسعَ للترجمة السابقة"
 
 #: src/models/actionsmodel.cpp:250
-#, fuzzy, kde-format
-#| msgid "Seek To Watch Later Position"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "اسعَ لمشاهدة أخر موقف"
 
 #: src/models/actionsmodel.cpp:257
-#, fuzzy, kde-format
-#| msgid "Set Loop"
+#, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "عين الحلقة"
 
 #: src/models/actionsmodel.cpp:264
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "لقطة شاشة"
 
 #: src/models/actionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgid "Subtitle Toggle"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "تبديل الترجمة"
 
 #: src/models/actionsmodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "زد من حجم خط الترجمة"
 
 #: src/models/actionsmodel.cpp:285
-#, fuzzy, kde-format
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "أنقص حجم خط الترجمة"
 
 #: src/models/actionsmodel.cpp:292
-#, fuzzy, kde-format
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "حرك الترجمة للأعلى"
 
 #: src/models/actionsmodel.cpp:299
-#, fuzzy, kde-format
-#| msgid "Subtitle Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "حرك الترجمة للأسفل"
 
 #: src/models/actionsmodel.cpp:306
-#, fuzzy, kde-format
-#| msgid "Subtitle Quicken"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "تسريع الترجمة"
 
 #: src/models/actionsmodel.cpp:313
-#, fuzzy, kde-format
-#| msgid "Subtitle Delay"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "تأخير الترجمة"
 
 #: src/models/actionsmodel.cpp:320
-#, fuzzy, kde-format
-#| msgid "Subtitle Cycle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "الترجمة دائرة للأعلى"
 
 #: src/models/actionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgid "Subtitle Cycle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "الترجمة دائرة للأسفل"
 
 #: src/models/actionsmodel.cpp:334
-#, fuzzy, kde-format
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "بدل فك التشبيك"
 
 #: src/models/actionsmodel.cpp:341
-#, fuzzy, kde-format
-#| msgid "Toggle Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "بدّل ملء الشاشة"
 
 #: src/models/actionsmodel.cpp:348
-#, fuzzy, kde-format
-#| msgid "Toggle Menu Bar"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "بدل شريط القائمة"
 
 #: src/models/actionsmodel.cpp:355
-#, fuzzy, kde-format
-#| msgid "Toggle Header"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "بدل ترويسة"
 
 #: src/models/actionsmodel.cpp:362 src/qml/Settings/SettingsWindow.qml:92
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "قائمة التشغيل"
 
 #: src/models/actionsmodel.cpp:369
-#, fuzzy, kde-format
-#| msgid "Video pan x left"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan x left"
 msgstr "حرك حاوية الفيديو لليسار"
 
 #: src/models/actionsmodel.cpp:376
-#, fuzzy, kde-format
-#| msgid "Video pan x right"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan x right"
 msgstr "حرك حاوية الفيديو لليمين"
 
 #: src/models/actionsmodel.cpp:383
-#, fuzzy, kde-format
-#| msgid "Video pan y up"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan y up"
 msgstr "حرك حاوية الفيديو للأعلى"
 
 #: src/models/actionsmodel.cpp:390
-#, fuzzy, kde-format
-#| msgid "Video pan y down"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan y down"
 msgstr "حرك حاوية الفيديو للأسفل"
 
 #: src/models/actionsmodel.cpp:397
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "ارفع الصوت"
 
 #: src/models/actionsmodel.cpp:404
-#, fuzzy, kde-format
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "اخفِض الصوت"
 
 #: src/models/actionsmodel.cpp:411
-#, fuzzy, kde-format
-#| msgid "Zoom In"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "قرّب"
 
 #: src/models/actionsmodel.cpp:418
-#, fuzzy, kde-format
-#| msgid "Zoom Out"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "بعّد"
 
 #: src/models/actionsmodel.cpp:425
-#, fuzzy, kde-format
-#| msgid "Zoom Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "صفّر التكبير"
 
 #: src/models/actionsmodel.cpp:433
-#, fuzzy, kde-format
-#| msgid "Contrast Up"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "زد التباين"
 
 #: src/models/actionsmodel.cpp:440
-#, fuzzy, kde-format
-#| msgid "Contrast Down"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "قلل التباين"
 
 #: src/models/actionsmodel.cpp:447
-#, fuzzy, kde-format
-#| msgid "Contrast Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "صفّر التباين"
 
 #: src/models/actionsmodel.cpp:454
-#, fuzzy, kde-format
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "زد السطوع"
 
 #: src/models/actionsmodel.cpp:461
-#, fuzzy, kde-format
-#| msgid "Brightness Down"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "قلل السطوع"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgid "Brightness Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "صفّر السطوع"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgid "Gamma Up"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "زد غاما"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgid "Gamma Down"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "قلل غاما"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgid "Gamma Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "صفّر غاما"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "زد التّشبّع"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgid "Saturation Down"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "قلل التّشبّع"
 
 #: src/models/actionsmodel.cpp:510
-#, fuzzy, kde-format
-#| msgid "Saturation Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "صفّر التّشبّع"
 
 #: src/models/actionsmodel.cpp:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
-#| "<br><br>Do you want to reassign the shortcut?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
@@ -604,776 +523,558 @@ msgstr ""
 "تعيين الاختصار؟"
 
 #: src/models/actionsmodel.cpp:657
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
 #: src/mpv/mpvitem.cpp:631
-#, fuzzy, kde-format
-#| msgid "Playlist is empty"
+#, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "قائمة تشغيل فارغة"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
-#, fuzzy
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "صوت: %1 %2"
 
 #: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
-#, fuzzy
-#| msgid "Playback speed: %1"
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "سرعة التشغيل: %1"
 
 #: src/qml/Actions.qml:236
-#, fuzzy
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "الحلقة تبدأ: %1"
 
 #: src/qml/Actions.qml:240
-#, fuzzy
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "الحلقة: %1 - %2"
 
 #: src/qml/Actions.qml:246
-#, fuzzy
-#| msgid "Loop cleared"
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "امسح الحلقة"
 
 #: src/qml/Actions.qml:254 src/qml/Actions.qml:259
-#, fuzzy
-#| msgid "Subtitle timing: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "توقيت الترجمة:  : %1"
 
 #: src/qml/Actions.qml:264
-#, fuzzy
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "الترجمة مغلقة"
 
 #: src/qml/Actions.qml:264
-#, fuzzy
-#| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "الترجمة تعمل"
 
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:285
-#, fuzzy
-#| msgid "Subtitle: None"
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "الترجمة: بدون"
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:289
-#, fuzzy
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "الترجمة: %1 %2"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:300
-#, fuzzy
-#| msgid "Subtitle scale: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "تكبير الترجمة: %1"
 
 #: src/qml/Actions.qml:309
-#, fuzzy
-#| msgid "Deinterlace: %1"
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "التشابك: %1"
 
 #: src/qml/Actions.qml:354 src/qml/Actions.qml:359
-#, fuzzy
-#| msgid "Volume: %1"
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "المستوى: %1"
 
 #: src/qml/Actions.qml:365 src/qml/Actions.qml:371
-#, fuzzy
-#| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "التكبير: %1"
 
 #: src/qml/Actions.qml:376
-#, fuzzy
-#| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "التكبير:  ٠"
 
 #: src/qml/Actions.qml:383 src/qml/Actions.qml:389
-#, fuzzy
-#| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "التباين: %1"
 
 #: src/qml/Actions.qml:394
-#, fuzzy
-#| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "التباين: ٠"
 
 #: src/qml/Actions.qml:400 src/qml/Actions.qml:406
-#, fuzzy
-#| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "السطوع: %1"
 
 #: src/qml/Actions.qml:411
-#, fuzzy
-#| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "السطوع: ٠"
 
 #: src/qml/Actions.qml:417 src/qml/Actions.qml:423
-#, fuzzy
-#| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "غاما: %1"
 
 #: src/qml/Actions.qml:428
-#, fuzzy
-#| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "غاما: ٠"
 
 #: src/qml/Actions.qml:434 src/qml/Actions.qml:440
-#, fuzzy
-#| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "التّشبّع: %1"
 
 #: src/qml/Actions.qml:445
-#, fuzzy
-#| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "التّشبّع: ٠"
 
 #: src/qml/Footer.qml:67
-#, fuzzy
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "ابدأ التشغيل"
 
 #: src/qml/Footer.qml:67
-#, fuzzy
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "ألبث التّشغيل"
 
 #: src/qml/Footer.qml:80
-#, fuzzy
-#| msgid "Play previous file"
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "شغل الملف السابق"
 
 #: src/qml/Footer.qml:93
-#, fuzzy
-#| msgid "Play next file"
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "شغل الملف التالي"
 
 #: src/qml/Footer.qml:107
-#, fuzzy
-#| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "الباقي: %1"
 
 #: src/qml/HamburgerMenu.qml:51
-#, fuzzy
-#| msgid "Recent Files"
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "الملفات الحديثة"
 
 #: src/qml/HamburgerMenu.qml:80
-#, fuzzy
-#| msgid "&More"
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "الم&زيد"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
-#, fuzzy
-#| msgid "Select a color"
 msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "اختر لوناً"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
-#, fuzzy
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "انقر مزدوجًا لتعين إجراء"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:65
-#, fuzzy
-#| msgid "Clear current action"
 msgctxt "@action:button"
 msgid "Clear current action"
 msgstr "امسح الإجراء الحالي"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#, fuzzy
-#| msgid "Help"
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "مساعدة"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
-#, fuzzy
-#| msgid "Haruna help window (english only)"
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
 msgstr "نافذة مساعدة هارونا (بالانجليزية فقط)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
-#, fuzzy
-#| msgid "Haruna handbook"
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "كتيب هارونا"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:39
-#, fuzzy
-#| msgid "Open config ..."
 msgctxt "@action:intoolbar"
 msgid "Open config ..."
 msgstr "افتح الضبط…"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy
-#| msgid "File"
 msgctxt "@action:inmenu"
 msgid "File"
-msgstr "الملف"
+msgstr "ملف"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, fuzzy
-#| msgid "Folder"
 msgctxt "@action:inmenu"
 msgid "Folder"
-msgstr "المجلد"
+msgstr "مجلد"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:27
-#, fuzzy
-#| msgid "Load subtitles from"
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "حمّل الترجمة من"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:102
-#, fuzzy
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "أكّد الحذف"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
-#, fuzzy
-#| msgid "Delete this folder from list"
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "احذف هذا المجلد من القائمة"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:134
-#, fuzzy
-#| msgid "Save changes"
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "احفظ التغيرات"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:156
-#, fuzzy
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "أضف مجلداً جديداً"
 
 #: src/qml/Header.qml:73
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "الترجمة"
 
 #: src/qml/Header.qml:106
-#, fuzzy
-#| msgid "Audio"
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "صوت"
 
 #: src/qml/HProgressBar.qml:182
-#, fuzzy
-#| msgid "Skip Chapters"
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "تخط الفصول"
 
 #: src/qml/main.qml:29
-#, fuzzy
-#| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
 #: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
-#, fuzzy
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "اختر ملفّا"
 
 #: src/qml/main.qml:226
-#, fuzzy
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "اختر ملف ترجمة"
 
 #: src/qml/main.qml:252
-#, fuzzy
-#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "لم يعثر على <a href=\"https://youtube-dl.org\">Youtube-dl</a> ."
 
 #: src/qml/main.qml:279
-#, fuzzy
-#| msgid "Open"
 msgctxt "@action:button"
 msgid "Open"
 msgstr "افتح"
 
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
-#, fuzzy
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&صوت"
 
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
-#, fuzzy
-#| msgid "&Primary Track"
 msgctxt "@title:menu"
 msgid "&Primary Track"
 msgstr "المسار الأ&ولي"
 
 #: src/qml/Menus/ContextMenu.qml:19
-#, fuzzy
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "سرعة التشغيل"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, fuzzy
-#| msgid "&File"
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&ملف"
 
 #: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
-#, fuzzy
-#| msgid "Recent Files"
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "الملفات الحديثة"
 
 #: src/qml/Menus/FileMenu.qml:38
-#, fuzzy
-#| msgid "Clear List"
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "امسح القائمة"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, fuzzy
-#| msgid "&Help"
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "م&ساعدة"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, fuzzy
-#| msgid "&Playback"
 msgctxt "@title:menu"
 msgid "&Playback"
-msgstr "الت&شغل"
+msgstr "ت&شغل"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
-#, fuzzy
-#| msgid "Seek"
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "اسعَ"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
-#, fuzzy
-#| msgid "&Settings"
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "إ&عدادات"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
-#, fuzzy
-#| msgid "&Subtitles"
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "ال&ترجمة"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:19
-#, fuzzy
-#| msgid "Primary Subtitle"
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "الترجمة الأولية"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:39
-#, fuzzy
-#| msgid "Secondary Subtitle"
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "الترجمة الثانوية"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
-#, fuzzy
-#| msgid "&Video"
 msgctxt "@title:menu"
 msgid "&Video"
-msgstr "ڤ&ديو"
+msgstr "ف&ديو"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
-#, fuzzy
-#| msgid "Adjustments"
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "التعديلات"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, fuzzy
-#| msgid "&View"
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "&عرض"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy
-#| msgid "Hide Menubar"
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
 msgstr "أخفِ شريط القوائم"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy
-#| msgid "Show Menubar"
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
 msgstr "اعرض شريط القوائم"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy
-#| msgid "Hide Toolbar"
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
-msgstr "اخف شريط الأدوات"
+msgstr "أخفِ شريط الأدوات"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy
-#| msgid "Show Toolbar"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "اعرض شريط الأدوات"
 
 #: src/qml/MpvVideo.qml:135
-#, fuzzy
-#| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
 
 #: src/qml/MpvVideo.qml:152
-#, fuzzy
-#| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
-#, fuzzy
-#| msgid "Preferred language"
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "اللغة المفضلة"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
-#, fuzzy
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng,ger etc."
 msgstr "eng,ar وهكذا."
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
-#, fuzzy
-#| msgid "Do not use spaces."
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
 msgstr "لا تستعمل المسافة"
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
-#, fuzzy
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "مسار الصوت المفضل"
 
 #: src/qml/Settings/AudioSettings.qml:69
-#, fuzzy
-#| msgid "Volume step"
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "عتبة المستوى"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
-#, fuzzy
-#| msgid "No custom commands yet"
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "لا يوجد أمر مخصص بعد"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
-#, fuzzy
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "أضف أ&مر"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:69
-#, fuzzy
-#| msgid "Don't set on next startup"
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "لا تضعه في البدء التشغيل القادم"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:155
-#, fuzzy
-#| msgid "&Add"
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "أ&ضف"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
-#, fuzzy
-#| msgid "Command"
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "الأمر"
 
 #: src/qml/Settings/EditCustomCommand.qml:50
-#, fuzzy
-#| msgid "add volume +10"
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "ارفع المستوى +١٠"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
-#, fuzzy
-#| msgid "OSD Message"
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "رسالة على الشاشة"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
-#, fuzzy
-#| msgid "Filename: ${filename}"
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "اسم الملف: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, fuzzy
-#| msgid "Type"
 msgctxt "@label"
 msgid "Type"
-msgstr "النّوع"
+msgstr "النوع"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
-#, fuzzy
-#| msgid "Keyboard shortcut"
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "اختصار لوحة المفاتيح"
 
 #: src/qml/Settings/EditCustomCommand.qml:98
-#, fuzzy
-#| msgid "Run at startup"
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "تشغيل عند البدء"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "احذف"
 
 #: src/qml/Settings/EditCustomCommand.qml:123
-#, fuzzy
-#| msgid "Cancel"
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "ألغِ"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, fuzzy
-#| msgid "&Save"
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "ا&حفظ"
 
 #: src/qml/Settings/GeneralSettings.qml:30
-#, fuzzy
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "حجم خط رسالة الشاشة"
 
 #: src/qml/Settings/GeneralSettings.qml:56
-#, fuzzy
-#| msgid "File dialog location"
 msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "موقع حواري الملف"
 
 #: src/qml/Settings/GeneralSettings.qml:71
-#, fuzzy
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr "إذا كان فارغاً سيتذكر حواري الملف أخر موقع مفتوح."
 
 #: src/qml/Settings/GeneralSettings.qml:76
-#, fuzzy
-#| msgid "Maximum recent files"
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "أقصى عدد ملفات الحديثة"
 
 #: src/qml/Settings/GeneralSettings.qml:93
-#, fuzzy
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr "كم ملف حديث يمكن تخزينه. أدخل 0 (صفر) لتعطيله."
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgid "Remember window size and position"
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "تذكّر أخر موضع للنافذة وحجمها"
 
 #: src/qml/Settings/GeneralSettings.qml:109
-#, fuzzy
-#| msgid "Interface"
 msgctxt "@title"
 msgid "Interface"
 msgstr "الواجهة"
 
 #: src/qml/Settings/GeneralSettings.qml:117
-#, fuzzy
-#| msgid "Show menubar"
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "اعرض شريط القوائم"
 
 #: src/qml/Settings/GeneralSettings.qml:128
-#, fuzzy
-#| msgid "Show toolbar"
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "اعرض شريط الأدوات"
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, fuzzy
-#| msgid "Show chapter markers"
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "أظهر علامات الفصل"
 
 #: src/qml/Settings/GeneralSettings.qml:148
-#, fuzzy
-#| msgid "Color scheme"
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "مخطّط الألوان"
 
 #: src/qml/Settings/GeneralSettings.qml:190
-#, fuzzy
-#| msgid "GUI style"
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "نمط الواجهة"
 
 #: src/qml/Settings/GeneralSettings.qml:239
-#, fuzzy
-#| msgid "Use Breeze icon theme"
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "استخدم أيقونات سمة النسيم"
 
 #: src/qml/Settings/GeneralSettings.qml:249
-#, fuzzy
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1383,24 +1084,16 @@ msgstr ""
 "ستحتاج لإعادة التشغيل"
 
 #: src/qml/Settings/PlaybackSettings.qml:29
-#, fuzzy
-#| msgid "Seek small step"
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "اسعَ بخطوة صغيرة"
 
 #: src/qml/Settings/PlaybackSettings.qml:47
-#, fuzzy
-#| msgid "Seek medium step"
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "اسعَ بخطوة متوسطة"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
-#, fuzzy
-#| msgid ""
-#| "This is also used for mouse wheel seeking, when mouse is over the "
-#| "progress bar"
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
@@ -1408,31 +1101,21 @@ msgid ""
 msgstr "يستخدم هذا أيضًا للبحث بعجلة الفأرة ، عندما تكون الفأرة فوق شريط التقدم"
 
 #: src/qml/Settings/PlaybackSettings.qml:84
-#, fuzzy
-#| msgid "Seek big step"
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "اسعَ بخطوة كبيرة"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
-#, fuzzy
-#| msgid "Open last played file on startup"
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "افتح أخر ملف مُشغل عند البدء"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "اسعَ لأخر موضوع معروض"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1441,34 +1124,22 @@ msgstr ""
 "عند فتح ملف شُغل من قبل؛ سيبدأ في الموضع الذي كان عليه عندما توقف التشغيل."
 
 #: src/qml/Settings/PlaybackSettings.qml:135
-#, fuzzy
-#| msgid "Start playing"
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "ابدأ التشغيل"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr "عند فتح ملف شُغل من قبل؛ سيبدأ في تشغيله تلقائيا."
 
 #: src/qml/Settings/PlaybackSettings.qml:153
-#, fuzzy
-#| msgid "Pause on minimize"
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "صغّر عن اللبث"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
-#, fuzzy
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1476,53 +1147,38 @@ msgid ""
 msgstr "تلبث المشغل عند تصغير النافذة، وسيستأنف التشغيل عند استعادتها."
 
 #: src/qml/Settings/PlaybackSettings.qml:166
-#, fuzzy
-#| msgid "Hardware decoding"
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "فك التشفير بالعتاد"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy
-#| msgid "Enabled"
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "ممكّن"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy
-#| msgid "Disabled"
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "معطّل"
 
 #: src/qml/Settings/PlaybackSettings.qml:232
-#, fuzzy
-#| msgid "Remember time position"
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "تذكّر أخر موضع"
 
 #: src/qml/Settings/PlaybackSettings.qml:252
-#, fuzzy
-#| msgid "Disabled"
 msgctxt "@info"
 msgid "Disabled"
 msgstr "معطّل"
 
 #: src/qml/Settings/PlaybackSettings.qml:254
-#, fuzzy
-#| msgid "For all files"
 msgctxt "@info"
 msgid "For all files"
 msgstr "لجميع الملفات"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
@@ -1534,9 +1190,6 @@ msgstr[4] "للملفات الأطول من %1 دقيقة"
 msgstr[5] "للملفات الأطول من %1 دقيقة"
 
 #: src/qml/Settings/PlaybackSettings.qml:285
-#, fuzzy
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1548,43 +1201,31 @@ msgstr[4] "احفظ الموقع كل %1 ثانية"
 msgstr[5] "احفظ الموقع كل %1 ثانية"
 
 #: src/qml/Settings/PlaybackSettings.qml:294
-#, fuzzy
-#| msgid "Skip chapters"
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "تخط الفصول"
 
 #: src/qml/Settings/PlaybackSettings.qml:311
-#, fuzzy
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "أعرض رسالة الشاشة في التخطي"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
-#, fuzzy
-#| msgid "Skip words"
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "تخطَّ كلمات"
 
 #: src/qml/Settings/PlaybackSettings.qml:328
-#, fuzzy
-#| msgid "op, ed, chapter 1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
 #: src/qml/Settings/PlaybackSettings.qml:337
-#, fuzzy
-#| msgid "Skip chapters containing these words. Comma separated list."
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "تخطَ الفصول التي تحتوي على هذه الكلمات. قائمة مفصولة بفواصل."
 
 #: src/qml/Settings/PlaybackSettings.qml:346
-#, fuzzy
-#| msgid "Youtube-dl"
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
@@ -1594,10 +1235,6 @@ msgid "Format selection"
 msgstr "اختيار التنسيق"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
-#, fuzzy
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1605,38 +1242,26 @@ msgid ""
 msgstr "يختار أفضل فيديو بارتفاع أقل من أو يساوي القيمة المحددة."
 
 #: src/qml/Settings/PlaybackSettings.qml:421
-#, fuzzy
-#| msgid "bestvideo+bestaudio/best"
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/qml/Settings/PlaylistSettings.qml:27
-#, fuzzy
-#| msgid "Position"
 msgctxt "@label:listbox"
 msgid "Position"
-msgstr "الموقع"
+msgstr "الموضع"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
-#, fuzzy
-#| msgid "Playlist style"
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "نمط قائمة التشغيل"
 
 #: src/qml/Settings/PlaylistSettings.qml:80
-#, fuzzy
-#| msgid "Overlay video"
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "فوق الفيديو"
 
 #: src/qml/Settings/PlaylistSettings.qml:87
-#, fuzzy
-#| msgid ""
-#| "When checked the playlist goes on top of the video\n"
-#| "When unchecked the video is resized"
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1646,43 +1271,31 @@ msgstr ""
 " عند إلغاء تحديد، يغير حجم الفيديو"
 
 #: src/qml/Settings/PlaylistSettings.qml:94
-#, fuzzy
-#| msgid "Show media title instead of file name"
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "اعرض عنوان الوسيط عوضا عن اسم الملف"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
-#, fuzzy
-#| msgid "Auto load videos from same folder"
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "تحميل آلي للفيدوهات من نفس المجلد"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
-#, fuzzy
-#| msgid "Repeat"
 msgctxt "@option:check"
 msgid "Repeat"
-msgstr "كرّر"
+msgstr "التكرار"
 
 #: src/qml/Settings/PlaylistSettings.qml:124
-#, fuzzy
-#| msgid "Show row number"
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "أظهر رقم الصف"
 
 #: src/qml/Settings/PlaylistSettings.qml:134
-#, fuzzy
-#| msgid "Toggle with mouse"
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "بدّل بالفأرة"
 
 #: src/qml/Settings/PlaylistSettings.qml:143
-#, fuzzy
-#| msgid "Increase font size when fullscreen"
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "زِد حجم الخطّ في ملء الشاشة"
@@ -1690,7 +1303,7 @@ msgstr "زِد حجم الخطّ في ملء الشاشة"
 #: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr ""
+msgstr "تذكر آخر حالة لقائمة التشغيل"
 
 #: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
@@ -1698,129 +1311,95 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
+"عندما تختاره سيتذكر البرنامج حالة قائمة التشغيل (مرئية/مخفية) بين كل تشغيله "
+"للبرنامج وأخرى"
 
 #: src/qml/Settings/SettingsWindow.qml:34
-#, fuzzy
-#| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "إعدادات"
 
 #: src/qml/Settings/SettingsWindow.qml:52
-#, fuzzy
-#| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "عامّ"
 
 #: src/qml/Settings/SettingsWindow.qml:60
-#, fuzzy
-#| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
-msgstr "التّشغيل"
+msgstr "تشغيل"
 
 #: src/qml/Settings/SettingsWindow.qml:68
-#, fuzzy
-#| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "فيديو"
 
 #: src/qml/Settings/SettingsWindow.qml:76
-#, fuzzy
-#| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "صوت"
 
 #: src/qml/Settings/SettingsWindow.qml:84
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "الترجمة"
 
 #: src/qml/Settings/SettingsWindow.qml:100
-#, fuzzy
-#| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "الفأرة"
 
 #: src/qml/Settings/SettingsWindow.qml:108
-#, fuzzy
-#| msgid "Shortcuts"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
 #: src/qml/Settings/SettingsWindow.qml:116
-#, fuzzy
-#| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "أوامر مخصَّصة"
 
 #: src/qml/Settings/SettingsWindow.qml:124
-#, fuzzy
-#| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "عن"
 
 #: src/qml/Settings/SettingsWindow.qml:162
-#, fuzzy
-#| msgid "Help"
 msgctxt "@title:window"
 msgid "Help"
 msgstr "مساعدة"
 
 #: src/qml/Settings/SubtitlesSettings.qml:75
-#, fuzzy
-#| msgid "Styling"
 msgctxt "@title"
 msgid "Styling"
 msgstr "النمط"
 
 #: src/qml/Settings/SubtitlesSettings.qml:81
-#, fuzzy
-#| msgid "Font family"
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "عائلة الخطوط"
 
 #: src/qml/Settings/SubtitlesSettings.qml:113
-#, fuzzy
-#| msgid "Font size"
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "حجم الخط"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
-#, fuzzy
-#| msgid "Font style"
 msgctxt "@label"
 msgid "Font style"
 msgstr "نمط الخطّ"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
-#, fuzzy
-#| msgid "Bold"
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "ثخين"
 
 #: src/qml/Settings/SubtitlesSettings.qml:146
-#, fuzzy
-#| msgid "Italic"
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "مائل"
 
 #: src/qml/Settings/SubtitlesSettings.qml:156
-#, fuzzy
-#| msgid "Font color"
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "لون الخطّ"
@@ -1828,44 +1407,32 @@ msgstr "لون الخطّ"
 #: src/qml/Settings/SubtitlesSettings.qml:189
 #: src/qml/Settings/SubtitlesSettings.qml:227
 #: src/qml/Settings/SubtitlesSettings.qml:287
-#, fuzzy
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "ضع القيمة المبدئية"
 
 #: src/qml/Settings/SubtitlesSettings.qml:195
-#, fuzzy
-#| msgid "Shadow color"
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "لون الظل"
 
 #: src/qml/Settings/SubtitlesSettings.qml:233
-#, fuzzy
-#| msgid "Shadow offset"
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "إزاحة الظل"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 #: src/qml/Settings/SubtitlesSettings.qml:309
-#, fuzzy
-#| msgid "Set to 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "ضع 0 (صفر) لتعطيله."
 
 #: src/qml/Settings/SubtitlesSettings.qml:254
-#, fuzzy
-#| msgid "Border color"
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "لون الحد"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
-#, fuzzy
-#| msgid "Border width"
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "عرض الحدّ"
@@ -1873,12 +1440,12 @@ msgstr "عرض الحدّ"
 #: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "الغلاف المبدئي"
 
 #: src/qml/Settings/VideoSettings.qml:36
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr ""
+msgstr "مسار لصور"
 
 #: src/qml/Settings/VideoSettings.qml:44
 msgctxt "@info:tooltip"
@@ -1886,66 +1453,50 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
+"تستخدم لملفات الموسيقى التي لا تحتوي على مسار فيديو أو صورة غلاف مضمنة أو "
+"صورة غلاف/مجلد في نفس المجلد للملف المُشغل."
 
 #: src/qml/Settings/VideoSettings.qml:70
-#, fuzzy
-#| msgid "Screenshots"
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "اللقطات"
 
 #: src/qml/Settings/VideoSettings.qml:80
-#, fuzzy
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "التّنسيق"
 
 #: src/qml/Settings/VideoSettings.qml:116
-#, fuzzy
-#| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "القالب"
 
 #: src/qml/Settings/VideoSettings.qml:132
-#, fuzzy
-#| msgid "Image adjustments"
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "تضبيطات الصورة"
 
 #: src/qml/Settings/VideoSettings.qml:142
-#, fuzzy
-#| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "التباين"
 
 #: src/qml/Settings/VideoSettings.qml:159
-#, fuzzy
-#| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "السطوع"
 
 #: src/qml/Settings/VideoSettings.qml:176
-#, fuzzy
-#| msgid "Gamma"
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "غاما"
 
 #: src/qml/Settings/VideoSettings.qml:193
-#, fuzzy
-#| msgid "Saturation"
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "التّشبّع"
 
 #: src/qml/Settings/VideoSettings.qml:207
-#, fuzzy
-#| msgid "Middle click on the sliders to reset them"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير تصفرها"
