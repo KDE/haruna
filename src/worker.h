@@ -26,7 +26,7 @@ Q_SIGNALS:
 #else
     void metaDataReady(int index, KFileMetaData::PropertyMap metadata);
 #endif
-    void thumbnailSuccess(const QImage &image);
+    void thumbnailSuccess(const QString &id, const QImage &image);
     void thumbnailFail();
 
 public Q_SLOTS:

@@ -24,9 +24,11 @@ QQuickImageResponse *ThumbnailImageProvider::requestImageResponse(const QString 
 
 ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSize)
 {
-    connect(Worker::instance(), &Worker::thumbnailSuccess, this, [=](const QImage &image) {
-        m_texture = QQuickTextureFactory::textureFactoryForImage(image);
-        Q_EMIT finished();
+    connect(Worker::instance(), &Worker::thumbnailSuccess, this, [=](const QString &resultId, const QImage &image) {
+        if (resultId == id) {
+            m_texture = QQuickTextureFactory::textureFactoryForImage(image);
+            Q_EMIT finished();
+        }
     }, Qt::QueuedConnection);
 
     connect(Worker::instance(), &Worker::thumbnailFail, this, [=]() {

@@ -65,7 +65,7 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
 
     // load existing thumbnail if there is one
     if (QFileInfo::exists(cachedFilePath) && image.load(cachedFilePath)) {
-        Q_EMIT thumbnailSuccess(image);
+        Q_EMIT thumbnailSuccess(id, image);
         return;
     }
 
@@ -87,7 +87,7 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
         qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(id);
         return;
     }
-    Q_EMIT thumbnailSuccess(image);
+    Q_EMIT thumbnailSuccess(id, image);
 
     QFileInfo fi(cachedFilePath);
     // create folders where the file will be saved
