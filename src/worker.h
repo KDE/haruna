@@ -8,6 +8,7 @@
 #define WORKER_H
 
 #include <QObject>
+#include <QImage>
 #include <KFileMetaData/Properties>
 #include <memory>
 #include <kconfig_version.h>
@@ -32,6 +33,7 @@ Q_SIGNALS:
 public Q_SLOTS:
     void getMetaData(int index, const QString &path);
     void makePlaylistThumbnail(const QString &id, int width);
+    QImage frameToImage(const QString &id, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
 private:

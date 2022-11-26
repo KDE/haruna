@@ -78,6 +78,7 @@ Q_SIGNALS:
 
 private:
     MpvItem *m_mpv;
+    QString getThumbnail(const QString &path);
 };
 
 #endif // MEDIAPLAYER2PLAYER_H

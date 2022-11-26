@@ -5,11 +5,20 @@
  */
 
 #include "mediaplayer2player.h"
-#include "mpvitem.h"
 
+#include "application.h"
+#include "mpvitem.h"
+#include "videosettings.h"
+#include "worker.h"
+
+#include <QBuffer>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusObjectPath>
+#include <QImage>
+
+#include <KFileMetaData/ExtractorCollection>
+#include <KFileMetaData/SimpleExtractionResult>
 
 MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     : QDBusAbstractAdaptor(parent)
@@ -131,7 +140,11 @@ QVariantMap MediaPlayer2Player::Metadata()
     auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvMediaTitle;
     metadata.insert(QStringLiteral("xesam:title"), title);
 
-    QUrl url(m_mpv->getProperty("path").toString());
+    auto path = m_mpv->getProperty("path").toString();
+
+    metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(path));
+
+    QUrl url(path);
     url.setScheme("file");
     metadata.insert(QStringLiteral("xesam:url"), url.toString());
 
@@ -213,4 +226,49 @@ void MediaPlayer2Player::setMpv(MpvItem *mpv)
     }
     m_mpv = mpv;
     Q_EMIT mpvChanged();
+}
+
+QString MediaPlayer2Player::getThumbnail(const QString &path)
+{
+    QString mimeType = Application::mimeType(QUrl(path));
+    KFileMetaData::ExtractorCollection exCol;
+    QList<KFileMetaData::Extractor*> extractors = exCol.fetchExtractors(mimeType);
+    KFileMetaData::SimpleExtractionResult result(path, mimeType,
+                                                 KFileMetaData::ExtractionResult::ExtractImageData);
+
+    if (extractors.size() > 0) {
+        KFileMetaData::Extractor* ex = extractors.first();
+        ex->extract(&result);
+        QString base64 = QStringLiteral("data:image/png;base64,");
+        auto imageData = result.imageData();
+        if (!imageData.isEmpty()) {
+            // look for image inside the file
+            using namespace KFileMetaData;
+            if (imageData.contains(EmbeddedImageData::FrontCover)) {
+                return base64.append(imageData[EmbeddedImageData::FrontCover].toBase64());
+            } else if (imageData.contains(EmbeddedImageData::BackCover)) {
+                return base64.append(imageData[EmbeddedImageData::BackCover].toBase64());
+            } else if (imageData.contains(EmbeddedImageData::MovieScreenCapture)) {
+                return base64.append(imageData[EmbeddedImageData::MovieScreenCapture].toBase64());
+            } else if (imageData.contains(EmbeddedImageData::Other)) {
+                return base64.append(imageData[EmbeddedImageData::Other].toBase64());
+            } else {
+                return base64.append(imageData[EmbeddedImageData::Unknown].toBase64());
+            }
+        } else {
+            // try to generate QImage from file
+            QImage image = Worker::instance()->frameToImage(path, 250);
+            if (image.isNull()) {
+                // generation failed, use user set default cover
+                return VideoSettings::defaultCover();
+            } else {
+                // generation succeeded
+                QByteArray byteArray;
+                QBuffer buffer(&byteArray);
+                image.save(&buffer, "JPEG");
+                return base64.append(byteArray.toBase64().data());
+            }
+        }
+    }
+    return QString();
 }

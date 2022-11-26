@@ -69,19 +69,7 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
         return;
     }
 
-    FrameDecoder frameDecoder(file.toLocalFile(), nullptr);
-    if (!frameDecoder.getInitialized()) {
-        return;
-    }
-    //before seeking, a frame has to be decoded
-    if (!frameDecoder.decodeVideoFrame()) {
-        return;
-    }
-
-    int secondToSeekTo = frameDecoder.getDuration() * 20 / 100;
-    frameDecoder.seek(secondToSeekTo);
-
-    frameDecoder.getScaledVideoFrame(width, true, image);
+    image = frameToImage(id, width);
 
     if (image.isNull()) {
         qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(id);
@@ -96,6 +84,25 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
             qDebug() << QStringLiteral("Failed to save thumbnail for file: %1").arg(id);
         }
     }
+}
+
+QImage Worker::frameToImage(const QString &id, int width)
+{
+    QImage image;
+    FrameDecoder frameDecoder(id, nullptr);
+    if (!frameDecoder.getInitialized()) {
+        return image;
+    }
+    //before seeking, a frame has to be decoded
+    if (!frameDecoder.decodeVideoFrame()) {
+        return image;
+    }
+
+    int secondToSeekTo = frameDecoder.getDuration() * 20 / 100;
+    frameDecoder.seek(secondToSeekTo);
+    frameDecoder.getScaledVideoFrame(width, true, image);
+
+    return image;
 }
 
 void Worker::syncConfigValue(QString path, QString group, QString key, QVariant value)
