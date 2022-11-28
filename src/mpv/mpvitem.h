@@ -36,10 +36,6 @@ class MpvItem : public MpvCore
     Q_PROPERTY(int audioId READ audioId WRITE setAudioId NOTIFY audioIdChanged)
     Q_PROPERTY(int subtitleId READ subtitleId WRITE setSubtitleId NOTIFY subtitleIdChanged)
     Q_PROPERTY(int secondarySubtitleId READ secondarySubtitleId WRITE setSecondarySubtitleId NOTIFY secondarySubtitleIdChanged)
-    Q_PROPERTY(int contrast READ contrast WRITE setContrast NOTIFY contrastChanged)
-    Q_PROPERTY(int brightness READ brightness WRITE setBrightness NOTIFY brightnessChanged)
-    Q_PROPERTY(int gamma READ gamma WRITE setGamma NOTIFY gammaChanged)
-    Q_PROPERTY(int saturation READ saturation WRITE setSaturation NOTIFY saturationChanged)
 
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
@@ -86,17 +82,6 @@ class MpvItem : public MpvCore
     int secondarySubtitleId();
     void setSecondarySubtitleId(int value);
 
-    int contrast();
-    void setContrast(int value);
-
-    int brightness();
-    void setBrightness(int value);
-
-    int gamma();
-    void setGamma(int value);
-
-    int saturation();
-    void setSaturation(int value);
 
 public:
     MpvItem(QQuickItem * parent = nullptr);
@@ -129,10 +114,6 @@ Q_SIGNALS:
     void audioIdChanged();
     void subtitleIdChanged();
     void secondarySubtitleIdChanged();
-    void contrastChanged();
-    void brightnessChanged();
-    void gammaChanged();
-    void saturationChanged();
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);

@@ -55,10 +55,6 @@ MpvItem::MpvItem(QQuickItem * parent)
     mpv_observe_property(m_mpv, 0, "sid",            MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "chapter",        MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "secondary-sid",  MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "contrast",       MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "brightness",     MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "gamma",          MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "saturation",     MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "track-list",     MPV_FORMAT_NODE);
 
     initProperties();
@@ -344,62 +340,6 @@ void MpvItem::setSecondarySubtitleId(int value)
     Q_EMIT secondarySubtitleIdChanged();
 }
 
-int MpvItem::contrast()
-{
-    return getProperty("contrast").toInt();
-}
-
-void MpvItem::setContrast(int value)
-{
-    if (value == contrast()) {
-        return;
-    }
-    setProperty("contrast", value);
-    Q_EMIT contrastChanged();
-}
-
-int MpvItem::brightness()
-{
-    return getProperty("brightness").toInt();
-}
-
-void MpvItem::setBrightness(int value)
-{
-    if (value == brightness()) {
-        return;
-    }
-    setProperty("brightness", value);
-    Q_EMIT brightnessChanged();
-}
-
-int MpvItem::gamma()
-{
-    return getProperty("gamma").toInt();
-}
-
-void MpvItem::setGamma(int value)
-{
-    if (value == gamma()) {
-        return;
-    }
-    setProperty("gamma", value);
-    Q_EMIT gammaChanged();
-}
-
-int MpvItem::saturation()
-{
-    return getProperty("saturation").toInt();
-}
-
-void MpvItem::setSaturation(int value)
-{
-    if (value == saturation()) {
-        return;
-    }
-    setProperty("saturation", value);
-    Q_EMIT saturationChanged();
-}
-
 double MpvItem::watchPercentage()
 {
     return m_watchPercentage;
@@ -513,22 +453,6 @@ void MpvItem::eventHandler()
             } else if (strcmp(prop->name, "secondary-sid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
                     Q_EMIT secondarySubtitleIdChanged();
-                }
-            } else if (strcmp(prop->name, "contrast") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT contrastChanged();
-                }
-            } else if (strcmp(prop->name, "brightness") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT brightnessChanged();
-                }
-            } else if (strcmp(prop->name, "gamma") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT gammaChanged();
-                }
-            } else if (strcmp(prop->name, "saturation") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT saturationChanged();
                 }
             } else if (strcmp(prop->name, "track-list") == 0) {
                 if (prop->format == MPV_FORMAT_NODE) {
