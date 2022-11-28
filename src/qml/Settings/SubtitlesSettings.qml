@@ -71,6 +71,22 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1; height: 1 }
+        CheckBox {
+            checked: PlaylistSettings.allowOnBlackBorders
+            text: i18nc("@option:check", "Allow subtitles in black borders")
+            onCheckStateChanged: {
+                PlaylistSettings.allowOnBlackBorders = checked
+                PlaylistSettings.save()
+                mpv.setProperty("sub-use-margins", checked ? "yes" : "no")
+                mpv.setProperty("sub-ass-force-margins", checked ? "yes" : "no")
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip", "When checked the subtitles can be rendered outside the video, in the black borders. Might not work for all .ass subtitles.")
+            }
+        }
+
         SettingsHeader {
             text: i18nc("@title", "Styling")
             Layout.columnSpan: 2
