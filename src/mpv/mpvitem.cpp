@@ -637,8 +637,6 @@ void MpvItem::getYouTubePlaylist(const QString &path)
         setPlaylistTitle(title);
         setPlaylistUrl(path);
 
-        QString playlistFileContent;
-
         for (int i = 0; i < entries.toArray().size(); ++i) {
             auto url = QString("https://youtu.be/%1").arg(entries[i]["id"].toString());
             auto title = entries[i]["title"].toString();
@@ -650,8 +648,6 @@ void MpvItem::getYouTubePlaylist(const QString &path)
 
             video->setDuration(Application::formatTime(duration));
             m_playList.append(video);
-
-            playlistFileContent += QString("%1,%2,%3\n").arg(url, title, QString::number(duration));
         }
 
         // save playlist to disk
