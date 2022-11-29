@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:45+0000\n"
+"POT-Creation-Date: 2022-11-29 00:46+0000\n"
 "PO-Revision-Date: 2022-11-06 15:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -530,7 +530,7 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reasignar"
 
-#: src/mpv/mpvitem.cpp:631
+#: src/mpv/mpvitem.cpp:633
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -1375,70 +1375,82 @@ msgctxt "@title:window"
 msgid "Help"
 msgstr "Ayuda"
 
-#: src/qml/Settings/SubtitlesSettings.qml:75
+#: src/qml/Settings/SubtitlesSettings.qml:77
+msgctxt "@option:check"
+msgid "Allow subtitles in black borders"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:86
+msgctxt "@info:tooltip"
+msgid ""
+"When checked the subtitles can be rendered outside the video, in the black "
+"borders. Might not work for all .ass subtitles."
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
 msgid "Styling"
 msgstr "Estilo"
 
-#: src/qml/Settings/SubtitlesSettings.qml:81
+#: src/qml/Settings/SubtitlesSettings.qml:97
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Familia del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:113
+#: src/qml/Settings/SubtitlesSettings.qml:129
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Tamaño del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:129
+#: src/qml/Settings/SubtitlesSettings.qml:145
 msgctxt "@label"
 msgid "Font style"
 msgstr "Estilo del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:134
+#: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Negrita"
 
-#: src/qml/Settings/SubtitlesSettings.qml:146
+#: src/qml/Settings/SubtitlesSettings.qml:162
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Cursiva"
 
-#: src/qml/Settings/SubtitlesSettings.qml:156
+#: src/qml/Settings/SubtitlesSettings.qml:172
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Color del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:189
-#: src/qml/Settings/SubtitlesSettings.qml:227
-#: src/qml/Settings/SubtitlesSettings.qml:287
+#: src/qml/Settings/SubtitlesSettings.qml:205
+#: src/qml/Settings/SubtitlesSettings.qml:243
+#: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Definir el valor predeterminado"
 
-#: src/qml/Settings/SubtitlesSettings.qml:195
+#: src/qml/Settings/SubtitlesSettings.qml:211
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Color de las sombras"
 
-#: src/qml/Settings/SubtitlesSettings.qml:233
+#: src/qml/Settings/SubtitlesSettings.qml:249
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Desplazamiento de las sombras"
 
-#: src/qml/Settings/SubtitlesSettings.qml:249
-#: src/qml/Settings/SubtitlesSettings.qml:309
+#: src/qml/Settings/SubtitlesSettings.qml:265
+#: src/qml/Settings/SubtitlesSettings.qml:325
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Defina a 0 (cero) para desactivar."
 
-#: src/qml/Settings/SubtitlesSettings.qml:254
+#: src/qml/Settings/SubtitlesSettings.qml:270
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Color del borde"
 
-#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:309
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Ancho del borde"
