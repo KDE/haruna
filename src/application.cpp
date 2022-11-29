@@ -27,14 +27,11 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QCoreApplication>
 #include <QDesktopServices>
-#include <QDir>
 #include <QFileInfo>
 #include <QFontDatabase>
 #include <QGuiApplication>
 #include <QMimeDatabase>
-#include <QPointer>
 #include <QQuickItem>
 #include <QQuickView>
 #include <QStandardPaths>
@@ -42,7 +39,6 @@
 #include <QStyleFactory>
 #include <QThread>
 
-#include <KAboutApplicationDialog>
 #include <KAboutData>
 #include <KColorSchemeManager>
 #include <KConfig>
@@ -333,16 +329,6 @@ QCommandLineParser *Application::parser() const
 void Application::activateColorScheme(const QString &name)
 {
     m_schemes->activateScheme(m_schemes->indexForScheme(name));
-}
-
-void Application::aboutApplication()
-{
-    static QPointer<QDialog> dialog;
-    if (!dialog) {
-        dialog = new KAboutApplicationDialog(KAboutData::applicationData(), nullptr);
-        dialog->setAttribute(Qt::WA_DeleteOnClose);
-    }
-    dialog->show();
 }
 
 void Application::openDocs(const QString &page)

@@ -93,7 +93,6 @@ private:
     void setupCommandLineParser();
     void registerQmlTypes();
     void setupQmlSettingsTypes();
-    void aboutApplication();
     QAbstractItemModel *colorSchemesModel();
     QApplication *m_app;
     KAboutData m_aboutData;
