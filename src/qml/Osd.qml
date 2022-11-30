@@ -40,6 +40,10 @@ Item {
     }
 
     function message(text) {
+        if (text == "") {
+            return
+        }
+
         const osdFontSize = parseInt(GeneralSettings.osdFontSize)
         label.text = text
         if (osdFontSize === 0) {
