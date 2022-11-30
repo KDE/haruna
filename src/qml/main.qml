@@ -110,8 +110,6 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    HamburgerMenu { id: hamburgerMenu }
-
     SystemPalette { id: systemPalette; colorGroup: SystemPalette.Active }
 
     Loader {
