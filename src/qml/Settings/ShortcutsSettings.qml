@@ -61,27 +61,16 @@ SettingsBasePage {
                 height: Kirigami.Units.iconSizes.smallMedium
             }
             trailing: KeySequenceItem {
-                property var oldKeySequence
-                property var shortcut: model.shortcut
-
                 checkForConflictsAgainst: ShortcutType.None
                 modifierlessAllowed: true
-                onShortcutChanged: {
-                    keySequence = shortcut
-                    oldKeySequence = shortcut
-                }
+                keySequence: model.shortcut
 
                 onKeySequenceChanged: {
                     if (keySequence !== model.shortcut) {
                         if (!proxyActionsModel.saveShortcut(model.index, keySequence)) {
-                            keySequence = oldKeySequence
+                            keySequence = model.shortcut
                         }
                     }
-                }
-
-                Component.onCompleted: {
-                    oldKeySequence = model.shortcut
-                    keySequence = model.shortcut
                 }
             }
         }

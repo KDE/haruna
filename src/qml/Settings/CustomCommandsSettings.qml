@@ -91,30 +91,18 @@ SettingsBasePage {
                 Loader {
                     active: model.type === "shortcut"
                     sourceComponent: KeySequenceItem {
-                        property var oldKeySequence
-                        property var shortcut: model.shortcut
-
                         checkForConflictsAgainst: ShortcutType.None
                         modifierlessAllowed: true
-                        onShortcutChanged: {
-                            keySequence = shortcut
-                            oldKeySequence = shortcut
-                        }
+                        keySequence: model.shortcut
 
                         onKeySequenceChanged: {
                             if (keySequence !== model.shortcut) {
                                 // use action name (commandId) since this changes the actionsModel
                                 if (!actionsModel.saveShortcut(model.commandId, keySequence)) {
-                                    keySequence = oldKeySequence
+                                    keySequence = model.shortcut
                                 }
                             }
                         }
-
-                        Component.onCompleted: {
-                            oldKeySequence = model.shortcut
-                            keySequence = model.shortcut
-                        }
-
                     }
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 }
