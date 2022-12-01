@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:46+0000\n"
-"PO-Revision-Date: 2022-11-06 10:40+0100\n"
+"POT-Creation-Date: 2022-12-01 00:46+0000\n"
+"PO-Revision-Date: 2022-11-29 09:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -776,22 +776,22 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:196 src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccioneu un fitxer"
 
-#: src/qml/main.qml:226
+#: src/qml/main.qml:224
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccioneu un fitxer de subtítols"
 
-#: src/qml/main.qml:252
+#: src/qml/main.qml:250
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "No s'ha trobat <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
 
-#: src/qml/main.qml:279
+#: src/qml/main.qml:277
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Obri"
@@ -956,7 +956,7 @@ msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "No s'establix a l'inici següent"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:155
+#: src/qml/Settings/CustomCommandsSettings.qml:143
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Afi&g"
@@ -1380,7 +1380,7 @@ msgstr "Ajuda"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "Permet els subtítols en les vores negres"
 
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@info:tooltip"
@@ -1388,6 +1388,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"Quan està marcada, els subtítols es poden representar fora del vídeo, a les "
+"vores negres. Podria no funcionar amb els subtítols «.ass»."
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
@@ -1521,7 +1523,3 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "Alçària de la fila"

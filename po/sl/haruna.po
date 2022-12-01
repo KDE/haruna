@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:46+0000\n"
-"PO-Revision-Date: 2022-11-12 19:47+0100\n"
+"POT-Creation-Date: 2022-12-01 00:46+0000\n"
+"PO-Revision-Date: 2022-11-30 07:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Generator: Poedit 3.1.1\n"
 
 #, kde-format
@@ -684,7 +684,7 @@ msgstr "Nedavne datoteke"
 #: src/qml/HamburgerMenu.qml:80
 msgctxt "@action:inmenu"
 msgid "&More"
-msgstr "&Dodatno"
+msgstr "Dodatno"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
 msgctxt "@info:tooltip"
@@ -776,22 +776,22 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:198 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:196 src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: src/qml/main.qml:226
+#: src/qml/main.qml:224
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Izberite datoteko podnaslovov"
 
-#: src/qml/main.qml:252
+#: src/qml/main.qml:250
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> ni bil najden."
 
-#: src/qml/main.qml:279
+#: src/qml/main.qml:277
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Odpri"
@@ -799,7 +799,7 @@ msgstr "Odpri"
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
 msgctxt "@title:menu"
 msgid "&Audio"
-msgstr "&Zvok"
+msgstr "Zvok"
 
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 msgctxt "@title:menu"
@@ -814,7 +814,7 @@ msgstr "Hitrost predvajanja"
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
 msgctxt "@title:menu"
 msgid "&File"
-msgstr "&Datoteka"
+msgstr "Datoteka"
 
 #: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
 msgctxt "@title:menu"
@@ -829,7 +829,7 @@ msgstr "Počisti seznam"
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Help"
-msgstr "Po&moč"
+msgstr "Pomoč"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
@@ -880,7 +880,7 @@ msgstr "Prilagoditve"
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
 msgctxt "@title:menu"
 msgid "&View"
-msgstr "&Pogled"
+msgstr "Pogled"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
 msgctxt "@action:inmenu"
@@ -956,7 +956,7 @@ msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "Ne nastavi pri naslednjem zagonu"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:155
+#: src/qml/Settings/CustomCommandsSettings.qml:143
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Dod&aj"
@@ -1380,7 +1380,7 @@ msgstr "Pomoč"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "Dovoli podnaslove v črnih okvirih"
 
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@info:tooltip"
@@ -1388,6 +1388,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"Kadar je odkljukano so podnaslovi upodobljeni izven videa v črnih okvirih. "
+"Lahko, da ne deluje za vse podnaslove .ass."
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
