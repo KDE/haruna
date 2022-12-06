@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-### ⚠ Bugs and feature requests go to https://bugs.kde.org
+### [Read before reporting a bug or requesting a feature](./bugs_and_feature_requests.md)
 
 ----
 
