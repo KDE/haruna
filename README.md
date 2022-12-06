@@ -15,7 +15,7 @@ SPDX-License-Identifier: CC-BY-4.0
 Haruna is an open source video player built with Qt/QML and libmpv.
 
 ![Haruna main window](./data/screenshots/haruna-dark.png)
-[More Screenshots](./Screenshots.md)
+For more screnshots go to [Haruna's website](https://haruna.kde.org)
 
 # Install
 
