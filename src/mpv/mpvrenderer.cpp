@@ -85,7 +85,8 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
 #endif
 
         mpv_render_param display{MPV_RENDER_PARAM_INVALID, nullptr};
-#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN) && QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         if(QX11Info::isPlatformX11()) {
             display.type = MPV_RENDER_PARAM_X11_DISPLAY;
             display.data = QX11Info::display();
@@ -101,6 +102,7 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
             display.data = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
         }
         // TODO: figure out qt6 alternative for the wayland part
+#endif
 #endif
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
