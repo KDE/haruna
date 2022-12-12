@@ -85,7 +85,7 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
     return roles;
 }
 
-void PlayListModel::getVideos(QString path)
+void PlayListModel::getSiblingVideos(QString path)
 {
     clear();
     QUrl url {path};

@@ -318,7 +318,7 @@ Kirigami.ApplicationWindow {
             }
         }
 
-        mpv.playlistModel.getVideos(path)
+        mpv.playlistModel.getSiblingVideos(path)
 
         mpv.loadFile(path)
         playList.scrollPositionTimer.start()
