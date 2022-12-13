@@ -120,7 +120,7 @@ void PlayListModel::getSiblingItems(QString path)
 
         beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
         for (int i = 0; i < siblingFiles.count(); ++i) {
-            auto item = new PlayListItem(siblingFiles.at(i), i, this);
+            auto item = new PlayListItem(siblingFiles.at(i), this);
             m_playlist.append(item);
             if (path == siblingFiles.at(i)) {
                 setPlayingItem(i);
@@ -139,11 +139,11 @@ void PlayListModel::appendItem(QString path)
     if (itemInfo.exists() && itemInfo.isFile()) {
         QString mimeType = Application::mimeType(QUrl(itemInfo.absoluteFilePath()));
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-            item = new PlayListItem(itemInfo.absoluteFilePath(), m_playlist.count(), this);
+            item = new PlayListItem(itemInfo.absoluteFilePath(), this);
         }
     } else {
         if (path.startsWith("http")) {
-            item = new PlayListItem(path, m_playlist.count(), this);
+            item = new PlayListItem(path, this);
         }
     }
 

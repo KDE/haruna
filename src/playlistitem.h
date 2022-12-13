@@ -13,7 +13,7 @@ class PlayListItem : public QObject
 {
     Q_OBJECT
 public:
-    explicit PlayListItem(const QString &path, int i = 0, QObject *parent = nullptr);
+    explicit PlayListItem(const QString &path, QObject *parent = nullptr);
 
     Q_INVOKABLE QString mediaTitle() const;
     void setMediaTitle(const QString &title);
@@ -33,9 +33,6 @@ public:
     Q_INVOKABLE bool isPlaying() const;
     void setIsPlaying(bool isPlaying);
 
-    Q_INVOKABLE int index() const;
-    void setIndex(int index);
-
 private:
     QString m_mediaTitle;
     QString m_filePath;
@@ -44,7 +41,6 @@ private:
     QString m_duration;
     bool m_isHovered {false};
     bool m_isPlaying {false};
-    int m_index {-1};
 };
 
 #endif // PLAYLISTITEM_H

@@ -9,7 +9,7 @@
 #include <QFileInfo>
 #include <QUrl>
 
-PlayListItem::PlayListItem(const QString &path, int i, QObject *parent)
+PlayListItem::PlayListItem(const QString &path, QObject *parent)
     : QObject(parent)
 {
     QUrl url(path);
@@ -24,7 +24,6 @@ PlayListItem::PlayListItem(const QString &path, int i, QObject *parent)
         setFilePath(fileInfo.absoluteFilePath());
         setFolderPath(fileInfo.absolutePath());
     }
-    setIndex(i);
     setIsPlaying(false);
 }
 
@@ -86,14 +85,4 @@ bool PlayListItem::isPlaying() const
 void PlayListItem::setIsPlaying(bool isPlaying)
 {
     m_isPlaying = isPlaying;
-}
-
-int PlayListItem::index() const
-{
-    return m_index;
-}
-
-void PlayListItem::setIndex(int index)
-{
-    m_index = index;
 }

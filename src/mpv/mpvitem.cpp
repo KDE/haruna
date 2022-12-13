@@ -570,7 +570,7 @@ void MpvItem::getYouTubePlaylist(const QString &path)
             auto title = entries[i]["title"].toString();
             auto duration = entries[i]["duration"].toDouble();
 
-            auto video = new PlayListItem(url, i, m_playlistModel);
+            auto video = new PlayListItem(url, m_playlistModel);
             video->setMediaTitle(!title.isEmpty() ? title : url);
             video->setFileName(!title.isEmpty() ? title : url);
 
