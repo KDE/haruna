@@ -244,8 +244,10 @@ void PlayListModel::clear()
 
 void PlayListModel::openM3uFile(const QString &path)
 {
-    QFile m3uFile(path);
+    QUrl url(path);
+    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
     if (!m3uFile.open(QFile::ReadOnly)) {
+        qDebug() << "can't open playlist file";
         return;
     }
     while (!m3uFile.atEnd()) {
@@ -268,7 +270,8 @@ void PlayListModel::openM3uFile(const QString &path)
 
 void PlayListModel::saveM3uFile(const QString &path)
 {
-    QFile m3uFile(path);
+    QUrl url(path);
+    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
     if (!m3uFile.open(QFile::WriteOnly)) {
         return;
     }
