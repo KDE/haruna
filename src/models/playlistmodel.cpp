@@ -12,9 +12,13 @@
 #include "worker.h"
 
 #include <KFileItem>
+#include <KLocalizedString>
 #include <QCollator>
 #include <QDirIterator>
 #include <QFileInfo>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QProcess>
 #include <QUrl>
 
 PlayListModel::PlayListModel(QObject *parent)
@@ -136,6 +140,7 @@ void PlayListModel::appendItem(QString path)
     path = QUrl(path).toLocalFile().isEmpty() ? path : QUrl(path).toLocalFile();
     PlayListItem *item {nullptr};
     QFileInfo itemInfo(path);
+    int row {m_playlist.count()};
     if (itemInfo.exists() && itemInfo.isFile()) {
         QString mimeType = Application::mimeType(QUrl(itemInfo.absoluteFilePath()));
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
@@ -144,6 +149,7 @@ void PlayListModel::appendItem(QString path)
     } else {
         if (path.startsWith("http")) {
             item = new PlayListItem(path, this);
+            getHttpItemTitle(path, row);
         }
     }
 
@@ -151,7 +157,6 @@ void PlayListModel::appendItem(QString path)
         return;
     }
 
-    int row {m_playlist.count()};
     beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
 
     m_playlist.append(item);
@@ -190,6 +195,26 @@ void PlayListModel::playPrevious()
 Playlist PlayListModel::items() const
 {
     return m_playlist;
+}
+
+void PlayListModel::getHttpItemTitle(const QString &url, int row)
+{
+    auto ytdlProcess = new QProcess();
+    ytdlProcess->setProgram(Application::youtubeDlExecutable());
+    ytdlProcess->setArguments(QStringList() << "-j" << url);
+    ytdlProcess->start();
+
+    QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
+                     this, [=](int, QProcess::ExitStatus) {
+        QString json = ytdlProcess->readAllStandardOutput();
+        QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
+        if (title.isEmpty()) {
+            Q_EMIT Global::instance()->error(i18nc("@info", "No title found for url %1", url));
+            return;
+        }
+        m_playlist.at(row)->setMediaTitle(title);
+        Q_EMIT dataChanged(index(row, 0), index(row, 0));
+    });
 }
 
 Playlist PlayListModel::getPlayList() const

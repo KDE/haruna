@@ -18,6 +18,7 @@ PlayListItem::PlayListItem(const QString &path, QObject *parent)
         setFilePath(url.toString());
         setFileName(QString());
         setFolderPath(QString());
+        setMediaTitle(url.toString());
     } else {
         QFileInfo fileInfo(path);
         setFileName(fileInfo.fileName());
