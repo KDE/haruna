@@ -160,7 +160,6 @@ void PlayListModel::appendItem(QString path)
     beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
 
     m_playlist.append(item);
-    setPlayingItem(row);
     Q_EMIT itemAdded(row, item->filePath());
 
     endInsertRows();
@@ -250,7 +249,7 @@ void PlayListModel::openM3uFile(const QString &path)
         return;
     }
     while (!m3uFile.atEnd()) {
-        QByteArray line = m3uFile.readLine().simplified();
+        QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine().simplified());
         // ignore comments
         if (line.startsWith("#")) {
             continue;
@@ -259,8 +258,12 @@ void PlayListModel::openM3uFile(const QString &path)
         QUrl url(line);
         if (!url.scheme().isEmpty()) {
             appendItem(url.toString());
+        } else {
+            // figure out if it's a relative path
+            appendItem(QUrl::fromUserInput(line, QFileInfo(path).absolutePath()).toString());
         }
     }
+    setPlayingItem(0);
 }
 
 QString PlayListModel::getPath(int index)
