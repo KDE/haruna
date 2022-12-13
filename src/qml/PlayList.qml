@@ -8,6 +8,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
+import Qt.labs.platform 1.0 as Platform
 
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
@@ -68,6 +69,57 @@ Item {
 
                 model: mpv.playlistModel
                 spacing: 1
+
+                headerPositioning: ListView.OverlayHeader
+                header: ToolBar {
+                    width: parent.width
+                    z: 100
+                    RowLayout {
+                        anchors.fill: parent
+                        Kirigami.ActionToolBar {
+                            actions: [
+                                Kirigami.Action {
+                                    text: i18nc("@action:button", "Open playlist")
+                                    icon.name: "media-playlist-append"
+                                    onTriggered: {
+                                        fileDialog.fileType = "playlist"
+                                        fileDialog.fileMode = Platform.FileDialog.OpenFile
+                                        fileDialog.open()
+                                    }
+                                },
+                                Kirigami.Action {
+                                    text: i18nc("@action:button", "Add file")
+                                    icon.name: "list-add"
+                                    onTriggered: {
+                                        fileDialog.fileType = "video"
+                                        fileDialog.fileMode = Platform.FileDialog.OpenFile
+                                        fileDialog.open()
+                                    }
+                                },
+                                Kirigami.Action {
+                                    text: i18nc("@action:button", "Clear")
+                                    icon.name: "edit-clear-all"
+                                    displayHint: Kirigami.Action.DisplayHint.AlwaysHide
+                                    onTriggered: {
+                                        mpv.playlistModel.clear()
+                                    }
+                                },
+                                Kirigami.Action {
+                                    text: i18nc("@action:button", "Save as")
+                                    icon.name: "document-save-as"
+                                    displayHint: Kirigami.Action.DisplayHint.AlwaysHide
+                                    onTriggered: {
+                                        fileDialog.fileType = "playlist"
+                                        fileDialog.fileMode = Platform.FileDialog.SaveFile
+                                        fileDialog.open()
+                                    }
+                                }
+                            ]
+                        }
+
+                    }
+                }
+
                 delegate: {
                     switch (PlaylistSettings.style) {
                     case "default":
@@ -130,7 +182,36 @@ Item {
             source: shaderEffect
             z: 10
         }
+    }
 
+    Platform.FileDialog {
+        id: fileDialog
+
+        property url location: GeneralSettings.fileDialogLocation
+                               ? app.pathToUrl(GeneralSettings.fileDialogLocation)
+                               : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
+        property string fileType: "video"
+
+        folder: location
+        title: i18nc("@title:window", "Select file")
+        fileMode: Platform.FileDialog.OpenFile
+
+        onAccepted: {
+            switch (fileType) {
+            case "video":
+                mpv.playlistModel.appendItem(fileDialog.file.toString())
+                break
+            case "playlist":
+                if (fileMode === Platform.FileDialog.OpenFile) {
+                    mpv.playlistModel.openM3uFile(fileDialog.file.toString())
+                } else {
+                    mpv.playlistModel.saveM3uFile(fileDialog.file.toString())
+                }
+
+                break
+            }
+        }
+        onRejected: mpv.focus = true
     }
 
     states: [
