@@ -47,6 +47,7 @@ public:
     Q_INVOKABLE int getPlayingVideo() const;
     Q_INVOKABLE void getSiblingVideos(QString path);
     Q_INVOKABLE void appendVideo(QString videoPath);
+    Q_INVOKABLE void removeVideo(int index);
     Q_INVOKABLE void clear();
 
     Playlist getPlayList() const;
@@ -54,6 +55,7 @@ public:
 
 Q_SIGNALS:
     void videoAdded(int index, QString path);
+    void videoRemoved(int index, QString path);
     void playingVideoChanged();
 
 private:

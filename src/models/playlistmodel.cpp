@@ -158,6 +158,14 @@ void PlayListModel::appendVideo(QString videoPath)
     endInsertRows();
 }
 
+void PlayListModel::removeVideo(int index)
+{
+    beginRemoveRows(QModelIndex(), index, index);
+    m_playList.removeAt(index);
+    endRemoveRows();
+    Q_EMIT videoRemoved(index, getPath(index));
+}
+
 Playlist PlayListModel::items() const
 {
     return m_playList;
