@@ -633,6 +633,7 @@ void MpvItem::resetTimePosition()
     if (f.exists()) {
         f.remove();
     }
+    f.close();
 }
 
 void MpvItem::userCommand(const QString &commandString)
