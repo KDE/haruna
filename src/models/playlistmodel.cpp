@@ -266,6 +266,17 @@ void PlayListModel::openM3uFile(const QString &path)
     setPlayingItem(0);
 }
 
+void PlayListModel::saveM3uFile(const QString &path)
+{
+    QFile m3uFile(path);
+    if (!m3uFile.open(QFile::WriteOnly)) {
+        return;
+    }
+    for (const auto &item : m_playlist) {
+        m3uFile.write(item->filePath().toUtf8().append("\n"));
+    }
+}
+
 QString PlayListModel::getPath(int index)
 {
     // when restoring a youtube playlist

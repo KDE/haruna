@@ -52,6 +52,7 @@ public:
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void clear();
     Q_INVOKABLE void openM3uFile(const QString &path);
+    Q_INVOKABLE void saveM3uFile(const QString &path);
 
     Playlist getPlayList() const;
     void setPlayList(const Playlist &playList);
