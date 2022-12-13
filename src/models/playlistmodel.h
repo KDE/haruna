@@ -64,7 +64,7 @@ Q_SIGNALS:
 
 private:
     Playlist items() const;
-    void getHttpItemTitle(const QString &url, int row);
+    void getHttpItemInfo(const QString &url, int row);
     Playlist m_playlist;
     int m_playingItem = 0;
 };

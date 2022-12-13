@@ -149,7 +149,7 @@ void PlayListModel::appendItem(QString path)
     } else {
         if (path.startsWith("http")) {
             item = new PlayListItem(path, this);
-            getHttpItemTitle(path, row);
+            getHttpItemInfo(path, row);
         }
     }
 
@@ -196,7 +196,7 @@ Playlist PlayListModel::items() const
     return m_playlist;
 }
 
-void PlayListModel::getHttpItemTitle(const QString &url, int row)
+void PlayListModel::getHttpItemInfo(const QString &url, int row)
 {
     auto ytdlProcess = new QProcess();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
@@ -207,11 +207,13 @@ void PlayListModel::getHttpItemTitle(const QString &url, int row)
                      this, [=](int, QProcess::ExitStatus) {
         QString json = ytdlProcess->readAllStandardOutput();
         QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
+        int duration = QJsonDocument::fromJson(json.toUtf8())["duration"].toInt();
         if (title.isEmpty()) {
             Q_EMIT Global::instance()->error(i18nc("@info", "No title found for url %1", url));
             return;
         }
         m_playlist.at(row)->setMediaTitle(title);
+        m_playlist.at(row)->setDuration(Application::formatTime(duration));
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });
 }
