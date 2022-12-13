@@ -134,23 +134,26 @@ void PlayListModel::getSiblingItems(QString path)
 void PlayListModel::appendItem(QString path)
 {
     path = QUrl(path).toLocalFile().isEmpty() ? path : QUrl(path).toLocalFile();
+    PlayListItem *item {nullptr};
     QFileInfo itemInfo(path);
-    QStringList items;
     if (itemInfo.exists() && itemInfo.isFile()) {
         QString mimeType = Application::mimeType(QUrl(itemInfo.absoluteFilePath()));
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-            items.append(itemInfo.absoluteFilePath());
+            item = new PlayListItem(itemInfo.absoluteFilePath(), m_playlist.count(), this);
+        }
+    } else {
+        if (path.startsWith("http")) {
+            item = new PlayListItem(path, m_playlist.count(), this);
         }
     }
 
-    if (items.isEmpty()) {
+    if (item == nullptr) {
         return;
     }
 
     int row {m_playlist.count()};
-    beginInsertRows(QModelIndex(), row, m_playlist.count());
+    beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
 
-    auto item = new PlayListItem(items.at(row), row, this);
     m_playlist.append(item);
     setPlayingItem(row);
     Q_EMIT itemAdded(row, item->filePath());
@@ -213,6 +216,26 @@ void PlayListModel::clear()
     beginResetModel();
     m_playlist.clear();
     endResetModel();
+}
+
+void PlayListModel::openM3uFile(const QString &path)
+{
+    QFile m3uFile(path);
+    if (!m3uFile.open(QFile::ReadOnly)) {
+        return;
+    }
+    while (!m3uFile.atEnd()) {
+        QByteArray line = m3uFile.readLine().simplified();
+        // ignore comments
+        if (line.startsWith("#")) {
+            continue;
+        }
+
+        QUrl url(line);
+        if (!url.scheme().isEmpty()) {
+            appendItem(url.toString());
+        }
+    }
 }
 
 QString PlayListModel::getPath(int index)
