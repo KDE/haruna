@@ -268,6 +268,7 @@ void PlayListModel::openM3uFile(const QString &path)
         }
     }
     setPlayingItem(0);
+    m3uFile.close();
 }
 
 void PlayListModel::saveM3uFile(const QString &path)
@@ -280,6 +281,7 @@ void PlayListModel::saveM3uFile(const QString &path)
     for (const auto &item : m_playlist) {
         m3uFile.write(item->filePath().toUtf8().append("\n"));
     }
+    m3uFile.close();
 }
 
 QString PlayListModel::getPath(int index)
