@@ -82,6 +82,10 @@ MpvItem::MpvItem(QQuickItem * parent)
         }
     });
 
+    connect(m_playlistModel, &PlayListModel::playingVideoChanged, this, [=]() {
+        command(QStringList() << "loadfile" << m_playlistModel->getPath(m_playlistModel->getPlayingVideo()));
+    });
+
 #if defined(Q_OS_UNIX)
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));

@@ -143,29 +143,11 @@ Item {
         onPlayPauseAction: mpv.pause = !mpv.pause
 
         onPlayNextAction: {
-            const nextFileRow = mpv.playlistModel.getPlayingVideo() + 1
-            const updateLastPlayedFile = !playList.isYouTubePlaylist
-            if (nextFileRow < playList.playlistView.count) {
-                const nextFile = mpv.playlistModel.getPath(nextFileRow)
-                mpv.playlistModel.setPlayingVideo(nextFileRow)
-                mpv.loadFile(nextFile, updateLastPlayedFile)
-            } else {
-                // Last file in playlist
-                if (PlaylistSettings.repeat) {
-                    mpv.playlistModel.setPlayingVideo(0)
-                    mpv.loadFile(mpv.playlistModel.getPath(0), updateLastPlayedFile)
-                }
-            }
+            mpv.playlistModel.playNext()
         }
 
         onPlayPreviousAction: {
-            if (mpv.playlistModel.getPlayingVideo() !== 0) {
-                const previousFileRow = mpv.playlistModel.getPlayingVideo() - 1
-                const previousFile = mpv.playlistModel.getPath(previousFileRow)
-                const updateLastPlayedFile = !playList.isYouTubePlaylist
-                mpv.playlistModel.setPlayingVideo(previousFileRow)
-                mpv.loadFile(previousFile, updateLastPlayedFile)
-            }
+            mpv.playlistModel.playPrevious()
         }
 
         onQuitApplicationAction: {

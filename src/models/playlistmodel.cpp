@@ -166,6 +166,24 @@ void PlayListModel::removeVideo(int index)
     Q_EMIT videoRemoved(index, getPath(index));
 }
 
+void PlayListModel::playNext()
+{
+    int i = m_playingVideo + 1;
+    if (i < rowCount()) {
+        setPlayingVideo(i);
+    } else {
+        setPlayingVideo(0);
+    }
+}
+
+void PlayListModel::playPrevious()
+{
+    int i = m_playingVideo - 1;
+    if (i >= 0) {
+        setPlayingVideo(i);
+    }
+}
+
 Playlist PlayListModel::items() const
 {
     return m_playList;

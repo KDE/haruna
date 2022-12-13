@@ -48,6 +48,8 @@ public:
     Q_INVOKABLE void getSiblingVideos(QString path);
     Q_INVOKABLE void appendVideo(QString videoPath);
     Q_INVOKABLE void removeVideo(int index);
+    Q_INVOKABLE void playNext();
+    Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void clear();
 
     Playlist getPlayList() const;
