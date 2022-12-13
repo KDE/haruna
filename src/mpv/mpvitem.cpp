@@ -82,8 +82,8 @@ MpvItem::MpvItem(QQuickItem * parent)
         }
     });
 
-    connect(m_playlistModel, &PlayListModel::playingVideoChanged, this, [=]() {
-        command(QStringList() << "loadfile" << m_playlistModel->getPath(m_playlistModel->getPlayingVideo()));
+    connect(m_playlistModel, &PlayListModel::playingItemChanged, this, [=]() {
+        command(QStringList() << "loadfile" << m_playlistModel->getPath(m_playlistModel->getPlayingItem()));
     });
 
 #if defined(Q_OS_UNIX)
@@ -385,7 +385,7 @@ void MpvItem::loadFile(const QString &file, bool updateLastPlayedFile)
         GeneralSettings::setLastPlayedFile(file);
         GeneralSettings::self()->save();
     } else {
-        GeneralSettings::setLastPlaylistIndex(m_playlistModel->getPlayingVideo());
+        GeneralSettings::setLastPlaylistIndex(m_playlistModel->getPlayingItem());
         GeneralSettings::self()->save();
     }
 }

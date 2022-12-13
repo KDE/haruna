@@ -19,11 +19,11 @@ using Playlist = QList<PlayListItem*>;
 class PlayListModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(int playingVideo
-               MEMBER m_playingVideo
-               READ getPlayingVideo
-               WRITE setPlayingVideo
-               NOTIFY playingVideoChanged)
+    Q_PROPERTY(int playingItem
+               MEMBER m_playingItem
+               READ getPlayingItem
+               WRITE setPlayingItem
+               NOTIFY playingItemChanged)
 
 public:
     explicit PlayListModel(QObject *parent = nullptr);
@@ -41,13 +41,13 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     virtual QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE QString getPath(int i);
-    Q_INVOKABLE PlayListItem *getItem(int i);
-    Q_INVOKABLE void setPlayingVideo(int playingVideo);
-    Q_INVOKABLE int getPlayingVideo() const;
-    Q_INVOKABLE void getSiblingVideos(QString path);
-    Q_INVOKABLE void appendVideo(QString videoPath);
-    Q_INVOKABLE void removeVideo(int index);
+    Q_INVOKABLE QString getPath(int index);
+    Q_INVOKABLE PlayListItem *getItem(int index);
+    Q_INVOKABLE void setPlayingItem(int i);
+    Q_INVOKABLE int getPlayingItem() const;
+    Q_INVOKABLE void getSiblingItems(QString path);
+    Q_INVOKABLE void appendItem(QString path);
+    Q_INVOKABLE void removeItem(int index);
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void clear();
@@ -56,14 +56,14 @@ public:
     void setPlayList(const Playlist &playList);
 
 Q_SIGNALS:
-    void videoAdded(int index, QString path);
-    void videoRemoved(int index, QString path);
-    void playingVideoChanged();
+    void itemAdded(int index, QString path);
+    void itemRemoved(int index, QString path);
+    void playingItemChanged();
 
 private:
     Playlist items() const;
-    Playlist m_playList;
-    int m_playingVideo = 0;
+    Playlist m_playlist;
+    int m_playingItem = 0;
 };
 
 #endif // PLAYLISTMODEL_H

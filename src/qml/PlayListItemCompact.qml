@@ -29,7 +29,7 @@ Kirigami.BasicListItem {
     }
 
     onDoubleClicked: {
-        mpv.playlistModel.setPlayingVideo(index)
+        mpv.playlistModel.setPlayingItem(index)
         mpv.loadFile(path, !isYouTubePlaylist)
         mpv.pause = false
     }

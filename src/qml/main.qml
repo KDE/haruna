@@ -211,7 +211,7 @@ Kirigami.ApplicationWindow {
 
         property url location: {
             if (mpv.playlistModel.length > 0) {
-                const item = mpv.playlistModel.getItem(mpv.playlistModel.getPlayingVideo())
+                const item = mpv.playlistModel.getItem(mpv.playlistModel.getPlayingItem())
                 return app.pathToUrl(item.folderPath())
             } else {
                 return (GeneralSettings.fileDialogLocation
@@ -318,7 +318,7 @@ Kirigami.ApplicationWindow {
             }
         }
 
-        mpv.playlistModel.getSiblingVideos(path)
+        mpv.playlistModel.getSiblingItems(path)
 
         mpv.loadFile(path)
         playList.scrollPositionTimer.start()

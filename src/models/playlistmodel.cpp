@@ -20,7 +20,7 @@
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(this, &PlayListModel::videoAdded,
+    connect(this, &PlayListModel::itemAdded,
             Worker::instance(), &Worker::getMetaData);
 
 #if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
@@ -31,8 +31,8 @@ PlayListModel::PlayListModel(QObject *parent)
         auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
         auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
-        m_playList[i]->setDuration(Application::formatTime(duration));
-        m_playList[i]->setMediaTitle(title);
+        m_playlist[i]->setDuration(Application::formatTime(duration));
+        m_playlist[i]->setMediaTitle(title);
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
 
@@ -44,15 +44,15 @@ int PlayListModel::rowCount(const QModelIndex &parent) const
     if (parent.isValid())
         return 0;
 
-    return m_playList.size();
+    return m_playlist.size();
 }
 
 QVariant PlayListModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || m_playList.empty())
+    if (!index.isValid() || m_playlist.empty())
         return QVariant();
 
-    auto playListItem = m_playList.at(index.row());
+    auto playListItem = m_playlist.at(index.row());
     switch (role) {
     case NameRole:
         return QVariant(playListItem->fileName());
@@ -85,13 +85,13 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
     return roles;
 }
 
-void PlayListModel::getSiblingVideos(QString path)
+void PlayListModel::getSiblingItems(QString path)
 {
     clear();
     QUrl url {path};
     bool isUrl = url.scheme().startsWith(QStringLiteral("http"));
     if (!PlaylistSettings::loadSiblings() || isUrl) {
-        appendVideo(path);
+        appendItem(path);
         return;
     }
 
@@ -120,132 +120,132 @@ void PlayListModel::getSiblingVideos(QString path)
 
         beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
         for (int i = 0; i < siblingFiles.count(); ++i) {
-            auto video = new PlayListItem(siblingFiles.at(i), i, this);
-            m_playList.append(video);
+            auto item = new PlayListItem(siblingFiles.at(i), i, this);
+            m_playlist.append(item);
             if (path == siblingFiles.at(i)) {
-                setPlayingVideo(i);
+                setPlayingItem(i);
             }
-            Q_EMIT videoAdded(i, video->filePath());
+            Q_EMIT itemAdded(i, item->filePath());
         }
         endInsertRows();
     }
 }
 
-void PlayListModel::appendVideo(QString videoPath)
+void PlayListModel::appendItem(QString path)
 {
-    videoPath = QUrl(videoPath).toLocalFile().isEmpty() ? videoPath : QUrl(videoPath).toLocalFile();
-    QFileInfo videoPathInfo(videoPath);
-    QStringList videoFiles;
-    if (videoPathInfo.exists() && videoPathInfo.isFile()) {
-        QString mimeType = Application::mimeType(QUrl(videoPathInfo.absoluteFilePath()));
+    path = QUrl(path).toLocalFile().isEmpty() ? path : QUrl(path).toLocalFile();
+    QFileInfo itemInfo(path);
+    QStringList items;
+    if (itemInfo.exists() && itemInfo.isFile()) {
+        QString mimeType = Application::mimeType(QUrl(itemInfo.absoluteFilePath()));
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-            videoFiles.append(videoPathInfo.absoluteFilePath());
+            items.append(itemInfo.absoluteFilePath());
         }
     }
 
-    if (videoFiles.isEmpty()) {
+    if (items.isEmpty()) {
         return;
     }
 
-    int row {m_playList.count()};
-    beginInsertRows(QModelIndex(), row, m_playList.count());
+    int row {m_playlist.count()};
+    beginInsertRows(QModelIndex(), row, m_playlist.count());
 
-    auto video = new PlayListItem(videoFiles.at(row), row, this);
-    m_playList.append(video);
-    setPlayingVideo(row);
-    Q_EMIT videoAdded(row, video->filePath());
+    auto item = new PlayListItem(items.at(row), row, this);
+    m_playlist.append(item);
+    setPlayingItem(row);
+    Q_EMIT itemAdded(row, item->filePath());
 
     endInsertRows();
 }
 
-void PlayListModel::removeVideo(int index)
+void PlayListModel::removeItem(int index)
 {
     beginRemoveRows(QModelIndex(), index, index);
-    m_playList.removeAt(index);
+    m_playlist.removeAt(index);
     endRemoveRows();
-    Q_EMIT videoRemoved(index, getPath(index));
+    Q_EMIT itemRemoved(index, getPath(index));
 }
 
 void PlayListModel::playNext()
 {
-    int i = m_playingVideo + 1;
+    int i = m_playingItem + 1;
     if (i < rowCount()) {
-        setPlayingVideo(i);
+        setPlayingItem(i);
     } else {
-        setPlayingVideo(0);
+        setPlayingItem(0);
     }
 }
 
 void PlayListModel::playPrevious()
 {
-    int i = m_playingVideo - 1;
+    int i = m_playingItem - 1;
     if (i >= 0) {
-        setPlayingVideo(i);
+        setPlayingItem(i);
     }
 }
 
 Playlist PlayListModel::items() const
 {
-    return m_playList;
+    return m_playlist;
 }
 
 Playlist PlayListModel::getPlayList() const
 {
-    return m_playList;
+    return m_playlist;
 }
 
 void PlayListModel::setPlayList(const Playlist &playList)
 {
     beginInsertRows(QModelIndex(), 0, playList.size() - 1);
-    m_playList = playList;
+    m_playlist = playList;
     endInsertRows();
 }
 
-int PlayListModel::getPlayingVideo() const
+int PlayListModel::getPlayingItem() const
 {
-    return m_playingVideo;
+    return m_playingItem;
 }
 
 void PlayListModel::clear()
 {
-    m_playingVideo = 0;
-    qDeleteAll(m_playList);
+    m_playingItem = 0;
+    qDeleteAll(m_playlist);
     beginResetModel();
-    m_playList.clear();
+    m_playlist.clear();
     endResetModel();
 }
 
-QString PlayListModel::getPath(int i)
+QString PlayListModel::getPath(int index)
 {
     // when restoring a youtube playlist
     // ensure the requested path is valid
-    if (m_playList.isEmpty()) {
+    if (m_playlist.isEmpty()) {
         return QString();
     }
-    if (m_playList.size() <= i) {
-        return m_playList[0]->filePath();
+    if (m_playlist.size() <= index) {
+        return m_playlist[0]->filePath();
     }
-    return m_playList[i]->filePath();
+    return m_playlist[index]->filePath();
 }
 
-PlayListItem *PlayListModel::getItem(int i)
+PlayListItem *PlayListModel::getItem(int index)
 {
-    if (m_playList.size() <= i) {
-        return m_playList[0];
+    if (m_playlist.size() <= index) {
+        return m_playlist[0];
     }
-    return m_playList[i];
+    return m_playlist[index];
 }
 
-void PlayListModel::setPlayingVideo(int playingVideo)
+void PlayListModel::setPlayingItem(int i)
 {
-    // unset current playing video
-    m_playList[m_playingVideo]->setIsPlaying(false);
-    Q_EMIT dataChanged(index(m_playingVideo, 0), index(m_playingVideo, 0));
+    // unset current playing item
+    m_playlist[m_playingItem]->setIsPlaying(false);
+    Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
 
-    // set new playing video
-    m_playList[playingVideo]->setIsPlaying(true);
-    Q_EMIT dataChanged(index(playingVideo, 0), index(playingVideo, 0));
+    // set new playing item
+    m_playlist[i]->setIsPlaying(true);
+    Q_EMIT dataChanged(index(i, 0), index(i, 0));
 
-    m_playingVideo = playingVideo;
-    Q_EMIT playingVideoChanged();
+    m_playingItem = i;
+    Q_EMIT playingItemChanged();
 }

@@ -73,7 +73,7 @@ MpvItem {
 
     onYoutubePlaylistLoaded: {
         command(["loadfile", playlistModel.getPath(GeneralSettings.lastPlaylistIndex)])
-        playlistModel.setPlayingVideo(GeneralSettings.lastPlaylistIndex)
+        playlistModel.setPlayingItem(GeneralSettings.lastPlaylistIndex)
 
         playList.setPlayListScrollPosition()
         recentFilesModel.addUrl(playlistUrl, playlistTitle)
@@ -147,27 +147,27 @@ MpvItem {
                 return
             }
 
-            const item = playlistModel.getItem(playlistModel.getPlayingVideo())
+            const item = playlistModel.getItem(playlistModel.getPlayingItem())
             const title = item.mediaTitle() || item.fileName()
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
-            // only skip to next video if it's a youtube playList
+            // only skip to next item if it's a youtube playList
             // to do: figure out why playback fails and act accordingly
             if (!playList.isYouTubePlaylist) {
                 return
             }
         }
-        const nextFileRow = playlistModel.getPlayingVideo() + 1
+        const nextFileRow = playlistModel.getPlayingItem() + 1
         if (nextFileRow < playList.playlistView.count) {
             const nextFile = playlistModel.getPath(nextFileRow)
-            playlistModel.setPlayingVideo(nextFileRow)
+            playlistModel.setPlayingItem(nextFileRow)
             loadFile(nextFile, !playList.isYouTubePlaylist)
         } else {
             // Last file in playlist
             if (PlaylistSettings.repeat) {
-                playlistModel.setPlayingVideo(0)
+                playlistModel.setPlayingItem(0)
                 loadFile(playlistModel.getPath(0), !playList.isYouTubePlaylist)
             } else {
-                loadFile(playlistModel.getPath(playlistModel.getPlayingVideo()), !playList.isYouTubePlaylist)
+                loadFile(playlistModel.getPath(playlistModel.getPlayingItem()), !playList.isYouTubePlaylist)
                 isFileReloaded = true
             }
         }
