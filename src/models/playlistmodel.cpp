@@ -217,6 +217,10 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
         }
         m_playlist.at(row)->setMediaTitle(title);
         m_playlist.at(row)->setDuration(Application::formatTime(duration));
+        if (m_emitOpened) {
+            Q_EMIT opened(title, url);
+            m_emitOpened = false;
+        }
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });
 }
@@ -306,12 +310,16 @@ void PlayListModel::openFile(const QString &path)
         auto mimeType = Application::mimeType(url);
         if (mimeType == QStringLiteral("audio/x-mpegurl")) {
             openM3uFile(path);
+            Q_EMIT opened(QFileInfo(path).fileName(), url.toString(QUrl::PreferLocalFile));
+
             GeneralSettings::setLastPlaylist(path);
             GeneralSettings::self()->save();
             return;
         }
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
             getSiblingItems(path);
+            Q_EMIT opened(QFileInfo(path).fileName(), url.toString(QUrl::PreferLocalFile));
+
             GeneralSettings::setLastPlayedFile(path);
             // clear the lastPlaylist so when the player opens without a file
             // it opens the lastPlayedFile instead of the last playlist
@@ -326,6 +334,8 @@ void PlayListModel::openFile(const QString &path)
             GeneralSettings::setLastPlaylist(path);
             GeneralSettings::self()->save();
         } else {
+            // emit opened signal only when actually opening an url
+            m_emitOpened = true;
             appendItem(path);
             setPlayingItem(0);
             GeneralSettings::setLastPlayedFile(path);
@@ -406,12 +416,9 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
             video->setFileName(!title.isEmpty() ? title : url);
             video->setDuration(Application::formatTime(duration));
 
-
             beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
-
             m_playlist.append(video);
             Q_EMIT itemAdded(i, video->filePath());
-
             endInsertRows();
 
             if (GeneralSettings::lastPlayedFile().contains(entries[i]["id"].toString())) {
@@ -419,6 +426,7 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
                 matchFound = true;
             }
         }
+        Q_EMIT opened(title, path);
         if (!matchFound) {
             setPlayingItem(0);
         }

@@ -250,6 +250,13 @@ Item {
         onRejected: mpv.focus = true
     }
 
+    Connections {
+        target: mpv.playlistModel
+        onOpened: {
+            recentFilesModel.addUrl(path, name)
+        }
+    }
+
     states: [
         State {
             name: "hidden"

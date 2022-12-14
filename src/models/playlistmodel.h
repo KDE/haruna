@@ -63,13 +63,14 @@ Q_SIGNALS:
     void itemAdded(int index, QString path);
     void itemRemoved(int index, QString path);
     void playingItemChanged();
-    void  youtubePlaylistLoaded();
+    void opened(const QString &name, const QString &path);
 
 private:
     Playlist items() const;
     void getHttpItemInfo(const QString &url, int row);
     Playlist m_playlist;
     int m_playingItem {-1};
+    bool m_emitOpened {false};
 };
 
 #endif // PLAYLISTMODEL_H
