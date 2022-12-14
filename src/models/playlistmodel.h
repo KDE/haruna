@@ -45,7 +45,6 @@ public:
     Q_INVOKABLE PlayListItem *getItem(int index);
     Q_INVOKABLE void setPlayingItem(int i);
     Q_INVOKABLE int getPlayingItem() const;
-    Q_INVOKABLE void getSiblingItems(QString path);
     Q_INVOKABLE void appendItem(QString path);
     Q_INVOKABLE void removeItem(int index);
     Q_INVOKABLE void playNext();
@@ -66,6 +65,7 @@ Q_SIGNALS:
 
 private:
     Playlist items() const;
+    void getSiblingItems(QString path);
     void getHttpItemInfo(const QString &url, int row);
     Playlist m_playlist;
     int m_playingItem {-1};
