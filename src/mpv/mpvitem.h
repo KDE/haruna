@@ -79,7 +79,7 @@ public:
     MpvItem(QQuickItem * parent = nullptr);
     ~MpvItem() = default;
 
-    Q_INVOKABLE void loadFile(const QString &file, bool updateLastPlayedFile = true);
+    Q_INVOKABLE void loadFile(const QString &file);
     Q_INVOKABLE void saveTimePosition();
     Q_INVOKABLE double loadTimePosition();
     Q_INVOKABLE void resetTimePosition();

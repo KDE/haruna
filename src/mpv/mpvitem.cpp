@@ -350,17 +350,12 @@ void MpvItem::setHWDecoding(bool value)
     Q_EMIT hwDecodingChanged();
 }
 
-void MpvItem::loadFile(const QString &file, bool updateLastPlayedFile)
+void MpvItem::loadFile(const QString &file)
 {
     command(QStringList() << "loadfile" << file);
 
-    if (updateLastPlayedFile) {
-        GeneralSettings::setLastPlayedFile(file);
-        GeneralSettings::self()->save();
-    } else {
-        GeneralSettings::setLastPlaylistIndex(m_playlistModel->getPlayingItem());
-        GeneralSettings::self()->save();
-    }
+    GeneralSettings::setLastPlayedFile(file);
+    GeneralSettings::self()->save();
 }
 
 void MpvItem::eventHandler()

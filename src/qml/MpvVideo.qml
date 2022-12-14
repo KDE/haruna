@@ -63,7 +63,6 @@ MpvItem {
             // open last played file
             if (app.isYoutubePlaylist(GeneralSettings.lastPlayedFile)) {
                 getYouTubePlaylist(GeneralSettings.lastPlayedFile)
-                playList.isYouTubePlaylist = true
             } else {
                 // file is local, open normally
                 window.openFile(GeneralSettings.lastPlayedFile)
@@ -142,11 +141,6 @@ MpvItem {
             const item = playlistModel.getItem(playlistModel.getPlayingItem())
             const title = item.mediaTitle() || item.fileName()
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
-            // only skip to next item if it's a youtube playList
-            // to do: figure out why playback fails and act accordingly
-            if (!playList.isYouTubePlaylist) {
-                return
-            }
         }
         if (playlistModel.getPlayingItem() + 1 < playList.playlistView.count) {
             playlistModel.playNext()
@@ -154,9 +148,9 @@ MpvItem {
             // Last file in playlist
             if (PlaylistSettings.repeat) {
                 playlistModel.setPlayingItem(0)
-                loadFile(playlistModel.getPath(0), !playList.isYouTubePlaylist)
+                loadFile(playlistModel.getPath(0))
             } else {
-                loadFile(playlistModel.getPath(), !playList.isYouTubePlaylist)
+                loadFile(playlistModel.getPath())
                 isFileReloaded = true
             }
         }

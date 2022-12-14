@@ -18,7 +18,6 @@ Item {
 
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
-    property bool isYouTubePlaylist: false
 
     height: mpv.height
     width: {
