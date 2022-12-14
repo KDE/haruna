@@ -57,7 +57,6 @@ public:
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);
 
     Playlist getPlayList() const;
-    void setPlayList(const Playlist &playList);
 
 Q_SIGNALS:
     void itemAdded(int index, QString path);

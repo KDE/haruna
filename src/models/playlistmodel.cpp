@@ -230,13 +230,6 @@ Playlist PlayListModel::getPlayList() const
     return m_playlist;
 }
 
-void PlayListModel::setPlayList(const Playlist &playList)
-{
-    beginInsertRows(QModelIndex(), 0, playList.size() - 1);
-    m_playlist = playList;
-    endInsertRows();
-}
-
 int PlayListModel::getPlayingItem() const
 {
     return m_playingItem;
