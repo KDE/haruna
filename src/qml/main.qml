@@ -279,8 +279,6 @@ Kirigami.ApplicationWindow {
                 onClicked: {
                     openFile(openUrlTextField.text, true)
                     GeneralSettings.lastUrl = openUrlTextField.text
-                    // in case the url is a playList, it opens the first video
-                    GeneralSettings.lastPlaylistIndex = 0
                     openUrlPopup.close()
                     openUrlTextField.clear()
                 }

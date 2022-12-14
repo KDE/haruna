@@ -295,19 +295,27 @@ void PlayListModel::openFile(const QString &path)
         auto mimeType = Application::mimeType(url);
         if (mimeType == QStringLiteral("audio/x-mpegurl")) {
             openM3uFile(path);
+            GeneralSettings::setLastPlaylist(path);
+            GeneralSettings::self()->save();
             return;
         }
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
             getSiblingItems(path);
+            GeneralSettings::setLastPlayedFile(path);
+            GeneralSettings::self()->save();
             return;
         }
     }
     if (url.scheme().startsWith("http")) {
         if (Application::isYoutubePlaylist(path)) {
             getYouTubePlaylist(path);
+            GeneralSettings::setLastPlaylist(path);
+            GeneralSettings::self()->save();
         } else {
             appendItem(path);
             setPlayingItem(0);
+            GeneralSettings::setLastPlayedFile(path);
+            GeneralSettings::self()->save();
         }
     }
 }

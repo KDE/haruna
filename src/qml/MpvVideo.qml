@@ -60,13 +60,13 @@ MpvItem {
             if (!PlaybackSettings.openLastPlayedFile) {
                 return
             }
-            // open last played file
-            if (app.isYoutubePlaylist(GeneralSettings.lastPlayedFile)) {
-                getYouTubePlaylist(GeneralSettings.lastPlayedFile)
+            if (GeneralSettings.lastPlaylist !== "") {
+                window.openFile(GeneralSettings.lastPlaylist)
             } else {
-                // file is local, open normally
                 window.openFile(GeneralSettings.lastPlayedFile)
             }
+            console.log(GeneralSettings.lastPlaylist)
+            console.log(GeneralSettings.lastPlayedFile)
         }
     }
 
