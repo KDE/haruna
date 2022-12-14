@@ -71,6 +71,32 @@ Item {
 
                 headerPositioning: ListView.OverlayHeader
                 header: ToolBar {
+                    id: toolbar
+
+                    Popup {
+                        id: addUrlPopup
+
+                        x: 0
+                        y: toolbar.height
+                        width: toolbar.width - Kirigami.Units.largeSpacing
+                        modal: true
+
+                        RowLayout {
+                            anchors.fill: parent
+                            TextField {
+                                id: addUrlField
+                                Layout.fillWidth: true
+                            }
+                            Button {
+                                text: i18nc("@action:button", "Add")
+                                onClicked: {
+                                    mpv.playlistModel.appendItem(addUrlField.text)
+                                    addUrlPopup.close()
+                                }
+                            }
+                        }
+                    }
+
                     width: parent.width
                     z: 100
                     RowLayout {
@@ -93,6 +119,17 @@ Item {
                                         fileDialog.fileType = "video"
                                         fileDialog.fileMode = Platform.FileDialog.OpenFile
                                         fileDialog.open()
+                                    }
+                                },
+                                Kirigami.Action {
+                                    text: i18nc("@action:button", "Add url")
+                                    icon.name: "list-add"
+                                    onTriggered: {
+                                        if (addUrlPopup.opened) {
+                                            addUrlPopup.close()
+                                        } else {
+                                            addUrlPopup.open()
+                                        }
                                     }
                                 },
                                 Kirigami.Action {
