@@ -313,6 +313,9 @@ void PlayListModel::openFile(const QString &path)
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
             getSiblingItems(path);
             GeneralSettings::setLastPlayedFile(path);
+            // clear the lastPlaylist so when the player opens without a file
+            // it opens the lastPlayedFile instead of the last playlist
+            GeneralSettings::setLastPlaylist(QString());
             GeneralSettings::self()->save();
             return;
         }
@@ -326,6 +329,7 @@ void PlayListModel::openFile(const QString &path)
             appendItem(path);
             setPlayingItem(0);
             GeneralSettings::setLastPlayedFile(path);
+            GeneralSettings::setLastPlaylist(QString());
             GeneralSettings::self()->save();
         }
     }

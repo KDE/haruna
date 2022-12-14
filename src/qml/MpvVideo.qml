@@ -60,6 +60,8 @@ MpvItem {
             if (!PlaybackSettings.openLastPlayedFile) {
                 return
             }
+            // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
+            // and the lastPlayedFile is searched in the playlist
             if (GeneralSettings.lastPlaylist !== "") {
                 window.openFile(GeneralSettings.lastPlaylist)
             } else {
