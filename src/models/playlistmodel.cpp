@@ -114,7 +114,9 @@ void PlayListModel::getSiblingItems(QString path)
             QUrl siblingUrl(siblingFile);
             siblingUrl.setScheme(openedUrl.scheme());
             QString mimeType = Application::mimeType(siblingUrl);
-            if (siblingFileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/"))) {
+            if (siblingFileInfo.exists()
+                    && (mimeType.startsWith("video/") || mimeType.startsWith("audio/"))
+                    && mimeType != QStringLiteral("audio/x-mpegurl")) {
                 siblingFiles.append(siblingFileInfo.absoluteFilePath());
             }
         }
