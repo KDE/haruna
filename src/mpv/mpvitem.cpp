@@ -42,8 +42,10 @@ MpvItem::MpvItem(QQuickItem * parent)
     : MpvCore(parent)
     , m_audioTracksModel(new TracksModel)
     , m_subtitleTracksModel(new TracksModel)
-    , m_playlistModel(new PlayListModel)
+    , m_playlistProxyModel(new PlayListProxyModel)
 {
+    m_playlistModel = new PlayListModel();
+    m_playlistProxyModel->setSourceModel(m_playlistModel);
     mpv_observe_property(m_mpv, 0, "media-title",    MPV_FORMAT_STRING);
     mpv_observe_property(m_mpv, 0, "time-pos",       MPV_FORMAT_DOUBLE);
     mpv_observe_property(m_mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
@@ -189,6 +191,16 @@ PlayListModel *MpvItem::playlistModel()
 void MpvItem::setPlaylistModel(PlayListModel *model)
 {
     m_playlistModel = model;
+}
+
+PlayListProxyModel *MpvItem::playlistProxyModel()
+{
+    return m_playlistProxyModel;
+}
+
+void MpvItem::setPlaylistProxyModel(PlayListProxyModel *model)
+{
+    m_playlistProxyModel = model;
 }
 
 QString MpvItem::mediaTitle()

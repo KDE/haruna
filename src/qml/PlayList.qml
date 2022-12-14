@@ -12,6 +12,7 @@ import Qt.labs.platform 1.0 as Platform
 
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
+import org.kde.haruna.models 1.0
 
 Item {
     id: root
@@ -66,7 +67,7 @@ Item {
             ListView {
                 id: playlistView
 
-                model: mpv.playlistModel
+                model: mpv.playlistProxyModel
                 spacing: 1
 
                 headerPositioning: ListView.OverlayHeader
@@ -129,6 +130,35 @@ Item {
                                             addUrlPopup.close()
                                         } else {
                                             addUrlPopup.open()
+                                        }
+                                    }
+                                },
+                                Kirigami.Action {
+                                    text: i18nc("@action:button", "Sort")
+                                    icon.name: "view-sort"
+
+                                    Kirigami.Action {
+                                        text: i18nc("@action:button", "Name ascending")
+                                        onTriggered: {
+                                            mpv.playlistProxyModel.sortItems("NameAscending")
+                                        }
+                                    }
+                                    Kirigami.Action {
+                                        text: i18nc("@action:button", "Name descending")
+                                        onTriggered: {
+                                            mpv.playlistProxyModel.sortItems("NameDescending")
+                                        }
+                                    }
+                                    Kirigami.Action {
+                                        text: i18nc("@action:button", "Duration ascending")
+                                        onTriggered: {
+                                            mpv.playlistProxyModel.sortItems("DurationAscending")
+                                        }
+                                    }
+                                    Kirigami.Action {
+                                        text: i18nc("@action:button", "Duration descending")
+                                        onTriggered: {
+                                            mpv.playlistProxyModel.sortItems("DurationDescending")
                                         }
                                     }
                                 },
@@ -241,7 +271,7 @@ Item {
                 if (fileMode === Platform.FileDialog.OpenFile) {
                     mpv.playlistModel.openM3uFile(fileDialog.file.toString())
                 } else {
-                    mpv.playlistModel.saveM3uFile(fileDialog.file.toString())
+                    mpv.playlistProxyModel.saveM3uFile(fileDialog.file.toString())
                 }
 
                 break

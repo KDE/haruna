@@ -21,6 +21,7 @@ class MpvItem : public MpvCore
     Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     Q_PROPERTY(TracksModel* subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
     Q_PROPERTY(PlayListModel* playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
+    Q_PROPERTY(PlayListProxyModel* playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
@@ -35,8 +36,11 @@ class MpvItem : public MpvCore
     Q_PROPERTY(int subtitleId READ subtitleId WRITE setSubtitleId NOTIFY subtitleIdChanged)
     Q_PROPERTY(int secondarySubtitleId READ secondarySubtitleId WRITE setSecondarySubtitleId NOTIFY secondarySubtitleIdChanged)
 
+    PlayListProxyModel *playlistProxyModel();
+    void setPlaylistProxyModel(PlayListProxyModel *model);
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
+
 
     QString mediaTitle();
 
@@ -90,6 +94,7 @@ Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
     void playlistModelChanged();
+    void playlistProxyModelChanged();
     void playlistTitleChanged();
     void playlistUrlChanged();
     void mediaTitleChanged();
@@ -128,6 +133,7 @@ private:
     QList<int> m_secondsWatched;
     double m_watchPercentage;
     PlayListModel *m_playlistModel;
+    PlayListProxyModel *m_playlistProxyModel;
     QString m_file;
 };
 

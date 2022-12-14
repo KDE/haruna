@@ -176,24 +176,6 @@ void PlayListModel::removeItem(int index)
     Q_EMIT itemRemoved(index, getPath(index));
 }
 
-void PlayListModel::playNext()
-{
-    int i = m_playingItem + 1;
-    if (i < rowCount()) {
-        setPlayingItem(i);
-    } else {
-        setPlayingItem(0);
-    }
-}
-
-void PlayListModel::playPrevious()
-{
-    int i = m_playingItem - 1;
-    if (i >= 0) {
-        setPlayingItem(i);
-    }
-}
-
 Playlist PlayListModel::items() const
 {
     return m_playlist;
@@ -282,18 +264,6 @@ void PlayListModel::openM3uFile(const QString &path)
     m3uFile.close();
 }
 
-void PlayListModel::saveM3uFile(const QString &path)
-{
-    QUrl url(path);
-    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
-    if (!m3uFile.open(QFile::WriteOnly)) {
-        return;
-    }
-    for (const auto &item : m_playlist) {
-        m3uFile.write(item->filePath().toUtf8().append("\n"));
-    }
-    m3uFile.close();
-}
 
 void PlayListModel::openFile(const QString &path)
 {
@@ -419,4 +389,76 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
             setPlayingItem(0);
         }
     });
+}
+
+PlayListProxyModel::PlayListProxyModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+{
+    setDynamicSortFilter(true);
+}
+
+void PlayListProxyModel::sortItems(const QString &sortMode)
+{
+    if (sortMode == "NameAscending") {
+        setSortRole(PlayListModel::PathRole);
+        sort(0, Qt::AscendingOrder);
+    } else if(sortMode == "NameDescending") {
+        setSortRole(PlayListModel::PathRole);
+        sort(0, Qt::DescendingOrder);
+    } else if (sortMode == "DurationAscending") {
+        setSortRole(PlayListModel::DurationRole);
+        sort(0, Qt::AscendingOrder);
+    } else if (sortMode == "DurationDescending") {
+        setSortRole(PlayListModel::DurationRole);
+        sort(0, Qt::DescendingOrder);
+    } else {
+
+
+    }
+}
+
+void PlayListProxyModel::setPlayingItem(int i)
+{
+    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    model->setPlayingItem(mapToSource(index(i, 0)).row());
+}
+
+void PlayListProxyModel::playNext()
+{
+    auto model = qobject_cast<PlayListModel*>(sourceModel());
+
+    auto currentIndex = mapFromSource(model->index(model->getPlayingItem(), 0)).row();
+    auto nextIndex = currentIndex + 1;
+
+    if (nextIndex < rowCount()) {
+        model->setPlayingItem(mapToSource(index(nextIndex, 0)).row());
+    } else {
+        setPlayingItem(0);
+    }
+}
+
+void PlayListProxyModel::playPrevious()
+{
+    auto model = qobject_cast<PlayListModel*>(sourceModel());
+
+    auto currentIndex = mapFromSource(model->index(model->getPlayingItem(), 0)).row();
+    auto previousIndex = currentIndex - 1;
+
+    if (previousIndex >= 0) {
+        model->setPlayingItem(mapToSource(index(previousIndex, 0)).row());
+    }
+}
+
+void PlayListProxyModel::saveM3uFile(const QString &path)
+{
+    QUrl url(path);
+    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
+    if (!m3uFile.open(QFile::WriteOnly)) {
+        return;
+    }
+    for ( int i {0}; i < rowCount(); ++i) {
+        QString path = data(index(i, 0), PlayListModel::PathRole).toString();
+        m3uFile.write(path.toUtf8().append("\n"));
+    }
+    m3uFile.close();
 }

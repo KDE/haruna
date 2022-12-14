@@ -143,11 +143,11 @@ Item {
         onPlayPauseAction: mpv.pause = !mpv.pause
 
         onPlayNextAction: {
-            mpv.playlistModel.playNext()
+            mpv.playlistProxyModel.playNext()
         }
 
         onPlayPreviousAction: {
-            mpv.playlistModel.playPrevious()
+            mpv.playlistProxyModel.playPrevious()
         }
 
         onQuitApplicationAction: {

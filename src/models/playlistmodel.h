@@ -8,6 +8,7 @@
 #define PLAYLISTMODEL_H
 
 #include <QAbstractTableModel>
+#include <QSortFilterProxyModel>
 #include <KSharedConfig>
 #include <map>
 #include <memory>
@@ -15,6 +16,19 @@
 class PlayListItem;
 
 using Playlist = QList<PlayListItem*>;
+
+class PlayListProxyModel : public QSortFilterProxyModel
+{
+    Q_OBJECT
+public:
+    explicit PlayListProxyModel(QObject *parent = nullptr);
+
+    Q_INVOKABLE void sortItems(const QString &sortMode);
+    Q_INVOKABLE void setPlayingItem(int i);
+    Q_INVOKABLE void playNext();
+    Q_INVOKABLE void playPrevious();
+    Q_INVOKABLE void saveM3uFile(const QString &path);
+};
 
 class PlayListModel : public QAbstractListModel
 {
@@ -47,11 +61,8 @@ public:
     Q_INVOKABLE int getPlayingItem() const;
     Q_INVOKABLE void appendItem(QString path);
     Q_INVOKABLE void removeItem(int index);
-    Q_INVOKABLE void playNext();
-    Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void clear();
     Q_INVOKABLE void openM3uFile(const QString &path);
-    Q_INVOKABLE void saveM3uFile(const QString &path);
     Q_INVOKABLE void openFile(const QString &path);
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);
 

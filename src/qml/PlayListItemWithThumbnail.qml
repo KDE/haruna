@@ -27,7 +27,7 @@ Kirigami.BasicListItem {
     }
 
     onDoubleClicked: {
-        mpv.playlistModel.setPlayingItem(index)
+        mpv.playlistProxyModel.setPlayingItem(index)
         mpv.loadFile(path)
         mpv.pause = false
     }
