@@ -140,25 +140,25 @@ Item {
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Name ascending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems("NameAscending")
+                                            mpv.playlistProxyModel.sortItems(PlayListProxyModel.NameAscending)
                                         }
                                     }
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Name descending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems("NameDescending")
+                                            mpv.playlistProxyModel.sortItems(PlayListProxyModel.NameDescending)
                                         }
                                     }
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Duration ascending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems("DurationAscending")
+                                            mpv.playlistProxyModel.sortItems(PlayListProxyModel.DurationAscending)
                                         }
                                     }
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Duration descending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems("DurationDescending")
+                                            mpv.playlistProxyModel.sortItems(PlayListProxyModel.DurationDescending)
                                         }
                                     }
                                 },

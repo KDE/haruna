@@ -153,7 +153,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<ProxyActionsModel>("org.kde.haruna.models",     1, 0, "ProxyActionsModel");
     qmlRegisterType<CustomCommandsModel>("org.kde.haruna.models",   1, 0, "CustomCommandsModel");
     qmlRegisterType<RecentFilesModel>("org.kde.haruna.models",      1, 0, "RecentFilesModel");
-
+    qmlRegisterType<PlayListProxyModel>("org.kde.haruna.models",    1, 0, "PlayListProxyModel");
 }
 
 void Application::setupQmlSettingsTypes()

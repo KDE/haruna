@@ -23,7 +23,16 @@ class PlayListProxyModel : public QSortFilterProxyModel
 public:
     explicit PlayListProxyModel(QObject *parent = nullptr);
 
-    Q_INVOKABLE void sortItems(const QString &sortMode);
+    enum Sort {
+        NameAscending,
+        NameDescending,
+        DurationAscending,
+        DurationDescending,
+    };
+    Q_ENUM(Sort);
+
+
+    Q_INVOKABLE void sortItems(Sort sortMode);
     Q_INVOKABLE void setPlayingItem(int i);
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
@@ -83,4 +92,5 @@ private:
     bool m_emitOpened {false};
 };
 
+Q_DECLARE_METATYPE(PlayListProxyModel::Sort);
 #endif // PLAYLISTMODEL_H

@@ -397,23 +397,29 @@ PlayListProxyModel::PlayListProxyModel(QObject *parent)
     setDynamicSortFilter(true);
 }
 
-void PlayListProxyModel::sortItems(const QString &sortMode)
+void PlayListProxyModel::sortItems(Sort sortMode)
 {
-    if (sortMode == "NameAscending") {
+    switch (sortMode) {
+    case NameAscending: {
         setSortRole(PlayListModel::PathRole);
         sort(0, Qt::AscendingOrder);
-    } else if(sortMode == "NameDescending") {
+        break;
+    }
+    case NameDescending: {
         setSortRole(PlayListModel::PathRole);
         sort(0, Qt::DescendingOrder);
-    } else if (sortMode == "DurationAscending") {
+        break;
+    }
+    case DurationAscending: {
         setSortRole(PlayListModel::DurationRole);
         sort(0, Qt::AscendingOrder);
-    } else if (sortMode == "DurationDescending") {
+        break;
+    }
+    case DurationDescending: {
         setSortRole(PlayListModel::DurationRole);
         sort(0, Qt::DescendingOrder);
-    } else {
-
-
+        break;
+    }
     }
 }
 
