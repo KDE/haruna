@@ -21,8 +21,6 @@ class MpvItem : public MpvCore
     Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     Q_PROPERTY(TracksModel* subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
     Q_PROPERTY(PlayListModel* playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
-    Q_PROPERTY(QString playlistTitle READ playlistTitle WRITE setPlaylistTitle NOTIFY playlistTitleChanged)
-    Q_PROPERTY(QString playlistUrl READ playlistUrl WRITE setPlaylistUrl NOTIFY playlistUrlChanged)
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
@@ -39,12 +37,6 @@ class MpvItem : public MpvCore
 
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
-
-    QString playlistTitle();
-    void setPlaylistTitle(const QString &title);
-
-    const QString &playlistUrl() const;
-    void setPlaylistUrl(const QString &_playlistUrl);
 
     QString mediaTitle();
 
@@ -88,7 +80,6 @@ public:
     ~MpvItem() = default;
 
     Q_INVOKABLE void loadFile(const QString &file, bool updateLastPlayedFile = true);
-    Q_INVOKABLE void getYouTubePlaylist(const QString &path);
     Q_INVOKABLE void saveTimePosition();
     Q_INVOKABLE double loadTimePosition();
     Q_INVOKABLE void resetTimePosition();
@@ -117,7 +108,6 @@ Q_SIGNALS:
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);
-    void youtubePlaylistLoaded();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
     // signals used for mpris
@@ -138,8 +128,6 @@ private:
     QList<int> m_secondsWatched;
     double m_watchPercentage;
     PlayListModel *m_playlistModel;
-    QString m_playlistTitle;
-    QString m_playlistUrl;
     QString m_file;
 };
 

@@ -191,33 +191,6 @@ void MpvItem::setPlaylistModel(PlayListModel *model)
     m_playlistModel = model;
 }
 
-QString MpvItem::playlistTitle()
-{
-    return m_playlistTitle;
-}
-
-void MpvItem::setPlaylistTitle(const QString &title)
-{
-    if (title == playlistTitle()) {
-        return;
-    }
-    m_playlistTitle = title;
-    Q_EMIT positionChanged();
-}
-
-const QString &MpvItem::playlistUrl() const
-{
-    return m_playlistUrl;
-}
-
-void MpvItem::setPlaylistUrl(const QString &_playlistUrl)
-{
-    if (m_playlistUrl == _playlistUrl)
-        return;
-    m_playlistUrl = _playlistUrl;
-    Q_EMIT playlistUrlChanged();
-}
-
 QString MpvItem::mediaTitle()
 {
     return getProperty("media-title").toString();
@@ -536,53 +509,6 @@ TracksModel *MpvItem::subtitleTracksModel() const
 TracksModel *MpvItem::audioTracksModel() const
 {
     return m_audioTracksModel;
-}
-
-void MpvItem::getYouTubePlaylist(const QString &path)
-{
-    m_playlistModel->clear();
-
-    // use youtube-dl to get the required playlist info as json
-    auto ytdlProcess = new QProcess();
-    ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << "-J" << "--flat-playlist" << path);
-    ytdlProcess->start();
-
-    QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
-                     this, [=](int, QProcess::ExitStatus) {
-        // use the json to populate the playlist model
-        using Playlist = QList<PlayListItem*>;
-        Playlist m_playList;
-
-        QString json = ytdlProcess->readAllStandardOutput();
-        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
-        QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
-        if (entries.toArray().isEmpty()) {
-            Q_EMIT Global::instance()->error(i18nc("@info", "Playlist is empty", title));
-            return;
-        }
-
-        setPlaylistTitle(title);
-        setPlaylistUrl(path);
-
-        for (int i = 0; i < entries.toArray().size(); ++i) {
-            auto url = QString("https://youtu.be/%1").arg(entries[i]["id"].toString());
-            auto title = entries[i]["title"].toString();
-            auto duration = entries[i]["duration"].toDouble();
-
-            auto video = new PlayListItem(url, m_playlistModel);
-            video->setMediaTitle(!title.isEmpty() ? title : url);
-            video->setFileName(!title.isEmpty() ? title : url);
-
-            video->setDuration(Application::formatTime(duration));
-            m_playList.append(video);
-        }
-
-        // save playlist to disk
-        m_playlistModel->setPlayList(m_playList);
-
-        Q_EMIT youtubePlaylistLoaded();
-    });
 }
 
 void MpvItem::saveTimePosition()

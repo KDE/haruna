@@ -20,6 +20,7 @@
 #include <QJsonDocument>
 #include <QProcess>
 #include <QUrl>
+#include <generalsettings.h>
 
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -126,7 +127,7 @@ void PlayListModel::getSiblingItems(QString path)
         for (int i = 0; i < siblingFiles.count(); ++i) {
             auto item = new PlayListItem(siblingFiles.at(i), this);
             m_playlist.append(item);
-            if (path == siblingFiles.at(i)) {
+            if (url.toString(QUrl::PreferLocalFile) == siblingFiles.at(i)) {
                 setPlayingItem(i);
             }
             Q_EMIT itemAdded(i, item->filePath());
@@ -284,6 +285,31 @@ void PlayListModel::saveM3uFile(const QString &path)
     m3uFile.close();
 }
 
+void PlayListModel::openFile(const QString &path)
+{
+    clear();
+    QUrl url(path);
+    if (url.scheme() == "file" || url.scheme() == QString()) {
+        auto mimeType = Application::mimeType(url);
+        if (mimeType == QStringLiteral("audio/x-mpegurl")) {
+            openM3uFile(path);
+            return;
+        }
+        if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
+            getSiblingItems(path);
+            return;
+        }
+    }
+    if (url.scheme().startsWith("http")) {
+        if (Application::isYoutubePlaylist(path)) {
+            getYouTubePlaylist(path);
+        } else {
+            appendItem(path);
+            setPlayingItem(0);
+        }
+    }
+}
+
 QString PlayListModel::getPath(int index)
 {
     // when restoring a youtube playlist
@@ -317,4 +343,44 @@ void PlayListModel::setPlayingItem(int i)
 
     m_playingItem = i;
     Q_EMIT playingItemChanged();
+}
+
+void PlayListModel::getYouTubePlaylist(const QString &path)
+{
+    // use youtube-dl to get the required playlist info as json
+    auto ytdlProcess = new QProcess();
+    ytdlProcess->setProgram(Application::youtubeDlExecutable());
+    ytdlProcess->setArguments(QStringList() << "-J" << "--flat-playlist" << path);
+    ytdlProcess->start();
+
+    QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
+                     this, [=](int, QProcess::ExitStatus) {
+        // use the json to populate the playlist model
+        using Playlist = QList<PlayListItem*>;
+        Playlist m_playList;
+
+        QString json = ytdlProcess->readAllStandardOutput();
+        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
+        QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
+        if (entries.toArray().isEmpty()) {
+            Q_EMIT Global::instance()->error(i18nc("@info", "Playlist is empty", title));
+            return;
+        }
+
+        for (int i = 0; i < entries.toArray().size(); ++i) {
+            auto url = QString("https://youtu.be/%1").arg(entries[i]["id"].toString());
+            auto title = entries[i]["title"].toString();
+            auto duration = entries[i]["duration"].toDouble();
+
+            auto video = new PlayListItem(url, this);
+            video->setMediaTitle(!title.isEmpty() ? title : url);
+            video->setFileName(!title.isEmpty() ? title : url);
+            video->setDuration(Application::formatTime(duration));
+
+            m_playList.append(video);
+        }
+
+        setPlayList(m_playList);
+        setPlayingItem(0);
+    });
 }

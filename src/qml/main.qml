@@ -304,24 +304,7 @@ Kirigami.ApplicationWindow {
     }
 
     function openFile(path, addToRecentFiles = false) {
-
-        if (app.isYoutubePlaylist(path)) {
-            mpv.getYouTubePlaylist(path);
-            playList.isYouTubePlaylist = true
-        } else {
-            playList.isYouTubePlaylist = false
-        }
-
-        if (addToRecentFiles && GeneralSettings.maxRecentFiles > 0) {
-            if (!playList.isYouTubePlaylist) {
-                recentFilesModel.addUrl(path)
-            }
-        }
-
-        mpv.playlistModel.getSiblingItems(path)
-
-        mpv.loadFile(path)
-        playList.scrollPositionTimer.start()
+        mpv.playlistModel.openFile(path)
     }
 
     function isFullScreen() {

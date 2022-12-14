@@ -53,6 +53,8 @@ public:
     Q_INVOKABLE void clear();
     Q_INVOKABLE void openM3uFile(const QString &path);
     Q_INVOKABLE void saveM3uFile(const QString &path);
+    Q_INVOKABLE void openFile(const QString &path);
+    Q_INVOKABLE void getYouTubePlaylist(const QString &path);
 
     Playlist getPlayList() const;
     void setPlayList(const Playlist &playList);
@@ -61,6 +63,7 @@ Q_SIGNALS:
     void itemAdded(int index, QString path);
     void itemRemoved(int index, QString path);
     void playingItemChanged();
+    void  youtubePlaylistLoaded();
 
 private:
     Playlist items() const;

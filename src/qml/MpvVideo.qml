@@ -71,14 +71,6 @@ MpvItem {
         }
     }
 
-    onYoutubePlaylistLoaded: {
-        command(["loadfile", playlistModel.getPath(GeneralSettings.lastPlaylistIndex)])
-        playlistModel.setPlayingItem(GeneralSettings.lastPlaylistIndex)
-
-        playList.setPlayListScrollPosition()
-        recentFilesModel.addUrl(playlistUrl, playlistTitle)
-    }
-
     onFileStarted: {
         if (typeof getProperty("path") === "string" && getProperty("path").startsWith("http")) {
             loadingIndicatorParent.visible = true
