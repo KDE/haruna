@@ -65,8 +65,6 @@ MpvItem {
             } else {
                 window.openFile(GeneralSettings.lastPlayedFile)
             }
-            console.log(GeneralSettings.lastPlaylist)
-            console.log(GeneralSettings.lastPlayedFile)
         }
     }
 

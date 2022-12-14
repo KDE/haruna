@@ -69,7 +69,7 @@ private:
     Playlist items() const;
     void getHttpItemInfo(const QString &url, int row);
     Playlist m_playlist;
-    int m_playingItem = 0;
+    int m_playingItem {-1};
 };
 
 #endif // PLAYLISTMODEL_H

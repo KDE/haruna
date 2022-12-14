@@ -255,6 +255,8 @@ void PlayListModel::openM3uFile(const QString &path)
         qDebug() << "can't open playlist file";
         return;
     }
+    int i {0};
+    bool matchFound {false};
     while (!m3uFile.atEnd()) {
         QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine().simplified());
         // ignore comments
@@ -263,14 +265,23 @@ void PlayListModel::openM3uFile(const QString &path)
         }
 
         QUrl url(line);
+        QString item;
         if (!url.scheme().isEmpty()) {
-            appendItem(url.toString());
+            item = url.toString(QUrl::PreferLocalFile);
         } else {
             // figure out if it's a relative path
-            appendItem(QUrl::fromUserInput(line, QFileInfo(path).absolutePath()).toString());
+            item = QUrl::fromUserInput(line, QFileInfo(path).absolutePath()).toString(QUrl::PreferLocalFile);
         }
+        appendItem(item);
+        if (item == QUrl(GeneralSettings::lastPlayedFile()).toString(QUrl::PreferLocalFile)) {
+            setPlayingItem(i);
+            matchFound = true;
+        }
+        ++i;
     }
-    setPlayingItem(0);
+    if (!matchFound) {
+        setPlayingItem(0);
+    }
     m3uFile.close();
 }
 
@@ -346,6 +357,10 @@ PlayListItem *PlayListModel::getItem(int index)
 
 void PlayListModel::setPlayingItem(int i)
 {
+    if (i == -1) {
+        return;
+    }
+    int c = m_playlist.count();
     // unset current playing item
     m_playlist[m_playingItem]->setIsPlaying(false);
     Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
@@ -368,10 +383,6 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
 
     QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
                      this, [=](int, QProcess::ExitStatus) {
-        // use the json to populate the playlist model
-        using Playlist = QList<PlayListItem*>;
-        Playlist m_playList;
-
         QString json = ytdlProcess->readAllStandardOutput();
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
         QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
@@ -380,6 +391,7 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
             return;
         }
 
+        bool matchFound {false};
         for (int i = 0; i < entries.toArray().size(); ++i) {
             auto url = QString("https://youtu.be/%1").arg(entries[i]["id"].toString());
             auto title = entries[i]["title"].toString();
@@ -390,10 +402,21 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
             video->setFileName(!title.isEmpty() ? title : url);
             video->setDuration(Application::formatTime(duration));
 
-            m_playList.append(video);
-        }
 
-        setPlayList(m_playList);
-        setPlayingItem(0);
+            beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
+
+            m_playlist.append(video);
+            Q_EMIT itemAdded(i, video->filePath());
+
+            endInsertRows();
+
+            if (GeneralSettings::lastPlayedFile().contains(entries[i]["id"].toString())) {
+                setPlayingItem(i);
+                matchFound = true;
+            }
+        }
+        if (!matchFound) {
+            setPlayingItem(0);
+        }
     });
 }
