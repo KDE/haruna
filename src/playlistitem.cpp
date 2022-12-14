@@ -25,7 +25,6 @@ PlayListItem::PlayListItem(const QString &path, QObject *parent)
         setFilePath(fileInfo.absoluteFilePath());
         setFolderPath(fileInfo.absolutePath());
     }
-    setIsPlaying(false);
 }
 
 QString PlayListItem::mediaTitle() const
@@ -76,14 +75,4 @@ QString PlayListItem::duration() const
 void PlayListItem::setDuration(const QString &duration)
 {
     m_duration = duration;
-}
-
-bool PlayListItem::isPlaying() const
-{
-    return m_isPlaying;
-}
-
-void PlayListItem::setIsPlaying(bool isPlaying)
-{
-    m_isPlaying = isPlaying;
 }

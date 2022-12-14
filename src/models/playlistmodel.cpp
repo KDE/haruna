@@ -70,7 +70,7 @@ QVariant PlayListModel::data(const QModelIndex &index, int role) const
     case DurationRole:
         return QVariant(playListItem->duration());
     case PlayingRole:
-        return QVariant(playListItem->isPlaying());
+        return QVariant(m_playingItem == index.row());
     case FolderPathRole:
         return QVariant(playListItem->folderPath());
     }
@@ -374,16 +374,11 @@ void PlayListModel::setPlayingItem(int i)
     if (i == -1) {
         return;
     }
-    int c = m_playlist.count();
-    // unset current playing item
-    m_playlist[m_playingItem]->setIsPlaying(false);
-    Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
 
-    // set new playing item
-    m_playlist[i]->setIsPlaying(true);
-    Q_EMIT dataChanged(index(i, 0), index(i, 0));
-
+    int previousItem = m_playingItem;
     m_playingItem = i;
+    Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
+    Q_EMIT dataChanged(index(i, 0), index(i, 0));
     Q_EMIT playingItemChanged();
 }
 

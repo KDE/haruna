@@ -24,7 +24,7 @@ Kirigami.BasicListItem {
 
     padding: 0
     backgroundColor: {
-        let color = model.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+        let color = root.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
         Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, alpha)
     }
 
@@ -60,7 +60,7 @@ Kirigami.BasicListItem {
                 source: "media-playback-start"
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
-                visible: isPlaying
+                visible: root.isPlaying
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
 
@@ -70,11 +70,11 @@ Kirigami.BasicListItem {
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 font.pointSize: root.fontSize
-                font.weight: isPlaying ? Font.ExtraBold : Font.Normal
+                font.weight: root.isPlaying ? Font.ExtraBold : Font.Normal
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
                 layer.enabled: true
                 Layout.fillWidth: true
-                Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : Kirigami.Units.largeSpacing
+                Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
                 Binding {
                     target: root
                     property: "implicitHeight"

@@ -30,17 +30,12 @@ public:
     Q_INVOKABLE QString duration() const;
     void setDuration(const QString &duration);
 
-    Q_INVOKABLE bool isPlaying() const;
-    void setIsPlaying(bool isPlaying);
-
 private:
     QString m_mediaTitle;
     QString m_filePath;
     QString m_fileName;
     QString m_folderPath;
     QString m_duration;
-    bool m_isHovered {false};
-    bool m_isPlaying {false};
 };
 
 #endif // PLAYLISTITEM_H
