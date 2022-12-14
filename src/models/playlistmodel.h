@@ -41,7 +41,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     virtual QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE QString getPath(int index);
+    Q_INVOKABLE QString getPath(int index = -1);
     Q_INVOKABLE PlayListItem *getItem(int index);
     Q_INVOKABLE void setPlayingItem(int i);
     Q_INVOKABLE int getPlayingItem() const;

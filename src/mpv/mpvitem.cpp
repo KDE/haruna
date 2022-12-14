@@ -83,7 +83,7 @@ MpvItem::MpvItem(QQuickItem * parent)
     });
 
     connect(m_playlistModel, &PlayListModel::playingItemChanged, this, [=]() {
-        command(QStringList() << "loadfile" << m_playlistModel->getPath(m_playlistModel->getPlayingItem()));
+        command(QStringList() << "loadfile" << m_playlistModel->getPath());
     });
 
 #if defined(Q_OS_UNIX)

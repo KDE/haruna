@@ -148,18 +148,15 @@ MpvItem {
                 return
             }
         }
-        const nextFileRow = playlistModel.getPlayingItem() + 1
-        if (nextFileRow < playList.playlistView.count) {
-            const nextFile = playlistModel.getPath(nextFileRow)
-            playlistModel.setPlayingItem(nextFileRow)
-            loadFile(nextFile, !playList.isYouTubePlaylist)
+        if (playlistModel.getPlayingItem() + 1 < playList.playlistView.count) {
+            playlistModel.playNext()
         } else {
             // Last file in playlist
             if (PlaylistSettings.repeat) {
                 playlistModel.setPlayingItem(0)
                 loadFile(playlistModel.getPath(0), !playList.isYouTubePlaylist)
             } else {
-                loadFile(playlistModel.getPath(playlistModel.getPlayingItem()), !playList.isYouTubePlaylist)
+                loadFile(playlistModel.getPath(), !playList.isYouTubePlaylist)
                 isFileReloaded = true
             }
         }

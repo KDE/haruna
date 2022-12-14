@@ -319,6 +319,9 @@ QString PlayListModel::getPath(int index)
     if (m_playlist.isEmpty()) {
         return QString();
     }
+    if (index == -1) {
+        return m_playlist[m_playingItem]->filePath();
+    }
     if (m_playlist.size() <= index) {
         return m_playlist[0]->filePath();
     }
