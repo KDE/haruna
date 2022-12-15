@@ -113,8 +113,8 @@ void PlayListModel::getSiblingItems(QString path)
         openedUrl.setScheme("file");
     }
     QFileInfo openedFileInfo(openedUrl.toLocalFile());
-    QStringList siblingFiles;
     if (openedFileInfo.exists() && openedFileInfo.isFile()) {
+        QStringList siblingFiles;
         QDirIterator it(openedFileInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
         while (it.hasNext()) {
             QString siblingFile = it.next();
@@ -205,8 +205,8 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
             Q_EMIT Global::instance()->error(i18nc("@info", "No title found for url %1", url));
             return;
         }
-        m_playlist.at(row)->setMediaTitle(!title.isEmpty() ? title : url);
-        m_playlist.at(row)->setFileName(!title.isEmpty() ? title : url);
+        m_playlist.at(row)->setMediaTitle(title);
+        m_playlist.at(row)->setFileName(title);
         m_playlist.at(row)->setDuration(Application::formatTime(duration));
         if (m_emitOpened) {
             Q_EMIT opened(title, url);
@@ -237,8 +237,8 @@ void PlayListModel::clear()
 
 void PlayListModel::openM3uFile(const QString &path)
 {
-    QUrl url(path);
-    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
+    QUrl playlistUrl(path);
+    QFile m3uFile(playlistUrl.toString(QUrl::PreferLocalFile));
     if (!m3uFile.open(QFile::ReadOnly)) {
         qDebug() << "can't open playlist file";
         return;
@@ -366,9 +366,9 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
                      this, [=](int, QProcess::ExitStatus) {
         QString json = ytdlProcess->readAllStandardOutput();
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
-        QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
+        QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
         if (entries.toArray().isEmpty()) {
-            Q_EMIT Global::instance()->error(i18nc("@info", "Playlist is empty", title));
+            Q_EMIT Global::instance()->error(i18nc("@info", "Playlist is empty", playlistTitle));
             return;
         }
 
@@ -393,7 +393,7 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
                 matchFound = true;
             }
         }
-        Q_EMIT opened(title, path);
+        Q_EMIT opened(playlistTitle, path);
         if (!matchFound) {
             setPlayingItem(0);
         }
@@ -472,8 +472,8 @@ void PlayListProxyModel::saveM3uFile(const QString &path)
         return;
     }
     for ( int i {0}; i < rowCount(); ++i) {
-        QString path = data(index(i, 0), PlayListModel::PathRole).toString();
-        m3uFile.write(path.toUtf8().append("\n"));
+        QString itemPath = data(index(i, 0), PlayListModel::PathRole).toString();
+        m3uFile.write(itemPath.toUtf8().append("\n"));
     }
     m3uFile.close();
 }
