@@ -7,12 +7,18 @@
 #include "playlistmodel.h"
 #include "playlistitem.h"
 #include "application.h"
+#include "generalsettings.h"
 #include "global.h"
 #include "playlistsettings.h"
 #include "worker.h"
 
 #include <KFileItem>
+#include <KIO/OpenFileManagerWindowJob>
+#include <KIO/DeleteOrTrashJob>
+#include <KIO/RenameFileDialog>
 #include <KLocalizedString>
+
+#include <QClipboard>
 #include <QCollator>
 #include <QDirIterator>
 #include <QFileInfo>
@@ -20,7 +26,6 @@
 #include <QJsonDocument>
 #include <QProcess>
 #include <QUrl>
-#include <generalsettings.h>
 
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -207,7 +212,7 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
     });
 }
 
-Playlist PlayListModel::getPlayList() const
+Playlist PlayListModel::getPlayList()
 {
     return m_playlist;
 }
@@ -467,4 +472,62 @@ void PlayListProxyModel::saveM3uFile(const QString &path)
         m3uFile.write(path.toUtf8().append("\n"));
     }
     m3uFile.close();
+}
+
+void PlayListProxyModel::highlightInFileManager(int row)
+{
+    QString path = data(index(row, 0), PlayListModel::PathRole).toString();
+    KIO::highlightInFileManager({path});
+}
+
+void PlayListProxyModel::renameFile(int row)
+{
+    QString path = data(index(row, 0), PlayListModel::PathRole).toString();
+    QUrl url(path);
+    url.setScheme("file");
+    KFileItem item(url);
+    auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
+    renameDialog->open();
+
+    connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
+        auto model = qobject_cast<PlayListModel*>(sourceModel());
+        auto item = model->getPlayList().at(row);
+        item->setFilePath(urls.first().path());
+        item->setFileName(urls.first().fileName());
+
+        Q_EMIT dataChanged(index(row, 0), index(row, 0));
+    });
+}
+
+void PlayListProxyModel::trashFile(int row)
+{
+    QList<QUrl> urls;
+    QString path = data(index(row, 0), PlayListModel::PathRole).toString();
+    QUrl url(path);
+    url.setScheme("file");
+    urls << url;
+    auto *job = new KIO::DeleteOrTrashJob(urls,
+                                          KIO::AskUserActionInterface::Trash,
+                                          KIO::AskUserActionInterface::DefaultConfirmation,
+                                          this);
+    job->start();
+
+    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    beginRemoveRows(QModelIndex(), row, row);
+    model->getPlayList().removeAt(row);
+    endRemoveRows();
+}
+
+void PlayListProxyModel::copyFileName(int row)
+{
+    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto item = model->getPlayList().at(row);
+    QGuiApplication::clipboard()->setText(item->fileName());
+}
+
+void PlayListProxyModel::copyFilePath(int row)
+{
+    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto item = model->getPlayList().at(row);
+    QGuiApplication::clipboard()->setText(item->filePath());
 }

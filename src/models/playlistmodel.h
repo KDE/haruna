@@ -37,6 +37,11 @@ public:
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void saveM3uFile(const QString &path);
+    Q_INVOKABLE void highlightInFileManager(int row);
+    Q_INVOKABLE void renameFile(int row);
+    Q_INVOKABLE void trashFile(int row);
+    Q_INVOKABLE void copyFileName(int row);
+    Q_INVOKABLE void copyFilePath(int row);
 };
 
 class PlayListModel : public QAbstractListModel
@@ -75,7 +80,7 @@ public:
     Q_INVOKABLE void openFile(const QString &path);
     Q_INVOKABLE void getYouTubePlaylist(const QString &path);
 
-    Playlist getPlayList() const;
+    Playlist getPlayList();
 
 Q_SIGNALS:
     void itemAdded(int index, QString path);

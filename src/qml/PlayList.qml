@@ -199,6 +199,53 @@ Item {
                         break
                     }
                 }
+
+                MouseArea {
+                    anchors.fill: playlistView.contentItem
+                    propagateComposedEvents: true
+                    acceptedButtons: Qt.RightButton
+                    onClicked: {
+                        contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
+                        contextMenuLoader.active = true
+                        contextMenuLoader.item.popup(playlistView.itemAt(mouseX, mouseY))
+                    }
+                }
+
+            }
+        }
+
+        Loader {
+            id: contextMenuLoader
+
+            property int row: -1
+
+            active: false
+            sourceComponent: Menu {
+
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Open containing folder")
+                    icon.name: "folder"
+                    onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Rename file")
+                    icon.name: "edit-rename"
+                    onClicked: mpv.playlistProxyModel.renameFile(row)
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Copy file name")
+                    onClicked: mpv.playlistProxyModel.copyFileName(row)
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Copy file path")
+                    onClicked: mpv.playlistProxyModel.copyFilePath(row)
+                }
+                MenuSeparator {}
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Trash file")
+                    icon.name: "delete"
+                    onClicked: mpv.playlistProxyModel.trashFile(row)
+                }
             }
         }
 
