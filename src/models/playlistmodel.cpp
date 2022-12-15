@@ -205,7 +205,8 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
             Q_EMIT Global::instance()->error(i18nc("@info", "No title found for url %1", url));
             return;
         }
-        m_playlist.at(row)->setMediaTitle(title);
+        m_playlist.at(row)->setMediaTitle(!title.isEmpty() ? title : url);
+        m_playlist.at(row)->setFileName(!title.isEmpty() ? title : url);
         m_playlist.at(row)->setDuration(Application::formatTime(duration));
         if (m_emitOpened) {
             Q_EMIT opened(title, url);
