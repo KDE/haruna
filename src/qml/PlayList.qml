@@ -206,6 +206,7 @@ Item {
                     acceptedButtons: Qt.RightButton
                     onClicked: {
                         contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
+                        contextMenuLoader.isLocal = playlistView.itemAt(mouseX, mouseY).isLocal
                         contextMenuLoader.active = true
                         contextMenuLoader.item.popup(playlistView.itemAt(mouseX, mouseY))
                     }
@@ -218,6 +219,7 @@ Item {
             id: contextMenuLoader
 
             property int row: -1
+            property bool isLocal: false
 
             active: false
             sourceComponent: Menu {
@@ -225,11 +227,13 @@ Item {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Open containing folder")
                     icon.name: "folder"
+                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Rename file")
                     icon.name: "edit-rename"
+                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.renameFile(row)
                 }
                 MenuItem {
@@ -244,6 +248,7 @@ Item {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Trash file")
                     icon.name: "delete"
+                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.trashFile(row)
                 }
             }

@@ -78,6 +78,8 @@ QVariant PlayListModel::data(const QModelIndex &index, int role) const
         return QVariant(m_playingItem == index.row());
     case FolderPathRole:
         return QVariant(playListItem->folderPath());
+    case IsLocalRole:
+        return QVariant(!playListItem->filePath().startsWith("http"));
     }
 
     return QVariant();
@@ -92,6 +94,7 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
     roles[FolderPathRole] = "folderPath";
     roles[DurationRole] = "duration";
     roles[PlayingRole] = "isPlaying";
+    roles[IsLocalRole] = "isLocal";
     return roles;
 }
 

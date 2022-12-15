@@ -16,6 +16,7 @@ Kirigami.BasicListItem {
     id: root
 
     property bool isPlaying: model.isPlaying
+    property bool isLocal: model.isLocal
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 

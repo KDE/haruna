@@ -62,7 +62,8 @@ public:
         DurationRole,
         PathRole,
         FolderPathRole,
-        PlayingRole
+        PlayingRole,
+        IsLocalRole,
     };
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
