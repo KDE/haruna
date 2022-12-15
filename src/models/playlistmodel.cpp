@@ -516,9 +516,7 @@ void PlayListProxyModel::trashFile(int row)
     job->start();
 
     auto model = qobject_cast<PlayListModel*>(sourceModel());
-    beginRemoveRows(QModelIndex(), row, row);
-    model->getPlayList().removeAt(row);
-    endRemoveRows();
+    model->removeItem(row);
 }
 
 void PlayListProxyModel::copyFileName(int row)
