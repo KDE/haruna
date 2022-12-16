@@ -40,11 +40,6 @@ Item {
         PlaylistSettings.save()
     }
 
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-    }
-
     Rectangle {
 
         anchors.fill: parent
@@ -202,7 +197,6 @@ Item {
 
                 MouseArea {
                     anchors.fill: playlistView.contentItem
-                    propagateComposedEvents: true
                     acceptedButtons: Qt.RightButton
                     onClicked: {
                         contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
