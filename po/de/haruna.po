@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:46+0000\n"
+"POT-Creation-Date: 2022-12-16 00:49+0000\n"
 "PO-Revision-Date: 2022-11-21 15:53+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -526,7 +526,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Neu zuweisen"
 
-#: src/mpv/mpvitem.cpp:557
+#: src/models/playlistmodel.cpp:205
+#, kde-format
+msgctxt "@info"
+msgid "No title found for url %1"
+msgstr ""
+
+#: src/models/playlistmodel.cpp:371
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -542,107 +548,107 @@ msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Wiedergabegeschwindigkeit: %1"
 
-#: src/qml/Actions.qml:236
+#: src/qml/Actions.qml:218
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Wiederholung starten: %1"
 
-#: src/qml/Actions.qml:240
+#: src/qml/Actions.qml:222
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Wiederholen: %1 - %2"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:228
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Wiederholung beendet"
 
-#: src/qml/Actions.qml:254 src/qml/Actions.qml:259
+#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Untertitel-Timing: %1"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Untertitel aus"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Untertitel ein"
 
-#: src/qml/Actions.qml:273 src/qml/Actions.qml:285
+#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Untertitel: keine"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:289
+#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Untertitel: %1 %2"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:300
+#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Untertitel-Vergrößerung: %1"
 
-#: src/qml/Actions.qml:309
+#: src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Deinterlace %1"
 
-#: src/qml/Actions.qml:354 src/qml/Actions.qml:359
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Lautstärke: %1"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Vergrößerung: %1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:358
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Vergrößerung: 0"
 
-#: src/qml/Actions.qml:383 src/qml/Actions.qml:389
+#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:394
+#: src/qml/Actions.qml:376
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:400 src/qml/Actions.qml:406
+#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Helligkeit: %1"
 
-#: src/qml/Actions.qml:411
+#: src/qml/Actions.qml:393
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Helligkeit: 0"
 
-#: src/qml/Actions.qml:417 src/qml/Actions.qml:423
+#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:428
+#: src/qml/Actions.qml:410
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:434 src/qml/Actions.qml:440
+#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Sättigung: %1"
 
-#: src/qml/Actions.qml:445
+#: src/qml/Actions.qml:427
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Sättigung: 0"
@@ -772,7 +778,8 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:196 src/qml/PlayList.qml:314
+#: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Datei auswählen"
@@ -899,15 +906,122 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Werkzeugleiste anzeigen"
 
-#: src/qml/MpvVideo.qml:135
+#: src/qml/MpvVideo.qml:126
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Kapitel übersprungen: %1"
 
-#: src/qml/MpvVideo.qml:152
+#: src/qml/MpvVideo.qml:143
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kann nicht abspielen: %1"
+
+#: src/qml/PlayList.qml:92
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "&Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "&Hinzufügen"
+
+#: src/qml/PlayList.qml:108
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:button"
+msgid "Open playlist"
+msgstr "Wiedergabeliste"
+
+#: src/qml/PlayList.qml:117
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add new folder"
+msgctxt "@action:button"
+msgid "Add file"
+msgstr "Neuen Ordner hinzufügen"
+
+#: src/qml/PlayList.qml:126
+msgctxt "@action:button"
+msgid "Add url"
+msgstr ""
+
+#: src/qml/PlayList.qml:137
+msgctxt "@action:button"
+msgid "Sort"
+msgstr ""
+
+#: src/qml/PlayList.qml:141
+msgctxt "@action:button"
+msgid "Name ascending"
+msgstr ""
+
+#: src/qml/PlayList.qml:147
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Hardware decoding"
+msgctxt "@action:button"
+msgid "Name descending"
+msgstr "Hardware-Dekodierung"
+
+#: src/qml/PlayList.qml:153
+msgctxt "@action:button"
+msgid "Duration ascending"
+msgstr ""
+
+#: src/qml/PlayList.qml:159
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Saturation Reset"
+msgctxt "@action:button"
+msgid "Duration descending"
+msgstr "Sättigung zurücksetzen"
+
+#: src/qml/PlayList.qml:166
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Clear List"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Liste leeren"
+
+#: src/qml/PlayList.qml:174
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Save changes"
+msgctxt "@action:button"
+msgid "Save as"
+msgstr "Änderungen speichern"
+
+#: src/qml/PlayList.qml:228
+msgctxt "@action:inmenu"
+msgid "Open containing folder"
+msgstr ""
+
+#: src/qml/PlayList.qml:234
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
+msgctxt "@action:inmenu"
+msgid "Rename file"
+msgstr "Datei auswählen"
+
+#: src/qml/PlayList.qml:240
+msgctxt "@action:inmenu"
+msgid "Copy file name"
+msgstr ""
+
+#: src/qml/PlayList.qml:244
+msgctxt "@action:inmenu"
+msgid "Copy file path"
+msgstr ""
+
+#: src/qml/PlayList.qml:249
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For all files"
+msgctxt "@action:inmenu"
+msgid "Trash file"
+msgstr "Für alle Dateien"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34

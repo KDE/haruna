@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:46+0000\n"
-"PO-Revision-Date: 2022-12-06 08:27+0100\n"
+"POT-Creation-Date: 2022-12-16 00:49+0000\n"
+"PO-Revision-Date: 2022-12-15 08:10+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -360,7 +360,7 @@ msgstr "სუბტიტრების ციკლის დაწევა"
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr ""
+msgstr "დეინტერლეისინგის გადართვა"
 
 #: src/models/actionsmodel.cpp:341
 #, kde-format
@@ -519,6 +519,8 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
+"არჩეული მალსახმობი კონფლიქტშია <b>%1</b> ქმედებათან.<br><br>გნებავთ "
+"მალსახმობის თავიდან მინიჭება?"
 
 #: src/models/actionsmodel.cpp:657
 #, kde-format
@@ -526,7 +528,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "თავიდან მინიჭება"
 
-#: src/mpv/mpvitem.cpp:557
+#: src/models/playlistmodel.cpp:205
+#, kde-format
+msgctxt "@info"
+msgid "No title found for url %1"
+msgstr ""
+
+#: src/models/playlistmodel.cpp:371
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -542,107 +550,107 @@ msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "დაკვრის სიჩქარე: %1"
 
-#: src/qml/Actions.qml:236
+#: src/qml/Actions.qml:218
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "მარყუჟის დასაწყისი: %1"
 
-#: src/qml/Actions.qml:240
+#: src/qml/Actions.qml:222
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "მარყუჟი: %1 - %2"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:228
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "მარყუჟი წაიშალა"
 
-#: src/qml/Actions.qml:254 src/qml/Actions.qml:259
+#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "სუბტიტრების დრო: %1"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "სუბტიტრები გამორთულია"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "სუბტიტრები ჩართულია"
 
-#: src/qml/Actions.qml:273 src/qml/Actions.qml:285
+#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "სუბტიტრები: არაფერი"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:289
+#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "სუბტიტრები: %1 %2"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:300
+#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "სუბტიტრების მასშტაბი: %1"
 
-#: src/qml/Actions.qml:309
+#: src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
-msgstr ""
+msgstr "დეინტერლეისი: %1"
 
-#: src/qml/Actions.qml:354 src/qml/Actions.qml:359
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "ხმა: %1"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "გადიდება: %1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:358
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "გადიდება: 0"
 
-#: src/qml/Actions.qml:383 src/qml/Actions.qml:389
+#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "კონტრასტი: %1"
 
-#: src/qml/Actions.qml:394
+#: src/qml/Actions.qml:376
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "კონტრასტი: 0"
 
-#: src/qml/Actions.qml:400 src/qml/Actions.qml:406
+#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "სიკაშკაშე: %1"
 
-#: src/qml/Actions.qml:411
+#: src/qml/Actions.qml:393
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "სიკაშკაშე: 0"
 
-#: src/qml/Actions.qml:417 src/qml/Actions.qml:423
+#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "გამა: %1"
 
-#: src/qml/Actions.qml:428
+#: src/qml/Actions.qml:410
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "გამა: 0"
 
-#: src/qml/Actions.qml:434 src/qml/Actions.qml:440
+#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "გაჯერებულობა: %1"
 
-#: src/qml/Actions.qml:445
+#: src/qml/Actions.qml:427
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "გაჯერებულობა: 0"
@@ -772,7 +780,8 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:196 src/qml/PlayList.qml:314
+#: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
@@ -898,15 +907,122 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "ხელსაწყოთა ზოლის ჩვენება"
 
-#: src/qml/MpvVideo.qml:135
+#: src/qml/MpvVideo.qml:126
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "გამოტოვებული თავი: %1"
 
-#: src/qml/MpvVideo.qml:152
+#: src/qml/MpvVideo.qml:143
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "ვერ ვუკრავ: %1"
+
+#: src/qml/PlayList.qml:92
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "&Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "&დამატება"
+
+#: src/qml/PlayList.qml:108
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:button"
+msgid "Open playlist"
+msgstr "დასაკრავი სია"
+
+#: src/qml/PlayList.qml:117
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add new folder"
+msgctxt "@action:button"
+msgid "Add file"
+msgstr "ახალი საქაღალდის დამატება"
+
+#: src/qml/PlayList.qml:126
+msgctxt "@action:button"
+msgid "Add url"
+msgstr ""
+
+#: src/qml/PlayList.qml:137
+msgctxt "@action:button"
+msgid "Sort"
+msgstr ""
+
+#: src/qml/PlayList.qml:141
+msgctxt "@action:button"
+msgid "Name ascending"
+msgstr ""
+
+#: src/qml/PlayList.qml:147
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Hardware decoding"
+msgctxt "@action:button"
+msgid "Name descending"
+msgstr "აპარატურული დეკოდერი"
+
+#: src/qml/PlayList.qml:153
+msgctxt "@action:button"
+msgid "Duration ascending"
+msgstr ""
+
+#: src/qml/PlayList.qml:159
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Saturation Reset"
+msgctxt "@action:button"
+msgid "Duration descending"
+msgstr "გაჯერებულობის დაბრუნება"
+
+#: src/qml/PlayList.qml:166
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Clear List"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "სიის გასუფთავება"
+
+#: src/qml/PlayList.qml:174
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Save changes"
+msgctxt "@action:button"
+msgid "Save as"
+msgstr "ცვლილებების შენახვა"
+
+#: src/qml/PlayList.qml:228
+msgctxt "@action:inmenu"
+msgid "Open containing folder"
+msgstr ""
+
+#: src/qml/PlayList.qml:234
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
+msgctxt "@action:inmenu"
+msgid "Rename file"
+msgstr "აირჩიეთ ფაილი"
+
+#: src/qml/PlayList.qml:240
+msgctxt "@action:inmenu"
+msgid "Copy file name"
+msgstr ""
+
+#: src/qml/PlayList.qml:244
+msgctxt "@action:inmenu"
+msgid "Copy file path"
+msgstr ""
+
+#: src/qml/PlayList.qml:249
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For all files"
+msgctxt "@action:inmenu"
+msgid "Trash file"
+msgstr "ყველა ფაილისთვის"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1148,6 +1264,7 @@ msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
+"დაკვრა შეჩერდება, როცა ფანჯარა ჩაკეცილია და გაგრძელდება, როცა მას ამოკეცავთ."
 
 #: src/qml/Settings/PlaybackSettings.qml:166
 msgctxt "@label"
@@ -1235,6 +1352,8 @@ msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr ""
+"მითითებულ მნიშვნელობაზე ნაკლები ან ტოლი სიმაღლის მქონე საუკეთესო ვიდეოს "
+"არჩევა."
 
 #: src/qml/Settings/PlaybackSettings.qml:421
 msgctxt "placeholder text"
@@ -1262,6 +1381,8 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
+"როცა ჩართულია, დასაკრავი სია ვიდეოს თავზე გამოჩნდება\n"
+"თუ გამორთულია, ვიდეოს ზომა იცვლება"
 
 #: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@option:check"
@@ -1304,6 +1425,8 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
+"თუ ჩართულია, დასაკრავი სიის მდგომარეობა (ხილული/უხილავი) დამახსოვრებული "
+"იქნება ხოლმე"
 
 #: src/qml/Settings/SettingsWindow.qml:34
 msgctxt "@title:window"
@@ -1371,6 +1494,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"თუ ჩართულია, სუბტიტრების რენდერი ვიდეოს გარეთაც შეიძლება მოხდეს, შავ "
+"საზღვრებში. შეიძლება ყველა .ass სუბტიტრზე არ იმუშაოს."
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
@@ -1456,6 +1581,8 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
+"გამოიყენება მუსიკის ფაილებისთვის, რომლებსაც ვიდეო-ტრეკი, ჩაშენებული ყდის "
+"სურათი ან/და საქაღალდე იგივე საქაღალდეში არ აქვთ."
 
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title"

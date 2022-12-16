@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:46+0000\n"
+"POT-Creation-Date: 2022-12-16 00:49+0000\n"
 "PO-Revision-Date: 2021-10-10 11:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -600,7 +600,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:557
+#: src/models/playlistmodel.cpp:205
+#, kde-format
+msgctxt "@info"
+msgid "No title found for url %1"
+msgstr ""
+
+#: src/models/playlistmodel.cpp:371
 #, fuzzy, kde-format
 #| msgid "Playlist style"
 msgctxt "@info"
@@ -621,147 +627,147 @@ msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Szybkość odtwarzania: %1"
 
-#: src/qml/Actions.qml:236
+#: src/qml/Actions.qml:218
 #, fuzzy
 #| msgid "Loop start: %1"
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Zapętlij początek: %1"
 
-#: src/qml/Actions.qml:240
+#: src/qml/Actions.qml:222
 #, fuzzy
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Zapętlij: %1 - %2"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:228
 #, fuzzy
 #| msgid "Loop cleared"
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Wyczyszczono pętlę"
 
-#: src/qml/Actions.qml:254 src/qml/Actions.qml:259
+#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
 #, fuzzy
 #| msgid "Subtitle timing: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Czas napisu: %1"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:246
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Wyłącz napisy"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:246
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Włącz napisy"
 
-#: src/qml/Actions.qml:273 src/qml/Actions.qml:285
+#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
 #, fuzzy
 #| msgid "Subtitle: None"
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Napis: Brak"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:289
+#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
 #, fuzzy
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Napis: %1 %2"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:300
+#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
 #, fuzzy
 #| msgid "Subtitle scale: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Skala napisu: %1"
 
-#: src/qml/Actions.qml:309
+#: src/qml/Actions.qml:291
 #, fuzzy
 #| msgid "Deinterlace: %1"
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Usuwanie przeplotu: %1"
 
-#: src/qml/Actions.qml:354 src/qml/Actions.qml:359
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
 #, fuzzy
 #| msgid "Volume: %1"
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Głośność: %1"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Powiększenie: %1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:358
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Powiększenie: 0"
 
-#: src/qml/Actions.qml:383 src/qml/Actions.qml:389
+#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:394
+#: src/qml/Actions.qml:376
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:400 src/qml/Actions.qml:406
+#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Jasność: %1"
 
-#: src/qml/Actions.qml:411
+#: src/qml/Actions.qml:393
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Jasność: 0"
 
-#: src/qml/Actions.qml:417 src/qml/Actions.qml:423
+#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:428
+#: src/qml/Actions.qml:410
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:434 src/qml/Actions.qml:440
+#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Nasycenie: %1"
 
-#: src/qml/Actions.qml:445
+#: src/qml/Actions.qml:427
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
@@ -941,7 +947,8 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:196 src/qml/PlayList.qml:314
+#: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@title:window"
@@ -1111,19 +1118,115 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Pokaż pasek narzędzi"
 
-#: src/qml/MpvVideo.qml:135
+#: src/qml/MpvVideo.qml:126
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Pominięty rozdział: %1"
 
-#: src/qml/MpvVideo.qml:152
+#: src/qml/MpvVideo.qml:143
 #, fuzzy
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Nie można odtworzyć: %1"
+
+#: src/qml/PlayList.qml:92
+#, fuzzy
+#| msgid "&Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Dod&aj"
+
+#: src/qml/PlayList.qml:108
+#, fuzzy
+#| msgid "Playlist"
+msgctxt "@action:button"
+msgid "Open playlist"
+msgstr "Lista odtwarzania"
+
+#: src/qml/PlayList.qml:117
+#, fuzzy
+#| msgid "Add new folder"
+msgctxt "@action:button"
+msgid "Add file"
+msgstr "Dodaj nowy katalog"
+
+#: src/qml/PlayList.qml:126
+msgctxt "@action:button"
+msgid "Add url"
+msgstr ""
+
+#: src/qml/PlayList.qml:137
+msgctxt "@action:button"
+msgid "Sort"
+msgstr ""
+
+#: src/qml/PlayList.qml:141
+msgctxt "@action:button"
+msgid "Name ascending"
+msgstr ""
+
+#: src/qml/PlayList.qml:147
+#, fuzzy
+#| msgid "Hardware decoding"
+msgctxt "@action:button"
+msgid "Name descending"
+msgstr "Dekodowanie sprzętowe"
+
+#: src/qml/PlayList.qml:153
+msgctxt "@action:button"
+msgid "Duration ascending"
+msgstr ""
+
+#: src/qml/PlayList.qml:159
+#, fuzzy
+#| msgid "Saturation Reset"
+msgctxt "@action:button"
+msgid "Duration descending"
+msgstr "Zerowanie nasycenia"
+
+#: src/qml/PlayList.qml:166
+msgctxt "@action:button"
+msgid "Clear"
+msgstr ""
+
+#: src/qml/PlayList.qml:174
+#, fuzzy
+#| msgid "Save changes"
+msgctxt "@action:button"
+msgid "Save as"
+msgstr "Zapisz zmiany"
+
+#: src/qml/PlayList.qml:228
+msgctxt "@action:inmenu"
+msgid "Open containing folder"
+msgstr ""
+
+#: src/qml/PlayList.qml:234
+#, fuzzy
+#| msgid "Play next file"
+msgctxt "@action:inmenu"
+msgid "Rename file"
+msgstr "Odtwórz następny plik"
+
+#: src/qml/PlayList.qml:240
+msgctxt "@action:inmenu"
+msgid "Copy file name"
+msgstr ""
+
+#: src/qml/PlayList.qml:244
+msgctxt "@action:inmenu"
+msgid "Copy file path"
+msgstr ""
+
+#: src/qml/PlayList.qml:249
+#, fuzzy
+#| msgid "For all files"
+msgctxt "@action:inmenu"
+msgid "Trash file"
+msgstr "Dla wszystkich plików"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
