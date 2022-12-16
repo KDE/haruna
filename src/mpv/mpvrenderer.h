@@ -14,7 +14,7 @@
 class MpvRenderer : public QQuickFramebufferObject::Renderer
 {
 public:
-    MpvRenderer(MpvCore *new_obj);
+    explicit MpvRenderer(MpvCore *new_obj);
     ~MpvRenderer() = default;
 
     MpvCore *m_mpv_core;

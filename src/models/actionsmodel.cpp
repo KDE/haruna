@@ -15,9 +15,8 @@
 
 ActionsModel::ActionsModel(QObject *parent)
     : QAbstractListModel(parent)
+    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
 {
-    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
-
     Action action;
     action.name = QStringLiteral("aboutHarunaAction");
     action.text = i18nc("@action", "About Haruna");

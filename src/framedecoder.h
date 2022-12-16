@@ -60,7 +60,6 @@ private:
 #else
     const AVCodec *m_pVideoCodec;
 #endif
-    AVStream *m_pVideoStream;
     AVFrame *m_pFrame;
     quint8 *m_pFrameBuffer;
     AVPacket *m_pPacket;

@@ -56,11 +56,10 @@ Application *Application::instance()
 
 Application::Application()
     : m_app(qApp)
+    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
+    , m_schemes(new KColorSchemeManager(this))
+    , m_systemDefaultStyle(m_app->style()->objectName())
 {
-    m_config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
-    m_schemes = new KColorSchemeManager(this);
-    m_systemDefaultStyle = m_app->style()->objectName();
-
     // used to hide playlist when mouse leaves the application
     // while moving between monitors while in fullscreen
     auto *appEventFilter = new ApplicationEventFilter();

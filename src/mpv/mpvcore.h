@@ -17,7 +17,7 @@
  */
 struct node_autofree {
     mpv_node *ptr;
-    node_autofree(mpv_node *a_ptr)
+    explicit node_autofree(mpv_node *a_ptr)
         : ptr(a_ptr)
     {
     }

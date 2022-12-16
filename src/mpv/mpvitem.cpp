@@ -387,7 +387,7 @@ void MpvItem::eventHandler()
             break;
         }
         case MPV_EVENT_END_FILE: {
-            auto prop = (mpv_event_end_file *)event->data;
+            auto prop = static_cast<mpv_event_end_file *>(event->data);
             if (prop->reason == MPV_END_FILE_REASON_EOF) {
                 Q_EMIT endFile("eof");
             } else if (prop->reason == MPV_END_FILE_REASON_ERROR) {
@@ -396,7 +396,7 @@ void MpvItem::eventHandler()
             break;
         }
         case MPV_EVENT_PROPERTY_CHANGE: {
-            mpv_event_property *prop = (mpv_event_property *)event->data;
+            mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
 
             if (strcmp(prop->name, "time-pos") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
@@ -465,39 +465,39 @@ void MpvItem::loadTracks()
     int subIndex = 1;
     int audioIndex = 0;
     for (const auto &track : tracks) {
-        const auto t = track.toMap();
-        if (track.toMap()["type"] == "sub") {
-            auto track = new Track();
-            track->setCodec(t["codec"].toString());
-            track->setType(t["type"].toString());
-            track->setDefaut(t["default"].toBool());
-            track->setDependent(t["dependent"].toBool());
-            track->setForced(t["forced"].toBool());
-            track->setId(t["id"].toLongLong());
-            track->setSrcId(t["src-id"].toLongLong());
-            track->setFfIndex(t["ff-index"].toLongLong());
-            track->setLang(t["lang"].toString());
-            track->setTitle(t["title"].toString());
-            track->setIndex(subIndex);
+        const auto trackMap = track.toMap();
+        if (trackMap["type"] == "sub") {
+            auto t = new Track();
+            t->setCodec(trackMap["codec"].toString());
+            t->setType(trackMap["type"].toString());
+            t->setDefaut(trackMap["default"].toBool());
+            t->setDependent(trackMap["dependent"].toBool());
+            t->setForced(trackMap["forced"].toBool());
+            t->setId(trackMap["id"].toLongLong());
+            t->setSrcId(trackMap["src-id"].toLongLong());
+            t->setFfIndex(trackMap["ff-index"].toLongLong());
+            t->setLang(trackMap["lang"].toString());
+            t->setTitle(trackMap["title"].toString());
+            t->setIndex(subIndex);
 
-            m_subtitleTracks.insert(subIndex, track);
+            m_subtitleTracks.insert(subIndex, t);
             subIndex++;
         }
-        if (track.toMap()["type"] == "audio") {
-            auto track = new Track();
-            track->setCodec(t["codec"].toString());
-            track->setType(t["type"].toString());
-            track->setDefaut(t["default"].toBool());
-            track->setDependent(t["dependent"].toBool());
-            track->setForced(t["forced"].toBool());
-            track->setId(t["id"].toLongLong());
-            track->setSrcId(t["src-id"].toLongLong());
-            track->setFfIndex(t["ff-index"].toLongLong());
-            track->setLang(t["lang"].toString());
-            track->setTitle(t["title"].toString());
-            track->setIndex(audioIndex);
+        if (trackMap["type"] == "audio") {
+            auto t = new Track();
+            t->setCodec(trackMap["codec"].toString());
+            t->setType(trackMap["type"].toString());
+            t->setDefaut(trackMap["default"].toBool());
+            t->setDependent(trackMap["dependent"].toBool());
+            t->setForced(trackMap["forced"].toBool());
+            t->setId(trackMap["id"].toLongLong());
+            t->setSrcId(trackMap["src-id"].toLongLong());
+            t->setFfIndex(trackMap["ff-index"].toLongLong());
+            t->setLang(trackMap["lang"].toString());
+            t->setTitle(trackMap["title"].toString());
+            t->setIndex(audioIndex);
 
-            m_audioTracks.insert(audioIndex, track);
+            m_audioTracks.insert(audioIndex, t);
             audioIndex++;
         }
     }
@@ -552,9 +552,9 @@ double MpvItem::loadTimePosition()
     auto hash = md5(getProperty("path").toString());
     auto configPath = Global::instance()->appConfigDirPath();
     KConfig *config = new KConfig(configPath.append("/watch-later/").append(hash));
-    int position = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
+    int pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
 
-    return position;
+    return pos;
 }
 
 void MpvItem::resetTimePosition()

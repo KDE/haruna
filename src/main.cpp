@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine(&qApplication);
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
-    auto onObjectCreated = [url](QObject *obj, const QUrl &objUrl) {
+    auto onObjectCreated = [url](const QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl) {
             QCoreApplication::exit(-1);
         }

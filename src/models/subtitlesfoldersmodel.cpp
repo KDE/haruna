@@ -14,8 +14,8 @@
 
 SubtitlesFoldersModel::SubtitlesFoldersModel(QObject *parent)
     : QAbstractListModel(parent)
+    , m_list(SubtitlesSettings::subtitlesFolders())
 {
-    m_list = SubtitlesSettings::subtitlesFolders();
 }
 
 int SubtitlesFoldersModel::rowCount(const QModelIndex &parent) const

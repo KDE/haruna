@@ -131,16 +131,19 @@ mpv_node_list *MpvCore::create_list(mpv_node *dst, bool is_map, int num)
     mpv_node_list *list = new mpv_node_list();
     dst->u.list = list;
     if (!list) {
-        list = nullptr;
+        free_node(dst);
+        return nullptr;
     }
     list->values = new mpv_node[num]();
     if (!list->values) {
-        list = nullptr;
+        free_node(dst);
+        return nullptr;
     }
     if (is_map) {
         list->keys = new char *[num]();
         if (!list->keys) {
-            list = nullptr;
+            free_node(dst);
+            return nullptr;
         }
     }
     return list;
@@ -166,16 +169,20 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
     } else if (src.canConvert<QVariantList>()) {
         QVariantList qlist = src.toList();
         mpv_node_list *list = create_list(dst, false, qlist.size());
-        if (!list)
+        if (!list) {
             dst->format = MPV_FORMAT_NONE;
+            return;
+        }
         list->num = qlist.size();
         for (int n = 0; n < qlist.size(); n++)
             setNode(&list->values[n], qlist[n]);
     } else if (src.canConvert<QVariantMap>()) {
         QVariantMap qmap = src.toMap();
         mpv_node_list *list = create_list(dst, true, qmap.size());
-        if (!list)
+        if (!list) {
             dst->format = MPV_FORMAT_NONE;
+            return;
+        }
         list->num = qmap.size();
         int n = 0;
         for (auto it = qmap.constKeyValueBegin(); it != qmap.constKeyValueEnd(); ++it) {
@@ -183,6 +190,7 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
             if (!list->keys[n]) {
                 free_node(dst);
                 dst->format = MPV_FORMAT_NONE;
+                return;
             }
             setNode(&list->values[n], it.operator*().second);
             ++n;

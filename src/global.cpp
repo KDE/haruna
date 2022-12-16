@@ -15,9 +15,9 @@ Global *Global::instance()
 }
 
 Global::Global()
+    : m_config(KSharedConfig::openConfig("haruna/haruna.conf"))
+    , m_ccConfig(KSharedConfig::openConfig("haruna/haruna-custom-commands.conf"))
 {
-    m_config = KSharedConfig::openConfig("haruna/haruna.conf");
-    m_ccConfig = KSharedConfig::openConfig("haruna/haruna-custom-commands.conf");
 }
 
 const QString Global::systemConfigPath()

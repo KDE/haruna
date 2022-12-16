@@ -303,8 +303,9 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
         return false;
     }
 
-    if (inputs || outputs)
-        return -1;
+    if (inputs || outputs) {
+        return false;
+    }
 
     ret = avfilter_graph_config(m_filterGraph, nullptr);
     if (ret < 0) {

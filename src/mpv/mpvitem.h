@@ -78,7 +78,7 @@ class MpvItem : public MpvCore
     void setSecondarySubtitleId(int value);
 
 public:
-    MpvItem(QQuickItem *parent = nullptr);
+    explicit MpvItem(QQuickItem *parent = nullptr);
     ~MpvItem() = default;
 
     Q_INVOKABLE void loadFile(const QString &file);
