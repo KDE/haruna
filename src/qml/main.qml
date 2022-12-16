@@ -235,8 +235,10 @@ Kirigami.ApplicationWindow {
 
     Popup {
         id: openUrlPopup
+
         x: 10
         y: 10
+        modal: true
 
         onOpened: {
             openUrlTextField.forceActiveFocus(Qt.MouseFocusReason)
