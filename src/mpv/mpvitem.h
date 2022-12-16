@@ -9,8 +9,8 @@
 
 #include "mpvcore.h"
 #include "playlistmodel.h"
-#include "tracksmodel.h"
 #include "track.h"
+#include "tracksmodel.h"
 
 class MpvRenderer;
 
@@ -18,10 +18,10 @@ class MpvItem : public MpvCore
 {
     Q_OBJECT
 
-    Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
-    Q_PROPERTY(TracksModel* subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
-    Q_PROPERTY(PlayListModel* playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
-    Q_PROPERTY(PlayListProxyModel* playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
+    Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
+    Q_PROPERTY(TracksModel *subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
+    Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
+    Q_PROPERTY(PlayListProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
@@ -40,7 +40,6 @@ class MpvItem : public MpvCore
     void setPlaylistProxyModel(PlayListProxyModel *model);
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
-
 
     QString mediaTitle();
 
@@ -78,9 +77,8 @@ class MpvItem : public MpvCore
     int secondarySubtitleId();
     void setSecondarySubtitleId(int value);
 
-
 public:
-    MpvItem(QQuickItem * parent = nullptr);
+    MpvItem(QQuickItem *parent = nullptr);
     ~MpvItem() = default;
 
     Q_INVOKABLE void loadFile(const QString &file);
@@ -128,8 +126,8 @@ private:
     QString md5(const QString &str);
     TracksModel *m_audioTracksModel;
     TracksModel *m_subtitleTracksModel;
-    QMap<int, Track*> m_subtitleTracks;
-    QMap<int, Track*> m_audioTracks;
+    QMap<int, Track *> m_subtitleTracks;
+    QMap<int, Track *> m_audioTracks;
     QList<int> m_secondsWatched;
     double m_watchPercentage;
     PlayListModel *m_playlistModel;

@@ -6,8 +6,10 @@
 
 #include "track.h"
 
-Track::Track(QObject *parent) : QObject(parent)
-{}
+Track::Track(QObject *parent)
+    : QObject(parent)
+{
+}
 
 QString Track::lang() const
 {

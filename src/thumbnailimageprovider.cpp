@@ -9,8 +9,8 @@
 #include "application.h"
 #include "worker.h"
 
-#include <QIcon>
 #include <QFile>
+#include <QIcon>
 
 ThumbnailImageProvider::ThumbnailImageProvider()
 {
@@ -24,34 +24,44 @@ QQuickImageResponse *ThumbnailImageProvider::requestImageResponse(const QString 
 
 ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSize)
 {
-    connect(Worker::instance(), &Worker::thumbnailSuccess, this, [=](const QString &resultId, const QImage &image) {
-        if (resultId == id) {
-            m_texture = QQuickTextureFactory::textureFactoryForImage(image);
+    connect(
+        Worker::instance(),
+        &Worker::thumbnailSuccess,
+        this,
+        [=](const QString &resultId, const QImage &image) {
+            if (resultId == id) {
+                m_texture = QQuickTextureFactory::textureFactoryForImage(image);
+                Q_EMIT finished();
+            }
+        },
+        Qt::QueuedConnection);
+
+    connect(
+        Worker::instance(),
+        &Worker::thumbnailFail,
+        this,
+        [=]() {
+            QString mimeType = Application::mimeType(QUrl(id));
+            QString iconName;
+            if (mimeType.startsWith("video/")) {
+                iconName = QStringLiteral("video-x-generic");
+            } else if (mimeType.startsWith("audio/")) {
+                iconName = QStringLiteral("audio-x-generic");
+            } else {
+                return;
+            }
+            auto icon = QIcon::fromTheme(iconName).pixmap(requestedSize);
+            m_texture = QQuickTextureFactory::textureFactoryForImage(icon.toImage());
+
             Q_EMIT finished();
-        }
-    }, Qt::QueuedConnection);
-
-    connect(Worker::instance(), &Worker::thumbnailFail, this, [=]() {
-        QString mimeType = Application::mimeType(QUrl(id));
-        QString iconName;
-        if (mimeType.startsWith("video/")) {
-            iconName = QStringLiteral("video-x-generic");
-        } else if (mimeType.startsWith("audio/")) {
-            iconName = QStringLiteral("audio-x-generic");
-        } else {
-            return;
-        }
-        auto icon = QIcon::fromTheme(iconName).pixmap(requestedSize);
-        m_texture = QQuickTextureFactory::textureFactoryForImage(icon.toImage());
-
-        Q_EMIT finished();
-    }, Qt::QueuedConnection);
+        },
+        Qt::QueuedConnection);
     getPreview(id, requestedSize);
 }
 
 void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize)
 {
-    if(QFile(id).exists()) {
+    if (QFile(id).exists()) {
         Worker::instance()->makePlaylistThumbnail(id, requestedSize.width());
     }
 

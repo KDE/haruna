@@ -16,7 +16,6 @@ public:
     QQuickImageResponse *requestImageResponse(const QString &id, const QSize &requestedSize) override;
 };
 
-
 class ThumbnailResponse : public QQuickImageResponse
 {
 public:
@@ -25,7 +24,7 @@ public:
     QQuickTextureFactory *textureFactory() const override;
     void getPreview(const QString &id, const QSize &requestedSize);
 
-    QQuickTextureFactory *m_texture {nullptr};
+    QQuickTextureFactory *m_texture{nullptr};
 };
 
 #endif // THUMBNAILIMAGEPROVIDER_H

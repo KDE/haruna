@@ -30,11 +30,11 @@ class ProxyActionsModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit ProxyActionsModel(QObject *parent = nullptr);
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const  override;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
 public Q_SLOTS:
-    void setNameFilter(const QString& regExp);
-    void setTypeFilter(const QString& regExp);
+    void setNameFilter(const QString &regExp);
+    void setTypeFilter(const QString &regExp);
     bool saveShortcut(int row, const QVariant &shortcut);
 
 private:
@@ -149,7 +149,7 @@ Q_SIGNALS:
 private:
     bool keyConflictMessageBox(const QString &actionText);
     KSharedConfig::Ptr m_config;
-    QList<Action>  m_actions;
+    QList<Action> m_actions;
 };
 
 #endif // ACTIONSMODEL_H

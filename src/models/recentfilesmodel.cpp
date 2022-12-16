@@ -91,7 +91,7 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     }
 
     auto _name = name == QString() ? url.fileName() : name;
-    for (int i {0}; i < m_urls.count(); ++i) {
+    for (int i{0}; i < m_urls.count(); ++i) {
         if (url == m_urls[i].url) {
             beginRemoveRows(QModelIndex(), i, i);
             m_urls.takeAt(i);
@@ -131,17 +131,16 @@ void RecentFilesModel::deleteEntries()
 
 void RecentFilesModel::saveEntries()
 {
-     m_recentFilesConfigGroup.deleteGroup();
-     int i = 1;
-     for (const auto &[url, name] : std::as_const(m_urls)) {
-         m_recentFilesConfigGroup.writePathEntry(QStringLiteral("File%1").arg(i),
-                                                 url.toDisplayString(QUrl::PreferLocalFile));
-         m_recentFilesConfigGroup.writePathEntry(QStringLiteral("Name%1").arg(i), name);
+    m_recentFilesConfigGroup.deleteGroup();
+    int i = 1;
+    for (const auto &[url, name] : std::as_const(m_urls)) {
+        m_recentFilesConfigGroup.writePathEntry(QStringLiteral("File%1").arg(i), url.toDisplayString(QUrl::PreferLocalFile));
+        m_recentFilesConfigGroup.writePathEntry(QStringLiteral("Name%1").arg(i), name);
 
-         ++i;
-     }
-     m_recentFilesConfigGroup.sync();
- }
+        ++i;
+    }
+    m_recentFilesConfigGroup.sync();
+}
 
 int RecentFilesModel::maxRecentFiles() const
 {

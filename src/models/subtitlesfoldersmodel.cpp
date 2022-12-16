@@ -33,7 +33,6 @@ QVariant SubtitlesFoldersModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-
     QString path = m_list[index.row()];
 
     switch (role) {

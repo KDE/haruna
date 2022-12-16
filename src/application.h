@@ -10,8 +10,8 @@
 #include <QAbstractItemModel>
 #include <QApplication>
 #include <QFont>
-#include <QQmlApplicationEngine>
 #include <QObject>
+#include <QQmlApplicationEngine>
 
 #include <KAboutData>
 #include <KSharedConfig>
@@ -29,7 +29,8 @@ Q_SIGNALS:
     void applicationMouseLeave();
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) override {
+    bool eventFilter(QObject *obj, QEvent *event) override
+    {
         if (event->type() == QEvent::Leave) {
             Q_EMIT applicationMouseLeave();
             return true;
@@ -43,7 +44,7 @@ protected:
 class Application : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QAbstractItemModel* colorSchemesModel READ colorSchemesModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *colorSchemesModel READ colorSchemesModel CONSTANT)
     Q_PROPERTY(QUrl configFilePath READ configFilePath CONSTANT)
     Q_PROPERTY(QUrl configFolderPath READ configFolderPath CONSTANT)
 

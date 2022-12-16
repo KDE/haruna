@@ -7,9 +7,9 @@
 #ifndef CUSTOMCOMMANDSMODEL_H
 #define CUSTOMCOMMANDSMODEL_H
 
+#include <KSharedConfig>
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
-#include <KSharedConfig>
 
 class ActionsModel;
 
@@ -17,7 +17,7 @@ class CustomCommandsModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(ActionsModel* appActionsModel READ appActionsModel WRITE setAppActionsModel NOTIFY appActionsModelChanged)
+    Q_PROPERTY(ActionsModel *appActionsModel READ appActionsModel WRITE setAppActionsModel NOTIFY appActionsModelChanged)
 
     struct Command {
         QString commandId;
@@ -25,8 +25,8 @@ class CustomCommandsModel : public QAbstractListModel
         QString osdMessage;
         QString shortcut;
         QString type;
-        bool setOnStartup {true};
-        int order {-1};
+        bool setOnStartup{true};
+        int order{-1};
     };
 
 public:
@@ -49,13 +49,8 @@ public:
 
     Q_INVOKABLE void init();
     Q_INVOKABLE void moveRows(int oldIndex, int newIndex);
-    Q_INVOKABLE void saveCustomCommand(const QString &command,
-                                       const QString &osdMessage,
-                                       const QString &type);
-    Q_INVOKABLE void editCustomCommand(int row,
-                                       const QString &command,
-                                       const QString &osdMessage,
-                                       const QString &type);
+    Q_INVOKABLE void saveCustomCommand(const QString &command, const QString &osdMessage, const QString &type);
+    Q_INVOKABLE void editCustomCommand(int row, const QString &command, const QString &osdMessage, const QString &type);
     Q_INVOKABLE void toggleCustomCommand(const QString &groupName, int row, bool setOnStartup);
     Q_INVOKABLE void deleteCustomCommand(const QString &groupName, int row);
 

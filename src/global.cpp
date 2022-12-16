@@ -42,4 +42,3 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
         return QString();
     }
 }
-

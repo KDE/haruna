@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "actionsmodel.h"
 #include "customcommandsmodel.h"
+#include "actionsmodel.h"
 
 #include <KConfigGroup>
 #include <global.h>
@@ -70,13 +70,13 @@ QHash<int, QByteArray> CustomCommandsModel::roleNames() const
 void CustomCommandsModel::init()
 {
     connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [=](const QString &name, const QString &shortcut) {
-        for (int i {0}; i < m_customCommands.count(); ++i) {
-             if (m_customCommands[i]->commandId == name) {
-                 m_customCommands[i]->shortcut = shortcut;
-                 Q_EMIT dataChanged(index(i, 0), index(i, 0));
-                 return;
-             }
-         }
+        for (int i{0}; i < m_customCommands.count(); ++i) {
+            if (m_customCommands[i]->commandId == name) {
+                m_customCommands[i]->shortcut = shortcut;
+                Q_EMIT dataChanged(index(i, 0), index(i, 0));
+                return;
+            }
+        }
     });
 
     QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
@@ -146,8 +146,7 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
     auto c = new Command();
     c->commandId = groupName;
     c->command = configGroup.readEntry("Command", QString());
-    c->osdMessage = configGroup.readEntry("OsdMessage", QString()),
-    c->type = configGroup.readEntry("Type", QString());
+    c->osdMessage = configGroup.readEntry("OsdMessage", QString()), c->type = configGroup.readEntry("Type", QString());
     m_customCommands << c;
     endInsertRows();
 
@@ -162,8 +161,7 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
     }
 }
 
-void CustomCommandsModel::editCustomCommand(int row, const QString &command,
-                                            const QString &osdMessage, const QString &type)
+void CustomCommandsModel::editCustomCommand(int row, const QString &command, const QString &osdMessage, const QString &type)
 {
     auto c = m_customCommands[row];
     c->command = command;

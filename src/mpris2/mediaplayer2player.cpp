@@ -23,8 +23,7 @@
 MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     : QDBusAbstractAdaptor(parent)
 {
-    connect(this, &MediaPlayer2Player::mpvChanged,
-            this, &MediaPlayer2Player::setupConnections);
+    connect(this, &MediaPlayer2Player::mpvChanged, this, &MediaPlayer2Player::setupConnections);
 }
 
 void MediaPlayer2Player::setupConnections()
@@ -99,13 +98,13 @@ void MediaPlayer2Player::Play()
 
 void MediaPlayer2Player::Seek(qlonglong offset)
 {
-    Q_EMIT seek(offset/1000/1000);
+    Q_EMIT seek(offset / 1000 / 1000);
 }
 
 void MediaPlayer2Player::SetPosition(const QDBusObjectPath &trackId, qlonglong pos)
 {
     Q_UNUSED(trackId)
-    m_mpv->setProperty("time-pos", pos/1000/1000);
+    m_mpv->setProperty("time-pos", pos / 1000 / 1000);
 }
 
 void MediaPlayer2Player::OpenUri(const QString &uri)
@@ -130,10 +129,8 @@ QVariantMap MediaPlayer2Player::Metadata()
         return QVariantMap();
     }
     QVariantMap metadata;
-    metadata.insert(QStringLiteral("mpris:length"),
-                    m_mpv->getProperty("duration").toDouble() * 1000 * 1000);
-    metadata.insert(QStringLiteral("mpris:trackid"),
-                    QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath("/org/kde/haruna")));
+    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty("duration").toDouble() * 1000 * 1000);
+    metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath("/org/kde/haruna")));
 
     auto mpvMediaTitle = m_mpv->getProperty("media-title").toString();
     auto mpvFilename = m_mpv->getProperty("filename").toString();
@@ -156,7 +153,7 @@ double MediaPlayer2Player::Volume()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty("volume").toDouble()/100;
+    return m_mpv->getProperty("volume").toDouble() / 100;
 }
 
 qlonglong MediaPlayer2Player::Position()
@@ -164,9 +161,8 @@ qlonglong MediaPlayer2Player::Position()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty("time-pos").toDouble()*1000*1000;
+    return m_mpv->getProperty("time-pos").toDouble() * 1000 * 1000;
 }
-
 
 bool MediaPlayer2Player::CanGoNext()
 {
@@ -211,7 +207,7 @@ void MediaPlayer2Player::setVolume(double vol)
     if (!m_mpv) {
         return;
     }
-    m_mpv->setProperty("volume", vol*100);
+    m_mpv->setProperty("volume", vol * 100);
 }
 
 MpvItem *MediaPlayer2Player::mpv() const
@@ -232,12 +228,11 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
 {
     QString mimeType = Application::mimeType(QUrl(path));
     KFileMetaData::ExtractorCollection exCol;
-    QList<KFileMetaData::Extractor*> extractors = exCol.fetchExtractors(mimeType);
-    KFileMetaData::SimpleExtractionResult result(path, mimeType,
-                                                 KFileMetaData::ExtractionResult::ExtractImageData);
+    QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
+    KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractImageData);
 
     if (extractors.size() > 0) {
-        KFileMetaData::Extractor* ex = extractors.first();
+        KFileMetaData::Extractor *ex = extractors.first();
         ex->extract(&result);
         QString base64 = QStringLiteral("data:image/png;base64,");
         auto imageData = result.imageData();

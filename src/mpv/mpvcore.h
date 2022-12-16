@@ -17,8 +17,14 @@
  */
 struct node_autofree {
     mpv_node *ptr;
-    node_autofree(mpv_node *a_ptr) : ptr(a_ptr) {}
-    ~node_autofree() { mpv_free_node_contents(ptr); }
+    node_autofree(mpv_node *a_ptr)
+        : ptr(a_ptr)
+    {
+    }
+    ~node_autofree()
+    {
+        mpv_free_node_contents(ptr);
+    }
 };
 
 /**
@@ -28,15 +34,20 @@ struct node_autofree {
  * You can use get_error() or is_error() to extract the error status from a
  * QVariant value.
  */
-struct ErrorReturn
-{
+struct ErrorReturn {
     /**
      * enum mpv_error value (or a value outside of it if ABI was extended)
      */
     int error;
 
-    ErrorReturn() : error(0) {}
-    explicit ErrorReturn(int err) : error(err) {}
+    ErrorReturn()
+        : error(0)
+    {
+    }
+    explicit ErrorReturn(int err)
+        : error(err)
+    {
+    }
 };
 Q_DECLARE_METATYPE(ErrorReturn)
 
@@ -44,7 +55,7 @@ class MpvCore : public QQuickFramebufferObject
 {
     Q_OBJECT
 public:
-    MpvCore(QQuickItem * parent = nullptr);
+    MpvCore(QQuickItem *parent = nullptr);
     ~MpvCore();
     Renderer *createRenderer() const override;
 
@@ -86,8 +97,8 @@ Q_SIGNALS:
     void ready();
 
 protected:
-    mpv_handle *m_mpv {nullptr};
-    mpv_render_context *m_mpv_gl {nullptr};
+    mpv_handle *m_mpv{nullptr};
+    mpv_render_context *m_mpv_gl{nullptr};
     mpv_node_list *create_list(mpv_node *dst, bool is_map, int num);
     void setNode(mpv_node *dst, const QVariant &src);
     bool test_type(const QVariant &v, QMetaType::Type t);

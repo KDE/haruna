@@ -11,27 +11,27 @@
 #include <QImage>
 
 extern "C" {
-#include <libswscale/swscale.h>
 #include <libavutil/imgutils.h>
+#include <libswscale/swscale.h>
 }
 
 using namespace std;
 
-FrameDecoder::FrameDecoder(const QString& filename, AVFormatContext* pavContext)
-        : m_VideoStream(-1)
-        , m_pFormatContext(pavContext)
-        , m_pVideoCodecContext(nullptr)
-        , m_pVideoCodec(nullptr)
-        , m_pFrame(nullptr)
-        , m_pFrameBuffer(nullptr)
-        , m_pPacket(nullptr)
-        , m_FormatContextWasGiven(pavContext != nullptr)
-        , m_AllowSeek(true)
-        , m_initialized(false)
-        , m_bufferSinkContext(nullptr)
-        , m_bufferSourceContext(nullptr)
-        , m_filterGraph(nullptr)
-        , m_filterFrame(nullptr)
+FrameDecoder::FrameDecoder(const QString &filename, AVFormatContext *pavContext)
+    : m_VideoStream(-1)
+    , m_pFormatContext(pavContext)
+    , m_pVideoCodecContext(nullptr)
+    , m_pVideoCodec(nullptr)
+    , m_pFrame(nullptr)
+    , m_pFrameBuffer(nullptr)
+    , m_pPacket(nullptr)
+    , m_FormatContextWasGiven(pavContext != nullptr)
+    , m_AllowSeek(true)
+    , m_initialized(false)
+    , m_bufferSinkContext(nullptr)
+    , m_bufferSourceContext(nullptr)
+    , m_filterGraph(nullptr)
+    , m_filterFrame(nullptr)
 {
     initialize(filename);
 }
@@ -41,7 +41,7 @@ FrameDecoder::~FrameDecoder()
     destroy();
 }
 
-void FrameDecoder::initialize(const QString& filename)
+void FrameDecoder::initialize(const QString &filename)
 {
     m_lastWidth = -1;
     m_lastHeight = -1;
@@ -54,7 +54,7 @@ void FrameDecoder::initialize(const QString& filename)
     QFileInfo fileInfo(filename);
 
     if ((!m_FormatContextWasGiven) && avformat_open_input(&m_pFormatContext, fileInfo.absoluteFilePath().toLocal8Bit().data(), nullptr, nullptr) != 0) {
-        qDebug() <<  "Could not open input file: " << fileInfo.absoluteFilePath();
+        qDebug() << "Could not open input file: " << fileInfo.absoluteFilePath();
         return;
     }
 
@@ -78,7 +78,6 @@ bool FrameDecoder::getInitialized()
 {
     return m_initialized;
 }
-
 
 void FrameDecoder::destroy()
 {
@@ -115,7 +114,7 @@ QString FrameDecoder::getCodec()
 {
     QString codecName;
     if (m_pVideoCodec) {
-        codecName=QString::fromLatin1(m_pVideoCodec->name);
+        codecName = QString::fromLatin1(m_pVideoCodec->name);
     }
     return codecName;
 }
@@ -216,7 +215,6 @@ void FrameDecoder::seek(int timeInSeconds)
     }
 }
 
-
 bool FrameDecoder::decodeVideoFrame()
 {
     bool frameFinished = false;
@@ -305,7 +303,7 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
         return false;
     }
 
-    if(inputs || outputs)
+    if (inputs || outputs)
         return -1;
 
     ret = avfilter_graph_config(m_filterGraph, nullptr);
@@ -328,12 +326,9 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
     return true;
 }
 
-bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src,
-                                enum AVPixelFormat pixfmt, int width, int height)
+bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVPixelFormat pixfmt, int width, int height)
 {
-    if (!m_filterGraph || width != m_lastWidth ||
-        height != m_lastHeight || pixfmt != m_lastPixfmt) {
-
+    if (!m_filterGraph || width != m_lastWidth || height != m_lastHeight || pixfmt != m_lastPixfmt) {
         if (!initFilterGraph(pixfmt, width, height)) {
             return false;
         }
@@ -364,77 +359,80 @@ bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src,
 void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, QImage &videoFrame)
 {
     if (m_pFrame->interlaced_frame) {
-        processFilterGraph((AVFrame*) m_pFrame, (AVFrame*) m_pFrame, m_pVideoCodecContext->pix_fmt,
-                              m_pVideoCodecContext->width, m_pVideoCodecContext->height);
+        processFilterGraph((AVFrame *)m_pFrame, (AVFrame *)m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
     }
 
     int scaledWidth, scaledHeight;
     convertAndScaleFrame(AV_PIX_FMT_RGB24, scaledSize, maintainAspectRatio, scaledWidth, scaledHeight);
     // .copy() since QImage otherwise assumes the memory will continue to be available.
     // We could instead pass a custom deleter, but meh.
-    videoFrame = QImage(m_pFrame->data[0], scaledWidth, scaledHeight,
-            m_pFrame->linesize[0], QImage::Format_RGB888).copy();
+    videoFrame = QImage(m_pFrame->data[0], scaledWidth, scaledHeight, m_pFrame->linesize[0], QImage::Format_RGB888).copy();
 }
 
-void FrameDecoder::convertAndScaleFrame(AVPixelFormat format, int scaledSize, bool maintainAspectRatio, int& scaledWidth, int& scaledHeight)
+void FrameDecoder::convertAndScaleFrame(AVPixelFormat format, int scaledSize, bool maintainAspectRatio, int &scaledWidth, int &scaledHeight)
 {
     calculateDimensions(scaledSize, maintainAspectRatio, scaledWidth, scaledHeight);
-    SwsContext* scaleContext = sws_getContext(m_pVideoCodecContext->width, m_pVideoCodecContext->height,
-                               m_pVideoCodecContext->pix_fmt, scaledWidth, scaledHeight,
-                               format, SWS_BICUBIC, nullptr, nullptr, nullptr);
+    SwsContext *scaleContext = sws_getContext(m_pVideoCodecContext->width,
+                                              m_pVideoCodecContext->height,
+                                              m_pVideoCodecContext->pix_fmt,
+                                              scaledWidth,
+                                              scaledHeight,
+                                              format,
+                                              SWS_BICUBIC,
+                                              nullptr,
+                                              nullptr,
+                                              nullptr);
 
     if (nullptr == scaleContext) {
         qDebug() << "Failed to create resize context";
         return;
     }
 
-    AVFrame* convertedFrame = nullptr;
-    uint8_t* convertedFrameBuffer = nullptr;
+    AVFrame *convertedFrame = nullptr;
+    uint8_t *convertedFrameBuffer = nullptr;
 
     createAVFrame(&convertedFrame, &convertedFrameBuffer, scaledWidth, scaledHeight, format);
 
-    sws_scale(scaleContext, m_pFrame->data, m_pFrame->linesize, 0, m_pVideoCodecContext->height,
-              convertedFrame->data, convertedFrame->linesize);
+    sws_scale(scaleContext, m_pFrame->data, m_pFrame->linesize, 0, m_pVideoCodecContext->height, convertedFrame->data, convertedFrame->linesize);
     sws_freeContext(scaleContext);
 
     av_frame_free(&m_pFrame);
     av_free(m_pFrameBuffer);
 
-    m_pFrame        = convertedFrame;
-    m_pFrameBuffer  = convertedFrameBuffer;
+    m_pFrame = convertedFrame;
+    m_pFrameBuffer = convertedFrameBuffer;
 }
 
-void FrameDecoder::calculateDimensions(int squareSize, bool maintainAspectRatio, int& destWidth, int& destHeight)
+void FrameDecoder::calculateDimensions(int squareSize, bool maintainAspectRatio, int &destWidth, int &destHeight)
 {
     if (!maintainAspectRatio) {
         destWidth = squareSize;
         destHeight = squareSize;
     } else {
-        int srcWidth            = m_pVideoCodecContext->width;
-        int srcHeight           = m_pVideoCodecContext->height;
-        int ascpectNominator    = m_pVideoCodecContext->sample_aspect_ratio.num;
-        int ascpectDenominator  = m_pVideoCodecContext->sample_aspect_ratio.den;
+        int srcWidth = m_pVideoCodecContext->width;
+        int srcHeight = m_pVideoCodecContext->height;
+        int ascpectNominator = m_pVideoCodecContext->sample_aspect_ratio.num;
+        int ascpectDenominator = m_pVideoCodecContext->sample_aspect_ratio.den;
 
         if (ascpectNominator != 0 && ascpectDenominator != 0) {
             srcWidth = srcWidth * ascpectNominator / ascpectDenominator;
         }
 
         if (srcWidth > srcHeight) {
-            destWidth  = squareSize;
+            destWidth = squareSize;
             destHeight = int(float(squareSize) / srcWidth * srcHeight);
         } else {
-            destWidth  = int(float(squareSize) / srcHeight * srcWidth);
+            destWidth = int(float(squareSize) / srcHeight * srcWidth);
             destHeight = squareSize;
         }
     }
 }
 
-void FrameDecoder::createAVFrame(AVFrame** avFrame, quint8** frameBuffer, int width, int height, AVPixelFormat format)
+void FrameDecoder::createAVFrame(AVFrame **avFrame, quint8 **frameBuffer, int width, int height, AVPixelFormat format)
 {
     *avFrame = av_frame_alloc();
 
-    int numBytes = av_image_get_buffer_size (format, width + 1, height + 1, 16);
-    *frameBuffer = reinterpret_cast<quint8*>(av_malloc(numBytes));
-    av_image_fill_arrays ((*avFrame)->data, (*avFrame)->linesize, *frameBuffer, format, width, height, 1);
+    int numBytes = av_image_get_buffer_size(format, width + 1, height + 1, 16);
+    *frameBuffer = reinterpret_cast<quint8 *>(av_malloc(numBytes));
+    av_image_fill_arrays((*avFrame)->data, (*avFrame)->linesize, *frameBuffer, format, width, height, 1);
 }
-

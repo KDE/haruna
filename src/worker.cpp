@@ -21,7 +21,7 @@
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 
-Worker* Worker::instance()
+Worker *Worker::instance()
 {
     static Worker w;
     return &w;
@@ -31,13 +31,12 @@ void Worker::getMetaData(int index, const QString &path)
 {
     QString mimeType = Application::mimeType(QUrl(path));
     KFileMetaData::ExtractorCollection exCol;
-    QList<KFileMetaData::Extractor*> extractors = exCol.fetchExtractors(mimeType);
-    KFileMetaData::SimpleExtractionResult result(path, mimeType,
-                                                 KFileMetaData::ExtractionResult::ExtractMetaData);
+    QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
+    KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);
     if (extractors.size() == 0) {
         return;
     }
-    KFileMetaData::Extractor* ex = extractors.first();
+    KFileMetaData::Extractor *ex = extractors.first();
     ex->extract(&result);
 #if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
     auto properties = result.properties(KFileMetaData::MultiMap);
@@ -93,7 +92,7 @@ QImage Worker::frameToImage(const QString &id, int width)
     if (!frameDecoder.getInitialized()) {
         return image;
     }
-    //before seeking, a frame has to be decoded
+    // before seeking, a frame has to be decoded
     if (!frameDecoder.decodeVideoFrame()) {
         return image;
     }

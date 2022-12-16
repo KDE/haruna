@@ -5,16 +5,16 @@
  */
 
 #include "playlistmodel.h"
-#include "playlistitem.h"
 #include "application.h"
 #include "generalsettings.h"
 #include "global.h"
+#include "playlistitem.h"
 #include "playlistsettings.h"
 #include "worker.h"
 
 #include <KFileItem>
-#include <KIO/OpenFileManagerWindowJob>
 #include <KIO/DeleteOrTrashJob>
+#include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
 #include <KLocalizedString>
 
@@ -30,8 +30,7 @@
 PlayListModel::PlayListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(this, &PlayListModel::itemAdded,
-            Worker::instance(), &Worker::getMetaData);
+    connect(this, &PlayListModel::itemAdded, Worker::instance(), &Worker::getMetaData);
 
 #if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
     connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, KFileMetaData::PropertyMultiMap metaData) {
@@ -45,7 +44,6 @@ PlayListModel::PlayListModel(QObject *parent)
         m_playlist[i]->setMediaTitle(title);
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
-
     });
 }
 
@@ -67,9 +65,7 @@ QVariant PlayListModel::data(const QModelIndex &index, int role) const
     case NameRole:
         return QVariant(playListItem->fileName());
     case TitleRole:
-        return playListItem->mediaTitle().isEmpty()
-                ? QVariant(playListItem->fileName())
-                : QVariant(playListItem->mediaTitle());
+        return playListItem->mediaTitle().isEmpty() ? QVariant(playListItem->fileName()) : QVariant(playListItem->mediaTitle());
     case PathRole:
         return QVariant(playListItem->filePath());
     case DurationRole:
@@ -101,7 +97,7 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
 void PlayListModel::getSiblingItems(QString path)
 {
     clear();
-    QUrl url {path};
+    QUrl url{path};
     bool isUrl = url.scheme().startsWith(QStringLiteral("http"));
     if (!PlaylistSettings::loadSiblings() || isUrl) {
         appendItem(path);
@@ -122,9 +118,7 @@ void PlayListModel::getSiblingItems(QString path)
             QUrl siblingUrl(siblingFile);
             siblingUrl.setScheme(openedUrl.scheme());
             QString mimeType = Application::mimeType(siblingUrl);
-            if (siblingFileInfo.exists()
-                    && (mimeType.startsWith("video/") || mimeType.startsWith("audio/"))
-                    && mimeType != QStringLiteral("audio/x-mpegurl")) {
+            if (siblingFileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) && mimeType != QStringLiteral("audio/x-mpegurl")) {
                 siblingFiles.append(siblingFileInfo.absoluteFilePath());
             }
         }
@@ -149,9 +143,9 @@ void PlayListModel::getSiblingItems(QString path)
 void PlayListModel::appendItem(QString path)
 {
     path = QUrl(path).toLocalFile().isEmpty() ? path : QUrl(path).toLocalFile();
-    PlayListItem *item {nullptr};
+    PlayListItem *item{nullptr};
     QFileInfo itemInfo(path);
-    int row {m_playlist.count()};
+    int row{m_playlist.count()};
     if (itemInfo.exists() && itemInfo.isFile()) {
         QString mimeType = Application::mimeType(QUrl(itemInfo.absoluteFilePath()));
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
@@ -196,8 +190,7 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
     ytdlProcess->setArguments(QStringList() << "-j" << url);
     ytdlProcess->start();
 
-    QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
-                     this, [=](int, QProcess::ExitStatus) {
+    QObject::connect(ytdlProcess, (void(QProcess::*)(int, QProcess::ExitStatus)) & QProcess::finished, this, [=](int, QProcess::ExitStatus) {
         QString json = ytdlProcess->readAllStandardOutput();
         QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
         int duration = QJsonDocument::fromJson(json.toUtf8())["duration"].toInt();
@@ -243,8 +236,8 @@ void PlayListModel::openM3uFile(const QString &path)
         qDebug() << "can't open playlist file";
         return;
     }
-    int i {0};
-    bool matchFound {false};
+    int i{0};
+    bool matchFound{false};
     while (!m3uFile.atEnd()) {
         QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine().simplified());
         // ignore comments
@@ -272,7 +265,6 @@ void PlayListModel::openM3uFile(const QString &path)
     }
     m3uFile.close();
 }
-
 
 void PlayListModel::openFile(const QString &path)
 {
@@ -359,11 +351,11 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = new QProcess();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << "-J" << "--flat-playlist" << path);
+    ytdlProcess->setArguments(QStringList() << "-J"
+                                            << "--flat-playlist" << path);
     ytdlProcess->start();
 
-    QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
-                     this, [=](int, QProcess::ExitStatus) {
+    QObject::connect(ytdlProcess, (void(QProcess::*)(int, QProcess::ExitStatus)) & QProcess::finished, this, [=](int, QProcess::ExitStatus) {
         QString json = ytdlProcess->readAllStandardOutput();
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
         QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
@@ -372,7 +364,7 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
             return;
         }
 
-        bool matchFound {false};
+        bool matchFound{false};
         for (int i = 0; i < entries.toArray().size(); ++i) {
             auto url = QString("https://youtu.be/%1").arg(entries[i]["id"].toString());
             auto title = entries[i]["title"].toString();
@@ -434,13 +426,13 @@ void PlayListProxyModel::sortItems(Sort sortMode)
 
 void PlayListProxyModel::setPlayingItem(int i)
 {
-    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
     model->setPlayingItem(mapToSource(index(i, 0)).row());
 }
 
 void PlayListProxyModel::playNext()
 {
-    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
 
     auto currentIndex = mapFromSource(model->index(model->getPlayingItem(), 0)).row();
     auto nextIndex = currentIndex + 1;
@@ -454,7 +446,7 @@ void PlayListProxyModel::playNext()
 
 void PlayListProxyModel::playPrevious()
 {
-    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
 
     auto currentIndex = mapFromSource(model->index(model->getPlayingItem(), 0)).row();
     auto previousIndex = currentIndex - 1;
@@ -471,7 +463,7 @@ void PlayListProxyModel::saveM3uFile(const QString &path)
     if (!m3uFile.open(QFile::WriteOnly)) {
         return;
     }
-    for ( int i {0}; i < rowCount(); ++i) {
+    for (int i{0}; i < rowCount(); ++i) {
         QString itemPath = data(index(i, 0), PlayListModel::PathRole).toString();
         m3uFile.write(itemPath.toUtf8().append("\n"));
     }
@@ -494,7 +486,7 @@ void PlayListProxyModel::renameFile(int row)
     renameDialog->open();
 
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
-        auto model = qobject_cast<PlayListModel*>(sourceModel());
+        auto model = qobject_cast<PlayListModel *>(sourceModel());
         auto item = model->getPlayList().at(row);
         item->setFilePath(urls.first().path());
         item->setFileName(urls.first().fileName());
@@ -510,26 +502,23 @@ void PlayListProxyModel::trashFile(int row)
     QUrl url(path);
     url.setScheme("file");
     urls << url;
-    auto *job = new KIO::DeleteOrTrashJob(urls,
-                                          KIO::AskUserActionInterface::Trash,
-                                          KIO::AskUserActionInterface::DefaultConfirmation,
-                                          this);
+    auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);
     job->start();
 
-    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
     model->removeItem(row);
 }
 
 void PlayListProxyModel::copyFileName(int row)
 {
-    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
     auto item = model->getPlayList().at(row);
     QGuiApplication::clipboard()->setText(item->fileName());
 }
 
 void PlayListProxyModel::copyFilePath(int row)
 {
-    auto model = qobject_cast<PlayListModel*>(sourceModel());
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
     auto item = model->getPlayList().at(row);
     QGuiApplication::clipboard()->setText(item->filePath());
 }

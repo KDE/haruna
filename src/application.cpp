@@ -65,8 +65,7 @@ Application::Application()
     // while moving between monitors while in fullscreen
     auto *appEventFilter = new ApplicationEventFilter();
     m_app->installEventFilter(appEventFilter);
-    QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave,
-                     this, &Application::qmlApplicationMouseLeave);
+    QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
 
     if (GeneralSettings::guiStyle() != QStringLiteral("System")) {
         QApplication::setStyle(GeneralSettings::guiStyle());
@@ -86,18 +85,14 @@ void Application::setupWorkerThread()
     auto worker = Worker::instance();
     auto thread = new QThread();
     worker->moveToThread(thread);
-    QObject::connect(thread, &QThread::finished,
-                     worker, &Worker::deleteLater);
-    QObject::connect(thread, &QThread::finished,
-                     thread, &QThread::deleteLater);
+    QObject::connect(thread, &QThread::finished, worker, &Worker::deleteLater);
+    QObject::connect(thread, &QThread::finished, thread, &QThread::deleteLater);
     thread->start();
 }
 
 void Application::setupAboutData()
 {
-    m_aboutData = KAboutData(QStringLiteral("haruna"),
-                             i18nc("application title/display name", "Haruna Video Player"),
-                             Application::version());
+    m_aboutData = KAboutData(QStringLiteral("haruna"), i18nc("application title/display name", "Haruna Video Player"), Application::version());
     m_aboutData.setShortDescription(i18nc("@title", "A configurable video player."));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
     m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2021"));
@@ -107,9 +102,9 @@ void Application::setupAboutData()
     m_aboutData.setDesktopFileName("org.kde.haruna");
 
     m_aboutData.addAuthor(i18nc("@info:credit", "George Florea Bănuș"),
-                        i18nc("@info:credit", "Developer"),
-                        QStringLiteral("georgefb899@gmail.com"),
-                        QStringLiteral("https://georgefb.com"));
+                          i18nc("@info:credit", "Developer"),
+                          QStringLiteral("georgefb899@gmail.com"),
+                          QStringLiteral("https://georgefb.com"));
 
     KAboutData::setApplicationData(m_aboutData);
 }
@@ -120,11 +115,13 @@ void Application::setupCommandLineParser()
     m_aboutData.setupCommandLine(m_parser);
     m_parser->addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
 
-    QCommandLineOption ytdlFormatSelectionOption(
-                QStringList() << "ytdl-format-selection" << "ytdlfs",
-                i18nc("@info:shell", "Allows to temporarily override the ytdl format selection setting. "
-                                     "Will be overwritten if the setting is changed through the GUI"),
-                i18nc("@info:shell", "bestvideo+bestaudio/best"), QString());
+    QCommandLineOption ytdlFormatSelectionOption(QStringList() << "ytdl-format-selection"
+                                                               << "ytdlfs",
+                                                 i18nc("@info:shell",
+                                                       "Allows to temporarily override the ytdl format selection setting. "
+                                                       "Will be overwritten if the setting is changed through the GUI"),
+                                                 i18nc("@info:shell", "bestvideo+bestaudio/best"),
+                                                 QString());
     m_parser->addOption(ytdlFormatSelectionOption);
 
     m_parser->process(*m_app);
@@ -138,9 +135,9 @@ void Application::setupCommandLineParser()
 void Application::registerQmlTypes()
 {
     qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
-    qRegisterMetaType<PlayListModel*>();
-    qRegisterMetaType<PlayListItem*>();
-    qRegisterMetaType<TracksModel*>();
+    qRegisterMetaType<PlayListModel *>();
+    qRegisterMetaType<PlayListItem *>();
+    qRegisterMetaType<TracksModel *>();
 
 #if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
     qRegisterMetaType<KFileMetaData::PropertyMap>("KFileMetaData::PropertyMultiMap");
@@ -149,27 +146,27 @@ void Application::registerQmlTypes()
 #endif
     // models
     qmlRegisterType<SubtitlesFoldersModel>("org.kde.haruna.models", 1, 0, "SubtitlesFoldersModel");
-    qmlRegisterType<ActionsModel>("org.kde.haruna.models",          1, 0, "ActionsModel");
-    qmlRegisterType<ProxyActionsModel>("org.kde.haruna.models",     1, 0, "ProxyActionsModel");
-    qmlRegisterType<CustomCommandsModel>("org.kde.haruna.models",   1, 0, "CustomCommandsModel");
-    qmlRegisterType<RecentFilesModel>("org.kde.haruna.models",      1, 0, "RecentFilesModel");
-    qmlRegisterType<PlayListProxyModel>("org.kde.haruna.models",    1, 0, "PlayListProxyModel");
+    qmlRegisterType<ActionsModel>("org.kde.haruna.models", 1, 0, "ActionsModel");
+    qmlRegisterType<ProxyActionsModel>("org.kde.haruna.models", 1, 0, "ProxyActionsModel");
+    qmlRegisterType<CustomCommandsModel>("org.kde.haruna.models", 1, 0, "CustomCommandsModel");
+    qmlRegisterType<RecentFilesModel>("org.kde.haruna.models", 1, 0, "RecentFilesModel");
+    qmlRegisterType<PlayListProxyModel>("org.kde.haruna.models", 1, 0, "PlayListProxyModel");
 }
 
 void Application::setupQmlSettingsTypes()
 {
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "AudioSettings",     AudioSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "GeneralSettings",   GeneralSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MouseSettings",     MouseSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaybackSettings",  PlaybackSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaylistSettings",  PlaylistSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "AudioSettings", AudioSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "GeneralSettings", GeneralSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MouseSettings", MouseSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaybackSettings", PlaybackSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaylistSettings", PlaylistSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "VideoSettings",     VideoSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "VideoSettings", VideoSettings::self());
 }
 
 void Application::restoreWindowGeometry(QQuickWindow *window) const
 {
-    if(!GeneralSettings::rememberWindowGeometry()) {
+    if (!GeneralSettings::rememberWindowGeometry()) {
         return;
     }
     KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
@@ -180,7 +177,7 @@ void Application::restoreWindowGeometry(QQuickWindow *window) const
 
 void Application::saveWindowGeometry(QQuickWindow *window) const
 {
-    if(!GeneralSettings::rememberWindowGeometry()) {
+    if (!GeneralSettings::rememberWindowGeometry()) {
         return;
     }
     KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
@@ -218,7 +215,6 @@ QString Application::version()
 bool Application::hasYoutubeDl()
 {
     return !youtubeDlExecutable().isEmpty();
-
 }
 
 QString Application::youtubeDlExecutable()

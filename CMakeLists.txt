@@ -18,14 +18,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(ECM 5.66 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+include(FeatureSummary)
 include(KDEInstallDirs)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
-include(ECMSetupVersion)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
-include(FeatureSummary)
 
+include(KDEClangFormat)
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.hpp *.c)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+
+include(ECMSetupVersion)
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX HARUNA
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/haruna-version.h"

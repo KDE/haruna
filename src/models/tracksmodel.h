@@ -17,19 +17,14 @@ class TracksModel : public QAbstractListModel
     Q_OBJECT
 public:
     explicit TracksModel(QObject *parent = nullptr);
-    enum {
-        TextRole = Qt::UserRole,
-        LanguageRole,
-        TitleRole,
-        IDRole,
-        CodecRole
-    };
+    enum { TextRole = Qt::UserRole, LanguageRole, TitleRole, IDRole, CodecRole };
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     virtual QHash<int, QByteArray> roleNames() const override;
 
 public Q_SLOTS:
     void setTracks(QMap<int, Track *> tracks);
+
 private:
     QMap<int, Track *> m_tracks;
 };

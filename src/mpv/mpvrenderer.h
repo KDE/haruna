@@ -21,7 +21,7 @@ public:
 
     // This function is called when a new FBO is needed.
     // This happens on the initial frame.
-    QOpenGLFramebufferObject * createFramebufferObject(const QSize &size) override;
+    QOpenGLFramebufferObject *createFramebufferObject(const QSize &size) override;
 
     void render() override;
 };

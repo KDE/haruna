@@ -51,13 +51,10 @@ QString MediaPlayer2::DesktopEntry() const
 
 QStringList MediaPlayer2::SupportedUriSchemes() const
 {
-    return QStringList() << QStringLiteral("file")
-                         << QStringLiteral("http")
-                         << QStringLiteral("https");
+    return QStringList() << QStringLiteral("file") << QStringLiteral("http") << QStringLiteral("https");
 }
 
 QStringList MediaPlayer2::SupportedMimeTypes() const
 {
-    return QStringList() << QStringLiteral("video/*")
-                         << QStringLiteral("audio/*");
+    return QStringList() << QStringLiteral("video/*") << QStringLiteral("audio/*");
 }

@@ -48,17 +48,14 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
         }
     };
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &qApplication, onObjectCreated, Qt::QueuedConnection);
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &qApplication, onObjectCreated, Qt::QueuedConnection);
     engine.addImportPath("qrc:/qml");
     engine.addImageProvider("thumbnail", new ThumbnailImageProvider());
     engine.rootContext()->setContextProperty("app", Application::instance());
     engine.rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
     engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
-    engine.rootContext()->setContextProperty("harunaAboutData",
-                                                QVariant::fromValue(KAboutData::applicationData()));
+    engine.rootContext()->setContextProperty("harunaAboutData", QVariant::fromValue(KAboutData::applicationData()));
     engine.load(url);
 
     return qApplication.exec();
 }
-

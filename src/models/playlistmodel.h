@@ -7,15 +7,15 @@
 #ifndef PLAYLISTMODEL_H
 #define PLAYLISTMODEL_H
 
+#include <KSharedConfig>
 #include <QAbstractTableModel>
 #include <QSortFilterProxyModel>
-#include <KSharedConfig>
 #include <map>
 #include <memory>
 
 class PlayListItem;
 
-using Playlist = QList<PlayListItem*>;
+using Playlist = QList<PlayListItem *>;
 
 class PlayListProxyModel : public QSortFilterProxyModel
 {
@@ -30,7 +30,6 @@ public:
         DurationDescending,
     };
     Q_ENUM(Sort);
-
 
     Q_INVOKABLE void sortItems(Sort sortMode);
     Q_INVOKABLE void setPlayingItem(int i);
@@ -47,11 +46,7 @@ public:
 class PlayListModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(int playingItem
-               MEMBER m_playingItem
-               READ getPlayingItem
-               WRITE setPlayingItem
-               NOTIFY playingItemChanged)
+    Q_PROPERTY(int playingItem MEMBER m_playingItem READ getPlayingItem WRITE setPlayingItem NOTIFY playingItemChanged)
 
 public:
     explicit PlayListModel(QObject *parent = nullptr);
@@ -94,8 +89,8 @@ private:
     void getSiblingItems(QString path);
     void getHttpItemInfo(const QString &url, int row);
     Playlist m_playlist;
-    int m_playingItem {-1};
-    bool m_emitOpened {false};
+    int m_playingItem{-1};
+    bool m_emitOpened{false};
 };
 
 Q_DECLARE_METATYPE(PlayListProxyModel::Sort);

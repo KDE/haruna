@@ -7,8 +7,8 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#include <QStandardPaths>
 #include <KSharedConfig>
+#include <QStandardPaths>
 
 class QCommandLineParser;
 
@@ -18,10 +18,7 @@ class Global : public QObject
 public:
     static Global *instance();
 
-    enum ConfigFile {
-        Main,
-        CustomCommands
-    };
+    enum ConfigFile { Main, CustomCommands };
 
     const QString systemConfigPath();
     const QString appConfigDirPath();

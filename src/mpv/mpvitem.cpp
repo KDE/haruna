@@ -8,12 +8,12 @@
 #include "application.h"
 #include "audiosettings.h"
 #include "generalsettings.h"
+#include "global.h"
 #include "playbacksettings.h"
 #include "playlistitem.h"
+#include "subtitlessettings.h"
 #include "track.h"
 #include "tracksmodel.h"
-#include "global.h"
-#include "subtitlessettings.h"
 #include "videosettings.h"
 #include "worker.h"
 
@@ -32,13 +32,13 @@
 #include <QCommandLineParser>
 
 #if defined(Q_OS_UNIX)
-#include <QDBusConnection>
 #include "lockmanager.h"
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
+#include <QDBusConnection>
 #endif
 
-MpvItem::MpvItem(QQuickItem * parent)
+MpvItem::MpvItem(QQuickItem *parent)
     : MpvCore(parent)
     , m_audioTracksModel(new TracksModel)
     , m_subtitleTracksModel(new TracksModel)
@@ -46,18 +46,18 @@ MpvItem::MpvItem(QQuickItem * parent)
 {
     m_playlistModel = new PlayListModel();
     m_playlistProxyModel->setSourceModel(m_playlistModel);
-    mpv_observe_property(m_mpv, 0, "media-title",    MPV_FORMAT_STRING);
-    mpv_observe_property(m_mpv, 0, "time-pos",       MPV_FORMAT_DOUBLE);
+    mpv_observe_property(m_mpv, 0, "media-title", MPV_FORMAT_STRING);
+    mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
     mpv_observe_property(m_mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(m_mpv, 0, "duration",       MPV_FORMAT_DOUBLE);
-    mpv_observe_property(m_mpv, 0, "pause",          MPV_FORMAT_FLAG);
-    mpv_observe_property(m_mpv, 0, "volume",         MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "mute",           MPV_FORMAT_FLAG);
-    mpv_observe_property(m_mpv, 0, "aid",            MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "sid",            MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "chapter",        MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "secondary-sid",  MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "track-list",     MPV_FORMAT_NODE);
+    mpv_observe_property(m_mpv, 0, "duration", MPV_FORMAT_DOUBLE);
+    mpv_observe_property(m_mpv, 0, "pause", MPV_FORMAT_FLAG);
+    mpv_observe_property(m_mpv, 0, "volume", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "mute", MPV_FORMAT_FLAG);
+    mpv_observe_property(m_mpv, 0, "aid", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "sid", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "chapter", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "secondary-sid", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "track-list", MPV_FORMAT_NODE);
 
     initProperties();
 
@@ -92,8 +92,7 @@ MpvItem::MpvItem(QQuickItem * parent)
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
     QDBusConnection::sessionBus().registerService(mspris2Name);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"),
-                                                 this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"), this, QDBusConnection::ExportAdaptors);
     // org.mpris.MediaPlayer2 mpris2 interface
     new MediaPlayer2(this);
     auto mp2Player = new MediaPlayer2Player(this);
@@ -118,7 +117,8 @@ MpvItem::MpvItem(QQuickItem * parent)
         Q_EMIT playPrevious();
     });
     connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
-        command(QStringList() << "add" << "time-pos" << QString::number(offset));
+        command(QStringList() << "add"
+                              << "time-pos" << QString::number(offset));
     });
     connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
         Q_EMIT openUri(uri);
@@ -356,7 +356,7 @@ void MpvItem::setHWDecoding(bool value)
 {
     if (value) {
         setProperty("hwdec", "yes");
-    } else  {
+    } else {
         setProperty("hwdec", "no");
     }
     Q_EMIT hwDecodingChanged();
@@ -390,7 +390,7 @@ void MpvItem::eventHandler()
             auto prop = (mpv_event_end_file *)event->data;
             if (prop->reason == MPV_END_FILE_REASON_EOF) {
                 Q_EMIT endFile("eof");
-            } else if(prop->reason == MPV_END_FILE_REASON_ERROR) {
+            } else if (prop->reason == MPV_END_FILE_REASON_ERROR) {
                 Q_EMIT endFile("error");
             }
             break;
@@ -445,7 +445,7 @@ void MpvItem::eventHandler()
             }
             break;
         }
-        default: ;
+        default:;
             // Ignore uninteresting or unknown events.
         }
     }

@@ -7,11 +7,11 @@
 #ifndef WORKER_H
 #define WORKER_H
 
-#include <QObject>
-#include <QImage>
 #include <KFileMetaData/Properties>
-#include <memory>
+#include <QImage>
+#include <QObject>
 #include <kconfig_version.h>
+#include <memory>
 
 class KConfig;
 
@@ -19,7 +19,7 @@ class Worker : public QObject
 {
     Q_OBJECT
 public:
-    static Worker* instance();
+    static Worker *instance();
 
 Q_SIGNALS:
 #if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)

@@ -4,17 +4,16 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "track.h"
 #include "tracksmodel.h"
+#include "track.h"
 #include <utility>
 
 TracksModel::TracksModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-
 }
 
-int TracksModel::rowCount(const QModelIndex &/*parent*/) const
+int TracksModel::rowCount(const QModelIndex & /*parent*/) const
 {
     return m_tracks.size();
 }

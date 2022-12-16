@@ -428,7 +428,6 @@ ActionsModel::ActionsModel(QObject *parent)
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
-
     action.name = QStringLiteral("contrastUpAction");
     action.text = i18nc("@action", "Contrast Up");
     action.iconName = QStringLiteral("contrast");
@@ -573,19 +572,19 @@ void ActionsModel::appendCustomAction(const Action &action)
 
 void ActionsModel::editCustomAction(const QString &name, const QString &text, const QString &description)
 {
-    for (int i {0}; i < m_actions.count(); ++i) {
-         if (m_actions[i].name == name) {
-             m_actions[i].text = text;
-             m_actions[i].description = description;
-             Q_EMIT dataChanged(index(i, 0), index(i, 0));
-             return;
-         }
-     }
+    for (int i{0}; i < m_actions.count(); ++i) {
+        if (m_actions[i].name == name) {
+            m_actions[i].text = text;
+            m_actions[i].description = description;
+            Q_EMIT dataChanged(index(i, 0), index(i, 0));
+            return;
+        }
+    }
 }
 
 bool ActionsModel::saveShortcut(const QString &name, const QVariant &shortcut)
 {
-    for (int i {0}; i < m_actions.count(); ++i) {
+    for (int i{0}; i < m_actions.count(); ++i) {
         if (m_actions[i].name == name) {
             return saveShortcut(i, shortcut);
         }
@@ -604,7 +603,7 @@ bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
     if (!shortcut.toString().isEmpty()) {
         // if shortcut is used, this is the action holding the shortcut
         Action *result = nullptr;
-        int i {0};
+        int i{0};
         for (; i < m_actions.count(); ++i) {
             if (m_actions[i].shortcut == shortcutString) {
                 result = &m_actions[i];
@@ -649,9 +648,11 @@ QString ActionsModel::getShortcut(const QString &key, const QKeySequence &defaul
 
 bool ActionsModel::keyConflictMessageBox(const QString &actionText)
 {
-    auto message = i18nc("@info", "The chosen shortcut conflicts with "
-                        "the shortcut of the <b>%1</b> action.<br><br>"
-                        "Do you want to reassign the shortcut?", actionText);
+    auto message = i18nc("@info",
+                         "The chosen shortcut conflicts with "
+                         "the shortcut of the <b>%1</b> action.<br><br>"
+                         "Do you want to reassign the shortcut?",
+                         actionText);
     QMessageBox msgBox;
     msgBox.setText(message);
     QPushButton *reassignBtn = msgBox.addButton(i18nc("@action:button", "Reassign"), QMessageBox::AcceptRole);
@@ -709,6 +710,6 @@ void ProxyActionsModel::setTypeFilter(const QString &regExp)
 
 bool ProxyActionsModel::saveShortcut(int row, const QVariant &shortcut)
 {
-    auto actionsModel = qobject_cast<ActionsModel*>(sourceModel());
+    auto actionsModel = qobject_cast<ActionsModel *>(sourceModel());
     return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), shortcut);
 }

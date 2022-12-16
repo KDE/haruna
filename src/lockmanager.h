@@ -22,12 +22,11 @@ public:
 public Q_SLOTS:
     void setInhibitionOn();
     void setInhibitionOff();
+
 private:
-    OrgFreedesktopScreenSaverInterface* m_iface;
-    int m_cookie {};
+    OrgFreedesktopScreenSaverInterface *m_iface;
+    int m_cookie{};
     bool m_inhibit;
 };
 
 #endif // LOCKMANAGER_H
-
-

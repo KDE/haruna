@@ -44,7 +44,7 @@ private:
     void saveEntries();
     QList<RecentFile> m_urls;
     KConfigGroup m_recentFilesConfigGroup;
-    int m_maxRecentFiles {10};
+    int m_maxRecentFiles{10};
 };
 
 #endif // RECENTFILESMODEL_H
