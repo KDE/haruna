@@ -69,6 +69,9 @@ Item {
                 header: ToolBar {
                     id: toolbar
 
+                    z: 100
+                    width: parent.width
+
                     Popup {
                         id: addUrlPopup
 
@@ -77,13 +80,32 @@ Item {
                         width: toolbar.width - Kirigami.Units.largeSpacing
                         modal: true
 
+                        onOpened: {
+                            addUrlField.forceActiveFocus(Qt.MouseFocusReason)
+                            addUrlField.selectAll()
+                        }
+
                         RowLayout {
                             anchors.fill: parent
+
                             TextField {
                                 id: addUrlField
+
                                 Layout.fillWidth: true
+
+                                Keys.onPressed: {
+                                    if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
+                                        addUrlButton.clicked()
+                                    }
+                                    if (event.key === Qt.Key_Escape) {
+                                        addUrlButton.close()
+                                    }
+                                }
                             }
+
                             Button {
+                                id: addUrlButton
+
                                 text: i18nc("@action:button", "Add")
                                 onClicked: {
                                     mpv.playlistModel.appendItem(addUrlField.text)
@@ -93,8 +115,6 @@ Item {
                         }
                     }
 
-                    width: parent.width
-                    z: 100
                     RowLayout {
                         anchors.fill: parent
                         Kirigami.ActionToolBar {
