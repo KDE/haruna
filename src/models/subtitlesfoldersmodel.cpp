@@ -71,3 +71,5 @@ void SubtitlesFoldersModel::addFolder()
     m_list.append(QString());
     endInsertRows();
 }
+
+#include "moc_subtitlesfoldersmodel.cpp"

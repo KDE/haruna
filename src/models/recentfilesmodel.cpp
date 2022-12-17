@@ -151,3 +151,5 @@ void RecentFilesModel::setMaxRecentFiles(int _maxRecentFiles)
 {
     m_maxRecentFiles = _maxRecentFiles;
 }
+
+#include "moc_recentfilesmodel.cpp"

@@ -266,3 +266,5 @@ inline QVariant MpvCore::node_to_variant(const mpv_node *node)
         return QVariant();
     }
 }
+
+#include "moc_mpvcore.cpp"

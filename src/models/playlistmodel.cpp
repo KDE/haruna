@@ -522,3 +522,5 @@ void PlayListProxyModel::copyFilePath(int row)
     auto item = model->getPlayList().at(row);
     QGuiApplication::clipboard()->setText(item->filePath());
 }
+
+#include "moc_playlistmodel.cpp"

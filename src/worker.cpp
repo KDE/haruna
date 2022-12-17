@@ -113,3 +113,5 @@ void Worker::syncConfigValue(QString path, QString group, QString key, QVariant 
     m_cachedConf->group(group).writeEntry(key, value);
     m_cachedConf->sync();
 }
+
+#include "moc_worker.cpp"

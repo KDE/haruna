@@ -221,3 +221,5 @@ void CustomCommandsModel::setAppActionsModel(ActionsModel *_appActionsModel)
     m_appActionsModel = _appActionsModel;
     Q_EMIT appActionsModelChanged();
 }
+
+#include "moc_customcommandsmodel.cpp"

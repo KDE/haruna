@@ -267,3 +267,5 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
     }
     return QString();
 }
+
+#include "moc_mediaplayer2player.cpp"

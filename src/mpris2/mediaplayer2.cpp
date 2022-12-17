@@ -58,3 +58,5 @@ QStringList MediaPlayer2::SupportedMimeTypes() const
 {
     return QStringList() << QStringLiteral("video/*") << QStringLiteral("audio/*");
 }
+
+#include "moc_mediaplayer2.cpp"

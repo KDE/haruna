@@ -42,3 +42,5 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
         return QString();
     }
 }
+
+#include "moc_global.cpp"

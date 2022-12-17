@@ -58,3 +58,5 @@ void TracksModel::setTracks(QMap<int, Track *> tracks)
     m_tracks = std::move(tracks);
     endResetModel();
 }
+
+#include "moc_tracksmodel.cpp"

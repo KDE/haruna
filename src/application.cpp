@@ -336,3 +336,5 @@ QStringList Application::getFonts()
     static QFontDatabase *fontDB = new QFontDatabase();
     return fontDB->families();
 }
+
+#include "moc_application.cpp"

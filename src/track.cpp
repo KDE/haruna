@@ -145,3 +145,5 @@ QString Track::text()
     }
     return text;
 }
+
+#include "moc_track.cpp"

@@ -712,3 +712,5 @@ bool ProxyActionsModel::saveShortcut(int row, const QVariant &shortcut)
     auto actionsModel = qobject_cast<ActionsModel *>(sourceModel());
     return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), shortcut);
 }
+
+#include "moc_actionsmodel.cpp"

@@ -76,3 +76,5 @@ void PlayListItem::setDuration(const QString &duration)
 {
     m_duration = duration;
 }
+
+#include "moc_playlistitem.cpp"

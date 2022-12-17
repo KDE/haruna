@@ -581,3 +581,5 @@ QString MpvItem::md5(const QString &str)
 
     return QString(md5.toHex());
 }
+
+#include "moc_mpvitem.cpp"
