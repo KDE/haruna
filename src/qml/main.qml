@@ -50,7 +50,11 @@ Kirigami.ApplicationWindow {
             }
         }
 
-        previousVisibility = visibility
+        // used to restore window state, when exiting fullscreen,
+        // to the one it had before going fullscreen
+        if (visibility !== Window.FullScreen) {
+            previousVisibility = visibility
+        }
     }
 
     header: Header { id: header }
