@@ -337,4 +337,9 @@ QStringList Application::getFonts()
     return fontDB->families();
 }
 
+int Application::frameworksVersionMinor()
+{
+    return KCONFIG_VERSION_MINOR;
+}
+
 #include "moc_application.cpp"

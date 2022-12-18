@@ -13,7 +13,10 @@
 #include "worker.h"
 
 #include <KFileItem>
+#include <kio_version.h>
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 100, 0)
 #include <KIO/DeleteOrTrashJob>
+#endif
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
 #include <KLocalizedString>
@@ -497,6 +500,7 @@ void PlayListProxyModel::renameFile(int row)
 
 void PlayListProxyModel::trashFile(int row)
 {
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     QList<QUrl> urls;
     QString path = data(index(row, 0), PlayListModel::PathRole).toString();
     QUrl url(path);
@@ -507,6 +511,7 @@ void PlayListProxyModel::trashFile(int row)
 
     auto model = qobject_cast<PlayListModel *>(sourceModel());
     model->removeItem(row);
+#endif
 }
 
 void PlayListProxyModel::copyFileName(int row)

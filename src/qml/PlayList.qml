@@ -214,12 +214,6 @@ Item {
                     onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Rename file")
-                    icon.name: "edit-rename"
-                    visible: contextMenuLoader.isLocal
-                    onClicked: mpv.playlistProxyModel.renameFile(row)
-                }
-                MenuItem {
                     text: i18nc("@action:inmenu", "Copy file name")
                     onClicked: mpv.playlistProxyModel.copyFileName(row)
                 }
@@ -229,9 +223,15 @@ Item {
                 }
                 MenuSeparator {}
                 MenuItem {
+                    text: i18nc("@action:inmenu", "Rename file")
+                    icon.name: "edit-rename"
+                    visible: contextMenuLoader.isLocal
+                    onClicked: mpv.playlistProxyModel.renameFile(row)
+                }
+                MenuItem {
                     text: i18nc("@action:inmenu", "Trash file")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal
+                    visible: contextMenuLoader.isLocal && app.frameworksVersionMinor() >= 100
                     onClicked: mpv.playlistProxyModel.trashFile(row)
                 }
             }

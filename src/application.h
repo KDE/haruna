@@ -66,6 +66,7 @@ public:
     Q_INVOKABLE void activateColorScheme(const QString &name);
     Q_INVOKABLE void openDocs(const QString &page);
     Q_INVOKABLE QStringList getFonts();
+    Q_INVOKABLE int frameworksVersionMinor();
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();
