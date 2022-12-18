@@ -7,6 +7,7 @@ Popup {
 
     signal urlOpened(string url)
     property string lastUrl: ""
+    property string buttonText: ""
 
     modal: true
 
@@ -49,7 +50,7 @@ Popup {
             id: openUrlButton
 
             visible: app.hasYoutubeDl()
-            text: i18nc("@action:button", "Open")
+            text: root.buttonText
 
             onClicked: {
                 root.urlOpened(openUrlTextField.text)

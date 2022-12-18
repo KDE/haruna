@@ -13,6 +13,7 @@ import Qt.labs.platform 1.0 as Platform
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
 import org.kde.haruna.models 1.0
+import Haruna.Components 1.0
 
 Item {
     id: root
@@ -72,46 +73,14 @@ Item {
                     z: 100
                     width: parent.width
 
-                    Popup {
+                    OpenUrlPopup {
                         id: addUrlPopup
 
-                        x: 0
-                        y: toolbar.height
                         width: toolbar.width - Kirigami.Units.largeSpacing
-                        modal: true
+                        buttonText: i18nc("@action:button", "Add")
 
-                        onOpened: {
-                            addUrlField.forceActiveFocus(Qt.MouseFocusReason)
-                            addUrlField.selectAll()
-                        }
-
-                        RowLayout {
-                            anchors.fill: parent
-
-                            TextField {
-                                id: addUrlField
-
-                                Layout.fillWidth: true
-
-                                Keys.onPressed: {
-                                    if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                                        addUrlButton.clicked()
-                                    }
-                                    if (event.key === Qt.Key_Escape) {
-                                        addUrlButton.close()
-                                    }
-                                }
-                            }
-
-                            Button {
-                                id: addUrlButton
-
-                                text: i18nc("@action:button", "Add")
-                                onClicked: {
-                                    mpv.playlistModel.appendItem(addUrlField.text)
-                                    addUrlPopup.close()
-                                }
-                            }
+                        onUrlOpened: {
+                            mpv.playlistModel.appendItem(url)
                         }
                     }
 

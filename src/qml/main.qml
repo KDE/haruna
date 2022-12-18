@@ -244,6 +244,7 @@ Kirigami.ApplicationWindow {
         x: 10
         y: 10
         lastUrl: GeneralSettings.lastUrl
+        buttonText: i18nc("@action:button", "Open")
 
         onUrlOpened: {
             window.openFile(url)
