@@ -14,6 +14,7 @@ import QtQml 2.12
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
 import org.kde.haruna.models 1.0
+import Haruna.Components 1.0
 
 import "Menus"
 import "Menus/Global"
@@ -237,58 +238,17 @@ Kirigami.ApplicationWindow {
         onRejected: mpv.focus = true
     }
 
-    Popup {
+    OpenUrlPopup {
         id: openUrlPopup
 
         x: 10
         y: 10
-        modal: true
+        lastUrl: GeneralSettings.lastUrl
 
-        onOpened: {
-            openUrlTextField.forceActiveFocus(Qt.MouseFocusReason)
-            openUrlTextField.selectAll()
-        }
-
-        RowLayout {
-            anchors.fill: parent
-
-            Label {
-                text: i18nc("@info", "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found.")
-                visible: !app.hasYoutubeDl()
-                onLinkActivated: Qt.openUrlExternally(link)
-            }
-
-            TextField {
-                id: openUrlTextField
-
-                visible: app.hasYoutubeDl()
-                Layout.preferredWidth: 400
-                Layout.fillWidth: true
-                Component.onCompleted: text = GeneralSettings.lastUrl
-
-                Keys.onPressed: {
-                    if (event.key === Qt.Key_Enter
-                            || event.key === Qt.Key_Return) {
-                        openUrlButton.clicked()
-                    }
-                    if (event.key === Qt.Key_Escape) {
-                        openUrlPopup.close()
-                    }
-                }
-            }
-            Button {
-                id: openUrlButton
-
-                visible: app.hasYoutubeDl()
-                text: i18nc("@action:button", "Open")
-
-                onClicked: {
-                    openFile(openUrlTextField.text, true)
-                    GeneralSettings.lastUrl = openUrlTextField.text
-                    openUrlPopup.close()
-                    openUrlTextField.clear()
-                }
-            }
+        onUrlOpened: {
+            window.openFile(url)
+            GeneralSettings.lastUrl = url
+            GeneralSettings.save()
         }
     }
 
