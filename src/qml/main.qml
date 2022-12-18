@@ -238,7 +238,7 @@ Kirigami.ApplicationWindow {
         onRejected: mpv.focus = true
     }
 
-    OpenUrlPopup {
+    InputPopup {
         id: openUrlPopup
 
         x: 10

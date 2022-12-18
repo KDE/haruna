@@ -73,7 +73,7 @@ Item {
                     z: 100
                     width: parent.width
 
-                    OpenUrlPopup {
+                    InputPopup {
                         id: addUrlPopup
 
                         width: toolbar.width - Kirigami.Units.largeSpacing
