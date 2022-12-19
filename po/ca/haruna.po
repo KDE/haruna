@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:49+0000\n"
+"POT-Creation-Date: 2022-12-19 00:46+0000\n"
 "PO-Revision-Date: 2022-12-16 14:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -697,6 +697,11 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Selecciona un color"
 
+#: src/qml/Haruna/Components/InputPopup.qml:29
+msgctxt "@info"
+msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgstr "No s'ha trobat <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
+
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
 msgid "Double click to set action"
@@ -777,28 +782,23 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Omet els capítols"
 
-#: src/qml/main.qml:29
+#: src/qml/main.qml:30
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/PlayList.qml:328
+#: src/qml/main.qml:201 src/qml/PlayList.qml:297
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccioneu un fitxer"
 
-#: src/qml/main.qml:224
+#: src/qml/main.qml:229
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccioneu un fitxer de subtítols"
 
-#: src/qml/main.qml:252
-msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "No s'ha trobat <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
-
-#: src/qml/main.qml:279
+#: src/qml/main.qml:247
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Obre"
@@ -919,82 +919,82 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No s'ha pogut reproduir: %1"
 
-#: src/qml/PlayList.qml:109
+#: src/qml/PlayList.qml:80
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Afegeix"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:92
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Obre una llista de reproducció"
 
-#: src/qml/PlayList.qml:132
+#: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "Add file"
 msgstr "Afegeix un fitxer"
 
-#: src/qml/PlayList.qml:141
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Add url"
 msgstr "Afegeix un URL"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:121
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Ordena"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:125
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Nom ascendent"
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:131
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Nom descendent"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Durada ascendent"
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Durada descendent"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:150
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Neteja"
 
-#: src/qml/PlayList.qml:189
+#: src/qml/PlayList.qml:158
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Desa com a"
 
-#: src/qml/PlayList.qml:242
+#: src/qml/PlayList.qml:211
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Obre la carpeta contenidora"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:217
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Reanomena el fitxer"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:223
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Copia el nom del fitxer"
 
-#: src/qml/PlayList.qml:258
+#: src/qml/PlayList.qml:227
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Copia el camí del fitxer"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:232
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Llença a la paperera"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:49+0000\n"
+"POT-Creation-Date: 2022-12-19 00:46+0000\n"
 "PO-Revision-Date: 2022-12-16 19:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -694,6 +694,11 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Bir renk seç"
 
+#: src/qml/Haruna/Components/InputPopup.qml:29
+msgctxt "@info"
+msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> bulunamadı."
+
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
 msgid "Double click to set action"
@@ -774,28 +779,23 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Fasılları Atla"
 
-#: src/qml/main.qml:29
+#: src/qml/main.qml:30
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/PlayList.qml:328
+#: src/qml/main.qml:201 src/qml/PlayList.qml:297
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya seç"
 
-#: src/qml/main.qml:224
+#: src/qml/main.qml:229
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Altyazı dosyası seç"
 
-#: src/qml/main.qml:252
-msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> bulunamadı."
-
-#: src/qml/main.qml:279
+#: src/qml/main.qml:247
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aç"
@@ -916,82 +916,82 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Oynatılamadı: %1"
 
-#: src/qml/PlayList.qml:109
+#: src/qml/PlayList.qml:80
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Ekle"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:92
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Oynatma Listesi Aç"
 
-#: src/qml/PlayList.qml:132
+#: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "Add file"
 msgstr "Dosya Ekle"
 
-#: src/qml/PlayList.qml:141
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Add url"
 msgstr "URL Ekle"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:121
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sırala"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:125
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Ad, artan"
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:131
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Ad, azalan"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Süre, artan"
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Süre, azalan"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:150
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Temizle"
 
-#: src/qml/PlayList.qml:189
+#: src/qml/PlayList.qml:158
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Farklı Kaydet"
 
-#: src/qml/PlayList.qml:242
+#: src/qml/PlayList.qml:211
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "İçeren Klasörü Aç"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:217
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Dosyayı Yeniden Adlandır"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:223
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Dosya Adını Kopyala"
 
-#: src/qml/PlayList.qml:258
+#: src/qml/PlayList.qml:227
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Dosya Yolunu Kopyala"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:232
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Dosyayı Çöpe At"

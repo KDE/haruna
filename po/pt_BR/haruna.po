@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:49+0000\n"
+"POT-Creation-Date: 2022-12-19 00:46+0000\n"
 "PO-Revision-Date: 2022-10-19 14:55-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -835,6 +835,13 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Selecionar uma cor"
 
+#: src/qml/Haruna/Components/InputPopup.qml:29
+#, fuzzy
+#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgctxt "@info"
+msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> não foi encontrado."
+
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 #, fuzzy
 #| msgid "Double click to set action"
@@ -947,14 +954,14 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Pular capítulos"
 
-#: src/qml/main.qml:29
+#: src/qml/main.qml:30
 #, fuzzy
 #| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/PlayList.qml:328
+#: src/qml/main.qml:201 src/qml/PlayList.qml:297
 #: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
@@ -962,21 +969,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "Selecionar arquivo"
 
-#: src/qml/main.qml:224
+#: src/qml/main.qml:229
 #, fuzzy
 #| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Selecionar arquivo de legenda"
 
-#: src/qml/main.qml:252
-#, fuzzy
-#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> não foi encontrado."
-
-#: src/qml/main.qml:279
+#: src/qml/main.qml:247
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1143,98 +1143,98 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Não foi possível reproduzir: %1"
 
-#: src/qml/PlayList.qml:109
+#: src/qml/PlayList.qml:80
 #, fuzzy
 #| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
 msgstr "&Adicionar"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:92
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Lista de reprodução"
 
-#: src/qml/PlayList.qml:132
+#: src/qml/PlayList.qml:101
 #, fuzzy
 #| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add file"
 msgstr "Adicionar nova pasta"
 
-#: src/qml/PlayList.qml:141
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Add url"
 msgstr ""
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:121
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:125
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:131
 #, fuzzy
 #| msgid "Hardware decoding"
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Decodificação por hardware"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:143
 #, fuzzy
 #| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Reiniciar saturação"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:150
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Limpar lista"
 
-#: src/qml/PlayList.qml:189
+#: src/qml/PlayList.qml:158
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Salvar alterações"
 
-#: src/qml/PlayList.qml:242
+#: src/qml/PlayList.qml:211
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:217
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Selecionar arquivo"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:223
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr ""
 
-#: src/qml/PlayList.qml:258
+#: src/qml/PlayList.qml:227
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr ""
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:232
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@action:inmenu"

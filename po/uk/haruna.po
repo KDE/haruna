@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:49+0000\n"
+"POT-Creation-Date: 2022-12-19 00:46+0000\n"
 "PO-Revision-Date: 2022-12-16 08:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -695,6 +695,11 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Вибір кольору"
 
+#: src/qml/Haruna/Components/InputPopup.qml:29
+msgctxt "@info"
+msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> не знайдено."
+
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
 msgid "Double click to set action"
@@ -775,28 +780,23 @@ msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Пропустити розділи"
 
-#: src/qml/main.qml:29
+#: src/qml/main.qml:30
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:196 src/qml/PlayList.qml:328
+#: src/qml/main.qml:201 src/qml/PlayList.qml:297
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Виберіть файл"
 
-#: src/qml/main.qml:224
+#: src/qml/main.qml:229
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Виберіть файл субтитрів"
 
-#: src/qml/main.qml:252
-msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> не знайдено."
-
-#: src/qml/main.qml:279
+#: src/qml/main.qml:247
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Відкрити"
@@ -917,82 +917,82 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Не вдалося відтворити: %1"
 
-#: src/qml/PlayList.qml:109
+#: src/qml/PlayList.qml:80
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Додати"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:92
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Відкрити список відтворення"
 
-#: src/qml/PlayList.qml:132
+#: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "Add file"
 msgstr "Додати файл"
 
-#: src/qml/PlayList.qml:141
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Add url"
 msgstr "Додати адресу"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:121
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Упорядкувати"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:125
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Назва (за зростанням)"
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:131
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Назва (за спаданням)"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Тривалість (за зростанням)"
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Тривалість (за спаданням)"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:150
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Спорожнити"
 
-#: src/qml/PlayList.qml:189
+#: src/qml/PlayList.qml:158
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Зберегти як"
 
-#: src/qml/PlayList.qml:242
+#: src/qml/PlayList.qml:211
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Відкрити теку з даними"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:217
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Перейменувати файл"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:223
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Копіювати назву файла"
 
-#: src/qml/PlayList.qml:258
+#: src/qml/PlayList.qml:227
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Копіювати шлях до файла"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:232
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Пересунути файл до смітника"
