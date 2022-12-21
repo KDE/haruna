@@ -98,22 +98,24 @@ Item {
                                     }
                                 },
                                 Kirigami.Action {
-                                    text: i18nc("@action:button", "Add file")
+                                    text: i18nc("@action:button", "Add ...")
                                     icon.name: "list-add"
-                                    onTriggered: {
-                                        fileDialog.fileType = "video"
-                                        fileDialog.fileMode = Platform.FileDialog.OpenFile
-                                        fileDialog.open()
+                                    Kirigami.Action {
+                                        text: i18nc("@action:button", "File")
+                                        onTriggered: {
+                                            fileDialog.fileType = "video"
+                                            fileDialog.fileMode = Platform.FileDialog.OpenFile
+                                            fileDialog.open()
+                                        }
                                     }
-                                },
-                                Kirigami.Action {
-                                    text: i18nc("@action:button", "Add url")
-                                    icon.name: "list-add"
-                                    onTriggered: {
-                                        if (addUrlPopup.opened) {
-                                            addUrlPopup.close()
-                                        } else {
-                                            addUrlPopup.open()
+                                    Kirigami.Action {
+                                        text: i18nc("@action:button", "Url")
+                                        onTriggered: {
+                                            if (addUrlPopup.opened) {
+                                                addUrlPopup.close()
+                                            } else {
+                                                addUrlPopup.open()
+                                            }
                                         }
                                     }
                                 },
