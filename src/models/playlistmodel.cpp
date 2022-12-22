@@ -517,8 +517,13 @@ void PlayListProxyModel::trashFile(int row)
     auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);
     job->start();
 
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
-    model->removeItem(row);
+    connect(job, &KJob::result, this, [=]() {
+        if (job->error() == 0) {
+            auto model = qobject_cast<PlayListModel *>(sourceModel());
+            auto sourceRow = mapToSource(index(row, 0)).row();
+            model->removeItem(sourceRow);
+        }
+    });
 #endif
 }
 
