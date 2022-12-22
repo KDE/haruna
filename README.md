@@ -10,9 +10,9 @@ SPDX-License-Identifier: CC-BY-4.0
 
 #### Donate: [GitHub Sponsors](https://github.com/sponsors/g-fb) | [Liberapay](https://liberapay.com/gfb/) | [PayPal](https://paypal.me/georgefloreabanus)
 
-# Haruna Video Player
+# Haruna Media Player
 
-Haruna is an open source video player built with Qt/QML and libmpv.
+Haruna is an open source media player built with Qt/QML and libmpv.
 
 ![Haruna main window](./data/screenshots/haruna-dark.png)
 For more screnshots go to [Haruna's website](https://haruna.kde.org)

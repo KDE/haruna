@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     QApplication::setOrganizationName("KDE");
     QApplication::setApplicationName("Haruna");
     QApplication::setOrganizationDomain("kde.org");
-    QApplication::setApplicationDisplayName("Haruna - Video Player");
+    QApplication::setApplicationDisplayName("Haruna - Media Player");
     QApplication::setApplicationVersion(Application::version());
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));

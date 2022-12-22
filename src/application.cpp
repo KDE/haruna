@@ -91,8 +91,8 @@ void Application::setupWorkerThread()
 
 void Application::setupAboutData()
 {
-    m_aboutData = KAboutData(QStringLiteral("haruna"), i18nc("application title/display name", "Haruna Video Player"), Application::version());
-    m_aboutData.setShortDescription(i18nc("@title", "A configurable video player."));
+    m_aboutData = KAboutData(QStringLiteral("haruna"), i18nc("application title/display name", "Haruna Media Player"), Application::version());
+    m_aboutData.setShortDescription(i18nc("@title", "A configurable media player."));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
     m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2021"));
     m_aboutData.setHomepage(QStringLiteral("https://invent.kde.org/multimedia/haruna"));
