@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:46+0000\n"
+"POT-Creation-Date: 2022-12-22 00:45+0000\n"
 "PO-Revision-Date: 2022-09-12 07:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -612,13 +612,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Berriz esleitu"
 
-#: src/models/playlistmodel.cpp:198
+#: src/models/playlistmodel.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "No title found for url %1"
 msgstr ""
 
-#: src/models/playlistmodel.cpp:363
+#: src/models/playlistmodel.cpp:366
 #, fuzzy, kde-format
 #| msgid "Playlist is empty"
 msgctxt "@info"
@@ -968,7 +968,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:297
+#: src/qml/main.qml:201 src/qml/PlayList.qml:299
 #: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
@@ -1165,83 +1165,88 @@ msgid "Open playlist"
 msgstr "Jotze-zerrenda"
 
 #: src/qml/PlayList.qml:101
-#, fuzzy
-#| msgid "Add new folder"
 msgctxt "@action:button"
-msgid "Add file"
-msgstr "Gehitu karpeta berria"
-
-#: src/qml/PlayList.qml:110
-msgctxt "@action:button"
-msgid "Add url"
+msgid "Add ..."
 msgstr ""
 
-#: src/qml/PlayList.qml:121
+#: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgid "File"
+msgctxt "@action:button"
+msgid "File"
+msgstr "Fitxategia"
+
+#: src/qml/PlayList.qml:112
+msgctxt "@action:button"
+msgid "Url"
+msgstr ""
+
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:131
+#: src/qml/PlayList.qml:133
 #, fuzzy
 #| msgid "Hardware decoding"
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Hardware bidezko deskodetzea"
 
-#: src/qml/PlayList.qml:137
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:143
+#: src/qml/PlayList.qml:145
 #, fuzzy
 #| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Asetasuna berrezarri"
 
-#: src/qml/PlayList.qml:150
+#: src/qml/PlayList.qml:152
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Garbitu zerrenda"
 
-#: src/qml/PlayList.qml:158
+#: src/qml/PlayList.qml:160
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Gorde aldaketak"
 
-#: src/qml/PlayList.qml:211
+#: src/qml/PlayList.qml:213
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:217
+#: src/qml/PlayList.qml:219
+msgctxt "@action:inmenu"
+msgid "Copy file name"
+msgstr ""
+
+#: src/qml/PlayList.qml:223
+msgctxt "@action:inmenu"
+msgid "Copy file path"
+msgstr ""
+
+#: src/qml/PlayList.qml:228
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Hautatu fitxategia"
 
-#: src/qml/PlayList.qml:223
-msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr ""
-
-#: src/qml/PlayList.qml:227
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr ""
-
-#: src/qml/PlayList.qml:232
+#: src/qml/PlayList.qml:234
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@action:inmenu"
@@ -2068,6 +2073,12 @@ msgstr "Saturazioa"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
+
+#, fuzzy
+#~| msgid "Add new folder"
+#~ msgctxt "@action:button"
+#~ msgid "Add file"
+#~ msgstr "Gehitu karpeta berria"
 
 #, fuzzy
 #~| msgid "Row height"

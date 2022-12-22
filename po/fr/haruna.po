@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:46+0000\n"
+"POT-Creation-Date: 2022-12-22 00:45+0000\n"
 "PO-Revision-Date: 2022-12-17 15:10+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -525,13 +525,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ré-allouer"
 
-#: src/models/playlistmodel.cpp:198
+#: src/models/playlistmodel.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "No title found for url %1"
 msgstr "Aucun titre trouvé pour l'URL %1"
 
-#: src/models/playlistmodel.cpp:363
+#: src/models/playlistmodel.cpp:366
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -784,7 +784,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:297
+#: src/qml/main.qml:201 src/qml/PlayList.qml:299
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
@@ -928,70 +928,78 @@ msgstr "Ouvrir une liste de lecture"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
-msgid "Add file"
-msgstr "Ajouter un fichier"
+msgid "Add ..."
+msgstr ""
 
-#: src/qml/PlayList.qml:110
+#: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "Add url"
-msgstr "Ajouter une URL"
+msgid "File"
+msgstr "Fichier"
 
-#: src/qml/PlayList.qml:121
+#: src/qml/PlayList.qml:112
+msgctxt "@action:button"
+msgid "Url"
+msgstr ""
+
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Trier"
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Par nom croissant"
 
-#: src/qml/PlayList.qml:131
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Par nom décroissant"
 
-#: src/qml/PlayList.qml:137
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Par durée croissante"
 
-#: src/qml/PlayList.qml:143
+#: src/qml/PlayList.qml:145
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Par durée décroissante"
 
-#: src/qml/PlayList.qml:150
+#: src/qml/PlayList.qml:152
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Effacer"
 
-#: src/qml/PlayList.qml:158
+#: src/qml/PlayList.qml:160
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Enregistrer sous"
 
-#: src/qml/PlayList.qml:211
+#: src/qml/PlayList.qml:213
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Ouvrir le dossier contenant"
 
-#: src/qml/PlayList.qml:217
-msgctxt "@action:inmenu"
-msgid "Rename file"
-msgstr "Renommer un fichier"
-
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:219
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Copier un nom de fichier"
 
-#: src/qml/PlayList.qml:227
+#: src/qml/PlayList.qml:223
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Copier un emplacement de fichier"
 
-#: src/qml/PlayList.qml:232
+#: src/qml/PlayList.qml:228
+msgctxt "@action:inmenu"
+msgid "Rename file"
+msgstr "Renommer un fichier"
+
+#: src/qml/PlayList.qml:234
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Mettre un fichier à la corbeille"
@@ -1611,6 +1619,14 @@ msgstr "Saturation"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Effectuer un clic central sur les curseurs pour le ré-initialiser"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add file"
+#~ msgstr "Ajouter un fichier"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add url"
+#~ msgstr "Ajouter une URL"
 
 #~ msgctxt "@label:spinbox"
 #~ msgid "Row height"

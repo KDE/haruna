@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:46+0000\n"
+"POT-Creation-Date: 2022-12-22 00:45+0000\n"
 "PO-Revision-Date: 2022-11-24 09:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -528,13 +528,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: src/models/playlistmodel.cpp:198
+#: src/models/playlistmodel.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "No title found for url %1"
 msgstr ""
 
-#: src/models/playlistmodel.cpp:363
+#: src/models/playlistmodel.cpp:366
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -785,7 +785,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:297
+#: src/qml/main.qml:201 src/qml/PlayList.qml:299
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
@@ -934,29 +934,34 @@ msgid "Open playlist"
 msgstr "قائمة التشغيل"
 
 #: src/qml/PlayList.qml:101
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
-msgid "Add file"
-msgstr "أضف مجلداً جديداً"
-
-#: src/qml/PlayList.qml:110
-msgctxt "@action:button"
-msgid "Add url"
+msgid "Add ..."
 msgstr ""
 
-#: src/qml/PlayList.qml:121
+#: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "File"
+msgctxt "@action:button"
+msgid "File"
+msgstr "ملف"
+
+#: src/qml/PlayList.qml:112
+msgctxt "@action:button"
+msgid "Url"
+msgstr ""
+
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:131
+#: src/qml/PlayList.qml:133
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Hardware decoding"
@@ -964,12 +969,12 @@ msgctxt "@action:button"
 msgid "Name descending"
 msgstr "فك التشفير بالعتاد"
 
-#: src/qml/PlayList.qml:137
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:143
+#: src/qml/PlayList.qml:145
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Saturation Reset"
@@ -977,7 +982,7 @@ msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "صفّر التّشبّع"
 
-#: src/qml/PlayList.qml:150
+#: src/qml/PlayList.qml:152
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Clear List"
@@ -985,7 +990,7 @@ msgctxt "@action:button"
 msgid "Clear"
 msgstr "امسح القائمة"
 
-#: src/qml/PlayList.qml:158
+#: src/qml/PlayList.qml:160
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Save changes"
@@ -993,12 +998,22 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr "احفظ التغيرات"
 
-#: src/qml/PlayList.qml:211
+#: src/qml/PlayList.qml:213
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:217
+#: src/qml/PlayList.qml:219
+msgctxt "@action:inmenu"
+msgid "Copy file name"
+msgstr ""
+
+#: src/qml/PlayList.qml:223
+msgctxt "@action:inmenu"
+msgid "Copy file path"
+msgstr ""
+
+#: src/qml/PlayList.qml:228
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1006,17 +1021,7 @@ msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "اختر ملفّا"
 
-#: src/qml/PlayList.qml:223
-msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr ""
-
-#: src/qml/PlayList.qml:227
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr ""
-
-#: src/qml/PlayList.qml:232
+#: src/qml/PlayList.qml:234
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "For all files"
@@ -1626,6 +1631,13 @@ msgstr "التّشبّع"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير تصفرها"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Add new folder"
+#~ msgctxt "@action:button"
+#~ msgid "Add file"
+#~ msgstr "أضف مجلداً جديداً"
 
 #, fuzzy
 #~| msgid "Row height"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:46+0000\n"
+"POT-Creation-Date: 2022-12-22 00:45+0000\n"
 "PO-Revision-Date: 2022-12-18 13:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -528,13 +528,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "თავიდან მინიჭება"
 
-#: src/models/playlistmodel.cpp:198
+#: src/models/playlistmodel.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "No title found for url %1"
 msgstr "ბმულისთვის %1 სათაური ნაპოვნი არაა"
 
-#: src/models/playlistmodel.cpp:363
+#: src/models/playlistmodel.cpp:366
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -785,7 +785,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:297
+#: src/qml/main.qml:201 src/qml/PlayList.qml:299
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
@@ -929,70 +929,78 @@ msgstr "დასაკრავი სიის გახსნა"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
-msgid "Add file"
-msgstr "ფაილის დამატება"
+msgid "Add ..."
+msgstr ""
 
-#: src/qml/PlayList.qml:110
+#: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "Add url"
-msgstr "ბმულის დამატება"
+msgid "File"
+msgstr "ფაილი"
 
-#: src/qml/PlayList.qml:121
+#: src/qml/PlayList.qml:112
+msgctxt "@action:button"
+msgid "Url"
+msgstr ""
+
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "დალაგება"
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "აღმავალი სახელით"
 
-#: src/qml/PlayList.qml:131
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "სახელი (დაღმავალი)"
 
-#: src/qml/PlayList.qml:137
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "აღმავალი ხანგრძლივობით"
 
-#: src/qml/PlayList.qml:143
+#: src/qml/PlayList.qml:145
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "დაღმავალი ხანგრძლივობით"
 
-#: src/qml/PlayList.qml:150
+#: src/qml/PlayList.qml:152
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "გასუფთავება"
 
-#: src/qml/PlayList.qml:158
+#: src/qml/PlayList.qml:160
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "შენახვა, როგორც"
 
-#: src/qml/PlayList.qml:211
+#: src/qml/PlayList.qml:213
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "შემცველი საქაღალდის გახსნა"
 
-#: src/qml/PlayList.qml:217
-msgctxt "@action:inmenu"
-msgid "Rename file"
-msgstr "ფაილის გადარქმევა"
-
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:219
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "ფაილის სახელის კოპირება"
 
-#: src/qml/PlayList.qml:227
+#: src/qml/PlayList.qml:223
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "ფაილის ბილიკის კოპირება"
 
-#: src/qml/PlayList.qml:232
+#: src/qml/PlayList.qml:228
+msgctxt "@action:inmenu"
+msgid "Rename file"
+msgstr "ფაილის გადარქმევა"
+
+#: src/qml/PlayList.qml:234
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "ფაილის სანაგვე ყუთში გადატანა"
@@ -1601,6 +1609,14 @@ msgstr "გაჯერებულობა"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "შუა-წკაპი სლაიდერების გასანულებლად"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add file"
+#~ msgstr "ფაილის დამატება"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add url"
+#~ msgstr "ბმულის დამატება"
 
 #~ msgctxt "@label:spinbox"
 #~ msgid "Row height"
