@@ -225,6 +225,12 @@ Item {
                 }
                 MenuSeparator {}
                 MenuItem {
+                    text: i18nc("@action:inmenu", "Remove from playlist")
+                    icon.name: "remove"
+                    visible: contextMenuLoader.isLocal
+                    onClicked: mpv.playlistProxyModel.removeItem(row)
+                }
+                MenuItem {
                     text: i18nc("@action:inmenu", "Rename file")
                     icon.name: "edit-rename"
                     visible: contextMenuLoader.isLocal

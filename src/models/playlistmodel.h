@@ -37,6 +37,7 @@ public:
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void saveM3uFile(const QString &path);
     Q_INVOKABLE void highlightInFileManager(int row);
+    Q_INVOKABLE void removeItem(int row);
     Q_INVOKABLE void renameFile(int row);
     Q_INVOKABLE void trashFile(int row);
     Q_INVOKABLE void copyFileName(int row);

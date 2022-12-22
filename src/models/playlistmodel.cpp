@@ -479,6 +479,14 @@ void PlayListProxyModel::highlightInFileManager(int row)
     KIO::highlightInFileManager({path});
 }
 
+void PlayListProxyModel::removeItem(int row)
+{
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
+
+    auto sourceRow = mapFromSource(model->index(row)).row();
+    model->removeItem(sourceRow);
+}
+
 void PlayListProxyModel::renameFile(int row)
 {
     QString path = data(index(row, 0), PlayListModel::PathRole).toString();
