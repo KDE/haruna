@@ -498,7 +498,8 @@ void PlayListProxyModel::renameFile(int row)
 
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
         auto model = qobject_cast<PlayListModel *>(sourceModel());
-        auto item = model->getPlayList().at(row);
+        auto sourceRow = mapToSource(index(row, 0)).row();
+        auto item = model->getPlayList().at(sourceRow);
         item->setFilePath(urls.first().path());
         item->setFileName(urls.first().fileName());
 
