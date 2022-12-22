@@ -476,7 +476,11 @@ void PlayListProxyModel::saveM3uFile(const QString &path)
 void PlayListProxyModel::highlightInFileManager(int row)
 {
     QString path = data(index(row, 0), PlayListModel::PathRole).toString();
-    KIO::highlightInFileManager({path});
+    QUrl url(path);
+    if (url.scheme().isEmpty()) {
+        url.setScheme(QStringLiteral("file"));
+    }
+    KIO::highlightInFileManager({url});
 }
 
 void PlayListProxyModel::removeItem(int row)
@@ -491,7 +495,9 @@ void PlayListProxyModel::renameFile(int row)
 {
     QString path = data(index(row, 0), PlayListModel::PathRole).toString();
     QUrl url(path);
-    url.setScheme("file");
+    if (url.scheme().isEmpty()) {
+        url.setScheme(QStringLiteral("file"));
+    }
     KFileItem item(url);
     auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
     renameDialog->open();
@@ -513,7 +519,9 @@ void PlayListProxyModel::trashFile(int row)
     QList<QUrl> urls;
     QString path = data(index(row, 0), PlayListModel::PathRole).toString();
     QUrl url(path);
-    url.setScheme("file");
+    if (url.scheme().isEmpty()) {
+        url.setScheme(QStringLiteral("file"));
+    }
     urls << url;
     auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);
     job->start();
