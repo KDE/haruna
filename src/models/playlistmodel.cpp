@@ -198,7 +198,7 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
         QString title = QJsonDocument::fromJson(json.toUtf8())["title"].toString();
         int duration = QJsonDocument::fromJson(json.toUtf8())["duration"].toInt();
         if (title.isEmpty()) {
-            Q_EMIT Global::instance()->error(i18nc("@info", "No title found for url %1", url));
+            // todo: log if can't get title
             return;
         }
         m_playlist.at(row)->setMediaTitle(title);
