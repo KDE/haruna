@@ -427,6 +427,12 @@ void PlayListProxyModel::sortItems(Sort sortMode)
     }
 }
 
+int PlayListProxyModel::getPlayingItem()
+{
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
+    return mapFromSource(index(model->getPlayingItem(), 0)).row();
+}
+
 void PlayListProxyModel::setPlayingItem(int i)
 {
     auto model = qobject_cast<PlayListModel *>(sourceModel());

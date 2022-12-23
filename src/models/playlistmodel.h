@@ -32,6 +32,7 @@ public:
     Q_ENUM(Sort);
 
     Q_INVOKABLE void sortItems(Sort sortMode);
+    Q_INVOKABLE int getPlayingItem();
     Q_INVOKABLE void setPlayingItem(int i);
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();

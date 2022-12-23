@@ -65,6 +65,7 @@ Item {
 
                 model: mpv.playlistProxyModel
                 spacing: 1
+                currentIndex: mpv.playlistProxyModel.getPlayingItem()
 
                 headerPositioning: ListView.OverlayHeader
                 header: ToolBar {
