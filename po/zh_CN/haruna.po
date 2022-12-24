@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:45+0000\n"
+"POT-Creation-Date: 2022-12-24 00:48+0000\n"
 "PO-Revision-Date: 2022-12-13 12:22\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -30,15 +30,19 @@ msgstr ""
 "zhouwenqing655@gmail.com"
 
 #: src/application.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Video Player"
 msgctxt "application title/display name"
-msgid "Haruna Video Player"
+msgid "Haruna Media Player"
 msgstr "Haruna 视频播放器"
 
 #: src/application.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "A configurable video player."
 msgctxt "@title"
-msgid "A configurable video player."
+msgid "A configurable media player."
 msgstr "可自定义的视频播放器。"
 
 #: src/application.cpp:97
@@ -80,10 +84,12 @@ msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/lockmanager.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
 msgctxt "@info reason for blocking sleep and screen slocking"
-msgid "Playing video"
-msgstr "播放视频"
+msgid "Playing media file"
+msgstr "播放下一个文件"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -782,7 +788,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:299
+#: src/qml/main.qml:201 src/qml/PlayList.qml:306
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
@@ -914,7 +920,7 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
 
-#: src/qml/PlayList.qml:80
+#: src/qml/PlayList.qml:81
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "&Add"
@@ -922,7 +928,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "添加(&A)"
 
-#: src/qml/PlayList.qml:92
+#: src/qml/PlayList.qml:93
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -930,12 +936,12 @@ msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "播放列表"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr ""
 
-#: src/qml/PlayList.qml:104
+#: src/qml/PlayList.qml:105
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "File"
@@ -943,22 +949,22 @@ msgctxt "@action:button"
 msgid "File"
 msgstr "文件"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
 msgstr ""
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:134
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Hardware decoding"
@@ -966,12 +972,12 @@ msgctxt "@action:button"
 msgid "Name descending"
 msgstr "硬件解码"
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:145
+#: src/qml/PlayList.qml:146
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Saturation Reset"
@@ -979,7 +985,7 @@ msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "重置饱和度"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:153
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Clear List"
@@ -987,7 +993,7 @@ msgctxt "@action:button"
 msgid "Clear"
 msgstr "清空列表"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:161
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Save changes"
@@ -995,22 +1001,30 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr "保存更改"
 
-#: src/qml/PlayList.qml:213
+#: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr ""
 
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr ""
 
-#: src/qml/PlayList.qml:228
+#: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:inmenu"
+msgid "Remove from playlist"
+msgstr "播放列表"
+
+#: src/qml/PlayList.qml:235
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1018,7 +1032,7 @@ msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "选择文件"
 
-#: src/qml/PlayList.qml:234
+#: src/qml/PlayList.qml:241
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "For all files"
@@ -1613,6 +1627,10 @@ msgstr "饱和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键单击滑块以重置"
+
+#~ msgctxt "@info reason for blocking sleep and screen slocking"
+#~ msgid "Playing video"
+#~ msgstr "播放视频"
 
 #, fuzzy
 #~| msgctxt "@action:button"

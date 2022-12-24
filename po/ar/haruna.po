@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:45+0000\n"
-"PO-Revision-Date: 2022-11-24 09:47+0400\n"
+"POT-Creation-Date: 2022-12-24 00:48+0000\n"
+"PO-Revision-Date: 2022-12-22 11:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -29,15 +29,19 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: src/application.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Video Player"
 msgctxt "application title/display name"
-msgid "Haruna Video Player"
+msgid "Haruna Media Player"
 msgstr "مشغل فيديو هارونا"
 
 #: src/application.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "A configurable video player."
 msgctxt "@title"
-msgid "A configurable video player."
+msgid "A configurable media player."
 msgstr "مشغل فيديو قابل للتخصيص"
 
 #: src/application.cpp:97
@@ -81,10 +85,12 @@ msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
 msgctxt "@info reason for blocking sleep and screen slocking"
-msgid "Playing video"
-msgstr "يشغل فيديو"
+msgid "Playing media file"
+msgstr "شغل الملف التالي"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -532,7 +538,7 @@ msgstr "أعد التعيين"
 #, kde-format
 msgctxt "@info"
 msgid "No title found for url %1"
-msgstr ""
+msgstr "لم يعثر على عنوان لرابط %1"
 
 #: src/models/playlistmodel.cpp:366
 #, kde-format
@@ -785,7 +791,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:299
+#: src/qml/main.qml:201 src/qml/PlayList.qml:306
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
@@ -917,117 +923,98 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
-#: src/qml/PlayList.qml:80
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
+#: src/qml/PlayList.qml:81
 msgctxt "@action:button"
 msgid "Add"
-msgstr "أ&ضف"
+msgstr "أضِف"
 
-#: src/qml/PlayList.qml:92
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
+#: src/qml/PlayList.qml:93
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "قائمة التشغيل"
+msgstr "افتح قائمة التّشغيل"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "أضف..."
 
-#: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
+#: src/qml/PlayList.qml:105
 msgctxt "@action:button"
 msgid "File"
 msgstr "ملف"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "رابط"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "افرز"
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "بالاسم، تصاعدياً"
 
-#: src/qml/PlayList.qml:133
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Hardware decoding"
+#: src/qml/PlayList.qml:134
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr "فك التشفير بالعتاد"
+msgstr "بالاسم، تنازلياً"
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "المدة تصاعديًّا"
 
-#: src/qml/PlayList.qml:145
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
+#: src/qml/PlayList.qml:146
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "صفّر التّشبّع"
+msgstr "المدة تنازليًّا"
 
-#: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Clear List"
+#: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "امسح القائمة"
+msgstr "امسح"
 
-#: src/qml/PlayList.qml:160
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#: src/qml/PlayList.qml:161
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "احفظ التغيرات"
+msgstr "حفظ باسم"
 
-#: src/qml/PlayList.qml:213
+#: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "افتح المجلد الحاوي"
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "انسخ اسم الملف"
 
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr ""
+msgstr "انسخ مسار الملف"
 
-#: src/qml/PlayList.qml:228
+#: src/qml/PlayList.qml:229
 #, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@action:inmenu"
+msgid "Remove from playlist"
+msgstr "افتح قائمة التّشغيل"
+
+#: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr "اختر ملفّا"
+msgstr "أعد تسمية الملفّ"
 
-#: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For all files"
+#: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr "لجميع الملفات"
+msgstr "ملف المهملات"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1491,7 +1478,7 @@ msgstr "مساعدة"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "اسمح بالترجمة في الحدود السوداء"
 
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@info:tooltip"
@@ -1499,6 +1486,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"عند اختيار هذا فإن الترجمة ستعرض خارج الفيديو، في الحدود السوداء. قد لا تعمل "
+"لجميع ترجمات .ass"
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
@@ -1631,6 +1620,10 @@ msgstr "التّشبّع"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير تصفرها"
+
+#~ msgctxt "@info reason for blocking sleep and screen slocking"
+#~ msgid "Playing video"
+#~ msgstr "يشغل فيديو"
 
 #, fuzzy
 #~| msgctxt "@action:button"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:45+0000\n"
-"PO-Revision-Date: 2022-12-16 03:29+0100\n"
+"POT-Creation-Date: 2022-12-24 00:48+0000\n"
+"PO-Revision-Date: 2022-12-22 22:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -30,15 +30,19 @@ msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
 #: src/application.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Video Player"
 msgctxt "application title/display name"
-msgid "Haruna Video Player"
+msgid "Haruna Media Player"
 msgstr "Reproductor de vídeo Haruna"
 
 #: src/application.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "A configurable video player."
 msgctxt "@title"
-msgid "A configurable video player."
+msgid "A configurable media player."
 msgstr "Reproductor de vídeo configurable."
 
 #: src/application.cpp:97
@@ -83,10 +87,12 @@ msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
 msgctxt "@info reason for blocking sleep and screen slocking"
-msgid "Playing video"
-msgstr "Reproduciendo vídeo"
+msgid "Playing media file"
+msgstr "Reproducir el archivo siguiente"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -787,7 +793,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:299
+#: src/qml/main.qml:201 src/qml/PlayList.qml:306
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
@@ -919,90 +925,95 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No se puede reproducir: %1"
 
-#: src/qml/PlayList.qml:80
+#: src/qml/PlayList.qml:81
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Añadir"
 
-#: src/qml/PlayList.qml:92
+#: src/qml/PlayList.qml:93
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Abrir lista de reproducción"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Añadir..."
 
-#: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
+#: src/qml/PlayList.qml:105
 msgctxt "@action:button"
 msgid "File"
 msgstr "Archivo"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Ordenar"
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Nombre ascendente"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:134
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Nombre descendente"
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Duración ascendente"
 
-#: src/qml/PlayList.qml:145
+#: src/qml/PlayList.qml:146
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Duración descendente"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Borrar todo"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:161
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Guardar como"
 
-#: src/qml/PlayList.qml:213
+#: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Abrir la carpeta contenedora"
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Copiar nombre de archivo"
 
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Copiar ruta del archivo"
 
-#: src/qml/PlayList.qml:228
+#: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@action:inmenu"
+msgid "Remove from playlist"
+msgstr "Abrir lista de reproducción"
+
+#: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Cambiar nombre de archivo"
 
-#: src/qml/PlayList.qml:234
+#: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Enviar archivo a la papelera"
@@ -1616,6 +1627,10 @@ msgstr "Saturación"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clic central en los controles deslizantes para reiniciarlos"
+
+#~ msgctxt "@info reason for blocking sleep and screen slocking"
+#~ msgid "Playing video"
+#~ msgstr "Reproduciendo vídeo"
 
 #~ msgctxt "@action:button"
 #~ msgid "Add file"

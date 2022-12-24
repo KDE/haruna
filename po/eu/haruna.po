@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:45+0000\n"
+"POT-Creation-Date: 2022-12-24 00:48+0000\n"
 "PO-Revision-Date: 2022-09-12 07:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -34,14 +34,14 @@ msgstr "xalba@ni.eus"
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
-msgid "Haruna Video Player"
+msgid "Haruna Media Player"
 msgstr "Haruna bideo jotzailea"
 
 #: src/application.cpp:95
 #, fuzzy, kde-format
 #| msgid "A configurable video player."
 msgctxt "@title"
-msgid "A configurable video player."
+msgid "A configurable media player."
 msgstr "Bideo jotzaile konfiguragarria."
 
 #: src/application.cpp:97
@@ -89,10 +89,10 @@ msgstr "bideorikonena+audiorikonena/onena"
 
 #: src/lockmanager.cpp:31
 #, fuzzy, kde-format
-#| msgid "Playing video."
+#| msgid "Play next file"
 msgctxt "@info reason for blocking sleep and screen slocking"
-msgid "Playing video"
-msgstr "Bideoa jotzea."
+msgid "Playing media file"
+msgstr "Jo hurrengo fitxategia"
 
 #: src/models/actionsmodel.cpp:22
 #, fuzzy, kde-format
@@ -968,7 +968,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:299
+#: src/qml/main.qml:201 src/qml/PlayList.qml:306
 #: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
@@ -1150,103 +1150,110 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ezin izan du jo: %1"
 
-#: src/qml/PlayList.qml:80
+#: src/qml/PlayList.qml:81
 #, fuzzy
 #| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
 msgstr "&Gehitu"
 
-#: src/qml/PlayList.qml:92
+#: src/qml/PlayList.qml:93
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Jotze-zerrenda"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr ""
 
-#: src/qml/PlayList.qml:104
+#: src/qml/PlayList.qml:105
 #, fuzzy
 #| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fitxategia"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
 msgstr ""
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:134
 #, fuzzy
 #| msgid "Hardware decoding"
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Hardware bidezko deskodetzea"
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:145
+#: src/qml/PlayList.qml:146
 #, fuzzy
 #| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Asetasuna berrezarri"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:153
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Garbitu zerrenda"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:161
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Gorde aldaketak"
 
-#: src/qml/PlayList.qml:213
+#: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr ""
 
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr ""
 
-#: src/qml/PlayList.qml:228
+#: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgid "Playlist"
+msgctxt "@action:inmenu"
+msgid "Remove from playlist"
+msgstr "Jotze-zerrenda"
+
+#: src/qml/PlayList.qml:235
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Hautatu fitxategia"
 
-#: src/qml/PlayList.qml:234
+#: src/qml/PlayList.qml:241
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@action:inmenu"
@@ -2073,6 +2080,12 @@ msgstr "Saturazioa"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
+
+#, fuzzy
+#~| msgid "Playing video."
+#~ msgctxt "@info reason for blocking sleep and screen slocking"
+#~ msgid "Playing video"
+#~ msgstr "Bideoa jotzea."
 
 #, fuzzy
 #~| msgid "Add new folder"

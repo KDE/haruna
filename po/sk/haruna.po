@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:45+0000\n"
+"POT-Creation-Date: 2022-12-24 00:48+0000\n"
 "PO-Revision-Date: 2021-07-18 15:26+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -29,13 +29,13 @@ msgstr "wizzardsk@gmail.com"
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
-msgid "Haruna Video Player"
+msgid "Haruna Media Player"
 msgstr "Prehrávač videa Haruna"
 
 #: src/application.cpp:95
 #, kde-format
 msgctxt "@title"
-msgid "A configurable video player."
+msgid "A configurable media player."
 msgstr ""
 
 #: src/application.cpp:97
@@ -82,7 +82,7 @@ msgstr ""
 #: src/lockmanager.cpp:31
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
-msgid "Playing video"
+msgid "Playing media file"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:22
@@ -899,7 +899,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr ""
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:299
+#: src/qml/main.qml:201 src/qml/PlayList.qml:306
 #: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Subtitles"
@@ -1069,99 +1069,106 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/PlayList.qml:80
+#: src/qml/PlayList.qml:81
 #, fuzzy
 #| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
 msgstr "&Pridať"
 
-#: src/qml/PlayList.qml:92
+#: src/qml/PlayList.qml:93
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Zoznam skladieb"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr ""
 
-#: src/qml/PlayList.qml:104
+#: src/qml/PlayList.qml:105
 #, fuzzy
 #| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Súbor"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
 msgstr ""
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:134
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr ""
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:145
+#: src/qml/PlayList.qml:146
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Sýtosť"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Clear"
 msgstr ""
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:161
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Uložiť zmeny"
 
-#: src/qml/PlayList.qml:213
+#: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr ""
 
-#: src/qml/PlayList.qml:223
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr ""
 
-#: src/qml/PlayList.qml:228
+#: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgid "Playlist"
+msgctxt "@action:inmenu"
+msgid "Remove from playlist"
+msgstr "Zoznam skladieb"
+
+#: src/qml/PlayList.qml:235
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Titulky"
 
-#: src/qml/PlayList.qml:234
+#: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr ""
