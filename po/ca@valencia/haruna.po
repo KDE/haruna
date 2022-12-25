@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-24 00:48+0000\n"
-"PO-Revision-Date: 2022-12-16 14:24+0100\n"
+"PO-Revision-Date: 2022-12-23 14:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -31,20 +31,16 @@ msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Reproductor de vídeo Haruna"
+msgstr "Reproductor multimèdia Haruna"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Un reproductor de vídeo configurable."
+msgstr "Un reproductor multimèdia configurable."
 
 #: src/application.cpp:97
 #, kde-format
@@ -87,12 +83,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr "millor_vídeo+millor_àudio/millor"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Reproduïx el fitxer següent"
+msgstr "Reproduïu un fitxer multimèdia"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -938,12 +932,9 @@ msgstr "Obri una llista de reproducció"
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Afig..."
 
 #: src/qml/PlayList.qml:105
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fitxer"
@@ -951,7 +942,7 @@ msgstr "Fitxer"
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
@@ -1004,12 +995,9 @@ msgid "Copy file path"
 msgstr "Copia el camí del fitxer"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Obri una llista de reproducció"
+msgstr "Elimina de la llista de reproducció"
 
 #: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
@@ -1632,15 +1620,3 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
-
-#~ msgctxt "@info reason for blocking sleep and screen slocking"
-#~ msgid "Playing video"
-#~ msgstr "S'està reproduint un vídeo"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add file"
-#~ msgstr "Afig un fitxer"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add url"
-#~ msgstr "Afig un URL"

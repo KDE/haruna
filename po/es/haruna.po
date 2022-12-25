@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-24 00:48+0000\n"
-"PO-Revision-Date: 2022-12-22 22:43+0100\n"
+"PO-Revision-Date: 2022-12-24 20:57+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -30,20 +30,16 @@ msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Reproductor de vídeo Haruna"
+msgstr "Reproductor multimedia Haruna"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Reproductor de vídeo configurable."
+msgstr "Reproductor multimedia configurable."
 
 #: src/application.cpp:97
 #, kde-format
@@ -87,12 +83,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Reproducir el archivo siguiente"
+msgstr "Reproduciendo archivo multimedia"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -1001,12 +995,9 @@ msgid "Copy file path"
 msgstr "Copiar ruta del archivo"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Abrir lista de reproducción"
+msgstr "Eliminar de la lista de reproducción"
 
 #: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-24 00:48+0000\n"
-"PO-Revision-Date: 2022-12-18 11:59+0000\n"
+"PO-Revision-Date: 2022-12-23 20:44+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -30,20 +30,16 @@ msgid "Your emails"
 msgstr "zepires@gmail.com"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Leitor de Vídeo Haruna"
+msgstr "Leitor Multimédia Haruna"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Um leitor de vídeo configurável."
+msgstr "Um leitor multimédia configurável."
 
 #: src/application.cpp:97
 #, kde-format
@@ -86,12 +82,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Reproduzir o ficheiro seguinte"
+msgstr "A reproduzir o ficheiro multimédia"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -938,12 +932,9 @@ msgstr "Abrir a lista de reprodução"
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Adicionar ..."
 
 #: src/qml/PlayList.qml:105
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Ficheiro"
@@ -951,7 +942,7 @@ msgstr "Ficheiro"
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
@@ -1004,12 +995,9 @@ msgid "Copy file path"
 msgstr "Copiar a localização do ficheiro"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Abrir a lista de reprodução"
+msgstr "Remover da lista de reprodução"
 
 #: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
@@ -1631,15 +1619,3 @@ msgstr "Saturação"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Botão do meio nas barras para as repor"
-
-#~ msgctxt "@info reason for blocking sleep and screen slocking"
-#~ msgid "Playing video"
-#~ msgstr "A reproduzir o vídeo"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add file"
-#~ msgstr "Adicionar um ficheiro"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add url"
-#~ msgstr "Adicionar um URL"
