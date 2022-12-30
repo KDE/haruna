@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-24 00:48+0000\n"
-"PO-Revision-Date: 2022-12-01 21:11+0100\n"
+"PO-Revision-Date: 2022-12-24 09:53+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.11.90\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,20 +29,16 @@ msgid "Your emails"
 msgstr "valtermura@gmail.com"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Riproduttore video Haruna"
+msgstr "Lettore multimediale Haruna"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Riproduttore video configurabile."
+msgstr "Riproduttore multimediale configurabile."
 
 #: src/application.cpp:97
 #, kde-format
@@ -87,12 +83,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Riproduci file successivo"
+msgstr "Riproduzione del file multimediale"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -541,7 +535,7 @@ msgstr "Riassegna"
 #, kde-format
 msgctxt "@info"
 msgid "No title found for url %1"
-msgstr ""
+msgstr "Nessun titolo trovato per l'URL %1"
 
 #: src/models/playlistmodel.cpp:366
 #, kde-format
@@ -927,30 +921,21 @@ msgid "Could not play: %1"
 msgstr "Impossibile riprodurre: %1"
 
 #: src/qml/PlayList.qml:81
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
-msgstr "&Aggiungi"
+msgstr "Aggiungi"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "Scaletta"
+msgstr "Apri scaletta"
 
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Aggiungi..."
 
 #: src/qml/PlayList.qml:105
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "File"
@@ -958,93 +943,72 @@ msgstr "File"
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "Ordina per"
 
 #: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "Nome, crescente"
 
 #: src/qml/PlayList.qml:134
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Hardware decoding"
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr "Decodifica hardware"
+msgstr "Nome, decrescente"
 
 #: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "Durata, crescente"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "Azzera saturazione"
+msgstr "Durata, decrescente"
 
 #: src/qml/PlayList.qml:153
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Clear List"
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Pulisci elenco"
+msgstr "Pulisci"
 
 #: src/qml/PlayList.qml:161
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "Salva le modifiche"
+msgstr "Salva come"
 
 #: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "Apri cartella contenente"
 
 #: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "Copia nome file"
 
 #: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr ""
+msgstr "Copia percorso file"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Scaletta"
+msgstr "Rimuovi dalla scaletta"
 
 #: src/qml/PlayList.qml:235
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr "Seleziona file"
+msgstr "Rinomina file"
 
 #: src/qml/PlayList.qml:241
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For all files"
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr "Per tutti i file"
+msgstr "Cestina file"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
