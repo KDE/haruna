@@ -273,6 +273,27 @@
     </ul>
   </description>
   <releases>
+    <release version="0.10.0" date="2023-01-02">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Playlist: added options to open m3u files (without support for extended attributes), add files and urls (only the url path will be displayed, no title and no duration), sort, clear and save the playlist</li>
+          <li>Playlist: added context menu for the playlist items</li>
+          <li>Playlist: added setting to remember playlist state</li>
+          <li>Subtitles: added setting to render subtitle in black borders</li>
+          <li>Video: added setting to set a default cover for music files</li>
+          <li>Added command line option to override the ytdl format selection setting (this option is overwritten if the GUI setting is changed)</li>
+          <li>Added MPRIS thumbnail</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Recent files: fixed ordering, showing duplicates, clearing and adding when list is full</li>
+          <li>Fixed OSD showing without text</li>
+          <li>Playlist: fixed "Increase font size when fullscreen" setting not working</li>
+          <li>Playlist: removed rowHeight setting</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.3" date="2022-10-06">
       <description>
         <p>Bugfixes:</p>
