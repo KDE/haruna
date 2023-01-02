@@ -173,6 +173,7 @@ void MpvItem::initProperties()
     setProperty("screenshot-template", VideoSettings::screenshotTemplate());
     setProperty("screenshot-format", VideoSettings::screenshotFormat());
 
+    setProperty("audio-client-name", "haruna");
     const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
     setProperty("aid", preferredAudioTrack == 0 ? "auto" : preferredAudioTrack);
     setProperty("alang", AudioSettings::preferredLanguage());
