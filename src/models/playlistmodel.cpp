@@ -157,7 +157,8 @@ void PlayListModel::appendItem(QString path)
     } else {
         if (path.startsWith("http")) {
             item = new PlayListItem(path, this);
-            getHttpItemInfo(path, row);
+            // causes issues with lots of links
+            // getHttpItemInfo(path, row);
         }
     }
 
