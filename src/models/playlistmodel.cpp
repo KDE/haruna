@@ -234,6 +234,10 @@ void PlayListModel::clear()
 
 void PlayListModel::openM3uFile(const QString &path)
 {
+    if (Application::mimeType(path) != QStringLiteral("audio/x-mpegurl")) {
+        return;
+    }
+
     QUrl playlistUrl(path);
     QFile m3uFile(playlistUrl.toString(QUrl::PreferLocalFile));
     if (!m3uFile.open(QFile::ReadOnly)) {
