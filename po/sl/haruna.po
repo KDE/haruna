@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-24 00:48+0000\n"
+"POT-Creation-Date: 2023-01-03 00:46+0000\n"
 "PO-Revision-Date: 2022-12-23 07:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -43,9 +43,11 @@ msgid "A configurable media player."
 msgstr "Nastavljiv predvajalnik medijev."
 
 #: src/application.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "copyright statement"
+#| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
-msgid "(c) 2019-2021"
+msgid "(c) 2019-2023"
 msgstr "(c) 2019-2021"
 
 #: src/application.cpp:103
@@ -530,13 +532,7 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Predodeli"
 
-#: src/models/playlistmodel.cpp:201
-#, kde-format
-msgctxt "@info"
-msgid "No title found for url %1"
-msgstr "Ni najdenega naslova za  url %1"
-
-#: src/models/playlistmodel.cpp:366
+#: src/models/playlistmodel.cpp:371
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -1619,6 +1615,10 @@ msgstr "Nasičenost"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"
+
+#~ msgctxt "@info"
+#~ msgid "No title found for url %1"
+#~ msgstr "Ni najdenega naslova za  url %1"
 
 #~ msgctxt "@info reason for blocking sleep and screen slocking"
 #~ msgid "Playing video"
