@@ -100,13 +100,6 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
 void PlayListModel::getSiblingItems(QString path)
 {
     clear();
-    QUrl url{path};
-    bool isUrl = url.scheme().startsWith(QStringLiteral("http"));
-    if (!PlaylistSettings::loadSiblings() || isUrl) {
-        appendItem(path);
-        return;
-    }
-
     QUrl openedUrl(path);
     if (openedUrl.scheme().isEmpty()) {
         openedUrl.setScheme("file");
@@ -134,7 +127,7 @@ void PlayListModel::getSiblingItems(QString path)
         for (int i = 0; i < siblingFiles.count(); ++i) {
             auto item = new PlayListItem(siblingFiles.at(i), this);
             m_playlist.append(item);
-            if (url.toString(QUrl::PreferLocalFile) == siblingFiles.at(i)) {
+            if (openedUrl.toString(QUrl::PreferLocalFile) == siblingFiles.at(i)) {
                 setPlayingItem(i);
             }
             Q_EMIT itemAdded(i, item->filePath());
@@ -289,7 +282,13 @@ void PlayListModel::openFile(const QString &path)
             return;
         }
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-            getSiblingItems(path);
+            if (PlaylistSettings::loadSiblings()) {
+                getSiblingItems(path);
+            } else {
+                appendItem(path);
+                setPlayingItem(0);
+            }
+
             Q_EMIT opened(QFileInfo(path).fileName(), url.toString(QUrl::PreferLocalFile));
 
             GeneralSettings::setLastPlayedFile(path);
