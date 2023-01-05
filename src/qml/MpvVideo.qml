@@ -143,7 +143,7 @@ MpvItem {
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
         }
         if (playlistModel.getPlayingItem() + 1 < playList.playlistView.count) {
-            playlistModel.playNext()
+            appActions.playNextAction.trigger()
         } else {
             // Last file in playlist
             if (PlaylistSettings.repeat) {
