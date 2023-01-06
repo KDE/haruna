@@ -84,6 +84,10 @@ void RecentFilesModel::populate()
 
 void RecentFilesModel::addUrl(const QString &path, const QString &name)
 {
+    if (maxRecentFiles() == 0) {
+        return;
+    }
+
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     QUrl url(path);
     if (!url.isLocalFile() && url.scheme().isEmpty()) {
