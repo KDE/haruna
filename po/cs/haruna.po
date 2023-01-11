@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-06 00:46+0000\n"
-"PO-Revision-Date: 2022-11-04 16:03+0100\n"
+"PO-Revision-Date: 2023-01-05 11:44+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "vit@pelcak.org"
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr ""
+msgstr "Přehrávač médií Haruna"
 
 #: src/application.cpp:95
 #, kde-format
@@ -43,7 +43,7 @@ msgstr ""
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr ""
+msgstr "(c) 2019-2023"
 
 #: src/application.cpp:103
 #, kde-format
@@ -81,7 +81,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr ""
+msgstr "Přehrávání souboru média"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -682,7 +682,7 @@ msgstr "&Více"
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr ""
+msgstr "Vyberte barvu"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -919,32 +919,32 @@ msgstr ""
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Přidat ..."
 
 #: src/qml/PlayList.qml:105
 msgctxt "@action:button"
 msgid "File"
-msgstr ""
+msgstr "Soubor"
 
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "Seřadit"
 
 #: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "Název vzestupně"
 
 #: src/qml/PlayList.qml:134
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr ""
+msgstr "Název sestupně"
 
 #: src/qml/PlayList.qml:140
 msgctxt "@action:button"
@@ -964,12 +964,12 @@ msgstr "Vyprázdnit"
 #: src/qml/PlayList.qml:161
 msgctxt "@action:button"
 msgid "Save as"
-msgstr ""
+msgstr "Uložit jako"
 
 #: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "Otevřít odpovídající složku"
 
 #: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
@@ -984,17 +984,17 @@ msgstr ""
 #: src/qml/PlayList.qml:229
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr ""
+msgstr "Odstranit ze seznamu skladeb"
 
 #: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr ""
+msgstr "Přejmenovat soubor"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr ""
+msgstr "Přesunout soubor do koše"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1012,7 +1012,7 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:49
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
-msgstr ""
+msgstr "Nepoužívat mezery."
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
@@ -1058,12 +1058,12 @@ msgstr "přidat hlasitost +10"
 #: src/qml/Settings/EditCustomCommand.qml:56
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr ""
+msgstr "Zpráva OSD"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
-msgstr ""
+msgstr "Název souboru: ${nazev_souboru}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
 msgctxt "@label"
@@ -1098,7 +1098,7 @@ msgstr "&Uložit"
 #: src/qml/Settings/GeneralSettings.qml:30
 msgctxt "@label:spinbox"
 msgid "Osd font size"
-msgstr ""
+msgstr "Velikost písma OSD"
 
 #: src/qml/Settings/GeneralSettings.qml:56
 msgctxt "@label:textbox"
@@ -1458,7 +1458,7 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
 msgid "Styling"
-msgstr ""
+msgstr "Styl"
 
 #: src/qml/Settings/SubtitlesSettings.qml:97
 msgctxt "@label:listbox"
@@ -1495,17 +1495,17 @@ msgstr "Barva písma"
 #: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr ""
+msgstr "Obnovit výchozí hodnotu"
 
 #: src/qml/Settings/SubtitlesSettings.qml:211
 msgctxt "@label:textbox"
 msgid "Shadow color"
-msgstr ""
+msgstr "Barva stínu"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
-msgstr ""
+msgstr "Posun stínu"
 
 #: src/qml/Settings/SubtitlesSettings.qml:265
 #: src/qml/Settings/SubtitlesSettings.qml:325
@@ -1516,7 +1516,7 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:270
 msgctxt "@label:textbox"
 msgid "Border color"
-msgstr ""
+msgstr "Barva ohraničení"
 
 #: src/qml/Settings/SubtitlesSettings.qml:309
 msgctxt "@label:spinbox"
@@ -1526,12 +1526,12 @@ msgstr "Šířka okraje"
 #: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "Výchozí obal"
 
 #: src/qml/Settings/VideoSettings.qml:36
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr ""
+msgstr "cesta k obrázku"
 
 #: src/qml/Settings/VideoSettings.qml:44
 msgctxt "@info:tooltip"
@@ -1543,17 +1543,17 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title"
 msgid "Screenshots"
-msgstr ""
+msgstr "Obrázky"
 
 #: src/qml/Settings/VideoSettings.qml:80
 msgctxt "@label:listbox"
 msgid "Format"
-msgstr ""
+msgstr "Formát"
 
 #: src/qml/Settings/VideoSettings.qml:116
 msgctxt "@label:textbox"
 msgid "Template"
-msgstr ""
+msgstr "Šablona"
 
 #: src/qml/Settings/VideoSettings.qml:132
 msgctxt "@title"
@@ -1568,17 +1568,17 @@ msgstr "Kontrast"
 #: src/qml/Settings/VideoSettings.qml:159
 msgctxt "@label:slider"
 msgid "Brightness"
-msgstr ""
+msgstr "Jas"
 
 #: src/qml/Settings/VideoSettings.qml:176
 msgctxt "@label:slider"
 msgid "Gamma"
-msgstr ""
+msgstr "Gama"
 
 #: src/qml/Settings/VideoSettings.qml:193
 msgctxt "@label:slider"
 msgid "Saturation"
-msgstr ""
+msgstr "Nasycení"
 
 #: src/qml/Settings/VideoSettings.qml:207
 msgctxt "@info"
