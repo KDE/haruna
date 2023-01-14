@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# Wantoyèk <wantoyek@gmail.com>, 2022.
+# Wantoyèk <wantoyek@gmail.com>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-06 00:46+0000\n"
-"PO-Revision-Date: 2022-11-27 13:27+0700\n"
+"PO-Revision-Date: 2023-01-13 08:26+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -28,28 +28,22 @@ msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Haruna Pemutar Video"
+msgstr "Haruna Pemutar Media"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Sebuah pemutar video yang dapat dikonfigurasi"
+msgstr "Sebuah pemutar media yang dapat dikonfigurasi"
 
 #: src/application.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "(c) 2019-2021"
+msgstr "(c) 2019-2023"
 
 #: src/application.cpp:103
 #, kde-format
@@ -86,12 +80,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr "videobagus+audiobagus/bagus"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Putar file selanjutnya"
+msgstr "Memutar file media"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -919,30 +911,21 @@ msgid "Could not play: %1"
 msgstr "Tidak bisa memutar: %1"
 
 #: src/qml/PlayList.qml:81
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
-msgstr "&Tambah"
+msgstr "Tambah"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "Playlist"
+msgstr "Buka playlist"
 
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Tambah ..."
 
 #: src/qml/PlayList.qml:105
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "File"
@@ -950,93 +933,72 @@ msgstr "File"
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "Urutkan"
 
 #: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "Nama menaik"
 
 #: src/qml/PlayList.qml:134
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Hardware decoding"
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr "Dekoding perangkat keras"
+msgstr "Nama menurun"
 
 #: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "Durasi menaik"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "Set Ulang Saturasi"
+msgstr "Durasi menurun"
 
 #: src/qml/PlayList.qml:153
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Clear List"
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Bersihkan Daftar"
+msgstr "Bersihkan"
 
 #: src/qml/PlayList.qml:161
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "Simpan perubahan"
+msgstr "Simpan sebagai"
 
 #: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "Buka folder yang mengandungnya"
 
 #: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "Salin nama file"
 
 #: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr ""
+msgstr "Salin alur file"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Playlist"
+msgstr "Singkirkan dari playlist"
 
 #: src/qml/PlayList.qml:235
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr "Pilih file"
+msgstr "Ubah nama file"
 
 #: src/qml/PlayList.qml:241
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For all files"
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr "Untuk semua file"
+msgstr "File sampah"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1505,7 +1467,7 @@ msgstr "Bantuan"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "Izinkan subtitel dalam bingkai hitam"
 
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@info:tooltip"
@@ -1513,6 +1475,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"Ketika dicentang, subtitel bisa dirender di luar video, dalam bingkai hitam. "
+"Kemungkinan tidak manjur untuk semua subtitel .ass."
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
