@@ -75,10 +75,7 @@ target_link_libraries(haruna PRIVATE
     KF5::FileMetaData
     KF5::I18n
     KF5::IconThemes
-    KF5::KIOCore
-    KF5::KIOFileWidgets
     KF5::KIOWidgets
-    KF5::KIONTLM
     KF5::Kirigami2
     KF5::ConfigWidgets
 
