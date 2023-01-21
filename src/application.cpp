@@ -267,9 +267,14 @@ bool Application::isYoutubePlaylist(const QString &path)
 
 QString Application::formatTime(const double time)
 {
-    QTime t(0, 0, 0);
-    QString formattedTime = t.addSecs(static_cast<qint64>(time)).toString("hh:mm:ss");
-    return formattedTime;
+    int totalNumberOfSeconds = static_cast<int>(time);
+    int seconds = totalNumberOfSeconds % 60;
+    int minutes = (totalNumberOfSeconds / 60) % 60;
+    int hours = (totalNumberOfSeconds / 60 / 60);
+
+    QString timeString = QString("%1:%2:%3").arg(hours, 2, 10, QChar('0')).arg(minutes, 2, 10, QChar('0')).arg(seconds, 2, 10, QChar('0'));
+
+    return timeString;
 }
 
 QString Application::argument(int key)
