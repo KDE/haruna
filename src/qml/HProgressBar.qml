@@ -17,7 +17,7 @@ Slider {
     id: root
 
     property alias loopIndicator: loopIndicator
-    property var chapters
+    property var chapters: []
     property bool seekStarted: false
 
     from: 0
@@ -79,9 +79,8 @@ Slider {
                     mpv.chapter = nextChapter
                 }
                 if (mouse.button === Qt.RightButton && root.chapters.length > 0) {
-                    const menuX = mouse.x-chaptersMenu.width * 0.5
-                    const menuY = -((chaptersMenu.count - 1) * chaptersMenu.menuItemHeight + 15)
-                    chaptersMenu.popup(root, menuX, menuY)
+                    chaptersPopup.x = mouseX - chaptersPopup.width * 0.5
+                    chaptersPopup.open()
                 }
             }
 
@@ -166,54 +165,66 @@ Slider {
         }
     }
 
-    Menu {
-        id: chaptersMenu
+    Popup {
+        id: chaptersPopup
 
-        property int menuItemHeight
+        property int itemHeight
         property var checkedItem
 
-        width: 0
-        modal: true
-
-        MenuSeparator {}
-
-        MenuItem {
-            id: skipChaptersMenuItem
-            text: i18nc("@action:inmenu", "Skip Chapters")
-            checkable: true
-            checked: PlaybackSettings.skipChapters
-            onCheckedChanged: {
-                PlaybackSettings.skipChapters = checked
-                PlaybackSettings.save()
-            }
+        y: -height - root.height
+        width: Kirigami.Units.gridUnit * 14
+        height: itemHeight * root.chapters.length + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
+                ? mpv.height - Kirigami.Units.gridUnit
+                : itemHeight * root.chapters.length + listViewPage.footer.height
+        padding: 0
+        onOpened: {
+            listView.positionViewAtIndex(checkedItem, ListView.Beginning)
         }
 
-        Instantiator {
-            model: root.chapters
-            delegate: MenuItem {
-                id: menuitem
+        Kirigami.ScrollablePage {
+            id: listViewPage
 
-                checkable: true
-                checked: index === chaptersMenu.checkedItem
-                text: `${app.formatTime(modelData.time)} - ${modelData.title}`
-                Component.onCompleted: {
-                    chaptersMenu.width = menuitem.width > chaptersMenu.width
-                            ? menuitem.width
-                            : chaptersMenu.width
-                    chaptersMenu.menuItemHeight = height
+            padding: 0
+
+            anchors.fill: parent
+            footer: ToolBar {
+                z: 100
+                width: parent.width
+                CheckBox {
+                    text: i18nc("@action:inmenu", "Skip Chapters")
+                    checked: PlaybackSettings.skipChapters
+                    width: listViewPage.width
+                    onCheckedChanged: {
+                        PlaybackSettings.skipChapters = checked
+                        PlaybackSettings.save()
+                    }
                 }
-                onClicked: mpv.chapter = index
             }
-            onObjectAdded: chaptersMenu.insertItem(index, object)
-            onObjectRemoved: chaptersMenu.removeItem(object)
+
+            ListView {
+                id: listView
+
+                width: parent.width - 20
+                model: root.chapters
+                delegate: CheckDelegate {
+                    text: `${app.formatTime(modelData.time)} - ${modelData.title}`
+                    checked: index === chaptersPopup.checkedItem
+                    width: listViewPage.width
+                    onClicked: {
+                        chaptersPopup.close()
+                        mpv.chapter = index
+                    }
+                    Component.onCompleted: chaptersPopup.itemHeight = height
+                }
+            }
         }
     }
 
     Connections {
         target: mpv
-        onFileLoaded: chapters = mpv.getProperty("chapter-list")
+        onFileLoaded: root.chapters = mpv.getProperty("chapter-list")
         onChapterChanged: {
-            chaptersMenu.checkedItem = mpv.chapter
+            chaptersPopup.checkedItem = mpv.chapter
         }
         onPositionChanged: {
             if (!root.seekStarted) {
