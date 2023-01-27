@@ -252,7 +252,7 @@ void PlayListModel::openM3uFile(const QString &path)
             item = url.toString(QUrl::PreferLocalFile);
         } else {
             // figure out if it's a relative path
-            item = QUrl::fromUserInput(line, QFileInfo(path).absolutePath()).toString(QUrl::PreferLocalFile);
+            item = QUrl::fromUserInput(line, QFileInfo(m3uFile).absolutePath()).toString(QUrl::PreferLocalFile);
         }
         appendItem(item);
         if (item == QUrl(GeneralSettings::lastPlayedFile()).toString(QUrl::PreferLocalFile)) {
