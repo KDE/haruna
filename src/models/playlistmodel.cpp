@@ -111,7 +111,10 @@ void PlayListModel::getSiblingItems(QString path)
         while (it.hasNext()) {
             QString siblingFile = it.next();
             QFileInfo siblingFileInfo(siblingFile);
-            QUrl siblingUrl(siblingFile);
+            // toPercentEncoding() is needed to get the correct mime type
+            // for files containing the # character and probably other characters too
+            // if the mime type is wrong the file will be ignored
+            QUrl siblingUrl(siblingFile.toUtf8().toPercentEncoding());
             siblingUrl.setScheme(openedUrl.scheme());
             QString mimeType = Application::mimeType(siblingUrl);
             if (siblingFileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) && mimeType != QStringLiteral("audio/x-mpegurl")) {
