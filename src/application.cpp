@@ -296,8 +296,11 @@ QString Application::getFileContent(const QString &file)
     return content;
 }
 
-QString Application::mimeType(const QUrl &url)
+QString Application::mimeType(QUrl url)
 {
+    if (url.scheme().isEmpty()) {
+        url.setScheme(QStringLiteral("file"));
+    }
     KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
     return fileItem.mimetype();
 }
