@@ -1,16 +1,16 @@
 # Translation for haruna.po to Euskara/Basque (eu).
-# Copyright (C) 2021-2022, This file is copyright:
+# Copyright (C) 2021-2023 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-30 00:56+0000\n"
-"PO-Revision-Date: 2022-09-12 07:01+0200\n"
+"PO-Revision-Date: 2023-01-31 22:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,43 +31,37 @@ msgid "Your emails"
 msgstr "xalba@ni.eus"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Haruna bideo jotzailea"
+msgstr "Haruna euskarri jotzailea"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Bideo jotzaile konfiguragarria."
+msgstr "Euskarri jotzaile konfiguragarri bat."
 
 #: src/application.cpp:97
-#, fuzzy, kde-format
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "(c) 2019-2021"
+msgstr "(c) 2019-2023"
 
 #: src/application.cpp:103
-#, fuzzy, kde-format
-#| msgid "George Florea Bănuș"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
 #: src/application.cpp:104
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Garatzailea"
 
 #: src/application.cpp:115
-#, fuzzy, kde-format
-#| msgid "File to open"
+#, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Ireki beharreko fitxategia"
@@ -79,878 +73,705 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"Baimendu «ytdl» formatuko hautapen ezarpenak denbora batez gainezartzen. "
+"Ezarpena GUI bidez aldatzen bada gainidatzi egingo da."
 
 #: src/application.cpp:122
-#, fuzzy, kde-format
-#| msgid "bestvideo+bestaudio/best"
+#, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bideorikonena+audiorikonena/onena"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Jo hurrengo fitxategia"
+msgstr "Euskarri fitxategia jotzen"
 
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "About Haruna"
-msgstr "Haruna-ri buruz"
+msgstr "«Haruna»ri buruz"
 
 #: src/models/actionsmodel.cpp:29
-#, fuzzy, kde-format
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "Audio-zikloa gorantz"
 
 #: src/models/actionsmodel.cpp:36
-#, fuzzy, kde-format
-#| msgid "Audio Cycle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "Audio-zikloa beherantz"
 
 #: src/models/actionsmodel.cpp:43
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "Konfiguratu"
 
 #: src/models/actionsmodel.cpp:50
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard Shortcuts"
+#, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Konfiguratu teklatuko lasterbideak"
 
 #: src/models/actionsmodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Exit Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Irten pantaila-osotik"
 
 #: src/models/actionsmodel.cpp:64
-#, fuzzy, kde-format
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
-msgstr "Fotograma urrats bat aurrerantz"
+msgstr "Fotograma urratsa aurrerantz"
 
 #: src/models/actionsmodel.cpp:72
-#, fuzzy, kde-format
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
-msgstr "Fotograma urrats bat atzerantz"
+msgstr "Fotograma urratsa atzerantz"
 
 #: src/models/actionsmodel.cpp:80
-#, fuzzy, kde-format
-#| msgid "Load Last Played File"
+#, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "Zamatu jotako azken fitxategia"
 
 #: src/models/actionsmodel.cpp:87
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Isilarazi"
 
 #: src/models/actionsmodel.cpp:94
-#, fuzzy, kde-format
-#| msgid "Open Context Menu"
+#, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "Ireki testuinguru-menua"
 
 #: src/models/actionsmodel.cpp:98
-#, fuzzy, kde-format
-#| msgid ""
-#| "Opens and closes the context menu at the position of the mouse pointer"
+#, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr "Testuinguru menua sagu erakuslearen kokalekuak ireki eta ixten du"
+msgstr "Testuinguru menua sagu erakuslearen kokalekuan ireki eta ixten du"
 
 #: src/models/actionsmodel.cpp:102
-#, fuzzy, kde-format
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Ireki fitxategia"
 
 #: src/models/actionsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgid "Add external subtitle…"
+#, kde-format
 msgctxt "@action"
 msgid "Add external subtitle…"
 msgstr "Gehitu kanpoko azpidatzia..."
 
 #: src/models/actionsmodel.cpp:116
-#, fuzzy, kde-format
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open Url"
-msgstr "Ireki URLa"
+msgstr "Ireki URL"
 
 #: src/models/actionsmodel.cpp:123
-#, fuzzy, kde-format
-#| msgid "Playback speed increase"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed increase"
 msgstr "Atzera-jotze abiadura handitzea"
 
 #: src/models/actionsmodel.cpp:130
-#, fuzzy, kde-format
-#| msgid "Playback speed decrease"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed decrease"
 msgstr "Atzera-jotze abiadura gutxitzea"
 
 #: src/models/actionsmodel.cpp:137
-#, fuzzy, kde-format
-#| msgid "Playback speed reset"
+#, kde-format
 msgctxt "@action"
 msgid "Playback speed reset"
 msgstr "Atzera-jotze abiadura berrezartzea"
 
 #: src/models/actionsmodel.cpp:144
-#, fuzzy, kde-format
-#| msgid "Play/Pause"
+#, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
-msgstr "Jotzea/Etenaldia"
+msgstr "Jo/Eten"
 
 #: src/models/actionsmodel.cpp:151
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgctxt "@action"
 msgid "Play Next"
-msgstr "Hurrengoa jo"
+msgstr "Jo hurrengoa"
 
 #: src/models/actionsmodel.cpp:158
-#, fuzzy, kde-format
-#| msgid "Play Previous"
+#, kde-format
 msgctxt "@action"
 msgid "Play Previous"
-msgstr "Aurrekoa jo"
+msgstr "Jo aurrekoa"
 
 #: src/models/actionsmodel.cpp:165
-#, fuzzy, kde-format
-#| msgid "Quit"
+#, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Irten"
 
 #: src/models/actionsmodel.cpp:172
-#, fuzzy, kde-format
-#| msgid "Restart Playback"
+#, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Berrekin atzera-jotzea"
 
 #: src/models/actionsmodel.cpp:179
-#, fuzzy, kde-format
-#| msgid "Seek Small Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "Bilatu urrats txikia aurrerantz"
 
 #: src/models/actionsmodel.cpp:186
-#, fuzzy, kde-format
-#| msgid "Seek Small Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Bilatu urrats txikia atzerantz"
 
 #: src/models/actionsmodel.cpp:193
-#, fuzzy, kde-format
-#| msgid "Seek Medium Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "Bilatu urrats ertaina aurrerantz"
 
 #: src/models/actionsmodel.cpp:200
-#, fuzzy, kde-format
-#| msgid "Seek Medium Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Bilatu urrats ertaina atzerantz"
 
 #: src/models/actionsmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid "Seek Big Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "Bilatu urrats handia aurrerantz"
 
 #: src/models/actionsmodel.cpp:214
-#, fuzzy, kde-format
-#| msgid "Seek Big Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Bilatu urrats handia atzerantz"
 
 #: src/models/actionsmodel.cpp:221
-#, fuzzy, kde-format
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "Bilatu hurrengo atala"
 
 #: src/models/actionsmodel.cpp:228
-#, fuzzy, kde-format
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "Bilatu aurreko atala"
 
 #: src/models/actionsmodel.cpp:235
-#, fuzzy, kde-format
-#| msgid "Seek To Next Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Bilatu hurrengo azpidatzia"
 
 #: src/models/actionsmodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "Seek To Previous Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Bilatu aurreko azpidatzia"
 
 #: src/models/actionsmodel.cpp:249
-#, fuzzy, kde-format
-#| msgid "Seek To Watch Later Position"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Bilatu Ikusi beranduago kokalekua"
 
 #: src/models/actionsmodel.cpp:256
-#, fuzzy, kde-format
-#| msgid "Set Loop"
+#, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Ezarri begizta"
 
 #: src/models/actionsmodel.cpp:263
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Pantaila-argazkia"
 
 #: src/models/actionsmodel.cpp:270
-#, fuzzy, kde-format
-#| msgid "Subtitle Toggle"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "Azpidatziak txandakatzea"
 
 #: src/models/actionsmodel.cpp:277
-#, fuzzy, kde-format
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "Azpidatzien letra-tipoa handiagotu"
 
 #: src/models/actionsmodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "Azpidatzien letra-tipoa txikiagotu"
 
 #: src/models/actionsmodel.cpp:291
-#, fuzzy, kde-format
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
-msgstr "Azpidatzia eraman goraka"
+msgstr "Azpidatzia gora eraman"
 
 #: src/models/actionsmodel.cpp:298
-#, fuzzy, kde-format
-#| msgid "Subtitle Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
-msgstr "Azpidatzia eraman beheraka"
+msgstr "Azpidatzia behera eraman"
 
 #: src/models/actionsmodel.cpp:305
-#, fuzzy, kde-format
-#| msgid "Subtitle Quicken"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "Azpidatziak bizkortzea"
 
 #: src/models/actionsmodel.cpp:312
-#, fuzzy, kde-format
-#| msgid "Subtitle Delay"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "Azpidatziak atzeratzea"
 
 #: src/models/actionsmodel.cpp:319
-#, fuzzy, kde-format
-#| msgid "Subtitle Cycle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "Azpidatzi-zikloa gorantz"
 
 #: src/models/actionsmodel.cpp:326
-#, fuzzy, kde-format
-#| msgid "Subtitle Cycle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "Azpidatzi-zikloa beherantz"
 
 #: src/models/actionsmodel.cpp:333
-#, fuzzy, kde-format
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr "Txandakatu gurutzelarkagetzea"
+msgstr "Txandakatu Gurutzelarkagetzea"
 
 #: src/models/actionsmodel.cpp:340
-#, fuzzy, kde-format
-#| msgid "Toggle Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
-msgstr "Txandakatu pantaila-osoa"
+msgstr "Txandakatu Pantaila-osoa"
 
 #: src/models/actionsmodel.cpp:347
-#, fuzzy, kde-format
-#| msgid "Toggle Menu Bar"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
-msgstr "Txandakatu menu-barra"
+msgstr "Txandakatu Menu-barra"
 
 #: src/models/actionsmodel.cpp:354
-#, fuzzy, kde-format
-#| msgid "Toggle Header"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
-msgstr "Txandakatu goiburua"
+msgstr "Txandakatu Goiburua"
 
 #: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:92
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
 #: src/models/actionsmodel.cpp:368
-#, fuzzy, kde-format
-#| msgid "Video pan x left"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan x left"
 msgstr "Bideo panorama x ezkerrera"
 
 #: src/models/actionsmodel.cpp:375
-#, fuzzy, kde-format
-#| msgid "Video pan x right"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan x right"
 msgstr "Bideo panorama x eskuinera"
 
 #: src/models/actionsmodel.cpp:382
-#, fuzzy, kde-format
-#| msgid "Video pan y up"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan y up"
 msgstr "Bideo panorama y gora"
 
 #: src/models/actionsmodel.cpp:389
-#, fuzzy, kde-format
-#| msgid "Video pan y down"
+#, kde-format
 msgctxt "@action"
 msgid "Video pan y down"
 msgstr "Bideo panorama y behera"
 
 #: src/models/actionsmodel.cpp:396
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Up"
-msgstr "Bolumena handitu"
+msgstr "Bolumena igo"
 
 #: src/models/actionsmodel.cpp:403
-#, fuzzy, kde-format
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Down"
-msgstr "Bolumena gutxitu"
+msgstr "Bolumena jaitsi"
 
 #: src/models/actionsmodel.cpp:410
-#, fuzzy, kde-format
-#| msgid "Zoom In"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Zooma gerturatu"
 
 #: src/models/actionsmodel.cpp:417
-#, fuzzy, kde-format
-#| msgid "Zoom Out"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Zooma urrundu"
 
 #: src/models/actionsmodel.cpp:424
-#, fuzzy, kde-format
-#| msgid "Zoom Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "Zooma berrezarri"
 
 #: src/models/actionsmodel.cpp:431
-#, fuzzy, kde-format
-#| msgid "Contrast Up"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "Kontrastea handitu"
 
 #: src/models/actionsmodel.cpp:438
-#, fuzzy, kde-format
-#| msgid "Contrast Down"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "Kontrastea gutxitu"
 
 #: src/models/actionsmodel.cpp:445
-#, fuzzy, kde-format
-#| msgid "Contrast Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "Kontrastea berrezarri"
 
 #: src/models/actionsmodel.cpp:452
-#, fuzzy, kde-format
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "Distira handitu"
 
 #: src/models/actionsmodel.cpp:459
-#, fuzzy, kde-format
-#| msgid "Brightness Down"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "Distira gutxitu"
 
 #: src/models/actionsmodel.cpp:466
-#, fuzzy, kde-format
-#| msgid "Brightness Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "Distira berrezarri"
 
 #: src/models/actionsmodel.cpp:473
-#, fuzzy, kde-format
-#| msgid "Gamma Up"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "Gamma handitu"
 
 #: src/models/actionsmodel.cpp:480
-#, fuzzy, kde-format
-#| msgid "Gamma Down"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "Gamma gutxitu"
 
 #: src/models/actionsmodel.cpp:487
-#, fuzzy, kde-format
-#| msgid "Gamma Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "Gamma berrezarri"
 
 #: src/models/actionsmodel.cpp:494
-#, fuzzy, kde-format
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "Asetasuna handitu"
 
 #: src/models/actionsmodel.cpp:501
-#, fuzzy, kde-format
-#| msgid "Saturation Down"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "Asetasuna gutxitu"
 
 #: src/models/actionsmodel.cpp:508
-#, fuzzy, kde-format
-#| msgid "Saturation Reset"
+#, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "Asetasuna berrezarri"
 
 #: src/models/actionsmodel.cpp:651
-#, fuzzy, kde-format
-#| msgid ""
-#| "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
-#| "<br><br>Do you want to reassign the shortcut?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
 "Hautatutako lasterbideak <b>%1</b> ekintzako lasterbidearekin gatazka du. "
-"<br><br>Lasterbidea berriz esleitu nahi duzu?"
+"<br><br>Lasterbidea berresleitu nahi duzu?"
 
 #: src/models/actionsmodel.cpp:657
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "Berriz esleitu"
+msgstr "Berresleitu"
 
 #: src/models/playlistmodel.cpp:373
-#, fuzzy, kde-format
-#| msgid "Playlist is empty"
+#, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Jotze-zerrenda hutsik dago"
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
-#, fuzzy
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Audioa: %1 %2"
 
 #: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
-#, fuzzy
-#| msgid "Playback speed: %1"
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Atzera-jotzeko abiadura: %1"
 
 #: src/qml/Actions.qml:218
-#, fuzzy
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Begizta hasi: %1"
 
 #: src/qml/Actions.qml:222
-#, fuzzy
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Begizta: %1 - %2"
 
 #: src/qml/Actions.qml:228
-#, fuzzy
-#| msgid "Loop cleared"
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Begizta garbitu da"
 
 #: src/qml/Actions.qml:236 src/qml/Actions.qml:241
-#, fuzzy
-#| msgid "Subtitle timing: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Azpidatzien erritmoa: %1"
 
 #: src/qml/Actions.qml:246
-#, fuzzy
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Azpidatziak itzalita"
 
 #: src/qml/Actions.qml:246
-#, fuzzy
-#| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Azpidatziak piztu"
+msgstr "Azpidatziak piztuta"
 
 #: src/qml/Actions.qml:255 src/qml/Actions.qml:267
-#, fuzzy
-#| msgid "Subtitle: None"
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Azpidatzia: Bat ere ez"
 
 #: src/qml/Actions.qml:259 src/qml/Actions.qml:271
-#, fuzzy
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Azpidatzia: %1 %2"
 
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:282
-#, fuzzy
-#| msgid "Subtitle scale: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr "Azpidatziaren neurria: %1"
+msgstr "Azpidatziaren eskala: %1"
 
 #: src/qml/Actions.qml:291
-#, fuzzy
-#| msgid "Deinterlace: %1"
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Gurutzelarkagetzea: %1"
 
 #: src/qml/Actions.qml:336 src/qml/Actions.qml:341
-#, fuzzy
-#| msgid "Volume: %1"
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Bolumena: %1"
 
 #: src/qml/Actions.qml:347 src/qml/Actions.qml:353
-#, fuzzy
-#| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zooma: %1"
 
 #: src/qml/Actions.qml:358
-#, fuzzy
-#| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zooma: 0"
 
 #: src/qml/Actions.qml:365 src/qml/Actions.qml:371
-#, fuzzy
-#| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrastea: %1"
 
 #: src/qml/Actions.qml:376
-#, fuzzy
-#| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrastea: 0"
 
 #: src/qml/Actions.qml:382 src/qml/Actions.qml:388
-#, fuzzy
-#| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Distira: %1"
 
 #: src/qml/Actions.qml:393
-#, fuzzy
-#| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Distira: 0"
 
 #: src/qml/Actions.qml:399 src/qml/Actions.qml:405
-#, fuzzy
-#| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
 #: src/qml/Actions.qml:410
-#, fuzzy
-#| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
 #: src/qml/Actions.qml:416 src/qml/Actions.qml:422
-#, fuzzy
-#| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Asetasuna: %1"
 
 #: src/qml/Actions.qml:427
-#, fuzzy
-#| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Asetasuna: 0"
 
 #: src/qml/Footer.qml:67
-#, fuzzy
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Hasi atzera-jotzen"
 
 #: src/qml/Footer.qml:67
-#, fuzzy
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
-msgstr "Etenaldia atzera-jotzean"
+msgstr "Eten atzera-jotzea"
 
 #: src/qml/Footer.qml:80
-#, fuzzy
-#| msgid "Play previous file"
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Jo aurreko fitxategi"
 
 #: src/qml/Footer.qml:93
-#, fuzzy
-#| msgid "Play next file"
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Jo hurrengo fitxategia"
 
 #: src/qml/Footer.qml:107
-#, fuzzy
-#| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Gainerakoa: %1"
 
 #: src/qml/HamburgerMenu.qml:51
-#, fuzzy
-#| msgid "Recent Files"
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Azken aldiko fitxategiak"
 
 #: src/qml/HamburgerMenu.qml:80
-#, fuzzy
-#| msgid "&More"
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Gehiago"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:38
-#, fuzzy
-#| msgid "Select a color"
 msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Hautatu kolore bat"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
-#, fuzzy
-#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgctxt "@info"
 msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgstr "Ez du aurkitu <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
-#, fuzzy
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Klik bikoitza ekintza ezartzeko"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:65
-#, fuzzy
-#| msgid "Clear current action"
 msgctxt "@action:button"
 msgid "Clear current action"
 msgstr "Garbitu uneko ekintza"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:25
-#, fuzzy
-#| msgid "Help"
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "Laguntza"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
-#, fuzzy
-#| msgid "Haruna help window (english only)"
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
-msgstr "Haruna, laguntza leihoa (ingesesez bakarrik)"
+msgstr "Haruna, laguntza leihoa (ingelesez bakarrik)"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:33
-#, fuzzy
-#| msgid "Haruna handbook"
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
-msgstr "Haruna-ren eskuliburua"
+msgstr "«Haruna»ren eskuliburua"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:39
-#, fuzzy
-#| msgid "Open config ..."
 msgctxt "@action:intoolbar"
 msgid "Open config ..."
 msgstr "Ireki konfigurazioa ..."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy
-#| msgid "File"
 msgctxt "@action:inmenu"
 msgid "File"
 msgstr "Fitxategia"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, fuzzy
-#| msgid "Folder"
 msgctxt "@action:inmenu"
 msgid "Folder"
 msgstr "Karpeta"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:27
-#, fuzzy
-#| msgid "Load subtitles from"
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Zamatu azpidatziak hemendik"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:102
-#, fuzzy
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Berretsi ezabatzea"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
-#, fuzzy
-#| msgid "Delete this folder from list"
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Ezabatu karpeta hau zerrendatik"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:134
-#, fuzzy
-#| msgid "Save changes"
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Gorde aldaketak"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:156
-#, fuzzy
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Gehitu karpeta berria"
 
 #: src/qml/Header.qml:73
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Azpidatziak"
 
 #: src/qml/Header.qml:106
-#, fuzzy
-#| msgid "Audio"
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audioa"
 
 #: src/qml/HProgressBar.qml:194
-#, fuzzy
-#| msgid "Skip Chapters"
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Saihestu atalak"
@@ -961,218 +782,162 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 msgstr ""
+"Hitz/karaktere jaki batzuk dituzten atalak automatikoki saihesten ditu.\n"
+"Markatu 'Atzera-Jotze' ezarpena xehetasun gehiagorako"
 
 #: src/qml/main.qml:30
-#, fuzzy
-#| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/main.qml:201 src/qml/PlayList.qml:306
 #: src/qml/Settings/VideoSettings.qml:59
-#, fuzzy
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"
 
 #: src/qml/main.qml:229
-#, fuzzy
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Hautatu azpidatzi-fitxategia"
 
 #: src/qml/main.qml:247
-#, fuzzy
-#| msgid "Open"
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ireki"
 
 #: src/qml/Menus/AudioMenu.qml:14 src/qml/Menus/Global/GlobalAudioMenu.qml:15
-#, fuzzy
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&Audioa"
 
 #: src/qml/Menus/AudioMenu.qml:19 src/qml/Menus/Global/GlobalAudioMenu.qml:20
-#, fuzzy
-#| msgid "&Primary Track"
 msgctxt "@title:menu"
 msgid "&Primary Track"
 msgstr "Pista na&gusia"
 
 #: src/qml/Menus/ContextMenu.qml:19
-#, fuzzy
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback speed"
-msgstr "Atzera-jotzeko abiadura"
+msgstr "Atzera-jotze abiadura"
 
 #: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
-#, fuzzy
-#| msgid "&File"
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&Fitxategia"
 
 #: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
-#, fuzzy
-#| msgid "Recent Files"
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Azken aldiko fitxategiak"
 
 #: src/qml/Menus/FileMenu.qml:38
-#, fuzzy
-#| msgid "Clear List"
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Garbitu zerrenda"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
-#, fuzzy
-#| msgid "&Help"
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&Laguntza"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, fuzzy
-#| msgid "&Playback"
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "Atzera-&jotzea"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
-#, fuzzy
-#| msgid "Seek"
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Bilatu"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
-#, fuzzy
-#| msgid "&Settings"
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "E&zarpenak"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
-#, fuzzy
-#| msgid "&Subtitles"
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "A&zpidatziak"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:19
-#, fuzzy
-#| msgid "Primary Subtitle"
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Lehen mailako azpidatzia"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:39
-#, fuzzy
-#| msgid "Secondary Subtitle"
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Bigarren mailako azpidatzia"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
-#, fuzzy
-#| msgid "&Video"
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "&Bideoa"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
-#, fuzzy
-#| msgid "Adjustments"
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "Doikuntzak"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
-#, fuzzy
-#| msgid "&View"
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "&Ikuspegia"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy
-#| msgid "Hide Menubar"
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
-msgstr "Ezkutatu menu-barra"
+msgstr "Ezkutatu Menu-barra"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy
-#| msgid "Show Menubar"
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
-msgstr "Erakutsi menu-barra"
+msgstr "Erakutsi Menu-barra"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy
-#| msgid "Hide Toolbar"
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
-msgstr "Ezkutatu tresna-barra"
+msgstr "Ezkutatu Tresna-barra"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy
-#| msgid "Show Toolbar"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
-msgstr "Erakutsi tresna-barra"
+msgstr "Erakutsi Tresna-barra"
 
 #: src/qml/MpvVideo.qml:126
-#, fuzzy
-#| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Saihestutako atala: %1"
 
 #: src/qml/MpvVideo.qml:143
-#, fuzzy
-#| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ezin izan du jo: %1"
 
 #: src/qml/PlayList.qml:81
-#, fuzzy
-#| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
-msgstr "&Gehitu"
+msgstr "Gehitu"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "Jotze-zerrenda"
+msgstr "Ireki jotze-zerrenda"
 
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Gehitu ..."
 
 #: src/qml/PlayList.qml:105
-#, fuzzy
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fitxategia"
@@ -1180,322 +945,240 @@ msgstr "Fitxategia"
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "Sailkatu"
 
 #: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "Izena gorakorra"
 
 #: src/qml/PlayList.qml:134
-#, fuzzy
-#| msgid "Hardware decoding"
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr "Hardware bidezko deskodetzea"
+msgstr "Izena beherakorra"
 
 #: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "Irupena gorakorra"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "Asetasuna berrezarri"
+msgstr "Iraupena beherakorra"
 
 #: src/qml/PlayList.qml:153
-#, fuzzy
-#| msgid "Clear List"
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Garbitu zerrenda"
+msgstr "Garbitu"
 
 #: src/qml/PlayList.qml:161
-#, fuzzy
-#| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "Gorde aldaketak"
+msgstr "Gorde honela"
 
 #: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "Ireki hau barnean duen karpeta"
 
 #: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "Kopiatu fitxategi-izena"
 
 #: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr ""
+msgstr "Kopiatu fitxategiaren bide-izena"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Jotze-zerrenda"
+msgstr "Kendu jotze-zerrendatik"
 
 #: src/qml/PlayList.qml:235
-#, fuzzy
-#| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr "Hautatu fitxategia"
+msgstr "Berrizendatu fitxategia"
 
 #: src/qml/PlayList.qml:241
-#, fuzzy
-#| msgid "For all files"
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr "Fitxategi guztietarako"
+msgstr "Fitxategia zakarrontzira"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
-#, fuzzy
-#| msgid "Preferred language"
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Hobetsitako hizkuntza"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
-#, fuzzy
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng,ger etc."
 msgstr "eng,ger etab."
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
-#, fuzzy
-#| msgid "Do not use spaces."
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
 msgstr "Ez erabili zuriunerik."
 
 #: src/qml/Settings/AudioSettings.qml:47
 #: src/qml/Settings/SubtitlesSettings.qml:54
-#, fuzzy
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Hobetsitako pista"
 
 #: src/qml/Settings/AudioSettings.qml:69
-#, fuzzy
-#| msgid "Volume step"
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Bolumenaren urratsa"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:34
-#, fuzzy
-#| msgid "No custom commands yet"
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr "Oraindik ez dago norberak finkatutako komandorik"
+msgstr "Oraindik ez dago neurrira ipinitako komandorik"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
-#, fuzzy
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "&Gehitu komandoa"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:69
-#, fuzzy
-#| msgid "Don't set on next startup"
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "Ez ezarri hurrengo abioan"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:143
-#, fuzzy
-#| msgid "&Add"
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Gehitu"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
-#, fuzzy
-#| msgid "Command"
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Komandoa"
 
 #: src/qml/Settings/EditCustomCommand.qml:50
-#, fuzzy
-#| msgid "add volume +10"
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "gehitu bolumen +10"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
-#, fuzzy
-#| msgid "OSD Message"
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "OSD mezua"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
-#, fuzzy
-#| msgid "Filename: ${filename}"
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "Fitxategi-izena: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
-#, fuzzy
-#| msgid "Type"
 msgctxt "@label"
 msgid "Type"
 msgstr "Mota"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
-#, fuzzy
-#| msgid "Keyboard shortcut"
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
-msgstr "Teklatuko Laster-tekla"
+msgstr "Laster-teklak"
 
 #: src/qml/Settings/EditCustomCommand.qml:98
-#, fuzzy
-#| msgid "Run at startup"
 msgctxt "@option:radio"
 msgid "Run at startup"
-msgstr "Exekutatu abiatzerakoan"
+msgstr "Exekutatu abiatzean"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "Ezabatu"
 
 #: src/qml/Settings/EditCustomCommand.qml:123
-#, fuzzy
-#| msgid "Cancel"
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "Utzi"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
-#, fuzzy
-#| msgid "&Save"
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&Gorde"
 
 #: src/qml/Settings/GeneralSettings.qml:30
-#, fuzzy
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "OSDaren letra-tipo neurria"
 
 #: src/qml/Settings/GeneralSettings.qml:56
-#, fuzzy
-#| msgid "File dialog location"
 msgctxt "@label:textbox"
 msgid "File dialog location"
-msgstr "Fitxategi elkarrizketa-koadroaren kokalekua"
+msgstr "Fitxategi elkarrizketa-koadroko kokalekua"
 
 #: src/qml/Settings/GeneralSettings.qml:71
-#, fuzzy
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr ""
-"Hutsik egongo balitz fitxategi elkarrizketa-koadroak irekitako azken "
-"kokalekua gogoratuko du."
+"Hutsik dagoenean fitxategi elkarrizketa-koadroak irekitako azken kokalekua "
+"gogoratuko du."
 
 #: src/qml/Settings/GeneralSettings.qml:76
-#, fuzzy
-#| msgid "Maximum recent files"
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Azken aldiko fitxategiak gehienez"
 
 #: src/qml/Settings/GeneralSettings.qml:93
-#, fuzzy
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr "Azken aldiko zenbait fitxategi gorde. Sartu 0 (zero) ezgaitzeko."
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgid "Remember window size and position"
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Gogoratu leihoaren neurria eta kokalekua"
 
 #: src/qml/Settings/GeneralSettings.qml:109
-#, fuzzy
-#| msgid "Interface"
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfazea"
 
 #: src/qml/Settings/GeneralSettings.qml:117
-#, fuzzy
-#| msgid "Show menubar"
 msgctxt "@option:check"
 msgid "Show menubar"
-msgstr "Erakutsi menu-barra"
+msgstr "Erakutsi Menu-barra"
 
 #: src/qml/Settings/GeneralSettings.qml:128
-#, fuzzy
-#| msgid "Show toolbar"
 msgctxt "@option:check"
 msgid "Show toolbar"
-msgstr "Erakutsi tresna-barra"
+msgstr "Erakutsi Tresna-barra"
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, fuzzy
-#| msgid "Show chapter markers"
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Erakutsi atal markatzaileak"
 
 #: src/qml/Settings/GeneralSettings.qml:148
-#, fuzzy
-#| msgid "Color scheme"
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kolore-antolaera"
 
 #: src/qml/Settings/GeneralSettings.qml:190
-#, fuzzy
-#| msgid "GUI style"
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI estiloa"
 
 #: src/qml/Settings/GeneralSettings.qml:239
-#, fuzzy
-#| msgid "Use Breeze icon theme"
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Erabili «Breeze» ikono-gaia"
 
 #: src/qml/Settings/GeneralSettings.qml:249
-#, fuzzy
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1505,24 +1188,16 @@ msgstr ""
 "Berrabiarazi beharra dago."
 
 #: src/qml/Settings/PlaybackSettings.qml:29
-#, fuzzy
-#| msgid "Seek small step"
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "Bilatu urrats txikia"
 
 #: src/qml/Settings/PlaybackSettings.qml:47
-#, fuzzy
-#| msgid "Seek medium step"
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "Bilatu urrats ertaina"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
-#, fuzzy
-#| msgid ""
-#| "This is also used for mouse wheel seeking, when mouse is over the "
-#| "progress bar"
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
@@ -1532,31 +1207,21 @@ msgstr ""
 "barraren gainean dagoenean"
 
 #: src/qml/Settings/PlaybackSettings.qml:84
-#, fuzzy
-#| msgid "Seek big step"
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "Bilatu  urrats handia"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
-#, fuzzy
-#| msgid "Open last played file on startup"
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Ireki jotako azken fitxategia abiatzean"
+msgstr "Abiatzean ireki jotako azken fitxategia"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "Bilatu azken atzera-jotze kokalekua"
 
 #: src/qml/Settings/PlaybackSettings.qml:126
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1566,34 +1231,22 @@ msgstr ""
 "gelditu zen kokalekua."
 
 #: src/qml/Settings/PlaybackSettings.qml:135
-#, fuzzy
-#| msgid "Start playing"
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Hasi jotzen"
 
 #: src/qml/Settings/PlaybackSettings.qml:144
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
-msgstr "Aurrez jo den fitxategi bat irekitzean, hasi automatikoki jotzen."
+msgstr "Aurrez jo den fitxategi bat irekitzean, hasi hura automatikoki jotzen."
 
 #: src/qml/Settings/PlaybackSettings.qml:153
-#, fuzzy
-#| msgid "Pause on minimize"
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Eten ikonotzean"
 
 #: src/qml/Settings/PlaybackSettings.qml:161
-#, fuzzy
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1603,53 +1256,38 @@ msgstr ""
 "berrekiten da lehengoratzean."
 
 #: src/qml/Settings/PlaybackSettings.qml:166
-#, fuzzy
-#| msgid "Hardware decoding"
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Hardware bidezko deskodetzea"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy
-#| msgid "Enabled"
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Gaituta"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
 #: src/qml/Settings/PlaybackSettings.qml:300
-#, fuzzy
-#| msgid "Disabled"
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
 #: src/qml/Settings/PlaybackSettings.qml:232
-#, fuzzy
-#| msgid "Remember time position"
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Gogoratu denbora-kokalekua"
 
 #: src/qml/Settings/PlaybackSettings.qml:252
-#, fuzzy
-#| msgid "Disabled"
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
 #: src/qml/Settings/PlaybackSettings.qml:254
-#, fuzzy
-#| msgid "For all files"
 msgctxt "@info"
 msgid "For all files"
 msgstr "Fitxategi guztietarako"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
@@ -1657,9 +1295,6 @@ msgstr[0] "Minutu %1 baino luzeagoak diren fitxategietarako"
 msgstr[1] "%1 minutu baino luzeagoak diren fitxategietarako"
 
 #: src/qml/Settings/PlaybackSettings.qml:285
-#, fuzzy
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1667,43 +1302,31 @@ msgstr[0] "Gorde kokalekua segundo %1ero"
 msgstr[1] "Gorde kokalekua %1 segundoero"
 
 #: src/qml/Settings/PlaybackSettings.qml:294
-#, fuzzy
-#| msgid "Skip chapters"
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Saihestu atalak"
 
 #: src/qml/Settings/PlaybackSettings.qml:311
-#, fuzzy
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Erakutsi OSD mezua saihestean"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
-#, fuzzy
-#| msgid "Skip words"
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Saihestu hitzak"
 
 #: src/qml/Settings/PlaybackSettings.qml:328
-#, fuzzy
-#| msgid "op, ed, chapter 1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 1. kapitulua"
 
 #: src/qml/Settings/PlaybackSettings.qml:337
-#, fuzzy
-#| msgid "Skip chapters containing these words. Comma separated list."
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "Saihestu hitz hauek dituzten atalak. Koma bidez bereizitako zerrenda."
 
 #: src/qml/Settings/PlaybackSettings.qml:346
-#, fuzzy
-#| msgid "Youtube-dl"
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
@@ -1713,50 +1336,34 @@ msgid "Format selection"
 msgstr "Formatuaren hautapena"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
-#, fuzzy
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr ""
-"Hautatutako balioaren altuera edo txikiagoa duen bideo onena hautatzen du."
+"Hautatutako balioaren altuerakoa edo txikiagoa den bideo onena hautatzen du."
 
 #: src/qml/Settings/PlaybackSettings.qml:421
-#, fuzzy
-#| msgid "bestvideo+bestaudio/best"
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bideorikonena+audiorikonena/onena"
 
 #: src/qml/Settings/PlaylistSettings.qml:27
-#, fuzzy
-#| msgid "Position"
 msgctxt "@label:listbox"
 msgid "Position"
-msgstr "Posizioa"
+msgstr "Kokapena"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
-#, fuzzy
-#| msgid "Playlist style"
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Jotze-zerrendaren estiloa"
 
 #: src/qml/Settings/PlaylistSettings.qml:80
-#, fuzzy
-#| msgid "Overlay video"
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Bideoaren gainean"
 
 #: src/qml/Settings/PlaylistSettings.qml:87
-#, fuzzy
-#| msgid ""
-#| "When checked the playlist goes on top of the video\n"
-#| "When unchecked the video is resized"
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1766,43 +1373,31 @@ msgstr ""
 "Markatzeke dagoenean bideoaren neurria aldatu egiten da"
 
 #: src/qml/Settings/PlaylistSettings.qml:94
-#, fuzzy
-#| msgid "Show media title instead of file name"
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Erakutsi euskarriaren titulua fitxategi-izenaren ordez"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
-#, fuzzy
-#| msgid "Auto load videos from same folder"
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Automatikoki zamatu karpeta bereko bideoak"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
-#, fuzzy
-#| msgid "Repeat"
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Errepikatu"
 
 #: src/qml/Settings/PlaylistSettings.qml:124
-#, fuzzy
-#| msgid "Show row number"
 msgctxt "@option:check"
 msgid "Show row number"
-msgstr "Erakutsi errenkada zenbakia"
+msgstr "Erakutsi errenkada-zenbakia"
 
 #: src/qml/Settings/PlaylistSettings.qml:134
-#, fuzzy
-#| msgid "Toggle with mouse"
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Txandakatu sagua erabiliz"
 
 #: src/qml/Settings/PlaylistSettings.qml:143
-#, fuzzy
-#| msgid "Increase font size when fullscreen"
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Handiagotu letra-tipoa pantaila-osoan"
@@ -1810,7 +1405,7 @@ msgstr "Handiagotu letra-tipoa pantaila-osoan"
 #: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr ""
+msgstr "Gogoratu azken jotze-zerrendaren egoera"
 
 #: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
@@ -1818,80 +1413,60 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
+"Markatuta dagoenean atzera-jotze egoera (ikusgai/ikusezin) abioetan zehar "
+"gogoratzen da"
 
 #: src/qml/Settings/SettingsWindow.qml:34
-#, fuzzy
-#| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Ezarpenak"
 
 #: src/qml/Settings/SettingsWindow.qml:52
-#, fuzzy
-#| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "Orokorra"
 
 #: src/qml/Settings/SettingsWindow.qml:60
-#, fuzzy
-#| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "Atzera-jotzea"
 
 #: src/qml/Settings/SettingsWindow.qml:68
-#, fuzzy
-#| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "Bideoa"
 
 #: src/qml/Settings/SettingsWindow.qml:76
-#, fuzzy
-#| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "Audioa"
 
 #: src/qml/Settings/SettingsWindow.qml:84
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Azpidatziak"
 
 #: src/qml/Settings/SettingsWindow.qml:100
-#, fuzzy
-#| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Sagua"
 
 #: src/qml/Settings/SettingsWindow.qml:108
-#, fuzzy
-#| msgid "Shortcuts"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
 #: src/qml/Settings/SettingsWindow.qml:116
-#, fuzzy
-#| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
-msgstr "Norberak finkatutako komandoak"
+msgstr "Neurrira ipinitako komandoak"
 
 #: src/qml/Settings/SettingsWindow.qml:124
-#, fuzzy
-#| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "Honi buruz"
 
 #: src/qml/Settings/SettingsWindow.qml:162
-#, fuzzy
-#| msgid "Help"
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Laguntza"
@@ -1899,7 +1474,7 @@ msgstr "Laguntza"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "Baimendu azpidatziak ertz beltzetan"
 
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@info:tooltip"
@@ -1907,52 +1482,40 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"Markatuta dagoenean azpidatziak bideotik kanpo, ertz beltzetan errenda "
+"daitezke. Baliteke «.ass» azpidatzi guztiekin ez ibiltzea"
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
-#, fuzzy
-#| msgid "Styling"
 msgctxt "@title"
 msgid "Styling"
 msgstr "Estiloa"
 
 #: src/qml/Settings/SubtitlesSettings.qml:97
-#, fuzzy
-#| msgid "Font family"
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Letra-tipoaren familia"
 
 #: src/qml/Settings/SubtitlesSettings.qml:129
-#, fuzzy
-#| msgid "Font size"
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Letra-tipoaren neurria"
 
 #: src/qml/Settings/SubtitlesSettings.qml:145
-#, fuzzy
-#| msgid "Font style"
 msgctxt "@label"
 msgid "Font style"
 msgstr "Letra-tipo mota"
 
 #: src/qml/Settings/SubtitlesSettings.qml:150
-#, fuzzy
-#| msgid "Bold"
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Lodia"
 
 #: src/qml/Settings/SubtitlesSettings.qml:162
-#, fuzzy
-#| msgid "Italic"
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Etzana"
 
 #: src/qml/Settings/SubtitlesSettings.qml:172
-#, fuzzy
-#| msgid "Font color"
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Letra-tipoaren kolorea"
@@ -1960,44 +1523,32 @@ msgstr "Letra-tipoaren kolorea"
 #: src/qml/Settings/SubtitlesSettings.qml:205
 #: src/qml/Settings/SubtitlesSettings.qml:243
 #: src/qml/Settings/SubtitlesSettings.qml:303
-#, fuzzy
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Ezarri balio lehenetsia"
 
 #: src/qml/Settings/SubtitlesSettings.qml:211
-#, fuzzy
-#| msgid "Shadow color"
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Itzalaren kolorea"
 
 #: src/qml/Settings/SubtitlesSettings.qml:249
-#, fuzzy
-#| msgid "Shadow offset"
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Itzalaren jatorri-aldaketa"
 
 #: src/qml/Settings/SubtitlesSettings.qml:265
 #: src/qml/Settings/SubtitlesSettings.qml:325
-#, fuzzy
-#| msgid "Set to 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Ezarri 0 (zero) ezgaitzeko."
 
 #: src/qml/Settings/SubtitlesSettings.qml:270
-#, fuzzy
-#| msgid "Border color"
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Ertzaren kolorea"
 
 #: src/qml/Settings/SubtitlesSettings.qml:309
-#, fuzzy
-#| msgid "Border width"
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Ertzaren zabalera"
@@ -2005,12 +1556,12 @@ msgstr "Ertzaren zabalera"
 #: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "Azal lehenetsia"
 
 #: src/qml/Settings/VideoSettings.qml:36
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr ""
+msgstr "irudirako bide-izena"
 
 #: src/qml/Settings/VideoSettings.qml:44
 msgctxt "@info:tooltip"
@@ -2018,66 +1569,50 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
+"Bideo pistarik, txertatutako azal-irudirik edo jotako fitxategiaren karpeta "
+"berean azal/karpeta irudirik ez duten musika fitxategietarako erabilia."
 
 #: src/qml/Settings/VideoSettings.qml:70
-#, fuzzy
-#| msgid "Screenshots"
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Pantaila-argazkiak"
 
 #: src/qml/Settings/VideoSettings.qml:80
-#, fuzzy
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Formatua"
 
 #: src/qml/Settings/VideoSettings.qml:116
-#, fuzzy
-#| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Txantiloia"
 
 #: src/qml/Settings/VideoSettings.qml:132
-#, fuzzy
-#| msgid "Image adjustments"
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Irudi-doikuntzak"
 
 #: src/qml/Settings/VideoSettings.qml:142
-#, fuzzy
-#| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrastea"
 
 #: src/qml/Settings/VideoSettings.qml:159
-#, fuzzy
-#| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Distira"
 
 #: src/qml/Settings/VideoSettings.qml:176
-#, fuzzy
-#| msgid "Gamma"
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
 #: src/qml/Settings/VideoSettings.qml:193
-#, fuzzy
-#| msgid "Saturation"
 msgctxt "@label:slider"
 msgid "Saturation"
-msgstr "Saturazioa"
+msgstr "Asetasuna"
 
 #: src/qml/Settings/VideoSettings.qml:207
-#, fuzzy
-#| msgid "Middle click on the sliders to reset them"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
