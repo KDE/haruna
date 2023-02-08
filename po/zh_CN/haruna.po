@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-30 00:56+0000\n"
-"PO-Revision-Date: 2023-01-12 10:32\n"
+"PO-Revision-Date: 2023-02-07 11:03\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -33,19 +33,19 @@ msgstr ""
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr ""
+msgstr "Haruna 媒体播放器"
 
 #: src/application.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr ""
+msgstr "可自定义配置的视频播放器。"
 
 #: src/application.cpp:97
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr ""
+msgstr "(c) 2019-2023"
 
 #: src/application.cpp:103
 #, kde-format
@@ -72,18 +72,19 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"允许暂时覆盖 ytdl 格式选择设置。如果该项设置通过图形界面被更改时将被覆盖"
 
 #: src/application.cpp:122
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
-msgstr ""
+msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr ""
+msgstr "正在播放媒体文件"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -95,13 +96,13 @@ msgstr "关于 Haruna"
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
-msgstr ""
+msgstr "音轨向上切换"
 
 #: src/models/actionsmodel.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
-msgstr ""
+msgstr "音轨向下切换"
 
 #: src/models/actionsmodel.cpp:43
 #, kde-format
@@ -155,7 +156,7 @@ msgstr "打开右键菜单"
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr ""
+msgstr "在鼠标指针位置打开和关闭上下文菜单"
 
 #: src/models/actionsmodel.cpp:102
 #, kde-format
@@ -518,6 +519,7 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
+"所选的快捷键与 <b>%1</b> 操作的快捷键冲突。<br><br>您想要重新分配该快捷键吗？"
 
 #: src/models/actionsmodel.cpp:657
 #, kde-format
@@ -918,92 +920,92 @@ msgstr "无法播放：%1"
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
 msgid "Add"
-msgstr ""
+msgstr "添加"
 
 #: src/qml/PlayList.qml:93
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr ""
+msgstr "打开播放列表"
 
 #: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "添加..."
 
 #: src/qml/PlayList.qml:105
 msgctxt "@action:button"
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "排序"
 
 #: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "按名称升序排序"
 
 #: src/qml/PlayList.qml:134
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr ""
+msgstr "按名称降序排序"
 
 #: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "按长度升序排序"
 
 #: src/qml/PlayList.qml:146
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr ""
+msgstr "按长度降序排序"
 
 #: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #: src/qml/PlayList.qml:161
 msgctxt "@action:button"
 msgid "Save as"
-msgstr ""
+msgstr "另存为"
 
 #: src/qml/PlayList.qml:214
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "打开所在文件夹"
 
 #: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "复制文件名"
 
 #: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr ""
+msgstr "复制文件路径"
 
 #: src/qml/PlayList.qml:229
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr ""
+msgstr "从播放列表中移除"
 
 #: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr ""
+msgstr "重命名文件"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr ""
+msgstr "移至回收站"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1015,7 +1017,7 @@ msgstr "首选语言"
 #: src/qml/Settings/SubtitlesSettings.qml:40
 msgctxt "placeholder text"
 msgid "eng,ger etc."
-msgstr ""
+msgstr "eng、ger 等"
 
 #: src/qml/Settings/AudioSettings.qml:42
 #: src/qml/Settings/SubtitlesSettings.qml:49
@@ -1047,7 +1049,7 @@ msgstr "添加命令(&A)"
 #: src/qml/Settings/CustomCommandsSettings.qml:69
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
-msgstr ""
+msgstr "下次启动时不设置"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:143
 msgctxt "@action:intoolbar"
@@ -1394,7 +1396,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
-msgstr ""
+msgstr "勾选后，播放列表的显示/隐藏状态将跨会话保存"
 
 #: src/qml/Settings/SettingsWindow.qml:34
 msgctxt "@title:window"
@@ -1454,7 +1456,7 @@ msgstr "帮助"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "允许在黑色边框中显示字幕"
 
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@info:tooltip"
@@ -1462,6 +1464,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"勾选后，字幕可以在视频之外的黑色边框中显示。并不是所有 .ass 字幕都支持此模"
+"式。"
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@title"
@@ -1547,6 +1551,8 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
+"用于不具备视频轨道的音乐文件。嵌入在音乐文件中的封面图像、或者保存在与播放文"
+"件相同文件夹的封面图像、文件夹图像等。"
 
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title"
