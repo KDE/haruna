@@ -1,4 +1,4 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 msgid ""
@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-30 00:56+0000\n"
-"PO-Revision-Date: 2022-12-19 10:25+0100\n"
+"PO-Revision-Date: 2023-02-09 00:45+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,28 +27,22 @@ msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
 #: src/application.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Haruna Videospieler"
+msgstr "Haruna Medienspieler"
 
 #: src/application.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "A configurable media player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Ein anpassbarer Videospieler."
+msgstr "Ein anpassbarer Medienspieler."
 
 #: src/application.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "Copyright 2019-2021"
+msgstr "Copyright 2019-2023"
 
 #: src/application.cpp:103
 #, kde-format
@@ -85,12 +79,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Nächste Datei abspielen"
+msgstr "Mediendatei abspielen"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -936,28 +928,19 @@ msgid "Open playlist"
 msgstr "Wiedergabeliste öffnen"
 
 #: src/qml/PlayList.qml:102
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add ..."
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Hinzufügen ..."
 
 #: src/qml/PlayList.qml:105
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Datei"
 
 #: src/qml/PlayList.qml:113
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Url"
 msgctxt "@action:button"
 msgid "Url"
-msgstr "URL hinzufügen"
+msgstr "Adresse"
 
 #: src/qml/PlayList.qml:124
 msgctxt "@action:button"
@@ -1010,12 +993,9 @@ msgid "Copy file path"
 msgstr "Dateipfad kopieren"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Aus Wiedergabeliste entfernen"
 
 #: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
