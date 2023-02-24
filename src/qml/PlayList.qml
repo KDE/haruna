@@ -21,17 +21,6 @@ Item {
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
 
-    height: mpv.height
-    width: {
-        if (PlaylistSettings.style === "compact") {
-            return Kirigami.Units.gridUnit * 21
-        } else {
-            const w = Kirigami.Units.gridUnit * 31
-            return (parent.width * 0.33) < w ? w : parent.width * 0.33
-        }
-    }
-    x: PlaylistSettings.position === "right" ? parent.width : -width
-    y: 0
     state: PlaylistSettings.rememberState
            ? (PlaylistSettings.visible ? "visible" : "hidden")
            : "hidden"
