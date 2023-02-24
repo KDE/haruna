@@ -169,10 +169,14 @@ Slider {
         id: chaptersPopup
 
         property int itemHeight
+        property int itemBiggestWidth
         property var checkedItem
+        property int maxWidth: window.width * 0.7 > Kirigami.Units.gridUnit * 40
+                               ? Kirigami.Units.gridUnit * 40
+                               : window.width * 0.7
 
         y: -height - root.height
-        width: Kirigami.Units.gridUnit * 14
+        width: itemBiggestWidth > maxWidth ? maxWidth : itemBiggestWidth
         height: itemHeight * root.chapters.length + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
                 ? mpv.height - Kirigami.Units.gridUnit
                 : itemHeight * root.chapters.length + listViewPage.footer.height
@@ -193,7 +197,6 @@ Slider {
                 CheckBox {
                     text: i18nc("@action:inmenu", "Skip Chapters")
                     checked: PlaybackSettings.skipChapters
-                    width: listViewPage.width
                     onCheckedChanged: {
                         PlaybackSettings.skipChapters = checked
                         PlaybackSettings.save()
@@ -208,9 +211,10 @@ Slider {
             ListView {
                 id: listView
 
-                width: parent.width - 20
                 model: root.chapters
                 delegate: CheckDelegate {
+                    id: menuitem
+
                     text: `${app.formatTime(modelData.time)} - ${modelData.title}`
                     checked: index === chaptersPopup.checkedItem
                     width: listViewPage.width
@@ -218,7 +222,14 @@ Slider {
                         chaptersPopup.close()
                         mpv.chapter = index
                     }
-                    Component.onCompleted: chaptersPopup.itemHeight = height
+                    Component.onCompleted: {
+                        const scrollBarWidth = listViewPage.contentItem.ScrollBar.vertical.width
+                        chaptersPopup.itemBiggestWidth = menuitem.implicitWidth + scrollBarWidth > chaptersPopup.width
+                                ? menuitem.implicitWidth + scrollBarWidth
+                                : chaptersPopup.width
+
+                        chaptersPopup.itemHeight = height
+                    }
                 }
             }
         }
