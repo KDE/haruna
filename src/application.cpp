@@ -222,7 +222,7 @@ QUrl Application::ccConfigFilePath(bool withScheme)
 
 QUrl Application::configFolderPath(bool withScheme)
 {
-    auto folder = Global::instance()->appConfigFilePath();
+    auto folder = Global::instance()->appConfigDirPath();
     if (folder.isEmpty()) {
         return QUrl();
     }
