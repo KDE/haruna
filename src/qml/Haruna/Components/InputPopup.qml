@@ -26,7 +26,7 @@ Popup {
         anchors.fill: parent
 
         Label {
-            text: i18nc("@info", "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found.")
+            text: i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
             visible: !app.hasYoutubeDl()
             onLinkActivated: Qt.openUrlExternally(link)
         }
