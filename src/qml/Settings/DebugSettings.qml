@@ -59,7 +59,7 @@ SettingsBasePage {
             }
 
             Button {
-                icon.name: "folder"
+                icon.name: "text-plain"
                 onClicked: {
                     Qt.openUrlExternally(app.configFilePath())
                 }
@@ -84,7 +84,7 @@ SettingsBasePage {
             }
 
             Button {
-                icon.name: "folder"
+                icon.name: "text-plain"
                 onClicked: {
                     Qt.openUrlExternally(app.ccConfigFilePath())
                 }
