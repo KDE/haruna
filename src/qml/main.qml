@@ -115,8 +115,6 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    SystemPalette { id: systemPalette; colorGroup: SystemPalette.Active }
-
     Loader {
         id: settingsLoader
 
