@@ -10,8 +10,6 @@
 #include <KSharedConfig>
 #include <QStandardPaths>
 
-class QCommandLineParser;
-
 class Global : public QObject
 {
     Q_OBJECT
@@ -35,6 +33,10 @@ private:
     Global &operator=(const Global &) = delete;
     Global(Global &&) = delete;
     Global &operator=(Global &&) = delete;
+
+    const QString m_configFolderName {QStringLiteral("haruna")};
+    const QString m_configFileName {QStringLiteral("haruna.conf")};
+    const QString m_ccConfigFileName {QStringLiteral("haruna-custom-commands.conf")};
 
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;

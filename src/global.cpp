@@ -15,8 +15,8 @@ Global *Global::instance()
 }
 
 Global::Global()
-    : m_config(KSharedConfig::openConfig("haruna/haruna.conf"))
-    , m_ccConfig(KSharedConfig::openConfig("haruna/haruna-custom-commands.conf"))
+    : m_config(KSharedConfig::openConfig(QString("%1/%2").arg(m_configFolderName).arg(m_configFileName)))
+    , m_ccConfig(KSharedConfig::openConfig(QString("%1/%2").arg(m_configFolderName).arg(m_ccConfigFileName)))
 {
 }
 
@@ -27,17 +27,30 @@ const QString Global::systemConfigPath()
 
 const QString Global::appConfigDirPath()
 {
-    QFileInfo configFile(QString(systemConfigPath()).append(m_config->name()));
-    return configFile.absolutePath();
+    QFileInfo configFolder(QString(systemConfigPath()).append(m_configFolderName));
+    if (configFolder.exists()) {
+        return configFolder.absoluteFilePath();
+    }
+    return QString();
 }
 
 const QString Global::appConfigFilePath(ConfigFile configFile)
 {
     switch (configFile) {
-    case ConfigFile::Main:
-        return QString(systemConfigPath()).append(m_config->name());
-    case ConfigFile::CustomCommands:
-        return QString(systemConfigPath()).append(m_ccConfig->name());
+    case ConfigFile::Main: {
+        QFileInfo configFile(QString(systemConfigPath()).append(m_config->name()));
+        if (configFile.exists()) {
+            return configFile.absoluteFilePath();
+        }
+        return QString();
+    }
+    case ConfigFile::CustomCommands: {
+        QFileInfo configFile(QString(systemConfigPath()).append(m_ccConfig->name()));
+        if (configFile.exists()) {
+            return configFile.absoluteFilePath();
+        }
+        return QString();
+    }
     default:
         return QString();
     }
