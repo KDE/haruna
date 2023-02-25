@@ -18,7 +18,6 @@ Item {
     // until the new one has been saved
     property bool canAddFolder: true
 
-    Layout.fillWidth: true
     implicitHeight: sectionTitle.height + sfListView.implicitHeight + sfAddFolder.height + 25
 
     Label {

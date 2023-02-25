@@ -125,6 +125,16 @@ Kirigami.ApplicationWindow {
     MpvVideo {
         id: mpv
 
+        width: window.contentItem.width
+        height: window.isFullScreen() ? window.contentItem.height : window.contentItem.height - footer.height
+        anchors.left: PlaylistSettings.overlayVideo
+                      ? window.contentItem.left
+                      : (PlaylistSettings.position === "left" ? playList.right : window.contentItem.left)
+        anchors.right: PlaylistSettings.overlayVideo
+                       ? window.contentItem.right
+                       : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right)
+        anchors.top: parent.top
+
         Osd { id: osd }
     }
 
@@ -144,7 +154,13 @@ Kirigami.ApplicationWindow {
         y: 0
     }
 
-    Footer { id: footer }
+    Footer {
+        id: footer
+
+        anchors.left: window.contentItem.left
+        anchors.right: window.contentItem.right
+        anchors.bottom: window.isFullScreen() ? mpv.bottom : window.contentItem.bottom
+    }
 
     Actions {}
 
