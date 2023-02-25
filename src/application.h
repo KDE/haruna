@@ -45,14 +45,13 @@ class Application : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QAbstractItemModel *colorSchemesModel READ colorSchemesModel CONSTANT)
-    Q_PROPERTY(QUrl configFilePath READ configFilePath CONSTANT)
-    Q_PROPERTY(QUrl configFolderPath READ configFolderPath CONSTANT)
 
 public:
     static Application *instance();
 
-    QUrl configFilePath();
-    QUrl configFolderPath();
+    Q_INVOKABLE QUrl configFilePath(bool withScheme = true);
+    Q_INVOKABLE QUrl ccConfigFilePath(bool withScheme = true);
+    Q_INVOKABLE QUrl configFolderPath(bool withScheme = true);
     Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE bool configFolderExists();

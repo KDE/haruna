@@ -186,17 +186,51 @@ void Application::saveWindowGeometry(QQuickWindow *window) const
     dataResource.sync();
 }
 
-QUrl Application::configFilePath()
+QUrl Application::configFilePath(bool withScheme)
 {
-    QUrl url(Global::instance()->appConfigFilePath());
-    url.setScheme("file");
+    auto file = Global::instance()->appConfigFilePath();
+    if (file.isEmpty()) {
+        return QUrl();
+    }
+    QUrl url(file);
+    if (url.scheme().isEmpty()) {
+        url.setScheme("file");
+    }
+    if (!withScheme) {
+        return url.toString(QUrl::PreferLocalFile);
+    }
     return url;
 }
 
-QUrl Application::configFolderPath()
+QUrl Application::ccConfigFilePath(bool withScheme)
 {
-    QUrl url(Global::instance()->appConfigDirPath());
-    url.setScheme("file");
+    auto file = Global::instance()->appConfigFilePath(Global::CustomCommands);
+    if (file.isEmpty()) {
+        return QUrl();
+    }
+    QUrl url(file);
+    if (url.scheme().isEmpty()) {
+        url.setScheme("file");
+    }
+    if (!withScheme) {
+        return url.toString(QUrl::PreferLocalFile);
+    }
+    return url;
+}
+
+QUrl Application::configFolderPath(bool withScheme)
+{
+    auto folder = Global::instance()->appConfigFilePath();
+    if (folder.isEmpty()) {
+        return QUrl();
+    }
+    QUrl url(folder);
+    if (url.scheme().isEmpty()) {
+        url.setScheme("file");
+    }
+    if (!withScheme) {
+        return url.toString(QUrl::PreferLocalFile);
+    }
     return url;
 }
 
