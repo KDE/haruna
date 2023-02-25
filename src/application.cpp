@@ -12,6 +12,7 @@
 #include "generalsettings.h"
 #include "global.h"
 #include "haruna-version.h"
+#include "informationsettings.h"
 #include "mousesettings.h"
 #include "mpvitem.h"
 #include "playbacksettings.h"
@@ -156,6 +157,7 @@ void Application::setupQmlSettingsTypes()
 {
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "AudioSettings", AudioSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "GeneralSettings", GeneralSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "InformationSettings", InformationSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MouseSettings", MouseSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaybackSettings", PlaybackSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaylistSettings", PlaylistSettings::self());

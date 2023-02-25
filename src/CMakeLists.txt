@@ -51,6 +51,7 @@ endif()
 
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/generalsettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/informationsettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/mousesettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playbacksettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)

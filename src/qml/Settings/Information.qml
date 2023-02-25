@@ -16,7 +16,7 @@ import Haruna.Components 1.0
 SettingsBasePage {
     id: root
 
-    hasHelp: false
+    hasHelp: true
     helpFile: ""
 
     ColumnLayout {
@@ -92,6 +92,18 @@ SettingsBasePage {
                 ToolTip {
                     text: i18nc("@info:tooltip", "Open custom commands config file")
                 }
+            }
+        }
+
+        Item { height: Kirigami.Units.largeSpacing }
+
+        CheckBox {
+            text: i18nc("@option:check", "Enable mpv logging")
+            checked: InformationSettings.mpvLogging
+            onCheckedChanged: {
+                mpv.setProperty("terminal", checked)
+                InformationSettings.mpvLogging = checked
+                InformationSettings.save()
             }
         }
     }

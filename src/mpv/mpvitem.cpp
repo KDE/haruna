@@ -9,8 +9,8 @@
 #include "audiosettings.h"
 #include "generalsettings.h"
 #include "global.h"
+#include "informationsettings.h"
 #include "playbacksettings.h"
-#include "playlistitem.h"
 #include "subtitlessettings.h"
 #include "track.h"
 #include "tracksmodel.h"
@@ -141,8 +141,8 @@ MpvItem::MpvItem(QQuickItem *parent)
 
 void MpvItem::initProperties()
 {
-    //    setProperty("terminal", "yes");
-    //    setProperty("msg-level", "all=v");
+    setProperty("terminal", InformationSettings::mpvLogging());
+    setProperty("msg-level", "all=v");
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
     setProperty("hwdec", hwdec);
