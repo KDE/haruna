@@ -34,9 +34,9 @@ private:
     Global(Global &&) = delete;
     Global &operator=(Global &&) = delete;
 
-    const QString m_configFolderName {QStringLiteral("haruna")};
-    const QString m_configFileName {QStringLiteral("haruna.conf")};
-    const QString m_ccConfigFileName {QStringLiteral("haruna-custom-commands.conf")};
+    const QString m_configFolderName{QStringLiteral("haruna")};
+    const QString m_configFileName{QStringLiteral("haruna.conf")};
+    const QString m_ccConfigFileName{QStringLiteral("haruna-custom-commands.conf")};
 
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;

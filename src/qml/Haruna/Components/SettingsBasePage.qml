@@ -34,20 +34,6 @@ Kirigami.ScrollablePage {
                     enabled: root.docPage !== ""
                     onTriggered: enabled ? app.openDocs(root.docPage) : undefined
                 }
-            },
-            Kirigami.Action {
-                text: i18nc("@action:intoolbar", "Open config ...")
-                iconName: "folder"
-                visible: app.configFolderExists()
-
-                Kirigami.Action {
-                    text: i18nc("@action:inmenu", "File")
-                    onTriggered: Qt.openUrlExternally(app.configFilePath)
-                }
-                Kirigami.Action {
-                    text: i18nc("@action:inmenu", "Folder")
-                    onTriggered: Qt.openUrlExternally(app.configFolderPath)
-                }
             }
         ]
     }
