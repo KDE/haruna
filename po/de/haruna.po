@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-30 00:56+0000\n"
+"POT-Creation-Date: 2023-02-25 00:59+0000\n"
 "PO-Revision-Date: 2023-02-09 00:45+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
@@ -768,12 +768,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:194
+#: src/qml/HProgressBar.qml:198
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Kapitel überspringen"
 
-#: src/qml/HProgressBar.qml:203
+#: src/qml/HProgressBar.qml:206
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -785,18 +785,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:201 src/qml/PlayList.qml:306
+#: src/qml/main.qml:215 src/qml/PlayList.qml:295
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Datei auswählen"
 
-#: src/qml/main.qml:229
+#: src/qml/main.qml:243
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Untertiteldatei auswählen"
 
-#: src/qml/main.qml:247
+#: src/qml/main.qml:261
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Öffnen"
@@ -917,92 +917,92 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kann nicht abspielen: %1"
 
-#: src/qml/PlayList.qml:81
+#: src/qml/PlayList.qml:70
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/qml/PlayList.qml:93
+#: src/qml/PlayList.qml:82
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Wiedergabeliste öffnen"
 
-#: src/qml/PlayList.qml:102
+#: src/qml/PlayList.qml:91
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Hinzufügen ..."
 
-#: src/qml/PlayList.qml:105
+#: src/qml/PlayList.qml:94
 msgctxt "@action:button"
 msgid "File"
 msgstr "Datei"
 
-#: src/qml/PlayList.qml:113
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Url"
 msgstr "Adresse"
 
-#: src/qml/PlayList.qml:124
+#: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sortieren"
 
-#: src/qml/PlayList.qml:128
+#: src/qml/PlayList.qml:117
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Namen aufsteigend"
 
-#: src/qml/PlayList.qml:134
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Namen absteigend"
 
-#: src/qml/PlayList.qml:140
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Dauer aufsteigend"
 
-#: src/qml/PlayList.qml:146
+#: src/qml/PlayList.qml:135
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Dauer absteigend"
 
-#: src/qml/PlayList.qml:153
+#: src/qml/PlayList.qml:142
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Leeren"
 
-#: src/qml/PlayList.qml:161
+#: src/qml/PlayList.qml:150
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Speichern unter"
 
-#: src/qml/PlayList.qml:214
+#: src/qml/PlayList.qml:203
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
-#: src/qml/PlayList.qml:220
+#: src/qml/PlayList.qml:209
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Dateinamen kopieren"
 
-#: src/qml/PlayList.qml:224
+#: src/qml/PlayList.qml:213
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Dateipfad kopieren"
 
-#: src/qml/PlayList.qml:229
+#: src/qml/PlayList.qml:218
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Aus Wiedergabeliste entfernen"
 
-#: src/qml/PlayList.qml:235
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Datei umbenennen"
 
-#: src/qml/PlayList.qml:241
+#: src/qml/PlayList.qml:230
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "In den Papierkorb"
