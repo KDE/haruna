@@ -28,6 +28,8 @@ SettingsBasePage {
 
         RowLayout {
             TextField {
+                id: configFolderField
+
                 text: app.configFolderPath(false)
                 readOnly: true
                 Layout.fillWidth: true
@@ -35,6 +37,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "folder"
+                enabled: configFolderField.text !== ""
                 onClicked: {
                     Qt.openUrlExternally(app.configFolderPath())
                 }
@@ -53,6 +56,8 @@ SettingsBasePage {
 
         RowLayout {
             TextField {
+                id: configFileField
+
                 text: app.configFilePath(false)
                 readOnly: true
                 Layout.fillWidth: true
@@ -60,6 +65,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "text-plain"
+                enabled: configFileField.text !== ""
                 onClicked: {
                     Qt.openUrlExternally(app.configFilePath())
                 }
@@ -78,6 +84,8 @@ SettingsBasePage {
 
         RowLayout {
             TextField {
+                id: ccConfigFileField
+
                 text: app.ccConfigFilePath(false)
                 readOnly: true
                 Layout.fillWidth: true
@@ -85,6 +93,7 @@ SettingsBasePage {
 
             Button {
                 icon.name: "text-plain"
+                enabled: ccConfigFileField.text !== ""
                 onClicked: {
                     Qt.openUrlExternally(app.ccConfigFilePath())
                 }
@@ -93,6 +102,14 @@ SettingsBasePage {
                     text: i18nc("@info:tooltip", "Open custom commands config file")
                 }
             }
+        }
+
+        Item { height: Kirigami.Units.largeSpacing }
+
+        Label {
+            text: i18nc("@info:usagetip", "If fields are empty that means there is no config file/folder (e.g when using the default settings).")
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            Layout.fillWidth: true
         }
 
         Item { height: Kirigami.Units.largeSpacing }
