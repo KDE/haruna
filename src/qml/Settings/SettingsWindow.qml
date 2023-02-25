@@ -15,7 +15,7 @@ import org.kde.haruna 1.0 as Haruna
 Kirigami.ApplicationWindow {
     id: root
 
-    property int currentPage: SettingsWindow.Page.Information
+    property int currentPage: SettingsWindow.Page.General
     enum Page {
         General = 0,
         Playback,
@@ -26,7 +26,7 @@ Kirigami.ApplicationWindow {
         Mouse,
         Shortcuts,
         CustomCommands,
-        Information,
+        Debug,
         About
     }
 
@@ -122,11 +122,11 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18nc("@action", "Information")
-                    icon.name: "configure"
+                    text: i18nc("@action", "Debug")
+                    icon.name: "help-about"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/Information.qml")
+                        applicationWindow().pageStack.push("qrc:/DebugSettings.qml")
                     }
                 },
                 Kirigami.Action {
