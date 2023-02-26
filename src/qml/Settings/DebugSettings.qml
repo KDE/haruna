@@ -27,24 +27,20 @@ SettingsBasePage {
         }
 
         RowLayout {
-            TextField {
+            Kirigami.ActionTextField {
                 id: configFolderField
 
                 text: app.configFolderPath(false)
                 readOnly: true
-                Layout.fillWidth: true
-            }
-
-            Button {
-                icon.name: "folder"
-                enabled: configFolderField.text !== ""
-                onClicked: {
-                    Qt.openUrlExternally(app.configFolderPath())
-                }
-
-                ToolTip {
+                rightActions: Kirigami.Action {
+                    icon.name: "document-open-folder"
+                    visible: configFolderField.text !== ""
                     text: i18nc("@info:tooltip", "Open config folder")
+                    onTriggered: {
+                        Qt.openUrlExternally(app.configFolderPath())
+                    }
                 }
+                Layout.fillWidth: true
             }
         }
 
@@ -55,24 +51,20 @@ SettingsBasePage {
         }
 
         RowLayout {
-            TextField {
+            Kirigami.ActionTextField {
                 id: configFileField
 
                 text: app.configFilePath(false)
                 readOnly: true
-                Layout.fillWidth: true
-            }
-
-            Button {
-                icon.name: "text-plain"
-                enabled: configFileField.text !== ""
-                onClicked: {
-                    Qt.openUrlExternally(app.configFilePath())
-                }
-
-                ToolTip {
+                rightActions: Kirigami.Action {
+                    icon.name: "document-open"
+                    visible: configFileField.text !== ""
                     text: i18nc("@info:tooltip", "Open config file")
+                    onTriggered: {
+                        Qt.openUrlExternally(app.configFilePath())
+                    }
                 }
+                Layout.fillWidth: true
             }
         }
 
@@ -83,24 +75,20 @@ SettingsBasePage {
         }
 
         RowLayout {
-            TextField {
+            Kirigami.ActionTextField {
                 id: ccConfigFileField
 
                 text: app.ccConfigFilePath(false)
                 readOnly: true
-                Layout.fillWidth: true
-            }
-
-            Button {
-                icon.name: "text-plain"
-                enabled: ccConfigFileField.text !== ""
-                onClicked: {
-                    Qt.openUrlExternally(app.ccConfigFilePath())
-                }
-
-                ToolTip {
+                rightActions: Kirigami.Action {
+                    icon.name: "document-open"
+                    visible: ccConfigFileField.text !== ""
                     text: i18nc("@info:tooltip", "Open custom commands config file")
+                    onTriggered: {
+                        Qt.openUrlExternally(app.ccConfigFilePath())
+                    }
                 }
+                Layout.fillWidth: true
             }
         }
 
