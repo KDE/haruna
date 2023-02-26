@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 00:59+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2022-09-06 16:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: KDE\n"
@@ -27,49 +27,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: src/application.cpp:94
+#: src/application.cpp:95
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna-videosoitin"
 
-#: src/application.cpp:95
+#: src/application.cpp:96
 #, fuzzy, kde-format
 #| msgid "A configurable video player."
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Mukautettava videosoitin."
 
-#: src/application.cpp:97
+#: src/application.cpp:98
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "© 2019–2021"
 
-#: src/application.cpp:103
+#: src/application.cpp:104
 #, fuzzy, kde-format
 #| msgid "George Florea Bănuș"
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Kehittäjä"
 
-#: src/application.cpp:115
+#: src/application.cpp:116
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Avattava sanasto"
 
-#: src/application.cpp:120
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, fuzzy, kde-format
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "@info:shell"
@@ -437,7 +437,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Näytä tai piilota otsake"
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:92
+#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
@@ -779,35 +779,35 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Värikylläisyys: 0"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Käynnistä toisto"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 #, fuzzy
 #| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Keskeytä toisto"
 
-#: src/qml/Footer.qml:80
+#: src/qml/Footer.qml:77
 #, fuzzy
 #| msgid "Play previous file"
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Toista edellinen tiedosto"
 
-#: src/qml/Footer.qml:93
+#: src/qml/Footer.qml:90
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Toista seuraava tiedosto"
 
-#: src/qml/Footer.qml:107
+#: src/qml/Footer.qml:104
 #, fuzzy
 #| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
@@ -836,11 +836,11 @@ msgid "Select a color"
 msgstr "Valitse väri"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
-#, fuzzy
-#| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
 msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a>:ää ei löytynyt."
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
+msgstr ""
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 #, fuzzy
@@ -877,56 +877,35 @@ msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Harunan käsikirja"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:39
-#, fuzzy
-#| msgid "Open config ..."
-msgctxt "@action:intoolbar"
-msgid "Open config ..."
-msgstr "Avaa asetukset…"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy
-#| msgid "File"
-msgctxt "@action:inmenu"
-msgid "File"
-msgstr "Tiedosto"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, fuzzy
-#| msgid "Folder"
-msgctxt "@action:inmenu"
-msgid "Folder"
-msgstr "Kansio"
-
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:27
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 #, fuzzy
 #| msgid "Load subtitles from"
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Lataa tekstitykset"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:102
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 #, fuzzy
 #| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Vahvista poistaminen"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:118
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 #, fuzzy
 #| msgid "Delete this folder from list"
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Poista tämä kansio luettelosta"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:134
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Tallenna muutokset"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:156
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:155
 #, fuzzy
 #| msgid "Add new folder"
 msgctxt "@action:button"
@@ -968,7 +947,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:215 src/qml/PlayList.qml:295
+#: src/qml/main.qml:229 src/qml/PlayList.qml:295
 #: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
@@ -976,14 +955,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "Valitse tiedosto"
 
-#: src/qml/main.qml:243
+#: src/qml/main.qml:257
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Valitse tiedosto"
 
-#: src/qml/main.qml:261
+#: src/qml/main.qml:275
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1136,14 +1115,14 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Näytä työkalurivi"
 
-#: src/qml/MpvVideo.qml:126
+#: src/qml/MpvVideo.qml:117
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Ohitettiin luku: %1"
 
-#: src/qml/MpvVideo.qml:143
+#: src/qml/MpvVideo.qml:134
 #, fuzzy
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
@@ -1326,6 +1305,60 @@ msgstr "Älä aseta ensi käynnistyksessä"
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Lisää"
+
+#: src/qml/Settings/DebugSettings.qml:26
+#, fuzzy
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config folder"
+msgstr "Asetukset"
+
+#: src/qml/Settings/DebugSettings.qml:46
+#, fuzzy
+#| msgid "Open config ..."
+msgctxt "@info:tooltip"
+msgid "Open config folder"
+msgstr "Avaa asetukset…"
+
+#: src/qml/Settings/DebugSettings.qml:54
+#, fuzzy
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config file"
+msgstr "Asetukset"
+
+#: src/qml/Settings/DebugSettings.qml:74
+#, fuzzy
+#| msgid "Open config ..."
+msgctxt "@info:tooltip"
+msgid "Open config file"
+msgstr "Avaa asetukset…"
+
+#: src/qml/Settings/DebugSettings.qml:82
+#, fuzzy
+#| msgid "Custom commands"
+msgctxt "@label:textbox"
+msgid "Custom commands config file"
+msgstr "Mukautetut komennot"
+
+#: src/qml/Settings/DebugSettings.qml:102
+#, fuzzy
+#| msgid "No custom commands yet"
+msgctxt "@info:tooltip"
+msgid "Open custom commands config file"
+msgstr "Ei vielä mukautettuja komentoja"
+
+#: src/qml/Settings/DebugSettings.qml:110
+msgctxt "@info:usagetip"
+msgid ""
+"If fields are empty that means there is no config file/folder (e.g when "
+"using the default settings)."
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:118
+msgctxt "@option:check"
+msgid "Enable mpv logging"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 #, fuzzy
@@ -1818,77 +1851,82 @@ msgid ""
 "launches"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:34
+#: src/qml/Settings/SettingsWindow.qml:35
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Asetukset"
 
-#: src/qml/Settings/SettingsWindow.qml:52
+#: src/qml/Settings/SettingsWindow.qml:53
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "Perusasetukset"
 
-#: src/qml/Settings/SettingsWindow.qml:60
+#: src/qml/Settings/SettingsWindow.qml:61
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "Toisto"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:69
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:76
+#: src/qml/Settings/SettingsWindow.qml:77
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "Ääni"
 
-#: src/qml/Settings/SettingsWindow.qml:84
+#: src/qml/Settings/SettingsWindow.qml:85
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Tekstitykset"
 
-#: src/qml/Settings/SettingsWindow.qml:100
+#: src/qml/Settings/SettingsWindow.qml:101
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Hiiri"
 
-#: src/qml/Settings/SettingsWindow.qml:108
+#: src/qml/Settings/SettingsWindow.qml:109
 #, fuzzy
 #| msgid "Shortcuts"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: src/qml/Settings/SettingsWindow.qml:116
+#: src/qml/Settings/SettingsWindow.qml:117
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Mukautetut komennot"
 
-#: src/qml/Settings/SettingsWindow.qml:124
+#: src/qml/Settings/SettingsWindow.qml:125
+msgctxt "@action"
+msgid "Debug"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:133
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "Tietoa"
 
-#: src/qml/Settings/SettingsWindow.qml:162
+#: src/qml/Settings/SettingsWindow.qml:171
 #, fuzzy
 #| msgid "Help"
 msgctxt "@title:window"
@@ -2080,6 +2118,24 @@ msgstr "Värikylläisyys"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
+
+#, fuzzy
+#~| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+#~ msgctxt "@info"
+#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+#~ msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a>:ää ei löytynyt."
+
+#, fuzzy
+#~| msgid "File"
+#~ msgctxt "@action:inmenu"
+#~ msgid "File"
+#~ msgstr "Tiedosto"
+
+#, fuzzy
+#~| msgid "Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Folder"
+#~ msgstr "Kansio"
 
 #, fuzzy
 #~| msgid "Playing video."

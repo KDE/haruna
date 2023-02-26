@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 00:59+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2022-06-06 00:43+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -28,43 +28,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: src/application.cpp:94
+#: src/application.cpp:95
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr ""
 
-#: src/application.cpp:95
+#: src/application.cpp:96
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr ""
 
-#: src/application.cpp:97
+#: src/application.cpp:98
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr ""
 
-#: src/application.cpp:103
+#: src/application.cpp:104
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr ""
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr ""
 
-#: src/application.cpp:115
+#: src/application.cpp:116
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr ""
 
-#: src/application.cpp:120
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -72,7 +72,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -378,7 +378,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:92
+#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -645,27 +645,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr ""
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr ""
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr ""
 
-#: src/qml/Footer.qml:80
+#: src/qml/Footer.qml:77
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr ""
 
-#: src/qml/Footer.qml:93
+#: src/qml/Footer.qml:90
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr ""
 
-#: src/qml/Footer.qml:107
+#: src/qml/Footer.qml:104
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr ""
@@ -687,7 +687,9 @@ msgstr ""
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
@@ -715,42 +717,27 @@ msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr ""
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:39
-msgctxt "@action:intoolbar"
-msgid "Open config ..."
-msgstr ""
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:44
-msgctxt "@action:inmenu"
-msgid "File"
-msgstr ""
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:48
-msgctxt "@action:inmenu"
-msgid "Folder"
-msgstr ""
-
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:27
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:102
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:118
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:134
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:156
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:155
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr ""
@@ -782,18 +769,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr ""
 
-#: src/qml/main.qml:215 src/qml/PlayList.qml:295
+#: src/qml/main.qml:229 src/qml/PlayList.qml:295
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr ""
 
-#: src/qml/main.qml:243
+#: src/qml/main.qml:257
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr ""
 
-#: src/qml/main.qml:261
+#: src/qml/main.qml:275
 msgctxt "@action:button"
 msgid "Open"
 msgstr ""
@@ -904,12 +891,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr ""
 
-#: src/qml/MpvVideo.qml:126
+#: src/qml/MpvVideo.qml:117
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr ""
 
-#: src/qml/MpvVideo.qml:143
+#: src/qml/MpvVideo.qml:134
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr ""
@@ -1051,6 +1038,48 @@ msgstr ""
 #: src/qml/Settings/CustomCommandsSettings.qml:143
 msgctxt "@action:intoolbar"
 msgid "&Add"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:26
+msgctxt "@label:textbox"
+msgid "Config folder"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:46
+msgctxt "@info:tooltip"
+msgid "Open config folder"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:54
+msgctxt "@label:textbox"
+msgid "Config file"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:74
+msgctxt "@info:tooltip"
+msgid "Open config file"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:82
+msgctxt "@label:textbox"
+msgid "Custom commands config file"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:102
+msgctxt "@info:tooltip"
+msgid "Open custom commands config file"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:110
+msgctxt "@info:usagetip"
+msgid ""
+"If fields are empty that means there is no config file/folder (e.g when "
+"using the default settings)."
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:118
+msgctxt "@option:check"
+msgid "Enable mpv logging"
 msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:42
@@ -1391,57 +1420,62 @@ msgid ""
 "launches"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:34
+#: src/qml/Settings/SettingsWindow.qml:35
 msgctxt "@title:window"
 msgid "Settings"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:52
+#: src/qml/Settings/SettingsWindow.qml:53
 msgctxt "@action"
 msgid "General"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:60
+#: src/qml/Settings/SettingsWindow.qml:61
 msgctxt "@action"
 msgid "Playback"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:69
 msgctxt "@action"
 msgid "Video"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:76
+#: src/qml/Settings/SettingsWindow.qml:77
 msgctxt "@action"
 msgid "Audio"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:84
+#: src/qml/Settings/SettingsWindow.qml:85
 msgctxt "@action"
 msgid "Subtitles"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:100
+#: src/qml/Settings/SettingsWindow.qml:101
 msgctxt "@action"
 msgid "Mouse"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:108
+#: src/qml/Settings/SettingsWindow.qml:109
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:116
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Custom commands"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:124
+#: src/qml/Settings/SettingsWindow.qml:125
+msgctxt "@action"
+msgid "Debug"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
 msgid "About"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:162
+#: src/qml/Settings/SettingsWindow.qml:171
 msgctxt "@title:window"
 msgid "Help"
 msgstr ""

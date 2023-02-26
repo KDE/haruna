@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 00:59+0000\n"
-"PO-Revision-Date: 2023-01-31 06:52+0100\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
+"PO-Revision-Date: 2023-02-25 09:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
@@ -30,43 +30,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
 
-#: src/application.cpp:94
+#: src/application.cpp:95
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Medijski predvajalnik Haruna"
 
-#: src/application.cpp:95
+#: src/application.cpp:96
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Nastavljiv predvajalnik medijev."
 
-#: src/application.cpp:97
+#: src/application.cpp:98
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:103
+#: src/application.cpp:104
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Razvijalec"
 
-#: src/application.cpp:115
+#: src/application.cpp:116
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Datoteka za odpiranje"
 
-#: src/application.cpp:120
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Omogoča začasno preglasiti nastavitev izbire oblike zapisa ytdl. Prepisano "
 "bo, če se nastavitev spremeni prek uporabniškega vmesnika"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -382,7 +382,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Preklopi glavo"
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:92
+#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -651,27 +651,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasičenost: 0"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Začni predvajati"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Premor predvajanja"
 
-#: src/qml/Footer.qml:80
+#: src/qml/Footer.qml:77
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Predvajaj prejšnjo datoteko"
 
-#: src/qml/Footer.qml:93
+#: src/qml/Footer.qml:90
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Predvajaj naslednjo datoteko"
 
-#: src/qml/Footer.qml:107
+#: src/qml/Footer.qml:104
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Preostalo: %1"
@@ -693,8 +693,10 @@ msgstr "Izberite barvo"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> ni bil najden."
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
+msgstr ""
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -721,42 +723,27 @@ msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Priročnik Haruna"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:39
-msgctxt "@action:intoolbar"
-msgid "Open config ..."
-msgstr "Odpri prilagoditve ..."
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:44
-msgctxt "@action:inmenu"
-msgid "File"
-msgstr "Datoteka"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:48
-msgctxt "@action:inmenu"
-msgid "Folder"
-msgstr "Mapa"
-
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:27
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Naloži podnaslove iz"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:102
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Potrdi brisanje"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:118
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Izbriši to mapo s seznama"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:134
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Shrani spremembe"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:156
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:155
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Dodaj novo mapo"
@@ -790,18 +777,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:215 src/qml/PlayList.qml:295
+#: src/qml/main.qml:229 src/qml/PlayList.qml:295
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: src/qml/main.qml:243
+#: src/qml/main.qml:257
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Izberite datoteko podnaslovov"
 
-#: src/qml/main.qml:261
+#: src/qml/main.qml:275
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Odpri"
@@ -912,12 +899,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Pokaži orodno vrstico"
 
-#: src/qml/MpvVideo.qml:126
+#: src/qml/MpvVideo.qml:117
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/qml/MpvVideo.qml:143
+#: src/qml/MpvVideo.qml:134
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ni mogoče predvajati: %1"
@@ -1060,6 +1047,66 @@ msgstr "Ne nastavi pri naslednjem zagonu"
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Dod&aj"
+
+#: src/qml/Settings/DebugSettings.qml:26
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config folder"
+msgstr "Nastavi"
+
+#: src/qml/Settings/DebugSettings.qml:46
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open containing folder"
+msgctxt "@info:tooltip"
+msgid "Open config folder"
+msgstr "Odpri vsebovano mapo"
+
+#: src/qml/Settings/DebugSettings.qml:54
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config file"
+msgstr "Nastavi"
+
+#: src/qml/Settings/DebugSettings.qml:74
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Open config ..."
+msgctxt "@info:tooltip"
+msgid "Open config file"
+msgstr "Odpri prilagoditve ..."
+
+#: src/qml/Settings/DebugSettings.qml:82
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Custom commands"
+msgctxt "@label:textbox"
+msgid "Custom commands config file"
+msgstr "Ukazi po meri"
+
+#: src/qml/Settings/DebugSettings.qml:102
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "No custom commands yet"
+msgctxt "@info:tooltip"
+msgid "Open custom commands config file"
+msgstr "Še ni ukazov po meri"
+
+#: src/qml/Settings/DebugSettings.qml:110
+msgctxt "@info:usagetip"
+msgid ""
+"If fields are empty that means there is no config file/folder (e.g when "
+"using the default settings)."
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:118
+msgctxt "@option:check"
+msgid "Enable mpv logging"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1422,57 +1469,62 @@ msgstr ""
 "Kadar je odkljukano, je stanje seznama predvajanja (vidno/skrito) zapomnjeno "
 "med izvajanji"
 
-#: src/qml/Settings/SettingsWindow.qml:34
+#: src/qml/Settings/SettingsWindow.qml:35
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: src/qml/Settings/SettingsWindow.qml:52
+#: src/qml/Settings/SettingsWindow.qml:53
 msgctxt "@action"
 msgid "General"
 msgstr "Splošno"
 
-#: src/qml/Settings/SettingsWindow.qml:60
+#: src/qml/Settings/SettingsWindow.qml:61
 msgctxt "@action"
 msgid "Playback"
 msgstr "Predvajanje"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:69
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:76
+#: src/qml/Settings/SettingsWindow.qml:77
 msgctxt "@action"
 msgid "Audio"
 msgstr "Zvok"
 
-#: src/qml/Settings/SettingsWindow.qml:84
+#: src/qml/Settings/SettingsWindow.qml:85
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Podnaslovi"
 
-#: src/qml/Settings/SettingsWindow.qml:100
+#: src/qml/Settings/SettingsWindow.qml:101
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Miška"
 
-#: src/qml/Settings/SettingsWindow.qml:108
+#: src/qml/Settings/SettingsWindow.qml:109
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Bližnjice"
 
-#: src/qml/Settings/SettingsWindow.qml:116
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Ukazi po meri"
 
-#: src/qml/Settings/SettingsWindow.qml:124
+#: src/qml/Settings/SettingsWindow.qml:125
+msgctxt "@action"
+msgid "Debug"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
 msgid "About"
 msgstr "O programu"
 
-#: src/qml/Settings/SettingsWindow.qml:162
+#: src/qml/Settings/SettingsWindow.qml:171
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Pomoč"
@@ -1622,6 +1674,18 @@ msgstr "Nasičenost"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"
+
+#~ msgctxt "@info"
+#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+#~ msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a> ni bil najden."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "File"
+#~ msgstr "Datoteka"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Folder"
+#~ msgstr "Mapa"
 
 #~ msgctxt "@info"
 #~ msgid "No title found for url %1"

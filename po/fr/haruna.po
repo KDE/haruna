@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 00:59+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-01-31 19:09+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -25,43 +25,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xavier.besnard@neuf.fr"
 
-#: src/application.cpp:94
+#: src/application.cpp:95
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Lecteur multi-media Haruna"
 
-#: src/application.cpp:95
+#: src/application.cpp:96
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Un lecteur multi-media configurable."
 
-#: src/application.cpp:97
+#: src/application.cpp:98
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019 - 2023"
 
-#: src/application.cpp:103
+#: src/application.cpp:104
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Développeur"
 
-#: src/application.cpp:115
+#: src/application.cpp:116
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Fichier à ouvrir"
 
-#: src/application.cpp:120
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 "« ytdl ». Sera écrasé si le paramètre est modifié grâce à l'interface "
 "utilisateur graphique"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -378,7 +378,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Basculer une en-tête"
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:92
+#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -647,27 +647,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturation : 0"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Démarrer la lecture"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Mettre la lecture en pause"
 
-#: src/qml/Footer.qml:80
+#: src/qml/Footer.qml:77
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Lire le fichier précédent"
 
-#: src/qml/Footer.qml:93
+#: src/qml/Footer.qml:90
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Lire le fichier suivant"
 
-#: src/qml/Footer.qml:107
+#: src/qml/Footer.qml:104
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Restant : %1"
@@ -689,10 +689,10 @@ msgstr "Sélectionnez une couleur"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
-"Le logiciel <a href=\"https://youtube-dl.org\">Youtube-dl</a> est "
-"introuvable."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -719,42 +719,27 @@ msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Manuel de Haruna"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:39
-msgctxt "@action:intoolbar"
-msgid "Open config ..."
-msgstr "Ouvrir une configuration..."
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:44
-msgctxt "@action:inmenu"
-msgid "File"
-msgstr "Fichier"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:48
-msgctxt "@action:inmenu"
-msgid "Folder"
-msgstr "Dossier"
-
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:27
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Charger les sous-titres à partir de"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:102
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Confirmer la suppression"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:118
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Supprimer ce dossier de la liste"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:134
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:156
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:155
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Ajouter un nouveau dossier"
@@ -789,18 +774,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:215 src/qml/PlayList.qml:295
+#: src/qml/main.qml:229 src/qml/PlayList.qml:295
 #: src/qml/Settings/VideoSettings.qml:59
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Sélectionnez un fichier"
 
-#: src/qml/main.qml:243
+#: src/qml/main.qml:257
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Sélectionnez un fichier de sous-titres"
 
-#: src/qml/main.qml:261
+#: src/qml/main.qml:275
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ouvrir"
@@ -911,12 +896,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Afficher la barre d'outils"
 
-#: src/qml/MpvVideo.qml:126
+#: src/qml/MpvVideo.qml:117
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Chapitre ignoré : %1"
 
-#: src/qml/MpvVideo.qml:143
+#: src/qml/MpvVideo.qml:134
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Lecture impossible : %1"
@@ -1059,6 +1044,66 @@ msgstr "Ne pas définir au prochain redémarrage"
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Ajouter"
+
+#: src/qml/Settings/DebugSettings.qml:26
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config folder"
+msgstr "Configurer"
+
+#: src/qml/Settings/DebugSettings.qml:46
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open containing folder"
+msgctxt "@info:tooltip"
+msgid "Open config folder"
+msgstr "Ouvrir le dossier contenant"
+
+#: src/qml/Settings/DebugSettings.qml:54
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config file"
+msgstr "Configurer"
+
+#: src/qml/Settings/DebugSettings.qml:74
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Open config ..."
+msgctxt "@info:tooltip"
+msgid "Open config file"
+msgstr "Ouvrir une configuration..."
+
+#: src/qml/Settings/DebugSettings.qml:82
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Custom commands"
+msgctxt "@label:textbox"
+msgid "Custom commands config file"
+msgstr "Commandes personnalisées"
+
+#: src/qml/Settings/DebugSettings.qml:102
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "No custom commands yet"
+msgctxt "@info:tooltip"
+msgid "Open custom commands config file"
+msgstr "Aucun commande personnalisée pour l'instant"
+
+#: src/qml/Settings/DebugSettings.qml:110
+msgctxt "@info:usagetip"
+msgid ""
+"If fields are empty that means there is no config file/folder (e.g when "
+"using the default settings)."
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:118
+msgctxt "@option:check"
+msgid "Enable mpv logging"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1424,57 +1469,62 @@ msgstr ""
 "Lorsque cette option est sélectionnée, l’état de la liste de lecture "
 "(visible / masquée) est mémorisé lors des lancements"
 
-#: src/qml/Settings/SettingsWindow.qml:34
+#: src/qml/Settings/SettingsWindow.qml:35
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Configuration"
 
-#: src/qml/Settings/SettingsWindow.qml:52
+#: src/qml/Settings/SettingsWindow.qml:53
 msgctxt "@action"
 msgid "General"
 msgstr "Général"
 
-#: src/qml/Settings/SettingsWindow.qml:60
+#: src/qml/Settings/SettingsWindow.qml:61
 msgctxt "@action"
 msgid "Playback"
 msgstr "Lecture"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:69
 msgctxt "@action"
 msgid "Video"
 msgstr "Vidéo"
 
-#: src/qml/Settings/SettingsWindow.qml:76
+#: src/qml/Settings/SettingsWindow.qml:77
 msgctxt "@action"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/Settings/SettingsWindow.qml:84
+#: src/qml/Settings/SettingsWindow.qml:85
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Sous-titres"
 
-#: src/qml/Settings/SettingsWindow.qml:100
+#: src/qml/Settings/SettingsWindow.qml:101
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Souris"
 
-#: src/qml/Settings/SettingsWindow.qml:108
+#: src/qml/Settings/SettingsWindow.qml:109
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Raccourcis"
 
-#: src/qml/Settings/SettingsWindow.qml:116
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Commandes personnalisées"
 
-#: src/qml/Settings/SettingsWindow.qml:124
+#: src/qml/Settings/SettingsWindow.qml:125
+msgctxt "@action"
+msgid "Debug"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
 msgid "About"
 msgstr "À propos"
 
-#: src/qml/Settings/SettingsWindow.qml:162
+#: src/qml/Settings/SettingsWindow.qml:171
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Aide"
@@ -1626,6 +1676,20 @@ msgstr "Saturation"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Effectuer un clic central sur les curseurs pour le ré-initialiser"
+
+#~ msgctxt "@info"
+#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+#~ msgstr ""
+#~ "Le logiciel <a href=\"https://youtube-dl.org\">Youtube-dl</a> est "
+#~ "introuvable."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "File"
+#~ msgstr "Fichier"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Folder"
+#~ msgstr "Dossier"
 
 #~ msgctxt "@info"
 #~ msgid "No title found for url %1"

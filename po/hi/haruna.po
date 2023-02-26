@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 00:59+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -27,47 +27,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
 
-#: src/application.cpp:94
+#: src/application.cpp:95
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "हारुना वीडियो चालक"
 
-#: src/application.cpp:95
+#: src/application.cpp:96
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr ""
 
-#: src/application.cpp:97
+#: src/application.cpp:98
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:103
+#: src/application.cpp:104
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr ""
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "डेवलपर"
 
-#: src/application.cpp:115
+#: src/application.cpp:116
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "फ़ाइल जिसे खोलना है"
 
-#: src/application.cpp:120
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -75,7 +75,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -418,7 +418,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "शीर्षक टॉगल करें"
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:92
+#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
@@ -746,35 +746,35 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "संतृप्ति: 0"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "प्लेबैक प्रारंभ करें"
 
-#: src/qml/Footer.qml:67
+#: src/qml/Footer.qml:64
 #, fuzzy
 #| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "प्लेबैक ठहराएँ"
 
-#: src/qml/Footer.qml:80
+#: src/qml/Footer.qml:77
 #, fuzzy
 #| msgid "Play Previous"
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "पिछला चलाएँ"
 
-#: src/qml/Footer.qml:93
+#: src/qml/Footer.qml:90
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "अगला फ़ाइल चलाएँ"
 
-#: src/qml/Footer.qml:107
+#: src/qml/Footer.qml:104
 #, fuzzy
 #| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
@@ -802,7 +802,9 @@ msgstr "फ़ाइल चुनें"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
-msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
@@ -834,50 +836,31 @@ msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "हारुना पुस्तिका"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:39
-msgctxt "@action:intoolbar"
-msgid "Open config ..."
-msgstr ""
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:44
-#, fuzzy
-#| msgid "File"
-msgctxt "@action:inmenu"
-msgid "File"
-msgstr "फ़ाइल"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:48
-#, fuzzy
-#| msgid "Folder"
-msgctxt "@action:inmenu"
-msgid "Folder"
-msgstr "फ़ोल्डर"
-
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:27
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "उपशीर्षक चालू"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:102
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:118
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:134
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "परिवर्तन सहेजें"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:156
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:155
 #, fuzzy
 #| msgid "Add new folder"
 msgctxt "@action:button"
@@ -919,7 +902,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/main.qml:215 src/qml/PlayList.qml:295
+#: src/qml/main.qml:229 src/qml/PlayList.qml:295
 #: src/qml/Settings/VideoSettings.qml:59
 #, fuzzy
 #| msgid "Select file"
@@ -927,14 +910,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/main.qml:243
+#: src/qml/main.qml:257
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/main.qml:261
+#: src/qml/main.qml:275
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1079,14 +1062,14 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "औज़ार पट्टी दिखाएँ"
 
-#: src/qml/MpvVideo.qml:126
+#: src/qml/MpvVideo.qml:117
 #, fuzzy
 #| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "अध्याय छोड़ें"
 
-#: src/qml/MpvVideo.qml:143
+#: src/qml/MpvVideo.qml:134
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
@@ -1257,6 +1240,58 @@ msgstr ""
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "जोड़ें (&A)"
+
+#: src/qml/Settings/DebugSettings.qml:26
+#, fuzzy
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config folder"
+msgstr "विन्यस्त करें"
+
+#: src/qml/Settings/DebugSettings.qml:46
+msgctxt "@info:tooltip"
+msgid "Open config folder"
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:54
+#, fuzzy
+#| msgid "Configure"
+msgctxt "@label:textbox"
+msgid "Config file"
+msgstr "विन्यस्त करें"
+
+#: src/qml/Settings/DebugSettings.qml:74
+#, fuzzy
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open config file"
+msgstr "फ़ाइल खोलें"
+
+#: src/qml/Settings/DebugSettings.qml:82
+#, fuzzy
+#| msgid "Custom commands"
+msgctxt "@label:textbox"
+msgid "Custom commands config file"
+msgstr "तदनुकूल समादेश"
+
+#: src/qml/Settings/DebugSettings.qml:102
+#, fuzzy
+#| msgid "Custom commands"
+msgctxt "@info:tooltip"
+msgid "Open custom commands config file"
+msgstr "तदनुकूल समादेश"
+
+#: src/qml/Settings/DebugSettings.qml:110
+msgctxt "@info:usagetip"
+msgid ""
+"If fields are empty that means there is no config file/folder (e.g when "
+"using the default settings)."
+msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:118
+msgctxt "@option:check"
+msgid "Enable mpv logging"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 #, fuzzy
@@ -1656,77 +1691,82 @@ msgid ""
 "launches"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:34
+#: src/qml/Settings/SettingsWindow.qml:35
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "विन्यास"
 
-#: src/qml/Settings/SettingsWindow.qml:52
+#: src/qml/Settings/SettingsWindow.qml:53
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "साधारण"
 
-#: src/qml/Settings/SettingsWindow.qml:60
+#: src/qml/Settings/SettingsWindow.qml:61
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "प्लेबैक"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:69
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "वीडियो"
 
-#: src/qml/Settings/SettingsWindow.qml:76
+#: src/qml/Settings/SettingsWindow.qml:77
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "ऑडियो"
 
-#: src/qml/Settings/SettingsWindow.qml:84
+#: src/qml/Settings/SettingsWindow.qml:85
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/qml/Settings/SettingsWindow.qml:100
+#: src/qml/Settings/SettingsWindow.qml:101
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "माउस"
 
-#: src/qml/Settings/SettingsWindow.qml:108
+#: src/qml/Settings/SettingsWindow.qml:109
 #, fuzzy
 #| msgid "Shortcut"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: src/qml/Settings/SettingsWindow.qml:116
+#: src/qml/Settings/SettingsWindow.qml:117
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "तदनुकूल समादेश"
 
-#: src/qml/Settings/SettingsWindow.qml:124
+#: src/qml/Settings/SettingsWindow.qml:125
+msgctxt "@action"
+msgid "Debug"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:133
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
 msgid "About"
 msgstr "परिचय"
 
-#: src/qml/Settings/SettingsWindow.qml:162
+#: src/qml/Settings/SettingsWindow.qml:171
 #, fuzzy
 #| msgid "Help"
 msgctxt "@title:window"
@@ -1898,6 +1938,18 @@ msgstr "संतृप्ति"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#, fuzzy
+#~| msgid "File"
+#~ msgctxt "@action:inmenu"
+#~ msgid "File"
+#~ msgstr "फ़ाइल"
+
+#, fuzzy
+#~| msgid "Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Folder"
+#~ msgstr "फ़ोल्डर"
 
 #, fuzzy
 #~| msgid "Overlay video"
