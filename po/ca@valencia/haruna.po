@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-01-30 10:15+0100\n"
+"PO-Revision-Date: 2023-02-26 10:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -697,6 +697,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"No s'ha trobat ni el <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> "
+"ni el <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -1049,52 +1051,34 @@ msgid "&Add"
 msgstr "Afi&g"
 
 #: src/qml/Settings/DebugSettings.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Configura"
+msgstr "Carpeta de configuració"
 
 #: src/qml/Settings/DebugSettings.qml:46
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Obri la carpeta contenidora"
+msgstr "Obri la carpeta de configuració"
 
 #: src/qml/Settings/DebugSettings.qml:54
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Configura"
+msgstr "Fitxer de configuració"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Obri la configuració..."
+msgstr "Obrir el fitxer de configuració"
 
 #: src/qml/Settings/DebugSettings.qml:82
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Ordres personalitzades"
+msgstr "Fitxer de configuració d'ordres personalitzades"
 
 #: src/qml/Settings/DebugSettings.qml:102
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Encara no hi ha cap ordre personalitzada"
+msgstr "Obri el fitxer de configuració d'ordres personalitzades"
 
 #: src/qml/Settings/DebugSettings.qml:110
 msgctxt "@info:usagetip"
@@ -1102,11 +1086,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Si els camps estan buits açò vol dir que no hi ha cap fitxer/carpeta de "
+"configuració (p. ex. quan s'utilitza la configuració predeterminada)."
 
 #: src/qml/Settings/DebugSettings.qml:118
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "Activa el registre de «mpv»"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1517,7 +1503,7 @@ msgstr "Ordres personalitzades"
 #: src/qml/Settings/SettingsWindow.qml:125
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Depuració"
 
 #: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
@@ -1675,15 +1661,3 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
-
-#~ msgctxt "@info"
-#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-#~ msgstr "No s'ha trobat <a href=\"https://youtube-dl.org\">Youtube-dl</a>."
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "File"
-#~ msgstr "Fitxer"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Folder"
-#~ msgstr "Carpeta"

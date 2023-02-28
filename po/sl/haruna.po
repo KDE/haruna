@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-02-25 09:28+0100\n"
+"PO-Revision-Date: 2023-02-27 07:47+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
@@ -697,6 +697,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"Ni najdeno niti <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> niti "
+"<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -1049,52 +1051,34 @@ msgid "&Add"
 msgstr "Dod&aj"
 
 #: src/qml/Settings/DebugSettings.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Nastavi"
+msgstr "Mapa konfiguracije"
 
 #: src/qml/Settings/DebugSettings.qml:46
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Odpri vsebovano mapo"
+msgstr "Odpri mapo config"
 
 #: src/qml/Settings/DebugSettings.qml:54
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Nastavi"
+msgstr "Datoteka config"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Odpri prilagoditve ..."
+msgstr "Odpri datoteko config"
 
 #: src/qml/Settings/DebugSettings.qml:82
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Ukazi po meri"
+msgstr "Ukazi po meri v datoteki config"
 
 #: src/qml/Settings/DebugSettings.qml:102
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Še ni ukazov po meri"
+msgstr "Odpri datoteko config ukazov po meri"
 
 #: src/qml/Settings/DebugSettings.qml:110
 msgctxt "@info:usagetip"
@@ -1102,11 +1086,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Če so polja prazna, to pomeni, da ni datoteke/mape config (npr. kadar "
+"uporabljate privzete nastavitve)."
 
 #: src/qml/Settings/DebugSettings.qml:118
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "Omogoči zapisovanje dnevnika mpv"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1517,7 +1503,7 @@ msgstr "Ukazi po meri"
 #: src/qml/Settings/SettingsWindow.qml:125
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Razhroščevanje"
 
 #: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"

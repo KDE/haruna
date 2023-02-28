@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-01-30 10:27+0100\n"
+"PO-Revision-Date: 2023-02-27 06:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -695,6 +695,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"აღმოჩენილია არც <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> და "
+"არც <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -1048,52 +1050,34 @@ msgid "&Add"
 msgstr "&დამატება"
 
 #: src/qml/Settings/DebugSettings.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "მორგება"
+msgstr "კონფიგურაციის საქაღალდე"
 
 #: src/qml/Settings/DebugSettings.qml:46
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "შემცველი საქაღალდის გახსნა"
+msgstr "კონფიგურაციის საქაღალდის გახსნა"
 
 #: src/qml/Settings/DebugSettings.qml:54
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "მორგება"
+msgstr "კონფიგურაციის ფაილი"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "კონფიგურაციის გახსნა ..."
+msgstr "კონფიგურაციის ფაილის გახსნა"
 
 #: src/qml/Settings/DebugSettings.qml:82
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "ხელით მითითებული ბრძანებები"
+msgstr "ხელით მითითებული ბრძანებების კონფიგურაციის ფაილი"
 
 #: src/qml/Settings/DebugSettings.qml:102
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "ბრძანებები ჯერ მითითებული არაა"
+msgstr "ხელით მითითებული ბრძანების კონფიგურაციის ფაილის გახსნა"
 
 #: src/qml/Settings/DebugSettings.qml:110
 msgctxt "@info:usagetip"
@@ -1101,11 +1085,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"თუ ველები ცარიელია, ეს ნიშნავს, რომ კონფიგურაცია/საქაღალდე არ არსებობს (მაგ: "
+"ნაგულისხმები პარამეტრების გამოყენებისას)."
 
 #: src/qml/Settings/DebugSettings.qml:118
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "MPV-ის ჟურნალის ჩართვა"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1510,7 +1496,7 @@ msgstr "ხელით მითითებული ბრძანებე�
 #: src/qml/Settings/SettingsWindow.qml:125
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "გამართვა"
 
 #: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"

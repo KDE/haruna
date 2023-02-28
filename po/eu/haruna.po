@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-01-31 22:07+0100\n"
+"PO-Revision-Date: 2023-02-27 22:05+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -697,6 +697,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"Ez da aurkitu <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> ezta "
+"<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ere."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -1049,52 +1051,34 @@ msgid "&Add"
 msgstr "&Gehitu"
 
 #: src/qml/Settings/DebugSettings.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Konfiguratu"
+msgstr "Konfigurazio-karpeta"
 
 #: src/qml/Settings/DebugSettings.qml:46
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Ireki hau barnean duen karpeta"
+msgstr "Ireki konfigurazio-karpeta"
 
 #: src/qml/Settings/DebugSettings.qml:54
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Konfiguratu"
+msgstr "Konfigurazio-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Ireki konfigurazioa ..."
+msgstr "Ireki konfigurazio-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:82
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Neurrira ipinitako komandoak"
+msgstr "Neurrira ipinitako komandoen konfigurazio-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:102
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Oraindik ez dago neurrira ipinitako komandorik"
+msgstr "Ireki neurrira ipinitako komandoak konfiguratzeko-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:110
 msgctxt "@info:usagetip"
@@ -1102,11 +1086,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Eremuak hutsik egotea konfiguratzeko-fitxategi/karpetarik ez dagoela esan "
+"nahi du. (adib. ezarpen lehenetsiak erabiltzean)."
 
 #: src/qml/Settings/DebugSettings.qml:118
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "Gaitu «mpv» erregistratzea"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1511,7 +1497,7 @@ msgstr "Neurrira ipinitako komandoak"
 #: src/qml/Settings/SettingsWindow.qml:125
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Araztu"
 
 #: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
