@@ -29,7 +29,7 @@ Worker *Worker::instance()
 
 void Worker::getMetaData(int index, const QString &path)
 {
-    QString mimeType = Application::mimeType(QUrl(path));
+    QString mimeType = Application::mimeType(path);
     KFileMetaData::ExtractorCollection exCol;
     QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
     KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);

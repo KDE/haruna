@@ -41,7 +41,7 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
         &Worker::thumbnailFail,
         this,
         [=]() {
-            QString mimeType = Application::mimeType(QUrl(id));
+            QString mimeType = Application::mimeType(id);
             QString iconName;
             if (mimeType.startsWith("video/")) {
                 iconName = QStringLiteral("video-x-generic");

@@ -226,7 +226,7 @@ void MediaPlayer2Player::setMpv(MpvItem *mpv)
 
 QString MediaPlayer2Player::getThumbnail(const QString &path)
 {
-    QString mimeType = Application::mimeType(QUrl(path));
+    QString mimeType = Application::mimeType(path);
     KFileMetaData::ExtractorCollection exCol;
     QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
     KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractImageData);
