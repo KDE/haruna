@@ -9,6 +9,7 @@
 #include "actionsmodel.h"
 #include "audiosettings.h"
 #include "customcommandsmodel.h"
+#include "file.h"
 #include "generalsettings.h"
 #include "global.h"
 #include "haruna-version.h"
@@ -334,12 +335,20 @@ QString Application::getFileContent(const QString &file)
 
 QString Application::mimeType(const QString &path)
 {
-    QUrl url(path);
-    if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
+    File file(path);
+    switch (file.type()) {
+    case File::Local: {
+        auto path = file.path().prepend(QStringLiteral("file://"));
+        KFileItem fileItem(QUrl(QUrl::toPercentEncoding(path)), KFileItem::NormalMimeTypeDetermination);
+        return fileItem.mimetype();
     }
-    KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
-    return fileItem.mimetype();
+    case File::Http:
+    case File::Unknown: {
+        KFileItem fileItem(file.path(), KFileItem::NormalMimeTypeDetermination);
+        return fileItem.mimetype();
+    }
+    }
+    return QString();
 }
 
 QStringList Application::availableGuiStyles()
