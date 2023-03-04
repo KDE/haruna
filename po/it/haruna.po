@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2023-02-04 13:30+0100\n"
+"POT-Creation-Date: 2023-03-04 00:46+0000\n"
+"PO-Revision-Date: 2023-03-01 21:58+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,43 +28,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "valtermura@gmail.com"
 
-#: src/application.cpp:95
+#: src/application.cpp:96
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Lettore multimediale Haruna"
 
-#: src/application.cpp:96
+#: src/application.cpp:97
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Riproduttore multimediale configurabile."
 
-#: src/application.cpp:98
+#: src/application.cpp:99
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:105
+#: src/application.cpp:106
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Sviluppatore"
 
-#: src/application.cpp:116
+#: src/application.cpp:117
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "File da aprire"
 
-#: src/application.cpp:121
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "l'interfaccia grafica"
 
 # VM: da tradurre? Non sicuro, nel caso di tag da recuperare.
-#: src/application.cpp:123
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -531,7 +531,7 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Riassegna"
 
-#: src/models/playlistmodel.cpp:372
+#: src/models/playlistmodel.cpp:373
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -698,6 +698,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"Non è stato trovato né <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</"
+"a> né <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -1050,52 +1052,34 @@ msgid "&Add"
 msgstr "&Aggiungi"
 
 #: src/qml/Settings/DebugSettings.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Configura"
+msgstr "Cartella di configurazione"
 
 #: src/qml/Settings/DebugSettings.qml:38
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Apri cartella contenente"
+msgstr "Apri cartella di configurazione"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Configura"
+msgstr "File di configurazione"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Apri configurazione..."
+msgstr "Apri file di configurazione"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Comandi personalizzati"
+msgstr "File di configurazione dei comandi personalizzati"
 
 #: src/qml/Settings/DebugSettings.qml:86
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Non ci sono ancora comandi personalizzati"
+msgstr "Apri file di configurazione dei comandi personalizzati"
 
 #: src/qml/Settings/DebugSettings.qml:98
 msgctxt "@info:usagetip"
@@ -1103,11 +1087,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Se i campi sono vuoti significa che non è presente cartella/file di "
+"configurazione (per es. quando usi le impostazioni predefinite)."
 
 #: src/qml/Settings/DebugSettings.qml:106
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "Abilita registro mpv"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1514,7 +1500,7 @@ msgstr "Comandi personalizzati"
 #: src/qml/Settings/SettingsWindow.qml:125
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Debug"
 
 #: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
