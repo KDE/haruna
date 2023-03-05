@@ -45,8 +45,8 @@ MpvItem {
     }
 
     onReady: {
-        if (app.argument(0) !== "") {
-            window.openFile(app.argument(0), true)
+        if (app.url(0) !== "") {
+            window.openFile(app.url(0), true)
         } else {
             if (!PlaybackSettings.openLastPlayedFile) {
                 return

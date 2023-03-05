@@ -57,8 +57,8 @@ public:
     Q_INVOKABLE bool configFolderExists();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
-    Q_INVOKABLE QString argument(int key);
-    Q_INVOKABLE void addArgument(int key, const QString &value);
+    Q_INVOKABLE QUrl url(int key);
+    Q_INVOKABLE void addUrl(int key, const QString &value);
     Q_INVOKABLE QString getFileContent(const QString &file);
     Q_INVOKABLE QStringList availableGuiStyles();
     Q_INVOKABLE void setGuiStyle(const QString &style);
@@ -99,7 +99,7 @@ private:
     KAboutData m_aboutData;
     KSharedConfig::Ptr m_config;
     QCommandLineParser *m_parser;
-    QMap<int, QString> m_args;
+    QMap<int, QUrl> m_urls;
     KColorSchemeManager *m_schemes;
     QString m_systemDefaultStyle;
 };

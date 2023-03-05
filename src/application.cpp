@@ -29,6 +29,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDesktopServices>
+#include <QDir>
 #include <QFileInfo>
 #include <QFontDatabase>
 #include <QGuiApplication>
@@ -128,7 +129,7 @@ void Application::setupCommandLineParser()
     m_aboutData.processCommandLine(m_parser);
 
     for (auto i = 0; i < m_parser->positionalArguments().size(); ++i) {
-        addArgument(i, m_parser->positionalArguments().at(i));
+        addUrl(i, m_parser->positionalArguments().at(i));
     }
 }
 
@@ -313,14 +314,14 @@ QString Application::formatTime(const double time)
     return timeString;
 }
 
-QString Application::argument(int key)
+QUrl Application::url(int key)
 {
-    return m_args[key];
+    return m_urls[key];
 }
 
-void Application::addArgument(int key, const QString &value)
+void Application::addUrl(int key, const QString &value)
 {
-    m_args.insert(key, value);
+    m_urls.insert(key, QUrl::fromUserInput(value, QDir::currentPath()));
 }
 
 QString Application::getFileContent(const QString &file)
@@ -334,9 +335,6 @@ QString Application::getFileContent(const QString &file)
 
 QString Application::mimeType(QUrl url)
 {
-    if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
-    }
     KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
     return fileItem.mimetype();
 }

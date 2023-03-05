@@ -97,27 +97,23 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
     return roles;
 }
 
-void PlayListModel::getSiblingItems(QString path)
+void PlayListModel::getSiblingItems(QUrl url)
 {
     clear();
-    QUrl openedUrl(path);
-    if (openedUrl.scheme().isEmpty()) {
-        openedUrl.setScheme("file");
-    }
-    QFileInfo openedFileInfo(openedUrl.toLocalFile());
+    QFileInfo openedFileInfo(url.toLocalFile());
     if (openedFileInfo.exists() && openedFileInfo.isFile()) {
         QStringList siblingFiles;
         QDirIterator it(openedFileInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
         while (it.hasNext()) {
             QString siblingFile = it.next();
             QFileInfo siblingFileInfo(siblingFile);
-            // toPercentEncoding() is needed to get the correct mime type
-            // for files containing the # character and probably other characters too
-            // if the mime type is wrong the file will be ignored
-            QUrl siblingUrl(siblingFile.toUtf8().toPercentEncoding());
-            siblingUrl.setScheme(openedUrl.scheme());
+            auto siblingUrl = QUrl::fromLocalFile(siblingFile);
+            siblingUrl.setScheme(url.scheme());
             QString mimeType = Application::mimeType(siblingUrl);
-            if (siblingFileInfo.exists() && (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) && mimeType != QStringLiteral("audio/x-mpegurl")) {
+            if (!siblingFileInfo.exists() || mimeType == QStringLiteral("audio/x-mpegurl")) {
+                continue;
+            }
+            if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
                 siblingFiles.append(siblingFileInfo.absoluteFilePath());
             }
         }
@@ -130,7 +126,7 @@ void PlayListModel::getSiblingItems(QString path)
         for (int i = 0; i < siblingFiles.count(); ++i) {
             auto item = new PlayListItem(siblingFiles.at(i), this);
             m_playlist.append(item);
-            if (openedUrl.toString(QUrl::PreferLocalFile) == siblingFiles.at(i)) {
+            if (url.toString(QUrl::PreferLocalFile) == siblingFiles.at(i)) {
                 setPlayingItem(i);
             }
             Q_EMIT itemAdded(i, item->filePath());
@@ -286,7 +282,7 @@ void PlayListModel::openFile(const QString &path)
         }
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
             if (PlaylistSettings::loadSiblings()) {
-                getSiblingItems(path);
+                getSiblingItems(url);
             } else {
                 appendItem(path);
                 setPlayingItem(0);
