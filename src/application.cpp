@@ -332,9 +332,8 @@ QString Application::getFileContent(const QString &file)
     return content;
 }
 
-QString Application::mimeType(const QString &path)
+QString Application::mimeType(QUrl url)
 {
-    QUrl url(path);
     if (url.scheme().isEmpty()) {
         url.setScheme(QStringLiteral("file"));
     }

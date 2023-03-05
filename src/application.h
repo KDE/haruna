@@ -72,7 +72,7 @@ public:
     Q_INVOKABLE static QString youtubeDlExecutable();
     Q_INVOKABLE static bool isYoutubePlaylist(const QString &path);
     Q_INVOKABLE static QString formatTime(const double time);
-    Q_INVOKABLE static QString mimeType(const QString &path);
+    Q_INVOKABLE static QString mimeType(QUrl url);
 
     QCommandLineParser *parser() const;
 
