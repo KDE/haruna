@@ -12,7 +12,6 @@ add_executable(haruna)
 target_sources(haruna
     PRIVATE
     application.h application.cpp
-    file.h file.cpp
     framedecoder.h framedecoder.cpp
     global.h global.cpp
     main.cpp
