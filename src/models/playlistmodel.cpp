@@ -108,7 +108,6 @@ void PlayListModel::getSiblingItems(QUrl url)
             QString siblingFile = it.next();
             QFileInfo siblingFileInfo(siblingFile);
             auto siblingUrl = QUrl::fromLocalFile(siblingFile);
-            siblingUrl.setScheme(url.scheme());
             QString mimeType = Application::mimeType(siblingUrl);
             if (!siblingFileInfo.exists() || mimeType == QStringLiteral("audio/x-mpegurl")) {
                 continue;
@@ -137,12 +136,12 @@ void PlayListModel::getSiblingItems(QUrl url)
 
 void PlayListModel::appendItem(QString path)
 {
-    path = QUrl(path).toLocalFile().isEmpty() ? path : QUrl(path).toLocalFile();
     PlayListItem *item{nullptr};
     QFileInfo itemInfo(path);
     int row{m_playlist.count()};
     if (itemInfo.exists() && itemInfo.isFile()) {
-        QString mimeType = Application::mimeType(QUrl(itemInfo.absoluteFilePath()));
+        auto url = QUrl::fromUserInput(path);
+        QString mimeType = Application::mimeType(url);
         if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
             item = new PlayListItem(itemInfo.absoluteFilePath(), this);
         }
@@ -226,7 +225,11 @@ void PlayListModel::clear()
 
 void PlayListModel::openM3uFile(const QString &path)
 {
-    if (Application::mimeType(path) != QStringLiteral("audio/x-mpegurl")) {
+    auto url = QUrl::fromUserInput(path);
+    if (url.scheme() != QStringLiteral("file")) {
+        return;
+    }
+    if (Application::mimeType(url) != QStringLiteral("audio/x-mpegurl")) {
         return;
     }
 
