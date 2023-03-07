@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 00:46+0000\n"
-"PO-Revision-Date: 2023-02-15 12:40+0000\n"
+"POT-Creation-Date: 2023-03-07 00:46+0000\n"
+"PO-Revision-Date: 2023-03-06 14:59+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -18,6 +18,7 @@ msgstr ""
 "X-POFile-SpellExtra: Haruna Florea Bănuș KHelpCenter Youtube dl OSD\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: bestvideo bestaudio best YTDL ger filename op ed ass\n"
+"X-POFile-SpellExtra: yt dlp youtube MPV\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -529,7 +530,7 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Atribuir de Novo"
 
-#: src/models/playlistmodel.cpp:373
+#: src/models/playlistmodel.cpp:372
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -696,6 +697,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"Nem o <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nem o <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> foram detectados."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:46
 msgctxt "@title"
@@ -1049,52 +1052,34 @@ msgid "&Add"
 msgstr "&Adicionar"
 
 #: src/qml/Settings/DebugSettings.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Configurar"
+msgstr "Pasta de configuração"
 
 #: src/qml/Settings/DebugSettings.qml:38
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Abrir a pasta respectiva"
+msgstr "Abrir a pasta de configuração"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Configurar"
+msgstr "Ficheiro de configuração"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Abrir a configuração ..."
+msgstr "Abrir o ficheiro de configuração"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Comandos personalizados"
+msgstr "Ficheiro de configuração dos comandos personalizados"
 
 #: src/qml/Settings/DebugSettings.qml:86
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Ainda sem comandos personalizados"
+msgstr "Abrir o ficheiro de configuração dos comandos personalizados"
 
 #: src/qml/Settings/DebugSettings.qml:98
 msgctxt "@info:usagetip"
@@ -1102,11 +1087,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Se os campos estiverem vazios, significa que não existe nenhum ficheiro/"
+"pasta de configuração (p.ex., ao usar a configuração predefinida)."
 
 #: src/qml/Settings/DebugSettings.qml:106
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "Activar o registo do MPV"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1515,7 +1502,7 @@ msgstr "Comandos personalizados"
 #: src/qml/Settings/SettingsWindow.qml:125
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Depurar"
 
 #: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
@@ -1674,16 +1661,3 @@ msgstr "Saturação"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Botão do meio nas barras para as repor"
-
-#~ msgctxt "@info"
-#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-#~ msgstr ""
-#~ "O <a href=\"https://youtube-dl.org\">Youtube-dl</a> não foi encontrado."
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "File"
-#~ msgstr "Ficheiro"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Folder"
-#~ msgstr "Pasta"
