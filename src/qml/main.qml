@@ -71,55 +71,6 @@ Kirigami.ApplicationWindow {
         sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent
     }
 
-    Component {
-        id: menuBarComponent
-
-        MenuBar {
-            hoverEnabled: true
-            Kirigami.Theme.colorSet: Kirigami.Theme.Header
-
-            FileMenu {}
-            ViewMenu {}
-            PlaybackMenu {}
-            VideoMenu {}
-            SubtitlesMenu {}
-            AudioMenu {}
-            SettingsMenu {}
-            HelpMenu {}
-        }
-    }
-
-    Component {
-        id: globalMenuBarComponent
-
-        Platform.MenuBar {
-            GlobalFileMenu {}
-            GlobalViewMenu {}
-            GlobalPlaybackMenu {}
-            GlobalVideoMenu {}
-            GlobalSubtitlesMenu {}
-            GlobalAudioMenu {}
-            GlobalSettingsMenu {}
-            GlobalHelpMenu {}
-        }
-    }
-
-    Loader {
-        id: mpvContextMenuLoader
-
-        active: false
-        sourceComponent: ContextMenu {
-            onClosed: mpvContextMenuLoader.active = false
-        }
-    }
-
-    Loader {
-        id: settingsLoader
-
-        active: false
-        sourceComponent: SettingsWindow {}
-    }
-
     MpvVideo {
         id: mpv
 
@@ -200,6 +151,55 @@ Kirigami.ApplicationWindow {
             Layout.fillHeight: true
             type: Kirigami.MessageType.Error
             showCloseButton: true
+        }
+    }
+
+    Loader {
+        id: mpvContextMenuLoader
+
+        active: false
+        sourceComponent: ContextMenu {
+            onClosed: mpvContextMenuLoader.active = false
+        }
+    }
+
+    Loader {
+        id: settingsLoader
+
+        active: false
+        sourceComponent: SettingsWindow {}
+    }
+
+    Component {
+        id: menuBarComponent
+
+        MenuBar {
+            hoverEnabled: true
+            Kirigami.Theme.colorSet: Kirigami.Theme.Header
+
+            FileMenu {}
+            ViewMenu {}
+            PlaybackMenu {}
+            VideoMenu {}
+            SubtitlesMenu {}
+            AudioMenu {}
+            SettingsMenu {}
+            HelpMenu {}
+        }
+    }
+
+    Component {
+        id: globalMenuBarComponent
+
+        Platform.MenuBar {
+            GlobalFileMenu {}
+            GlobalViewMenu {}
+            GlobalPlaybackMenu {}
+            GlobalVideoMenu {}
+            GlobalSubtitlesMenu {}
+            GlobalAudioMenu {}
+            GlobalSettingsMenu {}
+            GlobalHelpMenu {}
         }
     }
 
