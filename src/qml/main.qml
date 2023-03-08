@@ -75,11 +75,7 @@ Kirigami.ApplicationWindow {
         id: menuBarComponent
 
         MenuBar {
-            id: menuBar
             hoverEnabled: true
-            background: Rectangle {
-                color: Kirigami.Theme.backgroundColor
-            }
             Kirigami.Theme.colorSet: Kirigami.Theme.Header
 
             FileMenu {}
