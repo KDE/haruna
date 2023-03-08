@@ -63,7 +63,9 @@ Kirigami.ApplicationWindow {
     menuBar: Loader {
         id: menuBarLoader
 
-        property bool showGlobalMenu: Kirigami.Settings.hasPlatformMenuBar && !Kirigami.Settings.isMobile
+        property bool showGlobalMenu: app.platformName() !== "windows"
+                                      && Kirigami.Settings.hasPlatformMenuBar
+                                      && !Kirigami.Settings.isMobile
 
         visible: !window.isFullScreen() && GeneralSettings.showMenuBar
         sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent

@@ -384,4 +384,9 @@ int Application::frameworksVersionMinor()
     return KCONFIG_VERSION_MINOR;
 }
 
+QString Application::platformName()
+{
+    return QGuiApplication::platformName();
+}
+
 #include "moc_application.cpp"

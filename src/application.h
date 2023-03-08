@@ -66,6 +66,7 @@ public:
     Q_INVOKABLE void openDocs(const QString &page);
     Q_INVOKABLE QStringList getFonts();
     Q_INVOKABLE int frameworksVersionMinor();
+    Q_INVOKABLE QString platformName();
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();
