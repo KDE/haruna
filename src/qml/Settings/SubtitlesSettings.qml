@@ -73,11 +73,11 @@ SettingsBasePage {
 
         Item { width: 1; height: 1 }
         CheckBox {
-            checked: PlaylistSettings.allowOnBlackBorders
+            checked: SubtitlesSettings.allowOnBlackBorders
             text: i18nc("@option:check", "Allow subtitles in black borders")
             onCheckStateChanged: {
-                PlaylistSettings.allowOnBlackBorders = checked
-                PlaylistSettings.save()
+                SubtitlesSettings.allowOnBlackBorders = checked
+                SubtitlesSettings.save()
                 mpv.setProperty("sub-use-margins", checked ? "yes" : "no")
                 mpv.setProperty("sub-ass-force-margins", checked ? "yes" : "no")
             }
