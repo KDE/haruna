@@ -32,14 +32,17 @@ Item {
 
     Rectangle {
 
+        Rectangle {
+            z: 20
+            width: 1
+            height: parent.height
+            color: {
+                let color = Kirigami.Theme.backgroundColor
+                Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, 0.12)
+            }
+        }
+
         anchors.fill: parent
-        // margins are used to prevent closing the playlist, with the mouse, by accident
-        anchors.leftMargin: PlaylistSettings.position === "right" && PlaylistSettings.overlayVideo
-                            ? Kirigami.Units.largeSpacing * 5
-                            : 0
-        anchors.rightMargin: PlaylistSettings.position === "left" && PlaylistSettings.overlayVideo
-                             ? Kirigami.Units.largeSpacing * 5
-                             : 0
         color: Kirigami.Theme.backgroundColor
 
         ScrollView {

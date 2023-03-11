@@ -26,6 +26,12 @@ MpvItem {
     // this property is used to pause the player
     property bool isFileReloaded: false
 
+    property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
+    enum PlaybackState {
+        Playing,
+        Paused
+    }
+
     signal setSubtitle(int id)
     signal setSecondarySubtitle(int id)
     signal setAudio(int id)

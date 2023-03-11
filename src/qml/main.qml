@@ -43,11 +43,18 @@ Kirigami.ApplicationWindow {
     onVisibilityChanged: {
         if (PlaybackSettings.pauseWhileMinimized) {
             if (visibility === Window.Minimized) {
+                if (mpv.pause) {
+                    mpv.preMinimizePlaybackState = MpvVideo.PlaybackState.Paused
+                } else {
+                    mpv.preMinimizePlaybackState = MpvVideo.PlaybackState.Playing
+                }
                 mpv.pause = true
             }
             if (previousVisibility === Window.Minimized
                     && visibility === Window.Windowed | Window.Maximized | Window.FullScreen) {
-                mpv.pause = false
+                if (mpv.preMinimizePlaybackState === MpvVideo.PlaybackState.Playing) {
+                    mpv.pause = false
+                }
             }
         }
 
