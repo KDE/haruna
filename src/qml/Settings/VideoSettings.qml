@@ -32,18 +32,28 @@ SettingsBasePage {
 
         RowLayout {
             TextField {
+                id: defaultCover
+
                 text: VideoSettings.defaultCover
                 placeholderText: i18nc("placeholder text", "path to image")
                 Layout.fillWidth: true
-                onEditingFinished: {
-                    VideoSettings.defaultCover = text
-                    VideoSettings.save()
+                onEditingFinished: save()
+
+                Connections {
+                    target: root
+                    onSave: defaultCover.save()
                 }
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "Used for music files that don't have a video track, "
                                 + "an embedded cover image or a cover/folder image "
                                 + "in the same folder as the played file.")
+                }
+
+                function save() {
+                    console.log(defaultCover.text)
+                    VideoSettings.defaultCover = defaultCover.text
+                    VideoSettings.save()
                 }
             }
 
@@ -119,9 +129,17 @@ SettingsBasePage {
 
         TextField {
             id: screenshotTemplate
+
             text: VideoSettings.screenshotTemplate
             Layout.fillWidth: true
-            onEditingFinished: {
+            onEditingFinished: save()
+
+            Connections {
+                target: root
+                onSave: screenshotTemplate.save()
+            }
+
+            function save() {
                 VideoSettings.screenshotTemplate = text
                 VideoSettings.save()
                 mpv.setProperty("screenshot-template", VideoSettings.screenshotTemplate)

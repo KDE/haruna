@@ -324,17 +324,26 @@ SettingsBasePage {
         }
 
         TextField {
+            id: chaptersToSkip
+
             text: PlaybackSettings.chaptersToSkip
             placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
             enabled: skipChaptersCheckBox.checked
             Layout.fillWidth: true
-            onEditingFinished: {
-                PlaybackSettings.chaptersToSkip = text
-                PlaybackSettings.save()
+            onEditingFinished: save()
+
+            Connections {
+                target: root
+                onSave: chaptersToSkip.save()
             }
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Skip chapters containing these words. Comma separated list.")
+            }
+
+            function save() {
+                PlaybackSettings.chaptersToSkip = text
+                PlaybackSettings.save()
             }
         }
 
@@ -413,12 +422,11 @@ SettingsBasePage {
 
         TextField {
             id: ytdlFormatField
+
             text: PlaybackSettings.ytdlFormat
-            onEditingFinished: {
-                PlaybackSettings.ytdlFormat = text
-                PlaybackSettings.save()
-            }
             placeholderText: i18nc("placeholder text", "bestvideo+bestaudio/best")
+            Layout.fillWidth: true
+            onEditingFinished: save()
 
             onTextChanged: {
                 if (ytdlFormatComboBox.hCurrentvalue !== ytdlFormatField.text) {
@@ -431,7 +439,15 @@ SettingsBasePage {
                 }
             }
 
-            Layout.fillWidth: true
+            Connections {
+                target: root
+                onSave: ytdlFormatField.save()
+            }
+
+            function save() {
+                PlaybackSettings.ytdlFormat = text
+                PlaybackSettings.save()
+            }
         }
 
         // ------------------------------------

@@ -62,13 +62,20 @@ SettingsBasePage {
 
             text: GeneralSettings.fileDialogLocation
             Layout.fillWidth: true
-            onEditingFinished: {
-                GeneralSettings.fileDialogLocation = fileDialogLocation.text
-                GeneralSettings.save()
+            onEditingFinished: save()
+
+            Connections {
+                target: root
+                onSave: fileDialogLocation.save()
             }
 
             ToolTip {
                 text: i18nc("@info:tooltip", "If empty the file dialog will remember the last opened location.")
+            }
+
+            function save() {
+                GeneralSettings.fileDialogLocation = fileDialogLocation.text
+                GeneralSettings.save()
             }
         }
 

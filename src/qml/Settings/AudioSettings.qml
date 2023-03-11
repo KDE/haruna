@@ -29,17 +29,26 @@ SettingsBasePage {
         }
 
         TextField {
+            id: preferredLanguage
+
             text: AudioSettings.preferredLanguage
             placeholderText: i18nc("placeholder text", "eng,ger etc.")
             Layout.fillWidth: true
-            onTextEdited: {
-                AudioSettings.preferredLanguage = text
-                AudioSettings.save()
-                mpv.setProperty("alang", text)
+            onEditingFinished: save()
+
+            Connections {
+                target: root
+                onSave: preferredLanguage.save()
             }
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Do not use spaces.")
+            }
+
+            function save() {
+                AudioSettings.preferredLanguage = text
+                AudioSettings.save()
+                mpv.setProperty("alang", text)
             }
         }
 

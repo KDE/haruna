@@ -19,6 +19,10 @@ Kirigami.ScrollablePage {
     property string helpFile: ""
     property string docPage: ""
 
+    signal save()
+
+    Component.onDestruction: save()
+
     actions {
         contextualActions: [
             Kirigami.Action {

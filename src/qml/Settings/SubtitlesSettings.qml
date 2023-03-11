@@ -36,17 +36,26 @@ SettingsBasePage {
         }
 
         TextField {
+            id: preferredLanguage
+
             text: SubtitlesSettings.preferredLanguage
             placeholderText: i18nc("placeholder text", "eng,ger etc.")
             Layout.fillWidth: true
-            onTextEdited: {
-                SubtitlesSettings.preferredLanguage = text
-                SubtitlesSettings.save()
-                mpv.setProperty("slang", text)
+            onEditingFinished: save()
+
+            Connections {
+                target: root
+                onSave: preferredLanguage.save()
             }
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Do not use spaces.")
+            }
+
+            function save() {
+                SubtitlesSettings.preferredLanguage = text
+                SubtitlesSettings.save()
+                mpv.setProperty("slang", text)
             }
         }
 
@@ -189,7 +198,14 @@ SettingsBasePage {
                 property string defaultColor: "#FFFFFFFF"
 
                 text: SubtitlesSettings.fontColor
-                onTextChanged: {
+                onEditingFinished: save()
+
+                Connections {
+                    target: root
+                    onSave: subtitleColor.save()
+                }
+
+                function save() {
                     subtitleColorPicker.color = text
                     SubtitlesSettings.fontColor = text
                     SubtitlesSettings.save()
@@ -227,7 +243,14 @@ SettingsBasePage {
                 property string defaultColor: "#80F0F0F0"
 
                 text: SubtitlesSettings.shadowColor
-                onTextChanged: {
+                onEditingFinished: save()
+
+                Connections {
+                    target: root
+                    onSave: shadowColor.save()
+                }
+
+                function save() {
                     shadowColorPicker.color = text
                     SubtitlesSettings.shadowColor = text
                     SubtitlesSettings.save()
@@ -287,7 +310,14 @@ SettingsBasePage {
                 property string defaultColor: "#FF000000"
 
                 text: SubtitlesSettings.borderColor
-                onTextChanged: {
+                onEditingFinished: save()
+
+                Connections {
+                    target: root
+                    onSave: borderColor.save()
+                }
+
+                function save() {
                     borderColorPicker.color = text
                     SubtitlesSettings.borderColor = text
                     SubtitlesSettings.save()
