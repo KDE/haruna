@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:45+0000\n"
+"POT-Creation-Date: 2023-03-12 00:45+0000\n"
 "PO-Revision-Date: 2023-03-10 07:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
-"%100<=4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
@@ -710,17 +710,17 @@ msgctxt "@action:button"
 msgid "Clear current action"
 msgstr "Počisti trenutno dejavnost"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:25
+#: src/qml/Haruna/Components/SettingsBasePage.qml:29
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "Pomoč"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:28
+#: src/qml/Haruna/Components/SettingsBasePage.qml:32
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
 msgstr "Okno pomoči Haruna (samo angleško)"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:33
+#: src/qml/Haruna/Components/SettingsBasePage.qml:37
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Priročnik Haruna"
@@ -779,18 +779,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:231 src/qml/PlayList.qml:295
-#: src/qml/Settings/VideoSettings.qml:59
+#: src/qml/main.qml:234 src/qml/PlayList.qml:298
+#: src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: src/qml/main.qml:259
+#: src/qml/main.qml:262
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Izberite datoteko podnaslovov"
 
-#: src/qml/main.qml:277
+#: src/qml/main.qml:280
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Odpri"
@@ -901,102 +901,102 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Pokaži orodno vrstico"
 
-#: src/qml/MpvVideo.qml:117
+#: src/qml/MpvVideo.qml:123
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/qml/MpvVideo.qml:134
+#: src/qml/MpvVideo.qml:140
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ni mogoče predvajati: %1"
 
-#: src/qml/PlayList.qml:70
+#: src/qml/PlayList.qml:73
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/qml/PlayList.qml:82
+#: src/qml/PlayList.qml:85
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Odpri seznam predvajanja"
 
-#: src/qml/PlayList.qml:91
+#: src/qml/PlayList.qml:94
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Dodaj ..."
 
-#: src/qml/PlayList.qml:94
+#: src/qml/PlayList.qml:97
 msgctxt "@action:button"
 msgid "File"
 msgstr "Datoteka"
 
-#: src/qml/PlayList.qml:102
+#: src/qml/PlayList.qml:105
 msgctxt "@action:button"
 msgid "Url"
 msgstr "Url"
 
-#: src/qml/PlayList.qml:113
+#: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Razvrsti"
 
-#: src/qml/PlayList.qml:117
+#: src/qml/PlayList.qml:120
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Naraščajoče po imenu"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:126
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Padajoče po imenu"
 
-#: src/qml/PlayList.qml:129
+#: src/qml/PlayList.qml:132
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Naraščajoče po trajanju"
 
-#: src/qml/PlayList.qml:135
+#: src/qml/PlayList.qml:138
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Padajoče po trajanju"
 
-#: src/qml/PlayList.qml:142
+#: src/qml/PlayList.qml:145
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Počisti"
 
-#: src/qml/PlayList.qml:150
+#: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Shrani kot"
 
-#: src/qml/PlayList.qml:203
+#: src/qml/PlayList.qml:206
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Odpri vsebovano mapo"
 
-#: src/qml/PlayList.qml:209
+#: src/qml/PlayList.qml:212
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Kopiraj ime datoteke"
 
-#: src/qml/PlayList.qml:213
+#: src/qml/PlayList.qml:216
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Kopiraj pot datoteke"
 
-#: src/qml/PlayList.qml:218
+#: src/qml/PlayList.qml:221
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Odstrani s seznama predvajanja"
 
-#: src/qml/PlayList.qml:224
+#: src/qml/PlayList.qml:227
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Preimenuj datoteko"
 
-#: src/qml/PlayList.qml:230
+#: src/qml/PlayList.qml:233
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Datoteko v smeti"
@@ -1007,25 +1007,25 @@ msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Želeni jezik"
 
-#: src/qml/Settings/AudioSettings.qml:33
-#: src/qml/Settings/SubtitlesSettings.qml:40
+#: src/qml/Settings/AudioSettings.qml:35
+#: src/qml/Settings/SubtitlesSettings.qml:42
 msgctxt "placeholder text"
 msgid "eng,ger etc."
 msgstr "eng,ger itn."
 
-#: src/qml/Settings/AudioSettings.qml:42
-#: src/qml/Settings/SubtitlesSettings.qml:49
+#: src/qml/Settings/AudioSettings.qml:45
+#: src/qml/Settings/SubtitlesSettings.qml:52
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
 msgstr "Ne uporabljaj presledkov."
 
-#: src/qml/Settings/AudioSettings.qml:47
-#: src/qml/Settings/SubtitlesSettings.qml:54
+#: src/qml/Settings/AudioSettings.qml:56
+#: src/qml/Settings/SubtitlesSettings.qml:63
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Želena steza"
 
-#: src/qml/Settings/AudioSettings.qml:69
+#: src/qml/Settings/AudioSettings.qml:78
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Korak glasnosti"
@@ -1154,63 +1154,63 @@ msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "Mesto pogovornega okna datotek"
 
-#: src/qml/Settings/GeneralSettings.qml:71
+#: src/qml/Settings/GeneralSettings.qml:73
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr "Če je prazno, si bo pogovorno okno zapomnilo zadnje mesto odprtja."
 
-#: src/qml/Settings/GeneralSettings.qml:76
+#: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Največ nedavnih datotek"
 
-#: src/qml/Settings/GeneralSettings.qml:93
+#: src/qml/Settings/GeneralSettings.qml:100
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 "Koliko nedavnih datotek naj se shrani. Vnesite 0 (nič) za onemogočenje."
 
-#: src/qml/Settings/GeneralSettings.qml:100
+#: src/qml/Settings/GeneralSettings.qml:107
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Pomni velikost okna in položaj"
 
-#: src/qml/Settings/GeneralSettings.qml:109
+#: src/qml/Settings/GeneralSettings.qml:116
 msgctxt "@title"
 msgid "Interface"
 msgstr "Vmesnik"
 
-#: src/qml/Settings/GeneralSettings.qml:117
+#: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Pokaži menijsko letvico"
 
-#: src/qml/Settings/GeneralSettings.qml:128
+#: src/qml/Settings/GeneralSettings.qml:135
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Pokaži orodno letvico"
 
-#: src/qml/Settings/GeneralSettings.qml:139
+#: src/qml/Settings/GeneralSettings.qml:146
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Prikaži oznake poglavij"
 
-#: src/qml/Settings/GeneralSettings.qml:148
+#: src/qml/Settings/GeneralSettings.qml:155
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Barvna shema"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:197
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Slog grafičnega vmesnika"
 
-#: src/qml/Settings/GeneralSettings.qml:239
+#: src/qml/Settings/GeneralSettings.qml:246
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Uporabi temo ikon Sapica"
 
-#: src/qml/Settings/GeneralSettings.qml:249
+#: src/qml/Settings/GeneralSettings.qml:256
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1353,28 +1353,28 @@ msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Preskoči besede"
 
-#: src/qml/Settings/PlaybackSettings.qml:328
+#: src/qml/Settings/PlaybackSettings.qml:330
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, poglavje 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:337
+#: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
 "Preskoči poglavja, ki vsebujejo naslednje besede. Seznam besed, ločenih z "
 "vejico."
 
-#: src/qml/Settings/PlaybackSettings.qml:346
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:352
+#: src/qml/Settings/PlaybackSettings.qml:361
 msgid "Format selection"
 msgstr "Izbira formata"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:380
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1382,7 +1382,7 @@ msgid ""
 msgstr ""
 "Izbere najboljši video z višino, ki je manjša ali enaka izbrani vrednosti."
 
-#: src/qml/Settings/PlaybackSettings.qml:421
+#: src/qml/Settings/PlaybackSettings.qml:427
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -1515,12 +1515,12 @@ msgctxt "@title:window"
 msgid "Help"
 msgstr "Pomoč"
 
-#: src/qml/Settings/SubtitlesSettings.qml:77
+#: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Dovoli podnaslove v črnih okvirih"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:95
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1529,70 +1529,70 @@ msgstr ""
 "Kadar je odkljukano so podnaslovi upodobljeni izven videa v črnih okvirih. "
 "Lahko, da ne deluje za vse podnaslove .ass."
 
-#: src/qml/Settings/SubtitlesSettings.qml:91
+#: src/qml/Settings/SubtitlesSettings.qml:100
 msgctxt "@title"
 msgid "Styling"
 msgstr "Slogi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:97
+#: src/qml/Settings/SubtitlesSettings.qml:106
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Družina pisav"
 
-#: src/qml/Settings/SubtitlesSettings.qml:129
+#: src/qml/Settings/SubtitlesSettings.qml:138
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Velikost pisave"
 
-#: src/qml/Settings/SubtitlesSettings.qml:145
+#: src/qml/Settings/SubtitlesSettings.qml:154
 msgctxt "@label"
 msgid "Font style"
 msgstr "Slog pisave"
 
-#: src/qml/Settings/SubtitlesSettings.qml:150
+#: src/qml/Settings/SubtitlesSettings.qml:159
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Krepko"
 
-#: src/qml/Settings/SubtitlesSettings.qml:162
+#: src/qml/Settings/SubtitlesSettings.qml:171
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Ležeče"
 
-#: src/qml/Settings/SubtitlesSettings.qml:172
+#: src/qml/Settings/SubtitlesSettings.qml:181
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Barva pisave"
 
-#: src/qml/Settings/SubtitlesSettings.qml:205
-#: src/qml/Settings/SubtitlesSettings.qml:243
-#: src/qml/Settings/SubtitlesSettings.qml:303
+#: src/qml/Settings/SubtitlesSettings.qml:221
+#: src/qml/Settings/SubtitlesSettings.qml:266
+#: src/qml/Settings/SubtitlesSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Nastavi privzeto vrednost"
 
-#: src/qml/Settings/SubtitlesSettings.qml:211
+#: src/qml/Settings/SubtitlesSettings.qml:227
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Barva sence"
 
-#: src/qml/Settings/SubtitlesSettings.qml:249
+#: src/qml/Settings/SubtitlesSettings.qml:272
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Odmik sence"
 
-#: src/qml/Settings/SubtitlesSettings.qml:265
-#: src/qml/Settings/SubtitlesSettings.qml:325
+#: src/qml/Settings/SubtitlesSettings.qml:288
+#: src/qml/Settings/SubtitlesSettings.qml:355
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Vnesite 0 (nič) za onemogočenje."
 
-#: src/qml/Settings/SubtitlesSettings.qml:270
+#: src/qml/Settings/SubtitlesSettings.qml:293
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Barva roba"
 
-#: src/qml/Settings/SubtitlesSettings.qml:309
+#: src/qml/Settings/SubtitlesSettings.qml:339
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Širina roba"
@@ -1602,12 +1602,12 @@ msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "Privzeti ovitek"
 
-#: src/qml/Settings/VideoSettings.qml:36
+#: src/qml/Settings/VideoSettings.qml:38
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "pot do slike"
 
-#: src/qml/Settings/VideoSettings.qml:44
+#: src/qml/Settings/VideoSettings.qml:48
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -1616,47 +1616,47 @@ msgstr ""
 "Uporabljeno za glasbene datoteke, ki nimajo video posnetka, vdelano sliko "
 "ovitka ali sliko ovitka/mape v isti mapi kot predvajana datoteka."
 
-#: src/qml/Settings/VideoSettings.qml:70
+#: src/qml/Settings/VideoSettings.qml:80
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Posnetki zaslona"
 
-#: src/qml/Settings/VideoSettings.qml:80
+#: src/qml/Settings/VideoSettings.qml:90
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Zapis"
 
-#: src/qml/Settings/VideoSettings.qml:116
+#: src/qml/Settings/VideoSettings.qml:126
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Predloga"
 
-#: src/qml/Settings/VideoSettings.qml:132
+#: src/qml/Settings/VideoSettings.qml:150
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Prilagoditve slike"
 
-#: src/qml/Settings/VideoSettings.qml:142
+#: src/qml/Settings/VideoSettings.qml:160
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:177
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Svetlost"
 
-#: src/qml/Settings/VideoSettings.qml:176
+#: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:193
+#: src/qml/Settings/VideoSettings.qml:211
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Nasičenost"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:225
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"
