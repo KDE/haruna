@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 00:45+0000\n"
-"PO-Revision-Date: 2023-01-31 21:49+0530\n"
+"PO-Revision-Date: 2023-03-12 17:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -78,12 +78,10 @@ msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/lockmanager.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "அடுத்த கோப்பை இயக்கும்"
+msgstr "ஊடக‍க்கோப்பு இயக்கப்படுகிறது"
 
 #: src/models/actionsmodel.cpp:22
 #, kde-format
@@ -520,6 +518,8 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
+"தேர்ந்தெடுத்துள்ள சுருக்குவழி, <b>%1</b> எனும் செயலுக்கான சுருக்குவழியுடன் "
+"முரண்படுகிறது.<br><br>சுருக்குவழியை மீளமர்த்த வேண்டுமா?"
 
 #: src/models/actionsmodel.cpp:657
 #, kde-format
@@ -566,12 +566,12 @@ msgstr ""
 #: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
-msgstr ""
+msgstr "துணை உரையை முடக்கு"
 
 #: src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr ""
+msgstr "துணை உரையை காட்டு"
 
 #: src/qml/Actions.qml:255 src/qml/Actions.qml:267
 msgctxt "@info:tooltip"
@@ -586,7 +586,7 @@ msgstr "துணையுரை: %1 %2"
 #: src/qml/Actions.qml:277 src/qml/Actions.qml:282
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr ""
+msgstr "துணை உரையின் அளவு: %1"
 
 #: src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
