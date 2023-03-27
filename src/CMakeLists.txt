@@ -79,6 +79,7 @@ target_link_libraries(haruna PRIVATE
     KF5::KIOWidgets
     KF5::Kirigami2
     KF5::ConfigWidgets
+    KF5::WindowSystem
 
     Libmpv::Libmpv
     ${AVUTIL_LIBRARIES}

@@ -26,7 +26,7 @@ void MediaPlayer2::Quit()
 
 bool MediaPlayer2::CanRaise() const
 {
-    return false;
+    return true;
 }
 
 bool MediaPlayer2::CanQuit() const

@@ -114,6 +114,7 @@ Q_SIGNALS:
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
     // signals used for mpris
+    void raise();
     void playNext();
     void playPrevious();
     void openUri(const QString &uri);

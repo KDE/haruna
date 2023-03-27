@@ -153,6 +153,7 @@ MpvItem {
         }
     }
 
+    onRaise: { app.raiseWindow() }
     onPlayNext: { appActions.playNextAction.trigger() }
     onPlayPrevious: { appActions.playPreviousAction.trigger() }
     onOpenUri: { window.openFile(uri) }

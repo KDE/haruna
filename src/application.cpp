@@ -48,7 +48,9 @@
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KLocalizedString>
+#include <KStartupInfo>
 #include <KWindowConfig>
+#include <KWindowSystem>
 
 Application *Application::instance()
 {
@@ -358,6 +360,16 @@ QAbstractItemModel *Application::colorSchemesModel()
     return m_schemes->model();
 }
 
+QQmlApplicationEngine *Application::qmlEngine() const
+{
+    return m_qmlEngine;
+}
+
+void Application::setQmlEngine(QQmlApplicationEngine *_qmlEngine)
+{
+    m_qmlEngine = _qmlEngine;
+}
+
 QCommandLineParser *Application::parser() const
 {
     return m_parser;
@@ -387,6 +399,21 @@ int Application::frameworksVersionMinor()
 QString Application::platformName()
 {
     return QGuiApplication::platformName();
+}
+
+void Application::raiseWindow()
+{
+    QObject *m_rootObject = m_qmlEngine->rootObjects().constFirst();
+    if (!m_rootObject) {
+        return;
+    }
+
+    // todo: replace deprecated methods
+    QWindow *window = qobject_cast<QWindow *>(m_rootObject);
+    if (window) {
+        KStartupInfo::setNewStartupId(window, KStartupInfo::startupId());
+        KWindowSystem::activateWindow(window->winId());
+    }
 }
 
 #include "moc_application.cpp"

@@ -41,7 +41,6 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void raise();
-    void quit();
 };
 
 #endif // MEDIAPLAYER2_H

@@ -67,6 +67,7 @@ public:
     Q_INVOKABLE QStringList getFonts();
     Q_INVOKABLE int frameworksVersionMinor();
     Q_INVOKABLE QString platformName();
+    Q_INVOKABLE void raiseWindow();
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();
@@ -76,6 +77,9 @@ public:
     Q_INVOKABLE static QString mimeType(QUrl url);
 
     QCommandLineParser *parser() const;
+
+    QQmlApplicationEngine *qmlEngine() const;
+    void setQmlEngine(QQmlApplicationEngine *_qmlEngine);
 
 Q_SIGNALS:
     void qmlApplicationMouseLeave();
@@ -103,6 +107,7 @@ private:
     QMap<int, QUrl> m_urls;
     KColorSchemeManager *m_schemes;
     QString m_systemDefaultStyle;
+    QQmlApplicationEngine *m_qmlEngine;
 };
 
 #endif // APPLICATION_H

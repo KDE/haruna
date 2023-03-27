@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     QApplication::setWindowIcon(QIcon::fromTheme("haruna"));
     KLocalizedString::setApplicationDomain("haruna");
 
-    Application::instance();
+    auto application = Application::instance();
 
     QQmlApplicationEngine engine(&qApplication);
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
@@ -56,6 +56,8 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
     engine.rootContext()->setContextProperty("harunaAboutData", QVariant::fromValue(KAboutData::applicationData()));
     engine.load(url);
+
+    application->setQmlEngine(&engine);
 
     return qApplication.exec();
 }

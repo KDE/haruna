@@ -94,7 +94,8 @@ MpvItem::MpvItem(QQuickItem *parent)
     QDBusConnection::sessionBus().registerService(mspris2Name);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"), this, QDBusConnection::ExportAdaptors);
     // org.mpris.MediaPlayer2 mpris2 interface
-    new MediaPlayer2(this);
+    auto mp2 = new MediaPlayer2(this);
+    connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
     auto mp2Player = new MediaPlayer2Player(this);
     mp2Player->setMpv(this);
     connect(mp2Player, &MediaPlayer2Player::playpause, this, [=]() {

@@ -116,6 +116,10 @@ find_package(KF5ConfigWidgets)
 set_package_properties(KF5ConfigWidgets PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfigwidgets/html/index.html")
 
+find_package(KF5WindowSystem)
+set_package_properties(KF5WindowSystem PROPERTIES TYPE REQUIRED
+    URL "https://api.kde.org/frameworks/kwindowsystem/html/index.html")
+
 find_package(YouTubeDl)
 set_package_properties(YouTubeDl PROPERTIES TYPE RUNTIME)
 
