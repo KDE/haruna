@@ -459,7 +459,7 @@ void MpvItem::loadTracks()
 
     auto none = new Track();
     none->setId(0);
-    none->setTitle("None");
+    none->setTitle(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"));
     m_subtitleTracks.insert(0, none);
 
     const QList<QVariant> tracks = getProperty("track-list").toList();
