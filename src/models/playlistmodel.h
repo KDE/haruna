@@ -87,6 +87,7 @@ Q_SIGNALS:
     void opened(const QString &name, const QString &path);
 
 private:
+    bool isVideoOrAudioMimeType(const QString &mimeType);
     Playlist items() const;
     void getSiblingItems(QUrl url);
     void getHttpItemInfo(const QString &url, int row);

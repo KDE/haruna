@@ -97,6 +97,15 @@ QHash<int, QByteArray> PlayListModel::roleNames() const
     return roles;
 }
 
+bool PlayListModel::isVideoOrAudioMimeType(const QString &mimeType)
+{
+    // clang-format off
+    return mimeType.startsWith("video/")
+            || mimeType.startsWith("audio/")
+            || mimeType == QStringLiteral("application/vnd.rn-realmedia");
+    // clang-format on
+}
+
 void PlayListModel::getSiblingItems(QUrl url)
 {
     clear();
@@ -112,7 +121,7 @@ void PlayListModel::getSiblingItems(QUrl url)
             if (!siblingFileInfo.exists() || mimeType == QStringLiteral("audio/x-mpegurl")) {
                 continue;
             }
-            if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
+            if (isVideoOrAudioMimeType(mimeType)) {
                 siblingFiles.append(siblingFileInfo.absoluteFilePath());
             }
         }
@@ -283,7 +292,7 @@ void PlayListModel::openFile(const QString &path)
             GeneralSettings::self()->save();
             return;
         }
-        if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
+        if (isVideoOrAudioMimeType(mimeType)) {
             if (PlaylistSettings::loadSiblings()) {
                 getSiblingItems(url);
             } else {
