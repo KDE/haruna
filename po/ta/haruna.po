@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 00:45+0000\n"
+"POT-Creation-Date: 2023-03-28 00:46+0000\n"
 "PO-Revision-Date: 2023-03-12 17:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,43 +27,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: src/application.cpp:96
+#: src/application.cpp:98
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "ஹருணா நிகழ்பட இயக்கி"
 
-#: src/application.cpp:97
+#: src/application.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "தனிப்பயனாக்கக்கூடிய நிகழ்பட இயக்கி."
 
-#: src/application.cpp:99
+#: src/application.cpp:101
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:105
+#: src/application.cpp:107
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "ஜார்ஜ் ஃபுலோரியா பானுசு"
 
-#: src/application.cpp:106
+#: src/application.cpp:108
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "நிரலாளர்"
 
-#: src/application.cpp:117
+#: src/application.cpp:119
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "திறக்க வேண்டிய கோப்பு"
 
-#: src/application.cpp:122
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -71,7 +71,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -527,11 +527,18 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "இதற்கே அமர்த்து"
 
-#: src/models/playlistmodel.cpp:372
+#: src/models/playlistmodel.cpp:381
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "பாடல்வரிசை காலியாக உள்ளது"
+
+#: src/mpv/mpvitem.cpp:463
+#, kde-format
+msgctxt ""
+"@action The \"None\" subtitle track is used to clear/unset selected track"
+msgid "None"
+msgstr ""
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
 msgctxt "@info:tooltip"

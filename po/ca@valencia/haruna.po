@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 00:45+0000\n"
+"POT-Creation-Date: 2023-03-28 00:46+0000\n"
 "PO-Revision-Date: 2023-02-26 10:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,43 +30,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: src/application.cpp:96
+#: src/application.cpp:98
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Reproductor multimèdia Haruna"
 
-#: src/application.cpp:97
+#: src/application.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Un reproductor multimèdia configurable."
 
-#: src/application.cpp:99
+#: src/application.cpp:101
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:105
+#: src/application.cpp:107
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:106
+#: src/application.cpp:108
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: src/application.cpp:117
+#: src/application.cpp:119
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Fitxer que s'ha d'obrir"
 
-#: src/application.cpp:122
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Permet sobreescriure temporalment la configuració de selecció del format "
 "«ytdl». Se sobreescriurà si la configuració es canvia a través de la IGU"
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -530,11 +530,18 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reassigna"
 
-#: src/models/playlistmodel.cpp:372
+#: src/models/playlistmodel.cpp:381
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "La llista de reproducció està buida"
+
+#: src/mpv/mpvitem.cpp:463
+#, kde-format
+msgctxt ""
+"@action The \"None\" subtitle track is used to clear/unset selected track"
+msgid "None"
+msgstr ""
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
 msgctxt "@info:tooltip"

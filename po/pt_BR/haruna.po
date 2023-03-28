@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 00:45+0000\n"
+"POT-Creation-Date: 2023-03-28 00:46+0000\n"
 "PO-Revision-Date: 2022-10-19 14:55-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -27,49 +27,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dosreisdolorespatrick@gmail.com, igormoreiraa@vivaldi.net"
 
-#: src/application.cpp:96
+#: src/application.cpp:98
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Reprodutor de vídeos Haruna"
 
-#: src/application.cpp:97
+#: src/application.cpp:99
 #, fuzzy, kde-format
 #| msgid "A configurable video player."
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Um reprodutor de vídeos configurável."
 
-#: src/application.cpp:99
+#: src/application.cpp:101
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(C) 2019-2021"
 
-#: src/application.cpp:105
+#: src/application.cpp:107
 #, fuzzy, kde-format
 #| msgid "George Florea Bănuș"
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:106
+#: src/application.cpp:108
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: src/application.cpp:117
+#: src/application.cpp:119
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Arquivo a ser aberto"
 
-#: src/application.cpp:122
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, fuzzy, kde-format
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "@info:shell"
@@ -605,12 +605,19 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reatribuir"
 
-#: src/models/playlistmodel.cpp:372
+#: src/models/playlistmodel.cpp:381
 #, fuzzy, kde-format
 #| msgid "Playlist is empty"
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "A lista de reprodução está vazia"
+
+#: src/mpv/mpvitem.cpp:463
+#, kde-format
+msgctxt ""
+"@action The \"None\" subtitle track is used to clear/unset selected track"
+msgid "None"
+msgstr ""
 
 #: src/qml/Actions.qml:62 src/qml/Actions.qml:80
 #, fuzzy
