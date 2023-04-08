@@ -106,7 +106,7 @@ ActionsModel::ActionsModel(QObject *parent)
     m_actions << action;
 
     action.name = QStringLiteral("openSubtitlesFileAction");
-    action.text = i18nc("@action", "Add external subtitle…");
+    action.text = i18nc("@action", "Add External Subtitle…");
     action.iconName = QStringLiteral("add-subtitle");
     action.defaultShortcut = Qt::ALT | Qt::Key_S;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
@@ -120,21 +120,21 @@ ActionsModel::ActionsModel(QObject *parent)
     m_actions << action;
 
     action.name = QStringLiteral("playbackSpeedIncreaseAction");
-    action.text = i18nc("@action", "Playback speed increase");
+    action.text = i18nc("@action", "Playback Speed Increase");
     action.iconName = QString();
     action.defaultShortcut = Qt::Key_BracketRight;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
     action.name = QStringLiteral("playbackSpeedDecreaseAction");
-    action.text = i18nc("@action", "Playback speed decrease");
+    action.text = i18nc("@action", "Playback Speed Decrease");
     action.iconName = QString();
     action.defaultShortcut = Qt::Key_BracketLeft;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
     action.name = QStringLiteral("playbackSpeedResetAction");
-    action.text = i18nc("@action", "Playback speed reset");
+    action.text = i18nc("@action", "Playback Speed Reset");
     action.iconName = QString();
     action.defaultShortcut = Qt::Key_Backspace;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
@@ -365,28 +365,28 @@ ActionsModel::ActionsModel(QObject *parent)
     m_actions << action;
 
     action.name = QStringLiteral("videoPanXLeftAction");
-    action.text = i18nc("@action", "Video pan x left");
+    action.text = i18nc("@action", "Video Move Left");
     action.iconName = QString();
     action.defaultShortcut = Qt::CTRL | Qt::ALT | Qt::Key_Left;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
     action.name = QStringLiteral("videoPanXRightAction");
-    action.text = i18nc("@action", "Video pan x right");
+    action.text = i18nc("@action", "Video Move Right");
     action.iconName = QString();
     action.defaultShortcut = Qt::CTRL | Qt::ALT | Qt::Key_Right;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
     action.name = QStringLiteral("videoPanYUpAction");
-    action.text = i18nc("@action", "Video pan y up");
+    action.text = i18nc("@action", "Video Move Up");
     action.iconName = QString();
     action.defaultShortcut = Qt::CTRL | Qt::ALT | Qt::Key_Up;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
     action.name = QStringLiteral("videoPanYDownAction");
-    action.text = i18nc("@action", "Video pan y down");
+    action.text = i18nc("@action", "Video Move Down");
     action.iconName = QString();
     action.defaultShortcut = Qt::CTRL | Qt::ALT | Qt::Key_Down;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
