@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 00:46+0000\n"
+"POT-Creation-Date: 2023-04-09 00:46+0000\n"
 "PO-Revision-Date: 2023-03-29 16:09+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -162,9 +162,11 @@ msgid "Open File"
 msgstr "Otevřít soubor"
 
 #: src/models/actionsmodel.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Add external subtitle…"
 msgctxt "@action"
-msgid "Add external subtitle…"
+msgid "Add External Subtitle…"
 msgstr "Přidat externí titulky..."
 
 #: src/models/actionsmodel.cpp:116
@@ -174,21 +176,27 @@ msgid "Open Url"
 msgstr "Otevřít URL"
 
 #: src/models/actionsmodel.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed increase"
 msgctxt "@action"
-msgid "Playback speed increase"
+msgid "Playback Speed Increase"
 msgstr "Zvýšení rychlosti přehrávání"
 
 #: src/models/actionsmodel.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed decrease"
 msgctxt "@action"
-msgid "Playback speed decrease"
+msgid "Playback Speed Decrease"
 msgstr "Snížení rychlosti přehrávání"
 
 #: src/models/actionsmodel.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed reset"
 msgctxt "@action"
-msgid "Playback speed reset"
+msgid "Playback Speed Reset"
 msgstr "Původní rychlost přehrávání"
 
 #: src/models/actionsmodel.cpp:144
@@ -386,26 +394,30 @@ msgstr "Seznam skladeb"
 #: src/models/actionsmodel.cpp:368
 #, kde-format
 msgctxt "@action"
-msgid "Video pan x left"
+msgid "Video Move Left"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:375
 #, kde-format
 msgctxt "@action"
-msgid "Video pan x right"
+msgid "Video Move Right"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:382
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Video pan y up"
-msgstr ""
+msgid "Video Move Up"
+msgstr "Posunout titulky výše"
 
 #: src/models/actionsmodel.cpp:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Down"
 msgctxt "@action"
-msgid "Video pan y down"
-msgstr ""
+msgid "Video Move Down"
+msgstr "Posunout titulky níže"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format

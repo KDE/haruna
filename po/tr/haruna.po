@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 00:46+0000\n"
+"POT-Creation-Date: 2023-04-09 00:46+0000\n"
 "PO-Revision-Date: 2023-03-28 13:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -164,9 +164,11 @@ msgid "Open File"
 msgstr "Dosya Aç"
 
 #: src/models/actionsmodel.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Add external subtitle…"
 msgctxt "@action"
-msgid "Add external subtitle…"
+msgid "Add External Subtitle…"
 msgstr "Dış Altyazı Ekle…"
 
 #: src/models/actionsmodel.cpp:116
@@ -176,21 +178,27 @@ msgid "Open Url"
 msgstr "URL Aç"
 
 #: src/models/actionsmodel.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed increase"
 msgctxt "@action"
-msgid "Playback speed increase"
+msgid "Playback Speed Increase"
 msgstr "Oynatma Hızını Artır"
 
 #: src/models/actionsmodel.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed decrease"
 msgctxt "@action"
-msgid "Playback speed decrease"
+msgid "Playback Speed Decrease"
 msgstr "Oynatma Hızını Azalt"
 
 #: src/models/actionsmodel.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed reset"
 msgctxt "@action"
-msgid "Playback speed reset"
+msgid "Playback Speed Reset"
 msgstr "Oynatma Hızını Sıfırla"
 
 #: src/models/actionsmodel.cpp:144
@@ -386,28 +394,36 @@ msgid "Playlist"
 msgstr "Oynatma Listesi"
 
 #: src/models/actionsmodel.cpp:368
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video pan x left"
 msgctxt "@action"
-msgid "Video pan x left"
+msgid "Video Move Left"
 msgstr "Videoyu X Ekseninde Sola Kaydır"
 
 #: src/models/actionsmodel.cpp:375
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video pan x right"
 msgctxt "@action"
-msgid "Video pan x right"
+msgid "Video Move Right"
 msgstr "Videoyu X Ekseninde Sağa Kaydır"
 
 #: src/models/actionsmodel.cpp:382
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Video pan y up"
-msgstr "Videoyu Y Ekseninde Yukarı Kaydır"
+msgid "Video Move Up"
+msgstr "Altyazıyı Yukarı Taşı"
 
 #: src/models/actionsmodel.cpp:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Down"
 msgctxt "@action"
-msgid "Video pan y down"
-msgstr "Videoyu Y Ekseninde Aşağı Kaydır"
+msgid "Video Move Down"
+msgstr "Altyazıyı Aşağı Taşı"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format
@@ -1656,6 +1672,14 @@ msgstr "Doygunluk"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Sıfırlamak için kaydırıcılarda orta tıklayın"
+
+#~ msgctxt "@action"
+#~ msgid "Video pan y up"
+#~ msgstr "Videoyu Y Ekseninde Yukarı Kaydır"
+
+#~ msgctxt "@action"
+#~ msgid "Video pan y down"
+#~ msgstr "Videoyu Y Ekseninde Aşağı Kaydır"
 
 #~ msgctxt "@info"
 #~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."

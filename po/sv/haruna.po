@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 00:46+0000\n"
+"POT-Creation-Date: 2023-04-09 00:46+0000\n"
 "PO-Revision-Date: 2022-09-25 09:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -187,7 +187,7 @@ msgstr "Öppna fil"
 #, fuzzy, kde-format
 #| msgid "Add external subtitle…"
 msgctxt "@action"
-msgid "Add external subtitle…"
+msgid "Add External Subtitle…"
 msgstr "Lägg till extern textning..."
 
 #: src/models/actionsmodel.cpp:116
@@ -201,21 +201,21 @@ msgstr "Öppna webbadress"
 #, fuzzy, kde-format
 #| msgid "Playback speed increase"
 msgctxt "@action"
-msgid "Playback speed increase"
+msgid "Playback Speed Increase"
 msgstr "Öka uppspelningshastighet"
 
 #: src/models/actionsmodel.cpp:130
 #, fuzzy, kde-format
 #| msgid "Playback speed decrease"
 msgctxt "@action"
-msgid "Playback speed decrease"
+msgid "Playback Speed Decrease"
 msgstr "Minska uppspelningshastighet"
 
 #: src/models/actionsmodel.cpp:137
 #, fuzzy, kde-format
 #| msgid "Playback speed reset"
 msgctxt "@action"
-msgid "Playback speed reset"
+msgid "Playback Speed Reset"
 msgstr "Återställ uppspelningshastighet"
 
 #: src/models/actionsmodel.cpp:144
@@ -446,29 +446,29 @@ msgstr "Spellista"
 #, fuzzy, kde-format
 #| msgid "Video pan x left"
 msgctxt "@action"
-msgid "Video pan x left"
+msgid "Video Move Left"
 msgstr "Video panorera x åt vänster"
 
 #: src/models/actionsmodel.cpp:375
 #, fuzzy, kde-format
 #| msgid "Video pan x right"
 msgctxt "@action"
-msgid "Video pan x right"
+msgid "Video Move Right"
 msgstr "Video panorera x åt höger"
 
 #: src/models/actionsmodel.cpp:382
 #, fuzzy, kde-format
-#| msgid "Video pan y up"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Video pan y up"
-msgstr "Video panorera y uppåt"
+msgid "Video Move Up"
+msgstr "Flytta upp textning"
 
 #: src/models/actionsmodel.cpp:389
 #, fuzzy, kde-format
-#| msgid "Video pan y down"
+#| msgid "Subtitle Move Down"
 msgctxt "@action"
-msgid "Video pan y down"
-msgstr "Video panorera y neråt"
+msgid "Video Move Down"
+msgstr "Flytta ner textning"
 
 #: src/models/actionsmodel.cpp:396
 #, fuzzy, kde-format
@@ -2121,6 +2121,18 @@ msgstr "Färgmättnad"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Mittenklicka på skjutreglaget för att återställa dem"
+
+#, fuzzy
+#~| msgid "Video pan y up"
+#~ msgctxt "@action"
+#~ msgid "Video pan y up"
+#~ msgstr "Video panorera y uppåt"
+
+#, fuzzy
+#~| msgid "Video pan y down"
+#~ msgctxt "@action"
+#~ msgid "Video pan y down"
+#~ msgstr "Video panorera y neråt"
 
 #, fuzzy
 #~| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."

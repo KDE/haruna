@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 00:46+0000\n"
+"POT-Creation-Date: 2023-04-09 00:46+0000\n"
 "PO-Revision-Date: 2023-03-30 19:36+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -168,9 +168,11 @@ msgid "Open File"
 msgstr "Apri file"
 
 #: src/models/actionsmodel.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Add external subtitle…"
 msgctxt "@action"
-msgid "Add external subtitle…"
+msgid "Add External Subtitle…"
 msgstr "Aggiungi sottotitolo esterno"
 
 #: src/models/actionsmodel.cpp:116
@@ -180,21 +182,27 @@ msgid "Open Url"
 msgstr "Apri URL"
 
 #: src/models/actionsmodel.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed increase"
 msgctxt "@action"
-msgid "Playback speed increase"
+msgid "Playback Speed Increase"
 msgstr "Aumento velocità di riproduzione"
 
 #: src/models/actionsmodel.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed decrease"
 msgctxt "@action"
-msgid "Playback speed decrease"
+msgid "Playback Speed Decrease"
 msgstr "Diminuzione velocità di riproduzione"
 
 #: src/models/actionsmodel.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed reset"
 msgctxt "@action"
-msgid "Playback speed reset"
+msgid "Playback Speed Reset"
 msgstr "Ripristina velocità di riproduzione"
 
 #: src/models/actionsmodel.cpp:144
@@ -390,28 +398,36 @@ msgid "Playlist"
 msgstr "Scaletta"
 
 #: src/models/actionsmodel.cpp:368
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video pan x left"
 msgctxt "@action"
-msgid "Video pan x left"
+msgid "Video Move Left"
 msgstr "Sposta x video a sinistra"
 
 #: src/models/actionsmodel.cpp:375
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video pan x right"
 msgctxt "@action"
-msgid "Video pan x right"
+msgid "Video Move Right"
 msgstr "Sposta x video a destra"
 
 #: src/models/actionsmodel.cpp:382
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Video pan y up"
-msgstr "Sposta y video su"
+msgid "Video Move Up"
+msgstr "Sposta sottotitolo su"
 
 #: src/models/actionsmodel.cpp:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Down"
 msgctxt "@action"
-msgid "Video pan y down"
-msgstr "Sposta y video giù"
+msgid "Video Move Down"
+msgstr "Sposta sottotitolo giù"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format
@@ -1665,6 +1681,14 @@ msgstr "Saturazione"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clic centrale sui cursori per azzerarli"
+
+#~ msgctxt "@action"
+#~ msgid "Video pan y up"
+#~ msgstr "Sposta y video su"
+
+#~ msgctxt "@action"
+#~ msgid "Video pan y down"
+#~ msgstr "Sposta y video giù"
 
 #~ msgctxt "@info"
 #~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."

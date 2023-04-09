@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 00:46+0000\n"
+"POT-Creation-Date: 2023-04-09 00:46+0000\n"
 "PO-Revision-Date: 2023-03-27 12:00\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -165,9 +165,11 @@ msgid "Open File"
 msgstr "打开文件"
 
 #: src/models/actionsmodel.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Add external subtitle…"
 msgctxt "@action"
-msgid "Add external subtitle…"
+msgid "Add External Subtitle…"
 msgstr "添加外置字幕…"
 
 #: src/models/actionsmodel.cpp:116
@@ -177,21 +179,27 @@ msgid "Open Url"
 msgstr "打开链接"
 
 #: src/models/actionsmodel.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed increase"
 msgctxt "@action"
-msgid "Playback speed increase"
+msgid "Playback Speed Increase"
 msgstr "增加播放速度"
 
 #: src/models/actionsmodel.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed decrease"
 msgctxt "@action"
-msgid "Playback speed decrease"
+msgid "Playback Speed Decrease"
 msgstr "降低播放速度"
 
 #: src/models/actionsmodel.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback speed reset"
 msgctxt "@action"
-msgid "Playback speed reset"
+msgid "Playback Speed Reset"
 msgstr "重置播放速度"
 
 #: src/models/actionsmodel.cpp:144
@@ -387,28 +395,36 @@ msgid "Playlist"
 msgstr "播放列表"
 
 #: src/models/actionsmodel.cpp:368
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video pan x left"
 msgctxt "@action"
-msgid "Video pan x left"
+msgid "Video Move Left"
 msgstr "沿 X 轴向左平移画面"
 
 #: src/models/actionsmodel.cpp:375
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video pan x right"
 msgctxt "@action"
-msgid "Video pan x right"
+msgid "Video Move Right"
 msgstr "沿 X 轴向右平移画面"
 
 #: src/models/actionsmodel.cpp:382
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Video pan y up"
-msgstr "沿 Y 轴向上平移画面"
+msgid "Video Move Up"
+msgstr "字幕上移"
 
 #: src/models/actionsmodel.cpp:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Down"
 msgctxt "@action"
-msgid "Video pan y down"
-msgstr "沿 Y 轴向下平移画面"
+msgid "Video Move Down"
+msgstr "字幕下移"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format
@@ -1643,3 +1659,11 @@ msgstr "饱和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键单击滑块以重置"
+
+#~ msgctxt "@action"
+#~ msgid "Video pan y up"
+#~ msgstr "沿 Y 轴向上平移画面"
+
+#~ msgctxt "@action"
+#~ msgid "Video pan y down"
+#~ msgstr "沿 Y 轴向下平移画面"

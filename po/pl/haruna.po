@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 00:46+0000\n"
+"POT-Creation-Date: 2023-04-09 00:46+0000\n"
 "PO-Revision-Date: 2021-10-10 11:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgstr "Otwórz plik"
 #: src/models/actionsmodel.cpp:109
 #, kde-format
 msgctxt "@action"
-msgid "Add external subtitle…"
+msgid "Add External Subtitle…"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:116
@@ -199,21 +199,21 @@ msgstr "Otwórz adres URL"
 #, fuzzy, kde-format
 #| msgid "Playback speed increase"
 msgctxt "@action"
-msgid "Playback speed increase"
+msgid "Playback Speed Increase"
 msgstr "Zwiększ szybkość odtwarzania"
 
 #: src/models/actionsmodel.cpp:130
 #, fuzzy, kde-format
 #| msgid "Playback speed decrease"
 msgctxt "@action"
-msgid "Playback speed decrease"
+msgid "Playback Speed Decrease"
 msgstr "Zmniejsz szybkość odtwarzania"
 
 #: src/models/actionsmodel.cpp:137
 #, fuzzy, kde-format
 #| msgid "Playback speed reset"
 msgctxt "@action"
-msgid "Playback speed reset"
+msgid "Playback Speed Reset"
 msgstr "Wyzeruj szybkość odtwarzania"
 
 #: src/models/actionsmodel.cpp:144
@@ -443,29 +443,29 @@ msgstr "Lista odtwarzania"
 #, fuzzy, kde-format
 #| msgid "Video pan x left"
 msgctxt "@action"
-msgid "Video pan x left"
+msgid "Video Move Left"
 msgstr "Przesunięcie film w osi 'x' w lewo"
 
 #: src/models/actionsmodel.cpp:375
 #, fuzzy, kde-format
 #| msgid "Video pan x right"
 msgctxt "@action"
-msgid "Video pan x right"
+msgid "Video Move Right"
 msgstr "Przesunięcie film w osi 'x' w prawo"
 
 #: src/models/actionsmodel.cpp:382
 #, fuzzy, kde-format
-#| msgid "Video pan y up"
+#| msgid "Subtitle: None"
 msgctxt "@action"
-msgid "Video pan y up"
-msgstr "Przesunięcie film w osi 'y' w górę"
+msgid "Video Move Up"
+msgstr "Napis: Brak"
 
 #: src/models/actionsmodel.cpp:389
 #, fuzzy, kde-format
-#| msgid "Video pan y down"
+#| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Video pan y down"
-msgstr "Przesunięcie film w osi 'y' w dół"
+msgid "Video Move Down"
+msgstr "Włącz napisy"
 
 #: src/models/actionsmodel.cpp:396
 #, fuzzy, kde-format
@@ -2066,6 +2066,18 @@ msgstr "Nasycenie"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Naciśnięcie środkowym na suwaku zeruje go"
+
+#, fuzzy
+#~| msgid "Video pan y up"
+#~ msgctxt "@action"
+#~ msgid "Video pan y up"
+#~ msgstr "Przesunięcie film w osi 'y' w górę"
+
+#, fuzzy
+#~| msgid "Video pan y down"
+#~ msgctxt "@action"
+#~ msgid "Video pan y down"
+#~ msgstr "Przesunięcie film w osi 'y' w dół"
 
 #, fuzzy
 #~| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
