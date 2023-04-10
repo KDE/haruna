@@ -135,11 +135,11 @@ MpvItem {
                 return
             }
 
-            const item = playlistModel.getItem(playlistModel.getPlayingItem())
+            const item = playlistProxyModel.getItem(playlistProxyModel.getPlayingItem())
             const title = item.mediaTitle() || item.fileName()
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
         }
-        if (playlistModel.getPlayingItem() + 1 < playList.playlistView.count) {
+        if (playlistProxyModel.getPlayingItem() + 1 < playList.playlistView.count) {
             appActions.playNextAction.trigger()
         } else {
             // Last file in playlist
@@ -147,7 +147,7 @@ MpvItem {
                 playlistProxyModel.setPlayingItem(0)
                 loadFile(playlistProxyModel.getPath(0))
             } else {
-                loadFile(playlistModel.getPath())
+                loadFile(playlistProxyModel.getPath())
                 isFileReloaded = true
             }
         }
