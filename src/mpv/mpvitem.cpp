@@ -220,7 +220,6 @@ void MpvItem::setPosition(double value)
         return;
     }
     setProperty("time-pos", value);
-    Q_EMIT positionChanged();
 }
 
 double MpvItem::remaining()
@@ -244,7 +243,6 @@ void MpvItem::setPause(bool value)
         return;
     }
     setProperty("pause", value);
-    Q_EMIT pauseChanged();
 }
 
 int MpvItem::volume()
@@ -258,7 +256,6 @@ void MpvItem::setVolume(int value)
         return;
     }
     setProperty("volume", value);
-    Q_EMIT volumeChanged();
 }
 
 bool MpvItem::mute()
@@ -272,7 +269,6 @@ void MpvItem::setMute(bool value)
         return;
     }
     setProperty("mute", value);
-    Q_EMIT muteChanged();
 }
 
 int MpvItem::chapter()
@@ -286,7 +282,6 @@ void MpvItem::setChapter(int value)
         return;
     }
     setProperty("chapter", value);
-    Q_EMIT chapterChanged();
 }
 
 int MpvItem::audioId()
@@ -300,7 +295,6 @@ void MpvItem::setAudioId(int value)
         return;
     }
     setProperty("aid", value);
-    Q_EMIT audioIdChanged();
 }
 
 int MpvItem::subtitleId()
@@ -314,7 +308,6 @@ void MpvItem::setSubtitleId(int value)
         return;
     }
     setProperty("sid", value);
-    Q_EMIT subtitleIdChanged();
 }
 
 int MpvItem::secondarySubtitleId()
@@ -328,7 +321,6 @@ void MpvItem::setSecondarySubtitleId(int value)
         return;
     }
     setProperty("secondary-sid", value);
-    Q_EMIT secondarySubtitleIdChanged();
 }
 
 double MpvItem::watchPercentage()
@@ -419,6 +411,10 @@ void MpvItem::eventHandler()
             } else if (strcmp(prop->name, "volume") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
                     Q_EMIT volumeChanged();
+                }
+            } else if (strcmp(prop->name, "mute") == 0) {
+                if (prop->format == MPV_FORMAT_FLAG) {
+                    Q_EMIT muteChanged();
                 }
             } else if (strcmp(prop->name, "pause") == 0) {
                 if (prop->format == MPV_FORMAT_FLAG) {
