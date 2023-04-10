@@ -1,0 +1,488 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY haruna "<application
+>Haruna</application
+>">
+<!ENTITY i18n-translatable-entity "<application
+>Haruna</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<!--
+ SPDX-FileCopyrightText: 2021 George Florea Bănuș <georgefb899@gmail.com>
+
+ SPDX-License-Identifier: CC-BY-SA-4.0
+ -->
+
+<book id="haruna" lang="&language;">
+
+    <bookinfo>
+        <title
+>El manual de l'&haruna;</title>
+
+        <authorgroup>
+            <author
+><personname
+> <firstname
+>George</firstname
+> <surname
+>Florea Bănuș</surname
+> </personname
+> <email
+>georgefb899@gmail.com</email
+> </author>
+        </authorgroup>
+
+        <copyright>
+            <year
+>2019-2022</year>
+            <holder
+>George Florea Bănuș</holder>
+        </copyright>
+        <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+
+        <date
+>17 d'agost de 2022</date>
+        <releaseinfo
+>Haruna 0.9.0</releaseinfo>
+
+        <abstract>
+            <para
+>L'Haruna és un reproductor multimèdia de codi obert construït amb Qt/QML i la «libmpv».</para>
+        </abstract>
+
+        <keywordset>
+            <keyword
+>Haruna</keyword>
+            <keyword
+>KDE</keyword>
+            <keyword
+>kdemultimedia</keyword>
+            <keyword
+>vídeo</keyword>
+            <keyword
+>pel·lícula</keyword>
+        </keywordset>
+    </bookinfo>
+
+    <chapter id="settings">
+        <title
+>Configuració</title>
+        <para
+>Explica alguna de les opcions més complexes de l'Haruna.</para>
+        <section
+><title
+></title
+><para
+></para
+></section>
+
+        <section id="GeneralSettings">
+            <title
+>General</title>
+            <section>
+                <title
+>Ubicació en el diàleg de fitxers</title>
+                <para
+>La carpeta que el diàleg de fitxers carregarà quan s'utilitzi per a obrir un fitxer. Si està buida, recordarà l'última carpeta des de la qual s'ha obert un fitxer.</para>
+            </section>
+
+            <section>
+                <title
+>Nombre màxim de fitxers recents</title>
+                <para
+>Quants fitxers recents s'han de desar i mostrar al menú de fitxers recents.</para>
+            </section>
+
+            <section>
+                <title
+>Recorda la mida i la posició de la finestra</title>
+                <para
+>Restaura la mida i la posició de la finestra quan es va tancar. En el <emphasis
+>Wayland</emphasis
+> només es restaura la mida.</para>
+            </section>
+
+            <section>
+                <title
+>Tema d'icones Brisa</title>
+                <para
+>Quan està marcada, l'aplicació utilitza el tema d'icones Brisa.</para>
+                <para
+>Quan no està marcada, l'aplicació utilitza el tema d'icones del sistema. No sempre funciona com s'espera.</para>
+            </section>
+
+            <section>
+                <title
+>Estil de la IGU</title>
+                <para
+>Permet canviar l'estil dels Qt Quick Controls (botons, caselles de selecció, etc.), als estils disponibles al sistema. </para>
+            </section>
+        </section>
+
+        <section id="PlaybackSettings">
+            <title
+>Reproducció</title>
+            <section>
+                <title
+>Passos de cerca</title>
+                <para
+>How much to seek when triggering the corresponding action. Seek mode is <emphasis
+>exact</emphasis
+> <ulink url="https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]"
+> https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]</ulink
+>.</para>
+            </section>
+
+            <section>
+                <title
+>Obre el darrer fitxer reproduït en iniciar</title>
+                <para
+>En iniciar, obre el fitxer que s'estava reproduint quan es va tancar l'aplicació.</para>
+            </section>
+
+            <section>
+                <title
+>Ves a la darrera posició de reproducció</title>
+                <para
+>Quan s'obri un fitxer que s'ha reproduït abans, es tornarà a la posició en què es trobava quan s'aturà la reproducció.</para>
+            </section>
+
+            <section>
+                <title
+>Inicia la reproducció</title>
+                <para
+>Això només s'aplica quan es reprèn la reproducció (se cerca l'última posició de reproducció) d'un fitxer que s'ha reproduït abans.</para>
+            </section>
+
+            <section>
+                <title
+>En minimitzar fes pausa</title>
+                <para
+>Posa en pausa el reproductor mentre es minimitza la finestra, quan es restauri es reprendrà la reproducció.</para>
+            </section>
+
+            <section>
+                <title
+>Descodificació per maquinari</title>
+                <para
+>Si activeu la descodificació per maquinari, es recomana utilitzar les opcions «auto-safe» o «auto».</para>
+                <para
+>Podeu llegir més sobre cada opció aquí: <ulink url="https://mpv.io/manual/stable/#options-hwdec"
+>https://mpv.io/manual/stable/#options-hwdec</ulink
+>.</para>
+                <para
+>Si voleu utilitzar «vaapi» a l'X11, heu d'establir la variable d'entorn <emphasis
+>QT_XCB_GL_INTEGRATION</emphasis
+> a <emphasis
+>xcb_egl</emphasis
+>.</para>
+            </section>
+
+            <section>
+                <title
+>Recorda la posició del temps</title>
+                <para
+>Determina quan desar i restaurar la posició dels fitxers reproduïts anteriorment.</para>
+                <para
+>El primer camp controla per a quins fitxers desar la posició:</para>
+                <itemizedlist>
+                    <listitem
+><para
+>-1: la característica està desactivada</para
+></listitem>
+                    <listitem
+><para
+>0: desa per a tots els fitxers</para
+></listitem>
+                    <listitem
+><para
+>1-9999: desa per als fitxers més llargs que el valor establert, en minuts</para
+></listitem>
+                </itemizedlist>
+                <para
+>El segon camp controla amb quina freqüència es desarà la posició.</para>
+            </section>
+
+            <section>
+                <title
+>Omet els capítols</title>
+                <para
+>Quan està activat, s'ometen automàticament els capítols que contenen certes paraules/caràcters.</para>
+                <para
+>Les paraules/caràcters a ometre es defineixen com una cadena separada per comes.</para>
+                <para
+>La coincidència no és exacta, el que significa que <emphasis
+>ob</emphasis
+> coincidirà amb paraules que la continguin com <emphasis
+>obrint</emphasis
+>.</para>
+            </section>
+
+            <section>
+                <title
+>Selecció del format Youtube-dl</title>
+                <para
+>L'Haruna utilitza «youtube-dl» per reproduir vídeos en línia. Alguns llocs ofereixen diverses versions de vídeo/àudio (còdecs diferents, resolució). Aquest paràmetre permet configurar quina versió de vídeo/àudio selecciona «youtube-dl». Més informació: <ulink url="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection"
+>https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection</ulink
+> </para>
+            </section>
+        </section>
+
+        <section id="VideoSettings">
+            <title
+>Vídeo</title>
+            <section>
+                <title
+>Plantilla de captura de pantalla</title>
+                <para
+><ulink url="https://mpv.io/manual/stable/#screenshot"
+>https://mpv.io/manual/stable/#screenshot</ulink
+></para>
+                <para
+>Especifiqueu la plantilla de nom de fitxer utilitzada per a desar captures de pantalla. La plantilla especifica el nom de fitxer sense extensió de fitxer, i pot contenir especificadors de format, els quals seran substituïts quan es faci una captura de pantalla. De manera predeterminada, la plantilla és «mpv-shot%n», el qual resulta en noms de fitxer com «mpv-shot0012.png», per exemple.</para>
+                <para
+>La plantilla pot començar per un camí relatiu o absolut, per tal d'especificar una ubicació del directori on s'han de desar les captures de pantalla.</para>
+                <para
+>Si el nom de fitxer final de captura de pantalla apunta a un fitxer ja existent, el fitxer no se sobreescriurà. La captura de pantalla no es desarà, o si la plantilla conté %n, es desarà usant un nom de fitxer diferent generat nou.</para>
+                <para
+>Especificadors de format permesos:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para
+>%[#][0X]n</para>
+                        <para
+>Un número de seqüència, emplenat amb zeros a la longitud X (per defecte: 04). Per exemple, si passeu el format %04n, obtindreu 0012 a la 12a captura de pantalla. El número s'incrementa cada vegada que es fa una captura de pantalla o si el fitxer ja existeix. La longitud X ha d'estar en l'interval 0-9. Amb el signe # opcional, el «mpv» utilitzarà el número més baix disponible. Per exemple, si es prenen tres captures de pantalla (0001, 0002, 0003) i se suprimeixen les dues primeres, les dues pròximes captures de pantalla no seran 0004 i 0005, sinó 0001 i 0002 una altra vegada.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%f</para>
+                        <para
+>Nom del fitxer del vídeo que s'està reproduint.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%F</para>
+                        <para
+>Igual que %f, però elimina l'extensió del fitxer, inclòs el punt.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%x</para>
+                        <para
+>Camí del directori del vídeo que s'està reproduint. Si el vídeo no és al sistema de fitxers (però, per exemple, http://), això s'expandeix a una cadena buida.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%X{alternativa}</para>
+                        <para
+>Igual que %x, però si el fitxer de vídeo no és al sistema de fitxers, retorna la cadena alternativa dins de {...}.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%p</para>
+                        <para
+>Temps de reproducció actual, en el mateix format que s'utilitza a l'OSD. El resultat és una cadena de la forma «HH:MM:SS». Per exemple, si el vídeo es troba a la posició de temps de 5 minuts i 34 segons, %p serà substituït per «00:05:34».</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%P</para>
+                        <para
+>Similar a %p, però ampliat amb el temps de reproducció en mil·lisegons. Es dona format com a «HH:MM:SS.mmm», amb «mmm» sent els mil·lisegons del temps de reproducció.</para>
+                        <para
+>Nota</para>
+                        <para
+>Aquesta és una manera senzilla d'obtenir marques horàries úniques per fotograma. (Els nombres de fotograma serien més intuïtius, però no es poden implementar fàcilment perquè els formats de contenidors solen utilitzar marques horàries per identificar fotogrames)</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%wX</para>
+                        <para
+>Especifica l'hora de reproducció actual utilitzant la cadena de format X. %p és com %wH:%wM:%wS, i %P és com %wH:%wM:%wS.%wT.</para>
+                        <para
+>Especificadors de format vàlids:</para>
+                        <itemizedlist>
+                        <listitem>
+                            <para
+>%wH</para>
+                            <para
+>hora (omplerta amb 0 fins a dos dígits)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wh</para>
+                            <para
+>hora (sense omplir)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wM</para>
+                            <para
+>minuts (00-59)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wm</para>
+                            <para
+>minuts totals (inclou hores, a dunlike %wM)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wS</para>
+                            <para
+>segons (00-59)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%ws</para>
+                            <para
+>segons totals (inclou hores i minuts)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wf</para>
+                            <para
+>com %ws, però com a flotant</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wT</para>
+                            <para
+>mil·lisegons (000-999)</para>
+                        </listitem>
+                        </itemizedlist>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%tX</para>
+                        <para
+>Especifica la data/hora local actual utilitzant el format X. Aquest especificador de format utilitza internament la funció strftime() d'UNIX, i insereix el resultat de passar «%X» a strftime. Per exemple, %tm inserirà el número del mes actual com a número. Heu d'utilitzar múltiples especificadors %tX per a construir una cadena de data/hora completa.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%{prop[:text alternatiu]}</para>
+                        <para
+>Insereix el valor de la propietat d'entrada «prop». P. ex., %{filename} és el mateix que %f. Si la propietat no existeix o no està disponible, s'inserirà un text d'error, llevat que s'especifiqui una alternativa.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%%</para>
+                        <para
+>Substitut pel mateix caràcter %.</para>
+                    </listitem>
+
+                </itemizedlist>
+            </section>
+        </section>
+
+        <section id="CustomCommandsSettings">
+            <title
+>Ordres personalitzades</title>
+            <section>
+                <title
+>Ordre</title>
+                <para
+>Quina ordre «mpv» executar, vegeu les <ulink url="https://mpv.io/manual/stable/#list-of-input-commands"
+>Ordres de l'MPV</ulink
+> per a una llista d'ordres disponibles.</para>
+                <para
+>No totes les ordres funcionaran, ja que algunes són específiques de l'«mpv».</para>
+                <para
+>El més útil són les ordres per manipular propietats, com «set», «add», «cycle».</para>
+                <para
+><emphasis
+>set</emphasis
+>: estableix el valor d'una propietat <code
+>set volume-max 150</code
+>.</para>
+                <para
+><emphasis
+>add</emphasis
+>: augmenta/disminueix el valor d'una propietat <code
+>add volum 15</code
+>, augmenta el volum en 15. Per reduir el valor, utilitzeu <code
+>add volum -15</code
+>.</para>
+                <para
+><emphasis
+>cycle</emphasis
+>: circula a través dels valors d'una propietat <code
+>cycle aid up</code
+>.</para>
+            </section>
+            <section>
+                <title
+>Missatge OSD</title>
+                <para
+>Un missatge OSD a mostrar quan s'activa una ordre personalitzada de tipus d'acció.</para>
+                <para
+>Utilitzeu ${property_name} per mostrar el valor d'una propietat Volum: ${volume}.</para>
+            </section>
+            <section>
+                <title
+>Drecera de teclat</title>
+                <para
+>L'ordre s'activarà amb una drecera. La drecera es pot establir després de desar.</para>
+            </section>
+            <section>
+                <title
+>Executa a l'inici</title>
+                <para
+>L'ordre s'executarà en iniciar l'aplicació. Les ordres d'inici es poden commutar, el qual vol dir que podreu triar si s'estableixen o no en iniciar, això estarà disponible després de desar.</para>
+            </section>
+        </section>
+    </chapter>
+
+    <chapter id="credits">
+        <title
+>Crèdits i llicència</title>
+        <para
+>&haruna;</para>
+        <para
+>Copyright del programa 2019-2021 George Florea Bănuș</para>
+        <para
+>Col·laboradors: <itemizedlist
+> <listitem
+> <para
+>George Florea Bănuș <email
+>georgefb899@gmail.com</email
+></para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <para
+>Copyright de la documentació &copy; 2019-2021 George Florea Bănuș <email
+>georgefb899@gmail.com</email
+> </para>
+
+    <para
+>Traductor de la documentació: &credits.JosepMa.Ferrer;</para
+> &underCCBYSA4; &underGPL; </chapter>
+
+</book>
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

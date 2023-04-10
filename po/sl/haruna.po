@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-09 00:46+0000\n"
-"PO-Revision-Date: 2023-03-31 11:23+0200\n"
+"PO-Revision-Date: 2023-04-09 08:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -167,12 +167,10 @@ msgid "Open File"
 msgstr "Odpri datoteko"
 
 #: src/models/actionsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add external subtitle…"
+#, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "Dodaj zunanje podnaslove …"
+msgstr "Dodaj zunanje podnaslove…"
 
 #: src/models/actionsmodel.cpp:116
 #, kde-format
@@ -181,28 +179,22 @@ msgid "Open Url"
 msgstr "Odpri URL"
 
 #: src/models/actionsmodel.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback speed increase"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
-msgstr "Pospeši predvajanje"
+msgstr "Pospeši predvajanje playbacka"
 
 #: src/models/actionsmodel.cpp:130
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback speed decrease"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
-msgstr "Upočasni predvajanje"
+msgstr "Upočasni predvajanje playbacka"
 
 #: src/models/actionsmodel.cpp:137
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback speed reset"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
-msgstr "Ponastavi hitrost predvajanja"
+msgstr "Ponastavi hitrost predvajanja playbacka"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -397,36 +389,28 @@ msgid "Playlist"
 msgstr "Seznam predvajanja"
 
 #: src/models/actionsmodel.cpp:368
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video pan x left"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
-msgstr "Zasuk videa v levo"
+msgstr "Pomakni video v levo"
 
 #: src/models/actionsmodel.cpp:375
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video pan x right"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
-msgstr "Zasuk videa v desno"
+msgstr "Pomakni video v desno"
 
 #: src/models/actionsmodel.cpp:382
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
-msgstr "Pomakni podnaslov navzgor"
+msgstr "Pomakni video navzgor"
 
 #: src/models/actionsmodel.cpp:389
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
-msgstr "Pomakni podnaslov navzdol"
+msgstr "Pomakni video navzdol"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format
