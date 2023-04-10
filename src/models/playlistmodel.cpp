@@ -293,10 +293,11 @@ void PlayListModel::openFile(const QString &path)
             return;
         }
         if (isVideoOrAudioMimeType(mimeType)) {
+            url.setScheme(QStringLiteral("file"));
             if (PlaylistSettings::loadSiblings()) {
                 getSiblingItems(url);
             } else {
-                appendItem(path);
+                appendItem(url.toLocalFile());
                 setPlayingItem(0);
             }
 
