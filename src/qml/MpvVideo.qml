@@ -144,8 +144,8 @@ MpvItem {
         } else {
             // Last file in playlist
             if (PlaylistSettings.repeat) {
-                playlistModel.setPlayingItem(0)
-                loadFile(playlistModel.getPath(0))
+                playlistProxyModel.setPlayingItem(0)
+                loadFile(playlistProxyModel.getPath(0))
             } else {
                 loadFile(playlistModel.getPath())
                 isFileReloaded = true
