@@ -95,13 +95,15 @@ void Application::setupWorkerThread()
 
 void Application::setupAboutData()
 {
-    m_aboutData = KAboutData(QStringLiteral("haruna"), i18nc("application title/display name", "Haruna Media Player"), Application::version());
+    KAboutData m_aboutData;
+    m_aboutData.setComponentName(QStringLiteral("haruna"));
+    m_aboutData.setDisplayName(i18nc("application title/display name", "Haruna Media Player"));
+    m_aboutData.setVersion(Application::version().toUtf8());
     m_aboutData.setShortDescription(i18nc("@title", "A configurable media player."));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
     m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2023"));
-    m_aboutData.setHomepage(QStringLiteral("https://invent.kde.org/multimedia/haruna"));
+    m_aboutData.setHomepage(QStringLiteral("https://haruna.kde.org"));
     m_aboutData.setBugAddress(QStringLiteral("https://bugs.kde.org/enter_bug.cgi?product=Haruna").toUtf8());
-    m_aboutData.setComponentName(QStringLiteral("haruna"));
     m_aboutData.setDesktopFileName("org.kde.haruna");
 
     m_aboutData.addAuthor(i18nc("@info:credit", "George Florea Bănuș"),
