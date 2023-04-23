@@ -14,10 +14,9 @@
 
 class MpvRenderer;
 
-class MpvItem : public MpvCore
+class MpvItem : public MpvAbstractItem
 {
     Q_OBJECT
-
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     Q_PROPERTY(TracksModel *subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
     Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
@@ -86,7 +85,6 @@ public:
     Q_INVOKABLE double loadTimePosition();
     Q_INVOKABLE void resetTimePosition();
     Q_INVOKABLE void userCommand(const QString &commandString);
-    void eventHandler() override;
 
 Q_SIGNALS:
     void audioTracksModelChanged();

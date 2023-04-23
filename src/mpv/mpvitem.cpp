@@ -39,7 +39,7 @@
 #endif
 
 MpvItem::MpvItem(QQuickItem *parent)
-    : MpvCore(parent)
+    : MpvAbstractItem(parent)
     , m_audioTracksModel(new TracksModel)
     , m_subtitleTracksModel(new TracksModel)
     , m_playlistProxyModel(new PlayListProxyModel)
@@ -362,91 +362,6 @@ void MpvItem::loadFile(const QString &file)
 
     GeneralSettings::setLastPlayedFile(file);
     GeneralSettings::self()->save();
-}
-
-void MpvItem::eventHandler()
-{
-    while (m_mpv) {
-        mpv_event *event = mpv_wait_event(m_mpv, 0);
-        if (event->event_id == MPV_EVENT_NONE) {
-            break;
-        }
-        switch (event->event_id) {
-        case MPV_EVENT_START_FILE: {
-            Q_EMIT fileStarted();
-            break;
-        }
-        case MPV_EVENT_FILE_LOADED: {
-            Q_EMIT fileLoaded();
-            break;
-        }
-        case MPV_EVENT_END_FILE: {
-            auto prop = static_cast<mpv_event_end_file *>(event->data);
-            if (prop->reason == MPV_END_FILE_REASON_EOF) {
-                Q_EMIT endFile("eof");
-            } else if (prop->reason == MPV_END_FILE_REASON_ERROR) {
-                Q_EMIT endFile("error");
-            }
-            break;
-        }
-        case MPV_EVENT_PROPERTY_CHANGE: {
-            mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
-
-            if (strcmp(prop->name, "time-pos") == 0) {
-                if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT positionChanged();
-                }
-            } else if (strcmp(prop->name, "media-title") == 0) {
-                if (prop->format == MPV_FORMAT_STRING) {
-                    Q_EMIT mediaTitleChanged();
-                }
-            } else if (strcmp(prop->name, "time-remaining") == 0) {
-                if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT remainingChanged();
-                }
-            } else if (strcmp(prop->name, "duration") == 0) {
-                if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT durationChanged();
-                }
-            } else if (strcmp(prop->name, "volume") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT volumeChanged();
-                }
-            } else if (strcmp(prop->name, "mute") == 0) {
-                if (prop->format == MPV_FORMAT_FLAG) {
-                    Q_EMIT muteChanged();
-                }
-            } else if (strcmp(prop->name, "pause") == 0) {
-                if (prop->format == MPV_FORMAT_FLAG) {
-                    Q_EMIT pauseChanged();
-                }
-            } else if (strcmp(prop->name, "chapter") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT chapterChanged();
-                }
-            } else if (strcmp(prop->name, "aid") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT audioIdChanged();
-                }
-            } else if (strcmp(prop->name, "sid") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT subtitleIdChanged();
-                }
-            } else if (strcmp(prop->name, "secondary-sid") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT secondarySubtitleIdChanged();
-                }
-            } else if (strcmp(prop->name, "track-list") == 0) {
-                if (prop->format == MPV_FORMAT_NODE) {
-                    loadTracks();
-                }
-            }
-            break;
-        }
-        default:;
-            // Ignore uninteresting or unknown events.
-        }
-    }
 }
 
 void MpvItem::loadTracks()

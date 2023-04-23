@@ -51,15 +51,11 @@ struct ErrorReturn {
 };
 Q_DECLARE_METATYPE(ErrorReturn)
 
-class MpvCore : public QQuickFramebufferObject
+class MpvController : public QObject
 {
     Q_OBJECT
 public:
-    MpvCore(QQuickItem *parent = nullptr);
-    ~MpvCore();
-    Renderer *createRenderer() const override;
-
-    friend class MpvRenderer;
+    MpvController(QObject *parent = nullptr);
 
     /**
      * Set the given property as mpv_node converted from the QVariant argument.
@@ -90,15 +86,30 @@ public:
      */
     Q_INVOKABLE QString getError(int error);
 
+    mpv_handle *mpvHandle() const;
     static void mpvEvents(void *ctx);
-    virtual void eventHandler() = 0;
+    void eventHandler();
 
 Q_SIGNALS:
-    void ready();
+    void mediaTitleChanged();
+    void watchPercentageChanged();
+    void positionChanged();
+    void durationChanged();
+    void remainingChanged();
+    void pauseChanged();
+    void muteChanged();
+    void hwDecodingChanged();
+    void volumeChanged();
+    void chapterChanged();
+    void audioIdChanged();
+    void subtitleIdChanged();
+    void secondarySubtitleIdChanged();
+    void fileStarted();
+    void fileLoaded();
+    void endFile(QString reason);
 
 protected:
     mpv_handle *m_mpv{nullptr};
-    mpv_render_context *m_mpv_gl{nullptr};
     mpv_node_list *create_list(mpv_node *dst, bool is_map, int num);
     void setNode(mpv_node *dst, const QVariant &src);
     bool test_type(const QVariant &v, QMetaType::Type t);
@@ -106,6 +117,29 @@ protected:
 
 private:
     QVariant node_to_variant(const mpv_node *node);
+};
+
+class MpvAbstractItem : public QQuickFramebufferObject
+{
+    Q_OBJECT
+public:
+    MpvAbstractItem(QQuickItem *parent = nullptr);
+    ~MpvAbstractItem();
+    Renderer *createRenderer() const override;
+
+    Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
+    Q_INVOKABLE QVariant getProperty(const QString &name);
+    Q_INVOKABLE QVariant command(const QStringList &params);
+
+    friend class MpvRenderer;
+
+Q_SIGNALS:
+    void ready();
+
+protected:
+    MpvController *m_mpvController{nullptr};
+    mpv_handle *m_mpv{nullptr};
+    mpv_render_context *m_mpv_gl{nullptr};
 };
 
 #endif // MPVCORE_H

@@ -7,10 +7,51 @@
 #include "mpvcore.h"
 #include "mpvrenderer.h"
 
+#include <QThread>
 #include <clocale>
 
-MpvCore::MpvCore(QQuickItem *parent)
+MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     : QQuickFramebufferObject(parent)
+{
+    // Setup threads
+    auto *worker = new QThread();
+    worker->start();
+
+    m_mpvController = new MpvController();
+    m_mpvController->moveToThread(worker);
+    m_mpv = m_mpvController->mpvHandle();
+}
+
+MpvAbstractItem::~MpvAbstractItem()
+{
+    if (m_mpv_gl) {
+        mpv_render_context_free(m_mpv_gl);
+    }
+    mpv_terminate_destroy(m_mpvController->mpvHandle());
+}
+
+int MpvAbstractItem::setProperty(const QString &name, const QVariant &value)
+{
+    return m_mpvController->setProperty(name, value);
+}
+
+QVariant MpvAbstractItem::getProperty(const QString &name)
+{
+    return m_mpvController->getProperty(name);
+}
+
+QVariant MpvAbstractItem::command(const QStringList &params)
+{
+    return m_mpvController->command(params);
+}
+
+QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
+{
+    return new MpvRenderer(const_cast<MpvAbstractItem *>(this));
+}
+
+MpvController::MpvController(QObject *parent)
+    : QObject(parent)
 {
     // Qt sets the locale in the QGuiApplication constructor, but libmpv
     // requires the LC_NUMERIC category to be set to "C", so change it back.
@@ -23,35 +64,110 @@ MpvCore::MpvCore(QQuickItem *parent)
     if (mpv_initialize(m_mpv) < 0) {
         qFatal("could not initialize mpv context");
     }
-    mpv_set_wakeup_callback(m_mpv, MpvCore::mpvEvents, this);
+    mpv_set_wakeup_callback(m_mpv, MpvController::mpvEvents, this);
 }
 
-MpvCore::~MpvCore()
+void MpvController::mpvEvents(void *ctx)
 {
-    if (m_mpv_gl) {
-        mpv_render_context_free(m_mpv_gl);
+    QMetaObject::invokeMethod(static_cast<MpvController *>(ctx), &MpvController::eventHandler, Qt::QueuedConnection);
+}
+
+void MpvController::eventHandler()
+{
+    while (m_mpv) {
+        mpv_event *event = mpv_wait_event(m_mpv, 0);
+        if (event->event_id == MPV_EVENT_NONE) {
+            break;
+        }
+        switch (event->event_id) {
+        case MPV_EVENT_START_FILE: {
+            Q_EMIT fileStarted();
+            break;
+        }
+        case MPV_EVENT_FILE_LOADED: {
+            Q_EMIT fileLoaded();
+            break;
+        }
+        case MPV_EVENT_END_FILE: {
+            auto prop = static_cast<mpv_event_end_file *>(event->data);
+            if (prop->reason == MPV_END_FILE_REASON_EOF) {
+                Q_EMIT endFile("eof");
+            } else if (prop->reason == MPV_END_FILE_REASON_ERROR) {
+                Q_EMIT endFile("error");
+            }
+            break;
+        }
+        case MPV_EVENT_PROPERTY_CHANGE: {
+            mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
+
+            if (strcmp(prop->name, "time-pos") == 0) {
+                if (prop->format == MPV_FORMAT_DOUBLE) {
+                    Q_EMIT positionChanged();
+                }
+            } else if (strcmp(prop->name, "media-title") == 0) {
+                if (prop->format == MPV_FORMAT_STRING) {
+                    Q_EMIT mediaTitleChanged();
+                }
+            } else if (strcmp(prop->name, "time-remaining") == 0) {
+                if (prop->format == MPV_FORMAT_DOUBLE) {
+                    Q_EMIT remainingChanged();
+                }
+            } else if (strcmp(prop->name, "duration") == 0) {
+                if (prop->format == MPV_FORMAT_DOUBLE) {
+                    Q_EMIT durationChanged();
+                }
+            } else if (strcmp(prop->name, "volume") == 0) {
+                if (prop->format == MPV_FORMAT_INT64) {
+                    Q_EMIT volumeChanged();
+                }
+            } else if (strcmp(prop->name, "mute") == 0) {
+                if (prop->format == MPV_FORMAT_FLAG) {
+                    Q_EMIT muteChanged();
+                }
+            } else if (strcmp(prop->name, "pause") == 0) {
+                if (prop->format == MPV_FORMAT_FLAG) {
+                    Q_EMIT pauseChanged();
+                }
+            } else if (strcmp(prop->name, "chapter") == 0) {
+                if (prop->format == MPV_FORMAT_INT64) {
+                    Q_EMIT chapterChanged();
+                }
+            } else if (strcmp(prop->name, "aid") == 0) {
+                if (prop->format == MPV_FORMAT_INT64) {
+                    Q_EMIT audioIdChanged();
+                }
+            } else if (strcmp(prop->name, "sid") == 0) {
+                if (prop->format == MPV_FORMAT_INT64) {
+                    Q_EMIT subtitleIdChanged();
+                }
+            } else if (strcmp(prop->name, "secondary-sid") == 0) {
+                if (prop->format == MPV_FORMAT_INT64) {
+                    Q_EMIT secondarySubtitleIdChanged();
+                }
+            } else if (strcmp(prop->name, "track-list") == 0) {
+                if (prop->format == MPV_FORMAT_NODE) { }
+            }
+            break;
+        }
+        default:;
+            // Ignore uninteresting or unknown events.
+        }
     }
-    mpv_terminate_destroy(m_mpv);
 }
 
-QQuickFramebufferObject::Renderer *MpvCore::createRenderer() const
+mpv_handle *MpvController::mpvHandle() const
 {
-    return new MpvRenderer(const_cast<MpvCore *>(this));
+    return m_mpv;
 }
 
-void MpvCore::mpvEvents(void *ctx)
-{
-    QMetaObject::invokeMethod(static_cast<MpvCore *>(ctx), &MpvCore::eventHandler, Qt::QueuedConnection);
-}
-
-int MpvCore::setProperty(const QString &name, const QVariant &value)
+int MpvController::setProperty(const QString &name, const QVariant &value)
 {
     mpv_node node;
     setNode(&node, value);
     return mpv_set_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
 }
 
-QVariant MpvCore::getProperty(const QString &name)
+QVariant MpvController::getProperty(const QString &name)
 {
     mpv_node node;
     int err = mpv_get_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
@@ -62,7 +178,7 @@ QVariant MpvCore::getProperty(const QString &name)
     return node_to_variant(&node);
 }
 
-QVariant MpvCore::command(const QVariant &params)
+QVariant MpvController::command(const QVariant &params)
 {
     mpv_node node;
     setNode(&node, params);
@@ -75,7 +191,7 @@ QVariant MpvCore::command(const QVariant &params)
     return node_to_variant(&result);
 }
 
-QString MpvCore::getError(int error)
+QString MpvController::getError(int error)
 {
     ErrorReturn err{error};
     switch (err.error) {
@@ -125,7 +241,7 @@ QString MpvCore::getError(int error)
     return QString();
 }
 
-mpv_node_list *MpvCore::create_list(mpv_node *dst, bool is_map, int num)
+mpv_node_list *MpvController::create_list(mpv_node *dst, bool is_map, int num)
 {
     dst->format = is_map ? MPV_FORMAT_NODE_MAP : MPV_FORMAT_NODE_ARRAY;
     mpv_node_list *list = new mpv_node_list();
@@ -149,7 +265,7 @@ mpv_node_list *MpvCore::create_list(mpv_node *dst, bool is_map, int num)
     return list;
 }
 
-void MpvCore::setNode(mpv_node *dst, const QVariant &src)
+void MpvController::setNode(mpv_node *dst, const QVariant &src)
 {
     if (test_type(src, QMetaType::QString)) {
         dst->format = MPV_FORMAT_STRING;
@@ -201,7 +317,7 @@ void MpvCore::setNode(mpv_node *dst, const QVariant &src)
     return;
 }
 
-bool MpvCore::test_type(const QVariant &v, QMetaType::Type t)
+bool MpvController::test_type(const QVariant &v, QMetaType::Type t)
 {
     // The Qt docs say: "Although this function is declared as returning
     // QVariant::Type(obsolete), the return value should be interpreted
@@ -209,7 +325,7 @@ bool MpvCore::test_type(const QVariant &v, QMetaType::Type t)
     return static_cast<int>(v.type()) == static_cast<int>(t);
 }
 
-void MpvCore::free_node(mpv_node *dst)
+void MpvController::free_node(mpv_node *dst)
 {
     switch (dst->format) {
     case MPV_FORMAT_STRING:
@@ -236,7 +352,7 @@ void MpvCore::free_node(mpv_node *dst)
     dst->format = MPV_FORMAT_NONE;
 }
 
-inline QVariant MpvCore::node_to_variant(const mpv_node *node)
+inline QVariant MpvController::node_to_variant(const mpv_node *node)
 {
     switch (node->format) {
     case MPV_FORMAT_STRING:
