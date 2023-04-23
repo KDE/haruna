@@ -36,10 +36,6 @@ void MediaPlayer2Player::setupConnections()
         propertiesChanged("PlaybackStatus", PlaybackStatus());
         Q_EMIT playbackStatusChanged();
     });
-    connect(m_mpv, &MpvItem::positionChanged, this, [=]() {
-        propertiesChanged("PlaybackStatus", PlaybackStatus());
-        Q_EMIT playbackStatusChanged();
-    });
     connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
         propertiesChanged("Volume", Volume());
         Q_EMIT volumeChanged();
