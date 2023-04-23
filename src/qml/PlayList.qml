@@ -361,7 +361,7 @@ Item {
                 NumberAnimation {
                     target: root
                     property: "x"
-                    duration: 120
+                    duration: 150
                     easing.type: Easing.InQuad
                 }
 
@@ -386,7 +386,7 @@ Item {
                 NumberAnimation {
                     target: root
                     property: "x"
-                    duration: 120
+                    duration: 150
                     easing.type: Easing.OutQuad
                 }
             }
