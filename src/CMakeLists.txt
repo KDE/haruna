@@ -21,7 +21,8 @@ target_sources(haruna
     models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp
     models/tracksmodel.h models/tracksmodel.cpp
     models/playlistmodel.h models/playlistmodel.cpp
-    mpv/mpvcore.h mpv/mpvcore.cpp
+    mpv/mpvabstractitem.h mpv/mpvabstractitem.cpp
+    mpv/mpvcontroller.h mpv/mpvcontroller.cpp
     mpv/mpvitem.h mpv/mpvitem.cpp
     mpv/mpvrenderer.h mpv/mpvrenderer.cpp
     playlistitem.h playlistitem.cpp

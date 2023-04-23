@@ -5,17 +5,6 @@
  */
 
 #include "mpvitem.h"
-#include "application.h"
-#include "audiosettings.h"
-#include "generalsettings.h"
-#include "global.h"
-#include "informationsettings.h"
-#include "playbacksettings.h"
-#include "subtitlessettings.h"
-#include "track.h"
-#include "tracksmodel.h"
-#include "videosettings.h"
-#include "worker.h"
 
 #include <QCryptographicHash>
 #include <QDir>
@@ -30,6 +19,19 @@
 #include <KLocalizedString>
 #include <KShell>
 #include <QCommandLineParser>
+
+#include "application.h"
+#include "audiosettings.h"
+#include "generalsettings.h"
+#include "global.h"
+#include "informationsettings.h"
+#include "mpvcontroller.h"
+#include "playbacksettings.h"
+#include "subtitlessettings.h"
+#include "track.h"
+#include "tracksmodel.h"
+#include "videosettings.h"
+#include "worker.h"
 
 #if defined(Q_OS_UNIX)
 #include "lockmanager.h"
@@ -138,6 +140,8 @@ MpvItem::MpvItem(QQuickItem *parent)
 #endif
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
+
+    connect(m_mpvController, &MpvController::trackListChanged, this, &MpvItem::loadTracks);
 }
 
 void MpvItem::initProperties()

@@ -5,6 +5,7 @@
  */
 
 #include "mpvrenderer.h"
+#include "mpvcontroller.h"
 
 #include <QGuiApplication>
 #include <QOpenGLContext>
@@ -33,18 +34,18 @@ void on_mpv_redraw(void *ctx)
 }
 
 MpvRenderer::MpvRenderer(MpvAbstractItem *new_obj)
-    : m_mpvAbstractItem{new_obj}
+    : m_mpvAItem{new_obj}
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    m_mpvAbstractItem->window()->setPersistentOpenGLContext(true);
+    m_mpvAItem->window()->setPersistentOpenGLContext(true);
 #endif
-    m_mpvAbstractItem->window()->setPersistentSceneGraph(true);
+    m_mpvAItem->window()->setPersistentSceneGraph(true);
 }
 
 void MpvRenderer::render()
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    m_mpvAbstractItem->window()->resetOpenGLState();
+    m_mpvAItem->window()->resetOpenGLState();
 #endif
 
     QOpenGLFramebufferObject *fbo = framebufferObject();
@@ -65,17 +66,17 @@ void MpvRenderer::render()
                                  {MPV_RENDER_PARAM_INVALID, nullptr}};
     // See render_gl.h on what OpenGL environment mpv expects, and
     // other API details.
-    mpv_render_context_render(m_mpvAbstractItem->m_mpv_gl, params);
+    mpv_render_context_render(m_mpvAItem->m_mpv_gl, params);
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    m_mpvAbstractItem->window()->resetOpenGLState();
+    m_mpvAItem->window()->resetOpenGLState();
 #endif
 }
 
 QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size)
 {
     // init mpv_gl:
-    if (!m_mpvAbstractItem->m_mpv_gl) {
+    if (!m_mpvAItem->m_mpv_gl) {
 #if MPV_CLIENT_API_VERSION < MPV_MAKE_VERSION(2, 0)
         mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr, nullptr};
 #else
@@ -106,12 +107,13 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
                                   display,
                                   {MPV_RENDER_PARAM_INVALID, nullptr}};
 
-        if (mpv_render_context_create(&m_mpvAbstractItem->m_mpv_gl, m_mpvAbstractItem->m_mpvController->mpvHandle(), params) < 0) {
+        int result = mpv_render_context_create(&m_mpvAItem->m_mpv_gl, m_mpvAItem->m_mpv, params);
+        if (result < 0) {
             qFatal("failed to initialize mpv GL context");
         }
 
-        mpv_render_context_set_update_callback(m_mpvAbstractItem->m_mpv_gl, on_mpv_redraw, m_mpvAbstractItem);
-        Q_EMIT m_mpvAbstractItem->ready();
+        mpv_render_context_set_update_callback(m_mpvAItem->m_mpv_gl, on_mpv_redraw, m_mpvAItem);
+        Q_EMIT m_mpvAItem->ready();
     }
 
     return QQuickFramebufferObject::Renderer::createFramebufferObject(size);

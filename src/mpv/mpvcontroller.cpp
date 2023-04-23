@@ -1,54 +1,12 @@
 /*
- * SPDX-FileCopyrightText: 2022 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2023 George Florea Bănuș <georgefb899@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "mpvcore.h"
-#include "mpvrenderer.h"
+#include "mpvcontroller.h"
 
-#include <QThread>
-#include <clocale>
-
-MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
-    : QQuickFramebufferObject(parent)
-{
-    // Setup threads
-    auto *worker = new QThread();
-    worker->start();
-
-    m_mpvController = new MpvController();
-    m_mpvController->moveToThread(worker);
-    m_mpv = m_mpvController->mpvHandle();
-}
-
-MpvAbstractItem::~MpvAbstractItem()
-{
-    if (m_mpv_gl) {
-        mpv_render_context_free(m_mpv_gl);
-    }
-    mpv_terminate_destroy(m_mpvController->mpvHandle());
-}
-
-int MpvAbstractItem::setProperty(const QString &name, const QVariant &value)
-{
-    return m_mpvController->setProperty(name, value);
-}
-
-QVariant MpvAbstractItem::getProperty(const QString &name)
-{
-    return m_mpvController->getProperty(name);
-}
-
-QVariant MpvAbstractItem::command(const QStringList &params)
-{
-    return m_mpvController->command(params);
-}
-
-QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
-{
-    return new MpvRenderer(const_cast<MpvAbstractItem *>(this));
-}
+#include <QVariant>
 
 MpvController::MpvController(QObject *parent)
     : QObject(parent)
@@ -145,7 +103,9 @@ void MpvController::eventHandler()
                     Q_EMIT secondarySubtitleIdChanged();
                 }
             } else if (strcmp(prop->name, "track-list") == 0) {
-                if (prop->format == MPV_FORMAT_NODE) { }
+                if (prop->format == MPV_FORMAT_NODE) {
+                    Q_EMIT trackListChanged();
+                }
             }
             break;
         }
@@ -155,7 +115,7 @@ void MpvController::eventHandler()
     }
 }
 
-mpv_handle *MpvController::mpvHandle() const
+mpv_handle *MpvController::mpv() const
 {
     return m_mpv;
 }
@@ -383,4 +343,4 @@ inline QVariant MpvController::node_to_variant(const mpv_node *node)
     }
 }
 
-#include "moc_mpvcore.cpp"
+#include "moc_mpvcontroller.cpp"

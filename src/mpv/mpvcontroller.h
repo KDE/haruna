@@ -1,13 +1,13 @@
 /*
- * SPDX-FileCopyrightText: 2022 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2023 George Florea Bănuș <georgefb899@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#ifndef MPVCORE_H
-#define MPVCORE_H
+#ifndef MPVCONTROLLER_H
+#define MPVCONTROLLER_H
 
-#include <QtQuick/QQuickFramebufferObject>
+#include <QObject>
 
 #include <mpv/client.h>
 #include <mpv/render_gl.h>
@@ -86,13 +86,12 @@ public:
      */
     Q_INVOKABLE QString getError(int error);
 
-    mpv_handle *mpvHandle() const;
     static void mpvEvents(void *ctx);
     void eventHandler();
+    mpv_handle *mpv() const;
 
 Q_SIGNALS:
     void mediaTitleChanged();
-    void watchPercentageChanged();
     void positionChanged();
     void durationChanged();
     void remainingChanged();
@@ -104,42 +103,19 @@ Q_SIGNALS:
     void audioIdChanged();
     void subtitleIdChanged();
     void secondarySubtitleIdChanged();
+    void trackListChanged();
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);
 
-protected:
-    mpv_handle *m_mpv{nullptr};
+private:
     mpv_node_list *create_list(mpv_node *dst, bool is_map, int num);
     void setNode(mpv_node *dst, const QVariant &src);
     bool test_type(const QVariant &v, QMetaType::Type t);
     void free_node(mpv_node *dst);
-
-private:
     QVariant node_to_variant(const mpv_node *node);
-};
 
-class MpvAbstractItem : public QQuickFramebufferObject
-{
-    Q_OBJECT
-public:
-    MpvAbstractItem(QQuickItem *parent = nullptr);
-    ~MpvAbstractItem();
-    Renderer *createRenderer() const override;
-
-    Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
-    Q_INVOKABLE QVariant getProperty(const QString &name);
-    Q_INVOKABLE QVariant command(const QStringList &params);
-
-    friend class MpvRenderer;
-
-Q_SIGNALS:
-    void ready();
-
-protected:
-    MpvController *m_mpvController{nullptr};
     mpv_handle *m_mpv{nullptr};
-    mpv_render_context *m_mpv_gl{nullptr};
 };
 
-#endif // MPVCORE_H
+#endif // MPVCONTROLLER_H

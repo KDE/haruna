@@ -9,7 +9,7 @@
 
 #include <QtQuick/QQuickFramebufferObject>
 
-#include "mpvcore.h"
+#include "mpvabstractitem.h"
 
 class MpvRenderer : public QQuickFramebufferObject::Renderer
 {
@@ -17,7 +17,7 @@ public:
     explicit MpvRenderer(MpvAbstractItem *new_obj);
     ~MpvRenderer() = default;
 
-    MpvAbstractItem *m_mpvAbstractItem;
+    MpvAbstractItem *m_mpvAItem;
 
     // This function is called when a new FBO is needed.
     // This happens on the initial frame.
