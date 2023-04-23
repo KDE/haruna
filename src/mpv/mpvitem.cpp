@@ -131,13 +131,13 @@ void MpvItem::setupConnections()
             this, &MpvItem::mediaTitleChanged, Qt::QueuedConnection);
 
     connect(m_mpvController, &MpvController::positionChanged,
-            this, &MpvItem::positionChanged, Qt::QueuedConnection);
+            this, &MpvItem::setPosition, Qt::QueuedConnection);
 
     connect(m_mpvController, &MpvController::durationChanged,
-            this, &MpvItem::durationChanged, Qt::QueuedConnection);
+            this, &MpvItem::setDuration, Qt::QueuedConnection);
 
     connect(m_mpvController, &MpvController::remainingChanged,
-            this, &MpvItem::remainingChanged, Qt::QueuedConnection);
+            this, &MpvItem::setRemaining, Qt::QueuedConnection);
 
     connect(m_mpvController, &MpvController::pauseChanged,
             this, &MpvItem::pauseChanged, Qt::QueuedConnection);
@@ -177,8 +177,8 @@ void MpvItem::setupConnections()
     // clang-format on
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
-        int pos = getProperty("time-pos").toInt();
-        double duration = getProperty("duration").toDouble();
+        int pos = m_position;
+        double duration = m_duration;
         if (!m_secondsWatched.contains(pos)) {
             m_secondsWatched << pos;
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
@@ -267,7 +267,7 @@ QString MpvItem::mediaTitle()
 }
 double MpvItem::position()
 {
-    return getProperty("time-pos").toDouble();
+    return m_position;
 }
 
 void MpvItem::setPosition(double value)
@@ -275,17 +275,43 @@ void MpvItem::setPosition(double value)
     if (value == position()) {
         return;
     }
-    setProperty("time-pos", value);
+    m_position = value;
+    QVariant err;
+    QMetaObject::invokeMethod(m_mpvController,
+                              "setProperty",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(QVariant, err),
+                              Q_ARG(QString, "time-pos"),
+                              Q_ARG(QVariant, value));
+    Q_EMIT positionChanged();
 }
 
 double MpvItem::remaining()
 {
-    return getProperty("time-remaining").toDouble();
+    return m_remaining;
+}
+
+void MpvItem::setRemaining(double value)
+{
+    if (value == remaining()) {
+        return;
+    }
+    m_remaining = value;
+    Q_EMIT remainingChanged();
 }
 
 double MpvItem::duration()
 {
-    return getProperty("duration").toDouble();
+    return m_duration;
+}
+
+void MpvItem::setDuration(double value)
+{
+    if (value == duration()) {
+        return;
+    }
+    m_duration = value;
+    Q_EMIT durationChanged();
 }
 
 bool MpvItem::pause()

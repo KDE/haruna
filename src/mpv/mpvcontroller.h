@@ -92,9 +92,9 @@ public:
 
 Q_SIGNALS:
     void mediaTitleChanged();
-    void positionChanged();
-    void durationChanged();
-    void remainingChanged();
+    void positionChanged(double position);
+    void durationChanged(double duration);
+    void remainingChanged(double remaining);
     void pauseChanged();
     void muteChanged();
     void hwDecodingChanged();

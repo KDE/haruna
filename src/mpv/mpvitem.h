@@ -46,8 +46,10 @@ class MpvItem : public MpvAbstractItem
     void setPosition(double value);
 
     double duration();
+    void setDuration(double value);
 
     double remaining();
+    void setRemaining(double value);
 
     double watchPercentage();
     void setWatchPercentage(double value);
@@ -121,6 +123,7 @@ private:
     TracksModel *audioTracksModel() const;
     TracksModel *subtitleTracksModel() const;
     void initProperties();
+    void setupConnections();
     void loadTracks();
     QString md5(const QString &str);
     TracksModel *m_audioTracksModel;
@@ -132,6 +135,10 @@ private:
     PlayListModel *m_playlistModel;
     PlayListProxyModel *m_playlistProxyModel;
     QString m_file;
+
+    double m_position;
+    double m_remaining;
+    double m_duration;
 };
 
 #endif // MPVOBJECT_H

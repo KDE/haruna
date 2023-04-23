@@ -60,7 +60,7 @@ void MpvController::eventHandler()
 
             if (strcmp(prop->name, "time-pos") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT positionChanged();
+                    Q_EMIT positionChanged(*(double *)prop->data);
                 }
             } else if (strcmp(prop->name, "media-title") == 0) {
                 if (prop->format == MPV_FORMAT_STRING) {
@@ -68,11 +68,11 @@ void MpvController::eventHandler()
                 }
             } else if (strcmp(prop->name, "time-remaining") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT remainingChanged();
+                    Q_EMIT remainingChanged(*(double *)prop->data);
                 }
             } else if (strcmp(prop->name, "duration") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT durationChanged();
+                    Q_EMIT durationChanged(*(double *)prop->data);
                 }
             } else if (strcmp(prop->name, "volume") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
