@@ -27,11 +27,13 @@ MpvAbstractItem::~MpvAbstractItem()
     if (m_mpv_gl) {
         mpv_render_context_free(m_mpv_gl);
     }
-    mpv_terminate_destroy(m_mpvController->mpv());
+    mpv_terminate_destroy(m_mpv);
 
     m_workerThread->quit();
     m_workerThread->wait();
     m_workerThread->deleteLater();
+
+    delete m_mpvController;
 }
 
 QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const

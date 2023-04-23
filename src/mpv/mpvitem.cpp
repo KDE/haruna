@@ -42,11 +42,11 @@
 
 MpvItem::MpvItem(QQuickItem *parent)
     : MpvAbstractItem(parent)
-    , m_audioTracksModel(new TracksModel)
-    , m_subtitleTracksModel(new TracksModel)
-    , m_playlistProxyModel(new PlayListProxyModel)
+    , m_audioTracksModel{new TracksModel(this)}
+    , m_subtitleTracksModel{new TracksModel(this)}
+    , m_playlistProxyModel{new PlayListProxyModel(this)}
+    , m_playlistModel{new PlayListModel(this)}
 {
-    m_playlistModel = new PlayListModel();
     m_playlistProxyModel->setSourceModel(m_playlistModel);
     mpv_observe_property(m_mpv, 0, "media-title", MPV_FORMAT_STRING);
     mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
@@ -62,6 +62,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     mpv_observe_property(m_mpv, 0, "track-list", MPV_FORMAT_NODE);
 
     initProperties();
+    setupConnections();
 
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
@@ -76,6 +77,104 @@ MpvItem::MpvItem(QQuickItem *parent)
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
+}
+
+void MpvItem::initProperties()
+{
+    setProperty("terminal", InformationSettings::mpvLogging());
+    setProperty("msg-level", "all=v");
+
+    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
+    setProperty("hwdec", hwdec);
+    setProperty("sub-auto", "exact");
+    setProperty("volume-max", "100");
+    // set ytdl_path to yt-dlp or fallback to youtube-dl
+    setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
+
+    setProperty("sub-use-margins", SubtitlesSettings::allowOnBlackBorders() ? "yes" : "no");
+    setProperty("sub-ass-force-margins", SubtitlesSettings::allowOnBlackBorders() ? "yes" : "no");
+    QCommandLineParser *cmdParser = Application::instance()->parser();
+    QString ytdlFormat = PlaybackSettings::ytdlFormat();
+    if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
+        ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));
+    }
+    setProperty("ytdl-format", ytdlFormat);
+
+    setProperty("sub-font", SubtitlesSettings::fontFamily());
+    setProperty("sub-font-size", SubtitlesSettings::fontSize());
+    setProperty("sub-color", SubtitlesSettings::fontColor());
+    setProperty("sub-shadow-color", SubtitlesSettings::shadowColor());
+    setProperty("sub-shadow-offset", SubtitlesSettings::shadowOffset());
+    setProperty("sub-border-color", SubtitlesSettings::borderColor());
+    setProperty("sub-border-size", SubtitlesSettings::borderSize());
+    setProperty("sub-bold", SubtitlesSettings::isBold());
+    setProperty("sub-italic", SubtitlesSettings::isItalic());
+
+    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
+    setProperty("screenshot-format", VideoSettings::screenshotFormat());
+
+    setProperty("audio-client-name", "haruna");
+    const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
+    setProperty("aid", preferredAudioTrack == 0 ? "auto" : preferredAudioTrack);
+    setProperty("alang", AudioSettings::preferredLanguage());
+
+    const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
+    setProperty("sid", preferredSubTrack == 0 ? "auto" : preferredSubTrack);
+    setProperty("slang", SubtitlesSettings::preferredLanguage());
+    setProperty("sub-file-paths", SubtitlesSettings::subtitlesFolders().join(":"));
+}
+
+void MpvItem::setupConnections()
+{
+    // clang-format off
+    connect(m_mpvController, &MpvController::mediaTitleChanged,
+            this, &MpvItem::mediaTitleChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::positionChanged,
+            this, &MpvItem::positionChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::durationChanged,
+            this, &MpvItem::durationChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::remainingChanged,
+            this, &MpvItem::remainingChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::pauseChanged,
+            this, &MpvItem::pauseChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::muteChanged,
+            this, &MpvItem::muteChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::hwDecodingChanged,
+            this, &MpvItem::hwDecodingChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::volumeChanged,
+            this, &MpvItem::volumeChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::chapterChanged,
+            this, &MpvItem::chapterChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::audioIdChanged,
+            this, &MpvItem::audioIdChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::subtitleIdChanged,
+            this, &MpvItem::subtitleIdChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::secondarySubtitleIdChanged,
+            this, &MpvItem::secondarySubtitleIdChanged, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::trackListChanged,
+            this, &MpvItem::loadTracks, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::fileStarted,
+            this, &MpvItem::fileStarted, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::fileLoaded,
+            this, &MpvItem::fileLoaded, Qt::QueuedConnection);
+
+    connect(m_mpvController, &MpvController::endFile,
+            this, &MpvItem::endFile, Qt::QueuedConnection);
+    // clang-format on
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
         int pos = getProperty("time-pos").toInt();
@@ -140,53 +239,6 @@ MpvItem::MpvItem(QQuickItem *parent)
 #endif
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
-
-    connect(m_mpvController, &MpvController::trackListChanged, this, &MpvItem::loadTracks);
-}
-
-void MpvItem::initProperties()
-{
-    setProperty("terminal", InformationSettings::mpvLogging());
-    setProperty("msg-level", "all=v");
-
-    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
-    setProperty("hwdec", hwdec);
-    setProperty("sub-auto", "exact");
-    setProperty("volume-max", "100");
-    // set ytdl_path to yt-dlp or fallback to youtube-dl
-    setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
-
-    setProperty("sub-use-margins", SubtitlesSettings::allowOnBlackBorders() ? "yes" : "no");
-    setProperty("sub-ass-force-margins", SubtitlesSettings::allowOnBlackBorders() ? "yes" : "no");
-    QCommandLineParser *cmdParser = Application::instance()->parser();
-    QString ytdlFormat = PlaybackSettings::ytdlFormat();
-    if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
-        ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));
-    }
-    setProperty("ytdl-format", ytdlFormat);
-
-    setProperty("sub-font", SubtitlesSettings::fontFamily());
-    setProperty("sub-font-size", SubtitlesSettings::fontSize());
-    setProperty("sub-color", SubtitlesSettings::fontColor());
-    setProperty("sub-shadow-color", SubtitlesSettings::shadowColor());
-    setProperty("sub-shadow-offset", SubtitlesSettings::shadowOffset());
-    setProperty("sub-border-color", SubtitlesSettings::borderColor());
-    setProperty("sub-border-size", SubtitlesSettings::borderSize());
-    setProperty("sub-bold", SubtitlesSettings::isBold());
-    setProperty("sub-italic", SubtitlesSettings::isItalic());
-
-    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
-    setProperty("screenshot-format", VideoSettings::screenshotFormat());
-
-    setProperty("audio-client-name", "haruna");
-    const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
-    setProperty("aid", preferredAudioTrack == 0 ? "auto" : preferredAudioTrack);
-    setProperty("alang", AudioSettings::preferredLanguage());
-
-    const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
-    setProperty("sid", preferredSubTrack == 0 ? "auto" : preferredSubTrack);
-    setProperty("slang", SubtitlesSettings::preferredLanguage());
-    setProperty("sub-file-paths", SubtitlesSettings::subtitlesFolders().join(":"));
 }
 
 PlayListModel *MpvItem::playlistModel()
