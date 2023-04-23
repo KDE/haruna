@@ -30,9 +30,7 @@ MpvAbstractItem::~MpvAbstractItem()
     mpv_terminate_destroy(m_mpv);
 
     m_workerThread->quit();
-    m_workerThread->wait();
     m_workerThread->deleteLater();
-
     delete m_mpvController;
 }
 
