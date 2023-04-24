@@ -15,8 +15,6 @@ import org.kde.kirigami 2.10 as Kirigami
 MpvItem {
     id: root
 
-    property int mouseX: mouseArea.mouseX
-    property int mouseY: mouseArea.mouseY
     // cache the watch later time position to be used by the seekToWatchLaterPosition action
     // usefull when resuming playback is disabled
     property int watchLaterPosition: -1
