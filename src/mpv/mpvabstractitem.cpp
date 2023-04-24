@@ -20,6 +20,14 @@ MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     m_workerThread->start();
     m_mpvController->moveToThread(m_workerThread);
     m_mpv = m_mpvController->mpv();
+
+    // clang-format off
+    connect(this, &MpvAbstractItem::setMpvProperty,
+            m_mpvController, &MpvController::setProperty, Qt::QueuedConnection);
+
+    connect(this, &MpvAbstractItem::mpvCommand,
+            m_mpvController, &MpvController::command, Qt::QueuedConnection);
+    // clang-format on
 }
 
 MpvAbstractItem::~MpvAbstractItem()
@@ -39,9 +47,9 @@ QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
     return new MpvRenderer(const_cast<MpvAbstractItem *>(this));
 }
 
-int MpvAbstractItem::setProperty(const QString &name, const QVariant &value)
+void MpvAbstractItem::setProperty(const QString &name, const QVariant &value)
 {
-    return m_mpvController->setProperty(name, value);
+    Q_EMIT setMpvProperty(name, value);
 }
 
 QVariant MpvAbstractItem::getProperty(const QString &name)
@@ -49,9 +57,9 @@ QVariant MpvAbstractItem::getProperty(const QString &name)
     return m_mpvController->getProperty(name);
 }
 
-QVariant MpvAbstractItem::command(const QStringList &params)
+void MpvAbstractItem::command(const QStringList &params)
 {
-    return m_mpvController->command(params);
+    Q_EMIT mpvCommand(params);
 }
 
 #include "moc_mpvabstractitem.cpp"

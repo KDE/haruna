@@ -21,14 +21,16 @@ public:
     ~MpvAbstractItem();
 
     Renderer *createRenderer() const override;
-    Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
+    Q_INVOKABLE void setProperty(const QString &name, const QVariant &value);
     Q_INVOKABLE QVariant getProperty(const QString &name);
-    Q_INVOKABLE QVariant command(const QStringList &params);
+    Q_INVOKABLE void command(const QStringList &params);
 
     friend class MpvRenderer;
 
 Q_SIGNALS:
     void ready();
+    void mpvCommand(const QStringList &params);
+    void setMpvProperty(const QString &property, const QVariant &value);
 
 protected:
     QThread *m_workerThread{nullptr};
