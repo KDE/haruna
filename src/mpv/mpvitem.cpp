@@ -276,6 +276,7 @@ void MpvItem::setPosition(double value)
         return;
     }
     m_position = value;
+    m_formattedPosition = Application::formatTime(value);
     QVariant err;
     QMetaObject::invokeMethod(m_mpvController,
                               "setProperty",
@@ -297,6 +298,7 @@ void MpvItem::setRemaining(double value)
         return;
     }
     m_remaining = value;
+    m_formattedRemaining = Application::formatTime(value);
     Q_EMIT remainingChanged();
 }
 
@@ -311,6 +313,7 @@ void MpvItem::setDuration(double value)
         return;
     }
     m_duration = value;
+    m_formattedDuration = Application::formatTime(value);
     Q_EMIT durationChanged();
 }
 
@@ -575,6 +578,21 @@ QString MpvItem::md5(const QString &str)
     auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
 
     return QString(md5.toHex());
+}
+
+QString MpvItem::formattedDuration() const
+{
+    return m_formattedDuration;
+}
+
+QString MpvItem::formattedRemaining() const
+{
+    return m_formattedRemaining;
+}
+
+QString MpvItem::formattedPosition() const
+{
+    return m_formattedPosition;
 }
 
 #include "moc_mpvitem.cpp"

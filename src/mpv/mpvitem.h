@@ -25,6 +25,9 @@ class MpvItem : public MpvAbstractItem
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
     Q_PROPERTY(double remaining READ remaining NOTIFY remainingChanged)
+    Q_PROPERTY(QString formattedPosition READ formattedPosition NOTIFY positionChanged)
+    Q_PROPERTY(QString formattedDuration READ formattedDuration NOTIFY durationChanged)
+    Q_PROPERTY(QString formattedRemaining READ formattedRemaining NOTIFY remainingChanged)
     Q_PROPERTY(double watchPercentage MEMBER m_watchPercentage READ watchPercentage WRITE setWatchPercentage NOTIFY watchPercentageChanged)
     Q_PROPERTY(bool pause READ pause WRITE setPause NOTIFY pauseChanged)
     Q_PROPERTY(bool mute READ mute WRITE setMute NOTIFY muteChanged)
@@ -88,6 +91,10 @@ public:
     Q_INVOKABLE void resetTimePosition();
     Q_INVOKABLE void userCommand(const QString &commandString);
 
+    Q_INVOKABLE QString formattedPosition() const;
+    Q_INVOKABLE QString formattedRemaining() const;
+    Q_INVOKABLE QString formattedDuration() const;
+
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
@@ -137,8 +144,11 @@ private:
     QString m_file;
 
     double m_position;
+    QString m_formattedPosition;
     double m_remaining;
+    QString m_formattedRemaining;
     double m_duration;
+    QString m_formattedDuration;
 };
 
 #endif // MPVOBJECT_H
