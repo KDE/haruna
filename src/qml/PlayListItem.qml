@@ -15,8 +15,6 @@ import Haruna.Components 1.0
 Kirigami.BasicListItem {
     id: root
 
-    property bool isPlaying: model.isPlaying
-    property bool isLocal: model.isLocal
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
     property int fontSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
@@ -25,14 +23,13 @@ Kirigami.BasicListItem {
 
     padding: 0
     backgroundColor: {
-        let color = root.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+        let color = model.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
         Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, alpha)
 
     }
 
-    contentItem: Rectangle {
+    contentItem: Item {
         anchors.fill: parent
-        color: "transparent"
         RowLayout {
             anchors.fill: parent
             spacing: Kirigami.Units.largeSpacing
@@ -62,7 +59,7 @@ Kirigami.BasicListItem {
                 source: "media-playback-start"
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
-                visible: root.isPlaying
+                visible: model.isPlaying
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
 
@@ -72,11 +69,11 @@ Kirigami.BasicListItem {
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 font.pointSize: root.fontSize
-                font.weight: root.isPlaying ? Font.ExtraBold : Font.Normal
+                font.weight: model.isPlaying ? Font.ExtraBold : Font.Normal
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
                 layer.enabled: true
                 Layout.fillWidth: true
-                Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
+                Layout.leftMargin: PlaylistSettings.showRowNumber || model.isPlaying ? 0 : Kirigami.Units.largeSpacing
                 Binding {
                     target: root
                     property: "implicitHeight"
