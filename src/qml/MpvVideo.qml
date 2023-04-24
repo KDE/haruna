@@ -268,10 +268,8 @@ MpvItem {
 
         visible: false
         anchors.centerIn: parent
-        color: {
-            let color = Kirigami.Theme.backgroundColor
-            Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, 0.2)
-        }
+        color: Kirigami.Theme.backgroundColor
+        opacity: 0.6
 
         Kirigami.Icon {
             id: loadingIndicator
@@ -282,9 +280,9 @@ MpvItem {
             height: Kirigami.Units.iconSizes.large
 
             RotationAnimator {
-                target: loadingIndicator;
-                from: 0;
-                to: 360;
+                target: loadingIndicator
+                from: 0
+                to: 360
                 duration: 1500
                 loops: Animation.Infinite
                 running: loadingIndicatorParent.visible
