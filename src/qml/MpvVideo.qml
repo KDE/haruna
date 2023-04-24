@@ -159,16 +159,6 @@ MpvItem {
     onOpenUri: { window.openFile(uri) }
 
     Timer {
-        id: saveWatchLaterFileTimer
-
-        interval: PlaybackSettings.savePositionInterval * 1000
-        running: root.duration > 0 && !root.pause
-        repeat: true
-
-        onTriggered: handleTimePosition()
-    }
-
-    Timer {
         id: hideCursorTimer
 
         running: window.isFullScreen() && mouseArea.containsMouse
@@ -303,17 +293,6 @@ MpvItem {
             Component.onCompleted: {
                 parent.width = width + 10
                 parent.height = height + 10
-            }
-        }
-    }
-
-    function handleTimePosition() {
-        // need to check duration > 0 for youtube videos
-        if (duration > 0) {
-            if (position < duration - 10) {
-                saveTimePosition()
-            } else {
-                resetTimePosition()
             }
         }
     }

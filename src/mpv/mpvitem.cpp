@@ -14,6 +14,7 @@
 #include <QObject>
 #include <QProcess>
 #include <QStandardPaths>
+#include <QTimer>
 #include <QtGlobal>
 
 #include <KLocalizedString>
@@ -63,6 +64,20 @@ MpvItem::MpvItem(QQuickItem *parent)
 
     initProperties();
     setupConnections();
+
+    auto *timer = new QTimer();
+    timer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
+    timer->start();
+
+    connect(timer, &QTimer::timeout, this, [=]() {
+        if (duration() > 0) {
+            if (position() < duration() - 10) {
+                saveTimePosition();
+            } else {
+                resetTimePosition();
+            }
+        }
+    });
 
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
