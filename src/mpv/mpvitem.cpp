@@ -217,7 +217,7 @@ void MpvItem::setupConnections()
     });
 #endif
 
-    connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue);
+    connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue, Qt::QueuedConnection);
 }
 
 PlayListModel *MpvItem::playlistModel()
@@ -522,7 +522,7 @@ void MpvItem::saveTimePosition()
         return;
     }
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    if (getProperty("duration").toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+    if (getCachedPropertyValue("duration").toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
         return;
     }
 
@@ -530,7 +530,7 @@ void MpvItem::saveTimePosition()
     auto configPath = Global::instance()->appConfigDirPath();
     configPath.append("/watch-later/").append(hash);
 
-    Q_EMIT syncConfigValue(configPath, "", "TimePosition", getProperty("time-pos"));
+    Q_EMIT syncConfigValue(configPath, "", "TimePosition", getCachedPropertyValue("time-pos"));
 }
 
 double MpvItem::loadTimePosition()
