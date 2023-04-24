@@ -1,0 +1,490 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY haruna "<application
+>Haruna</application
+>">
+<!ENTITY i18n-translatable-entity "<application
+>Haruna</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE">
+]>
+
+<!--
+ SPDX-FileCopyrightText: 2021 George Florea Bănuș <georgefb899@gmail.com>
+
+ SPDX-License-Identifier: CC-BY-SA-4.0
+ -->
+
+<book id="haruna" lang="&language;">
+
+    <bookinfo>
+        <title
+>Manual de &haruna;</title>
+
+        <authorgroup>
+            <author
+><personname
+> <firstname
+>George</firstname
+> <surname
+>Florea Bănuș</surname
+> </personname
+> <email
+>georgefb899@gmail.com</email
+> </author>
+        </authorgroup>
+
+        <copyright>
+            <year
+>2019-2022</year>
+            <holder
+>George Florea Bănuș</holder>
+        </copyright>
+        <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+
+        <date
+>2022-08-17</date>
+        <releaseinfo
+>Haruna 0.9.0</releaseinfo>
+
+        <abstract>
+            <para
+>Haruna es un reproductor multimedia de código abierto creado con Qt/QML y libmpv.</para>
+        </abstract>
+
+        <keywordset>
+            <keyword
+>Haruna</keyword>
+            <keyword
+>KDE</keyword>
+            <keyword
+>kdemultimedia</keyword>
+            <keyword
+>vídeo</keyword>
+            <keyword
+>película</keyword>
+        </keywordset>
+    </bookinfo>
+
+    <chapter id="settings">
+        <title
+>Preferencias</title>
+        <para
+>Explica algunas de las preferencias más complejas de Haruna.</para>
+        <section
+><title
+></title
+><para
+></para
+></section>
+
+        <section id="GeneralSettings">
+            <title
+>General</title>
+            <section>
+                <title
+>Ubicación del diálogo de archivos</title>
+                <para
+>La carpeta que se abrirá en el diálogo de archivos cuando se use para abrir un archivo. Si está vacío se recordará la carpeta desde donde se abrió el último archivo.</para>
+            </section>
+
+            <section>
+                <title
+>Número máximo de archivos recientes</title>
+                <para
+>Número de archivos recientes que se deben guardar y mostrar en el menú de archivos recientes.</para>
+            </section>
+
+            <section>
+                <title
+>Recordar el tamaño y la posición de la ventana</title>
+                <para
+>Restaura el tamaño y la posición que tenía la ventana cuando se cerró. En <emphasis
+>Wayland</emphasis
+> solo se restaura el tamaño.</para>
+            </section>
+
+            <section>
+                <title
+>Tema de iconos Brisa</title>
+                <para
+>Si está marcada, la aplicación usa el tema de iconos Brisa.</para>
+                <para
+>Si no está marcada, la aplicación usa el tema de iconos del sistema. No siempre funciona como se espera.</para>
+            </section>
+
+            <section>
+                <title
+>Estilo de la interfaz de usuario</title>
+                <para
+>Permite cambiar el estilo de los controles de Qt Quick (botones, casillas, etc.) a los estilos disponibles en el sistema. </para>
+            </section>
+        </section>
+
+        <section id="PlaybackSettings">
+            <title
+>Reproducción</title>
+            <section>
+                <title
+>Pasos de avance</title>
+                <para
+>Cuánto se debe avanzar cuando se lleva a cabo la acción correspondiente. El modo de avance es <emphasis
+>exacto</emphasis
+> <ulink url="https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]"
+>https://mpv.io/manual/stable/#command-interface-seek-&lt;target&gt;-[&lt;flags&gt;]</ulink
+>.</para>
+            </section>
+
+            <section>
+                <title
+>Abrir el último archivo reproducido durante el inicio</title>
+                <para
+>Al iniciar, abre el archivo que se estaba reproduciendo la última vez que se cerró la aplicación.</para>
+            </section>
+
+            <section>
+                <title
+>Avanzar hasta la última posición de reproducción</title>
+                <para
+>Al abrir un archivo que se ha reproducido con anterioridad, se avanzará hasta la posición en la que se detuvo la reproducción.</para>
+            </section>
+
+            <section>
+                <title
+>Empezar la reproducción</title>
+                <para
+>Esto se aplica solo cuando se reanuda la reproducción (avanzando hasta la última posición de reproducción) de un archivo que se ha reproducido con anterioridad.</para>
+            </section>
+
+            <section>
+                <title
+>Pausar al minimizar</title>
+                <para
+>Pausa el reproductor cuando la ventana está minimizada. La reproducción continúa cuando se restaura la ventana.</para>
+            </section>
+
+            <section>
+                <title
+>Descodificación por hardware</title>
+                <para
+>Si activa la descodificación por hardware, se recomienda que use las opciones automáticas de seguridad o las opciones automáticas.</para>
+                <para
+>Puede leer más sobre cada opción aquí: <ulink url="https://mpv.io/manual/stable/#options-hwdec"
+>https://mpv.io/manual/stable/#options-hwdec</ulink
+>.</para>
+                <para
+>Si quiere usar «vaapi» en X11, debe establecer la variable de entorno <emphasis
+>QT_XCB_GL_INTEGRATION</emphasis
+> a <emphasis
+>xcb_egl</emphasis
+>.</para>
+            </section>
+
+            <section>
+                <title
+>Recordar la posición del tiempo</title>
+                <para
+>Determina si se debe guardar y restaurar la posición de los archivos reproducidos con anterioridad.</para>
+                <para
+>El primer campo controla para qué archivos se debe guardar la posición:</para>
+                <itemizedlist>
+                    <listitem
+><para
+>-1: la funcionalidad está desactivada</para
+></listitem>
+                    <listitem
+><para
+>0: guardar para todos los archivos</para
+></listitem>
+                    <listitem
+><para
+>1-9999: guardar para los archivos mayores que el valor definido, en minutos</para
+></listitem>
+                </itemizedlist>
+                <para
+>El segundo campo controla la frecuencia con la que se debe guardar la posición.</para>
+            </section>
+
+            <section>
+                <title
+>Omitir capítulos</title>
+                <para
+>Cuando está activada, se omitirán automáticamente los capítulos que contengan ciertas palabras o caracteres.</para>
+                <para
+>Las palabras o caracteres que se deben omitir se definen como una cadena de textos separados por comas.</para>
+                <para
+>La coincidencia no es exacta, lo que significa que <emphasis
+>ap</emphasis
+> coincidirá con palabras que la contengan, como <emphasis
+>apertura</emphasis
+>.</para>
+            </section>
+
+            <section>
+                <title
+>Selección de formato de youtube-dl</title>
+                <para
+>Haruna usa «youtube-dl» para reproducir vídeos en línea. Algunos sitios ofrecen varias versiones del vídeo/sonido (diferentes códecs, resolución). Esta preferencia le permite configurar la versión del vídeo/sonido que selecciona «youtube-dl». Dispone de más información en: <ulink url="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection"
+>https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection</ulink
+>. </para>
+            </section>
+        </section>
+
+        <section id="VideoSettings">
+            <title
+>Vídeo</title>
+            <section>
+                <title
+>Plantilla de captura de pantalla</title>
+                <para
+><ulink url="https://mpv.io/manual/stable/#screenshot"
+>https://mpv.io/manual/stable/#screenshot</ulink
+></para>
+                <para
+>Indique la plantilla de nombre de archivo que se usará para guardar las capturas de pantalla. La plantilla especifica el nombre del archivo sin la extensión y puede contener especificadores de formato, que se sustituirán al realizar una captura de pantalla. De forma predeterminada, la plantilla es «mpv-shot%n», que da como resultado nombres de archivo similares a «mpv-shot0012.png», por ejemplo.</para>
+                <para
+>La plantilla puede comenzar con una ruta relativa o absoluta para especificar la ubicación de directorio donde se deben guardar las capturas de pantalla.</para>
+                <para
+>Si el nombre de archivo final de la captura de pantalla apunta a un archivo ya existente, dicho archivo no se sobrescribirá. La captura de pantalla no se guardará o, si la plantilla contiene %n, se guardará con un nombre de archivo diferente recién generado.</para>
+                <para
+>Especificadores de formato permitidos:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para
+>%[#][0X]n</para>
+                        <para
+>Un número de secuencia, con ceros al principio hasta la longitud X (por omisión es 04). Por ejemplo, pasando el formato «%04n» producirá «0012» para la duodécima captura de pantalla. El número se incrementa cada vez que se realiza una captura de pantalla o si el archivo existe. La longitud X debe estar en el intervalo 0-9. Con el signo # opcional, mpv usará el número disponible más bajo. por ejemplo, si hace tres capturas de pantalla (0001, 0002 y 0003) y borra las dos primeras, las dos siguientes capturas de pantalla no serán 0004 y 0005, sino 0001 y 0002 de nuevo.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%f</para>
+                        <para
+>Nombre de archivo del vídeo reproducido actualmente.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%F</para>
+                        <para
+>Lo mismo que %f, pero eliminando la extensión del archivo (incluido el punto).</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%x</para>
+                        <para
+>Ruta del directorio del vídeo reproducido actualmente. Si el vídeo no está en el sistema de archivos (sino, por ejemplo, en la web), esto se expande a un texto vacío.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%X{fallback}</para>
+                        <para
+>Lo mismo que %x, pero si el archivo de vídeo no está en el sistema de archivos, devuelve la cadena de texto alternativa dentro del {...}.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%p</para>
+                        <para
+>Tiempo de reproducción actual, en el mismo formato que se usa en el OSD. El resultado es una cadena con la forma «HH:MM:SS». Por ejemplo, si el vídeo está en la posición de tiempo de 5 minutos y 34 segundos, %p se sustituirá con «00:05:34».</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%P</para>
+                        <para
+>Similar a %p, pero extendida con el tiempo de reproducción en milisegundos. Está formateada como «HH:MM:SS.mmm», siendo «mmm» la parte de los milisegundos del tiempo de reproducción.</para>
+                        <para
+>Nota</para>
+                        <para
+>Esta es una forma sencilla de obtener marcas de tiempo únicas por fotograma. (Los números de fotograma serían más intuitivos, pero no se pueden implementar fácilmente porque los formatos de contenedor suelen usar las marcas de tiempo para identificar fotogramas).</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%wX</para>
+                        <para
+>Indique el tiempo de reproducción actual usando el formato de cadena X. %p es como %wH:%wM:%wS, y %P es como %wH:%wM:%wS.%wT.</para>
+                        <para
+>Especificadores de formato válidos:</para>
+                        <itemizedlist>
+                        <listitem>
+                            <para
+>%wH</para>
+                            <para
+>hora (rellenada con 0 a dos dígitos)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wh</para>
+                            <para
+>hora (sin relleno)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wM</para>
+                            <para
+>minutos (00-59)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wm</para>
+                            <para
+>minutos totales (include horas, al contrario que %wM)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wS</para>
+                            <para
+>segundos (00-59)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%ws</para>
+                            <para
+>segundos totales (incluye horas y minutos)</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wf</para>
+                            <para
+>como %ws, pero en coma flotante</para>
+                        </listitem>
+                        <listitem>
+                            <para
+>%wT</para>
+                            <para
+>milisegundos (000-999)</para>
+                        </listitem>
+                        </itemizedlist>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%tX</para>
+                        <para
+>Especifica la fecha/hora local actual usando el formato X. Este especificador de formato usa internamente la función strftime() de UNIX e inserta el resultado de pasar «%X» a strftime. Por ejemplo, %tm insertará el número del mes actual como un número. Tendrá que usar varios especificadores %tX para construir una cadena de fecha/hora completa.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%{prop[:texto alternativo]}</para>
+                        <para
+>Inserta el valor de la propiedad de entrada «prop». Por ejemplo, %{filename} es lo mismo que %f. Si la propiedad no existe o no está disponible, se inserta un texto de error, a menos que se especifique un texto alternativo.</para>
+                    </listitem>
+
+                    <listitem>
+                        <para
+>%%</para>
+                        <para
+>Se sustituye con el propio carácter %.</para>
+                    </listitem>
+
+                </itemizedlist>
+            </section>
+        </section>
+
+        <section id="CustomCommandsSettings">
+            <title
+>Órdenes personalizadas</title>
+            <section>
+                <title
+>Orden</title>
+                <para
+>La orden de mpv que se debe ejecutar. Consulte las <ulink url="https://mpv.io/manual/stable/#list-of-input-commands"
+>Órdenes de MPV</ulink
+> para ver una lista de las órdenes disponibles.</para>
+                <para
+>No funcionarán todas las órdenes, ya que algunas son específicas de mpv.</para>
+                <para
+>Las más útiles son las órdenes para manejar las propiedades, como «set», «add» y «cycle».</para>
+                <para
+><emphasis
+>set</emphasis
+>: define el valor de una propiedad <code
+>set volume-max 150</code
+>.</para>
+                <para
+><emphasis
+>add</emphasis
+>: aumenta o disminuye el valor de una propiedad <code
+>add volume 15</code
+>, aumenta el volumen en 15. Para disminuir el valor, use <code
+>add volume -15</code
+>.</para>
+                <para
+><emphasis
+>cycle</emphasis
+>: recorrer los valores de una propiedad <code
+>cycle aid up</code
+>.</para>
+            </section>
+            <section>
+                <title
+>Mensaje OSD</title>
+                <para
+>Un mensaje OSD que se muestra al ejecutar una orden personalizada de tipo acción.</para>
+                <para
+>Use ${nombre_propiedad} para mostrar el valor de una propiedad. Volumen: ${volume}.</para>
+            </section>
+            <section>
+                <title
+>Acceso rápido del teclado</title>
+                <para
+>La orden se lanzará mediante un acceso rápido de teclado. El acceso rápido se puede usar tras guardarlo.</para>
+            </section>
+            <section>
+                <title
+>Ejecutar durante el inicio</title>
+                <para
+>La orden se ejecutará durante el inicio de la aplicación. Las órdenes de inicio se pueden conmutar, lo que significa que puede escoger si se definen durante el inicio o no. Esto está disponible tras guardar.</para>
+            </section>
+        </section>
+    </chapter>
+
+    <chapter id="credits">
+        <title
+>Créditos y licencia</title>
+        <para
+>&haruna;</para>
+        <para
+>Copyright del programa 2019-2021 George Florea Bănuș</para>
+        <para
+>Colaboradores: <itemizedlist
+> <listitem
+> <para
+>George Florea Bănuș <email
+>georgefb899@gmail.com</email
+></para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <para
+>Copyright de la documentación &copy; 2019-2021 George Florea Bănuș <email
+>georgefb899@gmail.com</email
+> </para>
+
+    <para
+>Traducido por Eloy Cuadra <email
+>ecuadra@eloihr.net</email
+>.</para
+> &underCCBYSA4; &underGPL; </chapter>
+
+</book>
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
