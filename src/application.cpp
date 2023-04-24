@@ -81,6 +81,7 @@ Application::Application()
     setupQmlSettingsTypes();
 
     connect(Global::instance(), &Global::error, this, &Application::error);
+    connect(this, &Application::saveWindowGeometryAsync, Worker::instance(), &Worker::saveWindowGeometry, Qt::QueuedConnection);
 }
 
 void Application::setupWorkerThread()
@@ -181,16 +182,9 @@ void Application::restoreWindowGeometry(QQuickWindow *window) const
     KWindowConfig::restoreWindowPosition(window, windowGroup);
 }
 
-void Application::saveWindowGeometry(QQuickWindow *window) const
+void Application::saveWindowGeometry(QQuickWindow *window)
 {
-    if (!GeneralSettings::rememberWindowGeometry()) {
-        return;
-    }
-    KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, QStringLiteral("Window"));
-    KWindowConfig::saveWindowPosition(window, windowGroup);
-    KWindowConfig::saveWindowSize(window, windowGroup);
-    dataResource.sync();
+    Q_EMIT saveWindowGeometryAsync(window);
 }
 
 QUrl Application::configFilePath(bool withScheme)

@@ -8,18 +8,21 @@
 
 #include "application.h"
 #include "framedecoder.h"
+#include "generalsettings.h"
 
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QDir>
 #include <QFileInfo>
 #include <QImage>
+#include <QQuickWindow>
 #include <QThread>
 
 #include <KConfig>
 #include <KConfigGroup>
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
+#include <KWindowConfig>
 
 Worker *Worker::instance()
 {
@@ -116,6 +119,18 @@ void Worker::syncConfigValue(QString path, QString group, QString key, QVariant 
 
     m_cachedConf->group(group).writeEntry(key, value);
     m_cachedConf->sync();
+}
+
+void Worker::saveWindowGeometry(QQuickWindow *window) const
+{
+    if (!GeneralSettings::rememberWindowGeometry()) {
+        return;
+    }
+    KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
+    KConfigGroup windowGroup(&dataResource, QStringLiteral("Window"));
+    KWindowConfig::saveWindowPosition(window, windowGroup);
+    KWindowConfig::saveWindowSize(window, windowGroup);
+    dataResource.sync();
 }
 
 #include "moc_worker.cpp"

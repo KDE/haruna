@@ -14,6 +14,7 @@
 #include <memory>
 
 class KConfig;
+class QQuickWindow;
 
 class Worker : public QObject
 {
@@ -35,6 +36,7 @@ public Q_SLOTS:
     void makePlaylistThumbnail(const QString &id, int width);
     QImage frameToImage(const QString &id, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
+    void saveWindowGeometry(QQuickWindow *window) const;
 
 private:
     Worker() = default;

@@ -53,7 +53,7 @@ public:
     Q_INVOKABLE QUrl ccConfigFilePath(bool withScheme = true);
     Q_INVOKABLE QUrl configFolderPath(bool withScheme = true);
     Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
-    Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window) const;
+    Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window);
     Q_INVOKABLE bool configFolderExists();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
@@ -84,6 +84,7 @@ public:
 Q_SIGNALS:
     void qmlApplicationMouseLeave();
     void error(const QString &message);
+    void saveWindowGeometryAsync(QQuickWindow *window);
 
 private:
     explicit Application();
