@@ -172,7 +172,6 @@ SettingsBasePage {
             text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
             checked: PlaybackSettings.useHWDecoding
             onCheckedChanged: {
-                mpv.hwDecoding = checked
                 PlaybackSettings.useHWDecoding = checked
                 PlaybackSettings.save()
             }

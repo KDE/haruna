@@ -31,7 +31,6 @@ class MpvItem : public MpvAbstractItem
     Q_PROPERTY(double watchPercentage MEMBER m_watchPercentage READ watchPercentage WRITE setWatchPercentage NOTIFY watchPercentageChanged)
     Q_PROPERTY(bool pause READ pause WRITE setPause NOTIFY pauseChanged)
     Q_PROPERTY(bool mute READ mute WRITE setMute NOTIFY muteChanged)
-    Q_PROPERTY(bool hwDecoding READ hwDecoding WRITE setHWDecoding NOTIFY hwDecodingChanged)
     Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
     Q_PROPERTY(int chapter READ chapter WRITE setChapter NOTIFY chapterChanged)
     Q_PROPERTY(int audioId READ audioId WRITE setAudioId NOTIFY audioIdChanged)
@@ -49,10 +48,8 @@ class MpvItem : public MpvAbstractItem
     void setPosition(double value);
 
     double duration();
-    void setDuration(double value);
 
     double remaining();
-    void setRemaining(double value);
 
     double watchPercentage();
     void setWatchPercentage(double value);
@@ -62,9 +59,6 @@ class MpvItem : public MpvAbstractItem
 
     bool mute();
     void setMute(bool value);
-
-    bool hwDecoding();
-    void setHWDecoding(bool value);
 
     int volume();
     void setVolume(int value);
@@ -81,6 +75,9 @@ class MpvItem : public MpvAbstractItem
     int secondarySubtitleId();
     void setSecondarySubtitleId(int value);
 
+    void onPropertyChanged(const QString &property, const QVariant &value);
+    void cachePropertyValue(const QString &property, const QVariant &value);
+
 public:
     explicit MpvItem(QQuickItem *parent = nullptr);
     ~MpvItem() = default;
@@ -94,6 +91,7 @@ public:
     Q_INVOKABLE QString formattedPosition() const;
     Q_INVOKABLE QString formattedRemaining() const;
     Q_INVOKABLE QString formattedDuration() const;
+    Q_INVOKABLE QVariant getCachedPropertyValue(const QString &property);
 
 Q_SIGNALS:
     void audioTracksModelChanged();
@@ -109,7 +107,6 @@ Q_SIGNALS:
     void remainingChanged();
     void pauseChanged();
     void muteChanged();
-    void hwDecodingChanged();
     void volumeChanged();
     void chapterChanged();
     void audioIdChanged();
@@ -149,6 +146,8 @@ private:
     QString m_formattedRemaining;
     double m_duration;
     QString m_formattedDuration;
+
+    QMap<QString, QVariant> m_propertiesCache;
 };
 
 #endif // MPVOBJECT_H

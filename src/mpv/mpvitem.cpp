@@ -127,44 +127,8 @@ void MpvItem::initProperties()
 void MpvItem::setupConnections()
 {
     // clang-format off
-    connect(m_mpvController, &MpvController::mediaTitleChanged,
-            this, &MpvItem::mediaTitleChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::positionChanged,
-            this, &MpvItem::setPosition, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::durationChanged,
-            this, &MpvItem::setDuration, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::remainingChanged,
-            this, &MpvItem::setRemaining, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::pauseChanged,
-            this, &MpvItem::pauseChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::muteChanged,
-            this, &MpvItem::muteChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::hwDecodingChanged,
-            this, &MpvItem::hwDecodingChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::volumeChanged,
-            this, &MpvItem::volumeChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::chapterChanged,
-            this, &MpvItem::chapterChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::audioIdChanged,
-            this, &MpvItem::audioIdChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::subtitleIdChanged,
-            this, &MpvItem::subtitleIdChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::secondarySubtitleIdChanged,
-            this, &MpvItem::secondarySubtitleIdChanged, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::trackListChanged,
-            this, &MpvItem::loadTracks, Qt::QueuedConnection);
+    connect(m_mpvController, &MpvController::propertyChanged,
+            this, &MpvItem::onPropertyChanged, Qt::QueuedConnection);
 
     connect(m_mpvController, &MpvController::fileStarted,
             this, &MpvItem::fileStarted, Qt::QueuedConnection);
@@ -263,11 +227,12 @@ void MpvItem::setPlaylistProxyModel(PlayListProxyModel *model)
 
 QString MpvItem::mediaTitle()
 {
-    return getProperty("media-title").toString();
+    return getCachedPropertyValue("media-title").toString();
 }
+
 double MpvItem::position()
 {
-    return m_position;
+    return getCachedPropertyValue("time-pos").toDouble();
 }
 
 void MpvItem::setPosition(double value)
@@ -275,51 +240,22 @@ void MpvItem::setPosition(double value)
     if (value == position()) {
         return;
     }
-    m_position = value;
-    m_formattedPosition = Application::formatTime(value);
-    QVariant err;
-    QMetaObject::invokeMethod(m_mpvController,
-                              "setProperty",
-                              Qt::BlockingQueuedConnection,
-                              Q_RETURN_ARG(QVariant, err),
-                              Q_ARG(QString, "time-pos"),
-                              Q_ARG(QVariant, value));
-    Q_EMIT positionChanged();
+    Q_EMIT setMpvProperty("time-pos", value);
 }
 
 double MpvItem::remaining()
 {
-    return m_remaining;
-}
-
-void MpvItem::setRemaining(double value)
-{
-    if (value == remaining()) {
-        return;
-    }
-    m_remaining = value;
-    m_formattedRemaining = Application::formatTime(value);
-    Q_EMIT remainingChanged();
+    return getCachedPropertyValue("time-remaining").toDouble();
 }
 
 double MpvItem::duration()
 {
-    return m_duration;
-}
-
-void MpvItem::setDuration(double value)
-{
-    if (value == duration()) {
-        return;
-    }
-    m_duration = value;
-    m_formattedDuration = Application::formatTime(value);
-    Q_EMIT durationChanged();
+    return getCachedPropertyValue("duration").toDouble();
 }
 
 bool MpvItem::pause()
 {
-    return getProperty("pause").toBool();
+    return getCachedPropertyValue("pause").toBool();
 }
 
 void MpvItem::setPause(bool value)
@@ -327,12 +263,12 @@ void MpvItem::setPause(bool value)
     if (value == pause()) {
         return;
     }
-    setProperty("pause", value);
+    Q_EMIT setMpvProperty("pause", value);
 }
 
 int MpvItem::volume()
 {
-    return getProperty("volume").toInt();
+    return getCachedPropertyValue("volume").toInt();
 }
 
 void MpvItem::setVolume(int value)
@@ -340,12 +276,12 @@ void MpvItem::setVolume(int value)
     if (value == volume()) {
         return;
     }
-    setProperty("volume", value);
+    Q_EMIT setMpvProperty("volume", value);
 }
 
 bool MpvItem::mute()
 {
-    return getProperty("mute").toBool();
+    return getCachedPropertyValue("mute").toBool();
 }
 
 void MpvItem::setMute(bool value)
@@ -353,12 +289,12 @@ void MpvItem::setMute(bool value)
     if (value == mute()) {
         return;
     }
-    setProperty("mute", value);
+    Q_EMIT setMpvProperty("mute", value);
 }
 
 int MpvItem::chapter()
 {
-    return getProperty("chapter").toInt();
+    return getCachedPropertyValue("chapter").toInt();
 }
 
 void MpvItem::setChapter(int value)
@@ -366,12 +302,12 @@ void MpvItem::setChapter(int value)
     if (value == chapter()) {
         return;
     }
-    setProperty("chapter", value);
+    Q_EMIT setMpvProperty("chapter", value);
 }
 
 int MpvItem::audioId()
 {
-    return getProperty("aid").toInt();
+    return getCachedPropertyValue("aid").toInt();
 }
 
 void MpvItem::setAudioId(int value)
@@ -379,12 +315,12 @@ void MpvItem::setAudioId(int value)
     if (value == audioId()) {
         return;
     }
-    setProperty("aid", value);
+    Q_EMIT setMpvProperty("aid", value);
 }
 
 int MpvItem::subtitleId()
 {
-    return getProperty("sid").toInt();
+    return getCachedPropertyValue("sid").toInt();
 }
 
 void MpvItem::setSubtitleId(int value)
@@ -392,12 +328,12 @@ void MpvItem::setSubtitleId(int value)
     if (value == subtitleId()) {
         return;
     }
-    setProperty("sid", value);
+    Q_EMIT setMpvProperty("sid", value);
 }
 
 int MpvItem::secondarySubtitleId()
 {
-    return getProperty("secondary-sid").toInt();
+    return getCachedPropertyValue("secondary-sid").toInt();
 }
 
 void MpvItem::setSecondarySubtitleId(int value)
@@ -405,7 +341,74 @@ void MpvItem::setSecondarySubtitleId(int value)
     if (value == secondarySubtitleId()) {
         return;
     }
-    setProperty("secondary-sid", value);
+    Q_EMIT setMpvProperty("secondary-sid", value);
+}
+
+void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
+{
+    if (property == "media-title") {
+        cachePropertyValue(property, value);
+        Q_EMIT mediaTitleChanged();
+
+    } else if (property == "time-pos") {
+        cachePropertyValue(property, value);
+        m_formattedPosition = Application::formatTime(value.toDouble());
+        Q_EMIT positionChanged();
+
+    } else if (property == "time-remaining") {
+        cachePropertyValue(property, value);
+        m_formattedRemaining = Application::formatTime(value.toDouble());
+        Q_EMIT remainingChanged();
+
+    } else if (property == "duration") {
+        cachePropertyValue(property, value);
+        m_formattedRemaining = Application::formatTime(value.toDouble());
+        Q_EMIT durationChanged();
+
+    } else if (property == "pause") {
+        cachePropertyValue(property, value);
+        Q_EMIT pauseChanged();
+
+    } else if (property == "volume") {
+        cachePropertyValue(property, value);
+        Q_EMIT volumeChanged();
+
+    } else if (property == "mute") {
+        cachePropertyValue(property, value);
+        Q_EMIT muteChanged();
+
+    } else if (property == "chapter") {
+        cachePropertyValue(property, value);
+        Q_EMIT chapterChanged();
+
+    } else if (property == "aid") {
+        cachePropertyValue(property, value);
+        Q_EMIT audioIdChanged();
+
+    } else if (property == "sid") {
+        cachePropertyValue(property, value);
+        Q_EMIT subtitleIdChanged();
+
+    } else if (property == "secondary-sid") {
+        cachePropertyValue(property, value);
+        Q_EMIT secondarySubtitleIdChanged();
+
+    } else if (property == "track-list") {
+        loadTracks();
+
+    } else {
+        // nothing
+    }
+}
+
+void MpvItem::cachePropertyValue(const QString &property, const QVariant &value)
+{
+    m_propertiesCache[property] = value;
+}
+
+QVariant MpvItem::getCachedPropertyValue(const QString &property)
+{
+    return m_propertiesCache[property];
 }
 
 double MpvItem::watchPercentage()
@@ -420,25 +423,6 @@ void MpvItem::setWatchPercentage(double value)
     }
     m_watchPercentage = value;
     Q_EMIT watchPercentageChanged();
-}
-
-bool MpvItem::hwDecoding()
-{
-    if (getProperty("hwdec") == "yes") {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-void MpvItem::setHWDecoding(bool value)
-{
-    if (value) {
-        setProperty("hwdec", "yes");
-    } else {
-        setProperty("hwdec", "no");
-    }
-    Q_EMIT hwDecodingChanged();
 }
 
 void MpvItem::loadFile(const QString &file)

@@ -91,19 +91,7 @@ public:
     mpv_handle *mpv() const;
 
 Q_SIGNALS:
-    void mediaTitleChanged();
-    void positionChanged(double position);
-    void durationChanged(double duration);
-    void remainingChanged(double remaining);
-    void pauseChanged();
-    void muteChanged();
-    void hwDecodingChanged();
-    void volumeChanged();
-    void chapterChanged();
-    void audioIdChanged();
-    void subtitleIdChanged();
-    void secondarySubtitleIdChanged();
-    void trackListChanged();
+    void propertyChanged(const QString &property, const QVariant &value);
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);

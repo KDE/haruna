@@ -57,56 +57,25 @@ void MpvController::eventHandler()
         }
         case MPV_EVENT_PROPERTY_CHANGE: {
             mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
-
-            if (strcmp(prop->name, "time-pos") == 0) {
-                if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT positionChanged(*(double *)prop->data);
-                }
-            } else if (strcmp(prop->name, "media-title") == 0) {
-                if (prop->format == MPV_FORMAT_STRING) {
-                    Q_EMIT mediaTitleChanged();
-                }
-            } else if (strcmp(prop->name, "time-remaining") == 0) {
-                if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT remainingChanged(*(double *)prop->data);
-                }
-            } else if (strcmp(prop->name, "duration") == 0) {
-                if (prop->format == MPV_FORMAT_DOUBLE) {
-                    Q_EMIT durationChanged(*(double *)prop->data);
-                }
-            } else if (strcmp(prop->name, "volume") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT volumeChanged();
-                }
-            } else if (strcmp(prop->name, "mute") == 0) {
-                if (prop->format == MPV_FORMAT_FLAG) {
-                    Q_EMIT muteChanged();
-                }
-            } else if (strcmp(prop->name, "pause") == 0) {
-                if (prop->format == MPV_FORMAT_FLAG) {
-                    Q_EMIT pauseChanged();
-                }
-            } else if (strcmp(prop->name, "chapter") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT chapterChanged();
-                }
-            } else if (strcmp(prop->name, "aid") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT audioIdChanged();
-                }
-            } else if (strcmp(prop->name, "sid") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT subtitleIdChanged();
-                }
-            } else if (strcmp(prop->name, "secondary-sid") == 0) {
-                if (prop->format == MPV_FORMAT_INT64) {
-                    Q_EMIT secondarySubtitleIdChanged();
-                }
-            } else if (strcmp(prop->name, "track-list") == 0) {
-                if (prop->format == MPV_FORMAT_NODE) {
-                    Q_EMIT trackListChanged();
-                }
+            QVariant data;
+            switch (prop->format) {
+            case MPV_FORMAT_DOUBLE:
+                data = *reinterpret_cast<double *>(prop->data);
+                break;
+            case MPV_FORMAT_STRING:
+                data = *reinterpret_cast<char **>(prop->data);
+                break;
+            case MPV_FORMAT_INT64:
+                data = qlonglong(*reinterpret_cast<int64_t *>(prop->data));
+                break;
+            case MPV_FORMAT_FLAG:
+                data = *reinterpret_cast<bool *>(prop->data);
+                break;
+            case MPV_FORMAT_NODE:
+                data = node_to_variant(reinterpret_cast<mpv_node *>(prop->data));
+                break;
             }
+            Q_EMIT propertyChanged(prop->name, data);
             break;
         }
         default:;
