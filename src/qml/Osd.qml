@@ -40,7 +40,7 @@ Item {
     }
 
     function message(text) {
-        if (text == "") {
+        if (text === "" || text === null || text === undefined) {
             return
         }
 
