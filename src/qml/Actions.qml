@@ -13,8 +13,6 @@ import "Settings"
 Item {
     id: root
 
-    property var list: ({})
-
     Instantiator {
         model: actionsModel
         delegate: Action {
