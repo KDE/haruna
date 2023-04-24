@@ -15,8 +15,6 @@ import Haruna.Components 1.0
 Kirigami.BasicListItem {
     id: root
 
-    property bool isPlaying: model.isPlaying
-    property bool isLocal: model.isLocal
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
@@ -33,9 +31,8 @@ Kirigami.BasicListItem {
         mpv.pause = false
     }
 
-    contentItem: Rectangle {
+    contentItem: Item {
         anchors.fill: parent
-        color: "transparent"
         RowLayout {
             anchors.fill: parent
             anchors.rightMargin: Kirigami.Units.largeSpacing
@@ -65,7 +62,7 @@ Kirigami.BasicListItem {
             }
 
             Item {
-                width: (root.height - 20) * 1.33333
+                width: (root.height - 20) * 1.33
                 height: root.height - 20
 
                 Image {
@@ -73,8 +70,10 @@ Kirigami.BasicListItem {
                     source: "image://thumbnail/" + model.path
                     sourceSize.width: parent.width
                     sourceSize.height: parent.height
+                    width: parent.width
+                    height: parent.height
                     asynchronous: true
-                    fillMode: Image.PreserveAspectFit
+                    fillMode: Image.PreserveAspectCrop
 
                     Rectangle {
                         visible: model.duration.length > 0
@@ -82,10 +81,7 @@ Kirigami.BasicListItem {
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
                         anchors.right: parent.right
-                        color: {
-                            let color = Kirigami.Theme.alternateBackgroundColor
-                            Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, 0.8)
-                        }
+                        color: Kirigami.Theme.alternateBackgroundColor
 
                         Label {
                             anchors.centerIn: parent
@@ -106,7 +102,7 @@ Kirigami.BasicListItem {
                 source: "media-playback-start"
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
-                visible: isPlaying
+                visible: model.isPlaying
 
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
@@ -121,13 +117,13 @@ Kirigami.BasicListItem {
                 font.pointSize: (window.isFullScreen() && playList.bigFont)
                                 ? Kirigami.Units.gridUnit
                                 : Kirigami.Units.gridUnit - 5
-                font.weight: isPlaying ? Font.ExtraBold : Font.Normal
+                font.weight: model.isPlaying ? Font.ExtraBold : Font.Normal
                 layer.enabled: true
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.topMargin: Kirigami.Units.largeSpacing
                 Layout.bottomMargin: Kirigami.Units.largeSpacing
-                Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : Kirigami.Units.largeSpacing
+                Layout.leftMargin: PlaylistSettings.showRowNumber || model.isPlaying ? 0 : Kirigami.Units.largeSpacing
             }
         }
     }
