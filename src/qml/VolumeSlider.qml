@@ -39,6 +39,16 @@ Slider {
         }
     }
 
+    onPressedChanged: {
+        mpv.volume = value.toFixed(0)
+    }
+
+    onValueChanged: {
+        GeneralSettings.volume = value.toFixed(0)
+        GeneralSettings.save()
+        osd.message(i18nc("@info:tooltip", "Volume: %1", GeneralSettings.volume))
+    }
+
     Label {
         id: progressBarToolTip
         text: root.value
@@ -47,11 +57,4 @@ Slider {
         layer.enabled: true
         layer.effect: DropShadow { verticalOffset: 1; color: "#111"; radius: 5; spread: 0.3; samples: 17 }
     }
-
-    onValueChanged: {
-        mpv.volume = value.toFixed(0)
-        GeneralSettings.volume = value.toFixed(0)
-        GeneralSettings.save()
-    }
-
 }

@@ -13,6 +13,7 @@ import org.kde.haruna 1.0
 Item {
     id: root
 
+    property bool active: false
     property alias label: label
 
     Label {
@@ -40,6 +41,10 @@ Item {
     }
 
     function message(text) {
+        if (!root.active) {
+            return
+        }
+
         if (text === "" || text === null || text === undefined) {
             return
         }

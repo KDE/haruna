@@ -331,12 +331,10 @@ Item {
 
         onVolumeUpAction: {
             mpv.command(["add", "volume", GeneralSettings.volumeStep])
-            osd.message(i18nc("@info:tooltip", "Volume: %1", parseInt(mpv.getCachedPropertyValue("volume"))))
         }
 
         onVolumeDownAction: {
             mpv.command(["add", "volume", -GeneralSettings.volumeStep])
-            osd.message(i18nc("@info:tooltip", "Volume: %1", parseInt(mpv.getCachedPropertyValue("volume"))))
         }
 
         onZoomInAction: {

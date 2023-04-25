@@ -63,6 +63,7 @@ MpvItem {
                 window.openFile(GeneralSettings.lastPlayedFile)
             }
         }
+        osd.active = true
     }
 
     onFileStarted: {
