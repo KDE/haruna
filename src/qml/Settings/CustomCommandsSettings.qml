@@ -82,6 +82,7 @@ SettingsBasePage {
                     text: model.command
                     elide: Text.ElideRight
                     enabled: model.setOnStartup
+                    opacity: enabled ? 1.0 : 0.7
 
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                     Layout.fillWidth: true
@@ -113,7 +114,6 @@ SettingsBasePage {
 
                 Button {
                     icon.name: "edit-entry"
-                    enabled: model.setOnStartup
                     Layout.rightMargin: Kirigami.Units.largeSpacing
                     onClicked: {
                         const properties = {
