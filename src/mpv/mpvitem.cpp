@@ -376,7 +376,7 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
     } else if (property == QStringLiteral("duration")) {
         cachePropertyValue(property, value);
-        m_formattedRemaining = Application::formatTime(value.toDouble());
+        m_formattedDuration = Application::formatTime(value.toDouble());
         Q_EMIT durationChanged();
 
     } else if (property == QStringLiteral("pause")) {
