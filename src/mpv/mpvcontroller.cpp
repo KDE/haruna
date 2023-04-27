@@ -65,7 +65,7 @@ void MpvController::eventHandler()
                 data = *reinterpret_cast<double *>(prop->data);
                 break;
             case MPV_FORMAT_STRING:
-                data = *reinterpret_cast<char **>(prop->data);
+                data = QString::fromStdString(*reinterpret_cast<char **>(prop->data));
                 break;
             case MPV_FORMAT_INT64:
                 data = qlonglong(*reinterpret_cast<int64_t *>(prop->data));
