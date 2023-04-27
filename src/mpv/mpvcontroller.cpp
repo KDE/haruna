@@ -8,6 +8,8 @@
 
 #include <QVariant>
 
+#include <clocale>
+
 MpvController::MpvController(QObject *parent)
     : QObject(parent)
 {

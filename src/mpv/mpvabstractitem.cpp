@@ -7,7 +7,6 @@
 #include "mpvabstractitem.h"
 
 #include <QThread>
-#include <clocale>
 
 #include "mpvcontroller.h"
 #include "mpvrenderer.h"
