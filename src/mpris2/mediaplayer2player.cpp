@@ -33,15 +33,15 @@ void MediaPlayer2Player::setupConnections()
     }
 
     connect(m_mpv, &MpvItem::pauseChanged, this, [=]() {
-        propertiesChanged("PlaybackStatus", PlaybackStatus());
+        propertiesChanged(QStringLiteral("PlaybackStatus"), PlaybackStatus());
         Q_EMIT playbackStatusChanged();
     });
     connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
-        propertiesChanged("Volume", Volume());
+        propertiesChanged(QStringLiteral("Volume"), Volume());
         Q_EMIT volumeChanged();
     });
     connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
-        propertiesChanged("Metadata", Metadata());
+        propertiesChanged(QStringLiteral("Metadata"), Metadata());
         Q_EMIT metadataChanged();
     });
 }
@@ -55,7 +55,7 @@ void MediaPlayer2Player::propertiesChanged(const QString &property, const QVaria
     QVariantMap properties;
     properties[property] = value;
 
-    msg << QString("org.mpris.MediaPlayer2.Player");
+    msg << QStringLiteral("org.mpris.MediaPlayer2.Player");
     msg << properties;
     msg << QStringList();
 
@@ -100,7 +100,7 @@ void MediaPlayer2Player::Seek(qlonglong offset)
 void MediaPlayer2Player::SetPosition(const QDBusObjectPath &trackId, qlonglong pos)
 {
     Q_UNUSED(trackId)
-    m_mpv->setProperty("time-pos", pos / 1000 / 1000);
+    m_mpv->setProperty(QStringLiteral("time-pos"), pos / 1000 / 1000);
 }
 
 void MediaPlayer2Player::OpenUri(const QString &uri)
@@ -113,10 +113,10 @@ QString MediaPlayer2Player::PlaybackStatus()
     if (!m_mpv) {
         return QString();
     }
-    bool isPaused = m_mpv->getProperty("pause").toBool();
-    int position = m_mpv->getProperty("time-pos").toInt();
+    bool isPaused = m_mpv->getProperty(QStringLiteral("pause")).toBool();
+    int position = m_mpv->getProperty(QStringLiteral("time-pos")).toInt();
 
-    return isPaused && position == 0 ? "Stopped" : (isPaused ? "Paused" : "Playing");
+    return isPaused && position == 0 ? QStringLiteral("Stopped") : (isPaused ? QStringLiteral("Paused") : QStringLiteral("Playing"));
 }
 
 QVariantMap MediaPlayer2Player::Metadata()
@@ -125,20 +125,20 @@ QVariantMap MediaPlayer2Player::Metadata()
         return QVariantMap();
     }
     QVariantMap metadata;
-    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty("duration").toDouble() * 1000 * 1000);
-    metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath("/org/kde/haruna")));
+    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty(QStringLiteral("duration")).toDouble() * 1000 * 1000);
+    metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
 
-    auto mpvMediaTitle = m_mpv->getProperty("media-title").toString();
-    auto mpvFilename = m_mpv->getProperty("filename").toString();
+    auto mpvMediaTitle = m_mpv->getProperty(QStringLiteral("media-title")).toString();
+    auto mpvFilename = m_mpv->getProperty(QStringLiteral("filename")).toString();
     auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvMediaTitle;
     metadata.insert(QStringLiteral("xesam:title"), title);
 
-    auto path = m_mpv->getProperty("path").toString();
+    auto path = m_mpv->getProperty(QStringLiteral("path")).toString();
 
     metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(path));
 
     QUrl url(path);
-    url.setScheme("file");
+    url.setScheme(QStringLiteral("file"));
     metadata.insert(QStringLiteral("xesam:url"), url.toString());
 
     return metadata;
@@ -149,7 +149,7 @@ double MediaPlayer2Player::Volume()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty("volume").toDouble() / 100;
+    return m_mpv->getProperty(QStringLiteral("volume")).toDouble() / 100;
 }
 
 qlonglong MediaPlayer2Player::Position()
@@ -157,7 +157,7 @@ qlonglong MediaPlayer2Player::Position()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty("time-pos").toDouble() * 1000 * 1000;
+    return m_mpv->getProperty(QStringLiteral("time-pos")).toDouble() * 1000 * 1000;
 }
 
 bool MediaPlayer2Player::CanGoNext()
@@ -195,7 +195,7 @@ void MediaPlayer2Player::setPosition(int pos)
     if (!m_mpv) {
         return;
     }
-    m_mpv->setProperty("position", pos);
+    m_mpv->setProperty(QStringLiteral("position"), pos);
 }
 
 void MediaPlayer2Player::setVolume(double vol)
@@ -203,7 +203,7 @@ void MediaPlayer2Player::setVolume(double vol)
     if (!m_mpv) {
         return;
     }
-    m_mpv->setProperty("volume", vol * 100);
+    m_mpv->setProperty(QStringLiteral("volume"), vol * 100);
 }
 
 MpvItem *MediaPlayer2Player::mpv() const
@@ -240,15 +240,15 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
             // look for image inside the file
             using namespace KFileMetaData;
             if (imageData.contains(EmbeddedImageData::FrontCover)) {
-                return base64.append(imageData[EmbeddedImageData::FrontCover].toBase64());
+                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::FrontCover].toBase64()));
             } else if (imageData.contains(EmbeddedImageData::BackCover)) {
-                return base64.append(imageData[EmbeddedImageData::BackCover].toBase64());
+                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::BackCover].toBase64()));
             } else if (imageData.contains(EmbeddedImageData::MovieScreenCapture)) {
-                return base64.append(imageData[EmbeddedImageData::MovieScreenCapture].toBase64());
+                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::MovieScreenCapture].toBase64()));
             } else if (imageData.contains(EmbeddedImageData::Other)) {
-                return base64.append(imageData[EmbeddedImageData::Other].toBase64());
+                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::Other].toBase64()));
             } else {
-                return base64.append(imageData[EmbeddedImageData::Unknown].toBase64());
+                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::Unknown].toBase64()));
             }
         } else {
             // try to generate QImage from file
@@ -261,7 +261,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
                 QByteArray byteArray;
                 QBuffer buffer(&byteArray);
                 image.save(&buffer, "JPEG");
-                return base64.append(byteArray.toBase64().data());
+                return base64.append(QString::fromUtf8(byteArray.toBase64().data()));
             }
         }
     }

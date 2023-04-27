@@ -51,9 +51,9 @@ void MpvController::eventHandler()
         case MPV_EVENT_END_FILE: {
             auto prop = static_cast<mpv_event_end_file *>(event->data);
             if (prop->reason == MPV_END_FILE_REASON_EOF) {
-                Q_EMIT endFile("eof");
+                Q_EMIT endFile(QStringLiteral("eof"));
             } else if (prop->reason == MPV_END_FILE_REASON_ERROR) {
-                Q_EMIT endFile("error");
+                Q_EMIT endFile(QStringLiteral("error"));
             }
             break;
         }
@@ -77,7 +77,7 @@ void MpvController::eventHandler()
                 data = node_to_variant(reinterpret_cast<mpv_node *>(prop->data));
                 break;
             }
-            Q_EMIT propertyChanged(prop->name, data);
+            Q_EMIT propertyChanged(QString::fromStdString(prop->name), data);
             break;
         }
         default:;

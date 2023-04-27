@@ -135,10 +135,10 @@ QString Track::text()
 {
     QString text;
     if (!m_title.isEmpty()) {
-        text += m_title + " ";
+        text += m_title.append(QStringLiteral(" "));
     }
     if (!m_lang.isEmpty()) {
-        text += m_lang + " ";
+        text += m_lang.append(QStringLiteral(" "));
     }
     if (!m_codec.isEmpty()) {
         text += m_codec;

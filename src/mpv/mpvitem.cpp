@@ -88,7 +88,7 @@ MpvItem::MpvItem(QQuickItem *parent)
         auto configGroup = m_customPropsConfig->group(_group);
         QString type = configGroup.readEntry("Type", QString());
         bool setOnStartup = configGroup.readEntry("SetOnStartup", true);
-        if (type == "startup" && setOnStartup) {
+        if (type == QStringLiteral("startup") && setOnStartup) {
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
@@ -96,47 +96,47 @@ MpvItem::MpvItem(QQuickItem *parent)
 
 void MpvItem::initProperties()
 {
-    setProperty("terminal", InformationSettings::mpvLogging());
-    setProperty("msg-level", "all=v");
+    setProperty(QStringLiteral("terminal"), InformationSettings::mpvLogging());
+    setProperty(QStringLiteral("msg-level"), QStringLiteral("all=v"));
 
-    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : "no";
-    setProperty("hwdec", hwdec);
-    setProperty("sub-auto", "exact");
-    setProperty("volume-max", "100");
+    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
+    setProperty(QStringLiteral("hwdec"), hwdec);
+    setProperty(QStringLiteral("sub-auto"), QStringLiteral("exact"));
+    setProperty(QStringLiteral("volume-max"), QStringLiteral("100"));
     // set ytdl_path to yt-dlp or fallback to youtube-dl
-    setProperty("script-opts", QString("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
+    setProperty(QStringLiteral("script-opts"), QStringLiteral("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
 
-    setProperty("sub-use-margins", SubtitlesSettings::allowOnBlackBorders() ? "yes" : "no");
-    setProperty("sub-ass-force-margins", SubtitlesSettings::allowOnBlackBorders() ? "yes" : "no");
+    setProperty(QStringLiteral("sub-use-margins"), SubtitlesSettings::allowOnBlackBorders() ? QStringLiteral("yes") : QStringLiteral("no"));
+    setProperty(QStringLiteral("sub-ass-force-margins"), SubtitlesSettings::allowOnBlackBorders() ? QStringLiteral("yes") : QStringLiteral("no"));
     QCommandLineParser *cmdParser = Application::instance()->parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
     if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
         ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));
     }
-    setProperty("ytdl-format", ytdlFormat);
+    setProperty(QStringLiteral("ytdl-format"), ytdlFormat);
 
-    setProperty("sub-font", SubtitlesSettings::fontFamily());
-    setProperty("sub-font-size", SubtitlesSettings::fontSize());
-    setProperty("sub-color", SubtitlesSettings::fontColor());
-    setProperty("sub-shadow-color", SubtitlesSettings::shadowColor());
-    setProperty("sub-shadow-offset", SubtitlesSettings::shadowOffset());
-    setProperty("sub-border-color", SubtitlesSettings::borderColor());
-    setProperty("sub-border-size", SubtitlesSettings::borderSize());
-    setProperty("sub-bold", SubtitlesSettings::isBold());
-    setProperty("sub-italic", SubtitlesSettings::isItalic());
+    setProperty(QStringLiteral("sub-font"), SubtitlesSettings::fontFamily());
+    setProperty(QStringLiteral("sub-font-size"), SubtitlesSettings::fontSize());
+    setProperty(QStringLiteral("sub-color"), SubtitlesSettings::fontColor());
+    setProperty(QStringLiteral("sub-shadow-color"), SubtitlesSettings::shadowColor());
+    setProperty(QStringLiteral("sub-shadow-offset"), SubtitlesSettings::shadowOffset());
+    setProperty(QStringLiteral("sub-border-color"), SubtitlesSettings::borderColor());
+    setProperty(QStringLiteral("sub-border-size"), SubtitlesSettings::borderSize());
+    setProperty(QStringLiteral("sub-bold"), SubtitlesSettings::isBold());
+    setProperty(QStringLiteral("sub-italic"), SubtitlesSettings::isItalic());
 
-    setProperty("screenshot-template", VideoSettings::screenshotTemplate());
-    setProperty("screenshot-format", VideoSettings::screenshotFormat());
+    setProperty(QStringLiteral("screenshot-template"), VideoSettings::screenshotTemplate());
+    setProperty(QStringLiteral("screenshot-format"), VideoSettings::screenshotFormat());
 
-    setProperty("audio-client-name", "haruna");
+    setProperty(QStringLiteral("audio-client-name"), QStringLiteral("haruna"));
     const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
-    setProperty("aid", preferredAudioTrack == 0 ? "auto" : preferredAudioTrack);
-    setProperty("alang", AudioSettings::preferredLanguage());
+    setProperty(QStringLiteral("aid"), preferredAudioTrack == 0 ? QStringLiteral("auto") : preferredAudioTrack);
+    setProperty(QStringLiteral("alang"), AudioSettings::preferredLanguage());
 
     const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
-    setProperty("sid", preferredSubTrack == 0 ? "auto" : preferredSubTrack);
-    setProperty("slang", SubtitlesSettings::preferredLanguage());
-    setProperty("sub-file-paths", SubtitlesSettings::subtitlesFolders().join(":"));
+    setProperty(QStringLiteral("sid"), preferredSubTrack == 0 ? QStringLiteral("auto") : preferredSubTrack);
+    setProperty(QStringLiteral("slang"), SubtitlesSettings::preferredLanguage());
+    setProperty(QStringLiteral("sub-file-paths"), SubtitlesSettings::subtitlesFolders().join(QStringLiteral(":")));
 }
 
 void MpvItem::setupConnections()
@@ -198,8 +198,7 @@ void MpvItem::setupConnections()
         Q_EMIT playPrevious();
     });
     connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
-        command(QStringList() << "add"
-                              << "time-pos" << QString::number(offset));
+        command(QStringList() << QStringLiteral("add") << QStringLiteral("time-pos") << QString::number(offset));
     });
     connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
         Q_EMIT openUri(uri);
@@ -242,12 +241,12 @@ void MpvItem::setPlaylistProxyModel(PlayListProxyModel *model)
 
 QString MpvItem::mediaTitle()
 {
-    return getCachedPropertyValue("media-title").toString();
+    return getCachedPropertyValue(QStringLiteral("media-title")).toString();
 }
 
 double MpvItem::position()
 {
-    return getCachedPropertyValue("time-pos").toDouble();
+    return getCachedPropertyValue(QStringLiteral("time-pos")).toDouble();
 }
 
 void MpvItem::setPosition(double value)
@@ -255,22 +254,22 @@ void MpvItem::setPosition(double value)
     if (value == position()) {
         return;
     }
-    Q_EMIT setMpvProperty("time-pos", value);
+    Q_EMIT setMpvProperty(QStringLiteral("time-pos"), value);
 }
 
 double MpvItem::remaining()
 {
-    return getCachedPropertyValue("time-remaining").toDouble();
+    return getCachedPropertyValue(QStringLiteral("time-remaining")).toDouble();
 }
 
 double MpvItem::duration()
 {
-    return getCachedPropertyValue("duration").toDouble();
+    return getCachedPropertyValue(QStringLiteral("duration")).toDouble();
 }
 
 bool MpvItem::pause()
 {
-    return getCachedPropertyValue("pause").toBool();
+    return getCachedPropertyValue(QStringLiteral("pause")).toBool();
 }
 
 void MpvItem::setPause(bool value)
@@ -278,12 +277,12 @@ void MpvItem::setPause(bool value)
     if (value == pause()) {
         return;
     }
-    Q_EMIT setMpvProperty("pause", value);
+    Q_EMIT setMpvProperty(QStringLiteral("pause"), value);
 }
 
 int MpvItem::volume()
 {
-    return getCachedPropertyValue("volume").toInt();
+    return getCachedPropertyValue(QStringLiteral("volume")).toInt();
 }
 
 void MpvItem::setVolume(int value)
@@ -291,12 +290,12 @@ void MpvItem::setVolume(int value)
     if (value == volume()) {
         return;
     }
-    Q_EMIT setMpvProperty("volume", value);
+    Q_EMIT setMpvProperty(QStringLiteral("volume"), value);
 }
 
 bool MpvItem::mute()
 {
-    return getCachedPropertyValue("mute").toBool();
+    return getCachedPropertyValue(QStringLiteral("mute")).toBool();
 }
 
 void MpvItem::setMute(bool value)
@@ -304,12 +303,12 @@ void MpvItem::setMute(bool value)
     if (value == mute()) {
         return;
     }
-    Q_EMIT setMpvProperty("mute", value);
+    Q_EMIT setMpvProperty(QStringLiteral("mute"), value);
 }
 
 int MpvItem::chapter()
 {
-    return getCachedPropertyValue("chapter").toInt();
+    return getCachedPropertyValue(QStringLiteral("chapter")).toInt();
 }
 
 void MpvItem::setChapter(int value)
@@ -317,12 +316,12 @@ void MpvItem::setChapter(int value)
     if (value == chapter()) {
         return;
     }
-    Q_EMIT setMpvProperty("chapter", value);
+    Q_EMIT setMpvProperty(QStringLiteral("chapter"), value);
 }
 
 int MpvItem::audioId()
 {
-    return getCachedPropertyValue("aid").toInt();
+    return getCachedPropertyValue(QStringLiteral("aid")).toInt();
 }
 
 void MpvItem::setAudioId(int value)
@@ -330,12 +329,12 @@ void MpvItem::setAudioId(int value)
     if (value == audioId()) {
         return;
     }
-    Q_EMIT setMpvProperty("aid", value);
+    Q_EMIT setMpvProperty(QStringLiteral("aid"), value);
 }
 
 int MpvItem::subtitleId()
 {
-    return getCachedPropertyValue("sid").toInt();
+    return getCachedPropertyValue(QStringLiteral("sid")).toInt();
 }
 
 void MpvItem::setSubtitleId(int value)
@@ -343,12 +342,12 @@ void MpvItem::setSubtitleId(int value)
     if (value == subtitleId()) {
         return;
     }
-    Q_EMIT setMpvProperty("sid", value);
+    Q_EMIT setMpvProperty(QStringLiteral("sid"), value);
 }
 
 int MpvItem::secondarySubtitleId()
 {
-    return getCachedPropertyValue("secondary-sid").toInt();
+    return getCachedPropertyValue(QStringLiteral("secondary-sid")).toInt();
 }
 
 void MpvItem::setSecondarySubtitleId(int value)
@@ -356,59 +355,59 @@ void MpvItem::setSecondarySubtitleId(int value)
     if (value == secondarySubtitleId()) {
         return;
     }
-    Q_EMIT setMpvProperty("secondary-sid", value);
+    Q_EMIT setMpvProperty(QStringLiteral("secondary-sid"), value);
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 {
-    if (property == "media-title") {
+    if (property == QStringLiteral("media-title")) {
         cachePropertyValue(property, value);
         Q_EMIT mediaTitleChanged();
 
-    } else if (property == "time-pos") {
+    } else if (property == QStringLiteral("time-pos")) {
         cachePropertyValue(property, value);
         m_formattedPosition = Application::formatTime(value.toDouble());
         Q_EMIT positionChanged();
 
-    } else if (property == "time-remaining") {
+    } else if (property == QStringLiteral("time-remaining")) {
         cachePropertyValue(property, value);
         m_formattedRemaining = Application::formatTime(value.toDouble());
         Q_EMIT remainingChanged();
 
-    } else if (property == "duration") {
+    } else if (property == QStringLiteral("duration")) {
         cachePropertyValue(property, value);
         m_formattedRemaining = Application::formatTime(value.toDouble());
         Q_EMIT durationChanged();
 
-    } else if (property == "pause") {
+    } else if (property == QStringLiteral("pause")) {
         cachePropertyValue(property, value);
         Q_EMIT pauseChanged();
 
-    } else if (property == "volume") {
+    } else if (property == QStringLiteral("volume")) {
         cachePropertyValue(property, value);
         Q_EMIT volumeChanged();
 
-    } else if (property == "mute") {
+    } else if (property == QStringLiteral("mute")) {
         cachePropertyValue(property, value);
         Q_EMIT muteChanged();
 
-    } else if (property == "chapter") {
+    } else if (property == QStringLiteral("chapter")) {
         cachePropertyValue(property, value);
         Q_EMIT chapterChanged();
 
-    } else if (property == "aid") {
+    } else if (property == QStringLiteral("aid")) {
         cachePropertyValue(property, value);
         Q_EMIT audioIdChanged();
 
-    } else if (property == "sid") {
+    } else if (property == QStringLiteral("sid")) {
         cachePropertyValue(property, value);
         Q_EMIT subtitleIdChanged();
 
-    } else if (property == "secondary-sid") {
+    } else if (property == QStringLiteral("secondary-sid")) {
         cachePropertyValue(property, value);
         Q_EMIT secondarySubtitleIdChanged();
 
-    } else if (property == "track-list") {
+    } else if (property == QStringLiteral("track-list")) {
         loadTracks();
 
     } else {
@@ -442,7 +441,7 @@ void MpvItem::setWatchPercentage(double value)
 
 void MpvItem::loadFile(const QString &file)
 {
-    command(QStringList() << "loadfile" << file);
+    command(QStringList() << QStringLiteral("loadfile") << file);
 
     GeneralSettings::setLastPlayedFile(file);
     GeneralSettings::self()->save();
@@ -458,40 +457,41 @@ void MpvItem::loadTracks()
     none->setTitle(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"));
     m_subtitleTracks.insert(0, none);
 
-    const QList<QVariant> tracks = getProperty("track-list").toList();
+    const QList<QVariant> tracks = getProperty(QStringLiteral("track-list")).toList();
     int subIndex = 1;
     int audioIndex = 0;
     for (const auto &track : tracks) {
         const auto trackMap = track.toMap();
-        if (trackMap["type"] == "sub") {
+        if (trackMap[QStringLiteral("type")] == QStringLiteral("sub")) {
             auto t = new Track();
-            t->setCodec(trackMap["codec"].toString());
-            t->setType(trackMap["type"].toString());
-            t->setDefaut(trackMap["default"].toBool());
-            t->setDependent(trackMap["dependent"].toBool());
-            t->setForced(trackMap["forced"].toBool());
-            t->setId(trackMap["id"].toLongLong());
-            t->setSrcId(trackMap["src-id"].toLongLong());
-            t->setFfIndex(trackMap["ff-index"].toLongLong());
-            t->setLang(trackMap["lang"].toString());
-            t->setTitle(trackMap["title"].toString());
+            t->setCodec(trackMap[QStringLiteral("codec")].toString());
+            t->setType(trackMap[QStringLiteral("type")].toString());
+            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
+            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
+            t->setForced(trackMap[QStringLiteral("forced")].toBool());
+            t->setId(trackMap[QStringLiteral("id")].toLongLong());
+            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
+            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
+            t->setLang(trackMap[QStringLiteral("lang")].toString());
+            t->setTitle(trackMap[QStringLiteral("title")].toString());
             t->setIndex(subIndex);
 
             m_subtitleTracks.insert(subIndex, t);
             subIndex++;
         }
-        if (trackMap["type"] == "audio") {
+        if (trackMap[QStringLiteral("type")] == QStringLiteral("audio")) {
             auto t = new Track();
-            t->setCodec(trackMap["codec"].toString());
-            t->setType(trackMap["type"].toString());
-            t->setDefaut(trackMap["default"].toBool());
-            t->setDependent(trackMap["dependent"].toBool());
-            t->setForced(trackMap["forced"].toBool());
-            t->setId(trackMap["id"].toLongLong());
-            t->setSrcId(trackMap["src-id"].toLongLong());
-            t->setFfIndex(trackMap["ff-index"].toLongLong());
-            t->setLang(trackMap["lang"].toString());
-            t->setTitle(trackMap["title"].toString());
+
+            t->setCodec(trackMap[QStringLiteral("codec")].toString());
+            t->setType(trackMap[QStringLiteral("type")].toString());
+            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
+            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
+            t->setForced(trackMap[QStringLiteral("forced")].toBool());
+            t->setId(trackMap[QStringLiteral("id")].toLongLong());
+            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
+            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
+            t->setLang(trackMap[QStringLiteral("lang")].toString());
+            t->setTitle(trackMap[QStringLiteral("title")].toString());
             t->setIndex(audioIndex);
 
             m_audioTracks.insert(audioIndex, t);
@@ -522,15 +522,15 @@ void MpvItem::saveTimePosition()
         return;
     }
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    if (getCachedPropertyValue("duration").toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+    if (getCachedPropertyValue(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
         return;
     }
 
-    auto hash = md5(getProperty("path").toString());
+    auto hash = md5(getProperty(QStringLiteral("path")).toString());
     auto configPath = Global::instance()->appConfigDirPath();
-    configPath.append("/watch-later/").append(hash);
+    configPath.append(QStringLiteral("/watch-later/")).append(hash);
 
-    Q_EMIT syncConfigValue(configPath, "", "TimePosition", getCachedPropertyValue("time-pos"));
+    Q_EMIT syncConfigValue(configPath, QString(), QStringLiteral("TimePosition"), getCachedPropertyValue(QStringLiteral("time-pos")));
 }
 
 double MpvItem::loadTimePosition()
@@ -542,13 +542,13 @@ double MpvItem::loadTimePosition()
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
     // but there can be cases when there is a saved position for files lower than minDurationToSavePosition()
     // when minDurationToSavePosition() was increased after position was already saved
-    if (getProperty("duration").toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+    if (getProperty(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
         return 0;
     }
 
-    auto hash = md5(getProperty("path").toString());
+    auto hash = md5(getProperty(QStringLiteral("path")).toString());
     auto configPath = Global::instance()->appConfigDirPath();
-    KConfig *config = new KConfig(configPath.append("/watch-later/").append(hash));
+    KConfig *config = new KConfig(configPath.append(QStringLiteral("/watch-later/")).append(hash));
     int pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
 
     return pos;
@@ -556,9 +556,9 @@ double MpvItem::loadTimePosition()
 
 void MpvItem::resetTimePosition()
 {
-    auto hash = md5(getProperty("path").toString());
+    auto hash = md5(getProperty(QStringLiteral("path")).toString());
     auto configPath = Global::instance()->appConfigDirPath();
-    QFile f(configPath.append("/watch-later/").append(hash));
+    QFile f(configPath.append(QStringLiteral("/watch-later/")).append(hash));
 
     if (f.exists()) {
         f.remove();
@@ -576,7 +576,7 @@ QString MpvItem::md5(const QString &str)
 {
     auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
 
-    return QString(md5.toHex());
+    return QString::fromUtf8(md5.toHex());
 }
 
 QString MpvItem::formattedDuration() const

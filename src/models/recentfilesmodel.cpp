@@ -70,7 +70,7 @@ void RecentFilesModel::populate()
         }
         QUrl url(file);
         if (!url.isLocalFile() && url.scheme().isEmpty()) {
-            url.setScheme("file");
+            url.setScheme(QStringLiteral("file"));
         }
         RecentFile recentFile;
         recentFile.url = url;
@@ -91,7 +91,7 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     QUrl url(path);
     if (!url.isLocalFile() && url.scheme().isEmpty()) {
-        url.setScheme("file");
+        url.setScheme(QStringLiteral("file"));
     }
 
     auto _name = name == QString() ? url.fileName() : name;

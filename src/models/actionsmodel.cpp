@@ -619,7 +619,7 @@ bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
             // ask user what whether to reassign or to cancel
             if (keyConflictMessageBox(result->text)) {
                 // user chose reassign, remove shortcut from action holding it
-                result->shortcut = "";
+                result->shortcut = QString();
                 group.writeEntry(result->name, result->shortcut);
                 Q_EMIT shortcutChanged(result->name, result->shortcut);
                 Q_EMIT dataChanged(index(i, 0), index(i, 0));

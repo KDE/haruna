@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
 
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-    QApplication::setOrganizationName("KDE");
-    QApplication::setApplicationName("Haruna");
-    QApplication::setOrganizationDomain("kde.org");
-    QApplication::setApplicationDisplayName("Haruna - Media Player");
+    QApplication::setOrganizationName(QStringLiteral("KDE"));
+    QApplication::setApplicationName(QStringLiteral("Haruna"));
+    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+    QApplication::setApplicationDisplayName(QStringLiteral("Haruna - Media Player"));
     QApplication::setApplicationVersion(Application::version());
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     }
 
     QApplication qApplication(argc, argv);
-    QApplication::setWindowIcon(QIcon::fromTheme("haruna"));
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("haruna")));
     KLocalizedString::setApplicationDomain("haruna");
 
     auto application = Application::instance();
@@ -49,12 +49,12 @@ int main(int argc, char *argv[])
         }
     };
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &qApplication, onObjectCreated, Qt::QueuedConnection);
-    engine.addImportPath("qrc:/qml");
-    engine.addImageProvider("thumbnail", new ThumbnailImageProvider());
-    engine.rootContext()->setContextProperty("app", Application::instance());
-    engine.rootContext()->setContextProperty("appActions", new QQmlPropertyMap);
+    engine.addImportPath(QStringLiteral("qrc:/qml"));
+    engine.addImageProvider(QStringLiteral("thumbnail"), new ThumbnailImageProvider());
+    engine.rootContext()->setContextProperty(QStringLiteral("app"), Application::instance());
+    engine.rootContext()->setContextProperty(QStringLiteral("appActions"), new QQmlPropertyMap);
     engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
-    engine.rootContext()->setContextProperty("harunaAboutData", QVariant::fromValue(KAboutData::applicationData()));
+    engine.rootContext()->setContextProperty(QStringLiteral("harunaAboutData"), QVariant::fromValue(KAboutData::applicationData()));
     engine.load(url);
 
     application->setQmlEngine(&engine);

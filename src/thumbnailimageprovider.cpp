@@ -47,9 +47,9 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
             }
             QString mimeType = Application::mimeType(url);
             QString iconName;
-            if (mimeType.startsWith("video/")) {
+            if (mimeType.startsWith(QStringLiteral("video/"))) {
                 iconName = QStringLiteral("video-x-generic");
-            } else if (mimeType.startsWith("audio/")) {
+            } else if (mimeType.startsWith(QStringLiteral("audio/"))) {
                 iconName = QStringLiteral("audio-x-generic");
             } else {
                 return;
@@ -69,8 +69,8 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
         Worker::instance()->makePlaylistThumbnail(id, requestedSize.width());
     }
 
-    if (QUrl(id).scheme() == "http" || QUrl(id).scheme() == "https") {
-        auto icon = QIcon::fromTheme("im-youtube", QIcon::fromTheme("video-x-generic"));
+    if (QUrl(id).scheme() == QStringLiteral("http") || QUrl(id).scheme() == QStringLiteral("https")) {
+        auto icon = QIcon::fromTheme(QStringLiteral("im-youtube"), QIcon::fromTheme(QStringLiteral("video-x-generic")));
         m_texture = QQuickTextureFactory::textureFactoryForImage(icon.pixmap(requestedSize).toImage());
         Q_EMIT finished();
     }

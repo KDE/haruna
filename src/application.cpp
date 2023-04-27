@@ -105,7 +105,7 @@ void Application::setupAboutData()
     m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2023"));
     m_aboutData.setHomepage(QStringLiteral("https://haruna.kde.org"));
     m_aboutData.setBugAddress(QStringLiteral("https://bugs.kde.org/enter_bug.cgi?product=Haruna").toUtf8());
-    m_aboutData.setDesktopFileName("org.kde.haruna");
+    m_aboutData.setDesktopFileName(QStringLiteral("org.kde.haruna"));
 
     m_aboutData.addAuthor(i18nc("@info:credit", "George Florea Bănuș"),
                           i18nc("@info:credit", "Developer"),
@@ -121,8 +121,7 @@ void Application::setupCommandLineParser()
     m_aboutData.setupCommandLine(m_parser);
     m_parser->addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
 
-    QCommandLineOption ytdlFormatSelectionOption(QStringList() << "ytdl-format-selection"
-                                                               << "ytdlfs",
+    QCommandLineOption ytdlFormatSelectionOption(QStringList() << QStringLiteral("ytdl-format-selection") << QStringLiteral("ytdlfs"),
                                                  i18nc("@info:shell",
                                                        "Allows to temporarily override the ytdl format selection setting. "
                                                        "Will be overwritten if the setting is changed through the GUI"),
@@ -195,10 +194,10 @@ QUrl Application::configFilePath(bool withScheme)
     }
     QUrl url(file);
     if (url.scheme().isEmpty()) {
-        url.setScheme("file");
+        url.setScheme(QStringLiteral("file"));
     }
     if (!withScheme) {
-        return url.toString(QUrl::PreferLocalFile);
+        return url;
     }
     return url;
 }
@@ -211,10 +210,10 @@ QUrl Application::ccConfigFilePath(bool withScheme)
     }
     QUrl url(file);
     if (url.scheme().isEmpty()) {
-        url.setScheme("file");
+        url.setScheme(QStringLiteral("file"));
     }
     if (!withScheme) {
-        return url.toString(QUrl::PreferLocalFile);
+        return url;
     }
     return url;
 }
@@ -227,10 +226,10 @@ QUrl Application::configFolderPath(bool withScheme)
     }
     QUrl url(folder);
     if (url.scheme().isEmpty()) {
-        url.setScheme("file");
+        url.setScheme(QStringLiteral("file"));
     }
     if (!withScheme) {
-        return url.toString(QUrl::PreferLocalFile);
+        return url;
     }
     return url;
 }
@@ -279,7 +278,7 @@ QUrl Application::parentUrl(const QString &path)
         fileInfo.setFile(url.toString());
     }
     QUrl parentFolderUrl(fileInfo.absolutePath());
-    parentFolderUrl.setScheme("file");
+    parentFolderUrl.setScheme(QStringLiteral("file"));
 
     return parentFolderUrl;
 }
@@ -290,14 +289,14 @@ QUrl Application::pathToUrl(const QString &path)
     if (!url.isValid()) {
         return QUrl();
     }
-    url.setScheme("file");
+    url.setScheme(QStringLiteral("file"));
 
     return url;
 }
 
 bool Application::isYoutubePlaylist(const QString &path)
 {
-    return path.contains("youtube.com/playlist?list");
+    return path.contains(QStringLiteral("youtube.com/playlist?list"));
 }
 
 QString Application::formatTime(const double time)
@@ -307,7 +306,8 @@ QString Application::formatTime(const double time)
     int minutes = (totalNumberOfSeconds / 60) % 60;
     int hours = (totalNumberOfSeconds / 60 / 60);
 
-    QString timeString = QString("%1:%2:%3").arg(hours, 2, 10, QChar('0')).arg(minutes, 2, 10, QChar('0')).arg(seconds, 2, 10, QChar('0'));
+    QString timeString =
+        QStringLiteral("%1:%2:%3").arg(hours, 2, 10, QLatin1Char('0')).arg(minutes, 2, 10, QLatin1Char('0')).arg(seconds, 2, 10, QLatin1Char('0'));
 
     return timeString;
 }
@@ -326,7 +326,7 @@ QString Application::getFileContent(const QString &file)
 {
     QFile f(file);
     f.open(QIODevice::ReadOnly);
-    QString content = f.readAll();
+    QString content = QString::fromUtf8(f.readAll());
     f.close();
     return content;
 }
@@ -344,7 +344,7 @@ QStringList Application::availableGuiStyles()
 
 void Application::setGuiStyle(const QString &style)
 {
-    if (style == "Default") {
+    if (style == QStringLiteral("Default")) {
         QApplication::setStyle(m_systemDefaultStyle);
         return;
     }

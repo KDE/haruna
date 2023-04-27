@@ -64,10 +64,11 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
     // figure out absolute path of the thumbnail
     auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
     QString cacheDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation));
-    QString appDir("haruna");
-    QString fileDir(md5Hash.toHex());
-    QString filename(QString(md5Hash.toHex()).append(".png"));
-    QString cachedFilePath = cacheDir + "/" + appDir + "/" + fileDir + "/" + filename;
+    QString appDir(QStringLiteral("haruna"));
+    QString fileDir(QString::fromUtf8(md5Hash.toHex()));
+    QString filename(QString::fromUtf8(md5Hash.toHex()).append(QStringLiteral(".png")));
+    QString separator(QStringLiteral("/"));
+    QString cachedFilePath = cacheDir + separator + appDir + separator + fileDir + separator + filename;
 
     // load existing thumbnail if there is one
     if (QFileInfo::exists(cachedFilePath) && image.load(cachedFilePath)) {

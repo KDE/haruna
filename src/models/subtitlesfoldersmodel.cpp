@@ -49,7 +49,7 @@ void SubtitlesFoldersModel::updateFolder(const QString &folder, int row)
     QStringList newList = m_list;
     // remove empty strings
     // removing directly from m_list messes with the ui logic
-    newList.removeAll(QString(""));
+    newList.removeAll(QStringLiteral(""));
 
     SubtitlesSettings::self()->setSubtitlesFolders(newList);
     SubtitlesSettings::self()->save();

@@ -128,7 +128,7 @@ void CustomCommandsModel::moveRows(int oldIndex, int newIndex)
 void CustomCommandsModel::saveCustomCommand(const QString &command, const QString &osdMessage, const QString &type)
 {
     int counter = m_customCommandsConfig->group(QString()).readEntry("Counter", 0);
-    const QString &groupName = QString("Command_%1").arg(counter);
+    const QString &groupName = QString(QStringLiteral("Command_%1")).arg(counter);
 
     if (m_customCommandsConfig->group(groupName).exists()) {
         return;
