@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-28 00:47+0000\n"
 "PO-Revision-Date: 2023-04-09 08:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -30,43 +30,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
 
-#: src/application.cpp:98
+#: src/application.cpp:101
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Medijski predvajalnik Haruna"
 
-#: src/application.cpp:99
+#: src/application.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Nastavljiv predvajalnik medijev."
 
-#: src/application.cpp:101
+#: src/application.cpp:105
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:107
+#: src/application.cpp:110
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:108
+#: src/application.cpp:111
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Razvijalec"
 
-#: src/application.cpp:119
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Datoteka za odpiranje"
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Omogoča začasno preglasiti nastavitev izbire oblike zapisa ytdl. Prepisano "
 "bo, če se nastavitev spremeni prek uporabniškega vmesnika"
 
-#: src/application.cpp:126
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -530,130 +530,125 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Predodeli"
 
-#: src/models/playlistmodel.cpp:382
+#: src/models/playlistmodel.cpp:381
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Seznam predvajanja je prazen"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:457
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Noben"
 
-#: src/qml/Actions.qml:62 src/qml/Actions.qml:80
+#: src/qml/Actions.qml:60 src/qml/Actions.qml:78
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Zvok: %1 %2"
 
-#: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
+#: src/qml/Actions.qml:128 src/qml/Actions.qml:133 src/qml/Actions.qml:138
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Hitrost predvajanja: %1"
 
-#: src/qml/Actions.qml:218
+#: src/qml/Actions.qml:216
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Začetek zanke: %1"
 
-#: src/qml/Actions.qml:222
+#: src/qml/Actions.qml:220
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Zanka: %1 - %2"
 
-#: src/qml/Actions.qml:228
+#: src/qml/Actions.qml:226
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Odstrani zanko"
 
-#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
+#: src/qml/Actions.qml:234 src/qml/Actions.qml:239
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Čas podnaslova: %1"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Podnaslovi izključeni"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Podnaslovi vključeni"
 
-#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
+#: src/qml/Actions.qml:253 src/qml/Actions.qml:265
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Podnaslov: brez"
 
-#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
+#: src/qml/Actions.qml:257 src/qml/Actions.qml:269
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Podnaslov: %1 %2"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
+#: src/qml/Actions.qml:275 src/qml/Actions.qml:280
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Merilo podnaslova: %1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Razpletanje: %1"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Glasnost: %1"
-
-#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
+#: src/qml/Actions.qml:343 src/qml/Actions.qml:349
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Povečava: %1"
 
-#: src/qml/Actions.qml:358
+#: src/qml/Actions.qml:354
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Povečava: 0"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:361 src/qml/Actions.qml:367
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:372
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
+#: src/qml/Actions.qml:378 src/qml/Actions.qml:384
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Svetlost: %1"
 
-#: src/qml/Actions.qml:393
+#: src/qml/Actions.qml:389
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Svetlost: 0"
 
-#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
+#: src/qml/Actions.qml:395 src/qml/Actions.qml:401
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:410
+#: src/qml/Actions.qml:406
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
+#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Nasičenost: %1"
 
-#: src/qml/Actions.qml:427
+#: src/qml/Actions.qml:423
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasičenost: 0"
@@ -908,12 +903,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Pokaži orodno vrstico"
 
-#: src/qml/MpvVideo.qml:123
+#: src/qml/MpvVideo.qml:122
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/qml/MpvVideo.qml:140
+#: src/qml/MpvVideo.qml:139
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ni mogoče predvajati: %1"
@@ -1301,33 +1296,33 @@ msgid "Hardware decoding"
 msgstr "Strojno dekodiranje"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Omogočeno"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: src/qml/Settings/PlaybackSettings.qml:232
+#: src/qml/Settings/PlaybackSettings.qml:231
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Zapomni si trenutek v času"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:251
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: src/qml/Settings/PlaybackSettings.qml:254
+#: src/qml/Settings/PlaybackSettings.qml:253
 msgctxt "@info"
 msgid "For all files"
 msgstr "Za vse datoteke"
 
-#: src/qml/Settings/PlaybackSettings.qml:257
+#: src/qml/Settings/PlaybackSettings.qml:256
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
@@ -1336,7 +1331,7 @@ msgstr[1] "Za datoteke, daljše od %1 minut"
 msgstr[2] "Za datoteke, daljše od %1 minut"
 msgstr[3] "Za datoteke, daljše od %1 minut"
 
-#: src/qml/Settings/PlaybackSettings.qml:285
+#: src/qml/Settings/PlaybackSettings.qml:284
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1345,43 +1340,43 @@ msgstr[1] "Shrani položaj vsaki %1 sekundi"
 msgstr[2] "Shrani položaj vsake %1 sekunde"
 msgstr[3] "Shrani položaj vsakih %1 sekund"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:293
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Preskoči poglavja"
 
-#: src/qml/Settings/PlaybackSettings.qml:311
+#: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Prikaži sporočilo osd ob preskoku"
 
-#: src/qml/Settings/PlaybackSettings.qml:321
+#: src/qml/Settings/PlaybackSettings.qml:320
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Preskoči besede"
 
-#: src/qml/Settings/PlaybackSettings.qml:330
+#: src/qml/Settings/PlaybackSettings.qml:329
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, poglavje 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:341
+#: src/qml/Settings/PlaybackSettings.qml:340
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
 "Preskoči poglavja, ki vsebujejo naslednje besede. Seznam besed, ločenih z "
 "vejico."
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:361
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgid "Format selection"
 msgstr "Izbira formata"
 
-#: src/qml/Settings/PlaybackSettings.qml:380
+#: src/qml/Settings/PlaybackSettings.qml:379
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1389,7 +1384,7 @@ msgid ""
 msgstr ""
 "Izbere najboljši video z višino, ki je manjša ali enaka izbrani vrednosti."
 
-#: src/qml/Settings/PlaybackSettings.qml:427
+#: src/qml/Settings/PlaybackSettings.qml:426
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -1667,6 +1662,11 @@ msgstr "Nasičenost"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"
+
+#: src/qml/VolumeSlider.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Glasnost: %1"
 
 #~ msgctxt "@action"
 #~ msgid "Video pan y up"

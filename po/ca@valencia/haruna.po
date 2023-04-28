@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-28 00:47+0000\n"
 "PO-Revision-Date: 2023-04-09 18:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,43 +30,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: src/application.cpp:98
+#: src/application.cpp:101
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Reproductor multimèdia Haruna"
 
-#: src/application.cpp:99
+#: src/application.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Un reproductor multimèdia configurable."
 
-#: src/application.cpp:101
+#: src/application.cpp:105
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:107
+#: src/application.cpp:110
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:108
+#: src/application.cpp:111
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: src/application.cpp:119
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Fitxer que s'ha d'obrir"
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Permet sobreescriure temporalment la configuració de selecció del format "
 "«ytdl». Se sobreescriurà si la configuració es canvia a través de la IGU"
 
-#: src/application.cpp:126
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -530,130 +530,125 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reassigna"
 
-#: src/models/playlistmodel.cpp:382
+#: src/models/playlistmodel.cpp:381
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "La llista de reproducció està buida"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:457
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Sense"
 
-#: src/qml/Actions.qml:62 src/qml/Actions.qml:80
+#: src/qml/Actions.qml:60 src/qml/Actions.qml:78
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Àudio: %1 %2"
 
-#: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
+#: src/qml/Actions.qml:128 src/qml/Actions.qml:133 src/qml/Actions.qml:138
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocitat de reproducció: %1"
 
-#: src/qml/Actions.qml:218
+#: src/qml/Actions.qml:216
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Inici de la repetició: %1"
 
-#: src/qml/Actions.qml:222
+#: src/qml/Actions.qml:220
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Repetició: %1 - %2"
 
-#: src/qml/Actions.qml:228
+#: src/qml/Actions.qml:226
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "S'ha esborrat la repetició"
 
-#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
+#: src/qml/Actions.qml:234 src/qml/Actions.qml:239
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Temps dels subtítols: %1"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Desactiva els subtítols"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Activa els subtítols"
 
-#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
+#: src/qml/Actions.qml:253 src/qml/Actions.qml:265
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Subtítols: Cap"
 
-#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
+#: src/qml/Actions.qml:257 src/qml/Actions.qml:269
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Subtítol: %1 %2"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
+#: src/qml/Actions.qml:275 src/qml/Actions.qml:280
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Escala dels subtítols: %1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrellaça: %1"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Volum: %1"
-
-#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
+#: src/qml/Actions.qml:343 src/qml/Actions.qml:349
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:358
+#: src/qml/Actions.qml:354
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:361 src/qml/Actions.qml:367
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrast: %1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:372
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrast: 0"
 
-#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
+#: src/qml/Actions.qml:378 src/qml/Actions.qml:384
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Lluminositat: %1"
 
-#: src/qml/Actions.qml:393
+#: src/qml/Actions.qml:389
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Lluminositat: 0"
 
-#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
+#: src/qml/Actions.qml:395 src/qml/Actions.qml:401
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:410
+#: src/qml/Actions.qml:406
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
+#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturació: %1"
 
-#: src/qml/Actions.qml:427
+#: src/qml/Actions.qml:423
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturació: 0"
@@ -908,12 +903,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: src/qml/MpvVideo.qml:123
+#: src/qml/MpvVideo.qml:122
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Capítol saltat: %1"
 
-#: src/qml/MpvVideo.qml:140
+#: src/qml/MpvVideo.qml:139
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No s'ha pogut reproduir: %1"
@@ -1304,82 +1299,82 @@ msgid "Hardware decoding"
 msgstr "Descodificació per maquinari"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Activada"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Desactivada"
 
-#: src/qml/Settings/PlaybackSettings.qml:232
+#: src/qml/Settings/PlaybackSettings.qml:231
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Recorda la posició del temps"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:251
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Desactivada"
 
-#: src/qml/Settings/PlaybackSettings.qml:254
+#: src/qml/Settings/PlaybackSettings.qml:253
 msgctxt "@info"
 msgid "For all files"
 msgstr "Per a tots els fitxers"
 
-#: src/qml/Settings/PlaybackSettings.qml:257
+#: src/qml/Settings/PlaybackSettings.qml:256
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "Per als fitxers més llargs que %1 minut"
 msgstr[1] "Per als fitxers més llargs que %1 minuts"
 
-#: src/qml/Settings/PlaybackSettings.qml:285
+#: src/qml/Settings/PlaybackSettings.qml:284
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Guarda la posició cada %1 segon"
 msgstr[1] "Guarda la posició cada %1 segons"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:293
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Omet els capítols"
 
-#: src/qml/Settings/PlaybackSettings.qml:311
+#: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Mostra un missatge OSD en saltar"
 
-#: src/qml/Settings/PlaybackSettings.qml:321
+#: src/qml/Settings/PlaybackSettings.qml:320
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Omet les paraules"
 
-#: src/qml/Settings/PlaybackSettings.qml:330
+#: src/qml/Settings/PlaybackSettings.qml:329
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, capítol 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:341
+#: src/qml/Settings/PlaybackSettings.qml:340
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
 "Omet els capítols que contenen estes paraules. Llista separada per comes."
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:361
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgid "Format selection"
 msgstr "Seleccioneu el format"
 
-#: src/qml/Settings/PlaybackSettings.qml:380
+#: src/qml/Settings/PlaybackSettings.qml:379
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1388,7 +1383,7 @@ msgstr ""
 "Selecciona el millor vídeo amb una alçària menor o igual que el valor "
 "seleccionat."
 
-#: src/qml/Settings/PlaybackSettings.qml:427
+#: src/qml/Settings/PlaybackSettings.qml:426
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "millor_vídeo+millor_àudio/millor"
@@ -1668,3 +1663,8 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
+
+#: src/qml/VolumeSlider.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Volum: %1"

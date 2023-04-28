@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-28 00:47+0000\n"
 "PO-Revision-Date: 2022-09-25 09:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,49 +27,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: src/application.cpp:98
+#: src/application.cpp:101
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna videospelare"
 
-#: src/application.cpp:99
+#: src/application.cpp:103
 #, fuzzy, kde-format
 #| msgid "A configurable video player."
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "En inställningsbar videospelare."
 
-#: src/application.cpp:101
+#: src/application.cpp:105
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "© 2019-2021"
 
-#: src/application.cpp:107
+#: src/application.cpp:110
 #, fuzzy, kde-format
 #| msgid "George Florea Bănuș"
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:108
+#: src/application.cpp:111
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Utvecklare"
 
-#: src/application.cpp:119
+#: src/application.cpp:122
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Fil att öppna"
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:126
+#: src/application.cpp:128
 #, fuzzy, kde-format
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "@info:shell"
@@ -609,175 +609,168 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ändra tilldelning"
 
-#: src/models/playlistmodel.cpp:382
+#: src/models/playlistmodel.cpp:381
 #, fuzzy, kde-format
 #| msgid "Playlist is empty"
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Spellistan är tom"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:457
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/qml/Actions.qml:62 src/qml/Actions.qml:80
+#: src/qml/Actions.qml:60 src/qml/Actions.qml:78
 #, fuzzy
 #| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Ljud: %1 %2"
 
-#: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
+#: src/qml/Actions.qml:128 src/qml/Actions.qml:133 src/qml/Actions.qml:138
 #, fuzzy
 #| msgid "Playback speed: %1"
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Uppspelningshastighet: %1"
 
-#: src/qml/Actions.qml:218
+#: src/qml/Actions.qml:216
 #, fuzzy
 #| msgid "Loop start: %1"
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Start av upprepning: %1"
 
-#: src/qml/Actions.qml:222
+#: src/qml/Actions.qml:220
 #, fuzzy
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Upprepa: %1 - %2"
 
-#: src/qml/Actions.qml:228
+#: src/qml/Actions.qml:226
 #, fuzzy
 #| msgid "Loop cleared"
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Upprepning borttagen"
 
-#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
+#: src/qml/Actions.qml:234 src/qml/Actions.qml:239
 #, fuzzy
 #| msgid "Subtitle timing: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Textningstider: %1"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Textning av"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Textning på"
 
-#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
+#: src/qml/Actions.qml:253 src/qml/Actions.qml:265
 #, fuzzy
 #| msgid "Subtitle: None"
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Textning: Ingen"
 
-#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
+#: src/qml/Actions.qml:257 src/qml/Actions.qml:269
 #, fuzzy
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Textning: %1 %2"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
+#: src/qml/Actions.qml:275 src/qml/Actions.qml:280
 #, fuzzy
 #| msgid "Subtitle scale: %1"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Textningsskala: %1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:289
 #, fuzzy
 #| msgid "Deinterlace: %1"
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Ta bort inflätning: %1"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
-#, fuzzy
-#| msgid "Volume: %1"
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Volym: %1"
-
-#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
+#: src/qml/Actions.qml:343 src/qml/Actions.qml:349
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:358
+#: src/qml/Actions.qml:354
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:361 src/qml/Actions.qml:367
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:372
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
+#: src/qml/Actions.qml:378 src/qml/Actions.qml:384
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Ljusstyrka: %1"
 
-#: src/qml/Actions.qml:393
+#: src/qml/Actions.qml:389
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Ljusstyrka: 0"
 
-#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
+#: src/qml/Actions.qml:395 src/qml/Actions.qml:401
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:410
+#: src/qml/Actions.qml:406
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
+#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Färgmättnad: %1"
 
-#: src/qml/Actions.qml:427
+#: src/qml/Actions.qml:423
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
@@ -1120,14 +1113,14 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Visa verktygsrad"
 
-#: src/qml/MpvVideo.qml:123
+#: src/qml/MpvVideo.qml:122
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Hoppade över kapitel: %1"
 
-#: src/qml/MpvVideo.qml:140
+#: src/qml/MpvVideo.qml:139
 #, fuzzy
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
@@ -1643,7 +1636,7 @@ msgid "Hardware decoding"
 msgstr "Hårdvaruavkodning"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 #, fuzzy
 #| msgid "Enabled"
 msgctxt "@option:check"
@@ -1651,35 +1644,35 @@ msgid "Enabled"
 msgstr "Aktiverad"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 #, fuzzy
 #| msgid "Disabled"
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: src/qml/Settings/PlaybackSettings.qml:232
+#: src/qml/Settings/PlaybackSettings.qml:231
 #, fuzzy
 #| msgid "Remember time position"
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Kom ihåg tidsposition"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:251
 #, fuzzy
 #| msgid "Disabled"
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: src/qml/Settings/PlaybackSettings.qml:254
+#: src/qml/Settings/PlaybackSettings.qml:253
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@info"
 msgid "For all files"
 msgstr "För alla filer"
 
-#: src/qml/Settings/PlaybackSettings.qml:257
+#: src/qml/Settings/PlaybackSettings.qml:256
 #, fuzzy
 #| msgid "For files longer than %1 minute"
 #| msgid_plural "For files longer than %1 minutes"
@@ -1689,7 +1682,7 @@ msgid_plural "For files longer than %1 minutes"
 msgstr[0] "För filer längre än %1 minut"
 msgstr[1] "För filer längre än %1 minuter"
 
-#: src/qml/Settings/PlaybackSettings.qml:285
+#: src/qml/Settings/PlaybackSettings.qml:284
 #, fuzzy
 #| msgid "Save position every %1 second"
 #| msgid_plural "Save position every %1 seconds"
@@ -1699,35 +1692,35 @@ msgid_plural "Save position every %1 seconds"
 msgstr[0] "Spara position med %1 sekunds mellanrum"
 msgstr[1] "Spara position med %1 sekunders mellanrum"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:293
 #, fuzzy
 #| msgid "Skip chapters"
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Hoppa över kapitel"
 
-#: src/qml/Settings/PlaybackSettings.qml:311
+#: src/qml/Settings/PlaybackSettings.qml:310
 #, fuzzy
 #| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Visa ett meddelande på skärmen vid överhopp"
 
-#: src/qml/Settings/PlaybackSettings.qml:321
+#: src/qml/Settings/PlaybackSettings.qml:320
 #, fuzzy
 #| msgid "Skip words"
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Hoppa över ord"
 
-#: src/qml/Settings/PlaybackSettings.qml:330
+#: src/qml/Settings/PlaybackSettings.qml:329
 #, fuzzy
 #| msgid "op, ed, chapter 1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, kapitel 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:341
+#: src/qml/Settings/PlaybackSettings.qml:340
 #, fuzzy
 #| msgid "Skip chapters containing these words. Comma separated list."
 msgctxt "@info:tooltip"
@@ -1736,18 +1729,18 @@ msgstr ""
 "Hoppa över kapitel som innehåller följande ord. Lista separerad med "
 "kommatecken."
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:354
 #, fuzzy
 #| msgid "Youtube-dl"
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:361
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgid "Format selection"
 msgstr "Formatval"
 
-#: src/qml/Settings/PlaybackSettings.qml:380
+#: src/qml/Settings/PlaybackSettings.qml:379
 #, fuzzy
 #| msgid ""
 #| "Selects the best video with a height lower than or equal to the selected "
@@ -1759,7 +1752,7 @@ msgid ""
 msgstr ""
 "Väljer bästa video med höjd mindre eller lika med det markerade värdet."
 
-#: src/qml/Settings/PlaybackSettings.qml:427
+#: src/qml/Settings/PlaybackSettings.qml:426
 #, fuzzy
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "placeholder text"
@@ -2121,6 +2114,13 @@ msgstr "Färgmättnad"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Mittenklicka på skjutreglaget för att återställa dem"
+
+#: src/qml/VolumeSlider.qml:49
+#, fuzzy
+#| msgid "Volume: %1"
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Volym: %1"
 
 #, fuzzy
 #~| msgid "Video pan y up"

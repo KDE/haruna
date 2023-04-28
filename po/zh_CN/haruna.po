@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-28 00:47+0000\n"
 "PO-Revision-Date: 2023-04-16 12:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,43 +29,43 @@ msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com, "
 "zhouwenqing655@gmail.com"
 
-#: src/application.cpp:98
+#: src/application.cpp:101
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna 媒体播放器"
 
-#: src/application.cpp:99
+#: src/application.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "可自定义配置的视频播放器。"
 
-#: src/application.cpp:101
+#: src/application.cpp:105
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:107
+#: src/application.cpp:110
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:108
+#: src/application.cpp:111
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "开发人员"
 
-#: src/application.cpp:119
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "要打开的文件"
 
-#: src/application.cpp:124
+#: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -74,7 +74,7 @@ msgid ""
 msgstr ""
 "允许暂时覆盖 ytdl 格式选择设置。如果该项设置通过图形界面被更改时将被覆盖"
 
-#: src/application.cpp:126
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -527,130 +527,125 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "重新分配"
 
-#: src/models/playlistmodel.cpp:382
+#: src/models/playlistmodel.cpp:381
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "播放列表为空"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:457
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/qml/Actions.qml:62 src/qml/Actions.qml:80
+#: src/qml/Actions.qml:60 src/qml/Actions.qml:78
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "音频：%1 %2"
 
-#: src/qml/Actions.qml:130 src/qml/Actions.qml:135 src/qml/Actions.qml:140
+#: src/qml/Actions.qml:128 src/qml/Actions.qml:133 src/qml/Actions.qml:138
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
-#: src/qml/Actions.qml:218
+#: src/qml/Actions.qml:216
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "循环开始：%1"
 
-#: src/qml/Actions.qml:222
+#: src/qml/Actions.qml:220
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "循环：%1 - %2"
 
-#: src/qml/Actions.qml:228
+#: src/qml/Actions.qml:226
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "循环已清除"
 
-#: src/qml/Actions.qml:236 src/qml/Actions.qml:241
+#: src/qml/Actions.qml:234 src/qml/Actions.qml:239
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "字幕偏移：%1"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "关闭字幕"
 
-#: src/qml/Actions.qml:246
+#: src/qml/Actions.qml:244
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "开启字幕"
 
-#: src/qml/Actions.qml:255 src/qml/Actions.qml:267
+#: src/qml/Actions.qml:253 src/qml/Actions.qml:265
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "字幕：无"
 
-#: src/qml/Actions.qml:259 src/qml/Actions.qml:271
+#: src/qml/Actions.qml:257 src/qml/Actions.qml:269
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/qml/Actions.qml:277 src/qml/Actions.qml:282
+#: src/qml/Actions.qml:275 src/qml/Actions.qml:280
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕缩放：%1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "反交错：%1"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:341
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "音量：%1"
-
-#: src/qml/Actions.qml:347 src/qml/Actions.qml:353
+#: src/qml/Actions.qml:343 src/qml/Actions.qml:349
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "缩放：%1"
 
-#: src/qml/Actions.qml:358
+#: src/qml/Actions.qml:354
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "缩放：0"
 
-#: src/qml/Actions.qml:365 src/qml/Actions.qml:371
+#: src/qml/Actions.qml:361 src/qml/Actions.qml:367
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "对比度：%1"
 
-#: src/qml/Actions.qml:376
+#: src/qml/Actions.qml:372
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "对比度：0"
 
-#: src/qml/Actions.qml:382 src/qml/Actions.qml:388
+#: src/qml/Actions.qml:378 src/qml/Actions.qml:384
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:393
+#: src/qml/Actions.qml:389
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:399 src/qml/Actions.qml:405
+#: src/qml/Actions.qml:395 src/qml/Actions.qml:401
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "伽玛值：%1"
 
-#: src/qml/Actions.qml:410
+#: src/qml/Actions.qml:406
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "伽玛值：0"
 
-#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
+#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "饱和度：%1"
 
-#: src/qml/Actions.qml:427
+#: src/qml/Actions.qml:423
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "饱和度：0"
@@ -905,12 +900,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/MpvVideo.qml:123
+#: src/qml/MpvVideo.qml:122
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "跳过的章节：%1"
 
-#: src/qml/MpvVideo.qml:140
+#: src/qml/MpvVideo.qml:139
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
@@ -1288,86 +1283,86 @@ msgid "Hardware decoding"
 msgstr "硬件解码"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "启用"
 
 #: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:299
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "禁用"
 
-#: src/qml/Settings/PlaybackSettings.qml:232
+#: src/qml/Settings/PlaybackSettings.qml:231
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "记住时间位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:251
 msgctxt "@info"
 msgid "Disabled"
 msgstr "禁用"
 
-#: src/qml/Settings/PlaybackSettings.qml:254
+#: src/qml/Settings/PlaybackSettings.qml:253
 msgctxt "@info"
 msgid "For all files"
 msgstr "应用于所有文件"
 
-#: src/qml/Settings/PlaybackSettings.qml:257
+#: src/qml/Settings/PlaybackSettings.qml:256
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "应用于长于 %1 分钟的文件"
 
-#: src/qml/Settings/PlaybackSettings.qml:285
+#: src/qml/Settings/PlaybackSettings.qml:284
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "每 %1 秒保存时间位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:293
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "跳过章节"
 
-#: src/qml/Settings/PlaybackSettings.qml:311
+#: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "跳过时显示 OSD 消息"
 
-#: src/qml/Settings/PlaybackSettings.qml:321
+#: src/qml/Settings/PlaybackSettings.qml:320
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "跳过单词"
 
-#: src/qml/Settings/PlaybackSettings.qml:330
+#: src/qml/Settings/PlaybackSettings.qml:329
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "开场曲, 结尾曲, 章节 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:341
+#: src/qml/Settings/PlaybackSettings.qml:340
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "跳过包含这些单词的章节。列表中的单词用逗号分隔。"
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:361
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgid "Format selection"
 msgstr "格式选择"
 
-#: src/qml/Settings/PlaybackSettings.qml:380
+#: src/qml/Settings/PlaybackSettings.qml:379
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr "选择高度低于或等于选定值的最佳视频。"
 
-#: src/qml/Settings/PlaybackSettings.qml:427
+#: src/qml/Settings/PlaybackSettings.qml:426
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -1643,3 +1638,8 @@ msgstr "饱和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键单击滑块以重置"
+
+#: src/qml/VolumeSlider.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "音量：%1"
