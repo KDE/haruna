@@ -43,10 +43,10 @@
 
 MpvItem::MpvItem(QQuickItem *parent)
     : MpvAbstractItem(parent)
-    , m_audioTracksModel{new TracksModel(this)}
-    , m_subtitleTracksModel{new TracksModel(this)}
-    , m_playlistProxyModel{new PlayListProxyModel(this)}
-    , m_playlistModel{new PlayListModel(this)}
+    , m_audioTracksModel{new TracksModel}
+    , m_subtitleTracksModel{new TracksModel}
+    , m_playlistProxyModel{new PlayListProxyModel}
+    , m_playlistModel{new PlayListModel}
 {
     m_playlistProxyModel->setSourceModel(m_playlistModel);
     mpv_observe_property(m_mpv, 0, "media-title", MPV_FORMAT_STRING);
