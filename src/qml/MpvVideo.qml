@@ -54,6 +54,7 @@ MpvItem {
         if (app.url(0).toString() !== "") {
             window.openFile(app.url(0), true)
         } else {
+            osd.active = true
             if (!PlaybackSettings.openLastPlayedFile) {
                 return
             }
@@ -65,7 +66,6 @@ MpvItem {
                 window.openFile(GeneralSettings.lastPlayedFile)
             }
         }
-        osd.active = true
     }
 
     onFileStarted: {
