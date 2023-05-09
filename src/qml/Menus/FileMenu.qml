@@ -27,7 +27,10 @@ Menu {
             model: recentFilesModel
             delegate: MenuItem {
                 text: model.name
-                onClicked: window.openFile(model.path)
+                onClicked: {
+                    recentFilesMenu.dismiss()
+                    window.openFile(model.path)
+                }
             }
             onObjectAdded: recentFilesMenu.insertItem(index, object)
             onObjectRemoved: recentFilesMenu.removeItem(object)
