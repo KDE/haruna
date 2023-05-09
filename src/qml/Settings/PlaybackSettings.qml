@@ -100,6 +100,26 @@ SettingsBasePage {
         Item { width: 1 }
 
         CheckBox {
+            id: pauseOnMinimizeCheckBox
+
+            text: i18nc("@option:check", "Pause on minimize")
+            checked: PlaybackSettings.pauseWhileMinimized
+            onCheckedChanged: {
+                PlaybackSettings.pauseWhileMinimized = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip", "Pauses the player while the window is minimized, playback resumes when restored.")
+            }
+        }
+
+        Label {
+            text: i18nc("@label:spinbox", "Resume playback")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        CheckBox {
             id: loadLastPlayedFileCheckBox
 
             text: i18nc("@option:check", "Open last played file on startup")
@@ -142,23 +162,6 @@ SettingsBasePage {
 
             ToolTip {
                 text: i18nc("@info:tooltip", "When opening a file that was played before, start playing it automatically.")
-            }
-        }
-
-        Item { width: 1 }
-
-        CheckBox {
-            id: pauseOnMinimizeCheckBox
-
-            text: i18nc("@option:check", "Pause on minimize")
-            checked: PlaybackSettings.pauseWhileMinimized
-            onCheckedChanged: {
-                PlaybackSettings.pauseWhileMinimized = checked
-                PlaybackSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip", "Pauses the player while the window is minimized, playback resumes when restored.")
             }
         }
 
