@@ -38,18 +38,10 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
-        QFileInfo configFile(QString(systemConfigPath()).append(m_config->name()));
-        if (configFile.exists()) {
-            return configFile.absoluteFilePath();
-        }
-        return QString();
+        return QString(systemConfigPath()).append(m_config->name());
     }
     case ConfigFile::CustomCommands: {
-        QFileInfo configFile(QString(systemConfigPath()).append(m_ccConfig->name()));
-        if (configFile.exists()) {
-            return configFile.absoluteFilePath();
-        }
-        return QString();
+        return QString(systemConfigPath()).append(m_ccConfig->name());
     }
     default:
         return QString();
