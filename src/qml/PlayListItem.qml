@@ -15,6 +15,7 @@ import Haruna.Components 1.0
 Kirigami.BasicListItem {
     id: root
 
+    property bool isLocal: model.isLocal
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
     property int fontSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
