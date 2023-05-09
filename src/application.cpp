@@ -186,50 +186,46 @@ void Application::saveWindowGeometry(QQuickWindow *window)
     Q_EMIT saveWindowGeometryAsync(window);
 }
 
-QUrl Application::configFilePath(bool withScheme)
+bool Application::urlExists(const QUrl &url)
+{
+    return pathExists(url.toLocalFile());
+}
+
+bool Application::pathExists(const QString &path)
+{
+    QFileInfo fileInfo(path);
+    if (fileInfo.exists()) {
+        return true;
+    }
+    return false;
+}
+
+QUrl Application::configFilePath()
 {
     auto file = Global::instance()->appConfigFilePath();
-    if (file.isEmpty()) {
-        return QUrl();
-    }
-    QUrl url(file);
-    if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
-    }
-    if (!withScheme) {
-        return url;
-    }
-    return url;
+    return pathToUrl(file);
 }
 
-QUrl Application::ccConfigFilePath(bool withScheme)
+QUrl Application::ccConfigFilePath()
 {
     auto file = Global::instance()->appConfigFilePath(Global::CustomCommands);
-    if (file.isEmpty()) {
-        return QUrl();
-    }
-    QUrl url(file);
-    if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
-    }
-    if (!withScheme) {
-        return url;
-    }
-    return url;
+    return pathToUrl(file);
 }
 
-QUrl Application::configFolderPath(bool withScheme)
+QUrl Application::configFolderPath()
 {
     auto folder = Global::instance()->appConfigDirPath();
-    if (folder.isEmpty()) {
+    return pathToUrl(folder);
+}
+
+QUrl Application::pathToUrl(const QString &path)
+{
+    QUrl url(path);
+    if (!url.isValid()) {
         return QUrl();
     }
-    QUrl url(folder);
     if (url.scheme().isEmpty()) {
         url.setScheme(QStringLiteral("file"));
-    }
-    if (!withScheme) {
-        return url;
     }
     return url;
 }
@@ -281,17 +277,6 @@ QUrl Application::parentUrl(const QString &path)
     parentFolderUrl.setScheme(QStringLiteral("file"));
 
     return parentFolderUrl;
-}
-
-QUrl Application::pathToUrl(const QString &path)
-{
-    QUrl url(path);
-    if (!url.isValid()) {
-        return QUrl();
-    }
-    url.setScheme(QStringLiteral("file"));
-
-    return url;
 }
 
 bool Application::isYoutubePlaylist(const QString &path)

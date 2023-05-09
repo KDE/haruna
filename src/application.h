@@ -49,14 +49,16 @@ class Application : public QObject
 public:
     static Application *instance();
 
-    Q_INVOKABLE QUrl configFilePath(bool withScheme = true);
-    Q_INVOKABLE QUrl ccConfigFilePath(bool withScheme = true);
-    Q_INVOKABLE QUrl configFolderPath(bool withScheme = true);
+    Q_INVOKABLE bool urlExists(const QUrl &url);
+    Q_INVOKABLE bool pathExists(const QString &url);
+    Q_INVOKABLE QUrl configFilePath();
+    Q_INVOKABLE QUrl ccConfigFilePath();
+    Q_INVOKABLE QUrl configFolderPath();
+    Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE void restoreWindowGeometry(QQuickWindow *window) const;
     Q_INVOKABLE void saveWindowGeometry(QQuickWindow *window);
     Q_INVOKABLE bool configFolderExists();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
-    Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE QUrl url(int key);
     Q_INVOKABLE void addUrl(int key, const QString &value);
     Q_INVOKABLE QString getFileContent(const QString &file);
