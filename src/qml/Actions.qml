@@ -26,7 +26,7 @@ Item {
                 }
                 if (model.type === "CustomAction") {
                     mpv.userCommand(model.text)
-                    osd.message(mpv.command(["expand-text", model.description]))
+                    osd.message(mpv.expandText(model.description))
                 }
             }
 

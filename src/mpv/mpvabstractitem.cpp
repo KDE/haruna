@@ -58,6 +58,11 @@ QVariant MpvAbstractItem::getProperty(const QString &name)
     return m_mpvController->getProperty(name);
 }
 
+QVariant MpvAbstractItem::expandText(const QString &text)
+{
+    return m_mpvController->command(QStringList{"expand-text", text});
+}
+
 void MpvAbstractItem::command(const QStringList &params)
 {
     Q_EMIT mpvCommand(params);
