@@ -95,13 +95,14 @@ SettingsBasePage {
             id: screenshotFormat
             textRole: "key"
             model: ListModel {
-                ListElement { key: "PNG"; }
-                ListElement { key: "JPG"; }
-                ListElement { key: "WebP"; }
+                ListElement { key: "PNG"; value: "png" }
+                ListElement { key: "JPG"; value: "jpg" }
+                ListElement { key: "WebP"; value: "webp" }
+                ListElement { key: "JPEG XL"; value: "jxl" }
             }
 
             onActivated: {
-                VideoSettings.screenshotFormat = model.get(index).key
+                VideoSettings.screenshotFormat = model.get(index).value
                 VideoSettings.save()
                 mpv.setProperty("screenshot-format", VideoSettings.screenshotFormat)
             }
