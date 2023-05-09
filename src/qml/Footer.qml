@@ -15,6 +15,7 @@ import Haruna.Components 1.0
 ToolBar {
     id: root
 
+    property Item m_mpv
     property alias progressBar: progressBar
     property alias footerRow: footerRow
     property alias timeInfo: timeInfo
@@ -24,7 +25,6 @@ ToolBar {
     padding: 5
     position: ToolBar.Footer
     hoverEnabled: true
-    visible: !window.isFullScreen() || mpv.mouseY > window.height - footer.height
 
     Component {
         id: togglePlaylistButton
@@ -55,13 +55,13 @@ ToolBar {
             id: playPauseButton
             action: appActions.playPauseAction
             text: ""
-            icon.name: mpv.pause ? "media-playback-start" : "media-playback-pause"
+            icon.name: m_mpv.pause ? "media-playback-start" : "media-playback-pause"
             focusPolicy: Qt.NoFocus
-            enabled: mpv.duration !== 0
+            enabled: m_mpv.duration !== 0
 
             ToolTip {
                 id: playPauseButtonToolTip
-                text: mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
+                text: m_mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
             }
         }
 
@@ -99,9 +99,9 @@ ToolBar {
         LabelWithTooltip {
             id: timeInfo
 
-            text: mpv.formattedPosition + " / " + mpv.formattedDuration
+            text: m_mpv.formattedPosition + " / " + m_mpv.formattedDuration
             font.pointSize: Math.round(Kirigami.Units.gridUnit * 0.7)
-            toolTipText: i18nc("@info:tooltip", "Remaining: %1", mpv.formattedRemaining)
+            toolTipText: i18nc("@info:tooltip", "Remaining: %1", m_mpv.formattedRemaining)
             alwaysShowToolTip: true
             horizontalAlignment: Qt.AlignHCenter
 
@@ -110,7 +110,7 @@ ToolBar {
         ToolButton {
             id: mute
             action: appActions.muteAction
-            icon.name: mpv.mute || mpv.volume === 0 ? "player-volume-muted" : "player-volume"
+            icon.name: m_mpv.mute || m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
             text: ""
             focusPolicy: Qt.NoFocus
 

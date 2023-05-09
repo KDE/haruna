@@ -113,9 +113,12 @@ Kirigami.ApplicationWindow {
     Footer {
         id: footer
 
+        m_mpv: mpv
+
         anchors.left: window.contentItem.left
         anchors.right: window.contentItem.right
         anchors.bottom: window.isFullScreen() ? mpv.bottom : window.contentItem.bottom
+        visible: !window.isFullScreen() || mpv.mouseY > window.height - footer.height
     }
 
     Actions {}
