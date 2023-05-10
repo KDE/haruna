@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:47+0000\n"
+"POT-Creation-Date: 2023-05-10 00:46+0000\n"
 "PO-Revision-Date: 2022-09-25 09:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -945,7 +945,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:234 src/qml/PlayList.qml:298
+#: src/qml/main.qml:237 src/qml/PlayList.qml:298
 #: src/qml/Settings/VideoSettings.qml:69
 #, fuzzy
 #| msgid "Select file"
@@ -953,14 +953,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "Välj fil"
 
-#: src/qml/main.qml:262
+#: src/qml/main.qml:265
 #, fuzzy
 #| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Välj textningsfil"
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:283
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1002,7 +1002,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Senaste filer"
 
-#: src/qml/Menus/FileMenu.qml:38
+#: src/qml/Menus/FileMenu.qml:41
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "@action:inmenu"
@@ -1113,14 +1113,14 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Visa verktygsrad"
 
-#: src/qml/MpvVideo.qml:122
+#: src/qml/MpvVideo.qml:124
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Hoppade över kapitel: %1"
 
-#: src/qml/MpvVideo.qml:139
+#: src/qml/MpvVideo.qml:141
 #, fuzzy
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
@@ -1566,56 +1566,12 @@ msgstr "Gå stort steg"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 #, fuzzy
-#| msgid "Open last played file on startup"
-msgctxt "@option:check"
-msgid "Open last played file on startup"
-msgstr "Öppna senaste spelade fil vid start"
-
-#: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy
-#| msgid "Seek to last playback position"
-msgctxt "@option:check"
-msgid "Seek to last playback position"
-msgstr "Gå till senaste uppspelningsposition"
-
-#: src/qml/Settings/PlaybackSettings.qml:126
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
-msgctxt "@info:tooltip"
-msgid ""
-"When opening a file that was played before, seek at the position it was last "
-"time."
-msgstr ""
-"När en fil öppnas som spelades tidigare gå till positionen den var förra "
-"gången."
-
-#: src/qml/Settings/PlaybackSettings.qml:135
-#, fuzzy
-#| msgid "Start playing"
-msgctxt "@option:check"
-msgid "Start playing"
-msgstr "Börja spela"
-
-#: src/qml/Settings/PlaybackSettings.qml:144
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
-msgctxt "@info:tooltip"
-msgid ""
-"When opening a file that was played before, start playing it automatically."
-msgstr "När en fil öppnas som spelades tidigare, börja spela den automatiskt."
-
-#: src/qml/Settings/PlaybackSettings.qml:153
-#, fuzzy
 #| msgid "Pause on minimize"
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Paus vid minimering"
 
-#: src/qml/Settings/PlaybackSettings.qml:161
+#: src/qml/Settings/PlaybackSettings.qml:113
 #, fuzzy
 #| msgid ""
 #| "Pauses the player while the window is minimized, playback resumes when "
@@ -1628,51 +1584,102 @@ msgstr ""
 "Pausar spelaren när fönstret minimeras, uppspelning återupptas när det "
 "återställs."
 
-#: src/qml/Settings/PlaybackSettings.qml:166
+#: src/qml/Settings/PlaybackSettings.qml:118
+#, fuzzy
+#| msgid "Resume playback"
+msgctxt "@label:spinbox"
+msgid "Resume playback"
+msgstr "Återuppta uppspelning"
+
+#: src/qml/Settings/PlaybackSettings.qml:125
+#, fuzzy
+#| msgid "Open last played file on startup"
+msgctxt "@option:check"
+msgid "Open last played file on startup"
+msgstr "Öppna senaste spelade fil vid start"
+
+#: src/qml/Settings/PlaybackSettings.qml:138
+#, fuzzy
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
+msgid "Seek to last playback position"
+msgstr "Gå till senaste uppspelningsposition"
+
+#: src/qml/Settings/PlaybackSettings.qml:146
+#, fuzzy
+#| msgid ""
+#| "When opening a file that was played before, seek at the position it was "
+#| "last time."
+msgctxt "@info:tooltip"
+msgid ""
+"When opening a file that was played before, seek at the position it was last "
+"time."
+msgstr ""
+"När en fil öppnas som spelades tidigare gå till positionen den var förra "
+"gången."
+
+#: src/qml/Settings/PlaybackSettings.qml:155
+#, fuzzy
+#| msgid "Start playing"
+msgctxt "@option:check"
+msgid "Start playing"
+msgstr "Börja spela"
+
+#: src/qml/Settings/PlaybackSettings.qml:164
+#, fuzzy
+#| msgid ""
+#| "When opening a file that was played before, start playing it "
+#| "automatically."
+msgctxt "@info:tooltip"
+msgid ""
+"When opening a file that was played before, start playing it automatically."
+msgstr "När en fil öppnas som spelades tidigare, börja spela den automatiskt."
+
+#: src/qml/Settings/PlaybackSettings.qml:169
 #, fuzzy
 #| msgid "Hardware decoding"
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Hårdvaruavkodning"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 #, fuzzy
 #| msgid "Enabled"
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Aktiverad"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 #, fuzzy
 #| msgid "Disabled"
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: src/qml/Settings/PlaybackSettings.qml:231
+#: src/qml/Settings/PlaybackSettings.qml:234
 #, fuzzy
 #| msgid "Remember time position"
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Kom ihåg tidsposition"
 
-#: src/qml/Settings/PlaybackSettings.qml:251
+#: src/qml/Settings/PlaybackSettings.qml:254
 #, fuzzy
 #| msgid "Disabled"
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: src/qml/Settings/PlaybackSettings.qml:253
+#: src/qml/Settings/PlaybackSettings.qml:256
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@info"
 msgid "For all files"
 msgstr "För alla filer"
 
-#: src/qml/Settings/PlaybackSettings.qml:256
+#: src/qml/Settings/PlaybackSettings.qml:259
 #, fuzzy
 #| msgid "For files longer than %1 minute"
 #| msgid_plural "For files longer than %1 minutes"
@@ -1682,7 +1689,7 @@ msgid_plural "For files longer than %1 minutes"
 msgstr[0] "För filer längre än %1 minut"
 msgstr[1] "För filer längre än %1 minuter"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:287
 #, fuzzy
 #| msgid "Save position every %1 second"
 #| msgid_plural "Save position every %1 seconds"
@@ -1692,35 +1699,35 @@ msgid_plural "Save position every %1 seconds"
 msgstr[0] "Spara position med %1 sekunds mellanrum"
 msgstr[1] "Spara position med %1 sekunders mellanrum"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:296
 #, fuzzy
 #| msgid "Skip chapters"
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Hoppa över kapitel"
 
-#: src/qml/Settings/PlaybackSettings.qml:310
+#: src/qml/Settings/PlaybackSettings.qml:313
 #, fuzzy
 #| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Visa ett meddelande på skärmen vid överhopp"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/qml/Settings/PlaybackSettings.qml:323
 #, fuzzy
 #| msgid "Skip words"
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Hoppa över ord"
 
-#: src/qml/Settings/PlaybackSettings.qml:329
+#: src/qml/Settings/PlaybackSettings.qml:332
 #, fuzzy
 #| msgid "op, ed, chapter 1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, kapitel 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:343
 #, fuzzy
 #| msgid "Skip chapters containing these words. Comma separated list."
 msgctxt "@info:tooltip"
@@ -1729,18 +1736,18 @@ msgstr ""
 "Hoppa över kapitel som innehåller följande ord. Lista separerad med "
 "kommatecken."
 
-#: src/qml/Settings/PlaybackSettings.qml:354
+#: src/qml/Settings/PlaybackSettings.qml:357
 #, fuzzy
 #| msgid "Youtube-dl"
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:360
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgid "Format selection"
 msgstr "Formatval"
 
-#: src/qml/Settings/PlaybackSettings.qml:379
+#: src/qml/Settings/PlaybackSettings.qml:382
 #, fuzzy
 #| msgid ""
 #| "Selects the best video with a height lower than or equal to the selected "
@@ -1752,7 +1759,7 @@ msgid ""
 msgstr ""
 "Väljer bästa video med höjd mindre eller lika med det markerade värdet."
 
-#: src/qml/Settings/PlaybackSettings.qml:426
+#: src/qml/Settings/PlaybackSettings.qml:429
 #, fuzzy
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "placeholder text"
@@ -2066,49 +2073,49 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Format"
 
-#: src/qml/Settings/VideoSettings.qml:126
+#: src/qml/Settings/VideoSettings.qml:127
 #, fuzzy
 #| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Mall"
 
-#: src/qml/Settings/VideoSettings.qml:150
+#: src/qml/Settings/VideoSettings.qml:151
 #, fuzzy
 #| msgid "Image adjustments"
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Bildjusteringar"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:161
 #, fuzzy
 #| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
-#: src/qml/Settings/VideoSettings.qml:177
+#: src/qml/Settings/VideoSettings.qml:178
 #, fuzzy
 #| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Ljusstyrka"
 
-#: src/qml/Settings/VideoSettings.qml:194
+#: src/qml/Settings/VideoSettings.qml:195
 #, fuzzy
 #| msgid "Gamma"
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
-#: src/qml/Settings/VideoSettings.qml:211
+#: src/qml/Settings/VideoSettings.qml:212
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Färgmättnad"
 
-#: src/qml/Settings/VideoSettings.qml:225
+#: src/qml/Settings/VideoSettings.qml:226
 #, fuzzy
 #| msgid "Middle click on the sliders to reset them"
 msgctxt "@info"
@@ -2217,9 +2224,6 @@ msgstr "Volym: %1"
 
 #~ msgid "Startup"
 #~ msgstr "Start"
-
-#~ msgid "Resume playback"
-#~ msgstr "Återuppta uppspelning"
 
 #~ msgid "For files longer than %1 minutes"
 #~ msgstr "För filer längre än %1 minuter"

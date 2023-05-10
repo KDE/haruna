@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:47+0000\n"
+"POT-Creation-Date: 2023-05-10 00:46+0000\n"
 "PO-Revision-Date: 2023-04-09 08:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -781,18 +781,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:234 src/qml/PlayList.qml:298
+#: src/qml/main.qml:237 src/qml/PlayList.qml:298
 #: src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: src/qml/main.qml:262
+#: src/qml/main.qml:265
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Izberite datoteko podnaslovov"
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:283
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Odpri"
@@ -822,7 +822,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Nedavne datoteke"
 
-#: src/qml/Menus/FileMenu.qml:38
+#: src/qml/Menus/FileMenu.qml:41
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Počisti seznam"
@@ -903,12 +903,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Pokaži orodno vrstico"
 
-#: src/qml/MpvVideo.qml:122
+#: src/qml/MpvVideo.qml:124
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/qml/MpvVideo.qml:139
+#: src/qml/MpvVideo.qml:141
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ni mogoče predvajati: %1"
@@ -1247,41 +1247,10 @@ msgstr "Iskanje: velik korak"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 msgctxt "@option:check"
-msgid "Open last played file on startup"
-msgstr "Odpri zadnjo predvajano datoteko po zagonu"
-
-#: src/qml/Settings/PlaybackSettings.qml:118
-msgctxt "@option:check"
-msgid "Seek to last playback position"
-msgstr "Poišči zadnji položaj predvajanja"
-
-#: src/qml/Settings/PlaybackSettings.qml:126
-msgctxt "@info:tooltip"
-msgid ""
-"When opening a file that was played before, seek at the position it was last "
-"time."
-msgstr ""
-"Ob odpiranju datoteke, ki je že bila predvajana, poišči položaj, kjer je "
-"bila takrat."
-
-#: src/qml/Settings/PlaybackSettings.qml:135
-msgctxt "@option:check"
-msgid "Start playing"
-msgstr "Začni predvajanje"
-
-#: src/qml/Settings/PlaybackSettings.qml:144
-msgctxt "@info:tooltip"
-msgid ""
-"When opening a file that was played before, start playing it automatically."
-msgstr ""
-"Ob odpiranju datoteke, ki je bila že predvajana, samodejno začni predvajanje."
-
-#: src/qml/Settings/PlaybackSettings.qml:153
-msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Premor pri strnjevanju"
 
-#: src/qml/Settings/PlaybackSettings.qml:161
+#: src/qml/Settings/PlaybackSettings.qml:113
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1290,39 +1259,78 @@ msgstr ""
 "Predvajalnik se ustavi, če je okno strnjeno, in nadaljuje s predvajanjem, ko "
 "je obnovljeno."
 
-#: src/qml/Settings/PlaybackSettings.qml:166
+#: src/qml/Settings/PlaybackSettings.qml:118
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
+msgctxt "@label:spinbox"
+msgid "Resume playback"
+msgstr "Znova zaženi predvajanje"
+
+#: src/qml/Settings/PlaybackSettings.qml:125
+msgctxt "@option:check"
+msgid "Open last played file on startup"
+msgstr "Odpri zadnjo predvajano datoteko po zagonu"
+
+#: src/qml/Settings/PlaybackSettings.qml:138
+msgctxt "@option:check"
+msgid "Seek to last playback position"
+msgstr "Poišči zadnji položaj predvajanja"
+
+#: src/qml/Settings/PlaybackSettings.qml:146
+msgctxt "@info:tooltip"
+msgid ""
+"When opening a file that was played before, seek at the position it was last "
+"time."
+msgstr ""
+"Ob odpiranju datoteke, ki je že bila predvajana, poišči položaj, kjer je "
+"bila takrat."
+
+#: src/qml/Settings/PlaybackSettings.qml:155
+msgctxt "@option:check"
+msgid "Start playing"
+msgstr "Začni predvajanje"
+
+#: src/qml/Settings/PlaybackSettings.qml:164
+msgctxt "@info:tooltip"
+msgid ""
+"When opening a file that was played before, start playing it automatically."
+msgstr ""
+"Ob odpiranju datoteke, ki je bila že predvajana, samodejno začni predvajanje."
+
+#: src/qml/Settings/PlaybackSettings.qml:169
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Strojno dekodiranje"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Omogočeno"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: src/qml/Settings/PlaybackSettings.qml:231
+#: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Zapomni si trenutek v času"
 
-#: src/qml/Settings/PlaybackSettings.qml:251
+#: src/qml/Settings/PlaybackSettings.qml:254
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: src/qml/Settings/PlaybackSettings.qml:253
+#: src/qml/Settings/PlaybackSettings.qml:256
 msgctxt "@info"
 msgid "For all files"
 msgstr "Za vse datoteke"
 
-#: src/qml/Settings/PlaybackSettings.qml:256
+#: src/qml/Settings/PlaybackSettings.qml:259
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
@@ -1331,7 +1339,7 @@ msgstr[1] "Za datoteke, daljše od %1 minut"
 msgstr[2] "Za datoteke, daljše od %1 minut"
 msgstr[3] "Za datoteke, daljše od %1 minut"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1340,43 +1348,43 @@ msgstr[1] "Shrani položaj vsaki %1 sekundi"
 msgstr[2] "Shrani položaj vsake %1 sekunde"
 msgstr[3] "Shrani položaj vsakih %1 sekund"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:296
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Preskoči poglavja"
 
-#: src/qml/Settings/PlaybackSettings.qml:310
+#: src/qml/Settings/PlaybackSettings.qml:313
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Prikaži sporočilo osd ob preskoku"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Preskoči besede"
 
-#: src/qml/Settings/PlaybackSettings.qml:329
+#: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, poglavje 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:343
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
 "Preskoči poglavja, ki vsebujejo naslednje besede. Seznam besed, ločenih z "
 "vejico."
 
-#: src/qml/Settings/PlaybackSettings.qml:354
+#: src/qml/Settings/PlaybackSettings.qml:357
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:360
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgid "Format selection"
 msgstr "Izbira formata"
 
-#: src/qml/Settings/PlaybackSettings.qml:379
+#: src/qml/Settings/PlaybackSettings.qml:382
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1384,7 +1392,7 @@ msgid ""
 msgstr ""
 "Izbere najboljši video z višino, ki je manjša ali enaka izbrani vrednosti."
 
-#: src/qml/Settings/PlaybackSettings.qml:426
+#: src/qml/Settings/PlaybackSettings.qml:429
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -1628,37 +1636,37 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Zapis"
 
-#: src/qml/Settings/VideoSettings.qml:126
+#: src/qml/Settings/VideoSettings.qml:127
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Predloga"
 
-#: src/qml/Settings/VideoSettings.qml:150
+#: src/qml/Settings/VideoSettings.qml:151
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Prilagoditve slike"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:161
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
-#: src/qml/Settings/VideoSettings.qml:177
+#: src/qml/Settings/VideoSettings.qml:178
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Svetlost"
 
-#: src/qml/Settings/VideoSettings.qml:194
+#: src/qml/Settings/VideoSettings.qml:195
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:211
+#: src/qml/Settings/VideoSettings.qml:212
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Nasičenost"
 
-#: src/qml/Settings/VideoSettings.qml:225
+#: src/qml/Settings/VideoSettings.qml:226
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"

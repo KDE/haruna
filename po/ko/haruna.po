@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:47+0000\n"
+"POT-Creation-Date: 2023-05-10 00:46+0000\n"
 "PO-Revision-Date: 2022-08-09 13:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -944,7 +944,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:234 src/qml/PlayList.qml:298
+#: src/qml/main.qml:237 src/qml/PlayList.qml:298
 #: src/qml/Settings/VideoSettings.qml:69
 #, fuzzy
 #| msgid "Select file"
@@ -952,14 +952,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: src/qml/main.qml:262
+#: src/qml/main.qml:265
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "파일 선택"
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:283
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1001,7 +1001,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "최근 파일"
 
-#: src/qml/Menus/FileMenu.qml:38
+#: src/qml/Menus/FileMenu.qml:41
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "@action:inmenu"
@@ -1112,14 +1112,14 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "도구 모음 표시"
 
-#: src/qml/MpvVideo.qml:122
+#: src/qml/MpvVideo.qml:124
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
-#: src/qml/MpvVideo.qml:139
+#: src/qml/MpvVideo.qml:141
 #, fuzzy
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
@@ -1565,19 +1565,44 @@ msgstr "큰 탐색 단위"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 #, fuzzy
+#| msgid "Pause on minimize"
+msgctxt "@option:check"
+msgid "Pause on minimize"
+msgstr "최소화 시 일시 정지"
+
+#: src/qml/Settings/PlaybackSettings.qml:113
+#, fuzzy
+#| msgid ""
+#| "Pauses the player while the window is minimized, playback resumes when "
+#| "restored."
+msgctxt "@info:tooltip"
+msgid ""
+"Pauses the player while the window is minimized, playback resumes when "
+"restored."
+msgstr "창이 최소화되었을 때 재생을 일시 정지하며 복원될 때 다시 시작합니다."
+
+#: src/qml/Settings/PlaybackSettings.qml:118
+#, fuzzy
+#| msgid "Resume playback"
+msgctxt "@label:spinbox"
+msgid "Resume playback"
+msgstr "재생 다시 시작"
+
+#: src/qml/Settings/PlaybackSettings.qml:125
+#, fuzzy
 #| msgid "Open last played file on startup"
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "시작할 때 마지막으로 재생한 파일 열기"
 
-#: src/qml/Settings/PlaybackSettings.qml:118
+#: src/qml/Settings/PlaybackSettings.qml:138
 #, fuzzy
 #| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "마지막으로 재생한 위치로 탐색"
 
-#: src/qml/Settings/PlaybackSettings.qml:126
+#: src/qml/Settings/PlaybackSettings.qml:146
 #, fuzzy
 #| msgid ""
 #| "When opening a file that was played before, seek at the position it was "
@@ -1589,14 +1614,14 @@ msgid ""
 msgstr ""
 "이전에 재생한 적이 있었던 파일을 열 때 재생을 멈췄던 위치로 이동합니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:135
+#: src/qml/Settings/PlaybackSettings.qml:155
 #, fuzzy
 #| msgid "Start playing"
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "재생 시작"
 
-#: src/qml/Settings/PlaybackSettings.qml:144
+#: src/qml/Settings/PlaybackSettings.qml:164
 #, fuzzy
 #| msgid ""
 #| "When opening a file that was played before, start playing it "
@@ -1606,69 +1631,51 @@ msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr "이전에 재생한 적이 있었던 파일을 열 때 자동으로 재생을 시작합니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:153
-#, fuzzy
-#| msgid "Pause on minimize"
-msgctxt "@option:check"
-msgid "Pause on minimize"
-msgstr "최소화 시 일시 정지"
-
-#: src/qml/Settings/PlaybackSettings.qml:161
-#, fuzzy
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
-msgctxt "@info:tooltip"
-msgid ""
-"Pauses the player while the window is minimized, playback resumes when "
-"restored."
-msgstr "창이 최소화되었을 때 재생을 일시 정지하며 복원될 때 다시 시작합니다."
-
-#: src/qml/Settings/PlaybackSettings.qml:166
+#: src/qml/Settings/PlaybackSettings.qml:169
 #, fuzzy
 #| msgid "Hardware decoding"
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "하드웨어 디코딩"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 #, fuzzy
 #| msgid "Enabled"
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "사용함"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 #, fuzzy
 #| msgid "Disabled"
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: src/qml/Settings/PlaybackSettings.qml:231
+#: src/qml/Settings/PlaybackSettings.qml:234
 #, fuzzy
 #| msgid "Remember time position"
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "시간 위치 기억"
 
-#: src/qml/Settings/PlaybackSettings.qml:251
+#: src/qml/Settings/PlaybackSettings.qml:254
 #, fuzzy
 #| msgid "Disabled"
 msgctxt "@info"
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: src/qml/Settings/PlaybackSettings.qml:253
+#: src/qml/Settings/PlaybackSettings.qml:256
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@info"
 msgid "For all files"
 msgstr "모든 파일"
 
-#: src/qml/Settings/PlaybackSettings.qml:256
+#: src/qml/Settings/PlaybackSettings.qml:259
 #, fuzzy
 #| msgid "For files longer than %1 minute"
 #| msgid_plural "For files longer than %1 minutes"
@@ -1677,7 +1684,7 @@ msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "%1분보다 긴 파일"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:287
 #, fuzzy
 #| msgid "Save position every %1 second"
 #| msgid_plural "Save position every %1 seconds"
@@ -1686,53 +1693,53 @@ msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "%1초마다 위치 저장"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:296
 #, fuzzy
 #| msgid "Skip chapters"
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/Settings/PlaybackSettings.qml:310
+#: src/qml/Settings/PlaybackSettings.qml:313
 #, fuzzy
 #| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "건너뛸 때 OSD 메시지 표시"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/qml/Settings/PlaybackSettings.qml:323
 #, fuzzy
 #| msgid "Skip words"
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "단어 건너뛰기"
 
-#: src/qml/Settings/PlaybackSettings.qml:329
+#: src/qml/Settings/PlaybackSettings.qml:332
 #, fuzzy
 #| msgid "op, ed, chapter 1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 챕터 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:343
 #, fuzzy
 #| msgid "Skip chapters containing these words. Comma separated list."
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "다음 단어가 포함된 챕터를 건너뜁니다. 쉼표로 구분하십시오."
 
-#: src/qml/Settings/PlaybackSettings.qml:354
+#: src/qml/Settings/PlaybackSettings.qml:357
 #, fuzzy
 #| msgid "Youtube-dl"
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:360
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgid "Format selection"
 msgstr "형식 선택"
 
-#: src/qml/Settings/PlaybackSettings.qml:379
+#: src/qml/Settings/PlaybackSettings.qml:382
 #, fuzzy
 #| msgid ""
 #| "Selects the best video with a height lower than or equal to the selected "
@@ -1743,7 +1750,7 @@ msgid ""
 "value."
 msgstr "높이가 지정한 값 이하인 최적 동영상을 선택합니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:426
+#: src/qml/Settings/PlaybackSettings.qml:429
 #, fuzzy
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "placeholder text"
@@ -2057,49 +2064,49 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "형식"
 
-#: src/qml/Settings/VideoSettings.qml:126
+#: src/qml/Settings/VideoSettings.qml:127
 #, fuzzy
 #| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "템플릿"
 
-#: src/qml/Settings/VideoSettings.qml:150
+#: src/qml/Settings/VideoSettings.qml:151
 #, fuzzy
 #| msgid "Image adjustments"
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "그림 조정"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:161
 #, fuzzy
 #| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "명암"
 
-#: src/qml/Settings/VideoSettings.qml:177
+#: src/qml/Settings/VideoSettings.qml:178
 #, fuzzy
 #| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "밝기"
 
-#: src/qml/Settings/VideoSettings.qml:194
+#: src/qml/Settings/VideoSettings.qml:195
 #, fuzzy
 #| msgid "Gamma"
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "감마"
 
-#: src/qml/Settings/VideoSettings.qml:211
+#: src/qml/Settings/VideoSettings.qml:212
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "채도"
 
-#: src/qml/Settings/VideoSettings.qml:225
+#: src/qml/Settings/VideoSettings.qml:226
 #, fuzzy
 #| msgid "Middle click on the sliders to reset them"
 msgctxt "@info"
@@ -2209,9 +2216,6 @@ msgstr "음량: %1"
 
 #~ msgid "Startup"
 #~ msgstr "시작"
-
-#~ msgid "Resume playback"
-#~ msgstr "재생 다시 시작"
 
 #~ msgid "For files longer than %1 minutes"
 #~ msgstr "%1분보다 긴 파일"

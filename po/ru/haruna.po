@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:47+0000\n"
+"POT-Creation-Date: 2023-05-10 00:46+0000\n"
 "PO-Revision-Date: 2022-11-17 16:07+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -801,18 +801,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:234 src/qml/PlayList.qml:298
+#: src/qml/main.qml:237 src/qml/PlayList.qml:298
 #: src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Выберите файл"
 
-#: src/qml/main.qml:262
+#: src/qml/main.qml:265
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Выбор файла субтитров"
 
-#: src/qml/main.qml:280
+#: src/qml/main.qml:283
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Открыть"
@@ -842,7 +842,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Последние файлы"
 
-#: src/qml/Menus/FileMenu.qml:38
+#: src/qml/Menus/FileMenu.qml:41
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Очистить список"
@@ -923,12 +923,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Показывать панель инструментов"
 
-#: src/qml/MpvVideo.qml:122
+#: src/qml/MpvVideo.qml:124
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Пропущенный раздел: %1"
 
-#: src/qml/MpvVideo.qml:139
+#: src/qml/MpvVideo.qml:141
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Не удалось воспроизвести: %1"
@@ -1314,42 +1314,10 @@ msgstr "Перемотать на большой диапазон"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 msgctxt "@option:check"
-msgid "Open last played file on startup"
-msgstr "Открывать последний проигранный файл при запуске"
-
-#: src/qml/Settings/PlaybackSettings.qml:118
-msgctxt "@option:check"
-msgid "Seek to last playback position"
-msgstr "Прокрутить до последней позиции воспроизведения"
-
-#: src/qml/Settings/PlaybackSettings.qml:126
-msgctxt "@info:tooltip"
-msgid ""
-"When opening a file that was played before, seek at the position it was last "
-"time."
-msgstr ""
-"При открытии файла, который воспроизводился ранее, будет произведён поиск "
-"позиции последнего воспроизведения."
-
-#: src/qml/Settings/PlaybackSettings.qml:135
-msgctxt "@option:check"
-msgid "Start playing"
-msgstr "Воспроизведение"
-
-#: src/qml/Settings/PlaybackSettings.qml:144
-msgctxt "@info:tooltip"
-msgid ""
-"When opening a file that was played before, start playing it automatically."
-msgstr ""
-"При открытии файла, который воспроизводился ранее, воспроизведение начнётся "
-"автоматически."
-
-#: src/qml/Settings/PlaybackSettings.qml:153
-msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Приостанавливать при сворачивании"
 
-#: src/qml/Settings/PlaybackSettings.qml:161
+#: src/qml/Settings/PlaybackSettings.qml:113
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1358,39 +1326,78 @@ msgstr ""
 "При сворачивании окна воспроизведение приостанавливается (и возобновляется "
 "при его последующем открытии)."
 
-#: src/qml/Settings/PlaybackSettings.qml:166
+#: src/qml/Settings/PlaybackSettings.qml:118
+#, fuzzy
+#| msgid "Resume playback"
+msgctxt "@label:spinbox"
+msgid "Resume playback"
+msgstr "Возобновлять воспроизведение"
+
+#: src/qml/Settings/PlaybackSettings.qml:125
+msgctxt "@option:check"
+msgid "Open last played file on startup"
+msgstr "Открывать последний проигранный файл при запуске"
+
+#: src/qml/Settings/PlaybackSettings.qml:138
+msgctxt "@option:check"
+msgid "Seek to last playback position"
+msgstr "Прокрутить до последней позиции воспроизведения"
+
+#: src/qml/Settings/PlaybackSettings.qml:146
+msgctxt "@info:tooltip"
+msgid ""
+"When opening a file that was played before, seek at the position it was last "
+"time."
+msgstr ""
+"При открытии файла, который воспроизводился ранее, будет произведён поиск "
+"позиции последнего воспроизведения."
+
+#: src/qml/Settings/PlaybackSettings.qml:155
+msgctxt "@option:check"
+msgid "Start playing"
+msgstr "Воспроизведение"
+
+#: src/qml/Settings/PlaybackSettings.qml:164
+msgctxt "@info:tooltip"
+msgid ""
+"When opening a file that was played before, start playing it automatically."
+msgstr ""
+"При открытии файла, который воспроизводился ранее, воспроизведение начнётся "
+"автоматически."
+
+#: src/qml/Settings/PlaybackSettings.qml:169
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Аппаратное декодирование"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Включено"
 
-#: src/qml/Settings/PlaybackSettings.qml:172
-#: src/qml/Settings/PlaybackSettings.qml:299
+#: src/qml/Settings/PlaybackSettings.qml:175
+#: src/qml/Settings/PlaybackSettings.qml:302
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Выключено"
 
-#: src/qml/Settings/PlaybackSettings.qml:231
+#: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Запоминать позицию"
 
-#: src/qml/Settings/PlaybackSettings.qml:251
+#: src/qml/Settings/PlaybackSettings.qml:254
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Выключено"
 
-#: src/qml/Settings/PlaybackSettings.qml:253
+#: src/qml/Settings/PlaybackSettings.qml:256
 msgctxt "@info"
 msgid "For all files"
 msgstr "Для всех файлов"
 
-#: src/qml/Settings/PlaybackSettings.qml:256
+#: src/qml/Settings/PlaybackSettings.qml:259
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
@@ -1399,7 +1406,7 @@ msgstr[1] "Для всех файлов длиннее %1 минут"
 msgstr[2] "Для всех файлов длиннее %1 минут"
 msgstr[3] "Для всех файлов длиннее одной минуты"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1408,41 +1415,41 @@ msgstr[1] "Сохранять позицию каждые %1 секунды"
 msgstr[2] "Сохранять позицию каждые %1 секунд"
 msgstr[3] "Сохранять позицию каждую %1 секунду"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:296
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Пропустить разделы"
 
-#: src/qml/Settings/PlaybackSettings.qml:310
+#: src/qml/Settings/PlaybackSettings.qml:313
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Выводить индикатор при пропуске"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Пропускать слова"
 
-#: src/qml/Settings/PlaybackSettings.qml:329
+#: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:343
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "Пропускать разделы, содержащие эти слова. Список слов через запятую."
 
-#: src/qml/Settings/PlaybackSettings.qml:354
+#: src/qml/Settings/PlaybackSettings.qml:357
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:360
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgid "Format selection"
 msgstr "Выбор формата"
 
-#: src/qml/Settings/PlaybackSettings.qml:379
+#: src/qml/Settings/PlaybackSettings.qml:382
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1450,7 +1457,7 @@ msgid ""
 msgstr ""
 "Выбирает лучшее видео с высотой, меньшей или равной указанному значению."
 
-#: src/qml/Settings/PlaybackSettings.qml:426
+#: src/qml/Settings/PlaybackSettings.qml:429
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -1693,37 +1700,37 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Формат"
 
-#: src/qml/Settings/VideoSettings.qml:126
+#: src/qml/Settings/VideoSettings.qml:127
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Шаблон"
 
-#: src/qml/Settings/VideoSettings.qml:150
+#: src/qml/Settings/VideoSettings.qml:151
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Настройка изображения"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:161
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Контрастность"
 
-#: src/qml/Settings/VideoSettings.qml:177
+#: src/qml/Settings/VideoSettings.qml:178
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Яркость"
 
-#: src/qml/Settings/VideoSettings.qml:194
+#: src/qml/Settings/VideoSettings.qml:195
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Гамма"
 
-#: src/qml/Settings/VideoSettings.qml:211
+#: src/qml/Settings/VideoSettings.qml:212
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Насыщенность"
 
-#: src/qml/Settings/VideoSettings.qml:225
+#: src/qml/Settings/VideoSettings.qml:226
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Щелчок средней кнопкой мыши по ползункам для сброса"
@@ -1819,9 +1826,6 @@ msgstr "Громкость: %1"
 
 #~ msgid "Startup"
 #~ msgstr "Запуск"
-
-#~ msgid "Resume playback"
-#~ msgstr "Возобновлять воспроизведение"
 
 #~ msgid "For files longer than %1 minutes"
 #~ msgstr "Для всех файлов длиннее %1 мин."
