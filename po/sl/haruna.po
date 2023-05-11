@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-10 00:46+0000\n"
-"PO-Revision-Date: 2023-04-09 08:01+0200\n"
+"PO-Revision-Date: 2023-05-10 10:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1260,12 +1260,9 @@ msgstr ""
 "je obnovljeno."
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@label:spinbox"
 msgid "Resume playback"
-msgstr "Znova zaženi predvajanje"
+msgstr "Nadaljuj playback"
 
 #: src/qml/Settings/PlaybackSettings.qml:125
 msgctxt "@option:check"
