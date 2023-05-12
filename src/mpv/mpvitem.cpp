@@ -422,6 +422,11 @@ void MpvItem::cachePropertyValue(const QString &property, const QVariant &value)
 
 QVariant MpvItem::getCachedPropertyValue(const QString &property)
 {
+    if (!m_propertiesCache[property].isValid()) {
+        auto value = getProperty(property);
+        cachePropertyValue(property, value);
+        return value;
+    }
     return m_propertiesCache[property];
 }
 
