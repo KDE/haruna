@@ -21,6 +21,8 @@ MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     m_mpv = m_mpvController->mpv();
 
     // clang-format off
+    connect(m_workerThread, &QThread::finished,
+            m_mpvController, &MpvController::deleteLater);
     connect(this, &MpvAbstractItem::setMpvProperty,
             m_mpvController, &MpvController::setProperty, Qt::QueuedConnection);
 
@@ -35,12 +37,11 @@ MpvAbstractItem::~MpvAbstractItem()
         mpv_render_context_free(m_mpv_gl);
     }
     mpv_set_wakeup_callback(m_mpv, nullptr, nullptr);
-    mpv_terminate_destroy(m_mpv);
 
     m_workerThread->quit();
     m_workerThread->wait();
     m_workerThread->deleteLater();
-    delete m_mpvController;
+    mpv_terminate_destroy(m_mpv);
 }
 
 QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
