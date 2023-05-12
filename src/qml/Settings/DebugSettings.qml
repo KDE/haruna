@@ -105,6 +105,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Enable mpv logging")
             checked: InformationSettings.mpvLogging
+            visible: false
             onCheckedChanged: {
                 mpv.setProperty("terminal", checked)
                 InformationSettings.mpvLogging = checked

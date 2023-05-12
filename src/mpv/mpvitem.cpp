@@ -96,8 +96,8 @@ MpvItem::MpvItem(QQuickItem *parent)
 
 void MpvItem::initProperties()
 {
-    setProperty(QStringLiteral("terminal"), InformationSettings::mpvLogging());
-    setProperty(QStringLiteral("msg-level"), QStringLiteral("all=v"));
+    //    setProperty(QStringLiteral("terminal"), InformationSettings::mpvLogging());
+    //    setProperty(QStringLiteral("msg-level"), QStringLiteral("all=v"));
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
     setProperty(QStringLiteral("hwdec"), hwdec);
