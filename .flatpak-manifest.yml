@@ -49,21 +49,7 @@ modules:
             sha256: '21199cd220ccf60434133e1fd2ab8c8e5217c3799199c82722543970dc8e38d5'
             dest-filename: waf
         modules:
-          - name: luajit
-            no-autogen: true
-            cleanup:
-              - /bin
-              - /lib/*.a
-              - /include
-              - /lib/pkgconfig
-              - /share/man
-            sources:
-              - type: archive
-                url: 'https://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz'
-                sha256: '1ad2e34b111c802f9d0cdf019e986909123237a28c746b21295b63c9e785d9c3'
-              - type: shell
-                commands:
-                  - sed -i 's|/usr/local|/app|' ./Makefile
+          - shared-modules/luajit/luajit.json
 
           - name: libv4l2
             cleanup:
@@ -81,8 +67,8 @@ modules:
               - '--with-udevdir=/app/lib/udev'
             sources:
               - type: archive
-                url: 'https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2'
-                sha256: '65c6fbe830a44ca105c443b027182c1b2c9053a91d1e72ad849dfab388b94e31'
+                url: 'https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.24.1.tar.bz2'
+                sha256: 'cbb7fe8a6307f5ce533a05cded70bb93c3ba06395ab9b6d007eb53b75d805f5b'
 
           - name: nv-codec-headers
             cleanup:
@@ -121,8 +107,8 @@ modules:
               - '--enable-libwebp'
             sources:
               - type: archive
-                url: 'https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.gz'
-                sha256: '87fe8defa37ce5f7449e36047171fed5e4c3f4bb73eaccea8c954ee81393581c'
+                url: 'https://ffmpeg.org/releases/ffmpeg-6.0.tar.gz'
+                sha256: 'f4ccf961403752c93961927715f524576d1f4dd02cd76d8c76aed3bbe6686656'
 
           - name: libass
             cleanup:
@@ -133,8 +119,8 @@ modules:
               - '--disable-static'
             sources:
               - type: archive
-                url: 'https://github.com/libass/libass/releases/download/0.17.0/libass-0.17.0.tar.gz'
-                sha256: '72b9ba5d9dd1ac6d30b5962f38cbe7aefb180174f71d8b65c5e3c3060dbc403f'
+                url: 'https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.gz'
+                sha256: 'd653be97198a0543c69111122173c41a99e0b91426f9e17f06a858982c2fb03d'
 
           - name: uchardet
             buildsystem: cmake-ninja
@@ -161,5 +147,5 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: 'https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2023.01.06.tar.gz'
-            sha256: '1ac3dfed834fec9ae18e8d2f0ee8be561df172d08ee42d90423f99fedd7f3226'
+            url: 'https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2023.03.04.tar.gz'
+            sha256: '5e5abfe78b8f92f8b8307231d1e7ed0e462407f4cd861b48a0278559612de9aa'
