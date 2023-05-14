@@ -70,12 +70,20 @@ MpvItem::MpvItem(QQuickItem *parent)
     timer->start();
 
     connect(timer, &QTimer::timeout, this, [=]() {
-        if (duration() > 0) {
+        if (duration() > 0 && !pause()) {
             if (position() < duration() - 10) {
                 saveTimePosition();
             } else {
                 resetTimePosition();
             }
+        }
+    });
+
+    connect(QApplication::instance(), &QApplication::aboutToQuit, this, [=]() {
+        if (position() < duration() - 10) {
+            saveTimePosition();
+        } else {
+            resetTimePosition();
         }
     });
 
