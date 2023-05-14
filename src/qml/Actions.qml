@@ -149,7 +149,6 @@ Item {
         }
 
         onQuitApplicationAction: {
-            mpv.handleTimePosition()
             Qt.quit()
         }
 
