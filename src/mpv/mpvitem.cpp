@@ -16,6 +16,7 @@
 #include <QStandardPaths>
 #include <QTimer>
 #include <QtGlobal>
+#include <playlistsettings.h>
 
 #include <KLocalizedString>
 #include <KShell>
@@ -161,7 +162,35 @@ void MpvItem::setupConnections()
 
     connect(m_mpvController, &MpvController::endFile,
             this, &MpvItem::endFile, Qt::QueuedConnection);
-    // clang-format on
+
+    connect(this, &MpvItem::fileLoaded, this, [=]() {
+        if (!getProperty("vid").toBool()) {
+            command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
+        }
+
+        setWatchLaterPosition(loadTimePosition());
+
+        if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
+            setProperty(QStringLiteral("loop-file"), QStringLiteral("inf"));
+        }
+
+        setProperty(QStringLiteral("ab-loop-a"), QStringLiteral("no"));
+        setProperty(QStringLiteral("ab-loop-b"), QStringLiteral("no"));
+
+        // this is only run when reloading the last file in the playlist
+        // due to the playlist repeat setting being turned off
+        if (isFileReloaded()) {
+            setPause(true);
+            setPosition(0);
+            setIsFileReloaded(false);
+            return;
+        }
+
+        if (PlaybackSettings::seekToLastPosition()) {
+            setPause(!PlaybackSettings::playOnResume() && watchLaterPosition() > 0);
+            setPosition(watchLaterPosition());
+        }
+    });
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
         int pos = m_position;
@@ -225,6 +254,7 @@ void MpvItem::setupConnections()
 #endif
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue, Qt::QueuedConnection);
+    // clang-format on
 }
 
 PlayListModel *MpvItem::playlistModel()
@@ -247,6 +277,20 @@ void MpvItem::setPlaylistProxyModel(PlayListProxyModel *model)
     m_playlistProxyModel = model;
 }
 
+bool MpvItem::isFileReloaded() const
+{
+    return m_isFileReloaded;
+}
+
+void MpvItem::setIsFileReloaded(bool _isFileReloaded)
+{
+    if (m_isFileReloaded == _isFileReloaded) {
+        return;
+    }
+    m_isFileReloaded = _isFileReloaded;
+    emit isFileReloadedChanged();
+}
+
 QString MpvItem::mediaTitle()
 {
     return getCachedPropertyValue(QStringLiteral("media-title")).toString();
@@ -263,6 +307,20 @@ void MpvItem::setPosition(double value)
         return;
     }
     Q_EMIT setMpvProperty(QStringLiteral("time-pos"), value);
+}
+
+double MpvItem::watchLaterPosition() const
+{
+    return m_watchLaterPosition;
+}
+
+void MpvItem::setWatchLaterPosition(double _watchLaterPosition)
+{
+    if (qFuzzyCompare(m_watchLaterPosition + 1, _watchLaterPosition + 1)) {
+        return;
+    }
+    m_watchLaterPosition = _watchLaterPosition;
+    emit watchLaterPositionChanged();
 }
 
 double MpvItem::remaining()

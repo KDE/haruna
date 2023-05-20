@@ -21,8 +21,14 @@ class MpvItem : public MpvAbstractItem
     Q_PROPERTY(TracksModel *subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
     Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
     Q_PROPERTY(PlayListProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
+    // when playlist repeat is turned off the last file in the playlist is reloaded
+    // this property is used to pause the player
+    Q_PROPERTY(bool isFileReloaded READ isFileReloaded WRITE setIsFileReloaded NOTIFY isFileReloadedChanged)
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
+    // cache the watch later time position to be used by the seekToWatchLaterPosition action
+    // useful when resuming playback is disabled
+    Q_PROPERTY(double watchLaterPosition READ watchLaterPosition WRITE setWatchLaterPosition NOTIFY watchLaterPositionChanged)
     Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
     Q_PROPERTY(double remaining READ remaining NOTIFY remainingChanged)
     Q_PROPERTY(QString formattedPosition READ formattedPosition NOTIFY positionChanged)
@@ -42,10 +48,16 @@ class MpvItem : public MpvAbstractItem
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
 
+    bool isFileReloaded() const;
+    void setIsFileReloaded(bool _isFileReloaded);
+
     QString mediaTitle();
 
     double position();
     void setPosition(double value);
+
+    double watchLaterPosition() const;
+    void setWatchLaterPosition(double _watchLaterPosition);
 
     double duration();
 
@@ -100,9 +112,11 @@ Q_SIGNALS:
     void playlistProxyModelChanged();
     void playlistTitleChanged();
     void playlistUrlChanged();
+    void isFileReloadedChanged();
     void mediaTitleChanged();
     void watchPercentageChanged();
     void positionChanged();
+    void watchLaterPositionChanged();
     void durationChanged();
     void remainingChanged();
     void pauseChanged();
@@ -148,6 +162,8 @@ private:
     QString m_formattedDuration;
 
     QMap<QString, QVariant> m_propertiesCache;
+    double m_watchLaterPosition{0.0};
+    bool m_isFileReloaded{false};
 };
 
 #endif // MPVOBJECT_H

@@ -17,15 +17,6 @@ MpvItem {
 
     property alias mouseY: mouseArea.mouseY
 
-    // cache the watch later time position to be used by the seekToWatchLaterPosition action
-    // usefull when resuming playback is disabled
-    property int watchLaterPosition: -1
-
-    // when playlist repeat is turned off
-    // the last file in the playlist is reloaded
-    // this property is used to pause the player
-    property bool isFileReloaded: false
-
     property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
     enum PlaybackState {
         Playing,
@@ -75,34 +66,11 @@ MpvItem {
     }
 
     onFileLoaded: {
-        if (!getProperty("vid")) {
-            command(["video-add", VideoSettings.defaultCover])
-        }
-
-        watchLaterPosition = loadTimePosition()
-
         loadingIndicatorParent.visible = false
+
         header.audioTracks = getProperty("track-list").filter(track => track["type"] === "audio")
         header.subtitleTracks = getProperty("track-list").filter(track => track["type"] === "sub")
 
-        if (playList.playlistView.count <= 1 && PlaylistSettings.repeat) {
-            setProperty("loop-file", "inf")
-        }
-
-        setProperty("ab-loop-a", "no")
-        setProperty("ab-loop-b", "no")
-
-        if (isFileReloaded) {
-            pause = true
-            position = 0
-            isFileReloaded = false
-            return
-        }
-
-        if (PlaybackSettings.seekToLastPosition) {
-            pause = !PlaybackSettings.playOnResume && watchLaterPosition > 0
-            position = watchLaterPosition
-        }
     }
 
     onChapterChanged: {
@@ -146,10 +114,9 @@ MpvItem {
             // Last file in playlist
             if (PlaylistSettings.repeat) {
                 playlistProxyModel.setPlayingItem(0)
-                loadFile(playlistProxyModel.getPath(0))
             } else {
-                loadFile(playlistProxyModel.getPath())
                 isFileReloaded = true
+                playlistProxyModel.setPlayingItem(playlistProxyModel.getPlayingItem())
             }
         }
     }
