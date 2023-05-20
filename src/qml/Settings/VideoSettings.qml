@@ -108,14 +108,17 @@ SettingsBasePage {
             }
 
             Component.onCompleted: {
-                if (VideoSettings.screenshotFormat === "PNG") {
+                if (VideoSettings.screenshotFormat === "png") {
                     currentIndex = 0
                 }
-                if (VideoSettings.screenshotFormat === "JPG") {
+                if (VideoSettings.screenshotFormat === "jpg") {
                     currentIndex = 1
                 }
-                if (VideoSettings.screenshotFormat === "WebP") {
+                if (VideoSettings.screenshotFormat === "webp") {
                     currentIndex = 2
+                }
+                if (VideoSettings.screenshotFormat === "jxl") {
+                    currentIndex = 3
                 }
             }
         }
