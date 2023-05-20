@@ -70,7 +70,6 @@ MpvItem {
 
         header.audioTracks = getProperty("track-list").filter(track => track["type"] === "audio")
         header.subtitleTracks = getProperty("track-list").filter(track => track["type"] === "sub")
-
     }
 
     onChapterChanged: {

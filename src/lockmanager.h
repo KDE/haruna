@@ -24,9 +24,9 @@ public Q_SLOTS:
     void setInhibitionOff();
 
 private:
-    OrgFreedesktopScreenSaverInterface *m_iface;
-    int m_cookie{};
-    bool m_inhibit;
+    OrgFreedesktopScreenSaverInterface *m_iface{nullptr};
+    int m_cookie{-1};
+    bool m_inhibit{false};
 };
 
 #endif // LOCKMANAGER_H

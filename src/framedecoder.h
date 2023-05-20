@@ -53,23 +53,23 @@ private:
 
 private:
     int m_VideoStream;
-    AVFormatContext *m_pFormatContext;
-    AVCodecContext *m_pVideoCodecContext;
+    AVFormatContext *m_pFormatContext{nullptr};
+    AVCodecContext *m_pVideoCodecContext{nullptr};
 #if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(59, 0, 100)
-    AVCodec *m_pVideoCodec;
+    AVCodec *m_pVideoCodec{nullptr};
 #else
-    const AVCodec *m_pVideoCodec;
+    const AVCodec *m_pVideoCodec{nullptr};
 #endif
-    AVFrame *m_pFrame;
-    quint8 *m_pFrameBuffer;
-    AVPacket *m_pPacket;
+    AVFrame *m_pFrame{nullptr};
+    quint8 *m_pFrameBuffer{nullptr};
+    AVPacket *m_pPacket{nullptr};
     bool m_FormatContextWasGiven;
     bool m_AllowSeek;
     bool m_initialized;
-    AVFilterContext *m_bufferSinkContext;
-    AVFilterContext *m_bufferSourceContext;
-    AVFilterGraph *m_filterGraph;
-    AVFrame *m_filterFrame;
+    AVFilterContext *m_bufferSinkContext{nullptr};
+    AVFilterContext *m_bufferSourceContext{nullptr};
+    AVFilterGraph *m_filterGraph{nullptr};
+    AVFrame *m_filterFrame{nullptr};
     int m_lastWidth;
     int m_lastHeight;
     enum AVPixelFormat m_lastPixfmt;

@@ -63,7 +63,7 @@ Q_SIGNALS:
 private:
     KSharedConfig::Ptr m_customCommandsConfig;
     QList<Command *> m_customCommands;
-    ActionsModel *m_appActionsModel = nullptr;
+    ActionsModel *m_appActionsModel{nullptr};
 };
 
 #endif // CUSTOMCOMMANDSMODEL_H

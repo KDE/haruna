@@ -58,14 +58,14 @@ private:
     QString m_title;
     QString m_codec;
     QString m_type;
-    qlonglong m_id{};
-    qlonglong m_ffIndex{};
-    qlonglong m_srcId{};
-    bool m_defaut{};
-    bool m_dependent{};
-    bool m_external{};
-    bool m_forced{};
-    int m_index{};
+    qlonglong m_id{-1};
+    qlonglong m_ffIndex{-1};
+    qlonglong m_srcId{-1};
+    bool m_defaut{false};
+    bool m_dependent{false};
+    bool m_external{false};
+    bool m_forced{false};
+    int m_index{-1};
 };
 
 #endif // TRACK_H

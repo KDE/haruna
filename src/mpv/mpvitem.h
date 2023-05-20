@@ -149,16 +149,16 @@ private:
     QMap<int, Track *> m_subtitleTracks;
     QMap<int, Track *> m_audioTracks;
     QList<int> m_secondsWatched;
-    double m_watchPercentage;
+    double m_watchPercentage{0.0};
     PlayListModel *m_playlistModel;
     PlayListProxyModel *m_playlistProxyModel;
     QString m_file;
 
-    double m_position;
+    double m_position{0.0};
     QString m_formattedPosition;
-    double m_remaining;
+    double m_remaining{0.0};
     QString m_formattedRemaining;
-    double m_duration;
+    double m_duration{0.0};
     QString m_formattedDuration;
 
     QMap<QString, QVariant> m_propertiesCache;

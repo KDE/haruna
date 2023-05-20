@@ -103,14 +103,14 @@ private:
     void registerQmlTypes();
     void setupQmlSettingsTypes();
     QAbstractItemModel *colorSchemesModel();
-    QApplication *m_app;
+    QApplication *m_app{nullptr};
     KAboutData m_aboutData;
     KSharedConfig::Ptr m_config;
-    QCommandLineParser *m_parser;
+    QCommandLineParser *m_parser{nullptr};
     QMap<int, QUrl> m_urls;
-    KColorSchemeManager *m_schemes;
+    KColorSchemeManager *m_schemes{nullptr};
     QString m_systemDefaultStyle;
-    QQmlApplicationEngine *m_qmlEngine;
+    QQmlApplicationEngine *m_qmlEngine{nullptr};
 };
 
 #endif // APPLICATION_H
