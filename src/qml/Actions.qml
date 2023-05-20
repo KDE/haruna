@@ -196,10 +196,10 @@ Item {
         }
 
         onSeekToWatchLaterPositionAction: {
-            if (mpv.watchLaterPosition === -1) {
+            if (mpv.watchLaterPosition === 0) {
                 return
             }
-            mpv.command(["seek", mpv.watchLaterPosition - 1, "absolute"])
+            mpv.command(["seek", mpv.watchLaterPosition, "absolute"])
         }
 
         onSetLoopAction: {
