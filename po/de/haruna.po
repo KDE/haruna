@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-15 00:46+0000\n"
+"POT-Creation-Date: 2023-05-21 00:45+0000\n"
 "PO-Revision-Date: 2023-04-15 02:08+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -532,7 +532,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Wiedergabeliste ist leer"
 
-#: src/mpv/mpvitem.cpp:470
+#: src/mpv/mpvitem.cpp:528
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -897,12 +897,12 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Werkzeugleiste anzeigen"
 
-#: src/qml/MpvVideo.qml:124
+#: src/qml/MpvVideo.qml:91
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Kapitel übersprungen: %1"
 
-#: src/qml/MpvVideo.qml:141
+#: src/qml/MpvVideo.qml:108
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kann nicht abspielen: %1"
@@ -1628,37 +1628,37 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Format"
 
-#: src/qml/Settings/VideoSettings.qml:127
+#: src/qml/Settings/VideoSettings.qml:130
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Vorlage"
 
-#: src/qml/Settings/VideoSettings.qml:151
+#: src/qml/Settings/VideoSettings.qml:154
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Bild-Anpassungen"
 
-#: src/qml/Settings/VideoSettings.qml:161
+#: src/qml/Settings/VideoSettings.qml:164
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
-#: src/qml/Settings/VideoSettings.qml:178
+#: src/qml/Settings/VideoSettings.qml:181
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Helligkeit"
 
-#: src/qml/Settings/VideoSettings.qml:195
+#: src/qml/Settings/VideoSettings.qml:198
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
-#: src/qml/Settings/VideoSettings.qml:212
+#: src/qml/Settings/VideoSettings.qml:215
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Sättigung"
 
-#: src/qml/Settings/VideoSettings.qml:226
+#: src/qml/Settings/VideoSettings.qml:229
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Ein Mittelklick auf einen Schieber setzt ihn zurück"
