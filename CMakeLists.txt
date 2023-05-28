@@ -81,43 +81,43 @@ set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
     URL "https://api.kde.org/frameworks/breeze-icons/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}Config)
-set_package_properties(KF5Config PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}Config PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfig/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}CoreAddons)
-set_package_properties(KF5CoreAddons PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}CoreAddons PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcoreaddons/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}DocTools)
-set_package_properties(KF5DocTools PROPERTIES
+set_package_properties(KF${QT_MAJOR_VERSION}DocTools PROPERTIES
     DESCRIPTION "https://api.kde.org/frameworks/kdoctools/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}FileMetaData)
-set_package_properties(KF5FileMetaData PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}FileMetaData PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kfilemetadata/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}I18n)
-set_package_properties(KF5I18n PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}I18n PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/ki18n/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}IconThemes)
-set_package_properties(KF5IconThemes PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}IconThemes PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kiconthemes/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}KIO)
-set_package_properties(KF5KIO PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}KIO PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kio/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}Kirigami2)
-set_package_properties(KF5Kirigami2 PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}Kirigami2 PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kirigami/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}ConfigWidgets)
-set_package_properties(KF5ConfigWidgets PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}ConfigWidgets PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfigwidgets/html/index.html")
 
 find_package(KF${QT_MAJOR_VERSION}WindowSystem)
-set_package_properties(KF5WindowSystem PROPERTIES TYPE REQUIRED
+set_package_properties(KF${QT_MAJOR_VERSION}WindowSystem PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kwindowsystem/html/index.html")
 
 find_package(YouTubeDl)
