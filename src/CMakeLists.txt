@@ -70,17 +70,17 @@ target_link_libraries(haruna PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::QuickControls2
 
-    KF5::ConfigCore
-    KF5::ConfigGui
-    KF5::CoreAddons
-    KF5::DocTools
-    KF5::FileMetaData
-    KF5::I18n
-    KF5::IconThemes
-    KF5::KIOWidgets
-    KF5::Kirigami2
-    KF5::ConfigWidgets
-    KF5::WindowSystem
+    KF${QT_MAJOR_VERSION}::ConfigCore
+    KF${QT_MAJOR_VERSION}::ConfigGui
+    KF${QT_MAJOR_VERSION}::CoreAddons
+    KF${QT_MAJOR_VERSION}::DocTools
+    KF${QT_MAJOR_VERSION}::FileMetaData
+    KF${QT_MAJOR_VERSION}::I18n
+    KF${QT_MAJOR_VERSION}::IconThemes
+    KF${QT_MAJOR_VERSION}::KIOWidgets
+    KF${QT_MAJOR_VERSION}::Kirigami2
+    KF${QT_MAJOR_VERSION}::ConfigWidgets
+    KF${QT_MAJOR_VERSION}::WindowSystem
 
     Libmpv::Libmpv
     ${AVUTIL_LIBRARIES}

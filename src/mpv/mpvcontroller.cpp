@@ -253,7 +253,11 @@ bool MpvController::test_type(const QVariant &v, QMetaType::Type t)
     // The Qt docs say: "Although this function is declared as returning
     // QVariant::Type(obsolete), the return value should be interpreted
     // as QMetaType::Type." So a cast is needed to avoid warnings.
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     return static_cast<int>(v.type()) == static_cast<int>(t);
+#else
+    return v.typeId() == t;
+#endif
 }
 
 void MpvController::free_node(mpv_node *dst)
