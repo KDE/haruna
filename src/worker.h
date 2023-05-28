@@ -23,11 +23,7 @@ public:
     static Worker *instance();
 
 Q_SIGNALS:
-#if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
     void metaDataReady(int index, KFileMetaData::PropertyMultiMap metadata);
-#else
-    void metaDataReady(int index, KFileMetaData::PropertyMap metadata);
-#endif
     void thumbnailSuccess(const QString &id, const QImage &image);
     void thumbnailFail();
 

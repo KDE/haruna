@@ -45,11 +45,8 @@ void Worker::getMetaData(int index, const QString &path)
     }
     KFileMetaData::Extractor *ex = extractors.first();
     ex->extract(&result);
-#if KCONFIG_VERSION >= QT_VERSION_CHECK(5, 89, 0)
-    auto properties = result.properties(KFileMetaData::MultiMap);
-#else
+
     auto properties = result.properties();
-#endif
 
     Q_EMIT metaDataReady(index, properties);
 }
