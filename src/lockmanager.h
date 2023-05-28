@@ -26,7 +26,6 @@ public Q_SLOTS:
 private:
     OrgFreedesktopScreenSaverInterface *m_iface{nullptr};
     int m_cookie{-1};
-    bool m_inhibit{false};
 };
 
 #endif // LOCKMANAGER_H

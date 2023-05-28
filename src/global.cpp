@@ -15,8 +15,8 @@ Global *Global::instance()
 }
 
 Global::Global()
-    : m_config(KSharedConfig::openConfig(QStringLiteral("%1/%2").arg(m_configFolderName).arg(m_configFileName)))
-    , m_ccConfig(KSharedConfig::openConfig(QStringLiteral("%1/%2").arg(m_configFolderName).arg(m_ccConfigFileName)))
+    : m_config(KSharedConfig::openConfig(QStringLiteral("%1/%2").arg(m_configFolderName, m_configFileName)))
+    , m_ccConfig(KSharedConfig::openConfig(QStringLiteral("%1/%2").arg(m_configFolderName, m_ccConfigFileName)))
 {
 }
 

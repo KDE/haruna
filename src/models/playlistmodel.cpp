@@ -190,7 +190,7 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
     ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url);
     ytdlProcess->start();
 
-    QObject::connect(ytdlProcess, (void(QProcess::*)(int, QProcess::ExitStatus)) & QProcess::finished, this, [=](int, QProcess::ExitStatus) {
+    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
         int duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toInt();
@@ -369,7 +369,7 @@ void PlayListModel::getYouTubePlaylist(const QString &path)
     ytdlProcess->setArguments(QStringList() << QStringLiteral("-J") << QStringLiteral("--flat-playlist") << path);
     ytdlProcess->start();
 
-    QObject::connect(ytdlProcess, (void(QProcess::*)(int, QProcess::ExitStatus)) & QProcess::finished, this, [=](int, QProcess::ExitStatus) {
+    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("entries")];
         QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();

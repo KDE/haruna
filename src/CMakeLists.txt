@@ -7,6 +7,7 @@
 # DATA_ICONS is defined in data/CMakeLists.txt
 ecm_add_app_icon(ICONS_SRCS ICONS ${DATA_ICONS})
 
+add_definitions(-DKFILEMETADATA_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
 add_executable(haruna)
 
 target_sources(haruna

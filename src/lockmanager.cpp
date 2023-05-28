@@ -13,7 +13,6 @@
 
 LockManager::LockManager(QObject *parent)
     : QObject(parent)
-    , m_inhibit()
 {
     m_iface = new OrgFreedesktopScreenSaverInterface(QStringLiteral("org.freedesktop.ScreenSaver"),
                                                      QStringLiteral("/org/freedesktop/ScreenSaver"),
