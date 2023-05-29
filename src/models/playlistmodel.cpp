@@ -142,16 +142,16 @@ void PlayListModel::getSiblingItems(QUrl url)
 void PlayListModel::appendItem(QString path)
 {
     PlayListItem *item{nullptr};
-    QFileInfo itemInfo(path);
-    int row{m_playlist.count()};
+    auto url = QUrl::fromUserInput(path);
+    QFileInfo itemInfo(url.toLocalFile());
+    auto row{m_playlist.count()};
     if (itemInfo.exists() && itemInfo.isFile()) {
-        auto url = QUrl::fromUserInput(path);
         QString mimeType = Application::mimeType(url);
         if (mimeType.startsWith(QStringLiteral("video/")) || mimeType.startsWith(QStringLiteral("audio/"))) {
             item = new PlayListItem(itemInfo.absoluteFilePath(), this);
         }
     } else {
-        if (path.startsWith(QStringLiteral("http"))) {
+        if (url.scheme().startsWith(QStringLiteral("http"))) {
             item = new PlayListItem(path, this);
             // causes issues with lots of links
             // getHttpItemInfo(path, row);
