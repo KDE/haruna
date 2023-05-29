@@ -164,7 +164,7 @@ void MpvItem::setupConnections()
             this, &MpvItem::endFile, Qt::QueuedConnection);
 
     connect(this, &MpvItem::fileLoaded, this, [=]() {
-        if (!getProperty("vid").toBool()) {
+        if (!getProperty(QStringLiteral("vid")).toBool()) {
             command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
 
@@ -288,7 +288,7 @@ void MpvItem::setIsFileReloaded(bool _isFileReloaded)
         return;
     }
     m_isFileReloaded = _isFileReloaded;
-    emit isFileReloadedChanged();
+    Q_EMIT isFileReloadedChanged();
 }
 
 QString MpvItem::mediaTitle()
@@ -320,7 +320,7 @@ void MpvItem::setWatchLaterPosition(double _watchLaterPosition)
         return;
     }
     m_watchLaterPosition = _watchLaterPosition;
-    emit watchLaterPositionChanged();
+    Q_EMIT watchLaterPositionChanged();
 }
 
 double MpvItem::remaining()
