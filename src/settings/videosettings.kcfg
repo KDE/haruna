@@ -18,7 +18,7 @@
     <entry name="ScreenshotTemplate" type="String">
       <code>
         QString screenshotsFolder = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
-        screenshotsFolder.append("/Haruna screenshots/%F-%n");
+        screenshotsFolder.append(QStringLiteral("/Haruna screenshots/%F-%n"));
       </code>
       <default code="true">screenshotsFolder</default>
     </entry>
