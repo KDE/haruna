@@ -142,7 +142,7 @@ SettingsBasePage {
         SpinBox {
             from: 0
             to: 1000
-            value: 55
+            value: SubtitlesSettings.fontSize
             onValueChanged: {
                 SubtitlesSettings.fontSize = value
                 SubtitlesSettings.save()
