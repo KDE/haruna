@@ -25,6 +25,7 @@ Kirigami.ApplicationWindow {
 
     property int previousVisibility: Window.Windowed
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
+    property alias playList: playlistLoader.item
 
     visible: true
     title: mpv.mediaTitle || i18nc("@title:window", "Haruna")
@@ -94,20 +95,11 @@ Kirigami.ApplicationWindow {
         Osd { id: osd }
     }
 
-    PlayList {
-        id: playList
+    Loader {
+        id: playlistLoader
 
-        height: mpv.height
-        width: {
-            if (PlaylistSettings.style === "compact") {
-                return Kirigami.Units.gridUnit * 21
-            } else {
-                const w = Kirigami.Units.gridUnit * 31
-                return (parent.width * 0.33) < w ? w : parent.width * 0.33
-            }
-        }
-        x: PlaylistSettings.position === "right" ? parent.width : -width
-        y: 0
+        active: true
+        source: app.qtMajorVersion() === 6 ? "PlayListQt6.qml" : "PlayList.qml"
     }
 
     Footer {

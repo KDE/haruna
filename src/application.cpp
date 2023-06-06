@@ -372,6 +372,11 @@ int Application::frameworksVersionMinor()
     return KCONFIG_VERSION_MINOR;
 }
 
+int Application::qtMajorVersion()
+{
+    return QT_VERSION_MAJOR;
+}
+
 QString Application::platformName()
 {
     return QGuiApplication::platformName();

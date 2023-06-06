@@ -20,7 +20,7 @@ ToolBar {
     property alias footerRow: footerRow
     property alias timeInfo: timeInfo
     property alias playPauseButton: playPauseButton
-    property alias volume: volume
+    property alias volume: volumeSliderLoader.item
 
     padding: 5
     position: ToolBar.Footer
@@ -119,7 +119,12 @@ ToolBar {
             }
         }
 
-        VolumeSlider { id: volume }
+        Loader {
+            id: volumeSliderLoader
+
+            active: true
+            source: app.qtMajorVersion() === 6 ? "VolumeSliderQt6.qml" : "VolumeSlider.qml"
+        }
 
         Loader {
             sourceComponent: togglePlaylistButton

@@ -68,6 +68,7 @@ public:
     Q_INVOKABLE void openDocs(const QString &page);
     Q_INVOKABLE QStringList getFonts();
     Q_INVOKABLE int frameworksVersionMinor();
+    Q_INVOKABLE int qtMajorVersion();
     Q_INVOKABLE QString platformName();
     Q_INVOKABLE void raiseWindow();
 

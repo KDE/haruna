@@ -17,6 +17,7 @@ MpvItem {
 
     property alias mouseY: mouseArea.mouseY
 
+
     property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
     enum PlaybackState {
         Playing,
@@ -106,7 +107,7 @@ MpvItem {
             const title = item.mediaTitle() || item.fileName()
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
         }
-        if (playlistProxyModel.getPlayingItem() + 1 < playList.playlistView.count) {
+        if (playlistProxyModel.getPlayingItem() + 1 < window.playList.playlistView.count) {
             appActions.playNextAction.trigger()
         } else {
             // Last file in playlist
@@ -147,20 +148,20 @@ MpvItem {
             hideCursor = false
             hideCursorTimer.restart()
 
-            if (!PlaylistSettings.canToggleWithMouse || playList.playlistView.count <= 1) {
+            if (!PlaylistSettings.canToggleWithMouse || window.playList.playlistView.count <= 1) {
                 return
             }
             if (PlaylistSettings.position === "right") {
                 if (mouseX > width - 50) {
-                    playList.state = "visible"
+                    window.playList.state = "visible"
                 } else {
-                    playList.state = "hidden"
+                    window.playList.state = "hidden"
                 }
             } else {
                 if (mouseX < 50) {
-                    playList.state = "visible"
+                    window.playList.state = "visible"
                 } else {
-                    playList.state = "hidden"
+                    window.playList.state = "hidden"
                 }
             }
         }
