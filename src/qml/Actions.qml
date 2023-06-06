@@ -44,6 +44,7 @@ Item {
         }
 
         onAudioCycleUpAction: {
+            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
             const tracks = mpv.getProperty("track-list")
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
@@ -62,6 +63,7 @@ Item {
         }
 
         onAudioCycleDownAction: {
+            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
             const tracks = mpv.getProperty("track-list")
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
@@ -124,18 +126,20 @@ Item {
         }
 
         onPlaybackSpeedIncreaseAction: {
-            mpv.command(["add", "speed", "0.1"])
-            osd.message(i18nc("@info:tooltip", "Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
+            const speed = mpv.getProperty("speed") + 0.1
+            mpv.setProperty("speed", speed)
+            osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         onPlaybackSpeedDecreaseAction: {
-            mpv.command(["add", "speed", "-0.1"])
-            osd.message(i18nc("@info:tooltip", "Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
+            const speed = mpv.getProperty("speed") - 0.1
+            mpv.setProperty("speed", speed)
+            osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         onPlaybackSpeedResetAction: {
             mpv.setProperty("speed", 1.0)
-            osd.message(i18nc("@info:tooltip", "Playback speed: %1", mpv.getProperty("speed").toFixed(2)))
+            osd.message(i18nc("@info:tooltip", "Playback speed: %1", 1.0))
         }
 
         onPlayPauseAction: mpv.pause = !mpv.pause
@@ -248,6 +252,7 @@ Item {
         }
 
         onSubtitleCycleUpAction: {
+            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
             mpv.command(["cycle", "sid", "up"])
             const currentTrackId = mpv.getProperty("sid")
             if (currentTrackId === false) {
@@ -260,6 +265,7 @@ Item {
         }
 
         onSubtitleCycleDownAction: {
+            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
             mpv.command(["cycle", "sid", "down"])
             const currentTrackId = mpv.getProperty("sid")
             if (currentTrackId === false) {
@@ -272,13 +278,15 @@ Item {
         }
 
         onSubtitleIncreaseFontSizeAction: {
-            mpv.command(["add", "sub-scale", "+0.1"])
-            osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", mpv.getProperty("sub-scale").toFixed(1)))
+            const subScale = mpv.getProperty("sub-scale") + 0.1
+            mpv.setProperty("sub-scale", subScale)
+            osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
         onSubtitleDecreaseFontSizeAction: {
-            mpv.command(["add", "sub-scale", "-0.1"])
-            osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", mpv.getProperty("sub-scale").toFixed(1)))
+            const subScale = mpv.getProperty("sub-scale") - 0.1
+            mpv.setProperty("sub-scale", subScale)
+            osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
         onSubtitleMoveUpAction: mpv.command(["add", "sub-pos", "-1"])
@@ -286,8 +294,9 @@ Item {
         onSubtitleMoveDownAction: mpv.command(["add", "sub-pos", "+1"])
 
         onToggleDeinterlacingAction: {
-            mpv.setProperty("deinterlace", !mpv.getProperty("deinterlace"))
-            osd.message(i18nc("@info:tooltip", "Deinterlace: %1", mpv.getProperty("deinterlace")))
+            const deinterlaced = !mpv.getProperty("deinterlace")
+            mpv.setProperty("deinterlace", deinterlaced)
+            osd.message(i18nc("@info:tooltip", "Deinterlace: %1", deinterlaced))
         }
 
         onToggleFullscreenAction: window.toggleFullScreen()
