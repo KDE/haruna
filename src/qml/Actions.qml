@@ -44,13 +44,12 @@ Item {
         }
 
         onAudioCycleUpAction: {
-            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
             const tracks = mpv.getProperty("track-list")
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
 
             if (audioTracksCount > 1) {
-                mpv.command(["cycle", "aid", "up"])
+                mpv.synchronousCommand(["cycle", "aid", "up"])
                 const currentTrackId = mpv.getProperty("aid")
 
                 if (currentTrackId === false) {
@@ -58,18 +57,17 @@ Item {
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                osd.message(i18nc("@info:tooltip", "Audio: %1 %2", currentTrackId, track.lang))
+                osd.message(i18nc("@info:tooltip", "Audio: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
         onAudioCycleDownAction: {
-            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
             const tracks = mpv.getProperty("track-list")
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
 
             if (audioTracksCount > 1) {
-                mpv.command(["cycle", "aid", "down"])
+                mpv.synchronousCommand(["cycle", "aid", "down"])
                 const currentTrackId = mpv.getProperty("aid")
 
                 if (currentTrackId === false) {
@@ -77,7 +75,7 @@ Item {
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                osd.message(i18nc("@info:tooltip", "Audio: %1 %2", currentTrackId, track.lang))
+                osd.message(i18nc("@info:tooltip", "Audio: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
@@ -252,28 +250,26 @@ Item {
         }
 
         onSubtitleCycleUpAction: {
-            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
-            mpv.command(["cycle", "sid", "up"])
+            mpv.synchronousCommand(["cycle", "sid", "up"])
             const currentTrackId = mpv.getProperty("sid")
             if (currentTrackId === false) {
                 osd.message(i18nc("@info:tooltip", "Subtitle: None"))
             } else {
                 const tracks = mpv.getProperty("track-list")
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang))
+                osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
         onSubtitleCycleDownAction: {
-            // TODO: fix osd showing wrong track caused by mpv running in a separate thread
-            mpv.command(["cycle", "sid", "down"])
+            mpv.synchronousCommand(["cycle", "sid", "down"])
             const currentTrackId = mpv.getProperty("sid")
             if (currentTrackId === false) {
                 osd.message(i18nc("@info:tooltip", "Subtitle: None"))
             } else {
                 const tracks = mpv.getProperty("track-list")
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang))
+                osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
