@@ -69,4 +69,9 @@ void MpvAbstractItem::command(const QStringList &params)
     Q_EMIT mpvCommand(params);
 }
 
+QVariant MpvAbstractItem::synchronousCommand(const QStringList &params)
+{
+    return m_mpvController->command(params);
+}
+
 #include "moc_mpvabstractitem.cpp"

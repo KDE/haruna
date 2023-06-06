@@ -24,6 +24,7 @@ public:
     Q_INVOKABLE void setProperty(const QString &name, const QVariant &value);
     Q_INVOKABLE QVariant getProperty(const QString &name);
     Q_INVOKABLE void command(const QStringList &params);
+    Q_INVOKABLE QVariant synchronousCommand(const QStringList &params);
     Q_INVOKABLE QVariant expandText(const QString &text);
 
     friend class MpvRenderer;
