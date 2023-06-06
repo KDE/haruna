@@ -229,13 +229,15 @@ Item {
         onScreenshotAction: mpv.command(["screenshot"])
 
         onSubtitleQuickenAction: {
-            mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") - 0.1)
-            osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
+            const delay = mpv.getProperty("sub-delay") - 0.1
+            mpv.setProperty("sub-delay", delay)
+            osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         onSubtitleDelayAction: {
-            mpv.setProperty("sub-delay", mpv.getProperty("sub-delay") + 0.1)
-            osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", mpv.getProperty("sub-delay").toFixed(2)))
+            const delay = mpv.getProperty("sub-delay") + 0.1
+            mpv.setProperty("sub-delay", delay)
+            osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         onSubtitleToggleAction: {
