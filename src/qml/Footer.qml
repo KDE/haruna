@@ -105,6 +105,13 @@ ToolBar {
             alwaysShowToolTip: true
             horizontalAlignment: Qt.AlignHCenter
 
+            Layout.minimumWidth: textMetrics.width
+
+            TextMetrics {
+                id: textMetrics
+                font: timeInfo.font
+                text: "000:00:00 / 000:00:00"
+            }
         }
 
         ToolButton {
