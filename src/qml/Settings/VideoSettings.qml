@@ -51,7 +51,6 @@ SettingsBasePage {
                 }
 
                 function save() {
-                    console.log(defaultCover.text)
                     VideoSettings.defaultCover = defaultCover.text
                     VideoSettings.save()
                 }
