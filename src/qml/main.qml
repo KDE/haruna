@@ -23,6 +23,8 @@ import "Settings"
 Kirigami.ApplicationWindow {
     id: window
 
+    property bool containsMouse: false
+
     property int previousVisibility: Window.Windowed
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
     property alias playList: playlistLoader.item
@@ -110,7 +112,7 @@ Kirigami.ApplicationWindow {
         anchors.left: window.contentItem.left
         anchors.right: window.contentItem.right
         anchors.bottom: window.isFullScreen() ? mpv.bottom : window.contentItem.bottom
-        visible: !window.isFullScreen() || mpv.mouseY > window.height - footer.height
+        visible: !window.isFullScreen() || (mpv.mouseY > window.height - footer.height && window.containsMouse)
     }
 
     Actions {}
@@ -211,6 +213,10 @@ Kirigami.ApplicationWindow {
             if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
                 playList.state = "hidden"
             }
+            window.containsMouse = false
+        }
+        onQmlApplicationMouseEnter: {
+            window.containsMouse = true
         }
         onError: {
             messageBox.visible = true

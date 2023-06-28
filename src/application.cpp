@@ -69,6 +69,7 @@ Application::Application()
     auto *appEventFilter = new ApplicationEventFilter();
     m_app->installEventFilter(appEventFilter);
     QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
+    QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
 
     if (GeneralSettings::guiStyle() != QStringLiteral("System")) {
         QApplication::setStyle(GeneralSettings::guiStyle());

@@ -27,12 +27,16 @@ class ApplicationEventFilter : public QObject
 
 Q_SIGNALS:
     void applicationMouseLeave();
+    void applicationMouseEnter();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override
     {
         if (event->type() == QEvent::Leave) {
             Q_EMIT applicationMouseLeave();
+            return true;
+        } else if (event->type() == QEvent::Enter) {
+            Q_EMIT applicationMouseEnter();
             return true;
         } else {
             // standard event processing
@@ -86,6 +90,7 @@ public:
 
 Q_SIGNALS:
     void qmlApplicationMouseLeave();
+    void qmlApplicationMouseEnter();
     void error(const QString &message);
     void saveWindowGeometryAsync(QQuickWindow *window);
 
