@@ -189,7 +189,11 @@ SettingsBasePage {
             ColorPickerButton {
                 id: subtitleColorPicker
 
+                color: SubtitlesSettings.fontColor
                 onColorChosen: subtitleColor.text = color
+
+                Layout.preferredHeight: subtitleColor.height
+                Layout.preferredWidth: subtitleColor.height
             }
 
             TextField {
@@ -199,6 +203,10 @@ SettingsBasePage {
 
                 text: SubtitlesSettings.fontColor
                 onEditingFinished: save()
+
+                onTextChanged: {
+                    subtitleColorPicker.color = text
+                }
 
                 Connections {
                     target: root
@@ -234,7 +242,11 @@ SettingsBasePage {
             ColorPickerButton {
                 id: shadowColorPicker
 
+                color: SubtitlesSettings.shadowColor
                 onColorChosen: shadowColor.text = color
+
+                Layout.preferredHeight: shadowColor.height
+                Layout.preferredWidth: shadowColor.height
             }
 
             TextField {
@@ -243,6 +255,11 @@ SettingsBasePage {
                 property string defaultColor: "#80F0F0F0"
 
                 text: SubtitlesSettings.shadowColor
+
+                onTextChanged: {
+                    shadowColorPicker.color = text
+                }
+
                 onEditingFinished: save()
 
                 Connections {
@@ -302,6 +319,9 @@ SettingsBasePage {
 
                 color: SubtitlesSettings.borderColor
                 onColorChosen: borderColor.text = color
+
+                Layout.preferredHeight: borderColor.height
+                Layout.preferredWidth: borderColor.height
             }
 
             TextField {
@@ -310,6 +330,11 @@ SettingsBasePage {
                 property string defaultColor: "#FF000000"
 
                 text: SubtitlesSettings.borderColor
+
+                onTextChanged: {
+                    borderColorPicker.color = text
+                }
+
                 onEditingFinished: save()
 
                 Connections {

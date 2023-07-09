@@ -23,7 +23,9 @@ Rectangle {
                   ? Kirigami.Theme.highlightColor
                   : Kirigami.Theme.alternateBackgroundColor
 
-    onColorChosen: color = colorPicker.color
+    onColorChosen: {
+        root.color = colorPicker.color
+    }
 
     MouseArea {
         id: ma
