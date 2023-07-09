@@ -202,10 +202,9 @@ SettingsBasePage {
                 property string defaultColor: "#FFFFFFFF"
 
                 text: SubtitlesSettings.fontColor
-                onEditingFinished: save()
 
                 onTextChanged: {
-                    subtitleColorPicker.color = text
+                    save()
                 }
 
                 Connections {
@@ -257,10 +256,8 @@ SettingsBasePage {
                 text: SubtitlesSettings.shadowColor
 
                 onTextChanged: {
-                    shadowColorPicker.color = text
+                    save()
                 }
-
-                onEditingFinished: save()
 
                 Connections {
                     target: root
@@ -332,10 +329,8 @@ SettingsBasePage {
                 text: SubtitlesSettings.borderColor
 
                 onTextChanged: {
-                    borderColorPicker.color = text
+                    save()
                 }
-
-                onEditingFinished: save()
 
                 Connections {
                     target: root
