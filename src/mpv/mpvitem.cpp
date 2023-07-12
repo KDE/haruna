@@ -163,6 +163,9 @@ void MpvItem::setupConnections()
     connect(m_mpvController, &MpvController::endFile,
             this, &MpvItem::endFile, Qt::QueuedConnection);
 
+    connect(m_mpvController, &MpvController::videoReconfig,
+            this, &MpvItem::videoReconfig, Qt::QueuedConnection);
+
     connect(this, &MpvItem::fileLoaded, this, [=]() {
         if (!getProperty(QStringLiteral("vid")).toBool()) {
             command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
@@ -497,9 +500,10 @@ void MpvItem::setWatchPercentage(double value)
 
 void MpvItem::loadFile(const QString &file)
 {
-    command(QStringList() << QStringLiteral("loadfile") << file);
+    m_currentFile = file;
+    command(QStringList() << QStringLiteral("loadfile") << m_currentFile);
 
-    GeneralSettings::setLastPlayedFile(file);
+    GeneralSettings::setLastPlayedFile(m_currentFile);
     GeneralSettings::self()->save();
 }
 
@@ -648,6 +652,11 @@ QString MpvItem::formattedRemaining() const
 QString MpvItem::formattedPosition() const
 {
     return m_formattedPosition;
+}
+
+QString MpvItem::currentFile() const
+{
+    return m_currentFile;
 }
 
 #include "moc_mpvitem.cpp"
