@@ -88,7 +88,6 @@ class MpvItem : public MpvAbstractItem
     void setSecondarySubtitleId(int value);
 
     void onPropertyChanged(const QString &property, const QVariant &value);
-    void cachePropertyValue(const QString &property, const QVariant &value);
 
 public:
     explicit MpvItem(QQuickItem *parent = nullptr);
@@ -103,7 +102,6 @@ public:
     Q_INVOKABLE QString formattedPosition() const;
     Q_INVOKABLE QString formattedRemaining() const;
     Q_INVOKABLE QString formattedDuration() const;
-    Q_INVOKABLE QVariant getCachedPropertyValue(const QString &property);
 
 Q_SIGNALS:
     void audioTracksModelChanged();
@@ -161,7 +159,6 @@ private:
     double m_duration{0.0};
     QString m_formattedDuration;
 
-    QMap<QString, QVariant> m_propertiesCache;
     double m_watchLaterPosition{0.0};
     bool m_isFileReloaded{false};
 };

@@ -23,6 +23,7 @@ public:
     Renderer *createRenderer() const override;
     Q_INVOKABLE void setProperty(const QString &name, const QVariant &value);
     Q_INVOKABLE QVariant getProperty(const QString &name);
+    Q_INVOKABLE QVariant getCachedPropertyValue(const QString &property);
     Q_INVOKABLE void command(const QStringList &params);
     Q_INVOKABLE QVariant synchronousCommand(const QStringList &params);
     Q_INVOKABLE QVariant expandText(const QString &text);
@@ -35,10 +36,13 @@ Q_SIGNALS:
     void setMpvProperty(const QString &property, const QVariant &value);
 
 protected:
+    void cachePropertyValue(const QString &property, const QVariant &value);
+
     QThread *m_workerThread{nullptr};
     MpvController *m_mpvController{nullptr};
     mpv_handle *m_mpv{nullptr};
     mpv_render_context *m_mpv_gl{nullptr};
+    QMap<QString, QVariant> m_propertiesCache;
 };
 
 #endif // MPVABSTRACTITEM_H

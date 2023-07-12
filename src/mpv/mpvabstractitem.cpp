@@ -59,6 +59,21 @@ QVariant MpvAbstractItem::getProperty(const QString &name)
     return m_mpvController->getProperty(name);
 }
 
+void MpvAbstractItem::cachePropertyValue(const QString &property, const QVariant &value)
+{
+    m_propertiesCache[property] = value;
+}
+
+QVariant MpvAbstractItem::getCachedPropertyValue(const QString &property)
+{
+    if (!m_propertiesCache[property].isValid()) {
+        auto value = getProperty(property);
+        cachePropertyValue(property, value);
+        return value;
+    }
+    return m_propertiesCache[property];
+}
+
 QVariant MpvAbstractItem::expandText(const QString &text)
 {
     return m_mpvController->command(QStringList{QStringLiteral("expand-text"), text});
