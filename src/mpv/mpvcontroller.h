@@ -95,6 +95,7 @@ Q_SIGNALS:
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);
+    void videoReconfig();
 
 private:
     mpv_node_list *create_list(mpv_node *dst, bool is_map, int num);

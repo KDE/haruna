@@ -57,6 +57,10 @@ void MpvController::eventHandler()
             }
             break;
         }
+        case MPV_EVENT_VIDEO_RECONFIG: {
+            Q_EMIT videoReconfig();
+            break;
+        }
         case MPV_EVENT_PROPERTY_CHANGE: {
             mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
             QVariant data;
