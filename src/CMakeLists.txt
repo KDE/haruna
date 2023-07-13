@@ -24,6 +24,7 @@ target_sources(haruna
     mpv/mpvabstractitem.h mpv/mpvabstractitem.cpp
     mpv/mpvcontroller.h mpv/mpvcontroller.cpp
     mpv/mpvitem.h mpv/mpvitem.cpp
+    mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvrenderer.h mpv/mpvrenderer.cpp
     playlistitem.h playlistitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp

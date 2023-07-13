@@ -55,9 +55,41 @@ Slider {
         ToolTip {
             id: progressBarToolTip
 
-            visible: progressBarMouseArea.containsMouse
+            visible: progressBarMouseArea.containsMouse && mpv.currentFile !== ""
             timeout: -1
             delay: 0
+            contentItem: ColumnLayout {
+
+                MpvPreview {
+                    id: previewMpv
+
+                    property double aspectRatio: 0
+
+                    width: Kirigami.Units.gridUnit * 10
+                    height: Math.ceil(width / aspectRatio)
+                    visible: file !== ""
+
+                    Layout.alignment: Qt.AlignCenter
+                    Connections {
+                        target: mpv
+                        onVideoReconfig: {
+                            let width = mpv.getProperty("width");
+                            let height = mpv.getProperty("height");
+                            let ar = width / height;
+                            previewMpv.aspectRatio = ar
+                        }
+                        onFileLoaded: {
+                            previewMpv.file = mpv.currentFile
+                        }
+                    }
+                }
+
+                Label {
+                    Layout.alignment: Qt.AlignCenter
+                    text: progressBarToolTip.text
+                }
+            }
+
         }
 
         MouseArea {
@@ -88,12 +120,13 @@ Slider {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
 
                 const time = mouseX * 100 / progressBarBG.width * root.to / 100
+                previewMpv.position = time
                 progressBarToolTip.text = app.formatTime(time)
             }
 
             onEntered: {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
-                progressBarToolTip.y = root.height
+                progressBarToolTip.y = root.height + Kirigami.Units.largeSpacing
             }
 
             onWheel: {

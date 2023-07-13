@@ -15,6 +15,7 @@
 #include "informationsettings.h"
 #include "mousesettings.h"
 #include "mpvitem.h"
+#include "mpvpreview.h"
 #include "playbacksettings.h"
 #include "playlistitem.h"
 #include "playlistmodel.h"
@@ -141,6 +142,7 @@ void Application::setupCommandLineParser()
 void Application::registerQmlTypes()
 {
     qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
+    qmlRegisterType<MpvPreview>("org.kde.haruna", 1, 0, "MpvPreview");
     qRegisterMetaType<PlayListModel *>();
     qRegisterMetaType<PlayListItem *>();
     qRegisterMetaType<TracksModel *>();
