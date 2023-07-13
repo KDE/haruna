@@ -118,6 +118,63 @@ SettingsBasePage {
             Layout.fillWidth: true
         }
 
+        Label {
+            text: i18nc("@label:spinbox", "Preview thumbnail")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        CheckBox {
+            text: i18nc("@option:check", "Show preview thumbnail")
+            checked: GeneralSettings.showPreviewThumbnail
+            onCheckedChanged: {
+                GeneralSettings.showPreviewThumbnail = checked
+                GeneralSettings.save()
+            }
+        }
+
+        Item { width: 1 }
+
+        RowLayout {
+        CheckBox {
+            text: i18nc("@option:check", "Use accurate preview")
+            checked: GeneralSettings.accuratePreviewThumbnail
+            enabled: GeneralSettings.showPreviewThumbnail
+            onCheckedChanged: {
+                GeneralSettings.accuratePreviewThumbnail = checked
+                GeneralSettings.save()
+            }
+        }
+        ToolButton {
+            icon.name: "documentinfo"
+            icon.color: Kirigami.Theme.negativeTextColor
+            checkable: true
+            checked: false
+
+            ToolTip {
+                text: i18nc("@info:tooltip", "Generating an accurate preview is slow")
+                visible: parent.checked
+                delay: 0
+                timeout: -1
+                closePolicy: Popup.NoAutoClose
+            }
+        }
+        }
+
+        Item { width: 1 }
+
+        SpinBox {
+            id: previewThumbnailWidth
+
+            from: 100
+            to: 10000
+            value: GeneralSettings.previewThumbnailWidth
+            enabled: GeneralSettings.showPreviewThumbnail
+            onValueChanged: {
+                GeneralSettings.previewThumbnailWidth = previewThumbnailWidth.value
+                GeneralSettings.save()
+            }
+        }
+
         Item { width: 1 }
 
         CheckBox {

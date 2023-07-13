@@ -65,9 +65,10 @@ Slider {
 
                     property double aspectRatio: 0
 
-                    width: Kirigami.Units.gridUnit * 10
-                    height: Math.ceil(width / aspectRatio)
-                    visible: file !== ""
+                    Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
+                    Layout.preferredHeight: Math.ceil(Layout.preferredWidth / aspectRatio)
+                    visible: file !== "" && GeneralSettings.showPreviewThumbnail
+                    accuratePreview: GeneralSettings.accuratePreviewThumbnail
 
                     Layout.alignment: Qt.AlignCenter
                     Connections {

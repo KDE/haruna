@@ -1,5 +1,7 @@
 #include "mpvpreview.h"
 
+#include "generalsettings.h"
+
 MpvPreview::MpvPreview()
 {
     mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
@@ -9,7 +11,7 @@ MpvPreview::MpvPreview()
     setProperty(QStringLiteral("really-quiet"), true);
 
     setProperty(QStringLiteral("hwdec"), QStringLiteral("auto"));
-    setProperty(QStringLiteral("hr-seek"), false);
+    setProperty(QStringLiteral("hr-seek"), GeneralSettings::accuratePreviewThumbnail());
     setProperty(QStringLiteral("aid"), false);
     setProperty(QStringLiteral("audio-file-auto"), false);
     setProperty(QStringLiteral("sub-auto"), false);
@@ -54,4 +56,19 @@ void MpvPreview::setFile(const QString &_file)
     }
     m_file = _file;
     Q_EMIT fileChanged();
+}
+
+bool MpvPreview::accuratePreview() const
+{
+    return m_accuratePreview;
+}
+
+void MpvPreview::setAccuratePreview(bool _accuratePreview)
+{
+    if (m_accuratePreview == _accuratePreview) {
+        return;
+    }
+    m_accuratePreview = _accuratePreview;
+    setProperty(QStringLiteral("hr-seek"), _accuratePreview);
+    Q_EMIT accuratePreviewChanged();
 }
