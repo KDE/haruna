@@ -61,6 +61,9 @@ void MpvPreview::setFile(const QString &_file)
         return;
     }
     m_file = _file;
+    auto url = QUrl::fromUserInput(m_file);
+    setIsLocalFile(url.isLocalFile());
+
     Q_EMIT fileChanged();
 }
 
@@ -77,4 +80,18 @@ void MpvPreview::setAccuratePreview(bool _accuratePreview)
     m_accuratePreview = _accuratePreview;
     setProperty(QStringLiteral("hr-seek"), _accuratePreview);
     Q_EMIT accuratePreviewChanged();
+}
+
+bool MpvPreview::isLocalFile() const
+{
+    return m_isLocalFile;
+}
+
+void MpvPreview::setIsLocalFile(bool _isLocalFile)
+{
+    if (m_isLocalFile == _isLocalFile) {
+        return;
+    }
+    m_isLocalFile = _isLocalFile;
+    Q_EMIT isLocalFileChanged();
 }

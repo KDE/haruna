@@ -65,12 +65,15 @@ Slider {
 
                     property double aspectRatio: 0
 
-                    Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
-                    Layout.preferredHeight: Math.ceil(Layout.preferredWidth / aspectRatio)
-                    visible: file !== "" && GeneralSettings.showPreviewThumbnail
+                    visible: previewMpv.file !== ""
+                             && previewMpv.isLocalFile
+                             && GeneralSettings.showPreviewThumbnail
                     accuratePreview: GeneralSettings.accuratePreviewThumbnail
 
+                    Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
+                    Layout.preferredHeight: Math.ceil(Layout.preferredWidth / aspectRatio)
                     Layout.alignment: Qt.AlignCenter
+
                     Connections {
                         target: mpv
                         onVideoReconfig: {
