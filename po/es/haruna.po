@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 00:47+0000\n"
+"POT-Creation-Date: 2023-07-14 00:46+0000\n"
 "PO-Revision-Date: 2023-05-11 00:25+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -29,43 +29,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: src/application.cpp:102
+#: src/application.cpp:103
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Reproductor multimedia Haruna"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Reproductor multimedia configurable."
 
-#: src/application.cpp:106
+#: src/application.cpp:107
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "© 2019-2023"
 
-#: src/application.cpp:111
+#: src/application.cpp:112
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desarrollador"
 
-#: src/application.cpp:123
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Archivo a abrir"
 
-#: src/application.cpp:127
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "«ytdl». No se tendrá en cuenta si el ajuste se cambia desde la interfaz de "
 "usuario."
 
-#: src/application.cpp:129
+#: src/application.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -762,12 +762,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Sonido"
 
-#: src/qml/HProgressBar.qml:198
+#: src/qml/HProgressBar.qml:235
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Omitir capítulos"
 
-#: src/qml/HProgressBar.qml:206
+#: src/qml/HProgressBar.qml:243
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1185,37 +1185,61 @@ msgctxt "@title"
 msgid "Interface"
 msgstr "Interfaz"
 
-#: src/qml/Settings/GeneralSettings.qml:124
+#: src/qml/Settings/GeneralSettings.qml:122
+#, fuzzy
+#| msgid "Show thumbnails"
+msgctxt "@label:spinbox"
+msgid "Preview thumbnail"
+msgstr "Mostrar miniaturas"
+
+#: src/qml/Settings/GeneralSettings.qml:127
+#, fuzzy
+#| msgid "Show thumbnails"
+msgctxt "@option:check"
+msgid "Show preview thumbnail"
+msgstr "Mostrar miniaturas"
+
+#: src/qml/Settings/GeneralSettings.qml:139
+msgctxt "@option:check"
+msgid "Use accurate preview"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "Generating an accurate preview is slow"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostrar la barra de menú"
 
-#: src/qml/Settings/GeneralSettings.qml:135
+#: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostrar la barra de herramientas"
 
-#: src/qml/Settings/GeneralSettings.qml:146
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostrar marcadores de capítulos"
 
-#: src/qml/Settings/GeneralSettings.qml:155
+#: src/qml/Settings/GeneralSettings.qml:212
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de color"
 
-#: src/qml/Settings/GeneralSettings.qml:197
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estilo de la interfaz de usuario"
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:303
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Usar el tema de iconos Brisa"
 
-#: src/qml/Settings/GeneralSettings.qml:256
+#: src/qml/Settings/GeneralSettings.qml:313
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1818,9 +1842,6 @@ msgstr "Volumen: %1"
 
 #~ msgid "Ytdl format selection"
 #~ msgstr "Selección del formato de Ytdl"
-
-#~ msgid "Show thumbnails"
-#~ msgstr "Mostrar miniaturas"
 
 #~ msgid "Screenshot format"
 #~ msgstr "Formato de captura de pantalla"

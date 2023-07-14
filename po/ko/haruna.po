@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 00:47+0000\n"
+"POT-Creation-Date: 2023-07-14 00:46+0000\n"
 "PO-Revision-Date: 2022-08-09 13:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,49 +27,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: src/application.cpp:102
+#: src/application.cpp:103
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna 동영상 재생기"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, fuzzy, kde-format
 #| msgid "A configurable video player."
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "설정 가능한 동영상 재생기입니다."
 
-#: src/application.cpp:106
+#: src/application.cpp:107
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:111
+#: src/application.cpp:112
 #, fuzzy, kde-format
 #| msgid "George Florea Bănuș"
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "개발자"
 
-#: src/application.cpp:123
+#: src/application.cpp:124
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "열 파일"
 
-#: src/application.cpp:127
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:129
+#: src/application.cpp:130
 #, fuzzy, kde-format
 #| msgid "bestvideo+bestaudio/best"
 msgctxt "@info:shell"
@@ -923,14 +923,14 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:198
+#: src/qml/HProgressBar.qml:235
 #, fuzzy
 #| msgid "Skip Chapters"
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:206
+#: src/qml/HProgressBar.qml:243
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1476,49 +1476,69 @@ msgctxt "@title"
 msgid "Interface"
 msgstr "인터페이스"
 
-#: src/qml/Settings/GeneralSettings.qml:124
+#: src/qml/Settings/GeneralSettings.qml:122
+msgctxt "@label:spinbox"
+msgid "Preview thumbnail"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:127
+msgctxt "@option:check"
+msgid "Show preview thumbnail"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:139
+msgctxt "@option:check"
+msgid "Use accurate preview"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "Generating an accurate preview is slow"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:181
 #, fuzzy
 #| msgid "Show Menubar"
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "메뉴 표시줄 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:135
+#: src/qml/Settings/GeneralSettings.qml:192
 #, fuzzy
 #| msgid "Show Toolbar"
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "도구 모음 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:146
+#: src/qml/Settings/GeneralSettings.qml:203
 #, fuzzy
 #| msgid "Show chapter markers"
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "챕터 마커 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:155
+#: src/qml/Settings/GeneralSettings.qml:212
 #, fuzzy
 #| msgid "Color scheme"
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "색 배열"
 
-#: src/qml/Settings/GeneralSettings.qml:197
+#: src/qml/Settings/GeneralSettings.qml:254
 #, fuzzy
 #| msgid "GUI Style"
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI 스타일"
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:303
 #, fuzzy
 #| msgid "Use Breeze icon theme"
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Breeze 아이콘 테마 사용"
 
-#: src/qml/Settings/GeneralSettings.qml:256
+#: src/qml/Settings/GeneralSettings.qml:313
 #, fuzzy
 #| msgid ""
 #| "Sets the icon theme to breeze.\n"

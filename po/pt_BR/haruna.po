@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 00:47+0000\n"
+"POT-Creation-Date: 2023-07-14 00:46+0000\n"
 "PO-Revision-Date: 2023-06-26 16:51-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,43 +29,43 @@ msgstr ""
 "dosreisdolorespatrick@gmail.com, igormoreiraa@vivaldi.net, "
 "geraldosimiao@fedoraproject.org"
 
-#: src/application.cpp:102
+#: src/application.cpp:103
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Reprodutor de mídia Haruna"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Um reprodutor de mídia configurável."
 
-#: src/application.cpp:106
+#: src/application.cpp:107
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(C) 2019-2023"
 
-#: src/application.cpp:111
+#: src/application.cpp:112
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: src/application.cpp:123
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Arquivo a ser aberto"
 
-#: src/application.cpp:127
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -75,7 +75,7 @@ msgstr ""
 "Permite substituir temporariamente a configuração de seleção de formato "
 "ytdl. Será substituído se a configuração for alterada por meio da GUI"
 
-#: src/application.cpp:129
+#: src/application.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -761,12 +761,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Áudio"
 
-#: src/qml/HProgressBar.qml:198
+#: src/qml/HProgressBar.qml:235
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Pular capítulos"
 
-#: src/qml/HProgressBar.qml:206
+#: src/qml/HProgressBar.qml:243
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1182,37 +1182,57 @@ msgctxt "@title"
 msgid "Interface"
 msgstr "Interface"
 
-#: src/qml/Settings/GeneralSettings.qml:124
+#: src/qml/Settings/GeneralSettings.qml:122
+msgctxt "@label:spinbox"
+msgid "Preview thumbnail"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:127
+msgctxt "@option:check"
+msgid "Show preview thumbnail"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:139
+msgctxt "@option:check"
+msgid "Use accurate preview"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "Generating an accurate preview is slow"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostrar barra de menus"
 
-#: src/qml/Settings/GeneralSettings.qml:135
+#: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostrar barra de ferramentas"
 
-#: src/qml/Settings/GeneralSettings.qml:146
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostrar marcadores de capítulo"
 
-#: src/qml/Settings/GeneralSettings.qml:155
+#: src/qml/Settings/GeneralSettings.qml:212
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de cores"
 
-#: src/qml/Settings/GeneralSettings.qml:197
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estilo da interface"
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:303
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Usa o tema dos ícones do Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:256
+#: src/qml/Settings/GeneralSettings.qml:313
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

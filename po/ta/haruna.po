@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 00:47+0000\n"
+"POT-Creation-Date: 2023-07-14 00:46+0000\n"
 "PO-Revision-Date: 2023-04-09 13:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,43 +27,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: src/application.cpp:102
+#: src/application.cpp:103
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "ஹருணா நிகழ்பட இயக்கி"
 
-#: src/application.cpp:104
+#: src/application.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "தனிப்பயனாக்கக்கூடிய நிகழ்பட இயக்கி."
 
-#: src/application.cpp:106
+#: src/application.cpp:107
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:111
+#: src/application.cpp:112
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "ஜார்ஜ் ஃபுலோரியா பானுசு"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "நிரலாளர்"
 
-#: src/application.cpp:123
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "திறக்க வேண்டிய கோப்பு"
 
-#: src/application.cpp:127
+#: src/application.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -71,7 +71,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
-#: src/application.cpp:129
+#: src/application.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -761,12 +761,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "ஒலி"
 
-#: src/qml/HProgressBar.qml:198
+#: src/qml/HProgressBar.qml:235
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "பகுதிகளை தவிர்"
 
-#: src/qml/HProgressBar.qml:206
+#: src/qml/HProgressBar.qml:243
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1221,37 +1221,57 @@ msgctxt "@title"
 msgid "Interface"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:124
+#: src/qml/Settings/GeneralSettings.qml:122
+msgctxt "@label:spinbox"
+msgid "Preview thumbnail"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:127
+msgctxt "@option:check"
+msgid "Show preview thumbnail"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:139
+msgctxt "@option:check"
+msgid "Use accurate preview"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "Generating an accurate preview is slow"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "பட்டிப் பட்டையை காட்டு"
 
-#: src/qml/Settings/GeneralSettings.qml:135
+#: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "கருவிப்பட்டையை காட்டு"
 
-#: src/qml/Settings/GeneralSettings.qml:146
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:155
+#: src/qml/Settings/GeneralSettings.qml:212
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "நிறத்திட்டம்"
 
-#: src/qml/Settings/GeneralSettings.qml:197
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "இடைமுகப்பின் பாங்கு"
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:303
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:256
+#: src/qml/Settings/GeneralSettings.qml:313
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
