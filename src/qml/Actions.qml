@@ -337,10 +337,12 @@ Item {
 
         onVolumeUpAction: {
             mpv.command(["add", "volume", GeneralSettings.volumeStep])
+            osd.message(i18nc("@info:tooltip", "Volume: %1", mpv.volume))
         }
 
         onVolumeDownAction: {
             mpv.command(["add", "volume", -GeneralSettings.volumeStep])
+            osd.message(i18nc("@info:tooltip", "Volume: %1", mpv.volume))
         }
 
         onZoomInAction: {
