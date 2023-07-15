@@ -50,16 +50,12 @@ Item {
         }
 
         const osdFontSize = parseInt(GeneralSettings.osdFontSize)
-        label.text = text
         if (osdFontSize === 0) {
             return;
         }
 
-        if(label.visible) {
-            timer.restart()
-        } else {
-            timer.start()
-        }
+        timer.restart()
+        label.text = text
         label.visible = true
     }
 
