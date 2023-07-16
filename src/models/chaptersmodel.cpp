@@ -1,0 +1,49 @@
+#include "chaptersmodel.h"
+
+ChaptersModel::ChaptersModel(QObject *parent)
+    : QAbstractListModel(parent)
+{
+}
+
+int ChaptersModel::rowCount(const QModelIndex &parent) const
+{
+    if (parent.isValid()) {
+        return 0;
+    }
+
+    return m_chapters.count();
+}
+
+QVariant ChaptersModel::data(const QModelIndex &index, int role) const
+{
+    if (!index.isValid()) {
+        return QVariant();
+    }
+
+    auto chapter = m_chapters.at(index.row());
+
+    switch (role) {
+    case TitleRole:
+        return QVariant(chapter.title);
+
+    case StartTimeRole:
+        return QVariant(chapter.startTime);
+    }
+
+    return QVariant();
+}
+
+QHash<int, QByteArray> ChaptersModel::roleNames() const
+{
+    QHash<int, QByteArray> roles;
+    roles[TitleRole] = "title";
+    roles[StartTimeRole] = "startTime";
+    return roles;
+}
+
+void ChaptersModel::setChapters(QList<Chapter> &_chapters)
+{
+    beginResetModel();
+    m_chapters = _chapters;
+    endResetModel();
+}

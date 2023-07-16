@@ -147,14 +147,14 @@ Slider {
     // create markers for the chapters
     Repeater {
         id: chaptersInstantiator
-        model: GeneralSettings.showChapterMarkers ? chapters : 0
+        model: GeneralSettings.showChapterMarkers ? mpv.chaptersModel : 0
         delegate: Shape {
             id: chapterMarkerShape
 
             // where the chapter marker shoud be positioned on the progress bar
             property int position: root.mirrored
-                                   ? progressBarBG.width - (modelData.time / mpv.duration * progressBarBG.width)
-                                   : modelData.time / mpv.duration * progressBarBG.width
+                                   ? progressBarBG.width - (model.startTime / mpv.duration * progressBarBG.width)
+                                   : model.startTime / mpv.duration * progressBarBG.width
 
             antialiasing: true
             ShapePath {
@@ -177,7 +177,7 @@ Slider {
                 color: "transparent"
                 ToolTip {
                     id: chapterTitleToolTip
-                    text: modelData.title
+                    text: model.title
                     visible: false
                     delay: 0
                     timeout: 10000
@@ -250,11 +250,11 @@ Slider {
             ListView {
                 id: listView
 
-                model: root.chapters
+                model: mpv.chaptersModel
                 delegate: CheckDelegate {
                     id: menuitem
 
-                    text: `${app.formatTime(modelData.time)} - ${modelData.title}`
+                    text: `${app.formatTime(model.startTime)} - ${model.title}`
                     checked: index === chaptersPopup.checkedItem
                     width: listViewPage.width
                     onClicked: {

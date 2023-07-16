@@ -48,6 +48,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_subtitleTracksModel{new TracksModel}
     , m_playlistModel{new PlayListModel}
     , m_playlistProxyModel{new PlayListProxyModel}
+    , m_chaptersModel{new ChaptersModel}
 {
     m_playlistProxyModel->setSourceModel(m_playlistModel);
     mpv_observe_property(m_mpv, 0, "media-title", MPV_FORMAT_STRING);
@@ -60,6 +61,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     mpv_observe_property(m_mpv, 0, "aid", MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "sid", MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "chapter", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "chapter-list", MPV_FORMAT_NODE);
     mpv_observe_property(m_mpv, 0, "secondary-sid", MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "track-list", MPV_FORMAT_NODE);
 
@@ -208,6 +210,20 @@ void MpvItem::setupConnections()
         loadFile(m_playlistModel->getPath());
     });
 
+    connect(this, &MpvItem::chapterListChanged, this, [=]() {
+        const auto chapters = getCachedPropertyValue(QStringLiteral("chapter-list"));
+        QList<Chapter> chaptersList;
+        for (const auto &chapter : chapters.toList()) {
+            Chapter c = {
+                .title = chapter.toMap()[QStringLiteral("title")].toString(),
+                .startTime = chapter.toMap()[QStringLiteral("time")].toDouble(),
+            };
+            chaptersList.append(c);
+        }
+        m_chaptersModel->setChapters(chaptersList);
+    });
+
+
 #if defined(Q_OS_UNIX)
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
@@ -306,7 +322,7 @@ double MpvItem::position()
 
 void MpvItem::setPosition(double value)
 {
-    if (value == position()) {
+    if (qFuzzyCompare(value, position())) {
         return;
     }
     Q_EMIT setMpvProperty(QStringLiteral("time-pos"), value);
@@ -464,6 +480,10 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
         cachePropertyValue(property, value);
         Q_EMIT chapterChanged();
 
+    } else if (property == QStringLiteral("chapter-list")) {
+        cachePropertyValue(property, value);
+        Q_EMIT chapterListChanged();
+
     } else if (property == QStringLiteral("aid")) {
         cachePropertyValue(property, value);
         Q_EMIT audioIdChanged();
@@ -491,7 +511,7 @@ double MpvItem::watchPercentage()
 
 void MpvItem::setWatchPercentage(double value)
 {
-    if (m_watchPercentage == value) {
+    if (qFuzzyCompare(m_watchPercentage, value)) {
         return;
     }
     m_watchPercentage = value;
@@ -657,6 +677,20 @@ QString MpvItem::formattedPosition() const
 QString MpvItem::currentFile() const
 {
     return m_currentFile;
+}
+
+ChaptersModel *MpvItem::chaptersModel() const
+{
+    return m_chaptersModel;
+}
+
+void MpvItem::setChaptersModel(ChaptersModel *_chaptersModel)
+{
+    if (m_chaptersModel == _chaptersModel) {
+        return;
+    }
+    m_chaptersModel = _chaptersModel;
+    Q_EMIT chaptersModelChanged();
 }
 
 #include "moc_mpvitem.cpp"

@@ -7,6 +7,7 @@
 #ifndef MPVOBJECT_H
 #define MPVOBJECT_H
 
+#include "chaptersmodel.h"
 #include "mpvabstractitem.h"
 #include "playlistmodel.h"
 #include "track.h"
@@ -21,6 +22,7 @@ class MpvItem : public MpvAbstractItem
     Q_PROPERTY(TracksModel *subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
     Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
     Q_PROPERTY(PlayListProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
+    Q_PROPERTY(ChaptersModel *chaptersModel READ chaptersModel WRITE setChaptersModel NOTIFY chaptersModelChanged)
     // when playlist repeat is turned off the last file in the playlist is reloaded
     // this property is used to pause the player
     Q_PROPERTY(bool isFileReloaded READ isFileReloaded WRITE setIsFileReloaded NOTIFY isFileReloadedChanged)
@@ -106,6 +108,9 @@ public:
 
     QString currentFile() const;
 
+    ChaptersModel *chaptersModel() const;
+    void setChaptersModel(ChaptersModel *_chaptersModel);
+
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
@@ -124,6 +129,7 @@ Q_SIGNALS:
     void muteChanged();
     void volumeChanged();
     void chapterChanged();
+    void chapterListChanged();
     void audioIdChanged();
     void subtitleIdChanged();
     void secondarySubtitleIdChanged();
@@ -138,6 +144,8 @@ Q_SIGNALS:
     void playNext();
     void playPrevious();
     void openUri(const QString &uri);
+
+    void chaptersModelChanged();
 
 private:
     TracksModel *audioTracksModel() const;
@@ -165,6 +173,7 @@ private:
     double m_watchLaterPosition{0.0};
     bool m_isFileReloaded{false};
     QString m_currentFile;
+    ChaptersModel *m_chaptersModel;
 };
 
 #endif // MPVOBJECT_H
