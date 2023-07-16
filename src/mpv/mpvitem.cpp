@@ -198,8 +198,8 @@ void MpvItem::setupConnections()
     });
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
-        int pos = m_position;
-        double duration = m_duration;
+        int pos = position();
+        double duration = getCachedPropertyValue(QStringLiteral("duration")).toDouble();
         if (!m_secondsWatched.contains(pos)) {
             m_secondsWatched << pos;
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
