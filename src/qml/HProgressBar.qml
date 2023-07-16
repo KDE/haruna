@@ -55,6 +55,7 @@ Slider {
         ToolTip {
             id: progressBarToolTip
 
+            z: 10
             visible: progressBarMouseArea.containsMouse && mpv.currentFile !== ""
             timeout: -1
             delay: 0
@@ -213,6 +214,7 @@ Slider {
                                : window.width * 0.7
 
         y: -height - root.height
+        z: 20
         width: itemBiggestWidth > maxWidth ? maxWidth : itemBiggestWidth
         height: itemHeight * root.chapters.length + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
                 ? mpv.height - Kirigami.Units.gridUnit
