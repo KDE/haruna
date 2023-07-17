@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-14 00:46+0000\n"
-"PO-Revision-Date: 2023-04-09 13:05+0530\n"
+"PO-Revision-Date: 2023-07-16 14:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.90\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -70,6 +70,8 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"ytdl கோப்புவகைத் தேர்வை தற்காலிகமாக மாற்றியமைக்கும். வரைபட இடைமுகப்பில் மாற்றினால் "
+"இத்தேர்வு பொருட்படுத்தப்படாது"
 
 #: src/application.cpp:130
 #, kde-format
@@ -285,7 +287,7 @@ msgstr "முந்தைய துணையுரைக்குச் செ�
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr ""
+msgstr "பிறகு பார்க்கவேண்டிய இடத்திற்கு செல்"
 
 #: src/models/actionsmodel.cpp:256
 #, kde-format
@@ -345,13 +347,13 @@ msgstr "துணையுரையைத் தாமதமாக்கு"
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr ""
+msgstr "முந்தைய வகையான துணை உரையை காட்டு"
 
 #: src/models/actionsmodel.cpp:326
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr ""
+msgstr "அடுத்த வகையான துணை உரையை காட்டு"
 
 #: src/models/actionsmodel.cpp:333
 #, kde-format
@@ -387,29 +389,25 @@ msgstr "பாடல்வரிசை"
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
-msgstr ""
+msgstr "நிகழ்படத்தை இடதாக நகர்த்து"
 
 #: src/models/actionsmodel.cpp:375
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
-msgstr ""
+msgstr "நிகழ்படத்தை வலதாக நகர்த்து"
 
 #: src/models/actionsmodel.cpp:382
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
-msgstr "துணையுரையை மேலே நகர்த்து"
+msgstr "நிகழ்படத்தை மேலே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:389
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
-msgstr "துணையுரையை கீழே நகர்த்து"
+msgstr "நிகழ்படத்தை கீழே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format
@@ -542,7 +540,7 @@ msgstr "பாடல்வரிசை காலியாக உள்ளது"
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
-msgstr ""
+msgstr "ஏதுமில்லை"
 
 #: src/qml/Actions.qml:60 src/qml/Actions.qml:78
 msgctxt "@info:tooltip"
