@@ -114,10 +114,19 @@ int MpvController::setProperty(const QString &name, const QVariant &value)
     return mpv_set_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
 }
 
-int MpvController::setPropertyAsync(const QString &name, const QVariant &value, int id)
+int MpvController::setProperty(Properties property, const QVariant &value)
 {
     mpv_node node;
     setNode(&node, value);
+    QString name = m_properties.value(property);
+    return mpv_set_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
+}
+
+int MpvController::setPropertyAsync(Properties property, const QVariant &value, int id)
+{
+    mpv_node node;
+    setNode(&node, value);
+    QString name = m_properties.value(property);
     int err = mpv_set_property_async(m_mpv, id, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
     return err;
 }
@@ -133,8 +142,9 @@ QVariant MpvController::getProperty(const QString &name)
     return node_to_variant(&node);
 }
 
-int MpvController::getPropertyAsync(const QString &name, int id)
+int MpvController::getPropertyAsync(Properties property, int id)
 {
+    QString name = m_properties.value(property);
     int err = mpv_get_property_async(m_mpv, id, name.toUtf8().constData(), MPV_FORMAT_NODE);
     return err;
 }

@@ -7,6 +7,7 @@
 #ifndef MPVCONTROLLER_H
 #define MPVCONTROLLER_H
 
+#include <QMap>
 #include <QObject>
 
 #include <mpv/client.h>
@@ -57,13 +58,31 @@ class MpvController : public QObject
 public:
     MpvController(QObject *parent = nullptr);
 
+    enum Properties {
+        Pause,
+        Volume,
+        Position,
+        Duration,
+        Remaining,
+        Mute,
+        Chapter,
+        ChapterList,
+        TrackList,
+        MediaTitle,
+        AudioId,
+        SubtitleId,
+        SecondarySubtitleId,
+        VideoId,
+    };
+
     /**
      * Set the given property as mpv_node converted from the QVariant argument.
      *
      * @return mpv error code (<0 on error, >= 0 on success)
      */
     Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
-    Q_INVOKABLE int setPropertyAsync(const QString &name, const QVariant &value, int id);
+    Q_INVOKABLE int setProperty(Properties property, const QVariant &value);
+    Q_INVOKABLE int setPropertyAsync(Properties property, const QVariant &value, int id);
 
     /**
      * Return the given property as mpv_node converted to QVariant,
@@ -73,7 +92,7 @@ public:
      * @return the property value, or an ErrorReturn with the error code
      */
     Q_INVOKABLE QVariant getProperty(const QString &name);
-    Q_INVOKABLE int getPropertyAsync(const QString &name, int id);
+    Q_INVOKABLE int getPropertyAsync(Properties property, int id);
 
     /**
      * mpv_command_node() equivalent.
@@ -109,6 +128,24 @@ private:
     QVariant node_to_variant(const mpv_node *node);
 
     mpv_handle *m_mpv{nullptr};
+    // clang-format off
+    QMap<Properties, QString> m_properties = {
+        {Pause,               QStringLiteral("pause")},
+        {Volume,              QStringLiteral("volume")},
+        {Position,            QStringLiteral("time-pos")},
+        {Duration,            QStringLiteral("duration")},
+        {Remaining,           QStringLiteral("time-remaining")},
+        {Mute,                QStringLiteral("mute")},
+        {Chapter,             QStringLiteral("chapter")},
+        {ChapterList,         QStringLiteral("chapter-list")},
+        {TrackList,           QStringLiteral("track-list")},
+        {MediaTitle,          QStringLiteral("media-title")},
+        {AudioId,             QStringLiteral("aid")},
+        {SubtitleId,          QStringLiteral("sid")},
+        {SecondarySubtitleId, QStringLiteral("secondary-sid")},
+        {VideoId,             QStringLiteral("vid")},
+    };
+    // clang-format on
 };
 
 #endif // MPVCONTROLLER_H
