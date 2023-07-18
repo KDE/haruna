@@ -23,8 +23,14 @@ MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     // clang-format off
     connect(m_workerThread, &QThread::finished,
             m_mpvController, &MpvController::deleteLater);
-    connect(this, &MpvAbstractItem::setMpvProperty,
-            m_mpvController, &MpvController::setProperty, Qt::QueuedConnection);
+
+    connect(this, QOverload<const QString &, const QVariant &>::of(&MpvAbstractItem::setMpvProperty),
+            m_mpvController, QOverload<const QString &, const QVariant &>::of(&MpvController::setProperty),
+            Qt::QueuedConnection);
+
+    connect(this, QOverload<MpvController::Properties, const QVariant &>::of(&MpvAbstractItem::setMpvProperty),
+            m_mpvController, QOverload<MpvController::Properties, const QVariant &>::of(&MpvController::setProperty),
+            Qt::QueuedConnection);
 
     connect(this, &MpvAbstractItem::mpvCommand,
             m_mpvController, &MpvController::command, Qt::QueuedConnection);

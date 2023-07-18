@@ -7,6 +7,8 @@
 #ifndef MPVABSTRACTITEM_H
 #define MPVABSTRACTITEM_H
 
+#include "mpvcontroller.h"
+
 #include <QtQuick/QQuickFramebufferObject>
 #include <mpv/client.h>
 #include <mpv/render_gl.h>
@@ -34,6 +36,7 @@ Q_SIGNALS:
     void ready();
     void mpvCommand(const QStringList &params);
     void setMpvProperty(const QString &property, const QVariant &value);
+    void setMpvProperty(MpvController::Properties property, const QVariant &value);
 
 protected:
     void cachePropertyValue(const QString &property, const QVariant &value);
