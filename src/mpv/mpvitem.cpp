@@ -629,7 +629,7 @@ double MpvItem::loadTimePosition()
     auto hash = md5(getProperty(QStringLiteral("path")).toString());
     auto configPath = Global::instance()->appConfigDirPath();
     KConfig *config = new KConfig(configPath.append(QStringLiteral("/watch-later/")).append(hash));
-    int pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
+    auto pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
 
     return pos;
 }
