@@ -45,6 +45,7 @@ class MpvItem : public MpvAbstractItem
     Q_PROPERTY(int audioId READ audioId WRITE setAudioId NOTIFY audioIdChanged)
     Q_PROPERTY(int subtitleId READ subtitleId WRITE setSubtitleId NOTIFY subtitleIdChanged)
     Q_PROPERTY(int secondarySubtitleId READ secondarySubtitleId WRITE setSecondarySubtitleId NOTIFY secondarySubtitleIdChanged)
+    Q_PROPERTY(bool finishedLoading READ finishedLoading WRITE setFinishedLoading NOTIFY finishedLoadingChanged)
 
     PlayListProxyModel *playlistProxyModel();
     void setPlaylistProxyModel(PlayListProxyModel *model);
@@ -110,6 +111,9 @@ public:
     ChaptersModel *chaptersModel() const;
     void setChaptersModel(ChaptersModel *_chaptersModel);
 
+    bool finishedLoading() const;
+    void setFinishedLoading(bool _finishedLoading);
+
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
@@ -147,12 +151,16 @@ Q_SIGNALS:
 
     void chaptersModelChanged();
 
+    void finishedLoadingChanged();
+
 private:
     TracksModel *audioTracksModel() const;
     TracksModel *subtitleTracksModel() const;
     void initProperties();
     void setupConnections();
     void loadTracks();
+    void onSetPropertyReply(MpvController::AsyncIds id);
+    void onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id);
     QString md5(const QString &str);
     TracksModel *m_audioTracksModel;
     TracksModel *m_subtitleTracksModel;
@@ -174,6 +182,7 @@ private:
     bool m_isFileReloaded{false};
     QUrl m_currentUrl;
     ChaptersModel *m_chaptersModel;
+    bool m_finishedLoading{false};
 };
 
 #endif // MPVOBJECT_H

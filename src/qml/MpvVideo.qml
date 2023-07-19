@@ -73,7 +73,7 @@ MpvItem {
     }
 
     onChapterChanged: {
-        if (!PlaybackSettings.skipChapters) {
+        if (!root.finishedLoading || !PlaybackSettings.skipChapters) {
             return
         }
 
