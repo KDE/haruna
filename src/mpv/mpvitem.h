@@ -27,7 +27,7 @@ class MpvItem : public MpvAbstractItem
     // this property is used to pause the player
     Q_PROPERTY(bool isFileReloaded READ isFileReloaded WRITE setIsFileReloaded NOTIFY isFileReloadedChanged)
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
-    Q_PROPERTY(QString currentFile READ currentFile NOTIFY mediaTitleChanged)
+    Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     // cache the watch later time position to be used by the seekToWatchLaterPosition action
     // useful when resuming playback is disabled
@@ -55,6 +55,7 @@ class MpvItem : public MpvAbstractItem
     void setIsFileReloaded(bool _isFileReloaded);
 
     QString mediaTitle();
+    QUrl currentUrl() const;
 
     double position();
     void setPosition(double value);
@@ -106,8 +107,6 @@ public:
     Q_INVOKABLE QString formattedRemaining() const;
     Q_INVOKABLE QString formattedDuration() const;
 
-    QString currentFile() const;
-
     ChaptersModel *chaptersModel() const;
     void setChaptersModel(ChaptersModel *_chaptersModel);
 
@@ -120,6 +119,7 @@ Q_SIGNALS:
     void playlistUrlChanged();
     void isFileReloadedChanged();
     void mediaTitleChanged();
+    void currentUrlChanged();
     void watchPercentageChanged();
     void positionChanged();
     void watchLaterPositionChanged();
@@ -172,7 +172,7 @@ private:
 
     double m_watchLaterPosition{0.0};
     bool m_isFileReloaded{false};
-    QString m_currentFile;
+    QUrl m_currentUrl;
     ChaptersModel *m_chaptersModel;
 };
 

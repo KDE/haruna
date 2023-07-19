@@ -84,7 +84,7 @@ Slider {
                             previewMpv.aspectRatio = ar
                         }
                         onFileLoaded: {
-                            previewMpv.file = mpv.currentFile
+                            previewMpv.file = mpv.currentUrl
                         }
                     }
                 }

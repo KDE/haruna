@@ -520,10 +520,15 @@ void MpvItem::setWatchPercentage(double value)
 
 void MpvItem::loadFile(const QString &file)
 {
-    m_currentFile = file;
-    command(QStringList() << QStringLiteral("loadfile") << m_currentFile);
+    auto url = QUrl::fromUserInput(file);
+    if (m_currentUrl != url) {
+        m_currentUrl = url;
+        Q_EMIT currentUrlChanged();
+    }
 
-    GeneralSettings::setLastPlayedFile(m_currentFile);
+    command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
+
+    GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();
 }
 
@@ -674,9 +679,9 @@ QString MpvItem::formattedPosition() const
     return m_formattedPosition;
 }
 
-QString MpvItem::currentFile() const
+QUrl MpvItem::currentUrl() const
 {
-    return m_currentFile;
+    return m_currentUrl;
 }
 
 ChaptersModel *MpvItem::chaptersModel() const
