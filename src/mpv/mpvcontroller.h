@@ -58,7 +58,7 @@ class MpvController : public QObject
 public:
     MpvController(QObject *parent = nullptr);
 
-    enum Properties {
+    enum class Properties {
         Pause,
         Volume,
         Position,
@@ -74,6 +74,13 @@ public:
         SecondarySubtitleId,
         VideoId,
     };
+    Q_ENUM(Properties);
+
+    enum class AsyncIds {
+        FinishedLoading,
+        SavePosition,
+    };
+    Q_ENUM(AsyncIds);
 
     /**
      * Set the given property as mpv_node converted from the QVariant argument.
@@ -82,7 +89,7 @@ public:
      */
     Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
     Q_INVOKABLE int setProperty(Properties property, const QVariant &value);
-    Q_INVOKABLE int setPropertyAsync(Properties property, const QVariant &value, int id);
+    Q_INVOKABLE int setPropertyAsync(Properties property, const QVariant &value, AsyncIds id);
 
     /**
      * Return the given property as mpv_node converted to QVariant,
@@ -92,7 +99,7 @@ public:
      * @return the property value, or an ErrorReturn with the error code
      */
     Q_INVOKABLE QVariant getProperty(const QString &name);
-    Q_INVOKABLE int getPropertyAsync(Properties property, int id);
+    Q_INVOKABLE int getPropertyAsync(Properties property, AsyncIds id);
 
     /**
      * mpv_command_node() equivalent.
@@ -113,8 +120,8 @@ public:
 
 Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
-    void getPropertyReply(const QVariant &value, int id);
-    void setPropertyReply(int id);
+    void getPropertyReply(const QVariant &value, AsyncIds id);
+    void setPropertyReply(AsyncIds id);
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);
@@ -130,20 +137,20 @@ private:
     mpv_handle *m_mpv{nullptr};
     // clang-format off
     QMap<Properties, QString> m_properties = {
-        {Pause,               QStringLiteral("pause")},
-        {Volume,              QStringLiteral("volume")},
-        {Position,            QStringLiteral("time-pos")},
-        {Duration,            QStringLiteral("duration")},
-        {Remaining,           QStringLiteral("time-remaining")},
-        {Mute,                QStringLiteral("mute")},
-        {Chapter,             QStringLiteral("chapter")},
-        {ChapterList,         QStringLiteral("chapter-list")},
-        {TrackList,           QStringLiteral("track-list")},
-        {MediaTitle,          QStringLiteral("media-title")},
-        {AudioId,             QStringLiteral("aid")},
-        {SubtitleId,          QStringLiteral("sid")},
-        {SecondarySubtitleId, QStringLiteral("secondary-sid")},
-        {VideoId,             QStringLiteral("vid")},
+        {Properties::Pause,               QStringLiteral("pause")},
+        {Properties::Volume,              QStringLiteral("volume")},
+        {Properties::Position,            QStringLiteral("time-pos")},
+        {Properties::Duration,            QStringLiteral("duration")},
+        {Properties::Remaining,           QStringLiteral("time-remaining")},
+        {Properties::Mute,                QStringLiteral("mute")},
+        {Properties::Chapter,             QStringLiteral("chapter")},
+        {Properties::ChapterList,         QStringLiteral("chapter-list")},
+        {Properties::TrackList,           QStringLiteral("track-list")},
+        {Properties::MediaTitle,          QStringLiteral("media-title")},
+        {Properties::AudioId,             QStringLiteral("aid")},
+        {Properties::SubtitleId,          QStringLiteral("sid")},
+        {Properties::SecondarySubtitleId, QStringLiteral("secondary-sid")},
+        {Properties::VideoId,             QStringLiteral("vid")},
     };
     // clang-format on
 };
