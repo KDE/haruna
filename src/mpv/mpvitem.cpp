@@ -165,10 +165,6 @@ void MpvItem::setupConnections()
     connect(m_mpvController, &MpvController::endFile,
             this, &MpvItem::endFile, Qt::QueuedConnection);
 
-    connect(this, &MpvItem::currentUrlChanged, this, [=]() {
-        setFinishedLoading(false);
-    });
-
     connect(m_mpvController, &MpvController::videoReconfig,
             this, &MpvItem::videoReconfig, Qt::QueuedConnection);
 
@@ -177,6 +173,10 @@ void MpvItem::setupConnections()
 
     connect(m_mpvController, &MpvController::getPropertyReply,
             this, &MpvItem::onGetPropertyReply, Qt::QueuedConnection);
+
+    connect(this, &MpvItem::currentUrlChanged, this, [=]() {
+        setFinishedLoading(false);
+    });
 
     connect(this, &MpvItem::fileLoaded, this, [=]() {
         if (!getProperty(QStringLiteral("vid")).toBool()) {
@@ -289,6 +289,220 @@ void MpvItem::setupConnections()
     // clang-format on
 }
 
+void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
+{
+    if (property == QStringLiteral("media-title")) {
+        cachePropertyValue(property, value);
+        Q_EMIT mediaTitleChanged();
+
+    } else if (property == QStringLiteral("time-pos")) {
+        cachePropertyValue(property, value);
+        m_formattedPosition = Application::formatTime(value.toDouble());
+        Q_EMIT positionChanged();
+
+    } else if (property == QStringLiteral("time-remaining")) {
+        cachePropertyValue(property, value);
+        m_formattedRemaining = Application::formatTime(value.toDouble());
+        Q_EMIT remainingChanged();
+
+    } else if (property == QStringLiteral("duration")) {
+        cachePropertyValue(property, value);
+        m_formattedDuration = Application::formatTime(value.toDouble());
+        Q_EMIT durationChanged();
+
+    } else if (property == QStringLiteral("pause")) {
+        cachePropertyValue(property, value);
+        Q_EMIT pauseChanged();
+
+    } else if (property == QStringLiteral("volume")) {
+        cachePropertyValue(property, value);
+        Q_EMIT volumeChanged();
+
+    } else if (property == QStringLiteral("mute")) {
+        cachePropertyValue(property, value);
+        Q_EMIT muteChanged();
+
+    } else if (property == QStringLiteral("chapter")) {
+        cachePropertyValue(property, value);
+        Q_EMIT chapterChanged();
+
+    } else if (property == QStringLiteral("chapter-list")) {
+        cachePropertyValue(property, value);
+        Q_EMIT chapterListChanged();
+
+    } else if (property == QStringLiteral("aid")) {
+        cachePropertyValue(property, value);
+        Q_EMIT audioIdChanged();
+
+    } else if (property == QStringLiteral("sid")) {
+        cachePropertyValue(property, value);
+        Q_EMIT subtitleIdChanged();
+
+    } else if (property == QStringLiteral("secondary-sid")) {
+        cachePropertyValue(property, value);
+        Q_EMIT secondarySubtitleIdChanged();
+
+    } else if (property == QStringLiteral("track-list")) {
+        loadTracks();
+
+    } else {
+        // nothing
+    }
+}
+
+void MpvItem::loadFile(const QString &file)
+{
+    auto url = QUrl::fromUserInput(file);
+    if (m_currentUrl != url) {
+        m_currentUrl = url;
+        Q_EMIT currentUrlChanged();
+    }
+
+    command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
+
+    GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
+    GeneralSettings::self()->save();
+}
+
+void MpvItem::loadTracks()
+{
+    m_subtitleTracks.clear();
+    m_audioTracks.clear();
+
+    auto none = new Track();
+    none->setId(0);
+    none->setTitle(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"));
+    m_subtitleTracks.insert(0, none);
+
+    const QList<QVariant> tracks = getProperty(QStringLiteral("track-list")).toList();
+    int subIndex = 1;
+    int audioIndex = 0;
+    for (const auto &track : tracks) {
+        const auto trackMap = track.toMap();
+        if (trackMap[QStringLiteral("type")] == QStringLiteral("sub")) {
+            auto t = new Track();
+            t->setCodec(trackMap[QStringLiteral("codec")].toString());
+            t->setType(trackMap[QStringLiteral("type")].toString());
+            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
+            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
+            t->setForced(trackMap[QStringLiteral("forced")].toBool());
+            t->setId(trackMap[QStringLiteral("id")].toLongLong());
+            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
+            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
+            t->setLang(trackMap[QStringLiteral("lang")].toString());
+            t->setTitle(trackMap[QStringLiteral("title")].toString());
+            t->setIndex(subIndex);
+
+            m_subtitleTracks.insert(subIndex, t);
+            subIndex++;
+        }
+        if (trackMap[QStringLiteral("type")] == QStringLiteral("audio")) {
+            auto t = new Track();
+
+            t->setCodec(trackMap[QStringLiteral("codec")].toString());
+            t->setType(trackMap[QStringLiteral("type")].toString());
+            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
+            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
+            t->setForced(trackMap[QStringLiteral("forced")].toBool());
+            t->setId(trackMap[QStringLiteral("id")].toLongLong());
+            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
+            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
+            t->setLang(trackMap[QStringLiteral("lang")].toString());
+            t->setTitle(trackMap[QStringLiteral("title")].toString());
+            t->setIndex(audioIndex);
+
+            m_audioTracks.insert(audioIndex, t);
+            audioIndex++;
+        }
+    }
+    m_subtitleTracksModel->setTracks(m_subtitleTracks);
+    m_audioTracksModel->setTracks(m_audioTracks);
+
+    Q_EMIT audioTracksModelChanged();
+    Q_EMIT subtitleTracksModelChanged();
+}
+
+void MpvItem::onSetPropertyReply(MpvController::AsyncIds id)
+{
+    switch (static_cast<MpvController::AsyncIds>(id)) {
+    case MpvController::AsyncIds::FinishedLoading:
+        setFinishedLoading(true);
+        break;
+    }
+}
+
+void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id)
+{
+    switch (static_cast<MpvController::AsyncIds>(id)) {
+    case MpvController::AsyncIds::SavePosition:
+        auto hash = md5(getProperty(QStringLiteral("path")).toString());
+        auto configPath = Global::instance()->appConfigDirPath();
+        configPath.append(QStringLiteral("/watch-later/")).append(hash);
+        Q_EMIT syncConfigValue(configPath, QString(), QStringLiteral("TimePosition"), value);
+        break;
+    }
+}
+
+void MpvItem::saveTimePosition()
+{
+    // saving position is disabled
+    if (PlaybackSettings::minDurationToSavePosition() == -1) {
+        return;
+    }
+    // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
+    if (getCachedPropertyValue(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+        return;
+    }
+
+    m_mpvController->getPropertyAsync(MpvController::Properties::Position, MpvController::AsyncIds::SavePosition);
+}
+
+double MpvItem::loadTimePosition()
+{
+    // saving position is disabled
+    if (PlaybackSettings::minDurationToSavePosition() == -1) {
+        return 0;
+    }
+    // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
+    // but there can be cases when there is a saved position for files lower than minDurationToSavePosition()
+    // when minDurationToSavePosition() was increased after position was already saved
+    if (getProperty(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+        return 0;
+    }
+
+    auto hash = md5(getProperty(QStringLiteral("path")).toString());
+    auto configPath = Global::instance()->appConfigDirPath();
+    KConfig *config = new KConfig(configPath.append(QStringLiteral("/watch-later/")).append(hash));
+    auto pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
+
+    return pos;
+}
+
+void MpvItem::resetTimePosition()
+{
+    auto hash = md5(getProperty(QStringLiteral("path")).toString());
+    auto configPath = Global::instance()->appConfigDirPath();
+    QFile f(configPath.append(QStringLiteral("/watch-later/")).append(hash));
+
+    if (f.exists()) {
+        f.remove();
+    }
+    f.close();
+}
+
+void MpvItem::userCommand(const QString &commandString)
+{
+    QStringList args = KShell::splitArgs(commandString);
+    command(args);
+}
+
+QString MpvItem::md5(const QString &str)
+{
+    auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
+
+    return QString::fromUtf8(md5.toHex());
+}
+
 PlayListModel *MpvItem::playlistModel()
 {
     return m_playlistModel;
@@ -307,6 +521,30 @@ PlayListProxyModel *MpvItem::playlistProxyModel()
 void MpvItem::setPlaylistProxyModel(PlayListProxyModel *model)
 {
     m_playlistProxyModel = model;
+}
+
+ChaptersModel *MpvItem::chaptersModel() const
+{
+    return m_chaptersModel;
+}
+
+void MpvItem::setChaptersModel(ChaptersModel *_chaptersModel)
+{
+    if (m_chaptersModel == _chaptersModel) {
+        return;
+    }
+    m_chaptersModel = _chaptersModel;
+    Q_EMIT chaptersModelChanged();
+}
+
+TracksModel *MpvItem::subtitleTracksModel() const
+{
+    return m_subtitleTracksModel;
+}
+
+TracksModel *MpvItem::audioTracksModel() const
+{
+    return m_audioTracksModel;
 }
 
 bool MpvItem::isFileReloaded() const
@@ -339,20 +577,6 @@ void MpvItem::setPosition(double value)
         return;
     }
     Q_EMIT setMpvProperty(QStringLiteral("time-pos"), value);
-}
-
-double MpvItem::watchLaterPosition() const
-{
-    return m_watchLaterPosition;
-}
-
-void MpvItem::setWatchLaterPosition(double _watchLaterPosition)
-{
-    if (qFuzzyCompare(m_watchLaterPosition + 1, _watchLaterPosition + 1)) {
-        return;
-    }
-    m_watchLaterPosition = _watchLaterPosition;
-    Q_EMIT watchLaterPositionChanged();
 }
 
 double MpvItem::remaining()
@@ -456,244 +680,6 @@ void MpvItem::setSecondarySubtitleId(int value)
     Q_EMIT setMpvProperty(QStringLiteral("secondary-sid"), value);
 }
 
-void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
-{
-    if (property == QStringLiteral("media-title")) {
-        cachePropertyValue(property, value);
-        Q_EMIT mediaTitleChanged();
-
-    } else if (property == QStringLiteral("time-pos")) {
-        cachePropertyValue(property, value);
-        m_formattedPosition = Application::formatTime(value.toDouble());
-        Q_EMIT positionChanged();
-
-    } else if (property == QStringLiteral("time-remaining")) {
-        cachePropertyValue(property, value);
-        m_formattedRemaining = Application::formatTime(value.toDouble());
-        Q_EMIT remainingChanged();
-
-    } else if (property == QStringLiteral("duration")) {
-        cachePropertyValue(property, value);
-        m_formattedDuration = Application::formatTime(value.toDouble());
-        Q_EMIT durationChanged();
-
-    } else if (property == QStringLiteral("pause")) {
-        cachePropertyValue(property, value);
-        Q_EMIT pauseChanged();
-
-    } else if (property == QStringLiteral("volume")) {
-        cachePropertyValue(property, value);
-        Q_EMIT volumeChanged();
-
-    } else if (property == QStringLiteral("mute")) {
-        cachePropertyValue(property, value);
-        Q_EMIT muteChanged();
-
-    } else if (property == QStringLiteral("chapter")) {
-        cachePropertyValue(property, value);
-        Q_EMIT chapterChanged();
-
-    } else if (property == QStringLiteral("chapter-list")) {
-        cachePropertyValue(property, value);
-        Q_EMIT chapterListChanged();
-
-    } else if (property == QStringLiteral("aid")) {
-        cachePropertyValue(property, value);
-        Q_EMIT audioIdChanged();
-
-    } else if (property == QStringLiteral("sid")) {
-        cachePropertyValue(property, value);
-        Q_EMIT subtitleIdChanged();
-
-    } else if (property == QStringLiteral("secondary-sid")) {
-        cachePropertyValue(property, value);
-        Q_EMIT secondarySubtitleIdChanged();
-
-    } else if (property == QStringLiteral("track-list")) {
-        loadTracks();
-
-    } else {
-        // nothing
-    }
-}
-
-double MpvItem::watchPercentage()
-{
-    return m_watchPercentage;
-}
-
-void MpvItem::setWatchPercentage(double value)
-{
-    if (qFuzzyCompare(m_watchPercentage, value)) {
-        return;
-    }
-    m_watchPercentage = value;
-    Q_EMIT watchPercentageChanged();
-}
-
-void MpvItem::loadFile(const QString &file)
-{
-    auto url = QUrl::fromUserInput(file);
-    if (m_currentUrl != url) {
-        m_currentUrl = url;
-        Q_EMIT currentUrlChanged();
-    }
-
-    command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
-
-    GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
-    GeneralSettings::self()->save();
-}
-
-void MpvItem::loadTracks()
-{
-    m_subtitleTracks.clear();
-    m_audioTracks.clear();
-
-    auto none = new Track();
-    none->setId(0);
-    none->setTitle(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"));
-    m_subtitleTracks.insert(0, none);
-
-    const QList<QVariant> tracks = getProperty(QStringLiteral("track-list")).toList();
-    int subIndex = 1;
-    int audioIndex = 0;
-    for (const auto &track : tracks) {
-        const auto trackMap = track.toMap();
-        if (trackMap[QStringLiteral("type")] == QStringLiteral("sub")) {
-            auto t = new Track();
-            t->setCodec(trackMap[QStringLiteral("codec")].toString());
-            t->setType(trackMap[QStringLiteral("type")].toString());
-            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
-            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
-            t->setForced(trackMap[QStringLiteral("forced")].toBool());
-            t->setId(trackMap[QStringLiteral("id")].toLongLong());
-            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
-            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
-            t->setLang(trackMap[QStringLiteral("lang")].toString());
-            t->setTitle(trackMap[QStringLiteral("title")].toString());
-            t->setIndex(subIndex);
-
-            m_subtitleTracks.insert(subIndex, t);
-            subIndex++;
-        }
-        if (trackMap[QStringLiteral("type")] == QStringLiteral("audio")) {
-            auto t = new Track();
-
-            t->setCodec(trackMap[QStringLiteral("codec")].toString());
-            t->setType(trackMap[QStringLiteral("type")].toString());
-            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
-            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
-            t->setForced(trackMap[QStringLiteral("forced")].toBool());
-            t->setId(trackMap[QStringLiteral("id")].toLongLong());
-            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
-            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
-            t->setLang(trackMap[QStringLiteral("lang")].toString());
-            t->setTitle(trackMap[QStringLiteral("title")].toString());
-            t->setIndex(audioIndex);
-
-            m_audioTracks.insert(audioIndex, t);
-            audioIndex++;
-        }
-    }
-    m_subtitleTracksModel->setTracks(m_subtitleTracks);
-    m_audioTracksModel->setTracks(m_audioTracks);
-
-    Q_EMIT audioTracksModelChanged();
-    Q_EMIT subtitleTracksModelChanged();
-}
-
-void MpvItem::onSetPropertyReply(MpvController::AsyncIds id)
-{
-    switch (static_cast<MpvController::AsyncIds>(id)) {
-    case MpvController::AsyncIds::FinishedLoading:
-        setFinishedLoading(true);
-        break;
-    }
-}
-
-void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id)
-{
-    switch (static_cast<MpvController::AsyncIds>(id)) {
-    case MpvController::AsyncIds::SavePosition:
-        auto hash = md5(getProperty(QStringLiteral("path")).toString());
-        auto configPath = Global::instance()->appConfigDirPath();
-        configPath.append(QStringLiteral("/watch-later/")).append(hash);
-        Q_EMIT syncConfigValue(configPath, QString(), QStringLiteral("TimePosition"), value);
-        break;
-    }
-}
-
-TracksModel *MpvItem::subtitleTracksModel() const
-{
-    return m_subtitleTracksModel;
-}
-
-TracksModel *MpvItem::audioTracksModel() const
-{
-    return m_audioTracksModel;
-}
-
-void MpvItem::saveTimePosition()
-{
-    // saving position is disabled
-    if (PlaybackSettings::minDurationToSavePosition() == -1) {
-        return;
-    }
-    // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    if (getCachedPropertyValue(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
-        return;
-    }
-
-    m_mpvController->getPropertyAsync(MpvController::Properties::Position, MpvController::AsyncIds::SavePosition);
-}
-
-double MpvItem::loadTimePosition()
-{
-    // saving position is disabled
-    if (PlaybackSettings::minDurationToSavePosition() == -1) {
-        return 0;
-    }
-    // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    // but there can be cases when there is a saved position for files lower than minDurationToSavePosition()
-    // when minDurationToSavePosition() was increased after position was already saved
-    if (getProperty(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
-        return 0;
-    }
-
-    auto hash = md5(getProperty(QStringLiteral("path")).toString());
-    auto configPath = Global::instance()->appConfigDirPath();
-    KConfig *config = new KConfig(configPath.append(QStringLiteral("/watch-later/")).append(hash));
-    auto pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
-
-    return pos;
-}
-
-void MpvItem::resetTimePosition()
-{
-    auto hash = md5(getProperty(QStringLiteral("path")).toString());
-    auto configPath = Global::instance()->appConfigDirPath();
-    QFile f(configPath.append(QStringLiteral("/watch-later/")).append(hash));
-
-    if (f.exists()) {
-        f.remove();
-    }
-    f.close();
-}
-
-void MpvItem::userCommand(const QString &commandString)
-{
-    QStringList args = KShell::splitArgs(commandString);
-    command(args);
-}
-
-QString MpvItem::md5(const QString &str)
-{
-    auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
-
-    return QString::fromUtf8(md5.toHex());
-}
-
 QString MpvItem::formattedDuration() const
 {
     return m_formattedDuration;
@@ -714,18 +700,18 @@ QUrl MpvItem::currentUrl() const
     return m_currentUrl;
 }
 
-ChaptersModel *MpvItem::chaptersModel() const
+double MpvItem::watchLaterPosition() const
 {
-    return m_chaptersModel;
+    return m_watchLaterPosition;
 }
 
-void MpvItem::setChaptersModel(ChaptersModel *_chaptersModel)
+void MpvItem::setWatchLaterPosition(double _watchLaterPosition)
 {
-    if (m_chaptersModel == _chaptersModel) {
+    if (qFuzzyCompare(m_watchLaterPosition + 1, _watchLaterPosition + 1)) {
         return;
     }
-    m_chaptersModel = _chaptersModel;
-    Q_EMIT chaptersModelChanged();
+    m_watchLaterPosition = _watchLaterPosition;
+    Q_EMIT watchLaterPositionChanged();
 }
 
 bool MpvItem::finishedLoading() const
@@ -740,6 +726,20 @@ void MpvItem::setFinishedLoading(bool _finishedLoading)
     }
     m_finishedLoading = _finishedLoading;
     Q_EMIT finishedLoadingChanged();
+}
+
+double MpvItem::watchPercentage()
+{
+    return m_watchPercentage;
+}
+
+void MpvItem::setWatchPercentage(double value)
+{
+    if (qFuzzyCompare(m_watchPercentage, value)) {
+        return;
+    }
+    m_watchPercentage = value;
+    Q_EMIT watchPercentageChanged();
 }
 
 #include "moc_mpvitem.cpp"
