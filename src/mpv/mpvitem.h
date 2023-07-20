@@ -117,16 +117,11 @@ class MpvItem : public MpvAbstractItem
     bool finishedLoading() const;
     void setFinishedLoading(bool _finishedLoading);
 
-    void onPropertyChanged(const QString &property, const QVariant &value);
-
 public:
     explicit MpvItem(QQuickItem *parent = nullptr);
     ~MpvItem() = default;
 
     Q_INVOKABLE void loadFile(const QString &file);
-    Q_INVOKABLE void saveTimePosition();
-    Q_INVOKABLE double loadTimePosition();
-    Q_INVOKABLE void resetTimePosition();
     Q_INVOKABLE void userCommand(const QString &commandString);
 
 Q_SIGNALS:
@@ -169,10 +164,15 @@ Q_SIGNALS:
 private:
     void initProperties();
     void setupConnections();
+    void onPropertyChanged(const QString &property, const QVariant &value);
+    void saveTimePosition();
+    double loadTimePosition();
+    void resetTimePosition();
     void loadTracks();
     void onSetPropertyReply(MpvController::AsyncIds id);
     void onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id);
     QString md5(const QString &str);
+
     TracksModel *m_audioTracksModel;
     TracksModel *m_subtitleTracksModel;
     QMap<int, Track *> m_subtitleTracks;
