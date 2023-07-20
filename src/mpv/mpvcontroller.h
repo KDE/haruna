@@ -61,6 +61,8 @@ public:
     enum class Properties {
         Pause,
         Volume,
+        VolumeMax,
+        HardwareDecoding,
         Position,
         Duration,
         Remaining,
@@ -70,9 +72,32 @@ public:
         TrackList,
         MediaTitle,
         AudioId,
+        AudioClientName,
+        AudioLanguage,
         SubtitleId,
+        SubtitleLanguage,
+        SubtitleFilePaths,
+        SubtitleAuto,
+        SubtitleFont,
+        SubtitleFontSize,
+        SubtitleColor,
+        SubtitleShadowColor,
+        SubtitleShadowOffset,
+        SubtitleBorderColor,
+        SubtitleBorderSize,
+        SubtitleBold,
+        SubtitleItalic,
+        SubtitleUseMargins,
+        SubtitleAssForceMargins,
         SecondarySubtitleId,
+        ScreenshotFormat,
+        ScreenshotTemplate,
         VideoId,
+        LoopFile,
+        ABLoopA,
+        ABLoopB,
+        YtdlFormat,
+        ScriptOpts,
     };
     Q_ENUM(Properties);
 
@@ -118,6 +143,8 @@ public:
     void eventHandler();
     mpv_handle *mpv() const;
 
+    QMap<Properties, QString> properties() const;
+
 Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
     void getPropertyReply(const QVariant &value, AsyncIds id);
@@ -137,20 +164,45 @@ private:
     mpv_handle *m_mpv{nullptr};
     // clang-format off
     QMap<Properties, QString> m_properties = {
-        {Properties::Pause,               QStringLiteral("pause")},
-        {Properties::Volume,              QStringLiteral("volume")},
-        {Properties::Position,            QStringLiteral("time-pos")},
-        {Properties::Duration,            QStringLiteral("duration")},
-        {Properties::Remaining,           QStringLiteral("time-remaining")},
-        {Properties::Mute,                QStringLiteral("mute")},
-        {Properties::Chapter,             QStringLiteral("chapter")},
-        {Properties::ChapterList,         QStringLiteral("chapter-list")},
-        {Properties::TrackList,           QStringLiteral("track-list")},
-        {Properties::MediaTitle,          QStringLiteral("media-title")},
-        {Properties::AudioId,             QStringLiteral("aid")},
-        {Properties::SubtitleId,          QStringLiteral("sid")},
-        {Properties::SecondarySubtitleId, QStringLiteral("secondary-sid")},
-        {Properties::VideoId,             QStringLiteral("vid")},
+        {Properties::Pause,                   QStringLiteral("pause")},
+        {Properties::Volume,                  QStringLiteral("volume")},
+        {Properties::VolumeMax,               QStringLiteral("volume-max")},
+        {Properties::HardwareDecoding,        QStringLiteral("hwdec")},
+        {Properties::Position,                QStringLiteral("time-pos")},
+        {Properties::Duration,                QStringLiteral("duration")},
+        {Properties::Remaining,               QStringLiteral("time-remaining")},
+        {Properties::Mute,                    QStringLiteral("mute")},
+        {Properties::Chapter,                 QStringLiteral("chapter")},
+        {Properties::ChapterList,             QStringLiteral("chapter-list")},
+        {Properties::TrackList,               QStringLiteral("track-list")},
+        {Properties::MediaTitle,              QStringLiteral("media-title")},
+        {Properties::AudioId,                 QStringLiteral("aid")},
+        {Properties::AudioClientName,         QStringLiteral("audio-client-name")},
+        {Properties::AudioLanguage,           QStringLiteral("alang")},
+        {Properties::SubtitleId,              QStringLiteral("sid")},
+        {Properties::SubtitleLanguage,        QStringLiteral("slang")},
+        {Properties::SubtitleFilePaths,       QStringLiteral("sub-file-paths")},
+        {Properties::SubtitleAuto,            QStringLiteral("sub-auto")},
+        {Properties::SubtitleFont,            QStringLiteral("sub-font")},
+        {Properties::SubtitleFontSize,        QStringLiteral("sub-font-size")},
+        {Properties::SubtitleColor,           QStringLiteral("sub-color")},
+        {Properties::SubtitleShadowColor,     QStringLiteral("sub-shadow-color")},
+        {Properties::SubtitleShadowOffset,    QStringLiteral("sub-shadow-offset")},
+        {Properties::SubtitleBorderColor,     QStringLiteral("sub-border-color")},
+        {Properties::SubtitleBorderSize,      QStringLiteral("sub-border-size")},
+        {Properties::SubtitleBold,            QStringLiteral("sub-bold")},
+        {Properties::SubtitleItalic,          QStringLiteral("sub-italic")},
+        {Properties::SubtitleUseMargins,      QStringLiteral("sub-use-margins")},
+        {Properties::SubtitleAssForceMargins, QStringLiteral("sub-ass-force-margins")},
+        {Properties::SecondarySubtitleId,     QStringLiteral("secondary-sid")},
+        {Properties::ScreenshotFormat,        QStringLiteral("screenshot-template")},
+        {Properties::ScreenshotTemplate,      QStringLiteral("screenshot-format")},
+        {Properties::VideoId,                 QStringLiteral("vid")},
+        {Properties::LoopFile,                QStringLiteral("loop-file")},
+        {Properties::ABLoopA,                 QStringLiteral("ab-loop-a")},
+        {Properties::ABLoopB,                 QStringLiteral("ab-loop-b")},
+        {Properties::YtdlFormat,              QStringLiteral("ytdl-format")},
+        {Properties::ScriptOpts,              QStringLiteral("script-opts")},
     };
     // clang-format on
 };

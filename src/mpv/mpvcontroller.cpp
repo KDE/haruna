@@ -358,4 +358,9 @@ inline QVariant MpvController::node_to_variant(const mpv_node *node)
     }
 }
 
+QMap<MpvController::Properties, QString> MpvController::properties() const
+{
+    return m_properties;
+}
+
 #include "moc_mpvcontroller.cpp"

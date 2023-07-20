@@ -111,43 +111,43 @@ void MpvItem::initProperties()
     //    setProperty(QStringLiteral("msg-level"), QStringLiteral("all=v"));
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
-    setProperty(QStringLiteral("hwdec"), hwdec);
-    setProperty(QStringLiteral("sub-auto"), QStringLiteral("exact"));
-    setProperty(QStringLiteral("volume-max"), QStringLiteral("100"));
-    // set ytdl_path to yt-dlp or fallback to youtube-dl
-    setProperty(QStringLiteral("script-opts"), QStringLiteral("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
+    setProperty(MpvController::Properties::HardwareDecoding, hwdec);
+    setProperty(MpvController::Properties::VolumeMax, QStringLiteral("100"));
 
-    setProperty(QStringLiteral("sub-use-margins"), SubtitlesSettings::allowOnBlackBorders() ? QStringLiteral("yes") : QStringLiteral("no"));
-    setProperty(QStringLiteral("sub-ass-force-margins"), SubtitlesSettings::allowOnBlackBorders() ? QStringLiteral("yes") : QStringLiteral("no"));
+    // set ytdl_path to yt-dlp or fallback to youtube-dl
+    setProperty(MpvController::Properties::ScriptOpts, QStringLiteral("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
     QCommandLineParser *cmdParser = Application::instance()->parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
     if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
         ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));
     }
-    setProperty(QStringLiteral("ytdl-format"), ytdlFormat);
+    setProperty(MpvController::Properties::YtdlFormat, ytdlFormat);
 
-    setProperty(QStringLiteral("sub-font"), SubtitlesSettings::fontFamily());
-    setProperty(QStringLiteral("sub-font-size"), SubtitlesSettings::fontSize());
-    setProperty(QStringLiteral("sub-color"), SubtitlesSettings::fontColor());
-    setProperty(QStringLiteral("sub-shadow-color"), SubtitlesSettings::shadowColor());
-    setProperty(QStringLiteral("sub-shadow-offset"), SubtitlesSettings::shadowOffset());
-    setProperty(QStringLiteral("sub-border-color"), SubtitlesSettings::borderColor());
-    setProperty(QStringLiteral("sub-border-size"), SubtitlesSettings::borderSize());
-    setProperty(QStringLiteral("sub-bold"), SubtitlesSettings::isBold());
-    setProperty(QStringLiteral("sub-italic"), SubtitlesSettings::isItalic());
+    setProperty(MpvController::Properties::SubtitleAuto, QStringLiteral("exact"));
+    setProperty(MpvController::Properties::SubtitleUseMargins, SubtitlesSettings::allowOnBlackBorders());
+    setProperty(MpvController::Properties::SubtitleAssForceMargins, SubtitlesSettings::allowOnBlackBorders());
+    setProperty(MpvController::Properties::SubtitleFont, SubtitlesSettings::fontFamily());
+    setProperty(MpvController::Properties::SubtitleFontSize, SubtitlesSettings::fontSize());
+    setProperty(MpvController::Properties::SubtitleColor, SubtitlesSettings::fontColor());
+    setProperty(MpvController::Properties::SubtitleShadowColor, SubtitlesSettings::shadowColor());
+    setProperty(MpvController::Properties::SubtitleShadowOffset, SubtitlesSettings::shadowOffset());
+    setProperty(MpvController::Properties::SubtitleBorderColor, SubtitlesSettings::borderColor());
+    setProperty(MpvController::Properties::SubtitleBorderSize, SubtitlesSettings::borderSize());
+    setProperty(MpvController::Properties::SubtitleBold, SubtitlesSettings::isBold());
+    setProperty(MpvController::Properties::SubtitleItalic, SubtitlesSettings::isItalic());
 
-    setProperty(QStringLiteral("screenshot-template"), VideoSettings::screenshotTemplate());
-    setProperty(QStringLiteral("screenshot-format"), VideoSettings::screenshotFormat());
+    setProperty(MpvController::Properties::ScreenshotTemplate, VideoSettings::screenshotTemplate());
+    setProperty(MpvController::Properties::ScreenshotFormat, VideoSettings::screenshotFormat());
 
-    setProperty(QStringLiteral("audio-client-name"), QStringLiteral("haruna"));
+    setProperty(MpvController::Properties::AudioClientName, QStringLiteral("haruna"));
     const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
-    setProperty(QStringLiteral("aid"), preferredAudioTrack == 0 ? QStringLiteral("auto") : preferredAudioTrack);
-    setProperty(QStringLiteral("alang"), AudioSettings::preferredLanguage());
+    setProperty(MpvController::Properties::AudioId, preferredAudioTrack == 0 ? QStringLiteral("auto") : preferredAudioTrack);
+    setProperty(MpvController::Properties::AudioLanguage, AudioSettings::preferredLanguage());
 
     const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
-    setProperty(QStringLiteral("sid"), preferredSubTrack == 0 ? QStringLiteral("auto") : preferredSubTrack);
-    setProperty(QStringLiteral("slang"), SubtitlesSettings::preferredLanguage());
-    setProperty(QStringLiteral("sub-file-paths"), SubtitlesSettings::subtitlesFolders().join(QStringLiteral(":")));
+    setProperty(MpvController::Properties::SubtitleId, preferredSubTrack == 0 ? QStringLiteral("auto") : preferredSubTrack);
+    setProperty(MpvController::Properties::SubtitleLanguage, SubtitlesSettings::preferredLanguage());
+    setProperty(MpvController::Properties::SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(QStringLiteral(":")));
 }
 
 void MpvItem::setupConnections()
@@ -186,11 +186,11 @@ void MpvItem::setupConnections()
         setWatchLaterPosition(loadTimePosition());
 
         if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
-            setProperty(QStringLiteral("loop-file"), QStringLiteral("inf"));
+            setProperty(MpvController::Properties::LoopFile, QStringLiteral("inf"));
         }
 
-        setProperty(QStringLiteral("ab-loop-a"), QStringLiteral("no"));
-        setProperty(QStringLiteral("ab-loop-b"), QStringLiteral("no"));
+        setProperty(MpvController::Properties::ABLoopA, QStringLiteral("no"));
+        setProperty(MpvController::Properties::ABLoopB, QStringLiteral("no"));
 
         // this is only run when reloading the last file in the playlist
         // due to the playlist repeat setting being turned off

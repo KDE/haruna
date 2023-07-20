@@ -62,7 +62,7 @@ void MpvAbstractItem::setProperty(const QString &name, const QVariant &value)
 
 void MpvAbstractItem::setProperty(MpvController::Properties property, const QVariant &value)
 {
-    auto name = m_mpvController->m_properties.value(property);
+    auto name = m_mpvController->properties().value(property);
     setProperty(name, value);
 }
 
