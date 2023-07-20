@@ -18,79 +18,104 @@ class MpvRenderer;
 class MpvItem : public MpvAbstractItem
 {
     Q_OBJECT
-    Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
-    Q_PROPERTY(TracksModel *subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
-    Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
-    Q_PROPERTY(PlayListProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
-    Q_PROPERTY(ChaptersModel *chaptersModel READ chaptersModel WRITE setChaptersModel NOTIFY chaptersModelChanged)
-    // when playlist repeat is turned off the last file in the playlist is reloaded
-    // this property is used to pause the player
-    Q_PROPERTY(bool isFileReloaded READ isFileReloaded WRITE setIsFileReloaded NOTIFY isFileReloadedChanged)
-    Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
-    Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
-    Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
-    // cache the watch later time position to be used by the seekToWatchLaterPosition action
-    // useful when resuming playback is disabled
-    Q_PROPERTY(double watchLaterPosition READ watchLaterPosition WRITE setWatchLaterPosition NOTIFY watchLaterPositionChanged)
-    Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
-    Q_PROPERTY(double remaining READ remaining NOTIFY remainingChanged)
-    Q_PROPERTY(QString formattedPosition READ formattedPosition NOTIFY positionChanged)
-    Q_PROPERTY(QString formattedDuration READ formattedDuration NOTIFY durationChanged)
-    Q_PROPERTY(QString formattedRemaining READ formattedRemaining NOTIFY remainingChanged)
-    Q_PROPERTY(double watchPercentage MEMBER m_watchPercentage READ watchPercentage WRITE setWatchPercentage NOTIFY watchPercentageChanged)
-    Q_PROPERTY(bool pause READ pause WRITE setPause NOTIFY pauseChanged)
-    Q_PROPERTY(bool mute READ mute WRITE setMute NOTIFY muteChanged)
-    Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
-    Q_PROPERTY(int chapter READ chapter WRITE setChapter NOTIFY chapterChanged)
-    Q_PROPERTY(int audioId READ audioId WRITE setAudioId NOTIFY audioIdChanged)
-    Q_PROPERTY(int subtitleId READ subtitleId WRITE setSubtitleId NOTIFY subtitleIdChanged)
-    Q_PROPERTY(int secondarySubtitleId READ secondarySubtitleId WRITE setSecondarySubtitleId NOTIFY secondarySubtitleIdChanged)
-    Q_PROPERTY(bool finishedLoading READ finishedLoading WRITE setFinishedLoading NOTIFY finishedLoadingChanged)
 
-    PlayListProxyModel *playlistProxyModel();
-    void setPlaylistProxyModel(PlayListProxyModel *model);
+    Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
     PlayListModel *playlistModel();
     void setPlaylistModel(PlayListModel *model);
 
+    Q_PROPERTY(PlayListProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
+    PlayListProxyModel *playlistProxyModel();
+    void setPlaylistProxyModel(PlayListProxyModel *model);
+
+    Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
+    TracksModel *audioTracksModel() const;
+
+    Q_PROPERTY(TracksModel *subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
+    TracksModel *subtitleTracksModel() const;
+
+    Q_PROPERTY(ChaptersModel *chaptersModel READ chaptersModel WRITE setChaptersModel NOTIFY chaptersModelChanged)
+    ChaptersModel *chaptersModel() const;
+    void setChaptersModel(ChaptersModel *_chaptersModel);
+
+    /**
+     * when playlist repeat is turned off the last file in the playlist is reloaded
+     * this property is used to pause the player
+     */
+    Q_PROPERTY(bool isFileReloaded READ isFileReloaded WRITE setIsFileReloaded NOTIFY isFileReloadedChanged)
     bool isFileReloaded() const;
     void setIsFileReloaded(bool _isFileReloaded);
 
+    Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     QString mediaTitle();
+    Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
     QUrl currentUrl() const;
 
+    Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     double position();
     void setPosition(double value);
 
+    Q_PROPERTY(double duration READ duration NOTIFY durationChanged)
+    double duration();
+
+    Q_PROPERTY(double remaining READ remaining NOTIFY remainingChanged)
+    double remaining();
+
+    Q_PROPERTY(QString formattedPosition READ formattedPosition NOTIFY positionChanged)
+    QString formattedPosition() const;
+
+    Q_PROPERTY(QString formattedDuration READ formattedDuration NOTIFY durationChanged)
+    QString formattedRemaining() const;
+
+    Q_PROPERTY(QString formattedRemaining READ formattedRemaining NOTIFY remainingChanged)
+    QString formattedDuration() const;
+
+    /**
+     * cache the watch later time position to be used by the seekToWatchLaterPosition action
+     * useful when resuming playback is disabled
+     */
+    Q_PROPERTY(double watchLaterPosition READ watchLaterPosition WRITE setWatchLaterPosition NOTIFY watchLaterPositionChanged)
     double watchLaterPosition() const;
     void setWatchLaterPosition(double _watchLaterPosition);
 
-    double duration();
-
-    double remaining();
-
+    Q_PROPERTY(double watchPercentage READ watchPercentage WRITE setWatchPercentage NOTIFY watchPercentageChanged)
     double watchPercentage();
     void setWatchPercentage(double value);
 
+    Q_PROPERTY(bool pause READ pause WRITE setPause NOTIFY pauseChanged)
     bool pause();
     void setPause(bool value);
 
+    Q_PROPERTY(bool mute READ mute WRITE setMute NOTIFY muteChanged)
     bool mute();
     void setMute(bool value);
 
+    Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
     int volume();
     void setVolume(int value);
 
+    Q_PROPERTY(int chapter READ chapter WRITE setChapter NOTIFY chapterChanged)
     int chapter();
     void setChapter(int value);
 
+    Q_PROPERTY(int audioId READ audioId WRITE setAudioId NOTIFY audioIdChanged)
     int audioId();
     void setAudioId(int value);
 
+    Q_PROPERTY(int subtitleId READ subtitleId WRITE setSubtitleId NOTIFY subtitleIdChanged)
     int subtitleId();
     void setSubtitleId(int value);
 
+    Q_PROPERTY(int secondarySubtitleId READ secondarySubtitleId WRITE setSecondarySubtitleId NOTIFY secondarySubtitleIdChanged)
     int secondarySubtitleId();
     void setSecondarySubtitleId(int value);
+
+    /**
+     * Whether the file finished loading and it's safe to start certain events,
+     * like auto skipping chapters, which otherwise skips wrong chapter due to the multithreaded code
+     */
+    Q_PROPERTY(bool finishedLoading READ finishedLoading WRITE setFinishedLoading NOTIFY finishedLoadingChanged)
+    bool finishedLoading() const;
+    void setFinishedLoading(bool _finishedLoading);
 
     void onPropertyChanged(const QString &property, const QVariant &value);
 
@@ -104,21 +129,13 @@ public:
     Q_INVOKABLE void resetTimePosition();
     Q_INVOKABLE void userCommand(const QString &commandString);
 
-    Q_INVOKABLE QString formattedPosition() const;
-    Q_INVOKABLE QString formattedRemaining() const;
-    Q_INVOKABLE QString formattedDuration() const;
-
-    ChaptersModel *chaptersModel() const;
-    void setChaptersModel(ChaptersModel *_chaptersModel);
-
-    bool finishedLoading() const;
-    void setFinishedLoading(bool _finishedLoading);
-
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
     void playlistModelChanged();
     void playlistProxyModelChanged();
+    void chaptersModelChanged();
+    void finishedLoadingChanged();
     void playlistTitleChanged();
     void playlistUrlChanged();
     void isFileReloadedChanged();
@@ -149,13 +166,7 @@ Q_SIGNALS:
     void playPrevious();
     void openUri(const QString &uri);
 
-    void chaptersModelChanged();
-
-    void finishedLoadingChanged();
-
 private:
-    TracksModel *audioTracksModel() const;
-    TracksModel *subtitleTracksModel() const;
     void initProperties();
     void setupConnections();
     void loadTracks();
