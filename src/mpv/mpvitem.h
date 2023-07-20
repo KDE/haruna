@@ -194,6 +194,7 @@ private:
     QUrl m_currentUrl;
     ChaptersModel *m_chaptersModel;
     bool m_finishedLoading{false};
+    QString m_watchLaterPath;
 };
 
 #endif // MPVOBJECT_H

@@ -49,6 +49,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_playlistModel{new PlayListModel}
     , m_playlistProxyModel{new PlayListProxyModel}
     , m_chaptersModel{new ChaptersModel}
+    , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(QStringLiteral("/watch-later/"))}
 {
     m_playlistProxyModel->setSourceModel(m_playlistModel);
     mpv_observe_property(m_mpv, 0, "media-title", MPV_FORMAT_STRING);
@@ -436,9 +437,8 @@ void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds 
     switch (static_cast<MpvController::AsyncIds>(id)) {
     case MpvController::AsyncIds::SavePosition:
         auto hash = md5(getProperty(QStringLiteral("path")).toString());
-        auto configPath = Global::instance()->appConfigDirPath();
-        configPath.append(QStringLiteral("/watch-later/")).append(hash);
-        Q_EMIT syncConfigValue(configPath, QString(), QStringLiteral("TimePosition"), value);
+        auto watchLaterConfig = m_watchLaterPath.append(hash);
+        Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), value);
         break;
     }
 }
@@ -470,19 +470,19 @@ double MpvItem::loadTimePosition()
         return 0;
     }
 
-    auto hash = md5(getProperty(QStringLiteral("path")).toString());
-    auto configPath = Global::instance()->appConfigDirPath();
-    KConfig *config = new KConfig(configPath.append(QStringLiteral("/watch-later/")).append(hash));
-    auto pos = config->group("").readEntry("TimePosition", QString::number(0)).toDouble();
+    auto hash = md5(currentUrl().toLocalFile());
+    auto watchLaterConfig = m_watchLaterPath.append(hash);
+    KConfig config(watchLaterConfig);
+    auto pos = config.group("").readEntry("TimePosition", QString::number(0)).toDouble();
 
     return pos;
 }
 
 void MpvItem::resetTimePosition()
 {
-    auto hash = md5(getProperty(QStringLiteral("path")).toString());
-    auto configPath = Global::instance()->appConfigDirPath();
-    QFile f(configPath.append(QStringLiteral("/watch-later/")).append(hash));
+    auto hash = md5(currentUrl().toLocalFile());
+    auto watchLaterConfig = m_watchLaterPath.append(hash);
+    QFile f(watchLaterConfig);
 
     if (f.exists()) {
         f.remove();
