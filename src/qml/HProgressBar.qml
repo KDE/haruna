@@ -276,7 +276,11 @@ Slider {
 
     Connections {
         target: mpv
-        onFileLoaded: root.chapters = mpv.getProperty("chapter-list")
+        onFileLoaded: {
+            loopIndicator.startPosition = -1
+            loopIndicator.endPosition = -1
+            root.chapters = mpv.getProperty("chapter-list")
+        }
         onChapterChanged: {
             chaptersPopup.checkedItem = mpv.chapter
         }
