@@ -24,6 +24,7 @@ public:
 
     Renderer *createRenderer() const override;
     Q_INVOKABLE void setProperty(const QString &name, const QVariant &value);
+    Q_INVOKABLE void setProperty(MpvController::Properties property, const QVariant &value);
     Q_INVOKABLE QVariant getProperty(const QString &name);
     Q_INVOKABLE QVariant getCachedPropertyValue(const QString &property);
     Q_INVOKABLE void command(const QStringList &params);
