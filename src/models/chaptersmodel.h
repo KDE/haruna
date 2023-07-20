@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2023 George Florea Bănuș <georgefb899@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 #ifndef CHAPTERSMODEL_H
 #define CHAPTERSMODEL_H
 
