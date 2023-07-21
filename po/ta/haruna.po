@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:46+0000\n"
+"POT-Creation-Date: 2023-07-21 00:48+0000\n"
 "PO-Revision-Date: 2023-07-16 14:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -535,7 +535,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "பாடல்வரிசை காலியாக உள்ளது"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:375
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -602,52 +602,58 @@ msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr ""
 
-#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
+#: src/qml/Actions.qml:340 src/qml/Actions.qml:345
+#: src/qml/VolumeSliderQt6.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "ஒலி அளவு: %1"
+
+#: src/qml/Actions.qml:351 src/qml/Actions.qml:357
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "உருப்பெருக்கம்: %1"
 
-#: src/qml/Actions.qml:360
+#: src/qml/Actions.qml:362
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "உருப்பெருக்கம்: 0"
 
-#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
+#: src/qml/Actions.qml:369 src/qml/Actions.qml:375
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "நிறமாறுபாடு: %1"
 
-#: src/qml/Actions.qml:378
+#: src/qml/Actions.qml:380
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "நிறமாறுபாடு: 0"
 
-#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
+#: src/qml/Actions.qml:386 src/qml/Actions.qml:392
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "பிரகாசம்: %1"
 
-#: src/qml/Actions.qml:395
+#: src/qml/Actions.qml:397
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "பிரகாசம்: 0"
 
-#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
+#: src/qml/Actions.qml:403 src/qml/Actions.qml:409
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "காமா: %1"
 
-#: src/qml/Actions.qml:412
+#: src/qml/Actions.qml:414
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "காமா: 0"
 
-#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr ""
 
-#: src/qml/Actions.qml:429
+#: src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr ""
@@ -759,12 +765,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "ஒலி"
 
-#: src/qml/HProgressBar.qml:235
+#: src/qml/HProgressBar.qml:237
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "பகுதிகளை தவிர்"
 
-#: src/qml/HProgressBar.qml:243
+#: src/qml/HProgressBar.qml:245
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -898,7 +904,7 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "கருவிப்பட்டையை காட்டு"
 
-#: src/qml/MpvVideo.qml:91
+#: src/qml/MpvVideo.qml:90
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "பகுதி தவிர்க்கப்பட்டது: %1"
@@ -1702,11 +1708,6 @@ msgstr ""
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
-
-#: src/qml/VolumeSlider.qml:49 src/qml/VolumeSliderQt6.qml:49
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "ஒலி அளவு: %1"
 
 #~ msgctxt "@info"
 #~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."

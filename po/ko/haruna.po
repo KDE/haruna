@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:46+0000\n"
+"POT-Creation-Date: 2023-07-21 00:48+0000\n"
 "PO-Revision-Date: 2022-08-09 13:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -615,7 +615,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "재생 목록이 비어 있음"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:375
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -706,70 +706,78 @@ msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "디인터레이스: %1"
 
-#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
+#: src/qml/Actions.qml:340 src/qml/Actions.qml:345
+#: src/qml/VolumeSliderQt6.qml:49
+#, fuzzy
+#| msgid "Volume: %1"
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "음량: %1"
+
+#: src/qml/Actions.qml:351 src/qml/Actions.qml:357
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "확대: %1"
 
-#: src/qml/Actions.qml:360
+#: src/qml/Actions.qml:362
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "확대: 0"
 
-#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
+#: src/qml/Actions.qml:369 src/qml/Actions.qml:375
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "명암: %1"
 
-#: src/qml/Actions.qml:378
+#: src/qml/Actions.qml:380
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "명암: 0"
 
-#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
+#: src/qml/Actions.qml:386 src/qml/Actions.qml:392
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "밝기: %1"
 
-#: src/qml/Actions.qml:395
+#: src/qml/Actions.qml:397
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "밝기: 0"
 
-#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
+#: src/qml/Actions.qml:403 src/qml/Actions.qml:409
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "감마: %1"
 
-#: src/qml/Actions.qml:412
+#: src/qml/Actions.qml:414
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "감마: 0"
 
-#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "채도: %1"
 
-#: src/qml/Actions.qml:429
+#: src/qml/Actions.qml:431
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
@@ -923,14 +931,14 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:235
+#: src/qml/HProgressBar.qml:237
 #, fuzzy
 #| msgid "Skip Chapters"
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:243
+#: src/qml/HProgressBar.qml:245
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1112,7 +1120,7 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "도구 모음 표시"
 
-#: src/qml/MpvVideo.qml:91
+#: src/qml/MpvVideo.qml:90
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
@@ -2132,13 +2140,6 @@ msgstr "채도"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
-
-#: src/qml/VolumeSlider.qml:49 src/qml/VolumeSliderQt6.qml:49
-#, fuzzy
-#| msgid "Volume: %1"
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "음량: %1"
 
 #, fuzzy
 #~| msgid "Video pan y up"

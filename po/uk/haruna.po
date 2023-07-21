@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:46+0000\n"
+"POT-Creation-Date: 2023-07-21 00:48+0000\n"
 "PO-Revision-Date: 2023-07-14 08:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -534,7 +534,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Список відтворення порожній"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:375
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -601,52 +601,58 @@ msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Усування черезрядковості: %1"
 
-#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
+#: src/qml/Actions.qml:340 src/qml/Actions.qml:345
+#: src/qml/VolumeSliderQt6.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Гучність: %1"
+
+#: src/qml/Actions.qml:351 src/qml/Actions.qml:357
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Масштаб: %1"
 
-#: src/qml/Actions.qml:360
+#: src/qml/Actions.qml:362
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Масштаб: 0"
 
-#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
+#: src/qml/Actions.qml:369 src/qml/Actions.qml:375
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Контрастність: %1"
 
-#: src/qml/Actions.qml:378
+#: src/qml/Actions.qml:380
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Контрастність: 0"
 
-#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
+#: src/qml/Actions.qml:386 src/qml/Actions.qml:392
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Яскравість: %1"
 
-#: src/qml/Actions.qml:395
+#: src/qml/Actions.qml:397
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Яскравість: 0"
 
-#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
+#: src/qml/Actions.qml:403 src/qml/Actions.qml:409
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Гамма: %1"
 
-#: src/qml/Actions.qml:412
+#: src/qml/Actions.qml:414
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Гамма: 0"
 
-#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Насиченість: %1"
 
-#: src/qml/Actions.qml:429
+#: src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Насиченість: 0"
@@ -760,12 +766,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Звук"
 
-#: src/qml/HProgressBar.qml:235
+#: src/qml/HProgressBar.qml:237
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Пропустити розділи"
 
-#: src/qml/HProgressBar.qml:243
+#: src/qml/HProgressBar.qml:245
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -901,7 +907,7 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Показати панель інструментів"
 
-#: src/qml/MpvVideo.qml:91
+#: src/qml/MpvVideo.qml:90
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Пропущений розділ: %1"
@@ -1691,11 +1697,6 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
 "Клацніть середньою кнопкою миші на повзунках, щоб відновити типові значення"
-
-#: src/qml/VolumeSlider.qml:49 src/qml/VolumeSliderQt6.qml:49
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Гучність: %1"
 
 #~ msgctxt "@action"
 #~ msgid "Video pan y up"
