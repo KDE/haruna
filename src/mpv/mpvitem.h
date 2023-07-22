@@ -47,8 +47,6 @@ class MpvItem : public MpvAbstractItem
 
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     QString mediaTitle();
-    Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
-    QUrl currentUrl() const;
 
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     double position();
@@ -120,6 +118,9 @@ class MpvItem : public MpvAbstractItem
 public:
     explicit MpvItem(QQuickItem *parent = nullptr);
     ~MpvItem() = default;
+
+    Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
+    QUrl currentUrl() const;
 
     Q_INVOKABLE void loadFile(const QString &file);
     Q_INVOKABLE void userCommand(const QString &commandString);
