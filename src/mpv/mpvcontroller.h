@@ -74,6 +74,9 @@ public:
         AudioId,
         AudioClientName,
         AudioLanguage,
+        AudioFileAuto,
+        AudioPitchCorection,
+        AudioDisplay,
         SubtitleId,
         SubtitleLanguage,
         SubtitleFilePaths,
@@ -98,14 +101,18 @@ public:
         ABLoopB,
         YtdlFormat,
         ScriptOpts,
+        ReallyQuiet,
+        AccurateSeek,
+        OsdLevel,
+        UseTextOsd,
     };
-    Q_ENUM(Properties);
+    Q_ENUM(Properties)
 
     enum class AsyncIds {
         FinishedLoading,
         SavePosition,
     };
-    Q_ENUM(AsyncIds);
+    Q_ENUM(AsyncIds)
 
     /**
      * Set the given property as mpv_node converted from the QVariant argument.
@@ -179,6 +186,9 @@ private:
         {Properties::AudioId,                 QStringLiteral("aid")},
         {Properties::AudioClientName,         QStringLiteral("audio-client-name")},
         {Properties::AudioLanguage,           QStringLiteral("alang")},
+        {Properties::AudioFileAuto,           QStringLiteral("audio-file-auto")},
+        {Properties::AudioPitchCorection,     QStringLiteral("audio-pitch-correction")},
+        {Properties::AudioDisplay,            QStringLiteral("audio-display")},
         {Properties::SubtitleId,              QStringLiteral("sid")},
         {Properties::SubtitleLanguage,        QStringLiteral("slang")},
         {Properties::SubtitleFilePaths,       QStringLiteral("sub-file-paths")},
@@ -203,6 +213,10 @@ private:
         {Properties::ABLoopB,                 QStringLiteral("ab-loop-b")},
         {Properties::YtdlFormat,              QStringLiteral("ytdl-format")},
         {Properties::ScriptOpts,              QStringLiteral("script-opts")},
+        {Properties::ReallyQuiet,             QStringLiteral("really-quiet")},
+        {Properties::AccurateSeek,            QStringLiteral("hr-seek")},
+        {Properties::OsdLevel,                QStringLiteral("osd-level")},
+        {Properties::UseTextOsd,              QStringLiteral("use-text-osd")},
     };
     // clang-format on
 };

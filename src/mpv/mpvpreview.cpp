@@ -12,19 +12,19 @@ MpvPreview::MpvPreview()
 {
     mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
 
-    setProperty(QStringLiteral("mute"), true);
-    setProperty(QStringLiteral("pause"), true);
-    setProperty(QStringLiteral("really-quiet"), true);
+    setProperty(MpvController::Properties::Mute, true);
+    setProperty(MpvController::Properties::Pause, true);
+    setProperty(MpvController::Properties::ReallyQuiet, true);
 
-    setProperty(QStringLiteral("hwdec"), QStringLiteral("auto"));
-    setProperty(QStringLiteral("hr-seek"), GeneralSettings::accuratePreviewThumbnail());
-    setProperty(QStringLiteral("aid"), false);
-    setProperty(QStringLiteral("audio-file-auto"), false);
-    setProperty(QStringLiteral("sub-auto"), false);
-    setProperty(QStringLiteral("osd-level"), 0);
-    setProperty(QStringLiteral("audio-pitch-correction"), false);
-    setProperty(QStringLiteral("use-text-osd"), false);
-    setProperty(QStringLiteral("audio-display"), false);
+    setProperty(MpvController::Properties::HardwareDecoding, QStringLiteral("auto"));
+    setProperty(MpvController::Properties::AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
+    setProperty(MpvController::Properties::AudioId, false);
+    setProperty(MpvController::Properties::AudioFileAuto, false);
+    setProperty(MpvController::Properties::SubtitleAuto, false);
+    setProperty(MpvController::Properties::OsdLevel, 0);
+    setProperty(MpvController::Properties::AudioPitchCorection, false);
+    setProperty(MpvController::Properties::UseTextOsd, false);
+    setProperty(MpvController::Properties::AudioDisplay, false);
 
     connect(this, &MpvPreview::fileChanged, this, &MpvPreview::loadFile);
     connect(this, &MpvPreview::ready, this, &MpvPreview::loadFile);
@@ -78,7 +78,7 @@ void MpvPreview::setAccuratePreview(bool _accuratePreview)
         return;
     }
     m_accuratePreview = _accuratePreview;
-    setProperty(QStringLiteral("hr-seek"), _accuratePreview);
+    setProperty(MpvController::Properties::AccurateSeek, _accuratePreview);
     Q_EMIT accuratePreviewChanged();
 }
 
