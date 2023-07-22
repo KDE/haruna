@@ -141,6 +141,7 @@ void Application::setupCommandLineParser()
 
 void Application::registerQmlTypes()
 {
+    qmlRegisterType<MpvController>("org.kde.haruna", 1, 0, "Mpv");
     qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
     qmlRegisterType<MpvPreview>("org.kde.haruna", 1, 0, "MpvPreview");
     qRegisterMetaType<PlayListModel *>();

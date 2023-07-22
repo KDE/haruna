@@ -55,7 +55,7 @@ SettingsBasePage {
             function save() {
                 SubtitlesSettings.preferredLanguage = text
                 SubtitlesSettings.save()
-                mpv.setProperty("slang", text)
+                mpv.setProperty(Mpv.SubtitleLanguage, text)
             }
         }
 
@@ -87,8 +87,8 @@ SettingsBasePage {
             onCheckStateChanged: {
                 SubtitlesSettings.allowOnBlackBorders = checked
                 SubtitlesSettings.save()
-                mpv.setProperty("sub-use-margins", checked ? "yes" : "no")
-                mpv.setProperty("sub-ass-force-margins", checked ? "yes" : "no")
+                mpv.setProperty(Mpv.SubtitleUseMargins, checked ? "yes" : "no")
+                mpv.setProperty(Mpv.SubtitleAssForceMargins, checked ? "yes" : "no")
             }
 
             ToolTip {
@@ -119,7 +119,7 @@ SettingsBasePage {
                 onActivated: {
                     SubtitlesSettings.fontFamily = currentText
                     SubtitlesSettings.save()
-                    mpv.setProperty("sub-font", currentText)
+                    mpv.setProperty(Mpv.SubtitleFont, currentText)
                 }
 
                 Component.onCompleted: currentIndex = indexOfValue(SubtitlesSettings.fontFamily)
@@ -146,7 +146,7 @@ SettingsBasePage {
             onValueChanged: {
                 SubtitlesSettings.fontSize = value
                 SubtitlesSettings.save()
-                mpv.setProperty("sub-font-size", value)
+                mpv.setProperty(Mpv.SubtitleFontSize, value)
             }
         }
 
@@ -161,7 +161,7 @@ SettingsBasePage {
             onCheckedChanged: {
                 SubtitlesSettings.isBold = checked
                 SubtitlesSettings.save()
-                mpv.setProperty("sub-bold", checked)
+                mpv.setProperty(Mpv.SubtitleBold, checked)
             }
         }
 
@@ -173,7 +173,7 @@ SettingsBasePage {
             onCheckedChanged: {
                 SubtitlesSettings.isItalic = checked
                 SubtitlesSettings.save()
-                mpv.setProperty("sub-italic", checked)
+                mpv.setProperty(Mpv.SubtitleItalic, checked)
             }
         }
 
@@ -216,7 +216,7 @@ SettingsBasePage {
                     subtitleColorPicker.color = text
                     SubtitlesSettings.fontColor = text
                     SubtitlesSettings.save()
-                    mpv.setProperty("sub-color", text)
+                    mpv.setProperty(Mpv.SubtitleColor, text)
                 }
             }
 
@@ -268,7 +268,7 @@ SettingsBasePage {
                     shadowColorPicker.color = text
                     SubtitlesSettings.shadowColor = text
                     SubtitlesSettings.save()
-                    mpv.setProperty("sub-shadow-color", text)
+                    mpv.setProperty(Mpv.SubtitleShadowColor, text)
                 }
             }
 
@@ -295,7 +295,7 @@ SettingsBasePage {
             onValueChanged: {
                 SubtitlesSettings.shadowOffset = value
                 SubtitlesSettings.save()
-                mpv.setProperty("sub-shadow-offset", value)
+                mpv.setProperty(Mpv.SubtitleShadowOffset, value)
             }
 
             ToolTip {
@@ -341,7 +341,7 @@ SettingsBasePage {
                     borderColorPicker.color = text
                     SubtitlesSettings.borderColor = text
                     SubtitlesSettings.save()
-                    mpv.setProperty("sub-border-color", text)
+                    mpv.setProperty(Mpv.SubtitleBorderColor, text)
                 }
             }
 
@@ -368,7 +368,7 @@ SettingsBasePage {
             onValueChanged: {
                 SubtitlesSettings.borderSize = value
                 SubtitlesSettings.save()
-                mpv.setProperty("sub-border-size", value)
+                mpv.setProperty(Mpv.SubtitleBorderSize, value)
             }
 
             ToolTip {

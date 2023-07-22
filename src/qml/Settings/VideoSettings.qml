@@ -103,7 +103,7 @@ SettingsBasePage {
             onActivated: {
                 VideoSettings.screenshotFormat = model.get(index).value
                 VideoSettings.save()
-                mpv.setProperty("screenshot-format", VideoSettings.screenshotFormat)
+                mpv.setProperty(Mpv.ScreenshotFormat, VideoSettings.screenshotFormat)
             }
 
             Component.onCompleted: {
@@ -145,7 +145,7 @@ SettingsBasePage {
             function save() {
                 VideoSettings.screenshotTemplate = text
                 VideoSettings.save()
-                mpv.setProperty("screenshot-template", VideoSettings.screenshotTemplate)
+                mpv.setProperty(Mpv.ScreenshotTemplate, VideoSettings.screenshotTemplate)
             }
         }
 
@@ -168,7 +168,7 @@ SettingsBasePage {
             id: contrastSlider
 
             value: mpv.getProperty("contrast")
-            onSliderValueChanged: mpv.setProperty("contrast", value.toFixed(0))
+            onSliderValueChanged: mpv.setProperty(Mpv.Contrast, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -185,7 +185,7 @@ SettingsBasePage {
             id: brightnessSlider
 
             value: mpv.getProperty("brightness")
-            onSliderValueChanged: mpv.setProperty("brightness", value.toFixed(0))
+            onSliderValueChanged: mpv.setProperty(Mpv.Brightness, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -202,7 +202,7 @@ SettingsBasePage {
             id: gammaSlider
 
             value: mpv.getProperty("gamma")
-            onSliderValueChanged:mpv.setProperty("gamma", value.toFixed(0))
+            onSliderValueChanged:mpv.setProperty(Mpv.Gamma, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -219,7 +219,7 @@ SettingsBasePage {
             id: saturationSlider
 
             value: mpv.getProperty("saturation")
-            onSliderValueChanged: mpv.setProperty("saturation", value.toFixed(0))
+            onSliderValueChanged: mpv.setProperty(Mpv.Saturation, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }

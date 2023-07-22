@@ -48,7 +48,7 @@ SettingsBasePage {
             function save() {
                 AudioSettings.preferredLanguage = text
                 AudioSettings.save()
-                mpv.setProperty("alang", text)
+                mpv.setProperty(Mpv.AudioLanguage, text)
             }
         }
 

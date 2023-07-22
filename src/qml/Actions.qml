@@ -125,18 +125,18 @@ Item {
 
         onPlaybackSpeedIncreaseAction: {
             const speed = mpv.getProperty("speed") + 0.1
-            mpv.setProperty("speed", speed)
+            mpv.setProperty(Mpv.Speed, speed)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         onPlaybackSpeedDecreaseAction: {
             const speed = mpv.getProperty("speed") - 0.1
-            mpv.setProperty("speed", speed)
+            mpv.setProperty(Mpv.Speed, speed)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         onPlaybackSpeedResetAction: {
-            mpv.setProperty("speed", 1.0)
+            mpv.setProperty(Mpv.Speed, 1.0)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", 1.0))
         }
 
@@ -212,16 +212,16 @@ Item {
             var bIsSet = b !== "no"
 
             if (!aIsSet && !bIsSet) {
-                mpv.setProperty("ab-loop-a", mpv.position)
+                mpv.setProperty(Mpv.ABLoopA, mpv.position)
                 footer.progressBar.loopIndicator.startPosition = mpv.position
                 osd.message(i18nc("@info:tooltip", "Loop start: %1", app.formatTime(mpv.position)))
             } else if (aIsSet && !bIsSet) {
-                mpv.setProperty("ab-loop-b", mpv.position)
+                mpv.setProperty(Mpv.ABLoopB, mpv.position)
                 footer.progressBar.loopIndicator.endPosition = mpv.position
                 osd.message(i18nc("@info:tooltip", "Loop: %1 - %2", app.formatTime(a), app.formatTime(mpv.position)))
             } else if (aIsSet && bIsSet) {
-                mpv.setProperty("ab-loop-a", "no")
-                mpv.setProperty("ab-loop-b", "no")
+                mpv.setProperty(ABLoopA, "no")
+                mpv.setProperty(ABLoopB, "no")
                 footer.progressBar.loopIndicator.startPosition = -1
                 footer.progressBar.loopIndicator.endPosition = -1
                 osd.message(i18nc("@info:tooltip", "Loop cleared"))
@@ -232,20 +232,20 @@ Item {
 
         onSubtitleQuickenAction: {
             const delay = mpv.getProperty("sub-delay") - 0.1
-            mpv.setProperty("sub-delay", delay)
+            mpv.setProperty(Mpv.SubtitleDelay, delay)
             osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         onSubtitleDelayAction: {
             const delay = mpv.getProperty("sub-delay") + 0.1
-            mpv.setProperty("sub-delay", delay)
+            mpv.setProperty(Mpv.SubtitleDelay, delay)
             osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         onSubtitleToggleAction: {
             const visible = mpv.getProperty("sub-visibility")
             const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles on")
-            mpv.setProperty("sub-visibility", !visible)
+            mpv.setProperty(Mpv.SubtitleVisibility, !visible)
             osd.message(message)
         }
 
@@ -275,13 +275,13 @@ Item {
 
         onSubtitleIncreaseFontSizeAction: {
             const subScale = mpv.getProperty("sub-scale") + 0.1
-            mpv.setProperty("sub-scale", subScale)
+            mpv.setProperty(Mpv.SubtitleScale, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
         onSubtitleDecreaseFontSizeAction: {
             const subScale = mpv.getProperty("sub-scale") - 0.1
-            mpv.setProperty("sub-scale", subScale)
+            mpv.setProperty(Mpv.SubtitleDelay, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
@@ -291,7 +291,7 @@ Item {
 
         onToggleDeinterlacingAction: {
             const deinterlaced = !mpv.getProperty("deinterlace")
-            mpv.setProperty("deinterlace", deinterlaced)
+            mpv.setProperty(Mpv.Deinterlace, deinterlaced)
             osd.message(i18nc("@info:tooltip", "Deinterlace: %1", deinterlaced))
         }
 
@@ -317,22 +317,22 @@ Item {
 
         onVideoPanXLeftAction: {
             const pan = mpv.getProperty("video-pan-x") - 0.01
-            mpv.setProperty("video-pan-x", pan)
+            mpv.setProperty(Mpv.VideoPanX, pan)
         }
 
         onVideoPanXRightAction: {
             const pan = mpv.getProperty("video-pan-x") + 0.01
-            mpv.setProperty("video-pan-x", pan)
+            mpv.setProperty(Mpv.VideoPanX, pan)
         }
 
         onVideoPanYUpAction: {
             const pan = mpv.getProperty("video-pan-y") - 0.01
-            mpv.setProperty("video-pan-y", pan)
+            mpv.setProperty(Mpv.VideoPanY, pan)
         }
 
         onVideoPanYDownAction: {
             const pan = mpv.getProperty("video-pan-y") + 0.01
-            mpv.setProperty("video-pan-y", pan)
+            mpv.setProperty(Mpv.VideoPanY, pan)
         }
 
         onVolumeUpAction: {
@@ -347,87 +347,87 @@ Item {
 
         onZoomInAction: {
             const zoom = mpv.getProperty("video-zoom") + 0.1
-            mpv.setProperty("video-zoom", zoom)
+            mpv.setProperty(Mpv.VideoZoom, zoom)
             osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
 
         onZoomOutAction: {
             const zoom = mpv.getProperty("video-zoom") - 0.1
-            mpv.setProperty("video-zoom", zoom)
+            mpv.setProperty(Mpv.VideoZoom, zoom)
             osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
 
         onZoomResetAction: {
-            mpv.setProperty("video-zoom", 0)
+            mpv.setProperty(Mpv.VideoZoom, 0)
             osd.message(i18nc("@info:tooltip", "Zoom: 0"))
         }
 
 
         onContrastUpAction: {
             const contrast = parseInt(mpv.getProperty("contrast")) + 1
-            mpv.setProperty("contrast", `${contrast}`)
+            mpv.setProperty(Mpv.Contrast, `${contrast}`)
             osd.message(i18nc("@info:tooltip", "Contrast: %1", contrast))
         }
 
         onContrastDownAction: {
             const contrast = parseInt(mpv.getProperty("contrast")) - 1
-            mpv.setProperty("contrast", `${contrast}`)
+            mpv.setProperty(Mpv.Contrast, `${contrast}`)
             osd.message(i18nc("@info:tooltip", "Contrast: %1", contrast))
         }
 
         onContrastResetAction: {
-            mpv.setProperty("contrast", 0)
+            mpv.setProperty(Mpv.Contrast, 0)
             osd.message(i18nc("@info:tooltip", "Contrast: 0"))
         }
 
         onBrightnessUpAction: {
             const brightness = parseInt(mpv.getProperty("brightness")) + 1
-            mpv.setProperty("brightness", `${brightness}`)
+            mpv.setProperty(Mpv.Brightness, `${brightness}`)
             osd.message(i18nc("@info:tooltip", "Brightness: %1", brightness))
         }
 
         onBrightnessDownAction: {
             const brightness = parseInt(mpv.getProperty("brightness")) - 1
-            mpv.setProperty("brightness", `${brightness}`)
+            mpv.setProperty(Mpv.Brightness, `${brightness}`)
             osd.message(i18nc("@info:tooltip", "Brightness: %1", brightness))
         }
 
         onBrightnessResetAction: {
-            mpv.setProperty("brightness", 0)
+            mpv.setProperty(Mpv.Brightness, 0)
             osd.message(i18nc("@info:tooltip", "Brightness: 0"))
         }
 
         onGammaUpAction: {
             const gamma = parseInt(mpv.getProperty("gamma")) + 1
-            mpv.setProperty("gamma", `${gamma}`)
+            mpv.setProperty(Mpv.Gamma, `${gamma}`)
             osd.message(i18nc("@info:tooltip", "Gamma: %1", gamma))
         }
 
         onGammaDownAction: {
             const gamma = parseInt(mpv.getProperty("gamma")) - 1
-            mpv.setProperty("gamma", `${gamma}`)
+            mpv.setProperty(Mpv.Gamma, `${gamma}`)
             osd.message(i18nc("@info:tooltip", "Gamma: %1", gamma))
         }
 
         onGammaResetAction: {
-            mpv.setProperty("gamma", 0)
+            mpv.setProperty(Mpv.Gamma, 0)
             osd.message(i18nc("@info:tooltip", "Gamma: 0"))
         }
 
         onSaturationUpAction: {
             const saturation = parseInt(mpv.getProperty("saturation")) + 1
-            mpv.setProperty("saturation", `${saturation}`)
+            mpv.setProperty(Mpv.Saturation, `${saturation}`)
             osd.message(i18nc("@info:tooltip", "Saturation: %1", saturation))
         }
 
         onSaturationDownAction: {
             const saturation = parseInt(mpv.getProperty("saturation")) - 1
-            mpv.setProperty("saturation", `${saturation}`)
+            mpv.setProperty(Mpv.Saturation, `${saturation}`)
             osd.message(i18nc("@info:tooltip", "Saturation: %1", saturation))
         }
 
         onSaturationResetAction: {
-            mpv.setProperty("saturation", 0)
+            mpv.setProperty(Mpv.Saturation, 0)
             osd.message(i18nc("@info:tooltip", "Saturation: 0"))
         }
     }
