@@ -113,8 +113,8 @@ QString MediaPlayer2Player::PlaybackStatus()
     if (!m_mpv) {
         return QString();
     }
-    bool isPaused = m_mpv->getProperty(QStringLiteral("pause")).toBool();
-    int position = m_mpv->getProperty(QStringLiteral("time-pos")).toInt();
+    bool isPaused = m_mpv->getProperty(MpvController::Properties::Pause).toBool();
+    int position = m_mpv->getProperty(MpvController::Properties::Position).toInt();
 
     return isPaused && position == 0 ? QStringLiteral("Stopped") : (isPaused ? QStringLiteral("Paused") : QStringLiteral("Playing"));
 }
@@ -125,15 +125,15 @@ QVariantMap MediaPlayer2Player::Metadata()
         return QVariantMap();
     }
     QVariantMap metadata;
-    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty(QStringLiteral("duration")).toDouble() * 1000 * 1000);
+    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty(MpvController::Properties::Duration).toDouble() * 1000 * 1000);
     metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
 
-    auto mpvMediaTitle = m_mpv->getProperty(QStringLiteral("media-title")).toString();
-    auto mpvFilename = m_mpv->getProperty(QStringLiteral("filename")).toString();
-    auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvMediaTitle;
+    auto mpvMediaTitle = m_mpv->getProperty(MpvController::Properties::MediaTitle).toString();
+    auto mpvFilename = m_mpv->currentUrl().fileName();
+    auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvFilename;
     metadata.insert(QStringLiteral("xesam:title"), title);
 
-    auto path = m_mpv->getProperty(QStringLiteral("path")).toString();
+    auto path = m_mpv->currentUrl().toLocalFile();
 
     metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(path));
 
@@ -149,7 +149,7 @@ double MediaPlayer2Player::Volume()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty(QStringLiteral("volume")).toDouble() / 100;
+    return m_mpv->getProperty(MpvController::Properties::Volume).toDouble() / 100;
 }
 
 qlonglong MediaPlayer2Player::Position()
@@ -157,7 +157,7 @@ qlonglong MediaPlayer2Player::Position()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty(QStringLiteral("time-pos")).toDouble() * 1000 * 1000;
+    return m_mpv->getProperty(MpvController::Properties::Position).toDouble() * 1000 * 1000;
 }
 
 bool MediaPlayer2Player::CanGoNext()

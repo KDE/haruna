@@ -44,13 +44,13 @@ Item {
         }
 
         onAudioCycleUpAction: {
-            const tracks = mpv.getProperty("track-list")
+            const tracks = mpv.getProperty(Mpv.TrackList)
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
 
             if (audioTracksCount > 1) {
                 mpv.synchronousCommand(["cycle", "aid", "up"])
-                const currentTrackId = mpv.getProperty("aid")
+                const currentTrackId = mpv.getProperty(Mpv.AudioId)
 
                 if (currentTrackId === false) {
                     actionsModel.signalEmitter("audioCycleUpAction")
@@ -62,13 +62,13 @@ Item {
         }
 
         onAudioCycleDownAction: {
-            const tracks = mpv.getProperty("track-list")
+            const tracks = mpv.getProperty(Mpv.TrackList)
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
 
             if (audioTracksCount > 1) {
                 mpv.synchronousCommand(["cycle", "aid", "down"])
-                const currentTrackId = mpv.getProperty("aid")
+                const currentTrackId = mpv.getProperty(Mpv.AudioId)
 
                 if (currentTrackId === false) {
                     actionsModel.signalEmitter("audioCycleDownAction")
@@ -124,13 +124,13 @@ Item {
         }
 
         onPlaybackSpeedIncreaseAction: {
-            const speed = mpv.getProperty("speed") + 0.1
+            const speed = mpv.getProperty(Mpv.Speed) + 0.1
             mpv.setProperty(Mpv.Speed, speed)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         onPlaybackSpeedDecreaseAction: {
-            const speed = mpv.getProperty("speed") - 0.1
+            const speed = mpv.getProperty(Mpv.Speed) - 0.1
             mpv.setProperty(Mpv.Speed, speed)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
@@ -169,8 +169,8 @@ Item {
         onSeekBackwardBigAction: mpv.command(["seek", -GeneralSettings.seekBigStep, "exact"])
 
         onSeekNextChapterAction: {
-            const chapters = mpv.getProperty("chapter-list")
-            const currentChapter = mpv.getProperty("chapter")
+            const chapters = mpv.getProperty(Mpv.ChapterList)
+            const currentChapter = mpv.getProperty(Mpv.Chapter)
             const nextChapter = currentChapter + 1
             if (nextChapter === chapters.length) {
                 actionsModel.signalEmitter("playNextAction")
@@ -182,7 +182,7 @@ Item {
         onSeekPreviousChapterAction: mpv.command(["add", "chapter", "-1"])
 
         onSeekNextSubtitleAction: {
-            if (mpv.getProperty("sid") !== false) {
+            if (mpv.getProperty(Mpv.SubtitleId) !== false) {
                 mpv.command(["sub-seek", "1"])
             } else {
                 actionsModel.signalEmitter("seekForwardSmallAction")
@@ -190,7 +190,7 @@ Item {
         }
 
         onSeekPreviousSubtitleAction: {
-            if (mpv.getProperty("sid") !== false) {
+            if (mpv.getProperty(Mpv.SubtitleId) !== false) {
                 mpv.command(["sub-seek", "-1"])
             } else {
                 actionsModel.signalEmitter("seekBackwardSmallAction")
@@ -205,8 +205,8 @@ Item {
         }
 
         onSetLoopAction: {
-            var a = mpv.getProperty("ab-loop-a")
-            var b = mpv.getProperty("ab-loop-b")
+            var a = mpv.getProperty(Mpv.ABLoopA)
+            var b = mpv.getProperty(Mpv.ABLoopB)
 
             var aIsSet = a !== "no"
             var bIsSet = b !== "no"
@@ -231,19 +231,19 @@ Item {
         onScreenshotAction: mpv.command(["screenshot"])
 
         onSubtitleQuickenAction: {
-            const delay = mpv.getProperty("sub-delay") - 0.1
+            const delay = mpv.getProperty(Mpv.SubtitleDelay) - 0.1
             mpv.setProperty(Mpv.SubtitleDelay, delay)
             osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         onSubtitleDelayAction: {
-            const delay = mpv.getProperty("sub-delay") + 0.1
+            const delay = mpv.getProperty(Mpv.SubtitleDelay) + 0.1
             mpv.setProperty(Mpv.SubtitleDelay, delay)
             osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         onSubtitleToggleAction: {
-            const visible = mpv.getProperty("sub-visibility")
+            const visible = mpv.getProperty(Mpv.SubtitleVisibility)
             const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles on")
             mpv.setProperty(Mpv.SubtitleVisibility, !visible)
             osd.message(message)
@@ -251,11 +251,11 @@ Item {
 
         onSubtitleCycleUpAction: {
             mpv.synchronousCommand(["cycle", "sid", "up"])
-            const currentTrackId = mpv.getProperty("sid")
+            const currentTrackId = mpv.getProperty(Mpv.SubtitleId)
             if (currentTrackId === false) {
                 osd.message(i18nc("@info:tooltip", "Subtitle: None"))
             } else {
-                const tracks = mpv.getProperty("track-list")
+                const tracks = mpv.getProperty(Mpv.TrackList)
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
                 osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
             }
@@ -263,24 +263,24 @@ Item {
 
         onSubtitleCycleDownAction: {
             mpv.synchronousCommand(["cycle", "sid", "down"])
-            const currentTrackId = mpv.getProperty("sid")
+            const currentTrackId = mpv.getProperty(Mpv.SubtitleId)
             if (currentTrackId === false) {
                 osd.message(i18nc("@info:tooltip", "Subtitle: None"))
             } else {
-                const tracks = mpv.getProperty("track-list")
+                const tracks = mpv.getProperty(Mpv.TrackList)
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
                 osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
         onSubtitleIncreaseFontSizeAction: {
-            const subScale = mpv.getProperty("sub-scale") + 0.1
+            const subScale = mpv.getProperty(Mpv.SubtitleScale) + 0.1
             mpv.setProperty(Mpv.SubtitleScale, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
         onSubtitleDecreaseFontSizeAction: {
-            const subScale = mpv.getProperty("sub-scale") - 0.1
+            const subScale = mpv.getProperty(Mpv.SubtitleScale) - 0.1
             mpv.setProperty(Mpv.SubtitleDelay, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
@@ -290,7 +290,7 @@ Item {
         onSubtitleMoveDownAction: mpv.command(["add", "sub-pos", "+1"])
 
         onToggleDeinterlacingAction: {
-            const deinterlaced = !mpv.getProperty("deinterlace")
+            const deinterlaced = !mpv.getProperty(Mpv.Deinterlace)
             mpv.setProperty(Mpv.Deinterlace, deinterlaced)
             osd.message(i18nc("@info:tooltip", "Deinterlace: %1", deinterlaced))
         }
@@ -316,22 +316,22 @@ Item {
         }
 
         onVideoPanXLeftAction: {
-            const pan = mpv.getProperty("video-pan-x") - 0.01
+            const pan = mpv.getProperty(Mpv.VideoPanX) - 0.01
             mpv.setProperty(Mpv.VideoPanX, pan)
         }
 
         onVideoPanXRightAction: {
-            const pan = mpv.getProperty("video-pan-x") + 0.01
+            const pan = mpv.getProperty(Mpv.VideoPanX) + 0.01
             mpv.setProperty(Mpv.VideoPanX, pan)
         }
 
         onVideoPanYUpAction: {
-            const pan = mpv.getProperty("video-pan-y") - 0.01
+            const pan = mpv.getProperty(Mpv.VideoPanX) - 0.01
             mpv.setProperty(Mpv.VideoPanY, pan)
         }
 
         onVideoPanYDownAction: {
-            const pan = mpv.getProperty("video-pan-y") + 0.01
+            const pan = mpv.getProperty(Mpv.VideoPanX) + 0.01
             mpv.setProperty(Mpv.VideoPanY, pan)
         }
 
@@ -346,13 +346,13 @@ Item {
         }
 
         onZoomInAction: {
-            const zoom = mpv.getProperty("video-zoom") + 0.1
+            const zoom = mpv.getProperty(Mpv.VideoZoom) + 0.1
             mpv.setProperty(Mpv.VideoZoom, zoom)
             osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
 
         onZoomOutAction: {
-            const zoom = mpv.getProperty("video-zoom") - 0.1
+            const zoom = mpv.getProperty(Mpv.VideoZoom) - 0.1
             mpv.setProperty(Mpv.VideoZoom, zoom)
             osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
@@ -364,13 +364,13 @@ Item {
 
 
         onContrastUpAction: {
-            const contrast = parseInt(mpv.getProperty("contrast")) + 1
+            const contrast = parseInt(mpv.getProperty(Mpv.Contrast)) + 1
             mpv.setProperty(Mpv.Contrast, `${contrast}`)
             osd.message(i18nc("@info:tooltip", "Contrast: %1", contrast))
         }
 
         onContrastDownAction: {
-            const contrast = parseInt(mpv.getProperty("contrast")) - 1
+            const contrast = parseInt(mpv.getProperty(Mpv.Contrast)) - 1
             mpv.setProperty(Mpv.Contrast, `${contrast}`)
             osd.message(i18nc("@info:tooltip", "Contrast: %1", contrast))
         }
@@ -381,13 +381,13 @@ Item {
         }
 
         onBrightnessUpAction: {
-            const brightness = parseInt(mpv.getProperty("brightness")) + 1
+            const brightness = parseInt(mpv.getProperty(Mpv.Brightness)) + 1
             mpv.setProperty(Mpv.Brightness, `${brightness}`)
             osd.message(i18nc("@info:tooltip", "Brightness: %1", brightness))
         }
 
         onBrightnessDownAction: {
-            const brightness = parseInt(mpv.getProperty("brightness")) - 1
+            const brightness = parseInt(mpv.getProperty(Mpv.Brightness)) - 1
             mpv.setProperty(Mpv.Brightness, `${brightness}`)
             osd.message(i18nc("@info:tooltip", "Brightness: %1", brightness))
         }
@@ -398,13 +398,13 @@ Item {
         }
 
         onGammaUpAction: {
-            const gamma = parseInt(mpv.getProperty("gamma")) + 1
+            const gamma = parseInt(mpv.getProperty(Mpv.Gamma)) + 1
             mpv.setProperty(Mpv.Gamma, `${gamma}`)
             osd.message(i18nc("@info:tooltip", "Gamma: %1", gamma))
         }
 
         onGammaDownAction: {
-            const gamma = parseInt(mpv.getProperty("gamma")) - 1
+            const gamma = parseInt(mpv.getProperty(Mpv.Gamma)) - 1
             mpv.setProperty(Mpv.Gamma, `${gamma}`)
             osd.message(i18nc("@info:tooltip", "Gamma: %1", gamma))
         }
@@ -415,13 +415,13 @@ Item {
         }
 
         onSaturationUpAction: {
-            const saturation = parseInt(mpv.getProperty("saturation")) + 1
+            const saturation = parseInt(mpv.getProperty(Mpv.Saturation)) + 1
             mpv.setProperty(Mpv.Saturation, `${saturation}`)
             osd.message(i18nc("@info:tooltip", "Saturation: %1", saturation))
         }
 
         onSaturationDownAction: {
-            const saturation = parseInt(mpv.getProperty("saturation")) - 1
+            const saturation = parseInt(mpv.getProperty(Mpv.Saturation)) - 1
             mpv.setProperty(Mpv.Saturation, `${saturation}`)
             osd.message(i18nc("@info:tooltip", "Saturation: %1", saturation))
         }

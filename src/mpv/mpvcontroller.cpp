@@ -142,6 +142,12 @@ QVariant MpvController::getProperty(const QString &name)
     return node_to_variant(&node);
 }
 
+QVariant MpvController::getProperty(Properties property)
+{
+    auto name = m_properties.value(property);
+    return getProperty(name);
+}
+
 int MpvController::getPropertyAsync(Properties property, AsyncIds id)
 {
     QString name = m_properties.value(property);

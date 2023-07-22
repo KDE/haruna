@@ -180,7 +180,7 @@ void MpvItem::setupConnections()
     });
 
     connect(this, &MpvItem::fileLoaded, this, [=]() {
-        if (!getProperty(QStringLiteral("vid")).toBool()) {
+        if (!getProperty(MpvController::Properties::VideoId).toBool()) {
             command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
 
@@ -375,7 +375,7 @@ void MpvItem::loadTracks()
     none->setTitle(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"));
     m_subtitleTracks.insert(0, none);
 
-    const QList<QVariant> tracks = getProperty(QStringLiteral("track-list")).toList();
+    const QList<QVariant> tracks = getProperty(MpvController::Properties::TrackList).toList();
     int subIndex = 1;
     int audioIndex = 0;
     for (const auto &track : tracks) {
@@ -436,7 +436,7 @@ void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds 
 {
     switch (static_cast<MpvController::AsyncIds>(id)) {
     case MpvController::AsyncIds::SavePosition:
-        auto hash = md5(getProperty(QStringLiteral("path")).toString());
+        auto hash = md5(currentUrl().toLocalFile());
         auto watchLaterConfig = m_watchLaterPath.append(hash);
         Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), value);
         break;
@@ -466,7 +466,8 @@ double MpvItem::loadTimePosition()
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
     // but there can be cases when there is a saved position for files lower than minDurationToSavePosition()
     // when minDurationToSavePosition() was increased after position was already saved
-    if (getProperty(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+    auto duration = getProperty(MpvController::Properties::Duration).toInt();
+    if (duration < PlaybackSettings::minDurationToSavePosition() * 60) {
         return 0;
     }
 

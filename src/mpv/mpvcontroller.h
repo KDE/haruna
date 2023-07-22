@@ -144,6 +144,7 @@ public:
      * @return the property value, or an ErrorReturn with the error code
      */
     Q_INVOKABLE QVariant getProperty(const QString &name);
+    Q_INVOKABLE QVariant getProperty(Properties property);
     Q_INVOKABLE int getPropertyAsync(Properties property, AsyncIds id);
 
     /**
