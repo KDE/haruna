@@ -472,7 +472,7 @@ double MpvItem::loadTimePosition()
     }
 
     auto hash = md5(currentUrl().toLocalFile());
-    auto watchLaterConfig = m_watchLaterPath.append(hash);
+    auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
     KConfig config(watchLaterConfig);
     auto pos = config.group("").readEntry("TimePosition", QString::number(0)).toDouble();
 
@@ -482,7 +482,7 @@ double MpvItem::loadTimePosition()
 void MpvItem::resetTimePosition()
 {
     auto hash = md5(currentUrl().toLocalFile());
-    auto watchLaterConfig = m_watchLaterPath.append(hash);
+    auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
     QFile f(watchLaterConfig);
 
     if (f.exists()) {
