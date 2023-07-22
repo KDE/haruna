@@ -66,9 +66,10 @@ SettingsBasePage {
                 AudioSettings.preferredTrack = value
                 AudioSettings.save()
                 if (value === 0) {
-                    mpv.setProperty("aid", "auto")
+                    mpv.audioId = "auto"
+
                 } else {
-                    mpv.setProperty("aid", value)
+                    mpv.audioId = value
                 }
             }
         }

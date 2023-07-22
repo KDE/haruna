@@ -73,9 +73,9 @@ SettingsBasePage {
                 SubtitlesSettings.preferredTrack = value
                 SubtitlesSettings.save()
                 if (value === 0) {
-                    mpv.setProperty("sid", "auto")
+                    mpv.subtitleId = "auto"
                 } else {
-                    mpv.setProperty("sid", value)
+                    mpv.subtitleId = value
                 }
             }
         }

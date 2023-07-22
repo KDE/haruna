@@ -187,7 +187,7 @@ Slider {
                     hoverEnabled: true
                     onEntered: chapterTitleToolTip.visible = true
                     onExited: chapterTitleToolTip.visible = false
-                    onClicked: mpv.setProperty("chapter", index)
+                    onClicked: mpv.chapter = index
                 }
             }
         }

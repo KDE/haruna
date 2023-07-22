@@ -31,15 +31,15 @@ MpvItem {
     volume: GeneralSettings.volume
 
     onSetSubtitle: {
-        setProperty("sid", id)
+        subtitleId = id
     }
 
     onSetSecondarySubtitle: {
-        setProperty("secondary-sid", id)
+        secondarySubtitleId = id
     }
 
     onSetAudio: {
-        setProperty("aid", id)
+        audioId = id
     }
 
     onReady: {
