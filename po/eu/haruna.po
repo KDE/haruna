@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-21 00:48+0000\n"
-"PO-Revision-Date: 2023-02-27 22:05+0100\n"
+"PO-Revision-Date: 2023-07-21 12:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -167,9 +167,7 @@ msgid "Open File"
 msgstr "Ireki fitxategia"
 
 #: src/models/actionsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add external subtitle…"
+#, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "Gehitu kanpoko azpidatzia..."
@@ -181,25 +179,19 @@ msgid "Open Url"
 msgstr "Ireki URL"
 
 #: src/models/actionsmodel.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback speed increase"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "Atzera-jotze abiadura handitzea"
 
 #: src/models/actionsmodel.cpp:130
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback speed decrease"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "Atzera-jotze abiadura gutxitzea"
 
 #: src/models/actionsmodel.cpp:137
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback speed reset"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "Atzera-jotze abiadura berrezartzea"
@@ -397,36 +389,28 @@ msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
 #: src/models/actionsmodel.cpp:368
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video pan x left"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
-msgstr "Bideo panorama x ezkerrera"
+msgstr "Bideo ezkerrera eraman"
 
 #: src/models/actionsmodel.cpp:375
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video pan x right"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
-msgstr "Bideo panorama x eskuinera"
+msgstr "Bideo eskuinera eraman"
 
 #: src/models/actionsmodel.cpp:382
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
-msgstr "Azpidatzia gora eraman"
+msgstr "Bideoa gora eraman"
 
 #: src/models/actionsmodel.cpp:389
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
-msgstr "Azpidatzia behera eraman"
+msgstr "Bideoa behera eraman"
 
 #: src/models/actionsmodel.cpp:396
 #, kde-format
@@ -557,7 +541,7 @@ msgstr "Jotze-zerrenda hutsik dago"
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
-msgstr ""
+msgstr "Bat ere ez"
 
 #: src/qml/Actions.qml:60 src/qml/Actions.qml:78
 msgctxt "@info:tooltip"
@@ -1208,22 +1192,22 @@ msgstr "Interfazea"
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr ""
+msgstr "Aurreikuspegi koadro-txikia"
 
 #: src/qml/Settings/GeneralSettings.qml:127
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "Erakutsi aurreikuspegi koadro-txikia"
 
 #: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Erabili aurreikuspegi zehatza"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Aurreikuspegi zehatz bat sortzea motela da"
 
 #: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@option:check"
@@ -1303,8 +1287,6 @@ msgstr ""
 "berrekiten da lehengoratzean."
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy
-#| msgid "Resume playback"
 msgctxt "@label:spinbox"
 msgid "Resume playback"
 msgstr "Berrekin atzera-jotzea"
