@@ -68,9 +68,6 @@ MpvItem {
 
     onFileLoaded: {
         loadingIndicatorParent.visible = false
-
-        header.audioTracks = getProperty(Mpv.TrackList).filter(track => track["type"] === "audio")
-        header.subtitleTracks = getProperty(Mpv.TrackList).filter(track => track["type"] === "sub")
     }
 
     onChapterChanged: {

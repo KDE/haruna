@@ -17,9 +17,6 @@ import "Menus"
 ToolBar {
     id: root
 
-    property var audioTracks
-    property var subtitleTracks
-
     position: ToolBar.Header
     visible: !window.isFullScreen() && GeneralSettings.showHeader
 
