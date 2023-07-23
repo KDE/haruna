@@ -60,7 +60,8 @@ MpvItem {
     }
 
     onFileStarted: {
-        if (typeof getProperty("path") === "string" && getProperty("path").startsWith("http")) {
+        const url = currentUrl.toString()
+        if (typeof url === "string" && url.startsWith("http")) {
             loadingIndicatorParent.visible = true
         }
     }
@@ -68,8 +69,8 @@ MpvItem {
     onFileLoaded: {
         loadingIndicatorParent.visible = false
 
-        header.audioTracks = getProperty("track-list").filter(track => track["type"] === "audio")
-        header.subtitleTracks = getProperty("track-list").filter(track => track["type"] === "sub")
+        header.audioTracks = getProperty(Mpv.TrackList).filter(track => track["type"] === "audio")
+        header.subtitleTracks = getProperty(Mpv.TrackList).filter(track => track["type"] === "sub")
     }
 
     onChapterChanged: {
@@ -77,7 +78,7 @@ MpvItem {
             return
         }
 
-        const chapters = getProperty("chapter-list")
+        const chapters = getProperty(Mpv.ChapterList)
         const chaptersToSkip = PlaybackSettings.chaptersToSkip
         if (chapters.length === 0 || chaptersToSkip === "") {
             return

@@ -167,7 +167,7 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: contrastSlider
 
-            value: mpv.getProperty("contrast")
+            value: mpv.getProperty(Mpv.Contrast)
             onSliderValueChanged: mpv.setProperty(Mpv.Contrast, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -184,7 +184,7 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: brightnessSlider
 
-            value: mpv.getProperty("brightness")
+            value: mpv.getProperty(Mpv.Brightness)
             onSliderValueChanged: mpv.setProperty(Mpv.Brightness, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -201,7 +201,7 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: gammaSlider
 
-            value: mpv.getProperty("gamma")
+            value: mpv.getProperty(Mpv.Gamma)
             onSliderValueChanged:mpv.setProperty(Mpv.Gamma, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -218,7 +218,7 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: saturationSlider
 
-            value: mpv.getProperty("saturation")
+            value: mpv.getProperty(Mpv.Saturation)
             onSliderValueChanged: mpv.setProperty(Mpv.Saturation, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
