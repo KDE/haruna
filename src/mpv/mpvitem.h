@@ -91,6 +91,10 @@ class MpvItem : public MpvAbstractItem
     int volume();
     void setVolume(int value);
 
+    Q_PROPERTY(int volumeMax READ volumeMax WRITE setVolumeMax NOTIFY volumeMaxChanged)
+    int volumeMax();
+    void setVolumeMax(int value);
+
     Q_PROPERTY(int chapter READ chapter WRITE setChapter NOTIFY chapterChanged)
     int chapter();
     void setChapter(int value);
@@ -145,6 +149,7 @@ Q_SIGNALS:
     void pauseChanged();
     void muteChanged();
     void volumeChanged();
+    void volumeMaxChanged();
     void chapterChanged();
     void chapterListChanged();
     void audioIdChanged();

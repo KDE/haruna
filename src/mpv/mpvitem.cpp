@@ -58,6 +58,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     mpv_observe_property(m_mpv, 0, "duration", MPV_FORMAT_DOUBLE);
     mpv_observe_property(m_mpv, 0, "pause", MPV_FORMAT_FLAG);
     mpv_observe_property(m_mpv, 0, "volume", MPV_FORMAT_INT64);
+    mpv_observe_property(m_mpv, 0, "volume-max", MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "mute", MPV_FORMAT_FLAG);
     mpv_observe_property(m_mpv, 0, "aid", MPV_FORMAT_INT64);
     mpv_observe_property(m_mpv, 0, "sid", MPV_FORMAT_INT64);
@@ -318,6 +319,10 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == QStringLiteral("volume")) {
         cachePropertyValue(property, value);
         Q_EMIT volumeChanged();
+
+    } else if (property == QStringLiteral("volume-max")) {
+        cachePropertyValue(property, value);
+        Q_EMIT volumeMaxChanged();
 
     } else if (property == QStringLiteral("mute")) {
         cachePropertyValue(property, value);
@@ -614,6 +619,21 @@ void MpvItem::setVolume(int value)
         return;
     }
     Q_EMIT setMpvProperty(QStringLiteral("volume"), value);
+}
+
+int MpvItem::volumeMax()
+{
+    return getCachedPropertyValue(QStringLiteral("volume-max")).toInt();
+}
+
+void MpvItem::setVolumeMax(int value)
+{
+    if (volumeMax() == value) {
+        return;
+    }
+
+    Q_EMIT setMpvProperty(MpvController::Properties::VolumeMax, value);
+    Q_EMIT volumeMaxChanged();
 }
 
 bool MpvItem::mute()
