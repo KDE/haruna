@@ -53,3 +53,5 @@ void ChaptersModel::setChapters(QList<Chapter> &_chapters)
     m_chapters = _chapters;
     endResetModel();
 }
+
+#include "moc_chaptersmodel.cpp"

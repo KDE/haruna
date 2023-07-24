@@ -95,3 +95,5 @@ void MpvPreview::setIsLocalFile(bool _isLocalFile)
     m_isLocalFile = _isLocalFile;
     Q_EMIT isLocalFileChanged();
 }
+
+#include "moc_mpvpreview.cpp"
