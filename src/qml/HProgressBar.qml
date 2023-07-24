@@ -110,7 +110,7 @@ Slider {
                         return
                     }
 
-                    const time = mouseX * 100 / progressBarBG.width * root.to / 100
+                    const time = mouseX / progressBarBG.width * root.to
                     const chapters = mpv.getProperty(Mpv.ChapterList)
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
                     mpv.chapter = nextChapter
@@ -124,7 +124,7 @@ Slider {
             onMouseXChanged: {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
 
-                const time = mouseX * 100 / progressBarBG.width * root.to / 100
+                const time = mouseX / progressBarBG.width * root.to
                 previewMpv.position = time
                 progressBarToolTip.text = app.formatTime(time)
             }
