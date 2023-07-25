@@ -442,7 +442,7 @@ void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds 
     switch (static_cast<MpvController::AsyncIds>(id)) {
     case MpvController::AsyncIds::SavePosition:
         auto hash = md5(currentUrl().toLocalFile());
-        auto watchLaterConfig = m_watchLaterPath.append(hash);
+        auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
         Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), value);
         break;
     }
