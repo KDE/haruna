@@ -39,7 +39,7 @@ void MpvPreview::loadFile()
 
 double MpvPreview::position()
 {
-    return getCachedPropertyValue(QStringLiteral("time-pos")).toDouble();
+    return getCachedPropertyValue(MpvController::Properties::Position).toDouble();
 }
 
 void MpvPreview::setPosition(double value)
@@ -47,7 +47,7 @@ void MpvPreview::setPosition(double value)
     if (qFuzzyCompare(m_position, value)) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("time-pos"), value);
+    setProperty(MpvController::Properties::Position, value);
 }
 
 QString MpvPreview::file() const

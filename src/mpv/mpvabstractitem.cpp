@@ -24,13 +24,8 @@ MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     connect(m_workerThread, &QThread::finished,
             m_mpvController, &MpvController::deleteLater);
 
-    connect(this, QOverload<const QString &, const QVariant &>::of(&MpvAbstractItem::setMpvProperty),
-            m_mpvController, QOverload<const QString &, const QVariant &>::of(&MpvController::setProperty),
-            Qt::QueuedConnection);
-
-    connect(this, QOverload<MpvController::Properties, const QVariant &>::of(&MpvAbstractItem::setMpvProperty),
-            m_mpvController, QOverload<MpvController::Properties, const QVariant &>::of(&MpvController::setProperty),
-            Qt::QueuedConnection);
+    connect(this, &MpvAbstractItem::setMpvProperty,
+            m_mpvController, &MpvController::setProperty, Qt::QueuedConnection);
 
     connect(this, &MpvAbstractItem::mpvCommand,
             m_mpvController, &MpvController::command, Qt::QueuedConnection);
@@ -55,15 +50,10 @@ QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
     return new MpvRenderer(const_cast<MpvAbstractItem *>(this));
 }
 
-void MpvAbstractItem::setProperty(const QString &name, const QVariant &value)
-{
-    Q_EMIT setMpvProperty(name, value);
-}
-
 void MpvAbstractItem::setProperty(MpvController::Properties property, const QVariant &value)
 {
     auto name = m_mpvController->properties().value(property);
-    setProperty(name, value);
+    Q_EMIT setMpvProperty(property, value);
 }
 
 QVariant MpvAbstractItem::getProperty(const QString &name)
@@ -77,12 +67,12 @@ QVariant MpvAbstractItem::getProperty(MpvController::Properties property)
     return getProperty(name);
 }
 
-void MpvAbstractItem::cachePropertyValue(const QString &property, const QVariant &value)
+void MpvAbstractItem::cachePropertyValue(MpvController::Properties property, const QVariant &value)
 {
     m_propertiesCache[property] = value;
 }
 
-QVariant MpvAbstractItem::getCachedPropertyValue(const QString &property)
+QVariant MpvAbstractItem::getCachedPropertyValue(MpvController::Properties property)
 {
     if (!m_propertiesCache[property].isValid()) {
         auto value = getProperty(property);

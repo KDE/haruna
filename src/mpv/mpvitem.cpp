@@ -156,7 +156,9 @@ void MpvItem::setupConnections()
 {
     // clang-format off
     connect(m_mpvController, &MpvController::propertyChanged,
-            this, &MpvItem::onPropertyChanged, Qt::QueuedConnection);
+            this, [=](const QString &property, const QVariant &value) {
+        onPropertyChanged(m_mpvController->rProperties().value(property), value);
+    }, Qt::QueuedConnection);
 
     connect(m_mpvController, &MpvController::fileStarted,
             this, &MpvItem::fileStarted, Qt::QueuedConnection);
@@ -214,7 +216,7 @@ void MpvItem::setupConnections()
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
         int pos = position();
-        double duration = getCachedPropertyValue(QStringLiteral("duration")).toDouble();
+        double duration = getCachedPropertyValue(MpvController::Properties::Duration).toDouble();
         if (!m_secondsWatched.contains(pos)) {
             m_secondsWatched << pos;
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
@@ -226,7 +228,7 @@ void MpvItem::setupConnections()
     });
 
     connect(this, &MpvItem::chapterListChanged, this, [=]() {
-        const auto chapters = getCachedPropertyValue(QStringLiteral("chapter-list"));
+        const auto chapters = getCachedPropertyValue(MpvController::Properties::ChapterList);
         QList<Chapter> chaptersList;
         for (const auto &chapter : chapters.toList()) {
             Chapter c = {
@@ -291,68 +293,80 @@ void MpvItem::setupConnections()
     // clang-format on
 }
 
-void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
+void MpvItem::onPropertyChanged(MpvController::Properties property, const QVariant &value)
 {
-    if (property == QStringLiteral("media-title")) {
+    switch (property) {
+    case MpvController::Properties::MediaTitle:
         cachePropertyValue(property, value);
         Q_EMIT mediaTitleChanged();
+        break;
 
-    } else if (property == QStringLiteral("time-pos")) {
+    case MpvController::Properties::Position:
         cachePropertyValue(property, value);
         m_formattedPosition = Application::formatTime(value.toDouble());
         Q_EMIT positionChanged();
+        break;
 
-    } else if (property == QStringLiteral("time-remaining")) {
+    case MpvController::Properties::Remaining:
         cachePropertyValue(property, value);
         m_formattedRemaining = Application::formatTime(value.toDouble());
         Q_EMIT remainingChanged();
+        break;
 
-    } else if (property == QStringLiteral("duration")) {
+    case MpvController::Properties::Duration:
         cachePropertyValue(property, value);
         m_formattedDuration = Application::formatTime(value.toDouble());
         Q_EMIT durationChanged();
+        break;
 
-    } else if (property == QStringLiteral("pause")) {
+    case MpvController::Properties::Pause:
         cachePropertyValue(property, value);
         Q_EMIT pauseChanged();
+        break;
 
-    } else if (property == QStringLiteral("volume")) {
+    case MpvController::Properties::Volume:
         cachePropertyValue(property, value);
         Q_EMIT volumeChanged();
+        break;
 
-    } else if (property == QStringLiteral("volume-max")) {
+    case MpvController::Properties::VolumeMax:
         cachePropertyValue(property, value);
         Q_EMIT volumeMaxChanged();
+        break;
 
-    } else if (property == QStringLiteral("mute")) {
+    case MpvController::Properties::Mute:
         cachePropertyValue(property, value);
         Q_EMIT muteChanged();
+        break;
 
-    } else if (property == QStringLiteral("chapter")) {
+    case MpvController::Properties::Chapter:
         cachePropertyValue(property, value);
         Q_EMIT chapterChanged();
+        break;
 
-    } else if (property == QStringLiteral("chapter-list")) {
+    case MpvController::Properties::ChapterList:
         cachePropertyValue(property, value);
         Q_EMIT chapterListChanged();
+        break;
 
-    } else if (property == QStringLiteral("aid")) {
+    case MpvController::Properties::AudioId:
         cachePropertyValue(property, value);
         Q_EMIT audioIdChanged();
+        break;
 
-    } else if (property == QStringLiteral("sid")) {
+    case MpvController::Properties::SubtitleId:
         cachePropertyValue(property, value);
         Q_EMIT subtitleIdChanged();
+        break;
 
-    } else if (property == QStringLiteral("secondary-sid")) {
+    case MpvController::Properties::SecondarySubtitleId:
         cachePropertyValue(property, value);
         Q_EMIT secondarySubtitleIdChanged();
+        break;
 
-    } else if (property == QStringLiteral("track-list")) {
+    case MpvController::Properties::TrackList:
         loadTracks();
-
-    } else {
-        // nothing
+        break;
     }
 }
 
@@ -455,7 +469,7 @@ void MpvItem::saveTimePosition()
         return;
     }
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    if (getCachedPropertyValue(QStringLiteral("duration")).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+    if (getCachedPropertyValue(MpvController::Properties::Duration).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
         return;
     }
 
@@ -569,12 +583,12 @@ void MpvItem::setIsFileReloaded(bool _isFileReloaded)
 
 QString MpvItem::mediaTitle()
 {
-    return getCachedPropertyValue(QStringLiteral("media-title")).toString();
+    return getCachedPropertyValue(MpvController::Properties::MediaTitle).toString();
 }
 
 double MpvItem::position()
 {
-    return getCachedPropertyValue(QStringLiteral("time-pos")).toDouble();
+    return getCachedPropertyValue(MpvController::Properties::Position).toDouble();
 }
 
 void MpvItem::setPosition(double value)
@@ -582,22 +596,22 @@ void MpvItem::setPosition(double value)
     if (qFuzzyCompare(value, position())) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("time-pos"), value);
+    setProperty(MpvController::Properties::Position, value);
 }
 
 double MpvItem::remaining()
 {
-    return getCachedPropertyValue(QStringLiteral("time-remaining")).toDouble();
+    return getCachedPropertyValue(MpvController::Properties::Remaining).toDouble();
 }
 
 double MpvItem::duration()
 {
-    return getCachedPropertyValue(QStringLiteral("duration")).toDouble();
+    return getCachedPropertyValue(MpvController::Properties::Duration).toDouble();
 }
 
 bool MpvItem::pause()
 {
-    return getCachedPropertyValue(QStringLiteral("pause")).toBool();
+    return getCachedPropertyValue(MpvController::Properties::Pause).toBool();
 }
 
 void MpvItem::setPause(bool value)
@@ -605,12 +619,12 @@ void MpvItem::setPause(bool value)
     if (value == pause()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("pause"), value);
+    setProperty(MpvController::Properties::Pause, value);
 }
 
 int MpvItem::volume()
 {
-    return getCachedPropertyValue(QStringLiteral("volume")).toInt();
+    return getCachedPropertyValue(MpvController::Properties::Volume).toInt();
 }
 
 void MpvItem::setVolume(int value)
@@ -618,12 +632,12 @@ void MpvItem::setVolume(int value)
     if (value == volume()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("volume"), value);
+    setProperty(MpvController::Properties::Volume, value);
 }
 
 int MpvItem::volumeMax()
 {
-    return getCachedPropertyValue(QStringLiteral("volume-max")).toInt();
+    return getCachedPropertyValue(MpvController::Properties::VolumeMax).toInt();
 }
 
 void MpvItem::setVolumeMax(int value)
@@ -632,13 +646,12 @@ void MpvItem::setVolumeMax(int value)
         return;
     }
 
-    Q_EMIT setMpvProperty(MpvController::Properties::VolumeMax, value);
-    Q_EMIT volumeMaxChanged();
+    setProperty(MpvController::Properties::VolumeMax, value);
 }
 
 bool MpvItem::mute()
 {
-    return getCachedPropertyValue(QStringLiteral("mute")).toBool();
+    return getCachedPropertyValue(MpvController::Properties::Mute).toBool();
 }
 
 void MpvItem::setMute(bool value)
@@ -646,12 +659,12 @@ void MpvItem::setMute(bool value)
     if (value == mute()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("mute"), value);
+    setProperty(MpvController::Properties::Mute, value);
 }
 
 int MpvItem::chapter()
 {
-    return getCachedPropertyValue(QStringLiteral("chapter")).toInt();
+    return getCachedPropertyValue(MpvController::Properties::Chapter).toInt();
 }
 
 void MpvItem::setChapter(int value)
@@ -659,12 +672,12 @@ void MpvItem::setChapter(int value)
     if (value == chapter()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("chapter"), value);
+    setProperty(MpvController::Properties::Chapter, value);
 }
 
 int MpvItem::audioId()
 {
-    return getCachedPropertyValue(QStringLiteral("aid")).toInt();
+    return getCachedPropertyValue(MpvController::Properties::AudioId).toInt();
 }
 
 void MpvItem::setAudioId(int value)
@@ -672,12 +685,12 @@ void MpvItem::setAudioId(int value)
     if (value == audioId()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("aid"), value);
+    setProperty(MpvController::Properties::AudioId, value);
 }
 
 int MpvItem::subtitleId()
 {
-    return getCachedPropertyValue(QStringLiteral("sid")).toInt();
+    return getCachedPropertyValue(MpvController::Properties::SubtitleId).toInt();
 }
 
 void MpvItem::setSubtitleId(int value)
@@ -685,12 +698,12 @@ void MpvItem::setSubtitleId(int value)
     if (value == subtitleId()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("sid"), value);
+    setProperty(MpvController::Properties::SubtitleId, value);
 }
 
 int MpvItem::secondarySubtitleId()
 {
-    return getCachedPropertyValue(QStringLiteral("secondary-sid")).toInt();
+    return getCachedPropertyValue(MpvController::Properties::SecondarySubtitleId).toInt();
 }
 
 void MpvItem::setSecondarySubtitleId(int value)
@@ -698,7 +711,7 @@ void MpvItem::setSecondarySubtitleId(int value)
     if (value == secondarySubtitleId()) {
         return;
     }
-    Q_EMIT setMpvProperty(QStringLiteral("secondary-sid"), value);
+    setProperty(MpvController::Properties::SecondarySubtitleId, value);
 }
 
 QString MpvItem::formattedDuration() const

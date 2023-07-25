@@ -134,7 +134,7 @@ public:
      *
      * @return mpv error code (<0 on error, >= 0 on success)
      */
-    Q_INVOKABLE int setProperty(const QString &name, const QVariant &value);
+    Q_INVOKABLE int setStringProperty(const QString &name, const QVariant &value);
     Q_INVOKABLE int setProperty(Properties property, const QVariant &value);
     Q_INVOKABLE int setPropertyAsync(Properties property, const QVariant &value, AsyncIds id);
 
@@ -167,6 +167,7 @@ public:
     mpv_handle *mpv() const;
 
     QMap<Properties, QString> properties() const;
+    QMap<QString, Properties> rProperties() const;
 
 Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
@@ -186,7 +187,7 @@ private:
 
     mpv_handle *m_mpv{nullptr};
     // clang-format off
-    QMap<Properties, QString> m_properties = {
+    const QMap<Properties, QString> m_properties = {
         {Properties::Pause,                   QStringLiteral("pause")},
         {Properties::Volume,                  QStringLiteral("volume")},
         {Properties::VolumeMax,               QStringLiteral("volume-max")},
@@ -249,6 +250,7 @@ private:
         {Properties::Saturation,              QStringLiteral("saturation")},
         {Properties::Terminal,                QStringLiteral("terminal")},
     };
+    QMap<QString, Properties> m_rProperties;
     // clang-format on
 };
 

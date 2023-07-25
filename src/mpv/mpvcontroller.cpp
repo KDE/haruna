@@ -17,6 +17,10 @@ MpvController::MpvController(QObject *parent)
     // requires the LC_NUMERIC category to be set to "C", so change it back.
     std::setlocale(LC_NUMERIC, "C");
 
+    for (auto i = m_properties.cbegin(), end = m_properties.cend(); i != end; ++i) {
+        m_rProperties.insert(i.value(), i.key());
+    }
+
     m_mpv = mpv_create();
     if (!m_mpv) {
         qFatal("could not create mpv context");
@@ -107,7 +111,7 @@ mpv_handle *MpvController::mpv() const
     return m_mpv;
 }
 
-int MpvController::setProperty(const QString &name, const QVariant &value)
+int MpvController::setStringProperty(const QString &name, const QVariant &value)
 {
     mpv_node node;
     setNode(&node, value);
@@ -116,10 +120,8 @@ int MpvController::setProperty(const QString &name, const QVariant &value)
 
 int MpvController::setProperty(Properties property, const QVariant &value)
 {
-    mpv_node node;
-    setNode(&node, value);
     QString name = m_properties.value(property);
-    return mpv_set_property(m_mpv, name.toUtf8().constData(), MPV_FORMAT_NODE, &node);
+    return setStringProperty(name, value);
 }
 
 int MpvController::setPropertyAsync(Properties property, const QVariant &value, AsyncIds id)
@@ -362,6 +364,11 @@ inline QVariant MpvController::node_to_variant(const mpv_node *node)
     default: // MPV_FORMAT_NONE, unknown values (e.g. future extensions)
         return QVariant();
     }
+}
+
+QMap<QString, MpvController::Properties> MpvController::rProperties() const
+{
+    return m_rProperties;
 }
 
 QMap<MpvController::Properties, QString> MpvController::properties() const

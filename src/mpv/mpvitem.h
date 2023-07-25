@@ -170,7 +170,7 @@ Q_SIGNALS:
 private:
     void initProperties();
     void setupConnections();
-    void onPropertyChanged(const QString &property, const QVariant &value);
+    void onPropertyChanged(MpvController::Properties property, const QVariant &value);
     void saveTimePosition();
     double loadTimePosition();
     void resetTimePosition();
