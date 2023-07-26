@@ -233,7 +233,7 @@ private:
         {Properties::VideoPanX,               QStringLiteral("video-pan-x")},
         {Properties::VideoPanY,               QStringLiteral("video-pan-y")},
         {Properties::Width,                   QStringLiteral("width")},
-        {Properties::Height,                  QStringLiteral("height~")},
+        {Properties::Height,                  QStringLiteral("height")},
         {Properties::LoopFile,                QStringLiteral("loop-file")},
         {Properties::ABLoopA,                 QStringLiteral("ab-loop-a")},
         {Properties::ABLoopB,                 QStringLiteral("ab-loop-b")},
