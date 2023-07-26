@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the haruna package.
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2022, 2023.
+# Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 07:32+0000\n"
-"PO-Revision-Date: 2023-06-26 16:51-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"POT-Creation-Date: 2023-07-26 00:45+0000\n"
+"PO-Revision-Date: 2023-07-25 21:39-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -535,7 +536,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "A lista de reprodução está vazia"
 
-#: src/mpv/mpvitem.cpp:380
+#: src/mpv/mpvitem.cpp:394
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -602,58 +603,52 @@ msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrelaçar %1"
 
-#: src/qml/Actions.qml:340 src/qml/Actions.qml:345
-#: src/qml/VolumeSliderQt6.qml:49
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Volume: %1"
-
-#: src/qml/Actions.qml:351 src/qml/Actions.qml:357
+#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:362
+#: src/qml/Actions.qml:360
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:369 src/qml/Actions.qml:375
+#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contraste: %1"
 
-#: src/qml/Actions.qml:380
+#: src/qml/Actions.qml:378
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contraste: 0"
 
-#: src/qml/Actions.qml:386 src/qml/Actions.qml:392
+#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brilho: %1"
 
-#: src/qml/Actions.qml:397
+#: src/qml/Actions.qml:395
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brilho: 0"
 
-#: src/qml/Actions.qml:403 src/qml/Actions.qml:409
+#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:414
+#: src/qml/Actions.qml:412
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
+#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturação: %1"
 
-#: src/qml/Actions.qml:431
+#: src/qml/Actions.qml:429
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturação: 0"
@@ -908,12 +903,17 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Mostrar barra de ferramentas"
 
-#: src/qml/MpvVideo.qml:88
+#: src/qml/MpvVideo.qml:46 src/qml/VolumeSliderQt6.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Volume: %1"
+
+#: src/qml/MpvVideo.qml:92
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Ignorar capítulo: %1"
 
-#: src/qml/MpvVideo.qml:106
+#: src/qml/MpvVideo.qml:110
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Não foi possível reproduzir: %1"
@@ -1191,22 +1191,22 @@ msgstr "Interface"
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr ""
+msgstr "Visualizar miniatura"
 
 #: src/qml/Settings/GeneralSettings.qml:127
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "Mostrar miniatura de visualização"
 
 #: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Usar visualização precisa"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "A geração de uma visualização precisa é lenta"
 
 #: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@option:check"

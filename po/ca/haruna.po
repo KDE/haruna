@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 07:32+0000\n"
+"POT-Creation-Date: 2023-07-26 00:45+0000\n"
 "PO-Revision-Date: 2023-07-14 19:22+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -536,7 +536,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "La llista de reproducció està buida"
 
-#: src/mpv/mpvitem.cpp:380
+#: src/mpv/mpvitem.cpp:394
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -603,58 +603,52 @@ msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrellaça: %1"
 
-#: src/qml/Actions.qml:340 src/qml/Actions.qml:345
-#: src/qml/VolumeSliderQt6.qml:49
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Volum: %1"
-
-#: src/qml/Actions.qml:351 src/qml/Actions.qml:357
+#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:362
+#: src/qml/Actions.qml:360
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:369 src/qml/Actions.qml:375
+#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrast: %1"
 
-#: src/qml/Actions.qml:380
+#: src/qml/Actions.qml:378
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrast: 0"
 
-#: src/qml/Actions.qml:386 src/qml/Actions.qml:392
+#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Lluminositat: %1"
 
-#: src/qml/Actions.qml:397
+#: src/qml/Actions.qml:395
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Lluminositat: 0"
 
-#: src/qml/Actions.qml:403 src/qml/Actions.qml:409
+#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:414
+#: src/qml/Actions.qml:412
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
+#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturació: %1"
 
-#: src/qml/Actions.qml:431
+#: src/qml/Actions.qml:429
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturació: 0"
@@ -909,12 +903,17 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: src/qml/MpvVideo.qml:88
+#: src/qml/MpvVideo.qml:46 src/qml/VolumeSliderQt6.qml:49
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Volum: %1"
+
+#: src/qml/MpvVideo.qml:92
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Capítol saltat: %1"
 
-#: src/qml/MpvVideo.qml:106
+#: src/qml/MpvVideo.qml:110
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No s'ha pogut reproduir: %1"

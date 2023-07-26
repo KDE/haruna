@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 07:32+0000\n"
+"POT-Creation-Date: 2023-07-26 00:45+0000\n"
 "PO-Revision-Date: 2021-10-10 11:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -607,7 +607,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Wygląd listy odtwarzania"
 
-#: src/mpv/mpvitem.cpp:380
+#: src/mpv/mpvitem.cpp:394
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -698,78 +698,70 @@ msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Usuwanie przeplotu: %1"
 
-#: src/qml/Actions.qml:340 src/qml/Actions.qml:345
-#: src/qml/VolumeSliderQt6.qml:49
-#, fuzzy
-#| msgid "Volume: %1"
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Głośność: %1"
-
-#: src/qml/Actions.qml:351 src/qml/Actions.qml:357
+#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Powiększenie: %1"
 
-#: src/qml/Actions.qml:362
+#: src/qml/Actions.qml:360
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Powiększenie: 0"
 
-#: src/qml/Actions.qml:369 src/qml/Actions.qml:375
+#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:380
+#: src/qml/Actions.qml:378
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:386 src/qml/Actions.qml:392
+#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Jasność: %1"
 
-#: src/qml/Actions.qml:397
+#: src/qml/Actions.qml:395
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Jasność: 0"
 
-#: src/qml/Actions.qml:403 src/qml/Actions.qml:409
+#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:414
+#: src/qml/Actions.qml:412
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
+#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Nasycenie: %1"
 
-#: src/qml/Actions.qml:431
+#: src/qml/Actions.qml:429
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
@@ -1106,14 +1098,21 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Pokaż pasek narzędzi"
 
-#: src/qml/MpvVideo.qml:88
+#: src/qml/MpvVideo.qml:46 src/qml/VolumeSliderQt6.qml:49
+#, fuzzy
+#| msgid "Volume: %1"
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Głośność: %1"
+
+#: src/qml/MpvVideo.qml:92
 #, fuzzy
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip"
 msgid "Skipped chapter: %1"
 msgstr "Pominięty rozdział: %1"
 
-#: src/qml/MpvVideo.qml:106
+#: src/qml/MpvVideo.qml:110
 #, fuzzy
 #| msgid "Could not play: %1"
 msgctxt "@info:tooltip"
