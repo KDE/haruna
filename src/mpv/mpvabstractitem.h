@@ -39,6 +39,7 @@ Q_SIGNALS:
     void setStringMpvProperty(const QString &property, const QVariant &value);
 
 protected:
+    void observeProperty(MpvController::Properties property, mpv_format format, int id = 0);
     void cachePropertyValue(MpvController::Properties property, const QVariant &value);
 
     QThread *m_workerThread{nullptr};

@@ -52,20 +52,20 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(QStringLiteral("/watch-later/"))}
 {
     m_playlistProxyModel->setSourceModel(m_playlistModel);
-    mpv_observe_property(m_mpv, 0, "media-title", MPV_FORMAT_STRING);
-    mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(m_mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(m_mpv, 0, "duration", MPV_FORMAT_DOUBLE);
-    mpv_observe_property(m_mpv, 0, "pause", MPV_FORMAT_FLAG);
-    mpv_observe_property(m_mpv, 0, "volume", MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "volume-max", MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "mute", MPV_FORMAT_FLAG);
-    mpv_observe_property(m_mpv, 0, "aid", MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "sid", MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "chapter", MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "chapter-list", MPV_FORMAT_NODE);
-    mpv_observe_property(m_mpv, 0, "secondary-sid", MPV_FORMAT_INT64);
-    mpv_observe_property(m_mpv, 0, "track-list", MPV_FORMAT_NODE);
+    observeProperty(MpvController::Properties::MediaTitle, MPV_FORMAT_STRING);
+    observeProperty(MpvController::Properties::Position, MPV_FORMAT_DOUBLE);
+    observeProperty(MpvController::Properties::Remaining, MPV_FORMAT_DOUBLE);
+    observeProperty(MpvController::Properties::Duration, MPV_FORMAT_DOUBLE);
+    observeProperty(MpvController::Properties::Pause, MPV_FORMAT_FLAG);
+    observeProperty(MpvController::Properties::Volume, MPV_FORMAT_INT64);
+    observeProperty(MpvController::Properties::VolumeMax, MPV_FORMAT_INT64);
+    observeProperty(MpvController::Properties::Mute, MPV_FORMAT_FLAG);
+    observeProperty(MpvController::Properties::AudioId, MPV_FORMAT_INT64);
+    observeProperty(MpvController::Properties::SubtitleId, MPV_FORMAT_INT64);
+    observeProperty(MpvController::Properties::SecondarySubtitleId, MPV_FORMAT_INT64);
+    observeProperty(MpvController::Properties::Chapter, MPV_FORMAT_INT64);
+    observeProperty(MpvController::Properties::ChapterList, MPV_FORMAT_NODE);
+    observeProperty(MpvController::Properties::TrackList, MPV_FORMAT_NODE);
 
     initProperties();
     setupConnections();

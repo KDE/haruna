@@ -62,6 +62,12 @@ QVariant MpvAbstractItem::getProperty(MpvController::Properties property)
     return m_mpvController->getProperty(name);
 }
 
+void MpvAbstractItem::observeProperty(MpvController::Properties property, mpv_format format, int id)
+{
+    auto name = m_mpvController->properties().value(property);
+    mpv_observe_property(m_mpv, id, name.toUtf8().data(), format);
+}
+
 void MpvAbstractItem::cachePropertyValue(MpvController::Properties property, const QVariant &value)
 {
     m_propertiesCache[property] = value;
