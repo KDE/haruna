@@ -42,6 +42,10 @@ MpvItem {
         audioId = id
     }
 
+    onVolumeChanged: {
+        osd.message(i18nc("@info:tooltip", "Volume: %1", root.volume))
+    }
+
     onReady: {
         if (app.url(0).toString() !== "") {
             window.openFile(app.url(0), true)
