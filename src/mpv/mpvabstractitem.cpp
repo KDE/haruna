@@ -56,15 +56,10 @@ void MpvAbstractItem::setProperty(MpvController::Properties property, const QVar
     Q_EMIT setMpvProperty(property, value);
 }
 
-QVariant MpvAbstractItem::getProperty(const QString &name)
-{
-    return m_mpvController->getProperty(name);
-}
-
 QVariant MpvAbstractItem::getProperty(MpvController::Properties property)
 {
     auto name = m_mpvController->properties().value(property);
-    return getProperty(name);
+    return m_mpvController->getProperty(name);
 }
 
 void MpvAbstractItem::cachePropertyValue(MpvController::Properties property, const QVariant &value)
