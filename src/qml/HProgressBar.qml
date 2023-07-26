@@ -144,6 +144,16 @@ Slider {
         }
     }
 
+    onToChanged: value = mpv.position
+    onPressedChanged: {
+        if (pressed) {
+            seekStarted = true
+        } else {
+            mpv.command(["seek", value, "absolute"])
+            seekStarted = false
+        }
+    }
+
     // create markers for the chapters
     Repeater {
         id: chaptersInstantiator
@@ -190,16 +200,6 @@ Slider {
                     onClicked: mpv.chapter = index
                 }
             }
-        }
-    }
-
-    onToChanged: value = mpv.position
-    onPressedChanged: {
-        if (pressed) {
-            seekStarted = true
-        } else {
-            mpv.command(["seek", value, "absolute"])
-            seekStarted = false
         }
     }
 
