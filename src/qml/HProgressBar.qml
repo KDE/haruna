@@ -78,8 +78,8 @@ Slider {
                     Connections {
                         target: mpv
                         onVideoReconfig: {
-                            let width = mpv.getProperty(Mpv.Width)
-                            let height = mpv.getProperty(Mpv.Height)
+                            let width = mpv.getProperty(MpvProperties.Width)
+                            let height = mpv.getProperty(MpvProperties.Height)
                             let ar = width / height;
                             previewMpv.aspectRatio = ar
                         }
@@ -111,7 +111,7 @@ Slider {
                     }
 
                     const time = mouseX / progressBarBG.width * root.to
-                    const chapters = mpv.getProperty(Mpv.ChapterList)
+                    const chapters = mpv.getProperty(MpvProperties.ChapterList)
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
                     mpv.chapter = nextChapter
                 }
@@ -279,7 +279,7 @@ Slider {
         onFileLoaded: {
             loopIndicator.startPosition = -1
             loopIndicator.endPosition = -1
-            root.chapters = mpv.getProperty(Mpv.ChapterList)
+            root.chapters = mpv.getProperty(MpvProperties.ChapterList)
         }
         onChapterChanged: {
             chaptersPopup.checkedItem = mpv.chapter

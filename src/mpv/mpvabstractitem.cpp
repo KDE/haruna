@@ -50,30 +50,27 @@ QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
     return new MpvRenderer(const_cast<MpvAbstractItem *>(this));
 }
 
-void MpvAbstractItem::setProperty(MpvController::Properties property, const QVariant &value)
+void MpvAbstractItem::setProperty(const QString &property, const QVariant &value)
 {
-    auto name = m_mpvController->properties().value(property);
     Q_EMIT setMpvProperty(property, value);
 }
 
-QVariant MpvAbstractItem::getProperty(MpvController::Properties property)
+QVariant MpvAbstractItem::getProperty(const QString &property)
 {
-    auto name = m_mpvController->properties().value(property);
-    return m_mpvController->getProperty(name);
+    return m_mpvController->getProperty(property);
 }
 
-void MpvAbstractItem::observeProperty(MpvController::Properties property, mpv_format format, int id)
+void MpvAbstractItem::observeProperty(const QString &property, mpv_format format, int id)
 {
-    auto name = m_mpvController->properties().value(property);
-    mpv_observe_property(m_mpv, id, name.toUtf8().data(), format);
+    mpv_observe_property(m_mpv, id, property.toUtf8().data(), format);
 }
 
-void MpvAbstractItem::cachePropertyValue(MpvController::Properties property, const QVariant &value)
+void MpvAbstractItem::cachePropertyValue(const QString &property, const QVariant &value)
 {
     m_propertiesCache[property] = value;
 }
 
-QVariant MpvAbstractItem::getCachedPropertyValue(MpvController::Properties property)
+QVariant MpvAbstractItem::getCachedPropertyValue(const QString &property)
 {
     if (!m_propertiesCache[property].isValid()) {
         auto value = getProperty(property);

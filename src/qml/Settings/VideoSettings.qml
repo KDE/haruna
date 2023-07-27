@@ -103,7 +103,7 @@ SettingsBasePage {
             onActivated: {
                 VideoSettings.screenshotFormat = model.get(index).value
                 VideoSettings.save()
-                mpv.setProperty(Mpv.ScreenshotFormat, VideoSettings.screenshotFormat)
+                mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
             }
 
             Component.onCompleted: {
@@ -145,7 +145,7 @@ SettingsBasePage {
             function save() {
                 VideoSettings.screenshotTemplate = text
                 VideoSettings.save()
-                mpv.setProperty(Mpv.ScreenshotTemplate, VideoSettings.screenshotTemplate)
+                mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
             }
         }
 
@@ -167,8 +167,8 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: contrastSlider
 
-            value: mpv.getProperty(Mpv.Contrast)
-            onSliderValueChanged: mpv.setProperty(Mpv.Contrast, value.toFixed(0))
+            value: mpv.getProperty(MpvProperties.Contrast)
+            onSliderValueChanged: mpv.setProperty(MpvProperties.Contrast, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -184,8 +184,8 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: brightnessSlider
 
-            value: mpv.getProperty(Mpv.Brightness)
-            onSliderValueChanged: mpv.setProperty(Mpv.Brightness, value.toFixed(0))
+            value: mpv.getProperty(MpvProperties.Brightness)
+            onSliderValueChanged: mpv.setProperty(MpvProperties.Brightness, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -201,8 +201,8 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: gammaSlider
 
-            value: mpv.getProperty(Mpv.Gamma)
-            onSliderValueChanged:mpv.setProperty(Mpv.Gamma, value.toFixed(0))
+            value: mpv.getProperty(MpvProperties.Gamma)
+            onSliderValueChanged:mpv.setProperty(MpvProperties.Gamma, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -218,8 +218,8 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: saturationSlider
 
-            value: mpv.getProperty(Mpv.Saturation)
-            onSliderValueChanged: mpv.setProperty(Mpv.Saturation, value.toFixed(0))
+            value: mpv.getProperty(MpvProperties.Saturation)
+            onSliderValueChanged: mpv.setProperty(MpvProperties.Saturation, value.toFixed(0))
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }

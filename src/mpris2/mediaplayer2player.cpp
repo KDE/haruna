@@ -8,6 +8,7 @@
 
 #include "application.h"
 #include "mpvitem.h"
+#include "mpvproperties.h"
 #include "videosettings.h"
 #include "worker.h"
 
@@ -100,7 +101,7 @@ void MediaPlayer2Player::Seek(qlonglong offset)
 void MediaPlayer2Player::SetPosition(const QDBusObjectPath &trackId, qlonglong pos)
 {
     Q_UNUSED(trackId)
-    m_mpv->setProperty(MpvController::Properties::Position, pos / 1000 / 1000);
+    m_mpv->setProperty(MpvProperties::self()->Position, pos / 1000 / 1000);
 }
 
 void MediaPlayer2Player::OpenUri(const QString &uri)
@@ -113,8 +114,8 @@ QString MediaPlayer2Player::PlaybackStatus()
     if (!m_mpv) {
         return QString();
     }
-    bool isPaused = m_mpv->getProperty(MpvController::Properties::Pause).toBool();
-    int position = m_mpv->getProperty(MpvController::Properties::Position).toInt();
+    bool isPaused = m_mpv->getProperty(MpvProperties::self()->Pause).toBool();
+    int position = m_mpv->getProperty(MpvProperties::self()->Position).toInt();
 
     return isPaused && position == 0 ? QStringLiteral("Stopped") : (isPaused ? QStringLiteral("Paused") : QStringLiteral("Playing"));
 }
@@ -125,10 +126,10 @@ QVariantMap MediaPlayer2Player::Metadata()
         return QVariantMap();
     }
     QVariantMap metadata;
-    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty(MpvController::Properties::Duration).toDouble() * 1000 * 1000);
+    metadata.insert(QStringLiteral("mpris:length"), m_mpv->getProperty(MpvProperties::self()->Duration).toDouble() * 1000 * 1000);
     metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
 
-    auto mpvMediaTitle = m_mpv->getProperty(MpvController::Properties::MediaTitle).toString();
+    auto mpvMediaTitle = m_mpv->getProperty(MpvProperties::self()->MediaTitle).toString();
     auto mpvFilename = m_mpv->currentUrl().fileName();
     auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvFilename;
     metadata.insert(QStringLiteral("xesam:title"), title);
@@ -149,7 +150,7 @@ double MediaPlayer2Player::Volume()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty(MpvController::Properties::Volume).toDouble() / 100;
+    return m_mpv->getProperty(MpvProperties::self()->Volume).toDouble() / 100;
 }
 
 qlonglong MediaPlayer2Player::Position()
@@ -157,7 +158,7 @@ qlonglong MediaPlayer2Player::Position()
     if (!m_mpv) {
         return 0;
     }
-    return m_mpv->getProperty(MpvController::Properties::Position).toDouble() * 1000 * 1000;
+    return m_mpv->getProperty(MpvProperties::self()->Position).toDouble() * 1000 * 1000;
 }
 
 bool MediaPlayer2Player::CanGoNext()
@@ -195,7 +196,7 @@ void MediaPlayer2Player::setPosition(int pos)
     if (!m_mpv) {
         return;
     }
-    m_mpv->setProperty(MpvController::Properties::Position, pos);
+    m_mpv->setProperty(MpvProperties::self()->Position, pos);
 }
 
 void MediaPlayer2Player::setVolume(double vol)
@@ -203,7 +204,7 @@ void MediaPlayer2Player::setVolume(double vol)
     if (!m_mpv) {
         return;
     }
-    m_mpv->setProperty(MpvController::Properties::Volume, vol * 100);
+    m_mpv->setProperty(MpvProperties::self()->Volume, vol * 100);
 }
 
 MpvItem *MediaPlayer2Player::mpv() const

@@ -7,24 +7,25 @@
 #include "mpvpreview.h"
 
 #include "generalsettings.h"
+#include "mpvproperties.h"
 
 MpvPreview::MpvPreview()
 {
     mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
 
-    setProperty(MpvController::Properties::Mute, true);
-    setProperty(MpvController::Properties::Pause, true);
-    setProperty(MpvController::Properties::ReallyQuiet, true);
+    setProperty(MpvProperties::self()->Mute, true);
+    setProperty(MpvProperties::self()->Pause, true);
+    setProperty(MpvProperties::self()->ReallyQuiet, true);
 
-    setProperty(MpvController::Properties::HardwareDecoding, QStringLiteral("auto"));
-    setProperty(MpvController::Properties::AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
-    setProperty(MpvController::Properties::AudioId, false);
-    setProperty(MpvController::Properties::AudioFileAuto, false);
-    setProperty(MpvController::Properties::SubtitleAuto, false);
-    setProperty(MpvController::Properties::OsdLevel, 0);
-    setProperty(MpvController::Properties::AudioPitchCorection, false);
-    setProperty(MpvController::Properties::UseTextOsd, false);
-    setProperty(MpvController::Properties::AudioDisplay, false);
+    setProperty(MpvProperties::self()->HardwareDecoding, QStringLiteral("auto"));
+    setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
+    setProperty(MpvProperties::self()->AudioId, false);
+    setProperty(MpvProperties::self()->AudioFileAuto, false);
+    setProperty(MpvProperties::self()->SubtitleAuto, false);
+    setProperty(MpvProperties::self()->OsdLevel, 0);
+    setProperty(MpvProperties::self()->AudioPitchCorection, false);
+    setProperty(MpvProperties::self()->UseTextOsd, false);
+    setProperty(MpvProperties::self()->AudioDisplay, false);
 
     connect(this, &MpvPreview::fileChanged, this, &MpvPreview::loadFile);
     connect(this, &MpvPreview::ready, this, &MpvPreview::loadFile);
@@ -39,7 +40,7 @@ void MpvPreview::loadFile()
 
 double MpvPreview::position()
 {
-    return getCachedPropertyValue(MpvController::Properties::Position).toDouble();
+    return getCachedPropertyValue(MpvProperties::self()->Position).toDouble();
 }
 
 void MpvPreview::setPosition(double value)
@@ -47,7 +48,7 @@ void MpvPreview::setPosition(double value)
     if (qFuzzyCompare(m_position, value)) {
         return;
     }
-    setProperty(MpvController::Properties::Position, value);
+    setProperty(MpvProperties::self()->Position, value);
 }
 
 QString MpvPreview::file() const
@@ -78,7 +79,7 @@ void MpvPreview::setAccuratePreview(bool _accuratePreview)
         return;
     }
     m_accuratePreview = _accuratePreview;
-    setProperty(MpvController::Properties::AccurateSeek, _accuratePreview);
+    setProperty(MpvProperties::self()->AccurateSeek, _accuratePreview);
     Q_EMIT accuratePreviewChanged();
 }
 

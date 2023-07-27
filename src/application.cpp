@@ -27,6 +27,7 @@
 #include "videosettings.h"
 #include "worker.h"
 
+#include "mpvproperties.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDesktopServices>
@@ -141,7 +142,6 @@ void Application::setupCommandLineParser()
 
 void Application::registerQmlTypes()
 {
-    qmlRegisterType<MpvController>("org.kde.haruna", 1, 0, "Mpv");
     qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
     qmlRegisterType<MpvPreview>("org.kde.haruna", 1, 0, "MpvPreview");
     qRegisterMetaType<PlayListModel *>();
@@ -159,6 +159,7 @@ void Application::registerQmlTypes()
 
 void Application::setupQmlSettingsTypes()
 {
+    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MpvProperties", MpvProperties::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "AudioSettings", AudioSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "GeneralSettings", GeneralSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "InformationSettings", InformationSettings::self());

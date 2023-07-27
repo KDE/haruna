@@ -217,7 +217,7 @@ SettingsBasePage {
             onActivated: {
                 PlaybackSettings.hWDecoding = model.get(index).key
                 PlaybackSettings.save()
-                mpv.setProperty(Mpv.HardwareDecoding, PlaybackSettings.hWDecoding)
+                mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
             }
 
             Component.onCompleted: {
@@ -393,7 +393,7 @@ SettingsBasePage {
                 }
                 PlaybackSettings.ytdlFormat = ytdlFormatField.text
                 PlaybackSettings.save()
-                mpv.setProperty(Mpv.YtdlFormat, PlaybackSettings.ytdlFormat)
+                mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
             }
 
             Component.onCompleted: {

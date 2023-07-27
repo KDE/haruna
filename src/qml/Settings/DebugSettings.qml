@@ -107,7 +107,7 @@ SettingsBasePage {
             checked: InformationSettings.mpvLogging
             visible: false
             onCheckedChanged: {
-                mpv.setProperty(Mpv.Terminal, checked)
+                mpv.setProperty(MpvProperties.Terminal, checked)
                 InformationSettings.mpvLogging = checked
                 InformationSettings.save()
             }

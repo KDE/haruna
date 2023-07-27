@@ -79,7 +79,7 @@ MpvItem {
             return
         }
 
-        const chapters = getProperty(Mpv.ChapterList)
+        const chapters = getProperty(MpvProperties.ChapterList)
         const chaptersToSkip = PlaybackSettings.chaptersToSkip
         if (chapters.length === 0 || chaptersToSkip === "") {
             return
