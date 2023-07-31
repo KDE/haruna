@@ -79,6 +79,11 @@ Kirigami.ApplicationWindow {
 
         visible: !window.isFullScreen() && GeneralSettings.showMenuBar
         sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent
+
+        onVisibleChanged: {
+            window.resizeWindow()
+        }
+
     }
 
     MpvVideo {
@@ -93,6 +98,10 @@ Kirigami.ApplicationWindow {
                        ? window.contentItem.right
                        : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right)
         anchors.top: parent.top
+
+        onVideoReconfig: {
+            resizeWindow()
+        }
 
         Osd { id: osd }
     }
@@ -293,6 +302,7 @@ Kirigami.ApplicationWindow {
     // the previous session.
     Timer {
         id: saveWindowGeometryTimer
+
         interval: 1000
         onTriggered: app.saveWindowGeometry(window)
     }
@@ -325,5 +335,17 @@ Kirigami.ApplicationWindow {
         } else {
             window.showNormal()
         }
+    }
+
+    function resizeWindow() {
+        if (!GeneralSettings.resizeWindowToVideo) {
+            return
+        }
+
+        window.width = mpv.videoWidth
+        window.height = mpv.videoHeight
+                + (footer.visible ? footer.height : 0)
+                + (header.visible ? header.height : 0)
+                + (menuBar.visible ? menuBar.height : 0)
     }
 }

@@ -101,17 +101,6 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
-
-        CheckBox {
-            text: i18nc("@option:check", "Remember window size and position")
-            checked: GeneralSettings.rememberWindowGeometry
-            onCheckedChanged: {
-                GeneralSettings.rememberWindowGeometry = checked
-                GeneralSettings.save()
-            }
-        }
-
         SettingsHeader {
             text: i18nc("@title", "Interface")
             Layout.columnSpan: 2
@@ -135,29 +124,30 @@ SettingsBasePage {
         Item { width: 1 }
 
         RowLayout {
-        CheckBox {
-            text: i18nc("@option:check", "Use accurate preview")
-            checked: GeneralSettings.accuratePreviewThumbnail
-            enabled: GeneralSettings.showPreviewThumbnail
-            onCheckedChanged: {
-                GeneralSettings.accuratePreviewThumbnail = checked
-                GeneralSettings.save()
+            CheckBox {
+                text: i18nc("@option:check", "Use accurate preview")
+                checked: GeneralSettings.accuratePreviewThumbnail
+                enabled: GeneralSettings.showPreviewThumbnail
+                onCheckedChanged: {
+                    GeneralSettings.accuratePreviewThumbnail = checked
+                    GeneralSettings.save()
+                }
             }
-        }
-        ToolButton {
-            icon.name: "documentinfo"
-            icon.color: Kirigami.Theme.negativeTextColor
-            checkable: true
-            checked: false
 
-            ToolTip {
-                text: i18nc("@info:tooltip", "Generating an accurate preview is slow")
-                visible: parent.checked
-                delay: 0
-                timeout: -1
-                closePolicy: Popup.NoAutoClose
+            ToolButton {
+                icon.name: "documentinfo"
+                icon.color: Kirigami.Theme.negativeTextColor
+                checkable: true
+                checked: false
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "Generating an accurate preview is slow")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
             }
-        }
         }
 
         Item { width: 1 }
@@ -172,6 +162,68 @@ SettingsBasePage {
             onValueChanged: {
                 GeneralSettings.previewThumbnailWidth = previewThumbnailWidth.value
                 GeneralSettings.save()
+            }
+        }
+
+        Label {
+            text: i18nc("@label:spinbox", "Window")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        RowLayout {
+            CheckBox {
+                text: i18nc("@option:check", "Resize to fit video")
+                checked: GeneralSettings.resizeWindowToVideo
+                onCheckedChanged: {
+                    GeneralSettings.resizeWindowToVideo = checked
+                    GeneralSettings.save()
+                    window.resizeWindow()
+                }
+            }
+
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "The window is resized according to the video resolution.\n" +
+                                "The maximum size is not constrained, this is left to the operating system.")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
+            }
+        }
+
+        Item { width: 1 }
+
+        RowLayout {
+            CheckBox {
+                text: i18nc("@option:check", "Remember window size and position")
+                checked: GeneralSettings.rememberWindowGeometry
+                onCheckedChanged: {
+                    GeneralSettings.rememberWindowGeometry = checked
+                    GeneralSettings.save()
+                }
+            }
+
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "When window size and position are changed the new values " +
+                                "are saved and used to restore the application " +
+                                "to the same size and position when a new instance is opened.\n\n"+
+                                "The \"Resize to fit video\" setting takes precedence.\n")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
             }
         }
 

@@ -20,6 +20,10 @@ ToolBar {
     position: ToolBar.Header
     visible: !window.isFullScreen() && GeneralSettings.showHeader
 
+    onVisibleChanged: {
+        window.resizeWindow()
+    }
+
     RowLayout {
         id: headerRow
 
