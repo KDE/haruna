@@ -22,7 +22,7 @@ ToolBar {
     property alias playPauseButton: playPauseButton
     property alias volume: volumeSliderLoader.item
 
-    padding: 5
+    padding: Kirigami.Units.smallSpacing
     position: ToolBar.Footer
     hoverEnabled: true
 
