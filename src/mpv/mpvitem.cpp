@@ -63,6 +63,8 @@ MpvItem::MpvItem(QQuickItem *parent)
     observeProperty(MpvProperties::self()->Mute, MPV_FORMAT_FLAG);
     observeProperty(MpvProperties::self()->AudioId, MPV_FORMAT_INT64);
     observeProperty(MpvProperties::self()->SubtitleId, MPV_FORMAT_INT64);
+    observeProperty(MpvProperties::self()->Width, MPV_FORMAT_NODE);
+    observeProperty(MpvProperties::self()->Height, MPV_FORMAT_NODE);
     observeProperty(MpvProperties::self()->SecondarySubtitleId, MPV_FORMAT_INT64);
     observeProperty(MpvProperties::self()->Chapter, MPV_FORMAT_INT64);
     observeProperty(MpvProperties::self()->ChapterList, MPV_FORMAT_NODE);
@@ -348,6 +350,14 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->SecondarySubtitleId) {
         cachePropertyValue(property, value);
         Q_EMIT secondarySubtitleIdChanged();
+
+    } else if (property == MpvProperties::self()->Width) {
+        cachePropertyValue(property, value);
+        Q_EMIT videoWidthChanged();
+
+    } else if (property == MpvProperties::self()->Height) {
+        cachePropertyValue(property, value);
+        Q_EMIT videoHeightChanged();
 
     } else if (property == MpvProperties::self()->TrackList) {
         loadTracks();
@@ -758,6 +768,32 @@ void MpvItem::setWatchPercentage(double value)
     }
     m_watchPercentage = value;
     Q_EMIT watchPercentageChanged();
+}
+
+int MpvItem::videoWidth()
+{
+    return getCachedPropertyValue(MpvProperties::self()->Width).toInt();
+}
+
+void MpvItem::setVideoWidth(int value)
+{
+    if (width() == value) {
+        return;
+    }
+    setProperty(MpvProperties::self()->Width, value);
+}
+
+int MpvItem::videoHeight()
+{
+    return getCachedPropertyValue(MpvProperties::self()->Height).toInt();
+}
+
+void MpvItem::setVideoHeight(int value)
+{
+    if (height() == value) {
+        return;
+    }
+    setProperty(MpvProperties::self()->Height, value);
 }
 
 #include "moc_mpvitem.cpp"

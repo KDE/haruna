@@ -111,6 +111,14 @@ class MpvItem : public MpvAbstractItem
     int secondarySubtitleId();
     void setSecondarySubtitleId(int value);
 
+    Q_PROPERTY(int videoWidth READ videoWidth WRITE setVideoWidth NOTIFY videoWidthChanged)
+    int videoWidth();
+    void setVideoWidth(int value);
+
+    Q_PROPERTY(int videoHeight READ videoHeight WRITE setVideoHeight NOTIFY videoHeightChanged)
+    int videoHeight();
+    void setVideoHeight(int value);
+
     /**
      * Whether the file finished loading and it's safe to start certain events,
      * like auto skipping chapters, which otherwise skips wrong chapter due to the multithreaded code
@@ -159,6 +167,8 @@ Q_SIGNALS:
     void fileLoaded();
     void endFile(QString reason);
     void videoReconfig();
+    void videoWidthChanged();
+    void videoHeightChanged();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
     // signals used for mpris
