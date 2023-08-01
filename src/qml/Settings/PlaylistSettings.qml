@@ -76,6 +76,16 @@ SettingsBasePage {
 
         Item { width: 1; height: 1 }
         CheckBox {
+            checked: PlaylistSettings.showToolbar
+            text: i18nc("@option:check", "Show toolbar")
+            onCheckStateChanged: {
+                PlaylistSettings.showToolbar = checked
+                PlaylistSettings.save()
+            }
+        }
+
+        Item { width: 1; height: 1 }
+        CheckBox {
             checked: PlaylistSettings.overlayVideo
             text: i18nc("@option:check", "Overlay video")
             onCheckStateChanged: {

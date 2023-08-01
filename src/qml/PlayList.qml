@@ -79,6 +79,8 @@ Item {
 
                     z: 100
                     width: parent.width
+                    height: PlaylistSettings.showToolbar ? implicitHeight : 0
+                    visible: PlaylistSettings.showToolbar
 
                     InputPopup {
                         id: addUrlPopup
