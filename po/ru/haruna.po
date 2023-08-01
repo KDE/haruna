@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 00:45+0000\n"
+"POT-Creation-Date: 2023-08-01 00:45+0000\n"
 "PO-Revision-Date: 2022-11-17 16:07+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -560,7 +560,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Список воспроизведения пуст"
 
-#: src/mpv/mpvitem.cpp:378
+#: src/mpv/mpvitem.cpp:388
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -774,12 +774,12 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Добавить новую папку"
 
-#: src/qml/Header.qml:70
+#: src/qml/Header.qml:74
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Субтитры"
 
-#: src/qml/Header.qml:103
+#: src/qml/Header.qml:107
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Аудио"
@@ -801,18 +801,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:235 src/qml/PlayList.qml:312 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:244 src/qml/PlayList.qml:312 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Выберите файл"
 
-#: src/qml/main.qml:263
+#: src/qml/main.qml:272
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Выбор файла субтитров"
 
-#: src/qml/main.qml:281
+#: src/qml/main.qml:290
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Открыть"
@@ -1244,71 +1244,98 @@ msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 "Количество сохраняемых последних файлов. Чтобы отключить, введите 0 (ноль)."
 
-#: src/qml/Settings/GeneralSettings.qml:107
-msgctxt "@option:check"
-msgid "Remember window size and position"
-msgstr "Восстанавливать размер и расположение окна"
-
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:105
 msgctxt "@title"
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:111
 #, fuzzy
 #| msgid "Show thumbnails"
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Показать миниатюры"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:116
 #, fuzzy
 #| msgid "Show thumbnails"
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Показать миниатюры"
 
-#: src/qml/Settings/GeneralSettings.qml:139
+#: src/qml/Settings/GeneralSettings.qml:128
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:154
+#: src/qml/Settings/GeneralSettings.qml:144
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:181
+#: src/qml/Settings/GeneralSettings.qml:169
+msgctxt "@label:spinbox"
+msgid "Window"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:175
+msgctxt "@option:check"
+msgid "Resize to fit video"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:190
+msgctxt "@info:tooltip"
+msgid ""
+"The window is resized according to the video resolution.\n"
+"The maximum size is not constrained, this is left to the operating system."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:204
+msgctxt "@option:check"
+msgid "Remember window size and position"
+msgstr "Восстанавливать размер и расположение окна"
+
+#: src/qml/Settings/GeneralSettings.qml:218
+msgctxt "@info:tooltip"
+msgid ""
+"When window size and position are changed the new values are saved and used "
+"to restore the application to the same size and position when a new instance "
+"is opened.\n"
+"\n"
+"The \"Resize to fit video\" setting takes precedence.\n"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Показывать строку меню"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:244
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Показывать панель инструментов"
 
-#: src/qml/Settings/GeneralSettings.qml:203
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Показывать маркеры разделов"
 
-#: src/qml/Settings/GeneralSettings.qml:212
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Цветовая схема"
 
-#: src/qml/Settings/GeneralSettings.qml:254
+#: src/qml/Settings/GeneralSettings.qml:306
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Оформление"
 
-#: src/qml/Settings/GeneralSettings.qml:303
+#: src/qml/Settings/GeneralSettings.qml:355
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Использовать набор значков Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:313
+#: src/qml/Settings/GeneralSettings.qml:365
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

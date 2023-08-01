@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 00:45+0000\n"
+"POT-Creation-Date: 2023-08-01 00:45+0000\n"
 "PO-Revision-Date: 2023-07-14 19:22+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -536,7 +536,7 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "La llista de reproducció està buida"
 
-#: src/mpv/mpvitem.cpp:378
+#: src/mpv/mpvitem.cpp:388
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -752,12 +752,12 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Afegeix una carpeta nova"
 
-#: src/qml/Header.qml:70
+#: src/qml/Header.qml:74
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Subtítols"
 
-#: src/qml/Header.qml:103
+#: src/qml/Header.qml:107
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Àudio"
@@ -781,18 +781,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:235 src/qml/PlayList.qml:312 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:244 src/qml/PlayList.qml:312 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccioneu un fitxer"
 
-#: src/qml/main.qml:263
+#: src/qml/main.qml:272
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccioneu un fitxer de subtítols"
 
-#: src/qml/main.qml:281
+#: src/qml/main.qml:290
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Obre"
@@ -1179,67 +1179,94 @@ msgstr ""
 "Nombre màxim de fitxers recents a emmagatzemar. Introduïu 0 (zero) per a "
 "desactivar-ho."
 
-#: src/qml/Settings/GeneralSettings.qml:107
-msgctxt "@option:check"
-msgid "Remember window size and position"
-msgstr "Recorda la mida i la posició de la finestra"
-
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:105
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfície"
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:111
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Vista prèvia de la miniatura"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:116
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Mostra una vista prèvia de la miniatura"
 
-#: src/qml/Settings/GeneralSettings.qml:139
+#: src/qml/Settings/GeneralSettings.qml:128
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Usa una vista prèvia precisa"
 
-#: src/qml/Settings/GeneralSettings.qml:154
+#: src/qml/Settings/GeneralSettings.qml:144
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "La generació d'una vista prèvia precisa és lenta"
 
-#: src/qml/Settings/GeneralSettings.qml:181
+#: src/qml/Settings/GeneralSettings.qml:169
+msgctxt "@label:spinbox"
+msgid "Window"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:175
+msgctxt "@option:check"
+msgid "Resize to fit video"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:190
+msgctxt "@info:tooltip"
+msgid ""
+"The window is resized according to the video resolution.\n"
+"The maximum size is not constrained, this is left to the operating system."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:204
+msgctxt "@option:check"
+msgid "Remember window size and position"
+msgstr "Recorda la mida i la posició de la finestra"
+
+#: src/qml/Settings/GeneralSettings.qml:218
+msgctxt "@info:tooltip"
+msgid ""
+"When window size and position are changed the new values are saved and used "
+"to restore the application to the same size and position when a new instance "
+"is opened.\n"
+"\n"
+"The \"Resize to fit video\" setting takes precedence.\n"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostra la barra de menús"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:244
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: src/qml/Settings/GeneralSettings.qml:203
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostra els marcadors de capítols"
 
-#: src/qml/Settings/GeneralSettings.qml:212
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de color"
 
-#: src/qml/Settings/GeneralSettings.qml:254
+#: src/qml/Settings/GeneralSettings.qml:306
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estil de la IGU"
 
-#: src/qml/Settings/GeneralSettings.qml:303
+#: src/qml/Settings/GeneralSettings.qml:355
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Empra el tema d'icones Brisa"
 
-#: src/qml/Settings/GeneralSettings.qml:313
+#: src/qml/Settings/GeneralSettings.qml:365
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
