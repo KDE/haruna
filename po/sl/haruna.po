@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-01 00:45+0000\n"
-"PO-Revision-Date: 2023-07-14 06:44+0200\n"
+"PO-Revision-Date: 2023-08-01 10:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
@@ -1205,12 +1205,12 @@ msgstr "Generiranje natančnega predogleda je počasno"
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Okno"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Prilagodi velikost videu"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1218,6 +1218,8 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"Velikost okna se spremeni glede na ločljivost videa.\n"
+"Največja velikost ni omejena, to je prepuščeno operacijskemu sistemu."
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@option:check"
@@ -1233,6 +1235,11 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Ko spremenite velikost in položaj okna, se nove vrednosti shranijo in "
+"uporabijo za obnovitev aplikacije na isto velikost in položaj, ko se odpre "
+"nov pojavek.\n"
+"\n"
+"Nastavitev »Spremeni velikost, da se prilega videu« ima prednost.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"

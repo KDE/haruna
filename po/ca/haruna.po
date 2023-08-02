@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-01 00:45+0000\n"
-"PO-Revision-Date: 2023-07-14 19:22+0300\n"
+"PO-Revision-Date: 2023-08-01 18:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1207,12 +1207,12 @@ msgstr "La generació d'una vista prèvia precisa és lenta"
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Finestra"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Redimensiona per a ajustar-se al vídeo"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1220,6 +1220,8 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"La finestra es redimensiona d'acord amb la resolució del vídeo.\n"
+"La mida màxima no està restringida, es deixa al sistema operatiu."
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@option:check"
@@ -1235,6 +1237,11 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Quan es canvien la mida i la posició de la finestra, els valors nous es "
+"desen i s'utilitzen per restaurar l'aplicació a la mateixa mida i posició "
+"quan s'obre una instància nova.\n"
+"\n"
+"El paràmetre «Redimensiona per a ajustar-se al vídeo» té prioritat.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"

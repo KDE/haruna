@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-01 00:45+0000\n"
-"PO-Revision-Date: 2023-07-14 10:35+0200\n"
+"PO-Revision-Date: 2023-08-01 14:31+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1203,12 +1203,12 @@ msgstr "Een accuraat voorbeeld genereren is langzaam"
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Venster"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Grootte wijzigen zodat de video past"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1216,6 +1216,9 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"Het venster is van grootte gewijzigd volgens de resolutie van de video.\n"
+"De maximum grootte is niet beperkt, dit wordt overgelaten aan het "
+"besturingssysteem."
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@option:check"
@@ -1231,6 +1234,11 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Wanneer venstergrootte en positie zijn gewijzigd dan worden de nieuwe "
+"waarden opgeslagen en gebruikt om de toepassing te herstellen op dezelfde "
+"grootte en positie wanneer een nieuw exemplaar wordt geopend.\n"
+"\n"
+"De instelling \"Grootte wijzigen om video te laten passen\" heeft voorrang.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"

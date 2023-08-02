@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-01 00:45+0000\n"
-"PO-Revision-Date: 2023-07-14 11:30+0200\n"
+"PO-Revision-Date: 2023-08-01 13:59+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1208,12 +1208,12 @@ msgstr "La generación de vistas previas precisas es lenta"
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Ventana"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Cambiar tamaño para ajustar al vídeo"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1221,6 +1221,9 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"El tamaño de la ventana se cambia según la resolución del vídeo.\n"
+"El tamaño máximo no está restringido, operación que se deja al sistema "
+"operativo."
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@option:check"
@@ -1236,6 +1239,11 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Cuando se cambia el tamaño y la posición de la ventana, los nuevos valores "
+"se guardan y se usan para que al restaurar la aplicación tenga el mismo "
+"tamaño y posición.\n"
+"\n"
+"La opción «Cambiar tamaño para ajustar al vídeo» tiene preferencia.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"
