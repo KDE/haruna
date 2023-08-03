@@ -108,7 +108,7 @@ SettingsBasePage {
 
                 function openSelectActionPopup() {
                     selectActionPopup.buttonIndex = model.index
-                    selectActionPopup.headerTitle = model.label
+                    selectActionPopup.title = model.label
                     selectActionPopup.open()
                 }
             }
@@ -120,6 +120,10 @@ SettingsBasePage {
             height: Kirigami.Units.gridUnit
         }
 
-        SelectActionPopup { id: selectActionPopup }
+        SelectActionPopup {
+            id: selectActionPopup
+
+            subtitle: i18nc("@title", "Double click to set action")
+        }
     }
 }

@@ -104,6 +104,25 @@ Kirigami.ApplicationWindow {
         }
 
         Osd { id: osd }
+
+        SelectActionPopup {
+            id: triggerActionPopup
+
+            property int minHeight: mpv.height * 0.5
+            property int maxHeight: mpv.height * 0.9
+
+            x: mpv.width * 0.5 - width * 0.5
+            y: Kirigami.Units.largeSpacing
+            anchors.centerIn: undefined
+            width: Kirigami.Units.gridUnit * 20
+            height: minHeight < Kirigami.Units.gridUnit * 16 ? maxHeight : minHeight
+            title: ""
+            subtitle: ""
+
+            onActionSelected: {
+                appActions[actionName].trigger()
+            }
+        }
     }
 
     Loader {

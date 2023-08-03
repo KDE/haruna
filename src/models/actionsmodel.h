@@ -74,6 +74,7 @@ public:
 
 Q_SIGNALS:
     void shortcutChanged(const QString &actionName, const QString &actionShortcut);
+    void openActionsDialogAction();
     void aboutHarunaAction();
     void audioCycleUpAction();
     void audioCycleDownAction();

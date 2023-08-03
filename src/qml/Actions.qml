@@ -37,6 +37,10 @@ Item {
     Connections {
         target: actionsModel
 
+        onOpenActionsDialogAction : {
+            triggerActionPopup.open()
+        }
+
         onAboutHarunaAction: {
             settingsLoader.active = true
             settingsLoader.item.currentPage = SettingsWindow.Page.About

@@ -12,7 +12,8 @@ import org.kde.kirigami 2.11 as Kirigami
 Popup {
     id: root
 
-    property string headerTitle
+    property string title: ""
+    property string subtitle: ""
     property int buttonIndex: -1
 
     signal actionSelected(string actionName)
@@ -24,26 +25,24 @@ Popup {
     focus: true
 
     onOpened: {
+        actionsListView.positionViewAtBeginning()
         filterActionsField.text = ""
         filterActionsField.focus = true
     }
 
     onActionSelected: close()
 
-    Action {
-        shortcut: "ctrl+f"
-        onTriggered: filterActionsField.forceActiveFocus(Qt.ShortcutFocusReason)
-    }
-
     ColumnLayout {
         anchors.fill: parent
 
         Kirigami.Heading {
-            text: root.headerTitle
+            text: root.title
+            visible: text !== ""
         }
 
         Label {
-            text: i18nc("@title", "Double click to set action")
+            text: root.subtitle
+            visible: text !== ""
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
         }
@@ -59,37 +58,41 @@ Popup {
             KeyNavigation.down: actionsListView
         }
 
-        ListView {
-            id: actionsListView
-
-            implicitHeight: 30 * model.count
-            model: proxyActionsModel
-            spacing: 1
-            clip: true
-            currentIndex: focus ? 0 : -1
-            delegate: Kirigami.BasicListItem {
-                height: 30
-                width: root.width
-                label: model.text
-                reserveSpaceForIcon: false
-                onDoubleClicked: actionSelected(model.name)
-                Keys.onEnterPressed: actionSelected(model.name)
-                Keys.onReturnPressed: actionSelected(model.name)
-            }
-
+        ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignTop
-            KeyNavigation.up: filterActionsField
-            KeyNavigation.down: filterActionsField
-            Keys.onPressed: {
-                if (event.key === Qt.Key_End) {
-                    actionsListView.currentIndex = actionsListView.count - 1
-                    actionsListView.positionViewAtIndex(actionsListView.currentIndex,ListView.Center)
+
+            ListView {
+                id: actionsListView
+
+                model: proxyActionsModel
+                spacing: 1
+                clip: true
+                currentIndex: focus ? 0 : -1
+                delegate: ListItem {
+                    label: model.text
+                    trailing: Label {
+                        text: model.shortcut
+                        opacity: 0.7
+                    }
+                    reserveSpaceForIcon: false
+                    onDoubleClicked: actionSelected(model.name)
+                    Keys.onEnterPressed: actionSelected(model.name)
+                    Keys.onReturnPressed: actionSelected(model.name)
                 }
-                if (event.key === Qt.Key_Home) {
-                    actionsListView.currentIndex = 0
-                    actionsListView.positionViewAtIndex(actionsListView.currentIndex,ListView.Center)
+
+                KeyNavigation.up: filterActionsField
+                KeyNavigation.down: filterActionsField
+                Keys.onPressed: {
+                    if (event.key === Qt.Key_End) {
+                        actionsListView.currentIndex = actionsListView.count - 1
+                        actionsListView.positionViewAtEnd()
+                    }
+                    if (event.key === Qt.Key_Home) {
+                        actionsListView.currentIndex = 0
+                        actionsListView.positionViewAtBeginning()
+                    }
                 }
             }
         }

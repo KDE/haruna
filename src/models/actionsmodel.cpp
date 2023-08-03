@@ -18,6 +18,12 @@ ActionsModel::ActionsModel(QObject *parent)
     , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
 {
     Action action;
+    action.name = QStringLiteral("openActionsDialogAction");
+    action.text = i18nc("@action", "Open Actions Dialog");
+    action.defaultShortcut = Qt::CTRL | Qt::Key_QuoteLeft; // Key_QuoteLeft =  backtick
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    m_actions << action;
+
     action.name = QStringLiteral("aboutHarunaAction");
     action.text = i18nc("@action", "About Haruna");
     action.iconName = QStringLiteral("haruna");
