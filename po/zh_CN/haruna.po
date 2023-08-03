@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-01 00:45+0000\n"
-"PO-Revision-Date: 2023-07-30 07:10\n"
+"PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -72,7 +72,8 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"允许暂时覆盖 ytdl 格式选择设置。如果该项设置通过图形界面被更改时将被覆盖"
+"允许暂时覆盖 ytdl 格式选择设置。如果是通过图形界面更改了该设置，则原有设置将"
+"被实际覆盖"
 
 #: src/application.cpp:131
 #, kde-format
@@ -126,13 +127,13 @@ msgstr "退出全屏"
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
-msgstr "上一帧"
+msgstr "下一帧"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
-msgstr "下一帧"
+msgstr "上一帧"
 
 #: src/models/actionsmodel.cpp:80
 #, kde-format
@@ -156,7 +157,7 @@ msgstr "打开右键菜单"
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr "在鼠标指针位置打开和关闭上下文菜单"
+msgstr "在鼠标指针位置打开/关闭右键菜单"
 
 #: src/models/actionsmodel.cpp:102
 #, kde-format
@@ -168,13 +169,13 @@ msgstr "打开文件"
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "添加外置字幕…"
+msgstr "添加外挂字幕…"
 
 #: src/models/actionsmodel.cpp:116
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
-msgstr "打开链接"
+msgstr "打开 URL"
 
 #: src/models/actionsmodel.cpp:123
 #, kde-format
@@ -222,7 +223,7 @@ msgstr "退出"
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
-msgstr "重新播放"
+msgstr "重新开始播放"
 
 #: src/models/actionsmodel.cpp:179
 #, kde-format
@@ -240,13 +241,13 @@ msgstr "向后快退一小步"
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
-msgstr "向前快进中等长度"
+msgstr "向前快进一中步"
 
 #: src/models/actionsmodel.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
-msgstr "向后快退中等长度"
+msgstr "向后快退一中步"
 
 #: src/models/actionsmodel.cpp:207
 #, kde-format
@@ -264,25 +265,25 @@ msgstr "向后快退一大步"
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
-msgstr "快进到下一章"
+msgstr "跳转到下一章节"
 
 #: src/models/actionsmodel.cpp:228
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
-msgstr "快退到上一章"
+msgstr "跳转到上一章节"
 
 #: src/models/actionsmodel.cpp:235
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr "快进到下一个字幕"
+msgstr "跳转到下一条字幕位置"
 
 #: src/models/actionsmodel.cpp:242
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "快退到上一个字幕"
+msgstr "跳转到上一条字幕位置"
 
 #: src/models/actionsmodel.cpp:249
 #, kde-format
@@ -300,7 +301,7 @@ msgstr "设置循环"
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
-msgstr "截屏"
+msgstr "截图"
 
 #: src/models/actionsmodel.cpp:270
 #, kde-format
@@ -312,13 +313,13 @@ msgstr "显示/隐藏字幕"
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
-msgstr "增加字幕字体大小"
+msgstr "增大字幕字体"
 
 #: src/models/actionsmodel.cpp:284
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
-msgstr "减小字幕字体大小"
+msgstr "减小字幕字体"
 
 #: src/models/actionsmodel.cpp:291
 #, kde-format
@@ -336,31 +337,31 @@ msgstr "字幕下移"
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
-msgstr "字幕快进"
+msgstr "字幕前拉"
 
 #: src/models/actionsmodel.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
-msgstr "字幕延迟"
+msgstr "字幕后推"
 
 #: src/models/actionsmodel.cpp:319
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr "字幕上移"
+msgstr "字幕向上切换"
 
 #: src/models/actionsmodel.cpp:326
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr "字幕下移"
+msgstr "字幕向下切换"
 
 #: src/models/actionsmodel.cpp:333
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr "开/关反交错"
+msgstr "启用/禁用反交错"
 
 #: src/models/actionsmodel.cpp:340
 #, kde-format
@@ -414,13 +415,13 @@ msgstr "视频下移"
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
-msgstr "增大音量"
+msgstr "提高音量"
 
 #: src/models/actionsmodel.cpp:403
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
-msgstr "减小音量"
+msgstr "降低音量"
 
 #: src/models/actionsmodel.cpp:410
 #, kde-format
@@ -498,7 +499,7 @@ msgstr "重置伽玛值"
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
-msgstr "增加饱和度"
+msgstr "提高饱和度"
 
 #: src/models/actionsmodel.cpp:501
 #, kde-format
@@ -553,7 +554,7 @@ msgstr "播放速度：%1"
 #: src/qml/Actions.qml:217
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
-msgstr "循环开始：%1"
+msgstr "循环起点：%1"
 
 #: src/qml/Actions.qml:221
 msgctxt "@info:tooltip"
@@ -573,12 +574,12 @@ msgstr "字幕偏移：%1"
 #: src/qml/Actions.qml:247
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
-msgstr "关闭字幕"
+msgstr "字幕关闭"
 
 #: src/qml/Actions.qml:247
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "开启字幕"
+msgstr "字幕开启"
 
 #: src/qml/Actions.qml:256 src/qml/Actions.qml:268
 msgctxt "@info:tooltip"
@@ -722,12 +723,12 @@ msgstr "Haruna 帮助窗口 (仅英文)"
 #: src/qml/Haruna/Components/SettingsBasePage.qml:37
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
-msgstr "Haruna 手册"
+msgstr "Haruna 使用手册"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
-msgstr "从...加载字幕"
+msgstr "字幕文件来源位置"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
@@ -737,7 +738,7 @@ msgstr "确认删除"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
-msgstr "从列表中删除这个文件夹"
+msgstr "从列表中删除此文件夹"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 msgctxt "@info:tooltip"
@@ -839,7 +840,7 @@ msgstr "播放(&P)"
 #: src/qml/Menus/PlaybackMenu.qml:31
 msgctxt "@title:menu"
 msgid "Seek"
-msgstr "快进/快退"
+msgstr "时移"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
@@ -873,7 +874,7 @@ msgstr "视频(&V)"
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
 msgctxt "@title:menu"
 msgid "Adjustments"
-msgstr "调整"
+msgstr "颜色调整"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
 msgctxt "@title:menu"
@@ -1015,13 +1016,13 @@ msgstr "首选语言"
 #: src/qml/Settings/SubtitlesSettings.qml:42
 msgctxt "placeholder text"
 msgid "eng,ger etc."
-msgstr "eng、ger 等"
+msgstr "eng,ger 等。"
 
 #: src/qml/Settings/AudioSettings.qml:45
 #: src/qml/Settings/SubtitlesSettings.qml:52
 msgctxt "@info:tooltip"
 msgid "Do not use spaces."
-msgstr "不要用空格。"
+msgstr "不要填写空格。"
 
 #: src/qml/Settings/AudioSettings.qml:56
 #: src/qml/Settings/SubtitlesSettings.qml:63
@@ -1037,7 +1038,7 @@ msgstr "音量调整步长"
 #: src/qml/Settings/CustomCommandsSettings.qml:34
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr "尚无自定义命令"
+msgstr "尚未设置任何自定义命令"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:36
 msgctxt "@action:button"
@@ -1089,7 +1090,7 @@ msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
-msgstr "如果字段为空，意味着没有配置文件/文件夹 (例如在使用默认设置时)。"
+msgstr "如果字段为空，意味着没有创建配置文件/文件夹 (例如在使用默认设置时)。"
 
 #: src/qml/Settings/DebugSettings.qml:106
 msgctxt "@option:check"
@@ -1109,7 +1110,7 @@ msgstr "add volume +10"
 #: src/qml/Settings/EditCustomCommand.qml:56
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr "OSD 消息"
+msgstr "屏显信息"
 
 #: src/qml/Settings/EditCustomCommand.qml:65
 msgctxt "placeholder text"
@@ -1129,7 +1130,7 @@ msgstr "键盘快捷键"
 #: src/qml/Settings/EditCustomCommand.qml:98
 msgctxt "@option:radio"
 msgid "Run at startup"
-msgstr "在启动时运行"
+msgstr "启动时运行"
 
 #: src/qml/Settings/EditCustomCommand.qml:108
 msgctxt "@action:intoolbar"
@@ -1149,7 +1150,7 @@ msgstr "保存(&S)"
 #: src/qml/Settings/GeneralSettings.qml:30
 msgctxt "@label:spinbox"
 msgid "Osd font size"
-msgstr "OSD 字体大小"
+msgstr "屏显字体大小"
 
 #: src/qml/Settings/GeneralSettings.qml:56
 msgctxt "@label:textbox"
@@ -1159,7 +1160,7 @@ msgstr "文件对话框位置"
 #: src/qml/Settings/GeneralSettings.qml:73
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
-msgstr "如果路径为空，对话框将记住最后打开的位置。"
+msgstr "如果此项为空，对话框将记住最近一次打开的位置。"
 
 #: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@label:spinbox"
@@ -1169,7 +1170,7 @@ msgstr "最近文件数目"
 #: src/qml/Settings/GeneralSettings.qml:100
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
-msgstr "记录的“最近文件”的最大数目。输入 0 以禁用。"
+msgstr "“最近文件”列表的文件数量上限。输入 0 时禁止记录最近文件。"
 
 #: src/qml/Settings/GeneralSettings.qml:105
 msgctxt "@title"
@@ -1189,22 +1190,22 @@ msgstr "显示预览缩略图"
 #: src/qml/Settings/GeneralSettings.qml:128
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr "使用精确预览"
+msgstr "使用精确预览图"
 
 #: src/qml/Settings/GeneralSettings.qml:144
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr "精确预览的生成速度较慢"
+msgstr "精确预览图的生成速度较慢"
 
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "窗口"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "调整窗口大小以适应视频"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1212,6 +1213,8 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"根据视频分辨率调整窗口大小。\n"
+"最大尺寸不作限制，由操作系统决定。"
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@option:check"
@@ -1227,6 +1230,10 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"窗口大小、位置在更改后将被保存。下次打开新的实例时，窗口将恢复成上次使用的大"
+"小和位置。\n"
+"\n"
+"“调整窗口大小以适应视频”选项的优先级更高。\n"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"
@@ -1251,12 +1258,12 @@ msgstr "配色方案"
 #: src/qml/Settings/GeneralSettings.qml:306
 msgctxt "@label:listbox"
 msgid "GUI style"
-msgstr "界面样式"
+msgstr "界面风格"
 
 #: src/qml/Settings/GeneralSettings.qml:355
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
-msgstr "使用微风图标主题"
+msgstr "使用 Breeze 微风图标主题"
 
 #: src/qml/Settings/GeneralSettings.qml:365
 msgctxt "@info:tooltip"
@@ -1264,8 +1271,8 @@ msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
 msgstr ""
-"设置图标主题为微风。\n"
-"需要重启。"
+"设置图标主题为 Breeze 微风。\n"
+"需要重启才能生效。"
 
 #: src/qml/Settings/PlaybackSettings.qml:29
 msgctxt "@label:spinbox"
@@ -1275,14 +1282,14 @@ msgstr "快进/快退一小步的步长"
 #: src/qml/Settings/PlaybackSettings.qml:47
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
-msgstr "快进/快退中等长度的步长"
+msgstr "快进/快退一中步的步长"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
 "bar"
-msgstr "当鼠标放置在进度条上时，这个设置也用于鼠标滚轮的快进/快退操作"
+msgstr "鼠标悬停在进度条上面时，鼠标滚轮的快进/快退操作也使用此数值"
 
 #: src/qml/Settings/PlaybackSettings.qml:84
 msgctxt "@label:spinbox"
@@ -1299,12 +1306,12 @@ msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
-msgstr "在最小化窗口时暂停播放，还原时恢复播放。"
+msgstr "窗口最小化时暂停播放，还原时恢复播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:118
 msgctxt "@label:spinbox"
 msgid "Resume playback"
-msgstr "继续播放"
+msgstr "播放中断恢复"
 
 #: src/qml/Settings/PlaybackSettings.qml:125
 msgctxt "@option:check"
@@ -1314,25 +1321,25 @@ msgstr "启动时打开上次播放的文件"
 #: src/qml/Settings/PlaybackSettings.qml:138
 msgctxt "@option:check"
 msgid "Seek to last playback position"
-msgstr "播放时自动恢复上次播放进度"
+msgstr "自动恢复上次播放进度"
 
 #: src/qml/Settings/PlaybackSettings.qml:146
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
-msgstr "当打开以前播放过的文件时，它将从播放停止时的位置开始。"
+msgstr "打开之前播放过的文件时，从上次播放中断的位置开始播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:155
 msgctxt "@option:check"
 msgid "Start playing"
-msgstr "开始播放"
+msgstr "自动开始播放"
 
 #: src/qml/Settings/PlaybackSettings.qml:164
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
-msgstr "当打开以前播放过的文件时，开始自动播放。"
+msgstr "打开以前播放过的文件时，自动开始播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:169
 msgctxt "@label"
@@ -1343,13 +1350,13 @@ msgstr "硬件解码"
 #: src/qml/Settings/PlaybackSettings.qml:302
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr "启用"
+msgstr "已启用"
 
 #: src/qml/Settings/PlaybackSettings.qml:175
 #: src/qml/Settings/PlaybackSettings.qml:302
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr "禁用"
+msgstr "已禁用"
 
 #: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@label:spinbox"
@@ -1359,18 +1366,18 @@ msgstr "记住时间位置"
 #: src/qml/Settings/PlaybackSettings.qml:254
 msgctxt "@info"
 msgid "Disabled"
-msgstr "禁用"
+msgstr "已禁用"
 
 #: src/qml/Settings/PlaybackSettings.qml:256
 msgctxt "@info"
 msgid "For all files"
-msgstr "应用于所有文件"
+msgstr "记住所有文件的时间位置"
 
 #: src/qml/Settings/PlaybackSettings.qml:259
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
-msgstr[0] "应用于长于 %1 分钟的文件"
+msgstr[0] "只记住长于 %1 分钟的文件"
 
 #: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info"
@@ -1386,22 +1393,22 @@ msgstr "跳过章节"
 #: src/qml/Settings/PlaybackSettings.qml:313
 msgctxt "@option:check"
 msgid "Show osd message on skip"
-msgstr "跳过时显示 OSD 消息"
+msgstr "跳过时显示屏显信息"
 
 #: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@label:textbox"
 msgid "Skip words"
-msgstr "跳过单词"
+msgstr "跳过包含关键词的章节"
 
 #: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
-msgstr "开场曲, 结尾曲, 章节 1"
+msgstr "op, ed, chapter 1, 开场曲, 结尾曲, 章节 1"
 
 #: src/qml/Settings/PlaybackSettings.qml:343
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
-msgstr "跳过包含这些单词的章节。列表中的单词用逗号分隔。"
+msgstr "跳过包含这些单词的章节。请用半角逗号分隔列表中的单词。"
 
 #: src/qml/Settings/PlaybackSettings.qml:357
 msgctxt "@title"
@@ -1417,7 +1424,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
-msgstr "选择高度低于或等于选定值的最佳视频。"
+msgstr "选择高度小于/等于指定值的最佳视频。"
 
 #: src/qml/Settings/PlaybackSettings.qml:429
 msgctxt "placeholder text"
@@ -1427,7 +1434,7 @@ msgstr "bestvideo+bestaudio/best"
 #: src/qml/Settings/PlaylistSettings.qml:27
 msgctxt "@label:listbox"
 msgid "Position"
-msgstr "位置"
+msgstr "播放列表位置"
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 msgctxt "@label:listbox"
@@ -1437,7 +1444,7 @@ msgstr "播放列表样式"
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr "悬浮视频"
+msgstr "播放列表在视频上方叠加显示"
 
 #: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@info:tooltip"
@@ -1445,23 +1452,23 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
-"勾选后，播放列表会显示在视频的顶部\n"
-"当未选中时，视频大小会被调整"
+"勾选时，播放列表将叠加显示在视频的上方\n"
+"不勾选时，视频画面将缩小以容纳播放列表"
 
 #: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
-msgstr "显示媒体文件标题，而非文件名称"
+msgstr "显示媒体文件的标题，而不是文件名称"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
-msgstr "自动从同一文件夹中加载视频"
+msgstr "自动加载相同文件夹中的视频"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Repeat"
-msgstr "循环"
+msgstr "循环播放"
 
 #: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
@@ -1471,7 +1478,7 @@ msgstr "显示行号"
 #: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Toggle with mouse"
-msgstr "用鼠标切换"
+msgstr "鼠标悬停边缘时显示播放列表"
 
 #: src/qml/Settings/PlaylistSettings.qml:143
 msgctxt "@option:check"
@@ -1481,7 +1488,7 @@ msgstr "全屏时增加字体大小"
 #: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr "记住上次播放列表状态"
+msgstr "记住播放列表的显示/隐藏状态"
 
 #: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@info:tooltip"
@@ -1513,7 +1520,7 @@ msgstr "视频"
 #: src/qml/Settings/SettingsWindow.qml:77
 msgctxt "@action"
 msgid "Audio"
-msgstr "声音"
+msgstr "音频"
 
 #: src/qml/Settings/SettingsWindow.qml:85
 msgctxt "@action"
@@ -1553,7 +1560,7 @@ msgstr "帮助"
 #: src/qml/Settings/SubtitlesSettings.qml:86
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr "允许在黑色边框中显示字幕"
+msgstr "允许在视频黑边中显示字幕"
 
 #: src/qml/Settings/SubtitlesSettings.qml:95
 msgctxt "@info:tooltip"
@@ -1561,13 +1568,12 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
-"勾选后，字幕可以在视频之外的黑色边框中显示。并不是所有 .ass 字幕都支持此模"
-"式。"
+"勾选后，字幕可以在视频外面的黑边中显示。并不是所有 .ass 字幕都支持此模式。"
 
 #: src/qml/Settings/SubtitlesSettings.qml:100
 msgctxt "@title"
 msgid "Styling"
-msgstr "样式"
+msgstr "字幕样式"
 
 #: src/qml/Settings/SubtitlesSettings.qml:106
 msgctxt "@label:listbox"
@@ -1604,7 +1610,7 @@ msgstr "字体颜色"
 #: src/qml/Settings/SubtitlesSettings.qml:353
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr "设置默认值"
+msgstr "设置为默认值"
 
 #: src/qml/Settings/SubtitlesSettings.qml:234
 msgctxt "@label:textbox"
@@ -1635,7 +1641,7 @@ msgstr "边框宽度"
 #: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr "默认封面"
+msgstr "音乐文件默认封面"
 
 #: src/qml/Settings/VideoSettings.qml:38
 msgctxt "placeholder text"
@@ -1648,13 +1654,13 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
-"用于不具备视频轨道的音乐文件。嵌入在音乐文件中的封面图像、或者保存在与播放文"
-"件相同文件夹的封面图像、文件夹图像等。"
+"文件没有可用的封面图像时，显示此图像。用于不具备视频轨道的音乐文件、没有嵌入"
+"封面图像的音乐文件、在相同文件夹中没有封面图像的音乐文件。"
 
 #: src/qml/Settings/VideoSettings.qml:79
 msgctxt "@title"
 msgid "Screenshots"
-msgstr "截屏"
+msgstr "截图"
 
 #: src/qml/Settings/VideoSettings.qml:89
 msgctxt "@label:listbox"
@@ -1669,7 +1675,7 @@ msgstr "模板"
 #: src/qml/Settings/VideoSettings.qml:153
 msgctxt "@title"
 msgid "Image adjustments"
-msgstr "图像调节"
+msgstr "图像调整"
 
 #: src/qml/Settings/VideoSettings.qml:163
 msgctxt "@label:slider"
@@ -1694,4 +1700,4 @@ msgstr "饱和度"
 #: src/qml/Settings/VideoSettings.qml:228
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
-msgstr "中键单击滑块以重置"
+msgstr "中键点击滑块可以重置"
