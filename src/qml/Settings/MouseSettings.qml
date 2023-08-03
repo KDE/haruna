@@ -69,15 +69,29 @@ SettingsBasePage {
             implicitHeight: delegateHeight * (mouseButtonsListView.count + 1)
             model: mouseActionsModel
 
-            delegate: Kirigami.BasicListItem {
+            delegate: ListItem {
                 id: delegate
 
                 label: model.label
-                subtitle: MouseSettings[model.key] ? appActions[MouseSettings[model.key]].text : "No action set"
+                subtitle: MouseSettings[model.key]
+                          ? appActions[MouseSettings[model.key]].text
+                          : i18nc("@label", "No action set")
                 icon: MouseSettings[model.key] ? "checkmark" : ""
                 reserveSpaceForIcon: true
                 width: content.width
                 highlighted: false
+
+                trailing: ToolButton {
+                    icon.name: "edit-clear-all"
+                    onClicked: {
+                        MouseSettings[model.key] = ""
+                        MouseSettings.save()
+                    }
+
+                    ToolTip {
+                        text: i18nc("@info:tooltip", "Clear action")
+                    }
+                }
 
                 onClicked: openSelectActionPopup()
                 Component.onCompleted: mouseButtonsListView.delegateHeight = height

@@ -56,18 +56,7 @@ Popup {
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
             KeyNavigation.up: actionsListView
-            KeyNavigation.down: clearActionButton
-        }
-        Button {
-            id: clearActionButton
-
-            Layout.fillWidth: true
-            text: i18nc("@action:button", "Clear current action")
-            KeyNavigation.up: filterActionsField
             KeyNavigation.down: actionsListView
-            onClicked: actionSelected("")
-            Keys.onEnterPressed: actionSelected("")
-            Keys.onReturnPressed: actionSelected("")
         }
 
         ListView {
@@ -91,7 +80,7 @@ Popup {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignTop
-            KeyNavigation.up: clearActionButton
+            KeyNavigation.up: filterActionsField
             KeyNavigation.down: filterActionsField
             Keys.onPressed: {
                 if (event.key === Qt.Key_End) {
