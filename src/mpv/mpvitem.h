@@ -132,6 +132,7 @@ public:
     ~MpvItem() = default;
 
     enum class AsyncIds {
+        None,
         FinishedLoading,
         SavePosition,
         Screenshot,
@@ -194,9 +195,7 @@ private:
     double loadTimePosition();
     void resetTimePosition();
     void loadTracks();
-    void onSetPropertyReply(int id);
-    void onGetPropertyReply(const QVariant &value, int id);
-    void onCommandReply(const QVariant &data, int id);
+    void onAsyncReply(const QVariant &data, int id);
     void onChapterChanged();
     QString md5(const QString &str);
 

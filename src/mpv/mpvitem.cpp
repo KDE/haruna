@@ -173,14 +173,8 @@ void MpvItem::setupConnections()
     connect(m_mpvController, &MpvController::videoReconfig,
             this, &MpvItem::videoReconfig, Qt::QueuedConnection);
 
-    connect(m_mpvController, &MpvController::setPropertyReply,
-            this, &MpvItem::onSetPropertyReply, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::getPropertyReply,
-            this, &MpvItem::onGetPropertyReply, Qt::QueuedConnection);
-
-    connect(m_mpvController, &MpvController::commandReply,
-            this, &MpvItem::onCommandReply, Qt::QueuedConnection);
+    connect(m_mpvController, &MpvController::asyncReply,
+            this, &MpvItem::onAsyncReply, Qt::QueuedConnection);
 
     connect(this, &MpvItem::currentUrlChanged, this, [=]() {
         setFinishedLoading(false);
@@ -443,33 +437,27 @@ void MpvItem::loadTracks()
     Q_EMIT subtitleTracksModelChanged();
 }
 
-void MpvItem::onSetPropertyReply(int id)
+void MpvItem::onAsyncReply(const QVariant &data, int id)
 {
     switch (static_cast<AsyncIds>(id)) {
-    case AsyncIds::FinishedLoading:
+    case AsyncIds::None: {
+        break;
+    }
+    case AsyncIds::FinishedLoading: {
         setFinishedLoading(true);
         break;
     }
-}
-
-void MpvItem::onGetPropertyReply(const QVariant &value, int id)
-{
-    switch (static_cast<AsyncIds>(id)) {
-    case AsyncIds::SavePosition:
+    case AsyncIds::SavePosition: {
         auto hash = md5(currentUrl().toLocalFile());
         auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
-        Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), value);
+        Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), data.toString());
         break;
     }
-}
-
-void MpvItem::onCommandReply(const QVariant &data, int id)
-{
-    switch (static_cast<AsyncIds>(id)) {
-    case AsyncIds::Screenshot:
+    case AsyncIds::Screenshot: {
         auto filename = data.toMap().value(QStringLiteral("filename")).toString();
         osdMessage(i18nc("@info:tooltip osd", "Screenshot: %1", filename));
         break;
+    }
     }
 }
 
@@ -510,7 +498,7 @@ void MpvItem::saveTimePosition()
         return;
     }
 
-    m_mpvController->getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::FinishedLoading));
+    m_mpvController->getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::SavePosition));
 }
 
 double MpvItem::loadTimePosition()

@@ -65,17 +65,17 @@ void MpvController::eventHandler()
         case MPV_EVENT_GET_PROPERTY_REPLY: {
             mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
             auto data = node_to_variant(reinterpret_cast<mpv_node *>(prop->data));
-            Q_EMIT getPropertyReply(data.toString(), event->reply_userdata);
+            Q_EMIT asyncReply(data, event->reply_userdata);
             break;
         }
         case MPV_EVENT_SET_PROPERTY_REPLY: {
-            Q_EMIT setPropertyReply(event->reply_userdata);
+            Q_EMIT asyncReply(QVariant(), event->reply_userdata);
             break;
         }
         case MPV_EVENT_COMMAND_REPLY: {
             mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
             auto data = node_to_variant(reinterpret_cast<mpv_node *>(prop));
-            Q_EMIT commandReply(data, event->reply_userdata);
+            Q_EMIT asyncReply(data, event->reply_userdata);
             break;
         }
 

@@ -9,6 +9,7 @@
 
 #include <QMap>
 #include <QObject>
+#include <QVariant>
 
 #include <mpv/client.h>
 #include <mpv/render_gl.h>
@@ -97,9 +98,7 @@ public:
 
 Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
-    void getPropertyReply(const QVariant &value, int id);
-    void setPropertyReply(int id);
-    void commandReply(const QVariant &data, int id);
+    void asyncReply(const QVariant &value = QVariant(), int id = 0);
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);
