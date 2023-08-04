@@ -215,7 +215,7 @@ void MpvItem::setupConnections()
             setPause(!PlaybackSettings::playOnResume() && watchLaterPosition() > 0);
             m_mpvController->setPropertyAsync(MpvProperties::self()->Position,
                                               watchLaterPosition(),
-                                              MpvController::AsyncIds::FinishedLoading);
+                                              static_cast<int>(AsyncIds::FinishedLoading));
         }
     });
 
@@ -443,19 +443,19 @@ void MpvItem::loadTracks()
     Q_EMIT subtitleTracksModelChanged();
 }
 
-void MpvItem::onSetPropertyReply(MpvController::AsyncIds id)
+void MpvItem::onSetPropertyReply(int id)
 {
-    switch (static_cast<MpvController::AsyncIds>(id)) {
-    case MpvController::AsyncIds::FinishedLoading:
+    switch (static_cast<AsyncIds>(id)) {
+    case AsyncIds::FinishedLoading:
         setFinishedLoading(true);
         break;
     }
 }
 
-void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id)
+void MpvItem::onGetPropertyReply(const QVariant &value, int id)
 {
-    switch (static_cast<MpvController::AsyncIds>(id)) {
-    case MpvController::AsyncIds::SavePosition:
+    switch (static_cast<AsyncIds>(id)) {
+    case AsyncIds::SavePosition:
         auto hash = md5(currentUrl().toLocalFile());
         auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
         Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), value);
@@ -505,7 +505,7 @@ void MpvItem::saveTimePosition()
         return;
     }
 
-    m_mpvController->getPropertyAsync(MpvProperties::self()->Position, MpvController::AsyncIds::SavePosition);
+    m_mpvController->getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::FinishedLoading));
 }
 
 double MpvItem::loadTimePosition()

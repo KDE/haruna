@@ -65,11 +65,11 @@ void MpvController::eventHandler()
         case MPV_EVENT_GET_PROPERTY_REPLY: {
             mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
             auto data = node_to_variant(reinterpret_cast<mpv_node *>(prop->data));
-            Q_EMIT getPropertyReply(data.toString(), static_cast<MpvController::AsyncIds>(event->reply_userdata));
+            Q_EMIT getPropertyReply(data.toString(), event->reply_userdata);
             break;
         }
         case MPV_EVENT_SET_PROPERTY_REPLY: {
-            Q_EMIT setPropertyReply(static_cast<MpvController::AsyncIds>(event->reply_userdata));
+            Q_EMIT setPropertyReply(event->reply_userdata);
             break;
         }
         case MPV_EVENT_COMMAND_REPLY: {
@@ -118,11 +118,11 @@ int MpvController::setProperty(const QString &property, const QVariant &value)
     return mpv_set_property(m_mpv, property.toUtf8().constData(), MPV_FORMAT_NODE, &node);
 }
 
-int MpvController::setPropertyAsync(const QString &property, const QVariant &value, AsyncIds id)
+int MpvController::setPropertyAsync(const QString &property, const QVariant &value, int id)
 {
     mpv_node node;
     setNode(&node, value);
-    int err = mpv_set_property_async(m_mpv, static_cast<int>(id), property.toUtf8().constData(), MPV_FORMAT_NODE, &node);
+    int err = mpv_set_property_async(m_mpv, id, property.toUtf8().constData(), MPV_FORMAT_NODE, &node);
     return err;
 }
 
@@ -137,7 +137,7 @@ QVariant MpvController::getProperty(const QString &property)
     return node_to_variant(&node);
 }
 
-int MpvController::getPropertyAsync(const QString &property, AsyncIds id)
+int MpvController::getPropertyAsync(const QString &property, int id)
 {
     int err = mpv_get_property_async(m_mpv, static_cast<int>(id), property.toUtf8().constData(), MPV_FORMAT_NODE);
     return err;

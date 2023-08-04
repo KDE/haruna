@@ -58,12 +58,6 @@ class MpvController : public QObject
 public:
     MpvController(QObject *parent = nullptr);
 
-    enum class AsyncIds {
-        FinishedLoading,
-        SavePosition,
-    };
-    Q_ENUM(AsyncIds)
-
     /**
      * Set the given property as mpv_node converted from the QVariant argument.
      *
@@ -71,7 +65,7 @@ public:
      * @return mpv error code (<0 on error, >= 0 on success)
      */
     Q_INVOKABLE int setProperty(const QString &property, const QVariant &value);
-    Q_INVOKABLE int setPropertyAsync(const QString &property, const QVariant &value, AsyncIds id);
+    Q_INVOKABLE int setPropertyAsync(const QString &property, const QVariant &value, int id);
 
     /**
      * Return the given property as mpv_node converted to QVariant,
@@ -81,7 +75,7 @@ public:
      * @return the property value, or an ErrorReturn with the error code
      */
     Q_INVOKABLE QVariant getProperty(const QString &property);
-    Q_INVOKABLE int getPropertyAsync(const QString &property, AsyncIds id);
+    Q_INVOKABLE int getPropertyAsync(const QString &property, int id);
 
     /**
      * mpv_command_node() equivalent.
@@ -103,8 +97,8 @@ public:
 
 Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
-    void getPropertyReply(const QVariant &value, AsyncIds id);
-    void setPropertyReply(AsyncIds id);
+    void getPropertyReply(const QVariant &value, int id);
+    void setPropertyReply(int id);
     void commandReply(int id);
     void fileStarted();
     void fileLoaded();

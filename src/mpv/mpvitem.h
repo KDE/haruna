@@ -131,6 +131,12 @@ public:
     explicit MpvItem(QQuickItem *parent = nullptr);
     ~MpvItem() = default;
 
+    enum class AsyncIds {
+        FinishedLoading,
+        SavePosition,
+    };
+    Q_ENUM(AsyncIds)
+
     Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
     QUrl currentUrl() const;
 
@@ -187,8 +193,8 @@ private:
     double loadTimePosition();
     void resetTimePosition();
     void loadTracks();
-    void onSetPropertyReply(MpvController::AsyncIds id);
-    void onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id);
+    void onSetPropertyReply(int id);
+    void onGetPropertyReply(const QVariant &value, int id);
     void onCommandReply(int id);
     void onChapterChanged();
     QString md5(const QString &str);
