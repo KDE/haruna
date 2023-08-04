@@ -103,7 +103,11 @@ Kirigami.ApplicationWindow {
             resizeWindow()
         }
 
-        Osd { id: osd }
+        Osd {
+            id: osd
+
+            maxWidth: mpv.width
+        }
 
         SelectActionPopup {
             id: triggerActionPopup

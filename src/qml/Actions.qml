@@ -232,7 +232,12 @@ Item {
             }
         }
 
-        onScreenshotAction: mpv.command(["screenshot"])
+        onScreenshotAction: {
+            const ss = mpv.synchronousCommand(["screenshot"])
+            if (ss.filename) {
+                osd.message(i18nc("@info:tooltip", "Screenshot: %1", ss.filename))
+            }
+        }
 
         onSubtitleQuickenAction: {
             const delay = mpv.getProperty(MpvProperties.SubtitleDelay) - 0.1

@@ -13,20 +13,31 @@ import org.kde.haruna 1.0
 Item {
     id: root
 
+    required property int maxWidth
     property bool active: false
     property alias label: label
 
     Label {
         id: label
-        x: 10
-        y: 10
+
+        x: Kirigami.Units.largeSpacing
+        y: Kirigami.Units.largeSpacing
+        width: textMetrics.advanceWidth > maxWidth ? maxWidth : textMetrics.advanceWidth + padding * 2
         visible: false
-        color: Kirigami.Theme.textColor
         background: Rectangle {
             color: Kirigami.Theme.backgroundColor
         }
-        padding: 5
+        padding: Kirigami.Units.largeSpacing
         font.pointSize: parseInt(GeneralSettings.osdFontSize)
+        maximumLineCount: 5
+        wrapMode: Text.WrapAnywhere
+
+        TextMetrics {
+            id: textMetrics
+
+            font: label.font
+            text: label.text
+        }
     }
 
     Timer {
