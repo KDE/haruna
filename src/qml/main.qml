@@ -298,7 +298,7 @@ Kirigami.ApplicationWindow {
 
         onAccepted: {
             if (acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.file))) {
-                mpv.command(["sub-add", subtitlesFileDialog.file.toString(), "select"])
+                mpv.commandAsync(["sub-add", subtitlesFileDialog.file.toString(), "select"])
             }
         }
         onRejected: mpv.focus = true

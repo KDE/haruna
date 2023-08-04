@@ -85,9 +85,9 @@ QVariant MpvAbstractItem::expandText(const QString &text)
     return m_mpvController->command(QStringList{QStringLiteral("expand-text"), text});
 }
 
-void MpvAbstractItem::command(const QStringList &params)
+int MpvAbstractItem::commandAsync(const QStringList &params, int id)
 {
-    Q_EMIT mpvCommand(params);
+    return m_mpvController->commandAsync(params, id);
 }
 
 QVariant MpvAbstractItem::synchronousCommand(const QStringList &params)

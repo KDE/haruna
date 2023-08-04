@@ -102,9 +102,9 @@ Item {
             window.exitFullscreen()
         }
 
-        onFrameStepForwardAction: mpv.command(["frame-step"])
+        onFrameStepForwardAction: mpv.commandAsync(["frame-step"])
 
-        onFrameStepBackwardAction: mpv.command(["frame-back-step"])
+        onFrameStepBackwardAction: mpv.commandAsync(["frame-back-step"])
 
         onLoadLastPlayedFileAction: window.openFile(GeneralSettings.lastPlayedFile, true)
 
@@ -158,19 +158,19 @@ Item {
             Qt.quit()
         }
 
-        onRestartPlaybackAction: mpv.command(["seek", 0, "absolute"])
+        onRestartPlaybackAction: mpv.commandAsync(["seek", 0, "absolute"])
 
-        onSeekForwardSmallAction: mpv.command(["seek", GeneralSettings.seekSmallStep, "exact"])
+        onSeekForwardSmallAction: mpv.commandAsync(["seek", GeneralSettings.seekSmallStep, "exact"])
 
-        onSeekBackwardSmallAction: mpv.command(["seek", -GeneralSettings.seekSmallStep, "exact"])
+        onSeekBackwardSmallAction: mpv.commandAsync(["seek", -GeneralSettings.seekSmallStep, "exact"])
 
-        onSeekForwardMediumAction: mpv.command(["seek", GeneralSettings.seekMediumStep, "exact"])
+        onSeekForwardMediumAction: mpv.commandAsync(["seek", GeneralSettings.seekMediumStep, "exact"])
 
-        onSeekBackwardMediumAction: mpv.command(["seek", -GeneralSettings.seekMediumStep, "exact"])
+        onSeekBackwardMediumAction: mpv.commandAsync(["seek", -GeneralSettings.seekMediumStep, "exact"])
 
-        onSeekForwardBigAction: mpv.command(["seek", GeneralSettings.seekBigStep, "exact"])
+        onSeekForwardBigAction: mpv.commandAsync(["seek", GeneralSettings.seekBigStep, "exact"])
 
-        onSeekBackwardBigAction: mpv.command(["seek", -GeneralSettings.seekBigStep, "exact"])
+        onSeekBackwardBigAction: mpv.commandAsync(["seek", -GeneralSettings.seekBigStep, "exact"])
 
         onSeekNextChapterAction: {
             const chapters = mpv.getProperty(MpvProperties.ChapterList)
@@ -180,14 +180,14 @@ Item {
                 actionsModel.signalEmitter("playNextAction")
                 return
             }
-            mpv.command(["add", "chapter", "1"])
+            mpv.commandAsync(["add", "chapter", "1"])
         }
 
-        onSeekPreviousChapterAction: mpv.command(["add", "chapter", "-1"])
+        onSeekPreviousChapterAction: mpv.commandAsync(["add", "chapter", "-1"])
 
         onSeekNextSubtitleAction: {
             if (mpv.getProperty(MpvProperties.SubtitleId) !== false) {
-                mpv.command(["sub-seek", "1"])
+                mpv.commandAsync(["sub-seek", "1"])
             } else {
                 actionsModel.signalEmitter("seekForwardSmallAction")
             }
@@ -195,7 +195,7 @@ Item {
 
         onSeekPreviousSubtitleAction: {
             if (mpv.getProperty(MpvProperties.SubtitleId) !== false) {
-                mpv.command(["sub-seek", "-1"])
+                mpv.commandAsync(["sub-seek", "-1"])
             } else {
                 actionsModel.signalEmitter("seekBackwardSmallAction")
             }
@@ -205,7 +205,7 @@ Item {
             if (mpv.watchLaterPosition === 0) {
                 return
             }
-            mpv.command(["seek", mpv.watchLaterPosition, "absolute"])
+            mpv.commandAsync(["seek", mpv.watchLaterPosition, "absolute"])
         }
 
         onSetLoopAction: {
@@ -294,9 +294,9 @@ Item {
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
-        onSubtitleMoveUpAction: mpv.command(["add", "sub-pos", "-1"])
+        onSubtitleMoveUpAction: mpv.commandAsync(["add", "sub-pos", "-1"])
 
-        onSubtitleMoveDownAction: mpv.command(["add", "sub-pos", "+1"])
+        onSubtitleMoveDownAction: mpv.commandAsync(["add", "sub-pos", "+1"])
 
         onToggleDeinterlacingAction: {
             const deinterlaced = !mpv.getProperty(MpvProperties.Deinterlace)
@@ -345,11 +345,11 @@ Item {
         }
 
         onVolumeUpAction: {
-            mpv.command(["add", "volume", GeneralSettings.volumeStep])
+            mpv.commandAsync(["add", "volume", GeneralSettings.volumeStep])
         }
 
         onVolumeDownAction: {
-            mpv.command(["add", "volume", -GeneralSettings.volumeStep])
+            mpv.commandAsync(["add", "volume", -GeneralSettings.volumeStep])
         }
 
         onZoomInAction: {

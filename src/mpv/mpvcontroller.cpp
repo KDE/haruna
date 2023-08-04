@@ -6,6 +6,7 @@
 
 #include "mpvcontroller.h"
 
+#include <QDebug>
 #include <QVariant>
 
 #include <clocale>
@@ -68,8 +69,11 @@ void MpvController::eventHandler()
             break;
         }
         case MPV_EVENT_SET_PROPERTY_REPLY: {
-            mpv_event_property *prop = static_cast<mpv_event_property *>(event->data);
             Q_EMIT setPropertyReply(static_cast<MpvController::AsyncIds>(event->reply_userdata));
+            break;
+        }
+        case MPV_EVENT_COMMAND_REPLY: {
+            Q_EMIT commandReply(event->reply_userdata);
             break;
         }
 
@@ -150,6 +154,13 @@ QVariant MpvController::command(const QVariant &params)
     }
     node_autofree f(&result);
     return node_to_variant(&result);
+}
+
+int MpvController::commandAsync(const QVariant &params, int id)
+{
+    mpv_node node;
+    setNode(&node, params);
+    return mpv_command_node_async(m_mpv, id, &node);
 }
 
 QString MpvController::getError(int error)

@@ -26,7 +26,7 @@ public:
     Q_INVOKABLE void setProperty(const QString &property, const QVariant &value);
     Q_INVOKABLE QVariant getProperty(const QString &property);
     Q_INVOKABLE QVariant getCachedPropertyValue(const QString &property);
-    Q_INVOKABLE void command(const QStringList &params);
+    Q_INVOKABLE int commandAsync(const QStringList &params, int id = 0);
     Q_INVOKABLE QVariant synchronousCommand(const QStringList &params);
     Q_INVOKABLE QVariant expandText(const QString &text);
 

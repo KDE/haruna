@@ -90,6 +90,7 @@ public:
      * @return the property value, or an ErrorReturn with the error code
      */
     Q_INVOKABLE QVariant command(const QVariant &params);
+    Q_INVOKABLE int commandAsync(const QVariant &params, int id = 0);
 
     /**
      * Return an error string from an ErrorReturn.
@@ -104,6 +105,7 @@ Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
     void getPropertyReply(const QVariant &value, AsyncIds id);
     void setPropertyReply(AsyncIds id);
+    void commandReply(int id);
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);

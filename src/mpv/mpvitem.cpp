@@ -179,13 +179,16 @@ void MpvItem::setupConnections()
     connect(m_mpvController, &MpvController::getPropertyReply,
             this, &MpvItem::onGetPropertyReply, Qt::QueuedConnection);
 
+    connect(m_mpvController, &MpvController::commandReply,
+            this, &MpvItem::onCommandReply, Qt::QueuedConnection);
+
     connect(this, &MpvItem::currentUrlChanged, this, [=]() {
         setFinishedLoading(false);
     });
 
     connect(this, &MpvItem::fileLoaded, this, [=]() {
         if (!getProperty(MpvProperties::self()->VideoId).toBool()) {
-            command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
+            commandAsync(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
 
         m_chaptersList = getProperty(MpvProperties::self()->ChapterList).toList();
@@ -276,7 +279,7 @@ void MpvItem::setupConnections()
         Q_EMIT playPrevious();
     });
     connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
-        command(QStringList() << QStringLiteral("add") << QStringLiteral("time-pos") << QString::number(offset));
+        commandAsync(QStringList() << QStringLiteral("add") << QStringLiteral("time-pos") << QString::number(offset));
     });
     connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
         Q_EMIT openUri(uri);
@@ -376,7 +379,7 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
-    command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
+    commandAsync(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();
@@ -460,6 +463,11 @@ void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds 
     }
 }
 
+void MpvItem::onCommandReply(int id)
+{
+    qDebug() << id;
+}
+
 void MpvItem::onChapterChanged()
 {
     if (!finishedLoading() || !PlaybackSettings::skipChapters()) {
@@ -477,7 +485,7 @@ void MpvItem::onChapterChanged()
         auto title = ch.value(QStringLiteral("title")).toString();
         QString word = words.at(i);
         if (!ch.isEmpty() && title.toLower().contains(word.toLower().simplified())) {
-            command({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
+            commandAsync({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
             if (PlaybackSettings::showOsdOnSkipChapters()) {
                 Q_EMIT chapterSkipMessage(title);
             }
@@ -537,7 +545,7 @@ void MpvItem::resetTimePosition()
 void MpvItem::userCommand(const QString &commandString)
 {
     QStringList args = KShell::splitArgs(commandString);
-    command(args);
+    commandAsync(args);
 }
 
 QString MpvItem::md5(const QString &str)

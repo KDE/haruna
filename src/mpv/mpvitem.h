@@ -189,6 +189,7 @@ private:
     void loadTracks();
     void onSetPropertyReply(MpvController::AsyncIds id);
     void onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id);
+    void onCommandReply(int id);
     void onChapterChanged();
     QString md5(const QString &str);
 
