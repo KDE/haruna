@@ -473,11 +473,11 @@ void MpvItem::onChapterChanged()
     }
 
     const QStringList words = chaptersToSkip.split(QStringLiteral(","));
+    auto ch = m_chaptersList.value(chapter()).toMap();
+    auto title = ch.value(QStringLiteral("title")).toString();
     for (int i = 0; i < words.count(); ++i) {
-        auto ch = m_chaptersList.value(chapter()).toMap();
-        auto title = ch.value(QStringLiteral("title")).toString();
-        QString word = words.at(i);
-        if (!ch.isEmpty() && title.toLower().contains(word.toLower().simplified())) {
+        QString word = words.at(i).toLower().simplified();
+        if (!ch.isEmpty() && title.toLower().contains(word)) {
             commandAsync({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
             if (PlaybackSettings::showOsdOnSkipChapters()) {
                 Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Skipped chapter: %1", title));
