@@ -171,6 +171,8 @@ Q_SIGNALS:
     void videoHeightChanged();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
+    void chapterSkipMessage(const QString &title);
+
     // signals used for mpris
     void raise();
     void playNext();
@@ -187,6 +189,7 @@ private:
     void loadTracks();
     void onSetPropertyReply(MpvController::AsyncIds id);
     void onGetPropertyReply(const QVariant &value, MpvController::AsyncIds id);
+    void onChapterChanged();
     QString md5(const QString &str);
 
     TracksModel *m_audioTracksModel;
@@ -211,6 +214,7 @@ private:
     ChaptersModel *m_chaptersModel;
     bool m_finishedLoading{false};
     QString m_watchLaterPath;
+    QList<QVariant> m_chaptersList;
 };
 
 #endif // MPVOBJECT_H

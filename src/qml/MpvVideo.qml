@@ -74,29 +74,8 @@ MpvItem {
         loadingIndicatorParent.visible = false
     }
 
-    onChapterChanged: {
-        if (!root.finishedLoading || !PlaybackSettings.skipChapters) {
-            return
-        }
-
-        const chapters = getProperty(MpvProperties.ChapterList)
-        const chaptersToSkip = PlaybackSettings.chaptersToSkip
-        if (chapters.length === 0 || chaptersToSkip === "") {
-            return
-        }
-
-        const words = chaptersToSkip.split(",")
-        for (let i = 0; i < words.length; ++i) {
-            if (chapters[chapter] && chapters[chapter].title.toLowerCase().includes(words[i].trim())) {
-                if (PlaybackSettings.showOsdOnSkipChapters) {
-                    osd.message(i18nc("@info:tooltip", "Skipped chapter: %1", chapters[chapter].title))
-                }
-                appActions.seekNextChapterAction.trigger()
-                // a chapter title can match multiple words
-                // return to prevent skipping multiple chapters
-                return
-            }
-        }
+    onChapterSkipMessage: {
+        osd.message(i18nc("@info:tooltip", "Skipped chapter: %1", title));
     }
 
     onEndFile: {

@@ -6,6 +6,7 @@
 
 #include "mpvitem.h"
 
+#include <QCommandLineParser>
 #include <QCryptographicHash>
 #include <QDir>
 #include <QJsonArray>
@@ -20,7 +21,6 @@
 
 #include <KLocalizedString>
 #include <KShell>
-#include <QCommandLineParser>
 
 #include "application.h"
 #include "audiosettings.h"
@@ -188,6 +188,7 @@ void MpvItem::setupConnections()
             command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
 
+        m_chaptersList = getProperty(MpvProperties::self()->ChapterList).toList();
         setWatchLaterPosition(loadTimePosition());
 
         if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
@@ -223,6 +224,9 @@ void MpvItem::setupConnections()
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
         }
     });
+
+    connect(this, &MpvItem::chapterChanged,
+            this, &MpvItem::onChapterChanged);
 
     connect(m_playlistModel, &PlayListModel::playingItemChanged, this, [=]() {
         loadFile(m_playlistModel->getPath());
@@ -453,6 +457,32 @@ void MpvItem::onGetPropertyReply(const QVariant &value, MpvController::AsyncIds 
         auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
         Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), value);
         break;
+    }
+}
+
+void MpvItem::onChapterChanged()
+{
+    if (!finishedLoading() || !PlaybackSettings::skipChapters()) {
+        return;
+    }
+
+    const QString chaptersToSkip = PlaybackSettings::chaptersToSkip();
+    if (m_chaptersList.count() == 0 || chaptersToSkip == QString()) {
+        return;
+    }
+
+    const QStringList words = chaptersToSkip.split(QStringLiteral(","));
+    for (int i = 0; i < words.count(); ++i) {
+        auto ch = m_chaptersList.value(chapter()).toMap();
+        auto title = ch.value(QStringLiteral("title")).toString();
+        QString word = words.at(i);
+        if (!ch.isEmpty() && title.toLower().contains(word.toLower().simplified())) {
+            command({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
+            if (PlaybackSettings::showOsdOnSkipChapters()) {
+                Q_EMIT chapterSkipMessage(title);
+            }
+            return;
+        }
     }
 }
 
