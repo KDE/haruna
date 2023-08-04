@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 00:45+0000\n"
+"POT-Creation-Date: 2023-08-04 00:45+0000\n"
 "PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -88,432 +88,440 @@ msgid "Playing media file"
 msgstr "正在播放媒体文件"
 
 #: src/models/actionsmodel.cpp:22
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@action"
+msgid "Open Actions Dialog"
+msgstr "打开配置文件"
+
+#: src/models/actionsmodel.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "关于 Haruna"
 
-#: src/models/actionsmodel.cpp:29
+#: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "音轨向上切换"
 
-#: src/models/actionsmodel.cpp:36
+#: src/models/actionsmodel.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "音轨向下切换"
 
-#: src/models/actionsmodel.cpp:43
+#: src/models/actionsmodel.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "配置"
 
-#: src/models/actionsmodel.cpp:50
+#: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "配置键盘快捷键"
 
-#: src/models/actionsmodel.cpp:57
+#: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "退出全屏"
 
-#: src/models/actionsmodel.cpp:64
+#: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "下一帧"
 
-#: src/models/actionsmodel.cpp:72
+#: src/models/actionsmodel.cpp:78
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "上一帧"
 
-#: src/models/actionsmodel.cpp:80
+#: src/models/actionsmodel.cpp:86
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "加载上次播放的文件"
 
-#: src/models/actionsmodel.cpp:87
+#: src/models/actionsmodel.cpp:93
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "静音"
 
-#: src/models/actionsmodel.cpp:94
+#: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "打开右键菜单"
 
-#: src/models/actionsmodel.cpp:98
+#: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "在鼠标指针位置打开/关闭右键菜单"
 
-#: src/models/actionsmodel.cpp:102
+#: src/models/actionsmodel.cpp:108
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "打开文件"
 
-#: src/models/actionsmodel.cpp:109
+#: src/models/actionsmodel.cpp:115
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "添加外挂字幕…"
 
-#: src/models/actionsmodel.cpp:116
+#: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "打开 URL"
 
-#: src/models/actionsmodel.cpp:123
+#: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "提高播放速度"
 
-#: src/models/actionsmodel.cpp:130
+#: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "降低播放速度"
 
-#: src/models/actionsmodel.cpp:137
+#: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "重置播放速度"
 
-#: src/models/actionsmodel.cpp:144
+#: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "播放/暂停"
 
-#: src/models/actionsmodel.cpp:151
+#: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "播放下一个"
 
-#: src/models/actionsmodel.cpp:158
+#: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "播放上一个"
 
-#: src/models/actionsmodel.cpp:165
+#: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "退出"
 
-#: src/models/actionsmodel.cpp:172
+#: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "重新开始播放"
 
-#: src/models/actionsmodel.cpp:179
+#: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "向前快进一小步"
 
-#: src/models/actionsmodel.cpp:186
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "向后快退一小步"
 
-#: src/models/actionsmodel.cpp:193
+#: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "向前快进一中步"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "向后快退一中步"
 
-#: src/models/actionsmodel.cpp:207
+#: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "向前快进一大步"
 
-#: src/models/actionsmodel.cpp:214
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "向后快退一大步"
 
-#: src/models/actionsmodel.cpp:221
+#: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "跳转到下一章节"
 
-#: src/models/actionsmodel.cpp:228
+#: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "跳转到上一章节"
 
-#: src/models/actionsmodel.cpp:235
+#: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "跳转到下一条字幕位置"
 
-#: src/models/actionsmodel.cpp:242
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "跳转到上一条字幕位置"
 
-#: src/models/actionsmodel.cpp:249
+#: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "跳转到稍后观看的位置"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "设置循环"
 
-#: src/models/actionsmodel.cpp:263
+#: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "截图"
 
-#: src/models/actionsmodel.cpp:270
+#: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "显示/隐藏字幕"
 
-#: src/models/actionsmodel.cpp:277
+#: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "增大字幕字体"
 
-#: src/models/actionsmodel.cpp:284
+#: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "减小字幕字体"
 
-#: src/models/actionsmodel.cpp:291
+#: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "字幕上移"
 
-#: src/models/actionsmodel.cpp:298
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "字幕下移"
 
-#: src/models/actionsmodel.cpp:305
+#: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "字幕前拉"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "字幕后推"
 
-#: src/models/actionsmodel.cpp:319
+#: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "字幕向上切换"
 
-#: src/models/actionsmodel.cpp:326
+#: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "字幕向下切换"
 
-#: src/models/actionsmodel.cpp:333
+#: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "启用/禁用反交错"
 
-#: src/models/actionsmodel.cpp:340
+#: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "进入/退出全屏模式"
 
-#: src/models/actionsmodel.cpp:347
+#: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "显示/隐藏菜单栏"
 
-#: src/models/actionsmodel.cpp:354
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "显示/隐藏标题"
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
+#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:93
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "播放列表"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
 msgstr "视频左移"
 
-#: src/models/actionsmodel.cpp:375
+#: src/models/actionsmodel.cpp:381
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
 msgstr "视频右移"
 
-#: src/models/actionsmodel.cpp:382
+#: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
 msgstr "视频上移"
 
-#: src/models/actionsmodel.cpp:389
+#: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
 msgstr "视频下移"
 
-#: src/models/actionsmodel.cpp:396
+#: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "提高音量"
 
-#: src/models/actionsmodel.cpp:403
+#: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "降低音量"
 
-#: src/models/actionsmodel.cpp:410
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "放大"
 
-#: src/models/actionsmodel.cpp:417
+#: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "缩小"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "重置缩放"
 
-#: src/models/actionsmodel.cpp:431
+#: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "提高对比度"
 
-#: src/models/actionsmodel.cpp:438
+#: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "降低对比度"
 
-#: src/models/actionsmodel.cpp:445
+#: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "重置对比度"
 
-#: src/models/actionsmodel.cpp:452
+#: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "提高亮度"
 
-#: src/models/actionsmodel.cpp:459
+#: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "降低亮度"
 
-#: src/models/actionsmodel.cpp:466
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "重置亮度"
 
-#: src/models/actionsmodel.cpp:473
+#: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "提高伽玛值"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "降低伽玛值"
 
-#: src/models/actionsmodel.cpp:487
+#: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "重置伽玛值"
 
-#: src/models/actionsmodel.cpp:494
+#: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "提高饱和度"
 
-#: src/models/actionsmodel.cpp:501
+#: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "降低饱和度"
 
-#: src/models/actionsmodel.cpp:508
+#: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "重置饱和度"
 
-#: src/models/actionsmodel.cpp:651
+#: src/models/actionsmodel.cpp:657
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -522,7 +530,7 @@ msgid ""
 msgstr ""
 "所选的快捷键与 <b>%1</b> 操作的快捷键冲突。<br><br>您想要重新分配该快捷键吗？"
 
-#: src/models/actionsmodel.cpp:657
+#: src/models/actionsmodel.cpp:663
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -541,112 +549,112 @@ msgctxt ""
 msgid "None"
 msgstr "无"
 
-#: src/qml/Actions.qml:60 src/qml/Actions.qml:78
+#: src/qml/Actions.qml:64 src/qml/Actions.qml:82
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "音频：%1 %2"
 
-#: src/qml/Actions.qml:129 src/qml/Actions.qml:135 src/qml/Actions.qml:140
+#: src/qml/Actions.qml:133 src/qml/Actions.qml:139 src/qml/Actions.qml:144
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
-#: src/qml/Actions.qml:217
+#: src/qml/Actions.qml:221
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "循环起点：%1"
 
-#: src/qml/Actions.qml:221
+#: src/qml/Actions.qml:225
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "循环：%1 - %2"
 
-#: src/qml/Actions.qml:227
+#: src/qml/Actions.qml:231
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "循环已清除"
 
-#: src/qml/Actions.qml:236 src/qml/Actions.qml:242
+#: src/qml/Actions.qml:240 src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "字幕偏移：%1"
 
-#: src/qml/Actions.qml:247
+#: src/qml/Actions.qml:251
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "字幕关闭"
 
-#: src/qml/Actions.qml:247
+#: src/qml/Actions.qml:251
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "字幕开启"
 
-#: src/qml/Actions.qml:256 src/qml/Actions.qml:268
+#: src/qml/Actions.qml:260 src/qml/Actions.qml:272
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "字幕：无"
 
-#: src/qml/Actions.qml:260 src/qml/Actions.qml:272
+#: src/qml/Actions.qml:264 src/qml/Actions.qml:276
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/qml/Actions.qml:279 src/qml/Actions.qml:285
+#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕缩放：%1"
 
-#: src/qml/Actions.qml:295
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "反交错：%1"
 
-#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
+#: src/qml/Actions.qml:353 src/qml/Actions.qml:359
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "缩放：%1"
 
-#: src/qml/Actions.qml:360
+#: src/qml/Actions.qml:364
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "缩放：0"
 
-#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
+#: src/qml/Actions.qml:371 src/qml/Actions.qml:377
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "对比度：%1"
 
-#: src/qml/Actions.qml:378
+#: src/qml/Actions.qml:382
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "对比度：0"
 
-#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
+#: src/qml/Actions.qml:388 src/qml/Actions.qml:394
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:395
+#: src/qml/Actions.qml:399
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
+#: src/qml/Actions.qml:405 src/qml/Actions.qml:411
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "伽玛值：%1"
 
-#: src/qml/Actions.qml:412
+#: src/qml/Actions.qml:416
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "伽玛值：0"
 
-#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:422 src/qml/Actions.qml:428
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "饱和度：%1"
 
-#: src/qml/Actions.qml:429
+#: src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "饱和度：0"
@@ -699,16 +707,6 @@ msgid ""
 msgstr ""
 "找不到 <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 或者 <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
-
-#: src/qml/Haruna/Components/SelectActionPopup.qml:46
-msgctxt "@title"
-msgid "Double click to set action"
-msgstr "双击设置操作"
-
-#: src/qml/Haruna/Components/SelectActionPopup.qml:65
-msgctxt "@action:button"
-msgid "Clear current action"
-msgstr "清除当前操作"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:29
 msgctxt "@action:intoolbar"
@@ -779,18 +777,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:244 src/qml/PlayList.qml:312 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:263 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "选择文件"
 
-#: src/qml/main.qml:272
+#: src/qml/main.qml:291
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "选择字幕文件"
 
-#: src/qml/main.qml:290
+#: src/qml/main.qml:309
 msgctxt "@action:button"
 msgid "Open"
 msgstr "打开"
@@ -842,11 +840,110 @@ msgctxt "@title:menu"
 msgid "Seek"
 msgstr "时移"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
-#: src/qml/Menus/SettingsMenu.qml:13
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:16
+#: src/qml/Menus/SettingsMenu.qml:15
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "设置(&S)"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
+#: src/qml/Menus/SettingsMenu.qml:20
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "General"
+msgctxt "@action:inmenu"
+msgid "General"
+msgstr "常规"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
+#: src/qml/Menus/SettingsMenu.qml:28
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playback"
+msgctxt "@action:inmenu"
+msgid "Playback"
+msgstr "播放"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
+#: src/qml/Menus/SettingsMenu.qml:36
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Video"
+msgctxt "@action:inmenu"
+msgid "Video"
+msgstr "视频"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
+#: src/qml/Menus/SettingsMenu.qml:44
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Audio"
+msgctxt "@action:inmenu"
+msgid "Audio"
+msgstr "音频"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
+#: src/qml/Menus/SettingsMenu.qml:52
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Subtitles"
+msgctxt "@action:inmenu"
+msgid "Subtitles"
+msgstr "字幕"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
+#: src/qml/Menus/SettingsMenu.qml:60
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:inmenu"
+msgid "Playlist"
+msgstr "播放列表"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
+#: src/qml/Menus/SettingsMenu.qml:68
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Mouse"
+msgctxt "@action:inmenu"
+msgid "Mouse"
+msgstr "鼠标"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
+#: src/qml/Menus/SettingsMenu.qml:76
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Shortcuts"
+msgctxt "@action:inmenu"
+msgid "Shortcuts"
+msgstr "快捷键"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
+#: src/qml/Menus/SettingsMenu.qml:84
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Custom commands"
+msgctxt "@action:inmenu"
+msgid "Custom Commands"
+msgstr "自定义命令"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
+#: src/qml/Menus/SettingsMenu.qml:92
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Debug"
+msgctxt "@action:inmenu"
+msgid "Debug"
+msgstr "调试"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
+#: src/qml/Menus/SettingsMenu.qml:100
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "About"
+msgctxt "@action:inmenu"
+msgid "About"
+msgstr "关于"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
@@ -916,92 +1013,92 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
 
-#: src/qml/PlayList.qml:87 src/qml/PlayListQt6.qml:87
+#: src/qml/PlayList.qml:89 src/qml/PlayListQt6.qml:87
 msgctxt "@action:button"
 msgid "Add"
 msgstr "添加"
 
-#: src/qml/PlayList.qml:99 src/qml/PlayListQt6.qml:99
+#: src/qml/PlayList.qml:101 src/qml/PlayListQt6.qml:99
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "打开播放列表"
 
-#: src/qml/PlayList.qml:108 src/qml/PlayListQt6.qml:108
+#: src/qml/PlayList.qml:110 src/qml/PlayListQt6.qml:108
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "添加..."
 
-#: src/qml/PlayList.qml:111 src/qml/PlayListQt6.qml:111
+#: src/qml/PlayList.qml:113 src/qml/PlayListQt6.qml:111
 msgctxt "@action:button"
 msgid "File"
 msgstr "文件"
 
-#: src/qml/PlayList.qml:119 src/qml/PlayListQt6.qml:119
+#: src/qml/PlayList.qml:121 src/qml/PlayListQt6.qml:119
 msgctxt "@action:button"
 msgid "Url"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:130 src/qml/PlayListQt6.qml:130
+#: src/qml/PlayList.qml:132 src/qml/PlayListQt6.qml:130
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "排序"
 
-#: src/qml/PlayList.qml:134 src/qml/PlayListQt6.qml:134
+#: src/qml/PlayList.qml:136 src/qml/PlayListQt6.qml:134
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "按名称升序排序"
 
-#: src/qml/PlayList.qml:140 src/qml/PlayListQt6.qml:140
+#: src/qml/PlayList.qml:142 src/qml/PlayListQt6.qml:140
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "按名称降序排序"
 
-#: src/qml/PlayList.qml:146 src/qml/PlayListQt6.qml:146
+#: src/qml/PlayList.qml:148 src/qml/PlayListQt6.qml:146
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "按长度升序排序"
 
-#: src/qml/PlayList.qml:152 src/qml/PlayListQt6.qml:152
+#: src/qml/PlayList.qml:154 src/qml/PlayListQt6.qml:152
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "按长度降序排序"
 
-#: src/qml/PlayList.qml:159 src/qml/PlayListQt6.qml:159
+#: src/qml/PlayList.qml:161 src/qml/PlayListQt6.qml:159
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "清除"
 
-#: src/qml/PlayList.qml:167 src/qml/PlayListQt6.qml:167
+#: src/qml/PlayList.qml:169 src/qml/PlayListQt6.qml:167
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "另存为"
 
-#: src/qml/PlayList.qml:220 src/qml/PlayListQt6.qml:220
+#: src/qml/PlayList.qml:222 src/qml/PlayListQt6.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "打开所在文件夹"
 
-#: src/qml/PlayList.qml:226 src/qml/PlayListQt6.qml:226
+#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "复制文件名"
 
-#: src/qml/PlayList.qml:230 src/qml/PlayListQt6.qml:230
+#: src/qml/PlayList.qml:232 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "复制文件路径"
 
-#: src/qml/PlayList.qml:235 src/qml/PlayListQt6.qml:235
+#: src/qml/PlayList.qml:237 src/qml/PlayListQt6.qml:235
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "从播放列表中移除"
 
-#: src/qml/PlayList.qml:241 src/qml/PlayListQt6.qml:241
+#: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:241
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "重命名文件"
 
-#: src/qml/PlayList.qml:247 src/qml/PlayListQt6.qml:247
+#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:247
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "移动到回收站"
@@ -1241,6 +1338,7 @@ msgid "Show menubar"
 msgstr "显示菜单栏"
 
 #: src/qml/Settings/GeneralSettings.qml:244
+#: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
@@ -1273,6 +1371,27 @@ msgid ""
 msgstr ""
 "设置图标主题为 Breeze 微风。\n"
 "需要重启才能生效。"
+
+#: src/qml/Settings/MouseSettings.qml:78
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Saturation Reset"
+msgctxt "@label"
+msgid "No action set"
+msgstr "重置饱和度"
+
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Clear current action"
+msgctxt "@info:tooltip"
+msgid "Clear action"
+msgstr "清除当前操作"
+
+#: src/qml/Settings/MouseSettings.qml:126
+msgctxt "@title"
+msgid "Double click to set action"
+msgstr "双击设置操作"
 
 #: src/qml/Settings/PlaybackSettings.qml:29
 msgctxt "@label:spinbox"
@@ -1441,12 +1560,12 @@ msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "播放列表样式"
 
-#: src/qml/Settings/PlaylistSettings.qml:80
+#: src/qml/Settings/PlaylistSettings.qml:90
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "播放列表在视频上方叠加显示"
 
-#: src/qml/Settings/PlaylistSettings.qml:87
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1455,42 +1574,42 @@ msgstr ""
 "勾选时，播放列表将叠加显示在视频的上方\n"
 "不勾选时，视频画面将缩小以容纳播放列表"
 
-#: src/qml/Settings/PlaylistSettings.qml:94
+#: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "显示媒体文件的标题，而不是文件名称"
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "自动加载相同文件夹中的视频"
 
-#: src/qml/Settings/PlaylistSettings.qml:114
+#: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "循环播放"
 
-#: src/qml/Settings/PlaylistSettings.qml:124
+#: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "显示行号"
 
-#: src/qml/Settings/PlaylistSettings.qml:134
+#: src/qml/Settings/PlaylistSettings.qml:144
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "鼠标悬停边缘时显示播放列表"
 
-#: src/qml/Settings/PlaylistSettings.qml:143
+#: src/qml/Settings/PlaylistSettings.qml:153
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "全屏时增加字体大小"
 
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "记住播放列表的显示/隐藏状态"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:173
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "

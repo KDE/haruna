@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 00:45+0000\n"
+"POT-Creation-Date: 2023-08-04 00:45+0000\n"
 "PO-Revision-Date: 2023-08-02 06:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -87,432 +87,440 @@ msgid "Playing media file"
 msgstr "მედია ფაილის დაკვრა"
 
 #: src/models/actionsmodel.cpp:22
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@action"
+msgid "Open Actions Dialog"
+msgstr "კონფიგურაციის ფაილის გახსნა"
+
+#: src/models/actionsmodel.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "Haruna-ის შესახებ"
 
-#: src/models/actionsmodel.cpp:29
+#: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "აუდიოს ციკლის აწევა"
 
-#: src/models/actionsmodel.cpp:36
+#: src/models/actionsmodel.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "აუდიოს ციკლის დაწევა"
 
-#: src/models/actionsmodel.cpp:43
+#: src/models/actionsmodel.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "მორგება"
 
-#: src/models/actionsmodel.cpp:50
+#: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "კლავიატურის მალსახმობების მორგება"
 
-#: src/models/actionsmodel.cpp:57
+#: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "სრული ეკრანიდან გასვლა"
 
-#: src/models/actionsmodel.cpp:64
+#: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "კადრის ბიჯი წინ"
 
-#: src/models/actionsmodel.cpp:72
+#: src/models/actionsmodel.cpp:78
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "კადრის ბიჯი უკან"
 
-#: src/models/actionsmodel.cpp:80
+#: src/models/actionsmodel.cpp:86
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "ბოლოს დაკრული ფაილის ჩატვირთვა"
 
-#: src/models/actionsmodel.cpp:87
+#: src/models/actionsmodel.cpp:93
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "დადუმება"
 
-#: src/models/actionsmodel.cpp:94
+#: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "კონტექსტური მენიუს გახსნა"
 
-#: src/models/actionsmodel.cpp:98
+#: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "თაგუნას კურსორთან კონტექსტური მენიუს გახსნა და დახურვა"
 
-#: src/models/actionsmodel.cpp:102
+#: src/models/actionsmodel.cpp:108
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "ფაილის გახსნა"
 
-#: src/models/actionsmodel.cpp:109
+#: src/models/actionsmodel.cpp:115
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "გარე სუბტიტრების დამატება…"
 
-#: src/models/actionsmodel.cpp:116
+#: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "URL-ის გახსნა"
 
-#: src/models/actionsmodel.cpp:123
+#: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "დაკვრის სიჩქარის გაზრდა"
 
-#: src/models/actionsmodel.cpp:130
+#: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "დაკვრის სიჩქარის შემცირება"
 
-#: src/models/actionsmodel.cpp:137
+#: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "დაკვრის სიჩქარის დაბრუნება"
 
-#: src/models/actionsmodel.cpp:144
+#: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "დაკვრა/შეჩერება"
 
-#: src/models/actionsmodel.cpp:151
+#: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "შემდეგის დაკვრა"
 
-#: src/models/actionsmodel.cpp:158
+#: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "წინას დაკვრა"
 
-#: src/models/actionsmodel.cpp:165
+#: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "გასვლა"
 
-#: src/models/actionsmodel.cpp:172
+#: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "დაკვრის თავიდან დაწყება"
 
-#: src/models/actionsmodel.cpp:179
+#: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "პატარა ბიჯით წინ გადახვევა"
 
-#: src/models/actionsmodel.cpp:186
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "პატარა ბიჯით უკან გადახვევა"
 
-#: src/models/actionsmodel.cpp:193
+#: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "საშუალო ბიჯით წინ გადახვევა"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "საშუალო ბიჯით უკან გადახვევა"
 
-#: src/models/actionsmodel.cpp:207
+#: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "დიდი ბიჯით წინ გადახვევა"
 
-#: src/models/actionsmodel.cpp:214
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "დიდი ბიჯით უკან გადახვევა"
 
-#: src/models/actionsmodel.cpp:221
+#: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "შემდეგ თავზე გადახვევა"
 
-#: src/models/actionsmodel.cpp:228
+#: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "წინა თავზე გადახვევა"
 
-#: src/models/actionsmodel.cpp:235
+#: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "შემდეგ სუბტიტრამდე გადახვევა"
 
-#: src/models/actionsmodel.cpp:242
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "წინა სუბტიტრამდე გადახვევა"
 
-#: src/models/actionsmodel.cpp:249
+#: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "მოგვიანებით საყურებელ მდებარეობაზე გადახვევა"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "მარყუჟის დაყენება"
 
-#: src/models/actionsmodel.cpp:263
+#: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "ეკრანის ანაბეჭდი"
 
-#: src/models/actionsmodel.cpp:270
+#: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "სუბტიტრების გადართვა"
 
-#: src/models/actionsmodel.cpp:277
+#: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "სუბტიტრის ფონტის ზომის გაზრდა"
 
-#: src/models/actionsmodel.cpp:284
+#: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "სუბტიტრის ფონტის ზომის შემცირება"
 
-#: src/models/actionsmodel.cpp:291
+#: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "სუბტიტრების აწევა"
 
-#: src/models/actionsmodel.cpp:298
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "სუბტიტრების ჩამოწევა"
 
-#: src/models/actionsmodel.cpp:305
+#: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "სუბტიტრების გაჩქარება"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "სუბტიტრების დაყოვნება"
 
-#: src/models/actionsmodel.cpp:319
+#: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "სუბტიტრების ციკლის აწევა"
 
-#: src/models/actionsmodel.cpp:326
+#: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "სუბტიტრების ციკლის დაწევა"
 
-#: src/models/actionsmodel.cpp:333
+#: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "დეინტერლეისინგის გადართვა"
 
-#: src/models/actionsmodel.cpp:340
+#: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "მთელ ეკრანზე გატანის გადართვა"
 
-#: src/models/actionsmodel.cpp:347
+#: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "მენიუს ზოლის გადართვა"
 
-#: src/models/actionsmodel.cpp:354
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "თავსართის გადართვა"
 
-#: src/models/actionsmodel.cpp:361 src/qml/Settings/SettingsWindow.qml:93
+#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:93
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "დასაკრავი სია"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
 msgstr "ვიდეოს მარცხნივ გაწევა"
 
-#: src/models/actionsmodel.cpp:375
+#: src/models/actionsmodel.cpp:381
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
 msgstr "ვიდეოს მარჯვნივ გაწევა"
 
-#: src/models/actionsmodel.cpp:382
+#: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
 msgstr "ვიდეოს ზემოთ აწევა"
 
-#: src/models/actionsmodel.cpp:389
+#: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
 msgstr "ვიდოს დაბლა ჩამოწევა"
 
-#: src/models/actionsmodel.cpp:396
+#: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "ხმის აწევა"
 
-#: src/models/actionsmodel.cpp:403
+#: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "ხმის დაწევა"
 
-#: src/models/actionsmodel.cpp:410
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "გადიდება"
 
-#: src/models/actionsmodel.cpp:417
+#: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "დაპატარავება"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "გადიდების გაუქმება"
 
-#: src/models/actionsmodel.cpp:431
+#: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "კონტრასტის გადიდება"
 
-#: src/models/actionsmodel.cpp:438
+#: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "კონტრასტის შემცირება"
 
-#: src/models/actionsmodel.cpp:445
+#: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "კონტრასტის დაბრუნება"
 
-#: src/models/actionsmodel.cpp:452
+#: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "სიკაშკაშის აწევა"
 
-#: src/models/actionsmodel.cpp:459
+#: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "სიკაშკაშის დაწევა"
 
-#: src/models/actionsmodel.cpp:466
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "სიკაშკაშის დაბრუნება"
 
-#: src/models/actionsmodel.cpp:473
+#: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "გამის აწევა"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "გამის დაწევა"
 
-#: src/models/actionsmodel.cpp:487
+#: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "გამის დაბრუნება"
 
-#: src/models/actionsmodel.cpp:494
+#: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "გაჯერებულობის აწევა"
 
-#: src/models/actionsmodel.cpp:501
+#: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "გაჯერებულობის დაწევა"
 
-#: src/models/actionsmodel.cpp:508
+#: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "გაჯერებულობის დაბრუნება"
 
-#: src/models/actionsmodel.cpp:651
+#: src/models/actionsmodel.cpp:657
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -522,7 +530,7 @@ msgstr ""
 "არჩეული მალსახმობი კონფლიქტშია <b>%1</b> ქმედებათან.<br><br>გნებავთ "
 "მალსახმობის თავიდან მინიჭება?"
 
-#: src/models/actionsmodel.cpp:657
+#: src/models/actionsmodel.cpp:663
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -541,112 +549,112 @@ msgctxt ""
 msgid "None"
 msgstr "არაფერი"
 
-#: src/qml/Actions.qml:60 src/qml/Actions.qml:78
+#: src/qml/Actions.qml:64 src/qml/Actions.qml:82
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "აუდიო: %1 %2"
 
-#: src/qml/Actions.qml:129 src/qml/Actions.qml:135 src/qml/Actions.qml:140
+#: src/qml/Actions.qml:133 src/qml/Actions.qml:139 src/qml/Actions.qml:144
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "დაკვრის სიჩქარე: %1"
 
-#: src/qml/Actions.qml:217
+#: src/qml/Actions.qml:221
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "მარყუჟის დასაწყისი: %1"
 
-#: src/qml/Actions.qml:221
+#: src/qml/Actions.qml:225
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "მარყუჟი: %1 - %2"
 
-#: src/qml/Actions.qml:227
+#: src/qml/Actions.qml:231
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "მარყუჟი წაიშალა"
 
-#: src/qml/Actions.qml:236 src/qml/Actions.qml:242
+#: src/qml/Actions.qml:240 src/qml/Actions.qml:246
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "სუბტიტრების დრო: %1"
 
-#: src/qml/Actions.qml:247
+#: src/qml/Actions.qml:251
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "სუბტიტრები გამორთულია"
 
-#: src/qml/Actions.qml:247
+#: src/qml/Actions.qml:251
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "სუბტიტრები ჩართულია"
 
-#: src/qml/Actions.qml:256 src/qml/Actions.qml:268
+#: src/qml/Actions.qml:260 src/qml/Actions.qml:272
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "სუბტიტრები: არაფერი"
 
-#: src/qml/Actions.qml:260 src/qml/Actions.qml:272
+#: src/qml/Actions.qml:264 src/qml/Actions.qml:276
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "სუბტიტრები: %1 %2"
 
-#: src/qml/Actions.qml:279 src/qml/Actions.qml:285
+#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "სუბტიტრების მასშტაბი: %1"
 
-#: src/qml/Actions.qml:295
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "დეინტერლეისი: %1"
 
-#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
+#: src/qml/Actions.qml:353 src/qml/Actions.qml:359
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "გადიდება: %1"
 
-#: src/qml/Actions.qml:360
+#: src/qml/Actions.qml:364
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "გადიდება: 0"
 
-#: src/qml/Actions.qml:367 src/qml/Actions.qml:373
+#: src/qml/Actions.qml:371 src/qml/Actions.qml:377
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "კონტრასტი: %1"
 
-#: src/qml/Actions.qml:378
+#: src/qml/Actions.qml:382
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "კონტრასტი: 0"
 
-#: src/qml/Actions.qml:384 src/qml/Actions.qml:390
+#: src/qml/Actions.qml:388 src/qml/Actions.qml:394
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "სიკაშკაშე: %1"
 
-#: src/qml/Actions.qml:395
+#: src/qml/Actions.qml:399
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "სიკაშკაშე: 0"
 
-#: src/qml/Actions.qml:401 src/qml/Actions.qml:407
+#: src/qml/Actions.qml:405 src/qml/Actions.qml:411
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "გამა: %1"
 
-#: src/qml/Actions.qml:412
+#: src/qml/Actions.qml:416
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "გამა: 0"
 
-#: src/qml/Actions.qml:418 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:422 src/qml/Actions.qml:428
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "გაჯერებულობა: %1"
 
-#: src/qml/Actions.qml:429
+#: src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "გაჯერებულობა: 0"
@@ -699,16 +707,6 @@ msgid ""
 msgstr ""
 "აღმოჩენილია არც <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> და "
 "არც <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a."
-
-#: src/qml/Haruna/Components/SelectActionPopup.qml:46
-msgctxt "@title"
-msgid "Double click to set action"
-msgstr "ორმაგი წკაპი ქმედების დასაყენებლად"
-
-#: src/qml/Haruna/Components/SelectActionPopup.qml:65
-msgctxt "@action:button"
-msgid "Clear current action"
-msgstr "მიმდინარე ქმედების გასუფთავება"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:29
 msgctxt "@action:intoolbar"
@@ -780,18 +778,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:244 src/qml/PlayList.qml:312 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:263 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
 
-#: src/qml/main.qml:272
+#: src/qml/main.qml:291
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "აირჩიეთ სუბტიტრების ფაილი"
 
-#: src/qml/main.qml:290
+#: src/qml/main.qml:309
 msgctxt "@action:button"
 msgid "Open"
 msgstr "გახსნა"
@@ -843,11 +841,110 @@ msgctxt "@title:menu"
 msgid "Seek"
 msgstr "გადახვევა"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
-#: src/qml/Menus/SettingsMenu.qml:13
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:16
+#: src/qml/Menus/SettingsMenu.qml:15
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "&მორგება"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
+#: src/qml/Menus/SettingsMenu.qml:20
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "General"
+msgctxt "@action:inmenu"
+msgid "General"
+msgstr "საერთო"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
+#: src/qml/Menus/SettingsMenu.qml:28
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playback"
+msgctxt "@action:inmenu"
+msgid "Playback"
+msgstr "დაკვრა"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
+#: src/qml/Menus/SettingsMenu.qml:36
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Video"
+msgctxt "@action:inmenu"
+msgid "Video"
+msgstr "ვიდეო"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
+#: src/qml/Menus/SettingsMenu.qml:44
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Audio"
+msgctxt "@action:inmenu"
+msgid "Audio"
+msgstr "აუდიო"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
+#: src/qml/Menus/SettingsMenu.qml:52
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Subtitles"
+msgctxt "@action:inmenu"
+msgid "Subtitles"
+msgstr "სუბტიტრები"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
+#: src/qml/Menus/SettingsMenu.qml:60
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:inmenu"
+msgid "Playlist"
+msgstr "დასაკრავი სია"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
+#: src/qml/Menus/SettingsMenu.qml:68
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Mouse"
+msgctxt "@action:inmenu"
+msgid "Mouse"
+msgstr "თაგუნა"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
+#: src/qml/Menus/SettingsMenu.qml:76
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Shortcuts"
+msgctxt "@action:inmenu"
+msgid "Shortcuts"
+msgstr "მალსახმობები"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
+#: src/qml/Menus/SettingsMenu.qml:84
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Custom commands"
+msgctxt "@action:inmenu"
+msgid "Custom Commands"
+msgstr "ხელით მითითებული ბრძანებები"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
+#: src/qml/Menus/SettingsMenu.qml:92
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Debug"
+msgctxt "@action:inmenu"
+msgid "Debug"
+msgstr "გამართვა"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
+#: src/qml/Menus/SettingsMenu.qml:100
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "About"
+msgctxt "@action:inmenu"
+msgid "About"
+msgstr "შესახებ"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
@@ -917,92 +1014,92 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "ვერ ვუკრავ: %1"
 
-#: src/qml/PlayList.qml:87 src/qml/PlayListQt6.qml:87
+#: src/qml/PlayList.qml:89 src/qml/PlayListQt6.qml:87
 msgctxt "@action:button"
 msgid "Add"
 msgstr "დამატება"
 
-#: src/qml/PlayList.qml:99 src/qml/PlayListQt6.qml:99
+#: src/qml/PlayList.qml:101 src/qml/PlayListQt6.qml:99
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "დასაკრავი სიის გახსნა"
 
-#: src/qml/PlayList.qml:108 src/qml/PlayListQt6.qml:108
+#: src/qml/PlayList.qml:110 src/qml/PlayListQt6.qml:108
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "დამატება ..."
 
-#: src/qml/PlayList.qml:111 src/qml/PlayListQt6.qml:111
+#: src/qml/PlayList.qml:113 src/qml/PlayListQt6.qml:111
 msgctxt "@action:button"
 msgid "File"
 msgstr "ფაილი"
 
-#: src/qml/PlayList.qml:119 src/qml/PlayListQt6.qml:119
+#: src/qml/PlayList.qml:121 src/qml/PlayListQt6.qml:119
 msgctxt "@action:button"
 msgid "Url"
 msgstr "Url"
 
-#: src/qml/PlayList.qml:130 src/qml/PlayListQt6.qml:130
+#: src/qml/PlayList.qml:132 src/qml/PlayListQt6.qml:130
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "დალაგება"
 
-#: src/qml/PlayList.qml:134 src/qml/PlayListQt6.qml:134
+#: src/qml/PlayList.qml:136 src/qml/PlayListQt6.qml:134
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "აღმავალი სახელით"
 
-#: src/qml/PlayList.qml:140 src/qml/PlayListQt6.qml:140
+#: src/qml/PlayList.qml:142 src/qml/PlayListQt6.qml:140
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "სახელი (დაღმავალი)"
 
-#: src/qml/PlayList.qml:146 src/qml/PlayListQt6.qml:146
+#: src/qml/PlayList.qml:148 src/qml/PlayListQt6.qml:146
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "აღმავალი ხანგრძლივობით"
 
-#: src/qml/PlayList.qml:152 src/qml/PlayListQt6.qml:152
+#: src/qml/PlayList.qml:154 src/qml/PlayListQt6.qml:152
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "დაღმავალი ხანგრძლივობით"
 
-#: src/qml/PlayList.qml:159 src/qml/PlayListQt6.qml:159
+#: src/qml/PlayList.qml:161 src/qml/PlayListQt6.qml:159
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "გასუფთავება"
 
-#: src/qml/PlayList.qml:167 src/qml/PlayListQt6.qml:167
+#: src/qml/PlayList.qml:169 src/qml/PlayListQt6.qml:167
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "შენახვა, როგორც"
 
-#: src/qml/PlayList.qml:220 src/qml/PlayListQt6.qml:220
+#: src/qml/PlayList.qml:222 src/qml/PlayListQt6.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "შემცველი საქაღალდის გახსნა"
 
-#: src/qml/PlayList.qml:226 src/qml/PlayListQt6.qml:226
+#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "ფაილის სახელის კოპირება"
 
-#: src/qml/PlayList.qml:230 src/qml/PlayListQt6.qml:230
+#: src/qml/PlayList.qml:232 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "ფაილის ბილიკის კოპირება"
 
-#: src/qml/PlayList.qml:235 src/qml/PlayListQt6.qml:235
+#: src/qml/PlayList.qml:237 src/qml/PlayListQt6.qml:235
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "დასაკრავი სიიდან წაშლა"
 
-#: src/qml/PlayList.qml:241 src/qml/PlayListQt6.qml:241
+#: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:241
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "ფაილის გადარქმევა"
 
-#: src/qml/PlayList.qml:247 src/qml/PlayListQt6.qml:247
+#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:247
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "ფაილის სანაგვე ყუთში გადატანა"
@@ -1245,6 +1342,7 @@ msgid "Show menubar"
 msgstr "მენიუს ზოლის ჩვენება"
 
 #: src/qml/Settings/GeneralSettings.qml:244
+#: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "ხელსაწყოთა ზოლის ჩვენება"
@@ -1277,6 +1375,27 @@ msgid ""
 msgstr ""
 "ხატულების თემის Breeze-ზე დაყენება.\n"
 "თავიდან გაშვება აუცილებელია."
+
+#: src/qml/Settings/MouseSettings.qml:78
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Saturation Reset"
+msgctxt "@label"
+msgid "No action set"
+msgstr "გაჯერებულობის დაბრუნება"
+
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Clear current action"
+msgctxt "@info:tooltip"
+msgid "Clear action"
+msgstr "მიმდინარე ქმედების გასუფთავება"
+
+#: src/qml/Settings/MouseSettings.qml:126
+msgctxt "@title"
+msgid "Double click to set action"
+msgstr "ორმაგი წკაპი ქმედების დასაყენებლად"
 
 #: src/qml/Settings/PlaybackSettings.qml:29
 msgctxt "@label:spinbox"
@@ -1456,12 +1575,12 @@ msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "დასაკრავი სიის სტილი"
 
-#: src/qml/Settings/PlaylistSettings.qml:80
+#: src/qml/Settings/PlaylistSettings.qml:90
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "ვიდეოს გადადება"
 
-#: src/qml/Settings/PlaylistSettings.qml:87
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1470,42 +1589,42 @@ msgstr ""
 "როცა ჩართულია, დასაკრავი სია ვიდეოს თავზე გამოჩნდება\n"
 "თუ გამორთულია, ვიდეოს ზომა იცვლება"
 
-#: src/qml/Settings/PlaylistSettings.qml:94
+#: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "ფაილის სახელის მაგიერ მედიის სათაურის ჩვენება"
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "აუდიოს ვიდეოსთან ერთად, იგივე საქაღალდიდან ჩატვირთვა"
 
-#: src/qml/Settings/PlaylistSettings.qml:114
+#: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "გამეორება"
 
-#: src/qml/Settings/PlaylistSettings.qml:124
+#: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "მწკრივების რაოდენობის ჩვენება"
 
-#: src/qml/Settings/PlaylistSettings.qml:134
+#: src/qml/Settings/PlaylistSettings.qml:144
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "თაგუნით გადართვა"
 
-#: src/qml/Settings/PlaylistSettings.qml:143
+#: src/qml/Settings/PlaylistSettings.qml:153
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "ფონტის გადიდება სრულ ეკრანზე გაშლისას"
 
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "დასაკრავი სიის ბოლო მდგომარეობის დამახსოვრება"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:173
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
