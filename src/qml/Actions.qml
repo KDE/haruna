@@ -233,10 +233,7 @@ Item {
         }
 
         onScreenshotAction: {
-            const ss = mpv.synchronousCommand(["screenshot"])
-            if (ss.filename) {
-                osd.message(i18nc("@info:tooltip", "Screenshot: %1", ss.filename))
-            }
+            mpv.commandAsync(["screenshot"], MpvItem.Screenshot)
         }
 
         onSubtitleQuickenAction: {

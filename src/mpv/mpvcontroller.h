@@ -99,7 +99,7 @@ Q_SIGNALS:
     void propertyChanged(const QString &property, const QVariant &value);
     void getPropertyReply(const QVariant &value, int id);
     void setPropertyReply(int id);
-    void commandReply(int id);
+    void commandReply(const QVariant &data, int id);
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);

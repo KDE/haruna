@@ -74,8 +74,8 @@ MpvItem {
         loadingIndicatorParent.visible = false
     }
 
-    onChapterSkipMessage: {
-        osd.message(i18nc("@info:tooltip", "Skipped chapter: %1", title));
+    onOsdMessage: {
+        osd.message(text);
     }
 
     onEndFile: {

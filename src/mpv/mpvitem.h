@@ -134,6 +134,7 @@ public:
     enum class AsyncIds {
         FinishedLoading,
         SavePosition,
+        Screenshot,
     };
     Q_ENUM(AsyncIds)
 
@@ -177,7 +178,7 @@ Q_SIGNALS:
     void videoHeightChanged();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
-    void chapterSkipMessage(const QString &title);
+    void osdMessage(const QString &text);
 
     // signals used for mpris
     void raise();
@@ -195,7 +196,7 @@ private:
     void loadTracks();
     void onSetPropertyReply(int id);
     void onGetPropertyReply(const QVariant &value, int id);
-    void onCommandReply(int id);
+    void onCommandReply(const QVariant &data, int id);
     void onChapterChanged();
     QString md5(const QString &str);
 

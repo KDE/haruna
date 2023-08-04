@@ -463,9 +463,14 @@ void MpvItem::onGetPropertyReply(const QVariant &value, int id)
     }
 }
 
-void MpvItem::onCommandReply(int id)
+void MpvItem::onCommandReply(const QVariant &data, int id)
 {
-    qDebug() << id;
+    switch (static_cast<AsyncIds>(id)) {
+    case AsyncIds::Screenshot:
+        auto filename = data.toMap().value(QStringLiteral("filename")).toString();
+        osdMessage(i18nc("@info:tooltip osd", "Screenshot: %1", filename));
+        break;
+    }
 }
 
 void MpvItem::onChapterChanged()
@@ -487,7 +492,7 @@ void MpvItem::onChapterChanged()
         if (!ch.isEmpty() && title.toLower().contains(word.toLower().simplified())) {
             commandAsync({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
             if (PlaybackSettings::showOsdOnSkipChapters()) {
-                Q_EMIT chapterSkipMessage(title);
+                Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Skipped chapter: %1", title));
             }
             return;
         }
