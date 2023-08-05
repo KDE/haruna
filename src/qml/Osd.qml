@@ -20,9 +20,11 @@ Item {
     Label {
         id: label
 
+        property int textWidth: Math.ceil(textMetrics.advanceWidth) + padding * 2
+
         x: Kirigami.Units.largeSpacing
         y: Kirigami.Units.largeSpacing
-        width: textMetrics.advanceWidth > maxWidth ? maxWidth : textMetrics.advanceWidth + padding * 2
+        width: textWidth > root.maxWidth ? maxWidth : undefined
         visible: false
         background: Rectangle {
             color: Kirigami.Theme.backgroundColor
