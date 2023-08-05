@@ -455,7 +455,11 @@ void MpvItem::onAsyncReply(const QVariant &data, int id)
     }
     case AsyncIds::Screenshot: {
         auto filename = data.toMap().value(QStringLiteral("filename")).toString();
-        osdMessage(i18nc("@info:tooltip osd", "Screenshot: %1", filename));
+        if (filename.isEmpty()) {
+            osdMessage(i18nc("@info:tooltip osd", "Screenshot taken"));
+        } else {
+            osdMessage(i18nc("@info:tooltip osd", "Screenshot: %1", filename));
+        }
         break;
     }
     }
