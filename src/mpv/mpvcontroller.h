@@ -66,7 +66,7 @@ public:
      * @return mpv error code (<0 on error, >= 0 on success)
      */
     Q_INVOKABLE int setProperty(const QString &property, const QVariant &value);
-    Q_INVOKABLE int setPropertyAsync(const QString &property, const QVariant &value, int id);
+    Q_INVOKABLE int setPropertyAsync(const QString &property, const QVariant &value, int id = 0);
 
     /**
      * Return the given property as mpv_node converted to QVariant,
@@ -76,7 +76,7 @@ public:
      * @return the property value, or an ErrorReturn with the error code
      */
     Q_INVOKABLE QVariant getProperty(const QString &property);
-    Q_INVOKABLE int getPropertyAsync(const QString &property, int id);
+    Q_INVOKABLE int getPropertyAsync(const QString &property, int id = 0);
 
     /**
      * mpv_command_node() equivalent.

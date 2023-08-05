@@ -23,12 +23,6 @@ MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     // clang-format off
     connect(m_workerThread, &QThread::finished,
             m_mpvController, &MpvController::deleteLater);
-
-    connect(this, &MpvAbstractItem::setMpvProperty,
-            m_mpvController, &MpvController::setProperty, Qt::QueuedConnection);
-
-    connect(this, &MpvAbstractItem::mpvCommand,
-            m_mpvController, &MpvController::command, Qt::QueuedConnection);
     // clang-format on
 }
 
@@ -50,14 +44,24 @@ QQuickFramebufferObject::Renderer *MpvAbstractItem::createRenderer() const
     return new MpvRenderer(const_cast<MpvAbstractItem *>(this));
 }
 
-void MpvAbstractItem::setProperty(const QString &property, const QVariant &value)
+int MpvAbstractItem::setProperty(const QString &property, const QVariant &value)
 {
-    Q_EMIT setMpvProperty(property, value);
+    return m_mpvController->setProperty(property, value);
+}
+
+int MpvAbstractItem::setPropertyAsync(const QString &property, const QVariant &value, int id)
+{
+    return m_mpvController->setPropertyAsync(property, value, id);
 }
 
 QVariant MpvAbstractItem::getProperty(const QString &property)
 {
     return m_mpvController->getProperty(property);
+}
+
+int MpvAbstractItem::getPropertyAsync(const QString &property, int id)
+{
+    return m_mpvController->getPropertyAsync(property, id);
 }
 
 void MpvAbstractItem::observeProperty(const QString &property, mpv_format format, int id)
@@ -85,14 +89,14 @@ QVariant MpvAbstractItem::expandText(const QString &text)
     return m_mpvController->command(QStringList{QStringLiteral("expand-text"), text});
 }
 
+QVariant MpvAbstractItem::command(const QStringList &params)
+{
+    return m_mpvController->command(params);
+}
+
 int MpvAbstractItem::commandAsync(const QStringList &params, int id)
 {
     return m_mpvController->commandAsync(params, id);
-}
-
-QVariant MpvAbstractItem::synchronousCommand(const QStringList &params)
-{
-    return m_mpvController->command(params);
 }
 
 #include "moc_mpvabstractitem.cpp"

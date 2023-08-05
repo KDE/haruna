@@ -53,7 +53,7 @@ Item {
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
 
             if (audioTracksCount > 1) {
-                mpv.synchronousCommand(["cycle", "aid", "up"])
+                mpv.command(["cycle", "aid", "up"])
                 const currentTrackId = mpv.getProperty(MpvProperties.AudioId)
 
                 if (currentTrackId === false) {
@@ -71,7 +71,7 @@ Item {
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
 
             if (audioTracksCount > 1) {
-                mpv.synchronousCommand(["cycle", "aid", "down"])
+                mpv.command(["cycle", "aid", "down"])
                 const currentTrackId = mpv.getProperty(MpvProperties.AudioId)
 
                 if (currentTrackId === false) {
@@ -256,7 +256,7 @@ Item {
         }
 
         onSubtitleCycleUpAction: {
-            mpv.synchronousCommand(["cycle", "sid", "up"])
+            mpv.command(["cycle", "sid", "up"])
             const currentTrackId = mpv.getProperty(MpvProperties.SubtitleId)
             if (currentTrackId === false) {
                 osd.message(i18nc("@info:tooltip", "Subtitle: None"))
@@ -268,7 +268,7 @@ Item {
         }
 
         onSubtitleCycleDownAction: {
-            mpv.synchronousCommand(["cycle", "sid", "down"])
+            mpv.command(["cycle", "sid", "down"])
             const currentTrackId = mpv.getProperty(MpvProperties.SubtitleId)
             if (currentTrackId === false) {
                 osd.message(i18nc("@info:tooltip", "Subtitle: None"))

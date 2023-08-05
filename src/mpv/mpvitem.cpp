@@ -207,9 +207,9 @@ void MpvItem::setupConnections()
 
         if (PlaybackSettings::seekToLastPosition()) {
             setPause(!PlaybackSettings::playOnResume() && watchLaterPosition() > 0);
-            m_mpvController->setPropertyAsync(MpvProperties::self()->Position,
-                                              watchLaterPosition(),
-                                              static_cast<int>(AsyncIds::FinishedLoading));
+            setPropertyAsync(MpvProperties::self()->Position,
+                             watchLaterPosition(),
+                             static_cast<int>(AsyncIds::FinishedLoading));
         }
     });
 
