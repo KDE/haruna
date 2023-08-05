@@ -102,7 +102,7 @@ public:
     const QString SubtitleAuto{QStringLiteral("sub-auto")};
 
     Q_PROPERTY(QString SubtitleFont MEMBER SubtitleFont CONSTANT)
-    const QString SubtitleFont{QStringLiteral("SubtitleFont")};
+    const QString SubtitleFont{QStringLiteral("sub-font")};
 
     Q_PROPERTY(QString SubtitleFontSize MEMBER SubtitleFontSize CONSTANT)
     const QString SubtitleFontSize{QStringLiteral("sub-font-size")};
