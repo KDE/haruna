@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-04 00:45+0000\n"
-"PO-Revision-Date: 2023-08-01 12:13+0200\n"
+"POT-Creation-Date: 2023-08-05 00:45+0000\n"
+"PO-Revision-Date: 2023-08-04 09:05+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,12 +89,10 @@ msgid "Playing media file"
 msgstr "Euskarri fitxategia jotzen"
 
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Ireki konfigurazio-fitxategia"
+msgstr "Ireki Ekintzak elkarrizketa-koadroa"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -544,12 +542,28 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Jotze-zerrenda hutsik dago"
 
-#: src/mpv/mpvitem.cpp:388
+#: src/mpv/mpvitem.cpp:395
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Bat ere ez"
+
+#: src/mpv/mpvitem.cpp:471
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot: %1"
+msgstr "Pantaila-argazkia"
+
+#: src/mpv/mpvitem.cpp:495
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Skipped chapter: %1"
+msgctxt "@info:tooltip osd"
+msgid "Skipped chapter: %1"
+msgstr "Saihestutako atala: %1"
 
 #: src/qml/Actions.qml:64 src/qml/Actions.qml:82
 msgctxt "@info:tooltip"
@@ -576,87 +590,87 @@ msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Begizta garbitu da"
 
-#: src/qml/Actions.qml:240 src/qml/Actions.qml:246
+#: src/qml/Actions.qml:242 src/qml/Actions.qml:248
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Azpidatzien erritmoa: %1"
 
-#: src/qml/Actions.qml:251
+#: src/qml/Actions.qml:253
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Azpidatziak itzalita"
 
-#: src/qml/Actions.qml:251
+#: src/qml/Actions.qml:253
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Azpidatziak piztuta"
 
-#: src/qml/Actions.qml:260 src/qml/Actions.qml:272
+#: src/qml/Actions.qml:262 src/qml/Actions.qml:274
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Azpidatzia: Bat ere ez"
 
-#: src/qml/Actions.qml:264 src/qml/Actions.qml:276
+#: src/qml/Actions.qml:266 src/qml/Actions.qml:278
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Azpidatzia: %1 %2"
 
-#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
+#: src/qml/Actions.qml:285 src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Azpidatziaren eskala: %1"
 
-#: src/qml/Actions.qml:299
+#: src/qml/Actions.qml:301
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Gurutzelarkagetzea: %1"
 
-#: src/qml/Actions.qml:353 src/qml/Actions.qml:359
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zooma: %1"
 
-#: src/qml/Actions.qml:364
+#: src/qml/Actions.qml:366
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zooma: 0"
 
-#: src/qml/Actions.qml:371 src/qml/Actions.qml:377
+#: src/qml/Actions.qml:373 src/qml/Actions.qml:379
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrastea: %1"
 
-#: src/qml/Actions.qml:382
+#: src/qml/Actions.qml:384
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrastea: 0"
 
-#: src/qml/Actions.qml:388 src/qml/Actions.qml:394
+#: src/qml/Actions.qml:390 src/qml/Actions.qml:396
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Distira: %1"
 
-#: src/qml/Actions.qml:399
+#: src/qml/Actions.qml:401
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Distira: 0"
 
-#: src/qml/Actions.qml:405 src/qml/Actions.qml:411
+#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:416
+#: src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:422 src/qml/Actions.qml:428
+#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Asetasuna: %1"
 
-#: src/qml/Actions.qml:433
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Asetasuna: 0"
@@ -779,18 +793,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:263 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:267 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"
 
-#: src/qml/main.qml:291
+#: src/qml/main.qml:295
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Hautatu azpidatzi-fitxategia"
 
-#: src/qml/main.qml:309
+#: src/qml/main.qml:313
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ireki"
@@ -850,99 +864,66 @@ msgstr "E&zarpenak"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "Orokorra"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Atzera-jotzea"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Bideoa"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Audioa"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Azpidatziak"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:68
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Sagua"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Neurrira ipinitako komandoak"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
 #: src/qml/Menus/SettingsMenu.qml:92
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Araztu"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Honi buruz"
@@ -1005,12 +986,7 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Bolumena: %1"
 
-#: src/qml/MpvVideo.qml:92
-msgctxt "@info:tooltip"
-msgid "Skipped chapter: %1"
-msgstr "Saihestutako atala: %1"
-
-#: src/qml/MpvVideo.qml:110
+#: src/qml/MpvVideo.qml:89
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ezin izan du jo: %1"
@@ -1380,20 +1356,14 @@ msgstr ""
 "Berrabiarazi beharra dago."
 
 #: src/qml/Settings/MouseSettings.qml:78
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@label"
 msgid "No action set"
-msgstr "Asetasuna berrezarri"
+msgstr "Ez da ekintzarik ezarri"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "Garbitu uneko ekintza"
+msgstr "Garbitu ekintza"
 
 #: src/qml/Settings/MouseSettings.qml:126
 msgctxt "@title"

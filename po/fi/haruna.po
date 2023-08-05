@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-04 00:45+0000\n"
+"POT-Creation-Date: 2023-08-05 00:45+0000\n"
 "PO-Revision-Date: 2023-04-27 19:56+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -544,12 +544,28 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Toistolista on tyhjä"
 
-#: src/mpv/mpvitem.cpp:388
+#: src/mpv/mpvitem.cpp:395
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ei mitään"
+
+#: src/mpv/mpvitem.cpp:471
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot: %1"
+msgstr "Ruutukaappaus"
+
+#: src/mpv/mpvitem.cpp:495
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Skipped chapter: %1"
+msgctxt "@info:tooltip osd"
+msgid "Skipped chapter: %1"
+msgstr "Ohitettiin luku: %1"
 
 #: src/qml/Actions.qml:64 src/qml/Actions.qml:82
 msgctxt "@info:tooltip"
@@ -576,87 +592,87 @@ msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Silmukka tyhjennetty"
 
-#: src/qml/Actions.qml:240 src/qml/Actions.qml:246
+#: src/qml/Actions.qml:242 src/qml/Actions.qml:248
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Tekstityksen ajoitus: %1"
 
-#: src/qml/Actions.qml:251
+#: src/qml/Actions.qml:253
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Ei tekstitystä"
 
-#: src/qml/Actions.qml:251
+#: src/qml/Actions.qml:253
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Tekstitys"
 
-#: src/qml/Actions.qml:260 src/qml/Actions.qml:272
+#: src/qml/Actions.qml:262 src/qml/Actions.qml:274
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Tekstitys: ei"
 
-#: src/qml/Actions.qml:264 src/qml/Actions.qml:276
+#: src/qml/Actions.qml:266 src/qml/Actions.qml:278
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Tekstitys: %1 %2"
 
-#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
+#: src/qml/Actions.qml:285 src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Tekstitysmittakaava: %1"
 
-#: src/qml/Actions.qml:299
+#: src/qml/Actions.qml:301
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Lomituksen poisto: %1"
 
-#: src/qml/Actions.qml:353 src/qml/Actions.qml:359
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Lähennys: %1"
 
-#: src/qml/Actions.qml:364
+#: src/qml/Actions.qml:366
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Lähennys: 0"
 
-#: src/qml/Actions.qml:371 src/qml/Actions.qml:377
+#: src/qml/Actions.qml:373 src/qml/Actions.qml:379
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrasti: %1"
 
-#: src/qml/Actions.qml:382
+#: src/qml/Actions.qml:384
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrasti: 0"
 
-#: src/qml/Actions.qml:388 src/qml/Actions.qml:394
+#: src/qml/Actions.qml:390 src/qml/Actions.qml:396
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Kirkkaus: %1"
 
-#: src/qml/Actions.qml:399
+#: src/qml/Actions.qml:401
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Kirkkaus: 0"
 
-#: src/qml/Actions.qml:405 src/qml/Actions.qml:411
+#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:416
+#: src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:422 src/qml/Actions.qml:428
+#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Kylläisyys: %1"
 
-#: src/qml/Actions.qml:433
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Kylläisyys: 0"
@@ -779,18 +795,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:263 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:267 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Valitse tiedosto"
 
-#: src/qml/main.qml:291
+#: src/qml/main.qml:295
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Valitse tekstitystiedosto"
 
-#: src/qml/main.qml:309
+#: src/qml/main.qml:313
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Avaa"
@@ -1005,12 +1021,7 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Äänenvoimakkuus: %1"
 
-#: src/qml/MpvVideo.qml:92
-msgctxt "@info:tooltip"
-msgid "Skipped chapter: %1"
-msgstr "Ohitettiin luku: %1"
-
-#: src/qml/MpvVideo.qml:110
+#: src/qml/MpvVideo.qml:89
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ei voitu toistaa: %1"
