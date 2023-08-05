@@ -542,7 +542,7 @@ void MpvItem::resetTimePosition()
 void MpvItem::userCommand(const QString &commandString)
 {
     QStringList args = KShell::splitArgs(commandString);
-    commandAsync(args);
+    command(args);
 }
 
 QString MpvItem::md5(const QString &str)
