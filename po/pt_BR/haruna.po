@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:45+0000\n"
+"POT-Creation-Date: 2023-08-06 00:45+0000\n"
 "PO-Revision-Date: 2023-08-04 01:39-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -542,14 +542,22 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "A lista de reprodução está vazia"
 
-#: src/mpv/mpvitem.cpp:395
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nenhuma"
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:459
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot taken"
+msgstr "Captura de tela"
+
+#: src/mpv/mpvitem.cpp:461
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -557,7 +565,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de tela"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:487
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"

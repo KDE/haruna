@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:45+0000\n"
+"POT-Creation-Date: 2023-08-06 00:45+0000\n"
 "PO-Revision-Date: 2023-07-24 20:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -545,14 +545,21 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "재생 목록이 비어 있음"
 
-#: src/mpv/mpvitem.cpp:395
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:459
+#, fuzzy, kde-format
+#| msgid "Screenshot"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot taken"
+msgstr "스크린샷"
+
+#: src/mpv/mpvitem.cpp:461
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -560,7 +567,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "스크린샷"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:487
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -1967,11 +1974,6 @@ msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
 #, fuzzy
 #~| msgid "Screenshot"
 #~ msgid "Screenshot format"
-#~ msgstr "스크린샷"
-
-#, fuzzy
-#~| msgid "Screenshot"
-#~ msgid "Screenshot template"
 #~ msgstr "스크린샷"
 
 #~ msgid "Haruna Settings"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:45+0000\n"
+"POT-Creation-Date: 2023-08-06 00:45+0000\n"
 "PO-Revision-Date: 2021-10-10 11:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -614,21 +614,28 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Wygląd listy odtwarzania"
 
-#: src/mpv/mpvitem.cpp:395
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:459
+#, fuzzy, kde-format
+#| msgid "Screenshot template"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot taken"
+msgstr "Szablon zrzutu ekranu"
+
+#: src/mpv/mpvitem.cpp:461
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Zrzut ekranu"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:487
 #, fuzzy, kde-format
 #| msgid "Skipped chapter: %1"
 msgctxt "@info:tooltip osd"
@@ -2388,9 +2395,6 @@ msgstr "Naciśnięcie środkowym na suwaku zeruje go"
 
 #~ msgid "Screenshot format"
 #~ msgstr "Format zrzutu ekranu"
-
-#~ msgid "Screenshot template"
-#~ msgstr "Szablon zrzutu ekranu"
 
 #~ msgid "Haruna Settings"
 #~ msgstr "Ustawienia Haruny"

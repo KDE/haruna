@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:45+0000\n"
+"POT-Creation-Date: 2023-08-06 00:45+0000\n"
 "PO-Revision-Date: 2021-07-18 18:15-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -532,20 +532,26 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:395
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:459
+#, kde-format
+msgctxt "@info:tooltip osd"
+msgid "Screenshot taken"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:461
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:487
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"

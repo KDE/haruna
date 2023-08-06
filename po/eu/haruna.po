@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:45+0000\n"
+"POT-Creation-Date: 2023-08-06 00:45+0000\n"
 "PO-Revision-Date: 2023-08-04 09:05+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -542,14 +542,21 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Jotze-zerrenda hutsik dago"
 
-#: src/mpv/mpvitem.cpp:395
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:459
+#, fuzzy, kde-format
+#| msgid "Screenshot"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot taken"
+msgstr "Pantaila-argazkia"
+
+#: src/mpv/mpvitem.cpp:461
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -557,7 +564,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Pantaila-argazkia"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:487
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -1936,11 +1943,6 @@ msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
 #, fuzzy
 #~| msgid "Screenshot"
 #~ msgid "Screenshot format"
-#~ msgstr "Pantaila-argazkia"
-
-#, fuzzy
-#~| msgid "Screenshot"
-#~ msgid "Screenshot template"
 #~ msgstr "Pantaila-argazkia"
 
 #~ msgid "Haruna Settings"

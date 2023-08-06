@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:45+0000\n"
-"PO-Revision-Date: 2023-08-04 10:32+0200\n"
+"POT-Creation-Date: 2023-08-06 00:45+0000\n"
+"PO-Revision-Date: 2023-08-05 09:34+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -539,25 +539,28 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Afspeellijst is leeg"
 
-#: src/mpv/mpvitem.cpp:395
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Geen"
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:459
 #, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#| msgid "Screenshot template"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot taken"
+msgstr "Schermafdruksjabloon"
+
+#: src/mpv/mpvitem.cpp:461
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Schermafdruk"
+msgstr "Schermafdruk: %1"
 
-#: src/mpv/mpvitem.cpp:495
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#: src/mpv/mpvitem.cpp:487
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Overgeslagen hoofdstuk: %1"
@@ -1954,9 +1957,6 @@ msgstr "Midden-klik op de schuifregelaars om ze te resetten"
 
 #~ msgid "Screenshot format"
 #~ msgstr "Schermafdrukformaat"
-
-#~ msgid "Screenshot template"
-#~ msgstr "Schermafdruksjabloon"
 
 #~ msgid "Haruna Settings"
 #~ msgstr "Haruna-instellingen"
