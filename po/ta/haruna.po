@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-06 00:45+0000\n"
-"PO-Revision-Date: 2023-07-16 14:53+0530\n"
+"PO-Revision-Date: 2023-08-06 15:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -551,24 +551,19 @@ msgid "None"
 msgstr "ஏதுமில்லை"
 
 #: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "திரைப்பிடிப்பு"
+msgstr "திரைப்பிடிப்பு எடுக்கப்பட்டது"
 
 #: src/mpv/mpvitem.cpp:461
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "திரைப்பிடிப்பு"
+msgstr "திரைப்பிடிப்பு: %1"
 
 #: src/mpv/mpvitem.cpp:487
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "பகுதி தவிர்க்கப்பட்டது: %1"
@@ -721,7 +716,7 @@ msgstr "&மேலும்"
 #: src/qml/Haruna/Components/ColorPickerButton.qml:40
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr ""
+msgstr "நிறத்தைத் தேர்ந்தெடுக்கவும்"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -729,6 +724,9 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"<a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a>, <a href=\"https://"
+"github.com/ytdl-org/youtube-dl\">youtube-dl</a> ஆகியவற்றில் ஒன்றுகூட "
+"கிடைக்கவில்லை."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:29
 msgctxt "@action:intoolbar"
@@ -773,7 +771,7 @@ msgstr "புதிய அடைவை சேர்க்கும்"
 #: src/qml/Header.qml:74
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
-msgstr ""
+msgstr "துணையுரை"
 
 #: src/qml/Header.qml:107
 msgctxt "@action:intoolbar"
@@ -806,7 +804,7 @@ msgstr "கோப்பை தேர்ந்தெடு"
 #: src/qml/main.qml:295
 msgctxt "@title:window"
 msgid "Select subtitles file"
-msgstr ""
+msgstr "துணையுரை கோப்பைத் தேர்ந்தெடுப்பது"
 
 #: src/qml/main.qml:313
 msgctxt "@action:button"
@@ -841,7 +839,7 @@ msgstr "சமீப கோப்புகள்"
 #: src/qml/Menus/FileMenu.qml:41
 msgctxt "@action:inmenu"
 msgid "Clear List"
-msgstr ""
+msgstr "பட்டியலை காலியாக்கு"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
 msgctxt "@title:menu"
@@ -868,81 +866,54 @@ msgstr "&அமைப்புகள்"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "பொதுவானவை"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "இயக்குதல்"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "நிகழ்படம்"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "ஒலி"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
-msgstr "துணை உரையை காட்டு"
+msgstr "துணை உரை"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "பாடல்வரிசை"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:68
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "சுட்டி"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "தனிப்பயன் கட்டளைகள்"
@@ -951,13 +922,13 @@ msgstr "தனிப்பயன் கட்டளைகள்"
 #: src/qml/Menus/SettingsMenu.qml:92
 msgctxt "@action:inmenu"
 msgid "Debug"
-msgstr ""
+msgstr "பிழைநீக்கம்"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
 msgctxt "@action:inmenu"
 msgid "About"
-msgstr ""
+msgstr "இதுபற்றி"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:14
@@ -1023,30 +994,21 @@ msgid "Could not play: %1"
 msgstr "இதனை இயக்க முடியவில்லை: %1"
 
 #: src/qml/PlayList.qml:89 src/qml/PlayListQt6.qml:87
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
-msgstr "&சேர்"
+msgstr "சேர்"
 
 #: src/qml/PlayList.qml:101 src/qml/PlayListQt6.qml:99
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "பாடல்வரிசை"
+msgstr "பாடல்வரிசையை திற"
 
 #: src/qml/PlayList.qml:110 src/qml/PlayListQt6.qml:108
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "சேர் ..."
 
 #: src/qml/PlayList.qml:113 src/qml/PlayListQt6.qml:111
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "கோப்பு"
@@ -1054,70 +1016,62 @@ msgstr "கோப்பு"
 #: src/qml/PlayList.qml:121 src/qml/PlayListQt6.qml:119
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "முகவரி"
 
 #: src/qml/PlayList.qml:132 src/qml/PlayListQt6.qml:130
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "வரிசைப்படுத்து"
 
 #: src/qml/PlayList.qml:136 src/qml/PlayListQt6.qml:134
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr ""
+msgstr "பெயர், ஏறுவரிசை"
 
 #: src/qml/PlayList.qml:142 src/qml/PlayListQt6.qml:140
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr ""
+msgstr "பெயர், இறங்குவரிசை"
 
 #: src/qml/PlayList.qml:148 src/qml/PlayListQt6.qml:146
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "நீளம், ஏறுவரிசை"
 
 #: src/qml/PlayList.qml:154 src/qml/PlayListQt6.qml:152
-#, fuzzy
-#| msgid "Contrast Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "நிறமாறுபாட்டை மீட்டமை"
+msgstr "நீளம், இறங்குவரிசை"
 
 #: src/qml/PlayList.qml:161 src/qml/PlayListQt6.qml:159
 msgctxt "@action:button"
 msgid "Clear"
-msgstr ""
+msgstr "காலியாக்கு"
 
 #: src/qml/PlayList.qml:169 src/qml/PlayListQt6.qml:167
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "மாற்றங்களை சேமிக்கும்"
+msgstr "வேறு பெயரில் சேமி"
 
 #: src/qml/PlayList.qml:222 src/qml/PlayListQt6.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "கொண்டுள்ள அடைவைத் திற"
 
 #: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "கோப்பின் பெயரை நகலெடு"
 
 #: src/qml/PlayList.qml:232 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr ""
+msgstr "கோப்பிற்கான பாதையை நகலெடு"
 
 #: src/qml/PlayList.qml:237 src/qml/PlayListQt6.qml:235
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "பாடல்வரிசை"
+msgstr "பாடல்வரிசையிலிருந்து நீக்கு"
 
 #: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:241
 #, fuzzy
