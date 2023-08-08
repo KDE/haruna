@@ -43,6 +43,7 @@ public:
     Q_INVOKABLE void trashFile(int row);
     Q_INVOKABLE void copyFileName(int row);
     Q_INVOKABLE void copyFilePath(int row);
+    Q_INVOKABLE QString getFilePath(int row);
 };
 
 class PlayListModel : public QAbstractListModel

@@ -567,4 +567,11 @@ void PlayListProxyModel::copyFilePath(int row)
     QGuiApplication::clipboard()->setText(item->filePath());
 }
 
+QString PlayListProxyModel::getFilePath(int row)
+{
+    auto model = qobject_cast<PlayListModel *>(sourceModel());
+    auto item = model->getPlayList().at(row);
+    return item->filePath();
+}
+
 #include "moc_playlistmodel.cpp"
