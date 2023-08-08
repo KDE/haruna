@@ -231,6 +231,12 @@ Item {
                     onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
                 }
                 MenuItem {
+                    text: i18nc("@action:inmenu", "Open url")
+                    icon.name: "link"
+                    visible: !contextMenuLoader.isLocal
+                    onClicked: Qt.openUrlExternally(mpv.playlistProxyModel.getFilePath(row))
+                }
+                MenuItem {
                     text: i18nc("@action:inmenu", "Copy file name")
                     onClicked: mpv.playlistProxyModel.copyFileName(row)
                 }
@@ -242,7 +248,6 @@ Item {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove from playlist")
                     icon.name: "remove"
-                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.removeItem(row)
                 }
                 MenuItem {
