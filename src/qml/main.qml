@@ -361,7 +361,7 @@ Kirigami.ApplicationWindow {
     }
 
     function resizeWindow() {
-        if (!GeneralSettings.resizeWindowToVideo) {
+        if (!GeneralSettings.resizeWindowToVideo || isFullScreen()) {
             return
         }
 
