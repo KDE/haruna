@@ -199,10 +199,16 @@ Item {
                     anchors.fill: playlistView.contentItem
                     acceptedButtons: Qt.RightButton
                     onClicked: {
-                        contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
-                        contextMenuLoader.isLocal = playlistView.itemAt(mouseX, mouseY).isLocal
+                        const index = playlistView.indexAt(mouseX, mouseY)
+                        if (index === -1) {
+                            return
+                        }
+
+                        const item = playlistView.itemAt(mouseX, mouseY)
+                        contextMenuLoader.row = index
+                        contextMenuLoader.isLocal = item.isLocal
                         contextMenuLoader.active = true
-                        contextMenuLoader.item.popup(playlistView.itemAt(mouseX, mouseY))
+                        contextMenuLoader.item.popup(item)
                     }
                 }
 
