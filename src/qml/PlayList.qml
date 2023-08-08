@@ -251,6 +251,14 @@ Item {
                     visible: contextMenuLoader.isLocal && app.frameworksVersionMinor() >= 100
                     onClicked: mpv.playlistProxyModel.trashFile(row)
                 }
+                MenuSeparator {}
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Scroll to playing item")
+                    onClicked: {
+                        const index = mpv.playlistProxyModel.getPlayingItem()
+                        playlistView.positionViewAtIndex(index, ListView.Beginning)
+                    }
+                }
             }
         }
 
