@@ -48,7 +48,7 @@ void MpvPreview::setPosition(double value)
     if (qFuzzyCompare(m_position, value)) {
         return;
     }
-    setProperty(MpvProperties::self()->Position, value);
+    setPropertyAsync(MpvProperties::self()->Position, value);
 }
 
 QString MpvPreview::file() const
