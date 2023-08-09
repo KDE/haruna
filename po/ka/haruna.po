@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 00:45+0000\n"
-"PO-Revision-Date: 2023-08-05 07:34+0200\n"
+"POT-Creation-Date: 2023-08-09 00:45+0000\n"
+"PO-Revision-Date: 2023-08-08 06:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -548,12 +548,10 @@ msgid "None"
 msgstr "არაფერი"
 
 #: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "ეკრანის ანაბეჭდი"
+msgstr "ეკრანის ანაბეჭდი აღებულია"
 
 #: src/mpv/mpvitem.cpp:461
 #, kde-format
@@ -796,7 +794,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:267 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:267 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1054,35 +1052,51 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr "შენახვა, როგორც"
 
-#: src/qml/PlayList.qml:222 src/qml/PlayListQt6.qml:220
+#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "შემცველი საქაღალდის გახსნა"
 
-#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:226
+#: src/qml/PlayList.qml:234
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open Url"
+msgctxt "@action:inmenu"
+msgid "Open url"
+msgstr "URL-ის გახსნა"
+
+#: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "ფაილის სახელის კოპირება"
 
-#: src/qml/PlayList.qml:232 src/qml/PlayListQt6.qml:230
+#: src/qml/PlayList.qml:244 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "ფაილის ბილიკის კოპირება"
 
-#: src/qml/PlayList.qml:237 src/qml/PlayListQt6.qml:235
+#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:235
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "დასაკრავი სიიდან წაშლა"
 
-#: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:241
+#: src/qml/PlayList.qml:254 src/qml/PlayListQt6.qml:241
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "ფაილის გადარქმევა"
 
-#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:247
+#: src/qml/PlayList.qml:260 src/qml/PlayListQt6.qml:247
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "ფაილის სანაგვე ყუთში გადატანა"
+
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Start playing"
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "დაკვრის დაწყება"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34

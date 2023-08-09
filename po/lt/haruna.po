@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 00:45+0000\n"
+"POT-Creation-Date: 2023-08-09 00:45+0000\n"
 "PO-Revision-Date: 2023-02-25 00:59+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -785,7 +785,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr ""
 
-#: src/qml/main.qml:267 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:267 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1043,34 +1043,44 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr ""
 
-#: src/qml/PlayList.qml:222 src/qml/PlayListQt6.qml:220
+#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:226
+#: src/qml/PlayList.qml:234
+msgctxt "@action:inmenu"
+msgid "Open url"
+msgstr ""
+
+#: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr ""
 
-#: src/qml/PlayList.qml:232 src/qml/PlayListQt6.qml:230
+#: src/qml/PlayList.qml:244 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr ""
 
-#: src/qml/PlayList.qml:237 src/qml/PlayListQt6.qml:235
+#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:235
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr ""
 
-#: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:241
+#: src/qml/PlayList.qml:254 src/qml/PlayListQt6.qml:241
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr ""
 
-#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:247
+#: src/qml/PlayList.qml:260 src/qml/PlayListQt6.qml:247
 msgctxt "@action:inmenu"
 msgid "Trash file"
+msgstr ""
+
+#: src/qml/PlayList.qml:267
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:27

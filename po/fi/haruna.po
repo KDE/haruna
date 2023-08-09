@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 00:45+0000\n"
+"POT-Creation-Date: 2023-08-09 00:45+0000\n"
 "PO-Revision-Date: 2023-04-27 19:56+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -802,7 +802,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:267 src/qml/PlayList.qml:314 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:267 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1093,36 +1093,52 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr "Tallenna nimellä"
 
-#: src/qml/PlayList.qml:222 src/qml/PlayListQt6.qml:220
+#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Avaa yläkansio"
 
-#: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:226
+#: src/qml/PlayList.qml:234
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open Url"
+msgctxt "@action:inmenu"
+msgid "Open url"
+msgstr "Avaa verkko-osoite"
+
+#: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Kopioi tiedostonimi"
 
-#: src/qml/PlayList.qml:232 src/qml/PlayListQt6.qml:230
+#: src/qml/PlayList.qml:244 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Kopioi tiedoston sijainti"
 
-#: src/qml/PlayList.qml:237 src/qml/PlayListQt6.qml:235
+#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:235
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Poista soittolistasta"
 
-#: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:241
+#: src/qml/PlayList.qml:254 src/qml/PlayListQt6.qml:241
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Muuta tiedoston nimeä"
 
 # *** TARKISTA: vai onko yhdyssana, ”roskakoritiedosto"?
-#: src/qml/PlayList.qml:249 src/qml/PlayListQt6.qml:247
+#: src/qml/PlayList.qml:260 src/qml/PlayListQt6.qml:247
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Vie tiedosto roskakoriin"
+
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Start playing"
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "Käynnistä toisto"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
