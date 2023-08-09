@@ -17,7 +17,7 @@ MpvPreview::MpvPreview()
     setProperty(MpvProperties::self()->Pause, true);
     setProperty(MpvProperties::self()->ReallyQuiet, true);
 
-    setProperty(MpvProperties::self()->HardwareDecoding, QStringLiteral("auto"));
+    setProperty(MpvProperties::self()->HardwareDecoding, QStringLiteral("auto-safe"));
     setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
     setProperty(MpvProperties::self()->AudioId, false);
     setProperty(MpvProperties::self()->AudioFileAuto, false);
