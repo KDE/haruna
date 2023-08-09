@@ -45,7 +45,9 @@ MpvRenderer::MpvRenderer(MpvAbstractItem *new_obj)
 void MpvRenderer::render()
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    m_mpvAItem->window()->resetOpenGLState();
+    if (m_mpvAItem->window() != nullptr) {
+        m_mpvAItem->window()->resetOpenGLState();
+    }
 #endif
 
     QOpenGLFramebufferObject *fbo = framebufferObject();
@@ -69,7 +71,9 @@ void MpvRenderer::render()
     mpv_render_context_render(m_mpvAItem->m_mpv_gl, params);
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    m_mpvAItem->window()->resetOpenGLState();
+    if (m_mpvAItem->window() != nullptr) {
+        m_mpvAItem->window()->resetOpenGLState();
+    }
 #endif
 }
 
