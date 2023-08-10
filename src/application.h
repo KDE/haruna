@@ -34,14 +34,11 @@ protected:
     {
         if (event->type() == QEvent::Leave) {
             Q_EMIT applicationMouseLeave();
-            return true;
-        } else if (event->type() == QEvent::Enter) {
-            Q_EMIT applicationMouseEnter();
-            return true;
-        } else {
-            // standard event processing
-            return QObject::eventFilter(obj, event);
         }
+        if (event->type() == QEvent::Enter) {
+            Q_EMIT applicationMouseEnter();
+        }
+        return QObject::eventFilter(obj, event);
     }
 };
 
