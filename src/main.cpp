@@ -6,6 +6,7 @@
 
 #include "application.h"
 #include "generalsettings.h"
+#include "kdsingleapplication.h"
 #include "qqmlpropertymap.h"
 #include "thumbnailimageprovider.h"
 
@@ -38,6 +39,13 @@ int main(int argc, char *argv[])
     QApplication qApplication(argc, argv);
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("haruna")));
     KLocalizedString::setApplicationDomain("haruna");
+
+    KDSingleApplication kdsApp;
+    if (kdsApp.isPrimaryInstance()) {
+        qDebug() << "primary";
+    } else {
+        qDebug() << "secondary";
+    }
 
     auto application = Application::instance();
 

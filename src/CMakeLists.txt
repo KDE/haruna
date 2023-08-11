@@ -14,6 +14,9 @@ target_sources(haruna
     application.h application.cpp
     framedecoder.h framedecoder.cpp
     global.h global.cpp
+    KDSingleApplication/kdsingleapplication_lib.h
+    KDSingleApplication/kdsingleapplication_localsocket_p.h KDSingleApplication/kdsingleapplication_localsocket.cpp
+    KDSingleApplication/kdsingleapplication.h KDSingleApplication/kdsingleapplication.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp
     models/chaptersmodel.h models/chaptersmodel.cpp
@@ -62,7 +65,14 @@ kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
 
-target_include_directories(haruna PRIVATE models mpv ${FFMPEG_INCLUDE_DIRS} ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
+target_include_directories(haruna
+    PRIVATE
+        KDSingleApplication
+        models
+        mpv
+        ${FFMPEG_INCLUDE_DIRS}
+        ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
+)
 
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
