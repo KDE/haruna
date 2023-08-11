@@ -29,12 +29,9 @@ ToolBar {
 
         width: parent.width
 
-        Loader {
-            active: !menuBarLoader.visible
-            visible: active
-            sourceComponent: HamburgerMenu {
-                position: HamburgerMenu.Position.Header
-            }
+        HamburgerMenu {
+            visible: !menuBarLoader.visible
+            position: HamburgerMenu.Position.Footer
         }
 
         ToolButton {
@@ -177,13 +174,13 @@ ToolBar {
                     NumberAnimation {
                         target: root
                         property: "opacity"
-                        duration: Kirigami.Units.shortDuration
+                        duration: Kirigami.Units.veryShortDuration
                         easing.type: Easing.Linear
                     }
                     NumberAnimation {
                         target: root
                         property: "height"
-                        duration: Kirigami.Units.shortDuration
+                        duration: Kirigami.Units.veryShortDuration
                         easing.type: Easing.Linear
                     }
                 }
@@ -208,13 +205,13 @@ ToolBar {
                     NumberAnimation {
                         target: root
                         property: "height"
-                        duration: Kirigami.Units.shortDuration
+                        duration: Kirigami.Units.veryShortDuration
                         easing.type: Easing.Linear
                     }
                     NumberAnimation {
                         target: root
                         property: "opacity"
-                        duration: Kirigami.Units.shortDuration
+                        duration: Kirigami.Units.veryShortDuration
                         easing.type: Easing.Linear
                     }
                 }

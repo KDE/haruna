@@ -77,13 +77,89 @@ Kirigami.ApplicationWindow {
                                       && Kirigami.Settings.hasPlatformMenuBar
                                       && !Kirigami.Settings.isMobile
 
-        visible: !window.isFullScreen() && GeneralSettings.showMenuBar
+        state: !window.isFullScreen() && GeneralSettings.showMenuBar ? "visible" : "hidden"
         sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent
 
         onVisibleChanged: {
             window.resizeWindow()
         }
 
+
+        states: [
+            State {
+                name: "hidden"
+                PropertyChanges {
+                    target: menuBarLoader
+                    height: 0
+                    opacity: 0
+                    visible: false
+                }
+            },
+            State {
+                name : "visible"
+                PropertyChanges {
+                    target: menuBarLoader
+                    height: menuBarLoader.implicitHeight
+                    opacity: 1
+                    visible: true
+                }
+            }
+        ]
+
+        transitions: [
+            Transition {
+                from: "visible"
+                to: "hidden"
+
+                SequentialAnimation {
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: menuBarLoader
+                            property: "opacity"
+                            duration: Kirigami.Units.veryShortDuration
+                            easing.type: Easing.Linear
+                        }
+                        NumberAnimation {
+                            target: menuBarLoader
+                            property: "height"
+                            duration: Kirigami.Units.veryShortDuration
+                            easing.type: Easing.Linear
+                        }
+                    }
+                    PropertyAction {
+                        target: menuBarLoader
+                        property: "visible"
+                        value: false
+                    }
+                }
+            },
+            Transition {
+                from: "hidden"
+                to: "visible"
+
+                SequentialAnimation {
+                    PropertyAction {
+                        target: menuBarLoader
+                        property: "visible"
+                        value: true
+                    }
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: menuBarLoader
+                            property: "height"
+                            duration: Kirigami.Units.veryShortDuration
+                            easing.type: Easing.Linear
+                        }
+                        NumberAnimation {
+                            target: menuBarLoader
+                            property: "opacity"
+                            duration: Kirigami.Units.veryShortDuration
+                            easing.type: Easing.Linear
+                        }
+                    }
+                }
+            }
+        ]
     }
 
     MpvVideo {
