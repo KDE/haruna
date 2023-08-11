@@ -136,4 +136,80 @@ ToolBar {
         }
 
     }
+
+    states: [
+        State {
+            name: "hidden"
+            PropertyChanges {
+                target: root
+                height: 0
+                opacity: 0
+                visible: false
+            }
+        },
+        State {
+            name : "visible"
+            PropertyChanges {
+                target: root
+                height: root.implicitHeight
+                opacity: 1
+                visible: true
+            }
+        }
+    ]
+
+    transitions: [
+        Transition {
+            from: "visible"
+            to: "hidden"
+
+            SequentialAnimation {
+                ParallelAnimation {
+                    NumberAnimation {
+                        target: root
+                        property: "opacity"
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.Linear
+                    }
+                    NumberAnimation {
+                        target: root
+                        property: "height"
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.Linear
+                    }
+                }
+                PropertyAction {
+                    target: root
+                    property: "visible"
+                    value: false
+                }
+            }
+        },
+        Transition {
+            from: "hidden"
+            to: "visible"
+
+            SequentialAnimation {
+                PropertyAction {
+                    target: root
+                    property: "visible"
+                    value: true
+                }
+                ParallelAnimation {
+                    NumberAnimation {
+                        target: root
+                        property: "height"
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.Linear
+                    }
+                    NumberAnimation {
+                        target: root
+                        property: "opacity"
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.Linear
+                    }
+                }
+            }
+        }
+    ]
 }

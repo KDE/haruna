@@ -220,7 +220,8 @@ Kirigami.ApplicationWindow {
         anchors.left: window.contentItem.left
         anchors.right: window.contentItem.right
         anchors.bottom: window.isFullScreen() ? mpv.bottom : window.contentItem.bottom
-        visible: !window.isFullScreen() || (mpv.mouseY > window.height - footer.height && window.containsMouse)
+        state: !window.isFullScreen() || (mpv.mouseY > window.height - footer.implicitHeight && window.containsMouse)
+               ? "visible" : "hidden"
     }
 
     Actions {}
