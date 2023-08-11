@@ -38,12 +38,9 @@ ToolBar {
         id: footerRow
         anchors.fill: parent
 
-        Loader {
-            active: !menuBarLoader.visible && !header.visible
-            visible: active
-            sourceComponent: HamburgerMenu {
-                position: HamburgerMenu.Position.Footer
-            }
+        HamburgerMenu {
+            visible: !menuBarLoader.visible && !header.visible
+            position: HamburgerMenu.Position.Footer
         }
 
         Loader {
