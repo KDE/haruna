@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 00:45+0000\n"
-"PO-Revision-Date: 2023-08-06 08:42+0200\n"
+"PO-Revision-Date: 2023-08-13 00:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
@@ -1059,12 +1059,9 @@ msgid "Open containing folder"
 msgstr "Odpri vsebovano mapo"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
-msgstr "Odpri URL"
+msgstr "Odpri url"
 
 #: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
@@ -1092,12 +1089,9 @@ msgid "Trash file"
 msgstr "Datoteko v smeti"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "Začni predvajanje"
+msgstr "Premakni se do predmeta predvajanja"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
