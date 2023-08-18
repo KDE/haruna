@@ -331,6 +331,9 @@ Kirigami.ApplicationWindow {
             messageBox.visible = true
             messageBox.text = message
         }
+        onOpenUrl: {
+            openFile(url)
+        }
     }
 
     Platform.FileDialog {

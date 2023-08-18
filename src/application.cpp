@@ -322,6 +322,16 @@ QString Application::mimeType(QUrl url)
     return fileItem.mimetype();
 }
 
+void Application::handleSecondayInstanceMessage(const QByteArray &message)
+{
+    auto msgString = QString::fromStdString(message.data());
+    QFileInfo fileInfo{msgString};
+    if (fileInfo.exists() && fileInfo.isFile()) {
+        Q_EMIT openUrl(QUrl::fromUserInput(msgString));
+        raiseWindow();
+    }
+}
+
 QStringList Application::availableGuiStyles()
 {
     return QStyleFactory::keys();

@@ -80,6 +80,7 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(QUrl url);
 
+    void handleSecondayInstanceMessage(const QByteArray &message);
     QCommandLineParser *parser() const;
 
     QQmlApplicationEngine *qmlEngine() const;
@@ -90,6 +91,7 @@ Q_SIGNALS:
     void qmlApplicationMouseEnter();
     void error(const QString &message);
     void saveWindowGeometryAsync(QQuickWindow *window);
+    void openUrl(const QUrl &url);
 
 private:
     explicit Application();

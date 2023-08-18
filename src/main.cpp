@@ -10,6 +10,7 @@
 #include "qqmlpropertymap.h"
 #include "thumbnailimageprovider.h"
 
+#include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -40,14 +41,22 @@ int main(int argc, char *argv[])
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("haruna")));
     KLocalizedString::setApplicationDomain("haruna");
 
+    auto application = Application::instance();
+
     KDSingleApplication kdsApp;
     if (kdsApp.isPrimaryInstance()) {
-        qDebug() << "primary";
+        QObject::connect(&kdsApp, &KDSingleApplication::messageReceived, [=](const QByteArray &message) {
+            application->handleSecondayInstanceMessage(message);
+        });
     } else {
-        qDebug() << "secondary";
+        QCommandLineParser clParser;
+        clParser.process(qApplication);
+        if (clParser.positionalArguments().size() > 0) {
+            QString file = clParser.positionalArguments().first();
+            kdsApp.sendMessage(file.toUtf8());
+        }
+        exit(EXIT_SUCCESS);
     }
-
-    auto application = Application::instance();
 
     QQmlApplicationEngine engine(&qApplication);
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
