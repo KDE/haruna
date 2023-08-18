@@ -332,7 +332,11 @@ Kirigami.ApplicationWindow {
             messageBox.text = message
         }
         onOpenUrl: {
-            openFile(url)
+            if (GeneralSettings.appendVideoToSingleInstance) {
+                mpv.playlistModel.appendItem(url.toString())
+            } else {
+                openFile(url)
+            }
         }
     }
 

@@ -103,15 +103,62 @@ SettingsBasePage {
 
         Item { width: 1 }
 
-        CheckBox {
-            text: i18nc("@option:check", "Allow a single instance")
-            checked: GeneralSettings.useSingleInstance
-            onCheckedChanged: {
-                GeneralSettings.useSingleInstance = checked
-                GeneralSettings.save()
+        RowLayout {
+            CheckBox {
+                text: i18nc("@option:check", "Allow only one instance")
+                checked: GeneralSettings.useSingleInstance
+                onCheckedChanged: {
+                    GeneralSettings.useSingleInstance = checked
+                    GeneralSettings.save()
+                }
+            }
+
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
+                ToolTip {
+                    text: i18nc("@info:tooltip",
+                                "Trying to open another Haruna instance will do nothing.\n"+
+                                "Trying to open another file with Haruna will open the file in the running instance.")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
             }
         }
 
+        Item { width: 1 }
+
+        RowLayout {
+            CheckBox {
+                text: i18nc("@option:check", "Add file to playlist")
+                checked: GeneralSettings.appendVideoToSingleInstance
+                enabled: GeneralSettings.useSingleInstance
+                onCheckedChanged: {
+                    GeneralSettings.appendVideoToSingleInstance = checked
+                    GeneralSettings.save()
+                }
+            }
+
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "File will be added to the end of the playlist")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
+            }
+        }
         SettingsHeader {
             text: i18nc("@title", "Interface")
             Layout.columnSpan: 2
@@ -150,6 +197,7 @@ SettingsBasePage {
                 icon.color: Kirigami.Theme.negativeTextColor
                 checkable: true
                 checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "Generating an accurate preview is slow")
@@ -196,6 +244,7 @@ SettingsBasePage {
                 icon.name: "documentinfo"
                 checkable: true
                 checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "The window is resized according to the video resolution.\n" +
@@ -224,6 +273,7 @@ SettingsBasePage {
                 icon.name: "documentinfo"
                 checkable: true
                 checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "When window size and position are changed the new values " +
@@ -362,6 +412,8 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1 }
+
         CheckBox {
             text: i18nc("@option:check", "Use Breeze icon theme")
             checked: GeneralSettings.useBreezeIconTheme
@@ -369,8 +421,6 @@ SettingsBasePage {
                 GeneralSettings.useBreezeIconTheme = checked
                 GeneralSettings.save()
             }
-            Layout.row: 14
-            Layout.column: 1
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Sets the icon theme to breeze.\nRequires restart.")
