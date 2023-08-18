@@ -101,6 +101,17 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1 }
+
+        CheckBox {
+            text: i18nc("@option:check", "Allow a single instance")
+            checked: GeneralSettings.useSingleInstance
+            onCheckedChanged: {
+                GeneralSettings.useSingleInstance = checked
+                GeneralSettings.save()
+            }
+        }
+
         SettingsHeader {
             text: i18nc("@title", "Interface")
             Layout.columnSpan: 2

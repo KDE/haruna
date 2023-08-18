@@ -49,13 +49,15 @@ int main(int argc, char *argv[])
             application->handleSecondayInstanceMessage(message);
         });
     } else {
-        QCommandLineParser clParser;
-        clParser.process(qApplication);
-        if (clParser.positionalArguments().size() > 0) {
-            QString file = clParser.positionalArguments().first();
-            kdsApp.sendMessage(file.toUtf8());
+        if (GeneralSettings::self()->useSingleInstance()) {
+            QCommandLineParser clParser;
+            clParser.process(qApplication);
+            if (clParser.positionalArguments().size() > 0) {
+                QString file = clParser.positionalArguments().first();
+                kdsApp.sendMessage(file.toUtf8());
+            }
+            exit(EXIT_SUCCESS);
         }
-        exit(EXIT_SUCCESS);
     }
 
     QQmlApplicationEngine engine(&qApplication);
