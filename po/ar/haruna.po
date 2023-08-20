@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 00:45+0000\n"
-"PO-Revision-Date: 2023-05-11 09:59+0400\n"
+"PO-Revision-Date: 2023-08-19 22:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -87,12 +87,10 @@ msgid "Playing media file"
 msgstr "شغل ملف وسائط"
 
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "افتح ملف الضبط"
+msgstr "افتح حواري الإجراءات"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -550,25 +548,19 @@ msgid "None"
 msgstr "لا يوجد"
 
 #: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "لقطة شاشة"
+msgstr "أخذت لقطة شاشة"
 
 #: src/mpv/mpvitem.cpp:461
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "لقطة شاشة"
+msgstr "لقطة شاشة: %1"
 
 #: src/mpv/mpvitem.cpp:487
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
@@ -872,99 +864,66 @@ msgstr "إ&عدادات"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "عامّ"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "تشغيل"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "فيديو"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "صوت"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "الترجمة"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "قائمة التشغيل"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:68
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "الفأرة"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "أوامر مخصَّصة"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
 #: src/qml/Menus/SettingsMenu.qml:92
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "نقّح"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "عن"
@@ -1098,12 +1057,9 @@ msgid "Open containing folder"
 msgstr "افتح المجلد الحاوي"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
-msgstr "افتح المسار"
+msgstr "افتح الرابط"
 
 #: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
@@ -1131,12 +1087,9 @@ msgid "Trash file"
 msgstr "ملف المهملات"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "ابدأ التشغيل"
+msgstr "مرر إلى العنصر المشغل"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1314,32 +1267,32 @@ msgstr "الواجهة"
 #: src/qml/Settings/GeneralSettings.qml:111
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr ""
+msgstr "مصغرة المعاينة"
 
 #: src/qml/Settings/GeneralSettings.qml:116
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "اعرض مصغرة المعاينة"
 
 #: src/qml/Settings/GeneralSettings.qml:128
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "استعمل معاينة دقيقة"
 
 #: src/qml/Settings/GeneralSettings.qml:144
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "توليد معاينة دقيقة بطيء"
 
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "النافذة"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "غير الحجم ليلائم الفيديو"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1404,20 +1357,14 @@ msgstr ""
 "ستحتاج لإعادة التشغيل"
 
 #: src/qml/Settings/MouseSettings.qml:78
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@label"
 msgid "No action set"
-msgstr "صفّر التّشبّع"
+msgstr "لم يعين أي إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "امسح الإجراء الحالي"
+msgstr "امسح إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:126
 msgctxt "@title"
