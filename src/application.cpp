@@ -291,8 +291,10 @@ QString Application::formatTime(const double time)
     int minutes = (totalNumberOfSeconds / 60) % 60;
     int hours = (totalNumberOfSeconds / 60 / 60);
 
-    QString timeString =
-        QStringLiteral("%1:%2:%3").arg(hours, 2, 10, QLatin1Char('0')).arg(minutes, 2, 10, QLatin1Char('0')).arg(seconds, 2, 10, QLatin1Char('0'));
+    QString hoursString = QStringLiteral("%1").arg(hours, 2, 10, QLatin1Char('0'));
+    QString minutesString = QStringLiteral("%1").arg(minutes, 2, 10, QLatin1Char('0'));
+    QString secondsString = QStringLiteral("%1").arg(seconds, 2, 10, QLatin1Char('0'));
+    QString timeString = QStringLiteral("%1:%2:%3").arg(hoursString, minutesString, secondsString);
 
     return timeString;
 }
