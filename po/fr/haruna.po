@@ -1,11 +1,11 @@
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 00:45+0000\n"
-"PO-Revision-Date: 2023-05-12 11:02+0200\n"
+"PO-Revision-Date: 2023-08-19 14:10+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -85,12 +85,10 @@ msgid "Playing media file"
 msgstr "Lecture d'un fichier multi-media"
 
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Ouvrir un fichier de configuration"
+msgstr "Ouvrir une boîte de dialogue pour les actions"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -548,24 +546,19 @@ msgid "None"
 msgstr "Aucun"
 
 #: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgid "Screenshot template"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Modèle de copie d'écran"
+msgstr "Copie d'écran effectuée"
 
 #: src/mpv/mpvitem.cpp:461
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Capture d'écran"
+msgstr "Copie d'écran : %1"
 
 #: src/mpv/mpvitem.cpp:487
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Chapitre ignoré : %1"
@@ -869,99 +862,66 @@ msgstr "&Configuration"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "Général"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Lecture"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Vidéo"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Sous-titres"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Liste de lecture"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:68
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Souris"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Raccourcis"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Commandes personnalisées"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
 #: src/qml/Menus/SettingsMenu.qml:92
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Débogage"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "À propos"
@@ -1095,9 +1055,6 @@ msgid "Open containing folder"
 msgstr "Ouvrir le dossier contenant"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
 msgstr "Ouvrir une URL"
@@ -1128,12 +1085,9 @@ msgid "Trash file"
 msgstr "Mettre un fichier à la corbeille"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "Démarrer la lecture"
+msgstr "Dérouler jusqu'à l'élément en lecture"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1314,38 +1268,34 @@ msgid "Interface"
 msgstr "Interface"
 
 #: src/qml/Settings/GeneralSettings.qml:111
-#, fuzzy
-#| msgid "Show thumbnails"
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr "Afficher les vignettes"
+msgstr "Vignettes d'aperçu"
 
 #: src/qml/Settings/GeneralSettings.qml:116
-#, fuzzy
-#| msgid "Show thumbnails"
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr "Afficher les vignettes"
+msgstr "Afficher la vignette d'aperçu"
 
 #: src/qml/Settings/GeneralSettings.qml:128
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Utiliser un aperçu précis"
 
 #: src/qml/Settings/GeneralSettings.qml:144
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "La génération d'un aperçu précis est lente"
 
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Fenêtre"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Re-dimensionner pour correspondre à la vidéo"
 
 #: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@info:tooltip"
@@ -1353,6 +1303,9 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"La fenêtre est re-dimensionnée selon la résolution vidéo.  \n"
+"La taille maximale n’est pas limitée. Ceci est laissé sous la responsabilité "
+"du système d’exploitation."
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@option:check"
@@ -1368,6 +1321,12 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Lorsque la taille et la position de la fenêtre sont modifiées, les nouvelles "
+"valeurs sont enregistrées et utilisées pour restaurer l’application avec les "
+"même taille et position lorsqu’une nouvelle instance est ouverte.  \n"
+"\n"
+"Le paramètre « Re-dimensionner pour s'adapter à la vidéo\" est "
+"prioritaire. \n"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@option:check"
@@ -1410,20 +1369,14 @@ msgstr ""
 "Nécessite un redémarrage."
 
 #: src/qml/Settings/MouseSettings.qml:78
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@label"
 msgid "No action set"
-msgstr "Ré-initialiser la saturation"
+msgstr "Aucune action définie"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "Effacer l'action courante"
+msgstr "Effacer une action"
 
 #: src/qml/Settings/MouseSettings.qml:126
 msgctxt "@title"
