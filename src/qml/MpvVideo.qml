@@ -84,7 +84,7 @@ MpvItem {
                 return
             }
 
-            const item = playlistProxyModel.getItem(playlistProxyModel.getPlayingItem())
+            const item = playlistModel.getItem(playlistProxyModel.getPlayingItem())
             const title = item.mediaTitle() || item.fileName()
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
         }
