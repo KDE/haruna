@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 00:45+0000\n"
+"POT-Creation-Date: 2023-08-22 00:45+0000\n"
 "PO-Revision-Date: 2023-08-10 22:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -79,7 +79,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "en iyi video + en iyi ses / en iyi"
 
-#: src/lockmanager.cpp:31
+#: src/lockmanager.cpp:30
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -792,18 +792,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:344 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya seç"
 
-#: src/qml/main.qml:372
+#: src/qml/main.qml:379
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Altyazı dosyası seç"
 
-#: src/qml/main.qml:390
+#: src/qml/main.qml:397
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aç"
@@ -1260,42 +1260,68 @@ msgstr ""
 "Kaç tane son kullanılan dosyanın depolanacağı. Devre dışı bırakmak için 0 "
 "(sıfır) girin."
 
-#: src/qml/Settings/GeneralSettings.qml:105
+#: src/qml/Settings/GeneralSettings.qml:108
+msgctxt "@option:check"
+msgid "Allow only one instance"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:124
+msgctxt "@info:tooltip"
+msgid ""
+"Trying to open another Haruna instance will do nothing.\n"
+"Trying to open another file with Haruna will open the file in the running "
+"instance."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:138
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@option:check"
+msgid "Add file to playlist"
+msgstr "Oynatma Listesi Aç"
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "File will be added to the end of the playlist"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
 msgid "Interface"
 msgstr "Arayüz"
 
-#: src/qml/Settings/GeneralSettings.qml:111
+#: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Küçük görselleri önizle"
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:174
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Küçük görsel önizlemesini göster"
 
-#: src/qml/Settings/GeneralSettings.qml:128
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Doğru önizleme kullan"
 
-#: src/qml/Settings/GeneralSettings.qml:144
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Doğru bir önizleme üretmek yavaştır"
 
-#: src/qml/Settings/GeneralSettings.qml:169
+#: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr "Pencere"
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Videoyu sığdırmak için yeniden boyutlandır"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1304,12 +1330,12 @@ msgstr ""
 "Pencere, video çözünürlüğüne göre yeniden boyutlandırıldı.\n"
 "En büyük boyut kısıtlanmaz; bu işletim sistemine bırakılmıştır."
 
-#: src/qml/Settings/GeneralSettings.qml:204
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Pencere boyutunu ve konumunu anımsa"
 
-#: src/qml/Settings/GeneralSettings.qml:218
+#: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1324,38 +1350,38 @@ msgstr ""
 "\n"
 "\"Videoyu sığdırmak için yeniden boyutlandır\" seçeneği öncelik alır.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:233
+#: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Menü çubuğunu göster"
 
-#: src/qml/Settings/GeneralSettings.qml:244
+#: src/qml/Settings/GeneralSettings.qml:305
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Araç çubuğunu göster"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:316
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Fasıl imleyicilerini göster"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:325
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Renk şeması"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:367
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Grafik arabirim biçemi"
 
-#: src/qml/Settings/GeneralSettings.qml:355
+#: src/qml/Settings/GeneralSettings.qml:418
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Esinti simge temasını kullan"
 
-#: src/qml/Settings/GeneralSettings.qml:365
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

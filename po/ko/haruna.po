@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 00:45+0000\n"
+"POT-Creation-Date: 2023-08-22 00:45+0000\n"
 "PO-Revision-Date: 2023-08-06 23:17+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -79,7 +79,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:31
+#: src/lockmanager.cpp:30
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -801,18 +801,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:344 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: src/qml/main.qml:372
+#: src/qml/main.qml:379
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "자막 파일 선택"
 
-#: src/qml/main.qml:390
+#: src/qml/main.qml:397
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
@@ -1273,42 +1273,68 @@ msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr "저장할 최근 파일 개수입니다. 0을 입력하면 비활성화합니다."
 
-#: src/qml/Settings/GeneralSettings.qml:105
+#: src/qml/Settings/GeneralSettings.qml:108
+msgctxt "@option:check"
+msgid "Allow only one instance"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:124
+msgctxt "@info:tooltip"
+msgid ""
+"Trying to open another Haruna instance will do nothing.\n"
+"Trying to open another file with Haruna will open the file in the running "
+"instance."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:138
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@option:check"
+msgid "Add file to playlist"
+msgstr "재생 목록 열기"
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "File will be added to the end of the playlist"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
 msgid "Interface"
 msgstr "인터페이스"
 
-#: src/qml/Settings/GeneralSettings.qml:111
+#: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "미리 보기 섬네일"
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:174
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "미리 보기 섬네일 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:128
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "정확한 미리 보기 사용"
 
-#: src/qml/Settings/GeneralSettings.qml:144
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "정확한 미리 보기를 생성하는 데에는 시간이 걸릴 수 있습니다"
 
-#: src/qml/Settings/GeneralSettings.qml:169
+#: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr "창"
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "동영상 크기에 맞게 조정"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1317,12 +1343,12 @@ msgstr ""
 "창 크기를 동영상 해상도에 맞게 조정합니다.\n"
 "최대 크기는 제한되어 있지 않으며 운영 체제에 의존합니다."
 
-#: src/qml/Settings/GeneralSettings.qml:204
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "창 크기와 위치 기억"
 
-#: src/qml/Settings/GeneralSettings.qml:218
+#: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1336,38 +1362,38 @@ msgstr ""
 "\n"
 "\"동영상 크기에 맞게 조정\" 설정은 이 설정에 우선합니다.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:233
+#: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "메뉴 표시줄 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:244
+#: src/qml/Settings/GeneralSettings.qml:305
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "도구 모음 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:316
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "챕터 마커 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:325
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "색 배열"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:367
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI 스타일"
 
-#: src/qml/Settings/GeneralSettings.qml:355
+#: src/qml/Settings/GeneralSettings.qml:418
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Breeze 아이콘 테마 사용"
 
-#: src/qml/Settings/GeneralSettings.qml:365
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

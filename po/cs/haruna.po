@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 00:45+0000\n"
+"POT-Creation-Date: 2023-08-22 00:45+0000\n"
 "PO-Revision-Date: 2023-05-16 10:53+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -77,7 +77,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "nejlepsivideo+nejlepsiaudio/nejlepsi"
 
-#: src/lockmanager.cpp:31
+#: src/lockmanager.cpp:30
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -794,18 +794,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:344 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vybrat soubor"
 
-#: src/qml/main.qml:372
+#: src/qml/main.qml:379
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Vyberte soubor s titulky"
 
-#: src/qml/main.qml:390
+#: src/qml/main.qml:397
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otevřít"
@@ -1297,54 +1297,80 @@ msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:105
+#: src/qml/Settings/GeneralSettings.qml:108
+msgctxt "@option:check"
+msgid "Allow only one instance"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:124
+msgctxt "@info:tooltip"
+msgid ""
+"Trying to open another Haruna instance will do nothing.\n"
+"Trying to open another file with Haruna will open the file in the running "
+"instance."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:138
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@option:check"
+msgid "Add file to playlist"
+msgstr "Otevřít seznam skladeb"
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "File will be added to the end of the playlist"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
 msgid "Interface"
 msgstr "Rozhraní"
 
-#: src/qml/Settings/GeneralSettings.qml:111
+#: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:174
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:128
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:144
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:169
+#: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:204
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Zapamatovat si velikost a pozici okna"
 
-#: src/qml/Settings/GeneralSettings.qml:218
+#: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1354,38 +1380,38 @@ msgid ""
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:233
+#: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Zobrazovat hlavní nabídku"
 
-#: src/qml/Settings/GeneralSettings.qml:244
+#: src/qml/Settings/GeneralSettings.qml:305
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Zobrazit panel nástrojů"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:316
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Zobrazit značky kapitol"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:325
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Barevné schéma"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:367
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Styl prostředí"
 
-#: src/qml/Settings/GeneralSettings.qml:355
+#: src/qml/Settings/GeneralSettings.qml:418
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Použít výchozí motiv ikon Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:365
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

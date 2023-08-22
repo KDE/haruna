@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 00:45+0000\n"
+"POT-Creation-Date: 2023-08-22 00:45+0000\n"
 "PO-Revision-Date: 2023-08-09 18:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -82,7 +82,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bideorikonena+audiorikonena/onena"
 
-#: src/lockmanager.cpp:31
+#: src/lockmanager.cpp:30
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -795,18 +795,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:344 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"
 
-#: src/qml/main.qml:372
+#: src/qml/main.qml:379
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Hautatu azpidatzi-fitxategia"
 
-#: src/qml/main.qml:390
+#: src/qml/main.qml:397
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ireki"
@@ -1263,42 +1263,68 @@ msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr "Azken aldiko zenbait fitxategi gorde. Sartu 0 (zero) ezgaitzeko."
 
-#: src/qml/Settings/GeneralSettings.qml:105
+#: src/qml/Settings/GeneralSettings.qml:108
+msgctxt "@option:check"
+msgid "Allow only one instance"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:124
+msgctxt "@info:tooltip"
+msgid ""
+"Trying to open another Haruna instance will do nothing.\n"
+"Trying to open another file with Haruna will open the file in the running "
+"instance."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:138
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@option:check"
+msgid "Add file to playlist"
+msgstr "Ireki jotze-zerrenda"
+
+#: src/qml/Settings/GeneralSettings.qml:154
+msgctxt "@info:tooltip"
+msgid "File will be added to the end of the playlist"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfazea"
 
-#: src/qml/Settings/GeneralSettings.qml:111
+#: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Aurreikuspegi koadro-txikia"
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:174
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Erakutsi aurreikuspegi koadro-txikia"
 
-#: src/qml/Settings/GeneralSettings.qml:128
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Erabili aurreikuspegi zehatza"
 
-#: src/qml/Settings/GeneralSettings.qml:144
+#: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Aurreikuspegi zehatz bat sortzea motela da"
 
-#: src/qml/Settings/GeneralSettings.qml:169
+#: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr "Leihoa"
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Handiera aldatu bideora egokitzeko"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1307,12 +1333,12 @@ msgstr ""
 "Leihoaren neurria bideoaren bereizmenaren arabera finkatzen da.\n"
 "Gehienezko neurria ez da mugatzen, hori sistema eragileari uzten zaio."
 
-#: src/qml/Settings/GeneralSettings.qml:204
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Gogoratu leihoaren neurria eta kokalekua"
 
-#: src/qml/Settings/GeneralSettings.qml:218
+#: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1327,38 +1353,38 @@ msgstr ""
 "\n"
 "\"Handiera aldatu bideora egokitzeko\" ezarpenak lehentasuna hartzen du.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:233
+#: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Erakutsi Menu-barra"
 
-#: src/qml/Settings/GeneralSettings.qml:244
+#: src/qml/Settings/GeneralSettings.qml:305
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Erakutsi Tresna-barra"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:316
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Erakutsi atal markatzaileak"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:325
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kolore-antolaera"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:367
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI estiloa"
 
-#: src/qml/Settings/GeneralSettings.qml:355
+#: src/qml/Settings/GeneralSettings.qml:418
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Erabili «Breeze» ikono-gaia"
 
-#: src/qml/Settings/GeneralSettings.qml:365
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
