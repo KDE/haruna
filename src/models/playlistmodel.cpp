@@ -48,16 +48,18 @@ PlayListModel::PlayListModel(QObject *parent)
 
 int PlayListModel::rowCount(const QModelIndex &parent) const
 {
-    if (parent.isValid())
+    if (parent.isValid()) {
         return 0;
+    }
 
     return m_playlist.size();
 }
 
 QVariant PlayListModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || m_playlist.empty())
+    if (!index.isValid() || m_playlist.empty()) {
         return QVariant();
+    }
 
     auto playListItem = m_playlist.at(index.row());
     switch (role) {

@@ -20,8 +20,9 @@ int TracksModel::rowCount(const QModelIndex & /*parent*/) const
 
 QVariant TracksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || m_tracks.isEmpty())
+    if (!index.isValid() || m_tracks.isEmpty()) {
         return QVariant();
+    }
 
     Track *track = m_tracks[index.row()];
 

@@ -22,8 +22,9 @@ static void *get_proc_address_mpv(void *ctx, const char *name)
     Q_UNUSED(ctx)
 
     QOpenGLContext *glctx = QOpenGLContext::currentContext();
-    if (!glctx)
+    if (!glctx) {
         return nullptr;
+    }
 
     return reinterpret_cast<void *>(glctx->getProcAddress(QByteArray(name)));
 }

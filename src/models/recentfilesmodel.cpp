@@ -25,16 +25,18 @@ RecentFilesModel::RecentFilesModel(QObject *parent)
 
 int RecentFilesModel::rowCount(const QModelIndex &parent) const
 {
-    if (parent.isValid())
+    if (parent.isValid()) {
         return 0;
+    }
 
     return m_urls.count();
 }
 
 QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return QVariant();
+    }
 
     RecentFile recentFile = m_urls.at(index.row());
 

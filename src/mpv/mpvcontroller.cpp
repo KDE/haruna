@@ -244,8 +244,9 @@ void MpvController::setNode(mpv_node *dst, const QVariant &src)
     if (test_type(src, QMetaType::QString)) {
         dst->format = MPV_FORMAT_STRING;
         dst->u.string = qstrdup(src.toString().toUtf8().data());
-        if (!dst->u.string)
+        if (!dst->u.string) {
             dst->format = MPV_FORMAT_NONE;
+        }
     } else if (test_type(src, QMetaType::Bool)) {
         dst->format = MPV_FORMAT_FLAG;
         dst->u.flag = src.toBool() ? 1 : 0;
@@ -314,10 +315,12 @@ void MpvController::free_node(mpv_node *dst)
         mpv_node_list *list = dst->u.list;
         if (list) {
             for (int n = 0; n < list->num; n++) {
-                if (list->keys)
+                if (list->keys) {
                     delete[] list->keys[n];
-                if (list->values)
+                }
+                if (list->values) {
                     free_node(&list->values[n]);
+                }
             }
             delete[] list->keys;
             delete[] list->values;
