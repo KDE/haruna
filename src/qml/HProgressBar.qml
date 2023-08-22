@@ -61,32 +61,39 @@ Slider {
             delay: 0
             contentItem: ColumnLayout {
 
-                MpvPreview {
-                    id: previewMpv
+                Loader {
+                    id: previewMpvLoader
 
-                    property double aspectRatio: 0
+                    property double position: 0
+                    property double aspectRatio: 1
 
-                    visible: previewMpv.file !== ""
-                             && previewMpv.isLocalFile
-                             && GeneralSettings.showPreviewThumbnail
-                    accuratePreview: GeneralSettings.accuratePreviewThumbnail
+                    active: GeneralSettings.showPreviewThumbnail
+                            && previewMpv.file !== ""
+                            && previewMpv.isLocalFile
+                    visible: active
+                    sourceComponent: MpvPreview {
+                        anchors.fill: parent
+                        accuratePreview: GeneralSettings.accuratePreviewThumbnail
+                        onPositionChanged: previewMpvLoader.position = position
 
-                    Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
-                    Layout.preferredHeight: Math.ceil(Layout.preferredWidth / aspectRatio)
-                    Layout.alignment: Qt.AlignCenter
-
-                    Connections {
-                        target: mpv
-                        onVideoReconfig: {
-                            let width = mpv.getProperty(MpvProperties.Width)
-                            let height = mpv.getProperty(MpvProperties.Height)
-                            let ar = width / height;
-                            previewMpv.aspectRatio = ar
-                        }
-                        onFileLoaded: {
-                            previewMpv.file = mpv.currentUrl
+                        Connections {
+                            target: mpv
+                            onVideoReconfig: {
+                                let width = mpv.getProperty(MpvProperties.Width)
+                                let height = mpv.getProperty(MpvProperties.Height)
+                                let ar = width / height;
+                                previewMpvLoader.aspectRatio = ar
+                            }
+                            onFileLoaded: {
+                                previewMpv.file = mpv.currentUrl
+                            }
                         }
                     }
+
+                    Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
+                    Layout.preferredHeight: Math.ceil(Layout.preferredWidth / previewMpvLoader.aspectRatio)
+                    Layout.alignment: Qt.AlignCenter
+
                 }
 
                 Label {
@@ -125,7 +132,7 @@ Slider {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
 
                 const time = mouseX / progressBarBG.width * root.to
-                previewMpv.position = time
+                previewMpvLoader.position = time
                 progressBarToolTip.text = app.formatTime(time)
             }
 
