@@ -7,6 +7,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
+import org.kde.kirigami 2.11 as Kirigami
+
 import org.kde.haruna 1.0
 import "Settings"
 
@@ -15,7 +17,7 @@ Item {
 
     Instantiator {
         model: actionsModel
-        delegate: Action {
+        delegate: Kirigami.Action {
             objectName: model.name
             text: model.text
             shortcut: model.shortcut

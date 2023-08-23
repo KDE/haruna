@@ -68,7 +68,13 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    header: Header { id: header }
+    header: Header {
+        id: header
+
+        onVisibleChanged: {
+            window.resizeWindow()
+        }
+    }
 
     menuBar: Loader {
         id: menuBarLoader
