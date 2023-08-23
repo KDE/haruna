@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 00:45+0000\n"
-"PO-Revision-Date: 2023-08-13 00:37+0200\n"
+"POT-Creation-Date: 2023-08-23 00:45+0000\n"
+"PO-Revision-Date: 2023-08-22 09:25+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
@@ -520,7 +520,7 @@ msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "Ponovno nastavi nasičenost"
 
-#: src/models/actionsmodel.cpp:657
+#: src/models/actionsmodel.cpp:659
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -530,13 +530,13 @@ msgstr ""
 "Izbrana tipkovna bližnjica je v sporu z dejanjem <b>%1</b>.<br><br>Ali "
 "želite predodeliti bližnjico?"
 
-#: src/models/actionsmodel.cpp:663
+#: src/models/actionsmodel.cpp:665
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Predodeli"
 
-#: src/models/playlistmodel.cpp:377
+#: src/models/playlistmodel.cpp:379
 #, kde-format
 msgctxt "@info"
 msgid "Playlist is empty"
@@ -567,112 +567,112 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/qml/Actions.qml:64 src/qml/Actions.qml:82
+#: src/qml/Actions.qml:66 src/qml/Actions.qml:84
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Zvok: %1 %2"
 
-#: src/qml/Actions.qml:133 src/qml/Actions.qml:139 src/qml/Actions.qml:144
+#: src/qml/Actions.qml:135 src/qml/Actions.qml:141 src/qml/Actions.qml:146
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Hitrost predvajanja: %1"
 
-#: src/qml/Actions.qml:221
+#: src/qml/Actions.qml:223
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Začetek zanke: %1"
 
-#: src/qml/Actions.qml:225
+#: src/qml/Actions.qml:227
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Zanka: %1 - %2"
 
-#: src/qml/Actions.qml:231
+#: src/qml/Actions.qml:233
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Odstrani zanko"
 
-#: src/qml/Actions.qml:242 src/qml/Actions.qml:248
+#: src/qml/Actions.qml:244 src/qml/Actions.qml:250
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Čas podnaslova: %1"
 
-#: src/qml/Actions.qml:253
+#: src/qml/Actions.qml:255
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Podnaslovi izključeni"
 
-#: src/qml/Actions.qml:253
+#: src/qml/Actions.qml:255
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Podnaslovi vključeni"
 
-#: src/qml/Actions.qml:262 src/qml/Actions.qml:274
+#: src/qml/Actions.qml:264 src/qml/Actions.qml:276
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Podnaslov: brez"
 
-#: src/qml/Actions.qml:266 src/qml/Actions.qml:278
+#: src/qml/Actions.qml:268 src/qml/Actions.qml:280
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Podnaslov: %1 %2"
 
-#: src/qml/Actions.qml:285 src/qml/Actions.qml:291
+#: src/qml/Actions.qml:287 src/qml/Actions.qml:293
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Merilo podnaslova: %1"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:303
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Razpletanje: %1"
 
-#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
+#: src/qml/Actions.qml:357 src/qml/Actions.qml:363
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Povečava: %1"
 
-#: src/qml/Actions.qml:366
+#: src/qml/Actions.qml:368
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Povečava: 0"
 
-#: src/qml/Actions.qml:373 src/qml/Actions.qml:379
+#: src/qml/Actions.qml:375 src/qml/Actions.qml:381
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:384
+#: src/qml/Actions.qml:386
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:390 src/qml/Actions.qml:396
+#: src/qml/Actions.qml:392 src/qml/Actions.qml:398
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Svetlost: %1"
 
-#: src/qml/Actions.qml:401
+#: src/qml/Actions.qml:403
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Svetlost: 0"
 
-#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
+#: src/qml/Actions.qml:409 src/qml/Actions.qml:415
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:418
+#: src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
+#: src/qml/Actions.qml:426 src/qml/Actions.qml:432
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Nasičenost: %1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasičenost: 0"
@@ -766,22 +766,22 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Dodaj novo mapo"
 
-#: src/qml/Header.qml:71
+#: src/qml/Header.qml:54 src/qml/Header.qml:59
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Podnaslovi"
 
-#: src/qml/Header.qml:104
+#: src/qml/Header.qml:95 src/qml/Header.qml:98
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Zvok"
 
-#: src/qml/HProgressBar.qml:237
+#: src/qml/HProgressBar.qml:244
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Preskoči poglavja"
 
-#: src/qml/HProgressBar.qml:245
+#: src/qml/HProgressBar.qml:252
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -795,18 +795,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:357 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: src/qml/main.qml:379
+#: src/qml/main.qml:385
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Izberite datoteko podnaslovov"
 
-#: src/qml/main.qml:397
+#: src/qml/main.qml:403
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Odpri"
@@ -1265,7 +1265,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Dovoli samo en pojavek"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1274,19 +1274,19 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Poskus odpiranja drugega pojavka Haruna ne bo naredil nič.\n"
+"Če s Haruno poskusite odpreti drugo datoteko, se bo datoteka odprla v "
+"tekočem pojavku."
 
 #: src/qml/Settings/GeneralSettings.qml:138
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Odpri seznam predvajanja"
+msgstr "Dodaj datoteko v seznam predvajanja"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "Datoteka bo dodana na konec seznama predvajanja"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
