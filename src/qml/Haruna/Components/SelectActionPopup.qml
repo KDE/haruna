@@ -77,7 +77,7 @@ Popup {
                         opacity: 0.7
                     }
                     reserveSpaceForIcon: false
-                    onDoubleClicked: actionSelected(model.name)
+                    onClicked: actionSelected(model.name)
                     Keys.onEnterPressed: actionSelected(model.name)
                     Keys.onReturnPressed: actionSelected(model.name)
                 }
