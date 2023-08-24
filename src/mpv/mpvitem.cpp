@@ -115,6 +115,10 @@ void MpvItem::initProperties()
     //    setProperty(QStringLiteral("terminal"), InformationSettings::mpvLogging());
     //    setProperty(QStringLiteral("msg-level"), QStringLiteral("all=v"));
 
+    // lockManager is connected to the pauseChanged signal
+    // by setting `pause` to true it ensures the signal is triggered at startup
+    setProperty(MpvProperties::self()->Pause, true);
+
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
     setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
     setProperty(MpvProperties::self()->VolumeMax, QStringLiteral("100"));
