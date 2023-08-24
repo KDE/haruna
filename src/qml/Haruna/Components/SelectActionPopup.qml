@@ -56,6 +56,7 @@ Popup {
             Layout.alignment: Qt.AlignTop
             KeyNavigation.up: actionsListView
             KeyNavigation.down: actionsListView
+            KeyNavigation.tab: actionsListView
         }
 
         ScrollView {
