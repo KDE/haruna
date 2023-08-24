@@ -82,6 +82,7 @@ SettingsBasePage {
                 highlighted: false
 
                 trailing: ToolButton {
+                    visible: MouseSettings[model.key]
                     icon.name: "edit-clear-all"
                     onClicked: {
                         MouseSettings[model.key] = ""
