@@ -64,17 +64,18 @@ Slider {
                 Loader {
                     id: previewMpvLoader
 
+                    property string file: ""
                     property double position: 0
                     property double aspectRatio: 1
 
                     active: GeneralSettings.showPreviewThumbnail
-                            && previewMpv.file !== ""
-                            && previewMpv.isLocalFile
                     visible: active
                     sourceComponent: MpvPreview {
+                        visible: isLocalFile
                         anchors.fill: parent
                         accuratePreview: GeneralSettings.accuratePreviewThumbnail
-                        onPositionChanged: previewMpvLoader.position = position
+                        position: previewMpvLoader.position
+                        file: previewMpvLoader.file
 
                         Connections {
                             target: mpv
@@ -85,7 +86,7 @@ Slider {
                                 previewMpvLoader.aspectRatio = ar
                             }
                             onFileLoaded: {
-                                previewMpv.file = mpv.currentUrl
+                                previewMpvLoader.file = mpv.currentUrl
                             }
                         }
                     }
