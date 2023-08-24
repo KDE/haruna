@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.12
 
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.haruna 1.0
-import "Menus"
+import "../../Menus"
 
 ToolButton {
     id: root
@@ -59,6 +59,12 @@ ToolButton {
             }
         }
 
+        SubtitleTracksMenu {
+            model: mpv.subtitleTracksModel
+            isPrimarySubtitleMenu: false
+            title: i18nc("@title:menu", "Secondary Subtitle")
+        }
+
         MenuSeparator {}
 
         MenuItem { action: appActions.toggleFullscreenAction }
@@ -87,6 +93,45 @@ ToolButton {
             AudioMenu {}
             SettingsMenu {}
             HelpMenu {}
+        }
+    }
+
+    SubtitleTracksMenu {
+        id: primarySubtitlesMenu
+
+        model: mpv.subtitleTracksModel
+        isPrimarySubtitleMenu: true
+        title: i18nc("@title:menu", "Primary Subtitle")
+
+        Component.onCompleted: {
+            if (root.position === HamburgerMenu.Position.Footer) {
+                menu.insertMenu(4, primarySubtitlesMenu)
+            }
+        }
+    }
+
+    Menu {
+        id: audioMenu
+
+        title: i18nc("@title:menu", "&Audio Track")
+        enabled: mpv.audioTracksModel.rowCount() > 0
+
+        Repeater {
+            id: audioMenuInstantiator
+            model: mpv.audioTracksModel
+            delegate: MenuItem {
+                id: audioMenuItem
+                checkable: true
+                checked: model.id === mpv.audioId
+                text: model.text
+                onTriggered: mpv.audioId = model.id
+            }
+        }
+
+        Component.onCompleted: {
+            if (root.position === HamburgerMenu.Position.Footer) {
+                menu.insertMenu(5, audioMenu)
+            }
         }
     }
 }
