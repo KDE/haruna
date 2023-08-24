@@ -361,35 +361,6 @@
     </release>
     <release version="0.10.3" date="2023-01-29">
       <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed last played file not being remembered sometimes.</li>
-          <li>Fixed durations longer than 24 hours not displaying correctly and messing up with chapter labels.</li>
-          <li>Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
-          <li>Fixed opening relative paths from a playlist file.</li>
-          <li>Fixed opening files containig # characters.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.10.2" date="2023-01-06">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed crash when "Maximum recent files" setting was set to zero.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.10.1" date="2023-01-05">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed not auto playing next file in playlist, when current file ends</li>
-          <li>Fixed opened file not playing when "Auto load videos from same folder" setting is disabled</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.10.0" date="2023-01-02">
-      <description>
         <p>Features:</p>
         <ul>
           <li>Playlist: added options to open m3u files (without support for extended attributes), add files and urls (only the url path will be displayed, no title and no duration), sort, clear and save the playlist</li>
@@ -407,46 +378,28 @@
           <li>Playlist: fixed "Increase font size when fullscreen" setting not working</li>
           <li>Playlist: removed rowHeight setting</li>
         </ul>
+        <p>Bugfixes 0.10.1:</p>
+        <ul>
+          <li>Fixed not auto playing next file in playlist, when current file ends</li>
+          <li>Fixed opened file not playing when "Auto load videos from same folder" setting is disabled</li>
+        </ul>
+        <p>Bugfixes 0.10.2:</p>
+        <ul>
+          <li>Fixed crash when "Maximum recent files" setting was set to zero.</li>
+        </ul>
+        <p>Bugfixes 0.10.3:</p>
+        <ul>
+          <li>Fixed last played file not being remembered sometimes.</li>
+          <li>Fixed durations longer than 24 hours not displaying correctly and messing up with chapter labels.</li>
+          <li>Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
+          <li>Fixed opening relative paths from a playlist file.</li>
+          <li>Fixed opening files containig # characters.</li>
+        </ul>
       </description>
     </release>
     <release version="0.9.3" date="2022-10-06">
       <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed playlist not loading videos from the same folder as the opened file</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.9.2" date="2022-09-30">
-      <description>
-        <p>Features:</p>
-        <ul>
-          <li>Added action to load a subtitle from a file dialog</li>
-        </ul>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Improved right to left layout</li>
-          <li>The window now scales when changing the system font size</li>
-          <li>Fixed a crash when changing the maximum recent files setting to 0</li>
-          <li>Fixed subtitles folders setting (these folders are used to search for subtitles)</li>
-          <li>Improved duration info font size scaling in footer, now its size should be closer to that of other components in the footer</li>
-          <li>Fixed an issue with determining mime types, which caused .ts video files to be treated as text files</li>
-          <li>Fixed not being able to click the add custom command button when there are no custom commands</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.9.1" date="2022-08-24">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed two broken actions in the global menu</li>
-          <li>Fixed translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.9.0" date="2022-08-17">
-      <description>
-        <p>Features:</p>
+        <p>Features 0.9.0:</p>
         <ul>
           <li>Refactored the shortcuts configuration, now it's available in the settings window with the other settings, instead of opening another window</li>
           <li>Hamburger menu now only show a few actions, the rest are available in a submenu</li>
@@ -462,12 +415,35 @@
           <li>Custom commands that run on startup can be turned off so they are not set on next run</li>
           <li>In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
         </ul>
-        <p>Bugfixes:</p>
+        <p>Features 0.9.2:</p>
+        <ul>
+          <li>Added action to load a subtitle from a file dialog</li>
+        </ul>
+        <p>Bugfixes 0.9.0:</p>
         <ul>
           <li>Toggling menubar and header/toolbar through actions remembers the state on next run</li>
           <li>Restore time position for youtube videos</li>
           <li>Improve mpv initialization to allow better hardware decoding support</li>
           <li>Ytdl-format property can be overwritten by a custom command action</li>
+        </ul>
+        <p>Bugfixes 0.9.1:</p>
+        <ul>
+          <li>Fixed two broken actions in the global menu</li>
+          <li>Fixed translations</li>
+        </ul>
+        <p>Bugfixes 0.9.2:</p>
+        <ul>
+          <li>Improved right to left layout</li>
+          <li>The window now scales when changing the system font size</li>
+          <li>Fixed a crash when changing the maximum recent files setting to 0</li>
+          <li>Fixed subtitles folders setting (these folders are used to search for subtitles)</li>
+          <li>Improved duration info font size scaling in footer, now its size should be closer to that of other components in the footer</li>
+          <li>Fixed an issue with determining mime types, which caused .ts video files to be treated as text files</li>
+          <li>Fixed not being able to click the add custom command button when there are no custom commands</li>
+        </ul>
+        <p>Bugfixes 0.9.3:</p>
+        <ul>
+          <li>Fixed playlist not loading videos from the same folder as the opened file</li>
         </ul>
       </description>
     </release>
@@ -491,131 +467,6 @@
           <li>OSD: When file can't be played show filename if there's no title</li>
           <li>Stuttering caused by slow disks</li>
           <li>Playlist items collapsing into each other</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.7.3" date="2021-11-03">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Made settings sidebar text translatable.</li>
-          <li>Moved about page inside the settings window.</li>
-          <li>Show title instead of filename in MPRIS2.</li>
-          <li>Fixed icon not showing in about page.</li>
-          <li>Fixed report bug button not working in the about page.</li>
-          <li>Added support for yt-dlp.</li>
-          <li>When last file in the playlist ends and repeat setting is disabled the file can be played again by unpausing the player.</li>
-          <li>Opening the settings window now brings the window on top of the main window even if already open.</li>
-          <li>Fixed subtitles and audio toolbuttons not properly closing their menu.</li>
-          <li>Decreased the font size of some tooltips.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.7.2" date="2021-09-26">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed settings window opening at startup.</li>
-          <li>Fixed mouse cursor hidding in settings window when main window is fullscreen.</li>
-          <li>Made mouse actions filtering case insensitive.</li>
-          <li>Fixed height of default playlist item.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.7.1" date="2021-09-13">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed crash on systems with older versions of Qt.</li>
-          <li>Fixed play/pause button being disabled when it shouldn't.</li>
-          <li>Removed quit button from toolbar.</li>
-          <li>Fixed video repeating when repeat is turned off.</li>
-          <li>Fixed settings window loading wrong pages.</li>
-          <li>Fixed settings window not showing the sidebar when system fonts where increased.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.7.0" date="2021-08-20">
-      <description>
-        <p>Features:</p>
-        <ul>
-          <li>Added custom commands. They can be used to run mpv commands, like setting properties.</li>
-          <li>Added option to toggle the opening of last played file on start up.</li>
-          <li>Added mouse scroll seeking when mouse is over the seek bar.</li>
-          <li>Added action to exit the fullscreen.</li>
-          <li>Made playback settings page more consistent with the other settings pages.</li>
-        </ul>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed playlist staying open when mouse moves to another screen while the app is in fullscreen mode.</li>
-          <li>Fixed not loading audio files from same folder when opening an audio file.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.6.3" date="2021-04-28">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed forcing breeze icons not working on Plasma, when system icon theme is not breeze.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.6.2" date="2021-04-17">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed youtube-dl format selection not working.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.6.1" date="2021-04-06">
-      <description>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Show loading indicator for online videos only.</li>
-          <li>Fixed not opening recent file from panel/task manager context menu.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.6.0" date="2021-03-30">
-      <description>
-        <p>Features:</p>
-        <ul>
-          <li>Added support for youtube playlists.</li>
-          <li>Added MPRIS2 support.</li>
-          <li>Settings open in separate window and reorganize some settings.</li>
-          <li>Playlist can overlay video or push it, Settings &gt; Playlist &gt; Overlay video.</li>
-          <li>Playlist has another, more compact style, Settings &gt; Playlist &gt; Playlist style.</li>
-          <li>When playlist toggle with mouse is disabled, a playlist toggle button will be added to the footer.</li>
-          <li>Added option to select any installed GUI style.</li>
-          <li>Added action to toggle deinterlacing (d key).</li>
-          <li>Replaced the open url controls with a message when youtube-dl is not found.</li>
-          <li>Can load ass, ssa and srt subtitles by drag and drop.</li>
-          <li>Added option to control the saving of the playing file's position, Settings &gt; Playback &gt; Remember time position (click on the help button for more information).</li>
-          <li>Changed default screenshots folder to `~/Pictures/Haruna screenshots`.</li>
-          <li>Added loading indicator for videos.</li>
-        </ul>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed playlist closing when hovering space between items.</li>
-          <li>Fixed crash when it can't read file metadata.</li>
-          <li>Fixed menubar height being to small.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.5.0" date="2021-01-11">
-      <description>
-        <p>Features:</p>
-        <ul>
-          <li>Toggle hardware decoding.</li>
-          <li>Set Breeze icon theme.</li>
-          <li>Set Breeze GUI style.</li>
-          <li>Set file dialog location.</li>
-        </ul>
-        <p>Bugfixes:</p>
-        <ul>
-          <li>Fixed 'skip chapter' setting not saving when changed from progress bar menu.</li>
-          <li>Fixed button to open config file/folder.</li>
         </ul>
       </description>
     </release>
