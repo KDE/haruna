@@ -31,7 +31,7 @@ ToolBar {
 
         HamburgerMenu {
             visible: !menuBarLoader.visible
-            position: HamburgerMenu.Position.Footer
+            position: HamburgerMenu.Position.Header
         }
 
         ToolButton {
