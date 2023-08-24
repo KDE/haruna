@@ -308,6 +308,28 @@
     </ul>
   </description>
   <releases>
+    <release version="0.12.0" date="2023-08-25">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added preview thumbnail to the progress bar, can be configured in the general settings page</li>
+          <li>Added setting to allow only a single instance, can be configured in the general settings page</li>
+          <li>Added action selection popup where you can search all available actions and trigger them (open with Ctrl+` (backtick), similar to KCommandBar)</li>
+          <li>Added setting to auto resize window to the video resolution, on Wayland the maximum size is not constrained</li>
+          <li>Added setting  to hide playlist toolbar</li>
+          <li>Added menu item for each settings page under settings menu</li>
+          <li>The screenshot path is shown in the osd when using mpv 0.36.0 or later versions</li>
+          <li>Added a "Scroll to playing item" entry to the playlist context menu</li>
+          <li>Added a "Open url" entry to the playlist context menu for online url</li>
+          <li>Hiding/showing the menubar, top toolbar and bottom toolbar is now animated</li>
+          <li>Added track selection menu entries to the hamburger menu</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed not blocking inhibition (turning the display off, sleep etc.) during playback</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.11.3" date="2023-07-12">
       <description>
         <p>Bugfixes:</p>
