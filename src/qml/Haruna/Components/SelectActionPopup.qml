@@ -26,7 +26,7 @@ Popup {
 
     onOpened: {
         actionsListView.positionViewAtBeginning()
-        filterActionsField.text = ""
+        filterActionsField.selectAll()
         filterActionsField.focus = true
     }
 
@@ -57,6 +57,12 @@ Popup {
             KeyNavigation.up: actionsListView
             KeyNavigation.down: actionsListView
             KeyNavigation.tab: actionsListView
+            Keys.onReturnPressed: {
+                actionSelected(actionsListView.currentItem.actionName)
+            }
+            Keys.onEnterPressed: {
+                actionSelected(actionsListView.currentItem.actionName)
+            }
         }
 
         ScrollView {
@@ -70,8 +76,9 @@ Popup {
                 model: proxyActionsModel
                 spacing: 1
                 clip: true
-                currentIndex: focus ? 0 : -1
                 delegate: ListItem {
+                    property string actionName: model.name
+
                     label: model.text
                     trailing: Label {
                         text: model.shortcut
