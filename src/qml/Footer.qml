@@ -96,8 +96,10 @@ ToolBar {
         LabelWithTooltip {
             id: timeInfo
 
-            text: m_mpv.formattedPosition + " / " + m_mpv.formattedDuration
-            font.pointSize: Math.round(Kirigami.Units.gridUnit * 0.7)
+            text: m_mpv.formattedPosition
+                  ? m_mpv.formattedPosition + " / " + m_mpv.formattedDuration
+                  : "00:00:00 / 00:00:00"
+            font.pointSize: Math.floor(Kirigami.Units.gridUnit * 0.6)
             toolTipText: i18nc("@info:tooltip", "Remaining: %1", m_mpv.formattedRemaining)
             alwaysShowToolTip: true
             horizontalAlignment: Qt.AlignHCenter
