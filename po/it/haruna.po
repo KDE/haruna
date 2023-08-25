@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-23 00:45+0000\n"
-"PO-Revision-Date: 2023-08-05 10:25+0200\n"
+"POT-Creation-Date: 2023-08-25 00:45+0000\n"
+"PO-Revision-Date: 2023-08-14 21:13+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -543,143 +543,137 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "La scaletta è vuota"
 
-#: src/mpv/mpvitem.cpp:389
+#: src/mpv/mpvitem.cpp:393
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nessuno"
 
-#: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#: src/mpv/mpvitem.cpp:463
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Schermata"
+msgstr "Schermata scattata"
 
-#: src/mpv/mpvitem.cpp:461
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#: src/mpv/mpvitem.cpp:465
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Schermata"
+msgstr "Schermata: %1"
 
-#: src/mpv/mpvitem.cpp:487
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#: src/mpv/mpvitem.cpp:491
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Capitolo saltato: %1"
 
-#: src/qml/Actions.qml:66 src/qml/Actions.qml:84
+#: src/qml/Actions.qml:64 src/qml/Actions.qml:82
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
-#: src/qml/Actions.qml:135 src/qml/Actions.qml:141 src/qml/Actions.qml:146
+#: src/qml/Actions.qml:133 src/qml/Actions.qml:139 src/qml/Actions.qml:144
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocità riproduzione: %1"
 
-#: src/qml/Actions.qml:223
+#: src/qml/Actions.qml:221
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Avvio ciclo: %1"
 
-#: src/qml/Actions.qml:227
+#: src/qml/Actions.qml:225
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Ciclo: %1 - %2"
 
-#: src/qml/Actions.qml:233
+#: src/qml/Actions.qml:231
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Ciclo azzerato"
 
-#: src/qml/Actions.qml:244 src/qml/Actions.qml:250
+#: src/qml/Actions.qml:242 src/qml/Actions.qml:248
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Tempo dei sottotitoli: %1"
 
-#: src/qml/Actions.qml:255
+#: src/qml/Actions.qml:253
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Sottotitoli disattivi"
 
-#: src/qml/Actions.qml:255
+#: src/qml/Actions.qml:253
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Sottotitoli attivi"
 
-#: src/qml/Actions.qml:264 src/qml/Actions.qml:276
+#: src/qml/Actions.qml:262 src/qml/Actions.qml:274
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Sottotitolo: nessuno"
 
-#: src/qml/Actions.qml:268 src/qml/Actions.qml:280
+#: src/qml/Actions.qml:266 src/qml/Actions.qml:278
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Sottotitolo: %1 %2"
 
-#: src/qml/Actions.qml:287 src/qml/Actions.qml:293
+#: src/qml/Actions.qml:285 src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Ridimensionamento sottotitoli: %1"
 
-#: src/qml/Actions.qml:303
+#: src/qml/Actions.qml:301
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Deinterlacciamento: %1"
 
-#: src/qml/Actions.qml:357 src/qml/Actions.qml:363
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Ingrandimento: %1"
 
-#: src/qml/Actions.qml:368
+#: src/qml/Actions.qml:366
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Ingrandimento: 0"
 
-#: src/qml/Actions.qml:375 src/qml/Actions.qml:381
+#: src/qml/Actions.qml:373 src/qml/Actions.qml:379
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrasto: %1"
 
-#: src/qml/Actions.qml:386
+#: src/qml/Actions.qml:384
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrasto: 0"
 
-#: src/qml/Actions.qml:392 src/qml/Actions.qml:398
+#: src/qml/Actions.qml:390 src/qml/Actions.qml:396
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Luminosità: %1"
 
-#: src/qml/Actions.qml:403
+#: src/qml/Actions.qml:401
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Luminosità: 0"
 
-#: src/qml/Actions.qml:409 src/qml/Actions.qml:415
+#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:420
+#: src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:426 src/qml/Actions.qml:432
+#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturazione: %1"
 
-#: src/qml/Actions.qml:437
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturazione: 0"
@@ -704,25 +698,47 @@ msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Riproduci file successivo"
 
-#: src/qml/Footer.qml:101
+#: src/qml/Footer.qml:103
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Rimanente: %1"
-
-#: src/qml/HamburgerMenu.qml:51
-msgctxt "@action:inmenu"
-msgid "Recent Files"
-msgstr "File recenti"
-
-#: src/qml/HamburgerMenu.qml:80
-msgctxt "@action:inmenu"
-msgid "&More"
-msgstr "&Altro"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:40
 msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Seleziona un colore"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:51
+msgctxt "@action:inmenu"
+msgid "Recent Files"
+msgstr "File recenti"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:65
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
+#: src/qml/Menus/SubtitlesMenu.qml:27
+msgctxt "@title:menu"
+msgid "Secondary Subtitle"
+msgstr "Sottotitolo secondario"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:86
+msgctxt "@action:inmenu"
+msgid "&More"
+msgstr "&Altro"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:104
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
+#: src/qml/Menus/SubtitlesMenu.qml:21
+msgctxt "@title:menu"
+msgid "Primary Subtitle"
+msgstr "Sottotitolo primario"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:116
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "&Audio"
+msgctxt "@title:menu"
+msgid "&Audio Track"
+msgstr "&Audio"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -773,22 +789,22 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Aggiungi nuova cartella"
 
-#: src/qml/Header.qml:54 src/qml/Header.qml:59
+#: src/qml/Header.qml:72
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Sottotitoli"
 
-#: src/qml/Header.qml:95 src/qml/Header.qml:98
+#: src/qml/Header.qml:105
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:244
+#: src/qml/HProgressBar.qml:245
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Salta capitoli"
 
-#: src/qml/HProgressBar.qml:252
+#: src/qml/HProgressBar.qml:253
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -802,18 +818,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:357 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleziona file"
 
-#: src/qml/main.qml:385
+#: src/qml/main.qml:379
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleziona file dei sottotitoli"
 
-#: src/qml/main.qml:403
+#: src/qml/main.qml:397
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Apri"
@@ -938,22 +954,10 @@ msgid "About"
 msgstr "Informazioni su"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
-#: src/qml/Menus/SubtitlesMenu.qml:14
+#: src/qml/Menus/SubtitlesMenu.qml:16
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "&Sottotitoli"
-
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
-#: src/qml/Menus/SubtitlesMenu.qml:19
-msgctxt "@title:menu"
-msgid "Primary Subtitle"
-msgstr "Sottotitolo primario"
-
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
-#: src/qml/Menus/SubtitlesMenu.qml:39
-msgctxt "@title:menu"
-msgid "Secondary Subtitle"
-msgstr "Sottotitolo secondario"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
 msgctxt "@title:menu"
@@ -1066,9 +1070,6 @@ msgid "Open containing folder"
 msgstr "Apri cartella contenente"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
 msgstr "Apri URL"
@@ -1099,12 +1100,9 @@ msgid "Trash file"
 msgstr "Cestina file"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "Avvia la riproduzione"
+msgstr "Scorri all'elemento in riproduzione"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1411,12 +1409,12 @@ msgctxt "@label"
 msgid "No action set"
 msgstr "Nessuna azione impostata"
 
-#: src/qml/Settings/MouseSettings.qml:92
+#: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr "Pulisci azione"
 
-#: src/qml/Settings/MouseSettings.qml:126
+#: src/qml/Settings/MouseSettings.qml:127
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Doppio clic per impostare l'azione"
