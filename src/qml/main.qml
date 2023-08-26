@@ -210,6 +210,26 @@ Kirigami.ApplicationWindow {
 
         active: true
         source: app.qtMajorVersion() === 6 ? "PlayListQt6.qml" : "PlayList.qml"
+        onStatusChanged: {
+            // hack to allow mpv to be anchored to the loader's item
+            // otherwise mpv is not resized when PlaylistSettings.overlayVideo is disabled
+            if (status === Loader.Ready) {
+                item.parent = window.contentItem
+
+                mpv.anchors.left = Qt.binding(
+                            () => {
+                                return (PlaylistSettings.overlayVideo
+                                ? window.contentItem.left
+                                : (PlaylistSettings.position === "left" ? playList.right : window.contentItem.left))
+                            })
+                mpv.anchors.right = Qt.binding(
+                            () => {
+                                return (PlaylistSettings.overlayVideo
+                                ? window.contentItem.right
+                                : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right))
+                            })
+            }
+        }
     }
 
     Footer {
