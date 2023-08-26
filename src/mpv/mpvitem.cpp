@@ -151,8 +151,7 @@ void MpvItem::initProperties()
 
     const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
     setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? QStringLiteral("auto") : preferredSubTrack);
-    setProperty(MpvProperties::self()->SubtitleLanguage,
-                SubtitlesSettings::preferredLanguage().remove(QStringLiteral(" "));
+    setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(QStringLiteral(" ")));
     setProperty(MpvProperties::self()->SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(QStringLiteral(":")));
 }
 
