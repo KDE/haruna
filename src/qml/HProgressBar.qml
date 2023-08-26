@@ -98,8 +98,9 @@ Slider {
                 }
 
                 Label {
-                    Layout.alignment: Qt.AlignCenter
                     text: progressBarToolTip.text
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Tooltip
+                    Layout.alignment: Qt.AlignCenter
                 }
             }
 
