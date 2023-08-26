@@ -18,6 +18,7 @@ LockManager::LockManager(QObject *parent)
                                                      QStringLiteral("/org/freedesktop/ScreenSaver"),
                                                      QDBusConnection::sessionBus(),
                                                      this);
+    setInhibitionOn();
 }
 
 void LockManager::setInhibitionOff()
