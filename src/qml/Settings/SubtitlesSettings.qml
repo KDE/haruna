@@ -49,10 +49,9 @@ SettingsBasePage {
             }
 
             function save() {
-                const textNoSpaces = text.replace(/\s+/g, '')
-                SubtitlesSettings.preferredLanguage = textNoSpaces
+                SubtitlesSettings.preferredLanguage = text
                 SubtitlesSettings.save()
-                mpv.setProperty(MpvProperties.SubtitleLanguage, textNoSpaces)
+                mpv.setProperty(MpvProperties.SubtitleLanguage, text.replace(/\s+/g, ''))
             }
         }
 

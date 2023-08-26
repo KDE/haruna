@@ -147,11 +147,12 @@ void MpvItem::initProperties()
     setProperty(MpvProperties::self()->AudioClientName, QStringLiteral("haruna"));
     const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
     setProperty(MpvProperties::self()->AudioId, preferredAudioTrack == 0 ? QStringLiteral("auto") : preferredAudioTrack);
-    setProperty(MpvProperties::self()->AudioLanguage, AudioSettings::preferredLanguage());
+    setProperty(MpvProperties::self()->AudioLanguage, AudioSettings::preferredLanguage().remove(QStringLiteral(" ")));
 
     const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
     setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? QStringLiteral("auto") : preferredSubTrack);
-    setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage());
+    setProperty(MpvProperties::self()->SubtitleLanguage,
+                SubtitlesSettings::preferredLanguage().remove(QStringLiteral(" "));
     setProperty(MpvProperties::self()->SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(QStringLiteral(":")));
 }
 

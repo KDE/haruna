@@ -42,10 +42,9 @@ SettingsBasePage {
             }
 
             function save() {
-                const textNoSpaces = text.replace(/\s+/g, '')
-                AudioSettings.preferredLanguage = textNoSpaces
+                AudioSettings.preferredLanguage = text
                 AudioSettings.save()
-                mpv.setProperty(MpvProperties.AudioLanguage, textNoSpaces)
+                mpv.setProperty(MpvProperties.AudioLanguage, text.replace(/\s+/g, ''))
             }
         }
 
