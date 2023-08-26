@@ -39,7 +39,7 @@ SettingsBasePage {
             id: preferredLanguage
 
             text: SubtitlesSettings.preferredLanguage
-            placeholderText: i18nc("placeholder text", "eng,ger etc.")
+            placeholderText: i18nc("placeholder text", "eng, ger etc.")
             Layout.fillWidth: true
             onEditingFinished: save()
 
@@ -48,14 +48,11 @@ SettingsBasePage {
                 onSave: preferredLanguage.save()
             }
 
-            ToolTip {
-                text: i18nc("@info:tooltip", "Do not use spaces.")
-            }
-
             function save() {
-                SubtitlesSettings.preferredLanguage = text
+                const textNoSpaces = text.replace(/\s+/g, '')
+                SubtitlesSettings.preferredLanguage = textNoSpaces
                 SubtitlesSettings.save()
-                mpv.setProperty(MpvProperties.SubtitleLanguage, text)
+                mpv.setProperty(MpvProperties.SubtitleLanguage, textNoSpaces)
             }
         }
 

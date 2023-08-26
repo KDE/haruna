@@ -32,7 +32,7 @@ SettingsBasePage {
             id: preferredLanguage
 
             text: AudioSettings.preferredLanguage
-            placeholderText: i18nc("placeholder text", "eng,ger etc.")
+            placeholderText: i18nc("placeholder text", "eng, ger etc.")
             Layout.fillWidth: true
             onEditingFinished: save()
 
@@ -41,14 +41,11 @@ SettingsBasePage {
                 onSave: preferredLanguage.save()
             }
 
-            ToolTip {
-                text: i18nc("@info:tooltip", "Do not use spaces.")
-            }
-
             function save() {
-                AudioSettings.preferredLanguage = text
+                const textNoSpaces = text.replace(/\s+/g, '')
+                AudioSettings.preferredLanguage = textNoSpaces
                 AudioSettings.save()
-                mpv.setProperty(MpvProperties.AudioLanguage, text)
+                mpv.setProperty(MpvProperties.AudioLanguage, textNoSpaces)
             }
         }
 
