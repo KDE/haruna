@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-25 00:45+0000\n"
-"PO-Revision-Date: 2023-08-06 23:17+0200\n"
+"PO-Revision-Date: 2023-08-25 23:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -551,24 +551,19 @@ msgid "None"
 msgstr "없음"
 
 #: src/mpv/mpvitem.cpp:463
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "스크린샷"
+msgstr "스크린샷 찍음"
 
 #: src/mpv/mpvitem.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "스크린샷"
+msgstr "스크린샷: %1"
 
 #: src/mpv/mpvitem.cpp:491
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
@@ -738,12 +733,9 @@ msgid "Primary Subtitle"
 msgstr "주 자막"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "오디오(&A)"
+msgstr "오디오 트랙(&A)"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -1075,9 +1067,6 @@ msgid "Open containing folder"
 msgstr "포함하는 폴더 열기"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
 msgstr "URL 열기"
@@ -1108,12 +1097,9 @@ msgid "Trash file"
 msgstr "파일을 휴지통으로 이동"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "재생 시작"
+msgstr "현재 재생 중인 항목으로 스크롤"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1286,7 +1272,7 @@ msgstr "저장할 최근 파일 개수입니다. 0을 입력하면 비활성화�
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "인스턴스 한 개만 허용"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1295,19 +1281,18 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"다른 Haruna 인스턴스를 열려고 할 때 아무것도 일어나지 않습니다.\n"
+"Haruna로 다른 파일을 열려고 할 때 현재 실행 중인 인스턴스에서 파일을 엽니다."
 
 #: src/qml/Settings/GeneralSettings.qml:138
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "재생 목록 열기"
+msgstr "재생 목록에 파일 추가"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "파일을 재생 목록의 맨 끝에 추가합니다"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"

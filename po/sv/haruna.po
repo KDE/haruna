@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-25 00:45+0000\n"
-"PO-Revision-Date: 2023-08-10 09:45+0200\n"
+"PO-Revision-Date: 2023-08-25 18:03+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -729,12 +729,9 @@ msgid "Primary Subtitle"
 msgstr "Primär textning"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "&Ljud"
+msgstr "&Ljudspår"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -1271,7 +1268,7 @@ msgstr "Hur många senaste filer att lagra. Ange 0 (noll) för att inaktivera."
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Tillåt bara en instans"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1280,19 +1277,18 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Försök att starta en annan instans av Haruna gör ingenting.\n"
+"Försök att öppna en annan fil med Haruna öppnar filen i instansen som kör."
 
 #: src/qml/Settings/GeneralSettings.qml:138
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Öppna spellista"
+msgstr "Lägg till fil i spellista"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "Filen läggs till sist i spellistan"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
