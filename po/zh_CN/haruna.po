@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-25 00:45+0000\n"
+"POT-Creation-Date: 2023-08-27 00:45+0000\n"
 "PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -81,7 +81,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:30
+#: src/lockmanager.cpp:31
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -542,14 +542,14 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "播放列表为空"
 
-#: src/mpv/mpvitem.cpp:393
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:459
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -557,7 +557,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:461
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -565,7 +565,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "截图"
 
-#: src/mpv/mpvitem.cpp:491
+#: src/mpv/mpvitem.cpp:487
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -804,12 +804,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "音频"
 
-#: src/qml/HProgressBar.qml:245
+#: src/qml/HProgressBar.qml:246
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "跳过章节"
 
-#: src/qml/HProgressBar.qml:253
+#: src/qml/HProgressBar.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -823,18 +823,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:371 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "选择文件"
 
-#: src/qml/main.qml:379
+#: src/qml/main.qml:399
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "选择字幕文件"
 
-#: src/qml/main.qml:397
+#: src/qml/main.qml:417
 msgctxt "@action:button"
 msgid "Open"
 msgstr "打开"
@@ -1156,23 +1156,20 @@ msgstr "首选语言"
 
 #: src/qml/Settings/AudioSettings.qml:35
 #: src/qml/Settings/SubtitlesSettings.qml:42
+#, fuzzy
+#| msgctxt "placeholder text"
+#| msgid "eng,ger etc."
 msgctxt "placeholder text"
-msgid "eng,ger etc."
+msgid "eng, ger etc."
 msgstr "eng,ger 等。"
 
-#: src/qml/Settings/AudioSettings.qml:45
-#: src/qml/Settings/SubtitlesSettings.qml:52
-msgctxt "@info:tooltip"
-msgid "Do not use spaces."
-msgstr "不要填写空格。"
-
-#: src/qml/Settings/AudioSettings.qml:56
-#: src/qml/Settings/SubtitlesSettings.qml:63
+#: src/qml/Settings/AudioSettings.qml:52
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "首选音轨"
 
-#: src/qml/Settings/AudioSettings.qml:79
+#: src/qml/Settings/AudioSettings.qml:75
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "音量调整步长"
@@ -1747,12 +1744,12 @@ msgctxt "@title:window"
 msgid "Help"
 msgstr "帮助"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "允许在视频黑边中显示字幕"
 
-#: src/qml/Settings/SubtitlesSettings.qml:95
+#: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1760,70 +1757,70 @@ msgid ""
 msgstr ""
 "勾选后，字幕可以在视频外面的黑边中显示。并不是所有 .ass 字幕都支持此模式。"
 
-#: src/qml/Settings/SubtitlesSettings.qml:100
+#: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
 msgid "Styling"
 msgstr "字幕样式"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "字体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:138
+#: src/qml/Settings/SubtitlesSettings.qml:134
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "字体大小"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@label"
 msgid "Font style"
 msgstr "字体风格"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "粗体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:171
+#: src/qml/Settings/SubtitlesSettings.qml:167
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "斜体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:181
+#: src/qml/Settings/SubtitlesSettings.qml:177
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "字体颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:228
-#: src/qml/Settings/SubtitlesSettings.qml:280
-#: src/qml/Settings/SubtitlesSettings.qml:353
+#: src/qml/Settings/SubtitlesSettings.qml:224
+#: src/qml/Settings/SubtitlesSettings.qml:276
+#: src/qml/Settings/SubtitlesSettings.qml:349
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "设置为默认值"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:230
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "阴影颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:286
+#: src/qml/Settings/SubtitlesSettings.qml:282
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "阴影偏移"
 
-#: src/qml/Settings/SubtitlesSettings.qml:302
-#: src/qml/Settings/SubtitlesSettings.qml:375
+#: src/qml/Settings/SubtitlesSettings.qml:298
+#: src/qml/Settings/SubtitlesSettings.qml:371
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "设置为 0 以禁用。"
 
-#: src/qml/Settings/SubtitlesSettings.qml:307
+#: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "边框颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:359
+#: src/qml/Settings/SubtitlesSettings.qml:355
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "边框宽度"
@@ -1891,3 +1888,7 @@ msgstr "饱和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键点击滑块可以重置"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Do not use spaces."
+#~ msgstr "不要填写空格。"

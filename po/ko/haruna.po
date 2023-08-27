@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-25 00:45+0000\n"
+"POT-Creation-Date: 2023-08-27 00:45+0000\n"
 "PO-Revision-Date: 2023-08-25 23:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -79,7 +79,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:30
+#: src/lockmanager.cpp:31
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -543,26 +543,26 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "재생 목록이 비어 있음"
 
-#: src/mpv/mpvitem.cpp:393
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:459
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:461
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:491
+#: src/mpv/mpvitem.cpp:487
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -796,12 +796,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:245
+#: src/qml/HProgressBar.qml:246
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:253
+#: src/qml/HProgressBar.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -815,18 +815,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:371 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: src/qml/main.qml:379
+#: src/qml/main.qml:399
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "자막 파일 선택"
 
-#: src/qml/main.qml:397
+#: src/qml/main.qml:417
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
@@ -1109,23 +1109,20 @@ msgstr "선호하는 언어"
 
 #: src/qml/Settings/AudioSettings.qml:35
 #: src/qml/Settings/SubtitlesSettings.qml:42
+#, fuzzy
+#| msgctxt "placeholder text"
+#| msgid "eng,ger etc."
 msgctxt "placeholder text"
-msgid "eng,ger etc."
+msgid "eng, ger etc."
 msgstr "eng,kor 등."
 
-#: src/qml/Settings/AudioSettings.qml:45
-#: src/qml/Settings/SubtitlesSettings.qml:52
-msgctxt "@info:tooltip"
-msgid "Do not use spaces."
-msgstr "공백을 사용하지 마십시오."
-
-#: src/qml/Settings/AudioSettings.qml:56
-#: src/qml/Settings/SubtitlesSettings.qml:63
+#: src/qml/Settings/AudioSettings.qml:52
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "선호하는 트랙"
 
-#: src/qml/Settings/AudioSettings.qml:79
+#: src/qml/Settings/AudioSettings.qml:75
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "음량 단계"
@@ -1697,12 +1694,12 @@ msgctxt "@title:window"
 msgid "Help"
 msgstr "도움말"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "검은 테두리로 둘러싼 자막 표시 허용"
 
-#: src/qml/Settings/SubtitlesSettings.qml:95
+#: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1711,70 +1708,70 @@ msgstr ""
 "이 옵션을 사용하면 자막이 동영상 바깥쪽 검은 테두리에 표시될 수 있습니다. 일"
 "부 .ass 자막에서는 작동하지 않을 수도 있습니다."
 
-#: src/qml/Settings/SubtitlesSettings.qml:100
+#: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
 msgid "Styling"
 msgstr "스타일"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "글꼴 종류"
 
-#: src/qml/Settings/SubtitlesSettings.qml:138
+#: src/qml/Settings/SubtitlesSettings.qml:134
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "글꼴 크기"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@label"
 msgid "Font style"
 msgstr "글꼴 스타일"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "굵게"
 
-#: src/qml/Settings/SubtitlesSettings.qml:171
+#: src/qml/Settings/SubtitlesSettings.qml:167
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "이탤릭"
 
-#: src/qml/Settings/SubtitlesSettings.qml:181
+#: src/qml/Settings/SubtitlesSettings.qml:177
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "글자색"
 
-#: src/qml/Settings/SubtitlesSettings.qml:228
-#: src/qml/Settings/SubtitlesSettings.qml:280
-#: src/qml/Settings/SubtitlesSettings.qml:353
+#: src/qml/Settings/SubtitlesSettings.qml:224
+#: src/qml/Settings/SubtitlesSettings.qml:276
+#: src/qml/Settings/SubtitlesSettings.qml:349
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "기본값 설정"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:230
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "그림자 색상"
 
-#: src/qml/Settings/SubtitlesSettings.qml:286
+#: src/qml/Settings/SubtitlesSettings.qml:282
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "그림자 오프셋"
 
-#: src/qml/Settings/SubtitlesSettings.qml:302
-#: src/qml/Settings/SubtitlesSettings.qml:375
+#: src/qml/Settings/SubtitlesSettings.qml:298
+#: src/qml/Settings/SubtitlesSettings.qml:371
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "0으로 설정하면 비활성화합니다."
 
-#: src/qml/Settings/SubtitlesSettings.qml:307
+#: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "테두리 색상"
 
-#: src/qml/Settings/SubtitlesSettings.qml:359
+#: src/qml/Settings/SubtitlesSettings.qml:355
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "경계선 두께"
@@ -1842,6 +1839,10 @@ msgstr "채도"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Do not use spaces."
+#~ msgstr "공백을 사용하지 마십시오."
 
 #, fuzzy
 #~| msgid "Video pan y up"

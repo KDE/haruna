@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-25 00:45+0000\n"
-"PO-Revision-Date: 2023-08-23 06:56+0200\n"
+"POT-Creation-Date: 2023-08-27 00:45+0000\n"
+"PO-Revision-Date: 2023-08-26 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -80,7 +80,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:30
+#: src/lockmanager.cpp:31
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -540,26 +540,26 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "დასაკრავი სია ცარიელია"
 
-#: src/mpv/mpvitem.cpp:393
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "არაფერი"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:459
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "ეკრანის ანაბეჭდი აღებულია"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:461
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "ეკრანის ანაბეჭდი: %1"
 
-#: src/mpv/mpvitem.cpp:491
+#: src/mpv/mpvitem.cpp:487
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -730,12 +730,9 @@ msgid "Primary Subtitle"
 msgstr "ძირითადი სუბტიტრები"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "&აუდიო"
+msgstr "&აუდიობილიკი"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -796,12 +793,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "აუდიო"
 
-#: src/qml/HProgressBar.qml:245
+#: src/qml/HProgressBar.qml:246
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "თავების გამოტოვება"
 
-#: src/qml/HProgressBar.qml:253
+#: src/qml/HProgressBar.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -816,18 +813,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:371 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
 
-#: src/qml/main.qml:379
+#: src/qml/main.qml:399
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "აირჩიეთ სუბტიტრების ფაილი"
 
-#: src/qml/main.qml:397
+#: src/qml/main.qml:417
 msgctxt "@action:button"
 msgid "Open"
 msgstr "გახსნა"
@@ -1110,23 +1107,20 @@ msgstr "სასურველი ენა"
 
 #: src/qml/Settings/AudioSettings.qml:35
 #: src/qml/Settings/SubtitlesSettings.qml:42
+#, fuzzy
+#| msgctxt "placeholder text"
+#| msgid "eng,ger etc."
 msgctxt "placeholder text"
-msgid "eng,ger etc."
+msgid "eng, ger etc."
 msgstr "eng, ger და ა.შ."
 
-#: src/qml/Settings/AudioSettings.qml:45
-#: src/qml/Settings/SubtitlesSettings.qml:52
-msgctxt "@info:tooltip"
-msgid "Do not use spaces."
-msgstr "გამოტოვებების გამოყენების გარეშე."
-
-#: src/qml/Settings/AudioSettings.qml:56
-#: src/qml/Settings/SubtitlesSettings.qml:63
+#: src/qml/Settings/AudioSettings.qml:52
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "სასურველი ტრეკი"
 
-#: src/qml/Settings/AudioSettings.qml:79
+#: src/qml/Settings/AudioSettings.qml:75
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "ხმის ბიჯი"
@@ -1710,12 +1704,12 @@ msgctxt "@title:window"
 msgid "Help"
 msgstr "დახმარება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "სუბტიტრების შავ საზღვრებში დაშვება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:95
+#: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1724,70 +1718,70 @@ msgstr ""
 "თუ ჩართულია, სუბტიტრების რენდერი ვიდეოს გარეთაც შეიძლება მოხდეს, შავ "
 "საზღვრებში. შეიძლება ყველა .ass სუბტიტრზე არ იმუშაოს."
 
-#: src/qml/Settings/SubtitlesSettings.qml:100
+#: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
 msgid "Styling"
 msgstr "სტლი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "ფონტების ოჯახი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:138
+#: src/qml/Settings/SubtitlesSettings.qml:134
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "ფონტის ზომა"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@label"
 msgid "Font style"
 msgstr "ფონტის სტილი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "გასქელება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:171
+#: src/qml/Settings/SubtitlesSettings.qml:167
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "დახრილი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:181
+#: src/qml/Settings/SubtitlesSettings.qml:177
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "ფონტის ფერი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:228
-#: src/qml/Settings/SubtitlesSettings.qml:280
-#: src/qml/Settings/SubtitlesSettings.qml:353
+#: src/qml/Settings/SubtitlesSettings.qml:224
+#: src/qml/Settings/SubtitlesSettings.qml:276
+#: src/qml/Settings/SubtitlesSettings.qml:349
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "ნაგულისხმები მნიშვნელობის დაყენება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:230
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "ჩრდილის ფერი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:286
+#: src/qml/Settings/SubtitlesSettings.qml:282
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "ჩრდილის წანაცვლება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:302
-#: src/qml/Settings/SubtitlesSettings.qml:375
+#: src/qml/Settings/SubtitlesSettings.qml:298
+#: src/qml/Settings/SubtitlesSettings.qml:371
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "გამოსართავად დააყენეთ მნიშვნელობა 0."
 
-#: src/qml/Settings/SubtitlesSettings.qml:307
+#: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "საზღვრის ფერი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:359
+#: src/qml/Settings/SubtitlesSettings.qml:355
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "საზღვრის სიგანე"
@@ -1855,6 +1849,10 @@ msgstr "გაჯერებულობა"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "შუა-წკაპი სლაიდერების გასანულებლად"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Do not use spaces."
+#~ msgstr "გამოტოვებების გამოყენების გარეშე."
 
 #~ msgctxt "@action"
 #~ msgid "Video pan y up"

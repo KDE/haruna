@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-25 00:45+0000\n"
+"POT-Creation-Date: 2023-08-27 00:45+0000\n"
 "PO-Revision-Date: 2022-11-17 16:07+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -88,7 +88,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:30
+#: src/lockmanager.cpp:31
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Play next file"
@@ -568,21 +568,21 @@ msgctxt "@info"
 msgid "Playlist is empty"
 msgstr "Список воспроизведения пуст"
 
-#: src/mpv/mpvitem.cpp:393
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:459
 #, fuzzy, kde-format
 #| msgid "Screenshot template"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Шаблон снимка экрана"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:461
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -590,7 +590,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Снимок экрана"
 
-#: src/mpv/mpvitem.cpp:491
+#: src/mpv/mpvitem.cpp:487
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -827,12 +827,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Аудио"
 
-#: src/qml/HProgressBar.qml:245
+#: src/qml/HProgressBar.qml:246
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Пропустить разделы"
 
-#: src/qml/HProgressBar.qml:253
+#: src/qml/HProgressBar.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -844,18 +844,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:351 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
+#: src/qml/main.qml:371 src/qml/PlayList.qml:333 src/qml/PlayListQt6.qml:312
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Выберите файл"
 
-#: src/qml/main.qml:379
+#: src/qml/main.qml:399
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Выбор файла субтитров"
 
-#: src/qml/main.qml:397
+#: src/qml/main.qml:417
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Открыть"
@@ -1204,23 +1204,20 @@ msgstr "Предпочитаемый язык"
 
 #: src/qml/Settings/AudioSettings.qml:35
 #: src/qml/Settings/SubtitlesSettings.qml:42
+#, fuzzy
+#| msgctxt "placeholder text"
+#| msgid "eng,ger etc."
 msgctxt "placeholder text"
-msgid "eng,ger etc."
+msgid "eng, ger etc."
 msgstr "eng,ger и т.д."
 
-#: src/qml/Settings/AudioSettings.qml:45
-#: src/qml/Settings/SubtitlesSettings.qml:52
-msgctxt "@info:tooltip"
-msgid "Do not use spaces."
-msgstr "Не использовать пробелы."
-
-#: src/qml/Settings/AudioSettings.qml:56
-#: src/qml/Settings/SubtitlesSettings.qml:63
+#: src/qml/Settings/AudioSettings.qml:52
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Предпочитаемая дорожка"
 
-#: src/qml/Settings/AudioSettings.qml:79
+#: src/qml/Settings/AudioSettings.qml:75
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Шаг изменения громкости"
@@ -1832,82 +1829,82 @@ msgctxt "@title:window"
 msgid "Help"
 msgstr "Справка"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:95
+#: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:100
+#: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
 msgid "Styling"
 msgstr "Стиль"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Гарнитура шрифта"
 
-#: src/qml/Settings/SubtitlesSettings.qml:138
+#: src/qml/Settings/SubtitlesSettings.qml:134
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Размер шрифта"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@label"
 msgid "Font style"
 msgstr "Начертание"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Полужирный"
 
-#: src/qml/Settings/SubtitlesSettings.qml:171
+#: src/qml/Settings/SubtitlesSettings.qml:167
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Курсив"
 
-#: src/qml/Settings/SubtitlesSettings.qml:181
+#: src/qml/Settings/SubtitlesSettings.qml:177
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Цвет шрифта"
 
-#: src/qml/Settings/SubtitlesSettings.qml:228
-#: src/qml/Settings/SubtitlesSettings.qml:280
-#: src/qml/Settings/SubtitlesSettings.qml:353
+#: src/qml/Settings/SubtitlesSettings.qml:224
+#: src/qml/Settings/SubtitlesSettings.qml:276
+#: src/qml/Settings/SubtitlesSettings.qml:349
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Значение по умолчанию"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:230
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Цвет тени"
 
-#: src/qml/Settings/SubtitlesSettings.qml:286
+#: src/qml/Settings/SubtitlesSettings.qml:282
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Цвет смещения"
 
-#: src/qml/Settings/SubtitlesSettings.qml:302
-#: src/qml/Settings/SubtitlesSettings.qml:375
+#: src/qml/Settings/SubtitlesSettings.qml:298
+#: src/qml/Settings/SubtitlesSettings.qml:371
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Укажите 0 (ноль) для выключения."
 
-#: src/qml/Settings/SubtitlesSettings.qml:307
+#: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Цвет границы"
 
-#: src/qml/Settings/SubtitlesSettings.qml:359
+#: src/qml/Settings/SubtitlesSettings.qml:355
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Ширина границы"
@@ -1976,6 +1973,10 @@ msgstr "Насыщенность"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Щелчок средней кнопкой мыши по ползункам для сброса"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Do not use spaces."
+#~ msgstr "Не использовать пробелы."
 
 #~ msgctxt "@action"
 #~ msgid "Video pan y up"
