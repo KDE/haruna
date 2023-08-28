@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-27 00:45+0000\n"
-"PO-Revision-Date: 2023-08-02 12:41\n"
+"PO-Revision-Date: 2023-08-27 03:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -88,12 +88,10 @@ msgid "Playing media file"
 msgstr "正在播放媒体文件"
 
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "打开配置文件"
+msgstr "打开操作对话框"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -550,25 +548,19 @@ msgid "None"
 msgstr "无"
 
 #: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "截图"
+msgstr "截图已保存"
 
 #: src/mpv/mpvitem.cpp:461
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "截图"
+msgstr "截图：%1"
 
 #: src/mpv/mpvitem.cpp:487
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "跳过的章节：%1"
@@ -738,12 +730,9 @@ msgid "Primary Subtitle"
 msgstr "主字幕"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "音频(&A)"
+msgstr "音轨(&A)"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -894,99 +883,66 @@ msgstr "设置(&S)"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "常规"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "播放"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "视频"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "音频"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "字幕"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "播放列表"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:68
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "鼠标"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "快捷键"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "自定义命令"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
 #: src/qml/Menus/SettingsMenu.qml:92
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "调试"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "关于"
@@ -1108,9 +1064,6 @@ msgid "Open containing folder"
 msgstr "打开所在文件夹"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
 msgstr "打开 URL"
@@ -1141,12 +1094,9 @@ msgid "Trash file"
 msgstr "移动到回收站"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "自动开始播放"
+msgstr "滚动到正在播放的项目"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1314,7 +1264,7 @@ msgstr "“最近文件”列表的文件数量上限。输入 0 时禁止记录
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "仅运行一个实例"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1323,19 +1273,18 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"尝试打开另一个 Haruna 实例时将不会发生任何事情。\n"
+"尝试用 Haruna 打开另一个文件时将用正在运行的实例打开。"
 
 #: src/qml/Settings/GeneralSettings.qml:138
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "打开播放列表"
+msgstr "添加文件至播放列表"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "文件将被添加到播放列表末尾"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
@@ -1441,20 +1390,14 @@ msgstr ""
 "需要重启才能生效。"
 
 #: src/qml/Settings/MouseSettings.qml:78
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@label"
 msgid "No action set"
-msgstr "重置饱和度"
+msgstr "没有设置操作"
 
 #: src/qml/Settings/MouseSettings.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "清除当前操作"
+msgstr "清除操作"
 
 #: src/qml/Settings/MouseSettings.qml:127
 msgctxt "@title"
