@@ -14,11 +14,9 @@
 
 #include <memory>
 
-#include "kdsingleapplication_lib.h"
-
 class KDSingleApplicationPrivate;
 
-class KDSINGLEAPPLICATION_EXPORT KDSingleApplication : public QObject
+class KDSingleApplication : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString name READ name CONSTANT)
