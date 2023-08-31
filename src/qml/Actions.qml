@@ -287,7 +287,7 @@ Item {
 
         onSubtitleDecreaseFontSizeAction: {
             const subScale = mpv.getProperty(MpvProperties.SubtitleScale) - 0.1
-            mpv.setProperty(MpvProperties.SubtitleDelay, subScale)
+            mpv.setProperty(MpvProperties.SubtitleScale, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
@@ -332,12 +332,12 @@ Item {
         }
 
         onVideoPanYUpAction: {
-            const pan = mpv.getProperty(MpvProperties.VideoPanX) - 0.01
+            const pan = mpv.getProperty(MpvProperties.VideoPanY) - 0.01
             mpv.setProperty(MpvProperties.VideoPanY, pan)
         }
 
         onVideoPanYDownAction: {
-            const pan = mpv.getProperty(MpvProperties.VideoPanX) + 0.01
+            const pan = mpv.getProperty(MpvProperties.VideoPanY) + 0.01
             mpv.setProperty(MpvProperties.VideoPanY, pan)
         }
 
