@@ -195,7 +195,7 @@ private:
     double loadTimePosition();
     void resetTimePosition();
     void loadTracks();
-    void onAsyncReply(const QVariant &data, int id);
+    void onAsyncReply(const QVariant &data, mpv_event *event);
     void onChapterChanged();
     QString md5(const QString &str);
 

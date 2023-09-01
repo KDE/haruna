@@ -437,9 +437,9 @@ void MpvItem::loadTracks()
     Q_EMIT subtitleTracksModelChanged();
 }
 
-void MpvItem::onAsyncReply(const QVariant &data, int id)
+void MpvItem::onAsyncReply(const QVariant &data, mpv_event *event)
 {
-    switch (static_cast<AsyncIds>(id)) {
+    switch (static_cast<AsyncIds>(event->reply_userdata)) {
     case AsyncIds::None: {
         break;
     }
@@ -454,6 +454,10 @@ void MpvItem::onAsyncReply(const QVariant &data, int id)
         break;
     }
     case AsyncIds::Screenshot: {
+        if (event->error < 0) {
+            osdMessage(i18nc("@info:tooltip osd", "Screenshot failed"));
+            break;
+        }
         auto filename = data.toMap().value(QStringLiteral("filename")).toString();
         if (filename.isEmpty()) {
             osdMessage(i18nc("@info:tooltip osd", "Screenshot taken"));
@@ -463,6 +467,7 @@ void MpvItem::onAsyncReply(const QVariant &data, int id)
         break;
     }
     }
+    delete event;
 }
 
 void MpvItem::onChapterChanged()
