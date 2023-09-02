@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-27 00:45+0000\n"
-"PO-Revision-Date: 2023-08-14 21:13+0200\n"
+"POT-Creation-Date: 2023-09-02 00:46+0000\n"
+"PO-Revision-Date: 2023-08-27 18:12+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.80\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -550,19 +550,27 @@ msgctxt ""
 msgid "None"
 msgstr "Nessuno"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:458
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip osd"
+#| msgid "Screenshot taken"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot failed"
+msgstr "Schermata scattata"
+
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Schermata scattata"
 
-#: src/mpv/mpvitem.cpp:461
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Schermata: %1"
 
-#: src/mpv/mpvitem.cpp:487
+#: src/mpv/mpvitem.cpp:492
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -733,12 +741,9 @@ msgid "Primary Subtitle"
 msgstr "Sottotitolo primario"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "&Audio"
+msgstr "Traccia &audio"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -1112,12 +1117,9 @@ msgstr "Lingua preferita"
 
 #: src/qml/Settings/AudioSettings.qml:35
 #: src/qml/Settings/SubtitlesSettings.qml:42
-#, fuzzy
-#| msgctxt "placeholder text"
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "eng,ita ecc."
+msgstr "eng, ita, ecc."
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:59
@@ -1274,7 +1276,7 @@ msgstr "Quanti file recenti memorizzare. Inserisci 0 (zero) per disabilitare."
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Permetti solo un'istanza"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1283,19 +1285,19 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Se provi ad aprire un'altra istanza di Haruna non succederà nulla.\n"
+"Se provi ad aprire un altro file con Haruna farà aprire il file nell'istanza "
+"in esecuzione."
 
 #: src/qml/Settings/GeneralSettings.qml:138
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Apri scaletta"
+msgstr "Aggiungi file alla scaletta"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "Il file verrà aggiunto alla fine della scaletta"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"

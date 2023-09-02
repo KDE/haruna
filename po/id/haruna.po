@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-27 00:45+0000\n"
+"POT-Creation-Date: 2023-09-02 00:46+0000\n"
 "PO-Revision-Date: 2023-08-12 06:38+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -546,19 +546,27 @@ msgctxt ""
 msgid "None"
 msgstr "Nihil"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:458
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip osd"
+#| msgid "Screenshot taken"
+msgctxt "@info:tooltip osd"
+msgid "Screenshot failed"
+msgstr "Pengambilan tangkapan layar"
+
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Pengambilan tangkapan layar"
 
-#: src/mpv/mpvitem.cpp:461
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Tangkapan layar: %1"
 
-#: src/mpv/mpvitem.cpp:487
+#: src/mpv/mpvitem.cpp:492
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
