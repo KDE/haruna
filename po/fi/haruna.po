@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 00:46+0000\n"
-"PO-Revision-Date: 2023-04-27 19:56+0300\n"
+"PO-Revision-Date: 2023-08-26 22:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -85,13 +85,12 @@ msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
 msgstr "Toistetaan mediatiedostoa"
 
+# *** TARKISTA: Kaksitulkintainen, joko [open actions][dialog] (avointen toimintojen ikkuna?) tai [open][actions dialog] kuten tässä.
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Avaa asetustiedosto"
+msgstr "Avaa toimintoikkuna"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -559,24 +558,19 @@ msgid "Screenshot failed"
 msgstr "Ruutukaappaus"
 
 #: src/mpv/mpvitem.cpp:463
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Ruutukaappaus"
+msgstr "Kaapattiin ruutu"
 
 #: src/mpv/mpvitem.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Ruutukaappaus"
+msgstr "Ruutukaappaus: %1"
 
 #: src/mpv/mpvitem.cpp:492
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Ohitettiin luku: %1"
@@ -902,99 +896,66 @@ msgstr "&Asetukset"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "Perusasetukset"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Toisto"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Ääni"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Tekstitykset"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
-msgstr "Toistolista"
+msgstr "Soittolista"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:68
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Hiiri"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Pikanäppäimet"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Mukautetut komennot"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
 #: src/qml/Menus/SettingsMenu.qml:92
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Virheenpaikannus"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Tietoa"
@@ -1116,9 +1077,6 @@ msgid "Open containing folder"
 msgstr "Avaa yläkansio"
 
 #: src/qml/PlayList.qml:234
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Open url"
 msgstr "Avaa verkko-osoite"
@@ -1150,12 +1108,9 @@ msgid "Trash file"
 msgstr "Vie tiedosto roskakoriin"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "Käynnistä toisto"
+msgstr "Toista kohde vierittämällä"
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1357,32 +1312,32 @@ msgstr "Käyttöliittymä"
 #: src/qml/Settings/GeneralSettings.qml:169
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr ""
+msgstr "Esikatsele pienoiskuvaa"
 
 #: src/qml/Settings/GeneralSettings.qml:174
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "Näytä pienoiskuvaesikatselu"
 
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Näytä tarkka esikatselu"
 
 #: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Tarkan esikatselun luominen on hidasta"
 
 #: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Ikkuna"
 
 #: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Sovita videon kokoon"
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
@@ -1390,6 +1345,8 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
+"Enimmäiskokoa ei rajoiteta, vaan se jätetään käyttöjärjestelmälle."
 
 #: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
@@ -1405,6 +1362,10 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Ikkunan kokoa ja sijaintia muutettaessa uudet arvot tallennetaan ja niitä "
+"käytetään uudelleen uutta sovellusikkunaa avattaessa.\n"
+"\n"
+"Etusijan ottaa asetus ”Sovita videon kokoon”.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
@@ -1447,20 +1408,14 @@ msgstr ""
 "Vaatii uudelleenkäynnistyksen."
 
 #: src/qml/Settings/MouseSettings.qml:78
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@label"
 msgid "No action set"
-msgstr "Palauta värikylläisyys"
+msgstr "Toimintoa ei ole asetettu"
 
 #: src/qml/Settings/MouseSettings.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "Tyhjennä nykyinen toiminto"
+msgstr "Tyhjennä toiminto"
 
 #: src/qml/Settings/MouseSettings.qml:127
 msgctxt "@title"
@@ -1505,8 +1460,6 @@ msgstr ""
 "Keskeyttää toiston ikkunaa pienennettäessä; toisto jatkuu palautettaessa."
 
 #: src/qml/Settings/PlaybackSettings.qml:118
-#, fuzzy
-#| msgid "Resume playback"
 msgctxt "@label:spinbox"
 msgid "Resume playback"
 msgstr "Jatka toistoa"
