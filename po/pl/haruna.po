@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 00:46+0000\n"
-"PO-Revision-Date: 2023-10-07 08:49+0200\n"
+"PO-Revision-Date: 2023-10-15 11:16+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -35,11 +35,10 @@ msgid "Haruna Media Player"
 msgstr "Odtwarzacz multimedialny Haruna"
 
 #: src/application.cpp:106
-#, fuzzy, kde-format
-#| msgid "A configurable video player."
+#, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Odtwarzacz filmów z ustawieniami."
+msgstr "Odtwarzacz mediów z ustawieniami."
 
 #: src/application.cpp:108
 #, kde-format
@@ -72,6 +71,8 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
+"Umożliwia tymczasowe zastąpienie ustawienia wyboru formatu ytdl. Zostanie "
+"zastąpione, jeśli ustawienie zostało zmienione w interfejsie użytkownika"
 
 #: src/application.cpp:131
 #, kde-format
@@ -161,7 +162,7 @@ msgstr "Otwórz menu podręczne"
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr ""
+msgstr "Otwiera i zamyka menu podręczne w miejscu wskaźnika myszy"
 
 #: src/models/actionsmodel.cpp:108
 #, kde-format
@@ -173,7 +174,7 @@ msgstr "Otwórz plik"
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr ""
+msgstr "Dodaj napisy zewnętrzne…"
 
 #: src/models/actionsmodel.cpp:122
 #, kde-format
@@ -182,15 +183,13 @@ msgid "Open Url"
 msgstr "Otwórz adres URL"
 
 #: src/models/actionsmodel.cpp:129
-#, fuzzy, kde-format
-#| msgid "Playback speed increase"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "Zwiększ szybkość odtwarzania"
 
 #: src/models/actionsmodel.cpp:136
-#, fuzzy, kde-format
-#| msgid "Playback speed decrease"
+#, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "Zmniejsz szybkość odtwarzania"
@@ -295,7 +294,7 @@ msgstr "Przewiń do poprzedniego napisu"
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr ""
+msgstr "Przewiń do położenia do obejrzenia na później"
 
 #: src/models/actionsmodel.cpp:262
 #, kde-format
@@ -316,15 +315,13 @@ msgid "Subtitle Toggle"
 msgstr "Przełącz napis"
 
 #: src/models/actionsmodel.cpp:283
-#, fuzzy, kde-format
-#| msgid "Increase Subtitle Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "Zwiększ rozmiar czcionki napisów"
 
 #: src/models/actionsmodel.cpp:290
-#, fuzzy, kde-format
-#| msgid "Decrease Subtitle Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "Zmniejsz rozmiar czcionki napisów"
@@ -528,6 +525,8 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
+"Wybrany skrót jest w sprzeczności ze skrótem działania <b>%1</b>. "
+"<br><br>Czy chcesz przypisać ten skrót ponownie?"
 
 #: src/models/actionsmodel.cpp:665
 #, kde-format
@@ -747,6 +746,8 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"Nie znaleziono ani <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a>, "
+"ani <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:29
 msgctxt "@action:intoolbar"
@@ -809,6 +810,8 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 msgstr ""
+"Sam pomija rozdziały, zawierające pewne słowa/znaki.\n"
+"Zajrzyj do ustawień 'Odtwarzania' po więcej szczegółów"
 
 #: src/qml/main.qml:33
 msgctxt "@title:window"
@@ -1044,7 +1047,7 @@ msgstr "Nazwa, malejąco"
 #: src/qml/PlayList.qml:148 src/qml/PlayListQt6.qml:146
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr ""
+msgstr "Czas trwania rosnąco"
 
 #: src/qml/PlayList.qml:154 src/qml/PlayListQt6.qml:152
 msgctxt "@action:button"
@@ -1062,7 +1065,6 @@ msgid "Save as"
 msgstr "Zapisz jako"
 
 #: src/qml/PlayList.qml:228 src/qml/PlayListQt6.qml:220
-#, fuzzy
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Otwórz katalog zawierający"
@@ -1075,7 +1077,7 @@ msgstr "Otwórz adres URL"
 #: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr ""
+msgstr "Skopiuj nazwę pliku"
 
 #: src/qml/PlayList.qml:244 src/qml/PlayListQt6.qml:230
 msgctxt "@action:inmenu"
@@ -1112,7 +1114,7 @@ msgstr "Domyślny język"
 #: src/qml/Settings/SubtitlesSettings.qml:42
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr ""
+msgstr "eng, ger itp."
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:59
@@ -1138,7 +1140,7 @@ msgstr "Dod&aj polecenie"
 #: src/qml/Settings/CustomCommandsSettings.qml:69
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
-msgstr ""
+msgstr "Nie ustawiaj przy następnym uruchomieniu"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:143
 msgctxt "@action:intoolbar"
@@ -1166,18 +1168,14 @@ msgid "Open config file"
 msgstr "Otwórz plik ustawień"
 
 #: src/qml/Settings/DebugSettings.qml:74
-#, fuzzy
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Własne polecenia"
+msgstr "Plik własnych ustawień poleceń"
 
 #: src/qml/Settings/DebugSettings.qml:86
-#, fuzzy
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Nie ma jeszcze żadnego własnego polecenia"
+msgstr "Otwórz plik własnych ustawień"
 
 #: src/qml/Settings/DebugSettings.qml:98
 msgctxt "@info:usagetip"
@@ -1185,11 +1183,13 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Jeśli pola są puste, oznacza to, że nie istnieje żaden plik/katalog ustawień "
+"(np. przy używaniu domyślnych ustawień)"
 
 #: src/qml/Settings/DebugSettings.qml:106
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr ""
+msgstr "Włącz dziennik mpv"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1199,7 +1199,7 @@ msgstr "Polecenie"
 #: src/qml/Settings/EditCustomCommand.qml:50
 msgctxt "placeholder text"
 msgid "add volume +10"
-msgstr ""
+msgstr "zwiększ głośność +10"
 
 #: src/qml/Settings/EditCustomCommand.qml:56
 msgctxt "@label:textbox"
@@ -1209,7 +1209,7 @@ msgstr "Wiadomość OSD"
 #: src/qml/Settings/EditCustomCommand.qml:65
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
-msgstr ""
+msgstr "Nazwa pliku: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:70
 msgctxt "@label"
@@ -1264,12 +1264,12 @@ msgstr "Najwięcej ostatnich plików"
 #: src/qml/Settings/GeneralSettings.qml:100
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
-msgstr ""
+msgstr "Ile ostatnich plików zapamiętać. Wpisz 0 (zero), aby wyłączyć."
 
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Zezwól tylko na jedno wystąpienie"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1278,6 +1278,9 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Próba uruchomienia kolejnego wystąpienia Haruny nie spowoduje niczego.\n"
+"Próba otwarcia kolejnego pliku w Harunie spowoduje otwarcie go w już "
+"uruchomionym wystąpieniu."
 
 #: src/qml/Settings/GeneralSettings.qml:138
 msgctxt "@option:check"
@@ -1287,7 +1290,7 @@ msgstr "Dodaj plik do listy odtwarzania"
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "Plik zostanie dodany do końca listy odtwarzania"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
@@ -1307,12 +1310,12 @@ msgstr "Pokaż miniaturę podglądu"
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Użyj dokładnego podglądu"
 
 #: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Budowanie dokładnego podglądu jest wolne"
 
 #: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
@@ -1322,7 +1325,7 @@ msgstr "Okno"
 #: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Dopasuj do rozmiaru obrazu"
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
@@ -1330,13 +1333,14 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"Okno jest przeskalowywane zgodnie z rozdzielczością obrazu.\n"
+"Największy rozmiar nie jest ograniczany, bo jest to pozostawiane systemowi "
+"operacyjnemu."
 
 #: src/qml/Settings/GeneralSettings.qml:264
-#, fuzzy
-#| msgid "Remember time position"
 msgctxt "@option:check"
 msgid "Remember window size and position"
-msgstr "Zapamiętaj położenie w czasie"
+msgstr "Zapamiętaj rozmiar i położenie okna"
 
 #: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@info:tooltip"
@@ -1347,6 +1351,11 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"Po zmianie rozmiaru i położenia okna, nowe wartości zostaną zapisane i użyte "
+"do przywrócenia aplikacji do tego samego rozmiaru i położenia po "
+"uruchomieniu nowego jej wystąpienia.\n"
+"\n"
+"Ustawienie \"Dostosuj, aby zmieścić obraz\" ma pierwszeństwo.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
@@ -1430,7 +1439,7 @@ msgstr "Przewiń duży krok"
 #: src/qml/Settings/PlaybackSettings.qml:105
 msgctxt "@option:check"
 msgid "Pause on minimize"
-msgstr ""
+msgstr "Wstrzymaj po zminimalizowaniu"
 
 #: src/qml/Settings/PlaybackSettings.qml:113
 msgctxt "@info:tooltip"
@@ -1438,6 +1447,8 @@ msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
+"Wstrzymuje odtwarzanie, po zminimalizowaniu okna i wznawia je po jego "
+"przywróceniu."
 
 #: src/qml/Settings/PlaybackSettings.qml:118
 msgctxt "@label:spinbox"
@@ -1445,29 +1456,23 @@ msgid "Resume playback"
 msgstr "Wznów odtwarzanie"
 
 #: src/qml/Settings/PlaybackSettings.qml:125
-#, fuzzy
-#| msgid "Open last played file"
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Otwórz ostatnio odtwarzany plik"
+msgstr "Otwórz ostatnio odtwarzany plik po uruchomieniu"
 
 #: src/qml/Settings/PlaybackSettings.qml:138
 msgctxt "@option:check"
 msgid "Seek to last playback position"
-msgstr ""
+msgstr "Przewiń do ostatniego odtwarzanego położenia"
 
 #: src/qml/Settings/PlaybackSettings.qml:146
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before it will start at the position "
-#| "it was when playback stopped."
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr ""
-"Po otwarciu pliku, który był odtwarzany wcześniej, zacznie on od miejsca, w "
-"którym poprzednio zatrzymano odtwarzanie."
+"Po otwarciu pliku, który był odtwarzany wcześniej, przewinie on od miejsca, "
+"w którym był ostatnio."
 
 #: src/qml/Settings/PlaybackSettings.qml:155
 msgctxt "@option:check"
@@ -1475,16 +1480,12 @@ msgid "Start playing"
 msgstr "Rozpocznij odtwarzanie"
 
 #: src/qml/Settings/PlaybackSettings.qml:164
-#, fuzzy
-#| msgid ""
-#| "When opening a file that was played before it will start at the position "
-#| "it was when playback stopped."
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr ""
-"Po otwarciu pliku, który był odtwarzany wcześniej, zacznie on od miejsca, w "
-"którym poprzednio zatrzymano odtwarzanie."
+"Po otwarciu pliku, który był odtwarzany wcześniej, sam rozpocznie on jego "
+"odtwarzanie."
 
 #: src/qml/Settings/PlaybackSettings.qml:169
 msgctxt "@label"
@@ -1530,9 +1531,9 @@ msgstr[2] "Dla plików dłuższych niż %1 minut"
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Zapisz położenie co każdą %1 sekundę"
+msgstr[1] "Zapisz położenie co każde %1 sekundy"
+msgstr[2] "Zapisz położenie co każde %1 sekund"
 
 #: src/qml/Settings/PlaybackSettings.qml:296
 msgctxt "@label"
@@ -1638,7 +1639,7 @@ msgstr "Zwiększ rozmiar czcionki w trybie pełnoekranowym"
 #: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr ""
+msgstr "Zapamiętaj ostatni stan listy odtwarzania"
 
 #: src/qml/Settings/PlaylistSettings.qml:173
 msgctxt "@info:tooltip"
@@ -1646,6 +1647,8 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
+"Po zaznaczeniu stan listy odtwarzania (widoczna/ukryta) będzie zapamiętywany "
+"pomiędzy uruchomieniami"
 
 #: src/qml/Settings/SettingsWindow.qml:35
 msgctxt "@title:window"
@@ -1710,7 +1713,7 @@ msgstr "Pomoc"
 #: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "Zezwól na napisy na czarnych pasach"
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
@@ -1718,6 +1721,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"Po zaznaczeniu napisy będą mogły być wyświetlane poza obrazem na czarnych "
+"pasach. Może to nie zadziałać dla wszystkich napisów .ass."
 
 #: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
@@ -1759,7 +1764,7 @@ msgstr "Kolor czcionki"
 #: src/qml/Settings/SubtitlesSettings.qml:349
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr ""
+msgstr "Ustaw wartość domyślną"
 
 #: src/qml/Settings/SubtitlesSettings.qml:230
 msgctxt "@label:textbox"
@@ -1769,13 +1774,13 @@ msgstr "Kolor cienia"
 #: src/qml/Settings/SubtitlesSettings.qml:282
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
-msgstr ""
+msgstr "Przesunięcie cienia"
 
 #: src/qml/Settings/SubtitlesSettings.qml:298
 #: src/qml/Settings/SubtitlesSettings.qml:371
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
-msgstr ""
+msgstr "Ustaw na 0 (zero), aby wyłączyć."
 
 #: src/qml/Settings/SubtitlesSettings.qml:303
 msgctxt "@label:textbox"
@@ -1790,12 +1795,12 @@ msgstr "Szerokość krawędzi"
 #: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "Domyślna okładka"
 
 #: src/qml/Settings/VideoSettings.qml:38
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr ""
+msgstr "ścieżka do obrazu"
 
 #: src/qml/Settings/VideoSettings.qml:48
 msgctxt "@info:tooltip"
@@ -1803,6 +1808,8 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
+"Używane dla plików muzycznych, które nie mają ścieżki obrazu, osadzona "
+"okładka lub obraz cover/folder w tym samym katalogu, co odgrywany plik."
 
 #: src/qml/Settings/VideoSettings.qml:79
 msgctxt "@title"
