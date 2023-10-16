@@ -23,11 +23,10 @@ SettingsBasePage {
     ListView {
         id: customCommandsView
 
+        reuseItems: true
         model: customCommandsModel
-        delegate: Kirigami.DelegateRecycler {
-            width: customCommandsView.width
-            sourceComponent: customCommandDelegate
-        }
+        delegate: customCommandDelegate
+
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
             visible: customCommandsView.count === 0
