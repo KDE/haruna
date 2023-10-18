@@ -91,12 +91,9 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     }
 
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
-    QUrl url(path);
-    if (!url.isLocalFile() && url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
-    }
-
+    auto url = QUrl::fromUserInput(path);
     auto _name = name == QString() ? url.fileName() : name;
+
     for (int i{0}; i < m_urls.count(); ++i) {
         if (url == m_urls[i].url) {
             beginRemoveRows(QModelIndex(), i, i);
@@ -105,6 +102,7 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
             break;
         }
     }
+
     RecentFile recentFile;
     recentFile.url = url;
     recentFile.name = _name;
@@ -114,6 +112,7 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
         m_urls.removeLast();
         endRemoveRows();
     }
+
     beginInsertRows(QModelIndex(), 0, 0);
     m_urls.prepend(recentFile);
     endInsertRows();
