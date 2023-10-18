@@ -551,3 +551,5 @@ QString PlaylistProxyModel::getFilePath(int row)
     auto item = model->m_playlist.at(row);
     return item.url.toString();
 }
+
+#include "moc_playlistmodel.cpp"
