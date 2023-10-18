@@ -7,29 +7,31 @@
 #ifndef PLAYLISTMODEL_H
 #define PLAYLISTMODEL_H
 
-#include <KSharedConfig>
-#include <QAbstractTableModel>
+#include <QAbstractListModel>
 #include <QSortFilterProxyModel>
-#include <map>
-#include <memory>
+#include <QUrl>
 
-class PlayListItem;
+struct PlaylistItem {
+    QUrl url;
+    QString filename;
+    QString mediaTitle;
+    QString folderPath;
+    QString duration;
+};
 
-using Playlist = QList<PlayListItem *>;
-
-class PlayListProxyModel : public QSortFilterProxyModel
+class PlaylistProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    explicit PlayListProxyModel(QObject *parent = nullptr);
+    explicit PlaylistProxyModel(QObject *parent = nullptr);
 
-    enum Sort {
+    enum class Sort {
         NameAscending,
         NameDescending,
         DurationAscending,
         DurationDescending,
     };
-    Q_ENUM(Sort);
+    Q_ENUM(Sort)
 
     Q_INVOKABLE void sortItems(Sort sortMode);
     Q_INVOKABLE int getPlayingItem();
@@ -46,15 +48,15 @@ public:
     Q_INVOKABLE QString getFilePath(int row);
 };
 
-class PlayListModel : public QAbstractListModel
+class PlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(int playingItem MEMBER m_playingItem READ getPlayingItem WRITE setPlayingItem NOTIFY playingItemChanged)
-
 public:
-    explicit PlayListModel(QObject *parent = nullptr);
+    explicit PlaylistModel(QObject *parent = nullptr);
+    friend class PlaylistProxyModel;
+    friend class MpvItem;
 
-    enum {
+    enum Roles {
         NameRole = Qt::UserRole,
         TitleRole,
         DurationRole,
@@ -64,38 +66,36 @@ public:
         IsLocalRole,
     };
 
+    enum Behaviour {
+        Append,
+        Clear,
+    };
+    Q_ENUM(Behaviour)
+
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     virtual QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE QString getPath(int index = -1);
-    Q_INVOKABLE PlayListItem *getItem(int index);
-    Q_INVOKABLE void setPlayingItem(int i);
-    Q_INVOKABLE int getPlayingItem() const;
-    Q_INVOKABLE void appendItem(QString path);
-    Q_INVOKABLE void removeItem(int index);
-    Q_INVOKABLE void clear();
-    Q_INVOKABLE void openM3uFile(const QString &path);
-    Q_INVOKABLE void openFile(const QString &path);
-    Q_INVOKABLE void getYouTubePlaylist(const QString &path);
-
-    Playlist getPlayList();
+    Q_INVOKABLE void addItem(const QString &path, PlaylistModel::Behaviour behaviour);
+    Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behaviour behaviour);
 
 Q_SIGNALS:
-    void itemAdded(int index, QString path);
-    void itemRemoved(int index, QString path);
+    void itemAdded(int index, const QString &path);
     void playingItemChanged();
-    void opened(const QString &name, const QString &path);
 
 private:
+    void appendItem(const QUrl &url);
+    void getSiblingItems(const QUrl &url);
+    void addM3uItems(const QUrl &url);
+    void getYouTubePlaylist(const QUrl &url, PlaylistModel::Behaviour behaviour);
+    void getHttpItemInfo(const QUrl &url, int row);
     bool isVideoOrAudioMimeType(const QString &mimeType);
-    Playlist items() const;
-    void getSiblingItems(QUrl url);
-    void getHttpItemInfo(const QString &url, int row);
-    Playlist m_playlist;
+    void setPlayingItem(int i);
+
+    QList<PlaylistItem> m_playlist;
     int m_playingItem{-1};
-    bool m_emitOpened{false};
+    QString m_playlistPath;
 };
 
-Q_DECLARE_METATYPE(PlayListProxyModel::Sort);
+Q_DECLARE_METATYPE(PlaylistModel::Behaviour)
 #endif // PLAYLISTMODEL_H

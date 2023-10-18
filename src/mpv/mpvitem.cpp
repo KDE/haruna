@@ -17,7 +17,6 @@
 #include <QStandardPaths>
 #include <QTimer>
 #include <QtGlobal>
-#include <playlistsettings.h>
 
 #include <KLocalizedString>
 #include <KShell>
@@ -30,6 +29,8 @@
 #include "mpvcontroller.h"
 #include "mpvproperties.h"
 #include "playbacksettings.h"
+#include "playlistmodel.h"
+#include "playlistsettings.h"
 #include "subtitlessettings.h"
 #include "track.h"
 #include "tracksmodel.h"
@@ -47,8 +48,8 @@ MpvItem::MpvItem(QQuickItem *parent)
     : MpvAbstractItem(parent)
     , m_audioTracksModel{new TracksModel}
     , m_subtitleTracksModel{new TracksModel}
-    , m_playlistModel{new PlayListModel}
-    , m_playlistProxyModel{new PlayListProxyModel}
+    , m_playlistModel{new PlaylistModel}
+    , m_playlistProxyModel{new PlaylistProxyModel}
     , m_chaptersModel{new ChaptersModel}
     , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(QStringLiteral("/watch-later/"))}
 {
@@ -225,8 +226,8 @@ void MpvItem::setupConnections()
     connect(this, &MpvItem::chapterChanged,
             this, &MpvItem::onChapterChanged);
 
-    connect(m_playlistModel, &PlayListModel::playingItemChanged, this, [=]() {
-        loadFile(m_playlistModel->getPath());
+    connect(m_playlistModel, &PlaylistModel::playingItemChanged, this, [=]() {
+        loadFile(m_playlistModel->m_playlist[m_playlistModel->m_playingItem].url.toString());
     });
 
     connect(this, &MpvItem::chapterListChanged, this, [=]() {
@@ -557,22 +558,22 @@ QString MpvItem::md5(const QString &str)
     return QString::fromUtf8(md5.toHex());
 }
 
-PlayListModel *MpvItem::playlistModel()
+PlaylistModel *MpvItem::playlistModel()
 {
     return m_playlistModel;
 }
 
-void MpvItem::setPlaylistModel(PlayListModel *model)
+void MpvItem::setPlaylistModel(PlaylistModel *model)
 {
     m_playlistModel = model;
 }
 
-PlayListProxyModel *MpvItem::playlistProxyModel()
+PlaylistProxyModel *MpvItem::playlistProxyModel()
 {
     return m_playlistProxyModel;
 }
 
-void MpvItem::setPlaylistProxyModel(PlayListProxyModel *model)
+void MpvItem::setPlaylistProxyModel(PlaylistProxyModel *model)
 {
     m_playlistProxyModel = model;
 }

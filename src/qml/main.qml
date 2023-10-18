@@ -440,7 +440,11 @@ Kirigami.ApplicationWindow {
     }
 
     function openFile(path, addToRecentFiles = false) {
-        mpv.playlistModel.openFile(path)
+        if (addToRecentFiles) {
+            recentFilesModel.addUrl(path)
+        }
+
+        mpv.playlistModel.addItem(path, PlaylistModel.Clear)
     }
 
     function isFullScreen() {

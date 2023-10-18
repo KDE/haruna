@@ -19,13 +19,13 @@ class MpvItem : public MpvAbstractItem
 {
     Q_OBJECT
 
-    Q_PROPERTY(PlayListModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
-    PlayListModel *playlistModel();
-    void setPlaylistModel(PlayListModel *model);
+    Q_PROPERTY(PlaylistModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
+    PlaylistModel *playlistModel();
+    void setPlaylistModel(PlaylistModel *model);
 
-    Q_PROPERTY(PlayListProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
-    PlayListProxyModel *playlistProxyModel();
-    void setPlaylistProxyModel(PlayListProxyModel *model);
+    Q_PROPERTY(PlaylistProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
+    PlaylistProxyModel *playlistProxyModel();
+    void setPlaylistProxyModel(PlaylistProxyModel *model);
 
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     TracksModel *audioTracksModel() const;
@@ -205,8 +205,8 @@ private:
     QMap<int, Track *> m_audioTracks;
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
-    PlayListModel *m_playlistModel;
-    PlayListProxyModel *m_playlistProxyModel;
+    PlaylistModel *m_playlistModel;
+    PlaylistProxyModel *m_playlistProxyModel;
 
     double m_position{0.0};
     QString m_formattedPosition;

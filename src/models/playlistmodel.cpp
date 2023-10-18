@@ -5,191 +5,336 @@
  */
 
 #include "playlistmodel.h"
+
 #include "application.h"
 #include "generalsettings.h"
-#include "global.h"
-#include "playlistitem.h"
 #include "playlistsettings.h"
 #include "worker.h"
 
 #include <KFileItem>
+#include <KFileMetaData/Properties>
 #include <kio_version.h>
 #if KIO_VERSION >= QT_VERSION_CHECK(5, 100, 0)
 #include <KIO/DeleteOrTrashJob>
 #endif
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
-#include <KLocalizedString>
 
 #include <QClipboard>
 #include <QCollator>
 #include <QDirIterator>
+#include <QFile>
 #include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QJsonValue>
 #include <QProcess>
-#include <QUrl>
 
-PlayListModel::PlayListModel(QObject *parent)
+PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(this, &PlayListModel::itemAdded, Worker::instance(), &Worker::getMetaData);
+    connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
 
     connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, KFileMetaData::PropertyMultiMap metaData) {
+        if (m_playlist.isEmpty()) {
+            return;
+        }
         auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
         auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
-        m_playlist[i]->setDuration(Application::formatTime(duration));
-        m_playlist[i]->setMediaTitle(title);
+        m_playlist[i].duration = Application::formatTime(duration);
+        m_playlist[i].mediaTitle = title;
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
     });
 }
 
-int PlayListModel::rowCount(const QModelIndex &parent) const
+int PlaylistModel::rowCount(const QModelIndex &parent) const
 {
-    if (parent.isValid()) {
-        return 0;
-    }
-
-    return m_playlist.size();
+    return m_playlist.count();
 }
 
-QVariant PlayListModel::data(const QModelIndex &index, int role) const
+QVariant PlaylistModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || m_playlist.empty()) {
+    if (!index.isValid()) {
         return QVariant();
     }
 
-    auto playListItem = m_playlist.at(index.row());
+    auto item = m_playlist.at(index.row());
     switch (role) {
     case NameRole:
-        return QVariant(playListItem->fileName());
+        return QVariant(item.filename);
     case TitleRole:
-        return playListItem->mediaTitle().isEmpty() ? QVariant(playListItem->fileName()) : QVariant(playListItem->mediaTitle());
+        return item.mediaTitle.isEmpty() ? QVariant(item.filename) : QVariant(item.mediaTitle);
     case PathRole:
-        return QVariant(playListItem->filePath());
+        return QVariant(item.url);
     case DurationRole:
-        return QVariant(playListItem->duration());
+        return QVariant(item.duration);
     case PlayingRole:
         return QVariant(m_playingItem == index.row());
     case FolderPathRole:
-        return QVariant(playListItem->folderPath());
+        return QVariant(item.folderPath);
     case IsLocalRole:
-        return QVariant(!playListItem->filePath().startsWith(QStringLiteral("http")));
+        return QVariant(!item.url.scheme().startsWith(QStringLiteral("http")));
     }
 
     return QVariant();
 }
 
-QHash<int, QByteArray> PlayListModel::roleNames() const
+QHash<int, QByteArray> PlaylistModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
-    roles[NameRole] = "name";
-    roles[TitleRole] = "title";
-    roles[PathRole] = "path";
-    roles[FolderPathRole] = "folderPath";
-    roles[DurationRole] = "duration";
-    roles[PlayingRole] = "isPlaying";
-    roles[IsLocalRole] = "isLocal";
+    QHash<int, QByteArray> roles = {
+        {NameRole, "name"},
+        {TitleRole, "title"},
+        {PathRole, "path"},
+        {FolderPathRole, "folderPath"},
+        {DurationRole, "duration"},
+        {PlayingRole, "isPlaying"},
+        {IsLocalRole, "isLocal"},
+    };
     return roles;
 }
 
-bool PlayListModel::isVideoOrAudioMimeType(const QString &mimeType)
+void PlaylistModel::addItem(const QString &path, Behaviour behaviour)
 {
-    // clang-format off
-    return mimeType.startsWith(QStringLiteral("video/"))
-            || mimeType.startsWith(QStringLiteral("audio/"))
-            || mimeType == QStringLiteral("application/vnd.rn-realmedia");
-    // clang-format on
+    auto url = QUrl::fromUserInput(path);
+    addItem(url, behaviour);
 }
 
-void PlayListModel::getSiblingItems(QUrl url)
+void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
 {
-    clear();
-    QFileInfo openedFileInfo(url.toLocalFile());
-    if (openedFileInfo.exists() && openedFileInfo.isFile()) {
-        QStringList siblingFiles;
-        QDirIterator it(openedFileInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
-        while (it.hasNext()) {
-            QString siblingFile = it.next();
-            QFileInfo siblingFileInfo(siblingFile);
-            auto siblingUrl = QUrl::fromLocalFile(siblingFile);
-            QString mimeType = Application::mimeType(siblingUrl);
-            if (!siblingFileInfo.exists() || mimeType == QStringLiteral("audio/x-mpegurl")) {
-                continue;
-            }
-            if (isVideoOrAudioMimeType(mimeType)) {
-                siblingFiles.append(siblingFileInfo.absoluteFilePath());
-            }
+    if (!url.isValid() || url.isEmpty()) {
+        return;
+    }
+    if (behaviour == Behaviour::Clear) {
+        m_playingItem = -1;
+        beginResetModel();
+        m_playlist.clear();
+        endResetModel();
+    }
+
+    if (url.scheme() == QStringLiteral("file")) {
+        auto mimeType = Application::mimeType(url);
+
+        if (mimeType == QStringLiteral("audio/x-mpegurl")) {
+            m_playlistPath = url.toString();
+            addM3uItems(url);
+            return;
         }
 
-        QCollator collator;
-        collator.setNumericMode(true);
-        std::sort(siblingFiles.begin(), siblingFiles.end(), collator);
+        if (isVideoOrAudioMimeType(mimeType)) {
+            m_playlistPath = QString();
 
-        beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
-        for (int i = 0; i < siblingFiles.count(); ++i) {
-            auto item = new PlayListItem(siblingFiles.at(i), this);
-            m_playlist.append(item);
-            if (url.toString(QUrl::PreferLocalFile) == siblingFiles.at(i)) {
-                setPlayingItem(i);
+            if (behaviour == Behaviour::Clear) {
+                if (PlaylistSettings::loadSiblings()) {
+                    getSiblingItems(url);
+                } else {
+                    appendItem(url);
+                    setPlayingItem(0);
+                }
+            } else {
+                appendItem(url);
             }
-            Q_EMIT itemAdded(i, item->filePath());
+
+            return;
         }
-        endInsertRows();
+    }
+
+    if (url.scheme() == QStringLiteral("http") || url.scheme() == QStringLiteral("https")) {
+        if (Application::isYoutubePlaylist(url.toString())) {
+            m_playlistPath = url.toString();
+            getYouTubePlaylist(url, behaviour);
+        } else {
+            m_playlistPath = QString();
+            if (behaviour == Behaviour::Clear) {
+                appendItem(url);
+                setPlayingItem(0);
+            } else {
+                appendItem(url);
+            }
+        }
     }
 }
 
-void PlayListModel::appendItem(QString path)
+void PlaylistModel::appendItem(const QUrl &url)
 {
-    PlayListItem *item{nullptr};
-    auto url = QUrl::fromUserInput(path);
+    PlaylistItem item;
     QFileInfo itemInfo(url.toLocalFile());
     auto row{m_playlist.count()};
     if (itemInfo.exists() && itemInfo.isFile()) {
-        QString mimeType = Application::mimeType(url);
-        if (mimeType.startsWith(QStringLiteral("video/")) || mimeType.startsWith(QStringLiteral("audio/"))) {
-            item = new PlayListItem(itemInfo.absoluteFilePath(), this);
-        }
+        item = {
+            .url = url,
+            .filename = itemInfo.fileName(),
+            .mediaTitle = QString(),
+            .folderPath = itemInfo.absolutePath(),
+            .duration = QString(),
+        };
     } else {
         if (url.scheme().startsWith(QStringLiteral("http"))) {
-            item = new PlayListItem(path, this);
+            item = {
+                .url = url,
+                .filename = url.toString(),
+            };
             // causes issues with lots of links
             // getHttpItemInfo(path, row);
         }
     }
 
-    if (item == nullptr) {
+    if (item.url.isEmpty()) {
         return;
     }
 
     beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
 
     m_playlist.append(item);
-    Q_EMIT itemAdded(row, item->filePath());
+    Q_EMIT itemAdded(row, item.url.toString());
 
     endInsertRows();
 }
 
-void PlayListModel::removeItem(int index)
+void PlaylistModel::getSiblingItems(const QUrl &url)
 {
-    beginRemoveRows(QModelIndex(), index, index);
-    m_playlist.removeAt(index);
-    endRemoveRows();
-    Q_EMIT itemRemoved(index, getPath(index));
+    QFileInfo openedFileInfo(url.toLocalFile());
+    if (!openedFileInfo.exists() || !openedFileInfo.isFile()) {
+        return;
+    }
+
+    QStringList siblingFiles;
+    QDirIterator it(openedFileInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
+    while (it.hasNext()) {
+        QString siblingFile = it.next();
+        QFileInfo siblingFileInfo(siblingFile);
+        auto siblingUrl = QUrl::fromLocalFile(siblingFile);
+        QString mimeType = Application::mimeType(siblingUrl);
+        if (!siblingFileInfo.exists()) {
+            continue;
+        }
+        if (isVideoOrAudioMimeType(mimeType)) {
+            siblingFiles.append(siblingFileInfo.absoluteFilePath());
+        }
+    }
+
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::sort(siblingFiles.begin(), siblingFiles.end(), collator);
+
+    beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
+    for (const auto &file : siblingFiles) {
+        QFileInfo fileInfo(file);
+        auto fileUrl = QUrl::fromLocalFile(file);
+        PlaylistItem item = {
+            .url = fileUrl,
+            .filename = fileInfo.fileName(),
+            .mediaTitle = QString(),
+            .folderPath = fileInfo.absolutePath(),
+            .duration = QString(),
+        };
+        m_playlist.append(item);
+        if (url == fileUrl) {
+            setPlayingItem(m_playlist.count() - 1);
+        }
+        Q_EMIT itemAdded(m_playlist.count() - 1, item.url.toString());
+    }
+    endInsertRows();
 }
 
-Playlist PlayListModel::items() const
+void PlaylistModel::addM3uItems(const QUrl &url)
 {
-    return m_playlist;
+    if (url.scheme() != QStringLiteral("file") || Application::mimeType(url) != QStringLiteral("audio/x-mpegurl")) {
+        return;
+    }
+
+    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
+    if (!m3uFile.open(QFile::ReadOnly)) {
+        qDebug() << "can't open playlist file";
+        return;
+    }
+
+    int i{0};
+    bool matchFound{false};
+    while (!m3uFile.atEnd()) {
+        QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine().simplified());
+        // ignore comments
+        if (line.startsWith("#")) {
+            continue;
+        }
+
+        auto url = QUrl::fromUserInput(QString::fromUtf8(line));
+        if (!url.scheme().isEmpty()) {
+            addItem(url, Behaviour::Append);
+        } else {
+            // figure out if it's a relative path
+            url = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath());
+            addItem(url, Behaviour::Append);
+        }
+
+        if (!matchFound && url == QUrl::fromUserInput(GeneralSettings::lastPlayedFile())) {
+            setPlayingItem(i);
+            matchFound = true;
+        }
+        ++i;
+    }
+    m3uFile.close();
+
+    if (!matchFound) {
+        setPlayingItem(0);
+    }
 }
 
-void PlayListModel::getHttpItemInfo(const QString &url, int row)
+void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
+{
+    // use youtube-dl to get the required playlist info as json
+    auto ytdlProcess = new QProcess();
+    auto args = QStringList() << QStringLiteral("-J") << QStringLiteral("--flat-playlist") << url.toString();
+    ytdlProcess->setProgram(Application::youtubeDlExecutable());
+    ytdlProcess->setArguments(args);
+    ytdlProcess->start();
+
+    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
+        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
+        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("entries")];
+        QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
+        if (entries.toArray().isEmpty()) {
+            return;
+        }
+
+        bool matchFound{false};
+        for (int i = 0; i < entries.toArray().size(); ++i) {
+            auto id = entries[i][QStringLiteral("id")].toString();
+            auto url = QStringLiteral("https://youtu.be/%1").arg(entries[i][QStringLiteral("id")].toString());
+            auto title = entries[i][QStringLiteral("title")].toString();
+            auto duration = entries[i][QStringLiteral("duration")].toDouble();
+
+            PlaylistItem item = {
+                .url = QUrl::fromUserInput(url),
+                .filename = !title.isEmpty() ? title : url,
+                .mediaTitle = !title.isEmpty() ? title : url,
+                .folderPath = QString(),
+                .duration = Application::formatTime(duration),
+            };
+
+            beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
+            m_playlist.append(item);
+            Q_EMIT itemAdded(i, item.url.toString());
+            endInsertRows();
+
+            if (GeneralSettings::lastPlayedFile().contains(id) && behaviour == Behaviour::Clear) {
+                setPlayingItem(i);
+                matchFound = true;
+            }
+        }
+
+        if (!matchFound && behaviour == Behaviour::Clear) {
+            setPlayingItem(0);
+        }
+    });
+}
+
+void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
 {
     auto ytdlProcess = new QProcess();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url);
+    ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url.toString());
     ytdlProcess->start();
 
     connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
@@ -200,157 +345,24 @@ void PlayListModel::getHttpItemInfo(const QString &url, int row)
             // todo: log if can't get title
             return;
         }
-        m_playlist.at(row)->setMediaTitle(title);
-        m_playlist.at(row)->setFileName(title);
-        m_playlist.at(row)->setDuration(Application::formatTime(duration));
-        if (m_emitOpened) {
-            Q_EMIT opened(title, url);
-            m_emitOpened = false;
-        }
+        m_playlist[row].mediaTitle = title;
+        m_playlist[row].filename = title;
+        m_playlist[row].duration = Application::formatTime(duration);
+
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });
 }
-
-Playlist PlayListModel::getPlayList()
+bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
 {
-    return m_playlist;
+    // clang-format off
+    return (mimeType.startsWith(QStringLiteral("video/"))
+            || mimeType.startsWith(QStringLiteral("audio/"))
+            || mimeType == QStringLiteral("application/vnd.rn-realmedia"))
+            && mimeType != QStringLiteral("audio/x-mpegurl");
+    // clang-format on
 }
 
-int PlayListModel::getPlayingItem() const
-{
-    return m_playingItem;
-}
-
-void PlayListModel::clear()
-{
-    m_playingItem = 0;
-    qDeleteAll(m_playlist);
-    beginResetModel();
-    m_playlist.clear();
-    endResetModel();
-}
-
-void PlayListModel::openM3uFile(const QString &path)
-{
-    auto url = QUrl::fromUserInput(path);
-    if (url.scheme() != QStringLiteral("file")) {
-        return;
-    }
-    if (Application::mimeType(url) != QStringLiteral("audio/x-mpegurl")) {
-        return;
-    }
-
-    QUrl playlistUrl(path);
-    QFile m3uFile(playlistUrl.toString(QUrl::PreferLocalFile));
-    if (!m3uFile.open(QFile::ReadOnly)) {
-        qDebug() << "can't open playlist file";
-        return;
-    }
-    int i{0};
-    bool matchFound{false};
-    while (!m3uFile.atEnd()) {
-        QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine().simplified());
-        // ignore comments
-        if (line.startsWith("#")) {
-            continue;
-        }
-
-        QUrl url(QString::fromUtf8(line));
-        QString item;
-        if (!url.scheme().isEmpty()) {
-            item = url.toString(QUrl::PreferLocalFile);
-        } else {
-            // figure out if it's a relative path
-            item = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath()).toString(QUrl::PreferLocalFile);
-        }
-        appendItem(item);
-        if (!matchFound && item == QUrl(GeneralSettings::lastPlayedFile()).toString(QUrl::PreferLocalFile)) {
-            setPlayingItem(i);
-            matchFound = true;
-        }
-        ++i;
-    }
-    if (!matchFound) {
-        setPlayingItem(0);
-    }
-    m3uFile.close();
-}
-
-void PlayListModel::openFile(const QString &path)
-{
-    clear();
-    QUrl url(path);
-    if (url.scheme() == QStringLiteral("file") || url.scheme() == QString()) {
-        auto mimeType = Application::mimeType(url);
-        if (mimeType == QStringLiteral("audio/x-mpegurl")) {
-            openM3uFile(path);
-            Q_EMIT opened(QFileInfo(path).fileName(), url.toString(QUrl::PreferLocalFile));
-
-            GeneralSettings::setLastPlaylist(path);
-            GeneralSettings::self()->save();
-            return;
-        }
-        if (isVideoOrAudioMimeType(mimeType)) {
-            url.setScheme(QStringLiteral("file"));
-            if (PlaylistSettings::loadSiblings()) {
-                getSiblingItems(url);
-            } else {
-                appendItem(url.toLocalFile());
-                setPlayingItem(0);
-            }
-
-            Q_EMIT opened(QFileInfo(path).fileName(), url.toString(QUrl::PreferLocalFile));
-
-            GeneralSettings::setLastPlayedFile(path);
-            // clear the lastPlaylist so when the player opens without a file
-            // it opens the lastPlayedFile instead of the last playlist
-            GeneralSettings::setLastPlaylist(QString());
-            GeneralSettings::self()->save();
-            return;
-        }
-    }
-    if (url.scheme().startsWith(QStringLiteral("http"))) {
-        if (Application::isYoutubePlaylist(path)) {
-            getYouTubePlaylist(path);
-            GeneralSettings::setLastPlaylist(path);
-            GeneralSettings::self()->save();
-        } else {
-            // emit opened signal only when actually opening an url
-            m_emitOpened = true;
-            appendItem(path);
-            setPlayingItem(0);
-            GeneralSettings::setLastPlayedFile(path);
-            GeneralSettings::setLastPlaylist(QString());
-            GeneralSettings::self()->save();
-        }
-    }
-}
-
-QString PlayListModel::getPath(int index)
-{
-    // when restoring a youtube playlist
-    // ensure the requested path is valid
-    if (m_playlist.isEmpty()) {
-        return QString();
-    }
-    if (index == -1) {
-        return m_playlist[m_playingItem]->filePath();
-    }
-    if (m_playlist.size() <= index) {
-        return m_playlist[0]->filePath();
-    }
-    return m_playlist[index]->filePath();
-}
-
-PlayListItem *PlayListModel::getItem(int index)
-{
-    if (m_playlist.size() <= index) {
-        return m_playlist[0];
-    }
-    return m_playlist[index];
-}
-
-void PlayListModel::setPlayingItem(int i)
+void PlaylistModel::setPlayingItem(int i)
 {
     if (i == -1) {
         return;
@@ -361,102 +373,61 @@ void PlayListModel::setPlayingItem(int i)
     Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
     Q_EMIT playingItemChanged();
+
+    GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
+    GeneralSettings::setLastPlaylist(m_playlistPath);
+    GeneralSettings::self()->save();
 }
 
-void PlayListModel::getYouTubePlaylist(const QString &path)
-{
-    // use youtube-dl to get the required playlist info as json
-    auto ytdlProcess = new QProcess();
-    ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << QStringLiteral("-J") << QStringLiteral("--flat-playlist") << path);
-    ytdlProcess->start();
-
-    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
-        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("entries")];
-        QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
-        if (entries.toArray().isEmpty()) {
-            Q_EMIT Global::instance()->error(i18nc("@info", "Playlist is empty", playlistTitle));
-            return;
-        }
-
-        bool matchFound{false};
-        for (int i = 0; i < entries.toArray().size(); ++i) {
-            auto url = QStringLiteral("https://youtu.be/%1").arg(entries[i][QStringLiteral("id")].toString());
-            auto title = entries[i][QStringLiteral("title")].toString();
-            auto duration = entries[i][QStringLiteral("duration")].toDouble();
-
-            auto video = new PlayListItem(url, this);
-            video->setMediaTitle(!title.isEmpty() ? title : url);
-            video->setFileName(!title.isEmpty() ? title : url);
-            video->setDuration(Application::formatTime(duration));
-
-            beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
-            m_playlist.append(video);
-            Q_EMIT itemAdded(i, video->filePath());
-            endInsertRows();
-
-            if (GeneralSettings::lastPlayedFile().contains(entries[i][QStringLiteral("id")].toString())) {
-                setPlayingItem(i);
-                matchFound = true;
-            }
-        }
-        Q_EMIT opened(playlistTitle, path);
-        if (!matchFound) {
-            setPlayingItem(0);
-        }
-    });
-}
-
-PlayListProxyModel::PlayListProxyModel(QObject *parent)
+PlaylistProxyModel::PlaylistProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setDynamicSortFilter(true);
 }
 
-void PlayListProxyModel::sortItems(Sort sortMode)
+void PlaylistProxyModel::sortItems(Sort sortMode)
 {
     switch (sortMode) {
-    case NameAscending: {
-        setSortRole(PlayListModel::PathRole);
+    case Sort::NameAscending: {
+        setSortRole(PlaylistModel::NameRole);
         sort(0, Qt::AscendingOrder);
         break;
     }
-    case NameDescending: {
-        setSortRole(PlayListModel::PathRole);
+    case Sort::NameDescending: {
+        setSortRole(PlaylistModel::NameRole);
         sort(0, Qt::DescendingOrder);
         break;
     }
-    case DurationAscending: {
-        setSortRole(PlayListModel::DurationRole);
+    case Sort::DurationAscending: {
+        setSortRole(PlaylistModel::DurationRole);
         sort(0, Qt::AscendingOrder);
         break;
     }
-    case DurationDescending: {
-        setSortRole(PlayListModel::DurationRole);
+    case Sort::DurationDescending: {
+        setSortRole(PlaylistModel::DurationRole);
         sort(0, Qt::DescendingOrder);
         break;
     }
     }
 }
 
-int PlayListProxyModel::getPlayingItem()
+int PlaylistProxyModel::getPlayingItem()
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
-    return mapFromSource(model->index(model->getPlayingItem(), 0)).row();
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
+    return mapFromSource(model->index(model->m_playingItem, 0)).row();
 }
 
-void PlayListProxyModel::setPlayingItem(int i)
+void PlaylistProxyModel::setPlayingItem(int i)
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
     model->setPlayingItem(mapToSource(index(i, 0)).row());
 }
 
-void PlayListProxyModel::playNext()
+void PlaylistProxyModel::playNext()
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
 
-    auto currentIndex = mapFromSource(model->index(model->getPlayingItem(), 0)).row();
+    auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
     auto nextIndex = currentIndex + 1;
 
     if (nextIndex < rowCount()) {
@@ -466,11 +437,11 @@ void PlayListProxyModel::playNext()
     }
 }
 
-void PlayListProxyModel::playPrevious()
+void PlaylistProxyModel::playPrevious()
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
 
-    auto currentIndex = mapFromSource(model->index(model->getPlayingItem(), 0)).row();
+    auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
     auto previousIndex = currentIndex - 1;
 
     if (previousIndex >= 0) {
@@ -478,7 +449,7 @@ void PlayListProxyModel::playPrevious()
     }
 }
 
-void PlayListProxyModel::saveM3uFile(const QString &path)
+void PlaylistProxyModel::saveM3uFile(const QString &path)
 {
     QUrl url(path);
     QFile m3uFile(url.toString(QUrl::PreferLocalFile));
@@ -486,15 +457,15 @@ void PlayListProxyModel::saveM3uFile(const QString &path)
         return;
     }
     for (int i{0}; i < rowCount(); ++i) {
-        QString itemPath = data(index(i, 0), PlayListModel::PathRole).toString();
+        QString itemPath = data(index(i, 0), PlaylistModel::PathRole).toString();
         m3uFile.write(itemPath.toUtf8().append("\n"));
     }
     m3uFile.close();
 }
 
-void PlayListProxyModel::highlightInFileManager(int row)
+void PlaylistProxyModel::highlightInFileManager(int row)
 {
-    QString path = data(index(row, 0), PlayListModel::PathRole).toString();
+    QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
     if (url.scheme().isEmpty()) {
         url.setScheme(QStringLiteral("file"));
@@ -502,17 +473,20 @@ void PlayListProxyModel::highlightInFileManager(int row)
     KIO::highlightInFileManager({url});
 }
 
-void PlayListProxyModel::removeItem(int row)
+void PlaylistProxyModel::removeItem(int row)
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
 
     auto sourceRow = mapFromSource(model->index(row)).row();
-    model->removeItem(sourceRow);
+
+    beginRemoveRows(QModelIndex(), sourceRow, sourceRow);
+    model->m_playlist.removeAt(sourceRow);
+    endRemoveRows();
 }
 
-void PlayListProxyModel::renameFile(int row)
+void PlaylistProxyModel::renameFile(int row)
 {
-    QString path = data(index(row, 0), PlayListModel::PathRole).toString();
+    QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
     if (url.scheme().isEmpty()) {
         url.setScheme(QStringLiteral("file"));
@@ -522,21 +496,21 @@ void PlayListProxyModel::renameFile(int row)
     renameDialog->open();
 
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
-        auto model = qobject_cast<PlayListModel *>(sourceModel());
+        auto model = qobject_cast<PlaylistModel *>(sourceModel());
         auto sourceRow = mapToSource(index(row, 0)).row();
-        auto item = model->getPlayList().at(sourceRow);
-        item->setFilePath(urls.first().path());
-        item->setFileName(urls.first().fileName());
+        auto item = model->m_playlist.at(sourceRow);
+        item.url = QUrl::fromUserInput(urls.first().path());
+        item.filename = urls.first().fileName();
 
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });
 }
 
-void PlayListProxyModel::trashFile(int row)
+void PlaylistProxyModel::trashFile(int row)
 {
 #if KIO_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     QList<QUrl> urls;
-    QString path = data(index(row, 0), PlayListModel::PathRole).toString();
+    QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
     if (url.scheme().isEmpty()) {
         url.setScheme(QStringLiteral("file"));
@@ -547,33 +521,33 @@ void PlayListProxyModel::trashFile(int row)
 
     connect(job, &KJob::result, this, [=]() {
         if (job->error() == 0) {
-            auto model = qobject_cast<PlayListModel *>(sourceModel());
+            auto model = qobject_cast<PlaylistModel *>(sourceModel());
             auto sourceRow = mapToSource(index(row, 0)).row();
-            model->removeItem(sourceRow);
+            beginRemoveRows(QModelIndex(), sourceRow, sourceRow);
+            model->m_playlist.removeAt(sourceRow);
+            endRemoveRows();
         }
     });
 #endif
 }
 
-void PlayListProxyModel::copyFileName(int row)
+void PlaylistProxyModel::copyFileName(int row)
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
-    auto item = model->getPlayList().at(row);
-    QGuiApplication::clipboard()->setText(item->fileName());
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
+    auto item = model->m_playlist.at(row);
+    QGuiApplication::clipboard()->setText(item.filename);
 }
 
-void PlayListProxyModel::copyFilePath(int row)
+void PlaylistProxyModel::copyFilePath(int row)
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
-    auto item = model->getPlayList().at(row);
-    QGuiApplication::clipboard()->setText(item->filePath());
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
+    auto item = model->m_playlist.at(row);
+    QGuiApplication::clipboard()->setText(item.url.toString());
 }
 
-QString PlayListProxyModel::getFilePath(int row)
+QString PlaylistProxyModel::getFilePath(int row)
 {
-    auto model = qobject_cast<PlayListModel *>(sourceModel());
-    auto item = model->getPlayList().at(row);
-    return item->filePath();
+    auto model = qobject_cast<PlaylistModel *>(sourceModel());
+    auto item = model->m_playlist.at(row);
+    return item.url.toString();
 }
-
-#include "moc_playlistmodel.cpp"

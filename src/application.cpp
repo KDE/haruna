@@ -144,8 +144,7 @@ void Application::registerQmlTypes()
 {
     qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
     qmlRegisterType<MpvPreview>("org.kde.haruna", 1, 0, "MpvPreview");
-    qRegisterMetaType<PlayListModel *>();
-    qRegisterMetaType<PlayListItem *>();
+    qRegisterMetaType<PlaylistModel *>();
     qRegisterMetaType<TracksModel *>();
     qRegisterMetaType<KFileMetaData::PropertyMultiMap>("KFileMetaData::PropertyMultiMap");
     // models
@@ -154,7 +153,8 @@ void Application::registerQmlTypes()
     qmlRegisterType<ProxyActionsModel>("org.kde.haruna.models", 1, 0, "ProxyActionsModel");
     qmlRegisterType<CustomCommandsModel>("org.kde.haruna.models", 1, 0, "CustomCommandsModel");
     qmlRegisterType<RecentFilesModel>("org.kde.haruna.models", 1, 0, "RecentFilesModel");
-    qmlRegisterType<PlayListProxyModel>("org.kde.haruna.models", 1, 0, "PlayListProxyModel");
+    qmlRegisterType<PlaylistProxyModel>("org.kde.haruna.models", 1, 0, "PlaylistProxyModel");
+    qmlRegisterType<PlaylistModel>("org.kde.haruna.models", 1, 0, "PlaylistModel");
 }
 
 void Application::setupQmlSettingsTypes()

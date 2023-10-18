@@ -89,7 +89,7 @@ Item {
                         buttonText: i18nc("@action:button", "Add")
 
                         onUrlOpened: {
-                            mpv.playlistModel.appendItem(url)
+                            mpv.playlistModel.addItem(url, PlaylistModel.Append)
                         }
                     }
 
@@ -336,11 +336,11 @@ Item {
         onAccepted: {
             switch (fileType) {
             case "video":
-                mpv.playlistModel.appendItem(fileDialog.file.toString())
+                mpv.playlistModel.addItem(fileDialog.file.toString(), PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === Platform.FileDialog.OpenFile) {
-                    mpv.playlistModel.openM3uFile(fileDialog.file.toString())
+                    mpv.playlistModel.addItem(fileDialog.file.toString(), PlaylistModel.Append)
                 } else {
                     mpv.playlistProxyModel.saveM3uFile(fileDialog.file.toString())
                 }
@@ -349,13 +349,6 @@ Item {
             }
         }
         onRejected: mpv.focus = true
-    }
-
-    Connections {
-        target: mpv.playlistModel
-        onOpened: {
-            recentFilesModel.addUrl(path, name)
-        }
     }
 
     states: [

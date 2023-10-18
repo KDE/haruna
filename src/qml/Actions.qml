@@ -106,7 +106,7 @@ Item {
 
         onFrameStepBackwardAction: mpv.commandAsync(["frame-back-step"])
 
-        onLoadLastPlayedFileAction: window.openFile(GeneralSettings.lastPlayedFile, true)
+        onLoadLastPlayedFileAction: window.openFile(GeneralSettings.lastPlayedFile)
 
         onMuteAction: mpv.mute = !mpv.mute
 
