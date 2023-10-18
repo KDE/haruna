@@ -68,26 +68,29 @@ Slider {
                     property double position: 0
                     property double aspectRatio: 1
 
-                    active: GeneralSettings.showPreviewThumbnail
-                    visible: active
+                    active: GeneralSettings.showPreviewThumbnail && previewMpvLoader.file !== ""
+                    visible: false
                     sourceComponent: MpvPreview {
-                        visible: isLocalFile
                         anchors.fill: parent
                         accuratePreview: GeneralSettings.accuratePreviewThumbnail
                         position: previewMpvLoader.position
                         file: previewMpvLoader.file
 
-                        Connections {
-                            target: mpv
-                            onVideoReconfig: {
-                                let width = mpv.getProperty(MpvProperties.Width)
-                                let height = mpv.getProperty(MpvProperties.Height)
-                                let ar = width / height;
-                                previewMpvLoader.aspectRatio = ar
-                            }
-                            onFileLoaded: {
-                                previewMpvLoader.file = mpv.currentUrl
-                            }
+                        onIsLocalFileChanged: {
+                            previewMpvLoader.visible = isLocalFile
+                        }
+                    }
+
+                    Connections {
+                        target: mpv
+                        onVideoReconfig: {
+                            let width = mpv.getProperty(MpvProperties.Width)
+                            let height = mpv.getProperty(MpvProperties.Height)
+                            let ar = width / height;
+                            previewMpvLoader.aspectRatio = ar
+                        }
+                        onFileLoaded: {
+                            previewMpvLoader.file = mpv.currentUrl
                         }
                     }
 
