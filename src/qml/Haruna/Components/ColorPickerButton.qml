@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.12
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Dialogs 1.3
 
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Rectangle {
     id: root
