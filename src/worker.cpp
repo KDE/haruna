@@ -55,7 +55,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
 {
     QImage image;
 
-    auto file = QUrl::fromUserInput(id);
+    auto file = QUrl::fromUserInput(path);
 
     // figure out absolute path of the thumbnail
     auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
