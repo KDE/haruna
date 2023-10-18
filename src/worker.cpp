@@ -51,12 +51,11 @@ void Worker::getMetaData(int index, const QString &path)
     Q_EMIT metaDataReady(index, properties);
 }
 
-void Worker::makePlaylistThumbnail(const QString &id, int width)
+void Worker::makePlaylistThumbnail(const QString &path, int width)
 {
     QImage image;
 
-    QUrl file(id);
-    file.setScheme(QStringLiteral("file"));
+    auto file = QUrl::fromUserInput(id);
 
     // figure out absolute path of the thumbnail
     auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
@@ -69,31 +68,31 @@ void Worker::makePlaylistThumbnail(const QString &id, int width)
 
     // load existing thumbnail if there is one
     if (QFileInfo::exists(cachedFilePath) && image.load(cachedFilePath)) {
-        Q_EMIT thumbnailSuccess(id, image);
+        Q_EMIT thumbnailSuccess(path, image);
         return;
     }
 
-    image = frameToImage(id, width);
+    image = frameToImage(path, width);
 
     if (image.isNull()) {
-        qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(id);
+        qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(path);
         return;
     }
-    Q_EMIT thumbnailSuccess(id, image);
+    Q_EMIT thumbnailSuccess(path, image);
 
     QFileInfo fi(cachedFilePath);
     // create folders where the file will be saved
     if (QDir().mkpath(fi.absolutePath())) {
         if (!image.save(cachedFilePath)) {
-            qDebug() << QStringLiteral("Failed to save thumbnail for file: %1").arg(id);
+            qDebug() << QStringLiteral("Failed to save thumbnail for file: %1").arg(path);
         }
     }
 }
 
-QImage Worker::frameToImage(const QString &id, int width)
+QImage Worker::frameToImage(const QString &path, int width)
 {
     QImage image;
-    FrameDecoder frameDecoder(id, nullptr);
+    FrameDecoder frameDecoder(path, nullptr);
     if (!frameDecoder.getInitialized()) {
         return image;
     }

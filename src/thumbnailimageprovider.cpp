@@ -28,8 +28,8 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
         Worker::instance(),
         &Worker::thumbnailSuccess,
         this,
-        [=](const QString &resultId, const QImage &image) {
-            if (resultId == id) {
+        [=](const QString &path, const QImage &image) {
+            if (path == QUrl::fromUserInput(id).toLocalFile()) {
                 m_texture = QQuickTextureFactory::textureFactoryForImage(image);
                 Q_EMIT finished();
             }
@@ -65,11 +65,12 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
 
 void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize)
 {
-    if (QFile(id).exists()) {
-        Worker::instance()->makePlaylistThumbnail(id, requestedSize.width());
+    auto url = QUrl::fromUserInput(id);
+    if (QFile(url.toLocalFile()).exists()) {
+        Worker::instance()->makePlaylistThumbnail(url.toLocalFile(), requestedSize.width());
     }
 
-    if (QUrl(id).scheme() == QStringLiteral("http") || QUrl(id).scheme() == QStringLiteral("https")) {
+    if (url.scheme() == QStringLiteral("http") || url.scheme() == QStringLiteral("https")) {
         auto icon = QIcon::fromTheme(QStringLiteral("im-youtube"), QIcon::fromTheme(QStringLiteral("video-x-generic")));
         m_texture = QQuickTextureFactory::textureFactoryForImage(icon.pixmap(requestedSize).toImage());
         Q_EMIT finished();

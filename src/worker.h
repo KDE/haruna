@@ -24,13 +24,13 @@ public:
 
 Q_SIGNALS:
     void metaDataReady(int index, KFileMetaData::PropertyMultiMap metadata);
-    void thumbnailSuccess(const QString &id, const QImage &image);
+    void thumbnailSuccess(const QString &path, const QImage &image);
     void thumbnailFail();
 
 public Q_SLOTS:
     void getMetaData(int index, const QString &path);
-    void makePlaylistThumbnail(const QString &id, int width);
-    QImage frameToImage(const QString &id, int width);
+    void makePlaylistThumbnail(const QString &path, int width);
+    QImage frameToImage(const QString &path, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
     void saveWindowGeometry(QQuickWindow *window) const;
 
