@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 00:42+0000\n"
+"POT-Creation-Date: 2023-10-19 00:42+0000\n"
 "PO-Revision-Date: 2023-05-21 14:52+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -535,34 +535,28 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reassign"
 
-#: src/models/playlistmodel.cpp:379
-#, kde-format
-msgctxt "@info"
-msgid "Playlist is empty"
-msgstr "Playlist is empty"
-
-#: src/mpv/mpvitem.cpp:389
+#: src/mpv/mpvitem.cpp:390
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "None"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:459
 #, fuzzy, kde-format
 #| msgid "Screenshot template"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Screenshot template"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:464
 #, fuzzy, kde-format
 #| msgid "Screenshot template"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Screenshot template"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:466
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -570,7 +564,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Screenshot"
 
-#: src/mpv/mpvitem.cpp:492
+#: src/mpv/mpvitem.cpp:493
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -809,12 +803,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:249
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Skip Chapters"
 
-#: src/qml/HProgressBar.qml:254
+#: src/qml/HProgressBar.qml:257
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1906,6 +1900,10 @@ msgstr "Saturation"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Middle click on the sliders to reset them"
+
+#~ msgctxt "@info"
+#~ msgid "Playlist is empty"
+#~ msgstr "Playlist is empty"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Do not use spaces."

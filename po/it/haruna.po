@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 00:42+0000\n"
+"POT-Creation-Date: 2023-10-19 00:42+0000\n"
 "PO-Revision-Date: 2023-09-03 20:17+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -537,38 +537,32 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Riassegna"
 
-#: src/models/playlistmodel.cpp:379
-#, kde-format
-msgctxt "@info"
-msgid "Playlist is empty"
-msgstr "La scaletta è vuota"
-
-#: src/mpv/mpvitem.cpp:389
+#: src/mpv/mpvitem.cpp:390
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nessuno"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:459
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Schermata non riuscita"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Schermata scattata"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:466
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Schermata: %1"
 
-#: src/mpv/mpvitem.cpp:492
+#: src/mpv/mpvitem.cpp:493
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -802,12 +796,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:249
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Salta capitoli"
 
-#: src/qml/HProgressBar.qml:254
+#: src/qml/HProgressBar.qml:257
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1858,6 +1852,10 @@ msgstr "Saturazione"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clic centrale sui cursori per azzerarli"
+
+#~ msgctxt "@info"
+#~ msgid "Playlist is empty"
+#~ msgstr "La scaletta è vuota"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Do not use spaces."

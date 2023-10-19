@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 00:42+0000\n"
+"POT-Creation-Date: 2023-10-19 00:42+0000\n"
 "PO-Revision-Date: 2022-11-17 16:07+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -562,34 +562,28 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Переназначить"
 
-#: src/models/playlistmodel.cpp:379
-#, kde-format
-msgctxt "@info"
-msgid "Playlist is empty"
-msgstr "Список воспроизведения пуст"
-
-#: src/mpv/mpvitem.cpp:389
+#: src/mpv/mpvitem.cpp:390
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:459
 #, fuzzy, kde-format
 #| msgid "Screenshot template"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Шаблон снимка экрана"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:464
 #, fuzzy, kde-format
 #| msgid "Screenshot template"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Шаблон снимка экрана"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:466
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -597,7 +591,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Снимок экрана"
 
-#: src/mpv/mpvitem.cpp:492
+#: src/mpv/mpvitem.cpp:493
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -834,12 +828,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Аудио"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:249
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Пропустить разделы"
 
-#: src/qml/HProgressBar.qml:254
+#: src/qml/HProgressBar.qml:257
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1980,6 +1974,10 @@ msgstr "Насыщенность"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Щелчок средней кнопкой мыши по ползункам для сброса"
+
+#~ msgctxt "@info"
+#~ msgid "Playlist is empty"
+#~ msgstr "Список воспроизведения пуст"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Do not use spaces."

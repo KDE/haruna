@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 00:42+0000\n"
+"POT-Creation-Date: 2023-10-19 00:42+0000\n"
 "PO-Revision-Date: 2023-09-10 20:11+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -532,38 +532,32 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ré-allouer"
 
-#: src/models/playlistmodel.cpp:379
-#, kde-format
-msgctxt "@info"
-msgid "Playlist is empty"
-msgstr "La liste de lecture est vide."
-
-#: src/mpv/mpvitem.cpp:389
+#: src/mpv/mpvitem.cpp:390
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Aucun"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:459
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Impossible de faire une copie d'écran"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Copie d'écran effectuée"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:466
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Copie d'écran : %1"
 
-#: src/mpv/mpvitem.cpp:492
+#: src/mpv/mpvitem.cpp:493
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -797,12 +791,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:249
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Ignorer des chapitres"
 
-#: src/qml/HProgressBar.qml:254
+#: src/qml/HProgressBar.qml:257
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1864,6 +1858,10 @@ msgstr "Saturation"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Effectuer un clic central sur les curseurs pour le ré-initialiser"
+
+#~ msgctxt "@info"
+#~ msgid "Playlist is empty"
+#~ msgstr "La liste de lecture est vide."
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Do not use spaces."
