@@ -110,11 +110,12 @@ parts:
         plugin: cmake
         build-packages:
         - cmake
-        - libswscale-dev
-        - libmpv-dev
+        - breeze-dev
         - libkf5doctools-dev
-        - samba-dev
+        - libmpv-dev
+        - libswscale-dev
         - qtbase5-private-dev
+        - yt-dlp
         build-snaps:
         - ffmpeg-2204
         stage-packages:
@@ -134,6 +135,12 @@ parts:
         - libqt5gstreamerquick-1.0-0
         - libqt5gstreamerui-1.0-0
         - libqt5gstreamerutils-1.0-0
+        - qml-module-org-kde-kirigami2
+        - qml-module-qt-labs-platform
+        - qml-module-qtquick-shapes
+        - libc6
+        - libstdc++6
+        - libswscale5
         - yt-dlp
         - libbs2b0
         - libcdio-cdda2
