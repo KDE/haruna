@@ -51,12 +51,12 @@ environment:
     SNAP_DESKTOP_RUNTIME: $SNAP/kf5
     GST_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
     GST_PLUGIN_SYSTEM_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
-    GST_PLUGIN_SCANNER: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
+    GST_PLUGIN_SCANNER: $SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
     XDG_DATA_DIRS: $SNAP/current/usr/share:/snap/kf5-5-110-qt-5-15-11-core22/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
     QT_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins
     QML2_IMPORT_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml
     LD_LIBRARY_PATH: "$SNAP/usr/lib:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/lapack"
-    QT_QUICK_CONTROLS_STYLE: org.kde.desktop
+    QT_QUICK_CONTROLS_STYLE: org.kde.breeze
 hooks:
     configure:
         plugs:
@@ -66,10 +66,12 @@ hooks:
 layout:
     /usr/share/X11:
         symlink: $SNAP/kf5/usr/share/X11
-    /usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib:
-        symlink: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib
-    /usr/share/alsa:
-        symlink: $SNAP/usr/share/alsa
+    "/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib":
+        bind: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib"
+    "/usr/share/alsa":
+        bind: "$SNAP/usr/share/alsa"
+    "/etc/alsa/conf.d":
+        bind: "$SNAP/etc/alsa/conf.d"
 slots:
     session-dbus-interface:
         interface: dbus
@@ -117,63 +119,28 @@ parts:
         - qtbase5-private-dev
         - yt-dlp
         build-snaps:
-        - ffmpeg-2204
+        - ffmpeg-2204-sdk
         stage-packages:
+        - gstreamer1.0-alsa
+        - gstreamer1.0-plugins-base
+        - gstreamer1.0-plugins-bad
+        - gstreamer1.0-plugins-good
+        - gstreamer1.0-plugins-ugly
+        - gstreamer1.0-libav
         - libasound2
         - libasound2-data
         - libasound2-plugins
+        - libasound2-plugins-extra
+        - breeze-icons
+        - breeze5
         - phonon4qt5
-        - libgstreamer1.0-0
-        - gstreamer1.0-alsa
-        - gstreamer1.0-pulseaudio
-        - gstreamer1.0-plugins-good
-        - gstreamer1.0-plugins-bad
-        - gstreamer1.0-plugins-ugly
         - phonon4qt5-backend-gstreamer
-        - oxygen-sounds
-        - libqt5gstreamer-1.0-0
-        - libqt5gstreamerquick-1.0-0
-        - libqt5gstreamerui-1.0-0
-        - libqt5gstreamerutils-1.0-0
         - qml-module-org-kde-kirigami2
         - qml-module-qt-labs-platform
         - qml-module-qtquick-shapes
-        - libc6
-        - libstdc++6
-        - libswscale5
-        - yt-dlp
-        - libbs2b0
-        - libcdio-cdda2
-        - libcdio-paranoia2
-        - libcdio19
-        - libfftw3-double3
-        - libflite1
-        - libjansson4
-        - libldb2
-        - liblilv-0-0
+        - qml-module-org-kde-qqc2breezestyle
         - libmpv1
-        - libnorm1
-        - libpgm-5.3-0
-        - librubberband2
-        - libsdl2-2.0-0
-        - libserd-0-0
-        - libsmbclient
-        - libsodium23
-        - libsord-0-0
-        - libsratom-0-0
-        - libtalloc2
-        - libtevent0
-        - libuchardet0
-        - libvidstab1.1
-        - libwbclient0
-        - libxcursor1
-        - libxinerama1
-        - libzmq5
-        - samba-libs
-        - libblas3
-        - liblapack3
-        - qml-module-org-kde-qqc2desktopstyle
-        - libnvidia-gl-525
+        - libswscale5
         stage-snaps:
         - ffmpeg-2204
         source: .
