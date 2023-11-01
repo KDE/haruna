@@ -25,7 +25,13 @@ SettingsBasePage {
 
         reuseItems: true
         model: customCommandsModel
-        delegate: customCommandDelegate
+        delegate: Loader {
+            required property var model
+            required property int index
+            width: customCommandsView.width
+            sourceComponent: customCommandDelegate
+        }
+
 
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
