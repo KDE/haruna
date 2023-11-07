@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:30+0000\n"
-"PO-Revision-Date: 2023-08-26 22:45+0300\n"
+"PO-Revision-Date: 2023-09-27 17:57+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -545,11 +545,10 @@ msgid "None"
 msgstr "Ei mitään"
 
 #: src/mpv/mpvitem.cpp:459
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "Ruutukaappaus"
+msgstr "Ruutukaappaus epäonnistui"
 
 #: src/mpv/mpvitem.cpp:464
 #, kde-format
@@ -734,12 +733,9 @@ msgid "Primary Subtitle"
 msgstr "Ensisijainen tekstitys"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "&Ääni"
+msgstr "&Ääniraita"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -1114,12 +1110,9 @@ msgstr "Suosittu kieli"
 
 #: src/qml/Settings/AudioSettings.qml:35
 #: src/qml/Settings/SubtitlesSettings.qml:42
-#, fuzzy
-#| msgctxt "placeholder text"
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "fin,eng jne."
+msgstr "fin, eng jne."
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:59
@@ -1275,7 +1268,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Salli vain yksi instanssi"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1284,19 +1277,18 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Yritys avata uusi Haruna-instanssi ei johda mihinkään.\n"
+"Yritys avata uusi tiedosto Harunaan avaa tiedoston nykyisessä instanssissa."
 
 #: src/qml/Settings/GeneralSettings.qml:138
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Avaa soittolista"
+msgstr "Avaa tiedosto soittolistalle"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "Tiedosto lisätään soittolistan loppuun"
 
 #: src/qml/Settings/GeneralSettings.qml:163
 msgctxt "@title"
