@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:30+0000\n"
-"PO-Revision-Date: 2023-05-16 10:53+0200\n"
+"PO-Revision-Date: 2023-11-08 14:19+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -87,7 +87,7 @@ msgstr "Přehrávání souboru média"
 #, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr ""
+msgstr "Otevřít dialog činností"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -542,25 +542,25 @@ msgstr "Nic"
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr ""
+msgstr "Snímání obrazovky selhalo"
 
 #: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr ""
+msgstr "Snímek obrazovky byl pořízen"
 
 #: src/mpv/mpvitem.cpp:466
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr ""
+msgstr "Snímek obrazovky: %1"
 
 #: src/mpv/mpvitem.cpp:493
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
-msgstr ""
+msgstr "Přeskočena kapitola: %1"
 
 #: src/qml/Actions.qml:64 src/qml/Actions.qml:82
 msgctxt "@info:tooltip"
@@ -729,7 +729,7 @@ msgstr "Primární titulky"
 #: src/qml/Haruna/Components/HamburgerMenu.qml:116
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr ""
+msgstr "&Audio stopa"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -878,31 +878,31 @@ msgstr "Na&stavení"
 #: src/qml/Menus/SettingsMenu.qml:20
 msgctxt "@action:inmenu"
 msgid "General"
-msgstr ""
+msgstr "Obecné"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:28
 msgctxt "@action:inmenu"
 msgid "Playback"
-msgstr ""
+msgstr "Přehrávání"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:36
 msgctxt "@action:inmenu"
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:44
 msgctxt "@action:inmenu"
 msgid "Audio"
-msgstr ""
+msgstr "Zvuk"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:52
 msgctxt "@action:inmenu"
 msgid "Subtitles"
-msgstr ""
+msgstr "Titulky"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:60
@@ -914,31 +914,31 @@ msgstr "Seznam skladeb"
 #: src/qml/Menus/SettingsMenu.qml:68
 msgctxt "@action:inmenu"
 msgid "Mouse"
-msgstr ""
+msgstr "Myš"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:76
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Zkratky"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
 #: src/qml/Menus/SettingsMenu.qml:84
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
-msgstr ""
+msgstr "Vlastní příkazy"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
 #: src/qml/Menus/SettingsMenu.qml:92
 msgctxt "@action:inmenu"
 msgid "Debug"
-msgstr ""
+msgstr "Ladění"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
 #: src/qml/Menus/SettingsMenu.qml:100
 msgctxt "@action:inmenu"
 msgid "About"
-msgstr ""
+msgstr "O aplikaci"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
 #: src/qml/Menus/SubtitlesMenu.qml:16
@@ -1059,7 +1059,7 @@ msgstr "Otevřít odpovídající složku"
 #: src/qml/PlayList.qml:234
 msgctxt "@action:inmenu"
 msgid "Open url"
-msgstr ""
+msgstr "Otevřít URL"
 
 #: src/qml/PlayList.qml:240 src/qml/PlayListQt6.qml:226
 msgctxt "@action:inmenu"
@@ -1101,7 +1101,7 @@ msgstr "Preferovaný jazyk"
 #: src/qml/Settings/SubtitlesSettings.qml:42
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr ""
+msgstr "cz, eng atd."
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:59
@@ -1254,7 +1254,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Povolit pouze jednu instanci"
 
 #: src/qml/Settings/GeneralSettings.qml:124
 msgctxt "@info:tooltip"
@@ -1267,7 +1267,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:138
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr ""
+msgstr "Přidat soubor do seznamu stop"
 
 #: src/qml/Settings/GeneralSettings.qml:154
 msgctxt "@info:tooltip"
@@ -1287,27 +1287,27 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:174
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "Zobrazit náhled obrázků"
 
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Použít přesný náhled"
 
 #: src/qml/Settings/GeneralSettings.qml:203
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Generování přesného náhledu je pomalé"
 
 #: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr ""
+msgstr "Okno"
 
 #: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Přizpůsobit velikost videu"
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@info:tooltip"
@@ -1773,7 +1773,7 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:79
 msgctxt "@title"
 msgid "Screenshots"
-msgstr "Obrázky"
+msgstr "Snímky obrazovky"
 
 #: src/qml/Settings/VideoSettings.qml:89
 msgctxt "@label:listbox"
