@@ -95,6 +95,14 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
     return roles;
 }
 
+void PlaylistModel::clear()
+{
+    m_playingItem = -1;
+    beginResetModel();
+    m_playlist.clear();
+    endResetModel();
+}
+
 void PlaylistModel::addItem(const QString &path, Behaviour behaviour)
 {
     auto url = QUrl::fromUserInput(path);
@@ -107,10 +115,7 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
         return;
     }
     if (behaviour == Behaviour::Clear) {
-        m_playingItem = -1;
-        beginResetModel();
-        m_playlist.clear();
-        endResetModel();
+        clear();
     }
 
     if (url.scheme() == QStringLiteral("file")) {
