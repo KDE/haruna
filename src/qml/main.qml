@@ -405,8 +405,6 @@ Kirigami.ApplicationWindow {
             }
         }
         onRejected: mpv.focus = true
-
-        onVisibleChanged: console.log(location)
     }
 
     InputPopup {
