@@ -42,6 +42,7 @@ public:
 
 private:
     void saveEntries();
+    void getHttpItemInfo(const QUrl &url);
     QList<RecentFile> m_urls;
     KConfigGroup m_recentFilesConfigGroup;
     int m_maxRecentFiles{10};

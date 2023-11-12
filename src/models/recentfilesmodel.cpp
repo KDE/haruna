@@ -6,13 +6,16 @@
 
 #include "recentfilesmodel.h"
 
-#include "generalsettings.h"
-#include <global.h>
+#include <KSharedConfig>
 
 #include <QDebug>
+#include <QJsonDocument>
 #include <QMenu>
+#include <QProcess>
 
-#include <KSharedConfig>
+#include "application.h"
+#include "generalsettings.h"
+#include "global.h"
 
 RecentFilesModel::RecentFilesModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -90,8 +93,12 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
         return;
     }
 
-    auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
     auto url = QUrl::fromUserInput(path);
+
+    if (url.scheme().startsWith(QStringLiteral("http")) && name.isEmpty()) {
+        getHttpItemInfo(url);
+    }
+
     auto _name = name == QString() ? url.fileName() : name;
 
     for (int i{0}; i < m_urls.count(); ++i) {
@@ -155,6 +162,26 @@ int RecentFilesModel::maxRecentFiles() const
 void RecentFilesModel::setMaxRecentFiles(int _maxRecentFiles)
 {
     m_maxRecentFiles = _maxRecentFiles;
+}
+
+void RecentFilesModel::getHttpItemInfo(const QUrl &url)
+{
+    auto ytdlProcess = new QProcess();
+    ytdlProcess->setProgram(Application::youtubeDlExecutable());
+    ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url.toString());
+    ytdlProcess->start();
+
+    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
+        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
+        QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
+        int duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toInt();
+        if (title.isEmpty()) {
+            // todo: log if can't get title
+            return;
+        }
+
+        addUrl(url.toString(), title);
+    });
 }
 
 #include "moc_recentfilesmodel.cpp"

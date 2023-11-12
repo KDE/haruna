@@ -418,7 +418,7 @@ Kirigami.ApplicationWindow {
         buttonText: i18nc("@action:button", "Open")
 
         onUrlOpened: {
-            window.openFile(url)
+            window.openFile(url, true)
             GeneralSettings.lastUrl = url
             GeneralSettings.save()
         }
