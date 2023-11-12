@@ -385,9 +385,8 @@ Kirigami.ApplicationWindow {
         id: subtitlesFileDialog
 
         property url location: {
-            if (mpv.playlistModel.length > 0) {
-                const item = mpv.playlistModel.getItem(mpv.playlistModel.getPlayingItem())
-                return app.pathToUrl(item.folderPath())
+            if (mpv.currentUrl) {
+                return app.parentUrl(mpv.currentUrl)
             } else {
                 return (GeneralSettings.fileDialogLocation
                 ? app.pathToUrl(GeneralSettings.fileDialogLocation)
@@ -406,6 +405,8 @@ Kirigami.ApplicationWindow {
             }
         }
         onRejected: mpv.focus = true
+
+        onVisibleChanged: console.log(location)
     }
 
     InputPopup {
