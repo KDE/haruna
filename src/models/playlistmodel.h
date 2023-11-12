@@ -96,6 +96,7 @@ private:
     QList<PlaylistItem> m_playlist;
     int m_playingItem{-1};
     QString m_playlistPath;
+    int m_httpItemCounter{0};
 };
 
 Q_DECLARE_METATYPE(PlaylistModel::Behaviour)

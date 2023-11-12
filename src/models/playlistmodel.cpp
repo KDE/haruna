@@ -97,6 +97,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
 
 void PlaylistModel::clear()
 {
+    m_playlistPath = QString();
     m_playingItem = -1;
     beginResetModel();
     m_playlist.clear();
@@ -128,8 +129,6 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
         }
 
         if (isVideoOrAudioMimeType(mimeType)) {
-            m_playlistPath = QString();
-
             if (behaviour == Behaviour::Clear) {
                 if (PlaylistSettings::loadSiblings()) {
                     getSiblingItems(url);
@@ -150,7 +149,6 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
             m_playlistPath = url.toString();
             getYouTubePlaylist(url, behaviour);
         } else {
-            m_playlistPath = QString();
             if (behaviour == Behaviour::Clear) {
                 appendItem(url);
                 setPlayingItem(0);
@@ -181,7 +179,10 @@ void PlaylistModel::appendItem(const QUrl &url)
                 .filename = url.toString(),
             };
             // causes issues with lots of links
-            // getHttpItemInfo(path, row);
+            if (m_httpItemCounter < 20) {
+                getHttpItemInfo(url, row);
+                ++m_httpItemCounter;
+            }
         }
     }
 
@@ -357,6 +358,7 @@ void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });
 }
+
 bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
 {
     // clang-format off
