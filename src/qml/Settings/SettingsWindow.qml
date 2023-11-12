@@ -163,6 +163,11 @@ Kirigami.ApplicationWindow {
 
     Component.onCompleted: pageStack.columnView.columnWidth = Kirigami.Units.gridUnit * 15
 
+    Shortcut {
+        sequence: "Esc"
+        onActivated: root.close()
+    }
+
     Window {
         id: helpWindow
 
