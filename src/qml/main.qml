@@ -228,6 +228,8 @@ Kirigami.ApplicationWindow {
                                 ? window.contentItem.right
                                 : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right))
                             })
+                item.anchors.top = Qt.binding(() => mpv.top)
+                item.anchors.bottom = Qt.binding(() => footer.top)
             }
         }
     }

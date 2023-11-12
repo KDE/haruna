@@ -21,7 +21,6 @@ Item {
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
 
-    height: mpv.height
     width: {
         if (PlaylistSettings.style === "compact") {
             return Kirigami.Units.gridUnit * 21
