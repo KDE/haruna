@@ -165,19 +165,15 @@ void PlaylistModel::appendItem(const QUrl &url)
     QFileInfo itemInfo(url.toLocalFile());
     auto row{m_playlist.count()};
     if (itemInfo.exists() && itemInfo.isFile()) {
-        item = {
-            .url = url,
-            .filename = itemInfo.fileName(),
-            .mediaTitle = QString(),
-            .folderPath = itemInfo.absolutePath(),
-            .duration = QString(),
-        };
+        item.url = url;
+        item.filename = itemInfo.fileName();
+        item.mediaTitle = QString();
+        item.folderPath = itemInfo.absolutePath();
+        item.duration = QString();
     } else {
         if (url.scheme().startsWith(QStringLiteral("http"))) {
-            item = {
-                .url = url,
-                .filename = url.toString(),
-            };
+            item.url = url;
+            item.filename = url.toString();
             // causes issues with lots of links
             if (m_httpItemCounter < 20) {
                 getHttpItemInfo(url, row);
@@ -228,13 +224,12 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     for (const auto &file : siblingFiles) {
         QFileInfo fileInfo(file);
         auto fileUrl = QUrl::fromLocalFile(file);
-        PlaylistItem item = {
-            .url = fileUrl,
-            .filename = fileInfo.fileName(),
-            .mediaTitle = QString(),
-            .folderPath = fileInfo.absolutePath(),
-            .duration = QString(),
-        };
+        PlaylistItem item;
+        item.url = fileUrl;
+        item.filename = fileInfo.fileName();
+        item.mediaTitle = QString();
+        item.folderPath = fileInfo.absolutePath();
+        item.duration = QString();
         m_playlist.append(item);
         if (url == fileUrl) {
             setPlayingItem(m_playlist.count() - 1);
@@ -311,13 +306,12 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
             auto title = entries[i][QStringLiteral("title")].toString();
             auto duration = entries[i][QStringLiteral("duration")].toDouble();
 
-            PlaylistItem item = {
-                .url = QUrl::fromUserInput(url),
-                .filename = !title.isEmpty() ? title : url,
-                .mediaTitle = !title.isEmpty() ? title : url,
-                .folderPath = QString(),
-                .duration = Application::formatTime(duration),
-            };
+            PlaylistItem item;
+            item.url = QUrl::fromUserInput(url);
+            item.filename = !title.isEmpty() ? title : url;
+            item.mediaTitle = !title.isEmpty() ? title : url;
+            item.folderPath = QString();
+            item.duration = Application::formatTime(duration);
 
             beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
             m_playlist.append(item);

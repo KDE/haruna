@@ -234,10 +234,9 @@ void MpvItem::setupConnections()
         const auto chapters = getCachedPropertyValue(MpvProperties::self()->ChapterList);
         QList<Chapter> chaptersList;
         for (const auto &chapter : chapters.toList()) {
-            Chapter c = {
-                .title = chapter.toMap()[QStringLiteral("title")].toString(),
-                .startTime = chapter.toMap()[QStringLiteral("time")].toDouble(),
-            };
+            Chapter c;
+            c.title = chapter.toMap()[QStringLiteral("title")].toString();
+            c.startTime = chapter.toMap()[QStringLiteral("time")].toDouble();
             chaptersList.append(c);
         }
         m_chaptersModel->setChapters(chaptersList);
