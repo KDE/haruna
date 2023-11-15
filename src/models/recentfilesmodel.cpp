@@ -174,9 +174,7 @@ void RecentFilesModel::getHttpItemInfo(const QUrl &url)
     connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
-        int duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toInt();
         if (title.isEmpty()) {
-            // todo: log if can't get title
             return;
         }
 
