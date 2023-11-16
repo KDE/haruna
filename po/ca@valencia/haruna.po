@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 00:42+0000\n"
+"POT-Creation-Date: 2023-11-16 00:42+0000\n"
 "PO-Revision-Date: 2023-09-02 11:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -528,40 +528,40 @@ msgid ""
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
 "La drecera triada entra en conflicte amb la drecera de l'acció <b>%1</b>."
-"<br><br>Voleu reassignar la drecera?"
+"<br><br>Voleu tornar a assignar la drecera?"
 
 #: src/models/actionsmodel.cpp:665
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "Reassigna"
+msgstr "Torna a assignar"
 
-#: src/mpv/mpvitem.cpp:390
+#: src/mpv/mpvitem.cpp:389
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Sense"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:458
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla fa fallat"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "S'ha pres una captura de pantalla"
 
-#: src/mpv/mpvitem.cpp:466
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:493
+#: src/mpv/mpvitem.cpp:492
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1601,9 +1601,9 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
-"Quan està marcada, la llista de reproducció se situarà en la part superior "
+"Quan se selecciona, la llista de reproducció se situarà en la part superior "
 "del vídeo.\n"
-"Quan està desmarcada, el vídeo canviarà de mida"
+"Quan es desselecciona, el vídeo canviarà de mida"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
@@ -1646,7 +1646,7 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
-"Si està marcada, es recordarà l'estat (visible/ocult) de la llista de "
+"Si se selecciona, es recordarà l'estat (visible/ocult) de la llista de "
 "reproducció en els reinicis"
 
 #: src/qml/Settings/SettingsWindow.qml:35
@@ -1720,8 +1720,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
-"Quan està marcada, els subtítols es poden representar fora del vídeo, a les "
-"vores negres. Podria no funcionar amb els subtítols «.ass»."
+"Quan se selecciona, els subtítols es podran representar fora del vídeo, en "
+"la vores negres. Podria no funcionar amb els subtítols «.ass»."
 
 #: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
@@ -1855,7 +1855,3 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
-
-#~ msgctxt "@info"
-#~ msgid "Playlist is empty"
-#~ msgstr "La llista de reproducció està buida"
