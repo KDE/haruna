@@ -15,7 +15,7 @@ import org.kde.kirigami 2.20
  *
  * @image html BasicListItemTypes.svg "The styles of the BasicListItem. From left to right top to bottom: light icon + title + subtitle, dark icon + title + subtitle, light icon + label, dark icon + label, light label, dark label." width=50%
  */
-AbstractListItem {
+Item {
     id: listItem
 
     /**
