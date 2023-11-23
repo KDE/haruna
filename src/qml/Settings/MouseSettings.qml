@@ -66,6 +66,7 @@ SettingsBasePage {
 
             property int delegateHeight
 
+            anchors.fill: parent
             implicitHeight: delegateHeight * (mouseButtonsListView.count + 1)
             model: mouseActionsModel
 
@@ -81,7 +82,9 @@ SettingsBasePage {
                         subtitle: MouseSettings[model.key]
                                   ? appActions[MouseSettings[model.key]].text
                                   : i18nc("@label", "No action set")
-                        icon: MouseSettings[model.key] ? "checkmark" : ""
+                        icon.name: MouseSettings[model.key] ? "checkmark" : ""
+
+                        Layout.fillWidth: true
                     }
                     ToolButton {
                         visible: MouseSettings[model.key]
