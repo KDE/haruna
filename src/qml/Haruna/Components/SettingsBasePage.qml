@@ -23,23 +23,21 @@ Kirigami.ScrollablePage {
 
     Component.onDestruction: save()
 
-    actions {
-        contextualActions: [
+    actions: [
+        Kirigami.Action {
+            text: i18nc("@action:intoolbar", "Help")
+            icon.name: "system-help"
             Kirigami.Action {
-                text: i18nc("@action:intoolbar", "Help")
-                iconName: "system-help"
-                Kirigami.Action {
-                    text: i18nc("@action:inmenu", "Haruna help window (english only)")
-                    enabled: root.hasHelp
-                    onTriggered: root.hasHelp ? helpWindow.show() : undefined
-                }
-                Kirigami.Action {
-                    text: i18nc("@action:inmenu", "Haruna handbook")
-                    enabled: root.docPage !== ""
-                    onTriggered: enabled ? app.openDocs(root.docPage) : undefined
-                }
+                text: i18nc("@action:inmenu", "Haruna help window (english only)")
+                enabled: root.hasHelp
+                onTriggered: root.hasHelp ? helpWindow.show() : undefined
             }
-        ]
-    }
+            Kirigami.Action {
+                text: i18nc("@action:inmenu", "Haruna handbook")
+                enabled: root.docPage !== ""
+                onTriggered: enabled ? app.openDocs(root.docPage) : undefined
+            }
+        }
+    ]
 
 }
