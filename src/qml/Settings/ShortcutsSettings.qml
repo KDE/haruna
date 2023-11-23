@@ -8,7 +8,7 @@ import QtQml 2.15
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kquickcontrols 2.0
@@ -48,17 +48,22 @@ SettingsBasePage {
     ListView {
         id: actionsListView
 
-        property int rowHeight: Math.ceil(Kirigami.Units.gridUnit * 2.4)
+        property int rowHeight: Math.ceil(Kirigami.Units.gridUnit * 2)
 
         model: proxyActionsModel
         implicitHeight: rowHeight * model.count
         delegate: ItemDelegate {
+            width: actionsListView.width
             height: actionsListView.rowHeight
+
             contentItem: RowLayout {
                 Kirigami.IconTitleSubtitle {
                     title: model.text
-                    icon: model.icon
+                    icon.name: model.icon
+
+                    Layout.fillWidth: true
                 }
+
                 KeySequenceItem {
                     checkForConflictsAgainst: ShortcutType.None
                     modifierlessAllowed: true
