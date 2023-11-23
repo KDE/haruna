@@ -19,13 +19,11 @@ ItemDelegate {
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
-    label: mainText()
-    subtitle: model.duration
     padding: 0
-    icon: model.isPlaying ? "media-playback-start" : ""
-    backgroundColor: {
-        let color = model.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-        Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, alpha)
+    contentItem: Kirigami.IconTitleSubtitle {
+        icon: model.isPlaying ? "media-playback-start" : ""
+        title: mainText()
+        subtitle: model.duration
     }
 
     onDoubleClicked: {
