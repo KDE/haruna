@@ -76,23 +76,23 @@ target_include_directories(haruna
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
-    Qt${QT_MAJOR_VERSION}::Core
-    Qt${QT_MAJOR_VERSION}::Gui
-    Qt${QT_MAJOR_VERSION}::Qml
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::QuickControls2
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Qml
+    Qt6::Quick
+    Qt6::QuickControls2
 
-    KF${QT_MAJOR_VERSION}::ConfigCore
-    KF${QT_MAJOR_VERSION}::ConfigGui
-    KF${QT_MAJOR_VERSION}::CoreAddons
-    KF${QT_MAJOR_VERSION}::DocTools
-    KF${QT_MAJOR_VERSION}::FileMetaData
-    KF${QT_MAJOR_VERSION}::I18n
-    KF${QT_MAJOR_VERSION}::IconThemes
-    KF${QT_MAJOR_VERSION}::KIOWidgets
-    KF${QT_MAJOR_VERSION}::Kirigami2
-    KF${QT_MAJOR_VERSION}::ConfigWidgets
-    KF${QT_MAJOR_VERSION}::WindowSystem
+    KF6::ConfigCore
+    KF6::ConfigGui
+    KF6::CoreAddons
+    KF6::DocTools
+    KF6::FileMetaData
+    KF6::I18n
+    KF6::IconThemes
+    KF6::KIOWidgets
+    KF6::Kirigami2
+    KF6::ConfigWidgets
+    KF6::WindowSystem
 
     Libmpv::Libmpv
     ${AVUTIL_LIBRARIES}
@@ -104,7 +104,7 @@ target_link_libraries(haruna PRIVATE
 
 if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     target_link_libraries(haruna PRIVATE
-        Qt${QT_MAJOR_VERSION}::DBus
+        Qt6::DBus
     )
     if (QT_MAJOR_VERSION STREQUAL "5")
         target_link_libraries(haruna PRIVATE

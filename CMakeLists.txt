@@ -42,26 +42,26 @@ set(X11_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
 
-find_package(Qt${QT_MAJOR_VERSION}Core)
-set_package_properties(Qt${QT_MAJOR_VERSION}Core PROPERTIES TYPE REQUIRED)
+find_package(Qt6Core)
+set_package_properties(Qt6Core PROPERTIES TYPE REQUIRED)
 
-find_package(Qt${QT_MAJOR_VERSION}Gui)
-set_package_properties(Qt${QT_MAJOR_VERSION}Gui PROPERTIES TYPE REQUIRED)
+find_package(Qt6Gui)
+set_package_properties(Qt6Gui PROPERTIES TYPE REQUIRED)
 
-find_package(Qt${QT_MAJOR_VERSION}Qml)
-set_package_properties(Qt${QT_MAJOR_VERSION}Qml PROPERTIES TYPE REQUIRED)
+find_package(Qt6Qml)
+set_package_properties(Qt6Qml PROPERTIES TYPE REQUIRED)
 
-find_package(Qt${QT_MAJOR_VERSION}Quick)
-set_package_properties(Qt${QT_MAJOR_VERSION}Quick PROPERTIES TYPE REQUIRED)
+find_package(Qt6Quick)
+set_package_properties(Qt6Quick PROPERTIES TYPE REQUIRED)
 
-find_package(Qt${QT_MAJOR_VERSION}QuickControls2)
-set_package_properties(Qt${QT_MAJOR_VERSION}QuickControls2 PROPERTIES TYPE REQUIRED)
+find_package(Qt6QuickControls2)
+set_package_properties(Qt6QuickControls2 PROPERTIES TYPE REQUIRED)
 
 if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS DBus X11Extras)
 
-    find_package(Qt${QT_MAJOR_VERSION}DBus)
-    set_package_properties(Qt${QT_MAJOR_VERSION}DBus PROPERTIES TYPE REQUIRED)
+    find_package(Qt6DBus)
+    set_package_properties(Qt6DBus PROPERTIES TYPE REQUIRED)
 
     if (QT_MAJOR_VERSION STREQUAL "5")
         find_package(Qt5X11Extras)
@@ -80,44 +80,44 @@ find_package(Breeze)
 set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
     URL "https://api.kde.org/frameworks/breeze-icons/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}Config)
-set_package_properties(KF${QT_MAJOR_VERSION}Config PROPERTIES TYPE REQUIRED
+find_package(KF6Config)
+set_package_properties(KF6Config PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfig/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}CoreAddons)
-set_package_properties(KF${QT_MAJOR_VERSION}CoreAddons PROPERTIES TYPE REQUIRED
+find_package(KF6CoreAddons)
+set_package_properties(KF6CoreAddons PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcoreaddons/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}DocTools)
-set_package_properties(KF${QT_MAJOR_VERSION}DocTools PROPERTIES
+find_package(KF6DocTools)
+set_package_properties(KF6DocTools PROPERTIES
     DESCRIPTION "https://api.kde.org/frameworks/kdoctools/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}FileMetaData)
-set_package_properties(KF${QT_MAJOR_VERSION}FileMetaData PROPERTIES TYPE REQUIRED
+find_package(KF6FileMetaData)
+set_package_properties(KF6FileMetaData PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kfilemetadata/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}I18n)
-set_package_properties(KF${QT_MAJOR_VERSION}I18n PROPERTIES TYPE REQUIRED
+find_package(KF6I18n)
+set_package_properties(KF6I18n PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/ki18n/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}IconThemes)
-set_package_properties(KF${QT_MAJOR_VERSION}IconThemes PROPERTIES TYPE REQUIRED
+find_package(KF6IconThemes)
+set_package_properties(KF6IconThemes PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kiconthemes/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}KIO)
-set_package_properties(KF${QT_MAJOR_VERSION}KIO PROPERTIES TYPE REQUIRED
+find_package(KF6KIO)
+set_package_properties(KF6KIO PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kio/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}Kirigami2)
-set_package_properties(KF${QT_MAJOR_VERSION}Kirigami2 PROPERTIES TYPE REQUIRED
+find_package(KF6Kirigami2)
+set_package_properties(KF6Kirigami2 PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kirigami/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}ConfigWidgets)
-set_package_properties(KF${QT_MAJOR_VERSION}ConfigWidgets PROPERTIES TYPE REQUIRED
+find_package(KF6ConfigWidgets)
+set_package_properties(KF6ConfigWidgets PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfigwidgets/html/index.html")
 
-find_package(KF${QT_MAJOR_VERSION}WindowSystem)
-set_package_properties(KF${QT_MAJOR_VERSION}WindowSystem PROPERTIES TYPE REQUIRED
+find_package(KF6WindowSystem)
+set_package_properties(KF6WindowSystem PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kwindowsystem/html/index.html")
 
 find_package(YouTubeDl)
