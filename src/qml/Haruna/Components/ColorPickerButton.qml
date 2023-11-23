@@ -6,7 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -46,7 +46,7 @@ Rectangle {
 
         title: qsTr("Select a color")
         onAccepted: colorChosen(colorPicker.color)
-        color: root.color
+        selectedColor: root.color
     }
 
     Connections {
