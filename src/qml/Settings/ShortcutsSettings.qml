@@ -52,23 +52,23 @@ SettingsBasePage {
 
         model: proxyActionsModel
         implicitHeight: rowHeight * model.count
-        delegate: ListItem {
+        delegate: ItemDelegate {
             height: actionsListView.rowHeight
-            text: model.text
-            leading: Kirigami.Icon {
-                source: model.icon
-                width: Kirigami.Units.iconSizes.smallMedium
-                height: Kirigami.Units.iconSizes.smallMedium
-            }
-            trailing: KeySequenceItem {
-                checkForConflictsAgainst: ShortcutType.None
-                modifierlessAllowed: true
-                keySequence: model.shortcut
+            contentItem: RowLayout {
+                Kirigami.IconTitleSubtitle {
+                    title: model.text
+                    icon: model.icon
+                }
+                KeySequenceItem {
+                    checkForConflictsAgainst: ShortcutType.None
+                    modifierlessAllowed: true
+                    keySequence: model.shortcut
 
-                onKeySequenceChanged: {
-                    if (keySequence !== model.shortcut) {
-                        if (!proxyActionsModel.saveShortcut(model.index, keySequence)) {
-                            keySequence = model.shortcut
+                    onKeySequenceChanged: {
+                        if (keySequence !== model.shortcut) {
+                            if (!proxyActionsModel.saveShortcut(model.index, keySequence)) {
+                                keySequence = model.shortcut
+                            }
                         }
                     }
                 }

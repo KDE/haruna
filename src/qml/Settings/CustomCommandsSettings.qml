@@ -47,7 +47,7 @@ SettingsBasePage {
     Component {
         id: customCommandDelegate
 
-        Kirigami.AbstractListItem {
+        ItemDelegate {
             id: customCommandItem
 
             height: Kirigami.Units.gridUnit * 3

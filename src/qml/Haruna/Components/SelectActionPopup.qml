@@ -76,15 +76,14 @@ Popup {
                 model: proxyActionsModel
                 spacing: 1
                 clip: true
-                delegate: ListItem {
+                delegate: ItemDelegate {
                     property string actionName: model.name
 
-                    label: model.text
-                    trailing: Label {
+                    text: model.text
+                    contentItem: Label {
                         text: model.shortcut
                         opacity: 0.7
                     }
-                    reserveSpaceForIcon: false
                     onClicked: actionSelected(model.name)
                     Keys.onEnterPressed: actionSelected(model.name)
                     Keys.onReturnPressed: actionSelected(model.name)

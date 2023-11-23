@@ -141,7 +141,7 @@ Kirigami.ApplicationWindow {
 
             anchors.fill: parent
             model: pages
-            delegate: Kirigami.BasicListItem {
+            delegate: ItemDelegate {
                 action: modelData
             }
         }

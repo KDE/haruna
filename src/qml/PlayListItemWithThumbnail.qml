@@ -12,7 +12,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.haruna 1.0
 import Haruna.Components 1.0
 
-Kirigami.BasicListItem {
+ItemDelegate {
     id: root
 
     property bool isLocal: model.isLocal
@@ -21,10 +21,6 @@ Kirigami.BasicListItem {
 
     implicitHeight: (Kirigami.Units.gridUnit - 6) * 8
     padding: 0
-    backgroundColor: {
-        let color = model.isPlaying ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-        Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, alpha)
-    }
 
     onDoubleClicked: {
         mpv.playlistProxyModel.setPlayingItem(index)
