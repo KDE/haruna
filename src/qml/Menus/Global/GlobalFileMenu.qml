@@ -43,8 +43,8 @@ Labs.Menu {
             id: recentFilesInstantiator
 
             model: 0
-            onObjectAdded: recentFilesMenu.insertItem( index, object )
-            onObjectRemoved: recentFilesMenu.removeItem( object )
+            onObjectAdded: (index, object) => recentFilesMenu.insertItem( index, object )
+            onObjectRemoved: (index, object) => recentFilesMenu.removeItem( object )
             delegate: Labs.MenuItem {
                 text: model.name
                 onTriggered: window.openFile(model.path)

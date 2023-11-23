@@ -32,8 +32,8 @@ Menu {
                     window.openFile(model.path)
                 }
             }
-            onObjectAdded: recentFilesMenu.insertItem(index, object)
-            onObjectRemoved: recentFilesMenu.removeItem(object)
+            onObjectAdded: (index, object) => recentFilesMenu.insertItem(index, object)
+            onObjectRemoved: (index, object) => recentFilesMenu.removeItem(object)
         }
 
         MenuSeparator {}

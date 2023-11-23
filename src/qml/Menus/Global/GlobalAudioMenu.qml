@@ -22,8 +22,8 @@ Labs.Menu {
         Instantiator {
             id: audioMenuInstantiator
             model: 0
-            onObjectAdded: audioMenu.insertItem( index, object )
-            onObjectRemoved: audioMenu.removeItem( object )
+            onObjectAdded: (index, object) => audioMenu.insertItem( index, object )
+            onObjectRemoved: (index, object) => audioMenu.removeItem( object )
             delegate: Labs.MenuItem {
                 id: audioMenuItem
                 checkable: true
@@ -34,7 +34,7 @@ Labs.Menu {
         }
         Connections {
             target: mpv
-            onFileLoaded: {
+            function onFileLoaded() {
                 audioMenuInstantiator.model = mpv.audioTracksModel
             }
         }

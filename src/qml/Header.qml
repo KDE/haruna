@@ -88,8 +88,8 @@ ToolBar {
                 Instantiator {
                     id: primarySubtitleMenuInstantiator
                     model: mpv.subtitleTracksModel
-                    onObjectAdded: subtitleMenu.addItem( object )
-                    onObjectRemoved: subtitleMenu.removeItem( object )
+                    onObjectAdded: (index, object) => subtitleMenu.addItem(object)
+                    onObjectRemoved: (index, object) => subtitleMenu.removeItem(object)
                     delegate: MenuItem {
                         enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
                         checkable: true
@@ -120,8 +120,8 @@ ToolBar {
                     id: audioMenuInstantiator
 
                     model: mpv.audioTracksModel
-                    onObjectAdded: audioMenu.insertItem( index, object )
-                    onObjectRemoved: audioMenu.removeItem( object )
+                    onObjectAdded: (index, object) => audioMenu.insertItem(index, object)
+                    onObjectRemoved: (index, object) => audioMenu.removeItem(object)
                     delegate: MenuItem {
                         id: audioMenuItem
                         checkable: true

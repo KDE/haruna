@@ -336,7 +336,9 @@ SettingsBasePage {
 
             Connections {
                 target: root
-                onSave: chaptersToSkip.save()
+                function onSave() {
+                    chaptersToSkip.save()
+                }
             }
 
             ToolTip {
@@ -443,7 +445,9 @@ SettingsBasePage {
 
             Connections {
                 target: root
-                onSave: ytdlFormatField.save()
+                function onSave() {
+                    ytdlFormatField.save()
+                }
             }
 
             function save() {

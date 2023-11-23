@@ -83,13 +83,13 @@ Slider {
 
                     Connections {
                         target: mpv
-                        onVideoReconfig: {
+                        function onVideoReconfig() {
                             let width = mpv.getProperty(MpvProperties.Width)
                             let height = mpv.getProperty(MpvProperties.Height)
                             let ar = width / height;
                             previewMpvLoader.aspectRatio = ar
                         }
-                        onFileLoaded: {
+                        function onFileLoaded() {
                             previewMpvLoader.file = mpv.currentUrl
                         }
                     }
@@ -288,15 +288,15 @@ Slider {
 
     Connections {
         target: mpv
-        onFileLoaded: {
+        function onFileLoaded() {
             loopIndicator.startPosition = -1
             loopIndicator.endPosition = -1
             root.chapters = mpv.getProperty(MpvProperties.ChapterList)
         }
-        onChapterChanged: {
+        function onChapterChanged() {
             chaptersPopup.checkedItem = mpv.chapter
         }
-        onPositionChanged: {
+        function onPositionChanged() {
             if (!root.seekStarted) {
                 root.value = mpv.position
             }

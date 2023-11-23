@@ -45,7 +45,9 @@ SettingsBasePage {
 
             Connections {
                 target: root
-                onSave: preferredLanguage.save()
+                function onSave() {
+                    preferredLanguage.save()
+                }
             }
 
             function save() {
@@ -205,7 +207,9 @@ SettingsBasePage {
 
                 Connections {
                     target: root
-                    onSave: subtitleColor.save()
+                    function onSave() {
+                        subtitleColor.save()
+                    }
                 }
 
                 function save() {
@@ -257,7 +261,9 @@ SettingsBasePage {
 
                 Connections {
                     target: root
-                    onSave: shadowColor.save()
+                    function onSave() {
+                        shadowColor.save()
+                    }
                 }
 
                 function save() {
@@ -330,7 +336,9 @@ SettingsBasePage {
 
                 Connections {
                     target: root
-                    onSave: borderColor.save()
+                    function onSave() {
+                        borderColor.save()
+                    }
                 }
 
                 function save() {

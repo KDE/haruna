@@ -43,7 +43,7 @@ Kirigami.ApplicationWindow {
     onXChanged: saveWindowGeometryTimer.restart()
     onYChanged: saveWindowGeometryTimer.restart()
 
-    onVisibilityChanged: {
+    onVisibilityChanged: function(visibility) {
         if (PlaybackSettings.pauseWhileMinimized) {
             if (visibility === Window.Minimized) {
                 if (mpv.pause) {
@@ -318,20 +318,20 @@ Kirigami.ApplicationWindow {
 
     Connections {
         target: app
-        onQmlApplicationMouseLeave: {
+        function onQmlApplicationMouseLeave() {
             if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
                 playList.state = "hidden"
             }
             window.containsMouse = false
         }
-        onQmlApplicationMouseEnter: {
+        function onQmlApplicationMouseEnter() {
             window.containsMouse = true
         }
-        onError: {
+        function onError(message) {
             messageBox.visible = true
             messageBox.text = message
         }
-        onOpenUrl: {
+        function onOpenUrl(url) {
             if (GeneralSettings.appendVideoToSingleInstance) {
                 mpv.playlistModel.appendItem(url.toString())
             } else {

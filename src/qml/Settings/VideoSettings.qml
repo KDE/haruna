@@ -41,7 +41,9 @@ SettingsBasePage {
 
                 Connections {
                     target: root
-                    onSave: defaultCover.save()
+                    function onSave() {
+                        defaultCover.save()
+                    }
                 }
 
                 ToolTip {
@@ -139,7 +141,9 @@ SettingsBasePage {
 
             Connections {
                 target: root
-                onSave: screenshotTemplate.save()
+                function onSave() {
+                    screenshotTemplate.save()
+                }
             }
 
             function save() {

@@ -38,7 +38,9 @@ SettingsBasePage {
 
             Connections {
                 target: root
-                onSave: preferredLanguage.save()
+                function onSave() {
+                    preferredLanguage.save()
+                }
             }
 
             function save() {

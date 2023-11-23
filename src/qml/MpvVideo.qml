@@ -147,7 +147,7 @@ MpvItem {
             }
         }
 
-        onWheel: {
+        onWheel: wheel => {
             if (wheel.angleDelta.y > 0) {
                 if (MouseSettings.scrollUp) {
                     appActions[MouseSettings.scrollUp].trigger()
@@ -159,7 +159,7 @@ MpvItem {
             }
         }
 
-        onPressed: {
+        onPressed: mouse => {
             focus = true
             if (mouse.button === Qt.LeftButton) {
                 if (MouseSettings.left) {
@@ -176,7 +176,7 @@ MpvItem {
             }
         }
 
-        onDoubleClicked: {
+        onDoubleClicked: mouse => {
             if (mouse.button === Qt.LeftButton) {
                 if (MouseSettings.leftx2) {
                     appActions[MouseSettings.leftx2].trigger()

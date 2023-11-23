@@ -51,6 +51,8 @@ Rectangle {
 
     Connections {
         target: window
-        onClosing: colorPicker.close()
+        function onClosing() {
+            colorPicker.close()
+        }
     }
 }

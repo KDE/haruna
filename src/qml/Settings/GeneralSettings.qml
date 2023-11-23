@@ -66,7 +66,9 @@ SettingsBasePage {
 
             Connections {
                 target: root
-                onSave: fileDialogLocation.save()
+                function onSave() {
+                    fileDialogLocation.save()
+                }
             }
 
             ToolTip {

@@ -37,17 +37,17 @@ Item {
     Connections {
         target: actionsModel
 
-        onOpenActionsDialogAction : {
+        function onOpenActionsDialogAction() {
             triggerActionPopup.open()
         }
 
-        onAboutHarunaAction: {
+        function onAboutHarunaAction() {
             settingsLoader.active = true
             settingsLoader.item.currentPage = SettingsWindow.Page.About
             actionsModel.signalEmitter("configureAction")
         }
 
-        onAudioCycleUpAction: {
+        function onAudioCycleUpAction() {
             const tracks = mpv.getProperty(MpvProperties.TrackList)
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
@@ -65,7 +65,7 @@ Item {
             }
         }
 
-        onAudioCycleDownAction: {
+        function onAudioCycleDownAction() {
             const tracks = mpv.getProperty(MpvProperties.TrackList)
             let audioTracksCount = 0
             tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
@@ -83,7 +83,7 @@ Item {
             }
         }
 
-        onConfigureAction: {
+        function onConfigureAction() {
             settingsLoader.active = true
             if (settingsLoader.item.visible) {
                 settingsLoader.item.raise()
@@ -92,34 +92,46 @@ Item {
             }
         }
 
-        onConfigureShortcutsAction: {
+        function onConfigureShortcutsAction() {
             settingsLoader.active = true
             settingsLoader.item.currentPage = SettingsWindow.Page.Shortcuts
             actionsModel.signalEmitter("configureAction")
         }
 
-        onExitFullscreenAction: {
+        function onExitFullscreenAction() {
             window.exitFullscreen()
         }
 
-        onFrameStepForwardAction: mpv.commandAsync(["frame-step"])
+        function onFrameStepForwardAction() {
+            mpv.commandAsync(["frame-step"])
+        }
 
-        onFrameStepBackwardAction: mpv.commandAsync(["frame-back-step"])
+        function onFrameStepBackwardAction() {
+            mpv.commandAsync(["frame-back-step"])
+        }
 
-        onLoadLastPlayedFileAction: window.openFile(GeneralSettings.lastPlayedFile)
+        function onLoadLastPlayedFileAction() {
+            window.openFile(GeneralSettings.lastPlayedFile)
+        }
 
-        onMuteAction: mpv.mute = !mpv.mute
+        function onMuteAction() {
+            mpv.mute = !mpv.mute
+        }
 
-        onOpenContextMenuAction: {
+        function onOpenContextMenuAction() {
             mpvContextMenuLoader.active = true
             mpvContextMenuLoader.item.popup()
         }
 
-        onOpenFileAction: fileDialog.open()
+        function onOpenFileAction() {
+            fileDialog.open()
+        }
 
-        onOpenSubtitlesFileAction: subtitlesFileDialog.open()
+        function onOpenSubtitlesFileAction() {
+            subtitlesFileDialog.open()
+        }
 
-        onOpenUrlAction: {
+        function onOpenUrlAction() {
             if (openUrlPopup.visible) {
                 openUrlPopup.close()
             } else {
@@ -127,52 +139,68 @@ Item {
             }
         }
 
-        onPlaybackSpeedIncreaseAction: {
+        function onPlaybackSpeedIncreaseAction() {
             const speed = mpv.getProperty(MpvProperties.Speed) + 0.1
             mpv.setProperty(MpvProperties.Speed, speed)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
-        onPlaybackSpeedDecreaseAction: {
+        function onPlaybackSpeedDecreaseAction() {
             const speed = mpv.getProperty(MpvProperties.Speed) - 0.1
             mpv.setProperty(MpvProperties.Speed, speed)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
-        onPlaybackSpeedResetAction: {
+        function onPlaybackSpeedResetAction() {
             mpv.setProperty(MpvProperties.Speed, 1.0)
             osd.message(i18nc("@info:tooltip", "Playback speed: %1", 1.0))
         }
 
-        onPlayPauseAction: mpv.pause = !mpv.pause
+        function onPlayPauseAction() {
+            mpv.pause = !mpv.pause
+        }
 
-        onPlayNextAction: {
+        function onPlayNextAction() {
             mpv.playlistProxyModel.playNext()
         }
 
-        onPlayPreviousAction: {
+        function onPlayPreviousAction() {
             mpv.playlistProxyModel.playPrevious()
         }
 
-        onQuitApplicationAction: {
+        function onQuitApplicationAction() {
             Qt.quit()
         }
 
-        onRestartPlaybackAction: mpv.commandAsync(["seek", 0, "absolute"])
+        function onRestartPlaybackAction() {
+            mpv.commandAsync(["seek", 0, "absolute"])
+        }
 
-        onSeekForwardSmallAction: mpv.commandAsync(["seek", GeneralSettings.seekSmallStep, "exact"])
+        function onSeekForwardSmallAction() {
+            mpv.commandAsync(["seek", GeneralSettings.seekSmallStep, "exact"])
+        }
 
-        onSeekBackwardSmallAction: mpv.commandAsync(["seek", -GeneralSettings.seekSmallStep, "exact"])
+        function onSeekBackwardSmallAction() {
+            mpv.commandAsync(["seek", -GeneralSettings.seekSmallStep, "exact"])
+        }
 
-        onSeekForwardMediumAction: mpv.commandAsync(["seek", GeneralSettings.seekMediumStep, "exact"])
+        function onSeekForwardMediumAction() {
+            mpv.commandAsync(["seek", GeneralSettings.seekMediumStep, "exact"])
+        }
 
-        onSeekBackwardMediumAction: mpv.commandAsync(["seek", -GeneralSettings.seekMediumStep, "exact"])
+        function onSeekBackwardMediumAction() {
+            mpv.commandAsync(["seek", -GeneralSettings.seekMediumStep, "exact"])
+        }
 
-        onSeekForwardBigAction: mpv.commandAsync(["seek", GeneralSettings.seekBigStep, "exact"])
+        function onSeekForwardBigAction() {
+            mpv.commandAsync(["seek", GeneralSettings.seekBigStep, "exact"])
+        }
 
-        onSeekBackwardBigAction: mpv.commandAsync(["seek", -GeneralSettings.seekBigStep, "exact"])
+        function onSeekBackwardBigAction() {
+            mpv.commandAsync(["seek", -GeneralSettings.seekBigStep, "exact"])
+        }
 
-        onSeekNextChapterAction: {
+        function onSeekNextChapterAction() {
             const chapters = mpv.getProperty(MpvProperties.ChapterList)
             const currentChapter = mpv.getProperty(MpvProperties.Chapter)
             const nextChapter = currentChapter + 1
@@ -183,9 +211,11 @@ Item {
             mpv.commandAsync(["add", "chapter", "1"])
         }
 
-        onSeekPreviousChapterAction: mpv.commandAsync(["add", "chapter", "-1"])
+        function onSeekPreviousChapterAction() {
+            mpv.commandAsync(["add", "chapter", "-1"])
+        }
 
-        onSeekNextSubtitleAction: {
+        function onSeekNextSubtitleAction() {
             if (mpv.getProperty(MpvProperties.SubtitleId) !== false) {
                 mpv.commandAsync(["sub-seek", "1"])
             } else {
@@ -193,7 +223,7 @@ Item {
             }
         }
 
-        onSeekPreviousSubtitleAction: {
+        function onSeekPreviousSubtitleAction() {
             if (mpv.getProperty(MpvProperties.SubtitleId) !== false) {
                 mpv.commandAsync(["sub-seek", "-1"])
             } else {
@@ -201,14 +231,14 @@ Item {
             }
         }
 
-        onSeekToWatchLaterPositionAction: {
+        function onSeekToWatchLaterPositionAction() {
             if (mpv.watchLaterPosition === 0) {
                 return
             }
             mpv.commandAsync(["seek", mpv.watchLaterPosition, "absolute"])
         }
 
-        onSetLoopAction: {
+        function onSetLoopAction() {
             var a = mpv.getProperty(MpvProperties.ABLoopA)
             var b = mpv.getProperty(MpvProperties.ABLoopB)
 
@@ -232,30 +262,30 @@ Item {
             }
         }
 
-        onScreenshotAction: {
+        function onScreenshotAction() {
             mpv.commandAsync(["screenshot"], MpvItem.Screenshot)
         }
 
-        onSubtitleQuickenAction: {
+        function onSubtitleQuickenAction() {
             const delay = mpv.getProperty(MpvProperties.SubtitleDelay) - 0.1
             mpv.setProperty(MpvProperties.SubtitleDelay, delay)
             osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
-        onSubtitleDelayAction: {
+        function onSubtitleDelayAction() {
             const delay = mpv.getProperty(MpvProperties.SubtitleDelay) + 0.1
             mpv.setProperty(MpvProperties.SubtitleDelay, delay)
             osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
-        onSubtitleToggleAction: {
+        function onSubtitleToggleAction() {
             const visible = mpv.getProperty(MpvProperties.SubtitleVisibility)
-            const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles on")
+            const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles function on")
             mpv.setProperty(MpvProperties.SubtitleVisibility, !visible)
             osd.message(message)
         }
 
-        onSubtitleCycleUpAction: {
+        function onSubtitleCycleUpAction() {
             mpv.command(["cycle", "sid", "up"])
             const currentTrackId = mpv.getProperty(MpvProperties.SubtitleId)
             if (currentTrackId === false) {
@@ -267,7 +297,7 @@ Item {
             }
         }
 
-        onSubtitleCycleDownAction: {
+        function onSubtitleCycleDownAction() {
             mpv.command(["cycle", "sid", "down"])
             const currentTrackId = mpv.getProperty(MpvProperties.SubtitleId)
             if (currentTrackId === false) {
@@ -279,41 +309,47 @@ Item {
             }
         }
 
-        onSubtitleIncreaseFontSizeAction: {
+        function onSubtitleIncreaseFontSizeAction() {
             const subScale = mpv.getProperty(MpvProperties.SubtitleScale) + 0.1
             mpv.setProperty(MpvProperties.SubtitleScale, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
-        onSubtitleDecreaseFontSizeAction: {
+        function onSubtitleDecreaseFontSizeAction() {
             const subScale = mpv.getProperty(MpvProperties.SubtitleScale) - 0.1
             mpv.setProperty(MpvProperties.SubtitleScale, subScale)
             osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
-        onSubtitleMoveUpAction: mpv.commandAsync(["add", "sub-pos", "-1"])
+        function onSubtitleMoveUpAction() {
+            mpv.commandAsync(["add", "sub-pos", "-1"])
+        }
 
-        onSubtitleMoveDownAction: mpv.commandAsync(["add", "sub-pos", "+1"])
+        function onSubtitleMoveDownAction() {
+            mpv.commandAsync(["add", "sub-pos", "+1"])
+        }
 
-        onToggleDeinterlacingAction: {
+        function onToggleDeinterlacingAction() {
             const deinterlaced = !mpv.getProperty(MpvProperties.Deinterlace)
             mpv.setProperty(MpvProperties.Deinterlace, deinterlaced)
             osd.message(i18nc("@info:tooltip", "Deinterlace: %1", deinterlaced))
         }
 
-        onToggleFullscreenAction: window.toggleFullScreen()
+        function onToggleFullscreenAction() {
+            window.toggleFullScreen()
+        }
 
-        onToggleMenuBarAction: {
+        function onToggleMenuBarAction() {
             GeneralSettings.showMenuBar = !GeneralSettings.showMenuBar
             GeneralSettings.save()
         }
 
-        onToggleHeaderAction: {
+        function onToggleHeaderAction() {
             GeneralSettings.showHeader = !GeneralSettings.showHeader
             GeneralSettings.save()
         }
 
-        onTogglePlaylistAction: {
+        function onTogglePlaylistAction() {
             if (playList.state === "visible") {
                 playList.state = "hidden"
             } else {
@@ -321,116 +357,116 @@ Item {
             }
         }
 
-        onVideoPanXLeftAction: {
+        function onVideoPanXLeftAction() {
             const pan = mpv.getProperty(MpvProperties.VideoPanX) - 0.01
             mpv.setProperty(MpvProperties.VideoPanX, pan)
         }
 
-        onVideoPanXRightAction: {
+        function onVideoPanXRightAction() {
             const pan = mpv.getProperty(MpvProperties.VideoPanX) + 0.01
             mpv.setProperty(MpvProperties.VideoPanX, pan)
         }
 
-        onVideoPanYUpAction: {
+        function onVideoPanYUpAction() {
             const pan = mpv.getProperty(MpvProperties.VideoPanY) - 0.01
             mpv.setProperty(MpvProperties.VideoPanY, pan)
         }
 
-        onVideoPanYDownAction: {
+        function onVideoPanYDownAction() {
             const pan = mpv.getProperty(MpvProperties.VideoPanY) + 0.01
             mpv.setProperty(MpvProperties.VideoPanY, pan)
         }
 
-        onVolumeUpAction: {
+        function onVolumeUpAction() {
             mpv.commandAsync(["add", "volume", GeneralSettings.volumeStep])
         }
 
-        onVolumeDownAction: {
+        function onVolumeDownAction() {
             mpv.commandAsync(["add", "volume", -GeneralSettings.volumeStep])
         }
 
-        onZoomInAction: {
+        function onZoomInAction() {
             const zoom = mpv.getProperty(MpvProperties.VideoZoom) + 0.1
             mpv.setProperty(MpvProperties.VideoZoom, zoom)
             osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
 
-        onZoomOutAction: {
+        function onZoomOutAction() {
             const zoom = mpv.getProperty(MpvProperties.VideoZoom) - 0.1
             mpv.setProperty(MpvProperties.VideoZoom, zoom)
             osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
 
-        onZoomResetAction: {
+        function onZoomResetAction() {
             mpv.setProperty(MpvProperties.VideoZoom, 0)
             osd.message(i18nc("@info:tooltip", "Zoom: 0"))
         }
 
 
-        onContrastUpAction: {
+        function onContrastUpAction() {
             const contrast = parseInt(mpv.getProperty(MpvProperties.Contrast)) + 1
             mpv.setProperty(MpvProperties.Contrast, `${contrast}`)
             osd.message(i18nc("@info:tooltip", "Contrast: %1", contrast))
         }
 
-        onContrastDownAction: {
+        function onContrastDownAction() {
             const contrast = parseInt(mpv.getProperty(MpvProperties.Contrast)) - 1
             mpv.setProperty(MpvProperties.Contrast, `${contrast}`)
             osd.message(i18nc("@info:tooltip", "Contrast: %1", contrast))
         }
 
-        onContrastResetAction: {
+        function onContrastResetAction() {
             mpv.setProperty(MpvProperties.Contrast, 0)
             osd.message(i18nc("@info:tooltip", "Contrast: 0"))
         }
 
-        onBrightnessUpAction: {
+        function onBrightnessUpAction() {
             const brightness = parseInt(mpv.getProperty(MpvProperties.Brightness)) + 1
             mpv.setProperty(MpvProperties.Brightness, `${brightness}`)
             osd.message(i18nc("@info:tooltip", "Brightness: %1", brightness))
         }
 
-        onBrightnessDownAction: {
+        function onBrightnessDownAction() {
             const brightness = parseInt(mpv.getProperty(MpvProperties.Brightness)) - 1
             mpv.setProperty(MpvProperties.Brightness, `${brightness}`)
             osd.message(i18nc("@info:tooltip", "Brightness: %1", brightness))
         }
 
-        onBrightnessResetAction: {
+        function onBrightnessResetAction() {
             mpv.setProperty(MpvProperties.Brightness, 0)
             osd.message(i18nc("@info:tooltip", "Brightness: 0"))
         }
 
-        onGammaUpAction: {
+        function onGammaUpAction() {
             const gamma = parseInt(mpv.getProperty(MpvProperties.Gamma)) + 1
             mpv.setProperty(MpvProperties.Gamma, `${gamma}`)
             osd.message(i18nc("@info:tooltip", "Gamma: %1", gamma))
         }
 
-        onGammaDownAction: {
+        function onGammaDownAction() {
             const gamma = parseInt(mpv.getProperty(MpvProperties.Gamma)) - 1
             mpv.setProperty(MpvProperties.Gamma, `${gamma}`)
             osd.message(i18nc("@info:tooltip", "Gamma: %1", gamma))
         }
 
-        onGammaResetAction: {
+        function onGammaResetAction() {
             mpv.setProperty(MpvProperties.Gamma, 0)
             osd.message(i18nc("@info:tooltip", "Gamma: 0"))
         }
 
-        onSaturationUpAction: {
+        function onSaturationUpAction() {
             const saturation = parseInt(mpv.getProperty(MpvProperties.Saturation)) + 1
             mpv.setProperty(MpvProperties.Saturation, `${saturation}`)
             osd.message(i18nc("@info:tooltip", "Saturation: %1", saturation))
         }
 
-        onSaturationDownAction: {
+        function onSaturationDownAction() {
             const saturation = parseInt(mpv.getProperty(MpvProperties.Saturation)) - 1
             mpv.setProperty(MpvProperties.Saturation, `${saturation}`)
             osd.message(i18nc("@info:tooltip", "Saturation: %1", saturation))
         }
 
-        onSaturationResetAction: {
+        function onSaturationResetAction() {
             mpv.setProperty(MpvProperties.Saturation, 0)
             osd.message(i18nc("@info:tooltip", "Saturation: 0"))
         }
