@@ -4,17 +4,17 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Window 2.15
-import QtQuick.Layouts 1.15
-import Qt.labs.platform 1.0 as Platform
-import QtQml 2.15
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
+import QtQuick.Layouts
+import Qt.labs.platform as Platform
+import QtQml
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.haruna 1.0
-import org.kde.haruna.models 1.0
-import Haruna.Components 1.0
+import org.kde.kirigami as Kirigami
+import org.kde.haruna
+import org.kde.haruna.models
+import Haruna.Components
 
 import "Menus"
 import "Menus/Global"

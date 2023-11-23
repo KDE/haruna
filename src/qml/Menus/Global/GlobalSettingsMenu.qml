@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import Qt.labs.platform 1.1 as Labs
+import QtQuick
+import QtQuick.Controls
+import Qt.labs.platform as Labs
 
 import "../../Settings"
 

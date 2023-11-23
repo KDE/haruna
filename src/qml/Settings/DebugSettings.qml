@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQml 2.15
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15
+import QtQml
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.haruna 1.0
-import Haruna.Components 1.0
+import org.kde.kirigami as Kirigami
+import org.kde.haruna
+import Haruna.Components
 
 SettingsBasePage {
     id: root
