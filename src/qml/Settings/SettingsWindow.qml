@@ -142,6 +142,7 @@ Kirigami.ApplicationWindow {
             anchors.fill: parent
             model: pages
             delegate: ItemDelegate {
+                width: settingsPagesList.width
                 action: modelData
             }
         }
