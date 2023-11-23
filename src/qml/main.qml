@@ -207,28 +207,9 @@ Kirigami.ApplicationWindow {
 
     PlayList {
         id: playlist
-        Component.onCompleted: {
-                // hack to allow mpv to be anchored to the loader's item
-                // otherwise mpv is not resized when PlaylistSettings.overlayVideo is disabled
-                if (status === Loader.Ready) {
-                    item.parent = window.contentItem
 
-                    mpv.anchors.left = Qt.binding(
-                        () => {
-                            return (PlaylistSettings.overlayVideo
-                                    ? window.contentItem.left
-                                    : (PlaylistSettings.position === "left" ? playList.right : window.contentItem.left))
-                        })
-                    mpv.anchors.right = Qt.binding(
-                        () => {
-                            return (PlaylistSettings.overlayVideo
-                                    ? window.contentItem.right
-                                    : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right))
-                        })
-                    item.anchors.top = Qt.binding(() => mpv.top)
-                    item.anchors.bottom = Qt.binding(() => footer.top)
-                }
-            }
+        anchors.top: mpv.top
+        anchors.bottom: footer.top
     }
 
     Footer {
