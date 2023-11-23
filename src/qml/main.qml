@@ -27,7 +27,7 @@ Kirigami.ApplicationWindow {
 
     property int previousVisibility: Window.Windowed
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
-    property alias playList: playlistLoader.item
+    property alias playList: playlist
 
     visible: true
     title: mpv.mediaTitle || i18nc("@title:window", "Haruna")
@@ -205,33 +205,30 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    Loader {
-        id: playlistLoader
+    PlayList {
+        id: playlist
+        Component.onCompleted: {
+                // hack to allow mpv to be anchored to the loader's item
+                // otherwise mpv is not resized when PlaylistSettings.overlayVideo is disabled
+                if (status === Loader.Ready) {
+                    item.parent = window.contentItem
 
-        active: true
-        source: app.qtMajorVersion() === 6 ? "PlayListQt6.qml" : "PlayList.qml"
-        onStatusChanged: {
-            // hack to allow mpv to be anchored to the loader's item
-            // otherwise mpv is not resized when PlaylistSettings.overlayVideo is disabled
-            if (status === Loader.Ready) {
-                item.parent = window.contentItem
-
-                mpv.anchors.left = Qt.binding(
-                            () => {
-                                return (PlaylistSettings.overlayVideo
-                                ? window.contentItem.left
-                                : (PlaylistSettings.position === "left" ? playList.right : window.contentItem.left))
-                            })
-                mpv.anchors.right = Qt.binding(
-                            () => {
-                                return (PlaylistSettings.overlayVideo
-                                ? window.contentItem.right
-                                : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right))
-                            })
-                item.anchors.top = Qt.binding(() => mpv.top)
-                item.anchors.bottom = Qt.binding(() => footer.top)
+                    mpv.anchors.left = Qt.binding(
+                        () => {
+                            return (PlaylistSettings.overlayVideo
+                                    ? window.contentItem.left
+                                    : (PlaylistSettings.position === "left" ? playList.right : window.contentItem.left))
+                        })
+                    mpv.anchors.right = Qt.binding(
+                        () => {
+                            return (PlaylistSettings.overlayVideo
+                                    ? window.contentItem.right
+                                    : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right))
+                        })
+                    item.anchors.top = Qt.binding(() => mpv.top)
+                    item.anchors.bottom = Qt.binding(() => footer.top)
+                }
             }
-        }
     }
 
     Footer {

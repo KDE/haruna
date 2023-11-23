@@ -1,15 +1,15 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2023 George Florea Bănuș <georgefb899@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQml 2.12
+import QtQml 2.15
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Shapes 1.15
-import QtGraphicalEffects 1.15
+import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.haruna 1.0
@@ -46,6 +46,7 @@ Slider {
     onValueChanged: {
         GeneralSettings.volume = value.toFixed(0)
         GeneralSettings.save()
+        osd.message(i18nc("@info:tooltip", "Volume: %1", GeneralSettings.volume))
     }
 
     Label {

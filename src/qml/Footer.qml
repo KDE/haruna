@@ -20,7 +20,7 @@ ToolBar {
     property alias footerRow: footerRow
     property alias timeInfo: timeInfo
     property alias playPauseButton: playPauseButton
-    property alias volume: volumeSliderLoader.item
+    property alias volume: volumeSlider
 
     padding: Kirigami.Units.smallSpacing
     position: ToolBar.Footer
@@ -125,11 +125,8 @@ ToolBar {
             }
         }
 
-        Loader {
-            id: volumeSliderLoader
-
-            active: true
-            source: app.qtMajorVersion() === 6 ? "VolumeSliderQt6.qml" : "VolumeSlider.qml"
+        VolumeSlider {
+            id: volumeSlider
         }
 
         Loader {

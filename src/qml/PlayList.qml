@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2023 George Florea Bănuș <georgefb899@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -7,7 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import QtGraphicalEffects 1.15
+import Qt5Compat.GraphicalEffects
 import Qt.labs.platform 1.0 as Platform
 
 import org.kde.kirigami 2.20 as Kirigami
@@ -21,6 +21,7 @@ Item {
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
 
+    height: mpv.height
     width: {
         if (PlaylistSettings.style === "compact") {
             return Kirigami.Units.gridUnit * 21
@@ -78,8 +79,6 @@ Item {
 
                     z: 100
                     width: parent.width
-                    height: PlaylistSettings.showToolbar ? implicitHeight : 0
-                    visible: PlaylistSettings.showToolbar
 
                     InputPopup {
                         id: addUrlPopup
@@ -88,7 +87,7 @@ Item {
                         buttonText: i18nc("@action:button", "Add")
 
                         onUrlOpened: {
-                            mpv.playlistModel.addItem(url, PlaylistModel.Append)
+                            mpv.playlistModel.appendItem(url)
                         }
                     }
 
@@ -198,16 +197,10 @@ Item {
                     anchors.fill: playlistView.contentItem
                     acceptedButtons: Qt.RightButton
                     onClicked: {
-                        const index = playlistView.indexAt(mouseX, mouseY)
-                        if (index === -1) {
-                            return
-                        }
-
-                        const item = playlistView.itemAt(mouseX, mouseY)
-                        contextMenuLoader.row = index
-                        contextMenuLoader.isLocal = item.isLocal
+                        contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
+                        contextMenuLoader.isLocal = playlistView.itemAt(mouseX, mouseY).isLocal
                         contextMenuLoader.active = true
-                        contextMenuLoader.item.popup(item)
+                        contextMenuLoader.item.popup(playlistView.itemAt(mouseX, mouseY))
                     }
                 }
 
@@ -230,12 +223,6 @@ Item {
                     onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Open url")
-                    icon.name: "link"
-                    visible: !contextMenuLoader.isLocal
-                    onClicked: Qt.openUrlExternally(mpv.playlistProxyModel.getFilePath(row))
-                }
-                MenuItem {
                     text: i18nc("@action:inmenu", "Copy file name")
                     onClicked: mpv.playlistProxyModel.copyFileName(row)
                 }
@@ -247,6 +234,7 @@ Item {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove from playlist")
                     icon.name: "remove"
+                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.removeItem(row)
                 }
                 MenuItem {
@@ -260,14 +248,6 @@ Item {
                     icon.name: "delete"
                     visible: contextMenuLoader.isLocal && app.frameworksVersionMinor() >= 100
                     onClicked: mpv.playlistProxyModel.trashFile(row)
-                }
-                MenuSeparator {}
-                MenuItem {
-                    text: i18nc("@action:inmenu", "Scroll to playing item")
-                    onClicked: {
-                        const index = mpv.playlistProxyModel.getPlayingItem()
-                        playlistView.positionViewAtIndex(index, ListView.Beginning)
-                    }
                 }
             }
         }
@@ -335,11 +315,11 @@ Item {
         onAccepted: {
             switch (fileType) {
             case "video":
-                mpv.playlistModel.addItem(fileDialog.file.toString(), PlaylistModel.Append)
+                mpv.playlistModel.appendItem(fileDialog.file.toString())
                 break
             case "playlist":
                 if (fileMode === Platform.FileDialog.OpenFile) {
-                    mpv.playlistModel.addItem(fileDialog.file.toString(), PlaylistModel.Append)
+                    mpv.playlistModel.openM3uFile(fileDialog.file.toString())
                 } else {
                     mpv.playlistProxyModel.saveM3uFile(fileDialog.file.toString())
                 }
@@ -348,6 +328,13 @@ Item {
             }
         }
         onRejected: mpv.focus = true
+    }
+
+    Connections {
+        target: mpv.playlistModel
+        onOpened: {
+            recentFilesModel.addUrl(path, name)
+        }
     }
 
     states: [
