@@ -158,7 +158,7 @@ Item {
                                 Kirigami.Action {
                                     text: i18nc("@action:button", "Clear")
                                     icon.name: "edit-clear-all"
-                                    displayHint: Kirigami.Action.DisplayHint.AlwaysHide
+                                    displayHint: Kirigami.DisplayHint.AlwaysHide
                                     onTriggered: {
                                         mpv.playlistModel.clear()
                                     }
@@ -166,7 +166,7 @@ Item {
                                 Kirigami.Action {
                                     text: i18nc("@action:button", "Save as")
                                     icon.name: "document-save-as"
-                                    displayHint: Kirigami.Action.DisplayHint.AlwaysHide
+                                    displayHint: Kirigami.DisplayHint.AlwaysHide
                                     onTriggered: {
                                         fileDialog.fileType = "playlist"
                                         fileDialog.fileMode = Platform.FileDialog.SaveFile
