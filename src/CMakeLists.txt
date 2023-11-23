@@ -40,11 +40,7 @@ target_sources(haruna
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
-    if (QT_MAJOR_VERSION STREQUAL "5")
-        qt5_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
-    else()
-        qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
-    endif()
+    qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
     target_sources(haruna
         PRIVATE
         lockmanager.h lockmanager.cpp
@@ -70,7 +66,6 @@ target_include_directories(haruna
         models
         mpv
         ${FFMPEG_INCLUDE_DIRS}
-        ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
 )
 
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
@@ -106,10 +101,5 @@ if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     target_link_libraries(haruna PRIVATE
         Qt6::DBus
     )
-    if (QT_MAJOR_VERSION STREQUAL "5")
-        target_link_libraries(haruna PRIVATE
-            Qt5::X11Extras
-        )
-    endif ()
 endif ()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

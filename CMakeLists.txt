@@ -40,7 +40,7 @@ ecm_setup_version(${PROJECT_VERSION}
 
 set(X11_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
 
 find_package(Qt6Core)
 set_package_properties(Qt6Core PROPERTIES TYPE REQUIRED)
@@ -58,15 +58,10 @@ find_package(Qt6QuickControls2)
 set_package_properties(Qt6QuickControls2 PROPERTIES TYPE REQUIRED)
 
 if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
-    find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS DBus X11Extras)
+    find_package(QT NAMES Qt6 REQUIRED COMPONENTS DBus X11Extras)
 
     find_package(Qt6DBus)
     set_package_properties(Qt6DBus PROPERTIES TYPE REQUIRED)
-
-    if (QT_MAJOR_VERSION STREQUAL "5")
-        find_package(Qt5X11Extras)
-        set_package_properties(Qt5X11Extras PROPERTIES TYPE REQUIRED)
-    endif ()
 endif ()
 
 find_package(Libmpv)
