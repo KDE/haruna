@@ -22,6 +22,7 @@ SettingsBasePage {
     ColumnLayout {
         id: content
 
+        anchors.fill: parent
         spacing: Kirigami.Units.largeSpacing
 
         ListModel {
@@ -66,10 +67,7 @@ SettingsBasePage {
 
             property int delegateHeight
 
-            anchors.fill: parent
-            implicitHeight: delegateHeight * (mouseButtonsListView.count + 1)
             model: mouseActionsModel
-
             delegate: ItemDelegate {
                 id: delegate
 
@@ -120,6 +118,8 @@ SettingsBasePage {
                 }
             }
 
+            Layout.fillWidth: true
+            Layout.fillHeight: true
         }
 
         Item {
