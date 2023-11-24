@@ -101,7 +101,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
     m_customPropsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customPropsConfig->groupList();
-    for (const QString &_group : qAsConst((groups))) {
+    for (const QString &_group : std::as_const(groups)) {
         auto configGroup = m_customPropsConfig->group(_group);
         QString type = configGroup.readEntry("Type", QString());
         bool setOnStartup = configGroup.readEntry("SetOnStartup", true);

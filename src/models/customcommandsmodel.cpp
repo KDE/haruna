@@ -84,7 +84,7 @@ void CustomCommandsModel::init()
     QStringList groups = m_customCommandsConfig->groupList();
 
     beginInsertRows(QModelIndex(), 0, groups.size());
-    for (const QString &groupName : qAsConst((groups))) {
+    for (const QString &groupName : std::as_const(groups)) {
         auto configGroup = m_customCommandsConfig->group(groupName);
         auto c = new Command();
         c->commandId = groupName;
