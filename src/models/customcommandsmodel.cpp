@@ -204,7 +204,7 @@ void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
     endRemoveRows();
 
     KSharedConfig::Ptr config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
-    config->group("Shortcuts").deleteEntry(groupName);
+    config->group(QStringLiteral("Shortcuts")).deleteEntry(groupName);
     config->sync();
 }
 

@@ -527,7 +527,7 @@ double MpvItem::loadTimePosition()
     auto hash = md5(currentUrl().toLocalFile());
     auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
     KConfig config(watchLaterConfig);
-    auto pos = config.group("").readEntry("TimePosition", QString::number(0)).toDouble();
+    auto pos = config.group(QString()).readEntry("TimePosition", QString::number(0)).toDouble();
 
     return pos;
 }
