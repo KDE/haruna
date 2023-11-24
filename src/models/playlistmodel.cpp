@@ -13,12 +13,10 @@
 
 #include <KFileItem>
 #include <KFileMetaData/Properties>
-#include <kio_version.h>
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 100, 0)
 #include <KIO/DeleteOrTrashJob>
-#endif
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
+#include <kio_version.h>
 
 #include <QClipboard>
 #include <QCollator>
@@ -509,7 +507,6 @@ void PlaylistProxyModel::renameFile(int row)
 
 void PlaylistProxyModel::trashFile(int row)
 {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     QList<QUrl> urls;
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
@@ -529,7 +526,6 @@ void PlaylistProxyModel::trashFile(int row)
             endRemoveRows();
         }
     });
-#endif
 }
 
 void PlaylistProxyModel::copyFileName(int row)

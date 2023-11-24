@@ -12,11 +12,6 @@
 #include <QOpenGLFramebufferObject>
 #include <QQuickWindow>
 
-#if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN) && QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QtX11Extras/QX11Info>
-#include <qpa/qplatformnativeinterface.h>
-#endif
-
 static void *get_proc_address_mpv(void *ctx, const char *name)
 {
     Q_UNUSED(ctx)
@@ -37,20 +32,11 @@ void on_mpv_redraw(void *ctx)
 MpvRenderer::MpvRenderer(MpvAbstractItem *new_obj)
     : m_mpvAItem{new_obj}
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    m_mpvAItem->window()->setPersistentOpenGLContext(true);
-#endif
     m_mpvAItem->window()->setPersistentSceneGraph(true);
 }
 
 void MpvRenderer::render()
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    if (m_mpvAItem->window() != nullptr) {
-        m_mpvAItem->window()->resetOpenGLState();
-    }
-#endif
-
     QOpenGLFramebufferObject *fbo = framebufferObject();
     mpv_opengl_fbo mpfbo;
     mpfbo.fbo = static_cast<int>(fbo->handle());
@@ -70,12 +56,6 @@ void MpvRenderer::render()
     // See render_gl.h on what OpenGL environment mpv expects, and
     // other API details.
     mpv_render_context_render(m_mpvAItem->m_mpv_gl, params);
-
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    if (m_mpvAItem->window() != nullptr) {
-        m_mpvAItem->window()->resetOpenGLState();
-    }
-#endif
 }
 
 QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size)
@@ -90,22 +70,11 @@ QOpenGLFramebufferObject *MpvRenderer::createFramebufferObject(const QSize &size
 
         mpv_render_param display{MPV_RENDER_PARAM_INVALID, nullptr};
 #if defined(Q_OS_UNIX) && !defined(Q_OS_DARWIN)
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        if (QX11Info::isPlatformX11()) {
-            display.type = MPV_RENDER_PARAM_X11_DISPLAY;
-            display.data = QX11Info::display();
-        }
-        if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
-            display.type = MPV_RENDER_PARAM_WL_DISPLAY;
-            display.data = (struct wl_display *)QGuiApplication::platformNativeInterface()->nativeResourceForWindow("display", nullptr);
-        }
-#else
         if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
             display.type = MPV_RENDER_PARAM_X11_DISPLAY;
             display.data = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
         }
         // TODO: figure out qt6 alternative for the wayland part
-#endif
 #endif
         mpv_render_param params[]{{MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
                                   {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &gl_init_params},

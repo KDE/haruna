@@ -409,12 +409,7 @@ void Application::raiseWindow()
     // todo: replace deprecated methods
     QWindow *window = qobject_cast<QWindow *>(m_rootObject);
     if (window) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        KStartupInfo::setNewStartupId(window, KStartupInfo::startupId());
-        KWindowSystem::activateWindow(window->winId());
-#else
         KWindowSystem::activateWindow(window);
-#endif
     }
 }
 
