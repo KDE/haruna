@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 00:42+0000\n"
+"POT-Creation-Date: 2023-11-24 01:34+0000\n"
 "PO-Revision-Date: 2023-11-08 14:19+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -567,107 +567,110 @@ msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Zvuk: %1 %2"
 
-#: src/qml/Actions.qml:133 src/qml/Actions.qml:139 src/qml/Actions.qml:144
+#: src/qml/Actions.qml:145 src/qml/Actions.qml:151 src/qml/Actions.qml:156
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Rychlost přehrávání: %1"
 
-#: src/qml/Actions.qml:221
+#: src/qml/Actions.qml:251
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Začátek smyčky: %1"
 
-#: src/qml/Actions.qml:225
+#: src/qml/Actions.qml:255
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Smyčka: %1 - %2"
 
-#: src/qml/Actions.qml:231
+#: src/qml/Actions.qml:261
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Smyčka byla vymazána"
 
-#: src/qml/Actions.qml:242 src/qml/Actions.qml:248
+#: src/qml/Actions.qml:272 src/qml/Actions.qml:278
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Časování titulků: %1"
 
-#: src/qml/Actions.qml:253
+#: src/qml/Actions.qml:283
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Titulky vypnuty"
 
-#: src/qml/Actions.qml:253
+#: src/qml/Actions.qml:283
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles on"
 msgctxt "@info:tooltip"
-msgid "Subtitles on"
+msgid "Subtitles function on"
 msgstr "Titulky zapnuty"
 
-#: src/qml/Actions.qml:262 src/qml/Actions.qml:274
+#: src/qml/Actions.qml:292 src/qml/Actions.qml:304
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Titulky: Žádné"
 
-#: src/qml/Actions.qml:266 src/qml/Actions.qml:278
+#: src/qml/Actions.qml:296 src/qml/Actions.qml:308
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Titulky: %1 %2"
 
-#: src/qml/Actions.qml:285 src/qml/Actions.qml:291
+#: src/qml/Actions.qml:315 src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Měřítko titulků: %1"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:335
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Zrušit proklad: %1"
 
-#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
+#: src/qml/Actions.qml:391 src/qml/Actions.qml:397
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zvětšení: %1"
 
-#: src/qml/Actions.qml:366
+#: src/qml/Actions.qml:402
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zvětšení: "
 
-#: src/qml/Actions.qml:373 src/qml/Actions.qml:379
+#: src/qml/Actions.qml:409 src/qml/Actions.qml:415
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:384
+#: src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:390 src/qml/Actions.qml:396
+#: src/qml/Actions.qml:426 src/qml/Actions.qml:432
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Jas: %1"
 
-#: src/qml/Actions.qml:401
+#: src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Jas: 0"
 
-#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
+#: src/qml/Actions.qml:443 src/qml/Actions.qml:449
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:418
+#: src/qml/Actions.qml:454
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
+#: src/qml/Actions.qml:460 src/qml/Actions.qml:466
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Sytost: %1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:471
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasycení: 0"
@@ -738,17 +741,17 @@ msgid ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:29
+#: src/qml/Haruna/Components/SettingsBasePage.qml:28
 msgctxt "@action:intoolbar"
 msgid "Help"
 msgstr "Nápověda"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:32
+#: src/qml/Haruna/Components/SettingsBasePage.qml:31
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
 msgstr ""
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:37
+#: src/qml/Haruna/Components/SettingsBasePage.qml:36
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
 msgstr "Příručka aplikace Haruna"
@@ -805,18 +808,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:373 src/qml/PlayList.qml:332 src/qml/PlayListQt6.qml:312
-#: src/qml/Settings/VideoSettings.qml:68
+#: src/qml/main.qml:351 src/qml/PlayList.qml:312
+#: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vybrat soubor"
 
-#: src/qml/main.qml:400
+#: src/qml/main.qml:378
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Vyberte soubor s titulky"
 
-#: src/qml/main.qml:418
+#: src/qml/main.qml:396
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otevřít"
@@ -981,7 +984,7 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Zobrazit panel nástrojů"
 
-#: src/qml/MpvVideo.qml:46 src/qml/VolumeSliderQt6.qml:49
+#: src/qml/MpvVideo.qml:46 src/qml/VolumeSlider.qml:49
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Hlasitost: %1"
@@ -991,105 +994,95 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Nelze přehrát: %1"
 
-#: src/qml/PlayList.qml:88 src/qml/PlayListQt6.qml:87
+#: src/qml/PlayList.qml:87
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Přidat"
 
-#: src/qml/PlayList.qml:100 src/qml/PlayListQt6.qml:99
+#: src/qml/PlayList.qml:99
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Otevřít seznam skladeb"
 
-#: src/qml/PlayList.qml:109 src/qml/PlayListQt6.qml:108
+#: src/qml/PlayList.qml:108
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Přidat ..."
 
-#: src/qml/PlayList.qml:112 src/qml/PlayListQt6.qml:111
+#: src/qml/PlayList.qml:111
 msgctxt "@action:button"
 msgid "File"
 msgstr "Soubor"
 
-#: src/qml/PlayList.qml:120 src/qml/PlayListQt6.qml:119
+#: src/qml/PlayList.qml:119
 msgctxt "@action:button"
 msgid "Url"
 msgstr "Url"
 
-#: src/qml/PlayList.qml:131 src/qml/PlayListQt6.qml:130
+#: src/qml/PlayList.qml:130
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Seřadit"
 
-#: src/qml/PlayList.qml:135 src/qml/PlayListQt6.qml:134
+#: src/qml/PlayList.qml:134
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Název vzestupně"
 
-#: src/qml/PlayList.qml:141 src/qml/PlayListQt6.qml:140
+#: src/qml/PlayList.qml:140
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Název sestupně"
 
-#: src/qml/PlayList.qml:147 src/qml/PlayListQt6.qml:146
+#: src/qml/PlayList.qml:146
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Délka vzestupně"
 
-#: src/qml/PlayList.qml:153 src/qml/PlayListQt6.qml:152
+#: src/qml/PlayList.qml:152
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Délka sestupně"
 
-#: src/qml/PlayList.qml:160 src/qml/PlayListQt6.qml:159
+#: src/qml/PlayList.qml:159
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Vyprázdnit"
 
-#: src/qml/PlayList.qml:168 src/qml/PlayListQt6.qml:167
+#: src/qml/PlayList.qml:167
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Uložit jako"
 
-#: src/qml/PlayList.qml:227 src/qml/PlayListQt6.qml:220
+#: src/qml/PlayList.qml:220
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Otevřít odpovídající složku"
 
-#: src/qml/PlayList.qml:233
-msgctxt "@action:inmenu"
-msgid "Open url"
-msgstr "Otevřít URL"
-
-#: src/qml/PlayList.qml:239 src/qml/PlayListQt6.qml:226
+#: src/qml/PlayList.qml:226
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Kopírovat název souboru"
 
-#: src/qml/PlayList.qml:243 src/qml/PlayListQt6.qml:230
+#: src/qml/PlayList.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Kopírovat cestu k souboru"
 
-#: src/qml/PlayList.qml:248 src/qml/PlayListQt6.qml:235
+#: src/qml/PlayList.qml:235
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Odstranit ze seznamu skladeb"
 
-#: src/qml/PlayList.qml:253 src/qml/PlayListQt6.qml:241
+#: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Přejmenovat soubor"
 
-#: src/qml/PlayList.qml:259 src/qml/PlayListQt6.qml:247
+#: src/qml/PlayList.qml:247
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Přesunout soubor do koše"
-
-#: src/qml/PlayList.qml:266
-msgctxt "@action:inmenu"
-msgid "Scroll to playing item"
-msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:27
 #: src/qml/Settings/SubtitlesSettings.qml:34
@@ -1103,13 +1096,13 @@ msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "cz, eng atd."
 
-#: src/qml/Settings/AudioSettings.qml:52
-#: src/qml/Settings/SubtitlesSettings.qml:59
+#: src/qml/Settings/AudioSettings.qml:54
+#: src/qml/Settings/SubtitlesSettings.qml:61
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Preferovaná stopa"
 
-#: src/qml/Settings/AudioSettings.qml:75
+#: src/qml/Settings/AudioSettings.qml:77
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Krok hlasitosti"
@@ -1236,27 +1229,27 @@ msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "Výchozí umístění souborů"
 
-#: src/qml/Settings/GeneralSettings.qml:73
+#: src/qml/Settings/GeneralSettings.qml:75
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr "Pokud je prázdné, bude uloženo naposled použité místo."
 
-#: src/qml/Settings/GeneralSettings.qml:83
+#: src/qml/Settings/GeneralSettings.qml:85
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Maximum nedávných souborů´"
 
-#: src/qml/Settings/GeneralSettings.qml:100
+#: src/qml/Settings/GeneralSettings.qml:102
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:108
+#: src/qml/Settings/GeneralSettings.qml:110
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Povolit pouze jednu instanci"
 
-#: src/qml/Settings/GeneralSettings.qml:124
+#: src/qml/Settings/GeneralSettings.qml:126
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.\n"
@@ -1264,64 +1257,64 @@ msgid ""
 "instance."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:138
+#: src/qml/Settings/GeneralSettings.qml:140
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Přidat soubor do seznamu stop"
 
-#: src/qml/Settings/GeneralSettings.qml:154
+#: src/qml/Settings/GeneralSettings.qml:156
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:163
+#: src/qml/Settings/GeneralSettings.qml:165
 msgctxt "@title"
 msgid "Interface"
 msgstr "Rozhraní"
 
-#: src/qml/Settings/GeneralSettings.qml:169
+#: src/qml/Settings/GeneralSettings.qml:171
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:174
+#: src/qml/Settings/GeneralSettings.qml:176
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Zobrazit náhled obrázků"
 
-#: src/qml/Settings/GeneralSettings.qml:186
+#: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Použít přesný náhled"
 
-#: src/qml/Settings/GeneralSettings.qml:203
+#: src/qml/Settings/GeneralSettings.qml:205
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Generování přesného náhledu je pomalé"
 
-#: src/qml/Settings/GeneralSettings.qml:228
+#: src/qml/Settings/GeneralSettings.qml:230
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr "Okno"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:236
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Přizpůsobit velikost videu"
 
-#: src/qml/Settings/GeneralSettings.qml:250
+#: src/qml/Settings/GeneralSettings.qml:252
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:266
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Zapamatovat si velikost a pozici okna"
 
-#: src/qml/Settings/GeneralSettings.qml:279
+#: src/qml/Settings/GeneralSettings.qml:281
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1331,38 +1324,38 @@ msgid ""
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:294
+#: src/qml/Settings/GeneralSettings.qml:296
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Zobrazovat hlavní nabídku"
 
-#: src/qml/Settings/GeneralSettings.qml:305
+#: src/qml/Settings/GeneralSettings.qml:307
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Zobrazit panel nástrojů"
 
-#: src/qml/Settings/GeneralSettings.qml:316
+#: src/qml/Settings/GeneralSettings.qml:318
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Zobrazit značky kapitol"
 
-#: src/qml/Settings/GeneralSettings.qml:325
+#: src/qml/Settings/GeneralSettings.qml:327
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Barevné schéma"
 
-#: src/qml/Settings/GeneralSettings.qml:367
+#: src/qml/Settings/GeneralSettings.qml:369
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Styl prostředí"
 
-#: src/qml/Settings/GeneralSettings.qml:418
+#: src/qml/Settings/GeneralSettings.qml:420
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Použít výchozí motiv ikon Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:426
+#: src/qml/Settings/GeneralSettings.qml:428
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1371,17 +1364,17 @@ msgstr ""
 "Nastaví motiv ikon na to breeze.\n"
 "Vyžaduje restart."
 
-#: src/qml/Settings/MouseSettings.qml:78
+#: src/qml/Settings/MouseSettings.qml:82
 msgctxt "@label"
 msgid "No action set"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:93
+#: src/qml/Settings/MouseSettings.qml:96
 msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:127
+#: src/qml/Settings/MouseSettings.qml:133
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Dvojklik pro nastavení činnosti"
@@ -1523,28 +1516,28 @@ msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:343
+#: src/qml/Settings/PlaybackSettings.qml:345
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:357
+#: src/qml/Settings/PlaybackSettings.qml:359
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:363
+#: src/qml/Settings/PlaybackSettings.qml:365
 msgid "Format selection"
 msgstr "Výběr formátu"
 
-#: src/qml/Settings/PlaybackSettings.qml:382
+#: src/qml/Settings/PlaybackSettings.qml:384
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:429
+#: src/qml/Settings/PlaybackSettings.qml:431
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "nejlepsivideo+nejlepsiaudio/nejlepsi"
@@ -1668,87 +1661,87 @@ msgctxt "@action"
 msgid "About"
 msgstr "O aplikaci"
 
-#: src/qml/Settings/SettingsWindow.qml:176
+#: src/qml/Settings/SettingsWindow.qml:177
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Nápověda"
 
-#: src/qml/Settings/SubtitlesSettings.qml:82
+#: src/qml/Settings/SubtitlesSettings.qml:84
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Povolit titulky v černých okrajích"
 
-#: src/qml/Settings/SubtitlesSettings.qml:91
+#: src/qml/Settings/SubtitlesSettings.qml:93
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:96
+#: src/qml/Settings/SubtitlesSettings.qml:98
 msgctxt "@title"
 msgid "Styling"
 msgstr "Styl"
 
-#: src/qml/Settings/SubtitlesSettings.qml:102
+#: src/qml/Settings/SubtitlesSettings.qml:104
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Rodina písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:134
+#: src/qml/Settings/SubtitlesSettings.qml:136
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Velikost písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:150
+#: src/qml/Settings/SubtitlesSettings.qml:152
 msgctxt "@label"
 msgid "Font style"
 msgstr "Styl písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:155
+#: src/qml/Settings/SubtitlesSettings.qml:157
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Tučné"
 
-#: src/qml/Settings/SubtitlesSettings.qml:167
+#: src/qml/Settings/SubtitlesSettings.qml:169
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Kurzíva"
 
-#: src/qml/Settings/SubtitlesSettings.qml:177
+#: src/qml/Settings/SubtitlesSettings.qml:179
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Barva písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:224
-#: src/qml/Settings/SubtitlesSettings.qml:276
-#: src/qml/Settings/SubtitlesSettings.qml:349
+#: src/qml/Settings/SubtitlesSettings.qml:228
+#: src/qml/Settings/SubtitlesSettings.qml:282
+#: src/qml/Settings/SubtitlesSettings.qml:357
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Obnovit výchozí hodnotu"
 
-#: src/qml/Settings/SubtitlesSettings.qml:230
+#: src/qml/Settings/SubtitlesSettings.qml:234
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Barva stínu"
 
-#: src/qml/Settings/SubtitlesSettings.qml:282
+#: src/qml/Settings/SubtitlesSettings.qml:288
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Posun stínu"
 
-#: src/qml/Settings/SubtitlesSettings.qml:298
-#: src/qml/Settings/SubtitlesSettings.qml:371
+#: src/qml/Settings/SubtitlesSettings.qml:304
+#: src/qml/Settings/SubtitlesSettings.qml:379
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:303
+#: src/qml/Settings/SubtitlesSettings.qml:309
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Barva ohraničení"
 
-#: src/qml/Settings/SubtitlesSettings.qml:355
+#: src/qml/Settings/SubtitlesSettings.qml:363
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Šířka okraje"
@@ -1763,54 +1756,58 @@ msgctxt "placeholder text"
 msgid "path to image"
 msgstr "cesta k obrázku"
 
-#: src/qml/Settings/VideoSettings.qml:48
+#: src/qml/Settings/VideoSettings.qml:50
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
 
-#: src/qml/Settings/VideoSettings.qml:79
+#: src/qml/Settings/VideoSettings.qml:81
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Snímky obrazovky"
 
-#: src/qml/Settings/VideoSettings.qml:89
+#: src/qml/Settings/VideoSettings.qml:91
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Formát"
 
-#: src/qml/Settings/VideoSettings.qml:129
+#: src/qml/Settings/VideoSettings.qml:131
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Šablona"
 
-#: src/qml/Settings/VideoSettings.qml:153
+#: src/qml/Settings/VideoSettings.qml:157
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr ""
 
-#: src/qml/Settings/VideoSettings.qml:163
+#: src/qml/Settings/VideoSettings.qml:167
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
-#: src/qml/Settings/VideoSettings.qml:180
+#: src/qml/Settings/VideoSettings.qml:184
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Jas"
 
-#: src/qml/Settings/VideoSettings.qml:197
+#: src/qml/Settings/VideoSettings.qml:201
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:214
+#: src/qml/Settings/VideoSettings.qml:218
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Nasycení"
 
-#: src/qml/Settings/VideoSettings.qml:228
+#: src/qml/Settings/VideoSettings.qml:232
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open url"
+#~ msgstr "Otevřít URL"
