@@ -23,8 +23,6 @@ int main(int argc, char *argv[])
 {
     qSetMessagePattern(QStringLiteral("%{function}() : %{message}\n"));
 
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setOrganizationName(QStringLiteral("KDE"));
     QApplication::setApplicationName(QStringLiteral("Haruna"));
     QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
