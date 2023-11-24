@@ -11,7 +11,7 @@
 
 MpvPreview::MpvPreview()
 {
-    mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
+    observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
 
     setProperty(MpvProperties::self()->Mute, true);
     setProperty(MpvProperties::self()->Pause, true);
@@ -28,12 +28,15 @@ MpvPreview::MpvPreview()
     setProperty(MpvProperties::self()->AudioDisplay, false);
 
     connect(this, &MpvPreview::fileChanged, this, &MpvPreview::loadFile);
-    connect(this, &MpvPreview::ready, this, &MpvPreview::loadFile);
+    connect(this, &MpvPreview::ready, this, [=]() {
+        m_isReady = true;
+        loadFile();
+    });
 }
 
 void MpvPreview::loadFile()
 {
-    if (m_mpv && m_mpv_gl && !m_file.isEmpty()) {
+    if (m_isReady && !m_file.isEmpty()) {
         commandAsync(QStringList() << QStringLiteral("loadfile") << m_file);
     }
 }

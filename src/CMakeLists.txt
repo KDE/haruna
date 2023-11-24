@@ -24,12 +24,9 @@ target_sources(haruna
     models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp
     models/tracksmodel.h models/tracksmodel.cpp
     models/playlistmodel.h models/playlistmodel.cpp
-    mpv/mpvabstractitem.h mpv/mpvabstractitem.cpp
-    mpv/mpvcontroller.h mpv/mpvcontroller.cpp
     mpv/mpvitem.h mpv/mpvitem.cpp
     mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvproperties.h
-    mpv/mpvrenderer.h mpv/mpvrenderer.cpp
     playlistitem.h playlistitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     track.h track.cpp
@@ -89,7 +86,7 @@ target_link_libraries(haruna PRIVATE
     KF6::ConfigWidgets
     KF6::WindowSystem
 
-    Libmpv::Libmpv
+    MpvQt::MpvQt
     ${AVUTIL_LIBRARIES}
     ${AVFILTER_LIBRARIES}
     ${AVFORMAT_LIBRARIES}

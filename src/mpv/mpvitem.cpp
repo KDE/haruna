@@ -20,13 +20,13 @@
 
 #include <KLocalizedString>
 #include <KShell>
+#include <MpvController>
 
 #include "application.h"
 #include "audiosettings.h"
 #include "generalsettings.h"
 #include "global.h"
 #include "informationsettings.h"
-#include "mpvcontroller.h"
 #include "mpvproperties.h"
 #include "playbacksettings.h"
 #include "playlistmodel.h"
@@ -159,22 +159,22 @@ void MpvItem::initProperties()
 void MpvItem::setupConnections()
 {
     // clang-format off
-    connect(m_mpvController, &MpvController::propertyChanged,
+    connect(mpvController(), &MpvController::propertyChanged,
             this, &MpvItem::onPropertyChanged, Qt::QueuedConnection);
 
-    connect(m_mpvController, &MpvController::fileStarted,
+    connect(mpvController(), &MpvController::fileStarted,
             this, &MpvItem::fileStarted, Qt::QueuedConnection);
 
-    connect(m_mpvController, &MpvController::fileLoaded,
+    connect(mpvController(), &MpvController::fileLoaded,
             this, &MpvItem::fileLoaded, Qt::QueuedConnection);
 
-    connect(m_mpvController, &MpvController::endFile,
+    connect(mpvController(), &MpvController::endFile,
             this, &MpvItem::endFile, Qt::QueuedConnection);
 
-    connect(m_mpvController, &MpvController::videoReconfig,
+    connect(mpvController(), &MpvController::videoReconfig,
             this, &MpvItem::videoReconfig, Qt::QueuedConnection);
 
-    connect(m_mpvController, &MpvController::asyncReply,
+    connect(mpvController(), &MpvController::asyncReply,
             this, &MpvItem::onAsyncReply, Qt::QueuedConnection);
 
     connect(this, &MpvItem::currentUrlChanged, this, [=]() {
@@ -507,7 +507,7 @@ void MpvItem::saveTimePosition()
         return;
     }
 
-    m_mpvController->getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::SavePosition));
+    mpvController()->getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::SavePosition));
 }
 
 double MpvItem::loadTimePosition()

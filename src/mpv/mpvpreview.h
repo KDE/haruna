@@ -49,6 +49,7 @@ private:
     QString m_file;
     bool m_accuratePreview;
     bool m_isLocalFile{false};
+    bool m_isReady{false};
 };
 
 #endif // MPVPREVIEW_H

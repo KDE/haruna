@@ -7,8 +7,9 @@
 #ifndef MPVOBJECT_H
 #define MPVOBJECT_H
 
+#include <MpvAbstractItem>
+
 #include "chaptersmodel.h"
-#include "mpvabstractitem.h"
 #include "playlistmodel.h"
 #include "track.h"
 #include "tracksmodel.h"

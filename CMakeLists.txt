@@ -64,9 +64,9 @@ if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     set_package_properties(Qt6DBus PROPERTIES TYPE REQUIRED)
 endif ()
 
-find_package(Libmpv)
-set_package_properties(Libmpv PROPERTIES TYPE REQUIRED
-    URL "https://mpv.io")
+find_package(MpvQt)
+set_package_properties(MpvQt PROPERTIES TYPE REQUIRED
+    URL "https://invent.kde.org/libraries/mpvqt")
 
 find_package(FFmpeg)
 set_package_properties(FFmpeg PROPERTIES TYPE REQUIRED)
