@@ -22,11 +22,27 @@ ItemDelegate {
     implicitWidth: ListView.view.width
     implicitHeight: (Kirigami.Units.gridUnit - 6) * 8
     padding: 0
+    highlighted: model.isPlaying
 
     onDoubleClicked: {
         mpv.playlistProxyModel.setPlayingItem(index)
         mpv.loadFile(path)
         mpv.pause = false
+    }
+
+    background: Rectangle {
+        anchors.fill: parent
+        color: {
+            if (hovered) {
+                return Qt.alpha(Kirigami.Theme.hoverColor, alpha)
+            }
+
+            if (highlighted) {
+                return Qt.alpha(Kirigami.Theme.highlightColor, alpha)
+            }
+
+            return Qt.alpha(Kirigami.Theme.backgroundColor, alpha)
+        }
     }
 
     contentItem: Item {
@@ -38,8 +54,9 @@ ItemDelegate {
 
             Label {
                 text: pad(root.rowNumber, playlistView.count.toString().length)
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 visible: PlaylistSettings.showRowNumber
-                font.pointSize: (window.isFullScreen() && playList.bigFont)
+                font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
                                 ? Kirigami.Units.gridUnit
                                 : Kirigami.Units.gridUnit - 6
                 horizontalAlignment: Qt.AlignCenter
@@ -75,18 +92,21 @@ ItemDelegate {
 
                     Rectangle {
                         visible: model.duration.length > 0
-                        height: 25
+                        height: durationLabel.font.pointSize + (Kirigami.Units.smallSpacing * 2)
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
                         anchors.right: parent.right
-                        color: Kirigami.Theme.alternateBackgroundColor
+                        color: Qt.alpha(Kirigami.Theme.textColor, 0.4)
 
                         Label {
+                            id: durationLabel
+
                             anchors.centerIn: parent
-                            color: Kirigami.Theme.textColor
+                            anchors.margins: Kirigami.Units.largeSpacing
+                            color: Kirigami.Theme.highlightedTextColor
                             horizontalAlignment: Qt.AlignCenter
                             text: model.duration
-                            font.pointSize: (window.isFullScreen() && playList.bigFont)
+                            font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
                                             ? Kirigami.Units.gridUnit
                                             : Kirigami.Units.gridUnit - 5
 
@@ -98,6 +118,7 @@ ItemDelegate {
 
             Kirigami.Icon {
                 source: "media-playback-start"
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
                 visible: model.isPlaying
@@ -107,12 +128,12 @@ ItemDelegate {
 
             LabelWithTooltip {
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
-                color: Kirigami.Theme.textColor
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                font.pointSize: (window.isFullScreen() && playList.bigFont)
+                font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
                                 ? Kirigami.Units.gridUnit
                                 : Kirigami.Units.gridUnit - 5
                 font.weight: model.isPlaying ? Font.ExtraBold : Font.Normal
