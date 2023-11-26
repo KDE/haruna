@@ -39,7 +39,8 @@ ItemDelegate {
     }
 
     contentItem: Kirigami.IconTitleSubtitle {
-        icon: model.isPlaying ? "media-playback-start" : ""
+        icon.name: model.isPlaying ? "media-playback-start" : ""
+        icon.color: color
         title: mainText()
         subtitle: model.duration
         color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
