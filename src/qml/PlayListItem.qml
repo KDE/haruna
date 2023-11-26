@@ -23,6 +23,7 @@ ItemDelegate {
                            : Kirigami.Units.gridUnit - 6
 
     padding: 0
+    implicitWidth: ListView.view.width
 
     contentItem: Item {
         anchors.fill: parent

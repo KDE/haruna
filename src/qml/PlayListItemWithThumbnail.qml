@@ -19,6 +19,7 @@ ItemDelegate {
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
+    implicitWidth: ListView.view.width
     implicitHeight: (Kirigami.Units.gridUnit - 6) * 8
     padding: 0
 

@@ -19,6 +19,7 @@ ItemDelegate {
     property string rowNumber: (index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
+    implicitWidth: ListView.view.width
     padding: 0
     contentItem: Kirigami.IconTitleSubtitle {
         icon: model.isPlaying ? "media-playback-start" : ""
