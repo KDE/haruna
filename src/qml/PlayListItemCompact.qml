@@ -21,21 +21,36 @@ ItemDelegate {
 
     implicitWidth: ListView.view.width
     padding: 0
+    highlighted: model.isPlaying
+
+    background: Rectangle {
+        anchors.fill: parent
+        color: {
+            if (hovered) {
+                return Qt.alpha(Kirigami.Theme.hoverColor, alpha)
+            }
+
+            if (highlighted) {
+                return Qt.alpha(Kirigami.Theme.highlightColor, alpha)
+            }
+
+            return Qt.alpha(Kirigami.Theme.backgroundColor, alpha)
+        }
+    }
+
     contentItem: Kirigami.IconTitleSubtitle {
         icon: model.isPlaying ? "media-playback-start" : ""
         title: mainText()
         subtitle: model.duration
+        color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+        ToolTip.text: title
+        ToolTip.visible: root.hovered
     }
 
     onDoubleClicked: {
         mpv.playlistProxyModel.setPlayingItem(index)
         mpv.loadFile(path)
         mpv.pause = false
-    }
-
-    ToolTip {
-        text: (PlaylistSettings.showMediaTitle ? model.title : model.name)
-        visible: root.containsMouse
     }
 
     function mainText() {
