@@ -24,6 +24,22 @@ ItemDelegate {
 
     padding: 0
     implicitWidth: ListView.view.width
+    highlighted: model.isPlaying
+
+    background: Rectangle {
+        anchors.fill: parent
+        color: {
+            if (hovered) {
+                return Qt.alpha(Kirigami.Theme.hoverColor, alpha)
+            }
+
+            if (highlighted) {
+                return Qt.alpha(Kirigami.Theme.highlightColor, alpha)
+            }
+
+            return Qt.alpha(Kirigami.Theme.backgroundColor, alpha)
+        }
+    }
 
     contentItem: Item {
         anchors.fill: parent
@@ -32,6 +48,7 @@ ItemDelegate {
             spacing: Kirigami.Units.largeSpacing
             Label {
                 text: pad(root.rowNumber, playlistView.count.toString().length)
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 visible: PlaylistSettings.showRowNumber
                 font.pointSize: root.fontSize
                 horizontalAlignment: Qt.AlignCenter
@@ -54,6 +71,7 @@ ItemDelegate {
 
             Kirigami.Icon {
                 source: "media-playback-start"
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
                 visible: model.isPlaying
@@ -61,7 +79,7 @@ ItemDelegate {
             }
 
             LabelWithTooltip {
-                color: Kirigami.Theme.textColor
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
@@ -80,6 +98,7 @@ ItemDelegate {
 
             Label {
                 text: model.duration
+                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 visible: model.duration.length > 0
                 font.pointSize: root.fontSize
                 horizontalAlignment: Qt.AlignCenter
