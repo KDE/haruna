@@ -49,7 +49,7 @@ SettingsBasePage {
         id: actionsListView
 
         model: proxyActionsModel
-        implicitHeight: rowHeight * model.count
+
         delegate: ItemDelegate {
             width: actionsListView.width
 
