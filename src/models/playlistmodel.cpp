@@ -465,11 +465,7 @@ void PlaylistProxyModel::saveM3uFile(const QString &path)
 void PlaylistProxyModel::highlightInFileManager(int row)
 {
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
-    QUrl url(path);
-    if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
-    }
-    KIO::highlightInFileManager({url});
+    KIO::highlightInFileManager({QUrl::fromUserInput(path)});
 }
 
 void PlaylistProxyModel::removeItem(int row)
