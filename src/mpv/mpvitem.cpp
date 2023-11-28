@@ -437,9 +437,9 @@ void MpvItem::loadTracks()
     Q_EMIT subtitleTracksModelChanged();
 }
 
-void MpvItem::onAsyncReply(const QVariant &data, mpv_event *event)
+void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
 {
-    switch (static_cast<AsyncIds>(event->reply_userdata)) {
+    switch (static_cast<AsyncIds>(event.reply_userdata)) {
     case AsyncIds::None: {
         break;
     }
@@ -454,7 +454,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event *event)
         break;
     }
     case AsyncIds::Screenshot: {
-        if (event->error < 0) {
+        if (event.error < 0) {
             osdMessage(i18nc("@info:tooltip osd", "Screenshot failed"));
             break;
         }
@@ -467,7 +467,6 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event *event)
         break;
     }
     }
-    delete event;
 }
 
 void MpvItem::onChapterChanged()
