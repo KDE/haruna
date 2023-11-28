@@ -48,13 +48,10 @@ SettingsBasePage {
     ListView {
         id: actionsListView
 
-        property int rowHeight: Math.ceil(Kirigami.Units.gridUnit * 2)
-
         model: proxyActionsModel
         implicitHeight: rowHeight * model.count
         delegate: ItemDelegate {
             width: actionsListView.width
-            height: actionsListView.rowHeight
 
             contentItem: RowLayout {
                 Kirigami.IconTitleSubtitle {
