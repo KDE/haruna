@@ -30,7 +30,7 @@ SettingsBasePage {
             Kirigami.ActionTextField {
                 id: configFolderField
 
-                text: app.urlExists(app.configFolderPath(false)) ? app.configFolderPath(false) : ""
+                text: app.configFolderPath()
                 readOnly: true
                 rightActions: Kirigami.Action {
                     icon.name: "document-open-folder"
@@ -54,7 +54,7 @@ SettingsBasePage {
             Kirigami.ActionTextField {
                 id: configFileField
 
-                text: app.urlExists(app.configFilePath(false)) ? app.configFilePath(false) : ""
+                text: app.configFilePath()
                 readOnly: true
                 rightActions: Kirigami.Action {
                     icon.name: "document-open"
@@ -78,7 +78,7 @@ SettingsBasePage {
             Kirigami.ActionTextField {
                 id: ccConfigFileField
 
-                text: app.urlExists(app.ccConfigFilePath(false)) ? app.ccConfigFilePath(false) : ""
+                text: app.ccConfigFilePath()
                 readOnly: true
                 rightActions: Kirigami.Action {
                     icon.name: "document-open"
