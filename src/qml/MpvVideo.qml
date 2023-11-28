@@ -10,6 +10,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.kde.haruna
+import org.kde.haruna.models
 import org.kde.kirigami as Kirigami
 
 MpvItem {
@@ -84,8 +85,8 @@ MpvItem {
                 return
             }
 
-            const item = playlistModel.getItem(playlistProxyModel.getPlayingItem())
-            const title = item.mediaTitle() || item.fileName()
+            const index = playlistModel.index(playlistProxyModel.getPlayingItem(), 0)
+            const title = playlistModel.data(index, PlaylistModel.TitleRole) || playlistModel.data(index, PlaylistModel.NameRole)
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
         }
         if (playlistProxyModel.getPlayingItem() + 1 < window.playList.playlistView.count) {

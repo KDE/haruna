@@ -65,6 +65,7 @@ public:
         PlayingRole,
         IsLocalRole,
     };
+    Q_ENUM(Roles)
 
     enum Behaviour {
         Append,
