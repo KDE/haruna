@@ -188,7 +188,9 @@ SettingsBasePage {
                 id: subtitleColorPicker
 
                 color: SubtitlesSettings.fontColor
-                onColorChosen: subtitleColor.text = color
+                onColorChosen: function (color) {
+                    subtitleColor.text = color
+                }
 
                 Layout.preferredHeight: subtitleColor.height
                 Layout.preferredWidth: subtitleColor.height
@@ -242,7 +244,9 @@ SettingsBasePage {
                 id: shadowColorPicker
 
                 color: SubtitlesSettings.shadowColor
-                onColorChosen: shadowColor.text = color
+                onColorChosen: function (color) {
+                    shadowColor.text = color
+                }
 
                 Layout.preferredHeight: shadowColor.height
                 Layout.preferredWidth: shadowColor.height
@@ -317,7 +321,9 @@ SettingsBasePage {
                 id: borderColorPicker
 
                 color: SubtitlesSettings.borderColor
-                onColorChosen: borderColor.text = color
+                onColorChosen: function (color) {
+                    borderColor.text = color
+                }
 
                 Layout.preferredHeight: borderColor.height
                 Layout.preferredWidth: borderColor.height

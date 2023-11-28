@@ -24,7 +24,7 @@ Rectangle {
                   : Kirigami.Theme.alternateBackgroundColor
 
     onColorChosen: {
-        root.color = colorPicker.color
+        root.color = colorPicker.selectedColor
     }
 
     MouseArea {
@@ -32,7 +32,9 @@ Rectangle {
 
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: colorPicker.open()
+        onClicked: {
+            colorPicker.open()
+        }
         cursorShape: containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
     }
 
@@ -45,14 +47,9 @@ Rectangle {
         id: colorPicker
 
         title: qsTr("Select a color")
-        onAccepted: colorChosen(colorPicker.color)
+        onAccepted: colorChosen(colorPicker.selectedColor)
         selectedColor: root.color
+        parentWindow: settingsLoader.item
     }
 
-    Connections {
-        target: window
-        function onClosing() {
-            colorPicker.close()
-        }
-    }
 }
