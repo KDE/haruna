@@ -79,10 +79,19 @@ Popup {
                 delegate: ItemDelegate {
                     property string actionName: model.name
 
-                    text: model.text
-                    contentItem: Label {
-                        text: model.shortcut
-                        opacity: 0.7
+                    width: actionsListView.width
+
+                    contentItem: RowLayout {
+                        Label {
+                            text: model.text
+
+                            Layout.fillWidth: true
+                        }
+
+                        Label {
+                            text: model.shortcut
+                            opacity: 0.7
+                        }
                     }
                     onClicked: actionSelected(model.name)
                     Keys.onEnterPressed: actionSelected(model.name)
