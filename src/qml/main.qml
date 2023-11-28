@@ -199,7 +199,7 @@ Kirigami.ApplicationWindow {
             title: ""
             subtitle: ""
 
-            onActionSelected: {
+            onActionSelected: function (actionName) {
                 appActions[actionName].trigger()
             }
         }

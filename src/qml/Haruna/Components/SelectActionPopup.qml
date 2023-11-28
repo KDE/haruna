@@ -9,6 +9,8 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
+import org.kde.haruna.models
+
 Popup {
     id: root
 
@@ -51,7 +53,7 @@ Popup {
             id: filterActionsField
 
             focus: true
-            onAccepted: proxyActionsModel.setNameFilter(text)
+            onAccepted: selectActionModel.setNameFilter(text)
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
             KeyNavigation.up: actionsListView
@@ -73,7 +75,12 @@ Popup {
             ListView {
                 id: actionsListView
 
-                model: proxyActionsModel
+                model: ProxyActionsModel {
+                    id: selectActionModel
+
+                    sourceModel: actionsModel
+                }
+
                 spacing: 1
                 clip: true
                 delegate: ItemDelegate {
