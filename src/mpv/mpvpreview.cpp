@@ -43,7 +43,7 @@ void MpvPreview::loadFile()
 
 double MpvPreview::position()
 {
-    return getCachedPropertyValue(MpvProperties::self()->Position).toDouble();
+    return getProperty(MpvProperties::self()->Position).toDouble();
 }
 
 void MpvPreview::setPosition(double value)
