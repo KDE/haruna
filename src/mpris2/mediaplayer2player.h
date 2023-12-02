@@ -8,6 +8,7 @@
 #define MEDIAPLAYER2PLAYER_H
 
 #include <QDBusAbstractAdaptor>
+#include <QImage>
 
 #include "mpvitem.h"
 
@@ -79,6 +80,7 @@ Q_SIGNALS:
 
 private:
     MpvItem *m_mpv;
+    QImage m_image;
     QString getThumbnail(const QString &path);
 };
 

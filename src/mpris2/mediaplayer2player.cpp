@@ -261,7 +261,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
             }
         } else {
             // try to generate QImage from file
-            QImage image = Worker::instance()->frameToImage(path, 250);
+            QImage image = m_image;
             if (image.isNull()) {
                 // generation failed, use user set default cover
                 return VideoSettings::defaultCover();
