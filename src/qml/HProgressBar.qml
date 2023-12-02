@@ -81,19 +81,6 @@ Slider {
                         }
                     }
 
-                    Connections {
-                        target: mpv
-                        function onVideoReconfig() {
-                            let width = mpv.getProperty(MpvProperties.Width)
-                            let height = mpv.getProperty(MpvProperties.Height)
-                            let ar = width / height;
-                            previewMpvLoader.aspectRatio = ar
-                        }
-                        function onFileLoaded() {
-                            previewMpvLoader.file = mpv.currentUrl
-                        }
-                    }
-
                     Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
                     Layout.preferredHeight: Math.ceil(Layout.preferredWidth / previewMpvLoader.aspectRatio)
                     Layout.alignment: Qt.AlignCenter
@@ -289,6 +276,7 @@ Slider {
     Connections {
         target: mpv
         function onFileLoaded() {
+            previewMpvLoader.file = mpv.currentUrl
             loopIndicator.startPosition = -1
             loopIndicator.endPosition = -1
             root.chapters = mpv.getProperty(MpvProperties.ChapterList)
@@ -300,6 +288,12 @@ Slider {
             if (!root.seekStarted) {
                 root.value = mpv.position
             }
+        }
+        function onVideoReconfig() {
+            let width = mpv.getProperty(MpvProperties.Width)
+            let height = mpv.getProperty(MpvProperties.Height)
+            let ar = width / height;
+            previewMpvLoader.aspectRatio = ar
         }
     }
 }
