@@ -29,7 +29,6 @@ target_sources(haruna
     mpv/mpvproperties.h
     playlistitem.h playlistitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
-    track.h track.cpp
     worker.h worker.cpp
     qml.qrc
     ../help/help.qrc

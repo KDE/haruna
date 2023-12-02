@@ -10,8 +10,6 @@
 #include <QAbstractListModel>
 #include <QObject>
 
-#include "track.h"
-
 class TracksModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -23,10 +21,10 @@ public:
     virtual QHash<int, QByteArray> roleNames() const override;
 
 public Q_SLOTS:
-    void setTracks(QMap<int, Track *> tracks);
+    void setTracks(QList<QVariant> tracks);
 
 private:
-    QMap<int, Track *> m_tracks;
+    QList<QVariant> m_tracks;
 };
 
 #endif // TRACKSMODEL_H

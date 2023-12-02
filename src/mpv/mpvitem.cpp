@@ -32,7 +32,6 @@
 #include "playlistmodel.h"
 #include "playlistsettings.h"
 #include "subtitlessettings.h"
-#include "track.h"
 #include "tracksmodel.h"
 #include "videosettings.h"
 #include "worker.h"
@@ -69,7 +68,6 @@ MpvItem::MpvItem(QQuickItem *parent)
     observeProperty(MpvProperties::self()->SecondarySubtitleId, MPV_FORMAT_INT64);
     observeProperty(MpvProperties::self()->Chapter, MPV_FORMAT_INT64);
     observeProperty(MpvProperties::self()->ChapterList, MPV_FORMAT_NODE);
-    observeProperty(MpvProperties::self()->TrackList, MPV_FORMAT_NODE);
 
     initProperties();
     setupConnections();
@@ -182,6 +180,7 @@ void MpvItem::setupConnections()
     });
 
     connect(this, &MpvItem::fileLoaded, this, [=]() {
+        getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
         if (!getProperty(MpvProperties::self()->VideoId).toBool()) {
             command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
@@ -344,9 +343,6 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
     } else if (property == MpvProperties::self()->Height) {
         Q_EMIT videoHeightChanged();
-
-    } else if (property == MpvProperties::self()->TrackList) {
-        loadTracks();
     }
 }
 
@@ -364,59 +360,28 @@ void MpvItem::loadFile(const QString &file)
     GeneralSettings::self()->save();
 }
 
-void MpvItem::loadTracks()
+void MpvItem::loadTracks(QList<QVariant> tracks)
 {
     m_subtitleTracks.clear();
     m_audioTracks.clear();
 
-    auto none = new Track();
-    none->setId(0);
-    none->setTitle(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"));
-    m_subtitleTracks.insert(0, none);
+    QMap<QString, QVariant> none = {
+        {QStringLiteral("id"), QVariant(0)},
+        {QStringLiteral("title"), QVariant(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"))},
+    };
+    m_subtitleTracks.append(none);
 
-    const QList<QVariant> tracks = getProperty(MpvProperties::self()->TrackList).toList();
-    int subIndex = 1;
-    int audioIndex = 0;
     for (const auto &track : tracks) {
         const auto trackMap = track.toMap();
         if (trackMap[QStringLiteral("type")] == QStringLiteral("sub")) {
-            auto t = new Track();
-            t->setCodec(trackMap[QStringLiteral("codec")].toString());
-            t->setType(trackMap[QStringLiteral("type")].toString());
-            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
-            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
-            t->setForced(trackMap[QStringLiteral("forced")].toBool());
-            t->setId(trackMap[QStringLiteral("id")].toLongLong());
-            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
-            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
-            t->setLang(trackMap[QStringLiteral("lang")].toString());
-            t->setTitle(trackMap[QStringLiteral("title")].toString());
-            t->setIndex(subIndex);
-
-            m_subtitleTracks.insert(subIndex, t);
-            subIndex++;
+            m_subtitleTracks.append(track);
         }
         if (trackMap[QStringLiteral("type")] == QStringLiteral("audio")) {
-            auto t = new Track();
-
-            t->setCodec(trackMap[QStringLiteral("codec")].toString());
-            t->setType(trackMap[QStringLiteral("type")].toString());
-            t->setDefaut(trackMap[QStringLiteral("default")].toBool());
-            t->setDependent(trackMap[QStringLiteral("dependent")].toBool());
-            t->setForced(trackMap[QStringLiteral("forced")].toBool());
-            t->setId(trackMap[QStringLiteral("id")].toLongLong());
-            t->setSrcId(trackMap[QStringLiteral("src-id")].toLongLong());
-            t->setFfIndex(trackMap[QStringLiteral("ff-index")].toLongLong());
-            t->setLang(trackMap[QStringLiteral("lang")].toString());
-            t->setTitle(trackMap[QStringLiteral("title")].toString());
-            t->setIndex(audioIndex);
-
-            m_audioTracks.insert(audioIndex, t);
-            audioIndex++;
+            m_audioTracks.append(track);
         }
     }
-    m_subtitleTracksModel->setTracks(m_subtitleTracks);
-    m_audioTracksModel->setTracks(m_audioTracks);
+    m_subtitleTracksModel->setTracks(std::move(m_subtitleTracks));
+    m_audioTracksModel->setTracks(std::move(m_audioTracks));
 
     Q_EMIT audioTracksModelChanged();
     Q_EMIT subtitleTracksModelChanged();
@@ -450,6 +415,9 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
             osdMessage(i18nc("@info:tooltip osd", "Screenshot: %1", filename));
         }
         break;
+    }
+    case AsyncIds::TrackList: {
+        loadTracks(data.toList());
     }
     }
 }

@@ -11,7 +11,6 @@
 
 #include "chaptersmodel.h"
 #include "playlistmodel.h"
-#include "track.h"
 #include "tracksmodel.h"
 
 class MpvRenderer;
@@ -137,6 +136,7 @@ public:
         FinishedLoading,
         SavePosition,
         Screenshot,
+        TrackList,
     };
     Q_ENUM(AsyncIds)
 
@@ -195,15 +195,15 @@ private:
     void saveTimePosition();
     double loadTimePosition();
     void resetTimePosition();
-    void loadTracks();
+    void loadTracks(QList<QVariant> tracks);
     void onAsyncReply(const QVariant &data, mpv_event event);
     void onChapterChanged();
     QString md5(const QString &str);
 
     TracksModel *m_audioTracksModel;
     TracksModel *m_subtitleTracksModel;
-    QMap<int, Track *> m_subtitleTracks;
-    QMap<int, Track *> m_audioTracks;
+    QList<QVariant> m_subtitleTracks;
+    QList<QVariant> m_audioTracks;
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
     PlaylistModel *m_playlistModel;

@@ -5,7 +5,6 @@
  */
 
 #include "tracksmodel.h"
-#include "track.h"
 #include <utility>
 
 TracksModel::TracksModel(QObject *parent)
@@ -24,19 +23,33 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    Track *track = m_tracks[index.row()];
+    QMap<QString, QVariant> track = m_tracks[index.row()].toMap();
 
     switch (role) {
-    case TextRole:
-        return QVariant(track->text());
+    case TextRole: {
+        QString text;
+        auto title = track[QStringLiteral("title")].toString();
+        if (!title.isEmpty()) {
+            text += title.append(QStringLiteral(" "));
+        }
+        auto lang = track[QStringLiteral("lang")].toString();
+        if (!lang.isEmpty()) {
+            text += lang.append(QStringLiteral(" "));
+        }
+        auto codec = track[QStringLiteral("codec")].toString();
+        if (!codec.isEmpty()) {
+            text += codec;
+        }
+        return text;
+    }
     case LanguageRole:
-        return QVariant(track->lang());
+        return track[QStringLiteral("lang")];
     case TitleRole:
-        return QVariant(track->title());
+        return track[QStringLiteral("title")];
     case IDRole:
-        return QVariant(track->id());
+        return track[QStringLiteral("id")];
     case CodecRole:
-        return QVariant(track->codec());
+        return track[QStringLiteral("codec")];
     }
 
     return QVariant();
@@ -53,10 +66,10 @@ QHash<int, QByteArray> TracksModel::roleNames() const
     return roles;
 }
 
-void TracksModel::setTracks(QMap<int, Track *> tracks)
+void TracksModel::setTracks(QList<QVariant> tracks)
 {
     beginResetModel();
-    m_tracks = std::move(tracks);
+    m_tracks = tracks;
     endResetModel();
 }
 
