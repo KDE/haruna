@@ -37,7 +37,7 @@ MpvPreview::MpvPreview()
 void MpvPreview::loadFile()
 {
     if (m_isReady && !m_file.isEmpty()) {
-        commandAsync(QStringList() << QStringLiteral("loadfile") << m_file);
+        command(QStringList() << QStringLiteral("loadfile") << m_file);
     }
 }
 

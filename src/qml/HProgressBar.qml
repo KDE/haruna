@@ -148,7 +148,7 @@ Slider {
         if (pressed) {
             seekStarted = true
         } else {
-            mpv.commandAsync(["seek", value, "absolute"])
+            mpv.command(["seek", value, "absolute"])
             seekStarted = false
         }
     }

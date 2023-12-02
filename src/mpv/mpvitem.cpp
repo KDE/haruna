@@ -183,7 +183,7 @@ void MpvItem::setupConnections()
 
     connect(this, &MpvItem::fileLoaded, this, [=]() {
         if (!getProperty(MpvProperties::self()->VideoId).toBool()) {
-            commandAsync(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
+            command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
 
         m_chaptersList = getProperty(MpvProperties::self()->ChapterList).toList();
@@ -273,7 +273,7 @@ void MpvItem::setupConnections()
         Q_EMIT playPrevious();
     });
     connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
-        commandAsync(QStringList() << QStringLiteral("add") << QStringLiteral("time-pos") << QString::number(offset));
+        command(QStringList() << QStringLiteral("add") << QStringLiteral("time-pos") << QString::number(offset));
     });
     connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
         Q_EMIT openUri(uri);
@@ -358,7 +358,7 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
-    commandAsync(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
+    command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();
@@ -471,7 +471,7 @@ void MpvItem::onChapterChanged()
     for (int i = 0; i < words.count(); ++i) {
         QString word = words.at(i).toLower().simplified();
         if (!ch.isEmpty() && title.toLower().contains(word)) {
-            commandAsync({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
+            command({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
             if (PlaybackSettings::showOsdOnSkipChapters()) {
                 Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Skipped chapter: %1", title));
             }

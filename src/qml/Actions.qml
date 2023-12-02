@@ -103,11 +103,11 @@ Item {
         }
 
         function onFrameStepForwardAction() {
-            mpv.commandAsync(["frame-step"])
+            mpv.command(["frame-step"])
         }
 
         function onFrameStepBackwardAction() {
-            mpv.commandAsync(["frame-back-step"])
+            mpv.command(["frame-back-step"])
         }
 
         function onLoadLastPlayedFileAction() {
@@ -173,31 +173,31 @@ Item {
         }
 
         function onRestartPlaybackAction() {
-            mpv.commandAsync(["seek", 0, "absolute"])
+            mpv.command(["seek", 0, "absolute"])
         }
 
         function onSeekForwardSmallAction() {
-            mpv.commandAsync(["seek", GeneralSettings.seekSmallStep, "exact"])
+            mpv.command(["seek", GeneralSettings.seekSmallStep, "exact"])
         }
 
         function onSeekBackwardSmallAction() {
-            mpv.commandAsync(["seek", -GeneralSettings.seekSmallStep, "exact"])
+            mpv.command(["seek", -GeneralSettings.seekSmallStep, "exact"])
         }
 
         function onSeekForwardMediumAction() {
-            mpv.commandAsync(["seek", GeneralSettings.seekMediumStep, "exact"])
+            mpv.command(["seek", GeneralSettings.seekMediumStep, "exact"])
         }
 
         function onSeekBackwardMediumAction() {
-            mpv.commandAsync(["seek", -GeneralSettings.seekMediumStep, "exact"])
+            mpv.command(["seek", -GeneralSettings.seekMediumStep, "exact"])
         }
 
         function onSeekForwardBigAction() {
-            mpv.commandAsync(["seek", GeneralSettings.seekBigStep, "exact"])
+            mpv.command(["seek", GeneralSettings.seekBigStep, "exact"])
         }
 
         function onSeekBackwardBigAction() {
-            mpv.commandAsync(["seek", -GeneralSettings.seekBigStep, "exact"])
+            mpv.command(["seek", -GeneralSettings.seekBigStep, "exact"])
         }
 
         function onSeekNextChapterAction() {
@@ -208,16 +208,16 @@ Item {
                 actionsModel.signalEmitter("playNextAction")
                 return
             }
-            mpv.commandAsync(["add", "chapter", "1"])
+            mpv.command(["add", "chapter", "1"])
         }
 
         function onSeekPreviousChapterAction() {
-            mpv.commandAsync(["add", "chapter", "-1"])
+            mpv.command(["add", "chapter", "-1"])
         }
 
         function onSeekNextSubtitleAction() {
             if (mpv.getProperty(MpvProperties.SubtitleId) !== false) {
-                mpv.commandAsync(["sub-seek", "1"])
+                mpv.command(["sub-seek", "1"])
             } else {
                 actionsModel.signalEmitter("seekForwardSmallAction")
             }
@@ -225,7 +225,7 @@ Item {
 
         function onSeekPreviousSubtitleAction() {
             if (mpv.getProperty(MpvProperties.SubtitleId) !== false) {
-                mpv.commandAsync(["sub-seek", "-1"])
+                mpv.command(["sub-seek", "-1"])
             } else {
                 actionsModel.signalEmitter("seekBackwardSmallAction")
             }
@@ -235,7 +235,7 @@ Item {
             if (mpv.watchLaterPosition === 0) {
                 return
             }
-            mpv.commandAsync(["seek", mpv.watchLaterPosition, "absolute"])
+            mpv.command(["seek", mpv.watchLaterPosition, "absolute"])
         }
 
         function onSetLoopAction() {
@@ -322,11 +322,11 @@ Item {
         }
 
         function onSubtitleMoveUpAction() {
-            mpv.commandAsync(["add", "sub-pos", "-1"])
+            mpv.command(["add", "sub-pos", "-1"])
         }
 
         function onSubtitleMoveDownAction() {
-            mpv.commandAsync(["add", "sub-pos", "+1"])
+            mpv.command(["add", "sub-pos", "+1"])
         }
 
         function onToggleDeinterlacingAction() {
@@ -378,11 +378,11 @@ Item {
         }
 
         function onVolumeUpAction() {
-            mpv.commandAsync(["add", "volume", GeneralSettings.volumeStep])
+            mpv.command(["add", "volume", GeneralSettings.volumeStep])
         }
 
         function onVolumeDownAction() {
-            mpv.commandAsync(["add", "volume", -GeneralSettings.volumeStep])
+            mpv.command(["add", "volume", -GeneralSettings.volumeStep])
         }
 
         function onZoomInAction() {
