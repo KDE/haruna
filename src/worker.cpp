@@ -108,6 +108,25 @@ QImage Worker::frameToImage(const QString &path, int width)
     return image;
 }
 
+void Worker::mprisThumbnail(const QString &path, int width)
+{
+    QImage image;
+    FrameDecoder frameDecoder(path, nullptr);
+    if (!frameDecoder.getInitialized()) {
+        return;
+    }
+    // before seeking, a frame has to be decoded
+    if (!frameDecoder.decodeVideoFrame()) {
+        return;
+    }
+
+    int secondToSeekTo = frameDecoder.getDuration() * 20 / 100;
+    frameDecoder.seek(secondToSeekTo);
+    frameDecoder.getScaledVideoFrame(width, true, image);
+
+    Q_EMIT mprisThumbnailSuccess(image);
+}
+
 void Worker::syncConfigValue(QString path, QString group, QString key, QVariant value)
 {
     if (!m_cachedConf || m_cachedConf->name() != path) {

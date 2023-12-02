@@ -26,6 +26,7 @@ Q_SIGNALS:
     void metaDataReady(int index, KFileMetaData::PropertyMultiMap metadata);
     void thumbnailSuccess(const QString &path, const QImage &image);
     void thumbnailFail();
+    void mprisThumbnailSuccess(const QImage &image);
 
 public Q_SLOTS:
     void getMetaData(int index, const QString &path);
@@ -33,6 +34,7 @@ public Q_SLOTS:
     QImage frameToImage(const QString &path, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
     void saveWindowGeometry(QQuickWindow *window) const;
+    void mprisThumbnail(const QString &path, int width);
 
 private:
     Worker() = default;

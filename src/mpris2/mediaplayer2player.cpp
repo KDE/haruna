@@ -41,7 +41,15 @@ void MediaPlayer2Player::setupConnections()
         propertiesChanged(QStringLiteral("Volume"), Volume());
         Q_EMIT volumeChanged();
     });
+
     connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
+        Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
+    });
+
+    connect(this, &MediaPlayer2Player::requestMprisThumbnail, Worker::instance(), &Worker::mprisThumbnail);
+
+    connect(Worker::instance(), &Worker::mprisThumbnailSuccess, this, [=](const QImage &image) {
+        m_image = image;
         propertiesChanged(QStringLiteral("Metadata"), Metadata());
         Q_EMIT metadataChanged();
     });

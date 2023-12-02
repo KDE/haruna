@@ -75,6 +75,7 @@ Q_SIGNALS:
     void metadataChanged();
     void volumeChanged();
     void mpvChanged();
+    void requestMprisThumbnail(const QString &path, int width);
 
 private:
     MpvItem *m_mpv;
