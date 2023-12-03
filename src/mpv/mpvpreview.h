@@ -15,6 +15,7 @@ class MpvPreview : public MpvAbstractItem
 {
     Q_OBJECT
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
+    Q_PROPERTY(double aspectRatio READ aspectRatio NOTIFY aspectRatioChanged)
     Q_PROPERTY(QString file READ file WRITE setFile NOTIFY fileChanged)
     Q_PROPERTY(bool accuratePreview READ accuratePreview WRITE setAccuratePreview NOTIFY accuratePreviewChanged)
     Q_PROPERTY(bool isLocalFile READ isLocalFile WRITE setIsLocalFile NOTIFY isLocalFileChanged)
@@ -24,6 +25,8 @@ public:
 
     double position();
     void setPosition(double value);
+
+    double aspectRatio();
 
     QString file() const;
     void setFile(const QString &_file);
@@ -38,10 +41,9 @@ public:
 
 Q_SIGNALS:
     void positionChanged();
+    void aspectRatioChanged();
     void fileChanged();
-
     void accuratePreviewChanged();
-
     void isLocalFileChanged();
 
 private:

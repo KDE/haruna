@@ -79,6 +79,7 @@ Slider {
                         onIsLocalFileChanged: {
                             previewMpvLoader.visible = isLocalFile
                         }
+                        onAspectRatioChanged: previewMpvLoader.aspectRatio = aspectRatio || 1
                     }
 
                     Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
@@ -288,12 +289,6 @@ Slider {
             if (!root.seekStarted) {
                 root.value = mpv.position
             }
-        }
-        function onVideoReconfig() {
-            let width = mpv.getProperty(MpvProperties.Width)
-            let height = mpv.getProperty(MpvProperties.Height)
-            let ar = width / height;
-            previewMpvLoader.aspectRatio = ar
         }
     }
 }

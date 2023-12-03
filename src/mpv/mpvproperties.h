@@ -203,6 +203,9 @@ public:
     Q_PROPERTY(QString Terminal MEMBER Terminal CONSTANT)
     const QString Terminal{QStringLiteral("terminal")};
 
+    Q_PROPERTY(QString AspectRatio MEMBER AspectRatio CONSTANT)
+    const QString AspectRatio{QStringLiteral("video-params/aspect")};
+
 private:
     explicit MpvProperties(QObject *parent = nullptr)
         : QObject(parent)

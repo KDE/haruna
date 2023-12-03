@@ -9,9 +9,12 @@
 #include "generalsettings.h"
 #include "mpvproperties.h"
 
+#include <MpvController>
+
 MpvPreview::MpvPreview()
 {
     observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
+    observeProperty(MpvProperties::self()->AspectRatio, MPV_FORMAT_DOUBLE);
 
     setProperty(MpvProperties::self()->Mute, true);
     setProperty(MpvProperties::self()->Pause, true);
@@ -27,6 +30,11 @@ MpvPreview::MpvPreview()
     setProperty(MpvProperties::self()->UseTextOsd, false);
     setProperty(MpvProperties::self()->AudioDisplay, false);
 
+    connect(mpvController(), &MpvController::propertyChanged, this, [=](const QString &property, const QVariant &value) {
+        if (property == MpvProperties::self()->AspectRatio) {
+            Q_EMIT aspectRatioChanged();
+        }
+    });
     connect(this, &MpvPreview::fileChanged, this, &MpvPreview::loadFile);
     connect(this, &MpvPreview::ready, this, [=]() {
         m_isReady = true;
@@ -52,6 +60,11 @@ void MpvPreview::setPosition(double value)
         return;
     }
     setPropertyAsync(MpvProperties::self()->Position, value);
+}
+
+double MpvPreview::aspectRatio()
+{
+    return getProperty(MpvProperties::self()->AspectRatio).toDouble();
 }
 
 QString MpvPreview::file() const
