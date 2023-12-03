@@ -355,7 +355,6 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
-    resetLocalProperties();
     command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
@@ -517,28 +516,6 @@ double MpvItem::loadTimePosition()
     auto pos = config.group(QString()).readEntry("TimePosition", QString::number(0)).toDouble();
 
     return pos;
-}
-
-void MpvItem::resetLocalProperties()
-{
-    m_position = 0.0;
-    m_formattedPosition.clear();
-    m_remaining = 0.0;
-    m_formattedRemaining.clear();
-    m_duration = 0.0;
-    m_formattedDuration.clear();
-    m_mediaTitle.clear();
-    m_pause = false;
-    m_mute = false;
-    m_chapter = 0;
-    m_volume = 0;
-    m_volumeMax = 0;
-    m_audioId = 0;
-    m_subtitleId = 0;
-    m_secondarySubtitleId = 0;
-    m_videoWidth = 0;
-    m_videoHeight = 0;
-    m_chaptersList.clear();
 }
 
 void MpvItem::resetTimePosition()

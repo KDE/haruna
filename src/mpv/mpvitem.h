@@ -197,7 +197,6 @@ private:
     void saveTimePosition();
     double loadTimePosition();
     void resetTimePosition();
-    void resetLocalProperties();
     void loadTracks(QList<QVariant> tracks);
     void onAsyncReply(const QVariant &data, mpv_event event);
     void onChapterChanged();
