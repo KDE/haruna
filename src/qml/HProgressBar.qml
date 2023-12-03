@@ -17,7 +17,6 @@ Slider {
     id: root
 
     property alias loopIndicator: loopIndicator
-    property var chapters: []
     property bool seekStarted: false
 
     from: 0
@@ -104,7 +103,7 @@ Slider {
             hoverEnabled: true
             acceptedButtons: Qt.MiddleButton | Qt.RightButton
 
-            onClicked: {
+            onClicked: function(mouse) {
                 if (mouse.button === Qt.MiddleButton) {
                     if (!GeneralSettings.showChapterMarkers) {
                         return
@@ -115,7 +114,7 @@ Slider {
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
                     mpv.chapter = nextChapter
                 }
-                if (mouse.button === Qt.RightButton && root.chapters.length > 0) {
+                if (mouse.button === Qt.RightButton && mpv.chaptersModel.rowCount() > 0) {
                     chaptersPopup.x = mouseX - chaptersPopup.width * 0.5
                     chaptersPopup.open()
                 }
@@ -207,7 +206,7 @@ Slider {
         id: chaptersPopup
 
         property int itemHeight
-        property int itemBiggestWidth
+        property int itemBiggestWidth: 1
         property var checkedItem
         property int maxWidth: window.width * 0.7 > Kirigami.Units.gridUnit * 40
                                ? Kirigami.Units.gridUnit * 40
@@ -216,9 +215,9 @@ Slider {
         y: -height - root.height
         z: 20
         width: itemBiggestWidth > maxWidth ? maxWidth : itemBiggestWidth
-        height: itemHeight * root.chapters.length + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
+        height: itemHeight * mpv.chaptersModel.rowCount() + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
                 ? mpv.height - Kirigami.Units.gridUnit
-                : itemHeight * root.chapters.length + listViewPage.footer.height
+                : itemHeight * mpv.chaptersModel.rowCount() + listViewPage.footer.height
         padding: 0
         onOpened: {
             listView.positionViewAtIndex(checkedItem, ListView.Beginning)
@@ -277,10 +276,9 @@ Slider {
     Connections {
         target: mpv
         function onFileLoaded() {
-            previewMpvLoader.file = mpv.currentUrl
             loopIndicator.startPosition = -1
             loopIndicator.endPosition = -1
-            root.chapters = mpv.getProperty(MpvProperties.ChapterList)
+            previewMpvLoader.file = mpv.currentUrl
         }
         function onChapterChanged() {
             chaptersPopup.checkedItem = mpv.chapter
