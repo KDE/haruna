@@ -206,6 +206,8 @@ void MpvItem::setupConnections()
             setPropertyAsync(MpvProperties::self()->Position,
                              watchLaterPosition(),
                              static_cast<int>(AsyncIds::FinishedLoading));
+        } else {
+            getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::FinishedLoading));
         }
         Q_EMIT fileLoaded();
     }, Qt::QueuedConnection);
