@@ -474,7 +474,7 @@ void MpvItem::saveTimePosition()
         return;
     }
 
-    mpvController()->getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::SavePosition));
+    getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::SavePosition));
 }
 
 double MpvItem::loadTimePosition()
