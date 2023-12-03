@@ -297,51 +297,62 @@ void MpvItem::setupConnections()
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 {
     if (property == MpvProperties::self()->MediaTitle) {
+        m_mediaTitle = value.toString();
         Q_EMIT mediaTitleChanged();
 
     } else if (property == MpvProperties::self()->Position) {
-        m_formattedPosition = Application::formatTime(value.toDouble());
+        m_position = value.toDouble();
         Q_EMIT positionChanged();
 
     } else if (property == MpvProperties::self()->Remaining) {
-        m_formattedRemaining = Application::formatTime(value.toDouble());
+        m_remaining = value.toDouble();
         Q_EMIT remainingChanged();
 
     } else if (property == MpvProperties::self()->Duration) {
-        m_formattedDuration = Application::formatTime(value.toDouble());
+        m_duration = value.toDouble();
         Q_EMIT durationChanged();
 
     } else if (property == MpvProperties::self()->Pause) {
+        m_pause = value.toBool();
         Q_EMIT pauseChanged();
 
     } else if (property == MpvProperties::self()->Volume) {
+        m_volume = value.toInt();
         Q_EMIT volumeChanged();
 
     } else if (property == MpvProperties::self()->VolumeMax) {
+        m_volumeMax = value.toInt();
         Q_EMIT volumeMaxChanged();
 
     } else if (property == MpvProperties::self()->Mute) {
+        m_mute = value.toBool();
         Q_EMIT muteChanged();
 
     } else if (property == MpvProperties::self()->Chapter) {
+        m_chapter = value.toInt();
         Q_EMIT chapterChanged();
 
     } else if (property == MpvProperties::self()->ChapterList) {
         Q_EMIT chapterListChanged();
 
     } else if (property == MpvProperties::self()->AudioId) {
+        m_audioId = value.toInt();
         Q_EMIT audioIdChanged();
 
     } else if (property == MpvProperties::self()->SubtitleId) {
+        m_subtitleId = value.toInt();
         Q_EMIT subtitleIdChanged();
 
     } else if (property == MpvProperties::self()->SecondarySubtitleId) {
+        m_secondarySubtitleId = value.toInt();
         Q_EMIT secondarySubtitleIdChanged();
 
     } else if (property == MpvProperties::self()->Width) {
+        m_videoWidth = value.toInt();
         Q_EMIT videoWidthChanged();
 
     } else if (property == MpvProperties::self()->Height) {
+        m_videoHeight = value.toInt();
         Q_EMIT videoHeightChanged();
     }
 }
@@ -418,6 +429,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     }
     case AsyncIds::TrackList: {
         loadTracks(data.toList());
+        break;
     }
     }
 }
@@ -569,12 +581,13 @@ void MpvItem::setIsFileReloaded(bool _isFileReloaded)
 
 QString MpvItem::mediaTitle()
 {
-    return getProperty(MpvProperties::self()->MediaTitle).toString();
+    return m_mediaTitle;
 }
 
 double MpvItem::position()
 {
-    return getProperty(MpvProperties::self()->Position).toDouble();
+    m_formattedPosition = Application::formatTime(m_position);
+    return m_position;
 }
 
 void MpvItem::setPosition(double value)
@@ -587,17 +600,19 @@ void MpvItem::setPosition(double value)
 
 double MpvItem::remaining()
 {
-    return getProperty(MpvProperties::self()->Remaining).toDouble();
+    m_formattedRemaining = Application::formatTime(m_remaining);
+    return m_remaining;
 }
 
 double MpvItem::duration()
 {
-    return getProperty(MpvProperties::self()->Duration).toDouble();
+    m_formattedDuration = Application::formatTime(m_duration);
+    return m_duration;
 }
 
 bool MpvItem::pause()
 {
-    return getProperty(MpvProperties::self()->Pause).toBool();
+    return m_pause;
 }
 
 void MpvItem::setPause(bool value)
@@ -610,7 +625,7 @@ void MpvItem::setPause(bool value)
 
 int MpvItem::volume()
 {
-    return getProperty(MpvProperties::self()->Volume).toInt();
+    return m_volume;
 }
 
 void MpvItem::setVolume(int value)
@@ -623,7 +638,7 @@ void MpvItem::setVolume(int value)
 
 int MpvItem::volumeMax()
 {
-    return getProperty(MpvProperties::self()->VolumeMax).toInt();
+    return m_volumeMax;
 }
 
 void MpvItem::setVolumeMax(int value)
@@ -637,7 +652,7 @@ void MpvItem::setVolumeMax(int value)
 
 bool MpvItem::mute()
 {
-    return getProperty(MpvProperties::self()->Mute).toBool();
+    return m_mute;
 }
 
 void MpvItem::setMute(bool value)
@@ -650,7 +665,7 @@ void MpvItem::setMute(bool value)
 
 int MpvItem::chapter()
 {
-    return getProperty(MpvProperties::self()->Chapter).toInt();
+    return m_chapter;
 }
 
 void MpvItem::setChapter(int value)
@@ -663,7 +678,7 @@ void MpvItem::setChapter(int value)
 
 int MpvItem::audioId()
 {
-    return getProperty(MpvProperties::self()->AudioId).toInt();
+    return m_audioId;
 }
 
 void MpvItem::setAudioId(int value)
@@ -676,7 +691,7 @@ void MpvItem::setAudioId(int value)
 
 int MpvItem::subtitleId()
 {
-    return getProperty(MpvProperties::self()->SubtitleId).toInt();
+    return m_subtitleId;
 }
 
 void MpvItem::setSubtitleId(int value)
@@ -689,7 +704,7 @@ void MpvItem::setSubtitleId(int value)
 
 int MpvItem::secondarySubtitleId()
 {
-    return getProperty(MpvProperties::self()->SecondarySubtitleId).toInt();
+    return m_secondarySubtitleId;
 }
 
 void MpvItem::setSecondarySubtitleId(int value)
@@ -764,7 +779,7 @@ void MpvItem::setWatchPercentage(double value)
 
 int MpvItem::videoWidth()
 {
-    return getProperty(MpvProperties::self()->Width).toInt();
+    return m_videoWidth;
 }
 
 void MpvItem::setVideoWidth(int value)
@@ -777,7 +792,7 @@ void MpvItem::setVideoWidth(int value)
 
 int MpvItem::videoHeight()
 {
-    return getProperty(MpvProperties::self()->Height).toInt();
+    return m_videoHeight;
 }
 
 void MpvItem::setVideoHeight(int value)

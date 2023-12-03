@@ -215,6 +215,17 @@ private:
     QString m_formattedRemaining;
     double m_duration{0.0};
     QString m_formattedDuration;
+    QString m_mediaTitle;
+    bool m_pause;
+    bool m_mute;
+    int m_chapter;
+    int m_volume;
+    int m_volumeMax;
+    int m_audioId;
+    int m_subtitleId;
+    int m_secondarySubtitleId;
+    int m_videoWidth;
+    int m_videoHeight;
 
     double m_watchLaterPosition{0.0};
     bool m_isFileReloaded{false};
