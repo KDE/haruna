@@ -197,6 +197,7 @@ private:
     void saveTimePosition();
     double loadTimePosition();
     void resetTimePosition();
+    void resetLocalProperties();
     void loadTracks(QList<QVariant> tracks);
     void onAsyncReply(const QVariant &data, mpv_event event);
     void onChapterChanged();
@@ -228,6 +229,7 @@ private:
     int m_secondarySubtitleId;
     int m_videoWidth;
     int m_videoHeight;
+    QList<QVariant> m_chaptersList;
 
     double m_watchLaterPosition{0.0};
     bool m_isFileReloaded{false};
@@ -235,7 +237,6 @@ private:
     ChaptersModel *m_chaptersModel;
     bool m_finishedLoading{false};
     QString m_watchLaterPath;
-    QList<QVariant> m_chaptersList;
 };
 
 #endif // MPVOBJECT_H

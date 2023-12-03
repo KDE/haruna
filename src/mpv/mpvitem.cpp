@@ -177,7 +177,6 @@ void MpvItem::setupConnections()
     });
 
     connect(mpvController(), &MpvController::fileLoaded, this, [=]() {
-        m_chaptersList.clear();
         getPropertyAsync(MpvProperties::self()->ChapterList, static_cast<int>(AsyncIds::ChapterList));
         getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
         getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
@@ -210,14 +209,16 @@ void MpvItem::setupConnections()
             getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::FinishedLoading));
         }
         Q_EMIT fileLoaded();
+
     }, Qt::QueuedConnection);
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
-        int pos = position();
-        double duration = getProperty(MpvProperties::self()->Duration).toDouble();
+        auto pos = static_cast<int>(position());
         if (!m_secondsWatched.contains(pos)) {
             m_secondsWatched << pos;
-            setWatchPercentage(m_secondsWatched.count() * 100 / duration);
+            if (m_duration != 0) {
+                setWatchPercentage(m_secondsWatched.count() * 100 / m_duration);
+            }
         }
     });
 
@@ -352,6 +353,7 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
+    resetLocalProperties();
     command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
@@ -499,6 +501,28 @@ double MpvItem::loadTimePosition()
     auto pos = config.group(QString()).readEntry("TimePosition", QString::number(0)).toDouble();
 
     return pos;
+}
+
+void MpvItem::resetLocalProperties()
+{
+    m_position = 0.0;
+    m_formattedPosition.clear();
+    m_remaining = 0.0;
+    m_formattedRemaining.clear();
+    m_duration = 0.0;
+    m_formattedDuration.clear();
+    m_mediaTitle.clear();
+    m_pause = false;
+    m_mute = false;
+    m_chapter = 0;
+    m_volume = 0;
+    m_volumeMax = 0;
+    m_audioId = 0;
+    m_subtitleId = 0;
+    m_secondarySubtitleId = 0;
+    m_videoWidth = 0;
+    m_videoHeight = 0;
+    m_chaptersList.clear();
 }
 
 void MpvItem::resetTimePosition()
