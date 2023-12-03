@@ -18,6 +18,8 @@
 #include <QTimer>
 #include <QtGlobal>
 
+#include <KFileMetaData/ExtractorCollection>
+#include <KFileMetaData/SimpleExtractionResult>
 #include <KLocalizedString>
 #include <KShell>
 #include <MpvController>
@@ -487,11 +489,24 @@ double MpvItem::loadTimePosition()
     if (PlaybackSettings::minDurationToSavePosition() == -1) {
         return 0;
     }
-    // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    // but there can be cases when there is a saved position for files lower than minDurationToSavePosition()
-    // when minDurationToSavePosition() was increased after position was already saved
-    // todo: must remove call to getProperty, slows down opening video
-    auto duration = getProperty(MpvProperties::self()->Duration).toInt();
+    double duration{0};
+
+    // KFileMetaData is faster than getProperty
+    QString mimeType = Application::mimeType(m_currentUrl);
+    KFileMetaData::ExtractorCollection exCol;
+    QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
+    KFileMetaData::SimpleExtractionResult result(m_currentUrl.toLocalFile(), mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);
+    if (extractors.size() > 0) {
+        KFileMetaData::Extractor *ex = extractors.first();
+        ex->extract(&result);
+        auto properties = result.properties();
+        duration = properties.value(KFileMetaData::Property::Duration).toDouble();
+    } else {
+        duration = getProperty(MpvProperties::self()->Duration).toInt();
+    }
+
+    // position for files with a duration lower than
+    // PlaybackSettings::minDurationToSavePosition() is not restored
     if (duration < PlaybackSettings::minDurationToSavePosition() * 60) {
         return 0;
     }
