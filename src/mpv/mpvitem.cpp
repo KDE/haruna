@@ -490,6 +490,7 @@ double MpvItem::loadTimePosition()
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
     // but there can be cases when there is a saved position for files lower than minDurationToSavePosition()
     // when minDurationToSavePosition() was increased after position was already saved
+    // todo: must remove call to getProperty, slows down opening video
     auto duration = getProperty(MpvProperties::self()->Duration).toInt();
     if (duration < PlaybackSettings::minDurationToSavePosition() * 60) {
         return 0;
