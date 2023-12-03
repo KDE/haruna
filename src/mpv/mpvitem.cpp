@@ -163,9 +163,6 @@ void MpvItem::setupConnections()
     connect(mpvController(), &MpvController::fileStarted,
             this, &MpvItem::fileStarted, Qt::QueuedConnection);
 
-    connect(mpvController(), &MpvController::fileLoaded,
-            this, &MpvItem::fileLoaded, Qt::QueuedConnection);
-
     connect(mpvController(), &MpvController::endFile,
             this, &MpvItem::endFile, Qt::QueuedConnection);
 
@@ -179,13 +176,12 @@ void MpvItem::setupConnections()
         setFinishedLoading(false);
     });
 
-    connect(this, &MpvItem::fileLoaded, this, [=]() {
+    connect(mpvController(), &MpvController::fileLoaded, this, [=]() {
+        m_chaptersList.clear();
+        getPropertyAsync(MpvProperties::self()->ChapterList, static_cast<int>(AsyncIds::ChapterList));
+        getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
         getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
-        if (!getProperty(MpvProperties::self()->VideoId).toBool()) {
-            command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
-        }
 
-        m_chaptersList = getProperty(MpvProperties::self()->ChapterList).toList();
         setWatchLaterPosition(loadTimePosition());
 
         if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
@@ -211,7 +207,8 @@ void MpvItem::setupConnections()
                              watchLaterPosition(),
                              static_cast<int>(AsyncIds::FinishedLoading));
         }
-    });
+        Q_EMIT fileLoaded();
+    }, Qt::QueuedConnection);
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
         int pos = position();
@@ -227,18 +224,6 @@ void MpvItem::setupConnections()
 
     connect(m_playlistModel, &PlaylistModel::playingItemChanged, this, [=]() {
         loadFile(m_playlistModel->m_playlist[m_playlistModel->m_playingItem].url.toString());
-    });
-
-    connect(this, &MpvItem::chapterListChanged, this, [=]() {
-        const auto chapters = getProperty(MpvProperties::self()->ChapterList);
-        QList<Chapter> chaptersList;
-        for (const auto &chapter : chapters.toList()) {
-            Chapter c;
-            c.title = chapter.toMap()[QStringLiteral("title")].toString();
-            c.startTime = chapter.toMap()[QStringLiteral("time")].toDouble();
-            chaptersList.append(c);
-        }
-        m_chaptersModel->setChapters(chaptersList);
     });
 
 
@@ -429,6 +414,24 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     }
     case AsyncIds::TrackList: {
         loadTracks(data.toList());
+        break;
+    }
+    case AsyncIds::ChapterList: {
+        m_chaptersList = data.toList();
+        QList<Chapter> chaptersList;
+        for (const auto &chapter : m_chaptersList) {
+            Chapter c;
+            c.title = chapter.toMap()[QStringLiteral("title")].toString();
+            c.startTime = chapter.toMap()[QStringLiteral("time")].toDouble();
+            chaptersList.append(c);
+        }
+        m_chaptersModel->setChapters(chaptersList);
+        break;
+    }
+    case AsyncIds::VideoId: {
+        if (!data.toBool()) {
+            command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
+        }
         break;
     }
     }

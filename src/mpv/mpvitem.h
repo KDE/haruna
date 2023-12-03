@@ -137,6 +137,8 @@ public:
         SavePosition,
         Screenshot,
         TrackList,
+        ChapterList,
+        VideoId,
     };
     Q_ENUM(AsyncIds)
 
