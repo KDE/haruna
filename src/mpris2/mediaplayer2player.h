@@ -19,6 +19,10 @@ class MediaPlayer2Player : public QDBusAbstractAdaptor
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.mpris.MediaPlayer2.Player")
 
+public:
+    explicit MediaPlayer2Player(QObject *parent = nullptr);
+    ~MediaPlayer2Player() = default;
+
     Q_PROPERTY(QString PlaybackStatus READ PlaybackStatus NOTIFY playbackStatusChanged)
     Q_PROPERTY(QVariantMap Metadata READ Metadata NOTIFY metadataChanged)
     Q_PROPERTY(double Volume READ Volume WRITE setVolume NOTIFY volumeChanged)
@@ -29,13 +33,7 @@ class MediaPlayer2Player : public QDBusAbstractAdaptor
     Q_PROPERTY(bool CanPause READ CanPause CONSTANT)
     Q_PROPERTY(bool CanSeek READ CanSeek CONSTANT)
     Q_PROPERTY(bool CanControl READ CanControl CONSTANT)
-    Q_PROPERTY(MpvItem *mpv READ mpv WRITE setMpv NOTIFY mpvChanged)
 
-public:
-    explicit MediaPlayer2Player(QObject *parent = nullptr);
-    ~MediaPlayer2Player() = default;
-
-    void setupConnections();
     void propertiesChanged(const QString &property, const QVariant &value);
 
 public Q_SLOTS:
@@ -60,8 +58,6 @@ public Q_SLOTS:
     bool CanControl();
     void setPosition(int pos);
     void setVolume(double vol);
-    MpvItem *mpv() const;
-    void setMpv(MpvItem *mpv);
 
 Q_SIGNALS:
     void next();

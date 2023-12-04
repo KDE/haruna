@@ -241,7 +241,6 @@ void MpvItem::setupConnections()
     auto mp2 = new MediaPlayer2(this);
     connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
     auto mp2Player = new MediaPlayer2Player(this);
-    mp2Player->setMpv(this);
     connect(mp2Player, &MediaPlayer2Player::playpause, this, [=]() {
         setPause(!pause());
     });
