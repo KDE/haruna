@@ -78,6 +78,7 @@ private:
     MpvItem *m_mpv;
     QImage m_image;
     QString getThumbnail(const QString &path);
+    QVariantMap m_metadata;
 };
 
 #endif // MEDIAPLAYER2PLAYER_H

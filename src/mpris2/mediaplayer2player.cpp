@@ -25,18 +25,10 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     : QDBusAbstractAdaptor(parent)
     , m_mpv{static_cast<MpvItem *>(parent)}
 {
-    connect(m_mpv, &MpvItem::pauseChanged, this, [=]() {
-        propertiesChanged(QStringLiteral("PlaybackStatus"), PlaybackStatus());
-        Q_EMIT playbackStatusChanged();
-    });
-
-    connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
-        propertiesChanged(QStringLiteral("Volume"), Volume());
-        Q_EMIT volumeChanged();
-    });
-
     connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
-        Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
+        if (m_mpv->currentUrl().isLocalFile()) {
+            Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
+        }
     });
 
     connect(this, &MediaPlayer2Player::requestMprisThumbnail, Worker::instance(), &Worker::mprisThumbnail);
@@ -45,6 +37,31 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
         m_image = image;
         propertiesChanged(QStringLiteral("Metadata"), Metadata());
         Q_EMIT metadataChanged();
+    });
+
+    connect(m_mpv, &MpvItem::mediaTitleChanged, this, [=]() {
+        auto title = m_mpv->mediaTitle();
+        if (title.isEmpty() || title.startsWith(QStringLiteral("watch"))) {
+            return;
+        }
+        m_image = QImage();
+        propertiesChanged(QStringLiteral("Metadata"), Metadata());
+        Q_EMIT metadataChanged();
+    });
+
+    connect(m_mpv, &MpvItem::durationChanged, this, [=]() {
+        m_metadata.insert(QStringLiteral("mpris:length"), m_mpv->duration() * 1000 * 1000);
+        propertiesChanged(QStringLiteral("Metadata"), m_metadata);
+    });
+
+    connect(m_mpv, &MpvItem::pauseChanged, this, [=]() {
+        propertiesChanged(QStringLiteral("PlaybackStatus"), PlaybackStatus());
+        Q_EMIT playbackStatusChanged();
+    });
+
+    connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
+        propertiesChanged(QStringLiteral("Volume"), Volume());
+        Q_EMIT volumeChanged();
     });
 }
 
@@ -66,24 +83,20 @@ void MediaPlayer2Player::propertiesChanged(const QString &property, const QVaria
 
 QVariantMap MediaPlayer2Player::Metadata()
 {
-    QVariantMap metadata;
-    metadata.insert(QStringLiteral("mpris:length"), m_mpv->duration() * 1000 * 1000);
-    metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
+    m_metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
 
     auto mpvMediaTitle = m_mpv->mediaTitle();
     auto mpvFilename = m_mpv->currentUrl().fileName();
-    auto title = mpvMediaTitle.isEmpty() || mpvMediaTitle.isNull() ? mpvFilename : mpvFilename;
-    metadata.insert(QStringLiteral("xesam:title"), title);
+    auto title = mpvMediaTitle.isEmpty() ? mpvFilename : mpvMediaTitle;
+    m_metadata.insert(QStringLiteral("xesam:title"), title);
 
     auto path = m_mpv->currentUrl().toLocalFile();
+    m_metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(path));
 
-    metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(path));
+    QUrl url(QUrl::fromUserInput(path));
+    m_metadata.insert(QStringLiteral("xesam:url"), url.toString());
 
-    QUrl url(path);
-    url.setScheme(QStringLiteral("file"));
-    metadata.insert(QStringLiteral("xesam:url"), url.toString());
-
-    return metadata;
+    return m_metadata;
 }
 
 QString MediaPlayer2Player::getThumbnail(const QString &path)
