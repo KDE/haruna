@@ -25,23 +25,7 @@ MpvItem {
         Paused
     }
 
-    signal setSubtitle(int id)
-    signal setSecondarySubtitle(int id)
-    signal setAudio(int id)
-
     volume: GeneralSettings.volume
-
-    onSetSubtitle: {
-        subtitleId = id
-    }
-
-    onSetSecondarySubtitle: {
-        secondarySubtitleId = id
-    }
-
-    onSetAudio: {
-        audioId = id
-    }
 
     onVolumeChanged: {
         osd.message(i18nc("@info:tooltip", "Volume: %1", root.volume))
@@ -200,9 +184,8 @@ MpvItem {
         anchors.fill: parent
         keys: ["text/uri-list"]
 
-        onDropped: {
-            if (acceptedSubtitleTypes.includes(app.mimeType(drop.urls[0]))) {
-                const subFile = drop.urls[0].replace("file://", "")
+        onDropped: drop => {
+            if (window.acceptedSubtitleTypes.includes(app.mimeType(drop.urls[0]))) {
                 command(["sub-add", drop.urls[0], "select"])
             }
 
