@@ -19,6 +19,21 @@ class MpvItem : public MpvAbstractItem
 {
     Q_OBJECT
 
+public:
+    explicit MpvItem(QQuickItem *parent = nullptr);
+    ~MpvItem() = default;
+
+    enum class AsyncIds {
+        None,
+        FinishedLoading,
+        SavePosition,
+        Screenshot,
+        TrackList,
+        ChapterList,
+        VideoId,
+    };
+    Q_ENUM(AsyncIds)
+
     Q_PROPERTY(PlaylistModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
     PlaylistModel *playlistModel();
     void setPlaylistModel(PlaylistModel *model);
@@ -126,21 +141,6 @@ class MpvItem : public MpvAbstractItem
     Q_PROPERTY(bool finishedLoading READ finishedLoading WRITE setFinishedLoading NOTIFY finishedLoadingChanged)
     bool finishedLoading() const;
     void setFinishedLoading(bool _finishedLoading);
-
-public:
-    explicit MpvItem(QQuickItem *parent = nullptr);
-    ~MpvItem() = default;
-
-    enum class AsyncIds {
-        None,
-        FinishedLoading,
-        SavePosition,
-        Screenshot,
-        TrackList,
-        ChapterList,
-        VideoId,
-    };
-    Q_ENUM(AsyncIds)
 
     Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
     QUrl currentUrl() const;
