@@ -67,33 +67,24 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
 
 void MediaPlayer2Player::propertiesChanged(const QString &property, const QVariant &value)
 {
-    QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/mpris/MediaPlayer2"),
-                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
-                                                  QStringLiteral("PropertiesChanged"));
-
     QVariantMap properties;
     properties[property] = value;
 
-    msg << QStringLiteral("org.mpris.MediaPlayer2.Player");
-    msg << properties;
-    msg << QStringList();
+    QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/mpris/MediaPlayer2"),
+                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                  QStringLiteral("PropertiesChanged"));
+    msg << QStringLiteral("org.mpris.MediaPlayer2.Player") << properties << QStringList();
 
     QDBusConnection::sessionBus().send(msg);
 }
 
 QVariantMap MediaPlayer2Player::Metadata()
 {
+    auto url = m_mpv->currentUrl();
+
+    m_metadata.insert(QStringLiteral("xesam:title"), m_mpv->mediaTitle());
     m_metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
-
-    auto mpvMediaTitle = m_mpv->mediaTitle();
-    auto mpvFilename = m_mpv->currentUrl().fileName();
-    auto title = mpvMediaTitle.isEmpty() ? mpvFilename : mpvMediaTitle;
-    m_metadata.insert(QStringLiteral("xesam:title"), title);
-
-    auto path = m_mpv->currentUrl().toLocalFile();
-    m_metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(path));
-
-    QUrl url(QUrl::fromUserInput(path));
+    m_metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(url.toLocalFile()));
     m_metadata.insert(QStringLiteral("xesam:url"), url.toString());
 
     return m_metadata;
@@ -102,9 +93,10 @@ QVariantMap MediaPlayer2Player::Metadata()
 QString MediaPlayer2Player::getThumbnail(const QString &path)
 {
     auto url = QUrl::fromUserInput(path);
-    if (url.scheme() != QStringLiteral("file")) {
+    if (!url.isLocalFile()) {
         return QString();
     }
+
     QString mimeType = Application::mimeType(url);
     KFileMetaData::ExtractorCollection exCol;
     QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);

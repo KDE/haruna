@@ -71,13 +71,12 @@ Q_SIGNALS:
     void playbackStatusChanged();
     void metadataChanged();
     void volumeChanged();
-    void mpvChanged();
     void requestMprisThumbnail(const QString &path, int width);
 
 private:
+    QString getThumbnail(const QString &path);
     MpvItem *m_mpv;
     QImage m_image;
-    QString getThumbnail(const QString &path);
     QVariantMap m_metadata;
 };
 
