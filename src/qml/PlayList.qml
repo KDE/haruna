@@ -86,8 +86,8 @@ Item {
                         width: toolbar.width - Kirigami.Units.largeSpacing
                         buttonText: i18nc("@action:button", "Add")
 
-                        onUrlOpened: {
-                            mpv.playlistModel.appendItem(url)
+                        onUrlOpened: function(url) {
+                            mpv.playlistModel.addItem(url, PlaylistModel.Append)
                         }
                     }
 
@@ -320,7 +320,7 @@ Item {
         onAccepted: {
             switch (fileType) {
             case "video":
-                mpv.playlistModel.appendItem(fileDialog.file.toString())
+                mpv.playlistModel.addItem(fileDialog.file, PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === Platform.FileDialog.OpenFile) {
