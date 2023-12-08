@@ -28,7 +28,7 @@ void LockManager::setInhibitionOff()
 
 void LockManager::setInhibitionOn()
 {
-    m_cookie = m_iface->Inhibit(QStringLiteral("Haruna Media Player"), i18nc("@info reason for blocking sleep and screen slocking", "Playing media file"));
+    m_cookie = m_iface->Inhibit(QStringLiteral("org.kde.haruna"), i18nc("@info reason for blocking sleep and screen slocking", "Playing media file"));
 }
 
 #include "moc_lockmanager.cpp"
