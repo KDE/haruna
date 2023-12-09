@@ -20,7 +20,7 @@
 RecentFilesModel::RecentFilesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
+    auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath(Global::ConfigFile::RecentFiles));
     m_recentFilesConfigGroup = config->group(QStringLiteral("RecentFiles"));
     setMaxRecentFiles(GeneralSettings::maxRecentFiles());
     populate();

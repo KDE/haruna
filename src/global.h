@@ -1,3 +1,4 @@
+
 /*
  * SPDX-FileCopyrightText: 2021 George Florea Bănuș <georgefb899@gmail.com>
  *
@@ -16,9 +17,12 @@ class Global : public QObject
 public:
     static Global *instance();
 
-    enum ConfigFile { Main, CustomCommands };
+    enum class ConfigFile {
+        Main,
+        CustomCommands,
+        RecentFiles,
+    };
 
-    const QString systemConfigPath();
     const QString appConfigDirPath();
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
 
@@ -34,12 +38,9 @@ private:
     Global(Global &&) = delete;
     Global &operator=(Global &&) = delete;
 
-    const QString m_configFolderName{QStringLiteral("haruna")};
-    const QString m_configFileName{QStringLiteral("haruna.conf")};
-    const QString m_ccConfigFileName{QStringLiteral("haruna-custom-commands.conf")};
-
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;
+    KSharedConfig::Ptr m_rfConfig;
 };
 
 #endif // GLOBALS_H

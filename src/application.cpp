@@ -211,7 +211,7 @@ QUrl Application::configFilePath()
 
 QUrl Application::ccConfigFilePath()
 {
-    auto file = Global::instance()->appConfigFilePath(Global::CustomCommands);
+    auto file = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
     if (pathExists(file)) {
         return pathToUrl(file);
     }

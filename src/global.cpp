@@ -15,19 +15,16 @@ Global *Global::instance()
 }
 
 Global::Global()
-    : m_config(KSharedConfig::openConfig(QStringLiteral("%1/%2").arg(m_configFolderName, m_configFileName)))
-    , m_ccConfig(KSharedConfig::openConfig(QStringLiteral("%1/%2").arg(m_configFolderName, m_ccConfigFileName)))
+    : m_config(KSharedConfig::openConfig(u"haruna/haruna.conf"_qs, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
+    , m_ccConfig(KSharedConfig::openConfig(u"haruna/custom-commands.conf"_qs, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
+    , m_rfConfig(KSharedConfig::openConfig(u"haruna/recent-files.conf"_qs, KConfig::SimpleConfig, QStandardPaths::GenericDataLocation))
 {
-}
-
-const QString Global::systemConfigPath()
-{
-    return QStandardPaths::writableLocation(m_config->locationType()).append(QStringLiteral("/"));
 }
 
 const QString Global::appConfigDirPath()
 {
-    QFileInfo configFolder(QString(systemConfigPath()).append(m_configFolderName));
+    auto path = QStandardPaths::writableLocation(m_config->locationType()).append(u"/haruna"_qs);
+    QFileInfo configFolder(path);
     if (configFolder.exists()) {
         return configFolder.absoluteFilePath();
     }
@@ -38,10 +35,16 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
-        return QString(systemConfigPath()).append(m_config->name());
+        auto path = QStandardPaths::writableLocation(m_config->locationType()).append(u"/"_qs);
+        return path.append(m_config->name());
     }
     case ConfigFile::CustomCommands: {
-        return QString(systemConfigPath()).append(m_ccConfig->name());
+        auto path = QStandardPaths::writableLocation(m_ccConfig->locationType()).append(u"/"_qs);
+        return path.append(m_ccConfig->name());
+    }
+    case ConfigFile::RecentFiles: {
+        auto path = QStandardPaths::writableLocation(m_rfConfig->locationType()).append(u"/"_qs);
+        return path.append(m_rfConfig->name());
     }
     default:
         return QString();
