@@ -94,6 +94,9 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
     }
 
     auto url = QUrl::fromUserInput(path);
+    if (!url.isValid()) {
+        return;
+    }
 
     if (url.scheme().startsWith(QStringLiteral("http")) && name.isEmpty()) {
         getHttpItemInfo(url);
