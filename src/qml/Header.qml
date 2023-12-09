@@ -95,26 +95,11 @@ ToolBar {
                 audioMenu.visible = !audioMenu.visible
             }
 
-            Menu {
+            AudioTracksMenu {
                 id: audioMenu
 
                 y: parent.height
-                closePolicy: Popup.CloseOnReleaseOutsideParent
-
-                Instantiator {
-                    id: audioMenuInstantiator
-
-                    model: mpv.audioTracksModel
-                    onObjectAdded: (index, object) => audioMenu.insertItem(index, object)
-                    onObjectRemoved: (index, object) => audioMenu.removeItem(object)
-                    delegate: MenuItem {
-                        id: audioMenuItem
-                        checkable: true
-                        checked: model.id === mpv.audioId
-                        text: model.text
-                        onTriggered: mpv.audioId = model.id
-                    }
-                }
+                model: mpv.audioTracksModel
             }
         }
 

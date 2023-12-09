@@ -18,19 +18,17 @@ Labs.Menu {
         id: primarySubtitleMenu
 
         title: i18nc("@title:menu", "Primary Subtitle")
-        onAboutToShow: primarySubtitleMenuInstantiator.model = mpv.subtitleTracksModel
 
-        Instantiator {
-            id: primarySubtitleMenuInstantiator
-            model: 0
-            onObjectAdded: primarySubtitleMenu.insertItem( index, object )
-            onObjectRemoved: primarySubtitleMenu.removeItem( object )
-            delegate: Labs.MenuItem {
+        Repeater {
+            model: mpv.subtitleTracksModel
+            delegate: MenuItem {
                 enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
                 checkable: true
                 checked: model.id === mpv.subtitleId
                 text: model.text
-                onTriggered: mpv.subtitleId = model.id
+                onTriggered: {
+                    mpv.subtitleId = model.id
+                }
             }
         }
     }
@@ -39,19 +37,17 @@ Labs.Menu {
         id: secondarySubtitleMenu
 
         title: i18nc("@title:menu", "Secondary Subtitle")
-        onAboutToShow: secondarySubtitleMenuInstantiator.model = mpv.subtitleTracksModel
 
-        Instantiator {
-            id: secondarySubtitleMenuInstantiator
-            model: 0
-            onObjectAdded: secondarySubtitleMenu.insertItem( index, object )
-            onObjectRemoved: secondarySubtitleMenu.removeItem( object )
-            delegate: Labs.MenuItem {
+        Repeater {
+            model: mpv.subtitleTracksModel
+            delegate: MenuItem {
                 enabled: model.id !== mpv.subtitleId || model.id === 0
                 checkable: true
                 checked: model.id === mpv.secondarySubtitleId
                 text: model.text
-                onTriggered: mpv.secondarySubtitleId = model.id
+                onTriggered: {
+                    mpv.secondarySubtitleId = model.id
+                }
             }
         }
     }

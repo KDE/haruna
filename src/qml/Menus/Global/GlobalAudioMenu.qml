@@ -17,25 +17,15 @@ Labs.Menu {
     Labs.Menu {
         id: audioMenu
 
-        title: i18nc("@title:menu", "&Primary Track")
-
-        Instantiator {
-            id: audioMenuInstantiator
-            model: 0
-            onObjectAdded: (index, object) => audioMenu.insertItem( index, object )
-            onObjectRemoved: (index, object) => audioMenu.removeItem( object )
-            delegate: Labs.MenuItem {
-                id: audioMenuItem
+        Repeater {
+            model: mpv.audioTracksModel
+            delegate: MenuItem {
                 checkable: true
                 checked: model.id === mpv.audioId
                 text: model.text
-                onTriggered: mpv.audioId = model.id
-            }
-        }
-        Connections {
-            target: mpv
-            function onFileLoaded() {
-                audioMenuInstantiator.model = mpv.audioTracksModel
+                onTriggered: {
+                    mpv.audioId = model.id
+                }
             }
         }
     }

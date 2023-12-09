@@ -8,30 +8,19 @@ import QtQml
 import QtQuick
 import QtQuick.Controls
 
+import "../Haruna/Components"
+
 Menu {
     id: root
 
     title: i18nc("@title:menu", "&Audio")
 
-    Menu {
+    AudioTracksMenu {
         id: audioMenu
 
-        title: i18nc("@title:menu", "&Primary Track")
-        enabled: mpv.audioTracksModel.rowCount() > 0
-
-        Instantiator {
-            id: audioMenuInstantiator
-            model: mpv.audioTracksModel
-            onObjectAdded: (index, object) => audioMenu.insertItem(index, object)
-            onObjectRemoved: (index, object) => audioMenu.removeItem(object)
-            delegate: MenuItem {
-                id: audioMenuItem
-                checkable: true
-                checked: model.id === mpv.audioId
-                text: model.text
-                onTriggered: mpv.audioId = model.id
-            }
-        }
+        y: parent.height
+        title: i18nc("@title:menu", "&Track")
+        model: mpv.audioTracksModel
     }
 
     MenuSeparator {}
