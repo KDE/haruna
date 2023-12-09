@@ -77,27 +77,12 @@ ToolBar {
                 subtitleMenu.visible = !subtitleMenu.visible
             }
 
-            Menu {
+            SubtitleTracksMenu {
                 id: subtitleMenu
 
                 y: parent.height
-                closePolicy: Popup.CloseOnReleaseOutsideParent
-
-                MenuItem { action: appActions.openSubtitlesFileAction }
-
-                Instantiator {
-                    id: primarySubtitleMenuInstantiator
-                    model: mpv.subtitleTracksModel
-                    onObjectAdded: (index, object) => subtitleMenu.addItem(object)
-                    onObjectRemoved: (index, object) => subtitleMenu.removeItem(object)
-                    delegate: MenuItem {
-                        enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
-                        checkable: true
-                        checked: model.id === mpv.subtitleId
-                        text: model.text
-                        onTriggered: mpv.subtitleId = model.id
-                    }
-                }
+                model: mpv.subtitleTracksModel
+                isPrimarySubtitleMenu: true
             }
         }
 
