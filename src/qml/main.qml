@@ -17,7 +17,6 @@ import org.kde.haruna.models
 import Haruna.Components
 
 import "Menus"
-import "Menus/Global"
 import "Settings"
 
 Kirigami.ApplicationWindow {
@@ -70,96 +69,8 @@ Kirigami.ApplicationWindow {
 
     header: Header { id: header }
 
-    menuBar: Loader {
+    menuBar: MenuBarLoader {
         id: menuBarLoader
-
-        property bool showGlobalMenu: app.platformName() !== "windows"
-                                      && Kirigami.Settings.hasPlatformMenuBar
-                                      && !Kirigami.Settings.isMobile
-
-        state: !window.isFullScreen() && GeneralSettings.showMenuBar ? "visible" : "hidden"
-        sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent
-
-        onVisibleChanged: {
-            window.resizeWindow()
-        }
-
-
-        states: [
-            State {
-                name: "hidden"
-                PropertyChanges {
-                    target: menuBarLoader
-                    height: 0
-                    opacity: 0
-                    visible: false
-                }
-            },
-            State {
-                name : "visible"
-                PropertyChanges {
-                    target: menuBarLoader
-                    height: menuBarLoader.implicitHeight
-                    opacity: 1
-                    visible: true
-                }
-            }
-        ]
-
-        transitions: [
-            Transition {
-                from: "visible"
-                to: "hidden"
-
-                SequentialAnimation {
-                    ParallelAnimation {
-                        NumberAnimation {
-                            target: menuBarLoader
-                            property: "opacity"
-                            duration: Kirigami.Units.veryShortDuration
-                            easing.type: Easing.Linear
-                        }
-                        NumberAnimation {
-                            target: menuBarLoader
-                            property: "height"
-                            duration: Kirigami.Units.veryShortDuration
-                            easing.type: Easing.Linear
-                        }
-                    }
-                    PropertyAction {
-                        target: menuBarLoader
-                        property: "visible"
-                        value: false
-                    }
-                }
-            },
-            Transition {
-                from: "hidden"
-                to: "visible"
-
-                SequentialAnimation {
-                    PropertyAction {
-                        target: menuBarLoader
-                        property: "visible"
-                        value: true
-                    }
-                    ParallelAnimation {
-                        NumberAnimation {
-                            target: menuBarLoader
-                            property: "height"
-                            duration: Kirigami.Units.veryShortDuration
-                            easing.type: Easing.Linear
-                        }
-                        NumberAnimation {
-                            target: menuBarLoader
-                            property: "opacity"
-                            duration: Kirigami.Units.veryShortDuration
-                            easing.type: Easing.Linear
-                        }
-                    }
-                }
-            }
-        ]
     }
 
     MpvVideo {
@@ -281,39 +192,6 @@ Kirigami.ApplicationWindow {
 
         active: false
         sourceComponent: SettingsWindow {}
-    }
-
-    Component {
-        id: menuBarComponent
-
-        MenuBar {
-            hoverEnabled: true
-            Kirigami.Theme.colorSet: Kirigami.Theme.Header
-
-            FileMenu {}
-            ViewMenu {}
-            PlaybackMenu {}
-            VideoMenu {}
-            SubtitlesMenu {}
-            AudioMenu {}
-            SettingsMenu {}
-            HelpMenu {}
-        }
-    }
-
-    Component {
-        id: globalMenuBarComponent
-
-        Platform.MenuBar {
-            GlobalFileMenu {}
-            GlobalViewMenu {}
-            GlobalPlaybackMenu {}
-            GlobalVideoMenu {}
-            GlobalSubtitlesMenu {}
-            GlobalAudioMenu {}
-            GlobalSettingsMenu {}
-            GlobalHelpMenu {}
-        }
     }
 
     Connections {
