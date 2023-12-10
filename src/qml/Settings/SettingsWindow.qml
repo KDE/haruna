@@ -43,6 +43,7 @@ Kirigami.ApplicationWindow {
         ListView {
             id: settingsPagesList
 
+            currentIndex: root.currentPage
             Component.onCompleted: {
                 pages[root.currentPage].trigger()
                 currentIndex = root.currentPage
@@ -144,6 +145,10 @@ Kirigami.ApplicationWindow {
             delegate: ItemDelegate {
                 width: settingsPagesList.width
                 action: modelData
+                highlighted: model.index === ListView.view.currentIndex
+                onClicked: {
+                    ListView.view.currentIndex = model.index
+                }
             }
         }
 
