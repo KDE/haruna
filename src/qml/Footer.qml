@@ -17,10 +17,6 @@ ToolBar {
 
     property Item m_mpv
     property alias progressBar: progressBar
-    property alias footerRow: footerRow
-    property alias timeInfo: timeInfo
-    property alias playPauseButton: playPauseButton
-    property alias volume: volumeSlider
 
     padding: Kirigami.Units.smallSpacing
     position: ToolBar.Footer
