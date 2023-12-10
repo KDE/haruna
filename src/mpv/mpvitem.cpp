@@ -756,6 +756,20 @@ QUrl MpvItem::currentUrl() const
     return m_currentUrl;
 }
 
+bool MpvItem::isReady() const
+{
+    return m_isReady;
+}
+
+inline void MpvItem::setIsReady(bool _isReady)
+{
+    if (m_isReady == _isReady) {
+        return;
+    }
+    m_isReady = _isReady;
+    Q_EMIT isReadyChanged();
+}
+
 double MpvItem::watchLaterPosition() const
 {
     return m_watchLaterPosition;

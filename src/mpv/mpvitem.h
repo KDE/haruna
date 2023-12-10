@@ -145,6 +145,10 @@ public:
     Q_PROPERTY(QUrl currentUrl READ currentUrl NOTIFY currentUrlChanged)
     QUrl currentUrl() const;
 
+    Q_PROPERTY(bool isReady READ isReady WRITE setIsReady NOTIFY isReadyChanged)
+    bool isReady() const;
+    void setIsReady(bool _isReady);
+
     Q_INVOKABLE void loadFile(const QString &file);
     Q_INVOKABLE void userCommand(const QString &commandString);
 
@@ -174,6 +178,7 @@ Q_SIGNALS:
     void audioIdChanged();
     void subtitleIdChanged();
     void secondarySubtitleIdChanged();
+    void isReadyChanged();
     void fileStarted();
     void fileLoaded();
     void endFile(QString reason);
@@ -232,6 +237,7 @@ private:
 
     double m_watchLaterPosition{0.0};
     bool m_isFileReloaded{false};
+    bool m_isReady{false};
     QUrl m_currentUrl;
     ChaptersModel *m_chaptersModel;
     bool m_finishedLoading{false};

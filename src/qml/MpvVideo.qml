@@ -32,6 +32,7 @@ MpvItem {
     }
 
     onReady: {
+        isReady = true
         if (app.url(0).toString() !== "") {
             window.openFile(app.url(0), true)
         } else {
