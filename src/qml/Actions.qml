@@ -350,10 +350,10 @@ Item {
         }
 
         function onTogglePlaylistAction() {
-            if (playList.state === "visible") {
-                playList.state = "hidden"
+            if (playlist.state === "visible") {
+                playlist.state = "hidden"
             } else {
-                playList.state = "visible"
+                playlist.state = "visible"
             }
         }
 

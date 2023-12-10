@@ -156,7 +156,7 @@ SettingsBasePage {
             onCheckStateChanged: {
                 PlaylistSettings.bigFontFullscreen = checked
                 PlaylistSettings.save()
-                playList.playlistView.forceLayout()
+                playlist.playlistView.forceLayout()
             }
         }
 

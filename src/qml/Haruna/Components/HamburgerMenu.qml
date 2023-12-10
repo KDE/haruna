@@ -15,7 +15,6 @@ import "../../Menus"
 ToolButton {
     id: root
 
-    property alias menu: menu
     property int position: HamburgerMenu.Position.Header
 
     enum Position {

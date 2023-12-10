@@ -73,7 +73,7 @@ MpvItem {
             const title = playlistModel.data(index, PlaylistModel.TitleRole) || playlistModel.data(index, PlaylistModel.NameRole)
             osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
         }
-        if (playlistProxyModel.getPlayingItem() + 1 < window.playList.playlistView.count) {
+        if (playlistProxyModel.getPlayingItem() + 1 < playlist.playlistView.count) {
             appActions.playNextAction.trigger()
         } else {
             // Last file in playlist
@@ -114,20 +114,20 @@ MpvItem {
             hideCursor = false
             hideCursorTimer.restart()
 
-            if (!PlaylistSettings.canToggleWithMouse || window.playList.playlistView.count <= 1) {
+            if (!PlaylistSettings.canToggleWithMouse || playlist.playlistView.count <= 1) {
                 return
             }
             if (PlaylistSettings.position === "right") {
                 if (mouseX > width - 50) {
-                    window.playList.state = "visible"
+                    playlist.state = "visible"
                 } else {
-                    window.playList.state = "hidden"
+                    playlist.state = "hidden"
                 }
             } else {
                 if (mouseX < 50) {
-                    window.playList.state = "visible"
+                    playlist.state = "visible"
                 } else {
-                    window.playList.state = "hidden"
+                    playlist.state = "hidden"
                 }
             }
         }

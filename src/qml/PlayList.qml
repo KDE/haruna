@@ -182,13 +182,13 @@ Item {
                 delegate: {
                     switch (PlaylistSettings.style) {
                     case "default":
-                        playListItemSimple
+                        playlistItemSimple
                         break
                     case "withThumbnails":
-                        playListItemWithThumbnail
+                        playlistItemWithThumbnail
                         break
                     case "compact":
-                        playListItemCompact
+                        playlistItemCompact
                         break
                     }
                 }
@@ -258,17 +258,17 @@ Item {
         }
 
         Component {
-            id: playListItemWithThumbnail
+            id: playlistItemWithThumbnail
             PlayListItemWithThumbnail {}
         }
 
         Component {
-            id: playListItemSimple
+            id: playlistItemSimple
             PlayListItem {}
         }
 
         Component {
-            id: playListItemCompact
+            id: playlistItemCompact
             PlayListItemCompact {}
         }
 

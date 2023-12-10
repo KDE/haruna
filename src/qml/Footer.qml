@@ -67,7 +67,7 @@ ToolBar {
             icon.name: root.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             text: ""
             focusPolicy: Qt.NoFocus
-            enabled: playList.playlistView.count > 1
+            enabled: playlist.playlistView.count > 1
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Play previous file")
@@ -80,7 +80,7 @@ ToolBar {
             icon.name: root.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             text: ""
             focusPolicy: Qt.NoFocus
-            enabled: playList.playlistView.count > 1
+            enabled: playlist.playlistView.count > 1
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Play next file")

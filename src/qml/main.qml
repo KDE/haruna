@@ -26,7 +26,6 @@ Kirigami.ApplicationWindow {
 
     property int previousVisibility: Window.Windowed
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
-    property alias playList: playlist
 
     visible: true
     title: mpv.mediaTitle || i18nc("@title:window", "Haruna")
@@ -80,10 +79,10 @@ Kirigami.ApplicationWindow {
         height: window.isFullScreen() ? window.contentItem.height : window.contentItem.height - footer.height
         anchors.left: PlaylistSettings.overlayVideo
                       ? window.contentItem.left
-                      : (PlaylistSettings.position === "left" ? playList.right : window.contentItem.left)
+                      : (PlaylistSettings.position === "left" ? playlist.right : window.contentItem.left)
         anchors.right: PlaylistSettings.overlayVideo
                        ? window.contentItem.right
-                       : (PlaylistSettings.position === "right" ? playList.left : window.contentItem.right)
+                       : (PlaylistSettings.position === "right" ? playlist.left : window.contentItem.right)
         anchors.top: parent.top
 
         onVideoReconfig: {
@@ -198,7 +197,7 @@ Kirigami.ApplicationWindow {
         target: app
         function onQmlApplicationMouseLeave() {
             if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
-                playList.state = "hidden"
+                playlist.state = "hidden"
             }
             window.containsMouse = false
         }
