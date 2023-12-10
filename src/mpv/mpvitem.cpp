@@ -118,7 +118,7 @@ void MpvItem::initProperties()
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
     setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
-    setProperty(MpvProperties::self()->VolumeMax, QStringLiteral("100"));
+    setProperty(MpvProperties::self()->VolumeMax, 100);
 
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     setProperty(MpvProperties::self()->ScriptOpts, QStringLiteral("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
