@@ -43,15 +43,6 @@ ToolBar {
         ToolButton {
             action: appActions.openUrlAction
             focusPolicy: Qt.NoFocus
-            MouseArea {
-                anchors.fill: parent
-                acceptedButtons: Qt.MiddleButton
-                onClicked: {
-                    openUrlTextField.clear()
-                    openUrlTextField.paste()
-                    window.openFile(openUrlTextField.text)
-                }
-            }
         }
 
         ToolSeparator {
