@@ -191,27 +191,13 @@ SettingsBasePage {
                 id: hwDecModel
                 ListElement { key: "auto"; }
                 ListElement { key: "auto-safe"; }
-                ListElement { key: "auto-copy"; }
-                ListElement { key: "vdpau"; }
-                ListElement { key: "vdpau-copy"; }
                 ListElement { key: "vaapi"; }
-                ListElement { key: "vaapi-copy"; }
-                ListElement { key: "videotoolbox"; }
-                ListElement { key: "videotoolbox-copy"; }
-                ListElement { key: "dxva2"; }
-                ListElement { key: "dxva2-copy"; }
-                ListElement { key: "d3d11va"; }
-                ListElement { key: "d3d11va-copy"; }
-                ListElement { key: "mediacodec"; }
-                ListElement { key: "mediacodec-copy"; }
-                ListElement { key: "mmal"; }
-                ListElement { key: "mmal-copy"; }
                 ListElement { key: "nvdec"; }
-                ListElement { key: "nvdec-copy"; }
+                ListElement { key: "videotoolbox"; }
+                ListElement { key: "vdpau"; }
                 ListElement { key: "cuda"; }
-                ListElement { key: "cuda-copy"; }
-                ListElement { key: "crystalhd"; }
-                ListElement { key: "rkmpp"; }
+                ListElement { key: "d3d11va"; }
+                ListElement { key: "mmal"; }
             }
 
             onActivated: {
