@@ -30,9 +30,12 @@ ToolBar {
 
         width: parent.width
 
-        HamburgerMenu {
-            visible: !menuBarLoader.visible
-            position: HamburgerMenu.Position.Header
+        Loader {
+            asynchronous: true
+            visible: menuBarLoader.state === "hidden"
+            sourceComponent: HamburgerMenu {
+                position: HamburgerMenu.Position.Header
+            }
         }
 
         ToolButton {
