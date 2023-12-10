@@ -64,6 +64,11 @@ QHash<int, QByteArray> RecentFilesModel::roleNames() const
 
 void RecentFilesModel::populate()
 {
+    if (GeneralSettings::maxRecentFiles() <= 0) {
+        deleteEntries();
+        return;
+    }
+
     clear();
     setMaxRecentFiles(GeneralSettings::maxRecentFiles());
 
