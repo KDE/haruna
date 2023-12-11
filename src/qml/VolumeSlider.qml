@@ -4,11 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQml
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Layouts
-import QtQuick.Shapes
 import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami as Kirigami

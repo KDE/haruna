@@ -13,7 +13,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
 
-import "Menus"
 import "Haruna/Components"
 
 ToolBar {
