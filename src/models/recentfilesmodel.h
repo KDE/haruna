@@ -10,6 +10,7 @@
 #include <KConfigGroup>
 #include <QAbstractListModel>
 #include <QUrl>
+#include <QtQml/qqmlregistration.h>
 
 class KRecentFilesAction;
 
@@ -21,6 +22,8 @@ struct RecentFile {
 class RecentFilesModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(RecentFilesModel)
+
 public:
     explicit RecentFilesModel(QObject *parent = nullptr);
 

@@ -47,6 +47,69 @@ if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     target_include_directories(haruna PRIVATE mpris2)
 endif()
 
+qt_policy(SET QTP0001 NEW)
+
+qt_add_qml_module(haruna
+    URI org.kde.haruna
+    VERSION 1.0
+    QML_FILES
+        qml/Actions.qml
+        qml/Footer.qml
+        qml/Header.qml
+        qml/HProgressBar.qml
+        qml/MenuBarLoader.qml
+        qml/MpvVideo.qml
+        qml/Osd.qml
+        qml/PlayList.qml
+        qml/PlayListItem.qml
+        qml/PlayListItemCompact.qml
+        qml/PlayListItemWithThumbnail.qml
+        qml/VolumeSlider.qml
+        qml/main.qml
+
+        qml/Haruna/Components/AudioTracksMenu.qml
+        qml/Haruna/Components/ColorPickerButton.qml
+        qml/Haruna/Components/HamburgerMenu.qml
+        qml/Haruna/Components/ImageAdjustmentSlider.qml
+        qml/Haruna/Components/InputPopup.qml
+        qml/Haruna/Components/LabelWithTooltip.qml
+        qml/Haruna/Components/SelectActionPopup.qml
+        qml/Haruna/Components/SettingsBasePage.qml
+        qml/Haruna/Components/SettingsHeader.qml
+        qml/Haruna/Components/SubtitlesFolders.qml
+        qml/Haruna/Components/SubtitleTracksMenu.qml
+
+        qml/Menus/AudioMenu.qml
+        qml/Menus/ContextMenu.qml
+        qml/Menus/FileMenu.qml
+        qml/Menus/HelpMenu.qml
+        qml/Menus/PlaybackMenu.qml
+        qml/Menus/SettingsMenu.qml
+        qml/Menus/SubtitlesMenu.qml
+        qml/Menus/VideoMenu.qml
+        qml/Menus/ViewMenu.qml
+        qml/Menus/Global/GlobalAudioMenu.qml
+        qml/Menus/Global/GlobalFileMenu.qml
+        qml/Menus/Global/GlobalHelpMenu.qml
+        qml/Menus/Global/GlobalPlaybackMenu.qml
+        qml/Menus/Global/GlobalSettingsMenu.qml
+        qml/Menus/Global/GlobalSubtitlesMenu.qml
+        qml/Menus/Global/GlobalVideoMenu.qml
+        qml/Menus/Global/GlobalViewMenu.qml
+
+        qml/Settings/GeneralSettings.qml
+        qml/Settings/PlaybackSettings.qml
+        qml/Settings/VideoSettings.qml
+        qml/Settings/AudioSettings.qml
+        qml/Settings/SubtitlesSettings.qml
+        qml/Settings/PlaylistSettings.qml
+        qml/Settings/MouseSettings.qml
+        qml/Settings/ShortcutsSettings.qml
+        qml/Settings/CustomCommandsSettings.qml
+        qml/Settings/EditCustomCommand.qml
+        qml/Settings/DebugSettings.qml
+)
+
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/generalsettings.kcfgc)
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/informationsettings.kcfgc)

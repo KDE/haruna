@@ -10,7 +10,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.kde.haruna
-import org.kde.haruna.models
+import org.kde.haruna.settings
 import org.kde.kirigami as Kirigami
 
 MpvItem {

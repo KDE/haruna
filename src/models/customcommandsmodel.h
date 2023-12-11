@@ -10,12 +10,14 @@
 #include <KSharedConfig>
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
+#include <QtQml/qqmlregistration.h>
 
 class ActionsModel;
 
 class CustomCommandsModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(CustomCommandsModel)
 
     Q_PROPERTY(ActionsModel *appActionsModel READ appActionsModel WRITE setAppActionsModel NOTIFY appActionsModelChanged)
 

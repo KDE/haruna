@@ -14,6 +14,7 @@
 #include <QKeySequence>
 #include <QQmlPropertyMap>
 #include <QSortFilterProxyModel>
+#include <QtQml/qqmlregistration.h>
 
 struct Action {
     QString name;
@@ -28,6 +29,8 @@ struct Action {
 class ProxyActionsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(ProxyActionsModel)
+
 public:
     explicit ProxyActionsModel(QObject *parent = nullptr);
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -45,6 +48,8 @@ private:
 class ActionsModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(ActionsModel)
+
 public:
     explicit ActionsModel(QObject *parent = nullptr);
 

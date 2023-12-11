@@ -10,6 +10,7 @@
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 #include <QUrl>
+#include <QtQml/qqmlregistration.h>
 
 struct PlaylistItem {
     QUrl url;
@@ -22,6 +23,8 @@ struct PlaylistItem {
 class PlaylistProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(PlaylistProxyModel)
+
 public:
     explicit PlaylistProxyModel(QObject *parent = nullptr);
 
@@ -51,6 +54,8 @@ public:
 class PlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(PlaylistModel)
+
 public:
     explicit PlaylistModel(QObject *parent = nullptr);
     friend class PlaylistProxyModel;

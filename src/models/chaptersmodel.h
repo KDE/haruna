@@ -8,6 +8,7 @@
 #define CHAPTERSMODEL_H
 
 #include <QAbstractListModel>
+#include <QtQml/qqmlregistration.h>
 
 struct Chapter {
     QString title;
@@ -17,6 +18,7 @@ struct Chapter {
 class ChaptersModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(ChaptersModel)
 
 public:
     explicit ChaptersModel(QObject *parent = nullptr);

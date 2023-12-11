@@ -9,10 +9,13 @@
 
 #include <QAbstractListModel>
 #include <QObject>
+#include <QtQml/qqmlregistration.h>
 
 class TracksModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(TracksModel)
+
 public:
     explicit TracksModel(QObject *parent = nullptr);
     enum { TextRole = Qt::UserRole, LanguageRole, TitleRole, IDRole, CodecRole };

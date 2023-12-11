@@ -80,7 +80,6 @@ Application::Application()
     setupWorkerThread();
     setupAboutData();
     setupCommandLineParser();
-    registerQmlTypes();
     setupQmlSettingsTypes();
 
     connect(Global::instance(), &Global::error, this, &Application::error);
@@ -140,34 +139,17 @@ void Application::setupCommandLineParser()
     }
 }
 
-void Application::registerQmlTypes()
-{
-    qmlRegisterType<MpvItem>("org.kde.haruna", 1, 0, "MpvItem");
-    qmlRegisterType<MpvPreview>("org.kde.haruna", 1, 0, "MpvPreview");
-    qRegisterMetaType<PlaylistModel *>();
-    qRegisterMetaType<TracksModel *>();
-    qRegisterMetaType<KFileMetaData::PropertyMultiMap>("KFileMetaData::PropertyMultiMap");
-    // models
-    qmlRegisterType<SubtitlesFoldersModel>("org.kde.haruna.models", 1, 0, "SubtitlesFoldersModel");
-    qmlRegisterType<ActionsModel>("org.kde.haruna.models", 1, 0, "ActionsModel");
-    qmlRegisterType<ProxyActionsModel>("org.kde.haruna.models", 1, 0, "ProxyActionsModel");
-    qmlRegisterType<CustomCommandsModel>("org.kde.haruna.models", 1, 0, "CustomCommandsModel");
-    qmlRegisterType<RecentFilesModel>("org.kde.haruna.models", 1, 0, "RecentFilesModel");
-    qmlRegisterType<PlaylistProxyModel>("org.kde.haruna.models", 1, 0, "PlaylistProxyModel");
-    qmlRegisterType<PlaylistModel>("org.kde.haruna.models", 1, 0, "PlaylistModel");
-}
-
 void Application::setupQmlSettingsTypes()
 {
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MpvProperties", MpvProperties::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "AudioSettings", AudioSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "GeneralSettings", GeneralSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "InformationSettings", InformationSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "MouseSettings", MouseSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaybackSettings", PlaybackSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "PlaylistSettings", PlaylistSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna", 1, 0, "VideoSettings", VideoSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.mpvproperties", 1, 0, "MpvProperties", MpvProperties::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "AudioSettings", AudioSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "GeneralSettings", GeneralSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "InformationSettings", InformationSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "MouseSettings", MouseSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "PlaybackSettings", PlaybackSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "PlaylistSettings", PlaylistSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
+    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "VideoSettings", VideoSettings::self());
 }
 
 void Application::restoreWindowGeometry(QQuickWindow *window) const

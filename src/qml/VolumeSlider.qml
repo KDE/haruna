@@ -13,6 +13,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.settings
 
 Slider {
     id: root

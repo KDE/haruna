@@ -13,7 +13,7 @@ import QtQml
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
-import org.kde.haruna.models
+import org.kde.haruna.settings
 import Haruna.Components
 
 import "Menus"
@@ -103,7 +103,6 @@ Kirigami.ApplicationWindow {
 
             x: mpv.width * 0.5 - width * 0.5
             y: Kirigami.Units.largeSpacing
-            anchors.centerIn: undefined
             width: Kirigami.Units.gridUnit * 20
             height: minHeight < Kirigami.Units.gridUnit * 16 ? maxHeight : minHeight
             title: ""

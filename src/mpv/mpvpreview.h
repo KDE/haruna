@@ -7,13 +7,15 @@
 #ifndef MPVPREVIEW_H
 #define MPVPREVIEW_H
 
-#include "mpvabstractitem.h"
+#include <MpvAbstractItem>
 
 class MpvRenderer;
 
 class MpvPreview : public MpvAbstractItem
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(double position READ position WRITE setPosition NOTIFY positionChanged)
     Q_PROPERTY(double aspectRatio READ aspectRatio NOTIFY aspectRatioChanged)
     Q_PROPERTY(QString file READ file WRITE setFile NOTIFY fileChanged)

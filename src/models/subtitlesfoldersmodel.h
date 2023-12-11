@@ -8,10 +8,12 @@
 #define SUBTITLESFOLDERSMODEL_H
 
 #include <QAbstractListModel>
+#include <QtQml/qqmlregistration.h>
 
 class SubtitlesFoldersModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(SubtitlesFoldersModel)
 
 public:
     explicit SubtitlesFoldersModel(QObject *parent = nullptr);

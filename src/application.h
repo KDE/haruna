@@ -105,7 +105,6 @@ private:
     void setupWorkerThread();
     void setupAboutData();
     void setupCommandLineParser();
-    void registerQmlTypes();
     void setupQmlSettingsTypes();
     QAbstractItemModel *colorSchemesModel();
     QApplication *m_app{nullptr};
