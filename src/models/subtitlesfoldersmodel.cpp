@@ -8,7 +8,6 @@
 #include "subtitlessettings.h"
 
 #include <KConfig>
-#include <KConfigDialog>
 #include <KConfigGroup>
 #include <global.h>
 

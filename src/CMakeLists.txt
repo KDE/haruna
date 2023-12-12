@@ -136,6 +136,7 @@ target_link_libraries(haruna PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
 
+    KF6::ColorScheme
     KF6::ConfigCore
     KF6::ConfigGui
     KF6::CoreAddons
@@ -144,7 +145,6 @@ target_link_libraries(haruna PRIVATE
     KF6::IconThemes
     KF6::KIOWidgets
     KF6::Kirigami2
-    KF6::ConfigWidgets
     KF6::WindowSystem
 
     MpvQt::MpvQt

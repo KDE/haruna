@@ -75,6 +75,10 @@ find_package(Breeze)
 set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
     URL "https://api.kde.org/frameworks/breeze-icons/html/index.html")
 
+find_package(KF6ColorScheme)
+set_package_properties(KF6ColorScheme PROPERTIES TYPE REQUIRED
+    URL "https://invent.kde.org/frameworks/kcolorscheme")
+
 find_package(KF6Config)
 set_package_properties(KF6Config PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfig/html/index.html")
@@ -106,10 +110,6 @@ set_package_properties(KF6KIO PROPERTIES TYPE REQUIRED
 find_package(KF6Kirigami2)
 set_package_properties(KF6Kirigami2 PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kirigami/html/index.html")
-
-find_package(KF6ConfigWidgets)
-set_package_properties(KF6ConfigWidgets PROPERTIES TYPE REQUIRED
-    URL "https://api.kde.org/frameworks/kconfigwidgets/html/index.html")
 
 find_package(KF6WindowSystem)
 set_package_properties(KF6WindowSystem PROPERTIES TYPE REQUIRED
