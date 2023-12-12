@@ -352,7 +352,7 @@ SettingsBasePage {
                 }
             }
 
-            onActivated: {
+            onActivated: function(index) {
                 GeneralSettings.colorScheme = colorThemeSwitcher.textAt(index)
                 GeneralSettings.save()
                 app.activateColorScheme(GeneralSettings.colorScheme)
@@ -381,7 +381,7 @@ SettingsBasePage {
                 ListElement { key: "Default"; }
             }
 
-            onActivated: {
+            onActivated: function(index) {
                 GeneralSettings.guiStyle = model.get(index).key
                 app.setGuiStyle(GeneralSettings.guiStyle)
                 // some themes can cause a crash

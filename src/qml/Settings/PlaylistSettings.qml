@@ -43,7 +43,7 @@ SettingsBasePage {
                     }
                 }
             }
-            onActivated: {
+            onActivated: function(index) {
                 PlaylistSettings.position = model.get(index).value
                 PlaylistSettings.save()
             }
@@ -69,7 +69,7 @@ SettingsBasePage {
                     }
                 }
             }
-            onActivated: {
+            onActivated: function(index) {
                 PlaylistSettings.style = model.get(index).value
                 PlaylistSettings.save()
             }

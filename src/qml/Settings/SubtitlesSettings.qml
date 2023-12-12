@@ -116,7 +116,7 @@ SettingsBasePage {
                 property string defaultFamily: "Sans Serif"
 
                 model: app.getFonts()
-                onActivated: {
+                onActivated: function(index) {
                     SubtitlesSettings.fontFamily = currentText
                     SubtitlesSettings.save()
                     mpv.setProperty(MpvProperties.SubtitleFont, currentText)

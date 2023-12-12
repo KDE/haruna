@@ -202,7 +202,7 @@ SettingsBasePage {
                 ListElement { key: "mmal"; }
             }
 
-            onActivated: {
+            onActivated: function(index) {
                 PlaybackSettings.hWDecoding = model.get(index).key
                 PlaybackSettings.save()
                 mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
@@ -372,7 +372,7 @@ SettingsBasePage {
                 text: i18nc("@info:tooltip", "Selects the best video with a height lower than or equal to the selected value.")
             }
 
-            onActivated: {
+            onActivated: function(index) {
                 hCurrentvalue = model.get(index).value
                 if (index === 0) {
                     ytdlFormatField.text = PlaybackSettings.ytdlFormat

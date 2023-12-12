@@ -104,7 +104,7 @@ SettingsBasePage {
                 ListElement { key: "JPEG XL"; value: "jxl" }
             }
 
-            onActivated: {
+            onActivated: function(index) {
                 VideoSettings.screenshotFormat = model.get(index).value
                 VideoSettings.save()
                 mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
@@ -174,7 +174,9 @@ SettingsBasePage {
             id: contrastSlider
 
             value: mpv.getProperty(MpvProperties.Contrast)
-            onSliderValueChanged: mpv.setProperty(MpvProperties.Contrast, value.toFixed(0))
+            onSliderValueChanged: function(value) {
+                mpv.setProperty(MpvProperties.Contrast, value.toFixed(0))
+            }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -191,7 +193,9 @@ SettingsBasePage {
             id: brightnessSlider
 
             value: mpv.getProperty(MpvProperties.Brightness)
-            onSliderValueChanged: mpv.setProperty(MpvProperties.Brightness, value.toFixed(0))
+            onSliderValueChanged: function(value) {
+                mpv.setProperty(MpvProperties.Brightness, value.toFixed(0))
+            }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -208,7 +212,9 @@ SettingsBasePage {
             id: gammaSlider
 
             value: mpv.getProperty(MpvProperties.Gamma)
-            onSliderValueChanged:mpv.setProperty(MpvProperties.Gamma, value.toFixed(0))
+            onSliderValueChanged: function(value) {
+                mpv.setProperty(MpvProperties.Gamma, value.toFixed(0))
+            }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
@@ -225,7 +231,9 @@ SettingsBasePage {
             id: saturationSlider
 
             value: mpv.getProperty(MpvProperties.Saturation)
-            onSliderValueChanged: mpv.setProperty(MpvProperties.Saturation, value.toFixed(0))
+            onSliderValueChanged: function(value) {
+                mpv.setProperty(MpvProperties.Saturation, value.toFixed(0))
+            }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
         }
