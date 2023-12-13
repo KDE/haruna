@@ -127,13 +127,11 @@ public:
     int secondarySubtitleId();
     void setSecondarySubtitleId(int value);
 
-    Q_PROPERTY(int videoWidth READ videoWidth WRITE setVideoWidth NOTIFY videoWidthChanged)
+    Q_PROPERTY(int videoWidth READ videoWidth NOTIFY videoWidthChanged)
     int videoWidth();
-    void setVideoWidth(int value);
 
-    Q_PROPERTY(int videoHeight READ videoHeight WRITE setVideoHeight NOTIFY videoHeightChanged)
+    Q_PROPERTY(int videoHeight READ videoHeight NOTIFY videoHeightChanged)
     int videoHeight();
-    void setVideoHeight(int value);
 
     /**
      * Whether the file finished loading and it's safe to start certain events,

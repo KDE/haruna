@@ -817,25 +817,9 @@ int MpvItem::videoWidth()
     return m_videoWidth;
 }
 
-void MpvItem::setVideoWidth(int value)
-{
-    if (width() == value) {
-        return;
-    }
-    setProperty(MpvProperties::self()->Width, value);
-}
-
 int MpvItem::videoHeight()
 {
     return m_videoHeight;
-}
-
-void MpvItem::setVideoHeight(int value)
-{
-    if (height() == value) {
-        return;
-    }
-    setProperty(MpvProperties::self()->Height, value);
 }
 
 #include "moc_mpvitem.cpp"
