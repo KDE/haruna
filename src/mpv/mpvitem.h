@@ -224,16 +224,16 @@ private:
     double m_duration{0.0};
     QString m_formattedDuration;
     QString m_mediaTitle;
-    bool m_pause;
-    bool m_mute;
-    int m_chapter;
-    int m_volume;
-    int m_volumeMax;
-    int m_audioId;
-    int m_subtitleId;
-    int m_secondarySubtitleId;
-    int m_videoWidth;
-    int m_videoHeight;
+    bool m_pause{false};
+    bool m_mute{false};
+    int m_chapter{0};
+    int m_volume{0};
+    int m_volumeMax{100};
+    int m_audioId{0};
+    int m_subtitleId{0};
+    int m_secondarySubtitleId{0};
+    int m_videoWidth{0};
+    int m_videoHeight{0};
     QList<QVariant> m_chaptersList;
 
     double m_watchLaterPosition{0.0};
