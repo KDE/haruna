@@ -291,14 +291,17 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
     } else if (property == MpvProperties::self()->Position) {
         m_position = value.toDouble();
+        m_formattedPosition = Application::formatTime(m_position);
         Q_EMIT positionChanged();
 
     } else if (property == MpvProperties::self()->Remaining) {
         m_remaining = value.toDouble();
+        m_formattedRemaining = Application::formatTime(m_remaining);
         Q_EMIT remainingChanged();
 
     } else if (property == MpvProperties::self()->Duration) {
         m_duration = value.toDouble();
+        m_formattedDuration = Application::formatTime(m_duration);
         Q_EMIT durationChanged();
 
     } else if (property == MpvProperties::self()->Pause) {
@@ -607,7 +610,6 @@ QString MpvItem::mediaTitle()
 
 double MpvItem::position()
 {
-    m_formattedPosition = Application::formatTime(m_position);
     return m_position;
 }
 
@@ -621,13 +623,11 @@ void MpvItem::setPosition(double value)
 
 double MpvItem::remaining()
 {
-    m_formattedRemaining = Application::formatTime(m_remaining);
     return m_remaining;
 }
 
 double MpvItem::duration()
 {
-    m_formattedDuration = Application::formatTime(m_duration);
     return m_duration;
 }
 
