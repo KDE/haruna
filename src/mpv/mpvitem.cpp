@@ -398,7 +398,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         break;
     }
     case AsyncIds::SavePosition: {
-        auto hash = md5(currentUrl().toLocalFile());
+        auto hash = md5(currentUrl().toString());
         auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
         Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), data.toString());
         break;
@@ -509,7 +509,7 @@ double MpvItem::loadTimePosition()
         return 0;
     }
 
-    auto hash = md5(currentUrl().toLocalFile());
+    auto hash = md5(currentUrl().toString());
     auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
     KConfig config(watchLaterConfig);
     auto pos = config.group(QString()).readEntry("TimePosition", QString::number(0)).toDouble();
@@ -519,7 +519,7 @@ double MpvItem::loadTimePosition()
 
 void MpvItem::resetTimePosition()
 {
-    auto hash = md5(currentUrl().toLocalFile());
+    auto hash = md5(currentUrl().toString());
     auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
     QFile f(watchLaterConfig);
 
