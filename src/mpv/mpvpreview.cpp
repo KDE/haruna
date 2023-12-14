@@ -24,6 +24,7 @@ MpvPreview::MpvPreview()
     setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
     setProperty(MpvProperties::self()->AudioId, false);
     setProperty(MpvProperties::self()->AudioFileAuto, false);
+    setProperty(MpvProperties::self()->SubtitleId, false);
     setProperty(MpvProperties::self()->SubtitleAuto, false);
     setProperty(MpvProperties::self()->OsdLevel, 0);
     setProperty(MpvProperties::self()->AudioPitchCorection, false);
