@@ -16,8 +16,8 @@
 #include "mousesettings.h"
 #include "mpvitem.h"
 #include "mpvpreview.h"
+#include "mpvproperties.h"
 #include "playbacksettings.h"
-#include "playlistitem.h"
 #include "playlistmodel.h"
 #include "playlistsettings.h"
 #include "recentfilesmodel.h"
@@ -27,7 +27,6 @@
 #include "videosettings.h"
 #include "worker.h"
 
-#include "mpvproperties.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDesktopServices>
