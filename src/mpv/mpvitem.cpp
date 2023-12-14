@@ -112,6 +112,7 @@ void MpvItem::initProperties()
 
     QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
     setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
+    setProperty(MpvProperties::self()->Volume, AudioSettings::volume());
     setProperty(MpvProperties::self()->VolumeMax, 100);
 
     // set ytdl_path to yt-dlp or fallback to youtube-dl
@@ -305,6 +306,9 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->Volume) {
         m_volume = value.toInt();
         Q_EMIT volumeChanged();
+
+        AudioSettings::setVolume(m_volume);
+        AudioSettings::self()->save();
 
     } else if (property == MpvProperties::self()->VolumeMax) {
         m_volumeMax = value.toInt();
