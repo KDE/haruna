@@ -179,27 +179,27 @@ Item {
         }
 
         function onSeekForwardSmallAction() {
-            mpv.command(["seek", GeneralSettings.seekSmallStep, "exact"])
+            mpv.command(["seek", PlaybackSettings.seekSmallStep, "exact"])
         }
 
         function onSeekBackwardSmallAction() {
-            mpv.command(["seek", -GeneralSettings.seekSmallStep, "exact"])
+            mpv.command(["seek", -PlaybackSettings.seekSmallStep, "exact"])
         }
 
         function onSeekForwardMediumAction() {
-            mpv.command(["seek", GeneralSettings.seekMediumStep, "exact"])
+            mpv.command(["seek", PlaybackSettings.seekMediumStep, "exact"])
         }
 
         function onSeekBackwardMediumAction() {
-            mpv.command(["seek", -GeneralSettings.seekMediumStep, "exact"])
+            mpv.command(["seek", -PlaybackSettings.seekMediumStep, "exact"])
         }
 
         function onSeekForwardBigAction() {
-            mpv.command(["seek", GeneralSettings.seekBigStep, "exact"])
+            mpv.command(["seek", PlaybackSettings.seekBigStep, "exact"])
         }
 
         function onSeekBackwardBigAction() {
-            mpv.command(["seek", -GeneralSettings.seekBigStep, "exact"])
+            mpv.command(["seek", -PlaybackSettings.seekBigStep, "exact"])
         }
 
         function onSeekNextChapterAction() {

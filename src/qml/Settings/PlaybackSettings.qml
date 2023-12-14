@@ -37,10 +37,10 @@ SettingsBasePage {
             editable: true
             from: 0
             to: 100
-            value: GeneralSettings.seekSmallStep
+            value: PlaybackSettings.seekSmallStep
             onValueChanged: {
-                GeneralSettings.seekSmallStep = seekSmallStep.value
-                GeneralSettings.save()
+                PlaybackSettings.seekSmallStep = seekSmallStep.value
+                PlaybackSettings.save()
             }
         }
 
@@ -57,10 +57,10 @@ SettingsBasePage {
                 editable: true
                 from: 0
                 to: 100
-                value: GeneralSettings.seekMediumStep
+                value: PlaybackSettings.seekMediumStep
                 onValueChanged: {
-                    GeneralSettings.seekMediumStep = seekMediumStep.value
-                    GeneralSettings.save()
+                    PlaybackSettings.seekMediumStep = seekMediumStep.value
+                    PlaybackSettings.save()
                 }
             }
 
@@ -92,10 +92,10 @@ SettingsBasePage {
             editable: true
             from: 0
             to: 100
-            value: GeneralSettings.seekBigStep
+            value: PlaybackSettings.seekBigStep
             onValueChanged: {
-                GeneralSettings.seekBigStep = seekBigStep.value
-                GeneralSettings.save()
+                PlaybackSettings.seekBigStep = seekBigStep.value
+                PlaybackSettings.save()
             }
         }
 
