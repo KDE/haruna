@@ -8,7 +8,6 @@
 
 #include <KSharedConfig>
 
-#include <QDebug>
 #include <QJsonDocument>
 #include <QMenu>
 #include <QProcess>

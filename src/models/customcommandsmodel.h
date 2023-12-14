@@ -8,6 +8,7 @@
 #define CUSTOMCOMMANDSMODEL_H
 
 #include <KSharedConfig>
+
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>

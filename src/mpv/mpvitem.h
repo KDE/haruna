@@ -9,10 +9,10 @@
 
 #include <MpvAbstractItem>
 
-#include "chaptersmodel.h"
-#include "playlistmodel.h"
-#include "tracksmodel.h"
-
+class ChaptersModel;
+class PlaylistModel;
+class PlaylistProxyModel;
+class TracksModel;
 class MpvRenderer;
 
 class MpvItem : public MpvAbstractItem

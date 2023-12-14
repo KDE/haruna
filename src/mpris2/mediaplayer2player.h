@@ -10,9 +10,8 @@
 #include <QDBusAbstractAdaptor>
 #include <QImage>
 
-#include "mpvitem.h"
-
 class QDBusObjectPath;
+class MpvItem;
 
 class MediaPlayer2Player : public QDBusAbstractAdaptor
 {

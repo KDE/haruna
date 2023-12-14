@@ -6,7 +6,6 @@
 
 #include "framedecoder.h"
 
-#include <QDebug>
 #include <QFileInfo>
 #include <QImage>
 

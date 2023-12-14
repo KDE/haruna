@@ -5,10 +5,11 @@
  */
 
 #include "customcommandsmodel.h"
-#include "actionsmodel.h"
 
 #include <KConfigGroup>
-#include <global.h>
+
+#include "actionsmodel.h"
+#include "global.h"
 
 CustomCommandsModel::CustomCommandsModel(QObject *parent)
     : QAbstractListModel(parent)

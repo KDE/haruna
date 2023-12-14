@@ -6,12 +6,12 @@
 
 #include "actionsmodel.h"
 
-#include <global.h>
-
 #include <KConfigGroup>
 
 #include <QMessageBox>
 #include <QPushButton>
+
+#include "global.h"
 
 ActionsModel::ActionsModel(QObject *parent)
     : QAbstractListModel(parent)

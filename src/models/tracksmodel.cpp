@@ -5,7 +5,6 @@
  */
 
 #include "tracksmodel.h"
-#include <utility>
 
 TracksModel::TracksModel(QObject *parent)
     : QAbstractListModel(parent)

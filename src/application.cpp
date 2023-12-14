@@ -35,7 +35,6 @@
 #include <QFontDatabase>
 #include <QGuiApplication>
 #include <QMimeDatabase>
-#include <QQuickItem>
 #include <QQuickView>
 #include <QStandardPaths>
 #include <QStyle>
@@ -49,7 +48,6 @@
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KLocalizedString>
-#include <KStartupInfo>
 #include <KWindowConfig>
 #include <KWindowSystem>
 

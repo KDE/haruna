@@ -6,11 +6,8 @@
 
 #include "mediaplayer2player.h"
 
-#include "application.h"
-#include "mpvitem.h"
-#include "mpvproperties.h"
-#include "videosettings.h"
-#include "worker.h"
+#include <KFileMetaData/ExtractorCollection>
+#include <KFileMetaData/SimpleExtractionResult>
 
 #include <QBuffer>
 #include <QDBusConnection>
@@ -18,8 +15,11 @@
 #include <QDBusObjectPath>
 #include <QImage>
 
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
+#include "application.h"
+#include "mpvitem.h"
+#include "mpvproperties.h"
+#include "videosettings.h"
+#include "worker.h"
 
 MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     : QDBusAbstractAdaptor(parent)

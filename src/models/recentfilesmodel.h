@@ -8,6 +8,7 @@
 #define RECENTFILESMODEL_H
 
 #include <KConfigGroup>
+
 #include <QAbstractListModel>
 #include <QUrl>
 #include <QtQml/qqmlregistration.h>

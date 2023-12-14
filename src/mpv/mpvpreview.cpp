@@ -6,10 +6,10 @@
 
 #include "mpvpreview.h"
 
+#include <MpvController>
+
 #include "generalsettings.h"
 #include "mpvproperties.h"
-
-#include <MpvController>
 
 MpvPreview::MpvPreview()
 {

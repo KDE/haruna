@@ -9,14 +9,7 @@
 #include <QCommandLineParser>
 #include <QCryptographicHash>
 #include <QDir>
-#include <QJsonArray>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QObject>
-#include <QProcess>
-#include <QStandardPaths>
 #include <QTimer>
-#include <QtGlobal>
 
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
@@ -26,6 +19,7 @@
 
 #include "application.h"
 #include "audiosettings.h"
+#include "chaptersmodel.h"
 #include "generalsettings.h"
 #include "global.h"
 #include "informationsettings.h"

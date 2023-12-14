@@ -7,6 +7,7 @@
 #include "mediaplayer2.h"
 
 #include <KAboutData>
+
 #include <QApplication>
 
 MediaPlayer2::MediaPlayer2(QObject *obj)

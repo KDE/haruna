@@ -11,7 +11,6 @@
 #include "generalsettings.h"
 
 #include <QCryptographicHash>
-#include <QDebug>
 #include <QDir>
 #include <QFileInfo>
 #include <QImage>

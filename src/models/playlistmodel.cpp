@@ -6,11 +6,6 @@
 
 #include "playlistmodel.h"
 
-#include "application.h"
-#include "generalsettings.h"
-#include "playlistsettings.h"
-#include "worker.h"
-
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KIO/DeleteOrTrashJob>
@@ -27,6 +22,11 @@
 #include <QJsonDocument>
 #include <QJsonValue>
 #include <QProcess>
+
+#include "application.h"
+#include "generalsettings.h"
+#include "playlistsettings.h"
+#include "worker.h"
 
 PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
