@@ -135,7 +135,7 @@ Slider {
                 progressBarToolTip.y = root.height + Kirigami.Units.largeSpacing
             }
 
-            onWheel: {
+            onWheel: function(wheel) {
                 if (wheel.angleDelta.y > 0) {
                     appActions.seekForwardMediumAction.trigger()
                 } else if (wheel.angleDelta.y) {
