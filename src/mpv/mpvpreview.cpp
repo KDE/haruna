@@ -32,6 +32,7 @@ MpvPreview::MpvPreview()
     setProperty(MpvProperties::self()->AudioDisplay, false);
 
     connect(mpvController(), &MpvController::propertyChanged, this, [=](const QString &property, const QVariant &value) {
+        Q_UNUSED(value)
         if (property == MpvProperties::self()->AspectRatio) {
             Q_EMIT aspectRatioChanged();
         }
