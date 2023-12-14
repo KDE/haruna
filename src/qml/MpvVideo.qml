@@ -43,29 +43,6 @@ MpvItem {
         osd.message(text);
     }
 
-    onEndFile: {
-        if (reason === "error") {
-            if (playlistModel.rowCount() === 0) {
-                return
-            }
-
-            const index = playlistModel.index(playlistProxyModel.getPlayingItem(), 0)
-            const title = playlistModel.data(index, PlaylistModel.TitleRole) || playlistModel.data(index, PlaylistModel.NameRole)
-            osd.message(i18nc("@info:tooltip", "Could not play: %1", title))
-        }
-        if (playlistProxyModel.getPlayingItem() + 1 < playlist.playlistView.count) {
-            appActions.playNextAction.trigger()
-        } else {
-            // Last file in playlist
-            if (PlaylistSettings.repeat) {
-                playlistProxyModel.setPlayingItem(0)
-            } else {
-                isFileReloaded = true
-                playlistProxyModel.setPlayingItem(playlistProxyModel.getPlayingItem())
-            }
-        }
-    }
-
     onRaise: { app.raiseWindow() }
     onPlayNext: { appActions.playNextAction.trigger() }
     onPlayPrevious: { appActions.playPreviousAction.trigger() }

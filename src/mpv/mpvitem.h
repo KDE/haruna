@@ -180,7 +180,6 @@ Q_SIGNALS:
     void isReadyChanged();
     void fileStarted();
     void fileLoaded();
-    void endFile(QString reason);
     void videoReconfig();
     void videoWidthChanged();
     void videoHeightChanged();
@@ -199,6 +198,7 @@ private:
     void initProperties();
     void setupConnections();
     void onReady();
+    void onEndFile(const QString &reason);
     void onPropertyChanged(const QString &property, const QVariant &value);
     void saveTimePosition();
     double loadTimePosition();

@@ -163,7 +163,7 @@ void MpvItem::setupConnections()
             this, &MpvItem::fileStarted, Qt::QueuedConnection);
 
     connect(mpvController(), &MpvController::endFile,
-            this, &MpvItem::endFile, Qt::QueuedConnection);
+            this, &MpvItem::onEndFile, Qt::QueuedConnection);
 
     connect(mpvController(), &MpvController::videoReconfig,
             this, &MpvItem::videoReconfig, Qt::QueuedConnection);
@@ -278,6 +278,32 @@ void MpvItem::setupConnections()
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue, Qt::QueuedConnection);
     // clang-format on
+}
+
+void MpvItem::onEndFile(const QString &reason)
+{
+    if (reason == u"error"_qs) {
+        if (playlistModel()->rowCount() == 0) {
+            return;
+        }
+
+        const auto index = playlistProxyModel()->index(playlistProxyModel()->getPlayingItem(), 0);
+        const auto title = playlistModel()->data(playlistProxyModel()->mapToSource(index), PlaylistModel::TitleRole);
+
+        Q_EMIT osdMessage(i18nc("@info:tooltip", "Could not play: %1", title.toString()));
+    }
+
+    if (playlistProxyModel()->getPlayingItem() + 1 < playlistModel()->rowCount()) {
+        playlistProxyModel()->playNext();
+    } else {
+        // Last file in playlist
+        if (PlaylistSettings::repeat()) {
+            playlistProxyModel()->setPlayingItem(0);
+        } else {
+            setIsFileReloaded(true);
+            playlistProxyModel()->setPlayingItem(playlistProxyModel()->getPlayingItem());
+        }
+    }
 }
 
 void MpvItem::onReady()
