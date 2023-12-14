@@ -21,7 +21,7 @@ Slider {
     implicitWidth: 100
     implicitHeight: 25
     wheelEnabled: true
-    stepSize: GeneralSettings.volumeStep
+    stepSize: AudioSettings.volumeStep
     leftPadding: 0
     rightPadding: 0
 

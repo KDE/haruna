@@ -85,11 +85,11 @@ SettingsBasePage {
             editable: true
             from: 0
             to: 100
-            value: GeneralSettings.volumeStep
+            value: AudioSettings.volumeStep
             onValueChanged: {
                 if (root.visible) {
-                    GeneralSettings.volumeStep = volumeStep.value
-                    GeneralSettings.save()
+                    AudioSettings.volumeStep = volumeStep.value
+                    AudioSettings.save()
                 }
             }
         }

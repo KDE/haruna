@@ -380,11 +380,11 @@ Item {
         }
 
         function onVolumeUpAction() {
-            mpv.command(["add", "volume", GeneralSettings.volumeStep])
+            mpv.command(["add", "volume", AudioSettings.volumeStep])
         }
 
         function onVolumeDownAction() {
-            mpv.command(["add", "volume", -GeneralSettings.volumeStep])
+            mpv.command(["add", "volume", -AudioSettings.volumeStep])
         }
 
         function onZoomInAction() {
