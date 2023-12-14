@@ -90,6 +90,8 @@ MpvItem::MpvItem(QQuickItem *parent)
         }
     });
 
+    connect(this, &MpvAbstractItem::ready, this, &MpvItem::onReady);
+
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
     QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
@@ -276,6 +278,27 @@ void MpvItem::setupConnections()
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue, Qt::QueuedConnection);
     // clang-format on
+}
+
+void MpvItem::onReady()
+{
+    setIsReady(true);
+
+    QUrl url{Application::instance()->url(0)};
+    if (!url.isEmpty() && url.isValid()) {
+        playlistModel()->addItem(Application::instance()->url(0), PlaylistModel::Clear);
+        Q_EMIT addToRecentFiles(url);
+    } else {
+        if (PlaybackSettings::openLastPlayedFile()) {
+            // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
+            // and the lastPlayedFile is searched in the playlist
+            if (!GeneralSettings::lastPlaylist().isEmpty()) {
+                playlistModel()->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
+            } else {
+                playlistModel()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
+            }
+        }
+    }
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)

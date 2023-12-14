@@ -88,6 +88,10 @@ Kirigami.ApplicationWindow {
             resizeWindow()
         }
 
+        onAddToRecentFiles: function(url) {
+            recentFilesModel.addUrl(url)
+        }
+
         Osd {
             id: osd
 

@@ -28,24 +28,6 @@ MpvItem {
         osd.message(i18nc("@info:tooltip", "Volume: %1", root.volume))
     }
 
-    onReady: {
-        isReady = true
-        if (app.url(0).toString() !== "") {
-            window.openFile(app.url(0), true)
-        } else {
-            if (PlaybackSettings.openLastPlayedFile) {
-                // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
-                // and the lastPlayedFile is searched in the playlist
-                if (GeneralSettings.lastPlaylist !== "") {
-                    window.openFile(GeneralSettings.lastPlaylist)
-                } else {
-                    window.openFile(GeneralSettings.lastPlayedFile)
-                }
-            }
-        }
-        osd.active = true
-    }
-
     onFileStarted: {
         const url = currentUrl.toString()
         if (typeof url === "string" && url.startsWith("http")) {

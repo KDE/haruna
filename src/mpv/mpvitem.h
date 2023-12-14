@@ -187,6 +187,7 @@ Q_SIGNALS:
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
     void osdMessage(const QString &text);
+    void addToRecentFiles(const QUrl &url);
 
     // signals used for mpris
     void raise();
@@ -197,6 +198,7 @@ Q_SIGNALS:
 private:
     void initProperties();
     void setupConnections();
+    void onReady();
     void onPropertyChanged(const QString &property, const QVariant &value);
     void saveTimePosition();
     double loadTimePosition();

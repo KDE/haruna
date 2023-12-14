@@ -15,7 +15,7 @@ Item {
     id: root
 
     required property int maxWidth
-    property bool active: false
+    property bool active: mpv.isReady
     property alias label: label
 
     Label {
