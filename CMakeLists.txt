@@ -107,8 +107,8 @@ find_package(KF6KIO)
 set_package_properties(KF6KIO PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kio/html/index.html")
 
-find_package(KF6Kirigami2)
-set_package_properties(KF6Kirigami2 PROPERTIES TYPE REQUIRED
+find_package(KF6Kirigami)
+set_package_properties(KF6Kirigami PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kirigami/html/index.html")
 
 find_package(KF6WindowSystem)

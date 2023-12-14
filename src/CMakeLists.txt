@@ -143,7 +143,7 @@ target_link_libraries(haruna PRIVATE
     KF6::I18n
     KF6::IconThemes
     KF6::KIOWidgets
-    KF6::Kirigami2
+    KF6::Kirigami
     KF6::WindowSystem
 
     MpvQt::MpvQt
@@ -158,5 +158,5 @@ if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
     target_link_libraries(haruna PRIVATE
         Qt6::DBus
     )
-endif ()
+endif()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
