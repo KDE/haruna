@@ -21,6 +21,7 @@ public:
         Main,
         CustomCommands,
         RecentFiles,
+        Shortcuts,
     };
 
     const QString appConfigDirPath();
@@ -41,6 +42,7 @@ private:
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;
     KSharedConfig::Ptr m_rfConfig;
+    KSharedConfig::Ptr m_shortcutsConfig;
 };
 
 #endif // GLOBALS_H

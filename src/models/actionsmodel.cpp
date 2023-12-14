@@ -15,7 +15,7 @@
 
 ActionsModel::ActionsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
+    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath(Global::ConfigFile::Shortcuts)))
 {
     Action action;
     action.name = QStringLiteral("openActionsDialogAction");
