@@ -46,9 +46,9 @@ Slider {
             return
         }
 
-        GeneralSettings.volume = value.toFixed(0)
-        GeneralSettings.save()
-        osd.message(i18nc("@info:tooltip", "Volume: %1", GeneralSettings.volume))
+        AudioSettings.volume = value.toFixed(0)
+        AudioSettings.save()
+        osd.message(i18nc("@info:tooltip", "Volume: %1", AudioSettings.volume))
     }
 
     Label {

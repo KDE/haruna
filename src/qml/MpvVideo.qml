@@ -24,7 +24,7 @@ MpvItem {
         Paused
     }
 
-    volume: GeneralSettings.volume
+    volume: AudioSettings.volume
 
     onVolumeChanged: {
         osd.message(i18nc("@info:tooltip", "Volume: %1", root.volume))
