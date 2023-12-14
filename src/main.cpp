@@ -59,14 +59,13 @@ int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine(&qApplication);
-    const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/qt/qml/org/kde/haruna/qml/main.qml"));
     auto onObjectCreated = [url](const QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl) {
             QCoreApplication::exit(-1);
         }
     };
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &qApplication, onObjectCreated, Qt::QueuedConnection);
-    engine.addImportPath(QStringLiteral("qrc:/qml"));
     engine.addImageProvider(QStringLiteral("thumbnail"), new ThumbnailImageProvider());
     engine.rootContext()->setContextProperty(QStringLiteral("app"), Application::instance());
     engine.rootContext()->setContextProperty(QStringLiteral("appActions"), new QQmlPropertyMap);

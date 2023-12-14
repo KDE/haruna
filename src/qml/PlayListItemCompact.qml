@@ -10,7 +10,6 @@ import QtQuick.Controls
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
-import Haruna.Components as HC
 
 ItemDelegate {
     id: root

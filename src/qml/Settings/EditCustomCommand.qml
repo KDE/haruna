@@ -10,11 +10,11 @@ import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
-import Haruna.Components
 
 SettingsBasePage {
     id: root
 
+    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
     property string command: ""
     property string osdMessage: ""
     property string type: "shortcut"
@@ -32,7 +32,7 @@ SettingsBasePage {
 
     Action {
         shortcut: "esc"
-        onTriggered: applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
+        onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
     }
 
     GridLayout {
@@ -110,7 +110,7 @@ SettingsBasePage {
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
                     customCommandsModel.deleteCustomCommand(root.commandId, root.index)
-                    applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
+                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
                 }
             }
 
@@ -122,7 +122,7 @@ SettingsBasePage {
             ToolButton {
                 text: i18nc("@action:intoolbar", "Cancel")
                 icon.name: "dialog-cancel"
-                onClicked: applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
+                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
                 Layout.alignment: Qt.AlignRight
             }
 
@@ -157,7 +157,7 @@ SettingsBasePage {
                                                               typeGroup.checkedButton.optionName)
                         break
                     }
-                    applicationWindow().pageStack.replace("qrc:/CustomCommandsSettings.qml")
+                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
                 }
 
             }

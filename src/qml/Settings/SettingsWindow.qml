@@ -10,11 +10,12 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
-import org.kde.haruna as Haruna
+import org.kde.haruna
 
 Kirigami.ApplicationWindow {
     id: root
 
+    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
     property int currentPage: SettingsWindow.Page.General
     enum Page {
         General = 0,
@@ -55,7 +56,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/GeneralSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/GeneralSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -63,7 +64,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "media-playback-start"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/PlaybackSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/PlaybackSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -71,7 +72,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "video-x-generic"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/VideoSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/VideoSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -79,7 +80,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "player-volume"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/AudioSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/AudioSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -87,7 +88,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "add-subtitle"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/SubtitlesSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/SubtitlesSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -95,7 +96,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "view-media-playlist"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/PlaylistSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/PlaylistSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -103,7 +104,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "input-mouse"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/MouseSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/MouseSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -111,7 +112,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure-shortcuts"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/ShortcutsSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/ShortcutsSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -119,7 +120,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/CustomCommandsSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/CustomCommandsSettings.qml`)
                     }
                 },
                 Kirigami.Action {
@@ -127,7 +128,7 @@ Kirigami.ApplicationWindow {
                     icon.name: "help-about"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push("qrc:/DebugSettings.qml")
+                        applicationWindow().pageStack.push(`${root.settingsPath}/DebugSettings.qml`)
                     }
                 },
                 Kirigami.Action {

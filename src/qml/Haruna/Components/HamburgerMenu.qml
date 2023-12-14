@@ -10,7 +10,6 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
-import "../../Menus"
 
 ToolButton {
     id: root

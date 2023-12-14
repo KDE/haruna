@@ -29,7 +29,6 @@ target_sources(haruna
     mpv/mpvproperties.h
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
-    qml.qrc
     ../help/help.qrc
     ${ICONS_SRCS}
 )
@@ -107,6 +106,7 @@ qt_add_qml_module(haruna
         qml/Settings/CustomCommandsSettings.qml
         qml/Settings/EditCustomCommand.qml
         qml/Settings/DebugSettings.qml
+        qml/Settings/SettingsWindow.qml
 )
 
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)

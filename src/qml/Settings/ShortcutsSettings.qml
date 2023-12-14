@@ -13,7 +13,6 @@ import QtQuick.Dialogs
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.haruna
-import Haruna.Components
 
 SettingsBasePage {
     id: root

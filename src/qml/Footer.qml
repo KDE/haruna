@@ -11,7 +11,6 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
-import Haruna.Components
 
 ToolBar {
     id: root

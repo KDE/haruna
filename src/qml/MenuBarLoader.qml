@@ -13,10 +13,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
 
-import "Menus"
-import "Menus/Global"
-import "Settings"
-
 Loader {
     id: root
 

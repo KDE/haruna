@@ -11,10 +11,11 @@ import QtQuick.Controls
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.haruna
-import Haruna.Components
 
 SettingsBasePage {
     id: root
+
+    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
 
     hasHelp: true
     helpFile: ":/CustomCommandsSettings.html"
@@ -39,7 +40,7 @@ SettingsBasePage {
             text: i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
                 text: i18nc("@action:button", "&Add command")
-                onTriggered: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
+                onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`)
             }
         }
     }
@@ -129,7 +130,7 @@ SettingsBasePage {
                             index: model.index,
                             mode: EditCustomCommand.Mode.Edit
                         }
-                        applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml", properties)
+                        applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, properties)
                     }
                 }
             }
@@ -147,7 +148,7 @@ SettingsBasePage {
 
                 text: i18nc("@action:intoolbar", "&Add")
                 icon.name: "list-add"
-                onClicked: applicationWindow().pageStack.replace("qrc:/EditCustomCommand.qml")
+                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`)
                 Layout.alignment: Qt.AlignRight
             }
         }

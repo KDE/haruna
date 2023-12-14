@@ -13,7 +13,6 @@ import Qt.labs.platform as Platform
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
-import Haruna.Components
 
 Item {
     id: root
