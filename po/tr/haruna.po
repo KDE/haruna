@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:34+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-12-11 16:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,43 +27,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
-#: src/application.cpp:103
+#: src/application.cpp:100
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna Ortam Oynatıcısı"
 
-#: src/application.cpp:105
+#: src/application.cpp:102
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Yapılandırılabilir bir ortam oynatıcısı."
 
-#: src/application.cpp:107
+#: src/application.cpp:104
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:112
+#: src/application.cpp:109
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:113
+#: src/application.cpp:110
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Geliştirici"
 
-#: src/application.cpp:124
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Açılacak dosya"
 
-#: src/application.cpp:128
+#: src/application.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 "ytdl biçim seçim ayarını geçici olarak geçersiz kılmaya izin verir. Ayar, "
 "kullanıcı arayüzü üzerinden değiştirilmişse üzerine yazılacaktır."
 
-#: src/application.cpp:130
+#: src/application.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -385,7 +385,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Üstbilgiyi Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:94
+#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -533,168 +533,174 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Yeniden Ata"
 
-#: src/mpv/mpvitem.cpp:370
+#: src/mpv/mpvitem.cpp:293
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Could not play: %1"
+msgstr "Oynatılamadı: %1"
+
+#: src/mpv/mpvitem.cpp:420
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Yok"
 
-#: src/mpv/mpvitem.cpp:408
+#: src/mpv/mpvitem.cpp:458
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekran görüntüsü alınamadı"
 
-#: src/mpv/mpvitem.cpp:413
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekran görüntüsü alındı"
 
-#: src/mpv/mpvitem.cpp:415
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Ekran Görüntüsü: %1"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:513
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Fasıl atlandı: %1"
 
-#: src/qml/Actions.qml:66 src/qml/Actions.qml:84
+#: src/qml/Actions.qml:65 src/qml/Actions.qml:83
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Ses: %1 %2"
 
-#: src/qml/Actions.qml:147 src/qml/Actions.qml:153 src/qml/Actions.qml:158
+#: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Oynatma hızı: %1"
 
-#: src/qml/Actions.qml:253
+#: src/qml/Actions.qml:252
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Döngü başlangıcı: %1"
 
-#: src/qml/Actions.qml:257
+#: src/qml/Actions.qml:256
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Döngü: %1 - %2"
 
-#: src/qml/Actions.qml:263
+#: src/qml/Actions.qml:262
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Döngü temizlendi"
 
-#: src/qml/Actions.qml:274 src/qml/Actions.qml:280
+#: src/qml/Actions.qml:273 src/qml/Actions.qml:279
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Altyazı zamanlaması: %1"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Altyazılar kapalı"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Subtitles function on"
 msgstr "Altyazı işlevi açık"
 
-#: src/qml/Actions.qml:294 src/qml/Actions.qml:306
+#: src/qml/Actions.qml:293 src/qml/Actions.qml:305
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Altyazı: Yok"
 
-#: src/qml/Actions.qml:298 src/qml/Actions.qml:310
+#: src/qml/Actions.qml:297 src/qml/Actions.qml:309
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Altyazı: %1 %2"
 
-#: src/qml/Actions.qml:317 src/qml/Actions.qml:323
+#: src/qml/Actions.qml:316 src/qml/Actions.qml:322
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Altyazı ölçeği: %1"
 
-#: src/qml/Actions.qml:337
+#: src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Görüntü ayrıştırma: %1"
 
-#: src/qml/Actions.qml:393 src/qml/Actions.qml:399
+#: src/qml/Actions.qml:392 src/qml/Actions.qml:398
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Yakınlaştırma: %1"
 
-#: src/qml/Actions.qml:404
+#: src/qml/Actions.qml:403
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Yakınlaştırma: 0"
 
-#: src/qml/Actions.qml:411 src/qml/Actions.qml:417
+#: src/qml/Actions.qml:410 src/qml/Actions.qml:416
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Karşıtlık: %1"
 
-#: src/qml/Actions.qml:422
+#: src/qml/Actions.qml:421
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Karşıtlık: 0"
 
-#: src/qml/Actions.qml:428 src/qml/Actions.qml:434
+#: src/qml/Actions.qml:427 src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Parlaklık: %1"
 
-#: src/qml/Actions.qml:439
+#: src/qml/Actions.qml:438
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Parlaklık: 0"
 
-#: src/qml/Actions.qml:445 src/qml/Actions.qml:451
+#: src/qml/Actions.qml:444 src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:456
+#: src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:462 src/qml/Actions.qml:468
+#: src/qml/Actions.qml:461 src/qml/Actions.qml:467
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Doygunluk: %1"
 
-#: src/qml/Actions.qml:473
+#: src/qml/Actions.qml:472
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Doygunluk: 0"
 
-#: src/qml/Footer.qml:61
+#: src/qml/Footer.qml:60
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Oynatmayı Başlat"
 
-#: src/qml/Footer.qml:61
+#: src/qml/Footer.qml:60
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Oynatmayı Duraklat"
 
-#: src/qml/Footer.qml:74
+#: src/qml/Footer.qml:73
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Önceki dosyayı oynat"
 
-#: src/qml/Footer.qml:87
+#: src/qml/Footer.qml:86
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Sonraki dosyayı oynat"
 
-#: src/qml/Footer.qml:103
+#: src/qml/Footer.qml:102
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Kalan: %1"
@@ -704,31 +710,31 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Bir renk seç"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:50
+#: src/qml/Haruna/Components/HamburgerMenu.qml:49
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Son Kullanılan Dosyalar"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:64
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:39
+#: src/qml/Haruna/Components/HamburgerMenu.qml:63
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:27
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "İkincil Altyazı"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:85
+#: src/qml/Haruna/Components/HamburgerMenu.qml:84
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Daha Fazla"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:103
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
+#: src/qml/Haruna/Components/HamburgerMenu.qml:102
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Birincil Altyazı"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:115
+#: src/qml/Haruna/Components/HamburgerMenu.qml:114
 msgctxt "@title:menu"
 msgid "&Audio Track"
 msgstr "&Ses Parçası"
@@ -782,12 +788,12 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Yeni klasör aç"
 
-#: src/qml/Header.qml:66
+#: src/qml/Header.qml:64
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Altyazılar"
 
-#: src/qml/Header.qml:84
+#: src/qml/Header.qml:82
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Ses"
@@ -806,13 +812,13 @@ msgstr ""
 "Belirli sözcükleri/karakterleri içeren fasılları kendiliğinden atlar.\n"
 "Ayrıntılar için 'Oynatma' ayarlarına bakın"
 
-#: src/qml/main.qml:30
+#: src/qml/main.qml:26
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:226 src/qml/PlayList.qml:317
-#: src/qml/Settings/VideoSettings.qml:72
+#: src/qml/main.qml:226 src/qml/PlayList.qml:316
+#: src/qml/Settings/VideoSettings.qml:71
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya seç"
@@ -827,7 +833,7 @@ msgctxt "@action:button"
 msgid "Open"
 msgstr "Aç"
 
-#: src/qml/Menus/AudioMenu.qml:16 src/qml/Menus/Global/GlobalAudioMenu.qml:15
+#: src/qml/Menus/AudioMenu.qml:16 src/qml/Menus/Global/GlobalAudioMenu.qml:17
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&Ses"
@@ -837,22 +843,22 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "&Parça"
 
-#: src/qml/Menus/ContextMenu.qml:19
+#: src/qml/Menus/ContextMenu.qml:17
 msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "Oynatma Hızı"
 
-#: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
+#: src/qml/Menus/FileMenu.qml:13 src/qml/Menus/Global/GlobalFileMenu.qml:16
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&Dosya"
 
-#: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
+#: src/qml/Menus/FileMenu.qml:22 src/qml/Menus/Global/GlobalFileMenu.qml:39
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Son Kullanılan Dosyalar"
 
-#: src/qml/Menus/FileMenu.qml:41
+#: src/qml/Menus/FileMenu.qml:39
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Listeyi Temizle"
@@ -874,79 +880,79 @@ msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Git"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:16
-#: src/qml/Menus/SettingsMenu.qml:15
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
+#: src/qml/Menus/SettingsMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "Ayar&lar"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
-#: src/qml/Menus/SettingsMenu.qml:20
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
+#: src/qml/Menus/SettingsMenu.qml:18
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "Genel"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
-#: src/qml/Menus/SettingsMenu.qml:28
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
+#: src/qml/Menus/SettingsMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Oynatma"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
-#: src/qml/Menus/SettingsMenu.qml:36
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
+#: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
-#: src/qml/Menus/SettingsMenu.qml:44
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
+#: src/qml/Menus/SettingsMenu.qml:42
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Ses"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
-#: src/qml/Menus/SettingsMenu.qml:52
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
+#: src/qml/Menus/SettingsMenu.qml:50
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Altyazılar"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
-#: src/qml/Menus/SettingsMenu.qml:60
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
+#: src/qml/Menus/SettingsMenu.qml:58
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Oynatma Listesi"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
-#: src/qml/Menus/SettingsMenu.qml:68
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
+#: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Fare"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
-#: src/qml/Menus/SettingsMenu.qml:76
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
+#: src/qml/Menus/SettingsMenu.qml:74
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
-#: src/qml/Menus/SettingsMenu.qml:84
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
+#: src/qml/Menus/SettingsMenu.qml:82
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Özel Komutlar"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
-#: src/qml/Menus/SettingsMenu.qml:92
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
+#: src/qml/Menus/SettingsMenu.qml:90
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Hata Ayıkla"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
-#: src/qml/Menus/SettingsMenu.qml:100
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
+#: src/qml/Menus/SettingsMenu.qml:98
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Hakkında"
 
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:17
 #: src/qml/Menus/SubtitlesMenu.qml:16
 msgctxt "@title:menu"
 msgid "&Subtitles"
@@ -987,180 +993,175 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Araç Çubuğunu Göster"
 
-#: src/qml/MpvVideo.qml:30 src/qml/VolumeSlider.qml:51
+#: src/qml/MpvVideo.qml:28
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Ses düzeyi: %1"
 
-#: src/qml/MpvVideo.qml:74
-msgctxt "@info:tooltip"
-msgid "Could not play: %1"
-msgstr "Oynatılamadı: %1"
-
-#: src/qml/PlayList.qml:87
+#: src/qml/PlayList.qml:86
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Ekle"
 
-#: src/qml/PlayList.qml:99
+#: src/qml/PlayList.qml:98
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Oynatma Listesi Aç"
 
-#: src/qml/PlayList.qml:108
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Ekle..."
 
-#: src/qml/PlayList.qml:111
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "File"
 msgstr "Dosya"
 
-#: src/qml/PlayList.qml:119
+#: src/qml/PlayList.qml:118
 msgctxt "@action:button"
 msgid "Url"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:130
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sırala"
 
-#: src/qml/PlayList.qml:134
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Ad, artan"
 
-#: src/qml/PlayList.qml:140
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Ad, azalan"
 
-#: src/qml/PlayList.qml:146
+#: src/qml/PlayList.qml:145
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Süre, artan"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:151
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Süre, azalan"
 
-#: src/qml/PlayList.qml:159
+#: src/qml/PlayList.qml:158
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Temizle"
 
-#: src/qml/PlayList.qml:167
+#: src/qml/PlayList.qml:166
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Farklı Kaydet"
 
-#: src/qml/PlayList.qml:225
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "İçeren Klasörü Aç"
 
-#: src/qml/PlayList.qml:231
+#: src/qml/PlayList.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Dosya Adını Kopyala"
 
-#: src/qml/PlayList.qml:235
+#: src/qml/PlayList.qml:234
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Dosya Yolunu Kopyala"
 
-#: src/qml/PlayList.qml:240
+#: src/qml/PlayList.qml:239
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Oynatma Listesinden Kaldır"
 
-#: src/qml/PlayList.qml:246
+#: src/qml/PlayList.qml:245
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Dosyayı Yeniden Adlandır"
 
-#: src/qml/PlayList.qml:252
+#: src/qml/PlayList.qml:251
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Dosyayı Çöpe At"
 
-#: src/qml/Settings/AudioSettings.qml:29
-#: src/qml/Settings/SubtitlesSettings.qml:36
+#: src/qml/Settings/AudioSettings.qml:28
+#: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Yeğlenen dil"
 
-#: src/qml/Settings/AudioSettings.qml:37
-#: src/qml/Settings/SubtitlesSettings.qml:44
+#: src/qml/Settings/AudioSettings.qml:36
+#: src/qml/Settings/SubtitlesSettings.qml:43
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "ing., alm., vb."
 
-#: src/qml/Settings/AudioSettings.qml:56
-#: src/qml/Settings/SubtitlesSettings.qml:63
+#: src/qml/Settings/AudioSettings.qml:55
+#: src/qml/Settings/SubtitlesSettings.qml:62
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Yeğlenen parça"
 
-#: src/qml/Settings/AudioSettings.qml:79
+#: src/qml/Settings/AudioSettings.qml:78
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Ses düzeyi çentiği"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:39
+#: src/qml/Settings/CustomCommandsSettings.qml:40
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Henüz özel komut yok"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:41
+#: src/qml/Settings/CustomCommandsSettings.qml:42
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "&Komut ekle"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:74
+#: src/qml/Settings/CustomCommandsSettings.qml:75
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "Bir sonraki başlangıçta ayarlama"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:148
+#: src/qml/Settings/CustomCommandsSettings.qml:149
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Ekle"
 
-#: src/qml/Settings/DebugSettings.qml:28
+#: src/qml/Settings/DebugSettings.qml:27
 msgctxt "@label:textbox"
 msgid "Config folder"
 msgstr "Yapılandırma klasörü"
 
-#: src/qml/Settings/DebugSettings.qml:40
+#: src/qml/Settings/DebugSettings.qml:39
 msgctxt "@info:tooltip"
 msgid "Open config folder"
 msgstr "Yapılandırma klasörünü aç"
 
-#: src/qml/Settings/DebugSettings.qml:52
+#: src/qml/Settings/DebugSettings.qml:51
 msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "Yapılandırma dosyası"
 
-#: src/qml/Settings/DebugSettings.qml:64
+#: src/qml/Settings/DebugSettings.qml:63
 msgctxt "@info:tooltip"
 msgid "Open config file"
 msgstr "Yapılandırma dosyasını aç"
 
-#: src/qml/Settings/DebugSettings.qml:76
+#: src/qml/Settings/DebugSettings.qml:75
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "Özel komutlar yapılandırma dosyası"
 
-#: src/qml/Settings/DebugSettings.qml:88
+#: src/qml/Settings/DebugSettings.qml:87
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
 msgstr "Özel komutlar yapılandırma dosyasını aç"
 
-#: src/qml/Settings/DebugSettings.qml:100
+#: src/qml/Settings/DebugSettings.qml:99
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
@@ -1169,7 +1170,7 @@ msgstr ""
 "Alanlar boşsa bir yapılandırma dosyası/klasörü yok demektir (öntanımlı "
 "ayarlar kullanılır)."
 
-#: src/qml/Settings/DebugSettings.qml:108
+#: src/qml/Settings/DebugSettings.qml:107
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "mpv günlüklemesini etkinleştir"
@@ -1224,39 +1225,39 @@ msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&Kaydet"
 
-#: src/qml/Settings/GeneralSettings.qml:31
+#: src/qml/Settings/GeneralSettings.qml:29
 msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "Ekran üzeri iletisi yazıtipi büyüklüğü"
 
-#: src/qml/Settings/GeneralSettings.qml:57
+#: src/qml/Settings/GeneralSettings.qml:55
 msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "Dosya penceresi konumu"
 
-#: src/qml/Settings/GeneralSettings.qml:76
+#: src/qml/Settings/GeneralSettings.qml:74
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr "Boşsa dosya penceresi son açılan konumu anımsayacaktır."
 
-#: src/qml/Settings/GeneralSettings.qml:86
+#: src/qml/Settings/GeneralSettings.qml:84
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "En çok son kullanılan dosya sayısı"
 
-#: src/qml/Settings/GeneralSettings.qml:103
+#: src/qml/Settings/GeneralSettings.qml:101
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 "Kaç tane son kullanılan dosyanın depolanacağı. Devre dışı bırakmak için 0 "
 "(sıfır) girin."
 
-#: src/qml/Settings/GeneralSettings.qml:111
+#: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Yalnızca bir örneğe izin ver"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:125
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.\n"
@@ -1266,52 +1267,52 @@ msgstr ""
 "Başka bir Haruna örneği açmaya çalışmak bir şey yapmayacaktır.\n"
 "Haruna ile başka bir dosyayı açmaya çalışmak, dosyayı çalışan örnekte açar."
 
-#: src/qml/Settings/GeneralSettings.qml:141
+#: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Dosyayı oynatma listesine ekle"
 
-#: src/qml/Settings/GeneralSettings.qml:157
+#: src/qml/Settings/GeneralSettings.qml:155
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "Dosya, oynatma listesinin sonuna eklenir"
 
-#: src/qml/Settings/GeneralSettings.qml:166
+#: src/qml/Settings/GeneralSettings.qml:164
 msgctxt "@title"
 msgid "Interface"
 msgstr "Arayüz"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:170
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Küçük görselleri önizle"
 
-#: src/qml/Settings/GeneralSettings.qml:177
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Küçük görsel önizlemesini göster"
 
-#: src/qml/Settings/GeneralSettings.qml:189
+#: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Doğru önizleme kullan"
 
-#: src/qml/Settings/GeneralSettings.qml:206
+#: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Doğru bir önizleme üretmek yavaştır"
 
-#: src/qml/Settings/GeneralSettings.qml:231
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr "Pencere"
 
-#: src/qml/Settings/GeneralSettings.qml:237
+#: src/qml/Settings/GeneralSettings.qml:235
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Videoyu sığdırmak için yeniden boyutlandır"
 
-#: src/qml/Settings/GeneralSettings.qml:253
+#: src/qml/Settings/GeneralSettings.qml:251
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1320,12 +1321,12 @@ msgstr ""
 "Pencere, video çözünürlüğüne göre yeniden boyutlandırıldı.\n"
 "En büyük boyut kısıtlanmaz; bu işletim sistemine bırakılmıştır."
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:265
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Pencere boyutunu ve konumunu anımsa"
 
-#: src/qml/Settings/GeneralSettings.qml:282
+#: src/qml/Settings/GeneralSettings.qml:280
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1340,38 +1341,38 @@ msgstr ""
 "\n"
 "\"Videoyu sığdırmak için yeniden boyutlandır\" seçeneği öncelik alır.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:297
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Menü çubuğunu göster"
 
-#: src/qml/Settings/GeneralSettings.qml:308
-#: src/qml/Settings/PlaylistSettings.qml:81
+#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Araç çubuğunu göster"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Fasıl imleyicilerini göster"
 
-#: src/qml/Settings/GeneralSettings.qml:328
+#: src/qml/Settings/GeneralSettings.qml:326
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Renk şeması"
 
-#: src/qml/Settings/GeneralSettings.qml:370
+#: src/qml/Settings/GeneralSettings.qml:368
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Grafik arabirim biçemi"
 
-#: src/qml/Settings/GeneralSettings.qml:421
+#: src/qml/Settings/GeneralSettings.qml:419
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Esinti simge temasını kullan"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:427
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1380,32 +1381,32 @@ msgstr ""
 "Simge temasını Esinti yapar.\n"
 "Yeniden başlatma gerektirir."
 
-#: src/qml/Settings/MouseSettings.qml:83
+#: src/qml/Settings/MouseSettings.qml:82
 msgctxt "@label"
 msgid "No action set"
 msgstr "Ayarlı eylem yok"
 
-#: src/qml/Settings/MouseSettings.qml:97
+#: src/qml/Settings/MouseSettings.qml:96
 msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr "Eylemi temizle"
 
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:133
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Eylem ayarlamak için çift tıklayın"
 
-#: src/qml/Settings/PlaybackSettings.qml:31
+#: src/qml/Settings/PlaybackSettings.qml:30
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "Ufak adım at"
 
-#: src/qml/Settings/PlaybackSettings.qml:49
+#: src/qml/Settings/PlaybackSettings.qml:48
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "Orta adım at"
 
-#: src/qml/Settings/PlaybackSettings.qml:75
+#: src/qml/Settings/PlaybackSettings.qml:74
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
@@ -1414,17 +1415,17 @@ msgstr ""
 "Bu aynı zamanda, fare, ilerleme çubuğunun üzerindeyken fare tekerleği ile "
 "ilerlemek için de kullanılır"
 
-#: src/qml/Settings/PlaybackSettings.qml:86
+#: src/qml/Settings/PlaybackSettings.qml:85
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "Büyük adım at"
 
-#: src/qml/Settings/PlaybackSettings.qml:107
+#: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Simge durumuna küçültüldüğünde duraklat"
 
-#: src/qml/Settings/PlaybackSettings.qml:115
+#: src/qml/Settings/PlaybackSettings.qml:114
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1433,148 +1434,148 @@ msgstr ""
 "Pencere simge durumuna küçültülmüşken oynatıcıyı duraklatır. Yeniden "
 "açıldığında oynatma sürer."
 
-#: src/qml/Settings/PlaybackSettings.qml:120
+#: src/qml/Settings/PlaybackSettings.qml:119
 msgctxt "@label:spinbox"
 msgid "Resume playback"
 msgstr "Oynatmayı sürdür"
 
-#: src/qml/Settings/PlaybackSettings.qml:127
+#: src/qml/Settings/PlaybackSettings.qml:126
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Başlangıçta son oynatılan dosyayı aç"
 
-#: src/qml/Settings/PlaybackSettings.qml:140
+#: src/qml/Settings/PlaybackSettings.qml:139
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "Son oynatma konumuna git"
 
-#: src/qml/Settings/PlaybackSettings.qml:148
+#: src/qml/Settings/PlaybackSettings.qml:147
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr "Daha önce oynatılan bir dosya açılırken kaldığı konumdan başlat."
 
-#: src/qml/Settings/PlaybackSettings.qml:157
+#: src/qml/Settings/PlaybackSettings.qml:156
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Oynatmayı başlat"
 
-#: src/qml/Settings/PlaybackSettings.qml:166
+#: src/qml/Settings/PlaybackSettings.qml:165
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
 msgstr ""
 "Daha önce oynatılan bir dosya açılırken onu kendiliğinden oynatmaya başlat."
 
-#: src/qml/Settings/PlaybackSettings.qml:171
+#: src/qml/Settings/PlaybackSettings.qml:170
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Donanım kod çözümü"
 
-#: src/qml/Settings/PlaybackSettings.qml:177
-#: src/qml/Settings/PlaybackSettings.qml:290
+#: src/qml/Settings/PlaybackSettings.qml:176
+#: src/qml/Settings/PlaybackSettings.qml:289
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Etkin"
 
-#: src/qml/Settings/PlaybackSettings.qml:177
-#: src/qml/Settings/PlaybackSettings.qml:290
+#: src/qml/Settings/PlaybackSettings.qml:176
+#: src/qml/Settings/PlaybackSettings.qml:289
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: src/qml/Settings/PlaybackSettings.qml:222
+#: src/qml/Settings/PlaybackSettings.qml:221
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Zaman konumunu anımsa"
 
-#: src/qml/Settings/PlaybackSettings.qml:242
+#: src/qml/Settings/PlaybackSettings.qml:241
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: src/qml/Settings/PlaybackSettings.qml:244
+#: src/qml/Settings/PlaybackSettings.qml:243
 msgctxt "@info"
 msgid "For all files"
 msgstr "Tüm dosyalar için"
 
-#: src/qml/Settings/PlaybackSettings.qml:247
+#: src/qml/Settings/PlaybackSettings.qml:246
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "%1 dakikadan daha uzun dosyalar için"
 msgstr[1] "%1 dakikadan daha uzun dosyalar için"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
+#: src/qml/Settings/PlaybackSettings.qml:274
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Her %1 saniyede konumu kaydet"
 msgstr[1] "Her %1 saniyede konumu kaydet"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:283
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Fasılları atla"
 
-#: src/qml/Settings/PlaybackSettings.qml:301
+#: src/qml/Settings/PlaybackSettings.qml:300
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Atlamada ekran üzeri iletiyi göster"
 
-#: src/qml/Settings/PlaybackSettings.qml:311
+#: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Sözcükleri atla"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/qml/Settings/PlaybackSettings.qml:319
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op., ed., fasıl 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:333
+#: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr "Bu sözcükleri içeren fasılları atlayın. Virgülle ayrılan listedir."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:352
 msgid "Format selection"
 msgstr "Seçimi biçimlendir"
 
-#: src/qml/Settings/PlaybackSettings.qml:372
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr "Seçili değerden düşük veya eşit en iyi videoyu seçer."
 
-#: src/qml/Settings/PlaybackSettings.qml:419
+#: src/qml/Settings/PlaybackSettings.qml:418
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "en iyi video + en iyi ses / en iyi"
 
-#: src/qml/Settings/PlaylistSettings.qml:28
+#: src/qml/Settings/PlaylistSettings.qml:27
 msgctxt "@label:listbox"
 msgid "Position"
 msgstr "Konum"
 
-#: src/qml/Settings/PlaylistSettings.qml:53
+#: src/qml/Settings/PlaylistSettings.qml:52
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Oynatma listesi biçemi"
 
-#: src/qml/Settings/PlaylistSettings.qml:91
+#: src/qml/Settings/PlaylistSettings.qml:90
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Video üzerine getir"
 
-#: src/qml/Settings/PlaylistSettings.qml:98
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1583,42 +1584,42 @@ msgstr ""
 "İmlendiğinde, oynatma listesi videonun üzerine gelir\n"
 "İmlenmediğinde, video yeniden boyutlandırılır"
 
-#: src/qml/Settings/PlaylistSettings.qml:105
+#: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Dosya adı yerine ortam başlığını göster"
 
-#: src/qml/Settings/PlaylistSettings.qml:115
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Aynı klasördeki videoları kendiliğinden yükle"
 
-#: src/qml/Settings/PlaylistSettings.qml:125
+#: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Yinele"
 
-#: src/qml/Settings/PlaylistSettings.qml:135
+#: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Satır numarasını göster"
 
-#: src/qml/Settings/PlaylistSettings.qml:145
+#: src/qml/Settings/PlaylistSettings.qml:144
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Fare ile aç/kapat"
 
-#: src/qml/Settings/PlaylistSettings.qml:154
+#: src/qml/Settings/PlaylistSettings.qml:153
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Tam ekranken yazıtipi boyutunu artır"
 
-#: src/qml/Settings/PlaylistSettings.qml:167
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Son oynatma listesi durumunu anımsa"
 
-#: src/qml/Settings/PlaylistSettings.qml:174
+#: src/qml/Settings/PlaylistSettings.qml:173
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -1627,72 +1628,72 @@ msgstr ""
 "İmlendiğinde, oynatma listesi görünür/gizlenir durumu her başlatmada "
 "anımsanır"
 
-#: src/qml/Settings/SettingsWindow.qml:35
+#: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/qml/Settings/SettingsWindow.qml:54
+#: src/qml/Settings/SettingsWindow.qml:55
 msgctxt "@action"
 msgid "General"
 msgstr "Genel"
 
-#: src/qml/Settings/SettingsWindow.qml:62
+#: src/qml/Settings/SettingsWindow.qml:63
 msgctxt "@action"
 msgid "Playback"
 msgstr "Oynatma"
 
-#: src/qml/Settings/SettingsWindow.qml:70
+#: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:78
+#: src/qml/Settings/SettingsWindow.qml:79
 msgctxt "@action"
 msgid "Audio"
 msgstr "Ses"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Altyazılar"
 
-#: src/qml/Settings/SettingsWindow.qml:102
+#: src/qml/Settings/SettingsWindow.qml:103
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Fare"
 
-#: src/qml/Settings/SettingsWindow.qml:110
+#: src/qml/Settings/SettingsWindow.qml:111
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: src/qml/Settings/SettingsWindow.qml:118
+#: src/qml/Settings/SettingsWindow.qml:119
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Özel Komutlar"
 
-#: src/qml/Settings/SettingsWindow.qml:126
+#: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Debug"
 msgstr "Hata Ayıkla"
 
-#: src/qml/Settings/SettingsWindow.qml:134
+#: src/qml/Settings/SettingsWindow.qml:135
 msgctxt "@action"
 msgid "About"
 msgstr "Hakkında"
 
-#: src/qml/Settings/SettingsWindow.qml:182
+#: src/qml/Settings/SettingsWindow.qml:183
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Yardım"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:85
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Siyah kenarlıklı altyazılara izin ver"
 
-#: src/qml/Settings/SubtitlesSettings.qml:95
+#: src/qml/Settings/SubtitlesSettings.qml:94
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1701,85 +1702,85 @@ msgstr ""
 "İşaretlendiğinde, altyazılar videonun dışında siyah kenarlıklarla "
 "görüntülenebilirler. Tüm .ass altyazıları için çalışmayabilir."
 
-#: src/qml/Settings/SubtitlesSettings.qml:100
+#: src/qml/Settings/SubtitlesSettings.qml:99
 msgctxt "@title"
 msgid "Styling"
 msgstr "Biçemleme"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/qml/Settings/SubtitlesSettings.qml:105
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Yazıtipi ailesi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:138
+#: src/qml/Settings/SubtitlesSettings.qml:137
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Yazıtipi boyutu"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:153
 msgctxt "@label"
 msgid "Font style"
 msgstr "Yazıtipi biçemi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:158
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Kalın"
 
-#: src/qml/Settings/SubtitlesSettings.qml:171
+#: src/qml/Settings/SubtitlesSettings.qml:170
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Yatık"
 
-#: src/qml/Settings/SubtitlesSettings.qml:181
+#: src/qml/Settings/SubtitlesSettings.qml:180
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Yazıtipi rengi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:232
-#: src/qml/Settings/SubtitlesSettings.qml:288
-#: src/qml/Settings/SubtitlesSettings.qml:365
+#: src/qml/Settings/SubtitlesSettings.qml:231
+#: src/qml/Settings/SubtitlesSettings.qml:287
+#: src/qml/Settings/SubtitlesSettings.qml:364
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Öntanımlı değeri ayarla"
 
-#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:237
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Gölge rengi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:294
+#: src/qml/Settings/SubtitlesSettings.qml:293
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Gölge ofseti"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:387
+#: src/qml/Settings/SubtitlesSettings.qml:309
+#: src/qml/Settings/SubtitlesSettings.qml:386
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Devre dışı bırakmak için 0 (sıfır) girin."
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:314
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Kenarlık rengi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:371
+#: src/qml/Settings/SubtitlesSettings.qml:370
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Kenarlık genişliği"
 
-#: src/qml/Settings/VideoSettings.qml:31
+#: src/qml/Settings/VideoSettings.qml:30
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "Öntanımlı kapak"
 
-#: src/qml/Settings/VideoSettings.qml:40
+#: src/qml/Settings/VideoSettings.qml:39
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "görsel yolu"
 
-#: src/qml/Settings/VideoSettings.qml:52
+#: src/qml/Settings/VideoSettings.qml:51
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -1788,47 +1789,47 @@ msgstr ""
 "Oynatılan dosyayla aynı klasörde bir kapak/klasör görseli, gömülü kapak "
 "görseli veya bir video izi olmayan müzik dosyaları için kullanılır."
 
-#: src/qml/Settings/VideoSettings.qml:83
+#: src/qml/Settings/VideoSettings.qml:82
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Ekran görüntüleri"
 
-#: src/qml/Settings/VideoSettings.qml:93
+#: src/qml/Settings/VideoSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Biçim"
 
-#: src/qml/Settings/VideoSettings.qml:133
+#: src/qml/Settings/VideoSettings.qml:132
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Şablon"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:158
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Görsel ince ayarları"
 
-#: src/qml/Settings/VideoSettings.qml:169
+#: src/qml/Settings/VideoSettings.qml:168
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Karşıtlık"
 
-#: src/qml/Settings/VideoSettings.qml:188
+#: src/qml/Settings/VideoSettings.qml:187
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Parlaklık"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:206
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:226
+#: src/qml/Settings/VideoSettings.qml:225
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Doygunluk"
 
-#: src/qml/Settings/VideoSettings.qml:242
+#: src/qml/Settings/VideoSettings.qml:241
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Sıfırlamak için kaydırıcılarda orta tıklayın"

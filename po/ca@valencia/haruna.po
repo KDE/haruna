@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:34+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-12-11 15:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,43 +30,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: src/application.cpp:103
+#: src/application.cpp:100
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Reproductor multimèdia Haruna"
 
-#: src/application.cpp:105
+#: src/application.cpp:102
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Un reproductor multimèdia configurable."
 
-#: src/application.cpp:107
+#: src/application.cpp:104
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:112
+#: src/application.cpp:109
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:113
+#: src/application.cpp:110
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: src/application.cpp:124
+#: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Fitxer que s'ha d'obrir"
 
-#: src/application.cpp:128
+#: src/application.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Permet sobreescriure temporalment la configuració de selecció del format "
 "«ytdl». Se sobreescriurà si la configuració es canvia a través de la IGU"
 
-#: src/application.cpp:130
+#: src/application.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -388,7 +388,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Canvia la capçalera"
 
-#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:94
+#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -536,168 +536,174 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Torna a assignar"
 
-#: src/mpv/mpvitem.cpp:370
+#: src/mpv/mpvitem.cpp:293
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Could not play: %1"
+msgstr "No s'ha pogut reproduir: %1"
+
+#: src/mpv/mpvitem.cpp:420
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Sense"
 
-#: src/mpv/mpvitem.cpp:408
+#: src/mpv/mpvitem.cpp:458
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla fa fallat"
 
-#: src/mpv/mpvitem.cpp:413
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "S'ha pres una captura de pantalla"
 
-#: src/mpv/mpvitem.cpp:415
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:513
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Capítol saltat: %1"
 
-#: src/qml/Actions.qml:66 src/qml/Actions.qml:84
+#: src/qml/Actions.qml:65 src/qml/Actions.qml:83
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Àudio: %1 %2"
 
-#: src/qml/Actions.qml:147 src/qml/Actions.qml:153 src/qml/Actions.qml:158
+#: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocitat de reproducció: %1"
 
-#: src/qml/Actions.qml:253
+#: src/qml/Actions.qml:252
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Inici de la repetició: %1"
 
-#: src/qml/Actions.qml:257
+#: src/qml/Actions.qml:256
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Repetició: %1 - %2"
 
-#: src/qml/Actions.qml:263
+#: src/qml/Actions.qml:262
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "S'ha esborrat la repetició"
 
-#: src/qml/Actions.qml:274 src/qml/Actions.qml:280
+#: src/qml/Actions.qml:273 src/qml/Actions.qml:279
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Temps dels subtítols: %1"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Desactiva els subtítols"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Subtitles function on"
 msgstr "Activa la funció dels subtítols"
 
-#: src/qml/Actions.qml:294 src/qml/Actions.qml:306
+#: src/qml/Actions.qml:293 src/qml/Actions.qml:305
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Subtítols: Cap"
 
-#: src/qml/Actions.qml:298 src/qml/Actions.qml:310
+#: src/qml/Actions.qml:297 src/qml/Actions.qml:309
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Subtítol: %1 %2"
 
-#: src/qml/Actions.qml:317 src/qml/Actions.qml:323
+#: src/qml/Actions.qml:316 src/qml/Actions.qml:322
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Escala dels subtítols: %1"
 
-#: src/qml/Actions.qml:337
+#: src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrellaça: %1"
 
-#: src/qml/Actions.qml:393 src/qml/Actions.qml:399
+#: src/qml/Actions.qml:392 src/qml/Actions.qml:398
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:404
+#: src/qml/Actions.qml:403
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:411 src/qml/Actions.qml:417
+#: src/qml/Actions.qml:410 src/qml/Actions.qml:416
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrast: %1"
 
-#: src/qml/Actions.qml:422
+#: src/qml/Actions.qml:421
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrast: 0"
 
-#: src/qml/Actions.qml:428 src/qml/Actions.qml:434
+#: src/qml/Actions.qml:427 src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brillantor: %1"
 
-#: src/qml/Actions.qml:439
+#: src/qml/Actions.qml:438
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brillantor: 0"
 
-#: src/qml/Actions.qml:445 src/qml/Actions.qml:451
+#: src/qml/Actions.qml:444 src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:456
+#: src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:462 src/qml/Actions.qml:468
+#: src/qml/Actions.qml:461 src/qml/Actions.qml:467
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturació: %1"
 
-#: src/qml/Actions.qml:473
+#: src/qml/Actions.qml:472
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturació: 0"
 
-#: src/qml/Footer.qml:61
+#: src/qml/Footer.qml:60
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Inicia la reproducció"
 
-#: src/qml/Footer.qml:61
+#: src/qml/Footer.qml:60
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Fa pausa en la reproducció"
 
-#: src/qml/Footer.qml:74
+#: src/qml/Footer.qml:73
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Reproduïx el fitxer anterior"
 
-#: src/qml/Footer.qml:87
+#: src/qml/Footer.qml:86
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Reproduïx el fitxer següent"
 
-#: src/qml/Footer.qml:103
+#: src/qml/Footer.qml:102
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Resta: %1"
@@ -707,31 +713,31 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Selecciona un color"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:50
+#: src/qml/Haruna/Components/HamburgerMenu.qml:49
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Fitxers recents"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:64
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:39
+#: src/qml/Haruna/Components/HamburgerMenu.qml:63
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:27
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Subtítol secundari"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:85
+#: src/qml/Haruna/Components/HamburgerMenu.qml:84
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Més"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:103
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
+#: src/qml/Haruna/Components/HamburgerMenu.qml:102
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Subtítol primari"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:115
+#: src/qml/Haruna/Components/HamburgerMenu.qml:114
 msgctxt "@title:menu"
 msgid "&Audio Track"
 msgstr "Pista d'&àudio"
@@ -785,12 +791,12 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Afig una carpeta nova"
 
-#: src/qml/Header.qml:66
+#: src/qml/Header.qml:64
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Subtítols"
 
-#: src/qml/Header.qml:84
+#: src/qml/Header.qml:82
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Àudio"
@@ -809,13 +815,13 @@ msgstr ""
 "Omet automàticament els capítols que contenen certes paraules/caràcters.\n"
 "Per a més detalls, comproveu les opcions de configuració de «Reproducció»"
 
-#: src/qml/main.qml:30
+#: src/qml/main.qml:26
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:226 src/qml/PlayList.qml:317
-#: src/qml/Settings/VideoSettings.qml:72
+#: src/qml/main.qml:226 src/qml/PlayList.qml:316
+#: src/qml/Settings/VideoSettings.qml:71
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccioneu un fitxer"
@@ -830,7 +836,7 @@ msgctxt "@action:button"
 msgid "Open"
 msgstr "Obri"
 
-#: src/qml/Menus/AudioMenu.qml:16 src/qml/Menus/Global/GlobalAudioMenu.qml:15
+#: src/qml/Menus/AudioMenu.qml:16 src/qml/Menus/Global/GlobalAudioMenu.qml:17
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&Àudio"
@@ -840,22 +846,22 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "Pis&ta"
 
-#: src/qml/Menus/ContextMenu.qml:19
+#: src/qml/Menus/ContextMenu.qml:17
 msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "Velocitat de reproducció"
 
-#: src/qml/Menus/FileMenu.qml:15 src/qml/Menus/Global/GlobalFileMenu.qml:16
+#: src/qml/Menus/FileMenu.qml:13 src/qml/Menus/Global/GlobalFileMenu.qml:16
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "Fi&txer"
 
-#: src/qml/Menus/FileMenu.qml:24 src/qml/Menus/Global/GlobalFileMenu.qml:39
+#: src/qml/Menus/FileMenu.qml:22 src/qml/Menus/Global/GlobalFileMenu.qml:39
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Fitxers recents"
 
-#: src/qml/Menus/FileMenu.qml:41
+#: src/qml/Menus/FileMenu.qml:39
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Neteja la llista"
@@ -877,79 +883,79 @@ msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Busca"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:16
-#: src/qml/Menus/SettingsMenu.qml:15
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
+#: src/qml/Menus/SettingsMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "Con&figuració"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
-#: src/qml/Menus/SettingsMenu.qml:20
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
+#: src/qml/Menus/SettingsMenu.qml:18
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "General"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
-#: src/qml/Menus/SettingsMenu.qml:28
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
+#: src/qml/Menus/SettingsMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Reproducció"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
-#: src/qml/Menus/SettingsMenu.qml:36
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
+#: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Vídeo"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
-#: src/qml/Menus/SettingsMenu.qml:44
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
+#: src/qml/Menus/SettingsMenu.qml:42
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Àudio"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
-#: src/qml/Menus/SettingsMenu.qml:52
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
+#: src/qml/Menus/SettingsMenu.qml:50
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Subtítols"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
-#: src/qml/Menus/SettingsMenu.qml:60
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
+#: src/qml/Menus/SettingsMenu.qml:58
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Llista de reproducció"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
-#: src/qml/Menus/SettingsMenu.qml:68
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
+#: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Ratolí"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
-#: src/qml/Menus/SettingsMenu.qml:76
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
+#: src/qml/Menus/SettingsMenu.qml:74
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:89
-#: src/qml/Menus/SettingsMenu.qml:84
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
+#: src/qml/Menus/SettingsMenu.qml:82
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Ordres personalitzades"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:97
-#: src/qml/Menus/SettingsMenu.qml:92
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
+#: src/qml/Menus/SettingsMenu.qml:90
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Depuració"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:105
-#: src/qml/Menus/SettingsMenu.qml:100
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
+#: src/qml/Menus/SettingsMenu.qml:98
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Quant a"
 
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:15
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:17
 #: src/qml/Menus/SubtitlesMenu.qml:16
 msgctxt "@title:menu"
 msgid "&Subtitles"
@@ -990,180 +996,175 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: src/qml/MpvVideo.qml:30 src/qml/VolumeSlider.qml:51
+#: src/qml/MpvVideo.qml:28
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volum: %1"
 
-#: src/qml/MpvVideo.qml:74
-msgctxt "@info:tooltip"
-msgid "Could not play: %1"
-msgstr "No s'ha pogut reproduir: %1"
-
-#: src/qml/PlayList.qml:87
+#: src/qml/PlayList.qml:86
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Afig"
 
-#: src/qml/PlayList.qml:99
+#: src/qml/PlayList.qml:98
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Obri una llista de reproducció"
 
-#: src/qml/PlayList.qml:108
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Afig..."
 
-#: src/qml/PlayList.qml:111
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fitxer"
 
-#: src/qml/PlayList.qml:119
+#: src/qml/PlayList.qml:118
 msgctxt "@action:button"
 msgid "Url"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:130
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Ordena"
 
-#: src/qml/PlayList.qml:134
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Nom ascendent"
 
-#: src/qml/PlayList.qml:140
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Nom descendent"
 
-#: src/qml/PlayList.qml:146
+#: src/qml/PlayList.qml:145
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Duració ascendent"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:151
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Duració descendent"
 
-#: src/qml/PlayList.qml:159
+#: src/qml/PlayList.qml:158
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Neteja"
 
-#: src/qml/PlayList.qml:167
+#: src/qml/PlayList.qml:166
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Anomena i guarda"
 
-#: src/qml/PlayList.qml:225
+#: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Obri la carpeta contenidora"
 
-#: src/qml/PlayList.qml:231
+#: src/qml/PlayList.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Copia el nom del fitxer"
 
-#: src/qml/PlayList.qml:235
+#: src/qml/PlayList.qml:234
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Copia el camí del fitxer"
 
-#: src/qml/PlayList.qml:240
+#: src/qml/PlayList.qml:239
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Elimina de la llista de reproducció"
 
-#: src/qml/PlayList.qml:246
+#: src/qml/PlayList.qml:245
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Canvia el nom del fitxer"
 
-#: src/qml/PlayList.qml:252
+#: src/qml/PlayList.qml:251
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Llença a la paperera"
 
-#: src/qml/Settings/AudioSettings.qml:29
-#: src/qml/Settings/SubtitlesSettings.qml:36
+#: src/qml/Settings/AudioSettings.qml:28
+#: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Idioma preferit"
 
-#: src/qml/Settings/AudioSettings.qml:37
-#: src/qml/Settings/SubtitlesSettings.qml:44
+#: src/qml/Settings/AudioSettings.qml:36
+#: src/qml/Settings/SubtitlesSettings.qml:43
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "cat, eng, etc."
 
-#: src/qml/Settings/AudioSettings.qml:56
-#: src/qml/Settings/SubtitlesSettings.qml:63
+#: src/qml/Settings/AudioSettings.qml:55
+#: src/qml/Settings/SubtitlesSettings.qml:62
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Pista preferida"
 
-#: src/qml/Settings/AudioSettings.qml:79
+#: src/qml/Settings/AudioSettings.qml:78
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Pas del volum"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:39
+#: src/qml/Settings/CustomCommandsSettings.qml:40
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Encara no hi ha cap ordre personalitzada"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:41
+#: src/qml/Settings/CustomCommandsSettings.qml:42
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "Afi&g una ordre"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:74
+#: src/qml/Settings/CustomCommandsSettings.qml:75
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "No s'establix a l'inici següent"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:148
+#: src/qml/Settings/CustomCommandsSettings.qml:149
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Afi&g"
 
-#: src/qml/Settings/DebugSettings.qml:28
+#: src/qml/Settings/DebugSettings.qml:27
 msgctxt "@label:textbox"
 msgid "Config folder"
 msgstr "Carpeta de configuració"
 
-#: src/qml/Settings/DebugSettings.qml:40
+#: src/qml/Settings/DebugSettings.qml:39
 msgctxt "@info:tooltip"
 msgid "Open config folder"
 msgstr "Obri la carpeta de configuració"
 
-#: src/qml/Settings/DebugSettings.qml:52
+#: src/qml/Settings/DebugSettings.qml:51
 msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "Fitxer de configuració"
 
-#: src/qml/Settings/DebugSettings.qml:64
+#: src/qml/Settings/DebugSettings.qml:63
 msgctxt "@info:tooltip"
 msgid "Open config file"
 msgstr "Obrir el fitxer de configuració"
 
-#: src/qml/Settings/DebugSettings.qml:76
+#: src/qml/Settings/DebugSettings.qml:75
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "Fitxer de configuració d'ordres personalitzades"
 
-#: src/qml/Settings/DebugSettings.qml:88
+#: src/qml/Settings/DebugSettings.qml:87
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
 msgstr "Obri el fitxer de configuració d'ordres personalitzades"
 
-#: src/qml/Settings/DebugSettings.qml:100
+#: src/qml/Settings/DebugSettings.qml:99
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
@@ -1172,7 +1173,7 @@ msgstr ""
 "Si els camps estan buits açò vol dir que no hi ha cap fitxer/carpeta de "
 "configuració (p. ex., quan s'utilitza la configuració predeterminada)."
 
-#: src/qml/Settings/DebugSettings.qml:108
+#: src/qml/Settings/DebugSettings.qml:107
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "Activa el registre de «mpv»"
@@ -1227,40 +1228,40 @@ msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "Guar&da"
 
-#: src/qml/Settings/GeneralSettings.qml:31
+#: src/qml/Settings/GeneralSettings.qml:29
 msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "Mida de la lletra d'OSD"
 
-#: src/qml/Settings/GeneralSettings.qml:57
+#: src/qml/Settings/GeneralSettings.qml:55
 msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "Ubicació en el diàleg de fitxers"
 
-#: src/qml/Settings/GeneralSettings.qml:76
+#: src/qml/Settings/GeneralSettings.qml:74
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
 msgstr ""
 "Si està buida, el diàleg de fitxers recordarà l'última ubicació oberta."
 
-#: src/qml/Settings/GeneralSettings.qml:86
+#: src/qml/Settings/GeneralSettings.qml:84
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Nombre màxim de fitxers recents"
 
-#: src/qml/Settings/GeneralSettings.qml:103
+#: src/qml/Settings/GeneralSettings.qml:101
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 "Nombre màxim de fitxers recents que s'emmagatzemaran. Introduïu 0 (zero) per "
 "a desactivar-ho."
 
-#: src/qml/Settings/GeneralSettings.qml:111
+#: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Permet només una única instància"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:125
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.\n"
@@ -1271,52 +1272,52 @@ msgstr ""
 "En intentar obrir un altre fitxer amb Haruna s'obrirà el fitxer en la "
 "instància en execució."
 
-#: src/qml/Settings/GeneralSettings.qml:141
+#: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Afig un fitxer a la llista de reproducció"
 
-#: src/qml/Settings/GeneralSettings.qml:157
+#: src/qml/Settings/GeneralSettings.qml:155
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "El fitxer s'afegirà al final de la llista de reproducció"
 
-#: src/qml/Settings/GeneralSettings.qml:166
+#: src/qml/Settings/GeneralSettings.qml:164
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfície"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:170
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Vista prèvia de la miniatura"
 
-#: src/qml/Settings/GeneralSettings.qml:177
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Mostra una vista prèvia de la miniatura"
 
-#: src/qml/Settings/GeneralSettings.qml:189
+#: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Utilitza una vista prèvia precisa"
 
-#: src/qml/Settings/GeneralSettings.qml:206
+#: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "La generació d'una vista prèvia precisa és lenta"
 
-#: src/qml/Settings/GeneralSettings.qml:231
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Window"
 msgstr "Finestra"
 
-#: src/qml/Settings/GeneralSettings.qml:237
+#: src/qml/Settings/GeneralSettings.qml:235
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Redimensiona per a ajustar-se al vídeo"
 
-#: src/qml/Settings/GeneralSettings.qml:253
+#: src/qml/Settings/GeneralSettings.qml:251
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1325,12 +1326,12 @@ msgstr ""
 "La finestra es redimensiona d'acord amb la resolució del vídeo.\n"
 "La mida màxima no està restringida, es deixa al sistema operatiu."
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:265
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Recorda la mida i la posició de la finestra"
 
-#: src/qml/Settings/GeneralSettings.qml:282
+#: src/qml/Settings/GeneralSettings.qml:280
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1345,38 +1346,38 @@ msgstr ""
 "\n"
 "El paràmetre «Redimensiona per a ajustar-se al vídeo» té prioritat.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:297
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostra la barra de menús"
 
-#: src/qml/Settings/GeneralSettings.qml:308
-#: src/qml/Settings/PlaylistSettings.qml:81
+#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostra els marcadors de capítols"
 
-#: src/qml/Settings/GeneralSettings.qml:328
+#: src/qml/Settings/GeneralSettings.qml:326
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de color"
 
-#: src/qml/Settings/GeneralSettings.qml:370
+#: src/qml/Settings/GeneralSettings.qml:368
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estil de la IGU"
 
-#: src/qml/Settings/GeneralSettings.qml:421
+#: src/qml/Settings/GeneralSettings.qml:419
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Utilitza el tema d'icones Brisa"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:427
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1385,32 +1386,32 @@ msgstr ""
 "Establix el tema d'icones a Brisa.\n"
 "Requerix reiniciar."
 
-#: src/qml/Settings/MouseSettings.qml:83
+#: src/qml/Settings/MouseSettings.qml:82
 msgctxt "@label"
 msgid "No action set"
 msgstr "Cap acció establida"
 
-#: src/qml/Settings/MouseSettings.qml:97
+#: src/qml/Settings/MouseSettings.qml:96
 msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr "Neteja l'acció"
 
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:133
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Feu doble clic per a establir l'acció"
 
-#: src/qml/Settings/PlaybackSettings.qml:31
+#: src/qml/Settings/PlaybackSettings.qml:30
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "Busca un pas xicotet"
 
-#: src/qml/Settings/PlaybackSettings.qml:49
+#: src/qml/Settings/PlaybackSettings.qml:48
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "Busca un pas mitjà"
 
-#: src/qml/Settings/PlaybackSettings.qml:75
+#: src/qml/Settings/PlaybackSettings.qml:74
 msgctxt "@info:tooltip"
 msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
@@ -1419,17 +1420,17 @@ msgstr ""
 "Açò també s'utilitza per a buscar amb la roda del ratolí, quan el ratolí "
 "està damunt la barra de progrés"
 
-#: src/qml/Settings/PlaybackSettings.qml:86
+#: src/qml/Settings/PlaybackSettings.qml:85
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "Busca un pas gran"
 
-#: src/qml/Settings/PlaybackSettings.qml:107
+#: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "En minimitzar fes pausa"
 
-#: src/qml/Settings/PlaybackSettings.qml:115
+#: src/qml/Settings/PlaybackSettings.qml:114
 msgctxt "@info:tooltip"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1438,22 +1439,22 @@ msgstr ""
 "Posa en pausa el reproductor mentre es minimitza la finestra, quan es "
 "restaure es reprendrà la reproducció."
 
-#: src/qml/Settings/PlaybackSettings.qml:120
+#: src/qml/Settings/PlaybackSettings.qml:119
 msgctxt "@label:spinbox"
 msgid "Resume playback"
 msgstr "Reprén la reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:127
+#: src/qml/Settings/PlaybackSettings.qml:126
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Obri l'últim fitxer reproduït en iniciar"
 
-#: src/qml/Settings/PlaybackSettings.qml:140
+#: src/qml/Settings/PlaybackSettings.qml:139
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "Ves fins a l'última posició de reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:148
+#: src/qml/Settings/PlaybackSettings.qml:147
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1462,12 +1463,12 @@ msgstr ""
 "Quan s'òbriga un fitxer que s'ha reproduït abans, va fins a la posició a on "
 "era l'última vegada."
 
-#: src/qml/Settings/PlaybackSettings.qml:157
+#: src/qml/Settings/PlaybackSettings.qml:156
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Inicia la reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:166
+#: src/qml/Settings/PlaybackSettings.qml:165
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
@@ -1475,88 +1476,88 @@ msgstr ""
 "Quan s'òbriga un fitxer que s'ha reproduït abans, començarà a reproduir-lo "
 "automàticament."
 
-#: src/qml/Settings/PlaybackSettings.qml:171
+#: src/qml/Settings/PlaybackSettings.qml:170
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Descodificació per maquinari"
 
-#: src/qml/Settings/PlaybackSettings.qml:177
-#: src/qml/Settings/PlaybackSettings.qml:290
+#: src/qml/Settings/PlaybackSettings.qml:176
+#: src/qml/Settings/PlaybackSettings.qml:289
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Activada"
 
-#: src/qml/Settings/PlaybackSettings.qml:177
-#: src/qml/Settings/PlaybackSettings.qml:290
+#: src/qml/Settings/PlaybackSettings.qml:176
+#: src/qml/Settings/PlaybackSettings.qml:289
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Desactivada"
 
-#: src/qml/Settings/PlaybackSettings.qml:222
+#: src/qml/Settings/PlaybackSettings.qml:221
 msgctxt "@label:spinbox"
 msgid "Remember time position"
 msgstr "Recorda la posició del temps"
 
-#: src/qml/Settings/PlaybackSettings.qml:242
+#: src/qml/Settings/PlaybackSettings.qml:241
 msgctxt "@info"
 msgid "Disabled"
 msgstr "Desactivada"
 
-#: src/qml/Settings/PlaybackSettings.qml:244
+#: src/qml/Settings/PlaybackSettings.qml:243
 msgctxt "@info"
 msgid "For all files"
 msgstr "Per a tots els fitxers"
 
-#: src/qml/Settings/PlaybackSettings.qml:247
+#: src/qml/Settings/PlaybackSettings.qml:246
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "Per als fitxers més llargs que %1 minut"
 msgstr[1] "Per als fitxers més llargs que %1 minuts"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
+#: src/qml/Settings/PlaybackSettings.qml:274
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Guarda la posició cada %1 segon"
 msgstr[1] "Guarda la posició cada %1 segons"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:283
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Omet els capítols"
 
-#: src/qml/Settings/PlaybackSettings.qml:301
+#: src/qml/Settings/PlaybackSettings.qml:300
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Mostra un missatge OSD en saltar"
 
-#: src/qml/Settings/PlaybackSettings.qml:311
+#: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Omet les paraules"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/qml/Settings/PlaybackSettings.qml:319
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, capítol 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:333
+#: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
 msgstr ""
 "Omet els capítols que contenen estes paraules. Llista separada per comes."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:352
 msgid "Format selection"
 msgstr "Seleccioneu el format"
 
-#: src/qml/Settings/PlaybackSettings.qml:372
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "@info:tooltip"
 msgid ""
 "Selects the best video with a height lower than or equal to the selected "
@@ -1565,27 +1566,27 @@ msgstr ""
 "Selecciona el millor vídeo amb una alçària menor o igual que el valor "
 "seleccionat."
 
-#: src/qml/Settings/PlaybackSettings.qml:419
+#: src/qml/Settings/PlaybackSettings.qml:418
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "millor_vídeo+millor_àudio/millor"
 
-#: src/qml/Settings/PlaylistSettings.qml:28
+#: src/qml/Settings/PlaylistSettings.qml:27
 msgctxt "@label:listbox"
 msgid "Position"
 msgstr "Posició"
 
-#: src/qml/Settings/PlaylistSettings.qml:53
+#: src/qml/Settings/PlaylistSettings.qml:52
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "Estil de la llista de reproducció"
 
-#: src/qml/Settings/PlaylistSettings.qml:91
+#: src/qml/Settings/PlaylistSettings.qml:90
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Superposició del vídeo"
 
-#: src/qml/Settings/PlaylistSettings.qml:98
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1595,42 +1596,42 @@ msgstr ""
 "del vídeo.\n"
 "Quan es desselecciona, el vídeo canviarà de mida"
 
-#: src/qml/Settings/PlaylistSettings.qml:105
+#: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Mostra el títol del suport en lloc del nom de fitxer"
 
-#: src/qml/Settings/PlaylistSettings.qml:115
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Carrega automàticament els vídeos des de la mateixa carpeta"
 
-#: src/qml/Settings/PlaylistSettings.qml:125
+#: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Repetix"
 
-#: src/qml/Settings/PlaylistSettings.qml:135
+#: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Mostra el número de fila"
 
-#: src/qml/Settings/PlaylistSettings.qml:145
+#: src/qml/Settings/PlaylistSettings.qml:144
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Canvia amb el ratolí"
 
-#: src/qml/Settings/PlaylistSettings.qml:154
+#: src/qml/Settings/PlaylistSettings.qml:153
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Augmenta la mida de la lletra en pantalla completa"
 
-#: src/qml/Settings/PlaylistSettings.qml:167
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Recorda l'últim estat de la llista de reproducció"
 
-#: src/qml/Settings/PlaylistSettings.qml:174
+#: src/qml/Settings/PlaylistSettings.qml:173
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -1639,72 +1640,72 @@ msgstr ""
 "Si se selecciona, es recordarà l'estat (visible/ocult) de la llista de "
 "reproducció en els reinicis"
 
-#: src/qml/Settings/SettingsWindow.qml:35
+#: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Configuració"
 
-#: src/qml/Settings/SettingsWindow.qml:54
+#: src/qml/Settings/SettingsWindow.qml:55
 msgctxt "@action"
 msgid "General"
 msgstr "General"
 
-#: src/qml/Settings/SettingsWindow.qml:62
+#: src/qml/Settings/SettingsWindow.qml:63
 msgctxt "@action"
 msgid "Playback"
 msgstr "Reproducció"
 
-#: src/qml/Settings/SettingsWindow.qml:70
+#: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Video"
 msgstr "Vídeo"
 
-#: src/qml/Settings/SettingsWindow.qml:78
+#: src/qml/Settings/SettingsWindow.qml:79
 msgctxt "@action"
 msgid "Audio"
 msgstr "Àudio"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Subtítols"
 
-#: src/qml/Settings/SettingsWindow.qml:102
+#: src/qml/Settings/SettingsWindow.qml:103
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Ratolí"
 
-#: src/qml/Settings/SettingsWindow.qml:110
+#: src/qml/Settings/SettingsWindow.qml:111
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: src/qml/Settings/SettingsWindow.qml:118
+#: src/qml/Settings/SettingsWindow.qml:119
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Ordres personalitzades"
 
-#: src/qml/Settings/SettingsWindow.qml:126
+#: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Debug"
 msgstr "Depuració"
 
-#: src/qml/Settings/SettingsWindow.qml:134
+#: src/qml/Settings/SettingsWindow.qml:135
 msgctxt "@action"
 msgid "About"
 msgstr "Quant a"
 
-#: src/qml/Settings/SettingsWindow.qml:182
+#: src/qml/Settings/SettingsWindow.qml:183
 msgctxt "@title:window"
 msgid "Help"
 msgstr "Ajuda"
 
-#: src/qml/Settings/SubtitlesSettings.qml:86
+#: src/qml/Settings/SubtitlesSettings.qml:85
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Permet els subtítols en les vores negres"
 
-#: src/qml/Settings/SubtitlesSettings.qml:95
+#: src/qml/Settings/SubtitlesSettings.qml:94
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1713,85 +1714,85 @@ msgstr ""
 "Quan se selecciona, els subtítols es podran representar fora del vídeo, en "
 "la vores negres. Podria no funcionar amb els subtítols «.ass»."
 
-#: src/qml/Settings/SubtitlesSettings.qml:100
+#: src/qml/Settings/SubtitlesSettings.qml:99
 msgctxt "@title"
 msgid "Styling"
 msgstr "Estil"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/qml/Settings/SubtitlesSettings.qml:105
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Família de la lletra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:138
+#: src/qml/Settings/SubtitlesSettings.qml:137
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Mida de la lletra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:153
 msgctxt "@label"
 msgid "Font style"
 msgstr "Estil de la lletra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:158
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Negreta"
 
-#: src/qml/Settings/SubtitlesSettings.qml:171
+#: src/qml/Settings/SubtitlesSettings.qml:170
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Cursiva"
 
-#: src/qml/Settings/SubtitlesSettings.qml:181
+#: src/qml/Settings/SubtitlesSettings.qml:180
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Color de la lletra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:232
-#: src/qml/Settings/SubtitlesSettings.qml:288
-#: src/qml/Settings/SubtitlesSettings.qml:365
+#: src/qml/Settings/SubtitlesSettings.qml:231
+#: src/qml/Settings/SubtitlesSettings.qml:287
+#: src/qml/Settings/SubtitlesSettings.qml:364
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Establix un valor predeterminat"
 
-#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:237
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Color de l'ombra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:294
+#: src/qml/Settings/SubtitlesSettings.qml:293
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Desplaçament de l'ombra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:387
+#: src/qml/Settings/SubtitlesSettings.qml:309
+#: src/qml/Settings/SubtitlesSettings.qml:386
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Establiu-ho a 0 (zero) per a desactivar."
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:314
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Color de la vora"
 
-#: src/qml/Settings/SubtitlesSettings.qml:371
+#: src/qml/Settings/SubtitlesSettings.qml:370
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Amplària de la vora"
 
-#: src/qml/Settings/VideoSettings.qml:31
+#: src/qml/Settings/VideoSettings.qml:30
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "Caràtula predeterminada"
 
-#: src/qml/Settings/VideoSettings.qml:40
+#: src/qml/Settings/VideoSettings.qml:39
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "camí cap a la imatge"
 
-#: src/qml/Settings/VideoSettings.qml:52
+#: src/qml/Settings/VideoSettings.qml:51
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -1801,47 +1802,47 @@ msgstr ""
 "imatge incrustada de caràtula o una imatge de caràtula/carpeta en la mateixa "
 "carpeta que el fitxer reproduït."
 
-#: src/qml/Settings/VideoSettings.qml:83
+#: src/qml/Settings/VideoSettings.qml:82
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Captures de pantalla"
 
-#: src/qml/Settings/VideoSettings.qml:93
+#: src/qml/Settings/VideoSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Format"
 
-#: src/qml/Settings/VideoSettings.qml:133
+#: src/qml/Settings/VideoSettings.qml:132
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Plantilla"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:158
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Configureu la imatge"
 
-#: src/qml/Settings/VideoSettings.qml:169
+#: src/qml/Settings/VideoSettings.qml:168
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Contrast"
 
-#: src/qml/Settings/VideoSettings.qml:188
+#: src/qml/Settings/VideoSettings.qml:187
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Lluminositat"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:206
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
-#: src/qml/Settings/VideoSettings.qml:226
+#: src/qml/Settings/VideoSettings.qml:225
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Saturació"
 
-#: src/qml/Settings/VideoSettings.qml:242
+#: src/qml/Settings/VideoSettings.qml:241
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
