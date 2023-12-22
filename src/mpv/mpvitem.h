@@ -26,7 +26,6 @@ public:
 
     enum class AsyncIds {
         None,
-        FinishedLoading,
         SavePosition,
         Screenshot,
         TrackList,

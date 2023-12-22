@@ -180,8 +180,6 @@ void MpvItem::setupConnections()
         getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
         getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
 
-        setWatchLaterPosition(loadTimePosition());
-
         if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
             setProperty(MpvProperties::self()->LoopFile, QStringLiteral("inf"));
         }
@@ -199,14 +197,7 @@ void MpvItem::setupConnections()
             return;
         }
 
-        if (PlaybackSettings::seekToLastPosition()) {
-            setPause(!PlaybackSettings::playOnResume() && watchLaterPosition() > 0);
-            setPropertyAsync(MpvProperties::self()->Position,
-                             watchLaterPosition(),
-                             static_cast<int>(AsyncIds::FinishedLoading));
-        } else {
-            getPropertyAsync(MpvProperties::self()->Position, static_cast<int>(AsyncIds::FinishedLoading));
-        }
+        setFinishedLoading(true);
         Q_EMIT fileLoaded();
 
     }, Qt::QueuedConnection);
@@ -404,6 +395,12 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
+    setPause(false);
+    setWatchLaterPosition(loadTimePosition());
+    if (PlaybackSettings::seekToLastPosition()) {
+        setPause(!PlaybackSettings::playOnResume() && watchLaterPosition() > 0);
+        setProperty(u"start"_qs, QVariant(u"+"_qs + QString::number(m_watchLaterPosition)));
+    }
     command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
@@ -441,10 +438,6 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
 {
     switch (static_cast<AsyncIds>(event.reply_userdata)) {
     case AsyncIds::None: {
-        break;
-    }
-    case AsyncIds::FinishedLoading: {
-        setFinishedLoading(true);
         break;
     }
     case AsyncIds::SavePosition: {
