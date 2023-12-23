@@ -57,7 +57,7 @@ Slider {
             id: progressBarToolTip
 
             z: 10
-            visible: progressBarMouseArea.containsMouse && mpv.currentFile !== ""
+            visible: progressBarMouseArea.containsMouse && mpv.duration > 0
             timeout: -1
             delay: 0
             contentItem: ColumnLayout {
