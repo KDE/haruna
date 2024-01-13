@@ -227,7 +227,7 @@
                 <title
 >Selecció del format Youtube-dl</title>
                 <para
->L'Haruna utilitza «youtube-dl» per reproduir vídeos en línia. Alguns llocs ofereixen diverses versions de vídeo/àudio (còdecs diferents, resolució). Aquest paràmetre permet configurar quina versió de vídeo/àudio selecciona «youtube-dl». Més informació: <ulink url="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection"
+>L'Haruna utilitza «youtube-dl» per a reproduir vídeos en línia. Alguns llocs ofereixen diverses versions de vídeo/àudio (còdecs diferents, resolució). Aquest paràmetre permet configurar quina versió de vídeo/àudio selecciona «youtube-dl». Més informació: <ulink url="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection"
 >https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection</ulink
 > </para>
             </section>
@@ -244,7 +244,7 @@
 >https://mpv.io/manual/stable/#screenshot</ulink
 ></para>
                 <para
->Especifiqueu la plantilla de nom de fitxer utilitzada per a desar captures de pantalla. La plantilla especifica el nom de fitxer sense extensió de fitxer, i pot contenir especificadors de format, els quals seran substituïts quan es faci una captura de pantalla. De manera predeterminada, la plantilla és «mpv-shot%n», el qual resulta en noms de fitxer com «mpv-shot0012.png», per exemple.</para>
+>Especifiqueu la plantilla de noms de fitxer utilitzada per a desar captures de pantalla. La plantilla especifica el nom de fitxer sense extensió de fitxer, i pot contenir especificadors de format, els quals seran substituïts quan es faci una captura de pantalla. De manera predeterminada, la plantilla és «mpv-shot%n», el qual resulta en noms de fitxer com «mpv-shot0012.png», per exemple.</para>
                 <para
 >La plantilla pot començar per un camí relatiu o absolut, per tal d'especificar una ubicació del directori on s'han de desar les captures de pantalla.</para>
                 <para
@@ -302,7 +302,7 @@
                         <para
 >Nota</para>
                         <para
->Aquesta és una manera senzilla d'obtenir marques horàries úniques per fotograma. (Els nombres de fotograma serien més intuïtius, però no es poden implementar fàcilment perquè els formats de contenidors solen utilitzar marques horàries per identificar fotogrames)</para>
+>Aquesta és una manera senzilla d'obtenir marques horàries úniques per fotograma. (Els nombres de fotogrames serien més intuïtius, però no es poden implementar fàcilment perquè els formats de contenidors solen utilitzar marques horàries per a identificar fotogrames)</para>
                     </listitem>
 
                     <listitem>
@@ -402,7 +402,7 @@
                 <para
 >No totes les ordres funcionaran, ja que algunes són específiques de l'«mpv».</para>
                 <para
->El més útil són les ordres per manipular propietats, com «set», «add», «cycle».</para>
+>El més útil són les ordres per a manipular propietats, com «set», «add», «cycle».</para>
                 <para
 ><emphasis
 >set</emphasis
@@ -414,7 +414,7 @@
 >add</emphasis
 >: augmenta/disminueix el valor d'una propietat <code
 >add volum 15</code
->, augmenta el volum en 15. Per reduir el valor, utilitzeu <code
+>, augmenta el volum en 15. Per a reduir el valor, utilitzeu <code
 >add volum -15</code
 >.</para>
                 <para
@@ -430,7 +430,7 @@
                 <para
 >Un missatge OSD a mostrar quan s'activa una ordre personalitzada de tipus d'acció.</para>
                 <para
->Utilitzeu ${property_name} per mostrar el valor d'una propietat Volum: ${volume}.</para>
+>Utilitzeu ${property_name} per a mostrar el valor d'una propietat Volum: ${volume}.</para>
             </section>
             <section>
                 <title
