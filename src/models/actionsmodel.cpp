@@ -91,7 +91,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = QStringLiteral("muteAction");
     action.text = i18nc("@action", "Mute");
-    action.iconName = QStringLiteral("player-volume");
+    action.iconName = QStringLiteral("player-volume-muted");
     action.defaultShortcut = Qt::Key_M;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
@@ -176,7 +176,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = QStringLiteral("restartPlaybackAction");
     action.text = i18nc("@action", "Restart Playback");
-    action.iconName = QStringLiteral("start-over");
+    action.iconName = QStringLiteral("edit-reset");
     action.defaultShortcut = Qt::Key_F5;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
