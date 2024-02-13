@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-08-19 22:30+0400\n"
+"PO-Revision-Date: 2024-02-12 12:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -548,12 +548,10 @@ msgid "None"
 msgstr "لا يوجد"
 
 #: src/mpv/mpvitem.cpp:451
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot taken"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "أخذت لقطة شاشة"
+msgstr "فشل أخذ اللقطة"
 
 #: src/mpv/mpvitem.cpp:456
 #, kde-format
@@ -609,12 +607,9 @@ msgid "Subtitles off"
 msgstr "الترجمة مغلقة"
 
 #: src/qml/Actions.qml:284
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles function on"
-msgstr "الترجمة تعمل"
+msgstr "وظيفة الترجمة تعمل"
 
 #: src/qml/Actions.qml:293 src/qml/Actions.qml:305
 msgctxt "@info:tooltip"
@@ -741,12 +736,9 @@ msgid "Primary Subtitle"
 msgstr "الترجمة الأولية"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:114
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "&صوت"
+msgstr "مقطوعة &صوتية"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -848,12 +840,9 @@ msgid "&Audio"
 msgstr "&صوت"
 
 #: src/qml/Menus/AudioMenu.qml:22
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&صوت"
+msgstr "&مقطوعة"
 
 #: src/qml/Menus/ContextMenu.qml:17
 msgctxt "@title:menu"
@@ -1108,9 +1097,6 @@ msgstr "اللغة المفضلة"
 
 #: src/qml/Settings/AudioSettings.qml:36
 #: src/qml/Settings/SubtitlesSettings.qml:43
-#, fuzzy
-#| msgctxt "placeholder text"
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "eng,ar وهكذا."
@@ -1268,7 +1254,7 @@ msgstr "كم ملف حديث يمكن تخزينه. أدخل 0 (صفر) لتعط
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "اسمح بنسخة واحدة فقط"
 
 #: src/qml/Settings/GeneralSettings.qml:125
 msgctxt "@info:tooltip"
@@ -1277,19 +1263,19 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"لن تؤدي محاولة فتح مثيل هارونا آخر إلى أي شيء.\n"
+"ستؤدي محاولة فتح ملف آخر باستخدام هارونا إلى فتح الملف  التطبيق الذي يعمل "
+"حاليا."
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "افتح قائمة التّشغيل"
+msgstr "أضف الملف إلى قائمة التّشغيل"
 
 #: src/qml/Settings/GeneralSettings.qml:155
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "سيضاف الملف إلى ذيل قائمة التشغيل"
 
 #: src/qml/Settings/GeneralSettings.qml:164
 msgctxt "@title"
@@ -1332,6 +1318,8 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"غُير حجم الإطار وفقاً لدقة الفيديو.\n"
+"الحد الأقصى للحجم غير مقيد، فهذا متروك لنظام التشغيل."
 
 #: src/qml/Settings/GeneralSettings.qml:265
 msgctxt "@option:check"
@@ -1347,6 +1335,10 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"عند تغيير حجم الإطار وموضعه، تحفظ القيم الجديدة واستخدامها لاستعادة التطبيق "
+"إلى نفس الحجم والموضع عند فتح مثيل جديد.\n"
+"\n"
+"يكون للإعداد \"تغيير الحجم ليناسب الفيديو\" الأسبقية.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
