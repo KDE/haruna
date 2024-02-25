@@ -1,49 +1,50 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023, 2024.
+# Sergiu Bivol <sergiu@cip.md>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2024-02-23 19:42+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: 2024-02-24 16:34+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tommi Nieminen"
+msgstr "Sergiu Bivol"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "translator@legisign.org"
+msgstr "sergiu@cip.md"
 
 #: src/application.cpp:100
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
-msgstr "Haruna-mediasoitin"
+msgstr "Lector multimedia Haruna"
 
 #: src/application.cpp:102
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
-msgstr "Mukautettava videosoitin."
+msgstr "Lector multimedia configurabil."
 
 #: src/application.cpp:104
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "© 2019–2023"
+msgstr "(c) 2019-2023"
 
 #: src/application.cpp:109
 #, kde-format
@@ -55,13 +56,13 @@ msgstr "George Florea Bănuș"
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
-msgstr "Kehittäjä"
+msgstr "Dezvoltator"
 
 #: src/application.cpp:121
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
-msgstr "Avattava tiedosto"
+msgstr "Fișierul de deschis"
 
 #: src/application.cpp:125
 #, kde-format
@@ -70,456 +71,450 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Sallii väliaikaisesti ohittaa Youtube-dl-muotovalinta-asetuksen. "
-"Sivuutetaan, jos asetusta muutetaan käyttöliittymässä"
 
 #: src/application.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
-msgstr "parasvideo+parasääni/paras"
+msgstr ""
 
 #: src/lockmanager.cpp:31
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Toistetaan mediatiedostoa"
+msgstr ""
 
-# *** TARKISTA: Kaksitulkintainen, joko [open actions][dialog] (avointen toimintojen ikkuna?) tai [open][actions dialog] kuten tässä.
 #: src/models/actionsmodel.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Avaa toimintoikkuna"
+msgstr "Deschide dialogul cu acțiuni"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
-msgstr "Tietoa Harunasta"
+msgstr "Despre Haruna"
 
 #: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Ciclează volumul în sus"
 
-# *** TARKISTA: Täysi arvaus. ”Audio up/down” voi olla jotain muutakin.
 #: src/models/actionsmodel.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
-msgstr "Vähennä äänenvoimakkuutta"
+msgstr "Ciclează volumul în jos"
 
 #: src/models/actionsmodel.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
-msgstr "Asetukset"
+msgstr "Configurează"
 
 #: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Aseta pikanäppäimet"
+msgstr "Configurează scurtăturile de tastatură"
 
 #: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
-msgstr "Poistu koko näytöltä"
+msgstr "Ieși din ecran complet"
 
 #: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
-msgstr "Kuva-askel eteenpäin"
+msgstr "Pășește cu un cadru înainte"
 
 #: src/models/actionsmodel.cpp:78
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
-msgstr "Kuva-askel taaksepäin"
+msgstr "Pășește cu un cadru înapoi"
 
 #: src/models/actionsmodel.cpp:86
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
-msgstr "Avaa viimeksi soitettu tiedosto"
+msgstr "Încarcă ultimul fișier redat"
 
 #: src/models/actionsmodel.cpp:93
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
-msgstr "Vaimenna"
+msgstr "Tăcut"
 
 #: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
-msgstr "Avaa kontekstivalikko"
+msgstr "Deschide meniul contextual"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr "Avaa ja sulkee kontekstivalikon hiiriosoittimen kohdalle"
+msgstr "Deschide și închide meniul contextual la poziția mausului"
 
 #: src/models/actionsmodel.cpp:108
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
-msgstr "Avaa tiedosto"
+msgstr "Deschide fișier"
 
 #: src/models/actionsmodel.cpp:115
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "Lisää ulkoinen tekstitys…"
+msgstr "Adaugă subtitre externe…"
 
 #: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
-msgstr "Avaa verkko-osoite"
+msgstr "Deschide URL"
 
 #: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
-msgstr "Lisää toistonopeutta"
+msgstr "Mărește viteza redării"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
-msgstr "Vähennä toistonopeutta"
+msgstr "Scade viteza redării"
 
 #: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
-msgstr "Palauta toistonopeus"
+msgstr "Reinițializează viteza redării"
 
 #: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
-msgstr "Toista/tauko"
+msgstr "Redare/Pauză"
 
 #: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
-msgstr "Toista seuraava"
+msgstr "Redă următoarea"
 
 #: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
-msgstr "Toista edellinen"
+msgstr "Redă precedenta"
 
 #: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
-msgstr "Lopeta"
+msgstr "Termină"
 
 #: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
-msgstr "Käynnistä toisto uudelleen"
+msgstr "Reîncepe redarea"
 
 #: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
-msgstr "Hyppää pieni askel eteenpäin"
+msgstr "Derulează cu pas mic înainte"
 
 #: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
-msgstr "Hyppää pieni askel taaksepäin"
+msgstr "Derulează cu pas mic înapoi"
 
 #: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
-msgstr "Hyppää keskikokoinen askel eteenpäin"
+msgstr "Derulează cu pas mediu înainte"
 
 #: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
-msgstr "Hyppää keskikokoinen askel taaksepäin"
+msgstr "Derulează cu pas mediu înapoi"
 
 #: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
-msgstr "Hyppää suuri askel eteenpäin"
+msgstr "Derulează cu pas mare înainte"
 
 #: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
-msgstr "Hyppää suuri askel taaksepäin"
+msgstr "Derulează cu pas mare înapoi"
 
 #: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
-msgstr "Hyppää seuraavaan lukuun"
+msgstr "Derulează la capitolul următor"
 
 #: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
-msgstr "Hyppää edelliseen lukuun"
+msgstr "Derulează la capitolul precedent"
 
 #: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr "Hyppää seuraavaan tekstiin"
+msgstr "Derulează la subtitrul următor"
 
 #: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "Hyppää edelliseen tekstiin"
+msgstr "Derulează la subtitrul precedent"
 
 #: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr "Hyppää katso myöhemmin -kohtaan"
+msgstr "Derulează la poziția de vizionare ulterioară"
 
 #: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
-msgstr "Aseta silmukka"
+msgstr "Stabilește bucla"
 
 #: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
-msgstr "Ruutukaappaus"
+msgstr "Captură de ecran"
 
 #: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
-msgstr "Näytä tai piilota tekstitys"
+msgstr "Comută subtitrele"
 
 #: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
-msgstr "Kasvata tekstitysfontin kokoa"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
-msgstr "Pienennä tekstitysfontin kokoa"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
-msgstr "Nosta tekstitystä"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
-msgstr "Laske tekstitystä"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
-msgstr "Nopeuta tekstitystä"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
-msgstr "Tekstitysviive"
+msgstr ""
 
-# ***TARKISTA: muukin tulkinta mahdollinen, esim. siirto ylös/alas, fonttikoon muutos…
 #: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr "Nopeuta tekstitystä"
+msgstr ""
 
-# ***TARKISTA: muukin tulkinta mahdollinen, esim. siirto ylös/alas, fonttikoon muutos…
 #: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr "Hidasta tekstitystä"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr "Ota käyttöön tai poista käytöstä lomituksenpoisto"
+msgstr "Comută deîntrețeserea"
 
 #: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
-msgstr "Vaihda koko näytön tilaan tai tilasta"
+msgstr "Comută ecranul complet"
 
 #: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
-msgstr "Näytä tai piilota valikkorivi"
+msgstr "Comută bara de meniu"
 
 #: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
-msgstr "Näytä tai piilota otsake"
+msgstr "Comută antetul"
 
 #: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
-msgstr "Toistolista"
+msgstr "Listă de redare"
 
 #: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
-msgstr "Siirrä videota vasemmalle"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:381
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
-msgstr "Siirrä videota oikealle"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
-msgstr "Siirrä videota ylemmäs"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
-msgstr "Siirrä videota alemmas"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Crește volumul"
 
 #: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
-msgstr "Vähennä äänenvoimakkuutta"
+msgstr "Micșorează volumul"
 
 #: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
-msgstr "Lähennä"
+msgstr "Apropie"
 
 #: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
-msgstr "Loitonna"
+msgstr "Îndepărtează"
 
 #: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
-msgstr "Palauta lähennystaso"
+msgstr "Reinițializează apropierea"
 
 #: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
-msgstr "Lisää kontrastia"
+msgstr "Mărește contrastul"
 
 #: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
-msgstr "Vähennä kontrastia"
+msgstr "Micșorează contrastul"
 
 #: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
-msgstr "Palauta kontrasti"
+msgstr "Reinițializează contrastul"
 
 #: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
-msgstr "Lisää kirkkautta"
+msgstr "Mărește luminozitatea"
 
 #: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
-msgstr "Vähennä kirkkautta"
+msgstr "Micșorează luminozitatea"
 
 #: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
-msgstr "Palauta kirkkaus"
+msgstr "Reinițializează luminozitatea"
 
 #: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
-msgstr "Lisää gammaa"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
-msgstr "Vähennä gammaa"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
-msgstr "Palauta gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
-msgstr "Lisää värikylläisyyttä"
+msgstr "Mărește saturația"
 
 #: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
-msgstr "Vähennä värikylläisyyttä"
+msgstr "Micșorează saturația"
 
 #: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
-msgstr "Palauta värikylläisyys"
+msgstr "Reinițializează saturația"
 
 #: src/models/actionsmodel.cpp:659
 #, kde-format
@@ -528,221 +523,218 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
-"Valittu pikanäppäin on ristiriidassa toiminnon <b>%1</b> kanssa."
-"<br><br>Haluatko sijoittaa pikanäppäimen uudelleen?"
 
 #: src/models/actionsmodel.cpp:665
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "Sijoita uudelleen"
+msgstr "Reatribuie"
 
 #: src/mpv/mpvitem.cpp:284
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
-msgstr "Ei voitu toistaa: %1"
+msgstr "Nu s-a putut reda: %1"
 
 #: src/mpv/mpvitem.cpp:417
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
-msgstr "Ei mitään"
+msgstr "Fără"
 
 #: src/mpv/mpvitem.cpp:451
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "Ruutukaappaus epäonnistui"
+msgstr "Captura ecranului a eșuat"
 
 #: src/mpv/mpvitem.cpp:456
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Kaapattiin ruutu"
+msgstr "Captura ecranului a reușit"
 
 #: src/mpv/mpvitem.cpp:458
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Ruutukaappaus: %1"
+msgstr "Captură de ecran: %1"
 
 #: src/mpv/mpvitem.cpp:506
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
-msgstr "Ohitettiin luku: %1"
+msgstr ""
 
 #: src/qml/Actions.qml:65 src/qml/Actions.qml:83
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
-msgstr "Ääni: %1 %2"
+msgstr "Audio: %1 %2"
 
 #: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
-msgstr "Toistonopeus: %1"
+msgstr "Viteza redării: %1"
 
 #: src/qml/Actions.qml:252
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
-msgstr "Silmukan alku: %1"
+msgstr "Început buclă: %1"
 
 #: src/qml/Actions.qml:256
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
-msgstr "Silmukka: %1–%2"
+msgstr "Buclă: %1 - %2"
 
 #: src/qml/Actions.qml:262
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
-msgstr "Silmukka tyhjennetty"
+msgstr "Buclă eliminată"
 
 #: src/qml/Actions.qml:273 src/qml/Actions.qml:279
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
-msgstr "Tekstityksen ajoitus: %1"
+msgstr ""
 
 #: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
-msgstr "Ei tekstitystä"
+msgstr "Subtitre dezactivate"
 
-# *** TARKISTA: Miten tämän on tarkoitus jatkua (ikkunassa)?
 #: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Subtitles function on"
-msgstr "Tekstitys toimii"
+msgstr ""
 
 #: src/qml/Actions.qml:293 src/qml/Actions.qml:305
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
-msgstr "Tekstitys: ei"
+msgstr "Subtitre: fără"
 
 #: src/qml/Actions.qml:297 src/qml/Actions.qml:309
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr "Tekstitys: %1 %2"
+msgstr "Subtitre: %1 %2"
 
 #: src/qml/Actions.qml:316 src/qml/Actions.qml:322
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr "Tekstitysmittakaava: %1"
+msgstr ""
 
 #: src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
-msgstr "Lomituksen poisto: %1"
+msgstr "Deîntrețesere: %1"
 
 #: src/qml/Actions.qml:392 src/qml/Actions.qml:398
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
-msgstr "Lähennys: %1"
+msgstr "Apropiere: %1"
 
 #: src/qml/Actions.qml:403
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
-msgstr "Lähennys: 0"
+msgstr "Apropiere: 0"
 
 #: src/qml/Actions.qml:410 src/qml/Actions.qml:416
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
-msgstr "Kontrasti: %1"
+msgstr "Contrast: %1"
 
 #: src/qml/Actions.qml:421
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
-msgstr "Kontrasti: 0"
+msgstr "Contrast: 0"
 
 #: src/qml/Actions.qml:427 src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
-msgstr "Kirkkaus: %1"
+msgstr "Luminozitate: %1"
 
 #: src/qml/Actions.qml:438
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
-msgstr "Kirkkaus: 0"
+msgstr "Luminozitate: 0"
 
 #: src/qml/Actions.qml:444 src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
-msgstr "Gamma: %1"
+msgstr ""
 
 #: src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr "Gamma: 0"
+msgstr ""
 
 #: src/qml/Actions.qml:461 src/qml/Actions.qml:467
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
-msgstr "Kylläisyys: %1"
+msgstr "Saturație: %1"
 
 #: src/qml/Actions.qml:472
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
-msgstr "Kylläisyys: 0"
+msgstr "Saturație: 0"
 
 #: src/qml/Footer.qml:60
 msgctxt "@info:tooltip"
 msgid "Start Playback"
-msgstr "Käynnistä toisto"
+msgstr "Începe redarea"
 
 #: src/qml/Footer.qml:60
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
-msgstr "Keskeytä toisto"
+msgstr "Întrerupe redarea"
 
 #: src/qml/Footer.qml:73
 msgctxt "@info:tooltip"
 msgid "Play previous file"
-msgstr "Toista edellinen tiedosto"
+msgstr "Redă fișierul precedent"
 
 #: src/qml/Footer.qml:86
 msgctxt "@info:tooltip"
 msgid "Play next file"
-msgstr "Toista seuraava tiedosto"
+msgstr "Redă fișierul următor"
 
 #: src/qml/Footer.qml:102
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
-msgstr "Jäljellä: %1"
+msgstr "Rămas: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr "Valitse väri"
+msgstr "Alege o culoare"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:49
 msgctxt "@action:inmenu"
 msgid "Recent Files"
-msgstr "Viimeisimmät tiedostot"
+msgstr "Fișiere recente"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:63
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
 #: src/qml/Menus/SubtitlesMenu.qml:27
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
-msgstr "Toissijainen tekstitys"
+msgstr "Subtitre secundare"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:84
 msgctxt "@action:inmenu"
 msgid "&More"
-msgstr "&Lisää"
+msgstr "&Mai mult"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:102
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
-msgstr "Ensisijainen tekstitys"
+msgstr "Subtitre primare"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:114
 msgctxt "@title:menu"
 msgid "&Audio Track"
-msgstr "&Ääniraita"
+msgstr "Pistă &audio"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -750,63 +742,61 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
-"Ohjelmia <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> tai <a href="
-"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ei löytynyt."
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:28
 msgctxt "@action:intoolbar"
 msgid "Help"
-msgstr "Ohje"
+msgstr "Ajutor"
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:31
 msgctxt "@action:inmenu"
 msgid "Haruna help window (english only)"
-msgstr "Harunan ohjeikkuna (vain englanniksi)"
+msgstr ""
 
 #: src/qml/Haruna/Components/SettingsBasePage.qml:36
 msgctxt "@action:inmenu"
 msgid "Haruna handbook"
-msgstr "Harunan käsikirja"
+msgstr "Manualul Haruna"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
-msgstr "Lataa tekstitykset tiedostosta"
+msgstr "Încarcă subtitre din"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
 msgid "Confirm deletion"
-msgstr "Vahvista poistaminen"
+msgstr "Confirmă ștergerea"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:117
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
-msgstr "Poista tämä kansio luettelosta"
+msgstr "Șterge acest dosar din listă"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:133
 msgctxt "@info:tooltip"
 msgid "Save changes"
-msgstr "Tallenna muutokset"
+msgstr "Salvează modificările"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:155
 msgctxt "@action:button"
 msgid "Add new folder"
-msgstr "Lisää uusi kansio"
+msgstr "Adaugă dosar nou"
 
 #: src/qml/Header.qml:64
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
-msgstr "Tekstitykset"
+msgstr "Subtitre"
 
 #: src/qml/Header.qml:82
 msgctxt "@action:intoolbar"
 msgid "Audio"
-msgstr "Ääni"
+msgstr "Audio"
 
 #: src/qml/HProgressBar.qml:238
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
-msgstr "Ohita luvut"
+msgstr ""
 
 #: src/qml/HProgressBar.qml:246
 msgctxt "@info:tooltip"
@@ -814,8 +804,6 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 msgstr ""
-"Ohita automaattisesti tiettyjä sanoja tai merkkejä sisältävät luvut.\n"
-"”Toisto”-asetuksista löytyy lisätietoa"
 
 #: src/qml/main.qml:26
 msgctxt "@title:window"
@@ -826,346 +814,345 @@ msgstr "Haruna"
 #: src/qml/Settings/VideoSettings.qml:71
 msgctxt "@title:window"
 msgid "Select file"
-msgstr "Valitse tiedosto"
+msgstr "Alege fișier"
 
 #: src/qml/main.qml:253
 msgctxt "@title:window"
 msgid "Select subtitles file"
-msgstr "Valitse tekstitystiedosto"
+msgstr "Alege fișier cu subtitre"
 
 #: src/qml/main.qml:271
 msgctxt "@action:button"
 msgid "Open"
-msgstr "Avaa"
+msgstr "Deschide"
 
 #: src/qml/Menus/AudioMenu.qml:16 src/qml/Menus/Global/GlobalAudioMenu.qml:17
 msgctxt "@title:menu"
 msgid "&Audio"
-msgstr "&Ääni"
+msgstr "&Audio"
 
 #: src/qml/Menus/AudioMenu.qml:22
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&Raita"
+msgstr "&Piesă"
 
 #: src/qml/Menus/ContextMenu.qml:17
 msgctxt "@title:menu"
 msgid "Playback speed"
-msgstr "Toistonopeus"
+msgstr "Viteza redării"
 
 #: src/qml/Menus/FileMenu.qml:13 src/qml/Menus/Global/GlobalFileMenu.qml:16
 msgctxt "@title:menu"
 msgid "&File"
-msgstr "&Tiedosto"
+msgstr "&Fișier"
 
 #: src/qml/Menus/FileMenu.qml:22 src/qml/Menus/Global/GlobalFileMenu.qml:39
 msgctxt "@title:menu"
 msgid "Recent Files"
-msgstr "Viimeisimmät tiedostot"
+msgstr "Fișiere recente"
 
 #: src/qml/Menus/FileMenu.qml:39
 msgctxt "@action:inmenu"
 msgid "Clear List"
-msgstr "Tyhjennä luettelo"
+msgstr "Golește lista"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Help"
-msgstr "O&hje"
+msgstr "&Ajutor"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Playback"
-msgstr "T&oisto"
+msgstr "&Redare"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
 msgctxt "@title:menu"
 msgid "Seek"
-msgstr "Hyppää"
+msgstr "Derulează"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Settings"
-msgstr "&Asetukset"
+msgstr "&Configurări"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
 #: src/qml/Menus/SettingsMenu.qml:18
 msgctxt "@action:inmenu"
 msgid "General"
-msgstr "Perusasetukset"
+msgstr "Generale"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
 #: src/qml/Menus/SettingsMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Playback"
-msgstr "Toisto"
+msgstr "Redare"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
 #: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
-msgstr "Video"
+msgstr "Imagine"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
 #: src/qml/Menus/SettingsMenu.qml:42
 msgctxt "@action:inmenu"
 msgid "Audio"
-msgstr "Ääni"
+msgstr "Sunet"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
 #: src/qml/Menus/SettingsMenu.qml:50
 msgctxt "@action:inmenu"
 msgid "Subtitles"
-msgstr "Tekstitykset"
+msgstr "Subtitre"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
 #: src/qml/Menus/SettingsMenu.qml:58
 msgctxt "@action:inmenu"
 msgid "Playlist"
-msgstr "Soittolista"
+msgstr "Listă de redare"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
 #: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
-msgstr "Hiiri"
+msgstr "Maus"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:74
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
-msgstr "Pikanäppäimet"
+msgstr "Scurtături"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
 #: src/qml/Menus/SettingsMenu.qml:82
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
-msgstr "Mukautetut komennot"
+msgstr "Comenzi personalizate"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
 #: src/qml/Menus/SettingsMenu.qml:90
 msgctxt "@action:inmenu"
 msgid "Debug"
-msgstr "Virheenpaikannus"
+msgstr "Depanare"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
 #: src/qml/Menus/SettingsMenu.qml:98
 msgctxt "@action:inmenu"
 msgid "About"
-msgstr "Tietoa"
+msgstr "Despre"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:17
 #: src/qml/Menus/SubtitlesMenu.qml:16
 msgctxt "@title:menu"
 msgid "&Subtitles"
-msgstr "T&ekstitys"
+msgstr "&Subtitre"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Video"
-msgstr "&Video"
+msgstr "&Imagine"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
 msgctxt "@title:menu"
 msgid "Adjustments"
-msgstr "Säädöt"
+msgstr "Ajustări"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
 msgctxt "@title:menu"
 msgid "&View"
-msgstr "&Näkymä"
+msgstr "&Vizualizare"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
-msgstr "Piilota valikkorivi"
+msgstr "Ascunde bara de meniu"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
-msgstr "Näytä valikkorivi"
+msgstr "Arată bara de meniu"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
-msgstr "Piilota työkalurivi"
+msgstr "Ascunde bara de unelte"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
-msgstr "Näytä työkalurivi"
+msgstr "Arată bara de unelte"
 
 #: src/qml/MpvVideo.qml:28
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
-msgstr "Äänenvoimakkuus: %1"
+msgstr "Volum: %1"
 
 #: src/qml/PlayList.qml:86
 msgctxt "@action:button"
 msgid "Add"
-msgstr "Lisää"
+msgstr "Adaugă"
 
 #: src/qml/PlayList.qml:98
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "Avaa soittolista"
+msgstr "Deschide listă"
 
 #: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr "Lisää…"
+msgstr "Adaugă…"
 
 #: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "File"
-msgstr "Tiedosto"
+msgstr "Fișier"
 
 #: src/qml/PlayList.qml:118
 msgctxt "@action:button"
 msgid "Url"
-msgstr "Verkko-osoite"
+msgstr "URL"
 
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Sort"
-msgstr "Lajittele"
+msgstr "Sortează"
 
 #: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr "Nimi nousevasti"
+msgstr ""
 
 #: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr "Nimi laskevasti"
+msgstr ""
 
 #: src/qml/PlayList.qml:145
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr "Kesto nousevasti"
+msgstr ""
 
 #: src/qml/PlayList.qml:151
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "Kesto laskevasti"
+msgstr ""
 
 #: src/qml/PlayList.qml:158
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Tyhjennä"
+msgstr "Șterge"
 
 #: src/qml/PlayList.qml:166
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "Tallenna nimellä"
+msgstr "Salvează ca"
 
 #: src/qml/PlayList.qml:224
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr "Avaa yläkansio"
+msgstr "Deschide dosarul conținător"
 
 #: src/qml/PlayList.qml:230
 msgctxt "@action:inmenu"
 msgid "Copy file name"
-msgstr "Kopioi tiedostonimi"
+msgstr "Copiază denumirea fișierului"
 
 #: src/qml/PlayList.qml:234
 msgctxt "@action:inmenu"
 msgid "Copy file path"
-msgstr "Kopioi tiedoston sijainti"
+msgstr "Copiază calea fișierului"
 
 #: src/qml/PlayList.qml:239
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Poista soittolistasta"
+msgstr "Elimină din listă"
 
 #: src/qml/PlayList.qml:245
 msgctxt "@action:inmenu"
 msgid "Rename file"
-msgstr "Muuta tiedoston nimeä"
+msgstr "Redenumește fișierul"
 
-# *** TARKISTA: vai onko yhdyssana, ”roskakoritiedosto"?
 #: src/qml/PlayList.qml:251
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr "Vie tiedosto roskakoriin"
+msgstr "Mută la gunoi"
 
 #: src/qml/Settings/AudioSettings.qml:28
 #: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:textbox"
 msgid "Preferred language"
-msgstr "Suosittu kieli"
+msgstr "Limbă preferată"
 
 #: src/qml/Settings/AudioSettings.qml:36
 #: src/qml/Settings/SubtitlesSettings.qml:43
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "fin, eng jne."
+msgstr "rom, eng, etc."
 
 #: src/qml/Settings/AudioSettings.qml:55
 #: src/qml/Settings/SubtitlesSettings.qml:62
 msgctxt "@label:spinbox"
 msgid "Preferred track"
-msgstr "Suosittu raita"
+msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:78
 msgctxt "@label:spinbox"
 msgid "Volume step"
-msgstr "Äänenvoimakkuusaskel"
+msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:40
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr "Ei vielä mukautettuja komentoja"
+msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:42
 msgctxt "@action:button"
 msgid "&Add command"
-msgstr "L&isää komento"
+msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:75
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
-msgstr "Älä aseta seuraavassa käynnistyksessä"
+msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:149
 msgctxt "@action:intoolbar"
 msgid "&Add"
-msgstr "&Lisää"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:27
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Asetuskansio"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:39
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Avaa asetuskansio"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:51
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Asetustiedosto"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:63
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Avaa asetustiedosto"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:75
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Mukautettujen komentojen asetustiedosto"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:87
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Avaa mukautettujen komentojen asetustiedosto"
+msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:99
 msgctxt "@info:usagetip"
@@ -1173,94 +1160,91 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
-"Jos kentät ovat tyhjiä, asetustiedosto tai -kansio puuttuu (esim. "
-"käytettäessä oletusasetuksia)."
 
 #: src/qml/Settings/DebugSettings.qml:107
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr "Käytä mpv-lokia"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
 msgid "Command"
-msgstr "Komento"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:50
 msgctxt "placeholder text"
 msgid "add volume +10"
-msgstr "lisää äänenvoimakkuutta +10"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:56
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr "Ruutuviesti"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:65
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
-msgstr "Tiedostonimi: ${tiedostonimi}"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:70
 msgctxt "@label"
 msgid "Type"
-msgstr "Tyyppi"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
-msgstr "Pikanäppäin"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:98
 msgctxt "@option:radio"
 msgid "Run at startup"
-msgstr "Suorita käynnistettäessä"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:108
 msgctxt "@action:intoolbar"
 msgid "Delete"
-msgstr "Poista"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:123
 msgctxt "@action:intoolbar"
 msgid "Cancel"
-msgstr "Peru"
+msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:130
 msgctxt "@action:intoolbar"
 msgid "&Save"
-msgstr "&Tallenna"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:29
 msgctxt "@label:spinbox"
 msgid "Osd font size"
-msgstr "Ruutunäytön fonttikoko"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:55
 msgctxt "@label:textbox"
 msgid "File dialog location"
-msgstr "Tiedostonvalintaikkunan sijainti"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:74
 msgctxt "@info:tooltip"
 msgid "If empty the file dialog will remember the last opened location."
-msgstr "Jos on tyhjä, tiedostonvalintaikkuna muistaa viimeisimmän sijaintinsa."
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:84
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
-msgstr "Viimeaikaisia tiedostoja enintään"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:101
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr ""
-"Montako viimeaikaista tiedostoa talletetaan. Poista käytöstä arvolla 0."
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr "Salli vain yksi ilmentymä"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:125
 msgctxt "@info:tooltip"
@@ -1269,53 +1253,51 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
-"Yritys avata uusi Haruna-ilmentymä ei johda mihinkään.\n"
-"Yritys avata uusi tiedosto Harunaan avaa tiedoston nykyisen ilmentymään."
 
 #: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Avaa tiedosto soittolistalle"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:155
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr "Tiedosto lisätään soittolistan loppuun"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:164
 msgctxt "@title"
 msgid "Interface"
-msgstr "Käyttöliittymä"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:170
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr "Esikatsele pienoiskuvaa"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr "Näytä pienoiskuvaesikatselu"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr "Näytä tarkka esikatselu"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr "Tarkan esikatselun luominen on hidasta"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Window"
-msgstr "Ikkuna"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:235
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr "Sovita videon kokoon"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:251
 msgctxt "@info:tooltip"
@@ -1323,13 +1305,11 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
-"Enimmäiskokoa ei rajoiteta, vaan se jätetään käyttöjärjestelmälle."
 
 #: src/qml/Settings/GeneralSettings.qml:265
 msgctxt "@option:check"
 msgid "Remember window size and position"
-msgstr "Muista ikkunan koko ja sijainti"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:280
 msgctxt "@info:tooltip"
@@ -1340,41 +1320,37 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
-"Ikkunan kokoa ja sijaintia muutettaessa uudet arvot tallennetaan ja niitä "
-"käytetään uudelleen uutta sovellusikkunaa avattaessa.\n"
-"\n"
-"Etusijan ottaa asetus ”Sovita videon kokoon”.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Show menubar"
-msgstr "Näytä valikkorivi"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:306
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
-msgstr "Näytä työkalurivi"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@option:check"
 msgid "Show chapter markers"
-msgstr "Näytä lukumerkit"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:326
 msgctxt "@label:listbox"
 msgid "Color scheme"
-msgstr "Väriteema"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:368
 msgctxt "@label:listbox"
 msgid "GUI style"
-msgstr "Käyttöliittymätyyli"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:419
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
-msgstr "Käytä Breeze-kuvaketeemaa"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:427
 msgctxt "@info:tooltip"
@@ -1382,33 +1358,31 @@ msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
 msgstr ""
-"Asettaa kuvaketeemaksi Breezen.\n"
-"Vaatii uudelleenkäynnistyksen."
 
 #: src/qml/Settings/MouseSettings.qml:82
 msgctxt "@label"
 msgid "No action set"
-msgstr "Toimintoa ei ole asetettu"
+msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:96
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "Tyhjennä toiminto"
+msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:133
 msgctxt "@title"
 msgid "Double click to set action"
-msgstr "Aseta toiminto kaksoisnapsauttamalla"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:30
 msgctxt "@label:spinbox"
 msgid "Seek small step"
-msgstr "Pieni kelausaskel"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:48
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
-msgstr "Keskikokoinen kelausaskel"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:74
 msgctxt "@info:tooltip"
@@ -1416,18 +1390,16 @@ msgid ""
 "This is also used for mouse wheel seeking, when mouse is over the progress "
 "bar"
 msgstr ""
-"Tätä käytetään myös hiiren rullalla kelaamiseen osoittimen ollessa "
-"etenemispalkin yllä"
 
 #: src/qml/Settings/PlaybackSettings.qml:85
 msgctxt "@label:spinbox"
 msgid "Seek big step"
-msgstr "Suuri kelausaskel"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@option:check"
 msgid "Pause on minimize"
-msgstr "Keskeytä pienennettäessä"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:114
 msgctxt "@info:tooltip"
@@ -1435,122 +1407,119 @@ msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
-"Keskeyttää toiston ikkunaa pienennettäessä; toisto jatkuu palautettaessa."
 
 #: src/qml/Settings/PlaybackSettings.qml:119
 msgctxt "@label:spinbox"
 msgid "Resume playback"
-msgstr "Jatka toistoa"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:126
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Avaa käynnistettäessä viimeksi toistettu tiedosto"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:139
 msgctxt "@option:check"
 msgid "Seek to last playback position"
-msgstr "Hyppää viimeisimpään toistokohtaan"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:147
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
-msgstr "Aiemmin toistettua tiedostoa avattaessa siirry kohtaan, johon jäätiin."
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:156
 msgctxt "@option:check"
 msgid "Start playing"
-msgstr "Käynnistä toisto"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:165
 msgctxt "@info:tooltip"
 msgid ""
 "When opening a file that was played before, start playing it automatically."
-msgstr "Aiemmin toistettua tiedostoa avattaessa aloita toisto automaattisesti."
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:170
 msgctxt "@label"
 msgid "Hardware decoding"
-msgstr "Laitteistopurku"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:176
 #: src/qml/Settings/PlaybackSettings.qml:289
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr "Käytössä"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:176
 #: src/qml/Settings/PlaybackSettings.qml:289
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr "Ei käytössä"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:221
 msgctxt "@label:spinbox"
 msgid "Remember time position"
-msgstr "Muista aikasijainti"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:241
 msgctxt "@info"
 msgid "Disabled"
-msgstr "Ei käytössä"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:243
 msgctxt "@info"
 msgid "For all files"
-msgstr "Kaikille tiedostoille"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:246
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
-msgstr[0] "Yli %1 minuutin tiedostoille"
-msgstr[1] "Yli %1 minuutin tiedostoille"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/Settings/PlaybackSettings.qml:274
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] "Tallenna sijainti %1 s välein"
-msgstr[1] "Tallenna sijainti %1 s välein"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/Settings/PlaybackSettings.qml:283
 msgctxt "@label"
 msgid "Skip chapters"
-msgstr "Ohita luvut"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:300
 msgctxt "@option:check"
 msgid "Show osd message on skip"
-msgstr "Näytä ohitettaessa ruutuviesti"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@label:textbox"
 msgid "Skip words"
-msgstr "Ohita sanat"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:319
-#, fuzzy
-#| msgid "Skipped chapter: %1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
-msgstr "Ohitettiin luku: %1"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "@info:tooltip"
 msgid "Skip chapters containing these words. Comma separated list."
-msgstr "Ohita seuraavia sanoja sisältävät luvut. Pilkuin eroteltu luettelo."
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@title"
 msgid "Youtube-dl"
-msgstr "Youtube-dl"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:352
 msgid "Format selection"
-msgstr "Tiedostomuodon valinta"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "@info:tooltip"
@@ -1558,28 +1527,26 @@ msgid ""
 "Selects the best video with a height lower than or equal to the selected "
 "value."
 msgstr ""
-"Valitsee parhaan videon, jonka korkeus on sama tai pienempi kuin asetettu "
-"arvo."
 
 #: src/qml/Settings/PlaybackSettings.qml:418
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
-msgstr "parasvideo+parasääni/paras"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:27
 msgctxt "@label:listbox"
 msgid "Position"
-msgstr "Sijainti"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:52
 msgctxt "@label:listbox"
 msgid "Playlist style"
-msgstr "Toistolistan tyyli"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:90
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr "Videon yllä"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@info:tooltip"
@@ -1587,44 +1554,41 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
-"Jos on valittu, toistolista näkyy videon yllä,\n"
-"muuten videon kokoa muutetaan"
 
 #: src/qml/Settings/PlaylistSettings.qml:104
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
-msgstr "Näytä tiedostonimen sijaan tietovälineen otsikko"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
-msgstr "Lataa saman kansion videot automaattisesti"
+msgstr ""
 
-# *** TARKISTA: Sekä play että repeat = toista, aiheuttaako ongelmia?
 #: src/qml/Settings/PlaylistSettings.qml:124
 msgctxt "@option:check"
 msgid "Repeat"
-msgstr "Toista"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:134
 msgctxt "@option:check"
 msgid "Show row number"
-msgstr "Näytä rivinumero"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:144
 msgctxt "@option:check"
 msgid "Toggle with mouse"
-msgstr "Vaihda hiirellä"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:153
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
-msgstr "Kasvata koko näytöllä fonttikokoa"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr "Muista viimeisin soittolistan tila"
+msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:173
 msgctxt "@info:tooltip"
@@ -1632,73 +1596,71 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
-"Jos valittu, soittolistan tila (näkyvillä/piilossa) muistetaan "
-"käynnistyskertojen välillä"
 
 #: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
 msgid "Settings"
-msgstr "Asetukset"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:55
 msgctxt "@action"
 msgid "General"
-msgstr "Perusasetukset"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:63
 msgctxt "@action"
 msgid "Playback"
-msgstr "Toisto"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:79
 msgctxt "@action"
 msgid "Audio"
-msgstr "Ääni"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "Subtitles"
-msgstr "Tekstitykset"
+msgstr "Subtitre"
 
 #: src/qml/Settings/SettingsWindow.qml:103
 msgctxt "@action"
 msgid "Mouse"
-msgstr "Hiiri"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:111
 msgctxt "@action"
 msgid "Shortcuts"
-msgstr "Pikanäppäimet"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:119
 msgctxt "@action"
 msgid "Custom commands"
-msgstr "Mukautetut komennot"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Debug"
-msgstr "Virheenpaikannus"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:135
 msgctxt "@action"
 msgid "About"
-msgstr "Tietoa"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:183
 msgctxt "@title:window"
 msgid "Help"
-msgstr "Ohje"
+msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:85
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr "Salli tekstitys mustiin reunoihin"
+msgstr "Permite subtitre pe conturul negru"
 
 #: src/qml/Settings/SubtitlesSettings.qml:94
 msgctxt "@info:tooltip"
@@ -1706,86 +1668,84 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
-"Jos valittu, tekstitys hahmonnetaan videon ulkopuolelle, mustiin reunoihin. "
-"Ei ehkä toimi kaikilla .ass-tekstityksillä."
 
 #: src/qml/Settings/SubtitlesSettings.qml:99
 msgctxt "@title"
 msgid "Styling"
-msgstr "Tyyli"
+msgstr "Stilizare"
 
 #: src/qml/Settings/SubtitlesSettings.qml:105
 msgctxt "@label:listbox"
 msgid "Font family"
-msgstr "Fonttiperhe"
+msgstr "Familie de fonturi"
 
 #: src/qml/Settings/SubtitlesSettings.qml:137
 msgctxt "@label:spinbox"
 msgid "Font size"
-msgstr "Fonttikoko"
+msgstr "Dimensiune font"
 
 #: src/qml/Settings/SubtitlesSettings.qml:153
 msgctxt "@label"
 msgid "Font style"
-msgstr "Fonttityyli"
+msgstr "Stil font"
 
 #: src/qml/Settings/SubtitlesSettings.qml:158
 msgctxt "@option:check"
 msgid "Bold"
-msgstr "Lihavointi"
+msgstr "Aldin"
 
 #: src/qml/Settings/SubtitlesSettings.qml:170
 msgctxt "@option:check"
 msgid "Italic"
-msgstr "Kursiivi"
+msgstr "Cursiv"
 
 #: src/qml/Settings/SubtitlesSettings.qml:180
 msgctxt "@label:textbox"
 msgid "Font color"
-msgstr "Fonttiväri"
+msgstr "Culoare font"
 
 #: src/qml/Settings/SubtitlesSettings.qml:231
 #: src/qml/Settings/SubtitlesSettings.qml:287
 #: src/qml/Settings/SubtitlesSettings.qml:364
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr "Aseta oletusarvo"
+msgstr "Stabilește valoarea implicită"
 
 #: src/qml/Settings/SubtitlesSettings.qml:237
 msgctxt "@label:textbox"
 msgid "Shadow color"
-msgstr "Varjoväri"
+msgstr "Culoare umbră"
 
 #: src/qml/Settings/SubtitlesSettings.qml:293
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
-msgstr "Varjon siirtymä"
+msgstr "Decalaj umbră"
 
 #: src/qml/Settings/SubtitlesSettings.qml:309
 #: src/qml/Settings/SubtitlesSettings.qml:386
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
-msgstr "Poista käytöstä arvolla 0."
+msgstr "Stabiliți la 0 (zero) pentru a dezactiva."
 
 #: src/qml/Settings/SubtitlesSettings.qml:314
 msgctxt "@label:textbox"
 msgid "Border color"
-msgstr "Reunaväri"
+msgstr "Culoare contur"
 
 #: src/qml/Settings/SubtitlesSettings.qml:370
 msgctxt "@label:spinbox"
 msgid "Border width"
-msgstr "Reunan paksuus"
+msgstr "Lățime contur"
 
 #: src/qml/Settings/VideoSettings.qml:30
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr "Oletuskansi"
+msgstr "Copertă implicită"
 
 #: src/qml/Settings/VideoSettings.qml:39
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr "kuvan sijainti"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:51
 msgctxt "@info:tooltip"
@@ -1793,208 +1753,48 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
-"Käytetään videoraidattomiin musiikkitiedostoihin: upotettu kuva tai "
-"kansikuva samassa kansiossa kuin toistettu tiedosto."
 
 #: src/qml/Settings/VideoSettings.qml:82
 msgctxt "@title"
 msgid "Screenshots"
-msgstr "Ruutukaappaukset"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Format"
-msgstr "Muoto"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:132
 msgctxt "@label:textbox"
 msgid "Template"
-msgstr "Mallipohja"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:158
 msgctxt "@title"
 msgid "Image adjustments"
-msgstr "Kuvasäädöt"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:168
 msgctxt "@label:slider"
 msgid "Contrast"
-msgstr "Kontrasti"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:187
 msgctxt "@label:slider"
 msgid "Brightness"
-msgstr "Kirkkaus"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:206
 msgctxt "@label:slider"
 msgid "Gamma"
-msgstr "Gamma"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:225
 msgctxt "@label:slider"
 msgid "Saturation"
-msgstr "Värikylläisyys"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:241
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
-msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
-
-#~ msgctxt "@title:menu"
-#~ msgid "&Primary Track"
-#~ msgstr "Ensisijainen &raita"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "Avaa verkko-osoite"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "Toista kohde vierittämällä"
-
-#~ msgctxt "@info"
-#~ msgid "Playlist is empty"
-#~ msgstr "Toistolista on tyhjä"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Do not use spaces."
-#~ msgstr "Älä käytä välilyöntejä."
-
-#~ msgctxt "@action"
-#~ msgid "Video pan y up"
-#~ msgstr "Panoroi videota ylemmäs"
-
-#~ msgctxt "@action"
-#~ msgid "Video pan y down"
-#~ msgstr "Panoroi videota alemmas"
-
-#, fuzzy
-#~| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-#~ msgctxt "@info"
-#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-#~ msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a>:ää ei löytynyt."
-
-#, fuzzy
-#~| msgid "File"
-#~ msgctxt "@action:inmenu"
-#~ msgid "File"
-#~ msgstr "Tiedosto"
-
-#, fuzzy
-#~| msgid "Folder"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Folder"
-#~ msgstr "Kansio"
-
-#, fuzzy
-#~| msgid "Playing video."
-#~ msgctxt "@info reason for blocking sleep and screen slocking"
-#~ msgid "Playing video"
-#~ msgstr "Toistetaan videota."
-
-#, fuzzy
-#~| msgid "Add new folder"
-#~ msgctxt "@action:button"
-#~ msgid "Add file"
-#~ msgstr "Lisää uusi kansio"
-
-#, fuzzy
-#~| msgid "Row height"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "Rivin korkeus"
-
-#~ msgid "Toggle Playlist"
-#~ msgstr "Näytä tai piilota soittolista"
-
-#~ msgid "Leave empty for default value: <i>bestvideo+bestaudio/best</i>"
-#~ msgstr ""
-#~ "Käytä oletusarvoa jättämällä tyhjäksi: <i>parasvideo+parasääni/paras</i>"
-
-#~ msgid "Subtitle color"
-#~ msgstr "Tekstitysväri"
-
-#~ msgid "Configure shortcuts"
-#~ msgstr "Pikanäppäinasetukset"
-
-#~ msgid "Move one frame forward, then pause"
-#~ msgstr "Siirry kuvan verran eteenpäin ja tauota"
-
-#~ msgid "Move one frame backward, then pause"
-#~ msgstr "Siirry kuvan verran taaksepäin ja tauota"
-
-# *** TARKISTA: Täysi arvaus. ”Audio up/down” voi olla jotain muutakin.
-#~ msgid "Cycle Audio Up"
-#~ msgstr "Lisää äänenvoimakkuutta"
-
-#~ msgid "Cycle Subtitle Up"
-#~ msgstr "Nosta tekstitystä"
-
-#~ msgid "Cycle Subtitle Down"
-#~ msgstr "Laske tekstitystä"
-
-#~ msgid "Move Subtitle Up"
-#~ msgstr "Nosta tekstitystä ylemmäs"
-
-#~ msgid "Move Subtitle Down"
-#~ msgstr "Laske tekstitystä alemmas"
-
-#~ msgid "Unmute"
-#~ msgstr "Palauta äänet"
-
-#~ msgid "Video pan x: %1"
-#~ msgstr "Videon x-panorointi: %1"
-
-#~ msgid "Video pan y: %1"
-#~ msgstr "Videon y-panorointi: %1"
-
-#~ msgid "Type to filter..."
-#~ msgstr "Suodata kirjoittamalla…"
-
-#~ msgid "Startup"
-#~ msgstr "Käynnistys"
-
-#~ msgid "For files longer than %1 minutes"
-#~ msgstr "Yli %1 minuutin tiedostoille"
-
-#, fuzzy
-#~| msgid "Show Menubar"
-#~ msgid "Show header"
-#~ msgstr "Näytä valikkorivi"
-
-#, fuzzy
-#~| msgid "Volume Up"
-#~ msgid "Volume"
-#~ msgstr "Lisää äänenvoimakkuutta"
-
-#, fuzzy
-#~| msgid "File dialog location"
-#~ msgid "File default dialog location"
-#~ msgstr "Tiedostonvalintaikkunan sijainti"
-
-#, fuzzy
-#~| msgid "File dialog location"
-#~ msgid "File dialog last location"
-#~ msgstr "Tiedostonvalintaikkunan sijainti"
-
-#, fuzzy
-#~| msgid "Skip chapters"
-#~ msgid "Show osd on skip chapters"
-#~ msgstr "Ohita luvut"
-
-#, fuzzy
-#~| msgid "Format selection"
-#~ msgid "Ytdl format selection"
-#~ msgstr "Tiedostomuodon valinta"
-
-#, fuzzy
-#~| msgid "Screenshot"
-#~ msgid "Screenshot format"
-#~ msgstr "Ruutukaappaus"
-
-#~ msgid "Haruna Settings"
-#~ msgstr "Harunan asetukset"
-
-#~ msgid "Show Menu Bar"
-#~ msgstr "Näytä valikkorivi"
+msgstr ""
