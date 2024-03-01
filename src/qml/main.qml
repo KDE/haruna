@@ -208,7 +208,7 @@ Kirigami.ApplicationWindow {
         }
         function onOpenUrl(url) {
             if (GeneralSettings.appendVideoToSingleInstance) {
-                mpv.playlistModel.appendItem(url.toString())
+                mpv.playlistModel.addItem(url.toString(), PlaylistModel.Append)
             } else {
                 openFile(url)
             }
