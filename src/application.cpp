@@ -6,9 +6,7 @@
 
 #include "application.h"
 
-#include "actionsmodel.h"
 #include "audiosettings.h"
-#include "customcommandsmodel.h"
 #include "generalsettings.h"
 #include "global.h"
 #include "haruna-version.h"
@@ -18,12 +16,8 @@
 #include "mpvpreview.h"
 #include "mpvproperties.h"
 #include "playbacksettings.h"
-#include "playlistmodel.h"
 #include "playlistsettings.h"
-#include "recentfilesmodel.h"
-#include "subtitlesfoldersmodel.h"
 #include "subtitlessettings.h"
-#include "tracksmodel.h"
 #include "videosettings.h"
 #include "worker.h"
 
