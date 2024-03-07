@@ -51,7 +51,7 @@ Q_SIGNALS:
 private:
     double m_position{0.0};
     QString m_file;
-    bool m_accuratePreview;
+    bool m_accuratePreview{false};
     bool m_isLocalFile{false};
     bool m_isReady{false};
 };
