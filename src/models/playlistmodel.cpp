@@ -364,14 +364,15 @@ bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
 
 void PlaylistModel::setPlayingItem(int i)
 {
-    if (i == -1) {
+    if (i < -1 || i >= m_playlist.size()) {
         return;
     }
 
-    int previousItem = m_playingItem;
+    int previousItem{m_playingItem};
     m_playingItem = i;
     Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
+
     Q_EMIT playingItemChanged();
 
     GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
