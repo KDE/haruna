@@ -16,7 +16,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
 {
     connect(this, &QAbstractListModel::rowsMoved, this, [=]() {
         for (int i = 0; i < m_customCommands.size(); ++i) {
-            auto configGroup = m_customCommandsConfig->group(m_customCommands[i]->commandId);
+            auto configGroup = m_customCommandsConfig->group(m_customCommands[i].commandId);
             configGroup.writeEntry("Order", i);
             configGroup.sync();
         }
@@ -36,21 +36,21 @@ QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    Command *command = m_customCommands[index.row()];
+    Command command = m_customCommands[index.row()];
 
     switch (role) {
     case CommandIdRole:
-        return QVariant(command->commandId);
+        return QVariant(command.commandId);
     case CommandRole:
-        return QVariant(command->command);
+        return QVariant(command.command);
     case OsdMessageRole:
-        return QVariant(command->osdMessage);
+        return QVariant(command.osdMessage);
     case TypeRole:
-        return QVariant(command->type);
+        return QVariant(command.type);
     case ShortcutRole:
-        return QVariant(command->shortcut);
+        return QVariant(command.shortcut);
     case SetOnStartupRole:
-        return QVariant(command->setOnStartup);
+        return QVariant(command.setOnStartup);
     }
 
     return QVariant();
@@ -72,8 +72,8 @@ void CustomCommandsModel::init()
 {
     connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [=](const QString &name, const QString &shortcut) {
         for (int i{0}; i < m_customCommands.count(); ++i) {
-            if (m_customCommands[i]->commandId == name) {
-                m_customCommands[i]->shortcut = shortcut;
+            if (m_customCommands[i].commandId == name) {
+                m_customCommands[i].shortcut = shortcut;
                 Q_EMIT dataChanged(index(i, 0), index(i, 0));
                 return;
             }
@@ -87,28 +87,28 @@ void CustomCommandsModel::init()
     beginInsertRows(QModelIndex(), 0, groups.size());
     for (const QString &groupName : std::as_const(groups)) {
         auto configGroup = m_customCommandsConfig->group(groupName);
-        auto c = new Command();
-        c->commandId = groupName;
-        c->command = configGroup.readEntry("Command", QString());
-        c->osdMessage = configGroup.readEntry("OsdMessage", QString());
-        c->type = configGroup.readEntry("Type", QString());
-        c->shortcut = appActionsModel()->getShortcut(c->commandId, QString());
-        c->order = configGroup.readEntry("Order", 0);
-        c->setOnStartup = configGroup.readEntry("SetOnStartup", true);
+        Command c;
+        c.commandId = groupName;
+        c.command = configGroup.readEntry("Command", QString());
+        c.osdMessage = configGroup.readEntry("OsdMessage", QString());
+        c.type = configGroup.readEntry("Type", QString());
+        c.shortcut = appActionsModel()->getShortcut(c.commandId, QString());
+        c.order = configGroup.readEntry("Order", 0);
+        c.setOnStartup = configGroup.readEntry("SetOnStartup", true);
         m_customCommands << c;
-        if (c->type == QStringLiteral("shortcut")) {
+        if (c.type == QStringLiteral("shortcut")) {
             Action action;
-            action.name = c->commandId;
-            action.text = c->command;
-            action.description = c->osdMessage;
-            action.shortcut = c->shortcut;
+            action.name = c.commandId;
+            action.text = c.command;
+            action.description = c.osdMessage;
+            action.shortcut = c.shortcut;
             action.type = QStringLiteral("CustomAction");
             appActionsModel()->appendCustomAction(action);
         }
     }
 
-    std::sort(m_customCommands.begin(), m_customCommands.end(), [=](Command *c1, Command *c2) {
-        return c1->order < c2->order;
+    std::sort(m_customCommands.begin(), m_customCommands.end(), [=](Command c1, Command c2) {
+        return c1.order < c2.order;
     });
 
     endInsertRows();
@@ -121,7 +121,7 @@ void CustomCommandsModel::moveRows(int oldIndex, int newIndex)
     } else {
         beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex);
     }
-    Command *c = m_customCommands.takeAt(oldIndex);
+    Command c = m_customCommands.takeAt(oldIndex);
     m_customCommands.insert(newIndex, c);
     endMoveRows();
 }
@@ -144,18 +144,18 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
 
     beginInsertRows(QModelIndex(), rowCount(), rowCount());
     auto configGroup = m_customCommandsConfig->group(groupName);
-    auto c = new Command();
-    c->commandId = groupName;
-    c->command = configGroup.readEntry("Command", QString());
-    c->osdMessage = configGroup.readEntry("OsdMessage", QString()), c->type = configGroup.readEntry("Type", QString());
+    Command c;
+    c.commandId = groupName;
+    c.command = configGroup.readEntry("Command", QString());
+    c.osdMessage = configGroup.readEntry("OsdMessage", QString()), c.type = configGroup.readEntry("Type", QString());
     m_customCommands << c;
     endInsertRows();
 
-    if (c->type == QStringLiteral("shortcut")) {
+    if (c.type == QStringLiteral("shortcut")) {
         Action action;
-        action.name = c->commandId;
-        action.text = c->command;
-        action.description = c->osdMessage;
+        action.name = c.commandId;
+        action.text = c.command;
+        action.description = c.osdMessage;
         action.shortcut = appActionsModel()->getShortcut(action.name, QString());
         action.type = QStringLiteral("CustomAction");
         appActionsModel()->appendCustomAction(action);
@@ -164,20 +164,20 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
 
 void CustomCommandsModel::editCustomCommand(int row, const QString &command, const QString &osdMessage, const QString &type)
 {
-    auto c = m_customCommands[row];
-    c->command = command;
-    c->osdMessage = osdMessage;
-    c->type = type;
+    Command &c = m_customCommands[row];
+    c.command = command;
+    c.osdMessage = osdMessage;
+    c.type = type;
 
-    QString groupName = c->commandId;
+    QString groupName = c.commandId;
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
     m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
     m_customCommandsConfig->sync();
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
-    if (c->type == QStringLiteral("shortcut")) {
-        appActionsModel()->editCustomAction(c->commandId, c->command, c->osdMessage);
+    if (c.type == QStringLiteral("shortcut")) {
+        appActionsModel()->editCustomAction(c.commandId, c.command, c.osdMessage);
     }
 }
 
@@ -187,8 +187,8 @@ void CustomCommandsModel::toggleCustomCommand(const QString &groupName, int row,
     if (setOnStartup == group.readEntry("SetOnStartup", true)) {
         return;
     }
-    auto customCommand = m_customCommands[row];
-    customCommand->setOnStartup = setOnStartup;
+    Command customCommand = m_customCommands[row];
+    customCommand.setOnStartup = setOnStartup;
 
     group.writeEntry("SetOnStartup", setOnStartup);
     m_customCommandsConfig->sync();
