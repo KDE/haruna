@@ -395,11 +395,11 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
-    setPause(false);
+    setPropertyBlocking(MpvProperties::self()->Pause, false);
     setWatchLaterPosition(loadTimePosition());
     if (PlaybackSettings::seekToLastPosition()) {
-        setPause(!PlaybackSettings::playOnResume() && watchLaterPosition() > 0);
-        setProperty(u"start"_qs, QVariant(u"+"_qs + QString::number(m_watchLaterPosition)));
+        setPropertyBlocking(MpvProperties::self()->Pause, !PlaybackSettings::playOnResume() && watchLaterPosition() > 1);
+        setPropertyBlocking(u"start"_qs, QVariant(u"+"_qs + QString::number(m_watchLaterPosition)));
     }
     command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
 
