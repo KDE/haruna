@@ -41,14 +41,15 @@
 
 MpvItem::MpvItem(QQuickItem *parent)
     : MpvAbstractItem(parent)
-    , m_audioTracksModel{new TracksModel}
-    , m_subtitleTracksModel{new TracksModel}
-    , m_playlistModel{new PlaylistModel}
-    , m_playlistProxyModel{new PlaylistProxyModel}
-    , m_chaptersModel{new ChaptersModel}
+    , m_audioTracksModel{std::make_unique<TracksModel>()}
+    , m_subtitleTracksModel{std::make_unique<TracksModel>()}
+    , m_playlistModel{std::make_unique<PlaylistModel>()}
+    , m_playlistProxyModel{std::make_unique<PlaylistProxyModel>()}
+    , m_chaptersModel{std::make_unique<ChaptersModel>()}
     , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(QStringLiteral("/watch-later/"))}
+    , m_saveTimePositionTimer{std::make_unique<QTimer>()}
 {
-    m_playlistProxyModel->setSourceModel(m_playlistModel);
+    m_playlistProxyModel->setSourceModel(m_playlistModel.get());
     Q_EMIT observeProperty(MpvProperties::self()->MediaTitle, MPV_FORMAT_STRING);
     Q_EMIT observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
     Q_EMIT observeProperty(MpvProperties::self()->Remaining, MPV_FORMAT_DOUBLE);
@@ -68,11 +69,11 @@ MpvItem::MpvItem(QQuickItem *parent)
     initProperties();
     setupConnections();
 
-    auto *timer = new QTimer();
-    timer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
-    timer->start();
+    m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
+    m_saveTimePositionTimer->start();
 
-    connect(timer, &QTimer::timeout, this, [=]() {
+    connect(m_saveTimePositionTimer.get(), &QTimer::timeout, this, [=]() {
+        qDebug() << 123;
         if (finishedLoading() && duration() > 0 && !pause()) {
             if (position() < duration() - 10) {
                 saveTimePosition();
@@ -105,6 +106,10 @@ MpvItem::MpvItem(QQuickItem *parent)
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
+}
+
+MpvItem::~MpvItem()
+{
 }
 
 void MpvItem::initProperties()
@@ -215,7 +220,7 @@ void MpvItem::setupConnections()
     connect(this, &MpvItem::chapterChanged,
             this, &MpvItem::onChapterChanged);
 
-    connect(m_playlistModel, &PlaylistModel::playingItemChanged, this, [=]() {
+    connect(m_playlistModel.get(), &PlaylistModel::playingItemChanged, this, [=]() {
         loadFile(m_playlistModel->m_playlist[m_playlistModel->m_playingItem].url.toString());
     });
 
@@ -258,7 +263,7 @@ void MpvItem::setupConnections()
 
 #if defined(Q_OS_UNIX)
     connect(this, &MpvItem::pauseChanged, this, [=]() {
-        static LockManager lockManager(this);
+        static LockManager lockManager;
         if (pause()) {
             lockManager.setInhibitionOff();
         } else {
@@ -589,46 +594,46 @@ QString MpvItem::md5(const QString &str)
 
 PlaylistModel *MpvItem::playlistModel()
 {
-    return m_playlistModel;
+    return m_playlistModel.get();
 }
 
 void MpvItem::setPlaylistModel(PlaylistModel *model)
 {
-    m_playlistModel = model;
+    m_playlistModel.reset(model);
 }
 
 PlaylistProxyModel *MpvItem::playlistProxyModel()
 {
-    return m_playlistProxyModel;
+    return m_playlistProxyModel.get();
 }
 
 void MpvItem::setPlaylistProxyModel(PlaylistProxyModel *model)
 {
-    m_playlistProxyModel = model;
+    m_playlistProxyModel.reset(model);
 }
 
 ChaptersModel *MpvItem::chaptersModel() const
 {
-    return m_chaptersModel;
+    return m_chaptersModel.get();
 }
 
 void MpvItem::setChaptersModel(ChaptersModel *_chaptersModel)
 {
-    if (m_chaptersModel == _chaptersModel) {
+    if (m_chaptersModel.get() == _chaptersModel) {
         return;
     }
-    m_chaptersModel = _chaptersModel;
+    m_chaptersModel.reset(_chaptersModel);
     Q_EMIT chaptersModelChanged();
 }
 
 TracksModel *MpvItem::subtitleTracksModel() const
 {
-    return m_subtitleTracksModel;
+    return m_subtitleTracksModel.get();
 }
 
 TracksModel *MpvItem::audioTracksModel() const
 {
-    return m_audioTracksModel;
+    return m_audioTracksModel.get();
 }
 
 bool MpvItem::isFileReloaded() const

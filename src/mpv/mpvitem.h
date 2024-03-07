@@ -8,6 +8,7 @@
 #define MPVOBJECT_H
 
 #include <MpvAbstractItem>
+#include <memory>
 
 class ChaptersModel;
 class PlaylistModel;
@@ -22,7 +23,7 @@ class MpvItem : public MpvAbstractItem
 
 public:
     explicit MpvItem(QQuickItem *parent = nullptr);
-    ~MpvItem() = default;
+    ~MpvItem();
 
     enum class AsyncIds {
         None,
@@ -207,14 +208,14 @@ private:
     void onChapterChanged();
     QString md5(const QString &str);
 
-    TracksModel *m_audioTracksModel;
-    TracksModel *m_subtitleTracksModel;
+    std::unique_ptr<TracksModel> m_audioTracksModel;
+    std::unique_ptr<TracksModel> m_subtitleTracksModel;
     QList<QVariant> m_subtitleTracks;
     QList<QVariant> m_audioTracks;
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
-    PlaylistModel *m_playlistModel;
-    PlaylistProxyModel *m_playlistProxyModel;
+    std::unique_ptr<PlaylistModel> m_playlistModel;
+    std::unique_ptr<PlaylistProxyModel> m_playlistProxyModel;
 
     double m_position{0.0};
     QString m_formattedPosition;
@@ -239,9 +240,10 @@ private:
     bool m_isFileReloaded{false};
     bool m_isReady{false};
     QUrl m_currentUrl;
-    ChaptersModel *m_chaptersModel;
+    std::unique_ptr<ChaptersModel> m_chaptersModel;
     bool m_finishedLoading{false};
     QString m_watchLaterPath;
+    std::unique_ptr<QTimer> m_saveTimePositionTimer;
 };
 
 #endif // MPVOBJECT_H

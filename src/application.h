@@ -95,7 +95,7 @@ Q_SIGNALS:
 
 private:
     explicit Application();
-    ~Application() = default;
+    ~Application();
 
     Application(const Application &) = delete;
     Application &operator=(const Application &) = delete;
@@ -115,6 +115,7 @@ private:
     KColorSchemeManager *m_schemes{nullptr};
     QString m_systemDefaultStyle;
     QQmlApplicationEngine *m_qmlEngine{nullptr};
+    std::unique_ptr<ApplicationEventFilter> m_appEventFilter;
 };
 
 #endif // APPLICATION_H

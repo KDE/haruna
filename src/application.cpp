@@ -56,13 +56,13 @@ Application::Application()
     , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
     , m_schemes(new KColorSchemeManager(this))
     , m_systemDefaultStyle(m_app->style()->objectName())
+    , m_appEventFilter{std::make_unique<ApplicationEventFilter>()}
 {
     // used to hide playlist when mouse leaves the application
     // while moving between monitors while in fullscreen
-    auto *appEventFilter = new ApplicationEventFilter();
-    m_app->installEventFilter(appEventFilter);
-    QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
-    QObject::connect(appEventFilter, &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
+    m_app->installEventFilter(m_appEventFilter.get());
+    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
+    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
 
     if (GeneralSettings::guiStyle() != QStringLiteral("System")) {
         QApplication::setStyle(GeneralSettings::guiStyle());
@@ -75,6 +75,10 @@ Application::Application()
 
     connect(Global::instance(), &Global::error, this, &Application::error);
     connect(this, &Application::saveWindowGeometryAsync, Worker::instance(), &Worker::saveWindowGeometry, Qt::QueuedConnection);
+}
+
+Application::~Application()
+{
 }
 
 void Application::setupWorkerThread()
