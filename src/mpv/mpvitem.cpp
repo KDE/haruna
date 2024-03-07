@@ -395,6 +395,7 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
+    setPropertyBlocking(MpvProperties::self()->Mute, true);
     setPropertyBlocking(MpvProperties::self()->Pause, false);
     setWatchLaterPosition(loadTimePosition());
     if (PlaybackSettings::seekToLastPosition()) {
@@ -402,6 +403,7 @@ void MpvItem::loadFile(const QString &file)
         setPropertyBlocking(u"start"_qs, QVariant(u"+"_qs + QString::number(m_watchLaterPosition)));
     }
     command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
+    setPropertyBlocking(MpvProperties::self()->Mute, false);
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();
