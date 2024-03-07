@@ -61,7 +61,9 @@ SettingsBasePage {
                 Kirigami.ListItemDragHandle {
                     listItem: customCommandItem
                     listView: customCommandsView
-                    onMoveRequested: customCommandsModel.moveRows(oldIndex, newIndex)
+                    onMoveRequested: function (oldIndex) {
+                        customCommandsModel.moveRows(oldIndex, newIndex)
+                    }
                 }
 
                 CheckBox {
