@@ -257,12 +257,12 @@ void MpvItem::setupConnections()
 #endif
 
 #if defined(Q_OS_UNIX)
-    auto lockManager = new LockManager(this);
     connect(this, &MpvItem::pauseChanged, this, [=]() {
+        static LockManager lockManager(this);
         if (pause()) {
-            lockManager->setInhibitionOff();
+            lockManager.setInhibitionOff();
         } else {
-            lockManager->setInhibitionOn();
+            lockManager.setInhibitionOn();
         }
     });
 #endif
