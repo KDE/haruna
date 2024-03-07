@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             QCommandLineParser clParser;
             clParser.process(qApplication);
             if (clParser.positionalArguments().size() > 0) {
-                QString file = clParser.positionalArguments().first();
+                QString file = clParser.positionalArguments().constFirst();
                 kdsApp.sendMessage(file.toUtf8());
             }
             exit(EXIT_SUCCESS);

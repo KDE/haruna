@@ -174,7 +174,7 @@ void MediaPlayer2Player::Seek(qlonglong offset)
 void MediaPlayer2Player::SetPosition(const QDBusObjectPath &trackId, qlonglong pos)
 {
     Q_UNUSED(trackId)
-    m_mpv->setProperty(MpvProperties::self()->Position, pos / 1000 / 1000);
+    Q_EMIT m_mpv->setProperty(MpvProperties::self()->Position, pos / 1000 / 1000);
 }
 
 void MediaPlayer2Player::OpenUri(const QString &uri)
@@ -197,7 +197,7 @@ double MediaPlayer2Player::Volume()
 
 void MediaPlayer2Player::setVolume(double vol)
 {
-    m_mpv->setProperty(MpvProperties::self()->Volume, vol * 100);
+    Q_EMIT m_mpv->setProperty(MpvProperties::self()->Volume, vol * 100);
 }
 
 qlonglong MediaPlayer2Player::Position()
@@ -207,7 +207,7 @@ qlonglong MediaPlayer2Player::Position()
 
 void MediaPlayer2Player::setPosition(int pos)
 {
-    m_mpv->setProperty(MpvProperties::self()->Position, pos);
+    Q_EMIT m_mpv->setProperty(MpvProperties::self()->Position, pos);
 }
 
 bool MediaPlayer2Player::CanGoNext()

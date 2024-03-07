@@ -13,23 +13,23 @@
 
 MpvPreview::MpvPreview()
 {
-    observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
-    observeProperty(MpvProperties::self()->AspectRatio, MPV_FORMAT_DOUBLE);
+    Q_EMIT observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
+    Q_EMIT observeProperty(MpvProperties::self()->AspectRatio, MPV_FORMAT_DOUBLE);
 
-    setProperty(MpvProperties::self()->Mute, true);
-    setProperty(MpvProperties::self()->Pause, true);
-    setProperty(MpvProperties::self()->ReallyQuiet, true);
+    Q_EMIT setProperty(MpvProperties::self()->Mute, true);
+    Q_EMIT setProperty(MpvProperties::self()->Pause, true);
+    Q_EMIT setProperty(MpvProperties::self()->ReallyQuiet, true);
 
-    setProperty(MpvProperties::self()->HardwareDecoding, QStringLiteral("auto-safe"));
-    setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
-    setProperty(MpvProperties::self()->AudioId, false);
-    setProperty(MpvProperties::self()->AudioFileAuto, false);
-    setProperty(MpvProperties::self()->SubtitleId, false);
-    setProperty(MpvProperties::self()->SubtitleAuto, false);
-    setProperty(MpvProperties::self()->OsdLevel, 0);
-    setProperty(MpvProperties::self()->AudioPitchCorection, false);
-    setProperty(MpvProperties::self()->UseTextOsd, false);
-    setProperty(MpvProperties::self()->AudioDisplay, false);
+    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, QStringLiteral("auto-safe"));
+    Q_EMIT setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
+    Q_EMIT setProperty(MpvProperties::self()->AudioId, false);
+    Q_EMIT setProperty(MpvProperties::self()->AudioFileAuto, false);
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleId, false);
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleAuto, false);
+    Q_EMIT setProperty(MpvProperties::self()->OsdLevel, 0);
+    Q_EMIT setProperty(MpvProperties::self()->AudioPitchCorection, false);
+    Q_EMIT setProperty(MpvProperties::self()->UseTextOsd, false);
+    Q_EMIT setProperty(MpvProperties::self()->AudioDisplay, false);
 
     connect(mpvController(), &MpvController::propertyChanged, this, [=](const QString &property, const QVariant &value) {
         Q_UNUSED(value)
@@ -47,7 +47,7 @@ MpvPreview::MpvPreview()
 void MpvPreview::loadFile()
 {
     if (m_isReady && !m_file.isEmpty()) {
-        command(QStringList() << QStringLiteral("loadfile") << m_file);
+        Q_EMIT command(QStringList() << QStringLiteral("loadfile") << m_file);
     }
 }
 
@@ -97,7 +97,7 @@ void MpvPreview::setAccuratePreview(bool _accuratePreview)
         return;
     }
     m_accuratePreview = _accuratePreview;
-    setProperty(MpvProperties::self()->AccurateSeek, _accuratePreview);
+    Q_EMIT setProperty(MpvProperties::self()->AccurateSeek, _accuratePreview);
     Q_EMIT accuratePreviewChanged();
 }
 

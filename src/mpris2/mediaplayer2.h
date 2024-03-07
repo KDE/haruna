@@ -28,7 +28,6 @@ public:
     explicit MediaPlayer2(QObject *obj);
     ~MediaPlayer2() = default;
 
-public Q_SLOTS:
     void Raise();
     void Quit();
     bool CanRaise() const;

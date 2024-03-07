@@ -293,7 +293,7 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
     connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("entries")];
-        QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
+        // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
         if (entries.toArray().isEmpty()) {
             return;
         }
