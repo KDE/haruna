@@ -207,7 +207,7 @@ void FrameDecoder::seek(int timeInSeconds)
         }
 
         ++keyFrameAttempts;
-    } while ((!gotFrame || !m_pFrame->key_frame) && keyFrameAttempts < 200);
+    } while ((!gotFrame || m_pFrame->flags & AV_FRAME_FLAG_KEY) && keyFrameAttempts < 200);
 
     if (gotFrame == 0) {
         qDebug() << "Seeking in video failed";
@@ -358,7 +358,7 @@ bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVP
 
 void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, QImage &videoFrame)
 {
-    if (m_pFrame->interlaced_frame) {
+    if (m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) {
         processFilterGraph((AVFrame *)m_pFrame, (AVFrame *)m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
     }
 
