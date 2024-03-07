@@ -359,8 +359,7 @@ void Application::openDocs(const QString &page)
 
 QStringList Application::getFonts()
 {
-    static QFontDatabase *fontDB = new QFontDatabase();
-    return fontDB->families();
+    return QFontDatabase::families();
 }
 
 int Application::frameworksVersionMinor()
