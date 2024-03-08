@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-07 00:37+0000\n"
+"POT-Creation-Date: 2024-03-08 00:37+0000\n"
 "PO-Revision-Date: 2024-02-09 20:15+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,43 +27,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: src/application.cpp:94
+#: src/application.cpp:98
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna 동영상 재생기"
 
-#: src/application.cpp:96
+#: src/application.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "설정 가능한 동영상 재생기입니다."
 
-#: src/application.cpp:98
+#: src/application.cpp:102
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:103
+#: src/application.cpp:107
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:104
+#: src/application.cpp:108
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "개발자"
 
-#: src/application.cpp:115
+#: src/application.cpp:119
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "열 파일"
 
-#: src/application.cpp:119
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 "ytdl 형식 설정 문자열을 재정의합니다. GUI에서 설정을 변경하면 이 설정이 무시"
 "됩니다"
 
-#: src/application.cpp:121
+#: src/application.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -533,38 +533,38 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "재할당"
 
-#: src/mpv/mpvitem.cpp:284
+#: src/mpv/mpvitem.cpp:288
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:419
+#: src/mpv/mpvitem.cpp:423
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:453
+#: src/mpv/mpvitem.cpp:457
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:462
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:460
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:512
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -881,73 +881,73 @@ msgid "Seek"
 msgstr "탐색"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
-#: src/qml/Menus/SettingsMenu.qml:13
+#: src/qml/Menus/SettingsMenu.qml:15
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "설정(&S)"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
-#: src/qml/Menus/SettingsMenu.qml:18
+#: src/qml/Menus/SettingsMenu.qml:20
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "일반"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
-#: src/qml/Menus/SettingsMenu.qml:26
+#: src/qml/Menus/SettingsMenu.qml:28
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "재생"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
-#: src/qml/Menus/SettingsMenu.qml:34
+#: src/qml/Menus/SettingsMenu.qml:36
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "비디오"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
-#: src/qml/Menus/SettingsMenu.qml:42
+#: src/qml/Menus/SettingsMenu.qml:44
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "오디오"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
-#: src/qml/Menus/SettingsMenu.qml:50
+#: src/qml/Menus/SettingsMenu.qml:52
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "자막"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
-#: src/qml/Menus/SettingsMenu.qml:58
+#: src/qml/Menus/SettingsMenu.qml:60
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "재생 목록"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
-#: src/qml/Menus/SettingsMenu.qml:66
+#: src/qml/Menus/SettingsMenu.qml:68
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "마우스"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
-#: src/qml/Menus/SettingsMenu.qml:74
+#: src/qml/Menus/SettingsMenu.qml:76
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "단축키"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
-#: src/qml/Menus/SettingsMenu.qml:82
+#: src/qml/Menus/SettingsMenu.qml:84
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "사용자 정의 명령"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
-#: src/qml/Menus/SettingsMenu.qml:90
+#: src/qml/Menus/SettingsMenu.qml:92
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "디버그"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
-#: src/qml/Menus/SettingsMenu.qml:98
+#: src/qml/Menus/SettingsMenu.qml:100
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "정보"
@@ -1121,12 +1121,12 @@ msgctxt "@action:button"
 msgid "&Add command"
 msgstr "명령 추가(&A)"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:75
+#: src/qml/Settings/CustomCommandsSettings.qml:77
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "다음에 시작할 때 설정하지 않음"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:149
+#: src/qml/Settings/CustomCommandsSettings.qml:151
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "추가(&A)"

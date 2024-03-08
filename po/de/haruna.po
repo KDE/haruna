@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-07 00:37+0000\n"
+"POT-Creation-Date: 2024-03-08 00:37+0000\n"
 "PO-Revision-Date: 2023-05-30 18:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -26,43 +26,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
-#: src/application.cpp:94
+#: src/application.cpp:98
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna Media Player"
 msgstr "Haruna Medienspieler"
 
-#: src/application.cpp:96
+#: src/application.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "A configurable media player."
 msgstr "Ein anpassbarer Medienspieler."
 
-#: src/application.cpp:98
+#: src/application.cpp:102
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
 msgstr "Copyright 2019-2023"
 
-#: src/application.cpp:103
+#: src/application.cpp:107
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:104
+#: src/application.cpp:108
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Entwickler"
 
-#: src/application.cpp:115
+#: src/application.cpp:119
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Zu öffnende Datei"
 
-#: src/application.cpp:119
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 "Ermöglicht das zeitweilige Verändern der Formatauswahl-Einstellung von yt-"
 "dlp. Wird bei Änderung der Einstellung in der Oberfläche überschrieben."
 
-#: src/application.cpp:121
+#: src/application.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -534,20 +534,20 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Neu zuweisen"
 
-#: src/mpv/mpvitem.cpp:284
+#: src/mpv/mpvitem.cpp:288
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kann nicht abspielen: %1"
 
-#: src/mpv/mpvitem.cpp:419
+#: src/mpv/mpvitem.cpp:423
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Keiner"
 
-#: src/mpv/mpvitem.cpp:453
+#: src/mpv/mpvitem.cpp:457
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -555,7 +555,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Bildschirmfoto"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:462
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -563,7 +563,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Bildschirmfoto"
 
-#: src/mpv/mpvitem.cpp:460
+#: src/mpv/mpvitem.cpp:464
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -571,7 +571,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Bildschirmfoto"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:512
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -897,13 +897,13 @@ msgid "Seek"
 msgstr "Springen"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
-#: src/qml/Menus/SettingsMenu.qml:13
+#: src/qml/Menus/SettingsMenu.qml:15
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "&Einstellungen"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
-#: src/qml/Menus/SettingsMenu.qml:18
+#: src/qml/Menus/SettingsMenu.qml:20
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "General"
@@ -912,7 +912,7 @@ msgid "General"
 msgstr "Allgemein"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
-#: src/qml/Menus/SettingsMenu.qml:26
+#: src/qml/Menus/SettingsMenu.qml:28
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playback"
@@ -921,7 +921,7 @@ msgid "Playback"
 msgstr "Wiedergabe"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
-#: src/qml/Menus/SettingsMenu.qml:34
+#: src/qml/Menus/SettingsMenu.qml:36
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Video"
@@ -930,7 +930,7 @@ msgid "Video"
 msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
-#: src/qml/Menus/SettingsMenu.qml:42
+#: src/qml/Menus/SettingsMenu.qml:44
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Audio"
@@ -939,7 +939,7 @@ msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
-#: src/qml/Menus/SettingsMenu.qml:50
+#: src/qml/Menus/SettingsMenu.qml:52
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Subtitles"
@@ -948,7 +948,7 @@ msgid "Subtitles"
 msgstr "Untertitel"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
-#: src/qml/Menus/SettingsMenu.qml:58
+#: src/qml/Menus/SettingsMenu.qml:60
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -957,7 +957,7 @@ msgid "Playlist"
 msgstr "Wiedergabeliste"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
-#: src/qml/Menus/SettingsMenu.qml:66
+#: src/qml/Menus/SettingsMenu.qml:68
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Mouse"
@@ -966,7 +966,7 @@ msgid "Mouse"
 msgstr "Maus"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
-#: src/qml/Menus/SettingsMenu.qml:74
+#: src/qml/Menus/SettingsMenu.qml:76
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Shortcuts"
@@ -975,7 +975,7 @@ msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
-#: src/qml/Menus/SettingsMenu.qml:82
+#: src/qml/Menus/SettingsMenu.qml:84
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Custom commands"
@@ -984,7 +984,7 @@ msgid "Custom Commands"
 msgstr "Benutzerdefinierte Befehle"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
-#: src/qml/Menus/SettingsMenu.qml:90
+#: src/qml/Menus/SettingsMenu.qml:92
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Debug"
@@ -993,7 +993,7 @@ msgid "Debug"
 msgstr "Debug"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
-#: src/qml/Menus/SettingsMenu.qml:98
+#: src/qml/Menus/SettingsMenu.qml:100
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "About"
@@ -1173,12 +1173,12 @@ msgctxt "@action:button"
 msgid "&Add command"
 msgstr "Befehl &hinzufügen"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:75
+#: src/qml/Settings/CustomCommandsSettings.qml:77
 msgctxt "@info:tooltip"
 msgid "Don't set on next startup"
 msgstr "Beim nächsten Starten nicht setzen"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:149
+#: src/qml/Settings/CustomCommandsSettings.qml:151
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Hinzufügen"
