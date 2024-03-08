@@ -114,16 +114,26 @@ void CustomCommandsModel::init()
     endInsertRows();
 }
 
-void CustomCommandsModel::moveRows(int oldIndex, int newIndex)
+bool CustomCommandsModel::moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild)
 {
-    if (oldIndex < newIndex) {
-        beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex + 1);
-    } else {
-        beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), newIndex);
+    if (sourceParent != destinationParent || sourceParent != QModelIndex()) {
+        return false;
     }
-    Command c = m_customCommands.takeAt(oldIndex);
-    m_customCommands.insert(newIndex, c);
+
+    const bool isMoveDown = destinationChild > sourceRow;
+    // QAbstractItemModel::beginMoveRows(): when moving rows down in the same parent,
+    // the rows will be placed before the destinationChild index.
+    auto destinationRow = isMoveDown ? destinationChild + 1 : destinationChild;
+    if (!beginMoveRows(sourceParent, sourceRow, sourceRow + count - 1, destinationParent, destinationRow)) {
+        return false;
+    }
+
+    for (int i = 0; i < count; i++) {
+        m_customCommands.move(isMoveDown ? sourceRow : sourceRow + i, destinationChild);
+    }
+
     endMoveRows();
+    return true;
 }
 
 void CustomCommandsModel::saveCustomCommand(const QString &command, const QString &osdMessage, const QString &type)

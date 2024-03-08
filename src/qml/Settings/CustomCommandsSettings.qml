@@ -61,8 +61,9 @@ SettingsBasePage {
                 Kirigami.ListItemDragHandle {
                     listItem: customCommandItem
                     listView: customCommandsView
-                    onMoveRequested: function (oldIndex) {
-                        customCommandsModel.moveRows(oldIndex, newIndex)
+                    onMoveRequested: function (sourceRow, destinationRow) {
+                        const modelIndex = customCommandsModel.index(sourceRow, 0).parent
+                        customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
                     }
                 }
 
