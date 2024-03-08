@@ -536,20 +536,20 @@ double MpvItem::loadTimePosition()
     if (PlaybackSettings::minDurationToSavePosition() == -1) {
         return 0;
     }
-    double duration{0};
+    PlaylistItem item{m_playlistModel->m_playlist[m_playlistModel->m_playingItem]};
+    auto duration{item.duration};
 
-    // KFileMetaData is faster than getProperty
-    QString mimeType = Application::mimeType(m_currentUrl);
-    KFileMetaData::ExtractorCollection exCol;
-    QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
-    KFileMetaData::SimpleExtractionResult result(m_currentUrl.toLocalFile(), mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);
-    if (extractors.size() > 0) {
-        KFileMetaData::Extractor *ex = extractors.first();
-        ex->extract(&result);
-        auto properties = result.properties();
-        duration = properties.value(KFileMetaData::Property::Duration).toDouble();
-    } else {
-        duration = getProperty(MpvProperties::self()->Duration).toInt();
+    if (qFuzzyCompare(duration, 0.0)) {
+        QString mimeType = Application::mimeType(m_currentUrl);
+        KFileMetaData::ExtractorCollection exCol;
+        QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
+        KFileMetaData::SimpleExtractionResult result(m_currentUrl.toLocalFile(), mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);
+        if (extractors.size() > 0) {
+            KFileMetaData::Extractor *ex = extractors.first();
+            ex->extract(&result);
+            auto properties = result.properties();
+            duration = properties.value(KFileMetaData::Property::Duration).toDouble();
+        }
     }
 
     // position for files with a duration lower than
