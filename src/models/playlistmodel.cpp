@@ -40,7 +40,8 @@ PlaylistModel::PlaylistModel(QObject *parent)
         auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
         auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
-        m_playlist[i].duration = Application::formatTime(duration);
+        m_playlist[i].formattedDuration = Application::formatTime(duration);
+        m_playlist[i].duration = duration;
         m_playlist[i].mediaTitle = title;
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
@@ -68,7 +69,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case PathRole:
         return QVariant(item.url);
     case DurationRole:
-        return QVariant(item.duration);
+        return QVariant(item.formattedDuration);
     case PlayingRole:
         return QVariant(m_playingItem == index.row());
     case FolderPathRole:
@@ -166,9 +167,7 @@ void PlaylistModel::appendItem(const QUrl &url)
     if (itemInfo.exists() && itemInfo.isFile()) {
         item.url = url;
         item.filename = itemInfo.fileName();
-        item.mediaTitle = QString();
         item.folderPath = itemInfo.absolutePath();
-        item.duration = QString();
     } else {
         if (url.scheme().startsWith(QStringLiteral("http"))) {
             item.url = url;
@@ -226,9 +225,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         PlaylistItem item;
         item.url = fileUrl;
         item.filename = fileInfo.fileName();
-        item.mediaTitle = QString();
         item.folderPath = fileInfo.absolutePath();
-        item.duration = QString();
         m_playlist.append(item);
         if (url == fileUrl) {
             setPlayingItem(m_playlist.count() - 1);
@@ -309,8 +306,8 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
             item.url = QUrl::fromUserInput(url);
             item.filename = !title.isEmpty() ? title : url;
             item.mediaTitle = !title.isEmpty() ? title : url;
-            item.folderPath = QString();
-            item.duration = Application::formatTime(duration);
+            item.formattedDuration = Application::formatTime(duration);
+            item.duration = duration;
 
             beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
             m_playlist.append(item);
@@ -339,14 +336,15 @@ void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
     connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
-        int duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toInt();
+        auto duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toDouble();
         if (title.isEmpty()) {
             // todo: log if can't get title
             return;
         }
         m_playlist[row].mediaTitle = title;
         m_playlist[row].filename = title;
-        m_playlist[row].duration = Application::formatTime(duration);
+        m_playlist[row].formattedDuration = Application::formatTime(duration);
+        m_playlist[row].duration = duration;
 
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });

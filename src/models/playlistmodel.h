@@ -17,7 +17,8 @@ struct PlaylistItem {
     QString filename;
     QString mediaTitle;
     QString folderPath;
-    QString duration;
+    QString formattedDuration;
+    double duration{0.0};
 };
 
 class PlaylistProxyModel : public QSortFilterProxyModel
