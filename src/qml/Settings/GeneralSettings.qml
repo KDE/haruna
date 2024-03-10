@@ -210,7 +210,10 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Label {
+            text: i18nc("@label:spinbox", "Thumbnail Width")
+            Layout.alignment: Qt.AlignRight
+        }
 
         SpinBox {
             id: previewThumbnailWidth
@@ -226,7 +229,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Window")
+            text: i18nc("@label", "Window")
             Layout.alignment: Qt.AlignRight
         }
 
