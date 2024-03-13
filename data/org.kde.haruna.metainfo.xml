@@ -333,6 +333,21 @@
     </ul>
   </description>
   <releases>
+    <release version="1.0.0" date="2024-03-13">
+      <description>
+        <p>Ported to Qt6.</p>
+        <p>Some hwdec options have been removed, if needed they can be set in the settings under "Custom commands" as `set hwdec decoding_method_name` and choose "Run at startup"</p>
+        <p>Port to Qt6</p>
+        <p>Features:</p>
+        <ul>
+          <li>Opening items from the playlist should be faster</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.12.3" date="2023-11-15">
       <description>
         <p>Bugfixes:</p>
