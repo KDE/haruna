@@ -110,7 +110,7 @@ private:
     QApplication *m_app{nullptr};
     KAboutData m_aboutData;
     KSharedConfig::Ptr m_config;
-    QCommandLineParser *m_parser{nullptr};
+    std::unique_ptr<QCommandLineParser> m_parser;
     QMap<int, QUrl> m_urls;
     KColorSchemeManager *m_schemes{nullptr};
     QString m_systemDefaultStyle;

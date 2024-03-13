@@ -281,13 +281,13 @@ void PlaylistModel::addM3uItems(const QUrl &url)
 void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
 {
     // use youtube-dl to get the required playlist info as json
-    auto ytdlProcess = new QProcess();
+    auto ytdlProcess = std::make_shared<QProcess>();
     auto args = QStringList() << QStringLiteral("-J") << QStringLiteral("--flat-playlist") << url.toString();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(args);
     ytdlProcess->start();
 
-    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
+    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("entries")];
         // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
@@ -328,12 +328,12 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
 
 void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
 {
-    auto ytdlProcess = new QProcess();
+    auto ytdlProcess = std::make_shared<QProcess>();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url.toString());
     ytdlProcess->start();
 
-    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
+    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
         auto duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toDouble();

@@ -173,12 +173,12 @@ void RecentFilesModel::setMaxRecentFiles(int _maxRecentFiles)
 
 void RecentFilesModel::getHttpItemInfo(const QUrl &url)
 {
-    auto ytdlProcess = new QProcess();
+    auto ytdlProcess = std::make_shared<QProcess>();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url.toString());
     ytdlProcess->start();
 
-    connect(ytdlProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
+    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
         if (title.isEmpty()) {

@@ -114,8 +114,8 @@ void Application::setupAboutData()
 
 void Application::setupCommandLineParser()
 {
-    m_parser = new QCommandLineParser();
-    m_aboutData.setupCommandLine(m_parser);
+    m_parser = std::make_unique<QCommandLineParser>();
+    m_aboutData.setupCommandLine(m_parser.get());
     m_parser->addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
 
     QCommandLineOption ytdlFormatSelectionOption(QStringList() << QStringLiteral("ytdl-format-selection") << QStringLiteral("ytdlfs"),
@@ -127,7 +127,7 @@ void Application::setupCommandLineParser()
     m_parser->addOption(ytdlFormatSelectionOption);
 
     m_parser->process(*m_app);
-    m_aboutData.processCommandLine(m_parser);
+    m_aboutData.processCommandLine(m_parser.get());
 
     for (auto i = 0; i < m_parser->positionalArguments().size(); ++i) {
         addUrl(i, m_parser->positionalArguments().at(i));
@@ -348,7 +348,7 @@ void Application::setQmlEngine(QQmlApplicationEngine *_qmlEngine)
 
 QCommandLineParser *Application::parser() const
 {
-    return m_parser;
+    return m_parser.get();
 }
 
 void Application::activateColorScheme(const QString &name)
