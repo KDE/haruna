@@ -227,7 +227,9 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         item.filename = fileInfo.fileName();
         item.folderPath = fileInfo.absolutePath();
         m_playlist.append(item);
-        if (url == fileUrl) {
+        // in flatpak the file dialog gives a percent encoded path
+        // use toLocalFile to normalize the urls
+        if (url.toLocalFile() == fileUrl.toLocalFile()) {
             setPlayingItem(m_playlist.count() - 1);
         }
         Q_EMIT itemAdded(m_playlist.count() - 1, item.url.toString());
