@@ -15,7 +15,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(ECM 5.89 REQUIRED NO_MODULE)
+set(QT_MIN_VERSION 6.6.0)
+set(KF6_MIN_VERSION 6.0.0)
+
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 include(FeatureSummary)
@@ -38,29 +41,25 @@ ecm_setup_version(${PROJECT_VERSION}
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/haruna-version.h"
 )
 
-set(X11_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
+set(DBUS_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 
-find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
-
-find_package(Qt6Core)
+find_package(Qt6Core ${QT_MIN_VERSION})
 set_package_properties(Qt6Core PROPERTIES TYPE REQUIRED)
 
-find_package(Qt6Gui)
+find_package(Qt6Gui ${QT_MIN_VERSION})
 set_package_properties(Qt6Gui PROPERTIES TYPE REQUIRED)
 
-find_package(Qt6Qml)
+find_package(Qt6Qml ${QT_MIN_VERSION})
 set_package_properties(Qt6Qml PROPERTIES TYPE REQUIRED)
 
-find_package(Qt6Quick)
+find_package(Qt6Quick ${QT_MIN_VERSION})
 set_package_properties(Qt6Quick PROPERTIES TYPE REQUIRED)
 
-find_package(Qt6QuickControls2)
+find_package(Qt6QuickControls2 ${QT_MIN_VERSION})
 set_package_properties(Qt6QuickControls2 PROPERTIES TYPE REQUIRED)
 
-if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
-    find_package(QT NAMES Qt6 REQUIRED COMPONENTS DBus X11Extras)
-
-    find_package(Qt6DBus)
+if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
+    find_package(Qt6DBus ${QT_MIN_VERSION})
     set_package_properties(Qt6DBus PROPERTIES TYPE REQUIRED)
 endif ()
 
@@ -75,43 +74,43 @@ find_package(Breeze)
 set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
     URL "https://api.kde.org/frameworks/breeze-icons/html/index.html")
 
-find_package(KF6ColorScheme)
+find_package(KF6ColorScheme ${KF6_MIN_VERSION})
 set_package_properties(KF6ColorScheme PROPERTIES TYPE REQUIRED
     URL "https://invent.kde.org/frameworks/kcolorscheme")
 
-find_package(KF6Config)
+find_package(KF6Config ${KF6_MIN_VERSION})
 set_package_properties(KF6Config PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kconfig/html/index.html")
 
-find_package(KF6CoreAddons)
+find_package(KF6CoreAddons ${KF6_MIN_VERSION})
 set_package_properties(KF6CoreAddons PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcoreaddons/html/index.html")
 
-find_package(KF6DocTools)
+find_package(KF6DocTools ${KF6_MIN_VERSION})
 set_package_properties(KF6DocTools PROPERTIES
     DESCRIPTION "https://api.kde.org/frameworks/kdoctools/html/index.html")
 
-find_package(KF6FileMetaData)
+find_package(KF6FileMetaData ${KF6_MIN_VERSION})
 set_package_properties(KF6FileMetaData PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kfilemetadata/html/index.html")
 
-find_package(KF6I18n)
+find_package(KF6I18n ${KF6_MIN_VERSION})
 set_package_properties(KF6I18n PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/ki18n/html/index.html")
 
-find_package(KF6IconThemes)
+find_package(KF6IconThemes ${KF6_MIN_VERSION})
 set_package_properties(KF6IconThemes PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kiconthemes/html/index.html")
 
-find_package(KF6KIO)
+find_package(KF6KIO ${KF6_MIN_VERSION})
 set_package_properties(KF6KIO PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kio/html/index.html")
 
-find_package(KF6Kirigami)
+find_package(KF6Kirigami ${KF6_MIN_VERSION})
 set_package_properties(KF6Kirigami PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kirigami/html/index.html")
 
-find_package(KF6WindowSystem)
+find_package(KF6WindowSystem ${KF6_MIN_VERSION})
 set_package_properties(KF6WindowSystem PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kwindowsystem/html/index.html")
 

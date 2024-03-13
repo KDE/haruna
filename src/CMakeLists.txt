@@ -33,7 +33,7 @@ target_sources(haruna
     ${ICONS_SRCS}
 )
 
-if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
+if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
     target_sources(haruna
         PRIVATE
@@ -154,7 +154,7 @@ target_link_libraries(haruna PRIVATE
     ${SWSCALE_LIBRARIES}
 )
 
-if (CMAKE_SYSTEM_NAME IN_LIST X11_PLATFORMS)
+if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     target_link_libraries(haruna PRIVATE
         Qt6::DBus
     )
