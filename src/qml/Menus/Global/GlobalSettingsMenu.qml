@@ -14,12 +14,6 @@ Labs.Menu {
     title: i18nc("@title:menu", "&Settings")
 
     Labs.MenuItem {
-        icon.name: appActions.configureShortcutsAction.icon.name
-        text: appActions.configureShortcutsAction.text
-        onTriggered: appActions.configureShortcutsAction.trigger()
-    }
-    Labs.MenuSeparator {}
-    Labs.MenuItem {
         text: i18nc("@action:inmenu", "General")
         onTriggered: {
             settingsLoader.active = true
@@ -77,6 +71,7 @@ Labs.Menu {
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Shortcuts")
+        icon.name: "configure-shortcuts"
         onTriggered: {
             settingsLoader.active = true
             settingsLoader.item.currentPage = SettingsWindow.Page.Shortcuts
