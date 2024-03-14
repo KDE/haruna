@@ -333,7 +333,7 @@
     </ul>
   </description>
   <releases>
-    <release version="1.0.0" date="2024-03-13">
+    <release version="1.0.1" date="2024-03-14">
       <description>
         <p>Ported to Qt6.</p>
         <p>Some hwdec options have been removed, if needed they can be set in the settings under "Custom commands" as `set hwdec decoding_method_name` and choose "Run at startup"</p>
@@ -343,6 +343,8 @@
         </ul>
         <p>Bugfixes:</p>
         <ul>
+          <li>Opening file through "Open File" action was not playing the file</li>
+          <li>Opening playlist file from playlist header was not doing anything</li>
           <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
         </ul>
       </description>
