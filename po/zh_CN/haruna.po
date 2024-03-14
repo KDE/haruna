@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-09 00:37+0000\n"
-"PO-Revision-Date: 2024-03-09 04:46\n"
+"POT-Creation-Date: 2024-03-14 00:37+0000\n"
+"PO-Revision-Date: 2024-03-13 20:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -886,68 +886,68 @@ msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "设置(&S)"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
-#: src/qml/Menus/SettingsMenu.qml:20
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:17
+#: src/qml/Menus/SettingsMenu.qml:18
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "常规"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
-#: src/qml/Menus/SettingsMenu.qml:28
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
+#: src/qml/Menus/SettingsMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "播放"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
-#: src/qml/Menus/SettingsMenu.qml:36
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
+#: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "视频"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
-#: src/qml/Menus/SettingsMenu.qml:44
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
+#: src/qml/Menus/SettingsMenu.qml:42
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "音频"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
-#: src/qml/Menus/SettingsMenu.qml:52
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
+#: src/qml/Menus/SettingsMenu.qml:50
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "字幕"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
-#: src/qml/Menus/SettingsMenu.qml:60
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
+#: src/qml/Menus/SettingsMenu.qml:58
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "播放列表"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
-#: src/qml/Menus/SettingsMenu.qml:68
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
+#: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "鼠标"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
-#: src/qml/Menus/SettingsMenu.qml:76
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
+#: src/qml/Menus/SettingsMenu.qml:74
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
-#: src/qml/Menus/SettingsMenu.qml:84
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:82
+#: src/qml/Menus/SettingsMenu.qml:83
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "自定义命令"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
-#: src/qml/Menus/SettingsMenu.qml:92
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:90
+#: src/qml/Menus/SettingsMenu.qml:91
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "调试"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
-#: src/qml/Menus/SettingsMenu.qml:100
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:98
+#: src/qml/Menus/SettingsMenu.qml:99
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "关于"
@@ -1298,17 +1298,25 @@ msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "精确预览图的生成速度较慢"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
+msgid "Thumbnail Width"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:232
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Window"
+msgctxt "@label"
 msgid "Window"
 msgstr "窗口"
 
-#: src/qml/Settings/GeneralSettings.qml:235
+#: src/qml/Settings/GeneralSettings.qml:238
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "调整窗口大小以适应视频"
 
-#: src/qml/Settings/GeneralSettings.qml:251
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1317,12 +1325,12 @@ msgstr ""
 "根据视频分辨率调整窗口大小。\n"
 "最大尺寸不作限制，由操作系统决定。"
 
-#: src/qml/Settings/GeneralSettings.qml:265
+#: src/qml/Settings/GeneralSettings.qml:268
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
-#: src/qml/Settings/GeneralSettings.qml:280
+#: src/qml/Settings/GeneralSettings.qml:283
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1336,38 +1344,38 @@ msgstr ""
 "\n"
 "“调整窗口大小以适应视频”选项的优先级更高。\n"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:298
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:309
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
-#: src/qml/Settings/GeneralSettings.qml:326
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
-#: src/qml/Settings/GeneralSettings.qml:368
+#: src/qml/Settings/GeneralSettings.qml:371
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面风格"
 
-#: src/qml/Settings/GeneralSettings.qml:419
+#: src/qml/Settings/GeneralSettings.qml:422
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "使用 Breeze 微风图标主题"
 
-#: src/qml/Settings/GeneralSettings.qml:427
+#: src/qml/Settings/GeneralSettings.qml:430
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

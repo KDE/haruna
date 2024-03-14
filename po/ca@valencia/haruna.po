@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-09 00:37+0000\n"
+"POT-Creation-Date: 2024-03-14 00:37+0000\n"
 "PO-Revision-Date: 2024-01-12 15:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -889,68 +889,68 @@ msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "Con&figuració"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
-#: src/qml/Menus/SettingsMenu.qml:20
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:17
+#: src/qml/Menus/SettingsMenu.qml:18
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "General"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
-#: src/qml/Menus/SettingsMenu.qml:28
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
+#: src/qml/Menus/SettingsMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Reproducció"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
-#: src/qml/Menus/SettingsMenu.qml:36
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
+#: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Vídeo"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
-#: src/qml/Menus/SettingsMenu.qml:44
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
+#: src/qml/Menus/SettingsMenu.qml:42
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Àudio"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
-#: src/qml/Menus/SettingsMenu.qml:52
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
+#: src/qml/Menus/SettingsMenu.qml:50
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Subtítols"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
-#: src/qml/Menus/SettingsMenu.qml:60
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
+#: src/qml/Menus/SettingsMenu.qml:58
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Llista de reproducció"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
-#: src/qml/Menus/SettingsMenu.qml:68
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
+#: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Ratolí"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
-#: src/qml/Menus/SettingsMenu.qml:76
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
+#: src/qml/Menus/SettingsMenu.qml:74
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
-#: src/qml/Menus/SettingsMenu.qml:84
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:82
+#: src/qml/Menus/SettingsMenu.qml:83
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Ordres personalitzades"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
-#: src/qml/Menus/SettingsMenu.qml:92
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:90
+#: src/qml/Menus/SettingsMenu.qml:91
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Depuració"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
-#: src/qml/Menus/SettingsMenu.qml:100
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:98
+#: src/qml/Menus/SettingsMenu.qml:99
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Quant a"
@@ -1307,17 +1307,25 @@ msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "La generació d'una vista prèvia precisa és lenta"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
+msgid "Thumbnail Width"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:232
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Window"
+msgctxt "@label"
 msgid "Window"
 msgstr "Finestra"
 
-#: src/qml/Settings/GeneralSettings.qml:235
+#: src/qml/Settings/GeneralSettings.qml:238
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Redimensiona per a ajustar-se al vídeo"
 
-#: src/qml/Settings/GeneralSettings.qml:251
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1326,12 +1334,12 @@ msgstr ""
 "La finestra es redimensiona d'acord amb la resolució del vídeo.\n"
 "La mida màxima no està restringida, es deixa al sistema operatiu."
 
-#: src/qml/Settings/GeneralSettings.qml:265
+#: src/qml/Settings/GeneralSettings.qml:268
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Recorda la mida i la posició de la finestra"
 
-#: src/qml/Settings/GeneralSettings.qml:280
+#: src/qml/Settings/GeneralSettings.qml:283
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1346,38 +1354,38 @@ msgstr ""
 "\n"
 "El paràmetre «Redimensiona per a ajustar-se al vídeo» té prioritat.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:298
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostra la barra de menús"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:309
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostra els marcadors de capítols"
 
-#: src/qml/Settings/GeneralSettings.qml:326
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de color"
 
-#: src/qml/Settings/GeneralSettings.qml:368
+#: src/qml/Settings/GeneralSettings.qml:371
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estil de la IGU"
 
-#: src/qml/Settings/GeneralSettings.qml:419
+#: src/qml/Settings/GeneralSettings.qml:422
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Utilitza el tema d'icones Brisa"
 
-#: src/qml/Settings/GeneralSettings.qml:427
+#: src/qml/Settings/GeneralSettings.qml:430
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

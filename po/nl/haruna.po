@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-09 00:37+0000\n"
+"POT-Creation-Date: 2024-03-14 00:37+0000\n"
 "PO-Revision-Date: 2023-12-11 11:10+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -886,68 +886,68 @@ msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "In&stellingen"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:23
-#: src/qml/Menus/SettingsMenu.qml:20
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:17
+#: src/qml/Menus/SettingsMenu.qml:18
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "Algemeen"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:31
-#: src/qml/Menus/SettingsMenu.qml:28
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
+#: src/qml/Menus/SettingsMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Afspelen"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:39
-#: src/qml/Menus/SettingsMenu.qml:36
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
+#: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:47
-#: src/qml/Menus/SettingsMenu.qml:44
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
+#: src/qml/Menus/SettingsMenu.qml:42
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:55
-#: src/qml/Menus/SettingsMenu.qml:52
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
+#: src/qml/Menus/SettingsMenu.qml:50
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Ondertiteling"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:63
-#: src/qml/Menus/SettingsMenu.qml:60
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
+#: src/qml/Menus/SettingsMenu.qml:58
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Afspeellijst"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
-#: src/qml/Menus/SettingsMenu.qml:68
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
+#: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Muis"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
-#: src/qml/Menus/SettingsMenu.qml:76
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
+#: src/qml/Menus/SettingsMenu.qml:74
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:87
-#: src/qml/Menus/SettingsMenu.qml:84
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:82
+#: src/qml/Menus/SettingsMenu.qml:83
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Aangepaste commando's"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:95
-#: src/qml/Menus/SettingsMenu.qml:92
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:90
+#: src/qml/Menus/SettingsMenu.qml:91
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Debuggen"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:103
-#: src/qml/Menus/SettingsMenu.qml:100
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:98
+#: src/qml/Menus/SettingsMenu.qml:99
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Info over"
@@ -1303,17 +1303,25 @@ msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Een accuraat voorbeeld genereren is langzaam"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
+msgid "Thumbnail Width"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:232
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Window"
+msgctxt "@label"
 msgid "Window"
 msgstr "Venster"
 
-#: src/qml/Settings/GeneralSettings.qml:235
+#: src/qml/Settings/GeneralSettings.qml:238
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Grootte wijzigen zodat de video past"
 
-#: src/qml/Settings/GeneralSettings.qml:251
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1323,12 +1331,12 @@ msgstr ""
 "De maximum grootte is niet beperkt, dit wordt overgelaten aan het "
 "besturingssysteem."
 
-#: src/qml/Settings/GeneralSettings.qml:265
+#: src/qml/Settings/GeneralSettings.qml:268
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Vensterafmetingen en positie onthouden"
 
-#: src/qml/Settings/GeneralSettings.qml:280
+#: src/qml/Settings/GeneralSettings.qml:283
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1343,38 +1351,38 @@ msgstr ""
 "\n"
 "De instelling \"Grootte wijzigen om video te laten passen\" heeft voorrang.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:298
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Menubalk tonen"
 
-#: src/qml/Settings/GeneralSettings.qml:306
+#: src/qml/Settings/GeneralSettings.qml:309
 #: src/qml/Settings/PlaylistSettings.qml:80
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Werkbalk tonen"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Hoofdstukmerktekens tonen"
 
-#: src/qml/Settings/GeneralSettings.qml:326
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kleurenschema"
 
-#: src/qml/Settings/GeneralSettings.qml:368
+#: src/qml/Settings/GeneralSettings.qml:371
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI-stijl"
 
-#: src/qml/Settings/GeneralSettings.qml:419
+#: src/qml/Settings/GeneralSettings.qml:422
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Thema Breeze-pictogrammen gebruiken"
 
-#: src/qml/Settings/GeneralSettings.qml:427
+#: src/qml/Settings/GeneralSettings.qml:430
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
