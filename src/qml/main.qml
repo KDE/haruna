@@ -7,7 +7,7 @@
 import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
-import Qt.labs.platform as Platform
+import QtQuick.Dialogs
 import QtQml
 
 import org.kde.kirigami as Kirigami
@@ -215,28 +215,28 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    Platform.FileDialog {
+    FileDialog {
         id: fileDialog
 
         property url location: GeneralSettings.fileDialogLocation
                                ? app.pathToUrl(GeneralSettings.fileDialogLocation)
                                : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
 
-        folder: location
         title: i18nc("@title:window", "Select file")
-        fileMode: Platform.FileDialog.OpenFile
+        currentFolder: location
+        fileMode: FileDialog.OpenFile
 
         onAccepted: {
-            openFile(fileDialog.file.toString(), true)
+            openFile(fileDialog.selectedFile, true)
             mpv.focus = true
 
-            GeneralSettings.fileDialogLastLocation = app.parentUrl(fileDialog.file)
+            GeneralSettings.fileDialogLastLocation = app.parentUrl(fileDialog.selectedFile)
             GeneralSettings.save()
         }
         onRejected: mpv.focus = true
     }
 
-    Platform.FileDialog {
+    FileDialog {
         id: subtitlesFileDialog
 
         property url location: {
@@ -249,14 +249,14 @@ Kirigami.ApplicationWindow {
             }
         }
 
-        folder: location
         title: i18nc("@title:window", "Select subtitles file")
-        fileMode: Platform.FileDialog.OpenFile
+        currentFolder: location
+        fileMode: FileDialog.OpenFile
         nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]
 
         onAccepted: {
-            if (acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.file))) {
-                mpv.command(["sub-add", subtitlesFileDialog.file.toString(), "select"])
+            if (acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.selectedFile))) {
+                mpv.command(["sub-add", subtitlesFileDialog.selectedFile, "select"])
             }
         }
         onRejected: mpv.focus = true

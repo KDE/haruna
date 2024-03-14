@@ -4,10 +4,11 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+import QtCore
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
-import Qt.labs.platform as Platform
+import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
@@ -64,15 +65,15 @@ SettingsBasePage {
                 onClicked: fileDialog.open()
             }
 
-            Platform.FileDialog {
+            FileDialog {
                 id: fileDialog
 
-                folder: Platform.StandardPaths.writableLocation(Platform.StandardPaths.PicturesLocation)
+                currentFolder: StandardPaths.writableLocation(StandardPaths.PicturesLocation)
                 title: i18nc("@title:window", "Select file")
-                fileMode: Platform.FileDialog.OpenFile
+                fileMode: FileDialog.OpenFile
 
                 onAccepted: {
-                    VideoSettings.defaultCover = fileDialog.file
+                    VideoSettings.defaultCover = fileDialog.selectedFile
                 }
                 onRejected: mpv.focus = true
             }

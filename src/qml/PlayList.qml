@@ -8,7 +8,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import Qt.labs.platform as Platform
+import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
@@ -99,7 +99,7 @@ Item {
                                     icon.name: "media-playlist-append"
                                     onTriggered: {
                                         fileDialog.fileType = "playlist"
-                                        fileDialog.fileMode = Platform.FileDialog.OpenFile
+                                        fileDialog.fileMode = FileDialog.OpenFile
                                         fileDialog.open()
                                     }
                                 },
@@ -110,7 +110,7 @@ Item {
                                         text: i18nc("@action:button", "File")
                                         onTriggered: {
                                             fileDialog.fileType = "video"
-                                            fileDialog.fileMode = Platform.FileDialog.OpenFile
+                                            fileDialog.fileMode = FileDialog.OpenFile
                                             fileDialog.open()
                                         }
                                     }
@@ -168,7 +168,7 @@ Item {
                                     displayHint: Kirigami.DisplayHint.AlwaysHide
                                     onTriggered: {
                                         fileDialog.fileType = "playlist"
-                                        fileDialog.fileMode = Platform.FileDialog.SaveFile
+                                        fileDialog.fileMode = FileDialog.SaveFile
                                         fileDialog.open()
                                     }
                                 }
@@ -304,7 +304,7 @@ Item {
         }
     }
 
-    Platform.FileDialog {
+    FileDialog {
         id: fileDialog
 
         property url location: GeneralSettings.fileDialogLocation
@@ -312,20 +312,20 @@ Item {
                                : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
         property string fileType: "video"
 
-        folder: location
         title: i18nc("@title:window", "Select file")
-        fileMode: Platform.FileDialog.OpenFile
+        currentFolder: location
+        fileMode: FileDialog.OpenFile
 
         onAccepted: {
             switch (fileType) {
             case "video":
-                mpv.playlistModel.addItem(fileDialog.file, PlaylistModel.Append)
+                mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 break
             case "playlist":
-                if (fileMode === Platform.FileDialog.OpenFile) {
-                    mpv.playlistModel.openM3uFile(fileDialog.file.toString())
+                if (fileMode === FileDialog.OpenFile) {
+                    mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 } else {
-                    mpv.playlistProxyModel.saveM3uFile(fileDialog.file.toString())
+                    mpv.playlistProxyModel.saveM3uFile(fileDialog.selectedFile)
                 }
 
                 break
