@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:37+0000\n"
-"PO-Revision-Date: 2023-12-11 16:06+0300\n"
+"POT-Creation-Date: 2024-03-15 00:37+0000\n"
+"PO-Revision-Date: 2024-03-14 13:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,7 +43,7 @@ msgstr "Yapılandırılabilir bir ortam oynatıcısı."
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "(c) 2019-2023"
+msgstr "(c) 2019–2023"
 
 #: src/application.cpp:107
 #, kde-format
@@ -588,7 +588,7 @@ msgstr "Döngü başlangıcı: %1"
 #: src/qml/Actions.qml:256
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
-msgstr "Döngü: %1 - %2"
+msgstr "Döngü: %1 — %2"
 
 #: src/qml/Actions.qml:262
 msgctxt "@info:tooltip"
@@ -810,20 +810,20 @@ msgid ""
 "Check 'Playback' settings for more details"
 msgstr ""
 "Belirli sözcükleri/karakterleri içeren fasılları kendiliğinden atlar.\n"
-"Ayrıntılar için 'Oynatma' ayarlarına bakın"
+"Ayrıntılar için ‘Oynatma’ ayarlarına bakın"
 
 #: src/qml/main.qml:26
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:226 src/qml/PlayList.qml:316
-#: src/qml/Settings/VideoSettings.qml:71
+#: src/qml/main.qml:225 src/qml/PlayList.qml:315
+#: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya seç"
 
-#: src/qml/main.qml:253
+#: src/qml/main.qml:252
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Altyazı dosyası seç"
@@ -1011,7 +1011,7 @@ msgstr "Oynatma Listesi Aç"
 #: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #: src/qml/PlayList.qml:110
 msgctxt "@action:button"
@@ -1305,12 +1305,9 @@ msgstr "Doğru bir önizleme üretmek yavaştır"
 #: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
 msgid "Thumbnail Width"
-msgstr ""
+msgstr "Küçük görsel genişliği"
 
 #: src/qml/Settings/GeneralSettings.qml:232
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "Pencere"
@@ -1347,7 +1344,7 @@ msgstr ""
 "uygulamanın başka bir örneği açıldığında uygulamayı aynı boyuta ve konuma "
 "geri yüklemek için kullanılır.\n"
 "\n"
-"\"Videoyu sığdırmak için yeniden boyutlandır\" seçeneği öncelik alır.\n"
+"‘Videoyu sığdırmak için yeniden boyutlandır’ seçeneği öncelik alır.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:298
 msgctxt "@option:check"
@@ -1550,7 +1547,7 @@ msgstr "Bu sözcükleri içeren fasılları atlayın. Virgülle ayrılan listedi
 #: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@title"
 msgid "Youtube-dl"
-msgstr "Youtube-dl"
+msgstr "youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:352
 msgid "Format selection"
@@ -1778,17 +1775,17 @@ msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Kenarlık genişliği"
 
-#: src/qml/Settings/VideoSettings.qml:30
+#: src/qml/Settings/VideoSettings.qml:31
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "Öntanımlı kapak"
 
-#: src/qml/Settings/VideoSettings.qml:39
+#: src/qml/Settings/VideoSettings.qml:40
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "görsel yolu"
 
-#: src/qml/Settings/VideoSettings.qml:51
+#: src/qml/Settings/VideoSettings.qml:52
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -1797,47 +1794,47 @@ msgstr ""
 "Oynatılan dosyayla aynı klasörde bir kapak/klasör görseli, gömülü kapak "
 "görseli veya bir video izi olmayan müzik dosyaları için kullanılır."
 
-#: src/qml/Settings/VideoSettings.qml:82
+#: src/qml/Settings/VideoSettings.qml:83
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Ekran görüntüleri"
 
-#: src/qml/Settings/VideoSettings.qml:92
+#: src/qml/Settings/VideoSettings.qml:93
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Biçim"
 
-#: src/qml/Settings/VideoSettings.qml:132
+#: src/qml/Settings/VideoSettings.qml:133
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Şablon"
 
-#: src/qml/Settings/VideoSettings.qml:158
+#: src/qml/Settings/VideoSettings.qml:159
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Görsel ince ayarları"
 
-#: src/qml/Settings/VideoSettings.qml:168
+#: src/qml/Settings/VideoSettings.qml:169
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Karşıtlık"
 
-#: src/qml/Settings/VideoSettings.qml:187
+#: src/qml/Settings/VideoSettings.qml:188
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Parlaklık"
 
-#: src/qml/Settings/VideoSettings.qml:206
+#: src/qml/Settings/VideoSettings.qml:207
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gama"
 
-#: src/qml/Settings/VideoSettings.qml:225
+#: src/qml/Settings/VideoSettings.qml:226
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Doygunluk"
 
-#: src/qml/Settings/VideoSettings.qml:241
+#: src/qml/Settings/VideoSettings.qml:242
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Sıfırlamak için kaydırıcılarda orta tıklayın"

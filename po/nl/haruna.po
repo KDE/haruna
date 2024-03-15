@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:37+0000\n"
-"PO-Revision-Date: 2023-12-11 11:10+0100\n"
+"POT-Creation-Date: 2024-03-15 00:37+0000\n"
+"PO-Revision-Date: 2024-03-14 13:44+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2022-2023"
+msgstr "Freek de Kruijf - 2022-2024"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -817,13 +817,13 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/main.qml:226 src/qml/PlayList.qml:316
-#: src/qml/Settings/VideoSettings.qml:71
+#: src/qml/main.qml:225 src/qml/PlayList.qml:315
+#: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Bestand selecteren"
 
-#: src/qml/main.qml:253
+#: src/qml/main.qml:252
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Bestand met ondertitels selecteren"
@@ -1306,12 +1306,9 @@ msgstr "Een accuraat voorbeeld genereren is langzaam"
 #: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
 msgid "Thumbnail Width"
-msgstr ""
+msgstr "Breedte miniatuur"
 
 #: src/qml/Settings/GeneralSettings.qml:232
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "Venster"
@@ -1785,17 +1782,17 @@ msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Breedte omlijning"
 
-#: src/qml/Settings/VideoSettings.qml:30
+#: src/qml/Settings/VideoSettings.qml:31
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "Standaard omslag"
 
-#: src/qml/Settings/VideoSettings.qml:39
+#: src/qml/Settings/VideoSettings.qml:40
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "pad naar afbeelding"
 
-#: src/qml/Settings/VideoSettings.qml:51
+#: src/qml/Settings/VideoSettings.qml:52
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -1805,47 +1802,47 @@ msgstr ""
 "omslagafbeelding of een omslag/mapafbeelding in dezelfde map hebben als het "
 "afgespeelde bestand."
 
-#: src/qml/Settings/VideoSettings.qml:82
+#: src/qml/Settings/VideoSettings.qml:83
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Schermafdrukken"
 
-#: src/qml/Settings/VideoSettings.qml:92
+#: src/qml/Settings/VideoSettings.qml:93
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Formaat"
 
-#: src/qml/Settings/VideoSettings.qml:132
+#: src/qml/Settings/VideoSettings.qml:133
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Sjabloon"
 
-#: src/qml/Settings/VideoSettings.qml:158
+#: src/qml/Settings/VideoSettings.qml:159
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Aanpassingen van afbeelding"
 
-#: src/qml/Settings/VideoSettings.qml:168
+#: src/qml/Settings/VideoSettings.qml:169
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Contrast"
 
-#: src/qml/Settings/VideoSettings.qml:187
+#: src/qml/Settings/VideoSettings.qml:188
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Helderheid"
 
-#: src/qml/Settings/VideoSettings.qml:206
+#: src/qml/Settings/VideoSettings.qml:207
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
-#: src/qml/Settings/VideoSettings.qml:225
+#: src/qml/Settings/VideoSettings.qml:226
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Verzadiging"
 
-#: src/qml/Settings/VideoSettings.qml:241
+#: src/qml/Settings/VideoSettings.qml:242
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Midden-klik op de schuifregelaars om ze te resetten"
