@@ -21,9 +21,9 @@ Labs.Menu {
 
         title: i18nc("@title:menu", "Primary Subtitle")
 
-        Repeater {
+        Instantiator {
             model: mpv.subtitleTracksModel
-            delegate: MenuItem {
+            delegate: Labs.MenuItem {
                 enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
                 checkable: true
                 checked: model.id === mpv.subtitleId
@@ -31,6 +31,12 @@ Labs.Menu {
                 onTriggered: {
                     mpv.subtitleId = model.id
                 }
+            }
+            onObjectAdded: function(index, object) {
+                primarySubtitleMenu.insertItem(index, object)
+            }
+            onObjectRemoved: function(index, object) {
+                primarySubtitleMenu.removeItem(object)
             }
         }
     }
@@ -40,9 +46,9 @@ Labs.Menu {
 
         title: i18nc("@title:menu", "Secondary Subtitle")
 
-        Repeater {
+        Instantiator {
             model: mpv.subtitleTracksModel
-            delegate: MenuItem {
+            delegate: Labs.MenuItem {
                 enabled: model.id !== mpv.subtitleId || model.id === 0
                 checkable: true
                 checked: model.id === mpv.secondarySubtitleId
@@ -50,6 +56,12 @@ Labs.Menu {
                 onTriggered: {
                     mpv.secondarySubtitleId = model.id
                 }
+            }
+            onObjectAdded: function(index, object) {
+                secondarySubtitleMenu.insertItem(index, object)
+            }
+            onObjectRemoved: function(index, object) {
+                secondarySubtitleMenu.removeItem(object)
             }
         }
     }

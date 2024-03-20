@@ -19,15 +19,23 @@ Labs.Menu {
     Labs.Menu {
         id: audioMenu
 
-        Repeater {
+        title: i18nc("@title:menu", "&Track")
+
+        Instantiator {
             model: mpv.audioTracksModel
-            delegate: MenuItem {
+            delegate: Labs.MenuItem {
                 checkable: true
                 checked: model.id === mpv.audioId
                 text: model.text
                 onTriggered: {
                     mpv.audioId = model.id
                 }
+            }
+            onObjectAdded: function(index, object) {
+                audioMenu.insertItem(index, object)
+            }
+            onObjectRemoved: function(index, object) {
+                audioMenu.removeItem(object)
             }
         }
     }
