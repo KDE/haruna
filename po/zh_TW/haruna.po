@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:37+0000\n"
-"PO-Revision-Date: 2024-01-22 16:08+0900\n"
+"POT-Creation-Date: 2024-03-21 00:37+0000\n"
+"PO-Revision-Date: 2024-03-20 18:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -717,7 +717,7 @@ msgid "Recent Files"
 msgstr "最近使用的檔案"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:63
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:41
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:47
 #: src/qml/Menus/SubtitlesMenu.qml:27
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
@@ -839,7 +839,7 @@ msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "音效(&A)"
 
-#: src/qml/Menus/AudioMenu.qml:22
+#: src/qml/Menus/AudioMenu.qml:22 src/qml/Menus/Global/GlobalAudioMenu.qml:22
 msgctxt "@title:menu"
 msgid "&Track"
 msgstr "軌道(&T)"
@@ -1302,12 +1302,9 @@ msgstr "產生準確預覽會比較慢"
 #: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
 msgid "Thumbnail Width"
-msgstr ""
+msgstr "縮圖寬度"
 
 #: src/qml/Settings/GeneralSettings.qml:232
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "視窗"
