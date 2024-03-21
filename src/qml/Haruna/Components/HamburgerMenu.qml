@@ -58,9 +58,26 @@ ToolButton {
         }
 
         SubtitleTracksMenu {
+            id: primarySubtitlesMenu
+
+            model: mpv.subtitleTracksModel
+            isPrimarySubtitleMenu: true
+            title: i18nc("@title:menu", "Primary Subtitle")
+        }
+
+        SubtitleTracksMenu {
             model: mpv.subtitleTracksModel
             isPrimarySubtitleMenu: false
             title: i18nc("@title:menu", "Secondary Subtitle")
+        }
+
+
+        AudioTracksMenu {
+            id: audioMenu
+
+            y: parent.height
+            title: i18nc("@title:menu", "Audio Track")
+            model: mpv.audioTracksModel
         }
 
         MenuSeparator {}
@@ -94,42 +111,4 @@ ToolButton {
         }
     }
 
-    SubtitleTracksMenu {
-        id: primarySubtitlesMenu
-
-        model: mpv.subtitleTracksModel
-        isPrimarySubtitleMenu: true
-        title: i18nc("@title:menu", "Primary Subtitle")
-
-        Component.onCompleted: {
-            if (root.position === HamburgerMenu.Position.Footer) {
-                menu.insertMenu(4, primarySubtitlesMenu)
-            }
-        }
-    }
-
-    Menu {
-        id: audioMenu
-
-        title: i18nc("@title:menu", "&Audio Track")
-        enabled: mpv.audioTracksModel.rowCount() > 0
-
-        Repeater {
-            id: audioMenuInstantiator
-            model: mpv.audioTracksModel
-            delegate: MenuItem {
-                id: audioMenuItem
-                checkable: true
-                checked: model.id === mpv.audioId
-                text: model.text
-                onTriggered: mpv.audioId = model.id
-            }
-        }
-
-        Component.onCompleted: {
-            if (root.position === HamburgerMenu.Position.Footer) {
-                menu.insertMenu(5, audioMenu)
-            }
-        }
-    }
 }
