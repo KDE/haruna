@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:37+0000\n"
+"POT-Creation-Date: 2024-03-22 00:37+0000\n"
 "PO-Revision-Date: 2023-12-13 21:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -718,29 +718,32 @@ msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Azken aldiko fitxategiak"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:63
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:47
-#: src/qml/Menus/SubtitlesMenu.qml:27
-msgctxt "@title:menu"
-msgid "Secondary Subtitle"
-msgstr "Bigarren mailako azpidatzia"
-
-#: src/qml/Haruna/Components/HamburgerMenu.qml:84
-msgctxt "@action:inmenu"
-msgid "&More"
-msgstr "&Gehiago"
-
-#: src/qml/Haruna/Components/HamburgerMenu.qml:102
+#: src/qml/Haruna/Components/HamburgerMenu.qml:65
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Lehen mailako azpidatzia"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:114
+#: src/qml/Haruna/Components/HamburgerMenu.qml:71
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:47
+#: src/qml/Menus/SubtitlesMenu.qml:27
 msgctxt "@title:menu"
-msgid "&Audio Track"
+msgid "Secondary Subtitle"
+msgstr "Bigarren mailako azpidatzia"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:79
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "&Audio Track"
+msgctxt "@title:menu"
+msgid "Audio Track"
 msgstr "&Audio-pista"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:101
+msgctxt "@action:inmenu"
+msgid "&More"
+msgstr "&Gehiago"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"

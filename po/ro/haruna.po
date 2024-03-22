@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:37+0000\n"
+"POT-Creation-Date: 2024-03-22 00:37+0000\n"
 "PO-Revision-Date: 2024-02-24 16:34+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -712,29 +712,32 @@ msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Fișiere recente"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:63
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:47
-#: src/qml/Menus/SubtitlesMenu.qml:27
-msgctxt "@title:menu"
-msgid "Secondary Subtitle"
-msgstr "Subtitre secundare"
-
-#: src/qml/Haruna/Components/HamburgerMenu.qml:84
-msgctxt "@action:inmenu"
-msgid "&More"
-msgstr "&Mai mult"
-
-#: src/qml/Haruna/Components/HamburgerMenu.qml:102
+#: src/qml/Haruna/Components/HamburgerMenu.qml:65
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Subtitre primare"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:114
+#: src/qml/Haruna/Components/HamburgerMenu.qml:71
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:47
+#: src/qml/Menus/SubtitlesMenu.qml:27
 msgctxt "@title:menu"
-msgid "&Audio Track"
+msgid "Secondary Subtitle"
+msgstr "Subtitre secundare"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:79
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "&Audio Track"
+msgctxt "@title:menu"
+msgid "Audio Track"
 msgstr "Pistă &audio"
+
+#: src/qml/Haruna/Components/HamburgerMenu.qml:101
+msgctxt "@action:inmenu"
+msgid "&More"
+msgstr "&Mai mult"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
