@@ -350,13 +350,13 @@
         <p>Some hwdec options have been removed, if needed they can be set in the settings under "Custom commands" as `set hwdec decoding_method_name` and choose "Run at startup"</p>
         <p>Features:</p>
         <ul>
-          <li>Opening items from the playlist should be faster</li>
+          <li>Opening items from the playlist is faster</li>
+          <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
         </ul>
         <p>Bugfixes:</p>
         <ul>
           <li>Opening file through "Open File" action was not playing the file</li>
           <li>Opening playlist file from playlist header was not doing anything</li>
-          <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
         </ul>
       </description>
     </release>
