@@ -33,8 +33,6 @@ ItemDelegate {
     onDoubleClicked: {
         if (!PlaylistSettings.openWithSingleClick) {
             mpv.playlistProxyModel.setPlayingItem(index)
-            mpv.loadFile(path)
-            mpv.pause = false
         }
     }
 
