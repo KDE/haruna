@@ -177,7 +177,7 @@ SettingsBasePage {
 
         Item { width: 1; height: 1 }
         CheckBox {
-            checked: PlaylistSettings.useSingleClick
+            checked: PlaylistSettings.openWithSingleClick
             text: i18nc("@option:check", "Open items with single click")
             onCheckStateChanged: {
                 PlaylistSettings.openWithSingleClick = checked
