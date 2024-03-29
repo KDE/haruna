@@ -106,7 +106,15 @@ ItemDelegate {
             }
         }
     }
+    onClicked: {
+        if (PlaylistSettings.openWithSingleClick) {
+            mpv.playlistProxyModel.setPlayingItem(index)
+        }
+    }
+
     onDoubleClicked: {
-        mpv.playlistProxyModel.setPlayingItem(index)
+        if (!PlaylistSettings.openWithSingleClick) {
+            mpv.playlistProxyModel.setPlayingItem(index)
+        }
     }
 }

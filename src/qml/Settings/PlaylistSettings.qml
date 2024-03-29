@@ -175,6 +175,16 @@ SettingsBasePage {
             }
         }
 
+        Item { width: 1; height: 1 }
+        CheckBox {
+            checked: PlaylistSettings.useSingleClick
+            text: i18nc("@option:check", "Open items with single click")
+            onCheckStateChanged: {
+                PlaylistSettings.openWithSingleClick = checked
+                PlaylistSettings.save()
+            }
+        }
+
 
         Item {
             width: Kirigami.Units.gridUnit

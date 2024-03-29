@@ -24,10 +24,20 @@ ItemDelegate {
     padding: 0
     highlighted: model.isPlaying
 
+    onClicked: {
+        if (PlaylistSettings.openWithSingleClick) {
+            mpv.playlistProxyModel.setPlayingItem(index)
+            mpv.loadFile(path)
+            mpv.pause = false
+        }
+    }
+
     onDoubleClicked: {
-        mpv.playlistProxyModel.setPlayingItem(index)
-        mpv.loadFile(path)
-        mpv.pause = false
+        if (!PlaylistSettings.openWithSingleClick) {
+            mpv.playlistProxyModel.setPlayingItem(index)
+            mpv.loadFile(path)
+            mpv.pause = false
+        }
     }
 
     background: Rectangle {
