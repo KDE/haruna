@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:37+0000\n"
-"PO-Revision-Date: 2024-03-20 18:15+0900\n"
+"POT-Creation-Date: 2024-03-30 00:37+0000\n"
+"PO-Revision-Date: 2024-03-29 21:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -731,12 +731,9 @@ msgid "Secondary Subtitle"
 msgstr "第二字幕"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:79
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "音效軌(&A)"
+msgstr "音效軌"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:101
 msgctxt "@action:inmenu"
@@ -1623,6 +1620,11 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "勾選時播放清單狀態（可見/隱藏）會在下次開啟時記住"
+
+#: src/qml/Settings/PlaylistSettings.qml:181
+msgctxt "@option:check"
+msgid "Open items with single click"
+msgstr ""
 
 #: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
