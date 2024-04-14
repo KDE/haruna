@@ -24,10 +24,14 @@ LockManager::LockManager(QObject *parent)
 void LockManager::setInhibitionOff()
 {
     m_iface->UnInhibit(m_cookie);
+    m_cookie = -1;
 }
 
 void LockManager::setInhibitionOn()
 {
+    if (m_cookie != -1) {
+        setInhibitionOff();
+    }
     m_cookie = m_iface->Inhibit(QStringLiteral("org.kde.haruna"), i18nc("@info reason for blocking sleep and screen slocking", "Playing media file"));
 }
 
