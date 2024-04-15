@@ -399,6 +399,9 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
+    // store the mute property so it can be restored after loading file
+    auto mute = m_mute;
+    // mute to avoid popping sound while loading files
     setPropertyBlocking(MpvProperties::self()->Mute, true);
     setPropertyBlocking(MpvProperties::self()->Pause, false);
     setWatchLaterPosition(loadTimePosition());
@@ -407,7 +410,7 @@ void MpvItem::loadFile(const QString &file)
         setPropertyBlocking(u"start"_qs, QVariant(u"+"_qs + QString::number(m_watchLaterPosition)));
     }
     Q_EMIT command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
-    setPropertyBlocking(MpvProperties::self()->Mute, false);
+    setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();
