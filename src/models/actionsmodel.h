@@ -73,8 +73,6 @@ public:
     Q_INVOKABLE QString getShortcut(const QString &key, const QKeySequence &defaultValue) const;
     Q_INVOKABLE void signalEmitter(const QString &actionName);
 
-    QQmlPropertyMap propertyMap;
-
     QList<Action> &actions();
 
 Q_SIGNALS:
