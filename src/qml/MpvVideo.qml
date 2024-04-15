@@ -39,7 +39,7 @@ MpvItem {
         loadingIndicatorParent.visible = false
     }
 
-    onOsdMessage: {
+    onOsdMessage: function(text) {
         osd.message(text);
     }
 
