@@ -142,7 +142,6 @@ ItemDelegate {
                 font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
                                 ? Kirigami.Units.gridUnit
                                 : Kirigami.Units.gridUnit - 5
-                font.weight: model.isPlaying ? Font.ExtraBold : Font.Normal
                 layer.enabled: true
                 Layout.fillWidth: true
                 Layout.fillHeight: true

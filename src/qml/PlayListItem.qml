@@ -84,7 +84,6 @@ ItemDelegate {
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 font.pointSize: root.fontSize
-                font.weight: model.isPlaying ? Font.ExtraBold : Font.Normal
                 text: PlaylistSettings.showMediaTitle ? model.title : model.name
                 layer.enabled: true
                 Layout.fillWidth: true
