@@ -95,9 +95,9 @@ void Application::setupAboutData()
 {
     KAboutData m_aboutData;
     m_aboutData.setComponentName(QStringLiteral("haruna"));
-    m_aboutData.setDisplayName(i18nc("application title/display name", "Haruna Media Player"));
+    m_aboutData.setDisplayName(i18nc("application title/display name", "Haruna"));
     m_aboutData.setVersion(Application::version().toUtf8());
-    m_aboutData.setShortDescription(i18nc("@title", "A configurable media player."));
+    m_aboutData.setShortDescription(i18nc("@title", "Media player"));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
     m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2023"));
     m_aboutData.setHomepage(QStringLiteral("https://haruna.kde.org"));
