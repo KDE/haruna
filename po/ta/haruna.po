@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2023-09-10 18:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -28,16 +28,20 @@ msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
 #: src/application.cpp:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Haruna"
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "ஹருணா நிகழ்பட இயக்கி"
+msgid "Haruna"
+msgstr "ஹருணா"
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Media Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr "தனிப்பயனாக்கக்கூடிய நிகழ்பட இயக்கி."
+msgid "Media player"
+msgstr "ஹருணா நிகழ்பட இயக்கி"
 
 #: src/application.cpp:102
 #, kde-format
@@ -543,14 +547,14 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "இதனை இயக்க முடியவில்லை: %1"
 
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot taken"
@@ -558,19 +562,19 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "திரைப்பிடிப்பு எடுக்கப்பட்டது"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "திரைப்பிடிப்பு எடுக்கப்பட்டது"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "திரைப்பிடிப்பு: %1"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1853,6 +1857,10 @@ msgstr ""
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#~ msgctxt "@title"
+#~ msgid "A configurable media player."
+#~ msgstr "தனிப்பயனாக்கக்கூடிய நிகழ்பட இயக்கி."
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"

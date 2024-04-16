@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2023-09-02 08:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -28,16 +28,20 @@ msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
 #: src/application.cpp:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Haruna"
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "Haruna mediaspelare"
+msgid "Haruna"
+msgstr "Haruna"
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Media Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr "En inställningsbar mediaspelare."
+msgid "Media player"
+msgstr "Haruna mediaspelare"
 
 #: src/application.cpp:102
 #, kde-format
@@ -539,32 +543,32 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kunde inte spela: %1"
 
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ingen"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Skärmbild misslyckades"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Skärmbild: %1"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1854,6 +1858,10 @@ msgstr "Färgmättnad"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Mittenklicka på skjutreglagen för att återställa dem"
+
+#~ msgctxt "@title"
+#~ msgid "A configurable media player."
+#~ msgstr "En inställningsbar mediaspelare."
 
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"

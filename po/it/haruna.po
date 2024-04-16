@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2024-04-01 12:44+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -29,16 +29,20 @@ msgid "Your emails"
 msgstr "valtermura@gmail.com"
 
 #: src/application.cpp:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Haruna"
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "Lettore multimediale Haruna"
+msgid "Haruna"
+msgstr "Haruna"
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Media Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr "Riproduttore multimediale configurabile."
+msgid "Media player"
+msgstr "Lettore multimediale Haruna"
 
 #: src/application.cpp:102
 #, kde-format
@@ -543,32 +547,32 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Impossibile riprodurre: %1"
 
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nessuno"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Schermata non riuscita"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Schermata scattata"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Schermata: %1"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1853,6 +1857,10 @@ msgstr "Saturazione"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clic centrale sui cursori per azzerarli"
+
+#~ msgctxt "@title"
+#~ msgid "A configurable media player."
+#~ msgstr "Riproduttore multimediale configurabile."
 
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"

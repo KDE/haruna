@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2023-12-13 07:56-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -31,16 +31,20 @@ msgstr ""
 "geraldosimiao@fedoraproject.org"
 
 #: src/application.cpp:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Haruna"
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "Reprodutor de mídia Haruna"
+msgid "Haruna"
+msgstr "Haruna"
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Media Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr "Um reprodutor de mídia configurável."
+msgid "Media player"
+msgstr "Reprodutor de mídia Haruna"
 
 #: src/application.cpp:102
 #, kde-format
@@ -542,32 +546,32 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Não foi possível reproduzir: %1"
 
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nenhuma"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Falha na captura de tela"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Captura de tela efetuada"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de tela: %1"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1859,6 +1863,10 @@ msgstr "Saturação"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clique com o botão do meio nos controles deslizantes para redefini-los"
+
+#~ msgctxt "@title"
+#~ msgid "A configurable media player."
+#~ msgstr "Um reprodutor de mídia configurável."
 
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"

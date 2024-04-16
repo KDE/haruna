@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2024-01-19 15:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -28,16 +28,20 @@ msgid "Your emails"
 msgstr "vit@pelcak.org"
 
 #: src/application.cpp:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Haruna"
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "Přehrávač médií Haruna"
+msgid "Haruna"
+msgstr "Haruna"
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Media Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr "Nastavitelný přehrávač videa."
+msgid "Media player"
+msgstr "Přehrávač médií Haruna"
 
 #: src/application.cpp:102
 #, kde-format
@@ -537,32 +541,32 @@ msgid "Could not play: %1"
 msgstr "Nelze přehrát: %1"
 
 # žádné parametry funkce v inspektoru funkcí
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nic"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímání obrazovky selhalo"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímek obrazovky byl pořízen"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Snímek obrazovky: %1"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1815,3 +1819,7 @@ msgstr "Nasycení"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
+
+#~ msgctxt "@title"
+#~ msgid "A configurable media player."
+#~ msgstr "Nastavitelný přehrávač videa."

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2021-07-18 15:26+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -26,17 +26,17 @@ msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
 #: src/application.cpp:98
-#, fuzzy, kde-format
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "Prehrávač videa Haruna"
+msgid "Haruna"
+msgstr ""
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Haruna Video Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr ""
+msgid "Media player"
+msgstr "Prehrávač videa Haruna"
 
 #: src/application.cpp:102
 #, fuzzy, kde-format
@@ -587,35 +587,35 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kontrast: %1"
 
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"

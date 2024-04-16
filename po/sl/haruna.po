@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:37+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2024-03-30 06:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -31,16 +31,20 @@ msgid "Your emails"
 msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
 
 #: src/application.cpp:98
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Haruna"
 msgctxt "application title/display name"
-msgid "Haruna Media Player"
-msgstr "Medijski predvajalnik Haruna"
+msgid "Haruna"
+msgstr "Haruna"
 
 #: src/application.cpp:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "application title/display name"
+#| msgid "Haruna Media Player"
 msgctxt "@title"
-msgid "A configurable media player."
-msgstr "Nastavljiv predvajalnik medijev."
+msgid "Media player"
+msgstr "Medijski predvajalnik Haruna"
 
 #: src/application.cpp:102
 #, kde-format
@@ -542,32 +546,32 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ni mogoče predvajati: %1"
 
-#: src/mpv/mpvitem.cpp:423
+#: src/mpv/mpvitem.cpp:426
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Noben"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:460
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Posnetek zaslona ni usoel"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Posnetek zaslona narejen"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:467
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Posnetek zaslona: %1"
 
-#: src/mpv/mpvitem.cpp:512
+#: src/mpv/mpvitem.cpp:515
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1855,6 +1859,10 @@ msgstr "Nasičenost"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"
+
+#~ msgctxt "@title"
+#~ msgid "A configurable media player."
+#~ msgstr "Nastavljiv predvajalnik medijev."
 
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"
