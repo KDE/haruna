@@ -20,6 +20,9 @@ public:
         return &p;
     }
 
+    Q_PROPERTY(QString VO MEMBER Pause CONSTANT)
+    const QString VO{QStringLiteral("vo")};
+
     Q_PROPERTY(QString Pause MEMBER Pause CONSTANT)
     const QString Pause{QStringLiteral("pause")};
 
