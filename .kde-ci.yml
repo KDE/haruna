@@ -15,3 +15,6 @@ Dependencies:
     'frameworks/kirigami': '@latest-kf6'
     'libraries/mpvqt': '@latest'
     'frameworks/qqc2-desktop-style': '@latest-kf6'
+
+Options:
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
