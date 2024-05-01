@@ -209,6 +209,9 @@ public:
     Q_PROPERTY(QString AspectRatio MEMBER AspectRatio CONSTANT)
     const QString AspectRatio{QStringLiteral("video-params/aspect")};
 
+    Q_PROPERTY(QString TracksCount MEMBER TracksCount CONSTANT)
+    const QString TracksCount{QStringLiteral("track-list/count")};
+
 private:
     explicit MpvProperties(QObject *parent = nullptr)
         : QObject(parent)

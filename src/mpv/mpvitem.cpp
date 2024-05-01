@@ -65,6 +65,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     Q_EMIT observeProperty(MpvProperties::self()->SecondarySubtitleId, MPV_FORMAT_INT64);
     Q_EMIT observeProperty(MpvProperties::self()->Chapter, MPV_FORMAT_INT64);
     Q_EMIT observeProperty(MpvProperties::self()->ChapterList, MPV_FORMAT_NODE);
+    Q_EMIT observeProperty(MpvProperties::self()->TracksCount, MPV_FORMAT_NODE);
 
     initProperties();
     setupConnections();
@@ -389,6 +390,10 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
     } else if (property == MpvProperties::self()->Height) {
         m_videoHeight = value.toInt();
+        Q_EMIT videoHeightChanged();
+
+    } else if (property == MpvProperties::self()->TracksCount) {
+        loadTracks(getProperty(MpvProperties::self()->TrackList).toList());
         Q_EMIT videoHeightChanged();
     }
 }
