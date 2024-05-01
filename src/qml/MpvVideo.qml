@@ -142,11 +142,12 @@ MpvItem {
         keys: ["text/uri-list"]
 
         onDropped: drop => {
-            if (window.acceptedSubtitleTypes.includes(app.mimeType(drop.urls[0]))) {
+            const mimeType = app.mimeType(drop.urls[0])
+            if (window.acceptedSubtitleTypes.includes(mimeType)) {
                 command(["sub-add", drop.urls[0], "select"])
             }
 
-            if (app.mimeType(drop.urls[0]).startsWith("video/") || app.mimeType(drop.urls[0]).startsWith("audio/")) {
+            if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
                 window.openFile(drop.urls[0], true)
             }
         }
