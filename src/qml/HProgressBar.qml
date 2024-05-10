@@ -77,8 +77,8 @@ Slider {
                         position: previewMpvLoader.position
                         file: previewMpvLoader.file
 
-                        onIsLocalFileChanged: {
-                            previewMpvLoader.visible = isLocalFile
+                        onFileChanged: {
+                            previewMpvLoader.visible = isLocalFile && isVideo
                         }
                         onAspectRatioChanged: previewMpvLoader.aspectRatio = aspectRatio || 1
                     }

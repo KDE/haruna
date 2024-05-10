@@ -7,6 +7,7 @@
 #include "mpvpreview.h"
 
 #include <MpvController>
+#include <QMimeDatabase>
 
 #include "generalsettings.h"
 #include "mpvproperties.h"
@@ -47,7 +48,7 @@ MpvPreview::MpvPreview()
 
 void MpvPreview::loadFile()
 {
-    if (m_isReady && !m_file.isEmpty()) {
+    if (m_isReady && m_isVideo && !m_file.isEmpty()) {
         Q_EMIT command(QStringList() << QStringLiteral("loadfile") << m_file);
     }
 }
@@ -84,6 +85,10 @@ void MpvPreview::setFile(const QString &_file)
     auto url = QUrl::fromUserInput(m_file);
     setIsLocalFile(url.isLocalFile());
 
+    QMimeDatabase mimeDb;
+    QString mimeType = mimeDb.mimeTypeForFile(m_file).name();
+    setIsVideo(mimeType.startsWith(u"video/"_qs));
+
     Q_EMIT fileChanged();
 }
 
@@ -117,3 +122,17 @@ void MpvPreview::setIsLocalFile(bool _isLocalFile)
 }
 
 #include "moc_mpvpreview.cpp"
+
+bool MpvPreview::isVideo() const
+{
+    return m_isVideo;
+}
+
+void MpvPreview::setIsVideo(bool _isVideo)
+{
+    if (m_isVideo == _isVideo) {
+        return;
+    }
+    m_isVideo = _isVideo;
+    Q_EMIT isVideoChanged();
+}
