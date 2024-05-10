@@ -34,12 +34,9 @@ ToolBar {
         id: footerRow
         anchors.fill: parent
 
-        Loader {
-            asynchronous: true
+        HamburgerMenu {
+            position: HamburgerMenu.Position.Footer
             visible: menuBarLoader.state === "hidden" && !header.visible
-            sourceComponent: HamburgerMenu {
-                position: HamburgerMenu.Position.Footer
-            }
         }
 
         Loader {

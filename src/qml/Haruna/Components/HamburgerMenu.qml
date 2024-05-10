@@ -25,89 +25,98 @@ ToolButton {
     focusPolicy: Qt.NoFocus
 
     onReleased: {
-        menu.visible = !menu.visible
+        menuLoader.menuVisibility = !menuLoader.menuVisibility
     }
 
-    Menu {
-        id: menu
+    Loader {
+        id: menuLoader
 
-        y: root.position === HamburgerMenu.Position.Header
-           ? parent.height + Kirigami.Units.smallSpacing
-           : -height - Kirigami.Units.smallSpacing
-        closePolicy: Popup.CloseOnReleaseOutsideParent
+        property bool menuVisibility: false
 
-        MenuItem {
-            action: appActions.openFileAction
-            visible: root.position === HamburgerMenu.Position.Footer
-        }
-        MenuItem {
-            action: appActions.openUrlAction
-            visible: root.position === HamburgerMenu.Position.Footer
-        }
+        asynchronous: true
+        active: menuBarLoader.state === "hidden"
+        sourceComponent: Menu {
+            id: menu
 
-        Menu {
-            title: i18nc("@action:inmenu", "Recent Files")
+            y: root.position === HamburgerMenu.Position.Header
+               ? root.height + Kirigami.Units.smallSpacing
+               : -height - Kirigami.Units.smallSpacing
+            visible:  menuLoader.menuVisibility
+            closePolicy: Popup.CloseOnReleaseOutsideParent
+            onClosed: menuLoader.menuVisibility = menu.visible
 
-            Repeater {
-                model: recentFilesModel
-                delegate: MenuItem {
-                    text: model.name
-                    onClicked: window.openFile(model.path)
+            MenuItem {
+                action: appActions.openFileAction
+                visible: root.position === HamburgerMenu.Position.Footer
+            }
+            MenuItem {
+                action: appActions.openUrlAction
+                visible: root.position === HamburgerMenu.Position.Footer
+            }
+
+            Menu {
+                title: i18nc("@action:inmenu", "Recent Files")
+
+                Repeater {
+                    model: recentFilesModel
+                    delegate: MenuItem {
+                        text: model.name
+                        onClicked: window.openFile(model.path)
+                    }
                 }
             }
-        }
 
-        SubtitleTracksMenu {
-            id: primarySubtitlesMenu
+            SubtitleTracksMenu {
+                id: primarySubtitlesMenu
 
-            model: mpv.subtitleTracksModel
-            isPrimarySubtitleMenu: true
-            title: i18nc("@title:menu", "Primary Subtitle")
-        }
+                model: mpv.subtitleTracksModel
+                isPrimarySubtitleMenu: true
+                title: i18nc("@title:menu", "Primary Subtitle")
+            }
 
-        SubtitleTracksMenu {
-            model: mpv.subtitleTracksModel
-            isPrimarySubtitleMenu: false
-            title: i18nc("@title:menu", "Secondary Subtitle")
-        }
+            SubtitleTracksMenu {
+                model: mpv.subtitleTracksModel
+                isPrimarySubtitleMenu: false
+                title: i18nc("@title:menu", "Secondary Subtitle")
+            }
 
 
-        AudioTracksMenu {
-            id: audioMenu
+            AudioTracksMenu {
+                id: audioMenu
 
-            y: parent.height
-            title: i18nc("@title:menu", "Audio Track")
-            model: mpv.audioTracksModel
-        }
+                title: i18nc("@title:menu", "Audio Track")
+                model: mpv.audioTracksModel
+            }
 
-        MenuSeparator {}
+            MenuSeparator {}
 
-        MenuItem { action: appActions.toggleFullscreenAction }
-        MenuItem { action: appActions.toggleDeinterlacingAction }
-        MenuItem { action: appActions.screenshotAction }
+            MenuItem { action: appActions.toggleFullscreenAction }
+            MenuItem { action: appActions.toggleDeinterlacingAction }
+            MenuItem { action: appActions.screenshotAction }
 
-        MenuSeparator {}
+            MenuSeparator {}
 
-        MenuItem {
-            action: appActions.configureAction
-            visible: root.position === HamburgerMenu.Position.Footer
-        }
-        MenuItem { action: appActions.configureShortcutsAction }
-        MenuItem { action: appActions.aboutHarunaAction }
+            MenuItem {
+                action: appActions.configureAction
+                visible: root.position === HamburgerMenu.Position.Footer
+            }
+            MenuItem { action: appActions.configureShortcutsAction }
+            MenuItem { action: appActions.aboutHarunaAction }
 
-        MenuSeparator {}
+            MenuSeparator {}
 
-        Menu {
-            title: i18nc("@action:inmenu", "&More")
+            Menu {
+                title: i18nc("@action:inmenu", "&More")
 
-            FileMenu {}
-            ViewMenu {}
-            PlaybackMenu {}
-            VideoMenu {}
-            SubtitlesMenu {}
-            AudioMenu {}
-            SettingsMenu {}
-            HelpMenu {}
+                FileMenu {}
+                ViewMenu {}
+                PlaybackMenu {}
+                VideoMenu {}
+                SubtitlesMenu {}
+                AudioMenu {}
+                SettingsMenu {}
+                HelpMenu {}
+            }
         }
     }
 
