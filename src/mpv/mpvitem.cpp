@@ -22,7 +22,6 @@
 #include "chaptersmodel.h"
 #include "generalsettings.h"
 #include "global.h"
-#include "informationsettings.h"
 #include "mpvproperties.h"
 #include "playbacksettings.h"
 #include "playlistmodel.h"
