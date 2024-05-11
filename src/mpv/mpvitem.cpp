@@ -493,6 +493,15 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     }
     case AsyncIds::VideoId: {
         if (!data.toBool()) {
+            // there's no video track
+            // either because the file is an audio file or the video track can't be decoded
+            auto mimeType = Application::mimeType(currentUrl());
+            if (mimeType.startsWith(u"video/"_qs)) {
+                auto errMsg = i18nc("Error message when video can't be decoded/played",
+                                    "No video track detected, most likely the video track can't be decoded/played due to missing codecs");
+                Q_EMIT Application::instance()->error(errMsg);
+                break;
+            }
             Q_EMIT command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
         }
         break;
