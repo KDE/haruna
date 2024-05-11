@@ -21,6 +21,7 @@ Menu {
         y: parent.height
         title: i18nc("@title:menu", "&Track")
         model: mpv.audioTracksModel
+        enabled: mpv.audioTracksModel.rowCount() > 0
     }
 
     MenuSeparator {}
