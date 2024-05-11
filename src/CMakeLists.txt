@@ -7,7 +7,7 @@
 # DATA_ICONS is defined in data/CMakeLists.txt
 ecm_add_app_icon(ICONS_SRCS ICONS ${DATA_ICONS})
 
-add_executable(haruna)
+qt_add_executable(haruna)
 
 target_sources(haruna
     PRIVATE
@@ -45,6 +45,15 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     target_include_directories(haruna PRIVATE mpris2)
 endif()
 
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/generalsettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/informationsettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/mousesettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playbacksettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
+kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
+
 qt_policy(SET QTP0001 NEW)
 
 qt_add_qml_module(haruna
@@ -63,7 +72,7 @@ qt_add_qml_module(haruna
         qml/PlayListItemCompact.qml
         qml/PlayListItemWithThumbnail.qml
         qml/VolumeSlider.qml
-        qml/main.qml
+        qml/Main.qml
 
         qml/Haruna/Components/AudioTracksMenu.qml
         qml/Haruna/Components/ColorPickerButton.qml
@@ -108,15 +117,6 @@ qt_add_qml_module(haruna
         qml/Settings/DebugSettings.qml
         qml/Settings/SettingsWindow.qml
 )
-
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/generalsettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/informationsettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/mousesettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playbacksettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
 
 target_include_directories(haruna
     PRIVATE
