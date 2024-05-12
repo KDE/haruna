@@ -96,11 +96,10 @@ find_package(KF6WindowSystem ${KF6_MIN_VERSION})
 set_package_properties(KF6WindowSystem PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kwindowsystem/html/index.html")
 
-find_package(YouTubeDl)
-set_package_properties(YouTubeDl PROPERTIES TYPE RUNTIME)
-
 find_package(Ytdlp)
-set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME)
+set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
+    URL "https://github.com/yt-dlp/yt-dlp"
+    DESCRIPTION "needed to play videos from youtube and other online sources")
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
