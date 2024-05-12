@@ -39,6 +39,8 @@ flatpak run --branch=beta org.kde.haruna
 
 these are just some features that set Haruna apart from others players
 
+- video preview on seek/progress bar
+
 - play online videos, through youtube-dl
 
 - toggle playlist with mouse-over, playlist overlays the video
@@ -48,6 +50,8 @@ these are just some features that set Haruna apart from others players
 - configurable shortcuts and mouse buttons
 
 - quick jump to next chapter by middle click on progress bar
+
+- custom mpv commands, can be run at start up or on keyboard shortcut
 
 # Dependencies
 Dependencies will be printed by `cmake` when building.
