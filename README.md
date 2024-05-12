@@ -50,37 +50,13 @@ these are just some features that set Haruna apart from others players
 - quick jump to next chapter by middle click on progress bar
 
 # Dependencies
-
-### Build time
-- Libmpv
-- FFmpeg
-- Qt5Core
-- Qt5DBus
-- Qt5Qml
-- Qt5Quick
-- Qt5QuickControls2
-- ExtraCmakeModules
-- KF5Config
-- KF5CoreAddons
-- KF5FileMetaData
-- KF5I18n
-- KF5IconThemes
-- KF5KIO
-- KF5Kirigami2
-- KF5DocTools
-
-### Runtime
-- Breeze icons
-- Breeze widgets style
-- QQC2-Desktop-Style
-- Youtube-dl
+Dependencies will be printed by `cmake` when building.
 
 # Build
 
 ```bash
 git clone https://invent.kde.org/multimedia/haruna.git
 cd haruna
-# append `-D CMAKE_INSTALL_PREFIX:PATH=/your/custom/path` to install to a custom location
 cmake -B build -G Ninja
 cmake --build build
 cmake --install build
