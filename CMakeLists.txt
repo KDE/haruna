@@ -50,7 +50,9 @@ set_package_properties(MpvQt PROPERTIES TYPE REQUIRED
     URL "https://invent.kde.org/libraries/mpvqt")
 
 find_package(FFmpeg)
-set_package_properties(FFmpeg PROPERTIES TYPE REQUIRED)
+set_package_properties(FFmpeg PROPERTIES TYPE REQUIRED
+    URL "https://ffmpeg.org"
+    DESCRIPTION "needed for playlist and mpris thumbnails")
 
 find_package(Breeze)
 set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
