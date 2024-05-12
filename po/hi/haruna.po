@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:38+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -592,42 +592,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:291
+#: src/mpv/mpvitem.cpp:290
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/mpv/mpvitem.cpp:433
+#: src/mpv/mpvitem.cpp:432
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:467
+#: src/mpv/mpvitem.cpp:466
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:472
+#: src/mpv/mpvitem.cpp:471
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:522
+#: src/mpv/mpvitem.cpp:500
+#, kde-format
+msgctxt "Error message when video can't be decoded/played"
+msgid ""
+"No video track detected, most likely the video track can't be decoded/played "
+"due to missing codecs"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:530
 #, fuzzy, kde-format
 #| msgid "Skip chapters"
 msgctxt "@info:tooltip osd"
@@ -655,164 +663,164 @@ msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "लूप आरंभ : %1"
 
-#: src/qml/Actions.qml:256
+#: src/qml/Actions.qml:258
 #, fuzzy
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "लूप : %1 - %2"
 
-#: src/qml/Actions.qml:262
+#: src/qml/Actions.qml:264
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr ""
 
-#: src/qml/Actions.qml:273 src/qml/Actions.qml:279
+#: src/qml/Actions.qml:275 src/qml/Actions.qml:281
 #, fuzzy
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/qml/Actions.qml:284
+#: src/qml/Actions.qml:286
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "उपशीर्षक बंद"
 
-#: src/qml/Actions.qml:284
+#: src/qml/Actions.qml:286
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles function on"
 msgstr "उपशीर्षक चालू"
 
-#: src/qml/Actions.qml:293 src/qml/Actions.qml:305
+#: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "उपशीर्षक चालू"
 
-#: src/qml/Actions.qml:297 src/qml/Actions.qml:309
+#: src/qml/Actions.qml:299 src/qml/Actions.qml:311
 #, fuzzy
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/qml/Actions.qml:316 src/qml/Actions.qml:322
+#: src/qml/Actions.qml:318 src/qml/Actions.qml:324
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "उपशीर्षक चालू"
 
-#: src/qml/Actions.qml:336
+#: src/qml/Actions.qml:338
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr ""
 
-#: src/qml/Actions.qml:392 src/qml/Actions.qml:398
+#: src/qml/Actions.qml:394 src/qml/Actions.qml:400
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "ज़ूम : %1"
 
-#: src/qml/Actions.qml:403
+#: src/qml/Actions.qml:405
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "ज़ूम : 0"
 
-#: src/qml/Actions.qml:410 src/qml/Actions.qml:416
+#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/qml/Actions.qml:421
+#: src/qml/Actions.qml:423
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "व्यतिरेक : 0"
 
-#: src/qml/Actions.qml:427 src/qml/Actions.qml:433
+#: src/qml/Actions.qml:429 src/qml/Actions.qml:435
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "चमकीलापन: %1"
 
-#: src/qml/Actions.qml:438
+#: src/qml/Actions.qml:440
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "चमकीलापन: 0"
 
-#: src/qml/Actions.qml:444 src/qml/Actions.qml:450
+#: src/qml/Actions.qml:446 src/qml/Actions.qml:452
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "गामा : %1"
 
-#: src/qml/Actions.qml:455
+#: src/qml/Actions.qml:457
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "गामा : 0"
 
-#: src/qml/Actions.qml:461 src/qml/Actions.qml:467
+#: src/qml/Actions.qml:463 src/qml/Actions.qml:469
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "संतृप्ति: %1"
 
-#: src/qml/Actions.qml:472
+#: src/qml/Actions.qml:474
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "संतृप्ति: 0"
 
-#: src/qml/Footer.qml:60
+#: src/qml/Footer.qml:57
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "प्लेबैक प्रारंभ करें"
 
-#: src/qml/Footer.qml:60
+#: src/qml/Footer.qml:57
 #, fuzzy
 #| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "प्लेबैक ठहराएँ"
 
-#: src/qml/Footer.qml:73
+#: src/qml/Footer.qml:70
 #, fuzzy
 #| msgid "Play Previous"
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "पिछला चलाएँ"
 
-#: src/qml/Footer.qml:86
+#: src/qml/Footer.qml:83
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "अगला फ़ाइल चलाएँ"
 
-#: src/qml/Footer.qml:102
+#: src/qml/Footer.qml:99
 #, fuzzy
 #| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
@@ -826,14 +834,14 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:49
+#: src/qml/Haruna/Components/HamburgerMenu.qml:58
 #, fuzzy
 #| msgid "Recent Files"
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "हाल हीं के फाइल"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:65
+#: src/qml/Haruna/Components/HamburgerMenu.qml:74
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 #, fuzzy
@@ -842,21 +850,21 @@ msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "उपशीर्षक"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:71
+#: src/qml/Haruna/Components/HamburgerMenu.qml:80
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:47
-#: src/qml/Menus/SubtitlesMenu.qml:27
+#: src/qml/Menus/SubtitlesMenu.qml:28
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr ""
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:79
+#: src/qml/Haruna/Components/HamburgerMenu.qml:87
 #, fuzzy
 #| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "ऑडियो (&A)"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:101
+#: src/qml/Haruna/Components/HamburgerMenu.qml:109
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr ""
@@ -918,42 +926,42 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "नया फ़ोल्डर जोड़ें"
 
-#: src/qml/Header.qml:64
+#: src/qml/Header.qml:61
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/qml/Header.qml:82
+#: src/qml/Header.qml:79
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "ऑडियो"
 
-#: src/qml/HProgressBar.qml:238
+#: src/qml/HProgressBar.qml:237
 #, fuzzy
 #| msgid "Skip Chapters"
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "अध्याय छोड़ें"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:245
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 msgstr ""
 
-#: src/qml/main.qml:26
+#: src/qml/Main.qml:26
 #, fuzzy
 #| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
 #: src/qml/Settings/VideoSettings.qml:72
 #, fuzzy
 #| msgid "Select file"
@@ -961,14 +969,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/main.qml:252
+#: src/qml/Main.qml:252
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/main.qml:271
+#: src/qml/Main.qml:271
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
