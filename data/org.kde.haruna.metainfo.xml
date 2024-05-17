@@ -329,6 +329,17 @@
     </ul>
   </description>
   <releases>
+    <release version="1.1.1" date="2024-05-17">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Subtitles menu not including manually added subtitles</li>
+          <li>Duration in the playlist being 0</li>
+          <li>Preview popup being visible for audio files</li>
+          <li>AB loop not resetting</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2024-04-19">
       <description>
         <p>Features:</p>
@@ -338,7 +349,7 @@
         <p>Bugfixes:</p>
         <ul>
           <li>Video opening in a separate window when using mpv version 0.38.0</li>
-          <li>Mute reseting when opening a new file</li>
+          <li>Mute resetting when opening a new file</li>
           <li>Playing item in playlist is no longer bold, it made text hard to read under certain conditions</li>
         </ul>
       </description>
