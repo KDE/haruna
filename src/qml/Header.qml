@@ -43,17 +43,7 @@ ToolBar {
             focusPolicy: Qt.NoFocus
         }
 
-        ToolSeparator {
-            padding: vertical ? 10 : 2
-            topPadding: vertical ? 2 : 10
-            bottomPadding: vertical ? 2 : 10
-
-            contentItem: Rectangle {
-                implicitWidth: parent.vertical ? 1 : 24
-                implicitHeight: parent.vertical ? 24 : 1
-                color: Kirigami.Theme.textColor
-            }
-        }
+        ToolSeparator {}
 
         ToolButton {
             id: subtitleMenuButton
