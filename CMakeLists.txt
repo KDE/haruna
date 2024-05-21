@@ -28,6 +28,9 @@ set(DBUS_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 find_package(Qt6Core ${QT_MIN_VERSION})
 set_package_properties(Qt6Core PROPERTIES TYPE REQUIRED)
 
+find_package(Qt6Core5Compat ${QT_MIN_VERSION})
+set_package_properties(Qt6Core5Compat PROPERTIES TYPE REQUIRED)
+
 find_package(Qt6Gui ${QT_MIN_VERSION})
 set_package_properties(Qt6Gui PROPERTIES TYPE REQUIRED)
 

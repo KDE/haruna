@@ -130,6 +130,7 @@ target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWit
 
 target_link_libraries(haruna PRIVATE
     Qt6::Core
+    Qt6::Core5Compat
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
