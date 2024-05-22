@@ -16,6 +16,7 @@
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQuickStyle>
+#include <QQuickWindow>
 
 #include <KLocalizedString>
 
@@ -28,6 +29,9 @@ int main(int argc, char *argv[])
     QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     QApplication::setApplicationDisplayName(QStringLiteral("Haruna - Media Player"));
     QApplication::setApplicationVersion(Application::version());
+
+    // required by mpv
+    QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
     QQuickStyle::setFallbackStyle(QStringLiteral("Fusion"));
