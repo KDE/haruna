@@ -42,7 +42,11 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
         mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
         ${haruna_screensaver_inhibit_SRCS}
     )
-    target_include_directories(haruna PRIVATE mpris2)
+    target_include_directories(haruna
+        PRIVATE
+            mpris2
+            ${CMAKE_CURRENT_BINARY_DIR}
+    )
 endif()
 
 kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)

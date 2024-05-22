@@ -20,6 +20,7 @@
 #include "application.h"
 #include "audiosettings.h"
 #include "chaptersmodel.h"
+#include "config-haruna.h"
 #include "generalsettings.h"
 #include "global.h"
 #include "mpvproperties.h"
@@ -226,7 +227,7 @@ void MpvItem::setupConnections()
     });
 
 
-#if defined(Q_OS_UNIX)
+#if HAVE_DBUS
     // register mpris dbus service
     QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
     QDBusConnection::sessionBus().registerService(mspris2Name);
