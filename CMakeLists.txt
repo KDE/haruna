@@ -48,11 +48,11 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     find_package(Qt6DBus ${QT_MIN_VERSION})
     set_package_properties(Qt6DBus PROPERTIES TYPE REQUIRED)
     set(HAVE_DBUS TRUE)
-    configure_file(
-       ${CMAKE_CURRENT_SOURCE_DIR}/config-haruna.h.cmake
-       ${CMAKE_CURRENT_BINARY_DIR}/src/config-haruna.h
-    )
 endif ()
+configure_file(
+   ${CMAKE_CURRENT_SOURCE_DIR}/config-haruna.h.cmake
+   ${CMAKE_CURRENT_BINARY_DIR}/src/config-haruna.h
+)
 
 find_package(MpvQt)
 set_package_properties(MpvQt PROPERTIES TYPE REQUIRED
