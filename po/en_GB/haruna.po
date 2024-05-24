@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:38+0000\n"
-"PO-Revision-Date: 2023-05-21 14:52+0100\n"
+"PO-Revision-Date: 2024-05-23 20:04+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,20 +28,16 @@ msgid "Your emails"
 msgstr "steve.allewell@gmail.com"
 
 #: src/application.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:100
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Haruna Media Player"
+msgstr "Media player"
 
 #: src/application.cpp:102
 #, kde-format
@@ -90,12 +86,10 @@ msgid "Playing media file"
 msgstr "Playing media file"
 
 #: src/models/actionsmodel.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Open configuration file"
+msgstr "Open Actions Dialog"
 
 #: src/models/actionsmodel.cpp:28
 #, kde-format
@@ -553,26 +547,22 @@ msgid "None"
 msgstr "None"
 
 #: src/mpv/mpvitem.cpp:467
-#, fuzzy, kde-format
-#| msgid "Screenshot template"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "Screenshot template"
+msgstr "Screenshot failed"
 
 #: src/mpv/mpvitem.cpp:472
-#, fuzzy, kde-format
-#| msgid "Screenshot template"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Screenshot template"
+msgstr "Screenshot taken"
 
 #: src/mpv/mpvitem.cpp:474
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Screenshot"
+msgstr "Screenshot: %1"
 
 #: src/mpv/mpvitem.cpp:501
 #, kde-format
@@ -581,11 +571,11 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"No video track detected, most likely the video track can't be decoded/played "
+"due to missing codecs"
 
 #: src/mpv/mpvitem.cpp:531
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Skipped chapter: %1"
@@ -626,12 +616,9 @@ msgid "Subtitles off"
 msgstr "Subtitles off"
 
 #: src/qml/Actions.qml:286
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitles function on"
-msgstr "Subtitles on"
+msgstr "Subtitles function on"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -753,12 +740,9 @@ msgid "Secondary Subtitle"
 msgstr "Secondary Subtitle"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:87
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "&Audio"
+msgstr "Audio Track"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:109
 msgctxt "@action:inmenu"
@@ -865,12 +849,9 @@ msgid "&Audio"
 msgstr "&Audio"
 
 #: src/qml/Menus/AudioMenu.qml:22 src/qml/Menus/Global/GlobalAudioMenu.qml:22
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&Audio"
+msgstr "&Track"
 
 #: src/qml/Menus/ContextMenu.qml:17
 msgctxt "@title:menu"
@@ -917,99 +898,66 @@ msgstr "&Settings"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:17
 #: src/qml/Menus/SettingsMenu.qml:18
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "General"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Playback"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:34
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:42
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:50
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Subtitles"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:58
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Playlist"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
 #: src/qml/Menus/SettingsMenu.qml:66
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Mouse"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:74
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Shortcuts"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:82
 #: src/qml/Menus/SettingsMenu.qml:83
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
-msgstr "Custom commands"
+msgstr "Custom Commands"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:90
 #: src/qml/Menus/SettingsMenu.qml:91
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Debug"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:98
 #: src/qml/Menus/SettingsMenu.qml:99
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "About"
@@ -1158,12 +1106,9 @@ msgstr "Preferred language"
 
 #: src/qml/Settings/AudioSettings.qml:36
 #: src/qml/Settings/SubtitlesSettings.qml:43
-#, fuzzy
-#| msgctxt "placeholder text"
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "eng,ger etc."
+msgstr "eng, ger etc."
 
 #: src/qml/Settings/AudioSettings.qml:55
 #: src/qml/Settings/SubtitlesSettings.qml:62
@@ -1318,7 +1263,7 @@ msgstr "How many recent files to store. Enter 0 (zero) to disable."
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Allow only one instance"
 
 #: src/qml/Settings/GeneralSettings.qml:125
 msgctxt "@info:tooltip"
@@ -1327,19 +1272,19 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Trying to open another Haruna instance will do nothing.\n"
+"Trying to open another file with Haruna will open the file in the running "
+"instance."
 
 #: src/qml/Settings/GeneralSettings.qml:139
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Open playlist"
+msgstr "Add file to playlist"
 
 #: src/qml/Settings/GeneralSettings.qml:155
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "File will be added to the end of the playlist"
 
 #: src/qml/Settings/GeneralSettings.qml:164
 msgctxt "@title"
@@ -1347,43 +1292,39 @@ msgid "Interface"
 msgstr "Interface"
 
 #: src/qml/Settings/GeneralSettings.qml:170
-#, fuzzy
-#| msgid "Show thumbnails"
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr "Show thumbnails"
+msgstr "Preview thumbnail"
 
 #: src/qml/Settings/GeneralSettings.qml:175
-#, fuzzy
-#| msgid "Show thumbnails"
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr "Show thumbnails"
+msgstr "Show preview thumbnail"
 
 #: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Use accurate preview"
 
 #: src/qml/Settings/GeneralSettings.qml:204
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Generating an accurate preview is slow"
 
 #: src/qml/Settings/GeneralSettings.qml:214
 msgctxt "@label:spinbox"
 msgid "Thumbnail Width"
-msgstr ""
+msgstr "Thumbnail Width"
 
 #: src/qml/Settings/GeneralSettings.qml:232
 msgctxt "@label"
 msgid "Window"
-msgstr ""
+msgstr "Window"
 
 #: src/qml/Settings/GeneralSettings.qml:238
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Resize to fit video"
 
 #: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@info:tooltip"
@@ -1391,6 +1332,8 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"The window is resized according to the video resolution.\n"
+"The maximum size is not constrained, this is left to the operating system."
 
 #: src/qml/Settings/GeneralSettings.qml:268
 msgctxt "@option:check"
@@ -1406,6 +1349,11 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
+"When window size and position are changed the new values are saved and used "
+"to restore the application to the same size and position when a new instance "
+"is opened.\n"
+"\n"
+"The \"Resize to fit video\" setting takes precedence.\n"
 
 #: src/qml/Settings/GeneralSettings.qml:298
 msgctxt "@option:check"
@@ -1448,20 +1396,14 @@ msgstr ""
 "Requires restart."
 
 #: src/qml/Settings/MouseSettings.qml:82
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@label"
 msgid "No action set"
-msgstr "Saturation Reset"
+msgstr "No action set"
 
 #: src/qml/Settings/MouseSettings.qml:96
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "Clear current action"
+msgstr "Clear action"
 
 #: src/qml/Settings/MouseSettings.qml:133
 msgctxt "@title"
@@ -1706,7 +1648,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:181
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr ""
+msgstr "Open items with single click"
 
 #: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
