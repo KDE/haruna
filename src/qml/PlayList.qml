@@ -250,6 +250,14 @@ Item {
                     onClicked: mpv.playlistProxyModel.renameFile(row)
                 }
                 MenuItem {
+                    text: i18nc("@action:inmenu", "Scroll to playing item")
+                    onClicked: {
+                        const index = mpv.playlistProxyModel.getPlayingItem()
+                        playlistView.positionViewAtIndex(index, ListView.Beginning)
+                    }
+                }
+                MenuSeparator {}
+                MenuItem {
                     text: i18nc("@action:inmenu", "Trash file")
                     icon.name: "delete"
                     visible: contextMenuLoader.isLocal && app.frameworksVersionMinor() >= 100
