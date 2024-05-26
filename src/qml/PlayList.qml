@@ -260,7 +260,7 @@ Item {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Trash file")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal && app.frameworksVersionMinor() >= 100
+                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.trashFile(row)
                 }
             }
