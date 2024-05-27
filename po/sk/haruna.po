@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-27 00:38+0000\n"
 "PO-Revision-Date: 2021-07-18 15:26+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -940,7 +940,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr ""
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
 #: src/qml/Settings/VideoSettings.qml:72
 #, fuzzy
 #| msgid "Subtitles"
@@ -1271,6 +1271,13 @@ msgid "Rename file"
 msgstr "Titulky"
 
 #: src/qml/PlayList.qml:253
+#, fuzzy
+#| msgid "Start Playback"
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "Spustiť prehrávanie"
+
+#: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr ""
@@ -2110,12 +2117,6 @@ msgstr ""
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"
 #~ msgstr "Otvoriť URL"
-
-#, fuzzy
-#~| msgid "Start Playback"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "Spustiť prehrávanie"
 
 #, fuzzy
 #~| msgid "Playlist"

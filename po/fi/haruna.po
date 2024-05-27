@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-27 00:38+0000\n"
 "PO-Revision-Date: 2024-02-23 19:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -837,7 +837,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
 #: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
@@ -1103,8 +1103,13 @@ msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Muuta tiedoston nimeä"
 
-# *** TARKISTA: vai onko yhdyssana, ”roskakoritiedosto"?
 #: src/qml/PlayList.qml:253
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "Toista kohde vierittämällä"
+
+# *** TARKISTA: vai onko yhdyssana, ”roskakoritiedosto"?
+#: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Vie tiedosto roskakoriin"
@@ -1880,10 +1885,6 @@ msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"
 #~ msgstr "Avaa verkko-osoite"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "Toista kohde vierittämällä"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

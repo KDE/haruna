@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-27 00:38+0000\n"
 "PO-Revision-Date: 2023-12-27 10:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -835,7 +835,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
 #: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
@@ -1102,6 +1102,11 @@ msgid "Rename file"
 msgstr "Переименовать файл"
 
 #: src/qml/PlayList.qml:253
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "Перемотать к записи, которая воспроизводится"
+
+#: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Удалить файл"
@@ -1889,10 +1894,6 @@ msgstr "Щелчок средней кнопкой мыши по ползунк�
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"
 #~ msgstr "Открыть URL"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "Перемотать к записи, которая воспроизводится"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

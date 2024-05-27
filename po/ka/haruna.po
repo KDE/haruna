@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-27 00:38+0000\n"
 "PO-Revision-Date: 2024-05-12 03:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -829,7 +829,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
 #: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
@@ -1096,6 +1096,11 @@ msgid "Rename file"
 msgstr "ფაილის გადარქმევა"
 
 #: src/qml/PlayList.qml:253
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "დაკვრად ელემენტზე გადახვევა"
+
+#: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "ფაილის სანაგვე ყუთში გადატანა"
@@ -1869,10 +1874,6 @@ msgstr "შუა-წკაპი სლაიდერების გასა
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"
 #~ msgstr "ბმულის გახსნა"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "დაკვრად ელემენტზე გადახვევა"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

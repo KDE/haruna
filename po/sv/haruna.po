@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-27 00:38+0000\n"
 "PO-Revision-Date: 2023-09-02 08:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -835,7 +835,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
 #: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
@@ -1105,6 +1105,11 @@ msgid "Rename file"
 msgstr "Byt namn på fil"
 
 #: src/qml/PlayList.qml:253
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "Gå till spelat objekt"
+
+#: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Flytta fil till papperskorgen"
@@ -1878,10 +1883,6 @@ msgstr "Mittenklicka på skjutreglagen för att återställa dem"
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"
 #~ msgstr "Öppna webbadress"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "Gå till spelat objekt"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

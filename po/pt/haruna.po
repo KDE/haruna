@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-27 00:38+0000\n"
 "PO-Revision-Date: 2023-07-14 22:00+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -849,7 +849,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:317
+#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
 #: src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
@@ -1152,6 +1152,14 @@ msgid "Rename file"
 msgstr "Mudar o nome do ficheiro"
 
 #: src/qml/PlayList.qml:253
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Start playing"
+msgctxt "@action:inmenu"
+msgid "Scroll to playing item"
+msgstr "Iniciar a reprodução"
+
+#: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Enviar o ficheiro para o lixo"
@@ -1937,13 +1945,6 @@ msgstr "Botão do meio nas barras para as repor"
 #~ msgctxt "@action:inmenu"
 #~ msgid "Open url"
 #~ msgstr "Abrir um URL"
-
-#, fuzzy
-#~| msgctxt "@option:check"
-#~| msgid "Start playing"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Scroll to playing item"
-#~ msgstr "Iniciar a reprodução"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"
