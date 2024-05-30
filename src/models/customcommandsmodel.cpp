@@ -197,7 +197,7 @@ void CustomCommandsModel::toggleCustomCommand(const QString &groupName, int row,
     if (setOnStartup == group.readEntry("SetOnStartup", true)) {
         return;
     }
-    Command customCommand = m_customCommands[row];
+    Command &customCommand = m_customCommands[row];
     customCommand.setOnStartup = setOnStartup;
 
     group.writeEntry("SetOnStartup", setOnStartup);
