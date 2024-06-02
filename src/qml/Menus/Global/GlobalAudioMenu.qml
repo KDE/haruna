@@ -20,6 +20,7 @@ Labs.Menu {
         id: audioMenu
 
         title: i18nc("@title:menu", "&Track")
+        enabled: mpv.audioTracksModel.rowCount() > 0
 
         Instantiator {
             model: mpv.audioTracksModel
