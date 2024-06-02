@@ -72,12 +72,14 @@ ToolButton {
                 model: mpv.subtitleTracksModel
                 isPrimarySubtitleMenu: true
                 title: i18nc("@title:menu", "Primary Subtitle")
+                enabled: mpv.subtitleTracksModel.rowCount() > 1
             }
 
             SubtitleTracksMenu {
                 model: mpv.subtitleTracksModel
                 isPrimarySubtitleMenu: false
                 title: i18nc("@title:menu", "Secondary Subtitle")
+                enabled: mpv.subtitleTracksModel.rowCount() > 1
             }
 
 
@@ -86,6 +88,8 @@ ToolButton {
 
                 title: i18nc("@title:menu", "Audio Track")
                 model: mpv.audioTracksModel
+                enabled: mpv.audioTracksModel.rowCount() > 0
+
             }
 
             MenuSeparator {}
