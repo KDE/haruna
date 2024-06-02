@@ -51,6 +51,8 @@ ToolBar {
             text: i18nc("@action:intoolbar", "Subtitles")
             icon.name: "add-subtitle"
             focusPolicy: Qt.NoFocus
+            enabled: mpv.subtitleTracksModel.rowCount() > 1
+            opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
                 subtitleMenu.visible = !subtitleMenu.visible
@@ -69,6 +71,8 @@ ToolBar {
             text: i18nc("@action:intoolbar", "Audio")
             icon.name: "audio-volume-high"
             focusPolicy: Qt.NoFocus
+            enabled: mpv.audioTracksModel.rowCount() > 0
+            opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
                 audioMenu.visible = !audioMenu.visible
