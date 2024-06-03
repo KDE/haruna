@@ -331,6 +331,18 @@
     </ul>
   </description>
   <releases>
+    <release version="1.1.2" date="2024-06-03">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Disabled track selection menus and buttons when there are no tracks to be selected</li>
+          <li>Fixed custom command toggling</li>
+          <li>Re-added "Scroll to playing item" and "Trash file" options to playlist context menu, lost during Qt6 port</li>
+          <li>Fixed some mpv properties not being correctly set at startup</li>
+          <li>Fixed video rendering on Windows</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.1" date="2024-05-17">
       <description>
         <p>Bugfixes:</p>
