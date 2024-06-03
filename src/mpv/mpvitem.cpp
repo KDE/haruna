@@ -67,8 +67,8 @@ MpvItem::MpvItem(QQuickItem *parent)
     Q_EMIT observeProperty(MpvProperties::self()->ChapterList, MPV_FORMAT_NODE);
     Q_EMIT observeProperty(MpvProperties::self()->TracksCount, MPV_FORMAT_NODE);
 
-    initProperties();
     setupConnections();
+    initProperties();
 
     m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
     m_saveTimePositionTimer->start();
