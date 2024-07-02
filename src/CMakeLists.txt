@@ -89,6 +89,7 @@ qt_add_qml_module(haruna
         qml/Haruna/Components/SettingsHeader.qml
         qml/Haruna/Components/SubtitlesFolders.qml
         qml/Haruna/Components/SubtitleTracksMenu.qml
+        qml/Haruna/Components/ToolTipButton.qml
 
         qml/Menus/AudioMenu.qml
         qml/Menus/ContextMenu.qml
