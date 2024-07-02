@@ -75,8 +75,8 @@ SettingsBasePage {
                     }
 
                     ToolTip {
-                        text: i18nc("@info:tooltip", "Don't set on next startup")
-                        delay: 0
+                        text: i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
+                                    "Unchecked: property will not be set at startup")
                     }
                 }
 
