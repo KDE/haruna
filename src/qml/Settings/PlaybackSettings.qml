@@ -374,9 +374,9 @@ SettingsBasePage {
             onActivated: function(index) {
                 hCurrentvalue = model.get(index).value
                 if (index === 0) {
-                    ytdlFormatField.text = PlaybackSettings.ytdlFormat
+                    ytdlFormatField.text = PlaybackSettings.ytdlFormatCustom
                 }
-                if(index > 0) {
+                if (index > 0) {
                     ytdlFormatField.focus = true
                     ytdlFormatField.text = model.get(index).value
                 }
@@ -421,10 +421,16 @@ SettingsBasePage {
 
             onTextChanged: {
                 if (ytdlFormatComboBox.hCurrentvalue !== ytdlFormatField.text) {
+                    // text doesn't match any of the combobox's preset values
+                    // meaning there's a custom value, set the index to the custom entry
+                    // and save the text to PlaybackSettings.ytdlFormatCustom
                     ytdlFormatComboBox.currentIndex = 0
+                    PlaybackSettings.ytdlFormatCustom = text
                     return;
                 }
                 if (ytdlFormatComboBox.hIndexOfValue(ytdlFormatField.text) !== -1) {
+                    // text matches one of the combobox's preset values
+                    // set the index of the matched entry as the current one
                     ytdlFormatComboBox.currentIndex = ytdlFormatComboBox.hIndexOfValue(ytdlFormatField.text)
                     return;
                 }
