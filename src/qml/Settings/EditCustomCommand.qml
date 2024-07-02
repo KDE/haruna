@@ -27,9 +27,6 @@ SettingsBasePage {
         Edit
     }
 
-    hasHelp: true
-    helpFile: ":/CustomCommandsSettings.html"
-
     Action {
         shortcut: "esc"
         onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
@@ -43,13 +40,32 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        TextField {
-            id: commandTextField
+        RowLayout {
+            TextField {
+                id: commandTextField
 
-            text: root.command
-            placeholderText: i18nc("placeholder text", "add volume +10")
-            Layout.fillWidth: true
-            Component.onCompleted: forceActiveFocus()
+                text: root.command
+                placeholderText: i18nc("placeholder text", "add volume +10")
+                Layout.fillWidth: true
+                Component.onCompleted: forceActiveFocus()
+            }
+
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip",
+                                   "What mpv command to run, " +
+                                   "see <a href=\"https://mpv.io/manual/stable/#list-of-input-commands\">MPV Commands</a> " +
+                                   "for a list of available commands.<br>" +
+                                   "Not all commands will work as some are specific for mpv.<br>" +
+                                   "Most useful are the commands to manipulate properties, " +
+                                   "like <strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>.<br>" +
+                                   "<strong>set</strong>: sets the value of a property <strong>set volume-max 150</strong>.<br>" +
+                                   "<strong>add</strong>: increases/decreases the value of a property <strong>add volume 15</strong>, " +
+                                   "increases volume by 15. To decrease the value use <strong>add volume -15</strong>.<br>" +
+                                   "<strong>cycle</strong>: cycle through the values of a property <strong>cycle aid up</strong>.")
+                toolTipWidth: 450
+
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            }
         }
 
         Label {
@@ -57,13 +73,24 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        TextField {
-            id: osdMessageTextField
+        RowLayout {
+            TextField {
+                id: osdMessageTextField
 
-            text: root.osdMessage
-            enabled: typeGroup.checkedButton.optionName === "shortcut"
-            placeholderText: i18nc("placeholder text", "Filename: ${filename}")
-            Layout.fillWidth: true
+                text: root.osdMessage
+                enabled: typeGroup.checkedButton.optionName === "shortcut"
+                placeholderText: i18nc("placeholder text", "Filename: ${filename}")
+                Layout.fillWidth: true
+            }
+
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip",
+                                   "An OSD message to display when triggering an action type custom command.<br>" +
+                                   "Use ${property_name} to display the value of a property <strong>Volume: ${volume}</strong>")
+                toolTipWidth: 450
+
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            }
         }
 
         Label {
@@ -89,6 +116,9 @@ SettingsBasePage {
 
                 checked: optionName === root.type
                 text: i18nc("@option:radio", "Keyboard shortcut")
+                ToolTip.text: i18nc("@info:tooltip", "The command will be triggered with a shortcut. The shortcut can be set after saving.")
+                ToolTip.visible: hovered
+                ToolTip.delay: 700
             }
 
             RadioButton {
@@ -96,6 +126,9 @@ SettingsBasePage {
 
                 checked: optionName === root.type
                 text: i18nc("@option:radio", "Run at startup")
+                ToolTip.text: i18nc("@info:tooltip", "The command will be run at application startup.")
+                ToolTip.visible: hovered
+                ToolTip.delay: 700
             }
         }
     }

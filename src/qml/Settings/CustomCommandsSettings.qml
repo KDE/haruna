@@ -17,9 +17,6 @@ SettingsBasePage {
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
 
-    hasHelp: true
-    helpFile: ":/CustomCommandsSettings.html"
-
     ListView {
         id: customCommandsView
 
