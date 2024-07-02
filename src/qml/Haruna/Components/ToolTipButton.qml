@@ -7,33 +7,42 @@ ToolButton {
     id: root
 
     required property string toolTipText
-    property int toolTipWidth: 350
+    property alias toolTipWidth: toolTip.width
+    property alias toolTipHeight: toolTip.height
 
     icon.name: "documentinfo"
     checkable: true
     checked: false
 
     ToolTip {
+        id: toolTip
+
+        y: root.height
         visible: root.checked
+
         delay: 0
         timeout: -1
         closePolicy: Popup.NoAutoClose
 
-        contentItem: TextArea {
-            text: root.toolTipText
-            width: root.toolTipWidth
-            background: Rectangle {
-                color: "transparent"
+        contentItem: ScrollView {
+            anchors.fill: parent
+            anchors.rightMargin: 0
+
+            TextArea {
+                text: root.toolTipText
+                background: Rectangle {
+                    color: "transparent"
+                }
+                readOnly: true
+                textFormat: Text.RichText
+                wrapMode: Text.WordWrap
+                selectByMouse: true
+                padding: 15
+                onLinkActivated: function(link) {
+                    Qt.openUrlExternally(link)
+                }
+                onHoveredLinkChanged: hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
             }
-            readOnly: true
-            textFormat: Text.RichText
-            wrapMode: Text.WordWrap
-            selectByMouse: true
-            padding: 0
-            onLinkActivated: function(link) {
-                Qt.openUrlExternally(link)
-            }
-            onHoveredLinkChanged: hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
         }
     }
 }
