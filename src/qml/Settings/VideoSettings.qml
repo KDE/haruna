@@ -18,9 +18,6 @@ import org.kde.haruna.settings
 SettingsBasePage {
     id: root
 
-    hasHelp: true
-    helpFile: ":/VideoSettings.html"
-
     GridLayout {
         id: content
 
@@ -133,24 +130,63 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        TextField {
-            id: screenshotTemplate
+        RowLayout {
+            TextField {
+                id: screenshotTemplate
 
-            text: VideoSettings.screenshotTemplate
-            Layout.fillWidth: true
-            onEditingFinished: save()
+                text: VideoSettings.screenshotTemplate
+                Layout.fillWidth: true
+                onEditingFinished: save()
 
-            Connections {
-                target: root
-                function onSave() {
-                    screenshotTemplate.save()
+                Connections {
+                    target: root
+                    function onSave() {
+                        screenshotTemplate.save()
+                    }
+                }
+
+                function save() {
+                    VideoSettings.screenshotTemplate = text
+                    VideoSettings.save()
+                    mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
                 }
             }
 
-            function save() {
-                VideoSettings.screenshotTemplate = text
-                VideoSettings.save()
-                mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
+            ToolTipButton {
+                toolTipWidth: 500
+                toolTipHeight: 300
+                toolTipText: i18nc("@info:tooltip",
+                                   "Specify the filename template used to save screenshots. The template specifies the " +
+                                   "filename without file extension, and can contain format specifiers, which will be " +
+                                   "substituted when taking a screenshot. By default, the template is \"%F-%n\". <br>" +
+                                   "The template can start with a relative or absolute path, in order to specify " +
+                                   "a directory location where screenshots should be saved.<br>" +
+                                   "If the final screenshot filename points to an already existing file, the file " +
+                                   "will not be overwritten. The screenshot will either not be saved, or if the template " +
+                                   "contains %n, saved using different, newly generated filename.<br>" +
+                                   "For full info checkout <a href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv.io/manual/stable/#options-screenshot-template</a><br><br>" +
+                                   "<strong>Allowed format specifiers:</strong><br>" +
+                                   "<ul><li><strong>%[#][0X]n</strong> A sequence number, padded with zeros to length X.<br>" +
+                                   "<li><strong>%f</strong> Filename of the currently played video.<br>" +
+                                   "<li><strong>%F</strong> Same as %f, but without the file extension.<br>" +
+                                   "<li><strong>%x</strong> Directory path of the currently played video. "+
+                                   "If the video is not on the filesystem (http:// urls), this expands to an empty string.<br>" +
+                                   "<li><strong>%X{fallback}</strong> Same as %x, but if the video file is not on the " +
+                                   "filesystem, return the fallback string inside the {...}.<br>" +
+                                   "<li><strong>%p</strong> Current playback time. The result is a " +
+                                   "string of the form \"HH:MM:SS\".<br>" +
+                                   "<li><strong>%P</strong> Similar to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm\".<br>" +
+                                   "<li><strong>%wX</strong> Specify the current playback time using the format string X.<br>" +
+                                   "Valid format specifiers:<br>" +
+                                   "<ul><li><strong>%wH</strong> hour (padded with 0 to two digits)</li>" +
+                                   "<li><strong>%wh</strong> hour (not padded)</li>" +
+                                   "<li><strong>%wM</strong> minutes (00-59)</li>" +
+                                   "<li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</li>" +
+                                   "<li><strong>%wS</strong> seconds (00-59)</li>" +
+                                   "<li><strong>%ws</strong> total seconds (includes hours and minutes)</li>" +
+                                   "<li><strong>%wf</strong> like %ws, but as float</li>" +
+                                   "<li><strong>%wT</strong> milliseconds (000-999)</li>" +
+                                   "<li><strong>%%</strong> Replaced with the % character itself.</li></ul><br>")
             }
         }
 
