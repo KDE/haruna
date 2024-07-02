@@ -19,7 +19,6 @@ SettingsBasePage {
 
     hasHelp: true
     helpFile: ":/CustomCommandsSettings.html"
-    docPage: "help:/haruna/CustomCommandsSettings.html"
 
     ListView {
         id: customCommandsView

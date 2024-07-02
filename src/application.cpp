@@ -356,11 +356,6 @@ void Application::activateColorScheme(const QString &name)
     m_schemes->activateScheme(m_schemes->indexForScheme(name));
 }
 
-void Application::openDocs(const QString &page)
-{
-    QDesktopServices::openUrl(QUrl(page));
-}
-
 QStringList Application::getFonts()
 {
     return QFontDatabase::families();

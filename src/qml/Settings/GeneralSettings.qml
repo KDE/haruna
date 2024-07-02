@@ -17,7 +17,6 @@ SettingsBasePage {
 
     hasHelp: true
     helpFile: ":/GeneralSettings.html"
-    docPage: "help:/haruna/GeneralSettings.html"
 
     GridLayout {
         id: content

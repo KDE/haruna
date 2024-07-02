@@ -17,7 +17,6 @@ Kirigami.ScrollablePage {
 
     property bool hasHelp: false
     property string helpFile: ""
-    property string docPage: ""
 
     signal save()
 
@@ -25,18 +24,10 @@ Kirigami.ScrollablePage {
 
     actions: [
         Kirigami.Action {
-            text: i18nc("@action:intoolbar", "Help")
+            text: i18nc("@action:inmenu", "Help")
             icon.name: "system-help"
-            Kirigami.Action {
-                text: i18nc("@action:inmenu", "Haruna help window (english only)")
-                enabled: root.hasHelp
-                onTriggered: root.hasHelp ? helpWindow.show() : undefined
-            }
-            Kirigami.Action {
-                text: i18nc("@action:inmenu", "Haruna handbook")
-                enabled: root.docPage !== ""
-                onTriggered: enabled ? app.openDocs(root.docPage) : undefined
-            }
+            visible: root.hasHelp
+            onTriggered: root.hasHelp ? helpWindow.show() : undefined
         }
     ]
 

@@ -79,10 +79,6 @@ find_package(KF6CoreAddons ${KF6_MIN_VERSION})
 set_package_properties(KF6CoreAddons PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcoreaddons/html/index.html")
 
-find_package(KF6DocTools ${KF6_MIN_VERSION})
-set_package_properties(KF6DocTools PROPERTIES
-    DESCRIPTION "https://api.kde.org/frameworks/kdoctools/html/index.html")
-
 find_package(KF6FileMetaData ${KF6_MIN_VERSION})
 set_package_properties(KF6FileMetaData PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kfilemetadata/html/index.html")
@@ -137,4 +133,3 @@ ki18n_install(po)
 
 add_subdirectory(data)
 add_subdirectory(src)
-add_subdirectory(doc)

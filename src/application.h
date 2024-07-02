@@ -66,7 +66,6 @@ public:
     Q_INVOKABLE QStringList availableGuiStyles();
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
-    Q_INVOKABLE void openDocs(const QString &page);
     Q_INVOKABLE QStringList getFonts();
     Q_INVOKABLE int frameworksVersionMinor();
     Q_INVOKABLE int qtMajorVersion();

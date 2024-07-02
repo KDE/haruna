@@ -20,7 +20,6 @@ SettingsBasePage {
 
     hasHelp: true
     helpFile: ":/VideoSettings.html"
-    docPage: "help:/haruna/VideoSettings.html"
 
     GridLayout {
         id: content
