@@ -386,8 +386,7 @@ SettingsBasePage {
             }
 
             Component.onCompleted: {
-                let i = hIndexOfValue(PlaybackSettings.ytdlFormat)
-                currentIndex = (i === -1) ? 0 : i
+                currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
             }
 
             function hIndexOfValue(value) {
