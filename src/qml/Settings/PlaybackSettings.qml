@@ -16,9 +16,6 @@ import org.kde.haruna.settings
 SettingsBasePage {
     id: root
 
-    hasHelp: true
-    helpFile: ":/PlaybackSettings.html"
-
     GridLayout {
         id: content
 
