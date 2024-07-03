@@ -30,15 +30,24 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        SpinBox {
-            id: seekSmallStep
-            editable: true
-            from: 0
-            to: 100
-            value: PlaybackSettings.seekSmallStep
-            onValueChanged: {
-                PlaybackSettings.seekSmallStep = seekSmallStep.value
-                PlaybackSettings.save()
+        RowLayout {
+
+            SpinBox {
+                id: seekSmallStep
+                editable: true
+                from: 0
+                to: 100
+                value: PlaybackSettings.seekSmallStep
+                onValueChanged: {
+                    PlaybackSettings.seekSmallStep = seekSmallStep.value
+                    PlaybackSettings.save()
+                }
+            }
+
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip seek small step setting",
+                                   "How much to seek when triggering the coresponding action. Seek mode is " +
+                                   "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>")
             }
         }
 
@@ -62,20 +71,11 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                checkable: true
-                checked: false
-
-                Layout.preferredHeight: seekMediumStep.height
-
-                ToolTip {
-                    text: i18nc("@info:tooltip", "This is also used for mouse wheel seeking, when mouse is over the progress bar")
-                    visible: parent.checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip seek medium step setting",
+                                   "How much to seek when triggering the coresponding action. Seek mode is " +
+                                   "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>.<br>" +
+                                   "This is also used for mouse wheel seeking, when mouse is over the progress bar.")
             }
         }
 
@@ -85,15 +85,23 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        SpinBox {
-            id: seekBigStep
-            editable: true
-            from: 0
-            to: 100
-            value: PlaybackSettings.seekBigStep
-            onValueChanged: {
-                PlaybackSettings.seekBigStep = seekBigStep.value
-                PlaybackSettings.save()
+        RowLayout {
+            SpinBox {
+                id: seekBigStep
+                editable: true
+                from: 0
+                to: 100
+                value: PlaybackSettings.seekBigStep
+                onValueChanged: {
+                    PlaybackSettings.seekBigStep = seekBigStep.value
+                    PlaybackSettings.save()
+                }
+            }
+
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip seek big step setting",
+                                   "How much to seek when triggering the coresponding action. Seek mode is " +
+                                   "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>")
             }
         }
 
@@ -110,7 +118,8 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "Pauses the player while the window is minimized, playback resumes when restored.")
+                text: i18nc("@info:tooltip pause on minimize setting",
+                            "Pauses the player while the window is minimized, playback resumes when restored.")
             }
         }
 
@@ -128,6 +137,11 @@ SettingsBasePage {
                 PlaybackSettings.openLastPlayedFile = checked
                 PlaybackSettings.save()
             }
+
+            ToolTip {
+                text: i18nc("@info:tooltip open last played file setting",
+                            "On startup it opens the file that was playing when the application was closed.")
+            }
         }
 
         Item { width: 1 }
@@ -143,7 +157,8 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "When opening a file that was played before, seek at the position it was last time.")
+                text: i18nc("@info:tooltip seek to last playback position setting",
+                            "When opening a file that was played before, seek at the position it was last time.")
             }
         }
 
@@ -161,7 +176,8 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "When opening a file that was played before, start playing it automatically.")
+                text: i18nc("@info:tooltip start playing setting",
+                            "When resuming playback and seeking to last playback position, start playing it automatically.")
             }
         }
 
@@ -182,42 +198,64 @@ SettingsBasePage {
 
         Item { width: 1 }
 
-        ComboBox {
-            id: hwDecodingComboBox
+        RowLayout {
+            ComboBox {
+                id: hwDecodingComboBox
 
-            enabled: hwDecodingCheckBox.checked
-            textRole: "key"
-            model: ListModel {
-                id: hwDecModel
-                ListElement { key: "auto"; }
-                ListElement { key: "auto-safe"; }
-                ListElement { key: "vaapi"; }
-                ListElement { key: "nvdec"; }
-                ListElement { key: "videotoolbox"; }
-                ListElement { key: "vdpau"; }
-                ListElement { key: "cuda"; }
-                ListElement { key: "d3d11va"; }
-                ListElement { key: "mmal"; }
-            }
+                enabled: hwDecodingCheckBox.checked
+                textRole: "key"
+                model: ListModel {
+                    id: hwDecModel
+                    ListElement { key: "auto"; }
+                    ListElement { key: "auto-safe"; }
+                    ListElement { key: "vaapi"; }
+                    ListElement { key: "nvdec"; }
+                    ListElement { key: "cuda"; }
+                    ListElement { key: "videotoolbox"; }
+                    ListElement { key: "d3d11va"; }
+                }
 
-            onActivated: function(index) {
-                PlaybackSettings.hWDecoding = model.get(index).key
-                PlaybackSettings.save()
-                mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
-            }
+                onActivated: function(index) {
+                    PlaybackSettings.hWDecoding = model.get(index).key
+                    PlaybackSettings.save()
+                    mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
+                }
 
-            Component.onCompleted: {
-                for (let i = 0; i < hwDecModel.count; ++i) {
-                    if (hwDecModel.get(i).key === PlaybackSettings.hWDecoding) {
-                        currentIndex = i
-                        break
+                Component.onCompleted: {
+                    for (let i = 0; i < hwDecModel.count; ++i) {
+                        if (hwDecModel.get(i).key === PlaybackSettings.hWDecoding) {
+                            currentIndex = i
+                            break
+                        }
                     }
                 }
+            }
+
+            ToolTipButton {
+                toolTipWidth: 450
+                toolTipHeight: 300
+                toolTipText: i18nc("@info:tooltip hardware decoding setting",
+                                   "Specify the hardware video decoding API that should be used if possible. " +
+                                   "Whether hardware decoding is actually done depends on the video codec. " +
+                                   "If hardware decoding is not possible, mpv will fall back on software decoding.<br><br>" +
+                                   "<ul><li><strong>auto</strong> tries to automatically enable hardware decoding using the first available method.</li>" +
+                                   "<li><strong>auto-safe</strong> similar to auto, but allows only whitelisted methods that are considered \"safe\".</li>" +
+                                   "<li><strong>vaapi</strong> works with Intel and AMD GPUs only. It also requires the opengl EGL backend.</li>" +
+                                   "<li><strong>nvdec</strong> the newest, and recommended method to do hardware decoding on Nvidia GPUs.</li>" +
+                                   "<li><strong>cuda</strong> an older implementation of hardware decoding on Nvidia GPUs.</li>" +
+                                   "<li><strong>videotoolbox</strong></li>" +
+                                   "<li><strong>d3d11va</strong></li>" +
+                                   "</ul>" +
+                                   "<br><br>" +
+                                   "You can read more about hardware decoding here: " +
+                                   "<a href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/stable/#options-hwdec</a>" +
+                                   "<br><br>" +
+                                   "You can set another hardware decoder by creating a startup custom command <strong>set hwdec <i>decoder_name</i></strong>.")
             }
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Remember time position")
+            text: i18nc("@label:spinbox", "Save playback position")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -283,25 +321,37 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        CheckBox {
-            id: skipChaptersCheckBox
-            text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
-            checked: PlaybackSettings.skipChapters
-            onCheckedChanged: {
-                PlaybackSettings.skipChapters = checked
-                PlaybackSettings.save()
+        RowLayout {
+            CheckBox {
+                id: skipChaptersCheckBox
+                text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
+                checked: PlaybackSettings.skipChapters
+                onCheckedChanged: {
+                    PlaybackSettings.skipChapters = checked
+                    PlaybackSettings.save()
+                }
+            }
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip skip chapters setting",
+                                   "When enabled it automatically skips chapters containing certain words/characters.")
             }
         }
 
         Item { width: 1 }
 
-        CheckBox {
-            text: i18nc("@option:check", "Show osd message on skip")
-            enabled: skipChaptersCheckBox.checked
-            checked: PlaybackSettings.showOsdOnSkipChapters
-            onCheckedChanged: {
-                PlaybackSettings.showOsdOnSkipChapters = checked
-                PlaybackSettings.save()
+        RowLayout {
+            CheckBox {
+                text: i18nc("@option:check", "Show osd message on skip")
+                enabled: skipChaptersCheckBox.checked
+                checked: PlaybackSettings.showOsdOnSkipChapters
+                onCheckedChanged: {
+                    PlaybackSettings.showOsdOnSkipChapters = checked
+                    PlaybackSettings.save()
+                }
+            }
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip show osd message on skip setting",
+                                   "When skipping chapters an osd message will show the title of the skipped chapter.")
             }
         }
 
@@ -311,29 +361,33 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        TextField {
-            id: chaptersToSkip
+        RowLayout {
+            TextField {
+                id: chaptersToSkip
 
-            text: PlaybackSettings.chaptersToSkip
-            placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
-            enabled: skipChaptersCheckBox.checked
-            Layout.fillWidth: true
-            onEditingFinished: save()
+                text: PlaybackSettings.chaptersToSkip
+                placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
+                enabled: skipChaptersCheckBox.checked
+                Layout.fillWidth: true
+                onEditingFinished: save()
 
-            Connections {
-                target: root
-                function onSave() {
-                    chaptersToSkip.save()
+                Connections {
+                    target: root
+                    function onSave() {
+                        chaptersToSkip.save()
+                    }
+                }
+
+                function save() {
+                    PlaybackSettings.chaptersToSkip = text
+                    PlaybackSettings.save()
                 }
             }
 
-            ToolTip {
-                text: i18nc("@info:tooltip", "Skip chapters containing these words. Comma separated list.")
-            }
-
-            function save() {
-                PlaybackSettings.chaptersToSkip = text
-                PlaybackSettings.save()
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip skip words setting",
+                                   "Skip chapters containing these words. Comma separated list. " +
+                                   "The match is not exact, meaning <strong>op</strong> will match words containing it like <strong><u>op</u>ening</strong>.")
             }
         }
 
@@ -352,58 +406,61 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        ComboBox {
-            id: ytdlFormatComboBox
-            property string hCurrentvalue: ""
-            textRole: "key"
-            model: ListModel {
-                id: leftButtonModel
-                ListElement { key: "Custom"; value: "" }
-                ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
-                ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
-                ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
-                ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
-                ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
-                ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
-            }
-            ToolTip {
-                text: i18nc("@info:tooltip", "Selects the best video with a height lower than or equal to the selected value.")
-            }
-
-            onActivated: function(index) {
-                hCurrentvalue = model.get(index).value
-                if (index === 0) {
-                    ytdlFormatField.text = PlaybackSettings.ytdlFormatCustom
+        RowLayout {
+            ComboBox {
+                id: ytdlFormatComboBox
+                property string hCurrentvalue: ""
+                textRole: "key"
+                model: ListModel {
+                    id: leftButtonModel
+                    ListElement { key: "Custom"; value: "" }
+                    ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
+                    ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
+                    ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
+                    ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
+                    ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
+                    ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
                 }
-                if (index > 0) {
-                    ytdlFormatField.focus = true
-                    ytdlFormatField.text = model.get(index).value
-                }
-                PlaybackSettings.ytdlFormat = ytdlFormatField.text
-                PlaybackSettings.save()
-                mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
-            }
 
-            Component.onCompleted: {
-                currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
-            }
-
-            function hIndexOfValue(value) {
-                switch(value) {
-                case "bestvideo+bestaudio/best":
-                    return 1
-                case "bestvideo[height<=2160]+bestaudio/best":
-                    return 2
-                case "bestvideo[height<=1440]+bestaudio/best":
-                    return 3
-                case "bestvideo[height<=1080]+bestaudio/best":
-                    return 4
-                case "bestvideo[height<=720]+bestaudio/best":
-                    return 5
-                case "bestvideo[height<=480]+bestaudio/best":
-                    return 6
+                onActivated: function(index) {
+                    hCurrentvalue = model.get(index).value
+                    if (index === 0) {
+                        ytdlFormatField.text = PlaybackSettings.ytdlFormatCustom
+                    }
+                    if (index > 0) {
+                        ytdlFormatField.focus = true
+                        ytdlFormatField.text = model.get(index).value
+                    }
+                    PlaybackSettings.ytdlFormat = ytdlFormatField.text
+                    PlaybackSettings.save()
+                    mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
                 }
-                return 0
+
+                Component.onCompleted: {
+                    currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
+                }
+
+                function hIndexOfValue(value) {
+                    switch(value) {
+                    case "bestvideo+bestaudio/best":
+                        return 1
+                    case "bestvideo[height<=2160]+bestaudio/best":
+                        return 2
+                    case "bestvideo[height<=1440]+bestaudio/best":
+                        return 3
+                    case "bestvideo[height<=1080]+bestaudio/best":
+                        return 4
+                    case "bestvideo[height<=720]+bestaudio/best":
+                        return 5
+                    case "bestvideo[height<=480]+bestaudio/best":
+                        return 6
+                    }
+                    return 0
+                }
+            }
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip format selection setting",
+                                   "Selects a video source that is closest to the selected format.")
             }
         }
 
