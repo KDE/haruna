@@ -17,9 +17,6 @@ import org.kde.haruna.settings
 SettingsBasePage {
     id: root
 
-    hasHelp: true
-    helpFile: ""
-
     ColumnLayout {
         id: content
 

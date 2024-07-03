@@ -17,9 +17,6 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
-    hasHelp: false
-    helpFile: ""
-
     onVisibleChanged: {
         if (!visible) {
             proxyActionsModel.setNameFilter("")

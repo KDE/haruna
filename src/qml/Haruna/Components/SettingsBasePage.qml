@@ -15,20 +15,8 @@ import org.kde.haruna
 Kirigami.ScrollablePage {
     id: root
 
-    property bool hasHelp: false
-    property string helpFile: ""
-
     signal save()
 
     Component.onDestruction: save()
-
-    actions: [
-        Kirigami.Action {
-            text: i18nc("@action:inmenu", "Help")
-            icon.name: "system-help"
-            visible: root.hasHelp
-            onTriggered: root.hasHelp ? helpWindow.show() : undefined
-        }
-    ]
 
 }

@@ -15,9 +15,6 @@ import org.kde.haruna.settings
 SettingsBasePage {
     id: root
 
-    hasHelp: false
-    helpFile: ""
-
     GridLayout {
         id: content
 
