@@ -29,7 +29,6 @@ target_sources(haruna
     mpv/mpvproperties.h
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
-    ../help/help.qrc
     ${ICONS_SRCS}
 )
 
