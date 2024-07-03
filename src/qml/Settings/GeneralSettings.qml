@@ -70,7 +70,8 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "If empty the file dialog will remember the last opened location.")
+                text: i18nc("@info:tooltip", "The default location of the open file dialog. If empty " +
+                            "the file dialog will try to open to the last opened location.")
             }
 
             function save() {
@@ -177,6 +178,10 @@ SettingsBasePage {
                 GeneralSettings.showPreviewThumbnail = checked
                 GeneralSettings.save()
             }
+
+            ToolTip.text: i18nc("@info:tooltip", "Shows a preview while hovering the seek/progress bar.")
+            ToolTip.visible: hovered
+            ToolTip.delay: 700
         }
 
         Item { width: 1 }
@@ -210,7 +215,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Thumbnail Width")
+            text: i18nc("@label:spinbox", "Thumbnail width")
             Layout.alignment: Qt.AlignRight
         }
 
