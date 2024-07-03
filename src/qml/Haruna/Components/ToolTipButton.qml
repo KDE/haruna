@@ -9,6 +9,7 @@ ToolButton {
     required property string toolTipText
     property alias toolTipWidth: toolTip.width
     property alias toolTipHeight: toolTip.height
+    readonly property int maxWidth: 300
 
     icon.name: "documentinfo"
     checkable: true
@@ -19,16 +20,19 @@ ToolButton {
 
         y: root.height
         visible: root.checked
+        padding: 0
+        implicitWidth: Math.min(root.maxWidth, textArea.contentWidth)
+        implicitHeight: textArea.implicitHeight
+
 
         delay: 0
         timeout: -1
         closePolicy: Popup.NoAutoClose
 
         contentItem: ScrollView {
-            anchors.fill: parent
-            anchors.rightMargin: 0
-
             TextArea {
+                id: textArea
+
                 text: root.toolTipText
                 background: Rectangle {
                     color: "transparent"
