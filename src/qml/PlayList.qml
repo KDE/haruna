@@ -196,17 +196,25 @@ Item {
 
                 MouseArea {
                     anchors.fill: playlistView.contentItem
-                    acceptedButtons: Qt.RightButton
-                    onClicked: {
-                        const item = playlistView.itemAt(mouseX, mouseY)
-                        if (!item) {
-                            return
-                        }
+                    acceptedButtons: Qt.MiddleButton | Qt.RightButton
+                    onClicked: function(mouse) {
+                        switch (mouse.button) {
+                        case Qt.MiddleButton:
+                            const index = mpv.playlistProxyModel.getPlayingItem()
+                            playlistView.positionViewAtIndex(index, ListView.Beginning)
+                            break
+                        case Qt.RightButton:
+                            const item = playlistView.itemAt(mouseX, mouseY)
+                            if (!item) {
+                                return
+                            }
 
-                        contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
-                        contextMenuLoader.isLocal = item.isLocal
-                        contextMenuLoader.active = true
-                        contextMenuLoader.item.popup(item)
+                            contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
+                            contextMenuLoader.isLocal = item.isLocal
+                            contextMenuLoader.active = true
+                            contextMenuLoader.item.popup(item)
+                            break
+                        }
                     }
                 }
 
