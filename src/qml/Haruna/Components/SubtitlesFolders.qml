@@ -162,5 +162,10 @@ Item {
                     : rows * sfListView.sfDelegateHeight + (sfListView.spacing * (rows - 1))
             root.canAddFolder = false
         }
+
+        ToolTip.text: i18nc("@info:tooltip add new sutbtitle folder setting",
+                            "Add a folder in which to look for subtitles.")
+        ToolTip.visible: hovered
+        ToolTip.delay: 700
     }
 }
