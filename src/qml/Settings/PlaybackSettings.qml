@@ -318,38 +318,36 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        RowLayout {
-            CheckBox {
-                id: skipChaptersCheckBox
-                text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
-                checked: PlaybackSettings.skipChapters
-                onCheckedChanged: {
-                    PlaybackSettings.skipChapters = checked
-                    PlaybackSettings.save()
-                }
+        CheckBox {
+            id: skipChaptersCheckBox
+            text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
+            checked: PlaybackSettings.skipChapters
+            onCheckedChanged: {
+                PlaybackSettings.skipChapters = checked
+                PlaybackSettings.save()
             }
-            ToolTipButton {
-                toolTipText: i18nc("@info:tooltip skip chapters setting",
-                                   "When enabled it automatically skips chapters containing certain words/characters.")
-            }
+
+            ToolTip.text: i18nc("@info:tooltip skip chapters setting",
+                                "When enabled it automatically skips chapters containing certain words/characters.")
+            ToolTip.visible: hovered
+            ToolTip.delay: 700
         }
 
         Item { width: 1 }
 
-        RowLayout {
-            CheckBox {
-                text: i18nc("@option:check", "Show osd message on skip")
-                enabled: skipChaptersCheckBox.checked
-                checked: PlaybackSettings.showOsdOnSkipChapters
-                onCheckedChanged: {
-                    PlaybackSettings.showOsdOnSkipChapters = checked
-                    PlaybackSettings.save()
-                }
+        CheckBox {
+            text: i18nc("@option:check", "Show osd message on skip")
+            enabled: skipChaptersCheckBox.checked
+            checked: PlaybackSettings.showOsdOnSkipChapters
+            onCheckedChanged: {
+                PlaybackSettings.showOsdOnSkipChapters = checked
+                PlaybackSettings.save()
             }
-            ToolTipButton {
-                toolTipText: i18nc("@info:tooltip show osd message on skip setting",
-                                   "When skipping chapters an osd message will show the title of the skipped chapter.")
-            }
+
+            ToolTip.text: i18nc("@info:tooltip show osd message on skip setting",
+                                "When skipping chapters an osd message will show the title of the skipped chapter.")
+            ToolTip.visible: hovered
+            ToolTip.delay: 700
         }
 
         Label {
@@ -358,35 +356,34 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        RowLayout {
-            TextField {
-                id: chaptersToSkip
+        TextField {
+            id: chaptersToSkip
 
-                text: PlaybackSettings.chaptersToSkip
-                placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
-                enabled: skipChaptersCheckBox.checked
-                Layout.fillWidth: true
-                onEditingFinished: save()
+            text: PlaybackSettings.chaptersToSkip
+            placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
+            enabled: skipChaptersCheckBox.checked
+            Layout.fillWidth: true
+            onEditingFinished: save()
 
-                Connections {
-                    target: root
-                    function onSave() {
-                        chaptersToSkip.save()
-                    }
-                }
+            ToolTip.text: i18nc("@info:tooltip skip words setting",
+                                "Skip chapters containing these words. Comma separated list. " +
+                                "The match is not exact, meaning <strong>op</strong> will match words containing it like <strong><u>op</u>ening</strong>.")
+            ToolTip.visible: hovered
+            ToolTip.delay: 700
 
-                function save() {
-                    PlaybackSettings.chaptersToSkip = text
-                    PlaybackSettings.save()
+            Connections {
+                target: root
+                function onSave() {
+                    chaptersToSkip.save()
                 }
             }
 
-            ToolTipButton {
-                toolTipText: i18nc("@info:tooltip skip words setting",
-                                   "Skip chapters containing these words. Comma separated list. " +
-                                   "The match is not exact, meaning <strong>op</strong> will match words containing it like <strong><u>op</u>ening</strong>.")
+            function save() {
+                PlaybackSettings.chaptersToSkip = text
+                PlaybackSettings.save()
             }
         }
+
 
         // ------------------------------------
         // Youtube-dl format settings
@@ -403,61 +400,62 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        RowLayout {
-            ComboBox {
-                id: ytdlFormatComboBox
-                property string hCurrentvalue: ""
-                textRole: "key"
-                model: ListModel {
-                    id: leftButtonModel
-                    ListElement { key: "Custom"; value: "" }
-                    ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
-                    ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
-                    ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
-                    ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
-                    ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
-                    ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
-                }
+        ComboBox {
+            id: ytdlFormatComboBox
 
-                onActivated: function(index) {
-                    hCurrentvalue = model.get(index).value
-                    if (index === 0) {
-                        ytdlFormatField.text = PlaybackSettings.ytdlFormatCustom
-                    }
-                    if (index > 0) {
-                        ytdlFormatField.focus = true
-                        ytdlFormatField.text = model.get(index).value
-                    }
-                    PlaybackSettings.ytdlFormat = ytdlFormatField.text
-                    PlaybackSettings.save()
-                    mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
-                }
+            property string hCurrentvalue: ""
 
-                Component.onCompleted: {
-                    currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
-                }
-
-                function hIndexOfValue(value) {
-                    switch(value) {
-                    case "bestvideo+bestaudio/best":
-                        return 1
-                    case "bestvideo[height<=2160]+bestaudio/best":
-                        return 2
-                    case "bestvideo[height<=1440]+bestaudio/best":
-                        return 3
-                    case "bestvideo[height<=1080]+bestaudio/best":
-                        return 4
-                    case "bestvideo[height<=720]+bestaudio/best":
-                        return 5
-                    case "bestvideo[height<=480]+bestaudio/best":
-                        return 6
-                    }
-                    return 0
-                }
+            textRole: "key"
+            model: ListModel {
+                id: leftButtonModel
+                ListElement { key: "Custom"; value: "" }
+                ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
+                ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
+                ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
+                ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
+                ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
+                ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
             }
-            ToolTipButton {
-                toolTipText: i18nc("@info:tooltip format selection setting",
-                                   "Selects a video source that is closest to the selected format.")
+
+            onActivated: function(index) {
+                hCurrentvalue = model.get(index).value
+                if (index === 0) {
+                    ytdlFormatField.text = PlaybackSettings.ytdlFormatCustom
+                }
+                if (index > 0) {
+                    ytdlFormatField.focus = true
+                    ytdlFormatField.text = model.get(index).value
+                }
+                PlaybackSettings.ytdlFormat = ytdlFormatField.text
+                PlaybackSettings.save()
+                mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
+            }
+
+            Component.onCompleted: {
+                currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
+            }
+
+            ToolTip.text: i18nc("@info:tooltip format selection setting",
+                                "Selects a video source that is closest to the selected format.")
+            ToolTip.visible: hovered
+            ToolTip.delay: 700
+
+            function hIndexOfValue(value) {
+                switch(value) {
+                case "bestvideo+bestaudio/best":
+                    return 1
+                case "bestvideo[height<=2160]+bestaudio/best":
+                    return 2
+                case "bestvideo[height<=1440]+bestaudio/best":
+                    return 3
+                case "bestvideo[height<=1080]+bestaudio/best":
+                    return 4
+                case "bestvideo[height<=720]+bestaudio/best":
+                    return 5
+                case "bestvideo[height<=480]+bestaudio/best":
+                    return 6
+                }
+                return 0
             }
         }
 
