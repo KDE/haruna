@@ -43,7 +43,7 @@ SettingsBasePage {
 
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip seek small step setting",
-                                   "How much to seek when triggering the coresponding action. Seek mode is " +
+                                   "How much to seek when triggering the corresponding action. Seek mode is " +
                                    "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>")
             }
         }
@@ -70,7 +70,7 @@ SettingsBasePage {
 
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip seek medium step setting",
-                                   "How much to seek when triggering the coresponding action. Seek mode is " +
+                                   "How much to seek when triggering the corresponding action. Seek mode is " +
                                    "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>.<br>" +
                                    "This is also used for mouse wheel seeking, when mouse is over the progress bar.")
             }
@@ -97,7 +97,7 @@ SettingsBasePage {
 
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip seek big step setting",
-                                   "How much to seek when triggering the coresponding action. Seek mode is " +
+                                   "How much to seek when triggering the corresponding action. Seek mode is " +
                                    "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>")
             }
         }
