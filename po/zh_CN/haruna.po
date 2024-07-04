@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:38+0000\n"
+"POT-Creation-Date: 2024-07-04 00:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -757,21 +757,6 @@ msgstr ""
 "找不到 <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 或者 <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
-#: src/qml/Haruna/Components/SettingsBasePage.qml:28
-msgctxt "@action:intoolbar"
-msgid "Help"
-msgstr "帮助"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:31
-msgctxt "@action:inmenu"
-msgid "Haruna help window (english only)"
-msgstr "Haruna 帮助窗口 (仅英文)"
-
-#: src/qml/Haruna/Components/SettingsBasePage.qml:36
-msgctxt "@action:inmenu"
-msgid "Haruna handbook"
-msgstr "Haruna 使用手册"
-
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
@@ -827,7 +812,7 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:225 src/qml/PlayList.qml:325
-#: src/qml/Settings/VideoSettings.qml:72
+#: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "选择文件"
@@ -1102,172 +1087,214 @@ msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "移动到回收站"
 
-#: src/qml/Settings/AudioSettings.qml:28
-#: src/qml/Settings/SubtitlesSettings.qml:35
+#: src/qml/Settings/AudioSettings.qml:25
+#: src/qml/Settings/SubtitlesSettings.qml:32
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "首选语言"
 
-#: src/qml/Settings/AudioSettings.qml:36
-#: src/qml/Settings/SubtitlesSettings.qml:43
+#: src/qml/Settings/AudioSettings.qml:33
+#: src/qml/Settings/SubtitlesSettings.qml:40
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "eng, ger 等。"
 
-#: src/qml/Settings/AudioSettings.qml:55
-#: src/qml/Settings/SubtitlesSettings.qml:62
+#: src/qml/Settings/AudioSettings.qml:52
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "首选音轨"
 
-#: src/qml/Settings/AudioSettings.qml:78
+#: src/qml/Settings/AudioSettings.qml:75
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "音量调整步长"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:40
+#: src/qml/Settings/CustomCommandsSettings.qml:36
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "尚未设置任何自定义命令"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:42
+#: src/qml/Settings/CustomCommandsSettings.qml:38
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "添加命令(&A)"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:78
+#: src/qml/Settings/CustomCommandsSettings.qml:74
 msgctxt "@info:tooltip"
-msgid "Don't set on next startup"
-msgstr "下次启动时不设置"
+msgid ""
+"Checked: property will be set at startup\n"
+"Unchecked: property will not be set at startup"
+msgstr ""
 
-#: src/qml/Settings/CustomCommandsSettings.qml:152
+#: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "添加(&A)"
 
-#: src/qml/Settings/DebugSettings.qml:27
+#: src/qml/Settings/DebugSettings.qml:24
 msgctxt "@label:textbox"
 msgid "Config folder"
 msgstr "配置文件夹"
 
-#: src/qml/Settings/DebugSettings.qml:39
+#: src/qml/Settings/DebugSettings.qml:36
 msgctxt "@info:tooltip"
 msgid "Open config folder"
 msgstr "打开配置文件夹"
 
-#: src/qml/Settings/DebugSettings.qml:51
+#: src/qml/Settings/DebugSettings.qml:48
 msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:63
+#: src/qml/Settings/DebugSettings.qml:60
 msgctxt "@info:tooltip"
 msgid "Open config file"
 msgstr "打开配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:75
+#: src/qml/Settings/DebugSettings.qml:72
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "自定义命令配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:87
+#: src/qml/Settings/DebugSettings.qml:84
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
 msgstr "打开自定义命令配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:99
+#: src/qml/Settings/DebugSettings.qml:96
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr "如果字段为空，意味着没有创建配置文件/文件夹 (例如在使用默认设置时)。"
 
-#: src/qml/Settings/DebugSettings.qml:107
+#: src/qml/Settings/DebugSettings.qml:104
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "启用 mpv 日志记录"
 
-#: src/qml/Settings/EditCustomCommand.qml:42
+#: src/qml/Settings/EditCustomCommand.qml:39
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "命令"
 
-#: src/qml/Settings/EditCustomCommand.qml:50
+#: src/qml/Settings/EditCustomCommand.qml:48
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "add volume +10"
 
-#: src/qml/Settings/EditCustomCommand.qml:56
+#: src/qml/Settings/EditCustomCommand.qml:55
+msgctxt "@info:tooltip"
+msgid ""
+"What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
+"input-commands\">MPV Commands</a> for a list of available commands.<br>Not "
+"all commands will work as some are specific for mpv.<br>Most useful are the "
+"commands to manipulate properties, like <strong>set</strong>, <strong>add</"
+"strong>, <strong>cycle</strong>.<br><strong>set</strong>: sets the value of "
+"a property <strong>set volume-max 150</strong>.<br><strong>add</strong>: "
+"increases/decreases the value of a property <strong>add volume 15</strong>, "
+"increases volume by 15. To decrease the value use <strong>add volume -15</"
+"strong>.<br><strong>cycle</strong>: cycle through the values of a property "
+"<strong>cycle aid up</strong>."
+msgstr ""
+
+#: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "屏显信息"
 
-#: src/qml/Settings/EditCustomCommand.qml:65
+#: src/qml/Settings/EditCustomCommand.qml:82
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "文件名：${filename}"
 
-#: src/qml/Settings/EditCustomCommand.qml:70
+#: src/qml/Settings/EditCustomCommand.qml:88
+msgctxt "@info:tooltip"
+msgid ""
+"An OSD message to display when triggering an action type custom command."
+"<br>Use ${property_name} to display the value of a property <strong>Volume: "
+"${volume}</strong>"
+msgstr ""
+
+#: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
 msgid "Type"
 msgstr "类型"
 
-#: src/qml/Settings/EditCustomCommand.qml:91
+#: src/qml/Settings/EditCustomCommand.qml:118
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "键盘快捷键"
 
-#: src/qml/Settings/EditCustomCommand.qml:98
+#: src/qml/Settings/EditCustomCommand.qml:119
+msgctxt "@info:tooltip"
+msgid ""
+"The command will be triggered with a shortcut. The shortcut can be set after "
+"saving."
+msgstr ""
+
+#: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "启动时运行"
 
-#: src/qml/Settings/EditCustomCommand.qml:108
+#: src/qml/Settings/EditCustomCommand.qml:129
+msgctxt "@info:tooltip"
+msgid "The command will be run at application startup."
+msgstr ""
+
+#: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "删除"
 
-#: src/qml/Settings/EditCustomCommand.qml:123
+#: src/qml/Settings/EditCustomCommand.qml:156
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "取消"
 
-#: src/qml/Settings/EditCustomCommand.qml:130
+#: src/qml/Settings/EditCustomCommand.qml:163
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "保存(&S)"
 
-#: src/qml/Settings/GeneralSettings.qml:29
+#: src/qml/Settings/GeneralSettings.qml:25
 msgctxt "@label:spinbox"
 msgid "Osd font size"
 msgstr "屏显字体大小"
 
-#: src/qml/Settings/GeneralSettings.qml:55
+#: src/qml/Settings/GeneralSettings.qml:51
 msgctxt "@label:textbox"
 msgid "File dialog location"
 msgstr "文件对话框位置"
 
-#: src/qml/Settings/GeneralSettings.qml:74
+#: src/qml/Settings/GeneralSettings.qml:70
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
-msgid "If empty the file dialog will remember the last opened location."
+msgid ""
+"The default location of the open file dialog. If empty the file dialog will "
+"try to open to the last opened location."
 msgstr "如果此项为空，对话框将记住最近一次打开的位置。"
 
-#: src/qml/Settings/GeneralSettings.qml:84
+#: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "最近文件数目"
 
-#: src/qml/Settings/GeneralSettings.qml:101
+#: src/qml/Settings/GeneralSettings.qml:98
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgstr "“最近文件”列表的文件数量上限。输入 0 时禁止记录最近文件。"
 
-#: src/qml/Settings/GeneralSettings.qml:109
+#: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "仅运行一个实例"
 
-#: src/qml/Settings/GeneralSettings.qml:125
+#: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.\n"
@@ -1277,57 +1304,65 @@ msgstr ""
 "尝试打开另一个 Haruna 实例时将不会发生任何事情。\n"
 "尝试用 Haruna 打开另一个文件时将用正在运行的实例打开。"
 
-#: src/qml/Settings/GeneralSettings.qml:139
+#: src/qml/Settings/GeneralSettings.qml:136
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "添加文件至播放列表"
 
-#: src/qml/Settings/GeneralSettings.qml:155
+#: src/qml/Settings/GeneralSettings.qml:152
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "文件将被添加到播放列表末尾"
 
-#: src/qml/Settings/GeneralSettings.qml:164
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@title"
 msgid "Interface"
 msgstr "界面"
 
-#: src/qml/Settings/GeneralSettings.qml:170
+#: src/qml/Settings/GeneralSettings.qml:167
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:172
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "显示预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:187
+#: src/qml/Settings/GeneralSettings.qml:179
+msgctxt "@info:tooltip"
+msgid "Shows a preview while hovering the seek/progress bar."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "使用精确预览图"
 
-#: src/qml/Settings/GeneralSettings.qml:204
+#: src/qml/Settings/GeneralSettings.qml:205
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "精确预览图的生成速度较慢"
 
-#: src/qml/Settings/GeneralSettings.qml:214
+#: src/qml/Settings/GeneralSettings.qml:215
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
-msgid "Thumbnail Width"
+msgid "Thumbnail width"
 msgstr "缩略图宽度"
 
-#: src/qml/Settings/GeneralSettings.qml:232
+#: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@label"
 msgid "Window"
 msgstr "窗口"
 
-#: src/qml/Settings/GeneralSettings.qml:238
+#: src/qml/Settings/GeneralSettings.qml:239
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "调整窗口大小以适应视频"
 
-#: src/qml/Settings/GeneralSettings.qml:254
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1336,12 +1371,12 @@ msgstr ""
 "根据视频分辨率调整窗口大小。\n"
 "最大尺寸不作限制，由操作系统决定。"
 
-#: src/qml/Settings/GeneralSettings.qml:268
+#: src/qml/Settings/GeneralSettings.qml:269
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
-#: src/qml/Settings/GeneralSettings.qml:283
+#: src/qml/Settings/GeneralSettings.qml:284
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1355,38 +1390,38 @@ msgstr ""
 "\n"
 "“调整窗口大小以适应视频”选项的优先级更高。\n"
 
-#: src/qml/Settings/GeneralSettings.qml:298
+#: src/qml/Settings/GeneralSettings.qml:299
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
-#: src/qml/Settings/GeneralSettings.qml:309
-#: src/qml/Settings/PlaylistSettings.qml:80
+#: src/qml/Settings/GeneralSettings.qml:310
+#: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/Settings/GeneralSettings.qml:320
+#: src/qml/Settings/GeneralSettings.qml:321
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:330
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
-#: src/qml/Settings/GeneralSettings.qml:371
+#: src/qml/Settings/GeneralSettings.qml:372
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面样式"
 
-#: src/qml/Settings/GeneralSettings.qml:422
+#: src/qml/Settings/GeneralSettings.qml:423
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "使用 Breeze 微风图标主题"
 
-#: src/qml/Settings/GeneralSettings.qml:430
+#: src/qml/Settings/GeneralSettings.qml:431
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1395,194 +1430,286 @@ msgstr ""
 "设置图标主题为 Breeze 微风。\n"
 "需要重启才能生效。"
 
-#: src/qml/Settings/MouseSettings.qml:82
+#: src/qml/Settings/MouseSettings.qml:79
 msgctxt "@label"
 msgid "No action set"
 msgstr "没有设置操作"
 
-#: src/qml/Settings/MouseSettings.qml:96
+#: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr "清除操作"
 
-#: src/qml/Settings/MouseSettings.qml:133
+#: src/qml/Settings/MouseSettings.qml:130
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "双击设置操作"
 
-#: src/qml/Settings/PlaybackSettings.qml:30
+#: src/qml/Settings/PlaybackSettings.qml:26
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "快进/快退一小步的步长"
 
-#: src/qml/Settings/PlaybackSettings.qml:48
+#: src/qml/Settings/PlaybackSettings.qml:46
+msgctxt "@info:tooltip seek small step setting"
+msgid ""
+"How much to seek when triggering the coresponding action. Seek mode is <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "快进/快退一中步的步长"
 
-#: src/qml/Settings/PlaybackSettings.qml:74
-msgctxt "@info:tooltip"
+#: src/qml/Settings/PlaybackSettings.qml:73
+msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"This is also used for mouse wheel seeking, when mouse is over the progress "
-"bar"
-msgstr "鼠标悬停在进度条上面时，鼠标滚轮的快进/快退操作也使用此数值"
+"How much to seek when triggering the coresponding action. Seek mode is <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
+"mouse is over the progress bar."
+msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:85
+#: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "快进/快退一大步的步长"
 
-#: src/qml/Settings/PlaybackSettings.qml:106
+#: src/qml/Settings/PlaybackSettings.qml:100
+msgctxt "@info:tooltip seek big step setting"
+msgid ""
+"How much to seek when triggering the coresponding action. Seek mode is <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "最小化时暂停"
 
-#: src/qml/Settings/PlaybackSettings.qml:114
-msgctxt "@info:tooltip"
+#: src/qml/Settings/PlaybackSettings.qml:119
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pauses the player while the window is minimized, playback resumes when "
+#| "restored."
+msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr "窗口最小化时暂停播放，还原时恢复播放。"
 
-#: src/qml/Settings/PlaybackSettings.qml:119
+#: src/qml/Settings/PlaybackSettings.qml:124
 msgctxt "@label:spinbox"
 msgid "Resume playback"
 msgstr "播放中断恢复"
 
-#: src/qml/Settings/PlaybackSettings.qml:126
+#: src/qml/Settings/PlaybackSettings.qml:131
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "启动时打开上次播放的文件"
 
-#: src/qml/Settings/PlaybackSettings.qml:139
+#: src/qml/Settings/PlaybackSettings.qml:140
+msgctxt "@info:tooltip open last played file setting"
+msgid ""
+"On startup it opens the file that was playing when the application was "
+"closed."
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
 msgid "Seek to last playback position"
 msgstr "自动恢复上次播放进度"
 
-#: src/qml/Settings/PlaybackSettings.qml:147
-msgctxt "@info:tooltip"
+#: src/qml/Settings/PlaybackSettings.qml:158
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "When opening a file that was played before, seek at the position it was "
+#| "last time."
+msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr "打开之前播放过的文件时，从上次播放中断的位置开始播放。"
 
-#: src/qml/Settings/PlaybackSettings.qml:156
+#: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "自动开始播放"
 
-#: src/qml/Settings/PlaybackSettings.qml:165
-msgctxt "@info:tooltip"
+#: src/qml/Settings/PlaybackSettings.qml:177
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "When opening a file that was played before, start playing it "
+#| "automatically."
+msgctxt "@info:tooltip start playing setting"
 msgid ""
-"When opening a file that was played before, start playing it automatically."
+"When resuming playback and seeking to last playback position, start playing "
+"it automatically."
 msgstr "打开以前播放过的文件时，自动开始播放。"
 
-#: src/qml/Settings/PlaybackSettings.qml:170
+#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "硬件解码"
 
-#: src/qml/Settings/PlaybackSettings.qml:176
-#: src/qml/Settings/PlaybackSettings.qml:289
+#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:324
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "已启用"
 
-#: src/qml/Settings/PlaybackSettings.qml:176
-#: src/qml/Settings/PlaybackSettings.qml:289
+#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:324
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/qml/Settings/PlaybackSettings.qml:221
-msgctxt "@label:spinbox"
-msgid "Remember time position"
-msgstr "记住时间位置"
+#: src/qml/Settings/PlaybackSettings.qml:235
+msgctxt "@info:tooltip hardware decoding setting"
+msgid ""
+"Specify the hardware video decoding API that should be used if possible. "
+"Whether hardware decoding is actually done depends on the video codec. If "
+"hardware decoding is not possible, mpv will fall back on software decoding."
+"<br><br><ul><li><strong>auto</strong> tries to automatically enable hardware "
+"decoding using the first available method.</li><li><strong>auto-safe</"
+"strong> similar to auto, but allows only whitelisted methods that are "
+"considered \"safe\".</li><li><strong>vaapi</strong> works with Intel and AMD "
+"GPUs only. It also requires the opengl EGL backend.</li><li><strong>nvdec</"
+"strong> the newest, and recommended method to do hardware decoding on Nvidia "
+"GPUs.</li><li><strong>cuda</strong> an older implementation of hardware "
+"decoding on Nvidia GPUs.</li><li><strong>videotoolbox</strong></"
+"li><li><strong>d3d11va</strong></li></ul><br><br>You can read more about "
+"hardware decoding here: <a href='https://mpv.io/manual/stable/#options-"
+"hwdec'>https://mpv.io/manual/stable/#options-hwdec</a><br><br>You can set "
+"another hardware decoder by creating a startup custom command <strong>set "
+"hwdec <i>decoder_name</i></strong>."
+msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:241
+#: src/qml/Settings/PlaybackSettings.qml:255
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Seek to last playback position"
+msgctxt "@label:spinbox"
+msgid "Save playback position"
+msgstr "自动恢复上次播放进度"
+
+#: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/qml/Settings/PlaybackSettings.qml:243
+#: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info"
 msgid "For all files"
 msgstr "记住所有文件的时间位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:246
+#: src/qml/Settings/PlaybackSettings.qml:280
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
 msgstr[0] "只记住长于 %1 分钟的文件"
 
-#: src/qml/Settings/PlaybackSettings.qml:274
+#: src/qml/Settings/PlaybackSettings.qml:308
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "每 %1 秒保存时间位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:283
+#: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@label"
 msgid "Skip chapters"
 msgstr "跳过章节"
 
-#: src/qml/Settings/PlaybackSettings.qml:300
+#: src/qml/Settings/PlaybackSettings.qml:333
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Automatically skips chapters containing certain words/characters.\n"
+#| "Check 'Playback' settings for more details"
+msgctxt "@info:tooltip skip chapters setting"
+msgid ""
+"When enabled it automatically skips chapters containing certain words/"
+"characters."
+msgstr ""
+"自动跳过包含某些单词/字符的章节。\n"
+"查看“播放”设置以获取更多详细信息"
+
+#: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "跳过时显示屏显信息"
 
-#: src/qml/Settings/PlaybackSettings.qml:310
+#: src/qml/Settings/PlaybackSettings.qml:351
+msgctxt "@info:tooltip show osd message on skip setting"
+msgid ""
+"When skipping chapters an osd message will show the title of the skipped "
+"chapter."
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "跳过包含关键词的章节"
 
-#: src/qml/Settings/PlaybackSettings.qml:319
+#: src/qml/Settings/PlaybackSettings.qml:366
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1, 开场曲, 结尾曲, 章节 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:332
-msgctxt "@info:tooltip"
-msgid "Skip chapters containing these words. Comma separated list."
-msgstr "跳过包含这些单词的章节。请用半角逗号分隔列表中的单词。"
+#: src/qml/Settings/PlaybackSettings.qml:386
+msgctxt "@info:tooltip skip words setting"
+msgid ""
+"Skip chapters containing these words. Comma separated list. The match is not "
+"exact, meaning <strong>op</strong> will match words containing it like "
+"<strong><u>op</u>ening</strong>."
+msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:346
+#: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:352
+#: src/qml/Settings/PlaybackSettings.qml:402
 msgid "Format selection"
 msgstr "格式选择"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
-msgctxt "@info:tooltip"
-msgid ""
-"Selects the best video with a height lower than or equal to the selected "
-"value."
+#: src/qml/Settings/PlaybackSettings.qml:460
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Selects the best video with a height lower than or equal to the selected "
+#| "value."
+msgctxt "@info:tooltip format selection setting"
+msgid "Selects a video source that is closest to the selected format."
 msgstr "选择高度小于/等于指定值的最佳视频。"
 
-#: src/qml/Settings/PlaybackSettings.qml:417
+#: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/qml/Settings/PlaylistSettings.qml:27
+#: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
 msgid "Position"
 msgstr "播放列表位置"
 
-#: src/qml/Settings/PlaylistSettings.qml:52
+#: src/qml/Settings/PlaylistSettings.qml:49
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "播放列表样式"
 
-#: src/qml/Settings/PlaylistSettings.qml:90
+#: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "播放列表在视频上方叠加显示"
 
-#: src/qml/Settings/PlaylistSettings.qml:97
+#: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1591,49 +1718,49 @@ msgstr ""
 "勾选时，播放列表将叠加显示在视频的上方\n"
 "不勾选时，视频画面将缩小以容纳播放列表"
 
-#: src/qml/Settings/PlaylistSettings.qml:104
+#: src/qml/Settings/PlaylistSettings.qml:101
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "显示媒体文件的标题，而不是文件名称"
 
-#: src/qml/Settings/PlaylistSettings.qml:114
+#: src/qml/Settings/PlaylistSettings.qml:111
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "自动加载相同文件夹中的视频"
 
-#: src/qml/Settings/PlaylistSettings.qml:124
+#: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "循环播放"
 
-#: src/qml/Settings/PlaylistSettings.qml:134
+#: src/qml/Settings/PlaylistSettings.qml:131
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "显示行号"
 
-#: src/qml/Settings/PlaylistSettings.qml:144
+#: src/qml/Settings/PlaylistSettings.qml:141
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "鼠标悬停边缘时显示播放列表"
 
-#: src/qml/Settings/PlaylistSettings.qml:153
+#: src/qml/Settings/PlaylistSettings.qml:150
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "全屏时增加字体大小"
 
-#: src/qml/Settings/PlaylistSettings.qml:166
+#: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "记住播放列表的显示/隐藏状态"
 
-#: src/qml/Settings/PlaylistSettings.qml:173
+#: src/qml/Settings/PlaylistSettings.qml:170
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "勾选后，播放列表的显示/隐藏状态将跨会话保存"
 
-#: src/qml/Settings/PlaylistSettings.qml:181
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "单击打开项目"
@@ -1693,17 +1820,12 @@ msgctxt "@action"
 msgid "About"
 msgstr "关于"
 
-#: src/qml/Settings/SettingsWindow.qml:183
-msgctxt "@title:window"
-msgid "Help"
-msgstr "帮助"
-
-#: src/qml/Settings/SubtitlesSettings.qml:85
+#: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "允许在视频黑边中显示字幕"
 
-#: src/qml/Settings/SubtitlesSettings.qml:94
+#: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -1711,85 +1833,85 @@ msgid ""
 msgstr ""
 "勾选后，字幕可以在视频外面的黑边中显示。并不是所有 .ass 字幕都支持此模式。"
 
-#: src/qml/Settings/SubtitlesSettings.qml:99
+#: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
 msgid "Styling"
 msgstr "字幕样式"
 
-#: src/qml/Settings/SubtitlesSettings.qml:105
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "字体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:137
+#: src/qml/Settings/SubtitlesSettings.qml:134
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "字体大小"
 
-#: src/qml/Settings/SubtitlesSettings.qml:153
+#: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@label"
 msgid "Font style"
 msgstr "字体样式"
 
-#: src/qml/Settings/SubtitlesSettings.qml:158
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "粗体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:170
+#: src/qml/Settings/SubtitlesSettings.qml:167
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "斜体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:180
+#: src/qml/Settings/SubtitlesSettings.qml:177
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "字体颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:231
-#: src/qml/Settings/SubtitlesSettings.qml:287
-#: src/qml/Settings/SubtitlesSettings.qml:364
+#: src/qml/Settings/SubtitlesSettings.qml:228
+#: src/qml/Settings/SubtitlesSettings.qml:284
+#: src/qml/Settings/SubtitlesSettings.qml:361
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "设置为默认值"
 
-#: src/qml/Settings/SubtitlesSettings.qml:237
+#: src/qml/Settings/SubtitlesSettings.qml:234
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "阴影颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:290
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "阴影偏移"
 
-#: src/qml/Settings/SubtitlesSettings.qml:309
-#: src/qml/Settings/SubtitlesSettings.qml:386
+#: src/qml/Settings/SubtitlesSettings.qml:306
+#: src/qml/Settings/SubtitlesSettings.qml:383
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "设置为 0 以禁用。"
 
-#: src/qml/Settings/SubtitlesSettings.qml:314
+#: src/qml/Settings/SubtitlesSettings.qml:311
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "边框颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:367
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "边框宽度"
 
-#: src/qml/Settings/VideoSettings.qml:31
+#: src/qml/Settings/VideoSettings.qml:27
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "音乐文件默认封面"
 
-#: src/qml/Settings/VideoSettings.qml:40
+#: src/qml/Settings/VideoSettings.qml:36
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "图像的路径"
 
-#: src/qml/Settings/VideoSettings.qml:52
+#: src/qml/Settings/VideoSettings.qml:48
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -1798,47 +1920,116 @@ msgstr ""
 "文件没有可用的封面图像时，显示此图像。用于不具备视频轨道的音乐文件、没有嵌入"
 "封面图像的音乐文件、在相同文件夹中没有封面图像的音乐文件。"
 
-#: src/qml/Settings/VideoSettings.qml:83
+#: src/qml/Settings/VideoSettings.qml:79
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "截图"
 
-#: src/qml/Settings/VideoSettings.qml:93
+#: src/qml/Settings/VideoSettings.qml:89
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "格式"
 
-#: src/qml/Settings/VideoSettings.qml:133
+#: src/qml/Settings/VideoSettings.qml:129
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "模板"
 
 #: src/qml/Settings/VideoSettings.qml:159
+msgctxt "@info:tooltip"
+msgid ""
+"Specify the filename template used to save screenshots. The template "
+"specifies the filename without file extension, and can contain format "
+"specifiers, which will be substituted when taking a screenshot. By default, "
+"the template is \"%F-%n\". <br>The template can start with a relative or "
+"absolute path, in order to specify a directory location where screenshots "
+"should be saved.<br>If the final screenshot filename points to an already "
+"existing file, the file will not be overwritten. The screenshot will either "
+"not be saved, or if the template contains %n, saved using different, newly "
+"generated filename.<br>For full info checkout <a href='https://mpv.io/manual/"
+"stable/#options-screenshot-template'>https://mpv.io/manual/stable/#options-"
+"screenshot-template</a><br><br><strong>Allowed format specifiers:</"
+"strong><br><ul><li><strong>%[#][0X]n</strong> A sequence number, padded with "
+"zeros to length X.<br><li><strong>%f</strong> Filename of the currently "
+"played video.<br><li><strong>%F</strong> Same as %f, but without the file "
+"extension.<br><li><strong>%x</strong> Directory path of the currently played "
+"video. If the video is not on the filesystem (http:// urls), this expands to "
+"an empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
+"video file is not on the filesystem, return the fallback string inside the "
+"{...}.<br><li><strong>%p</strong> Current playback time. The result is a "
+"string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar to %p, "
+"but extended with the playback time in milliseconds \"HH:MM:SS.mmm\"."
+"<br><li><strong>%wX</strong> Specify the current playback time using the "
+"format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</strong> "
+"hour (padded with 0 to two digits)</li><li><strong>%wh</strong> hour (not "
+"padded)</li><li><strong>%wM</strong> minutes (00-59)</li><li><strong>%wm</"
+"strong> total minutes (includes hours, unlike %wM)</li><li><strong>%wS</"
+"strong> seconds (00-59)</li><li><strong>%ws</strong> total seconds (includes "
+"hours and minutes)</li><li><strong>%wf</strong> like %ws, but as float</"
+"li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
+"strong> Replaced with the % character itself.</li></ul><br>"
+msgstr ""
+
+#: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "图像调整"
 
-#: src/qml/Settings/VideoSettings.qml:169
+#: src/qml/Settings/VideoSettings.qml:204
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "对比度"
 
-#: src/qml/Settings/VideoSettings.qml:188
+#: src/qml/Settings/VideoSettings.qml:223
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "亮度"
 
-#: src/qml/Settings/VideoSettings.qml:207
+#: src/qml/Settings/VideoSettings.qml:242
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "伽玛值"
 
-#: src/qml/Settings/VideoSettings.qml:226
+#: src/qml/Settings/VideoSettings.qml:261
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "饱和度"
 
-#: src/qml/Settings/VideoSettings.qml:242
+#: src/qml/Settings/VideoSettings.qml:277
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键点击滑块可以重置"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "Help"
+#~ msgstr "帮助"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Haruna help window (english only)"
+#~ msgstr "Haruna 帮助窗口 (仅英文)"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Haruna handbook"
+#~ msgstr "Haruna 使用手册"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Don't set on next startup"
+#~ msgstr "下次启动时不设置"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "This is also used for mouse wheel seeking, when mouse is over the "
+#~ "progress bar"
+#~ msgstr "鼠标悬停在进度条上面时，鼠标滚轮的快进/快退操作也使用此数值"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Remember time position"
+#~ msgstr "记住时间位置"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Skip chapters containing these words. Comma separated list."
+#~ msgstr "跳过包含这些单词的章节。请用半角逗号分隔列表中的单词。"
+
+#~ msgctxt "@title:window"
+#~ msgid "Help"
+#~ msgstr "帮助"
