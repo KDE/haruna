@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
-"PO-Revision-Date: 2024-05-29 22:04+0200\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"PO-Revision-Date: 2024-07-04 21:35+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1275,14 +1275,13 @@ msgid "File dialog location"
 msgstr "Dosiera dialogloko"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Se malplena la dosierdialogo memoros la lastan malfermitan lokon."
+msgstr ""
+"La defaŭlta loko de la dialogo por malfermi dosieron. Se malplena, la "
+"dosierdialogo memoros la lastan malfermitan lokon."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1351,12 +1350,9 @@ msgid "Generating an accurate preview is slow"
 msgstr "Generado de preciza antaŭrigardo estas malrapida"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr "Larĝeco de Bildeto"
+msgstr "Larĝeco de bildeto"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@label"
@@ -1461,7 +1457,7 @@ msgstr "Serĉi paŝeton"
 #: src/qml/Settings/PlaybackSettings.qml:46
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
@@ -1474,7 +1470,7 @@ msgstr "Serĉi mezan paŝon"
 #: src/qml/Settings/PlaybackSettings.qml:73
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
@@ -1488,7 +1484,7 @@ msgstr "Serĉi paŝegon"
 #: src/qml/Settings/PlaybackSettings.qml:100
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
@@ -1499,11 +1495,6 @@ msgid "Pause on minimize"
 msgstr "Paŭzi je minimumigo"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1535,11 +1526,6 @@ msgid "Seek to last playback position"
 msgstr "Serĉi ĝis lasta reprodukta pozicio"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1554,17 +1540,13 @@ msgid "Start playing"
 msgstr "Komenci ludi"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"Malfermante dosieron, kiu estis ludita antaŭe, komencu ludi ĝin aŭtomate."
+"Daŭrigante ludadon kaj serĉante ĝis lasta ludadpozicio, komenci ludi ĝin "
+"aŭtomate."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1605,12 +1587,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Serĉi ĝis lasta reprodukta pozicio"
+msgstr "Konservi reproduktan pozicion"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1642,18 +1621,13 @@ msgid "Skip chapters"
 msgstr "Salti ĉapitrojn"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Aŭtomate preterlasas ĉapitrojn enhavantajn iujn vortojn/signojn.\n"
-"Kontrolu agordojn de 'Reproduktado' por pliaj detaloj"
+"Kiam ebligita, ĝi aŭtomate preterlasas ĉapitrojn enhavantajn certajn vortojn/"
+"signojn."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1695,16 +1669,10 @@ msgid "Format selection"
 msgstr "Elekto de formato"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr ""
-"Elektas la plej bonan videon kun alteco pli malalta ol aŭ egala al la "
-"elektita valoro."
+"Elektas filmetan fonton kiu estas plej proksima al la elektita formato."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -2018,40 +1986,3 @@ msgstr "Saturiĝo"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Meze alklaku la glitilojn por restarigi ilin"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "Help"
-#~ msgstr "Helpo"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna help window (english only)"
-#~ msgstr "Helpfenestro de Haruna (nur en la angla)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna handbook"
-#~ msgstr "Haruna manlibro"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Don't set on next startup"
-#~ msgstr "Ne agordi la venontan ekfunkciigon"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "This is also used for mouse wheel seeking, when mouse is over the "
-#~ "progress bar"
-#~ msgstr ""
-#~ "Ĉi tio ankaŭ estas uzata por serĉado de musrado, kiam muso estas super la "
-#~ "progresbreto"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Remember time position"
-#~ msgstr "Memori tempan pozicion"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Skip chapters containing these words. Comma separated list."
-#~ msgstr ""
-#~ "Salti ĉapitrojn enhavantajn ĉi tiujn vortojn. Listo de apartigitaj komoj."
-
-#~ msgctxt "@title:window"
-#~ msgid "Help"
-#~ msgstr "Helpo"

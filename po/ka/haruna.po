@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 03:37+0200\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"PO-Revision-Date: 2024-07-04 05:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1129,6 +1129,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"ჩართული: თვისება გაშვებისას დადგება\n"
+"გამორთული: თვისება გაშვებისას დაყენებული არ იქნება"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1203,6 +1205,17 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"იმისათვის, რომ იხილოთ, რომელი mpv ბრძანებები გაუშვათ, გადადით ბმულზე <a href="
+"\"https://mpv.io/manual/stable/#list-of-input-commands\">MPV-ის ბრძანებები</"
+"a>.<br>ყველა ბრძანება არ იმუშავებს, რადგან ზოგიერთი, მხოლოდ, mpv-სთვისაა "
+"განკუთვნილი.<br>ყველაზე გამოსადეგია თვისებების შემცველი ბრძანებები, "
+"როგორიცაა <strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>."
+"<br><strong>set</strong>: აყენებს თვისების მნიშვნელობას <strong>set volume-"
+"max 150</strong>.<br><strong>add</strong>: გაზრდის/შეამცირებს თვისების "
+"მნიშვნელობას <strong>add volume 15</strong>, გაზრდის ხმას 15-ით. იმისათვის, "
+"რომ შეამციროთ მნიშვნელობა, გაოიყენეთ <strong>add volume -15</strong>."
+"<br><strong>cycle</strong>: თვისების მნიშვნელობის გადართვა. მაგ: "
+"<strong>cycle aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1221,6 +1234,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"OSD შეტყობინება, რომელიც ნაჩვენები იქნება ქმედების ტიპის მორგებული ბრძანების "
+"დატრიგერებისას,<br>გამოიყენეთ ${property_name}, რომ გამოიტანოთ თვისების "
+"მნიშვნელობა <strong>ხმა: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1238,6 +1254,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"ბრძანება დატრიგერდება მალსახმობით. მალსახმობის დაყენება შენახვის შემდეგ "
+"შეგეძლებათ."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1247,7 +1265,7 @@ msgstr "ჩატვირთვისას გაშვება"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "ბრძანება აპლიკაციის გაშვებისას შესრულდება."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1275,14 +1293,13 @@ msgid "File dialog location"
 msgstr "ფაილის ფანჯრის მდებარეობა"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "დაიმახსოვრებს თუ არა ფაილის ფანჯარა ბოლოს გახსნილ მდებარეობას."
+msgstr ""
+"ნაგულისხმევი მდებარეობა ფაილის გახსნის დიალოგისთვის. თუ ცარიელია, ფაილის "
+"დიალოგი ბოლოს გახსნის მდებარეობა გახსნის."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1338,6 +1355,8 @@ msgstr "გადახედვის მინიატურის ჩვე�
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
+"აჩვენებს მინიატურას, როცა თაგუნას კურსორი გადახვევის/მიმდინარეობის ზოლზე "
+"გიჭირავთ."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1350,9 +1369,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "სწორი მინიატურის გენერაცია ნელია"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "მინიატურის სიგანე"
@@ -1457,12 +1473,21 @@ msgid "Seek small step"
 msgstr "პატარა ბიჯით გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:46
+#, fuzzy
+#| msgctxt "@info:tooltip seek small step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"რამდენით მოხდება გადახვევა შესაბამისი ქმედების დატრიგერებისას. გადახვევის "
+"რეჟიმია <a href='https://mpv.io/manual/stable/#command-interface-seek-"
+"<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1470,13 +1495,24 @@ msgid "Seek medium step"
 msgstr "საშუალო ბიჯით გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
+#, fuzzy
+#| msgctxt "@info:tooltip seek medium step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
+#| "mouse is over the progress bar."
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"რამდენით მოხდება გადახვევა შესაბამისი ქმედების დატრიგერებისას. გადახვევის "
+"რეჟიმია <a href='https://mpv.io/manual/stable/#command-interface-seek-"
+"<target>-[<flags>]'>exact</a>.<br> ეს ასევე შეგიძლიათ, თაგუნათი "
+"გადახვევისასაც გამოიყენოთ, როცა თაგუნას კურსორი მიმდინარეობის ზოლის თავზეა."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1484,12 +1520,21 @@ msgid "Seek big step"
 msgstr "დიდი ბიჯით გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:100
+#, fuzzy
+#| msgctxt "@info:tooltip seek big step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"რამდენით მოხდება გადახვევა შესაბამისი ქმედების დატრიგერებისას. გადახვევის "
+"რეჟიმია <a href='https://mpv.io/manual/stable/#command-interface-seek-"
+"<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1497,11 +1542,6 @@ msgid "Pause on minimize"
 msgstr "შეჩერება ჩაკეცვისას"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1524,7 +1564,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "გაშვებისას ის გახსნის ფაილს, რომელსაც უკრავდა, როცა აპლიკაცია დახურეს."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1532,11 +1572,6 @@ msgid "Seek to last playback position"
 msgstr "ბოლოს დაკრულ ადგილას გადახვევა"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1551,18 +1586,13 @@ msgid "Start playing"
 msgstr "დაკვრის დაწყება"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"ფაილის გახსნისას, რომელიც ადრე უკვე გახსნილი იყო, მისი დაკვრის ავტომატური "
-"დაწყება."
+"როცა აგრძელებთ დაკვრას და გადახვევას ბოლოს დაკრულ მდებარეობაზე, დაკვრა "
+"ავტომატურად დაიწყება."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1601,14 +1631,27 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"მიუთითეთ აპარატურული ვიდეოდეკოდერის API, რომელიც გნებავთ, გამოიყენოთ, თუ ეს "
+"შესაძლებელია. თუ აპარატურული დეკოდერი ასევე დამოკიდებულია ვიდეოკოდეკზეც. თუ "
+"აპარატურული დეკოდერი ხელმისაწვდომი არაა, mpv პროგრამულ დეკოდერზე გადართვება."
+"<br><br><ul><li><strong>ავტო</strong> ეცდება, აპარატურული დეკოდერი პირველივე "
+"ხელმისაწვდომი მეთოდით ჩართოს..</li><li><strong>ავტო-უსაფრთხო</strong> ავტოს "
+"წააგავს, მაგრამ, მხოლოდ, თეთრ სიაში არსებული მეთოდების გამოყენებას ცდილობს.."
+"</li><li><strong>vaapi</strong> მხოლოდ, Intel-ის და AMD-ის GPU-ებზე მუშაობს. "
+"მას ასევე opengl EGL უკანაბოლოც ესაჭიროება.</li><li><strong>nvdec</strong> "
+"უახლესი, რეკომენდებული მეთოდი აპარატურული დეკოდერის გამოსაყენებლად Nvidia-ის "
+"GPU-ებზე.</li><li><strong>cuda</strong> Nvidia-ის GPU-ებზე აპარატურული "
+"დეკოდერის გამოყენების მოძველებული ვარიანტია.</li><li><strong>videotoolbox</"
+"strong></li><li><strong>d3d11va</strong></li></ul><br><br>აპარატურული "
+"დეკოდერების შესახებ მეტი ინფორმაციის მიღება შეგიძლიათ აქ: <a href='https://"
+"mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/stable/#options-"
+"hwdec</a><br><br> ასევე შეგიძლიათ დააყენოთ სხვა აპარატურული დეკოდერიც, "
+"ბრძანებით <strong>set hwdec <i>decoder_name</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "ბოლოს დაკრულ ადგილას გადახვევა"
+msgstr "დაკვრის მდებარეობის შენახვა"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1640,19 +1683,13 @@ msgid "Skip chapters"
 msgstr "თავების გამოტოვება"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"ავტომატურად გამოტოვებს თავებს, რომლებიც მითითებულ სიტყვებს/სიმბოლოებს "
-"შეიცავს.\n"
-"მეტი დეტალებისთვის გადაამოწმეთ დაკვრის პარამეტრები"
+"როცა ჩართულია, ავტომატურად გამოტოვებს თავებს, რომლებიც მითითებულ სიტყვებს/"
+"სიმბოლოებს შეიცავს."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1665,6 +1702,7 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"როცა თავებს გამოტოვებთ, OSD შეტყობინება გამოტოვებული თავის სათაურს აჩვენებს."
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1683,6 +1721,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"გამოტოვებს თავებს, რომლებიც ამ სიტყვებს შეიცავს. მძიმით გამოყოფილი სია. "
+"დამთხვევა სრული არაა, რაც ნიშნავს, რომ <strong>op</strong> დაემთხვევა "
+"სიტყვებს, როგორიცაა <strong><u>op</u>ening</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1694,16 +1735,9 @@ msgid "Format selection"
 msgstr "ფორმატის არჩევანი"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"მითითებულ მნიშვნელობაზე ნაკლები ან ტოლი სიმაღლის მქონე საუკეთესო ვიდეოს "
-"არჩევა."
+msgstr "აირჩევს ვიდეოს წყაროს, რომელიც უახლოესია არჩეულ ფორმატთან."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1988,6 +2022,37 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"მიუთითეთ ფაილის სახელის ნიმუში ეკრანის ანაბეჭდების შესანახად. ნიმუში "
+"მიუთითებს ფაილის სახელზე გაფართოების გარეშე და შეიძლება, ფორმატის "
+"მიმთითებელებს შეიცავდეს, რომლებიც ჩანაცვლდება, როცა ეკრანის ანაბეჭდს აიღებთ. "
+"ნაგულისხმევად ნიმუშია \"%F-%n\".<br>ნიმუში შეიძლება, ფარდობითი ან აბსოლუტური "
+"ბილიკით იწყებოდეს იმისთვის, რომ მიუთითოთ საქაღალდის მდებარეობა, სადაც მისი "
+"შენახვა უნდა მოხდეს.<br>თუ საბოლოო ეკრანის ანაბეჭდის სახელი მიუთითებს უკვე "
+"არსებულ ფაილზე, ფაილის თავზე გადაწერა არ მოხდება. ეკრანის ანაბეჭდი ან "
+"შენახული არ იქნება, ან, თუ ნიმუში შეიცავს სტრიქონს %n, ის შენახული იქნება "
+"სხვა, ახალი სახელით.<br>სრული ინფორმაციისთვის იხილეთ <a href='https://mpv.io/"
+"manual/stable/#options-screenshot-template'>https://mpv.io/manual/stable/"
+"#options-screenshot-template</a><br><br><strong>დაშვებულია ფორმატის "
+"სპეციფიკატორები:</strong><br><ul><li><strong>%[#][0X]n</strong>მიმდევრობის "
+"ნომერი, შევსებული ნულებით X სიგრძემდე. <br><li><strong>%f</strong> ფაილის "
+"სახელი ვიდეოსი, რომლის დაკვრაც ამჟამად მიმდინარეობს.<br><li><strong>%F</"
+"strong> იგივე, რაც %f, მაგრამ ფაილის გაფართოების გარეშე.<br><li><strong>%x</"
+"strong> საქაღალდის ბილიკი ვიდეოსი, რომლის დაკვრაც ამჟამად მიმდინარეობს. თუ "
+"ვიდეო ფაილურ სისტემაში არაა (http:// URL-ები), ეს ცარიელ სტრიქონი იქნება."
+"<br><li><strong>%X{fallback}</strong>იგივე, რაც %x, მაგრამ, თუ ვიდეო ფაილურ "
+"სისტემაში არაა, {...}-ში არსებულ სტრიქონს დააბრუნებს.<br><li><strong>%p</"
+"strong> მიმდინარე დაკვრის დრო. შედეგი სტრიქონია ფორმით \"სს:წწ:წწ\". "
+"<br><li><strong>%P</strong>ჰგავს %p-ს, მაგრამ დაკვრის დრო ასევე შეიცავს "
+"მილიწამებსაც: \"სს:წწ:წწ.მწმ\".<br><li><strong>%wX</strong> მიუთითებს "
+"მიმდიანრე დაკვირს დროის ფორმატს სტრიქონიდან X.<br>სწორი ფორმატი აგება "
+"შეგძლიათ: <br><ul><li><strong>%wH</strong> საათი (შეივსება ნულით ორ 0 "
+"ციფრამდე)</li><li><strong>%wh</strong> საათი (შევსების გარეშე)</"
+"li><li><strong>%wM</strong> წუთები (00-59)</li><li><strong>%wm</strong> სულ "
+"წუთები (შეიცავ საათებსაც, %wM-სგან განხვავებით)</li><li><strong>%wS</strong> "
+"წამები (00-59)</li><li><strong>%ws</strong> წამები სულ (შეიცავს საათებსაც და "
+"წუთებსაც)</li><li><strong>%wf</strong> %ws-ს წააგავს, მაგრამ მნიშვნელობა "
+"წილადია</li><li><strong>%wT</strong> მილიწამები (000-999)</li><li><strong>%"
+"%</strong> ჩანაცვლდება ერთი სიმბოლოთი %.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"

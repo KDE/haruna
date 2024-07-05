@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
-"PO-Revision-Date: 2024-05-29 11:22+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"PO-Revision-Date: 2024-07-04 14:36+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1235,7 +1235,7 @@ msgstr "Spustit při startu"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Příkaz bude spuštěn při startu aplikace."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1263,14 +1263,13 @@ msgid "File dialog location"
 msgstr "Výchozí umístění souborů"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Pokud je prázdné, bude uloženo naposled použité místo."
+msgstr ""
+"Výchozí místo nabídky výběru souboru. Pokud je prázdné, bude zobrazeno "
+"naposled použité místo."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1323,7 +1322,7 @@ msgstr "Zobrazit náhled obrázků"
 #: src/qml/Settings/GeneralSettings.qml:179
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "Zobrazit náhled při najetí myší nad posuvník/ukazatel průběhu."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1336,9 +1335,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "Generování přesného náhledu je pomalé"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Šířka náhledu"
@@ -1438,7 +1434,7 @@ msgstr "Posuv o malý krok"
 #: src/qml/Settings/PlaybackSettings.qml:46
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
@@ -1451,7 +1447,7 @@ msgstr "Posuv o střední krok"
 #: src/qml/Settings/PlaybackSettings.qml:73
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
@@ -1465,7 +1461,7 @@ msgstr "Posuv o velký krok"
 #: src/qml/Settings/PlaybackSettings.qml:100
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
@@ -1505,11 +1501,6 @@ msgid "Seek to last playback position"
 msgstr "Přejít na poslední pozici přehrávání"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1523,17 +1514,12 @@ msgid "Start playing"
 msgstr "Spustit přehrávání"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"Při otevření souboru, který již byl přehráván, opět spustit přehrávání."
+"Při návratu k naposled přehrávanému videu a poloze opět spustit přehrávání."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1574,12 +1560,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Přejít na poslední pozici přehrávání"
+msgstr "Uložit pozici přehrávání"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1661,7 +1644,7 @@ msgstr "Výběr formátu"
 #: src/qml/Settings/PlaybackSettings.qml:460
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
+msgstr "Vybere zdroj videa, který je nejblíže zvolenému formátu."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1968,23 +1951,3 @@ msgstr "Nasycení"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "Help"
-#~ msgstr "Nápověda"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna handbook"
-#~ msgstr "Příručka aplikace Haruna"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Don't set on next startup"
-#~ msgstr "Nenastavovat při příštím spuštění"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Remember time position"
-#~ msgstr "Zapamatovat si pozici času"
-
-#~ msgctxt "@title:window"
-#~ msgid "Help"
-#~ msgstr "Nápověda"

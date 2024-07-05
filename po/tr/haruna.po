@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 13:31+0300\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"PO-Revision-Date: 2024-07-04 18:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,7 +43,7 @@ msgstr "Ortam Oynatıcısı"
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "(c) 2019–2023"
+msgstr "© 2019–2023"
 
 #: src/application.cpp:107
 #, kde-format
@@ -1127,6 +1127,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"İşaretli: Özellik başlangıçta ayarlanacak\n"
+"İşaretsiz: Özellik başlangıçta ayarlanmayacak"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1201,6 +1203,18 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Çalıştırılacak mpv komutu, kullanılabilir komutların bir listesi için <a "
+"href=\"https://mpv.io/manual/stable/#list-of-input-commands\">MPV Komutları</"
+"a> sayfasına bakın.<br>Komutların bazıları mpv’ye özel olduğundan hepsi aynı "
+"şekilde çalışmayacaktır.<br>Bunların en yararlıları, özellikleri manipüle "
+"etmekte kullanılan komutlardır; örneğin, <strong>set</strong>, <strong>add</"
+"strong> veya <strong>cycle</strong> gibi.<br><strong>set</strong>: Bir "
+"özelliğin değerini ayarlar; örneğin, <strong>set volume-max 150</strong>."
+"<br><strong>add</strong>: Bir özelliğin değerini artırır/azaltır; örneğin, "
+"<strong>add volume 15</strong>, ses düzeyini 15 puan artırır. Ses düzeyini "
+"azaltmak için <strong>add volume −15</strong> kullanın.<br><strong>cycle</"
+"strong>: Bir özelliğin değerleri arasında gezinin; örneğin, <strong>cycle "
+"aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1219,6 +1233,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Bir eylem türü özel komutu tetiklendiğinde görüntülenecek bir Ekran Üzeri "
+"Görüntü iletisi.<br>Bir özelliğin değerini görüntülemek için "
+"${property_name} kullanın: <strong>Ses düzeyi: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1236,6 +1253,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Komut bir kısayolla tetiklenecektir. Kısayol kaydettikten sonra "
+"ayarlanabilir."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1245,7 +1264,7 @@ msgstr "Başlangıçta çalıştır"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Komut, uygulama başlangıcında çalıştırılacaktır."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1273,14 +1292,13 @@ msgid "File dialog location"
 msgstr "Dosya penceresi konumu"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Boşsa dosya penceresi son açılan konumu anımsayacaktır."
+msgstr ""
+"Açık dosya iletişim kutusunun öntanımlı konumu. Dosya iletişim kutusu boşsa "
+"son açılan konuma açılmaya çalışacaktır."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1337,7 +1355,7 @@ msgstr "Küçük görsel önizlemesini göster"
 #: src/qml/Settings/GeneralSettings.qml:179
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "Arama/ilerleme çubuğunun üzerine gelindiğinde bir önizleme gösterir."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1350,9 +1368,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "Doğru bir önizleme üretmek yavaştır"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Küçük görsel genişliği"
@@ -1457,12 +1472,20 @@ msgid "Seek small step"
 msgstr "Ufak adım at"
 
 #: src/qml/Settings/PlaybackSettings.qml:46
+#, fuzzy
+#| msgctxt "@info:tooltip seek small step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"İlgili eylemi tetiklerken ne kadar aranacağı. Arama kipi: <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1470,13 +1493,24 @@ msgid "Seek medium step"
 msgstr "Orta adım at"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
+#, fuzzy
+#| msgctxt "@info:tooltip seek medium step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
+#| "mouse is over the progress bar."
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"İlgili eylemi tetiklerken ne kadar aranacağı. Arama kipi: <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>."
+"<br>Bu aynı zamanda fare ilerleme çubuğunun üzerindeyken fare tekerleğini "
+"aramak için de kullanılır."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1484,12 +1518,20 @@ msgid "Seek big step"
 msgstr "Büyük adım at"
 
 #: src/qml/Settings/PlaybackSettings.qml:100
+#, fuzzy
+#| msgctxt "@info:tooltip seek big step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"İlgili eylemi tetiklerken ne kadar aranacağı. Arama kipi: <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1497,11 +1539,6 @@ msgid "Pause on minimize"
 msgstr "Simge durumuna küçültüldüğünde duraklat"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1525,7 +1562,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "Başlangıçta, uygulama kapatıldığında oynatılan dosyayı açar."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1533,16 +1570,11 @@ msgid "Seek to last playback position"
 msgstr "Son oynatma konumuna git"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
-msgstr "Daha önce oynatılan bir dosya açılırken kaldığı konumdan başlat."
+msgstr "Daha önce oynatılan bir dosya açılırken kaldığı konumdan başlatın."
 
 #: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
@@ -1550,17 +1582,13 @@ msgid "Start playing"
 msgstr "Oynatmayı başlat"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"Daha önce oynatılan bir dosya açılırken onu kendiliğinden oynatmaya başlat."
+"Oynatmayı sürdürürken ve son oynatma konumunu ararken, oynatmayı "
+"kendiliğinden başlatın."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1599,14 +1627,30 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Olanaklıysa kullanılması gereken donanım ile video kod çözme API’sini "
+"belirtin. Donanım ile kod çözme işleminin gerçekten yapılıp yapılmayacağı "
+"video kod çözücüsü bileşenine bağlıdır. Donanım ile kod çözümü olanaklı "
+"değilse mpv yazılım ile kod çözme işlemine başvuracaktır."
+"<br><br><ul><li><strong>auto</strong>, var olan ilk yöntemi kullanarak "
+"donanım ile kod çözmeyi kendiliğinden etkinleştirmeye çalışır.</"
+"li><li><strong>auto-safe</strong>, auto ile benzerdir; ancak yalnızca "
+"“güvenli” olarak addedilen beyaz listedeki yöntemlere izin verir.</"
+"li><li><strong>vaapi</strong>, yalnızca Intel ve AMD GPU’larla çalışır. "
+"Ayrıca OpenGL EGL arka ucuna gereksinim duyar.</li><li><strong>nvdec</"
+"strong>, en yeni ve NVidia GPU’larda donanım ile kod çözmenin önerilen "
+"yoludur.</li><li><strong>cuda</strong>, NVidia GPU’larda donanım ile kod "
+"çözmenin eski bir yoludur.</li><li><strong>videotoolbox</strong></"
+"li><li><strong>d3d11va</strong></li></ul><br><br>Donanım ile kod çözme "
+"hakkında buradan daha fazla bilgi alabilirsiniz: <a href='https://mpv.io/"
+"manual/stable/#options-hwdec'>https://mpv.io/manual/stable/#options-hwdec</"
+"a><br><br><strong>set hwdec <i>kod_çözücü_adı</i> biçiminde bir özel "
+"başlangıç komutu kullanarak başka bir donanım kod çözücüsü "
+"ayarlayabilirsiniz</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Son oynatma konumuna git"
+msgstr "Oynatma konumunu kaydet"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1638,18 +1682,13 @@ msgid "Skip chapters"
 msgstr "Fasılları atla"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Belirli sözcükleri/karakterleri içeren fasılları kendiliğinden atlar.\n"
-"Ayrıntılar için ‘Oynatma’ ayarlarına bakın"
+"Etkinleştirildiğinde,belirli sözcükleri/karakterleri içeren fasılları "
+"kendiliğinden atlar."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1662,6 +1701,8 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"Fasılları atlarken, bir Ekran Üzeri Görüntü, atlanan faslın başlığını "
+"gösterir."
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1680,6 +1721,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Bu sözcükleri içeren fasılları atlayın. Virgülle ayrılmış bir listedir. "
+"Eşleşme tam değildir; demek olur ki, <strong>aç</strong>, <strong><u>aç</"
+"u>ılış</strong> gibi terimlerle de eşleşir."
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1691,14 +1735,9 @@ msgid "Format selection"
 msgstr "Seçimi biçimlendir"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "Seçili değerden düşük veya eşit en iyi videoyu seçer."
+msgstr "Seçili biçime en yakın olan bir video kaynağı seçer."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1983,6 +2022,37 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Ekran görüntülerini kaydetmek için kullanılan dosya adı şablonunu belirtin. "
+"Şablon, dosya uzantısı olmadan dosya adını belirtir ve ekran görüntüsü "
+"alınırken değiştirilecek olan biçim belirteçlerini içerebilir. Öntanımlı "
+"olarak şablon “%F-%n”dir.<br>Şablon, ekran görüntülerinin kaydedileceği "
+"dizin konumunu belirtmek için göreceli veya mutlak bir yolla başlayabilir."
+"<br>Son ekran görüntüsü dosya adı halihazırda var olan bir dosyayı "
+"gösteriyorsa dosyanın üzerine yazılmaz. Ekran görüntüsü ya "
+"kaydedilmeyecektir ya da %n ögesi bulunuyorsa şablonda yeni üretilen farklı "
+"bir dosya adı kullanılacaktır.<br>Ayrıntılı bilgiler için <a href='https://"
+"mpv.io/manual/stable/#options-screenshot-template'>https://mpv.io/manual/"
+"stable/#options-screenshot-template</a> bölümüne bakın.<br><br><strong>İzin "
+"verilen biçim belirteçleri:</strong><br><ul><li><strong>%[#][0X]n</strong> X "
+"uzunluğuna kadar sıfırlarla doldurulmuş bir sıra numarası.<br><li><strong>"
+"%f</strong> Şu anda oynatılan videonun dosya adı.<br><li><strong>%F</strong> "
+"%f ile aynı; ancak dosya uzantısı olmadan.<br><li><strong>%x</strong> Şu "
+"anda oynatılan videonun dizin yolu. Video dosya sisteminde (http:// "
+"URL’leri) değilse bu boş bir diziye genişletilir.<br><li><strong>%X{fallback}"
+"</strong> %x ile aynı; ancak video dosyası dosya sisteminde değilse geri "
+"dönüş dizisini {...} içine döndürün.<br><li><strong>%p</strong> Geçerli "
+"oynatma süresi. Sonuç, “SS:DD:SS” biçiminde bir dizidir.<br><li><strong>%P</"
+"strong> %p ile benzerdir; ancak oynatma süresi milisaniye türünden “SS:DD:SS."
+"mmm” olarak uzatılmıştır.<br><li><strong>%wX</strong> X biçim dizisini "
+"kullanarak geçerli oynatma süresini belirtin.<br><br>Geçerli biçim "
+"belirteçleri:<br><br><ul><li><strong>%wH</strong> saat (0–2 rakamla "
+"doldurulmuş)</li><li><strong>%wh</strong> saat (dolgusuz)</li><li><strong>"
+"%wM</strong> dakika (00–59)</li><li><strong>%wm</strong> toplam dakika (%wM "
+"aksine saatleri içerir)</li><li><strong>%wS</strong> saniye (00–59)</"
+"li><li><strong>%ws</strong> toplam saniye (saatleri ve dakikaları içerir)</"
+"li><li><strong>%wf</strong> %ws gibi; ancak, kayan noktalı değer</"
+"li><li><strong>%wT</strong> milisaniye (000–999)</li><li><strong>%%</strong> "
+"% karakteriyle değiştirilir.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"

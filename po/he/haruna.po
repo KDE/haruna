@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
-"PO-Revision-Date: 2024-05-27 19:39+0300\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"PO-Revision-Date: 2024-07-04 15:20+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1125,6 +1125,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"מסומן: המאפיין יוגדר בהתחלה\n"
+"לא מסומן: המאפיין לא יוגדר בהתחלה"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1217,6 +1219,8 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"הודעה מרחפת להצגה עקב הזנקת פקודה מותאמת לפי סוג פעולה.<br>יש להשתמש ב־"
+"${property_name} כדי להציג את ערך המאפיין <strong>כרך: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1233,7 +1237,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
-msgstr ""
+msgstr "הפקודה תוזנק עם מקשי קיצור. אפשר להגדיר את מקשי הקיצור אחרי שמירה."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1243,7 +1247,7 @@ msgstr "הרצה עם העלייה"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "הפקודה תרוץ עם עליית היישום."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1271,14 +1275,13 @@ msgid "File dialog location"
 msgstr "מקום חלונית קובץ"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "אם נשאר ריק, חלונית הקבצים תזכור את המקום האחרון בו נפתחה."
+msgstr ""
+"מקום ברירת המחדל של חלונית פתיחת הקבצים.אם נשאר ריק, חלונית הקבצים תזכור את "
+"המקום האחרון בו נפתחה."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1333,7 +1336,7 @@ msgstr "הצגת תמונה ממוזערת להמחשה"
 #: src/qml/Settings/GeneralSettings.qml:179
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "הצגת תצוגה מקדימה תוך ריחוף על סרגל החתירה/ההתקדמות."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1346,9 +1349,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "יצירת המחשה מדויקת היא איטית"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "רוחב תמונה ממוזערת"
@@ -1452,12 +1452,20 @@ msgid "Seek small step"
 msgstr "חתירה בצעד קטן"
 
 #: src/qml/Settings/PlaybackSettings.qml:46
+#, fuzzy
+#| msgctxt "@info:tooltip seek small step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"כמה לחתור בעת הזנקת הפעולה הנבחרת. מצב החתירה הוא <a href='https://mpv.io/"
+"manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a> (מדויק)"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1465,13 +1473,23 @@ msgid "Seek medium step"
 msgstr "חתירה בצעד בינוני"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
+#, fuzzy
+#| msgctxt "@info:tooltip seek medium step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
+#| "mouse is over the progress bar."
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"כמה לחתור בעת הזנקת הפעולה המתאימה. מצב החתימה הוא <a href='https://mpv.io/"
+"manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a> (מדויק)."
+"<br>משמש לחתירה עם גלגלת העכבר כאשר העכבר מרחף מעל סרגל ההתקדמות."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1479,12 +1497,20 @@ msgid "Seek big step"
 msgstr "חתירה בצעד גדול"
 
 #: src/qml/Settings/PlaybackSettings.qml:100
+#, fuzzy
+#| msgctxt "@info:tooltip seek big step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"כמה לחתור בעת הזנקת הפעולה הנבחרת. מצב החתירה הוא <a href='https://mpv.io/"
+"manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a> (מדויק)"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1492,11 +1518,6 @@ msgid "Pause on minimize"
 msgstr "השהיה עם המזעור"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1518,7 +1539,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "עם העלייה לפתוח את הקובץ שהתנגן בזמן שהיישום נסגר."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1526,16 +1547,11 @@ msgid "Seek to last playback position"
 msgstr "חתירה למקום הנגינה האחרון"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
-msgstr "בעת פתיחת קובץ שהתנגן בעבר, לחתור למקום הנגינה האחרון שלו."
+msgstr "בעת פתיחת קובץ שהתנגן בעבר, לחתור לנקודת הנגינה האחרון שלו."
 
 #: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
@@ -1543,16 +1559,13 @@ msgid "Start playing"
 msgstr "התחלת נגינה"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "בעת פתיחת קובץ שהתנגן בעבר, להתחיל לנגן אותו אוטומטית."
+msgstr ""
+"בעת פתיחת קובץ שהתנגן בעבר וחתירה לנקודת הנגינה האחרנה, להתחיל לנגן אותו "
+"אוטומטית."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1593,12 +1606,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "חתירה למקום הנגינה האחרון"
+msgstr "שמירת נקודת הנגינה"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1634,18 +1644,12 @@ msgid "Skip chapters"
 msgstr "דילוג על פרקים"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"דילוג אוטומטי על פרקים שמכילים מילים/תווים מסוימים.\n"
-"אפשר לגשת אל הגדרות ‚נגינה’ לפרטים נוספים"
+"כשהאפשרות פעילה הנגן ידלג אוטומטית על פרקים שמכילים מילים/תווים מסוימים."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1658,6 +1662,7 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"בעת דילוג על פרקים תופיע הודעה מרחפת על המסך שתציג את כותרת הפרק שדולג."
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1676,6 +1681,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"דילוג על פרקים שמכילים את המילים האלו. רשימה מופרדת בפסיקים. ההתאמה לא "
+"מדויקת כלומר ש־<strong>פת</strong> יכול לתפוס גם מילים כמו <strong><u>פת</"
+"u>יחה</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1687,14 +1695,9 @@ msgid "Format selection"
 msgstr "בחירת תסדיר"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "בוחר את הסרטון הטוב ביותר בגובה שקטן או שווה לערך הנבחר."
+msgstr "בוחר את מקור הווידאו שהכי קרוב לתצורה הנבחרת."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"

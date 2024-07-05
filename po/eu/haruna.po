@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
-"PO-Revision-Date: 2024-05-18 15:56+0200\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"PO-Revision-Date: 2024-07-04 10:33+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1130,6 +1130,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Markatuta: propietatea abioan ezarriko da\n"
+"Markatu gabe: propietatea ez da abioan ezarriko"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1204,6 +1206,17 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Zein mpv komando exekutatu, begiratu <a href=\"https://mpv.io/manual/stable/"
+"#list-of-input-commands\">MPV komandoak</a> komando erabilgarrien zerrenda "
+"bat izateko.<br>Komando guztiak ez dira ibiliko, batzuk berariaz mpv-renak "
+"direlako.<br>Erabilgarrienak propietateak manipulatzeko komandoak dira, "
+"<strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>,"
+"<br><strong>set</strong>: propietate baten balioa ezartzen du <strong>set "
+"voume-max 150</strong>.<br><strong>add</strong>: goratu/beheratu propietate "
+"baten balioa <strong>add volume 15</strong>, bolumena 15 puntutan igotzen "
+"du. Balioa beheratzeko erabili <strong>add volume -15</strong>."
+"<br><strong>cycle</strong>: propietate baten balioetan zikloa <strong>cycle "
+"aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1222,6 +1235,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Ekintza-motako neurrira ipinitako komando bat eragitean azaldu beharreko OSD "
+"mezu bat.<br>Erabili ${property_name} propietate baten balioa azaltzeko "
+"<strong>Bolumena: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1239,6 +1255,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Komandoa larterbide baten bidez eragingo da. Lasterbidea gorde ondoren ezar "
+"daiteke."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1248,7 +1266,7 @@ msgstr "Exekutatu abiatzean"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Komandoa aplikazioa abiatzean exekutatuko da."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1276,16 +1294,13 @@ msgid "File dialog location"
 msgstr "Fitxategi elkarrizketa-koadroko kokalekua"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"Hutsik dagoenean fitxategi elkarrizketa-koadroak irekitako azken kokalekua "
-"gogoratuko du."
+"Ireki fitxategia elkarrizketa-koadroaren kokaleku lehenetsia. Hutsik badago, "
+"elkarrizketa, irekitako azken kokalekua irekitzen saiatuko da."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1342,6 +1357,8 @@ msgstr "Erakutsi aurreikuspegi koadro-txikia"
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
+"Aurreikuspegi bat erakusten du bilaketa/aurrerapen barraren gainetik "
+"igarotzean."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1354,9 +1371,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "Aurreikuspegi zehatz bat sortzea motela da"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Koadro-txikien zabalera"
@@ -1461,12 +1475,21 @@ msgid "Seek small step"
 msgstr "Bilatu urrats txikia"
 
 #: src/qml/Settings/PlaybackSettings.qml:46
+#, fuzzy
+#| msgctxt "@info:tooltip seek small step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Hari dagokion ekintza eragitean zenbat bilatu. Bilaketa modua  <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a> da"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1474,13 +1497,24 @@ msgid "Seek medium step"
 msgstr "Bilatu urrats ertaina"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
+#, fuzzy
+#| msgctxt "@info:tooltip seek medium step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
+#| "mouse is over the progress bar."
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Hari dagokion ekintza eragitean zenbat bilatu. Bilaketa modua   <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a> da.<br>Saguaren gurpilarekin bilatzeko ere, sagua "
+"aurrerapen barra gainean dagoenean, hau erabiltzen da."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1488,12 +1522,21 @@ msgid "Seek big step"
 msgstr "Bilatu  urrats handia"
 
 #: src/qml/Settings/PlaybackSettings.qml:100
+#, fuzzy
+#| msgctxt "@info:tooltip seek big step setting"
+#| msgid ""
+#| "How much to seek when triggering the coresponding action. Seek mode is <a "
+#| "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+#| "[<flags>]'>exact</a>"
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Hari dagokion ekintza eragitean zenbat bilatu. Bilaketa modua  <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a> da"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1501,17 +1544,12 @@ msgid "Pause on minimize"
 msgstr "Eten ikonotzean"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
-"Jotzaile eteten du leihoa ikonotuta dagoen bitartean, atzera-jotzea "
+"Jotzailea eteten du leihoa ikonotuta dagoen bitartean, atzera-jotzea "
 "berrekiten da lehengoratzean."
 
 #: src/qml/Settings/PlaybackSettings.qml:124
@@ -1530,6 +1568,7 @@ msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
+"Abiatzean, aplikazioa itxi zenean jotzen ari zen fitxategia irekitzen du."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1537,18 +1576,12 @@ msgid "Seek to last playback position"
 msgstr "Bilatu azken atzera-jotze kokalekua"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr ""
-"Aurrez jo den fitxategi bat irekitzean, bilatu azken aldian atzera-jotzea "
-"gelditu zen kokalekua."
+"Aurrez jo den fitxategi bat irekitzean, bilatu azken aldian zegoen kokalekua."
 
 #: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
@@ -1556,16 +1589,13 @@ msgid "Start playing"
 msgstr "Hasi jotzen"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "Aurrez jo den fitxategi bat irekitzean, hasi hura automatikoki jotzen."
+msgstr ""
+"Atzera-jotzea berrekitean eta atzera-jo zen azken kokapena aurkitzean, hasi "
+"automatikoki jotzen."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1604,14 +1634,29 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Ahal bada, zehaztu bideoa deskodetzeko  erabili beharko litzatekeen hardware "
+"APIa. Hardeware bidez benetan deskodetzen den bideo kodeken araberakoa da. "
+"Hardware bidez deskodetzea posible ez bada, mpv software bidez deskodetzera "
+"joko du.<br><br><ul><li><strong>auto</strong> lehenengo metodo erabilgarria "
+"erabiliz hardware bidez deskodetzea automatikoki gaitzen saiatzen da.</"
+"li><li><strong>auto-safe</strong> auto-ren antzekoa, baina zerrenda-zurian "
+"inpinitako, \"segurutzat\" jotzen diren metodoak bakarrik baimentzen ditu.</"
+"li><li><strong>vaapi</strong> Intel eta AMD GPUekin bakarrik dabil. OpenGL "
+"EGL bizkarraldekoa ere behar du. </li><li><strong>nvdec</strong> berriena, "
+"eta Nvidia GPUetan hardware bidez deskodetzeko metodo gomendatua.</"
+"li><li><strong>cuda</strong>Nvidia GPUetan hardware bidez deskodetzeko "
+"inplementazio zaharrago bat.</li><li><strong>videotoolbox </strong></"
+"li><li><strong>d3d11va</strong></li></ul><br><br>Hardware bidez "
+"deskodetzeari buruz gehiago irakurri dezakezu hemen: <a href='https://mpv.io/"
+"manual/stable/#options-hwdec'>https://mpv.io/manual/stable/#options-hwdec</"
+"a><br><br>Neurrira ipinitako abioko komando bat sortuz beste hardware "
+"deskodetzaile bat ezar dezakezu <strong>set hwdec <i>decoder_name</i></"
+"strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Bilatu azken atzera-jotze kokalekua"
+msgstr "Gorde atzera-jotze kokalekua"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1643,18 +1688,12 @@ msgid "Skip chapters"
 msgstr "Saihestu atalak"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Hitz/karaktere jaki batzuk dituzten atalak automatikoki saihesten ditu.\n"
-"Markatu 'Atzera-Jotze' ezarpena xehetasun gehiagorako"
+"Gaitzen denean, hitz/karaktere dituzten atalak automatikoki salatzen ditu."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1667,6 +1706,7 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"Atalak saltatzean, OSD mezu batek saltutako atalaren titulua erakutsiko du."
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1685,6 +1725,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Saltatu hitz hauek dituzten atalak. Koma bidez bereizitako zerrenda. Bat "
+"etortzea ez da zehatza, hau da, <strong>op</strong> bat etorriko da berau "
+"barruan duten hitzekin, <strong><u>op</u>ening</strong> esaterako."
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1696,15 +1739,9 @@ msgid "Format selection"
 msgstr "Formatuaren hautapena"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"Hautatutako balioaren altuerakoa edo txikiagoa den bideo onena hautatzen du."
+msgstr "Hautatutako formatutik hurbilen dagoen bideo-sorburua hauatzen du."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1989,6 +2026,36 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Zehaztu pantaila-argazkiak gordetzeko erabilitako fitxategi-izen txantiloia. "
+"Txantiloiak fitxategi-izena luzapenik gabe zehazten du, eta pantaila-argazki "
+"bat hartzean ordezkatuko direna formatu zehaztaileak izan ditzake. Era "
+"lehenetsian txantiloia \"%F-%n\" da.<br>Txantiloia bide-izen erlatibo edo "
+"absolutu batekin has daiteke, pantaila-argazkiak gorde behar diren "
+"direktorio-kokapen bat zehazteko. <br>Pantaila-argazkiaren bukaerako "
+"fitxategi-izenak jada dagoen fitxategi bat erakusten badu, fitxategia ez da "
+"gainidatziko. Pantaila-argazkia ez da gordeko, edo txantiloiak %n badu, "
+"beste fitxategi-izen berri bat erabiliz gordeko<br>Informazio osoa jasotzeko "
+"<a href='https://mpv.io/manual/stable/#options-screenshot-template'>https://"
+"mpv.io/manual/stable/#options-screenshot-template</"
+"a><br><br><strong>Baimendutako formatu zehaztaileak:</"
+"strong><br><ul><li><strong>%[#][0X]n</strong> Sekuentzia-zenbaki bat, X "
+"luzera arte zeroekin betea.<br><li><strong>%f</strong>Unean jotzen ari den "
+"bideoaren fitategi-izena.<br><li><strong>%F</strong> %f(e)ren berdina, baina "
+"fitxategi-luzapenik gabe.<br> <li><strong>%x</strong> Unean jotzen ari den "
+"bideoaren direktorioaren bide-izena. Bideoa fitxategi-sisteman ez badago, "
+"itzuli erreserbako katea {...} barruan.<br><li><strong>%p</strong> Atzera-"
+"jotzearen uneko denbora. Emaitza \"HH:MM:SS\" formako kate bat da."
+"<br><li><strong>%P</strong> %p(e)ren antzekoa, baina hedatua, denbora "
+"milisegundotan duela \"HH:MM:SS.mmm\".<br><li><strong>%wX</strong> Zehaztu "
+"uneko atzera-jotze denbora X formatu-katea erabiliz.<br>Balizko formatu "
+"zehaztaileak:<br><ul><li><strong>%wH</strong>ordua (bi digitu arte 0ekin "
+"beteta)</li><li><strong>%wh</strong> ordua (bete gabe)</li><li><strong>%wM</"
+"strong> minutuak (00-59)</li><li><strong>%wm</strong> minutuak guztira "
+"(orduak barne, %wM ez bezala) </li><li><strong>%wS</strong> segundoak "
+"(00-59)</li><li><strong>%ws</strong> segundoak guztira (orduak eta minutuak "
+"barne)</li><li><strong>%wf</strong> %ws bezala, baina koma higikor gisa</"
+"li><li><strong>%wT</strong> milisegundoak (000-999)</li><li><strong>%%</"
+"strong> % karakterearekin ordezkatua.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"

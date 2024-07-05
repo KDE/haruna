@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:38+0000\n"
+"POT-Creation-Date: 2024-07-05 00:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1270,14 +1270,11 @@ msgid "File dialog location"
 msgstr "文件对话框位置"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "如果此项为空，对话框将记住最近一次打开的位置。"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1345,12 +1342,9 @@ msgid "Generating an accurate preview is slow"
 msgstr "精确预览图的生成速度较慢"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr "缩略图宽度"
+msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@label"
@@ -1453,7 +1447,7 @@ msgstr "快进/快退一小步的步长"
 #: src/qml/Settings/PlaybackSettings.qml:46
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
@@ -1466,7 +1460,7 @@ msgstr "快进/快退一中步的步长"
 #: src/qml/Settings/PlaybackSettings.qml:73
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
@@ -1480,7 +1474,7 @@ msgstr "快进/快退一大步的步长"
 #: src/qml/Settings/PlaybackSettings.qml:100
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
-"How much to seek when triggering the coresponding action. Seek mode is <a "
+"How much to seek when triggering the corresponding action. Seek mode is <a "
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
@@ -1491,11 +1485,6 @@ msgid "Pause on minimize"
 msgstr "最小化时暂停"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1525,11 +1514,6 @@ msgid "Seek to last playback position"
 msgstr "自动恢复上次播放进度"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1542,16 +1526,11 @@ msgid "Start playing"
 msgstr "自动开始播放"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "打开以前播放过的文件时，自动开始播放。"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1592,12 +1571,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "自动恢复上次播放进度"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1627,18 +1603,11 @@ msgid "Skip chapters"
 msgstr "跳过章节"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"自动跳过包含某些单词/字符的章节。\n"
-"查看“播放”设置以获取更多详细信息"
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1680,14 +1649,9 @@ msgid "Format selection"
 msgstr "格式选择"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "选择高度小于/等于指定值的最佳视频。"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1999,37 +1963,3 @@ msgstr "饱和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键点击滑块可以重置"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "Help"
-#~ msgstr "帮助"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna help window (english only)"
-#~ msgstr "Haruna 帮助窗口 (仅英文)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna handbook"
-#~ msgstr "Haruna 使用手册"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Don't set on next startup"
-#~ msgstr "下次启动时不设置"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "This is also used for mouse wheel seeking, when mouse is over the "
-#~ "progress bar"
-#~ msgstr "鼠标悬停在进度条上面时，鼠标滚轮的快进/快退操作也使用此数值"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Remember time position"
-#~ msgstr "记住时间位置"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Skip chapters containing these words. Comma separated list."
-#~ msgstr "跳过包含这些单词的章节。请用半角逗号分隔列表中的单词。"
-
-#~ msgctxt "@title:window"
-#~ msgid "Help"
-#~ msgstr "帮助"
