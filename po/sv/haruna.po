@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-05 00:38+0000\n"
-"PO-Revision-Date: 2024-06-17 17:42+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"PO-Revision-Date: 2024-07-05 09:41+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -1127,6 +1127,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Markerad: egenskapen ställs in vid start\n"
+"Avmarkerad: egenskapen ställs inte in vid start"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1185,7 +1187,7 @@ msgstr "Kommando"
 #: src/qml/Settings/EditCustomCommand.qml:48
 msgctxt "placeholder text"
 msgid "add volume +10"
-msgstr "lägg till volym + 10"
+msgstr "öka volym + 10"
 
 #: src/qml/Settings/EditCustomCommand.qml:55
 msgctxt "@info:tooltip"
@@ -1201,6 +1203,16 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Vilket mpv-kommando som ska köras, se <a href=\"https://mpv.io/manual/stable/"
+"#list-of-input-commands\">MPV Commands</a> för en lista över tillgängliga "
+"kommandon.<br> Alla kommandon fungerar inte eftersom vissa är specifika för "
+"mpv.<br>De mest användbara är kommandona för att manipulera egenskaper, som "
+"<strong>set</strong>, <strong>add</strong>, <strong>cycle</strong> >."
+"<br><strong>set</strong>: ställer in värdet på en egenskap: <strong>set "
+"volym-max 150</strong>.<br><strong>add</strong>: ökar eller minskar värdet "
+"av en egenskap <strong>add volume 15</strong>, ökar volymen med 15. För att "
+"minska värdet använd <strong>add volume -15</strong>.<br><strong>cycle</"
+"strong>: bläddra igenom värdena på en egenskap <strong>cycle aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1219,6 +1231,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Ett skärmmeddelande som ska visas när ett eget kommando av åtgärdstyp utförs."
+"<br>Använd ${egenskapsnamn} för att visa värdet på en egenskap "
+"<strong>Volym: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1236,6 +1251,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Kommandot utförs med en genväg. Genvägen kan ställas in efter det har "
+"sparats."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1245,7 +1262,7 @@ msgstr "Kör vid start"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Kommandot körs vid programstart."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1273,14 +1290,13 @@ msgid "File dialog location"
 msgstr "Fildialogrutans plats"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Om tom kommer fildialogrutan ihåg senast öppnade plats."
+msgstr ""
+"Normal plats för filöppningsdialogrutan. Om den är tom görs ett försök att "
+"visa fildialogrutan på den senast använda platsen."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1336,6 +1352,8 @@ msgstr "Visa förhandsgranskningsminiatyrbild"
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
+"Visar en förhandsgranskning när muspekaren hålls över sök- eller "
+"förloppsraden."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1348,9 +1366,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "Att generera en naturtrogen förhandsgranskning går långsamt."
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Miniatyrbildens bredd"
@@ -1461,6 +1476,8 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Hur långt ska motsvarade åtgärd gå när den utförs. Läget är <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exakt</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1475,6 +1492,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Hur långt ska motsvarade åtgärd gå när den utförs. Läget är <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exakt</a>."
+"<br>Det gäller också när mushjulet används för att stega när musen är över "
+"förloppsraden."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1488,6 +1509,8 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Hur långt ska motsvarade åtgärd gå när den utförs. Läget är <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exakt</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1495,11 +1518,6 @@ msgid "Pause on minimize"
 msgstr "Paus vid minimering"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1523,7 +1541,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "Vid start öppnar den filen som spelades upp när programmet stängdes."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1531,11 +1549,6 @@ msgid "Seek to last playback position"
 msgstr "Gå till senaste uppspelningsposition"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1550,16 +1563,13 @@ msgid "Start playing"
 msgstr "Börja spela"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "När en fil öppnas som spelades tidigare, börja spela den automatiskt."
+msgstr ""
+"När en fil som spelades tidigare öppnas vid senaste uppspelningsposition, "
+"börja spela den automatiskt."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1598,14 +1608,29 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Ange vilket programmeringsgränssnitt för videoavkodning med maskinvara som "
+"ska användas, om möjligt. Huruvida avkodning med maskinvara faktiskt görs "
+"beror på videoavkodaren. Om maskinvaruavkodning inte är möjlig återgår mpv "
+"till programvaruavkodning.<br><br><ul><li><strong>auto</strong> försöker "
+"automatiskt aktivera maskinvaruavkodning och använder den första "
+"tillgängliga metoden.</li ><li><strong>auto-safe</strong>liknar auto, men "
+"tillåter endast vitlistade metoder som anses vara \"säkra\".</"
+"li><li><strong>vaapi</strong> fungerar endast med Intel och AMD "
+"grafikprocessorer. Den kräver också OpenGL EGL-gränssnitt.</"
+"li><li><strong>nvdec</strong> är den nyaste och rekommenderade metoden för "
+"att göra maskinvaruavkodning på Nvidia grafikprocessorer.</"
+"li><li><strong>cuda</strong> är en äldre implementering av "
+"maskinvaruavkodning på Nvidia grafikprocessorer.</"
+"li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></li></"
+"ul> <br><br>Man kan läsa mer om maskinvaruavkodning här: <a href='https://"
+"mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/stable/ #options-"
+"hwdec</a><br><br>Det går att ställa in en annan maskinvaruavkodare genom att "
+"skapa ett eget startkommando <strong>set hwdec <i>avkodarnamn</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Gå till senaste uppspelningsposition"
+msgstr "Spara uppspelningsposition"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1637,18 +1662,13 @@ msgid "Skip chapters"
 msgstr "Hoppa över kapitel"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Hoppar automatiskt över kapitel som innehåller vissa ord eller tecken.\n"
-"Kontrollera uppspelningsinställningarna för mer information."
+"Om aktiverad, hopps kapitel automatiskt över som innehåller vissa ord eller "
+"tecken."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1661,6 +1681,8 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"När kapitel hoppas över visar ett skärmmeddelande det överhoppade kapitlets "
+"rubrik."
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1679,6 +1701,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Hoppa över kapitel som innehåller orden. Lista åtskild med kommatecken. "
+"Matchningen är inte exakt, vilket betyder att <strong>in</strong> matchar "
+"ord som innehåller det, såsom <strong><u>in</u>ledning</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1690,14 +1715,9 @@ msgid "Format selection"
 msgstr "Formatval"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "Väljer bästa video med höjd mindre eller lika med det valda värdet."
+msgstr "Väljer en videokälla som ligger närmast det valda formatet."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1982,6 +2002,36 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Ange filnamnsmall som används för att spara skärmbilder. Mallen anger "
+"filnamnet utan filändelse och kan innehålla formatspecifikationer, som "
+"ersätts när en skärmbild tas. Normalt är mallen \"%F-%n\". <br>Mallen kan "
+"börja med en relativ eller absolut sökväg, för att ange en katalogplats där "
+"skärmbilder ska sparas.<br>Om den senaste skärmbildens filnamn pekar på en "
+"redan befintlig fil, skrivs filen inte över. Skärmbilden sparas antingen "
+"inte alls, eller om mallen innehåller %n, sparas den med ett annat, nyskapat "
+"filnamn.<br>För fullständig information, ta en titt på <a href='https://mpv."
+"io/manual/stable/#options -screenshot-template'>https://mpv.io/manual/stable/"
+"#options-screenshot-template</a><br><br><strong>Tillåtna "
+"formatspecifikationer:</strong><br><ul ><li><strong>%[#][0X]n</strong> Ett "
+"sekvensnummer, utfyllt med nollor till längden X.<br><li><strong>%f</strong> "
+"Filnamnet på videon som för närvarande spelas.<br><li><strong>%F</strong> "
+"Samma som %f, men utan filändelse.<br><li><strong>%x</strong> Katalogsökväg "
+"för videon som för närvarande spelas. Om videon inte finns i filsystemet "
+"(http://webbadresser), expanderas den till en tom sträng.<br><li><strong>"
+"%X{reserv}</strong> Samma som %x, men om videon filen inte finns i "
+"filsystemet, returnera reservsträngen i {...}.<br><li><strong>%p</strong> "
+"Nuvarande uppspelningstid. Resultatet är en sträng på formen \"TT:MM:SS\"."
+"<br><li><strong>%P</strong> Liknar %p, men förlängd med uppspelningstiden i "
+"millisekunder \"TT:MM:SS.mmm\".<br><li><strong>%wX</strong> Anger nuvarande "
+"uppspelningstid med formatsträngen X.<br>Giltig formatspecifikation:"
+"<br><ul><li><strong>%wH</strong> timma (utfylld med 0 till två siffror)</"
+"li><li><strong>%wh</strong> timma (utan utfyllnad)</li><li><strong>%wM</"
+"strong > minuter (00-59)</li><li><strong>%wm</strong> totalt antal minuter "
+"(inkluderar timmar, till skillnad från %wM)</li><li><strong>%wS</strong> "
+"sekunder (00-59)</li><li><strong>%ws</strong> totalt antal sekunder "
+"(inkluderar timmar och minuter)</li><li><strong>%wf</strong> som %ws, men "
+"som flyttal</li><li><strong>%wT</strong> millisekunder (000-999)</"
+"li><li><strong>%%</strong> Ersätts med själva tecknet %.</li ></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"

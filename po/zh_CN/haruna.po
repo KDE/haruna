@@ -1126,6 +1126,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"选中：启动时将设置属性\n"
+"未选中：启动时将不设置属性"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1198,6 +1200,15 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"要运行的 mpv 命令，请参考 <a href=\"https://mpv.io/manual/stable/#list-of-"
+"input-commands\">MPV 命令</a> 网页中的可用命令列表。<br>并不是所有命令都能工"
+"作，因为其中的一些命令是 mpv 的特定命令。<br>最有用的是操作属性的命令，例如 "
+"<strong>set</strong>、<strong>add</strong>、<strong>cycle</strong>。"
+"<br><strong>set</strong>：设置一个属性的值 <strong>set volume-max 150</"
+"strong>。<br><strong>add</strong>：提高/降低一个属性的值 <strong>add volume "
+"15</strong> 命令将提高 15 音量值。降低音量则是 <strong>add volume -15</"
+"strong>。<br><strong>cycle</strong>：循环切换一个属性的值 <strong>cycle aid "
+"up</strong>。"
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1216,6 +1227,8 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"触发操作类型的自定义命令时要显示的屏幕消息 (OSD)。<br>使用 ${property_name} "
+"来显示一个属性的值。<strong>音量：${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1232,7 +1245,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
-msgstr ""
+msgstr "命令将通过快捷键触发。快捷键可以在保存后设置。"
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1242,7 +1255,7 @@ msgstr "启动时运行"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "命令将在应用程序启动后运行。"
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1275,6 +1288,8 @@ msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
 msgstr ""
+"打开文件对话框的默认位置。如果留空，文件对话框将尝试打开最后一次打开过的位"
+"置。"
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1329,7 +1344,7 @@ msgstr "显示预览缩略图"
 #: src/qml/Settings/GeneralSettings.qml:179
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "光标悬停在播放进度条上时显示预览"
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1344,7 +1359,7 @@ msgstr "精确预览图的生成速度较慢"
 #: src/qml/Settings/GeneralSettings.qml:215
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "缩略图宽度"
 
 #: src/qml/Settings/GeneralSettings.qml:233
 msgctxt "@label"
@@ -1506,7 +1521,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "启动时打开上次关闭播放器时正在播放的文件。"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1530,7 +1545,7 @@ msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr ""
+msgstr "当恢复播放并跳转到上一次的播放位置时，自动开始播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1569,11 +1584,23 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"指定在可能时应该使用哪种硬件视频解码 API。播放器是否使用硬件解码取决于视频的"
+"编码。如果无法进行硬件解码，mpv 将退而使用软件解码。"
+"<br><br><ul><li><strong>auto</strong> 尝试自动启用首个可用的硬件解码方式。</"
+"li><li><strong>auto-safe</strong> 类似于 auto，但仅限使用白名单中的“安全”解码"
+"方式。</li><li><strong>vaapi</strong> 仅支持 Intel 和 AMD GPU，并且需要 "
+"OpenGL EGL 后端程序。</li><li><strong>nvdec</strong> 是 Nvidia GPU 上推荐使用"
+"的最新解码方式。</li><li><strong>cuda</strong> 是 Nvidia GPU 上进行硬件解码的"
+"较早实现方式。</li><li><strong>videotoolbox</strong></"
+"li><li><strong>d3d11va</strong></li></ul><br><br>您可以在此查看关于硬件解码的"
+"更多信息：<a href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv."
+"io/manual/stable/#options-hwdec</a><br><br>您可以通过创建一个启动自定义命令 "
+"<strong>set hwdec <i>decoder_name</i></strong> 来设置另一个硬件解码器。"
 
 #: src/qml/Settings/PlaybackSettings.qml:255
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr ""
+msgstr "保存播放位置"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1607,7 +1634,7 @@ msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr ""
+msgstr "启用时将自动跳过包含了某些词语或者字符的章节。"
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1619,7 +1646,7 @@ msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr ""
+msgstr "跳过章节时会在屏幕上显示跳过章节的标题。"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1638,6 +1665,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"跳过包含这些单词的章节。以半角逗号区隔的列表 (CSV)。不完全匹配的项目也算匹"
+"配，例如 <strong>op</strong> 将匹配包含它的字符串，例如 <strong><u>op</"
+"u>ening</strong>。"
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1651,7 +1681,7 @@ msgstr "格式选择"
 #: src/qml/Settings/PlaybackSettings.qml:460
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
+msgstr "选择一个最接近选定格式的视频来源。"
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1933,6 +1963,28 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"指定用于保存截图的文件名模板。模板指定的文件名不含扩展名，可以包含格式说明"
+"符，它将在保存截图时被替换。默认模板是“%F-%n”。<br>模板可以使用相对或者绝对路"
+"径开头，这样可以指定截图的保存目录的位置。<br>如果截图的文件名指向了一个已有"
+"文件，它将不会被覆盖。截图要么不会保存，要么在模板包含 %n 时使用一个新生成的"
+"不同文件名保存。<br>完整信息请查看 <a href='https://mpv.io/manual/stable/"
+"#options-screenshot-template'>https://mpv.io/manual/stable/#options-"
+"screenshot-template</a><br><br><strong>允许使用的格式说明符：</"
+"strong><br><ul><li><strong>%[#][0X]n</strong> 序列数字，前插 0 到 X 位。"
+"<br><li><strong>%f</strong> 当前正在播放的视频的文件名。<br><li><strong>%F</"
+"strong> 和 %f 相同，但不含文件扩展名。<br><li><strong>%x</strong> 当前正在播"
+"放的视频所在的目录。如果该视频不在文件系统中 (http:// URL)，这将扩展为空白字"
+"符串。<br><li><strong>%X{fallback}</strong> 和 %x 相同，但如果视频文件不在文"
+"件系统中，返回在 {...} 括号中的备选字符串<br><li><strong>%p</strong> 当前播放"
+"时间。输出结果是“HH:MM:SS”格式的字符串。<br><li><strong>%P</strong> 和 %p 类"
+"似，但将播放时间精确到毫秒“HH:MM:SS.mmm”。<br><li><strong>%wX</strong> 使用格"
+"式字符串 X 指定当前播放时间。<br>有效的格式说明符：<br><ul><li><strong>%wH</"
+"strong> 小时 (前插 0 到两位)</li><li><strong>%wh</strong> 小时 (不前插 0 到两"
+"位)</li><li><strong>%wM</strong> 分钟 (00-59)</li><li><strong>%wm</strong> 总"
+"分钟数 (包括小时数，不像 %wM)</li><li><strong>%wS</strong> 秒 (00-59)</"
+"li><li><strong>%ws</strong> 总秒数 (包括小时数和分钟数)</li><li><strong>%wf</"
+"strong> 和 %ws 类似，但作为浮点值</li><li><strong>%wT</strong> 毫秒 "
+"(000-999)</li><li><strong>%%</strong> 替换为 % 字符本身。</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-05 00:38+0000\n"
-"PO-Revision-Date: 2024-05-30 03:03+0900\n"
+"PO-Revision-Date: 2024-07-05 16:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1126,6 +1126,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"勾選時：屬性會在啟動時設定\n"
+"不勾選時：屬性不會在啟動時設定"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1198,6 +1200,15 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"要執行的 mpv 指令。可用指令列表請見 <a href=\"https://mpv.io/manual/stable/"
+"#list-of-input-commands\">MPV 指令</a>。<br>不是所有指令都能正常運作，因為某"
+"些指令是 mpv 專用的。<br>最有用的指令是調整屬性的各個指令，像是 <strong>set</"
+"strong>、<strong>add</strong> 和 <strong>cycle</strong>。<br><strong>set</"
+"strong>：設定一個屬性的數值 <strong>set volume-max 150</strong>。"
+"<br><strong>add</strong>：提高/降低一個屬性的數值 <strong>add volume 15</"
+"strong>，把音量提高 15 個單位。要降低數值可以使用 <strong>add volume -15</"
+"strong>。<br><strong>cycle</strong>：循環切換一個屬性的可用數值 "
+"<strong>cycle aid up</strong>。"
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1216,6 +1227,8 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"觸發動作型自訂指令時要顯示的螢幕訊息。<br>使用 ${屬性名稱} 來顯示某屬性的數"
+"值 <strong>音量：${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1232,7 +1245,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
-msgstr ""
+msgstr "指令會由快捷鍵所觸發。快捷鍵可以在儲存之後設定。"
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1242,7 +1255,7 @@ msgstr "啟動時執行"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "指令會在應用程式啟動時執行。"
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1270,14 +1283,11 @@ msgid "File dialog location"
 msgstr "檔案對話框位置"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "若為空，檔案對話框將會記住上次開啟的位置。"
+msgstr "開啟檔案對話框的預設位置。若為空，檔案對話框會嘗試開啟上次開啟的位置。"
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1332,7 +1342,7 @@ msgstr "顯示預覽縮圖"
 #: src/qml/Settings/GeneralSettings.qml:179
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "滑鼠停留於影片進度條時顯示預覽。"
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1345,9 +1355,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "產生準確預覽會比較慢"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "縮圖寬度"
@@ -1457,6 +1464,8 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"觸發對應動作時要跳多遠。跳轉模式是 <a href='https://mpv.io/manual/stable/"
+"#command-interface-seek-<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1471,6 +1480,9 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"觸發對應動作時要跳多遠。跳轉模式是 <a href='https://mpv.io/manual/stable/"
+"#command-interface-seek-<target>-[<flags>]'>exact</a>。<br>這也用於滑鼠在進度"
+"條上時利用滑鼠滾輪的跳轉。"
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1484,6 +1496,8 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"觸發對應動作時要跳多遠。跳轉模式是 <a href='https://mpv.io/manual/stable/"
+"#command-interface-seek-<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1491,16 +1505,11 @@ msgid "Pause on minimize"
 msgstr "最小化時暫停"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
-msgstr "視窗最小化時暫停播放，恢復時繼續播放。"
+msgstr "視窗最小化時暫停播放，還原後繼續播放。"
 
 #: src/qml/Settings/PlaybackSettings.qml:124
 msgctxt "@label:spinbox"
@@ -1517,7 +1526,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "啟動時它會開啟應用程式上次關閉時正在播放的檔案。"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1525,11 +1534,6 @@ msgid "Seek to last playback position"
 msgstr "跳到上次播放位置"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1542,16 +1546,11 @@ msgid "Start playing"
 msgstr "開始播放"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "開啟之前播放過的檔案時，自動開始播放它。"
+msgstr "恢復播放並跳到上次播放位置時，自動開始播放它。"
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1590,14 +1589,24 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"指定可能時應使用的硬體影片解碼 API。影片解碼實際上是否使用要取決於影片編碼"
+"器。如果無法使用硬體解碼，mpv 會退回到使用軟體解碼。"
+"<br><br><ul><li><strong>auto</strong>（自動）會嘗試自動利用第一個可用的方法啟"
+"用硬體解碼。</li><li><strong>auto-safe</strong>（自動-安全）類似自動，但只允"
+"許被當作「安全」的白名單上的方法。</li><li><strong>vaapi</strong> 只支援 "
+"Intel 和 AMD 的 GPU，並且需要 OpenGL EGL 後端。</li><li><strong>nvdec</"
+"strong> Nvidia GPU 上最新且建議使用的硬體解碼方式。</li><li><strong>cuda</"
+"strong> Nvidia GPU 用的一個較舊的硬體解碼實作。</"
+"li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></li></"
+"ul><br><br>關於硬體解碼的更多資訊請參閱：<a href='https://mpv.io/manual/"
+"stable/#options-hwdec'>https://mpv.io/manual/stable/#options-hwdec</"
+"a><br><br>您也可以如此建立啟動自訂指令：<strong>set hwdec <i>解碼器名稱</i></"
+"strong> 來設定另一個硬體解碼器。"
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "跳到上次播放位置"
+msgstr "儲存播放位置"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1627,18 +1636,11 @@ msgid "Skip chapters"
 msgstr "跳過章節"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr ""
-"自動跳過包含某些單詞/字元的章節。\n"
-"更多詳細資訊請見「播放」設定"
+msgstr "啟用時自動跳過包含某些單詞/字元的章節。"
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1650,7 +1652,7 @@ msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr ""
+msgstr "跳過章節時跳出螢幕顯示訊息，來顯示跳過的章節的標題。"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1669,6 +1671,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"跳過包含這些單詞的章節。格式是以逗號分隔的清單。比對方式是不完全相符的也會比"
+"對到，例如 <strong>op</strong> 會比對到包含它的單詞，像是 <strong><u>op</"
+"u>ening</strong>。"
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1680,14 +1685,9 @@ msgid "Format selection"
 msgstr "格式選取"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "選取高度小於等於指定數值的最好的影片"
+msgstr "選擇最接近所選格式的影片來源。"
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1970,6 +1970,30 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"指定用來儲存螢幕截圖的檔名樣本。該樣本會指定除了副檔名以外的檔名，並且可以包"
+"含截圖時會替換掉的格式指定符。預設的樣本是 \"%F-%n\"。<br>樣本開頭可以包含相"
+"對或絕對路徑，來指定螢幕截圖應該儲存的目錄位置。<br>如果最終的螢幕截圖檔案名"
+"稱指定的是已經存在的檔案，該檔案不會被覆寫。這個情況下，如果樣本包含 %n 會以"
+"另一個新產生的檔案名稱儲存，否則不會儲存螢幕截圖。<br>完整資訊請參閱 <a "
+"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
+"io/manual/stable/#options-screenshot-template</a><br><br><strong>允許使用的格"
+"式指定符：</strong><br><ul>  <li><strong>%[#][0X]n</strong> 序列編號，利用數"
+"字 0 補白到長度為 X 為止。</li>  <li><strong>%f</strong> 目前播放的影片的檔案"
+"名稱。</li>  <li><strong>%F</strong> 如同 %f，但不包含副檔名。</li>  "
+"<li><strong>%x</strong> 目前播放的影片的目錄路徑。如果影片不在檔案系統上（像"
+"是 http:// 網址），這會替換為空白字串。</li>  <li><strong>%X{備用}</strong> "
+"如同 %x，但影片檔案不在檔案系統上時則回傳 {...} 內的備用字串。</li>  "
+"<li><strong>%p</strong> 目前播放時間。格式是 \"HH:MM:SS\"（兩位數小時:分鐘:"
+"秒）。</li>  <li><strong>%P</strong> 類似 %p，但包含毫秒，格式是 \"HH:MM:SS."
+"mmm\"。</li>  <li><strong>%wX</strong> 用格式字串來格式化目前播放時間。<br>有"
+"效的格式指定符：</li>  <ul>    <li><strong>%wH</strong> 小時（用數字 0 補白到"
+"兩位數）</li>    <li><strong>%wh</strong> 小時（不補白）</li>    <li><strong>"
+"%wM</strong> 分鐘 (00-59)</li>    <li><strong>%wm</strong> 總計分鐘數（包含超"
+"過一小時的部分，不像 %wM）</li>    <li><strong>%wS</strong> 秒 (00-59)</"
+"li>    <li><strong>%ws</strong> 總計秒數（包含分鐘和小時）</li>    "
+"<li><strong>%wf</strong> 如同 %ws，但作為浮點數</li>    <li><strong>%wT</"
+"strong> 毫秒 (000-999)</li>    <li><strong>%%</strong> 替換為 % 字元本身。</"
+"li>  </ul>  <br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"
