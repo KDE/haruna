@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-05 00:38+0000\n"
-"PO-Revision-Date: 2024-06-16 11:02+0200\n"
+"PO-Revision-Date: 2024-07-06 12:30+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -1128,6 +1128,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Zaznaczone: właściwość będzie ustawiona po uruchomieniu\n"
+"Niezaznaczone: właściwość nie będzie ustawiona po uruchomieniu"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1202,6 +1204,16 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Jaki plik mpv uruchomić. Po wykaz dostępny poleceń, zajrzyj do <a href="
+"\"https://mpv.io/manual/stable/#list-of-input-commands\">Poleceń MPV</a>."
+"<br>Nie wszystkie polecenia będą działać, bo niektóre są szczególne dla mpv."
+"<br>Najbardziej przydatne są polecenia do zmiany właściwości, takie jak "
+"<strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>."
+"<br><strong>set</strong>: ustawia wartość właściwości <strong>set volume-max "
+"150</strong>.<br><strong>add</strong>: zwiększa/zmniejsza wartość "
+"właściwości <strong>add volume 15</strong>, zwiększa głośność o 15. Aby ją "
+"zmniejszyć użyj <strong>add volume -15</strong>.<br><strong>cycle</strong>: "
+"krąż po wartościach właściwości <strong>cycle aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1220,6 +1232,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Wyświetlana wiadomość OSD po wyzwoleniu własnego działania.<br>Użyj "
+"${nazwa_własności} aby wyświetlić wartość własności <strong>Głośność: "
+"${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1237,6 +1252,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Polecenie zostanie wydane po naciśnięciu skrótu. Skrót można ustawić po "
+"zapisaniu."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1246,7 +1263,7 @@ msgstr "Uruchom na początku"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Polecenie zostanie wykonane po uruchomieniu aplikacji."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1274,14 +1291,13 @@ msgid "File dialog location"
 msgstr "Położenie okna pliku"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Jeśli puste, to okno pliku zapamięta ostatnio otwierane miejsce."
+msgstr ""
+"Domyślne miejsce pokazywane w oknie otwierania pliku. Jeśli puste, to okno "
+"pliku spróbuje otworzyć ostatnio otwierane miejsce."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1337,7 +1353,7 @@ msgstr "Pokaż miniaturę podglądu"
 #: src/qml/Settings/GeneralSettings.qml:179
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "Pokazuje podgląd po najechaniu na pasek przewijania/postępu."
 
 #: src/qml/Settings/GeneralSettings.qml:188
 msgctxt "@option:check"
@@ -1350,9 +1366,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "Budowanie dokładnego podglądu jest wolne"
 
 #: src/qml/Settings/GeneralSettings.qml:215
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Szerokość miniatury"
@@ -1464,6 +1477,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Ile przewinąć po wyzwoleniu odpowiedniego działania. Tryb przeszukiwania "
+"jest ustawiony na <a href='https://mpv.io/manual/stable/#command-interface-"
+"seek-<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1478,6 +1494,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Ile przewinąć po wyzwoleniu odpowiedniego działania. Tryb przeszukiwania "
+"jest ustawiony na <a href='https://mpv.io/manual/stable/#command-interface-"
+"seek-<target>-[<flags>]'>exact</a>.<br>Jest to stosowane także przy "
+"przewijaniu kółkiem myszy, gdy jej wskaźnik znajdzie się na pasku postępu."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1491,6 +1511,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Ile przewinąć po wyzwoleniu odpowiedniego działania. Tryb przeszukiwania "
+"jest ustawiony na <a href='https://mpv.io/manual/stable/#command-interface-"
+"seek-<target>-[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1498,11 +1521,6 @@ msgid "Pause on minimize"
 msgstr "Wstrzymaj po zminimalizowaniu"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1527,6 +1545,8 @@ msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
+"Po uruchomieniu, otworzy plik, który był odtwarzany przed ostatnim "
+"zamknięciem aplikacji."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1534,11 +1554,6 @@ msgid "Seek to last playback position"
 msgstr "Przewiń do ostatniego odtwarzanego położenia"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1553,18 +1568,13 @@ msgid "Start playing"
 msgstr "Rozpocznij odtwarzanie"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"Po otwarciu pliku, który był odtwarzany wcześniej, sam rozpocznie on jego "
-"odtwarzanie."
+"Przy wznawianiu odtwarzania i powrocie do ostatnio odtwarzanego miejsca, "
+"zacznij sam je odtwarzać."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1603,14 +1613,27 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Określa używane API sprzętowego dekodowania obrazu. To czy to nastąpi zależy "
+"od kodeka obrazu. Jeśli dekodowanie sprzętowe jest niemożliwe, mpv wróci do "
+"dekodowania programowego.<br><br><ul><li><strong>auto</strong> próbuje sam "
+"włączyć sprzętowe dekodowanie przy użyciu pierwszego dostępnego wyboru.</"
+"li><li><strong>auto-safe</strong> podobne do auto, lecz zezwala tylko na "
+"wybory, które są na liście dozwolonych tzn. uznanych za \"bezpieczne\".</"
+"li><li><strong>vaapi</strong> działa tylko na kartach graficznych Intela "
+"oraz AMD. Wymaga także silnika OpenGL EGL.</li><li><strong>nvdec</strong> "
+"najnowszy i zalecany wybór na kartach graficznych NVIDII.</"
+"li><li><strong>cuda</strong> starsza implementacja na kartach graficznych "
+"NVIDII.</li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</"
+"strong></li></ul><br><br>Po więcej szczegółów na temat sprzętowego "
+"dekodowania zajrzyj na: <a href='https://mpv.io/manual/stable/#options-"
+"hwdec'>https://mpv.io/manual/stable/#options-hwdec</a><br><br>Możesz ustawić "
+"inne sprzętowe dekodowanie, tworząc własne polecenie uruchamiające "
+"<strong>set hwdec <i>nazwa_dekodera</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Przewiń do ostatniego odtwarzanego położenia"
+msgstr "Zapisz miejsce odtwarzania"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1644,18 +1667,11 @@ msgid "Skip chapters"
 msgstr "Pomiń rozdziały"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr ""
-"Sam pomija rozdziały, zawierające pewne słowa/znaki.\n"
-"Zajrzyj do ustawień 'Odtwarzania' po więcej szczegółów"
+msgstr "Po włączeniu, sam pominie rozdziały, zawierające pewne słowa/znaki."
 
 #: src/qml/Settings/PlaybackSettings.qml:341
 msgctxt "@option:check"
@@ -1668,6 +1684,7 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"Gdy rozdział zostanie pominięty, to pojawi się wiadomość OSD z jego nazwą."
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
@@ -1686,6 +1703,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Pomiń rozdziały zawierające te słowa. Wpisy oddzielone przecinkami. "
+"Filtrowanie nie będzie odbywać się dokładnie, co znaczy, że <strong>op</"
+"strong> odfiltruj słowa takie jak <strong><u>op</u>ening</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:396
 msgctxt "@title"
@@ -1697,15 +1717,9 @@ msgid "Format selection"
 msgstr "Wybór formatu"
 
 #: src/qml/Settings/PlaybackSettings.qml:460
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"Wybiera najlepszy film o wysokości niższej lub równej wpisanej wartości."
+msgstr "Wybiera źródło obrazu, będące najbliżej zaznaczonego formatu."
 
 #: src/qml/Settings/PlaybackSettings.qml:470
 msgctxt "placeholder text"
@@ -1990,6 +2004,36 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Określ wzorzec nazwy pliku używany do zapisywania zrzutów ekranów. Wzorzec "
+"określa nazwę pliku bez jego rozszerzenia i może zawierać znaki zastępcze, "
+"które zostaną zastąpione po zrobieniu zrzutu. Domyślnie wzorzec ten to \"%F-"
+"%n\". <br>Wzorzec może zaczynać się od ścieżki względnej lub bezwzględnej "
+"przy wskazywaniu katalogu, do którego zapisać zrzuty.<br>Jeśli nazwa zrzutu "
+"wskazuje na już istniejący plik, to nie zostanie on zastąpiony. Zrzut nie "
+"zostanie wtedy zapisany, chyba że wzorzec zawiera %n.<br>Po więcej "
+"szczegółów zajrzyj na <a href='https://mpv.io/manual/stable/#options-"
+"screenshot-template'>https://mpv.io/manual/stable/#options-screenshot-"
+"template</a><br><br><strong>Dozwolone znaki zastępcze:</"
+"strong><br><ul><li><strong>%[#][0X]n</strong> Liczba w kolejności, "
+"wypełniona zerami do długości X.<br><li><strong>%f</strong> Nazwa pliku "
+"obecnie odtwarzanego pliku.<br><li><strong>%F</strong> To samo co %f, lecz "
+"bez rozszerzenia pliku.<br><li><strong>%x</strong> Ścieżka do katalogu "
+"obecnie odtwarzanego pliku. Jeśli plik nie jest lokalny (adresy URL "
+"http://), to pojawi się tu pusty ciąg znaków.<br><li><strong>%X{fallback}</"
+"strong> To samo co %x, lecz gdy pliku nie ma lokalnie, to zwróci ciąg znaków "
+"zawarty w {...}.<br><li><strong>%p</strong> Obecny czas odtwarzania. "
+"Wynikiem jest ciąg znaków w postaci \"HH:MM:SS\".<br><li><strong>%P</strong> "
+"Podobne do %p z dodatkiem milisekund \"HH:MM:SS.mmm\".<br><li><strong>%wX</"
+"strong> Określa zapis czas odtwarzania poprzez ciąg znaków X.<br>Dozwolone "
+"znaki formatujące:<br><ul><li><strong>%wH</strong> godzina (wypełniona 0 do "
+"dwóch cyfr)</li><li><strong>%wh</strong> godzina (niewypełniona)</"
+"li><li><strong>%wM</strong> minuty (00-59)</li><li><strong>%wm</strong> "
+"łącznie minut (z uwzględnieniem godzin, w przeciwieństwie do %wM)</"
+"li><li><strong>%wS</strong> sekundy (00-59)</li><li><strong>%ws</strong> "
+"łącznie sekund (z uwzględnieniem godzin i minut)</li><li><strong>%wf</"
+"strong> jak w %ws, lecz w postaci liczby rzeczywistej</li><li><strong>%wT</"
+"strong> milisekundy (000-999)</li><li><strong>%%</strong> Wstawia znak %.</"
+"li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"
