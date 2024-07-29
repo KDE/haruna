@@ -15,6 +15,7 @@ ToolButton {
     id: root
 
     property int position: HamburgerMenu.Position.Header
+    property bool isOpen: false
 
     enum Position {
         Header = 0,
@@ -25,13 +26,11 @@ ToolButton {
     focusPolicy: Qt.NoFocus
 
     onReleased: {
-        menuLoader.menuVisibility = !menuLoader.menuVisibility
+        root.isOpen = !root.isOpen
     }
 
     Loader {
         id: menuLoader
-
-        property bool menuVisibility: false
 
         asynchronous: true
         active: menuBarLoader.state === "hidden"
@@ -41,9 +40,9 @@ ToolButton {
             y: root.position === HamburgerMenu.Position.Header
                ? root.height + Kirigami.Units.smallSpacing
                : -height - Kirigami.Units.smallSpacing
-            visible:  menuLoader.menuVisibility
+            visible:  root.isOpen
             closePolicy: Popup.CloseOnReleaseOutsideParent
-            onClosed: menuLoader.menuVisibility = menu.visible
+            onClosed: root.isOpen = menu.visible
             modal: true
 
             MenuItem {

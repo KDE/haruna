@@ -79,7 +79,7 @@ Item {
             repeat: false
             interval: 1000
             onTriggered: {
-                if (footer.hovered) {
+                if (footer.hovered || hamburgerMenu.isOpen) {
                     return
                 }
                 footer.state = "hidden"
@@ -100,6 +100,8 @@ Item {
             anchors.fill: parent
 
             HamburgerMenu {
+                id: hamburgerMenu
+
                 position: HamburgerMenu.Position.Footer
                 visible: menuBarLoader.state === "hidden" && !header.visible
             }
