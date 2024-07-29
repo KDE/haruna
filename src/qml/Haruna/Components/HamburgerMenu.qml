@@ -44,6 +44,7 @@ ToolButton {
             visible:  menuLoader.menuVisibility
             closePolicy: Popup.CloseOnReleaseOutsideParent
             onClosed: menuLoader.menuVisibility = menu.visible
+            modal: true
 
             MenuItem {
                 action: appActions.openFileAction
