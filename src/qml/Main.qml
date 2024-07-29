@@ -14,6 +14,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
 
+pragma ComponentBehavior: Bound
+
 Kirigami.ApplicationWindow {
     id: window
 
@@ -71,7 +73,9 @@ Kirigami.ApplicationWindow {
         id: mpv
 
         width: window.contentItem.width
-        height: window.isFullScreen() ? window.contentItem.height : window.contentItem.height - footer.height
+        height: window.isFullScreen()
+                ? window.contentItem.height
+                : window.contentItem.height - footerLoader.footerHeight
         anchors.left: PlaylistSettings.overlayVideo
                       ? window.contentItem.left
                       : (PlaylistSettings.position === "left" ? playlist.right : window.contentItem.left)
@@ -115,21 +119,39 @@ Kirigami.ApplicationWindow {
 
     PlayList {
         id: playlist
-
-        anchors.top: mpv.top
-        anchors.bottom: footer.top
+        height: window.isFullScreen() ? mpv.height - footerLoader.footerHeight : mpv.height
     }
 
-    Footer {
-        id: footer
+    Loader {
+        id: footerLoader
 
-        m_mpv: mpv
+        property int footerHeight: item.isFloating ? 0 : item.height
 
-        anchors.left: window.contentItem.left
-        anchors.right: window.contentItem.right
-        anchors.bottom: window.isFullScreen() ? mpv.bottom : window.contentItem.bottom
-        state: !window.isFullScreen() || (mpv.mouseY > window.height - footer.implicitHeight && window.containsMouse)
-               ? "visible" : "hidden"
+        active: false
+        anchors.bottom: window.contentItem.bottom
+        sourceComponent: GeneralSettings.footerStyle === "default"
+                         ? footerComponent
+                         : floatingFooterComponent
+    }
+
+    Component {
+        id: footerComponent
+
+        Footer {
+            m_window: window
+            m_mpv: mpv
+            m_playlist: playlist
+        }
+    }
+
+    Component {
+        id: floatingFooterComponent
+
+        FloatingFooter {
+            m_window: window
+            m_mpv: mpv
+            m_playlist: playlist
+        }
     }
 
     Actions {}
@@ -289,6 +311,7 @@ Kirigami.ApplicationWindow {
     }
 
     Component.onCompleted: {
+        footerLoader.active = true
         app.restoreWindowGeometry(window)
         app.activateColorScheme(GeneralSettings.colorScheme)
     }
@@ -329,7 +352,7 @@ Kirigami.ApplicationWindow {
 
         window.width = mpv.videoWidth
         window.height = mpv.videoHeight
-                + (footer.visible ? footer.height : 0)
+                + (footerLoader.visible ? footerLoader.height : 0)
                 + (header.visible ? header.height : 0)
                 + (menuBar.visible ? menuBar.height : 0)
     }

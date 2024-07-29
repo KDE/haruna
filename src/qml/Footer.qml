@@ -15,9 +15,16 @@ import org.kde.haruna.settings
 ToolBar {
     id: root
 
-    property Item m_mpv
-    property alias progressBar: progressBar
+    required property Kirigami.ApplicationWindow m_window
+    required property MpvVideo m_mpv
+    required property PlayList m_playlist
 
+    property alias progressBar: progressBar
+    property bool isFloating: false
+
+    state: !m_window.isFullScreen() || (m_mpv.mouseY > m_mpv.height - 4 && m_window.containsMouse)
+           ? "visible" : "hidden"
+    implicitWidth: m_window.contentItem.width
     padding: Kirigami.Units.smallSpacing
     position: ToolBar.Footer
     hoverEnabled: true
@@ -32,6 +39,7 @@ ToolBar {
 
     RowLayout {
         id: footerRow
+
         anchors.fill: parent
 
         HamburgerMenu {
@@ -64,7 +72,7 @@ ToolBar {
             icon.name: root.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             text: ""
             focusPolicy: Qt.NoFocus
-            enabled: playlist.playlistView.count > 1
+            enabled: root.m_playlist.playlistView.count > 1
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Play previous file")
@@ -77,7 +85,7 @@ ToolBar {
             icon.name: root.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             text: ""
             focusPolicy: Qt.NoFocus
-            enabled: playlist.playlistView.count > 1
+            enabled: root.m_playlist.playlistView.count > 1
 
             ToolTip {
                 text: i18nc("@info:tooltip", "Play next file")

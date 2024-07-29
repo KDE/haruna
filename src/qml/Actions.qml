@@ -248,19 +248,19 @@ Item {
 
             if (!aIsSet && !bIsSet) {
                 mpv.setProperty(MpvProperties.ABLoopA, mpv.position)
-                footer.progressBar.loopIndicator.startPosition = mpv.position
+                footerLoader.item.progressBar.loopIndicator.startPosition = mpv.position
                 osd.message(i18nc("@info:tooltip", "Loop start: %1", app.formatTime(mpv.position)))
             } else if (aIsSet && !bIsSet) {
                 // set b position sligthly ahead to ensure the loop section is not skipped
                 const bPosition = mpv.position + 0.1
                 mpv.setPropertyBlocking(MpvProperties.ABLoopB, bPosition)
-                footer.progressBar.loopIndicator.endPosition = bPosition
+                footerLoader.item.progressBar.loopIndicator.endPosition = bPosition
                 osd.message(i18nc("@info:tooltip", "Loop: %1 - %2", app.formatTime(a), app.formatTime(bPosition)))
             } else {
                 mpv.setProperty(MpvProperties.ABLoopA, "no")
                 mpv.setProperty(MpvProperties.ABLoopB, "no")
-                footer.progressBar.loopIndicator.startPosition = -1
-                footer.progressBar.loopIndicator.endPosition = -1
+                footerLoader.item.progressBar.loopIndicator.startPosition = -1
+                footerLoader.item.progressBar.loopIndicator.endPosition = -1
                 osd.message(i18nc("@info:tooltip", "Loop cleared"))
             }
         }

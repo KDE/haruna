@@ -15,10 +15,11 @@ import org.kde.kirigami as Kirigami
 MpvItem {
     id: root
 
+    property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
     property alias mouseY: mouseArea.mouseY
 
+    signal mousePositionChanged(double x, double y)
 
-    property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
     enum PlaybackState {
         Playing,
         Paused
@@ -68,6 +69,8 @@ MpvItem {
         cursorShape: hideCursor && window.isFullScreen() ? Qt.BlankCursor : Qt.ArrowCursor
 
         onPositionChanged: {
+            root.mousePositionChanged(mouseX, mouseY)
+
             hideCursor = false
             hideCursorTimer.restart()
 

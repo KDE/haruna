@@ -164,6 +164,68 @@ SettingsBasePage {
         }
 
         Label {
+            text: i18nc("@label:spinbox", "Footer style")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        ComboBox {
+            textRole: "display"
+            model: ListModel {
+                ListElement { display: "Default"; value: "default" }
+                ListElement { display: "Floating"; value: "floating" }
+            }
+            Component.onCompleted: {
+                for (let i = 0; i < model.count; ++i) {
+                    if (model.get(i).value === GeneralSettings.footerStyle) {
+                        currentIndex = i
+                        break
+                    }
+                }
+            }
+            onActivated: function(index) {
+                GeneralSettings.footerStyle = model.get(index).value
+                GeneralSettings.save()
+            }
+        }
+
+        Label {
+            text: i18nc("@label:spinbox", "Show floating footer on")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        RowLayout {
+            ComboBox {
+                textRole: "display"
+                enabled: GeneralSettings.footerStyle === "floating"
+                model: ListModel {
+                    ListElement { display: "Every mouse movement"; value: "EveryMouseMovement" }
+                    ListElement { display: "Bottom mouse movement"; value: "BottomMouseMovement" }
+                }
+
+                Component.onCompleted: {
+                    for (let i = 0; i < model.count; ++i) {
+                        if (model.get(i).value === GeneralSettings.floatingFooterTrigger) {
+                            currentIndex = i
+                            break
+                        }
+                    }
+                }
+                onActivated: function(index) {
+                    GeneralSettings.floatingFooterTrigger = model.get(index).value
+                    GeneralSettings.save()
+                }
+            }
+
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip",
+                                   "What action shows the footer.<br>" +
+                                   "<strong>Every mouse movement</strong> - every mouse movement over the video area<br>" +
+                                   "<strong>Bottom mouse movement</strong> - mouse movement on the bottom of the video area")
+            }
+
+        }
+
+        Label {
             text: i18nc("@label:spinbox", "Preview thumbnail")
             Layout.alignment: Qt.AlignRight
         }
