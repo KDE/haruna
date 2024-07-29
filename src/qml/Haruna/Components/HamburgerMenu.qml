@@ -38,8 +38,8 @@ ToolButton {
             id: menu
 
             y: root.position === HamburgerMenu.Position.Header
-               ? root.height + Kirigami.Units.smallSpacing
-               : -height - Kirigami.Units.smallSpacing
+               ? root.height + Kirigami.Units.largeSpacing
+               : -height - Kirigami.Units.largeSpacing
             visible:  root.isOpen
             closePolicy: Popup.CloseOnReleaseOutsideParent
             onClosed: root.isOpen = menu.visible
