@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"POT-Creation-Date: 2024-07-30 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 12:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -693,27 +693,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Asetasuna: 0"
 
-#: src/qml/Footer.qml:57
+#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Hasi atzera-jotzen"
 
-#: src/qml/Footer.qml:57
+#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Eten atzera-jotzea"
 
-#: src/qml/Footer.qml:70
+#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Jo aurreko fitxategi"
 
-#: src/qml/Footer.qml:83
+#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Jo hurrengo fitxategia"
 
-#: src/qml/Footer.qml:99
+#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Gainerakoa: %1"
@@ -786,6 +786,11 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Gehitu karpeta berria"
 
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:167
+msgctxt "@info:tooltip add new sutbtitle folder setting"
+msgid "Add a folder in which to look for subtitles."
+msgstr ""
+
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -810,23 +815,23 @@ msgstr ""
 "Hitz/karaktere jaki batzuk dituzten atalak automatikoki saihesten ditu.\n"
 "Markatu 'Atzera-Jotze' ezarpena xehetasun gehiagorako"
 
-#: src/qml/Main.qml:26
+#: src/qml/Main.qml:28
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"
 
-#: src/qml/Main.qml:252
+#: src/qml/Main.qml:274
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Hautatu azpidatzi-fitxategia"
 
-#: src/qml/Main.qml:271
+#: src/qml/Main.qml:293
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ireki"
@@ -991,102 +996,102 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Erakutsi Tresna-barra"
 
-#: src/qml/MpvVideo.qml:28
+#: src/qml/MpvVideo.qml:29
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Bolumena: %1"
 
-#: src/qml/PlayList.qml:88
+#: src/qml/PlayList.qml:90
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Gehitu"
 
-#: src/qml/PlayList.qml:100
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Ireki jotze-zerrenda"
 
-#: src/qml/PlayList.qml:109
+#: src/qml/PlayList.qml:111
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Gehitu ..."
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:114
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fitxategia"
 
-#: src/qml/PlayList.qml:120
+#: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Url"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:131
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sailkatu"
 
-#: src/qml/PlayList.qml:135
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Izena gorakorra"
 
-#: src/qml/PlayList.qml:141
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Izena beherakorra"
 
-#: src/qml/PlayList.qml:147
+#: src/qml/PlayList.qml:149
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Irupena gorakorra"
 
-#: src/qml/PlayList.qml:153
+#: src/qml/PlayList.qml:155
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Iraupena beherakorra"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:162
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Garbitu"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:170
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Gorde honela"
 
-#: src/qml/PlayList.qml:226
+#: src/qml/PlayList.qml:236
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Ireki hau barnean duen karpeta"
 
-#: src/qml/PlayList.qml:232
+#: src/qml/PlayList.qml:242
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Kopiatu fitxategi-izena"
 
-#: src/qml/PlayList.qml:236
+#: src/qml/PlayList.qml:246
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Kopiatu fitxategiaren bide-izena"
 
-#: src/qml/PlayList.qml:241
+#: src/qml/PlayList.qml:251
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Kendu jotze-zerrendatik"
 
-#: src/qml/PlayList.qml:247
+#: src/qml/PlayList.qml:257
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Berrizendatu fitxategia"
 
-#: src/qml/PlayList.qml:253
+#: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Kiribildu jotzen ari den elementuraino"
 
-#: src/qml/PlayList.qml:261
+#: src/qml/PlayList.qml:271
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Fitxategia zakarrontzira"
@@ -1344,48 +1349,69 @@ msgid "Interface"
 msgstr "Interfazea"
 
 #: src/qml/Settings/GeneralSettings.qml:167
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font style"
+msgctxt "@label:spinbox"
+msgid "Footer style"
+msgstr "Letra-tipo mota"
+
+#: src/qml/Settings/GeneralSettings.qml:192
+msgctxt "@label:spinbox"
+msgid "Show floating footer on"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:221
+msgctxt "@info:tooltip"
+msgid ""
+"What action shows the footer.<br><strong>Every mouse movement</strong> - "
+"every mouse movement over the video area<br><strong>Bottom mouse movement</"
+"strong> - mouse movement on the bottom of the video area"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Aurreikuspegi koadro-txikia"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Erakutsi aurreikuspegi koadro-txikia"
 
-#: src/qml/Settings/GeneralSettings.qml:179
+#: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 "Aurreikuspegi bat erakusten du bilaketa/aurrerapen barraren gainetik "
 "igarotzean."
 
-#: src/qml/Settings/GeneralSettings.qml:188
+#: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Erabili aurreikuspegi zehatza"
 
-#: src/qml/Settings/GeneralSettings.qml:205
+#: src/qml/Settings/GeneralSettings.qml:267
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Aurreikuspegi zehatz bat sortzea motela da"
 
-#: src/qml/Settings/GeneralSettings.qml:215
+#: src/qml/Settings/GeneralSettings.qml:277
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Koadro-txikien zabalera"
 
-#: src/qml/Settings/GeneralSettings.qml:233
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@label"
 msgid "Window"
 msgstr "Leihoa"
 
-#: src/qml/Settings/GeneralSettings.qml:239
+#: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Handiera aldatu bideora egokitzeko"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1394,12 +1420,12 @@ msgstr ""
 "Leihoaren neurria bideoaren bereizmenaren arabera finkatzen da.\n"
 "Gehienezko neurria ez da mugatzen, hori sistema eragileari uzten zaio."
 
-#: src/qml/Settings/GeneralSettings.qml:269
+#: src/qml/Settings/GeneralSettings.qml:331
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Gogoratu leihoaren neurria eta kokalekua"
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/qml/Settings/GeneralSettings.qml:346
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1414,38 +1440,38 @@ msgstr ""
 "\n"
 "\"Handiera aldatu bideora egokitzeko\" ezarpenak lehentasuna hartzen du.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:299
+#: src/qml/Settings/GeneralSettings.qml:361
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Erakutsi Menu-barra"
 
-#: src/qml/Settings/GeneralSettings.qml:310
+#: src/qml/Settings/GeneralSettings.qml:372
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Erakutsi Tresna-barra"
 
-#: src/qml/Settings/GeneralSettings.qml:321
+#: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Erakutsi atal markatzaileak"
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:392
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kolore-antolaera"
 
-#: src/qml/Settings/GeneralSettings.qml:372
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI estiloa"
 
-#: src/qml/Settings/GeneralSettings.qml:423
+#: src/qml/Settings/GeneralSettings.qml:485
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Erabili «Breeze» ikono-gaia"
 
-#: src/qml/Settings/GeneralSettings.qml:431
+#: src/qml/Settings/GeneralSettings.qml:493
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1584,13 +1610,13 @@ msgid "Hardware decoding"
 msgstr "Hardware bidezko deskodetzea"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
-#: src/qml/Settings/PlaybackSettings.qml:324
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Gaituta"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
-#: src/qml/Settings/PlaybackSettings.qml:324
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Ezgaituta"
@@ -1668,7 +1694,7 @@ msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Saihestu atalak"
 
-#: src/qml/Settings/PlaybackSettings.qml:333
+#: src/qml/Settings/PlaybackSettings.qml:331
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1676,12 +1702,12 @@ msgid ""
 msgstr ""
 "Gaitzen denean, hitz/karaktere dituzten atalak automatikoki salatzen ditu."
 
-#: src/qml/Settings/PlaybackSettings.qml:341
+#: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Erakutsi OSD mezua saihestean"
 
-#: src/qml/Settings/PlaybackSettings.qml:351
+#: src/qml/Settings/PlaybackSettings.qml:348
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1689,17 +1715,17 @@ msgid ""
 msgstr ""
 "Atalak saltatzean, OSD mezu batek saltutako atalaren titulua erakutsiko du."
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Saihestu hitzak"
 
-#: src/qml/Settings/PlaybackSettings.qml:366
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 1. kapitulua"
 
-#: src/qml/Settings/PlaybackSettings.qml:386
+#: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1710,21 +1736,21 @@ msgstr ""
 "etortzea ez da zehatza, hau da, <strong>op</strong> bat etorriko da berau "
 "barruan duten hitzekin, <strong><u>op</u>ening</strong> esaterako."
 
-#: src/qml/Settings/PlaybackSettings.qml:396
+#: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:402
+#: src/qml/Settings/PlaybackSettings.qml:399
 msgid "Format selection"
 msgstr "Formatuaren hautapena"
 
-#: src/qml/Settings/PlaybackSettings.qml:460
+#: src/qml/Settings/PlaybackSettings.qml:439
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Hautatutako formatutik hurbilen dagoen bideo-sorburua hauatzen du."
 
-#: src/qml/Settings/PlaybackSettings.qml:470
+#: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bideorikonena+audiorikonena/onena"

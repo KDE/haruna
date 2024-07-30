@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:38+0000\n"
+"POT-Creation-Date: 2024-07-30 00:40+0000\n"
 "PO-Revision-Date: 2023-12-27 10:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -695,27 +695,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Насыщенность: 0"
 
-#: src/qml/Footer.qml:57
+#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Начать воспроизведение"
 
-#: src/qml/Footer.qml:57
+#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Приостановить воспроизведение"
 
-#: src/qml/Footer.qml:70
+#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Воспроизвести предыдущий файл"
 
-#: src/qml/Footer.qml:83
+#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Воспроизвести следующий файл"
 
-#: src/qml/Footer.qml:99
+#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Осталось: %1"
@@ -791,6 +791,11 @@ msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Добавить новую папку"
 
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:167
+msgctxt "@info:tooltip add new sutbtitle folder setting"
+msgid "Add a folder in which to look for subtitles."
+msgstr ""
+
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -815,23 +820,23 @@ msgstr ""
 "Автоматически пропускает главы, содержащие указанные слова или символы.\n"
 "Более подробная информация содержится в параметрах воспроизведения"
 
-#: src/qml/Main.qml:26
+#: src/qml/Main.qml:28
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:225 src/qml/PlayList.qml:325
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Выберите файл"
 
-#: src/qml/Main.qml:252
+#: src/qml/Main.qml:274
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Выбор файла субтитров"
 
-#: src/qml/Main.qml:271
+#: src/qml/Main.qml:293
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Открыть"
@@ -996,102 +1001,102 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Показывать панель инструментов"
 
-#: src/qml/MpvVideo.qml:28
+#: src/qml/MpvVideo.qml:29
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Громкость: %1"
 
-#: src/qml/PlayList.qml:88
+#: src/qml/PlayList.qml:90
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Добавить"
 
-#: src/qml/PlayList.qml:100
+#: src/qml/PlayList.qml:102
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Открыть список воспроизведения"
 
-#: src/qml/PlayList.qml:109
+#: src/qml/PlayList.qml:111
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Добавить …"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:114
 msgctxt "@action:button"
 msgid "File"
 msgstr "Файл"
 
-#: src/qml/PlayList.qml:120
+#: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Url"
 msgstr "Адрес"
 
-#: src/qml/PlayList.qml:131
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Упорядочить"
 
-#: src/qml/PlayList.qml:135
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Имя по возрастанию"
 
-#: src/qml/PlayList.qml:141
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Имя по убыванию"
 
-#: src/qml/PlayList.qml:147
+#: src/qml/PlayList.qml:149
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Длительность по убыванию"
 
-#: src/qml/PlayList.qml:153
+#: src/qml/PlayList.qml:155
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Длительность по убыванию"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:162
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Очистить"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:170
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Сохранить как"
 
-#: src/qml/PlayList.qml:226
+#: src/qml/PlayList.qml:236
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Открыть содержащую папку"
 
-#: src/qml/PlayList.qml:232
+#: src/qml/PlayList.qml:242
 msgctxt "@action:inmenu"
 msgid "Copy file name"
 msgstr "Копировать имя файла"
 
-#: src/qml/PlayList.qml:236
+#: src/qml/PlayList.qml:246
 msgctxt "@action:inmenu"
 msgid "Copy file path"
 msgstr "Копировать путь к файлу"
 
-#: src/qml/PlayList.qml:241
+#: src/qml/PlayList.qml:251
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Удалить из списка воспроизведения"
 
-#: src/qml/PlayList.qml:247
+#: src/qml/PlayList.qml:257
 msgctxt "@action:inmenu"
 msgid "Rename file"
 msgstr "Переименовать файл"
 
-#: src/qml/PlayList.qml:253
+#: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Перемотать к записи, которая воспроизводится"
 
-#: src/qml/PlayList.qml:261
+#: src/qml/PlayList.qml:271
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Удалить файл"
@@ -1334,38 +1339,59 @@ msgid "Interface"
 msgstr "Интерфейс"
 
 #: src/qml/Settings/GeneralSettings.qml:167
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font style"
+msgctxt "@label:spinbox"
+msgid "Footer style"
+msgstr "Начертание"
+
+#: src/qml/Settings/GeneralSettings.qml:192
+msgctxt "@label:spinbox"
+msgid "Show floating footer on"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:221
+msgctxt "@info:tooltip"
+msgid ""
+"What action shows the footer.<br><strong>Every mouse movement</strong> - "
+"every mouse movement over the video area<br><strong>Bottom mouse movement</"
+"strong> - mouse movement on the bottom of the video area"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Миниатюра предварительного просмотра"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Показывать миниатюру предварительного просмотра"
 
-#: src/qml/Settings/GeneralSettings.qml:179
+#: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:188
+#: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Использовать точный предварительный просмотр"
 
-#: src/qml/Settings/GeneralSettings.qml:205
+#: src/qml/Settings/GeneralSettings.qml:267
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr ""
 "Создание изображения для точного предварительного просмотра выполняется "
 "медленно"
 
-#: src/qml/Settings/GeneralSettings.qml:215
+#: src/qml/Settings/GeneralSettings.qml:277
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:233
+#: src/qml/Settings/GeneralSettings.qml:295
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Window"
@@ -1373,12 +1399,12 @@ msgctxt "@label"
 msgid "Window"
 msgstr "Окно"
 
-#: src/qml/Settings/GeneralSettings.qml:239
+#: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Изменять размер, чтобы вместить видео"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1387,12 +1413,12 @@ msgstr ""
 "Размер окна меняется в соответствии с разрешением видео.\n"
 "Максимальный размер не ограничен (устанавливается операционной системой)."
 
-#: src/qml/Settings/GeneralSettings.qml:269
+#: src/qml/Settings/GeneralSettings.qml:331
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Восстанавливать размер и расположение окна"
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/qml/Settings/GeneralSettings.qml:346
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1407,38 +1433,38 @@ msgstr ""
 "\n"
 "Параметр «Изменять размер, чтобы вместить видео» имеет приоритет.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:299
+#: src/qml/Settings/GeneralSettings.qml:361
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Показывать строку меню"
 
-#: src/qml/Settings/GeneralSettings.qml:310
+#: src/qml/Settings/GeneralSettings.qml:372
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Показывать панель инструментов"
 
-#: src/qml/Settings/GeneralSettings.qml:321
+#: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Показывать маркеры разделов"
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:392
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Цветовая схема"
 
-#: src/qml/Settings/GeneralSettings.qml:372
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Оформление"
 
-#: src/qml/Settings/GeneralSettings.qml:423
+#: src/qml/Settings/GeneralSettings.qml:485
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Использовать набор значков Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:431
+#: src/qml/Settings/GeneralSettings.qml:493
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1582,13 +1608,13 @@ msgid "Hardware decoding"
 msgstr "Аппаратное декодирование"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
-#: src/qml/Settings/PlaybackSettings.qml:324
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Включено"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
-#: src/qml/Settings/PlaybackSettings.qml:324
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Выключено"
@@ -1655,7 +1681,7 @@ msgctxt "@label"
 msgid "Skip chapters"
 msgstr "Пропустить разделы"
 
-#: src/qml/Settings/PlaybackSettings.qml:333
+#: src/qml/Settings/PlaybackSettings.qml:331
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1669,29 +1695,29 @@ msgstr ""
 "Автоматически пропускает главы, содержащие указанные слова или символы.\n"
 "Более подробная информация содержится в параметрах воспроизведения"
 
-#: src/qml/Settings/PlaybackSettings.qml:341
+#: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Выводить индикатор при пропуске"
 
-#: src/qml/Settings/PlaybackSettings.qml:351
+#: src/qml/Settings/PlaybackSettings.qml:348
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Пропускать слова"
 
-#: src/qml/Settings/PlaybackSettings.qml:366
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:386
+#: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1699,16 +1725,16 @@ msgid ""
 "<strong><u>op</u>ening</strong>."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:396
+#: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:402
+#: src/qml/Settings/PlaybackSettings.qml:399
 msgid "Format selection"
 msgstr "Выбор формата"
 
-#: src/qml/Settings/PlaybackSettings.qml:460
+#: src/qml/Settings/PlaybackSettings.qml:439
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1719,7 +1745,7 @@ msgid "Selects a video source that is closest to the selected format."
 msgstr ""
 "Выбирает лучшее видео с высотой, меньшей или равной указанному значению."
 
-#: src/qml/Settings/PlaybackSettings.qml:470
+#: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
