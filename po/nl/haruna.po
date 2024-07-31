@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 11:34+0200\n"
+"PO-Revision-Date: 2024-07-30 13:03+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -786,7 +786,7 @@ msgstr "Nieuwe map toevoegen"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Een map toevoegen waarin te zoeken naar ondertitels."
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
@@ -1347,17 +1347,14 @@ msgid "Interface"
 msgstr "Interface"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Tekenstijl"
+msgstr "Stijl van voettekst"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Zwevende voettekst aan tonen"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1366,6 +1363,9 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"Welke actie toont de voettekst.<br><strong>Iedere muisbeweging</strong> - "
+"iedere muisbeweging over het videogebied<br><strong>Muisbeweging onderaan</"
+"strong> - muisbeweging onderaan het videogebied"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
