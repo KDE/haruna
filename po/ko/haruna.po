@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:40+0000\n"
-"PO-Revision-Date: 2024-02-09 20:15+0100\n"
+"PO-Revision-Date: 2024-08-20 22:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,20 +28,16 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: src/application.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:100
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Haruna 동영상 재생기"
+msgstr "미디어 재생기"
 
 #: src/application.cpp:102
 #, kde-format
@@ -575,6 +571,8 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
+"수 없습니다"
 
 #: src/mpv/mpvitem.cpp:531
 #, kde-format
@@ -742,12 +740,9 @@ msgid "Secondary Subtitle"
 msgstr "보조 자막"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:89
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "오디오 트랙(&A)"
+msgstr "오디오 트랙"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:113
 msgctxt "@action:inmenu"
@@ -791,7 +786,7 @@ msgstr "새 폴더 추가"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "자막을 찾을 폴더를 추가합니다."
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
@@ -1137,6 +1132,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"선택함: 시작할 때 속성 설정\n"
+"선택하지 않음: 시작할 때 속성 설정하지 않음"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1211,6 +1208,15 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"실행할 mpv 명령입니다. 사용 가능한 명령 목록은 <a href=\"https://mpv.io/"
+"manual/stable/#list-of-input-commands\">mpv 명령</a>을 참조하십시오.<br>일부 "
+"명령은 작동하지 않을 수도 있습니다.<br>유용한 명령은 <strong>set</strong>, "
+"<strong>add</strong>, <strong>cycle</strong> 등 속성을 변경하는 명령입니다."
+"<br><strong>set</strong>: 속성의 값을 지정. 예: <strong>set volume-max 150</"
+"strong><br><strong>add</strong>: 속성의 값을 증가/감소. 예: <strong>add "
+"volume 15</strong>: 음량 증가. 값을 감소시키려면 <strong>add volume -15</"
+"strong> 사용.<br><strong>cycle</strong>: 속성의 가능한 값을 따라서 전환. 예: "
+"<strong>cycle aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1229,6 +1235,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"동작 형식 사용자 정의 명령을 트리거할 때 표시할 OSD 메시지입니다.<br>"
+"${property_name}을 사용하면 속성의 값을 표시합니다. 예: <strong>음량: "
+"${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1246,6 +1255,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"이 명령은 단축키를 입력했을 때 트리거됩니다. 저장한 후 단축키를 설정할 수 있"
+"습니다."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1255,7 +1266,7 @@ msgstr "시작할 때 실행"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "앱을 시작할 때 실행할 명령입니다."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1283,14 +1294,13 @@ msgid "File dialog location"
 msgstr "파일 대화 상자 위치"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "비워 두면 마지막으로 사용한 위치를 기억합니다."
+msgstr ""
+"파일 대화 상자의 기본 위치입니다. 비워 두면 마지막으로 사용한 위치를 다시 사"
+"용합니다."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1333,17 +1343,14 @@ msgid "Interface"
 msgstr "인터페이스"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "글꼴 스타일"
+msgstr "바닥글 스타일"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "떠다니는 바닥글 표시"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1352,6 +1359,9 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"바닥글을 표시할 동작입니다.<br><strong>모든 마우스 움직임</strong>: 동영상 영"
+"역에서 마우스를 움직일 때마다<br><strong>아래쪽에서 마우스 움직임</strong>: "
+"동영상 영역 아래쪽에서 마우스를 움직일 때마다"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
@@ -1366,7 +1376,7 @@ msgstr "미리 보기 섬네일 표시"
 #: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "검색/진행 표시줄에서 마우스를 올려 두었을 때 미리 보기를 표시합니다."
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
@@ -1381,12 +1391,9 @@ msgstr "정확한 미리 보기를 생성하는 데에는 시간이 걸릴 수 �
 #: src/qml/Settings/GeneralSettings.qml:277
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "섬네일 너비"
 
 #: src/qml/Settings/GeneralSettings.qml:295
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "창"
@@ -1491,6 +1498,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"해당 동작을 트리거했을 때 탐색할 분량입니다. 검색 모드는 <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
+"니다"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1505,6 +1515,9 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"해당 동작을 트리거했을 때 탐색할 분량입니다. 검색 모드는 <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
+"니다. 마우스 커서가 진행 표시줄 위에 있을 때 휠을 돌렸을 때에도 사용됩니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1518,6 +1531,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"해당 동작을 트리거했을 때 탐색할 분량입니다. 검색 모드는 <a href='https://"
+"mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
+"니다"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1525,11 +1541,6 @@ msgid "Pause on minimize"
 msgstr "최소화 시 일시 정지"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1551,7 +1562,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "시작할 때 마지막으로 앱을 닫을 때 재생했던 파일을 엽니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1559,11 +1570,6 @@ msgid "Seek to last playback position"
 msgstr "마지막으로 재생한 위치로 탐색"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1577,16 +1583,12 @@ msgid "Start playing"
 msgstr "재생 시작"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "이전에 재생한 적이 있었던 파일을 열 때 자동으로 재생을 시작합니다."
+msgstr ""
+"재생을 다시 시작하고 마지막 위치로 탐색할 때 자동으로 재생을 시작합니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1625,14 +1627,27 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"사용 가능한 경우 하드웨어 동영상 디코딩 API를 지정합니다. 하드웨어 디코딩을 "
+"사용할 수 있는지 여부는 동영상 코덱에 따라서 결정됩니다. 하드웨어 디코딩을 사"
+"용할 수 없으면 소프트웨어 디코딩을 대신 사용합니다."
+"<br><br><ul><li><strong>auto</strong>: 자동으로 하드웨어 디코딩을 활성화하고 "
+"사용 가능한 경우 첫 번째 방법을 사용합니다.</li><li><strong>auto-safe</"
+"strong>: auto와 비슷하지만 안전한 것으로 알려진 디코딩 방법만 사용합니다.</"
+"li><li><strong>vaapi</strong>: 인텔/AMD GPU에서만 사용할 수 있습니다. opengl "
+"EGL 백엔드가 필요합니다.</li><li><strong>nvdec</strong>: 엔비디아 GPU의 하드"
+"웨어 디코딩을 사용해야 할 경우 추천합니다.</li><li><strong>cuda</strong>: 엔"
+"비디아 GPU 하드웨어 디코딩의 구형 구현체입니다.</"
+"li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></li></"
+"ul><br><br>하드웨어 디코딩에 대한 자세한 설명은 다음을 참조하십시오: <a "
+"href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
+"stable/#options-hwdec</a><br><br>다른 하드웨어 디코더를 직접 지정하려면 사용"
+"자 정의 시작 명령으로 <strong>set hwdec <i>decoder_name</i></strong>을 입력하"
+"십시오."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "마지막으로 재생한 위치로 탐색"
+msgstr "재생 위치 저장"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1662,18 +1677,12 @@ msgid "Skip chapters"
 msgstr "챕터 건너뛰기"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"특정한 단어/문자를 포함하는 챕터를 자동으로 건너뜁니다.\n"
-"자세한 사항은 '재생' 설정을 참조하십시오"
+"이 옵션을 사용하면 지정한 단어나 문자를 포함한 챕터를 자동으로 건너뜁니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
@@ -1685,7 +1694,7 @@ msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr ""
+msgstr "챕터를 건너뛸 때 건너뛴 챕터 제목을 OSD 메시지로 표시합니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
@@ -1704,6 +1713,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"다음 단어가 포함된 챕터를 건너뜁니다. 쉼표로 구분하십시오. 일치는 완전한 단"
+"어 기반이 아닙니다. 예를 들어 <strong>오</strong>를 입력하면 <strong><u>오</"
+"u>프닝</strong>과 같은 단어에도 일치합니다.JK"
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
@@ -1715,14 +1727,9 @@ msgid "Format selection"
 msgstr "형식 선택"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "높이가 지정한 값 이하인 최적 동영상을 선택합니다."
+msgstr "선택한 형식에 가장 가까운 동영상 원본을 선택합니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
@@ -1799,7 +1806,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr ""
+msgstr "한 번 클릭으로 항목 열기"
 
 #: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
@@ -2006,6 +2013,32 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"스크린샷을 저장할 때 사용할 파일 이름 템플릿을 지정하십시오. 템플릿은 파일 확"
+"장자를 제외한 파일 이름을 지정하며, 스크린샷을 찍을 때 대체되는 자리 비움자"
+"를 사용할 수 있습니다. 기본값 템플릿은 \"%F-%n\"입니다.<br>템플릿은 상대 및 "
+"절대 경로로 시작할 수 있습니다. 이를 통해서 스크린샷을 저장할 경로를 지정할 "
+"수 있습니다.<br>최종 스크린샷 파일 이름이 기존 파일과 중복되어도 기존 파일을 "
+"덮어쓰지는 않습니다. 이때는 파일을 저장하지 않거나, 템플릿에 %n이 포함되어 있"
+"으면 새로 생성된 파일 이름을 사용하여 저장됩니다.<br>자세한 설명은 <a "
+"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
+"io/manual/stable/#options-screenshot-template</a> 페이지를 참조하십시오"
+"<br><br><strong>사용 가능한 자리 비움자:</strong><br><ul><li><strong>%[#]"
+"[0X]n</strong> 일련 번호, X에 지정한 길이만큼 0을 채움.<br><li><strong>%f</"
+"strong> 현재 재생 중인 동영상 파일 이름.<br><li><strong>%F</strong> %f와 같지"
+"만 파일 확장자 제외.<br><li><strong>%x</strong> 현재 재생 중인 동영상 파일의 "
+"디렉터리 경로. 동영상이 파일 시스템에 없다면(http:// URL) 빈 문자열로 대체됨."
+"<br><li><strong>%X{fallback}</strong> %x와 같지만 동영상이 파일 시스템에 없"
+"을 때 {...} 안에 있는 fallback 문자열을 반환함.<br><li><strong>%p</strong> 현"
+"재 재생 시간. 형식은 \"HH:MM:SS\".<br><li><strong>%P</strong> %p와 같지만 밀"
+"리초 단위의 재생 시간을 추가함. 형식은 \"HH:MM:SS.mmm\".<br><li><strong>%wX</"
+"strong> X를 형식 지정 문자열로 사용하여 현재 재생 시간을 반환함.<br>올바른 형"
+"식 지정 문자열:<br><ul><li><strong>%wH</strong> 시간(10보다 작으면 0을 추가"
+"함)</li><li><strong>%wh</strong> 시간(0을 추가하지 않음)</li><li><strong>"
+"%wM</strong> 분(00-59)</i><li><strong>%wm</strong> 총 분(%wM과 다르게 시간 포"
+"함)</li><li><strong>%wS</strong> 초(00-59)</li><li><strong>%ws</strong> 총 초"
+"(시간과 분 포함)</li><li><strong>%wf</strong> %ws와 같지만 부동 소수점 사용</"
+"li><li><strong>%wT</strong> 밀리초(000-999)</li><li><strong>%%</strong> % 문"
+"자로 대체됨.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"
