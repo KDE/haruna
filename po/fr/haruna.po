@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 09:54+0200\n"
+"PO-Revision-Date: 2024-08-12 16:15+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -785,7 +785,7 @@ msgstr "Ajouter un nouveau dossier"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Ajoutez un dossier dans lequel rechercher des sous-titres."
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
@@ -1351,17 +1351,14 @@ msgid "Interface"
 msgstr "Interface"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Style de police"
+msgstr "Style de pied de page"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Afficher un pied de page flottant sur"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1370,6 +1367,10 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"Quelle action affiche le pied de page.<br><strong>Chaque mouvement de la "
+"souris</strong> - Chaque mouvement de la souris sur la zone de la "
+"vidéo<br><strong> Mouvement de la souris vers le bas</strong> - Mouvement de "
+"la souris vers le bas de la zone vidéo"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
@@ -1659,7 +1660,7 @@ msgstr ""
 "AMD . Il nécessite également un moteur « EGL OpenGL ». </"
 "li><li><strong>nvdec</strong> la méthode la plus récente et la plus "
 "recommandée pour effectuer le décodage matériel sur les processeurs "
-"graphiques « GPU » de Nvidia.</li><li><strong>cuda</strong> un ancienne "
+"graphiques « GPU » de Nvidia.</li><li><strong>CUDA</strong>, une ancienne "
 "implémentation de décodage matériel sur les processeurs graphiques « GPU » "
 "de Nvidia.</li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</"
 "strong></li></ul><br><br>Pour en savoir plus sur le décodage du matériel, "
@@ -1744,13 +1745,13 @@ msgid ""
 "<strong><u>op</u>ening</strong>."
 msgstr ""
 "Ignorez les chapitres contenant ces mots. Liste séparée par des virgules. La "
-"correspondance n'est pas exacte, ce qui signifie que <strong>op</strong> "
-"correspondra aux mots les contenant comme <strong><u>ou</u>verture</strong>."
+"correspondance n'est pas exacte, ce qui signifie que <strong>vert</strong> "
+"correspondra aux mots les contenant comme <strong><u>vert</u>ture</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
 msgid "Youtube-dl"
-msgstr "Youtube-dl"
+msgstr "youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:399
 msgid "Format selection"
