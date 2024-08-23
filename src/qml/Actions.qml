@@ -283,7 +283,7 @@ Item {
 
         function onSubtitleToggleAction() {
             const visible = mpv.getProperty(MpvProperties.SubtitleVisibility)
-            const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles function on")
+            const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles on")
             mpv.setProperty(MpvProperties.SubtitleVisibility, !visible)
             osd.message(message)
         }
