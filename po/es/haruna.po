@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:40+0000\n"
+"POT-Creation-Date: 2024-08-24 00:39+0000\n"
 "PO-Revision-Date: 2024-07-30 16:31+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -619,9 +619,12 @@ msgid "Subtitles off"
 msgstr "Subtítulos desactivados"
 
 #: src/qml/Actions.qml:286
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
-msgid "Subtitles function on"
-msgstr "Función de subtítulos activada"
+msgid "Subtitles on"
+msgstr "Subtítulos desactivados"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -693,27 +696,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturación: 0"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Empezar la reproducción"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Pausar la reproducción"
 
-#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:140 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Reproducir el archivo anterior"
 
-#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:154 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Reproducir el archivo siguiente"
 
-#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
+#: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Restantes: %1"
@@ -2113,6 +2116,10 @@ msgstr "Saturación"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clic central en los controles deslizantes para reiniciarlos"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Subtitles function on"
+#~ msgstr "Función de subtítulos activada"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "Help"

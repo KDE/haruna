@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:40+0000\n"
+"POT-Creation-Date: 2024-08-24 00:39+0000\n"
 "PO-Revision-Date: 2024-02-23 19:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -621,11 +621,13 @@ msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Ei tekstitystä"
 
-# *** TARKISTA: Miten tämän on tarkoitus jatkua (ikkunassa)?
 #: src/qml/Actions.qml:286
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
-msgid "Subtitles function on"
-msgstr "Tekstitys toimii"
+msgid "Subtitles on"
+msgstr "Ei tekstitystä"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -697,27 +699,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Kylläisyys: 0"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Käynnistä toisto"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Keskeytä toisto"
 
-#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:140 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Toista edellinen tiedosto"
 
-#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:154 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Toista seuraava tiedosto"
 
-#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
+#: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Jäljellä: %1"
@@ -2051,6 +2053,11 @@ msgstr "Värikylläisyys"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
+
+# *** TARKISTA: Miten tämän on tarkoitus jatkua (ikkunassa)?
+#~ msgctxt "@info:tooltip"
+#~ msgid "Subtitles function on"
+#~ msgstr "Tekstitys toimii"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "Help"

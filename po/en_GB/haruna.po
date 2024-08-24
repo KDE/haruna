@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:40+0000\n"
+"POT-Creation-Date: 2024-08-24 00:39+0000\n"
 "PO-Revision-Date: 2024-08-03 13:04+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -616,9 +616,12 @@ msgid "Subtitles off"
 msgstr "Subtitles off"
 
 #: src/qml/Actions.qml:286
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
-msgid "Subtitles function on"
-msgstr "Subtitles function on"
+msgid "Subtitles on"
+msgstr "Subtitles off"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -690,27 +693,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturation: 0"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Start Playback"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Pause Playback"
 
-#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:140 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Play previous file"
 
-#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:154 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Play next file"
 
-#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
+#: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Remaining: %1"
@@ -2088,6 +2091,10 @@ msgstr "Saturation"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Middle click on the sliders to reset them"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Subtitles function on"
+#~ msgstr "Subtitles function on"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "Help"

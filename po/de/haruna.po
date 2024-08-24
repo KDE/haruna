@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:40+0000\n"
+"POT-Creation-Date: 2024-08-24 00:39+0000\n"
 "PO-Revision-Date: 2023-05-30 18:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -629,10 +629,10 @@ msgstr "Untertitel aus"
 #: src/qml/Actions.qml:286
 #, fuzzy
 #| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
-msgid "Subtitles function on"
-msgstr "Untertitel ein"
+msgid "Subtitles on"
+msgstr "Untertitel aus"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -704,27 +704,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Sättigung: 0"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Wiedergabe starten"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Wiedergabe pausieren"
 
-#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:140 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Vorangehende Datei abspielen"
 
-#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:154 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Nächste Datei abspielen"
 
-#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
+#: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Verbleibende Zeit: %1"
@@ -2091,6 +2091,13 @@ msgstr "Sättigung"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Ein Mittelklick auf einen Schieber setzt ihn zurück"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Subtitles on"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Subtitles function on"
+#~ msgstr "Untertitel ein"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "Help"

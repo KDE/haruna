@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:40+0000\n"
+"POT-Creation-Date: 2024-08-24 00:39+0000\n"
 "PO-Revision-Date: 2024-07-30 15:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -617,9 +617,12 @@ msgid "Subtitles off"
 msgstr "Субтитри вимкнено"
 
 #: src/qml/Actions.qml:286
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
-msgid "Subtitles function on"
-msgstr "Субтитри увімкнено"
+msgid "Subtitles on"
+msgstr "Субтитри вимкнено"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -691,27 +694,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Насиченість: 0"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Почати відтворення"
 
-#: src/qml/FloatingFooter.qml:124 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Призупинити відтворення"
 
-#: src/qml/FloatingFooter.qml:138 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:140 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Відтворити попередній файл"
 
-#: src/qml/FloatingFooter.qml:152 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:154 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Відтворити наступний файл"
 
-#: src/qml/FloatingFooter.qml:169 src/qml/Footer.qml:107
+#: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Залишилось: %1"
@@ -2107,6 +2110,10 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
 "Клацніть середньою кнопкою миші на повзунках, щоб відновити типові значення"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Subtitles function on"
+#~ msgstr "Субтитри увімкнено"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "Help"
