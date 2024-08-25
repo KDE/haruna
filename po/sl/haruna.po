@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:39+0000\n"
-"PO-Revision-Date: 2024-07-30 08:51+0200\n"
+"PO-Revision-Date: 2024-08-24 07:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -176,7 +176,7 @@ msgstr "Odpri datoteko"
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "Dodaj zunanje podnaslove…"
+msgstr "Dodaj zunanje podnapise…"
 
 #: src/models/actionsmodel.cpp:122
 #, kde-format
@@ -284,13 +284,13 @@ msgstr "Poišči prejšnje poglavje"
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr "Poišči do naslednjega podnaslova"
+msgstr "Poišči do naslednjega podnapisa"
 
 #: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "Poišči do prejšnjega podnaslova"
+msgstr "Poišči do prejšnjega podnapisa"
 
 #: src/models/actionsmodel.cpp:255
 #, kde-format
@@ -314,55 +314,55 @@ msgstr "Posnetek zaslona"
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
-msgstr "Preklopi podnaslove"
+msgstr "Preklopi podnapis"
 
 #: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
-msgstr "Povečaj pisavo podnaslovov"
+msgstr "Povečaj pisavo podnapisa"
 
 #: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
-msgstr "Pomanjšaj pisavo podnaslovov"
+msgstr "Pomanjšaj pisavo podnapisa"
 
 #: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
-msgstr "Pomakni podnaslov navzgor"
+msgstr "Pomakni podnapis navzgor"
 
 #: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
-msgstr "Pomakni podnaslov navzdol"
+msgstr "Pomakni podnapis navzdol"
 
 #: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
-msgstr "Pospeši podnaslov"
+msgstr "Pospeši podnapis"
 
 #: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
-msgstr "Zakasni podnaslov"
+msgstr "Zakasni podnapis"
 
 #: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr "Kroži podnaslov navzgor"
+msgstr "Kroži podnapis navzgor"
 
 #: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr "Kroži podnaslov navzdol"
+msgstr "Kroži podnapis navzdol"
 
 #: src/models/actionsmodel.cpp:339
 #, kde-format
@@ -611,35 +611,32 @@ msgstr "Odstrani zanko"
 #: src/qml/Actions.qml:275 src/qml/Actions.qml:281
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
-msgstr "Čas podnaslova: %1"
+msgstr "Čas podnapisa: %1"
 
 #: src/qml/Actions.qml:286
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
-msgstr "Podnaslovi izključeni"
+msgstr "Podnapisi izključeni"
 
 #: src/qml/Actions.qml:286
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Podnaslovi izključeni"
+msgstr "Podnapisi vključeni"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
-msgstr "Podnaslov: brez"
+msgstr "Podnapis: brez"
 
 #: src/qml/Actions.qml:299 src/qml/Actions.qml:311
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr "Podnaslov: %1 %2"
+msgstr "Podnapis: %1 %2"
 
 #: src/qml/Actions.qml:318 src/qml/Actions.qml:324
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr "Merilo podnaslova: %1"
+msgstr "Merilo podnapisa: %1"
 
 #: src/qml/Actions.qml:338
 msgctxt "@info:tooltip"
@@ -767,7 +764,7 @@ msgstr ""
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
-msgstr "Naloži podnaslove iz"
+msgstr "Naloži podnapise iz"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:101
 msgctxt "@action:button"
@@ -792,12 +789,12 @@ msgstr "Dodaj novo mapo"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr "Dodaj mapo, v kateri bosmo iskali podnapise."
+msgstr "Dodaj mapo, v kateri bomo iskali podnapise."
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
-msgstr "Podnaslovi"
+msgstr "Podnapisi"
 
 #: src/qml/Header.qml:71
 msgctxt "@action:intoolbar"
@@ -832,7 +829,7 @@ msgstr "Izberite datoteko"
 #: src/qml/Main.qml:274
 msgctxt "@title:window"
 msgid "Select subtitles file"
-msgstr "Izberite datoteko podnaslovov"
+msgstr "Izberite datoteko podnapisov"
 
 #: src/qml/Main.qml:293
 msgctxt "@action:button"
@@ -962,7 +959,7 @@ msgstr "O programu"
 #: src/qml/Menus/SubtitlesMenu.qml:16
 msgctxt "@title:menu"
 msgid "&Subtitles"
-msgstr "Podna&slovi"
+msgstr "Podnapisi"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
 msgctxt "@title:menu"
@@ -1862,7 +1859,7 @@ msgstr "Zvok"
 #: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "Subtitles"
-msgstr "Podnaslovi"
+msgstr "Podnapisi"
 
 #: src/qml/Settings/SettingsWindow.qml:103
 msgctxt "@action"
@@ -1892,7 +1889,7 @@ msgstr "O programu"
 #: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr "Dovoli podnaslove v črnih okvirih"
+msgstr "Dovoli podnapise v črnih okvirih"
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@info:tooltip"
@@ -1900,8 +1897,8 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
-"Kadar je odkljukano so podnaslovi upodobljeni izven videa v črnih okvirih. "
-"Lahko, da ne deluje za vse podnaslove .ass."
+"Kadar je odkljukano so podnapisi upodobljeni izven videa v črnih okvirih. "
+"Lahko, da ne deluje za vse podnapise .ass."
 
 #: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@title"
