@@ -65,7 +65,7 @@ Slider {
                 Loader {
                     id: previewMpvLoader
 
-                    property string file: ""
+                    property string file: mpv.currentUrl
                     property double position: 0
                     property double aspectRatio: 2
 
