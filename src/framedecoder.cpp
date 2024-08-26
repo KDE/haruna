@@ -82,6 +82,9 @@ void FrameDecoder::destroy()
 {
     deleteFilterGraph();
     if (m_pVideoCodecContext) {
+#if LIBAVCODEC_VERSION_MAJOR < 61
+        avcodec_close(m_pVideoCodecContext);
+#endif
         avcodec_free_context(&m_pVideoCodecContext);
         m_pVideoCodecContext = nullptr;
     }
