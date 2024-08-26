@@ -82,7 +82,6 @@ void FrameDecoder::destroy()
 {
     deleteFilterGraph();
     if (m_pVideoCodecContext) {
-        avcodec_close(m_pVideoCodecContext);
         avcodec_free_context(&m_pVideoCodecContext);
         m_pVideoCodecContext = nullptr;
     }
