@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:39+0000\n"
-"PO-Revision-Date: 2024-07-05 16:16+0900\n"
+"PO-Revision-Date: 2024-08-26 16:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -615,12 +615,9 @@ msgid "Subtitles off"
 msgstr "字幕關閉"
 
 #: src/qml/Actions.qml:286
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "字幕關閉"
+msgstr "字幕開啟"
 
 #: src/qml/Actions.qml:295 src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -788,7 +785,7 @@ msgstr "新增資料夾"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "新增尋找字幕用的資料夾。"
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
@@ -1338,17 +1335,14 @@ msgid "Interface"
 msgstr "介面"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "字型樣式"
+msgstr "頁尾樣式"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "顯示浮動頁尾時機"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1357,6 +1351,9 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"哪些動作會顯示頁尾。<br><strong>Every mouse movement</strong> - 在影片任何區"
+"域上移動滑鼠時顯示頁尾<br><strong>Bottom mouse movement</strong> - 在影片區域"
+"底部上移動滑鼠時顯示頁尾"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"

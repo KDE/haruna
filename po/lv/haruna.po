@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:39+0000\n"
-"PO-Revision-Date: 2024-06-04 23:30+0300\n"
+"PO-Revision-Date: 2024-08-23 10:08+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -790,7 +790,7 @@ msgstr "Pievienot jaunu mapi"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Pievienot mapi, kurā meklēt subtitrus."
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
@@ -1136,6 +1136,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Atzīmēts: īpašība būs iestatīta ieslēdzoties\n"
+"Nav atzīmēts: īpašība nebūs iestatīta ieslēdzoties"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1210,6 +1212,17 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"To, kādas „mpv“ komandas palaist, skatiet <a href=\"https://mpv.io/manual/"
+"stable/#list-of-input-commands\">MPV komandas</a>, kas satur sarakstu ar "
+"pieejamajām komandām.<br>Ne visas komandas darbosies, jo dažas ir "
+"specifiskas „mpv“.<br>Lietderīgākās ir tās komandas, kuru nolūks ir "
+"manipulēt ar īpašībām, piemēram, <strong>set</strong>, <strong>add</strong>, "
+"<strong>cycle</strong>.<br><strong>set</strong>: iestata īpašības vērtību "
+"<strong>set volume-max 150</strong>.<br><strong>add</strong>: palielina/"
+"samazina īpašības vērtību <strong>add volume 15</strong>, palielina skaļumu "
+"par 15. Lai samazinātu vērtību, rakstiet <strong>add volume -15</strong>."
+"<br><strong>cycle</strong>: iet cauri īpašības vērtībām <strong>cycle aid "
+"up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1228,6 +1241,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"OSD ziņojums, ko programma parādīs, ievadot pielāgotu komandu.<br>Rakstiet "
+"${property_name}, lai parādītu īpašības vērtību <strong>Skaļums: ${volume}</"
+"strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1245,6 +1261,7 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Komandu varēsiet palaist ar saīsni. Saīsni varēsiet norādīt pēc saglabāšanas."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1254,7 +1271,7 @@ msgstr "Palaist ieslēdzot"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Komandu programma palaidīs pēc tās ieslēgšanas."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1282,14 +1299,13 @@ msgid "File dialog location"
 msgstr "Datņu lodziņa vieta"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Ja tukšs, datnes lodziņš atcerēsies iepriekšējo pozīciju."
+msgstr ""
+"Datnes atvēršanas lodziņa noklusētā atrašanās vietā. Ja tukša, datnes "
+"lodziņš atcerēsies iepriekšējo atvēršanas vietu."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1332,17 +1348,14 @@ msgid "Interface"
 msgstr "Saskarne"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Fonta stils"
+msgstr "Kājenes stils"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Rādīt peldošu kājeni pēc"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1351,6 +1364,10 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"Kādas darbības parāda kājeni.<br><strong>Katras peles kustības</strong> — "
+"pēc katras peles kustības pāri video atskaņošanas laukam<br><strong>Peles "
+"kustībām apakšā</strong> — pēc peles pakustināšanas video atskaņošanas "
+"apgabala apakšējā daļā"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
@@ -1366,6 +1383,8 @@ msgstr "Rādīt priekšskatījuma sīktēlu"
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
+"Rāda priekšskatījumu, pārliekot pāri peli progresa joslai vai tajā "
+"pārvietojoties."
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
@@ -1378,9 +1397,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "Precīza priekšskatījuma ģenerēšana ir lēna"
 
 #: src/qml/Settings/GeneralSettings.qml:277
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Sīktēla platums"
@@ -1491,6 +1507,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Cik tālu iet progresa joslā, palaižot attiecīgo darbību. Iešanas režīms ir "
+"<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>precīzs</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1505,6 +1524,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Cik tālu iet progresa joslā, palaižot attiecīgo darbību. Iešanas režīms ir "
+"<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>precīzs</a>.<br>Šis iestatījums tiek izmantotas arī, tad, ja "
+"iešanu veicat, kad virs progresa joslas ir peles kursors."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1518,6 +1541,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Cik tālu iet progresa joslā, palaižot attiecīgo darbību. Iešanas režīms ir "
+"<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>precīzs</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1525,11 +1551,6 @@ msgid "Pause on minimize"
 msgstr "Pauzēt minimizējot"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1546,7 +1567,7 @@ msgstr "Atjaunot atskaņošanu"
 #: src/qml/Settings/PlaybackSettings.qml:131
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Ieslēdzot atvērt pēdējo atskaņoto datni"
+msgstr "Palaižot programmu, atvērt pēdējo atskaņoto datni"
 
 #: src/qml/Settings/PlaybackSettings.qml:140
 msgctxt "@info:tooltip open last played file setting"
@@ -1554,6 +1575,7 @@ msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
+"Palaižot programmu, atver datni, kuru atskaņojāt, kad programmu aizvērāt."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1561,11 +1583,6 @@ msgid "Seek to last playback position"
 msgstr "Iet uz pēdējo atskaņošanas pozīciju"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1580,17 +1597,13 @@ msgid "Start playing"
 msgstr "Sākt atskaņošanu"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"Kad atverat datni, ko atskaņojāt iepriekš, sākt to atskaņot automātiski."
+"Kad atsākat atskaņošanu un ejat uz pēdējo atskaņošanas pozīciju, atskaņošanu "
+"atsākt automātiski."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1629,14 +1642,29 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Precizēt aparatūras video dekodēšanas API, ko programmai izmantot, ja "
+"iespējams. Tas, vai dekodēšanu faktiski veic aparatūra ir atkarīgs no video "
+"kodeka. Ja aparatūras dekodēšana nav iespējama, „mpv“ izmantos "
+"programmatūras dekodēšanu. <br><br><ul><li><strong>auto</strong> mēģina "
+"automātiski ieslēgt aparatūras dekodēšanu, izmantojot pirmo pieejamo metodi."
+"</li><li><strong>auto-safe</strong> līdzīgi „auto“ iestatījumam, bet mēģina "
+"tikai baltajā sarakstā ievietotas metodes, kuras uzskata par „drošām“.</"
+"li><li><strong>vaapi</strong> darbojas tikai ar „Intel“ un AMD video "
+"procesoriem. Tāpat tam nepieciešama „opengl EGL“ aizmugursistēma.</"
+"li><li><strong>nvdec</strong> jaunākā un ieteicamā metode aparatūras "
+"dekodēšanai, ja izmantojat „Nvidia“ video procesoru.</li><li><strong>cuda</"
+"strong> vecāka aparatūras kodēšanas sistēma, izmantojot „Nvidia“ video "
+"procesoru.</li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</"
+"strong></li></ul><br><br>Vairāk par aparatūras dekodēšanu varat uzzināt te: "
+"<a href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
+"stable/#options-hwdec</a><br><br>Citu aparatūras dekodēšanu varat norādīt, "
+"izveidojot pielāgotu palaišanas komandu <strong>set hwdec <i>decoder_name</"
+"i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Iet uz pēdējo atskaņošanas pozīciju"
+msgstr "Saglabāt atskaņošanas pozīciju"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1670,18 +1698,13 @@ msgid "Skip chapters"
 msgstr "Izlaist daļas"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Automātiski izlaiž daļas, kas satur noteiktus vārdus vai rakstzīmes.\n"
-"Skatiet „Atskaņošanas“ iestatījumus, lai uzzinātu vairāk"
+"Kad ieslēgts, automātiski izlaiž nodaļas, kas satur noteiktus vārdus/"
+"rakstzīmes."
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
@@ -1693,7 +1716,7 @@ msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr ""
+msgstr "Izlaižot nodaļas, parādās OSD ziņojums ar izlaistās nodaļas nosaukumu."
 
 #: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
@@ -1712,6 +1735,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Izlaist nodaļas, kas satur šos vārdus. Ar komatu atdalāms saraksts. Atbilsme "
+"nav precīza, kas nozīmē <strong>rek</strong> atbildēs vārdiem, kas to satur, "
+"piemēram, <strong><u>rek</u>lāma</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
@@ -1723,16 +1749,9 @@ msgid "Format selection"
 msgstr "Formāta atlase"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"Atlasa labāko video ar augstumu, kas ir zemāks vai vienāds ar atlasīto "
-"vērtību."
+msgstr "Atlasa video avotu, kas ir tuvākais atlasītajam formātam."
 
 #: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
@@ -2017,6 +2036,38 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Precizē datņu nosaukumu paraugu pēc kura programma saglabās ekrānattēlus. "
+"Paraugs nosaka datnes nosaukumu bez paplašinājuma un var saturēt "
+"formatēšanas vietturus, kas tiks aizvietoti, uzņemot ekrānattēlu. Pēc "
+"noklusējuma paraugs ir „%F-%n“.<br>Paraugs var sākties ar relatīvu vai "
+"absolūtu ceļu, lai norādītu mapi, kurā vēlaties saglabāt ekrānattēlus.<br>Ja "
+"beigās ekrānattēla datnes nosaukums norādīs uz jau pastāvošu datni, datne "
+"pārrakstīta netiks — ekrānattēls vai nu netiks saglabāts, vai, ja paraugs "
+"satur %n, programma jauno ekrānattēlu saglabās ar atšķirīgu (no jauna "
+"ģenerētu) nosaukumu.<br>Pilnu informāciju varat iegūt <a href='https://mpv."
+"io/manual/stable/#options-screenshot-template'>https://mpv.io/manual/stable/"
+"#options-screenshot-template</a><br><br><strong>Atļautie nosaukuma "
+"formatēšanas vietturi:</strong><br><ul><li><strong>%[#][0X]n</strong> "
+"secības skaitlis, kas papildināts ar nullēm līdz X garumam.<br><li><strong>"
+"%f</strong> atskaņotās video datnes nosaukums.<br><li><strong>%F</strong> "
+"tas pats, kas %f, bet bez datnes paplašinājuma.<br><li><strong>%x</strong> "
+"ceļš uz šobrīd atskaņoto video. Ja video neatrodas datņu sistēmā (http:// "
+"urls), tas paplašinās uz tukšu virkni.<br><li><strong>%X{fallback}</strong> "
+"tas pats, kas %x, bet, ja video datne neatrodas datņu sistēmā, atgriež "
+"rezerves virkni, kas norādāma iekavās — {...}.<br><li><strong>%p</strong> "
+"pašreizējās atskaņošanas vietas laiks. Rezultāts ir virkne formātā „HH:MM:"
+"SS“.<br><li><strong>%P</strong> līdzīgi %p, bet paplašināta ar atskaņošanas "
+"laiku milisekundēs „HH:MM:SS.mmm“.<br><li><strong>%wX</strong> norāda "
+"pašreizējās atskaņošanas vietas laiku, izmantojot X formāta virkni."
+"<br>Derīgi formatēšanas vietturi:<br><ul><li><strong>%wH</strong> stunda "
+"(papildināta ar nulli, lai iegūtu divciparu skaitli)</li><li><strong>%wh</"
+"strong> stunda (bez papildināšanas)</li><li><strong>%wM</strong> minūtes (00—"
+"59)</li><li><strong>%wm</strong> minūtes kopā (ieskaitot stundas, skatīt arī "
+"%wM)</li><li><strong>%wS</strong> sekundes (00—59)</li><li><strong>%ws</"
+"strong> sekundes kopā (ieskaitot stundas un minūtes)</li><li><strong>%wf</"
+"strong> kā %ws, bet kā peldoša vērtība</li><li><strong>%wT</strong> "
+"milisekundes (000—999)</li><li><strong>%%</strong> aizvietots ar % rakstzīmi."
+"</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"
