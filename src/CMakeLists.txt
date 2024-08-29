@@ -151,6 +151,7 @@ target_link_libraries(haruna PRIVATE
     KF6::KIOWidgets
     KF6::Kirigami
     KF6::WindowSystem
+    KF6::Crash
 
     MpvQt::MpvQt
     ${AVUTIL_LIBRARIES}

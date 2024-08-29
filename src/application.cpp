@@ -39,6 +39,7 @@
 #include <KColorSchemeManager>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KCrash>
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KLocalizedString>
@@ -72,6 +73,8 @@ Application::Application()
     setupAboutData();
     setupCommandLineParser();
     setupQmlSettingsTypes();
+
+    KCrash::initialize();
 
     connect(Global::instance(), &Global::error, this, &Application::error);
     connect(this, &Application::saveWindowGeometryAsync, Worker::instance(), &Worker::saveWindowGeometry, Qt::QueuedConnection);

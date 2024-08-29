@@ -103,6 +103,10 @@ find_package(KF6WindowSystem ${KF6_MIN_VERSION})
 set_package_properties(KF6WindowSystem PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kwindowsystem/html/index.html")
 
+find_package(KF6Crash ${KF6_MIN_VERSION})
+set_package_properties(KF6Crash PROPERTIES TYPE REQUIRED
+    URL "https://api.kde.org/frameworks/kcrash/html/index.html")
+
 find_package(Ytdlp)
 set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
     URL "https://github.com/yt-dlp/yt-dlp"
