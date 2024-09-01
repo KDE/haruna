@@ -55,7 +55,11 @@ Application *Application::instance()
 Application::Application()
     : m_app(qApp)
     , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
+#if KCOLORSCHEME_VERSION < QT_VERSION_CHECK(6, 6, 0)
     , m_schemes(new KColorSchemeManager(this))
+#else
+    , m_schemes(KColorSchemeManager::instance())
+#endif
     , m_systemDefaultStyle(m_app->style()->objectName())
     , m_appEventFilter{std::make_unique<ApplicationEventFilter>()}
 {
