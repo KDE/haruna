@@ -1,8 +1,3 @@
-<!--
-SPDX-FileCopyrightText: none
-SPDX-License-Identifier: CC0-1.0
--->
-
 # Important!
 
 Please note that all bug reports and feature requests should be filed on https://bugs.kde.org/enter_bug.cgi?product=Haruna and should never be raised here.
