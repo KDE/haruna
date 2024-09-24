@@ -95,8 +95,12 @@ ToolBar {
                         Instantiator {
                             id: secondarySubtitleMenuInstantiator
                             model: subtitleMenuButton.model
-                            onObjectAdded: secondarySubtitleMenu.insertItem( index, object )
-                            onObjectRemoved: secondarySubtitleMenu.removeItem( object )
+                            onObjectAdded: function(index, object) {
+                                secondarySubtitleMenu.insertItem( index, object )
+                            }
+                            onObjectRemoved: function(index, object) {
+                                secondarySubtitleMenu.removeItem( object )
+                            }
                             delegate: MenuItem {
                                 enabled: model.id !== mpv.subtitleId || model.id === 0
                                 checkable: true
@@ -117,8 +121,12 @@ ToolBar {
                     Instantiator {
                         id: primarySubtitleMenuInstantiator
                         model: subtitleMenuButton.model
-                        onObjectAdded: subtitleMenu.addItem( object )
-                        onObjectRemoved: subtitleMenu.removeItem( object )
+                        onObjectAdded: function(index, object) {
+                            subtitleMenu.insertItem( index, object )
+                        }
+                        onObjectRemoved: function(index, object) {
+                            subtitleMenu.removeItem( object )
+                        }
                         delegate: MenuItem {
                             enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
                             checkable: true
@@ -150,8 +158,12 @@ ToolBar {
                         id: audioMenuInstantiator
 
                         model: 0
-                        onObjectAdded: audioMenu.insertItem( index, object )
-                        onObjectRemoved: audioMenu.removeItem( object )
+                        onObjectAdded: function(index, object) {
+                            audioMenu.insertItem( index, object )
+                        }
+                        onObjectRemoved: function(index, object) {
+                            audioMenu.removeItem( object )
+                        }
                         delegate: MenuItem {
                             id: audioMenuItem
                             checkable: true

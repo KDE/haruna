@@ -8,7 +8,7 @@ import QtQuick 2.10
 import QtQuick.Window 2.1
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
-import QtGraphicalEffects 1.12
+import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.11 as Kirigami
 
 Pane {
@@ -193,11 +193,11 @@ Pane {
             id: infoFlickable
             anchors.fill: parent
             contentHeight: info.height
-            anchors.rightMargin: scrollBar.width
             TextEdit {
                 id: info
 
                 width: parent.width
+                rightPadding: scrollBar.width
                 color: Kirigami.Theme.textColor
                 readOnly: true
                 textFormat: Text.RichText
@@ -209,9 +209,6 @@ Pane {
             }
             ScrollBar.vertical: ScrollBar {
                 id: scrollBar
-                anchors.top: parent.top
-                anchors.bottom: parent.bottom
-                anchors.left: parent.right
             }
         }
     }

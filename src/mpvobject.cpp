@@ -38,8 +38,6 @@ MpvRenderer::MpvRenderer(MpvObject *new_obj)
 
 void MpvRenderer::render()
 {
-    obj->window()->resetOpenGLState();
-
     QOpenGLFramebufferObject *fbo = framebufferObject();
     mpv_opengl_fbo mpfbo;
     mpfbo.fbo = static_cast<int>(fbo->handle());
@@ -58,8 +56,6 @@ void MpvRenderer::render()
     // See render_gl.h on what OpenGL environment mpv expects, and
     // other API details.
     mpv_render_context_render(obj->mpv_gl, params);
-
-    obj->window()->resetOpenGLState();
 }
 
 QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &size)
@@ -67,7 +63,7 @@ QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &siz
     // init mpv_gl:
     if (!obj->mpv_gl)
     {
-        mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr, nullptr};
+        mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr};
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
             {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &gl_init_params},
@@ -95,6 +91,7 @@ MpvObject::MpvObject(QQuickItem * parent)
 
 //    mpv_set_option_string(mpv, "terminal", "yes");
 //    mpv_set_option_string(mpv, "msg-level", "all=v");
+    setProperty("vo", "libmpv");
     setProperty("hwdec", "auto");
     setProperty("screenshot-template", "%x/screenshots/%n");
 
@@ -299,7 +296,6 @@ void MpvObject::setSaturation(int value)
 
 QQuickFramebufferObject::Renderer *MpvObject::createRenderer() const
 {
-    window()->setPersistentOpenGLContext(true);
     window()->setPersistentSceneGraph(true);
     return new MpvRenderer(const_cast<MpvObject *>(this));
 }

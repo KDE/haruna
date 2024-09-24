@@ -8,7 +8,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import QtGraphicalEffects 1.12
+import Qt5Compat.GraphicalEffects
 import Qt.labs.platform 1.0 as Platform
 import org.kde.kirigami 2.11 as Kirigami
 import AppSettings 1.0
@@ -31,7 +31,7 @@ Kirigami.ApplicationWindow {
     minimumHeight: 450
     color: Kirigami.Theme.backgroundColor
 
-    onVisibilityChanged: {
+    onVisibilityChanged: function(visibility) {
         if (!window.isFullScreen()) {
             preFullScreenVisibility = visibility
         }

@@ -186,18 +186,24 @@ Slider {
                 }
                 onClicked: mpv.chapter = index
             }
-            onObjectAdded: chaptersMenu.insertItem(index, object)
-            onObjectRemoved: chaptersMenu.removeItem(object)
+            onObjectAdded: function(index, object) {
+                chaptersMenu.insertItem( index, object )
+            }
+            onObjectRemoved: function(index, object) {
+                chaptersMenu.removeItem( object )
+            }
         }
     }
 
     Connections {
         target: mpv
-        onFileLoaded: chapters = mpv.getProperty("chapter-list")
-        onChapterChanged: {
+        function onFileLoaded() {
+            chapters = mpv.getProperty("chapter-list")
+        }
+        function onChapterChanged() {
             chaptersMenu.checkedItem = mpv.chapter
         }
-        onPositionChanged: {
+        function onPositionChanged() {
             if (!root.seekStarted) {
                 root.value = mpv.position
             }

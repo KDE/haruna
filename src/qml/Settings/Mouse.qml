@@ -45,7 +45,7 @@ Item {
                     Layout.fillWidth: true
                 }
             }
-            delegate: Kirigami.BasicListItem {
+            delegate: ItemDelegate {
                 property string actionLabel: AppSettings.get("Mouse", modelData)
                 property string buttonLabel: modelData
 
@@ -86,7 +86,7 @@ Item {
             }
             Connections {
                 target: selectActionPopup
-                onActionSelected: {
+                function onActionSelected() {
                     const item  = buttonsView.itemAtIndex(buttonsView.index)
                     item.actionLabel = actionName
                     AppSettings.set("Mouse", item.buttonLabel, actionName)

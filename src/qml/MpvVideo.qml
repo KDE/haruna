@@ -209,7 +209,7 @@ MpvObject {
             my = mouseY
         }
 
-        onWheel: {
+        onWheel: function(wheel) {
             if (wheel.angleDelta.y > 0) {
                 if (AppSettings.mouseScrollUpAction) {
                     actions.list[AppSettings.mouseScrollUpAction].trigger()
@@ -221,7 +221,7 @@ MpvObject {
             }
         }
 
-        onPressed: {
+        onPressed: function(mouse) {
             focus = true
             if (mouse.button === Qt.LeftButton) {
                 if (AppSettings.mouseLeftAction) {
@@ -238,7 +238,7 @@ MpvObject {
             }
         }
 
-        onDoubleClicked: {
+        onDoubleClicked: function(mouse) {
             if (mouse.button === Qt.LeftButton) {
                 if (AppSettings.mouseLeftx2Action) {
                     actions.list[AppSettings.mouseLeftx2Action].trigger()

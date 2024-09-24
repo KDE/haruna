@@ -21,8 +21,12 @@ Menu {
         Instantiator {
             id: audioMenuInstantiator
             model: 0
-            onObjectAdded: audioMenu.insertItem( index, object )
-            onObjectRemoved: audioMenu.removeItem( object )
+            onObjectAdded: function(index, object) {
+                audioMenu.insertItem( index, object )
+            }
+            onObjectRemoved: function(index, object) {
+                audioMenu.removeItem( object )
+            }
             delegate: MenuItem {
                 id: audioMenuItem
                 checkable: true
@@ -33,7 +37,7 @@ Menu {
         }
         Connections {
             target: mpv
-            onFileLoaded: {
+            function onFileLoaded() {
                 audioMenuInstantiator.model = mpv.audioTracksModel()
             }
         }

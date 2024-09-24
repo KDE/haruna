@@ -27,12 +27,10 @@
 #include <QThread>
 
 #include <KAboutData>
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 int main(int argc, char *argv[])
 {
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setOrganizationName("georgefb");
     QApplication::setOrganizationDomain("georgefb.com");
     QApplication::setWindowIcon(QIcon::fromTheme("com.georgefb.haruna"));
@@ -40,8 +38,9 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
-    QQuickStyle::setFallbackStyle(QStringLiteral("fusion"));
+    QQuickStyle::setFallbackStyle(QStringLiteral("Fusion"));
 
+    KLocalizedString::setApplicationDomain("haruna");
     KAboutData aboutData(
                 QStringLiteral("haruna"),
                 i18n("Haruna Video Player"),
@@ -118,4 +117,3 @@ int main(int argc, char *argv[])
     engine.load(url);
     return QApplication::exec();
 }
-

@@ -266,7 +266,7 @@ QString Settings::mouseScrollUpAction()
 
 void Settings::setMouseScrollUpAction(const QString &action)
 {
-    if (&action == mouseScrollUpAction()) {
+    if (action == mouseScrollUpAction()) {
         return;
     }
     set("Mouse", "ScrollUp", action);

@@ -60,9 +60,10 @@ Flickable {
 
         anchors.fill: parent
         model: settingsPagesModel
-        delegate: Kirigami.BasicListItem {
+        delegate: ItemDelegate {
             text: qsTr(name)
-            icon: iconName
+            icon.name: iconName
+            width: parent.width
             onClicked: {
                 let activeComponent;
                 switch (name) {

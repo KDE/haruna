@@ -93,11 +93,10 @@ Popup {
                     actionsListView.positionViewAtIndex(actionsListView.currentIndex,ListView.Center)
                 }
             }
-            delegate: Kirigami.BasicListItem {
+            delegate: ItemDelegate {
                 height: 30
                 width: root.width
-                label: modelData
-                reserveSpaceForIcon: false
+                text: modelData
                 onDoubleClicked: actionSelected(modelData)
                 Keys.onEnterPressed: actionSelected(modelData)
                 Keys.onReturnPressed: actionSelected(modelData)

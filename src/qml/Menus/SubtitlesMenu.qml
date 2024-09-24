@@ -22,8 +22,12 @@ Menu {
         Instantiator {
             id: primarySubtitleMenuInstantiator
             model: 0
-            onObjectAdded: primarySubtitleMenu.insertItem( index, object )
-            onObjectRemoved: primarySubtitleMenu.removeItem( object )
+            onObjectAdded: function(index, object) {
+                primarySubtitleMenu.insertItem( index, object )
+            }
+            onObjectRemoved: function(index, object) {
+                primarySubtitleMenu.removeItem( object )
+            }
             delegate: MenuItem {
                 enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
                 checkable: true
@@ -43,8 +47,12 @@ Menu {
         Instantiator {
             id: secondarySubtitleMenuInstantiator
             model: 0
-            onObjectAdded: secondarySubtitleMenu.insertItem( index, object )
-            onObjectRemoved: secondarySubtitleMenu.removeItem( object )
+            onObjectAdded: function(index, object) {
+                secondarySubtitleMenu.insertItem( index, object )
+            }
+            onObjectRemoved: function(index, object) {
+                secondarySubtitleMenu.removeItem( object )
+            }
             delegate: MenuItem {
                 enabled: model.id !== mpv.subtitleId || model.id === 0
                 checkable: true

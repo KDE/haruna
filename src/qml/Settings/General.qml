@@ -151,6 +151,8 @@ Item {
 
     Connections {
         target: settingsEditor
-        onVisibleChanged: visible = settingsEditor.visible
+        function onVisibleChanged() {
+            visible = settingsEditor.visible
+        }
     }
 }

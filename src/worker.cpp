@@ -34,7 +34,7 @@ void Worker::getVideoDuration(int index, const QString &path)
     KFileMetaData::Extractor* ex = extractors.first();
     ex->extract(&result);
     auto properties = result.properties();
-    int duration = properties[KFileMetaData::Property::Duration].toInt();
+    int duration = properties.value(KFileMetaData::Property::Duration).toInt();
 
     emit videoDuration(index, Application::formatTime(duration));
 }

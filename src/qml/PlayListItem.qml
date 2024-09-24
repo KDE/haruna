@@ -8,7 +8,6 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import QtGraphicalEffects 1.12
 import org.kde.kirigami 2.11 as Kirigami
 
 Rectangle {
@@ -71,7 +70,7 @@ Rectangle {
             toolTip.visible = false
         }
 
-        onDoubleClicked: {
+        onDoubleClicked: function(mouse) {
             if (mouse.button === Qt.LeftButton) {
                 window.openFile(model.path, true, false)
                 playListModel.setPlayingVideo(row)
