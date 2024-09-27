@@ -7,7 +7,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 cmake_policy(SET CMP0048 NEW)
-project(haruna VERSION 1.2.0 LANGUAGES CXX)
+project(haruna VERSION 1.2.1 LANGUAGES CXX)
 
 set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/qml)
 set(QML_IMPORT_PATH ${QT_QML_OUTPUT_DIRECTORY} CACHE PATH "Extra QML import paths to make Qt Creator happy")
