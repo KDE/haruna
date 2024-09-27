@@ -70,15 +70,13 @@ Slider {
                     property double aspectRatio: 2
 
                     active: GeneralSettings.showPreviewThumbnail && previewMpvLoader.file !== "" && mpv.videoWidth > 0
-                    visible: false
+                    visible: active && (item as MpvPreview).isLocalFile && (item as MpvPreview).isVideo
                     sourceComponent: MpvPreview {
+                        id: mpvPreview
                         accuratePreview: GeneralSettings.accuratePreviewThumbnail
                         position: previewMpvLoader.position
                         file: previewMpvLoader.file
 
-                        onFileChanged: {
-                            previewMpvLoader.visible = isLocalFile && isVideo
-                        }
                         onAspectRatioChanged: previewMpvLoader.aspectRatio = aspectRatio || 2
                     }
 
