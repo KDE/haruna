@@ -209,7 +209,11 @@ void FrameDecoder::seek(int timeInSeconds)
         }
 
         ++keyFrameAttempts;
+#if (LIBAVFORMAT_VERSION_MAJOR < 61)
+    } while ((!gotFrame || m_pFrame->flags & AV_PKT_FLAG_KEY) && keyFrameAttempts < 200);
+#else
     } while ((!gotFrame || m_pFrame->flags & AV_FRAME_FLAG_KEY) && keyFrameAttempts < 200);
+#endif
 
     if (gotFrame == 0) {
         qDebug() << "Seeking in video failed";
@@ -360,7 +364,11 @@ bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVP
 
 void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, QImage &videoFrame)
 {
+#if (LIBAVFORMAT_VERSION_MAJOR < 61)
+    if (m_pFrame->flags & AV_CODEC_FLAG_INTERLACED_ME) {
+#else
     if (m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) {
+#endif
         processFilterGraph((AVFrame *)m_pFrame, (AVFrame *)m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
     }
 
