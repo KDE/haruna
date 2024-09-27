@@ -195,22 +195,8 @@ Item {
                 }
             }
 
-            Slider {
+            VolumeSlider {
                 id: volumeSlider
-
-                from: 0.0
-                to: 1.0
-                value: root.m_mpv.volume / 100
-                wheelEnabled: true
-
-                onValueChanged: {
-                    if (!mpv.isReady) {
-                        return
-                    }
-
-                    root.m_mpv.volume = (value * 100).toFixed(0)
-                }
-
             }
 
             Loader {
