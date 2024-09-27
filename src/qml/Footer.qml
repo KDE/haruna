@@ -131,6 +131,8 @@ ToolBar {
 
         VolumeSlider {
             id: volumeSlider
+
+            m_mpv: mpv
         }
 
         Loader {

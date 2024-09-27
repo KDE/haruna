@@ -197,6 +197,8 @@ Item {
 
             VolumeSlider {
                 id: volumeSlider
+
+                m_mpv: mpv
             }
 
             Loader {

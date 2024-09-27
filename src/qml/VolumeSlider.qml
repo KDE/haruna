@@ -15,9 +15,11 @@ import org.kde.haruna.settings
 Slider {
     id: root
 
+    required property MpvItem m_mpv
+
     from: 0
-    to: mpv.volumeMax
-    value: mpv.volume
+    to: root.m_mpv.volumeMax
+    value: root.m_mpv.volume
     implicitWidth: 100
     implicitHeight: 25
     wheelEnabled: true
@@ -38,15 +40,15 @@ Slider {
     }
 
     onPressedChanged: {
-        mpv.volume = value.toFixed(0)
+        root.m_mpv.volume = value.toFixed(0)
     }
 
     onValueChanged: {
-        if (!mpv.isReady) {
+        if (!root.m_mpv.isReady) {
             return
         }
 
-        mpv.volume = value.toFixed(0)
+        root.m_mpv.volume = value.toFixed(0)
     }
 
     Label {
