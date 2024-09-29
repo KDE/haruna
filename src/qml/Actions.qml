@@ -48,6 +48,14 @@ Item {
             actionsModel.signalEmitter("configureAction")
         }
 
+        function onReportBugAction() {
+            Qt.openUrlExternally("https://bugs.kde.org/enter_bug.cgi?product=Haruna")
+        }
+
+        function onSponsorAction() {
+            Qt.openUrlExternally("https://github.com/sponsors/g-fb")
+        }
+
         function onAudioCycleUpAction() {
             const tracks = mpv.getProperty(MpvProperties.TrackList)
             let audioTracksCount = 0

@@ -31,6 +31,20 @@ ActionsModel::ActionsModel(QObject *parent)
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
+    action.name = QStringLiteral("reportBugAction");
+    action.text = i18nc("@action", "Report bug");
+    action.iconName = QStringLiteral("tools-report-bug");
+    action.defaultShortcut = Qt::CTRL | Qt::SHIFT | Qt::Key_F1;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    m_actions << action;
+
+    action.name = QStringLiteral("sponsorAction");
+    action.text = i18nc("@action", "Sponsor Haruna");
+    action.iconName = QStringLiteral("help-donate-ars");
+    action.defaultShortcut = QKeySequence{};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    m_actions << action;
+
     action.name = QStringLiteral("audioCycleUpAction");
     action.text = i18nc("@action", "Audio Cycle Up");
     action.iconName = QString();

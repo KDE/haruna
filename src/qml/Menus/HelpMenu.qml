@@ -13,4 +13,6 @@ Menu {
     title: i18nc("@title:menu", "&Help")
 
     MenuItem { action: appActions.aboutHarunaAction }
+    MenuItem { action: appActions.reportBugAction }
+    MenuItem { action: appActions.sponsorAction }
 }
