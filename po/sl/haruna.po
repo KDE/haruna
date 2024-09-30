@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-28 00:39+0000\n"
+"POT-Creation-Date: 2024-09-30 00:38+0000\n"
 "PO-Revision-Date: 2024-08-24 07:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -103,424 +103,438 @@ msgstr "O programu Haruna"
 #: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
+msgid "Report bug"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:42
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "About Haruna"
+msgctxt "@action"
+msgid "Sponsor Haruna"
+msgstr "O programu Haruna"
+
+#: src/models/actionsmodel.cpp:49
+#, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "Kroži zvok navzgor"
 
-#: src/models/actionsmodel.cpp:42
+#: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "Kroži zvok navzdol"
 
-#: src/models/actionsmodel.cpp:49
+#: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "Nastavi"
 
-#: src/models/actionsmodel.cpp:56
+#: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Nastavi bližnjice na tipkovnici"
 
-#: src/models/actionsmodel.cpp:63
+#: src/models/actionsmodel.cpp:77
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Izhod iz celozaslonskega načina"
 
-#: src/models/actionsmodel.cpp:70
+#: src/models/actionsmodel.cpp:84
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "Korak v sličicah naprej"
 
-#: src/models/actionsmodel.cpp:78
+#: src/models/actionsmodel.cpp:92
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "Korak v sličicah nazaj"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "Naloži zadnjo predvajano datoteko"
 
-#: src/models/actionsmodel.cpp:93
+#: src/models/actionsmodel.cpp:107
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Izklopi zvok"
 
-#: src/models/actionsmodel.cpp:100
+#: src/models/actionsmodel.cpp:114
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "Odpri kontekstni meni"
 
-#: src/models/actionsmodel.cpp:104
+#: src/models/actionsmodel.cpp:118
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "Odpre in zapre kontekstni meni na mestu miškinega kazalca"
 
-#: src/models/actionsmodel.cpp:108
+#: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Odpri datoteko"
 
-#: src/models/actionsmodel.cpp:115
+#: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "Dodaj zunanje podnapise…"
 
-#: src/models/actionsmodel.cpp:122
+#: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "Odpri URL"
 
-#: src/models/actionsmodel.cpp:129
+#: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "Pospeši predvajanje playbacka"
 
-#: src/models/actionsmodel.cpp:136
+#: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "Upočasni predvajanje playbacka"
 
-#: src/models/actionsmodel.cpp:143
+#: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "Ponastavi hitrost predvajanja playbacka"
 
-#: src/models/actionsmodel.cpp:150
+#: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "Predvajaj/premor"
 
-#: src/models/actionsmodel.cpp:157
+#: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "Predvajaj naslednje"
 
-#: src/models/actionsmodel.cpp:164
+#: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Predvajaj prejšnje"
 
-#: src/models/actionsmodel.cpp:171
+#: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Izhod"
 
-#: src/models/actionsmodel.cpp:178
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Znova zaženi predvajanje"
 
-#: src/models/actionsmodel.cpp:185
+#: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "Pošči majhen korak naprej"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Poišči majhen korak nazaj"
 
-#: src/models/actionsmodel.cpp:199
+#: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "Poišči srednji korak naprej"
 
-#: src/models/actionsmodel.cpp:206
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Poišči srednji korak nazaj"
 
-#: src/models/actionsmodel.cpp:213
+#: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "Poišči velik korak naprej"
 
-#: src/models/actionsmodel.cpp:220
+#: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Poišči velik korak nazaj"
 
-#: src/models/actionsmodel.cpp:227
+#: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "Poišči naslednje poglavje"
 
-#: src/models/actionsmodel.cpp:234
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "Poišči prejšnje poglavje"
 
-#: src/models/actionsmodel.cpp:241
+#: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Poišči do naslednjega podnapisa"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Poišči do prejšnjega podnapisa"
 
-#: src/models/actionsmodel.cpp:255
+#: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Poišči položaj za kasnejši ogled"
 
-#: src/models/actionsmodel.cpp:262
+#: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Nastavi zanko"
 
-#: src/models/actionsmodel.cpp:269
+#: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Posnetek zaslona"
 
-#: src/models/actionsmodel.cpp:276
+#: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "Preklopi podnapis"
 
-#: src/models/actionsmodel.cpp:283
+#: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "Povečaj pisavo podnapisa"
 
-#: src/models/actionsmodel.cpp:290
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "Pomanjšaj pisavo podnapisa"
 
-#: src/models/actionsmodel.cpp:297
+#: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "Pomakni podnapis navzgor"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "Pomakni podnapis navzdol"
 
-#: src/models/actionsmodel.cpp:311
+#: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "Pospeši podnapis"
 
-#: src/models/actionsmodel.cpp:318
+#: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "Zakasni podnapis"
 
-#: src/models/actionsmodel.cpp:325
+#: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "Kroži podnapis navzgor"
 
-#: src/models/actionsmodel.cpp:332
+#: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "Kroži podnapis navzdol"
 
-#: src/models/actionsmodel.cpp:339
+#: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Preklopi razpletanje"
 
-#: src/models/actionsmodel.cpp:346
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Preklopi celozaslonski način"
 
-#: src/models/actionsmodel.cpp:353
+#: src/models/actionsmodel.cpp:367
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Preklopi menijsko vrstico"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Preklopi glavo"
 
-#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
+#: src/models/actionsmodel.cpp:381 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Seznam predvajanja"
 
-#: src/models/actionsmodel.cpp:374
+#: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
 msgstr "Pomakni video v levo"
 
-#: src/models/actionsmodel.cpp:381
+#: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
 msgstr "Pomakni video v desno"
 
-#: src/models/actionsmodel.cpp:388
+#: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
 msgstr "Pomakni video navzgor"
 
-#: src/models/actionsmodel.cpp:395
+#: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
 msgstr "Pomakni video navzdol"
 
-#: src/models/actionsmodel.cpp:402
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Glasneje"
 
-#: src/models/actionsmodel.cpp:409
+#: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Tišje"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Približaj"
 
-#: src/models/actionsmodel.cpp:423
+#: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Oddalji"
 
-#: src/models/actionsmodel.cpp:430
+#: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "Ponastavi povečavo"
 
-#: src/models/actionsmodel.cpp:437
+#: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "Več kontrasta"
 
-#: src/models/actionsmodel.cpp:444
+#: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "Manj kontrasta"
 
-#: src/models/actionsmodel.cpp:451
+#: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "Ponovno nastavi kontrast"
 
-#: src/models/actionsmodel.cpp:458
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "Več svetlosti"
 
-#: src/models/actionsmodel.cpp:465
+#: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "Manj svetlosti"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "Ponovno nastavi svetlost"
 
-#: src/models/actionsmodel.cpp:479
+#: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "Več game"
 
-#: src/models/actionsmodel.cpp:486
+#: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "Manj game"
 
-#: src/models/actionsmodel.cpp:493
+#: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "Ponovno nastavi gamo"
 
-#: src/models/actionsmodel.cpp:500
+#: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "Več nasičenosti"
 
-#: src/models/actionsmodel.cpp:507
+#: src/models/actionsmodel.cpp:521
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "Manj nasičenosti"
 
-#: src/models/actionsmodel.cpp:514
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "Ponovno nastavi nasičenost"
 
-#: src/models/actionsmodel.cpp:659
+#: src/models/actionsmodel.cpp:673
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -530,7 +544,7 @@ msgstr ""
 "Izbrana tipkovna bližnjica je v sporu z dejanjem <b>%1</b>.<br><br>Ali "
 "želite predodeliti bližnjico?"
 
-#: src/models/actionsmodel.cpp:665
+#: src/models/actionsmodel.cpp:679
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -583,112 +597,112 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/qml/Actions.qml:65 src/qml/Actions.qml:83
+#: src/qml/Actions.qml:73 src/qml/Actions.qml:91
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Zvok: %1 %2"
 
-#: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
+#: src/qml/Actions.qml:154 src/qml/Actions.qml:160 src/qml/Actions.qml:165
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Hitrost predvajanja: %1"
 
-#: src/qml/Actions.qml:252
+#: src/qml/Actions.qml:260
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Začetek zanke: %1"
 
-#: src/qml/Actions.qml:258
+#: src/qml/Actions.qml:266
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Zanka: %1 - %2"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:272
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Odstrani zanko"
 
-#: src/qml/Actions.qml:275 src/qml/Actions.qml:281
+#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Čas podnapisa: %1"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Podnapisi izključeni"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Podnapisi vključeni"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:307
+#: src/qml/Actions.qml:303 src/qml/Actions.qml:315
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Podnapis: brez"
 
-#: src/qml/Actions.qml:299 src/qml/Actions.qml:311
+#: src/qml/Actions.qml:307 src/qml/Actions.qml:319
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Podnapis: %1 %2"
 
-#: src/qml/Actions.qml:318 src/qml/Actions.qml:324
+#: src/qml/Actions.qml:326 src/qml/Actions.qml:332
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Merilo podnapisa: %1"
 
-#: src/qml/Actions.qml:338
+#: src/qml/Actions.qml:346
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Razpletanje: %1"
 
-#: src/qml/Actions.qml:394 src/qml/Actions.qml:400
+#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Povečava: %1"
 
-#: src/qml/Actions.qml:405
+#: src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Povečava: 0"
 
-#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:423
+#: src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:429 src/qml/Actions.qml:435
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Svetlost: %1"
 
-#: src/qml/Actions.qml:440
+#: src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Svetlost: 0"
 
-#: src/qml/Actions.qml:446 src/qml/Actions.qml:452
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:457
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:463 src/qml/Actions.qml:469
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Nasičenost: %1"
 
-#: src/qml/Actions.qml:474
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasičenost: 0"

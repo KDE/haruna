@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-28 00:39+0000\n"
+"POT-Creation-Date: 2024-09-30 00:38+0000\n"
 "PO-Revision-Date: 2024-05-16 11:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -100,424 +100,438 @@ msgstr "عن هارونا"
 #: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
+msgid "Report bug"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:42
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "About Haruna"
+msgctxt "@action"
+msgid "Sponsor Haruna"
+msgstr "عن هارونا"
+
+#: src/models/actionsmodel.cpp:49
+#, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "دور الصوت للأعلى"
 
-#: src/models/actionsmodel.cpp:42
+#: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "دور الصوت للأسفل"
 
-#: src/models/actionsmodel.cpp:49
+#: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "اضبط"
 
-#: src/models/actionsmodel.cpp:56
+#: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "اضبط اختصارات لوحة المفاتيح"
 
-#: src/models/actionsmodel.cpp:63
+#: src/models/actionsmodel.cpp:77
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "أخرج من ملء الشّاشة"
 
-#: src/models/actionsmodel.cpp:70
+#: src/models/actionsmodel.cpp:84
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "اسعَ بخطوة للأمام"
 
-#: src/models/actionsmodel.cpp:78
+#: src/models/actionsmodel.cpp:92
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "اسعَ بخطوة للخلف"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "حمّل أخر ملف مشغل"
 
-#: src/models/actionsmodel.cpp:93
+#: src/models/actionsmodel.cpp:107
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "اكتم"
 
-#: src/models/actionsmodel.cpp:100
+#: src/models/actionsmodel.cpp:114
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "افتح قائمة السياق"
 
-#: src/models/actionsmodel.cpp:104
+#: src/models/actionsmodel.cpp:118
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "يفتح ويغلق قائمة السياق في موضع مؤشر الفأرة"
 
-#: src/models/actionsmodel.cpp:108
+#: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "افتح ملفًّا"
 
-#: src/models/actionsmodel.cpp:115
+#: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "أضف ترجمات خارجية…"
 
-#: src/models/actionsmodel.cpp:122
+#: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "افتح المسار"
 
-#: src/models/actionsmodel.cpp:129
+#: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "زيادة سرعة التشغيل"
 
-#: src/models/actionsmodel.cpp:136
+#: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "خفض سرعة التشغيل"
 
-#: src/models/actionsmodel.cpp:143
+#: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "صفّر سرعة التشغيل"
 
-#: src/models/actionsmodel.cpp:150
+#: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "شغّل/ألبث"
 
-#: src/models/actionsmodel.cpp:157
+#: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "شغل التالي"
 
-#: src/models/actionsmodel.cpp:164
+#: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "شغل السابق"
 
-#: src/models/actionsmodel.cpp:171
+#: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "أنهِ"
 
-#: src/models/actionsmodel.cpp:178
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "أعد تشغيل"
 
-#: src/models/actionsmodel.cpp:185
+#: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "اسعَ بخطوة صغيرة للأمام"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "اسعَ بخطوة صغيرة للخلف"
 
-#: src/models/actionsmodel.cpp:199
+#: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "اسعَ بخطوة متوسطة للأمام"
 
-#: src/models/actionsmodel.cpp:206
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "اسعَ بخطوة متوسطة للخلف"
 
-#: src/models/actionsmodel.cpp:213
+#: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "اسعَ بخطوة كبيرة للأمام"
 
-#: src/models/actionsmodel.cpp:220
+#: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "اسعَ بخطوة كبيرة للخلف"
 
-#: src/models/actionsmodel.cpp:227
+#: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "اسعَ للفصل التالي"
 
-#: src/models/actionsmodel.cpp:234
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "اسعَ للفصل السابق"
 
-#: src/models/actionsmodel.cpp:241
+#: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "اسعَ للترجمة التالية"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "اسعَ للترجمة السابقة"
 
-#: src/models/actionsmodel.cpp:255
+#: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "اسعَ لمشاهدة أخر موقف"
 
-#: src/models/actionsmodel.cpp:262
+#: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "عين الحلقة"
 
-#: src/models/actionsmodel.cpp:269
+#: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "لقطة شاشة"
 
-#: src/models/actionsmodel.cpp:276
+#: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "تبديل الترجمة"
 
-#: src/models/actionsmodel.cpp:283
+#: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "زد من حجم خط الترجمة"
 
-#: src/models/actionsmodel.cpp:290
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "أنقص حجم خط الترجمة"
 
-#: src/models/actionsmodel.cpp:297
+#: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "حرك الترجمة للأعلى"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "حرك الترجمة للأسفل"
 
-#: src/models/actionsmodel.cpp:311
+#: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "تسريع الترجمة"
 
-#: src/models/actionsmodel.cpp:318
+#: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "تأخير الترجمة"
 
-#: src/models/actionsmodel.cpp:325
+#: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "الترجمة دائرة للأعلى"
 
-#: src/models/actionsmodel.cpp:332
+#: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "الترجمة دائرة للأسفل"
 
-#: src/models/actionsmodel.cpp:339
+#: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "بدل فك التشبيك"
 
-#: src/models/actionsmodel.cpp:346
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "بدّل ملء الشاشة"
 
-#: src/models/actionsmodel.cpp:353
+#: src/models/actionsmodel.cpp:367
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "بدل شريط القائمة"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "بدل ترويسة"
 
-#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
+#: src/models/actionsmodel.cpp:381 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "قائمة التشغيل"
 
-#: src/models/actionsmodel.cpp:374
+#: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
 msgstr "حرك الفيديو لليسار"
 
-#: src/models/actionsmodel.cpp:381
+#: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
 msgstr "حرك الفيديو لليمين"
 
-#: src/models/actionsmodel.cpp:388
+#: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
 msgstr "حرك الفيديو للأعلى"
 
-#: src/models/actionsmodel.cpp:395
+#: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
 msgstr "حرك الفيديو للأسفل"
 
-#: src/models/actionsmodel.cpp:402
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "ارفع الصوت"
 
-#: src/models/actionsmodel.cpp:409
+#: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "اخفِض الصوت"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "قرّب"
 
-#: src/models/actionsmodel.cpp:423
+#: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "بعّد"
 
-#: src/models/actionsmodel.cpp:430
+#: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "صفّر التكبير"
 
-#: src/models/actionsmodel.cpp:437
+#: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "زد التباين"
 
-#: src/models/actionsmodel.cpp:444
+#: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "قلل التباين"
 
-#: src/models/actionsmodel.cpp:451
+#: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "صفّر التباين"
 
-#: src/models/actionsmodel.cpp:458
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "زد السطوع"
 
-#: src/models/actionsmodel.cpp:465
+#: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "قلل السطوع"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "صفّر السطوع"
 
-#: src/models/actionsmodel.cpp:479
+#: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "زد غاما"
 
-#: src/models/actionsmodel.cpp:486
+#: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "قلل غاما"
 
-#: src/models/actionsmodel.cpp:493
+#: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "صفّر غاما"
 
-#: src/models/actionsmodel.cpp:500
+#: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "زد التّشبّع"
 
-#: src/models/actionsmodel.cpp:507
+#: src/models/actionsmodel.cpp:521
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "قلل التّشبّع"
 
-#: src/models/actionsmodel.cpp:514
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "صفّر التّشبّع"
 
-#: src/models/actionsmodel.cpp:659
+#: src/models/actionsmodel.cpp:673
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -527,7 +541,7 @@ msgstr ""
 "الاختصار المختار يتعارض مع اختصار إجراء <b>%1</b>. <br><br>هل تريد إعادة "
 "تعيين الاختصار؟"
 
-#: src/models/actionsmodel.cpp:665
+#: src/models/actionsmodel.cpp:679
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -580,42 +594,42 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
 
-#: src/qml/Actions.qml:65 src/qml/Actions.qml:83
+#: src/qml/Actions.qml:73 src/qml/Actions.qml:91
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "صوت: %1 %2"
 
-#: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
+#: src/qml/Actions.qml:154 src/qml/Actions.qml:160 src/qml/Actions.qml:165
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "سرعة التشغيل: %1"
 
-#: src/qml/Actions.qml:252
+#: src/qml/Actions.qml:260
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "الحلقة تبدأ: %1"
 
-#: src/qml/Actions.qml:258
+#: src/qml/Actions.qml:266
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "الحلقة: %1 - %2"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:272
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "امسح الحلقة"
 
-#: src/qml/Actions.qml:275 src/qml/Actions.qml:281
+#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "توقيت الترجمة:  : %1"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "الترجمة مغلقة"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles off"
@@ -623,72 +637,72 @@ msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "الترجمة مغلقة"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:307
+#: src/qml/Actions.qml:303 src/qml/Actions.qml:315
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "الترجمة: بدون"
 
-#: src/qml/Actions.qml:299 src/qml/Actions.qml:311
+#: src/qml/Actions.qml:307 src/qml/Actions.qml:319
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "الترجمة: %1 %2"
 
-#: src/qml/Actions.qml:318 src/qml/Actions.qml:324
+#: src/qml/Actions.qml:326 src/qml/Actions.qml:332
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "تكبير الترجمة: %1"
 
-#: src/qml/Actions.qml:338
+#: src/qml/Actions.qml:346
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "التشابك: %1"
 
-#: src/qml/Actions.qml:394 src/qml/Actions.qml:400
+#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "التكبير: %1"
 
-#: src/qml/Actions.qml:405
+#: src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "التكبير:  0"
 
-#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "التباين: %1"
 
-#: src/qml/Actions.qml:423
+#: src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "التباين: 0"
 
-#: src/qml/Actions.qml:429 src/qml/Actions.qml:435
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "السطوع: %1"
 
-#: src/qml/Actions.qml:440
+#: src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "السطوع: 0"
 
-#: src/qml/Actions.qml:446 src/qml/Actions.qml:452
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "غاما: %1"
 
-#: src/qml/Actions.qml:457
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "غاما: 0"
 
-#: src/qml/Actions.qml:463 src/qml/Actions.qml:469
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "التّشبّع: %1"
 
-#: src/qml/Actions.qml:474
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "التّشبّع: 0"

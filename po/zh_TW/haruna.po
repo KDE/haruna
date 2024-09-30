@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-28 00:39+0000\n"
+"POT-Creation-Date: 2024-09-30 00:38+0000\n"
 "PO-Revision-Date: 2024-08-26 16:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -102,424 +102,438 @@ msgstr "關於 Haruna"
 #: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
+msgid "Report bug"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:42
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "About Haruna"
+msgctxt "@action"
+msgid "Sponsor Haruna"
+msgstr "關於 Haruna"
+
+#: src/models/actionsmodel.cpp:49
+#, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "切換上一個音訊"
 
-#: src/models/actionsmodel.cpp:42
+#: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "切換下一個音訊"
 
-#: src/models/actionsmodel.cpp:49
+#: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "設定"
 
-#: src/models/actionsmodel.cpp:56
+#: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "設定鍵盤快捷鍵"
 
-#: src/models/actionsmodel.cpp:63
+#: src/models/actionsmodel.cpp:77
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "離開全螢幕"
 
-#: src/models/actionsmodel.cpp:70
+#: src/models/actionsmodel.cpp:84
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "下一個影格"
 
-#: src/models/actionsmodel.cpp:78
+#: src/models/actionsmodel.cpp:92
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "上一個影格"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "載入上次播放的檔案"
 
-#: src/models/actionsmodel.cpp:93
+#: src/models/actionsmodel.cpp:107
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "靜音"
 
-#: src/models/actionsmodel.cpp:100
+#: src/models/actionsmodel.cpp:114
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "開啟內文選單"
 
-#: src/models/actionsmodel.cpp:104
+#: src/models/actionsmodel.cpp:118
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "在滑鼠指標位置開啟或關閉內文選單"
 
-#: src/models/actionsmodel.cpp:108
+#: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "開啟檔案"
 
-#: src/models/actionsmodel.cpp:115
+#: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "新增外部字幕…"
 
-#: src/models/actionsmodel.cpp:122
+#: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "開啟網址"
 
-#: src/models/actionsmodel.cpp:129
+#: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "播放速度提高"
 
-#: src/models/actionsmodel.cpp:136
+#: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "播放速度降低"
 
-#: src/models/actionsmodel.cpp:143
+#: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "播放速度重設"
 
-#: src/models/actionsmodel.cpp:150
+#: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "播放/暫停"
 
-#: src/models/actionsmodel.cpp:157
+#: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "播放下一個"
 
-#: src/models/actionsmodel.cpp:164
+#: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "播放上一個"
 
-#: src/models/actionsmodel.cpp:171
+#: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "離開"
 
-#: src/models/actionsmodel.cpp:178
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "從頭重新開始播放"
 
-#: src/models/actionsmodel.cpp:185
+#: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "快轉一小步"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "倒轉一小步"
 
-#: src/models/actionsmodel.cpp:199
+#: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "快轉一些"
 
-#: src/models/actionsmodel.cpp:206
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "倒轉一些"
 
-#: src/models/actionsmodel.cpp:213
+#: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "快轉一大步"
 
-#: src/models/actionsmodel.cpp:220
+#: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "倒轉一大步"
 
-#: src/models/actionsmodel.cpp:227
+#: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "跳到下一個章節"
 
-#: src/models/actionsmodel.cpp:234
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "跳到上一個章節"
 
-#: src/models/actionsmodel.cpp:241
+#: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "跳到下一個字幕"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "跳到上一個字幕"
 
-#: src/models/actionsmodel.cpp:255
+#: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "跳到稍後觀看位置"
 
-#: src/models/actionsmodel.cpp:262
+#: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "設定循環"
 
-#: src/models/actionsmodel.cpp:269
+#: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "螢幕截圖"
 
-#: src/models/actionsmodel.cpp:276
+#: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "切換字幕"
 
-#: src/models/actionsmodel.cpp:283
+#: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "字幕字型大小提高"
 
-#: src/models/actionsmodel.cpp:290
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "字幕字型大小降低"
 
-#: src/models/actionsmodel.cpp:297
+#: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "字幕向上移動"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "字幕向下移動"
 
-#: src/models/actionsmodel.cpp:311
+#: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "字幕早一些"
 
-#: src/models/actionsmodel.cpp:318
+#: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "字幕晚一些"
 
-#: src/models/actionsmodel.cpp:325
+#: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "切換上一個字幕"
 
-#: src/models/actionsmodel.cpp:332
+#: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "切換下一個字幕"
 
-#: src/models/actionsmodel.cpp:339
+#: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "切換解交錯"
 
-#: src/models/actionsmodel.cpp:346
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "切換全螢幕"
 
-#: src/models/actionsmodel.cpp:353
+#: src/models/actionsmodel.cpp:367
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "切換選單列"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "切換標頭"
 
-#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
+#: src/models/actionsmodel.cpp:381 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "播放清單"
 
-#: src/models/actionsmodel.cpp:374
+#: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
 msgstr "影片向左移動"
 
-#: src/models/actionsmodel.cpp:381
+#: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
 msgstr "影片向右移動"
 
-#: src/models/actionsmodel.cpp:388
+#: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
 msgstr "影片向上移動"
 
-#: src/models/actionsmodel.cpp:395
+#: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
 msgstr "影片向下移動"
 
-#: src/models/actionsmodel.cpp:402
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "音量提高"
 
-#: src/models/actionsmodel.cpp:409
+#: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "音量降低"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "放大"
 
-#: src/models/actionsmodel.cpp:423
+#: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: src/models/actionsmodel.cpp:430
+#: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "縮放重設"
 
-#: src/models/actionsmodel.cpp:437
+#: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "對比度提高"
 
-#: src/models/actionsmodel.cpp:444
+#: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "對比度降低"
 
-#: src/models/actionsmodel.cpp:451
+#: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "對比度重設"
 
-#: src/models/actionsmodel.cpp:458
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "亮度提高"
 
-#: src/models/actionsmodel.cpp:465
+#: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "亮度降低"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "亮度重設"
 
-#: src/models/actionsmodel.cpp:479
+#: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "Gamma 提高"
 
-#: src/models/actionsmodel.cpp:486
+#: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "Gamma 降低"
 
-#: src/models/actionsmodel.cpp:493
+#: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "Gamma 重設"
 
-#: src/models/actionsmodel.cpp:500
+#: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "飽和度提高"
 
-#: src/models/actionsmodel.cpp:507
+#: src/models/actionsmodel.cpp:521
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "飽和度降低"
 
-#: src/models/actionsmodel.cpp:514
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "飽和度重設"
 
-#: src/models/actionsmodel.cpp:659
+#: src/models/actionsmodel.cpp:673
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -528,7 +542,7 @@ msgid ""
 msgstr ""
 "選取的快捷鍵與 <b>%1</b> 動作的快捷鍵衝突。<br><br>您要重新指派快捷鍵嗎？"
 
-#: src/models/actionsmodel.cpp:665
+#: src/models/actionsmodel.cpp:679
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -579,112 +593,112 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "已跳過章節：%1"
 
-#: src/qml/Actions.qml:65 src/qml/Actions.qml:83
+#: src/qml/Actions.qml:73 src/qml/Actions.qml:91
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "音效：%1 %2"
 
-#: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
+#: src/qml/Actions.qml:154 src/qml/Actions.qml:160 src/qml/Actions.qml:165
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
-#: src/qml/Actions.qml:252
+#: src/qml/Actions.qml:260
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "循環開始：%1"
 
-#: src/qml/Actions.qml:258
+#: src/qml/Actions.qml:266
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "循環：%1 - %2"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:272
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "已清除循環"
 
-#: src/qml/Actions.qml:275 src/qml/Actions.qml:281
+#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "字幕延遲：%1"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "字幕關閉"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "字幕開啟"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:307
+#: src/qml/Actions.qml:303 src/qml/Actions.qml:315
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "字幕：無"
 
-#: src/qml/Actions.qml:299 src/qml/Actions.qml:311
+#: src/qml/Actions.qml:307 src/qml/Actions.qml:319
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/qml/Actions.qml:318 src/qml/Actions.qml:324
+#: src/qml/Actions.qml:326 src/qml/Actions.qml:332
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕縮放：%1"
 
-#: src/qml/Actions.qml:338
+#: src/qml/Actions.qml:346
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "解交錯：%1"
 
-#: src/qml/Actions.qml:394 src/qml/Actions.qml:400
+#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "縮放：%1"
 
-#: src/qml/Actions.qml:405
+#: src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "縮放：0"
 
-#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "對比度：%1"
 
-#: src/qml/Actions.qml:423
+#: src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "對比度：0"
 
-#: src/qml/Actions.qml:429 src/qml/Actions.qml:435
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:440
+#: src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:446 src/qml/Actions.qml:452
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma：%1"
 
-#: src/qml/Actions.qml:457
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma：0"
 
-#: src/qml/Actions.qml:463 src/qml/Actions.qml:469
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "飽和度：%1"
 
-#: src/qml/Actions.qml:474
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "飽和度：0"

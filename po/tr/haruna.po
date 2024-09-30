@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-28 00:39+0000\n"
+"POT-Creation-Date: 2024-09-30 00:38+0000\n"
 "PO-Revision-Date: 2024-08-25 20:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -100,424 +100,438 @@ msgstr "Haruna Hakkında"
 #: src/models/actionsmodel.cpp:35
 #, kde-format
 msgctxt "@action"
+msgid "Report bug"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:42
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "About Haruna"
+msgctxt "@action"
+msgid "Sponsor Haruna"
+msgstr "Haruna Hakkında"
+
+#: src/models/actionsmodel.cpp:49
+#, kde-format
+msgctxt "@action"
 msgid "Audio Cycle Up"
 msgstr "Ses Yukarı Çevir"
 
-#: src/models/actionsmodel.cpp:42
+#: src/models/actionsmodel.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
 msgstr "Ses Aşağı Çevir"
 
-#: src/models/actionsmodel.cpp:49
+#: src/models/actionsmodel.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Configure"
 msgstr "Yapılandır"
 
-#: src/models/actionsmodel.cpp:56
+#: src/models/actionsmodel.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Klavye Kısayollarını Yapılandır"
 
-#: src/models/actionsmodel.cpp:63
+#: src/models/actionsmodel.cpp:77
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Tam Ekrandan Çık"
 
-#: src/models/actionsmodel.cpp:70
+#: src/models/actionsmodel.cpp:84
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
 msgstr "Kare İleri Git"
 
-#: src/models/actionsmodel.cpp:78
+#: src/models/actionsmodel.cpp:92
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
 msgstr "Kare Geri Git"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "Son Oynatılan Dosyayı Yükle"
 
-#: src/models/actionsmodel.cpp:93
+#: src/models/actionsmodel.cpp:107
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Sessize Al"
 
-#: src/models/actionsmodel.cpp:100
+#: src/models/actionsmodel.cpp:114
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "Bağlam Menüsünü Aç"
 
-#: src/models/actionsmodel.cpp:104
+#: src/models/actionsmodel.cpp:118
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "Bağlam menüsünü fare imleci konumunda açar ve kapatır"
 
-#: src/models/actionsmodel.cpp:108
+#: src/models/actionsmodel.cpp:122
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Dosya Aç"
 
-#: src/models/actionsmodel.cpp:115
+#: src/models/actionsmodel.cpp:129
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "Dış Altyazı Ekle…"
 
-#: src/models/actionsmodel.cpp:122
+#: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
 msgstr "URL Aç"
 
-#: src/models/actionsmodel.cpp:129
+#: src/models/actionsmodel.cpp:143
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
 msgstr "Oynatma Hızını Artır"
 
-#: src/models/actionsmodel.cpp:136
+#: src/models/actionsmodel.cpp:150
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
 msgstr "Oynatma Hızını Azalt"
 
-#: src/models/actionsmodel.cpp:143
+#: src/models/actionsmodel.cpp:157
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
 msgstr "Oynatma Hızını Sıfırla"
 
-#: src/models/actionsmodel.cpp:150
+#: src/models/actionsmodel.cpp:164
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "Oynat/Duraklat"
 
-#: src/models/actionsmodel.cpp:157
+#: src/models/actionsmodel.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "Sonrakini Oynat"
 
-#: src/models/actionsmodel.cpp:164
+#: src/models/actionsmodel.cpp:178
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Öncekini Oynat"
 
-#: src/models/actionsmodel.cpp:171
+#: src/models/actionsmodel.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Çık"
 
-#: src/models/actionsmodel.cpp:178
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Oynatmayı Yeniden Başlat"
 
-#: src/models/actionsmodel.cpp:185
+#: src/models/actionsmodel.cpp:199
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "İleri Kısa Adım At"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Geri Kısa Adım At"
 
-#: src/models/actionsmodel.cpp:199
+#: src/models/actionsmodel.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "İleri Orta Adım At"
 
-#: src/models/actionsmodel.cpp:206
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Geri Orta Adım At"
 
-#: src/models/actionsmodel.cpp:213
+#: src/models/actionsmodel.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "İleri Uzun Adım At"
 
-#: src/models/actionsmodel.cpp:220
+#: src/models/actionsmodel.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Geri Uzun Adım At"
 
-#: src/models/actionsmodel.cpp:227
+#: src/models/actionsmodel.cpp:241
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
 msgstr "Sonraki Fasıla Git"
 
-#: src/models/actionsmodel.cpp:234
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
 msgstr "Önceki Fasıla Git"
 
-#: src/models/actionsmodel.cpp:241
+#: src/models/actionsmodel.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Sonraki Altyazıya Git"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Önceki Altyazıya Git"
 
-#: src/models/actionsmodel.cpp:255
+#: src/models/actionsmodel.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Sonra İzlenecek Konuma Git"
 
-#: src/models/actionsmodel.cpp:262
+#: src/models/actionsmodel.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Döngü Ayarla"
 
-#: src/models/actionsmodel.cpp:269
+#: src/models/actionsmodel.cpp:283
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Ekran Görüntüsü"
 
-#: src/models/actionsmodel.cpp:276
+#: src/models/actionsmodel.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
 msgstr "Altyazıyı Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:283
+#: src/models/actionsmodel.cpp:297
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
 msgstr "Altyazı Yazıtipi Boyutunu Artır"
 
-#: src/models/actionsmodel.cpp:290
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
 msgstr "Altyazı Yazıtipi Boyutunu Azalt"
 
-#: src/models/actionsmodel.cpp:297
+#: src/models/actionsmodel.cpp:311
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
 msgstr "Altyazıyı Yukarı Taşı"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
 msgstr "Altyazıyı Aşağı Taşı"
 
-#: src/models/actionsmodel.cpp:311
+#: src/models/actionsmodel.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
 msgstr "Altyazıyı Hızlandır"
 
-#: src/models/actionsmodel.cpp:318
+#: src/models/actionsmodel.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
 msgstr "Altyazıyı Geciktir"
 
-#: src/models/actionsmodel.cpp:325
+#: src/models/actionsmodel.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
 msgstr "Altyazıyı Yukarı Çevir"
 
-#: src/models/actionsmodel.cpp:332
+#: src/models/actionsmodel.cpp:346
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
 msgstr "Altyazıyı Aşağı Çevir"
 
-#: src/models/actionsmodel.cpp:339
+#: src/models/actionsmodel.cpp:353
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Görüntü Ayrıştırmayı Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:346
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Tam Ekran Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:353
+#: src/models/actionsmodel.cpp:367
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Menü Çubuğunu Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:374
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Üstbilgiyi Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:367 src/qml/Settings/SettingsWindow.qml:95
+#: src/models/actionsmodel.cpp:381 src/qml/Settings/SettingsWindow.qml:95
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Oynatma Listesi"
 
-#: src/models/actionsmodel.cpp:374
+#: src/models/actionsmodel.cpp:388
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
 msgstr "Videoyu Sola Kaydır"
 
-#: src/models/actionsmodel.cpp:381
+#: src/models/actionsmodel.cpp:395
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
 msgstr "Videoyu Sağa Kaydır"
 
-#: src/models/actionsmodel.cpp:388
+#: src/models/actionsmodel.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
 msgstr "Videoyu Yukarı Taşı"
 
-#: src/models/actionsmodel.cpp:395
+#: src/models/actionsmodel.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
 msgstr "Videoyu Aşağı Taşı"
 
-#: src/models/actionsmodel.cpp:402
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Sesi Aç"
 
-#: src/models/actionsmodel.cpp:409
+#: src/models/actionsmodel.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Sesi Kıs"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:430
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Yakınlaştır"
 
-#: src/models/actionsmodel.cpp:423
+#: src/models/actionsmodel.cpp:437
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Uzaklaştır"
 
-#: src/models/actionsmodel.cpp:430
+#: src/models/actionsmodel.cpp:444
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "Yakınlaştırmayı Sıfırla"
 
-#: src/models/actionsmodel.cpp:437
+#: src/models/actionsmodel.cpp:451
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "Karşıtlığı Yükselt"
 
-#: src/models/actionsmodel.cpp:444
+#: src/models/actionsmodel.cpp:458
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "Karşıtlığı Düşür"
 
-#: src/models/actionsmodel.cpp:451
+#: src/models/actionsmodel.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "Karşıtlığı Sıfırla"
 
-#: src/models/actionsmodel.cpp:458
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "Parlaklığı Yükselt"
 
-#: src/models/actionsmodel.cpp:465
+#: src/models/actionsmodel.cpp:479
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "Parlaklığı Düşür"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "Parlaklığı Sıfırla"
 
-#: src/models/actionsmodel.cpp:479
+#: src/models/actionsmodel.cpp:493
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "Gama Yükselt"
 
-#: src/models/actionsmodel.cpp:486
+#: src/models/actionsmodel.cpp:500
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "Gama Düşür"
 
-#: src/models/actionsmodel.cpp:493
+#: src/models/actionsmodel.cpp:507
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "Gama Sıfırla"
 
-#: src/models/actionsmodel.cpp:500
+#: src/models/actionsmodel.cpp:514
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "Doygunluğu Yükselt"
 
-#: src/models/actionsmodel.cpp:507
+#: src/models/actionsmodel.cpp:521
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "Doygunluğu Düşür"
 
-#: src/models/actionsmodel.cpp:514
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "Doygunluğu Sıfırla"
 
-#: src/models/actionsmodel.cpp:659
+#: src/models/actionsmodel.cpp:673
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -527,7 +541,7 @@ msgstr ""
 "Seçili kısayol, <b>%1</b> eylemi kısayoluyla çakışıyor.<br><br>Kısayolu "
 "yeniden atamak istiyor musunuz?"
 
-#: src/models/actionsmodel.cpp:665
+#: src/models/actionsmodel.cpp:679
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -580,112 +594,112 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Fasıl atlandı: %1"
 
-#: src/qml/Actions.qml:65 src/qml/Actions.qml:83
+#: src/qml/Actions.qml:73 src/qml/Actions.qml:91
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Ses: %1 %2"
 
-#: src/qml/Actions.qml:146 src/qml/Actions.qml:152 src/qml/Actions.qml:157
+#: src/qml/Actions.qml:154 src/qml/Actions.qml:160 src/qml/Actions.qml:165
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Oynatma hızı: %1"
 
-#: src/qml/Actions.qml:252
+#: src/qml/Actions.qml:260
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Döngü başlangıcı: %1"
 
-#: src/qml/Actions.qml:258
+#: src/qml/Actions.qml:266
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Döngü: %1 — %2"
 
-#: src/qml/Actions.qml:264
+#: src/qml/Actions.qml:272
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Döngü temizlendi"
 
-#: src/qml/Actions.qml:275 src/qml/Actions.qml:281
+#: src/qml/Actions.qml:283 src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "Altyazı zamanlaması: %1"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Altyazılar kapalı"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:294
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Altyazılar açık"
 
-#: src/qml/Actions.qml:295 src/qml/Actions.qml:307
+#: src/qml/Actions.qml:303 src/qml/Actions.qml:315
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Altyazı: Yok"
 
-#: src/qml/Actions.qml:299 src/qml/Actions.qml:311
+#: src/qml/Actions.qml:307 src/qml/Actions.qml:319
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Altyazı: %1 %2"
 
-#: src/qml/Actions.qml:318 src/qml/Actions.qml:324
+#: src/qml/Actions.qml:326 src/qml/Actions.qml:332
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Altyazı ölçeği: %1"
 
-#: src/qml/Actions.qml:338
+#: src/qml/Actions.qml:346
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Görüntü ayrıştırma: %1"
 
-#: src/qml/Actions.qml:394 src/qml/Actions.qml:400
+#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Yakınlaştırma: %1"
 
-#: src/qml/Actions.qml:405
+#: src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Yakınlaştırma: 0"
 
-#: src/qml/Actions.qml:412 src/qml/Actions.qml:418
+#: src/qml/Actions.qml:420 src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Karşıtlık: %1"
 
-#: src/qml/Actions.qml:423
+#: src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Karşıtlık: 0"
 
-#: src/qml/Actions.qml:429 src/qml/Actions.qml:435
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Parlaklık: %1"
 
-#: src/qml/Actions.qml:440
+#: src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Parlaklık: 0"
 
-#: src/qml/Actions.qml:446 src/qml/Actions.qml:452
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:457
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:463 src/qml/Actions.qml:469
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Doygunluk: %1"
 
-#: src/qml/Actions.qml:474
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Doygunluk: 0"
