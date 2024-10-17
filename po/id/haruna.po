@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-30 00:38+0000\n"
-"PO-Revision-Date: 2024-10-03 20:40+0700\n"
+"PO-Revision-Date: 2024-10-16 23:21+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,20 +28,16 @@ msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
 #: src/application.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Haruna Pemutar Media"
+msgstr "Pemutar media"
 
 #: src/application.cpp:109
 #, kde-format
@@ -105,15 +101,13 @@ msgstr "Tentang Haruna"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Laporkan bug"
 
 #: src/models/actionsmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "Tentang Haruna"
+msgstr "Sponsor Haruna"
 
 #: src/models/actionsmodel.cpp:49
 #, kde-format
@@ -323,7 +317,7 @@ msgstr "Setel Putaran"
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
-msgstr "Tangkapan Layar"
+msgstr "Jepretan layar"
 
 #: src/models/actionsmodel.cpp:290
 #, kde-format
@@ -565,24 +559,22 @@ msgid "None"
 msgstr "Nihil"
 
 #: src/mpv/mpvitem.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot taken"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "Pengambilan tangkapan layar"
+msgstr "Gagal menjepret layar"
 
 #: src/mpv/mpvitem.cpp:472
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Pengambilan tangkapan layar"
+msgstr "Pengambilan jepretan layar"
 
 #: src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Tangkapan layar: %1"
+msgstr "Jepretan layar: %1"
 
 #: src/mpv/mpvitem.cpp:501
 #, kde-format
@@ -591,6 +583,8 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"Tidak ada trek video yang terdeteksi, sepertinya trek video tidak bisa "
+"didekode/diputar karena codec yang hilang"
 
 #: src/mpv/mpvitem.cpp:531
 #, kde-format
@@ -634,12 +628,9 @@ msgid "Subtitles off"
 msgstr "Subtitel off"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Subtitel off"
+msgstr "Subtitel nyala"
 
 #: src/qml/Actions.qml:303 src/qml/Actions.qml:315
 msgctxt "@info:tooltip"
@@ -761,12 +752,9 @@ msgid "Secondary Subtitle"
 msgstr "Subtitel Sekunder"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:89
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "&Audio"
+msgstr "Trek Audio"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:113
 msgctxt "@action:inmenu"
@@ -810,7 +798,7 @@ msgstr "Tambahkan folder baru"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:167
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Tambahkan folder untuk mencari subtitel."
 
 #: src/qml/Header.qml:51
 msgctxt "@action:intoolbar"
@@ -863,12 +851,9 @@ msgid "&Audio"
 msgstr "&Audio"
 
 #: src/qml/Menus/AudioMenu.qml:22 src/qml/Menus/Global/GlobalAudioMenu.qml:22
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&Audio"
+msgstr "&Trek"
 
 #: src/qml/Menus/ContextMenu.qml:17
 msgctxt "@title:menu"
@@ -1128,12 +1113,9 @@ msgstr "Bahasa utama"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:40
-#, fuzzy
-#| msgctxt "placeholder text"
-#| msgid "eng,ger etc."
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "id,eng dll."
+msgstr "id, eng dll."
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:59
@@ -1162,6 +1144,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Dicentang: properti akan disetel saat pemulaian\n"
+"Tak dicentang: properti tidak akan disetel saat pemulaian"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:148
 msgctxt "@action:intoolbar"
@@ -1236,6 +1220,17 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Perintah mpv apa yang berjalan, lihat <a href=\"https://mpv.io/manual/stable/"
+"#list-of-input-commands\">MPV Commands</a> untuk daftar perintah yang "
+"tersedia.<br>Tidak semua perintah akan bekerja karena beberapa khusus untuk "
+"mpv.<br>Beberapa perintah yang berguna untuk memanipulasi properti, seperti "
+"<strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>."
+"<br><strong>set</strong>: menyetel nilai properti <strong>set volume-max "
+"150</strong>.<br><strong>add</strong>: meningkatkan/menurunkan nilai "
+"properti <strong>add volume 15</strong>, meningkatkan volume dengan 15. "
+"Untuk menurunkan nilai gunakan <strong>add volume -15</strong>."
+"<br><strong>cycle</strong>: siklus melalui nilai properti<strong>cycle aid "
+"up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:72
 msgctxt "@label:textbox"
@@ -1254,6 +1249,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Sebuah pesan OSD ditampilkan ketika memicu sebuah perintah kustom jenis "
+"tindakan.<br>Gunakan ${property_name} untuk menampilkan nilai properti "
+"<strong>Volume: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:97
 msgctxt "@label"
@@ -1271,6 +1269,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Perintah akan dipicu dengan pintasan. Pintasan bisa disetel sesudah "
+"menyimpan."
 
 #: src/qml/Settings/EditCustomCommand.qml:128
 msgctxt "@option:radio"
@@ -1280,7 +1280,7 @@ msgstr "Jalankan saat pemulaian"
 #: src/qml/Settings/EditCustomCommand.qml:129
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Perintah akan dijalankan saat pemulaian aplikasi."
 
 #: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@action:intoolbar"
@@ -1308,15 +1308,13 @@ msgid "File dialog location"
 msgstr "Lokasi dialog file"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"Jika kosong maka dialog file akan mengingat lokasi yang dibuka terakhir kali."
+"Lokasi baku dialog file yang dibuka. Jika kosong maka dialog file akan "
+"mencoba membuka lokasi yang dibuka saat terakhir."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1333,7 +1331,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Izinkan hanya satu instansi"
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@info:tooltip"
@@ -1342,19 +1340,19 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
+"Mencoba membuka instansi Haruna lainnya tidak akan melakukan apa-apa.\n"
+"Mencoba membuka file lainnya dengan Haruna akan membuka file dalam instansi "
+"yang berjalan."
 
 #: src/qml/Settings/GeneralSettings.qml:136
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Buka playlist"
+msgstr "Tambahkan ke playlist"
 
 #: src/qml/Settings/GeneralSettings.qml:152
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr ""
+msgstr "File akan ditambahkan ke akhir playlist"
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@title"
@@ -1362,17 +1360,14 @@ msgid "Interface"
 msgstr "Antarmuka"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Gaya font"
+msgstr "Gaya footer"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Tampilkan footer mengambang saat"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1381,6 +1376,10 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"Tindakan untuk menampilkan footer.<br><strong>Setiap pergerakan mouse</"
+"strong> - setiap pergerakan mouse di atas area video<br><strong>Pergerakan "
+"mouse di bagian bawah</strong> - pergerakan mouse di bagian bawah di area "
+"video"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
@@ -1395,7 +1394,7 @@ msgstr "Tampilkan pratinjau thumbnail"
 #: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "Tampilkan pratinjau selagi melintasi bilah progres/jangka."
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
@@ -1410,12 +1409,9 @@ msgstr "Menghasilkan sebuah pratinjau yang akurat namun pelan"
 #: src/qml/Settings/GeneralSettings.qml:277
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "Luas thumbnail"
 
 #: src/qml/Settings/GeneralSettings.qml:295
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "Jendela"
@@ -1431,7 +1427,7 @@ msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"Jendela telah diubah ukurannya sesuai resolusi video.\n"
+"Jendela diubah ukurannya sesuai resolusi video.\n"
 "Ukuran maksimum tidaklah dibatasi, ini diserahkan ke sistem operasi."
 
 #: src/qml/Settings/GeneralSettings.qml:331
@@ -1521,6 +1517,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Berapa banyak jangka ketika memicu tindakan yang sesuai. Mode jangka adalah "
+"<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1535,6 +1534,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Berapa banyak jangka ketika memicu tindakan yang sesuai. Mode jangka adalah "
+"<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>.<br>Ini juga digunakan untuk penjangkaan roda mouse, "
+"ketika mouse melintasi bilah progres."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1548,6 +1551,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Berapa banyak jangka ketika memicu tindakan yang sesuai. Mode jangka adalah "
+"<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1555,17 +1561,12 @@ msgid "Pause on minimize"
 msgstr "Jeda saat minimal"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
-"Menjeda pemutar selagi jendela diminimalkan, pemitaran dilanjutkan ketika "
+"Menjeda pemutar selagi jendela diminimalkan, pemutaran dilanjutkan ketika "
 "dipulihkan."
 
 #: src/qml/Settings/PlaybackSettings.qml:124
@@ -1576,7 +1577,7 @@ msgstr "Lanjutkan Pemutaran"
 #: src/qml/Settings/PlaybackSettings.qml:131
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Buka file yang dibuka terakhir kali saat startup"
+msgstr "Buka file yang dibuka terakhir kali saat pemulaian"
 
 #: src/qml/Settings/PlaybackSettings.qml:140
 msgctxt "@info:tooltip open last played file setting"
@@ -1584,6 +1585,7 @@ msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
+"Saat pemulaian membuka file yang sedang diputar ketika aplikasi ditutup."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1591,18 +1593,13 @@ msgid "Seek to last playback position"
 msgstr "Jangka ke posisi pemutaran terakhir"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr ""
 "Ketika membuka sebuah file yang sudah diputar sebelumnya, jangkakan pada "
-"posisi saat terakhir kalinya."
+"posisi saat terakhir kali."
 
 #: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
@@ -1610,18 +1607,13 @@ msgid "Start playing"
 msgstr "Mulai memutar"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
 msgstr ""
-"Ketika membuka sebuah file yang sudah diputar sebelumnya, maka mulai memutar "
-"ia secara otomatis."
+"Ketika melanjutkan pemutaran dan menjangka ke posisi pemutaran saat "
+"terakhir, mulai memutarnya secara otomatis."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1660,14 +1652,30 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Tentukan API decoding video perangkat keras yang harus digunakan jika "
+"memungkinkan. Apakah decoding perangkat keras benar-benar dilakukan "
+"tergantung pada codec video. Jika decoding perangkat keras tidak "
+"memungkinkan, mpv akan kembali pada decoding perangkat lunak."
+"<br><br><ul><li><strong>auto</strong> mencoba untuk secara otomatis "
+"memfungsikan decoding perangkat keras menggunakan metode yang tersedia "
+"terlebih dulu.</li><li><strong>auto-safe</strong> mirip ke auto, tetapi "
+"hanya memperbolehkan metode daftar putih yang mempertimbangkan keamanan "
+"\"safe\".</li><li><strong>vaapi</strong> bekerja dengan GPU-GPU Intel dan "
+"AMD saja. Juga memerlukan backend opengl EGL.</li><li><strong>nvdec</strong> "
+"yang terbaru, dan metode yang direkomendasikan untuk melakukan decoding "
+"perangkat keras pada GPU-GPU Nvidia.</li><li><strong>cuda</strong> sebuah "
+"implementasi lawas decoding perangkat keras pada GPU-GPU Nvidia.</"
+"li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></li></"
+"ul><br><br>Anda bisa membaca lebih lanjut tentang decoding perangkat keras "
+"di sini: <a href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv."
+"io/manual/stable/#options-hwdec</a><br><br>Anda bisa mengeset decoder "
+"perangkat keras lainnya dengan membuat perintah kustom pemulaian <strong>set "
+"hwdec <i>nama_decoder</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Jangka ke posisi pemutaran terakhir"
+msgstr "Simpan posisi pemutaran"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
@@ -1699,18 +1707,13 @@ msgid "Skip chapters"
 msgstr "Lewati bab"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Melewati bab yang berisi kata/karakter tertentu secara otomatis.\n"
-"Periksa pengaturan 'Pemutaran' untuk detail lebih lanjut"
+"Ketika difungsikan, lewati secara otomatis bab-bab yang mengandung kata/"
+"karakter tertentu."
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
@@ -1723,6 +1726,8 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"Ketika pelewatan bab-bab, pesan osd akan menampilkan judul-judul bab yang "
+"dilewati."
 
 #: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
@@ -1741,6 +1746,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Lewati bab-bab yang mengandung kata-kata tersebut. Daftar dipisahkan dengan "
+"koma. Kecocokannya tidak tepat, artinya <strong>ko</strong> akan mencocokkan "
+"kata-kata yang berhubungan seperti <strong><u>ko</u>clok</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
@@ -1752,16 +1760,9 @@ msgid "Format selection"
 msgstr "Pemilihan format"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"Pilih bagus tidaknya video dengan ketinggian lebih rendah dari atau sama "
-"dengan nilai yang dipilih."
+msgstr "Pilih sumber video yang paling dekat dengan format yang dipilih."
 
 #: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
@@ -1795,7 +1796,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:101
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
-msgstr "Tampilkan judul media sebagai gantinya nama file"
+msgstr "Tampilkan judul media alih-alih nama file"
 
 #: src/qml/Settings/PlaylistSettings.qml:111
 msgctxt "@option:check"
@@ -1839,7 +1840,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr ""
+msgstr "Buka item dengan klik tinggal"
 
 #: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
@@ -2001,7 +2002,7 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:79
 msgctxt "@title"
 msgid "Screenshots"
-msgstr "Tangkapan Layar"
+msgstr "Jepretan layar"
 
 #: src/qml/Settings/VideoSettings.qml:89
 msgctxt "@label:listbox"
@@ -2047,6 +2048,38 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Tentukan templat nama file yang digunakan untuk menyimpan jepretan layar. "
+"Templat menentukan nama file tanpa file ekstensi, dan bisa mengandung format "
+"khusus, yang akan disubtitusi ketika pengambilan jepretan layar. Secara "
+"bakunya, templatnya adalah \"%F-%n\". <br>Templat bisa dimulai dengan alur "
+"mutlak atau relatif, supaya untuk menentukan sebuah lokasi direktori di mana "
+"jepretan layar harus disimpan.<br>Jika nama file jepretan layar final "
+"menunjuk ke file yang sudah ada, file tidak akan ditimpa. Skrinsut tidak "
+"akan disimpan, atau jika templat mengandung %n, disimpan menggunakan yang "
+"berbeda, nama file akan dihasilkan secara baru.<br>Untuk info lengkap "
+"lihatlah <a href='https://mpv.io/manual/stable/#options-screenshot-"
+"template'>https://mpv.io/manual/stable/#options-screenshot-template</"
+"a><br><br><strong>Format khusus yang diperbolehkan:</"
+"strong><br><ul><li><strong>%[#][0X]n</strong> Nomor urut, diisi dengan angka "
+"nol hingga sepanjang X.<br><li><strong>%f</strong> Nama file video yang "
+"diputar saat ini.<br><li><strong>%F</strong> Sama seperti %f, tetapi tanpa "
+"ekstensi file.<br><li><strong>%x</strong> Alur direktori video yang diputar "
+"saat ini. Jika video tidak pada sistem file (http:// urls), ini memperluas "
+"ke string kosong.<br><li><strong>%X{fallback}</strong> Sama seperti %x, "
+"tetapi file video tidak pada sistem file, kembalikan string fallback di "
+"dalam {...}.<br><li><strong>%p</strong> Waktu pemutaran saat ini. Hasilnya "
+"adalah string pada formulir \"HH:MM:SS\".<br><li><strong>%P</strong> Mirip "
+"ke %p, tetapi diperluas dengan waktu pemutaran dalam milidetik \"HH:MM:SS.mmm"
+"\".<br><li><strong>%wX</strong> Menentukan waktu pemutaran saat ini "
+"menggunakan string format X.<br>Format khusus yang valid:<br><ul><li><strong>"
+"%wH</strong> jam (diisi dengan 0 untuk dua digit)</li><li><strong>%wh</"
+"strong> jam (tidak diisi)</li><li><strong>%wM</strong> menit (00-59)</"
+"li><li><strong>%wm</strong> total menit (termasuk jam, tak seperti %wM)</"
+"li><li><strong>%wS</strong> detik (00-59)</li><li><strong>%ws</strong> total "
+"detik (termasuk jam dan menit)</li><li><strong>%wf</strong> seperti %ws, "
+"tetapi sebagai pengambang</li><li><strong>%wT</strong> millidetik (000-999)</"
+"li><li><strong>%%</strong> Digantikan dengan karakter % tersendiri.</li></"
+"ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:194
 msgctxt "@title"
@@ -2076,7 +2109,7 @@ msgstr "Saturasi"
 #: src/qml/Settings/VideoSettings.qml:277
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
-msgstr "Klik tengah pada penggeser untuk mengesetulangnya"
+msgstr "Klik tengah pada penggeser untuk mengeset ulang"
 
 #, fuzzy
 #~| msgctxt "@info:tooltip"
