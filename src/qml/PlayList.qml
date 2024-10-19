@@ -250,7 +250,6 @@ Item {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove from playlist")
                     icon.name: "remove"
-                    visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.removeItem(row)
                 }
                 MenuItem {
