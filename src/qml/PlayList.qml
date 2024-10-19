@@ -248,11 +248,13 @@ Item {
                     }
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Copy file name")
+                    text: i18nc("@action:inmenu", "Copy name")
                     onClicked: mpv.playlistProxyModel.copyFileName(row)
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Copy file path")
+                    text: contextMenuLoader.isLocal
+                          ? i18nc("@action:inmenu", "Copy path")
+                          : i18nc("@action:inmenu", "Copy url")
                     onClicked: mpv.playlistProxyModel.copyFilePath(row)
                 }
                 MenuSeparator {}
@@ -262,7 +264,7 @@ Item {
                     onClicked: mpv.playlistProxyModel.removeItem(row)
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Rename file")
+                    text: i18nc("@action:inmenu", "Rename")
                     icon.name: "edit-rename"
                     visible: contextMenuLoader.isLocal
                     onClicked: mpv.playlistProxyModel.renameFile(row)
@@ -274,7 +276,9 @@ Item {
                         playlistView.positionViewAtIndex(index, ListView.Beginning)
                     }
                 }
-                MenuSeparator {}
+                MenuSeparator {
+                    visible: contextMenuLoader.isLocal
+                }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Trash file")
                     icon.name: "delete"
