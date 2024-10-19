@@ -239,6 +239,15 @@ Item {
                     onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
                 }
                 MenuItem {
+                    text: i18nc("@action:inmenu", "Open in browser")
+                    icon.name: "link"
+                    visible: !contextMenuLoader.isLocal
+                    onClicked: {
+                        const modelIndex = mpv.playlistProxyModel.index(row, 0)
+                        Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
+                    }
+                }
+                MenuItem {
                     text: i18nc("@action:inmenu", "Copy file name")
                     onClicked: mpv.playlistProxyModel.copyFileName(row)
                 }
