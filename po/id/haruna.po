@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-10-16 23:21+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -829,7 +829,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1076,31 +1076,56 @@ msgid "Open containing folder"
 msgstr "Buka folder konten"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "Salin nama file"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "Salin alur file"
+msgid "Open in browser"
+msgstr "Buka folder konfig"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "Salin nama file"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "Salin alur file"
+
+#: src/qml/PlayList.qml:257
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open url"
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr "Buka url"
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Singkirkan dari playlist"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "Ubah nama file"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Gulir untuk memutar item"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "File sampah"
@@ -2163,10 +2188,6 @@ msgstr "Klik tengah pada penggeser untuk mengeset ulang"
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"
 #~ msgstr "Trek &Primer"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "Buka url"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

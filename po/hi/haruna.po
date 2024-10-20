@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -960,7 +960,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 #, fuzzy
 #| msgid "Select file"
@@ -1278,36 +1278,51 @@ msgstr ""
 
 #: src/qml/PlayList.qml:242
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr ""
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
+msgid "Open in browser"
 msgstr ""
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "राघवेंद्र कामत"
+
+#: src/qml/PlayList.qml:256
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr ""
+
+#: src/qml/PlayList.qml:257
+#, fuzzy
+#| msgid "Open Url"
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr "यूआरएल खोलें"
+
+#: src/qml/PlayList.qml:262
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "वीडियो-सूची"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "प्लेबैक प्रारंभ करें"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@action:inmenu"
@@ -2351,12 +2366,6 @@ msgstr ""
 #~ msgctxt "@title:window"
 #~ msgid "Help"
 #~ msgstr "मदद"
-
-#, fuzzy
-#~| msgid "Open Url"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "यूआरएल खोलें"
 
 #, fuzzy
 #~| msgid "Playlist style"

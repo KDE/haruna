@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-09-30 09:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -832,7 +832,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1079,31 +1079,56 @@ msgid "Open containing folder"
 msgstr "Odpri vsebovano mapo"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "Kopiraj ime datoteke"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "Kopiraj pot datoteke"
+msgid "Open in browser"
+msgstr "Odpri mapo config"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "Kopiraj ime datoteke"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "Kopiraj pot datoteke"
+
+#: src/qml/PlayList.qml:257
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open url"
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr "Odpri url"
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Odstrani s seznama predvajanja"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "Preimenuj datoteko"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Premakni se do predmeta predvajanja"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Datoteko v smeti"
@@ -2159,10 +2184,6 @@ msgstr "Srednji klik drsnikov za njihovo ponovno nastavitev"
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"
 #~ msgstr "&Primarna steza"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "Odpri url"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

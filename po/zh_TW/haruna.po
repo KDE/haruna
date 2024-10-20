@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-10-02 17:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -828,7 +828,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1075,31 +1075,53 @@ msgid "Open containing folder"
 msgstr "開啟包含資料夾"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "複製檔案名稱"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "複製檔案路徑"
+msgid "Open in browser"
+msgstr "開啟設定資料夾"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "複製檔案名稱"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "複製檔案路徑"
+
+#: src/qml/PlayList.qml:257
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr ""
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "從播放清單移除"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "重新命名檔案"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "捲動到目前播放的項目"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "將檔案移到垃圾桶"

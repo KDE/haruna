@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-03-27 22:46+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -819,7 +819,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr ""
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1067,30 +1067,43 @@ msgstr ""
 
 #: src/qml/PlayList.qml:242
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr ""
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
+msgid "Open in browser"
 msgstr ""
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
 msgctxt "@action:inmenu"
-msgid "Remove from playlist"
+msgid "Copy name"
+msgstr "Softastur"
+
+#: src/qml/PlayList.qml:256
+msgctxt "@action:inmenu"
+msgid "Copy path"
 msgstr ""
 
 #: src/qml/PlayList.qml:257
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Copy url"
 msgstr ""
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:262
+msgctxt "@action:inmenu"
+msgid "Remove from playlist"
+msgstr ""
+
+#: src/qml/PlayList.qml:267
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr ""
+
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr ""
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr ""

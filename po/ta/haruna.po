@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 15:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -840,7 +840,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "ஹருணா"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1090,31 +1090,56 @@ msgid "Open containing folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "கோப்பின் பெயரை நகலெடு"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "கோப்பிற்கான பாதையை நகலெடு"
+msgid "Open in browser"
+msgstr "அமைப்புகளுக்கான அடைவைத் திற"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "கோப்பின் பெயரை நகலெடு"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "கோப்பிற்கான பாதையை நகலெடு"
+
+#: src/qml/PlayList.qml:257
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open url"
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr "முகவரியை திற"
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "பாடல்வரிசையிலிருந்து நீக்கு"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "கோப்பின் பெயரை மாற்று"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "தற்போதைய உருப்படிக்கு உருள்"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "கோப்பை அகற்றிடப்படுத்து"
@@ -2062,10 +2087,6 @@ msgstr ""
 #~ msgctxt "@title"
 #~ msgid "A configurable media player."
 #~ msgstr "தனிப்பயனாக்கக்கூடிய நிகழ்பட இயக்கி."
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "முகவரியை திற"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

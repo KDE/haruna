@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-10-01 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -821,7 +821,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1068,31 +1068,53 @@ msgid "Open containing folder"
 msgstr "Otevřít odpovídající složku"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "Kopírovat název souboru"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "Kopírovat cestu k souboru"
+msgid "Open in browser"
+msgstr "Otevřít složku nastavení"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "Kopírovat název souboru"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "Kopírovat cestu k souboru"
+
+#: src/qml/PlayList.qml:257
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr ""
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Odstranit ze seznamu skladeb"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "Přejmenovat soubor"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Přejít na přehrávanou položku"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Přesunout soubor do koše"

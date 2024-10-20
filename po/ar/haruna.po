@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 11:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -834,7 +834,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1081,31 +1081,56 @@ msgid "Open containing folder"
 msgstr "افتح المجلد الحاوي"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "انسخ اسم الملف"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "انسخ مسار الملف"
+msgid "Open in browser"
+msgstr "افتح مجلد الضبط"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "انسخ اسم الملف"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "انسخ مسار الملف"
+
+#: src/qml/PlayList.qml:257
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open url"
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr "افتح الرابط"
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "أزل من قائمة التّشغيل"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "أعد تسمية الملفّ"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "مرر إلى العنصر المشغل"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "ملف المهملات"
@@ -2107,10 +2132,6 @@ msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"
 #~ msgstr "المسار الأ&ولي"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "افتح الرابط"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"

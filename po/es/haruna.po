@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-30 00:38+0000\n"
+"POT-Creation-Date: 2024-10-20 00:39+0000\n"
 "PO-Revision-Date: 2024-10-01 12:28+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -832,7 +832,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:247 src/qml/PlayList.qml:335
+#: src/qml/Main.qml:247 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
 msgctxt "@title:window"
 msgid "Select file"
@@ -1079,31 +1079,56 @@ msgid "Open containing folder"
 msgstr "Abrir la carpeta contenedora"
 
 #: src/qml/PlayList.qml:242
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Copy file name"
-msgstr "Copiar nombre de archivo"
-
-#: src/qml/PlayList.qml:246
-msgctxt "@action:inmenu"
-msgid "Copy file path"
-msgstr "Copiar ruta del archivo"
+msgid "Open in browser"
+msgstr "Abrir la carpeta de configuración"
 
 #: src/qml/PlayList.qml:251
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file name"
+msgctxt "@action:inmenu"
+msgid "Copy name"
+msgstr "Copiar nombre de archivo"
+
+#: src/qml/PlayList.qml:256
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy file path"
+msgctxt "@action:inmenu"
+msgid "Copy path"
+msgstr "Copiar ruta del archivo"
+
+#: src/qml/PlayList.qml:257
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open url"
+msgctxt "@action:inmenu"
+msgid "Copy url"
+msgstr "Abrir URL"
+
+#: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Eliminar de la lista de reproducción"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:267
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Rename file"
 msgctxt "@action:inmenu"
-msgid "Rename file"
+msgid "Rename"
 msgstr "Cambiar nombre de archivo"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Desplazar hasta el elemento en reproducción"
 
-#: src/qml/PlayList.qml:271
+#: src/qml/PlayList.qml:283
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Enviar archivo a la papelera"
@@ -2174,10 +2199,6 @@ msgstr "Clic central en los controles deslizantes para reiniciarlos"
 #~ msgctxt "@title:menu"
 #~ msgid "&Primary Track"
 #~ msgstr "&Pista principal"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open url"
-#~ msgstr "Abrir URL"
 
 #~ msgctxt "@info"
 #~ msgid "Playlist is empty"
