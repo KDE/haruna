@@ -325,6 +325,34 @@ SettingsBasePage {
         }
 
         Item { width: 1 }
+        RowLayout {
+            CheckBox {
+               text: i18nc("@option:check", "Start videos in full-screen mode")
+               checked: GeneralSettings.startVideoFullScreen
+               onCheckedChanged: {
+                   GeneralSettings.startVideoFullScreen = checked
+                   GeneralSettings.save()
+               }
+            }
+
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "Opens all videos in full-screen mode.\n" +
+                                 "This takes precedence over Resize to fit video, and Remember window size and position settings.")
+                    visible: parent.checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
+            }
+        }
+
+        Item { width: 1 }
 
         RowLayout {
             CheckBox {

@@ -314,6 +314,10 @@ Kirigami.ApplicationWindow {
         footerLoader.active = true
         app.restoreWindowGeometry(window)
         app.activateColorScheme(GeneralSettings.colorScheme)
+
+        if (GeneralSettings.startVideoFullScreen){
+            toggleFullScreen()
+        }
     }
 
     function openFile(path, addToRecentFiles = false) {
