@@ -358,6 +358,7 @@ SettingsBasePage {
             CheckBox {
                 text: i18nc("@option:check", "Remember window size and position")
                 checked: GeneralSettings.rememberWindowGeometry
+                enabled: !GeneralSettings.resizeWindowToVideo
                 onCheckedChanged: {
                     GeneralSettings.rememberWindowGeometry = checked
                     GeneralSettings.save()
