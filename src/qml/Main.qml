@@ -315,7 +315,7 @@ Kirigami.ApplicationWindow {
         app.restoreWindowGeometry(window)
         app.activateColorScheme(GeneralSettings.colorScheme)
 
-        if (GeneralSettings.startVideoFullScreen){
+        if (GeneralSettings.fullscreenOnStartUp) {
             toggleFullScreen()
         }
     }

@@ -327,10 +327,10 @@ SettingsBasePage {
         Item { width: 1 }
         RowLayout {
             CheckBox {
-               text: i18nc("@option:check", "Start videos in full-screen mode")
-               checked: GeneralSettings.startVideoFullScreen
+               text: i18nc("@option:check", "Start in fullscreen mode")
+               checked: GeneralSettings.fullscreenOnStartUp
                onCheckedChanged: {
-                   GeneralSettings.startVideoFullScreen = checked
+                   GeneralSettings.fullscreenOnStartUp = checked
                    GeneralSettings.save()
                }
             }
@@ -342,7 +342,7 @@ SettingsBasePage {
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Opens all videos in full-screen mode.\n" +
+                    text: i18nc("@info:tooltip", "Enter fullscreen mode when the application starts.\n" +
                                  "This takes precedence over Resize to fit video, and Remember window size and position settings.")
                     visible: parent.checked
                     delay: 0
