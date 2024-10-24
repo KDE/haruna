@@ -266,10 +266,10 @@ void MpvItem::setupConnections()
 #if defined(Q_OS_UNIX)
     connect(this, &MpvItem::pauseChanged, this, [=]() {
         static LockManager lockManager;
-        if (pause()) {
-            lockManager.setInhibitionOff();
-        } else {
+        if (!pause() && !m_currentUrl.isEmpty()) {
             lockManager.setInhibitionOn();
+        } else {
+            lockManager.setInhibitionOff();
         }
     });
 #endif
