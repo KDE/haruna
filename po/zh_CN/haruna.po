@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-20 00:39+0000\n"
+"POT-Creation-Date: 2024-10-25 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -80,7 +80,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:35
+#: src/lockmanager.cpp:34
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -1427,12 +1427,25 @@ msgstr ""
 "根据视频分辨率调整窗口大小。\n"
 "最大尺寸不作限制，由操作系统决定。"
 
-#: src/qml/Settings/GeneralSettings.qml:331
+#: src/qml/Settings/GeneralSettings.qml:330
+msgctxt "@option:check"
+msgid "Start in fullscreen mode"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:345
+msgctxt "@info:tooltip"
+msgid ""
+"Enter fullscreen mode when the application starts.\n"
+"This takes precedence over Resize to fit video, and Remember window size and "
+"position settings."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:359
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
-#: src/qml/Settings/GeneralSettings.qml:346
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1446,38 +1459,38 @@ msgstr ""
 "\n"
 "“调整窗口大小以适应视频”选项的优先级更高。\n"
 
-#: src/qml/Settings/GeneralSettings.qml:361
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
-#: src/qml/Settings/GeneralSettings.qml:372
+#: src/qml/Settings/GeneralSettings.qml:401
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
-#: src/qml/Settings/GeneralSettings.qml:392
+#: src/qml/Settings/GeneralSettings.qml:421
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
-#: src/qml/Settings/GeneralSettings.qml:434
+#: src/qml/Settings/GeneralSettings.qml:463
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面样式"
 
-#: src/qml/Settings/GeneralSettings.qml:485
+#: src/qml/Settings/GeneralSettings.qml:514
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "使用 Breeze 微风图标主题"
 
-#: src/qml/Settings/GeneralSettings.qml:493
+#: src/qml/Settings/GeneralSettings.qml:522
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

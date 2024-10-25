@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-20 00:39+0000\n"
+"POT-Creation-Date: 2024-10-25 00:39+0000\n"
 "PO-Revision-Date: 2024-08-20 22:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -79,7 +79,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
 
-#: src/lockmanager.cpp:35
+#: src/lockmanager.cpp:34
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -1454,12 +1454,25 @@ msgstr ""
 "창 크기를 동영상 해상도에 맞게 조정합니다.\n"
 "최대 크기는 제한되어 있지 않으며 운영 체제에 의존합니다."
 
-#: src/qml/Settings/GeneralSettings.qml:331
+#: src/qml/Settings/GeneralSettings.qml:330
+msgctxt "@option:check"
+msgid "Start in fullscreen mode"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:345
+msgctxt "@info:tooltip"
+msgid ""
+"Enter fullscreen mode when the application starts.\n"
+"This takes precedence over Resize to fit video, and Remember window size and "
+"position settings."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:359
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "창 크기와 위치 기억"
 
-#: src/qml/Settings/GeneralSettings.qml:346
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1473,38 +1486,38 @@ msgstr ""
 "\n"
 "\"동영상 크기에 맞게 조정\" 설정은 이 설정에 우선합니다.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:361
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "메뉴 표시줄 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:372
+#: src/qml/Settings/GeneralSettings.qml:401
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "도구 모음 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "챕터 마커 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:392
+#: src/qml/Settings/GeneralSettings.qml:421
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "색 배열"
 
-#: src/qml/Settings/GeneralSettings.qml:434
+#: src/qml/Settings/GeneralSettings.qml:463
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI 스타일"
 
-#: src/qml/Settings/GeneralSettings.qml:485
+#: src/qml/Settings/GeneralSettings.qml:514
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Breeze 아이콘 테마 사용"
 
-#: src/qml/Settings/GeneralSettings.qml:493
+#: src/qml/Settings/GeneralSettings.qml:522
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

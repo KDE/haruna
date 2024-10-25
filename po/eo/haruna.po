@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-20 00:39+0000\n"
+"POT-Creation-Date: 2024-10-25 00:39+0000\n"
 "PO-Revision-Date: 2024-08-24 09:18+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -80,7 +80,7 @@ msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/plej bona"
 
-#: src/lockmanager.cpp:35
+#: src/lockmanager.cpp:34
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -1453,12 +1453,25 @@ msgstr ""
 "La maksimuma grandeco ne estas limigita, ĉi tio estas lasita al la "
 "operaciumo."
 
-#: src/qml/Settings/GeneralSettings.qml:331
+#: src/qml/Settings/GeneralSettings.qml:330
+msgctxt "@option:check"
+msgid "Start in fullscreen mode"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:345
+msgctxt "@info:tooltip"
+msgid ""
+"Enter fullscreen mode when the application starts.\n"
+"This takes precedence over Resize to fit video, and Remember window size and "
+"position settings."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:359
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Memori fenestrograndecon kaj pozicion"
 
-#: src/qml/Settings/GeneralSettings.qml:346
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1473,38 +1486,38 @@ msgstr ""
 "\n"
 "La agordo \"Aligrandigi por konveni videon\" havas prioritaton.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:361
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Montri menubreton"
 
-#: src/qml/Settings/GeneralSettings.qml:372
+#: src/qml/Settings/GeneralSettings.qml:401
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Montri ilobreton"
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Montri ĉapitrajn markilojn"
 
-#: src/qml/Settings/GeneralSettings.qml:392
+#: src/qml/Settings/GeneralSettings.qml:421
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kolorskemo"
 
-#: src/qml/Settings/GeneralSettings.qml:434
+#: src/qml/Settings/GeneralSettings.qml:463
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI-stilo"
 
-#: src/qml/Settings/GeneralSettings.qml:485
+#: src/qml/Settings/GeneralSettings.qml:514
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Uzi Breeze-piktogrametoson"
 
-#: src/qml/Settings/GeneralSettings.qml:493
+#: src/qml/Settings/GeneralSettings.qml:522
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
