@@ -41,11 +41,10 @@ ItemDelegate {
         }
     }
 
-    contentItem: Item {
-        anchors.fill: parent
-        RowLayout {
-            anchors.fill: parent
+    contentItem: RowLayout {
+            width: parent.width
             spacing: Kirigami.Units.largeSpacing
+
             Label {
                 text: pad(root.rowNumber, playlistView.count.toString().length)
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
@@ -63,18 +62,18 @@ ItemDelegate {
             }
 
             Rectangle {
-                width: 1
                 color: Kirigami.Theme.alternateBackgroundColor
                 visible: PlaylistSettings.showRowNumber
+                Layout.preferredWidth: 1
                 Layout.fillHeight: true
             }
 
             Kirigami.Icon {
                 source: "media-playback-start"
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
                 visible: model.isPlaying
+                Layout.preferredWidth: Kirigami.Units.iconSizes.small
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
 
@@ -93,17 +92,15 @@ ItemDelegate {
                     property: "implicitHeight"
                     value: root.fontSize * 3
                 }
+
             }
 
             Label {
-                text: model.duration
+                text: model.duration.length > 0 ? model.duration : ""
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                visible: model.duration.length > 0
                 font.pointSize: root.fontSize
-                horizontalAlignment: Qt.AlignCenter
                 Layout.margins: Kirigami.Units.largeSpacing
             }
-        }
     }
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
