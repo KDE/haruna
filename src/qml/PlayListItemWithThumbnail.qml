@@ -102,7 +102,7 @@ ItemDelegate {
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
                         anchors.right: parent.right
-                        color: Qt.alpha(Kirigami.Theme.textColor, 0.4)
+                        color: Qt.alpha(Kirigami.Theme.backgroundColor, 0.7)
 
                         Label {
                             id: durationLabel
