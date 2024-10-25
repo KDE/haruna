@@ -115,7 +115,7 @@ SettingsBasePage {
 
 
 
-                Item { width: Kirigami.Units.smallSpacing }
+                Item { Layout.preferredWidth: Kirigami.Units.smallSpacing }
 
                 Button {
                     icon.name: "edit-entry"

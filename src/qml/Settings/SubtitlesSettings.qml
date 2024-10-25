@@ -76,7 +76,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: SubtitlesSettings.allowOnBlackBorders
             text: i18nc("@option:check", "Allow subtitles in black borders")
@@ -161,7 +161,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             text: i18nc("@option:check", "Italic")

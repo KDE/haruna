@@ -99,7 +99,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         RowLayout {
             CheckBox {
@@ -129,7 +129,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         RowLayout {
             CheckBox {
@@ -243,7 +243,7 @@ SettingsBasePage {
             ToolTip.delay: 700
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         RowLayout {
             CheckBox {
@@ -324,7 +324,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
         RowLayout {
             CheckBox {
                text: i18nc("@option:check", "Start in fullscreen mode")
@@ -352,7 +352,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         RowLayout {
             CheckBox {
@@ -384,7 +384,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             text: i18nc("@option:check", "Show menubar")
@@ -395,7 +395,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             text: i18nc("@option:check", "Show toolbar")
@@ -406,7 +406,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             text: i18nc("@option:check", "Show chapter markers")
@@ -508,7 +508,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             text: i18nc("@option:check", "Use Breeze icon theme")

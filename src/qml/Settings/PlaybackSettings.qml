@@ -102,7 +102,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             id: pauseOnMinimizeCheckBox
@@ -141,7 +141,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             id: seekToLastPositionCheckBox
@@ -159,7 +159,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             id: playOnResumeCheckBox
@@ -193,7 +193,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         RowLayout {
             ComboBox {
@@ -287,7 +287,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         RowLayout {
             enabled: timePositionSaving.value >= 0
@@ -333,7 +333,7 @@ SettingsBasePage {
             ToolTip.delay: 700
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             text: i18nc("@option:check", "Show osd message on skip")
@@ -459,7 +459,7 @@ SettingsBasePage {
             }
         }
 
-        Item { width: 1 }
+        Item { Layout.preferredWidth: 1 }
 
         TextField {
             id: ytdlFormatField
