@@ -71,6 +71,7 @@ public:
     Q_INVOKABLE int qtMajorVersion();
     Q_INVOKABLE QString platformName();
     Q_INVOKABLE void raiseWindow();
+    Q_INVOKABLE bool isPlatformWayland();
 
     static QString version();
     Q_INVOKABLE static bool hasYoutubeDl();

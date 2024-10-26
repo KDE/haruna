@@ -397,4 +397,9 @@ void Application::raiseWindow()
     }
 }
 
+bool Application::isPlatformWayland()
+{
+    return KWindowSystem::isPlatformWayland();
+}
+
 #include "moc_application.cpp"

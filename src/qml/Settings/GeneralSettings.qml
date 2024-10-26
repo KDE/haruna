@@ -300,6 +300,7 @@ SettingsBasePage {
             CheckBox {
                 text: i18nc("@option:check", "Resize to fit video")
                 checked: GeneralSettings.resizeWindowToVideo
+                enabled: !app.isPlatformWayland()
                 onCheckedChanged: {
                     GeneralSettings.resizeWindowToVideo = checked
                     GeneralSettings.save()
@@ -314,8 +315,11 @@ SettingsBasePage {
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "The window is resized according to the video resolution.\n" +
-                                "The maximum size is not constrained, this is left to the operating system.")
+                    readonly property string waylandMessage: app.isPlatformWayland()
+                                                             ? i18nc("@info:tooltip", "<b>Not supported on Wayland.</b>")
+                                                             : ""
+                    text: i18nc("@info:tooltip", "%1 The window is resized according to the video resolution.\n" +
+                                "The maximum size is not constrained, this is left to the operating system.", waylandMessage)
                     visible: parent.checked
                     delay: 0
                     timeout: -1
