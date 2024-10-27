@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-25 00:39+0000\n"
+"POT-Creation-Date: 2024-10-27 00:39+0000\n"
 "PO-Revision-Date: 2024-10-25 17:56+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1437,22 +1437,32 @@ msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Cambiar tamaño para ajustar al vídeo"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:319
+msgctxt "@info:tooltip"
+msgid "<b>Not supported on Wayland.</b>"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:321
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The window is resized according to the video resolution.\n"
+#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
-"The window is resized according to the video resolution.\n"
+"%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
 "El tamaño de la ventana se cambia según la resolución del vídeo.\n"
 "El tamaño máximo no está restringido, operación que se deja al sistema "
 "operativo."
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Iniciar en modo de pantalla completa"
 
-#: src/qml/Settings/GeneralSettings.qml:345
+#: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1463,12 +1473,12 @@ msgstr ""
 "Esto tiene preferencia sobre el cambio de tamaño para ajustarse al vídeo y "
 "sobre los ajustes de recordar el tamaño y la posición de la ventana."
 
-#: src/qml/Settings/GeneralSettings.qml:359
+#: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Recordar el tamaño y la posición de la ventana"
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/qml/Settings/GeneralSettings.qml:379
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1483,38 +1493,38 @@ msgstr ""
 "\n"
 "La opción «Cambiar tamaño para ajustar al vídeo» tiene preferencia.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:390
+#: src/qml/Settings/GeneralSettings.qml:394
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostrar la barra de menú"
 
-#: src/qml/Settings/GeneralSettings.qml:401
+#: src/qml/Settings/GeneralSettings.qml:405
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostrar la barra de herramientas"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:416
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostrar marcadores de capítulos"
 
-#: src/qml/Settings/GeneralSettings.qml:421
+#: src/qml/Settings/GeneralSettings.qml:425
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de color"
 
-#: src/qml/Settings/GeneralSettings.qml:463
+#: src/qml/Settings/GeneralSettings.qml:467
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estilo de la interfaz de usuario"
 
-#: src/qml/Settings/GeneralSettings.qml:514
+#: src/qml/Settings/GeneralSettings.qml:518
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Usar el tema de iconos Brisa"
 
-#: src/qml/Settings/GeneralSettings.qml:522
+#: src/qml/Settings/GeneralSettings.qml:526
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

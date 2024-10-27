@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-25 00:39+0000\n"
+"POT-Creation-Date: 2024-10-27 00:39+0000\n"
 "PO-Revision-Date: 2021-07-18 15:26+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1622,19 +1622,24 @@ msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:319
+msgctxt "@info:tooltip"
+msgid "<b>Not supported on Wayland.</b>"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:321
 msgctxt "@info:tooltip"
 msgid ""
-"The window is resized according to the video resolution.\n"
+"%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:345
+#: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1642,12 +1647,12 @@ msgid ""
 "position settings."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:359
+#: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/qml/Settings/GeneralSettings.qml:379
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1657,14 +1662,14 @@ msgid ""
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:390
+#: src/qml/Settings/GeneralSettings.qml:394
 #, fuzzy
 #| msgid "Show MenuBar"
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Zobraziť panel ponuky"
 
-#: src/qml/Settings/GeneralSettings.qml:401
+#: src/qml/Settings/GeneralSettings.qml:405
 #: src/qml/Settings/PlaylistSettings.qml:77
 #, fuzzy
 #| msgid "Show Header"
@@ -1672,31 +1677,31 @@ msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Zobraziť hlavičku"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:416
 #, fuzzy
 #| msgid "Show MenuBar"
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Zobraziť panel ponuky"
 
-#: src/qml/Settings/GeneralSettings.qml:421
+#: src/qml/Settings/GeneralSettings.qml:425
 #, fuzzy
 #| msgid "Color scheme"
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Farebná schéma"
 
-#: src/qml/Settings/GeneralSettings.qml:463
+#: src/qml/Settings/GeneralSettings.qml:467
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:514
+#: src/qml/Settings/GeneralSettings.qml:518
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:522
+#: src/qml/Settings/GeneralSettings.qml:526
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-25 00:39+0000\n"
-"PO-Revision-Date: 2024-10-05 12:34+0200\n"
+"POT-Creation-Date: 2024-10-27 00:39+0000\n"
+"PO-Revision-Date: 2024-10-26 12:31+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -1077,36 +1077,24 @@ msgid "Open containing folder"
 msgstr "Otwórz katalog zawierający"
 
 #: src/qml/PlayList.qml:242
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Otwórz katalog ustawień"
+msgstr "Otwórz w przeglądarce"
 
 #: src/qml/PlayList.qml:251
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Skopiuj nazwę pliku"
+msgstr "Skopiuj nazwę"
 
 #: src/qml/PlayList.qml:256
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Skopiuj ścieżkę pliku"
+msgstr "Skopiuj ścieżkę"
 
 #: src/qml/PlayList.qml:257
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "Otwórz adres URL"
+msgstr "Skopiuj adres URL"
 
 #: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
@@ -1114,12 +1102,9 @@ msgid "Remove from playlist"
 msgstr "Usuń z listy odtwarzania"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Zmień nazwę pliku"
+msgstr "Przemianuj"
 
 #: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
@@ -1443,35 +1428,48 @@ msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Dopasuj do rozmiaru obrazu"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:319
+msgctxt "@info:tooltip"
+msgid "<b>Not supported on Wayland.</b>"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:321
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The window is resized according to the video resolution.\n"
+#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
-"The window is resized according to the video resolution.\n"
+"%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
 "Okno jest przeskalowywane zgodnie z rozdzielczością obrazu.\n"
 "Największy rozmiar nie jest ograniczany, bo jest to pozostawiane systemowi "
 "operacyjnemu."
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Uruchom na całym ekranie"
 
-#: src/qml/Settings/GeneralSettings.qml:345
+#: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Uruchom aplikację na całym ekranie.\n"
+"Ustawienie to ma pierwszeństwo przez dostosowaniem rozmiaru do obrazu oraz "
+"pamiętania okna i jego położenia."
 
-#: src/qml/Settings/GeneralSettings.qml:359
+#: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Zapamiętaj rozmiar i położenie okna"
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/qml/Settings/GeneralSettings.qml:379
 msgctxt "@info:tooltip"
 msgid ""
 "When window size and position are changed the new values are saved and used "
@@ -1486,38 +1484,38 @@ msgstr ""
 "\n"
 "Ustawienie \"Dostosuj, aby zmieścić obraz\" ma pierwszeństwo.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:390
+#: src/qml/Settings/GeneralSettings.qml:394
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Pokaż pasek menu"
 
-#: src/qml/Settings/GeneralSettings.qml:401
+#: src/qml/Settings/GeneralSettings.qml:405
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Pokaż pasek narzędzi"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:416
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Pokaż znaczniki rozdziałów"
 
-#: src/qml/Settings/GeneralSettings.qml:421
+#: src/qml/Settings/GeneralSettings.qml:425
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Zestaw barw"
 
-#: src/qml/Settings/GeneralSettings.qml:463
+#: src/qml/Settings/GeneralSettings.qml:467
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Wygląd interfejsu"
 
-#: src/qml/Settings/GeneralSettings.qml:514
+#: src/qml/Settings/GeneralSettings.qml:518
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Użyj zestawu ikon Bryzy"
 
-#: src/qml/Settings/GeneralSettings.qml:522
+#: src/qml/Settings/GeneralSettings.qml:526
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
