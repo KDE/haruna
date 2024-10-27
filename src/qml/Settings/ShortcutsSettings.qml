@@ -47,12 +47,22 @@ SettingsBasePage {
         model: proxyActionsModel
 
         delegate: ItemDelegate {
+            id: delegate
+
+            required property int index
+            required property string actionName
+            required property string actionText
+            required property string actionDescription
+            required property string actionShortcut
+            required property string actionIcon
+            required property string actionType
+
             width: actionsListView.width
 
             contentItem: RowLayout {
                 Kirigami.IconTitleSubtitle {
-                    title: model.text
-                    icon.name: model.icon
+                    title: delegate.actionText
+                    icon.name: delegate.actionIcon
 
                     Layout.fillWidth: true
                 }
@@ -60,12 +70,12 @@ SettingsBasePage {
                 KeySequenceItem {
                     checkForConflictsAgainst: ShortcutType.None
                     modifierlessAllowed: true
-                    keySequence: model.shortcut
+                    keySequence: delegate.actionShortcut
 
                     onKeySequenceChanged: {
-                        if (keySequence !== model.shortcut) {
-                            if (!proxyActionsModel.saveShortcut(model.index, keySequence)) {
-                                keySequence = model.shortcut
+                        if (keySequence !== delegate.actionShortcut) {
+                            if (!proxyActionsModel.saveShortcut(delegate.index, keySequence)) {
+                                keySequence = delegate.actionShortcut
                             }
                         }
                     }

@@ -84,25 +84,32 @@ Popup {
                 spacing: 1
                 clip: true
                 delegate: ItemDelegate {
-                    property string actionName: model.name
+                    id: delegate
+
+                    required property string actionName
+                    required property string actionText
+                    required property string actionDescription
+                    required property string actionShortcut
+                    required property string actionIcon
+                    required property string actionType
 
                     width: actionsListView.width
 
                     contentItem: RowLayout {
                         Label {
-                            text: model.text
+                            text: delegate.actionText
 
                             Layout.fillWidth: true
                         }
 
                         Label {
-                            text: model.shortcut
+                            text: delegate.actionShortcut
                             opacity: 0.7
                         }
                     }
-                    onClicked: actionSelected(model.name)
-                    Keys.onEnterPressed: actionSelected(model.name)
-                    Keys.onReturnPressed: actionSelected(model.name)
+                    onClicked: actionSelected(delegate.actionName)
+                    Keys.onEnterPressed: actionSelected(delegate.actionName)
+                    Keys.onReturnPressed: actionSelected(delegate.actionName)
                 }
 
                 KeyNavigation.up: filterActionsField

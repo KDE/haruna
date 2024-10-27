@@ -17,17 +17,26 @@ Item {
     Instantiator {
         model: actionsModel
         delegate: Action {
-            objectName: model.name
-            text: model.text
-            shortcut: model.shortcut
-            icon.name: model.icon
+            id: delegate
+
+            required property string actionName
+            required property string actionText
+            required property string actionDescription
+            required property string actionShortcut
+            required property string actionIcon
+            required property string actionType
+
+            objectName: delegate.actionName
+            text: delegate.actionText
+            shortcut: delegate.actionShortcut
+            icon.name: delegate.actionIcon
             onTriggered: {
-                if (model.type === "NormalAction") {
+                if (delegate.actionType === "NormalAction") {
                     actionsModel.signalEmitter(objectName)
                 }
-                if (model.type === "CustomAction") {
-                    mpv.userCommand(model.text)
-                    osd.message(mpv.expandText(model.description))
+                if (delegate.actionType === "CustomAction") {
+                    mpv.userCommand(delegate.actionText)
+                    osd.message(mpv.expandText(delegate.actionDescription))
                 }
             }
 
