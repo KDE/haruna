@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2024-09-30 15:33+0200\n"
+"PO-Revision-Date: 2024-10-27 07:54+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1079,36 +1079,24 @@ msgid "Open containing folder"
 msgstr "Ireki hau barnean duen karpeta"
 
 #: src/qml/PlayList.qml:242
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Ireki konfigurazio-karpeta"
+msgstr "Ireki arakatzailean"
 
 #: src/qml/PlayList.qml:251
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Kopiatu fitxategi-izena"
+msgstr "Kopiatu izena"
 
 #: src/qml/PlayList.qml:256
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Kopiatu fitxategiaren bide-izena"
+msgstr "Kopiatu bide-izena"
 
 #: src/qml/PlayList.qml:257
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "Ireki URL"
+msgstr "Kopiatu URLa"
 
 #: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
@@ -1116,12 +1104,9 @@ msgid "Remove from playlist"
 msgstr "Kendu jotze-zerrendatik"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Berrizendatu fitxategia"
+msgstr "Berrizendatu"
 
 #: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
@@ -1452,26 +1437,21 @@ msgstr "Handiera aldatu bideora egokitzeko"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>Wayland-en ez du euskarririk.</b>"
 
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"Leihoaren neurria bideoaren bereizmenaren arabera finkatzen da.\n"
+"%1 Leihoaren neurria bideoaren bereizmenaren arabera neurri-aldatzen da.\n"
 "Gehienezko neurria ez da mugatzen, hori sistema eragileari uzten zaio."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Abiatu pantaila-osoko moduan"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1480,6 +1460,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Aplikazioa abiatzen denean, sartu pantaila-osoko moduan.\n"
+"Horrek Handiera aldatu bideoa egokitzeko, eta Gogoratu leihoaren neurria eta "
+"kokalekua ezarpenekiko lehentasuna hartzen du."
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
