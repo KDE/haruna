@@ -315,7 +315,10 @@ Kirigami.ApplicationWindow {
         app.restoreWindowGeometry(window)
         app.activateColorScheme(GeneralSettings.colorScheme)
 
-        if (GeneralSettings.fullscreenOnStartUp) {
+        const hasCommandLineFile = app.url(0).toString() !== ""
+        const hasLastPlayedFile = GeneralSettings.lastPlayedFile !== ""
+        const hasFileToOpen = hasCommandLineFile || (PlaybackSettings.openLastPlayedFile && hasLastPlayedFile)
+        if (GeneralSettings.fullscreenOnStartUp && hasFileToOpen) {
             toggleFullScreen()
         }
     }
