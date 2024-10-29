@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2024-10-21 07:28+0200\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"PO-Revision-Date: 2024-10-28 12:18+0100\n"
+"Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -1438,26 +1438,21 @@ msgstr "Ridimensiona per adattare il video"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>Non supportato in Wayland.</b>"
 
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"La finestra viene ridimensionata in base alla risoluzione del video.\n"
+"%1 La finestra viene ridimensionata in base alla risoluzione del video.\n"
 "La dimensione massima non viene limitata ma la decide il sistema operativo."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Avvia in modalità schermo intero"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1466,6 +1461,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Entra nella modalità schermo intero quando si avvia l'applicazione.\n"
+"Ha precedenza sull'opzione «Ridimensiona per adattare il video» e le "
+"impostazioni dell'opzione «Ricorda dimensione e posizione della finestra»."
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"

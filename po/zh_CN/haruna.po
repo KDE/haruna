@@ -1421,7 +1421,7 @@ msgstr "调整窗口大小以适应视频"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>在 Wayland 环境中不支持。</b>"
 
 #: src/qml/Settings/GeneralSettings.qml:321
 msgctxt "@info:tooltip"
@@ -1429,11 +1429,13 @@ msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
+"%1 窗口将根据视频分辨率调整大小。\n"
+"最大尺寸没有限制，由操作系统控制。"
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "启动为全屏模式"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1442,6 +1444,8 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"应用程序启动时进入全屏模式。\n"
+"此选项的优先级高于“调整窗口大小以适应视频”和“记住窗口大小和位置”。"
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
