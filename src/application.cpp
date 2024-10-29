@@ -291,7 +291,11 @@ QString Application::formatTime(const double time)
 
 QUrl Application::url(int key)
 {
-    return m_urls[key];
+    if (m_urls.contains(key)) {
+        return m_urls[key];
+    }
+
+    return {};
 }
 
 void Application::addUrl(int key, const QString &value)
