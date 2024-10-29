@@ -15,8 +15,14 @@ import org.kde.haruna.settings
 ItemDelegate {
     id: root
 
-    property bool isLocal: model.isLocal
-    property string rowNumber: (index + 1).toString()
+    required property int index
+    required property string title
+    required property string name
+    required property string duration
+    required property bool isLocal
+    required property bool isPlaying
+
+    property string rowNumber: (root.index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
     property int fontSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
                            ? Kirigami.Units.gridUnit
@@ -24,7 +30,7 @@ ItemDelegate {
 
     padding: 0
     implicitWidth: ListView.view.width
-    highlighted: model.isPlaying
+    highlighted: root.isPlaying
 
     background: Rectangle {
         anchors.fill: parent
@@ -72,7 +78,7 @@ ItemDelegate {
                 source: "media-playback-start"
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 height: Kirigami.Units.iconSizes.small
-                visible: model.isPlaying
+                visible: root.isPlaying
                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
@@ -83,10 +89,10 @@ ItemDelegate {
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 font.pointSize: root.fontSize
-                text: PlaylistSettings.showMediaTitle ? model.title : model.name
+                text: PlaylistSettings.showMediaTitle ? root.title : root.name
                 layer.enabled: true
                 Layout.fillWidth: true
-                Layout.leftMargin: PlaylistSettings.showRowNumber || model.isPlaying ? 0 : Kirigami.Units.largeSpacing
+                Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
                 Binding {
                     target: root
                     property: "implicitHeight"
@@ -96,7 +102,7 @@ ItemDelegate {
             }
 
             Label {
-                text: model.duration.length > 0 ? model.duration : ""
+                text: root.duration.length > 0 ? root.duration : ""
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 font.pointSize: root.fontSize
                 Layout.margins: Kirigami.Units.largeSpacing

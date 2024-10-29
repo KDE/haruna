@@ -15,14 +15,21 @@ import org.kde.haruna.settings
 ItemDelegate {
     id: root
 
-    property bool isLocal: model.isLocal
-    property string rowNumber: (index + 1).toString()
+    required property int index
+    required property string title
+    required property string name
+    required property string path
+    required property string duration
+    required property bool isLocal
+    required property bool isPlaying
+
+    property string rowNumber: (root.index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
     implicitWidth: ListView.view.width
     implicitHeight: (Kirigami.Units.gridUnit - 6) * 8
     padding: 0
-    highlighted: model.isPlaying
+    highlighted: root.isPlaying
 
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
@@ -88,7 +95,7 @@ ItemDelegate {
 
                 Image {
                     anchors.fill: parent
-                    source: "image://thumbnail/" + model.path
+                    source: "image://thumbnail/" + root.path
                     sourceSize.width: parent.width
                     sourceSize.height: parent.height
                     width: parent.width
@@ -97,7 +104,7 @@ ItemDelegate {
                     fillMode: Image.PreserveAspectCrop
 
                     Rectangle {
-                        visible: model.duration.length > 0
+                        visible: root.duration.length > 0
                         height: durationLabel.font.pointSize + (Kirigami.Units.smallSpacing * 2)
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
@@ -111,9 +118,9 @@ ItemDelegate {
                             anchors.margins: Kirigami.Units.largeSpacing
                             color: Kirigami.Theme.highlightedTextColor
                             horizontalAlignment: Qt.AlignCenter
-                            text: model.duration
+                            text: root.duration
                             font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
-                                            ? Kirigami.Units.gridUnit
+                                            ? Kirigami.Units.gridUnit - 2
                                             : Kirigami.Units.gridUnit - 5
 
                             Layout.margins: Kirigami.Units.largeSpacing
@@ -127,13 +134,13 @@ ItemDelegate {
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
-                visible: model.isPlaying
+                visible: root.isPlaying
 
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
 
             LabelWithTooltip {
-                text: PlaylistSettings.showMediaTitle ? model.title : model.name
+                text: PlaylistSettings.showMediaTitle ? root.title : root.name
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
@@ -147,7 +154,7 @@ ItemDelegate {
                 Layout.fillHeight: true
                 Layout.topMargin: Kirigami.Units.largeSpacing
                 Layout.bottomMargin: Kirigami.Units.largeSpacing
-                Layout.leftMargin: PlaylistSettings.showRowNumber || model.isPlaying ? 0 : Kirigami.Units.largeSpacing
+                Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
             }
         }
     }

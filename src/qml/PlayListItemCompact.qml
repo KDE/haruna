@@ -14,13 +14,19 @@ import org.kde.haruna.settings
 ItemDelegate {
     id: root
 
-    property bool isLocal: model.isLocal
-    property string rowNumber: (index + 1).toString()
+    required property int index
+    required property string title
+    required property string name
+    required property string duration
+    required property bool isLocal
+    required property bool isPlaying
+
+    property string rowNumber: (root.index + 1).toString()
     property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
     implicitWidth: ListView.view.width
     padding: 0
-    highlighted: model.isPlaying
+    highlighted: root.isPlaying
 
     background: Rectangle {
         anchors.fill: parent
@@ -38,10 +44,10 @@ ItemDelegate {
     }
 
     contentItem: Kirigami.IconTitleSubtitle {
-        icon.name: model.isPlaying ? "media-playback-start" : ""
+        icon.name: root.isPlaying ? "media-playback-start" : ""
         icon.color: color
         title: mainText()
-        subtitle: model.duration
+        subtitle: root.duration
         color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         ToolTip.text: title
         ToolTip.visible: root.hovered
@@ -63,9 +69,9 @@ ItemDelegate {
         const rowNumber = pad(root.rowNumber, playlistView.count.toString().length) + ". "
 
         if(PlaylistSettings.showRowNumber) {
-            return rowNumber + (PlaylistSettings.showMediaTitle ? model.title : model.name)
+            return rowNumber + (PlaylistSettings.showMediaTitle ? root.title : root.name)
         }
-        return (PlaylistSettings.showMediaTitle ? model.title : model.name)
+        return (PlaylistSettings.showMediaTitle ? root.title : root.name)
     }
 
     function pad(number, length) {
