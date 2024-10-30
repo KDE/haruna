@@ -15,6 +15,8 @@ import org.kde.kirigami as Kirigami
 MpvItem {
     id: root
 
+    required property Osd osd
+    property var window: Window.window
     property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
     property alias mouseY: mouseArea.mouseY
 
@@ -47,12 +49,15 @@ MpvItem {
     onRaise: { app.raiseWindow() }
     onPlayNext: { appActions.playNextAction.trigger() }
     onPlayPrevious: { appActions.playPreviousAction.trigger() }
-    onOpenUri: { window.openFile(uri) }
+    onOpenUri: {
+        root.window.openFile(uri)
+    }
 
     Timer {
         id: hideCursorTimer
 
-        running: window.isFullScreen() && mouseArea.containsMouse
+        running: root.window.isFullScreen() && mouseArea.containsMouse
+
         repeat: true
         interval: 2000
         onTriggered: mouseArea.hideCursor = true
@@ -66,7 +71,7 @@ MpvItem {
         acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
         anchors.fill: parent
         hoverEnabled: true
-        cursorShape: hideCursor && window.isFullScreen() ? Qt.BlankCursor : Qt.ArrowCursor
+        cursorShape: hideCursor && root.window.isFullScreen() ? Qt.BlankCursor : Qt.ArrowCursor
 
         onPositionChanged: {
             root.mousePositionChanged(mouseX, mouseY)
@@ -146,12 +151,12 @@ MpvItem {
 
         onDropped: drop => {
             const mimeType = app.mimeType(drop.urls[0])
-            if (window.acceptedSubtitleTypes.includes(mimeType)) {
+            if (root.window.acceptedSubtitleTypes.includes(mimeType)) {
                 command(["sub-add", drop.urls[0], "select"])
             }
 
             if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-                window.openFile(drop.urls[0], true)
+                root.window.openFile(drop.urls[0], true)
             }
         }
     }

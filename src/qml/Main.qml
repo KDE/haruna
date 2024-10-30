@@ -72,6 +72,8 @@ Kirigami.ApplicationWindow {
     MpvVideo {
         id: mpv
 
+        osd: osd
+
         width: window.contentItem.width
         height: window.isFullScreen()
                 ? window.contentItem.height
@@ -82,7 +84,7 @@ Kirigami.ApplicationWindow {
         anchors.right: PlaylistSettings.overlayVideo
                        ? window.contentItem.right
                        : (PlaylistSettings.position === "right" ? playlist.left : window.contentItem.right)
-        anchors.top: parent.top
+        anchors.top: window.contentItem.top
 
         onVideoReconfig: {
             resizeWindow()
@@ -277,7 +279,7 @@ Kirigami.ApplicationWindow {
         nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]
 
         onAccepted: {
-            if (acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.selectedFile))) {
+            if (window.acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.selectedFile))) {
                 mpv.command(["sub-add", subtitlesFileDialog.selectedFile, "select"])
             }
         }
