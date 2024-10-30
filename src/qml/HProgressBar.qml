@@ -113,7 +113,7 @@ Slider {
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
                     mpv.chapter = nextChapter
                 }
-                if (mouse.button === Qt.RightButton && mpv.chaptersModel.rowCount() > 0) {
+                if (mouse.button === Qt.RightButton && mpv.chaptersModel.rowCount > 0) {
                     chaptersPopup.x = mouseX - chaptersPopup.width * 0.5
                     chaptersPopup.open()
                 }
@@ -155,7 +155,7 @@ Slider {
     // create markers for the chapters
     Repeater {
         id: chaptersInstantiator
-        model: GeneralSettings.showChapterMarkers ? mpv.chaptersModel : 0
+        model: GeneralSettings.showChapterMarkers  && mpv.chaptersModel.rowCount < 50 ? mpv.chaptersModel : 0
         delegate: Shape {
             id: chapterMarkerShape
 
@@ -218,9 +218,10 @@ Slider {
         y: -height - root.height
         z: 20
         width: itemBiggestWidth > maxWidth ? maxWidth : itemBiggestWidth
-        height: itemHeight * mpv.chaptersModel.rowCount() + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
-                ? mpv.height - Kirigami.Units.gridUnit
-                : itemHeight * mpv.chaptersModel.rowCount() + listViewPage.footer.height
+        height: itemHeight * mpv.chaptersModel.rowCount + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
+                ? mpv.height - Kirigami.Units.gridUnit - listViewPage.footer.height * 2
+                : itemHeight * mpv.chaptersModel.rowCount + listViewPage.footer.height
+        modal: true
         padding: 0
         onOpened: {
             listView.positionViewAtIndex(checkedItem, ListView.Beginning)
@@ -253,6 +254,7 @@ Slider {
                 id: listView
 
                 model: mpv.chaptersModel
+                reuseItems: true
                 delegate: CheckDelegate {
                     id: menuitem
 
