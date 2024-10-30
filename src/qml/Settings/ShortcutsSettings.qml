@@ -45,7 +45,7 @@ SettingsBasePage {
         id: actionsListView
 
         model: proxyActionsModel
-
+        reuseItems: true
         delegate: ItemDelegate {
             id: delegate
 
