@@ -52,6 +52,7 @@ void ChaptersModel::setChapters(QList<Chapter> &_chapters)
     beginResetModel();
     m_chapters = _chapters;
     endResetModel();
+    Q_EMIT rowCountChanged();
 }
 
 #include "moc_chaptersmodel.cpp"
