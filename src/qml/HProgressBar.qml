@@ -159,10 +159,14 @@ Slider {
         delegate: Shape {
             id: chapterMarkerShape
 
+            required property int index
+            required property string title
+            required property double startTime
+
             // where the chapter marker shoud be positioned on the progress bar
             property int position: root.mirrored
-                                   ? progressBarBG.width - (model.startTime / mpv.duration * progressBarBG.width)
-                                   : model.startTime / mpv.duration * progressBarBG.width
+                                   ? progressBarBG.width - (chapterMarkerShape.startTime / mpv.duration * progressBarBG.width)
+                                   : chapterMarkerShape.startTime / mpv.duration * progressBarBG.width
 
             antialiasing: true
             ShapePath {
@@ -185,7 +189,7 @@ Slider {
                 color: "transparent"
                 ToolTip {
                     id: chapterTitleToolTip
-                    text: model.title
+                    text: chapterMarkerShape.title
                     visible: false
                     delay: 0
                     timeout: 10000
@@ -195,7 +199,7 @@ Slider {
                     hoverEnabled: true
                     onEntered: chapterTitleToolTip.visible = true
                     onExited: chapterTitleToolTip.visible = false
-                    onClicked: mpv.chapter = index
+                    onClicked: mpv.chapter = chapterMarkerShape.index
                 }
             }
         }
@@ -252,12 +256,16 @@ Slider {
                 delegate: CheckDelegate {
                     id: menuitem
 
-                    text: `${app.formatTime(model.startTime)} - ${model.title}`
-                    checked: index === chaptersPopup.checkedItem
+                    required property int index
+                    required property string title
+                    required property double startTime
+
+                    text: `${app.formatTime(menuitem.startTime)} - ${menuitem.title}`
+                    checked: menuitem.index === chaptersPopup.checkedItem
                     width: listViewPage.width
                     onClicked: {
                         chaptersPopup.close()
-                        mpv.chapter = index
+                        mpv.chapter = menuitem.index
                     }
                     Component.onCompleted: {
                         const scrollBarWidth = listViewPage.contentItem.ScrollBar.vertical.width
