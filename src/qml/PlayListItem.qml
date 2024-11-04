@@ -68,7 +68,7 @@ ItemDelegate {
         }
 
         Rectangle {
-            color: Kirigami.Theme.alternateBackgroundColor
+            color: Qt.alpha(Kirigami.Theme.alternateBackgroundColor, 0.6)
             visible: PlaylistSettings.showRowNumber
             Layout.preferredWidth: 1
             Layout.fillHeight: true
