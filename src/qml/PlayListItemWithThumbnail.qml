@@ -90,8 +90,8 @@ ItemDelegate {
             }
 
             Item {
-                width: (root.height - 20) * 1.33
-                height: root.height - 20
+                Layout.preferredWidth: (root.height - 20) * 1.33
+                Layout.preferredHeight: root.height - 20
 
                 Image {
                     anchors.fill: parent
@@ -132,9 +132,9 @@ ItemDelegate {
             Kirigami.Icon {
                 source: "media-playback-start"
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                width: Kirigami.Units.iconSizes.small
-                height: Kirigami.Units.iconSizes.small
                 visible: root.isPlaying
+                Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                Layout.preferredHeight: Kirigami.Units.iconSizes.small
 
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
