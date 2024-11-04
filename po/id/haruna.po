@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-31 00:39+0000\n"
-"PO-Revision-Date: 2024-10-16 23:21+0700\n"
+"PO-Revision-Date: 2024-11-03 19:55+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -1076,36 +1076,24 @@ msgid "Open containing folder"
 msgstr "Buka folder konten"
 
 #: src/qml/PlayList.qml:242
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Buka folder konfig"
+msgstr "Buka di peramban"
 
 #: src/qml/PlayList.qml:251
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Salin nama file"
+msgstr "Salin nama"
 
 #: src/qml/PlayList.qml:256
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Salin alur file"
+msgstr "Salin alur"
 
 #: src/qml/PlayList.qml:257
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "Buka url"
+msgstr "Salin url"
 
 #: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
@@ -1113,12 +1101,9 @@ msgid "Remove from playlist"
 msgstr "Singkirkan dari playlist"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Ubah nama file"
+msgstr "Ubah nama"
 
 #: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
@@ -1214,7 +1199,7 @@ msgid ""
 "using the default settings)."
 msgstr ""
 "Jika bidang kosong itu berarti tidak ada file/folder konfig (mis. saat "
-"menggunakan pengaturan default)."
+"menggunakan pengaturan baku)."
 
 #: src/qml/Settings/DebugSettings.qml:104
 msgctxt "@option:check"
@@ -1449,26 +1434,21 @@ msgstr "Ubah ukuran ke pas video"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>Tidak didukung di Wayland.</b>"
 
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"Jendela diubah ukurannya sesuai resolusi video.\n"
-"Ukuran maksimum tidaklah dibatasi, ini diserahkan ke sistem operasi."
+"%1 Jendela diubah ukurannya sesuai resolusi video.\n"
+"Ukuran maksimum tidaklah dibatasi, ini diserahkan kepada sistem operasi."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Mulai dalam mode layar penuh"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1477,6 +1457,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Masuk mode layar penuh ketika aplikasi dimulai.\n"
+"Ini lebih diutamakan daripada Mengubah ukuran untuk mengepaskan video, dan "
+"Mengingat ukuran jendela dan pengaturan posisi."
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
@@ -1888,7 +1871,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr "Buka item dengan klik tinggal"
+msgstr "Buka item dengan klik tunggal"
 
 #: src/qml/Settings/SettingsWindow.qml:36
 msgctxt "@title:window"
@@ -1999,7 +1982,7 @@ msgstr "Warna font"
 #: src/qml/Settings/SubtitlesSettings.qml:361
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr "Setel nilai default"
+msgstr "Setel nilai baku"
 
 #: src/qml/Settings/SubtitlesSettings.qml:234
 msgctxt "@label:textbox"
@@ -2030,7 +2013,7 @@ msgstr "Lebar bing&kai:"
 #: src/qml/Settings/VideoSettings.qml:27
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr "Setel nilai default"
+msgstr "Sampul baku"
 
 #: src/qml/Settings/VideoSettings.qml:36
 msgctxt "placeholder text"
