@@ -101,7 +101,7 @@ ToolBar {
             id: timeInfo
 
             text: m_mpv.formattedPosition
-                  ? m_mpv.formattedPosition + " / " + m_mpv.formattedDuration
+                  ? "%1 / %2".arg(m_mpv.formattedPosition).arg(m_mpv.formattedDuration)
                   : "00:00:00 / 00:00:00"
             font.pointSize: Math.floor(Kirigami.Units.gridUnit * 0.6)
             toolTipText: i18nc("@info:tooltip", "Remaining: %1", m_mpv.formattedRemaining)

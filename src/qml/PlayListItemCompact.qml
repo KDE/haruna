@@ -66,7 +66,7 @@ ItemDelegate {
     }
 
     function mainText() {
-        const rowNumber = pad(root.rowNumber, playlistView.count.toString().length) + ". "
+        const rowNumber = "%1. ".arg(pad(root.rowNumber, playlistView.count.toString().length))
 
         if(PlaylistSettings.showRowNumber) {
             return rowNumber + (PlaylistSettings.showMediaTitle ? root.title : root.name)

@@ -64,8 +64,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     QString appDir(QStringLiteral("haruna"));
     QString fileDir(QString::fromUtf8(md5Hash.toHex()));
     QString filename(QString::fromUtf8(md5Hash.toHex()).append(QStringLiteral(".png")));
-    QString separator(QStringLiteral("/"));
-    QString cachedFilePath = cacheDir + separator + appDir + separator + fileDir + separator + filename;
+    QString cachedFilePath = QStringLiteral("%1/%2/%3/%4").arg(cacheDir, appDir, fileDir, filename);
 
     // load existing thumbnail if there is one
     if (QFileInfo::exists(cachedFilePath) && image.load(cachedFilePath)) {

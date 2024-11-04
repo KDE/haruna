@@ -165,7 +165,7 @@ Item {
                 id: timeInfo
 
                 text: root.m_mpv.formattedPosition
-                      ? root.m_mpv.formattedPosition + " / " + root.m_mpv.formattedDuration
+                      ? "%1 / %2".arg(root.m_mpv.formattedPosition).arg(root.m_mpv.formattedDuration)
                       : "00:00:00 / 00:00:00"
                 font.pointSize: Math.floor(Kirigami.Units.gridUnit * 0.6)
                 toolTipText: i18nc("@info:tooltip", "Remaining: %1", root.m_mpv.formattedRemaining)

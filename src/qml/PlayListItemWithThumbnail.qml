@@ -95,7 +95,7 @@ ItemDelegate {
 
                 Image {
                     anchors.fill: parent
-                    source: "image://thumbnail/" + root.path
+                    source: "image://thumbnail/%1".arg(root.path)
                     sourceSize.width: parent.width
                     sourceSize.height: parent.height
                     width: parent.width
