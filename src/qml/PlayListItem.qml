@@ -48,65 +48,65 @@ ItemDelegate {
     }
 
     contentItem: RowLayout {
-            width: parent.width
-            spacing: Kirigami.Units.largeSpacing
+        width: parent.width
+        spacing: Kirigami.Units.largeSpacing
 
-            Label {
-                text: pad(root.rowNumber, playlistView.count.toString().length)
-                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                visible: PlaylistSettings.showRowNumber
-                font.pointSize: root.fontSize
-                horizontalAlignment: Qt.AlignCenter
-                Layout.leftMargin: Kirigami.Units.largeSpacing
+        Label {
+            text: pad(root.rowNumber, playlistView.count.toString().length)
+            color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            visible: PlaylistSettings.showRowNumber
+            font.pointSize: root.fontSize
+            horizontalAlignment: Qt.AlignCenter
+            Layout.leftMargin: Kirigami.Units.largeSpacing
 
-                function pad(number, length) {
-                    while (number.length < length)
-                        number = "0" + number;
-                    return number;
-                }
-
+            function pad(number, length) {
+                while (number.length < length)
+                    number = "0" + number;
+                return number;
             }
 
-            Rectangle {
-                color: Kirigami.Theme.alternateBackgroundColor
-                visible: PlaylistSettings.showRowNumber
-                Layout.preferredWidth: 1
-                Layout.fillHeight: true
+        }
+
+        Rectangle {
+            color: Kirigami.Theme.alternateBackgroundColor
+            visible: PlaylistSettings.showRowNumber
+            Layout.preferredWidth: 1
+            Layout.fillHeight: true
+        }
+
+        Kirigami.Icon {
+            source: "media-playback-start"
+            color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            height: Kirigami.Units.iconSizes.small
+            visible: root.isPlaying
+            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+            Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
+        }
+
+        LabelWithTooltip {
+            color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            horizontalAlignment: Qt.AlignLeft
+            verticalAlignment: Qt.AlignVCenter
+            elide: Text.ElideRight
+            font.pointSize: root.fontSize
+            text: PlaylistSettings.showMediaTitle ? root.title : root.name
+            layer.enabled: true
+            Layout.fillWidth: true
+            Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
+            Binding {
+                target: root
+                property: "implicitHeight"
+                value: root.fontSize * 3
             }
 
-            Kirigami.Icon {
-                source: "media-playback-start"
-                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                height: Kirigami.Units.iconSizes.small
-                visible: root.isPlaying
-                Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
-            }
+        }
 
-            LabelWithTooltip {
-                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                horizontalAlignment: Qt.AlignLeft
-                verticalAlignment: Qt.AlignVCenter
-                elide: Text.ElideRight
-                font.pointSize: root.fontSize
-                text: PlaylistSettings.showMediaTitle ? root.title : root.name
-                layer.enabled: true
-                Layout.fillWidth: true
-                Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
-                Binding {
-                    target: root
-                    property: "implicitHeight"
-                    value: root.fontSize * 3
-                }
-
-            }
-
-            Label {
-                text: root.duration.length > 0 ? root.duration : ""
-                color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                font.pointSize: root.fontSize
-                Layout.margins: Kirigami.Units.largeSpacing
-            }
+        Label {
+            text: root.duration.length > 0 ? root.duration : ""
+            color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            font.pointSize: root.fontSize
+            Layout.margins: Kirigami.Units.largeSpacing
+        }
     }
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
