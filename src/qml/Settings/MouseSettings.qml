@@ -68,24 +68,28 @@ SettingsBasePage {
             delegate: ItemDelegate {
                 id: delegate
 
+                required property int index
+                required property string label
+                required property string key
+
                 width: content.width
                 highlighted: false
 
                 contentItem: RowLayout {
                     Kirigami.IconTitleSubtitle {
-                        title: model.label
-                        subtitle: MouseSettings[model.key]
-                                  ? appActions[MouseSettings[model.key]].text
+                        title: delegate.label
+                        subtitle: MouseSettings[delegate.key]
+                                  ? appActions[MouseSettings[delegate.key]].text
                                   : i18nc("@label", "No action set")
-                        icon.name: MouseSettings[model.key] ? "checkmark" : ""
+                        icon.name: MouseSettings[delegate.key] ? "checkmark" : ""
 
                         Layout.fillWidth: true
                     }
                     ToolButton {
-                        visible: MouseSettings[model.key]
+                        visible: MouseSettings[delegate.key]
                         icon.name: "edit-clear-all"
                         onClicked: {
-                            MouseSettings[model.key] = ""
+                            MouseSettings[delegate.key] = ""
                             MouseSettings.save()
                         }
 
@@ -101,16 +105,16 @@ SettingsBasePage {
                 Connections {
                     target: selectActionPopup
                     function onActionSelected(actionName) {
-                        if (selectActionPopup.buttonIndex === model.index) {
-                            MouseSettings[model.key] = actionName
+                        if (selectActionPopup.buttonIndex === delegate.index) {
+                            MouseSettings[delegate.key] = actionName
                             MouseSettings.save()
                         }
                     }
                 }
 
                 function openSelectActionPopup() {
-                    selectActionPopup.buttonIndex = model.index
-                    selectActionPopup.title = model.label
+                    selectActionPopup.buttonIndex = delegate.index
+                    selectActionPopup.title = delegate.label
                     selectActionPopup.open()
                 }
             }

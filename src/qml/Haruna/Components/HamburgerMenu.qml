@@ -60,8 +60,13 @@ ToolButton {
                 Repeater {
                     model: recentFilesModel
                     delegate: MenuItem {
-                        text: model.name
-                        onClicked: window.openFile(model.path)
+                        id: delegate
+
+                        required property string name
+                        required property string path
+
+                        text: delegate.name
+                        onClicked: window.openFile(delegate.path)
                     }
                 }
             }

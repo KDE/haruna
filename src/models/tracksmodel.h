@@ -18,7 +18,18 @@ class TracksModel : public QAbstractListModel
 
 public:
     explicit TracksModel(QObject *parent = nullptr);
-    enum { TextRole = Qt::UserRole, LanguageRole, TitleRole, IDRole, CodecRole };
+
+    // clang-format off
+    enum Roles {
+        TextRole = Qt::UserRole,
+        LanguageRole,
+        TitleRole,
+        IdRole,
+        CodecRole
+    };
+    Q_ENUM(Roles)
+    // clang-format on
+
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;

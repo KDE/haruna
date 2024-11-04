@@ -15,11 +15,19 @@ Menu {
     Repeater {
         model: root.model
         delegate: MenuItem {
+            id: delegate
+
+            required property string displayText
+            required property string language
+            required property string title
+            required property string codec
+            required property string trackId
+
             checkable: true
-            checked: model.id === mpv.audioId
-            text: model.text
+            checked: delegate.trackId === mpv.audioId
+            text: delegate.displayText
             onTriggered: {
-                mpv.audioId = model.id
+                mpv.audioId = delegate.trackId
             }
         }
     }

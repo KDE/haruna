@@ -12,6 +12,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.haruna
 
+pragma ComponentBehavior: Bound
+
 SettingsBasePage {
     id: root
 
@@ -22,12 +24,7 @@ SettingsBasePage {
 
         reuseItems: true
         model: customCommandsModel
-        delegate: Loader {
-            required property var model
-            required property int index
-            width: customCommandsView.width
-            sourceComponent: customCommandDelegate
-        }
+        delegate: customCommandDelegate
 
 
         Kirigami.PlaceholderMessage {
@@ -44,92 +41,105 @@ SettingsBasePage {
     Component {
         id: customCommandDelegate
 
-        ItemDelegate {
-            id: customCommandItem
+        Loader {
+            id: delegate
 
-            height: Kirigami.Units.gridUnit * 3
-            padding: 0
+            required property int index
+            required property string command
+            required property string shortcut
+            required property string commandId
+            required property string osdMessage
+            required property string type
+            required property bool setOnStartup
 
-            contentItem: RowLayout {
-                anchors.fill: parent
-                spacing: 0
+            width: customCommandsView.width
+            sourceComponent: ItemDelegate {
+                id: customCommandItem
 
-                Kirigami.ListItemDragHandle {
-                    listItem: customCommandItem
-                    listView: customCommandsView
-                    onMoveRequested: function (sourceRow, destinationRow) {
-                        const modelIndex = customCommandsModel.index(sourceRow, 0).parent
-                        customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
+                height: Kirigami.Units.gridUnit * 3
+                padding: 0
+
+                contentItem: RowLayout {
+                    anchors.fill: parent
+                    spacing: 0
+
+                    Kirigami.ListItemDragHandle {
+                        listItem: customCommandItem
+                        listView: customCommandsView
+                        onMoveRequested: function (sourceRow, destinationRow) {
+                            const modelIndex = customCommandsModel.index(sourceRow, 0).parent
+                            customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
+                        }
                     }
-                }
 
-                CheckBox {
-                    visible: model.type === "startup"
-                    checked: model.setOnStartup
-                    onCheckStateChanged: {
-                        customCommandsModel.toggleCustomCommand(model.commandId, model.index, checked)
+                    CheckBox {
+                        visible: delegate.type === "startup"
+                        checked: delegate.setOnStartup
+                        onCheckStateChanged: {
+                            customCommandsModel.toggleCustomCommand(delegate.commandId, delegate.index, checked)
+                        }
+
+                        ToolTip {
+                            text: i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
+                                        "Unchecked: property will not be set at startup")
+                        }
                     }
 
-                    ToolTip {
-                        text: i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
-                                    "Unchecked: property will not be set at startup")
+                    Kirigami.Icon {
+                        source: delegate.type === "shortcut" ? "configure-shortcuts" : "code-context"
+                        width: Kirigami.Units.iconSizes.small
+                        height: Kirigami.Units.iconSizes.small
+                        enabled: delegate.setOnStartup
                     }
-                }
 
-                Kirigami.Icon {
-                    source: model.type === "shortcut" ? "configure-shortcuts" : "code-context"
-                    width: Kirigami.Units.iconSizes.small
-                    height: Kirigami.Units.iconSizes.small
-                    enabled: model.setOnStartup
-                }
+                    LabelWithTooltip {
+                        text: delegate.command
+                        elide: Text.ElideRight
+                        enabled: delegate.setOnStartup
+                        opacity: enabled ? 1.0 : 0.7
 
-                LabelWithTooltip {
-                    text: model.command
-                    elide: Text.ElideRight
-                    enabled: model.setOnStartup
-                    opacity: enabled ? 1.0 : 0.7
+                        Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                        Layout.fillWidth: true
+                        Layout.margins: Kirigami.Units.largeSpacing
+                    }
 
-                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                    Layout.fillWidth: true
-                    Layout.margins: Kirigami.Units.largeSpacing
-                }
+                    Loader {
+                        active: delegate.type === "shortcut"
+                        sourceComponent: KeySequenceItem {
+                            checkForConflictsAgainst: ShortcutType.None
+                            modifierlessAllowed: true
+                            keySequence: delegate.shortcut
 
-                Loader {
-                    active: model.type === "shortcut"
-                    sourceComponent: KeySequenceItem {
-                        checkForConflictsAgainst: ShortcutType.None
-                        modifierlessAllowed: true
-                        keySequence: model.shortcut
-
-                        onKeySequenceChanged: {
-                            if (keySequence !== model.shortcut) {
-                                // use action name (commandId) since this changes the actionsModel
-                                if (!actionsModel.saveShortcut(model.commandId, keySequence)) {
-                                    keySequence = model.shortcut
+                            onKeySequenceChanged: {
+                                if (keySequence !== delegate.shortcut) {
+                                    // use action name (commandId) since this changes the actionsModel
+                                    if (!actionsModel.saveShortcut(delegate.commandId, keySequence)) {
+                                        keySequence = delegate.shortcut
+                                    }
                                 }
                             }
                         }
+                        Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                     }
-                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                }
 
 
 
-                Item { Layout.preferredWidth: Kirigami.Units.smallSpacing }
+                    Item { Layout.preferredWidth: Kirigami.Units.smallSpacing }
 
-                Button {
-                    icon.name: "edit-entry"
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    onClicked: {
-                        const properties = {
-                            command: model.command,
-                            osdMessage: model.osdMessage,
-                            type: model.type,
-                            commandId: model.commandId,
-                            index: model.index,
-                            mode: EditCustomCommand.Mode.Edit
+                    Button {
+                        icon.name: "edit-entry"
+                        Layout.rightMargin: Kirigami.Units.largeSpacing
+                        onClicked: {
+                            const properties = {
+                                command: delegate.command,
+                                osdMessage: delegate.osdMessage,
+                                type: delegate.type,
+                                commandId: delegate.commandId,
+                                index: delegate.index,
+                                mode: EditCustomCommand.Mode.Edit
+                            }
+                            applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, properties)
                         }
-                        applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, properties)
                     }
                 }
             }

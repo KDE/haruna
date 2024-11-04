@@ -24,10 +24,16 @@ Menu {
         Instantiator {
             model: recentFilesModel
             delegate: MenuItem {
-                text: model.name
+                id: delegate
+
+                required property string name
+                required property string path
+
+                text: delegate.name
+
                 onClicked: {
                     recentFilesMenu.dismiss()
-                    window.openFile(model.path)
+                    window.openFile(delegate.path)
                 }
             }
             onObjectAdded: (index, object) => recentFilesMenu.insertItem(index, object)

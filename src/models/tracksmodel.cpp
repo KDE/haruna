@@ -45,7 +45,7 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
         return track[QStringLiteral("lang")];
     case TitleRole:
         return track[QStringLiteral("title")];
-    case IDRole:
+    case IdRole:
         return track[QStringLiteral("id")];
     case CodecRole:
         return track[QStringLiteral("codec")];
@@ -57,10 +57,10 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> TracksModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
-    roles[TextRole] = "text";
+    roles[TextRole] = "displayText";
     roles[LanguageRole] = "language";
     roles[TitleRole] = "title";
-    roles[IDRole] = "id";
+    roles[IdRole] = "trackId";
     roles[CodecRole] = "codec";
     return roles;
 }

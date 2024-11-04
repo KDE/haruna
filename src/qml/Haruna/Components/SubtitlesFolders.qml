@@ -44,6 +44,10 @@ Item {
         ScrollBar.vertical: ScrollBar { id: scrollBar }
         delegate: Rectangle {
             id: sfDelegate
+
+            required property int index
+            required property string display
+
             width: root.width
             height: sfListView.sfDelegateHeight
             color: Kirigami.Theme.alternateBackgroundColor
@@ -51,7 +55,7 @@ Item {
             Loader {
                 id: sfLoader
                 anchors.fill: parent
-                sourceComponent: model.display === "" ? sfEditComponent : sfDisplayComponent
+                sourceComponent: sfDelegate.display === "" ? sfEditComponent : sfDisplayComponent
             }
 
             Component {
@@ -61,7 +65,7 @@ Item {
 
                     Label {
                         id: sfLabel
-                        text: model.display
+                        text: sfDelegate.display
                         leftPadding: 10
                         Layout.fillWidth: true
                     }
@@ -86,7 +90,7 @@ Item {
                     TextField {
                         id: editField
                         leftPadding: 10
-                        text: model.display
+                        text: sfDelegate.display
                         Layout.leftMargin: 5
                         Layout.fillWidth: true
                         Component.onCompleted: editField.forceActiveFocus(Qt.MouseFocusReason)
@@ -103,10 +107,10 @@ Item {
                                 return
                             }
 
-                            if (model.row === sfListView.count - 1) {
+                            if (sfDelegate.index === sfListView.count - 1) {
                                 root.canAddFolder = true
                             }
-                            subtitlesFoldersModel.deleteFolder(model.row)
+                            subtitlesFoldersModel.deleteFolder(sfDelegate.index)
                             const rows = sfListView.count
                             sfListView.implicitHeight = rows > 5
                                     ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
@@ -123,9 +127,9 @@ Item {
                         flat: true
                         enabled: editField.text !== "" ? true : false
                         onClicked: {
-                            subtitlesFoldersModel.updateFolder(editField.text, model.row)
+                            subtitlesFoldersModel.updateFolder(editField.text, sfDelegate.index)
                             sfLoader.sourceComponent = sfDisplayComponent
-                            if (model.row === sfListView.count - 1) {
+                            if (sfDelegate.index === sfListView.count - 1) {
                                 root.canAddFolder = true
                             }
                         }

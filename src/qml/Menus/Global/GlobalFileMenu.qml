@@ -46,8 +46,13 @@ Labs.Menu {
             onObjectAdded: (index, object) => recentFilesMenu.insertItem( index, object )
             onObjectRemoved: (index, object) => recentFilesMenu.removeItem( object )
             delegate: Labs.MenuItem {
-                text: model.name
-                onTriggered: window.openFile(model.path)
+                id: delegate
+
+                required property string name
+                required property string path
+
+                text: delegate.name
+                onTriggered: window.openFile(delegate.path)
             }
         }
     }

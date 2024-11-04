@@ -25,12 +25,20 @@ Labs.Menu {
         Instantiator {
             model: mpv.subtitleTracksModel
             delegate: Labs.MenuItem {
-                enabled: model.id !== mpv.secondarySubtitleId || model.id === 0
+                id: primarySubDelegate
+
+                required property string displayText
+                required property string language
+                required property string title
+                required property string codec
+                required property string trackId
+
+                enabled: primarySubDelegate.trackId !== mpv.secondarySubtitleId || primarySubDelegate.trackId === 0
                 checkable: true
-                checked: model.id === mpv.subtitleId
-                text: model.text
+                checked: primarySubDelegate.trackId === mpv.subtitleId
+                text: primarySubDelegate.displayText
                 onTriggered: {
-                    mpv.subtitleId = model.id
+                    mpv.subtitleId = primarySubDelegate.trackId
                 }
             }
             onObjectAdded: function(index, object) {
@@ -51,12 +59,20 @@ Labs.Menu {
         Instantiator {
             model: mpv.subtitleTracksModel
             delegate: Labs.MenuItem {
-                enabled: model.id !== mpv.subtitleId || model.id === 0
+                id: secondarySubDelegate
+
+                required property string displayText
+                required property string language
+                required property string title
+                required property string codec
+                required property string trackId
+
+                enabled: secondarySubDelegate.trackId !== mpv.subtitleId || secondarySubDelegate.trackId === 0
                 checkable: true
-                checked: model.id === mpv.secondarySubtitleId
-                text: model.text
+                checked: secondarySubDelegate.trackId === mpv.secondarySubtitleId
+                text: secondarySubDelegate.displayText
                 onTriggered: {
-                    mpv.secondarySubtitleId = model.id
+                    mpv.secondarySubtitleId = secondarySubDelegate.trackId
                 }
             }
             onObjectAdded: function(index, object) {

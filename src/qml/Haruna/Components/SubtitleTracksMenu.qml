@@ -16,19 +16,27 @@ Menu {
     Repeater {
         model: root.model
         delegate: MenuItem {
+            id: delegate
+
+            required property string displayText
+            required property string language
+            required property string title
+            required property string codec
+            required property string trackId
+
             enabled: isPrimarySubtitleMenu
-                     ? model.id !== mpv.secondarySubtitleId || model.id === 0
-                     : model.id !== mpv.subtitleId || model.id === 0
+                     ? delegate.trackId !== mpv.secondarySubtitleId || delegate.trackId === 0
+                     : delegate.trackId !== mpv.subtitleId || delegate.trackId === 0
             checkable: true
             checked: isPrimarySubtitleMenu
-                     ? model.id === mpv.subtitleId
-                     : model.id === mpv.secondarySubtitleId
-            text: model.text
+                     ? delegate.trackId === mpv.subtitleId
+                     : delegate.trackId === mpv.secondarySubtitleId
+            text: delegate.displayText
             onTriggered: {
                 if (isPrimarySubtitleMenu) {
-                    mpv.subtitleId = model.id
+                    mpv.subtitleId = delegate.trackId
                 } else {
-                    mpv.secondarySubtitleId = model.id
+                    mpv.secondarySubtitleId = delegate.trackId
                 }
             }
         }

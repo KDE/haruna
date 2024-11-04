@@ -55,6 +55,8 @@ void SubtitlesFoldersModel::updateFolder(const QString &folder, int row)
 
     SubtitlesSettings::self()->setSubtitlesFolders(newList);
     SubtitlesSettings::self()->save();
+
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 void SubtitlesFoldersModel::deleteFolder(int row)
