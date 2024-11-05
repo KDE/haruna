@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-31 00:39+0000\n"
+"POT-Creation-Date: 2024-11-05 00:39+0000\n"
 "PO-Revision-Date: 2023-05-30 18:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -753,21 +753,21 @@ msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Zuletzt geöffnete Dateien"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:74
+#: src/qml/Haruna/Components/HamburgerMenu.qml:79
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:21
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Primäre Untertitel"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:81
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:48
+#: src/qml/Haruna/Components/HamburgerMenu.qml:86
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:56
 #: src/qml/Menus/SubtitlesMenu.qml:28
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Sekundäre Untertitel"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:89
+#: src/qml/Haruna/Components/HamburgerMenu.qml:94
 #, fuzzy
 #| msgctxt "@title:menu"
 #| msgid "&Audio"
@@ -775,7 +775,7 @@ msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "&Audio"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:113
+#: src/qml/Haruna/Components/HamburgerMenu.qml:118
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Mehr"
@@ -794,27 +794,27 @@ msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Untertitel laden von"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:101
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Löschen bestätigen"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:117
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:121
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Diesen Ordner aus der Liste löschen"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:133
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:137
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Änderungen speichern"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:155
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:159
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Neuen Ordner hinzufügen"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:167
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:171
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr ""
@@ -890,7 +890,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Zuletzt geöffnete Dateien"
 
-#: src/qml/Menus/FileMenu.qml:39
+#: src/qml/Menus/FileMenu.qml:45
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Liste leeren"
@@ -1212,24 +1212,24 @@ msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Lautstärkeschritte"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:36
+#: src/qml/Settings/CustomCommandsSettings.qml:33
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Noch keine benutzerdefinierten Befehle"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:38
+#: src/qml/Settings/CustomCommandsSettings.qml:35
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "Befehl &hinzufügen"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:74
+#: src/qml/Settings/CustomCommandsSettings.qml:83
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
 
-#: src/qml/Settings/CustomCommandsSettings.qml:148
+#: src/qml/Settings/CustomCommandsSettings.qml:158
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Hinzufügen"
@@ -1571,7 +1571,7 @@ msgstr ""
 "Stellt das Symboldesign auf Breeze.\n"
 "Benötigt Neustart."
 
-#: src/qml/Settings/MouseSettings.qml:79
+#: src/qml/Settings/MouseSettings.qml:83
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Saturation Reset"
@@ -1579,7 +1579,7 @@ msgctxt "@label"
 msgid "No action set"
 msgstr "Sättigung zurücksetzen"
 
-#: src/qml/Settings/MouseSettings.qml:93
+#: src/qml/Settings/MouseSettings.qml:97
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Clear current action"
@@ -1587,7 +1587,7 @@ msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr "Aktuelle Aktion entfernen"
 
-#: src/qml/Settings/MouseSettings.qml:130
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "Doppelklicken Sie, um die Aktion festzulegen"
