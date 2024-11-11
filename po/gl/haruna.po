@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-05 00:39+0000\n"
-"PO-Revision-Date: 2024-10-07 01:35+0200\n"
+"PO-Revision-Date: 2024-11-10 12:57+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1076,33 +1076,24 @@ msgid "Open containing folder"
 msgstr "Abrir o cartafol contedor"
 
 #: src/qml/PlayList.qml:242
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Abrir o cartafol de configuración."
+msgstr "Abrir no navegador"
 
 #: src/qml/PlayList.qml:251
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Copiar o nome do ficheiro"
+msgstr "Copiar o nome"
 
 #: src/qml/PlayList.qml:256
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Copiar a ruta do ficheiro"
+msgstr "Copiar a ruta"
 
 #: src/qml/PlayList.qml:257
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr ""
+msgstr "Copiar o URL"
 
 #: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
@@ -1110,12 +1101,9 @@ msgid "Remove from playlist"
 msgstr "Retirar da lista de reprodución"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Renomear o ficheiro"
+msgstr "Renomear"
 
 #: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
@@ -1445,27 +1433,22 @@ msgstr "Redimensionar para axustar ao vídeo."
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>Non funciona en Wayland.</b>"
 
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"A xanela redimensionarase de acordo coa resolución do vídeo.\n"
+"%1 A xanela redimensionarase de acordo coa resolución do vídeo.\n"
 "O tamaño máximo non está limitado, o sistema operativo debería encargarse "
 "dese límite."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Iniciar a pantalla completa."
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1474,6 +1457,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Poñer a pantalla completa ao iniciar a aplicación.\n"
+"Ten precedencia sobre as opcións de «Redimensionar para axustar ao vídeo» e "
+"de «Lembrar o tamaño e posición da xanela»."
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
