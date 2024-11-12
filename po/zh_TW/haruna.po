@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-05 00:39+0000\n"
-"PO-Revision-Date: 2024-10-24 19:32+0900\n"
+"PO-Revision-Date: 2024-11-11 16:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1420,26 +1420,21 @@ msgstr "將大小調整到符合影片"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>Wayland 上不支援。</b>"
 
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"視窗會依影片解析度調整大小。\n"
+"%1 視窗會依影片解析度調整大小。\n"
 "最大的大小不受 Haruna 限制，交給作業系統處理。"
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "以全螢幕模式開始"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1448,6 +1443,8 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"應用程式啟動時進入全螢幕模式。\n"
+"這會在「將大小調整到符合影片」與「記住視窗大小和位置」設定值之前優先套用。"
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"

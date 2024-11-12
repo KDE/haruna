@@ -1,18 +1,18 @@
 # translation of haruna.po to Slovak
-# Roman Paholík <wizzardsk@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Roman Paholík <wizzardsk@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-05 00:39+0000\n"
-"PO-Revision-Date: 2021-07-18 15:26+0200\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2024-11-11 17:46+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -29,21 +29,19 @@ msgstr "wizzardsk@gmail.com"
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
-msgstr ""
+msgstr "Haruna"
 
 #: src/application.cpp:107
-#, fuzzy, kde-format
-#| msgid "Haruna Video Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Prehrávač videa Haruna"
+msgstr "Prehrávač médií"
 
 #: src/application.cpp:109
-#, fuzzy, kde-format
-#| msgid "(c) 2019-2021"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "(c) 2019-2021"
+msgstr "(c) 2019-2023"
 
 #: src/application.cpp:114
 #, kde-format
@@ -52,8 +50,7 @@ msgid "George Florea Bănuș"
 msgstr ""
 
 #: src/application.cpp:115
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Vývojár"
@@ -99,10 +96,10 @@ msgid "About Haruna"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:35
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Nahlásiť chybu"
 
 #: src/models/actionsmodel.cpp:42
 #, kde-format
@@ -139,8 +136,7 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "Nastaviť klávesové skratky"
 
 #: src/models/actionsmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Exit Fullscreen"
+#, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Ukončiť režim celej obrazovky"
@@ -164,8 +160,7 @@ msgid "Load Last Played File"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:107
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Stlmiť"
@@ -174,7 +169,7 @@ msgstr "Stlmiť"
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
-msgstr ""
+msgstr "Otvoriť kontextovú ponuku"
 
 #: src/models/actionsmodel.cpp:118
 #, kde-format
@@ -183,8 +178,7 @@ msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:122
-#, fuzzy, kde-format
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Otvoriť súbor"
@@ -330,8 +324,7 @@ msgid "Set Loop"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:283
-#, fuzzy, kde-format
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Snímka obrazovky"
@@ -427,8 +420,7 @@ msgid "Toggle Header"
 msgstr "Prepnúť do celoobrazovkového režimu"
 
 #: src/models/actionsmodel.cpp:381 src/qml/Settings/SettingsWindow.qml:95
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Zoznam skladieb"
@@ -460,15 +452,13 @@ msgid "Video Move Down"
 msgstr "Titulky"
 
 #: src/models/actionsmodel.cpp:416
-#, fuzzy, kde-format
-#| msgid "Volume Up"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Zvýšiť hlasitosť"
 
 #: src/models/actionsmodel.cpp:423
-#, fuzzy, kde-format
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Znížiť hlasitosť"
@@ -587,10 +577,10 @@ msgid ""
 msgstr ""
 
 #: src/models/actionsmodel.cpp:679
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Znovu priradiť"
 
 #: src/mpv/mpvitem.cpp:291
 #, fuzzy, kde-format
@@ -600,11 +590,11 @@ msgid "Could not play: %1"
 msgstr "Kontrast: %1"
 
 #: src/mpv/mpvitem.cpp:433
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
-msgstr ""
+msgstr "Žiadne"
 
 #: src/mpv/mpvitem.cpp:467
 #, fuzzy, kde-format
@@ -646,7 +636,7 @@ msgstr ""
 #| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
-msgstr "Audio: %1 %2"
+msgstr "Zvuk"
 
 #: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
 #, fuzzy
@@ -667,7 +657,7 @@ msgstr "Kontrast: %1"
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
-msgstr "Opakovať: %1 - %2"
+msgstr "Opakovať"
 
 #: src/qml/Actions.qml:281
 msgctxt "@info:tooltip"
@@ -707,7 +697,7 @@ msgstr "Titulky"
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr "Podtitulok: %1 %2"
+msgstr "Podtitulok"
 
 #: src/qml/Actions.qml:335 src/qml/Actions.qml:341
 #, fuzzy
@@ -721,11 +711,9 @@ msgstr "Titulky"
 #| msgid "Deinterlace: %1"
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
-msgstr "Zrušiť prekladanie: %1"
+msgstr "Zrušiť prekladanie"
 
 #: src/qml/Actions.qml:411 src/qml/Actions.qml:417
-#, fuzzy
-#| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Lupa: %1"
@@ -735,39 +723,37 @@ msgstr "Lupa: %1"
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
-msgstr "Lupa: 0"
+msgstr "Zoom: %1%"
 
 #: src/qml/Actions.qml:429 src/qml/Actions.qml:435
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
-msgstr "Kontrast: %1"
+msgstr "Kontrast"
 
 #: src/qml/Actions.qml:440
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
-msgstr "Kontrast: 0"
+msgstr "Kontrast"
 
 #: src/qml/Actions.qml:446 src/qml/Actions.qml:452
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
-msgstr "Jas: %1"
+msgstr "Jas"
 
 #: src/qml/Actions.qml:457
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
-msgstr "Jas: 0"
+msgstr "Jas"
 
 #: src/qml/Actions.qml:463 src/qml/Actions.qml:469
-#, fuzzy
-#| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
@@ -777,28 +763,28 @@ msgstr "Gama: %1"
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr "Gama: 0"
+msgstr "Gama"
 
 #: src/qml/Actions.qml:480 src/qml/Actions.qml:486
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
-msgstr "Sýtosť: %1"
+msgstr "Sýtosť"
 
 #: src/qml/Actions.qml:491
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
-msgstr "Sýtosť: 0"
+msgstr "Sýtosť"
 
 #: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
-msgstr "Spustiť prehrávanie"
+msgstr "spustiť prehrávanie"
 
 #: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
 #, fuzzy
@@ -818,8 +804,6 @@ msgid "Play next file"
 msgstr ""
 
 #: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
-#, fuzzy
-#| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Zostáva: %1"
@@ -829,14 +813,14 @@ msgstr "Zostáva: %1"
 #| msgid "Subtitles"
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr "Titulky"
+msgstr "Vybrať farbu"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:58
 #, fuzzy
 #| msgid "Open File"
 msgctxt "@action:inmenu"
 msgid "Recent Files"
-msgstr "Otvoriť súbor"
+msgstr "Nedávne súbory"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:79
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
@@ -859,12 +843,12 @@ msgstr ""
 #| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "&Audio"
+msgstr "1 zvuková stopa"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:118
 msgctxt "@action:inmenu"
 msgid "&More"
-msgstr ""
+msgstr "&Viac"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -881,8 +865,6 @@ msgid "Load subtitles from"
 msgstr "Titulky"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Potvrdiť vymazanie"
@@ -893,8 +875,6 @@ msgid "Delete this folder from list"
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:137
-#, fuzzy
-#| msgid "Save changes"
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Uložiť zmeny"
@@ -910,8 +890,6 @@ msgid "Add a folder in which to look for subtitles."
 msgstr ""
 
 #: src/qml/Header.qml:51
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Titulky"
@@ -921,7 +899,7 @@ msgstr "Titulky"
 #| msgid "Audio"
 msgctxt "@action:intoolbar"
 msgid "Audio"
-msgstr "Audio"
+msgstr "Zvuk"
 
 #: src/qml/HProgressBar.qml:240
 msgctxt "@action:inmenu"
@@ -938,15 +916,13 @@ msgstr ""
 #: src/qml/Main.qml:28
 msgctxt "@title:window"
 msgid "Haruna"
-msgstr ""
+msgstr "Haruna"
 
 #: src/qml/Main.qml:249 src/qml/PlayList.qml:347
 #: src/qml/Settings/VideoSettings.qml:68
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@title:window"
 msgid "Select file"
-msgstr "Titulky"
+msgstr "Vyberte súbor"
 
 #: src/qml/Main.qml:276
 #, fuzzy
@@ -956,8 +932,6 @@ msgid "Select subtitles file"
 msgstr "Titulky"
 
 #: src/qml/Main.qml:295
-#, fuzzy
-#| msgid "Open"
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otvoriť"
@@ -967,14 +941,12 @@ msgstr "Otvoriť"
 #| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Audio"
-msgstr "&Audio"
+msgstr "Zvuk"
 
 #: src/qml/Menus/AudioMenu.qml:22 src/qml/Menus/Global/GlobalAudioMenu.qml:22
-#, fuzzy
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&Audio"
+msgstr "S&topa"
 
 #: src/qml/Menus/ContextMenu.qml:17
 #, fuzzy
@@ -995,12 +967,12 @@ msgstr "&Súbor"
 #| msgid "Open File"
 msgctxt "@title:menu"
 msgid "Recent Files"
-msgstr "Otvoriť súbor"
+msgstr "Nedávne súbory"
 
 #: src/qml/Menus/FileMenu.qml:45
 msgctxt "@action:inmenu"
 msgid "Clear List"
-msgstr ""
+msgstr "Vyčistiť zoznam"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
 #, fuzzy
@@ -1011,17 +983,16 @@ msgstr "&Pomocník"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
 #: src/qml/Menus/PlaybackMenu.qml:13
-#, fuzzy
-#| msgid "&Playback"
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "&Prehrávanie"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
 #: src/qml/Menus/PlaybackMenu.qml:31
+#, fuzzy
 msgctxt "@title:menu"
 msgid "Seek"
-msgstr ""
+msgstr "Posunúť"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
 #: src/qml/Menus/SettingsMenu.qml:15
@@ -1033,23 +1004,22 @@ msgstr "&Nastavenia"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:17
 #: src/qml/Menus/SettingsMenu.qml:18
+#, fuzzy
 msgctxt "@action:inmenu"
 msgid "General"
-msgstr ""
+msgstr "Všeobecné"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
 #: src/qml/Menus/SettingsMenu.qml:26
-#, fuzzy
-#| msgid "&Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
-msgstr "&Prehrávanie"
+msgstr "Prehrávanie"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
 #: src/qml/Menus/SettingsMenu.qml:34
 msgctxt "@action:inmenu"
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
 #: src/qml/Menus/SettingsMenu.qml:42
@@ -1057,20 +1027,16 @@ msgstr ""
 #| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
-msgstr "Audio"
+msgstr "Zvuk"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
 #: src/qml/Menus/SettingsMenu.qml:50
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Titulky"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
 #: src/qml/Menus/SettingsMenu.qml:58
-#, fuzzy
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Zoznam skladieb"
@@ -1079,7 +1045,7 @@ msgstr "Zoznam skladieb"
 #: src/qml/Menus/SettingsMenu.qml:66
 msgctxt "@action:inmenu"
 msgid "Mouse"
-msgstr ""
+msgstr "Myš"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
 #: src/qml/Menus/SettingsMenu.qml:74
@@ -1087,7 +1053,7 @@ msgstr ""
 #| msgid "Shortcut"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
-msgstr "Skratka"
+msgstr "Skratky"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:82
 #: src/qml/Menus/SettingsMenu.qml:83
@@ -1099,20 +1065,20 @@ msgstr "Príkaz"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:90
 #: src/qml/Menus/SettingsMenu.qml:91
+#, fuzzy
 msgctxt "@action:inmenu"
 msgid "Debug"
-msgstr ""
+msgstr "Ladenie"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:98
 #: src/qml/Menus/SettingsMenu.qml:99
+#, fuzzy
 msgctxt "@action:inmenu"
 msgid "About"
-msgstr ""
+msgstr "O aplikácii"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:17
 #: src/qml/Menus/SubtitlesMenu.qml:16
-#, fuzzy
-#| msgid "&Subtitles"
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "&Titulky"
@@ -1120,14 +1086,12 @@ msgstr "&Titulky"
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
 msgctxt "@title:menu"
 msgid "&Video"
-msgstr ""
+msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
-#, fuzzy
-#| msgid "Image adjustments"
 msgctxt "@title:menu"
 msgid "Adjustments"
-msgstr "Úpravy obrázka"
+msgstr "Úpravy"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
 #, fuzzy
@@ -1144,68 +1108,63 @@ msgid "Hide Menubar"
 msgstr "Skryť panel ponuky"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
-#, fuzzy
-#| msgid "Show MenuBar"
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
-msgstr "Zobraziť panel ponuky"
+msgstr "Zobraziť menu"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
 #, fuzzy
 #| msgid "Show Header"
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
-msgstr "Zobraziť hlavičku"
+msgstr "Skryť panel nástrojov %1"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
-#, fuzzy
-#| msgid "Show Header"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
-msgstr "Zobraziť hlavičku"
+msgstr "Zobraziť panel nástrojov"
 
 #: src/qml/MpvVideo.qml:31
 #, fuzzy
 #| msgid "Volume: %1"
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
-msgstr "Hlasitosť: %1"
+msgstr "Hlasitosť"
 
 #: src/qml/PlayList.qml:90
-#, fuzzy
-#| msgid "&Add"
 msgctxt "@action:button"
 msgid "Add"
-msgstr "&Pridať"
+msgstr "Pridať"
 
 #: src/qml/PlayList.qml:102
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "Zoznam skladieb"
+msgstr "Otvoriť zoznam skladieb..."
 
 #: src/qml/PlayList.qml:111
+#, fuzzy
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr ""
+msgstr "Pridať"
 
 #: src/qml/PlayList.qml:114
-#, fuzzy
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "Súbor"
 
 #: src/qml/PlayList.qml:122
+#, fuzzy
 msgctxt "@action:button"
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: src/qml/PlayList.qml:133
+#, fuzzy
 msgctxt "@action:button"
 msgid "Sort"
-msgstr ""
+msgstr "Triediť"
 
 #: src/qml/PlayList.qml:137
 msgctxt "@action:button"
@@ -1230,26 +1189,26 @@ msgid "Duration descending"
 msgstr "Sýtosť"
 
 #: src/qml/PlayList.qml:162
+#, fuzzy
 msgctxt "@action:button"
 msgid "Clear"
-msgstr ""
+msgstr "Vyčistiť"
 
 #: src/qml/PlayList.qml:170
-#, fuzzy
-#| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "Uložiť zmeny"
+msgstr "Uložiť ako"
 
 #: src/qml/PlayList.qml:236
+#, fuzzy
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr ""
+msgstr "Otvoriť priečinok s obsahom"
 
 #: src/qml/PlayList.qml:242
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr ""
+msgstr "Otvoriť v prehliadači"
 
 #: src/qml/PlayList.qml:251
 #, fuzzy
@@ -1260,30 +1219,27 @@ msgid "Copy name"
 msgstr "Roman Paholík"
 
 #: src/qml/PlayList.qml:256
+#, fuzzy
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr ""
+msgstr "Kopírovať cestu"
 
 #: src/qml/PlayList.qml:257
-#, fuzzy
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "Otvoriť URL"
+msgstr "Kopírovať URL adresu"
 
 #: src/qml/PlayList.qml:262
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Zoznam skladieb"
+msgstr "Odstrániť zo zoznamu skladieb"
 
 #: src/qml/PlayList.qml:267
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Titulky"
+msgstr "Premenovať"
 
 #: src/qml/PlayList.qml:273
 #, fuzzy
@@ -1293,9 +1249,10 @@ msgid "Scroll to playing item"
 msgstr "Spustiť prehrávanie"
 
 #: src/qml/PlayList.qml:283
+#, fuzzy
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr ""
+msgstr "Kôš"
 
 #: src/qml/Settings/AudioSettings.qml:25
 #: src/qml/Settings/SubtitlesSettings.qml:32
@@ -1338,7 +1295,7 @@ msgstr "Príkaz"
 #| msgid "Command"
 msgctxt "@action:button"
 msgid "&Add command"
-msgstr "Príkaz"
+msgstr "Pridať príkaz"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:83
 msgctxt "@info:tooltip"
@@ -1348,8 +1305,6 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:158
-#, fuzzy
-#| msgid "&Add"
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Pridať"
@@ -1367,11 +1322,9 @@ msgid "Open config folder"
 msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:48
-#, fuzzy
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Nastaviť"
+msgstr "Konfiguračný súbor"
 
 #: src/qml/Settings/DebugSettings.qml:60
 #, fuzzy
@@ -1407,8 +1360,6 @@ msgid "Enable mpv logging"
 msgstr ""
 
 #: src/qml/Settings/EditCustomCommand.qml:39
-#, fuzzy
-#| msgid "Command"
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Príkaz"
@@ -1463,7 +1414,7 @@ msgstr "Typ"
 #| msgid "Keyboard shortcut"
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
-msgstr "Klávesová skratka"
+msgstr "Klávesová skratka:"
 
 #: src/qml/Settings/EditCustomCommand.qml:119
 msgctxt "@info:tooltip"
@@ -1490,8 +1441,6 @@ msgid "Delete"
 msgstr "Vymazať"
 
 #: src/qml/Settings/EditCustomCommand.qml:156
-#, fuzzy
-#| msgid "Cancel"
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -1501,7 +1450,7 @@ msgstr "Zrušiť"
 #| msgid "&Save"
 msgctxt "@action:intoolbar"
 msgid "&Save"
-msgstr "Uložiť"
+msgstr "&Uložiť"
 
 #: src/qml/Settings/GeneralSettings.qml:25
 msgctxt "@label:spinbox"
@@ -1558,8 +1507,6 @@ msgid "File will be added to the end of the playlist"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:161
-#, fuzzy
-#| msgid "Interface"
 msgctxt "@title"
 msgid "Interface"
 msgstr "Rozhranie"
@@ -1608,14 +1555,15 @@ msgid "Generating an accurate preview is slow"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:277
+#, fuzzy
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "Šírka náhľadu"
 
 #: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@label"
 msgid "Window"
-msgstr ""
+msgstr "Okno"
 
 #: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
@@ -1637,7 +1585,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Spustí v režime na celú obrazovku"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1667,7 +1615,7 @@ msgstr ""
 #| msgid "Show MenuBar"
 msgctxt "@option:check"
 msgid "Show menubar"
-msgstr "Zobraziť panel ponuky"
+msgstr "Zobraziť menu"
 
 #: src/qml/Settings/GeneralSettings.qml:405
 #: src/qml/Settings/PlaylistSettings.qml:77
@@ -1675,7 +1623,7 @@ msgstr "Zobraziť panel ponuky"
 #| msgid "Show Header"
 msgctxt "@option:check"
 msgid "Show toolbar"
-msgstr "Zobraziť hlavičku"
+msgstr "Zobraziť panel &nástrojov"
 
 #: src/qml/Settings/GeneralSettings.qml:416
 #, fuzzy
@@ -1685,8 +1633,6 @@ msgid "Show chapter markers"
 msgstr "Zobraziť panel ponuky"
 
 #: src/qml/Settings/GeneralSettings.qml:425
-#, fuzzy
-#| msgid "Color scheme"
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Farebná schéma"
@@ -1835,7 +1781,7 @@ msgstr ""
 #| msgid "Disabled"
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr "Zakázané"
+msgstr "Povolené"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
 #: src/qml/Settings/PlaybackSettings.qml:323
@@ -2042,35 +1988,32 @@ msgstr ""
 #| msgid "&Settings"
 msgctxt "@title:window"
 msgid "Settings"
-msgstr "&Nastavenia"
+msgstr "Nastavenia"
 
 #: src/qml/Settings/SettingsWindow.qml:55
+#, fuzzy
 msgctxt "@action"
 msgid "General"
-msgstr ""
+msgstr "Všeobecné"
 
 #: src/qml/Settings/SettingsWindow.qml:63
-#, fuzzy
-#| msgid "&Playback"
 msgctxt "@action"
 msgid "Playback"
-msgstr "&Prehrávanie"
+msgstr "Prehrávanie"
 
 #: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/qml/Settings/SettingsWindow.qml:79
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
-msgstr "Audio"
+msgstr "Zvuk"
 
 #: src/qml/Settings/SettingsWindow.qml:87
-#, fuzzy
-#| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Titulky"
@@ -2078,14 +2021,14 @@ msgstr "Titulky"
 #: src/qml/Settings/SettingsWindow.qml:103
 msgctxt "@action"
 msgid "Mouse"
-msgstr ""
+msgstr "Myš"
 
 #: src/qml/Settings/SettingsWindow.qml:111
 #, fuzzy
 #| msgid "Shortcut"
 msgctxt "@action"
 msgid "Shortcuts"
-msgstr "Skratka"
+msgstr "Skratky"
 
 #: src/qml/Settings/SettingsWindow.qml:119
 #, fuzzy
@@ -2095,14 +2038,16 @@ msgid "Custom commands"
 msgstr "Príkaz"
 
 #: src/qml/Settings/SettingsWindow.qml:127
+#, fuzzy
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Ladenie"
 
 #: src/qml/Settings/SettingsWindow.qml:135
+#, fuzzy
 msgctxt "@action"
 msgid "About"
-msgstr ""
+msgstr "O aplikácii"
 
 #: src/qml/Settings/SubtitlesSettings.qml:82
 msgctxt "@option:check"
@@ -2124,32 +2069,33 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@label:listbox"
 msgid "Font family"
-msgstr ""
+msgstr "Rodina písma"
 
 #: src/qml/Settings/SubtitlesSettings.qml:134
 msgctxt "@label:spinbox"
 msgid "Font size"
-msgstr ""
+msgstr "Veľkosť písma"
 
 #: src/qml/Settings/SubtitlesSettings.qml:150
 msgctxt "@label"
 msgid "Font style"
-msgstr ""
+msgstr "Štýl písma"
 
 #: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@option:check"
 msgid "Bold"
-msgstr ""
+msgstr "Tučné"
 
 #: src/qml/Settings/SubtitlesSettings.qml:167
 msgctxt "@option:check"
 msgid "Italic"
-msgstr ""
+msgstr "Kurzíva"
 
 #: src/qml/Settings/SubtitlesSettings.qml:177
+#, fuzzy
 msgctxt "@label:textbox"
 msgid "Font color"
-msgstr ""
+msgstr "Farba písma"
 
 #: src/qml/Settings/SubtitlesSettings.qml:228
 #: src/qml/Settings/SubtitlesSettings.qml:284
@@ -2159,9 +2105,10 @@ msgid "Set default value"
 msgstr ""
 
 #: src/qml/Settings/SubtitlesSettings.qml:234
+#, fuzzy
 msgctxt "@label:textbox"
 msgid "Shadow color"
-msgstr ""
+msgstr "Farba tieňa:"
 
 #: src/qml/Settings/SubtitlesSettings.qml:290
 msgctxt "@label:spinbox"
@@ -2182,7 +2129,7 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:367
 msgctxt "@label:spinbox"
 msgid "Border width"
-msgstr ""
+msgstr "Šírka okraja"
 
 #: src/qml/Settings/VideoSettings.qml:27
 msgctxt "@label:listbox"
@@ -2216,8 +2163,6 @@ msgid "Format"
 msgstr "Formát"
 
 #: src/qml/Settings/VideoSettings.qml:129
-#, fuzzy
-#| msgid "Template"
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Šablóna"
@@ -2265,15 +2210,11 @@ msgid "Image adjustments"
 msgstr "Úpravy obrázka"
 
 #: src/qml/Settings/VideoSettings.qml:204
-#, fuzzy
-#| msgid "Contrast"
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontrast"
 
 #: src/qml/Settings/VideoSettings.qml:223
-#, fuzzy
-#| msgid "Brightness"
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Jas"
