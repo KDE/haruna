@@ -16,10 +16,8 @@ finish-args:
   - --device=dri
   - --filesystem=host:ro
   - --filesystem=home
-  - --filesystem=xdg-run/pipewire-0:ro
   - --talk-name=org.freedesktop.ScreenSaver
   - --own-name=org.mpris.MediaPlayer2.haruna
-  - --env=LC_NUMERIC=C
   - --system-talk-name=org.freedesktop.UDisks2
 cleanup:
   - '*.a'
@@ -34,13 +32,24 @@ modules:
     sources:
       - type: dir
         path: '.'
+      # - type: archive
+      #   url: https://download.kde.org/stable/haruna/1.2.1/haruna-1.2.1.tar.xz
+      #   sha256: eb01261a3498c6e25c28064e6ccea37aeb38cd8aa5006f02c92760b124c362fb
+      #   x-checker-data:
+      #     type: anitya
+      #     projet-id: 267594
+      #     url-template: https://download.kde.org/stable/haruna/$version/haruna-$version.tar.xz
     modules:
       - name: mpvqt
         buildsystem: cmake-ninja
         sources:
           - type: archive
-            url: https://download.kde.org/stable/mpvqt/mpvqt-1.0.0.tar.xz
-            sha256: 9131d2a925e5f33e19b9d081dfd5f30d576abd87464d67c70bef41a486f54eb9
+            url: https://download.kde.org/stable/mpvqt/mpvqt-1.0.1.tar.xz
+            sha256: 9f37b85f319c27f6244743c4259402b0aa2474ed851f0d833d9bd2a0731c178c
+            x-checker-data:
+              type: anitya
+              projet-id: 370634
+              url-template: https://download.kde.org/stable/mpvqt/mpvqt-$version.tar.xz
         modules:
           - name: libmpv
             cleanup:
@@ -59,8 +68,8 @@ modules:
               - -Dmanpage-build=disabled
             sources:
               - type: archive
-                url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.37.0.tar.gz
-                sha256: 1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf
+                url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.39.0.tar.gz
+                sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
                 x-checker-data:
                   type: anitya
                   project-id: 5348
@@ -71,24 +80,20 @@ modules:
                 no-autogen: true
                 make-args:
                   - BUILDMODE=dynamic
-                  - 'PREFIX=${FLATPAK_DEST}'
+                  - PREFIX=${FLATPAK_DEST}
                 make-install-args:
-                  - 'PREFIX=${FLATPAK_DEST}'
+                  - PREFIX=${FLATPAK_DEST}
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20240314
-                    commit: 15f58c9648ee40a3fb6617e22e2f3fdff80d66b8
+                    tag: v2.1-20241113
+                    commit: 098183d9d24b8942a26dcc720fe8725b287ec77f
                     x-checker-data:
                       type: git
-                      tag-pattern: '^v([\d.-]+)$'
+                      tag-pattern: ^v([\d.-]+)$
                       stable-only: false
                 cleanup:
                   - /bin
-                  - /include
-                  - /lib/pkgconfig
-                  - /share/man
-
 
               - name: libplacebo
                 buildsystem: meson
@@ -97,61 +102,29 @@ modules:
                   - -Ddemos=False
                 sources:
                   - type: archive
-                    url: https://code.videolan.org/videolan/libplacebo/-/archive/v6.338.2/libplacebo-v6.338.2.tar.gz
-                    sha256: d029adbe55bba8aed7aed2c48b0b66081dddfb9d42683a709342e33aa666c544
+                    url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.349.0/libplacebo-v7.349.0.tar.gz
+                    sha256: 79120e685a1836344b51b13b6a5661622486a84e4d4a35f6c8d01679a20fbc86
                     x-checker-data:
                       type: anitya
                       project-id: 20101
                       stable-only: true
                       url-template: https://code.videolan.org/videolan/libplacebo/-/archive/v$version/libplacebo-v$version.tar.gz
                   - type: archive
-                    url: https://github.com/pallets/markupsafe/archive/refs/tags/2.1.3.tar.gz
-                    sha256: b209e55e953eabf4bc31e0c9f3182af03b40e5bf5afed652f72b9b7ac02c0b30
-                    dest: 3rdparty/markupsafe
-                  - type: archive
-                    url: https://github.com/pallets/jinja/archive/refs/tags/3.1.2.tar.gz
-                    sha256: ecae76cd1a064d40eb46c5375f07953d747f4d65b68cd3fa5f02c91714b799fc
+                    url: https://github.com/pallets/jinja/archive/refs/tags/3.1.4.tar.gz
+                    sha256: ed06f67abd2c8b7697dfb714f80715903ab0507e3c5acc11e92477e4ea51033b
                     dest: 3rdparty/jinja
+                    x-checker-data:
+                      type: anitya
+                      projet-id: 3894
+                      url-template: https://github.com/pallets/jinja/archive/refs/tags/$version.tar.gz
                   - type: archive
                     url: https://github.com/Dav1dde/glad/archive/refs/tags/v2.0.4.tar.gz
                     sha256: 02629644c242dcc27c58222bd2c001d5e2f3765dbbcfd796542308bddebab401
                     dest: 3rdparty/glad
-                modules:
-                  - name: glslang
-                    buildsystem: cmake-ninja
-                    config-opts:
-                      - -DBUILD_SHARED_LIBS=ON
-                    cleanup:
-                      - /bin
-                      - /include
-                      - /lib/cmake
-                    sources:
-                      - type: archive
-                        url: https://github.com/KhronosGroup/glslang/archive/14.1.0.tar.gz
-                        sha256: b5e4c36d60eda7613f36cfee3489c6f507156829c707e1ecd7f48ca45b435322
-                        x-checker-data:
-                          type: anitya
-                          project-id: 205796
-                          stable-only: true
-                          url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
-                      - type: archive
-                        url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/sdk-1.3.261.1.tar.gz
-                        sha256: ead95c626ad482882a141d1aa0ce47b9453871f72c42c0b28d39c82f60a52008
-                        dest: External/spirv-tools
-                        x-checker-data:
-                          type: anitya
-                          stable-only: true
-                          project-id: 334920
-                          url-template: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/sdk-$version.tar.gz
-                      - type: archive
-                        url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/sdk-1.3.261.1.tar.gz
-                        sha256: 32b4c6ae6a2fa9b56c2c17233c8056da47e331f76e117729925825ea3e77a739
-                        dest: External/spirv-tools/external/spirv-headers
-                        x-checker-data:
-                          type: anitya
-                          stable-only: true
-                          project-id: 334920
-                          url-template: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/sdk-$version.tar.gz
+                    x-checker-data:
+                      type: anitya
+                      projet-id: 300234
+                      url-template: https://github.com/Dav1dde/glad/archive/refs/tags/v$version.tar.gz
 
               - name: libXpresent
                 buildsystem: autotools
@@ -165,24 +138,6 @@ modules:
                       stable-only: true
                       url-template: https://xorg.freedesktop.org/archive/individual/lib/libXpresent-$version.tar.xz
 
-              - name: libv4l2
-                cleanup:
-                  - /sbin
-                  - /bin
-                config-opts:
-                  - --disable-static
-                  - --disable-bpf
-                  - --with-udevdir=/app/lib/udev
-                sources:
-                  - type: archive
-                    url: https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.24.1.tar.bz2
-                    sha256: cbb7fe8a6307f5ce533a05cded70bb93c3ba06395ab9b6d007eb53b75d805f5b
-                    x-checker-data:
-                      type: anitya
-                      project-id: 9998
-                      stable-only: true
-                      url-template: https://linuxtv.org/downloads/v4l-utils/v4l-utils-$version.tar.bz2
-
               - name: nv-codec-headers
                 cleanup:
                   - '*'
@@ -191,8 +146,8 @@ modules:
                   - PREFIX=/app
                 sources:
                   - type: archive
-                    url: https://github.com/FFmpeg/nv-codec-headers/archive/refs/tags/n12.1.14.0.tar.gz
-                    sha256: 2fefaa227d2a3b4170797796425a59d1dd2ed5fd231db9b4244468ba327acd0b
+                    url: https://github.com/FFmpeg/nv-codec-headers/archive/refs/tags/n12.2.72.0.tar.gz
+                    sha256: dbeaec433d93b850714760282f1d0992b1254fc3b5a6cb7d76fc1340a1e47563
                     x-checker-data:
                       type: anitya
                       project-id: 223796
@@ -227,61 +182,21 @@ modules:
                   - --enable-libxml2
                 sources:
                   - type: archive
-                    url: https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.gz
-                    sha256: b0aee531e4a91fed6bc031445dfc3ad8eb36de1fcb0fa2acdb589ecc9f8dc9cb
+                    url: https://ffmpeg.org/releases/ffmpeg-7.1.tar.gz
+                    sha256: 42a7dc0d1583885d1b8f6559fa7ce28f97acafea6803de6a8f73e3ba229348bd
                     x-checker-data:
                       type: anitya
                       project-id: 5405
                       stable-only: true
                       url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.gz
-                modules:
-                  - name: libjxl
-                    buildsystem: cmake-ninja
-                    config-opts:
-                      - -DJPEGXL_ENABLE_JPEGLI=OFF
-                      - -DBUILD_TESTING=OFF
-                      - -DJPEGXL_ENABLE_BENCHMARK=OFF
-                      - -DJPEGXL_ENABLE_COVERAGE=OFF
-                      - -DJPEGXL_ENABLE_EXAMPLES=OFF
-                      - -DJPEGXL_ENABLE_FUZZERS=OFF
-                      - -DJPEGXL_ENABLE_JNI=OFF
-                      - -DJPEGXL_ENABLE_SJPEG=OFF
-                      - -DJPEGXL_ENABLE_SKCMS=OFF
-                      - -DJPEGXL_ENABLE_TOOLS=OFF
-                      - -DJPEGXL_ENABLE_VIEWERS=OFF
-                    sources:
-                      - type: archive
-                        url: https://github.com/libjxl/libjxl/archive/refs/tags/v0.10.2.tar.gz
-                        sha256: 95e807f63143856dc4d161c071cca01115d2c6405b3d3209854ac6989dc6bb91
-                        x-checker-data:
-                          type: anitya
-                          project-id: 232764
-                          stable-only: true
-                          url-template: https://github.com/libjxl/libjxl/archive/refs/tags/v$version.tar.gz
-                    modules:
-                      - name: highway
-                        buildsystem: cmake-ninja
-                        config-opts:
-                          - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-                          - -DBUILD_TESTING=OFF
-                          - -DBUILD_SHARED_LIBS=ON
-                        sources:
-                          - type: archive
-                            url: https://github.com/google/highway/archive/refs/tags/1.1.0.tar.gz
-                            sha256: 354a8b4539b588e70b98ec70844273e3f2741302c4c377bcc4e81b3d1866f7c9
-                            x-checker-data:
-                              type: anitya
-                              project-id: 205809
-                              stable-only: true
-                              url-template: https://github.com/google/highway/archive/refs/tags/$version.tar.gz
 
               - name: libass
                 config-opts:
                   - --disable-static
                 sources:
                   - type: archive
-                    url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.gz
-                    sha256: d653be97198a0543c69111122173c41a99e0b91426f9e17f06a858982c2fb03d
+                    url: https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.gz
+                    sha256: da7c348deb6fa6c24507afab2dee7545ba5dd5bbf90a137bfe9e738f7df68537
                     x-checker-data:
                       type: anitya
                       project-id: 1560
@@ -315,8 +230,8 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2024.03.10.tar.gz
-            sha256: 079dbf54586e8120c7d76e0dd1b7a60e6c13f4d23f9681fc919577f2fe17d8cd
+            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2024.11.04.tar.gz
+            sha256: b4b72700b4a7cea6fdb327580921bc7ddd317a2380230e23ec412651670e2947
             x-checker-data:
               type: anitya
               project-id: 143399
