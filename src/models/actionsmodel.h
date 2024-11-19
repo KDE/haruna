@@ -20,7 +20,7 @@ struct Action {
     QString name;
     QString text;
     QString iconName;
-    QString shortcut;
+    QKeySequence shortcut;
     QKeySequence defaultShortcut;
     QString description;
     QString type = QStringLiteral("NormalAction");
@@ -38,7 +38,7 @@ public:
 public Q_SLOTS:
     void setNameFilter(const QString &regExp);
     void setTypeFilter(const QString &regExp);
-    bool saveShortcut(int row, const QVariant &shortcut);
+    bool saveShortcut(int row, QKeySequence keySequence);
 
 private:
     QRegularExpression nameRegExp;
@@ -68,15 +68,15 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     void appendCustomAction(const Action &action);
     void editCustomAction(const QString &name, const QString &text, const QString &description);
-    Q_INVOKABLE bool saveShortcut(const QString &name, const QVariant &shortcut);
-    Q_INVOKABLE bool saveShortcut(int row, const QVariant &shortcut);
-    Q_INVOKABLE QString getShortcut(const QString &key, const QKeySequence &defaultValue) const;
+    Q_INVOKABLE bool saveShortcut(const QString &name, QKeySequence keySequence);
+    Q_INVOKABLE bool saveShortcut(int row, QKeySequence keySequence);
+    Q_INVOKABLE QKeySequence getShortcut(const QString &key, const QKeySequence &defaultValue) const;
     Q_INVOKABLE void signalEmitter(const QString &actionName);
 
     QList<Action> &actions();
 
 Q_SIGNALS:
-    void shortcutChanged(const QString &actionName, const QString &actionShortcut);
+    void shortcutChanged(const QString &actionName, const QKeySequence &actionShortcut);
     void openActionsDialogAction();
     void aboutHarunaAction();
     void reportBugAction();

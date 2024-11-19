@@ -603,30 +603,29 @@ void ActionsModel::editCustomAction(const QString &name, const QString &text, co
     }
 }
 
-bool ActionsModel::saveShortcut(const QString &name, const QVariant &shortcut)
+bool ActionsModel::saveShortcut(const QString &name, QKeySequence keySequence)
 {
     for (int i{0}; i < m_actions.count(); ++i) {
         if (m_actions[i].name == name) {
-            return saveShortcut(i, shortcut);
+            return saveShortcut(i, keySequence);
         }
     }
     return false;
 }
 
-bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
+bool ActionsModel::saveShortcut(int row, QKeySequence keySequence)
 {
     auto group = m_config->group(QStringLiteral("Shortcuts"));
-    auto shortcutString = shortcut.value<QKeySequence>().toString(QKeySequence::PortableText);
     // action whose shortcut is changed
     auto action = &m_actions[row];
 
     // if shortcut is being cleared, no need to search for a conflict
-    if (!shortcut.toString().isEmpty()) {
+    if (!keySequence.isEmpty()) {
         // if shortcut is used, this is the action holding the shortcut
         Action *result = nullptr;
         int i{0};
         for (; i < m_actions.count(); ++i) {
-            if (m_actions[i].shortcut == shortcutString) {
+            if (m_actions[i].shortcut == keySequence) {
                 result = &m_actions[i];
                 break;
             }
@@ -641,8 +640,8 @@ bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
             // ask user what whether to reassign or to cancel
             if (keyConflictMessageBox(result->text)) {
                 // user chose reassign, remove shortcut from action holding it
-                result->shortcut = QString();
-                group.writeEntry(result->name, result->shortcut);
+                result->shortcut = QKeySequence{};
+                group.writeEntry(result->name, QString{});
                 Q_EMIT shortcutChanged(result->name, result->shortcut);
                 Q_EMIT dataChanged(index(i, 0), index(i, 0));
             } else {
@@ -652,19 +651,20 @@ bool ActionsModel::saveShortcut(int row, const QVariant &shortcut)
         }
     }
     // set shortcut on the action being changed
-    action->shortcut = shortcutString;
-    group.writeEntry(action->name, action->shortcut);
+    action->shortcut = keySequence;
+    group.writeEntry(action->name, action->shortcut.toString(QKeySequence::PortableText));
     Q_EMIT shortcutChanged(action->name, action->shortcut);
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
 
     return group.sync();
 }
 
-QString ActionsModel::getShortcut(const QString &key, const QKeySequence &defaultValue) const
+QKeySequence ActionsModel::getShortcut(const QString &key, const QKeySequence &defaultValue) const
 {
     auto v = defaultValue.toString(QKeySequence::PortableText);
     auto group = m_config->group(QStringLiteral("Shortcuts"));
-    return group.readEntry(key, v);
+    QKeySequence keySequence(group.readEntry(key, v), QKeySequence::PortableText);
+    return keySequence;
 }
 
 bool ActionsModel::keyConflictMessageBox(const QString &actionText)
@@ -729,10 +729,10 @@ void ProxyActionsModel::setTypeFilter(const QString &regExp)
     invalidateFilter();
 }
 
-bool ProxyActionsModel::saveShortcut(int row, const QVariant &shortcut)
+bool ProxyActionsModel::saveShortcut(int row, QKeySequence keySequence)
 {
     auto actionsModel = qobject_cast<ActionsModel *>(sourceModel());
-    return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), shortcut);
+    return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), keySequence);
 }
 
 #include "moc_actionsmodel.cpp"

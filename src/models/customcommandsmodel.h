@@ -10,6 +10,7 @@
 #include <KSharedConfig>
 
 #include <QAbstractListModel>
+#include <QKeySequence>
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>
 
@@ -26,7 +27,7 @@ class CustomCommandsModel : public QAbstractListModel
         QString commandId;
         QString command;
         QString osdMessage;
-        QString shortcut;
+        QKeySequence shortcut;
         QString type;
         bool setOnStartup{true};
         int order{-1};

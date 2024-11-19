@@ -72,8 +72,12 @@ SettingsBasePage {
                     modifierlessAllowed: true
                     keySequence: delegate.actionShortcut
 
-                    onKeySequenceChanged: {
-                        if (keySequence !== delegate.actionShortcut) {
+                    onKeySequenceModified: {
+                        if (keySequence.toString() === "" ) {
+                            return
+                        }
+
+                        if (keySequence.toString() !== delegate.actionShortcut) {
                             if (!proxyActionsModel.saveShortcut(delegate.index, keySequence)) {
                                 keySequence = delegate.actionShortcut
                             }

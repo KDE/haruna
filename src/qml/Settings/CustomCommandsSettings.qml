@@ -110,7 +110,10 @@ SettingsBasePage {
                             modifierlessAllowed: true
                             keySequence: delegate.shortcut
 
-                            onKeySequenceChanged: {
+                            onKeySequenceModified: {
+                                if (keySequence.toString() === "" ) {
+                                    return
+                                }
                                 if (keySequence !== delegate.shortcut) {
                                     // use action name (commandId) since this changes the actionsModel
                                     if (!actionsModel.saveShortcut(delegate.commandId, keySequence)) {

@@ -70,7 +70,7 @@ QHash<int, QByteArray> CustomCommandsModel::roleNames() const
 
 void CustomCommandsModel::init()
 {
-    connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [=](const QString &name, const QString &shortcut) {
+    connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [=](const QString &name, const QKeySequence &shortcut) {
         for (int i{0}; i < m_customCommands.count(); ++i) {
             if (m_customCommands[i].commandId == name) {
                 m_customCommands[i].shortcut = shortcut;
