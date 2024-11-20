@@ -33,10 +33,11 @@
 #include "worker.h"
 
 #if defined(Q_OS_UNIX)
+#include <QDBusConnection>
+
 #include "lockmanager.h"
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
-#include <QDBusConnection>
 #endif
 
 using namespace Qt::StringLiterals;

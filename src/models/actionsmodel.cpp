@@ -6,10 +6,10 @@
 
 #include "actionsmodel.h"
 
-#include <KConfigGroup>
-
 #include <QMessageBox>
 #include <QPushButton>
+
+#include <KConfigGroup>
 
 #include "global.h"
 

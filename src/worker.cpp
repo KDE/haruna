@@ -6,10 +6,6 @@
 
 #include "worker.h"
 
-#include "application.h"
-#include "framedecoder.h"
-#include "generalsettings.h"
-
 #include <QCryptographicHash>
 #include <QDir>
 #include <QFileInfo>
@@ -22,6 +18,10 @@
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 #include <KWindowConfig>
+
+#include "application.h"
+#include "framedecoder.h"
+#include "generalsettings.h"
 
 using namespace Qt::StringLiterals;
 

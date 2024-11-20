@@ -6,11 +6,11 @@
 
 #include "recentfilesmodel.h"
 
-#include <KSharedConfig>
-
 #include <QJsonDocument>
 #include <QMenu>
 #include <QProcess>
+
+#include <KSharedConfig>
 
 #include "application.h"
 #include "generalsettings.h"

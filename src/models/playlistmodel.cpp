@@ -6,13 +6,6 @@
 
 #include "playlistmodel.h"
 
-#include <KFileItem>
-#include <KFileMetaData/Properties>
-#include <KIO/DeleteOrTrashJob>
-#include <KIO/OpenFileManagerWindowJob>
-#include <KIO/RenameFileDialog>
-#include <kio_version.h>
-
 #include <QClipboard>
 #include <QCollator>
 #include <QDirIterator>
@@ -22,6 +15,13 @@
 #include <QJsonDocument>
 #include <QJsonValue>
 #include <QProcess>
+
+#include <KFileItem>
+#include <KFileMetaData/Properties>
+#include <KIO/DeleteOrTrashJob>
+#include <KIO/OpenFileManagerWindowJob>
+#include <KIO/RenameFileDialog>
+#include <kio_version.h>
 
 #include "application.h"
 #include "generalsettings.h"

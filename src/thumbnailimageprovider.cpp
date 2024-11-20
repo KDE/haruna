@@ -6,11 +6,11 @@
 
 #include "thumbnailimageprovider.h"
 
-#include "application.h"
-#include "worker.h"
-
 #include <QFile>
 #include <QIcon>
+
+#include "application.h"
+#include "worker.h"
 
 using namespace Qt::StringLiterals;
 

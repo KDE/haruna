@@ -8,8 +8,9 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#include <KSharedConfig>
 #include <QStandardPaths>
+
+#include <KSharedConfig>
 
 class Global : public QObject
 {

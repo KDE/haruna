@@ -9,8 +9,6 @@
 
 #include <QString>
 
-class QImage;
-
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavfilter/avfilter.h>
@@ -18,6 +16,8 @@ extern "C" {
 #include <libavfilter/buffersrc.h>
 #include <libavformat/avformat.h>
 }
+
+class QImage;
 
 class FrameDecoder
 {

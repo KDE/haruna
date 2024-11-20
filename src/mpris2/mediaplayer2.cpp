@@ -6,9 +6,9 @@
 
 #include "mediaplayer2.h"
 
-#include <KAboutData>
-
 #include <QApplication>
+
+#include <KAboutData>
 
 using namespace Qt::StringLiterals;
 

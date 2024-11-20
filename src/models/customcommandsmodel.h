@@ -7,12 +7,12 @@
 #ifndef CUSTOMCOMMANDSMODEL_H
 #define CUSTOMCOMMANDSMODEL_H
 
-#include <KSharedConfig>
-
 #include <QAbstractListModel>
 #include <QKeySequence>
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>
+
+#include <KSharedConfig>
 
 class ActionsModel;
 

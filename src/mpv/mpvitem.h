@@ -8,6 +8,7 @@
 #define MPVOBJECT_H
 
 #include <MpvAbstractItem>
+
 #include <memory>
 
 class ChaptersModel;

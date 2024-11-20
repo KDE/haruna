@@ -6,14 +6,14 @@
 
 #include "mediaplayer2player.h"
 
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
-
 #include <QBuffer>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusObjectPath>
 #include <QImage>
+
+#include <KFileMetaData/ExtractorCollection>
+#include <KFileMetaData/SimpleExtractionResult>
 
 #include "application.h"
 #include "mpvitem.h"

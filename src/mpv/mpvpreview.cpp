@@ -6,8 +6,9 @@
 
 #include "mpvpreview.h"
 
-#include <MpvController>
 #include <QMimeDatabase>
+
+#include <MpvController>
 
 #include "generalsettings.h"
 #include "mpvproperties.h"

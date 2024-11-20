@@ -5,11 +5,12 @@
  */
 
 #include "lockmanager.h"
-#include "screensaverdbusinterface.h"
+
+#include <QDBusConnection>
 
 #include <KLocalizedString>
 
-#include <QDBusConnection>
+#include "screensaverdbusinterface.h"
 
 using namespace Qt::StringLiterals;
 

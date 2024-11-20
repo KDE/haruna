@@ -6,21 +6,6 @@
 
 #include "application.h"
 
-#include "audiosettings.h"
-#include "generalsettings.h"
-#include "global.h"
-#include "haruna-version.h"
-#include "informationsettings.h"
-#include "mousesettings.h"
-#include "mpvitem.h"
-#include "mpvpreview.h"
-#include "mpvproperties.h"
-#include "playbacksettings.h"
-#include "playlistsettings.h"
-#include "subtitlessettings.h"
-#include "videosettings.h"
-#include "worker.h"
-
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDesktopServices>
@@ -45,6 +30,19 @@
 #include <KLocalizedString>
 #include <KWindowConfig>
 #include <KWindowSystem>
+
+#include "audiosettings.h"
+#include "generalsettings.h"
+#include "global.h"
+#include "haruna-version.h"
+#include "informationsettings.h"
+#include "mousesettings.h"
+#include "mpvproperties.h"
+#include "playbacksettings.h"
+#include "playlistsettings.h"
+#include "subtitlessettings.h"
+#include "videosettings.h"
+#include "worker.h"
 
 using namespace Qt::StringLiterals;
 

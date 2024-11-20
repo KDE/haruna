@@ -4,12 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "application.h"
-#include "generalsettings.h"
-#include "kdsingleapplication.h"
-#include "qqmlpropertymap.h"
-#include "thumbnailimageprovider.h"
-
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
@@ -19,6 +13,12 @@
 #include <QQuickWindow>
 
 #include <KLocalizedString>
+
+#include "application.h"
+#include "generalsettings.h"
+#include "kdsingleapplication.h"
+#include "qqmlpropertymap.h"
+#include "thumbnailimageprovider.h"
 
 using namespace Qt::StringLiterals;
 
