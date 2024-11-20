@@ -58,12 +58,16 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> TracksModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
-    roles[TextRole] = "displayText";
-    roles[LanguageRole] = "language";
-    roles[TitleRole] = "title";
-    roles[IdRole] = "trackId";
-    roles[CodecRole] = "codec";
+    // clang-format off
+    QHash<int, QByteArray> roles{
+        {TextRole,     QByteArrayLiteral("displayText")},
+        {LanguageRole, QByteArrayLiteral("language")},
+        {TitleRole,    QByteArrayLiteral("title")},
+        {IdRole,       QByteArrayLiteral("trackId")},
+        {CodecRole,    QByteArrayLiteral("codec")},
+    };
+    // clang-format on
+
     return roles;
 }
 

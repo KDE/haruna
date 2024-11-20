@@ -60,13 +60,17 @@ QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> CustomCommandsModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
-    roles[CommandIdRole] = "commandId";
-    roles[OsdMessageRole] = "osdMessage";
-    roles[CommandRole] = "command";
-    roles[TypeRole] = "type";
-    roles[ShortcutRole] = "shortcut";
-    roles[SetOnStartupRole] = "setOnStartup";
+    // clang-format off
+    QHash<int, QByteArray> roles{
+        {CommandIdRole,    QByteArrayLiteral("commandId")},
+        {OsdMessageRole,   QByteArrayLiteral("osdMessage")},
+        {CommandRole,      QByteArrayLiteral("command")},
+        {TypeRole,         QByteArrayLiteral("type")},
+        {ShortcutRole,     QByteArrayLiteral("shortcut")},
+        {SetOnStartupRole, QByteArrayLiteral("setOnStartup")},
+    };
+    // clang-format on
+
     return roles;
 }
 

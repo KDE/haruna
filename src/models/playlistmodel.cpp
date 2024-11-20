@@ -85,15 +85,18 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> PlaylistModel::roleNames() const
 {
+    // clang-format off
     QHash<int, QByteArray> roles = {
-        {NameRole, "name"},
-        {TitleRole, "title"},
-        {PathRole, "path"},
-        {FolderPathRole, "folderPath"},
-        {DurationRole, "duration"},
-        {PlayingRole, "isPlaying"},
-        {IsLocalRole, "isLocal"},
+        {NameRole,       QByteArrayLiteral("name")},
+        {TitleRole,      QByteArrayLiteral("title")},
+        {PathRole,       QByteArrayLiteral("path")},
+        {FolderPathRole, QByteArrayLiteral("folderPath")},
+        {DurationRole,   QByteArrayLiteral("duration")},
+        {PlayingRole,    QByteArrayLiteral("isPlaying")},
+        {IsLocalRole,    QByteArrayLiteral("isLocal")},
     };
+    // clang-format on
+
     return roles;
 }
 

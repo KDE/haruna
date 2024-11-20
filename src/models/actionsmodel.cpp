@@ -575,14 +575,18 @@ QVariant ActionsModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> ActionsModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
-    roles[NameRole] = "actionName";
-    roles[TextRole] = "actionText";
-    roles[IconRole] = "actionIcon";
-    roles[ShortcutRole] = "actionShortcut";
-    roles[DefaultShortcutRole] = "actionDefaultShortcut";
-    roles[DescriptionRole] = "actionDescription";
-    roles[TypeRole] = "actionType";
+    // clang-format off
+    QHash<int, QByteArray> roles{
+        {NameRole,            QByteArrayLiteral("actionName")},
+        {TextRole,            QByteArrayLiteral("actionText")},
+        {IconRole,            QByteArrayLiteral("actionIcon")},
+        {ShortcutRole,        QByteArrayLiteral("actionShortcut")},
+        {DefaultShortcutRole, QByteArrayLiteral("actionDefaultShortcut")},
+        {DescriptionRole,     QByteArrayLiteral("actionDescription")},
+        {TypeRole,            QByteArrayLiteral("actionType")},
+    };
+    // clang-format on
+
     return roles;
 }
 

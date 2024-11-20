@@ -56,9 +56,10 @@ QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> RecentFilesModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
-    roles[PathRole] = "path";
-    roles[NameRole] = "name";
+    QHash<int, QByteArray> roles{
+        {PathRole, QByteArrayLiteral("path")},
+        {NameRole, QByteArrayLiteral("name")},
+    };
 
     return roles;
 }

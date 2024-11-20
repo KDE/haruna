@@ -41,9 +41,13 @@ QVariant ChaptersModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> ChaptersModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
-    roles[TitleRole] = "title";
-    roles[StartTimeRole] = "startTime";
+    // clang-format off
+    QHash<int, QByteArray> roles{
+        {TitleRole,     QByteArrayLiteral("title")},
+        {StartTimeRole, QByteArrayLiteral("startTime")},
+    };
+    // clang-format on
+
     return roles;
 }
 
