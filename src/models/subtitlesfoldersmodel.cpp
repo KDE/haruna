@@ -9,7 +9,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 
-#include "global.h"
 #include "subtitlessettings.h"
 
 SubtitlesFoldersModel::SubtitlesFoldersModel(QObject *parent)
