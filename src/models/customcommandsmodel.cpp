@@ -11,6 +11,8 @@
 #include "actionsmodel.h"
 #include "global.h"
 
+using namespace Qt::StringLiterals;
+
 CustomCommandsModel::CustomCommandsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -96,13 +98,13 @@ void CustomCommandsModel::init()
         c.order = configGroup.readEntry("Order", 0);
         c.setOnStartup = configGroup.readEntry("SetOnStartup", true);
         m_customCommands << c;
-        if (c.type == QStringLiteral("shortcut")) {
+        if (c.type == u"shortcut"_s) {
             Action action;
             action.name = c.commandId;
             action.text = c.command;
             action.description = c.osdMessage;
             action.shortcut = c.shortcut;
-            action.type = QStringLiteral("CustomAction");
+            action.type = u"CustomAction"_s;
             appActionsModel()->appendCustomAction(action);
         }
     }
@@ -139,17 +141,17 @@ bool CustomCommandsModel::moveRows(const QModelIndex &sourceParent, int sourceRo
 void CustomCommandsModel::saveCustomCommand(const QString &command, const QString &osdMessage, const QString &type)
 {
     int counter = m_customCommandsConfig->group(QString()).readEntry("Counter", 0);
-    const QString &groupName = QString(QStringLiteral("Command_%1")).arg(counter);
+    const QString &groupName = QString(u"Command_%1"_s).arg(counter);
 
     if (m_customCommandsConfig->group(groupName).exists()) {
         return;
     }
 
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Order"), rowCount());
-    m_customCommandsConfig->group(QString()).writeEntry(QStringLiteral("Counter"), counter + 1);
+    m_customCommandsConfig->group(groupName).writeEntry("Command", command);
+    m_customCommandsConfig->group(groupName).writeEntry("OsdMessage", osdMessage);
+    m_customCommandsConfig->group(groupName).writeEntry("Type", type);
+    m_customCommandsConfig->group(groupName).writeEntry("Order", rowCount());
+    m_customCommandsConfig->group(QString()).writeEntry("Counter", counter + 1);
     m_customCommandsConfig->sync();
 
     beginInsertRows(QModelIndex(), rowCount(), rowCount());
@@ -161,13 +163,13 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
     m_customCommands << c;
     endInsertRows();
 
-    if (c.type == QStringLiteral("shortcut")) {
+    if (c.type == u"shortcut"_s) {
         Action action;
         action.name = c.commandId;
         action.text = c.command;
         action.description = c.osdMessage;
         action.shortcut = appActionsModel()->getShortcut(action.name, QString());
-        action.type = QStringLiteral("CustomAction");
+        action.type = u"CustomAction"_s;
         appActionsModel()->appendCustomAction(action);
     }
 }
@@ -180,13 +182,13 @@ void CustomCommandsModel::editCustomCommand(int row, const QString &command, con
     c.type = type;
 
     QString groupName = c.commandId;
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Command"), command);
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("OsdMessage"), osdMessage);
-    m_customCommandsConfig->group(groupName).writeEntry(QStringLiteral("Type"), type);
+    m_customCommandsConfig->group(groupName).writeEntry("Command", command);
+    m_customCommandsConfig->group(groupName).writeEntry("OsdMessage", osdMessage);
+    m_customCommandsConfig->group(groupName).writeEntry("Type", type);
     m_customCommandsConfig->sync();
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
-    if (c.type == QStringLiteral("shortcut")) {
+    if (c.type == u"shortcut"_s) {
         appActionsModel()->editCustomAction(c.commandId, c.command, c.osdMessage);
     }
 }
@@ -215,7 +217,7 @@ void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
     endRemoveRows();
 
     KSharedConfig::Ptr config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
-    config->group(QStringLiteral("Shortcuts")).deleteEntry(groupName);
+    config->group(u"Shortcuts"_s).deleteEntry(groupName);
     config->sync();
 }
 

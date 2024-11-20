@@ -12,9 +12,11 @@
 #include "generalsettings.h"
 #include "mpvproperties.h"
 
+using namespace Qt::StringLiterals;
+
 MpvPreview::MpvPreview()
 {
-    Q_EMIT setProperty(MpvProperties::self()->VO, QStringLiteral("libmpv"));
+    Q_EMIT setProperty(MpvProperties::self()->VO, u"libmpv"_s);
     Q_EMIT observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
     Q_EMIT observeProperty(MpvProperties::self()->AspectRatio, MPV_FORMAT_DOUBLE);
 
@@ -22,7 +24,7 @@ MpvPreview::MpvPreview()
     Q_EMIT setProperty(MpvProperties::self()->Pause, true);
     Q_EMIT setProperty(MpvProperties::self()->ReallyQuiet, true);
 
-    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, QStringLiteral("auto-safe"));
+    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, u"auto-safe"_s);
     Q_EMIT setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
     Q_EMIT setProperty(MpvProperties::self()->AudioId, false);
     Q_EMIT setProperty(MpvProperties::self()->AudioFileAuto, false);
@@ -49,7 +51,7 @@ MpvPreview::MpvPreview()
 void MpvPreview::loadFile()
 {
     if (m_isReady && m_isVideo && !m_file.isEmpty()) {
-        Q_EMIT command(QStringList() << QStringLiteral("loadfile") << m_file);
+        Q_EMIT command(QStringList() << u"loadfile"_s << m_file);
     }
 }
 
@@ -87,7 +89,7 @@ void MpvPreview::setFile(const QString &_file)
 
     QMimeDatabase mimeDb;
     QString mimeType = mimeDb.mimeTypeForFile(m_file).name();
-    setIsVideo(mimeType.startsWith(u"video/"_qs));
+    setIsVideo(mimeType.startsWith(u"video/"_s));
 
     Q_EMIT fileChanged();
 }
@@ -121,8 +123,6 @@ void MpvPreview::setIsLocalFile(bool _isLocalFile)
     Q_EMIT isLocalFileChanged();
 }
 
-#include "moc_mpvpreview.cpp"
-
 bool MpvPreview::isVideo() const
 {
     return m_isVideo;
@@ -136,3 +136,5 @@ void MpvPreview::setIsVideo(bool _isVideo)
     m_isVideo = _isVideo;
     Q_EMIT isVideoChanged();
 }
+
+#include "moc_mpvpreview.cpp"

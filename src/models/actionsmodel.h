@@ -16,6 +16,8 @@
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>
 
+using namespace Qt::StringLiterals;
+
 struct Action {
     QString name;
     QString text;
@@ -23,7 +25,7 @@ struct Action {
     QKeySequence shortcut;
     QKeySequence defaultShortcut;
     QString description;
-    QString type = QStringLiteral("NormalAction");
+    QString type = u"NormalAction"_s;
 };
 
 class ProxyActionsModel : public QSortFilterProxyModel

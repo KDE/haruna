@@ -21,6 +21,8 @@
 #include "videosettings.h"
 #include "worker.h"
 
+using namespace Qt::StringLiterals;
+
 MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     : QDBusAbstractAdaptor(parent)
     , m_mpv{static_cast<MpvItem *>(parent)}
@@ -35,32 +37,32 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
 
     connect(Worker::instance(), &Worker::mprisThumbnailSuccess, this, [=](const QImage &image) {
         m_image = image;
-        propertiesChanged(QStringLiteral("Metadata"), Metadata());
+        propertiesChanged(u"Metadata"_s, Metadata());
         Q_EMIT metadataChanged();
     });
 
     connect(m_mpv, &MpvItem::mediaTitleChanged, this, [=]() {
         auto title = m_mpv->mediaTitle();
-        if (title.isEmpty() || title.startsWith(QStringLiteral("watch"))) {
+        if (title.isEmpty() || title.startsWith(u"watch"_s)) {
             return;
         }
         m_image = QImage();
-        propertiesChanged(QStringLiteral("Metadata"), Metadata());
+        propertiesChanged(u"Metadata"_s, Metadata());
         Q_EMIT metadataChanged();
     });
 
     connect(m_mpv, &MpvItem::durationChanged, this, [=]() {
-        m_metadata.insert(QStringLiteral("mpris:length"), m_mpv->duration() * 1000 * 1000);
-        propertiesChanged(QStringLiteral("Metadata"), m_metadata);
+        m_metadata.insert(u"mpris:length"_s, m_mpv->duration() * 1000 * 1000);
+        propertiesChanged(u"Metadata"_s, m_metadata);
     });
 
     connect(m_mpv, &MpvItem::pauseChanged, this, [=]() {
-        propertiesChanged(QStringLiteral("PlaybackStatus"), PlaybackStatus());
+        propertiesChanged(u"PlaybackStatus"_s, PlaybackStatus());
         Q_EMIT playbackStatusChanged();
     });
 
     connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
-        propertiesChanged(QStringLiteral("Volume"), Volume());
+        propertiesChanged(u"Volume"_s, Volume());
         Q_EMIT volumeChanged();
     });
 }
@@ -70,10 +72,8 @@ void MediaPlayer2Player::propertiesChanged(const QString &property, const QVaria
     QVariantMap properties;
     properties[property] = value;
 
-    QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/mpris/MediaPlayer2"),
-                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
-                                                  QStringLiteral("PropertiesChanged"));
-    msg << QStringLiteral("org.mpris.MediaPlayer2.Player") << properties << QStringList();
+    QDBusMessage msg = QDBusMessage::createSignal(u"/org/mpris/MediaPlayer2"_s, u"org.freedesktop.DBus.Properties"_s, u"PropertiesChanged"_s);
+    msg << u"org.mpris.MediaPlayer2.Player"_s << properties << QStringList();
 
     QDBusConnection::sessionBus().send(msg);
 }
@@ -82,10 +82,10 @@ QVariantMap MediaPlayer2Player::Metadata()
 {
     auto url = m_mpv->currentUrl();
 
-    m_metadata.insert(QStringLiteral("xesam:title"), m_mpv->mediaTitle());
-    m_metadata.insert(QStringLiteral("mpris:trackid"), QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(QStringLiteral("/org/kde/haruna"))));
-    m_metadata.insert(QStringLiteral("mpris:artUrl"), getThumbnail(url.toLocalFile()));
-    m_metadata.insert(QStringLiteral("xesam:url"), url.toString());
+    m_metadata.insert(u"xesam:title"_s, m_mpv->mediaTitle());
+    m_metadata.insert(u"mpris:trackid"_s, QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(u"/org/kde/haruna"_s)));
+    m_metadata.insert(u"mpris:artUrl"_s, getThumbnail(url.toLocalFile()));
+    m_metadata.insert(u"xesam:url"_s, url.toString());
 
     return m_metadata;
 }
@@ -105,7 +105,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
     if (extractors.size() > 0) {
         KFileMetaData::Extractor *ex = extractors.first();
         ex->extract(&result);
-        QString base64 = QStringLiteral("data:image/png;base64,");
+        QString base64 = u"data:image/png;base64,"_s;
         auto imageData = result.imageData();
         if (!imageData.isEmpty()) {
             // look for image inside the file
@@ -187,7 +187,7 @@ QString MediaPlayer2Player::PlaybackStatus()
     bool isPaused = m_mpv->pause();
     double position = m_mpv->position();
 
-    return isPaused && position == 0 ? QStringLiteral("Stopped") : (isPaused ? QStringLiteral("Paused") : QStringLiteral("Playing"));
+    return isPaused && position == 0 ? u"Stopped"_s : (isPaused ? u"Paused"_s : u"Playing"_s);
 }
 
 double MediaPlayer2Player::Volume()

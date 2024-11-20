@@ -11,13 +11,12 @@
 
 #include <QDBusConnection>
 
+using namespace Qt::StringLiterals;
+
 LockManager::LockManager(QObject *parent)
     : QObject(parent)
 {
-    m_iface = new OrgFreedesktopScreenSaverInterface(QStringLiteral("org.freedesktop.ScreenSaver"),
-                                                     QStringLiteral("/org/freedesktop/ScreenSaver"),
-                                                     QDBusConnection::sessionBus(),
-                                                     this);
+    m_iface = new OrgFreedesktopScreenSaverInterface(u"org.freedesktop.ScreenSaver"_s, u"/org/freedesktop/ScreenSaver"_s, QDBusConnection::sessionBus(), this);
 }
 
 void LockManager::setInhibitionOff()
@@ -31,7 +30,7 @@ void LockManager::setInhibitionOn()
     if (m_cookie != -1) {
         setInhibitionOff();
     }
-    m_cookie = m_iface->Inhibit(QStringLiteral("org.kde.haruna"), i18nc("@info reason for blocking sleep and screen slocking", "Playing media file"));
+    m_cookie = m_iface->Inhibit(u"org.kde.haruna"_s, i18nc("@info reason for blocking sleep and screen slocking", "Playing media file"));
 }
 
 #include "moc_lockmanager.cpp"

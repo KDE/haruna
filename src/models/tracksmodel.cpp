@@ -6,6 +6,8 @@
 
 #include "tracksmodel.h"
 
+using namespace Qt::StringLiterals;
+
 TracksModel::TracksModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -27,28 +29,28 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case TextRole: {
         QString text;
-        auto title = track[QStringLiteral("title")].toString();
+        auto title = track[u"title"_s].toString();
         if (!title.isEmpty()) {
-            text += title.append(QStringLiteral(" "));
+            text += title.append(u" "_s);
         }
-        auto lang = track[QStringLiteral("lang")].toString();
+        auto lang = track[u"lang"_s].toString();
         if (!lang.isEmpty()) {
-            text += lang.append(QStringLiteral(" "));
+            text += lang.append(u" "_s);
         }
-        auto codec = track[QStringLiteral("codec")].toString();
+        auto codec = track[u"codec"_s].toString();
         if (!codec.isEmpty()) {
             text += codec;
         }
         return text;
     }
     case LanguageRole:
-        return track[QStringLiteral("lang")];
+        return track[u"lang"_s];
     case TitleRole:
-        return track[QStringLiteral("title")];
+        return track[u"title"_s];
     case IdRole:
-        return track[QStringLiteral("id")];
+        return track[u"id"_s];
     case CodecRole:
-        return track[QStringLiteral("codec")];
+        return track[u"codec"_s];
     }
 
     return QVariant();

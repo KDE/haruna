@@ -20,27 +20,29 @@
 
 #include <KLocalizedString>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char *argv[])
 {
-    qSetMessagePattern(QStringLiteral("%{function}() : %{message}\n"));
+    qSetMessagePattern(u"%{function}() : %{message}\n"_s);
 
-    QApplication::setOrganizationName(QStringLiteral("KDE"));
-    QApplication::setApplicationName(QStringLiteral("Haruna"));
-    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
-    QApplication::setApplicationDisplayName(QStringLiteral("Haruna - Media Player"));
+    QApplication::setOrganizationName(u"KDE"_s);
+    QApplication::setApplicationName(u"Haruna"_s);
+    QApplication::setOrganizationDomain(u"kde.org"_s);
+    QApplication::setApplicationDisplayName(u"Haruna - Media Player"_s);
     QApplication::setApplicationVersion(Application::version());
 
     // required by mpv
     QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
 
-    QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
-    QQuickStyle::setFallbackStyle(QStringLiteral("Fusion"));
+    QQuickStyle::setStyle(u"org.kde.desktop"_s);
+    QQuickStyle::setFallbackStyle(u"Fusion"_s);
     if (GeneralSettings::useBreezeIconTheme()) {
-        QIcon::setThemeName(QStringLiteral("breeze"));
+        QIcon::setThemeName(u"breeze"_s);
     }
 
     QApplication qApplication(argc, argv);
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("haruna")));
+    QApplication::setWindowIcon(QIcon::fromTheme(u"haruna"_s));
     KLocalizedString::setApplicationDomain("haruna");
 
     auto application = Application::instance();
@@ -63,11 +65,11 @@ int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine(&qApplication);
-    engine.addImageProvider(QStringLiteral("thumbnail"), new ThumbnailImageProvider());
-    engine.rootContext()->setContextProperty(QStringLiteral("app"), Application::instance());
-    engine.rootContext()->setContextProperty(QStringLiteral("appActions"), new QQmlPropertyMap);
+    engine.addImageProvider(u"thumbnail"_s, new ThumbnailImageProvider());
+    engine.rootContext()->setContextProperty(u"app"_s, Application::instance());
+    engine.rootContext()->setContextProperty(u"appActions"_s, new QQmlPropertyMap);
     engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
-    engine.rootContext()->setContextProperty(QStringLiteral("harunaAboutData"), QVariant::fromValue(KAboutData::applicationData()));
+    engine.rootContext()->setContextProperty(u"harunaAboutData"_s, QVariant::fromValue(KAboutData::applicationData()));
     engine.loadFromModule("org.kde.haruna", "Main");
 
     application->setQmlEngine(&engine);

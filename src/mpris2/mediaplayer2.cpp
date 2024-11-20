@@ -10,6 +10,8 @@
 
 #include <QApplication>
 
+using namespace Qt::StringLiterals;
+
 MediaPlayer2::MediaPlayer2(QObject *obj)
     : QDBusAbstractAdaptor(obj)
 {
@@ -42,7 +44,7 @@ bool MediaPlayer2::HasTrackList() const
 
 QString MediaPlayer2::Identity() const
 {
-    return QStringLiteral("Haruna");
+    return u"Haruna"_s;
 }
 
 QString MediaPlayer2::DesktopEntry() const
@@ -52,12 +54,12 @@ QString MediaPlayer2::DesktopEntry() const
 
 QStringList MediaPlayer2::SupportedUriSchemes() const
 {
-    return QStringList() << QStringLiteral("file") << QStringLiteral("http") << QStringLiteral("https");
+    return QStringList() << u"file"_s << u"http"_s << u"https"_s;
 }
 
 QStringList MediaPlayer2::SupportedMimeTypes() const
 {
-    return QStringList() << QStringLiteral("video/*") << QStringLiteral("audio/*");
+    return QStringList() << u"video/*"_s << u"audio/*"_s;
 }
 
 #include "moc_mediaplayer2.cpp"

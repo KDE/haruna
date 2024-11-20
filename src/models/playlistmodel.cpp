@@ -28,6 +28,8 @@
 #include "playlistsettings.h"
 #include "worker.h"
 
+using namespace Qt::StringLiterals;
+
 PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -75,7 +77,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case FolderPathRole:
         return QVariant(item.folderPath);
     case IsLocalRole:
-        return QVariant(!item.url.scheme().startsWith(QStringLiteral("http")));
+        return QVariant(!item.url.scheme().startsWith(u"http"_s));
     }
 
     return QVariant();
@@ -119,10 +121,10 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
         clear();
     }
 
-    if (url.scheme() == QStringLiteral("file")) {
+    if (url.scheme() == u"file"_s) {
         auto mimeType = Application::mimeType(url);
 
-        if (mimeType == QStringLiteral("audio/x-mpegurl")) {
+        if (mimeType == u"audio/x-mpegurl"_s) {
             m_playlistPath = url.toString();
             addM3uItems(url);
             return;
@@ -144,7 +146,7 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
         }
     }
 
-    if (url.scheme() == QStringLiteral("http") || url.scheme() == QStringLiteral("https")) {
+    if (url.scheme() == u"http"_s || url.scheme() == u"https"_s) {
         if (Application::isYoutubePlaylist(url.toString())) {
             m_playlistPath = url.toString();
             getYouTubePlaylist(url, behaviour);
@@ -169,7 +171,7 @@ void PlaylistModel::appendItem(const QUrl &url)
         item.filename = itemInfo.fileName();
         item.folderPath = itemInfo.absolutePath();
     } else {
-        if (url.scheme().startsWith(QStringLiteral("http"))) {
+        if (url.scheme().startsWith(u"http"_s)) {
             item.url = url;
             item.filename = url.toString();
             // causes issues with lots of links
@@ -239,7 +241,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
 
 void PlaylistModel::addM3uItems(const QUrl &url)
 {
-    if (url.scheme() != QStringLiteral("file") || Application::mimeType(url) != QStringLiteral("audio/x-mpegurl")) {
+    if (url.scheme() != u"file"_s || Application::mimeType(url) != u"audio/x-mpegurl"_s) {
         return;
     }
 
@@ -284,25 +286,25 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
 {
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = std::make_shared<QProcess>();
-    auto args = QStringList() << QStringLiteral("-J") << QStringLiteral("--flat-playlist") << url.toString();
+    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << url.toString();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(args);
     ytdlProcess->start();
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("entries")];
-        // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
+        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[u"entries"_s];
+        // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[u"title")].toString();
         if (entries.toArray().isEmpty()) {
             return;
         }
 
         bool matchFound{false};
         for (int i = 0; i < entries.toArray().size(); ++i) {
-            auto id = entries[i][QStringLiteral("id")].toString();
-            auto url = QStringLiteral("https://youtu.be/%1").arg(entries[i][QStringLiteral("id")].toString());
-            auto title = entries[i][QStringLiteral("title")].toString();
-            auto duration = entries[i][QStringLiteral("duration")].toDouble();
+            auto id = entries[i][u"id"_s].toString();
+            auto url = u"https://youtu.be/%1"_s.arg(entries[i][u"id"_s].toString());
+            auto title = entries[i][u"title"_s].toString();
+            auto duration = entries[i][u"duration"_s].toDouble();
 
             PlaylistItem item;
             item.url = QUrl::fromUserInput(url);
@@ -332,13 +334,13 @@ void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
 {
     auto ytdlProcess = std::make_shared<QProcess>();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url.toString());
+    ytdlProcess->setArguments(QStringList() << u"-j"_s << url.toString());
     ytdlProcess->start();
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
-        auto duration = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("duration")].toDouble();
+        QString title = QJsonDocument::fromJson(json.toUtf8())[u"title"_s].toString();
+        auto duration = QJsonDocument::fromJson(json.toUtf8())[u"duration"_s].toDouble();
         if (title.isEmpty()) {
             // todo: log if can't get title
             return;
@@ -355,10 +357,10 @@ void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
 bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
 {
     // clang-format off
-    return (mimeType.startsWith(QStringLiteral("video/"))
-            || mimeType.startsWith(QStringLiteral("audio/"))
-            || mimeType == QStringLiteral("application/vnd.rn-realmedia"))
-            && mimeType != QStringLiteral("audio/x-mpegurl");
+    return (mimeType.startsWith(u"video/"_s)
+            || mimeType.startsWith(u"audio/"_s)
+            || mimeType == u"application/vnd.rn-realmedia"_s)
+            && mimeType != u"audio/x-mpegurl"_s;
     // clang-format on
 }
 
@@ -486,7 +488,7 @@ void PlaylistProxyModel::renameFile(int row)
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
     if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
+        url.setScheme(u"file"_s);
     }
     KFileItem item(url);
     auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
@@ -509,7 +511,7 @@ void PlaylistProxyModel::trashFile(int row)
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
     if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
+        url.setScheme(u"file"_s);
     }
     urls << url;
     auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);

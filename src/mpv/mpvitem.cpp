@@ -39,6 +39,8 @@
 #include <QDBusConnection>
 #endif
 
+using namespace Qt::StringLiterals;
+
 MpvItem::MpvItem(QQuickItem *parent)
     : MpvAbstractItem(parent)
     , m_audioTracksModel{std::make_unique<TracksModel>()}
@@ -46,7 +48,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_playlistModel{std::make_unique<PlaylistModel>()}
     , m_playlistProxyModel{std::make_unique<PlaylistProxyModel>()}
     , m_chaptersModel{std::make_unique<ChaptersModel>()}
-    , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(QStringLiteral("/watch-later/"))}
+    , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(u"/watch-later/"_s)}
     , m_saveTimePositionTimer{std::make_unique<QTimer>()}
 {
     m_playlistProxyModel->setSourceModel(m_playlistModel.get());
@@ -102,7 +104,7 @@ MpvItem::MpvItem(QQuickItem *parent)
         auto configGroup = m_customPropsConfig->group(_group);
         QString type = configGroup.readEntry("Type", QString());
         bool setOnStartup = configGroup.readEntry("SetOnStartup", true);
-        if (type == QStringLiteral("startup") && setOnStartup) {
+        if (type == u"startup"_s && setOnStartup) {
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
@@ -114,26 +116,26 @@ MpvItem::~MpvItem()
 
 void MpvItem::initProperties()
 {
-    //    setProperty(QStringLiteral("terminal"), InformationSettings::mpvLogging());
-    //    setProperty(QStringLiteral("msg-level"), QStringLiteral("all=v"));
+    //    setProperty(u"terminal"_s, InformationSettings::mpvLogging());
+    //    setProperty(u"msg-level"_s, u"all=v"_s);
 
-    Q_EMIT setProperty(MpvProperties::self()->VO, QStringLiteral("libmpv"));
+    Q_EMIT setProperty(MpvProperties::self()->VO, u"libmpv"_s);
 
-    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
+    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : u"no"_s;
     Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
     Q_EMIT setProperty(MpvProperties::self()->Volume, AudioSettings::volume());
     Q_EMIT setProperty(MpvProperties::self()->VolumeMax, 100);
 
     // set ytdl_path to yt-dlp or fallback to youtube-dl
-    Q_EMIT setProperty(MpvProperties::self()->ScriptOpts, QStringLiteral("ytdl_hook-ytdl_path=%1").arg(Application::youtubeDlExecutable()));
+    Q_EMIT setProperty(MpvProperties::self()->ScriptOpts, u"ytdl_hook-ytdl_path=%1"_s.arg(Application::youtubeDlExecutable()));
     QCommandLineParser *cmdParser = Application::instance()->parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
-    if (cmdParser->isSet(QStringLiteral("ytdl-format-selection"))) {
-        ytdlFormat = cmdParser->value(QStringLiteral("ytdl-format-selection"));
+    if (cmdParser->isSet(u"ytdl-format-selection"_s)) {
+        ytdlFormat = cmdParser->value(u"ytdl-format-selection"_s);
     }
     Q_EMIT setProperty(MpvProperties::self()->YtdlFormat, ytdlFormat);
 
-    Q_EMIT setProperty(MpvProperties::self()->SubtitleAuto, QStringLiteral("exact"));
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleAuto, u"exact"_s);
     Q_EMIT setProperty(MpvProperties::self()->SubtitleUseMargins, SubtitlesSettings::allowOnBlackBorders());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleAssForceMargins, SubtitlesSettings::allowOnBlackBorders());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleFont, SubtitlesSettings::fontFamily());
@@ -149,15 +151,15 @@ void MpvItem::initProperties()
     Q_EMIT setProperty(MpvProperties::self()->ScreenshotTemplate, VideoSettings::screenshotTemplate());
     Q_EMIT setProperty(MpvProperties::self()->ScreenshotFormat, VideoSettings::screenshotFormat());
 
-    Q_EMIT setProperty(MpvProperties::self()->AudioClientName, QStringLiteral("haruna"));
+    Q_EMIT setProperty(MpvProperties::self()->AudioClientName, u"haruna"_s);
     const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
-    Q_EMIT setProperty(MpvProperties::self()->AudioId, preferredAudioTrack == 0 ? QStringLiteral("auto") : preferredAudioTrack);
-    Q_EMIT setProperty(MpvProperties::self()->AudioLanguage, AudioSettings::preferredLanguage().remove(QStringLiteral(" ")));
+    Q_EMIT setProperty(MpvProperties::self()->AudioId, preferredAudioTrack == 0 ? u"auto"_s : preferredAudioTrack);
+    Q_EMIT setProperty(MpvProperties::self()->AudioLanguage, AudioSettings::preferredLanguage().remove(u" "_s));
 
     const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
-    Q_EMIT setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? QStringLiteral("auto") : preferredSubTrack);
-    Q_EMIT setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(QStringLiteral(" ")));
-    Q_EMIT setProperty(MpvProperties::self()->SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(QStringLiteral(":")));
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? u"auto"_s : preferredSubTrack);
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(u" "_s));
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(u":"_s));
 }
 
 void MpvItem::setupConnections()
@@ -188,11 +190,11 @@ void MpvItem::setupConnections()
         getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
 
         if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
-            Q_EMIT setProperty(MpvProperties::self()->LoopFile, QStringLiteral("inf"));
+            Q_EMIT setProperty(MpvProperties::self()->LoopFile, u"inf"_s);
         }
 
-        Q_EMIT setProperty(MpvProperties::self()->ABLoopA, QStringLiteral("no"));
-        Q_EMIT setProperty(MpvProperties::self()->ABLoopB, QStringLiteral("no"));
+        Q_EMIT setProperty(MpvProperties::self()->ABLoopA, u"no"_s);
+        Q_EMIT setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
 
         // this is only run when reloading the last file in the playlist
         // due to the playlist repeat setting being turned off
@@ -229,9 +231,9 @@ void MpvItem::setupConnections()
 
 #if HAVE_DBUS
     // register mpris dbus service
-    QString mspris2Name(QStringLiteral("org.mpris.MediaPlayer2.haruna"));
+    QString mspris2Name(u"org.mpris.MediaPlayer2.haruna"_s);
     QDBusConnection::sessionBus().registerService(mspris2Name);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/mpris/MediaPlayer2"), this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(u"/org/mpris/MediaPlayer2"_s, this, QDBusConnection::ExportAdaptors);
     // org.mpris.MediaPlayer2 mpris2 interface
     auto mp2 = new MediaPlayer2(this);
     connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
@@ -256,7 +258,7 @@ void MpvItem::setupConnections()
         Q_EMIT playPrevious();
     });
     connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
-        Q_EMIT command(QStringList() << QStringLiteral("add") << QStringLiteral("time-pos") << QString::number(offset));
+        Q_EMIT command(QStringList() << u"add"_s << u"time-pos"_s << QString::number(offset));
     });
     connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
         Q_EMIT openUri(uri);
@@ -280,7 +282,7 @@ void MpvItem::setupConnections()
 
 void MpvItem::onEndFile(const QString &reason)
 {
-    if (reason == u"error"_qs) {
+    if (reason == u"error"_s) {
         if (playlistModel()->rowCount() == 0) {
             return;
         }
@@ -414,9 +416,9 @@ void MpvItem::loadFile(const QString &file)
     setWatchLaterPosition(loadTimePosition());
     if (PlaybackSettings::seekToLastPosition()) {
         setPropertyBlocking(MpvProperties::self()->Pause, !PlaybackSettings::playOnResume() && watchLaterPosition() > 1);
-        setPropertyBlocking(u"start"_qs, QVariant(u"+"_qs + QString::number(m_watchLaterPosition)));
+        setPropertyBlocking(u"start"_s, QVariant(u"+"_s + QString::number(m_watchLaterPosition)));
     }
-    Q_EMIT command(QStringList() << QStringLiteral("loadfile") << m_currentUrl.toString());
+    Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
@@ -429,17 +431,17 @@ void MpvItem::loadTracks(QList<QVariant> tracks)
     m_audioTracks.clear();
 
     QMap<QString, QVariant> none = {
-        {QStringLiteral("id"), QVariant(0)},
-        {QStringLiteral("title"), QVariant(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"))},
+        {u"id"_s, QVariant(0)},
+        {u"title"_s, QVariant(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"))},
     };
     m_subtitleTracks.append(none);
 
     for (const auto &track : tracks) {
         const auto trackMap = track.toMap();
-        if (trackMap[QStringLiteral("type")] == QStringLiteral("sub")) {
+        if (trackMap[u"type"_s] == u"sub"_s) {
             m_subtitleTracks.append(track);
         }
-        if (trackMap[QStringLiteral("type")] == QStringLiteral("audio")) {
+        if (trackMap[u"type"_s] == u"audio"_s) {
             m_audioTracks.append(track);
         }
     }
@@ -459,7 +461,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     case AsyncIds::SavePosition: {
         auto hash = md5(currentUrl().toString());
         auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
-        Q_EMIT syncConfigValue(watchLaterConfig, QString(), QStringLiteral("TimePosition"), data.toString());
+        Q_EMIT syncConfigValue(watchLaterConfig, QString(), u"TimePosition"_s, data.toString());
         break;
     }
     case AsyncIds::Screenshot: {
@@ -467,7 +469,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
             Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Screenshot failed"));
             break;
         }
-        auto filename = data.toMap().value(QStringLiteral("filename")).toString();
+        auto filename = data.toMap().value(u"filename"_s).toString();
         if (filename.isEmpty()) {
             Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Screenshot taken"));
         } else {
@@ -484,8 +486,8 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         QList<Chapter> chaptersList;
         for (const auto &chapter : std::as_const(m_chaptersList)) {
             Chapter c;
-            c.title = chapter.toMap()[QStringLiteral("title")].toString();
-            c.startTime = chapter.toMap()[QStringLiteral("time")].toDouble();
+            c.title = chapter.toMap()[u"title"_s].toString();
+            c.startTime = chapter.toMap()[u"time"_s].toDouble();
             chaptersList.append(c);
         }
         m_chaptersModel->setChapters(chaptersList);
@@ -496,13 +498,13 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
             // there's no video track
             // either because the file is an audio file or the video track can't be decoded
             auto mimeType = Application::mimeType(currentUrl());
-            if (mimeType.startsWith(u"video/"_qs)) {
+            if (mimeType.startsWith(u"video/"_s)) {
                 auto errMsg = i18nc("Error message when video can't be decoded/played",
                                     "No video track detected, most likely the video track can't be decoded/played due to missing codecs");
                 Q_EMIT Application::instance()->error(errMsg);
                 break;
             }
-            Q_EMIT command(QStringList{QStringLiteral("video-add"), VideoSettings::defaultCover()});
+            Q_EMIT command(QStringList{u"video-add"_s, VideoSettings::defaultCover()});
         }
         break;
     }
@@ -520,13 +522,13 @@ void MpvItem::onChapterChanged()
         return;
     }
 
-    const QStringList words = chaptersToSkip.split(QStringLiteral(","));
+    const QStringList words = chaptersToSkip.split(u","_s);
     auto ch = m_chaptersList.value(chapter()).toMap();
-    auto title = ch.value(QStringLiteral("title")).toString();
+    auto title = ch.value(u"title"_s).toString();
     for (int i = 0; i < words.count(); ++i) {
         QString word = words.at(i).toLower().simplified();
         if (!ch.isEmpty() && title.contains(word, Qt::CaseInsensitive)) {
-            Q_EMIT command({QStringLiteral("add"), QStringLiteral("chapter"), QStringLiteral("1")});
+            Q_EMIT command({u"add"_s, u"chapter"_s, u"1"_s});
             if (PlaybackSettings::showOsdOnSkipChapters()) {
                 Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Skipped chapter: %1", title));
             }

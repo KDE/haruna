@@ -46,6 +46,8 @@
 #include <KWindowConfig>
 #include <KWindowSystem>
 
+using namespace Qt::StringLiterals;
+
 Application *Application::instance()
 {
     static Application app;
@@ -69,7 +71,7 @@ Application::Application()
     QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
     QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
 
-    if (GeneralSettings::guiStyle() != QStringLiteral("System")) {
+    if (GeneralSettings::guiStyle() != u"System"_s) {
         QApplication::setStyle(GeneralSettings::guiStyle());
     }
 
@@ -101,20 +103,20 @@ void Application::setupWorkerThread()
 void Application::setupAboutData()
 {
     KAboutData m_aboutData;
-    m_aboutData.setComponentName(QStringLiteral("haruna"));
+    m_aboutData.setComponentName(u"haruna"_s);
     m_aboutData.setDisplayName(i18nc("application title/display name", "Haruna"));
     m_aboutData.setVersion(Application::version().toUtf8());
     m_aboutData.setShortDescription(i18nc("@title", "Media player"));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
     m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2023"));
-    m_aboutData.setHomepage(QStringLiteral("https://haruna.kde.org"));
-    m_aboutData.setBugAddress(QStringLiteral("https://bugs.kde.org/enter_bug.cgi?product=Haruna").toUtf8());
-    m_aboutData.setDesktopFileName(QStringLiteral("org.kde.haruna"));
+    m_aboutData.setHomepage(u"https://haruna.kde.org"_s);
+    m_aboutData.setBugAddress(u"https://bugs.kde.org/enter_bug.cgi?product=Haruna"_s.toUtf8());
+    m_aboutData.setDesktopFileName(u"org.kde.haruna"_s);
 
     m_aboutData.addAuthor(i18nc("@info:credit", "George Florea Bănuș"),
                           i18nc("@info:credit", "Developer"),
-                          QStringLiteral("georgefb899@gmail.com"),
-                          QStringLiteral("https://georgefb.com"));
+                          u"georgefb899@gmail.com"_s,
+                          u"https://georgefb.com"_s);
 
     KAboutData::setApplicationData(m_aboutData);
 }
@@ -123,9 +125,9 @@ void Application::setupCommandLineParser()
 {
     m_parser = std::make_unique<QCommandLineParser>();
     m_aboutData.setupCommandLine(m_parser.get());
-    m_parser->addPositionalArgument(QStringLiteral("file"), i18nc("@info:shell", "File to open"));
+    m_parser->addPositionalArgument(u"file"_s, i18nc("@info:shell", "File to open"));
 
-    QCommandLineOption ytdlFormatSelectionOption(QStringList() << QStringLiteral("ytdl-format-selection") << QStringLiteral("ytdlfs"),
+    QCommandLineOption ytdlFormatSelectionOption(QStringList() << u"ytdl-format-selection"_s << u"ytdlfs"_s,
                                                  i18nc("@info:shell",
                                                        "Allows to temporarily override the ytdl format selection setting. "
                                                        "Will be overwritten if the setting is changed through the GUI"),
@@ -159,8 +161,8 @@ void Application::restoreWindowGeometry(QQuickWindow *window) const
     if (!GeneralSettings::rememberWindowGeometry()) {
         return;
     }
-    KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, QStringLiteral("Window"));
+    KConfig dataResource(u"data"_s, KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
+    KConfigGroup windowGroup(&dataResource, u"Window"_s);
     KWindowConfig::restoreWindowSize(window, windowGroup);
     KWindowConfig::restoreWindowPosition(window, windowGroup);
 }
@@ -228,7 +230,7 @@ bool Application::configFolderExists()
 
 QString Application::version()
 {
-    return QStringLiteral(HARUNA_VERSION_STRING);
+    return QString::fromStdString(HARUNA_VERSION_STRING);
 }
 
 bool Application::hasYoutubeDl()
@@ -238,12 +240,12 @@ bool Application::hasYoutubeDl()
 
 QString Application::youtubeDlExecutable()
 {
-    auto ytDlp = QStandardPaths::findExecutable(QStringLiteral("yt-dlp"));
+    auto ytDlp = QStandardPaths::findExecutable(u"yt-dlp"_s);
     if (!ytDlp.isEmpty()) {
         return ytDlp;
     }
 
-    auto youtubeDl = QStandardPaths::findExecutable(QStringLiteral("youtube-dl"));
+    auto youtubeDl = QStandardPaths::findExecutable(u"youtube-dl"_s);
     if (!youtubeDl.isEmpty()) {
         return youtubeDl;
     }
@@ -264,14 +266,14 @@ QUrl Application::parentUrl(const QString &path)
         fileInfo.setFile(url.toString());
     }
     QUrl parentFolderUrl(fileInfo.absolutePath());
-    parentFolderUrl.setScheme(QStringLiteral("file"));
+    parentFolderUrl.setScheme(u"file"_s);
 
     return parentFolderUrl;
 }
 
 bool Application::isYoutubePlaylist(const QString &path)
 {
-    return path.contains(QStringLiteral("youtube.com/playlist?list"));
+    return path.contains(u"youtube.com/playlist?list"_s);
 }
 
 QString Application::formatTime(const double time)
@@ -281,10 +283,10 @@ QString Application::formatTime(const double time)
     int minutes = (totalNumberOfSeconds / 60) % 60;
     int hours = (totalNumberOfSeconds / 60 / 60);
 
-    QString hoursString = QStringLiteral("%1").arg(hours, 2, 10, QLatin1Char('0'));
-    QString minutesString = QStringLiteral("%1").arg(minutes, 2, 10, QLatin1Char('0'));
-    QString secondsString = QStringLiteral("%1").arg(seconds, 2, 10, QLatin1Char('0'));
-    QString timeString = QStringLiteral("%1:%2:%3").arg(hoursString, minutesString, secondsString);
+    QString hoursString = u"%1"_s.arg(hours, 2, 10, QLatin1Char('0'));
+    QString minutesString = u"%1"_s.arg(minutes, 2, 10, QLatin1Char('0'));
+    QString secondsString = u"%1"_s.arg(seconds, 2, 10, QLatin1Char('0'));
+    QString timeString = u"%1:%2:%3"_s.arg(hoursString, minutesString, secondsString);
 
     return timeString;
 }
@@ -335,7 +337,7 @@ QStringList Application::availableGuiStyles()
 
 void Application::setGuiStyle(const QString &style)
 {
-    if (style == QStringLiteral("Default")) {
+    if (style == u"Default"_s) {
         QApplication::setStyle(m_systemDefaultStyle);
         return;
     }

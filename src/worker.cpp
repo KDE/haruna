@@ -23,6 +23,8 @@
 #include <KFileMetaData/SimpleExtractionResult>
 #include <KWindowConfig>
 
+using namespace Qt::StringLiterals;
+
 Worker *Worker::instance()
 {
     static Worker w;
@@ -34,7 +36,7 @@ void Worker::getMetaData(int index, const QString &path)
     using namespace KFileMetaData;
 
     auto url = QUrl::fromUserInput(path);
-    if (url.scheme() != QStringLiteral("file")) {
+    if (url.scheme() != u"file"_s) {
         return;
     }
     QString mimeType = Application::mimeType(url);
@@ -61,10 +63,10 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     // figure out absolute path of the thumbnail
     auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
     QString cacheDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation));
-    QString appDir(QStringLiteral("haruna"));
+    QString appDir(u"haruna"_s);
     QString fileDir(QString::fromUtf8(md5Hash.toHex()));
-    QString filename(QString::fromUtf8(md5Hash.toHex()).append(QStringLiteral(".png")));
-    QString cachedFilePath = QStringLiteral("%1/%2/%3/%4").arg(cacheDir, appDir, fileDir, filename);
+    QString filename(QString::fromUtf8(md5Hash.toHex()).append(u".png"_s));
+    QString cachedFilePath = u"%1/%2/%3/%4"_s.arg(cacheDir, appDir, fileDir, filename);
 
     // load existing thumbnail if there is one
     if (QFileInfo::exists(cachedFilePath) && image.load(cachedFilePath)) {
@@ -75,7 +77,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     image = frameToImage(path, width);
 
     if (image.isNull()) {
-        qDebug() << QStringLiteral("Failed to create thumbnail for file: %1").arg(path);
+        qDebug() << u"Failed to create thumbnail for file: %1"_s.arg(path);
         return;
     }
     Q_EMIT thumbnailSuccess(path, image);
@@ -84,7 +86,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     // create folders where the file will be saved
     if (QDir().mkpath(fi.absolutePath())) {
         if (!image.save(cachedFilePath)) {
-            qDebug() << QStringLiteral("Failed to save thumbnail for file: %1").arg(path);
+            qDebug() << u"Failed to save thumbnail for file: %1"_s.arg(path);
         }
     }
 }
@@ -142,8 +144,8 @@ void Worker::saveWindowGeometry(QQuickWindow *window) const
     if (!GeneralSettings::rememberWindowGeometry()) {
         return;
     }
-    KConfig dataResource(QStringLiteral("data"), KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, QStringLiteral("Window"));
+    KConfig dataResource(u"data"_s, KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
+    KConfigGroup windowGroup(&dataResource, u"Window"_s);
     KWindowConfig::saveWindowPosition(window, windowGroup);
     KWindowConfig::saveWindowSize(window, windowGroup);
     dataResource.sync();

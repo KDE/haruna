@@ -16,11 +16,13 @@
 #include "generalsettings.h"
 #include "global.h"
 
+using namespace Qt::StringLiterals;
+
 RecentFilesModel::RecentFilesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath(Global::ConfigFile::RecentFiles));
-    m_recentFilesConfigGroup = config->group(QStringLiteral("RecentFiles"));
+    m_recentFilesConfigGroup = config->group(u"RecentFiles"_s);
     setMaxRecentFiles(GeneralSettings::maxRecentFiles());
     populate();
 }
@@ -72,14 +74,14 @@ void RecentFilesModel::populate()
     setMaxRecentFiles(GeneralSettings::maxRecentFiles());
 
     for (int i = 0; i < maxRecentFiles(); i++) {
-        auto file = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("File%1").arg(i + 1), QString());
-        auto name = m_recentFilesConfigGroup.readPathEntry(QStringLiteral("Name%1").arg(i + 1), QString());
+        auto file = m_recentFilesConfigGroup.readPathEntry(u"File%1"_s.arg(i + 1), QString());
+        auto name = m_recentFilesConfigGroup.readPathEntry(u"Name%1"_s.arg(i + 1), QString());
         if (file.isEmpty()) {
             break;
         }
         QUrl url(file);
         if (!url.isLocalFile() && url.scheme().isEmpty()) {
-            url.setScheme(QStringLiteral("file"));
+            url.setScheme(u"file"_s);
         }
         RecentFile recentFile;
         recentFile.url = url;
@@ -102,7 +104,7 @@ void RecentFilesModel::addUrl(const QString &path, const QString &name)
         return;
     }
 
-    if (url.scheme().startsWith(QStringLiteral("http")) && name.isEmpty()) {
+    if (url.scheme().startsWith(u"http"_s) && name.isEmpty()) {
         getHttpItemInfo(url);
     }
 
@@ -153,8 +155,8 @@ void RecentFilesModel::saveEntries()
     m_recentFilesConfigGroup.deleteGroup();
     int i = 1;
     for (const auto &[url, name] : std::as_const(m_urls)) {
-        m_recentFilesConfigGroup.writePathEntry(QStringLiteral("File%1").arg(i), url.toDisplayString(QUrl::PreferLocalFile));
-        m_recentFilesConfigGroup.writePathEntry(QStringLiteral("Name%1").arg(i), name);
+        m_recentFilesConfigGroup.writePathEntry(u"File%1"_s.arg(i), url.toDisplayString(QUrl::PreferLocalFile));
+        m_recentFilesConfigGroup.writePathEntry(u"Name%1"_s.arg(i), name);
 
         ++i;
     }
@@ -175,12 +177,12 @@ void RecentFilesModel::getHttpItemInfo(const QUrl &url)
 {
     auto ytdlProcess = std::make_shared<QProcess>();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << QStringLiteral("-j") << url.toString());
+    ytdlProcess->setArguments(QStringList() << u"-j"_s << url.toString());
     ytdlProcess->start();
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QString title = QJsonDocument::fromJson(json.toUtf8())[QStringLiteral("title")].toString();
+        QString title = QJsonDocument::fromJson(json.toUtf8())[u"title"_s].toString();
         if (title.isEmpty()) {
             return;
         }
