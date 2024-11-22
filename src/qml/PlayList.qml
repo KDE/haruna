@@ -71,6 +71,7 @@ Item {
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 65
                 model: mpv.playlistProxyModel
+                reuseItems: true
                 spacing: 1
                 currentIndex: mpv.playlistProxyModel.getPlayingItem()
 
