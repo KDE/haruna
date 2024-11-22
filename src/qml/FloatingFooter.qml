@@ -18,6 +18,8 @@ Item {
     required property Kirigami.ApplicationWindow m_window
     required property MpvVideo m_mpv
     required property PlayList m_playlist
+    required property MenuBarLoader m_menuBarLoader
+    required property Header m_header
 
     property alias progressBar: progressBar
     property bool isFloating: true
@@ -103,7 +105,7 @@ Item {
                 id: hamburgerMenu
 
                 position: HamburgerMenu.Position.Footer
-                visible: menuBarLoader.state === "hidden" && !header.visible
+                visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
             }
 
             Loader {
@@ -198,7 +200,7 @@ Item {
             VolumeSlider {
                 id: volumeSlider
 
-                m_mpv: mpv
+                m_mpv: root.m_mpv
             }
 
             Loader {
@@ -211,17 +213,15 @@ Item {
             State {
                 name: "hidden"
                 PropertyChanges {
-                    target: footer
-                    y: root.height
-                    visible: false
+                    footer.y: root.height
+                    footer.visible: false
                 }
             },
             State {
                 name : "visible"
                 PropertyChanges {
-                    target: footer
-                    y: 0
-                    visible: true
+                    footer.y: 0
+                    footer.visible: true
                 }
             }
         ]

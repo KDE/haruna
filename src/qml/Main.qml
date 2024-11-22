@@ -153,6 +153,8 @@ Kirigami.ApplicationWindow {
             m_window: window
             m_mpv: mpv
             m_playlist: playlist
+            m_menuBarLoader: menuBarLoader
+            m_header: header
         }
     }
 
