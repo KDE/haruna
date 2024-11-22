@@ -156,7 +156,18 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    Actions {}
+    Actions {
+        m_actionsModel: actionsModel
+        m_mpv: mpv
+        m_mpvContextMenuLoader: mpvContextMenuLoader
+        m_osd: osd
+        m_settingsLoader: settingsLoader
+        m_triggerActionPopup: triggerActionPopup
+        m_openUrlPopup: openUrlPopup
+
+        onOpenFileDialog: fileDialog.open()
+        onOpenSubtitleDialog: subtitlesFileDialog.open()
+    }
 
     ActionsModel {
         id: actionsModel
