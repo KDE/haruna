@@ -127,6 +127,8 @@ Kirigami.ApplicationWindow {
 
     PlayList {
         id: playlist
+
+        m_mpv: mpv
         height: window.isFullScreen() ? mpv.height - footerLoader.footerHeight : mpv.height
     }
 

@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -17,19 +19,21 @@ import org.kde.haruna.settings
 Item {
     id: root
 
+    required property MpvVideo m_mpv
+
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
 
-    height: mpv.height
+    height: m_mpv.height
     width: {
         if (PlaylistSettings.style === "compact") {
             return Kirigami.Units.gridUnit * 21
         } else {
             const w = Kirigami.Units.gridUnit * 31
-            return (window.width * 0.33) < w ? w : window.width * 0.33
+            return (Window.window.width * 0.33) < w ? w : Window.window.width * 0.33
         }
     }
-    x: PlaylistSettings.position === "right" ? window.width : -width
+    x: PlaylistSettings.position === "right" ? Window.window.width : -width
     y: 0
     state: PlaylistSettings.rememberState
            ? (PlaylistSettings.visible ? "visible" : "hidden")
@@ -70,10 +74,10 @@ Item {
 
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 65
-                model: mpv.playlistProxyModel
+                model: root.m_mpv.playlistProxyModel
                 reuseItems: true
                 spacing: 1
-                currentIndex: mpv.playlistProxyModel.getPlayingItem()
+                currentIndex: root.m_mpv.playlistProxyModel.getPlayingItem()
 
                 headerPositioning: ListView.OverlayHeader
                 header: ToolBar {
@@ -91,7 +95,7 @@ Item {
                         buttonText: i18nc("@action:button", "Add")
 
                         onUrlOpened: function(url) {
-                            mpv.playlistModel.addItem(url, PlaylistModel.Append)
+                            root.m_mpv.playlistModel.addItem(url, PlaylistModel.Append)
                         }
                     }
 
@@ -137,25 +141,25 @@ Item {
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Name ascending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameAscending)
+                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameAscending)
                                         }
                                     }
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Name descending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameDescending)
+                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameDescending)
                                         }
                                     }
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Duration ascending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationAscending)
+                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationAscending)
                                         }
                                     }
                                     Kirigami.Action {
                                         text: i18nc("@action:button", "Duration descending")
                                         onTriggered: {
-                                            mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
+                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
                                         }
                                     }
                                 },
@@ -164,7 +168,7 @@ Item {
                                     icon.name: "edit-clear-all"
                                     displayHint: Kirigami.DisplayHint.AlwaysHide
                                     onTriggered: {
-                                        mpv.playlistModel.clear()
+                                        root.m_mpv.playlistModel.clear()
                                     }
                                 },
                                 Kirigami.Action {
@@ -203,7 +207,7 @@ Item {
                     onClicked: function(mouse) {
                         switch (mouse.button) {
                         case Qt.MiddleButton:
-                            const index = mpv.playlistProxyModel.getPlayingItem()
+                            const index = root.m_mpv.playlistProxyModel.getPlayingItem()
                             playlistView.positionViewAtIndex(index, ListView.Beginning)
                             break
                         case Qt.RightButton:
@@ -237,43 +241,43 @@ Item {
                     text: i18nc("@action:inmenu", "Open containing folder")
                     icon.name: "folder"
                     visible: contextMenuLoader.isLocal
-                    onClicked: mpv.playlistProxyModel.highlightInFileManager(row)
+                    onClicked: root.m_mpv.playlistProxyModel.highlightInFileManager(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Open in browser")
                     icon.name: "link"
                     visible: !contextMenuLoader.isLocal
                     onClicked: {
-                        const modelIndex = mpv.playlistProxyModel.index(row, 0)
+                        const modelIndex = root.m_mpv.playlistProxyModel.index(contextMenuLoader.row, 0)
                         Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
                     }
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Copy name")
-                    onClicked: mpv.playlistProxyModel.copyFileName(row)
+                    onClicked: root.m_mpv.playlistProxyModel.copyFileName(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: contextMenuLoader.isLocal
                           ? i18nc("@action:inmenu", "Copy path")
                           : i18nc("@action:inmenu", "Copy url")
-                    onClicked: mpv.playlistProxyModel.copyFilePath(row)
+                    onClicked: root.m_mpv.playlistProxyModel.copyFilePath(contextMenuLoader.row)
                 }
                 MenuSeparator {}
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove from playlist")
                     icon.name: "remove"
-                    onClicked: mpv.playlistProxyModel.removeItem(row)
+                    onClicked: root.m_mpv.playlistProxyModel.removeItem(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Rename")
                     icon.name: "edit-rename"
                     visible: contextMenuLoader.isLocal
-                    onClicked: mpv.playlistProxyModel.renameFile(row)
+                    onClicked: root.m_mpv.playlistProxyModel.renameFile(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Scroll to playing item")
                     onClicked: {
-                        const index = mpv.playlistProxyModel.getPlayingItem()
+                        const index = root.m_mpv.playlistProxyModel.getPlayingItem()
                         playlistView.positionViewAtIndex(index, ListView.Beginning)
                     }
                 }
@@ -284,7 +288,7 @@ Item {
                     text: i18nc("@action:inmenu", "Trash file")
                     icon.name: "delete"
                     visible: contextMenuLoader.isLocal
-                    onClicked: mpv.playlistProxyModel.trashFile(row)
+                    onClicked: root.m_mpv.playlistProxyModel.trashFile(contextMenuLoader.row)
                 }
             }
         }
@@ -322,9 +326,9 @@ Item {
 
             visible: PlaylistSettings.overlayVideo
             anchors.fill: playlistScrollView
-            sourceItem: mpv
+            sourceItem: root.m_mpv
             sourceRect: PlaylistSettings.position === "right"
-                        ? Qt.rect(mpv.width - root.width, mpv.y, root.width, root.height)
+                        ? Qt.rect(root.m_mpv.width - root.width, root.m_mpv.y, root.width, root.height)
                         : Qt.rect(0, 0, root.width, root.height)
         }
 
@@ -352,19 +356,19 @@ Item {
         onAccepted: {
             switch (fileType) {
             case "video":
-                mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
+                root.m_mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === FileDialog.OpenFile) {
-                    mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
+                    root.m_mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 } else {
-                    mpv.playlistProxyModel.saveM3uFile(fileDialog.selectedFile)
+                    root.m_mpv.playlistProxyModel.saveM3uFile(fileDialog.selectedFile)
                 }
 
                 break
             }
         }
-        onRejected: mpv.focus = true
+        onRejected: root.m_mpv.focus = true
     }
 
     states: [
@@ -372,26 +376,16 @@ Item {
             name: "hidden"
 
             PropertyChanges {
-                target: root;
-                x: PlaylistSettings.position === "right" ? window.width : -width
-            }
-
-            PropertyChanges {
-                target: root;
-                visible: false
+                root.x: PlaylistSettings.position === "right" ? root.Window.window.width : -width
+                root.visible: false
             }
         },
         State {
             name : "visible"
 
             PropertyChanges {
-                target: root;
-                x: PlaylistSettings.position === "right" ? window.width - root.width : 0
-            }
-
-            PropertyChanges {
-                target: root;
-                visible: true
+                root.x: PlaylistSettings.position === "right" ? root.Window.window.width - root.width : 0
+                root.visible: true
             }
         }
     ]
