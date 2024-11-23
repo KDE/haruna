@@ -63,7 +63,12 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    header: Header { id: header }
+    header: Header {
+        id: header
+
+        m_mpv: mpv
+        m_menuBarLoader: menuBarLoader
+    }
 
     menuBar: MenuBarLoader {
         id: menuBarLoader
@@ -140,9 +145,10 @@ Kirigami.ApplicationWindow {
         id: footerComponent
 
         Footer {
-            m_window: window
             m_mpv: mpv
             m_playlist: playlist
+            m_menuBarLoader: menuBarLoader
+            m_header: header
         }
     }
 

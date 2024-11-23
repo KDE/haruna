@@ -15,16 +15,23 @@ import org.kde.haruna.settings
 ToolBar {
     id: root
 
-    required property Kirigami.ApplicationWindow m_window
     required property MpvVideo m_mpv
     required property PlayList m_playlist
+    required property MenuBarLoader m_menuBarLoader
+    required property Header m_header
 
     property alias progressBar: progressBar
     property bool isFloating: false
 
-    state: !m_window.isFullScreen() || (m_mpv.mouseY > m_mpv.height - 4 && m_window.containsMouse)
-           ? "visible" : "hidden"
-    implicitWidth: m_window.contentItem.width
+    state: {
+        const mainWindow = Window.window as Main
+        if (!mainWindow.isFullScreen() || (root.m_mpv.mouseY > root.m_mpv.height - 4 && mainWindow.containsMouse)) {
+            return "visible"
+        } else {
+            return "hidden"
+        }
+    }
+    implicitWidth: Window.window.contentItem.width
     padding: Kirigami.Units.smallSpacing
     position: ToolBar.Footer
     hoverEnabled: true
@@ -44,7 +51,7 @@ ToolBar {
 
         HamburgerMenu {
             position: HamburgerMenu.Position.Footer
-            visible: menuBarLoader.state === "hidden" && !header.visible
+            visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
         }
 
         Loader {
@@ -56,13 +63,13 @@ ToolBar {
             id: playPauseButton
             action: appActions.playPauseAction
             text: ""
-            icon.name: m_mpv.pause ? "media-playback-start" : "media-playback-pause"
+            icon.name: root.m_mpv.pause ? "media-playback-start" : "media-playback-pause"
             focusPolicy: Qt.NoFocus
-            enabled: m_mpv.duration !== 0
+            enabled: root.m_mpv.duration !== 0
 
             ToolTip {
                 id: playPauseButtonToolTip
-                text: m_mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
+                text: root.m_mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
             }
         }
 
@@ -100,11 +107,11 @@ ToolBar {
         LabelWithTooltip {
             id: timeInfo
 
-            text: m_mpv.formattedPosition
-                  ? "%1 / %2".arg(m_mpv.formattedPosition).arg(m_mpv.formattedDuration)
+            text: root.m_mpv.formattedPosition
+                  ? "%1 / %2".arg(root.m_mpv.formattedPosition).arg(root.m_mpv.formattedDuration)
                   : "00:00:00 / 00:00:00"
             font.pointSize: Math.floor(Kirigami.Units.gridUnit * 0.6)
-            toolTipText: i18nc("@info:tooltip", "Remaining: %1", m_mpv.formattedRemaining)
+            toolTipText: i18nc("@info:tooltip", "Remaining: %1", root.m_mpv.formattedRemaining)
             alwaysShowToolTip: true
             horizontalAlignment: Qt.AlignHCenter
 
@@ -120,7 +127,7 @@ ToolBar {
         ToolButton {
             id: mute
             action: appActions.muteAction
-            icon.name: m_mpv.mute || m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
+            icon.name: root.m_mpv.mute || root.m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
             text: ""
             focusPolicy: Qt.NoFocus
 
@@ -132,7 +139,7 @@ ToolBar {
         VolumeSlider {
             id: volumeSlider
 
-            m_mpv: mpv
+            m_mpv: root.m_mpv
         }
 
         Loader {
@@ -146,19 +153,17 @@ ToolBar {
         State {
             name: "hidden"
             PropertyChanges {
-                target: root
-                height: 0
-                opacity: 0
-                visible: false
+                root.height: 0
+                root.opacity: 0
+                root.visible: false
             }
         },
         State {
             name : "visible"
             PropertyChanges {
-                target: root
-                height: root.implicitHeight
-                opacity: 1
-                visible: true
+                root.height: root.implicitHeight
+                root.opacity: 1
+                root.visible: true
             }
         }
     ]

@@ -16,11 +16,22 @@ import org.kde.haruna.settings
 ToolBar {
     id: root
 
+    required property MpvVideo m_mpv
+    required property MenuBarLoader m_menuBarLoader
+
     position: ToolBar.Header
-    state: !window.isFullScreen() && GeneralSettings.showHeader ? "visible" : "hidden"
+    state: {
+        const mainWindow = Window.window as Main
+        if (!mainWindow.isFullScreen() && GeneralSettings.showHeader) {
+            return "visible"
+        } else {
+            return "hidden"
+        }
+    }
 
     onVisibleChanged: {
-        window.resizeWindow()
+        const mainWindow = Window.window as Main
+        mainWindow.resizeWindow()
     }
 
     RowLayout {
@@ -30,7 +41,7 @@ ToolBar {
 
         HamburgerMenu {
             position: HamburgerMenu.Position.Header
-            visible: menuBarLoader.state === "hidden"
+            visible: root.m_menuBarLoader.state === "hidden"
         }
 
         ToolButton {
@@ -51,7 +62,7 @@ ToolBar {
             text: i18nc("@action:intoolbar", "Subtitles")
             icon.name: "add-subtitle"
             focusPolicy: Qt.NoFocus
-            enabled: mpv.subtitleTracksModel.rowCount() > 1
+            enabled: root.m_mpv.subtitleTracksModel.rowCount() > 1
             opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
@@ -62,7 +73,7 @@ ToolBar {
                 id: subtitleMenu
 
                 y: parent.height
-                model: mpv.subtitleTracksModel
+                model: root.m_mpv.subtitleTracksModel
                 isPrimarySubtitleMenu: true
             }
         }
@@ -71,7 +82,7 @@ ToolBar {
             text: i18nc("@action:intoolbar", "Audio")
             icon.name: "audio-volume-high"
             focusPolicy: Qt.NoFocus
-            enabled: mpv.audioTracksModel.rowCount() > 0
+            enabled: root.m_mpv.audioTracksModel.rowCount() > 0
             opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
@@ -82,7 +93,7 @@ ToolBar {
                 id: audioMenu
 
                 y: parent.height
-                model: mpv.audioTracksModel
+                model: root.m_mpv.audioTracksModel
             }
         }
 
@@ -101,19 +112,17 @@ ToolBar {
         State {
             name: "hidden"
             PropertyChanges {
-                target: root
-                height: 0
-                opacity: 0
-                visible: false
+                root.height: 0
+                root.opacity: 0
+                root.visible: false
             }
         },
         State {
             name : "visible"
             PropertyChanges {
-                target: root
-                height: root.implicitHeight
-                opacity: 1
-                visible: true
+                root.height: root.implicitHeight
+                root.opacity: 1
+                root.visible: true
             }
         }
     ]
