@@ -5,7 +5,6 @@
  */
 
 import QtQuick
-import QtQuick.Controls
 import Qt.labs.platform as Labs
 
 import org.kde.haruna

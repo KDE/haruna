@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick
-import QtQuick.Controls
 import Qt.labs.platform as Labs
 
 Labs.Menu {

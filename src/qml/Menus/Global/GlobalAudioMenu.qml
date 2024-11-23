@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQml
 import QtQuick
-import QtQuick.Controls
 import Qt.labs.platform as Labs
 
 import org.kde.haruna
