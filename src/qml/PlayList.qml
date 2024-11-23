@@ -295,17 +295,23 @@ Item {
 
         Component {
             id: playlistItemWithThumbnail
-            PlayListItemWithThumbnail {}
+            PlayListItemWithThumbnail {
+                m_mpv: root.m_mpv
+            }
         }
 
         Component {
             id: playlistItemSimple
-            PlayListItem {}
+            PlayListItem {
+                m_mpv: root.m_mpv
+            }
         }
 
         Component {
             id: playlistItemCompact
-            PlayListItemCompact {}
+            PlayListItemCompact {
+                m_mpv: root.m_mpv
+            }
         }
 
         // without a timer the scroll position is incorrect

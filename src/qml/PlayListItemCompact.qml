@@ -14,6 +14,8 @@ import org.kde.haruna.settings
 ItemDelegate {
     id: root
 
+    required property MpvVideo m_mpv
+
     required property int index
     required property string title
     required property string name
@@ -31,22 +33,22 @@ ItemDelegate {
     background: Rectangle {
         anchors.fill: parent
         color: {
-            if (hovered) {
-                return Qt.alpha(Kirigami.Theme.hoverColor, alpha)
+            if (root.hovered) {
+                return Qt.alpha(Kirigami.Theme.hoverColor, root.alpha)
             }
 
-            if (highlighted) {
-                return Qt.alpha(Kirigami.Theme.highlightColor, alpha)
+            if (root.highlighted) {
+                return Qt.alpha(Kirigami.Theme.highlightColor, root.alpha)
             }
 
-            return Qt.alpha(Kirigami.Theme.backgroundColor, alpha)
+            return Qt.alpha(Kirigami.Theme.backgroundColor, root.alpha)
         }
     }
 
     contentItem: Kirigami.IconTitleSubtitle {
         icon.name: root.isPlaying ? "media-playback-start" : ""
         icon.color: color
-        title: mainText()
+        title: root.mainText()
         subtitle: root.duration
         color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         ToolTip.text: title
@@ -55,18 +57,18 @@ ItemDelegate {
 
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
-            mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistProxyModel.setPlayingItem(index)
         }
     }
 
     onDoubleClicked: {
         if (!PlaylistSettings.openWithSingleClick) {
-            mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistProxyModel.setPlayingItem(index)
         }
     }
 
     function mainText() {
-        const rowNumber = "%1. ".arg(pad(root.rowNumber, playlistView.count.toString().length))
+        const rowNumber = "%1. ".arg(pad(root.rowNumber, root.ListView.view.count.toString().length))
 
         if(PlaylistSettings.showRowNumber) {
             return rowNumber + (PlaylistSettings.showMediaTitle ? root.title : root.name)

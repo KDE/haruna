@@ -15,6 +15,8 @@ import org.kde.haruna.settings
 ItemDelegate {
     id: root
 
+    required property MpvVideo m_mpv
+
     required property int index
     required property string title
     required property string name
@@ -33,28 +35,28 @@ ItemDelegate {
 
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
-            mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistProxyModel.setPlayingItem(index)
         }
     }
 
     onDoubleClicked: {
         if (!PlaylistSettings.openWithSingleClick) {
-            mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistProxyModel.setPlayingItem(index)
         }
     }
 
     background: Rectangle {
         anchors.fill: parent
         color: {
-            if (hovered) {
-                return Qt.alpha(Kirigami.Theme.hoverColor, alpha)
+            if (root.hovered) {
+                return Qt.alpha(Kirigami.Theme.hoverColor, root.alpha)
             }
 
-            if (highlighted) {
-                return Qt.alpha(Kirigami.Theme.highlightColor, alpha)
+            if (root.highlighted) {
+                return Qt.alpha(Kirigami.Theme.highlightColor, root.alpha)
             }
 
-            return Qt.alpha(Kirigami.Theme.backgroundColor, alpha)
+            return Qt.alpha(Kirigami.Theme.backgroundColor, root.alpha)
         }
     }
 
@@ -66,12 +68,17 @@ ItemDelegate {
             spacing: Kirigami.Units.largeSpacing
 
             Label {
-                text: pad(root.rowNumber, playlistView.count.toString().length)
+                text: pad(root.rowNumber, root.ListView.view.count.toString().length)
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 visible: PlaylistSettings.showRowNumber
-                font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
-                                ? Kirigami.Units.gridUnit
-                                : Kirigami.Units.gridUnit - 6
+                font.pointSize: {
+                    const mainWindow = Window.window as Main
+                    if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
+                        return Kirigami.Units.gridUnit
+                    } else {
+                        return Kirigami.Units.gridUnit - 6
+                    }
+                }
                 horizontalAlignment: Qt.AlignCenter
                 Layout.leftMargin: Kirigami.Units.largeSpacing
 
@@ -119,9 +126,14 @@ ItemDelegate {
                             color: Kirigami.Theme.highlightedTextColor
                             horizontalAlignment: Qt.AlignCenter
                             text: root.duration
-                            font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
-                                            ? Kirigami.Units.gridUnit - 2
-                                            : Kirigami.Units.gridUnit - 5
+                            font.pointSize: {
+                                const mainWindow = Window.window as Main
+                                if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
+                                    return Kirigami.Units.gridUnit - 2
+                                } else {
+                                    return Kirigami.Units.gridUnit - 5
+                                }
+                            }
 
                             Layout.margins: Kirigami.Units.largeSpacing
                         }
@@ -146,9 +158,14 @@ ItemDelegate {
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                font.pointSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
-                                ? Kirigami.Units.gridUnit
-                                : Kirigami.Units.gridUnit - 5
+                font.pointSize: {
+                    const mainWindow = Window.window as Main
+                    if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
+                        return Kirigami.Units.gridUnit
+                    } else {
+                        return Kirigami.Units.gridUnit - 5
+                    }
+                }
                 layer.enabled: true
                 Layout.fillWidth: true
                 Layout.fillHeight: true

@@ -15,6 +15,8 @@ import org.kde.haruna.settings
 ItemDelegate {
     id: root
 
+    required property MpvVideo m_mpv
+
     required property int index
     required property string title
     required property string name
@@ -23,10 +25,15 @@ ItemDelegate {
     required property bool isPlaying
 
     property string rowNumber: (root.index + 1).toString()
-    property var alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
-    property int fontSize: (window.isFullScreen() && PlaylistSettings.bigFontFullscreen)
-                           ? Kirigami.Units.gridUnit
-                           : Kirigami.Units.gridUnit - 6
+    property double alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
+    property int fontSize: {
+        const mainWindow = Window.window as Main
+        if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
+            return Kirigami.Units.gridUnit
+        } else {
+            return Kirigami.Units.gridUnit - 6
+        }
+    }
 
     padding: 0
     implicitWidth: ListView.view.width
@@ -35,15 +42,15 @@ ItemDelegate {
     background: Rectangle {
         anchors.fill: parent
         color: {
-            if (hovered) {
-                return Qt.alpha(Kirigami.Theme.hoverColor, alpha)
+            if (root.hovered) {
+                return Qt.alpha(Kirigami.Theme.hoverColor, root.alpha)
             }
 
-            if (highlighted) {
-                return Qt.alpha(Kirigami.Theme.highlightColor, alpha)
+            if (root.highlighted) {
+                return Qt.alpha(Kirigami.Theme.highlightColor, root.alpha)
             }
 
-            return Qt.alpha(Kirigami.Theme.backgroundColor, alpha)
+            return Qt.alpha(Kirigami.Theme.backgroundColor, root.alpha)
         }
     }
 
@@ -52,7 +59,7 @@ ItemDelegate {
         spacing: Kirigami.Units.largeSpacing
 
         Label {
-            text: pad(root.rowNumber, playlistView.count.toString().length)
+            text: pad(root.rowNumber, root.ListView.view.count.toString().length)
             color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             visible: PlaylistSettings.showRowNumber
             font.pointSize: root.fontSize
@@ -77,9 +84,9 @@ ItemDelegate {
         Kirigami.Icon {
             source: "media-playback-start"
             color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-            height: Kirigami.Units.iconSizes.small
             visible: root.isPlaying
             Layout.preferredWidth: Kirigami.Units.iconSizes.small
+            Layout.preferredHeight: Kirigami.Units.iconSizes.small
             Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
         }
 
@@ -110,13 +117,13 @@ ItemDelegate {
     }
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
-            mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistProxyModel.setPlayingItem(index)
         }
     }
 
     onDoubleClicked: {
         if (!PlaylistSettings.openWithSingleClick) {
-            mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistProxyModel.setPlayingItem(index)
         }
     }
 }
