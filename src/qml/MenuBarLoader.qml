@@ -20,11 +20,19 @@ Loader {
                                     && Kirigami.Settings.hasPlatformMenuBar
                                     && !Kirigami.Settings.isMobile
 
-    state: !window.isFullScreen() && GeneralSettings.showMenuBar ? "visible" : "hidden"
+    state: {
+        const mainWindow = Window.window as Main
+        if (!mainWindow.isFullScreen() && GeneralSettings.showMenuBar) {
+            return "visible"
+        } else {
+            return "hidden"
+        }
+    }
     sourceComponent: showGlobalMenu ? globalMenuBarComponent : menuBarComponent
 
     onVisibleChanged: {
-        window.resizeWindow()
+        const mainWindow = Window.window as Main
+        mainWindow.resizeWindow()
     }
 
     Component {
@@ -64,19 +72,17 @@ Loader {
         State {
             name: "hidden"
             PropertyChanges {
-                target: root
-                height: 0
-                opacity: 0
-                visible: false
+                root.height: 0
+                root.opacity: 0
+                root.visible: false
             }
         },
         State {
             name : "visible"
             PropertyChanges {
-                target: root
-                height: root.implicitHeight
-                opacity: 1
-                visible: true
+                root.height: root.implicitHeight
+                root.opacity: 1
+                root.visible: true
             }
         }
     ]
