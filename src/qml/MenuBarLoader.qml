@@ -18,6 +18,7 @@ Loader {
 
     required property MpvVideo m_mpv
     required property RecentFilesModel m_recentFilesModel
+    required property Loader m_settingsLoader
 
     property bool showGlobalMenu: app.platformName() !== "windows"
                                     && Kirigami.Settings.hasPlatformMenuBar
@@ -57,7 +58,9 @@ Loader {
             AudioMenu {
                 m_mpv: root.m_mpv
             }
-            SettingsMenu {}
+            SettingsMenu {
+                m_settingsLoader: settingsLoader
+            }
             HelpMenu {}
         }
     }
@@ -78,7 +81,9 @@ Loader {
             GlobalAudioMenu {
                 m_mpv: root.m_mpv
             }
-            GlobalSettingsMenu {}
+            GlobalSettingsMenu {
+                m_settingsLoader: settingsLoader
+            }
             GlobalHelpMenu {}
         }
     }

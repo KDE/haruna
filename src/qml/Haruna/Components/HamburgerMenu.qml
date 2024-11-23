@@ -16,6 +16,7 @@ ToolButton {
 
     required property MpvVideo m_mpv
     required property RecentFilesModel m_recentFilesModel
+    required property Loader m_settingsLoader
 
     property int position: HamburgerMenu.Position.Header
     property bool isOpen: false
@@ -132,7 +133,9 @@ ToolButton {
                 AudioMenu {
                     m_mpv: root.m_mpv
                 }
-                SettingsMenu {}
+                SettingsMenu {
+                    m_settingsLoader: settingsLoader
+                }
                 HelpMenu {}
             }
         }

@@ -19,6 +19,7 @@ ToolBar {
     required property MpvVideo m_mpv
     required property MenuBarLoader m_menuBarLoader
     required property RecentFilesModel m_recentFilesModel
+    required property Loader m_settingsLoader
 
     position: ToolBar.Header
     state: {
@@ -43,6 +44,7 @@ ToolBar {
         HamburgerMenu {
             m_mpv: root.m_mpv
             m_recentFilesModel: root.m_recentFilesModel
+            m_settingsLoader: settingsLoader
 
             position: HamburgerMenu.Position.Header
             visible: root.m_menuBarLoader.state === "hidden"
