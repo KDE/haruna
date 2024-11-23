@@ -8,6 +8,8 @@ import QtQuick
 import QtQuick.Controls
 import Qt.labs.platform as Labs
 
+import org.kde.haruna
+
 Labs.Menu {
     id: root
 
@@ -21,13 +23,27 @@ Labs.Menu {
 
     Labs.MenuItem {
         icon.name: appActions.toggleMenuBarAction.icon.name
-        text: menuBar.visible ? i18nc("@action:inmenu", "Hide Menubar") : i18nc("@action:inmenu", "Show Menubar")
+        text: {
+            const mainWindow = Window.window as Main
+            if (mainWindow?.menuBar.visible) {
+                return i18nc("@action:inmenu", "Hide Menubar")
+            } else {
+                return i18nc("@action:inmenu", "Show Menubar")
+            }
+        }
         onTriggered: appActions.toggleMenuBarAction.trigger()
     }
 
     Labs.MenuItem {
         icon.name: appActions.toggleHeaderAction.icon.name
-        text: header.visible ? i18nc("@action:inmenu", "Hide Toolbar") : i18nc("@action:inmenu", "Show Toolbar")
+        text: {
+            const mainWindow = Window.window as Main
+            if (mainWindow?.header.visible) {
+                return i18nc("@action:inmenu", "Hide Toolbar")
+            } else {
+                return i18nc("@action:inmenu", "Show Toolbar")
+            }
+        }
         onTriggered: appActions.toggleHeaderAction.trigger()
     }
 }

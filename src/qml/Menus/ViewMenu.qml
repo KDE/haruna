@@ -4,7 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+import QtQuick
 import QtQuick.Controls
+
+import org.kde.haruna
 
 Menu {
     id: root
@@ -15,10 +18,24 @@ Menu {
 
     MenuItem {
         action: appActions.toggleMenuBarAction
-        text: menuBar.visible ? i18nc("@action:inmenu", "Hide Menubar") : i18nc("@action:inmenu", "Show Menubar")
+        text: {
+            const mainWindow = Window.window as Main
+            if (mainWindow?.menuBar.visible) {
+                return i18nc("@action:inmenu", "Hide Menubar")
+            } else {
+                return i18nc("@action:inmenu", "Show Menubar")
+            }
+        }
     }
     MenuItem {
         action: appActions.toggleHeaderAction
-        text: header.visible ? i18nc("@action:inmenu", "Hide Toolbar") : i18nc("@action:inmenu", "Show Toolbar")
+        text: {
+            const mainWindow = Window.window as Main
+            if (mainWindow?.header.visible) {
+                return i18nc("@action:inmenu", "Hide Toolbar")
+            } else {
+                return i18nc("@action:inmenu", "Show Toolbar")
+            }
+        }
     }
 }
