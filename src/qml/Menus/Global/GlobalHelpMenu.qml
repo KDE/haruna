@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick
-import QtQuick.Controls
 import Qt.labs.platform as Labs
 
 Labs.Menu {
@@ -17,5 +15,15 @@ Labs.Menu {
         icon.name: appActions.aboutHarunaAction.icon.name
         text: appActions.aboutHarunaAction.text
         onTriggered: appActions.aboutHarunaAction.trigger()
+    }
+    Labs.MenuItem {
+        icon.name: appActions.reportBugAction.icon.name
+        text: appActions.reportBugAction.text
+        onTriggered: appActions.reportBugAction.trigger()
+    }
+    Labs.MenuItem {
+        icon.name: appActions.sponsorAction.icon.name
+        text: appActions.sponsorAction.text
+        onTriggered: appActions.sponsorAction.trigger()
     }
 }
