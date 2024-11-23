@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
@@ -13,8 +15,6 @@ import QtQml
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
-
-pragma ComponentBehavior: Bound
 
 Kirigami.ApplicationWindow {
     id: window
@@ -72,6 +72,8 @@ Kirigami.ApplicationWindow {
 
     menuBar: MenuBarLoader {
         id: menuBarLoader
+
+        m_mpv: mpv
     }
 
     MpvVideo {
@@ -225,6 +227,7 @@ Kirigami.ApplicationWindow {
 
         active: false
         sourceComponent: ContextMenu {
+            m_mpv: mpv
             onClosed: mpvContextMenuLoader.active = false
         }
     }

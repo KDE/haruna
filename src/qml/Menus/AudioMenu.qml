@@ -13,15 +13,17 @@ import org.kde.haruna
 Menu {
     id: root
 
+    required property MpvVideo m_mpv
+
     title: i18nc("@title:menu", "&Audio")
 
     AudioTracksMenu {
         id: audioMenu
 
+        m_mpv: root.m_mpv
+
         y: parent.height
         title: i18nc("@title:menu", "&Track")
-        model: mpv.audioTracksModel
-        enabled: mpv.audioTracksModel.rowCount() > 0
     }
 
     MenuSeparator {}

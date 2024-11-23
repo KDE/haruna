@@ -16,6 +16,8 @@ import org.kde.haruna.settings
 Loader {
     id: root
 
+    required property MpvVideo m_mpv
+
     property bool showGlobalMenu: app.platformName() !== "windows"
                                     && Kirigami.Settings.hasPlatformMenuBar
                                     && !Kirigami.Settings.isMobile
@@ -46,8 +48,12 @@ Loader {
             ViewMenu {}
             PlaybackMenu {}
             VideoMenu {}
-            SubtitlesMenu {}
-            AudioMenu {}
+            SubtitlesMenu {
+                m_mpv: root.m_mpv
+            }
+            AudioMenu {
+                m_mpv: root.m_mpv
+            }
             SettingsMenu {}
             HelpMenu {}
         }
@@ -61,8 +67,12 @@ Loader {
             GlobalViewMenu {}
             GlobalPlaybackMenu {}
             GlobalVideoMenu {}
-            GlobalSubtitlesMenu {}
-            GlobalAudioMenu {}
+            GlobalSubtitlesMenu {
+                m_mpv: root.m_mpv
+            }
+            GlobalAudioMenu {
+                m_mpv: root.m_mpv
+            }
             GlobalSettingsMenu {}
             GlobalHelpMenu {}
         }

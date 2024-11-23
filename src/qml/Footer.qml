@@ -50,6 +50,7 @@ ToolBar {
         anchors.fill: parent
 
         HamburgerMenu {
+            m_mpv: root.m_mpv
             position: HamburgerMenu.Position.Footer
             visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
         }

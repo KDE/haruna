@@ -7,10 +7,16 @@
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.haruna
+
 Menu {
     id: root
 
-    required property var model
+    required property MpvVideo m_mpv
+
+    property TracksModel model: m_mpv.audioTracksModel
+
+    enabled: root.m_mpv.audioTracksModel.rowCount() > 0
 
     Repeater {
         model: root.model
@@ -24,10 +30,10 @@ Menu {
             required property string trackId
 
             checkable: true
-            checked: delegate.trackId === mpv.audioId
+            checked: delegate.trackId === root.m_mpv.audioId
             text: delegate.displayText
             onTriggered: {
-                mpv.audioId = delegate.trackId
+                root.m_mpv.audioId = delegate.trackId
             }
         }
     }

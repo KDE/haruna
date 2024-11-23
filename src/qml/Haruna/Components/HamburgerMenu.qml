@@ -14,6 +14,8 @@ import org.kde.haruna
 ToolButton {
     id: root
 
+    required property MpvVideo m_mpv
+
     property int position: HamburgerMenu.Position.Header
     property bool isOpen: false
 
@@ -74,22 +76,22 @@ ToolButton {
             SubtitleTracksMenu {
                 id: primarySubtitlesMenu
 
-                model: mpv.subtitleTracksModel
+                m_mpv: root.m_mpv
                 isPrimarySubtitleMenu: true
                 title: i18nc("@title:menu", "Primary Subtitle")
-                enabled: mpv.subtitleTracksModel.rowCount() > 1
             }
 
             SubtitleTracksMenu {
-                model: mpv.subtitleTracksModel
+                m_mpv: root.m_mpv
                 isPrimarySubtitleMenu: false
                 title: i18nc("@title:menu", "Secondary Subtitle")
-                enabled: mpv.subtitleTracksModel.rowCount() > 1
             }
 
 
             AudioTracksMenu {
                 id: audioMenu
+
+                m_mpv: root.m_mpv
 
                 title: i18nc("@title:menu", "Audio Track")
                 model: mpv.audioTracksModel
@@ -121,8 +123,12 @@ ToolButton {
                 ViewMenu {}
                 PlaybackMenu {}
                 VideoMenu {}
-                SubtitlesMenu {}
-                AudioMenu {}
+                SubtitlesMenu {
+                    m_mpv: root.m_mpv
+                }
+                AudioMenu {
+                    m_mpv: root.m_mpv
+                }
                 SettingsMenu {}
                 HelpMenu {}
             }

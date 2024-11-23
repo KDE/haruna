@@ -14,16 +14,18 @@ import org.kde.haruna
 Labs.Menu {
     id: root
 
+    required property MpvVideo m_mpv
+
     title: i18nc("@title:menu", "&Subtitles")
 
     Labs.Menu {
         id: primarySubtitleMenu
 
         title: i18nc("@title:menu", "Primary Subtitle")
-        enabled: mpv.subtitleTracksModel.rowCount() > 1
+        enabled: root.m_mpv.subtitleTracksModel.rowCount() > 1
 
         Instantiator {
-            model: mpv.subtitleTracksModel
+            model: root.m_mpv.subtitleTracksModel
             delegate: Labs.MenuItem {
                 id: primarySubDelegate
 
@@ -33,12 +35,12 @@ Labs.Menu {
                 required property string codec
                 required property string trackId
 
-                enabled: primarySubDelegate.trackId !== mpv.secondarySubtitleId || primarySubDelegate.trackId === 0
+                enabled: primarySubDelegate.trackId !== root.m_mpv.secondarySubtitleId || primarySubDelegate.trackId === 0
                 checkable: true
-                checked: primarySubDelegate.trackId === mpv.subtitleId
+                checked: primarySubDelegate.trackId === root.m_mpv.subtitleId
                 text: primarySubDelegate.displayText
                 onTriggered: {
-                    mpv.subtitleId = primarySubDelegate.trackId
+                    root.m_mpv.subtitleId = primarySubDelegate.trackId
                 }
             }
             onObjectAdded: function(index, object) {
@@ -54,10 +56,10 @@ Labs.Menu {
         id: secondarySubtitleMenu
 
         title: i18nc("@title:menu", "Secondary Subtitle")
-        enabled: mpv.subtitleTracksModel.rowCount() > 1
+        enabled: root.m_mpv.subtitleTracksModel.rowCount() > 1
 
         Instantiator {
-            model: mpv.subtitleTracksModel
+            model: root.m_mpv.subtitleTracksModel
             delegate: Labs.MenuItem {
                 id: secondarySubDelegate
 
@@ -67,12 +69,12 @@ Labs.Menu {
                 required property string codec
                 required property string trackId
 
-                enabled: secondarySubDelegate.trackId !== mpv.subtitleId || secondarySubDelegate.trackId === 0
+                enabled: secondarySubDelegate.trackId !== root.m_mpv.subtitleId || secondarySubDelegate.trackId === 0
                 checkable: true
-                checked: secondarySubDelegate.trackId === mpv.secondarySubtitleId
+                checked: secondarySubDelegate.trackId === root.m_mpv.secondarySubtitleId
                 text: secondarySubDelegate.displayText
                 onTriggered: {
-                    mpv.secondarySubtitleId = secondarySubDelegate.trackId
+                    root.m_mpv.secondarySubtitleId = secondarySubDelegate.trackId
                 }
             }
             onObjectAdded: function(index, object) {

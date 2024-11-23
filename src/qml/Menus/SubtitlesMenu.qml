@@ -13,20 +13,20 @@ import org.kde.haruna
 Menu {
     id: root
 
+    required property MpvVideo m_mpv
+
     title: i18nc("@title:menu", "&Subtitles")
 
     SubtitleTracksMenu {
-        model: mpv.subtitleTracksModel
+        m_mpv: root.m_mpv
         isPrimarySubtitleMenu: true
         title: i18nc("@title:menu", "Primary Subtitle")
-        enabled: mpv.subtitleTracksModel.rowCount() > 1
     }
 
     SubtitleTracksMenu {
-        model: mpv.subtitleTracksModel
+        m_mpv: root.m_mpv
         isPrimarySubtitleMenu: false
         title: i18nc("@title:menu", "Secondary Subtitle")
-        enabled: mpv.subtitleTracksModel.rowCount() > 1
     }
 
     MenuSeparator {}

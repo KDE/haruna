@@ -7,8 +7,12 @@
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.haruna
+
 Menu {
     id: root
+
+    required property MpvVideo m_mpv
 
     MenuItem { action: appActions.playPauseAction }
     MenuItem { action: appActions.playNextAction }
@@ -28,8 +32,12 @@ Menu {
     MenuSeparator {}
 
     VideoMenu {}
-    AudioMenu {}
-    SubtitlesMenu {}
+    AudioMenu {
+        m_mpv: root.m_mpv
+    }
+    SubtitlesMenu {
+        m_mpv: root.m_mpv
+    }
 
     MenuSeparator {}
 

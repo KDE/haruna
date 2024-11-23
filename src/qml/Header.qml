@@ -40,6 +40,7 @@ ToolBar {
         width: parent.width
 
         HamburgerMenu {
+            m_mpv: root.m_mpv
             position: HamburgerMenu.Position.Header
             visible: root.m_menuBarLoader.state === "hidden"
         }
@@ -72,9 +73,10 @@ ToolBar {
             SubtitleTracksMenu {
                 id: subtitleMenu
 
-                y: parent.height
-                model: root.m_mpv.subtitleTracksModel
+                m_mpv: root.m_mpv
                 isPrimarySubtitleMenu: true
+
+                y: parent.height
             }
         }
 
@@ -91,6 +93,8 @@ ToolBar {
 
             AudioTracksMenu {
                 id: audioMenu
+
+                m_mpv: root.m_mpv
 
                 y: parent.height
                 model: root.m_mpv.audioTracksModel
