@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Window
-import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
@@ -14,6 +15,10 @@ import org.kde.haruna
 
 Kirigami.ApplicationWindow {
     id: root
+
+    required property MpvVideo m_mpv
+    required property ProxyActionsModel m_proxyActionsModel
+    required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
     property int currentPage: SettingsWindow.Page.General
@@ -72,7 +77,8 @@ Kirigami.ApplicationWindow {
                     icon.name: "video-x-generic"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/VideoSettings.qml`)
+                        applicationWindow().pageStack.push(`${root.settingsPath}/VideoSettings.qml`,
+                                                           {m_mpv: root.m_mpv})
                     }
                 },
                 Kirigami.Action {
@@ -112,7 +118,8 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure-shortcuts"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/ShortcutsSettings.qml`)
+                        applicationWindow().pageStack.push(`${root.settingsPath}/ShortcutsSettings.qml`,
+                                                           {m_proxyActionsModel: root.m_proxyActionsModel})
                     }
                 },
                 Kirigami.Action {
@@ -120,7 +127,8 @@ Kirigami.ApplicationWindow {
                     icon.name: "configure"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/CustomCommandsSettings.qml`)
+                        applicationWindow().pageStack.push(`${root.settingsPath}/CustomCommandsSettings.qml`,
+                                                           {m_customCommandsModel: root.m_customCommandsModel})
                     }
                 },
                 Kirigami.Action {
@@ -128,7 +136,8 @@ Kirigami.ApplicationWindow {
                     icon.name: "help-about"
                     onTriggered: {
                         applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/DebugSettings.qml`)
+                        applicationWindow().pageStack.push(`${root.settingsPath}/DebugSettings.qml`,
+                                                           {m_mpv: root.m_mpv})
                     }
                 },
                 Kirigami.Action {
@@ -144,11 +153,16 @@ Kirigami.ApplicationWindow {
             anchors.fill: parent
             model: pages
             delegate: ItemDelegate {
+                id: delegate
+
+                required property int index
+                required property Action modelData
+
                 width: settingsPagesList.width
-                action: modelData
-                highlighted: model.index === ListView.view.currentIndex
+                action: delegate.modelData
+                highlighted: delegate.index === ListView.view.currentIndex
                 onClicked: {
-                    ListView.view.currentIndex = model.index
+                    ListView.view.currentIndex = delegate.index
                 }
             }
         }

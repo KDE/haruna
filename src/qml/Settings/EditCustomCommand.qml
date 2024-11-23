@@ -14,6 +14,8 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
+    required property CustomCommandsModel m_customCommandsModel
+
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
     property string command: ""
     property string osdMessage: ""
@@ -142,7 +144,7 @@ SettingsBasePage {
                 icon.name: "delete"
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
-                    customCommandsModel.deleteCustomCommand(root.commandId, root.index)
+                    root.m_customCommandsModel.deleteCustomCommand(root.commandId, root.index)
                     applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
                 }
             }
@@ -178,13 +180,13 @@ SettingsBasePage {
                     switch (root.mode) {
                     case EditCustomCommand.Mode.Create:
                         // save new command to config file
-                        customCommandsModel.saveCustomCommand(commandTextField.text,
+                        root.m_customCommandsModel.saveCustomCommand(commandTextField.text,
                                                               osdMessageTextField.text,
                                                               typeGroup.checkedButton.optionName)
                         break
                     case EditCustomCommand.Mode.Edit:
                         // update existing command
-                        customCommandsModel.editCustomCommand(root.index,
+                        root.m_customCommandsModel.editCustomCommand(root.index,
                                                               commandTextField.text,
                                                               osdMessageTextField.text,
                                                               typeGroup.checkedButton.optionName)

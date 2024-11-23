@@ -504,8 +504,8 @@ SettingsBasePage {
         // ------------------------------------
 
         Item {
-            width: Kirigami.Units.gridUnit
-            height: Kirigami.Units.gridUnit
+            Layout.preferredWidth: Kirigami.Units.gridUnit
+            Layout.preferredHeight: Kirigami.Units.gridUnit
         }
     }
 }

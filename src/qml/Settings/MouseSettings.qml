@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQml
 import QtQuick
 import QtQuick.Layouts
@@ -124,8 +126,8 @@ SettingsBasePage {
         }
 
         Item {
-            width: Kirigami.Units.gridUnit
-            height: Kirigami.Units.gridUnit
+            Layout.preferredWidth: Kirigami.Units.gridUnit
+            Layout.preferredHeight: Kirigami.Units.gridUnit
         }
 
         SelectActionPopup {

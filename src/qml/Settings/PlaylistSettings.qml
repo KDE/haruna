@@ -71,7 +71,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.showToolbar
             text: i18nc("@option:check", "Show toolbar")
@@ -81,7 +81,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.overlayVideo
             text: i18nc("@option:check", "Overlay video")
@@ -95,7 +95,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.showMediaTitle
             text: i18nc("@option:check", "Show media title instead of file name")
@@ -105,7 +105,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.loadSiblings
             text: i18nc("@option:check", "Auto load videos from same folder")
@@ -115,7 +115,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.repeat
             text: i18nc("@option:check", "Repeat")
@@ -125,7 +125,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.showRowNumber
             text: i18nc("@option:check", "Show row number")
@@ -135,7 +135,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.canToggleWithMouse
             text: i18nc("@option:check", "Toggle with mouse")
@@ -145,7 +145,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             text: i18nc("@option:check", "Increase font size when fullscreen")
             checked: PlaylistSettings.bigFontFullscreen
@@ -157,7 +157,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.rememberState
             text: i18nc("@option:check", "Remember last playlist state")
@@ -172,7 +172,7 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1; height: 1 }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.openWithSingleClick
             text: i18nc("@option:check", "Open items with single click")
@@ -184,8 +184,8 @@ SettingsBasePage {
 
 
         Item {
-            width: Kirigami.Units.gridUnit
-            height: Kirigami.Units.gridUnit
+            Layout.preferredWidth: Kirigami.Units.gridUnit
+            Layout.preferredHeight: Kirigami.Units.gridUnit
         }
     }
 }

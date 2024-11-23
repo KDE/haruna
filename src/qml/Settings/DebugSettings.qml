@@ -17,6 +17,8 @@ import org.kde.haruna.settings
 SettingsBasePage {
     id: root
 
+    required property MpvVideo m_mpv
+
     ColumnLayout {
         id: content
 
@@ -42,7 +44,7 @@ SettingsBasePage {
             }
         }
 
-        Item { height: Kirigami.Units.largeSpacing }
+        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
             text: i18nc("@label:textbox", "Config file")
@@ -66,7 +68,7 @@ SettingsBasePage {
             }
         }
 
-        Item { height: Kirigami.Units.largeSpacing }
+        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
             text: i18nc("@label:textbox", "Custom commands config file")
@@ -90,7 +92,7 @@ SettingsBasePage {
             }
         }
 
-        Item { height: Kirigami.Units.largeSpacing }
+        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
             text: i18nc("@info:usagetip", "If fields are empty that means there is no config file/folder (e.g when using the default settings).")
@@ -98,14 +100,14 @@ SettingsBasePage {
             Layout.fillWidth: true
         }
 
-        Item { height: Kirigami.Units.largeSpacing }
+        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         CheckBox {
             text: i18nc("@option:check", "Enable mpv logging")
             checked: InformationSettings.mpvLogging
             visible: false
             onCheckedChanged: {
-                mpv.setProperty(MpvProperties.Terminal, checked)
+                root.m_mpv.setProperty(MpvProperties.Terminal, checked)
                 InformationSettings.mpvLogging = checked
                 InformationSettings.save()
             }

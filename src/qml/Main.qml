@@ -244,7 +244,11 @@ Kirigami.ApplicationWindow {
         id: settingsLoader
 
         active: false
-        sourceComponent: SettingsWindow {}
+        sourceComponent: SettingsWindow {
+            m_mpv: mpv
+            m_proxyActionsModel: proxyActionsModel
+            m_customCommandsModel: customCommandsModel
+        }
     }
 
     Connections {

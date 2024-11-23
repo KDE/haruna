@@ -121,7 +121,7 @@ SettingsBasePage {
                     text: i18nc("@info:tooltip",
                                 "Trying to open another Haruna instance will do nothing.\n"+
                                 "Trying to open another file with Haruna will open the file in the running instance.")
-                    visible: parent.checked
+                    visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
                     closePolicy: Popup.NoAutoClose
@@ -150,7 +150,7 @@ SettingsBasePage {
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "File will be added to the end of the playlist")
-                    visible: parent.checked
+                    visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
                     closePolicy: Popup.NoAutoClose
@@ -265,7 +265,7 @@ SettingsBasePage {
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "Generating an accurate preview is slow")
-                    visible: parent.checked
+                    visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
                     closePolicy: Popup.NoAutoClose
@@ -320,7 +320,7 @@ SettingsBasePage {
                                                              : ""
                     text: i18nc("@info:tooltip", "%1 The window is resized according to the video resolution.\n" +
                                 "The maximum size is not constrained, this is left to the operating system.", waylandMessage)
-                    visible: parent.checked
+                    visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
                     closePolicy: Popup.NoAutoClose
@@ -348,7 +348,7 @@ SettingsBasePage {
                 ToolTip {
                     text: i18nc("@info:tooltip", "Enter fullscreen mode when the application starts.\n" +
                                  "This takes precedence over Resize to fit video, and Remember window size and position settings.")
-                    visible: parent.checked
+                    visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
                     closePolicy: Popup.NoAutoClose
@@ -380,7 +380,7 @@ SettingsBasePage {
                                 "are saved and used to restore the application " +
                                 "to the same size and position when a new instance is opened.\n\n"+
                                 "The \"Resize to fit video\" setting takes precedence.\n")
-                    visible: parent.checked
+                    visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
                     closePolicy: Popup.NoAutoClose
@@ -432,6 +432,8 @@ SettingsBasePage {
             textRole: "display"
             model: app.colorSchemesModel
             delegate: ItemDelegate {
+                id: delegate
+
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
                 width: colorThemeSwitcher.width
                 highlighted: model.display === GeneralSettings.colorScheme
@@ -443,7 +445,7 @@ SettingsBasePage {
                     }
                     Label {
                         text: model.display
-                        color: highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                        color: delegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                         Layout.fillWidth: true
                     }
                 }
@@ -528,8 +530,8 @@ SettingsBasePage {
         }
 
         Item {
-            width: Kirigami.Units.gridUnit
-            height: Kirigami.Units.gridUnit
+            Layout.preferredWidth: Kirigami.Units.gridUnit
+            Layout.preferredHeight: Kirigami.Units.gridUnit
         }
     }
 }

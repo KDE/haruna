@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQml
 import QtQuick
 import QtQuick.Layouts
@@ -17,9 +19,11 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
+    required property ProxyActionsModel m_proxyActionsModel
+
     onVisibleChanged: {
         if (!visible) {
-            proxyActionsModel.setNameFilter("")
+            root.m_proxyActionsModel.setNameFilter("")
         }
     }
 
@@ -33,7 +37,7 @@ SettingsBasePage {
                 id: searchField
 
                 focus: true
-                onAccepted: proxyActionsModel.setNameFilter(text)
+                onAccepted: root.m_proxyActionsModel.setNameFilter(text)
                 Layout.fillWidth: true
                 KeyNavigation.up: actionsListView
                 KeyNavigation.down: actionsListView
@@ -44,7 +48,7 @@ SettingsBasePage {
     ListView {
         id: actionsListView
 
-        model: proxyActionsModel
+        model: root.m_proxyActionsModel
         reuseItems: true
         delegate: ItemDelegate {
             id: delegate
@@ -78,7 +82,7 @@ SettingsBasePage {
                         }
 
                         if (keySequence.toString() !== delegate.actionShortcut) {
-                            if (!proxyActionsModel.saveShortcut(delegate.index, keySequence)) {
+                            if (!root.m_proxyActionsModel.saveShortcut(delegate.index, keySequence)) {
                                 keySequence = delegate.actionShortcut
                             }
                         }

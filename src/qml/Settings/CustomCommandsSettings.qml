@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
@@ -12,10 +14,10 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.haruna
 
-pragma ComponentBehavior: Bound
-
 SettingsBasePage {
     id: root
+
+    required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
 
@@ -23,7 +25,7 @@ SettingsBasePage {
         id: customCommandsView
 
         reuseItems: true
-        model: customCommandsModel
+        model: root.m_customCommandsModel
         delegate: customCommandDelegate
 
 
@@ -33,7 +35,9 @@ SettingsBasePage {
             text: i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
                 text: i18nc("@action:button", "&Add command")
-                onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`)
+                onTriggered: applicationWindow().pageStack.replace(
+                                 `${root.settingsPath}/EditCustomCommand.qml`,
+                                 {m_customCommandsModel: root.m_customCommandsModel})
             }
         }
     }
@@ -67,8 +71,8 @@ SettingsBasePage {
                         listItem: customCommandItem
                         listView: customCommandsView
                         onMoveRequested: function (sourceRow, destinationRow) {
-                            const modelIndex = customCommandsModel.index(sourceRow, 0).parent
-                            customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
+                            const modelIndex = root.m_customCommandsModel.index(sourceRow, 0).parent
+                            root.m_customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
                         }
                     }
 
@@ -76,7 +80,7 @@ SettingsBasePage {
                         visible: delegate.type === "startup"
                         checked: delegate.setOnStartup
                         onCheckStateChanged: {
-                            customCommandsModel.toggleCustomCommand(delegate.commandId, delegate.index, checked)
+                            root.m_customCommandsModel.toggleCustomCommand(delegate.commandId, delegate.index, checked)
                         }
 
                         ToolTip {
@@ -87,9 +91,9 @@ SettingsBasePage {
 
                     Kirigami.Icon {
                         source: delegate.type === "shortcut" ? "configure-shortcuts" : "code-context"
-                        width: Kirigami.Units.iconSizes.small
-                        height: Kirigami.Units.iconSizes.small
                         enabled: delegate.setOnStartup
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
                     }
 
                     LabelWithTooltip {

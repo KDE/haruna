@@ -18,6 +18,8 @@ import org.kde.haruna.settings
 SettingsBasePage {
     id: root
 
+    required property MpvVideo m_mpv
+
     GridLayout {
         id: content
 
@@ -71,7 +73,7 @@ SettingsBasePage {
                 onAccepted: {
                     VideoSettings.defaultCover = fileDialog.selectedFile
                 }
-                onRejected: mpv.focus = true
+                onRejected: root.m_mpv.focus = true
             }
         }
 
@@ -103,7 +105,7 @@ SettingsBasePage {
             onActivated: function(index) {
                 VideoSettings.screenshotFormat = model.get(index).value
                 VideoSettings.save()
-                mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
+                root.m_mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
             }
 
             Component.onCompleted: {
@@ -148,7 +150,7 @@ SettingsBasePage {
                 function save() {
                     VideoSettings.screenshotTemplate = text
                     VideoSettings.save()
-                    mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
+                    root.m_mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
                 }
             }
 
@@ -208,9 +210,9 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: contrastSlider
 
-            value: mpv.getProperty(MpvProperties.Contrast)
+            value: root.m_mpv.getProperty(MpvProperties.Contrast)
             onSliderValueChanged: function(value) {
-                mpv.setProperty(MpvProperties.Contrast, value.toFixed(0))
+                root.m_mpv.setProperty(MpvProperties.Contrast, value.toFixed(0))
             }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -227,9 +229,9 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: brightnessSlider
 
-            value: mpv.getProperty(MpvProperties.Brightness)
+            value: root.m_mpv.getProperty(MpvProperties.Brightness)
             onSliderValueChanged: function(value) {
-                mpv.setProperty(MpvProperties.Brightness, value.toFixed(0))
+                root.m_mpv.setProperty(MpvProperties.Brightness, value.toFixed(0))
             }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -246,9 +248,9 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: gammaSlider
 
-            value: mpv.getProperty(MpvProperties.Gamma)
+            value: root.m_mpv.getProperty(MpvProperties.Gamma)
             onSliderValueChanged: function(value) {
-                mpv.setProperty(MpvProperties.Gamma, value.toFixed(0))
+                root.m_mpv.setProperty(MpvProperties.Gamma, value.toFixed(0))
             }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
@@ -265,9 +267,9 @@ SettingsBasePage {
         ImageAdjustmentSlider {
             id: saturationSlider
 
-            value: mpv.getProperty(MpvProperties.Saturation)
+            value: root.m_mpv.getProperty(MpvProperties.Saturation)
             onSliderValueChanged: function(value) {
-                mpv.setProperty(MpvProperties.Saturation, value.toFixed(0))
+                root.m_mpv.setProperty(MpvProperties.Saturation, value.toFixed(0))
             }
 
             Layout.topMargin: Kirigami.Units.largeSpacing
