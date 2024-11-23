@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import Qt.labs.platform as Labs
@@ -12,6 +14,8 @@ import org.kde.haruna
 
 Labs.Menu {
     id: root
+
+    required property RecentFilesModel m_recentFilesModel
 
     title: i18nc("@title:menu", "&File")
 
@@ -37,7 +41,7 @@ Labs.Menu {
         id: recentFilesMenu
 
         title: i18nc("@title:menu", "Recent Files")
-        onAboutToShow: recentFilesInstantiator.model = recentFilesModel
+        onAboutToShow: recentFilesInstantiator.model = root.m_recentFilesModel
 
         Instantiator {
             id: recentFilesInstantiator
@@ -52,8 +56,17 @@ Labs.Menu {
                 required property string path
 
                 text: delegate.name
-                onTriggered: window.openFile(delegate.path)
+                onTriggered: {
+                    recentFilesMenu.close()
+                    const mainWindow = Window.window as Main
+                    mainWindow.openFile(delegate.path)
+                }
             }
+        }
+        Labs.MenuSeparator {}
+        Labs.MenuItem {
+            text: i18nc("@action:inmenu", "Clear List")
+            onTriggered: root.m_recentFilesModel.deleteEntries()
         }
     }
 

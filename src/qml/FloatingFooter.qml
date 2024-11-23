@@ -19,6 +19,7 @@ Item {
     required property PlayList m_playlist
     required property MenuBarLoader m_menuBarLoader
     required property Header m_header
+    required property RecentFilesModel m_recentFilesModel
 
     property alias progressBar: progressBar
     property bool isFloating: true
@@ -105,6 +106,8 @@ Item {
                 id: hamburgerMenu
 
                 m_mpv: root.m_mpv
+                m_recentFilesModel: root.m_recentFilesModel
+
                 position: HamburgerMenu.Position.Footer
                 visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
             }

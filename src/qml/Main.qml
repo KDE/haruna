@@ -68,12 +68,14 @@ Kirigami.ApplicationWindow {
 
         m_mpv: mpv
         m_menuBarLoader: menuBarLoader
+        m_recentFilesModel: recentFilesModel
     }
 
     menuBar: MenuBarLoader {
         id: menuBarLoader
 
         m_mpv: mpv
+        m_recentFilesModel: recentFilesModel
     }
 
     MpvVideo {
@@ -154,6 +156,7 @@ Kirigami.ApplicationWindow {
             m_playlist: playlist
             m_menuBarLoader: menuBarLoader
             m_header: header
+            m_recentFilesModel: recentFilesModel
         }
     }
 
@@ -165,6 +168,7 @@ Kirigami.ApplicationWindow {
             m_playlist: playlist
             m_menuBarLoader: menuBarLoader
             m_header: header
+            m_recentFilesModel: recentFilesModel
         }
     }
 

@@ -15,6 +15,7 @@ ToolButton {
     id: root
 
     required property MpvVideo m_mpv
+    required property RecentFilesModel m_recentFilesModel
 
     property int position: HamburgerMenu.Position.Header
     property bool isOpen: false
@@ -119,7 +120,9 @@ ToolButton {
             Menu {
                 title: i18nc("@action:inmenu", "&More")
 
-                FileMenu {}
+                FileMenu {
+                    m_recentFilesModel: root.m_recentFilesModel
+                }
                 ViewMenu {}
                 PlaybackMenu {}
                 VideoMenu {}

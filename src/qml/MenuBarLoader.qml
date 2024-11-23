@@ -17,6 +17,7 @@ Loader {
     id: root
 
     required property MpvVideo m_mpv
+    required property RecentFilesModel m_recentFilesModel
 
     property bool showGlobalMenu: app.platformName() !== "windows"
                                     && Kirigami.Settings.hasPlatformMenuBar
@@ -44,7 +45,9 @@ Loader {
             hoverEnabled: true
             Kirigami.Theme.colorSet: Kirigami.Theme.Header
 
-            FileMenu {}
+            FileMenu {
+                m_recentFilesModel: root.m_recentFilesModel
+            }
             ViewMenu {}
             PlaybackMenu {}
             VideoMenu {}
@@ -63,7 +66,9 @@ Loader {
         id: globalMenuBarComponent
 
         Platform.MenuBar {
-            GlobalFileMenu {}
+            GlobalFileMenu {
+                m_recentFilesModel: root.m_recentFilesModel
+            }
             GlobalViewMenu {}
             GlobalPlaybackMenu {}
             GlobalVideoMenu {}
