@@ -102,6 +102,7 @@ Kirigami.ApplicationWindow {
         Osd {
             id: osd
 
+            active: mpv.isReady
             maxWidth: mpv.width
         }
 

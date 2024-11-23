@@ -15,7 +15,8 @@ Item {
     id: root
 
     required property int maxWidth
-    property bool active: mpv.isReady
+
+    property bool active: false
     property alias label: label
 
     Label {
@@ -25,7 +26,7 @@ Item {
 
         x: Kirigami.Units.largeSpacing
         y: Kirigami.Units.largeSpacing
-        width: textWidth > root.maxWidth ? maxWidth : undefined
+        width: textWidth > root.maxWidth ? root.maxWidth : undefined
         visible: false
         background: Rectangle {
             color: Kirigami.Theme.backgroundColor
