@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQml
 import QtQuick
 import QtQuick.Controls
@@ -18,11 +20,13 @@ import org.kde.haruna.settings
 Slider {
     id: root
 
+    required property MpvVideo m_mpv
+
     property alias loopIndicator: loopIndicator
     property bool seekStarted: false
 
     from: 0
-    to: mpv.duration
+    to: root.m_mpv.duration
     implicitWidth: 200
     implicitHeight: 25
     leftPadding: 0
@@ -39,11 +43,11 @@ Slider {
             id: loopIndicator
             property double startPosition: -1
             property double endPosition: -1
-            width: endPosition === -1 ? 1 : (endPosition / mpv.duration * progressBarBG.width) - x
+            width: endPosition === -1 ? 1 : (endPosition / root.m_mpv.duration * progressBarBG.width) - x
             height: parent.height
             color: Qt.hsla(0, 0, 0, 0.4)
             visible: startPosition !== -1
-            x: startPosition / mpv.duration * progressBarBG.width
+            x: startPosition / root.m_mpv.duration * progressBarBG.width
             z: 110
         }
 
@@ -57,7 +61,7 @@ Slider {
             id: progressBarToolTip
 
             z: 10
-            visible: progressBarMouseArea.containsMouse && mpv.duration > 0
+            visible: progressBarMouseArea.containsMouse && root.m_mpv.duration > 0
             timeout: -1
             delay: 0
             contentItem: ColumnLayout {
@@ -65,11 +69,11 @@ Slider {
                 Loader {
                     id: previewMpvLoader
 
-                    property string file: mpv.currentUrl
+                    property string file: root.m_mpv.currentUrl
                     property double position: 0
                     property double aspectRatio: 2
 
-                    active: GeneralSettings.showPreviewThumbnail && previewMpvLoader.file !== "" && mpv.videoWidth > 0
+                    active: GeneralSettings.showPreviewThumbnail && previewMpvLoader.file !== "" && root.m_mpv.videoWidth > 0
                     visible: active && (item as MpvPreview).isLocalFile && (item as MpvPreview).isVideo
                     sourceComponent: MpvPreview {
                         id: mpvPreview
@@ -109,11 +113,11 @@ Slider {
                     }
 
                     const time = mouseX / progressBarBG.width * root.to
-                    const chapters = mpv.getProperty(MpvProperties.ChapterList)
+                    const chapters = root.m_mpv.getProperty(MpvProperties.ChapterList)
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
-                    mpv.chapter = nextChapter
+                    root.m_mpv.chapter = nextChapter
                 }
-                if (mouse.button === Qt.RightButton && mpv.chaptersModel.rowCount > 0) {
+                if (mouse.button === Qt.RightButton && root.m_mpv.chaptersModel.rowCount > 0) {
                     chaptersPopup.x = mouseX - chaptersPopup.width * 0.5
                     chaptersPopup.open()
                 }
@@ -142,12 +146,12 @@ Slider {
         }
     }
 
-    onToChanged: value = mpv.position
+    onToChanged: value = root.m_mpv.position
     onPressedChanged: {
         if (pressed) {
             seekStarted = true
         } else {
-            mpv.command(["seek", value, "absolute"])
+            root.m_mpv.command(["seek", value, "absolute"])
             seekStarted = false
         }
     }
@@ -155,7 +159,9 @@ Slider {
     // create markers for the chapters
     Repeater {
         id: chaptersInstantiator
-        model: GeneralSettings.showChapterMarkers  && mpv.chaptersModel.rowCount < 50 ? mpv.chaptersModel : 0
+        model: GeneralSettings.showChapterMarkers && root.m_mpv.chaptersModel.rowCount < 50
+               ? root.m_mpv.chaptersModel
+               : 0
         delegate: Shape {
             id: chapterMarkerShape
 
@@ -165,8 +171,8 @@ Slider {
 
             // where the chapter marker shoud be positioned on the progress bar
             property int position: root.mirrored
-                                   ? progressBarBG.width - (chapterMarkerShape.startTime / mpv.duration * progressBarBG.width)
-                                   : chapterMarkerShape.startTime / mpv.duration * progressBarBG.width
+                                   ? progressBarBG.width - (chapterMarkerShape.startTime / root.m_mpv.duration * progressBarBG.width)
+                                   : chapterMarkerShape.startTime / root.m_mpv.duration * progressBarBG.width
 
             antialiasing: true
             ShapePath {
@@ -199,7 +205,7 @@ Slider {
                     hoverEnabled: true
                     onEntered: chapterTitleToolTip.visible = true
                     onExited: chapterTitleToolTip.visible = false
-                    onClicked: mpv.chapter = chapterMarkerShape.index
+                    onClicked: root.m_mpv.chapter = chapterMarkerShape.index
                 }
             }
         }
@@ -211,16 +217,16 @@ Slider {
         property int itemHeight
         property int itemBiggestWidth: 1
         property var checkedItem
-        property int maxWidth: window.width * 0.7 > Kirigami.Units.gridUnit * 40
+        property int maxWidth: root.Window.window.width * 0.7 > Kirigami.Units.gridUnit * 40
                                ? Kirigami.Units.gridUnit * 40
-                               : window.width * 0.7
+                               : root.Window.window.width * 0.7
 
         y: -height - root.height
         z: 20
         width: itemBiggestWidth > maxWidth ? maxWidth : itemBiggestWidth
-        height: itemHeight * mpv.chaptersModel.rowCount + listViewPage.footer.height > mpv.height - Kirigami.Units.gridUnit
-                ? mpv.height - Kirigami.Units.gridUnit - listViewPage.footer.height * 2
-                : itemHeight * mpv.chaptersModel.rowCount + listViewPage.footer.height
+        height: itemHeight * root.m_mpv.chaptersModel.rowCount + listViewPage.footer.height > root.m_mpv.height - Kirigami.Units.gridUnit
+                ? root.m_mpv.height - Kirigami.Units.gridUnit - listViewPage.footer.height * 2
+                : itemHeight * root.m_mpv.chaptersModel.rowCount + listViewPage.footer.height
         modal: true
         padding: 0
         onOpened: {
@@ -253,7 +259,7 @@ Slider {
             ListView {
                 id: listView
 
-                model: mpv.chaptersModel
+                model: root.m_mpv.chaptersModel
                 reuseItems: true
                 delegate: CheckDelegate {
                     id: menuitem
@@ -262,15 +268,16 @@ Slider {
                     required property string title
                     required property double startTime
 
+                    property int scrollBarWidth: listViewPage.contentItem.ScrollBar.vertical.width
+
                     text: `${app.formatTime(menuitem.startTime)} - ${menuitem.title}`
                     checked: menuitem.index === chaptersPopup.checkedItem
-                    width: listViewPage.width
+                    width: listViewPage.width - scrollBarWidth
                     onClicked: {
                         chaptersPopup.close()
-                        mpv.chapter = menuitem.index
+                        root.m_mpv.chapter = menuitem.index
                     }
                     Component.onCompleted: {
-                        const scrollBarWidth = listViewPage.contentItem.ScrollBar.vertical.width
                         chaptersPopup.itemBiggestWidth = menuitem.implicitWidth + scrollBarWidth > chaptersPopup.width
                                 ? menuitem.implicitWidth + scrollBarWidth
                                 : chaptersPopup.width
@@ -283,18 +290,18 @@ Slider {
     }
 
     Connections {
-        target: mpv
+        target: root.m_mpv
         function onFileLoaded() {
             loopIndicator.startPosition = -1
             loopIndicator.endPosition = -1
-            previewMpvLoader.file = mpv.currentUrl
+            previewMpvLoader.file = root.m_mpv.currentUrl
         }
         function onChapterChanged() {
-            chaptersPopup.checkedItem = mpv.chapter
+            chaptersPopup.checkedItem = root.m_mpv.chapter
         }
         function onPositionChanged() {
             if (!root.seekStarted) {
-                root.value = mpv.position
+                root.value = root.m_mpv.position
             }
         }
     }

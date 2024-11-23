@@ -160,6 +160,7 @@ Item {
             HProgressBar {
                 id: progressBar
 
+                m_mpv: root.m_mpv
                 Layout.fillWidth: true
             }
 
