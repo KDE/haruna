@@ -150,7 +150,6 @@ Kirigami.ApplicationWindow {
         id: floatingFooterComponent
 
         FloatingFooter {
-            m_window: window
             m_mpv: mpv
             m_playlist: playlist
             m_menuBarLoader: menuBarLoader

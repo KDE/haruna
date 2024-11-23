@@ -15,7 +15,6 @@ import org.kde.haruna.settings
 Item {
     id: root
 
-    required property Kirigami.ApplicationWindow m_window
     required property MpvVideo m_mpv
     required property PlayList m_playlist
     required property MenuBarLoader m_menuBarLoader
@@ -24,7 +23,7 @@ Item {
     property alias progressBar: progressBar
     property bool isFloating: true
 
-    implicitWidth: m_window.contentItem.width
+    implicitWidth: Window.window.contentItem.width
     implicitHeight: footer.height + Kirigami.Units.largeSpacing * 2
 
     ToolBar {
@@ -32,10 +31,11 @@ Item {
 
         function getState() {
             if (root.m_mpv.mouseY > root.m_mpv.height - footer.height * 2) {
-                if (root.m_window.isFullScreen() && root.m_window.containsMouse) {
+                const mainWindow = Window.window as Main
+                if (mainWindow.isFullScreen() && mainWindow.containsMouse) {
                     return "visible"
                 }
-                if (root.m_window.isFullScreen() && !root.m_window.containsMouse){
+                if (mainWindow.isFullScreen() && !mainWindow.containsMouse){
                     return "hidden"
                 }
                 return "visible"
@@ -44,7 +44,7 @@ Item {
         }
 
         x: (root.width - width) / 2
-        width: Math.min(root.m_window.contentItem.width - Kirigami.Units.largeSpacing * 2, 900)
+        width: Math.min(Window.window.contentItem.width - Kirigami.Units.largeSpacing * 2, 900)
 
         state: GeneralSettings.floatingFooterTrigger === "EveryMouseMovement" ? "hidden" : getState()
         padding: Kirigami.Units.smallSpacing
