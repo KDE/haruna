@@ -27,6 +27,8 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
     QMap<QString, QVariant> track = m_tracks[index.row()].toMap();
 
     switch (role) {
+    case IdRole:
+        return track[u"id"_s];
     case TextRole: {
         QString text;
         auto title = track[u"title"_s].toString();
@@ -47,8 +49,6 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
         return track[u"lang"_s];
     case TitleRole:
         return track[u"title"_s];
-    case IdRole:
-        return track[u"id"_s];
     case CodecRole:
         return track[u"codec"_s];
     }
@@ -60,10 +60,10 @@ QHash<int, QByteArray> TracksModel::roleNames() const
 {
     // clang-format off
     QHash<int, QByteArray> roles{
+        {IdRole,       QByteArrayLiteral("trackId")},
         {TextRole,     QByteArrayLiteral("displayText")},
         {LanguageRole, QByteArrayLiteral("language")},
         {TitleRole,    QByteArrayLiteral("title")},
-        {IdRole,       QByteArrayLiteral("trackId")},
         {CodecRole,    QByteArrayLiteral("codec")},
     };
     // clang-format on

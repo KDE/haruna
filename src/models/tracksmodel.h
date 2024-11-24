@@ -21,10 +21,10 @@ public:
 
     // clang-format off
     enum Roles {
-        TextRole = Qt::UserRole,
+        IdRole = Qt::UserRole,
+        TextRole,
         LanguageRole,
         TitleRole,
-        IdRole,
         CodecRole
     };
     Q_ENUM(Roles)

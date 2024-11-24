@@ -26,11 +26,11 @@ Menu {
         delegate: MenuItem {
             id: delegate
 
+            required property int trackId
             required property string displayText
             required property string language
             required property string title
             required property string codec
-            required property string trackId
 
             enabled: root.isPrimarySubtitleMenu
                      ? delegate.trackId !== root.m_mpv.secondarySubtitleId || delegate.trackId === 0
