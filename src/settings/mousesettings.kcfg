@@ -10,7 +10,9 @@
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="haruna/haruna.conf" />
   <group name="Mouse">
-    <entry name="Left" type="String"></entry>
+    <entry name="Left" type="String">
+      <default>playPauseAction</default>
+    </entry>
     <entry name="Leftx2" type="String">
       <default>toggleFullscreenAction</default>
     </entry>
