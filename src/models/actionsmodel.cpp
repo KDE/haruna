@@ -62,7 +62,7 @@ ActionsModel::ActionsModel(QObject *parent)
     m_actions << action;
 
     action.name = u"configureAction"_s;
-    action.text = i18nc("@action", "Configure");
+    action.text = i18nc("@action", "Settings");
     action.iconName = u"configure"_s;
     action.defaultShortcut = Qt::CTRL | Qt::SHIFT | Qt::Key_Comma;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
