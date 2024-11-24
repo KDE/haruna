@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:39+0000\n"
+"POT-Creation-Date: 2024-11-24 00:40+0000\n"
 "PO-Revision-Date: 2024-05-16 11:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -399,7 +399,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "بدل ترويسة"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:95
+#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:101
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -594,42 +594,42 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
 
-#: src/qml/Actions.qml:82 src/qml/Actions.qml:100
+#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "صوت: %1 %2"
 
-#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
+#: src/qml/Actions.qml:178 src/qml/Actions.qml:184 src/qml/Actions.qml:189
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "سرعة التشغيل: %1"
 
-#: src/qml/Actions.qml:269
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "الحلقة تبدأ: %1"
 
-#: src/qml/Actions.qml:275
+#: src/qml/Actions.qml:290
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "الحلقة: %1 - %2"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:296
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "امسح الحلقة"
 
-#: src/qml/Actions.qml:292 src/qml/Actions.qml:298
+#: src/qml/Actions.qml:307 src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
 msgstr "توقيت الترجمة:  : %1"
 
-#: src/qml/Actions.qml:303
+#: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "الترجمة مغلقة"
 
-#: src/qml/Actions.qml:303
+#: src/qml/Actions.qml:318
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles off"
@@ -637,97 +637,97 @@ msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "الترجمة مغلقة"
 
-#: src/qml/Actions.qml:312 src/qml/Actions.qml:324
+#: src/qml/Actions.qml:327 src/qml/Actions.qml:339
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "الترجمة: بدون"
 
-#: src/qml/Actions.qml:316 src/qml/Actions.qml:328
+#: src/qml/Actions.qml:331 src/qml/Actions.qml:343
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "الترجمة: %1 %2"
 
-#: src/qml/Actions.qml:335 src/qml/Actions.qml:341
+#: src/qml/Actions.qml:350 src/qml/Actions.qml:356
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "تكبير الترجمة: %1"
 
-#: src/qml/Actions.qml:355
+#: src/qml/Actions.qml:370
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "التشابك: %1"
 
-#: src/qml/Actions.qml:411 src/qml/Actions.qml:417
+#: src/qml/Actions.qml:427 src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "التكبير: %1"
 
-#: src/qml/Actions.qml:422
+#: src/qml/Actions.qml:438
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "التكبير:  0"
 
-#: src/qml/Actions.qml:429 src/qml/Actions.qml:435
+#: src/qml/Actions.qml:445 src/qml/Actions.qml:451
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "التباين: %1"
 
-#: src/qml/Actions.qml:440
+#: src/qml/Actions.qml:456
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "التباين: 0"
 
-#: src/qml/Actions.qml:446 src/qml/Actions.qml:452
+#: src/qml/Actions.qml:462 src/qml/Actions.qml:468
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "السطوع: %1"
 
-#: src/qml/Actions.qml:457
+#: src/qml/Actions.qml:473
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "السطوع: 0"
 
-#: src/qml/Actions.qml:463 src/qml/Actions.qml:469
+#: src/qml/Actions.qml:479 src/qml/Actions.qml:485
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "غاما: %1"
 
-#: src/qml/Actions.qml:474
+#: src/qml/Actions.qml:490
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "غاما: 0"
 
-#: src/qml/Actions.qml:480 src/qml/Actions.qml:486
+#: src/qml/Actions.qml:496 src/qml/Actions.qml:502
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "التّشبّع: %1"
 
-#: src/qml/Actions.qml:491
+#: src/qml/Actions.qml:507
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "التّشبّع: 0"
 
-#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "ابدأ التشغيل"
 
-#: src/qml/FloatingFooter.qml:126 src/qml/Footer.qml:65
+#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "ألبث التّشغيل"
 
-#: src/qml/FloatingFooter.qml:140 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "شغل الملف السابق"
 
-#: src/qml/FloatingFooter.qml:154 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:104
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "شغل الملف التالي"
 
-#: src/qml/FloatingFooter.qml:171 src/qml/Footer.qml:107
+#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:122
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "الباقي: %1"
@@ -737,31 +737,31 @@ msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "اختر لوناً"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:58
+#: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "الملفات الحديثة"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:79
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
-#: src/qml/Menus/SubtitlesMenu.qml:21
+#: src/qml/Haruna/Components/HamburgerMenu.qml:83
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
+#: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "الترجمة الأولية"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:86
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:56
-#: src/qml/Menus/SubtitlesMenu.qml:28
+#: src/qml/Haruna/Components/HamburgerMenu.qml:89
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
+#: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "الترجمة الثانوية"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:94
+#: src/qml/Haruna/Components/HamburgerMenu.qml:98
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "مقطوعة صوتية"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:118
+#: src/qml/Haruna/Components/HamburgerMenu.qml:122
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "الم&زيد"
@@ -805,22 +805,22 @@ msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr ""
 
-#: src/qml/Header.qml:51
+#: src/qml/Header.qml:68
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "الترجمة"
 
-#: src/qml/Header.qml:71
+#: src/qml/Header.qml:89
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "صوت"
 
-#: src/qml/HProgressBar.qml:240
+#: src/qml/HProgressBar.qml:246
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "تخط الفصول"
 
-#: src/qml/HProgressBar.qml:248
+#: src/qml/HProgressBar.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -834,178 +834,178 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/qml/Main.qml:249 src/qml/PlayList.qml:348
-#: src/qml/Settings/VideoSettings.qml:68
+#: src/qml/Main.qml:285 src/qml/PlayList.qml:358
+#: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "اختر ملفّا"
 
-#: src/qml/Main.qml:276
+#: src/qml/Main.qml:312
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "اختر ملف ترجمة"
 
-#: src/qml/Main.qml:295
+#: src/qml/Main.qml:331
 msgctxt "@action:button"
 msgid "Open"
 msgstr "افتح"
 
-#: src/qml/Menus/AudioMenu.qml:16 src/qml/Menus/Global/GlobalAudioMenu.qml:17
+#: src/qml/Menus/AudioMenu.qml:18 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 msgctxt "@title:menu"
 msgid "&Audio"
 msgstr "&صوت"
 
-#: src/qml/Menus/AudioMenu.qml:22 src/qml/Menus/Global/GlobalAudioMenu.qml:22
+#: src/qml/Menus/AudioMenu.qml:26 src/qml/Menus/Global/GlobalAudioMenu.qml:25
 msgctxt "@title:menu"
 msgid "&Track"
 msgstr "&مقطوعة"
 
-#: src/qml/Menus/ContextMenu.qml:17
+#: src/qml/Menus/ContextMenu.qml:21
 msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "سرعة التشغيل"
 
-#: src/qml/Menus/FileMenu.qml:13 src/qml/Menus/Global/GlobalFileMenu.qml:16
+#: src/qml/Menus/FileMenu.qml:19 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&ملف"
 
-#: src/qml/Menus/FileMenu.qml:22 src/qml/Menus/Global/GlobalFileMenu.qml:39
+#: src/qml/Menus/FileMenu.qml:28 src/qml/Menus/Global/GlobalFileMenu.qml:42
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "الملفات الحديثة"
 
-#: src/qml/Menus/FileMenu.qml:45
+#: src/qml/Menus/FileMenu.qml:52 src/qml/Menus/Global/GlobalFileMenu.qml:67
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "امسح القائمة"
 
-#: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:13
+#: src/qml/Menus/Global/GlobalHelpMenu.qml:12 src/qml/Menus/HelpMenu.qml:12
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "م&ساعدة"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
-#: src/qml/Menus/PlaybackMenu.qml:13
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:12
+#: src/qml/Menus/PlaybackMenu.qml:12
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "ت&شغل"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
-#: src/qml/Menus/PlaybackMenu.qml:31
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:67
+#: src/qml/Menus/PlaybackMenu.qml:30
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "اسعَ"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:14
-#: src/qml/Menus/SettingsMenu.qml:15
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:15
+#: src/qml/Menus/SettingsMenu.qml:17
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "إ&عدادات"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:17
-#: src/qml/Menus/SettingsMenu.qml:18
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:18
+#: src/qml/Menus/SettingsMenu.qml:20
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "عامّ"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:25
-#: src/qml/Menus/SettingsMenu.qml:26
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:26
+#: src/qml/Menus/SettingsMenu.qml:28
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "تشغيل"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:33
-#: src/qml/Menus/SettingsMenu.qml:34
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:34
+#: src/qml/Menus/SettingsMenu.qml:36
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "فيديو"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:41
-#: src/qml/Menus/SettingsMenu.qml:42
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:42
+#: src/qml/Menus/SettingsMenu.qml:44
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "صوت"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:49
-#: src/qml/Menus/SettingsMenu.qml:50
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:50
+#: src/qml/Menus/SettingsMenu.qml:52
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "الترجمة"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:57
-#: src/qml/Menus/SettingsMenu.qml:58
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:58
+#: src/qml/Menus/SettingsMenu.qml:60
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "قائمة التشغيل"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:65
-#: src/qml/Menus/SettingsMenu.qml:66
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:66
+#: src/qml/Menus/SettingsMenu.qml:68
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "الفأرة"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
-#: src/qml/Menus/SettingsMenu.qml:74
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:74
+#: src/qml/Menus/SettingsMenu.qml:76
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:82
-#: src/qml/Menus/SettingsMenu.qml:83
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:83
+#: src/qml/Menus/SettingsMenu.qml:85
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "أوامر مخصَّصة"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:90
-#: src/qml/Menus/SettingsMenu.qml:91
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:91
+#: src/qml/Menus/SettingsMenu.qml:93
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "نقّح"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:98
-#: src/qml/Menus/SettingsMenu.qml:99
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:99
+#: src/qml/Menus/SettingsMenu.qml:101
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "عن"
 
-#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:17
-#: src/qml/Menus/SubtitlesMenu.qml:16
+#: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
+#: src/qml/Menus/SubtitlesMenu.qml:18
 msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "ال&ترجمة"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:13
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:12 src/qml/Menus/VideoMenu.qml:12
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "ف&ديو"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:71 src/qml/Menus/VideoMenu.qml:26
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:69 src/qml/Menus/VideoMenu.qml:25
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "التعديلات"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:14 src/qml/Menus/ViewMenu.qml:13
+#: src/qml/Menus/Global/GlobalViewMenu.qml:15 src/qml/Menus/ViewMenu.qml:15
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "&عرض"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
+#: src/qml/Menus/Global/GlobalViewMenu.qml:28 src/qml/Menus/ViewMenu.qml:24
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
 msgstr "أخفِ شريط القوائم"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:24 src/qml/Menus/ViewMenu.qml:19
+#: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
 msgstr "اعرض شريط القوائم"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
+#: src/qml/Menus/Global/GlobalViewMenu.qml:41 src/qml/Menus/ViewMenu.qml:35
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
 msgstr "أخفِ شريط الأدوات"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:23
+#: src/qml/Menus/Global/GlobalViewMenu.qml:43 src/qml/Menus/ViewMenu.qml:37
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "اعرض شريط الأدوات"
@@ -1015,72 +1015,72 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "المستوى: %1"
 
-#: src/qml/PlayList.qml:91
+#: src/qml/PlayList.qml:95
 msgctxt "@action:button"
 msgid "Add"
 msgstr "أضِف"
 
-#: src/qml/PlayList.qml:103
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "افتح قائمة التّشغيل"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "أضف..."
 
-#: src/qml/PlayList.qml:115
+#: src/qml/PlayList.qml:119
 msgctxt "@action:button"
 msgid "File"
 msgstr "ملف"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Url"
 msgstr "رابط"
 
-#: src/qml/PlayList.qml:134
+#: src/qml/PlayList.qml:138
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "افرز"
 
-#: src/qml/PlayList.qml:138
+#: src/qml/PlayList.qml:142
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "بالاسم، تصاعدياً"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:148
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "بالاسم، تنازلياً"
 
-#: src/qml/PlayList.qml:150
+#: src/qml/PlayList.qml:154
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "المدة تصاعديًّا"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:160
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "المدة تنازليًّا"
 
-#: src/qml/PlayList.qml:163
+#: src/qml/PlayList.qml:167
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "امسح"
 
-#: src/qml/PlayList.qml:171
+#: src/qml/PlayList.qml:175
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "حفظ باسم"
 
-#: src/qml/PlayList.qml:237
+#: src/qml/PlayList.qml:241
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "افتح المجلد الحاوي"
 
-#: src/qml/PlayList.qml:243
+#: src/qml/PlayList.qml:247
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Open config folder"
@@ -1088,7 +1088,7 @@ msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr "افتح مجلد الضبط"
 
-#: src/qml/PlayList.qml:252
+#: src/qml/PlayList.qml:256
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy file name"
@@ -1096,7 +1096,7 @@ msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "انسخ اسم الملف"
 
-#: src/qml/PlayList.qml:257
+#: src/qml/PlayList.qml:261
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy file path"
@@ -1104,7 +1104,7 @@ msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr "انسخ مسار الملف"
 
-#: src/qml/PlayList.qml:258
+#: src/qml/PlayList.qml:262
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open url"
@@ -1112,12 +1112,12 @@ msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr "افتح الرابط"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:267
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "أزل من قائمة التّشغيل"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:272
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Rename file"
@@ -1125,12 +1125,12 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "أعد تسمية الملفّ"
 
-#: src/qml/PlayList.qml:274
+#: src/qml/PlayList.qml:278
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "مرر إلى العنصر المشغل"
 
-#: src/qml/PlayList.qml:284
+#: src/qml/PlayList.qml:288
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "ملف المهملات"
@@ -1158,59 +1158,59 @@ msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "عتبة المستوى"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:33
+#: src/qml/Settings/CustomCommandsSettings.qml:35
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "لا يوجد أمر مخصص بعد"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:35
+#: src/qml/Settings/CustomCommandsSettings.qml:37
 msgctxt "@action:button"
 msgid "&Add command"
 msgstr "أضف أ&مر"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:83
+#: src/qml/Settings/CustomCommandsSettings.qml:87
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
 
-#: src/qml/Settings/CustomCommandsSettings.qml:161
+#: src/qml/Settings/CustomCommandsSettings.qml:165
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "أ&ضف"
 
-#: src/qml/Settings/DebugSettings.qml:24
+#: src/qml/Settings/DebugSettings.qml:26
 msgctxt "@label:textbox"
 msgid "Config folder"
 msgstr "مجلد الضبط"
 
-#: src/qml/Settings/DebugSettings.qml:36
+#: src/qml/Settings/DebugSettings.qml:38
 msgctxt "@info:tooltip"
 msgid "Open config folder"
 msgstr "افتح مجلد الضبط"
 
-#: src/qml/Settings/DebugSettings.qml:48
+#: src/qml/Settings/DebugSettings.qml:50
 msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "ملف الضبط"
 
-#: src/qml/Settings/DebugSettings.qml:60
+#: src/qml/Settings/DebugSettings.qml:62
 msgctxt "@info:tooltip"
 msgid "Open config file"
 msgstr "افتح ملف الضبط"
 
-#: src/qml/Settings/DebugSettings.qml:72
+#: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "ملف ضبط الأوامر المخصَّصة"
 
-#: src/qml/Settings/DebugSettings.qml:84
+#: src/qml/Settings/DebugSettings.qml:86
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
 msgstr "افتح ملف ضبط الأوامر المخصَّصة"
 
-#: src/qml/Settings/DebugSettings.qml:96
+#: src/qml/Settings/DebugSettings.qml:98
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
@@ -1219,22 +1219,22 @@ msgstr ""
 "إذا كانت الخانات فارغة فهذا يعني أنه لا يوجد ملف/مجلد ضبط (على سبيل عند "
 "استخدام الإعدادات المبدئية)."
 
-#: src/qml/Settings/DebugSettings.qml:104
+#: src/qml/Settings/DebugSettings.qml:106
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "تفعيل سجّل mpv"
 
-#: src/qml/Settings/EditCustomCommand.qml:39
+#: src/qml/Settings/EditCustomCommand.qml:41
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "الأمر"
 
-#: src/qml/Settings/EditCustomCommand.qml:48
+#: src/qml/Settings/EditCustomCommand.qml:50
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "ارفع المستوى +10"
 
-#: src/qml/Settings/EditCustomCommand.qml:55
+#: src/qml/Settings/EditCustomCommand.qml:57
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -1249,17 +1249,17 @@ msgid ""
 "<strong>cycle aid up</strong>."
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:72
+#: src/qml/Settings/EditCustomCommand.qml:74
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "رسالة على الشاشة"
 
-#: src/qml/Settings/EditCustomCommand.qml:82
+#: src/qml/Settings/EditCustomCommand.qml:84
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "اسم الملف: ${filename}"
 
-#: src/qml/Settings/EditCustomCommand.qml:88
+#: src/qml/Settings/EditCustomCommand.qml:90
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -1267,44 +1267,44 @@ msgid ""
 "${volume}</strong>"
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:97
+#: src/qml/Settings/EditCustomCommand.qml:99
 msgctxt "@label"
 msgid "Type"
 msgstr "النوع"
 
-#: src/qml/Settings/EditCustomCommand.qml:118
+#: src/qml/Settings/EditCustomCommand.qml:120
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "اختصار لوحة المفاتيح"
 
-#: src/qml/Settings/EditCustomCommand.qml:119
+#: src/qml/Settings/EditCustomCommand.qml:121
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:128
+#: src/qml/Settings/EditCustomCommand.qml:130
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "تشغيل عند البدء"
 
-#: src/qml/Settings/EditCustomCommand.qml:129
+#: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:141
+#: src/qml/Settings/EditCustomCommand.qml:143
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "احذف"
 
-#: src/qml/Settings/EditCustomCommand.qml:156
+#: src/qml/Settings/EditCustomCommand.qml:158
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: src/qml/Settings/EditCustomCommand.qml:163
+#: src/qml/Settings/EditCustomCommand.qml:165
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "ا&حفظ"
@@ -1506,17 +1506,17 @@ msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "مخطّط الألوان"
 
-#: src/qml/Settings/GeneralSettings.qml:467
+#: src/qml/Settings/GeneralSettings.qml:469
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "نمط الواجهة"
 
-#: src/qml/Settings/GeneralSettings.qml:518
+#: src/qml/Settings/GeneralSettings.qml:520
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "استخدم أيقونات سمة النسيم"
 
-#: src/qml/Settings/GeneralSettings.qml:526
+#: src/qml/Settings/GeneralSettings.qml:528
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1525,17 +1525,17 @@ msgstr ""
 "تعين سمة الأيقونات للنسيم.\n"
 "ستحتاج لإعادة التشغيل"
 
-#: src/qml/Settings/MouseSettings.qml:83
+#: src/qml/Settings/MouseSettings.qml:85
 msgctxt "@label"
 msgid "No action set"
 msgstr "لم يعين أي إجراء"
 
-#: src/qml/Settings/MouseSettings.qml:97
+#: src/qml/Settings/MouseSettings.qml:99
 msgctxt "@info:tooltip"
 msgid "Clear action"
 msgstr "امسح إجراء"
 
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:136
 msgctxt "@title"
 msgid "Double click to set action"
 msgstr "انقر مزدوجًا لتعين إجراء"
@@ -1873,57 +1873,57 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "افتح العناصر بنقرة واحدة"
 
-#: src/qml/Settings/SettingsWindow.qml:36
+#: src/qml/Settings/SettingsWindow.qml:41
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "إعدادات"
 
-#: src/qml/Settings/SettingsWindow.qml:55
+#: src/qml/Settings/SettingsWindow.qml:60
 msgctxt "@action"
 msgid "General"
 msgstr "عامّ"
 
-#: src/qml/Settings/SettingsWindow.qml:63
+#: src/qml/Settings/SettingsWindow.qml:68
 msgctxt "@action"
 msgid "Playback"
 msgstr "تشغيل"
 
-#: src/qml/Settings/SettingsWindow.qml:71
+#: src/qml/Settings/SettingsWindow.qml:76
 msgctxt "@action"
 msgid "Video"
 msgstr "فيديو"
 
-#: src/qml/Settings/SettingsWindow.qml:79
+#: src/qml/Settings/SettingsWindow.qml:85
 msgctxt "@action"
 msgid "Audio"
 msgstr "صوت"
 
-#: src/qml/Settings/SettingsWindow.qml:87
+#: src/qml/Settings/SettingsWindow.qml:93
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "الترجمة"
 
-#: src/qml/Settings/SettingsWindow.qml:103
+#: src/qml/Settings/SettingsWindow.qml:109
 msgctxt "@action"
 msgid "Mouse"
 msgstr "الفأرة"
 
-#: src/qml/Settings/SettingsWindow.qml:111
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
-#: src/qml/Settings/SettingsWindow.qml:119
+#: src/qml/Settings/SettingsWindow.qml:126
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "أوامر مخصَّصة"
 
-#: src/qml/Settings/SettingsWindow.qml:127
+#: src/qml/Settings/SettingsWindow.qml:135
 msgctxt "@action"
 msgid "Debug"
 msgstr "نقّح"
 
-#: src/qml/Settings/SettingsWindow.qml:135
+#: src/qml/Settings/SettingsWindow.qml:144
 msgctxt "@action"
 msgid "About"
 msgstr "عن"
@@ -2010,17 +2010,17 @@ msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "عرض الحدّ"
 
-#: src/qml/Settings/VideoSettings.qml:27
+#: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "الغلاف المبدئي"
 
-#: src/qml/Settings/VideoSettings.qml:36
+#: src/qml/Settings/VideoSettings.qml:38
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "مسار لصور"
 
-#: src/qml/Settings/VideoSettings.qml:48
+#: src/qml/Settings/VideoSettings.qml:50
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
@@ -2029,22 +2029,22 @@ msgstr ""
 "تستخدم لملفات الموسيقى التي لا تحتوي على مسار فيديو أو صورة غلاف مضمنة أو "
 "صورة غلاف/مجلد في نفس المجلد للملف المُشغل."
 
-#: src/qml/Settings/VideoSettings.qml:79
+#: src/qml/Settings/VideoSettings.qml:81
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "اللقطات"
 
-#: src/qml/Settings/VideoSettings.qml:89
+#: src/qml/Settings/VideoSettings.qml:91
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "التّنسيق"
 
-#: src/qml/Settings/VideoSettings.qml:129
+#: src/qml/Settings/VideoSettings.qml:131
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "القالب"
 
-#: src/qml/Settings/VideoSettings.qml:159
+#: src/qml/Settings/VideoSettings.qml:161
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -2079,32 +2079,32 @@ msgid ""
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 
-#: src/qml/Settings/VideoSettings.qml:194
+#: src/qml/Settings/VideoSettings.qml:196
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "تضبيطات الصورة"
 
-#: src/qml/Settings/VideoSettings.qml:204
+#: src/qml/Settings/VideoSettings.qml:206
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "التباين"
 
-#: src/qml/Settings/VideoSettings.qml:223
+#: src/qml/Settings/VideoSettings.qml:225
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "السطوع"
 
-#: src/qml/Settings/VideoSettings.qml:242
+#: src/qml/Settings/VideoSettings.qml:244
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "غاما"
 
-#: src/qml/Settings/VideoSettings.qml:261
+#: src/qml/Settings/VideoSettings.qml:263
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "التّشبّع"
 
-#: src/qml/Settings/VideoSettings.qml:277
+#: src/qml/Settings/VideoSettings.qml:279
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير تصفرها"
