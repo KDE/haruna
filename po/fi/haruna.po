@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-24 00:40+0000\n"
+"POT-Creation-Date: 2024-11-25 00:39+0000\n"
 "PO-Revision-Date: 2024-02-23 19:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -130,9 +130,11 @@ msgid "Audio Cycle Down"
 msgstr "Vähennä äänenvoimakkuutta"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
 msgctxt "@action"
-msgid "Configure"
+msgid "Settings"
 msgstr "Asetukset"
 
 #: src/models/actionsmodel.cpp:72
@@ -2115,6 +2117,10 @@ msgstr "Värikylläisyys"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
+
+#~ msgctxt "@action"
+#~ msgid "Configure"
+#~ msgstr "Asetukset"
 
 # *** TARKISTA: Miten tämän on tarkoitus jatkua (ikkunassa)?
 #~ msgctxt "@info:tooltip"

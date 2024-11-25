@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-24 00:40+0000\n"
+"POT-Creation-Date: 2024-11-25 00:39+0000\n"
 "PO-Revision-Date: 2023-05-30 18:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -129,10 +129,12 @@ msgid "Audio Cycle Down"
 msgstr "Vorherige Audiospur"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
 msgctxt "@action"
-msgid "Configure"
-msgstr "Einrichten"
+msgid "Settings"
+msgstr "Einstellungen"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
@@ -2148,6 +2150,10 @@ msgstr "Sättigung"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Ein Mittelklick auf einen Schieber setzt ihn zurück"
+
+#~ msgctxt "@action"
+#~ msgid "Configure"
+#~ msgstr "Einrichten"
 
 #, fuzzy
 #~| msgctxt "@info:tooltip"

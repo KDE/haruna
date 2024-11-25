@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-24 00:40+0000\n"
+"POT-Creation-Date: 2024-11-25 00:39+0000\n"
 "PO-Revision-Date: 2024-10-27 10:11+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -125,10 +125,12 @@ msgid "Audio Cycle Down"
 msgstr "Cicle d'àudio cap avall"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
 msgctxt "@action"
-msgid "Configure"
-msgstr "Configura"
+msgid "Settings"
+msgstr "Arranjament"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
@@ -2150,6 +2152,10 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig sobre els controls lliscants per a restablir-los"
+
+#~ msgctxt "@action"
+#~ msgid "Configure"
+#~ msgstr "Configura"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Subtitles function on"

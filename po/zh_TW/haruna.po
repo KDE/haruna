@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-24 00:40+0000\n"
+"POT-Creation-Date: 2024-11-25 00:39+0000\n"
 "PO-Revision-Date: 2024-11-11 16:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -124,9 +124,11 @@ msgid "Audio Cycle Down"
 msgstr "切換下一個音訊"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
 msgctxt "@action"
-msgid "Configure"
+msgid "Settings"
 msgstr "設定"
 
 #: src/models/actionsmodel.cpp:72
@@ -2092,6 +2094,10 @@ msgstr "飽和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中鍵點擊滑條來重設它"
+
+#~ msgctxt "@action"
+#~ msgid "Configure"
+#~ msgstr "設定"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Subtitles function on"

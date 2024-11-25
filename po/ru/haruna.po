@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-24 00:40+0000\n"
+"POT-Creation-Date: 2024-11-25 00:39+0000\n"
 "PO-Revision-Date: 2023-12-27 10:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -131,10 +131,12 @@ msgid "Audio Cycle Down"
 msgstr "Ниже в цикле звука"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
 msgctxt "@action"
-msgid "Configure"
-msgstr "Настроить"
+msgid "Settings"
+msgstr "Настройка"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
@@ -2125,6 +2127,10 @@ msgstr "Насыщенность"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Щелчок средней кнопкой мыши по ползункам для сброса"
+
+#~ msgctxt "@action"
+#~ msgid "Configure"
+#~ msgstr "Настроить"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Subtitles function on"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-24 00:40+0000\n"
+"POT-Creation-Date: 2024-11-25 00:39+0000\n"
 "PO-Revision-Date: 2024-10-27 07:56+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -123,10 +123,12 @@ msgid "Audio Cycle Down"
 msgstr "מעבר להגדרת השמע הקודמת"
 
 #: src/models/actionsmodel.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
 msgctxt "@action"
-msgid "Configure"
-msgstr "הגדרה"
+msgid "Settings"
+msgstr "הגדרות"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
@@ -2109,6 +2111,10 @@ msgstr "רוויה"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "לחיצה אמצעית על המחוונים תאפס אותם"
+
+#~ msgctxt "@action"
+#~ msgid "Configure"
+#~ msgstr "הגדרה"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Subtitles function on"
