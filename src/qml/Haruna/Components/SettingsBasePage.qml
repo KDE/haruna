@@ -17,6 +17,8 @@ Kirigami.ScrollablePage {
 
     signal save()
 
+    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
+
     Component.onDestruction: save()
 
 }
