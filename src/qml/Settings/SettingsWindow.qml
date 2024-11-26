@@ -60,24 +60,24 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "General")
                     icon.name: "configure"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/GeneralSettings.qml`)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/GeneralSettings.qml`)
                     }
                 },
                 Kirigami.Action {
                     text: i18nc("@action", "Playback")
                     icon.name: "media-playback-start"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/PlaybackSettings.qml`)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/PlaybackSettings.qml`)
                     }
                 },
                 Kirigami.Action {
                     text: i18nc("@action", "Video")
                     icon.name: "video-x-generic"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/VideoSettings.qml`,
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/VideoSettings.qml`,
                                                            {m_mpv: root.m_mpv})
                     }
                 },
@@ -85,40 +85,40 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Audio")
                     icon.name: "player-volume"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/AudioSettings.qml`)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/AudioSettings.qml`)
                     }
                 },
                 Kirigami.Action {
                     text: i18nc("@action", "Subtitles")
                     icon.name: "add-subtitle"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/SubtitlesSettings.qml`)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/SubtitlesSettings.qml`)
                     }
                 },
                 Kirigami.Action {
                     text: i18nc("@action", "Playlist")
                     icon.name: "view-media-playlist"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/PlaylistSettings.qml`)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/PlaylistSettings.qml`)
                     }
                 },
                 Kirigami.Action {
                     text: i18nc("@action", "Mouse")
                     icon.name: "input-mouse"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/MouseSettings.qml`)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/MouseSettings.qml`)
                     }
                 },
                 Kirigami.Action {
                     text: i18nc("@action", "Shortcuts")
                     icon.name: "configure-shortcuts"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/ShortcutsSettings.qml`,
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/ShortcutsSettings.qml`,
                                                            {m_proxyActionsModel: root.m_proxyActionsModel})
                     }
                 },
@@ -126,8 +126,8 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Custom commands")
                     icon.name: "configure"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/CustomCommandsSettings.qml`,
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/CustomCommandsSettings.qml`,
                                                            {m_customCommandsModel: root.m_customCommandsModel})
                     }
                 },
@@ -135,8 +135,8 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Debug")
                     icon.name: "help-about"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(`${root.settingsPath}/DebugSettings.qml`,
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(`${root.settingsPath}/DebugSettings.qml`,
                                                            {m_mpv: root.m_mpv})
                     }
                 },
@@ -144,8 +144,8 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "About")
                     icon.name: "help-about"
                     onTriggered: {
-                        applicationWindow().pageStack.removePage(1)
-                        applicationWindow().pageStack.push(aboutPage)
+                        root.pageStack.removePage(1)
+                        root.pageStack.push(aboutPage)
                     }
                 }
             ]
