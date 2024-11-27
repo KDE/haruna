@@ -708,8 +708,9 @@ ProxyActionsModel::ProxyActionsModel(QObject *parent)
     setDynamicSortFilter(true);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
 
-    nameRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
-    typeRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+    m_nameRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+    m_textRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+    m_typeRegExp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
 }
 
 bool ProxyActionsModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
@@ -718,20 +719,21 @@ bool ProxyActionsModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourc
     QModelIndex typeIndex = sourceModel()->index(sourceRow, 0, sourceParent);
 
     QString name = sourceModel()->data(nameIndex, ActionsModel::NameRole).toString();
+    QString text = sourceModel()->data(nameIndex, ActionsModel::TextRole).toString();
     QString type = sourceModel()->data(typeIndex, ActionsModel::TypeRole).toString();
 
-    return (name.contains(nameRegExp) && type.contains(typeRegExp));
+    return ((name.contains(m_nameRegExp) || text.contains(m_nameRegExp)) && type.contains(m_typeRegExp));
 }
 
 void ProxyActionsModel::setNameFilter(const QString &regExp)
 {
-    nameRegExp.setPattern(regExp);
+    m_nameRegExp.setPattern(regExp);
     invalidateFilter();
 }
 
 void ProxyActionsModel::setTypeFilter(const QString &regExp)
 {
-    typeRegExp.setPattern(regExp);
+    m_typeRegExp.setPattern(regExp);
     invalidateFilter();
 }
 

@@ -43,8 +43,9 @@ public Q_SLOTS:
     bool saveShortcut(int row, QKeySequence keySequence);
 
 private:
-    QRegularExpression nameRegExp;
-    QRegularExpression typeRegExp;
+    QRegularExpression m_nameRegExp;
+    QRegularExpression m_textRegExp;
+    QRegularExpression m_typeRegExp;
 };
 
 class ActionsModel : public QAbstractListModel
