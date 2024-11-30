@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:39+0000\n"
-"PO-Revision-Date: 2024-05-16 11:45+0400\n"
+"PO-Revision-Date: 2024-11-29 06:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -101,7 +102,7 @@ msgstr "عن هارونا"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "أبلغ عن علة"
 
 #: src/models/actionsmodel.cpp:44
 #, fuzzy, kde-format
@@ -1083,12 +1084,9 @@ msgid "Open containing folder"
 msgstr "افتح المجلد الحاوي"
 
 #: src/qml/PlayList.qml:247
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "افتح مجلد الضبط"
+msgstr "افتح في المتصفّح"
 
 #: src/qml/PlayList.qml:256
 #, fuzzy
@@ -1099,20 +1097,14 @@ msgid "Copy name"
 msgstr "انسخ اسم الملف"
 
 #: src/qml/PlayList.qml:261
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "انسخ مسار الملف"
+msgstr "انسخ مسار"
 
 #: src/qml/PlayList.qml:262
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "افتح الرابط"
+msgstr "انسخ الرابط"
 
 #: src/qml/PlayList.qml:267
 msgctxt "@action:inmenu"
@@ -1120,12 +1112,9 @@ msgid "Remove from playlist"
 msgstr "أزل من قائمة التّشغيل"
 
 #: src/qml/PlayList.qml:272
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "أعد تسمية الملفّ"
+msgstr "أعد التّسمية"
 
 #: src/qml/PlayList.qml:278
 msgctxt "@action:inmenu"
@@ -1419,9 +1408,6 @@ msgid "Generating an accurate preview is slow"
 msgstr "توليد معاينة دقيقة بطيء"
 
 #: src/qml/Settings/GeneralSettings.qml:277
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Thumbnail Width"
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "عرض المصغرة"
@@ -1442,23 +1428,18 @@ msgid "<b>Not supported on Wayland.</b>"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"غُير حجم الإطار وفقاً لدقة الفيديو.\n"
+"%1 غُير حجم النافذة وفقاً لدقة الفيديو.\n"
 "الحد الأقصى للحجم غير مقيد، فهذا متروك لنظام التشغيل."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "ابدأ في نمط ملء الشاشة"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
