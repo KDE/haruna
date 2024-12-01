@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:39+0000\n"
-"PO-Revision-Date: 2024-11-29 06:40+0400\n"
+"PO-Revision-Date: 2024-11-30 16:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -105,12 +105,10 @@ msgid "Report bug"
 msgstr "أبلغ عن علة"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "عن هارونا"
+msgstr "اكفل هارونا"
 
 #: src/models/actionsmodel.cpp:51
 #, kde-format
@@ -125,9 +123,7 @@ msgid "Audio Cycle Down"
 msgstr "دور الصوت للأسفل"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "إعدادات"
@@ -633,12 +629,9 @@ msgid "Subtitles off"
 msgstr "الترجمة مغلقة"
 
 #: src/qml/Actions.qml:318
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "الترجمة مغلقة"
+msgstr "الترجمة مفعلة"
 
 #: src/qml/Actions.qml:327 src/qml/Actions.qml:339
 msgctxt "@info:tooltip"
@@ -1089,12 +1082,9 @@ msgid "Open in browser"
 msgstr "افتح في المتصفّح"
 
 #: src/qml/PlayList.qml:256
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "انسخ اسم الملف"
+msgstr "انسخ الاسم"
 
 #: src/qml/PlayList.qml:261
 msgctxt "@action:inmenu"
@@ -1362,12 +1352,9 @@ msgid "Interface"
 msgstr "الواجهة"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "نمط الخطّ"
+msgstr "نمط التذييل"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
@@ -1671,12 +1658,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "اسعَ لأخر موضوع معروض"
+msgstr "احفظ موضع التشغيل"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
