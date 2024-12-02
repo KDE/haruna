@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-23 19:42+0200\n"
+"PO-Revision-Date: 2024-11-07 16:30+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,20 +28,16 @@ msgid "Your emails"
 msgstr "translator@legisign.org"
 
 #: src/application.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Haruna-mediasoitin"
+msgstr "Mediasoitin"
 
 #: src/application.cpp:109
 #, kde-format
@@ -106,15 +102,13 @@ msgstr "Tietoa Harunasta"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Ilmoita viasta"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "Tietoa Harunasta"
+msgstr "Sponsoroi Harunaa"
 
 #: src/models/actionsmodel.cpp:51
 #, kde-format
@@ -595,6 +589,8 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"Videoraitaa ei havaittu: sitä ei todennäköisesti puuttuvien koodekkien takia "
+"ole voitu purkaa tai toistaa"
 
 #: src/mpv/mpvitem.cpp:534
 #, kde-format
@@ -638,12 +634,9 @@ msgid "Subtitles off"
 msgstr "Ei tekstitystä"
 
 #: src/qml/Actions.qml:318
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Ei tekstitystä"
+msgstr "Tekstitys käytössä"
 
 #: src/qml/Actions.qml:327 src/qml/Actions.qml:339
 msgctxt "@info:tooltip"
@@ -765,12 +758,9 @@ msgid "Secondary Subtitle"
 msgstr "Toissijainen tekstitys"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:98
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "&Ääniraita"
+msgstr "Ääniraita"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:122
 msgctxt "@action:inmenu"
@@ -814,7 +804,7 @@ msgstr "Lisää uusi kansio"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:171
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Kysy kansio, josta etsiä tekstityksiä."
 
 #: src/qml/Header.qml:68
 msgctxt "@action:intoolbar"
@@ -1092,36 +1082,24 @@ msgid "Open containing folder"
 msgstr "Avaa yläkansio"
 
 #: src/qml/PlayList.qml:247
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Avaa asetuskansio"
+msgstr "Avaa selaimeen"
 
 #: src/qml/PlayList.qml:256
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Kopioi tiedostonimi"
+msgstr "Kopioi nimi"
 
 #: src/qml/PlayList.qml:261
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Kopioi tiedoston sijainti"
+msgstr "Kopioi sijainti"
 
 #: src/qml/PlayList.qml:262
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "Avaa verkko-osoite"
+msgstr "Kopioi verkko-osoite"
 
 #: src/qml/PlayList.qml:267
 msgctxt "@action:inmenu"
@@ -1129,12 +1107,9 @@ msgid "Remove from playlist"
 msgstr "Poista soittolistasta"
 
 #: src/qml/PlayList.qml:272
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Muuta tiedoston nimeä"
+msgstr "Muuta nimeä"
 
 #: src/qml/PlayList.qml:278
 msgctxt "@action:inmenu"
@@ -1186,6 +1161,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Valittu: ominaisuus asetetaan käynnistettäessä\n"
+"Ei valittu: ominaisuutta ei aseteta käynnistettäessä"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:165
 msgctxt "@action:intoolbar"
@@ -1260,6 +1237,17 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Mikä mpv-komento suoritetaan; täysi luettelo saatavilla olevista "
+"komennoista: <a href=\"https://mpv.io/manual/stable/#list-of-input-commands"
+"\">MPV-komennot</a>.<br>Kaikki komennot eivät toimi, koska ne ovat mpv-"
+"kohtaisia.<br>Hyödyllisimmät komennot käsittelevät ominaisuuksia kuten "
+"<strong>set</strong>, <strong>add</strong> tai <strong>cycle</strong>."
+"<br><strong>set</strong>: asettaa ominaisuuden arvon, esim. <strong>set "
+"volume-max 150</strong>.<br><strong>add</strong>: muuttaa ominaisuuden "
+"arvoa, esim. <strong>add volume 15</strong> lisää äänenvoimakkuutta 15:llä. "
+"Negatiivinen arvo muuttaa toiseen suuntaan: <strong>add volume -15</strong>."
+"<br><strong>cycle</strong>: vaihtaa ominaisuuden eri arvosta toiseen, esim. "
+"<strong>cycle aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:74
 msgctxt "@label:textbox"
@@ -1278,6 +1266,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Toimintotyypin mukautettua komentoa käynnistettäessä näytettävä ruutuviesti."
+"<br>Ominaisuuden arvon voi näyttää muuttujalla {ominaisuuden_nimi}, esim. "
+"<strong>Äänenvoimakkuus: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:99
 msgctxt "@label"
@@ -1295,6 +1286,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Pikanäppäimellä käynnistettävä komento. Pikanäppäimen voi asettaa "
+"tallennuksen jälkeen."
 
 #: src/qml/Settings/EditCustomCommand.qml:130
 msgctxt "@option:radio"
@@ -1304,7 +1297,7 @@ msgstr "Suorita käynnistettäessä"
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Sovellusta käynnistettäessä suoritettava komento."
 
 #: src/qml/Settings/EditCustomCommand.qml:143
 msgctxt "@action:intoolbar"
@@ -1332,14 +1325,13 @@ msgid "File dialog location"
 msgstr "Tiedostonvalintaikkunan sijainti"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "Jos on tyhjä, tiedostonvalintaikkuna muistaa viimeisimmän sijaintinsa."
+msgstr ""
+"Tiedostonvalintaikkunan oletussijainti. Jos on tyhjä, tiedostonvalintaikkuna "
+"käynnistyy viimeksi auki olleeseen sijaintiin."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1383,17 +1375,14 @@ msgid "Interface"
 msgstr "Käyttöliittymä"
 
 #: src/qml/Settings/GeneralSettings.qml:167
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Fonttityyli"
+msgstr "Alatunnistetyyli"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Näytä leijuva alatunniste"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1402,6 +1391,9 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"Mikä toiminto näyttää alatunnisteen.<br><strong>Jokainen hiiren liike</"
+"strong> – jokainen hiiren liike videoalueella<br><strong>Hiiren liike "
+"alalaidalla</strong> – hiiren liike videon alalaidalla"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
@@ -1416,7 +1408,7 @@ msgstr "Näytä pienoiskuvaesikatselu"
 #: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "Näyttää esikatselun leijuttaessa etenemispalkin yllä."
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
@@ -1431,12 +1423,9 @@ msgstr "Tarkan esikatselun luominen on hidasta"
 #: src/qml/Settings/GeneralSettings.qml:277
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "Pienoiskuvan leveys"
 
 #: src/qml/Settings/GeneralSettings.qml:295
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "Ikkuna"
@@ -1449,26 +1438,22 @@ msgstr "Sovita videon kokoon"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr ""
+msgstr "<b>Ei tueta Waylandissä.</b>"
 
+# *** TARKISTA: Mitä ”%1” tässä on?
 #: src/qml/Settings/GeneralSettings.qml:321
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
+"%1 Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
 "Enimmäiskokoa ei rajoiteta, vaan se jätetään käyttöjärjestelmälle."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Aloita koko näytön tilassa"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1477,6 +1462,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Aloita sovelluksen käynnistyessä koko näytön tilassa.\n"
+"Tämä ohittaa asetukset ”Sovita videon kokoon” ja ”Muista ikkunan koko ja "
+"sijainti”."
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
@@ -1564,6 +1552,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Siirtymän suuruus kelaustoimintoa käytettäessä. Kelaustila on <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1578,6 +1569,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Siirtymän suuruus kelaustoimintoa käytettäessä. Kelaustila on <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>.<br>Tätä käytetään myös hiiren rullalla kelaamiseen "
+"hiiren ollessa etenemispalkin yllä."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1591,6 +1586,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Siirtymän suuruus kelaustoimintoa käytettäessä. Kelaustila on <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>exact</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1598,17 +1596,12 @@ msgid "Pause on minimize"
 msgstr "Keskeytä pienennettäessä"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
-"Keskeyttää toiston ikkunaa pienennettäessä; toisto jatkuu palautettaessa."
+"Keskeyttää toiston, kun ikkuna pienennetään; toisto jatkuu palautettaessa."
 
 #: src/qml/Settings/PlaybackSettings.qml:124
 msgctxt "@label:spinbox"
@@ -1626,6 +1619,7 @@ msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
+"Käynnistettäessä avataan viimeksi sovellusta suljettaessa toistettu tiedosto."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1633,11 +1627,6 @@ msgid "Seek to last playback position"
 msgstr "Hyppää viimeisimpään toistokohtaan"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
@@ -1650,11 +1639,6 @@ msgid "Start playing"
 msgstr "Käynnistä toisto"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
@@ -1698,11 +1682,24 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Aseta käytettävä laitteistovideopurun API,  jos mahdollista. "
+"Videokoodekistariippuu, tehdäänkö laitteistopurkua oikeasti. Ellei se ole "
+"mahdollista, mpvpalaa ohjelmapohjaiseen purkuun."
+"<br><br><ul><li><strong>auto</strong> yrittää ottaa käyttöön ensimmäisen "
+"käytettävissäolevan menetelmän laitteistopurun.</li><li><strong>auto-safe</"
+"strong> on kuten ”auto” mutta sallii vain turvallisiksi\n"
+"(”safe”) merkityt menetelmät.</li><li><strong>vaapi</strong> toimii vain "
+"Intelin ja AMD:n näytönohjaimilla javaatii OpenGL:n EGL-taustajärjestelmän.</"
+"li><li><strong>nvdec</strong> on uusin ja suositeltavin menetelmä "
+"Nvidiannäytönohjaimien laitteistopurkuun.</li><li><strong>cuda</strong> on "
+"vanhempi Nvidian näytönohjaimin laitteistopuruntoteutus.</"
+"li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></li></"
+"ul><br><br>Lisätietoa laitteistopurusta löytyy osoitteesta: <a href='https://"
+"mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/stable/#options-"
+"hwdec</a><br><br>Toisen laitteistopurun voi asettaa luomalla mukautetun "
+"käynnistyskomennon:<strong>set hwdec <i>purkajan_nimi</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:255
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@label:spinbox"
 msgid "Save playback position"
 msgstr "Hyppää viimeisimpään toistokohtaan"
@@ -1737,18 +1734,11 @@ msgid "Skip chapters"
 msgstr "Ohita luvut"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr ""
-"Ohita automaattisesti tiettyjä sanoja tai merkkejä sisältävät luvut.\n"
-"”Toisto”-asetuksista löytyy lisätietoa"
+msgstr "Ohita automaattisesti tiettyjä sanoja tai merkkejä sisältävät luvut."
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
@@ -1760,7 +1750,7 @@ msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr ""
+msgstr "Näytä lukuja sivuutettaessa ruutuviestissä sivuutetun luvun otsikko."
 
 #: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
@@ -1781,6 +1771,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Sivuuta näitä sanoja sisältävät luvut. Erota pilkuin. Osuma ei ole tarkka;"
+"esim. <strong>op</strong> täsmää myös sen sisältäviin sanoihin "
+"kuten<strong><u>op</u>ening</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
@@ -1792,16 +1785,9 @@ msgid "Format selection"
 msgstr "Tiedostomuodon valinta"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"Valitsee parhaan videon, jonka korkeus on sama tai pienempi kuin asetettu "
-"arvo."
+msgstr "Valitse lähimmäs valittua muotoa tulevan videolähteen."
 
 #: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
@@ -1880,7 +1866,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr ""
+msgstr "Avaa kohteet yksittäisnapsautuksella"
 
 #: src/qml/Settings/SettingsWindow.qml:41
 msgctxt "@title:window"
@@ -2087,6 +2073,36 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Määrittää ruutukaappausten tiedostonimimallin. Malli asettaa "
+"tiedostonimenpäätteettä ja voi sisältää muuttujia, joiden arvo korvataan "
+"ruutukaappaustaotettaessa. Oletusmalli on ”%F-%n”.<br>Malli voi alkaa "
+"suhteellisella tai absoluuttisella sijainnilla, millä voimäärittää "
+"ruutukaappausten tallennuspaikan.<br>Jos lopullinen tiedostonimi osoittaa jo "
+"olemassa olevaan tiedostoon,tiedostoa ei korvata vaan ruutukaappausta joko "
+"ei tallenneta lainkaan tai– jos mallissa on ”%n” – käytetään vasta luotua "
+"uutta tiedostonimeä.<br>Täydellinen kuvaus löytyy osoitteesta:<a "
+"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
+"io/manual/stable/#options-screenshot-template</"
+"a><br><br><strong>Käytettävissä olevat muuttujat:</"
+"strong><br><ul><li><strong>%[#][0X]n</strong> Juokseva numero; täytetään "
+"nollin X:lläosoitettuun pituuteen asti.<br><li><strong>%f</strong> "
+"Toistettavan videon tiedostonimi.<br><li><strong>%F</strong> Kuten %f mutta "
+"tiedostonimen päätteettä.<br><li><strong>%x</strong> Toistettavan videon "
+"sijainti. Jos sijainti ei ole tiedostojärjestelmässä (http://-osoite), "
+"laventuu tyhjäksimerkkijonoksi.<br><li><strong>%X{varateksti}</strong> Kuten "
+"%x, mutta jos videotiedosto eiole tiedostojärjestelmässä käyttää sen sijaan "
+"{…}-merkeissä olevaa varatekstiä.<br><li><strong>%p</strong> Toistokohta. "
+"Tulosmerkkijono on muotoa”TT:MM:SS”.<br><li><strong>%P</strong> Kuten %p "
+"mutta lisää millisekunnit:”TT:MM:SS.mmm”.<br><li><strong>%wX</strong> "
+"Muotoilee toistokohtatiedon jonon X mukaan.<br>Käytettävät muotoilukomennot:"
+"<br><ul><li><strong>%wH</strong> tunnit (täytetään nollin "
+"kaksinumeroiseksi)</li><li><strong>%wh</strong> tunnit (ei täytetä)</"
+"li><li><strong>%wM</strong> minuutit (00–59)</li><li><strong>%wm</strong> "
+"minuutit yhteensä (sisältää tunnit toisin kuin %wM)</li><li><strong>%wS</"
+"strong> sekunnit (00–59)</li><li><strong>%ws</strong> sekunnit yhteensä "
+"(sisältää tunnit ja minuutit)</li><li><strong>%wf</strong> kuten %ws mutta "
+"liukulukuna</li><li><strong>%wT</strong> millisekunnit (000–999)</"
+"li><li><strong>%%</strong> korvataan %-merkillä.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:196
 msgctxt "@title"
