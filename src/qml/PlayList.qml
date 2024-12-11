@@ -27,10 +27,16 @@ Item {
     height: m_mpv.height
     width: {
         if (PlaylistSettings.style === "compact") {
-            return Kirigami.Units.gridUnit * 21
+            return 380
         } else {
-            const w = Kirigami.Units.gridUnit * 31
-            return (Window.window.width * 0.33) < w ? w : Window.window.width * 0.33
+            let playlistWidth = Window.window.width - 50
+            if (Window.window.width > 600) {
+                playlistWidth = 550
+            }
+            if (Window.window.width * 0.35 > playlistWidth) {
+                playlistWidth = Window.window.width * 0.35
+            }
+            return playlistWidth
         }
     }
     x: PlaylistSettings.position === "right" ? Window.window.width : -width
