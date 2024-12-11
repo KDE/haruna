@@ -41,15 +41,14 @@ SettingsBasePage {
             onCheckStateChanged: {
                 SubtitlesSettings.autoloadSubtitles = checked
                 SubtitlesSettings.save()
+                mpv.selectSubtitleTrack()
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "When checked the subtitles will be shown when the application starts.")
-                ToolTip.visible: hovered
-                ToolTip.delay: 700
+                text: i18nc("@info:tooltip", "When checked a subtitle track will be automatically selected and displayed")
+                delay: 700
             }
         }
-
 
         Label {
             text: i18nc("@label:textbox", "Preferred language")
