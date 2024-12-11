@@ -29,6 +29,29 @@ SettingsBasePage {
         }
 
         Label {
+            text: i18nc("@label:spinbox", "Autoload subtitles")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        CheckBox {
+            id: autoloadSubtitles
+
+            checked: SubtitlesSettings.autoloadSubtitles
+            
+            onCheckStateChanged: {
+                SubtitlesSettings.autoloadSubtitles = checked
+                SubtitlesSettings.save()
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip", "When checked the subtitles will be shown when the application starts.")
+                ToolTip.visible: hovered
+                ToolTip.delay: 700
+            }
+        }
+
+
+        Label {
             text: i18nc("@label:textbox", "Preferred language")
             Layout.alignment: Qt.AlignRight
         }
@@ -40,6 +63,7 @@ SettingsBasePage {
             placeholderText: i18nc("placeholder text", "eng, ger etc.")
             Layout.fillWidth: true
             onEditingFinished: save()
+            enabled: autoloadSubtitles.checked
 
             Connections {
                 target: root
@@ -65,6 +89,7 @@ SettingsBasePage {
             to: 100
             value: SubtitlesSettings.preferredTrack
             editable: true
+            enabled: autoloadSubtitles.checked
             onValueChanged: {
                 SubtitlesSettings.preferredTrack = value
                 SubtitlesSettings.save()

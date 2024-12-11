@@ -161,6 +161,9 @@ void MpvItem::initProperties()
     Q_EMIT setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? u"auto"_s : preferredSubTrack);
     Q_EMIT setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(u" "_s));
     Q_EMIT setProperty(MpvProperties::self()->SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(u":"_s));
+
+    //autoload subtitles
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleVisibility, SubtitlesSettings::autoloadSubtitles());
 }
 
 void MpvItem::setupConnections()
