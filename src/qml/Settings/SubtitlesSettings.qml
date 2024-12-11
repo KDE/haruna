@@ -46,7 +46,6 @@ SettingsBasePage {
 
             ToolTip {
                 text: i18nc("@info:tooltip", "When checked a subtitle track will be automatically selected and displayed")
-                delay: 700
             }
         }
 
