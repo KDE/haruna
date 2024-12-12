@@ -391,10 +391,6 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->Height) {
         m_videoHeight = value.toInt();
         Q_EMIT videoHeightChanged();
-
-    } else if (property == MpvProperties::self()->TracksCount) {
-        loadTracks(getProperty(MpvProperties::self()->TrackList).toList());
-        Q_EMIT videoHeightChanged();
     }
 }
 
