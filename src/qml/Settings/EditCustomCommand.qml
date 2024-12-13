@@ -169,7 +169,7 @@ SettingsBasePage {
 
                 Layout.alignment: Qt.AlignRight
 
-                function saveCustomCommand() {
+                function saveCustomCommand() : void {
                     if (commandTextField.text === "") {
                         return
                     }

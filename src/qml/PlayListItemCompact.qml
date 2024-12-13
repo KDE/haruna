@@ -67,7 +67,7 @@ ItemDelegate {
         }
     }
 
-    function mainText() {
+    function mainText() : string {
         const rowNumber = "%1. ".arg(pad(root.rowNumber, root.ListView.view.count.toString().length))
 
         if(PlaylistSettings.showRowNumber) {
@@ -76,9 +76,10 @@ ItemDelegate {
         return (PlaylistSettings.showMediaTitle ? root.title : root.name)
     }
 
-    function pad(number, length) {
-        while (number.length < length)
-            number = "0" + number;
-        return number;
+    function pad(number: string, length: int) : string {
+        while (number.length < length) {
+            number = "0" + number
+        }
+        return number
     }
 }

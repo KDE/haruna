@@ -31,7 +31,7 @@ Item {
     ToolBar {
         id: footer
 
-        function getState() {
+        function getState() : string {
             if (root.m_mpv.mouseY > root.m_mpv.height - footer.height * 2) {
                 const mainWindow = Window.window as Main
                 if (mainWindow.isFullScreen() && mainWindow.containsMouse) {

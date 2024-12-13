@@ -378,7 +378,7 @@ SettingsBasePage {
                 }
             }
 
-            function save() {
+            function save() : void {
                 PlaybackSettings.chaptersToSkip = text
                 PlaybackSettings.save()
             }
@@ -440,7 +440,7 @@ SettingsBasePage {
             ToolTip.visible: hovered
             ToolTip.delay: 700
 
-            function hIndexOfValue(value) {
+            function hIndexOfValue(value) : int {
                 switch(value) {
                 case "bestvideo+bestaudio/best":
                     return 1
@@ -493,7 +493,7 @@ SettingsBasePage {
                 }
             }
 
-            function save() {
+            function save() : void {
                 PlaybackSettings.ytdlFormat = text
                 PlaybackSettings.save()
             }

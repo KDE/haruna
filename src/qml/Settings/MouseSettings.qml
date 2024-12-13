@@ -114,7 +114,7 @@ SettingsBasePage {
                     }
                 }
 
-                function openSelectActionPopup() {
+                function openSelectActionPopup() : void {
                     selectActionPopup.buttonIndex = delegate.index
                     selectActionPopup.title = delegate.label
                     selectActionPopup.open()

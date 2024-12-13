@@ -361,7 +361,7 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    function openFile(path, addToRecentFiles = false) {
+    function openFile(path: string, addToRecentFiles = false) : void {
         if (addToRecentFiles) {
             recentFilesModel.addUrl(path)
         }
@@ -369,11 +369,11 @@ Kirigami.ApplicationWindow {
         mpv.playlistModel.addItem(path, PlaylistModel.Clear)
     }
 
-    function isFullScreen() {
+    function isFullScreen() : bool {
         return window.visibility === Window.FullScreen
     }
 
-    function toggleFullScreen() {
+    function toggleFullScreen() : void {
         if (!isFullScreen()) {
             window.showFullScreen()
         } else {
@@ -381,7 +381,7 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    function exitFullscreen() {
+    function exitFullscreen() : void {
         if (window.previousVisibility === Window.Maximized) {
             window.show()
             window.showMaximized()
@@ -390,7 +390,7 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    function resizeWindow() {
+    function resizeWindow() : void {
         if (app.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
             return
         }

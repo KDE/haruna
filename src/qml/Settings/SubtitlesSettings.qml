@@ -70,7 +70,7 @@ SettingsBasePage {
                 }
             }
 
-            function save() {
+            function save() : void {
                 SubtitlesSettings.preferredLanguage = text
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleLanguage, text.replace(/\s+/g, ''))
@@ -235,7 +235,7 @@ SettingsBasePage {
                     }
                 }
 
-                function save() {
+                function save() : void {
                     subtitleColorPicker.color = text
                     SubtitlesSettings.fontColor = text
                     SubtitlesSettings.save()
@@ -291,7 +291,7 @@ SettingsBasePage {
                     }
                 }
 
-                function save() {
+                function save() : void {
                     shadowColorPicker.color = text
                     SubtitlesSettings.shadowColor = text
                     SubtitlesSettings.save()
@@ -368,7 +368,7 @@ SettingsBasePage {
                     }
                 }
 
-                function save() {
+                function save() : void {
                     borderColorPicker.color = text
                     SubtitlesSettings.borderColor = text
                     SubtitlesSettings.save()

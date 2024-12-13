@@ -82,10 +82,11 @@ ItemDelegate {
                 horizontalAlignment: Qt.AlignCenter
                 Layout.leftMargin: Kirigami.Units.largeSpacing
 
-                function pad(number, length) {
-                    while (number.length < length)
-                        number = "0" + number;
-                    return number;
+                function pad(number: string, length: int) : string {
+                    while (number.length < length) {
+                        number = "0" + number
+                    }
+                    return number
                 }
             }
 

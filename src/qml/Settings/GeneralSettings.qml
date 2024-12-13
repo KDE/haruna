@@ -71,7 +71,7 @@ SettingsBasePage {
                             "the file dialog will try to open to the last opened location.")
             }
 
-            function save() {
+            function save() : void {
                 GeneralSettings.fileDialogLocation = fileDialogLocation.text
                 GeneralSettings.save()
             }

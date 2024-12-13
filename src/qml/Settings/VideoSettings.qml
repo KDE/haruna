@@ -52,7 +52,7 @@ SettingsBasePage {
                                 + "in the same folder as the played file.")
                 }
 
-                function save() {
+                function save() : void {
                     VideoSettings.defaultCover = defaultCover.text
                     VideoSettings.save()
                 }
@@ -147,7 +147,7 @@ SettingsBasePage {
                     }
                 }
 
-                function save() {
+                function save() : void {
                     VideoSettings.screenshotTemplate = text
                     VideoSettings.save()
                     root.m_mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)

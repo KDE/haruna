@@ -55,7 +55,7 @@ Item {
         }
     }
 
-    function message(text) {
+    function message(text: string) : void {
         if (!root.active) {
             return
         }
