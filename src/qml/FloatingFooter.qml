@@ -116,7 +116,9 @@ Item {
 
             Loader {
                 sourceComponent: togglePlaylistButton
-                visible: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "left"
+                active: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "left"
+                visible: active
+                asynchronous: true
             }
 
             ToolButton {
@@ -212,7 +214,9 @@ Item {
 
             Loader {
                 sourceComponent: togglePlaylistButton
-                visible: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "right"
+                active: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "right"
+                visible: active
+                asynchronous: true
             }
         }
 

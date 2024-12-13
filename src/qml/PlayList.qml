@@ -241,6 +241,7 @@ Item {
             property bool isLocal: false
 
             active: false
+            asynchronous: true
             sourceComponent: Menu {
 
                 MenuItem {

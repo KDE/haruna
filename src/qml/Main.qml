@@ -144,6 +144,7 @@ Kirigami.ApplicationWindow {
         property int footerHeight: item.isFloating ? 0 : item.height
 
         active: false
+        asynchronous: true
         anchors.bottom: window.contentItem.bottom
         sourceComponent: GeneralSettings.footerStyle === "default"
                          ? footerComponent
@@ -234,6 +235,7 @@ Kirigami.ApplicationWindow {
         id: mpvContextMenuLoader
 
         active: false
+        asynchronous: true
         sourceComponent: ContextMenu {
             m_mpv: mpv
             onClosed: mpvContextMenuLoader.active = false
@@ -244,6 +246,7 @@ Kirigami.ApplicationWindow {
         id: settingsLoader
 
         active: false
+        asynchronous: true
         sourceComponent: SettingsWindow {
             m_mpv: mpv
             m_proxyActionsModel: proxyActionsModel

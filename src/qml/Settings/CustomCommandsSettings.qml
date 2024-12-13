@@ -57,6 +57,7 @@ SettingsBasePage {
             required property bool setOnStartup
 
             width: customCommandsView.width
+            asynchronous: true
             sourceComponent: ItemDelegate {
                 id: customCommandItem
 
@@ -109,6 +110,7 @@ SettingsBasePage {
 
                     Loader {
                         active: delegate.type === "shortcut"
+                        asynchronous: true
                         sourceComponent: KeySequenceItem {
                             checkForConflictsAgainst: ShortcutType.None
                             modifierlessAllowed: true
