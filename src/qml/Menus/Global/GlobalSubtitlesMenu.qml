@@ -23,7 +23,7 @@ Labs.Menu {
         id: primarySubtitleMenu
 
         title: i18nc("@title:menu", "Primary Subtitle")
-        enabled: root.m_mpv.subtitleTracksModel.rowCount() > 1
+        enabled: root.m_mpv.subtitleTracksModel.rowCount > 1
 
         Instantiator {
             model: root.m_mpv.subtitleTracksModel
@@ -57,7 +57,7 @@ Labs.Menu {
         id: secondarySubtitleMenu
 
         title: i18nc("@title:menu", "Secondary Subtitle")
-        enabled: root.m_mpv.subtitleTracksModel.rowCount() > 1
+        enabled: root.m_mpv.subtitleTracksModel.rowCount > 1
 
         Instantiator {
             model: root.m_mpv.subtitleTracksModel

@@ -17,12 +17,13 @@ Menu {
     required property MpvVideo m_mpv
     required property bool isPrimarySubtitleMenu
 
+    property bool loadItems: false
     property TracksModel model: m_mpv.subtitleTracksModel
 
-    enabled: m_mpv.subtitleTracksModel.rowCount() > 1
+    enabled: m_mpv.subtitleTracksModel.rowCount > 1
 
     Repeater {
-        model: root.model
+        model: root.loadItems ? root.model : 0
         delegate: MenuItem {
             id: delegate
 

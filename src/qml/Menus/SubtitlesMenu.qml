@@ -21,12 +21,14 @@ Menu {
         m_mpv: root.m_mpv
         isPrimarySubtitleMenu: true
         title: i18nc("@title:menu", "Primary Subtitle")
+        loadItems: root.visible
     }
 
     SubtitleTracksMenu {
         m_mpv: root.m_mpv
         isPrimarySubtitleMenu: false
         title: i18nc("@title:menu", "Secondary Subtitle")
+        loadItems: root.visible
     }
 
     MenuSeparator {}

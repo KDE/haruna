@@ -18,7 +18,7 @@ Menu {
 
     property TracksModel model: m_mpv.audioTracksModel
 
-    enabled: root.m_mpv.audioTracksModel.rowCount() > 0
+    enabled: root.m_mpv.audioTracksModel.rowCount > 0
 
     Repeater {
         model: root.model
