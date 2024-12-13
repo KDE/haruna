@@ -430,17 +430,21 @@ void MpvItem::loadTracks(QList<QVariant> tracks)
     };
     m_subtitleTracks.append(none);
 
-    for (const auto &track : tracks) {
-        const auto trackMap = track.toMap();
-        if (trackMap[u"type"_s] == u"sub"_s) {
-            m_subtitleTracks.append(track);
+    for (const auto &item : tracks) {
+        const auto map = item.toMap();
+        Track track = {
+            map[u"id"_s].toInt(),
+            map[u"lang"_s].toString(),
+            map[u"title"_s].toString(),
+            map[u"codec"_s].toString(),
+        };
+        if (map[u"type"_s] == u"sub"_s) {
+            m_subtitleTracksModel->addTrack(track);
         }
-        if (trackMap[u"type"_s] == u"audio"_s) {
-            m_audioTracks.append(track);
+        if (map[u"type"_s] == u"audio"_s) {
+            m_audioTracksModel->addTrack(track);
         }
     }
-    m_subtitleTracksModel->setTracks(std::move(m_subtitleTracks));
-    m_audioTracksModel->setTracks(std::move(m_audioTracks));
 
     Q_EMIT audioTracksModelChanged();
     Q_EMIT subtitleTracksModelChanged();

@@ -11,6 +11,13 @@
 #include <QObject>
 #include <QtQml/qqmlregistration.h>
 
+struct Track {
+    int trackid{-1};
+    QString lang;
+    QString title;
+    QString codec;
+};
+
 class TracksModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -34,11 +41,14 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    void clear();
+    void addTrack(Track track);
+
 public Q_SLOTS:
-    void setTracks(QList<QVariant> tracks);
+    void setTracks(QList<Track> tracks);
 
 private:
-    QList<QVariant> m_tracks;
+    QList<Track> m_tracks;
 };
 
 #endif // TRACKSMODEL_H

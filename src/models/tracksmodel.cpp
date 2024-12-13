@@ -24,33 +24,33 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    QMap<QString, QVariant> track = m_tracks[index.row()].toMap();
+    Track track = m_tracks[index.row()];
 
     switch (role) {
     case IdRole:
-        return track[u"id"_s];
+        return track.trackid;
     case TextRole: {
         QString text;
-        auto title = track[u"title"_s].toString();
+        auto title = track.title;
         if (!title.isEmpty()) {
             text += title.append(u" "_s);
         }
-        auto lang = track[u"lang"_s].toString();
+        auto lang = track.lang;
         if (!lang.isEmpty()) {
             text += lang.append(u" "_s);
         }
-        auto codec = track[u"codec"_s].toString();
+        auto codec = track.codec;
         if (!codec.isEmpty()) {
             text += codec;
         }
         return text;
     }
     case LanguageRole:
-        return track[u"lang"_s];
+        return track.lang;
     case TitleRole:
-        return track[u"title"_s];
+        return track.title;
     case CodecRole:
-        return track[u"codec"_s];
+        return track.codec;
     }
 
     return QVariant();
@@ -71,7 +71,19 @@ QHash<int, QByteArray> TracksModel::roleNames() const
     return roles;
 }
 
-void TracksModel::setTracks(QList<QVariant> tracks)
+void TracksModel::clear()
+{
+    m_tracks.clear();
+}
+
+void TracksModel::addTrack(Track track)
+{
+    beginInsertRows(QModelIndex(), m_tracks.count(), m_tracks.count());
+    m_tracks.append(track);
+    endInsertRows();
+}
+
+void TracksModel::setTracks(QList<Track> tracks)
 {
     beginResetModel();
     m_tracks = tracks;
