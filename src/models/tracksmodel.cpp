@@ -81,6 +81,7 @@ void TracksModel::addTrack(Track track)
     beginInsertRows(QModelIndex(), m_tracks.count(), m_tracks.count());
     m_tracks.append(track);
     endInsertRows();
+    Q_EMIT rowCountChanged();
 }
 
 void TracksModel::setTracks(QList<Track> tracks)
@@ -88,6 +89,7 @@ void TracksModel::setTracks(QList<Track> tracks)
     beginResetModel();
     m_tracks = tracks;
     endResetModel();
+    Q_EMIT rowCountChanged();
 }
 
 #include "moc_tracksmodel.cpp"

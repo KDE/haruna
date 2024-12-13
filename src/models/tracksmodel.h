@@ -37,6 +37,8 @@ public:
     Q_ENUM(Roles)
     // clang-format on
 
+    Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
+    Q_SIGNAL void rowCountChanged();
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
