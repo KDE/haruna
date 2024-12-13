@@ -212,8 +212,6 @@ private:
 
     std::unique_ptr<TracksModel> m_audioTracksModel;
     std::unique_ptr<TracksModel> m_subtitleTracksModel;
-    QList<QVariant> m_subtitleTracks;
-    QList<QVariant> m_audioTracks;
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
     std::unique_ptr<PlaylistModel> m_playlistModel;

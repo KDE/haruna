@@ -421,14 +421,16 @@ void MpvItem::loadFile(const QString &file)
 
 void MpvItem::loadTracks(QList<QVariant> tracks)
 {
-    m_subtitleTracks.clear();
-    m_audioTracks.clear();
+    m_subtitleTracksModel->clear();
+    m_audioTracksModel->clear();
 
-    QMap<QString, QVariant> none = {
-        {u"id"_s, QVariant(0)},
-        {u"title"_s, QVariant(i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"))},
+    Track noneTrack = {
+        0,
+        QString{},
+        i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"),
+        QString{},
     };
-    m_subtitleTracks.append(none);
+    m_subtitleTracksModel->addTrack(noneTrack);
 
     for (const auto &item : tracks) {
         const auto map = item.toMap();
