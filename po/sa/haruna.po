@@ -1,67 +1,69 @@
+# Sanskrit translations for haruna package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-14 00:47+0000\n"
-"PO-Revision-Date: 2024-12-01 14:32+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tommi Nieminen"
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "translator@legisign.org"
+msgstr "भवतः ईमेलपत्राणि"
 
 #: src/application.cpp:105
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
-msgstr "Haruna"
+msgstr "हारून"
 
 #: src/application.cpp:107
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Mediasoitin"
+msgstr "मीडिया प्लेयर"
 
 #: src/application.cpp:109
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2023"
-msgstr "© 2019–2023"
+msgstr "(ग) 2019-2023"
 
 #: src/application.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
-msgstr "George Florea Bănuș"
+msgstr "जॉर्ज फ्लोरेआ बनुș"
 
 #: src/application.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
-msgstr "Kehittäjä"
+msgstr "विकासकः"
 
 #: src/application.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
-msgstr "Avattava tiedosto"
+msgstr "सञ्चिकां उद्घाटयितुं"
 
 #: src/application.cpp:130
 #, kde-format
@@ -70,468 +72,464 @@ msgid ""
 "Allows to temporarily override the ytdl format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Sallii väliaikaisesti ohittaa Youtube-dl-muotovalinta-asetuksen. "
-"Sivuutetaan, jos asetusta muutetaan käyttöliittymässä"
+"अस्थायीरूपेण ytdl प्रारूपचयनसेटिंग् अधिलिखितुं अनुमतिं ददाति । यदि GUI मार्गेण सेटिङ्ग् "
+"परिवर्तितं भवति तर्हि अधिलिखितं भविष्यति"
 
 #: src/application.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
-msgstr "parasvideo+parasääni/paras"
+msgstr "bestvideo+bestaudio/सर्वश्रेष्ठम्"
 
 #: src/lockmanager.cpp:34
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Toistetaan mediatiedostoa"
+msgstr "मीडिया सञ्चिकां वादयति"
 
-# *** TARKISTA: Kaksitulkintainen, joko [open actions][dialog] (avointen toimintojen ikkuna?) tai [open][actions dialog] kuten tässä.
 #: src/models/actionsmodel.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Avaa toimintoikkuna"
+msgstr "क्रियाः संवादं उद्घाटयन्तु"
 
 #: src/models/actionsmodel.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
-msgstr "Tietoa Harunasta"
+msgstr "हारुणा विषये"
 
 #: src/models/actionsmodel.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr "Ilmoita viasta"
+msgstr "दोषस्य सूचनां ददातु"
 
 #: src/models/actionsmodel.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "Sponsoroi Harunaa"
+msgstr "प्रायोजक हारुणा"
 
 #: src/models/actionsmodel.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Up"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "श्रव्यचक्रं Up"
 
-# *** TARKISTA: Täysi arvaus. ”Audio up/down” voi olla jotain muutakin.
 #: src/models/actionsmodel.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Audio Cycle Down"
-msgstr "Vähennä äänenvoimakkuutta"
+msgstr "श्रव्यचक्रं अधः"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
 msgctxt "@action"
 msgid "Settings"
-msgstr "Asetukset"
+msgstr "सेटिंग्स्"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Aseta pikanäppäimet"
+msgstr "कीबोर्ड शॉर्टकट् विन्यस्तं कुर्वन्तु"
 
 #: src/models/actionsmodel.cpp:79
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
-msgstr "Poistu koko näytöltä"
+msgstr "Fullscreen इत्यस्मात् निर्गच्छन्तु"
 
 #: src/models/actionsmodel.cpp:86
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Forward"
-msgstr "Kuva-askel eteenpäin"
+msgstr "फ्रेम Step Forward इति"
 
 #: src/models/actionsmodel.cpp:94
 #, kde-format
 msgctxt "@action"
 msgid "Frame Step Backward"
-msgstr "Kuva-askel taaksepäin"
+msgstr "फ्रेम Step Backward इति"
 
 #: src/models/actionsmodel.cpp:102
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
-msgstr "Avaa viimeksi soitettu tiedosto"
+msgstr "अन्तिमवारं वादितं सञ्चिकां लोडं कुर्वन्तु"
 
 #: src/models/actionsmodel.cpp:109
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
-msgstr "Vaimenna"
+msgstr "मूक"
 
 #: src/models/actionsmodel.cpp:116
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
-msgstr "Avaa kontekstivalikko"
+msgstr "सन्दर्भ मेनू उद्घाटयन्तु"
 
 #: src/models/actionsmodel.cpp:120
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
-msgstr "Avaa ja sulkee kontekstivalikon hiiriosoittimen kohdalle"
+msgstr "मूषकसूचकस्य स्थाने सन्दर्भमेनू उद्घाटयति पिधायति च"
 
 #: src/models/actionsmodel.cpp:124
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
-msgstr "Avaa tiedosto"
+msgstr "सञ्चिकां उद्घाटयन्तु"
 
 #: src/models/actionsmodel.cpp:131
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "Lisää ulkoinen tekstitys…"
+msgstr "बाह्य उपशीर्षकं योजयतु…"
 
 #: src/models/actionsmodel.cpp:138
 #, kde-format
 msgctxt "@action"
 msgid "Open Url"
-msgstr "Avaa verkko-osoite"
+msgstr "Url उद्घाटयन्तु"
 
 #: src/models/actionsmodel.cpp:145
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Increase"
-msgstr "Lisää toistonopeutta"
+msgstr "प्लेबैकवेगवर्धनम्"
 
 #: src/models/actionsmodel.cpp:152
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Decrease"
-msgstr "Vähennä toistonopeutta"
+msgstr "प्लेबैक गति न्यूनीभवति"
 
 #: src/models/actionsmodel.cpp:159
 #, kde-format
 msgctxt "@action"
 msgid "Playback Speed Reset"
-msgstr "Palauta toistonopeus"
+msgstr "प्लेबैक गति पुनः सेट् कुर्वन्तु"
 
 #: src/models/actionsmodel.cpp:166
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
-msgstr "Toista/tauko"
+msgstr "क्रीडतु/विरामं कुरुत"
 
 #: src/models/actionsmodel.cpp:173
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
-msgstr "Toista seuraava"
+msgstr "अग्रिमम् क्रीडतु"
 
 #: src/models/actionsmodel.cpp:180
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
-msgstr "Toista edellinen"
+msgstr "Play Previous"
 
 #: src/models/actionsmodel.cpp:187
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
-msgstr "Lopeta"
+msgstr "परिजहातु"
 
 #: src/models/actionsmodel.cpp:194
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
-msgstr "Käynnistä toisto uudelleen"
+msgstr "प्लेबैक् पुनः आरभत"
 
 #: src/models/actionsmodel.cpp:201
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
-msgstr "Hyppää pieni askel eteenpäin"
+msgstr "अग्रे लघु पदं अन्वेष्टुम्"
 
 #: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
-msgstr "Hyppää pieni askel taaksepäin"
+msgstr "लघु पदं पश्चात्तापं अन्वेष्टुम्"
 
 #: src/models/actionsmodel.cpp:215
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
-msgstr "Hyppää keskikokoinen askel eteenpäin"
+msgstr "मध्यमपदं अग्रे अन्वेष्टुम्"
 
 #: src/models/actionsmodel.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
-msgstr "Hyppää keskikokoinen askel taaksepäin"
+msgstr "मध्यमपदं पश्चात्तापं अन्वेष्यताम्"
 
 #: src/models/actionsmodel.cpp:229
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
-msgstr "Hyppää suuri askel eteenpäin"
+msgstr "अग्रे बृहत् कदमम् अन्वेष्टुम्"
 
 #: src/models/actionsmodel.cpp:236
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
-msgstr "Hyppää suuri askel taaksepäin"
+msgstr "Big Step Backward इति अन्वेष्टुम्"
 
 #: src/models/actionsmodel.cpp:243
 #, kde-format
 msgctxt "@action"
 msgid "Seek Next Chapter"
-msgstr "Hyppää seuraavaan lukuun"
+msgstr "अग्रिमः अध्यायः अन्वेष्यताम्"
 
 #: src/models/actionsmodel.cpp:250
 #, kde-format
 msgctxt "@action"
 msgid "Seek Previous Chapter"
-msgstr "Hyppää edelliseen lukuun"
+msgstr "पूर्वाध्यायम् अन्वेष्यताम्"
 
 #: src/models/actionsmodel.cpp:257
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr "Hyppää seuraavaan tekstiin"
+msgstr "Seek To Next उपशीर्षकं"
 
 #: src/models/actionsmodel.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "Hyppää edelliseen tekstiin"
+msgstr "Seek To Previous उपशीर्षकम्"
 
 #: src/models/actionsmodel.cpp:271
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr "Hyppää katso myöhemmin -kohtaan"
+msgstr "Seek To Watch पश्चात् पदम्"
 
 #: src/models/actionsmodel.cpp:278
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
-msgstr "Aseta silmukka"
+msgstr "सेट् लूप्"
 
 #: src/models/actionsmodel.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
-msgstr "Ruutukaappaus"
+msgstr "स्क्रीनशॉट"
 
 #: src/models/actionsmodel.cpp:292
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Toggle"
-msgstr "Näytä tai piilota tekstitys"
+msgstr "उपशीर्षक टॉगल"
 
 #: src/models/actionsmodel.cpp:299
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Increase Font Size"
-msgstr "Kasvata tekstitysfontin kokoa"
+msgstr "उपशीर्षकं फॉन्ट आकारं वर्धयतु"
 
 #: src/models/actionsmodel.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Decrease Font Size"
-msgstr "Pienennä tekstitysfontin kokoa"
+msgstr "उपशीर्षकं फ़ॉन्टस्य आकारं न्यूनीकरोतु"
 
 #: src/models/actionsmodel.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Up"
-msgstr "Nosta tekstitystä"
+msgstr "उपशीर्षकम् उपरि गच्छतु"
 
 #: src/models/actionsmodel.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Move Down"
-msgstr "Laske tekstitystä"
+msgstr "उपशीर्षकम् अधः गच्छतु"
 
 #: src/models/actionsmodel.cpp:327
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Quicken"
-msgstr "Nopeuta tekstitystä"
+msgstr "उपशीर्षक Quicken"
 
 #: src/models/actionsmodel.cpp:334
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Delay"
-msgstr "Tekstitysviive"
+msgstr "उपशीर्षक विलम्ब"
 
-# ***TARKISTA: muukin tulkinta mahdollinen, esim. siirto ylös/alas, fonttikoon muutos…
 #: src/models/actionsmodel.cpp:341
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Up"
-msgstr "Nopeuta tekstitystä"
+msgstr "उपशीर्षक चक्र Up"
 
-# ***TARKISTA: muukin tulkinta mahdollinen, esim. siirto ylös/alas, fonttikoon muutos…
 #: src/models/actionsmodel.cpp:348
 #, kde-format
 msgctxt "@action"
 msgid "Subtitle Cycle Down"
-msgstr "Hidasta tekstitystä"
+msgstr "उपशीर्षक चक्र डाउन"
 
 #: src/models/actionsmodel.cpp:355
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr "Ota käyttöön tai poista käytöstä lomituksenpoisto"
+msgstr "Toggle Deinterlacing इति"
 
 #: src/models/actionsmodel.cpp:362
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
-msgstr "Vaihda koko näytön tilaan tai tilasta"
+msgstr "पूर्णपर्दे टॉगलं कुर्वन्तु"
 
 #: src/models/actionsmodel.cpp:369
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
-msgstr "Näytä tai piilota valikkorivi"
+msgstr "मेनू बार टॉगल करें"
 
 #: src/models/actionsmodel.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
-msgstr "Näytä tai piilota otsake"
+msgstr "Toggle Header इति"
 
 #: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:102
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
-msgstr "Toistolista"
+msgstr "प्लेलिस्ट्"
 
 #: src/models/actionsmodel.cpp:390
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Left"
-msgstr "Siirrä videota vasemmalle"
+msgstr "Video Move Left"
 
 #: src/models/actionsmodel.cpp:397
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Right"
-msgstr "Siirrä videota oikealle"
+msgstr "Video Move Right"
 
 #: src/models/actionsmodel.cpp:404
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Up"
-msgstr "Siirrä videota ylemmäs"
+msgstr "विडियो मूव अप"
 
 #: src/models/actionsmodel.cpp:411
 #, kde-format
 msgctxt "@action"
 msgid "Video Move Down"
-msgstr "Siirrä videota alemmas"
+msgstr "विडियो अधः गच्छतु"
 
 #: src/models/actionsmodel.cpp:418
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Volume Up"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
-msgstr "Vähennä äänenvoimakkuutta"
+msgstr "Volume Down इति"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
-msgstr "Lähennä"
+msgstr "Zoom In इति"
 
 #: src/models/actionsmodel.cpp:439
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
-msgstr "Loitonna"
+msgstr "Zoom Out इति"
 
 #: src/models/actionsmodel.cpp:446
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
-msgstr "Palauta lähennystaso"
+msgstr "जूम रीसेट्"
 
 #: src/models/actionsmodel.cpp:453
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
-msgstr "Lisää kontrastia"
+msgstr "विपरीतम् Up"
 
 #: src/models/actionsmodel.cpp:460
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
-msgstr "Vähennä kontrastia"
+msgstr "Contrast Down इति"
 
 #: src/models/actionsmodel.cpp:467
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
-msgstr "Palauta kontrasti"
+msgstr "Contrast Reset इति"
 
 #: src/models/actionsmodel.cpp:474
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
-msgstr "Lisää kirkkautta"
+msgstr "कान्तिः Up"
 
 #: src/models/actionsmodel.cpp:481
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
-msgstr "Vähennä kirkkautta"
+msgstr "कान्तिः अधः"
 
 #: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
-msgstr "Palauta kirkkaus"
+msgstr "प्रकाशः पुनः सेट् कुर्वन्तु"
 
 #: src/models/actionsmodel.cpp:495
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
-msgstr "Lisää gammaa"
+msgstr "गाम्मा उप"
 
 #: src/models/actionsmodel.cpp:502
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
-msgstr "Vähennä gammaa"
+msgstr "गामा डाउन"
 
 #: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
-msgstr "Palauta gamma"
+msgstr "गामा रीसेट्"
 
 #: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
-msgstr "Lisää värikylläisyyttä"
+msgstr "संतृप्ति Up"
 
 #: src/models/actionsmodel.cpp:523
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
-msgstr "Vähennä värikylläisyyttä"
+msgstr "संतृप्तिः अधः"
 
 #: src/models/actionsmodel.cpp:530
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
-msgstr "Palauta värikylläisyys"
+msgstr "संतृप्ति पुनः सेट्"
 
 #: src/models/actionsmodel.cpp:679
 #, kde-format
@@ -540,45 +538,45 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
-"Valittu pikanäppäin on ristiriidassa toiminnon <b>%1</b> kanssa."
-"<br><br>Haluatko sijoittaa pikanäppäimen uudelleen?"
+"चयनितः शॉर्टकट् <b>%1</b> क्रियायाः शॉर्टकट् इत्यनेन सह विग्रहं करोति ।<br><br> किं "
+"भवन्तः शॉर्टकट् पुनः नियुक्तुं इच्छन्ति ?"
 
 #: src/models/actionsmodel.cpp:685
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "Sijoita uudelleen"
+msgstr "पुनः नियुक्ति"
 
 #: src/mpv/mpvitem.cpp:291
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
-msgstr "Ei voitu toistaa: %1"
+msgstr "क्रीडितुं न शक्तवान्: %1"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
-msgstr "Ei mitään"
+msgstr "न कश्चित्"
 
 #: src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "Ruutukaappaus epäonnistui"
+msgstr "स्क्रीनशॉट् विफलम् अभवत्"
 
 #: src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Kaapattiin ruutu"
+msgstr "स्क्रीनशॉट् गृहीतम्"
 
 #: src/mpv/mpvitem.cpp:476
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
-msgstr "Ruutukaappaus: %1"
+msgstr "स्क्रीनशॉट्: %1"
 
 #: src/mpv/mpvitem.cpp:503
 #, kde-format
@@ -587,183 +585,183 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
-"Videoraitaa ei havaittu: sitä ei todennäköisesti puuttuvien koodekkien takia "
-"ole voitu purkaa tai toistaa"
+"कोऽपि विडियो ट्रैकः न ज्ञातः, अधिकतया विडियो ट्रैकः गम्यमानस्य कोडेक्स् इत्यस्य कारणेन "
+"डिकोड्/वादयितुं न शक्यते"
 
 #: src/mpv/mpvitem.cpp:533
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
-msgstr "Ohitettiin luku: %1"
+msgstr "अध्यायः त्यक्तः: %1"
 
 #: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
-msgstr "Ääni: %1 %2"
+msgstr "श्रव्यः %1 %2"
 
 #: src/qml/Actions.qml:178 src/qml/Actions.qml:184 src/qml/Actions.qml:189
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
-msgstr "Toistonopeus: %1"
+msgstr "प्लेबैकवेगः %1"
 
 #: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
-msgstr "Silmukan alku: %1"
+msgstr "पाशप्रारम्भः %1"
 
 #: src/qml/Actions.qml:290
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
-msgstr "Silmukka: %1–%2"
+msgstr "पाशः %1 - %2"
 
 #: src/qml/Actions.qml:296
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
-msgstr "Silmukka tyhjennetty"
+msgstr "पाशः स्वच्छः अभवत्"
 
 #: src/qml/Actions.qml:307 src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1"
-msgstr "Tekstityksen ajoitus: %1"
+msgstr "उपशीर्षकसमयः %1"
 
 #: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
-msgstr "Ei tekstitystä"
+msgstr "उपशीर्षकं बंद"
 
 #: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Tekstitys käytössä"
+msgstr "उपशीर्षक पर"
 
 #: src/qml/Actions.qml:327 src/qml/Actions.qml:339
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
-msgstr "Tekstitys: ei"
+msgstr "उपशीर्षकम् : कोऽपि नास्ति"
 
 #: src/qml/Actions.qml:331 src/qml/Actions.qml:343
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
-msgstr "Tekstitys: %1 %2"
+msgstr "उपशीर्षकम् : %1 %2"
 
 #: src/qml/Actions.qml:350 src/qml/Actions.qml:356
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr "Tekstitysmittakaava: %1"
+msgstr "उपशीर्षकपरिमाणः %1"
 
 #: src/qml/Actions.qml:370
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
-msgstr "Lomituksen poisto: %1"
+msgstr "Deinterlace: %1"
 
 #: src/qml/Actions.qml:427 src/qml/Actions.qml:433
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
-msgstr "Lähennys: %1"
+msgstr "जूम: %1"
 
 #: src/qml/Actions.qml:438
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
-msgstr "Lähennys: 0"
+msgstr "जूमः 0"
 
 #: src/qml/Actions.qml:445 src/qml/Actions.qml:451
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
-msgstr "Kontrasti: %1"
+msgstr "विपरीतता : %1"
 
 #: src/qml/Actions.qml:456
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
-msgstr "Kontrasti: 0"
+msgstr "विपरीतता : 0"
 
 #: src/qml/Actions.qml:462 src/qml/Actions.qml:468
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
-msgstr "Kirkkaus: %1"
+msgstr "कान्तिः %1"
 
 #: src/qml/Actions.qml:473
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
-msgstr "Kirkkaus: 0"
+msgstr "कान्तिः 0"
 
 #: src/qml/Actions.qml:479 src/qml/Actions.qml:485
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
-msgstr "Gamma: %1"
+msgstr "गामा: %1"
 
 #: src/qml/Actions.qml:490
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr "Gamma: 0"
+msgstr "गामा: 0"
 
 #: src/qml/Actions.qml:496 src/qml/Actions.qml:502
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
-msgstr "Kylläisyys: %1"
+msgstr "संतृप्ति: %1"
 
 #: src/qml/Actions.qml:507
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
-msgstr "Kylläisyys: 0"
+msgstr "संतृप्ति: 0"
 
 #: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Start Playback"
-msgstr "Käynnistä toisto"
+msgstr "Playback आरभ्यताम्"
 
 #: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
-msgstr "Keskeytä toisto"
+msgstr "प्लेबैकं विरामयन्तु"
 
 #: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:91
 msgctxt "@info:tooltip"
 msgid "Play previous file"
-msgstr "Toista edellinen tiedosto"
+msgstr "पूर्वसञ्चिकां वादयन्तु"
 
 #: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:104
 msgctxt "@info:tooltip"
 msgid "Play next file"
-msgstr "Toista seuraava tiedosto"
+msgstr "अग्रिमसञ्चिकां वादयन्तु"
 
 #: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:122
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
-msgstr "Jäljellä: %1"
+msgstr "शेषः : %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr "Valitse väri"
+msgstr "एकं वर्णं चिनोतु"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
 msgid "Recent Files"
-msgstr "Viimeisimmät tiedostot"
+msgstr "अद्यतनसञ्चिकाः"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:83
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
-msgstr "Ensisijainen tekstitys"
+msgstr "प्राथमिक उपशीर्षक"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:90
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:30
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
-msgstr "Toissijainen tekstitys"
+msgstr "गौण उपशीर्षक"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:100
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "Ääniraita"
+msgstr "ऑडियो ट्रैक"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:124
 msgctxt "@action:inmenu"
 msgid "&More"
-msgstr "&Lisää"
+msgstr "&अधिकः"
 
 #: src/qml/Haruna/Components/InputPopup.qml:29
 msgctxt "@info"
@@ -771,53 +769,53 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
-"Ohjelmia <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> tai <a href="
-"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ei löytynyt."
+"न <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> न <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> प्राप्तम्।"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:26
 msgctxt "@title"
 msgid "Load subtitles from"
-msgstr "Lataa tekstitykset tiedostosta"
+msgstr "तः उपशीर्षकाणि लोडयन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
 msgid "Confirm deletion"
-msgstr "Vahvista poistaminen"
+msgstr "लोपस्य पुष्टिं कुर्वन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:121
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
-msgstr "Poista tämä kansio luettelosta"
+msgstr "सूचीतः एतत् पुटं विलोपयन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:137
 msgctxt "@info:tooltip"
 msgid "Save changes"
-msgstr "Tallenna muutokset"
+msgstr "परिवर्तनं रक्षतु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:159
 msgctxt "@action:button"
 msgid "Add new folder"
-msgstr "Lisää uusi kansio"
+msgstr "नूतनं पुटं योजयन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:171
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr "Kysy kansio, josta etsiä tekstityksiä."
+msgstr "एकं पुटं योजयन्तु यस्मिन् उपशीर्षकं अन्वेष्टव्यम् ।"
 
 #: src/qml/Header.qml:68
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
-msgstr "Tekstitykset"
+msgstr "उपशीर्षक"
 
 #: src/qml/Header.qml:90
 msgctxt "@action:intoolbar"
 msgid "Audio"
-msgstr "Ääni"
+msgstr "श्रव्यः"
 
 #: src/qml/HProgressBar.qml:246
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
-msgstr "Ohita luvut"
+msgstr "अध्यायान् त्यजन्तु"
 
 #: src/qml/HProgressBar.qml:254
 msgctxt "@info:tooltip"
@@ -825,333 +823,332 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 msgstr ""
-"Ohita automaattisesti tiettyjä sanoja tai merkkejä sisältävät luvut.\n"
-"”Toisto”-asetuksista löytyy lisätietoa"
+"कतिपयशब्दाः/वर्णाः युक्ताः अध्यायाः स्वयमेव लङ्घयति ।\n"
+"अधिकविवरणार्थं 'Playback' सेटिंग्स् पश्यन्तु"
 
 #: src/qml/Main.qml:28
 msgctxt "@title:window"
 msgid "Haruna"
-msgstr "Haruna"
+msgstr "हारून"
 
 #: src/qml/Main.qml:285 src/qml/PlayList.qml:364
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
-msgstr "Valitse tiedosto"
+msgstr "सञ्चिकां चिनोतु"
 
 #: src/qml/Main.qml:312
 msgctxt "@title:window"
 msgid "Select subtitles file"
-msgstr "Valitse tekstitystiedosto"
+msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 
 #: src/qml/Main.qml:331
 msgctxt "@action:button"
 msgid "Open"
-msgstr "Avaa"
+msgstr "उद्घाटित"
 
 #: src/qml/Menus/AudioMenu.qml:18 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 msgctxt "@title:menu"
 msgid "&Audio"
-msgstr "&Ääni"
+msgstr "&श्रव्यः"
 
 #: src/qml/Menus/AudioMenu.qml:26 src/qml/Menus/Global/GlobalAudioMenu.qml:25
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&Raita"
+msgstr "&मार्ग"
 
 #: src/qml/Menus/ContextMenu.qml:21
 msgctxt "@title:menu"
 msgid "Playback speed"
-msgstr "Toistonopeus"
+msgstr "प्लेबैकवेगः"
 
 #: src/qml/Menus/FileMenu.qml:19 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
-msgstr "&Tiedosto"
+msgstr "&संचिका"
 
 #: src/qml/Menus/FileMenu.qml:28 src/qml/Menus/Global/GlobalFileMenu.qml:42
 msgctxt "@title:menu"
 msgid "Recent Files"
-msgstr "Viimeisimmät tiedostot"
+msgstr "अद्यतनसञ्चिकाः"
 
 #: src/qml/Menus/FileMenu.qml:52 src/qml/Menus/Global/GlobalFileMenu.qml:67
 msgctxt "@action:inmenu"
 msgid "Clear List"
-msgstr "Tyhjennä luettelo"
+msgstr "स्पष्ट सूची"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:12 src/qml/Menus/HelpMenu.qml:12
 msgctxt "@title:menu"
 msgid "&Help"
-msgstr "O&hje"
+msgstr "&साहाय्यम्‌"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:12
 #: src/qml/Menus/PlaybackMenu.qml:12
 msgctxt "@title:menu"
 msgid "&Playback"
-msgstr "T&oisto"
+msgstr "&प्लेबैक"
 
 #: src/qml/Menus/Global/GlobalPlaybackMenu.qml:67
 #: src/qml/Menus/PlaybackMenu.qml:30
 msgctxt "@title:menu"
 msgid "Seek"
-msgstr "Hyppää"
+msgstr "अन्विष्यति"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:15
 #: src/qml/Menus/SettingsMenu.qml:17
 msgctxt "@title:menu"
 msgid "&Settings"
-msgstr "&Asetukset"
+msgstr "&सेटिंग्स"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:18
 #: src/qml/Menus/SettingsMenu.qml:20
 msgctxt "@action:inmenu"
 msgid "General"
-msgstr "Perusasetukset"
+msgstr "सामान्य"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:26
 #: src/qml/Menus/SettingsMenu.qml:28
 msgctxt "@action:inmenu"
 msgid "Playback"
-msgstr "Toisto"
+msgstr "प्लेबैक"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:34
 #: src/qml/Menus/SettingsMenu.qml:36
 msgctxt "@action:inmenu"
 msgid "Video"
-msgstr "Video"
+msgstr "विडिओ"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:42
 #: src/qml/Menus/SettingsMenu.qml:44
 msgctxt "@action:inmenu"
 msgid "Audio"
-msgstr "Ääni"
+msgstr "श्रव्यः"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:50
 #: src/qml/Menus/SettingsMenu.qml:52
 msgctxt "@action:inmenu"
 msgid "Subtitles"
-msgstr "Tekstitykset"
+msgstr "उपशीर्षक"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:58
 #: src/qml/Menus/SettingsMenu.qml:60
 msgctxt "@action:inmenu"
 msgid "Playlist"
-msgstr "Soittolista"
+msgstr "प्लेलिस्ट्"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:66
 #: src/qml/Menus/SettingsMenu.qml:68
 msgctxt "@action:inmenu"
 msgid "Mouse"
-msgstr "Hiiri"
+msgstr "मूषकः"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:74
 #: src/qml/Menus/SettingsMenu.qml:76
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
-msgstr "Pikanäppäimet"
+msgstr "शॉर्टकट"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:83
 #: src/qml/Menus/SettingsMenu.qml:85
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
-msgstr "Mukautetut komennot"
+msgstr "कस्टम् आदेशाः"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:91
 #: src/qml/Menus/SettingsMenu.qml:93
 msgctxt "@action:inmenu"
 msgid "Debug"
-msgstr "Virheenpaikannus"
+msgstr "त्रुटिनिवारणम्"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:99
 #: src/qml/Menus/SettingsMenu.qml:101
 msgctxt "@action:inmenu"
 msgid "About"
-msgstr "Tietoa"
+msgstr "विषये"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:20
 #: src/qml/Menus/SubtitlesMenu.qml:18
 msgctxt "@title:menu"
 msgid "&Subtitles"
-msgstr "T&ekstitys"
+msgstr "&उपशीर्षक"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:12 src/qml/Menus/VideoMenu.qml:12
 msgctxt "@title:menu"
 msgid "&Video"
-msgstr "&Video"
+msgstr "&विडिओ"
 
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:69 src/qml/Menus/VideoMenu.qml:25
 msgctxt "@title:menu"
 msgid "Adjustments"
-msgstr "Säädöt"
+msgstr "समायोजनानि"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:15 src/qml/Menus/ViewMenu.qml:15
 msgctxt "@title:menu"
 msgid "&View"
-msgstr "&Näkymä"
+msgstr "&दृश्यं"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:28 src/qml/Menus/ViewMenu.qml:24
 msgctxt "@action:inmenu"
 msgid "Hide Menubar"
-msgstr "Piilota valikkorivi"
+msgstr "मेनूबारं गोपयन्तु"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:30 src/qml/Menus/ViewMenu.qml:26
 msgctxt "@action:inmenu"
 msgid "Show Menubar"
-msgstr "Näytä valikkorivi"
+msgstr "मेनूबारं दर्शयतु"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:41 src/qml/Menus/ViewMenu.qml:35
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
-msgstr "Piilota työkalurivi"
+msgstr "Toolbar गोपयन्तु"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:43 src/qml/Menus/ViewMenu.qml:37
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
-msgstr "Näytä työkalurivi"
+msgstr "Toolbar दर्शयतु"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
-msgstr "Äänenvoimakkuus: %1"
+msgstr "आयतनम् : %1"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "Add"
-msgstr "Lisää"
+msgstr "संयोजयति"
 
 #: src/qml/PlayList.qml:113
 msgctxt "@action:button"
 msgid "Open playlist"
-msgstr "Avaa soittolista"
+msgstr "प्लेलिस्ट् उद्घाटयन्तु"
 
 #: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Add ..."
-msgstr "Lisää…"
+msgstr "संयोजयति ..."
 
 #: src/qml/PlayList.qml:125
 msgctxt "@action:button"
 msgid "File"
-msgstr "Tiedosto"
+msgstr "संचिका"
 
 #: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Url"
-msgstr "Verkko-osoite"
+msgstr "उर्ल्"
 
 #: src/qml/PlayList.qml:144
 msgctxt "@action:button"
 msgid "Sort"
-msgstr "Lajittele"
+msgstr "प्रकारं"
 
 #: src/qml/PlayList.qml:148
 msgctxt "@action:button"
 msgid "Name ascending"
-msgstr "Nimi nousevasti"
+msgstr "नाम आरोहणम्"
 
 #: src/qml/PlayList.qml:154
 msgctxt "@action:button"
 msgid "Name descending"
-msgstr "Nimi laskevasti"
+msgstr "नाम अवरोहति"
 
 #: src/qml/PlayList.qml:160
 msgctxt "@action:button"
 msgid "Duration ascending"
-msgstr "Kesto nousevasti"
+msgstr "अवधिः आरोही"
 
 #: src/qml/PlayList.qml:166
 msgctxt "@action:button"
 msgid "Duration descending"
-msgstr "Kesto laskevasti"
+msgstr "अवरोहति अवधिः"
 
 #: src/qml/PlayList.qml:173
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Tyhjennä"
+msgstr "स्पष्टः"
 
 #: src/qml/PlayList.qml:181
 msgctxt "@action:button"
 msgid "Save as"
-msgstr "Tallenna nimellä"
+msgstr "यथा रक्षतु"
 
 #: src/qml/PlayList.qml:247
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
-msgstr "Avaa yläkansio"
+msgstr "युक्तं पुटं उद्घाटयन्तु"
 
 #: src/qml/PlayList.qml:253
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Avaa selaimeen"
+msgstr "ब्राउजर् मध्ये उद्घाटयन्तु"
 
 #: src/qml/PlayList.qml:262
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Kopioi nimi"
+msgstr "प्रतिलिपि नाम"
 
 #: src/qml/PlayList.qml:267
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Kopioi sijainti"
+msgstr "प्रतिलिपि मार्ग"
 
 #: src/qml/PlayList.qml:268
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "Kopioi verkko-osoite"
+msgstr "url प्रतिलिपि कुर्वन्तु"
 
 #: src/qml/PlayList.qml:273
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
-msgstr "Poista soittolistasta"
+msgstr "प्लेलिस्ट् तः निष्कासयन्तु"
 
 #: src/qml/PlayList.qml:278
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Muuta nimeä"
+msgstr "पुनर्नाम"
 
 #: src/qml/PlayList.qml:284
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
-msgstr "Toista kohde vierittämällä"
+msgstr "प्लेइंग आइटम् प्रति स्क्रॉल कुर्वन्तु"
 
-# *** TARKISTA: vai onko yhdyssana, ”roskakoritiedosto"?
 #: src/qml/PlayList.qml:294
 msgctxt "@action:inmenu"
 msgid "Trash file"
-msgstr "Vie tiedosto roskakoriin"
+msgstr "कचरा सञ्चिका"
 
 #: src/qml/Settings/AudioSettings.qml:25
 #: src/qml/Settings/SubtitlesSettings.qml:53
 msgctxt "@label:textbox"
 msgid "Preferred language"
-msgstr "Suosittu kieli"
+msgstr "प्राधान्य भाषा"
 
 #: src/qml/Settings/AudioSettings.qml:33
 #: src/qml/Settings/SubtitlesSettings.qml:61
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "fin, eng jne."
+msgstr "क, गेर इत्यादि ।"
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:81
 msgctxt "@label:spinbox"
 msgid "Preferred track"
-msgstr "Suosittu raita"
+msgstr "प्राधान्यं पटलम्"
 
 #: src/qml/Settings/AudioSettings.qml:75
 msgctxt "@label:spinbox"
 msgid "Volume step"
-msgstr "Äänenvoimakkuusaskel"
+msgstr "मात्रा चरण"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:35
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr "Ei vielä mukautettuja komentoja"
+msgstr "अद्यापि कस्टम् आदेशाः नास्ति"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
 msgctxt "@action:button"
 msgid "&Add command"
-msgstr "L&isää komento"
+msgstr "&आदेशं योजयतु"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:87
 msgctxt "@info:tooltip"
@@ -1159,43 +1156,43 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
-"Valittu: ominaisuus asetetaan käynnistettäessä\n"
-"Ei valittu: ominaisuutta ei aseteta käynnistettäessä"
+"चेक्ड्: प्रॉपर्टी प्रारम्भे सेट् भविष्यति\n"
+"अनिरीक्षितम्: प्रारम्भे गुणः सेट् न भविष्यति"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:165
 msgctxt "@action:intoolbar"
 msgid "&Add"
-msgstr "&Lisää"
+msgstr "&संयोजयति"
 
 #: src/qml/Settings/DebugSettings.qml:26
 msgctxt "@label:textbox"
 msgid "Config folder"
-msgstr "Asetuskansio"
+msgstr "Config पुटम्"
 
 #: src/qml/Settings/DebugSettings.qml:38
 msgctxt "@info:tooltip"
 msgid "Open config folder"
-msgstr "Avaa asetuskansio"
+msgstr "config फोल्डर् उद्घाटयन्तु"
 
 #: src/qml/Settings/DebugSettings.qml:50
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "Asetustiedosto"
+msgstr "सञ्चिकां विन्यस्तं कुर्वन्तु"
 
 #: src/qml/Settings/DebugSettings.qml:62
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "Avaa asetustiedosto"
+msgstr "config सञ्चिकां उद्घाटयन्तु"
 
 #: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Mukautettujen komentojen asetustiedosto"
+msgstr "कस्टम् आदेश्स् config file"
 
 #: src/qml/Settings/DebugSettings.qml:86
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Avaa mukautettujen komentojen asetustiedosto"
+msgstr "custom commands config file उद्घाटयन्तु"
 
 #: src/qml/Settings/DebugSettings.qml:98
 msgctxt "@info:usagetip"
@@ -1203,23 +1200,23 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
-"Jos kentät ovat tyhjiä, asetustiedosto tai -kansio puuttuu (esim. "
-"käytettäessä oletusasetuksia)."
+"यदि क्षेत्राणि रिक्तानि सन्ति तर्हि तस्य अर्थः अस्ति यत् विन्याससञ्चिका/पुटं नास्ति (उदा. "
+"पूर्वनिर्धारितसेटिंग्स् इत्यस्य उपयोगं कुर्वन्) ।"
 
 #: src/qml/Settings/DebugSettings.qml:106
 msgctxt "@option:check"
 msgid "Enable mpv logging"
-msgstr "Käytä mpv-lokia"
+msgstr "mpv logging सक्षमं कुर्वन्तु"
 
 #: src/qml/Settings/EditCustomCommand.qml:41
 msgctxt "@label:textbox"
 msgid "Command"
-msgstr "Komento"
+msgstr "आदेश"
 
 #: src/qml/Settings/EditCustomCommand.qml:50
 msgctxt "placeholder text"
 msgid "add volume +10"
-msgstr "lisää äänenvoimakkuutta +10"
+msgstr "आयतन +10 योजयन्तु"
 
 #: src/qml/Settings/EditCustomCommand.qml:57
 msgctxt "@info:tooltip"
@@ -1235,27 +1232,26 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
-"Mikä mpv-komento suoritetaan; täysi luettelo saatavilla olevista "
-"komennoista: <a href=\"https://mpv.io/manual/stable/#list-of-input-commands"
-"\">MPV-komennot</a>.<br>Kaikki komennot eivät toimi, koska ne ovat mpv-"
-"kohtaisia.<br>Hyödyllisimmät komennot käsittelevät ominaisuuksia kuten "
-"<strong>set</strong>, <strong>add</strong> tai <strong>cycle</strong>."
-"<br><strong>set</strong>: asettaa ominaisuuden arvon, esim. <strong>set "
-"volume-max 150</strong>.<br><strong>add</strong>: muuttaa ominaisuuden "
-"arvoa, esim. <strong>add volume 15</strong> lisää äänenvoimakkuutta 15:llä. "
-"Negatiivinen arvo muuttaa toiseen suuntaan: <strong>add volume -15</strong>."
-"<br><strong>cycle</strong>: vaihtaa ominaisuuden eri arvosta toiseen, esim. "
-"<strong>cycle aid up</strong>."
+"किं mpv आदेशं चालनीयम्, उपलब्धानां आदेशानां सूचीं प्राप्तुं <a href=\"https://mpv.io/"
+"manual/stable/#list-of-input-commands\">MPV Commands</a> पश्यन्तु ।<br> सर्वे "
+"आदेशाः कार्यं न करिष्यन्ति यतः केचन mpv कृते विशिष्टाः सन्ति ।<br> सर्वाधिकं उपयोगिनो "
+"गुणानाम् परिवर्तनार्थं आदेशाः सन्ति, यथा <strong>set</strong> , <strong>add</"
+"strong> , <strong>cycle</strong> ।<br> <strong>set</strong> : एकस्य गुणस्य मूल्यं "
+"सेट् करोति <strong>set volume-max 150</strong> .<br> <strong>add</strong> : "
+"एकस्य गुणस्य मूल्यं <strong>add volume 15 इत्यस्य</strong> मूल्यं वर्धयति/घटयति , volume "
+"15 इत्यनेन वर्धयति मूल्यं न्यूनीकर्तुं <strong>add volume -15 इत्यस्य</strong> उपयोगं "
+"कुर्वन्तु ।<br> <strong>cycle</strong> : एकस्य गुणस्य मूल्यानां माध्यमेन चक्रं "
+"<strong>cycle aid up</strong> ."
 
 #: src/qml/Settings/EditCustomCommand.qml:74
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr "Ruutuviesti"
+msgstr "ओएसडी सन्देश"
 
 #: src/qml/Settings/EditCustomCommand.qml:84
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
-msgstr "Tiedostonimi: ${tiedostonimi}"
+msgstr "सञ्चिकानाम: ${filename}"
 
 #: src/qml/Settings/EditCustomCommand.qml:90
 msgctxt "@info:tooltip"
@@ -1264,63 +1260,60 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
-"Toimintotyypin mukautettua komentoa käynnistettäessä näytettävä ruutuviesti."
-"<br>Ominaisuuden arvon voi näyttää muuttujalla {ominaisuuden_nimi}, esim. "
-"<strong>Äänenvoimakkuus: ${volume}</strong>"
+"क्रियाप्रकारस्य कस्टम् आदेशं प्रेरयति समये प्रदर्शयितुं OSD सन्देशः ।<br> गुणस्य मूल्यं प्रदर्शयितुं "
+"${property_name} इत्यस्य उपयोगं कुर्वन्तु <strong>Volume: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:99
 msgctxt "@label"
 msgid "Type"
-msgstr "Tyyppi"
+msgstr "प्रकारः"
 
 #: src/qml/Settings/EditCustomCommand.qml:120
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
-msgstr "Pikanäppäin"
+msgstr "कीबोर्ड शॉर्टकट"
 
 #: src/qml/Settings/EditCustomCommand.qml:121
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
-msgstr ""
-"Pikanäppäimellä käynnistettävä komento. Pikanäppäimen voi asettaa "
-"tallennuksen jälkeen."
+msgstr "आदेशः शॉर्टकट् इत्यनेन सह प्रवर्तते । रक्षणानन्तरं शॉर्टकट् सेट् कर्तुं शक्यते ।"
 
 #: src/qml/Settings/EditCustomCommand.qml:130
 msgctxt "@option:radio"
 msgid "Run at startup"
-msgstr "Suorita käynnistettäessä"
+msgstr "स्टार्टअप इत्यत्र चालयन्तु"
 
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr "Sovellusta käynnistettäessä suoritettava komento."
+msgstr "अनुप्रयोगस्य आरम्भे आदेशः चालितः भविष्यति ।"
 
 #: src/qml/Settings/EditCustomCommand.qml:143
 msgctxt "@action:intoolbar"
 msgid "Delete"
-msgstr "Poista"
+msgstr "लुप्"
 
 #: src/qml/Settings/EditCustomCommand.qml:158
 msgctxt "@action:intoolbar"
 msgid "Cancel"
-msgstr "Peru"
+msgstr "निरसयतु"
 
 #: src/qml/Settings/EditCustomCommand.qml:165
 msgctxt "@action:intoolbar"
 msgid "&Save"
-msgstr "&Tallenna"
+msgstr "&रक्ष्"
 
 #: src/qml/Settings/GeneralSettings.qml:25
 msgctxt "@label:spinbox"
 msgid "Osd font size"
-msgstr "Ruutunäytön fonttikoko"
+msgstr "Osd फ़ॉन्ट आकार"
 
 #: src/qml/Settings/GeneralSettings.qml:51
 msgctxt "@label:textbox"
 msgid "File dialog location"
-msgstr "Tiedostonvalintaikkunan sijainti"
+msgstr "सञ्चिकासंवादस्थानम्"
 
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
@@ -1328,24 +1321,23 @@ msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"Tiedostonvalintaikkunan oletussijainti. Jos on tyhjä, tiedostonvalintaikkuna "
-"käynnistyy viimeksi auki olleeseen sijaintiin."
+"मुक्तसञ्चिकासंवादस्य पूर्वनिर्धारितस्थानं । यदि रिक्तं भवति तर्हि सञ्चिकासंवादः अन्तिमे "
+"उद्घाटितस्थानं प्रति उद्घाटयितुं प्रयतते ।"
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
-msgstr "Viimeaikaisia tiedostoja enintään"
+msgstr "अधिकतमं अद्यतनसञ्चिकाः"
 
 #: src/qml/Settings/GeneralSettings.qml:98
 msgctxt "@info:tooltip"
 msgid "How many recent files to store. Enter 0 (zero) to disable."
-msgstr ""
-"Montako viimeaikaista tiedostoa talletetaan. Poista käytöstä arvolla 0."
+msgstr "कति अद्यतनसञ्चिकाः संग्रहणीयाः। अक्षमीकरणाय 0 (शून्यम्) प्रविष्टं कुर्वन्तु ।"
 
 #: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr "Salli vain yksi ilmentymä"
+msgstr "केवलं एकं उदाहरणं अनुमन्यताम्"
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@info:tooltip"
@@ -1354,33 +1346,33 @@ msgid ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 msgstr ""
-"Yritys avata uusi Haruna-ilmentymä ei johda mihinkään.\n"
-"Yritys avata uusi tiedosto Harunaan avaa tiedoston nykyisen ilmentymään."
+"अन्यं हारुणा-दृष्टान्तं उद्घाटयितुं प्रयत्नः किमपि न करिष्यति ।\n"
+"हारुना इत्यनेन सह अन्यां सञ्चिकां उद्घाटयितुं प्रयत्नः चालितदृष्टान्ते सञ्चिकां उद्घाटयिष्यति ।"
 
 #: src/qml/Settings/GeneralSettings.qml:136
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Avaa tiedosto soittolistalle"
+msgstr "प्लेलिस्ट् मध्ये सञ्चिकां योजयन्तु"
 
 #: src/qml/Settings/GeneralSettings.qml:152
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
-msgstr "Tiedosto lisätään soittolistan loppuun"
+msgstr "प्लेलिस्ट् इत्यस्य अन्ते सञ्चिका योजिता भविष्यति"
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@title"
 msgid "Interface"
-msgstr "Käyttöliittymä"
+msgstr "अन्तरफलकम्"
 
 #: src/qml/Settings/GeneralSettings.qml:167
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Alatunnistetyyli"
+msgstr "पादशैली"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr "Näytä leijuva alatunniste"
+msgstr "प्लवमानं पादलेखं दर्शयतु"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1389,69 +1381,68 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
-"Mikä toiminto näyttää alatunnisteen.<br><strong>Jokainen hiiren liike</"
-"strong> – jokainen hiiren liike videoalueella<br><strong>Hiiren liike "
-"alalaidalla</strong> – hiiren liike videon alalaidalla"
+"किं कर्म पादं दर्शयति।<br> <strong>प्रत्येकं मूषकस्य गतिः</strong> - प्रत्येकं मूषकस्य गतिः "
+"विडियो क्षेत्रस्य उपरि<br> <strong>अधः मूषकस्य गतिः</strong> - विडियोक्षेत्रस्य अधः "
+"मूषकस्य गतिः"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr "Esikatsele pienoiskuvaa"
+msgstr "पूर्वावलोकन लघुचित्र"
 
 #: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr "Näytä pienoiskuvaesikatselu"
+msgstr "पूर्वावलोकनलघुचित्रं दर्शयतु"
 
 #: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr "Näyttää esikatselun leijuttaessa etenemispalkin yllä."
+msgstr "seek/progress bar इत्यत्र भ्रमन् पूर्वावलोकनं दर्शयति ।"
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr "Näytä tarkka esikatselu"
+msgstr "सटीकपूर्वावलोकनस्य उपयोगं कुर्वन्तु"
 
 #: src/qml/Settings/GeneralSettings.qml:267
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr "Tarkan esikatselun luominen on hidasta"
+msgstr "समीचीनं पूर्वावलोकनं जनयितुं मन्दं भवति"
 
 #: src/qml/Settings/GeneralSettings.qml:277
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr "Pienoiskuvan leveys"
+msgstr "लघुचित्रविस्तारः"
 
 #: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@label"
 msgid "Window"
-msgstr "Ikkuna"
+msgstr "कोष्ठ"
 
 #: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr "Sovita videon kokoon"
+msgstr "विडियो फिट् कर्तुं आकारं परिवर्तयन्तु"
 
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "<b>Not supported on Wayland.</b>"
-msgstr "<b>Ei tueta Waylandissä.</b>"
+msgstr "<b>वेलैण्ड् इत्यत्र समर्थितं नास्ति ।</b>"
 
-# *** TARKISTA: Mitä ”%1” tässä on?
 #: src/qml/Settings/GeneralSettings.qml:321
 msgctxt "@info:tooltip"
 msgid ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
-"Enimmäiskokoa ei rajoiteta, vaan se jätetään käyttöjärjestelmälle."
+"%1 विण्डो इत्यस्य आकारः विडियो संकल्पानुसारं परिवर्तितः भवति ।\n"
+"अधिकतमः आकारः बाध्यः नास्ति, एतत् प्रचालनतन्त्राय अवशिष्टम् अस्ति ।"
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr "Aloita koko näytön tilassa"
+msgstr "पूर्णपर्दे मोड् मध्ये आरभत"
 
 #: src/qml/Settings/GeneralSettings.qml:349
 msgctxt "@info:tooltip"
@@ -1460,14 +1451,14 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
-"Aloita sovelluksen käynnistyessä koko näytön tilassa.\n"
-"Tämä ohittaa asetukset ”Sovita videon kokoon” ja ”Muista ikkunan koko ja "
-"sijainti”."
+"यदा अनुप्रयोगः आरभ्यते तदा पूर्णपर्दे मोडं प्रविशतु।\n"
+"एतत् विडियो फिट् कर्तुं Resize इत्यस्य अपेक्षया प्राधान्यं प्राप्नोति, तथा च Remember "
+"window size and position settings इत्येतयोः अपेक्षया ।"
 
 #: src/qml/Settings/GeneralSettings.qml:363
 msgctxt "@option:check"
 msgid "Remember window size and position"
-msgstr "Muista ikkunan koko ja sijainti"
+msgstr "विण्डो आकारं स्थानं च स्मर्यताम्"
 
 #: src/qml/Settings/GeneralSettings.qml:379
 msgctxt "@info:tooltip"
@@ -1478,41 +1469,41 @@ msgid ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 msgstr ""
-"Ikkunan kokoa ja sijaintia muutettaessa uudet arvot tallennetaan ja niitä "
-"käytetään uudelleen uutta sovellusikkunaa avattaessa.\n"
+"यदा विण्डो आकारः स्थानं च परिवर्तते तदा नूतनानि मूल्यानि रक्षिताः भवन्ति तथा च "
+"नूतनदृष्टान्तस्य उद्घाटने अनुप्रयोगस्य समान आकारे स्थाने च पुनः स्थापयितुं उपयुज्यन्ते ।\n"
 "\n"
-"Etusijan ottaa asetus ”Sovita videon kokoon”.\n"
+"\"Resize to fit video\" इति सेटिङ्ग् प्राधान्यं प्राप्नोति ।\n"
 
 #: src/qml/Settings/GeneralSettings.qml:394
 msgctxt "@option:check"
 msgid "Show menubar"
-msgstr "Näytä valikkorivi"
+msgstr "मेनूबारं दर्शयतु"
 
 #: src/qml/Settings/GeneralSettings.qml:405
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
-msgstr "Näytä työkalurivi"
+msgstr "साधनपट्टिकां दर्शयतु"
 
 #: src/qml/Settings/GeneralSettings.qml:416
 msgctxt "@option:check"
 msgid "Show chapter markers"
-msgstr "Näytä lukumerkit"
+msgstr "अध्यायचिह्नानि दर्शयन्तु"
 
 #: src/qml/Settings/GeneralSettings.qml:425
 msgctxt "@label:listbox"
 msgid "Color scheme"
-msgstr "Väriteema"
+msgstr "वर्ण योजना"
 
 #: src/qml/Settings/GeneralSettings.qml:469
 msgctxt "@label:listbox"
 msgid "GUI style"
-msgstr "Käyttöliittymätyyli"
+msgstr "GUI शैली"
 
 #: src/qml/Settings/GeneralSettings.qml:520
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
-msgstr "Käytä Breeze-kuvaketeemaa"
+msgstr "Breeze चिह्न विषयस्य उपयोगं कुर्वन्तु"
 
 #: src/qml/Settings/GeneralSettings.qml:528
 msgctxt "@info:tooltip"
@@ -1520,28 +1511,28 @@ msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
 msgstr ""
-"Asettaa kuvaketeemaksi Breezen.\n"
-"Vaatii uudelleenkäynnistyksen."
+"चिह्नविषयं वायुना सेट् करोति ।\n"
+"पुनः आरम्भस्य आवश्यकता अस्ति।"
 
 #: src/qml/Settings/MouseSettings.qml:85
 msgctxt "@label"
 msgid "No action set"
-msgstr "Toimintoa ei ole asetettu"
+msgstr "न क्रियासमूहः"
 
 #: src/qml/Settings/MouseSettings.qml:99
 msgctxt "@info:tooltip"
 msgid "Clear action"
-msgstr "Tyhjennä toiminto"
+msgstr "स्पष्टं कर्म"
 
 #: src/qml/Settings/MouseSettings.qml:136
 msgctxt "@title"
 msgid "Double click to set action"
-msgstr "Aseta toiminto kaksoisnapsauttamalla"
+msgstr "क्रियां सेट् कर्तुं द्विवारं क्लिक् कुर्वन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:26
 msgctxt "@label:spinbox"
 msgid "Seek small step"
-msgstr "Pieni kelausaskel"
+msgstr "लघु पदं अन्वेष्टुम्"
 
 #: src/qml/Settings/PlaybackSettings.qml:46
 msgctxt "@info:tooltip seek small step setting"
@@ -1550,14 +1541,13 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
-"Siirtymän suuruus kelaustoimintoa käytettäessä. Kelaustila on <a "
-"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
-"[<flags>]'>exact</a>"
+"तत्सम्बद्धं कार्यं प्रेरयन् कियत् अन्वेष्टव्यम्। Seek मोड् <a href='https://mpv.io/manual/"
+"stable/#command-interface-seek-<target>-[<flags>]'>सटीकः</a> अस्ति"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
-msgstr "Keskikokoinen kelausaskel"
+msgstr "मध्यमपदं अन्वेष्यताम्"
 
 #: src/qml/Settings/PlaybackSettings.qml:73
 msgctxt "@info:tooltip seek medium step setting"
@@ -1567,15 +1557,14 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
-"Siirtymän suuruus kelaustoimintoa käytettäessä. Kelaustila on <a "
-"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
-"[<flags>]'>exact</a>.<br>Tätä käytetään myös hiiren rullalla kelaamiseen "
-"hiiren ollessa etenemispalkin yllä."
+"तत्सम्बद्धं कार्यं प्रेरयन् कियत् अन्वेष्टव्यम्। Seek मोड् <a href='https://mpv.io/manual/"
+"stable/#command-interface-seek-<target>-[<flags>]'>सटीकः</a> अस्ति .<br> एतत् "
+"मूषकचक्रार्थाय अपि उपयुज्यते, यदा मूषकः प्रगतिपट्टिकायाः उपरि भवति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
 msgid "Seek big step"
-msgstr "Suuri kelausaskel"
+msgstr "महत् पदं अन्वेष्टुम्"
 
 #: src/qml/Settings/PlaybackSettings.qml:100
 msgctxt "@info:tooltip seek big step setting"
@@ -1584,81 +1573,78 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
-"Siirtymän suuruus kelaustoimintoa käytettäessä. Kelaustila on <a "
-"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
-"[<flags>]'>exact</a>"
+"तत्सम्बद्धं कार्यं प्रेरयन् कियत् अन्वेष्टव्यम्। Seek मोड् <a href='https://mpv.io/manual/"
+"stable/#command-interface-seek-<target>-[<flags>]'>सटीकः</a> अस्ति"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
 msgid "Pause on minimize"
-msgstr "Keskeytä pienennettäessä"
+msgstr "न्यूनतमं कर्तुं विरामं कुर्वन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
-msgstr ""
-"Keskeyttää toiston, kun ikkuna pienennetään; toisto jatkuu palautettaessa."
+msgstr "विण्डो न्यूनीकृत्य खिलाडिनं विरामयति, पुनर्स्थापिते सति प्लेबैक् पुनः आरभ्यते ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:124
 msgctxt "@label:spinbox"
 msgid "Resume playback"
-msgstr "Jatka toistoa"
+msgstr "पुनः प्लेबैकं आरभत"
 
 #: src/qml/Settings/PlaybackSettings.qml:131
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Avaa käynnistettäessä viimeksi toistettu tiedosto"
+msgstr "स्टार्टअप-समये अन्तिम-वादिता-सञ्चिकां उद्घाटयन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:140
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
-"Käynnistettäessä avataan viimeksi sovellusta suljettaessa toistettu tiedosto."
+msgstr "प्रारम्भे एतत् सञ्चिकां उद्घाटयति यत् अनुप्रयोगस्य निमीलनस्य समये क्रीडति स्म ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
 msgid "Seek to last playback position"
-msgstr "Hyppää viimeisimpään toistokohtaan"
+msgstr "अन्तिमप्लेबैकस्थानं अन्वेष्टुम्"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
-msgstr "Aiemmin toistettua tiedostoa avattaessa siirry kohtaan, johon jäätiin."
+msgstr "पूर्वं वादितां सञ्चिकां उद्घाटयन्ते सति गतवारं यत् स्थानं आसीत् तत् स्थानं अन्वेष्टुम् ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
 msgid "Start playing"
-msgstr "Käynnistä toisto"
+msgstr "क्रीडितुं आरभत"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "Aiemmin toistettua tiedostoa avattaessa aloita toisto automaattisesti."
+msgstr "पुनः प्लेबैक् आरभ्य अन्तिमप्लेबैकस्थानं इच्छन् स्वयमेव वादयितुं आरभत ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
 msgid "Hardware decoding"
-msgstr "Laitteistopurku"
+msgstr "हार्डवेयर डिकोडिंग्"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
 #: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr "Käytössä"
+msgstr "सक्षमम्"
 
 #: src/qml/Settings/PlaybackSettings.qml:188
 #: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr "Ei käytössä"
+msgstr "अक्षमित"
 
 #: src/qml/Settings/PlaybackSettings.qml:235
 msgctxt "@info:tooltip hardware decoding setting"
@@ -1680,87 +1666,85 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
-"Aseta käytettävä laitteistovideopurun API,  jos mahdollista. "
-"Videokoodekistariippuu, tehdäänkö laitteistopurkua oikeasti. Ellei se ole "
-"mahdollista, mpvpalaa ohjelmapohjaiseen purkuun."
-"<br><br><ul><li><strong>auto</strong> yrittää ottaa käyttöön ensimmäisen "
-"käytettävissäolevan menetelmän laitteistopurun.</li><li><strong>auto-safe</"
-"strong> on kuten ”auto” mutta sallii vain turvallisiksi\n"
-"(”safe”) merkityt menetelmät.</li><li><strong>vaapi</strong> toimii vain "
-"Intelin ja AMD:n näytönohjaimilla javaatii OpenGL:n EGL-taustajärjestelmän.</"
-"li><li><strong>nvdec</strong> on uusin ja suositeltavin menetelmä "
-"Nvidiannäytönohjaimien laitteistopurkuun.</li><li><strong>cuda</strong> on "
-"vanhempi Nvidian näytönohjaimin laitteistopuruntoteutus.</"
-"li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></li></"
-"ul><br><br>Lisätietoa laitteistopurusta löytyy osoitteesta: <a href='https://"
-"mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/stable/#options-"
-"hwdec</a><br><br>Toisen laitteistopurun voi asettaa luomalla mukautetun "
-"käynnistyskomennon:<strong>set hwdec <i>purkajan_nimi</i></strong>."
+"यदि सम्भवं तर्हि तस्य उपयोगः करणीयः इति हार्डवेयर-वीडियो-विकोडिंग् एपिआइ निर्दिशन्तु । "
+"हार्डवेयर डिकोडिंग् वस्तुतः क्रियते वा इति विडियो कोडेक् इत्यस्य उपरि निर्भरं भवति । यदि "
+"हार्डवेयर डिकोडिंग् सम्भवं नास्ति तर्हि mpv सॉफ्टवेयर डिकोडिंग् इत्यत्र पुनः पतति ।"
+"<br><br><ul><li> <strong>auto</strong> प्रथमं उपलब्धं पद्धतिं उपयुज्य स्वयमेव हार्डवेयर "
+"डिकोडिंग् सक्षमं कर्तुं प्रयतते ।</li><li> <strong>auto-safe</strong> auto इत्यस्य सदृशं, "
+"परन्तु केवलं श्वेतसूचीकृतानां पद्धतीनां अनुमतिं ददाति ये &quot;सुरक्षिताः&quot; इति मन्यन्ते ।</"
+"li><li> <strong>vaapi</strong> केवलं Intel तथा AMD GPU इत्यनेन सह कार्यं करोति । "
+"अस्य opengl EGL बैकएण्ड् अपि आवश्यकम् अस्ति ।</li><li> <strong>nvdec</strong> "
+"नवीनतमः, तथा च Nvidia GPUs इत्यत्र हार्डवेयर डिकोडिंग् कर्तुं अनुशंसितः विधिः ।</"
+"li><li> <strong>cuda</strong> Nvidia GPUs इत्यत्र हार्डवेयर डिकोडिंग् इत्यस्य पुरातनं "
+"कार्यान्वयनम् ।</li><li> <strong>videotoolbox इति</strong></li><li> "
+"<strong>घ३द११वा</strong></li></ul><br><br> हार्डवेयर डिकोडिंग् विषये अधिकं पठितुं "
+"शक्नुवन्ति अत्र: <a href='https://mpv.io/manual/stable/#options-hwdec'>https://"
+"mpv.io/manual/stable/#options-hwdec</a><br><br> <strong>set hwdec "
+"<i>decoder_name इति</i></strong> startup custom आदेशं निर्माय अन्यं हार्डवेयर "
+"डिकोडरं सेट् कर्तुं शक्नुवन्ति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:255
 msgctxt "@label:spinbox"
 msgid "Save playback position"
-msgstr "Hyppää viimeisimpään toistokohtaan"
+msgstr "प्लेबैकस्थानं रक्षतु"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
 msgid "Disabled"
-msgstr "Ei käytössä"
+msgstr "अक्षमित"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info"
 msgid "For all files"
-msgstr "Kaikille tiedostoille"
+msgstr "सर्वेषां सञ्चिकानां कृते"
 
 #: src/qml/Settings/PlaybackSettings.qml:280
 msgctxt "@info"
 msgid "For files longer than %1 minute"
 msgid_plural "For files longer than %1 minutes"
-msgstr[0] "Yli %1 minuutin tiedostoille"
-msgstr[1] "Yli %1 minuutin tiedostoille"
+msgstr[0] "%1 निमेषात् अधिकदीर्घसञ्चिकानां कृते"
+msgstr[1] "%1 निमेषाभ्यधिकं सञ्चिकानां कृते"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
 msgctxt "@info"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] "Tallenna sijainti %1 s välein"
-msgstr[1] "Tallenna sijainti %1 s välein"
+msgstr[0] "प्रत्येकं %1 सेकण्ड् स्थानं रक्षन्तु"
+msgstr[1] "प्रत्येकं %1 सेकेण्ड् मध्ये स्थानं रक्षन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@label"
 msgid "Skip chapters"
-msgstr "Ohita luvut"
+msgstr "अध्यायान् लङ्घयन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr "Ohita automaattisesti tiettyjä sanoja tai merkkejä sisältävät luvut."
+msgstr "यदा सक्षमं भवति तदा स्वयमेव कतिपयशब्दान्/वर्णान् युक्तान् अध्यायान् लङ्घयति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@option:check"
 msgid "Show osd message on skip"
-msgstr "Näytä ohitettaessa ruutuviesti"
+msgstr "skip इत्यत्र od सन्देशं दर्शयतु"
 
 #: src/qml/Settings/PlaybackSettings.qml:348
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr "Näytä lukuja sivuutettaessa ruutuviestissä sivuutetun luvun otsikko."
+msgstr "अध्यायान् त्यक्त्वा osd सन्देशः त्यक्तस्य अध्यायस्य शीर्षकं दर्शयिष्यति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@label:textbox"
 msgid "Skip words"
-msgstr "Ohita sanat"
+msgstr "शब्दान् लङ्घयन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:363
-#, fuzzy
-#| msgid "Skipped chapter: %1"
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
-msgstr "Ohitettiin luku: %1"
+msgstr "op, ed, अध्याय 1"
 
 #: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "@info:tooltip skip words setting"
@@ -1769,9 +1753,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
-"Sivuuta näitä sanoja sisältävät luvut. Erota pilkuin. Osuma ei ole tarkka;"
-"esim. <strong>op</strong> täsmää myös sen sisältäviin sanoihin "
-"kuten<strong><u>op</u>ening</strong>."
+"एते शब्दाः समाविष्टाः अध्यायाः त्यजन्तु। अल्पविरामेन पृथक्कृता सूची। मेलनं सटीकं नास्ति, "
+"अर्थात् <strong>op</strong> <strong><u>op</u> ening</strong> इत्यादीनां तत्युक्तानां "
+"शब्दानां मेलनं करिष्यति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@title"
@@ -1780,32 +1764,32 @@ msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:399
 msgid "Format selection"
-msgstr "Tiedostomuodon valinta"
+msgstr "प्रारूपचयनम्"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "Valitse lähimmäs valittua muotoa tulevan videolähteen."
+msgstr "चयनितस्वरूपस्य समीपस्थं विडियो स्रोतः चिनोति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:468
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
-msgstr "parasvideo+parasääni/paras"
+msgstr "bestvideo+bestaudio/सर्वश्रेष्ठम्"
 
 #: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
 msgid "Position"
-msgstr "Sijainti"
+msgstr "स्थितिः"
 
 #: src/qml/Settings/PlaylistSettings.qml:49
 msgctxt "@label:listbox"
 msgid "Playlist style"
-msgstr "Toistolistan tyyli"
+msgstr "प्लेलिस्ट शैली"
 
 #: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr "Videon yllä"
+msgstr "ओवरले विडियो"
 
 #: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@info:tooltip"
@@ -1813,132 +1797,126 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
-"Jos on valittu, toistolista näkyy videon yllä,\n"
-"muuten videon kokoa muutetaan"
+"यदा परीक्षितं भवति तदा प्लेलिस्ट् विडियो उपरि गच्छति\n"
+"यदा अनचेक् भवति तदा विडियो आकारः परिवर्तितः भवति"
 
 #: src/qml/Settings/PlaylistSettings.qml:101
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
-msgstr "Näytä tiedostonimen sijaan tietovälineen otsikko"
+msgstr "सञ्चिकानामस्य स्थाने मीडिया शीर्षकं दर्शयतु"
 
 #: src/qml/Settings/PlaylistSettings.qml:111
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
-msgstr "Lataa saman kansion videot automaattisesti"
+msgstr "एकस्मिन् एव फोल्डर् तः विडियो स्वतः लोड् कुर्वन्तु"
 
-# *** TARKISTA: Sekä play että repeat = toista, aiheuttaako ongelmia?
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Repeat"
-msgstr "Toista"
+msgstr "परिहरन"
 
 #: src/qml/Settings/PlaylistSettings.qml:131
 msgctxt "@option:check"
 msgid "Show row number"
-msgstr "Näytä rivinumero"
+msgstr "पङ्क्तिसङ्ख्यां दर्शयतु"
 
 #: src/qml/Settings/PlaylistSettings.qml:141
 msgctxt "@option:check"
 msgid "Toggle with mouse"
-msgstr "Vaihda hiirellä"
+msgstr "मूषकेन सह टॉगलं कुर्वन्तु"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
-msgstr "Kasvata koko näytöllä fonttikokoa"
+msgstr "पूर्णपर्दे फ़ॉन्ट आकारं वर्धयन्तु"
 
 #: src/qml/Settings/PlaylistSettings.qml:163
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr "Muista viimeisin soittolistan tila"
+msgstr "अन्तिम प्लेलिस्ट् अवस्थां स्मर्यताम्"
 
 #: src/qml/Settings/PlaylistSettings.qml:170
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
-msgstr ""
-"Jos valittu, soittolistan tila (näkyvillä/piilossa) muistetaan "
-"käynnistyskertojen välillä"
+msgstr "यदा परीक्षितं भवति तदा प्लेलिस्ट् स्थितिः (दृश्यमानः/गुप्तः) प्रक्षेपणेषु स्मर्यते"
 
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr "Avaa kohteet yksittäisnapsautuksella"
+msgstr "एकेन क्लिक् कृत्वा वस्तूनि उद्घाटयन्तु"
 
 #: src/qml/Settings/SettingsWindow.qml:41
 msgctxt "@title:window"
 msgid "Settings"
-msgstr "Asetukset"
+msgstr "सेटिंग्स्"
 
 #: src/qml/Settings/SettingsWindow.qml:61
 msgctxt "@action"
 msgid "General"
-msgstr "Perusasetukset"
+msgstr "सामान्य"
 
 #: src/qml/Settings/SettingsWindow.qml:69
 msgctxt "@action"
 msgid "Playback"
-msgstr "Toisto"
+msgstr "प्लेबैक"
 
 #: src/qml/Settings/SettingsWindow.qml:77
 msgctxt "@action"
 msgid "Video"
-msgstr "Video"
+msgstr "विडिओ"
 
 #: src/qml/Settings/SettingsWindow.qml:86
 msgctxt "@action"
 msgid "Audio"
-msgstr "Ääni"
+msgstr "श्रव्यः"
 
 #: src/qml/Settings/SettingsWindow.qml:94
 msgctxt "@action"
 msgid "Subtitles"
-msgstr "Tekstitykset"
+msgstr "उपशीर्षक"
 
 #: src/qml/Settings/SettingsWindow.qml:110
 msgctxt "@action"
 msgid "Mouse"
-msgstr "Hiiri"
+msgstr "मूषकः"
 
 #: src/qml/Settings/SettingsWindow.qml:118
 msgctxt "@action"
 msgid "Shortcuts"
-msgstr "Pikanäppäimet"
+msgstr "शॉर्टकट"
 
 #: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Custom commands"
-msgstr "Mukautetut komennot"
+msgstr "कस्टम् आदेशाः"
 
 #: src/qml/Settings/SettingsWindow.qml:136
 msgctxt "@action"
 msgid "Debug"
-msgstr "Virheenpaikannus"
+msgstr "त्रुटिनिवारणम्"
 
 #: src/qml/Settings/SettingsWindow.qml:145
 msgctxt "@action"
 msgid "About"
-msgstr "Tietoa"
+msgstr "विषये"
 
 #: src/qml/Settings/SubtitlesSettings.qml:32
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label:spinbox"
 msgid "Autoload subtitles"
-msgstr "Lataa tekstitykset tiedostosta"
+msgstr "उपशीर्षक स्वतः लोड करें"
 
 #: src/qml/Settings/SubtitlesSettings.qml:48
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "यदा परीक्षितं भवति तदा उपशीर्षकपट्टिका स्वयमेव चयनं कृत्वा प्रदर्शितं भविष्यति"
 
 #: src/qml/Settings/SubtitlesSettings.qml:105
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr "Salli tekstitys mustiin reunoihin"
+msgstr "कृष्णसीमासु उपशीर्षकाणां अनुमतिं ददातु"
 
 #: src/qml/Settings/SubtitlesSettings.qml:114
 msgctxt "@info:tooltip"
@@ -1946,86 +1924,86 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
-"Jos valittu, tekstitys hahmonnetaan videon ulkopuolelle, mustiin reunoihin. "
-"Ei ehkä toimi kaikilla .ass-tekstityksillä."
+"यदा परीक्षितं भवति तदा उपशीर्षकाणि विडियोतः बहिः, कृष्णसीमासु प्रतिपादयितुं शक्यन्ते । "
+"सर्वेषां .ass उपशीर्षकाणां कृते कार्यं न कर्तुं शक्नोति।"
 
 #: src/qml/Settings/SubtitlesSettings.qml:119
 msgctxt "@title"
 msgid "Styling"
-msgstr "Tyyli"
+msgstr "स्टाइलिंग"
 
 #: src/qml/Settings/SubtitlesSettings.qml:125
 msgctxt "@label:listbox"
 msgid "Font family"
-msgstr "Fonttiperhe"
+msgstr "फॉन्ट परिवार"
 
 #: src/qml/Settings/SubtitlesSettings.qml:157
 msgctxt "@label:spinbox"
 msgid "Font size"
-msgstr "Fonttikoko"
+msgstr "फन्ट् आकारः"
 
 #: src/qml/Settings/SubtitlesSettings.qml:173
 msgctxt "@label"
 msgid "Font style"
-msgstr "Fonttityyli"
+msgstr "फॉन्टशैली"
 
 #: src/qml/Settings/SubtitlesSettings.qml:178
 msgctxt "@option:check"
 msgid "Bold"
-msgstr "Lihavointi"
+msgstr "विक्रान्तः"
 
 #: src/qml/Settings/SubtitlesSettings.qml:190
 msgctxt "@option:check"
 msgid "Italic"
-msgstr "Kursiivi"
+msgstr "इटालिक"
 
 #: src/qml/Settings/SubtitlesSettings.qml:200
 msgctxt "@label:textbox"
 msgid "Font color"
-msgstr "Fonttiväri"
+msgstr "फॉन्ट् रङ्गः"
 
 #: src/qml/Settings/SubtitlesSettings.qml:251
 #: src/qml/Settings/SubtitlesSettings.qml:307
 #: src/qml/Settings/SubtitlesSettings.qml:384
 msgctxt "@info:tooltip"
 msgid "Set default value"
-msgstr "Aseta oletusarvo"
+msgstr "पूर्वनिर्धारितं मूल्यं सेट् कुर्वन्तु"
 
 #: src/qml/Settings/SubtitlesSettings.qml:257
 msgctxt "@label:textbox"
 msgid "Shadow color"
-msgstr "Varjoväri"
+msgstr "छायावर्णः"
 
 #: src/qml/Settings/SubtitlesSettings.qml:313
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
-msgstr "Varjon siirtymä"
+msgstr "छाया ऑफसेट"
 
 #: src/qml/Settings/SubtitlesSettings.qml:329
 #: src/qml/Settings/SubtitlesSettings.qml:406
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
-msgstr "Poista käytöstä arvolla 0."
+msgstr "अक्षमीकरणाय 0 (शून्यम्) इति सेट् कुर्वन्तु ।"
 
 #: src/qml/Settings/SubtitlesSettings.qml:334
 msgctxt "@label:textbox"
 msgid "Border color"
-msgstr "Reunaväri"
+msgstr "सीमावर्णः"
 
 #: src/qml/Settings/SubtitlesSettings.qml:390
 msgctxt "@label:spinbox"
 msgid "Border width"
-msgstr "Reunan paksuus"
+msgstr "सीमाविस्तारः"
 
 #: src/qml/Settings/VideoSettings.qml:29
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr "Oletuskansi"
+msgstr "पूर्वनिर्धारित आवरण"
 
 #: src/qml/Settings/VideoSettings.qml:38
 msgctxt "placeholder text"
 msgid "path to image"
-msgstr "kuvan sijainti"
+msgstr "प्रतिबिम्बं प्रति मार्गः"
 
 #: src/qml/Settings/VideoSettings.qml:50
 msgctxt "@info:tooltip"
@@ -2033,23 +2011,23 @@ msgid ""
 "Used for music files that don't have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
-"Käytetään videoraidattomiin musiikkitiedostoihin: upotettu kuva tai "
-"kansikuva samassa kansiossa kuin toistettu tiedosto."
+"सङ्गीतसञ्चिकानां कृते उपयुज्यते येषु वाद्यसञ्चिकायाः समानपुटे विडियो ट्रैक, एम्बेडेड् कवर इमेज "
+"अथवा कवर/फोल्डर् इमेज नास्ति ।"
 
 #: src/qml/Settings/VideoSettings.qml:81
 msgctxt "@title"
 msgid "Screenshots"
-msgstr "Ruutukaappaukset"
+msgstr "स्क्रीनशॉट्"
 
 #: src/qml/Settings/VideoSettings.qml:91
 msgctxt "@label:listbox"
 msgid "Format"
-msgstr "Muoto"
+msgstr "प्रारूप"
 
 #: src/qml/Settings/VideoSettings.qml:131
 msgctxt "@label:textbox"
 msgid "Template"
-msgstr "Mallipohja"
+msgstr "टेम्पलेट"
 
 #: src/qml/Settings/VideoSettings.qml:161
 msgctxt "@info:tooltip"
@@ -2085,262 +2063,62 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
-"Määrittää ruutukaappausten tiedostonimimallin. Malli asettaa "
-"tiedostonimenpäätteettä ja voi sisältää muuttujia, joiden arvo korvataan "
-"ruutukaappaustaotettaessa. Oletusmalli on ”%F-%n”.<br>Malli voi alkaa "
-"suhteellisella tai absoluuttisella sijainnilla, millä voimäärittää "
-"ruutukaappausten tallennuspaikan.<br>Jos lopullinen tiedostonimi osoittaa jo "
-"olemassa olevaan tiedostoon,tiedostoa ei korvata vaan ruutukaappausta joko "
-"ei tallenneta lainkaan tai– jos mallissa on ”%n” – käytetään vasta luotua "
-"uutta tiedostonimeä.<br>Täydellinen kuvaus löytyy osoitteesta:<a "
-"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
-"io/manual/stable/#options-screenshot-template</"
-"a><br><br><strong>Käytettävissä olevat muuttujat:</"
-"strong><br><ul><li><strong>%[#][0X]n</strong> Juokseva numero; täytetään "
-"nollin X:lläosoitettuun pituuteen asti.<br><li><strong>%f</strong> "
-"Toistettavan videon tiedostonimi.<br><li><strong>%F</strong> Kuten %f mutta "
-"tiedostonimen päätteettä.<br><li><strong>%x</strong> Toistettavan videon "
-"sijainti. Jos sijainti ei ole tiedostojärjestelmässä (http://-osoite), "
-"laventuu tyhjäksimerkkijonoksi.<br><li><strong>%X{varateksti}</strong> Kuten "
-"%x, mutta jos videotiedosto eiole tiedostojärjestelmässä käyttää sen sijaan "
-"{…}-merkeissä olevaa varatekstiä.<br><li><strong>%p</strong> Toistokohta. "
-"Tulosmerkkijono on muotoa”TT:MM:SS”.<br><li><strong>%P</strong> Kuten %p "
-"mutta lisää millisekunnit:”TT:MM:SS.mmm”.<br><li><strong>%wX</strong> "
-"Muotoilee toistokohtatiedon jonon X mukaan.<br>Käytettävät muotoilukomennot:"
-"<br><ul><li><strong>%wH</strong> tunnit (täytetään nollin "
-"kaksinumeroiseksi)</li><li><strong>%wh</strong> tunnit (ei täytetä)</"
-"li><li><strong>%wM</strong> minuutit (00–59)</li><li><strong>%wm</strong> "
-"minuutit yhteensä (sisältää tunnit toisin kuin %wM)</li><li><strong>%wS</"
-"strong> sekunnit (00–59)</li><li><strong>%ws</strong> sekunnit yhteensä "
-"(sisältää tunnit ja minuutit)</li><li><strong>%wf</strong> kuten %ws mutta "
-"liukulukuna</li><li><strong>%wT</strong> millisekunnit (000–999)</"
-"li><li><strong>%%</strong> korvataan %-merkillä.</li></ul><br>"
+"स्क्रीनशॉट् रक्षितुं प्रयुक्तं सञ्चिकानाम टेम्पलेट् निर्दिशन्तु । टेम्पलेट् सञ्चिकाविस्तारं विना "
+"सञ्चिकानाम निर्दिशति, तथा च प्रारूपनिर्देशकाः समाविष्टुं शक्नुवन्ति, ये स्क्रीनशॉट् गृह्णन्ते "
+"सति प्रतिस्थापिताः भविष्यन्ति । पूर्वनिर्धारितरूपेण, साचा &quot;%F-%n&quot; अस्ति ।"
+"<br> टेम्पलेट् सापेक्षिकेन अथवा निरपेक्षमार्गेण आरभुं शक्नोति, यत् निर्देशिकास्थानं निर्दिष्टुं "
+"शक्यते यत्र स्क्रीनशॉट् रक्षितव्याः ।<br> यदि अन्तिमः स्क्रीनशॉट् सञ्चिकानाम पूर्वमेव "
+"विद्यमानं सञ्चिकां दर्शयति तर्हि सञ्चिका अधिलिखिता न भविष्यति । स्क्रीनशॉट् वा न रक्षितः "
+"भविष्यति, अथवा यदि टेम्पलेट् मध्ये %n अस्ति तर्हि भिन्नं, नवजनितं सञ्चिकानाम उपयुज्य रक्षितम् "
+"।<br> पूर्णसूचनार्थं <a href='https://mpv.io/manual/stable/#options-screenshot-"
+"template'>https://mpv.io/manual/stable/#options-screenshot-template इति</a> "
+"चेकआउट् कुर्वन्तु<br><br> <strong>अनुमताः प्रारूपनिर्देशकाः : १.</strong><br><ul><li> "
+"<strong>%[#][0X]n</strong> एकः क्रमसङ्ख्या, X दीर्घतां यावत् शून्यैः गद्दीकृतः ।"
+"<br><li> <strong>%f</strong> वर्तमानकाले वादितस्य विडियोस्य सञ्चिकानाम ।<br><li> "
+"<strong>%F</strong> %f इत्यस्य समानं, परन्तु सञ्चिकाविस्तारं विना ।<br><li> <strong>"
+"%x</strong> वर्तमानकाले वादितस्य विडियोस्य निर्देशिकामार्गः । यदि विडियो सञ्चिकातन्त्रे "
+"(http:// urls) नास्ति तर्हि एतत् रिक्तं तारं यावत् विस्तारं प्राप्नोति ।<br><li> "
+"<strong>%X{fallback}</strong> %x इत्यस्य समानं, परन्तु यदि विडियो सञ्चिका "
+"सञ्चिकातन्त्रे नास्ति तर्हि {...} इत्यस्य अन्तः fallback स्ट्रिंग् प्रत्यागच्छतु ।<br><li> "
+"<strong>%p</strong> वर्तमानप्लेबैकसमयः । परिणामः &quot;HH:MM:SS&quot; इति रूपस्य "
+"एकः स्ट्रिंग् अस्ति ।<br><li> <strong>%P</strong> %p इत्यस्य सदृशं, परन्तु प्लेबैकसमयेन सह "
+"मिलीसेकेण्ड् &quot;HH:MM:SS.mmm&quot; इति विस्तारितम् ।<br><li> <strong>%wX</"
+"strong> प्रारूपतारं X उपयुज्य वर्तमानप्लेबैकसमयं निर्दिशन्तु ।<br> वैध प्रारूपनिर्देशकाः : १."
+"<br><ul><li> <strong>%wH</strong> घण्टा (0 तः द्वयोः अङ्कयोः गद्दीकृतम्)</li><li> "
+"<strong>%wh</strong> घण्टा (गद्दीकृता नास्ति) २.</li><li> <strong>%wM</strong> "
+"मिनिट् (००-५९) २.</li><li> <strong>%wm</strong> कुलनिमेषाः (%wM इत्यस्य विपरीतम्, "
+"घण्टाः समाविष्टाः)</li><li> <strong>%wS</strong> सेकण्ड् (००-५९) २.</li><li> "
+"<strong>%ws</strong> कुलसेकेण्ड् (घण्टाः निमेषाः च समाविष्टाः)</li><li> <strong>%wf</"
+"strong> %ws इव, परन्तु float इव</li><li> <strong>%wT</strong> मिलीसेकेण्ड् "
+"(०००-९९९) २.</li><li> <strong>%%</strong> % वर्णेन एव प्रतिस्थापितम् ।</li></"
+"ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:196
 msgctxt "@title"
 msgid "Image adjustments"
-msgstr "Kuvasäädöt"
+msgstr "चित्रसमायोजनम्"
 
 #: src/qml/Settings/VideoSettings.qml:206
 msgctxt "@label:slider"
 msgid "Contrast"
-msgstr "Kontrasti"
+msgstr "विप्रकर्ष"
 
 #: src/qml/Settings/VideoSettings.qml:225
 msgctxt "@label:slider"
 msgid "Brightness"
-msgstr "Kirkkaus"
+msgstr "कान्तिः"
 
 #: src/qml/Settings/VideoSettings.qml:244
 msgctxt "@label:slider"
 msgid "Gamma"
-msgstr "Gamma"
+msgstr "गाम्मा"
 
 #: src/qml/Settings/VideoSettings.qml:263
 msgctxt "@label:slider"
 msgid "Saturation"
-msgstr "Värikylläisyys"
+msgstr "संतृप्ति"
 
 #: src/qml/Settings/VideoSettings.qml:279
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
-msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
-
-#~ msgctxt "@action"
-#~ msgid "Configure"
-#~ msgstr "Asetukset"
-
-# *** TARKISTA: Miten tämän on tarkoitus jatkua (ikkunassa)?
-#~ msgctxt "@info:tooltip"
-#~ msgid "Subtitles function on"
-#~ msgstr "Tekstitys toimii"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "Help"
-#~ msgstr "Ohje"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna help window (english only)"
-#~ msgstr "Harunan ohjeikkuna (vain englanniksi)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna handbook"
-#~ msgstr "Harunan käsikirja"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Don't set on next startup"
-#~ msgstr "Älä aseta seuraavassa käynnistyksessä"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "This is also used for mouse wheel seeking, when mouse is over the "
-#~ "progress bar"
-#~ msgstr ""
-#~ "Tätä käytetään myös hiiren rullalla kelaamiseen osoittimen ollessa "
-#~ "etenemispalkin yllä"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Remember time position"
-#~ msgstr "Muista aikasijainti"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Skip chapters containing these words. Comma separated list."
-#~ msgstr "Ohita seuraavia sanoja sisältävät luvut. Pilkuin eroteltu luettelo."
-
-#~ msgctxt "@title:window"
-#~ msgid "Help"
-#~ msgstr "Ohje"
-
-#~ msgctxt "@title"
-#~ msgid "A configurable media player."
-#~ msgstr "Mukautettava videosoitin."
-
-#~ msgctxt "@title:menu"
-#~ msgid "&Primary Track"
-#~ msgstr "Ensisijainen &raita"
-
-#~ msgctxt "@info"
-#~ msgid "Playlist is empty"
-#~ msgstr "Toistolista on tyhjä"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Do not use spaces."
-#~ msgstr "Älä käytä välilyöntejä."
-
-#~ msgctxt "@action"
-#~ msgid "Video pan y up"
-#~ msgstr "Panoroi videota ylemmäs"
-
-#~ msgctxt "@action"
-#~ msgid "Video pan y down"
-#~ msgstr "Panoroi videota alemmas"
-
-#, fuzzy
-#~| msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-#~ msgctxt "@info"
-#~ msgid "<a href=\"https://youtube-dl.org\">Youtube-dl</a> was not found."
-#~ msgstr "<a href=\"https://youtube-dl.org\">Youtube-dl</a>:ää ei löytynyt."
-
-#, fuzzy
-#~| msgid "File"
-#~ msgctxt "@action:inmenu"
-#~ msgid "File"
-#~ msgstr "Tiedosto"
-
-#, fuzzy
-#~| msgid "Folder"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Folder"
-#~ msgstr "Kansio"
-
-#, fuzzy
-#~| msgid "Playing video."
-#~ msgctxt "@info reason for blocking sleep and screen slocking"
-#~ msgid "Playing video"
-#~ msgstr "Toistetaan videota."
-
-#, fuzzy
-#~| msgid "Add new folder"
-#~ msgctxt "@action:button"
-#~ msgid "Add file"
-#~ msgstr "Lisää uusi kansio"
-
-#, fuzzy
-#~| msgid "Row height"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "Rivin korkeus"
-
-#~ msgid "Toggle Playlist"
-#~ msgstr "Näytä tai piilota soittolista"
-
-#~ msgid "Leave empty for default value: <i>bestvideo+bestaudio/best</i>"
-#~ msgstr ""
-#~ "Käytä oletusarvoa jättämällä tyhjäksi: <i>parasvideo+parasääni/paras</i>"
-
-#~ msgid "Subtitle color"
-#~ msgstr "Tekstitysväri"
-
-#~ msgid "Configure shortcuts"
-#~ msgstr "Pikanäppäinasetukset"
-
-#~ msgid "Move one frame forward, then pause"
-#~ msgstr "Siirry kuvan verran eteenpäin ja tauota"
-
-#~ msgid "Move one frame backward, then pause"
-#~ msgstr "Siirry kuvan verran taaksepäin ja tauota"
-
-# *** TARKISTA: Täysi arvaus. ”Audio up/down” voi olla jotain muutakin.
-#~ msgid "Cycle Audio Up"
-#~ msgstr "Lisää äänenvoimakkuutta"
-
-#~ msgid "Cycle Subtitle Up"
-#~ msgstr "Nosta tekstitystä"
-
-#~ msgid "Cycle Subtitle Down"
-#~ msgstr "Laske tekstitystä"
-
-#~ msgid "Move Subtitle Up"
-#~ msgstr "Nosta tekstitystä ylemmäs"
-
-#~ msgid "Move Subtitle Down"
-#~ msgstr "Laske tekstitystä alemmas"
-
-#~ msgid "Unmute"
-#~ msgstr "Palauta äänet"
-
-#~ msgid "Video pan x: %1"
-#~ msgstr "Videon x-panorointi: %1"
-
-#~ msgid "Video pan y: %1"
-#~ msgstr "Videon y-panorointi: %1"
-
-#~ msgid "Type to filter..."
-#~ msgstr "Suodata kirjoittamalla…"
-
-#~ msgid "Startup"
-#~ msgstr "Käynnistys"
-
-#~ msgid "For files longer than %1 minutes"
-#~ msgstr "Yli %1 minuutin tiedostoille"
-
-#, fuzzy
-#~| msgid "Show Menubar"
-#~ msgid "Show header"
-#~ msgstr "Näytä valikkorivi"
-
-#, fuzzy
-#~| msgid "Volume Up"
-#~ msgid "Volume"
-#~ msgstr "Lisää äänenvoimakkuutta"
-
-#, fuzzy
-#~| msgid "File dialog location"
-#~ msgid "File default dialog location"
-#~ msgstr "Tiedostonvalintaikkunan sijainti"
-
-#, fuzzy
-#~| msgid "File dialog location"
-#~ msgid "File dialog last location"
-#~ msgstr "Tiedostonvalintaikkunan sijainti"
-
-#, fuzzy
-#~| msgid "Skip chapters"
-#~ msgid "Show osd on skip chapters"
-#~ msgstr "Ohita luvut"
-
-#, fuzzy
-#~| msgid "Format selection"
-#~ msgid "Ytdl format selection"
-#~ msgstr "Tiedostomuodon valinta"
-
-#, fuzzy
-#~| msgid "Screenshot"
-#~ msgid "Screenshot format"
-#~ msgstr "Ruutukaappaus"
-
-#~ msgid "Haruna Settings"
-#~ msgstr "Harunan asetukset"
-
-#~ msgid "Show Menu Bar"
-#~ msgstr "Näytä valikkorivi"
+msgstr "स्लाइडर् रीसेट् कर्तुं मध्यं क्लिक् कुर्वन्तु"
