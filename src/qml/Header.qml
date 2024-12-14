@@ -47,7 +47,7 @@ ToolBar {
             m_settingsLoader: settingsLoader
 
             position: HamburgerMenu.Position.Header
-            visible: root.m_menuBarLoader.state === "hidden"
+            visible: !root.m_menuBarLoader.visible || root.m_menuBarLoader.isShowAnimationRunning
         }
 
         ToolButton {

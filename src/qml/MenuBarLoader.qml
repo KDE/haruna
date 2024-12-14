@@ -20,10 +20,12 @@ Loader {
     required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
 
+    property bool isShowAnimationRunning: false
     property bool showGlobalMenu: app.platformName() !== "windows"
                                     && Kirigami.Settings.hasPlatformMenuBar
                                     && !Kirigami.Settings.isMobile
 
+    clip: true
     state: {
         const mainWindow = Window.window as Main
         if (!mainWindow.isFullScreen() && GeneralSettings.showMenuBar) {
@@ -93,7 +95,6 @@ Loader {
             name: "hidden"
             PropertyChanges {
                 root.height: 0
-                root.opacity: 0
                 root.visible: false
             }
         },
@@ -101,7 +102,6 @@ Loader {
             name : "visible"
             PropertyChanges {
                 root.height: root.implicitHeight
-                root.opacity: 1
                 root.visible: true
             }
         }
@@ -113,19 +113,11 @@ Loader {
             to: "hidden"
 
             SequentialAnimation {
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: root
-                        property: "opacity"
-                        duration: Kirigami.Units.veryShortDuration
-                        easing.type: Easing.Linear
-                    }
-                    NumberAnimation {
-                        target: root
-                        property: "height"
-                        duration: Kirigami.Units.veryShortDuration
-                        easing.type: Easing.Linear
-                    }
+                NumberAnimation {
+                    target: root
+                    property: "height"
+                    duration: Kirigami.Units.shortDuration
+                    easing.type: Easing.Linear
                 }
                 PropertyAction {
                     target: root
@@ -141,22 +133,24 @@ Loader {
             SequentialAnimation {
                 PropertyAction {
                     target: root
+                    property: "isShowAnimationRunning"
+                    value: true
+                }
+                PropertyAction {
+                    target: root
                     property: "visible"
                     value: true
                 }
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: root
-                        property: "height"
-                        duration: Kirigami.Units.veryShortDuration
-                        easing.type: Easing.Linear
-                    }
-                    NumberAnimation {
-                        target: root
-                        property: "opacity"
-                        duration: Kirigami.Units.veryShortDuration
-                        easing.type: Easing.Linear
-                    }
+                NumberAnimation {
+                    target: root
+                    property: "height"
+                    duration: Kirigami.Units.shortDuration
+                    easing.type: Easing.Linear
+                }
+                PropertyAction {
+                    target: root
+                    property: "isShowAnimationRunning"
+                    value: false
                 }
             }
         }
