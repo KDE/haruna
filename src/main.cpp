@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty(u"app"_s, Application::instance());
     engine.rootContext()->setContextProperty(u"appActions"_s, new QQmlPropertyMap);
     engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
-    engine.rootContext()->setContextProperty(u"harunaAboutData"_s, QVariant::fromValue(KAboutData::applicationData()));
     engine.loadFromModule("org.kde.haruna", "Main");
 
     application->setQmlEngine(&engine);

@@ -11,6 +11,7 @@ import QtQuick.Window
 import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
+import org.kde.coreaddons as KCoreAddons
 import org.kde.haruna
 
 Kirigami.ApplicationWindow {
@@ -172,7 +173,7 @@ Kirigami.ApplicationWindow {
             id: aboutPage
 
             Kirigami.AboutPage {
-                aboutData: harunaAboutData
+                aboutData: KCoreAddons.AboutData
             }
         }
     }
