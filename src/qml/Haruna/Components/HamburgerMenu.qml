@@ -100,7 +100,7 @@ ToolButton {
                 title: i18nc("@title:menu", "Audio Track")
                 model: mpv.audioTracksModel
                 enabled: mpv.audioTracksModel.rowCount > 0
-
+                loadItems: root.isOpen
             }
 
             MenuSeparator {}

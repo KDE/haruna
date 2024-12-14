@@ -94,6 +94,7 @@ ToolBar {
             opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
+                audioMenu.loadItems = true
                 audioMenu.visible = !audioMenu.visible
             }
 

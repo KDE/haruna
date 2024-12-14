@@ -16,12 +16,21 @@ Menu {
 
     required property MpvVideo m_mpv
 
+    property bool loadItems: false
     property TracksModel model: m_mpv.audioTracksModel
 
-    enabled: root.m_mpv.audioTracksModel.rowCount > 0
+    enabled: model.rowCount > 0
+
+    onLoadItemsChanged: {
+        if (loadItems) {
+            // break the binding so the model doesn't change
+            // causing the items to be loaded multiple times
+            loadItems = true
+        }
+    }
 
     Repeater {
-        model: root.model
+        model: root.loadItems ? root.model : 0
         delegate: MenuItem {
             id: delegate
 
