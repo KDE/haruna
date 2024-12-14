@@ -72,8 +72,13 @@ ToolBar {
             opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
-                subtitleMenu.loadItems = true
                 subtitleMenu.visible = !subtitleMenu.visible
+            }
+
+            onHoveredChanged: {
+                if (hovered) {
+                    subtitleMenu.loadItems = true
+                }
             }
 
             SubtitleTracksMenu {
@@ -94,8 +99,13 @@ ToolBar {
             opacity: enabled ? 1.0 : 0.6
 
             onReleased: {
-                audioMenu.loadItems = true
                 audioMenu.visible = !audioMenu.visible
+            }
+
+            onHoveredChanged: {
+                if (hovered) {
+                    audioMenu.loadItems = true
+                }
             }
 
             AudioTracksMenu {
