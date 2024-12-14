@@ -20,7 +20,15 @@ Menu {
     property bool loadItems: false
     property TracksModel model: m_mpv.subtitleTracksModel
 
-    enabled: m_mpv.subtitleTracksModel.rowCount > 1
+    enabled: model.rowCount > 1
+
+    onLoadItemsChanged: {
+        if (loadItems) {
+            // break the binding so the model doesn't change
+            // causing the items to be loaded multiple times
+            loadItems = true
+        }
+    }
 
     Repeater {
         model: root.loadItems ? root.model : 0
