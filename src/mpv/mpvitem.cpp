@@ -69,6 +69,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     Q_EMIT observeProperty(MpvProperties::self()->Chapter, MPV_FORMAT_INT64);
     Q_EMIT observeProperty(MpvProperties::self()->ChapterList, MPV_FORMAT_NODE);
     Q_EMIT observeProperty(MpvProperties::self()->TracksCount, MPV_FORMAT_NODE);
+    Q_EMIT observeProperty(MpvProperties::self()->SubtitleDelay, MPV_FORMAT_DOUBLE);
 
     setupConnections();
     initProperties();
@@ -383,6 +384,15 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->SecondarySubtitleId) {
         m_secondarySubtitleId = value.toInt();
         Q_EMIT secondarySubtitleIdChanged();
+
+    } else if (property == MpvProperties::self()->SubtitleDelay) {
+        auto delay = QString::number(value.toDouble(), 'f', 2).toDouble();
+        auto delayString = QLocale().toString(delay, 'f', 2);
+        if (delay > 0) {
+            Q_EMIT osdMessage(i18nc("@info:tooltip", "Subtitle timing: %1 seconds", delayString.prepend(u"+"_s)));
+        } else {
+            Q_EMIT osdMessage(i18nc("@info:tooltip", "Subtitle timing: %1 seconds", delayString));
+        }
 
     } else if (property == MpvProperties::self()->Width) {
         m_videoWidth = value.toInt();

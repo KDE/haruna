@@ -304,13 +304,11 @@ Item {
         function onSubtitleQuickenAction() {
             const delay = root.m_mpv.getProperty(MpvProperties.SubtitleDelay) - 0.1
             root.m_mpv.setProperty(MpvProperties.SubtitleDelay, delay)
-            root.m_osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         function onSubtitleDelayAction() {
             const delay = root.m_mpv.getProperty(MpvProperties.SubtitleDelay) + 0.1
             root.m_mpv.setProperty(MpvProperties.SubtitleDelay, delay)
-            root.m_osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         function onSubtitleToggleAction() {
