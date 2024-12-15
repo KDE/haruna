@@ -315,11 +315,10 @@ SettingsBasePage {
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
-                    readonly property string waylandMessage: HarunaApp.isPlatformWayland()
-                                                             ? i18nc("@info:tooltip", "<b>Not supported on Wayland.</b>")
-                                                             : ""
-                    text: i18nc("@info:tooltip", "%1 The window is resized according to the video resolution.\n" +
-                                "The maximum size is not constrained, this is left to the operating system.", waylandMessage)
+                    text: HarunaApp.isPlatformWayland()
+                          ? i18nc("@info:tooltip","Not supported on Wayland.")
+                          : i18nc("@info:tooltip", "The window is resized according to the video resolution.\n" +
+                                  "The maximum size is not constrained, this is left to the operating system.")
                     visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
@@ -331,12 +330,12 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1 }
         RowLayout {
             CheckBox {
-               text: i18nc("@option:check", "Start in fullscreen mode")
-               checked: GeneralSettings.fullscreenOnStartUp
-               onCheckedChanged: {
-                   GeneralSettings.fullscreenOnStartUp = checked
-                   GeneralSettings.save()
-               }
+                text: i18nc("@option:check", "Start in fullscreen mode")
+                checked: GeneralSettings.fullscreenOnStartUp
+                onCheckedChanged: {
+                    GeneralSettings.fullscreenOnStartUp = checked
+                    GeneralSettings.save()
+                }
             }
 
             ToolButton {
@@ -347,7 +346,7 @@ SettingsBasePage {
 
                 ToolTip {
                     text: i18nc("@info:tooltip", "Enter fullscreen mode when the application starts.\n" +
-                                 "This takes precedence over Resize to fit video, and Remember window size and position settings.")
+                                "This takes precedence over Resize to fit video, and Remember window size and position settings.")
                     visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
@@ -371,15 +370,20 @@ SettingsBasePage {
 
             ToolButton {
                 icon.name: "documentinfo"
+                icon.color: HarunaApp.isPlatformWayland() ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.textColor
                 checkable: true
                 checked: false
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "When window size and position are changed the new values " +
-                                "are saved and used to restore the application " +
-                                "to the same size and position when a new instance is opened.\n\n"+
-                                "The \"Resize to fit video\" setting takes precedence.\n")
+                    readonly property
+                    string waylandMessage: HarunaApp.isPlatformWayland()
+                                           ? i18nc("@info:tooltip extra wayland info for the \"Remember window size and position\" setting",
+                                                   "<b>Restoring position is not supported on Wayland.</b><br><br>")
+                                           : ""
+                    text: i18nc("@info:tooltip", "Changes to the window's size and position "
+                                +"are saved and used for newly opened windows.<br><br>"
+                                +"%1The \"Resize to fit video\" setting takes precedence.", waylandMessage)
                     visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1
