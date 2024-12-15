@@ -16,21 +16,19 @@ Menu {
 
     required property MpvVideo m_mpv
 
-    property bool loadItems: false
     property TracksModel model: m_mpv.audioTracksModel
 
     enabled: model.rowCount > 0
 
-    onLoadItemsChanged: {
-        if (loadItems) {
-            // break the binding so the model doesn't change
-            // causing the items to be loaded multiple times
-            loadItems = true
-        }
-    }
+    contentItem: ListView {
+        property bool hasCheckables: false
+        property bool hasIcons: false
 
-    Repeater {
-        model: root.loadItems ? root.model : 0
+        model: root.model
+        implicitWidth: contentItem.children.reduce((maxWidth, child) => Math.max(maxWidth, child.implicitWidth), 0)
+        implicitHeight: Math.max(1, contentItem.childrenRect.height)
+        spacing: 0
+        clip: true
         delegate: MenuItem {
             id: delegate
 

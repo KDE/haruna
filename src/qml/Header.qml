@@ -75,12 +75,6 @@ ToolBar {
                 subtitleMenu.visible = !subtitleMenu.visible
             }
 
-            onHoveredChanged: {
-                if (hovered) {
-                    subtitleMenu.loadItems = true
-                }
-            }
-
             SubtitleTracksMenu {
                 id: subtitleMenu
 
@@ -100,12 +94,6 @@ ToolBar {
 
             onReleased: {
                 audioMenu.visible = !audioMenu.visible
-            }
-
-            onHoveredChanged: {
-                if (hovered) {
-                    audioMenu.loadItems = true
-                }
             }
 
             AudioTracksMenu {

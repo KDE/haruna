@@ -24,7 +24,6 @@ Menu {
 
         y: parent.height
         title: i18nc("@title:menu", "&Track")
-        loadItems: root.visible
     }
 
     MenuSeparator {}
