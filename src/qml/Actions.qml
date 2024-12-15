@@ -175,18 +175,18 @@ Item {
         function onPlaybackSpeedIncreaseAction() {
             const speed = root.m_mpv.getProperty(MpvProperties.Speed) + 0.1
             root.m_mpv.setProperty(MpvProperties.Speed, speed)
-            root.m_root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
+            root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         function onPlaybackSpeedDecreaseAction() {
             const speed = root.m_mpv.getProperty(MpvProperties.Speed) - 0.1
             root.m_mpv.setProperty(MpvProperties.Speed, speed)
-            root.m_root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
+            root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         function onPlaybackSpeedResetAction() {
             root.m_mpv.setProperty(MpvProperties.Speed, 1.0)
-            root.m_root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", 1.0))
+            root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", 1.0))
         }
 
         function onPlayPauseAction() {
@@ -281,19 +281,19 @@ Item {
             if (!aIsSet && !bIsSet) {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, root.m_mpv.position)
                 footerLoader.item.progressBar.loopIndicator.startPosition = root.m_mpv.position
-                root.m_root.m_osd.message(i18nc("@info:tooltip", "Loop start: %1", app.formatTime(root.m_mpv.position)))
+                root.m_osd.message(i18nc("@info:tooltip", "Loop start: %1", app.formatTime(root.m_mpv.position)))
             } else if (aIsSet && !bIsSet) {
                 // set b position sligthly ahead to ensure the loop section is not skipped
                 const bPosition = root.m_mpv.position + 0.1
                 root.m_mpv.setPropertyBlocking(MpvProperties.ABLoopB, bPosition)
                 footerLoader.item.progressBar.loopIndicator.endPosition = bPosition
-                root.m_root.m_osd.message(i18nc("@info:tooltip", "Loop: %1 - %2", app.formatTime(a), app.formatTime(bPosition)))
+                root.m_osd.message(i18nc("@info:tooltip", "Loop: %1 - %2", app.formatTime(a), app.formatTime(bPosition)))
             } else {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, "no")
                 root.m_mpv.setProperty(MpvProperties.ABLoopB, "no")
                 footerLoader.item.progressBar.loopIndicator.startPosition = -1
                 footerLoader.item.progressBar.loopIndicator.endPosition = -1
-                root.m_root.m_osd.message(i18nc("@info:tooltip", "Loop cleared"))
+                root.m_osd.message(i18nc("@info:tooltip", "Loop cleared"))
             }
         }
 
@@ -304,20 +304,20 @@ Item {
         function onSubtitleQuickenAction() {
             const delay = root.m_mpv.getProperty(MpvProperties.SubtitleDelay) - 0.1
             root.m_mpv.setProperty(MpvProperties.SubtitleDelay, delay)
-            root.m_root.m_osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
+            root.m_osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         function onSubtitleDelayAction() {
             const delay = root.m_mpv.getProperty(MpvProperties.SubtitleDelay) + 0.1
             root.m_mpv.setProperty(MpvProperties.SubtitleDelay, delay)
-            root.m_root.m_osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
+            root.m_osd.message(i18nc("@info:tooltip", "Subtitle timing: %1", delay.toFixed(2)))
         }
 
         function onSubtitleToggleAction() {
             const visible = root.m_mpv.getProperty(MpvProperties.SubtitleVisibility)
             const message = visible ? i18nc("@info:tooltip", "Subtitles off") : i18nc("@info:tooltip", "Subtitles on")
             root.m_mpv.setProperty(MpvProperties.SubtitleVisibility, !visible)
-            root.m_root.m_osd.message(message)
+            root.m_osd.message(message)
         }
 
         function onSubtitleCycleUpAction() {
