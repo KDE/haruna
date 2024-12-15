@@ -52,10 +52,6 @@ Kirigami.ApplicationWindow {
             id: settingsPagesList
 
             currentIndex: root.currentPage
-            Component.onCompleted: {
-                pages[root.currentPage].trigger()
-                currentIndex = root.currentPage
-            }
 
             property list<Kirigami.Action> pages: [
                 Kirigami.Action {
