@@ -32,7 +32,7 @@ Kirigami.ApplicationWindow {
     minimumHeight: 200
     color: Kirigami.Theme.backgroundColor
 
-    onClosing: app.saveWindowGeometry(window)
+    onClosing: HarunaApp.saveWindowGeometry(window)
     onWidthChanged: saveWindowGeometryTimer.restart()
     onHeightChanged: saveWindowGeometryTimer.restart()
     onXChanged: saveWindowGeometryTimer.restart()
@@ -255,7 +255,7 @@ Kirigami.ApplicationWindow {
     }
 
     Connections {
-        target: app
+        target: HarunaApp
         function onQmlApplicationMouseLeave() {
             if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
                 playlist.state = "hidden"
@@ -282,8 +282,8 @@ Kirigami.ApplicationWindow {
         id: fileDialog
 
         property url location: GeneralSettings.fileDialogLocation
-                               ? app.pathToUrl(GeneralSettings.fileDialogLocation)
-                               : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
+                               ? HarunaApp.pathToUrl(GeneralSettings.fileDialogLocation)
+                               : HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
 
         title: i18nc("@title:window", "Select file")
         currentFolder: location
@@ -293,7 +293,7 @@ Kirigami.ApplicationWindow {
             openFile(fileDialog.selectedFile, true)
             mpv.focus = true
 
-            GeneralSettings.fileDialogLastLocation = app.parentUrl(fileDialog.selectedFile)
+            GeneralSettings.fileDialogLastLocation = HarunaApp.parentUrl(fileDialog.selectedFile)
             GeneralSettings.save()
         }
         onRejected: mpv.focus = true
@@ -304,11 +304,11 @@ Kirigami.ApplicationWindow {
 
         property url location: {
             if (mpv.currentUrl) {
-                return app.parentUrl(mpv.currentUrl)
+                return HarunaApp.parentUrl(mpv.currentUrl)
             } else {
                 return (GeneralSettings.fileDialogLocation
-                ? app.pathToUrl(GeneralSettings.fileDialogLocation)
-                : app.pathToUrl(GeneralSettings.fileDialogLastLocation))
+                ? HarunaApp.pathToUrl(GeneralSettings.fileDialogLocation)
+                : HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation))
             }
         }
 
@@ -318,7 +318,7 @@ Kirigami.ApplicationWindow {
         nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]
 
         onAccepted: {
-            if (window.acceptedSubtitleTypes.includes(app.mimeType(subtitlesFileDialog.selectedFile))) {
+            if (window.acceptedSubtitleTypes.includes(HarunaApp.mimeType(subtitlesFileDialog.selectedFile))) {
                 mpv.command(["sub-add", subtitlesFileDialog.selectedFile, "select"])
             }
         }
@@ -348,15 +348,15 @@ Kirigami.ApplicationWindow {
         id: saveWindowGeometryTimer
 
         interval: 1000
-        onTriggered: app.saveWindowGeometry(window)
+        onTriggered: HarunaApp.saveWindowGeometry(window)
     }
 
     Component.onCompleted: {
         footerLoader.active = true
-        app.restoreWindowGeometry(window)
-        app.activateColorScheme(GeneralSettings.colorScheme)
+        HarunaApp.restoreWindowGeometry(window)
+        HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
 
-        const hasCommandLineFile = app.url(0).toString() !== ""
+        const hasCommandLineFile = HarunaApp.url(0).toString() !== ""
         const hasLastPlayedFile = GeneralSettings.lastPlayedFile !== ""
         const hasFileToOpen = hasCommandLineFile || (PlaybackSettings.openLastPlayedFile && hasLastPlayedFile)
         if (GeneralSettings.fullscreenOnStartUp && hasFileToOpen) {
@@ -394,7 +394,7 @@ Kirigami.ApplicationWindow {
     }
 
     function resizeWindow() : void {
-        if (app.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
+        if (HarunaApp.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
             return
         }
 

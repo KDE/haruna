@@ -45,10 +45,14 @@ protected:
 class Application : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QAbstractItemModel *colorSchemesModel READ colorSchemesModel CONSTANT)
+    QML_SINGLETON
+    QML_NAMED_ELEMENT(HarunaApp)
 
 public:
     static Application *instance();
+    static Application *create(QQmlEngine *, QJSEngine *);
+
+    Q_PROPERTY(QAbstractItemModel *colorSchemesModel READ colorSchemesModel CONSTANT)
 
     Q_INVOKABLE bool urlExists(const QUrl &url);
     Q_INVOKABLE bool pathExists(const QString &url);

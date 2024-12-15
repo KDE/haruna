@@ -46,7 +46,7 @@ MpvItem {
         osd.message(text);
     }
 
-    onRaise: { app.raiseWindow() }
+    onRaise: { HarunaApp.raiseWindow() }
     onPlayNext: { appActions.playNextAction.trigger() }
     onPlayPrevious: { appActions.playPreviousAction.trigger() }
     onOpenUri: {
@@ -150,7 +150,7 @@ MpvItem {
         keys: ["text/uri-list"]
 
         onDropped: drop => {
-            const mimeType = app.mimeType(drop.urls[0])
+            const mimeType = HarunaApp.mimeType(drop.urls[0])
             if (root.window.acceptedSubtitleTypes.includes(mimeType)) {
                 command(["sub-add", drop.urls[0], "select"])
             }

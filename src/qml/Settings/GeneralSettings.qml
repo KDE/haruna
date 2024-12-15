@@ -300,7 +300,7 @@ SettingsBasePage {
             CheckBox {
                 text: i18nc("@option:check", "Resize to fit video")
                 checked: GeneralSettings.resizeWindowToVideo
-                enabled: !app.isPlatformWayland()
+                enabled: !HarunaApp.isPlatformWayland()
                 onCheckedChanged: {
                     GeneralSettings.resizeWindowToVideo = checked
                     GeneralSettings.save()
@@ -315,7 +315,7 @@ SettingsBasePage {
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
                 ToolTip {
-                    readonly property string waylandMessage: app.isPlatformWayland()
+                    readonly property string waylandMessage: HarunaApp.isPlatformWayland()
                                                              ? i18nc("@info:tooltip", "<b>Not supported on Wayland.</b>")
                                                              : ""
                     text: i18nc("@info:tooltip", "%1 The window is resized according to the video resolution.\n" +
@@ -430,7 +430,7 @@ SettingsBasePage {
             id: colorThemeSwitcher
 
             textRole: "display"
-            model: app.colorSchemesModel
+            model: HarunaApp.colorSchemesModel
             delegate: ItemDelegate {
                 id: delegate
 
@@ -454,7 +454,7 @@ SettingsBasePage {
             onActivated: function(index) {
                 GeneralSettings.colorScheme = colorThemeSwitcher.textAt(index)
                 GeneralSettings.save()
-                app.activateColorScheme(GeneralSettings.colorScheme)
+                HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
             }
 
             Component.onCompleted: {
@@ -482,7 +482,7 @@ SettingsBasePage {
 
             onActivated: function(index) {
                 GeneralSettings.guiStyle = model.get(index).key
-                app.setGuiStyle(GeneralSettings.guiStyle)
+                HarunaApp.setGuiStyle(GeneralSettings.guiStyle)
                 // some themes can cause a crash
                 // the timer prevents saving the crashing theme,
                 // which would cause the app to crash on startup
@@ -500,8 +500,8 @@ SettingsBasePage {
 
             Component.onCompleted: {
                 // populate the model with the available styles
-                for (let i = 0; i < app.availableGuiStyles().length; ++i) {
-                    stylesModel.append({key: app.availableGuiStyles()[i]})
+                for (let i = 0; i < HarunaApp.availableGuiStyles().length; ++i) {
+                    stylesModel.append({key: HarunaApp.availableGuiStyles()[i]})
                 }
 
                 // set the saved style as the current item in the combo box

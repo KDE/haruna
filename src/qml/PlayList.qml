@@ -358,8 +358,8 @@ Item {
         id: fileDialog
 
         property url location: GeneralSettings.fileDialogLocation
-                               ? app.pathToUrl(GeneralSettings.fileDialogLocation)
-                               : app.pathToUrl(GeneralSettings.fileDialogLastLocation)
+                               ? HarunaApp.pathToUrl(GeneralSettings.fileDialogLocation)
+                               : HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
         property string fileType: "video"
 
         title: i18nc("@title:window", "Select file")

@@ -134,7 +134,7 @@ SettingsBasePage {
 
                 property string defaultFamily: "Sans Serif"
 
-                model: app.getFonts()
+                model: HarunaApp.getFonts()
                 onActivated: function(index) {
                     SubtitlesSettings.fontFamily = currentText
                     SubtitlesSettings.save()

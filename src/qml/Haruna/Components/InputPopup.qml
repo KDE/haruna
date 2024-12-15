@@ -8,6 +8,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.haruna
+
 Popup {
     id: root
 
@@ -27,7 +29,7 @@ Popup {
 
         Label {
             text: i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
-            visible: !app.hasYoutubeDl()
+            visible: !HarunaApp.hasYoutubeDl()
             onLinkActivated: Qt.openUrlExternally(link)
         }
 
@@ -35,7 +37,7 @@ Popup {
             id: openUrlTextField
 
             text: root.lastUrl
-            visible: app.hasYoutubeDl()
+            visible: HarunaApp.hasYoutubeDl()
             Layout.preferredWidth: 400
             Layout.fillWidth: true
 
@@ -55,7 +57,7 @@ Popup {
         Button {
             id: openUrlButton
 
-            visible: app.hasYoutubeDl()
+            visible: HarunaApp.hasYoutubeDl()
             text: root.buttonText
 
             onClicked: {

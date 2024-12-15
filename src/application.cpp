@@ -52,8 +52,15 @@ Application *Application::instance()
     return &app;
 }
 
+Application *Application::create(QQmlEngine *, QJSEngine *)
+{
+    QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+    return instance();
+}
+
 Application::Application()
-    : m_app(qApp)
+    : QObject{nullptr}
+    , m_app(qApp)
     , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
 #if KCOLORSCHEME_VERSION < QT_VERSION_CHECK(6, 6, 0)
     , m_schemes(new KColorSchemeManager(this))

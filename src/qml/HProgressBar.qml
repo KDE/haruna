@@ -129,7 +129,7 @@ Slider {
 
                 const time = mouseX / progressBarBG.width * root.to
                 previewMpvLoader.position = time
-                progressBarToolTip.text = app.formatTime(time)
+                progressBarToolTip.text = HarunaApp.formatTime(time)
             }
 
             onEntered: {
@@ -271,7 +271,7 @@ Slider {
 
                     property int scrollBarWidth: listViewPage.contentItem.ScrollBar.vertical.width
 
-                    text: `${app.formatTime(menuitem.startTime)} - ${menuitem.title}`
+                    text: `${HarunaApp.formatTime(menuitem.startTime)} - ${menuitem.title}`
                     checked: menuitem.index === chaptersPopup.checkedItem
                     width: listViewPage.width - scrollBarWidth
                     onClicked: {

@@ -30,14 +30,14 @@ SettingsBasePage {
             Kirigami.ActionTextField {
                 id: configFolderField
 
-                text: app.configFolderPath()
+                text: HarunaApp.configFolderPath()
                 readOnly: true
                 rightActions: Kirigami.Action {
                     icon.name: "document-open-folder"
                     visible: configFolderField.text !== ""
                     text: i18nc("@info:tooltip", "Open config folder")
                     onTriggered: {
-                        Qt.openUrlExternally(app.configFolderPath())
+                        Qt.openUrlExternally(HarunaApp.configFolderPath())
                     }
                 }
                 Layout.fillWidth: true
@@ -54,14 +54,14 @@ SettingsBasePage {
             Kirigami.ActionTextField {
                 id: configFileField
 
-                text: app.configFilePath()
+                text: HarunaApp.configFilePath()
                 readOnly: true
                 rightActions: Kirigami.Action {
                     icon.name: "document-open"
                     visible: configFileField.text !== ""
                     text: i18nc("@info:tooltip", "Open config file")
                     onTriggered: {
-                        Qt.openUrlExternally(app.configFilePath())
+                        Qt.openUrlExternally(HarunaApp.configFilePath())
                     }
                 }
                 Layout.fillWidth: true
@@ -78,14 +78,14 @@ SettingsBasePage {
             Kirigami.ActionTextField {
                 id: ccConfigFileField
 
-                text: app.ccConfigFilePath()
+                text: HarunaApp.ccConfigFilePath()
                 readOnly: true
                 rightActions: Kirigami.Action {
                     icon.name: "document-open"
                     visible: ccConfigFileField.text !== ""
                     text: i18nc("@info:tooltip", "Open custom commands config file")
                     onTriggered: {
-                        Qt.openUrlExternally(app.ccConfigFilePath())
+                        Qt.openUrlExternally(HarunaApp.ccConfigFilePath())
                     }
                 }
                 Layout.fillWidth: true

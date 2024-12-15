@@ -21,7 +21,7 @@ Loader {
     required property Loader m_settingsLoader
 
     property bool isShowAnimationRunning: false
-    property bool showGlobalMenu: app.platformName() !== "windows"
+    property bool showGlobalMenu: HarunaApp.platformName() !== "windows"
                                     && Kirigami.Settings.hasPlatformMenuBar
                                     && !Kirigami.Settings.isMobile
 
