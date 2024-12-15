@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:47+0000\n"
+"POT-Creation-Date: 2024-12-15 00:40+0000\n"
 "PO-Revision-Date: 2024-10-01 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -397,7 +397,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Přepnout záhlaví"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:102
+#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:103
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -700,27 +700,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasycení: 0"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:136 src/qml/Footer.qml:80
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Začít přehrávání"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:136 src/qml/Footer.qml:80
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Pozastavit přehrávání"
 
-#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:150 src/qml/Footer.qml:93
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Přehrát předchozí soubor"
 
-#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:104
+#: src/qml/FloatingFooter.qml:164 src/qml/Footer.qml:106
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Přehrát následující soubor"
 
-#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:122
+#: src/qml/FloatingFooter.qml:182 src/qml/Footer.qml:124
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Zbývá: %1"
@@ -806,12 +806,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:247
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/HProgressBar.qml:254
+#: src/qml/HProgressBar.qml:255
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -823,18 +823,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:285 src/qml/PlayList.qml:364
+#: src/qml/Main.qml:288 src/qml/PlayList.qml:365
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vybrat soubor"
 
-#: src/qml/Main.qml:312
+#: src/qml/Main.qml:315
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Vyberte soubor s titulky"
 
-#: src/qml/Main.qml:331
+#: src/qml/Main.qml:334
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otevřít"
@@ -1064,12 +1064,12 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr "Uložit jako"
 
-#: src/qml/PlayList.qml:247
+#: src/qml/PlayList.qml:248
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Otevřít odpovídající složku"
 
-#: src/qml/PlayList.qml:253
+#: src/qml/PlayList.qml:254
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Open config folder"
@@ -1077,7 +1077,7 @@ msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr "Otevřít složku nastavení"
 
-#: src/qml/PlayList.qml:262
+#: src/qml/PlayList.qml:263
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy file name"
@@ -1085,7 +1085,7 @@ msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "Kopírovat název souboru"
 
-#: src/qml/PlayList.qml:267
+#: src/qml/PlayList.qml:268
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy file path"
@@ -1093,17 +1093,17 @@ msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr "Kopírovat cestu k souboru"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr ""
 
-#: src/qml/PlayList.qml:273
+#: src/qml/PlayList.qml:274
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Odstranit ze seznamu skladeb"
 
-#: src/qml/PlayList.qml:278
+#: src/qml/PlayList.qml:279
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Rename file"
@@ -1111,12 +1111,12 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Přejmenovat soubor"
 
-#: src/qml/PlayList.qml:284
+#: src/qml/PlayList.qml:285
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Přejít na přehrávanou položku"
 
-#: src/qml/PlayList.qml:294
+#: src/qml/PlayList.qml:295
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Přesunout soubor do koše"
@@ -1154,14 +1154,14 @@ msgctxt "@action:button"
 msgid "&Add command"
 msgstr "Přid&at příkaz"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:87
+#: src/qml/Settings/CustomCommandsSettings.qml:88
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
 
-#: src/qml/Settings/CustomCommandsSettings.qml:165
+#: src/qml/Settings/CustomCommandsSettings.qml:167
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Přid&at"
@@ -1797,57 +1797,57 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Otevřít položky jedním kliknutím"
 
-#: src/qml/Settings/SettingsWindow.qml:41
+#: src/qml/Settings/SettingsWindow.qml:42
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: src/qml/Settings/SettingsWindow.qml:61
+#: src/qml/Settings/SettingsWindow.qml:62
 msgctxt "@action"
 msgid "General"
 msgstr "Obecné"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:70
 msgctxt "@action"
 msgid "Playback"
 msgstr "Přehrávání"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:78
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/qml/Settings/SettingsWindow.qml:94
+#: src/qml/Settings/SettingsWindow.qml:95
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Titulky"
 
-#: src/qml/Settings/SettingsWindow.qml:110
+#: src/qml/Settings/SettingsWindow.qml:111
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Myš"
 
-#: src/qml/Settings/SettingsWindow.qml:118
+#: src/qml/Settings/SettingsWindow.qml:119
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Zkratky"
 
-#: src/qml/Settings/SettingsWindow.qml:127
+#: src/qml/Settings/SettingsWindow.qml:128
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "Vlastní příkazy"
 
-#: src/qml/Settings/SettingsWindow.qml:136
+#: src/qml/Settings/SettingsWindow.qml:137
 msgctxt "@action"
 msgid "Debug"
 msgstr "Ladění"
 
-#: src/qml/Settings/SettingsWindow.qml:145
+#: src/qml/Settings/SettingsWindow.qml:146
 msgctxt "@action"
 msgid "About"
 msgstr "O aplikaci"

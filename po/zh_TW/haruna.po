@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:47+0000\n"
+"POT-Creation-Date: 2024-12-15 00:40+0000\n"
 "PO-Revision-Date: 2024-11-26 00:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -399,7 +399,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "切換標頭"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:102
+#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:103
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -701,27 +701,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "飽和度：0"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:136 src/qml/Footer.qml:80
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "開始播放"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:78
+#: src/qml/FloatingFooter.qml:136 src/qml/Footer.qml:80
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "暫停播放"
 
-#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:91
+#: src/qml/FloatingFooter.qml:150 src/qml/Footer.qml:93
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "播放上一個檔案"
 
-#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:104
+#: src/qml/FloatingFooter.qml:164 src/qml/Footer.qml:106
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "播放下一個檔案"
 
-#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:122
+#: src/qml/FloatingFooter.qml:182 src/qml/Footer.qml:124
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "剩餘：%1"
@@ -809,12 +809,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "音效"
 
-#: src/qml/HProgressBar.qml:246
+#: src/qml/HProgressBar.qml:247
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "跳過章節"
 
-#: src/qml/HProgressBar.qml:254
+#: src/qml/HProgressBar.qml:255
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -828,18 +828,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:285 src/qml/PlayList.qml:364
+#: src/qml/Main.qml:288 src/qml/PlayList.qml:365
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "選擇檔案"
 
-#: src/qml/Main.qml:312
+#: src/qml/Main.qml:315
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "選擇字幕檔案"
 
-#: src/qml/Main.qml:331
+#: src/qml/Main.qml:334
 msgctxt "@action:button"
 msgid "Open"
 msgstr "開啟"
@@ -1069,47 +1069,47 @@ msgctxt "@action:button"
 msgid "Save as"
 msgstr "另存新檔"
 
-#: src/qml/PlayList.qml:247
+#: src/qml/PlayList.qml:248
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "開啟包含資料夾"
 
-#: src/qml/PlayList.qml:253
+#: src/qml/PlayList.qml:254
 msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr "在瀏覽器開啟"
 
-#: src/qml/PlayList.qml:262
+#: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "複製名稱"
 
-#: src/qml/PlayList.qml:267
+#: src/qml/PlayList.qml:268
 msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr "複製路徑"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr "複製 URL"
 
-#: src/qml/PlayList.qml:273
+#: src/qml/PlayList.qml:274
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "從播放清單移除"
 
-#: src/qml/PlayList.qml:278
+#: src/qml/PlayList.qml:279
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "重新命名"
 
-#: src/qml/PlayList.qml:284
+#: src/qml/PlayList.qml:285
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "捲動到目前播放的項目"
 
-#: src/qml/PlayList.qml:294
+#: src/qml/PlayList.qml:295
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "將檔案移到垃圾桶"
@@ -1147,7 +1147,7 @@ msgctxt "@action:button"
 msgid "&Add command"
 msgstr "新增指令(&A)"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:87
+#: src/qml/Settings/CustomCommandsSettings.qml:88
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
@@ -1156,7 +1156,7 @@ msgstr ""
 "勾選時：屬性會在啟動時設定\n"
 "不勾選時：屬性不會在啟動時設定"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:165
+#: src/qml/Settings/CustomCommandsSettings.qml:167
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "新增(&A)"
@@ -1834,57 +1834,57 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "單擊開啟項目"
 
-#: src/qml/Settings/SettingsWindow.qml:41
+#: src/qml/Settings/SettingsWindow.qml:42
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "設定"
 
-#: src/qml/Settings/SettingsWindow.qml:61
+#: src/qml/Settings/SettingsWindow.qml:62
 msgctxt "@action"
 msgid "General"
 msgstr "一般"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:70
 msgctxt "@action"
 msgid "Playback"
 msgstr "播放"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:78
 msgctxt "@action"
 msgid "Video"
 msgstr "影片"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "Audio"
 msgstr "音效"
 
-#: src/qml/Settings/SettingsWindow.qml:94
+#: src/qml/Settings/SettingsWindow.qml:95
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "字幕"
 
-#: src/qml/Settings/SettingsWindow.qml:110
+#: src/qml/Settings/SettingsWindow.qml:111
 msgctxt "@action"
 msgid "Mouse"
 msgstr "滑鼠"
 
-#: src/qml/Settings/SettingsWindow.qml:118
+#: src/qml/Settings/SettingsWindow.qml:119
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "快捷鍵"
 
-#: src/qml/Settings/SettingsWindow.qml:127
+#: src/qml/Settings/SettingsWindow.qml:128
 msgctxt "@action"
 msgid "Custom commands"
 msgstr "自訂指令"
 
-#: src/qml/Settings/SettingsWindow.qml:136
+#: src/qml/Settings/SettingsWindow.qml:137
 msgctxt "@action"
 msgid "Debug"
 msgstr "除錯"
 
-#: src/qml/Settings/SettingsWindow.qml:145
+#: src/qml/Settings/SettingsWindow.qml:146
 msgctxt "@action"
 msgid "About"
 msgstr "關於"
