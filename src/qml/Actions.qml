@@ -65,9 +65,7 @@ Item {
         }
 
         function onAboutHarunaAction() {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.About
-            root.m_actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.About)
         }
 
         function onReportBugAction() {
@@ -115,18 +113,11 @@ Item {
         }
 
         function onConfigureAction() {
-            root.m_settingsLoader.active = true
-            if (root.m_settingsLoader.item.visible) {
-                root.m_settingsLoader.item.raise()
-            } else {
-                root.m_settingsLoader.item.visible = true
-            }
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.General)
         }
 
         function onConfigureShortcutsAction() {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Shortcuts
-            root.m_actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Shortcuts)
         }
 
         function onExitFullscreenAction() {

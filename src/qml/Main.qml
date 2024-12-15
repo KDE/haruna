@@ -251,6 +251,25 @@ Kirigami.ApplicationWindow {
             m_mpv: mpv
             m_proxyActionsModel: proxyActionsModel
             m_customCommandsModel: customCommandsModel
+            onClosing: settingsLoader.active = false
+        }
+
+        function openSettingPage(page: int) : void {
+            if (!settingsLoader.active) {
+                settingsLoader.active = true
+                settingsLoader.loaded.connect(function() {
+                    settingsLoader.openSettingPage(page)
+                })
+                return
+            }
+
+            const settingsWindow = settingsLoader.item as SettingsWindow
+            settingsWindow.currentPage = page
+            if (settingsWindow.visible) {
+                settingsWindow.raise()
+            } else {
+                settingsWindow.visible = true
+            }
         }
     }
 

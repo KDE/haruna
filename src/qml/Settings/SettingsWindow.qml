@@ -22,7 +22,7 @@ Kirigami.ApplicationWindow {
     required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
-    property int currentPage: SettingsWindow.Page.General
+    property int currentPage: -1
     enum Page {
         General = 0,
         Playback,
@@ -62,6 +62,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "General")
                     icon.name: "configure"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.General
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/GeneralSettings.qml`)
                     }
@@ -70,6 +71,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Playback")
                     icon.name: "media-playback-start"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Playback
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/PlaybackSettings.qml`)
                     }
@@ -78,6 +80,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Video")
                     icon.name: "video-x-generic"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Video
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/VideoSettings.qml`,
                                                            {m_mpv: root.m_mpv})
@@ -87,6 +90,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Audio")
                     icon.name: "player-volume"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Audio
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/AudioSettings.qml`)
                     }
@@ -95,6 +99,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Subtitles")
                     icon.name: "add-subtitle"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Subtitles
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/SubtitlesSettings.qml`)
                     }
@@ -103,6 +108,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Playlist")
                     icon.name: "view-media-playlist"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Playlist
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/PlaylistSettings.qml`)
                     }
@@ -111,6 +117,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Mouse")
                     icon.name: "input-mouse"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Mouse
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/MouseSettings.qml`)
                     }
@@ -119,6 +126,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Shortcuts")
                     icon.name: "configure-shortcuts"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Shortcuts
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/ShortcutsSettings.qml`,
                                                            {m_proxyActionsModel: root.m_proxyActionsModel})
@@ -128,6 +136,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Custom commands")
                     icon.name: "configure"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.CustomCommands
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/CustomCommandsSettings.qml`,
                                                            {m_customCommandsModel: root.m_customCommandsModel})
@@ -137,6 +146,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "Debug")
                     icon.name: "help-about"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.Debug
                         root.pageStack.removePage(1)
                         root.pageStack.push(`${root.settingsPath}/DebugSettings.qml`,
                                                            {m_mpv: root.m_mpv})
@@ -146,6 +156,7 @@ Kirigami.ApplicationWindow {
                     text: i18nc("@action", "About")
                     icon.name: "help-about"
                     onTriggered: {
+                        root.currentPage = SettingsWindow.Page.About
                         root.pageStack.removePage(1)
                         root.pageStack.push(aboutPage)
                     }

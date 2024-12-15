@@ -7,6 +7,8 @@
 import QtQuick
 import Qt.labs.platform as Labs
 
+import org.kde.haruna
+
 Labs.Menu {
     id: root
 
@@ -17,90 +19,68 @@ Labs.Menu {
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "General")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.General
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.General)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Playback")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Playback
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Playback)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Video")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Video
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Video)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Audio")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Audio
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Audio)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Subtitles")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Subtitles
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Subtitles)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Playlist")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Playlist
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Playlist)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Mouse")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Mouse
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Mouse)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Shortcuts")
         icon.name: "configure-shortcuts"
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Shortcuts
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Shortcuts)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Custom Commands")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.CustomCommands
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.CustomCommands)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "Debug")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.Debug
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Debug)
         }
     }
     Labs.MenuItem {
         text: i18nc("@action:inmenu", "About")
         onTriggered: {
-            root.m_settingsLoader.active = true
-            root.m_settingsLoader.item.currentPage = SettingsWindow.Page.About
-            actionsModel.signalEmitter("configureAction")
+            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.About)
         }
     }
 }
