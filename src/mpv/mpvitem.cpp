@@ -549,8 +549,7 @@ void MpvItem::onChapterChanged()
 
 void MpvItem::saveTimePosition()
 {
-    // saving position is disabled
-    if (PlaybackSettings::minDurationToSavePosition() == -1) {
+    if (!PlaybackSettings::restoreFilePosition()) {
         return;
     }
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
@@ -563,8 +562,7 @@ void MpvItem::saveTimePosition()
 
 double MpvItem::loadTimePosition()
 {
-    // saving position is disabled
-    if (PlaybackSettings::minDurationToSavePosition() == -1) {
+    if (!PlaybackSettings::restoreFilePosition()) {
         return 0;
     }
     PlaylistItem item{m_playlistModel->m_playlist[m_playlistModel->m_playingItem]};
@@ -585,7 +583,7 @@ double MpvItem::loadTimePosition()
 
     // position for files with a duration lower than
     // PlaybackSettings::minDurationToSavePosition() is not restored
-    if (duration < PlaybackSettings::minDurationToSavePosition() * 60) {
+    if (m_currentUrl.isLocalFile() && duration < PlaybackSettings::minDurationToSavePosition() * 60) {
         return 0;
     }
 

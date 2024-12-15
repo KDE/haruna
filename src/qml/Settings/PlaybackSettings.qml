@@ -251,15 +251,45 @@ SettingsBasePage {
             }
         }
 
-        Label {
-            text: i18nc("@label:spinbox", "Save playback position")
-            Layout.alignment: Qt.AlignRight
+        // ------------------------------------
+        // Playback position
+        // ------------------------------------
+
+        SettingsHeader {
+            text: i18nc("@title", "Playback position")
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
         }
 
+        Item { Layout.preferredWidth: 1 }
+
+        CheckBox {
+            id: saveFilePositionCheckBox
+            text: qsTr("Restore playback position")
+            checked: PlaybackSettings.restoreFilePosition
+            onCheckedChanged: {
+                PlaybackSettings.restoreFilePosition = checked
+                PlaybackSettings.save()
+            }
+            ToolTip {
+                text: i18ncp("@info:tooltip save playback position",
+                             // singular
+                             "Saves the file position during playback, opening the same file again will seek to the saved position.\n"
+                             +"Position is saved every %1 second, except for the last 10 seconds of the video.",
+                             // plural
+                             "Saves the file position during playback, opening the same file again will seek to the saved position.\n"
+                             +"Position is saved every %1 seconds, except for the last 10 seconds of the video.",
+                             timePositionSaveInterval.value)
+            }
+        }
+
+        Item { Layout.preferredWidth: 1 }
+
         RowLayout {
+            enabled: saveFilePositionCheckBox.checked
             SpinBox {
                 id: timePositionSaving
-                from: -1
+                from: 0
                 to: 9999
                 value: PlaybackSettings.minDurationToSavePosition
 
@@ -269,28 +299,30 @@ SettingsBasePage {
                 }
             }
 
-            LabelWithTooltip {
+            Label {
                 text: {
-                    if (timePositionSaving.value === -1) {
-                        return i18nc("@info", "Disabled")
-                    } else if (timePositionSaving.value === 0) {
-                        return i18nc("@info", "For all files")
+                    if (timePositionSaving.value === 0) {
+                        return i18nc("@info", "For any duration")
                     } else {
                         return i18ncp("@info",
-                                      "For files longer than %1 minute",
-                                      "For files longer than %1 minutes",
+                                      "If duration is longer than %1 minute",
+                                      "If duration is longer than %1 minutes",
                                       timePositionSaving.value)
                     }
                 }
                 elide: Text.ElideRight
-                Layout.fillWidth: true
+            }
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip restore playback position > duration",
+                             "Position for remote files is restored regardless of duration.",
+                             timePositionSaving.value)
             }
         }
 
         Item { Layout.preferredWidth: 1 }
 
         RowLayout {
-            enabled: timePositionSaving.value >= 0
+            enabled: saveFilePositionCheckBox.checked
             SpinBox {
                 id: timePositionSaveInterval
                 from: 1
@@ -304,7 +336,7 @@ SettingsBasePage {
             }
 
             LabelWithTooltip {
-                text: i18ncp("@info",
+                text: i18ncp("@info:tooltip restore playback position > save interval",
                              "Save position every %1 second",
                              "Save position every %1 seconds",
                              timePositionSaveInterval.value)
@@ -313,14 +345,21 @@ SettingsBasePage {
             }
         }
 
-        Label {
-            text: i18nc("@label", "Skip chapters")
-            Layout.alignment: Qt.AlignRight
+        // ------------------------------------
+        // Chapters
+        // ------------------------------------
+
+        SettingsHeader {
+            text: i18nc("@title", "Chapters")
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
         }
+
+        Item { Layout.preferredWidth: 1 }
 
         CheckBox {
             id: skipChaptersCheckBox
-            text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
+            text: i18nc("@option:check", "Skip chapters")
             checked: PlaybackSettings.skipChapters
             onCheckedChanged: {
                 PlaybackSettings.skipChapters = checked

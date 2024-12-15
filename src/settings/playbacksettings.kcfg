@@ -10,6 +10,9 @@
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="haruna/haruna.conf" />
   <group name="Playback">
+  <entry name="RestoreFilePosition" type="bool">
+    <default>false</default>
+  </entry>
     <entry name="MinDurationToSavePosition" type="int">
       <default>1</default>
     </entry>
