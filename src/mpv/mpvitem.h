@@ -54,14 +54,6 @@ public:
     ChaptersModel *chaptersModel() const;
     void setChaptersModel(ChaptersModel *_chaptersModel);
 
-    /**
-     * when playlist repeat is turned off the last file in the playlist is reloaded
-     * this property is used to pause the player
-     */
-    Q_PROPERTY(bool isFileReloaded READ isFileReloaded WRITE setIsFileReloaded NOTIFY isFileReloadedChanged)
-    bool isFileReloaded() const;
-    void setIsFileReloaded(bool _isFileReloaded);
-
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     QString mediaTitle();
 
@@ -162,7 +154,6 @@ Q_SIGNALS:
     void finishedLoadingChanged();
     void playlistTitleChanged();
     void playlistUrlChanged();
-    void isFileReloadedChanged();
     void mediaTitleChanged();
     void currentUrlChanged();
     void watchPercentageChanged();
@@ -237,7 +228,6 @@ private:
     QList<QVariant> m_chaptersList;
 
     double m_watchLaterPosition{0.0};
-    bool m_isFileReloaded{false};
     bool m_isReady{false};
     QUrl m_currentUrl;
     std::unique_ptr<ChaptersModel> m_chaptersModel;

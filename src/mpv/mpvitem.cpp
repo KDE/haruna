@@ -183,31 +183,16 @@ void MpvItem::setupConnections()
         setFinishedLoading(false);
     });
 
-    connect(mpvController(), &MpvController::fileLoaded, this, [=]() {
+    connect(mpvController(), &MpvController::fileLoaded, this, [this]() {
         getPropertyAsync(MpvProperties::self()->ChapterList, static_cast<int>(AsyncIds::ChapterList));
         getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
         getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
 
-        if (m_playlistModel->rowCount() <= 1 && PlaylistSettings::repeat()) {
-            Q_EMIT setProperty(MpvProperties::self()->LoopFile, u"inf"_s);
-        }
-
         Q_EMIT setProperty(MpvProperties::self()->ABLoopA, u"no"_s);
         Q_EMIT setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
 
-        // this is only run when reloading the last file in the playlist
-        // due to the playlist repeat setting being turned off
-        if (isFileReloaded()) {
-            setPause(true);
-            setPosition(0);
-            setIsFileReloaded(false);
-            setFinishedLoading(true);
-            return;
-        }
-
         setFinishedLoading(true);
         Q_EMIT fileLoaded();
-
     }, Qt::QueuedConnection);
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
@@ -279,32 +264,6 @@ void MpvItem::setupConnections()
     // clang-format on
 }
 
-void MpvItem::onEndFile(const QString &reason)
-{
-    if (reason == u"error"_s) {
-        if (playlistModel()->rowCount() == 0) {
-            return;
-        }
-
-        const auto index = playlistProxyModel()->index(playlistProxyModel()->getPlayingItem(), 0);
-        const auto title = playlistModel()->data(playlistProxyModel()->mapToSource(index), PlaylistModel::TitleRole);
-
-        Q_EMIT osdMessage(i18nc("@info:tooltip", "Could not play: %1", title.toString()));
-    }
-
-    if (playlistProxyModel()->getPlayingItem() + 1 < playlistModel()->rowCount()) {
-        playlistProxyModel()->playNext();
-    } else {
-        // Last file in playlist
-        if (PlaylistSettings::repeat()) {
-            playlistProxyModel()->setPlayingItem(0);
-        } else {
-            setIsFileReloaded(true);
-            playlistProxyModel()->setPlayingItem(playlistProxyModel()->getPlayingItem());
-        }
-    }
-}
-
 void MpvItem::onReady()
 {
     setIsReady(true);
@@ -324,6 +283,37 @@ void MpvItem::onReady()
             }
         }
     }
+}
+
+void MpvItem::onEndFile(const QString &reason)
+{
+    int currentItem = playlistProxyModel()->getPlayingItem();
+    if (reason == u"error"_s) {
+        if (playlistModel()->rowCount() == 0) {
+            return;
+        }
+
+        const auto index = playlistProxyModel()->index(currentItem, 0);
+        const auto title = playlistModel()->data(playlistProxyModel()->mapToSource(index), PlaylistModel::TitleRole);
+
+        Q_EMIT osdMessage(i18nc("@info:tooltip", "Could not play: %1", title.toString()));
+    }
+
+    if (!playlistProxyModel()->isLastItem(currentItem)) {
+        playlistProxyModel()->playNext();
+        return;
+    }
+
+    // Last file in playlist
+    if (PlaylistSettings::repeat()) {
+        // repeat is on -> open first item in the playlist
+        playlistProxyModel()->setPlayingItem(0);
+        return;
+    }
+
+    // repeat is off -> reopen the last file paused
+    setPropertyBlocking(MpvProperties::self()->Pause, true);
+    Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
@@ -672,20 +662,6 @@ TracksModel *MpvItem::subtitleTracksModel() const
 TracksModel *MpvItem::audioTracksModel() const
 {
     return m_audioTracksModel.get();
-}
-
-bool MpvItem::isFileReloaded() const
-{
-    return m_isFileReloaded;
-}
-
-void MpvItem::setIsFileReloaded(bool _isFileReloaded)
-{
-    if (m_isFileReloaded == _isFileReloaded) {
-        return;
-    }
-    m_isFileReloaded = _isFileReloaded;
-    Q_EMIT isFileReloadedChanged();
 }
 
 QString MpvItem::mediaTitle()
