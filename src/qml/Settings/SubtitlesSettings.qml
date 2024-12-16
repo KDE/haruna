@@ -28,18 +28,16 @@ SettingsBasePage {
             Layout.columnSpan: 2
         }
 
-        Label {
-            text: i18nc("@label:spinbox", "Autoload subtitles")
-            Layout.alignment: Qt.AlignRight
-        }
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
 
         CheckBox {
-            id: autoloadSubtitles
+            id: autoSelectSubtitles
 
-            checked: SubtitlesSettings.autoloadSubtitles
+            text: i18nc("@label:spinbox", "Auto select track")
+            checked: SubtitlesSettings.autoSelectSubtitles
             
             onCheckStateChanged: {
-                SubtitlesSettings.autoloadSubtitles = checked
+                SubtitlesSettings.autoSelectSubtitles = checked
                 SubtitlesSettings.save()
                 mpv.selectSubtitleTrack()
             }
@@ -61,7 +59,7 @@ SettingsBasePage {
             placeholderText: i18nc("placeholder text", "eng, ger etc.")
             Layout.fillWidth: true
             onEditingFinished: save()
-            enabled: autoloadSubtitles.checked
+            enabled: autoSelectSubtitles.checked
 
             Connections {
                 target: root
@@ -87,7 +85,7 @@ SettingsBasePage {
             to: 100
             value: SubtitlesSettings.preferredTrack
             editable: true
-            enabled: autoloadSubtitles.checked
+            enabled: autoSelectSubtitles.checked
             onValueChanged: {
                 SubtitlesSettings.preferredTrack = value
                 SubtitlesSettings.save()

@@ -606,7 +606,7 @@ void MpvItem::userCommand(const QString &commandString)
 void MpvItem::selectSubtitleTrack()
 {
     Q_EMIT setProperty(MpvProperties::self()->SubtitleId, u"no"_s);
-    if (SubtitlesSettings::autoloadSubtitles()) {
+    if (SubtitlesSettings::autoSelectSubtitles()) {
         const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
         Q_EMIT setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? u"auto"_s : preferredSubTrack);
         Q_EMIT setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(u" "_s));
