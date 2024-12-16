@@ -98,7 +98,7 @@ Kirigami.ApplicationWindow {
         anchors.top: window.contentItem.top
 
         onVideoReconfig: {
-            resizeWindow()
+            window.resizeWindow()
         }
 
         onAddToRecentFiles: function(url) {
