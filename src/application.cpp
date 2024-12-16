@@ -401,7 +401,6 @@ void Application::raiseWindow()
         return;
     }
 
-    // todo: replace deprecated methods
     QWindow *window = qobject_cast<QWindow *>(m_rootObject);
     if (window) {
         KWindowSystem::activateWindow(window);
