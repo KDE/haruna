@@ -552,4 +552,9 @@ QString PlaylistProxyModel::getFilePath(int row)
     return item.url.toString();
 }
 
+bool PlaylistProxyModel::isLastItem(int row)
+{
+    return row == rowCount() - 1;
+}
+
 #include "moc_playlistmodel.cpp"

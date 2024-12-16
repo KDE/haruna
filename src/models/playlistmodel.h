@@ -50,6 +50,7 @@ public:
     Q_INVOKABLE void copyFileName(int row);
     Q_INVOKABLE void copyFilePath(int row);
     Q_INVOKABLE QString getFilePath(int row);
+    Q_INVOKABLE bool isLastItem(int row);
 };
 
 class PlaylistModel : public QAbstractListModel
