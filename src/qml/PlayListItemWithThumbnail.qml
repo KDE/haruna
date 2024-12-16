@@ -72,6 +72,10 @@ ItemDelegate {
                 color: root.hovered || root.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 visible: PlaylistSettings.showRowNumber
                 font.pointSize: {
+                    if (Window.window === null) {
+                        return Kirigami.Units.gridUnit
+                    }
+
                     const mainWindow = Window.window as Main
                     if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
                         return Kirigami.Units.gridUnit
@@ -128,6 +132,10 @@ ItemDelegate {
                             horizontalAlignment: Qt.AlignCenter
                             text: root.duration
                             font.pointSize: {
+                                if (Window.window === null) {
+                                    return Kirigami.Units.gridUnit - 2
+                                }
+
                                 const mainWindow = Window.window as Main
                                 if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
                                     return Kirigami.Units.gridUnit - 2
@@ -160,6 +168,10 @@ ItemDelegate {
                 elide: Text.ElideRight
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                 font.pointSize: {
+                    if (Window.window === null) {
+                        return Kirigami.Units.gridUnit
+                    }
+
                     const mainWindow = Window.window as Main
                     if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
                         return Kirigami.Units.gridUnit

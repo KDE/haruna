@@ -27,6 +27,10 @@ ItemDelegate {
     property string rowNumber: (root.index + 1).toString()
     property double alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
     property int fontSize: {
+        if (Window.window === null) {
+            return Kirigami.Units.gridUnit
+        }
+
         const mainWindow = Window.window as Main
         if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
             return Kirigami.Units.gridUnit
