@@ -240,6 +240,23 @@ Kirigami.ApplicationWindow {
             m_mpv: mpv
             onClosed: mpvContextMenuLoader.active = false
         }
+
+        function openMpvContextMenuLoader() : void {
+            if (!mpvContextMenuLoader.active) {
+                mpvContextMenuLoader.active = true
+                mpvContextMenuLoader.loaded.connect(function() {
+                    openMpvContextMenuLoader()
+                })
+                return
+            }
+
+            const contextMenu = mpvContextMenuLoader.item as ContextMenu
+            contextMenu.popup()
+        }
+
+        function closeMpvContextMenuLoader() : void {
+            mpvContextMenuLoader.active = false
+        }
     }
 
     Loader {
