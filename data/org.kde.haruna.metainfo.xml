@@ -383,17 +383,25 @@
   <releases>
     <release version="next" date="2099-12-13">
       <description>
+        <p>There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
         <p>Features:</p>
         <ul>
+          <li>Changed the settings related to restoring the playback position, if you changed the defaults you have to redo them</li>
           <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed</li>
-          <li>Added setting (General) to start app in fullscreen</li>
+          <li>Added setting (in General) to start app in fullscreen</li>
+          <li>Added setting (in Subtitles) to control subtitle auto selection</li>
           <li>Changed left and right mouse button default actions: left click is now play/pause and right click opens the context menu. Actions can be changed in settings Mouse page</li>
+          <li>Decreased the minimum window size</li>
         </ul>
         <p>Bugfixes:</p>
         <ul>
           <li>Imporved scrolling performace of playlist, shortcuts and seekbar's chapters menu</li>
           <li>Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
           <li>Fixed active audio and subtitle tracks not being correctly checked</li>
+          <li>Removed empty header toolbar from settings window</li>
+          <li>Fixed a bug where the app would freeze when loading a file with lots of tracks</li>
+          <li>Improved menubar animation</li>
+          <li>The floating footer now hides when the mouse leaves the app</li>
         </ul>
       </description>
     </release>
