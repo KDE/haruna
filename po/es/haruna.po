@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-16 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 01:27+0100\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
+"PO-Revision-Date: 2024-12-16 12:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -548,46 +548,44 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reasignar"
 
-#: src/mpv/mpvitem.cpp:292
+#: src/mpv/mpvitem.cpp:299
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No se puede reproducir: %1"
 
-#: src/mpv/mpvitem.cpp:392 src/mpv/mpvitem.cpp:394
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Ritmo de subtítulos: %1"
+msgstr "Ritmo de subtítulos: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:440
+#: src/mpv/mpvitem.cpp:430
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ninguna"
 
-#: src/mpv/mpvitem.cpp:479
+#: src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla ha fallado"
 
-#: src/mpv/mpvitem.cpp:484
+#: src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Captura de pantalla realizada"
 
-#: src/mpv/mpvitem.cpp:486
+#: src/mpv/mpvitem.cpp:476
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -597,7 +595,7 @@ msgstr ""
 "No se ha detectado la pista de vídeo, seguramente porque no se puede "
 "descodificar o reproducir debido a la ausencia de códecs."
 
-#: src/mpv/mpvitem.cpp:543
+#: src/mpv/mpvitem.cpp:533
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1122,19 +1120,19 @@ msgid "Trash file"
 msgstr "Enviar archivo a la papelera"
 
 #: src/qml/Settings/AudioSettings.qml:25
-#: src/qml/Settings/SubtitlesSettings.qml:53
+#: src/qml/Settings/SubtitlesSettings.qml:51
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Idioma preferido"
 
 #: src/qml/Settings/AudioSettings.qml:33
-#: src/qml/Settings/SubtitlesSettings.qml:61
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "eng, ger, etc."
 
 #: src/qml/Settings/AudioSettings.qml:52
-#: src/qml/Settings/SubtitlesSettings.qml:81
+#: src/qml/Settings/SubtitlesSettings.qml:79
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Pista preferida"
@@ -1441,25 +1439,17 @@ msgid "Resize to fit video"
 msgstr "Cambiar tamaño para ajustar al vídeo"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>No permitido en Wayland.</b>"
+msgstr "No permitido en Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 El tamaño de la ventana se cambia según la resolución del vídeo.\n"
+"El tamaño de la ventana se cambia según la resolución del vídeo.\n"
 "El tamaño máximo no está restringido, operación que se deja al sistema "
 "operativo."
 
@@ -1485,35 +1475,23 @@ msgid "Remember window size and position"
 msgstr "Recordar el tamaño y la posición de la ventana"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>No permitido en Wayland.</b>"
+msgstr ""
+"<b>La restauración de la posición no está permitida en Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"Cuando se cambia el tamaño y la posición de la ventana, los nuevos valores "
-"se guardan y se usan para que al restaurar la aplicación tenga el mismo "
-"tamaño y posición.\n"
-"\n"
-"La opción «Cambiar tamaño para ajustar al vídeo» tiene preferencia.\n"
+"Los cambios del tamaño de la ventana y de la posición se guardan y se usan "
+"en las ventanas que se abran posteriormente.<br><br>%1La opción «Cambiar "
+"tamaño para ajustar al vídeo» tiene preferencia."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1738,12 +1716,9 @@ msgstr ""
 "<i>nombre_del_descodificador</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Guardar la posición de reproducción"
+msgstr "Posición de reproducción"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1758,37 +1733,36 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Guarda la posición del archivo durante la reproducción. Si se abre el mismo "
+"archivo, se moverá a la posición guardada.\n"
+"La posición se guarda cada segundo, excepto para los últimos 10 segundos del "
+"vídeo."
 msgstr[1] ""
+"Guarda la posición del archivo durante la reproducción. Si se abre el mismo "
+"archivo, se moverá a la posición guardada.\n"
+"La posición se guarda cada %1 segundos, excepto para los últimos 10 segundos "
+"del vídeo."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Saturación"
+msgstr "Para cualquier duración"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Para archivos de más de %1 minuto de duración"
-msgstr[1] "Para archivos de más de %1 minutos de duración"
+msgstr[0] "Si la duración es superior a %1 minuto"
+msgstr[1] "Si la duración es superior a %1 minutos"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
+"La posición de los archivos remotos se restaura sin tener en cuenta la "
+"duración."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1796,17 +1770,11 @@ msgstr[0] "Guardar la posición cada segundo"
 msgstr[1] "Guardar la posición cada %1 segundos"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Omitir capítulos"
+msgstr "Capítulos"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Omitir capítulos"
@@ -2003,12 +1971,12 @@ msgctxt "@action"
 msgid "About"
 msgstr "Acerca de"
 
-#: src/qml/Settings/SubtitlesSettings.qml:32
+#: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
-msgid "Autoload subtitles"
-msgstr "Cargar subtítulos automáticamente"
+msgid "Auto select track"
+msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:48
+#: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
@@ -2016,12 +1984,12 @@ msgstr ""
 "Si está marcada, se seleccionará y mostrará automáticamente una pista de "
 "subtítulos"
 
-#: src/qml/Settings/SubtitlesSettings.qml:105
+#: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Permitir subtítulos en los bordes negros"
 
-#: src/qml/Settings/SubtitlesSettings.qml:114
+#: src/qml/Settings/SubtitlesSettings.qml:112
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -2030,70 +1998,70 @@ msgstr ""
 "Si está marcada, los subtítulos se pueden mostrar fuera del vídeo, en los "
 "bordes negros. Es posible que no funcione con todos los subtítulos .ass."
 
-#: src/qml/Settings/SubtitlesSettings.qml:119
+#: src/qml/Settings/SubtitlesSettings.qml:117
 msgctxt "@title"
 msgid "Styling"
 msgstr "Estilo"
 
-#: src/qml/Settings/SubtitlesSettings.qml:125
+#: src/qml/Settings/SubtitlesSettings.qml:123
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Familia del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:157
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Tamaño del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:173
+#: src/qml/Settings/SubtitlesSettings.qml:171
 msgctxt "@label"
 msgid "Font style"
 msgstr "Estilo del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:178
+#: src/qml/Settings/SubtitlesSettings.qml:176
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Negrita"
 
-#: src/qml/Settings/SubtitlesSettings.qml:190
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Cursiva"
 
-#: src/qml/Settings/SubtitlesSettings.qml:200
+#: src/qml/Settings/SubtitlesSettings.qml:198
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Color del tipo de letra"
 
-#: src/qml/Settings/SubtitlesSettings.qml:251
-#: src/qml/Settings/SubtitlesSettings.qml:307
-#: src/qml/Settings/SubtitlesSettings.qml:384
+#: src/qml/Settings/SubtitlesSettings.qml:249
+#: src/qml/Settings/SubtitlesSettings.qml:305
+#: src/qml/Settings/SubtitlesSettings.qml:382
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Definir el valor predeterminado"
 
-#: src/qml/Settings/SubtitlesSettings.qml:257
+#: src/qml/Settings/SubtitlesSettings.qml:255
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Color de las sombras"
 
-#: src/qml/Settings/SubtitlesSettings.qml:313
+#: src/qml/Settings/SubtitlesSettings.qml:311
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Desplazamiento de las sombras"
 
-#: src/qml/Settings/SubtitlesSettings.qml:329
-#: src/qml/Settings/SubtitlesSettings.qml:406
+#: src/qml/Settings/SubtitlesSettings.qml:327
+#: src/qml/Settings/SubtitlesSettings.qml:404
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Defina a 0 (cero) para desactivar."
 
-#: src/qml/Settings/SubtitlesSettings.qml:334
+#: src/qml/Settings/SubtitlesSettings.qml:332
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Color del borde"
 
-#: src/qml/Settings/SubtitlesSettings.qml:390
+#: src/qml/Settings/SubtitlesSettings.qml:388
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Ancho del borde"
@@ -2234,6 +2202,10 @@ msgstr "Saturación"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Clic central en los controles deslizantes para reiniciarlos"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Autoload subtitles"
+#~ msgstr "Cargar subtítulos automáticamente"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"

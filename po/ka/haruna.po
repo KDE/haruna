@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-16 00:41+0000\n"
-"PO-Revision-Date: 2024-12-12 03:48+0100\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
+"PO-Revision-Date: 2024-12-16 05:18+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -546,46 +546,44 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "თავიდან მინიჭება"
 
-#: src/mpv/mpvitem.cpp:292
+#: src/mpv/mpvitem.cpp:299
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "ვერ ვუკრავ: %1"
 
-#: src/mpv/mpvitem.cpp:392 src/mpv/mpvitem.cpp:394
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "სუბტიტრების დრო: %1"
+msgstr "სუბტიტრების დრო: %1 წმ"
 
-#: src/mpv/mpvitem.cpp:440
+#: src/mpv/mpvitem.cpp:430
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "არაფერი"
 
-#: src/mpv/mpvitem.cpp:479
+#: src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "ეკრანის ანაბეჭდი ჩავარდა"
 
-#: src/mpv/mpvitem.cpp:484
+#: src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "ეკრანის ანაბეჭდი აღებულია"
 
-#: src/mpv/mpvitem.cpp:486
+#: src/mpv/mpvitem.cpp:476
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "ეკრანის ანაბეჭდი: %1"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -595,7 +593,7 @@ msgstr ""
 "ვიდეოტრეკი აღმოჩენილი არაა. ალბათ, ვიდეოტრეკის გაშიფვრა/დაკვრა შეუძლებელია "
 "შესაბამისი კოდეკების არარსებობის გამო"
 
-#: src/mpv/mpvitem.cpp:543
+#: src/mpv/mpvitem.cpp:533
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1121,19 +1119,19 @@ msgid "Trash file"
 msgstr "ფაილის სანაგვე ყუთში გადატანა"
 
 #: src/qml/Settings/AudioSettings.qml:25
-#: src/qml/Settings/SubtitlesSettings.qml:53
+#: src/qml/Settings/SubtitlesSettings.qml:51
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "სასურველი ენა"
 
 #: src/qml/Settings/AudioSettings.qml:33
-#: src/qml/Settings/SubtitlesSettings.qml:61
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr "eng, ger და ა.შ."
 
 #: src/qml/Settings/AudioSettings.qml:52
-#: src/qml/Settings/SubtitlesSettings.qml:81
+#: src/qml/Settings/SubtitlesSettings.qml:79
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "სასურველი ტრეკი"
@@ -1435,25 +1433,17 @@ msgid "Resize to fit video"
 msgstr "ზომის შეცვლა ვიდეოს ჩატევამდე"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Wayland-ზე მხარდაჭერილი არაა.</b>"
+msgstr "Wayland-ზე მხარდაჭერილი არაა."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 ფანჯრის ზომები ვიდეოს გაფართოების შესაბამისად შეიცვლება.\n"
+"ფანჯრის ზომები ვიდეოს გაფართოების შესაბამისად შეიცვლება.\n"
 "მაქსიმალური ზომა შეზღუდული არაა, ამას ოპერაციული სისტემა წყვეტს."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1478,35 +1468,22 @@ msgid "Remember window size and position"
 msgstr "ფანჯრის ზომისა და მდებარეობის დამახსოვრება"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Wayland-ზე მხარდაჭერილი არაა.</b>"
+msgstr "<b>მდებარეობის აღდგენა Wayland-ზე მხარდაჭერილი არაა.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"როცა ფანჯრის ზომა და მდებარეობა იცვლება, ახალი მნიშვნელობები შეინახება და "
-"გამოიყენება აპლიკაციის ზომებისა და ადგილის აღსადგენად, როცა მას თავიდან "
-"გახსნით.\n"
-"\n"
-"\"ზომის შეცვლა ვიდეოს ჩატევამდე\"-ს უფრო დიდი პრიორიტეტი გააჩნია.\n"
+"ცვლილებები ფანჯრის ზომასა და მდებარეობაში ინახება და გამოიყენება ახალი "
+"ფანჯრებისთვის.<br><br>%1პარამეტრს \"ზომის შეცვლა ვიდეოს ჩასატევად\" მეტი "
+"პრიორიტეტი აქვს."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1724,12 +1701,9 @@ msgstr ""
 "ბრძანებით <strong>set hwdec <i>decoder_name</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "დაკვრის მდებარეობის შენახვა"
+msgstr "დაკვრის მდებარეობა"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1744,37 +1718,32 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"ინახავს ფაილის მდებარეობას დაკვრისას. იგივე ფაილის გახსნა შენახულ ადგილას "
+"გადაახვევს.\n"
+"მდებარეობის შენახვა %1 წამში ერთხელ ხდება, ბოლო 10 წამის გარდა."
 msgstr[1] ""
+"ინახავს ფაილის მდებარეობას დაკვრისას. იგივე ფაილის გახსნა შენახულ ადგილას "
+"გადაახვევს.\n"
+"მდებარეობის შენახვა %1 წამში ერთხელ ხდება, ბოლო 10 წამის გარდა."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "გაჯერებულობა"
+msgstr "ნებისმიერი ხანგრძლივობისთვის"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "ფაილისთვის, რომელიც %1 წუთზე გრძელია"
-msgstr[1] "ფაილისთვის, რომელიც %1 წუთზე გრძელია"
+msgstr[0] "თუ ხანგრძლივობა %1 წუთზე მეტია"
+msgstr[1] "თუ ხანგრძლივობა %1 წუთზე მეტია"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "მდებარეობა დაშორებული ფაილებისთვის ხანგრძლივობის მიუხედავად აღდგება."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1782,17 +1751,11 @@ msgstr[0] "პოზიციის ყოველ %1 წამში დამ
 msgstr[1] "პოზიციის ყოველ %1 წამში დამახსოვრება"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "თავების გამოტოვება"
+msgstr "თავები"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "თავების გამოტოვება"
@@ -1987,23 +1950,23 @@ msgctxt "@action"
 msgid "About"
 msgstr "შესახებ"
 
-#: src/qml/Settings/SubtitlesSettings.qml:32
+#: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
-msgid "Autoload subtitles"
-msgstr "სუბტიტრების ავტოჩატვირთვა"
+msgid "Auto select track"
+msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:48
+#: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr "როცა ჩართულია, სუბტიტრის ბილიკის არჩევა და ჩვენება ავტომატურად მოხდება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:105
+#: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "სუბტიტრების შავ საზღვრებში დაშვება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:114
+#: src/qml/Settings/SubtitlesSettings.qml:112
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -2012,70 +1975,70 @@ msgstr ""
 "თუ ჩართულია, სუბტიტრების რენდერი ვიდეოს გარეთაც შეიძლება მოხდეს, შავ "
 "საზღვრებში. შეიძლება ყველა .ass სუბტიტრზე არ იმუშაოს."
 
-#: src/qml/Settings/SubtitlesSettings.qml:119
+#: src/qml/Settings/SubtitlesSettings.qml:117
 msgctxt "@title"
 msgid "Styling"
 msgstr "სტლი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:125
+#: src/qml/Settings/SubtitlesSettings.qml:123
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "ფონტების ოჯახი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:157
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "ფონტის ზომა"
 
-#: src/qml/Settings/SubtitlesSettings.qml:173
+#: src/qml/Settings/SubtitlesSettings.qml:171
 msgctxt "@label"
 msgid "Font style"
 msgstr "ფონტის სტილი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:178
+#: src/qml/Settings/SubtitlesSettings.qml:176
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "გასქელება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:190
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "დახრილი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:200
+#: src/qml/Settings/SubtitlesSettings.qml:198
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "ფონტის ფერი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:251
-#: src/qml/Settings/SubtitlesSettings.qml:307
-#: src/qml/Settings/SubtitlesSettings.qml:384
+#: src/qml/Settings/SubtitlesSettings.qml:249
+#: src/qml/Settings/SubtitlesSettings.qml:305
+#: src/qml/Settings/SubtitlesSettings.qml:382
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "ნაგულისხმები მნიშვნელობის დაყენება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:257
+#: src/qml/Settings/SubtitlesSettings.qml:255
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "ჩრდილის ფერი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:313
+#: src/qml/Settings/SubtitlesSettings.qml:311
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "ჩრდილის წანაცვლება"
 
-#: src/qml/Settings/SubtitlesSettings.qml:329
-#: src/qml/Settings/SubtitlesSettings.qml:406
+#: src/qml/Settings/SubtitlesSettings.qml:327
+#: src/qml/Settings/SubtitlesSettings.qml:404
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "გამოსართავად დააყენეთ მნიშვნელობა 0."
 
-#: src/qml/Settings/SubtitlesSettings.qml:334
+#: src/qml/Settings/SubtitlesSettings.qml:332
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "საზღვრის ფერი"
 
-#: src/qml/Settings/SubtitlesSettings.qml:390
+#: src/qml/Settings/SubtitlesSettings.qml:388
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "საზღვრის სიგანე"
@@ -2209,6 +2172,10 @@ msgstr "გაჯერებულობა"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "შუა-წკაპი სლაიდერების გასანულებლად"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Autoload subtitles"
+#~ msgstr "სუბტიტრების ავტოჩატვირთვა"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-16 00:41+0000\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -582,49 +582,49 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Znovu priradiť"
 
-#: src/mpv/mpvitem.cpp:292
+#: src/mpv/mpvitem.cpp:299
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Kontrast: %1"
 
-#: src/mpv/mpvitem.cpp:392 src/mpv/mpvitem.cpp:394
+#: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Podtitulok: %1 %2"
 
-#: src/mpv/mpvitem.cpp:440
+#: src/mpv/mpvitem.cpp:430
 #, fuzzy, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Žiadne"
 
-#: src/mpv/mpvitem.cpp:479
+#: src/mpv/mpvitem.cpp:469
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:484
+#: src/mpv/mpvitem.cpp:474
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:486
+#: src/mpv/mpvitem.cpp:476
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -632,7 +632,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:543
+#: src/mpv/mpvitem.cpp:533
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1255,7 +1255,7 @@ msgid "Trash file"
 msgstr "Kôš"
 
 #: src/qml/Settings/AudioSettings.qml:25
-#: src/qml/Settings/SubtitlesSettings.qml:53
+#: src/qml/Settings/SubtitlesSettings.qml:51
 #, fuzzy
 #| msgid "Preferred language"
 msgctxt "@label:textbox"
@@ -1263,13 +1263,13 @@ msgid "Preferred language"
 msgstr "Preferovaný jazyk"
 
 #: src/qml/Settings/AudioSettings.qml:33
-#: src/qml/Settings/SubtitlesSettings.qml:61
+#: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "placeholder text"
 msgid "eng, ger etc."
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:52
-#: src/qml/Settings/SubtitlesSettings.qml:81
+#: src/qml/Settings/SubtitlesSettings.qml:79
 #, fuzzy
 #| msgid "Preferred language"
 msgctxt "@label:spinbox"
@@ -2077,97 +2077,95 @@ msgctxt "@action"
 msgid "About"
 msgstr "O aplikácii"
 
-#: src/qml/Settings/SubtitlesSettings.qml:32
-#, fuzzy
-#| msgid "Subtitles"
+#: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
-msgid "Autoload subtitles"
-msgstr "Titulky"
+msgid "Auto select track"
+msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:48
+#: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:105
+#: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:114
+#: src/qml/Settings/SubtitlesSettings.qml:112
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:119
+#: src/qml/Settings/SubtitlesSettings.qml:117
 msgctxt "@title"
 msgid "Styling"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:125
+#: src/qml/Settings/SubtitlesSettings.qml:123
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Rodina písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:157
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Veľkosť písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:173
+#: src/qml/Settings/SubtitlesSettings.qml:171
 msgctxt "@label"
 msgid "Font style"
 msgstr "Štýl písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:178
+#: src/qml/Settings/SubtitlesSettings.qml:176
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Tučné"
 
-#: src/qml/Settings/SubtitlesSettings.qml:190
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Kurzíva"
 
-#: src/qml/Settings/SubtitlesSettings.qml:200
+#: src/qml/Settings/SubtitlesSettings.qml:198
 #, fuzzy
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Farba písma"
 
-#: src/qml/Settings/SubtitlesSettings.qml:251
-#: src/qml/Settings/SubtitlesSettings.qml:307
-#: src/qml/Settings/SubtitlesSettings.qml:384
+#: src/qml/Settings/SubtitlesSettings.qml:249
+#: src/qml/Settings/SubtitlesSettings.qml:305
+#: src/qml/Settings/SubtitlesSettings.qml:382
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:257
+#: src/qml/Settings/SubtitlesSettings.qml:255
 #, fuzzy
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Farba tieňa:"
 
-#: src/qml/Settings/SubtitlesSettings.qml:313
+#: src/qml/Settings/SubtitlesSettings.qml:311
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:329
-#: src/qml/Settings/SubtitlesSettings.qml:406
+#: src/qml/Settings/SubtitlesSettings.qml:327
+#: src/qml/Settings/SubtitlesSettings.qml:404
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:334
+#: src/qml/Settings/SubtitlesSettings.qml:332
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:390
+#: src/qml/Settings/SubtitlesSettings.qml:388
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Šírka okraja"
@@ -2278,6 +2276,12 @@ msgstr "Sýtosť"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Subtitles"
+#~ msgctxt "@label:spinbox"
+#~ msgid "Autoload subtitles"
+#~ msgstr "Titulky"
 
 #, fuzzy
 #~| msgid "Disabled"
