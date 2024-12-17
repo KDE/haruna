@@ -262,13 +262,17 @@ Kirigami.ApplicationWindow {
     Loader {
         id: settingsLoader
 
+        property int page: SettingsWindow.Page.General
+
         active: false
         asynchronous: true
         sourceComponent: SettingsWindow {
             m_mpv: mpv
             m_proxyActionsModel: proxyActionsModel
             m_customCommandsModel: customCommandsModel
+
             onClosing: settingsLoader.active = false
+            onCurrentPageChanged: settingsLoader.page = currentPage
         }
 
         function openSettingPage(page: int) : void {

@@ -113,7 +113,7 @@ Item {
         }
 
         function onConfigureAction() {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.General)
+            root.m_settingsLoader.openSettingPage(root.m_settingsLoader.page)
         }
 
         function onConfigureShortcutsAction() {
