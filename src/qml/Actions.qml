@@ -155,6 +155,13 @@ Item {
         }
 
         function onOpenSubtitlesFileAction() {
+            if (root.m_mpv.currentUrl.toString() === "") {
+                const osdMsg = i18nc("osd message when trying to open subtile selection dialog while no file is open",
+                                     "Can't load subtitle when no file is open")
+                root.m_osd.message(osdMsg)
+                return
+            }
+
             root.openSubtitleDialog()
         }
 

@@ -6,6 +6,7 @@
 
 pragma ComponentBehavior: Bound
 
+import QtCore
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -341,15 +342,7 @@ ApplicationWindow {
     FileDialog {
         id: subtitlesFileDialog
 
-        property url location: {
-            if (mpv.currentUrl) {
-                return HarunaApp.parentUrl(mpv.currentUrl)
-            } else {
-                return (GeneralSettings.fileDialogLocation
-                ? HarunaApp.pathToUrl(GeneralSettings.fileDialogLocation)
-                : HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation))
-            }
-        }
+        property url location: HarunaApp.parentUrl(mpv.currentUrl)
 
         title: i18nc("@title:window", "Select subtitles file")
         currentFolder: location

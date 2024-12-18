@@ -31,7 +31,10 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: appActions.openSubtitlesFileAction }
+    MenuItem {
+        action: appActions.openSubtitlesFileAction
+        enabled: root.m_mpv.currentUrl.toString() !== ""
+    }
     MenuItem { action: appActions.subtitleIncreaseFontSizeAction }
     MenuItem { action: appActions.subtitleDecreaseFontSizeAction }
     MenuItem { action: appActions.subtitleMoveUpAction }
