@@ -26,6 +26,7 @@ Loader {
                                     && !Kirigami.Settings.isMobile
 
     clip: true
+    asynchronous: !GeneralSettings.showMenuBar
     state: {
         const mainWindow = Window.window as Main
         if (!mainWindow.isFullScreen() && GeneralSettings.showMenuBar) {
