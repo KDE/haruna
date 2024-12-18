@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-17 00:39+0000\n"
-"PO-Revision-Date: 2024-12-14 10:47+0100\n"
+"POT-Creation-Date: 2024-12-18 00:39+0000\n"
+"PO-Revision-Date: 2024-12-17 18:05+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -552,12 +552,10 @@ msgid "Could not play: %1"
 msgstr "Non foi posíbel reproducir: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Axuste cronolóxico dos subtítulos: %1"
+msgstr "Axuste dos subtítulos: %1 segundos"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -605,103 +603,103 @@ msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Son: %1 %2"
 
-#: src/qml/Actions.qml:169 src/qml/Actions.qml:175 src/qml/Actions.qml:180
+#: src/qml/Actions.qml:172 src/qml/Actions.qml:178 src/qml/Actions.qml:183
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocidade de reprodución: %1"
 
-#: src/qml/Actions.qml:275
+#: src/qml/Actions.qml:278
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Inicio do bucle: %1"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Bucle: %1 — %2"
 
 # skip-rule: trasno-disable_reverse
-#: src/qml/Actions.qml:287
+#: src/qml/Actions.qml:290
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Desactivouse o bucle"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:310
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Subtítulos desactivados"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:310
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Subtítulos activados"
 
-#: src/qml/Actions.qml:316 src/qml/Actions.qml:328
+#: src/qml/Actions.qml:319 src/qml/Actions.qml:331
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Subtítulos: ningún"
 
-#: src/qml/Actions.qml:320 src/qml/Actions.qml:332
+#: src/qml/Actions.qml:323 src/qml/Actions.qml:335
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Subtítulos: %1 %2"
 
-#: src/qml/Actions.qml:339 src/qml/Actions.qml:345
+#: src/qml/Actions.qml:342 src/qml/Actions.qml:348
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Escala dos subtítulos: %1"
 
-#: src/qml/Actions.qml:359
+#: src/qml/Actions.qml:362
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrelazar: %1"
 
-#: src/qml/Actions.qml:416 src/qml/Actions.qml:422
+#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Ampliación: %1"
 
-#: src/qml/Actions.qml:427
+#: src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Ampliación: 0"
 
-#: src/qml/Actions.qml:434 src/qml/Actions.qml:440
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contraste. %1"
 
-#: src/qml/Actions.qml:445
+#: src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contraste: 0"
 
-#: src/qml/Actions.qml:451 src/qml/Actions.qml:457
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brillo: %1"
 
-#: src/qml/Actions.qml:462
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brillo: 0"
 
-#: src/qml/Actions.qml:468 src/qml/Actions.qml:474
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:479
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:485 src/qml/Actions.qml:491
+#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturación: %1"
 
-#: src/qml/Actions.qml:496
+#: src/qml/Actions.qml:499
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturación: 0"
@@ -833,18 +831,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:307 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:328 src/qml/PlayList.qml:365
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccionar un ficheiro"
 
-#: src/qml/Main.qml:334
+#: src/qml/Main.qml:355
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccionar un ficheiro de subtítulos"
 
-#: src/qml/Main.qml:353
+#: src/qml/Main.qml:374
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"
@@ -1435,25 +1433,17 @@ msgid "Resize to fit video"
 msgstr "Redimensionar para axustar ao vídeo."
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Non funciona en Wayland.</b>"
+msgstr "Non funciona en Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 A xanela redimensionarase de acordo coa resolución do vídeo.\n"
+"A xanela redimensionarase de acordo coa resolución do vídeo.\n"
 "O tamaño máximo non está limitado, o sistema operativo debería encargarse "
 "dese límite."
 
@@ -1479,35 +1469,22 @@ msgid "Remember window size and position"
 msgstr "Lembrar o tamaño e posición da xanela."
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Non funciona en Wayland.</b>"
+msgstr "<b>Wayland non permite restaurar a posición.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"Ao cambiar o tamaño e posición da xanela, os novos valores gárdanse e úsanse "
-"para restaurar a aplicación co mesmo tamaño e posición ao abrir unha nova "
-"instancia.\n"
-"\n"
-"A opción «Redimensionar para axustar ao vídeo» ten precedencia.\n"
+"Os cambios de tamaño e posición da xanela gárdanse e úsanse para as próximas "
+"xanelas que se abran.<br><br>%1A opción de «Cambiar o tamaño para axustar o "
+"vídeo» ten precedencia."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1732,12 +1709,9 @@ msgstr ""
 "i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Gardar a posición de reprodución"
+msgstr "Posición de reprodución"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1752,37 +1726,34 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Garda a posición do ficheiro durante a reprodución. Ao abrir de novo o mesmo "
+"ficheiro, estará na posición gardada.\n"
+"A posición gárdase cada %1 segundo, salvo para os últimos 10 segundos do "
+"vídeo."
 msgstr[1] ""
+"Garda a posición do ficheiro durante a reprodución. Ao abrir de novo o mesmo "
+"ficheiro, estará na posición gardada.\n"
+"A posición gárdase cada %1 segundos, salvo para os últimos 10 segundos do "
+"vídeo."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Saturación"
+msgstr "Para calquera duración"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Para os ficheiros de máis de %1 minuto"
-msgstr[1] "Para os ficheiros de máis de %1 minutos"
+msgstr[0] "Se a duración supera %1 minuto"
+msgstr[1] "Se a duración supera %1 minutos"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "A posición dos ficheiros remotos restáurase sen importar a duración."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1790,20 +1761,14 @@ msgstr[0] "Gardar a posición cada %1 segundo"
 msgstr[1] "Gardar a posición cada %1 segundos"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Saltar capítulos"
+msgstr "Capítulos"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "Saltar capítulos"
+msgstr "Saltar capítulos."
 
 #: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "@info:tooltip skip chapters setting"
@@ -1999,7 +1964,7 @@ msgstr "Sobre"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "Seleccionar a pista automaticamente"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
