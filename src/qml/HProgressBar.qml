@@ -23,6 +23,7 @@ Slider {
     required property MpvVideo m_mpv
 
     property alias loopIndicator: loopIndicator
+    property alias chaptersPopupIsOpen: chaptersPopup.visible
     property bool seekStarted: false
 
     from: 0

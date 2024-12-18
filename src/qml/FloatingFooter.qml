@@ -31,20 +31,10 @@ Item {
     ToolBar {
         id: footer
 
-        function getState() : string {
-            if (root.m_mpv.mouseY > root.m_mpv.height - footer.height * 2) {
-                const mainWindow = Window.window as Main
-                if (mainWindow.containsMouse) {
-                    return "visible"
-                }
-            }
-            return "hidden"
-        }
-
         x: (root.width - width) / 2
         width: Math.min(Window.window.contentItem.width - Kirigami.Units.largeSpacing * 2, 900)
 
-        state: GeneralSettings.floatingFooterTrigger === "EveryMouseMovement" ? "hidden" : getState()
+        state: "hidden"
         padding: Kirigami.Units.smallSpacing
         position: ToolBar.Footer
         hoverEnabled: true
@@ -54,11 +44,9 @@ Item {
         }
 
         Connections {
-            target: GeneralSettings
-            function onFloatingFooterTriggerChanged() {
-                if (GeneralSettings.floatingFooterTrigger === "BottomMouseMovement") {
-                    footer.state = Qt.binding(() => footer.getState())
-                }
+            target: HarunaApp
+            function onQmlApplicationMouseLeave() {
+                hideFooterTimer.start()
             }
         }
 
@@ -66,8 +54,21 @@ Item {
             target: root.m_mpv
             function onMousePositionChanged(x, y) {
                 if (GeneralSettings.floatingFooterTrigger === "EveryMouseMovement") {
+                    hideFooterTimer.stop()
                     footer.state = "visible"
-                    hideFooterTimer.restart()
+                    if (root.m_mpv.mouseY < root.m_mpv.height - footer.height * 2) {
+                        hideFooterTimer.restart()
+                    }
+                } else {
+                    if (y > root.m_mpv.height - footer.height * 2) {
+                        const mainWindow = root.Window.window as Main
+                        if (mainWindow.containsMouse) {
+                            hideFooterTimer.stop()
+                            footer.state = "visible"
+                        }
+                    } else {
+                        hideFooterTimer.start()
+                    }
                 }
             }
         }
@@ -75,13 +76,14 @@ Item {
         Timer {
             id: hideFooterTimer
 
-            running: GeneralSettings.floatingFooterTrigger === "EveryMouseMovement"
+            running: false
             repeat: false
             interval: 1000
             onTriggered: {
-                if (footer.hovered || hamburgerMenu.isOpen) {
+                if (footer.hovered || hamburgerMenu.isOpen || progressBar.chaptersPopupIsOpen) {
                     return
                 }
+
                 footer.state = "hidden"
             }
         }
