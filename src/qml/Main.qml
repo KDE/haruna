@@ -7,16 +7,15 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Window
+import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
-import QtQml
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
 
-Kirigami.ApplicationWindow {
+ApplicationWindow {
     id: window
 
     property bool containsMouse: false
