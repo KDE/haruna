@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-18 00:39+0000\n"
-"PO-Revision-Date: 2024-12-17 19:20+0100\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"POT-Creation-Date: 2024-12-19 00:40+0000\n"
+"PO-Revision-Date: 2024-12-18 11:00+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
@@ -606,127 +606,134 @@ msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Àudio: %1 %2"
 
-#: src/qml/Actions.qml:172 src/qml/Actions.qml:178 src/qml/Actions.qml:183
+#: src/qml/Actions.qml:160
+msgctxt ""
+"osd message when trying to open subtile selection dialog while no file is "
+"open"
+msgid "Can't load subtitle when no file is open"
+msgstr ""
+
+#: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocitat de reproducció: %1"
 
-#: src/qml/Actions.qml:278
+#: src/qml/Actions.qml:285
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Inici de la repetició: %1"
 
-#: src/qml/Actions.qml:284
+#: src/qml/Actions.qml:291
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Repetició: %1 - %2"
 
-#: src/qml/Actions.qml:290
+#: src/qml/Actions.qml:297
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "S'ha esborrat la repetició"
 
-#: src/qml/Actions.qml:310
+#: src/qml/Actions.qml:317
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Desactiva els subtítols"
 
-#: src/qml/Actions.qml:310
+#: src/qml/Actions.qml:317
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Activa els subtítols"
 
-#: src/qml/Actions.qml:319 src/qml/Actions.qml:331
+#: src/qml/Actions.qml:326 src/qml/Actions.qml:338
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Subtítols: Cap"
 
-#: src/qml/Actions.qml:323 src/qml/Actions.qml:335
+#: src/qml/Actions.qml:330 src/qml/Actions.qml:342
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Subtítol: %1 %2"
 
-#: src/qml/Actions.qml:342 src/qml/Actions.qml:348
+#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Escala dels subtítols: %1"
 
-#: src/qml/Actions.qml:362
+#: src/qml/Actions.qml:369
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrellaça: %1"
 
-#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
+#: src/qml/Actions.qml:426 src/qml/Actions.qml:432
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
+#: src/qml/Actions.qml:444 src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrast: %1"
 
-#: src/qml/Actions.qml:448
+#: src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrast: 0"
 
-#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
+#: src/qml/Actions.qml:461 src/qml/Actions.qml:467
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brillantor: %1"
 
-#: src/qml/Actions.qml:465
+#: src/qml/Actions.qml:472
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brillantor: 0"
 
-#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
+#: src/qml/Actions.qml:478 src/qml/Actions.qml:484
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:482
+#: src/qml/Actions.qml:489
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
+#: src/qml/Actions.qml:495 src/qml/Actions.qml:501
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturació: %1"
 
-#: src/qml/Actions.qml:499
+#: src/qml/Actions.qml:506
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturació: 0"
 
-#: src/qml/FloatingFooter.qml:132 src/qml/Footer.qml:80
+#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Inicia la reproducció"
 
-#: src/qml/FloatingFooter.qml:132 src/qml/Footer.qml:80
+#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Fa pausa en la reproducció"
 
-#: src/qml/FloatingFooter.qml:146 src/qml/Footer.qml:93
+#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:93
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Reproduïx el fitxer anterior"
 
-#: src/qml/FloatingFooter.qml:160 src/qml/Footer.qml:106
+#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:106
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Reproduïx el fitxer següent"
 
-#: src/qml/FloatingFooter.qml:178 src/qml/Footer.qml:124
+#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:124
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Resta: %1"
@@ -814,12 +821,20 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Àudio"
 
-#: src/qml/HProgressBar.qml:247
+#: src/qml/HProgressBar.qml:43
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Skip chapters"
+msgctxt "@info:tooltip"
+msgid "Open chapters menu"
+msgstr "Omet els capítols"
+
+#: src/qml/HProgressBar.qml:273
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Omet els capítols"
 
-#: src/qml/HProgressBar.qml:255
+#: src/qml/HProgressBar.qml:281
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -839,12 +854,12 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccioneu un fitxer"
 
-#: src/qml/Main.qml:355
+#: src/qml/Main.qml:347
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccioneu un fitxer de subtítols"
 
-#: src/qml/Main.qml:374
+#: src/qml/Main.qml:366
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Obri"
@@ -1745,8 +1760,8 @@ msgstr "Per a qualsevol duració"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Si la duració supera %1 minut"
-msgstr[1] "Si la duració supera %1 minuts"
+msgstr[0] "Si la duració és superior a %1 minut"
+msgstr[1] "Si la duració és superior a %1 minuts"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"

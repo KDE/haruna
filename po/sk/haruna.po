@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-18 00:39+0000\n"
+"POT-Creation-Date: 2024-12-19 00:40+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -645,165 +645,172 @@ msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Zvuk"
 
-#: src/qml/Actions.qml:172 src/qml/Actions.qml:178 src/qml/Actions.qml:183
+#: src/qml/Actions.qml:160
+msgctxt ""
+"osd message when trying to open subtile selection dialog while no file is "
+"open"
+msgid "Can't load subtitle when no file is open"
+msgstr ""
+
+#: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 #, fuzzy
 #| msgid "&Playback"
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "&Prehrávanie"
 
-#: src/qml/Actions.qml:278
+#: src/qml/Actions.qml:285
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:284
+#: src/qml/Actions.qml:291
 #, fuzzy
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Opakovať"
 
-#: src/qml/Actions.qml:290
+#: src/qml/Actions.qml:297
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr ""
 
-#: src/qml/Actions.qml:310
+#: src/qml/Actions.qml:317
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Titulky"
 
-#: src/qml/Actions.qml:310
+#: src/qml/Actions.qml:317
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Titulky"
 
-#: src/qml/Actions.qml:319 src/qml/Actions.qml:331
+#: src/qml/Actions.qml:326 src/qml/Actions.qml:338
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Titulky"
 
-#: src/qml/Actions.qml:323 src/qml/Actions.qml:335
+#: src/qml/Actions.qml:330 src/qml/Actions.qml:342
 #, fuzzy
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Podtitulok"
 
-#: src/qml/Actions.qml:342 src/qml/Actions.qml:348
+#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Titulky"
 
-#: src/qml/Actions.qml:362
+#: src/qml/Actions.qml:369
 #, fuzzy
 #| msgid "Deinterlace: %1"
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Zrušiť prekladanie"
 
-#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
+#: src/qml/Actions.qml:426 src/qml/Actions.qml:432
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Lupa: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:437
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: %1%"
 
-#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
+#: src/qml/Actions.qml:444 src/qml/Actions.qml:450
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast"
 
-#: src/qml/Actions.qml:448
+#: src/qml/Actions.qml:455
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast"
 
-#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
+#: src/qml/Actions.qml:461 src/qml/Actions.qml:467
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Jas"
 
-#: src/qml/Actions.qml:465
+#: src/qml/Actions.qml:472
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Jas"
 
-#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
+#: src/qml/Actions.qml:478 src/qml/Actions.qml:484
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:482
+#: src/qml/Actions.qml:489
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama"
 
-#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
+#: src/qml/Actions.qml:495 src/qml/Actions.qml:501
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Sýtosť"
 
-#: src/qml/Actions.qml:499
+#: src/qml/Actions.qml:506
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Sýtosť"
 
-#: src/qml/FloatingFooter.qml:132 src/qml/Footer.qml:80
+#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "spustiť prehrávanie"
 
-#: src/qml/FloatingFooter.qml:132 src/qml/Footer.qml:80
+#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
 #, fuzzy
 #| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Pozastaviť prehrávanie"
 
-#: src/qml/FloatingFooter.qml:146 src/qml/Footer.qml:93
+#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:93
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr ""
 
-#: src/qml/FloatingFooter.qml:160 src/qml/Footer.qml:106
+#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:106
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr ""
 
-#: src/qml/FloatingFooter.qml:178 src/qml/Footer.qml:124
+#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:124
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Zostáva: %1"
@@ -901,12 +908,19 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/qml/HProgressBar.qml:247
+#: src/qml/HProgressBar.qml:43
+#, fuzzy
+#| msgid "Show MenuBar"
+msgctxt "@info:tooltip"
+msgid "Open chapters menu"
+msgstr "Zobraziť panel ponuky"
+
+#: src/qml/HProgressBar.qml:273
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr ""
 
-#: src/qml/HProgressBar.qml:255
+#: src/qml/HProgressBar.qml:281
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -924,14 +938,14 @@ msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vyberte súbor"
 
-#: src/qml/Main.qml:355
+#: src/qml/Main.qml:347
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Titulky"
 
-#: src/qml/Main.qml:374
+#: src/qml/Main.qml:366
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otvoriť"
