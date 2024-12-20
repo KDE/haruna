@@ -25,10 +25,12 @@ Item {
     property alias progressBar: progressBar
     property string footerState: isFloating ? "hidden" : "visible"
     property bool isFloating: GeneralSettings.footerStyle === "floating"
+    property bool isSmallSize: width < 600
+    property int buttonSize: isSmallSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
 
     implicitWidth: Window.window.contentItem.width
     implicitHeight: root.isFloating
-                    ? footer.height + Kirigami.Units.largeSpacing * 2
+                    ? footer.height + Kirigami.Units.largeSpacing * (root.isSmallSize ? 1 : 2)
                     : footer.height
 
     ToolBar {
@@ -36,7 +38,7 @@ Item {
 
         x: (root.width - width) / 2
         width: root.isFloating
-               ? Math.min(Window.window.contentItem.width - Kirigami.Units.largeSpacing * 2, 900)
+               ? Math.min(Window.window.contentItem.width - Kirigami.Units.largeSpacing * (root.isSmallSize ? 2 : 4), 900)
                : root.width
 
         state: root.footerState
@@ -93,128 +95,163 @@ Item {
 
             ToolButton {
                 action: appActions.togglePlaylistAction
+                icon.width: root.buttonSize
+                icon.height: root.buttonSize
+                display: root.isSmallSize ? AbstractButton.IconOnly : AbstractButton.TextBesideIcon
             }
         }
 
-        RowLayout {
-            id: footerRow
-
+        ColumnLayout {
+            spacing: 0
             anchors.fill: parent
 
-            HamburgerMenu {
-                id: hamburgerMenu
+            RowLayout {
+                id: footerRow
 
-                m_mpv: root.m_mpv
-                m_recentFilesModel: root.m_recentFilesModel
-                m_settingsLoader: settingsLoader
+                spacing: root.isSmallSize ? 1 : Kirigami.Units.smallSpacing
 
-                position: HamburgerMenu.Position.Footer
-                visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
-            }
+                HamburgerMenu {
+                    id: hamburgerMenu
 
-            Loader {
-                sourceComponent: togglePlaylistButton
-                active: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "left"
-                visible: active
-                asynchronous: true
-            }
+                    m_mpv: root.m_mpv
+                    m_recentFilesModel: root.m_recentFilesModel
+                    m_settingsLoader: settingsLoader
 
-            ToolButton {
-                id: playPauseButton
+                    position: HamburgerMenu.Position.Footer
+                    visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
+                    icon.width: root.buttonSize
+                    icon.height: root.buttonSize
+                }
 
-                action: appActions.playPauseAction
-                display: AbstractButton.IconOnly
-                icon.name: root.m_mpv.pause ? "media-playback-start" : "media-playback-pause"
-                focusPolicy: Qt.NoFocus
-                enabled: root.m_mpv.duration !== 0
+                Loader {
+                    sourceComponent: togglePlaylistButton
+                    active: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "left"
+                    visible: active
+                    asynchronous: true
+                }
 
-                ToolTip {
-                    id: playPauseButtonToolTip
+                ToolButton {
+                    id: playPauseButton
 
-                    text: root.m_mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
+                    action: appActions.playPauseAction
+                    display: AbstractButton.IconOnly
+                    icon.name: root.m_mpv.pause ? "media-playback-start" : "media-playback-pause"
+                    icon.width: root.buttonSize
+                    icon.height: root.buttonSize
+                    focusPolicy: Qt.NoFocus
+                    enabled: root.m_mpv.duration !== 0
+
+                    ToolTip {
+                        id: playPauseButtonToolTip
+
+                        text: root.m_mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
+                    }
+                }
+
+                ToolButton {
+                    id: playPreviousFile
+
+                    action: appActions.playPreviousAction
+                    icon.name: footer.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+                    icon.width: root.buttonSize
+                    icon.height: root.buttonSize
+                    display: AbstractButton.IconOnly
+                    focusPolicy: Qt.NoFocus
+                    enabled: root.m_playlist.playlistView.count > 1
+
+                    ToolTip {
+                        text: i18nc("@info:tooltip", "Play previous file")
+                    }
+                }
+
+                ToolButton {
+                    id: playNextFile
+
+                    action: appActions.playNextAction
+                    icon.name: footer.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+                    icon.width: root.buttonSize
+                    icon.height: root.buttonSize
+                    display: AbstractButton.IconOnly
+                    focusPolicy: Qt.NoFocus
+                    enabled: root.m_playlist.playlistView.count > 1
+
+                    ToolTip {
+                        text: i18nc("@info:tooltip", "Play next file")
+                    }
+                }
+
+                HProgressBar {
+                    id: progressBar
+
+                    m_mpv: root.m_mpv
+
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 20
+                }
+
+                ToolButton {
+                    id: mute
+
+                    action: appActions.muteAction
+                    icon.name: root.m_mpv.mute || root.m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
+                    icon.width: root.buttonSize
+                    icon.height: root.buttonSize
+                    display: AbstractButton.IconOnly
+                    focusPolicy: Qt.NoFocus
+
+                    ToolTip {
+                        text: appActions.muteAction.text
+                    }
+                }
+
+
+                VolumeSlider {
+                    id: volumeSlider
+
+                    m_mpv: root.m_mpv
+                    label.font.pointSize: root.isSmallSize ? 8 : 10
+
+                    Layout.preferredWidth: root.isSmallSize ? 60 : 100
+                    Layout.preferredHeight: 20
+                }
+
+                Loader {
+                    sourceComponent: togglePlaylistButton
+                    active: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "right"
+                    visible: active
+                    asynchronous: true
                 }
             }
 
-            ToolButton {
-                id: playPreviousFile
+            RowLayout {
+                LabelWithTooltip {
+                    id: mediaTitleLabel
 
-                action: appActions.playPreviousAction
-                icon.name: footer.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-                display: AbstractButton.IconOnly
-                focusPolicy: Qt.NoFocus
-                enabled: root.m_playlist.playlistView.count > 1
+                    text: root.m_mpv.mediaTitle
+                    font.pointSize: 9
+                    toolTipText: root.m_mpv.mediaTitle
 
-                ToolTip {
-                    text: i18nc("@info:tooltip", "Play previous file")
+                    Layout.fillWidth: true
                 }
-            }
 
-            ToolButton {
-                id: playNextFile
+                LabelWithTooltip {
+                    id: timeInfo
 
-                action: appActions.playNextAction
-                icon.name: footer.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                display: AbstractButton.IconOnly
-                focusPolicy: Qt.NoFocus
-                enabled: root.m_playlist.playlistView.count > 1
+                    text: "%1 / %2".arg(root.m_mpv.formattedPosition).arg(root.m_mpv.formattedDuration)
+                    font.pointSize: 9
+                    toolTipText: i18nc("@info:tooltip", "Remaining: %1", root.m_mpv.formattedRemaining)
+                    alwaysShowToolTip: true
+                    horizontalAlignment: Qt.AlignHCenter
 
-                ToolTip {
-                    text: i18nc("@info:tooltip", "Play next file")
+                    Layout.minimumWidth: textMetrics.width
+
+                    TextMetrics {
+                        id: textMetrics
+
+                        font: timeInfo.font
+                        text: "000:00:00 / 000:00:00"
+                    }
                 }
-            }
-
-            HProgressBar {
-                id: progressBar
-
-                m_mpv: root.m_mpv
-                Layout.fillWidth: true
-            }
-
-            LabelWithTooltip {
-                id: timeInfo
-
-                text: root.m_mpv.formattedPosition
-                      ? "%1 / %2".arg(root.m_mpv.formattedPosition).arg(root.m_mpv.formattedDuration)
-                      : "00:00:00 / 00:00:00"
-                font.pointSize: Math.floor(Kirigami.Units.gridUnit * 0.6)
-                toolTipText: i18nc("@info:tooltip", "Remaining: %1", root.m_mpv.formattedRemaining)
-                alwaysShowToolTip: true
-                horizontalAlignment: Qt.AlignHCenter
-
-                Layout.minimumWidth: textMetrics.width
-
-                TextMetrics {
-                    id: textMetrics
-
-                    font: timeInfo.font
-                    text: "000:00:00 / 000:00:00"
-                }
-            }
-
-            ToolButton {
-                id: mute
-
-                action: appActions.muteAction
-                icon.name: root.m_mpv.mute || root.m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
-                display: AbstractButton.IconOnly
-                focusPolicy: Qt.NoFocus
-
-                ToolTip {
-                    text: appActions.muteAction.text
-                }
-            }
-
-            VolumeSlider {
-                id: volumeSlider
-
-                m_mpv: root.m_mpv
-            }
-
-            Loader {
-                sourceComponent: togglePlaylistButton
-                active: !PlaylistSettings.canToggleWithMouse && PlaylistSettings.position === "right"
-                visible: active
-                asynchronous: true
             }
         }
 

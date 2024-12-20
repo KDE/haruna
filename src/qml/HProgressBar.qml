@@ -51,8 +51,8 @@ RowLayout {
 
         from: 0
         to: root.m_mpv.duration
-        implicitWidth: 200
-        implicitHeight: 25
+        implicitWidth: root.width
+        implicitHeight: root.height
         leftPadding: 0
         rightPadding: 0
 

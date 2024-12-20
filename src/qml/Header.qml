@@ -21,6 +21,9 @@ ToolBar {
     required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
 
+    property bool isSmallSize: width < 600
+    property int buttonSize: isSmallSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
+
     position: ToolBar.Header
     state: {
         const mainWindow = Window.window as Main
@@ -48,16 +51,23 @@ ToolBar {
 
             position: HamburgerMenu.Position.Header
             visible: !root.m_menuBarLoader.visible || root.m_menuBarLoader.isShowAnimationRunning
+
+            icon.width: root.buttonSize
+            icon.height: root.buttonSize
         }
 
         ToolButton {
             action: appActions.openFileAction
             focusPolicy: Qt.NoFocus
+            icon.width: root.buttonSize
+            icon.height: root.buttonSize
         }
 
         ToolButton {
             action: appActions.openUrlAction
             focusPolicy: Qt.NoFocus
+            icon.width: root.buttonSize
+            icon.height: root.buttonSize
         }
 
         ToolSeparator {}
@@ -67,9 +77,12 @@ ToolBar {
 
             text: i18nc("@action:intoolbar", "Subtitles")
             icon.name: "add-subtitle"
+            icon.width: root.buttonSize
+            icon.height: root.buttonSize
             focusPolicy: Qt.NoFocus
             enabled: root.m_mpv.subtitleTracksModel.rowCount > 1
             opacity: enabled ? 1.0 : 0.6
+            display: root.isSmallSize ? AbstractButton.IconOnly : AbstractButton.TextBesideIcon
 
             onReleased: {
                 subtitleMenu.visible = !subtitleMenu.visible
@@ -88,9 +101,12 @@ ToolBar {
         ToolButton {
             text: i18nc("@action:intoolbar", "Audio")
             icon.name: "audio-volume-high"
+            icon.width: root.buttonSize
+            icon.height: root.buttonSize
             focusPolicy: Qt.NoFocus
             enabled: root.m_mpv.audioTracksModel.rowCount > 0
             opacity: enabled ? 1.0 : 0.6
+            display: root.isSmallSize ? AbstractButton.IconOnly : AbstractButton.TextBesideIcon
 
             onReleased: {
                 audioMenu.visible = !audioMenu.visible
@@ -113,6 +129,9 @@ ToolBar {
         ToolButton {
             action: appActions.configureAction
             focusPolicy: Qt.NoFocus
+            icon.width: root.buttonSize
+            icon.height: root.buttonSize
+            display: root.isSmallSize ? AbstractButton.IconOnly : AbstractButton.TextBesideIcon
         }
     }
 

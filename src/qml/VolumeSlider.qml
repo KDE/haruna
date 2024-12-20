@@ -17,6 +17,8 @@ Slider {
 
     required property MpvItem m_mpv
 
+    property alias label: volumeLabel
+
     from: 0
     to: root.m_mpv.volumeMax
     value: root.m_mpv.volume
@@ -52,7 +54,7 @@ Slider {
     }
 
     Label {
-        id: progressBarToolTip
+        id: volumeLabel
         text: root.value
         anchors.centerIn: root
         color: "#fff"
