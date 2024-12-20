@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-19 00:40+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"PO-Revision-Date: 2024-12-19 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -554,12 +554,10 @@ msgid "Could not play: %1"
 msgstr "क्रीडितुं न शक्तवान्: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "उपशीर्षकसमयः %1"
+msgstr "उपशीर्षकसमयः %1 सेकण्ड्"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -612,7 +610,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "यदा कोऽपि सञ्चिका उद्घाटिता नास्ति तदा उपशीर्षकं लोड् कर्तुं न शक्नोति"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -823,12 +821,9 @@ msgid "Audio"
 msgstr "श्रव्यः"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "अध्यायान् लङ्घयन्तु"
+msgstr "अध्यायानां मेनू उद्घाटयन्तु"
 
 #: src/qml/HProgressBar.qml:273
 msgctxt "@action:inmenu"
@@ -1444,25 +1439,17 @@ msgid "Resize to fit video"
 msgstr "विडियो फिट् कर्तुं आकारं परिवर्तयन्तु"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>वेलैण्ड् इत्यत्र समर्थितं नास्ति ।</b>"
+msgstr "वेलैण्ड् इत्यत्र समर्थितं नास्ति ।"
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 विण्डो इत्यस्य आकारः विडियो संकल्पानुसारं परिवर्तितः भवति ।\n"
+"विण्डो इत्यस्य आकारः विडियो संकल्पानुसारं परिवर्तितः भवति ।\n"
 "अधिकतमः आकारः बाध्यः नास्ति, एतत् प्रचालनतन्त्राय अवशिष्टम् अस्ति ।"
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1487,34 +1474,21 @@ msgid "Remember window size and position"
 msgstr "विण्डो आकारं स्थानं च स्मर्यताम्"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>वेलैण्ड् इत्यत्र समर्थितं नास्ति ।</b>"
+msgstr "<b>वेलैण्ड् इत्यत्र स्थानस्य पुनर्स्थापनं समर्थितं नास्ति।</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"यदा विण्डो आकारः स्थानं च परिवर्तते तदा नूतनानि मूल्यानि रक्षिताः भवन्ति तथा च "
-"नूतनदृष्टान्तस्य उद्घाटने अनुप्रयोगस्य समान आकारे स्थाने च पुनः स्थापयितुं उपयुज्यन्ते ।\n"
-"\n"
-"\"Resize to fit video\" इति सेटिङ्ग् प्राधान्यं प्राप्नोति ।\n"
+"विण्डो इत्यस्य आकारे स्थाने च परिवर्तनं रक्षितं भवति, नव उद्घाटितविण्डोषु च उपयुज्यते।"
+"<br><br>%1\"Resize to fit video\" सेटिंग् प्राधान्यं प्राप्नोति।"
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1724,12 +1698,9 @@ msgstr ""
 "डिकोडरं सेट् कर्तुं शक्नुवन्ति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "प्लेबैकस्थानं रक्षतु"
+msgstr "प्लेबैक स्थिति"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1744,37 +1715,30 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"प्लेबैकस्य समये सञ्चिकास्थानं रक्षति, पुनः समानसञ्चिकां उद्घाट्य रक्षितस्थानं अन्वेषयिष्यति ।\n"
+"स्थानं प्रत्येकं %1 सेकेण्ड् रक्षितं भवति, विडियोस्य अन्तिमं 10 सेकण्ड् विहाय ।"
 msgstr[1] ""
+"प्लेबैकस्य समये सञ्चिकास्थानं रक्षति, पुनः समानसञ्चिकां उद्घाट्य रक्षितस्थानं अन्वेषयिष्यति ।\n"
+"स्थितिः प्रत्येकं %1 सेकेण्ड् मध्ये रक्षिता भवति, विडियोस्य अन्तिमं 10 सेकेण्ड् व्यतिरिक्तम् ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "संतृप्ति"
+msgstr "कस्यापि अवधिपर्यन्तं"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "%1 निमेषात् अधिकदीर्घसञ्चिकानां कृते"
-msgstr[1] "%1 निमेषाभ्यधिकं सञ्चिकानां कृते"
+msgstr[0] "यदि अवधिः %1 निमेषात् अधिका अस्ति"
+msgstr[1] "यदि अवधिः %1 निमेषाभ्यः अधिका अस्ति"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "दूरस्थसञ्चिकानां कृते स्थानं अवधिं न कृत्वा पुनः स्थापितं भवति ।"
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1782,17 +1746,11 @@ msgstr[0] "प्रत्येकं %1 सेकण्ड् स्थान�
 msgstr[1] "प्रत्येकं %1 सेकेण्ड् मध्ये स्थानं रक्षन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "अध्यायान् त्यजन्तु"
+msgstr "अध्यायाः"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "अध्यायान् लङ्घयन्तु"
@@ -1985,7 +1943,7 @@ msgstr "विषये"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "स्वयमेव ट्रैक चयनं कुर्वन्तु"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
