@@ -123,7 +123,7 @@ Item {
                 id: playPauseButton
 
                 action: appActions.playPauseAction
-                text: ""
+                display: AbstractButton.IconOnly
                 icon.name: root.m_mpv.pause ? "media-playback-start" : "media-playback-pause"
                 focusPolicy: Qt.NoFocus
                 enabled: root.m_mpv.duration !== 0
@@ -140,7 +140,7 @@ Item {
 
                 action: appActions.playPreviousAction
                 icon.name: footer.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-                text: ""
+                display: AbstractButton.IconOnly
                 focusPolicy: Qt.NoFocus
                 enabled: root.m_playlist.playlistView.count > 1
 
@@ -154,7 +154,7 @@ Item {
 
                 action: appActions.playNextAction
                 icon.name: footer.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                text: ""
+                display: AbstractButton.IconOnly
                 focusPolicy: Qt.NoFocus
                 enabled: root.m_playlist.playlistView.count > 1
 
@@ -196,7 +196,7 @@ Item {
 
                 action: appActions.muteAction
                 icon.name: root.m_mpv.mute || root.m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
-                text: ""
+                display: AbstractButton.IconOnly
                 focusPolicy: Qt.NoFocus
 
                 ToolTip {
