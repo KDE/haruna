@@ -66,7 +66,6 @@ qt_add_qml_module(haruna
     VERSION 1.0
     QML_FILES
         qml/Actions.qml
-        qml/FloatingFooter.qml
         qml/Footer.qml
         qml/Header.qml
         qml/HProgressBar.qml

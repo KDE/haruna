@@ -88,7 +88,7 @@ ApplicationWindow {
         width: window.contentItem.width
         height: window.isFullScreen()
                 ? window.contentItem.height
-                : window.contentItem.height - footerLoader.footerHeight
+                : window.contentItem.height - (footer.isFloating ? 0 : footer.height)
         anchors.left: PlaylistSettings.overlayVideo
                       ? window.contentItem.left
                       : (PlaylistSettings.position === "left" ? playlist.right : window.contentItem.left)
@@ -135,46 +135,20 @@ ApplicationWindow {
         id: playlist
 
         m_mpv: mpv
-        height: window.isFullScreen() ? mpv.height - footerLoader.footerHeight : mpv.height
+        height: mpv.height
     }
 
-    Loader {
-        id: footerLoader
+    Footer {
+        id: footer
 
-        property int footerHeight: item.isFloating ? 0 : item.height
-
-        active: false
-        asynchronous: true
         anchors.bottom: window.contentItem.bottom
-        sourceComponent: GeneralSettings.footerStyle === "default"
-                         ? footerComponent
-                         : floatingFooterComponent
-    }
 
-    Component {
-        id: footerComponent
-
-        Footer {
-            m_mpv: mpv
-            m_playlist: playlist
-            m_menuBarLoader: menuBarLoader
-            m_header: header
-            m_recentFilesModel: recentFilesModel
-            m_settingsLoader: settingsLoader
-        }
-    }
-
-    Component {
-        id: floatingFooterComponent
-
-        FloatingFooter {
-            m_mpv: mpv
-            m_playlist: playlist
-            m_menuBarLoader: menuBarLoader
-            m_header: header
-            m_recentFilesModel: recentFilesModel
-            m_settingsLoader: settingsLoader
-        }
+        m_mpv: mpv
+        m_playlist: playlist
+        m_menuBarLoader: menuBarLoader
+        m_header: header
+        m_recentFilesModel: recentFilesModel
+        m_settingsLoader: settingsLoader
     }
 
     Actions {
@@ -384,7 +358,6 @@ ApplicationWindow {
     }
 
     Component.onCompleted: {
-        footerLoader.active = true
         HarunaApp.restoreWindowGeometry(window)
         HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
 
@@ -432,7 +405,7 @@ ApplicationWindow {
 
         window.width = mpv.videoWidth
         window.height = mpv.videoHeight
-                + (footerLoader.visible ? footerLoader.height : 0)
+                + (footer.isFloating ? 0 : footer.height)
                 + (header.visible ? header.height : 0)
                 + (menuBar.visible ? menuBar.height : 0)
     }
