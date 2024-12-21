@@ -336,6 +336,7 @@ ApplicationWindow {
 
         x: 10
         y: 10
+        width: Math.min(window.width * 0.9, 600)
         lastUrl: GeneralSettings.lastUrl
         buttonText: i18nc("@action:button", "Open")
 
