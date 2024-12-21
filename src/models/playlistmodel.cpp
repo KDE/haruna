@@ -333,7 +333,7 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
     });
 }
 
-void PlaylistModel::getHttpItemInfo(const QUrl &url, int row)
+void PlaylistModel::getHttpItemInfo(const QUrl &url, uint row)
 {
     auto ytdlProcess = std::make_shared<QProcess>();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
@@ -367,13 +367,13 @@ bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
     // clang-format on
 }
 
-void PlaylistModel::setPlayingItem(int i)
+void PlaylistModel::setPlayingItem(uint i)
 {
-    if (i < -1 || i >= m_playlist.size()) {
+    if (i >= m_playlist.size()) {
         return;
     }
 
-    int previousItem{m_playingItem};
+    uint previousItem{m_playingItem};
     m_playingItem = i;
     Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
@@ -417,13 +417,13 @@ void PlaylistProxyModel::sortItems(Sort sortMode)
     }
 }
 
-int PlaylistProxyModel::getPlayingItem()
+uint PlaylistProxyModel::getPlayingItem()
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
     return mapFromSource(model->index(model->m_playingItem, 0)).row();
 }
 
-void PlaylistProxyModel::setPlayingItem(int i)
+void PlaylistProxyModel::setPlayingItem(uint i)
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
     model->setPlayingItem(mapToSource(index(i, 0)).row());
@@ -469,13 +469,13 @@ void PlaylistProxyModel::saveM3uFile(const QString &path)
     m3uFile.close();
 }
 
-void PlaylistProxyModel::highlightInFileManager(int row)
+void PlaylistProxyModel::highlightInFileManager(uint row)
 {
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     KIO::highlightInFileManager({QUrl::fromUserInput(path)});
 }
 
-void PlaylistProxyModel::removeItem(int row)
+void PlaylistProxyModel::removeItem(uint row)
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
 
@@ -486,7 +486,7 @@ void PlaylistProxyModel::removeItem(int row)
     endRemoveRows();
 }
 
-void PlaylistProxyModel::renameFile(int row)
+void PlaylistProxyModel::renameFile(uint row)
 {
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
     QUrl url(path);
@@ -508,7 +508,7 @@ void PlaylistProxyModel::renameFile(int row)
     });
 }
 
-void PlaylistProxyModel::trashFile(int row)
+void PlaylistProxyModel::trashFile(uint row)
 {
     QList<QUrl> urls;
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
@@ -531,28 +531,28 @@ void PlaylistProxyModel::trashFile(int row)
     });
 }
 
-void PlaylistProxyModel::copyFileName(int row)
+void PlaylistProxyModel::copyFileName(uint row)
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
     auto item = model->m_playlist.at(row);
     QGuiApplication::clipboard()->setText(item.filename);
 }
 
-void PlaylistProxyModel::copyFilePath(int row)
+void PlaylistProxyModel::copyFilePath(uint row)
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
     auto item = model->m_playlist.at(row);
     QGuiApplication::clipboard()->setText(item.url.toString());
 }
 
-QString PlaylistProxyModel::getFilePath(int row)
+QString PlaylistProxyModel::getFilePath(uint row)
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
     auto item = model->m_playlist.at(row);
     return item.url.toString();
 }
 
-bool PlaylistProxyModel::isLastItem(int row)
+bool PlaylistProxyModel::isLastItem(uint row)
 {
     return row == rowCount() - 1;
 }

@@ -25,13 +25,13 @@ public:
     static Worker *instance();
 
 Q_SIGNALS:
-    void metaDataReady(int index, KFileMetaData::PropertyMultiMap metadata);
+    void metaDataReady(uint index, KFileMetaData::PropertyMultiMap metadata);
     void thumbnailSuccess(const QString &path, const QImage &image);
     void thumbnailFail();
     void mprisThumbnailSuccess(const QImage &image);
 
 public Q_SLOTS:
-    void getMetaData(int index, const QString &path);
+    void getMetaData(uint index, const QString &path);
     void makePlaylistThumbnail(const QString &path, int width);
     QImage frameToImage(const QString &path, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);

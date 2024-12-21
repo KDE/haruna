@@ -31,7 +31,7 @@ Worker *Worker::instance()
     return &w;
 }
 
-void Worker::getMetaData(int index, const QString &path)
+void Worker::getMetaData(uint index, const QString &path)
 {
     using namespace KFileMetaData;
 

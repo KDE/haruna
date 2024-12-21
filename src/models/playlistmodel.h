@@ -38,19 +38,19 @@ public:
     Q_ENUM(Sort)
 
     Q_INVOKABLE void sortItems(Sort sortMode);
-    Q_INVOKABLE int getPlayingItem();
-    Q_INVOKABLE void setPlayingItem(int i);
+    Q_INVOKABLE uint getPlayingItem();
+    Q_INVOKABLE void setPlayingItem(uint i);
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void saveM3uFile(const QString &path);
-    Q_INVOKABLE void highlightInFileManager(int row);
-    Q_INVOKABLE void removeItem(int row);
-    Q_INVOKABLE void renameFile(int row);
-    Q_INVOKABLE void trashFile(int row);
-    Q_INVOKABLE void copyFileName(int row);
-    Q_INVOKABLE void copyFilePath(int row);
-    Q_INVOKABLE QString getFilePath(int row);
-    Q_INVOKABLE bool isLastItem(int row);
+    Q_INVOKABLE void highlightInFileManager(uint row);
+    Q_INVOKABLE void removeItem(uint row);
+    Q_INVOKABLE void renameFile(uint row);
+    Q_INVOKABLE void trashFile(uint row);
+    Q_INVOKABLE void copyFileName(uint row);
+    Q_INVOKABLE void copyFilePath(uint row);
+    Q_INVOKABLE QString getFilePath(uint row);
+    Q_INVOKABLE bool isLastItem(uint row);
 };
 
 class PlaylistModel : public QAbstractListModel
@@ -89,7 +89,7 @@ public:
     Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behaviour behaviour);
 
 Q_SIGNALS:
-    void itemAdded(int index, const QString &path);
+    void itemAdded(uint index, const QString &path);
     void playingItemChanged();
 
 private:
@@ -97,12 +97,12 @@ private:
     void getSiblingItems(const QUrl &url);
     void addM3uItems(const QUrl &url);
     void getYouTubePlaylist(const QUrl &url, PlaylistModel::Behaviour behaviour);
-    void getHttpItemInfo(const QUrl &url, int row);
+    void getHttpItemInfo(const QUrl &url, uint row);
     bool isVideoOrAudioMimeType(const QString &mimeType);
-    void setPlayingItem(int i);
+    void setPlayingItem(uint i);
 
     QList<PlaylistItem> m_playlist;
-    int m_playingItem{-1};
+    uint m_playingItem{0};
     QString m_playlistPath;
     int m_httpItemCounter{0};
 };
