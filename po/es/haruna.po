@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-19 00:40+0000\n"
-"PO-Revision-Date: 2024-12-18 00:03+0100\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"PO-Revision-Date: 2024-12-20 02:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -611,7 +611,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "No se pueden cargar subtítulos cuando no hay ningún archivo abierto"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -713,27 +713,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturación: 0"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
+#: src/qml/Footer.qml:134
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Empezar la reproducción"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
+#: src/qml/Footer.qml:134
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Pausar la reproducción"
 
-#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:93
+#: src/qml/Footer.qml:148
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Reproducir el archivo anterior"
 
-#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:106
+#: src/qml/Footer.qml:162
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Reproducir el archivo siguiente"
 
-#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:124
+#: src/qml/Footer.qml:180
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Restantes: %1"
@@ -822,12 +822,9 @@ msgid "Audio"
 msgstr "Sonido"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Omitir capítulos"
+msgstr "Abrir menú de capítulos"
 
 #: src/qml/HProgressBar.qml:273
 msgctxt "@action:inmenu"
@@ -848,18 +845,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:328 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:302 src/qml/PlayList.qml:365
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccionar archivo"
 
-#: src/qml/Main.qml:347
+#: src/qml/Main.qml:321
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccione archivo de subtítulos"
 
-#: src/qml/Main.qml:366
+#: src/qml/Main.qml:340
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"

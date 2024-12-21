@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-19 00:40+0000\n"
-"PO-Revision-Date: 2024-12-17 08:06+0200\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"PO-Revision-Date: 2024-12-19 22:11+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -606,7 +606,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "לא ניתן לטעון כתוביות כשאף קובץ לא פתוח"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -708,27 +708,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "רוויה: 0"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
+#: src/qml/Footer.qml:134
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "התחלת נגינה"
 
-#: src/qml/FloatingFooter.qml:134 src/qml/Footer.qml:80
+#: src/qml/Footer.qml:134
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "השהיית נגינה"
 
-#: src/qml/FloatingFooter.qml:148 src/qml/Footer.qml:93
+#: src/qml/Footer.qml:148
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "ניגון הקובץ הקודם"
 
-#: src/qml/FloatingFooter.qml:162 src/qml/Footer.qml:106
+#: src/qml/Footer.qml:162
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "ניגון הקובץ הבא"
 
-#: src/qml/FloatingFooter.qml:180 src/qml/Footer.qml:124
+#: src/qml/Footer.qml:180
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "נותרו: %1"
@@ -817,12 +817,9 @@ msgid "Audio"
 msgstr "שמע"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "דילוג על פרקים"
+msgstr "פתיחת תפריט פרקים"
 
 #: src/qml/HProgressBar.qml:273
 msgctxt "@action:inmenu"
@@ -843,18 +840,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:328 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:302 src/qml/PlayList.qml:365
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "בחירת קובץ"
 
-#: src/qml/Main.qml:347
+#: src/qml/Main.qml:321
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "בחירת קובץ כתוביות"
 
-#: src/qml/Main.qml:366
+#: src/qml/Main.qml:340
 msgctxt "@action:button"
 msgid "Open"
 msgstr "פתיחה"
