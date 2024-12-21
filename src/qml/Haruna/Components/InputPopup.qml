@@ -30,7 +30,7 @@ Popup {
         Label {
             text: i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
             visible: !HarunaApp.hasYoutubeDl()
-            onLinkActivated: Qt.openUrlExternally(link)
+            onLinkActivated: (link) => Qt.openUrlExternally(link)
         }
 
         TextField {
@@ -48,7 +48,7 @@ Popup {
                     openUrlButton.clicked()
                     return;
                 case Qt.Key_Escape:
-                    openUrlPopup.close()
+                    root.close()
                     return;
                 }
             }
