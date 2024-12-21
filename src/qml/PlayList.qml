@@ -79,7 +79,7 @@ Item {
                 id: playlistView
 
                 // set bottomMargin so that the footer doesn't block playlist items
-                bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 65
+                bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 100
                 model: root.m_mpv.playlistProxyModel
                 reuseItems: true
                 spacing: 1
@@ -421,7 +421,9 @@ Item {
             name: "hidden"
 
             PropertyChanges {
-                root.x: PlaylistSettings.position === "right" ? root.Window.window.width : -width
+                root.x: PlaylistSettings.position === "right"
+                        ? root.Window.window.width
+                        : -width
                 root.visible: false
             }
         },
@@ -429,7 +431,9 @@ Item {
             name : "visible"
 
             PropertyChanges {
-                root.x: PlaylistSettings.position === "right" ? root.Window.window.width - root.width : 0
+                root.x: PlaylistSettings.position === "right"
+                        ? root.Window.window.width - root.width
+                        : 0
                 root.visible: true
             }
         }
@@ -444,7 +448,7 @@ Item {
                 NumberAnimation {
                     target: root
                     property: "x"
-                    duration: 150
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InQuad
                 }
 
@@ -469,7 +473,7 @@ Item {
                 NumberAnimation {
                     target: root
                     property: "x"
-                    duration: 150
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.OutQuad
                 }
             }
