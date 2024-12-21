@@ -222,10 +222,7 @@ Item {
                                 return
                             }
 
-                            contextMenuLoader.row = playlistView.indexAt(mouseX, mouseY)
-                            contextMenuLoader.isLocal = item.isLocal
-                            contextMenuLoader.active = true
-                            contextMenuLoader.item.popup(item)
+                            contextMenuLoader.open(item)
                             break
                         }
                     }
@@ -297,6 +294,40 @@ Item {
                     visible: contextMenuLoader.isLocal
                     onClicked: root.m_mpv.playlistProxyModel.trashFile(contextMenuLoader.row)
                 }
+            }
+
+            function open(item: ItemDelegate) : void {
+                if (!contextMenuLoader.active) {
+                    contextMenuLoader.active = true
+                    contextMenuLoader.loaded.connect(function() {
+                        contextMenuLoader.open(item)
+                    })
+                    return
+                }
+                let playlistItem = null
+                switch (PlaylistSettings.style) {
+                case "default": {
+                    playlistItem = item as PlayListItem
+                    break
+                }
+                case "withThumbnails": {
+                    playlistItem = item as PlayListItemWithThumbnail
+                    break
+                }
+                case "compact": {
+                    playlistItem = item as PlayListItemCompact
+                    break
+                }
+                }
+                if (playlistItem === null) {
+                    return
+                }
+
+                contextMenuLoader.row = item.index
+                contextMenuLoader.isLocal = item.isLocal
+
+                const contextMenu = contextMenuLoader.item as Menu
+                contextMenu.popup()
             }
         }
 
