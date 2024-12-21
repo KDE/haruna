@@ -84,6 +84,7 @@ Item {
                 reuseItems: true
                 spacing: 1
                 currentIndex: root.m_mpv.playlistProxyModel.getPlayingItem()
+                contentItem.z: 20
 
                 headerPositioning: ListView.OverlayHeader
                 header: ToolBar {
