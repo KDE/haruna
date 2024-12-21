@@ -16,7 +16,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
 
-Item {
+Page {
     id: root
 
     required property MpvVideo m_mpv
@@ -41,6 +41,7 @@ Item {
     }
     x: PlaylistSettings.position === "right" ? Window.window.width : -width
     y: 0
+    padding: 0
     state: PlaylistSettings.rememberState
            ? (PlaylistSettings.visible ? "visible" : "hidden")
            : "hidden"
@@ -53,16 +54,121 @@ Item {
         }
     }
 
+    header: ToolBar {
+        id: toolbar
+
+        width: parent.width
+        visible: PlaylistSettings.showToolbar
+        height: visible ? implicitHeight : 0
+
+        RowLayout {
+            anchors.fill: parent
+            Kirigami.ActionToolBar {
+                actions: [
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Open playlist")
+                        icon.name: "media-playlist-append"
+                        onTriggered: {
+                            fileDialog.fileType = "playlist"
+                            fileDialog.fileMode = FileDialog.OpenFile
+                            fileDialog.open()
+                        }
+                    },
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Add ...")
+                        icon.name: "list-add"
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "File")
+                            onTriggered: {
+                                fileDialog.fileType = "video"
+                                fileDialog.fileMode = FileDialog.OpenFile
+                                fileDialog.open()
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Url")
+                            onTriggered: {
+                                if (addUrlPopup.opened) {
+                                    addUrlPopup.close()
+                                } else {
+                                    addUrlPopup.open()
+                                }
+                            }
+                        }
+                    },
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Sort")
+                        icon.name: "view-sort"
+
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Name ascending")
+                            onTriggered: {
+                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameAscending)
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Name descending")
+                            onTriggered: {
+                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameDescending)
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Duration ascending")
+                            onTriggered: {
+                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationAscending)
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Duration descending")
+                            onTriggered: {
+                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
+                            }
+                        }
+                    },
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Clear")
+                        icon.name: "edit-clear-all"
+                        displayHint: Kirigami.DisplayHint.AlwaysHide
+                        onTriggered: {
+                            root.m_mpv.playlistModel.clear()
+                        }
+                    },
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Save as")
+                        icon.name: "document-save-as"
+                        displayHint: Kirigami.DisplayHint.AlwaysHide
+                        onTriggered: {
+                            fileDialog.fileType = "playlist"
+                            fileDialog.fileMode = FileDialog.SaveFile
+                            fileDialog.open()
+                        }
+                    }
+                ]
+            }
+
+        }
+    }
+
+    InputPopup {
+        id: addUrlPopup
+
+        x: Kirigami.Units.largeSpacing
+        y: Kirigami.Units.largeSpacing
+        width: toolbar.width - Kirigami.Units.largeSpacing * 2
+        buttonText: i18nc("@action:button", "Add")
+
+        onUrlOpened: function(url) {
+            root.m_mpv.playlistModel.addItem(url, PlaylistModel.Append)
+        }
+    }
+
     Rectangle {
 
         Rectangle {
             z: 20
             width: 1
             height: parent.height
-            color: {
-                let color = Kirigami.Theme.backgroundColor
-                Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, 0.12)
-            }
+            color: Kirigami.Theme.backgroundColor
         }
 
         anchors.fill: parent
@@ -84,115 +190,6 @@ Item {
                 reuseItems: true
                 spacing: 1
                 currentIndex: root.m_mpv.playlistProxyModel.getPlayingItem()
-                contentItem.z: 20
-
-                headerPositioning: ListView.OverlayHeader
-                header: ToolBar {
-                    id: toolbar
-
-                    z: 100
-                    width: parent.width
-                    visible: PlaylistSettings.showToolbar
-                    height: visible ? implicitHeight : 0
-
-                    InputPopup {
-                        id: addUrlPopup
-
-                        width: toolbar.width - Kirigami.Units.largeSpacing
-                        buttonText: i18nc("@action:button", "Add")
-
-                        onUrlOpened: function(url) {
-                            root.m_mpv.playlistModel.addItem(url, PlaylistModel.Append)
-                        }
-                    }
-
-                    RowLayout {
-                        anchors.fill: parent
-                        Kirigami.ActionToolBar {
-                            actions: [
-                                Kirigami.Action {
-                                    text: i18nc("@action:button", "Open playlist")
-                                    icon.name: "media-playlist-append"
-                                    onTriggered: {
-                                        fileDialog.fileType = "playlist"
-                                        fileDialog.fileMode = FileDialog.OpenFile
-                                        fileDialog.open()
-                                    }
-                                },
-                                Kirigami.Action {
-                                    text: i18nc("@action:button", "Add ...")
-                                    icon.name: "list-add"
-                                    Kirigami.Action {
-                                        text: i18nc("@action:button", "File")
-                                        onTriggered: {
-                                            fileDialog.fileType = "video"
-                                            fileDialog.fileMode = FileDialog.OpenFile
-                                            fileDialog.open()
-                                        }
-                                    }
-                                    Kirigami.Action {
-                                        text: i18nc("@action:button", "Url")
-                                        onTriggered: {
-                                            if (addUrlPopup.opened) {
-                                                addUrlPopup.close()
-                                            } else {
-                                                addUrlPopup.open()
-                                            }
-                                        }
-                                    }
-                                },
-                                Kirigami.Action {
-                                    text: i18nc("@action:button", "Sort")
-                                    icon.name: "view-sort"
-
-                                    Kirigami.Action {
-                                        text: i18nc("@action:button", "Name ascending")
-                                        onTriggered: {
-                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameAscending)
-                                        }
-                                    }
-                                    Kirigami.Action {
-                                        text: i18nc("@action:button", "Name descending")
-                                        onTriggered: {
-                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameDescending)
-                                        }
-                                    }
-                                    Kirigami.Action {
-                                        text: i18nc("@action:button", "Duration ascending")
-                                        onTriggered: {
-                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationAscending)
-                                        }
-                                    }
-                                    Kirigami.Action {
-                                        text: i18nc("@action:button", "Duration descending")
-                                        onTriggered: {
-                                            root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
-                                        }
-                                    }
-                                },
-                                Kirigami.Action {
-                                    text: i18nc("@action:button", "Clear")
-                                    icon.name: "edit-clear-all"
-                                    displayHint: Kirigami.DisplayHint.AlwaysHide
-                                    onTriggered: {
-                                        root.m_mpv.playlistModel.clear()
-                                    }
-                                },
-                                Kirigami.Action {
-                                    text: i18nc("@action:button", "Save as")
-                                    icon.name: "document-save-as"
-                                    displayHint: Kirigami.DisplayHint.AlwaysHide
-                                    onTriggered: {
-                                        fileDialog.fileType = "playlist"
-                                        fileDialog.fileMode = FileDialog.SaveFile
-                                        fileDialog.open()
-                                    }
-                                }
-                            ]
-                        }
-
-                    }
-                }
 
                 delegate: {
                     switch (PlaylistSettings.style) {
