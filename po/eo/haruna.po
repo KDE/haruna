@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"POT-Creation-Date: 2024-12-22 00:39+0000\n"
 "PO-Revision-Date: 2024-08-24 09:18+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -718,27 +718,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturiĝo: 0"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Komenci Reproduktadon"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Paŭzi Reprodukton"
 
-#: src/qml/Footer.qml:148
+#: src/qml/Footer.qml:163
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Ludi antaŭan dosieron"
 
-#: src/qml/Footer.qml:162
+#: src/qml/Footer.qml:179
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Ludi sekvantan dosieron"
 
-#: src/qml/Footer.qml:180
+#: src/qml/Footer.qml:242
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Restas: %1"
@@ -816,12 +816,12 @@ msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Aldonu dosierujon en kiu rigardi pri subtekstoj."
 
-#: src/qml/Header.qml:68
+#: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Subtekstoj"
 
-#: src/qml/Header.qml:89
+#: src/qml/Header.qml:102
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Aŭdio"
@@ -853,7 +853,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
@@ -864,7 +864,7 @@ msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Elekti subtitolan dosieron"
 
-#: src/qml/Main.qml:340
+#: src/qml/Main.qml:341
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Malfermi"
@@ -1034,72 +1034,72 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Laŭteco: %1"
 
-#: src/qml/PlayList.qml:101
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Aldoni"
-
-#: src/qml/PlayList.qml:113
+#: src/qml/PlayList.qml:69
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Malfermi ludliston"
 
-#: src/qml/PlayList.qml:122
+#: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Aldoni ..."
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:81
 msgctxt "@action:button"
 msgid "File"
 msgstr "Dosiero"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "Url"
 msgstr "Url"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:100
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Ordigi"
 
-#: src/qml/PlayList.qml:148
+#: src/qml/PlayList.qml:104
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Nomo supreniranta"
 
-#: src/qml/PlayList.qml:154
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Nomo descendanta"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Daŭro supreniranta"
 
-#: src/qml/PlayList.qml:166
+#: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Daŭro malsupreniranta"
 
-#: src/qml/PlayList.qml:173
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Forviŝi"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Konservi kiel"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:158
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Aldoni"
+
+#: src/qml/PlayList.qml:243
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Malfermi enhavantan dosierujon"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:249
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Open config folder"
@@ -1107,7 +1107,7 @@ msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr "Malfermi agordan dosierujon"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:258
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy file name"
@@ -1115,7 +1115,7 @@ msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "Kopii dosiernomon"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:263
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy file path"
@@ -1123,17 +1123,17 @@ msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr "Kopii dosiervojon"
 
-#: src/qml/PlayList.qml:269
+#: src/qml/PlayList.qml:264
 msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr ""
 
-#: src/qml/PlayList.qml:274
+#: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Forigi el ludlisto"
 
-#: src/qml/PlayList.qml:279
+#: src/qml/PlayList.qml:274
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Rename file"
@@ -1141,12 +1141,12 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Alinomi dosieron"
 
-#: src/qml/PlayList.qml:285
+#: src/qml/PlayList.qml:280
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Rulumi al ludanta ero"
 
-#: src/qml/PlayList.qml:295
+#: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Rubuja dosiero"

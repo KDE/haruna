@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"POT-Creation-Date: 2024-12-22 00:39+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -812,35 +812,35 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "संतृप्ति: 0"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "प्लेबैक प्रारंभ करें"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 #, fuzzy
 #| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "प्लेबैक ठहराएँ"
 
-#: src/qml/Footer.qml:148
+#: src/qml/Footer.qml:163
 #, fuzzy
 #| msgid "Play Previous"
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "पिछला चलाएँ"
 
-#: src/qml/Footer.qml:162
+#: src/qml/Footer.qml:179
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "अगला फ़ाइल चलाएँ"
 
-#: src/qml/Footer.qml:180
+#: src/qml/Footer.qml:242
 #, fuzzy
 #| msgid "Remaining: %1"
 msgctxt "@info:tooltip"
@@ -932,14 +932,14 @@ msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr ""
 
-#: src/qml/Header.qml:68
+#: src/qml/Header.qml:78
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/qml/Header.qml:89
+#: src/qml/Header.qml:102
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action:intoolbar"
@@ -974,7 +974,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 #, fuzzy
 #| msgid "Select file"
@@ -989,7 +989,7 @@ msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:340
+#: src/qml/Main.qml:341
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1215,87 +1215,87 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "आवाज़ : %1"
 
-#: src/qml/PlayList.qml:101
-#, fuzzy
-#| msgid "&Add"
-msgctxt "@action:button"
-msgid "Add"
-msgstr "जोड़ें (&A)"
-
-#: src/qml/PlayList.qml:113
+#: src/qml/PlayList.qml:69
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "वीडियो-सूची"
 
-#: src/qml/PlayList.qml:122
+#: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr ""
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:81
 #, fuzzy
 #| msgid "File"
 msgctxt "@action:button"
 msgid "File"
 msgstr "फ़ाइल"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "Url"
 msgstr ""
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:100
 msgctxt "@action:button"
 msgid "Sort"
 msgstr ""
 
-#: src/qml/PlayList.qml:148
+#: src/qml/PlayList.qml:104
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:154
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr ""
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:166
+#: src/qml/PlayList.qml:122
 #, fuzzy
 #| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "संतृप्ति रिसेट करें"
 
-#: src/qml/PlayList.qml:173
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Clear"
 msgstr ""
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:137
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "परिवर्तन सहेजें"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:158
+#, fuzzy
+#| msgid "&Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "जोड़ें (&A)"
+
+#: src/qml/PlayList.qml:243
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr ""
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:249
 msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr ""
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:258
 #, fuzzy
 #| msgctxt "NAME OF TRANSLATORS"
 #| msgid "Your names"
@@ -1303,40 +1303,40 @@ msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "राघवेंद्र कामत"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr ""
 
-#: src/qml/PlayList.qml:269
+#: src/qml/PlayList.qml:264
 #, fuzzy
 #| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr "यूआरएल खोलें"
 
-#: src/qml/PlayList.qml:274
+#: src/qml/PlayList.qml:269
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "वीडियो-सूची"
 
-#: src/qml/PlayList.qml:279
+#: src/qml/PlayList.qml:274
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/PlayList.qml:285
+#: src/qml/PlayList.qml:280
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "प्लेबैक प्रारंभ करें"
 
-#: src/qml/PlayList.qml:295
+#: src/qml/PlayList.qml:290
 #, fuzzy
 #| msgid "For all files"
 msgctxt "@action:inmenu"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"POT-Creation-Date: 2024-12-22 00:39+0000\n"
 "PO-Revision-Date: 2024-12-17 00:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -713,27 +713,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Asetasuna: 0"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Hasi atzera-jotzen"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Eten atzera-jotzea"
 
-#: src/qml/Footer.qml:148
+#: src/qml/Footer.qml:163
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Jo aurreko fitxategi"
 
-#: src/qml/Footer.qml:162
+#: src/qml/Footer.qml:179
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Jo hurrengo fitxategia"
 
-#: src/qml/Footer.qml:180
+#: src/qml/Footer.qml:242
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Gainerakoa: %1"
@@ -811,12 +811,12 @@ msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Gehitu azpidatziak bilatzeko karpeta bat."
 
-#: src/qml/Header.qml:68
+#: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Azpidatziak"
 
-#: src/qml/Header.qml:89
+#: src/qml/Header.qml:102
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audioa"
@@ -848,7 +848,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
@@ -859,7 +859,7 @@ msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Hautatu azpidatzi-fitxategia"
 
-#: src/qml/Main.qml:340
+#: src/qml/Main.qml:341
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ireki"
@@ -1029,107 +1029,107 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Bolumena: %1"
 
-#: src/qml/PlayList.qml:101
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Gehitu"
-
-#: src/qml/PlayList.qml:113
+#: src/qml/PlayList.qml:69
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Ireki jotze-zerrenda"
 
-#: src/qml/PlayList.qml:122
+#: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Gehitu ..."
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:81
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fitxategia"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "Url"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:100
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sailkatu"
 
-#: src/qml/PlayList.qml:148
+#: src/qml/PlayList.qml:104
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Izena gorakorra"
 
-#: src/qml/PlayList.qml:154
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Izena beherakorra"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Irupena gorakorra"
 
-#: src/qml/PlayList.qml:166
+#: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Iraupena beherakorra"
 
-#: src/qml/PlayList.qml:173
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Garbitu"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Gorde honela"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:158
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Gehitu"
+
+#: src/qml/PlayList.qml:243
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Ireki hau barnean duen karpeta"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:249
 msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr "Ireki arakatzailean"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:258
 msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "Kopiatu izena"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr "Kopiatu bide-izena"
 
-#: src/qml/PlayList.qml:269
+#: src/qml/PlayList.qml:264
 msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr "Kopiatu URLa"
 
-#: src/qml/PlayList.qml:274
+#: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Kendu jotze-zerrendatik"
 
-#: src/qml/PlayList.qml:279
+#: src/qml/PlayList.qml:274
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Berrizendatu"
 
-#: src/qml/PlayList.qml:285
+#: src/qml/PlayList.qml:280
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Kiribildu jotzen ari den elementuraino"
 
-#: src/qml/PlayList.qml:295
+#: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Fitxategia zakarrontzira"

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:40+0000\n"
-"PO-Revision-Date: 2024-12-18 10:02+0100\n"
+"POT-Creation-Date: 2024-12-22 00:39+0000\n"
+"PO-Revision-Date: 2024-12-20 08:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -607,7 +607,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "Impossible de charger le sous-titre lorsqu'aucun fichier n'est ouvert"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -709,27 +709,27 @@ msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturation : 0"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 msgctxt "@info:tooltip"
 msgid "Start Playback"
 msgstr "Démarrer la lecture"
 
-#: src/qml/Footer.qml:134
+#: src/qml/Footer.qml:147
 msgctxt "@info:tooltip"
 msgid "Pause Playback"
 msgstr "Mettre la lecture en pause"
 
-#: src/qml/Footer.qml:148
+#: src/qml/Footer.qml:163
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Lire le fichier précédent"
 
-#: src/qml/Footer.qml:162
+#: src/qml/Footer.qml:179
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Lire le fichier suivant"
 
-#: src/qml/Footer.qml:180
+#: src/qml/Footer.qml:242
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Restant : %1"
@@ -807,23 +807,20 @@ msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Ajoutez un dossier dans lequel rechercher des sous-titres."
 
-#: src/qml/Header.qml:68
+#: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "Sous-titres"
 
-#: src/qml/Header.qml:89
+#: src/qml/Header.qml:102
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Ignorer des chapitres"
+msgstr "Ouvrir le menu des chapitres"
 
 #: src/qml/HProgressBar.qml:273
 msgctxt "@action:inmenu"
@@ -844,7 +841,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:365
+#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
@@ -855,7 +852,7 @@ msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Sélectionnez un fichier de sous-titres"
 
-#: src/qml/Main.qml:340
+#: src/qml/Main.qml:341
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ouvrir"
@@ -1025,107 +1022,107 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume : %1"
 
-#: src/qml/PlayList.qml:101
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Ajouter"
-
-#: src/qml/PlayList.qml:113
+#: src/qml/PlayList.qml:69
 msgctxt "@action:button"
 msgid "Open playlist"
 msgstr "Ouvrir une liste de lecture"
 
-#: src/qml/PlayList.qml:122
+#: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add ..."
 msgstr "Ajouter..."
 
-#: src/qml/PlayList.qml:125
+#: src/qml/PlayList.qml:81
 msgctxt "@action:button"
 msgid "File"
 msgstr "Fichier"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "Url"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:100
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Trier"
 
-#: src/qml/PlayList.qml:148
+#: src/qml/PlayList.qml:104
 msgctxt "@action:button"
 msgid "Name ascending"
 msgstr "Par nom croissant"
 
-#: src/qml/PlayList.qml:154
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Name descending"
 msgstr "Par nom décroissant"
 
-#: src/qml/PlayList.qml:160
+#: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Duration ascending"
 msgstr "Par durée croissante"
 
-#: src/qml/PlayList.qml:166
+#: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Duration descending"
 msgstr "Par durée décroissante"
 
-#: src/qml/PlayList.qml:173
+#: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Effacer"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Save as"
 msgstr "Enregistrer sous"
 
-#: src/qml/PlayList.qml:248
+#: src/qml/PlayList.qml:158
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Ajouter"
+
+#: src/qml/PlayList.qml:243
 msgctxt "@action:inmenu"
 msgid "Open containing folder"
 msgstr "Ouvrir le dossier contenant"
 
-#: src/qml/PlayList.qml:254
+#: src/qml/PlayList.qml:249
 msgctxt "@action:inmenu"
 msgid "Open in browser"
 msgstr "Ouvrir dans un navigateur"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:258
 msgctxt "@action:inmenu"
 msgid "Copy name"
 msgstr "Copier le nom"
 
-#: src/qml/PlayList.qml:268
+#: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
 msgid "Copy path"
 msgstr "Copier l'emplacement"
 
-#: src/qml/PlayList.qml:269
+#: src/qml/PlayList.qml:264
 msgctxt "@action:inmenu"
 msgid "Copy url"
 msgstr "Copier l'URL"
 
-#: src/qml/PlayList.qml:274
+#: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
 msgid "Remove from playlist"
 msgstr "Supprimer de la liste de lecture"
 
-#: src/qml/PlayList.qml:279
+#: src/qml/PlayList.qml:274
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Renommer"
 
-#: src/qml/PlayList.qml:285
+#: src/qml/PlayList.qml:280
 msgctxt "@action:inmenu"
 msgid "Scroll to playing item"
 msgstr "Dérouler jusqu'à l'élément en lecture"
 
-#: src/qml/PlayList.qml:295
+#: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Trash file"
 msgstr "Mettre un fichier à la corbeille"
