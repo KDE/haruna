@@ -86,6 +86,8 @@ RowLayout {
             ToolTip {
                 id: progressBarToolTip
 
+                x: progressBarMouseArea.mouseX - (progressBarToolTip.width * 0.5)
+                y: -height - Kirigami.Units.largeSpacing
                 z: 10
                 visible: progressBarMouseArea.containsMouse && root.m_mpv.duration > 0
                 timeout: -1
@@ -151,16 +153,9 @@ RowLayout {
                 }
 
                 onMouseXChanged: {
-                    progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
-
                     const time = mouseX / progressBarBG.width * slider.to
                     previewMpvLoader.position = time
                     progressBarToolTip.text = HarunaApp.formatTime(time)
-                }
-
-                onEntered: {
-                    progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
-                    progressBarToolTip.y = slider.height + Kirigami.Units.largeSpacing
                 }
 
                 onWheel: function(wheel) {
@@ -174,13 +169,23 @@ RowLayout {
         }
 
         onToChanged: value = root.m_mpv.position
-        onPressedChanged: {
-            if (pressed) {
-                seekStarted = true
-            } else {
-                root.m_mpv.command(["seek", value, "absolute"])
-                seekStarted = false
+
+        onValueChanged: {
+            if (!pressed) {
+                return
             }
+
+            root.m_mpv.command(["seek", slider.value, "absolute"])
+
+            const xPos = (slider.value * 100 / slider.to) / 100 * slider.width
+            progressBarToolTip.x = xPos - (progressBarToolTip.width * 0.5)
+            progressBarToolTip.text = HarunaApp.formatTime(slider.value)
+
+            const previewItem = previewMpvLoader.item as MpvPreview
+            if (previewItem === null) {
+                return
+            }
+            previewItem.command(["seek", slider.value, "absolute"])
         }
 
         // create markers for the chapters

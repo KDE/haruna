@@ -679,7 +679,7 @@ void MpvItem::setPosition(double value)
     if (qFuzzyCompare(value, position())) {
         return;
     }
-    Q_EMIT setProperty(MpvProperties::self()->Position, value);
+    Q_EMIT setPropertyAsync(MpvProperties::self()->Position, value);
 }
 
 double MpvItem::remaining()

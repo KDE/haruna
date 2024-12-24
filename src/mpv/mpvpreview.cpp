@@ -9,6 +9,7 @@
 #include <QMimeDatabase>
 
 #include <MpvController>
+#include <playbacksettings.h>
 
 #include "generalsettings.h"
 #include "mpvproperties.h"
@@ -25,7 +26,8 @@ MpvPreview::MpvPreview()
     Q_EMIT setProperty(MpvProperties::self()->Pause, true);
     Q_EMIT setProperty(MpvProperties::self()->ReallyQuiet, true);
 
-    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, u"auto-safe"_s);
+    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : u"no"_s;
+    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
     Q_EMIT setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
     Q_EMIT setProperty(MpvProperties::self()->AudioId, false);
     Q_EMIT setProperty(MpvProperties::self()->AudioFileAuto, false);
