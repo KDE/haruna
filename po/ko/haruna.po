@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-22 00:39+0000\n"
-"PO-Revision-Date: 2024-12-09 23:32+0100\n"
+"POT-Creation-Date: 2024-12-25 00:40+0000\n"
+"PO-Revision-Date: 2024-12-24 16:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -552,12 +552,10 @@ msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "자막 시간 조정: %1"
+msgstr "자막 시간 조정: %1초"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -610,7 +608,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "연 파일이 없을 때 자막을 불러올 수 없음"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -821,19 +819,16 @@ msgid "Audio"
 msgstr "오디오"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "챕터 건너뛰기"
+msgstr "챕터 메뉴 열기"
 
-#: src/qml/HProgressBar.qml:273
+#: src/qml/HProgressBar.qml:278
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:281
+#: src/qml/HProgressBar.qml:286
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1444,25 +1439,17 @@ msgid "Resize to fit video"
 msgstr "동영상 크기에 맞게 조정"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Wayland에서는 지원하지 않습니다.</b>"
+msgstr "Wayland에서는 지원하지 않습니다."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 창 크기를 동영상 해상도에 맞게 조정합니다.\n"
+"창 크기를 동영상 해상도에 맞게 조정합니다.\n"
 "최대 크기는 제한되어 있지 않으며 운영 체제에 의존합니다."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1487,34 +1474,21 @@ msgid "Remember window size and position"
 msgstr "창 크기와 위치 기억"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Wayland에서는 지원하지 않습니다.</b>"
+msgstr "Wayland에서는 위치 복원을 지원하지 않습니다."
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"창 크기와 위치가 변경되었을 때 새로운 값을 저장하여 새 인스턴스가 열렸을 때 "
-"같은 크기와 위치를 사용합니다.\n"
-"\n"
-"\"동영상 크기에 맞게 조정\" 설정은 이 설정에 우선합니다.\n"
+"창 크기와 위치가 변경되었을 때 새로운 값을 저장하여 새로 열린 창에 사용합니"
+"다.<br><br>%1\"동영상 크기에 맞게 조정\" 설정은 이 설정에 우선합니다."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1728,12 +1702,9 @@ msgstr ""
 "십시오."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "재생 위치 저장"
+msgstr "재생 위치"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1748,52 +1719,38 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"재생 중에 파일 위치를 기억하고 다음에 다시 열었을 때 저장된 위치로 이동합니"
+"다.\n"
+"매 %1초마다 동영상 위치를 저장하며, 마지막 10초는 제외됩니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "채도"
+msgstr "모든 시간에"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "%1분보다 긴 파일"
+msgstr[0] "시간이 %1분보다 더 길 때"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "원격 파일 위치는 시간에 관계 없이 복원됩니다."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "%1초마다 위치 저장"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "챕터 건너뛰기"
+msgstr "챕터 "
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "챕터 건너뛰기"
@@ -1988,13 +1945,13 @@ msgstr "정보"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "트랙 자동 선택"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "이 옵션을 사용하면 자막 트랙을 자동으로 선택하여 표시합니다"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
