@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-25 00:40+0000\n"
-"PO-Revision-Date: 2024-12-12 18:18+0100\n"
+"PO-Revision-Date: 2024-12-19 23:18+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -556,12 +556,10 @@ msgid "Could not play: %1"
 msgstr "Impossibile riprodurre: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Tempo dei sottotitoli: %1"
+msgstr "Tempo dei sottotitoli: %1 secondi"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -614,7 +612,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "Impossibile caricare il sottotitolo se non è aperto alcun file"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -825,12 +823,9 @@ msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Salta capitoli"
+msgstr "Apri menu dei capitoli"
 
 #: src/qml/HProgressBar.qml:278
 msgctxt "@action:inmenu"
@@ -1454,25 +1449,17 @@ msgid "Resize to fit video"
 msgstr "Ridimensiona per adattare il video"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Non supportato in Wayland.</b>"
+msgstr "Non supportato in Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 La finestra viene ridimensionata in base alla risoluzione del video.\n"
+"La finestra viene ridimensionata in base alla risoluzione del video.\n"
 "La dimensione massima non viene limitata ma la decide il sistema operativo."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1497,35 +1484,23 @@ msgid "Remember window size and position"
 msgstr "Ricorda dimensione e posizione della finestra"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Non supportato in Wayland.</b>"
+msgstr ""
+"<b>Il ripristino della posizione non è supportato in Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"Quando la dimensione e la posizione della finestra cambiano, i nuovi valori "
-"sono salvati e utilizzati per ripristinare l'applicazione alla stessa "
-"posizione e dimensione, all'apertura di una nuova istanza..\n"
-"\n"
-"L'impostazione «Ridimensiona per adattare il video» ha precedenza.\n"
+"Le modifiche alla dimensione e alla posizione della finestra sono salvate e "
+"utilizzate per le finestre aperte di recente.<br><br>%1 L'impostazione "
+"«Ridimensiona per adattare il video» ha precedenza."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1748,12 +1723,9 @@ msgstr ""
 "<strong>set hwdec <i>nome_decodificatore</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Salva la posizione di riproduzione"
+msgstr "Posizione di riproduzione"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1768,37 +1740,35 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Salva la posizione del file durante la riproduzione, riaprendo lo stesso "
+"file si posizionerà alla posizione salvata.\n"
+"La posizione è salvata ogni secondo, ad eccezione degli ultimi dieci secondi "
+"del video."
 msgstr[1] ""
+"Salva la posizione del file durante la riproduzione, riaprendo lo stesso "
+"file si posizionerà alla posizione salvata.\n"
+"La posizione è salvata %1 secondi, ad eccezione degli ultimi dieci secondi "
+"del video."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Saturazione"
+msgstr "Per qualsiasi durata"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Per i file lunghi più di un minuto"
-msgstr[1] "Per i file lunghi più di %1 minuti"
+msgstr[0] "Se la durata è più lunga di un minuto"
+msgstr[1] "Se la durata è più lunga di %1 minuti"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
+"La posizione per i file remoti è ripristinata a prescindere dalla durata."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1806,17 +1776,11 @@ msgstr[0] "Salva la posizione ogni secondo"
 msgstr[1] "Salva la posizione ogni %1 secondi"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Salta capitoli"
+msgstr "Capitoli"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Salta capitoli"
@@ -2017,7 +1981,7 @@ msgstr "Informazioni"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "Selezione automatica della traccia"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
