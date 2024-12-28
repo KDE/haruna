@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-25 00:40+0000\n"
-"PO-Revision-Date: 2024-08-24 09:18+0200\n"
+"PO-Revision-Date: 2024-12-27 23:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -102,12 +102,10 @@ msgstr "Pri Haruna"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Raporti cimon"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
 msgstr "Pri Haruna"
@@ -125,9 +123,7 @@ msgid "Audio Cycle Down"
 msgstr "Aŭdio-Cikli Malsupren"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "Agordoj"
@@ -558,12 +554,10 @@ msgid "Could not play: %1"
 msgstr "Ne eblis ludi: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Subtitola tempo: %1"
+msgstr "Subtitola tempumado: %1 sekundoj"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -827,12 +821,9 @@ msgid "Audio"
 msgstr "Aŭdio"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Salti ĉapitrojn"
+msgstr "Menuo por malfermi ĉapitrojn"
 
 #: src/qml/HProgressBar.qml:278
 msgctxt "@action:inmenu"
@@ -1100,33 +1091,24 @@ msgid "Open containing folder"
 msgstr "Malfermi enhavantan dosierujon"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "Malfermi agordan dosierujon"
+msgstr "Malfermi en foliumilo"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "Kopii dosiernomon"
+msgstr "Kopii nomon"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "Kopii dosiervojon"
+msgstr "Kopii vojon"
 
 #: src/qml/PlayList.qml:264
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr ""
+msgstr "Kopii url"
 
 #: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
@@ -1134,12 +1116,9 @@ msgid "Remove from playlist"
 msgstr "Forigi el ludlisto"
 
 #: src/qml/PlayList.qml:274
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Alinomi dosieron"
+msgstr "Alinomi"
 
 #: src/qml/PlayList.qml:280
 msgctxt "@action:inmenu"
@@ -1161,7 +1140,7 @@ msgstr "Preferata lingvo"
 #: src/qml/Settings/SubtitlesSettings.qml:59
 msgctxt "placeholder text"
 msgid "eng, ger etc."
-msgstr "epo, ger ktp."
+msgstr "eng, ger ktp."
 
 #: src/qml/Settings/AudioSettings.qml:52
 #: src/qml/Settings/SubtitlesSettings.qml:79
@@ -1461,32 +1440,27 @@ msgstr "Fenestro"
 #: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr "Aligrandigi por konveni videon"
+msgstr "Aligrandigi por konveni filmeteon"
 
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr ""
+msgstr "Nesubtenata en Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"La fenestro estas regrandigita laŭ la video-distingivo.\n"
+"La fenestro estas aligrandigita laŭ la video-distingivo.\n"
 "La maksimuma grandeco ne estas limigita, ĉi tio estas lasita al la "
 "operaciumo."
 
 #: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Komenci en plenekrana reĝimo"
 
 #: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@info:tooltip"
@@ -1509,25 +1483,15 @@ msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"Kiam fenestrogrando kaj pozicio estas ŝanĝitaj, la novaj valoroj estas "
-"konservitaj kaj uzataj por restarigi la aplikaĵon al la sama grandeco kaj "
-"pozicio kiam nova kazo estas malfermita.\n"
-"\n"
-"La agordo \"Aligrandigi por konveni videon\" havas prioritaton.\n"
+"Ŝanĝoj al la fenestrogrando kaj pozicio estas konservitaj kaj uzataj por "
+"nove malfermataj fenestroj.<br><br>%1La agordo \"Aligrandigi por konveni "
+"filmeton\" havas prioritaton."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1749,12 +1713,9 @@ msgstr ""
 "strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Konservi reproduktan pozicion"
+msgstr "Reproduktan pozicion"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1772,23 +1733,16 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Saturiĝo"
+msgstr "Por ajna daŭro"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Por dosieroj pli longaj ol %1 minuto"
-msgstr[1] "Por dosieroj pli longaj ol %1 minutoj"
+msgstr[0] "Se daŭro estas pli longa ol %1 minuto"
+msgstr[1] "Se daŭro estas pli longa ol %1 minutoj"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
@@ -1796,10 +1750,6 @@ msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1807,20 +1757,14 @@ msgstr[0] "Konservi pozicion ĉiun %1 sekundon"
 msgstr[1] "Konservi pozicion ĉiujn %1 sekundojn"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Salti Ĉapitrojn"
+msgstr "Ĉapitroj"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "Salti ĉapitrojn"
+msgstr "Preterlasi ĉapitrojn"
 
 #: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "@info:tooltip skip chapters setting"
@@ -2234,26 +2178,3 @@ msgstr "Saturiĝo"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Meze alklaku la glitilojn por restarigi ilin"
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "Load subtitles from"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "Ŝargi subtekstojn de"
-
-#~ msgctxt "@info"
-#~ msgid "Disabled"
-#~ msgstr "Malebligita"
-
-#~ msgctxt "@info"
-#~ msgid "For all files"
-#~ msgstr "Por ĉiuj dosieroj"
-
-#~ msgctxt "@action"
-#~ msgid "Configure"
-#~ msgstr "Agordi"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Subtitles function on"
-#~ msgstr "Subtekstfunkcio ŝaltita"
