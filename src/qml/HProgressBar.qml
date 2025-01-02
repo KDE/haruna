@@ -182,7 +182,7 @@ RowLayout {
             progressBarToolTip.text = HarunaApp.formatTime(slider.value)
 
             const previewItem = previewMpvLoader.item as MpvPreview
-            if (previewItem === null) {
+            if (previewItem === null || !previewItem.isLocalFile) {
                 return
             }
             previewItem.command(["seek", slider.value, "absolute"])
