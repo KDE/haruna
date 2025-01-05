@@ -3,69 +3,34 @@
 name: haruna
 confinement: strict
 grade: stable
-base: core22
+base: core24
 adopt-info: haruna
 icon: $CRAFT_PROJECT_DIR/data/icons/128-apps-haruna.png
 apps:
-    haruna:
-        # extensions:
-        # - kde-neon
-        common-id: org.kde.haruna
-        desktop: usr/share/applications/org.kde.haruna.desktop
-        command: usr/bin/haruna
-        plugs:
-        - desktop
-        - desktop-legacy
-        - opengl
-        - wayland
-        - x11
-        - home
-        - network
-        - network-bind
-        - audio-playback
-        - removable-media
-        - alsa
-        - unity7
-        command-chain:
-        - snap/command-chain/desktop-launch
-assumes:
-- snapd2.58.3
-compression: lzo
-plugs:
-    desktop:
-        mount-host-font-cache: false
-    icon-themes:
-        interface: content
-        target: $SNAP/data-dir/icons
-        default-provider: gtk-common-themes
-    sound-themes:
-        interface: content
-        target: $SNAP/data-dir/sounds
-        default-provider: gtk-common-themes
-    kf5-5-110-qt-5-15-11-core22:
-        content: kf5-5-110-qt-5-15-11-core22-all
-        interface: content
-        default-provider: kf5-5-110-qt-5-15-11-core22
-        target: $SNAP/kf5
+  haruna:
+    extensions:
+      - kde-neon-6
+    common-id: org.kde.haruna
+    desktop: usr/share/applications/org.kde.haruna.desktop
+    command: usr/bin/haruna
+    plugs:
+      - home
+      - audio-record
+      - removable-media
 environment:
-    SNAP_DESKTOP_RUNTIME: $SNAP/kf5
     GST_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
     GST_PLUGIN_SYSTEM_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
-    GST_PLUGIN_SCANNER: $SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
-    XDG_DATA_DIRS: $SNAP/current/usr/share:/snap/kf5-5-110-qt-5-15-11-core22/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
-    QT_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins
-    QML2_IMPORT_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml
-    LD_LIBRARY_PATH: "$SNAP/usr/lib:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/lapack"
+    GST_PLUGIN_SCANNER: $SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
     QT_QUICK_CONTROLS_STYLE: org.kde.breeze
-hooks:
-    configure:
-        plugs:
-        - desktop
-        command-chain:
-        - snap/command-chain/hooks-configure-desktop
+    ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
+    LD_LIBRARY_PATH: "$SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/ffmpeg-platform/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib:$SNAP/lib/:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/blas:/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio:${LD_LIBRARY_PATH}"
+    PATH: $SNAP/ffmpeg-platform/usr/bin:${PATH}
+plugs:
+  ffmpeg-2404:
+    interface: content
+    target: ffmpeg-platform # the folder where this content snap will be mounted
+    default-provider: ffmpeg-2404
 layout:
-    /usr/share/X11:
-        symlink: $SNAP/kf5/usr/share/X11
     "/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib":
         bind: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib"
     "/usr/share/alsa":
@@ -82,88 +47,111 @@ package-repositories:
     components:
     - main
     suites:
-    - jammy
+    - noble
     key-id: 444DABCF3667D0283F894EDDE6D4736255751E5D
     url: http://origin.archive.neon.kde.org/user
     key-server: keyserver.ubuntu.com
 parts:
-    kde-neon:
-        source: /snap/snapcraft/current/share/snapcraft/extensions/desktop/kde-neon
-        source-type: local
-        plugin: make
-        make-parameters:
-        - PLATFORM_PLUG=kf5-5-110-qt-5-15-11-core22
-        build-snaps:
-        - kf5-5-110-qt-5-15-11-core22-sdk
-        build-environment:
-        - &id001
-            PATH: /snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/bin${PATH:+:$PATH}
-        - &id002
-            XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
-        - &id003
-            XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
-        - &id004
-            CRAFT_CMAKE_ARGS: -DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-11-core22-sdk/current${CRAFT_CMAKE_ARGS:+:$CRAFT_CMAKE_ARGS}
-    haruna:
-        after:
-        - kde-neon
-        parse-info:
-        - usr/share/metainfo/org.kde.haruna.metainfo.xml
-        plugin: cmake
-        build-packages:
-        - cmake
-        - breeze-dev
-        - libkf5doctools-dev
-        - libmpv-dev
-        - libswscale-dev
-        - qtbase5-private-dev
-        - yt-dlp
-        build-snaps:
-        - ffmpeg-2204-sdk
-        stage-packages:
-        - gstreamer1.0-alsa
-        - gstreamer1.0-plugins-base
-        - gstreamer1.0-plugins-bad
-        - gstreamer1.0-plugins-good
-        - gstreamer1.0-plugins-ugly
-        - gstreamer1.0-libav
-        - libasound2
-        - libasound2-data
-        - libasound2-plugins
-        - libasound2-plugins-extra
-        - breeze-icons
-        - breeze
-        - phonon4qt5
-        - phonon4qt5-backend-gstreamer
-        - qml-module-org-kde-kirigami2
-        - qml-module-qt-labs-platform
-        - qml-module-qtquick-shapes
-        - qml-module-org-kde-qqc2breezestyle
-        - libmpv1
-        - libswscale5
-        stage-snaps:
-        - ffmpeg-2204
-        source: .
-        source-type: local
-        cmake-parameters:
-        - -DCMAKE_INSTALL_PREFIX=/usr
-        - -DCMAKE_BUILD_TYPE=Release
-        - -DENABLE_TESTING=OFF
-        - -DBUILD_TESTING=OFF
-        - -DKDE_SKIP_TEST_SETTINGS=ON
-        - -DCMAKE_FIND_ROOT_PATH=$CRAFT_STAGE\;/snap/kf5-5-110-qt-5-15-11-core22-sdk/current
-        prime:
-        - "-usr/lib/*/cmake/*"
-        - "-usr/include/*"
-        - "-usr/share/ECM/*"
-        - "-usr/share/doc/*"
-        - "-usr/share/man/*"
-        - "-usr/share/icons/breeze-dark*"
-        - "-usr/bin/X11"
-        - "-usr/lib/gcc/$CRAFT_ARCH_TRIPLET/6.0.0"
-        - "-usr/lib/aspell/*"
-        build-environment: &id005
-        - *id001
-        - *id002
-        - *id003
-        - *id004
+  mpvqt:
+    plugin: cmake
+    source: https://invent.kde.org/libraries/mpvqt.git
+    source-branch: master
+    build-packages:
+      - libmpv-dev
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DQT_MAJOR_VERSION=6
+      - -DBUILD_WITH_QT6=ON
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_INSTALL_SYSCONFDIR=/etc
+      - -DCMAKE_INSTALL_LOCALSTATEDIR=/var
+      - -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF
+      - -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_INSTALL_RUNSTATEDIR=/run
+      - -DCMAKE_SKIP_INSTALL_ALL_DEPENDENCY=ON
+      - -DCMAKE_VERBOSE_MAKEFILE=ON
+      - -DCMAKE_INSTALL_LIBDIR=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+      - --log-level=STATUS
+      - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+  haruna:
+    after:
+      - mpvqt
+    parse-info:
+      - usr/share/metainfo/org.kde.haruna.metainfo.xml
+    plugin: cmake
+    build-packages:
+      - libmpv-dev
+      - yt-dlp
+    build-snaps:
+      - ffmpeg-2404-sdk
+    stage-packages:
+      - gstreamer1.0-alsa
+      - gstreamer1.0-plugins-base
+      - gstreamer1.0-plugins-bad
+      - gstreamer1.0-plugins-good
+      - gstreamer1.0-plugins-ugly
+      - gstreamer1.0-libav
+      - libasound2
+      - libasound2-data
+      - libasound2-plugins
+      - libasound2-plugins-extra
+      - libmpv2
+    source: .
+    source-type: local
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DQT_MAJOR_VERSION=6
+      - -DBUILD_WITH_QT6=ON
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_INSTALL_SYSCONFDIR=/etc
+      - -DCMAKE_INSTALL_LOCALSTATEDIR=/var
+      - -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF
+      - -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_INSTALL_RUNSTATEDIR=/run
+      - -DCMAKE_SKIP_INSTALL_ALL_DEPENDENCY=ON
+      - -DCMAKE_VERBOSE_MAKEFILE=ON
+      - -DCMAKE_INSTALL_LIBDIR=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+      - --log-level=STATUS
+      - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+      - "-DCMAKE_FIND_ROOT_PATH=$CRAFT_STAGE\\;/snap/kde-qt6-core24-sdk/current\\;/snap/kf6-core24-sdk/current/usr"
+      - "-DCMAKE_PREFIX_PATH=$CRAFT_STAGE\\;/snap/kde-qt6-core24-sdk/current\\;/snap/kf6-core24-sdk/current/usr"
+    build-environment: &buildenvironment
+      - PATH: /snap/kde-qt6-core24-sdk/current/usr/bin${PATH:+:$PATH}
+      - PKG_CONFIG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}
+      - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
+      - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
+      - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    prime:
+      - "-usr/lib/*/cmake/*"
+      - "-usr/include/*"
+      - "-usr/share/ECM/*"
+      - "-usr/share/doc/*"
+      - "-usr/share/man/*"
+      - "-usr/bin/X11"
+      - "-usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/6.0.0"
+      - "-usr/lib/aspell/*"
+  gpu-2404:
+    after: [haruna]
+    source: https://github.com/canonical/gpu-snap.git
+    plugin: dump
+    override-prime: |
+      craftctl default
+      ${CRAFT_PART_SRC}/bin/gpu-2404-cleanup mesa-2404
+    prime:
+      - bin/gpu-2404-wrapper
+  cleanup:
+    after:
+      - haruna
+    plugin: nil
+    build-snaps:
+      - core24
+      - kf6-core24
+    override-prime: |
+      set -eux
+      for snap in "core24" "kf6-core24"; do
+        cd "/snap/$snap/current" && find . -type f,l -exec rm -rf "${CRAFT_PRIME}/{}" \;
+      done
