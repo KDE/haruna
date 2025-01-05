@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-25 00:40+0000\n"
-"PO-Revision-Date: 2024-11-30 16:37+0400\n"
+"PO-Revision-Date: 2025-01-04 20:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -553,12 +553,10 @@ msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "توقيت الترجمة:  : %1"
+msgstr "توقيت الترجمة:  : %1ث"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -611,7 +609,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "لا يمكن تحميل الترجمة عندما لا يكون هناك ملف مفتوح"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -809,7 +807,7 @@ msgstr "أضف مجلداً جديداً"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:171
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "أضف مجلدًا للبحث عن الترجمات."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -822,12 +820,9 @@ msgid "Audio"
 msgstr "صوت"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "تخط الفصول"
+msgstr "افتح قائمة الفصول"
 
 #: src/qml/HProgressBar.qml:278
 msgctxt "@action:inmenu"
@@ -1173,6 +1168,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"محددة: ستعين الخاصية عند بدء التشغيل\n"
+"لم يتم التحقق منها: لن تعين الخاصية عند بدء التشغيل"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:167
 msgctxt "@action:intoolbar"
@@ -1247,6 +1244,15 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"ما هو أمر mpv الذي يجب تشغيله، راجع <a href=\"https://mpv.io/manual/stable/"
+"#list-of-input-commands\">أوامر MPV</a> للحصول على قائمة بالأوامر المتاحة."
+"<br>لن تعمل جميع الأوامر حيث أن بعضها خاص بـ mpv.<br>الأكثر فائدة هي الأوامر "
+"الخاصة بالتلاعب بالخصائص، مثل <strong>set</strong> و<strong>add</strong> "
+"و<strong>cycle</strong>.<br><strong>set</strong>: تعيين قيمة الخاصية "
+"<strong>set volume-max 150</strong>.<br><strong>add</strong>: زيادة/تقليل "
+"قيمة الخاصية <strong>add volume 15</strong>، وزيادة مستوى الصوت بمقدار 15. "
+"لتقليل القيمة، استخدم <strong>add volume -15</strong>.<br><strong>cycle</"
+"strong>: التنقل بين قيم الخاصية <strong>cycle aid up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:74
 msgctxt "@label:textbox"
@@ -1265,6 +1271,8 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"رسالة الشاشة التي ستعرض عند تشغيل أمر مخصص لنوع الإجراء.<br>استخدم "
+"${property_name} لعرض قيمة الخاصية <strong>Volume: ${volume}"
 
 #: src/qml/Settings/EditCustomCommand.qml:99
 msgctxt "@label"
@@ -1281,7 +1289,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
-msgstr ""
+msgstr "سيشغل الأمر باستخدام اختصار. يمكن تعيين الاختصار بعد الحفظ."
 
 #: src/qml/Settings/EditCustomCommand.qml:130
 msgctxt "@option:radio"
@@ -1291,7 +1299,7 @@ msgstr "تشغيل عند البدء"
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "سيشغل الأمر عند بدء تشغيل التطبيق."
 
 #: src/qml/Settings/EditCustomCommand.qml:143
 msgctxt "@action:intoolbar"
@@ -1319,14 +1327,13 @@ msgid "File dialog location"
 msgstr "موقع حواري الملف"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty the file dialog will "
 "try to open to the last opened location."
-msgstr "إذا كان فارغاً سيتذكر حواري الملف أخر موقع مفتوح."
+msgstr ""
+"الموقع الافتراضي لمربع حوار فتح الملف. إذا كان مربع حوار الملف فارغًا، "
+"فسيحاول فتحه على آخر موقع مفتوح."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1377,7 +1384,7 @@ msgstr "نمط التذييل"
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "اعرض التذييل العائم على"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
@@ -1386,6 +1393,9 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 msgstr ""
+"ما الإجراء الذي يظهر في التذييل.<br><strong>كل حركة للفأرة</strong> - كل "
+"حركة للفأرة فوق منطقة الفيديو<br><strong>حركة الفأرة في الأسفل</strong> - "
+"حركة الفأرة في أسفل منطقة الفيديو"
 
 #: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
@@ -1400,7 +1410,7 @@ msgstr "اعرض مصغرة المعاينة"
 #: src/qml/Settings/GeneralSettings.qml:241
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
-msgstr ""
+msgstr "يعرض معاينة أثناء تحريك شريط البحث/التقدم."
 
 #: src/qml/Settings/GeneralSettings.qml:250
 msgctxt "@option:check"
@@ -1430,20 +1440,15 @@ msgstr "غير الحجم ليلائم الفيديو"
 #: src/qml/Settings/GeneralSettings.qml:319
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr ""
+msgstr "غير مدعومة في ويلاند."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 غُير حجم النافذة وفقاً لدقة الفيديو.\n"
+"غُير حجم النافذة وفقاً لدقة الفيديو.\n"
 "الحد الأقصى للحجم غير مقيد، فهذا متروك لنظام التشغيل."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1458,6 +1463,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"ادخل إلى وضع ملء الشاشة عند بدء تشغيل التطبيق.\n"
+"يأخذ هذا الأولوية على تغيير الحجم ليناسب الفيديو، وتذكر إعدادات حجم النافذة "
+"وموضعها."
 
 #: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@option:check"
@@ -1469,27 +1477,17 @@ msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr ""
+msgstr "<b>استعادة الوضع غير مدعومة في ويلاند.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"عند تغيير حجم الإطار وموضعه، تحفظ القيم الجديدة واستخدامها لاستعادة التطبيق "
-"إلى نفس الحجم والموضع عند فتح مثيل جديد.\n"
-"\n"
-"يكون للإعداد \"تغيير الحجم ليناسب الفيديو\" الأسبقية.\n"
+"تحفظ التغييرات التي تطرأ على حجم النافذة وموضعها، وتستخدم للنوافذ المفتوحة "
+"حديثًا.<br><br>%1 يكون لإعداد \"تغيير الحجم ليناسب الفيديو\" الأولوية."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1558,6 +1556,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"ما مقدار البحث المطلوب عند تشغيل الإجراء المقابل. وضع البحث هو <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>دقيق</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:53
 msgctxt "@label:spinbox"
@@ -1572,6 +1573,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"ما مقدار البحث المطلوب عند تشغيل الإجراء المقابل. وضع البحث هو <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>دقيق</a>.<br>يستخدم هذا أيضًا للبحث في عجلة الماوس، عندما يكون "
+"الماوس فوق شريط التقدم."
 
 #: src/qml/Settings/PlaybackSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1585,6 +1590,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"ما مقدار البحث المطلوب عند تشغيل الإجراء المقابل. وضع البحث هو <a "
+"href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
+"[<flags>]'>دقيق</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:110
 msgctxt "@option:check"
@@ -1592,11 +1600,6 @@ msgid "Pause on minimize"
 msgstr "صغّر عن اللبث"
 
 #: src/qml/Settings/PlaybackSettings.qml:119
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1618,7 +1621,7 @@ msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
-msgstr ""
+msgstr "عند بدء التشغيل، سيفتح الملف الذي كان يتم تشغيله عند إغلاق التطبيق."
 
 #: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@option:check"
@@ -1626,17 +1629,13 @@ msgid "Seek to last playback position"
 msgstr "اسعَ لأخر موضوع معروض"
 
 #: src/qml/Settings/PlaybackSettings.qml:158
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, seek at the position it was "
-#| "last time."
 msgctxt "@info:tooltip seek to last playback position setting"
 msgid ""
 "When opening a file that was played before, seek at the position it was last "
 "time."
 msgstr ""
-"عند فتح ملف شُغل من قبل؛ سيبدأ في الموضع الذي كان عليه عندما توقف التشغيل."
+"عند فتح ملف شُغل من قبل؛ سيبدأ في الموضع الذي كان عليه عندما توقف التشغيل أخر "
+"مرة."
 
 #: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@option:check"
@@ -1644,16 +1643,12 @@ msgid "Start playing"
 msgstr "ابدأ التشغيل"
 
 #: src/qml/Settings/PlaybackSettings.qml:177
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When opening a file that was played before, start playing it "
-#| "automatically."
 msgctxt "@info:tooltip start playing setting"
 msgid ""
 "When resuming playback and seeking to last playback position, start playing "
 "it automatically."
-msgstr "عند فتح ملف شُغل من قبل؛ سيبدأ في تشغيله تلقائيا."
+msgstr ""
+"عند استئناف التشغيل والبحث عن موضع التشغيل الأخير، ابدأ تشغيله تلقائيًا."
 
 #: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
@@ -1690,14 +1685,27 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"حدد واجهة برمجة تطبيقات فك تشفير الفيديو المادية التي يجب استخدامها إذا "
+"أمكن. يعتمد ما إذا كان فك التشفير المادي يتم بالفعل على برنامج ترميز "
+"الفيديو. إذا لم يكن فك التشفير المادي ممكنًا، فسوف يعتمد mpv على فك التشفير "
+"البرمجي.<br><br><ul><li><strong>auto</strong> يحاول تمكين فك التشفير المادي "
+"تلقائيًا باستخدام أول طريقة متاحة.</li><li><strong>auto-safe</strong> مشابه "
+"لـ auto، لكنه يسمح فقط بالطرق المدرجة في القائمة البيضاء والتي تعتبر \"آمنة"
+"\".</li><li><strong>vaapi</strong> يعمل فقط مع وحدات معالجة الرسوميات Intel "
+"وAMD. كما يتطلب أيضًا واجهة OpenGL الخلفية EGL.</li><li><strong>nvdec</"
+"strong> هي الطريقة الأحدث والموصى بها لفك تشفير الأجهزة على وحدات معالجة "
+"الرسومات Nvidia.</li><li><strong>cuda</strong> هي تنفيذ أقدم لفك تشفير "
+"الأجهزة على وحدات معالجة الرسومات Nvidia.</li><li><strong>videotoolbox</"
+"strong></li><li><strong>d3d11va</strong></li></ul><br><br>يمكنك قراءة المزيد "
+"حول فك تشفير الأجهزة هنا: <a href='https://mpv.io/manual/stable/#options-"
+"hwdec'>https://mpv.io/manual/stable/#options-hwdec</a><br><br>يمكنك تعيين فك "
+"تشفير أجهزة آخر عن طريق إنشاء أمر بدء تشغيل مخصص <strong>set hwdec "
+"<i>decoder_name</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "احفظ موضع التشغيل"
+msgstr "موضع التشغيل"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1712,84 +1720,78 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"يحفظ موضع الملف أثناء التشغيل، وسيؤدي فتح نفس الملف مرة أخرى إلى البحث عن "
+"الموضع المحفوظ.\n"
+"يحفظ الموضع كل %1 ثانية، باستثناء آخر 10 ثوانٍ من الفيديو."
 msgstr[1] ""
+"يحفظ موضع الملف أثناء التشغيل، وسيؤدي فتح نفس الملف مرة أخرى إلى البحث عن "
+"الموضع المحفوظ.\n"
+"يحفظ الموضع كل ثانية واحدة، باستثناء آخر 10 ثوانٍ من الفيديو."
 msgstr[2] ""
+"يحفظ موضع الملف أثناء التشغيل، وسيؤدي فتح نفس الملف مرة أخرى إلى البحث عن "
+"الموضع المحفوظ.\n"
+"يحفظ الموضع كل ثانيتين، باستثناء آخر 10 ثوانٍ من الفيديو."
 msgstr[3] ""
+"يحفظ موضع الملف أثناء التشغيل، وسيؤدي فتح نفس الملف مرة أخرى إلى البحث عن "
+"الموضع المحفوظ.\n"
+"يحفظ الموضع كل %1 ثواني، باستثناء آخر 10 ثوانٍ من الفيديو."
 msgstr[4] ""
+"يحفظ موضع الملف أثناء التشغيل، وسيؤدي فتح نفس الملف مرة أخرى إلى البحث عن "
+"الموضع المحفوظ.\n"
+"يحفظ الموضع كل %1 ثانية، باستثناء آخر 10 ثوانٍ من الفيديو."
 msgstr[5] ""
+"يحفظ موضع الملف أثناء التشغيل، وسيؤدي فتح نفس الملف مرة أخرى إلى البحث عن "
+"الموضع المحفوظ.\n"
+"يحفظ الموضع كل %1 ثانية، باستثناء آخر 10 ثوانٍ من الفيديو."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "التّشبّع"
+msgstr "لأي مدة"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "للملفات الأطول من دقيقة"
-msgstr[1] "للملفات الأطول من دقيقة"
-msgstr[2] "للملفات الأطول من دقيقتين"
-msgstr[3] "للملفات الأطول من %1 دقائق"
-msgstr[4] "للملفات الأطول من %1 دقيقة"
-msgstr[5] "للملفات الأطول من %1 دقيقة"
+msgstr[0] "إذا كانت المدة أطول من دقيقة"
+msgstr[1] "إذا كانت المدة أطول من دقيقة"
+msgstr[2] "إذا كانت المدة أطول من دقيقتين"
+msgstr[3] "إذا كانت المدة أطول من %1 دقائق"
+msgstr[4] "إذا كانت المدة أطول من %1 دقيقة"
+msgstr[5] "إذا كانت المدة أطول من %1 دقيقة"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "سيستعاد موضع الملفات البعيدة بغض النظر عن المدة."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] "احفظ الموقع كل ثانية"
-msgstr[1] "احفظ الموقع كل ثانية"
-msgstr[2] "احفظ الموقع كل ثانيتين"
-msgstr[3] "احفظ الموقع كل %1 ثواني"
-msgstr[4] "احفظ الموقع كل %1 ثانية"
-msgstr[5] "احفظ الموقع كل %1 ثانية"
+msgstr[0] "احفظ الموضع كل ثانية"
+msgstr[1] "احفظ الموضع كل ثانية"
+msgstr[2] "احفظ الموضع كل ثانيتين"
+msgstr[3] "احفظ الموضع كل %1 ثواني"
+msgstr[4] "احفظ الموضع كل %1 ثانية"
+msgstr[5] "احفظ الموضع كل %1 ثانية"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "تخط الفصول"
+msgstr "الفصول"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "تخط الفصول"
+msgstr "تخط فصول"
 
 #: src/qml/Settings/PlaybackSettings.qml:370
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr ""
-"تخطَ الفصول التي تحوي كلمات/حروف معينة.\n"
-"راجع إعدادات \"التشغيل\" لمزيد من التفاصيل"
+msgstr "عند تمكينه، فإنه يتخطى تلقائيًا الفصول التي تحتوي على كلمات/أحرف معينة."
 
 #: src/qml/Settings/PlaybackSettings.qml:378
 msgctxt "@option:check"
@@ -1801,7 +1803,7 @@ msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
-msgstr ""
+msgstr "عند تخطي الفصول، ستظهر رسالة شاشة تحوي عنوان الفصل الذي تم تخطيه."
 
 #: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@label:textbox"
@@ -1820,6 +1822,9 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"تخطي الفصول التي تحتوي على هذه الكلمات. قائمة مفصولة بفواصل. المطابقة ليست "
+"دقيقة، مما يعني أن <strong>op</strong> ستطابق الكلمات التي تحتوي عليها مثل "
+"<strong><u>op</u>ening</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:432
 msgctxt "@title"
@@ -1831,14 +1836,9 @@ msgid "Format selection"
 msgstr "اختيار التنسيق"
 
 #: src/qml/Settings/PlaybackSettings.qml:478
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "يختار أفضل فيديو بارتفاع أقل من أو يساوي القيمة المحددة."
+msgstr "يحدد مصدر الفيديو الأقرب إلى التنسيق المحدد."
 
 #: src/qml/Settings/PlaybackSettings.qml:507
 msgctxt "placeholder text"
@@ -1976,13 +1976,13 @@ msgstr "عن"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "تحديد المسار تلقائيًا"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "عند تحديد هذا الخيار، سيتم تحديد مسار الترجمة تلقائيًا وعرضه"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
@@ -2134,6 +2134,34 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"حدد قالب اسم الملف المستخدم لحفظ لقطات الشاشة. يحدد القالب اسم الملف بدون "
+"امتداد الملف، ويمكن أن يحتوي على مواصفات تنسيق، والتي سيتم استبدالها عند "
+"التقاط لقطة شاشة. بشكل افتراضي، يكون القالب هو \"%F-%n\". <br>يمكن أن يبدأ "
+"القالب بمسار نسبي أو مطلق، لتحديد موقع الدليل حيث يجب حفظ لقطات الشاشة."
+"<br>إذا كان اسم ملف لقطة الشاشة النهائي يشير إلى ملف موجود بالفعل، فلن يتم "
+"الكتابة فوق الملف. لن يتم حفظ لقطة الشاشة، أو إذا كان القالب يحتوي على %n، "
+"فسيتم حفظه باستخدام اسم ملف مختلف تم إنشاؤه حديثًا.<br>للحصول على معلومات "
+"كاملة، راجع <a href='https://mpv.io/manual/stable/#options-screenshot-"
+"template'>https://mpv.io/manual/stable/#options-screenshot-template</"
+"a><br><br><strong>مواصفات التنسيق المسموح بها:</strong><br><ul><li><strong>"
+"%[#][0X]n</strong> رقم تسلسلي، مبطن بالأصفار بطول X.<br><li><strong>%f</"
+"strong> اسم ملف الفيديو الذي يتم تشغيله حاليًا.<br><li><strong>%F</strong> "
+"نفس %f، ولكن بدون امتداد الملف.<br><li><strong>%x</strong> مسار الدليل "
+"للفيديو الذي يتم تشغيله حاليًا. إذا لم يكن الفيديو موجودًا على نظام الملفات "
+"(http:// urls)، فسيتم توسيع هذا إلى سلسلة فارغة.<br><li><strong>%X{fallback}"
+"</strong> نفس %x، ولكن إذا لم يكن ملف الفيديو موجودًا على نظام الملفات، فقم "
+"بإرجاع السلسلة البديلة داخل {...}.<br><li><strong>%p</strong> وقت التشغيل "
+"الحالي. النتيجة عبارة عن سلسلة من النموذج \"HH:MM:SS\".<br><li><strong>%P</"
+"strong> مشابهة لـ %p، ولكنها ممتدة بوقت التشغيل بالمللي ثانية \"HH:MM:SS.mmm"
+"\".<br><li><strong>%wX</strong> حدد وقت التشغيل الحالي باستخدام سلسلة "
+"التنسيق X.<br>مواصفات التنسيق الصالحة:<br><ul><li><strong>%wH</strong> ساعة "
+"(مبطنة من 0 إلى رقمين)</li><li><strong>%wh</strong> ساعة (غير مبطنة)</"
+"li><li><strong>%wM</strong> دقيقة (00-59)</li><li><strong>%wm</strong> "
+"إجمالي الدقائق (يشمل الساعات، على عكس %wM)</li><li><strong>%wS</strong> "
+"ثانية (00-59)</li><li><strong>%ws</strong> إجمالي الثواني (يتضمن الساعات "
+"والدقائق)</li><li><strong>%wf</strong> مثل %ws، ولكن كعدد عشري</"
+"li><li><strong>%wT</strong> مللي ثانية (000-999)</li><li><strong>%%</strong> "
+"تم استبداله بحرف % نفسه.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:196
 msgctxt "@title"
