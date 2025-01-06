@@ -121,64 +121,6 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Resume playback")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        CheckBox {
-            id: loadLastPlayedFileCheckBox
-
-            text: i18nc("@option:check", "Open last played file on startup")
-            checked: PlaybackSettings.openLastPlayedFile
-            onCheckedChanged: {
-                PlaybackSettings.openLastPlayedFile = checked
-                PlaybackSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip open last played file setting",
-                            "On startup it opens the file that was playing when the application was closed.")
-            }
-        }
-
-        Item { Layout.preferredWidth: 1 }
-
-        CheckBox {
-            id: seekToLastPositionCheckBox
-
-            text: i18nc("@option:check", "Seek to last playback position")
-            checked: PlaybackSettings.seekToLastPosition
-            onCheckedChanged: {
-                PlaybackSettings.seekToLastPosition = checked
-                PlaybackSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip seek to last playback position setting",
-                            "When opening a file that was played before, seek at the position it was last time.")
-            }
-        }
-
-        Item { Layout.preferredWidth: 1 }
-
-        CheckBox {
-            id: playOnResumeCheckBox
-
-            text: i18nc("@option:check", "Start playing")
-            checked: PlaybackSettings.playOnResume
-            enabled: seekToLastPositionCheckBox.checked
-            onCheckedChanged: {
-                PlaybackSettings.playOnResume = checked
-                PlaybackSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip start playing setting",
-                            "When resuming playback and seeking to last playback position, start playing it automatically.")
-            }
-        }
-
-        Label {
             text: i18nc("@label", "Hardware decoding")
             Layout.alignment: Qt.AlignRight
         }
@@ -251,6 +193,30 @@ SettingsBasePage {
             }
         }
 
+        Item {
+            Layout.columnSpan: 2
+            Layout.preferredWidth: 1
+            Layout.preferredHeight: 10
+        }
+
+        Item { Layout.preferredWidth: 1 }
+
+        CheckBox {
+            id: loadLastPlayedFileCheckBox
+
+            text: i18nc("@option:check", "Open last played file on startup")
+            checked: PlaybackSettings.openLastPlayedFile
+            onCheckedChanged: {
+                PlaybackSettings.openLastPlayedFile = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip open last played file setting",
+                            "On startup it opens the file that was playing when the application was closed.")
+            }
+        }
+
         // ------------------------------------
         // Playback position
         // ------------------------------------
@@ -265,6 +231,7 @@ SettingsBasePage {
 
         CheckBox {
             id: saveFilePositionCheckBox
+
             text: qsTr("Restore playback position")
             checked: PlaybackSettings.restoreFilePosition
             onCheckedChanged: {
@@ -280,6 +247,25 @@ SettingsBasePage {
                              "Saves the file position during playback, opening the same file again will seek to the saved position.\n"
                              +"Position is saved every %1 seconds, except for the last 10 seconds of the video.",
                              timePositionSaveInterval.value)
+            }
+        }
+
+        Item { Layout.preferredWidth: 1 }
+
+        CheckBox {
+            id: playOnResumeCheckBox
+
+            text: i18nc("@option:check", "Start playing")
+            checked: PlaybackSettings.playOnResume
+            enabled: saveFilePositionCheckBox.checked
+            onCheckedChanged: {
+                PlaybackSettings.playOnResume = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip start playing setting",
+                            "When resuming playback and seeking to last playback position, start playing it automatically.")
             }
         }
 
