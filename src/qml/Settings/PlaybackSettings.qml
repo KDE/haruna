@@ -314,8 +314,7 @@ SettingsBasePage {
             }
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip restore playback position > duration",
-                             "Position for remote files is restored regardless of duration.",
-                             timePositionSaving.value)
+                             "Position for remote files is restored regardless of duration.")
             }
         }
 
