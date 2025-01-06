@@ -265,7 +265,7 @@ SettingsBasePage {
 
             ToolTip {
                 text: i18nc("@info:tooltip start playing setting",
-                            "When resuming playback and seeking to last playback position, start playing it automatically.")
+                            "The file will be playing after restoring the playback position")
             }
         }
 
