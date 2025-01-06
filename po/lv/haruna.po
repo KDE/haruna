@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-25 00:40+0000\n"
-"PO-Revision-Date: 2024-10-28 16:39+0200\n"
+"PO-Revision-Date: 2025-01-04 18:07+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -123,9 +123,7 @@ msgid "Audio Cycle Down"
 msgstr "Audio ciklu samazināt"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "Iestatījumi"
@@ -555,12 +553,10 @@ msgid "Could not play: %1"
 msgstr "Nevarēja atskaņot: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Subtitru laiks: %1"
+msgstr "Subtitru laiks: %1 sekundes"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -601,7 +597,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
-msgstr "Izlaista daļa: %1"
+msgstr "Izlaista nodaļa: %1"
 
 #: src/qml/Actions.qml:93 src/qml/Actions.qml:111
 msgctxt "@info:tooltip"
@@ -613,7 +609,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "Nevar ielādēt subtitru, kad nav atvērta neviena datne"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -824,17 +820,14 @@ msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Izlaist daļas"
+msgstr "Atvērt nodaļu izvēlni"
 
 #: src/qml/HProgressBar.qml:278
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
-msgstr "Izlaist daļas"
+msgstr "Izlaist nodaļas"
 
 #: src/qml/HProgressBar.qml:286
 msgctxt "@info:tooltip"
@@ -842,7 +835,7 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 msgstr ""
-"Automātiski izlaiž daļas, kas satur noteiktus vārdus vai rakstzīmes.\n"
+"Automātiski izlaiž nodaļas, kas satur noteiktus vārdus vai rakstzīmes.\n"
 "Skatiet „Atskaņošanas“ iestatījumus, lai uzzinātu vairāk"
 
 #: src/qml/Main.qml:28
@@ -1451,25 +1444,17 @@ msgid "Resize to fit video"
 msgstr "Mainīt izmēru, lai ietilpinātu video"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Nav atbalstīts ar „Wayland“.</b>"
+msgstr "Nav atbalstīts ar „Wayland“."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 Loga izmērs ir mainīts atbilstoši video izšķirtspējai.\n"
+"Loga izmērs ir mainīts atbilstoši video izšķirtspējai.\n"
 "Maksimālais izmērs nav ierobežots — šo iestatījumu pārvalda operētājsistēma."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1494,35 +1479,23 @@ msgid "Remember window size and position"
 msgstr "Atcerēties loga izmēru un novietojumu"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Nav atbalstīts ar „Wayland“.</b>"
+msgstr ""
+"<b>Atrašanās vietas atjaunošana nav atbalstīta ar „Wayland“.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"Mainot loga izmēru un novietojumu, tiek saglabātas jaunās vērtības un "
-"izmantotas, lai programmu atjaunotu uz to pašu izmēru un novietojumu, "
-"atverot jaunu instanci.\n"
-"\n"
-"Priekšroka ir iestatījumam „Mainīt izmēru, lai ietilpinātu video“.\n"
+"Tiek saglabātas izmainītās loga izmēra un novietojuma vērtības, ko programma "
+"izmantos no jauna atvērtajos logos.<br><br>%1Priekšroka ir iestatījumam "
+"„Mainīt loga izmēru, lai ietilpinātu video“."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1744,12 +1717,9 @@ msgstr ""
 "i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:259
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Saglabāt atskaņošanas pozīciju"
+msgstr "Atskaņošanas pozīcija"
 
 #: src/qml/Settings/PlaybackSettings.qml:277
 msgctxt "@info:tooltip save playback position"
@@ -1764,39 +1734,40 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Saglabā datnes atskaņošanas pozīciju, lai, vēlreiz atverot šo pašu datni, "
+"varētu turpināt skatīties no pēdējās atskaņošanas vietas.\n"
+"Pozīciju programma saglabā ik pēc %1 sekundes, izņemot videoklipa pēdējās 10 "
+"sekundes."
 msgstr[1] ""
+"Saglabā datnes atskaņošanas pozīciju, lai, vēlreiz atverot šo pašu datni, "
+"varētu turpināt skatīties no pēdējās atskaņošanas vietas.\n"
+"Pozīciju programma saglabā ik pēc %1 sekundēm, izņemot videoklipa pēdējās 10 "
+"sekundes."
 msgstr[2] ""
+"Saglabā datnes atskaņošanas pozīciju, lai, vēlreiz atverot šo pašu datni, "
+"varētu turpināt skatīties no pēdējās atskaņošanas vietas.\n"
+"Pozīciju programma saglabā ik pēc %1 sekundēm, izņemot videoklipa pēdējās 10 "
+"sekundes."
 
 #: src/qml/Settings/PlaybackSettings.qml:305
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Piesātinājums"
+msgstr "Jebkādam ilgumam"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Datnēm, kas ir garākas par %1 minūti"
-msgstr[1] "Datnēm, kas ir garākas par %1 minūtēm"
-msgstr[2] "Datnēm, kas ir garākas par %1 minūtēm"
+msgstr[0] "Ja ilgums pārsniedz %1 minūti"
+msgstr[1] "Ja ilgums pārsniedz %1 minūtes"
+msgstr[2] "Ja ilgums pārsniedz %1 minūšu"
 
 #: src/qml/Settings/PlaybackSettings.qml:317
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "Pozīciju attālām datnēm saglabā, neskatoties uz to ilgumu."
 
 #: src/qml/Settings/PlaybackSettings.qml:340
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1805,20 +1776,14 @@ msgstr[1] "Saglabāt pozīciju ik pēc %1 sekundēm"
 msgstr[2] "Saglabāt pozīciju ik pēc %1 sekundēm"
 
 #: src/qml/Settings/PlaybackSettings.qml:353
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Izlaist daļas"
+msgstr "Nodaļas"
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "Izlaist daļas"
+msgstr "Izlaist nodaļas"
 
 #: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "@info:tooltip skip chapters setting"
@@ -1849,7 +1814,7 @@ msgstr "Izlaist vārdus"
 #: src/qml/Settings/PlaybackSettings.qml:402
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
-msgstr "op, ed, 1. daļa"
+msgstr "op, ed, 1. nodaļa"
 
 #: src/qml/Settings/PlaybackSettings.qml:408
 msgctxt "@info:tooltip skip words setting"
@@ -2012,13 +1977,13 @@ msgstr "Par"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "Automātiski atlasīt celiņu"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "Kad atzīmēts, programma automātiski atlasīs un parādīs subtitru celiņu"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
