@@ -73,7 +73,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case DurationRole:
         return QVariant(item.formattedDuration);
     case PlayingRole:
-        return QVariant(m_playingItem == index.row());
+        return QVariant(static_cast<int>(m_playingItem) == index.row());
     case FolderPathRole:
         return QVariant(item.folderPath);
     case IsLocalRole:
@@ -554,7 +554,7 @@ QString PlaylistProxyModel::getFilePath(uint row)
 
 bool PlaylistProxyModel::isLastItem(uint row)
 {
-    return row == rowCount() - 1;
+    return static_cast<int>(row) == rowCount() - 1;
 }
 
 #include "moc_playlistmodel.cpp"
