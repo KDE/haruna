@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:40+0000\n"
+"POT-Creation-Date: 2025-01-07 00:40+0000\n"
 "PO-Revision-Date: 2024-12-22 09:23+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1620,66 +1620,21 @@ msgstr ""
 "berrekiten da lehengoratzean."
 
 #: src/qml/Settings/PlaybackSettings.qml:124
-msgctxt "@label:spinbox"
-msgid "Resume playback"
-msgstr "Berrekin atzera-jotzea"
-
-#: src/qml/Settings/PlaybackSettings.qml:131
-msgctxt "@option:check"
-msgid "Open last played file on startup"
-msgstr "Abiatzean ireki jotako azken fitxategia"
-
-#: src/qml/Settings/PlaybackSettings.qml:140
-msgctxt "@info:tooltip open last played file setting"
-msgid ""
-"On startup it opens the file that was playing when the application was "
-"closed."
-msgstr ""
-"Abiatzean, aplikazioa itxi zenean jotzen ari zen fitxategia irekitzen du."
-
-#: src/qml/Settings/PlaybackSettings.qml:149
-msgctxt "@option:check"
-msgid "Seek to last playback position"
-msgstr "Bilatu azken atzera-jotze kokalekua"
-
-#: src/qml/Settings/PlaybackSettings.qml:158
-msgctxt "@info:tooltip seek to last playback position setting"
-msgid ""
-"When opening a file that was played before, seek at the position it was last "
-"time."
-msgstr ""
-"Aurrez jo den fitxategi bat irekitzean, bilatu azken aldian zegoen kokalekua."
-
-#: src/qml/Settings/PlaybackSettings.qml:167
-msgctxt "@option:check"
-msgid "Start playing"
-msgstr "Hasi jotzen"
-
-#: src/qml/Settings/PlaybackSettings.qml:177
-msgctxt "@info:tooltip start playing setting"
-msgid ""
-"When resuming playback and seeking to last playback position, start playing "
-"it automatically."
-msgstr ""
-"Atzera-jotzea berrekitean eta atzera-jo zen azken kokapena aurkitzean, hasi "
-"automatikoki jotzen."
-
-#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Hardware bidezko deskodetzea"
 
-#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:130
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Gaituta"
 
-#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:130
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
-#: src/qml/Settings/PlaybackSettings.qml:235
+#: src/qml/Settings/PlaybackSettings.qml:177
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1718,12 +1673,25 @@ msgstr ""
 "deskodetzaile bat ezar dezakezu <strong>set hwdec <i>decoder_name</i></"
 "strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:259
+#: src/qml/Settings/PlaybackSettings.qml:207
+msgctxt "@option:check"
+msgid "Open last played file on startup"
+msgstr "Abiatzean ireki jotako azken fitxategia"
+
+#: src/qml/Settings/PlaybackSettings.qml:216
+msgctxt "@info:tooltip open last played file setting"
+msgid ""
+"On startup it opens the file that was playing when the application was "
+"closed."
+msgstr ""
+"Abiatzean, aplikazioa itxi zenean jotzen ari zen fitxategia irekitzen du."
+
+#: src/qml/Settings/PlaybackSettings.qml:225
 msgctxt "@title"
 msgid "Playback position"
 msgstr "Atzera-jotze kokalekua"
 
-#: src/qml/Settings/PlaybackSettings.qml:277
+#: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1746,42 +1714,52 @@ msgstr[1] ""
 "Kokalekua %1 segundoero gordetzen da, bideoaren azken 10 segundoetarako izan "
 "ezik."
 
-#: src/qml/Settings/PlaybackSettings.qml:305
+#: src/qml/Settings/PlaybackSettings.qml:258
+msgctxt "@option:check"
+msgid "Start playing"
+msgstr "Hasi jotzen"
+
+#: src/qml/Settings/PlaybackSettings.qml:268
+msgctxt "@info:tooltip start playing setting"
+msgid "The file will be playing after restoring the playback position"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:291
 msgctxt "@info"
 msgid "For any duration"
 msgstr "Edozein iraupenerako"
 
-#: src/qml/Settings/PlaybackSettings.qml:308
+#: src/qml/Settings/PlaybackSettings.qml:294
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "Iraupena minutu %1 baino luzeagoa bada"
 msgstr[1] "Iraupena %1 minutu baino luzeagoa bada"
 
-#: src/qml/Settings/PlaybackSettings.qml:317
+#: src/qml/Settings/PlaybackSettings.qml:303
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 "Urrutiko fitxategien kokalekua, iraupena edozein dela, lehengoratzen da."
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:325
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Gorde kokalekua %1 segundoero"
 msgstr[1] "Gorde kokalekua %1 segundoero"
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Atalak"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Saihestu atalak"
 
-#: src/qml/Settings/PlaybackSettings.qml:370
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1789,12 +1767,12 @@ msgid ""
 msgstr ""
 "Gaitzen denean, hitz/karaktere dituzten atalak automatikoki salatzen ditu."
 
-#: src/qml/Settings/PlaybackSettings.qml:378
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Erakutsi OSD mezua saihestean"
 
-#: src/qml/Settings/PlaybackSettings.qml:387
+#: src/qml/Settings/PlaybackSettings.qml:372
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1802,17 +1780,17 @@ msgid ""
 msgstr ""
 "Atalak saltatzean, OSD mezu batek saltutako atalaren titulua erakutsiko du."
 
-#: src/qml/Settings/PlaybackSettings.qml:393
+#: src/qml/Settings/PlaybackSettings.qml:378
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Saihestu hitzak"
 
-#: src/qml/Settings/PlaybackSettings.qml:402
+#: src/qml/Settings/PlaybackSettings.qml:387
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 1. kapitulua"
 
-#: src/qml/Settings/PlaybackSettings.qml:408
+#: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1823,21 +1801,21 @@ msgstr ""
 "etortzea ez da zehatza, hau da, <strong>op</strong> bat etorriko da berau "
 "barruan duten hitzekin, <strong><u>op</u>ening</strong> esaterako."
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:417
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:423
 msgid "Format selection"
 msgstr "Formatuaren hautapena"
 
-#: src/qml/Settings/PlaybackSettings.qml:478
+#: src/qml/Settings/PlaybackSettings.qml:463
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Hautatutako formatutik hurbilen dagoen bideo-sorburua hauatzen du."
 
-#: src/qml/Settings/PlaybackSettings.qml:507
+#: src/qml/Settings/PlaybackSettings.qml:492
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bideorikonena+audiorikonena/onena"
@@ -2193,6 +2171,30 @@ msgstr "Asetasuna"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Resume playback"
+#~ msgstr "Berrekin atzera-jotzea"
+
+#~ msgctxt "@option:check"
+#~ msgid "Seek to last playback position"
+#~ msgstr "Bilatu azken atzera-jotze kokalekua"
+
+#~ msgctxt "@info:tooltip seek to last playback position setting"
+#~ msgid ""
+#~ "When opening a file that was played before, seek at the position it was "
+#~ "last time."
+#~ msgstr ""
+#~ "Aurrez jo den fitxategi bat irekitzean, bilatu azken aldian zegoen "
+#~ "kokalekua."
+
+#~ msgctxt "@info:tooltip start playing setting"
+#~ msgid ""
+#~ "When resuming playback and seeking to last playback position, start "
+#~ "playing it automatically."
+#~ msgstr ""
+#~ "Atzera-jotzea berrekitean eta atzera-jo zen azken kokapena aurkitzean, "
+#~ "hasi automatikoki jotzen."
 
 #~ msgctxt "@label:spinbox"
 #~ msgid "Autoload subtitles"

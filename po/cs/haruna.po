@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:40+0000\n"
+"POT-Creation-Date: 2025-01-07 00:40+0000\n"
 "PO-Revision-Date: 2024-10-01 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1579,64 +1579,21 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:124
-msgctxt "@label:spinbox"
-msgid "Resume playback"
-msgstr "Pokračovat v přehrávání"
-
-#: src/qml/Settings/PlaybackSettings.qml:131
-msgctxt "@option:check"
-msgid "Open last played file on startup"
-msgstr "Otevřít naposled přehrávaný soubor při spuštění"
-
-#: src/qml/Settings/PlaybackSettings.qml:140
-msgctxt "@info:tooltip open last played file setting"
-msgid ""
-"On startup it opens the file that was playing when the application was "
-"closed."
-msgstr ""
-
-#: src/qml/Settings/PlaybackSettings.qml:149
-msgctxt "@option:check"
-msgid "Seek to last playback position"
-msgstr "Přejít na poslední pozici přehrávání"
-
-#: src/qml/Settings/PlaybackSettings.qml:158
-msgctxt "@info:tooltip seek to last playback position setting"
-msgid ""
-"When opening a file that was played before, seek at the position it was last "
-"time."
-msgstr ""
-"Při otevření souboru, který již byl přehráván, přejít na pozici z minula."
-
-#: src/qml/Settings/PlaybackSettings.qml:167
-msgctxt "@option:check"
-msgid "Start playing"
-msgstr "Spustit přehrávání"
-
-#: src/qml/Settings/PlaybackSettings.qml:177
-msgctxt "@info:tooltip start playing setting"
-msgid ""
-"When resuming playback and seeking to last playback position, start playing "
-"it automatically."
-msgstr ""
-"Při návratu k naposled přehrávanému videu a poloze opět spustit přehrávání."
-
-#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Hardwarové dekódování"
 
-#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:130
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Povoleno"
 
-#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:130
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "Zakázáno"
 
-#: src/qml/Settings/PlaybackSettings.qml:235
+#: src/qml/Settings/PlaybackSettings.qml:177
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1657,7 +1614,19 @@ msgid ""
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:259
+#: src/qml/Settings/PlaybackSettings.qml:207
+msgctxt "@option:check"
+msgid "Open last played file on startup"
+msgstr "Otevřít naposled přehrávaný soubor při spuštění"
+
+#: src/qml/Settings/PlaybackSettings.qml:216
+msgctxt "@info:tooltip open last played file setting"
+msgid ""
+"On startup it opens the file that was playing when the application was "
+"closed."
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:225
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Save playback position"
@@ -1665,7 +1634,7 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Uložit pozici přehrávání"
 
-#: src/qml/Settings/PlaybackSettings.qml:277
+#: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1681,7 +1650,17 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/qml/Settings/PlaybackSettings.qml:305
+#: src/qml/Settings/PlaybackSettings.qml:258
+msgctxt "@option:check"
+msgid "Start playing"
+msgstr "Spustit přehrávání"
+
+#: src/qml/Settings/PlaybackSettings.qml:268
+msgctxt "@info:tooltip start playing setting"
+msgid "The file will be playing after restoring the playback position"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:291
 #, fuzzy
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -1689,7 +1668,7 @@ msgctxt "@info"
 msgid "For any duration"
 msgstr "Nasycení"
 
-#: src/qml/Settings/PlaybackSettings.qml:308
+#: src/qml/Settings/PlaybackSettings.qml:294
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "For files longer than %1 minute"
@@ -1701,12 +1680,12 @@ msgstr[0] "Pro soubory delší než %1 minuta"
 msgstr[1] "Pro soubory delší než %1 minuty"
 msgstr[2] "Pro soubory delší než %1 minut"
 
-#: src/qml/Settings/PlaybackSettings.qml:317
+#: src/qml/Settings/PlaybackSettings.qml:303
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:325
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Save position every %1 second"
@@ -1718,7 +1697,7 @@ msgstr[0] "Uložit pozici každou %1 sekundu"
 msgstr[1] "Uložit pozici každé %1 sekundy"
 msgstr[2] "Uložit pozici každých %1 sekund"
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:338
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Skip Chapters"
@@ -1726,7 +1705,7 @@ msgctxt "@title"
 msgid "Chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:347
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Skip chapters"
@@ -1734,36 +1713,36 @@ msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/Settings/PlaybackSettings.qml:370
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:378
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Zobrazit zprávy OSD při přeskočení"
 
-#: src/qml/Settings/PlaybackSettings.qml:387
+#: src/qml/Settings/PlaybackSettings.qml:372
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:393
+#: src/qml/Settings/PlaybackSettings.qml:378
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Přeskočit slova"
 
-#: src/qml/Settings/PlaybackSettings.qml:402
+#: src/qml/Settings/PlaybackSettings.qml:387
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:408
+#: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1771,21 +1750,21 @@ msgid ""
 "<strong><u>op</u>ening</strong>."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:417
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:423
 msgid "Format selection"
 msgstr "Výběr formátu"
 
-#: src/qml/Settings/PlaybackSettings.qml:478
+#: src/qml/Settings/PlaybackSettings.qml:463
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Vybere zdroj videa, který je nejblíže zvolenému formátu."
 
-#: src/qml/Settings/PlaybackSettings.qml:507
+#: src/qml/Settings/PlaybackSettings.qml:492
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "nejlepsivideo+nejlepsiaudio/nejlepsi"
@@ -2101,6 +2080,29 @@ msgstr "Nasycení"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Resume playback"
+#~ msgstr "Pokračovat v přehrávání"
+
+#~ msgctxt "@option:check"
+#~ msgid "Seek to last playback position"
+#~ msgstr "Přejít na poslední pozici přehrávání"
+
+#~ msgctxt "@info:tooltip seek to last playback position setting"
+#~ msgid ""
+#~ "When opening a file that was played before, seek at the position it was "
+#~ "last time."
+#~ msgstr ""
+#~ "Při otevření souboru, který již byl přehráván, přejít na pozici z minula."
+
+#~ msgctxt "@info:tooltip start playing setting"
+#~ msgid ""
+#~ "When resuming playback and seeking to last playback position, start "
+#~ "playing it automatically."
+#~ msgstr ""
+#~ "Při návratu k naposled přehrávanému videu a poloze opět spustit "
+#~ "přehrávání."
 
 #, fuzzy
 #~| msgctxt "@title"

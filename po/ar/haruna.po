@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:40+0000\n"
+"POT-Creation-Date: 2025-01-07 00:40+0000\n"
 "PO-Revision-Date: 2025-01-04 20:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1607,65 +1607,21 @@ msgid ""
 msgstr "تلبث المشغل عند تصغير النافذة، وسيستأنف التشغيل عند استعادتها."
 
 #: src/qml/Settings/PlaybackSettings.qml:124
-msgctxt "@label:spinbox"
-msgid "Resume playback"
-msgstr "استأنف التشغيل"
-
-#: src/qml/Settings/PlaybackSettings.qml:131
-msgctxt "@option:check"
-msgid "Open last played file on startup"
-msgstr "افتح أخر ملف مُشغل عند البدء"
-
-#: src/qml/Settings/PlaybackSettings.qml:140
-msgctxt "@info:tooltip open last played file setting"
-msgid ""
-"On startup it opens the file that was playing when the application was "
-"closed."
-msgstr "عند بدء التشغيل، سيفتح الملف الذي كان يتم تشغيله عند إغلاق التطبيق."
-
-#: src/qml/Settings/PlaybackSettings.qml:149
-msgctxt "@option:check"
-msgid "Seek to last playback position"
-msgstr "اسعَ لأخر موضوع معروض"
-
-#: src/qml/Settings/PlaybackSettings.qml:158
-msgctxt "@info:tooltip seek to last playback position setting"
-msgid ""
-"When opening a file that was played before, seek at the position it was last "
-"time."
-msgstr ""
-"عند فتح ملف شُغل من قبل؛ سيبدأ في الموضع الذي كان عليه عندما توقف التشغيل أخر "
-"مرة."
-
-#: src/qml/Settings/PlaybackSettings.qml:167
-msgctxt "@option:check"
-msgid "Start playing"
-msgstr "ابدأ التشغيل"
-
-#: src/qml/Settings/PlaybackSettings.qml:177
-msgctxt "@info:tooltip start playing setting"
-msgid ""
-"When resuming playback and seeking to last playback position, start playing "
-"it automatically."
-msgstr ""
-"عند استئناف التشغيل والبحث عن موضع التشغيل الأخير، ابدأ تشغيله تلقائيًا."
-
-#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "فك التشفير بالعتاد"
 
-#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:130
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "ممكّن"
 
-#: src/qml/Settings/PlaybackSettings.qml:188
+#: src/qml/Settings/PlaybackSettings.qml:130
 msgctxt "@option:check"
 msgid "Disabled"
 msgstr "معطّل"
 
-#: src/qml/Settings/PlaybackSettings.qml:235
+#: src/qml/Settings/PlaybackSettings.qml:177
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1702,12 +1658,24 @@ msgstr ""
 "تشفير أجهزة آخر عن طريق إنشاء أمر بدء تشغيل مخصص <strong>set hwdec "
 "<i>decoder_name</i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:259
+#: src/qml/Settings/PlaybackSettings.qml:207
+msgctxt "@option:check"
+msgid "Open last played file on startup"
+msgstr "افتح أخر ملف مُشغل عند البدء"
+
+#: src/qml/Settings/PlaybackSettings.qml:216
+msgctxt "@info:tooltip open last played file setting"
+msgid ""
+"On startup it opens the file that was playing when the application was "
+"closed."
+msgstr "عند بدء التشغيل، سيفتح الملف الذي كان يتم تشغيله عند إغلاق التطبيق."
+
+#: src/qml/Settings/PlaybackSettings.qml:225
 msgctxt "@title"
 msgid "Playback position"
 msgstr "موضع التشغيل"
 
-#: src/qml/Settings/PlaybackSettings.qml:277
+#: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1744,12 +1712,22 @@ msgstr[5] ""
 "الموضع المحفوظ.\n"
 "يحفظ الموضع كل %1 ثانية، باستثناء آخر 10 ثوانٍ من الفيديو."
 
-#: src/qml/Settings/PlaybackSettings.qml:305
+#: src/qml/Settings/PlaybackSettings.qml:258
+msgctxt "@option:check"
+msgid "Start playing"
+msgstr "ابدأ التشغيل"
+
+#: src/qml/Settings/PlaybackSettings.qml:268
+msgctxt "@info:tooltip start playing setting"
+msgid "The file will be playing after restoring the playback position"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:291
 msgctxt "@info"
 msgid "For any duration"
 msgstr "لأي مدة"
 
-#: src/qml/Settings/PlaybackSettings.qml:308
+#: src/qml/Settings/PlaybackSettings.qml:294
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
@@ -1760,12 +1738,12 @@ msgstr[3] "إذا كانت المدة أطول من %1 دقائق"
 msgstr[4] "إذا كانت المدة أطول من %1 دقيقة"
 msgstr[5] "إذا كانت المدة أطول من %1 دقيقة"
 
-#: src/qml/Settings/PlaybackSettings.qml:317
+#: src/qml/Settings/PlaybackSettings.qml:303
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "سيستعاد موضع الملفات البعيدة بغض النظر عن المدة."
 
-#: src/qml/Settings/PlaybackSettings.qml:340
+#: src/qml/Settings/PlaybackSettings.qml:325
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1776,46 +1754,46 @@ msgstr[3] "احفظ الموضع كل %1 ثواني"
 msgstr[4] "احفظ الموضع كل %1 ثانية"
 msgstr[5] "احفظ الموضع كل %1 ثانية"
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@title"
 msgid "Chapters"
 msgstr "الفصول"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "تخط فصول"
 
-#: src/qml/Settings/PlaybackSettings.qml:370
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr "عند تمكينه، فإنه يتخطى تلقائيًا الفصول التي تحتوي على كلمات/أحرف معينة."
 
-#: src/qml/Settings/PlaybackSettings.qml:378
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "أعرض رسالة الشاشة في التخطي"
 
-#: src/qml/Settings/PlaybackSettings.qml:387
+#: src/qml/Settings/PlaybackSettings.qml:372
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr "عند تخطي الفصول، ستظهر رسالة شاشة تحوي عنوان الفصل الذي تم تخطيه."
 
-#: src/qml/Settings/PlaybackSettings.qml:393
+#: src/qml/Settings/PlaybackSettings.qml:378
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "تخطَّ كلمات"
 
-#: src/qml/Settings/PlaybackSettings.qml:402
+#: src/qml/Settings/PlaybackSettings.qml:387
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:408
+#: src/qml/Settings/PlaybackSettings.qml:393
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1826,21 +1804,21 @@ msgstr ""
 "دقيقة، مما يعني أن <strong>op</strong> ستطابق الكلمات التي تحتوي عليها مثل "
 "<strong><u>op</u>ening</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:417
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:423
 msgid "Format selection"
 msgstr "اختيار التنسيق"
 
-#: src/qml/Settings/PlaybackSettings.qml:478
+#: src/qml/Settings/PlaybackSettings.qml:463
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "يحدد مصدر الفيديو الأقرب إلى التنسيق المحدد."
 
-#: src/qml/Settings/PlaybackSettings.qml:507
+#: src/qml/Settings/PlaybackSettings.qml:492
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -2192,6 +2170,29 @@ msgstr "التّشبّع"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير تصفرها"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Resume playback"
+#~ msgstr "استأنف التشغيل"
+
+#~ msgctxt "@option:check"
+#~ msgid "Seek to last playback position"
+#~ msgstr "اسعَ لأخر موضوع معروض"
+
+#~ msgctxt "@info:tooltip seek to last playback position setting"
+#~ msgid ""
+#~ "When opening a file that was played before, seek at the position it was "
+#~ "last time."
+#~ msgstr ""
+#~ "عند فتح ملف شُغل من قبل؛ سيبدأ في الموضع الذي كان عليه عندما توقف التشغيل "
+#~ "أخر مرة."
+
+#~ msgctxt "@info:tooltip start playing setting"
+#~ msgid ""
+#~ "When resuming playback and seeking to last playback position, start "
+#~ "playing it automatically."
+#~ msgstr ""
+#~ "عند استئناف التشغيل والبحث عن موضع التشغيل الأخير، ابدأ تشغيله تلقائيًا."
 
 #, fuzzy
 #~| msgctxt "@title"
