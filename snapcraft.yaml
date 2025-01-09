@@ -18,13 +18,17 @@ apps:
       - audio-record
       - removable-media
 environment:
+    PYTHONPYCACHEPREFIX: "$SNAP_USER_COMMON/.pycache"
+    PYTHONUSERBASE: $SNAP_USER_COMMON/.local
+    PIP_USER: 1
+    PYTHONPATH: ${SNAP}/usr/lib/python3/dist-packages:${PYTHONPATH}
     GST_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
     GST_PLUGIN_SYSTEM_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
     GST_PLUGIN_SCANNER: $SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
     QT_QUICK_CONTROLS_STYLE: org.kde.breeze
     ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
     LD_LIBRARY_PATH: "$SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/ffmpeg-platform/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib:$SNAP/lib/:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/blas:/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio:${LD_LIBRARY_PATH}"
-    PATH: $SNAP/ffmpeg-platform/usr/bin:${PATH}
+    PATH: $SNAP/ffmpeg-platform/usr/bin:$SNAP/usr/bin:${PATH}
 plugs:
   ffmpeg-2404:
     interface: content
@@ -52,6 +56,35 @@ package-repositories:
     url: http://origin.archive.neon.kde.org/user
     key-server: keyserver.ubuntu.com
 parts:
+  python-deps:
+    source: .
+    plugin: python
+    python-packages:
+      - yt-dlp
+      - youtube-dl
+    prime:
+      - -usr/bin/activate
+      - -usr/bin/activate.csh
+      - -usr/bin/activate.fish
+      - -usr/bin/Activate.ps1
+      - -usr/bin/python
+      - -usr/bin/python3
+      - -usr/bin/python3.12
+      - -usr/bin/pip
+      - -usr/bin/pip3
+      - -usr/bin/pip3.12
+      - -usr/bin/wheel
+      - -usr/lib/python3.12/dist-packages/pip*
+      - -usr/lib/python3.12/dist-packages/pkg_resources
+      - -usr/lib/python3.12/dist-packages/setuptools*
+      - -pyvenv.cfg
+      - -lib
+      - -lib64
+      - -include
+      - -share
+    organize:
+      bin: usr/bin
+      lib/python3.12/site-packages: usr/lib/python3/dist-packages
   mpvqt:
     plugin: cmake
     source: https://invent.kde.org/libraries/mpvqt.git
@@ -78,12 +111,12 @@ parts:
   haruna:
     after:
       - mpvqt
+      - python-deps
     parse-info:
       - usr/share/metainfo/org.kde.haruna.metainfo.xml
     plugin: cmake
     build-packages:
       - libmpv-dev
-      - yt-dlp
     build-snaps:
       - ffmpeg-2404-sdk
     stage-packages:
@@ -125,6 +158,8 @@ parts:
       - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
       - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
       - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+      - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
+
     prime:
       - "-usr/lib/*/cmake/*"
       - "-usr/include/*"
@@ -150,8 +185,9 @@ parts:
     build-snaps:
       - core24
       - kf6-core24
+      - ffmpeg-2404
     override-prime: |
       set -eux
-      for snap in "core24" "kf6-core24"; do
+      for snap in "core24" "kf6-core24" "ffmpeg-2404"; do
         cd "/snap/$snap/current" && find . -type f,l -exec rm -rf "${CRAFT_PRIME}/{}" \;
       done
