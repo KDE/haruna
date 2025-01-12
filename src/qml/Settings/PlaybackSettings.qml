@@ -232,7 +232,7 @@ SettingsBasePage {
         CheckBox {
             id: saveFilePositionCheckBox
 
-            text: qsTr("Restore playback position")
+            text: i18nc("@option:check", "Restore playback position")
             checked: PlaybackSettings.restoreFilePosition
             onCheckedChanged: {
                 PlaybackSettings.restoreFilePosition = checked

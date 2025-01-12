@@ -46,7 +46,7 @@ Rectangle {
     ColorDialog {
         id: colorPicker
 
-        title: qsTr("Select a color")
+        title: i18nc("@title:window", "Select a color")
         onAccepted: colorChosen(colorPicker.selectedColor)
         selectedColor: root.color
         parentWindow: settingsLoader.item
