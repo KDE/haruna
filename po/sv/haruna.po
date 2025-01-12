@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:40+0000\n"
-"PO-Revision-Date: 2024-11-25 18:30+0100\n"
+"PO-Revision-Date: 2025-01-11 20:45+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -552,12 +552,10 @@ msgid "Could not play: %1"
 msgstr "Kunde inte spela: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Textningstider: %1"
+msgstr "Textningstiming: %1 sekunder"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -610,7 +608,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "Kan inte läsa in textning när igen fil är öppen"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -821,12 +819,9 @@ msgid "Audio"
 msgstr "Ljud"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Hoppa över kapitel"
+msgstr "Öppna kapitelmeny"
 
 #: src/qml/HProgressBar.qml:278
 msgctxt "@action:inmenu"
@@ -1447,25 +1442,17 @@ msgid "Resize to fit video"
 msgstr "Ändra storlek för att passa video"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Stöds inte på Wayland.</b>"
+msgstr "Stöds inte på Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 Fönstrets storlek ändras enligt videons upplösning.\n"
+"Fönstrets storlek ändras enligt videons upplösning.\n"
 "Den maximala storleken begränsas inte, det överlämnas till operativsystemet."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1490,35 +1477,22 @@ msgid "Remember window size and position"
 msgstr "Kom ihåg fönsterstorlek och position"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Stöds inte på Wayland.</b>"
+msgstr "<b>Återställa position stöds inte på Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"När fönsterstorlek och position ändras, sparas de nya värdena och används "
-"för att återställa programmet till samma storlek och position när en ny "
-"instans öppnas.\n"
-"\n"
-"Inställningen \"Ändra storlek för att passa video\" har företräde.\n"
+"Ändringar av fönsterstorlek och position sparas och används för nyöppnade "
+"fönster.<br><br>%1Inställningen \"Ändra storlek för att passa video\" har "
+"företräde."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1704,12 +1678,9 @@ msgid ""
 msgstr "Vid start öppnar den filen som spelades upp när programmet stängdes."
 
 #: src/qml/Settings/PlaybackSettings.qml:225
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Spara uppspelningsposition"
+msgstr "Uppspelningsposition"
 
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
@@ -1724,7 +1695,15 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Sparar filposition under uppspelning, om samma fil öppnas igen återställs "
+"den sparade positionen.\n"
+"Positionen sparas med %1 sekunds mellanrum, utom för de sista tio sekunderna "
+"i videon."
 msgstr[1] ""
+"Sparar filposition under uppspelning, om samma fil öppnas igen återställs "
+"den sparade positionen.\n"
+"Positionen sparas med %1 sekunders mellanrum, utom för de sista tio "
+"sekunderna i videon."
 
 #: src/qml/Settings/PlaybackSettings.qml:258
 msgctxt "@option:check"
@@ -1734,37 +1713,26 @@ msgstr "Börja spela"
 #: src/qml/Settings/PlaybackSettings.qml:268
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
-msgstr ""
+msgstr "Filen spelas upp efter att uppspelningspositionen har återställts"
 
 #: src/qml/Settings/PlaybackSettings.qml:291
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Färgmättnad"
+msgstr "För godtycklig längd"
 
 #: src/qml/Settings/PlaybackSettings.qml:294
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "För filer längre än %1 minut"
-msgstr[1] "För filer längre än %1 minuter"
+msgstr[0] "Om längden överskrider %1 minut"
+msgstr[1] "Om längden överskrider %1 minuter"
 
 #: src/qml/Settings/PlaybackSettings.qml:303
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "Position för fjärrfiler återställs oberoende av längd."
 
 #: src/qml/Settings/PlaybackSettings.qml:325
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1772,17 +1740,11 @@ msgstr[0] "Spara position med %1 sekunds mellanrum"
 msgstr[1] "Spara position med %1 sekunders mellanrum"
 
 #: src/qml/Settings/PlaybackSettings.qml:338
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Hoppa över kapitel"
+msgstr "Kapitel"
 
 #: src/qml/Settings/PlaybackSettings.qml:347
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Hoppa över kapitel"
@@ -1981,13 +1943,13 @@ msgstr "Om"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "Välj spår automatiskt"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "När markerat väljes och visas ett textningsspår automatiskt"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
