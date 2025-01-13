@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2023-12-13 07:56-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -751,6 +751,14 @@ msgstr "Restante: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "Selecionar uma cor"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "Selecionar uma cor"
 
@@ -1699,6 +1707,14 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Buscar a última posição de reprodução"
 
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
+msgid "Restore playback position"
+msgstr "Buscar a última posição de reprodução"
+
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
@@ -2168,10 +2184,6 @@ msgstr "Clique com o botão do meio nos controles deslizantes para redefini-los"
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"
 #~ msgstr "Recomeçar reprodução"
-
-#~ msgctxt "@option:check"
-#~ msgid "Seek to last playback position"
-#~ msgstr "Buscar a última posição de reprodução"
 
 #, fuzzy
 #~| msgctxt "@info:tooltip"

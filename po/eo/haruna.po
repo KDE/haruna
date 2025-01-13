@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
-"PO-Revision-Date: 2025-01-01 09:06+0100\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
+"PO-Revision-Date: 2025-01-12 08:09+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -739,6 +739,14 @@ msgstr "Restas: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "Elekti koloron"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "Elekti koloron"
 
@@ -1687,6 +1695,14 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Reproduktan pozicion"
 
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@option:check"
+msgid "Restore playback position"
+msgstr "Reproduktan pozicion"
+
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
@@ -1700,7 +1716,15 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Konservas la dosierpozicion dum reproduktado, malfermi la saman dosieron "
+"denove serĉos al la konservita pozicio.\n"
+"Pozicio estas konservita ĉiun %1 sekundon, krom la lastaj 10 sekundoj de la "
+"filmeto."
 msgstr[1] ""
+"Konservas la dosierpozicion dum reproduktado, malfermi la saman dosieron "
+"denove serĉos al la konservita pozicio.\n"
+"Pozicio estas konservita ĉiujn %1 sekundojn, krom la lastaj 10 sekundoj de "
+"la filmeto."
 
 #: src/qml/Settings/PlaybackSettings.qml:258
 msgctxt "@option:check"
@@ -1710,7 +1734,7 @@ msgstr "Komenci ludi"
 #: src/qml/Settings/PlaybackSettings.qml:268
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
-msgstr ""
+msgstr "La dosiero estos ludanta post restaŭro de la reprodukta pozicio"
 
 #: src/qml/Settings/PlaybackSettings.qml:291
 msgctxt "@info"
@@ -1727,7 +1751,7 @@ msgstr[1] "Se daŭro estas pli longa ol %1 minutoj"
 #: src/qml/Settings/PlaybackSettings.qml:303
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "Pozicio por foraj dosieroj estas restarigita sendepende de daŭro."
 
 #: src/qml/Settings/PlaybackSettings.qml:325
 msgctxt "@info:tooltip restore playback position > save interval"
@@ -1945,7 +1969,7 @@ msgstr "Aŭtomate elekti trakon"
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "Kiam markita, subteksta trako estos aŭtomate elektita kaj montrata"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
@@ -2158,27 +2182,3 @@ msgstr "Saturiĝo"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Meze alklaku la glitilojn por restarigi ilin"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Resume playback"
-#~ msgstr "Rekomenci reproduktadon"
-
-#~ msgctxt "@option:check"
-#~ msgid "Seek to last playback position"
-#~ msgstr "Serĉi ĝis lasta reprodukta pozicio"
-
-#~ msgctxt "@info:tooltip seek to last playback position setting"
-#~ msgid ""
-#~ "When opening a file that was played before, seek at the position it was "
-#~ "last time."
-#~ msgstr ""
-#~ "Malfermante dosieron, kiu estis ludita antaŭe, serĉu la pozicion, en kiu "
-#~ "ĝi estis la lastan fojon."
-
-#~ msgctxt "@info:tooltip start playing setting"
-#~ msgid ""
-#~ "When resuming playback and seeking to last playback position, start "
-#~ "playing it automatically."
-#~ msgstr ""
-#~ "Daŭrigante ludadon kaj serĉante ĝis lasta ludadpozicio, komenci ludi ĝin "
-#~ "aŭtomate."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2025-01-07 15:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -737,6 +737,14 @@ msgstr "Kalan: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "Bir renk seç"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "Bir renk seç"
 
@@ -1685,6 +1693,14 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Oynatma Konumu"
 
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
+msgid "Restore playback position"
+msgstr "Son oynatma konumuna git"
+
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
@@ -2168,10 +2184,6 @@ msgstr "Sıfırlamak için sürgülerde orta tıklayın"
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"
 #~ msgstr "Oynatmayı sürdür"
-
-#~ msgctxt "@option:check"
-#~ msgid "Seek to last playback position"
-#~ msgstr "Son oynatma konumuna git"
 
 #~ msgctxt "@info:tooltip seek to last playback position setting"
 #~ msgid ""

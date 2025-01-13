@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -739,6 +739,14 @@ msgstr "शेषः : %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "एकं वर्णं चिनोतु"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "एकं वर्णं चिनोतु"
 
@@ -1673,6 +1681,14 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "प्लेबैक स्थिति"
 
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
+msgid "Restore playback position"
+msgstr "अन्तिमप्लेबैकस्थानं अन्वेष्टुम्"
+
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
@@ -2145,10 +2161,6 @@ msgstr "स्लाइडर् रीसेट् कर्तुं मध्
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"
 #~ msgstr "पुनः प्लेबैकं आरभत"
-
-#~ msgctxt "@option:check"
-#~ msgid "Seek to last playback position"
-#~ msgstr "अन्तिमप्लेबैकस्थानं अन्वेष्टुम्"
 
 #~ msgctxt "@info:tooltip seek to last playback position setting"
 #~ msgid ""

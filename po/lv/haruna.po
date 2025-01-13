@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2025-01-04 18:07+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -738,6 +738,14 @@ msgstr "Atlicis: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "Atlasīt krāsu"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "Atlasīt krāsu"
 
@@ -1688,6 +1696,14 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Atskaņošanas pozīcija"
 
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
+msgid "Restore playback position"
+msgstr "Iet uz pēdējo atskaņošanas pozīciju"
+
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
@@ -2178,10 +2194,6 @@ msgstr "Lai atiestatītu, spiediet uz slīdņiem ar peles vidējo pogu"
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"
 #~ msgstr "Atjaunot atskaņošanu"
-
-#~ msgctxt "@option:check"
-#~ msgid "Seek to last playback position"
-#~ msgstr "Iet uz pēdējo atskaņošanas pozīciju"
 
 #~ msgctxt "@info:tooltip seek to last playback position setting"
 #~ msgid ""

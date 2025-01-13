@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2024-05-12 15:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -750,6 +750,14 @@ msgstr "மீதம்: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "நிறத்தைத் தேர்ந்தெடுக்கவும்"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "நிறத்தைத் தேர்ந்தெடுக்கவும்"
 
@@ -1678,6 +1686,14 @@ msgstr ""
 #| msgid "Playback Speed Reset"
 msgctxt "@title"
 msgid "Playback position"
+msgstr "இயக்கவேகத்தை மீட்டமை"
+
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playback Speed Reset"
+msgctxt "@option:check"
+msgid "Restore playback position"
 msgstr "இயக்கவேகத்தை மீட்டமை"
 
 #: src/qml/Settings/PlaybackSettings.qml:244

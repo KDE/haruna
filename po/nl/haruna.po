@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2025-01-07 11:08+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -737,6 +737,14 @@ msgstr "Resterend: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "Selecteer een kleur"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "Selecteer een kleur"
 
@@ -1689,6 +1697,14 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Afspeelpositie"
 
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Seek to last playback position"
+msgctxt "@option:check"
+msgid "Restore playback position"
+msgstr "Naar de laatst afspeelpositie spoelen"
+
 #: src/qml/Settings/PlaybackSettings.qml:244
 msgctxt "@info:tooltip save playback position"
 msgid ""
@@ -2182,10 +2198,6 @@ msgstr "Midden-klik op de schuifregelaars om ze te resetten"
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"
 #~ msgstr "Afspelen hervatten"
-
-#~ msgctxt "@option:check"
-#~ msgid "Seek to last playback position"
-#~ msgstr "Naar de laatst afspeelpositie spoelen"
 
 #~ msgctxt "@info:tooltip seek to last playback position setting"
 #~ msgid ""

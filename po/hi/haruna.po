@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-13 00:40+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -851,6 +851,13 @@ msgstr "बाकी: %1"
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@info:tooltip"
+msgid "Select a color"
+msgstr "फ़ाइल चुनें"
+
+#: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgid "Select file"
+msgctxt "@title:window"
 msgid "Select a color"
 msgstr "फ़ाइल चुनें"
 
@@ -1893,6 +1900,13 @@ msgstr ""
 #| msgid "Playback"
 msgctxt "@title"
 msgid "Playback position"
+msgstr "प्लेबैक"
+
+#: src/qml/Settings/PlaybackSettings.qml:235
+#, fuzzy
+#| msgid "Playback"
+msgctxt "@option:check"
+msgid "Restore playback position"
 msgstr "प्लेबैक"
 
 #: src/qml/Settings/PlaybackSettings.qml:244
