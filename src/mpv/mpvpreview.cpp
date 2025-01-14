@@ -26,8 +26,7 @@ MpvPreview::MpvPreview()
     Q_EMIT setProperty(MpvProperties::self()->Pause, true);
     Q_EMIT setProperty(MpvProperties::self()->ReallyQuiet, true);
 
-    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : u"no"_s;
-    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
+    Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, PlaybackSettings::hWDecoding());
     Q_EMIT setProperty(MpvProperties::self()->AccurateSeek, GeneralSettings::accuratePreviewThumbnail());
     Q_EMIT setProperty(MpvProperties::self()->AudioId, false);
     Q_EMIT setProperty(MpvProperties::self()->AudioFileAuto, false);

@@ -125,26 +125,14 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        CheckBox {
-            id: hwDecodingCheckBox
-            text: checked ? i18nc("@option:check", "Enabled") : i18nc("@option:check", "Disabled")
-            checked: PlaybackSettings.useHWDecoding
-            onCheckedChanged: {
-                PlaybackSettings.useHWDecoding = checked
-                PlaybackSettings.save()
-            }
-        }
-
-        Item { Layout.preferredWidth: 1 }
-
         RowLayout {
             ComboBox {
                 id: hwDecodingComboBox
 
-                enabled: hwDecodingCheckBox.checked
                 textRole: "key"
                 model: ListModel {
                     id: hwDecModel
+                    ListElement { key: "disabled"; }
                     ListElement { key: "auto"; }
                     ListElement { key: "auto-safe"; }
                     ListElement { key: "vaapi"; }
@@ -155,7 +143,9 @@ SettingsBasePage {
                 }
 
                 onActivated: function(index) {
-                    PlaybackSettings.hWDecoding = model.get(index).key
+                    PlaybackSettings.hWDecoding = model.get(index).key === "disabled"
+                            ? "no"
+                            : model.get(index).key
                     PlaybackSettings.save()
                     mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
                 }
