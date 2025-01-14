@@ -7,6 +7,7 @@
 #include "recentfilesmodel.h"
 
 #include <QJsonDocument>
+#include <QJsonValue>
 #include <QMenu>
 #include <QProcess>
 
