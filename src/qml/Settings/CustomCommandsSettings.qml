@@ -140,6 +140,7 @@ SettingsBasePage {
                         Layout.rightMargin: Kirigami.Units.largeSpacing
                         onClicked: {
                             const properties = {
+                                m_customCommandsModel: root.m_customCommandsModel,
                                 command: delegate.command,
                                 osdMessage: delegate.osdMessage,
                                 type: delegate.type,
@@ -166,7 +167,8 @@ SettingsBasePage {
 
                 text: i18nc("@action:intoolbar", "&Add")
                 icon.name: "list-add"
-                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`)
+                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`,
+                                                                 {m_customCommandsModel: root.m_customCommandsModel})
                 Layout.alignment: Qt.AlignRight
             }
         }

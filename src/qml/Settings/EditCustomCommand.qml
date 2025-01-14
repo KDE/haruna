@@ -31,7 +31,8 @@ SettingsBasePage {
 
     Action {
         shortcut: "esc"
-        onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
+        onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
+                                                           {m_customCommandsModel: root.m_customCommandsModel})
     }
 
     GridLayout {
@@ -145,7 +146,8 @@ SettingsBasePage {
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
                     root.m_customCommandsModel.deleteCustomCommand(root.commandId, root.index)
-                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
+                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
+                                                          {m_customCommandsModel: root.m_customCommandsModel})
                 }
             }
 
@@ -157,7 +159,8 @@ SettingsBasePage {
             ToolButton {
                 text: i18nc("@action:intoolbar", "Cancel")
                 icon.name: "dialog-cancel"
-                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
+                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
+                                                                 {m_customCommandsModel: root.m_customCommandsModel})
                 Layout.alignment: Qt.AlignRight
             }
 
@@ -192,7 +195,8 @@ SettingsBasePage {
                                                               typeGroup.checkedButton.optionName)
                         break
                     }
-                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`)
+                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
+                                                          {m_customCommandsModel: root.m_customCommandsModel})
                 }
 
             }
