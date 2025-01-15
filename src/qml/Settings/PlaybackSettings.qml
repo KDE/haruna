@@ -102,24 +102,6 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1 }
-
-        CheckBox {
-            id: pauseOnMinimizeCheckBox
-
-            text: i18nc("@option:check", "Pause on minimize")
-            checked: PlaybackSettings.pauseWhileMinimized
-            onCheckedChanged: {
-                PlaybackSettings.pauseWhileMinimized = checked
-                PlaybackSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip pause on minimize setting",
-                            "Pauses the player while the window is minimized, playback resumes when restored.")
-            }
-        }
-
         Label {
             text: i18nc("@label", "Hardware decoding")
             Layout.alignment: Qt.AlignRight
@@ -183,12 +165,6 @@ SettingsBasePage {
             }
         }
 
-        Item {
-            Layout.columnSpan: 2
-            Layout.preferredWidth: 1
-            Layout.preferredHeight: 10
-        }
-
         Item { Layout.preferredWidth: 1 }
 
         CheckBox {
@@ -204,6 +180,24 @@ SettingsBasePage {
             ToolTip {
                 text: i18nc("@info:tooltip open last played file setting",
                             "On startup it opens the file that was playing when the application was closed.")
+            }
+        }
+
+        Item { Layout.preferredWidth: 1 }
+
+        CheckBox {
+            id: pauseOnMinimizeCheckBox
+
+            text: i18nc("@option:check", "Pause on minimize")
+            checked: PlaybackSettings.pauseWhileMinimized
+            onCheckedChanged: {
+                PlaybackSettings.pauseWhileMinimized = checked
+                PlaybackSettings.save()
+            }
+
+            ToolTip {
+                text: i18nc("@info:tooltip pause on minimize setting",
+                            "Pauses the player while the window is minimized, playback resumes when restored.")
             }
         }
 
