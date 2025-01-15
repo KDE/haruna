@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 00:40+0000\n"
+"POT-Creation-Date: 2025-01-15 00:40+0000\n"
 "PO-Revision-Date: 2024-10-01 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -542,13 +542,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Přeřadit"
 
-#: src/mpv/mpvitem.cpp:299
+#: src/mpv/mpvitem.cpp:298
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Nelze přehrát: %1"
 
-#: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
+#: src/mpv/mpvitem.cpp:381 src/mpv/mpvitem.cpp:383
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1"
@@ -557,32 +557,32 @@ msgid "Subtitle timing: %1 seconds"
 msgstr "Časování titulků: %1"
 
 # žádné parametry funkce v inspektoru funkcí
-#: src/mpv/mpvitem.cpp:430
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nic"
 
-#: src/mpv/mpvitem.cpp:469
+#: src/mpv/mpvitem.cpp:468
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímání obrazovky selhalo"
 
-#: src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímek obrazovky byl pořízen"
 
-#: src/mpv/mpvitem.cpp:476
+#: src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Snímek obrazovky: %1"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:502
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -590,7 +590,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:533
+#: src/mpv/mpvitem.cpp:532
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1182,7 +1182,7 @@ msgid ""
 "Unchecked: property will not be set at startup"
 msgstr ""
 
-#: src/qml/Settings/CustomCommandsSettings.qml:167
+#: src/qml/Settings/CustomCommandsSettings.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Přid&at"
@@ -1229,17 +1229,17 @@ msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "Povolit záznam mpv"
 
-#: src/qml/Settings/EditCustomCommand.qml:41
+#: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Příkaz"
 
-#: src/qml/Settings/EditCustomCommand.qml:50
+#: src/qml/Settings/EditCustomCommand.qml:51
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "přidat hlasitost +10"
 
-#: src/qml/Settings/EditCustomCommand.qml:57
+#: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -1254,17 +1254,17 @@ msgid ""
 "<strong>cycle aid up</strong>."
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:74
+#: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "Zpráva OSD"
 
-#: src/qml/Settings/EditCustomCommand.qml:84
+#: src/qml/Settings/EditCustomCommand.qml:85
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "Název souboru: ${nazev_souboru}"
 
-#: src/qml/Settings/EditCustomCommand.qml:90
+#: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -1272,44 +1272,44 @@ msgid ""
 "${volume}</strong>"
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:99
+#: src/qml/Settings/EditCustomCommand.qml:100
 msgctxt "@label"
 msgid "Type"
 msgstr "Typ"
 
-#: src/qml/Settings/EditCustomCommand.qml:120
+#: src/qml/Settings/EditCustomCommand.qml:121
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "Klávesová zkratka"
 
-#: src/qml/Settings/EditCustomCommand.qml:121
+#: src/qml/Settings/EditCustomCommand.qml:122
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
 
-#: src/qml/Settings/EditCustomCommand.qml:130
+#: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "Spustit při startu"
 
-#: src/qml/Settings/EditCustomCommand.qml:131
+#: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr "Příkaz bude spuštěn při startu aplikace."
 
-#: src/qml/Settings/EditCustomCommand.qml:143
+#: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "Smazat"
 
-#: src/qml/Settings/EditCustomCommand.qml:158
+#: src/qml/Settings/EditCustomCommand.qml:160
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: src/qml/Settings/EditCustomCommand.qml:165
+#: src/qml/Settings/EditCustomCommand.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&Uložit"
@@ -1586,17 +1586,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Hardwarové dekódování"
 
-#: src/qml/Settings/PlaybackSettings.qml:130
-msgctxt "@option:check"
-msgid "Enabled"
-msgstr "Povoleno"
-
-#: src/qml/Settings/PlaybackSettings.qml:130
-msgctxt "@option:check"
-msgid "Disabled"
-msgstr "Zakázáno"
-
-#: src/qml/Settings/PlaybackSettings.qml:177
+#: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1617,19 +1607,19 @@ msgid ""
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:207
+#: src/qml/Settings/PlaybackSettings.qml:197
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Otevřít naposled přehrávaný soubor při spuštění"
 
-#: src/qml/Settings/PlaybackSettings.qml:216
+#: src/qml/Settings/PlaybackSettings.qml:206
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:215
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Save playback position"
@@ -1637,7 +1627,7 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Uložit pozici přehrávání"
 
-#: src/qml/Settings/PlaybackSettings.qml:235
+#: src/qml/Settings/PlaybackSettings.qml:225
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Seek to last playback position"
@@ -1645,7 +1635,7 @@ msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Přejít na poslední pozici přehrávání"
 
-#: src/qml/Settings/PlaybackSettings.qml:244
+#: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1661,17 +1651,17 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:248
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Spustit přehrávání"
 
-#: src/qml/Settings/PlaybackSettings.qml:268
+#: src/qml/Settings/PlaybackSettings.qml:258
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:291
+#: src/qml/Settings/PlaybackSettings.qml:281
 #, fuzzy
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -1679,7 +1669,7 @@ msgctxt "@info"
 msgid "For any duration"
 msgstr "Nasycení"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:284
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "For files longer than %1 minute"
@@ -1691,12 +1681,12 @@ msgstr[0] "Pro soubory delší než %1 minuta"
 msgstr[1] "Pro soubory delší než %1 minuty"
 msgstr[2] "Pro soubory delší než %1 minut"
 
-#: src/qml/Settings/PlaybackSettings.qml:303
+#: src/qml/Settings/PlaybackSettings.qml:293
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:325
+#: src/qml/Settings/PlaybackSettings.qml:315
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Save position every %1 second"
@@ -1708,7 +1698,7 @@ msgstr[0] "Uložit pozici každou %1 sekundu"
 msgstr[1] "Uložit pozici každé %1 sekundy"
 msgstr[2] "Uložit pozici každých %1 sekund"
 
-#: src/qml/Settings/PlaybackSettings.qml:338
+#: src/qml/Settings/PlaybackSettings.qml:328
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Skip Chapters"
@@ -1716,7 +1706,7 @@ msgctxt "@title"
 msgid "Chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:337
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Skip chapters"
@@ -1724,36 +1714,36 @@ msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:345
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:363
+#: src/qml/Settings/PlaybackSettings.qml:353
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Zobrazit zprávy OSD při přeskočení"
 
-#: src/qml/Settings/PlaybackSettings.qml:372
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:378
+#: src/qml/Settings/PlaybackSettings.qml:368
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Přeskočit slova"
 
-#: src/qml/Settings/PlaybackSettings.qml:387
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:393
+#: src/qml/Settings/PlaybackSettings.qml:383
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1761,21 +1751,21 @@ msgid ""
 "<strong><u>op</u>ening</strong>."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:417
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:423
+#: src/qml/Settings/PlaybackSettings.qml:413
 msgid "Format selection"
 msgstr "Výběr formátu"
 
-#: src/qml/Settings/PlaybackSettings.qml:463
+#: src/qml/Settings/PlaybackSettings.qml:453
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Vybere zdroj videa, který je nejblíže zvolenému formátu."
 
-#: src/qml/Settings/PlaybackSettings.qml:492
+#: src/qml/Settings/PlaybackSettings.qml:482
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "nejlepsivideo+nejlepsiaudio/nejlepsi"
@@ -2091,6 +2081,14 @@ msgstr "Nasycení"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enabled"
+#~ msgstr "Povoleno"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disabled"
+#~ msgstr "Zakázáno"
 
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"

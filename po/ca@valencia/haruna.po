@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 00:40+0000\n"
+"POT-Creation-Date: 2025-01-15 00:40+0000\n"
 "PO-Revision-Date: 2025-01-13 10:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -548,44 +548,44 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Torna a assignar"
 
-#: src/mpv/mpvitem.cpp:299
+#: src/mpv/mpvitem.cpp:298
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No s'ha pogut reproduir: %1"
 
-#: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
+#: src/mpv/mpvitem.cpp:381 src/mpv/mpvitem.cpp:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Temps dels subtítols: %1 segons"
 
-#: src/mpv/mpvitem.cpp:430
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Sense"
 
-#: src/mpv/mpvitem.cpp:469
+#: src/mpv/mpvitem.cpp:468
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla ha fallat"
 
-#: src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "S'ha pres una captura de pantalla"
 
-#: src/mpv/mpvitem.cpp:476
+#: src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:502
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -595,7 +595,7 @@ msgstr ""
 "No s'ha detectat cap pista de vídeo, és molt probable que la pista de vídeo "
 "no es puga descodificar o reproduir a causa de còdecs que falten"
 
-#: src/mpv/mpvitem.cpp:533
+#: src/mpv/mpvitem.cpp:532
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1178,7 +1178,7 @@ msgstr ""
 "Marcada: la propietat s'establirà a l'inici\n"
 "Sense marcar: la propietat no s'establirà a l'inici"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:167
+#: src/qml/Settings/CustomCommandsSettings.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Afi&g"
@@ -1227,17 +1227,17 @@ msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "Activa el registre de «mpv»"
 
-#: src/qml/Settings/EditCustomCommand.qml:41
+#: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Ordre"
 
-#: src/qml/Settings/EditCustomCommand.qml:50
+#: src/qml/Settings/EditCustomCommand.qml:51
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "Afig volum +10"
 
-#: src/qml/Settings/EditCustomCommand.qml:57
+#: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -1263,17 +1263,17 @@ msgstr ""
 "<br><strong>cycle</strong>: circula a través dels valors d'una propietat "
 "<strong>cycle aid up</strong>."
 
-#: src/qml/Settings/EditCustomCommand.qml:74
+#: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "Missatge OSD"
 
-#: src/qml/Settings/EditCustomCommand.qml:84
+#: src/qml/Settings/EditCustomCommand.qml:85
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "Nom de fitxer: ${filename}"
 
-#: src/qml/Settings/EditCustomCommand.qml:90
+#: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -1284,17 +1284,17 @@ msgstr ""
 "tipus d'acció.<br>Utilitzeu ${property_name} per a mostrar el valor d'una "
 "propietat <strong>Volum: ${volume}</strong>"
 
-#: src/qml/Settings/EditCustomCommand.qml:99
+#: src/qml/Settings/EditCustomCommand.qml:100
 msgctxt "@label"
 msgid "Type"
 msgstr "Tipus"
 
-#: src/qml/Settings/EditCustomCommand.qml:120
+#: src/qml/Settings/EditCustomCommand.qml:121
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "Drecera de teclat"
 
-#: src/qml/Settings/EditCustomCommand.qml:121
+#: src/qml/Settings/EditCustomCommand.qml:122
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
@@ -1303,27 +1303,27 @@ msgstr ""
 "L'ordre s'activarà amb una drecera. La drecera es pot establir després de "
 "guardar."
 
-#: src/qml/Settings/EditCustomCommand.qml:130
+#: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "Executa a l'inici"
 
-#: src/qml/Settings/EditCustomCommand.qml:131
+#: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr "L'ordre s'executarà en iniciar l'aplicació."
 
-#: src/qml/Settings/EditCustomCommand.qml:143
+#: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "Suprimix"
 
-#: src/qml/Settings/EditCustomCommand.qml:158
+#: src/qml/Settings/EditCustomCommand.qml:160
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: src/qml/Settings/EditCustomCommand.qml:165
+#: src/qml/Settings/EditCustomCommand.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "Guar&da"
@@ -1630,17 +1630,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Descodificació per maquinari"
 
-#: src/qml/Settings/PlaybackSettings.qml:130
-msgctxt "@option:check"
-msgid "Enabled"
-msgstr "Activada"
-
-#: src/qml/Settings/PlaybackSettings.qml:130
-msgctxt "@option:check"
-msgid "Disabled"
-msgstr "Desactivada"
-
-#: src/qml/Settings/PlaybackSettings.qml:177
+#: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1680,12 +1670,12 @@ msgstr ""
 "maquinari creant una ordre personalitzada d'inici <strong>set hwdec "
 "<i>decoder_name</i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:207
+#: src/qml/Settings/PlaybackSettings.qml:197
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Obri l'últim fitxer reproduït en iniciar"
 
-#: src/qml/Settings/PlaybackSettings.qml:216
+#: src/qml/Settings/PlaybackSettings.qml:206
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
@@ -1694,17 +1684,17 @@ msgstr ""
 "En iniciar, obri el fitxer que s'estava reproduint quan es va tancar "
 "l'aplicació."
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:215
 msgctxt "@title"
 msgid "Playback position"
 msgstr "Posició de reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:235
+#: src/qml/Settings/PlaybackSettings.qml:225
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Restaura la posició de reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:244
+#: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1725,52 +1715,52 @@ msgstr[1] ""
 "de nou es buscarà a la posició guardada.\n"
 "La posició es guarda cada %1 segons, excepte els últims 10 segons del vídeo."
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:248
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Inicia la reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:268
+#: src/qml/Settings/PlaybackSettings.qml:258
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "El fitxer es reproduirà després de restaurar la posició de reproducció"
 
-#: src/qml/Settings/PlaybackSettings.qml:291
+#: src/qml/Settings/PlaybackSettings.qml:281
 msgctxt "@info"
 msgid "For any duration"
 msgstr "Per a qualsevol duració"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:284
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "Si la duració és superior a %1 minut"
 msgstr[1] "Si la duració és superior a %1 minuts"
 
-#: src/qml/Settings/PlaybackSettings.qml:303
+#: src/qml/Settings/PlaybackSettings.qml:293
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 "La posició dels fitxers remots es restaura independentment de la duració."
 
-#: src/qml/Settings/PlaybackSettings.qml:325
+#: src/qml/Settings/PlaybackSettings.qml:315
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Guarda la posició cada %1 segon"
 msgstr[1] "Guarda la posició cada %1 segons"
 
-#: src/qml/Settings/PlaybackSettings.qml:338
+#: src/qml/Settings/PlaybackSettings.qml:328
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Capítols"
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:337
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Omet els capítols"
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:345
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1779,12 +1769,12 @@ msgstr ""
 "Quan es marca, s'ometen automàticament els capítols que contenen certes "
 "paraules/caràcters."
 
-#: src/qml/Settings/PlaybackSettings.qml:363
+#: src/qml/Settings/PlaybackSettings.qml:353
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Mostra un missatge OSD en saltar"
 
-#: src/qml/Settings/PlaybackSettings.qml:372
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1792,17 +1782,17 @@ msgid ""
 msgstr ""
 "Quan s'ometen capítols, un missatge OSD mostrarà el títol del capítol omés."
 
-#: src/qml/Settings/PlaybackSettings.qml:378
+#: src/qml/Settings/PlaybackSettings.qml:368
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Omet les paraules"
 
-#: src/qml/Settings/PlaybackSettings.qml:387
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, capítol 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:393
+#: src/qml/Settings/PlaybackSettings.qml:383
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1813,22 +1803,22 @@ msgstr ""
 "coincidència no és exacta, el que significa que <strong>op</strong> "
 "coincidirà amb paraules que ho continguen com <strong><u>op</u>inió</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:417
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:423
+#: src/qml/Settings/PlaybackSettings.qml:413
 msgid "Format selection"
 msgstr "Seleccioneu el format"
 
-#: src/qml/Settings/PlaybackSettings.qml:463
+#: src/qml/Settings/PlaybackSettings.qml:453
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr ""
 "Selecciona una font de vídeo que siga la més propera al format seleccionat."
 
-#: src/qml/Settings/PlaybackSettings.qml:492
+#: src/qml/Settings/PlaybackSettings.qml:482
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "millor_vídeo+millor_àudio/millor"
@@ -2190,3 +2180,11 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enabled"
+#~ msgstr "Activada"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disabled"
+#~ msgstr "Desactivada"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 00:40+0000\n"
+"POT-Creation-Date: 2025-01-15 00:40+0000\n"
 "PO-Revision-Date: 2025-01-08 17:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -546,44 +546,44 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "重新指派"
 
-#: src/mpv/mpvitem.cpp:299
+#: src/mpv/mpvitem.cpp:298
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "無法播放：%1"
 
-#: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
+#: src/mpv/mpvitem.cpp:381 src/mpv/mpvitem.cpp:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕延遲：%1 秒"
 
-#: src/mpv/mpvitem.cpp:430
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "無"
 
-#: src/mpv/mpvitem.cpp:469
+#: src/mpv/mpvitem.cpp:468
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "螢幕截圖失敗"
 
-#: src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "已擷取螢幕截圖"
 
-#: src/mpv/mpvitem.cpp:476
+#: src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "螢幕截圖：%1"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:502
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -591,7 +591,7 @@ msgid ""
 "due to missing codecs"
 msgstr "未偵測到視訊軌，這大概是因為缺乏解碼器而無法解碼/播放視訊軌"
 
-#: src/mpv/mpvitem.cpp:533
+#: src/mpv/mpvitem.cpp:532
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1177,7 +1177,7 @@ msgstr ""
 "勾選時：屬性會在啟動時設定\n"
 "不勾選時：屬性不會在啟動時設定"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:167
+#: src/qml/Settings/CustomCommandsSettings.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "新增(&A)"
@@ -1224,17 +1224,17 @@ msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "啟用 mpv 紀錄"
 
-#: src/qml/Settings/EditCustomCommand.qml:41
+#: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "指令"
 
-#: src/qml/Settings/EditCustomCommand.qml:50
+#: src/qml/Settings/EditCustomCommand.qml:51
 msgctxt "placeholder text"
 msgid "add volume +10"
 msgstr "add volume +10"
 
-#: src/qml/Settings/EditCustomCommand.qml:57
+#: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -1258,17 +1258,17 @@ msgstr ""
 "strong>。<br><strong>cycle</strong>：循環切換一個屬性的可用數值 "
 "<strong>cycle aid up</strong>。"
 
-#: src/qml/Settings/EditCustomCommand.qml:74
+#: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "OSD 訊息"
 
-#: src/qml/Settings/EditCustomCommand.qml:84
+#: src/qml/Settings/EditCustomCommand.qml:85
 msgctxt "placeholder text"
 msgid "Filename: ${filename}"
 msgstr "檔案名稱：${filename}"
 
-#: src/qml/Settings/EditCustomCommand.qml:90
+#: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -1278,44 +1278,44 @@ msgstr ""
 "觸發動作型自訂指令時要顯示的螢幕訊息。<br>使用 ${屬性名稱} 來顯示某屬性的數"
 "值 <strong>音量：${volume}</strong>"
 
-#: src/qml/Settings/EditCustomCommand.qml:99
+#: src/qml/Settings/EditCustomCommand.qml:100
 msgctxt "@label"
 msgid "Type"
 msgstr "類型"
 
-#: src/qml/Settings/EditCustomCommand.qml:120
+#: src/qml/Settings/EditCustomCommand.qml:121
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "鍵盤快捷鍵"
 
-#: src/qml/Settings/EditCustomCommand.qml:121
+#: src/qml/Settings/EditCustomCommand.qml:122
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr "指令會由快捷鍵所觸發。快捷鍵可以在儲存之後設定。"
 
-#: src/qml/Settings/EditCustomCommand.qml:130
+#: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "啟動時執行"
 
-#: src/qml/Settings/EditCustomCommand.qml:131
+#: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr "指令會在應用程式啟動時執行。"
 
-#: src/qml/Settings/EditCustomCommand.qml:143
+#: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "刪除"
 
-#: src/qml/Settings/EditCustomCommand.qml:158
+#: src/qml/Settings/EditCustomCommand.qml:160
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "取消"
 
-#: src/qml/Settings/EditCustomCommand.qml:165
+#: src/qml/Settings/EditCustomCommand.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "儲存(&S)"
@@ -1608,17 +1608,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "硬體解碼"
 
-#: src/qml/Settings/PlaybackSettings.qml:130
-msgctxt "@option:check"
-msgid "Enabled"
-msgstr "已啟用"
-
-#: src/qml/Settings/PlaybackSettings.qml:130
-msgctxt "@option:check"
-msgid "Disabled"
-msgstr "已停用"
-
-#: src/qml/Settings/PlaybackSettings.qml:177
+#: src/qml/Settings/PlaybackSettings.qml:167
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1652,24 +1642,24 @@ msgstr ""
 "a><br><br>您也可以如此建立啟動自訂指令：<strong>set hwdec <i>解碼器名稱</i></"
 "strong> 來設定另一個硬體解碼器。"
 
-#: src/qml/Settings/PlaybackSettings.qml:207
+#: src/qml/Settings/PlaybackSettings.qml:197
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "啟動時開啟上次播放的檔案"
 
-#: src/qml/Settings/PlaybackSettings.qml:216
+#: src/qml/Settings/PlaybackSettings.qml:206
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr "啟動時它會開啟應用程式上次關閉時正在播放的檔案。"
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:215
 msgctxt "@title"
 msgid "Playback position"
 msgstr "播放位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:235
+#: src/qml/Settings/PlaybackSettings.qml:225
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Seek to last playback position"
@@ -1677,7 +1667,7 @@ msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "跳到上次播放位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:244
+#: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1693,78 +1683,78 @@ msgstr[0] ""
 "播放時儲存檔案的播放位置，下次開啟同一個檔案的時候就會跳到已儲存的位置。\n"
 "播放位置每過 %1 秒會儲存一次，除非已經在影片的最後 10 秒。"
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:248
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "開始播放"
 
-#: src/qml/Settings/PlaybackSettings.qml:268
+#: src/qml/Settings/PlaybackSettings.qml:258
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "復原播放位置之後隨即開始播放檔案"
 
-#: src/qml/Settings/PlaybackSettings.qml:291
+#: src/qml/Settings/PlaybackSettings.qml:281
 msgctxt "@info"
 msgid "For any duration"
 msgstr "不論影片長度"
 
-#: src/qml/Settings/PlaybackSettings.qml:294
+#: src/qml/Settings/PlaybackSettings.qml:284
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "長度超過 %1 分鐘時"
 
-#: src/qml/Settings/PlaybackSettings.qml:303
+#: src/qml/Settings/PlaybackSettings.qml:293
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "遠端檔案的位置總是會復原，不論其長度。"
 
-#: src/qml/Settings/PlaybackSettings.qml:325
+#: src/qml/Settings/PlaybackSettings.qml:315
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "每 %1 秒記住位置"
 
-#: src/qml/Settings/PlaybackSettings.qml:338
+#: src/qml/Settings/PlaybackSettings.qml:328
 msgctxt "@title"
 msgid "Chapters"
 msgstr "章節"
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:337
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "跳過章節"
 
-#: src/qml/Settings/PlaybackSettings.qml:355
+#: src/qml/Settings/PlaybackSettings.qml:345
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr "啟用時自動跳過包含某些單詞/字元的章節。"
 
-#: src/qml/Settings/PlaybackSettings.qml:363
+#: src/qml/Settings/PlaybackSettings.qml:353
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "跳過時在螢幕顯示 OSD 訊息"
 
-#: src/qml/Settings/PlaybackSettings.qml:372
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr "跳過章節時跳出螢幕顯示訊息，來顯示跳過的章節的標題。"
 
-#: src/qml/Settings/PlaybackSettings.qml:378
+#: src/qml/Settings/PlaybackSettings.qml:368
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "跳過單詞"
 
-#: src/qml/Settings/PlaybackSettings.qml:387
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:393
+#: src/qml/Settings/PlaybackSettings.qml:383
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1775,21 +1765,21 @@ msgstr ""
 "對到，例如 <strong>op</strong> 會比對到包含它的單詞，像是 <strong><u>op</"
 "u>ening</strong>。"
 
-#: src/qml/Settings/PlaybackSettings.qml:417
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:423
+#: src/qml/Settings/PlaybackSettings.qml:413
 msgid "Format selection"
 msgstr "格式選取"
 
-#: src/qml/Settings/PlaybackSettings.qml:463
+#: src/qml/Settings/PlaybackSettings.qml:453
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "選擇最接近所選格式的影片來源。"
 
-#: src/qml/Settings/PlaybackSettings.qml:492
+#: src/qml/Settings/PlaybackSettings.qml:482
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -2135,6 +2125,14 @@ msgstr "飽和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中鍵點擊滑條來重設它"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enabled"
+#~ msgstr "已啟用"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disabled"
+#~ msgstr "已停用"
 
 #~ msgctxt "@label:spinbox"
 #~ msgid "Resume playback"
