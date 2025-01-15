@@ -86,7 +86,14 @@ RowLayout {
             ToolTip {
                 id: progressBarToolTip
 
-                x: progressBarMouseArea.mouseX - (progressBarToolTip.width * 0.5)
+                x: {
+                    if (slider.pressed) {
+                        const xPos = (slider.value * 100 / slider.to) / 100 * slider.width
+                        return xPos - (progressBarToolTip.width * 0.5)
+                    }
+
+                    return progressBarMouseArea.mouseX - (progressBarToolTip.width * 0.5)
+                }
                 y: -height - Kirigami.Units.largeSpacing
                 z: 10
                 visible: progressBarMouseArea.containsMouse && root.m_mpv.duration > 0
@@ -176,9 +183,6 @@ RowLayout {
             }
 
             root.m_mpv.command(["seek", slider.value, "absolute"])
-
-            const xPos = (slider.value * 100 / slider.to) / 100 * slider.width
-            progressBarToolTip.x = xPos - (progressBarToolTip.width * 0.5)
             progressBarToolTip.text = HarunaApp.formatTime(slider.value)
 
             const previewItem = previewMpvLoader.item as MpvPreview
