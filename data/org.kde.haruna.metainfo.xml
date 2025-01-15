@@ -386,12 +386,14 @@
         <p>There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
         <p>Features:</p>
         <ul>
-          <li>Changed the settings related to restoring the playback position, if you changed the defaults you have to redo them</li>
-          <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed</li>
+          <li>Changed the settings related to restoring the playback position, if you changed the defaults you might have to redo them</li>
+          <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed (from the playlist)</li>
           <li>Added setting (in General) to start app in fullscreen</li>
           <li>Added setting (in Subtitles) to control subtitle auto selection</li>
           <li>Changed left and right mouse button default actions: left click is now play/pause and right click opens the context menu. Actions can be changed in settings Mouse page</li>
+          <li>Dragging the seek/progress bar will update the main view as well as the seekbar preview</li>
           <li>Decreased the minimum window size</li>
+          <li>Replaced hardware decoding checkbox with an option in the hardware decoding combobox/drop-down</li>
         </ul>
         <p>Bugfixes:</p>
         <ul>
