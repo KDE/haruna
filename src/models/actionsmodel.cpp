@@ -43,7 +43,7 @@ ActionsModel::ActionsModel(QObject *parent)
     action.name = u"sponsorAction"_s;
     action.text = i18nc("@action", "Sponsor Haruna");
     action.iconName = u"help-donate-ars"_s;
-    action.defaultShortcut = QKeySequence{};
+    action.defaultShortcut = Qt::Key_Dollar;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
