@@ -15,6 +15,7 @@
 
 #include <KAboutData>
 #include <KSharedConfig>
+#include <qprocess.h>
 
 class QQuickWindow;
 class KActionCollection;
@@ -120,6 +121,7 @@ private:
     QString m_systemDefaultStyle;
     QQmlApplicationEngine *m_qmlEngine{nullptr};
     std::unique_ptr<ApplicationEventFilter> m_appEventFilter;
+    std::unique_ptr<QProcess> m_ytdlpProcess;
 };
 
 #endif // APPLICATION_H

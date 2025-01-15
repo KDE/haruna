@@ -31,6 +31,8 @@
 #include <KWindowConfig>
 #include <KWindowSystem>
 
+#include <MpvAbstractItem>
+
 #include "audiosettings.h"
 #include "generalsettings.h"
 #include "global.h"
@@ -107,13 +109,12 @@ void Application::setupWorkerThread()
 
 void Application::setupAboutData()
 {
-    KAboutData m_aboutData;
     m_aboutData.setComponentName(u"haruna"_s);
     m_aboutData.setDisplayName(i18nc("application title/display name", "Haruna"));
     m_aboutData.setVersion(Application::version().toUtf8());
     m_aboutData.setShortDescription(i18nc("@title", "Media player"));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
-    m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2023"));
+    m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2025"));
     m_aboutData.setHomepage(u"https://haruna.kde.org"_s);
     m_aboutData.setBugAddress(u"https://bugs.kde.org/enter_bug.cgi?product=Haruna"_s.toUtf8());
     m_aboutData.setDesktopFileName(u"org.kde.haruna"_s);
@@ -122,6 +123,36 @@ void Application::setupAboutData()
                           i18nc("@info:credit", "Developer"),
                           u"georgefb899@gmail.com"_s,
                           u"https://georgefb.com"_s);
+
+    KAboutData::setApplicationData(m_aboutData);
+
+    m_ytdlpProcess = std::make_unique<QProcess>();
+    m_ytdlpProcess->setProgram(Application::youtubeDlExecutable());
+    m_ytdlpProcess->setArguments({u"--version"_s});
+    m_ytdlpProcess->start();
+    connect(m_ytdlpProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int, QProcess::ExitStatus) {
+        auto ytdlpVersion = m_ytdlpProcess->readAllStandardOutput();
+        m_aboutData.addComponent(u"yt-dlp"_s,
+                                 i18n("Feature-rich command-line audio/video downloader"),
+                                 QString::fromUtf8(ytdlpVersion),
+                                 u"https://github.com/yt-dlp/yt-dlp"_s,
+                                 u"https://unlicense.org"_s);
+
+        KAboutData::setApplicationData(m_aboutData);
+    });
+
+    MpvAbstractItem mpvItem;
+    m_aboutData.addComponent(u"mpv"_s,
+                             i18n("Command line video player"),
+                             mpvItem.getProperty(u"mpv-version"_s).toString().replace(u"mpv "_s, QString{}),
+                             u"https://mpv.io"_s,
+                             KAboutLicense::GPL);
+
+    m_aboutData.addComponent(u"ffmpeg"_s,
+                             i18n("Cross-platform solution to record, convert and stream audio and video"),
+                             mpvItem.getProperty(u"ffmpeg-version"_s).toString(),
+                             u"https://www.ffmpeg.org"_s,
+                             KAboutLicense::GPL);
 
     KAboutData::setApplicationData(m_aboutData);
 }
