@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:40+0000\n"
+"POT-Creation-Date: 2025-01-16 00:40+0000\n"
 "PO-Revision-Date: 2024-12-24 16:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,43 +27,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:114
+#: src/application.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "미디어 재생기"
 
-#: src/application.cpp:116
-#, kde-format
+#: src/application.cpp:117
+#, fuzzy, kde-format
+#| msgctxt "copyright statement"
+#| msgid "(c) 2019-2023"
 msgctxt "copyright statement"
-msgid "(c) 2019-2023"
+msgid "(c) 2019-2025"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:121
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "개발자"
 
-#: src/application.cpp:133
+#: src/application.cpp:136
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr ""
+
+#: src/application.cpp:146
+#, kde-format
+msgid "Command line video player"
+msgstr ""
+
+#: src/application.cpp:152
+#, kde-format
+msgid "Cross-platform solution to record, convert and stream audio and video"
+msgstr ""
+
+#: src/application.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "열 파일"
 
-#: src/application.cpp:137
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -73,7 +90,7 @@ msgstr ""
 "ytdl 형식 설정 문자열을 재정의합니다. GUI에서 설정을 변경하면 이 설정이 무시"
 "됩니다"
 
-#: src/application.cpp:139
+#: src/application.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -831,12 +848,12 @@ msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "챕터 메뉴 열기"
 
-#: src/qml/HProgressBar.qml:278
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:286
+#: src/qml/HProgressBar.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1602,24 +1619,12 @@ msgstr ""
 "mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
 "니다"
 
-#: src/qml/Settings/PlaybackSettings.qml:110
-msgctxt "@option:check"
-msgid "Pause on minimize"
-msgstr "최소화 시 일시 정지"
-
-#: src/qml/Settings/PlaybackSettings.qml:119
-msgctxt "@info:tooltip pause on minimize setting"
-msgid ""
-"Pauses the player while the window is minimized, playback resumes when "
-"restored."
-msgstr "창이 최소화되었을 때 재생을 일시 정지하며 복원될 때 다시 시작합니다."
-
-#: src/qml/Settings/PlaybackSettings.qml:124
+#: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "하드웨어 디코딩"
 
-#: src/qml/Settings/PlaybackSettings.qml:167
+#: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1656,24 +1661,36 @@ msgstr ""
 "자 정의 시작 명령으로 <strong>set hwdec <i>decoder_name</i></strong>을 입력하"
 "십시오."
 
-#: src/qml/Settings/PlaybackSettings.qml:197
+#: src/qml/Settings/PlaybackSettings.qml:173
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "시작할 때 마지막으로 재생한 파일 열기"
 
-#: src/qml/Settings/PlaybackSettings.qml:206
+#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr "시작할 때 마지막으로 앱을 닫을 때 재생했던 파일을 엽니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:215
+#: src/qml/Settings/PlaybackSettings.qml:191
+msgctxt "@option:check"
+msgid "Pause on minimize"
+msgstr "최소화 시 일시 정지"
+
+#: src/qml/Settings/PlaybackSettings.qml:200
+msgctxt "@info:tooltip pause on minimize setting"
+msgid ""
+"Pauses the player while the window is minimized, playback resumes when "
+"restored."
+msgstr "창이 최소화되었을 때 재생을 일시 정지하며 복원될 때 다시 시작합니다."
+
+#: src/qml/Settings/PlaybackSettings.qml:209
 msgctxt "@title"
 msgid "Playback position"
 msgstr "재생 위치"
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:219
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Seek to last playback position"
@@ -1681,7 +1698,7 @@ msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "마지막으로 재생한 위치로 탐색"
 
-#: src/qml/Settings/PlaybackSettings.qml:234
+#: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1698,49 +1715,49 @@ msgstr[0] ""
 "다.\n"
 "매 %1초마다 동영상 위치를 저장하며, 마지막 10초는 제외됩니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:248
+#: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "재생 시작"
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:281
+#: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
 msgid "For any duration"
 msgstr "모든 시간에"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:278
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "시간이 %1분보다 더 길 때"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "원격 파일 위치는 시간에 관계 없이 복원됩니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:315
+#: src/qml/Settings/PlaybackSettings.qml:309
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "%1초마다 위치 저장"
 
-#: src/qml/Settings/PlaybackSettings.qml:328
+#: src/qml/Settings/PlaybackSettings.qml:322
 msgctxt "@title"
 msgid "Chapters"
 msgstr "챕터 "
 
-#: src/qml/Settings/PlaybackSettings.qml:337
+#: src/qml/Settings/PlaybackSettings.qml:331
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/Settings/PlaybackSettings.qml:345
+#: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1748,29 +1765,29 @@ msgid ""
 msgstr ""
 "이 옵션을 사용하면 지정한 단어나 문자를 포함한 챕터를 자동으로 건너뜁니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "건너뛸 때 OSD 메시지 표시"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr "챕터를 건너뛸 때 건너뛴 챕터 제목을 OSD 메시지로 표시합니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:368
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "단어 건너뛰기"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 챕터 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:383
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1781,21 +1798,21 @@ msgstr ""
 "어 기반이 아닙니다. 예를 들어 <strong>오</strong>를 입력하면 <strong><u>오</"
 "u>프닝</strong>과 같은 단어에도 일치합니다.JK"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:413
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgid "Format selection"
 msgstr "형식 선택"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "선택한 형식에 가장 가까운 동영상 원본을 선택합니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:482
+#: src/qml/Settings/PlaybackSettings.qml:476
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"

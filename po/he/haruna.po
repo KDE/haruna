@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:40+0000\n"
+"POT-Creation-Date: 2025-01-16 00:40+0000\n"
 "PO-Revision-Date: 2025-01-13 18:09+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,43 +28,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:114
+#: src/application.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "נגן מדיה"
 
-#: src/application.cpp:116
-#, kde-format
+#: src/application.cpp:117
+#, fuzzy, kde-format
+#| msgctxt "copyright statement"
+#| msgid "(c) 2019-2023"
 msgctxt "copyright statement"
-msgid "(c) 2019-2023"
+msgid "(c) 2019-2025"
 msgstr "(c) 2019‏-2023"
 
-#: src/application.cpp:121
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "ג׳ורג׳ פלוריאה באנוש"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "מפתח"
 
-#: src/application.cpp:133
+#: src/application.cpp:136
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr ""
+
+#: src/application.cpp:146
+#, kde-format
+msgid "Command line video player"
+msgstr ""
+
+#: src/application.cpp:152
+#, kde-format
+msgid "Cross-platform solution to record, convert and stream audio and video"
+msgstr ""
+
+#: src/application.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "קובץ לפתיחה"
 
-#: src/application.cpp:137
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -74,7 +91,7 @@ msgstr ""
 "מאפשר מעקף זמני של הגדרות בחירת תסדיר ytdl. ישוכתב אם ההגדרה תשתנה דרך ממשק "
 "המשתמש"
 
-#: src/application.cpp:139
+#: src/application.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -826,12 +843,12 @@ msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "פתיחת תפריט פרקים"
 
-#: src/qml/HProgressBar.qml:278
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "דילוג על פרקים"
 
-#: src/qml/HProgressBar.qml:286
+#: src/qml/HProgressBar.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1592,24 +1609,12 @@ msgstr ""
 "כמה לחתור בעת הזנקת הפעולה הנבחרת. מצב החתירה הוא <a href='https://mpv.io/"
 "manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a> (מדויק)"
 
-#: src/qml/Settings/PlaybackSettings.qml:110
-msgctxt "@option:check"
-msgid "Pause on minimize"
-msgstr "השהיה עם המזעור"
-
-#: src/qml/Settings/PlaybackSettings.qml:119
-msgctxt "@info:tooltip pause on minimize setting"
-msgid ""
-"Pauses the player while the window is minimized, playback resumes when "
-"restored."
-msgstr "משהה את הנגן כשהחלון ממוזער, הנגינה חוזרת עם שחזורו."
-
-#: src/qml/Settings/PlaybackSettings.qml:124
+#: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "פענוח חומרה"
 
-#: src/qml/Settings/PlaybackSettings.qml:167
+#: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1645,29 +1650,41 @@ msgstr ""
 "מפענח חומרה אחר על ידי יצירת פקודת טעינה מותאמת אישית עם <strong>set hwdec "
 "<i>decoder_name</i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:197
+#: src/qml/Settings/PlaybackSettings.qml:173
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "פתיחת הקובץ האחרון שהתנגנן בעלייה"
 
-#: src/qml/Settings/PlaybackSettings.qml:206
+#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr "עם העלייה לפתוח את הקובץ שהתנגן בזמן שהיישום נסגר."
 
-#: src/qml/Settings/PlaybackSettings.qml:215
+#: src/qml/Settings/PlaybackSettings.qml:191
+msgctxt "@option:check"
+msgid "Pause on minimize"
+msgstr "השהיה עם המזעור"
+
+#: src/qml/Settings/PlaybackSettings.qml:200
+msgctxt "@info:tooltip pause on minimize setting"
+msgid ""
+"Pauses the player while the window is minimized, playback resumes when "
+"restored."
+msgstr "משהה את הנגן כשהחלון ממוזער, הנגינה חוזרת עם שחזורו."
+
+#: src/qml/Settings/PlaybackSettings.qml:209
 msgctxt "@title"
 msgid "Playback position"
 msgstr "נקודת הנגינה"
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:219
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "שחזור נקודת הנגינה האחרון"
 
-#: src/qml/Settings/PlaybackSettings.qml:234
+#: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1692,22 +1709,22 @@ msgstr[3] ""
 "נקודת הנגינה בקובץ נשמרת, פתיחת אותו הקובץ שוב תחתור למקום שנשמר.\n"
 "המקום נשמר כל %1 שניות, למעט עשר השניות האחרונות של הסרטון."
 
-#: src/qml/Settings/PlaybackSettings.qml:248
+#: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "התחלת נגינה"
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "הקובץ יתנגן לאחר שחזור נקודת הנגינה"
 
-#: src/qml/Settings/PlaybackSettings.qml:281
+#: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
 msgid "For any duration"
 msgstr "לכל משך שהוא"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:278
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
@@ -1716,12 +1733,12 @@ msgstr[1] "אם האורך הוא יותר משתי דקות"
 msgstr[2] "אם האורך הוא יותר מ־%1 דקות"
 msgstr[3] "אם הארוך הוא יותר מ־%1 דקות"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "מקום לקבצים מרוחקים נשמר ללא תלות באורכם."
 
-#: src/qml/Settings/PlaybackSettings.qml:315
+#: src/qml/Settings/PlaybackSettings.qml:309
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1730,17 +1747,17 @@ msgstr[1] "לשמור את המקום כל שתי שניות"
 msgstr[2] "לשמור את המקום כל %1 שניות"
 msgstr[3] "לשמור את המקום כל %1 שניות"
 
-#: src/qml/Settings/PlaybackSettings.qml:328
+#: src/qml/Settings/PlaybackSettings.qml:322
 msgctxt "@title"
 msgid "Chapters"
 msgstr "פרקים"
 
-#: src/qml/Settings/PlaybackSettings.qml:337
+#: src/qml/Settings/PlaybackSettings.qml:331
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "דילוג על פרקים"
 
-#: src/qml/Settings/PlaybackSettings.qml:345
+#: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1748,12 +1765,12 @@ msgid ""
 msgstr ""
 "כשהאפשרות פעילה הנגן ידלג אוטומטית על פרקים שמכילים מילים/תווים מסוימים."
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "הצגת הודעה על גבי המסך עם הדילוג"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1761,17 +1778,17 @@ msgid ""
 msgstr ""
 "בעת דילוג על פרקים תופיע הודעה מרחפת על המסך שתציג את כותרת הפרק שדולג."
 
-#: src/qml/Settings/PlaybackSettings.qml:368
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "דילוג על מילים"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "פרק 1, פרסומת, הצגה"
 
-#: src/qml/Settings/PlaybackSettings.qml:383
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1782,21 +1799,21 @@ msgstr ""
 "מדויקת כלומר ש־<strong>פת</strong> יכול לתפוס גם מילים כמו <strong><u>פת</"
 "u>יחה</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:413
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgid "Format selection"
 msgstr "בחירת תסדיר"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "בוחר את מקור הווידאו שהכי קרוב לתצורה הנבחרת."
 
-#: src/qml/Settings/PlaybackSettings.qml:482
+#: src/qml/Settings/PlaybackSettings.qml:476
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"

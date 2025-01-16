@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:40+0000\n"
+"POT-Creation-Date: 2025-01-16 00:40+0000\n"
 "PO-Revision-Date: 2025-01-15 00:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -27,43 +27,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adrian@chaves.io"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:114
+#: src/application.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Reprodutor multimedia"
 
-#: src/application.cpp:116
-#, kde-format
+#: src/application.cpp:117
+#, fuzzy, kde-format
+#| msgctxt "copyright statement"
+#| msgid "(c) 2019-2023"
 msgctxt "copyright statement"
-msgid "(c) 2019-2023"
+msgid "(c) 2019-2025"
 msgstr "© 2019-2023"
 
-#: src/application.cpp:121
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolvemento."
 
-#: src/application.cpp:133
+#: src/application.cpp:136
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr ""
+
+#: src/application.cpp:146
+#, kde-format
+msgid "Command line video player"
+msgstr ""
+
+#: src/application.cpp:152
+#, kde-format
+msgid "Cross-platform solution to record, convert and stream audio and video"
+msgstr ""
+
+#: src/application.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Ficheiro para abrir"
 
-#: src/application.cpp:137
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -73,7 +90,7 @@ msgstr ""
 "Permite sobredefinir temporalmente a opción de selección de formato de ytdl. "
 "Sobrescribirase se cambia a opción mediante a interface."
 
-#: src/application.cpp:139
+#: src/application.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -829,12 +846,12 @@ msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "Abrir o menú de capítulos."
 
-#: src/qml/HProgressBar.qml:278
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Saltar capítulos"
 
-#: src/qml/HProgressBar.qml:286
+#: src/qml/HProgressBar.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1608,26 +1625,12 @@ msgstr ""
 "é <a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exacto</a>."
 
-#: src/qml/Settings/PlaybackSettings.qml:110
-msgctxt "@option:check"
-msgid "Pause on minimize"
-msgstr "Pausar ao minimizar."
-
-#: src/qml/Settings/PlaybackSettings.qml:119
-msgctxt "@info:tooltip pause on minimize setting"
-msgid ""
-"Pauses the player while the window is minimized, playback resumes when "
-"restored."
-msgstr ""
-"Pausa o reproducir ao minimizar a súa xanela. A reprodución continúa ao "
-"restaurala."
-
-#: src/qml/Settings/PlaybackSettings.qml:124
+#: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Descodificación por soporte físico"
 
-#: src/qml/Settings/PlaybackSettings.qml:167
+#: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1668,12 +1671,12 @@ msgstr ""
 "cree unha orde personalizada de inicio <strong>set hwdec <i>decoder_name</"
 "i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:197
+#: src/qml/Settings/PlaybackSettings.qml:173
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Abrir o último ficheiro reproducido ao reiniciar."
 
-#: src/qml/Settings/PlaybackSettings.qml:206
+#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
@@ -1682,17 +1685,31 @@ msgstr ""
 "No inicio abre o ficheiro que se estaba a reproducir cando se pechou a "
 "aplicación."
 
-#: src/qml/Settings/PlaybackSettings.qml:215
+#: src/qml/Settings/PlaybackSettings.qml:191
+msgctxt "@option:check"
+msgid "Pause on minimize"
+msgstr "Pausar ao minimizar."
+
+#: src/qml/Settings/PlaybackSettings.qml:200
+msgctxt "@info:tooltip pause on minimize setting"
+msgid ""
+"Pauses the player while the window is minimized, playback resumes when "
+"restored."
+msgstr ""
+"Pausa o reproducir ao minimizar a súa xanela. A reprodución continúa ao "
+"restaurala."
+
+#: src/qml/Settings/PlaybackSettings.qml:209
 msgctxt "@title"
 msgid "Playback position"
 msgstr "Posición de reprodución"
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:219
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Restaurar a posición de reprodución."
 
-#: src/qml/Settings/PlaybackSettings.qml:234
+#: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1715,51 +1732,51 @@ msgstr[1] ""
 "A posición gárdase cada %1 segundos, salvo para os últimos 10 segundos do "
 "vídeo."
 
-#: src/qml/Settings/PlaybackSettings.qml:248
+#: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Iniciar a reprodución."
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "O ficheiro reproducirase tras restaurar a posición de reprodución."
 
-#: src/qml/Settings/PlaybackSettings.qml:281
+#: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
 msgid "For any duration"
 msgstr "Para calquera duración"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:278
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "Se a duración supera %1 minuto"
 msgstr[1] "Se a duración supera %1 minutos"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "A posición dos ficheiros remotos restáurase sen importar a duración."
 
-#: src/qml/Settings/PlaybackSettings.qml:315
+#: src/qml/Settings/PlaybackSettings.qml:309
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Gardar a posición cada %1 segundo"
 msgstr[1] "Gardar a posición cada %1 segundos"
 
-#: src/qml/Settings/PlaybackSettings.qml:328
+#: src/qml/Settings/PlaybackSettings.qml:322
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Capítulos"
 
-#: src/qml/Settings/PlaybackSettings.qml:337
+#: src/qml/Settings/PlaybackSettings.qml:331
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Saltar capítulos."
 
-#: src/qml/Settings/PlaybackSettings.qml:345
+#: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1768,12 +1785,12 @@ msgstr ""
 "Se se activa, omite automaticamente capítulos que conteñen certas palabras "
 "ou caracteres."
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "Amosar unha mensaxe en pantalla ao saltar."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1782,17 +1799,17 @@ msgstr ""
 "Ao omitir capítulos, unha mensaxe en pantalla amosará o título do capítulo "
 "omitido."
 
-#: src/qml/Settings/PlaybackSettings.qml:368
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Saltar palabras"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, capítulo 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:383
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1803,21 +1820,21 @@ msgstr ""
 "coincidencia non é exacta, é dicir, <strong>ab</strong> coincidirá con "
 "palabras que o conteñan, como <strong><u>ab</u>rindo</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:413
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgid "Format selection"
 msgstr "Selección de formato"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Selecciona a fonte de vídeo máis próxima ao formato seleccionado."
 
-#: src/qml/Settings/PlaybackSettings.qml:482
+#: src/qml/Settings/PlaybackSettings.qml:476
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"

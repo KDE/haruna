@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:40+0000\n"
+"POT-Creation-Date: 2025-01-16 00:40+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,43 +29,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: src/application.cpp:112
+#: src/application.cpp:113
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "हारून"
 
-#: src/application.cpp:114
+#: src/application.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "मीडिया प्लेयर"
 
-#: src/application.cpp:116
-#, kde-format
+#: src/application.cpp:117
+#, fuzzy, kde-format
+#| msgctxt "copyright statement"
+#| msgid "(c) 2019-2023"
 msgctxt "copyright statement"
-msgid "(c) 2019-2023"
+msgid "(c) 2019-2025"
 msgstr "(ग) 2019-2023"
 
-#: src/application.cpp:121
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "जॉर्ज फ्लोरेआ बनुș"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "विकासकः"
 
-#: src/application.cpp:133
+#: src/application.cpp:136
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr ""
+
+#: src/application.cpp:146
+#, kde-format
+msgid "Command line video player"
+msgstr ""
+
+#: src/application.cpp:152
+#, kde-format
+msgid "Cross-platform solution to record, convert and stream audio and video"
+msgstr ""
+
+#: src/application.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "सञ्चिकां उद्घाटयितुं"
 
-#: src/application.cpp:137
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -75,7 +92,7 @@ msgstr ""
 "अस्थायीरूपेण ytdl प्रारूपचयनसेटिंग् अधिलिखितुं अनुमतिं ददाति । यदि GUI मार्गेण सेटिङ्ग् "
 "परिवर्तितं भवति तर्हि अधिलिखितं भविष्यति"
 
-#: src/application.cpp:139
+#: src/application.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -833,12 +850,12 @@ msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "अध्यायानां मेनू उद्घाटयन्तु"
 
-#: src/qml/HProgressBar.qml:278
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "अध्यायान् त्यजन्तु"
 
-#: src/qml/HProgressBar.qml:286
+#: src/qml/HProgressBar.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1600,24 +1617,12 @@ msgstr ""
 "तत्सम्बद्धं कार्यं प्रेरयन् कियत् अन्वेष्टव्यम्। Seek मोड् <a href='https://mpv.io/manual/"
 "stable/#command-interface-seek-<target>-[<flags>]'>सटीकः</a> अस्ति"
 
-#: src/qml/Settings/PlaybackSettings.qml:110
-msgctxt "@option:check"
-msgid "Pause on minimize"
-msgstr "न्यूनतमं कर्तुं विरामं कुर्वन्तु"
-
-#: src/qml/Settings/PlaybackSettings.qml:119
-msgctxt "@info:tooltip pause on minimize setting"
-msgid ""
-"Pauses the player while the window is minimized, playback resumes when "
-"restored."
-msgstr "विण्डो न्यूनीकृत्य खिलाडिनं विरामयति, पुनर्स्थापिते सति प्लेबैक् पुनः आरभ्यते ।"
-
-#: src/qml/Settings/PlaybackSettings.qml:124
+#: src/qml/Settings/PlaybackSettings.qml:106
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "हार्डवेयर डिकोडिंग्"
 
-#: src/qml/Settings/PlaybackSettings.qml:167
+#: src/qml/Settings/PlaybackSettings.qml:149
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1654,24 +1659,36 @@ msgstr ""
 "<i>decoder_name इति</i></strong> startup custom आदेशं निर्माय अन्यं हार्डवेयर "
 "डिकोडरं सेट् कर्तुं शक्नुवन्ति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:197
+#: src/qml/Settings/PlaybackSettings.qml:173
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "स्टार्टअप-समये अन्तिम-वादिता-सञ्चिकां उद्घाटयन्तु"
 
-#: src/qml/Settings/PlaybackSettings.qml:206
+#: src/qml/Settings/PlaybackSettings.qml:182
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr "प्रारम्भे एतत् सञ्चिकां उद्घाटयति यत् अनुप्रयोगस्य निमीलनस्य समये क्रीडति स्म ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:215
+#: src/qml/Settings/PlaybackSettings.qml:191
+msgctxt "@option:check"
+msgid "Pause on minimize"
+msgstr "न्यूनतमं कर्तुं विरामं कुर्वन्तु"
+
+#: src/qml/Settings/PlaybackSettings.qml:200
+msgctxt "@info:tooltip pause on minimize setting"
+msgid ""
+"Pauses the player while the window is minimized, playback resumes when "
+"restored."
+msgstr "विण्डो न्यूनीकृत्य खिलाडिनं विरामयति, पुनर्स्थापिते सति प्लेबैक् पुनः आरभ्यते ।"
+
+#: src/qml/Settings/PlaybackSettings.qml:209
 msgctxt "@title"
 msgid "Playback position"
 msgstr "प्लेबैक स्थिति"
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/qml/Settings/PlaybackSettings.qml:219
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Seek to last playback position"
@@ -1679,7 +1696,7 @@ msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "अन्तिमप्लेबैकस्थानं अन्वेष्टुम्"
 
-#: src/qml/Settings/PlaybackSettings.qml:234
+#: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1698,80 +1715,80 @@ msgstr[1] ""
 "प्लेबैकस्य समये सञ्चिकास्थानं रक्षति, पुनः समानसञ्चिकां उद्घाट्य रक्षितस्थानं अन्वेषयिष्यति ।\n"
 "स्थितिः प्रत्येकं %1 सेकेण्ड् मध्ये रक्षिता भवति, विडियोस्य अन्तिमं 10 सेकेण्ड् व्यतिरिक्तम् ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:248
+#: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "क्रीडितुं आरभत"
 
-#: src/qml/Settings/PlaybackSettings.qml:258
+#: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:281
+#: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
 msgid "For any duration"
 msgstr "कस्यापि अवधिपर्यन्तं"
 
-#: src/qml/Settings/PlaybackSettings.qml:284
+#: src/qml/Settings/PlaybackSettings.qml:278
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "यदि अवधिः %1 निमेषात् अधिका अस्ति"
 msgstr[1] "यदि अवधिः %1 निमेषाभ्यः अधिका अस्ति"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "दूरस्थसञ्चिकानां कृते स्थानं अवधिं न कृत्वा पुनः स्थापितं भवति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:315
+#: src/qml/Settings/PlaybackSettings.qml:309
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "प्रत्येकं %1 सेकण्ड् स्थानं रक्षन्तु"
 msgstr[1] "प्रत्येकं %1 सेकेण्ड् मध्ये स्थानं रक्षन्तु"
 
-#: src/qml/Settings/PlaybackSettings.qml:328
+#: src/qml/Settings/PlaybackSettings.qml:322
 msgctxt "@title"
 msgid "Chapters"
 msgstr "अध्यायाः"
 
-#: src/qml/Settings/PlaybackSettings.qml:337
+#: src/qml/Settings/PlaybackSettings.qml:331
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "अध्यायान् लङ्घयन्तु"
 
-#: src/qml/Settings/PlaybackSettings.qml:345
+#: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr "यदा सक्षमं भवति तदा स्वयमेव कतिपयशब्दान्/वर्णान् युक्तान् अध्यायान् लङ्घयति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:353
+#: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "skip इत्यत्र od सन्देशं दर्शयतु"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr "अध्यायान् त्यक्त्वा osd सन्देशः त्यक्तस्य अध्यायस्य शीर्षकं दर्शयिष्यति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:368
+#: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "शब्दान् लङ्घयन्तु"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, अध्याय 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:383
+#: src/qml/Settings/PlaybackSettings.qml:377
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1782,21 +1799,21 @@ msgstr ""
 "अर्थात् <strong>op</strong> <strong><u>op</u> ening</strong> इत्यादीनां तत्युक्तानां "
 "शब्दानां मेलनं करिष्यति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:413
+#: src/qml/Settings/PlaybackSettings.qml:407
 msgid "Format selection"
 msgstr "प्रारूपचयनम्"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "चयनितस्वरूपस्य समीपस्थं विडियो स्रोतः चिनोति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:482
+#: src/qml/Settings/PlaybackSettings.qml:476
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/सर्वश्रेष्ठम्"
