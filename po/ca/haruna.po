@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:40+0000\n"
-"PO-Revision-Date: 2025-01-13 10:00+0100\n"
+"PO-Revision-Date: 2025-01-16 10:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -43,12 +43,10 @@ msgid "Media player"
 msgstr "Reproductor multimèdia"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
-msgstr "(c) 2019-2023"
+msgstr "(c) 2019-2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -65,17 +63,19 @@ msgstr "Desenvolupador"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "Descarregador d'àudio/vídeo ric en funcions de línia d'ordres"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Reproductor de vídeo de línia d'ordres"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Una solució multiplataforma per a enregistrar, convertir i transmetre àudio "
+"i vídeo"
 
 #: src/application.cpp:164
 #, kde-format
@@ -2198,93 +2198,3 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig sobre els controls lliscants per a restablir-los"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enabled"
-#~ msgstr "Activada"
-
-#~ msgctxt "@option:check"
-#~ msgid "Disabled"
-#~ msgstr "Desactivada"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Resume playback"
-#~ msgstr "Reprèn la reproducció"
-
-#~ msgctxt "@info:tooltip seek to last playback position setting"
-#~ msgid ""
-#~ "When opening a file that was played before, seek at the position it was "
-#~ "last time."
-#~ msgstr ""
-#~ "Quan s'obri un fitxer que s'ha reproduït abans, va a la posició a on era "
-#~ "la darrera vegada."
-
-#~ msgctxt "@info:tooltip start playing setting"
-#~ msgid ""
-#~ "When resuming playback and seeking to last playback position, start "
-#~ "playing it automatically."
-#~ msgstr ""
-#~ "Quan es reprèn la reproducció i se cerca a la darrera posició reproduïda, "
-#~ "la comença a reproduir automàticament."
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "Carrega automàticament els subtítols"
-
-#~ msgctxt "@info"
-#~ msgid "Disabled"
-#~ msgstr "Desactivada"
-
-#~ msgctxt "@info"
-#~ msgid "For all files"
-#~ msgstr "Per a tots els fitxers"
-
-#~ msgctxt "@action"
-#~ msgid "Configure"
-#~ msgstr "Configura"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Subtitles function on"
-#~ msgstr "Activa la funció dels subtítols"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "Help"
-#~ msgstr "Ajuda"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna help window (english only)"
-#~ msgstr "Finestra d'ajuda de l'Haruna (només en anglès)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Haruna handbook"
-#~ msgstr "Manual de l'Haruna"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Don't set on next startup"
-#~ msgstr "No s'estableix a l'inici següent"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "This is also used for mouse wheel seeking, when mouse is over the "
-#~ "progress bar"
-#~ msgstr ""
-#~ "Això també s'usa per a cercar amb la roda del ratolí, quan el ratolí està "
-#~ "sobre la barra de progrés"
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Remember time position"
-#~ msgstr "Recorda la posició del temps"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Skip chapters containing these words. Comma separated list."
-#~ msgstr ""
-#~ "Omet els capítols que contenen aquestes paraules. Llista separada per "
-#~ "comes."
-
-#~ msgctxt "@title:window"
-#~ msgid "Help"
-#~ msgstr "Ajuda"
-
-#~ msgctxt "@title"
-#~ msgid "A configurable media player."
-#~ msgstr "Un reproductor multimèdia configurable."
