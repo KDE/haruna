@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:40+0000\n"
-"PO-Revision-Date: 2025-01-13 10:00+0100\n"
+"PO-Revision-Date: 2025-01-16 10:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -43,12 +43,10 @@ msgid "Media player"
 msgstr "Reproductor multimèdia"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
-msgstr "(c) 2019-2023"
+msgstr "(c) 2019-2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -65,17 +63,19 @@ msgstr "Desenvolupador"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "Descarregador d'àudio/vídeo ric en funcions de línia d'ordres"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Reproductor de vídeo de línia d'ordres"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Una solució multiplataforma per a enregistrar, convertir i transmetre àudio "
+"i vídeo"
 
 #: src/application.cpp:164
 #, kde-format
@@ -2197,11 +2197,3 @@ msgstr "Saturació"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Feu clic del mig damunt dels controls lliscants per a restablir-los"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enabled"
-#~ msgstr "Activada"
-
-#~ msgctxt "@option:check"
-#~ msgid "Disabled"
-#~ msgstr "Desactivada"
