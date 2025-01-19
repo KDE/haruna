@@ -192,7 +192,7 @@ QString MediaPlayer2Player::PlaybackStatus()
 
 double MediaPlayer2Player::Volume()
 {
-    return m_mpv->volume() / 100;
+    return m_mpv->getProperty(MpvProperties::self()->Volume).toDouble() / 100;
 }
 
 void MediaPlayer2Player::setVolume(double vol)
