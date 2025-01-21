@@ -561,9 +561,9 @@ QVariant ActionsModel::data(const QModelIndex &index, int role) const
     case IconRole:
         return QVariant(action.iconName);
     case ShortcutRole:
-        return QVariant(action.shortcut);
+        return QVariant(action.shortcut.toString(QKeySequence::PortableText));
     case DefaultShortcutRole:
-        return QVariant(action.defaultShortcut);
+        return QVariant(action.defaultShortcut.toString(QKeySequence::PortableText));
     case DescriptionRole:
         return QVariant(action.description);
     case TypeRole:
