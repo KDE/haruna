@@ -215,7 +215,7 @@ private:
     double m_duration{0.0};
     QString m_formattedDuration;
     QString m_mediaTitle;
-    bool m_pause{false};
+    bool m_pause{true};
     bool m_mute{false};
     int m_chapter{0};
     int m_volume{0};

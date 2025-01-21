@@ -122,6 +122,7 @@ void MpvItem::initProperties()
     //    setProperty(u"msg-level"_s, u"all=v"_s);
 
     Q_EMIT setProperty(MpvProperties::self()->VO, u"libmpv"_s);
+    Q_EMIT setProperty(MpvProperties::self()->Pause, m_pause);
 
     Q_EMIT setProperty(MpvProperties::self()->HardwareDecoding, PlaybackSettings::hWDecoding());
     Q_EMIT setProperty(MpvProperties::self()->Volume, AudioSettings::volume());
