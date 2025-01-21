@@ -408,7 +408,7 @@ void MpvItem::loadFile(const QString &file)
     setPropertyBlocking(MpvProperties::self()->Mute, true);
     setPropertyBlocking(MpvProperties::self()->Pause, false);
     setWatchLaterPosition(loadTimePosition());
-    if (PlaybackSettings::seekToLastPosition()) {
+    if (PlaybackSettings::restoreFilePosition()) {
         setPropertyBlocking(MpvProperties::self()->Pause, !PlaybackSettings::playOnResume() && watchLaterPosition() > 1);
         setPropertyBlocking(u"start"_s, QVariant(u"+"_s + QString::number(m_watchLaterPosition)));
     }
