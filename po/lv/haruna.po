@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-22 00:40+0000\n"
-"PO-Revision-Date: 2025-01-04 18:07+0200\n"
+"PO-Revision-Date: 2025-01-20 12:46+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,12 +41,10 @@ msgid "Media player"
 msgstr "Multivides atskaņotājs"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
-msgstr "(c) 2019—2023"
+msgstr "(c) 2019—2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -63,23 +61,25 @@ msgstr "Izstrādātājs"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "Iespējām bagāts komandrindas audio/video lejupielādētājs"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Komandrindas video atskaņotājs"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Vairākplatformu rīks audio un video ierakstīšanai, pārveidošanai un "
+"straumēšanai"
 
 #: src/application.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
-msgstr "Datne, ko atvērt"
+msgstr "Atveramā datne"
 
 #: src/application.cpp:168
 #, kde-format
@@ -759,12 +759,9 @@ msgid "Select a color"
 msgstr "Atlasīt krāsu"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select a color"
-msgstr "Atlasīt krāsu"
+msgstr "Krāsu atlasīšana"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -872,12 +869,12 @@ msgstr "Haruna"
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
-msgstr "Atlasīt datni"
+msgstr "Datņu atlasīšana"
 
 #: src/qml/Main.qml:321
 msgctxt "@title:window"
 msgid "Select subtitles file"
-msgstr "Atlasīt subtitru datni"
+msgstr "Atlasiet subtitru datni"
 
 #: src/qml/Main.qml:341
 msgctxt "@action:button"
@@ -1704,12 +1701,9 @@ msgid "Playback position"
 msgstr "Atskaņošanas pozīcija"
 
 #: src/qml/Settings/PlaybackSettings.qml:219
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "Iet uz pēdējo atskaņošanas pozīciju"
+msgstr "Atjaunot atskaņošanas pozīciju"
 
 #: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
@@ -1747,7 +1741,7 @@ msgstr "Sākt atskaņošanu"
 #: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
-msgstr ""
+msgstr "Datni atskaņos pēc atskaņošanas pozīcijas atjaunošanas"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
 msgctxt "@info"
