@@ -427,13 +427,14 @@ QString Application::platformName()
 
 void Application::raiseWindow()
 {
-    QObject *m_rootObject = m_qmlEngine->rootObjects().constFirst();
-    if (!m_rootObject) {
+    QObject *rootObject = m_qmlEngine->rootObjects().constFirst();
+    if (!rootObject) {
         return;
     }
 
-    QWindow *window = qobject_cast<QWindow *>(m_rootObject);
+    QWindow *window = qobject_cast<QWindow *>(rootObject);
     if (window) {
+        KWindowSystem::updateStartupId(window);
         KWindowSystem::activateWindow(window);
     }
 }
