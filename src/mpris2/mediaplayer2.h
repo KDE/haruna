@@ -28,8 +28,6 @@ public:
     explicit MediaPlayer2(QObject *obj);
     ~MediaPlayer2() = default;
 
-    void Raise();
-    void Quit();
     bool CanRaise() const;
     bool CanQuit() const;
     bool HasTrackList() const;
@@ -37,6 +35,10 @@ public:
     QString DesktopEntry() const;
     QStringList SupportedUriSchemes() const;
     QStringList SupportedMimeTypes() const;
+
+public Q_SLOTS:
+    void Raise();
+    void Quit();
 
 Q_SIGNALS:
     void raise();
