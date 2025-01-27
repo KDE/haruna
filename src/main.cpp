@@ -50,15 +50,28 @@ int main(int argc, char *argv[])
     KDSingleApplication kdsApp;
     if (kdsApp.isPrimaryInstance()) {
         QObject::connect(&kdsApp, &KDSingleApplication::messageReceived, [=](const QByteArray &message) {
-            application->handleSecondayInstanceMessage(message);
+            QString file;
+            QString token;
+
+            QByteArray byteArray{message};
+            QDataStream dataStream(&byteArray, QIODevice::ReadOnly);
+            dataStream >> file >> token;
+
+            application->handleSecondayInstanceMessage(file.toUtf8(), token);
         });
     } else {
         if (GeneralSettings::self()->useSingleInstance()) {
             QCommandLineParser clParser;
             clParser.process(qApplication);
             if (clParser.positionalArguments().size() > 0) {
-                QString file = clParser.positionalArguments().constFirst();
-                kdsApp.sendMessage(file.toUtf8());
+                const QString file = clParser.positionalArguments().constFirst();
+                const QString token = qEnvironmentVariable("XDG_ACTIVATION_TOKEN");
+
+                QByteArray byteArray;
+                QDataStream dataStream(&byteArray, QIODevice::WriteOnly);
+                dataStream << file << token;
+
+                kdsApp.sendMessage(byteArray);
             }
             exit(EXIT_SUCCESS);
         }

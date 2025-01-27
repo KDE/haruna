@@ -356,12 +356,13 @@ QString Application::mimeType(QUrl url)
     return fileItem.mimetype();
 }
 
-void Application::handleSecondayInstanceMessage(const QByteArray &message)
+void Application::handleSecondayInstanceMessage(const QByteArray &message, const QString activationToken)
 {
     auto msgString = QString::fromStdString(message.data());
     QFileInfo fileInfo{msgString};
     if (fileInfo.exists() && fileInfo.isFile()) {
         Q_EMIT openUrl(QUrl::fromUserInput(msgString));
+        qputenv("XDG_ACTIVATION_TOKEN", activationToken.toUtf8());
         raiseWindow();
     }
 }

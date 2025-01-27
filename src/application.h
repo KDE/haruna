@@ -85,7 +85,7 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(QUrl url);
 
-    void handleSecondayInstanceMessage(const QByteArray &message);
+    void handleSecondayInstanceMessage(const QByteArray &message, const QString activationToken);
     QCommandLineParser *parser() const;
 
     QQmlApplicationEngine *qmlEngine() const;
