@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-22 00:40+0000\n"
-"PO-Revision-Date: 2024-05-12 15:09+0530\n"
+"PO-Revision-Date: 2025-01-26 16:31+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,12 +40,10 @@ msgid "Media player"
 msgstr "நிகழ்பட இயக்கி"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
-msgstr "(c) 2019-2023"
+msgstr "(c) 2019-2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -62,12 +60,12 @@ msgstr "நிரலாளர்"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "முனைய பாடல்/நிகழ்பட பதிவிறக்கி"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "முனைய நிகழ்பட இயக்கி"
 
 #: src/application.cpp:152
 #, kde-format
@@ -103,12 +101,10 @@ msgid "Playing media file"
 msgstr "ஊடக‍க்கோப்பு இயக்கப்படுகிறது"
 
 #: src/models/actionsmodel.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "அமைப்புகளை திற ..."
+msgstr "செயல் அமைப்புச்சாளரத்தை திற ..."
 
 #: src/models/actionsmodel.cpp:30
 #, kde-format
@@ -120,15 +116,13 @@ msgstr "ஹருணா பற்றி"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "பிழையை தெரிவி"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "ஹருணா பற்றி"
+msgstr "ஹருணாவை ஆதரிக்க"
 
 #: src/models/actionsmodel.cpp:51
 #, kde-format
@@ -143,9 +137,7 @@ msgid "Audio Cycle Down"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "அமைப்புகள்"
@@ -592,12 +584,10 @@ msgid "None"
 msgstr "ஏதுமில்லை"
 
 #: src/mpv/mpvitem.cpp:469
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot taken"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "திரைப்பிடிப்பு எடுக்கப்பட்டது"
+msgstr "திரைப்பிடிப்பு தோல்வியடைந்தது"
 
 #: src/mpv/mpvitem.cpp:474
 #, kde-format
@@ -663,12 +653,9 @@ msgid "Subtitles off"
 msgstr "துணை உரையை முடக்கு"
 
 #: src/qml/Actions.qml:317
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "துணை உரையை முடக்கு"
+msgstr "துணை உரையை இயக்கு"
 
 #: src/qml/Actions.qml:326 src/qml/Actions.qml:338
 msgctxt "@info:tooltip"
@@ -771,12 +758,9 @@ msgid "Select a color"
 msgstr "நிறத்தைத் தேர்ந்தெடுக்கவும்"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select a color"
-msgstr "நிறத்தைத் தேர்ந்தெடுக்கவும்"
+msgstr "நிறத்தைத் தேர்ந்தெடுப்பது"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -788,14 +772,14 @@ msgstr "சமீப கோப்புகள்"
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
-msgstr ""
+msgstr "முதல்நிலை துணை உரை"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:89
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
-msgstr ""
+msgstr "இரண்டாம்நிலை துணை உரை"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:98
 #, fuzzy
@@ -1135,36 +1119,24 @@ msgid "Open containing folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in browser"
-msgstr "அமைப்புகளுக்கான அடைவைத் திற"
+msgstr "உலாவியில் திற"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy name"
-msgstr "கோப்பின் பெயரை நகலெடு"
+msgstr "பெயரை நகலெடு"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy path"
-msgstr "கோப்பிற்கான பாதையை நகலெடு"
+msgstr "பாதையை நகலெடு"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy url"
-msgstr "முகவரியை திற"
+msgstr "முகவரியை நகலெடு"
 
 #: src/qml/PlayList.qml:269
 msgctxt "@action:inmenu"
@@ -1172,12 +1144,9 @@ msgid "Remove from playlist"
 msgstr "பாடல்வரிசையிலிருந்து நீக்கு"
 
 #: src/qml/PlayList.qml:274
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "கோப்பின் பெயரை மாற்று"
+msgstr "மறுபெயரிடு"
 
 #: src/qml/PlayList.qml:280
 msgctxt "@action:inmenu"
