@@ -177,7 +177,7 @@ RowLayout {
 
         onToChanged: value = root.m_mpv.position
 
-        onValueChanged: {
+        onMoved: {
             if (!pressed) {
                 return
             }
