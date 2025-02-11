@@ -230,6 +230,7 @@ Item {
                     text: root.m_mpv.mediaTitle
                     font.pointSize: 9
                     toolTipText: root.m_mpv.mediaTitle
+                    elide: Text.ElideRight
 
                     Layout.fillWidth: true
                 }
