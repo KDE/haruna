@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-12 00:40+0000\n"
-"PO-Revision-Date: 2024-12-01 14:32+0200\n"
+"PO-Revision-Date: 2025-01-12 19:45+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -573,12 +573,10 @@ msgid "Could not play: %1"
 msgstr "Ei voitu toistaa: %1"
 
 #: src/mpv/mpvitem.cpp:382 src/mpv/mpvitem.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Tekstityksen ajoitus: %1"
+msgstr "Tekstityksen ajoitus: %1 sekuntia"
 
 #: src/mpv/mpvitem.cpp:430
 #, kde-format
@@ -631,7 +629,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
-msgstr ""
+msgstr "Tekstitystä ei voi ladata, kun yhtään tiedostoa ei ole auki"
 
 #: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
 msgctxt "@info:tooltip"
@@ -850,12 +848,9 @@ msgid "Audio"
 msgstr "Ääni"
 
 #: src/qml/HProgressBar.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Ohita luvut"
+msgstr "Avaa lukuvalikko"
 
 #: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
@@ -1477,26 +1472,18 @@ msgid "Resize to fit video"
 msgstr "Sovita videon kokoon"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Ei tueta Waylandissä.</b>"
+msgstr "Ei tueta Waylandissä."
 
 # *** TARKISTA: Mitä ”%1” tässä on?
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
+"Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
 "Enimmäiskokoa ei rajoiteta, vaan se jätetään käyttöjärjestelmälle."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1521,34 +1508,21 @@ msgid "Remember window size and position"
 msgstr "Muista ikkunan koko ja sijainti"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the \"Remember window size and position"
 "\" setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Ei tueta Waylandissä.</b>"
+msgstr "Sijainnin palauttamista ei tueta Waylandissä.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window's size and position are saved and used for newly "
 "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
 "precedence."
 msgstr ""
-"Ikkunan kokoa ja sijaintia muutettaessa uudet arvot tallennetaan ja niitä "
-"käytetään uudelleen uutta sovellusikkunaa avattaessa.\n"
-"\n"
-"Etusijan ottaa asetus ”Sovita videon kokoon”.\n"
+"Muutokset ikkunan kokoon ja sijaintiin tallennetaan ja arvoja käytetään "
+"uusiin ikkunoihin.<br><br>%1Etusijan ottaa asetus ”Sovita videon kokoon”.<br>"
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1724,12 +1698,9 @@ msgstr ""
 "Keskeyttää toiston, kun ikkuna pienennetään; toisto jatkuu palautettaessa."
 
 #: src/qml/Settings/PlaybackSettings.qml:209
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Hyppää viimeisimpään toistokohtaan"
+msgstr "Toistokohta"
 
 #: src/qml/Settings/PlaybackSettings.qml:219
 #, fuzzy
@@ -1752,7 +1723,13 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Tallentaa tiedoston toistokohdan, ja tiedostoa seuraavan kerran avattaessa "
+"hypätään siihen.\n"
+"Sijainti tallennetaan joka sekunti paitsi videon 10 viime sekunnilla."
 msgstr[1] ""
+"Tallentaa tiedoston toistosijainnin, jolloin tiedostoa seuraavan kerran "
+"avattaessa hypätään samaan kohtaan.\n"
+"Sijainti tallennetaan %1 sekunnin välein paitsi videon 10 viime sekunnilla."
 
 #: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
@@ -1762,58 +1739,41 @@ msgstr "Käynnistä toisto"
 #: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
-msgstr ""
+msgstr "Tiedosto toistetaan toistokohdan palautuksen jälkeen"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Värikylläisyys"
+msgstr "Kaikilla kestoilla"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Yli %1 minuutin tiedostoille"
-msgstr[1] "Yli %1 minuutin tiedostoille"
+msgstr[0] "Jos kesto on yli minuutin"
+msgstr[1] "Jos kesto on yli %1 minuuttia"
 
 #: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "Etätiedostoilla toistokohta palautetaan kestosta riippumatta."
 
 #: src/qml/Settings/PlaybackSettings.qml:309
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
-msgstr[0] "Tallenna sijainti %1 s välein"
-msgstr[1] "Tallenna sijainti %1 s välein"
+msgstr[0] "Tallenna toistokohta joka sekunti"
+msgstr[1] "Tallenna toistokohta %1 sekunnin välein"
 
 #: src/qml/Settings/PlaybackSettings.qml:322
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Ohita luvut"
+msgstr "Luvut"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "Ohita luvut"
+msgstr "Sivuuta luvut"
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@info:tooltip skip chapters setting"
@@ -2008,13 +1968,13 @@ msgstr "Tietoa"
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:spinbox"
 msgid "Auto select track"
-msgstr ""
+msgstr "Valitse raita automaattisesti"
 
 #: src/qml/Settings/SubtitlesSettings.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
+msgstr "Jos valittu, tekstitysraita valitaan ja näytetään automaattisesti"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@option:check"
