@@ -40,6 +40,10 @@
 #include "mediaplayer2player.h"
 #endif
 
+#if defined(Q_OS_WIN32)
+#include <Windows.h>
+#endif
+
 using namespace Qt::StringLiterals;
 
 MpvItem::MpvItem(QQuickItem *parent)
@@ -258,6 +262,16 @@ void MpvItem::setupConnections()
             lockManager.setInhibitionOff();
         }
     });
+#endif
+
+#if defined(Q_OS_WIN32)
+connect(this, &MpvItem::pauseChanged, this, [=]() {
+    if (!pause() && !m_currentUrl.isEmpty()) {
+        SetThreadExecutionState(ES_CONTINUOUS | ES_DISPLAY_REQUIRED);
+    } else {
+        SetThreadExecutionState(ES_CONTINUOUS);
+    }
+});
 #endif
 
     connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue, Qt::QueuedConnection);
