@@ -16,8 +16,6 @@ target_sources(haruna
     application.h application.cpp
     framedecoder.h framedecoder.cpp
     global.h global.cpp
-    KDSingleApplication/kdsingleapplication_localsocket_p.h KDSingleApplication/kdsingleapplication_localsocket.cpp
-    KDSingleApplication/kdsingleapplication.h KDSingleApplication/kdsingleapplication.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp
     models/chaptersmodel.h models/chaptersmodel.cpp
@@ -33,6 +31,14 @@ target_sources(haruna
     worker.h worker.cpp
     ${ICONS_SRCS}
 )
+
+if (NOT KDSingleApplication-qt6_FOUND)
+    target_sources(haruna
+        PRIVATE
+        KDSingleApplication/kdsingleapplication_localsocket_p.h KDSingleApplication/kdsingleapplication_localsocket.cpp
+        KDSingleApplication/kdsingleapplication.h KDSingleApplication/kdsingleapplication.cpp
+    )
+endif()
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
@@ -126,11 +132,17 @@ qt_add_qml_module(haruna
 
 target_include_directories(haruna
     PRIVATE
-        KDSingleApplication
         models
         mpv
         ${FFMPEG_INCLUDE_DIRS}
 )
+
+if (NOT KDSingleApplication-qt6_FOUND)
+    target_include_directories(haruna
+        PRIVATE
+        KDSingleApplication
+    )
+endif()
 
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
@@ -161,6 +173,11 @@ target_link_libraries(haruna PRIVATE
     ${AVCODEC_LIBRARIES}
     ${SWSCALE_LIBRARIES}
 )
+if(KDSingleApplication-qt6_FOUND)
+    target_link_libraries(haruna PRIVATE
+        KDAB::kdsingleapplication
+    )
+endif()
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     target_link_libraries(haruna PRIVATE

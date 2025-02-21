@@ -112,6 +112,13 @@ set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
     URL "https://github.com/yt-dlp/yt-dlp"
     DESCRIPTION "needed to play videos from youtube and other online sources")
 
+find_package(KDSingleApplication-qt6 QUIET)
+if(KDSingleApplication-qt6_FOUND)
+    message(STATUS "Using system KDSingleApplication")
+else()
+    message(STATUS "Using bundled KDSingleApplication")
+endif()
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 include(KDEInstallDirs)
