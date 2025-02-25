@@ -522,6 +522,9 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         }
         break;
     }
+    case AsyncIds::AddSubtitleTrack: {
+        loadTracks(getProperty(MpvProperties::self()->TrackList).toList());
+    }
     }
 }
 

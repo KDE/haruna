@@ -33,6 +33,7 @@ public:
         TrackList,
         ChapterList,
         VideoId,
+        AddSubtitleTrack,
     };
     Q_ENUM(AsyncIds)
 
