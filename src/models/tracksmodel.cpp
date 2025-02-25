@@ -73,7 +73,9 @@ QHash<int, QByteArray> TracksModel::roleNames() const
 
 void TracksModel::clear()
 {
+    beginResetModel();
     m_tracks.clear();
+    endResetModel();
 }
 
 void TracksModel::addTrack(Track track)
