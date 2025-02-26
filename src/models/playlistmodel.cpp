@@ -36,7 +36,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
 
     connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, KFileMetaData::PropertyMultiMap metaData) {
-        if (m_playlist.isEmpty()) {
+        if (m_playlist.isEmpty() || i > m_playlist.size()) {
             return;
         }
         auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
