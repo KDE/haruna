@@ -357,6 +357,8 @@ void PlaylistModel::getHttpItemInfo(const QUrl &url, uint row)
         m_playlist[row].formattedDuration = Application::formatTime(duration);
         m_playlist[row].duration = duration;
 
+        --m_httpItemCounter;
+
         Q_EMIT dataChanged(index(row, 0), index(row, 0));
     });
 }
