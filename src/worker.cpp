@@ -8,6 +8,7 @@
 
 #include <QCryptographicHash>
 #include <QDir>
+#include <QDirIterator>
 #include <QFileInfo>
 #include <QImage>
 #include <QQuickWindow>
@@ -22,6 +23,7 @@
 #include "application.h"
 #include "framedecoder.h"
 #include "generalsettings.h"
+#include "subtitlessettings.h"
 
 using namespace Qt::StringLiterals;
 
@@ -127,6 +129,47 @@ void Worker::mprisThumbnail(const QString &path, int width)
     frameDecoder.getScaledVideoFrame(width, true, image);
 
     Q_EMIT mprisThumbnailSuccess(image);
+}
+
+void Worker::findRecursiveSubtitles(const QUrl &url)
+{
+    QStringList subs;
+    auto parentFolder = QFileInfo(url.toLocalFile()).absolutePath();
+    const auto subFolders = SubtitlesSettings::self()->subtitlesFolders();
+    for (const auto &subFolder : subFolders) {
+        if (subFolder.startsWith(u"/"_s)) {
+            // ignore absolute paths
+            continue;
+        }
+
+        auto searchFolder = QString(parentFolder).append(u"/%1"_s.arg(subFolder));
+
+        QFileInfo fi(searchFolder);
+        if (!fi.exists()) {
+            continue;
+        }
+
+        QDirIterator it{searchFolder, QDir::Files, QDirIterator::Subdirectories};
+        while (it.hasNext()) {
+            auto fi = it.nextFileInfo();
+
+            auto url = QUrl::fromLocalFile(fi.absoluteFilePath());
+            QString mimeType = Application::mimeType(url);
+            if (mimeType.startsWith(u"application/x-subrip"_s) || mimeType.startsWith(u"text/x-ssa"_s)) {
+                auto currentFI = QFileInfo(url.toLocalFile());
+                // The subtitles path must contain the name of the playing file
+                if (fi.absoluteFilePath().contains(currentFI.baseName())) {
+                    subs.append(fi.absoluteFilePath());
+                }
+            }
+        }
+    }
+
+    if (subs.isEmpty()) {
+        return;
+    }
+
+    Q_EMIT subtitlesFound(subs);
 }
 
 void Worker::syncConfigValue(QString path, QString group, QString key, QVariant value)

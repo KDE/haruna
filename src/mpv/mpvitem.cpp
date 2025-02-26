@@ -209,6 +209,13 @@ void MpvItem::setupConnections()
         }
     });
 
+    connect(Worker::instance(), &Worker::subtitlesFound, this, [this](QStringList subs) {
+        for (const auto &sub : std::as_const(subs)) {
+            command({u"sub-add"_s, sub, u"select"_s});
+            loadTracks(getProperty(MpvProperties::self()->TrackList).toList());
+        }
+    });
+
     connect(this, &MpvItem::chapterChanged,
             this, &MpvItem::onChapterChanged);
 
@@ -428,6 +435,8 @@ void MpvItem::loadFile(const QString &file)
     }
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
+
+    QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, url);
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();

@@ -29,6 +29,7 @@ Q_SIGNALS:
     void thumbnailSuccess(const QString &path, const QImage &image);
     void thumbnailFail();
     void mprisThumbnailSuccess(const QImage &image);
+    void subtitlesFound(QStringList subs);
 
 public Q_SLOTS:
     void getMetaData(uint index, const QString &path);
@@ -37,6 +38,7 @@ public Q_SLOTS:
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
     void saveWindowGeometry(QQuickWindow *window) const;
     void mprisThumbnail(const QString &path, int width);
+    void findRecursiveSubtitles(const QUrl &url);
 
 private:
     Worker() = default;
