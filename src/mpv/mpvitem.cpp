@@ -436,7 +436,9 @@ void MpvItem::loadFile(const QString &file)
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
-    QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, url);
+    if (SubtitlesSettings::recursiveSubtitlesSearch()) {
+        QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, url);
+    }
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
     GeneralSettings::self()->save();

@@ -9,9 +9,10 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
+import org.kde.haruna.settings
 
 // Subtitles Folders
-Item {
+ColumnLayout {
     id: root
 
     // prevent creating multiple empty items
@@ -31,9 +32,6 @@ Item {
         id: sfListView
         property int sfDelegateHeight: 40
 
-        anchors.top: sectionTitle.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
         implicitHeight: count > 5
                 ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
                 : count * sfListView.sfDelegateHeight + (sfListView.spacing * (count - 1))
@@ -146,15 +144,13 @@ Item {
 
     Item {
         id: spacer
-        anchors.top: sfListView.bottom
+
         height: 5
     }
 
     Button {
         id: sfAddFolder
 
-        anchors.left: parent.left
-        anchors.top: spacer.bottom
         icon.name: "list-add"
         text: i18nc("@action:button", "Add new folder")
         enabled: root.canAddFolder
@@ -172,4 +168,36 @@ Item {
         ToolTip.visible: hovered
         ToolTip.delay: 700
     }
+
+    RowLayout {
+        CheckBox {
+            id: recursiveSubtitlesSearch
+
+            text: i18nc("@label:check", "Search subtitles recursively")
+            checked: SubtitlesSettings.recursiveSubtitlesSearch
+
+            onCheckStateChanged: {
+                SubtitlesSettings.recursiveSubtitlesSearch = checked
+                SubtitlesSettings.save()
+            }
+        }
+
+        ToolButton {
+            icon.name: "documentinfo"
+            checkable: true
+            checked: false
+            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
+            ToolTip {
+                text: i18nc("@info:tooltip",
+                            "Subtitles are searched recursively in the \"%1\" setting\n" +
+                            "Only relative folders are searched", sectionTitle.text)
+                visible: (parent as ToolButton).checked
+                delay: 0
+                timeout: -1
+                closePolicy: Popup.NoAutoClose
+            }
+        }
+    }
+    Item { Layout.preferredWidth: 1; Layout.preferredHeight: 10 }
 }

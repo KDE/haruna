@@ -33,7 +33,7 @@ SettingsBasePage {
         CheckBox {
             id: autoSelectSubtitles
 
-            text: i18nc("@label:spinbox", "Auto select track")
+            text: i18nc("@label:check", "Auto select track")
             checked: SubtitlesSettings.autoSelectSubtitles
             
             onCheckStateChanged: {
