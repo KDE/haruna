@@ -9,6 +9,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
+import org.kde.haruna
 import org.kde.haruna.settings
 
 // Subtitles Folders
@@ -28,118 +29,122 @@ ColumnLayout {
         bottomPadding: 10
     }
 
-    ListView {
-        id: sfListView
-        property int sfDelegateHeight: 40
-
-        implicitHeight: count > 5
-                ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
-                : count * sfListView.sfDelegateHeight + (sfListView.spacing * (count - 1))
-        spacing: 5
-        clip: true
-        model: subtitlesFoldersModel
+    ScrollView {
+        Layout.preferredHeight: Math.min(Math.max(sfListView.contentHeight, 50), 200)
         Layout.fillWidth: true
-        ScrollBar.vertical: ScrollBar { id: scrollBar }
-        delegate: Rectangle {
-            id: sfDelegate
 
-            required property int index
-            required property string display
+        ListView {
+            id: sfListView
 
-            width: root.width
-            height: sfListView.sfDelegateHeight
-            color: Kirigami.Theme.alternateBackgroundColor
+            ScrollBar.vertical: ScrollBar { id: scrollBar }
 
-            Loader {
-                id: sfLoader
-                anchors.fill: parent
-                sourceComponent: sfDelegate.display === "" ? sfEditComponent : sfDisplayComponent
+            anchors.fill: parent
+            spacing: Kirigami.Units.smallSpacing
+            clip: true
+            model: SubtitlesFoldersModel {
+                id: subtitlesFoldersModel
             }
 
-            Component {
-                id: sfDisplayComponent
+            delegate: ItemDelegate {
+                id: sfDelegate
 
-                RowLayout {
+                required property int index
+                required property string path
 
-                    Label {
-                        id: sfLabel
-                        text: sfDelegate.display
-                        leftPadding: 10
-                        Layout.fillWidth: true
-                    }
+                width: ListView.view.width
 
-                    Button {
-                        icon.name: "edit-entry"
-                        flat: true
-                        onClicked: {
-                            sfLoader.sourceComponent = sfEditComponent
-                        }
-                    }
-
-                    Item { width: scrollBar.width }
+                contentItem: Loader {
+                    id: sfLoader
+                    anchors.fill: parent
+                    sourceComponent: sfDelegate.path === "" ? sfEditComponent : sfDisplayComponent
                 }
-            } // Component: display
+                Component {
+                    id: sfDisplayComponent
 
-            Component {
-                id: sfEditComponent
+                    RowLayout {
 
-                RowLayout {
-
-                    TextField {
-                        id: editField
-                        leftPadding: 10
-                        text: sfDelegate.display
-                        Layout.leftMargin: 5
-                        Layout.fillWidth: true
-                        Component.onCompleted: editField.forceActiveFocus(Qt.MouseFocusReason)
-                    }
-
-                    Button {
-                        property bool canDelete: editField.text === ""
-                        icon.name: "delete"
-                        flat: true
-                        onClicked: {
-                            if (!canDelete) {
-                                text = i18nc("@action:button", "Confirm deletion")
-                                canDelete = true
-                                return
-                            }
-
-                            if (sfDelegate.index === sfListView.count - 1) {
-                                root.canAddFolder = true
-                            }
-                            subtitlesFoldersModel.deleteFolder(sfDelegate.index)
-                            const rows = sfListView.count
-                            sfListView.implicitHeight = rows > 5
-                                    ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
-                                    : rows * sfListView.sfDelegateHeight + (sfListView.spacing * (rows - 1))
-
+                        Label {
+                            id: sfLabel
+                            text: sfDelegate.path
+                            leftPadding: 10
+                            Layout.fillWidth: true
                         }
-                        ToolTip {
-                            text: i18nc("@info:tooltip", "Delete this folder from list")
-                        }
-                    }
 
-                    Button {
-                        icon.name: "dialog-ok"
-                        flat: true
-                        enabled: editField.text !== "" ? true : false
-                        onClicked: {
-                            subtitlesFoldersModel.updateFolder(editField.text, sfDelegate.index)
-                            sfLoader.sourceComponent = sfDisplayComponent
-                            if (sfDelegate.index === sfListView.count - 1) {
-                                root.canAddFolder = true
+                        Button {
+                            icon.name: "edit-entry"
+                            flat: true
+                            onClicked: {
+                                sfLoader.sourceComponent = sfEditComponent
                             }
                         }
-                        ToolTip {
-                            text: i18nc("@info:tooltip", "Save changes")
-                        }
-                    }
 
-                    Item { width: scrollBar.width }
-                }
-            } // Component: edit
-        } // delegate: Rectangle
+                        Item { width: scrollBar.width }
+                    }
+                } // Component: display
+
+                Component {
+                    id: sfEditComponent
+
+                    RowLayout {
+
+                        TextField {
+                            id: editField
+                            leftPadding: 10
+                            text: sfDelegate.path
+                            Layout.leftMargin: 5
+                            Layout.fillWidth: true
+                            Component.onCompleted: editField.forceActiveFocus(Qt.MouseFocusReason)
+                        }
+
+                        Button {
+                            property bool canDelete: editField.text === ""
+                            icon.name: "delete"
+                            flat: true
+                            onClicked: {
+                                if (!canDelete) {
+                                    text = i18nc("@action:button", "Confirm deletion")
+                                    canDelete = true
+                                    return
+                                }
+
+                                if (sfDelegate.index === sfListView.count - 1) {
+                                    root.canAddFolder = true
+                                }
+                                subtitlesFoldersModel.deleteFolder(sfDelegate.index)
+                            }
+                            ToolTip {
+                                text: i18nc("@info:tooltip", "Delete this folder from list")
+                            }
+                        }
+
+                        Button {
+                            icon.name: "dialog-ok"
+                            flat: true
+                            enabled: editField.text !== "" ? true : false
+                            onClicked: {
+                                subtitlesFoldersModel.updateFolder(editField.text, sfDelegate.index)
+                                sfLoader.sourceComponent = sfDisplayComponent
+                                if (sfDelegate.index === sfListView.count - 1) {
+                                    root.canAddFolder = true
+                                }
+                            }
+                            ToolTip {
+                                text: i18nc("@info:tooltip", "Save changes")
+                            }
+                        }
+
+                        Item { width: scrollBar.width }
+                    }
+                } // Component: edit
+            } // ItemDelegate
+
+            Label {
+                text: i18n("No folder set")
+                anchors.verticalCenter: parent.verticalCenter
+                visible: sfListView.count === 0
+                opacity: 0.7
+            }
+        }
     }
 
     Item {
@@ -156,10 +161,6 @@ ColumnLayout {
         enabled: root.canAddFolder
         onClicked: {
             subtitlesFoldersModel.addFolder()
-            const rows = sfListView.count
-            sfListView.implicitHeight = rows > 5
-                    ? 5 * sfListView.sfDelegateHeight + (sfListView.spacing * 4)
-                    : rows * sfListView.sfDelegateHeight + (sfListView.spacing * (rows - 1))
             root.canAddFolder = false
         }
 

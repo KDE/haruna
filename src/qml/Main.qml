@@ -185,10 +185,6 @@ ApplicationWindow {
         id: recentFilesModel
     }
 
-    SubtitlesFoldersModel {
-        id: subtitlesFoldersModel
-    }
-
     RowLayout {
         width: window.width * 0.8 > Kirigami.Units.gridUnit * 50
                ? Kirigami.Units.gridUnit * 50
