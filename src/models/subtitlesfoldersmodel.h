@@ -18,10 +18,14 @@ class SubtitlesFoldersModel : public QAbstractListModel
 public:
     explicit SubtitlesFoldersModel(QObject *parent = nullptr);
 
-    // Basic functionality:
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    enum Roles {
+        PathRole
+    };
+    Q_ENUM(Roles)
 
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QHash<int, QByteArray> roleNames() const override;
 
 public Q_SLOTS:
     void updateFolder(const QString &folder, int row);

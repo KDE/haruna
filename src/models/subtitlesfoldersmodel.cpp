@@ -37,11 +37,16 @@ QVariant SubtitlesFoldersModel::data(const QModelIndex &index, int role) const
     QString path = m_list[index.row()];
 
     switch (role) {
-    case Qt::DisplayRole:
+    case PathRole:
         return QVariant(path);
     }
 
     return QVariant();
+}
+
+QHash<int, QByteArray> SubtitlesFoldersModel::roleNames() const
+{
+    return {{Roles::PathRole, QByteArray("path")}};
 }
 
 void SubtitlesFoldersModel::updateFolder(const QString &folder, int row)
