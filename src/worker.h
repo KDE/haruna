@@ -25,7 +25,7 @@ public:
     static Worker *instance();
 
 Q_SIGNALS:
-    void metaDataReady(uint index, KFileMetaData::PropertyMultiMap metadata);
+    void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
     void thumbnailSuccess(const QString &path, const QImage &image);
     void thumbnailFail();
     void mprisThumbnailSuccess(const QImage &image);

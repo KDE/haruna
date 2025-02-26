@@ -53,7 +53,7 @@ void Worker::getMetaData(uint index, const QString &path)
 
     auto properties = result.properties();
 
-    Q_EMIT metaDataReady(index, properties);
+    Q_EMIT metaDataReady(index, url, properties);
 }
 
 void Worker::makePlaylistThumbnail(const QString &path, int width)

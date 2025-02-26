@@ -35,18 +35,26 @@ PlaylistModel::PlaylistModel(QObject *parent)
 {
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
 
-    connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, KFileMetaData::PropertyMultiMap metaData) {
+    connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, const QUrl &url, KFileMetaData::PropertyMultiMap metaData) {
         if (m_playlist.isEmpty() || i > m_playlist.size()) {
             return;
         }
-        auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
-        auto title = metaData.value(KFileMetaData::Property::Title).toString();
+        if (m_playlist[i].url == url) {
+            auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
+            auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
-        m_playlist[i].formattedDuration = Application::formatTime(duration);
-        m_playlist[i].duration = duration;
-        m_playlist[i].mediaTitle = title;
+            m_playlist[i].formattedDuration = Application::formatTime(duration);
+            m_playlist[i].duration = duration;
+            m_playlist[i].mediaTitle = title;
 
-        Q_EMIT dataChanged(index(i, 0), index(i, 0));
+            Q_EMIT dataChanged(index(i, 0), index(i, 0));
+        } else {
+            qDebug() << "\n"
+                     << u"Data missmatch: the url at position %1 received from the worker thread:"_s.arg(i) << "\n"
+                     << u"%1"_s.arg(url.toString()) << "\n"
+                     << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
+                     << u"%1"_s.arg(m_playlist[i].url.toString());
+        }
     });
 }
 
