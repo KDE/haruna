@@ -263,14 +263,10 @@ void PlaylistModel::addM3uItems(const QUrl &url)
             continue;
         }
 
-        auto url = QUrl::fromUserInput(QString::fromUtf8(line));
-        if (!url.scheme().isEmpty()) {
-            addItem(url, Behaviour::Append);
-        } else {
-            // figure out if it's a relative path
-            url = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath());
-            addItem(url, Behaviour::Append);
-        }
+        // always set the working directory
+        // it doesn't affect absolute paths and it's required for relative paths
+        auto url = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath());
+        addItem(url, Behaviour::Append);
 
         if (!matchFound && url == QUrl::fromUserInput(GeneralSettings::lastPlayedFile())) {
             setPlayingItem(i);
