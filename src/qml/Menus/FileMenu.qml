@@ -10,6 +10,7 @@ import QtQuick
 import QtQuick.Controls
 
 import org.kde.haruna
+import org.kde.haruna.settings
 
 Menu {
     id: root
@@ -20,7 +21,11 @@ Menu {
 
     MenuItem { action: appActions.openFileAction }
     MenuItem { action: appActions.openUrlAction }
-    MenuItem { action: appActions.loadLastPlayedFileAction }
+    MenuItem {
+        action: appActions.loadLastPlayedFileAction
+        enabled: GeneralSettings.lastPlayedFile !== ""
+        Component.onCompleted: console.log(GeneralSettings.lastPlayedFile)
+    }
 
     Menu {
         id: recentFilesMenu

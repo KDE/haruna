@@ -134,6 +134,10 @@ Item {
         }
 
         function onLoadLastPlayedFileAction() {
+            if (GeneralSettings.lastPlayedFile === "") {
+                return
+            }
+
             const mainWindow = root.Window.window as Main
             mainWindow.openFile(GeneralSettings.lastPlayedFile)
         }
