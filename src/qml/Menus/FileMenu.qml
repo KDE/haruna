@@ -24,7 +24,6 @@ Menu {
     MenuItem {
         action: appActions.loadLastPlayedFileAction
         enabled: GeneralSettings.lastPlayedFile !== ""
-        Component.onCompleted: console.log(GeneralSettings.lastPlayedFile)
     }
 
     Menu {
