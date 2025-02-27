@@ -36,7 +36,7 @@ SettingsBasePage {
             from: 0
             to: 100
             value: GeneralSettings.osdFontSize
-            onValueChanged: {
+            onValueModified: {
                 if (completed) {
                     osd.label.font.pointSize = osdFontSize.value
                     osd.message("Test osd font size")
@@ -88,7 +88,7 @@ SettingsBasePage {
             from: 0
             to: 100
             value: GeneralSettings.maxRecentFiles
-            onValueChanged: {
+            onValueModified: {
                 GeneralSettings.maxRecentFiles = maxRecentFiles.value
                 GeneralSettings.save()
                 recentFilesModel.populate()
@@ -105,7 +105,7 @@ SettingsBasePage {
             CheckBox {
                 text: i18nc("@option:check", "Allow only one instance")
                 checked: GeneralSettings.useSingleInstance
-                onCheckedChanged: {
+                onClicked: {
                     GeneralSettings.useSingleInstance = checked
                     GeneralSettings.save()
                 }
@@ -136,7 +136,7 @@ SettingsBasePage {
                 text: i18nc("@option:check", "Add file to playlist")
                 checked: GeneralSettings.appendVideoToSingleInstance
                 enabled: GeneralSettings.useSingleInstance
-                onCheckedChanged: {
+                onClicked: {
                     GeneralSettings.appendVideoToSingleInstance = checked
                     GeneralSettings.save()
                 }
@@ -233,7 +233,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Show preview thumbnail")
             checked: GeneralSettings.showPreviewThumbnail
-            onCheckedChanged: {
+            onClicked: {
                 GeneralSettings.showPreviewThumbnail = checked
                 GeneralSettings.save()
             }
@@ -250,7 +250,7 @@ SettingsBasePage {
                 text: i18nc("@option:check", "Use accurate preview")
                 checked: GeneralSettings.accuratePreviewThumbnail
                 enabled: GeneralSettings.showPreviewThumbnail
-                onCheckedChanged: {
+                onClicked: {
                     GeneralSettings.accuratePreviewThumbnail = checked
                     GeneralSettings.save()
                 }
@@ -285,7 +285,7 @@ SettingsBasePage {
             to: 10000
             value: GeneralSettings.previewThumbnailWidth
             enabled: GeneralSettings.showPreviewThumbnail
-            onValueChanged: {
+            onValueModified: {
                 GeneralSettings.previewThumbnailWidth = previewThumbnailWidth.value
                 GeneralSettings.save()
             }
@@ -301,7 +301,7 @@ SettingsBasePage {
                 text: i18nc("@option:check", "Resize to fit video")
                 checked: GeneralSettings.resizeWindowToVideo
                 enabled: !HarunaApp.isPlatformWayland()
-                onCheckedChanged: {
+                onClicked: {
                     GeneralSettings.resizeWindowToVideo = checked
                     GeneralSettings.save()
                     window.resizeWindow()
@@ -332,7 +332,7 @@ SettingsBasePage {
             CheckBox {
                 text: i18nc("@option:check", "Start in fullscreen mode")
                 checked: GeneralSettings.fullscreenOnStartUp
-                onCheckedChanged: {
+                onClicked: {
                     GeneralSettings.fullscreenOnStartUp = checked
                     GeneralSettings.save()
                 }
@@ -362,7 +362,7 @@ SettingsBasePage {
                 text: i18nc("@option:check", "Remember window size and position")
                 checked: GeneralSettings.rememberWindowGeometry
                 enabled: !GeneralSettings.resizeWindowToVideo
-                onCheckedChanged: {
+                onClicked: {
                     GeneralSettings.rememberWindowGeometry = checked
                     GeneralSettings.save()
                 }
@@ -397,7 +397,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Show menubar")
             checked: GeneralSettings.showMenuBar
-            onCheckedChanged: {
+            onClicked: {
                 GeneralSettings.showMenuBar = checked
                 GeneralSettings.save()
             }
@@ -408,7 +408,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Show toolbar")
             checked: GeneralSettings.showHeader
-            onCheckedChanged: {
+            onClicked: {
                 GeneralSettings.showHeader = checked
                 GeneralSettings.save()
             }
@@ -419,7 +419,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Show chapter markers")
             checked: GeneralSettings.showChapterMarkers
-            onCheckedChanged: {
+            onClicked: {
                 GeneralSettings.showChapterMarkers = checked
                 GeneralSettings.save()
             }
@@ -523,7 +523,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Use Breeze icon theme")
             checked: GeneralSettings.useBreezeIconTheme
-            onCheckedChanged: {
+            onClicked: {
                 GeneralSettings.useBreezeIconTheme = checked
                 GeneralSettings.save()
             }

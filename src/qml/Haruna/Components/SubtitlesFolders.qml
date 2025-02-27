@@ -177,7 +177,7 @@ ColumnLayout {
             text: i18nc("@label:check", "Search subtitles recursively")
             checked: SubtitlesSettings.recursiveSubtitlesSearch
 
-            onCheckStateChanged: {
+            onClicked: {
                 SubtitlesSettings.recursiveSubtitlesSearch = checked
                 SubtitlesSettings.save()
             }

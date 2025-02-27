@@ -75,7 +75,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.showToolbar
             text: i18nc("@option:check", "Show toolbar")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.showToolbar = checked
                 PlaylistSettings.save()
             }
@@ -85,7 +85,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.overlayVideo
             text: i18nc("@option:check", "Overlay video")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.overlayVideo = checked
                 PlaylistSettings.save()
             }
@@ -99,7 +99,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.showMediaTitle
             text: i18nc("@option:check", "Show media title instead of file name")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.showMediaTitle = checked
                 PlaylistSettings.save()
             }
@@ -109,7 +109,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.loadSiblings
             text: i18nc("@option:check", "Auto load videos from same folder")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.loadSiblings = checked
                 PlaylistSettings.save()
             }
@@ -119,7 +119,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.repeat
             text: i18nc("@option:check", "Repeat")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.repeat = checked
                 PlaylistSettings.save()
             }
@@ -129,7 +129,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.showRowNumber
             text: i18nc("@option:check", "Show row number")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.showRowNumber = checked
                 PlaylistSettings.save()
             }
@@ -139,7 +139,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.canToggleWithMouse
             text: i18nc("@option:check", "Toggle with mouse")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.canToggleWithMouse = checked
                 PlaylistSettings.save()
             }
@@ -150,7 +150,7 @@ SettingsBasePage {
             text: i18nc("@option:check", "Increase font size when fullscreen")
             checked: PlaylistSettings.bigFontFullscreen
             enabled: PlaylistSettings.style === "compact" ? false : true
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.bigFontFullscreen = checked
                 PlaylistSettings.save()
                 playlist.playlistView.forceLayout()
@@ -161,7 +161,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.rememberState
             text: i18nc("@option:check", "Remember last playlist state")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.rememberState = checked
                 PlaylistSettings.save()
             }
@@ -176,7 +176,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.openWithSingleClick
             text: i18nc("@option:check", "Open items with single click")
-            onCheckStateChanged: {
+            onClicked: {
                 PlaylistSettings.openWithSingleClick = checked
                 PlaylistSettings.save()
             }

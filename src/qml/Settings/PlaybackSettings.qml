@@ -35,7 +35,7 @@ SettingsBasePage {
                 from: 0
                 to: 100
                 value: PlaybackSettings.seekSmallStep
-                onValueChanged: {
+                onValueModified: {
                     PlaybackSettings.seekSmallStep = seekSmallStep.value
                     PlaybackSettings.save()
                 }
@@ -62,7 +62,7 @@ SettingsBasePage {
                 from: 0
                 to: 100
                 value: PlaybackSettings.seekMediumStep
-                onValueChanged: {
+                onValueModified: {
                     PlaybackSettings.seekMediumStep = seekMediumStep.value
                     PlaybackSettings.save()
                 }
@@ -89,7 +89,7 @@ SettingsBasePage {
                 from: 0
                 to: 100
                 value: PlaybackSettings.seekBigStep
-                onValueChanged: {
+                onValueModified: {
                     PlaybackSettings.seekBigStep = seekBigStep.value
                     PlaybackSettings.save()
                 }
@@ -125,6 +125,7 @@ SettingsBasePage {
                 }
 
                 onActivated: function(index) {
+                    console.log(999)
                     PlaybackSettings.hWDecoding = model.get(index).key === "disabled"
                             ? "no"
                             : model.get(index).key
@@ -172,7 +173,7 @@ SettingsBasePage {
 
             text: i18nc("@option:check", "Open last played file on startup")
             checked: PlaybackSettings.openLastPlayedFile
-            onCheckedChanged: {
+            onClicked: {
                 PlaybackSettings.openLastPlayedFile = checked
                 PlaybackSettings.save()
             }
@@ -190,7 +191,7 @@ SettingsBasePage {
 
             text: i18nc("@option:check", "Pause on minimize")
             checked: PlaybackSettings.pauseWhileMinimized
-            onCheckedChanged: {
+            onClicked: {
                 PlaybackSettings.pauseWhileMinimized = checked
                 PlaybackSettings.save()
             }
@@ -218,7 +219,7 @@ SettingsBasePage {
 
             text: i18nc("@option:check", "Restore playback position")
             checked: PlaybackSettings.restoreFilePosition
-            onCheckedChanged: {
+            onClicked: {
                 PlaybackSettings.restoreFilePosition = checked
                 PlaybackSettings.save()
             }
@@ -242,7 +243,7 @@ SettingsBasePage {
             text: i18nc("@option:check", "Start playing")
             checked: PlaybackSettings.playOnResume
             enabled: saveFilePositionCheckBox.checked
-            onCheckedChanged: {
+            onClicked: {
                 PlaybackSettings.playOnResume = checked
                 PlaybackSettings.save()
             }
@@ -263,7 +264,7 @@ SettingsBasePage {
                 to: 9999
                 value: PlaybackSettings.minDurationToSavePosition
 
-                onValueChanged: {
+                onValueModified: {
                     PlaybackSettings.minDurationToSavePosition = value
                     PlaybackSettings.save()
                 }
@@ -298,7 +299,7 @@ SettingsBasePage {
                 to: 300
                 value: PlaybackSettings.savePositionInterval
 
-                onValueChanged: {
+                onValueModified: {
                     PlaybackSettings.savePositionInterval = value
                     PlaybackSettings.save()
                 }
@@ -330,7 +331,7 @@ SettingsBasePage {
             id: skipChaptersCheckBox
             text: i18nc("@option:check", "Skip chapters")
             checked: PlaybackSettings.skipChapters
-            onCheckedChanged: {
+            onClicked: {
                 PlaybackSettings.skipChapters = checked
                 PlaybackSettings.save()
             }
@@ -347,7 +348,7 @@ SettingsBasePage {
             text: i18nc("@option:check", "Show osd message on skip")
             enabled: skipChaptersCheckBox.checked
             checked: PlaybackSettings.showOsdOnSkipChapters
-            onCheckedChanged: {
+            onClicked: {
                 PlaybackSettings.showOsdOnSkipChapters = checked
                 PlaybackSettings.save()
             }

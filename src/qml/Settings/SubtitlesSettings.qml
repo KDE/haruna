@@ -36,7 +36,7 @@ SettingsBasePage {
             text: i18nc("@label:check", "Auto select track")
             checked: SubtitlesSettings.autoSelectSubtitles
             
-            onCheckStateChanged: {
+            onClicked: {
                 SubtitlesSettings.autoSelectSubtitles = checked
                 SubtitlesSettings.save()
                 mpv.selectSubtitleTrack()
@@ -86,7 +86,7 @@ SettingsBasePage {
             value: SubtitlesSettings.preferredTrack
             editable: true
             enabled: autoSelectSubtitles.checked
-            onValueChanged: {
+            onValueModified: {
                 SubtitlesSettings.preferredTrack = value
                 SubtitlesSettings.save()
                 if (value === 0) {
@@ -101,7 +101,7 @@ SettingsBasePage {
         CheckBox {
             checked: SubtitlesSettings.allowOnBlackBorders
             text: i18nc("@option:check", "Allow subtitles in black borders")
-            onCheckStateChanged: {
+            onClicked: {
                 SubtitlesSettings.allowOnBlackBorders = checked
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleUseMargins, checked ? "yes" : "no")
@@ -160,7 +160,7 @@ SettingsBasePage {
             from: 0
             to: 1000
             value: SubtitlesSettings.fontSize
-            onValueChanged: {
+            onValueModified: {
                 SubtitlesSettings.fontSize = value
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleFontSize, value)
@@ -175,7 +175,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Bold")
             checked: SubtitlesSettings.isBold
-            onCheckedChanged: {
+            onClicked: {
                 SubtitlesSettings.isBold = checked
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleBold, checked)
@@ -187,7 +187,7 @@ SettingsBasePage {
         CheckBox {
             text: i18nc("@option:check", "Italic")
             checked: SubtitlesSettings.isItalic
-            onCheckedChanged: {
+            onClicked: {
                 SubtitlesSettings.isItalic = checked
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleItalic, checked)
@@ -317,7 +317,7 @@ SettingsBasePage {
             to: 25
             value: SubtitlesSettings.shadowOffset
             editable: true
-            onValueChanged: {
+            onValueModified: {
                 SubtitlesSettings.shadowOffset = value
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleShadowOffset, value)
@@ -394,7 +394,7 @@ SettingsBasePage {
             to: 25
             value: SubtitlesSettings.borderSize
             editable: true
-            onValueChanged: {
+            onValueModified: {
                 SubtitlesSettings.borderSize = value
                 SubtitlesSettings.save()
                 mpv.setProperty(MpvProperties.SubtitleBorderSize, value)

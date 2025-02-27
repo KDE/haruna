@@ -106,7 +106,7 @@ SettingsBasePage {
             text: i18nc("@option:check", "Enable mpv logging")
             checked: InformationSettings.mpvLogging
             visible: false
-            onCheckedChanged: {
+            onClicked: {
                 root.m_mpv.setProperty(MpvProperties.Terminal, checked)
                 InformationSettings.mpvLogging = checked
                 InformationSettings.save()

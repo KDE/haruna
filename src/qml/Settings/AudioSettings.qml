@@ -58,7 +58,7 @@ SettingsBasePage {
             to: 100
             value: AudioSettings.preferredTrack
             editable: true
-            onValueChanged: {
+            onValueModified: {
                 AudioSettings.preferredTrack = value
                 AudioSettings.save()
                 if (value === 0) {
@@ -82,7 +82,7 @@ SettingsBasePage {
             from: 0
             to: 100
             value: AudioSettings.volumeStep
-            onValueChanged: {
+            onValueModified: {
                 if (root.visible) {
                     AudioSettings.volumeStep = volumeStep.value
                     AudioSettings.save()

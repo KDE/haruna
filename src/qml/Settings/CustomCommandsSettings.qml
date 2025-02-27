@@ -80,7 +80,7 @@ SettingsBasePage {
                     CheckBox {
                         visible: delegate.type === "startup"
                         checked: delegate.setOnStartup
-                        onCheckStateChanged: {
+                        onClicked: {
                             root.m_customCommandsModel.toggleCustomCommand(delegate.commandId, delegate.index, checked)
                         }
 
