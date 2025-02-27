@@ -160,7 +160,6 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
 
     if (url.scheme() == u"http"_s || url.scheme() == u"https"_s) {
         if (Application::isYoutubePlaylist(url)) {
-            m_playlistPath = url.toString();
             getYouTubePlaylist(url, behaviour);
         } else {
             if (behaviour == Behaviour::Clear) {
@@ -295,11 +294,11 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
     QUrlQuery query{url.query()};
     QString playlistId{query.queryItemValue(u"list"_s)};
     QString videoId{query.queryItemValue(u"v"_s)};
-    QString playlistUrl{u"https://www.youtube.com/playlist?list=%1"_s.arg(playlistId)};
+    m_playlistPath = u"https://www.youtube.com/playlist?list=%1"_s.arg(playlistId);
 
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = std::make_shared<QProcess>();
-    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << playlistUrl;
+    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << m_playlistPath;
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(args);
     ytdlProcess->start();
