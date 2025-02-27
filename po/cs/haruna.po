@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-27 00:40+0000\n"
 "PO-Revision-Date: 2024-10-01 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -557,45 +557,45 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Přeřadit"
 
-#: src/mpv/mpvitem.cpp:313
+#: src/mpv/mpvitem.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Nelze přehrát: %1"
 
-#: src/mpv/mpvitem.cpp:396 src/mpv/mpvitem.cpp:398
+#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr ""
 
 # žádné parametry funkce v inspektoru funkcí
-#: src/mpv/mpvitem.cpp:444
+#: src/mpv/mpvitem.cpp:455
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nic"
 
-#: src/mpv/mpvitem.cpp:483
+#: src/mpv/mpvitem.cpp:494
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímání obrazovky selhalo"
 
-#: src/mpv/mpvitem.cpp:488
+#: src/mpv/mpvitem.cpp:499
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímek obrazovky byl pořízen"
 
-#: src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:501
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Snímek obrazovky: %1"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:528
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -603,7 +603,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:550
+#: src/mpv/mpvitem.cpp:561
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -792,7 +792,7 @@ msgid ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:28
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Načíst titulky z"
@@ -802,25 +802,47 @@ msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Potvrdit smazání"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:121
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:116
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Smazat tuto složku ze seznamu."
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:137
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:132
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Uložit změny"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:159
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:142
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Config folder"
+msgid "No folder set"
+msgstr "Složka nastavení"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Přidat novou složku"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:171
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:168
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Přidejte složku, ve které hledat titulky."
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:177
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
+msgctxt "@label:check"
+msgid "Search subtitles recursively"
+msgstr "Vyberte soubor s titulky"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:194
+msgctxt "@info:tooltip"
+msgid ""
+"Subtitles are searched recursively in the \"%1\" setting\n"
+"Only relative folders are searched"
+msgstr ""
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -854,18 +876,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
+#: src/qml/Main.qml:298 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vybrat soubor"
 
-#: src/qml/Main.qml:321
+#: src/qml/Main.qml:317
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Vyberte soubor s titulky"
 
-#: src/qml/Main.qml:341
+#: src/qml/Main.qml:337
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otevřít"
@@ -1870,7 +1892,7 @@ msgid "About"
 msgstr "O aplikaci"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-msgctxt "@label:spinbox"
+msgctxt "@label:check"
 msgid "Auto select track"
 msgstr ""
 

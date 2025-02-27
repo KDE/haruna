@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-27 00:40+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -564,44 +564,44 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "पुनः नियुक्ति"
 
-#: src/mpv/mpvitem.cpp:313
+#: src/mpv/mpvitem.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "क्रीडितुं न शक्तवान्: %1"
 
-#: src/mpv/mpvitem.cpp:396 src/mpv/mpvitem.cpp:398
+#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षकसमयः %1 सेकण्ड्"
 
-#: src/mpv/mpvitem.cpp:444
+#: src/mpv/mpvitem.cpp:455
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "न कश्चित्"
 
-#: src/mpv/mpvitem.cpp:483
+#: src/mpv/mpvitem.cpp:494
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट् विफलम् अभवत्"
 
-#: src/mpv/mpvitem.cpp:488
+#: src/mpv/mpvitem.cpp:499
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट् गृहीतम्"
 
-#: src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:501
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट्: %1"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:528
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -611,7 +611,7 @@ msgstr ""
 "कोऽपि विडियो ट्रैकः न ज्ञातः, अधिकतया विडियो ट्रैकः गम्यमानस्य कोडेक्स् इत्यस्य कारणेन "
 "डिकोड्/वादयितुं न शक्यते"
 
-#: src/mpv/mpvitem.cpp:550
+#: src/mpv/mpvitem.cpp:561
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -805,7 +805,7 @@ msgstr ""
 "न <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> न <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> प्राप्तम्।"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:28
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "तः उपशीर्षकाणि लोडयन्तु"
@@ -815,25 +815,47 @@ msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "लोपस्य पुष्टिं कुर्वन्तु"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:121
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:116
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "सूचीतः एतत् पुटं विलोपयन्तु"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:137
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:132
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "परिवर्तनं रक्षतु"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:159
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:142
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Config folder"
+msgid "No folder set"
+msgstr "Config पुटम्"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "नूतनं पुटं योजयन्तु"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:171
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:168
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "एकं पुटं योजयन्तु यस्मिन् उपशीर्षकं अन्वेष्टव्यम् ।"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:177
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
+msgctxt "@label:check"
+msgid "Search subtitles recursively"
+msgstr "उपशीर्षकसञ्चिकां चिनोतु"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:194
+msgctxt "@info:tooltip"
+msgid ""
+"Subtitles are searched recursively in the \"%1\" setting\n"
+"Only relative folders are searched"
+msgstr ""
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -869,18 +891,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारून"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
+#: src/qml/Main.qml:298 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "सञ्चिकां चिनोतु"
 
-#: src/qml/Main.qml:321
+#: src/qml/Main.qml:317
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 
-#: src/qml/Main.qml:341
+#: src/qml/Main.qml:337
 msgctxt "@action:button"
 msgid "Open"
 msgstr "उद्घाटित"
@@ -1945,7 +1967,10 @@ msgid "About"
 msgstr "विषये"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-msgctxt "@label:spinbox"
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Auto select track"
+msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "स्वयमेव ट्रैक चयनं कुर्वन्तु"
 

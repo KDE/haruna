@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-27 00:40+0000\n"
 "PO-Revision-Date: 2025-01-16 07:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -564,44 +564,44 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reasignar"
 
-#: src/mpv/mpvitem.cpp:313
+#: src/mpv/mpvitem.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "No se puede reproducir: %1"
 
-#: src/mpv/mpvitem.cpp:396 src/mpv/mpvitem.cpp:398
+#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Ritmo de subtítulos: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:444
+#: src/mpv/mpvitem.cpp:455
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ninguna"
 
-#: src/mpv/mpvitem.cpp:483
+#: src/mpv/mpvitem.cpp:494
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla ha fallado"
 
-#: src/mpv/mpvitem.cpp:488
+#: src/mpv/mpvitem.cpp:499
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Captura de pantalla realizada"
 
-#: src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:501
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:528
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -611,7 +611,7 @@ msgstr ""
 "No se ha detectado la pista de vídeo, seguramente porque no se puede "
 "descodificar o reproducir debido a la ausencia de códecs."
 
-#: src/mpv/mpvitem.cpp:550
+#: src/mpv/mpvitem.cpp:561
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -802,7 +802,7 @@ msgstr ""
 "No se han encontrado <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> "
 "ni <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:26
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:28
 msgctxt "@title"
 msgid "Load subtitles from"
 msgstr "Cargar subtítulos desde"
@@ -812,25 +812,47 @@ msgctxt "@action:button"
 msgid "Confirm deletion"
 msgstr "Confirmar borrado"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:121
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:116
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Borrar esta carpeta de la lista"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:137
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:132
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Guardar cambios"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:159
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:142
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Config folder"
+msgid "No folder set"
+msgstr "Carpeta de configuración"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
 msgid "Add new folder"
 msgstr "Añadir nueva carpeta..."
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:171
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:168
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Añadir una carpeta donde buscar subtítulos."
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:177
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
+msgctxt "@label:check"
+msgid "Search subtitles recursively"
+msgstr "Seleccione archivo de subtítulos"
+
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:194
+msgctxt "@info:tooltip"
+msgid ""
+"Subtitles are searched recursively in the \"%1\" setting\n"
+"Only relative folders are searched"
+msgstr ""
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -866,18 +888,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:302 src/qml/PlayList.qml:394
+#: src/qml/Main.qml:298 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccionar archivo"
 
-#: src/qml/Main.qml:321
+#: src/qml/Main.qml:317
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "Seleccione archivo de subtítulos"
 
-#: src/qml/Main.qml:341
+#: src/qml/Main.qml:337
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"
@@ -1977,7 +1999,10 @@ msgid "About"
 msgstr "Acerca de"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-msgctxt "@label:spinbox"
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Auto select track"
+msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Seleccionar pista automáticamente"
 
