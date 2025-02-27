@@ -15,6 +15,7 @@
 #include <QJsonDocument>
 #include <QJsonValue>
 #include <QProcess>
+#include <QUrlQuery>
 
 #include <KFileItem>
 #include <KFileMetaData/Properties>
@@ -158,7 +159,7 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
     }
 
     if (url.scheme() == u"http"_s || url.scheme() == u"https"_s) {
-        if (Application::isYoutubePlaylist(url.toString())) {
+        if (Application::isYoutubePlaylist(url)) {
             m_playlistPath = url.toString();
             getYouTubePlaylist(url, behaviour);
         } else {
@@ -291,9 +292,14 @@ void PlaylistModel::addM3uItems(const QUrl &url)
 
 void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
 {
+    QUrlQuery query{url.query()};
+    QString playlistId{query.queryItemValue(u"list"_s)};
+    QString videoId{query.queryItemValue(u"v"_s)};
+    QString playlistUrl{u"https://www.youtube.com/playlist?list=%1"_s.arg(playlistId)};
+
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = std::make_shared<QProcess>();
-    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << url.toString();
+    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << playlistUrl;
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
     ytdlProcess->setArguments(args);
     ytdlProcess->start();
@@ -325,9 +331,19 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
             Q_EMIT itemAdded(i, item.url.toString());
             endInsertRows();
 
-            if (GeneralSettings::lastPlayedFile().contains(id) && behaviour == Behaviour::Clear) {
-                setPlayingItem(i);
-                matchFound = true;
+            if (videoId.isEmpty()) {
+                // when videoId is not available check if GeneralSettings::lastPlayedFile()
+                // is part of the playlist and set the matching item as playing
+                if (GeneralSettings::lastPlayedFile().contains(id) && !matchFound && behaviour == Behaviour::Clear) {
+                    setPlayingItem(i);
+                    matchFound = true;
+                }
+            } else {
+                // when videoId is available set the item with the same id as playing
+                if (videoId == id && !matchFound && behaviour == Behaviour::Clear) {
+                    setPlayingItem(i);
+                    matchFound = true;
+                }
             }
         }
 

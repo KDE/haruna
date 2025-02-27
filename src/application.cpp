@@ -19,6 +19,7 @@
 #include <QStyle>
 #include <QStyleFactory>
 #include <QThread>
+#include <QUrlQuery>
 
 #include <KAboutData>
 #include <KColorSchemeManager>
@@ -307,9 +308,11 @@ QUrl Application::parentUrl(const QString &path)
     return parentFolderUrl;
 }
 
-bool Application::isYoutubePlaylist(const QString &path)
+bool Application::isYoutubePlaylist(const QUrl &url)
 {
-    return path.contains(u"youtube.com/playlist?list"_s);
+    QUrlQuery query{url.query()};
+    const auto listId = query.queryItemValue(u"list"_s);
+    return !listId.isEmpty();
 }
 
 QString Application::formatTime(const double time)
