@@ -42,6 +42,18 @@ Labs.Menu {
     }
 
     Labs.MenuItem {
+        icon.name: appActions.rotateClockwiseAction.icon.name
+        text: appActions.rotateClockwiseAction.text
+        onTriggered: appActions.rotateClockwiseAction.trigger()
+    }
+
+    Labs.MenuItem {
+        icon.name: appActions.rotateCounterClockwiseAction.icon.name
+        text: appActions.rotateCounterClockwiseAction.text
+        onTriggered: appActions.rotateCounterClockwiseAction.trigger()
+    }
+
+    Labs.MenuItem {
         icon.name: appActions.videoPanXLeftAction.icon.name
         text: appActions.videoPanXLeftAction.text
         onTriggered: appActions.videoPanXLeftAction.trigger()

@@ -16,6 +16,8 @@ Menu {
     MenuItem { action: appActions.zoomOutAction }
     MenuItem { action: appActions.zoomResetAction }
     MenuItem { action: appActions.screenshotAction }
+    MenuItem { action: appActions.rotateClockwiseAction }
+    MenuItem { action: appActions.rotateCounterClockwiseAction }
     MenuItem { action: appActions.videoPanXLeftAction }
     MenuItem { action: appActions.videoPanXRightAction }
     MenuItem { action: appActions.videoPanYUpAction }
