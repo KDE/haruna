@@ -136,6 +136,8 @@ Q_SIGNALS:
     void videoPanXRightAction();
     void videoPanYUpAction();
     void videoPanYDownAction();
+    void rotateClockwiseAction();
+    void rotateCounterClockwiseAction();
     void volumeUpAction();
     void volumeDownAction();
     void zoomInAction();

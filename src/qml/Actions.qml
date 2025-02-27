@@ -416,6 +416,14 @@ Item {
             root.m_mpv.setProperty(MpvProperties.VideoPanY, pan)
         }
 
+        function onRotateClockwiseAction() {
+            root.m_mpv.commandAsync(["cycle_values", "video-rotate", "90", "180", "270", "0"])
+        }
+
+        function onRotateCounterClockwiseAction() {
+            root.m_mpv.commandAsync(["cycle_values", "video-rotate", "270", "180", "90", "0"])
+        }
+
         function onVolumeUpAction() {
             root.m_mpv.command(["add", "volume", AudioSettings.volumeStep])
         }

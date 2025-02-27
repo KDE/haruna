@@ -414,6 +414,20 @@ ActionsModel::ActionsModel(QObject *parent)
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     m_actions << action;
 
+    action.name = u"rotateClockwiseAction"_s;
+    action.text = i18nc("@action", "Rotate clockwise");
+    action.iconName = QString();
+    action.defaultShortcut = Qt::CTRL | Qt::Key_R;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    m_actions << action;
+
+    action.name = u"rotateCounterClockwiseAction"_s;
+    action.text = i18nc("@action", "Rotate counter clockwise");
+    action.iconName = QString();
+    action.defaultShortcut = Qt::CTRL | Qt::Key_E;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    m_actions << action;
+
     action.name = u"volumeUpAction"_s;
     action.text = i18nc("@action", "Volume Up");
     action.iconName = u"audio-volume-high"_s;
