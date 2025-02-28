@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-27 00:40+0000\n"
-"PO-Revision-Date: 2025-01-16 14:26+0100\n"
+"POT-Creation-Date: 2025-02-28 00:41+0000\n"
+"PO-Revision-Date: 2025-02-27 22:53+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,60 +27,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: src/application.cpp:113
+#: src/application.cpp:114
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:115
+#: src/application.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Haruna mediaspeler"
 
-#: src/application.cpp:117
+#: src/application.cpp:118
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
 msgstr "(c) 2019-2025"
 
-#: src/application.cpp:122
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:123
+#: src/application.cpp:124
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Ontwikkelaar"
 
-#: src/application.cpp:136
+#: src/application.cpp:137
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Audio/video-downloader voor de opdrachtregel rijk aan mogelijkheden"
 
-#: src/application.cpp:146
+#: src/application.cpp:147
 #, kde-format
 msgid "Command line video player"
 msgstr "Videospeler voor de opdrachtregel"
 
-#: src/application.cpp:152
+#: src/application.cpp:153
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Cross-platform oplossing om geluid en video op te nemen, te converteren en "
 "te streamen"
 
-#: src/application.cpp:164
+#: src/application.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Te openen bestand"
 
-#: src/application.cpp:168
+#: src/application.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 "Staat toe de instelling van het ytdl-formaat te overschrijven. Zal "
 "overschreven worden als de instelling gewijzigd is via de GUI"
 
-#: src/application.cpp:170
+#: src/application.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -447,106 +447,118 @@ msgstr "Video omlaag verplaatsen"
 #: src/models/actionsmodel.cpp:418
 #, kde-format
 msgctxt "@action"
+msgid "Rotate clockwise"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:425
+#, kde-format
+msgctxt "@action"
+msgid "Rotate counter clockwise"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:432
+#, kde-format
+msgctxt "@action"
 msgid "Volume Up"
 msgstr "Volume omhoog"
 
-#: src/models/actionsmodel.cpp:425
+#: src/models/actionsmodel.cpp:439
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Volume omlaag"
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:446
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Inzoomen"
 
-#: src/models/actionsmodel.cpp:439
+#: src/models/actionsmodel.cpp:453
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Uitzoomen"
 
-#: src/models/actionsmodel.cpp:446
+#: src/models/actionsmodel.cpp:460
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Reset"
 msgstr "Zoomen reset"
 
-#: src/models/actionsmodel.cpp:453
+#: src/models/actionsmodel.cpp:467
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Up"
 msgstr "Contrast omhoog"
 
-#: src/models/actionsmodel.cpp:460
+#: src/models/actionsmodel.cpp:474
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Down"
 msgstr "Contrast omlaag"
 
-#: src/models/actionsmodel.cpp:467
+#: src/models/actionsmodel.cpp:481
 #, kde-format
 msgctxt "@action"
 msgid "Contrast Reset"
 msgstr "Contrast reset"
 
-#: src/models/actionsmodel.cpp:474
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Up"
 msgstr "Helderheid omhoog"
 
-#: src/models/actionsmodel.cpp:481
+#: src/models/actionsmodel.cpp:495
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Down"
 msgstr "Helderheid omlaag"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:502
 #, kde-format
 msgctxt "@action"
 msgid "Brightness Reset"
 msgstr "Helderheid reset"
 
-#: src/models/actionsmodel.cpp:495
+#: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Up"
 msgstr "Gamma omhoog"
 
-#: src/models/actionsmodel.cpp:502
+#: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Down"
 msgstr "Gamma omlaag"
 
-#: src/models/actionsmodel.cpp:509
+#: src/models/actionsmodel.cpp:523
 #, kde-format
 msgctxt "@action"
 msgid "Gamma Reset"
 msgstr "Gamma reset"
 
-#: src/models/actionsmodel.cpp:516
+#: src/models/actionsmodel.cpp:530
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Up"
 msgstr "Verzadiging omhoog"
 
-#: src/models/actionsmodel.cpp:523
+#: src/models/actionsmodel.cpp:537
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Down"
 msgstr "Verzadiging omlaag"
 
-#: src/models/actionsmodel.cpp:530
+#: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Saturation Reset"
 msgstr "Verzadiging reset"
 
-#: src/models/actionsmodel.cpp:679
+#: src/models/actionsmodel.cpp:693
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -556,7 +568,7 @@ msgstr ""
 "De gekozen sneltoets is in conflicts met de sneltoets van de actie <b>%1</b>."
 "<br><br>Wilt u de sneltoets opnieuw toekennen?"
 
-#: src/models/actionsmodel.cpp:685
+#: src/models/actionsmodel.cpp:699
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -620,109 +632,109 @@ msgctxt "@info:tooltip"
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
-#: src/qml/Actions.qml:160
+#: src/qml/Actions.qml:164
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can't load subtitle when no file is open"
 msgstr "Kan ondertitel niet laden wanneer geen bestand is geopend"
 
-#: src/qml/Actions.qml:179 src/qml/Actions.qml:185 src/qml/Actions.qml:190
+#: src/qml/Actions.qml:183 src/qml/Actions.qml:189 src/qml/Actions.qml:194
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Afspeelsnelheid: %1"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:289
 msgctxt "@info:tooltip"
 msgid "Loop start: %1"
 msgstr "Begin van herhalen: %1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:295
 msgctxt "@info:tooltip"
 msgid "Loop: %1 - %2"
 msgstr "Herhalen: %1 - %2"
 
-#: src/qml/Actions.qml:297
+#: src/qml/Actions.qml:301
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Herhalen gewist"
 
-#: src/qml/Actions.qml:317
+#: src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Ondertiteling uit"
 
-#: src/qml/Actions.qml:317
+#: src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Ondertiteling aan"
 
-#: src/qml/Actions.qml:326 src/qml/Actions.qml:338
+#: src/qml/Actions.qml:330 src/qml/Actions.qml:342
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Ondertiteling: geen"
 
-#: src/qml/Actions.qml:330 src/qml/Actions.qml:342
+#: src/qml/Actions.qml:334 src/qml/Actions.qml:346
 msgctxt "@info:tooltip"
 msgid "Subtitle: %1 %2"
 msgstr "Ondertitel: %1 %2"
 
-#: src/qml/Actions.qml:349 src/qml/Actions.qml:355
+#: src/qml/Actions.qml:353 src/qml/Actions.qml:359
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Schaal ondertiteling: %1"
 
-#: src/qml/Actions.qml:369
+#: src/qml/Actions.qml:373
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "De-interlace: %1"
 
-#: src/qml/Actions.qml:426 src/qml/Actions.qml:432
+#: src/qml/Actions.qml:438 src/qml/Actions.qml:444
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoomen: %1"
 
-#: src/qml/Actions.qml:437
+#: src/qml/Actions.qml:449
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoomen: 0"
 
-#: src/qml/Actions.qml:444 src/qml/Actions.qml:450
+#: src/qml/Actions.qml:456 src/qml/Actions.qml:462
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrast: %1"
 
-#: src/qml/Actions.qml:455
+#: src/qml/Actions.qml:467
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrast: 0"
 
-#: src/qml/Actions.qml:461 src/qml/Actions.qml:467
+#: src/qml/Actions.qml:473 src/qml/Actions.qml:479
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Helderheid: %1"
 
-#: src/qml/Actions.qml:472
+#: src/qml/Actions.qml:484
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Helderheid: 0"
 
-#: src/qml/Actions.qml:478 src/qml/Actions.qml:484
+#: src/qml/Actions.qml:490 src/qml/Actions.qml:496
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:489
+#: src/qml/Actions.qml:501
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:495 src/qml/Actions.qml:501
+#: src/qml/Actions.qml:507 src/qml/Actions.qml:513
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Verzadiging: %1"
 
-#: src/qml/Actions.qml:506
+#: src/qml/Actions.qml:518
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Verzadiging: 0"
@@ -821,11 +833,8 @@ msgid "Save changes"
 msgstr "Wijzigingen opslaan"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Configuratiemap"
+msgstr "Geen map ingesteld"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -838,12 +847,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Een map toevoegen waarin te zoeken naar ondertitels."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Bestand met ondertitels selecteren"
+msgstr "Ondertitels recursief zoeken"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -851,6 +857,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"Ondertitels worden recursief doorzocht in de \"%1\" instelling\n"
+"Alleen relatieve mappen doorzocht"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -917,17 +925,17 @@ msgctxt "@title:menu"
 msgid "Playback speed"
 msgstr "Afspeelsnelheid"
 
-#: src/qml/Menus/FileMenu.qml:19 src/qml/Menus/Global/GlobalFileMenu.qml:19
+#: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
 msgstr "&Bestand"
 
-#: src/qml/Menus/FileMenu.qml:28 src/qml/Menus/Global/GlobalFileMenu.qml:42
+#: src/qml/Menus/FileMenu.qml:32 src/qml/Menus/Global/GlobalFileMenu.qml:42
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Recente bestanden"
 
-#: src/qml/Menus/FileMenu.qml:52 src/qml/Menus/Global/GlobalFileMenu.qml:67
+#: src/qml/Menus/FileMenu.qml:56 src/qml/Menus/Global/GlobalFileMenu.qml:67
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Lijst wissen"
@@ -1032,7 +1040,7 @@ msgctxt "@title:menu"
 msgid "&Video"
 msgstr "&Video"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:69 src/qml/Menus/VideoMenu.qml:25
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:81 src/qml/Menus/VideoMenu.qml:27
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "Aanpassingen"
@@ -1651,7 +1659,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Decoderen met hardware"
 
-#: src/qml/Settings/PlaybackSettings.qml:149
+#: src/qml/Settings/PlaybackSettings.qml:150
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1690,12 +1698,12 @@ msgstr ""
 "opstart aangepast commando te maken <strong>set hwdec <i>decoder_name</i></"
 "strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:173
+#: src/qml/Settings/PlaybackSettings.qml:174
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Laatste afgespeelde bestand openen bij opstarten"
 
-#: src/qml/Settings/PlaybackSettings.qml:182
+#: src/qml/Settings/PlaybackSettings.qml:183
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
@@ -1704,12 +1712,12 @@ msgstr ""
 "Bij opstarten opent het het bestand dat speelde toen de toepassing werd "
 "gesloten."
 
-#: src/qml/Settings/PlaybackSettings.qml:191
+#: src/qml/Settings/PlaybackSettings.qml:192
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Pauzeren bij minimaliseren"
 
-#: src/qml/Settings/PlaybackSettings.qml:200
+#: src/qml/Settings/PlaybackSettings.qml:201
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1718,17 +1726,17 @@ msgstr ""
 "Pauzeert de speler terwijl het venster is geminimaliseerd, afspelen gaat "
 "verder bij herstel."
 
-#: src/qml/Settings/PlaybackSettings.qml:209
+#: src/qml/Settings/PlaybackSettings.qml:210
 msgctxt "@title"
 msgid "Playback position"
 msgstr "Afspeelpositie"
 
-#: src/qml/Settings/PlaybackSettings.qml:219
+#: src/qml/Settings/PlaybackSettings.qml:220
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Afspeelpositie herstellen"
 
-#: src/qml/Settings/PlaybackSettings.qml:228
+#: src/qml/Settings/PlaybackSettings.qml:229
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1751,52 +1759,52 @@ msgstr[1] ""
 "Positie wordt elke %1 seconden opgeslagen, behalve gedurende de laatste 10 "
 "seconden van de video."
 
-#: src/qml/Settings/PlaybackSettings.qml:242
+#: src/qml/Settings/PlaybackSettings.qml:243
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Afspelen starten"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:253
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "Het bestand zal worden afgespeeld na herstel van de afspeelpositie"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
+#: src/qml/Settings/PlaybackSettings.qml:276
 msgctxt "@info"
 msgid "For any duration"
 msgstr "Voor elke tijdsduur"
 
-#: src/qml/Settings/PlaybackSettings.qml:278
+#: src/qml/Settings/PlaybackSettings.qml:279
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "Als de tijdsduur langer is dan %1 minuut"
 msgstr[1] "Als de tijdsduur langer is dan %1 minuten"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
+#: src/qml/Settings/PlaybackSettings.qml:288
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 "Positie voor bestanden op afstand wordt hersteld ongeacht de tijdsduur."
 
-#: src/qml/Settings/PlaybackSettings.qml:309
+#: src/qml/Settings/PlaybackSettings.qml:310
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
 msgstr[0] "Positie elke %1 seconde opslaan"
 msgstr[1] "Positie elke %1 seconden opslaan"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:323
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Hoofdstukken"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:332
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Hoofdstukken overslaan"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:340
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1805,12 +1813,12 @@ msgstr ""
 "Indien ingeschakeld slaat het automatisch hoofdstukken over die bepaalde "
 "woorden/tekens bevatten."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:348
 msgctxt "@option:check"
 msgid "Show osd message on skip"
 msgstr "OSD-bericht tonen bij overslaan"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:357
 msgctxt "@info:tooltip show osd message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1819,17 +1827,17 @@ msgstr ""
 "Bij het overslaan van hoofdstukken zal er een osd-bericht verschijnen die de "
 "titel van het overgeslagen hoofdstuk toont."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:363
 msgctxt "@label:textbox"
 msgid "Skip words"
 msgstr "Woorden overslaan"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:372
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, hoofdstuk 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:378
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1841,22 +1849,22 @@ msgstr ""
 "overeenkomen met woorden die het bevatten zoals <strong><u>op</u>ening</"
 "strong>"
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:402
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:408
 msgid "Format selection"
 msgstr "Selectie van formaat"
 
-#: src/qml/Settings/PlaybackSettings.qml:447
+#: src/qml/Settings/PlaybackSettings.qml:448
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr ""
 "Selecteert een videobron die het dichtst bij het geselecteerde formaat is."
 
-#: src/qml/Settings/PlaybackSettings.qml:476
+#: src/qml/Settings/PlaybackSettings.qml:477
 msgctxt "placeholder text"
 msgid "bestvideo+bestaudio/best"
 msgstr "bestvideo+bestaudio/best"
@@ -1990,9 +1998,6 @@ msgid "About"
 msgstr "Info over"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Automatisch geselecteerde track"
