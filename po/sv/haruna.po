@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:41+0000\n"
-"PO-Revision-Date: 2025-01-16 17:27+0100\n"
+"PO-Revision-Date: 2025-02-28 19:30+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -448,13 +448,13 @@ msgstr "Flytta ner video"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Rotera medurs"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Rotera moturs"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -833,11 +833,8 @@ msgid "Save changes"
 msgstr "Spara ändringar"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Anpassa katalog"
+msgstr "Ingen katalog angiven"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -850,12 +847,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Lägg till en katalog där textning kan hittas."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Välj textningsfil"
+msgstr "Sök textning rekursivt"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -863,6 +857,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"Textning söks igenom rekursivt med inställningen \"%1\".\n"
+"Endast relativa kataloger genomsöks"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1992,9 +1988,6 @@ msgid "About"
 msgstr "Om"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Välj spår automatiskt"

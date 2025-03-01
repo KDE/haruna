@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:41+0000\n"
-"PO-Revision-Date: 2025-01-17 09:51+0200\n"
+"PO-Revision-Date: 2025-02-28 11:49+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -447,13 +447,13 @@ msgstr "הורדת סרטון"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "סיבוב עם כיוון השעון"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "סיבוב עם כיוון השעון"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -829,11 +829,8 @@ msgid "Save changes"
 msgstr "שמירת השינויים"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "תיקיית הגדרות"
+msgstr "לא הוגדרה תיקייה"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -846,12 +843,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "הוספת תיקייה בה יתבצע חיפוש אחר כתוביות."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "בחירת קובץ כתוביות"
+msgstr "חיפוש כתוביות בנסיגה"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -859,6 +853,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"מתבצע חיפוש בנסיגה אחר כתוביות בהגדרה „%1”\n"
+"יתבצע חיפוש רק בתיקיות יחסיות"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1977,9 +1973,6 @@ msgid "About"
 msgstr "על אודות"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "בחירת רצועה אוטומטית"

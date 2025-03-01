@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:41+0000\n"
-"PO-Revision-Date: 2025-01-16 08:51+0200\n"
+"PO-Revision-Date: 2025-02-28 09:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -451,13 +451,13 @@ msgstr "Пересунути відео нижче"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Обернути за годинниковою стрілкою"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Обернути проти годинникової стрілки"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -836,11 +836,8 @@ msgid "Save changes"
 msgstr "Зберегти зміни"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Тека налаштувань"
+msgstr "Теку не встановлено"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -853,12 +850,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Додати теку, у якій слід шукати субтитри."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Виберіть файл субтитрів"
+msgstr "Шукати субтитри рекурсивно"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -866,6 +860,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"За параметра «%1» пошук субтитрів буде виконано рекурсивно\n"
+"Пошук відбуватиметься лише у відносних теках"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -2015,9 +2011,6 @@ msgid "About"
 msgstr "Про програму"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Вибирати доріжку автоматично"
