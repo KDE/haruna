@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:41+0000\n"
-"PO-Revision-Date: 2025-01-18 13:10+0100\n"
+"PO-Revision-Date: 2025-02-28 19:25+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -452,13 +452,13 @@ msgstr "Sposta video giù"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Ruota in senso orario"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Ruota in senso antiorario"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -837,11 +837,8 @@ msgid "Save changes"
 msgstr "Salva le modifiche"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Cartella di configurazione"
+msgstr "Nessuna cartella configurata"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -854,12 +851,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Aggiungi una cartella in cui cercare i sottotitoli."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Seleziona file dei sottotitoli"
+msgstr "Cerca ricorsivamente i sottotitoli"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -867,6 +861,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"I sottotitoli vengono ricercati ricorsivamente nell'impostazione «%1»\n"
+"La ricerca viene eseguita solo nelle cartelle relative"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -2008,9 +2004,6 @@ msgid "About"
 msgstr "Informazioni"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Selezione automatica della traccia"
