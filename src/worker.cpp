@@ -182,16 +182,4 @@ void Worker::syncConfigValue(QString path, QString group, QString key, QVariant 
     m_cachedConf->sync();
 }
 
-void Worker::saveWindowGeometry(QQuickWindow *window) const
-{
-    if (!GeneralSettings::rememberWindowGeometry()) {
-        return;
-    }
-    KConfig dataResource(u"data"_s, KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, u"Window"_s);
-    KWindowConfig::saveWindowPosition(window, windowGroup);
-    KWindowConfig::saveWindowSize(window, windowGroup);
-    dataResource.sync();
-}
-
 #include "moc_worker.cpp"

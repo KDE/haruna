@@ -91,7 +91,6 @@ Application::Application()
     KCrash::initialize();
 
     connect(Global::instance(), &Global::error, this, &Application::error);
-    connect(this, &Application::saveWindowGeometryAsync, Worker::instance(), &Worker::saveWindowGeometry, Qt::QueuedConnection);
 }
 
 Application::~Application()
@@ -191,22 +190,6 @@ void Application::setupQmlSettingsTypes()
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "PlaylistSettings", PlaylistSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "VideoSettings", VideoSettings::self());
-}
-
-void Application::restoreWindowGeometry(QQuickWindow *window) const
-{
-    if (!GeneralSettings::rememberWindowGeometry()) {
-        return;
-    }
-    KConfig dataResource(u"data"_s, KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, u"Window"_s);
-    KWindowConfig::restoreWindowSize(window, windowGroup);
-    KWindowConfig::restoreWindowPosition(window, windowGroup);
-}
-
-void Application::saveWindowGeometry(QQuickWindow *window)
-{
-    Q_EMIT saveWindowGeometryAsync(window);
 }
 
 bool Application::urlExists(const QUrl &url)

@@ -36,7 +36,6 @@ public Q_SLOTS:
     void makePlaylistThumbnail(const QString &path, int width);
     QImage frameToImage(const QString &path, int width);
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
-    void saveWindowGeometry(QQuickWindow *window) const;
     void mprisThumbnail(const QString &path, int width);
     void findRecursiveSubtitles(const QUrl &url);
 

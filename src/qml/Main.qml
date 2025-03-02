@@ -13,6 +13,7 @@ import QtQuick.Layouts
 import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
+import org.kde.config as KConfig
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -31,12 +32,6 @@ ApplicationWindow {
     minimumWidth: 400
     minimumHeight: 200
     color: Kirigami.Theme.backgroundColor
-
-    onClosing: HarunaApp.saveWindowGeometry(window)
-    onWidthChanged: saveWindowGeometryTimer.restart()
-    onHeightChanged: saveWindowGeometryTimer.restart()
-    onXChanged: saveWindowGeometryTimer.restart()
-    onYChanged: saveWindowGeometryTimer.restart()
 
     onVisibilityChanged: function(visibility) {
         if (PlaybackSettings.pauseWhileMinimized) {
@@ -78,6 +73,14 @@ ApplicationWindow {
         m_mpv: mpv
         m_recentFilesModel: recentFilesModel
         m_settingsLoader: settingsLoader
+    }
+
+    Loader {
+        active: false
+        sourceComponent: KConfig.WindowStateSaver {
+            configGroupName: "MainWindow"
+        }
+        Component.onCompleted: active = GeneralSettings.rememberWindowGeometry
     }
 
     MpvVideo {
@@ -343,19 +346,7 @@ ApplicationWindow {
         }
     }
 
-    // This timer allows to batch update the window size change to reduce
-    // the io load and also work around the fact that x/y/width/height are
-    // changed when loading the page and overwrite the saved geometry from
-    // the previous session.
-    Timer {
-        id: saveWindowGeometryTimer
-
-        interval: 1000
-        onTriggered: HarunaApp.saveWindowGeometry(window)
-    }
-
     Component.onCompleted: {
-        HarunaApp.restoreWindowGeometry(window)
         HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
 
         const hasCommandLineFile = HarunaApp.url(0).toString() !== ""
