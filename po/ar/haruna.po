@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-28 00:41+0000\n"
-"PO-Revision-Date: 2025-01-17 07:06+0400\n"
+"POT-Creation-Date: 2025-03-03 00:40+0000\n"
+"PO-Revision-Date: 2025-03-02 10:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -28,58 +28,58 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: src/application.cpp:114
+#: src/application.cpp:113
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/application.cpp:116
+#: src/application.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "مشغل وسائط"
 
-#: src/application.cpp:118
+#: src/application.cpp:117
 #, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
 msgstr "© 2019-2025"
 
-#: src/application.cpp:123
+#: src/application.cpp:122
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "جورج فلوريا بونوي"
 
-#: src/application.cpp:124
+#: src/application.cpp:123
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "مطوّر"
 
-#: src/application.cpp:137
+#: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "أداة تنزيل الصوت والفيديو الغنية بالميزات عبر سطر الأوامر"
 
-#: src/application.cpp:147
+#: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
 msgstr "مشغل فيديو سطر الأوامر"
 
-#: src/application.cpp:153
+#: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "حل متعدد الأنظمة لتسجيل وتحويل وبث الصوت والفيديو"
 
-#: src/application.cpp:165
+#: src/application.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "الملف المراد فتحه"
 
-#: src/application.cpp:169
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -89,7 +89,7 @@ msgstr ""
 "يسمح بتجاوز مؤقتًا لإعداد اختيار تنسيق YTDL. سيستبدل إذا غُيّر الإعداد من خلال "
 "واجهة المستخدم الرسومية"
 
-#: src/application.cpp:171
+#: src/application.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "bestvideo+bestaudio/best"
@@ -447,13 +447,13 @@ msgstr "حرك الفيديو للأسفل"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "أدر باتجاه عقارب الساعة"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "أدر بعكس اتجاه عقارب الساعة"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -832,11 +832,8 @@ msgid "Save changes"
 msgstr "احفظ التغيرات"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "مجلد الضبط"
+msgstr "لم يعين مجلد"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -849,12 +846,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "أضف مجلدًا للبحث عن الترجمات."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "اختر ملف ترجمة"
+msgstr "ابحث عن الترجمات في المجلدات الفرعية"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -862,6 +856,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"سيُبحث عن الترجمات في المجلدات الفرعية في الإعداد \"%1\"\n"
+"البحث سيكون في المجلدات ذات الصلة فقط"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -892,23 +888,23 @@ msgstr ""
 "تخطَ الفصول التي تحوي كلمات/حروف معينة.\n"
 "راجع إعدادات \"التشغيل\" لمزيد من التفاصيل"
 
-#: src/qml/Main.qml:28
+#: src/qml/Main.qml:29
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/qml/Main.qml:298 src/qml/PlayList.qml:394
+#: src/qml/Main.qml:301 src/qml/PlayList.qml:394
 #: src/qml/Settings/VideoSettings.qml:70
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "اختر ملفّا"
 
-#: src/qml/Main.qml:317
+#: src/qml/Main.qml:320
 msgctxt "@title:window"
 msgid "Select subtitles file"
 msgstr "اختر ملف ترجمة"
 
-#: src/qml/Main.qml:337
+#: src/qml/Main.qml:340
 msgctxt "@action:button"
 msgid "Open"
 msgstr "افتح"
@@ -2001,9 +1997,6 @@ msgid "About"
 msgstr "عن"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "تحديد المسار تلقائيًا"
