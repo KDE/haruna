@@ -135,7 +135,7 @@ ActionsModel::ActionsModel(QObject *parent)
     m_actions << action;
 
     action.name = u"openUrlAction"_s;
-    action.text = i18nc("@action", "Open Url");
+    action.text = i18nc("@action", "Open URL");
     action.iconName = u"internet-services"_s;
     action.defaultShortcut = Qt::CTRL | Qt::SHIFT | Qt::Key_O;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
