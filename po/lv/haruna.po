@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-03 00:40+0000\n"
-"PO-Revision-Date: 2025-01-20 12:46+0200\n"
+"PO-Revision-Date: 2025-03-04 17:22+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -449,13 +449,13 @@ msgstr "Pārvietot video lejup"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Pagriezt pulksteņrādītāja virzienā"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Pagriezt pretēji pulksteņrādītāja virzienam"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -834,11 +834,8 @@ msgid "Save changes"
 msgstr "Saglabāt izmaiņas"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Konfigurācijas mape"
+msgstr "Nav norādīta mape"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -851,12 +848,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Pievienot mapi, kurā meklēt subtitrus."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Atlasiet subtitru datni"
+msgstr "Subtitrus meklēt rekursīvi"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -864,6 +858,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"Subtitrus meklē rekursīvi „%1“ iestatījumā\n"
+"Meklēt tikai relatīvas mapes"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -2003,9 +1999,6 @@ msgid "About"
 msgstr "Par"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Automātiski atlasīt celiņu"
