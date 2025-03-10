@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-03 00:40+0000\n"
-"PO-Revision-Date: 2025-01-12 19:45+0200\n"
+"POT-Creation-Date: 2025-03-10 00:41+0000\n"
+"PO-Revision-Date: 2025-02-15 18:06+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -40,12 +40,10 @@ msgid "Media player"
 msgstr "Mediasoitin"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
-msgstr "© 2019–2023"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -62,17 +60,19 @@ msgstr "Kehittäjä"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "Monipuolinen komentorivin ääni- ja videolataaja"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Komentorivin videosoitin"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Alustariippumaton ratkaisu äänen ja videon tallentamiseen, muuntamiseen ja "
+"suoratoistoon"
 
 #: src/application.cpp:164
 #, kde-format
@@ -207,9 +207,11 @@ msgid "Add External Subtitle…"
 msgstr "Lisää ulkoinen tekstitys…"
 
 #: src/models/actionsmodel.cpp:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Open Url"
 msgctxt "@action"
-msgid "Open Url"
+msgid "Open URL"
 msgstr "Avaa verkko-osoite"
 
 #: src/models/actionsmodel.cpp:145
@@ -774,9 +776,6 @@ msgid "Select a color"
 msgstr "Valitse väri"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select a color"
 msgstr "Valitse väri"
@@ -1737,12 +1736,9 @@ msgid "Playback position"
 msgstr "Toistokohta"
 
 #: src/qml/Settings/PlaybackSettings.qml:220
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "Hyppää viimeisimpään toistokohtaan"
+msgstr "Palauta viimeisin toistokohta"
 
 #: src/qml/Settings/PlaybackSettings.qml:229
 msgctxt "@info:tooltip save playback position"

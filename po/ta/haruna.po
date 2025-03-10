@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-03 00:40+0000\n"
-"PO-Revision-Date: 2025-01-26 16:31+0530\n"
+"POT-Creation-Date: 2025-03-10 00:41+0000\n"
+"PO-Revision-Date: 2025-03-09 12:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -203,9 +203,11 @@ msgid "Add External Subtitle…"
 msgstr "துணை உரையை வேறு கோப்பிலிருந்து சேர்…"
 
 #: src/models/actionsmodel.cpp:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Open Url"
 msgctxt "@action"
-msgid "Open Url"
+msgid "Open URL"
 msgstr "முகவரியை திற"
 
 #: src/models/actionsmodel.cpp:145
@@ -1250,20 +1252,14 @@ msgid "Open config folder"
 msgstr "அமைப்புகளுக்கான அடைவைத் திற"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Configure"
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr "அமை"
+msgstr "அமைப்புக்கோப்பு"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Open config ..."
 msgctxt "@info:tooltip"
 msgid "Open config file"
-msgstr "அமைப்புகளை திற ..."
+msgstr "அமைப்புக்கோப்பைத் திறக்கும்"
 
 #: src/qml/Settings/DebugSettings.qml:74
 #, fuzzy
@@ -1274,12 +1270,9 @@ msgid "Custom commands config file"
 msgstr "தனிப்பயன் கட்டளைகள்"
 
 #: src/qml/Settings/DebugSettings.qml:86
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "தனிப்பயன் கட்டளைகள் இல்லை"
+msgstr "தனிப்பயன் கட்டளைகளுக்கான அமைப்புக்கோப்பைத் திறக்கும்"
 
 #: src/qml/Settings/DebugSettings.qml:98
 msgctxt "@info:usagetip"
