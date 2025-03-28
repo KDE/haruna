@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:41+0000\n"
-"PO-Revision-Date: 2025-01-24 22:49+0900\n"
+"PO-Revision-Date: 2025-03-27 21:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -205,9 +205,7 @@ msgid "Add External Subtitle…"
 msgstr "新增外部字幕…"
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "開啟網址"
@@ -450,13 +448,13 @@ msgstr "影片向下移動"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "順時針旋轉"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "逆時針旋轉"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -832,11 +830,8 @@ msgid "Save changes"
 msgstr "儲存變更"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "設定資料夾"
+msgstr "未設定資料夾"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -849,12 +844,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "新增尋找字幕用的資料夾。"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "選擇字幕檔案"
+msgstr "遞迴搜尋字幕"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -862,6 +854,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"字幕因「%1」設定值而遞迴搜尋\n"
+"只會搜尋相對資料夾"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1957,9 +1951,6 @@ msgid "About"
 msgstr "關於"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "自動選取音軌"
