@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:41+0000\n"
-"PO-Revision-Date: 2025-02-15 18:06+0200\n"
+"PO-Revision-Date: 2025-03-23 15:57+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -454,13 +454,13 @@ msgstr "Siirrä videota alemmas"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Käännä myötäpäivään"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Käännä vastapäivään"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -839,11 +839,8 @@ msgid "Save changes"
 msgstr "Tallenna muutokset"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Asetuskansio"
+msgstr "Kansiota ei ole asetettu"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -856,12 +853,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Kysy kansio, josta etsiä tekstityksiä."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Valitse tekstitystiedosto"
+msgstr "Etsi tekstityksiä alikansioistakin"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -1996,9 +1990,6 @@ msgid "About"
 msgstr "Tietoa"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Valitse raita automaattisesti"
