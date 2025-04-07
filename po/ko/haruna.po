@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:41+0000\n"
-"PO-Revision-Date: 2024-12-24 16:28+0100\n"
+"PO-Revision-Date: 2025-04-06 22:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -40,12 +40,10 @@ msgid "Media player"
 msgstr "미디어 재생기"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt "copyright statement"
 msgid "(c) 2019-2025"
-msgstr "(c) 2019-2023"
+msgstr "(c) 2019-2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -62,17 +60,17 @@ msgstr "개발자"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "다기능 명령행 오디오/비디오 다운로더"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "명령행 동영상 재생기"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
-msgstr ""
+msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
 #: src/application.cpp:164
 #, kde-format
@@ -205,9 +203,7 @@ msgid "Add External Subtitle…"
 msgstr "외부 자막 추가…"
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "URL 열기"
@@ -450,13 +446,13 @@ msgstr "동영상 아래로 이동"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "시계 방향으로 회전"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "반시계 방향으로 회전"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -772,9 +768,6 @@ msgid "Select a color"
 msgstr "색상 선택"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select a color"
 msgstr "색상 선택"
@@ -838,11 +831,8 @@ msgid "Save changes"
 msgstr "변경 사항 저장"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "설정 폴더"
+msgstr "설정한 폴더 없음"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
 msgctxt "@action:button"
@@ -855,12 +845,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "자막을 찾을 폴더를 추가합니다."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "자막 파일 선택"
+msgstr "재귀적으로 자막 검색"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -868,6 +855,8 @@ msgid ""
 "Subtitles are searched recursively in the \"%1\" setting\n"
 "Only relative folders are searched"
 msgstr ""
+"자막을 \"%1\" 설정에서 재귀적으로 검색합니다\n"
+"상대 경로 폴더만 검색합니다"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1727,12 +1716,9 @@ msgid "Playback position"
 msgstr "재생 위치"
 
 #: src/qml/Settings/PlaybackSettings.qml:220
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "마지막으로 재생한 위치로 탐색"
+msgstr "재생 위치 복원"
 
 #: src/qml/Settings/PlaybackSettings.qml:229
 msgctxt "@info:tooltip save playback position"
@@ -1759,7 +1745,7 @@ msgstr "재생 시작"
 #: src/qml/Settings/PlaybackSettings.qml:253
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
-msgstr ""
+msgstr "재생 위치를 복원한 후 파일 재생이 시작됨"
 
 #: src/qml/Settings/PlaybackSettings.qml:276
 msgctxt "@info"
@@ -1981,9 +1967,6 @@ msgid "About"
 msgstr "정보"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "트랙 자동 선택"
