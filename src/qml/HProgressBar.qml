@@ -48,6 +48,7 @@ RowLayout {
         id: slider
 
         property bool seekStarted: false
+        property bool prePressPause: root.m_mpv.pause
 
         from: 0
         to: root.m_mpv.duration
@@ -190,6 +191,15 @@ RowLayout {
                 return
             }
             previewItem.command(["seek", slider.value, "absolute"])
+        }
+
+        onPressedChanged: {
+            if (pressed) {
+                slider.prePressPause = root.m_mpv.pause
+                root.m_mpv.pause = true
+            } else {
+                root.m_mpv.pause = slider.prePressPause
+            }
         }
 
         // create markers for the chapters
