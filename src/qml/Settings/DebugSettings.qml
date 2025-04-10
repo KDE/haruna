@@ -11,7 +11,6 @@ import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
-import org.kde.haruna.mpvproperties
 import org.kde.haruna.settings
 
 SettingsBasePage {

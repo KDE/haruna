@@ -181,7 +181,6 @@ void Application::setupCommandLineParser()
 
 void Application::setupQmlSettingsTypes()
 {
-    qmlRegisterSingletonInstance("org.kde.haruna.mpvproperties", 1, 0, "MpvProperties", MpvProperties::self());
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "AudioSettings", AudioSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "GeneralSettings", GeneralSettings::self());
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "InformationSettings", InformationSettings::self());

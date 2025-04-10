@@ -10,7 +10,6 @@ import QtQuick
 import QtQuick.Controls
 
 import org.kde.haruna
-import org.kde.haruna.mpvproperties
 import org.kde.haruna.settings
 
 Item {
