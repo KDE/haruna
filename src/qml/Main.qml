@@ -209,7 +209,7 @@ ApplicationWindow {
 
         active: false
         asynchronous: true
-        sourceComponent: ContextMenu {
+        sourceComponent: MpvContextMenu {
             m_mpv: mpv
             onClosed: mpvContextMenuLoader.active = false
         }
@@ -223,7 +223,7 @@ ApplicationWindow {
                 return
             }
 
-            const contextMenu = mpvContextMenuLoader.item as ContextMenu
+            const contextMenu = mpvContextMenuLoader.item as MpvContextMenu
             contextMenu.popup()
         }
 

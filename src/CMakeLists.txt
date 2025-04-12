@@ -99,7 +99,7 @@ qt_add_qml_module(haruna
         qml/Haruna/Components/ToolTipButton.qml
 
         qml/Menus/AudioMenu.qml
-        qml/Menus/ContextMenu.qml
+        qml/Menus/MpvContextMenu.qml
         qml/Menus/FileMenu.qml
         qml/Menus/HelpMenu.qml
         qml/Menus/PlaybackMenu.qml
