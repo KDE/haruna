@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:41+0000\n"
+"POT-Creation-Date: 2025-04-13 00:40+0000\n"
 "PO-Revision-Date: 2025-03-27 21:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -917,11 +917,6 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "軌道(&T)"
 
-#: src/qml/Menus/ContextMenu.qml:21
-msgctxt "@title:menu"
-msgid "Playback speed"
-msgstr "播放速度"
-
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
@@ -1066,6 +1061,11 @@ msgstr "隱藏工具列"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "顯示工具列"
+
+#: src/qml/Menus/MpvContextMenu.qml:21
+msgctxt "@title:menu"
+msgid "Playback speed"
+msgstr "播放速度"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"

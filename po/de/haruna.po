@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:41+0000\n"
+"POT-Creation-Date: 2025-04-13 00:40+0000\n"
 "PO-Revision-Date: 2023-05-30 18:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -956,11 +956,6 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "&Audio"
 
-#: src/qml/Menus/ContextMenu.qml:21
-msgctxt "@title:menu"
-msgid "Playback speed"
-msgstr "Wiedergabegeschwindigkeit"
-
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
@@ -1138,6 +1133,11 @@ msgstr "Werkzeugleiste ausblenden"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Werkzeugleiste anzeigen"
+
+#: src/qml/Menus/MpvContextMenu.qml:21
+msgctxt "@title:menu"
+msgid "Playback speed"
+msgstr "Wiedergabegeschwindigkeit"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:41+0000\n"
+"POT-Creation-Date: 2025-04-13 00:40+0000\n"
 "PO-Revision-Date: 2023-12-27 10:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -949,11 +949,6 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "&Дорожка"
 
-#: src/qml/Menus/ContextMenu.qml:21
-msgctxt "@title:menu"
-msgid "Playback speed"
-msgstr "Скорость воспроизведения"
-
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
@@ -1098,6 +1093,11 @@ msgstr "Скрыть панель инструментов"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Показывать панель инструментов"
+
+#: src/qml/Menus/MpvContextMenu.qml:21
+msgctxt "@title:menu"
+msgid "Playback speed"
+msgstr "Скорость воспроизведения"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"

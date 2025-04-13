@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:41+0000\n"
+"POT-Creation-Date: 2025-04-13 00:40+0000\n"
 "PO-Revision-Date: 2025-04-06 22:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -918,11 +918,6 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "트랙(&T)"
 
-#: src/qml/Menus/ContextMenu.qml:21
-msgctxt "@title:menu"
-msgid "Playback speed"
-msgstr "재생 속도"
-
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
@@ -1067,6 +1062,11 @@ msgstr "도구 모음 숨기기"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "도구 모음 표시"
+
+#: src/qml/Menus/MpvContextMenu.qml:21
+msgctxt "@title:menu"
+msgid "Playback speed"
+msgstr "재생 속도"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"

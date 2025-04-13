@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:41+0000\n"
+"POT-Creation-Date: 2025-04-13 00:40+0000\n"
 "PO-Revision-Date: 2025-03-19 13:13+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -921,11 +921,6 @@ msgctxt "@title:menu"
 msgid "&Track"
 msgstr "&Pista"
 
-#: src/qml/Menus/ContextMenu.qml:21
-msgctxt "@title:menu"
-msgid "Playback speed"
-msgstr "Velocidade de reprodución"
-
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
 msgid "&File"
@@ -1070,6 +1065,11 @@ msgstr "Agochar a barra de ferramentas"
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Amosar a barra de ferramentas"
+
+#: src/qml/Menus/MpvContextMenu.qml:21
+msgctxt "@title:menu"
+msgid "Playback speed"
+msgstr "Velocidade de reprodución"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"
