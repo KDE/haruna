@@ -383,6 +383,22 @@
     </ul>
   </description>
   <releases>
+    <release version="1.4.0" date="2025-04-15">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>Added setting to search subtitles recursively. Searches folders relative to the parent folder of the playing file and folders defined by the `Load subtitles from` setting</li>
+          <li>Added support for opening youtube playlists from urls containing a playlist id</li>
+          <li>Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>Fix tracks menus showing tracks from previously opened files</li>
+          <li>Fix subtitles added by drag and drop not being added to the subtitles menu</li>
+          <li>While the progress/seek slider is pressed the video is paused, fixes continuously opening the next video when dragged and held all the why to the end</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.3.3" date="2025-02-24">
       <description>
         <p>Bugfixes:</p>
