@@ -160,7 +160,7 @@ Item {
         function onOpenSubtitlesFileAction() {
             if (root.m_mpv.currentUrl.toString() === "") {
                 const osdMsg = i18nc("osd message when trying to open subtile selection dialog while no file is open",
-                                     "Can't load subtitle when no file is open")
+                                     "Can’t load subtitle when no file is open")
                 root.m_osd.message(osdMsg)
                 return
             }
@@ -291,7 +291,7 @@ Item {
                 const bPosition = root.m_mpv.position + 0.1
                 root.m_mpv.setPropertyBlocking(MpvProperties.ABLoopB, bPosition)
                 footerLoader.item.progressBar.loopIndicator.endPosition = bPosition
-                root.m_osd.message(i18nc("@info:tooltip", "Loop: %1 - %2", HarunaApp.formatTime(a), HarunaApp.formatTime(bPosition)))
+                root.m_osd.message(i18nc("@info:tooltip, use en dash for the range", "Loop: %1–%2", HarunaApp.formatTime(a), HarunaApp.formatTime(bPosition)))
             } else {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, "no")
                 root.m_mpv.setProperty(MpvProperties.ABLoopB, "no")

@@ -296,7 +296,7 @@ RowLayout {
                         }
 
                         ToolTip {
-                            text: i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck 'Playback' settings for more details")
+                            text: i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
                         }
                     }
                 }

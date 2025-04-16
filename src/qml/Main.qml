@@ -298,7 +298,7 @@ ApplicationWindow {
                                ? HarunaApp.pathToUrl(GeneralSettings.fileDialogLocation)
                                : HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
 
-        title: i18nc("@title:window", "Select file")
+        title: i18nc("@title:window", "Select File")
         currentFolder: location
         fileMode: FileDialog.OpenFile
 
@@ -317,7 +317,7 @@ ApplicationWindow {
 
         property url location: HarunaApp.parentUrl(mpv.currentUrl)
 
-        title: i18nc("@title:window", "Select subtitles file")
+        title: i18nc("@title:window", "Select Subtitles File")
         currentFolder: location
         fileMode: FileDialog.OpenFile
         nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]

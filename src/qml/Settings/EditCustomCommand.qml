@@ -63,7 +63,7 @@ SettingsBasePage {
                                    "like <strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>.<br>" +
                                    "<strong>set</strong>: sets the value of a property <strong>set volume-max 150</strong>.<br>" +
                                    "<strong>add</strong>: increases/decreases the value of a property <strong>add volume 15</strong>, " +
-                                   "increases volume by 15. To decrease the value use <strong>add volume -15</strong>.<br>" +
+                                   "increases volume by 15. To decrease the value use <strong>add volume −15</strong>.<br>" +
                                    "<strong>cycle</strong>: cycle through the values of a property <strong>cycle aid up</strong>.")
                 toolTipWidth: 450
 

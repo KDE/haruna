@@ -66,7 +66,7 @@ Page {
             Kirigami.ActionToolBar {
                 actions: [
                     Kirigami.Action {
-                        text: i18nc("@action:button", "Open playlist")
+                        text: i18nc("@action:button", "Open Playlist")
                         icon.name: "media-playlist-append"
                         onTriggered: {
                             fileDialog.fileType = "playlist"
@@ -75,7 +75,7 @@ Page {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action:button", "Add ...")
+                        text: i18nc("@action:button", "Add…")
                         icon.name: "list-add"
                         Kirigami.Action {
                             text: i18nc("@action:button", "File")
@@ -86,7 +86,7 @@ Page {
                             }
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Url")
+                            text: i18nc("@action:button", "URL")
                             onTriggered: {
                                 if (addUrlPopup.opened) {
                                     addUrlPopup.close()
@@ -101,25 +101,25 @@ Page {
                         icon.name: "view-sort"
 
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Name ascending")
+                            text: i18nc("@action:button", "Name, ascending")
                             onTriggered: {
                                 root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameAscending)
                             }
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Name descending")
+                            text: i18nc("@action:button", "Name, descending")
                             onTriggered: {
                                 root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameDescending)
                             }
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Duration ascending")
+                            text: i18nc("@action:button", "Duration, ascending")
                             onTriggered: {
                                 root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationAscending)
                             }
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Duration descending")
+                            text: i18nc("@action:button", "Duration, descending")
                             onTriggered: {
                                 root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
                             }
@@ -134,7 +134,7 @@ Page {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action:button", "Save as")
+                        text: i18nc("@action:button", "Save As")
                         icon.name: "document-save-as"
                         displayHint: Kirigami.DisplayHint.AlwaysHide
                         onTriggered: {
@@ -240,13 +240,13 @@ Page {
             sourceComponent: Menu {
 
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Open containing folder")
+                    text: i18nc("@action:inmenu", "Open Containing Folder")
                     icon.name: "folder"
                     visible: contextMenuLoader.isLocal
                     onClicked: root.m_mpv.playlistProxyModel.highlightInFileManager(contextMenuLoader.row)
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Open in browser")
+                    text: i18nc("@action:inmenu", "Open in Browser")
                     icon.name: "link"
                     visible: !contextMenuLoader.isLocal
                     onClicked: {
@@ -255,18 +255,18 @@ Page {
                     }
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Copy name")
+                    text: i18nc("@action:inmenu", "Copy Name")
                     onClicked: root.m_mpv.playlistProxyModel.copyFileName(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: contextMenuLoader.isLocal
-                          ? i18nc("@action:inmenu", "Copy path")
-                          : i18nc("@action:inmenu", "Copy url")
+                          ? i18nc("@action:inmenu", "Copy Path")
+                          : i18nc("@action:inmenu", "Copy URL")
                     onClicked: root.m_mpv.playlistProxyModel.copyFilePath(contextMenuLoader.row)
                 }
                 MenuSeparator {}
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Remove from playlist")
+                    text: i18nc("@action:inmenu", "Remove from Playlist")
                     icon.name: "remove"
                     onClicked: root.m_mpv.playlistProxyModel.removeItem(contextMenuLoader.row)
                 }
@@ -277,7 +277,7 @@ Page {
                     onClicked: root.m_mpv.playlistProxyModel.renameFile(contextMenuLoader.row)
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Scroll to playing item")
+                    text: i18nc("@action:inmenu", "Scroll to Playing Item")
                     onClicked: {
                         const index = root.m_mpv.playlistProxyModel.getPlayingItem()
                         playlistView.positionViewAtIndex(index, ListView.Beginning)
@@ -287,7 +287,7 @@ Page {
                     visible: contextMenuLoader.isLocal
                 }
                 MenuItem {
-                    text: i18nc("@action:inmenu", "Trash file")
+                    text: i18nc("@action:inmenu", "Move File to Trash")
                     icon.name: "delete"
                     visible: contextMenuLoader.isLocal
                     onClicked: root.m_mpv.playlistProxyModel.trashFile(contextMenuLoader.row)

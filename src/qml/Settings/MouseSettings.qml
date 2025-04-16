@@ -133,7 +133,7 @@ SettingsBasePage {
         SelectActionPopup {
             id: selectActionPopup
 
-            subtitle: i18nc("@title", "Double click to set action")
+            subtitle: i18nc("@title", "Double Click to Set Action")
         }
     }
 }
