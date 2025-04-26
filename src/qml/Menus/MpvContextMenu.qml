@@ -18,7 +18,7 @@ Menu {
     MenuItem { action: appActions.playNextAction }
     MenuItem { action: appActions.playPreviousAction }
     Menu {
-        title: i18nc("@title:menu", "Playback speed")
+        title: i18nc("@title:menu", "Playback Speed")
         MenuItem { action: appActions.playbackSpeedIncreaseAction }
         MenuItem { action: appActions.playbackSpeedDecreaseAction }
         MenuItem { action: appActions.playbackSpeedResetAction }

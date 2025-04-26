@@ -150,7 +150,7 @@ SettingsBasePage {
                                    "Whether hardware decoding is actually done depends on the video codec. " +
                                    "If hardware decoding is not possible, mpv will fall back on software decoding.<br><br>" +
                                    "<ul><li><strong>auto</strong> tries to automatically enable hardware decoding using the first available method.</li>" +
-                                   "<li><strong>auto-safe</strong> similar to auto, but allows only whitelisted methods that are considered \"safe\".</li>" +
+                                   "<li><strong>auto-safe</strong> similar to auto, but allows only whitelisted methods that are considered “safe”.</li>" +
                                    "<li><strong>vaapi</strong> works with Intel and AMD GPUs only. It also requires the opengl EGL backend.</li>" +
                                    "<li><strong>nvdec</strong> the newest, and recommended method to do hardware decoding on Nvidia GPUs.</li>" +
                                    "<li><strong>cuda</strong> an older implementation of hardware decoding on Nvidia GPUs.</li>" +

@@ -144,7 +144,7 @@ Item {
                     ToolTip {
                         id: playPauseButtonToolTip
 
-                        text: root.m_mpv.pause ? i18nc("@info:tooltip", "Start Playback") : i18nc("@info:tooltip", "Pause Playback")
+                        text: root.m_mpv.pause ? i18nc("@info:tooltip", "Start playback") : i18nc("@info:tooltip", "Pause playback")
                     }
                 }
 

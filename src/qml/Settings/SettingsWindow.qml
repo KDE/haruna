@@ -129,7 +129,7 @@ Kirigami.ApplicationWindow {
                     }
                 },
                 Kirigami.Action {
-                    text: i18nc("@action", "Custom commands")
+                    text: i18nc("@action", "Custom Commands")
                     icon.name: "configure"
                     onTriggered: {
                         root.currentPage = SettingsWindow.Page.CustomCommands

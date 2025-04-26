@@ -25,7 +25,7 @@ ColumnLayout {
     Label {
         id: sectionTitle
 
-        text: i18nc("@title", "Load subtitles from")
+        text: i18nc("@label", "Load subtitles from")
         bottomPadding: 10
     }
 
@@ -102,7 +102,7 @@ ColumnLayout {
                             flat: true
                             onClicked: {
                                 if (!canDelete) {
-                                    text = i18nc("@action:button", "Confirm deletion")
+                                    text = i18nc("@action:button", "Confirm Deletion")
                                     canDelete = true
                                     return
                                 }
@@ -157,7 +157,7 @@ ColumnLayout {
         id: sfAddFolder
 
         icon.name: "list-add"
-        text: i18nc("@action:button", "Add new folder")
+        text: i18nc("@action:button", "Add New Folder")
         enabled: root.canAddFolder
         onClicked: {
             subtitlesFoldersModel.addFolder()
@@ -191,8 +191,8 @@ ColumnLayout {
 
             ToolTip {
                 text: i18nc("@info:tooltip",
-                            "Subtitles are searched recursively in the \"%1\" setting\n" +
-                            "Only relative folders are searched", sectionTitle.text)
+                            "Subtitles are searched recursively in the “%1” settings.\n" +
+                            "Only relative folders are searched.", sectionTitle.text)
                 visible: (parent as ToolButton).checked
                 delay: 0
                 timeout: -1

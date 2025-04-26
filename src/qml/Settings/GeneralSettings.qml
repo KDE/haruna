@@ -67,7 +67,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "The default location of the open file dialog. If empty " +
+                text: i18nc("@info:tooltip", "The default location of the open file dialog. If empty, " +
                             "the file dialog will try to open to the last opened location.")
             }
 
@@ -95,7 +95,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "How many recent files to store. Enter 0 (zero) to disable.")
+                text: i18nc("@info:tooltip", "The number of recent files to store. Enter 0 (zero) to disable.")
             }
         }
 
@@ -219,8 +219,8 @@ SettingsBasePage {
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip",
                                    "What action shows the footer.<br>" +
-                                   "<strong>Every mouse movement</strong> - every mouse movement over the video area<br>" +
-                                   "<strong>Bottom mouse movement</strong> - mouse movement on the bottom of the video area")
+                                   "<strong>Every mouse movement</strong> — every mouse movement over the video area<br>" +
+                                   "<strong>Bottom mouse movement</strong> — mouse movement on the bottom of the video area")
             }
 
         }
@@ -378,12 +378,12 @@ SettingsBasePage {
                 ToolTip {
                     readonly property
                     string waylandMessage: HarunaApp.isPlatformWayland()
-                                           ? i18nc("@info:tooltip extra wayland info for the \"Remember window size and position\" setting",
+                                           ? i18nc("@info:tooltip extra wayland info for the “Remember window size and position” setting",
                                                    "<b>Restoring position is not supported on Wayland.</b><br><br>")
                                            : ""
-                    text: i18nc("@info:tooltip", "Changes to the window's size and position "
+                    text: i18nc("@info:tooltip", "Changes to the window’s size and position "
                                 +"are saved and used for newly opened windows.<br><br>"
-                                +"%1The \"Resize to fit video\" setting takes precedence.", waylandMessage)
+                                +"%1The “Resize to fit video” setting takes precedence.", waylandMessage)
                     visible: (parent as ToolButton).checked
                     delay: 0
                     timeout: -1

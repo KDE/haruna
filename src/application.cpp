@@ -114,7 +114,7 @@ void Application::setupAboutData()
     m_aboutData.setVersion(Application::version().toUtf8());
     m_aboutData.setShortDescription(i18nc("@title", "Media player"));
     m_aboutData.setLicense(KAboutLicense::GPL_V3);
-    m_aboutData.setCopyrightStatement(i18nc("copyright statement", "(c) 2019-2025"));
+    m_aboutData.setCopyrightStatement(i18nc("copyright statement, use copyright symbol and en dash for the year range", "© 2019–2025"));
     m_aboutData.setHomepage(u"https://haruna.kde.org"_s);
     m_aboutData.setBugAddress(u"https://bugs.kde.org/enter_bug.cgi?product=Haruna"_s.toUtf8());
     m_aboutData.setDesktopFileName(u"org.kde.haruna"_s);

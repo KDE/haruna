@@ -34,7 +34,7 @@ SettingsBasePage {
             visible: customCommandsView.count === 0
             text: i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
-                text: i18nc("@action:button", "&Add command")
+                text: i18nc("@action:button", "&Add Command")
                 onTriggered: applicationWindow().pageStack.replace(
                                  `${root.settingsPath}/EditCustomCommand.qml`,
                                  {m_customCommandsModel: root.m_customCommandsModel})

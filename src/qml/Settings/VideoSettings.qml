@@ -46,7 +46,7 @@ SettingsBasePage {
                 }
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Used for music files that don't have a video track, "
+                    text: i18nc("@info:tooltip", "Used for music files that don’t have a video track, "
                                 + "an embedded cover image or a cover/folder image "
                                 + "in the same folder as the played file.")
                 }
@@ -159,7 +159,7 @@ SettingsBasePage {
                 toolTipText: i18nc("@info:tooltip",
                                    "Specify the filename template used to save screenshots. The template specifies the " +
                                    "filename without file extension, and can contain format specifiers, which will be " +
-                                   "substituted when taking a screenshot. By default, the template is \"%F-%n\". <br>" +
+                                   "substituted when taking a screenshot. By default, the template is “%F-%n”. <br>" +
                                    "The template can start with a relative or absolute path, in order to specify " +
                                    "a directory location where screenshots should be saved.<br>" +
                                    "If the final screenshot filename points to an already existing file, the file " +
@@ -173,20 +173,20 @@ SettingsBasePage {
                                    "<li><strong>%x</strong> Directory path of the currently played video. "+
                                    "If the video is not on the filesystem (http:// urls), this expands to an empty string.<br>" +
                                    "<li><strong>%X{fallback}</strong> Same as %x, but if the video file is not on the " +
-                                   "filesystem, return the fallback string inside the {...}.<br>" +
+                                   "filesystem, return the fallback string inside the {…}.<br>" +
                                    "<li><strong>%p</strong> Current playback time. The result is a " +
-                                   "string of the form \"HH:MM:SS\".<br>" +
-                                   "<li><strong>%P</strong> Similar to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm\".<br>" +
+                                   "string of the form “HH:MM:SS”.<br>" +
+                                   "<li><strong>%P</strong> Similar to %p, but extended with the playback time in milliseconds “HH:MM:SS.mmm”.<br>" +
                                    "<li><strong>%wX</strong> Specify the current playback time using the format string X.<br>" +
                                    "Valid format specifiers:<br>" +
                                    "<ul><li><strong>%wH</strong> hour (padded with 0 to two digits)</li>" +
                                    "<li><strong>%wh</strong> hour (not padded)</li>" +
-                                   "<li><strong>%wM</strong> minutes (00-59)</li>" +
+                                   "<li><strong>%wM</strong> minutes (00–59)</li>" +
                                    "<li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</li>" +
-                                   "<li><strong>%wS</strong> seconds (00-59)</li>" +
+                                   "<li><strong>%wS</strong> seconds (00–59)</li>" +
                                    "<li><strong>%ws</strong> total seconds (includes hours and minutes)</li>" +
                                    "<li><strong>%wf</strong> like %ws, but as float</li>" +
-                                   "<li><strong>%wT</strong> milliseconds (000-999)</li>" +
+                                   "<li><strong>%wT</strong> milliseconds (000–999)</li>" +
                                    "<li><strong>%%</strong> Replaced with the % character itself.</li></ul><br>")
             }
         }
