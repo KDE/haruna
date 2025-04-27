@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -44,8 +44,9 @@ msgstr "हारुना वीडियो चालक"
 #: src/application.cpp:117
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
-msgctxt "copyright statement"
-msgid "(c) 2019-2025"
+msgctxt ""
+"copyright statement, use copyright symbol and en dash for the year range"
+msgid "© 2019–2025"
 msgstr "(c) 2019-2021"
 
 #: src/application.cpp:122
@@ -700,7 +701,7 @@ msgstr "ऑडियो: %1 %2"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
-msgid "Can't load subtitle when no file is open"
+msgid "Can’t load subtitle when no file is open"
 msgstr ""
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
@@ -720,8 +721,8 @@ msgstr "लूप आरंभ : %1"
 #: src/qml/Actions.qml:294
 #, fuzzy
 #| msgid "Loop: %1 - %2"
-msgctxt "@info:tooltip"
-msgid "Loop: %1 - %2"
+msgctxt "@info:tooltip, use en dash for the range"
+msgid "Loop: %1–%2"
 msgstr "लूप : %1 - %2"
 
 #: src/qml/Actions.qml:300
@@ -843,14 +844,14 @@ msgstr "संतृप्ति: 0"
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@info:tooltip"
-msgid "Start Playback"
+msgid "Start playback"
 msgstr "प्लेबैक प्रारंभ करें"
 
 #: src/qml/Footer.qml:147
 #, fuzzy
 #| msgid "Pause Playback"
 msgctxt "@info:tooltip"
-msgid "Pause Playback"
+msgid "Pause playback"
 msgstr "प्लेबैक ठहराएँ"
 
 #: src/qml/Footer.qml:163
@@ -885,7 +886,7 @@ msgstr "फ़ाइल चुनें"
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
-msgid "Select a color"
+msgid "Select Color"
 msgstr "फ़ाइल चुनें"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
@@ -933,13 +934,13 @@ msgstr ""
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
 #, fuzzy
 #| msgid "Subtitles on"
-msgctxt "@title"
+msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "उपशीर्षक चालू"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
-msgid "Confirm deletion"
+msgid "Confirm Deletion"
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:116
@@ -964,7 +965,7 @@ msgstr "विन्यस्त करें"
 #, fuzzy
 #| msgid "Add new folder"
 msgctxt "@action:button"
-msgid "Add new folder"
+msgid "Add New Folder"
 msgstr "नया फ़ोल्डर जोड़ें"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
@@ -982,8 +983,8 @@ msgstr "फ़ाइल चुनें"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
 msgid ""
-"Subtitles are searched recursively in the \"%1\" setting\n"
-"Only relative folders are searched"
+"Subtitles are searched recursively in the “%1” settings.\n"
+"Only relative folders are searched."
 msgstr ""
 
 #: src/qml/Header.qml:78
@@ -1018,7 +1019,7 @@ msgstr "अध्याय छोड़ें"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
-"Check 'Playback' settings for more details"
+"Check “Playback” settings for more details."
 msgstr ""
 
 #: src/qml/Main.qml:29
@@ -1028,19 +1029,18 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/Main.qml:301 src/qml/PlayList.qml:394
-#: src/qml/Settings/VideoSettings.qml:69
+#: src/qml/Main.qml:301
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
-msgid "Select file"
+msgid "Select File"
 msgstr "फ़ाइल चुनें"
 
 #: src/qml/Main.qml:320
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
-msgid "Select subtitles file"
+msgid "Select Subtitles File"
 msgstr "फ़ाइल चुनें"
 
 #: src/qml/Main.qml:340
@@ -1259,7 +1259,7 @@ msgstr "औज़ार पट्टी दिखाएँ"
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@title:menu"
-msgid "Playback speed"
+msgid "Playback Speed"
 msgstr "प्लेबैक"
 
 #: src/qml/MpvVideo.qml:31
@@ -1273,12 +1273,12 @@ msgstr "आवाज़ : %1"
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
-msgid "Open playlist"
+msgid "Open Playlist"
 msgstr "वीडियो-सूची"
 
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
-msgid "Add ..."
+msgid "Add…"
 msgstr ""
 
 #: src/qml/PlayList.qml:81
@@ -1290,7 +1290,7 @@ msgstr "फ़ाइल"
 
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
-msgid "Url"
+msgid "URL"
 msgstr ""
 
 #: src/qml/PlayList.qml:100
@@ -1300,24 +1300,28 @@ msgstr ""
 
 #: src/qml/PlayList.qml:104
 msgctxt "@action:button"
-msgid "Name ascending"
+msgid "Name, ascending"
 msgstr ""
 
 #: src/qml/PlayList.qml:110
+#, fuzzy
+#| msgid "Saturation Reset"
 msgctxt "@action:button"
-msgid "Name descending"
-msgstr ""
+msgid "Name, descending"
+msgstr "संतृप्ति रिसेट करें"
 
 #: src/qml/PlayList.qml:116
+#, fuzzy
+#| msgid "Saturation Reset"
 msgctxt "@action:button"
-msgid "Duration ascending"
-msgstr ""
+msgid "Duration, ascending"
+msgstr "संतृप्ति रिसेट करें"
 
 #: src/qml/PlayList.qml:122
 #, fuzzy
 #| msgid "Saturation Reset"
 msgctxt "@action:button"
-msgid "Duration descending"
+msgid "Duration, descending"
 msgstr "संतृप्ति रिसेट करें"
 
 #: src/qml/PlayList.qml:129
@@ -1329,7 +1333,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Save changes"
 msgctxt "@action:button"
-msgid "Save as"
+msgid "Save As"
 msgstr "परिवर्तन सहेजें"
 
 #: src/qml/PlayList.qml:158
@@ -1340,13 +1344,15 @@ msgid "Add"
 msgstr "जोड़ें (&A)"
 
 #: src/qml/PlayList.qml:243
+#, fuzzy
+#| msgid "Open File"
 msgctxt "@action:inmenu"
-msgid "Open containing folder"
-msgstr ""
+msgid "Open Containing Folder"
+msgstr "फ़ाइल खोलें"
 
 #: src/qml/PlayList.qml:249
 msgctxt "@action:inmenu"
-msgid "Open in browser"
+msgid "Open in Browser"
 msgstr ""
 
 #: src/qml/PlayList.qml:258
@@ -1354,26 +1360,29 @@ msgstr ""
 #| msgctxt "NAME OF TRANSLATORS"
 #| msgid "Your names"
 msgctxt "@action:inmenu"
-msgid "Copy name"
+msgid "Copy Name"
 msgstr "राघवेंद्र कामत"
 
 #: src/qml/PlayList.qml:263
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
 msgctxt "@action:inmenu"
-msgid "Copy path"
-msgstr ""
+msgid "Copy Path"
+msgstr "राघवेंद्र कामत"
 
 #: src/qml/PlayList.qml:264
 #, fuzzy
 #| msgid "Open Url"
 msgctxt "@action:inmenu"
-msgid "Copy url"
+msgid "Copy URL"
 msgstr "यूआरएल खोलें"
 
 #: src/qml/PlayList.qml:269
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
-msgid "Remove from playlist"
+msgid "Remove from Playlist"
 msgstr "वीडियो-सूची"
 
 #: src/qml/PlayList.qml:274
@@ -1387,15 +1396,20 @@ msgstr "फ़ाइल चुनें"
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:inmenu"
-msgid "Scroll to playing item"
+msgid "Scroll to Playing Item"
 msgstr "प्लेबैक प्रारंभ करें"
 
 #: src/qml/PlayList.qml:290
-#, fuzzy
-#| msgid "For all files"
 msgctxt "@action:inmenu"
-msgid "Trash file"
-msgstr "सभी फाइलों के लिए"
+msgid "Move File to Trash"
+msgstr ""
+
+#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+#, fuzzy
+#| msgid "Select file"
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "फ़ाइल चुनें"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1435,7 +1449,7 @@ msgstr "तदनुकूल समादेश"
 #, fuzzy
 #| msgid "&Add command"
 msgctxt "@action:button"
-msgid "&Add command"
+msgid "&Add Command"
 msgstr "समादेश जोड़ें (&A)"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:88
@@ -1618,7 +1632,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
 msgid ""
-"The default location of the open file dialog. If empty the file dialog will "
+"The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
 
@@ -1631,7 +1645,7 @@ msgstr "हाल हीं के फाइल"
 
 #: src/qml/Settings/GeneralSettings.qml:98
 msgctxt "@info:tooltip"
-msgid "How many recent files to store. Enter 0 (zero) to disable."
+msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:106
@@ -1681,9 +1695,9 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid ""
-"What action shows the footer.<br><strong>Every mouse movement</strong> - "
+"What action shows the footer.<br><strong>Every mouse movement</strong> — "
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
-"strong> - mouse movement on the bottom of the video area"
+"strong> — mouse movement on the bottom of the video area"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:229
@@ -1758,17 +1772,16 @@ msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:382
 msgctxt ""
-"@info:tooltip extra wayland info for the \"Remember window size and position"
-"\" setting"
+"@info:tooltip extra wayland info for the “Remember window size and position” "
+"setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:384
 msgctxt "@info:tooltip"
 msgid ""
-"Changes to the window's size and position are saved and used for newly "
-"opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-"precedence."
+"Changes to the window’s size and position are saved and used for newly "
+"opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:398
@@ -1835,7 +1848,7 @@ msgstr "संतृप्ति"
 
 #: src/qml/Settings/MouseSettings.qml:136
 msgctxt "@title"
-msgid "Double click to set action"
+msgid "Double Click to Set Action"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:25
@@ -1892,7 +1905,7 @@ msgid ""
 "<br><br><ul><li><strong>auto</strong> tries to automatically enable hardware "
 "decoding using the first available method.</li><li><strong>auto-safe</"
 "strong> similar to auto, but allows only whitelisted methods that are "
-"considered \"safe\".</li><li><strong>vaapi</strong> works with Intel and AMD "
+"considered “safe”.</li><li><strong>vaapi</strong> works with Intel and AMD "
 "GPUs only. It also requires the opengl EGL backend.</li><li><strong>nvdec</"
 "strong> the newest, and recommended method to do hardware decoding on Nvidia "
 "GPUs.</li><li><strong>cuda</strong> an older implementation of hardware "
@@ -2210,7 +2223,7 @@ msgstr "शॉर्टकट"
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
-msgid "Custom commands"
+msgid "Custom Commands"
 msgstr "तदनुकूल समादेश"
 
 #: src/qml/Settings/SettingsWindow.qml:142
@@ -2337,7 +2350,7 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:49
 msgctxt "@info:tooltip"
 msgid ""
-"Used for music files that don't have a video track, an embedded cover image "
+"Used for music files that don’t have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
 
@@ -2368,7 +2381,7 @@ msgid ""
 "Specify the filename template used to save screenshots. The template "
 "specifies the filename without file extension, and can contain format "
 "specifiers, which will be substituted when taking a screenshot. By default, "
-"the template is \"%F-%n\". <br>The template can start with a relative or "
+"the template is “%F-%n”. <br>The template can start with a relative or "
 "absolute path, in order to specify a directory location where screenshots "
 "should be saved.<br>If the final screenshot filename points to an already "
 "existing file, the file will not be overwritten. The screenshot will either "
@@ -2383,17 +2396,17 @@ msgid ""
 "video. If the video is not on the filesystem (http:// urls), this expands to "
 "an empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
 "video file is not on the filesystem, return the fallback string inside the "
-"{...}.<br><li><strong>%p</strong> Current playback time. The result is a "
-"string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar to %p, "
-"but extended with the playback time in milliseconds \"HH:MM:SS.mmm\"."
+"{…}.<br><li><strong>%p</strong> Current playback time. The result is a "
+"string of the form “HH:MM:SS”.<br><li><strong>%P</strong> Similar to %p, but "
+"extended with the playback time in milliseconds “HH:MM:SS.mmm”."
 "<br><li><strong>%wX</strong> Specify the current playback time using the "
 "format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</strong> "
 "hour (padded with 0 to two digits)</li><li><strong>%wh</strong> hour (not "
-"padded)</li><li><strong>%wM</strong> minutes (00-59)</li><li><strong>%wm</"
+"padded)</li><li><strong>%wM</strong> minutes (00–59)</li><li><strong>%wm</"
 "strong> total minutes (includes hours, unlike %wM)</li><li><strong>%wS</"
-"strong> seconds (00-59)</li><li><strong>%ws</strong> total seconds (includes "
+"strong> seconds (00–59)</li><li><strong>%ws</strong> total seconds (includes "
 "hours and minutes)</li><li><strong>%wf</strong> like %ws, but as float</"
-"li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
+"li><li><strong>%wT</strong> milliseconds (000–999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 
@@ -2436,6 +2449,18 @@ msgstr "संतृप्ति"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#, fuzzy
+#~| msgid "For all files"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Trash file"
+#~ msgstr "सभी फाइलों के लिए"
+
+#, fuzzy
+#~| msgid "Custom commands"
+#~ msgctxt "@action"
+#~ msgid "Custom commands"
+#~ msgstr "तदनुकूल समादेश"
 
 #, fuzzy
 #~| msgid "Enabled"

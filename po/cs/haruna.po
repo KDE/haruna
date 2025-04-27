@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2024-10-01 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -41,8 +41,9 @@ msgstr "Přehrávač médií"
 
 #: src/application.cpp:117
 #, kde-format
-msgctxt "copyright statement"
-msgid "(c) 2019-2025"
+msgctxt ""
+"copyright statement, use copyright symbol and en dash for the year range"
+msgid "© 2019–2025"
 msgstr ""
 
 #: src/application.cpp:122
@@ -632,7 +633,7 @@ msgstr "Zvuk: %1 %2"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
-msgid "Can't load subtitle when no file is open"
+msgid "Can’t load subtitle when no file is open"
 msgstr ""
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
@@ -646,8 +647,11 @@ msgid "Loop start: %1"
 msgstr "Začátek smyčky: %1"
 
 #: src/qml/Actions.qml:294
-msgctxt "@info:tooltip"
-msgid "Loop: %1 - %2"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop: %1 - %2"
+msgctxt "@info:tooltip, use en dash for the range"
+msgid "Loop: %1–%2"
 msgstr "Smyčka: %1 - %2"
 
 #: src/qml/Actions.qml:300
@@ -736,13 +740,19 @@ msgid "Saturation: 0"
 msgstr "Nasycení: 0"
 
 #: src/qml/Footer.qml:147
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Start Playback"
 msgctxt "@info:tooltip"
-msgid "Start Playback"
+msgid "Start playback"
 msgstr "Začít přehrávání"
 
 #: src/qml/Footer.qml:147
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
-msgid "Pause Playback"
+msgid "Pause playback"
 msgstr "Pozastavit přehrávání"
 
 #: src/qml/Footer.qml:163
@@ -766,9 +776,12 @@ msgid "Select a color"
 msgstr "Vyberte barvu"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
 msgctxt "@title:window"
-msgid "Select a color"
-msgstr ""
+msgid "Select Color"
+msgstr "Vyberte barvu"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -807,13 +820,19 @@ msgid ""
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-msgctxt "@title"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Load subtitles from"
+msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "Načíst titulky z"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Confirm deletion"
 msgctxt "@action:button"
-msgid "Confirm deletion"
+msgid "Confirm Deletion"
 msgstr "Potvrdit smazání"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:116
@@ -834,8 +853,11 @@ msgid "No folder set"
 msgstr "Složka nastavení"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add new folder"
 msgctxt "@action:button"
-msgid "Add new folder"
+msgid "Add New Folder"
 msgstr "Přidat novou složku"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
@@ -854,8 +876,8 @@ msgstr "Vyberte soubor s titulky"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
 msgid ""
-"Subtitles are searched recursively in the \"%1\" setting\n"
-"Only relative folders are searched"
+"Subtitles are searched recursively in the “%1” settings.\n"
+"Only relative folders are searched."
 msgstr ""
 
 #: src/qml/Header.qml:78
@@ -882,7 +904,7 @@ msgstr "Přeskakovat kapitoly"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
-"Check 'Playback' settings for more details"
+"Check “Playback” settings for more details."
 msgstr ""
 
 #: src/qml/Main.qml:29
@@ -890,15 +912,20 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:301 src/qml/PlayList.qml:394
-#: src/qml/Settings/VideoSettings.qml:69
+#: src/qml/Main.qml:301
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
 msgctxt "@title:window"
-msgid "Select file"
+msgid "Select File"
 msgstr "Vybrat soubor"
 
 #: src/qml/Main.qml:320
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
 msgctxt "@title:window"
-msgid "Select subtitles file"
+msgid "Select Subtitles File"
 msgstr "Vyberte soubor s titulky"
 
 #: src/qml/Main.qml:340
@@ -1062,8 +1089,11 @@ msgid "Show Toolbar"
 msgstr "Zobrazit panel nástrojů"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "Playback speed"
 msgctxt "@title:menu"
-msgid "Playback speed"
+msgid "Playback Speed"
 msgstr "Rychlost přehrávání"
 
 #: src/qml/MpvVideo.qml:31
@@ -1072,14 +1102,17 @@ msgid "Volume: %1"
 msgstr "Hlasitost: %1"
 
 #: src/qml/PlayList.qml:69
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
 msgctxt "@action:button"
-msgid "Open playlist"
+msgid "Open Playlist"
 msgstr "Otevřít seznam skladeb"
 
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
-msgid "Add ..."
-msgstr "Přidat ..."
+msgid "Add…"
+msgstr ""
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1088,8 +1121,8 @@ msgstr "Soubor"
 
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
-msgid "Url"
-msgstr "Url"
+msgid "URL"
+msgstr ""
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1097,23 +1130,35 @@ msgid "Sort"
 msgstr "Seřadit"
 
 #: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name ascending"
 msgctxt "@action:button"
-msgid "Name ascending"
+msgid "Name, ascending"
 msgstr "Název vzestupně"
 
 #: src/qml/PlayList.qml:110
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name descending"
 msgctxt "@action:button"
-msgid "Name descending"
+msgid "Name, descending"
 msgstr "Název sestupně"
 
 #: src/qml/PlayList.qml:116
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration ascending"
 msgctxt "@action:button"
-msgid "Duration ascending"
+msgid "Duration, ascending"
 msgstr "Délka vzestupně"
 
 #: src/qml/PlayList.qml:122
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration descending"
 msgctxt "@action:button"
-msgid "Duration descending"
+msgid "Duration, descending"
 msgstr "Délka sestupně"
 
 #: src/qml/PlayList.qml:129
@@ -1122,8 +1167,11 @@ msgid "Clear"
 msgstr "Vyprázdnit"
 
 #: src/qml/PlayList.qml:137
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Save as"
 msgctxt "@action:button"
-msgid "Save as"
+msgid "Save As"
 msgstr "Uložit jako"
 
 #: src/qml/PlayList.qml:158
@@ -1132,33 +1180,45 @@ msgid "Add"
 msgstr "Přidat"
 
 #: src/qml/PlayList.qml:243
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
-msgid "Open containing folder"
+msgid "Open Containing Folder"
 msgstr "Otevřít odpovídající složku"
 
 #: src/qml/PlayList.qml:249
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config folder"
 msgctxt "@action:inmenu"
-msgid "Open in browser"
-msgstr ""
+msgid "Open in Browser"
+msgstr "Otevřít složku nastavení"
 
 #: src/qml/PlayList.qml:258
 msgctxt "@action:inmenu"
-msgid "Copy name"
+msgid "Copy Name"
 msgstr ""
 
 #: src/qml/PlayList.qml:263
 msgctxt "@action:inmenu"
-msgid "Copy path"
+msgid "Copy Path"
 msgstr ""
 
 #: src/qml/PlayList.qml:264
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open Url"
 msgctxt "@action:inmenu"
-msgid "Copy url"
-msgstr ""
+msgid "Copy URL"
+msgstr "Otevřít URL"
 
 #: src/qml/PlayList.qml:269
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
-msgid "Remove from playlist"
+msgid "Remove from Playlist"
 msgstr "Odstranit ze seznamu skladeb"
 
 #: src/qml/PlayList.qml:274
@@ -1167,14 +1227,22 @@ msgid "Rename"
 msgstr "Přejmenovat"
 
 #: src/qml/PlayList.qml:280
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
-msgid "Scroll to playing item"
+msgid "Scroll to Playing Item"
 msgstr "Přejít na přehrávanou položku"
 
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
-msgid "Trash file"
-msgstr "Přesunout soubor do koše"
+msgid "Move File to Trash"
+msgstr ""
+
+#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "Vybrat soubor"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1205,8 +1273,11 @@ msgid "No custom commands yet"
 msgstr "Zatím žádné vlastní příkazy"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "&Add command"
 msgctxt "@action:button"
-msgid "&Add command"
+msgid "&Add Command"
 msgstr "Přid&at příkaz"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:88
@@ -1359,9 +1430,14 @@ msgid "File dialog location"
 msgstr "Výchozí umístění souborů"
 
 #: src/qml/Settings/GeneralSettings.qml:70
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The default location of the open file dialog. If empty the file dialog "
+#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
-"The default location of the open file dialog. If empty the file dialog will "
+"The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
 "Výchozí místo nabídky výběru souboru. Pokud je prázdné, bude zobrazeno "
@@ -1374,7 +1450,7 @@ msgstr "Maximum nedávných souborů´"
 
 #: src/qml/Settings/GeneralSettings.qml:98
 msgctxt "@info:tooltip"
-msgid "How many recent files to store. Enter 0 (zero) to disable."
+msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:106
@@ -1418,9 +1494,9 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid ""
-"What action shows the footer.<br><strong>Every mouse movement</strong> - "
+"What action shows the footer.<br><strong>Every mouse movement</strong> — "
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
-"strong> - mouse movement on the bottom of the video area"
+"strong> — mouse movement on the bottom of the video area"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:229
@@ -1495,17 +1571,16 @@ msgstr "Zapamatovat si velikost a pozici okna"
 
 #: src/qml/Settings/GeneralSettings.qml:382
 msgctxt ""
-"@info:tooltip extra wayland info for the \"Remember window size and position"
-"\" setting"
+"@info:tooltip extra wayland info for the “Remember window size and position” "
+"setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:384
 msgctxt "@info:tooltip"
 msgid ""
-"Changes to the window's size and position are saved and used for newly "
-"opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-"precedence."
+"Changes to the window’s size and position are saved and used for newly "
+"opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:398
@@ -1559,8 +1634,11 @@ msgid "Clear action"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:136
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Double click to set action"
 msgctxt "@title"
-msgid "Double click to set action"
+msgid "Double Click to Set Action"
 msgstr "Dvojklik pro nastavení činnosti"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
@@ -1617,7 +1695,7 @@ msgid ""
 "<br><br><ul><li><strong>auto</strong> tries to automatically enable hardware "
 "decoding using the first available method.</li><li><strong>auto-safe</"
 "strong> similar to auto, but allows only whitelisted methods that are "
-"considered \"safe\".</li><li><strong>vaapi</strong> works with Intel and AMD "
+"considered “safe”.</li><li><strong>vaapi</strong> works with Intel and AMD "
 "GPUs only. It also requires the opengl EGL backend.</li><li><strong>nvdec</"
 "strong> the newest, and recommended method to do hardware decoding on Nvidia "
 "GPUs.</li><li><strong>cuda</strong> an older implementation of hardware "
@@ -1891,8 +1969,11 @@ msgid "Shortcuts"
 msgstr "Zkratky"
 
 #: src/qml/Settings/SettingsWindow.qml:132
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Custom Commands"
 msgctxt "@action"
-msgid "Custom commands"
+msgid "Custom Commands"
 msgstr "Vlastní příkazy"
 
 #: src/qml/Settings/SettingsWindow.qml:142
@@ -2009,7 +2090,7 @@ msgstr "cesta k obrázku"
 #: src/qml/Settings/VideoSettings.qml:49
 msgctxt "@info:tooltip"
 msgid ""
-"Used for music files that don't have a video track, an embedded cover image "
+"Used for music files that don’t have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
 
@@ -2034,7 +2115,7 @@ msgid ""
 "Specify the filename template used to save screenshots. The template "
 "specifies the filename without file extension, and can contain format "
 "specifiers, which will be substituted when taking a screenshot. By default, "
-"the template is \"%F-%n\". <br>The template can start with a relative or "
+"the template is “%F-%n”. <br>The template can start with a relative or "
 "absolute path, in order to specify a directory location where screenshots "
 "should be saved.<br>If the final screenshot filename points to an already "
 "existing file, the file will not be overwritten. The screenshot will either "
@@ -2049,17 +2130,17 @@ msgid ""
 "video. If the video is not on the filesystem (http:// urls), this expands to "
 "an empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
 "video file is not on the filesystem, return the fallback string inside the "
-"{...}.<br><li><strong>%p</strong> Current playback time. The result is a "
-"string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar to %p, "
-"but extended with the playback time in milliseconds \"HH:MM:SS.mmm\"."
+"{…}.<br><li><strong>%p</strong> Current playback time. The result is a "
+"string of the form “HH:MM:SS”.<br><li><strong>%P</strong> Similar to %p, but "
+"extended with the playback time in milliseconds “HH:MM:SS.mmm”."
 "<br><li><strong>%wX</strong> Specify the current playback time using the "
 "format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</strong> "
 "hour (padded with 0 to two digits)</li><li><strong>%wh</strong> hour (not "
-"padded)</li><li><strong>%wM</strong> minutes (00-59)</li><li><strong>%wm</"
+"padded)</li><li><strong>%wM</strong> minutes (00–59)</li><li><strong>%wm</"
 "strong> total minutes (includes hours, unlike %wM)</li><li><strong>%wS</"
-"strong> seconds (00-59)</li><li><strong>%ws</strong> total seconds (includes "
+"strong> seconds (00–59)</li><li><strong>%ws</strong> total seconds (includes "
 "hours and minutes)</li><li><strong>%wf</strong> like %ws, but as float</"
-"li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
+"li><li><strong>%wT</strong> milliseconds (000–999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 
@@ -2092,3 +2173,19 @@ msgstr "Nasycení"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add ..."
+#~ msgstr "Přidat ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Url"
+#~ msgstr "Url"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Trash file"
+#~ msgstr "Přesunout soubor do koše"
+
+#~ msgctxt "@action"
+#~ msgid "Custom commands"
+#~ msgstr "Vlastní příkazy"

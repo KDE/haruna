@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -45,8 +45,9 @@ msgstr "मीडिया प्लेयर"
 #, fuzzy, kde-format
 #| msgctxt "copyright statement"
 #| msgid "(c) 2019-2023"
-msgctxt "copyright statement"
-msgid "(c) 2019-2025"
+msgctxt ""
+"copyright statement, use copyright symbol and en dash for the year range"
+msgid "© 2019–2025"
 msgstr "(ग) 2019-2023"
 
 #: src/application.cpp:122
@@ -637,10 +638,15 @@ msgid "Audio: %1 %2"
 msgstr "श्रव्यः %1 %2"
 
 #: src/qml/Actions.qml:163
+#, fuzzy
+#| msgctxt ""
+#| "osd message when trying to open subtile selection dialog while no file is "
+#| "open"
+#| msgid "Can't load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
-msgid "Can't load subtitle when no file is open"
+msgid "Can’t load subtitle when no file is open"
 msgstr "यदा कोऽपि सञ्चिका उद्घाटिता नास्ति तदा उपशीर्षकं लोड् कर्तुं न शक्नोति"
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
@@ -654,8 +660,11 @@ msgid "Loop start: %1"
 msgstr "पाशप्रारम्भः %1"
 
 #: src/qml/Actions.qml:294
-msgctxt "@info:tooltip"
-msgid "Loop: %1 - %2"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop: %1 - %2"
+msgctxt "@info:tooltip, use en dash for the range"
+msgid "Loop: %1–%2"
 msgstr "पाशः %1 - %2"
 
 #: src/qml/Actions.qml:300
@@ -744,13 +753,19 @@ msgid "Saturation: 0"
 msgstr "संतृप्ति: 0"
 
 #: src/qml/Footer.qml:147
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Start Playback"
 msgctxt "@info:tooltip"
-msgid "Start Playback"
+msgid "Start playback"
 msgstr "Playback आरभ्यताम्"
 
 #: src/qml/Footer.qml:147
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
-msgid "Pause Playback"
+msgid "Pause playback"
 msgstr "प्लेबैकं विरामयन्तु"
 
 #: src/qml/Footer.qml:163
@@ -778,7 +793,7 @@ msgstr "एकं वर्णं चिनोतु"
 #| msgctxt "@info:tooltip"
 #| msgid "Select a color"
 msgctxt "@title:window"
-msgid "Select a color"
+msgid "Select Color"
 msgstr "एकं वर्णं चिनोतु"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
@@ -820,13 +835,19 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> प्राप्तम्।"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-msgctxt "@title"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Load subtitles from"
+msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "तः उपशीर्षकाणि लोडयन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Confirm deletion"
 msgctxt "@action:button"
-msgid "Confirm deletion"
+msgid "Confirm Deletion"
 msgstr "लोपस्य पुष्टिं कुर्वन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:116
@@ -847,8 +868,11 @@ msgid "No folder set"
 msgstr "Config पुटम्"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add new folder"
 msgctxt "@action:button"
-msgid "Add new folder"
+msgid "Add New Folder"
 msgstr "नूतनं पुटं योजयन्तु"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
@@ -867,8 +891,8 @@ msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
 msgid ""
-"Subtitles are searched recursively in the \"%1\" setting\n"
-"Only relative folders are searched"
+"Subtitles are searched recursively in the “%1” settings.\n"
+"Only relative folders are searched."
 msgstr ""
 
 #: src/qml/Header.qml:78
@@ -892,10 +916,15 @@ msgid "Skip Chapters"
 msgstr "अध्यायान् त्यजन्तु"
 
 #: src/qml/HProgressBar.qml:299
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Automatically skips chapters containing certain words/characters.\n"
+#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
-"Check 'Playback' settings for more details"
+"Check “Playback” settings for more details."
 msgstr ""
 "कतिपयशब्दाः/वर्णाः युक्ताः अध्यायाः स्वयमेव लङ्घयति ।\n"
 "अधिकविवरणार्थं 'Playback' सेटिंग्स् पश्यन्तु"
@@ -905,15 +934,20 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारून"
 
-#: src/qml/Main.qml:301 src/qml/PlayList.qml:394
-#: src/qml/Settings/VideoSettings.qml:69
+#: src/qml/Main.qml:301
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
 msgctxt "@title:window"
-msgid "Select file"
+msgid "Select File"
 msgstr "सञ्चिकां चिनोतु"
 
 #: src/qml/Main.qml:320
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
 msgctxt "@title:window"
-msgid "Select subtitles file"
+msgid "Select Subtitles File"
 msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 
 #: src/qml/Main.qml:340
@@ -1077,8 +1111,11 @@ msgid "Show Toolbar"
 msgstr "Toolbar दर्शयतु"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "Playback speed"
 msgctxt "@title:menu"
-msgid "Playback speed"
+msgid "Playback Speed"
 msgstr "प्लेबैकवेगः"
 
 #: src/qml/MpvVideo.qml:31
@@ -1087,14 +1124,17 @@ msgid "Volume: %1"
 msgstr "आयतनम् : %1"
 
 #: src/qml/PlayList.qml:69
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
 msgctxt "@action:button"
-msgid "Open playlist"
+msgid "Open Playlist"
 msgstr "प्लेलिस्ट् उद्घाटयन्तु"
 
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
-msgid "Add ..."
-msgstr "संयोजयति ..."
+msgid "Add…"
+msgstr ""
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1103,8 +1143,8 @@ msgstr "सञ्चिका"
 
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
-msgid "Url"
-msgstr "उर्ल्"
+msgid "URL"
+msgstr ""
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1112,23 +1152,35 @@ msgid "Sort"
 msgstr "प्रकारं"
 
 #: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name ascending"
 msgctxt "@action:button"
-msgid "Name ascending"
+msgid "Name, ascending"
 msgstr "नाम आरोहणम्"
 
 #: src/qml/PlayList.qml:110
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name descending"
 msgctxt "@action:button"
-msgid "Name descending"
+msgid "Name, descending"
 msgstr "नाम अवरोहति"
 
 #: src/qml/PlayList.qml:116
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration ascending"
 msgctxt "@action:button"
-msgid "Duration ascending"
+msgid "Duration, ascending"
 msgstr "अवधिः आरोही"
 
 #: src/qml/PlayList.qml:122
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration descending"
 msgctxt "@action:button"
-msgid "Duration descending"
+msgid "Duration, descending"
 msgstr "अवरोहति अवधिः"
 
 #: src/qml/PlayList.qml:129
@@ -1137,8 +1189,11 @@ msgid "Clear"
 msgstr "स्पष्टः"
 
 #: src/qml/PlayList.qml:137
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Save as"
 msgctxt "@action:button"
-msgid "Save as"
+msgid "Save As"
 msgstr "यथा रक्षतु"
 
 #: src/qml/PlayList.qml:158
@@ -1147,33 +1202,51 @@ msgid "Add"
 msgstr "संयोजयति"
 
 #: src/qml/PlayList.qml:243
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
-msgid "Open containing folder"
+msgid "Open Containing Folder"
 msgstr "युक्तं पुटं उद्घाटयन्तु"
 
 #: src/qml/PlayList.qml:249
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open in browser"
 msgctxt "@action:inmenu"
-msgid "Open in browser"
+msgid "Open in Browser"
 msgstr "ब्राउजर् मध्ये उद्घाटयन्तु"
 
 #: src/qml/PlayList.qml:258
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy name"
 msgctxt "@action:inmenu"
-msgid "Copy name"
+msgid "Copy Name"
 msgstr "प्रतिलिपि नाम"
 
 #: src/qml/PlayList.qml:263
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy path"
 msgctxt "@action:inmenu"
-msgid "Copy path"
+msgid "Copy Path"
 msgstr "प्रतिलिपि मार्ग"
 
 #: src/qml/PlayList.qml:264
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy url"
 msgctxt "@action:inmenu"
-msgid "Copy url"
+msgid "Copy URL"
 msgstr "url प्रतिलिपि कुर्वन्तु"
 
 #: src/qml/PlayList.qml:269
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
-msgid "Remove from playlist"
+msgid "Remove from Playlist"
 msgstr "प्लेलिस्ट् तः निष्कासयन्तु"
 
 #: src/qml/PlayList.qml:274
@@ -1182,14 +1255,22 @@ msgid "Rename"
 msgstr "पुनर्नाम"
 
 #: src/qml/PlayList.qml:280
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
-msgid "Scroll to playing item"
+msgid "Scroll to Playing Item"
 msgstr "प्लेइंग आइटम् प्रति स्क्रॉल कुर्वन्तु"
 
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
-msgid "Trash file"
-msgstr "कचरा सञ्चिका"
+msgid "Move File to Trash"
+msgstr ""
+
+#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "सञ्चिकां चिनोतु"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1220,8 +1301,11 @@ msgid "No custom commands yet"
 msgstr "अद्यापि कस्टम् आदेशाः नास्ति"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "&Add command"
 msgctxt "@action:button"
-msgid "&Add command"
+msgid "&Add Command"
 msgstr "&आदेशं योजयतु"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:88
@@ -1390,9 +1474,14 @@ msgid "File dialog location"
 msgstr "सञ्चिकासंवादस्थानम्"
 
 #: src/qml/Settings/GeneralSettings.qml:70
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The default location of the open file dialog. If empty the file dialog "
+#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
-"The default location of the open file dialog. If empty the file dialog will "
+"The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
 "मुक्तसञ्चिकासंवादस्य पूर्वनिर्धारितस्थानं । यदि रिक्तं भवति तर्हि सञ्चिकासंवादः अन्तिमे "
@@ -1404,8 +1493,11 @@ msgid "Maximum recent files"
 msgstr "अधिकतमं अद्यतनसञ्चिकाः"
 
 #: src/qml/Settings/GeneralSettings.qml:98
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
-msgid "How many recent files to store. Enter 0 (zero) to disable."
+msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr "कति अद्यतनसञ्चिकाः संग्रहणीयाः। अक्षमीकरणाय 0 (शून्यम्) प्रविष्टं कुर्वन्तु ।"
 
 #: src/qml/Settings/GeneralSettings.qml:106
@@ -1449,11 +1541,17 @@ msgid "Show floating footer on"
 msgstr "प्लवमानं पादलेखं दर्शयतु"
 
 #: src/qml/Settings/GeneralSettings.qml:221
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "What action shows the footer.<br><strong>Every mouse movement</strong> - "
+#| "every mouse movement over the video area<br><strong>Bottom mouse "
+#| "movement</strong> - mouse movement on the bottom of the video area"
 msgctxt "@info:tooltip"
 msgid ""
-"What action shows the footer.<br><strong>Every mouse movement</strong> - "
+"What action shows the footer.<br><strong>Every mouse movement</strong> — "
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
-"strong> - mouse movement on the bottom of the video area"
+"strong> — mouse movement on the bottom of the video area"
 msgstr ""
 "किं कर्म पादं दर्शयति।<br> <strong>प्रत्येकं मूषकस्य गतिः</strong> - प्रत्येकं मूषकस्य गतिः "
 "विडियो क्षेत्रस्य उपरि<br> <strong>अधः मूषकस्य गतिः</strong> - विडियोक्षेत्रस्य अधः "
@@ -1535,18 +1633,28 @@ msgid "Remember window size and position"
 msgstr "विण्डो आकारं स्थानं च स्मर्यताम्"
 
 #: src/qml/Settings/GeneralSettings.qml:382
+#, fuzzy
+#| msgctxt ""
+#| "@info:tooltip extra wayland info for the \"Remember window size and "
+#| "position\" setting"
+#| msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgctxt ""
-"@info:tooltip extra wayland info for the \"Remember window size and position"
-"\" setting"
+"@info:tooltip extra wayland info for the “Remember window size and position” "
+"setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>वेलैण्ड् इत्यत्र स्थानस्य पुनर्स्थापनं समर्थितं नास्ति।</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Changes to the window's size and position are saved and used for newly "
+#| "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
+#| "precedence."
 msgctxt "@info:tooltip"
 msgid ""
-"Changes to the window's size and position are saved and used for newly "
-"opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-"precedence."
+"Changes to the window’s size and position are saved and used for newly "
+"opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 "विण्डो इत्यस्य आकारे स्थाने च परिवर्तनं रक्षितं भवति, नव उद्घाटितविण्डोषु च उपयुज्यते।"
 "<br><br>%1\"Resize to fit video\" सेटिंग् प्राधान्यं प्राप्नोति।"
@@ -1602,8 +1710,11 @@ msgid "Clear action"
 msgstr "स्पष्टं कर्म"
 
 #: src/qml/Settings/MouseSettings.qml:136
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Double click to set action"
 msgctxt "@title"
-msgid "Double click to set action"
+msgid "Double Click to Set Action"
 msgstr "क्रियां सेट् कर्तुं द्विवारं क्लिक् कुर्वन्तु"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
@@ -1659,6 +1770,26 @@ msgid "Hardware decoding"
 msgstr "हार्डवेयर डिकोडिंग्"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
+#, fuzzy
+#| msgctxt "@info:tooltip hardware decoding setting"
+#| msgid ""
+#| "Specify the hardware video decoding API that should be used if possible. "
+#| "Whether hardware decoding is actually done depends on the video codec. If "
+#| "hardware decoding is not possible, mpv will fall back on software "
+#| "decoding.<br><br><ul><li><strong>auto</strong> tries to automatically "
+#| "enable hardware decoding using the first available method.</"
+#| "li><li><strong>auto-safe</strong> similar to auto, but allows only "
+#| "whitelisted methods that are considered \"safe\".</li><li><strong>vaapi</"
+#| "strong> works with Intel and AMD GPUs only. It also requires the opengl "
+#| "EGL backend.</li><li><strong>nvdec</strong> the newest, and recommended "
+#| "method to do hardware decoding on Nvidia GPUs.</li><li><strong>cuda</"
+#| "strong> an older implementation of hardware decoding on Nvidia GPUs.</"
+#| "li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></"
+#| "li></ul><br><br>You can read more about hardware decoding here: <a "
+#| "href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
+#| "stable/#options-hwdec</a><br><br>You can set another hardware decoder by "
+#| "creating a startup custom command <strong>set hwdec <i>decoder_name</i></"
+#| "strong>."
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1667,7 +1798,7 @@ msgid ""
 "<br><br><ul><li><strong>auto</strong> tries to automatically enable hardware "
 "decoding using the first available method.</li><li><strong>auto-safe</"
 "strong> similar to auto, but allows only whitelisted methods that are "
-"considered \"safe\".</li><li><strong>vaapi</strong> works with Intel and AMD "
+"considered “safe”.</li><li><strong>vaapi</strong> works with Intel and AMD "
 "GPUs only. It also requires the opengl EGL backend.</li><li><strong>nvdec</"
 "strong> the newest, and recommended method to do hardware decoding on Nvidia "
 "GPUs.</li><li><strong>cuda</strong> an older implementation of hardware "
@@ -1966,8 +2097,11 @@ msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
 #: src/qml/Settings/SettingsWindow.qml:132
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Custom Commands"
 msgctxt "@action"
-msgid "Custom commands"
+msgid "Custom Commands"
 msgstr "कस्टम् आदेशाः"
 
 #: src/qml/Settings/SettingsWindow.qml:142
@@ -2087,9 +2221,14 @@ msgid "path to image"
 msgstr "प्रतिबिम्बं प्रति मार्गः"
 
 #: src/qml/Settings/VideoSettings.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Used for music files that don't have a video track, an embedded cover "
+#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
-"Used for music files that don't have a video track, an embedded cover image "
+"Used for music files that don’t have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
 "सङ्गीतसञ्चिकानां कृते उपयुज्यते येषु वाद्यसञ्चिकायाः समानपुटे विडियो ट्रैक, एम्बेडेड् कवर इमेज "
@@ -2111,12 +2250,47 @@ msgid "Template"
 msgstr "टेम्पलेट"
 
 #: src/qml/Settings/VideoSettings.qml:160
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Specify the filename template used to save screenshots. The template "
+#| "specifies the filename without file extension, and can contain format "
+#| "specifiers, which will be substituted when taking a screenshot. By "
+#| "default, the template is \"%F-%n\". <br>The template can start with a "
+#| "relative or absolute path, in order to specify a directory location where "
+#| "screenshots should be saved.<br>If the final screenshot filename points "
+#| "to an already existing file, the file will not be overwritten. The "
+#| "screenshot will either not be saved, or if the template contains %n, "
+#| "saved using different, newly generated filename.<br>For full info "
+#| "checkout <a href='https://mpv.io/manual/stable/#options-screenshot-"
+#| "template'>https://mpv.io/manual/stable/#options-screenshot-template</"
+#| "a><br><br><strong>Allowed format specifiers:</strong><br><ul><li><strong>"
+#| "%[#][0X]n</strong> A sequence number, padded with zeros to length X."
+#| "<br><li><strong>%f</strong> Filename of the currently played video."
+#| "<br><li><strong>%F</strong> Same as %f, but without the file extension."
+#| "<br><li><strong>%x</strong> Directory path of the currently played video. "
+#| "If the video is not on the filesystem (http:// urls), this expands to an "
+#| "empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
+#| "video file is not on the filesystem, return the fallback string inside "
+#| "the {...}.<br><li><strong>%p</strong> Current playback time. The result "
+#| "is a string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar "
+#| "to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm"
+#| "\".<br><li><strong>%wX</strong> Specify the current playback time using "
+#| "the format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</"
+#| "strong> hour (padded with 0 to two digits)</li><li><strong>%wh</strong> "
+#| "hour (not padded)</li><li><strong>%wM</strong> minutes (00-59)</"
+#| "li><li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</"
+#| "li><li><strong>%wS</strong> seconds (00-59)</li><li><strong>%ws</strong> "
+#| "total seconds (includes hours and minutes)</li><li><strong>%wf</strong> "
+#| "like %ws, but as float</li><li><strong>%wT</strong> milliseconds "
+#| "(000-999)</li><li><strong>%%</strong> Replaced with the % character "
+#| "itself.</li></ul><br>"
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
 "specifies the filename without file extension, and can contain format "
 "specifiers, which will be substituted when taking a screenshot. By default, "
-"the template is \"%F-%n\". <br>The template can start with a relative or "
+"the template is “%F-%n”. <br>The template can start with a relative or "
 "absolute path, in order to specify a directory location where screenshots "
 "should be saved.<br>If the final screenshot filename points to an already "
 "existing file, the file will not be overwritten. The screenshot will either "
@@ -2131,17 +2305,17 @@ msgid ""
 "video. If the video is not on the filesystem (http:// urls), this expands to "
 "an empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
 "video file is not on the filesystem, return the fallback string inside the "
-"{...}.<br><li><strong>%p</strong> Current playback time. The result is a "
-"string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar to %p, "
-"but extended with the playback time in milliseconds \"HH:MM:SS.mmm\"."
+"{…}.<br><li><strong>%p</strong> Current playback time. The result is a "
+"string of the form “HH:MM:SS”.<br><li><strong>%P</strong> Similar to %p, but "
+"extended with the playback time in milliseconds “HH:MM:SS.mmm”."
 "<br><li><strong>%wX</strong> Specify the current playback time using the "
 "format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</strong> "
 "hour (padded with 0 to two digits)</li><li><strong>%wh</strong> hour (not "
-"padded)</li><li><strong>%wM</strong> minutes (00-59)</li><li><strong>%wm</"
+"padded)</li><li><strong>%wM</strong> minutes (00–59)</li><li><strong>%wm</"
 "strong> total minutes (includes hours, unlike %wM)</li><li><strong>%wS</"
-"strong> seconds (00-59)</li><li><strong>%ws</strong> total seconds (includes "
+"strong> seconds (00–59)</li><li><strong>%ws</strong> total seconds (includes "
 "hours and minutes)</li><li><strong>%wf</strong> like %ws, but as float</"
-"li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
+"li><li><strong>%wT</strong> milliseconds (000–999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 "स्क्रीनशॉट् रक्षितुं प्रयुक्तं सञ्चिकानाम टेम्पलेट् निर्दिशन्तु । टेम्पलेट् सञ्चिकाविस्तारं विना "
@@ -2203,6 +2377,22 @@ msgstr "संतृप्ति"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "स्लाइडर् रीसेट् कर्तुं मध्यं क्लिक् कुर्वन्तु"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add ..."
+#~ msgstr "संयोजयति ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Url"
+#~ msgstr "उर्ल्"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Trash file"
+#~ msgstr "कचरा सञ्चिका"
+
+#~ msgctxt "@action"
+#~ msgid "Custom commands"
+#~ msgstr "कस्टम् आदेशाः"
 
 #~ msgctxt "@option:check"
 #~ msgid "Enabled"

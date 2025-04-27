@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2025-03-09 12:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -40,9 +40,12 @@ msgid "Media player"
 msgstr "நிகழ்பட இயக்கி"
 
 #: src/application.cpp:117
-#, kde-format
-msgctxt "copyright statement"
-msgid "(c) 2019-2025"
+#, fuzzy, kde-format
+#| msgctxt "copyright statement"
+#| msgid "(c) 2019-2025"
+msgctxt ""
+"copyright statement, use copyright symbol and en dash for the year range"
+msgid "© 2019–2025"
 msgstr "(c) 2019-2025"
 
 #: src/application.cpp:122
@@ -638,7 +641,7 @@ msgstr "ஒலி: %1 %2"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
-msgid "Can't load subtitle when no file is open"
+msgid "Can’t load subtitle when no file is open"
 msgstr ""
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
@@ -652,8 +655,11 @@ msgid "Loop start: %1"
 msgstr "சுழற்சியின் துவக்கம்: %1"
 
 #: src/qml/Actions.qml:294
-msgctxt "@info:tooltip"
-msgid "Loop: %1 - %2"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop: %1 - %2"
+msgctxt "@info:tooltip, use en dash for the range"
+msgid "Loop: %1–%2"
 msgstr "சுழற்சி: %1 - %2"
 
 #: src/qml/Actions.qml:300
@@ -742,13 +748,19 @@ msgid "Saturation: 0"
 msgstr ""
 
 #: src/qml/Footer.qml:147
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Start Playback"
 msgctxt "@info:tooltip"
-msgid "Start Playback"
+msgid "Start playback"
 msgstr "வாசிப்பதை துவக்கும்"
 
 #: src/qml/Footer.qml:147
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
-msgid "Pause Playback"
+msgid "Pause playback"
 msgstr "வாசிப்பதை இடைநிறுத்தும்"
 
 #: src/qml/Footer.qml:163
@@ -772,8 +784,11 @@ msgid "Select a color"
 msgstr "நிறத்தைத் தேர்ந்தெடுக்கவும்"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select a color"
 msgctxt "@title:window"
-msgid "Select a color"
+msgid "Select Color"
 msgstr "நிறத்தைத் தேர்ந்தெடுப்பது"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
@@ -819,13 +834,19 @@ msgstr ""
 "கிடைக்கவில்லை."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-msgctxt "@title"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles on"
+msgctxt "@label"
 msgid "Load subtitles from"
-msgstr ""
+msgstr "துணை உரையை இயக்கு"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Confirm deletion"
 msgctxt "@action:button"
-msgid "Confirm deletion"
+msgid "Confirm Deletion"
 msgstr "நீக்குவதை உறுதி செய்"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:116
@@ -846,8 +867,11 @@ msgid "No folder set"
 msgstr "அமைப்புகளுக்கான அடைவு"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add new folder"
 msgctxt "@action:button"
-msgid "Add new folder"
+msgid "Add New Folder"
 msgstr "புதிய அடைவை சேர்க்கும்"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
@@ -866,8 +890,8 @@ msgstr "துணையுரை கோப்பைத் தேர்ந்த�
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
 msgid ""
-"Subtitles are searched recursively in the \"%1\" setting\n"
-"Only relative folders are searched"
+"Subtitles are searched recursively in the “%1” settings.\n"
+"Only relative folders are searched."
 msgstr ""
 
 #: src/qml/Header.qml:78
@@ -897,7 +921,7 @@ msgstr "பகுதிகளை தவிர்"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
-"Check 'Playback' settings for more details"
+"Check “Playback” settings for more details."
 msgstr ""
 
 #: src/qml/Main.qml:29
@@ -905,15 +929,20 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "ஹருணா"
 
-#: src/qml/Main.qml:301 src/qml/PlayList.qml:394
-#: src/qml/Settings/VideoSettings.qml:69
+#: src/qml/Main.qml:301
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
 msgctxt "@title:window"
-msgid "Select file"
+msgid "Select File"
 msgstr "கோப்பை தேர்ந்தெடு"
 
 #: src/qml/Main.qml:320
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
 msgctxt "@title:window"
-msgid "Select subtitles file"
+msgid "Select Subtitles File"
 msgstr "துணையுரை கோப்பைத் தேர்ந்தெடுப்பது"
 
 #: src/qml/Main.qml:340
@@ -1080,8 +1109,11 @@ msgid "Show Toolbar"
 msgstr "கருவிப்பட்டையை காட்டு"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "Playback speed"
 msgctxt "@title:menu"
-msgid "Playback speed"
+msgid "Playback Speed"
 msgstr "இயக்கும் வேகம்"
 
 #: src/qml/MpvVideo.qml:31
@@ -1090,14 +1122,17 @@ msgid "Volume: %1"
 msgstr "ஒலி அளவு: %1"
 
 #: src/qml/PlayList.qml:69
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
 msgctxt "@action:button"
-msgid "Open playlist"
+msgid "Open Playlist"
 msgstr "பாடல்வரிசையை திற"
 
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
-msgid "Add ..."
-msgstr "சேர் ..."
+msgid "Add…"
+msgstr ""
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1106,8 +1141,8 @@ msgstr "கோப்பு"
 
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
-msgid "Url"
-msgstr "முகவரி"
+msgid "URL"
+msgstr ""
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1115,23 +1150,35 @@ msgid "Sort"
 msgstr "வரிசைப்படுத்து"
 
 #: src/qml/PlayList.qml:104
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name ascending"
 msgctxt "@action:button"
-msgid "Name ascending"
+msgid "Name, ascending"
 msgstr "பெயர், ஏறுவரிசை"
 
 #: src/qml/PlayList.qml:110
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name descending"
 msgctxt "@action:button"
-msgid "Name descending"
+msgid "Name, descending"
 msgstr "பெயர், இறங்குவரிசை"
 
 #: src/qml/PlayList.qml:116
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration ascending"
 msgctxt "@action:button"
-msgid "Duration ascending"
+msgid "Duration, ascending"
 msgstr "நீளம், ஏறுவரிசை"
 
 #: src/qml/PlayList.qml:122
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration descending"
 msgctxt "@action:button"
-msgid "Duration descending"
+msgid "Duration, descending"
 msgstr "நீளம், இறங்குவரிசை"
 
 #: src/qml/PlayList.qml:129
@@ -1140,8 +1187,11 @@ msgid "Clear"
 msgstr "காலியாக்கு"
 
 #: src/qml/PlayList.qml:137
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Save as"
 msgctxt "@action:button"
-msgid "Save as"
+msgid "Save As"
 msgstr "வேறு பெயரில் சேமி"
 
 #: src/qml/PlayList.qml:158
@@ -1150,33 +1200,51 @@ msgid "Add"
 msgstr "சேர்"
 
 #: src/qml/PlayList.qml:243
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
-msgid "Open containing folder"
+msgid "Open Containing Folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
 #: src/qml/PlayList.qml:249
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open in browser"
 msgctxt "@action:inmenu"
-msgid "Open in browser"
+msgid "Open in Browser"
 msgstr "உலாவியில் திற"
 
 #: src/qml/PlayList.qml:258
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy name"
 msgctxt "@action:inmenu"
-msgid "Copy name"
+msgid "Copy Name"
 msgstr "பெயரை நகலெடு"
 
 #: src/qml/PlayList.qml:263
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy path"
 msgctxt "@action:inmenu"
-msgid "Copy path"
+msgid "Copy Path"
 msgstr "பாதையை நகலெடு"
 
 #: src/qml/PlayList.qml:264
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy url"
 msgctxt "@action:inmenu"
-msgid "Copy url"
+msgid "Copy URL"
 msgstr "முகவரியை நகலெடு"
 
 #: src/qml/PlayList.qml:269
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
-msgid "Remove from playlist"
+msgid "Remove from Playlist"
 msgstr "பாடல்வரிசையிலிருந்து நீக்கு"
 
 #: src/qml/PlayList.qml:274
@@ -1185,14 +1253,22 @@ msgid "Rename"
 msgstr "மறுபெயரிடு"
 
 #: src/qml/PlayList.qml:280
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
-msgid "Scroll to playing item"
+msgid "Scroll to Playing Item"
 msgstr "தற்போதைய உருப்படிக்கு உருள்"
 
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
-msgid "Trash file"
-msgstr "கோப்பை அகற்றிடப்படுத்து"
+msgid "Move File to Trash"
+msgstr ""
+
+#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "கோப்பை தேர்ந்தெடு"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1225,8 +1301,11 @@ msgid "No custom commands yet"
 msgstr "தனிப்பயன் கட்டளைகள் இல்லை"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "&Add command"
 msgctxt "@action:button"
-msgid "&Add command"
+msgid "&Add Command"
 msgstr "&கட்டளையை சேர்"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:88
@@ -1384,7 +1463,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
 msgid ""
-"The default location of the open file dialog. If empty the file dialog will "
+"The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
 
@@ -1395,7 +1474,7 @@ msgstr "சமீப கோப்புகளின் அதிகபட்ச 
 
 #: src/qml/Settings/GeneralSettings.qml:98
 msgctxt "@info:tooltip"
-msgid "How many recent files to store. Enter 0 (zero) to disable."
+msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:106
@@ -1445,9 +1524,9 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid ""
-"What action shows the footer.<br><strong>Every mouse movement</strong> - "
+"What action shows the footer.<br><strong>Every mouse movement</strong> — "
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
-"strong> - mouse movement on the bottom of the video area"
+"strong> — mouse movement on the bottom of the video area"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:229
@@ -1522,17 +1601,16 @@ msgstr "சாளர இருப்பிடத்தையும் அளவ�
 
 #: src/qml/Settings/GeneralSettings.qml:382
 msgctxt ""
-"@info:tooltip extra wayland info for the \"Remember window size and position"
-"\" setting"
+"@info:tooltip extra wayland info for the “Remember window size and position” "
+"setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:384
 msgctxt "@info:tooltip"
 msgid ""
-"Changes to the window's size and position are saved and used for newly "
-"opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-"precedence."
+"Changes to the window’s size and position are saved and used for newly "
+"opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:398
@@ -1590,7 +1668,7 @@ msgstr "தற்போதைய செயலை நீக்கு"
 
 #: src/qml/Settings/MouseSettings.qml:136
 msgctxt "@title"
-msgid "Double click to set action"
+msgid "Double Click to Set Action"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:25
@@ -1647,7 +1725,7 @@ msgid ""
 "<br><br><ul><li><strong>auto</strong> tries to automatically enable hardware "
 "decoding using the first available method.</li><li><strong>auto-safe</"
 "strong> similar to auto, but allows only whitelisted methods that are "
-"considered \"safe\".</li><li><strong>vaapi</strong> works with Intel and AMD "
+"considered “safe”.</li><li><strong>vaapi</strong> works with Intel and AMD "
 "GPUs only. It also requires the opengl EGL backend.</li><li><strong>nvdec</"
 "strong> the newest, and recommended method to do hardware decoding on Nvidia "
 "GPUs.</li><li><strong>cuda</strong> an older implementation of hardware "
@@ -1934,8 +2012,11 @@ msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
 
 #: src/qml/Settings/SettingsWindow.qml:132
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Custom Commands"
 msgctxt "@action"
-msgid "Custom commands"
+msgid "Custom Commands"
 msgstr "தனிப்பயன் கட்டளைகள்"
 
 #: src/qml/Settings/SettingsWindow.qml:142
@@ -2052,7 +2133,7 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:49
 msgctxt "@info:tooltip"
 msgid ""
-"Used for music files that don't have a video track, an embedded cover image "
+"Used for music files that don’t have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
 
@@ -2077,7 +2158,7 @@ msgid ""
 "Specify the filename template used to save screenshots. The template "
 "specifies the filename without file extension, and can contain format "
 "specifiers, which will be substituted when taking a screenshot. By default, "
-"the template is \"%F-%n\". <br>The template can start with a relative or "
+"the template is “%F-%n”. <br>The template can start with a relative or "
 "absolute path, in order to specify a directory location where screenshots "
 "should be saved.<br>If the final screenshot filename points to an already "
 "existing file, the file will not be overwritten. The screenshot will either "
@@ -2092,17 +2173,17 @@ msgid ""
 "video. If the video is not on the filesystem (http:// urls), this expands to "
 "an empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
 "video file is not on the filesystem, return the fallback string inside the "
-"{...}.<br><li><strong>%p</strong> Current playback time. The result is a "
-"string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar to %p, "
-"but extended with the playback time in milliseconds \"HH:MM:SS.mmm\"."
+"{…}.<br><li><strong>%p</strong> Current playback time. The result is a "
+"string of the form “HH:MM:SS”.<br><li><strong>%P</strong> Similar to %p, but "
+"extended with the playback time in milliseconds “HH:MM:SS.mmm”."
 "<br><li><strong>%wX</strong> Specify the current playback time using the "
 "format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</strong> "
 "hour (padded with 0 to two digits)</li><li><strong>%wh</strong> hour (not "
-"padded)</li><li><strong>%wM</strong> minutes (00-59)</li><li><strong>%wm</"
+"padded)</li><li><strong>%wM</strong> minutes (00–59)</li><li><strong>%wm</"
 "strong> total minutes (includes hours, unlike %wM)</li><li><strong>%wS</"
-"strong> seconds (00-59)</li><li><strong>%ws</strong> total seconds (includes "
+"strong> seconds (00–59)</li><li><strong>%ws</strong> total seconds (includes "
 "hours and minutes)</li><li><strong>%wf</strong> like %ws, but as float</"
-"li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
+"li><li><strong>%wT</strong> milliseconds (000–999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 
@@ -2135,6 +2216,22 @@ msgstr ""
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "Add ..."
+#~ msgstr "சேர் ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Url"
+#~ msgstr "முகவரி"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Trash file"
+#~ msgstr "கோப்பை அகற்றிடப்படுத்து"
+
+#~ msgctxt "@action"
+#~ msgid "Custom commands"
+#~ msgstr "தனிப்பயன் கட்டளைகள்"
 
 #~ msgctxt "@option:check"
 #~ msgid "Enabled"
