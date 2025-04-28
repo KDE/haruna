@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-27 00:41+0000\n"
-"PO-Revision-Date: 2025-03-10 10:46+0200\n"
+"PO-Revision-Date: 2025-04-27 08:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,13 +41,11 @@ msgid "Media player"
 msgstr "נגן מדיה"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2025"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019‏-2025"
+msgstr "© 2019‏–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -632,11 +630,6 @@ msgid "Audio: %1 %2"
 msgstr "שמע: %1 %2"
 
 #: src/qml/Actions.qml:163
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can't load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
@@ -654,12 +647,9 @@ msgid "Loop start: %1"
 msgstr "תחילת לולאה: %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "לולאה: %1 - %2"
+msgstr "לולאה: %1–%2"
 
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
@@ -747,17 +737,11 @@ msgid "Saturation: 0"
 msgstr "רוויה: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "התחלת נגינה"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "השהיית נגינה"
@@ -783,9 +767,6 @@ msgid "Select a color"
 msgstr "בחירת צבע"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
 msgstr "בחירת צבע"
@@ -829,17 +810,11 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "טעינת כתוביות מתוך"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "אישור מחיקה"
@@ -859,9 +834,6 @@ msgid "No folder set"
 msgstr "לא הוגדרה תיקייה"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "הוספת תיקייה חדשה"
@@ -877,18 +849,13 @@ msgid "Search subtitles recursively"
 msgstr "חיפוש כתוביות בנסיגה"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the \"%1\" setting\n"
-#| "Only relative folders are searched"
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
-"מתבצע חיפוש בנסיגה אחר כתוביות בהגדרה „%1”\n"
-"יתבצע חיפוש רק בתיקיות יחסיות"
+"מתבצע חיפוש בנסיגה אחר כתוביות בהגדרות „%1”.\n"
+"יתבצע חיפוש רק בתיקיות יחסיות."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -911,18 +878,13 @@ msgid "Skip Chapters"
 msgstr "דילוג על פרקים"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
 "דילוג אוטומטי על פרקים שמכילים מילים/תווים מסוימים.\n"
-"אפשר לגשת אל הגדרות ‚נגינה’ לפרטים נוספים"
+"אפשר לגשת אל הגדרות „נגינה” לפרטים נוספים"
 
 #: src/qml/Main.qml:29
 msgctxt "@title:window"
@@ -930,17 +892,11 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:301
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "בחירת קובץ"
 
 #: src/qml/Main.qml:320
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "בחירת קובץ כתוביות"
@@ -1106,9 +1062,6 @@ msgid "Show Toolbar"
 msgstr "הצגת סרגל כלים"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "מהירות נגינה"
@@ -1119,9 +1072,6 @@ msgid "Volume: %1"
 msgstr "עוצמת שמע: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "פתיחת רשימת נגינה"
@@ -1129,7 +1079,7 @@ msgstr "פתיחת רשימת נגינה"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "הוספה…"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1139,7 +1089,7 @@ msgstr "קובץ"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "כתובת"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1147,33 +1097,21 @@ msgid "Sort"
 msgstr "מיון"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "עולה לפי שם"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "יורד לפי שם"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "עולה לפי משך"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "יורד לפי משך"
@@ -1184,9 +1122,6 @@ msgid "Clear"
 msgstr "פינוי"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "שמירה בשם"
@@ -1197,49 +1132,31 @@ msgid "Add"
 msgstr "הוספה"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "פתיחה בדפדפן"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "העתקת השם"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "העתקת הנתיב"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr "העתקת כתובת"
+msgstr "העתקת הכתובת"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "הסרה מרשימת הנגינה"
@@ -1250,9 +1167,6 @@ msgid "Rename"
 msgstr "שינוי שם"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "יש לגלול כדי לנגן פריט"
@@ -1260,7 +1174,7 @@ msgstr "יש לגלול כדי לנגן פריט"
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "העברת קובץ לאשפה"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1296,9 +1210,6 @@ msgid "No custom commands yet"
 msgstr "אין עדיין פקודות משלך"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "הו&ספת פקודה"
@@ -1469,17 +1380,12 @@ msgid "File dialog location"
 msgstr "מקום חלונית קובץ"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"מקום ברירת המחדל של חלונית פתיחת הקבצים.אם נשאר ריק, חלונית הקבצים תזכור את "
+"מקום ברירת המחדל של חלונית פתיחת הקבצים. אם נשאר ריק, חלונית הקבצים תזכור את "
 "המקום האחרון בו נפתחה."
 
 #: src/qml/Settings/GeneralSettings.qml:81
@@ -1488,12 +1394,9 @@ msgid "Maximum recent files"
 msgstr "כמות קבצים אחרונים מרבית"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
-msgstr "כמה קבצים אחרונים לאחסן. 0 (אפס) משבית."
+msgstr "כמות הקבצים האחרונים לאחסן. 0 (אפס) משבית."
 
 #: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
@@ -1627,11 +1530,6 @@ msgid "Remember window size and position"
 msgstr "שמירת גודל ומקום החלון"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt ""
-#| "@info:tooltip extra wayland info for the \"Remember window size and "
-#| "position\" setting"
-#| msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
@@ -1639,12 +1537,6 @@ msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>שחזור המקום לא נתמך ב־Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Changes to the window's size and position are saved and used for newly "
-#| "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-#| "precedence."
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1704,9 +1596,6 @@ msgid "Clear action"
 msgstr "פינוי הפעולה"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
 msgstr "לחיצה כפולה להגדרת פעולה"
@@ -2099,9 +1988,6 @@ msgid "Shortcuts"
 msgstr "קיצורי דרך"
 
 #: src/qml/Settings/SettingsWindow.qml:132
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "פקודות משלך"
@@ -2220,11 +2106,6 @@ msgid "path to image"
 msgstr "נתיב לתמונה"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
