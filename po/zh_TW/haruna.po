@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-27 00:41+0000\n"
-"PO-Revision-Date: 2025-03-27 21:48+0900\n"
+"PO-Revision-Date: 2025-05-01 17:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,13 +43,11 @@ msgid "Media player"
 msgstr "媒體播放器"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2025"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2025"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -633,11 +631,6 @@ msgid "Audio: %1 %2"
 msgstr "音效：%1 %2"
 
 #: src/qml/Actions.qml:163
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can't load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
@@ -655,12 +648,9 @@ msgid "Loop start: %1"
 msgstr "循環開始：%1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "循環：%1 - %2"
+msgstr "循環：%1–%2"
 
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
@@ -748,17 +738,11 @@ msgid "Saturation: 0"
 msgstr "飽和度：0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "開始播放"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "暫停播放"
@@ -784,9 +768,6 @@ msgid "Select a color"
 msgstr "選擇顏色"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
 msgstr "選擇顏色"
@@ -830,17 +811,11 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "從何處載入字幕"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "確認刪除"
@@ -860,9 +835,6 @@ msgid "No folder set"
 msgstr "未設定資料夾"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "新增資料夾"
@@ -878,18 +850,13 @@ msgid "Search subtitles recursively"
 msgstr "遞迴搜尋字幕"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the \"%1\" setting\n"
-#| "Only relative folders are searched"
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
-"字幕因「%1」設定值而遞迴搜尋\n"
-"只會搜尋相對資料夾"
+"字幕因「%1」設定值而遞迴搜尋。\n"
+"只會搜尋相對資料夾。"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -912,18 +879,13 @@ msgid "Skip Chapters"
 msgstr "跳過章節"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
 "自動跳過包含某些單詞/字元的章節。\n"
-"更多詳細資訊請見「播放」設定"
+"更多詳細資訊請見「播放」設定。"
 
 #: src/qml/Main.qml:29
 msgctxt "@title:window"
@@ -931,17 +893,11 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:301
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "選擇檔案"
 
 #: src/qml/Main.qml:320
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "選擇字幕檔案"
@@ -1107,9 +1063,6 @@ msgid "Show Toolbar"
 msgstr "顯示工具列"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "播放速度"
@@ -1120,9 +1073,6 @@ msgid "Volume: %1"
 msgstr "音量：%1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "開啟播放清單"
@@ -1130,7 +1080,7 @@ msgstr "開啟播放清單"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "新增…"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1140,7 +1090,7 @@ msgstr "檔案"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1148,36 +1098,24 @@ msgid "Sort"
 msgstr "排序"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
-msgstr "名稱遞增"
+msgstr "名稱，遞增"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
-msgstr "名稱遞減"
+msgstr "名稱，遞減"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
-msgstr "長度遞增"
+msgstr "長度，遞增"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
-msgstr "長度遞減"
+msgstr "長度，遞減"
 
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
@@ -1185,9 +1123,6 @@ msgid "Clear"
 msgstr "清除"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "另存新檔"
@@ -1198,49 +1133,31 @@ msgid "Add"
 msgstr "新增"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "在瀏覽器開啟"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "複製名稱"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "複製路徑"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "複製 URL"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "從播放清單移除"
@@ -1251,9 +1168,6 @@ msgid "Rename"
 msgstr "重新命名"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "捲動到目前播放的項目"
@@ -1261,7 +1175,7 @@ msgstr "捲動到目前播放的項目"
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "將檔案移到垃圾桶"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1297,9 +1211,6 @@ msgid "No custom commands yet"
 msgstr "尚無自訂指令"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "新增指令(&A)"
@@ -1467,11 +1378,6 @@ msgid "File dialog location"
 msgstr "檔案對話框位置"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
@@ -1484,9 +1390,6 @@ msgid "Maximum recent files"
 msgstr "最近檔案數量"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr "要記住幾個最近使用的檔案。輸入 0（零）來停用。"
@@ -1532,20 +1435,14 @@ msgid "Show floating footer on"
 msgstr "顯示浮動頁尾時機"
 
 #: src/qml/Settings/GeneralSettings.qml:221
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "What action shows the footer.<br><strong>Every mouse movement</strong> - "
-#| "every mouse movement over the video area<br><strong>Bottom mouse "
-#| "movement</strong> - mouse movement on the bottom of the video area"
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
-"哪些動作會顯示頁尾。<br><strong>Every mouse movement</strong> - 在影片任何區"
-"域上移動滑鼠時顯示頁尾<br><strong>Bottom mouse movement</strong> - 在影片區域"
+"哪些動作會顯示頁尾。<br><strong>Every mouse movement</strong> — 在影片任何區"
+"域上移動滑鼠時顯示頁尾<br><strong>Bottom mouse movement</strong> — 在影片區域"
 "底部上移動滑鼠時顯示頁尾"
 
 #: src/qml/Settings/GeneralSettings.qml:229
@@ -1623,11 +1520,6 @@ msgid "Remember window size and position"
 msgstr "記住視窗大小和位置"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt ""
-#| "@info:tooltip extra wayland info for the \"Remember window size and "
-#| "position\" setting"
-#| msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
@@ -1635,12 +1527,6 @@ msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>不支援在 Wayland 上復原視窗位置。</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Changes to the window's size and position are saved and used for newly "
-#| "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-#| "precedence."
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1700,9 +1586,6 @@ msgid "Clear action"
 msgstr "清除動作"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
 msgstr "雙擊來設定動作"
@@ -1760,26 +1643,6 @@ msgid "Hardware decoding"
 msgstr "硬體解碼"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
-#, fuzzy
-#| msgctxt "@info:tooltip hardware decoding setting"
-#| msgid ""
-#| "Specify the hardware video decoding API that should be used if possible. "
-#| "Whether hardware decoding is actually done depends on the video codec. If "
-#| "hardware decoding is not possible, mpv will fall back on software "
-#| "decoding.<br><br><ul><li><strong>auto</strong> tries to automatically "
-#| "enable hardware decoding using the first available method.</"
-#| "li><li><strong>auto-safe</strong> similar to auto, but allows only "
-#| "whitelisted methods that are considered \"safe\".</li><li><strong>vaapi</"
-#| "strong> works with Intel and AMD GPUs only. It also requires the opengl "
-#| "EGL backend.</li><li><strong>nvdec</strong> the newest, and recommended "
-#| "method to do hardware decoding on Nvidia GPUs.</li><li><strong>cuda</"
-#| "strong> an older implementation of hardware decoding on Nvidia GPUs.</"
-#| "li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></"
-#| "li></ul><br><br>You can read more about hardware decoding here: <a "
-#| "href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
-#| "stable/#options-hwdec</a><br><br>You can set another hardware decoder by "
-#| "creating a startup custom command <strong>set hwdec <i>decoder_name</i></"
-#| "strong>."
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -2077,9 +1940,6 @@ msgid "Shortcuts"
 msgstr "快捷鍵"
 
 #: src/qml/Settings/SettingsWindow.qml:132
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "自訂指令"
@@ -2198,11 +2058,6 @@ msgid "path to image"
 msgstr "影像路徑"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
@@ -2226,41 +2081,6 @@ msgid "Template"
 msgstr "樣本"
 
 #: src/qml/Settings/VideoSettings.qml:160
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Specify the filename template used to save screenshots. The template "
-#| "specifies the filename without file extension, and can contain format "
-#| "specifiers, which will be substituted when taking a screenshot. By "
-#| "default, the template is \"%F-%n\". <br>The template can start with a "
-#| "relative or absolute path, in order to specify a directory location where "
-#| "screenshots should be saved.<br>If the final screenshot filename points "
-#| "to an already existing file, the file will not be overwritten. The "
-#| "screenshot will either not be saved, or if the template contains %n, "
-#| "saved using different, newly generated filename.<br>For full info "
-#| "checkout <a href='https://mpv.io/manual/stable/#options-screenshot-"
-#| "template'>https://mpv.io/manual/stable/#options-screenshot-template</"
-#| "a><br><br><strong>Allowed format specifiers:</strong><br><ul><li><strong>"
-#| "%[#][0X]n</strong> A sequence number, padded with zeros to length X."
-#| "<br><li><strong>%f</strong> Filename of the currently played video."
-#| "<br><li><strong>%F</strong> Same as %f, but without the file extension."
-#| "<br><li><strong>%x</strong> Directory path of the currently played video. "
-#| "If the video is not on the filesystem (http:// urls), this expands to an "
-#| "empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
-#| "video file is not on the filesystem, return the fallback string inside "
-#| "the {...}.<br><li><strong>%p</strong> Current playback time. The result "
-#| "is a string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar "
-#| "to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm"
-#| "\".<br><li><strong>%wX</strong> Specify the current playback time using "
-#| "the format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</"
-#| "strong> hour (padded with 0 to two digits)</li><li><strong>%wh</strong> "
-#| "hour (not padded)</li><li><strong>%wM</strong> minutes (00-59)</"
-#| "li><li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</"
-#| "li><li><strong>%wS</strong> seconds (00-59)</li><li><strong>%ws</strong> "
-#| "total seconds (includes hours and minutes)</li><li><strong>%wf</strong> "
-#| "like %ws, but as float</li><li><strong>%wT</strong> milliseconds "
-#| "(000-999)</li><li><strong>%%</strong> Replaced with the % character "
-#| "itself.</li></ul><br>"
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -2295,7 +2115,7 @@ msgid ""
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 "指定用來儲存螢幕截圖的檔名樣本。該樣本會指定除了副檔名以外的檔名，並且可以包"
-"含截圖時會替換掉的格式指定符。預設的樣本是 \"%F-%n\"。<br>樣本開頭可以包含相"
+"含截圖時會替換掉的格式指定符。預設的樣本是 \"%F–%n\"。<br>樣本開頭可以包含相"
 "對或絕對路徑，來指定螢幕截圖應該儲存的目錄位置。<br>如果最終的螢幕截圖檔案名"
 "稱指定的是已經存在的檔案，該檔案不會被覆寫。這個情況下，如果樣本包含 %n 會以"
 "另一個新產生的檔案名稱儲存，否則不會儲存螢幕截圖。<br>完整資訊請參閱 <a "
@@ -2306,17 +2126,17 @@ msgstr ""
 "名稱。</li>  <li><strong>%F</strong> 如同 %f，但不包含副檔名。</li>  "
 "<li><strong>%x</strong> 目前播放的影片的目錄路徑。如果影片不在檔案系統上（像"
 "是 http:// 網址），這會替換為空白字串。</li>  <li><strong>%X{備用}</strong> "
-"如同 %x，但影片檔案不在檔案系統上時則回傳 {...} 內的備用字串。</li>  "
+"如同 %x，但影片檔案不在檔案系統上時則回傳 {…} 內的備用字串。</li>  "
 "<li><strong>%p</strong> 目前播放時間。格式是 \"HH:MM:SS\"（兩位數小時:分鐘:"
 "秒）。</li>  <li><strong>%P</strong> 類似 %p，但包含毫秒，格式是 \"HH:MM:SS."
 "mmm\"。</li>  <li><strong>%wX</strong> 用格式字串來格式化目前播放時間。<br>有"
 "效的格式指定符：</li>  <ul>    <li><strong>%wH</strong> 小時（用數字 0 補白到"
 "兩位數）</li>    <li><strong>%wh</strong> 小時（不補白）</li>    <li><strong>"
-"%wM</strong> 分鐘 (00-59)</li>    <li><strong>%wm</strong> 總計分鐘數（包含超"
-"過一小時的部分，不像 %wM）</li>    <li><strong>%wS</strong> 秒 (00-59)</"
+"%wM</strong> 分鐘 (00–59)</li>    <li><strong>%wm</strong> 總計分鐘數（包含超"
+"過一小時的部分，不像 %wM）</li>    <li><strong>%wS</strong> 秒 (00–59)</"
 "li>    <li><strong>%ws</strong> 總計秒數（包含分鐘和小時）</li>    "
 "<li><strong>%wf</strong> 如同 %ws，但作為浮點數</li>    <li><strong>%wT</"
-"strong> 毫秒 (000-999)</li>    <li><strong>%%</strong> 替換為 % 字元本身。</"
+"strong> 毫秒 (000–999)</li>    <li><strong>%%</strong> 替換為 % 字元本身。</"
 "li>  </ul>  <br>"
 
 #: src/qml/Settings/VideoSettings.qml:195
