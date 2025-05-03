@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-27 00:41+0000\n"
-"PO-Revision-Date: 2025-03-11 08:42+0100\n"
+"PO-Revision-Date: 2025-05-01 17:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -38,13 +38,11 @@ msgid "Media player"
 msgstr "Lecteur de média"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2025"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019 - 2025"
+msgstr "© 2019 - 2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -637,16 +635,11 @@ msgid "Audio: %1 %2"
 msgstr "Audio : %1 %2"
 
 #: src/qml/Actions.qml:163
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can't load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr "Impossible de charger le sous-titre lorsqu'aucun fichier n'est ouvert"
+msgstr "Impossible de charger un sous-titre lorsqu'aucun fichier n'est ouvert"
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
 msgctxt "@info:tooltip"
@@ -659,9 +652,6 @@ msgid "Loop start: %1"
 msgstr "Début de la boucle : %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Boucle : %1 - %2"
@@ -752,17 +742,11 @@ msgid "Saturation: 0"
 msgstr "Saturation : 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Démarrer la lecture"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Mettre la lecture en pause"
@@ -788,9 +772,6 @@ msgid "Select a color"
 msgstr "Sélectionnez une couleur"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
 msgstr "Sélectionnez une couleur"
@@ -834,17 +815,11 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> n'a été trouvé."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "Charger les sous-titres à partir de"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "Confirmer la suppression"
@@ -864,9 +839,6 @@ msgid "No folder set"
 msgstr "Aucun dossier défini"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Ajouter un nouveau dossier"
@@ -882,11 +854,6 @@ msgid "Search subtitles recursively"
 msgstr "Rechercher récursivement des sous-titres"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the \"%1\" setting\n"
-#| "Only relative folders are searched"
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
@@ -916,18 +883,13 @@ msgid "Skip Chapters"
 msgstr "Ignorer des chapitres"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
 "Ignore automatiquement les chapitres contenant certains mots / caractères.\n"
-"Veuillez vérifier les paramètres de « Lecture » pour plus de détails"
+"Veuillez vérifier les paramètres de « Lecture » pour plus de détails."
 
 #: src/qml/Main.qml:29
 msgctxt "@title:window"
@@ -935,17 +897,11 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:301
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Sélectionnez un fichier"
 
 #: src/qml/Main.qml:320
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Sélectionnez un fichier de sous-titres"
@@ -1111,9 +1067,6 @@ msgid "Show Toolbar"
 msgstr "Afficher la barre d'outils"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Vitesse de lecture"
@@ -1124,9 +1077,6 @@ msgid "Volume: %1"
 msgstr "Volume : %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Ouvrir une liste de lecture"
@@ -1134,7 +1084,7 @@ msgstr "Ouvrir une liste de lecture"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Ajouter..."
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1144,7 +1094,7 @@ msgstr "Fichier"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1152,33 +1102,21 @@ msgid "Sort"
 msgstr "Trier"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Par nom croissant"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Par nom décroissant"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Par durée croissante"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Par durée décroissante"
@@ -1189,9 +1127,6 @@ msgid "Clear"
 msgstr "Effacer"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Enregistrer sous"
@@ -1202,49 +1137,31 @@ msgid "Add"
 msgstr "Ajouter"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Ouvrir le dossier contenant"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Ouvrir dans un navigateur"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Copier le nom"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Copier l'emplacement"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Copier l'URL"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Supprimer de la liste de lecture"
@@ -1255,9 +1172,6 @@ msgid "Rename"
 msgstr "Renommer"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Dérouler jusqu'à l'élément en lecture"
@@ -1265,7 +1179,7 @@ msgstr "Dérouler jusqu'à l'élément en lecture"
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Déplacer le fichier dans la corbeille"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1301,9 +1215,6 @@ msgid "No custom commands yet"
 msgstr "Aucun commande personnalisée pour l'instant"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "&Ajouter une commande"
@@ -1481,19 +1392,14 @@ msgid "File dialog location"
 msgstr "Emplacement de la boîte de dialogue de fichiers"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
 "L'emplacement par défaut de la boîte de dialogue d'ouverture de fichiers. Si "
-"cet emplacement est vide, une boîte de dialogue tentera d'ouvrir "
-"l'emplacement ouvert le plus récemment."
+"cet emplacement est vide, une boîte de dialogue tentera d'ouvrir le dernier "
+"emplacement ouvert."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1501,14 +1407,11 @@ msgid "Maximum recent files"
 msgstr "Nombre maximum de fichiers récents"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
-"Le nombre de fichiers récents à enregistrer. Saisissez 0 (Zéro) pour "
-"désactiver."
+"Le nombre de fichiers récents à enregistrer. Veuillez saisir la valeur 0 "
+"(Zéro) pour désactiver."
 
 #: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
@@ -1552,12 +1455,6 @@ msgid "Show floating footer on"
 msgstr "Afficher un pied de page flottant sur"
 
 #: src/qml/Settings/GeneralSettings.qml:221
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "What action shows the footer.<br><strong>Every mouse movement</strong> - "
-#| "every mouse movement over the video area<br><strong>Bottom mouse "
-#| "movement</strong> - mouse movement on the bottom of the video area"
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1565,7 +1462,7 @@ msgid ""
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
 "Quelle action affiche le pied de page.<br><strong>Chaque mouvement de la "
-"souris</strong> - Chaque mouvement de la souris sur la zone de la "
+"souris</strong> - Chaque mouvement de la souris dans la zone de la "
 "vidéo<br><strong> Mouvement de la souris vers le bas</strong> - Mouvement de "
 "la souris vers le bas de la zone vidéo"
 
@@ -1648,11 +1545,6 @@ msgid "Remember window size and position"
 msgstr "Se souvenir de la position et de la taille de la fenêtre"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt ""
-#| "@info:tooltip extra wayland info for the \"Remember window size and "
-#| "position\" setting"
-#| msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
@@ -1662,20 +1554,15 @@ msgstr ""
 "b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Changes to the window's size and position are saved and used for newly "
-#| "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-#| "precedence."
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
 "opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 "Les modifications de taille et de position de la fenêtre sont enregistrées "
-"et utilisées lors de l'ouverture de nouvelles fenêtres. <br><br>%1 Le "
-"paramètre « Re-dimensionner pour s'ajuster à la vidéo » a la priorité."
+"et utilisées lors de l'ouverture de nouvelles fenêtres. <br><br>%1 La "
+"priorité est donnée au paramètre « Re-dimensionner pour s'ajuster à la "
+"vidéo »."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1728,9 +1615,6 @@ msgid "Clear action"
 msgstr "Effacer une action"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
 msgstr "Faire un double clic pour définir une action"
@@ -1792,26 +1676,6 @@ msgid "Hardware decoding"
 msgstr "Décodage matériel"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
-#, fuzzy
-#| msgctxt "@info:tooltip hardware decoding setting"
-#| msgid ""
-#| "Specify the hardware video decoding API that should be used if possible. "
-#| "Whether hardware decoding is actually done depends on the video codec. If "
-#| "hardware decoding is not possible, mpv will fall back on software "
-#| "decoding.<br><br><ul><li><strong>auto</strong> tries to automatically "
-#| "enable hardware decoding using the first available method.</"
-#| "li><li><strong>auto-safe</strong> similar to auto, but allows only "
-#| "whitelisted methods that are considered \"safe\".</li><li><strong>vaapi</"
-#| "strong> works with Intel and AMD GPUs only. It also requires the opengl "
-#| "EGL backend.</li><li><strong>nvdec</strong> the newest, and recommended "
-#| "method to do hardware decoding on Nvidia GPUs.</li><li><strong>cuda</"
-#| "strong> an older implementation of hardware decoding on Nvidia GPUs.</"
-#| "li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></"
-#| "li></ul><br><br>You can read more about hardware decoding here: <a "
-#| "href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
-#| "stable/#options-hwdec</a><br><br>You can set another hardware decoder by "
-#| "creating a startup custom command <strong>set hwdec <i>decoder_name</i></"
-#| "strong>."
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1831,26 +1695,27 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
-"Spécifiez l'API de décodage vidéo matériel devant être utilisée, si "
-"possible. La façon dont le décodage matériel est actuellement réalisé, "
-"dépend du codec vidéo. Si Le décodage matériel est impossible, MPV utilisera "
-"par défaut le décodage logiciel. <br><br><ul><li><strong>auto</strong> "
-"essaie d'activer automatiquement le décodage matériel à l'aide de la "
-"première méthode disponible. </li><li><strong>auto--safe</strong> similaire "
-"à « auto », mais autorise uniquement les méthodes explicitement autorisées "
-"et considérées comme « sûr ». </li><li><strong>vaapi</strong> fonctionne "
-"uniquement avec les processeurs Intel et les processeurs graphique « GPU » "
-"AMD. Il nécessite également un moteur « EGL OpenGL ». </"
-"li><li><strong>nvdec</strong> la méthode la plus récente et la plus "
-"recommandée pour effectuer le décodage matériel sur les processeurs "
-"graphiques « GPU » de Nvidia.</li><li><strong>CUDA</strong>, une ancienne "
-"implémentation de décodage matériel sur les processeurs graphiques « GPU » "
-"de Nvidia.</li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</"
-"strong></li></ul><br><br>Pour en savoir plus sur le décodage du matériel, "
-"veuillez cliquer ici : <a href='https://mpv.io/manual/stable/#options-"
+"Spécifiez l'API de décodage vidéo par le matériel devant être utilisée, si "
+"possible. La façon dont le décodage matériel est actuellement réalisé dépend "
+"du codec vidéo. Si le décodage matériel est impossible, le module « mpv » "
+"utilisera par défaut le décodage par logiciel. <br><br><ul><li>L'option "
+"<strong>auto</strong> essaie d'activer automatiquement le décodage matériel "
+"à l'aide de la première méthode disponible. </li><li>L'option <strong>auto--"
+"safe</strong> est similaire à « auto » mais autorise uniquement les méthodes "
+"explicitement autorisées et considérées comme « sûres ». </li><li>L'option "
+"<strong>vaapi</strong> fonctionne uniquement avec les processeurs Intel et "
+"les processeurs graphiques « GPU » de AMD. Elle nécessite également un "
+"moteur « EGL OpenGL ». </li><li>L'option <strong>nvdec</strong>, la méthode "
+"la plus récente et la plus recommandée pour effectuer le décodage matériel "
+"sur les processeurs graphiques « GPU » de Nvidia.</li><li>L'option "
+"<strong>CUDA</strong>, une ancienne implémentation de décodage matériel sur "
+"les processeurs graphiques « GPU » de Nvidia.</li><li>L'option "
+"<strong>videotoolbox</strong></li><li>L'option <strong>d3d11va</strong></"
+"li></ul><br><br>vous pouvez en savoir plus sur le décodage par le matériel, "
+"sur cette page : <a href='https://mpv.io/manual/stable/#options-"
 "hwdec'>https://mpv.io/manual/stable/#options-hwdec</a><br><br>Vous pouvez "
-"définir un autre décodeur matériel en créant une commande de démarrage "
-"personnalisée <strong>set hwdec <i>nom-décodeur</i></strong>."
+"définir un autre décodeur matériel en créant une commande personnalisée de "
+"démarrage <strong>set hwdec <i>nom-décodeur</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:173
 msgctxt "@option:check"
@@ -2137,9 +2002,6 @@ msgid "Shortcuts"
 msgstr "Raccourcis"
 
 #: src/qml/Settings/SettingsWindow.qml:132
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Commandes personnalisées"
@@ -2261,19 +2123,14 @@ msgid "path to image"
 msgstr "emplacement vers une image"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
-"Utilisé pour les fichiers musicaux n'ayant aucune piste vidéo, une image de "
-"couverture intégrée ou une image de couverture / dossier dans le même "
-"dossier que le fichier lu."
+"Utilisé pour les fichiers de musique ne possédant aucune piste vidéo, aucune "
+"image de couverture intégrée ou aucune image de couverture / dossier dans le "
+"même dossier que le fichier en cours de lecture."
 
 #: src/qml/Settings/VideoSettings.qml:80
 msgctxt "@title"
