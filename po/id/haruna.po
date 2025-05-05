@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Wantoyèk <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Wantoyèk <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-27 00:41+0000\n"
-"PO-Revision-Date: 2024-11-03 19:55+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2025-05-04 09:31+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,13 +40,11 @@ msgid "Media player"
 msgstr "Pemutar media"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2023"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -63,17 +61,18 @@ msgstr "Pengembang"
 #: src/application.cpp:136
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "Baris perintah kaya fitur pengunduh audio/video"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Baris perintah pemutar video"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Solusi lintas platform untuk rekam, konversi dan stream audio dan video"
 
 #: src/application.cpp:164
 #, kde-format
@@ -140,9 +139,7 @@ msgid "Audio Cycle Down"
 msgstr "Siklus Audio Turun"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "Pengaturan"
@@ -208,12 +205,10 @@ msgid "Add External Subtitle…"
 msgstr "Tambahkan Subtitel Eksternal..."
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
-msgstr "Buka Url"
+msgstr "Buka URL"
 
 #: src/models/actionsmodel.cpp:145
 #, kde-format
@@ -453,13 +448,13 @@ msgstr "Video Pindah Turun"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Rotasikan searah jarum jam"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Rotasikan lawan arah jarum jam"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -586,12 +581,10 @@ msgid "Could not play: %1"
 msgstr "Tidak bisa memutar: %1"
 
 #: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Timing subtitel: %1"
+msgstr "Perwaktuan subtitel: %1 detik"
 
 #: src/mpv/mpvitem.cpp:455
 #, kde-format
@@ -644,7 +637,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr ""
+msgstr "Tidak bisa memuat subtitel ketika tidak ada file yang dibuka"
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
 msgctxt "@info:tooltip"
@@ -657,12 +650,9 @@ msgid "Loop start: %1"
 msgstr "Awal putaran: %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "Putaran: %1 - %2"
+msgstr "Pengulangan: %1–%2"
 
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
@@ -750,20 +740,14 @@ msgid "Saturation: 0"
 msgstr "Saturasi: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
-msgstr "Mulai Pemutaran"
+msgstr "Mulai pemutaran"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
-msgstr "Jeda Pemutaran"
+msgstr "Jeda pemutaran"
 
 #: src/qml/Footer.qml:163
 msgctxt "@info:tooltip"
@@ -786,12 +770,9 @@ msgid "Select a color"
 msgstr "Pilih warna"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr "Pilih warna"
+msgstr "Pilih Warna"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -832,20 +813,14 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> telah ditemukan."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "Muat subtitel dari"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
-msgstr "Konfirmasi penghapusan"
+msgstr "Konfirmasi Penghapusan"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:116
 msgctxt "@info:tooltip"
@@ -858,19 +833,13 @@ msgid "Save changes"
 msgstr "Simpan perubahan"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Folder konfig"
+msgstr "Tidak ada folder yang diatur"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
-msgstr "Tambahkan folder baru"
+msgstr "Tambahkan Folder Baru"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
 msgctxt "@info:tooltip add new sutbtitle folder setting"
@@ -878,12 +847,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Tambahkan folder untuk mencari subtitel."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Pilih file subtitel"
+msgstr "Cari subtitel secara rekursif"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -891,6 +857,8 @@ msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
+"Subtitel akan dicari secara rekursif di pengaturan “%1”.\n"
+"Hanya folder-folder relatif yang dicari."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -903,12 +871,9 @@ msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/HProgressBar.qml:42
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Lewati bab"
+msgstr "Buka menu bab-bab"
 
 #: src/qml/HProgressBar.qml:291
 msgctxt "@action:inmenu"
@@ -916,18 +881,13 @@ msgid "Skip Chapters"
 msgstr "Lewati Bab"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
-"Melewati bab yang berisi kata/karakter tertentu secara otomatis.\n"
-"Periksa pengaturan 'Pemutaran' untuk detail lebih lanjut"
+"Secara otomatis melewatkan bab yang mengandung kata/karakter tertentu.\n"
+"Periksa pengaturan \"Pemutaran\" untuk lebih jelasnya."
 
 #: src/qml/Main.qml:29
 msgctxt "@title:window"
@@ -935,20 +895,14 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:301
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
-msgstr "Pilih file"
+msgstr "Pilih File"
 
 #: src/qml/Main.qml:320
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
-msgstr "Pilih file subtitel"
+msgstr "Pilih File Subtitel"
 
 #: src/qml/Main.qml:340
 msgctxt "@action:button"
@@ -1111,12 +1065,9 @@ msgid "Show Toolbar"
 msgstr "Tampilkan Bilah Alat"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
-msgstr "Kecepatan pemutaran"
+msgstr "Kecepatan Pemutaran"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"
@@ -1124,17 +1075,14 @@ msgid "Volume: %1"
 msgstr "Volume: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
-msgstr "Buka playlist"
+msgstr "Buka Playlist"
 
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Tambah..."
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1144,7 +1092,7 @@ msgstr "File"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1152,36 +1100,24 @@ msgid "Sort"
 msgstr "Urutkan"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
-msgstr "Nama menaik"
+msgstr "Nama, menaik"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
-msgstr "Nama menurun"
+msgstr "Nama, menurun"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
-msgstr "Durasi menaik"
+msgstr "Durasi, menaik"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
-msgstr "Durasi menurun"
+msgstr "Durasi, menurun"
 
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
@@ -1189,12 +1125,9 @@ msgid "Clear"
 msgstr "Bersihkan"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
-msgstr "Simpan sebagai"
+msgstr "Simpan Sebagai"
 
 #: src/qml/PlayList.qml:158
 msgctxt "@action:button"
@@ -1202,52 +1135,34 @@ msgid "Add"
 msgstr "Tambah"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
-msgstr "Buka folder konten"
+msgstr "Buka Folder Konten"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
-msgstr "Buka di peramban"
+msgstr "Buka di Browser"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
-msgstr "Salin nama"
+msgstr "Salin Nama"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
-msgstr "Salin alur"
+msgstr "Salin Alur"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr "Salin url"
+msgstr "Salin URL"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
-msgstr "Singkirkan dari playlist"
+msgstr "Singkirkan dari Playlist"
 
 #: src/qml/PlayList.qml:274
 msgctxt "@action:inmenu"
@@ -1255,17 +1170,14 @@ msgid "Rename"
 msgstr "Ubah nama"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
-msgstr "Gulir untuk memutar item"
+msgstr "Gulir ke Item Berputar"
 
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Pindahkan File ke Tong Sampah"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1301,12 +1213,9 @@ msgid "No custom commands yet"
 msgstr "Belum ada kustom perintah"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
-msgstr "&Tambahkan perintah"
+msgstr "&Tambahkan Perintah"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:88
 msgctxt "@info:tooltip"
@@ -1478,18 +1387,13 @@ msgid "File dialog location"
 msgstr "Lokasi dialog file"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"Lokasi baku dialog file yang dibuka. Jika kosong maka dialog file akan "
-"mencoba membuka lokasi yang dibuka saat terakhir."
+"Lokasi baku dialog file yang dibuka. Jika kosong, dialog file akan mencoba "
+"membuka lokasi yang dibuka terakhir kali."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1497,14 +1401,10 @@ msgid "Maximum recent files"
 msgstr "Maksimum file terkini"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
-"Seberapa banyak file terkini untuk disimpan. Masukkan 0 (nol) untuk "
-"menonfungsikan."
+"Sejumlah file terkini untuk disimpan. Masukkan 0 (nol) untuk menonfungsikan."
 
 #: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
@@ -1548,12 +1448,6 @@ msgid "Show floating footer on"
 msgstr "Tampilkan footer mengambang saat"
 
 #: src/qml/Settings/GeneralSettings.qml:221
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "What action shows the footer.<br><strong>Every mouse movement</strong> - "
-#| "every mouse movement over the video area<br><strong>Bottom mouse "
-#| "movement</strong> - mouse movement on the bottom of the video area"
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1561,8 +1455,8 @@ msgid ""
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
 "Tindakan untuk menampilkan footer.<br><strong>Setiap pergerakan mouse</"
-"strong> - setiap pergerakan mouse di atas area video<br><strong>Pergerakan "
-"mouse di bagian bawah</strong> - pergerakan mouse di bagian bawah di area "
+"strong> — setiap pergerakan mouse di atas area video<br><strong>Pergerakan "
+"mouse di bagian bawah</strong> — pergerakan mouse di bagian bawah di area "
 "video"
 
 #: src/qml/Settings/GeneralSettings.qml:229
@@ -1606,25 +1500,17 @@ msgid "Resize to fit video"
 msgstr "Ubah ukuran ke pas video"
 
 #: src/qml/Settings/GeneralSettings.qml:319
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr "<b>Tidak didukung di Wayland.</b>"
+msgstr "Tidak didukung di Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "%1 The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 msgstr ""
-"%1 Jendela diubah ukurannya sesuai resolusi video.\n"
+"Jendela diubah ukurannya sesuai resolusi video.\n"
 "Ukuran maksimum tidaklah dibatasi, ini diserahkan kepada sistem operasi."
 
 #: src/qml/Settings/GeneralSettings.qml:333
@@ -1649,34 +1535,21 @@ msgid "Remember window size and position"
 msgstr "Ingat posisi dan ukuran jendela"
 
 #: src/qml/Settings/GeneralSettings.qml:382
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "<b>Not supported on Wayland.</b>"
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr "<b>Tidak didukung di Wayland.</b>"
+msgstr "<b>Pengembalian posisi tidak didukung di Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:384
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
 "opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
-"Ketika posisi dan ukuran jendela diubah, nilai baru akan disimpan dan "
-"digunakan untuk mengembalikan aplikasi ke posisi dan ukuran yang sama ketika "
-"instansi-baru dibuka.\n"
-"\n"
-"Pengaturan \"Ubah ukuran ke pas video\" akan didahulukan.\n"
+"Mengubah ke ukuran dan posisi jendela adalah disimpan dan digunakan untuk "
+"jendela-jendela yang baru dibuka.<br><br>%1Pengaturan \"Ubah ukuran ke pas "
+"video\" akan didahulukan."
 
 #: src/qml/Settings/GeneralSettings.qml:398
 msgctxt "@option:check"
@@ -1729,12 +1602,9 @@ msgid "Clear action"
 msgstr "Bersihkan tindakan"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
-msgstr "Klik dua kali untuk mengeset aksi"
+msgstr "Klik Ganda untuk Mengatur Tindakan"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -1792,26 +1662,6 @@ msgid "Hardware decoding"
 msgstr "Dekoding perangkat keras"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
-#, fuzzy
-#| msgctxt "@info:tooltip hardware decoding setting"
-#| msgid ""
-#| "Specify the hardware video decoding API that should be used if possible. "
-#| "Whether hardware decoding is actually done depends on the video codec. If "
-#| "hardware decoding is not possible, mpv will fall back on software "
-#| "decoding.<br><br><ul><li><strong>auto</strong> tries to automatically "
-#| "enable hardware decoding using the first available method.</"
-#| "li><li><strong>auto-safe</strong> similar to auto, but allows only "
-#| "whitelisted methods that are considered \"safe\".</li><li><strong>vaapi</"
-#| "strong> works with Intel and AMD GPUs only. It also requires the opengl "
-#| "EGL backend.</li><li><strong>nvdec</strong> the newest, and recommended "
-#| "method to do hardware decoding on Nvidia GPUs.</li><li><strong>cuda</"
-#| "strong> an older implementation of hardware decoding on Nvidia GPUs.</"
-#| "li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></"
-#| "li></ul><br><br>You can read more about hardware decoding here: <a "
-#| "href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
-#| "stable/#options-hwdec</a><br><br>You can set another hardware decoder by "
-#| "creating a startup custom command <strong>set hwdec <i>decoder_name</i></"
-#| "strong>."
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1837,7 +1687,7 @@ msgstr ""
 "memungkinkan, mpv akan kembali pada decoding perangkat lunak."
 "<br><br><ul><li><strong>auto</strong> mencoba untuk secara otomatis "
 "memfungsikan decoding perangkat keras menggunakan metode yang tersedia "
-"terlebih dulu.</li><li><strong>auto-safe</strong> mirip ke auto, tetapi "
+"terlebih dulu.</li><li><strong>auto-safe</strong> mirip seperti auto, tetapi "
 "hanya memperbolehkan metode daftar putih yang mempertimbangkan keamanan "
 "\"safe\".</li><li><strong>vaapi</strong> bekerja dengan GPU-GPU Intel dan "
 "AMD saja. Juga memerlukan backend opengl EGL.</li><li><strong>nvdec</strong> "
@@ -1879,20 +1729,14 @@ msgstr ""
 "dipulihkan."
 
 #: src/qml/Settings/PlaybackSettings.qml:209
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Save playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Simpan posisi pemutaran"
+msgstr "Posisi pemutaran"
 
 #: src/qml/Settings/PlaybackSettings.qml:219
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "Jangka ke posisi pemutaran terakhir"
+msgstr "Kembalikan posisi pemutaran"
 
 #: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
@@ -1907,7 +1751,13 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Simpan posisi file selama pemutaran, membuka file yang sama lagi akan "
+"menjangka ke posisi tersimpan.\n"
+"Posisi akan disimpan setiap %1 detik, kecuali videonya kurang dari 10 detik."
 msgstr[1] ""
+"Simpan posisi file selama pemutaran, membuka file yang sama lagi akan "
+"menjangka ke posisi tersimpan.\n"
+"Posisi akan disimpan setiap %1 detik, kecuali videonya kurang dari 10 detik."
 
 #: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
@@ -1917,37 +1767,26 @@ msgstr "Mulai memutar"
 #: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
-msgstr ""
+msgstr "File akan diputar sesudah mengembalikan posisi pemutaran"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Saturasi"
+msgstr "Untuk durasi apa pun"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Untuk file yang lebih panjang dari %1 menit"
-msgstr[1] "Untuk file-file yang lebih panjang dari %1 menit"
+msgstr[0] "Jika durasi lebih panjang dari %1 menit"
+msgstr[1] "Jika durasi lebih panjang dari %1 menit"
 
 #: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
-msgstr ""
+msgstr "Posisi file jarak jauh dikembalikan tanpa mempedulikan durasi."
 
 #: src/qml/Settings/PlaybackSettings.qml:309
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1955,20 +1794,14 @@ msgstr[0] "Simpan posisi setiap %1 detik"
 msgstr[1] "Simpan posisi setiap %1 detik"
 
 #: src/qml/Settings/PlaybackSettings.qml:322
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Lewati Bab"
+msgstr "Bab"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "Lewati bab"
+msgstr "Lewati bab-bab"
 
 #: src/qml/Settings/PlaybackSettings.qml:339
 msgctxt "@info:tooltip skip chapters setting"
@@ -2147,12 +1980,9 @@ msgid "Shortcuts"
 msgstr "Pintasan"
 
 #: src/qml/Settings/SettingsWindow.qml:132
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
-msgstr "Kustom Perintah"
+msgstr "Perintah Kustom"
 
 #: src/qml/Settings/SettingsWindow.qml:142
 msgctxt "@action"
@@ -2167,13 +1997,14 @@ msgstr "Tentang"
 #: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:check"
 msgid "Auto select track"
-msgstr ""
+msgstr "Auto pilih trek"
 
 #: src/qml/Settings/SubtitlesSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr ""
+"Ketika dicentang, trek subtitel akan secara otomatis dipilih dan ditayangkan"
 
 #: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@option:check"
@@ -2268,11 +2099,6 @@ msgid "path to image"
 msgstr "alur ke gambar"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
@@ -2298,41 +2124,6 @@ msgid "Template"
 msgstr "Templat"
 
 #: src/qml/Settings/VideoSettings.qml:160
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Specify the filename template used to save screenshots. The template "
-#| "specifies the filename without file extension, and can contain format "
-#| "specifiers, which will be substituted when taking a screenshot. By "
-#| "default, the template is \"%F-%n\". <br>The template can start with a "
-#| "relative or absolute path, in order to specify a directory location where "
-#| "screenshots should be saved.<br>If the final screenshot filename points "
-#| "to an already existing file, the file will not be overwritten. The "
-#| "screenshot will either not be saved, or if the template contains %n, "
-#| "saved using different, newly generated filename.<br>For full info "
-#| "checkout <a href='https://mpv.io/manual/stable/#options-screenshot-"
-#| "template'>https://mpv.io/manual/stable/#options-screenshot-template</"
-#| "a><br><br><strong>Allowed format specifiers:</strong><br><ul><li><strong>"
-#| "%[#][0X]n</strong> A sequence number, padded with zeros to length X."
-#| "<br><li><strong>%f</strong> Filename of the currently played video."
-#| "<br><li><strong>%F</strong> Same as %f, but without the file extension."
-#| "<br><li><strong>%x</strong> Directory path of the currently played video. "
-#| "If the video is not on the filesystem (http:// urls), this expands to an "
-#| "empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
-#| "video file is not on the filesystem, return the fallback string inside "
-#| "the {...}.<br><li><strong>%p</strong> Current playback time. The result "
-#| "is a string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar "
-#| "to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm"
-#| "\".<br><li><strong>%wX</strong> Specify the current playback time using "
-#| "the format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</"
-#| "strong> hour (padded with 0 to two digits)</li><li><strong>%wh</strong> "
-#| "hour (not padded)</li><li><strong>%wM</strong> minutes (00-59)</"
-#| "li><li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</"
-#| "li><li><strong>%wS</strong> seconds (00-59)</li><li><strong>%ws</strong> "
-#| "total seconds (includes hours and minutes)</li><li><strong>%wf</strong> "
-#| "like %ws, but as float</li><li><strong>%wT</strong> milliseconds "
-#| "(000-999)</li><li><strong>%%</strong> Replaced with the % character "
-#| "itself.</li></ul><br>"
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -2367,37 +2158,36 @@ msgid ""
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
 "Tentukan templat nama file yang digunakan untuk menyimpan jepretan layar. "
-"Templat menentukan nama file tanpa file ekstensi, dan bisa mengandung format "
-"khusus, yang akan disubtitusi ketika pengambilan jepretan layar. Secara "
-"bakunya, templatnya adalah \"%F-%n\". <br>Templat bisa dimulai dengan alur "
-"mutlak atau relatif, supaya untuk menentukan sebuah lokasi direktori di mana "
-"jepretan layar harus disimpan.<br>Jika nama file jepretan layar final "
-"menunjuk ke file yang sudah ada, file tidak akan ditimpa. Skrinsut tidak "
-"akan disimpan, atau jika templat mengandung %n, disimpan menggunakan yang "
-"berbeda, nama file akan dihasilkan secara baru.<br>Untuk info lengkap "
-"lihatlah <a href='https://mpv.io/manual/stable/#options-screenshot-"
-"template'>https://mpv.io/manual/stable/#options-screenshot-template</"
-"a><br><br><strong>Format khusus yang diperbolehkan:</"
-"strong><br><ul><li><strong>%[#][0X]n</strong> Nomor urut, diisi dengan angka "
-"nol hingga sepanjang X.<br><li><strong>%f</strong> Nama file video yang "
-"diputar saat ini.<br><li><strong>%F</strong> Sama seperti %f, tetapi tanpa "
-"ekstensi file.<br><li><strong>%x</strong> Alur direktori video yang diputar "
-"saat ini. Jika video tidak pada sistem file (http:// urls), ini memperluas "
-"ke string kosong.<br><li><strong>%X{fallback}</strong> Sama seperti %x, "
-"tetapi file video tidak pada sistem file, kembalikan string fallback di "
-"dalam {...}.<br><li><strong>%p</strong> Waktu pemutaran saat ini. Hasilnya "
-"adalah string pada formulir \"HH:MM:SS\".<br><li><strong>%P</strong> Mirip "
-"ke %p, tetapi diperluas dengan waktu pemutaran dalam milidetik \"HH:MM:SS.mmm"
-"\".<br><li><strong>%wX</strong> Menentukan waktu pemutaran saat ini "
-"menggunakan string format X.<br>Format khusus yang valid:<br><ul><li><strong>"
-"%wH</strong> jam (diisi dengan 0 untuk dua digit)</li><li><strong>%wh</"
-"strong> jam (tidak diisi)</li><li><strong>%wM</strong> menit (00-59)</"
-"li><li><strong>%wm</strong> total menit (termasuk jam, tak seperti %wM)</"
-"li><li><strong>%wS</strong> detik (00-59)</li><li><strong>%ws</strong> total "
-"detik (termasuk jam dan menit)</li><li><strong>%wf</strong> seperti %ws, "
-"tetapi sebagai pengambang</li><li><strong>%wT</strong> millidetik (000-999)</"
-"li><li><strong>%%</strong> Digantikan dengan karakter % tersendiri.</li></"
-"ul><br>"
+"Templat menentukan nama file tanpa file ekstensi, dan dapat berisi penentu "
+"format, yang akan disubtitusi ketika mengambil jepretan layar. Secara baku, "
+"templatnya adalah \"%F-%n\". <br>Templat bisa dimulai dengan alur mutlak "
+"atau relatif, supaya untuk menentukan lokasi direktori di mana jepretan "
+"layar harus disimpan.<br>Jika nama file jepretan layar final menunjuk ke "
+"file yang sudah ada, file tidak akan ditimpa. Jepretan layar tidak akan "
+"disimpan, atau jika templat mengandung %n, disimpan menggunakan nama file "
+"yang berbeda yang dihasilkan secara baru.<br>Untuk info lengkap lihatlah <a "
+"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
+"io/manual/stable/#options-screenshot-template</a><br><br><strong>Penentu "
+"format yang diperbolehkan:</strong><br><ul><li><strong>%[#][0X]n</strong> "
+"Nomor urut, diisi dengan angka nol hingga sepanjang X.<br><li><strong>%f</"
+"strong> Nama file video yang diputar saat ini.<br><li><strong>%F</strong> "
+"Sama seperti %f, tetapi tanpa ekstensi file.<br><li><strong>%x</strong> Alur "
+"direktori video yang diputar saat ini. Jika video tidak pada sistem file "
+"(http:// urls), ini memperluas ke string kosong.<br><li><strong>%X{fallback}"
+"</strong> Sama seperti %x, tetapi file video tidak pada sistem file, "
+"kembalikan string fallback di dalam {...}.<br><li><strong>%p</strong> Waktu "
+"pemutaran saat ini. Hasilnya adalah string pada formulir \"HH:MM:SS\"."
+"<br><li><strong>%P</strong> Mirip seperti %p, tetapi diperluas dengan waktu "
+"pemutaran dalam milidetik \"HH:MM:SS.mmm\".<br><li><strong>%wX</strong> "
+"Menentukan waktu pemutaran saat ini menggunakan string format X.<br>Penentu "
+"format yang valid:<br><ul><li><strong>%wH</strong> jam (diisi dengan 0 untuk "
+"dua digit)</li><li><strong>%wh</strong> jam (tidak diisi)</li><li><strong>"
+"%wM</strong> menit (00-59)</li><li><strong>%wm</strong> total menit "
+"(termasuk jam, tak seperti %wM)</li><li><strong>%wS</strong> detik (00-59)</"
+"li><li><strong>%ws</strong> total detik (termasuk jam dan menit)</"
+"li><li><strong>%wf</strong> seperti %ws, tetapi sebagai pengambang</"
+"li><li><strong>%wT</strong> millidetik (000-999)</li><li><strong>%%</strong> "
+"Digantikan dengan karakter % tersendiri.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:195
 msgctxt "@title"
