@@ -40,6 +40,7 @@ Kirigami.ApplicationWindow {
     width: Kirigami.Units.gridUnit * 45
     height: Kirigami.Units.gridUnit * 35
     title: i18nc("@title:window", "Settings")
+    transientParent: null
     pageStack.initialPage: Kirigami.ScrollablePage {
         globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
         bottomPadding: 0

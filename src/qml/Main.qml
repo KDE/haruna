@@ -58,6 +58,11 @@ ApplicationWindow {
         }
     }
 
+    onClosing: {
+        const settingsWindow = settingsLoader.item as Window
+        settingsWindow?.close()
+    }
+
     header: Header {
         id: header
 

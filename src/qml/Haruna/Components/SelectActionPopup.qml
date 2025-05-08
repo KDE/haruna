@@ -114,7 +114,7 @@ Popup {
 
                 KeyNavigation.up: filterActionsField
                 KeyNavigation.down: filterActionsField
-                Keys.onPressed: {
+                Keys.onPressed: function(event) {
                     if (event.key === Qt.Key_End) {
                         actionsListView.currentIndex = actionsListView.count - 1
                         actionsListView.positionViewAtEnd()
