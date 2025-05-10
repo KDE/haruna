@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-09 00:41+0000\n"
-"PO-Revision-Date: 2025-03-11 09:58+0100\n"
+"PO-Revision-Date: 2025-05-09 16:23+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -40,13 +40,11 @@ msgid "Media player"
 msgstr "Media Player (Reproductor de Media)"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2025"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2025"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -447,13 +445,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Rota in senso horari"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Rota in senso anti-horari"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -645,12 +643,9 @@ msgid "Loop start: %1"
 msgstr "Initio de circulo (anellar) %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "Anella: %1 - %2"
+msgstr "Anella: %1 - –%2"
 
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
@@ -738,17 +733,11 @@ msgid "Saturation: 0"
 msgstr "Saturation: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Starta reproduction sonor"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Pausa reproduction sonor"
@@ -774,12 +763,9 @@ msgid "Select a color"
 msgstr "Selige un color"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr "Selige un color"
+msgstr "Selectiona Color"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -818,17 +804,11 @@ msgid ""
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
 msgctxt "@label"
 msgid "Load subtitles from"
-msgstr "Subtitulos on (activate)"
+msgstr "Carga subtitulos ex"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "Confirma deletion"
@@ -848,9 +828,6 @@ msgid "No folder set"
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Adde nove dossier"
@@ -905,20 +882,14 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:306
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Selige File"
 
 #: src/qml/Main.qml:325
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
-msgstr "Selige File"
+msgstr "Selige File de Subtitulos"
 
 #: src/qml/Main.qml:345
 msgctxt "@action:button"
@@ -1081,12 +1052,9 @@ msgid "Show Toolbar"
 msgstr "Monstra le barra de instrumentos"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@title:menu"
 msgid "Playback Speed"
-msgstr "Reproduce"
+msgstr "Velocitate de Reproducer"
 
 #: src/qml/MpvVideo.qml:31
 msgctxt "@info:tooltip"
@@ -1094,17 +1062,14 @@ msgid "Volume: %1"
 msgstr "Volumine: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
-msgstr "Aperi lista de reproduction…"
+msgstr "Aperi lista de reproduction"
 
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Adde…"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1114,7 +1079,7 @@ msgstr "File"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1147,9 +1112,6 @@ msgid "Clear"
 msgstr "Netta"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Salveguarda como"
@@ -1160,49 +1122,31 @@ msgid "Add"
 msgstr "Adde"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Aperi dossier continente"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Aperi con navigator"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Copia Nomine"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Copia Percurso"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Copia URL"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Remove ex lista de reproduction"
@@ -1213,9 +1157,6 @@ msgid "Rename"
 msgstr "Renomina"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Rola pro reproducer elemento"
@@ -1223,7 +1164,7 @@ msgstr "Rola pro reproducer elemento"
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Move File a corbe"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1259,9 +1200,6 @@ msgid "No custom commands yet"
 msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "&Adde Commando"
@@ -1940,12 +1878,9 @@ msgid "Shortcuts"
 msgstr "Vias breve"
 
 #: src/qml/Settings/SettingsWindow.qml:133
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Command"
 msgctxt "@action"
 msgid "Custom Commands"
-msgstr "Commando"
+msgstr "Commandos Personaliste"
 
 #: src/qml/Settings/SettingsWindow.qml:143
 msgctxt "@action"
