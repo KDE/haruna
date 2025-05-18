@@ -567,11 +567,8 @@ void MpvItem::onChapterChanged()
 
 void MpvItem::saveTimePosition()
 {
-    if (!PlaybackSettings::restoreFilePosition()) {
-        return;
-    }
     // position is saved only for files longer than PlaybackSettings::minDurationToSavePosition()
-    if (getProperty(MpvProperties::self()->Duration).toInt() < PlaybackSettings::minDurationToSavePosition() * 60) {
+    if (duration() < PlaybackSettings::minDurationToSavePosition() * 60) {
         return;
     }
 
@@ -580,9 +577,6 @@ void MpvItem::saveTimePosition()
 
 double MpvItem::loadTimePosition()
 {
-    if (!PlaybackSettings::restoreFilePosition()) {
-        return 0;
-    }
     PlaylistItem item{m_playlistModel->m_playlist[m_playlistModel->m_playingItem]};
     auto duration{item.duration};
 
