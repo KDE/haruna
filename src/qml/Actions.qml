@@ -284,19 +284,19 @@ Item {
 
             if (!aIsSet && !bIsSet) {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, root.m_mpv.position)
-                footerLoader.item.progressBar.loopIndicator.startPosition = root.m_mpv.position
+                footer.progressBar.loopIndicator.startPosition = root.m_mpv.position
                 root.m_osd.message(i18nc("@info:tooltip", "Loop start: %1", HarunaApp.formatTime(root.m_mpv.position)))
             } else if (aIsSet && !bIsSet) {
                 // set b position sligthly ahead to ensure the loop section is not skipped
                 const bPosition = root.m_mpv.position + 0.1
                 root.m_mpv.setPropertyBlocking(MpvProperties.ABLoopB, bPosition)
-                footerLoader.item.progressBar.loopIndicator.endPosition = bPosition
+                footer.progressBar.loopIndicator.endPosition = bPosition
                 root.m_osd.message(i18nc("@info:tooltip, use en dash for the range", "Loop: %1–%2", HarunaApp.formatTime(a), HarunaApp.formatTime(bPosition)))
             } else {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, "no")
                 root.m_mpv.setProperty(MpvProperties.ABLoopB, "no")
-                footerLoader.item.progressBar.loopIndicator.startPosition = -1
-                footerLoader.item.progressBar.loopIndicator.endPosition = -1
+                footer.progressBar.loopIndicator.startPosition = -1
+                footer.progressBar.loopIndicator.endPosition = -1
                 root.m_osd.message(i18nc("@info:tooltip", "Loop cleared"))
             }
         }
