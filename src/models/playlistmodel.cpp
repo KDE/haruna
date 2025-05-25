@@ -150,8 +150,13 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
                     appendItem(url);
                     setPlayingItem(0);
                 }
-            } else {
+            }
+            if (behaviour == Behaviour::Append) {
                 appendItem(url);
+            }
+            if (behaviour == Behaviour::AppendAndPlay) {
+                appendItem(url);
+                setPlayingItem(m_playlist.count() - 1);
             }
 
             return;
@@ -165,8 +170,13 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
             if (behaviour == Behaviour::Clear) {
                 appendItem(url);
                 setPlayingItem(0);
-            } else {
+            }
+            if (behaviour == Behaviour::Append) {
                 appendItem(url);
+            }
+            if (behaviour == Behaviour::AppendAndPlay) {
+                appendItem(url);
+                setPlayingItem(m_playlist.count() - 1);
             }
         }
     }

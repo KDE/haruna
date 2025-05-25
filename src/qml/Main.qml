@@ -289,10 +289,15 @@ ApplicationWindow {
         }
         function onOpenUrl(url) {
             if (GeneralSettings.appendVideoToSingleInstance) {
-                mpv.playlistModel.addItem(url.toString(), PlaylistModel.Append)
-            } else {
-                openFile(url)
+                let behavior = GeneralSettings.playNewFileInSingleInstance
+                    ? PlaylistModel.AppendAndPlay
+                    : PlaylistModel.Append
+
+                mpv.playlistModel.addItem(url.toString(), behavior)
+                return
             }
+
+            window.openFile(url)
         }
     }
 

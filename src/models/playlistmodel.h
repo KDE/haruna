@@ -76,6 +76,7 @@ public:
 
     enum Behaviour {
         Append,
+        AppendAndPlay,
         Clear,
     };
     Q_ENUM(Behaviour)

@@ -157,6 +157,20 @@ SettingsBasePage {
                 }
             }
         }
+
+        Item { Layout.preferredWidth: 1 }
+
+        CheckBox {
+            text: i18nc("@option:check", "Play new file")
+            checked: GeneralSettings.playNewFileInSingleInstance
+            enabled: GeneralSettings.useSingleInstance && GeneralSettings.appendVideoToSingleInstance
+            onClicked: {
+                GeneralSettings.playNewFileInSingleInstance = checked
+                GeneralSettings.save()
+            }
+        }
+
+
         SettingsHeader {
             text: i18nc("@title", "Interface")
             Layout.columnSpan: 2
