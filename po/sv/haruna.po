@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:41+0000\n"
+"POT-Creation-Date: 2025-05-26 00:41+0000\n"
 "PO-Revision-Date: 2025-03-26 17:51+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -933,7 +933,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:306
+#: src/qml/Main.qml:311
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -941,7 +941,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Välj fil"
 
-#: src/qml/Main.qml:325
+#: src/qml/Main.qml:330
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -949,7 +949,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Välj textningsfil"
 
-#: src/qml/Main.qml:345
+#: src/qml/Main.qml:350
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Öppna"
@@ -1527,22 +1527,30 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "Filen läggs till sist i spellistan"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:164
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Play new file"
+msgstr "Spela nästa fil"
+
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
 msgid "Interface"
 msgstr "Gränssnitt"
 
-#: src/qml/Settings/GeneralSettings.qml:167
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Sidfotsstil"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
 msgstr "Visa löskopplad sidfot vid"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:235
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1559,54 +1567,54 @@ msgstr ""
 "musrörelse över videoområdet<br><strong>Nedre musrörelse</strong> - "
 "musrörelse längst ner i videoområdet."
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Förhandsgranskningsminiatyrbild"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:248
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Visa förhandsgranskningsminiatyrbild"
 
-#: src/qml/Settings/GeneralSettings.qml:241
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 "Visar en förhandsgranskning när muspekaren hålls över sök- eller "
 "förloppsraden."
 
-#: src/qml/Settings/GeneralSettings.qml:250
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Använd naturtrogen förhandsgranskning"
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:281
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Att generera en naturtrogen förhandsgranskning går långsamt."
 
-#: src/qml/Settings/GeneralSettings.qml:277
+#: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Miniatyrbildens bredd"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@label"
 msgid "Window"
 msgstr "Fönster"
 
-#: src/qml/Settings/GeneralSettings.qml:301
+#: src/qml/Settings/GeneralSettings.qml:315
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Ändra storlek för att passa video"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Stöds inte på Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:320
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1615,12 +1623,12 @@ msgstr ""
 "Fönstrets storlek ändras enligt videons upplösning.\n"
 "Den maximala storleken begränsas inte, det överlämnas till operativsystemet."
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Starta i fullskärmsläge"
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1631,12 +1639,12 @@ msgstr ""
 "Det har företräde framför inställningarna Ändra storlek för att passa video "
 "och Kom ihåg fönsterstorlek och position."
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Kom ihåg fönsterstorlek och position"
 
-#: src/qml/Settings/GeneralSettings.qml:382
+#: src/qml/Settings/GeneralSettings.qml:396
 #, fuzzy
 #| msgctxt ""
 #| "@info:tooltip extra wayland info for the \"Remember window size and "
@@ -1648,7 +1656,7 @@ msgctxt ""
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>Återställa position stöds inte på Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:384
+#: src/qml/Settings/GeneralSettings.qml:398
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1664,38 +1672,38 @@ msgstr ""
 "fönster.<br><br>%1Inställningen \"Ändra storlek för att passa video\" har "
 "företräde."
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Visa menyrad"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:423
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Visa verktygsrad"
 
-#: src/qml/Settings/GeneralSettings.qml:420
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Visa kapitelmarkörer"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:443
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Färgschema"
 
-#: src/qml/Settings/GeneralSettings.qml:473
+#: src/qml/Settings/GeneralSettings.qml:487
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Stil för grafiskt användargränssnitt"
 
-#: src/qml/Settings/GeneralSettings.qml:524
+#: src/qml/Settings/GeneralSettings.qml:538
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Använd Breeze ikontema"
 
-#: src/qml/Settings/GeneralSettings.qml:532
+#: src/qml/Settings/GeneralSettings.qml:546
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

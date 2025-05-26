@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:41+0000\n"
+"POT-Creation-Date: 2025-05-26 00:41+0000\n"
 "PO-Revision-Date: 2023-12-13 07:56-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -947,7 +947,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:306
+#: src/qml/Main.qml:311
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -955,7 +955,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Selecionar arquivo"
 
-#: src/qml/Main.qml:325
+#: src/qml/Main.qml:330
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -963,7 +963,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Selecionar arquivo de legenda"
 
-#: src/qml/Main.qml:345
+#: src/qml/Main.qml:350
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"
@@ -1526,12 +1526,20 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "O arquivo será adicionado ao final da lista de reprodução"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:164
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Play new file"
+msgstr "Reproduzir próximo arquivo"
+
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interface"
 
-#: src/qml/Settings/GeneralSettings.qml:167
+#: src/qml/Settings/GeneralSettings.qml:181
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font style"
@@ -1539,12 +1547,12 @@ msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Estilo da fonte"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:235
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1552,37 +1560,37 @@ msgid ""
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Visualizar miniatura"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:248
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Mostrar miniatura de visualização"
 
-#: src/qml/Settings/GeneralSettings.qml:241
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:250
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Usar visualização precisa"
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:281
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "A geração de uma visualização precisa é lenta"
 
-#: src/qml/Settings/GeneralSettings.qml:277
+#: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:309
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Window"
@@ -1590,17 +1598,17 @@ msgctxt "@label"
 msgid "Window"
 msgstr "Janela"
 
-#: src/qml/Settings/GeneralSettings.qml:301
+#: src/qml/Settings/GeneralSettings.qml:315
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Redimensionar para caber no vídeo"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:320
+#: src/qml/Settings/GeneralSettings.qml:334
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1614,12 +1622,12 @@ msgstr ""
 "A janela é redimensionada de acordo com a resolução do vídeo.\n"
 "O tamanho máximo não é limitado, isso é deixado para o sistema operacional."
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1627,19 +1635,19 @@ msgid ""
 "position settings."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Lembrar a última posição e tamanho da janela"
 
-#: src/qml/Settings/GeneralSettings.qml:382
+#: src/qml/Settings/GeneralSettings.qml:396
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:384
+#: src/qml/Settings/GeneralSettings.qml:398
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1659,38 +1667,38 @@ msgstr ""
 "\n"
 "A configuração \"Redimensionar para caber no vídeo\" tem precedência.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Mostrar barra de menus"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:423
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostrar barra de ferramentas"
 
-#: src/qml/Settings/GeneralSettings.qml:420
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostrar marcadores de capítulo"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:443
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de cores"
 
-#: src/qml/Settings/GeneralSettings.qml:473
+#: src/qml/Settings/GeneralSettings.qml:487
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estilo da interface"
 
-#: src/qml/Settings/GeneralSettings.qml:524
+#: src/qml/Settings/GeneralSettings.qml:538
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Usa o tema dos ícones do Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:532
+#: src/qml/Settings/GeneralSettings.qml:546
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

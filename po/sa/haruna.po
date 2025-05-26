@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:41+0000\n"
+"POT-Creation-Date: 2025-05-26 00:41+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -934,7 +934,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारून"
 
-#: src/qml/Main.qml:306
+#: src/qml/Main.qml:311
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -942,7 +942,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "सञ्चिकां चिनोतु"
 
-#: src/qml/Main.qml:325
+#: src/qml/Main.qml:330
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -950,7 +950,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 
-#: src/qml/Main.qml:345
+#: src/qml/Main.qml:350
 msgctxt "@action:button"
 msgid "Open"
 msgstr "उद्घाटित"
@@ -1525,22 +1525,30 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "प्लेलिस्ट् इत्यस्य अन्ते सञ्चिका योजिता भविष्यति"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:164
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Play new file"
+msgstr "अग्रिमसञ्चिकां वादयन्तु"
+
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
 msgid "Interface"
 msgstr "अन्तरफलकम्"
 
-#: src/qml/Settings/GeneralSettings.qml:167
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "पादशैली"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
 msgstr "प्लवमानं पादलेखं दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:235
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1557,52 +1565,52 @@ msgstr ""
 "विडियो क्षेत्रस्य उपरि<br> <strong>अधः मूषकस्य गतिः</strong> - विडियोक्षेत्रस्य अधः "
 "मूषकस्य गतिः"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "पूर्वावलोकन लघुचित्र"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:248
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "पूर्वावलोकनलघुचित्रं दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:241
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "seek/progress bar इत्यत्र भ्रमन् पूर्वावलोकनं दर्शयति ।"
 
-#: src/qml/Settings/GeneralSettings.qml:250
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "सटीकपूर्वावलोकनस्य उपयोगं कुर्वन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:281
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "समीचीनं पूर्वावलोकनं जनयितुं मन्दं भवति"
 
-#: src/qml/Settings/GeneralSettings.qml:277
+#: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "लघुचित्रविस्तारः"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@label"
 msgid "Window"
 msgstr "कोष्ठ"
 
-#: src/qml/Settings/GeneralSettings.qml:301
+#: src/qml/Settings/GeneralSettings.qml:315
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "विडियो फिट् कर्तुं आकारं परिवर्तयन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "वेलैण्ड् इत्यत्र समर्थितं नास्ति ।"
 
-#: src/qml/Settings/GeneralSettings.qml:320
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1611,12 +1619,12 @@ msgstr ""
 "विण्डो इत्यस्य आकारः विडियो संकल्पानुसारं परिवर्तितः भवति ।\n"
 "अधिकतमः आकारः बाध्यः नास्ति, एतत् प्रचालनतन्त्राय अवशिष्टम् अस्ति ।"
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "पूर्णपर्दे मोड् मध्ये आरभत"
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1627,12 +1635,12 @@ msgstr ""
 "एतत् विडियो फिट् कर्तुं Resize इत्यस्य अपेक्षया प्राधान्यं प्राप्नोति, तथा च Remember "
 "window size and position settings इत्येतयोः अपेक्षया ।"
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "विण्डो आकारं स्थानं च स्मर्यताम्"
 
-#: src/qml/Settings/GeneralSettings.qml:382
+#: src/qml/Settings/GeneralSettings.qml:396
 #, fuzzy
 #| msgctxt ""
 #| "@info:tooltip extra wayland info for the \"Remember window size and "
@@ -1644,7 +1652,7 @@ msgctxt ""
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>वेलैण्ड् इत्यत्र स्थानस्य पुनर्स्थापनं समर्थितं नास्ति।</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:384
+#: src/qml/Settings/GeneralSettings.qml:398
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1659,38 +1667,38 @@ msgstr ""
 "विण्डो इत्यस्य आकारे स्थाने च परिवर्तनं रक्षितं भवति, नव उद्घाटितविण्डोषु च उपयुज्यते।"
 "<br><br>%1\"Resize to fit video\" सेटिंग् प्राधान्यं प्राप्नोति।"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "मेनूबारं दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:423
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "साधनपट्टिकां दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:420
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "अध्यायचिह्नानि दर्शयन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:443
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "वर्ण योजना"
 
-#: src/qml/Settings/GeneralSettings.qml:473
+#: src/qml/Settings/GeneralSettings.qml:487
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI शैली"
 
-#: src/qml/Settings/GeneralSettings.qml:524
+#: src/qml/Settings/GeneralSettings.qml:538
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Breeze चिह्न विषयस्य उपयोगं कुर्वन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:532
+#: src/qml/Settings/GeneralSettings.qml:546
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

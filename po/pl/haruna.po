@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:41+0000\n"
+"POT-Creation-Date: 2025-05-26 00:41+0000\n"
 "PO-Revision-Date: 2025-01-18 11:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -934,7 +934,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:306
+#: src/qml/Main.qml:311
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -942,7 +942,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Wybierz plik"
 
-#: src/qml/Main.qml:325
+#: src/qml/Main.qml:330
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -950,7 +950,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Zaznacz plik napisów"
 
-#: src/qml/Main.qml:345
+#: src/qml/Main.qml:350
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otwórz"
@@ -1529,22 +1529,30 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "Plik zostanie dodany do końca listy odtwarzania"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:164
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Play new file"
+msgstr "Odtwórz następny plik"
+
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfejs"
 
-#: src/qml/Settings/GeneralSettings.qml:167
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Wygląd stopki"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
 msgstr "Pokaż pływającą stopkę na"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:235
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1561,52 +1569,52 @@ msgstr ""
 "każdy ruch myszy na całym obrazie<br> <strong>Ruch myszy na dole</strong> - "
 "ruch myszy na dolnej części obrazu"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Podgląd miniatur"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:248
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Pokaż miniaturę podglądu"
 
-#: src/qml/Settings/GeneralSettings.qml:241
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "Pokazuje podgląd po najechaniu na pasek przewijania/postępu."
 
-#: src/qml/Settings/GeneralSettings.qml:250
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Użyj dokładnego podglądu"
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:281
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Budowanie dokładnego podglądu jest wolne"
 
-#: src/qml/Settings/GeneralSettings.qml:277
+#: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Szerokość miniatury"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@label"
 msgid "Window"
 msgstr "Okno"
 
-#: src/qml/Settings/GeneralSettings.qml:301
+#: src/qml/Settings/GeneralSettings.qml:315
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Dopasuj do rozmiaru obrazu"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Nieobsługiwane na Waylandzie."
 
-#: src/qml/Settings/GeneralSettings.qml:320
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1616,12 +1624,12 @@ msgstr ""
 "Największy rozmiar nie jest ograniczany, bo jest to pozostawiane systemowi "
 "operacyjnemu."
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Uruchom na całym ekranie"
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1632,12 +1640,12 @@ msgstr ""
 "Ustawienie to ma pierwszeństwo przez dostosowaniem rozmiaru do obrazu oraz "
 "pamiętania okna i jego położenia."
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Zapamiętaj rozmiar i położenie okna"
 
-#: src/qml/Settings/GeneralSettings.qml:382
+#: src/qml/Settings/GeneralSettings.qml:396
 #, fuzzy
 #| msgctxt ""
 #| "@info:tooltip extra wayland info for the \"Remember window size and "
@@ -1650,7 +1658,7 @@ msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 "<b>Przywracanie położenia jest nieobsługiwane na Waylandzie.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:384
+#: src/qml/Settings/GeneralSettings.qml:398
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1666,38 +1674,38 @@ msgstr ""
 "otwieranych okien.<br> <br> %1. Ustawienie \"Dostosuj, aby zmieścić obraz\" "
 "ma pierwszeństwo."
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Pokaż pasek menu"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:423
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Pokaż pasek narzędzi"
 
-#: src/qml/Settings/GeneralSettings.qml:420
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Pokaż znaczniki rozdziałów"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:443
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Zestaw barw"
 
-#: src/qml/Settings/GeneralSettings.qml:473
+#: src/qml/Settings/GeneralSettings.qml:487
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Wygląd interfejsu"
 
-#: src/qml/Settings/GeneralSettings.qml:524
+#: src/qml/Settings/GeneralSettings.qml:538
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Użyj zestawu ikon Bryzy"
 
-#: src/qml/Settings/GeneralSettings.qml:532
+#: src/qml/Settings/GeneralSettings.qml:546
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"

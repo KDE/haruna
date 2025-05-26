@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:41+0000\n"
+"POT-Creation-Date: 2025-05-26 00:41+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -933,7 +933,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:306
+#: src/qml/Main.qml:311
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -941,7 +941,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Elekti dosieron"
 
-#: src/qml/Main.qml:325
+#: src/qml/Main.qml:330
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -949,7 +949,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Elekti subtitolan dosieron"
 
-#: src/qml/Main.qml:345
+#: src/qml/Main.qml:350
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Malfermi"
@@ -1528,22 +1528,30 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist"
 msgstr "Dosiero estos aldonita al la fino de la ludlisto"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:164
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Play new file"
+msgstr "Ludi sekvantan dosieron"
+
+#: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfaco"
 
-#: src/qml/Settings/GeneralSettings.qml:167
+#: src/qml/Settings/GeneralSettings.qml:181
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Piedlinia stilo"
 
-#: src/qml/Settings/GeneralSettings.qml:192
+#: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
 msgstr "Montri flosantan piedlinion je"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:235
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1560,52 +1568,52 @@ msgstr ""
 "super la filmeta areo<br><strong>Musmovado malsupre</strong> - movo de muso "
 "sur la fundo de la filmeta areo"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Antaŭrigardi bildeton"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:248
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Montri antaŭrigardan bildeton"
 
-#: src/qml/Settings/GeneralSettings.qml:241
+#: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "Montras antaŭrigardpm dum ŝvebo de la serĉ-/progres-breto."
 
-#: src/qml/Settings/GeneralSettings.qml:250
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Uzi precizan antaŭrigardon"
 
-#: src/qml/Settings/GeneralSettings.qml:267
+#: src/qml/Settings/GeneralSettings.qml:281
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Generado de preciza antaŭrigardo estas malrapida"
 
-#: src/qml/Settings/GeneralSettings.qml:277
+#: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Larĝeco de bildeto"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@label"
 msgid "Window"
 msgstr "Fenestro"
 
-#: src/qml/Settings/GeneralSettings.qml:301
+#: src/qml/Settings/GeneralSettings.qml:315
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Aligrandigi por konveni filmeteon"
 
-#: src/qml/Settings/GeneralSettings.qml:319
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Nesubtenata en Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:320
+#: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1615,12 +1623,12 @@ msgstr ""
 "La maksimuma grandeco ne estas limigita, ĉi tio estas lasita al la "
 "operaciumo."
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Komenci en plenekrana reĝimo"
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1631,12 +1639,12 @@ msgstr ""
 "Ĉi tio havas prioritaton super Aligrandigi por konveni videon, kaj Memori "
 "fenestrograndecon kaj pozicio-agordojn."
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Memori fenestrograndecon kaj pozicion"
 
-#: src/qml/Settings/GeneralSettings.qml:382
+#: src/qml/Settings/GeneralSettings.qml:396
 #, fuzzy
 #| msgctxt ""
 #| "@info:tooltip extra wayland info for the \"Remember window size and "
@@ -1648,7 +1656,7 @@ msgctxt ""
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>Restaŭro de pozicio ne estas subtenata en Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:384
+#: src/qml/Settings/GeneralSettings.qml:398
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1664,38 +1672,38 @@ msgstr ""
 "nove malfermataj fenestroj.<br><br>%1La agordo \"Aligrandigi por konveni "
 "filmeton\" havas prioritaton."
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Montri menubreton"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:423
 #: src/qml/Settings/PlaylistSettings.qml:77
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Montri ilobreton"
 
-#: src/qml/Settings/GeneralSettings.qml:420
+#: src/qml/Settings/GeneralSettings.qml:434
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Montri ĉapitrajn markilojn"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/qml/Settings/GeneralSettings.qml:443
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kolorskemo"
 
-#: src/qml/Settings/GeneralSettings.qml:473
+#: src/qml/Settings/GeneralSettings.qml:487
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI-stilo"
 
-#: src/qml/Settings/GeneralSettings.qml:524
+#: src/qml/Settings/GeneralSettings.qml:538
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Uzi Breeze-piktogrametoson"
 
-#: src/qml/Settings/GeneralSettings.qml:532
+#: src/qml/Settings/GeneralSettings.qml:546
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
