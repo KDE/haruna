@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-26 00:41+0000\n"
-"PO-Revision-Date: 2025-01-18 11:45+0100\n"
+"PO-Revision-Date: 2025-05-31 09:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,13 +41,11 @@ msgid "Media player"
 msgstr "Odtwarzacz multimedialny"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2025"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2025"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -208,9 +207,7 @@ msgid "Add External Subtitle…"
 msgstr "Dodaj napisy zewnętrzne…"
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "Otwórz adres URL"
@@ -453,13 +450,13 @@ msgstr "Przesuń film w dół"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Obróć w prawo"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Obrót w lewo"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -638,16 +635,11 @@ msgid "Audio: %1 %2"
 msgstr "Dźwięk: %1 %2"
 
 #: src/qml/Actions.qml:163
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can't load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr "Nie można wczytać napisu, gdy plik nie jest otwarty"
+msgstr "Nie można wczytać napisu, gdy żaden plik nie jest otwarty"
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
 msgctxt "@info:tooltip"
@@ -660,12 +652,9 @@ msgid "Loop start: %1"
 msgstr "Zapętlij początek: %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "Zapętlij: %1 - %2"
+msgstr "Zapętlij: %1–%2"
 
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
@@ -753,17 +742,11 @@ msgid "Saturation: 0"
 msgstr "Nasycenie: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Rozpocznij odtwarzanie"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Wstrzymaj odtwarzanie"
@@ -789,12 +772,9 @@ msgid "Select a color"
 msgstr "Wybierz barwę"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr "Wybierz barwę"
+msgstr "Wybierz kolor"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -835,17 +815,11 @@ msgstr ""
 "ani <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "Wczytaj napisy z"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "Potwierdź usunięcie"
@@ -861,16 +835,10 @@ msgid "Save changes"
 msgstr "Zapisz zmiany"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Katalog ustawień"
+msgstr "Nie ustawiono żadnego katalogu"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Dodaj nowy katalog"
@@ -881,12 +849,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr "Dodaj katalog, w którym poszukać napisów."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Zaznacz plik napisów"
+msgstr "Poszukaj napisów wgłąb"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -894,6 +859,8 @@ msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
+"Napisy są wyszukiwane wgłąb w ustawieniach “%1”.\n"
+"Tylko względne katalogi są wyszukiwane."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -916,18 +883,13 @@ msgid "Skip Chapters"
 msgstr "Pomiń rozdziały"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
 "Sam pomija rozdziały, zawierające pewne słowa/znaki.\n"
-"Zajrzyj do ustawień 'Odtwarzania' po więcej szczegółów"
+"Zajrzyj do ustawień “Odtwarzania“ po więcej szczegółów."
 
 #: src/qml/Main.qml:29
 msgctxt "@title:window"
@@ -935,20 +897,14 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:311
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Wybierz plik"
 
 #: src/qml/Main.qml:330
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
-msgstr "Zaznacz plik napisów"
+msgstr "Wybierz plik napisów"
 
 #: src/qml/Main.qml:350
 msgctxt "@action:button"
@@ -1111,9 +1067,6 @@ msgid "Show Toolbar"
 msgstr "Pokaż pasek narzędzi"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Szybkość odtwarzania"
@@ -1124,9 +1077,6 @@ msgid "Volume: %1"
 msgstr "Głośność: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Otwórz listę odtwarzania"
@@ -1134,7 +1084,7 @@ msgstr "Otwórz listę odtwarzania"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Dodaj…"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1144,7 +1094,7 @@ msgstr "Plik"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "Adres URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1152,33 +1102,21 @@ msgid "Sort"
 msgstr "Uszereguj"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Nazwa, rosnąco"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Nazwa, malejąco"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Czas trwania rosnąco"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Czas trwania malejąco"
@@ -1189,9 +1127,6 @@ msgid "Clear"
 msgstr "Wyczyść"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Zapisz jako"
@@ -1202,49 +1137,31 @@ msgid "Add"
 msgstr "Dodaj"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
-msgstr "Otwórz katalog zawierający"
+msgstr "Otwórz jego katalog"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Otwórz w przeglądarce"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Skopiuj nazwę"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Skopiuj ścieżkę"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Skopiuj adres URL"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Usuń z listy odtwarzania"
@@ -1255,9 +1172,6 @@ msgid "Rename"
 msgstr "Przemianuj"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Przewiń do odtwarzanej rzeczy"
@@ -1265,7 +1179,7 @@ msgstr "Przewiń do odtwarzanej rzeczy"
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Przenieś plik do kosza"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1301,9 +1215,6 @@ msgid "No custom commands yet"
 msgstr "Nie ma jeszcze żadnego własnego polecenia"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "Dod&aj polecenie"
@@ -1477,11 +1388,6 @@ msgid "File dialog location"
 msgstr "Położenie okna pliku"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
@@ -1496,9 +1402,6 @@ msgid "Maximum recent files"
 msgstr "Najwięcej ostatnich plików"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr "Ile ostatnich plików zapamiętać. Wpisz 0 (zero), aby wyłączyć."
@@ -1530,9 +1433,6 @@ msgid "File will be added to the end of the playlist"
 msgstr "Plik zostanie dodany do końca listy odtwarzania"
 
 #: src/qml/Settings/GeneralSettings.qml:164
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "Odtwórz następny plik"
@@ -1553,20 +1453,14 @@ msgid "Show floating footer on"
 msgstr "Pokaż pływającą stopkę na"
 
 #: src/qml/Settings/GeneralSettings.qml:235
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "What action shows the footer.<br><strong>Every mouse movement</strong> - "
-#| "every mouse movement over the video area<br><strong>Bottom mouse "
-#| "movement</strong> - mouse movement on the bottom of the video area"
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
-"Jakie działanie pokazuje stopka.<br> <strong>Każdy ruch myszy</strong> - "
-"każdy ruch myszy na całym obrazie<br> <strong>Ruch myszy na dole</strong> - "
+"Jakie działanie pokazuje stopka.<br> <strong>Każdy ruch myszy</strong> — "
+"każdy ruch myszy na całym obrazie<br> <strong>Ruch myszy na dole</strong> — "
 "ruch myszy na dolnej części obrazu"
 
 #: src/qml/Settings/GeneralSettings.qml:243
@@ -1646,11 +1540,6 @@ msgid "Remember window size and position"
 msgstr "Zapamiętaj rozmiar i położenie okna"
 
 #: src/qml/Settings/GeneralSettings.qml:396
-#, fuzzy
-#| msgctxt ""
-#| "@info:tooltip extra wayland info for the \"Remember window size and "
-#| "position\" setting"
-#| msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
@@ -1659,20 +1548,14 @@ msgstr ""
 "<b>Przywracanie położenia jest nieobsługiwane na Waylandzie.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:398
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Changes to the window's size and position are saved and used for newly "
-#| "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-#| "precedence."
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
 "opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 "Zmiany w rozmiarze i położeniu okna są zapisywane i stosowane dla nowo-"
-"otwieranych okien.<br> <br> %1. Ustawienie \"Dostosuj, aby zmieścić obraz\" "
-"ma pierwszeństwo."
+"otwieranych okien.<br> <br> %1. Ustawienie “Dostosuj, aby zmieścić obraz“ ma "
+"pierwszeństwo."
 
 #: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
@@ -1725,9 +1608,6 @@ msgid "Clear action"
 msgstr "Wyczyść działanie"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
 msgstr "Naciśnij dwukrotnie, aby ustawić działanie"
@@ -1788,26 +1668,6 @@ msgid "Hardware decoding"
 msgstr "Dekodowanie sprzętowe"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
-#, fuzzy
-#| msgctxt "@info:tooltip hardware decoding setting"
-#| msgid ""
-#| "Specify the hardware video decoding API that should be used if possible. "
-#| "Whether hardware decoding is actually done depends on the video codec. If "
-#| "hardware decoding is not possible, mpv will fall back on software "
-#| "decoding.<br><br><ul><li><strong>auto</strong> tries to automatically "
-#| "enable hardware decoding using the first available method.</"
-#| "li><li><strong>auto-safe</strong> similar to auto, but allows only "
-#| "whitelisted methods that are considered \"safe\".</li><li><strong>vaapi</"
-#| "strong> works with Intel and AMD GPUs only. It also requires the opengl "
-#| "EGL backend.</li><li><strong>nvdec</strong> the newest, and recommended "
-#| "method to do hardware decoding on Nvidia GPUs.</li><li><strong>cuda</"
-#| "strong> an older implementation of hardware decoding on Nvidia GPUs.</"
-#| "li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></"
-#| "li></ul><br><br>You can read more about hardware decoding here: <a "
-#| "href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
-#| "stable/#options-hwdec</a><br><br>You can set another hardware decoder by "
-#| "creating a startup custom command <strong>set hwdec <i>decoder_name</i></"
-#| "strong>."
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1832,7 +1692,7 @@ msgstr ""
 "dekodowania programowego.<br><br><ul><li><strong>auto</strong> próbuje sam "
 "włączyć sprzętowe dekodowanie przy użyciu pierwszego dostępnego wyboru.</"
 "li><li><strong>auto-safe</strong> podobne do auto, lecz zezwala tylko na "
-"wybory, które są na liście dozwolonych tzn. uznanych za \"bezpieczne\".</"
+"wybory, które są na liście dozwolonych tzn. uznanych za “bezpieczne“.</"
 "li><li><strong>vaapi</strong> działa tylko na kartach graficznych Intela "
 "oraz AMD. Wymaga także silnika OpenGL EGL.</li><li><strong>nvdec</strong> "
 "najnowszy i zalecany wybór na kartach graficznych NVIDII.</"
@@ -2130,9 +1990,6 @@ msgid "Shortcuts"
 msgstr "Skróty"
 
 #: src/qml/Settings/SettingsWindow.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Własne polecenia"
@@ -2148,9 +2005,6 @@ msgid "About"
 msgstr "O programie"
 
 #: src/qml/Settings/SubtitlesSettings.qml:35
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Auto select track"
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Sam wybierz ścieżkę"
@@ -2254,11 +2108,6 @@ msgid "path to image"
 msgstr "ścieżka do obrazu"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
@@ -2283,41 +2132,6 @@ msgid "Template"
 msgstr "Wzorzec"
 
 #: src/qml/Settings/VideoSettings.qml:160
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Specify the filename template used to save screenshots. The template "
-#| "specifies the filename without file extension, and can contain format "
-#| "specifiers, which will be substituted when taking a screenshot. By "
-#| "default, the template is \"%F-%n\". <br>The template can start with a "
-#| "relative or absolute path, in order to specify a directory location where "
-#| "screenshots should be saved.<br>If the final screenshot filename points "
-#| "to an already existing file, the file will not be overwritten. The "
-#| "screenshot will either not be saved, or if the template contains %n, "
-#| "saved using different, newly generated filename.<br>For full info "
-#| "checkout <a href='https://mpv.io/manual/stable/#options-screenshot-"
-#| "template'>https://mpv.io/manual/stable/#options-screenshot-template</"
-#| "a><br><br><strong>Allowed format specifiers:</strong><br><ul><li><strong>"
-#| "%[#][0X]n</strong> A sequence number, padded with zeros to length X."
-#| "<br><li><strong>%f</strong> Filename of the currently played video."
-#| "<br><li><strong>%F</strong> Same as %f, but without the file extension."
-#| "<br><li><strong>%x</strong> Directory path of the currently played video. "
-#| "If the video is not on the filesystem (http:// urls), this expands to an "
-#| "empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
-#| "video file is not on the filesystem, return the fallback string inside "
-#| "the {...}.<br><li><strong>%p</strong> Current playback time. The result "
-#| "is a string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar "
-#| "to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm"
-#| "\".<br><li><strong>%wX</strong> Specify the current playback time using "
-#| "the format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</"
-#| "strong> hour (padded with 0 to two digits)</li><li><strong>%wh</strong> "
-#| "hour (not padded)</li><li><strong>%wM</strong> minutes (00-59)</"
-#| "li><li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</"
-#| "li><li><strong>%wS</strong> seconds (00-59)</li><li><strong>%ws</strong> "
-#| "total seconds (includes hours and minutes)</li><li><strong>%wf</strong> "
-#| "like %ws, but as float</li><li><strong>%wT</strong> milliseconds "
-#| "(000-999)</li><li><strong>%%</strong> Replaced with the % character "
-#| "itself.</li></ul><br>"
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -2353,8 +2167,8 @@ msgid ""
 msgstr ""
 "Określ wzorzec nazwy pliku używany do zapisywania zrzutów ekranów. Wzorzec "
 "określa nazwę pliku bez jego rozszerzenia i może zawierać znaki zastępcze, "
-"które zostaną zastąpione po zrobieniu zrzutu. Domyślnie wzorzec ten to \"%F-"
-"%n\". <br>Wzorzec może zaczynać się od ścieżki względnej lub bezwzględnej "
+"które zostaną zastąpione po zrobieniu zrzutu. Domyślnie wzorzec ten to “%F-"
+"%n“. <br>Wzorzec może zaczynać się od ścieżki względnej lub bezwzględnej "
 "przy wskazywaniu katalogu, do którego zapisać zrzuty.<br>Jeśli nazwa zrzutu "
 "wskazuje na już istniejący plik, to nie zostanie on zastąpiony. Zrzut nie "
 "zostanie wtedy zapisany, chyba że wzorzec zawiera %n.<br>Po więcej "
