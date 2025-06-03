@@ -320,6 +320,16 @@ void MpvItem::onEndFile(const QString &reason)
         Q_EMIT osdMessage(i18nc("@info:tooltip", "Could not play: %1", title.toString()));
     }
 
+    auto reopenLastFilePaused = [this]() {
+        setPropertyBlocking(MpvProperties::self()->Pause, true);
+        Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
+    };
+
+    if (!PlaylistSettings::autoplay()) {
+        reopenLastFilePaused();
+        return;
+    }
+
     if (!playlistProxyModel()->isLastItem(currentItem)) {
         playlistProxyModel()->playNext();
         return;
@@ -333,8 +343,7 @@ void MpvItem::onEndFile(const QString &reason)
     }
 
     // repeat is off -> reopen the last file paused
-    setPropertyBlocking(MpvProperties::self()->Pause, true);
-    Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
+    reopenLastFilePaused();
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
