@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:41+0000\n"
+"POT-Creation-Date: 2025-06-04 00:42+0000\n"
 "PO-Revision-Date: 2025-05-31 09:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -582,38 +582,38 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Nie można odtworzyć: %1"
 
-#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
+#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Czas napisu: %1 sekund"
 
-#: src/mpv/mpvitem.cpp:455
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Brak"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Nie udało się zrzucić ekranu"
 
-#: src/mpv/mpvitem.cpp:499
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Zrobiono zrzut ekranu"
 
-#: src/mpv/mpvitem.cpp:501
+#: src/mpv/mpvitem.cpp:510
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Zrzut ekranu: %1"
 
-#: src/mpv/mpvitem.cpp:528
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -623,7 +623,7 @@ msgstr ""
 "Nie wykryto żadnej ścieżki obrazu, co prawdopodobnie jest oznaką, że ścieżki "
 "takiej nie można zdekodować/odtworzyć ze względu na brakujący kodek"
 
-#: src/mpv/mpvitem.cpp:561
+#: src/mpv/mpvitem.cpp:570
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1912,30 +1912,40 @@ msgstr "Sam wczytuj filmy z tego samego katalogu"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
+msgid "Autoplay"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:128
+msgctxt "@info:tooltip"
+msgid "When checked the next video will play automatically"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:136
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Powtórz"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:146
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Pokaż numer wiersza"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Przełącz przy użyciu myszy"
 
-#: src/qml/Settings/PlaylistSettings.qml:150
+#: src/qml/Settings/PlaylistSettings.qml:165
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Zwiększ rozmiar czcionki w trybie pełnoekranowym"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Zapamiętaj ostatni stan listy odtwarzania"
 
-#: src/qml/Settings/PlaylistSettings.qml:170
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -1944,7 +1954,7 @@ msgstr ""
 "Po zaznaczeniu stan listy odtwarzania (widoczna/ukryta) będzie zapamiętywany "
 "pomiędzy uruchomieniami"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Otwieraj rzeczy jednokrotnym naciśnięciem"

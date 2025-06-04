@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:41+0000\n"
+"POT-Creation-Date: 2025-06-04 00:42+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -583,38 +583,38 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Ne eblis ludi: %1"
 
-#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
+#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Subtitola tempumado: %1 sekundoj"
 
-#: src/mpv/mpvitem.cpp:455
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Neniu"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekrankopio malsukcesis"
 
-#: src/mpv/mpvitem.cpp:499
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekrankopio prenita"
 
-#: src/mpv/mpvitem.cpp:501
+#: src/mpv/mpvitem.cpp:510
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Ekrankopio: %1"
 
-#: src/mpv/mpvitem.cpp:528
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -624,7 +624,7 @@ msgstr ""
 "Neniu videotrako detektita, plej verŝajne la videotrako ne povas esti "
 "malkodita/ludata pro mankantaj kodekoj"
 
-#: src/mpv/mpvitem.cpp:561
+#: src/mpv/mpvitem.cpp:570
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -2047,30 +2047,40 @@ msgstr "Aŭtomate ŝargi filmetojn el la sama dosierujo"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
+msgid "Autoplay"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:128
+msgctxt "@info:tooltip"
+msgid "When checked the next video will play automatically"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:136
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Ripeti"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:146
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Montri numeron de vico"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Baskuligi per muso"
 
-#: src/qml/Settings/PlaylistSettings.qml:150
+#: src/qml/Settings/PlaylistSettings.qml:165
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Pliigi tiparograndon kiam plenekrana"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Memori la lastan staton de ludlisto"
 
-#: src/qml/Settings/PlaylistSettings.qml:170
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2078,7 +2088,7 @@ msgid ""
 msgstr ""
 "Kiam markita, la ludlista stato (videbla/kaŝita) estas memorita tra lanĉoj"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Malfermi erojn per sola klako"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:41+0000\n"
+"POT-Creation-Date: 2025-06-04 00:42+0000\n"
 "PO-Revision-Date: 2025-05-27 18:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -580,38 +580,38 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
-#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
+#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "توقيت الترجمة:  : %1ث"
 
-#: src/mpv/mpvitem.cpp:455
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "لا يوجد"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "فشل أخذ اللقطة"
 
-#: src/mpv/mpvitem.cpp:499
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
-#: src/mpv/mpvitem.cpp:501
+#: src/mpv/mpvitem.cpp:510
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
 
-#: src/mpv/mpvitem.cpp:528
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -621,7 +621,7 @@ msgstr ""
 "لم يكتشف أي مسار فيديو، وعلى الأرجح لا يمكن فك تشفير/تشغيل مسار الفيديو بسبب "
 "فقدان برامج الترميز"
 
-#: src/mpv/mpvitem.cpp:561
+#: src/mpv/mpvitem.cpp:570
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1913,30 +1913,40 @@ msgstr "تحميل آلي للفيدوهات من نفس المجلد"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
+msgid "Autoplay"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:128
+msgctxt "@info:tooltip"
+msgid "When checked the next video will play automatically"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:136
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr "التكرار"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:146
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "أظهر رقم الصف"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "بدّل بالفأرة"
 
-#: src/qml/Settings/PlaylistSettings.qml:150
+#: src/qml/Settings/PlaylistSettings.qml:165
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "زِد حجم الخطّ في ملء الشاشة"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "تذكر آخر حالة لقائمة التشغيل"
 
-#: src/qml/Settings/PlaylistSettings.qml:170
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -1945,7 +1955,7 @@ msgstr ""
 "عندما تختاره سيتذكر البرنامج حالة قائمة التشغيل (مرئية/مخفية) بين كل تشغيله "
 "للبرنامج وأخرى"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "افتح العناصر بنقرة واحدة"

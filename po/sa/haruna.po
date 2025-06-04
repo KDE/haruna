@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:41+0000\n"
+"POT-Creation-Date: 2025-06-04 00:42+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -585,38 +585,38 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "क्रीडितुं न शक्तवान्: %1"
 
-#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
+#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षकसमयः %1 सेकण्ड्"
 
-#: src/mpv/mpvitem.cpp:455
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "न कश्चित्"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट् विफलम् अभवत्"
 
-#: src/mpv/mpvitem.cpp:499
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट् गृहीतम्"
 
-#: src/mpv/mpvitem.cpp:501
+#: src/mpv/mpvitem.cpp:510
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट्: %1"
 
-#: src/mpv/mpvitem.cpp:528
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -626,7 +626,7 @@ msgstr ""
 "कोऽपि विडियो ट्रैकः न ज्ञातः, अधिकतया विडियो ट्रैकः गम्यमानस्य कोडेक्स् इत्यस्य कारणेन "
 "डिकोड्/वादयितुं न शक्यते"
 
-#: src/mpv/mpvitem.cpp:561
+#: src/mpv/mpvitem.cpp:570
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -2029,37 +2029,47 @@ msgstr "एकस्मिन् एव समुच्चय तः विड�
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
+msgid "Autoplay"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:128
+msgctxt "@info:tooltip"
+msgid "When checked the next video will play automatically"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:136
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr "परिहरन"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:146
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "पङ्क्तिसङ्ख्यां दर्शयतु"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "मूषकेन सह टॉगलं कुर्वन्तु"
 
-#: src/qml/Settings/PlaylistSettings.qml:150
+#: src/qml/Settings/PlaylistSettings.qml:165
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "पूर्णपर्दे फ़ॉन्ट आकारं वर्धयन्तु"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "अन्तिम प्लेलिस्ट् अवस्थां स्मर्यताम्"
 
-#: src/qml/Settings/PlaylistSettings.qml:170
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "यदा परीक्षितं भवति तदा प्लेलिस्ट् स्थितिः (दृश्यमानः/गुप्तः) प्रक्षेपणेषु स्मर्यते"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "एकेन क्लिक् कृत्वा वस्तूनि उद्घाटयन्तु"

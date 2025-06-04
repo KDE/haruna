@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
 # Мария Шикунова <translation-team@basealt.ru>, 2021, 2022, 2023.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2025 Mariya Shikunova <maremarie@altlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:41+0000\n"
-"PO-Revision-Date: 2023-12-27 10:11+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"POT-Creation-Date: 2025-06-04 00:42+0000\n"
+"PO-Revision-Date: 2025-06-02 17:12+0300\n"
+"Last-Translator: Mariya Shikunova <maremarie@altlinux.org>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -31,29 +32,23 @@ msgstr ""
 "translation-team@basealt.ru, kekcuha@gmail.com, translation-team@basealt.ru"
 
 #: src/application.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Проигрыватель Haruna"
+msgstr "Медиапроигрыватель"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2023"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -71,16 +66,20 @@ msgstr "Разработчик"
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr ""
+"Многофункциональное средство для получения аудио- и видеоданных с "
+"управлением из командной строки"
 
 #: src/application.cpp:146
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Видеоплеер с управлением из командной строки"
 
 #: src/application.cpp:152
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Кроссплатформенное решение для записи, преобразования и потоковой передачи "
+"аудио и видео."
 
 #: src/application.cpp:164
 #, kde-format
@@ -126,15 +125,13 @@ msgstr "О программе Haruna"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Сообщить об ошибке"
 
 #: src/models/actionsmodel.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "О программе Haruna"
+msgstr "Проспонсировать Haruna"
 
 #: src/models/actionsmodel.cpp:51
 #, kde-format
@@ -149,9 +146,7 @@ msgid "Audio Cycle Down"
 msgstr "Ниже в цикле звука"
 
 #: src/models/actionsmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "Настройка"
@@ -217,9 +212,7 @@ msgid "Add External Subtitle…"
 msgstr "Открыть внешние субтитры…"
 
 #: src/models/actionsmodel.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "Открыть URL"
@@ -462,13 +455,13 @@ msgstr "Переместить видео вниз"
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Повернуть по часовой стрелке"
 
 #: src/models/actionsmodel.cpp:425
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Повернуть против часовой стрелки"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -594,48 +587,48 @@ msgctxt "@info:tooltip"
 msgid "Could not play: %1"
 msgstr "Не удалось воспроизвести: %1"
 
-#: src/mpv/mpvitem.cpp:403 src/mpv/mpvitem.cpp:405
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Синхронизация субтитров: %1"
+msgstr "Время субтитров: %1 секунд"
 
-#: src/mpv/mpvitem.cpp:455
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Нет"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Не удалось сделать снимок экрана"
 
-#: src/mpv/mpvitem.cpp:499
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Снимок экрана сделан"
 
-#: src/mpv/mpvitem.cpp:501
+#: src/mpv/mpvitem.cpp:510
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot: %1"
 msgstr "Снимок экрана: %1"
 
-#: src/mpv/mpvitem.cpp:528
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"Видеодорожка не обнаружена, возможно, по причине того, что для декодирования "
+"или воспроизведения не хватает кодеков"
 
-#: src/mpv/mpvitem.cpp:561
+#: src/mpv/mpvitem.cpp:570
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -651,7 +644,7 @@ msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr ""
+msgstr "Невозможно загрузить субтитры, если файл не открыт"
 
 #: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
 msgctxt "@info:tooltip"
@@ -664,9 +657,6 @@ msgid "Loop start: %1"
 msgstr "Начало повтора: %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Повтор: %1 — %2"
@@ -682,12 +672,9 @@ msgid "Subtitles off"
 msgstr "Выключить субтитры"
 
 #: src/qml/Actions.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Выключить субтитры"
+msgstr "Включить субтитры"
 
 #: src/qml/Actions.qml:329 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
@@ -760,17 +747,11 @@ msgid "Saturation: 0"
 msgstr "Насыщенность: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Начать воспроизведение"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Приостановить воспроизведение"
@@ -796,12 +777,9 @@ msgid "Select a color"
 msgstr "Выберите цвет"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr "Выберите цвет"
+msgstr "Выбор цвета"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -823,12 +801,9 @@ msgid "Secondary Subtitle"
 msgstr "Второстепенные субтитры"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:98
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "&Аудиодорожка"
+msgstr "Аудиодорожка"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:121
 msgctxt "@action:inmenu"
@@ -845,20 +820,14 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "Загрузка субтитров из"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
-msgstr "Подтверждение удаления"
+msgstr "Подтвердить удаление"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:116
 msgctxt "@info:tooltip"
@@ -871,16 +840,10 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Папка конфигурации"
+msgstr "Папка не указана"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Добавить новую папку"
@@ -888,15 +851,12 @@ msgstr "Добавить новую папку"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
 msgctxt "@info:tooltip add new sutbtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Добавить папку с субтитрами."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Выбор файла субтитров"
+msgstr "Искать субтитры рекурсивно"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -904,6 +864,8 @@ msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
+"С параметром «%1» поиск субтитров будет выполняться рекурсивно.\n"
+"Поиск будет производиться только в относительных папках."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -916,12 +878,9 @@ msgid "Audio"
 msgstr "Аудио"
 
 #: src/qml/HProgressBar.qml:42
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Пропустить разделы"
+msgstr "Открыть меню разделов"
 
 #: src/qml/HProgressBar.qml:291
 msgctxt "@action:inmenu"
@@ -929,17 +888,12 @@ msgid "Skip Chapters"
 msgstr "Пропустить разделы"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
-"Автоматически пропускает главы, содержащие указанные слова или символы.\n"
+"Автоматически пропускает разделы, содержащие указанные слова или символы.\n"
 "Более подробная информация содержится в параметрах воспроизведения"
 
 #: src/qml/Main.qml:29
@@ -948,17 +902,11 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:311
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Выберите файл"
 
 #: src/qml/Main.qml:330
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Выбор файла субтитров"
@@ -1124,9 +1072,6 @@ msgid "Show Toolbar"
 msgstr "Показывать панель инструментов"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Скорость воспроизведения"
@@ -1137,9 +1082,6 @@ msgid "Volume: %1"
 msgstr "Громкость: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Открыть список воспроизведения"
@@ -1147,7 +1089,7 @@ msgstr "Открыть список воспроизведения"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Добавить…"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1157,7 +1099,7 @@ msgstr "Файл"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1165,36 +1107,24 @@ msgid "Sort"
 msgstr "Упорядочить"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Имя по возрастанию"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Имя по убыванию"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
-msgstr "Длительность по убыванию"
+msgstr "Продолжительность по возрастанию"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
-msgstr "Длительность по убыванию"
+msgstr "Продолжительность по убыванию"
 
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
@@ -1202,9 +1132,6 @@ msgid "Clear"
 msgstr "Очистить"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Сохранить как"
@@ -1215,65 +1142,41 @@ msgid "Add"
 msgstr "Добавить"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Открыть содержащую папку"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
-msgstr "Открыть папку конфигурации"
+msgstr "Открыть в браузере"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Копировать имя файла"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Копировать путь к файлу"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr "Открыть URL"
+msgstr "Копировать URL"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Удалить из списка воспроизведения"
 
 #: src/qml/PlayList.qml:274
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Переименовать файл"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Перемотать к записи, которая воспроизводится"
@@ -1281,7 +1184,7 @@ msgstr "Перемотать к записи, которая воспроизв�
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Переместить файл в корзину"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1317,9 +1220,6 @@ msgid "No custom commands yet"
 msgstr "Особые команды ещё не указаны"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "&Добавить команду"
@@ -1330,6 +1230,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Флажок установлен: свойство будет установлено при запуске\n"
+"Флажок снят: свойство не будет установлено при запуске"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:168
 msgctxt "@action:intoolbar"
@@ -1404,6 +1306,18 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Чтобы узнать, какую команду mpv следует запустить, обратитесь к списку "
+"доступных <a href=\"https://mpv.io/manual/stable/#list-of-input-commands"
+"\">команд MPV</a>.<br>Не все команды будут работать, потому что некоторые из "
+"них специфичные для mpv.<br>Самыми полезными являются команды, позволяющие "
+"менять свойства, такие как <strong>set</strong>, <strong>add</strong>, "
+"<strong>cycle</strong>.<br><strong>set</strong>: устанавливает значение "
+"свойству <strong>set volume-max 150</strong>.<br><strong>add</strong>: "
+"увеличивает или уменьшает значение свойства, например, <strong>add volume "
+"15</strong>, увеличивает громкость на 15 единиц. Чтобы уменьшить громкость, "
+"воспользуйтесь командой <strong>add volume -15</strong>.<br><strong>cycle</"
+"strong>: циклически перейти к значениям свойства <strong>cycle aid up</"
+"strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
@@ -1422,6 +1336,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
+"Контекстное уведомление, показывающееся при инициировании действия, "
+"описанного пользовательской командой.<br>Воспользуйтесь ${property_name} для "
+"показа значения свойства <strong>Громкость: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:100
 msgctxt "@label"
@@ -1439,6 +1356,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Команда будет запущена при нажатии комбинации клавиш. Комбинацию клавиш "
+"можно настроить после сохранения."
 
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
@@ -1448,7 +1367,7 @@ msgstr "Запускать при загрузке системы"
 #: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Команда будет выполнена при запуске приложения."
 
 #: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
@@ -1476,15 +1395,13 @@ msgid "File dialog location"
 msgstr "Расположение файлового диалога"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"Если ничего не указано, файловый диалог запомнит последний открытый каталог."
+"Каталог по умолчанию для открытия файлового диалога. Если ничего не указано, "
+"файловый диалог запомнит последний открытый каталог."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1492,9 +1409,6 @@ msgid "Maximum recent files"
 msgstr "Максимальное количество последних файлов"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
@@ -1527,12 +1441,9 @@ msgid "File will be added to the end of the playlist"
 msgstr "Файл будет добавлен в конец списка воспроизведения"
 
 #: src/qml/Settings/GeneralSettings.qml:164
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
-msgstr "Воспроизвести следующий файл"
+msgstr "Воспроизвести новый файл"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
@@ -1540,17 +1451,14 @@ msgid "Interface"
 msgstr "Интерфейс"
 
 #: src/qml/Settings/GeneralSettings.qml:181
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Начертание"
+msgstr "Стиль нижнего колонтитула"
 
 #: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Показывать плавающий нижний колонтитул при"
 
 #: src/qml/Settings/GeneralSettings.qml:235
 msgctxt "@info:tooltip"
@@ -1559,6 +1467,9 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
+"Какое действие показывает нижний колонтитул.<br><strong>Любое движение "
+"мышью</strong> — любое движение мышью в области видео<br><strong>Движение "
+"мышью внизу</strong> — движение мышью в нижней части области видео"
 
 #: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
@@ -1574,6 +1485,8 @@ msgstr "Показывать миниатюру предварительного
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
+"Показывает предварительный просмотр при наведении курсора на индикатор "
+"перемотки/выполнения."
 
 #: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@option:check"
@@ -1590,12 +1503,9 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "Ширина миниатюры"
 
 #: src/qml/Settings/GeneralSettings.qml:309
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Window"
 msgctxt "@label"
 msgid "Window"
 msgstr "Окно"
@@ -1608,14 +1518,9 @@ msgstr "Изменять размер, чтобы вместить видео"
 #: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr ""
+msgstr "Не поддерживается в Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:334
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1627,7 +1532,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Запускать в полноэкранном режиме"
 
 #: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
@@ -1636,6 +1541,9 @@ msgid ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 msgstr ""
+"Запуск приложения в полноэкранном режиме при его открытии.\n"
+"Этот параметр имеет приоритет над параметрами «Изменять размер, чтобы "
+"вместить видео» и «Восстанавливать размер и расположение окна»."
 
 #: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@option:check"
@@ -1648,16 +1556,9 @@ msgctxt ""
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
+"<b>Восстановление расположения не поддерживается в Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:398
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When window size and position are changed the new values are saved and "
-#| "used to restore the application to the same size and position when a new "
-#| "instance is opened.\n"
-#| "\n"
-#| "The \"Resize to fit video\" setting takes precedence.\n"
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1665,9 +1566,8 @@ msgid ""
 msgstr ""
 "Когда размер и положение окна меняются, новые значения сохраняются и "
 "используются, чтобы восстановить приложение в том же размере и положении при "
-"открытии нового экземпляра.\n"
-"\n"
-"Параметр «Изменять размер, чтобы вместить видео» имеет приоритет.\n"
+"открытии нового экземпляра.<br><br>%1Параметр «Изменять размер, чтобы "
+"вместить видео» имеет приоритет."
 
 #: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@option:check"
@@ -1720,9 +1620,6 @@ msgid "Clear action"
 msgstr "Очистить действие"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
 msgstr "Действие по двойному щелчку"
@@ -1739,6 +1636,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Сколько проматывать при запуске соответствующего действия. Режим перемотки "
+"является <a href='https://mpv.io/manual/stable/#command-interface-seek-"
+"<target>-[<flags>]'>точным</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:52
 msgctxt "@label:spinbox"
@@ -1753,6 +1653,10 @@ msgid ""
 "[<flags>]'>exact</a>.<br>This is also used for mouse wheel seeking, when "
 "mouse is over the progress bar."
 msgstr ""
+"Сколько проматывать при запуске соответствующего действия. Режим перемотки "
+"является <a href='https://mpv.io/manual/stable/#command-interface-seek-"
+"<target>-[<flags>]'>точным</a>. Перематывать также можно колесом мыши, когда "
+"курсор расположен над индикатором выполнения."
 
 #: src/qml/Settings/PlaybackSettings.qml:80
 msgctxt "@label:spinbox"
@@ -1766,6 +1670,9 @@ msgid ""
 "href='https://mpv.io/manual/stable/#command-interface-seek-<target>-"
 "[<flags>]'>exact</a>"
 msgstr ""
+"Сколько проматывать при запуске соответствующего действия. Режим перемотки "
+"является <a href='https://mpv.io/manual/stable/#command-interface-seek-"
+"<target>-[<flags>]'>точным</a>"
 
 #: src/qml/Settings/PlaybackSettings.qml:105
 msgctxt "@label"
@@ -1792,6 +1699,24 @@ msgid ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 msgstr ""
+"Определяет программный интерфейс аппаратного декодирования видео, который "
+"будет использоваться, если это возможно. От кодека зависит, будет ли "
+"выполняться аппаратное декодирование на самом деле. Если аппаратное "
+"декодирование недоступно, mpv вернётся к программному декодированию."
+"<br><br><ul><li><strong>auto</strong> попытка включить аппаратное "
+"декодирование автоматически с помощью первого доступного метода.</"
+"li><li><strong>auto-safe</strong> аналогично авто, но использует только "
+"методы, помеченные как безопасные.</li><li><strong>vaapi</strong> работает "
+"только с графическими процессорами Intel и AMD. Также требует модуль EGL "
+"opengl.</li><li><strong>nvdec</strong> самый новый и рекомендуемый метод "
+"программного декодирования для графических процессоров Nvidia.</"
+"li><li><strong>cuda</strong> более старая версия аппаратного декодирования "
+"для графических процессоров Nvidia.</li><li><strong>videotoolbox</strong></"
+"li><li><strong>d3d11va</strong></li></ul><br><br>Более подробная информация "
+"о программном декодировании содержится здесь: <a href='https://mpv.io/manual/"
+"stable/#options-hwdec'>https://mpv.io/manual/stable/#options-hwdec</"
+"a><br><br>Также можно указать другой аппаратный декодер с помощью команды "
+"<strong>set hwdec <i>название_декодера</i></strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:173
 msgctxt "@option:check"
@@ -1804,6 +1729,7 @@ msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr ""
+"При запуске открывает файл, который воспроизводился при закрытии приложения."
 
 #: src/qml/Settings/PlaybackSettings.qml:191
 msgctxt "@option:check"
@@ -1811,11 +1737,6 @@ msgid "Pause on minimize"
 msgstr "Приостанавливать при сворачивании"
 
 #: src/qml/Settings/PlaybackSettings.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1825,17 +1746,11 @@ msgstr ""
 "при его последующем открытии)."
 
 #: src/qml/Settings/PlaybackSettings.qml:209
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Прокрутить до последней позиции воспроизведения"
+msgstr "Позиция воспроизведения"
 
 #: src/qml/Settings/PlaybackSettings.qml:219
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Прокрутить до последней позиции воспроизведения"
@@ -1853,9 +1768,21 @@ msgid_plural ""
 "Position is saved every %1 seconds, except for the last 10 seconds of the "
 "video."
 msgstr[0] ""
+"Сохраняет позицию при воспроизведении, повторное открытие файла позволяет "
+"продолжить воспроизведение с сохранённого места.\n"
+"Позиция сохраняется каждую %1 секунду, кроме последних 10 секунд видео."
 msgstr[1] ""
+"Сохраняет позицию при воспроизведении, повторное открытие файла позволяет "
+"продолжить воспроизведение с сохранённого места.\n"
+"Позиция сохраняется каждые %1 секунды, кроме последних 10 секунд видео."
 msgstr[2] ""
+"Сохраняет позицию при воспроизведении, повторное открытие файла позволяет "
+"продолжить воспроизведение с сохранённого места.\n"
+"Позиция сохраняется каждые %1 секунд, кроме последних 10 секунд видео."
 msgstr[3] ""
+"Сохраняет позицию при воспроизведении, повторное открытие файла позволяет "
+"продолжить воспроизведение с сохранённого места.\n"
+"Позиция сохраняется каждую %1 секунду, кроме последних 10 секунд видео."
 
 #: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
@@ -1866,38 +1793,30 @@ msgstr "Воспроизведение"
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
+"Файл продолжит воспроизводиться после восстановления позиции воспроизведения"
 
 #: src/qml/Settings/PlaybackSettings.qml:275
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Насыщенность"
+msgstr "Для любой продолжительности"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Для всех файлов длиннее %1 минуты"
-msgstr[1] "Для всех файлов длиннее %1 минут"
-msgstr[2] "Для всех файлов длиннее %1 минут"
-msgstr[3] "Для всех файлов длиннее одной минуты"
+msgstr[0] "Если продолжительность больше %1 минуты"
+msgstr[1] "Если продолжительность больше %1 минут"
+msgstr[2] "Если продолжительность больше %1 минут"
+msgstr[3] "Если продолжительность больше одной минуты"
 
 #: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
+"Расположение для удалённых файлов для восстановления вне зависимости от "
+"продолжительности."
 
 #: src/qml/Settings/PlaybackSettings.qml:309
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1907,34 +1826,23 @@ msgstr[2] "Сохранять позицию каждые %1 секунд"
 msgstr[3] "Сохранять позицию каждую %1 секунду"
 
 #: src/qml/Settings/PlaybackSettings.qml:322
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Пропустить разделы"
+msgstr "Разделы"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr "Пропустить разделы"
+msgstr "Пропускать разделы"
 
 #: src/qml/Settings/PlaybackSettings.qml:339
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr ""
-"Автоматически пропускает главы, содержащие указанные слова или символы.\n"
-"Более подробная информация содержится в параметрах воспроизведения"
+"Когда включено, автоматически пропускает разделы, содержащие указанные слова "
+"или символы."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
@@ -1947,6 +1855,8 @@ msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
+"При пропуске разделов появится контекстное уведомление, показывающее "
+"название пропущенного раздела."
 
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
@@ -1965,6 +1875,10 @@ msgid ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 msgstr ""
+"Пропустить разделы, содержащие указанные слова. Список, разделённый запятой. "
+"Соответствие не будет полным, то есть, <strong>вст</strong> будет "
+"соответствовать всем словам, содержащим эту комбинацию букв, например, "
+"<strong><u>вст</u>упление</strong>."
 
 #: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@title"
@@ -1976,15 +1890,9 @@ msgid "Format selection"
 msgstr "Выбор формата"
 
 #: src/qml/Settings/PlaybackSettings.qml:447
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-"Выбирает лучшее видео с высотой, меньшей или равной указанному значению."
+msgstr "Выбирает ближайший к указанному формату источник видео."
 
 #: src/qml/Settings/PlaybackSettings.qml:476
 msgctxt "placeholder text"
@@ -2027,30 +1935,40 @@ msgstr "Автоматически загружать видео из этой �
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
+msgid "Autoplay"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:128
+msgctxt "@info:tooltip"
+msgid "When checked the next video will play automatically"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:136
+msgctxt "@option:check"
 msgid "Repeat"
 msgstr "Повтор"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:146
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Показывать номер строки"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Переключение с помощью мыши"
 
-#: src/qml/Settings/PlaylistSettings.qml:150
+#: src/qml/Settings/PlaylistSettings.qml:165
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Увеличивать размер шрифта в полноэкранном режиме"
 
-#: src/qml/Settings/PlaylistSettings.qml:163
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Запоминать последнее состояние списка воспроизведения"
 
-#: src/qml/Settings/PlaylistSettings.qml:170
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2059,10 +1977,10 @@ msgstr ""
 "Если этот флажок установлен, будет запоминаться состояние списка "
 "воспроизведения (скрыт/отображается) между запусками"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr ""
+msgstr "Открывать элементы одним щелчком мыши"
 
 #: src/qml/Settings/SettingsWindow.qml:42
 msgctxt "@title:window"
@@ -2105,9 +2023,6 @@ msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
 #: src/qml/Settings/SettingsWindow.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Пользовательские команды"
@@ -2125,13 +2040,15 @@ msgstr "О программе"
 #: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:check"
 msgid "Auto select track"
-msgstr ""
+msgstr "Автовыбор трека"
 
 #: src/qml/Settings/SubtitlesSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr ""
+"Когда этот флажок установлен, дорожка субтитров будет выбрана и показана "
+"автоматически"
 
 #: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@option:check"
@@ -2227,11 +2144,6 @@ msgid "path to image"
 msgstr "путь к изображению"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
@@ -2290,6 +2202,38 @@ msgid ""
 "li><li><strong>%wT</strong> milliseconds (000–999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 msgstr ""
+"Определяет шаблон имени файла для сохраняемых снимков экрана. Шаблон "
+"определяет имя файла без расширения и может содержать подстановочные "
+"символы, которые будут заменены определёнными данными при сохранении. По "
+"умолчанию шаблон: «%F-%n». <br>Шаблон может начинаться с относительного или "
+"абсолютного пути, который будет указывать на каталог, в который будут "
+"сохраняться снимки экрана.<br>Если название будет совпадать с названием "
+"существующего файла, его содержимое не будет перезаписано. Снимок экрана "
+"либо не будет сохранён, либо, если шаблон содержит «%n», будет сохранён под "
+"другим именем.<br>Более подробная информация содержится здесь: <a "
+"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
+"io/manual/stable/#options-screenshot-template</a><br><br><strong>Доступные "
+"подстановочные символы:</strong><br><ul><li><strong>%[#][0X]n</strong> "
+"Порядковый номер, дополненный нулями до длины X.<br><li><strong>%f</strong> "
+"Название текущего воспроизводимого видеофайла.<br><li><strong>%F</strong> "
+"Аналогично «%f», но без расширения файла.<br><li><strong>%x</strong> Пусть к "
+"каталогу, где расположен воспроизводимый видеофайл. Если видео находится не "
+"в файловой системе (ссылки «http://»), будет развёрнуто в пустую строку."
+"<br><li><strong>%X{резерв}</strong> Аналогично «%x», но если видео находится "
+"не в файловой системе, возвращает резервную строку в скобках {…}."
+"<br><li><strong>%p</strong> Текущее время воспроизведения. Результат будет "
+"записан в форме «ЧЧ:ММ:СС».<br><li><strong>%P</strong> Аналогично «%p», но "
+"время воспроизведения расширено до миллисекунд: «ЧЧ:ММ:СС.ммм»."
+"<br><li><strong>%wX</strong> Указывает текущее время воспроизведения с "
+"помощью строки форматирования X.<br>Допустимые спецификаторы формата :"
+"<br><ul><li><strong>%wH</strong> часы (с дополнением 0 до двух цифр)</"
+"li><li><strong>%wh</strong> часы (без дополнения)</li><li><strong>%wM</"
+"strong> минуты (00–59)</li><li><strong>%wm</strong> всего минут (включая "
+"часы, в отличие от «%wM»)</li><li><strong>%wS</strong> секунды (00–59)</"
+"li><li><strong>%ws</strong> всего секунд (включая часы и минуты)</"
+"li><li><strong>%wf</strong> как «%ws», но в формате числа с плавающей "
+"запятой</li><li><strong>%wT</strong> миллисекунды (000–999)</li><li><strong>%"
+"%</strong> Замена самим символом «%».</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:195
 msgctxt "@title"
