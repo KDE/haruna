@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:42+0000\n"
-"PO-Revision-Date: 2025-04-06 22:12+0200\n"
+"PO-Revision-Date: 2025-06-10 23:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,13 +40,11 @@ msgid "Media player"
 msgstr "미디어 재생기"
 
 #: src/application.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2025"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2025"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:122
 #, kde-format
@@ -634,11 +632,6 @@ msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
 #: src/qml/Actions.qml:163
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can't load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
@@ -656,9 +649,6 @@ msgid "Loop start: %1"
 msgstr "반복 시작: %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "반복: %1 - %2"
@@ -749,17 +739,11 @@ msgid "Saturation: 0"
 msgstr "채도: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "재생 시작"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "재생 일시 정지"
@@ -785,12 +769,9 @@ msgid "Select a color"
 msgstr "색상 선택"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr "색상 선택"
+msgstr "색 선택"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:62
 msgctxt "@action:inmenu"
@@ -831,17 +812,11 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>을 찾을 수 없습니다."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label"
 msgid "Load subtitles from"
 msgstr "다음에서 자막 불러오기"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "삭제 확인"
@@ -861,9 +836,6 @@ msgid "No folder set"
 msgstr "설정한 폴더 없음"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "새 폴더 추가"
@@ -879,18 +851,13 @@ msgid "Search subtitles recursively"
 msgstr "재귀적으로 자막 검색"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the \"%1\" setting\n"
-#| "Only relative folders are searched"
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
-"자막을 \"%1\" 설정에서 재귀적으로 검색합니다\n"
-"상대 경로 폴더만 검색합니다"
+"자막을 \"%1\" 설정에서 재귀적으로 검색합니다.\n"
+"상대 경로 폴더만 검색합니다."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -913,18 +880,13 @@ msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
 #: src/qml/HProgressBar.qml:299
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Automatically skips chapters containing certain words/characters.\n"
-#| "Check 'Playback' settings for more details"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
 "특정한 단어/문자를 포함하는 챕터를 자동으로 건너뜁니다.\n"
-"자세한 사항은 '재생' 설정을 참조하십시오"
+"자세한 사항은 \"재생\" 설정을 참조하십시오."
 
 #: src/qml/Main.qml:29
 msgctxt "@title:window"
@@ -932,17 +894,11 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:311
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
 #: src/qml/Main.qml:330
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
@@ -1108,9 +1064,6 @@ msgid "Show Toolbar"
 msgstr "도구 모음 표시"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "재생 속도"
@@ -1121,9 +1074,6 @@ msgid "Volume: %1"
 msgstr "음량: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "재생 목록 열기"
@@ -1131,7 +1081,7 @@ msgstr "재생 목록 열기"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "추가…"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1141,7 +1091,7 @@ msgstr "파일"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1149,33 +1099,21 @@ msgid "Sort"
 msgstr "정렬"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "이름, 오름차순"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "이름, 내림차순"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "시간, 오름차순"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "시간, 내림차순"
@@ -1186,9 +1124,6 @@ msgid "Clear"
 msgstr "지우기"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
@@ -1199,49 +1134,31 @@ msgid "Add"
 msgstr "추가"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "브라우저로 열기"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "이름 복사"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "경로 복사"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL 복사"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "재생 목록에서 삭제"
@@ -1252,9 +1169,6 @@ msgid "Rename"
 msgstr "이름 바꾸기"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "현재 재생 중인 항목으로 스크롤"
@@ -1262,7 +1176,7 @@ msgstr "현재 재생 중인 항목으로 스크롤"
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "파일을 휴지통으로 이동"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1298,9 +1212,6 @@ msgid "No custom commands yet"
 msgstr "사용자 정의 명령 없음"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "명령 추가(&A)"
@@ -1473,11 +1384,6 @@ msgid "File dialog location"
 msgstr "파일 대화 상자 위치"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
@@ -1492,9 +1398,6 @@ msgid "Maximum recent files"
 msgstr "최대 최근 파일"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr "저장할 최근 파일 개수입니다. 0을 입력하면 비활성화합니다."
@@ -1525,12 +1428,9 @@ msgid "File will be added to the end of the playlist"
 msgstr "파일을 재생 목록의 맨 끝에 추가합니다"
 
 #: src/qml/Settings/GeneralSettings.qml:164
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
-msgstr "다음 파일 재생"
+msgstr "새 파일 재생"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
@@ -1548,12 +1448,6 @@ msgid "Show floating footer on"
 msgstr "떠다니는 바닥글 표시"
 
 #: src/qml/Settings/GeneralSettings.qml:235
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "What action shows the footer.<br><strong>Every mouse movement</strong> - "
-#| "every mouse movement over the video area<br><strong>Bottom mouse "
-#| "movement</strong> - mouse movement on the bottom of the video area"
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1640,11 +1534,6 @@ msgid "Remember window size and position"
 msgstr "창 크기와 위치 기억"
 
 #: src/qml/Settings/GeneralSettings.qml:396
-#, fuzzy
-#| msgctxt ""
-#| "@info:tooltip extra wayland info for the \"Remember window size and "
-#| "position\" setting"
-#| msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
@@ -1652,12 +1541,6 @@ msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "Wayland에서는 위치 복원을 지원하지 않습니다."
 
 #: src/qml/Settings/GeneralSettings.qml:398
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Changes to the window's size and position are saved and used for newly "
-#| "opened windows.<br><br>%1The \"Resize to fit video\" setting takes "
-#| "precedence."
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1717,9 +1600,6 @@ msgid "Clear action"
 msgstr "동작 지우기"
 
 #: src/qml/Settings/MouseSettings.qml:136
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Double click to set action"
 msgctxt "@title"
 msgid "Double Click to Set Action"
 msgstr "두 번 클릭하여 동작 설정"
@@ -1779,26 +1659,6 @@ msgid "Hardware decoding"
 msgstr "하드웨어 디코딩"
 
 #: src/qml/Settings/PlaybackSettings.qml:149
-#, fuzzy
-#| msgctxt "@info:tooltip hardware decoding setting"
-#| msgid ""
-#| "Specify the hardware video decoding API that should be used if possible. "
-#| "Whether hardware decoding is actually done depends on the video codec. If "
-#| "hardware decoding is not possible, mpv will fall back on software "
-#| "decoding.<br><br><ul><li><strong>auto</strong> tries to automatically "
-#| "enable hardware decoding using the first available method.</"
-#| "li><li><strong>auto-safe</strong> similar to auto, but allows only "
-#| "whitelisted methods that are considered \"safe\".</li><li><strong>vaapi</"
-#| "strong> works with Intel and AMD GPUs only. It also requires the opengl "
-#| "EGL backend.</li><li><strong>nvdec</strong> the newest, and recommended "
-#| "method to do hardware decoding on Nvidia GPUs.</li><li><strong>cuda</"
-#| "strong> an older implementation of hardware decoding on Nvidia GPUs.</"
-#| "li><li><strong>videotoolbox</strong></li><li><strong>d3d11va</strong></"
-#| "li></ul><br><br>You can read more about hardware decoding here: <a "
-#| "href='https://mpv.io/manual/stable/#options-hwdec'>https://mpv.io/manual/"
-#| "stable/#options-hwdec</a><br><br>You can set another hardware decoder by "
-#| "creating a startup custom command <strong>set hwdec <i>decoder_name</i></"
-#| "strong>."
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -2025,12 +1885,12 @@ msgstr "같은 폴더의 동영상 자동으로 불러오기"
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Autoplay"
-msgstr ""
+msgstr "자동 재생"
 
 #: src/qml/Settings/PlaylistSettings.qml:128
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
-msgstr ""
+msgstr "이 옵션을 사용하면 자동으로 다음 동영상을 재생함"
 
 #: src/qml/Settings/PlaylistSettings.qml:136
 msgctxt "@option:check"
@@ -2111,9 +1971,6 @@ msgid "Shortcuts"
 msgstr "단축키"
 
 #: src/qml/Settings/SettingsWindow.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "사용자 정의 명령"
@@ -2232,11 +2089,6 @@ msgid "path to image"
 msgstr "그림 경로"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
@@ -2261,41 +2113,6 @@ msgid "Template"
 msgstr "템플릿"
 
 #: src/qml/Settings/VideoSettings.qml:160
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Specify the filename template used to save screenshots. The template "
-#| "specifies the filename without file extension, and can contain format "
-#| "specifiers, which will be substituted when taking a screenshot. By "
-#| "default, the template is \"%F-%n\". <br>The template can start with a "
-#| "relative or absolute path, in order to specify a directory location where "
-#| "screenshots should be saved.<br>If the final screenshot filename points "
-#| "to an already existing file, the file will not be overwritten. The "
-#| "screenshot will either not be saved, or if the template contains %n, "
-#| "saved using different, newly generated filename.<br>For full info "
-#| "checkout <a href='https://mpv.io/manual/stable/#options-screenshot-"
-#| "template'>https://mpv.io/manual/stable/#options-screenshot-template</"
-#| "a><br><br><strong>Allowed format specifiers:</strong><br><ul><li><strong>"
-#| "%[#][0X]n</strong> A sequence number, padded with zeros to length X."
-#| "<br><li><strong>%f</strong> Filename of the currently played video."
-#| "<br><li><strong>%F</strong> Same as %f, but without the file extension."
-#| "<br><li><strong>%x</strong> Directory path of the currently played video. "
-#| "If the video is not on the filesystem (http:// urls), this expands to an "
-#| "empty string.<br><li><strong>%X{fallback}</strong> Same as %x, but if the "
-#| "video file is not on the filesystem, return the fallback string inside "
-#| "the {...}.<br><li><strong>%p</strong> Current playback time. The result "
-#| "is a string of the form \"HH:MM:SS\".<br><li><strong>%P</strong> Similar "
-#| "to %p, but extended with the playback time in milliseconds \"HH:MM:SS.mmm"
-#| "\".<br><li><strong>%wX</strong> Specify the current playback time using "
-#| "the format string X.<br>Valid format specifiers:<br><ul><li><strong>%wH</"
-#| "strong> hour (padded with 0 to two digits)</li><li><strong>%wh</strong> "
-#| "hour (not padded)</li><li><strong>%wM</strong> minutes (00-59)</"
-#| "li><li><strong>%wm</strong> total minutes (includes hours, unlike %wM)</"
-#| "li><li><strong>%wS</strong> seconds (00-59)</li><li><strong>%ws</strong> "
-#| "total seconds (includes hours and minutes)</li><li><strong>%wf</strong> "
-#| "like %ws, but as float</li><li><strong>%wT</strong> milliseconds "
-#| "(000-999)</li><li><strong>%%</strong> Replaced with the % character "
-#| "itself.</li></ul><br>"
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
