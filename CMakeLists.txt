@@ -108,7 +108,7 @@ set_package_properties(KF6Crash PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcrash/html/index.html")
 
 find_package(KDSingleApplication-qt6)
-set_package_properties(Ytdlp PROPERTIES TYPE REQUIRED
+set_package_properties(KDSingleApplication-qt6 PROPERTIES TYPE REQUIRED
     URL "https://github.com/KDAB/KDSingleApplication"
     DESCRIPTION "helper class for single-instance policy applications")
 
