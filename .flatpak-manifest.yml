@@ -7,6 +7,13 @@ sdk: org.kde.Sdk
 command: haruna
 rename-icon: haruna
 copy-icon: true
+add-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    version: '24.08'
+    directory: lib/ffmpeg
+    add-ld-path: .
+cleanup-commands:
+  - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 finish-args:
   - --share=ipc
   - --share=network
@@ -17,6 +24,7 @@ finish-args:
   - --filesystem=host:ro
   - --filesystem=home
   - --talk-name=org.freedesktop.ScreenSaver
+  - --talk-name=org.freedesktop.FileManager1
   - --own-name=org.mpris.MediaPlayer2.haruna
   - --system-talk-name=org.freedesktop.UDisks2
 cleanup:
@@ -37,7 +45,7 @@ modules:
       #   sha256: eb01261a3498c6e25c28064e6ccea37aeb38cd8aa5006f02c92760b124c362fb
       #   x-checker-data:
       #     type: anitya
-      #     projet-id: 267594
+      #     project-id: 267594
       #     url-template: https://download.kde.org/stable/haruna/$version/haruna-$version.tar.xz
     modules:
       - name: mpvqt
@@ -48,9 +56,26 @@ modules:
             sha256: 9f37b85f319c27f6244743c4259402b0aa2474ed851f0d833d9bd2a0731c178c
             x-checker-data:
               type: anitya
-              projet-id: 370634
+              project-id: 370634
               url-template: https://download.kde.org/stable/mpvqt/mpvqt-$version.tar.xz
         modules:
+          - name: KDSingleApplication
+            buildsystem: cmake-ninja
+            builddir: true
+            config-opts:
+              - -DCMAKE_BUILD_TYPE=Release
+              - -DKDSingleApplication_QT6=ON
+              - -DKDSingleApplication_EXAMPLES=OFF
+            sources:
+            - type: archive
+              url: https://github.com/KDAB/KDSingleApplication/releases/download/v1.2.0/kdsingleapplication-1.2.0.tar.gz
+              sha256: ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
+              x-checker-data:
+                type: anitya
+                project-id: 370439
+                stable-only: true
+                url-template: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v$version.tar.gz
+
           - name: libmpv
             cleanup:
               - /share/bash-completion
@@ -68,8 +93,8 @@ modules:
               - -Dmanpage-build=disabled
             sources:
               - type: archive
-                url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.39.0.tar.gz
-                sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
+                url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.40.0.tar.gz
+                sha256: 10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3
                 x-checker-data:
                   type: anitya
                   project-id: 5348
@@ -86,8 +111,8 @@ modules:
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20241113
-                    commit: 098183d9d24b8942a26dcc720fe8725b287ec77f
+                    tag: v2.1-20250117
+                    commit: 93162f34e7424cd0ea3c4046a9ffacce621626bc
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.-]+)$
@@ -110,20 +135,20 @@ modules:
                       stable-only: true
                       url-template: https://code.videolan.org/videolan/libplacebo/-/archive/v$version/libplacebo-v$version.tar.gz
                   - type: archive
-                    url: https://github.com/pallets/jinja/archive/refs/tags/3.1.4.tar.gz
-                    sha256: ed06f67abd2c8b7697dfb714f80715903ab0507e3c5acc11e92477e4ea51033b
+                    url: https://github.com/pallets/jinja/archive/refs/tags/3.1.6.tar.gz
+                    sha256: 2074b22a72caa65474902234b320d73463d6d4c223ee49f4b433495758356337
                     dest: 3rdparty/jinja
                     x-checker-data:
                       type: anitya
-                      projet-id: 3894
+                      project-id: 3894
                       url-template: https://github.com/pallets/jinja/archive/refs/tags/$version.tar.gz
                   - type: archive
-                    url: https://github.com/Dav1dde/glad/archive/refs/tags/v2.0.4.tar.gz
-                    sha256: 02629644c242dcc27c58222bd2c001d5e2f3765dbbcfd796542308bddebab401
+                    url: https://github.com/Dav1dde/glad/archive/refs/tags/v2.0.8.tar.gz
+                    sha256: 44f06f9195427c7017f5028d0894f57eb216b0a8f7c4eda7ce883732aeb2d0fc
                     dest: 3rdparty/glad
                     x-checker-data:
                       type: anitya
-                      projet-id: 300234
+                      project-id: 300234
                       url-template: https://github.com/Dav1dde/glad/archive/refs/tags/v$version.tar.gz
 
               - name: libXpresent
@@ -138,65 +163,13 @@ modules:
                       stable-only: true
                       url-template: https://xorg.freedesktop.org/archive/individual/lib/libXpresent-$version.tar.xz
 
-              - name: nv-codec-headers
-                cleanup:
-                  - '*'
-                no-autogen: true
-                make-install-args:
-                  - PREFIX=/app
-                sources:
-                  - type: archive
-                    url: https://github.com/FFmpeg/nv-codec-headers/archive/refs/tags/n12.2.72.0.tar.gz
-                    sha256: dbeaec433d93b850714760282f1d0992b1254fc3b5a6cb7d76fc1340a1e47563
-                    x-checker-data:
-                      type: anitya
-                      project-id: 223796
-                      stable-only: true
-                      url-template: https://github.com/FFmpeg/nv-codec-headers/archive/refs/tags/n$version.tar.gz
-
-              - name: ffmpeg
-                cleanup:
-                  - /share/ffmpeg/examples
-                config-opts:
-                  - --disable-debug
-                  - --disable-doc
-                  - --disable-programs
-                  - --disable-static
-                  - --disable-encoders
-                  - --disable-muxers
-                  - --enable-shared
-                  - --enable-gnutls
-                  - --enable-gpl
-                  - --enable-version3
-                  - --enable-encoder=png,libwebp,libjxl
-                  - --enable-libv4l2
-                  - --enable-libdav1d
-                  - --enable-libfontconfig
-                  - --enable-libfreetype
-                  - --enable-libopus
-                  - --enable-librsvg
-                  - --enable-libvpx
-                  - --enable-libmp3lame
-                  - --enable-libwebp
-                  - --enable-libjxl
-                  - --enable-libxml2
-                sources:
-                  - type: archive
-                    url: https://ffmpeg.org/releases/ffmpeg-7.1.tar.gz
-                    sha256: 42a7dc0d1583885d1b8f6559fa7ce28f97acafea6803de6a8f73e3ba229348bd
-                    x-checker-data:
-                      type: anitya
-                      project-id: 5405
-                      stable-only: true
-                      url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.gz
-
               - name: libass
                 config-opts:
                   - --disable-static
                 sources:
                   - type: archive
-                    url: https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.gz
-                    sha256: da7c348deb6fa6c24507afab2dee7545ba5dd5bbf90a137bfe9e738f7df68537
+                    url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.gz
+                    sha256: a886b3b80867f437bc55cff3280a652bfa0d37b43d2aff39ddf3c4f288b8c5a8
                     x-checker-data:
                       type: anitya
                       project-id: 1560
@@ -230,8 +203,8 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2024.11.04.tar.gz
-            sha256: b4b72700b4a7cea6fdb327580921bc7ddd317a2380230e23ec412651670e2947
+            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.06.09.tar.gz
+            sha256: f823d212dda8fe905b7ddbc72b5a0cffef0c9fa7d32eb1b6885b4314928bc6d0
             x-checker-data:
               type: anitya
               project-id: 143399
