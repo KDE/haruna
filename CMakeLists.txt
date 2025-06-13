@@ -107,17 +107,15 @@ find_package(KF6Crash ${KF6_MIN_VERSION})
 set_package_properties(KF6Crash PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/frameworks/kcrash/html/index.html")
 
+find_package(KDSingleApplication-qt6)
+set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
+    URL "https://github.com/KDAB/KDSingleApplication"
+    DESCRIPTION "helper class for single-instance policy applications")
+
 find_package(Ytdlp)
 set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
     URL "https://github.com/yt-dlp/yt-dlp"
     DESCRIPTION "needed to play videos from youtube and other online sources")
-
-find_package(KDSingleApplication-qt6 QUIET)
-if(KDSingleApplication-qt6_FOUND)
-    message(STATUS "Using system KDSingleApplication")
-else()
-    message(STATUS "Using bundled KDSingleApplication")
-endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

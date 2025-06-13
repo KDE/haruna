@@ -32,14 +32,6 @@ target_sources(haruna
     ${ICONS_SRCS}
 )
 
-if (NOT KDSingleApplication-qt6_FOUND)
-    target_sources(haruna
-        PRIVATE
-        KDSingleApplication/kdsingleapplication_localsocket_p.h KDSingleApplication/kdsingleapplication_localsocket.cpp
-        KDSingleApplication/kdsingleapplication.h KDSingleApplication/kdsingleapplication.cpp
-    )
-endif()
-
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
     target_sources(haruna
@@ -137,13 +129,6 @@ target_include_directories(haruna
         ${FFMPEG_INCLUDE_DIRS}
 )
 
-if (NOT KDSingleApplication-qt6_FOUND)
-    target_include_directories(haruna
-        PRIVATE
-        KDSingleApplication
-    )
-endif()
-
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
@@ -166,6 +151,8 @@ target_link_libraries(haruna PRIVATE
     KF6::WindowSystem
     KF6::Crash
 
+    KDAB::kdsingleapplication
+
     MpvQt::MpvQt
     ${AVUTIL_LIBRARIES}
     ${AVFILTER_LIBRARIES}
@@ -173,11 +160,6 @@ target_link_libraries(haruna PRIVATE
     ${AVCODEC_LIBRARIES}
     ${SWSCALE_LIBRARIES}
 )
-if(KDSingleApplication-qt6_FOUND)
-    target_link_libraries(haruna PRIVATE
-        KDAB::kdsingleapplication
-    )
-endif()
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     target_link_libraries(haruna PRIVATE

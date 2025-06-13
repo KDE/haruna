@@ -14,9 +14,10 @@
 
 #include <KLocalizedString>
 
+#include <KDSingleApplication>
+
 #include "application.h"
 #include "generalsettings.h"
-#include "kdsingleapplication.h"
 #include "qqmlpropertymap.h"
 #include "thumbnailimageprovider.h"
 
