@@ -52,6 +52,22 @@ SettingsBasePage {
                 key: "middlex2"
             }
             ListElement {
+                label: "Forward"
+                key: "forward"
+            }
+            ListElement {
+                label: "Forward double click"
+                key: "forwardx2"
+            }
+            ListElement {
+                label: "Back"
+                key: "back"
+            }
+            ListElement {
+                label: "Back double click"
+                key: "backx2"
+            }
+            ListElement {
                 label: "Scroll up"
                 key: "scrollUp"
             }
@@ -79,7 +95,7 @@ SettingsBasePage {
 
                 contentItem: RowLayout {
                     Kirigami.IconTitleSubtitle {
-                        title: delegate.label
+                        title: i18nc("@label:mouse", delegate.label)
                         subtitle: MouseSettings[delegate.key]
                                   ? appActions[MouseSettings[delegate.key]].text
                                   : i18nc("@label", "No action set")
@@ -116,7 +132,7 @@ SettingsBasePage {
 
                 function openSelectActionPopup() : void {
                     selectActionPopup.buttonIndex = delegate.index
-                    selectActionPopup.title = delegate.label
+                    selectActionPopup.title = i18nc("@label:mouse", delegate.label)
                     selectActionPopup.open()
                 }
             }

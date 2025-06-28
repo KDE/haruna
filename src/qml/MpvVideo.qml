@@ -68,7 +68,7 @@ MpvItem {
 
         property bool hideCursor: false
 
-        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
+        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton | Qt.ForwardButton | Qt.BackButton
         anchors.fill: parent
         hoverEnabled: true
         cursorShape: hideCursor && root.window.isFullScreen() ? Qt.BlankCursor : Qt.ArrowCursor
@@ -123,6 +123,14 @@ MpvItem {
                 if (MouseSettings.right) {
                     appActions[MouseSettings.right].trigger()
                 }
+            } else if (mouse.button === Qt.ForwardButton) {
+                if (MouseSettings.forward) {
+                    appActions[MouseSettings.forward].trigger()
+                }
+            } else if (mouse.button === Qt.BackButton) {
+                if (MouseSettings.back) {
+                    appActions[MouseSettings.back].trigger()
+                }
             }
         }
 
@@ -138,6 +146,14 @@ MpvItem {
             } else if (mouse.button === Qt.RightButton) {
                 if (MouseSettings.rightx2) {
                     appActions[MouseSettings.rightx2].trigger()
+                }
+            } else if (mouse.button === Qt.ForwardButton) {
+                if (MouseSettings.forwardx2) {
+                    appActions[MouseSettings.forwardx2].trigger()
+                }
+            } else if (mouse.button === Qt.BackButton) {
+                if (MouseSettings.backx2) {
+                    appActions[MouseSettings.backx2].trigger()
                 }
             }
         }
