@@ -89,7 +89,7 @@ Item {
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip", "Audio: %1 %2", currentTrackId, track.lang || ""))
+                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Audio: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
@@ -107,7 +107,7 @@ Item {
                     return
                 }
                 const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip", "Audio: %1 %2", currentTrackId, track.lang || ""))
+                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Audio: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
@@ -285,7 +285,7 @@ Item {
             if (!aIsSet && !bIsSet) {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, root.m_mpv.position)
                 footer.progressBar.loopIndicator.startPosition = root.m_mpv.position
-                root.m_osd.message(i18nc("@info:tooltip", "Loop start: %1", HarunaApp.formatTime(root.m_mpv.position)))
+                root.m_osd.message(i18nc("@info:tooltip; %1 is the timestamp where the loop starts", "Loop start: %1", HarunaApp.formatTime(root.m_mpv.position)))
             } else if (aIsSet && !bIsSet) {
                 // set b position sligthly ahead to ensure the loop section is not skipped
                 const bPosition = root.m_mpv.position + 0.1
@@ -330,7 +330,7 @@ Item {
             } else {
                 const tracks = root.m_mpv.getProperty(MpvProperties.TrackList)
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
+                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 
@@ -342,7 +342,7 @@ Item {
             } else {
                 const tracks = root.m_mpv.getProperty(MpvProperties.TrackList)
                 const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
+                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
             }
         }
 

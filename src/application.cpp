@@ -165,9 +165,9 @@ void Application::setupCommandLineParser()
 
     QCommandLineOption ytdlFormatSelectionOption(QStringList() << u"ytdl-format-selection"_s << u"ytdlfs"_s,
                                                  i18nc("@info:shell",
-                                                       "Allows to temporarily override the ytdl format selection setting. "
+                                                       "Allows to temporarily override the yt-dlp format selection setting. "
                                                        "Will be overwritten if the setting is changed through the GUI"),
-                                                 i18nc("@info:shell", "bestvideo+bestaudio/best"),
+                                                 u"bestvideo+bestaudio/best"_s,
                                                  QString());
     m_parser->addOption(ytdlFormatSelectionOption);
 

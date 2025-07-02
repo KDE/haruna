@@ -48,7 +48,7 @@ SettingsBasePage {
                 id: commandTextField
 
                 text: root.command
-                placeholderText: i18nc("placeholder text", "add volume +10")
+                placeholderText: "add volume +10"
                 Layout.fillWidth: true
                 Component.onCompleted: forceActiveFocus()
             }
@@ -82,7 +82,7 @@ SettingsBasePage {
 
                 text: root.osdMessage
                 enabled: typeGroup.checkedButton.optionName === "shortcut"
-                placeholderText: i18nc("placeholder text", "Filename: ${filename}")
+                placeholderText: i18nc("placeholder text; %1 is an example of how to display an mpv property", "Filename: %1", "${filename}")
                 Layout.fillWidth: true
             }
 

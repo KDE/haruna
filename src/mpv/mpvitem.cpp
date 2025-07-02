@@ -323,7 +323,7 @@ void MpvItem::onEndFile(const QString &reason)
         const auto index = playlistProxyModel()->index(currentItem, 0);
         const auto title = playlistModel()->data(playlistProxyModel()->mapToSource(index), PlaylistModel::TitleRole);
 
-        Q_EMIT osdMessage(i18nc("@info:tooltip", "Could not play: %1", title.toString()));
+        Q_EMIT osdMessage(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
     }
 
     if (!playlistProxyModel()->isLastItem(currentItem)) {
@@ -538,7 +538,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         if (filename.isEmpty()) {
             Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Screenshot taken"));
         } else {
-            Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Screenshot: %1", filename));
+            Q_EMIT osdMessage(i18nc("@info:tooltip osd; %1 is a filename with path", "Screenshot: %1", filename));
         }
         break;
     }

@@ -25,7 +25,7 @@ ColumnLayout {
     Label {
         id: sectionTitle
 
-        text: i18nc("@label", "Load subtitles from")
+        text: i18nc("@label; Below is a list of folders containing subtitles", "Load subtitles from:")
         bottomPadding: 10
     }
 

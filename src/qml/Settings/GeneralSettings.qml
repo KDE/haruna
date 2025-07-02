@@ -22,7 +22,7 @@ SettingsBasePage {
 
         // OSD Font Size
         Label {
-            text: i18nc("@label:spinbox", "Osd font size")
+            text: i18nc("@label:spinbox", "OSD font size")
             Layout.alignment: Qt.AlignRight
         }
 

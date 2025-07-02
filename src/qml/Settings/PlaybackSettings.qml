@@ -344,7 +344,7 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1 }
 
         CheckBox {
-            text: i18nc("@option:check", "Show osd message on skip")
+            text: i18nc("@option:check", "Show OSD message on skip")
             enabled: skipChaptersCheckBox.checked
             checked: PlaybackSettings.showOsdOnSkipChapters
             onClicked: {
@@ -352,14 +352,14 @@ SettingsBasePage {
                 PlaybackSettings.save()
             }
 
-            ToolTip.text: i18nc("@info:tooltip show osd message on skip setting",
+            ToolTip.text: i18nc("@info:tooltip show OSD message on skip setting",
                                 "When skipping chapters an osd message will show the title of the skipped chapter.")
             ToolTip.visible: hovered
             ToolTip.delay: 700
         }
 
         Label {
-            text: i18nc("@label:textbox", "Skip words")
+            text: i18nc("@label:textbox", "Keywords")
             enabled: skipChaptersCheckBox.checked
             Layout.alignment: Qt.AlignRight
         }
@@ -473,7 +473,7 @@ SettingsBasePage {
             id: ytdlFormatField
 
             text: PlaybackSettings.ytdlFormat
-            placeholderText: i18nc("placeholder text", "bestvideo+bestaudio/best")
+            placeholderText: "bestvideo+bestaudio/best"
             Layout.fillWidth: true
             onEditingFinished: save()
 
