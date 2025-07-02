@@ -220,6 +220,12 @@ public:
     Q_PROPERTY(QString TracksCount MEMBER TracksCount CONSTANT)
     const QString TracksCount{u"track-list/count"_s};
 
+    Q_PROPERTY(QString KeepOpen MEMBER KeepOpen CONSTANT)
+    const QString KeepOpen{u"keep-open"_s};
+
+    Q_PROPERTY(QString EofReached MEMBER EofReached CONSTANT)
+    const QString EofReached{u"eof-reached"_s};
+
 private:
     Q_DISABLE_COPY_MOVE(MpvProperties)
 };

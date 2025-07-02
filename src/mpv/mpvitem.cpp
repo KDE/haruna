@@ -74,6 +74,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     Q_EMIT observeProperty(MpvProperties::self()->ChapterList, MPV_FORMAT_NODE);
     Q_EMIT observeProperty(MpvProperties::self()->TracksCount, MPV_FORMAT_NODE);
     Q_EMIT observeProperty(MpvProperties::self()->SubtitleDelay, MPV_FORMAT_DOUBLE);
+    Q_EMIT observeProperty(MpvProperties::self()->EofReached, MPV_FORMAT_FLAG);
 
     setupConnections();
     initProperties();
@@ -125,6 +126,7 @@ void MpvItem::initProperties()
     //    setProperty(u"terminal"_s, InformationSettings::mpvLogging());
     //    setProperty(u"msg-level"_s, u"all=v"_s);
 
+    Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"always"_s);
     Q_EMIT setProperty(MpvProperties::self()->VO, u"libmpv"_s);
     Q_EMIT setProperty(MpvProperties::self()->Pause, m_pause);
 
@@ -176,6 +178,9 @@ void MpvItem::setupConnections()
 
     connect(mpvController(), &MpvController::endFile,
             this, &MpvItem::onEndFile, Qt::QueuedConnection);
+
+    connect(this, &MpvItem::eofReachedChanged,
+            this, &MpvItem::onEndOfFileReadched);
 
     connect(mpvController(), &MpvController::videoReconfig,
             this, &MpvItem::videoReconfig, Qt::QueuedConnection);
@@ -308,7 +313,9 @@ void MpvItem::onReady()
 
 void MpvItem::onEndFile(const QString &reason)
 {
-    int currentItem = playlistProxyModel()->getPlayingItem();
+    Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"always"_s);
+    // this runs after the file has been unloaded from mpv
+    uint currentItem = playlistProxyModel()->getPlayingItem();
     if (reason == u"error"_s) {
         if (playlistModel()->rowCount() == 0) {
             return;
@@ -320,30 +327,49 @@ void MpvItem::onEndFile(const QString &reason)
         Q_EMIT osdMessage(i18nc("@info:tooltip", "Could not play: %1", title.toString()));
     }
 
-    auto reopenLastFilePaused = [this]() {
-        setPropertyBlocking(MpvProperties::self()->Pause, true);
-        Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
-    };
-
-    if (!PlaylistSettings::autoplay()) {
-        reopenLastFilePaused();
-        return;
-    }
-
     if (!playlistProxyModel()->isLastItem(currentItem)) {
         playlistProxyModel()->playNext();
         return;
     }
 
-    // Last file in playlist
+    // last file in playlist
     if (PlaylistSettings::repeat()) {
         // repeat is on -> open first item in the playlist
         playlistProxyModel()->setPlayingItem(0);
         return;
     }
+}
 
-    // repeat is off -> reopen the last file paused
-    reopenLastFilePaused();
+void MpvItem::onEndOfFileReadched()
+{
+    // this runs before the file is unloaded from mpv
+    if (!m_eofReached) {
+        return;
+    }
+
+    auto seekToStartAndPause = [this]() {
+        setPropertyBlocking(MpvProperties::self()->Pause, true);
+        setPropertyBlocking(MpvProperties::self()->Position, 0);
+    };
+
+    if (!PlaylistSettings::autoplay()) {
+        seekToStartAndPause();
+        return;
+    }
+
+    uint currentItem = playlistProxyModel()->getPlayingItem();
+    if (playlistProxyModel()->isLastItem(currentItem)) {
+        if (PlaylistSettings::repeat()) {
+            if (playlistProxyModel()->rowCount() == 1) {
+                setPropertyBlocking(MpvProperties::self()->Position, 0);
+            }
+        } else {
+            seekToStartAndPause();
+            return;
+        }
+    }
+
+    Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"no"_s);
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
@@ -421,6 +447,10 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->Height) {
         m_videoHeight = value.toInt();
         Q_EMIT videoHeightChanged();
+
+    } else if (property == MpvProperties::self()->EofReached) {
+        m_eofReached = value.toBool();
+        Q_EMIT eofReachedChanged();
     }
 }
 

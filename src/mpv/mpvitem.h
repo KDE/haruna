@@ -177,6 +177,7 @@ Q_SIGNALS:
     void videoReconfig();
     void videoWidthChanged();
     void videoHeightChanged();
+    void eofReachedChanged();
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
     void osdMessage(const QString &text);
@@ -193,6 +194,7 @@ private:
     void setupConnections();
     void onReady();
     void onEndFile(const QString &reason);
+    void onEndOfFileReadched();
     void onPropertyChanged(const QString &property, const QVariant &value);
     void saveTimePosition();
     double loadTimePosition();
@@ -226,6 +228,7 @@ private:
     int m_secondarySubtitleId{0};
     int m_videoWidth{0};
     int m_videoHeight{0};
+    bool m_eofReached{false};
     QList<QVariant> m_chaptersList;
 
     double m_watchLaterPosition{0.0};
