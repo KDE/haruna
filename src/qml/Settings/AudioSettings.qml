@@ -29,7 +29,7 @@ SettingsBasePage {
             id: preferredLanguage
 
             text: AudioSettings.preferredLanguage
-            placeholderText: i18nc("placeholder text", "eng, ger etc.")
+            placeholderText: "eng, ger etc."
             Layout.fillWidth: true
             onEditingFinished: save()
 

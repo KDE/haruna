@@ -55,7 +55,7 @@ SettingsBasePage {
             id: preferredLanguage
 
             text: SubtitlesSettings.preferredLanguage
-            placeholderText: i18nc("placeholder text", "eng, ger etc.")
+            placeholderText: "eng, ger etc."
             Layout.fillWidth: true
             onEditingFinished: save()
             enabled: autoSelectSubtitles.checked
