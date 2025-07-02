@@ -313,7 +313,6 @@ void MpvItem::onReady()
 
 void MpvItem::onEndFile(const QString &reason)
 {
-    Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"always"_s);
     // this runs after the file has been unloaded from mpv
     uint currentItem = playlistProxyModel()->getPlayingItem();
     if (reason == u"error"_s) {
@@ -456,6 +455,8 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
 void MpvItem::loadFile(const QString &file)
 {
+    Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"always"_s);
+
     auto url = QUrl::fromUserInput(file);
     if (m_currentUrl != url) {
         m_currentUrl = url;
