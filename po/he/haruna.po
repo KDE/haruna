@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:42+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2025-06-04 10:23+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -81,20 +81,18 @@ msgid "File to open"
 msgstr "קובץ לפתיחה"
 
 #: src/application.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid ""
+#| "Allows to temporarily override the ytdl format selection setting. Will be "
+#| "overwritten if the setting is changed through the GUI"
 msgctxt "@info:shell"
 msgid ""
-"Allows to temporarily override the ytdl format selection setting. Will be "
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 "מאפשר מעקף זמני של הגדרות בחירת תסדיר ytdl. ישוכתב אם ההגדרה תשתנה דרך ממשק "
 "המשתמש"
-
-#: src/application.cpp:170
-#, kde-format
-msgctxt "@info:shell"
-msgid "bestvideo+bestaudio/best"
-msgstr "bestvideo+bestaudio/best"
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -127,16 +125,20 @@ msgid "Sponsor Haruna"
 msgstr "מימון Haruna"
 
 #: src/models/actionsmodel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Audio Track"
 msgctxt "@action"
-msgid "Audio Cycle Up"
-msgstr "מעבר להגדרת השמע הבאה"
+msgid "Cycle Up Audio Track"
+msgstr "רצועת שמע"
 
 #: src/models/actionsmodel.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Audio Track"
 msgctxt "@action"
-msgid "Audio Cycle Down"
-msgstr "מעבר להגדרת השמע הקודמת"
+msgid "Cycle Down Audio Track"
+msgstr "רצועת שמע"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
@@ -157,15 +159,19 @@ msgid "Exit Fullscreen"
 msgstr "יציאה ממסך מלא"
 
 #: src/models/actionsmodel.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Frame Step Forward"
 msgctxt "@action"
-msgid "Frame Step Forward"
+msgid "Step Frame Forward"
 msgstr "תמונית קדימה"
 
 #: src/models/actionsmodel.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Frame Step Backward"
 msgctxt "@action"
-msgid "Frame Step Backward"
+msgid "Step Frame Backward"
 msgstr "תמונית אחורה"
 
 #: src/models/actionsmodel.cpp:102
@@ -211,22 +217,28 @@ msgid "Open URL"
 msgstr "פתיחת כתובת"
 
 #: src/models/actionsmodel.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Increase"
-msgstr "האצת נגינה"
+msgid "Increase Playback Speed"
+msgstr "מהירות נגינה"
 
 #: src/models/actionsmodel.cpp:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Decrease"
-msgstr "האטת נגינה"
+msgid "Decrease Playback Speed"
+msgstr "מהירות נגינה"
 
 #: src/models/actionsmodel.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Reset"
-msgstr "איפוס מהירות נגינה"
+msgid "Reset Playback Speed"
+msgstr "מהירות נגינה"
 
 #: src/models/actionsmodel.cpp:166
 #, kde-format
@@ -295,15 +307,19 @@ msgid "Seek Big Step Backward"
 msgstr "דילוג צעד גדול אחורה"
 
 #: src/models/actionsmodel.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Next Chapter"
 msgctxt "@action"
-msgid "Seek Next Chapter"
+msgid "Seek To Next Chapter"
 msgstr "חתירה לפרק הבא"
 
 #: src/models/actionsmodel.cpp:250
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Previous Chapter"
 msgctxt "@action"
-msgid "Seek Previous Chapter"
+msgid "Seek To Previous Chapter"
 msgstr "חתירה לפרק הקודם"
 
 #: src/models/actionsmodel.cpp:257
@@ -337,58 +353,76 @@ msgid "Screenshot"
 msgstr "צילום מסך"
 
 #: src/models/actionsmodel.cpp:292
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Toggle"
-msgstr "הצגת/הסתרת כתוביות"
+msgid "Toggle Subtitles"
+msgstr "כתוביות"
 
 #: src/models/actionsmodel.cpp:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Increase Font Size"
 msgctxt "@action"
-msgid "Subtitle Increase Font Size"
+msgid "Increase Subtitle Font Size"
 msgstr "הגדלת כתב כתוביות"
 
 #: src/models/actionsmodel.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Decrease Font Size"
 msgctxt "@action"
-msgid "Subtitle Decrease Font Size"
+msgid "Decrease Subtitle Font Size"
 msgstr "הקטנת כתב כתוביות"
 
 #: src/models/actionsmodel.cpp:313
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Subtitle Move Up"
+msgid "Move Subtitle Up"
 msgstr "הגבהת כתוביות"
 
 #: src/models/actionsmodel.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Subtitle Move Down"
-msgstr "הנמכת כתוביות"
+msgid "Move Subtitle Down"
+msgstr "כתוביות פעילות"
 
 #: src/models/actionsmodel.cpp:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
 msgctxt "@action"
-msgid "Subtitle Quicken"
-msgstr "האצת כתוביות"
+msgid "Show Subtitles Earlier"
+msgstr "בחירת קובץ כתוביות"
 
 #: src/models/actionsmodel.cpp:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
 msgctxt "@action"
-msgid "Subtitle Delay"
-msgstr "השהיית כתוביות"
+msgid "Show Subtitles Later"
+msgstr "בחירת קובץ כתוביות"
 
 #: src/models/actionsmodel.cpp:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Cycle Up"
-msgstr "מעבר לכתוביות המוגדרות הבאות"
+msgid "Cycle Up Subtitle"
+msgstr "כתוביות"
 
 #: src/models/actionsmodel.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Secondary Subtitle"
 msgctxt "@action"
-msgid "Subtitle Cycle Down"
-msgstr "מעבר לכתוביות המוגדרות הקודמות"
+msgid "Cycle Down Subtitle"
+msgstr "כתובית משנית"
 
 #: src/models/actionsmodel.cpp:355
 #, kde-format
@@ -421,27 +455,35 @@ msgid "Playlist"
 msgstr "רשימת נגינה"
 
 #: src/models/actionsmodel.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Left"
 msgctxt "@action"
-msgid "Video Move Left"
+msgid "Move Video Left"
 msgstr "הזזת סרטון שמאלה"
 
 #: src/models/actionsmodel.cpp:397
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Right"
 msgctxt "@action"
-msgid "Video Move Right"
+msgid "Move Video Right"
 msgstr "הזזת סרטון ימינה"
 
 #: src/models/actionsmodel.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Up"
 msgctxt "@action"
-msgid "Video Move Up"
+msgid "Move Video Up"
 msgstr "הגבהת סרטון"
 
 #: src/models/actionsmodel.cpp:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Down"
 msgctxt "@action"
-msgid "Video Move Down"
+msgid "Move Video Down"
 msgstr "הורדת סרטון"
 
 #: src/models/actionsmodel.cpp:418
@@ -483,80 +525,100 @@ msgstr "התרחקות"
 #: src/models/actionsmodel.cpp:460
 #, kde-format
 msgctxt "@action"
-msgid "Zoom Reset"
-msgstr "איפוס תקריב"
+msgid "Reset Zoom"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:467
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Up"
-msgstr "הגברת ניגודיות"
+msgid "Increase Contrast"
+msgstr "ניגודיות"
 
 #: src/models/actionsmodel.cpp:474
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Down"
-msgstr "הפחתת ניגודיות"
+msgid "Decrease Contrast"
+msgstr "ניגודיות"
 
 #: src/models/actionsmodel.cpp:481
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Reset"
-msgstr "איפוס ניגודיות"
+msgid "Reset Contrast"
+msgstr "ניגודיות"
 
 #: src/models/actionsmodel.cpp:488
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Up"
-msgstr "הגברת בהירות"
+msgid "Increase Brightness"
+msgstr "בהירות"
 
 #: src/models/actionsmodel.cpp:495
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Down"
-msgstr "הפחתת בהירות"
+msgid "Decrease Brightness"
+msgstr "בהירות"
 
 #: src/models/actionsmodel.cpp:502
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Reset"
-msgstr "איפוס בהירות"
+msgid "Reset Brightness"
+msgstr "בהירות"
 
 #: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Up"
-msgstr "הגברת גאמה"
+msgid "Increase Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Down"
-msgstr "הפחתת גאמה"
+msgid "Decrease Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:523
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Gamma"
 msgctxt "@action"
-msgid "Gamma Reset"
-msgstr "איפוס גאמה"
+msgid "Reset Gamma"
+msgstr "גאמה"
 
 #: src/models/actionsmodel.cpp:530
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Up"
-msgstr "הגברת רוויה"
+msgid "Increase Saturation"
+msgstr "רוויה"
 
 #: src/models/actionsmodel.cpp:537
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Down"
-msgstr "הפחתת רוויה"
+msgid "Decrease Saturation"
+msgstr "רוויה"
 
 #: src/models/actionsmodel.cpp:544
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Reset"
-msgstr "איפוס רוויה"
+msgid "Reset Saturation"
+msgstr "רוויה"
 
 #: src/models/actionsmodel.cpp:693
 #, kde-format
@@ -573,44 +635,48 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "הקצאה מחדש"
 
-#: src/mpv/mpvitem.cpp:320
-#, kde-format
-msgctxt "@info:tooltip"
+#: src/mpv/mpvitem.cpp:326
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Could not play: %1"
+msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "לא ניתן לנגן: %1"
 
-#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
+#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "תזמון כתובית: %1 שניות"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:495
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "אין"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:534
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "צילום המסך נכשל"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
-#: src/mpv/mpvitem.cpp:510
-#, kde-format
-msgctxt "@info:tooltip osd"
+#: src/mpv/mpvitem.cpp:541
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip osd"
+#| msgid "Screenshot: %1"
+msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "צילום מסך: %1"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -618,14 +684,17 @@ msgid ""
 "due to missing codecs"
 msgstr "לא זוהתה רצועת וידאו, כנראה שאי אפשר לפענח/לנגן עקב בעיית מפענחים"
 
-#: src/mpv/mpvitem.cpp:570
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "פרק שנפסח: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "שמע: %1 %2"
 
@@ -642,7 +711,10 @@ msgid "Playback speed: %1"
 msgstr "מהירות נגינה: %1"
 
 #: src/qml/Actions.qml:288
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop start: %1"
+msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "תחילת לולאה: %1"
 
@@ -672,7 +744,10 @@ msgid "Subtitle: None"
 msgstr "כתוביות: אין"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "כתובית: %1 %2"
 
@@ -810,8 +885,11 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-msgctxt "@label"
-msgid "Load subtitles from"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Load subtitles from"
+msgctxt "@label; Below is a list of folders containing subtitles"
+msgid "Load subtitles from:"
 msgstr "טעינת כתוביות מתוך"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
@@ -1187,12 +1265,6 @@ msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "שפה מועדפת"
 
-#: src/qml/Settings/AudioSettings.qml:32
-#: src/qml/Settings/SubtitlesSettings.qml:58
-msgctxt "placeholder text"
-msgid "eng, ger etc."
-msgstr "eng, heb ועוד."
-
 #: src/qml/Settings/AudioSettings.qml:51
 #: src/qml/Settings/SubtitlesSettings.qml:78
 msgctxt "@label:spinbox"
@@ -1277,11 +1349,6 @@ msgctxt "@label:textbox"
 msgid "Command"
 msgstr "פקודה"
 
-#: src/qml/Settings/EditCustomCommand.qml:51
-msgctxt "placeholder text"
-msgid "add volume +10"
-msgstr "הוספת ‎+10 לעוצמת השמע"
-
 #: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
@@ -1313,9 +1380,12 @@ msgid "OSD Message"
 msgstr "הודעה על המסך"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-msgctxt "placeholder text"
-msgid "Filename: ${filename}"
-msgstr "שם קובץ: ${filename}"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Volume: %1"
+msgctxt "placeholder text; %1 is an example of how to display an mpv property"
+msgid "Filename: %1"
+msgstr "עוצמת שמע: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1370,8 +1440,11 @@ msgid "&Save"
 msgstr "&שמירה"
 
 #: src/qml/Settings/GeneralSettings.qml:25
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Osd font size"
 msgctxt "@label:spinbox"
-msgid "Osd font size"
+msgid "OSD font size"
 msgstr "גודל כתב בשכבת על המסך"
 
 #: src/qml/Settings/GeneralSettings.qml:51
@@ -1803,12 +1876,20 @@ msgstr ""
 "כשהאפשרות פעילה הנגן ידלג אוטומטית על פרקים שמכילים מילים/תווים מסוימים."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Show osd message on skip"
 msgctxt "@option:check"
-msgid "Show osd message on skip"
+msgid "Show OSD message on skip"
 msgstr "הצגת הודעה על גבי המסך עם הדילוג"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-msgctxt "@info:tooltip show osd message on skip setting"
+#, fuzzy
+#| msgctxt "@info:tooltip show osd message on skip setting"
+#| msgid ""
+#| "When skipping chapters an osd message will show the title of the skipped "
+#| "chapter."
+msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
@@ -1817,8 +1898,8 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
-msgid "Skip words"
-msgstr "דילוג על מילים"
+msgid "Keywords"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
@@ -1849,11 +1930,6 @@ msgstr "בחירת תסדיר"
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "בוחר את מקור הווידאו שהכי קרוב לתצורה הנבחרת."
-
-#: src/qml/Settings/PlaybackSettings.qml:476
-msgctxt "placeholder text"
-msgid "bestvideo+bestaudio/best"
-msgstr "bestvideo+bestaudio/best"
 
 #: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
@@ -2207,6 +2283,126 @@ msgstr "רוויה"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "לחיצה אמצעית על המחוונים תאפס אותם"
+
+#~ msgctxt "@info:shell"
+#~ msgid "bestvideo+bestaudio/best"
+#~ msgstr "bestvideo+bestaudio/best"
+
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Up"
+#~ msgstr "מעבר להגדרת השמע הבאה"
+
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Down"
+#~ msgstr "מעבר להגדרת השמע הקודמת"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Increase"
+#~ msgstr "האצת נגינה"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Decrease"
+#~ msgstr "האטת נגינה"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Reset"
+#~ msgstr "איפוס מהירות נגינה"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Toggle"
+#~ msgstr "הצגת/הסתרת כתוביות"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Down"
+#~ msgstr "הנמכת כתוביות"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Quicken"
+#~ msgstr "האצת כתוביות"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Delay"
+#~ msgstr "השהיית כתוביות"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Up"
+#~ msgstr "מעבר לכתוביות המוגדרות הבאות"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Down"
+#~ msgstr "מעבר לכתוביות המוגדרות הקודמות"
+
+#~ msgctxt "@action"
+#~ msgid "Zoom Reset"
+#~ msgstr "איפוס תקריב"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Up"
+#~ msgstr "הגברת ניגודיות"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Down"
+#~ msgstr "הפחתת ניגודיות"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Reset"
+#~ msgstr "איפוס ניגודיות"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Up"
+#~ msgstr "הגברת בהירות"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Down"
+#~ msgstr "הפחתת בהירות"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Reset"
+#~ msgstr "איפוס בהירות"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Up"
+#~ msgstr "הגברת גאמה"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Down"
+#~ msgstr "הפחתת גאמה"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Reset"
+#~ msgstr "איפוס גאמה"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Up"
+#~ msgstr "הגברת רוויה"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Down"
+#~ msgstr "הפחתת רוויה"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Reset"
+#~ msgstr "איפוס רוויה"
+
+#~ msgctxt "placeholder text"
+#~ msgid "eng, ger etc."
+#~ msgstr "eng, heb ועוד."
+
+#~ msgctxt "placeholder text"
+#~ msgid "add volume +10"
+#~ msgstr "הוספת ‎+10 לעוצמת השמע"
+
+#~ msgctxt "placeholder text"
+#~ msgid "Filename: ${filename}"
+#~ msgstr "שם קובץ: ${filename}"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Skip words"
+#~ msgstr "דילוג על מילים"
+
+#~ msgctxt "placeholder text"
+#~ msgid "bestvideo+bestaudio/best"
+#~ msgstr "bestvideo+bestaudio/best"
 
 #~ msgctxt "@action:button"
 #~ msgid "Add ..."

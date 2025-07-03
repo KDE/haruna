@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:42+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2025-03-09 12:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -82,20 +82,18 @@ msgid "File to open"
 msgstr "திறக்க வேண்டிய கோப்பு"
 
 #: src/application.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid ""
+#| "Allows to temporarily override the ytdl format selection setting. Will be "
+#| "overwritten if the setting is changed through the GUI"
 msgctxt "@info:shell"
 msgid ""
-"Allows to temporarily override the ytdl format selection setting. Will be "
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 "ytdl கோப்புவகைத் தேர்வை தற்காலிகமாக மாற்றியமைக்கும். வரைபட இடைமுகப்பில் மாற்றினால் "
 "இத்தேர்வு பொருட்படுத்தப்படாது"
-
-#: src/application.cpp:170
-#, kde-format
-msgctxt "@info:shell"
-msgid "bestvideo+bestaudio/best"
-msgstr ""
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -128,16 +126,20 @@ msgid "Sponsor Haruna"
 msgstr "ஹருணாவை ஆதரிக்க"
 
 #: src/models/actionsmodel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "&Audio"
 msgctxt "@action"
-msgid "Audio Cycle Up"
-msgstr ""
+msgid "Cycle Up Audio Track"
+msgstr "&ஒலி"
 
 #: src/models/actionsmodel.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "&Audio"
 msgctxt "@action"
-msgid "Audio Cycle Down"
-msgstr ""
+msgid "Cycle Down Audio Track"
+msgstr "&ஒலி"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
@@ -158,16 +160,20 @@ msgid "Exit Fullscreen"
 msgstr "முழுத்திரை பயன்முறையிலிருந்து வெளியேறு"
 
 #: src/models/actionsmodel.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Small Step Forward"
 msgctxt "@action"
-msgid "Frame Step Forward"
-msgstr ""
+msgid "Step Frame Forward"
+msgstr "சிறுபடியாக முன்னே செல்"
 
 #: src/models/actionsmodel.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Small Step Backward"
 msgctxt "@action"
-msgid "Frame Step Backward"
-msgstr ""
+msgid "Step Frame Backward"
+msgstr "சிறுபடியாக பின்னே செல்"
 
 #: src/models/actionsmodel.cpp:102
 #, kde-format
@@ -214,22 +220,28 @@ msgid "Open URL"
 msgstr "முகவரியை திற"
 
 #: src/models/actionsmodel.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback speed"
 msgctxt "@action"
-msgid "Playback Speed Increase"
-msgstr "வேகமாக இயக்கு"
+msgid "Increase Playback Speed"
+msgstr "இயக்கும் வேகம்"
 
 #: src/models/actionsmodel.cpp:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback speed"
 msgctxt "@action"
-msgid "Playback Speed Decrease"
-msgstr "மெதுவாக இயக்கு"
+msgid "Decrease Playback Speed"
+msgstr "இயக்கும் வேகம்"
 
 #: src/models/actionsmodel.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback speed"
 msgctxt "@action"
-msgid "Playback Speed Reset"
-msgstr "இயக்கவேகத்தை மீட்டமை"
+msgid "Reset Playback Speed"
+msgstr "இயக்கும் வேகம்"
 
 #: src/models/actionsmodel.cpp:166
 #, kde-format
@@ -298,15 +310,19 @@ msgid "Seek Big Step Backward"
 msgstr "பெரும்படியாக பின்னே செல்"
 
 #: src/models/actionsmodel.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Next Chapter"
 msgctxt "@action"
-msgid "Seek Next Chapter"
+msgid "Seek To Next Chapter"
 msgstr "அடுத்த பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:250
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Previous Chapter"
 msgctxt "@action"
-msgid "Seek Previous Chapter"
+msgid "Seek To Previous Chapter"
 msgstr "முந்தைய பகுதிக்கு செல்"
 
 #: src/models/actionsmodel.cpp:257
@@ -340,58 +356,76 @@ msgid "Screenshot"
 msgstr "திரைப்பிடிப்பு"
 
 #: src/models/actionsmodel.cpp:292
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:intoolbar"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Toggle"
-msgstr "துணையுரையைக் காட்டு/மறை"
+msgid "Toggle Subtitles"
+msgstr "துணையுரை"
 
 #: src/models/actionsmodel.cpp:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Increase Font Size"
 msgctxt "@action"
-msgid "Subtitle Increase Font Size"
+msgid "Increase Subtitle Font Size"
 msgstr "துணையுரையைப் பெரிதாக்கு"
 
 #: src/models/actionsmodel.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Decrease Font Size"
 msgctxt "@action"
-msgid "Subtitle Decrease Font Size"
+msgid "Decrease Subtitle Font Size"
 msgstr "துணையுரையை சிறிதாக்கு"
 
 #: src/models/actionsmodel.cpp:313
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Move Up"
 msgctxt "@action"
-msgid "Subtitle Move Up"
+msgid "Move Subtitle Up"
 msgstr "துணையுரையை மேலே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Subtitle Move Down"
-msgstr "துணையுரையை கீழே நகர்த்து"
+msgid "Move Subtitle Down"
+msgstr "துணை உரையை இயக்கு"
 
 #: src/models/actionsmodel.cpp:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
 msgctxt "@action"
-msgid "Subtitle Quicken"
-msgstr "துணையுரையை வேகப்படுத்து"
+msgid "Show Subtitles Earlier"
+msgstr "துணையுரை கோப்பைத் தேர்ந்தெடுப்பது"
 
 #: src/models/actionsmodel.cpp:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
 msgctxt "@action"
-msgid "Subtitle Delay"
-msgstr "துணையுரையைத் தாமதமாக்கு"
+msgid "Show Subtitles Later"
+msgstr "துணையுரை கோப்பைத் தேர்ந்தெடுப்பது"
 
 #: src/models/actionsmodel.cpp:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:intoolbar"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Cycle Up"
-msgstr "முந்தைய வகையான துணை உரையை காட்டு"
+msgid "Cycle Up Subtitle"
+msgstr "துணையுரை"
 
 #: src/models/actionsmodel.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Secondary Subtitle"
 msgctxt "@action"
-msgid "Subtitle Cycle Down"
-msgstr "அடுத்த வகையான துணை உரையை காட்டு"
+msgid "Cycle Down Subtitle"
+msgstr "இரண்டாம்நிலை துணை உரை"
 
 #: src/models/actionsmodel.cpp:355
 #, kde-format
@@ -424,27 +458,35 @@ msgid "Playlist"
 msgstr "பாடல்வரிசை"
 
 #: src/models/actionsmodel.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Left"
 msgctxt "@action"
-msgid "Video Move Left"
+msgid "Move Video Left"
 msgstr "நிகழ்படத்தை இடதாக நகர்த்து"
 
 #: src/models/actionsmodel.cpp:397
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Right"
 msgctxt "@action"
-msgid "Video Move Right"
+msgid "Move Video Right"
 msgstr "நிகழ்படத்தை வலதாக நகர்த்து"
 
 #: src/models/actionsmodel.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Up"
 msgctxt "@action"
-msgid "Video Move Up"
+msgid "Move Video Up"
 msgstr "நிகழ்படத்தை மேலே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Down"
 msgctxt "@action"
-msgid "Video Move Down"
+msgid "Move Video Down"
 msgstr "நிகழ்படத்தை கீழே நகர்த்து"
 
 #: src/models/actionsmodel.cpp:418
@@ -486,82 +528,95 @@ msgstr "சிறிதாக்கு"
 #: src/models/actionsmodel.cpp:460
 #, kde-format
 msgctxt "@action"
-msgid "Zoom Reset"
-msgstr "உருப்பெருக்கத்தை மீட்டமை"
+msgid "Reset Zoom"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:467
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Up"
+msgid "Increase Contrast"
 msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/models/actionsmodel.cpp:474
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Down"
-msgstr "நிறமாறுபாட்டை குறை"
+msgid "Decrease Contrast"
+msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/models/actionsmodel.cpp:481
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Reset"
-msgstr "நிறமாறுபாட்டை மீட்டமை"
+msgid "Reset Contrast"
+msgstr "நிறமாறுபாட்டை கூட்டு"
 
 #: src/models/actionsmodel.cpp:488
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Up"
+msgid "Increase Brightness"
 msgstr "பிரகாசத்தை கூட்டு"
 
 #: src/models/actionsmodel.cpp:495
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Down"
-msgstr "பிரகாசத்தை குறை"
+msgid "Decrease Brightness"
+msgstr "பிரகாசத்தை கூட்டு"
 
 #: src/models/actionsmodel.cpp:502
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Reset"
-msgstr "பிரகாசத்தை மீட்டமை"
+msgid "Reset Brightness"
+msgstr "பிரகாசத்தை கூட்டு"
 
 #: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Up"
-msgstr "காமாவை கூட்டு"
+msgid "Increase Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Down"
-msgstr "காமாவை குறை"
+msgid "Decrease Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:523
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Gamma"
 msgctxt "@action"
-msgid "Gamma Reset"
-msgstr "காமாவை மீட்டமை"
+msgid "Reset Gamma"
+msgstr "காமாவை கூட்டு"
 
 #: src/models/actionsmodel.cpp:530
 #, kde-format
 msgctxt "@action"
-msgid "Saturation Up"
+msgid "Increase Saturation"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:537
-#, fuzzy, kde-format
-#| msgid "Contrast Down"
+#, kde-format
 msgctxt "@action"
-msgid "Saturation Down"
-msgstr "நிறமாறுபாட்டை குறை"
+msgid "Decrease Saturation"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:544
 #, fuzzy, kde-format
-#| msgid "Contrast Reset"
+#| msgid "Contrast Down"
 msgctxt "@action"
-msgid "Saturation Reset"
-msgstr "நிறமாறுபாட்டை மீட்டமை"
+msgid "Reset Saturation"
+msgstr "நிறமாறுபாட்டை குறை"
 
 #: src/models/actionsmodel.cpp:693
 #, kde-format
@@ -579,13 +634,15 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "இதற்கே அமர்த்து"
 
-#: src/mpv/mpvitem.cpp:320
-#, kde-format
-msgctxt "@info:tooltip"
+#: src/mpv/mpvitem.cpp:326
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Could not play: %1"
+msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "இதனை இயக்க முடியவில்லை: %1"
 
-#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
+#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles on"
@@ -593,32 +650,34 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "துணை உரையை காட்டு"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:495
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:534
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "திரைப்பிடிப்பு தோல்வியடைந்தது"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "திரைப்பிடிப்பு எடுக்கப்பட்டது"
 
-#: src/mpv/mpvitem.cpp:510
-#, kde-format
-msgctxt "@info:tooltip osd"
+#: src/mpv/mpvitem.cpp:541
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip osd"
+#| msgid "Screenshot: %1"
+msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "திரைப்பிடிப்பு: %1"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -626,14 +685,17 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:570
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "பகுதி தவிர்க்கப்பட்டது: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "ஒலி: %1 %2"
 
@@ -650,7 +712,10 @@ msgid "Playback speed: %1"
 msgstr "இயக்கும் வேகம்: %1"
 
 #: src/qml/Actions.qml:288
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop start: %1"
+msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "சுழற்சியின் துவக்கம்: %1"
 
@@ -683,7 +748,10 @@ msgid "Subtitle: None"
 msgstr "துணையுரை: ஏதுமில்லை"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "துணையுரை: %1 %2"
 
@@ -837,8 +905,8 @@ msgstr ""
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles on"
-msgctxt "@label"
-msgid "Load subtitles from"
+msgctxt "@label; Below is a list of folders containing subtitles"
+msgid "Load subtitles from:"
 msgstr "துணை உரையை இயக்கு"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
@@ -1276,12 +1344,6 @@ msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "முதன்மையான மொழி"
 
-#: src/qml/Settings/AudioSettings.qml:32
-#: src/qml/Settings/SubtitlesSettings.qml:58
-msgctxt "placeholder text"
-msgid "eng, ger etc."
-msgstr ""
-
 #: src/qml/Settings/AudioSettings.qml:51
 #: src/qml/Settings/SubtitlesSettings.qml:78
 #, fuzzy
@@ -1370,11 +1432,6 @@ msgctxt "@label:textbox"
 msgid "Command"
 msgstr "கட்டளை"
 
-#: src/qml/Settings/EditCustomCommand.qml:51
-msgctxt "placeholder text"
-msgid "add volume +10"
-msgstr ""
-
 #: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
@@ -1396,9 +1453,12 @@ msgid "OSD Message"
 msgstr "திரையில் காட்டப்படும் தகவல்"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-msgctxt "placeholder text"
-msgid "Filename: ${filename}"
-msgstr ""
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Volume: %1"
+msgctxt "placeholder text; %1 is an example of how to display an mpv property"
+msgid "Filename: %1"
+msgstr "ஒலி அளவு: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1452,7 +1512,7 @@ msgstr "&சேமி"
 
 #: src/qml/Settings/GeneralSettings.qml:25
 msgctxt "@label:spinbox"
-msgid "Osd font size"
+msgid "OSD font size"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:51
@@ -1862,12 +1922,15 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:347
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Show osd message on skip"
 msgctxt "@option:check"
-msgid "Show osd message on skip"
+msgid "Show OSD message on skip"
 msgstr "தவிர்க்கும்போது திரையில் தகவல் காட்டு"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-msgctxt "@info:tooltip show osd message on skip setting"
+msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
@@ -1875,8 +1938,8 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
-msgid "Skip words"
-msgstr "சொற்களைத் தவிர்"
+msgid "Keywords"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
@@ -1903,11 +1966,6 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-
-#: src/qml/Settings/PlaybackSettings.qml:476
-msgctxt "placeholder text"
-msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:24
@@ -2234,6 +2292,92 @@ msgstr ""
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Increase"
+#~ msgstr "வேகமாக இயக்கு"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Decrease"
+#~ msgstr "மெதுவாக இயக்கு"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Reset"
+#~ msgstr "இயக்கவேகத்தை மீட்டமை"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Toggle"
+#~ msgstr "துணையுரையைக் காட்டு/மறை"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Down"
+#~ msgstr "துணையுரையை கீழே நகர்த்து"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Quicken"
+#~ msgstr "துணையுரையை வேகப்படுத்து"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Delay"
+#~ msgstr "துணையுரையைத் தாமதமாக்கு"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Up"
+#~ msgstr "முந்தைய வகையான துணை உரையை காட்டு"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Down"
+#~ msgstr "அடுத்த வகையான துணை உரையை காட்டு"
+
+#~ msgctxt "@action"
+#~ msgid "Zoom Reset"
+#~ msgstr "உருப்பெருக்கத்தை மீட்டமை"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Up"
+#~ msgstr "நிறமாறுபாட்டை கூட்டு"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Down"
+#~ msgstr "நிறமாறுபாட்டை குறை"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Reset"
+#~ msgstr "நிறமாறுபாட்டை மீட்டமை"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Up"
+#~ msgstr "பிரகாசத்தை கூட்டு"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Down"
+#~ msgstr "பிரகாசத்தை குறை"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Reset"
+#~ msgstr "பிரகாசத்தை மீட்டமை"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Up"
+#~ msgstr "காமாவை கூட்டு"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Down"
+#~ msgstr "காமாவை குறை"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Reset"
+#~ msgstr "காமாவை மீட்டமை"
+
+#, fuzzy
+#~| msgid "Contrast Reset"
+#~ msgctxt "@action"
+#~ msgid "Saturation Reset"
+#~ msgstr "நிறமாறுபாட்டை மீட்டமை"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Skip words"
+#~ msgstr "சொற்களைத் தவிர்"
 
 #~ msgctxt "@action:button"
 #~ msgid "Add ..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:42+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2025-06-20 22:13+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -85,20 +85,18 @@ msgid "File to open"
 msgstr "Ireki beharreko fitxategia"
 
 #: src/application.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid ""
+#| "Allows to temporarily override the ytdl format selection setting. Will be "
+#| "overwritten if the setting is changed through the GUI"
 msgctxt "@info:shell"
 msgid ""
-"Allows to temporarily override the ytdl format selection setting. Will be "
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 "Baimendu «ytdl» formatuko hautapen ezarpenak denbora batez gainezartzen. "
 "Ezarpena GUI bidez aldatzen bada gainidatzi egingo da."
-
-#: src/application.cpp:170
-#, kde-format
-msgctxt "@info:shell"
-msgid "bestvideo+bestaudio/best"
-msgstr "bideorikonena+audiorikonena/onena"
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -131,16 +129,19 @@ msgid "Sponsor Haruna"
 msgstr "Babestu Haruna"
 
 #: src/models/actionsmodel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Audio Track"
 msgctxt "@action"
-msgid "Audio Cycle Up"
-msgstr "Audio-zikloa gorantz"
+msgid "Cycle Up Audio Track"
+msgstr "Audio-pista"
 
 #: src/models/actionsmodel.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cycle Audio Up"
 msgctxt "@action"
-msgid "Audio Cycle Down"
-msgstr "Audio-zikloa beherantz"
+msgid "Cycle Down Audio Track"
+msgstr "Audio-zikloa gora"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
@@ -161,15 +162,19 @@ msgid "Exit Fullscreen"
 msgstr "Irten pantaila-osotik"
 
 #: src/models/actionsmodel.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Frame Step Forward"
 msgctxt "@action"
-msgid "Frame Step Forward"
+msgid "Step Frame Forward"
 msgstr "Fotograma urratsa aurrerantz"
 
 #: src/models/actionsmodel.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Frame Step Backward"
 msgctxt "@action"
-msgid "Frame Step Backward"
+msgid "Step Frame Backward"
 msgstr "Fotograma urratsa atzerantz"
 
 #: src/models/actionsmodel.cpp:102
@@ -215,22 +220,28 @@ msgid "Open URL"
 msgstr "Ireki URL"
 
 #: src/models/actionsmodel.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Increase"
-msgstr "Atzera-jotze abiadura handitzea"
+msgid "Increase Playback Speed"
+msgstr "Atzera-jotze abiadura"
 
 #: src/models/actionsmodel.cpp:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Decrease"
-msgstr "Atzera-jotze abiadura gutxitzea"
+msgid "Decrease Playback Speed"
+msgstr "Atzera-jotze abiadura"
 
 #: src/models/actionsmodel.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Reset"
-msgstr "Atzera-jotze abiadura berrezartzea"
+msgid "Reset Playback Speed"
+msgstr "Atzera-jotze abiadura"
 
 #: src/models/actionsmodel.cpp:166
 #, kde-format
@@ -299,15 +310,19 @@ msgid "Seek Big Step Backward"
 msgstr "Bilatu urrats handia atzerantz"
 
 #: src/models/actionsmodel.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Next Chapter"
 msgctxt "@action"
-msgid "Seek Next Chapter"
+msgid "Seek To Next Chapter"
 msgstr "Bilatu hurrengo atala"
 
 #: src/models/actionsmodel.cpp:250
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Previous Chapter"
 msgctxt "@action"
-msgid "Seek Previous Chapter"
+msgid "Seek To Previous Chapter"
 msgstr "Bilatu aurreko atala"
 
 #: src/models/actionsmodel.cpp:257
@@ -341,58 +356,72 @@ msgid "Screenshot"
 msgstr "Pantaila-argazkia"
 
 #: src/models/actionsmodel.cpp:292
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Toggle"
-msgstr "Azpidatziak txandakatzea"
+msgid "Toggle Subtitles"
+msgstr "Azpidatziak"
 
 #: src/models/actionsmodel.cpp:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Increase Font Size"
 msgctxt "@action"
-msgid "Subtitle Increase Font Size"
+msgid "Increase Subtitle Font Size"
 msgstr "Azpidatzien letra-tipoa handiagotu"
 
 #: src/models/actionsmodel.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Decrease Font Size"
 msgctxt "@action"
-msgid "Subtitle Decrease Font Size"
+msgid "Decrease Subtitle Font Size"
 msgstr "Azpidatzien letra-tipoa txikiagotu"
 
 #: src/models/actionsmodel.cpp:313
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Up"
 msgctxt "@action"
-msgid "Subtitle Move Up"
-msgstr "Azpidatzia gora eraman"
+msgid "Move Subtitle Up"
+msgstr "Eraman azpidatzia gora"
 
 #: src/models/actionsmodel.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Down"
 msgctxt "@action"
-msgid "Subtitle Move Down"
-msgstr "Azpidatzia behera eraman"
+msgid "Move Subtitle Down"
+msgstr "Eraman azpidatzia behera"
 
 #: src/models/actionsmodel.cpp:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
 msgctxt "@action"
-msgid "Subtitle Quicken"
-msgstr "Azpidatziak bizkortzea"
+msgid "Show Subtitles Earlier"
+msgstr "Hautatu azpidatzi-fitxategia"
 
 #: src/models/actionsmodel.cpp:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
 msgctxt "@action"
-msgid "Subtitle Delay"
-msgstr "Azpidatziak atzeratzea"
+msgid "Show Subtitles Later"
+msgstr "Hautatu azpidatzi-fitxategia"
 
 #: src/models/actionsmodel.cpp:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cycle Subtitle Up"
 msgctxt "@action"
-msgid "Subtitle Cycle Up"
-msgstr "Azpidatzi-zikloa gorantz"
+msgid "Cycle Up Subtitle"
+msgstr "Azpidatzi-zikloa gora"
 
 #: src/models/actionsmodel.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cycle Subtitle Up"
 msgctxt "@action"
-msgid "Subtitle Cycle Down"
-msgstr "Azpidatzi-zikloa beherantz"
+msgid "Cycle Down Subtitle"
+msgstr "Azpidatzi-zikloa gora"
 
 #: src/models/actionsmodel.cpp:355
 #, kde-format
@@ -425,28 +454,34 @@ msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
 #: src/models/actionsmodel.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Left"
 msgctxt "@action"
-msgid "Video Move Left"
+msgid "Move Video Left"
 msgstr "Bideo ezkerrera eraman"
 
 #: src/models/actionsmodel.cpp:397
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Right"
 msgctxt "@action"
-msgid "Video Move Right"
+msgid "Move Video Right"
 msgstr "Bideo eskuinera eraman"
 
 #: src/models/actionsmodel.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Up"
 msgctxt "@action"
-msgid "Video Move Up"
-msgstr "Bideoa gora eraman"
+msgid "Move Video Up"
+msgstr "Eraman azpidatzia gora"
 
 #: src/models/actionsmodel.cpp:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Down"
 msgctxt "@action"
-msgid "Video Move Down"
-msgstr "Bideoa behera eraman"
+msgid "Move Video Down"
+msgstr "Eraman azpidatzia behera"
 
 #: src/models/actionsmodel.cpp:418
 #, kde-format
@@ -487,80 +522,100 @@ msgstr "Zooma urrundu"
 #: src/models/actionsmodel.cpp:460
 #, kde-format
 msgctxt "@action"
-msgid "Zoom Reset"
-msgstr "Zooma berrezarri"
+msgid "Reset Zoom"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:467
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Up"
-msgstr "Kontrastea handitu"
+msgid "Increase Contrast"
+msgstr "Kontrastea"
 
 #: src/models/actionsmodel.cpp:474
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Down"
-msgstr "Kontrastea gutxitu"
+msgid "Decrease Contrast"
+msgstr "Kontrastea"
 
 #: src/models/actionsmodel.cpp:481
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Reset"
-msgstr "Kontrastea berrezarri"
+msgid "Reset Contrast"
+msgstr "Kontrastea"
 
 #: src/models/actionsmodel.cpp:488
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Up"
-msgstr "Distira handitu"
+msgid "Increase Brightness"
+msgstr "Distira"
 
 #: src/models/actionsmodel.cpp:495
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Down"
-msgstr "Distira gutxitu"
+msgid "Decrease Brightness"
+msgstr "Distira"
 
 #: src/models/actionsmodel.cpp:502
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Reset"
-msgstr "Distira berrezarri"
+msgid "Reset Brightness"
+msgstr "Distira"
 
 #: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Up"
-msgstr "Gamma handitu"
+msgid "Increase Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Down"
-msgstr "Gamma gutxitu"
+msgid "Decrease Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:523
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Gamma"
 msgctxt "@action"
-msgid "Gamma Reset"
-msgstr "Gamma berrezarri"
+msgid "Reset Gamma"
+msgstr "Gamma"
 
 #: src/models/actionsmodel.cpp:530
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Up"
-msgstr "Asetasuna handitu"
+msgid "Increase Saturation"
+msgstr "Asetasuna"
 
 #: src/models/actionsmodel.cpp:537
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Down"
-msgstr "Asetasuna gutxitu"
+msgid "Decrease Saturation"
+msgstr "Asetasuna"
 
 #: src/models/actionsmodel.cpp:544
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Reset"
-msgstr "Asetasuna berrezarri"
+msgid "Reset Saturation"
+msgstr "Asetasuna"
 
 #: src/models/actionsmodel.cpp:693
 #, kde-format
@@ -578,44 +633,48 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Berresleitu"
 
-#: src/mpv/mpvitem.cpp:320
-#, kde-format
-msgctxt "@info:tooltip"
+#: src/mpv/mpvitem.cpp:326
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Could not play: %1"
+msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ezin izan du jo: %1"
 
-#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
+#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Azpidatzien denbora: %1"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:495
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:534
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Pantaila-argazkiak huts egin du"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Pantaila-argazkia atera du"
 
-#: src/mpv/mpvitem.cpp:510
-#, kde-format
-msgctxt "@info:tooltip osd"
+#: src/mpv/mpvitem.cpp:541
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip osd"
+#| msgid "Screenshot: %1"
+msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Pantaila-argazkia: %1"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -625,14 +684,17 @@ msgstr ""
 "Ez da bideo-pistarik hauteman, ziurrenik bideo-pista ezin da, falta diren "
 "kodeken ondorioz deskodetu/jo"
 
-#: src/mpv/mpvitem.cpp:570
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Jauzi egindako atala: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Audioa: %1 %2"
 
@@ -649,7 +711,10 @@ msgid "Playback speed: %1"
 msgstr "Atzera-jotzeko abiadura: %1"
 
 #: src/qml/Actions.qml:288
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop start: %1"
+msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Begizta hasi: %1"
 
@@ -679,7 +744,10 @@ msgid "Subtitle: None"
 msgstr "Azpidatzia: Bat ere ez"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Azpidatzia: %1 %2"
 
@@ -817,8 +885,11 @@ msgstr ""
 "<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ere."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-msgctxt "@label"
-msgid "Load subtitles from"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Load subtitles from"
+msgctxt "@label; Below is a list of folders containing subtitles"
+msgid "Load subtitles from:"
 msgstr "Zamatu azpidatziak hemendik"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
@@ -1194,12 +1265,6 @@ msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Hobetsitako hizkuntza"
 
-#: src/qml/Settings/AudioSettings.qml:32
-#: src/qml/Settings/SubtitlesSettings.qml:58
-msgctxt "placeholder text"
-msgid "eng, ger etc."
-msgstr "eng, ger etab."
-
 #: src/qml/Settings/AudioSettings.qml:51
 #: src/qml/Settings/SubtitlesSettings.qml:78
 msgctxt "@label:spinbox"
@@ -1284,11 +1349,6 @@ msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Komandoa"
 
-#: src/qml/Settings/EditCustomCommand.qml:51
-msgctxt "placeholder text"
-msgid "add volume +10"
-msgstr "gehitu bolumen +10"
-
 #: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
@@ -1321,9 +1381,12 @@ msgid "OSD Message"
 msgstr "OSD mezua"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-msgctxt "placeholder text"
-msgid "Filename: ${filename}"
-msgstr "Fitxategi-izena: ${filename}"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Volume: %1"
+msgctxt "placeholder text; %1 is an example of how to display an mpv property"
+msgid "Filename: %1"
+msgstr "Bolumena: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1381,8 +1444,11 @@ msgid "&Save"
 msgstr "&Gorde"
 
 #: src/qml/Settings/GeneralSettings.qml:25
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Osd font size"
 msgctxt "@label:spinbox"
-msgid "Osd font size"
+msgid "OSD font size"
 msgstr "OSDaren letra-tipo neurria"
 
 #: src/qml/Settings/GeneralSettings.qml:51
@@ -1824,12 +1890,20 @@ msgstr ""
 "Gaitzen denean, hitz/karaktere dituzten atalak automatikoki salatzen ditu."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Show osd message on skip"
 msgctxt "@option:check"
-msgid "Show osd message on skip"
+msgid "Show OSD message on skip"
 msgstr "Erakutsi OSD mezua saihestean"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-msgctxt "@info:tooltip show osd message on skip setting"
+#, fuzzy
+#| msgctxt "@info:tooltip show osd message on skip setting"
+#| msgid ""
+#| "When skipping chapters an osd message will show the title of the skipped "
+#| "chapter."
+msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
@@ -1838,8 +1912,8 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
-msgid "Skip words"
-msgstr "Saihestu hitzak"
+msgid "Keywords"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
@@ -1870,11 +1944,6 @@ msgstr "Formatuaren hautapena"
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Hautatutako formatutik hurbilen dagoen bideo-sorburua hauatzen du."
-
-#: src/qml/Settings/PlaybackSettings.qml:476
-msgctxt "placeholder text"
-msgid "bestvideo+bestaudio/best"
-msgstr "bideorikonena+audiorikonena/onena"
 
 #: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
@@ -2242,6 +2311,138 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
 
+#~ msgctxt "@info:shell"
+#~ msgid "bestvideo+bestaudio/best"
+#~ msgstr "bideorikonena+audiorikonena/onena"
+
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Up"
+#~ msgstr "Audio-zikloa gorantz"
+
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Down"
+#~ msgstr "Audio-zikloa beherantz"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Increase"
+#~ msgstr "Atzera-jotze abiadura handitzea"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Decrease"
+#~ msgstr "Atzera-jotze abiadura gutxitzea"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Reset"
+#~ msgstr "Atzera-jotze abiadura berrezartzea"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Toggle"
+#~ msgstr "Azpidatziak txandakatzea"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Up"
+#~ msgstr "Azpidatzia gora eraman"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Down"
+#~ msgstr "Azpidatzia behera eraman"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Quicken"
+#~ msgstr "Azpidatziak bizkortzea"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Delay"
+#~ msgstr "Azpidatziak atzeratzea"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Up"
+#~ msgstr "Azpidatzi-zikloa gorantz"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Down"
+#~ msgstr "Azpidatzi-zikloa beherantz"
+
+#~ msgctxt "@action"
+#~ msgid "Video Move Up"
+#~ msgstr "Bideoa gora eraman"
+
+#~ msgctxt "@action"
+#~ msgid "Video Move Down"
+#~ msgstr "Bideoa behera eraman"
+
+#~ msgctxt "@action"
+#~ msgid "Zoom Reset"
+#~ msgstr "Zooma berrezarri"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Up"
+#~ msgstr "Kontrastea handitu"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Down"
+#~ msgstr "Kontrastea gutxitu"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Reset"
+#~ msgstr "Kontrastea berrezarri"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Up"
+#~ msgstr "Distira handitu"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Down"
+#~ msgstr "Distira gutxitu"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Reset"
+#~ msgstr "Distira berrezarri"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Up"
+#~ msgstr "Gamma handitu"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Down"
+#~ msgstr "Gamma gutxitu"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Reset"
+#~ msgstr "Gamma berrezarri"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Up"
+#~ msgstr "Asetasuna handitu"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Down"
+#~ msgstr "Asetasuna gutxitu"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Reset"
+#~ msgstr "Asetasuna berrezarri"
+
+#~ msgctxt "placeholder text"
+#~ msgid "eng, ger etc."
+#~ msgstr "eng, ger etab."
+
+#~ msgctxt "placeholder text"
+#~ msgid "add volume +10"
+#~ msgstr "gehitu bolumen +10"
+
+#~ msgctxt "placeholder text"
+#~ msgid "Filename: ${filename}"
+#~ msgstr "Fitxategi-izena: ${filename}"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Skip words"
+#~ msgstr "Saihestu hitzak"
+
+#~ msgctxt "placeholder text"
+#~ msgid "bestvideo+bestaudio/best"
+#~ msgstr "bideorikonena+audiorikonena/onena"
+
 #~ msgctxt "@action:button"
 #~ msgid "Add ..."
 #~ msgstr "Gehitu ..."
@@ -2419,20 +2620,8 @@ msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
 #~ msgid "Move one frame backward, then pause"
 #~ msgstr "Mugitu fotograma bat atzerantz, ondoren etenaldia"
 
-#~ msgid "Cycle Audio Up"
-#~ msgstr "Audio-zikloa gora"
-
-#~ msgid "Cycle Subtitle Up"
-#~ msgstr "Azpidatzi-zikloa gora"
-
 #~ msgid "Cycle Subtitle Down"
 #~ msgstr "Azpititulu-zikloa behera"
-
-#~ msgid "Move Subtitle Up"
-#~ msgstr "Eraman azpidatzia gora"
-
-#~ msgid "Move Subtitle Down"
-#~ msgstr "Eraman azpidatzia behera"
 
 #~ msgid "Unmute"
 #~ msgstr "Ozenduta"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:42+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2025-06-10 07:59+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -82,21 +82,19 @@ msgid "File to open"
 msgstr "Fichier à ouvrir"
 
 #: src/application.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid ""
+#| "Allows to temporarily override the ytdl format selection setting. Will be "
+#| "overwritten if the setting is changed through the GUI"
 msgctxt "@info:shell"
 msgid ""
-"Allows to temporarily override the ytdl format selection setting. Will be "
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 "Permet de remplacer temporairement le paramètre de sélection de format "
 "« ytdl ». Sera écrasé si le paramètre est modifié grâce à l'interface "
 "utilisateur graphique"
-
-#: src/application.cpp:170
-#, kde-format
-msgctxt "@info:shell"
-msgid "bestvideo+bestaudio/best"
-msgstr "bestvideo + bestaudio / best"
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -129,16 +127,19 @@ msgid "Sponsor Haruna"
 msgstr "Soutenir Haruna"
 
 #: src/models/actionsmodel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Audio Track"
 msgctxt "@action"
-msgid "Audio Cycle Up"
-msgstr "Faire défiler l'audio vers le haut"
+msgid "Cycle Up Audio Track"
+msgstr "Piste audio"
 
 #: src/models/actionsmodel.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cycle Audio Up"
 msgctxt "@action"
-msgid "Audio Cycle Down"
-msgstr "Faire défiler l'audio vers le bas"
+msgid "Cycle Down Audio Track"
+msgstr "Faire défiler l'audio vers le haut"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
@@ -159,15 +160,19 @@ msgid "Exit Fullscreen"
 msgstr "Sortir du mode « Plein écran »"
 
 #: src/models/actionsmodel.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Frame Step Forward"
 msgctxt "@action"
-msgid "Frame Step Forward"
+msgid "Step Frame Forward"
 msgstr "En avant d'une trame comme pas"
 
 #: src/models/actionsmodel.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Frame Step Backward"
 msgctxt "@action"
-msgid "Frame Step Backward"
+msgid "Step Frame Backward"
 msgstr "En arrière d'une trame comme pas"
 
 #: src/models/actionsmodel.cpp:102
@@ -213,22 +218,28 @@ msgid "Open URL"
 msgstr "Ouvrir une URL"
 
 #: src/models/actionsmodel.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Increase"
-msgstr "Augmentation de la vitesse de lecture"
+msgid "Increase Playback Speed"
+msgstr "Vitesse de lecture"
 
 #: src/models/actionsmodel.cpp:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Decrease"
-msgstr "Diminution de la vitesse de lecture"
+msgid "Decrease Playback Speed"
+msgstr "Vitesse de lecture"
 
 #: src/models/actionsmodel.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Playback Speed"
 msgctxt "@action"
-msgid "Playback Speed Reset"
-msgstr "Ré-initialisation de la vitesse de lecture"
+msgid "Reset Playback Speed"
+msgstr "Vitesse de lecture"
 
 #: src/models/actionsmodel.cpp:166
 #, kde-format
@@ -297,15 +308,19 @@ msgid "Seek Big Step Backward"
 msgstr "Se déplacer en arrière avec un pas important"
 
 #: src/models/actionsmodel.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Next Chapter"
 msgctxt "@action"
-msgid "Seek Next Chapter"
+msgid "Seek To Next Chapter"
 msgstr "Aller au prochain chapitre"
 
 #: src/models/actionsmodel.cpp:250
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Seek Previous Chapter"
 msgctxt "@action"
-msgid "Seek Previous Chapter"
+msgid "Seek To Previous Chapter"
 msgstr "Se placer sur le chapitre précédent"
 
 #: src/models/actionsmodel.cpp:257
@@ -339,58 +354,72 @@ msgid "Screenshot"
 msgstr "Capture d'écran"
 
 #: src/models/actionsmodel.cpp:292
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Toggle"
-msgstr "Basculer les sous-titres"
+msgid "Toggle Subtitles"
+msgstr "Sous-titres"
 
 #: src/models/actionsmodel.cpp:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Increase Font Size"
 msgctxt "@action"
-msgid "Subtitle Increase Font Size"
+msgid "Increase Subtitle Font Size"
 msgstr "Augmenter la taille de la police des sous-titres"
 
 #: src/models/actionsmodel.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitle Decrease Font Size"
 msgctxt "@action"
-msgid "Subtitle Decrease Font Size"
+msgid "Decrease Subtitle Font Size"
 msgstr "Diminuer la taille de la police des sous-titres"
 
 #: src/models/actionsmodel.cpp:313
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Up"
 msgctxt "@action"
-msgid "Subtitle Move Up"
+msgid "Move Subtitle Up"
 msgstr "Déplacer un sous-titre vers le haut"
 
 #: src/models/actionsmodel.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Down"
 msgctxt "@action"
-msgid "Subtitle Move Down"
-msgstr "Déplacer un sous-titre vers le bas"
+msgid "Move Subtitle Down"
+msgstr "Déplacer le sous-titre vers le bas"
 
 #: src/models/actionsmodel.cpp:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
 msgctxt "@action"
-msgid "Subtitle Quicken"
-msgstr "Sous-titre « Quicken »"
+msgid "Show Subtitles Earlier"
+msgstr "Sélectionnez un fichier de sous-titres"
 
 #: src/models/actionsmodel.cpp:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
 msgctxt "@action"
-msgid "Subtitle Delay"
-msgstr "Retard des sous-titres"
+msgid "Show Subtitles Later"
+msgstr "Sélectionnez un fichier de sous-titres"
 
 #: src/models/actionsmodel.cpp:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cycle Subtitle Up"
 msgctxt "@action"
-msgid "Subtitle Cycle Up"
-msgstr "Faire défiler les sous-titres vers le haut"
+msgid "Cycle Up Subtitle"
+msgstr "Faire défiler le sous-titre vers le haut"
 
 #: src/models/actionsmodel.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cycle Subtitle Up"
 msgctxt "@action"
-msgid "Subtitle Cycle Down"
-msgstr "Faire défiler les sous-titres vers le bas"
+msgid "Cycle Down Subtitle"
+msgstr "Faire défiler le sous-titre vers le haut"
 
 #: src/models/actionsmodel.cpp:355
 #, kde-format
@@ -423,28 +452,34 @@ msgid "Playlist"
 msgstr "Liste de lecture"
 
 #: src/models/actionsmodel.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Left"
 msgctxt "@action"
-msgid "Video Move Left"
+msgid "Move Video Left"
 msgstr "Déplacement de la vidéo vers la gauche"
 
 #: src/models/actionsmodel.cpp:397
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Video Move Right"
 msgctxt "@action"
-msgid "Video Move Right"
+msgid "Move Video Right"
 msgstr "Déplacement de la vidéo vers la droite"
 
 #: src/models/actionsmodel.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Up"
 msgctxt "@action"
-msgid "Video Move Up"
-msgstr "Déplacement de la vidéo vers le haut"
+msgid "Move Video Up"
+msgstr "Déplacer un sous-titre vers le haut"
 
 #: src/models/actionsmodel.cpp:411
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Subtitle Down"
 msgctxt "@action"
-msgid "Video Move Down"
-msgstr "Déplacement de la vidéo vers le bas"
+msgid "Move Video Down"
+msgstr "Déplacer le sous-titre vers le bas"
 
 #: src/models/actionsmodel.cpp:418
 #, kde-format
@@ -485,80 +520,100 @@ msgstr "Zoom arrière"
 #: src/models/actionsmodel.cpp:460
 #, kde-format
 msgctxt "@action"
-msgid "Zoom Reset"
-msgstr "Ré-initialisation du zoom"
+msgid "Reset Zoom"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:467
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Up"
-msgstr "Augmenter le contraste"
+msgid "Increase Contrast"
+msgstr "Contraste"
 
 #: src/models/actionsmodel.cpp:474
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Down"
-msgstr "Diminuer le contraste"
+msgid "Decrease Contrast"
+msgstr "Contraste"
 
 #: src/models/actionsmodel.cpp:481
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Reset"
-msgstr "Ré-initialisation du contraste"
+msgid "Reset Contrast"
+msgstr "Contraste"
 
 #: src/models/actionsmodel.cpp:488
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Up"
-msgstr "Augmenter la luminosité"
+msgid "Increase Brightness"
+msgstr "Luminosité"
 
 #: src/models/actionsmodel.cpp:495
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Down"
-msgstr "Diminuer la luminosité"
+msgid "Decrease Brightness"
+msgstr "Luminosité"
 
 #: src/models/actionsmodel.cpp:502
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Reset"
-msgstr "Ré-initialiser la luminosité"
+msgid "Reset Brightness"
+msgstr "Luminosité"
 
 #: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Up"
-msgstr "Augmenter le gamma"
+msgid "Increase Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
-msgid "Gamma Down"
-msgstr "Diminuer le gamma"
+msgid "Decrease Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:523
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Gamma"
 msgctxt "@action"
-msgid "Gamma Reset"
-msgstr "Ré-initialiser le gamma"
+msgid "Reset Gamma"
+msgstr "Gamma"
 
 #: src/models/actionsmodel.cpp:530
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Up"
-msgstr "Augmenter la saturation"
+msgid "Increase Saturation"
+msgstr "Saturation"
 
 #: src/models/actionsmodel.cpp:537
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Down"
-msgstr "Diminuer la saturation"
+msgid "Decrease Saturation"
+msgstr "Saturation"
 
 #: src/models/actionsmodel.cpp:544
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Reset"
-msgstr "Ré-initialiser la saturation"
+msgid "Reset Saturation"
+msgstr "Saturation"
 
 #: src/models/actionsmodel.cpp:693
 #, kde-format
@@ -576,44 +631,48 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ré-allouer"
 
-#: src/mpv/mpvitem.cpp:320
-#, kde-format
-msgctxt "@info:tooltip"
+#: src/mpv/mpvitem.cpp:326
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Could not play: %1"
+msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Lecture impossible : %1"
 
-#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
+#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Cadencement des sous-titres : %1 secondes"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:495
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Aucun"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:534
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Impossible de faire une copie d'écran"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Copie d'écran effectuée"
 
-#: src/mpv/mpvitem.cpp:510
-#, kde-format
-msgctxt "@info:tooltip osd"
+#: src/mpv/mpvitem.cpp:541
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip osd"
+#| msgid "Screenshot: %1"
+msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Copie d'écran : %1"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -623,14 +682,17 @@ msgstr ""
 "Aucune piste vidéo n'a été détectée. Il est très probable que la piste vidéo "
 "n'a pu être décodée / lue en raison de codecs manquants."
 
-#: src/mpv/mpvitem.cpp:570
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Chapitre ignoré : %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Audio: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Audio : %1 %2"
 
@@ -647,7 +709,10 @@ msgid "Playback speed: %1"
 msgstr "Vitesse de lecture : %1"
 
 #: src/qml/Actions.qml:288
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Loop start: %1"
+msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Début de la boucle : %1"
 
@@ -677,7 +742,10 @@ msgid "Subtitle: None"
 msgstr "Sous-titres : aucun"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-msgctxt "@info:tooltip"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: %1 %2"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Sous-titres : %1 %2"
 
@@ -815,8 +883,11 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> n'a été trouvé."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-msgctxt "@label"
-msgid "Load subtitles from"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Load subtitles from"
+msgctxt "@label; Below is a list of folders containing subtitles"
+msgid "Load subtitles from:"
 msgstr "Charger les sous-titres à partir de"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
@@ -1192,12 +1263,6 @@ msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Langue préférée"
 
-#: src/qml/Settings/AudioSettings.qml:32
-#: src/qml/Settings/SubtitlesSettings.qml:58
-msgctxt "placeholder text"
-msgid "eng, ger etc."
-msgstr "eng, fr, etc."
-
 #: src/qml/Settings/AudioSettings.qml:51
 #: src/qml/Settings/SubtitlesSettings.qml:78
 msgctxt "@label:spinbox"
@@ -1283,11 +1348,6 @@ msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Commande"
 
-#: src/qml/Settings/EditCustomCommand.qml:51
-msgctxt "placeholder text"
-msgid "add volume +10"
-msgstr "Augmenter le volume de 10"
-
 #: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
@@ -1321,9 +1381,12 @@ msgid "OSD Message"
 msgstr "Message en incrustation vidéo (OSD)"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-msgctxt "placeholder text"
-msgid "Filename: ${filename}"
-msgstr "Nom de fichier : ${filename}"
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Volume: %1"
+msgctxt "placeholder text; %1 is an example of how to display an mpv property"
+msgid "Filename: %1"
+msgstr "Volume : %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1382,8 +1445,11 @@ msgid "&Save"
 msgstr "Enregi&strer"
 
 #: src/qml/Settings/GeneralSettings.qml:25
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Osd font size"
 msgctxt "@label:spinbox"
-msgid "Osd font size"
+msgid "OSD font size"
 msgstr "Taille de la police de l'incrustation vidéo"
 
 #: src/qml/Settings/GeneralSettings.qml:51
@@ -1838,13 +1904,21 @@ msgstr ""
 "chapitres contenant certains mots / caractères."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Show osd message on skip"
 msgctxt "@option:check"
-msgid "Show osd message on skip"
+msgid "Show OSD message on skip"
 msgstr ""
 "Afficher un message en incrustation vidéo lorsqu'un chapitre est ignoré"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-msgctxt "@info:tooltip show osd message on skip setting"
+#, fuzzy
+#| msgctxt "@info:tooltip show osd message on skip setting"
+#| msgid ""
+#| "When skipping chapters an osd message will show the title of the skipped "
+#| "chapter."
+msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
@@ -1854,8 +1928,8 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
-msgid "Skip words"
-msgstr "Ignorer des mots"
+msgid "Keywords"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
@@ -1886,11 +1960,6 @@ msgstr "Sélection du format"
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Sélectionne la source vidéo la plus proche du format sélectionné."
-
-#: src/qml/Settings/PlaybackSettings.qml:476
-msgctxt "placeholder text"
-msgid "bestvideo+bestaudio/best"
-msgstr "bestvideo + bestaudio / best"
 
 #: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
@@ -2264,6 +2333,138 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Effectuer un clic central sur les curseurs pour le ré-initialiser"
 
+#~ msgctxt "@info:shell"
+#~ msgid "bestvideo+bestaudio/best"
+#~ msgstr "bestvideo + bestaudio / best"
+
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Up"
+#~ msgstr "Faire défiler l'audio vers le haut"
+
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Down"
+#~ msgstr "Faire défiler l'audio vers le bas"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Increase"
+#~ msgstr "Augmentation de la vitesse de lecture"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Decrease"
+#~ msgstr "Diminution de la vitesse de lecture"
+
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Reset"
+#~ msgstr "Ré-initialisation de la vitesse de lecture"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Toggle"
+#~ msgstr "Basculer les sous-titres"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Up"
+#~ msgstr "Déplacer un sous-titre vers le haut"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Down"
+#~ msgstr "Déplacer un sous-titre vers le bas"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Quicken"
+#~ msgstr "Sous-titre « Quicken »"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Delay"
+#~ msgstr "Retard des sous-titres"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Up"
+#~ msgstr "Faire défiler les sous-titres vers le haut"
+
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Down"
+#~ msgstr "Faire défiler les sous-titres vers le bas"
+
+#~ msgctxt "@action"
+#~ msgid "Video Move Up"
+#~ msgstr "Déplacement de la vidéo vers le haut"
+
+#~ msgctxt "@action"
+#~ msgid "Video Move Down"
+#~ msgstr "Déplacement de la vidéo vers le bas"
+
+#~ msgctxt "@action"
+#~ msgid "Zoom Reset"
+#~ msgstr "Ré-initialisation du zoom"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Up"
+#~ msgstr "Augmenter le contraste"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Down"
+#~ msgstr "Diminuer le contraste"
+
+#~ msgctxt "@action"
+#~ msgid "Contrast Reset"
+#~ msgstr "Ré-initialisation du contraste"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Up"
+#~ msgstr "Augmenter la luminosité"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Down"
+#~ msgstr "Diminuer la luminosité"
+
+#~ msgctxt "@action"
+#~ msgid "Brightness Reset"
+#~ msgstr "Ré-initialiser la luminosité"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Up"
+#~ msgstr "Augmenter le gamma"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Down"
+#~ msgstr "Diminuer le gamma"
+
+#~ msgctxt "@action"
+#~ msgid "Gamma Reset"
+#~ msgstr "Ré-initialiser le gamma"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Up"
+#~ msgstr "Augmenter la saturation"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Down"
+#~ msgstr "Diminuer la saturation"
+
+#~ msgctxt "@action"
+#~ msgid "Saturation Reset"
+#~ msgstr "Ré-initialiser la saturation"
+
+#~ msgctxt "placeholder text"
+#~ msgid "eng, ger etc."
+#~ msgstr "eng, fr, etc."
+
+#~ msgctxt "placeholder text"
+#~ msgid "add volume +10"
+#~ msgstr "Augmenter le volume de 10"
+
+#~ msgctxt "placeholder text"
+#~ msgid "Filename: ${filename}"
+#~ msgstr "Nom de fichier : ${filename}"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Skip words"
+#~ msgstr "Ignorer des mots"
+
+#~ msgctxt "placeholder text"
+#~ msgid "bestvideo+bestaudio/best"
+#~ msgstr "bestvideo + bestaudio / best"
+
 #~ msgctxt "@action:button"
 #~ msgid "Add ..."
 #~ msgstr "Ajouter..."
@@ -2444,20 +2645,8 @@ msgstr "Effectuer un clic central sur les curseurs pour le ré-initialiser"
 #~ msgid "Move one frame backward, then pause"
 #~ msgstr "Se déplacer d'une trame en arrière puis passer en pause"
 
-#~ msgid "Cycle Audio Up"
-#~ msgstr "Faire défiler l'audio vers le haut"
-
-#~ msgid "Cycle Subtitle Up"
-#~ msgstr "Faire défiler le sous-titre vers le haut"
-
 #~ msgid "Cycle Subtitle Down"
 #~ msgstr "Faire défiler le sous-titre vers le bas"
-
-#~ msgid "Move Subtitle Up"
-#~ msgstr "Déplacer un sous-titre vers le haut"
-
-#~ msgid "Move Subtitle Down"
-#~ msgstr "Déplacer le sous-titre vers le bas"
 
 #~ msgid "Unmute"
 #~ msgstr "Remettre le son"

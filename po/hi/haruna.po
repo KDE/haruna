@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:42+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -88,14 +88,8 @@ msgstr "फ़ाइल जिसे खोलना है"
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
-"Allows to temporarily override the ytdl format selection setting. Will be "
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
-msgstr ""
-
-#: src/application.cpp:170
-#, kde-format
-msgctxt "@info:shell"
-msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/lockmanager.cpp:34
@@ -134,17 +128,17 @@ msgstr "हारुना के बारे में"
 
 #: src/models/actionsmodel.cpp:51
 #, fuzzy, kde-format
-#| msgid "Subtitles on"
+#| msgid "&Audio"
 msgctxt "@action"
-msgid "Audio Cycle Up"
-msgstr "उपशीर्षक चालू"
+msgid "Cycle Up Audio Track"
+msgstr "ऑडियो (&A)"
 
 #: src/models/actionsmodel.cpp:58
 #, fuzzy, kde-format
-#| msgid "Subtitles on"
+#| msgid "&Audio"
 msgctxt "@action"
-msgid "Audio Cycle Down"
-msgstr "उपशीर्षक चालू"
+msgid "Cycle Down Audio Track"
+msgstr "ऑडियो (&A)"
 
 #: src/models/actionsmodel.cpp:65
 #, fuzzy, kde-format
@@ -170,13 +164,13 @@ msgstr "पूर्ण स्क्रीन टॉगल करें"
 #: src/models/actionsmodel.cpp:86
 #, kde-format
 msgctxt "@action"
-msgid "Frame Step Forward"
+msgid "Step Frame Forward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:94
 #, kde-format
 msgctxt "@action"
-msgid "Frame Step Backward"
+msgid "Step Frame Backward"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:102
@@ -230,21 +224,21 @@ msgstr "यूआरएल खोलें"
 #, fuzzy, kde-format
 #| msgid "Playback"
 msgctxt "@action"
-msgid "Playback Speed Increase"
+msgid "Increase Playback Speed"
 msgstr "प्लेबैक"
 
 #: src/models/actionsmodel.cpp:152
 #, fuzzy, kde-format
 #| msgid "Playback"
 msgctxt "@action"
-msgid "Playback Speed Decrease"
+msgid "Decrease Playback Speed"
 msgstr "प्लेबैक"
 
 #: src/models/actionsmodel.cpp:159
 #, fuzzy, kde-format
 #| msgid "Playback"
 msgctxt "@action"
-msgid "Playback Speed Reset"
+msgid "Reset Playback Speed"
 msgstr "प्लेबैक"
 
 #: src/models/actionsmodel.cpp:166
@@ -322,14 +316,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Skip Chapters"
 msgctxt "@action"
-msgid "Seek Next Chapter"
+msgid "Seek To Next Chapter"
 msgstr "अध्याय छोड़ें"
 
 #: src/models/actionsmodel.cpp:250
 #, fuzzy, kde-format
 #| msgid "Skip Chapters"
 msgctxt "@action"
-msgid "Seek Previous Chapter"
+msgid "Seek To Previous Chapter"
 msgstr "अध्याय छोड़ें"
 
 #: src/models/actionsmodel.cpp:257
@@ -366,66 +360,65 @@ msgstr "स्क्रीनशॉट"
 
 #: src/models/actionsmodel.cpp:292
 #, fuzzy, kde-format
-#| msgid "Subtitle Toggle"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Toggle"
-msgstr "उपशीर्षक टॉगल करें"
+msgid "Toggle Subtitles"
+msgstr "उपशीर्षक"
 
 #: src/models/actionsmodel.cpp:299
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Subtitle Increase Font Size"
+msgid "Increase Subtitle Font Size"
 msgstr "उपशीर्षक चालू"
 
 #: src/models/actionsmodel.cpp:306
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Subtitle Decrease Font Size"
+msgid "Decrease Subtitle Font Size"
 msgstr "उपशीर्षक चालू"
 
 #: src/models/actionsmodel.cpp:313
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Subtitle Move Up"
+msgid "Move Subtitle Up"
 msgstr "उपशीर्षक चालू"
 
 #: src/models/actionsmodel.cpp:320
 #, fuzzy, kde-format
-#| msgid "Subtitles on"
+#| msgid "Subtitles off"
 msgctxt "@action"
-msgid "Subtitle Move Down"
-msgstr "उपशीर्षक चालू"
+msgid "Move Subtitle Down"
+msgstr "उपशीर्षक बंद"
 
 #: src/models/actionsmodel.cpp:327
 #, fuzzy, kde-format
-#| msgid "Subtitles on"
+#| msgid "Select file"
 msgctxt "@action"
-msgid "Subtitle Quicken"
-msgstr "उपशीर्षक चालू"
+msgid "Show Subtitles Earlier"
+msgstr "फ़ाइल चुनें"
 
 #: src/models/actionsmodel.cpp:334
 #, fuzzy, kde-format
-#| msgid "Subtitle Delay"
+#| msgid "Select file"
 msgctxt "@action"
-msgid "Subtitle Delay"
-msgstr "उपशीर्षक विलंब"
+msgid "Show Subtitles Later"
+msgstr "फ़ाइल चुनें"
 
 #: src/models/actionsmodel.cpp:341
 #, fuzzy, kde-format
-#| msgid "Subtitles on"
+#| msgid "Subtitles"
 msgctxt "@action"
-msgid "Subtitle Cycle Up"
-msgstr "उपशीर्षक चालू"
+msgid "Cycle Up Subtitle"
+msgstr "उपशीर्षक"
 
 #: src/models/actionsmodel.cpp:348
-#, fuzzy, kde-format
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
-msgid "Subtitle Cycle Down"
-msgstr "उपशीर्षक चालू"
+msgid "Cycle Down Subtitle"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:355
 #, fuzzy, kde-format
@@ -465,27 +458,27 @@ msgstr "वीडियो-सूची"
 #: src/models/actionsmodel.cpp:390
 #, kde-format
 msgctxt "@action"
-msgid "Video Move Left"
+msgid "Move Video Left"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:397
 #, kde-format
 msgctxt "@action"
-msgid "Video Move Right"
+msgid "Move Video Right"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:404
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Video Move Up"
+msgid "Move Video Up"
 msgstr "उपशीर्षक चालू"
 
 #: src/models/actionsmodel.cpp:411
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
-msgid "Video Move Down"
+msgid "Move Video Down"
 msgstr "उपशीर्षक चालू"
 
 #: src/models/actionsmodel.cpp:418
@@ -529,95 +522,92 @@ msgid "Zoom Out"
 msgstr "ज़ूम आउट"
 
 #: src/models/actionsmodel.cpp:460
-#, fuzzy, kde-format
-#| msgid "Zoom Reset"
+#, kde-format
 msgctxt "@action"
-msgid "Zoom Reset"
-msgstr "ज़ूम रीसेट"
+msgid "Reset Zoom"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:467
 #, fuzzy, kde-format
-#| msgid "Contrast Up"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Up"
-msgstr "व्यतिरेक बढाएँ"
+msgid "Increase Contrast"
+msgstr "व्यतिरेक"
 
 #: src/models/actionsmodel.cpp:474
 #, fuzzy, kde-format
-#| msgid "Contrast Down"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Down"
-msgstr "व्यतिरेक घटाएँ"
+msgid "Decrease Contrast"
+msgstr "व्यतिरेक"
 
 #: src/models/actionsmodel.cpp:481
 #, fuzzy, kde-format
-#| msgid "Contrast Reset"
+#| msgid "Contrast"
 msgctxt "@action"
-msgid "Contrast Reset"
-msgstr "व्यतिरेक रिसेट करें"
+msgid "Reset Contrast"
+msgstr "व्यतिरेक"
 
 #: src/models/actionsmodel.cpp:488
 #, fuzzy, kde-format
-#| msgid "Brightness Up"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Up"
-msgstr "चमकीलापन बढाएँ"
+msgid "Increase Brightness"
+msgstr "चमकीलापन"
 
 #: src/models/actionsmodel.cpp:495
 #, fuzzy, kde-format
-#| msgid "Brightness Down"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Down"
-msgstr "चमकीलापन घटाएँ"
+msgid "Decrease Brightness"
+msgstr "चमकीलापन"
 
 #: src/models/actionsmodel.cpp:502
 #, fuzzy, kde-format
-#| msgid "Brightness Reset"
+#| msgid "Brightness"
 msgctxt "@action"
-msgid "Brightness Reset"
-msgstr "चमकीलापन रिसेट करें"
+msgid "Reset Brightness"
+msgstr "चमकीलापन"
 
 #: src/models/actionsmodel.cpp:509
-#, fuzzy, kde-format
-#| msgid "Gamma Up"
+#, kde-format
 msgctxt "@action"
-msgid "Gamma Up"
-msgstr "गामा बढाएँ"
+msgid "Increase Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:516
-#, fuzzy, kde-format
-#| msgid "Gamma Down"
+#, kde-format
 msgctxt "@action"
-msgid "Gamma Down"
-msgstr "गामा घटाएँ"
+msgid "Decrease Gamma"
+msgstr ""
 
 #: src/models/actionsmodel.cpp:523
 #, fuzzy, kde-format
-#| msgid "Gamma Reset"
+#| msgid "Gamma"
 msgctxt "@action"
-msgid "Gamma Reset"
-msgstr "गामा रिसेट करें"
+msgid "Reset Gamma"
+msgstr "गामा"
 
 #: src/models/actionsmodel.cpp:530
 #, fuzzy, kde-format
-#| msgid "Saturation Up"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Up"
-msgstr "संतृप्ति बढाएँ"
+msgid "Increase Saturation"
+msgstr "संतृप्ति"
 
 #: src/models/actionsmodel.cpp:537
 #, fuzzy, kde-format
-#| msgid "Saturation Down"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Down"
-msgstr "संतृप्ति घटाएँ"
+msgid "Decrease Saturation"
+msgstr "संतृप्ति"
 
 #: src/models/actionsmodel.cpp:544
 #, fuzzy, kde-format
-#| msgid "Saturation Reset"
+#| msgid "Saturation"
 msgctxt "@action"
-msgid "Saturation Reset"
-msgstr "संतृप्ति रिसेट करें"
+msgid "Reset Saturation"
+msgstr "संतृप्ति"
 
 #: src/models/actionsmodel.cpp:693
 #, kde-format
@@ -633,49 +623,49 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:320
+#: src/mpv/mpvitem.cpp:326
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/mpv/mpvitem.cpp:412 src/mpv/mpvitem.cpp:414
+#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:495
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:534
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:539
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:510
+#: src/mpv/mpvitem.cpp:541
 #, fuzzy, kde-format
 #| msgid "Screenshot"
-msgctxt "@info:tooltip osd"
+msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -683,7 +673,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:570
+#: src/mpv/mpvitem.cpp:601
 #, fuzzy, kde-format
 #| msgid "Skip chapters"
 msgctxt "@info:tooltip osd"
@@ -693,7 +683,7 @@ msgstr "अध्याय छोड़ें"
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
 #, fuzzy
 #| msgid "Audio: %1 %2"
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "ऑडियो: %1 %2"
 
@@ -714,7 +704,7 @@ msgstr "प्लेबैक"
 #: src/qml/Actions.qml:288
 #, fuzzy
 #| msgid "Loop start: %1"
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "लूप आरंभ : %1"
 
@@ -754,7 +744,7 @@ msgstr "उपशीर्षक चालू"
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
 #, fuzzy
 #| msgid "Subtitle: %1 %2"
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "उपशीर्षक: %1 %2"
 
@@ -934,8 +924,8 @@ msgstr ""
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
 #, fuzzy
 #| msgid "Subtitles on"
-msgctxt "@label"
-msgid "Load subtitles from"
+msgctxt "@label; Below is a list of folders containing subtitles"
+msgid "Load subtitles from:"
 msgstr "उपशीर्षक चालू"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
@@ -1417,14 +1407,6 @@ msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr ""
 
-#: src/qml/Settings/AudioSettings.qml:32
-#: src/qml/Settings/SubtitlesSettings.qml:58
-#, fuzzy
-#| msgid "eng,ger etc."
-msgctxt "placeholder text"
-msgid "eng, ger etc."
-msgstr "अंग्रेजी,जर्मन,इत्यादि"
-
 #: src/qml/Settings/AudioSettings.qml:51
 #: src/qml/Settings/SubtitlesSettings.qml:78
 msgctxt "@label:spinbox"
@@ -1525,11 +1507,6 @@ msgctxt "@label:textbox"
 msgid "Command"
 msgstr "समादेश"
 
-#: src/qml/Settings/EditCustomCommand.qml:51
-msgctxt "placeholder text"
-msgid "add volume +10"
-msgstr ""
-
 #: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
 msgid ""
@@ -1553,9 +1530,11 @@ msgid "OSD Message"
 msgstr "ओएसडी संदेश"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-msgctxt "placeholder text"
-msgid "Filename: ${filename}"
-msgstr ""
+#, fuzzy
+#| msgid "Volume: %1"
+msgctxt "placeholder text; %1 is an example of how to display an mpv property"
+msgid "Filename: %1"
+msgstr "आवाज़ : %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1621,7 +1600,7 @@ msgstr "सहेजें (&S)"
 #, fuzzy
 #| msgid "Osd font size"
 msgctxt "@label:spinbox"
-msgid "Osd font size"
+msgid "OSD font size"
 msgstr "ओएसडी फ़ॉन्ट आकार"
 
 #: src/qml/Settings/GeneralSettings.qml:51
@@ -2038,22 +2017,20 @@ msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
-msgid "Show osd message on skip"
+msgid "Show OSD message on skip"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-msgctxt "@info:tooltip show osd message on skip setting"
+msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:362
-#, fuzzy
-#| msgid "Skip words"
 msgctxt "@label:textbox"
-msgid "Skip words"
-msgstr "शब्द छोड़ें"
+msgid "Keywords"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 #, fuzzy
@@ -2084,11 +2061,6 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr ""
-
-#: src/qml/Settings/PlaybackSettings.qml:476
-msgctxt "placeholder text"
-msgid "bestvideo+bestaudio/best"
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:24
@@ -2466,6 +2438,162 @@ msgstr "संतृप्ति"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Subtitles on"
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Up"
+#~ msgstr "उपशीर्षक चालू"
+
+#, fuzzy
+#~| msgid "Subtitles on"
+#~ msgctxt "@action"
+#~ msgid "Audio Cycle Down"
+#~ msgstr "उपशीर्षक चालू"
+
+#, fuzzy
+#~| msgid "Playback"
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Increase"
+#~ msgstr "प्लेबैक"
+
+#, fuzzy
+#~| msgid "Playback"
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Decrease"
+#~ msgstr "प्लेबैक"
+
+#, fuzzy
+#~| msgid "Playback"
+#~ msgctxt "@action"
+#~ msgid "Playback Speed Reset"
+#~ msgstr "प्लेबैक"
+
+#, fuzzy
+#~| msgid "Subtitle Toggle"
+#~ msgctxt "@action"
+#~ msgid "Subtitle Toggle"
+#~ msgstr "उपशीर्षक टॉगल करें"
+
+#, fuzzy
+#~| msgid "Subtitles on"
+#~ msgctxt "@action"
+#~ msgid "Subtitle Move Down"
+#~ msgstr "उपशीर्षक चालू"
+
+#, fuzzy
+#~| msgid "Subtitles on"
+#~ msgctxt "@action"
+#~ msgid "Subtitle Quicken"
+#~ msgstr "उपशीर्षक चालू"
+
+#, fuzzy
+#~| msgid "Subtitle Delay"
+#~ msgctxt "@action"
+#~ msgid "Subtitle Delay"
+#~ msgstr "उपशीर्षक विलंब"
+
+#, fuzzy
+#~| msgid "Subtitles on"
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Up"
+#~ msgstr "उपशीर्षक चालू"
+
+#, fuzzy
+#~| msgid "Subtitles on"
+#~ msgctxt "@action"
+#~ msgid "Subtitle Cycle Down"
+#~ msgstr "उपशीर्षक चालू"
+
+#, fuzzy
+#~| msgid "Zoom Reset"
+#~ msgctxt "@action"
+#~ msgid "Zoom Reset"
+#~ msgstr "ज़ूम रीसेट"
+
+#, fuzzy
+#~| msgid "Contrast Up"
+#~ msgctxt "@action"
+#~ msgid "Contrast Up"
+#~ msgstr "व्यतिरेक बढाएँ"
+
+#, fuzzy
+#~| msgid "Contrast Down"
+#~ msgctxt "@action"
+#~ msgid "Contrast Down"
+#~ msgstr "व्यतिरेक घटाएँ"
+
+#, fuzzy
+#~| msgid "Contrast Reset"
+#~ msgctxt "@action"
+#~ msgid "Contrast Reset"
+#~ msgstr "व्यतिरेक रिसेट करें"
+
+#, fuzzy
+#~| msgid "Brightness Up"
+#~ msgctxt "@action"
+#~ msgid "Brightness Up"
+#~ msgstr "चमकीलापन बढाएँ"
+
+#, fuzzy
+#~| msgid "Brightness Down"
+#~ msgctxt "@action"
+#~ msgid "Brightness Down"
+#~ msgstr "चमकीलापन घटाएँ"
+
+#, fuzzy
+#~| msgid "Brightness Reset"
+#~ msgctxt "@action"
+#~ msgid "Brightness Reset"
+#~ msgstr "चमकीलापन रिसेट करें"
+
+#, fuzzy
+#~| msgid "Gamma Up"
+#~ msgctxt "@action"
+#~ msgid "Gamma Up"
+#~ msgstr "गामा बढाएँ"
+
+#, fuzzy
+#~| msgid "Gamma Down"
+#~ msgctxt "@action"
+#~ msgid "Gamma Down"
+#~ msgstr "गामा घटाएँ"
+
+#, fuzzy
+#~| msgid "Gamma Reset"
+#~ msgctxt "@action"
+#~ msgid "Gamma Reset"
+#~ msgstr "गामा रिसेट करें"
+
+#, fuzzy
+#~| msgid "Saturation Up"
+#~ msgctxt "@action"
+#~ msgid "Saturation Up"
+#~ msgstr "संतृप्ति बढाएँ"
+
+#, fuzzy
+#~| msgid "Saturation Down"
+#~ msgctxt "@action"
+#~ msgid "Saturation Down"
+#~ msgstr "संतृप्ति घटाएँ"
+
+#, fuzzy
+#~| msgid "Saturation Reset"
+#~ msgctxt "@action"
+#~ msgid "Saturation Reset"
+#~ msgstr "संतृप्ति रिसेट करें"
+
+#, fuzzy
+#~| msgid "eng,ger etc."
+#~ msgctxt "placeholder text"
+#~ msgid "eng, ger etc."
+#~ msgstr "अंग्रेजी,जर्मन,इत्यादि"
+
+#, fuzzy
+#~| msgid "Skip words"
+#~ msgctxt "@label:textbox"
+#~ msgid "Skip words"
+#~ msgstr "शब्द छोड़ें"
 
 #, fuzzy
 #~| msgid "For all files"
