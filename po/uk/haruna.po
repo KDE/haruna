@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:56+0000\n"
-"PO-Revision-Date: 2025-06-04 19:56+0300\n"
+"PO-Revision-Date: 2025-07-04 12:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -85,17 +85,13 @@ msgid "File to open"
 msgstr "Файл, який слід відкрити"
 
 #: src/application.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Уможливлює тимчасове перевизначення параметра вибору формату ytdl. Буде "
+"Уможливлює тимчасове перевизначення параметра вибору формату yt-dl. Буде "
 "перезаписано, якщо змінити параметр за допомогою графічного інтерфейсу."
 
 #: src/lockmanager.cpp:34
@@ -129,19 +125,16 @@ msgid "Sponsor Haruna"
 msgstr "Спонсорувати Haruna"
 
 #: src/models/actionsmodel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "Звукова доріжка"
+msgstr "Зациклити звукову доріжку вище"
 
 #: src/models/actionsmodel.cpp:58
-#, fuzzy, kde-format
-#| msgid "Cycle Audio Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "Зациклити звук вище"
+msgstr "Зациклити звукову доріжку нижче"
 
 #: src/models/actionsmodel.cpp:65
 #, kde-format
@@ -162,20 +155,16 @@ msgid "Exit Fullscreen"
 msgstr "Вийти з повноекранного режиму"
 
 #: src/models/actionsmodel.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
-msgstr "Крок вперед у кадрах"
+msgstr "Перейти на кадр вперед"
 
 #: src/models/actionsmodel.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
-msgstr "Крок назад у кадрах"
+msgstr "Перейти на кадр назад"
 
 #: src/models/actionsmodel.cpp:102
 #, kde-format
@@ -220,28 +209,22 @@ msgid "Open URL"
 msgstr "Відкрити адресу"
 
 #: src/models/actionsmodel.cpp:145
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "Швидкість програвання"
+msgstr "Збільшити швидкість відтворення"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "Швидкість програвання"
+msgstr "Зменшити швидкість відтворення"
 
 #: src/models/actionsmodel.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "Швидкість програвання"
+msgstr "Скинути швидкість відтворення"
 
 #: src/models/actionsmodel.cpp:166
 #, kde-format
@@ -310,17 +293,13 @@ msgid "Seek Big Step Backward"
 msgstr "Перехід великим кроком назад"
 
 #: src/models/actionsmodel.cpp:243
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Перехід до наступного розділу"
 
 #: src/models/actionsmodel.cpp:250
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Перехід до попереднього розділу"
@@ -356,72 +335,58 @@ msgid "Screenshot"
 msgstr "Знімок вікна"
 
 #: src/models/actionsmodel.cpp:292
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "Субтитри"
+msgstr "Увімкнути/Вимкнути субтитри"
 
 #: src/models/actionsmodel.cpp:299
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
-msgstr "Збільшити розмір шрифту субтитрів"
+msgstr "Зменшити розмір шрифту субтитрів"
 
 #: src/models/actionsmodel.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Зменшити розмір шрифту субтитрів"
 
 #: src/models/actionsmodel.cpp:313
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Пересунути субтитри вище"
 
 #: src/models/actionsmodel.cpp:320
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Пересунути субтитри нижче"
 
 #: src/models/actionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "Виберіть файл субтитрів"
+msgstr "Показати субтитри раніше"
 
 #: src/models/actionsmodel.cpp:334
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "Виберіть файл субтитрів"
+msgstr "Показати субтитри пізніше"
 
 #: src/models/actionsmodel.cpp:341
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "Зациклити субтитри вище"
 
 #: src/models/actionsmodel.cpp:348
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "Зациклити субтитри вище"
+msgstr "Зациклити субтитри нижче"
 
 #: src/models/actionsmodel.cpp:355
 #, kde-format
@@ -454,34 +419,28 @@ msgid "Playlist"
 msgstr "Список відтворення"
 
 #: src/models/actionsmodel.cpp:390
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Пересунути відео ліворуч"
 
 #: src/models/actionsmodel.cpp:397
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Пересунути відео праворуч"
 
 #: src/models/actionsmodel.cpp:404
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr "Пересунути субтитри вище"
+msgstr "Пересунути відео вище"
 
 #: src/models/actionsmodel.cpp:411
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr "Пересунути субтитри нижче"
+msgstr "Пересунути відео нижче"
 
 #: src/models/actionsmodel.cpp:418
 #, kde-format
@@ -523,99 +482,79 @@ msgstr "Зменшити"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Скинути масштаб"
 
 #: src/models/actionsmodel.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "Контрастність"
+msgstr "Збільшити контрастність"
 
 #: src/models/actionsmodel.cpp:474
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "Контрастність"
+msgstr "Зменшити контрастність"
 
 #: src/models/actionsmodel.cpp:481
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "Контрастність"
+msgstr "Скинути контрастність"
 
 #: src/models/actionsmodel.cpp:488
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "Яскравість"
+msgstr "Збільшити яскравість"
 
 #: src/models/actionsmodel.cpp:495
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "Яскравість"
+msgstr "Зменшити яскравість"
 
 #: src/models/actionsmodel.cpp:502
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "Яскравість"
+msgstr "Скинути яскравість"
 
 #: src/models/actionsmodel.cpp:509
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Збільшити гамму"
 
 #: src/models/actionsmodel.cpp:516
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Зменшити гамму"
 
 #: src/models/actionsmodel.cpp:523
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "Гамма"
+msgstr "Скинути гамму"
 
 #: src/models/actionsmodel.cpp:530
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "Насиченість"
+msgstr "Збільшити насиченість"
 
 #: src/models/actionsmodel.cpp:537
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "Насиченість"
+msgstr "Зменшити насиченість"
 
 #: src/models/actionsmodel.cpp:544
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "Насиченість"
+msgstr "Скинути насиченість"
 
 #: src/models/actionsmodel.cpp:693
 #, kde-format
@@ -634,9 +573,7 @@ msgid "Reassign"
 msgstr "Перепризначити"
 
 #: src/mpv/mpvitem.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Не вдалося відтворити: %1"
@@ -667,9 +604,7 @@ msgid "Screenshot taken"
 msgstr "Знімок отримано"
 
 #: src/mpv/mpvitem.cpp:541
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Знімок вікна: %1"
@@ -691,9 +626,6 @@ msgid "Skipped chapter: %1"
 msgstr "Пропущений розділ: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Звук: %1 %2"
@@ -711,9 +643,6 @@ msgid "Playback speed: %1"
 msgstr "Швидкість відтворення: %1"
 
 #: src/qml/Actions.qml:288
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Початок циклу: %1"
@@ -744,9 +673,6 @@ msgid "Subtitle: None"
 msgstr "Субтитри: немає"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Субтитри: %1 %2"
@@ -885,12 +811,9 @@ msgstr ""
 "<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from:"
-msgstr "Завантажити субтитри з"
+msgstr "Завантажити субтитри з:"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
@@ -1381,12 +1304,9 @@ msgid "OSD Message"
 msgstr "Повідомлення екранної панелі"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "Гучність: %1"
+msgstr "Назва файла: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1444,9 +1364,6 @@ msgid "&Save"
 msgstr "З&берегти"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "Розмір шрифту екранної панелі"
@@ -1903,19 +1820,11 @@ msgid ""
 msgstr "Автоматично пропускає глави, що містять певні слова або символи."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Показати екранне повідомлення при пропусканні"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-#, fuzzy
-#| msgctxt "@info:tooltip show osd message on skip setting"
-#| msgid ""
-#| "When skipping chapters an osd message will show the title of the skipped "
-#| "chapter."
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1927,7 +1836,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "Ключові слова"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
