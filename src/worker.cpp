@@ -22,7 +22,6 @@
 
 #include "application.h"
 #include "framedecoder.h"
-#include "generalsettings.h"
 #include "subtitlessettings.h"
 
 using namespace Qt::StringLiterals;
