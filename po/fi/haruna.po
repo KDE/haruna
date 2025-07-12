@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:56+0000\n"
-"PO-Revision-Date: 2025-05-28 10:57+0300\n"
+"PO-Revision-Date: 2025-07-07 16:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -925,12 +925,15 @@ msgctxt "@label:check"
 msgid "Search subtitles recursively"
 msgstr "Etsi tekstityksiä alikansioistakin"
 
+# *** TARKISTA: ”Relative folders” on epäselvä; tässä heitetään arvaus.
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the “%1” settings.\n"
 "Only relative folders are searched."
 msgstr ""
+"Tekstityksiä etsitään kansiorakenteesta asetuksella ”%1”.\n"
+"Vain alikansioista etsitään."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1970,12 +1973,12 @@ msgstr "Lataa saman kansion videot automaattisesti"
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Autoplay"
-msgstr ""
+msgstr "Toista automaattisesti"
 
 #: src/qml/Settings/PlaylistSettings.qml:128
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
-msgstr ""
+msgstr "Jos valittu, seuraava video toistetaan automaattisesti"
 
 # *** TARKISTA: Sekä play että repeat = toista, aiheuttaako ongelmia?
 #: src/qml/Settings/PlaylistSettings.qml:136
