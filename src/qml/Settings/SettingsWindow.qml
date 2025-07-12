@@ -20,6 +20,7 @@ Kirigami.ApplicationWindow {
     required property MpvVideo m_mpv
     required property ProxyActionsModel m_proxyActionsModel
     required property CustomCommandsModel m_customCommandsModel
+    required property MouseActionsModel m_mouseActionsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
     property int currentPage: -1
@@ -116,7 +117,8 @@ Kirigami.ApplicationWindow {
                     onTriggered: {
                         root.currentPage = SettingsWindow.Page.Mouse
                         root.pageStack.removePage(1)
-                        root.pageStack.push(`${root.settingsPath}/MouseSettings.qml`)
+                        root.pageStack.push(`${root.settingsPath}/MouseSettings.qml`,
+                                            {m_mouseActionsModel: root.m_mouseActionsModel})
                     }
                 },
                 Kirigami.Action {

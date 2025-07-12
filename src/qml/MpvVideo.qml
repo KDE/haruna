@@ -12,10 +12,13 @@ import org.kde.haruna
 import org.kde.haruna.settings
 import org.kde.kirigami as Kirigami
 
+import org.kde.haruna
+
 MpvItem {
     id: root
 
     required property Osd osd
+    required property MouseActionsModel mouseActionsModel
     property var window: Window.window
     property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
     property alias mouseY: mouseArea.mouseY
@@ -97,64 +100,62 @@ MpvItem {
             }
         }
 
-        onWheel: wheel => {
+        onWheel: function(wheel) {
+            const model = root.mouseActionsModel
+            let actionName
+            let modifier = wheel.modifiers
             if (wheel.angleDelta.y > 0) {
-                if (MouseSettings.scrollUp) {
-                    appActions[MouseSettings.scrollUp].trigger()
-                }
+                actionName = model.getAction(MouseActionsModel.ScrollUp, modifier)
             } else if (wheel.angleDelta.y) {
-                if (MouseSettings.scrollDown) {
-                    appActions[MouseSettings.scrollDown].trigger()
-                }
+                actionName = model.getAction(MouseActionsModel.ScrollDown, modifier)
+            }
+
+            if (actionName) {
+                appActions[actionName].trigger()
             }
         }
 
-        onPressed: mouse => {
+        onPressed: function(mouse) {
             focus = true
+            const model = root.mouseActionsModel
+            let actionName
+            let modifier = mouse.modifiers
             if (mouse.button === Qt.LeftButton) {
-                if (MouseSettings.left) {
-                    appActions[MouseSettings.left].trigger()
-                }
+                actionName = model.getAction(Qt.LeftButton, modifier)
             } else if (mouse.button === Qt.MiddleButton) {
-                if (MouseSettings.middle) {
-                    appActions[MouseSettings.middle].trigger()
-                }
+                actionName = model.getAction(Qt.MiddleButton, modifier)
             } else if (mouse.button === Qt.RightButton) {
-                if (MouseSettings.right) {
-                    appActions[MouseSettings.right].trigger()
-                }
+                actionName = model.getAction(Qt.RightButton, modifier)
             } else if (mouse.button === Qt.ForwardButton) {
-                if (MouseSettings.forward) {
-                    appActions[MouseSettings.forward].trigger()
-                }
+                actionName = model.getAction(Qt.ForwardButton, modifier)
             } else if (mouse.button === Qt.BackButton) {
-                if (MouseSettings.back) {
-                    appActions[MouseSettings.back].trigger()
-                }
+                actionName = model.getAction(Qt.BackButton, modifier)
+            }
+
+            if (actionName) {
+                appActions[actionName].trigger()
             }
         }
 
-        onDoubleClicked: mouse => {
+        onDoubleClicked: function(mouse) {
+            focus = true
+            const model = root.mouseActionsModel
+            let actionName
+            let modifier = mouse.modifiers
             if (mouse.button === Qt.LeftButton) {
-                if (MouseSettings.leftx2) {
-                    appActions[MouseSettings.leftx2].trigger()
-                }
+                actionName = model.getAction(Qt.LeftButton, modifier, true)
             } else if (mouse.button === Qt.MiddleButton) {
-                if (MouseSettings.middlex2) {
-                    appActions[MouseSettings.middlex2].trigger()
-                }
+                actionName = model.getAction(Qt.MiddleButton, modifier, true)
             } else if (mouse.button === Qt.RightButton) {
-                if (MouseSettings.rightx2) {
-                    appActions[MouseSettings.rightx2].trigger()
-                }
+                actionName = model.getAction(Qt.RightButton, modifier, true)
             } else if (mouse.button === Qt.ForwardButton) {
-                if (MouseSettings.forwardx2) {
-                    appActions[MouseSettings.forwardx2].trigger()
-                }
+                actionName = model.getAction(Qt.ForwardButton, modifier, true)
             } else if (mouse.button === Qt.BackButton) {
-                if (MouseSettings.backx2) {
-                    appActions[MouseSettings.backx2].trigger()
-                }
+                actionName = model.getAction(Qt.BackButton, modifier, true)
+            }
+
+            if (actionName) {
+                appActions[actionName].trigger()
             }
         }
     }

@@ -92,6 +92,7 @@ ApplicationWindow {
         id: mpv
 
         osd: osd
+        mouseActionsModel: mouseActionsModel
 
         width: window.contentItem.width
         height: window.isFullScreen()
@@ -172,6 +173,10 @@ ApplicationWindow {
         onOpenSubtitleDialog: subtitlesFileDialog.open()
     }
 
+    MouseActionsModel {
+        id: mouseActionsModel
+    }
+
     ActionsModel {
         id: actionsModel
     }
@@ -248,6 +253,7 @@ ApplicationWindow {
             m_mpv: mpv
             m_proxyActionsModel: proxyActionsModel
             m_customCommandsModel: customCommandsModel
+            m_mouseActionsModel: mouseActionsModel
 
             onClosing: settingsLoader.active = false
             onCurrentPageChanged: settingsLoader.page = currentPage

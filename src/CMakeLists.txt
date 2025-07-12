@@ -20,6 +20,7 @@ target_sources(haruna
     models/actionsmodel.h models/actionsmodel.cpp
     models/chaptersmodel.h models/chaptersmodel.cpp
     models/customcommandsmodel.h models/customcommandsmodel.cpp
+    models/mouseactionsmodel.h models/mouseactionsmodel.cpp
     models/recentfilesmodel.h models/recentfilesmodel.cpp
     models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp
     models/tracksmodel.h models/tracksmodel.cpp
