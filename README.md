@@ -20,17 +20,10 @@ For more screnshots go to [Haruna's website](https://haruna.kde.org)
 # Install
 
 https://flathub.org/apps/details/org.kde.haruna
-### Stable
+
 ```
 flatpak install flathub org.kde.haruna
 flatpak run org.kde.haruna
-```
-
-### Beta
-```
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-flatpak install flathub-beta org.kde.haruna
-flatpak run --branch=beta org.kde.haruna
 ```
 
 [Flatpak setup guide](https://flatpak.org/setup/)
