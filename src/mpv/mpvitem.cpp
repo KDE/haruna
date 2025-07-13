@@ -6,6 +6,7 @@
 
 #include "mpvitem.h"
 
+#include <QApplication>
 #include <QCommandLineParser>
 #include <QCryptographicHash>
 #include <QDir>

@@ -11,6 +11,7 @@
 #include <QDirIterator>
 #include <QFileInfo>
 #include <QImage>
+#include <QProcess>
 #include <QQuickWindow>
 #include <QThread>
 
@@ -179,6 +180,18 @@ void Worker::syncConfigValue(QString path, QString group, QString key, QVariant 
 
     m_cachedConf->group(group).writeEntry(key, value);
     m_cachedConf->sync();
+}
+
+void Worker::getYtdlpVersion()
+{
+    QProcess ytdlpProcess;
+    ytdlpProcess.setProgram(Application::youtubeDlExecutable());
+    ytdlpProcess.setArguments({u"--version"_s});
+    ytdlpProcess.start();
+    ytdlpProcess.waitForFinished();
+    auto ytdlpVersion = ytdlpProcess.readAllStandardOutput().simplified();
+
+    Q_EMIT ytdlpVersionRetrived(ytdlpVersion);
 }
 
 #include "moc_worker.cpp"

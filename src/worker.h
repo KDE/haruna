@@ -30,6 +30,7 @@ Q_SIGNALS:
     void thumbnailFail();
     void mprisThumbnailSuccess(const QImage &image);
     void subtitlesFound(QStringList subs);
+    void ytdlpVersionRetrived(const QByteArray &version);
 
 public Q_SLOTS:
     void getMetaData(uint index, const QString &path);
@@ -38,6 +39,7 @@ public Q_SLOTS:
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
     void mprisThumbnail(const QString &path, int width);
     void findRecursiveSubtitles(const QUrl &url);
+    void getYtdlpVersion();
 
 private:
     Worker() = default;

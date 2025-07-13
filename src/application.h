@@ -7,16 +7,14 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include <QAbstractItemModel>
-#include <QApplication>
-#include <QFont>
 #include <QObject>
 #include <QQmlApplicationEngine>
 
 #include <KAboutData>
 #include <KSharedConfig>
-#include <qprocess.h>
 
+class QAbstractItemModel;
+class QApplication;
 class QQuickWindow;
 class KActionCollection;
 class KConfigDialog;
@@ -31,16 +29,7 @@ Q_SIGNALS:
     void applicationMouseEnter();
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) override
-    {
-        if (event->type() == QEvent::Leave) {
-            Q_EMIT applicationMouseLeave();
-        }
-        if (event->type() == QEvent::Enter) {
-            Q_EMIT applicationMouseEnter();
-        }
-        return QObject::eventFilter(obj, event);
-    }
+    bool eventFilter(QObject *obj, QEvent *event) override;
 };
 
 class Application : public QObject
@@ -118,7 +107,6 @@ private:
     QString m_systemDefaultStyle;
     QQmlApplicationEngine *m_qmlEngine{nullptr};
     std::unique_ptr<ApplicationEventFilter> m_appEventFilter;
-    std::unique_ptr<QProcess> m_ytdlpProcess;
 };
 
 #endif // APPLICATION_H

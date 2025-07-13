@@ -6,6 +6,7 @@
 
 #include "application.h"
 
+#include <QAbstractItemModel>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDesktopServices>
@@ -40,7 +41,6 @@
 #include "haruna-version.h"
 #include "informationsettings.h"
 #include "mousesettings.h"
-#include "mpvproperties.h"
 #include "playbacksettings.h"
 #include "playlistsettings.h"
 #include "subtitlessettings.h"
@@ -48,6 +48,17 @@
 #include "worker.h"
 
 using namespace Qt::StringLiterals;
+
+bool ApplicationEventFilter::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::Leave) {
+        Q_EMIT applicationMouseLeave();
+    }
+    if (event->type() == QEvent::Enter) {
+        Q_EMIT applicationMouseEnter();
+    }
+    return QObject::eventFilter(obj, event);
+}
 
 Application *Application::instance()
 {
@@ -104,6 +115,19 @@ void Application::setupWorkerThread()
     worker->moveToThread(thread);
     QObject::connect(thread, &QThread::finished, worker, &Worker::deleteLater);
     QObject::connect(thread, &QThread::finished, thread, &QThread::deleteLater);
+    connect(
+        Worker::instance(),
+        &Worker::ytdlpVersionRetrived,
+        this,
+        [this](const QByteArray &version) {
+            m_aboutData.addComponent(u"yt-dlp"_s,
+                                     i18n("Feature-rich command-line audio/video downloader"),
+                                     QString::fromUtf8(version),
+                                     u"https://github.com/yt-dlp/yt-dlp"_s,
+                                     u"https://unlicense.org"_s);
+            KAboutData::setApplicationData(m_aboutData);
+        },
+        Qt::QueuedConnection);
     thread->start();
 }
 
@@ -124,22 +148,7 @@ void Application::setupAboutData()
                           u"georgefb899@gmail.com"_s,
                           u"https://georgefb.com"_s);
 
-    KAboutData::setApplicationData(m_aboutData);
-
-    m_ytdlpProcess = std::make_unique<QProcess>();
-    m_ytdlpProcess->setProgram(Application::youtubeDlExecutable());
-    m_ytdlpProcess->setArguments({u"--version"_s});
-    m_ytdlpProcess->start();
-    connect(m_ytdlpProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int, QProcess::ExitStatus) {
-        auto ytdlpVersion = m_ytdlpProcess->readAllStandardOutput();
-        m_aboutData.addComponent(u"yt-dlp"_s,
-                                 i18n("Feature-rich command-line audio/video downloader"),
-                                 QString::fromUtf8(ytdlpVersion),
-                                 u"https://github.com/yt-dlp/yt-dlp"_s,
-                                 u"https://unlicense.org"_s);
-
-        KAboutData::setApplicationData(m_aboutData);
-    });
+    QMetaObject::invokeMethod(Worker::instance(), &Worker::getYtdlpVersion, Qt::QueuedConnection);
 
     MpvAbstractItem mpvItem;
     m_aboutData.addComponent(u"mpv"_s,
