@@ -50,8 +50,8 @@ MpvItem {
     }
 
     onRaise: { HarunaApp.raiseWindow() }
-    onPlayNext: { appActions.playNextAction.trigger() }
-    onPlayPrevious: { appActions.playPreviousAction.trigger() }
+    onPlayNext: { HarunaApp.actions.playNextAction.trigger() }
+    onPlayPrevious: { HarunaApp.actions.playPreviousAction.trigger() }
     onOpenUri: {
         root.window.openFile(uri)
     }
@@ -111,7 +111,7 @@ MpvItem {
             }
 
             if (actionName) {
-                appActions[actionName].trigger()
+                HarunaApp.actions[actionName].trigger()
             }
         }
 
@@ -133,7 +133,7 @@ MpvItem {
             }
 
             if (actionName) {
-                appActions[actionName].trigger()
+                HarunaApp.actions[actionName].trigger()
             }
         }
 
@@ -155,7 +155,7 @@ MpvItem {
             }
 
             if (actionName) {
-                appActions[actionName].trigger()
+                HarunaApp.actions[actionName].trigger()
             }
         }
     }

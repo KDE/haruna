@@ -9,6 +9,7 @@
 
 #include <QObject>
 #include <QQmlApplicationEngine>
+#include <QQmlPropertyMap>
 
 #include <KAboutData>
 #include <KSharedConfig>
@@ -43,6 +44,7 @@ public:
     static Application *create(QQmlEngine *, QJSEngine *);
 
     Q_PROPERTY(QAbstractItemModel *colorSchemesModel READ colorSchemesModel CONSTANT)
+    Q_PROPERTY(QQmlPropertyMap *actions MEMBER m_actions CONSTANT)
 
     Q_INVOKABLE bool urlExists(const QUrl &url);
     Q_INVOKABLE bool pathExists(const QString &url);
@@ -107,6 +109,7 @@ private:
     QString m_systemDefaultStyle;
     QQmlApplicationEngine *m_qmlEngine{nullptr};
     std::unique_ptr<ApplicationEventFilter> m_appEventFilter;
+    QQmlPropertyMap *m_actions{new QQmlPropertyMap};
 };
 
 #endif // APPLICATION_H

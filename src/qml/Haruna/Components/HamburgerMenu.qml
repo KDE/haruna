@@ -50,11 +50,11 @@ ToolButton {
             modal: true
 
             MenuItem {
-                action: appActions.openFileAction
+                action: HarunaApp.actions.openFileAction
                 visible: root.position === HamburgerMenu.Position.Footer
             }
             MenuItem {
-                action: appActions.openUrlAction
+                action: HarunaApp.actions.openUrlAction
                 visible: root.position === HamburgerMenu.Position.Footer
             }
 
@@ -102,18 +102,18 @@ ToolButton {
 
             MenuSeparator {}
 
-            MenuItem { action: appActions.toggleFullscreenAction }
-            MenuItem { action: appActions.toggleDeinterlacingAction }
-            MenuItem { action: appActions.screenshotAction }
+            MenuItem { action: HarunaApp.actions.toggleFullscreenAction }
+            MenuItem { action: HarunaApp.actions.toggleDeinterlacingAction }
+            MenuItem { action: HarunaApp.actions.screenshotAction }
 
             MenuSeparator {}
 
             MenuItem {
-                action: appActions.configureAction
+                action: HarunaApp.actions.configureAction
                 visible: root.position === HamburgerMenu.Position.Footer
             }
-            MenuItem { action: appActions.configureShortcutsAction }
-            MenuItem { action: appActions.aboutHarunaAction }
+            MenuItem { action: HarunaApp.actions.configureShortcutsAction }
+            MenuItem { action: HarunaApp.actions.aboutHarunaAction }
 
             MenuSeparator {}
 

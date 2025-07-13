@@ -19,10 +19,10 @@ Menu {
 
     title: i18nc("@title:menu", "&File")
 
-    MenuItem { action: appActions.openFileAction }
-    MenuItem { action: appActions.openUrlAction }
+    MenuItem { action: HarunaApp.actions.openFileAction }
+    MenuItem { action: HarunaApp.actions.openUrlAction }
     MenuItem {
-        action: appActions.loadLastPlayedFileAction
+        action: HarunaApp.actions.loadLastPlayedFileAction
         enabled: GeneralSettings.lastPlayedFile !== ""
     }
 
@@ -61,5 +61,5 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: appActions.quitApplicationAction }
+    MenuItem { action: HarunaApp.actions.quitApplicationAction }
 }

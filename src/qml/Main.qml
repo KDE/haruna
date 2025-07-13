@@ -135,7 +135,7 @@ ApplicationWindow {
             subtitle: ""
 
             onActionSelected: function (actionName) {
-                appActions[actionName].trigger()
+                HarunaApp.actions[actionName].trigger()
             }
         }
     }

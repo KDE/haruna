@@ -94,7 +94,7 @@ Item {
             id: togglePlaylistButton
 
             ToolButton {
-                action: appActions.togglePlaylistAction
+                action: HarunaApp.actions.togglePlaylistAction
                 icon.width: root.buttonSize
                 icon.height: root.buttonSize
                 display: root.isSmallSize ? AbstractButton.IconOnly : AbstractButton.TextBesideIcon
@@ -133,7 +133,7 @@ Item {
                 ToolButton {
                     id: playPauseButton
 
-                    action: appActions.playPauseAction
+                    action: HarunaApp.actions.playPauseAction
                     display: AbstractButton.IconOnly
                     icon.name: root.m_mpv.pause ? "media-playback-start" : "media-playback-pause"
                     icon.width: root.buttonSize
@@ -151,7 +151,7 @@ Item {
                 ToolButton {
                     id: playPreviousFile
 
-                    action: appActions.playPreviousAction
+                    action: HarunaApp.actions.playPreviousAction
                     icon.name: footer.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                     icon.width: root.buttonSize
                     icon.height: root.buttonSize
@@ -167,7 +167,7 @@ Item {
                 ToolButton {
                     id: playNextFile
 
-                    action: appActions.playNextAction
+                    action: HarunaApp.actions.playNextAction
                     icon.name: footer.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                     icon.width: root.buttonSize
                     icon.height: root.buttonSize
@@ -192,7 +192,7 @@ Item {
                 ToolButton {
                     id: mute
 
-                    action: appActions.muteAction
+                    action: HarunaApp.actions.muteAction
                     icon.name: root.m_mpv.mute || root.m_mpv.volume === 0 ? "player-volume-muted" : "player-volume"
                     icon.width: root.buttonSize
                     icon.height: root.buttonSize
@@ -200,7 +200,7 @@ Item {
                     focusPolicy: Qt.NoFocus
 
                     ToolTip {
-                        text: appActions.muteAction.text
+                        text: HarunaApp.actions.muteAction.text
                     }
                 }
 

@@ -57,14 +57,14 @@ ToolBar {
         }
 
         ToolButton {
-            action: appActions.openFileAction
+            action: HarunaApp.actions.openFileAction
             focusPolicy: Qt.NoFocus
             icon.width: root.buttonSize
             icon.height: root.buttonSize
         }
 
         ToolButton {
-            action: appActions.openUrlAction
+            action: HarunaApp.actions.openUrlAction
             focusPolicy: Qt.NoFocus
             icon.width: root.buttonSize
             icon.height: root.buttonSize
@@ -127,7 +127,7 @@ ToolBar {
         }
 
         ToolButton {
-            action: appActions.configureAction
+            action: HarunaApp.actions.configureAction
             focusPolicy: Qt.NoFocus
             icon.width: root.buttonSize
             icon.height: root.buttonSize

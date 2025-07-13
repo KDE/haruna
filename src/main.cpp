@@ -81,7 +81,6 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine(&qApplication);
     engine.addImageProvider(u"thumbnail"_s, new ThumbnailImageProvider());
-    engine.rootContext()->setContextProperty(u"appActions"_s, new QQmlPropertyMap);
     engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
     engine.loadFromModule("org.kde.haruna", "Main");
 

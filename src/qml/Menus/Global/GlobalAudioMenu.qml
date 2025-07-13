@@ -55,32 +55,32 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: appActions.muteAction.icon.name
-        text: appActions.muteAction.text
-        onTriggered: appActions.muteAction.trigger()
+        icon.name: HarunaApp.actions.muteAction.icon.name
+        text: HarunaApp.actions.muteAction.text
+        onTriggered: HarunaApp.actions.muteAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.volumeUpAction.icon.name
-        text: appActions.volumeUpAction.text
-        onTriggered: appActions.volumeUpAction.trigger()
+        icon.name: HarunaApp.actions.volumeUpAction.icon.name
+        text: HarunaApp.actions.volumeUpAction.text
+        onTriggered: HarunaApp.actions.volumeUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.volumeDownAction.icon.name
-        text: appActions.volumeDownAction.text
-        onTriggered: appActions.volumeDownAction.trigger()
+        icon.name: HarunaApp.actions.volumeDownAction.icon.name
+        text: HarunaApp.actions.volumeDownAction.text
+        onTriggered: HarunaApp.actions.volumeDownAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.audioCycleUpAction.icon.name
-        text: appActions.audioCycleUpAction.text
-        onTriggered: appActions.audioCycleUpAction.trigger()
+        icon.name: HarunaApp.actions.audioCycleUpAction.icon.name
+        text: HarunaApp.actions.audioCycleUpAction.text
+        onTriggered: HarunaApp.actions.audioCycleUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.audioCycleDownAction.icon.name
-        text: appActions.audioCycleDownAction.text
-        onTriggered: appActions.audioCycleDownAction.trigger()
+        icon.name: HarunaApp.actions.audioCycleDownAction.icon.name
+        text: HarunaApp.actions.audioCycleDownAction.text
+        onTriggered: HarunaApp.actions.audioCycleDownAction.trigger()
     }
 }

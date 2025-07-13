@@ -6,12 +6,14 @@
 
 import QtQuick.Controls
 
+import org.kde.haruna
+
 Menu {
     id: root
 
     title: i18nc("@title:menu", "&Help")
 
-    MenuItem { action: appActions.aboutHarunaAction }
-    MenuItem { action: appActions.reportBugAction }
-    MenuItem { action: appActions.sponsorAction }
+    MenuItem { action: HarunaApp.actions.aboutHarunaAction }
+    MenuItem { action: HarunaApp.actions.reportBugAction }
+    MenuItem { action: HarunaApp.actions.sponsorAction }
 }

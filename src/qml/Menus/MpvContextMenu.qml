@@ -14,20 +14,20 @@ Menu {
 
     required property MpvVideo m_mpv
 
-    MenuItem { action: appActions.playPauseAction }
-    MenuItem { action: appActions.playNextAction }
-    MenuItem { action: appActions.playPreviousAction }
+    MenuItem { action: HarunaApp.actions.playPauseAction }
+    MenuItem { action: HarunaApp.actions.playNextAction }
+    MenuItem { action: HarunaApp.actions.playPreviousAction }
     Menu {
         title: i18nc("@title:menu", "Playback Speed")
-        MenuItem { action: appActions.playbackSpeedIncreaseAction }
-        MenuItem { action: appActions.playbackSpeedDecreaseAction }
-        MenuItem { action: appActions.playbackSpeedResetAction }
+        MenuItem { action: HarunaApp.actions.playbackSpeedIncreaseAction }
+        MenuItem { action: HarunaApp.actions.playbackSpeedDecreaseAction }
+        MenuItem { action: HarunaApp.actions.playbackSpeedResetAction }
     }
 
     MenuSeparator {}
 
-    MenuItem { action: appActions.openFileAction }
-    MenuItem { action: appActions.openUrlAction }
+    MenuItem { action: HarunaApp.actions.openFileAction }
+    MenuItem { action: HarunaApp.actions.openUrlAction }
 
     MenuSeparator {}
 
@@ -41,5 +41,5 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: appActions.configureAction }
+    MenuItem { action: HarunaApp.actions.configureAction }
 }

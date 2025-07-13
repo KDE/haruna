@@ -69,7 +69,7 @@ SettingsBasePage {
                     }
 
                     Label {
-                        text: appActions[delegate.actionName].text
+                        text: HarunaApp.actions[delegate.actionName].text
                     }
 
                     ToolButton {
@@ -261,7 +261,7 @@ SettingsBasePage {
                             return ""
                         }
                         return i18nc("@info", "Mouse button combination is already assigned to “%1”",
-                                     appActions[actionName].text)
+                                     HarunaApp.actions[actionName].text)
                     }
 
                     type: Kirigami.MessageType.Warning
@@ -279,7 +279,7 @@ SettingsBasePage {
                 width: Math.min(parent.width, 400)
                 height: Math.min(parent.height, 600)
                 onActionSelected: function(actionName) {
-                    selectedActionLabel.text = appActions[actionName].text
+                    selectedActionLabel.text = HarunaApp.actions[actionName].text
                     selectedActionLabel.actionName = actionName
                     Q_EMIT: root.newMouseActionChanged()
                 }

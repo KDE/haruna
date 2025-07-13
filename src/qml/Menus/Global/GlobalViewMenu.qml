@@ -15,13 +15,13 @@ Labs.Menu {
     title: i18nc("@title:menu", "&View")
 
     Labs.MenuItem {
-        icon.name: appActions.toggleFullscreenAction.icon.name
-        text: appActions.toggleFullscreenAction.text
-        onTriggered: appActions.toggleFullscreenAction.trigger()
+        icon.name: HarunaApp.actions.toggleFullscreenAction.icon.name
+        text: HarunaApp.actions.toggleFullscreenAction.text
+        onTriggered: HarunaApp.actions.toggleFullscreenAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.toggleMenuBarAction.icon.name
+        icon.name: HarunaApp.actions.toggleMenuBarAction.icon.name
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.menuBar.visible) {
@@ -30,11 +30,11 @@ Labs.Menu {
                 return i18nc("@action:inmenu", "Show Menubar")
             }
         }
-        onTriggered: appActions.toggleMenuBarAction.trigger()
+        onTriggered: HarunaApp.actions.toggleMenuBarAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.toggleHeaderAction.icon.name
+        icon.name: HarunaApp.actions.toggleHeaderAction.icon.name
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.header.visible) {
@@ -43,6 +43,6 @@ Labs.Menu {
                 return i18nc("@action:inmenu", "Show Toolbar")
             }
         }
-        onTriggered: appActions.toggleHeaderAction.trigger()
+        onTriggered: HarunaApp.actions.toggleHeaderAction.trigger()
     }
 }

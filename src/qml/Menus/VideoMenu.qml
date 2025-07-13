@@ -6,37 +6,39 @@
 
 import QtQuick.Controls
 
+import org.kde.haruna
+
 Menu {
     id: root
 
     title: i18nc("@title:menu", "&Video")
 
-    MenuItem { action: appActions.toggleDeinterlacingAction }
-    MenuItem { action: appActions.zoomInAction }
-    MenuItem { action: appActions.zoomOutAction }
-    MenuItem { action: appActions.zoomResetAction }
-    MenuItem { action: appActions.screenshotAction }
-    MenuItem { action: appActions.rotateClockwiseAction }
-    MenuItem { action: appActions.rotateCounterClockwiseAction }
-    MenuItem { action: appActions.videoPanXLeftAction }
-    MenuItem { action: appActions.videoPanXRightAction }
-    MenuItem { action: appActions.videoPanYUpAction }
-    MenuItem { action: appActions.videoPanYDownAction }
+    MenuItem { action: HarunaApp.actions.toggleDeinterlacingAction }
+    MenuItem { action: HarunaApp.actions.zoomInAction }
+    MenuItem { action: HarunaApp.actions.zoomOutAction }
+    MenuItem { action: HarunaApp.actions.zoomResetAction }
+    MenuItem { action: HarunaApp.actions.screenshotAction }
+    MenuItem { action: HarunaApp.actions.rotateClockwiseAction }
+    MenuItem { action: HarunaApp.actions.rotateCounterClockwiseAction }
+    MenuItem { action: HarunaApp.actions.videoPanXLeftAction }
+    MenuItem { action: HarunaApp.actions.videoPanXRightAction }
+    MenuItem { action: HarunaApp.actions.videoPanYUpAction }
+    MenuItem { action: HarunaApp.actions.videoPanYDownAction }
 
     Menu {
         title: i18nc("@title:menu", "Adjustments")
 
-        MenuItem { action: appActions.contrastUpAction }
-        MenuItem { action: appActions.contrastDownAction }
-        MenuItem { action: appActions.contrastResetAction }
-        MenuItem { action: appActions.brightnessUpAction }
-        MenuItem { action: appActions.brightnessDownAction }
-        MenuItem { action: appActions.brightnessResetAction }
-        MenuItem { action: appActions.gammaUpAction }
-        MenuItem { action: appActions.gammaDownAction }
-        MenuItem { action: appActions.gammaResetAction }
-        MenuItem { action: appActions.saturationUpAction }
-        MenuItem { action: appActions.saturationDownAction }
-        MenuItem { action: appActions.saturationResetAction }
+        MenuItem { action: HarunaApp.actions.contrastUpAction }
+        MenuItem { action: HarunaApp.actions.contrastDownAction }
+        MenuItem { action: HarunaApp.actions.contrastResetAction }
+        MenuItem { action: HarunaApp.actions.brightnessUpAction }
+        MenuItem { action: HarunaApp.actions.brightnessDownAction }
+        MenuItem { action: HarunaApp.actions.brightnessResetAction }
+        MenuItem { action: HarunaApp.actions.gammaUpAction }
+        MenuItem { action: HarunaApp.actions.gammaDownAction }
+        MenuItem { action: HarunaApp.actions.gammaResetAction }
+        MenuItem { action: HarunaApp.actions.saturationUpAction }
+        MenuItem { action: HarunaApp.actions.saturationDownAction }
+        MenuItem { action: HarunaApp.actions.saturationResetAction }
     }
 }

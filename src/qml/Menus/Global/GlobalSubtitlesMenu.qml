@@ -90,63 +90,63 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: appActions.openSubtitlesFileAction.icon.name
-        text: appActions.openSubtitlesFileAction.text
-        onTriggered: appActions.openSubtitlesFileAction.trigger()
+        icon.name: HarunaApp.actions.openSubtitlesFileAction.icon.name
+        text: HarunaApp.actions.openSubtitlesFileAction.text
+        onTriggered: HarunaApp.actions.openSubtitlesFileAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleIncreaseFontSizeAction.icon.name
-        text: appActions.subtitleIncreaseFontSizeAction.text
-        onTriggered: appActions.subtitleIncreaseFontSizeAction.trigger()
+        icon.name: HarunaApp.actions.subtitleIncreaseFontSizeAction.icon.name
+        text: HarunaApp.actions.subtitleIncreaseFontSizeAction.text
+        onTriggered: HarunaApp.actions.subtitleIncreaseFontSizeAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleDecreaseFontSizeAction.icon.name
-        text: appActions.subtitleDecreaseFontSizeAction.text
-        onTriggered: appActions.subtitleDecreaseFontSizeAction.trigger()
+        icon.name: HarunaApp.actions.subtitleDecreaseFontSizeAction.icon.name
+        text: HarunaApp.actions.subtitleDecreaseFontSizeAction.text
+        onTriggered: HarunaApp.actions.subtitleDecreaseFontSizeAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleMoveUpAction.icon.name
-        text: appActions.subtitleMoveUpAction.text
-        onTriggered: appActions.subtitleMoveUpAction.trigger()
+        icon.name: HarunaApp.actions.subtitleMoveUpAction.icon.name
+        text: HarunaApp.actions.subtitleMoveUpAction.text
+        onTriggered: HarunaApp.actions.subtitleMoveUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleMoveDownAction.icon.name
-        text: appActions.subtitleMoveDownAction.text
-        onTriggered: appActions.subtitleMoveDownAction.trigger()
+        icon.name: HarunaApp.actions.subtitleMoveDownAction.icon.name
+        text: HarunaApp.actions.subtitleMoveDownAction.text
+        onTriggered: HarunaApp.actions.subtitleMoveDownAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleQuickenAction.icon.name
-        text: appActions.subtitleQuickenAction.text
-        onTriggered: appActions.subtitleQuickenAction.trigger()
+        icon.name: HarunaApp.actions.subtitleQuickenAction.icon.name
+        text: HarunaApp.actions.subtitleQuickenAction.text
+        onTriggered: HarunaApp.actions.subtitleQuickenAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleDelayAction.icon.name
-        text: appActions.subtitleDelayAction.text
-        onTriggered: appActions.subtitleDelayAction.trigger()
+        icon.name: HarunaApp.actions.subtitleDelayAction.icon.name
+        text: HarunaApp.actions.subtitleDelayAction.text
+        onTriggered: HarunaApp.actions.subtitleDelayAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleToggleAction.icon.name
-        text: appActions.subtitleToggleAction.text
-        onTriggered: appActions.subtitleToggleAction.trigger()
+        icon.name: HarunaApp.actions.subtitleToggleAction.icon.name
+        text: HarunaApp.actions.subtitleToggleAction.text
+        onTriggered: HarunaApp.actions.subtitleToggleAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleCycleUpAction.icon.name
-        text: appActions.subtitleCycleUpAction.text
-        onTriggered: appActions.subtitleCycleUpAction.trigger()
+        icon.name: HarunaApp.actions.subtitleCycleUpAction.icon.name
+        text: HarunaApp.actions.subtitleCycleUpAction.text
+        onTriggered: HarunaApp.actions.subtitleCycleUpAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.subtitleCycleDownAction.icon.name
-        text: appActions.subtitleCycleDownAction.text
-        onTriggered: appActions.subtitleCycleDownAction.trigger()
+        icon.name: HarunaApp.actions.subtitleCycleDownAction.icon.name
+        text: HarunaApp.actions.subtitleCycleDownAction.text
+        onTriggered: HarunaApp.actions.subtitleCycleDownAction.trigger()
     }
 
 }

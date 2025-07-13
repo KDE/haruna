@@ -52,7 +52,7 @@ Item {
                 }
             }
 
-            Component.onCompleted: appActions[objectName] = this
+            Component.onCompleted: HarunaApp.actions[objectName] = this
         }
     }
 

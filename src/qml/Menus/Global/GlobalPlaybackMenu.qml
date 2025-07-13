@@ -6,59 +6,61 @@
 
 import Qt.labs.platform as Labs
 
+import org.kde.haruna
+
 Labs.Menu {
     id: root
 
     title: i18nc("@title:menu", "&Playback")
 
     Labs.MenuItem {
-        icon.name: appActions.playPauseAction.icon.name
-        text: appActions.playPauseAction.text
-        onTriggered: appActions.playPauseAction.trigger()
+        icon.name: HarunaApp.actions.playPauseAction.icon.name
+        text: HarunaApp.actions.playPauseAction.text
+        onTriggered: HarunaApp.actions.playPauseAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.playNextAction.icon.name
-        text: appActions.playNextAction.text
-        onTriggered: appActions.playNextAction.trigger()
+        icon.name: HarunaApp.actions.playNextAction.icon.name
+        text: HarunaApp.actions.playNextAction.text
+        onTriggered: HarunaApp.actions.playNextAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.playPreviousAction.icon.name
-        text: appActions.playPreviousAction.text
-        onTriggered: appActions.playPreviousAction.trigger()
+        icon.name: HarunaApp.actions.playPreviousAction.icon.name
+        text: HarunaApp.actions.playPreviousAction.text
+        onTriggered: HarunaApp.actions.playPreviousAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.restartPlaybackAction.icon.name
-        text: appActions.restartPlaybackAction.text
-        onTriggered: appActions.restartPlaybackAction.trigger()
+        icon.name: HarunaApp.actions.restartPlaybackAction.icon.name
+        text: HarunaApp.actions.restartPlaybackAction.text
+        onTriggered: HarunaApp.actions.restartPlaybackAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.setLoopAction.icon.name
-        text: appActions.setLoopAction.text
-        onTriggered: appActions.setLoopAction.trigger()
+        icon.name: HarunaApp.actions.setLoopAction.icon.name
+        text: HarunaApp.actions.setLoopAction.text
+        onTriggered: HarunaApp.actions.setLoopAction.trigger()
     }
 
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: appActions.playbackSpeedIncreaseAction.icon.name
-        text: appActions.playbackSpeedIncreaseAction.text
-        onTriggered: appActions.playbackSpeedIncreaseAction.trigger()
+        icon.name: HarunaApp.actions.playbackSpeedIncreaseAction.icon.name
+        text: HarunaApp.actions.playbackSpeedIncreaseAction.text
+        onTriggered: HarunaApp.actions.playbackSpeedIncreaseAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.playbackSpeedDecreaseAction.icon.name
-        text: appActions.playbackSpeedDecreaseAction.text
-        onTriggered: appActions.playbackSpeedDecreaseAction.trigger()
+        icon.name: HarunaApp.actions.playbackSpeedDecreaseAction.icon.name
+        text: HarunaApp.actions.playbackSpeedDecreaseAction.text
+        onTriggered: HarunaApp.actions.playbackSpeedDecreaseAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.playbackSpeedResetAction.icon.name
-        text: appActions.playbackSpeedResetAction.text
-        onTriggered: appActions.playbackSpeedResetAction.trigger()
+        icon.name: HarunaApp.actions.playbackSpeedResetAction.icon.name
+        text: HarunaApp.actions.playbackSpeedResetAction.text
+        onTriggered: HarunaApp.actions.playbackSpeedResetAction.trigger()
     }
 
     Labs.MenuSeparator {}
@@ -66,90 +68,90 @@ Labs.Menu {
     Labs.Menu {
         title: i18nc("@title:menu", "Seek")
         Labs.MenuItem {
-            icon.name: appActions.seekForwardSmallAction.icon.name
-            text: appActions.seekForwardSmallAction.text
-            onTriggered: appActions.seekForwardSmallAction.trigger()
+            icon.name: HarunaApp.actions.seekForwardSmallAction.icon.name
+            text: HarunaApp.actions.seekForwardSmallAction.text
+            onTriggered: HarunaApp.actions.seekForwardSmallAction.trigger()
         }
         Labs.MenuItem {
-            icon.name: appActions.seekBackwardSmallAction.icon.name
-            text: appActions.seekBackwardSmallAction.text
-            onTriggered: appActions.seekBackwardSmallAction.trigger()
-        }
-
-        Labs.MenuSeparator {}
-
-        Labs.MenuItem {
-            icon.name: appActions.seekForwardMediumAction.icon.name
-            text: appActions.seekForwardMediumAction.text
-            onTriggered: appActions.seekForwardMediumAction.trigger()
-        }
-
-        Labs.MenuItem {
-            icon.name: appActions.seekBackwardMediumAction.icon.name
-            text: appActions.seekBackwardMediumAction.text
-            onTriggered: appActions.seekBackwardMediumAction.trigger()
+            icon.name: HarunaApp.actions.seekBackwardSmallAction.icon.name
+            text: HarunaApp.actions.seekBackwardSmallAction.text
+            onTriggered: HarunaApp.actions.seekBackwardSmallAction.trigger()
         }
 
         Labs.MenuSeparator {}
 
         Labs.MenuItem {
-            icon.name: appActions.seekForwardBigAction.icon.name
-            text: appActions.seekForwardBigAction.text
-            onTriggered: appActions.seekForwardBigAction.trigger()
+            icon.name: HarunaApp.actions.seekForwardMediumAction.icon.name
+            text: HarunaApp.actions.seekForwardMediumAction.text
+            onTriggered: HarunaApp.actions.seekForwardMediumAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: appActions.seekBackwardBigAction.icon.name
-            text: appActions.seekBackwardBigAction.text
-            onTriggered: appActions.seekBackwardBigAction.trigger()
-        }
-
-        Labs.MenuSeparator {}
-
-        Labs.MenuItem {
-            icon.name: appActions.seekNextSubtitleAction.icon.name
-            text: appActions.seekNextSubtitleAction.text
-            onTriggered: appActions.seekNextSubtitleAction.trigger()
-        }
-
-        Labs.MenuItem {
-            icon.name: appActions.seekPreviousSubtitleAction.icon.name
-            text: appActions.seekPreviousSubtitleAction.text
-            onTriggered: appActions.seekPreviousSubtitleAction.trigger()
+            icon.name: HarunaApp.actions.seekBackwardMediumAction.icon.name
+            text: HarunaApp.actions.seekBackwardMediumAction.text
+            onTriggered: HarunaApp.actions.seekBackwardMediumAction.trigger()
         }
 
         Labs.MenuSeparator {}
 
         Labs.MenuItem {
-            icon.name: appActions.seekNextChapterAction.icon.name
-            text: appActions.seekNextChapterAction.text
-            onTriggered: appActions.seekNextChapterAction.trigger()
+            icon.name: HarunaApp.actions.seekForwardBigAction.icon.name
+            text: HarunaApp.actions.seekForwardBigAction.text
+            onTriggered: HarunaApp.actions.seekForwardBigAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: appActions.seekPreviousChapterAction.icon.name
-            text: appActions.seekPreviousChapterAction.text
-            onTriggered: appActions.seekPreviousChapterAction.trigger()
+            icon.name: HarunaApp.actions.seekBackwardBigAction.icon.name
+            text: HarunaApp.actions.seekBackwardBigAction.text
+            onTriggered: HarunaApp.actions.seekBackwardBigAction.trigger()
         }
 
         Labs.MenuSeparator {}
 
         Labs.MenuItem {
-            icon.name: appActions.frameStepForwardAction.icon.name
-            text: appActions.frameStepForwardAction.text
-            onTriggered: appActions.frameStepForwardAction.trigger()
+            icon.name: HarunaApp.actions.seekNextSubtitleAction.icon.name
+            text: HarunaApp.actions.seekNextSubtitleAction.text
+            onTriggered: HarunaApp.actions.seekNextSubtitleAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: appActions.frameStepBackwardAction.icon.name
-            text: appActions.frameStepBackwardAction.text
-            onTriggered: appActions.frameStepBackwardAction.trigger()
+            icon.name: HarunaApp.actions.seekPreviousSubtitleAction.icon.name
+            text: HarunaApp.actions.seekPreviousSubtitleAction.text
+            onTriggered: HarunaApp.actions.seekPreviousSubtitleAction.trigger()
+        }
+
+        Labs.MenuSeparator {}
+
+        Labs.MenuItem {
+            icon.name: HarunaApp.actions.seekNextChapterAction.icon.name
+            text: HarunaApp.actions.seekNextChapterAction.text
+            onTriggered: HarunaApp.actions.seekNextChapterAction.trigger()
         }
 
         Labs.MenuItem {
-            icon.name: appActions.seekToWatchLaterPositionAction.icon.name
-            text: appActions.seekToWatchLaterPositionAction.text
-            onTriggered: appActions.seekToWatchLaterPositionAction.trigger()
+            icon.name: HarunaApp.actions.seekPreviousChapterAction.icon.name
+            text: HarunaApp.actions.seekPreviousChapterAction.text
+            onTriggered: HarunaApp.actions.seekPreviousChapterAction.trigger()
+        }
+
+        Labs.MenuSeparator {}
+
+        Labs.MenuItem {
+            icon.name: HarunaApp.actions.frameStepForwardAction.icon.name
+            text: HarunaApp.actions.frameStepForwardAction.text
+            onTriggered: HarunaApp.actions.frameStepForwardAction.trigger()
+        }
+
+        Labs.MenuItem {
+            icon.name: HarunaApp.actions.frameStepBackwardAction.icon.name
+            text: HarunaApp.actions.frameStepBackwardAction.text
+            onTriggered: HarunaApp.actions.frameStepBackwardAction.trigger()
+        }
+
+        Labs.MenuItem {
+            icon.name: HarunaApp.actions.seekToWatchLaterPositionAction.icon.name
+            text: HarunaApp.actions.seekToWatchLaterPositionAction.text
+            onTriggered: HarunaApp.actions.seekToWatchLaterPositionAction.trigger()
         }
     }
 }

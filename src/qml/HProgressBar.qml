@@ -167,9 +167,9 @@ RowLayout {
 
                 onWheel: function(wheel) {
                     if (wheel.angleDelta.y > 0) {
-                        appActions.seekForwardMediumAction.trigger()
+                        HarunaApp.actions.seekForwardMediumAction.trigger()
                     } else if (wheel.angleDelta.y) {
-                        appActions.seekBackwardMediumAction.trigger()
+                        HarunaApp.actions.seekBackwardMediumAction.trigger()
                     }
                 }
             }

@@ -14,10 +14,10 @@ Menu {
 
     title: i18nc("@title:menu", "&View")
 
-    MenuItem { action: appActions.toggleFullscreenAction }
+    MenuItem { action: HarunaApp.actions.toggleFullscreenAction }
 
     MenuItem {
-        action: appActions.toggleMenuBarAction
+        action: HarunaApp.actions.toggleMenuBarAction
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.menuBar.visible) {
@@ -28,7 +28,7 @@ Menu {
         }
     }
     MenuItem {
-        action: appActions.toggleHeaderAction
+        action: HarunaApp.actions.toggleHeaderAction
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.header.visible) {

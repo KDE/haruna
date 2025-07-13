@@ -32,16 +32,16 @@ Menu {
     MenuSeparator {}
 
     MenuItem {
-        action: appActions.openSubtitlesFileAction
+        action: HarunaApp.actions.openSubtitlesFileAction
         enabled: root.m_mpv.currentUrl.toString() !== ""
     }
-    MenuItem { action: appActions.subtitleIncreaseFontSizeAction }
-    MenuItem { action: appActions.subtitleDecreaseFontSizeAction }
-    MenuItem { action: appActions.subtitleMoveUpAction }
-    MenuItem { action: appActions.subtitleMoveDownAction }
-    MenuItem { action: appActions.subtitleQuickenAction }
-    MenuItem { action: appActions.subtitleDelayAction }
-    MenuItem { action: appActions.subtitleToggleAction }
-    MenuItem { action: appActions.subtitleCycleUpAction }
-    MenuItem { action: appActions.subtitleCycleDownAction }
+    MenuItem { action: HarunaApp.actions.subtitleIncreaseFontSizeAction }
+    MenuItem { action: HarunaApp.actions.subtitleDecreaseFontSizeAction }
+    MenuItem { action: HarunaApp.actions.subtitleMoveUpAction }
+    MenuItem { action: HarunaApp.actions.subtitleMoveDownAction }
+    MenuItem { action: HarunaApp.actions.subtitleQuickenAction }
+    MenuItem { action: HarunaApp.actions.subtitleDelayAction }
+    MenuItem { action: HarunaApp.actions.subtitleToggleAction }
+    MenuItem { action: HarunaApp.actions.subtitleCycleUpAction }
+    MenuItem { action: HarunaApp.actions.subtitleCycleDownAction }
 }

@@ -19,21 +19,21 @@ Labs.Menu {
     title: i18nc("@title:menu", "&File")
 
     Labs.MenuItem {
-        icon.name: appActions.openFileAction.icon.name
-        text: appActions.openFileAction.text
-        onTriggered: appActions.openFileAction.trigger()
+        icon.name: HarunaApp.actions.openFileAction.icon.name
+        text: HarunaApp.actions.openFileAction.text
+        onTriggered: HarunaApp.actions.openFileAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.openUrlAction.icon.name
-        text: appActions.openUrlAction.text
-        onTriggered: appActions.openUrlAction.trigger()
+        icon.name: HarunaApp.actions.openUrlAction.icon.name
+        text: HarunaApp.actions.openUrlAction.text
+        onTriggered: HarunaApp.actions.openUrlAction.trigger()
     }
 
     Labs.MenuItem {
-        icon.name: appActions.loadLastPlayedFileAction.icon.name
-        text: appActions.loadLastPlayedFileAction.text
-        onTriggered: appActions.loadLastPlayedFileAction.trigger()
+        icon.name: HarunaApp.actions.loadLastPlayedFileAction.icon.name
+        text: HarunaApp.actions.loadLastPlayedFileAction.text
+        onTriggered: HarunaApp.actions.loadLastPlayedFileAction.trigger()
     }
 
     Labs.Menu {
@@ -73,8 +73,8 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: appActions.quitApplicationAction.icon.name
-        text: appActions.quitApplicationAction.text
-        onTriggered: appActions.quitApplicationAction.trigger()
+        icon.name: HarunaApp.actions.quitApplicationAction.icon.name
+        text: HarunaApp.actions.quitApplicationAction.text
+        onTriggered: HarunaApp.actions.quitApplicationAction.trigger()
     }
 }

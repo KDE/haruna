@@ -28,9 +28,9 @@ Menu {
 
     MenuSeparator {}
 
-    MenuItem { action: appActions.muteAction }
-    MenuItem { action: appActions.volumeUpAction }
-    MenuItem { action: appActions.volumeDownAction }
-    MenuItem { action: appActions.audioCycleUpAction }
-    MenuItem { action: appActions.audioCycleDownAction }
+    MenuItem { action: HarunaApp.actions.muteAction }
+    MenuItem { action: HarunaApp.actions.volumeUpAction }
+    MenuItem { action: HarunaApp.actions.volumeDownAction }
+    MenuItem { action: HarunaApp.actions.audioCycleUpAction }
+    MenuItem { action: HarunaApp.actions.audioCycleDownAction }
 }
