@@ -9,11 +9,9 @@
 
 #include <QAbstractListModel>
 #include <QKeySequence>
-#include <QQmlPropertyMap>
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>
 
-#include <KLocalizedString>
 #include <KSharedConfig>
 
 using namespace Qt::StringLiterals;

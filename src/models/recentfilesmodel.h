@@ -7,11 +7,11 @@
 #ifndef RECENTFILESMODEL_H
 #define RECENTFILESMODEL_H
 
-#include <KConfigGroup>
-
 #include <QAbstractListModel>
 #include <QUrl>
 #include <QtQml/qqmlregistration.h>
+
+#include <KConfigGroup>
 
 class KRecentFilesAction;
 

@@ -8,7 +8,6 @@
 #define TRACKSMODEL_H
 
 #include <QAbstractListModel>
-#include <QObject>
 #include <QtQml/qqmlregistration.h>
 
 struct Track {

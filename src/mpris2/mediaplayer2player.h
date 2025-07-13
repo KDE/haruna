@@ -11,6 +11,7 @@
 #include <QImage>
 
 class QDBusObjectPath;
+class QImage;
 class MpvItem;
 
 class MediaPlayer2Player : public QDBusAbstractAdaptor

@@ -7,15 +7,14 @@
 #ifndef WORKER_H
 #define WORKER_H
 
-#include <QImage>
 #include <QObject>
 
 #include <KFileMetaData/Properties>
-#include <kconfig_version.h>
 
 #include <memory>
 
 class KConfig;
+class QImage;
 class QQuickWindow;
 
 class Worker : public QObject

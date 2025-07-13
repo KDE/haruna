@@ -10,6 +10,8 @@
 #include <QImage>
 
 extern "C" {
+#include <libavfilter/buffersink.h>
+#include <libavfilter/buffersrc.h>
 #include <libavutil/imgutils.h>
 #include <libswscale/swscale.h>
 }

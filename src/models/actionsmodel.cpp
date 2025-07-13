@@ -10,6 +10,7 @@
 #include <QPushButton>
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 
 #include "global.h"
 
