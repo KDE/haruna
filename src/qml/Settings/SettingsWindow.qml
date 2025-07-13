@@ -38,8 +38,10 @@ Kirigami.ApplicationWindow {
         About
     }
 
-    width: Kirigami.Units.gridUnit * 45
-    height: Kirigami.Units.gridUnit * 35
+    width: 800
+    height: 600
+    minimumWidth: 750
+    minimumHeight: 400
     title: i18nc("@title:window", "Settings")
     transientParent: null
     pageStack.initialPage: Kirigami.ScrollablePage {
