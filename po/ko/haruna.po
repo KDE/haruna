@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-03 06:56+0000\n"
+"POT-Creation-Date: 2025-07-14 00:41+0000\n"
 "PO-Revision-Date: 2025-06-10 23:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,59 +27,59 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: src/application.cpp:113
+#: src/application.cpp:124
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr "다기능 명령행 오디오/비디오 다운로더"
+
+#: src/application.cpp:137
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:115
+#: src/application.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "미디어 재생기"
 
-#: src/application.cpp:117
+#: src/application.cpp:141
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:122
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:123
+#: src/application.cpp:147
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "개발자"
 
-#: src/application.cpp:136
-#, kde-format
-msgid "Feature-rich command-line audio/video downloader"
-msgstr "다기능 명령행 오디오/비디오 다운로더"
-
-#: src/application.cpp:146
+#: src/application.cpp:155
 #, kde-format
 msgid "Command line video player"
 msgstr "명령행 동영상 재생기"
 
-#: src/application.cpp:152
+#: src/application.cpp:161
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
-#: src/application.cpp:164
+#: src/application.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "열 파일"
 
-#: src/application.cpp:168
+#: src/application.cpp:177
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid ""
@@ -99,31 +99,31 @@ msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
 msgstr "미디어 파일 재생 중"
 
-#: src/models/actionsmodel.cpp:24
+#: src/models/actionsmodel.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
 msgstr "동작 대화 상자 열기"
 
-#: src/models/actionsmodel.cpp:30
+#: src/models/actionsmodel.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "Haruna 정보"
 
-#: src/models/actionsmodel.cpp:37
+#: src/models/actionsmodel.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
 msgstr "버그 보고"
 
-#: src/models/actionsmodel.cpp:44
+#: src/models/actionsmodel.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
 msgstr "Haruna 스폰서"
 
-#: src/models/actionsmodel.cpp:51
+#: src/models/actionsmodel.cpp:52
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Audio Track"
@@ -131,32 +131,32 @@ msgctxt "@action"
 msgid "Cycle Up Audio Track"
 msgstr "오디오 트랙"
 
-#: src/models/actionsmodel.cpp:58
+#: src/models/actionsmodel.cpp:59
 #, fuzzy, kde-format
 #| msgid "Cycle Audio Up"
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
 msgstr "오디오 위로 순환"
 
-#: src/models/actionsmodel.cpp:65
+#: src/models/actionsmodel.cpp:66
 #, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "설정"
 
-#: src/models/actionsmodel.cpp:72
+#: src/models/actionsmodel.cpp:73
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "키보드 단축키 설정"
 
-#: src/models/actionsmodel.cpp:79
+#: src/models/actionsmodel.cpp:80
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "전체 화면 모드 끝내기"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:87
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Frame Step Forward"
@@ -164,7 +164,7 @@ msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "프레임 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:94
+#: src/models/actionsmodel.cpp:95
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Frame Step Backward"
@@ -172,49 +172,49 @@ msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "프레임 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:102
+#: src/models/actionsmodel.cpp:103
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "마지막으로 재생한 파일 열기"
 
-#: src/models/actionsmodel.cpp:109
+#: src/models/actionsmodel.cpp:110
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "음소거"
 
-#: src/models/actionsmodel.cpp:116
+#: src/models/actionsmodel.cpp:117
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "상황에 맞는 메뉴 열기"
 
-#: src/models/actionsmodel.cpp:120
+#: src/models/actionsmodel.cpp:121
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "상황에 맞는 메뉴를 현재 마우스 포인터 위치에서 열고 닫기"
 
-#: src/models/actionsmodel.cpp:124
+#: src/models/actionsmodel.cpp:125
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "파일 열기"
 
-#: src/models/actionsmodel.cpp:131
+#: src/models/actionsmodel.cpp:132
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "외부 자막 추가…"
 
-#: src/models/actionsmodel.cpp:138
+#: src/models/actionsmodel.cpp:139
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "URL 열기"
 
-#: src/models/actionsmodel.cpp:145
+#: src/models/actionsmodel.cpp:146
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Playback Speed"
@@ -222,7 +222,7 @@ msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "재생 속도"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:153
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Playback Speed"
@@ -230,7 +230,7 @@ msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "재생 속도"
 
-#: src/models/actionsmodel.cpp:159
+#: src/models/actionsmodel.cpp:160
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Playback Speed"
@@ -238,73 +238,73 @@ msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "재생 속도"
 
-#: src/models/actionsmodel.cpp:166
+#: src/models/actionsmodel.cpp:167
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "재생/일시 정지"
 
-#: src/models/actionsmodel.cpp:173
+#: src/models/actionsmodel.cpp:174
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "다음 재생"
 
-#: src/models/actionsmodel.cpp:180
+#: src/models/actionsmodel.cpp:181
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "이전 재생"
 
-#: src/models/actionsmodel.cpp:187
+#: src/models/actionsmodel.cpp:188
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "끝내기"
 
-#: src/models/actionsmodel.cpp:194
+#: src/models/actionsmodel.cpp:195
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "재생 다시 시작"
 
-#: src/models/actionsmodel.cpp:201
+#: src/models/actionsmodel.cpp:202
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "작은 단위 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "작은 단위 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:215
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "중간 단위 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:222
+#: src/models/actionsmodel.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "중간 단위 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:229
+#: src/models/actionsmodel.cpp:230
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "큰 단위 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:236
+#: src/models/actionsmodel.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "큰 단위 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:243
+#: src/models/actionsmodel.cpp:244
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Seek Next Chapter"
@@ -312,7 +312,7 @@ msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "다음 챕터로 이동"
 
-#: src/models/actionsmodel.cpp:250
+#: src/models/actionsmodel.cpp:251
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Seek Previous Chapter"
@@ -320,37 +320,37 @@ msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "이전 챕터로 이동"
 
-#: src/models/actionsmodel.cpp:257
+#: src/models/actionsmodel.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "다음 자막으로 이동"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:265
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "이전 자막으로 이동"
 
-#: src/models/actionsmodel.cpp:271
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "마지막으로 본 위치로 탐색"
 
-#: src/models/actionsmodel.cpp:278
+#: src/models/actionsmodel.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "구간 반복 설정"
 
-#: src/models/actionsmodel.cpp:285
+#: src/models/actionsmodel.cpp:286
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "스크린샷"
 
-#: src/models/actionsmodel.cpp:292
+#: src/models/actionsmodel.cpp:293
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitles"
@@ -358,7 +358,7 @@ msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "자막"
 
-#: src/models/actionsmodel.cpp:299
+#: src/models/actionsmodel.cpp:300
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitle Increase Font Size"
@@ -366,7 +366,7 @@ msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "자막 글꼴 크기 확대"
 
-#: src/models/actionsmodel.cpp:306
+#: src/models/actionsmodel.cpp:307
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitle Decrease Font Size"
@@ -374,21 +374,21 @@ msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "자막 글꼴 크기 축소"
 
-#: src/models/actionsmodel.cpp:313
+#: src/models/actionsmodel.cpp:314
 #, fuzzy, kde-format
 #| msgid "Move Subtitle Up"
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "자막 위로 이동"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:321
 #, fuzzy, kde-format
 #| msgid "Move Subtitle Down"
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "자막 아래로 이동"
 
-#: src/models/actionsmodel.cpp:327
+#: src/models/actionsmodel.cpp:328
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Subtitles File"
@@ -396,7 +396,7 @@ msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "자막 파일 선택"
 
-#: src/models/actionsmodel.cpp:334
+#: src/models/actionsmodel.cpp:335
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Subtitles File"
@@ -404,51 +404,51 @@ msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "자막 파일 선택"
 
-#: src/models/actionsmodel.cpp:341
+#: src/models/actionsmodel.cpp:342
 #, fuzzy, kde-format
 #| msgid "Cycle Subtitle Up"
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "자막 위로 순환"
 
-#: src/models/actionsmodel.cpp:348
+#: src/models/actionsmodel.cpp:349
 #, fuzzy, kde-format
 #| msgid "Cycle Subtitle Up"
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "자막 위로 순환"
 
-#: src/models/actionsmodel.cpp:355
+#: src/models/actionsmodel.cpp:356
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "디인터레이싱 전환"
 
-#: src/models/actionsmodel.cpp:362
+#: src/models/actionsmodel.cpp:363
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "전체 화면 전환"
 
-#: src/models/actionsmodel.cpp:369
+#: src/models/actionsmodel.cpp:370
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "메뉴 표시줄 전환"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:377
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "머리글 전환"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:105
+#: src/models/actionsmodel.cpp:384 src/qml/Settings/SettingsWindow.qml:108
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "재생 목록"
 
-#: src/models/actionsmodel.cpp:390
+#: src/models/actionsmodel.cpp:391
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Left"
@@ -456,7 +456,7 @@ msgctxt "@action"
 msgid "Move Video Left"
 msgstr "동영상 왼쪽으로 이동"
 
-#: src/models/actionsmodel.cpp:397
+#: src/models/actionsmodel.cpp:398
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Right"
@@ -464,63 +464,63 @@ msgctxt "@action"
 msgid "Move Video Right"
 msgstr "동영상 오른쪽으로 이동"
 
-#: src/models/actionsmodel.cpp:404
+#: src/models/actionsmodel.cpp:405
 #, fuzzy, kde-format
 #| msgid "Move Subtitle Up"
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "자막 위로 이동"
 
-#: src/models/actionsmodel.cpp:411
+#: src/models/actionsmodel.cpp:412
 #, fuzzy, kde-format
 #| msgid "Move Subtitle Down"
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "자막 아래로 이동"
 
-#: src/models/actionsmodel.cpp:418
+#: src/models/actionsmodel.cpp:419
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "시계 방향으로 회전"
 
-#: src/models/actionsmodel.cpp:425
+#: src/models/actionsmodel.cpp:426
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "반시계 방향으로 회전"
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:433
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "음량 증가"
 
-#: src/models/actionsmodel.cpp:439
+#: src/models/actionsmodel.cpp:440
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "음량 감소"
 
-#: src/models/actionsmodel.cpp:446
+#: src/models/actionsmodel.cpp:447
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "확대"
 
-#: src/models/actionsmodel.cpp:453
+#: src/models/actionsmodel.cpp:454
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "축소"
 
-#: src/models/actionsmodel.cpp:460
+#: src/models/actionsmodel.cpp:461
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:467
+#: src/models/actionsmodel.cpp:468
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -528,7 +528,7 @@ msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "명암"
 
-#: src/models/actionsmodel.cpp:474
+#: src/models/actionsmodel.cpp:475
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -536,7 +536,7 @@ msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "명암"
 
-#: src/models/actionsmodel.cpp:481
+#: src/models/actionsmodel.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -544,7 +544,7 @@ msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "명암"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:489
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -552,7 +552,7 @@ msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "밝기"
 
-#: src/models/actionsmodel.cpp:495
+#: src/models/actionsmodel.cpp:496
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -560,7 +560,7 @@ msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "밝기"
 
-#: src/models/actionsmodel.cpp:502
+#: src/models/actionsmodel.cpp:503
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -568,19 +568,19 @@ msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "밝기"
 
-#: src/models/actionsmodel.cpp:509
+#: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:516
+#: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:523
+#: src/models/actionsmodel.cpp:524
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Gamma"
@@ -588,7 +588,7 @@ msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "감마"
 
-#: src/models/actionsmodel.cpp:530
+#: src/models/actionsmodel.cpp:531
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -596,7 +596,7 @@ msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "채도"
 
-#: src/models/actionsmodel.cpp:537
+#: src/models/actionsmodel.cpp:538
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -604,7 +604,7 @@ msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "채도"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:545
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -612,7 +612,7 @@ msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "채도"
 
-#: src/models/actionsmodel.cpp:693
+#: src/models/actionsmodel.cpp:694
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -622,13 +622,13 @@ msgstr ""
 "선택한 단축키가 <b>%1</b> 동작의 단축키와 충돌합니다.<br><br>다시 할당하시겠"
 "습니까?"
 
-#: src/models/actionsmodel.cpp:699
+#: src/models/actionsmodel.cpp:700
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "재할당"
 
-#: src/mpv/mpvitem.cpp:326
+#: src/mpv/mpvitem.cpp:327
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -636,32 +636,32 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
+#: src/mpv/mpvitem.cpp:438 src/mpv/mpvitem.cpp:440
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "자막 시간 조정: %1초"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:535
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:539
+#: src/mpv/mpvitem.cpp:540
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:541
+#: src/mpv/mpvitem.cpp:542
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -669,7 +669,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -679,7 +679,7 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -964,17 +964,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:311
+#: src/qml/Main.qml:317
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
-#: src/qml/Main.qml:330
+#: src/qml/Main.qml:336
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
 
-#: src/qml/Main.qml:350
+#: src/qml/Main.qml:356
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
@@ -1004,19 +1004,19 @@ msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "목록 비우기"
 
-#: src/qml/Menus/Global/GlobalHelpMenu.qml:12 src/qml/Menus/HelpMenu.qml:12
+#: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "도움말(&H)"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:12
-#: src/qml/Menus/PlaybackMenu.qml:12
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
+#: src/qml/Menus/PlaybackMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "재생(&P)"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:67
-#: src/qml/Menus/PlaybackMenu.qml:30
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
+#: src/qml/Menus/PlaybackMenu.qml:32
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "탐색"
@@ -1099,12 +1099,12 @@ msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "자막(&S)"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:12 src/qml/Menus/VideoMenu.qml:12
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "비디오(&V)"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:81 src/qml/Menus/VideoMenu.qml:27
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:83 src/qml/Menus/VideoMenu.qml:29
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "조정"
@@ -1139,7 +1139,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "재생 속도"
 
-#: src/qml/MpvVideo.qml:31
+#: src/qml/MpvVideo.qml:34
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "음량: %1"
@@ -1655,20 +1655,146 @@ msgstr ""
 "아이콘 테마를 Breeze로 설정합니다.\n"
 "적용하려면 다시 시작해야 합니다."
 
-#: src/qml/Settings/MouseSettings.qml:101
-msgctxt "@label"
-msgid "No action set"
-msgstr "설정한 동작 없음"
-
-#: src/qml/Settings/MouseSettings.qml:115
+#: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
-msgid "Clear action"
+msgid "Remove mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "&Add"
+msgctxt "@action:intoolbar add a mouse button action"
+msgid "&Add"
+msgstr "추가(&A)"
+
+#: src/qml/Settings/MouseSettings.qml:125
+msgctxt "@title:window"
+msgid "Add mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:142
+msgctxt "@label"
+msgid "Mouse button"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:154
+msgctxt "@label:listbox left mouse button"
+msgid "Left"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:155
+msgctxt "@label:listbox middle mouse button"
+msgid "Middle"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:156
+#, fuzzy
+#| msgid "Row height"
+msgctxt "@label:listbox right mouse button"
+msgid "Right"
+msgstr "줄 높이"
+
+#: src/qml/Settings/MouseSettings.qml:157
+msgctxt "@label:listbox forward mouse button"
+msgid "Forward"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:158
+msgctxt "@label:listbox back mouse button"
+msgid "Back"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:159
+msgctxt "@label:listbox mouse scroll up"
+msgid "Scroll up"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:160
+msgctxt "@label:listbox mouse scroll down"
+msgid "Scroll down"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:169
+msgctxt "@label"
+msgid "Modifier key"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:177
+msgctxt "@label:listbox no modifier key"
+msgid "No modifier"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:178
+#, fuzzy
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
+msgctxt "@label:listbox control modifier key"
+msgid "Control"
+msgstr "명암"
+
+#: src/qml/Settings/MouseSettings.qml:179
+msgctxt "@label:listbox shift modifier key"
+msgid "Shift"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:180
+msgctxt "@label:listbox alt modifier key"
+msgid "Alt"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:181
+msgctxt "@label:listbox meta modifier key"
+msgid "Meta"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:192
+msgctxt ""
+"@label:check whether mouse button action shoud trigger on double click"
+msgid "Trigger on double click"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:202
+msgctxt "@label"
+msgid "Action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:210
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@action:button select mouse button action"
+msgid "Select action"
+msgstr "색상 선택"
+
+#: src/qml/Settings/MouseSettings.qml:214
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window select mouse button action"
+msgid "Select action"
+msgstr "색상 선택"
+
+#: src/qml/Settings/MouseSettings.qml:231
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Clear action"
+msgctxt "@action:button change mouse button action "
+msgid "Change action"
 msgstr "동작 지우기"
 
-#: src/qml/Settings/MouseSettings.qml:152
-msgctxt "@title"
-msgid "Double Click to Set Action"
-msgstr "두 번 클릭하여 동작 설정"
+#: src/qml/Settings/MouseSettings.qml:240
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "No action set"
+msgctxt "@info"
+msgid "No action selected"
+msgstr "설정한 동작 없음"
+
+#: src/qml/Settings/MouseSettings.qml:263
+msgctxt "@info"
+msgid "Mouse button combination is already assigned to “%1”"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -1999,57 +2125,57 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "한 번 클릭으로 항목 열기"
 
-#: src/qml/Settings/SettingsWindow.qml:42
+#: src/qml/Settings/SettingsWindow.qml:45
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "설정"
 
-#: src/qml/Settings/SettingsWindow.qml:59
+#: src/qml/Settings/SettingsWindow.qml:62
 msgctxt "@action"
 msgid "General"
 msgstr "일반"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Playback"
 msgstr "재생"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:80
 msgctxt "@action"
 msgid "Video"
 msgstr "비디오"
 
-#: src/qml/Settings/SettingsWindow.qml:87
+#: src/qml/Settings/SettingsWindow.qml:90
 msgctxt "@action"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/Settings/SettingsWindow.qml:96
+#: src/qml/Settings/SettingsWindow.qml:99
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "자막"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Mouse"
 msgstr "마우스"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: src/qml/Settings/SettingsWindow.qml:133
+#: src/qml/Settings/SettingsWindow.qml:137
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "사용자 정의 명령"
 
-#: src/qml/Settings/SettingsWindow.qml:143
+#: src/qml/Settings/SettingsWindow.qml:147
 msgctxt "@action"
 msgid "Debug"
 msgstr "디버그"
 
-#: src/qml/Settings/SettingsWindow.qml:153
+#: src/qml/Settings/SettingsWindow.qml:157
 msgctxt "@action"
 msgid "About"
 msgstr "정보"
@@ -2271,6 +2397,10 @@ msgstr "채도"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
+
+#~ msgctxt "@title"
+#~ msgid "Double Click to Set Action"
+#~ msgstr "두 번 클릭하여 동작 설정"
 
 #~ msgctxt "@info:shell"
 #~ msgid "bestvideo+bestaudio/best"
@@ -2562,12 +2692,6 @@ msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
 #~ msgctxt "@action:button"
 #~ msgid "Add file"
 #~ msgstr "새 폴더 추가"
-
-#, fuzzy
-#~| msgid "Row height"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "줄 높이"
 
 #~ msgid "Toggle Playlist"
 #~ msgstr "재생 목록 전환"

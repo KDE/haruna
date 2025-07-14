@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-03 06:56+0000\n"
+"POT-Creation-Date: 2025-07-14 00:41+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -27,21 +27,26 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
 
-#: src/application.cpp:113
+#: src/application.cpp:124
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr ""
+
+#: src/application.cpp:137
 #, fuzzy, kde-format
 #| msgid "Haruna"
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/application.cpp:115
+#: src/application.cpp:139
 #, fuzzy, kde-format
 #| msgid "Haruna Video Player"
 msgctxt "@title"
 msgid "Media player"
 msgstr "हारुना वीडियो चालक"
 
-#: src/application.cpp:117
+#: src/application.cpp:141
 #, fuzzy, kde-format
 #| msgid "(c) 2019-2021"
 msgctxt ""
@@ -49,42 +54,37 @@ msgctxt ""
 msgid "© 2019–2025"
 msgstr "(c) 2019-2021"
 
-#: src/application.cpp:122
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr ""
 
-#: src/application.cpp:123
+#: src/application.cpp:147
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "डेवलपर"
 
-#: src/application.cpp:136
-#, kde-format
-msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
-
-#: src/application.cpp:146
+#: src/application.cpp:155
 #, kde-format
 msgid "Command line video player"
 msgstr ""
 
-#: src/application.cpp:152
+#: src/application.cpp:161
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/application.cpp:164
+#: src/application.cpp:173
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "फ़ाइल जिसे खोलना है"
 
-#: src/application.cpp:168
+#: src/application.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -99,517 +99,517 @@ msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
 msgstr "अगला फ़ाइल चलाएँ"
 
-#: src/models/actionsmodel.cpp:24
+#: src/models/actionsmodel.cpp:25
 #, fuzzy, kde-format
 #| msgid "Open File"
 msgctxt "@action"
 msgid "Open Actions Dialog"
 msgstr "फ़ाइल खोलें"
 
-#: src/models/actionsmodel.cpp:30
+#: src/models/actionsmodel.cpp:31
 #, fuzzy, kde-format
 #| msgid "About Haruna"
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "हारुना के बारे में"
 
-#: src/models/actionsmodel.cpp:37
+#: src/models/actionsmodel.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:44
+#: src/models/actionsmodel.cpp:45
 #, fuzzy, kde-format
 #| msgid "About Haruna"
 msgctxt "@action"
 msgid "Sponsor Haruna"
 msgstr "हारुना के बारे में"
 
-#: src/models/actionsmodel.cpp:51
+#: src/models/actionsmodel.cpp:52
 #, fuzzy, kde-format
 #| msgid "&Audio"
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
 msgstr "ऑडियो (&A)"
 
-#: src/models/actionsmodel.cpp:58
+#: src/models/actionsmodel.cpp:59
 #, fuzzy, kde-format
 #| msgid "&Audio"
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
 msgstr "ऑडियो (&A)"
 
-#: src/models/actionsmodel.cpp:65
+#: src/models/actionsmodel.cpp:66
 #, fuzzy, kde-format
 #| msgid "Settings"
 msgctxt "@action"
 msgid "Settings"
 msgstr "विन्यास"
 
-#: src/models/actionsmodel.cpp:72
+#: src/models/actionsmodel.cpp:73
 #, fuzzy, kde-format
 #| msgid "Configure Keyboard Shortcuts"
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "कुंजीपटल शॉर्टकटों को विन्यस्त करें"
 
-#: src/models/actionsmodel.cpp:79
+#: src/models/actionsmodel.cpp:80
 #, fuzzy, kde-format
 #| msgid "Toggle Fullscreen"
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "पूर्ण स्क्रीन टॉगल करें"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:87
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:94
+#: src/models/actionsmodel.cpp:95
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:102
+#: src/models/actionsmodel.cpp:103
 #, fuzzy, kde-format
 #| msgid "Load Last Played File"
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "पिछली बार चलाया गया फ़ाइल"
 
-#: src/models/actionsmodel.cpp:109
+#: src/models/actionsmodel.cpp:110
 #, fuzzy, kde-format
 #| msgid "Mute"
 msgctxt "@action"
 msgid "Mute"
 msgstr "मूक करें"
 
-#: src/models/actionsmodel.cpp:116
+#: src/models/actionsmodel.cpp:117
 #, fuzzy, kde-format
 #| msgid "Open Context Menu"
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "संदर्भ मेनू खोलें"
 
-#: src/models/actionsmodel.cpp:120
+#: src/models/actionsmodel.cpp:121
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:124
+#: src/models/actionsmodel.cpp:125
 #, fuzzy, kde-format
 #| msgid "Open File"
 msgctxt "@action"
 msgid "Open File"
 msgstr "फ़ाइल खोलें"
 
-#: src/models/actionsmodel.cpp:131
+#: src/models/actionsmodel.cpp:132
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:138
+#: src/models/actionsmodel.cpp:139
 #, fuzzy, kde-format
 #| msgid "Open Url"
 msgctxt "@action"
 msgid "Open URL"
 msgstr "यूआरएल खोलें"
 
-#: src/models/actionsmodel.cpp:145
+#: src/models/actionsmodel.cpp:146
 #, fuzzy, kde-format
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "प्लेबैक"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:153
 #, fuzzy, kde-format
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "प्लेबैक"
 
-#: src/models/actionsmodel.cpp:159
+#: src/models/actionsmodel.cpp:160
 #, fuzzy, kde-format
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "प्लेबैक"
 
-#: src/models/actionsmodel.cpp:166
+#: src/models/actionsmodel.cpp:167
 #, fuzzy, kde-format
 #| msgid "Play/Pause"
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "बजाएँ/ठहरें"
 
-#: src/models/actionsmodel.cpp:173
+#: src/models/actionsmodel.cpp:174
 #, fuzzy, kde-format
 #| msgid "Play Next"
 msgctxt "@action"
 msgid "Play Next"
 msgstr "अगला चलाएँ"
 
-#: src/models/actionsmodel.cpp:180
+#: src/models/actionsmodel.cpp:181
 #, fuzzy, kde-format
 #| msgid "Play Previous"
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "पिछला चलाएँ"
 
-#: src/models/actionsmodel.cpp:187
+#: src/models/actionsmodel.cpp:188
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgctxt "@action"
 msgid "Quit"
 msgstr "बाहर जाएँ"
 
-#: src/models/actionsmodel.cpp:194
+#: src/models/actionsmodel.cpp:195
 #, fuzzy, kde-format
 #| msgid "Restart Playback"
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "प्लेबैक पुनः प्रारंभ करें"
 
-#: src/models/actionsmodel.cpp:201
+#: src/models/actionsmodel.cpp:202
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:215
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:222
+#: src/models/actionsmodel.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:229
+#: src/models/actionsmodel.cpp:230
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:236
+#: src/models/actionsmodel.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:243
+#: src/models/actionsmodel.cpp:244
 #, fuzzy, kde-format
 #| msgid "Skip Chapters"
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "अध्याय छोड़ें"
 
-#: src/models/actionsmodel.cpp:250
+#: src/models/actionsmodel.cpp:251
 #, fuzzy, kde-format
 #| msgid "Skip Chapters"
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "अध्याय छोड़ें"
 
-#: src/models/actionsmodel.cpp:257
+#: src/models/actionsmodel.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:265
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:271
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:278
+#: src/models/actionsmodel.cpp:279
 #, fuzzy, kde-format
 #| msgid "Set Loop"
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "लूप नियत करें"
 
-#: src/models/actionsmodel.cpp:285
+#: src/models/actionsmodel.cpp:286
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "स्क्रीनशॉट"
 
-#: src/models/actionsmodel.cpp:292
+#: src/models/actionsmodel.cpp:293
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/models/actionsmodel.cpp:299
+#: src/models/actionsmodel.cpp:300
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:306
+#: src/models/actionsmodel.cpp:307
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:313
+#: src/models/actionsmodel.cpp:314
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:321
 #, fuzzy, kde-format
 #| msgid "Subtitles off"
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "उपशीर्षक बंद"
 
-#: src/models/actionsmodel.cpp:327
+#: src/models/actionsmodel.cpp:328
 #, fuzzy, kde-format
 #| msgid "Select file"
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "फ़ाइल चुनें"
 
-#: src/models/actionsmodel.cpp:334
+#: src/models/actionsmodel.cpp:335
 #, fuzzy, kde-format
 #| msgid "Select file"
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "फ़ाइल चुनें"
 
-#: src/models/actionsmodel.cpp:341
+#: src/models/actionsmodel.cpp:342
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "उपशीर्षक"
 
-#: src/models/actionsmodel.cpp:348
+#: src/models/actionsmodel.cpp:349
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:355
+#: src/models/actionsmodel.cpp:356
 #, fuzzy, kde-format
 #| msgid "Toggle Header"
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "शीर्षक टॉगल करें"
 
-#: src/models/actionsmodel.cpp:362
+#: src/models/actionsmodel.cpp:363
 #, fuzzy, kde-format
 #| msgid "Toggle Fullscreen"
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "पूर्ण स्क्रीन टॉगल करें"
 
-#: src/models/actionsmodel.cpp:369
+#: src/models/actionsmodel.cpp:370
 #, fuzzy, kde-format
 #| msgid "Toggle Header"
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "शीर्षक टॉगल करें"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:377
 #, fuzzy, kde-format
 #| msgid "Toggle Header"
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "शीर्षक टॉगल करें"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:105
+#: src/models/actionsmodel.cpp:384 src/qml/Settings/SettingsWindow.qml:108
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
 msgid "Playlist"
 msgstr "वीडियो-सूची"
 
-#: src/models/actionsmodel.cpp:390
+#: src/models/actionsmodel.cpp:391
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:397
+#: src/models/actionsmodel.cpp:398
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:404
+#: src/models/actionsmodel.cpp:405
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:411
+#: src/models/actionsmodel.cpp:412
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:418
+#: src/models/actionsmodel.cpp:419
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:425
+#: src/models/actionsmodel.cpp:426
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:433
 #, fuzzy, kde-format
 #| msgid "Volume Up"
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "आवाज़ बढ़ाएँ"
 
-#: src/models/actionsmodel.cpp:439
+#: src/models/actionsmodel.cpp:440
 #, fuzzy, kde-format
 #| msgid "Volume Down"
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "आवाज़ घटाएँ"
 
-#: src/models/actionsmodel.cpp:446
+#: src/models/actionsmodel.cpp:447
 #, fuzzy, kde-format
 #| msgid "Zoom In"
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "ज़ूम इन"
 
-#: src/models/actionsmodel.cpp:453
+#: src/models/actionsmodel.cpp:454
 #, fuzzy, kde-format
 #| msgid "Zoom Out"
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "ज़ूम आउट"
 
-#: src/models/actionsmodel.cpp:460
+#: src/models/actionsmodel.cpp:461
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:467
+#: src/models/actionsmodel.cpp:468
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "व्यतिरेक"
 
-#: src/models/actionsmodel.cpp:474
+#: src/models/actionsmodel.cpp:475
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "व्यतिरेक"
 
-#: src/models/actionsmodel.cpp:481
+#: src/models/actionsmodel.cpp:482
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "व्यतिरेक"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:489
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "चमकीलापन"
 
-#: src/models/actionsmodel.cpp:495
+#: src/models/actionsmodel.cpp:496
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "चमकीलापन"
 
-#: src/models/actionsmodel.cpp:502
+#: src/models/actionsmodel.cpp:503
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "चमकीलापन"
 
-#: src/models/actionsmodel.cpp:509
+#: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:516
+#: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:523
+#: src/models/actionsmodel.cpp:524
 #, fuzzy, kde-format
 #| msgid "Gamma"
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "गामा"
 
-#: src/models/actionsmodel.cpp:530
+#: src/models/actionsmodel.cpp:531
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "संतृप्ति"
 
-#: src/models/actionsmodel.cpp:537
+#: src/models/actionsmodel.cpp:538
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "संतृप्ति"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:545
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "संतृप्ति"
 
-#: src/models/actionsmodel.cpp:693
+#: src/models/actionsmodel.cpp:694
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -617,55 +617,55 @@ msgid ""
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:699
+#: src/models/actionsmodel.cpp:700
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:326
+#: src/mpv/mpvitem.cpp:327
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
+#: src/mpv/mpvitem.cpp:438 src/mpv/mpvitem.cpp:440
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:535
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:539
+#: src/mpv/mpvitem.cpp:540
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:541
+#: src/mpv/mpvitem.cpp:542
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -673,7 +673,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:602
 #, fuzzy, kde-format
 #| msgid "Skip chapters"
 msgctxt "@info:tooltip osd"
@@ -1019,21 +1019,21 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/Main.qml:311
+#: src/qml/Main.qml:317
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:330
+#: src/qml/Main.qml:336
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:350
+#: src/qml/Main.qml:356
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -1073,23 +1073,23 @@ msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr ""
 
-#: src/qml/Menus/Global/GlobalHelpMenu.qml:12 src/qml/Menus/HelpMenu.qml:12
+#: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:14
 #, fuzzy
 #| msgid "&Help"
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "मदद (&H)"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:12
-#: src/qml/Menus/PlaybackMenu.qml:12
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
+#: src/qml/Menus/PlaybackMenu.qml:14
 #, fuzzy
 #| msgid "&Playback"
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "प्लेबैक (&P)"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:67
-#: src/qml/Menus/PlaybackMenu.qml:30
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
+#: src/qml/Menus/PlaybackMenu.qml:32
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr ""
@@ -1196,14 +1196,14 @@ msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:12 src/qml/Menus/VideoMenu.qml:12
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:14
 #, fuzzy
 #| msgid "&Video"
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "विडियो (&V)"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:81 src/qml/Menus/VideoMenu.qml:27
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:83 src/qml/Menus/VideoMenu.qml:29
 #, fuzzy
 #| msgid "Adjustments"
 msgctxt "@title:menu"
@@ -1252,7 +1252,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "प्लेबैक"
 
-#: src/qml/MpvVideo.qml:31
+#: src/qml/MpvVideo.qml:34
 #, fuzzy
 #| msgid "Volume: %1"
 msgctxt "@info:tooltip"
@@ -1818,23 +1818,139 @@ msgid ""
 "Requires restart."
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:101
-#, fuzzy
-#| msgid "Saturation Reset"
-msgctxt "@label"
-msgid "No action set"
-msgstr "संतृप्ति रिसेट करें"
+#: src/qml/Settings/MouseSettings.qml:83
+msgctxt "@info:tooltip"
+msgid "Remove mouse button action"
+msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:115
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgid "&Add"
+msgctxt "@action:intoolbar add a mouse button action"
+msgid "&Add"
+msgstr "जोड़ें (&A)"
+
+#: src/qml/Settings/MouseSettings.qml:125
+msgctxt "@title:window"
+msgid "Add mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:142
+msgctxt "@label"
+msgid "Mouse button"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:154
+msgctxt "@label:listbox left mouse button"
+msgid "Left"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:155
+msgctxt "@label:listbox middle mouse button"
+msgid "Middle"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:156
+#, fuzzy
+#| msgid "Row height"
+msgctxt "@label:listbox right mouse button"
+msgid "Right"
+msgstr "पंक्ति की ऊंचाई"
+
+#: src/qml/Settings/MouseSettings.qml:157
+msgctxt "@label:listbox forward mouse button"
+msgid "Forward"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:158
+msgctxt "@label:listbox back mouse button"
+msgid "Back"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:159
+msgctxt "@label:listbox mouse scroll up"
+msgid "Scroll up"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:160
+msgctxt "@label:listbox mouse scroll down"
+msgid "Scroll down"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:169
+msgctxt "@label"
+msgid "Modifier key"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:177
+msgctxt "@label:listbox no modifier key"
+msgid "No modifier"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:178
+#, fuzzy
+#| msgid "Contrast"
+msgctxt "@label:listbox control modifier key"
+msgid "Control"
+msgstr "व्यतिरेक"
+
+#: src/qml/Settings/MouseSettings.qml:179
+msgctxt "@label:listbox shift modifier key"
+msgid "Shift"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:180
+msgctxt "@label:listbox alt modifier key"
+msgid "Alt"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:181
+msgctxt "@label:listbox meta modifier key"
+msgid "Meta"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:192
+msgctxt ""
+"@label:check whether mouse button action shoud trigger on double click"
+msgid "Trigger on double click"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:202
+msgctxt "@label"
+msgid "Action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:210
+#, fuzzy
+#| msgid "Select file"
+msgctxt "@action:button select mouse button action"
+msgid "Select action"
+msgstr "फ़ाइल चुनें"
+
+#: src/qml/Settings/MouseSettings.qml:214
+#, fuzzy
+#| msgid "Select file"
+msgctxt "@title:window select mouse button action"
+msgid "Select action"
+msgstr "फ़ाइल चुनें"
+
+#: src/qml/Settings/MouseSettings.qml:231
 #, fuzzy
 #| msgid "Saturation"
-msgctxt "@info:tooltip"
-msgid "Clear action"
+msgctxt "@action:button change mouse button action "
+msgid "Change action"
 msgstr "संतृप्ति"
 
-#: src/qml/Settings/MouseSettings.qml:152
-msgctxt "@title"
-msgid "Double Click to Set Action"
+#: src/qml/Settings/MouseSettings.qml:240
+#, fuzzy
+#| msgid "Saturation Reset"
+msgctxt "@info"
+msgid "No action selected"
+msgstr "संतृप्ति रिसेट करें"
+
+#: src/qml/Settings/MouseSettings.qml:263
+msgctxt "@info"
+msgid "Mouse button combination is already assigned to “%1”"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:25
@@ -2152,75 +2268,75 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:42
+#: src/qml/Settings/SettingsWindow.qml:45
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "विन्यास"
 
-#: src/qml/Settings/SettingsWindow.qml:59
+#: src/qml/Settings/SettingsWindow.qml:62
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "साधारण"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:71
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "प्लेबैक"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:80
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "वीडियो"
 
-#: src/qml/Settings/SettingsWindow.qml:87
+#: src/qml/Settings/SettingsWindow.qml:90
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "ऑडियो"
 
-#: src/qml/Settings/SettingsWindow.qml:96
+#: src/qml/Settings/SettingsWindow.qml:99
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:117
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "माउस"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:127
 #, fuzzy
 #| msgid "Shortcut"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: src/qml/Settings/SettingsWindow.qml:133
+#: src/qml/Settings/SettingsWindow.qml:137
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "तदनुकूल समादेश"
 
-#: src/qml/Settings/SettingsWindow.qml:143
+#: src/qml/Settings/SettingsWindow.qml:147
 msgctxt "@action"
 msgid "Debug"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:153
+#: src/qml/Settings/SettingsWindow.qml:157
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
@@ -2702,12 +2818,6 @@ msgstr ""
 #~ msgctxt "@action:button"
 #~ msgid "Add file"
 #~ msgstr "नया फ़ोल्डर जोड़ें"
-
-#, fuzzy
-#~| msgid "Row height"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "पंक्ति की ऊंचाई"
 
 #, fuzzy
 #~| msgid "Playlist"

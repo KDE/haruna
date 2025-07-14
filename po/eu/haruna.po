@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-03 06:56+0000\n"
-"PO-Revision-Date: 2025-07-12 14:55+0200\n"
+"POT-Creation-Date: 2025-07-14 00:41+0000\n"
+"PO-Revision-Date: 2025-07-13 15:39+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -30,61 +30,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: src/application.cpp:113
+#: src/application.cpp:124
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr "Ezaugarri aberatseko komando-lerroko audio/bideo zama-jaistekoa"
+
+#: src/application.cpp:137
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:115
+#: src/application.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Hedabide-jotzailea"
 
-#: src/application.cpp:117
+#: src/application.cpp:141
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:122
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:123
+#: src/application.cpp:147
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Garatzailea"
 
-#: src/application.cpp:136
-#, kde-format
-msgid "Feature-rich command-line audio/video downloader"
-msgstr "Ezaugarri aberatseko komando-lerroko audio/bideo zama-jaistekoa"
-
-#: src/application.cpp:146
+#: src/application.cpp:155
 #, kde-format
 msgid "Command line video player"
 msgstr "Komando-lerroko bideo jotzailea"
 
-#: src/application.cpp:152
+#: src/application.cpp:161
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Audioa eta bideoa grabatzeko, bihurtzeko eta transmisiorako plataforma "
 "anitzeko soluzioa"
 
-#: src/application.cpp:164
+#: src/application.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Ireki beharreko fitxategia"
 
-#: src/application.cpp:168
+#: src/application.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -100,463 +100,463 @@ msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
 msgstr "Euskarri fitxategia jotzen"
 
-#: src/models/actionsmodel.cpp:24
+#: src/models/actionsmodel.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
 msgstr "Ireki Ekintzak elkarrizketa-koadroa"
 
-#: src/models/actionsmodel.cpp:30
+#: src/models/actionsmodel.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr "«Haruna»ri buruz"
 
-#: src/models/actionsmodel.cpp:37
+#: src/models/actionsmodel.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
 msgstr "Eman akatsaren berri"
 
-#: src/models/actionsmodel.cpp:44
+#: src/models/actionsmodel.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
 msgstr "Babestu Haruna"
 
-#: src/models/actionsmodel.cpp:51
+#: src/models/actionsmodel.cpp:52
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
 msgstr "Audio-pista zikloan gora"
 
-#: src/models/actionsmodel.cpp:58
+#: src/models/actionsmodel.cpp:59
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
 msgstr "Audio-pista zikloan gora"
 
-#: src/models/actionsmodel.cpp:65
+#: src/models/actionsmodel.cpp:66
 #, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "Ezarpenak"
 
-#: src/models/actionsmodel.cpp:72
+#: src/models/actionsmodel.cpp:73
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Konfiguratu teklatuko lasterbideak"
 
-#: src/models/actionsmodel.cpp:79
+#: src/models/actionsmodel.cpp:80
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Irten pantaila-osotik"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:87
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "Fotograma urratsa aurrera"
 
-#: src/models/actionsmodel.cpp:94
+#: src/models/actionsmodel.cpp:95
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "Fotograma urratsa atzera"
 
-#: src/models/actionsmodel.cpp:102
+#: src/models/actionsmodel.cpp:103
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "Zamatu jotako azken fitxategia"
 
-#: src/models/actionsmodel.cpp:109
+#: src/models/actionsmodel.cpp:110
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Isilarazi"
 
-#: src/models/actionsmodel.cpp:116
+#: src/models/actionsmodel.cpp:117
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "Ireki testuinguru-menua"
 
-#: src/models/actionsmodel.cpp:120
+#: src/models/actionsmodel.cpp:121
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "Testuinguru menua sagu erakuslearen kokalekuan ireki eta ixten du"
 
-#: src/models/actionsmodel.cpp:124
+#: src/models/actionsmodel.cpp:125
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Ireki fitxategia"
 
-#: src/models/actionsmodel.cpp:131
+#: src/models/actionsmodel.cpp:132
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "Gehitu kanpoko azpidatzia..."
 
-#: src/models/actionsmodel.cpp:138
+#: src/models/actionsmodel.cpp:139
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "Ireki URL"
 
-#: src/models/actionsmodel.cpp:145
+#: src/models/actionsmodel.cpp:146
 #, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "Handitu atzera-jotze abiadura"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:153
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "Txikitu atzera-jotze abiadura"
 
-#: src/models/actionsmodel.cpp:159
+#: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "Berrezarri atzera-jotze abiadura"
 
-#: src/models/actionsmodel.cpp:166
+#: src/models/actionsmodel.cpp:167
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "Jo/Eten"
 
-#: src/models/actionsmodel.cpp:173
+#: src/models/actionsmodel.cpp:174
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "Jo hurrengoa"
 
-#: src/models/actionsmodel.cpp:180
+#: src/models/actionsmodel.cpp:181
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Jo aurrekoa"
 
-#: src/models/actionsmodel.cpp:187
+#: src/models/actionsmodel.cpp:188
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Irten"
 
-#: src/models/actionsmodel.cpp:194
+#: src/models/actionsmodel.cpp:195
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Berrekin atzera-jotzea"
 
-#: src/models/actionsmodel.cpp:201
+#: src/models/actionsmodel.cpp:202
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "Eman urrats txikia aurrera"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Eman urrats txikia atzera"
 
-#: src/models/actionsmodel.cpp:215
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "Eman urrats ertaina aurrera"
 
-#: src/models/actionsmodel.cpp:222
+#: src/models/actionsmodel.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Eman urrats ertaina atzera"
 
-#: src/models/actionsmodel.cpp:229
+#: src/models/actionsmodel.cpp:230
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "Eman urrats handia aurrera"
 
-#: src/models/actionsmodel.cpp:236
+#: src/models/actionsmodel.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Eman urrats handia atzera"
 
-#: src/models/actionsmodel.cpp:243
+#: src/models/actionsmodel.cpp:244
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Joan hurrengo atalera"
 
-#: src/models/actionsmodel.cpp:250
+#: src/models/actionsmodel.cpp:251
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Joan aurreko atalera"
 
-#: src/models/actionsmodel.cpp:257
+#: src/models/actionsmodel.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Joan hurrengo azpidatzira"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:265
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Joan aurreko azpidatzira"
 
-#: src/models/actionsmodel.cpp:271
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Joan azken kokapenetik ikustera"
 
-#: src/models/actionsmodel.cpp:278
+#: src/models/actionsmodel.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Ezarri begizta"
 
-#: src/models/actionsmodel.cpp:285
+#: src/models/actionsmodel.cpp:286
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Pantaila-argazkia"
 
-#: src/models/actionsmodel.cpp:292
+#: src/models/actionsmodel.cpp:293
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "Txandakatu azpidatziak"
 
-#: src/models/actionsmodel.cpp:299
+#: src/models/actionsmodel.cpp:300
 #, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Handitu azpidatzien letra-tipoa"
 
-#: src/models/actionsmodel.cpp:306
+#: src/models/actionsmodel.cpp:307
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Txikitu azpidatzien letra-tipoa"
 
-#: src/models/actionsmodel.cpp:313
+#: src/models/actionsmodel.cpp:314
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Mugitu azpidatzia gora"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:321
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Mugitu azpidatzia behera"
 
-#: src/models/actionsmodel.cpp:327
+#: src/models/actionsmodel.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "Erakutsi azpidatzia lehenago"
 
-#: src/models/actionsmodel.cpp:334
+#: src/models/actionsmodel.cpp:335
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "Erakutsi azpidatziak beranduago"
 
-#: src/models/actionsmodel.cpp:341
+#: src/models/actionsmodel.cpp:342
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "Azpidatzi zikloan gora"
 
-#: src/models/actionsmodel.cpp:348
+#: src/models/actionsmodel.cpp:349
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "Azpidatzi zikloan behera"
 
-#: src/models/actionsmodel.cpp:355
+#: src/models/actionsmodel.cpp:356
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Txandakatu Gurutzelarkagetzea"
 
-#: src/models/actionsmodel.cpp:362
+#: src/models/actionsmodel.cpp:363
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Txandakatu Pantaila-osoa"
 
-#: src/models/actionsmodel.cpp:369
+#: src/models/actionsmodel.cpp:370
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Txandakatu Menu-barra"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:377
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Txandakatu Goiburua"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:105
+#: src/models/actionsmodel.cpp:384 src/qml/Settings/SettingsWindow.qml:108
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
-#: src/models/actionsmodel.cpp:390
+#: src/models/actionsmodel.cpp:391
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Mugitu bideoa ezkerrera"
 
-#: src/models/actionsmodel.cpp:397
+#: src/models/actionsmodel.cpp:398
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Mugitu bideoa eskuinera"
 
-#: src/models/actionsmodel.cpp:404
+#: src/models/actionsmodel.cpp:405
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Mugitu bideoa gora"
 
-#: src/models/actionsmodel.cpp:411
+#: src/models/actionsmodel.cpp:412
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Mugitu bideoa behera"
 
-#: src/models/actionsmodel.cpp:418
+#: src/models/actionsmodel.cpp:419
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "Biratu erlojuaren noranzkoan"
 
-#: src/models/actionsmodel.cpp:425
+#: src/models/actionsmodel.cpp:426
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "Biratu erloju-orratzen aurkako noranzkoan"
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:433
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Bolumena igo"
 
-#: src/models/actionsmodel.cpp:439
+#: src/models/actionsmodel.cpp:440
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Bolumena jaitsi"
 
-#: src/models/actionsmodel.cpp:446
+#: src/models/actionsmodel.cpp:447
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Zooma gerturatu"
 
-#: src/models/actionsmodel.cpp:453
+#: src/models/actionsmodel.cpp:454
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Zooma urrundu"
 
-#: src/models/actionsmodel.cpp:460
+#: src/models/actionsmodel.cpp:461
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr "Berrezarri zooma"
 
-#: src/models/actionsmodel.cpp:467
+#: src/models/actionsmodel.cpp:468
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Handitu kontrastea"
 
-#: src/models/actionsmodel.cpp:474
+#: src/models/actionsmodel.cpp:475
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Txikitu kontrastea"
 
-#: src/models/actionsmodel.cpp:481
+#: src/models/actionsmodel.cpp:482
 #, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Berrezarri kontrastea"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:489
 #, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Handitu distira"
 
-#: src/models/actionsmodel.cpp:495
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Txikitu distira"
 
-#: src/models/actionsmodel.cpp:502
+#: src/models/actionsmodel.cpp:503
 #, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Berrezarri distira"
 
-#: src/models/actionsmodel.cpp:509
+#: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr "Handitu gamma"
 
-#: src/models/actionsmodel.cpp:516
+#: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr "Txikitu gamma"
 
-#: src/models/actionsmodel.cpp:523
+#: src/models/actionsmodel.cpp:524
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Berrezarri gamma"
 
-#: src/models/actionsmodel.cpp:530
+#: src/models/actionsmodel.cpp:531
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Handitu asetasuna"
 
-#: src/models/actionsmodel.cpp:537
+#: src/models/actionsmodel.cpp:538
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Txikitu asetasuna"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:545
 #, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Berrezarri asetasuna"
 
-#: src/models/actionsmodel.cpp:693
+#: src/models/actionsmodel.cpp:694
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -566,50 +566,50 @@ msgstr ""
 "Hautatutako lasterbideak <b>%1</b> ekintzako lasterbidearekin gatazka du. "
 "<br><br>Lasterbidea berresleitu nahi duzu?"
 
-#: src/models/actionsmodel.cpp:699
+#: src/models/actionsmodel.cpp:700
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Berresleitu"
 
-#: src/mpv/mpvitem.cpp:326
+#: src/mpv/mpvitem.cpp:327
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ezin izan du jo: %1"
 
-#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
+#: src/mpv/mpvitem.cpp:438 src/mpv/mpvitem.cpp:440
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Azpidatzien denbora: %1"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:535
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Pantaila-argazkiak huts egin du"
 
-#: src/mpv/mpvitem.cpp:539
+#: src/mpv/mpvitem.cpp:540
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Pantaila-argazkia atera du"
 
-#: src/mpv/mpvitem.cpp:541
+#: src/mpv/mpvitem.cpp:542
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Pantaila-argazkia: %1"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -619,7 +619,7 @@ msgstr ""
 "Ez da bideo-pistarik hauteman, ziurrenik bideo-pista ezin da, falta diren "
 "kodeken ondorioz deskodetu/jo"
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -892,17 +892,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:311
+#: src/qml/Main.qml:317
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Hautatu fitxategia"
 
-#: src/qml/Main.qml:330
+#: src/qml/Main.qml:336
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Hautatu azpidatzi-fitxategia"
 
-#: src/qml/Main.qml:350
+#: src/qml/Main.qml:356
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ireki"
@@ -932,19 +932,19 @@ msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Garbitu zerrenda"
 
-#: src/qml/Menus/Global/GlobalHelpMenu.qml:12 src/qml/Menus/HelpMenu.qml:12
+#: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&Laguntza"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:12
-#: src/qml/Menus/PlaybackMenu.qml:12
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
+#: src/qml/Menus/PlaybackMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "Atzera-&jotzea"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:67
-#: src/qml/Menus/PlaybackMenu.qml:30
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
+#: src/qml/Menus/PlaybackMenu.qml:32
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Bilatu"
@@ -1027,12 +1027,12 @@ msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "A&zpidatziak"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:12 src/qml/Menus/VideoMenu.qml:12
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "&Bideoa"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:81 src/qml/Menus/VideoMenu.qml:27
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:83 src/qml/Menus/VideoMenu.qml:29
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "Doikuntzak"
@@ -1067,7 +1067,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Atzera-jotze abiadura"
 
-#: src/qml/MpvVideo.qml:31
+#: src/qml/MpvVideo.qml:34
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Bolumena: %1"
@@ -1100,22 +1100,22 @@ msgstr "Sailkatu"
 #: src/qml/PlayList.qml:104
 msgctxt "@action:button"
 msgid "Name, ascending"
-msgstr "Izena, gorakorra"
+msgstr "Izena, goranzkoa"
 
 #: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Name, descending"
-msgstr "Izena, beherakorra"
+msgstr "Izena, beheranzkoa"
 
 #: src/qml/PlayList.qml:116
 msgctxt "@action:button"
 msgid "Duration, ascending"
-msgstr "Irupena, gorakorra"
+msgstr "Irupena, goranzkoa"
 
 #: src/qml/PlayList.qml:122
 msgctxt "@action:button"
 msgid "Duration, descending"
-msgstr "Iraupena, beherakorra"
+msgstr "Iraupena, beheranzkoa"
 
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
@@ -1584,20 +1584,146 @@ msgstr ""
 "Ikono gai gisa «Breeze» ezartzen du.\n"
 "Berrabiarazi beharra dago."
 
-#: src/qml/Settings/MouseSettings.qml:101
-msgctxt "@label"
-msgid "No action set"
-msgstr "Ez da ekintzarik ezarri"
-
-#: src/qml/Settings/MouseSettings.qml:115
+#: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
-msgid "Clear action"
+msgid "Remove mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "&Add"
+msgctxt "@action:intoolbar add a mouse button action"
+msgid "&Add"
+msgstr "&Gehitu"
+
+#: src/qml/Settings/MouseSettings.qml:125
+msgctxt "@title:window"
+msgid "Add mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:142
+msgctxt "@label"
+msgid "Mouse button"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:154
+msgctxt "@label:listbox left mouse button"
+msgid "Left"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:155
+msgctxt "@label:listbox middle mouse button"
+msgid "Middle"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:156
+#, fuzzy
+#| msgid "Row height"
+msgctxt "@label:listbox right mouse button"
+msgid "Right"
+msgstr "Errenkadaren altuera"
+
+#: src/qml/Settings/MouseSettings.qml:157
+msgctxt "@label:listbox forward mouse button"
+msgid "Forward"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:158
+msgctxt "@label:listbox back mouse button"
+msgid "Back"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:159
+msgctxt "@label:listbox mouse scroll up"
+msgid "Scroll up"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:160
+msgctxt "@label:listbox mouse scroll down"
+msgid "Scroll down"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:169
+msgctxt "@label"
+msgid "Modifier key"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:177
+msgctxt "@label:listbox no modifier key"
+msgid "No modifier"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:178
+#, fuzzy
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
+msgctxt "@label:listbox control modifier key"
+msgid "Control"
+msgstr "Kontrastea"
+
+#: src/qml/Settings/MouseSettings.qml:179
+msgctxt "@label:listbox shift modifier key"
+msgid "Shift"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:180
+msgctxt "@label:listbox alt modifier key"
+msgid "Alt"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:181
+msgctxt "@label:listbox meta modifier key"
+msgid "Meta"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:192
+msgctxt ""
+"@label:check whether mouse button action shoud trigger on double click"
+msgid "Trigger on double click"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:202
+msgctxt "@label"
+msgid "Action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:210
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@action:button select mouse button action"
+msgid "Select action"
+msgstr "Hautatu kolore bat"
+
+#: src/qml/Settings/MouseSettings.qml:214
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select a color"
+msgctxt "@title:window select mouse button action"
+msgid "Select action"
+msgstr "Hautatu kolore bat"
+
+#: src/qml/Settings/MouseSettings.qml:231
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Clear action"
+msgctxt "@action:button change mouse button action "
+msgid "Change action"
 msgstr "Garbitu ekintza"
 
-#: src/qml/Settings/MouseSettings.qml:152
-msgctxt "@title"
-msgid "Double Click to Set Action"
-msgstr "Klik bikoitza ekintza ezartzeko"
+#: src/qml/Settings/MouseSettings.qml:240
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "No action set"
+msgctxt "@info"
+msgid "No action selected"
+msgstr "Ez da ekintzarik ezarri"
+
+#: src/qml/Settings/MouseSettings.qml:263
+msgctxt "@info"
+msgid "Mouse button combination is already assigned to “%1”"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -1937,57 +2063,57 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Ireki elementuak klik bakarrarekin"
 
-#: src/qml/Settings/SettingsWindow.qml:42
+#: src/qml/Settings/SettingsWindow.qml:45
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Ezarpenak"
 
-#: src/qml/Settings/SettingsWindow.qml:59
+#: src/qml/Settings/SettingsWindow.qml:62
 msgctxt "@action"
 msgid "General"
 msgstr "Orokorra"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Playback"
 msgstr "Atzera-jotzea"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:80
 msgctxt "@action"
 msgid "Video"
 msgstr "Bideoa"
 
-#: src/qml/Settings/SettingsWindow.qml:87
+#: src/qml/Settings/SettingsWindow.qml:90
 msgctxt "@action"
 msgid "Audio"
 msgstr "Audioa"
 
-#: src/qml/Settings/SettingsWindow.qml:96
+#: src/qml/Settings/SettingsWindow.qml:99
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Azpidatziak"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Sagua"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
-#: src/qml/Settings/SettingsWindow.qml:133
+#: src/qml/Settings/SettingsWindow.qml:137
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Neurrira ipinitako komandoak"
 
-#: src/qml/Settings/SettingsWindow.qml:143
+#: src/qml/Settings/SettingsWindow.qml:147
 msgctxt "@action"
 msgid "Debug"
 msgstr "Araztu"
 
-#: src/qml/Settings/SettingsWindow.qml:153
+#: src/qml/Settings/SettingsWindow.qml:157
 msgctxt "@action"
 msgid "About"
 msgstr "Honi buruz"
@@ -2219,6 +2345,10 @@ msgstr "Asetasuna"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
+
+#~ msgctxt "@title"
+#~ msgid "Double Click to Set Action"
+#~ msgstr "Klik bikoitza ekintza ezartzeko"
 
 #~ msgctxt "@info:shell"
 #~ msgid "bestvideo+bestaudio/best"
@@ -2500,12 +2630,6 @@ msgstr "Erdiko klik graduatzaileetan haiek berrezartzeko"
 #~ msgctxt "@action:button"
 #~ msgid "Add file"
 #~ msgstr "Gehitu karpeta berria"
-
-#, fuzzy
-#~| msgid "Row height"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "Errenkadaren altuera"
 
 #~ msgid "Toggle Playlist"
 #~ msgstr "Txandakatu jotze-zerrenda"

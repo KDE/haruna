@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-03 06:56+0000\n"
+"POT-Creation-Date: 2025-07-14 00:41+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,19 +25,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: src/application.cpp:113
+#: src/application.cpp:124
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr ""
+
+#: src/application.cpp:137
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:115
+#: src/application.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Prehrávač médií"
 
-#: src/application.cpp:117
+#: src/application.cpp:141
 #, fuzzy, kde-format
 #| msgctxt "copyright statement"
 #| msgid "(c) 2019-2023"
@@ -46,41 +51,36 @@ msgctxt ""
 msgid "© 2019–2025"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:122
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr ""
 
-#: src/application.cpp:123
+#: src/application.cpp:147
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Vývojár"
 
-#: src/application.cpp:136
-#, kde-format
-msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
-
-#: src/application.cpp:146
+#: src/application.cpp:155
 #, kde-format
 msgid "Command line video player"
 msgstr ""
 
-#: src/application.cpp:152
+#: src/application.cpp:161
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/application.cpp:164
+#: src/application.cpp:173
 #, fuzzy, kde-format
 #| msgid "File to open"
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Súbor na otvorenie"
 
-#: src/application.cpp:168
+#: src/application.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -94,254 +94,254 @@ msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:24
+#: src/models/actionsmodel.cpp:25
 #, fuzzy, kde-format
 #| msgid "Open File"
 msgctxt "@action"
 msgid "Open Actions Dialog"
 msgstr "Otvoriť súbor"
 
-#: src/models/actionsmodel.cpp:30
+#: src/models/actionsmodel.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "About Haruna"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:37
+#: src/models/actionsmodel.cpp:38
 #, fuzzy, kde-format
 msgctxt "@action"
 msgid "Report bug"
 msgstr "Nahlásiť chybu"
 
-#: src/models/actionsmodel.cpp:44
+#: src/models/actionsmodel.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:51
+#: src/models/actionsmodel.cpp:52
 #, fuzzy, kde-format
 #| msgid "&Audio"
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
 msgstr "1 zvuková stopa"
 
-#: src/models/actionsmodel.cpp:58
+#: src/models/actionsmodel.cpp:59
 #, fuzzy, kde-format
 #| msgid "&Audio"
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
 msgstr "1 zvuková stopa"
 
-#: src/models/actionsmodel.cpp:65
+#: src/models/actionsmodel.cpp:66
 #, fuzzy, kde-format
 #| msgid "&Settings"
 msgctxt "@action"
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: src/models/actionsmodel.cpp:72
+#: src/models/actionsmodel.cpp:73
 #, fuzzy, kde-format
 #| msgid "Configure Keyboard Shortcuts"
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Nastaviť klávesové skratky"
 
-#: src/models/actionsmodel.cpp:79
+#: src/models/actionsmodel.cpp:80
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "Ukončiť režim celej obrazovky"
 
-#: src/models/actionsmodel.cpp:86
+#: src/models/actionsmodel.cpp:87
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:94
+#: src/models/actionsmodel.cpp:95
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:102
+#: src/models/actionsmodel.cpp:103
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:109
+#: src/models/actionsmodel.cpp:110
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "Stlmiť"
 
-#: src/models/actionsmodel.cpp:116
+#: src/models/actionsmodel.cpp:117
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "Otvoriť kontextovú ponuku"
 
-#: src/models/actionsmodel.cpp:120
+#: src/models/actionsmodel.cpp:121
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:124
+#: src/models/actionsmodel.cpp:125
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "Otvoriť súbor"
 
-#: src/models/actionsmodel.cpp:131
+#: src/models/actionsmodel.cpp:132
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:138
+#: src/models/actionsmodel.cpp:139
 #, fuzzy, kde-format
 #| msgid "Open Url"
 msgctxt "@action"
 msgid "Open URL"
 msgstr "Otvoriť URL"
 
-#: src/models/actionsmodel.cpp:145
+#: src/models/actionsmodel.cpp:146
 #, fuzzy, kde-format
 #| msgid "&Playback"
 msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "&Prehrávanie"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:153
 #, fuzzy, kde-format
 #| msgid "&Playback"
 msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "&Prehrávanie"
 
-#: src/models/actionsmodel.cpp:159
+#: src/models/actionsmodel.cpp:160
 #, fuzzy, kde-format
 #| msgid "&Playback"
 msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "&Prehrávanie"
 
-#: src/models/actionsmodel.cpp:166
+#: src/models/actionsmodel.cpp:167
 #, fuzzy, kde-format
 #| msgid "Play/Pause"
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "Prehrať/Pozastaviť"
 
-#: src/models/actionsmodel.cpp:173
+#: src/models/actionsmodel.cpp:174
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:180
+#: src/models/actionsmodel.cpp:181
 #, fuzzy, kde-format
 #| msgid "Play/Pause"
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Prehrať/Pozastaviť"
 
-#: src/models/actionsmodel.cpp:187
+#: src/models/actionsmodel.cpp:188
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgctxt "@action"
 msgid "Quit"
 msgstr "Ukončiť"
 
-#: src/models/actionsmodel.cpp:194
+#: src/models/actionsmodel.cpp:195
 #, fuzzy, kde-format
 #| msgid "Start Playback"
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Spustiť prehrávanie"
 
-#: src/models/actionsmodel.cpp:201
+#: src/models/actionsmodel.cpp:202
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:215
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:222
+#: src/models/actionsmodel.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:229
+#: src/models/actionsmodel.cpp:230
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:236
+#: src/models/actionsmodel.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:243
+#: src/models/actionsmodel.cpp:244
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:250
+#: src/models/actionsmodel.cpp:251
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:257
+#: src/models/actionsmodel.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:265
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:271
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:278
+#: src/models/actionsmodel.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:285
+#: src/models/actionsmodel.cpp:286
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Snímka obrazovky"
 
-#: src/models/actionsmodel.cpp:292
+#: src/models/actionsmodel.cpp:293
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitles"
@@ -349,49 +349,49 @@ msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:299
+#: src/models/actionsmodel.cpp:300
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:306
+#: src/models/actionsmodel.cpp:307
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:313
+#: src/models/actionsmodel.cpp:314
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:321
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:327
+#: src/models/actionsmodel.cpp:328
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:334
+#: src/models/actionsmodel.cpp:335
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:341
+#: src/models/actionsmodel.cpp:342
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitles"
@@ -399,116 +399,116 @@ msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:348
+#: src/models/actionsmodel.cpp:349
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:355
+#: src/models/actionsmodel.cpp:356
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:362
+#: src/models/actionsmodel.cpp:363
 #, fuzzy, kde-format
 #| msgid "Toggle Fullscreen"
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Prepnúť do celoobrazovkového režimu"
 
-#: src/models/actionsmodel.cpp:369
+#: src/models/actionsmodel.cpp:370
 #, fuzzy, kde-format
 #| msgid "Show Menu Bar"
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Zobraziť ponuku"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:377
 #, fuzzy, kde-format
 #| msgid "Toggle Fullscreen"
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Prepnúť do celoobrazovkového režimu"
 
-#: src/models/actionsmodel.cpp:383 src/qml/Settings/SettingsWindow.qml:105
+#: src/models/actionsmodel.cpp:384 src/qml/Settings/SettingsWindow.qml:108
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Zoznam skladieb"
 
-#: src/models/actionsmodel.cpp:390
+#: src/models/actionsmodel.cpp:391
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:397
+#: src/models/actionsmodel.cpp:398
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:404
+#: src/models/actionsmodel.cpp:405
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:411
+#: src/models/actionsmodel.cpp:412
 #, fuzzy, kde-format
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Titulky"
 
-#: src/models/actionsmodel.cpp:418
+#: src/models/actionsmodel.cpp:419
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:425
+#: src/models/actionsmodel.cpp:426
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:433
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Zvýšiť hlasitosť"
 
-#: src/models/actionsmodel.cpp:439
+#: src/models/actionsmodel.cpp:440
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Znížiť hlasitosť"
 
-#: src/models/actionsmodel.cpp:446
+#: src/models/actionsmodel.cpp:447
 #, fuzzy, kde-format
 #| msgid "Zoom In"
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Priblížiť"
 
-#: src/models/actionsmodel.cpp:453
+#: src/models/actionsmodel.cpp:454
 #, fuzzy, kde-format
 #| msgid "Zoom Out"
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Oddialiť"
 
-#: src/models/actionsmodel.cpp:460
+#: src/models/actionsmodel.cpp:461
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:467
+#: src/models/actionsmodel.cpp:468
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -516,7 +516,7 @@ msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Kontrast"
 
-#: src/models/actionsmodel.cpp:474
+#: src/models/actionsmodel.cpp:475
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -524,7 +524,7 @@ msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Kontrast"
 
-#: src/models/actionsmodel.cpp:481
+#: src/models/actionsmodel.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -532,7 +532,7 @@ msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Kontrast"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:489
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -540,7 +540,7 @@ msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Jas"
 
-#: src/models/actionsmodel.cpp:495
+#: src/models/actionsmodel.cpp:496
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -548,7 +548,7 @@ msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Jas"
 
-#: src/models/actionsmodel.cpp:502
+#: src/models/actionsmodel.cpp:503
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -556,47 +556,47 @@ msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Jas"
 
-#: src/models/actionsmodel.cpp:509
+#: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:516
+#: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:523
+#: src/models/actionsmodel.cpp:524
 #, fuzzy, kde-format
 #| msgid "Gamma"
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Gama"
 
-#: src/models/actionsmodel.cpp:530
+#: src/models/actionsmodel.cpp:531
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Sýtosť"
 
-#: src/models/actionsmodel.cpp:537
+#: src/models/actionsmodel.cpp:538
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Sýtosť"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:545
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Sýtosť"
 
-#: src/models/actionsmodel.cpp:693
+#: src/models/actionsmodel.cpp:694
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -604,55 +604,55 @@ msgid ""
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:699
+#: src/models/actionsmodel.cpp:700
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Znovu priradiť"
 
-#: src/mpv/mpvitem.cpp:326
+#: src/mpv/mpvitem.cpp:327
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kontrast: %1"
 
-#: src/mpv/mpvitem.cpp:437 src/mpv/mpvitem.cpp:439
+#: src/mpv/mpvitem.cpp:438 src/mpv/mpvitem.cpp:440
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Podtitulok: %1 %2"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:496
 #, fuzzy, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Žiadne"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:535
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:539
+#: src/mpv/mpvitem.cpp:540
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:541
+#: src/mpv/mpvitem.cpp:542
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -660,7 +660,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -990,7 +990,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:311
+#: src/qml/Main.qml:317
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -998,14 +998,14 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Vyberte súbor"
 
-#: src/qml/Main.qml:330
+#: src/qml/Main.qml:336
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Titulky"
 
-#: src/qml/Main.qml:350
+#: src/qml/Main.qml:356
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otvoriť"
@@ -1041,21 +1041,21 @@ msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Vyčistiť zoznam"
 
-#: src/qml/Menus/Global/GlobalHelpMenu.qml:12 src/qml/Menus/HelpMenu.qml:12
+#: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:14
 #, fuzzy
 #| msgid "&Help"
 msgctxt "@title:menu"
 msgid "&Help"
 msgstr "&Pomocník"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:12
-#: src/qml/Menus/PlaybackMenu.qml:12
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:14
+#: src/qml/Menus/PlaybackMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "&Prehrávanie"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:67
-#: src/qml/Menus/PlaybackMenu.qml:30
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
+#: src/qml/Menus/PlaybackMenu.qml:32
 #, fuzzy
 msgctxt "@title:menu"
 msgid "Seek"
@@ -1150,12 +1150,12 @@ msgctxt "@title:menu"
 msgid "&Subtitles"
 msgstr "&Titulky"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:12 src/qml/Menus/VideoMenu.qml:12
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:14 src/qml/Menus/VideoMenu.qml:14
 msgctxt "@title:menu"
 msgid "&Video"
 msgstr "Video"
 
-#: src/qml/Menus/Global/GlobalVideoMenu.qml:81 src/qml/Menus/VideoMenu.qml:27
+#: src/qml/Menus/Global/GlobalVideoMenu.qml:83 src/qml/Menus/VideoMenu.qml:29
 msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "Úpravy"
@@ -1198,7 +1198,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "&Prehrávanie"
 
-#: src/qml/MpvVideo.qml:31
+#: src/qml/MpvVideo.qml:34
 #, fuzzy
 #| msgid "Volume: %1"
 msgctxt "@info:tooltip"
@@ -1746,23 +1746,141 @@ msgid ""
 "Requires restart."
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:101
-#, fuzzy
-#| msgid "Saturation"
-msgctxt "@label"
-msgid "No action set"
-msgstr "Sýtosť"
-
-#: src/qml/Settings/MouseSettings.qml:115
-#, fuzzy
-#| msgid "Saturation"
+#: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
-msgid "Clear action"
+msgid "Remove mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "&Add"
+msgctxt "@action:intoolbar add a mouse button action"
+msgid "&Add"
+msgstr "&Pridať"
+
+#: src/qml/Settings/MouseSettings.qml:125
+msgctxt "@title:window"
+msgid "Add mouse button action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:142
+msgctxt "@label"
+msgid "Mouse button"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:154
+msgctxt "@label:listbox left mouse button"
+msgid "Left"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:155
+msgctxt "@label:listbox middle mouse button"
+msgid "Middle"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:156
+#, fuzzy
+#| msgid "Row height"
+msgctxt "@label:listbox right mouse button"
+msgid "Right"
+msgstr "Výška riadku"
+
+#: src/qml/Settings/MouseSettings.qml:157
+msgctxt "@label:listbox forward mouse button"
+msgid "Forward"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:158
+msgctxt "@label:listbox back mouse button"
+msgid "Back"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:159
+msgctxt "@label:listbox mouse scroll up"
+msgid "Scroll up"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:160
+msgctxt "@label:listbox mouse scroll down"
+msgid "Scroll down"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:169
+msgctxt "@label"
+msgid "Modifier key"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:177
+msgctxt "@label:listbox no modifier key"
+msgid "No modifier"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:178
+#, fuzzy
+#| msgctxt "@label:slider"
+#| msgid "Contrast"
+msgctxt "@label:listbox control modifier key"
+msgid "Control"
+msgstr "Kontrast"
+
+#: src/qml/Settings/MouseSettings.qml:179
+msgctxt "@label:listbox shift modifier key"
+msgid "Shift"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:180
+msgctxt "@label:listbox alt modifier key"
+msgid "Alt"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:181
+msgctxt "@label:listbox meta modifier key"
+msgid "Meta"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:192
+msgctxt ""
+"@label:check whether mouse button action shoud trigger on double click"
+msgid "Trigger on double click"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:202
+msgctxt "@label"
+msgid "Action"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:210
+#, fuzzy
+#| msgid "Subtitles"
+msgctxt "@action:button select mouse button action"
+msgid "Select action"
+msgstr "Vybrať farbu"
+
+#: src/qml/Settings/MouseSettings.qml:214
+#, fuzzy
+#| msgid "Subtitles"
+msgctxt "@title:window select mouse button action"
+msgid "Select action"
+msgstr "Vybrať farbu"
+
+#: src/qml/Settings/MouseSettings.qml:231
+#, fuzzy
+#| msgid "Saturation"
+msgctxt "@action:button change mouse button action "
+msgid "Change action"
 msgstr "Sýtosť"
 
-#: src/qml/Settings/MouseSettings.qml:152
-msgctxt "@title"
-msgid "Double Click to Set Action"
+#: src/qml/Settings/MouseSettings.qml:240
+#, fuzzy
+#| msgid "Saturation"
+msgctxt "@info"
+msgid "No action selected"
+msgstr "Sýtosť"
+
+#: src/qml/Settings/MouseSettings.qml:263
+msgctxt "@info"
+msgid "Mouse button combination is already assigned to “%1”"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:25
@@ -2075,67 +2193,67 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:42
+#: src/qml/Settings/SettingsWindow.qml:45
 #, fuzzy
 #| msgid "&Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: src/qml/Settings/SettingsWindow.qml:59
+#: src/qml/Settings/SettingsWindow.qml:62
 #, fuzzy
 msgctxt "@action"
 msgid "General"
 msgstr "Všeobecné"
 
-#: src/qml/Settings/SettingsWindow.qml:68
+#: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Playback"
 msgstr "Prehrávanie"
 
-#: src/qml/Settings/SettingsWindow.qml:77
+#: src/qml/Settings/SettingsWindow.qml:80
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:87
+#: src/qml/Settings/SettingsWindow.qml:90
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/qml/Settings/SettingsWindow.qml:96
+#: src/qml/Settings/SettingsWindow.qml:99
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Titulky"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Myš"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:127
 #, fuzzy
 #| msgid "Shortcut"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Skratky"
 
-#: src/qml/Settings/SettingsWindow.qml:133
+#: src/qml/Settings/SettingsWindow.qml:137
 #, fuzzy
 #| msgid "Command"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Príkaz"
 
-#: src/qml/Settings/SettingsWindow.qml:143
+#: src/qml/Settings/SettingsWindow.qml:147
 #, fuzzy
 msgctxt "@action"
 msgid "Debug"
 msgstr "Ladenie"
 
-#: src/qml/Settings/SettingsWindow.qml:153
+#: src/qml/Settings/SettingsWindow.qml:157
 #, fuzzy
 msgctxt "@action"
 msgid "About"
@@ -2577,12 +2695,6 @@ msgstr ""
 #~ msgctxt "@action:inmenu"
 #~ msgid "Folder"
 #~ msgstr "Priečinok"
-
-#, fuzzy
-#~| msgid "Row height"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Row height"
-#~ msgstr "Výška riadku"
 
 #, fuzzy
 #~| msgid "Playlist"
