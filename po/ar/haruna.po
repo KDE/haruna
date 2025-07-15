@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-14 00:41+0000\n"
-"PO-Revision-Date: 2025-06-12 12:17+0400\n"
+"PO-Revision-Date: 2025-07-14 20:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -450,9 +450,7 @@ msgid "Playlist"
 msgstr "قائمة التشغيل"
 
 #: src/models/actionsmodel.cpp:391
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "حرك الفيديو لليسار"
@@ -519,23 +517,19 @@ msgstr "بعّد"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "صفّر مستوى التّكبير"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "التباين"
+msgstr "زد التباين"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "التباين"
+msgstr "انقص التباين"
 
 #: src/models/actionsmodel.cpp:482
 #, fuzzy, kde-format
@@ -590,28 +584,22 @@ msgid "Reset Gamma"
 msgstr "غاما"
 
 #: src/models/actionsmodel.cpp:531
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "التّشبّع"
+msgstr "زِد التّشبّع"
 
 #: src/models/actionsmodel.cpp:538
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "التّشبّع"
+msgstr "أنقص التّشبّع"
 
 #: src/models/actionsmodel.cpp:545
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "التّشبّع"
+msgstr "صفّر التشبع"
 
 #: src/models/actionsmodel.cpp:694
 #, kde-format
@@ -630,9 +618,7 @@ msgid "Reassign"
 msgstr "أعد التعيين"
 
 #: src/mpv/mpvitem.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
@@ -663,9 +649,7 @@ msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
 #: src/mpv/mpvitem.cpp:542
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
@@ -687,9 +671,6 @@ msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "صوت: %1 %2"
@@ -707,9 +688,6 @@ msgid "Playback speed: %1"
 msgstr "سرعة التشغيل: %1"
 
 #: src/qml/Actions.qml:288
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "الحلقة تبدأ: %1"
@@ -740,9 +718,6 @@ msgid "Subtitle: None"
 msgstr "الترجمة: بدون"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "الترجمة: %1 %2"
@@ -881,12 +856,9 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from:"
-msgstr "حمّل الترجمة من"
+msgstr "حمّل الترجمة من:"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
@@ -1375,12 +1347,9 @@ msgid "OSD Message"
 msgstr "رسالة على الشاشة"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "المستوى: %1"
+msgstr "اسم الملفّ: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1435,9 +1404,6 @@ msgid "&Save"
 msgstr "ا&حفظ"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "حجم خط رسالة الشاشة"
@@ -1660,9 +1626,6 @@ msgid "Remove mouse button action"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "أ&ضف"
@@ -1675,77 +1638,72 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label"
 msgid "Mouse button"
-msgstr ""
+msgstr "زر الفأرة"
 
 #: src/qml/Settings/MouseSettings.qml:154
 msgctxt "@label:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "يسار"
 
 #: src/qml/Settings/MouseSettings.qml:155
 msgctxt "@label:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "الأوسط"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
-#| msgid "Row height"
 msgctxt "@label:listbox right mouse button"
 msgid "Right"
-msgstr "ارتفاع الصف"
+msgstr "يمين"
 
 #: src/qml/Settings/MouseSettings.qml:157
 msgctxt "@label:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "تقدّم"
 
 #: src/qml/Settings/MouseSettings.qml:158
 msgctxt "@label:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "عُد"
 
 #: src/qml/Settings/MouseSettings.qml:159
 msgctxt "@label:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "لف لأعلى"
 
 #: src/qml/Settings/MouseSettings.qml:160
 msgctxt "@label:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "لف لأسفل"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@label"
 msgid "Modifier key"
-msgstr ""
+msgstr "المفتاح المغيِّر"
 
 #: src/qml/Settings/MouseSettings.qml:177
 msgctxt "@label:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "لا يوجد مغير"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
 msgctxt "@label:listbox control modifier key"
 msgid "Control"
-msgstr "التباين"
+msgstr "Control"
 
 #: src/qml/Settings/MouseSettings.qml:179
 msgctxt "@label:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@label:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
 msgctxt "@label:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
 msgctxt ""
@@ -1756,39 +1714,27 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "الإجراء"
 
 #: src/qml/Settings/MouseSettings.qml:210
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "اختر لوناً"
+msgstr "اختر إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:214
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window select mouse button action"
 msgid "Select action"
-msgstr "اختر لوناً"
+msgstr "اختر إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:231
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@action:button change mouse button action "
 msgid "Change action"
-msgstr "امسح إجراء"
+msgstr "غيّر إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:240
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info"
 msgid "No action selected"
-msgstr "لم يعين أي إجراء"
+msgstr "لم يختر أي إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:263
 msgctxt "@info"
@@ -2018,19 +1964,11 @@ msgid ""
 msgstr "عند تمكينه، فإنه يتخطى تلقائيًا الفصول التي تحتوي على كلمات/أحرف معينة."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
-msgstr "أعرض رسالة الشاشة في التخطي"
+msgstr "اعرض رسالة الشاشة في التخطي"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-#, fuzzy
-#| msgctxt "@info:tooltip show osd message on skip setting"
-#| msgid ""
-#| "When skipping chapters an osd message will show the title of the skipped "
-#| "chapter."
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2040,7 +1978,7 @@ msgstr "عند تخطي الفصول، ستظهر رسالة شاشة تحوي �
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "الكلمات المفتاحيّة"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
