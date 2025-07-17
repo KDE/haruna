@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-14 00:41+0000\n"
-"PO-Revision-Date: 2025-07-14 20:29+0400\n"
+"PO-Revision-Date: 2025-07-16 14:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -81,18 +81,14 @@ msgid "File to open"
 msgstr "الملف المراد فتحه"
 
 #: src/application.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"يسمح بتجاوز مؤقتًا لإعداد اختيار تنسيق YTDL. سيستبدل إذا غُيّر الإعداد من خلال "
-"واجهة المستخدم الرسومية"
+"يسمح بتجاوز مؤقتًا لإعداد اختيار تنسيق yt-dlp. سيستبدل إذا غُيّر الإعداد من "
+"خلال واجهة المستخدم الرسومية"
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -125,19 +121,16 @@ msgid "Sponsor Haruna"
 msgstr "اكفل هارونا"
 
 #: src/models/actionsmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "مقطوعة صوتية"
+msgstr "بدّل لمسار الصوت السابق"
 
 #: src/models/actionsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Cycle Audio Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "دور الصوت للأعلى"
+msgstr "بدّل لمسار الصوت التالي"
 
 #: src/models/actionsmodel.cpp:66
 #, kde-format
@@ -158,20 +151,16 @@ msgid "Exit Fullscreen"
 msgstr "أخرج من ملء الشّاشة"
 
 #: src/models/actionsmodel.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
-msgstr "اسعَ بخطوة للأمام"
+msgstr "اسعَ خطوة للأمام"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
-msgstr "اسعَ بخطوة للخلف"
+msgstr "اسعَ خطوة للخلف"
 
 #: src/models/actionsmodel.cpp:103
 #, kde-format
@@ -216,28 +205,22 @@ msgid "Open URL"
 msgstr "افتح الرابط"
 
 #: src/models/actionsmodel.cpp:146
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "سرعة التشغيل"
+msgstr "زِد سرعة التشغيل"
 
 #: src/models/actionsmodel.cpp:153
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "سرعة التشغيل"
+msgstr "أنقص سرعة التشغيل"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "سرعة التشغيل"
+msgstr "صفّر سرعة التشغيل"
 
 #: src/models/actionsmodel.cpp:167
 #, kde-format
@@ -273,50 +256,46 @@ msgstr "أعد تشغيل"
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
-msgstr "اسعَ بخطوة صغيرة للأمام"
+msgstr "اسعَ خطوة صغيرة للأمام"
 
 #: src/models/actionsmodel.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
-msgstr "اسعَ بخطوة صغيرة للخلف"
+msgstr "اسعَ خطوة صغيرة للخلف"
 
 #: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
-msgstr "اسعَ بخطوة متوسطة للأمام"
+msgstr "اسعَ خطوة متوسطة للأمام"
 
 #: src/models/actionsmodel.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
-msgstr "اسعَ بخطوة متوسطة للخلف"
+msgstr "اسعَ خطوة متوسطة للخلف"
 
 #: src/models/actionsmodel.cpp:230
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
-msgstr "اسعَ بخطوة كبيرة للأمام"
+msgstr "اسعَ خطوة كبيرة للأمام"
 
 #: src/models/actionsmodel.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
-msgstr "اسعَ بخطوة كبيرة للخلف"
+msgstr "اسعَ خطوة كبيرة للخلف"
 
 #: src/models/actionsmodel.cpp:244
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "اسعَ للفصل التالي"
 
 #: src/models/actionsmodel.cpp:251
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "اسعَ للفصل السابق"
@@ -337,7 +316,7 @@ msgstr "اسعَ للترجمة السابقة"
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr "اسعَ لمشاهدة أخر موقف"
+msgstr "اسعَ لموقع المشاهدة لاحقًا"
 
 #: src/models/actionsmodel.cpp:279
 #, kde-format
@@ -352,72 +331,58 @@ msgid "Screenshot"
 msgstr "لقطة شاشة"
 
 #: src/models/actionsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "الترجمة"
+msgstr "اعرض/أخف الترجمة"
 
 #: src/models/actionsmodel.cpp:300
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "زد من حجم خط الترجمة"
 
 #: src/models/actionsmodel.cpp:307
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "أنقص حجم خط الترجمة"
 
 #: src/models/actionsmodel.cpp:314
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "حرك الترجمة للأعلى"
 
 #: src/models/actionsmodel.cpp:321
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "حرك الترجمة للأسفل"
 
 #: src/models/actionsmodel.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "اختر ملف ترجمة"
+msgstr "قدّم الترجمة"
 
 #: src/models/actionsmodel.cpp:335
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "اختر ملف ترجمة"
+msgstr "أخّر الترجمة"
 
 #: src/models/actionsmodel.cpp:342
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "دور الترجمة للأعلى"
+msgstr "بدّل إلى الترجمة السابقة"
 
 #: src/models/actionsmodel.cpp:349
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "دور الترجمة للأعلى"
+msgstr "بدّل إلى الترجمة التالية"
 
 #: src/models/actionsmodel.cpp:356
 #, kde-format
@@ -456,26 +421,22 @@ msgid "Move Video Left"
 msgstr "حرك الفيديو لليسار"
 
 #: src/models/actionsmodel.cpp:398
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "حرك الفيديو لليمين"
 
 #: src/models/actionsmodel.cpp:405
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr "حرك الترجمة للأعلى"
+msgstr "حرك الفيديو للأعلى"
 
 #: src/models/actionsmodel.cpp:412
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr "حرك الترجمة للأسفل"
+msgstr "حرك الفيديو للأسفل"
 
 #: src/models/actionsmodel.cpp:419
 #, kde-format
@@ -532,56 +493,46 @@ msgid "Decrease Contrast"
 msgstr "انقص التباين"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "التباين"
+msgstr "صفّر التباين"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "السطوع"
+msgstr "زِد السطوع"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "السطوع"
+msgstr "انقص السطوع"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "السطوع"
+msgstr "صفّر السطوع"
 
 #: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "زِد غاما"
 
 #: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "أنقص غاما"
 
 #: src/models/actionsmodel.cpp:524
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "غاما"
+msgstr "صفّر غاما"
 
 #: src/models/actionsmodel.cpp:531
 #, kde-format
@@ -1623,7 +1574,7 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
-msgstr ""
+msgstr "أزل إجراء زر الفأرة"
 
 #: src/qml/Settings/MouseSettings.qml:106
 msgctxt "@action:intoolbar add a mouse button action"
@@ -1633,7 +1584,7 @@ msgstr "أ&ضف"
 #: src/qml/Settings/MouseSettings.qml:125
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "أضف إجراء زر الفأرة"
 
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label"
@@ -1709,7 +1660,7 @@ msgstr "Meta"
 msgctxt ""
 "@label:check whether mouse button action shoud trigger on double click"
 msgid "Trigger on double click"
-msgstr ""
+msgstr "أطلق عن النقر المزدوج"
 
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
@@ -1739,7 +1690,7 @@ msgstr "لم يختر أي إجراء"
 #: src/qml/Settings/MouseSettings.qml:263
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "مجموعة أزرار الفأرة مخصصة مسبقًا لـ ”%1“"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
