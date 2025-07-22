@@ -4,19 +4,20 @@
 # Мария Шикунова <translation-team@basealt.ru>, 2021, 2022, 2023.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023.
 # SPDX-FileCopyrightText: 2025 Mariya Shikunova <maremarie@altlinux.org>
+# SPDX-FileCopyrightText: 2025 Olesya Gerasimenko <goa@altlinux.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-14 00:41+0000\n"
-"PO-Revision-Date: 2025-06-02 17:12+0300\n"
-"Last-Translator: Mariya Shikunova <maremarie@altlinux.org>\n"
+"PO-Revision-Date: 2025-07-21 11:22+0300\n"
+"Last-Translator: Olesya Gerasimenko <goa@altlinux.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -28,8 +29,7 @@ msgstr "Мария Шикунова, Александр Яворский, Оле
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"translation-team@basealt.ru, kekcuha@gmail.com, translation-team@basealt.ru"
+msgstr "translation-team@basealt.ru, kekcuha@gmail.com, goa@altlinux.org"
 
 #: src/application.cpp:124
 #, kde-format
@@ -88,18 +88,15 @@ msgid "File to open"
 msgstr "Открыть файл"
 
 #: src/application.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Позволяет временно перезаписать настройку выбора формата ytdl. Будет "
-"перезаписано, если настройка будет изменена через графический интерфейс."
+"Позволяет временно переопределить значение параметра выбора формата yt-dlp. "
+"Переопределение будет выполнено в случае изменения параметра с помощью "
+"графического интерфейса."
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -132,19 +129,16 @@ msgid "Sponsor Haruna"
 msgstr "Проспонсировать Haruna"
 
 #: src/models/actionsmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "Аудиодорожка"
+msgstr "Перейти к аудиодорожке выше"
 
 #: src/models/actionsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Cycle Audio Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "Циклически прокрутить дорожку вперёд"
+msgstr "Перейти к аудиодорожке ниже"
 
 #: src/models/actionsmodel.cpp:66
 #, kde-format
@@ -165,17 +159,13 @@ msgid "Exit Fullscreen"
 msgstr "Выйти из полноэкранного режима"
 
 #: src/models/actionsmodel.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "Прокрутить вперёд на один кадр"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "Прокрутить назад на один кадр"
@@ -223,28 +213,22 @@ msgid "Open URL"
 msgstr "Открыть URL"
 
 #: src/models/actionsmodel.cpp:146
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "Скорость воспроизведения"
+msgstr "Увеличить скорость воспроизведения"
 
 #: src/models/actionsmodel.cpp:153
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "Скорость воспроизведения"
+msgstr "Уменьшить скорость воспроизведения"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "Скорость воспроизведения"
+msgstr "Вернуть скорость воспроизведения к значению по умолчанию"
 
 #: src/models/actionsmodel.cpp:167
 #, kde-format
@@ -313,17 +297,13 @@ msgid "Seek Big Step Backward"
 msgstr "Перемотать назад на большой диапазон"
 
 #: src/models/actionsmodel.cpp:244
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Перемотать на следующий раздел"
 
 #: src/models/actionsmodel.cpp:251
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Перемотать на предыдущий раздел"
@@ -359,72 +339,58 @@ msgid "Screenshot"
 msgstr "Снимок экрана"
 
 #: src/models/actionsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "Субтитры"
+msgstr "Включить или отключить субтитры"
 
 #: src/models/actionsmodel.cpp:300
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Увеличить размер шрифта субтитров"
 
 #: src/models/actionsmodel.cpp:307
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Уменьшить размер шрифта субтитров"
 
 #: src/models/actionsmodel.cpp:314
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
-msgstr "Переместить субтитр выше"
+msgstr "Переместить субтитр вверх"
 
 #: src/models/actionsmodel.cpp:321
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
-msgstr "Переместить субтитр ниже"
+msgstr "Переместить субтитр вниз"
 
 #: src/models/actionsmodel.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "Выбор файла субтитров"
+msgstr "Показать субтитры раньше"
 
 #: src/models/actionsmodel.cpp:335
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "Выбор файла субтитров"
+msgstr "Показать субтитры позже"
 
 #: src/models/actionsmodel.cpp:342
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "Циклически прокрутить субтитр вперёд"
+msgstr "Перейти к субтитру выше"
 
 #: src/models/actionsmodel.cpp:349
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "Циклически прокрутить субтитр вперёд"
+msgstr "Перейти к субтитру ниже"
 
 #: src/models/actionsmodel.cpp:356
 #, kde-format
@@ -457,34 +423,28 @@ msgid "Playlist"
 msgstr "Список воспроизведения"
 
 #: src/models/actionsmodel.cpp:391
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
-msgstr "Сдвинуть видео влево"
+msgstr "Переместить видео влево"
 
 #: src/models/actionsmodel.cpp:398
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
-msgstr "Сдвинуть видео вправо"
+msgstr "Переместить видео вправо"
 
 #: src/models/actionsmodel.cpp:405
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr "Переместить субтитр выше"
+msgstr "Переместить видео вверх"
 
 #: src/models/actionsmodel.cpp:412
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr "Переместить субтитр ниже"
+msgstr "Переместить видео вниз"
 
 #: src/models/actionsmodel.cpp:419
 #, kde-format
@@ -526,99 +486,79 @@ msgstr "Уменьшить масштаб"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Вернуть масштаб к значению по умолчанию"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "Контрастность"
+msgstr "Увеличить контрастность"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "Контрастность"
+msgstr "Уменьшить контрастность"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "Контрастность"
+msgstr "Вернуть контрастность к значению по умолчанию"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "Яркость"
+msgstr "Увеличить яркость"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "Яркость"
+msgstr "Уменьшить яркость"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "Яркость"
+msgstr "Вернуть яркость к значению по умолчани"
 
 #: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Увеличить гамму"
 
 #: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Уменьшить гамму"
 
 #: src/models/actionsmodel.cpp:524
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "Гамма"
+msgstr "Вернуть гамму к значению по умолчанию"
 
 #: src/models/actionsmodel.cpp:531
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "Насыщенность"
+msgstr "Увеличить насыщенность"
 
 #: src/models/actionsmodel.cpp:538
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "Насыщенность"
+msgstr "Уменьшить насыщенность"
 
 #: src/models/actionsmodel.cpp:545
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "Насыщенность"
+msgstr "Вернуть насыщенность к значению по умолчанию"
 
 #: src/models/actionsmodel.cpp:694
 #, kde-format
@@ -637,9 +577,7 @@ msgid "Reassign"
 msgstr "Переназначить"
 
 #: src/mpv/mpvitem.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Не удалось воспроизвести: %1"
@@ -670,9 +608,7 @@ msgid "Screenshot taken"
 msgstr "Снимок экрана сделан"
 
 #: src/mpv/mpvitem.cpp:542
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Снимок экрана: %1"
@@ -694,9 +630,6 @@ msgid "Skipped chapter: %1"
 msgstr "Пропущенный раздел: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Аудио: %1 %2"
@@ -714,9 +647,6 @@ msgid "Playback speed: %1"
 msgstr "Скорость воспроизведения: %1"
 
 #: src/qml/Actions.qml:288
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Начало повтора: %1"
@@ -747,9 +677,6 @@ msgid "Subtitle: None"
 msgstr "Субтитры: Нет"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Субтитры: %1 %2"
@@ -888,12 +815,9 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from:"
-msgstr "Загрузка субтитров из"
+msgstr "Загрузка субтитров из:"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
@@ -975,7 +899,7 @@ msgstr "Haruna"
 #: src/qml/Main.qml:317
 msgctxt "@title:window"
 msgid "Select File"
-msgstr "Выберите файл"
+msgstr "Выбор файла"
 
 #: src/qml/Main.qml:336
 msgctxt "@title:window"
@@ -1260,7 +1184,7 @@ msgstr "Переместить файл в корзину"
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
-msgstr "Выберите файл"
+msgstr "Выбор файла"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1382,15 +1306,12 @@ msgstr ""
 #: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr "Индикатор"
+msgstr "Экранное уведомление"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "Громкость: %1"
+msgstr "Имя файла: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1399,9 +1320,9 @@ msgid ""
 "<br>Use ${property_name} to display the value of a property <strong>Volume: "
 "${volume}</strong>"
 msgstr ""
-"Контекстное уведомление, показывающееся при инициировании действия, "
-"описанного пользовательской командой.<br>Воспользуйтесь ${property_name} для "
-"показа значения свойства <strong>Громкость: ${volume}</strong>"
+"Экранное уведомление при запуске действия, описанного пользовательской "
+"командой.<br>Воспользуйтесь ${property_name} для показа значения свойства "
+"<strong>Громкость: ${volume}</strong>"
 
 #: src/qml/Settings/EditCustomCommand.qml:100
 msgctxt "@label"
@@ -1448,12 +1369,9 @@ msgid "&Save"
 msgstr "&Сохранить"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
-msgstr "Размер шрифта индикатора"
+msgstr "Размер шрифта экранного уведомления"
 
 #: src/qml/Settings/GeneralSettings.qml:51
 msgctxt "@label:textbox"
@@ -1678,12 +1596,9 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
-msgstr ""
+msgstr "Удалить действие по кнопке мыши"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Добавить"
@@ -1691,133 +1606,113 @@ msgstr "&Добавить"
 #: src/qml/Settings/MouseSettings.qml:125
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "Добавление действия по нажатию кнопки мыши"
 
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label"
 msgid "Mouse button"
-msgstr ""
+msgstr "Кнопка мыши"
 
 #: src/qml/Settings/MouseSettings.qml:154
 msgctxt "@label:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Левая"
 
 #: src/qml/Settings/MouseSettings.qml:155
 msgctxt "@label:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Средняя"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
 msgctxt "@label:listbox right mouse button"
 msgid "Right"
-msgstr "Высота строки"
+msgstr "Правая"
 
 #: src/qml/Settings/MouseSettings.qml:157
 msgctxt "@label:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "Вперёд"
 
 #: src/qml/Settings/MouseSettings.qml:158
 msgctxt "@label:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/qml/Settings/MouseSettings.qml:159
 msgctxt "@label:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "Прокрутка вверх"
 
 #: src/qml/Settings/MouseSettings.qml:160
-#, fuzzy
-#| msgid "Action for scroll down"
 msgctxt "@label:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr "Действие для прокрутки вниз"
+msgstr "Прокрутка вниз"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@label"
 msgid "Modifier key"
-msgstr ""
+msgstr "Клавиша-модификатор"
 
 #: src/qml/Settings/MouseSettings.qml:177
 msgctxt "@label:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "Без модификатора"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
 msgctxt "@label:listbox control modifier key"
 msgid "Control"
-msgstr "Контрастность"
+msgstr "Ctrl"
 
 #: src/qml/Settings/MouseSettings.qml:179
 msgctxt "@label:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@label:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
 msgctxt "@label:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
-#, fuzzy
-#| msgid "Action for left double click"
 msgctxt ""
 "@label:check whether mouse button action shoud trigger on double click"
 msgid "Trigger on double click"
-msgstr "Действие для двойного щелчка левой кнопкой мыши"
+msgstr "Запуск по двойному щелчку"
 
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "Действие"
 
 #: src/qml/Settings/MouseSettings.qml:210
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "Выберите цвет"
+msgstr "Выбрать действие"
 
 #: src/qml/Settings/MouseSettings.qml:214
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window select mouse button action"
 msgid "Select action"
-msgstr "Выберите цвет"
+msgstr "Выбор действия"
 
 #: src/qml/Settings/MouseSettings.qml:231
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@action:button change mouse button action "
 msgid "Change action"
-msgstr "Очистить действие"
+msgstr "Изменить действие"
 
 #: src/qml/Settings/MouseSettings.qml:240
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info"
 msgid "No action selected"
-msgstr "Действие не задано"
+msgstr "Действие не выбрано"
 
 #: src/qml/Settings/MouseSettings.qml:263
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "Эта комбинация кнопок мыши уже назначена действию «%1»"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -1948,7 +1843,7 @@ msgstr "Позиция воспроизведения"
 #: src/qml/Settings/PlaybackSettings.qml:219
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "Прокрутить до последней позиции воспроизведения"
+msgstr "Восстанавливать позицию воспроизведения"
 
 #: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
@@ -1982,7 +1877,7 @@ msgstr[3] ""
 #: src/qml/Settings/PlaybackSettings.qml:242
 msgctxt "@option:check"
 msgid "Start playing"
-msgstr "Воспроизведение"
+msgstr "Начинать воспроизведение"
 
 #: src/qml/Settings/PlaybackSettings.qml:252
 msgctxt "@info:tooltip start playing setting"
@@ -2040,31 +1935,23 @@ msgstr ""
 "или символы."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
-msgstr "Выводить индикатор при пропуске"
+msgstr "Выводить экранное уведомление при пропуске"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-#, fuzzy
-#| msgctxt "@info:tooltip show osd message on skip setting"
-#| msgid ""
-#| "When skipping chapters an osd message will show the title of the skipped "
-#| "chapter."
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 msgstr ""
-"При пропуске разделов появится контекстное уведомление, показывающее "
-"название пропущенного раздела."
+"При пропуске разделов появится экранное уведомление, показывающее название "
+"пропущенного раздела."
 
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "Ключевые слова"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
@@ -2110,7 +1997,7 @@ msgstr "Стиль списка воспроизведения"
 #: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr "Накладываемое изображение"
+msgstr "Поверх видео"
 
 #: src/qml/Settings/PlaylistSettings.qml:94
 msgctxt "@info:tooltip"
@@ -2118,7 +2005,7 @@ msgid ""
 "When checked the playlist goes on top of the video\n"
 "When unchecked the video is resized"
 msgstr ""
-"При установленном флажке список отображается поверх видео\n"
+"При установленном флажке список воспроизведения отображается поверх видео\n"
 "При снятом флажке размер видео изменяется"
 
 #: src/qml/Settings/PlaylistSettings.qml:101
@@ -2134,12 +2021,14 @@ msgstr "Автоматически загружать видео из этой �
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Autoplay"
-msgstr ""
+msgstr "Автоматическое воспроизведение"
 
 #: src/qml/Settings/PlaylistSettings.qml:128
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
 msgstr ""
+"Когда этот флажок установлен, воспроизведение следующего видео начнётся "
+"автоматически"
 
 #: src/qml/Settings/PlaylistSettings.qml:136
 msgctxt "@option:check"
@@ -2172,8 +2061,8 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
-"Если этот флажок установлен, будет запоминаться состояние списка "
-"воспроизведения (скрыт/отображается) между запусками"
+"Когда этот флажок установлен, состояние списка воспроизведения (скрыт/"
+"отображается) будет сохраняться между запусками"
 
 #: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"

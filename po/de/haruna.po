@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 # Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
@@ -6,15 +7,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-14 00:41+0000\n"
-"PO-Revision-Date: 2023-05-30 18:46+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2025-07-18 11:54+0200\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,29 +33,23 @@ msgid "Feature-rich command-line audio/video downloader"
 msgstr ""
 
 #: src/application.cpp:137
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Haruna Medienspieler"
+msgstr "Medienspieler"
 
 #: src/application.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "Copyright 2019-2023"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:146
 #, kde-format
@@ -71,7 +66,7 @@ msgstr "Entwickler"
 #: src/application.cpp:155
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Befehlszeilen-Videoplayer"
 
 #: src/application.cpp:161
 #, kde-format
@@ -85,24 +80,21 @@ msgid "File to open"
 msgstr "Zu öffnende Datei"
 
 #: src/application.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Ermöglicht das zeitweilige Verändern der Formatauswahl-Einstellung von yt-"
-"dlp. Wird bei Änderung der Einstellung in der Oberfläche überschrieben."
+"Ermöglicht das temporäre Ändern der Formatauswahl-Einstellung von yt-dlp. "
+"Wird überschrieben, wenn die Einstellung über die Benutzeroberfläche "
+"geändert wird."
 
 #: src/lockmanager.cpp:34
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Mediendatei abspielen"
+msgstr "Mediendatei wird abgespielt"
 
 #: src/models/actionsmodel.cpp:25
 #, fuzzy, kde-format
@@ -122,36 +114,28 @@ msgstr "Über Haruna"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Problem melden"
 
 #: src/models/actionsmodel.cpp:45
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "Über Haruna"
+msgstr "Haruna unterstützen"
 
 #: src/models/actionsmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "&Audio"
+msgstr "Nächste Audiospur"
 
 #: src/models/actionsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "&Audio"
+msgstr "Vorherige Audiospur"
 
 #: src/models/actionsmodel.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
 msgstr "Einstellungen"
@@ -169,20 +153,16 @@ msgid "Exit Fullscreen"
 msgstr "Vollbildmodus beenden"
 
 #: src/models/actionsmodel.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
-msgstr "Ein Einzelbild vor gehen"
+msgstr "Einzelbild vorwärts"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
-msgstr "Ein Einzelbild zurück gehen"
+msgstr "Einzelbild zurück"
 
 #: src/models/actionsmodel.cpp:103
 #, kde-format
@@ -218,39 +198,31 @@ msgstr "Datei öffnen"
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "Externe Untertitel hinzufügen ..."
+msgstr "Externen Untertitel hinzufügen …"
 
 #: src/models/actionsmodel.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
-msgstr "Adresse (URL) öffnen"
+msgstr "URL öffnen"
 
 #: src/models/actionsmodel.cpp:146
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "Wiedergabegeschwindigkeit"
+msgstr "Wiedergabegeschwindigkeit erhöhen"
 
 #: src/models/actionsmodel.cpp:153
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "Wiedergabegeschwindigkeit"
+msgstr "Wiedergabegeschwindigkeit verringern"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "Wiedergabegeschwindigkeit"
+msgstr "Wiedergabegeschwindigkeit zurücksetzen"
 
 #: src/models/actionsmodel.cpp:167
 #, kde-format
@@ -262,13 +234,13 @@ msgstr "Wiedergabe/Pause"
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
-msgstr "Nächste wiedergeben"
+msgstr "Nächstes Element wiedergeben"
 
 #: src/models/actionsmodel.cpp:181
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
-msgstr "Vorherige wiedergeben"
+msgstr "Vorheriges Element wiedergeben"
 
 #: src/models/actionsmodel.cpp:188
 #, kde-format
@@ -286,77 +258,73 @@ msgstr "Wiedergabe neu starten"
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
-msgstr "Einen kleinen Schritt vor gehen"
+msgstr "Einen kleinen Schritt vorspulen"
 
 #: src/models/actionsmodel.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
-msgstr "Einen kleinen Schritt zurück gehen"
+msgstr "Einen kleinen Schritt zurückspulen"
 
 #: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
-msgstr "Einen mittleren Schritt vor gehen"
+msgstr "Einen mittleren Schritt vorspulen"
 
 #: src/models/actionsmodel.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
-msgstr "Einen mittleren Schritt zurück gehen"
+msgstr "Einen mittleren Schritt zurückspulen"
 
 #: src/models/actionsmodel.cpp:230
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
-msgstr "Einen großen Schritt vor gehen"
+msgstr "Einen großen Schritt vorspulen"
 
 #: src/models/actionsmodel.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
-msgstr "Einen großen Schritt zurück gehen"
+msgstr "Einen großen Schritt zurückspulen"
 
 #: src/models/actionsmodel.cpp:244
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
-msgstr "Zum nächten Kapitel gehen"
+msgstr "Zum nächten Kapitel springen"
 
 #: src/models/actionsmodel.cpp:251
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
-msgstr "Zum vorherigen Kapitel gehen"
+msgstr "Zum vorherigen Kapitel springen"
 
 #: src/models/actionsmodel.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
-msgstr "Zum nächsten Untertitel gehen"
+msgstr "Zum nächsten Untertitel springen"
 
 #: src/models/actionsmodel.cpp:265
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
-msgstr "Zum vorherigen Untertitel gehen"
+msgstr "Zum vorherigen Untertitel springen"
 
 #: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
-msgstr "Zur „Später ansehen“-Position gehen"
+msgstr "Zur „Später ansehen“-Position springen"
 
 #: src/models/actionsmodel.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
-msgstr "Wiederholung"
+msgstr "Wiederholung setzen"
 
 #: src/models/actionsmodel.cpp:286
 #, kde-format
@@ -365,80 +333,64 @@ msgid "Screenshot"
 msgstr "Bildschirmfoto"
 
 #: src/models/actionsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "Untertitel"
+msgstr "Untertitel umschalten"
 
 #: src/models/actionsmodel.cpp:300
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
-msgstr "Schrift von Untertitel vergrößern"
+msgstr "Untertitel-Schriftgröße vergrößern"
 
 #: src/models/actionsmodel.cpp:307
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
-msgstr "Schrift von Untertitel verkleinern"
+msgstr "Untertitel-Schriftgröße verkleinern"
 
 #: src/models/actionsmodel.cpp:314
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Untertitel nach oben verschieben"
 
 #: src/models/actionsmodel.cpp:321
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Untertitel nach unten verschieben"
 
 #: src/models/actionsmodel.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "Untertiteldatei auswählen"
+msgstr "Untertitel früher anzeigen"
 
 #: src/models/actionsmodel.cpp:335
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "Untertiteldatei auswählen"
+msgstr "Untertitel später anzeigen"
 
 #: src/models/actionsmodel.cpp:342
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "Untertitel"
+msgstr "Nächste Untertitelspur"
 
 #: src/models/actionsmodel.cpp:349
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "Sekundäre Untertitel"
+msgstr "Vorherige Untertitelspur"
 
 #: src/models/actionsmodel.cpp:356
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
-msgstr "Deinterlacing ein-/ausschalten"
+msgstr "Deinterlacing umschalten"
 
 #: src/models/actionsmodel.cpp:363
 #, kde-format
@@ -450,13 +402,13 @@ msgstr "Vollbildmodus umschalten"
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
-msgstr "Menüleiste ein-/ausschalten"
+msgstr "Menüleiste umschalten"
 
 #: src/models/actionsmodel.cpp:377
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
-msgstr "Kopfleiste ein-/ausschalten"
+msgstr "Kopfleiste umschalten"
 
 #: src/models/actionsmodel.cpp:384 src/qml/Settings/SettingsWindow.qml:108
 #, kde-format
@@ -465,46 +417,40 @@ msgid "Playlist"
 msgstr "Wiedergabeliste"
 
 #: src/models/actionsmodel.cpp:391
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Video nach links verschieben"
 
 #: src/models/actionsmodel.cpp:398
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Video nach rechts verschieben"
 
 #: src/models/actionsmodel.cpp:405
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr "Untertitel nach oben verschieben"
+msgstr "Video nach oben verschieben"
 
 #: src/models/actionsmodel.cpp:412
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr "Untertitel nach unten verschieben"
+msgstr "Video nach unten verschieben"
 
 #: src/models/actionsmodel.cpp:419
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Im Uhrzeigersinn drehen"
 
 #: src/models/actionsmodel.cpp:426
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Gegen den Uhrzeigersinn drehen"
 
 #: src/models/actionsmodel.cpp:433
 #, kde-format
@@ -534,99 +480,79 @@ msgstr "Verkleinern"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Skalierung zurücksetzen"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "Kontrast"
+msgstr "Kontrast erhöhen"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "Kontrast"
+msgstr "Kontrast verringern"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "Kontrast"
+msgstr "Kontrast zurücksetzen"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "Helligkeit"
+msgstr "Helligkeit erhöhen"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "Helligkeit"
+msgstr "Helligkeit verringern"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "Helligkeit"
+msgstr "Helligkeit zurücksetzen"
 
 #: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Gamma erhöhen"
 
 #: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Gamma verringern"
 
 #: src/models/actionsmodel.cpp:524
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "Gamma"
+msgstr "Gamma zurücksetzen"
 
 #: src/models/actionsmodel.cpp:531
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "Sättigung"
+msgstr "Sättigung erhöhen"
 
 #: src/models/actionsmodel.cpp:538
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "Sättigung"
+msgstr "Sättigung verringern"
 
 #: src/models/actionsmodel.cpp:545
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "Sättigung"
+msgstr "Sättigung zurücksetzen"
 
 #: src/models/actionsmodel.cpp:694
 #, kde-format
@@ -645,20 +571,16 @@ msgid "Reassign"
 msgstr "Neu zuweisen"
 
 #: src/mpv/mpvitem.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
-msgstr "Kann nicht abspielen: %1"
+msgstr "Kann „%1“ nicht abspielen"
 
 #: src/mpv/mpvitem.cpp:438 src/mpv/mpvitem.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Untertitel-Timing: %1"
+msgstr "Untertitel-Timing: %1 Sekunden"
 
 #: src/mpv/mpvitem.cpp:496
 #, kde-format
@@ -668,28 +590,22 @@ msgid "None"
 msgstr "Keiner"
 
 #: src/mpv/mpvitem.cpp:535
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
-msgstr "Bildschirmfoto"
+msgstr "Bildschirmfoto fehlgeschlagen"
 
 #: src/mpv/mpvitem.cpp:540
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
-msgstr "Bildschirmfoto"
+msgstr "Bildschirmfoto erstellt"
 
 #: src/mpv/mpvitem.cpp:542
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
-msgstr "Bildschirmfoto"
+msgstr "Bildschirmfoto: %1"
 
 #: src/mpv/mpvitem.cpp:569
 #, kde-format
@@ -700,17 +616,12 @@ msgid ""
 msgstr ""
 
 #: src/mpv/mpvitem.cpp:602
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Skipped chapter: %1"
+#, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Kapitel übersprungen: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
@@ -728,20 +639,14 @@ msgid "Playback speed: %1"
 msgstr "Wiedergabegeschwindigkeit: %1"
 
 #: src/qml/Actions.qml:288
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
-msgstr "Wiederholung starten: %1"
+msgstr "Beginn der Wiederholung: %1"
 
 #: src/qml/Actions.qml:294
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "Wiederholen: %1 - %2"
+msgstr "Wiederholen: %1–%2"
 
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
@@ -754,12 +659,9 @@ msgid "Subtitles off"
 msgstr "Untertitel aus"
 
 #: src/qml/Actions.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Untertitel aus"
+msgstr "Untertitel an"
 
 #: src/qml/Actions.qml:329 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
@@ -767,9 +669,6 @@ msgid "Subtitle: None"
 msgstr "Untertitel: keine"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Untertitel: %1 %2"
@@ -777,22 +676,22 @@ msgstr "Untertitel: %1 %2"
 #: src/qml/Actions.qml:352 src/qml/Actions.qml:358
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr "Untertitel-Vergrößerung: %1"
+msgstr "Untertitel-Skalierung: %1"
 
 #: src/qml/Actions.qml:372
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
-msgstr "Deinterlace %1"
+msgstr "Deinterlace: %1"
 
 #: src/qml/Actions.qml:437 src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
-msgstr "Vergrößerung: %1"
+msgstr "Skalierung: %1"
 
 #: src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
-msgstr "Vergrößerung: 0"
+msgstr "Skalierung: 0"
 
 #: src/qml/Actions.qml:455 src/qml/Actions.qml:461
 msgctxt "@info:tooltip"
@@ -835,17 +734,11 @@ msgid "Saturation: 0"
 msgstr "Sättigung: 0"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Wiedergabe starten"
 
 #: src/qml/Footer.qml:147
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Wiedergabe pausieren"
@@ -853,7 +746,7 @@ msgstr "Wiedergabe pausieren"
 #: src/qml/Footer.qml:163
 msgctxt "@info:tooltip"
 msgid "Play previous file"
-msgstr "Vorangehende Datei abspielen"
+msgstr "Vorherige Datei abspielen"
 
 #: src/qml/Footer.qml:179
 msgctxt "@info:tooltip"
@@ -863,17 +756,14 @@ msgstr "Nächste Datei abspielen"
 #: src/qml/Footer.qml:243
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
-msgstr "Verbleibende Zeit: %1"
+msgstr "Verbleibend: %1"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:42
 msgctxt "@info:tooltip"
 msgid "Select a color"
-msgstr "Farbe auswählen"
+msgstr "Eine Farbe auswählen"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
 msgstr "Farbe auswählen"
@@ -888,22 +778,19 @@ msgstr "Zuletzt geöffnete Dateien"
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
-msgstr "Primäre Untertitel"
+msgstr "Primärer Untertitel"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:89
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
-msgstr "Sekundäre Untertitel"
+msgstr "Sekundärer Untertitel"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:98
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "&Audio"
+msgstr "Audiospur"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:121
 msgctxt "@action:inmenu"
@@ -920,17 +807,11 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> wurde gefunden."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from:"
-msgstr "Untertitel laden von"
+msgstr "Untertitel laden von:"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "Löschen bestätigen"
@@ -946,16 +827,10 @@ msgid "Save changes"
 msgstr "Änderungen speichern"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:142
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Config folder"
 msgid "No folder set"
-msgstr "Einstellungsordner"
+msgstr "Kein Ordner ausgewählt"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Neuen Ordner hinzufügen"
@@ -966,12 +841,9 @@ msgid "Add a folder in which to look for subtitles."
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:177
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Untertiteldatei auswählen"
+msgstr "Rekursiv nach Untertiteln suchen"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:194
 msgctxt "@info:tooltip"
@@ -991,12 +863,9 @@ msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/HProgressBar.qml:42
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Kapitel überspringen"
+msgstr "Kapitelmenü öffnen"
 
 #: src/qml/HProgressBar.qml:291
 msgctxt "@action:inmenu"
@@ -1016,17 +885,11 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:317
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Datei auswählen"
 
 #: src/qml/Main.qml:336
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Untertiteldatei auswählen"
@@ -1042,12 +905,9 @@ msgid "&Audio"
 msgstr "&Audio"
 
 #: src/qml/Menus/AudioMenu.qml:26 src/qml/Menus/Global/GlobalAudioMenu.qml:25
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio"
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "&Audio"
+msgstr "&Spur"
 
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
@@ -1089,99 +949,66 @@ msgstr "&Einstellungen"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:20
 #: src/qml/Menus/SettingsMenu.qml:20
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "General"
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "Allgemein"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:26
 #: src/qml/Menus/SettingsMenu.qml:26
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback"
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "Wiedergabe"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:32
 #: src/qml/Menus/SettingsMenu.qml:32
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Video"
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "Video"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:38
 #: src/qml/Menus/SettingsMenu.qml:38
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "Audio"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:44
 #: src/qml/Menus/SettingsMenu.qml:44
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "Untertitel"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:50
 #: src/qml/Menus/SettingsMenu.qml:50
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "Wiedergabeliste"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:56
 #: src/qml/Menus/SettingsMenu.qml:56
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Mouse"
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "Maus"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:62
 #: src/qml/Menus/SettingsMenu.qml:62
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Shortcuts"
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:69
 #: src/qml/Menus/SettingsMenu.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "Benutzerdefinierte Befehle"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:75
 #: src/qml/Menus/SettingsMenu.qml:75
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Debug"
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "Debug"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:81
 #: src/qml/Menus/SettingsMenu.qml:81
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "About"
 msgctxt "@action:inmenu"
 msgid "About"
 msgstr "Über"
@@ -1200,7 +1027,7 @@ msgstr "Video"
 #: src/qml/Menus/Global/GlobalVideoMenu.qml:83 src/qml/Menus/VideoMenu.qml:29
 msgctxt "@title:menu"
 msgid "Adjustments"
-msgstr "Bild-Anpassungen"
+msgstr "Anpassungen"
 
 #: src/qml/Menus/Global/GlobalViewMenu.qml:15 src/qml/Menus/ViewMenu.qml:15
 msgctxt "@title:menu"
@@ -1228,9 +1055,6 @@ msgid "Show Toolbar"
 msgstr "Werkzeugleiste anzeigen"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Wiedergabegeschwindigkeit"
@@ -1241,9 +1065,6 @@ msgid "Volume: %1"
 msgstr "Lautstärke: %1"
 
 #: src/qml/PlayList.qml:69
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Wiedergabeliste öffnen"
@@ -1251,7 +1072,7 @@ msgstr "Wiedergabeliste öffnen"
 #: src/qml/PlayList.qml:78
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Hinzufügen …"
 
 #: src/qml/PlayList.qml:81
 msgctxt "@action:button"
@@ -1261,7 +1082,7 @@ msgstr "Datei"
 #: src/qml/PlayList.qml:89
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/qml/PlayList.qml:100
 msgctxt "@action:button"
@@ -1269,36 +1090,24 @@ msgid "Sort"
 msgstr "Sortieren"
 
 #: src/qml/PlayList.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
 msgctxt "@action:button"
 msgid "Name, ascending"
-msgstr "Namen aufsteigend"
+msgstr "Name, aufsteigend"
 
 #: src/qml/PlayList.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
 msgctxt "@action:button"
 msgid "Name, descending"
-msgstr "Namen absteigend"
+msgstr "Name, absteigend"
 
 #: src/qml/PlayList.qml:116
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
 msgctxt "@action:button"
 msgid "Duration, ascending"
-msgstr "Dauer aufsteigend"
+msgstr "Dauer, aufsteigend"
 
 #: src/qml/PlayList.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
 msgctxt "@action:button"
 msgid "Duration, descending"
-msgstr "Dauer absteigend"
+msgstr "Dauer, absteigend"
 
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
@@ -1306,9 +1115,6 @@ msgid "Clear"
 msgstr "Leeren"
 
 #: src/qml/PlayList.qml:137
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Speichern unter"
@@ -1319,73 +1125,49 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 #: src/qml/PlayList.qml:243
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
 #: src/qml/PlayList.qml:249
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config folder"
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
-msgstr "Einstellungsordner öffnen"
+msgstr "Im Browser öffnen"
 
 #: src/qml/PlayList.qml:258
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
-msgstr "Dateinamen kopieren"
+msgstr "Namen kopieren"
 
 #: src/qml/PlayList.qml:263
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
-msgstr "Dateipfad kopieren"
+msgstr "Pfad kopieren"
 
 #: src/qml/PlayList.qml:264
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr "Adresse (URL) öffnen"
+msgstr "URL kopieren"
 
 #: src/qml/PlayList.qml:269
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Aus Wiedergabeliste entfernen"
 
 #: src/qml/PlayList.qml:274
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Datei umbenennen"
+msgstr "Umbenennen"
 
 #: src/qml/PlayList.qml:280
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Start playing"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
-msgstr "Wiedergabe starten"
+msgstr "Zu aktuellem Element gehen"
 
 #: src/qml/PlayList.qml:290
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Datei in den Papierkorb verschieben"
 
 #: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1415,9 +1197,6 @@ msgid "No custom commands yet"
 msgstr "Noch keine benutzerdefinierten Befehle"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:37
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Add command"
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "Befehl &hinzufügen"
@@ -1455,20 +1234,14 @@ msgid "Open config file"
 msgstr "Einstellungsdatei öffnen"
 
 #: src/qml/Settings/DebugSettings.qml:73
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Benutzerdefinierte Befehle"
+msgstr "Konfigurationsdatei für benutzerdefinierte Befehle"
 
 #: src/qml/Settings/DebugSettings.qml:85
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "No custom commands yet"
 msgctxt "@info:tooltip"
 msgid "Open custom commands config file"
-msgstr "Noch keine benutzerdefinierten Befehle"
+msgstr "Konfigurationsdatei für benutzerdefinierte Befehle öffnen"
 
 #: src/qml/Settings/DebugSettings.qml:97
 msgctxt "@info:usagetip"
@@ -1508,12 +1281,9 @@ msgid "OSD Message"
 msgstr "OSD-Nachricht"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "Lautstärke: %1"
+msgstr "Dateiname: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1566,9 +1336,6 @@ msgid "&Save"
 msgstr "&Speichern"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "OSD-Schriftgröße"
@@ -1576,37 +1343,33 @@ msgstr "OSD-Schriftgröße"
 #: src/qml/Settings/GeneralSettings.qml:51
 msgctxt "@label:textbox"
 msgid "File dialog location"
-msgstr "Position des Dateidialogs"
+msgstr "Ort des „Datei öffnen“-Dialogs"
 
 #: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "If empty the file dialog will remember the last opened location."
 msgctxt "@info:tooltip"
 msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
-msgstr "Wenn leer, wird die letzte Position des Dialogs gespeichert."
+msgstr ""
+"Standardort für den „Datei öffnen“-Dialog. Wenn hier nichts angegeben ist, "
+"wird versucht, den zuletzt geöffneten Ordner zu öffnen."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
-msgstr "Anzahl zuletzt geöffneter Dateien"
+msgstr "Maximale Anzahl zuletzt geöffneter Dateien"
 
 #: src/qml/Settings/GeneralSettings.qml:98
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "How many recent files to store. Enter 0 (zero) to disable."
 msgctxt "@info:tooltip"
 msgid "The number of recent files to store. Enter 0 (zero) to disable."
 msgstr ""
-"Wie viele Dateien gespeichert werden sollen. Geben Sie zum Deaktivieren 0 "
-"(null) ein."
+"Die zu speichernde Anzahl der zuletzt verwendeten Dateien. Geben Sie zum "
+"Deaktivieren 0 (Null) ein."
 
 #: src/qml/Settings/GeneralSettings.qml:106
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Nur eine Instanz erlauben"
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@info:tooltip"
@@ -1617,12 +1380,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:136
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Datei zur Wiedergabeliste hinzufügen"
 
 #: src/qml/Settings/GeneralSettings.qml:152
 msgctxt "@info:tooltip"
@@ -1630,12 +1390,9 @@ msgid "File will be added to the end of the playlist"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:164
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
-msgstr "Nächste Datei abspielen"
+msgstr "Neue Datei abspielen"
 
 #: src/qml/Settings/GeneralSettings.qml:175
 msgctxt "@title"
@@ -1643,12 +1400,9 @@ msgid "Interface"
 msgstr "Oberfläche"
 
 #: src/qml/Settings/GeneralSettings.qml:181
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font style"
 msgctxt "@label:spinbox"
 msgid "Footer style"
-msgstr "Schriftstil"
+msgstr "Stil der Fußzeile"
 
 #: src/qml/Settings/GeneralSettings.qml:206
 msgctxt "@label:spinbox"
@@ -1666,12 +1420,12 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:243
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr ""
+msgstr "Vorschaubild"
 
 #: src/qml/Settings/GeneralSettings.qml:248
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "Vorschaubild anzeigen"
 
 #: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@info:tooltip"
@@ -1691,22 +1445,22 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "Vorschaubildbreite"
 
 #: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@label"
 msgid "Window"
-msgstr ""
+msgstr "Fenster"
 
 #: src/qml/Settings/GeneralSettings.qml:315
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "An Video anpassen"
 
 #: src/qml/Settings/GeneralSettings.qml:333
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr ""
+msgstr "Unter Wayland nicht unterstützt."
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt "@info:tooltip"
@@ -1718,7 +1472,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Im Vollbildmodus starten"
 
 #: src/qml/Settings/GeneralSettings.qml:362
 msgctxt "@info:tooltip"
@@ -1784,18 +1538,15 @@ msgid ""
 "Sets the icon theme to breeze.\n"
 "Requires restart."
 msgstr ""
-"Stellt das Symboldesign auf Breeze.\n"
+"Verwendet das Breeze-Symboldesign.\n"
 "Benötigt Neustart."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
-msgstr ""
+msgstr "Maustatstenaktion entfernen"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Hinzufügen"
@@ -1803,80 +1554,77 @@ msgstr "&Hinzufügen"
 #: src/qml/Settings/MouseSettings.qml:125
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "Maustatstenaktion hinzufügen"
 
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label"
 msgid "Mouse button"
-msgstr ""
+msgstr "Maustaste"
 
 #: src/qml/Settings/MouseSettings.qml:154
 msgctxt "@label:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: src/qml/Settings/MouseSettings.qml:155
 msgctxt "@label:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Mitte"
 
 #: src/qml/Settings/MouseSettings.qml:156
 msgctxt "@label:listbox right mouse button"
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: src/qml/Settings/MouseSettings.qml:157
 msgctxt "@label:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "Vorwärts"
 
 #: src/qml/Settings/MouseSettings.qml:158
 msgctxt "@label:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 #: src/qml/Settings/MouseSettings.qml:159
 msgctxt "@label:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "Nach oben scrollen"
 
 #: src/qml/Settings/MouseSettings.qml:160
 msgctxt "@label:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "Nach unten scrollen"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@label"
 msgid "Modifier key"
-msgstr ""
+msgstr "Sondertaste"
 
 #: src/qml/Settings/MouseSettings.qml:177
 msgctxt "@label:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "Keine Sondertaste"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
 msgctxt "@label:listbox control modifier key"
 msgid "Control"
-msgstr "Kontrast"
+msgstr "Strg"
 
 #: src/qml/Settings/MouseSettings.qml:179
 msgctxt "@label:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Umschalt"
 
 #: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@label:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
 msgctxt "@label:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
 msgctxt ""
@@ -1887,39 +1635,27 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "Aktion"
 
 #: src/qml/Settings/MouseSettings.qml:210
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "Farbe auswählen"
+msgstr "Aktion auswählen"
 
 #: src/qml/Settings/MouseSettings.qml:214
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window select mouse button action"
 msgid "Select action"
-msgstr "Farbe auswählen"
+msgstr "Aktion auswählen"
 
 #: src/qml/Settings/MouseSettings.qml:231
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear current action"
 msgctxt "@action:button change mouse button action "
 msgid "Change action"
-msgstr "Aktuelle Aktion entfernen"
+msgstr "Aktion ändern"
 
 #: src/qml/Settings/MouseSettings.qml:240
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@info"
 msgid "No action selected"
-msgstr "Sättigung zurücksetzen"
+msgstr "Keine Aktion ausgewählt"
 
 #: src/qml/Settings/MouseSettings.qml:263
 msgctxt "@info"
@@ -1929,7 +1665,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
 msgid "Seek small step"
-msgstr "Kleiner Schritt"
+msgstr "Einen kleinen Schritt spulen"
 
 #: src/qml/Settings/PlaybackSettings.qml:45
 msgctxt "@info:tooltip seek small step setting"
@@ -1942,7 +1678,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:52
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
-msgstr "Mittlerer Schritt"
+msgstr "Einen mittleren Schritt spulen"
 
 #: src/qml/Settings/PlaybackSettings.qml:72
 msgctxt "@info:tooltip seek medium step setting"
@@ -1956,7 +1692,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:80
 msgctxt "@label:spinbox"
 msgid "Seek big step"
-msgstr "Großer Schritt"
+msgstr "Einen großen Schritt spulen"
 
 #: src/qml/Settings/PlaybackSettings.qml:99
 msgctxt "@info:tooltip seek big step setting"
@@ -2010,34 +1746,23 @@ msgid "Pause on minimize"
 msgstr "Beim Minimieren pausieren"
 
 #: src/qml/Settings/PlaybackSettings.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pauses the player while the window is minimized, playback resumes when "
-#| "restored."
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr ""
-"Hält die Wiedergabe an während das Fenster minimiert ist. Die Wiedergabe "
-"wird beim Wiederherstellen fortgesetzt."
+"Pausiert die Wiedergabe, während das Fenster minimiert ist. Die Wiedergabe "
+"wird beim Wiederherstellen des Fensters fortgesetzt."
 
 #: src/qml/Settings/PlaybackSettings.qml:209
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Zur letzten Abspielposition gehen"
+msgstr "Abspielposition"
 
 #: src/qml/Settings/PlaybackSettings.qml:219
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Seek to last playback position"
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "Zur letzten Abspielposition gehen"
+msgstr "Abspielposition wiederherstellen"
 
 #: src/qml/Settings/PlaybackSettings.qml:228
 msgctxt "@info:tooltip save playback position"
@@ -2065,23 +1790,16 @@ msgid "The file will be playing after restoring the playback position"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:275
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@info"
 msgid "For any duration"
-msgstr "Sättigung"
+msgstr "Für beliebige Dauer"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For files longer than %1 minute"
-#| msgid_plural "For files longer than %1 minutes"
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
-msgstr[0] "Für Dateien länger als %1 Minute"
-msgstr[1] "Für Dateien länger als %1 Minuten"
+msgstr[0] "Wenn die Dauer mehr als %1 Minute beträgt"
+msgstr[1] "Wenn die Dauer mehr als %1 Minuten beträgt"
 
 #: src/qml/Settings/PlaybackSettings.qml:287
 msgctxt "@info:tooltip restore playback position > duration"
@@ -2089,10 +1807,6 @@ msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:309
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -2100,17 +1814,11 @@ msgstr[0] "Die Position jede Sekunde speichern"
 msgstr[1] "Die Position alle %1 Sekunden speichern"
 
 #: src/qml/Settings/PlaybackSettings.qml:322
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Skip Chapters"
 msgctxt "@title"
 msgid "Chapters"
-msgstr "Kapitel überspringen"
+msgstr "Kapitel"
 
 #: src/qml/Settings/PlaybackSettings.qml:331
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Kapitel überspringen"
@@ -2123,12 +1831,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:347
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
-msgstr "OSD-Nachricht beim Springen anzeigen"
+msgstr "OSD-Nachricht beim Überspringen anzeigen"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@info:tooltip show OSD message on skip setting"
@@ -2140,7 +1845,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "Schlüsselwörter"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "placeholder text"
@@ -2165,14 +1870,9 @@ msgid "Format selection"
 msgstr "Formatauswahl"
 
 #: src/qml/Settings/PlaybackSettings.qml:447
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Selects the best video with a height lower than or equal to the selected "
-#| "value."
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
-msgstr "Wählt das beste Video mit einer maximalen Höhe des gewählten Wertes."
+msgstr "Wählt eine Videoquelle, die dem gewählten Format am nächsten kommt."
 
 #: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
@@ -2182,7 +1882,7 @@ msgstr "Position"
 #: src/qml/Settings/PlaylistSettings.qml:49
 msgctxt "@label:listbox"
 msgid "Playlist style"
-msgstr "Stil"
+msgstr "Wiedergabelisten-Stil"
 
 #: src/qml/Settings/PlaylistSettings.qml:87
 msgctxt "@option:check"
@@ -2196,7 +1896,7 @@ msgid ""
 "When unchecked the video is resized"
 msgstr ""
 "Wenn aktiviert, wird die Wiedergabeliste über dem Video angezeigt\n"
-"When deaktiviert, wird das Video verkleinert"
+"Wenn deaktiviert, wird das Video verkleinert"
 
 #: src/qml/Settings/PlaylistSettings.qml:101
 msgctxt "@option:check"
@@ -2211,7 +1911,7 @@ msgstr "Videos aus demselben Ordner automatisch laden"
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Autoplay"
-msgstr ""
+msgstr "Automatische Wiedergabe"
 
 #: src/qml/Settings/PlaylistSettings.qml:128
 msgctxt "@info:tooltip"
@@ -2231,7 +1931,7 @@ msgstr "Zeilennummer anzeigen"
 #: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Toggle with mouse"
-msgstr "Umschalten mit Maus"
+msgstr "Mit Maus umschalten"
 
 #: src/qml/Settings/PlaylistSettings.qml:165
 msgctxt "@option:check"
@@ -2241,7 +1941,7 @@ msgstr "Schrift vergrößern bei Vollbildmodus"
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr "Letzten Zustand der Wiedergabeliste speichern"
+msgstr "Den letzten Zustand der Wiedergabeliste merken"
 
 #: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
@@ -2249,7 +1949,7 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
-"Wenn aktiviert, wird der Status der Wiedergabeliste (sichtbar/ausgeblendet) "
+"Wenn aktiviert, wird der Zustand der Wiedergabeliste (sichtbar/ausgeblendet) "
 "über den Programmstart hinaus gespeichert"
 
 #: src/qml/Settings/PlaylistSettings.qml:193
@@ -2298,9 +1998,6 @@ msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
 #: src/qml/Settings/SettingsWindow.qml:137
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Benutzerdefinierte Befehle"
@@ -2318,7 +2015,7 @@ msgstr "Über"
 #: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:check"
 msgid "Auto select track"
-msgstr ""
+msgstr "Spur automatisch auswählen"
 
 #: src/qml/Settings/SubtitlesSettings.qml:45
 msgctxt "@info:tooltip"
@@ -2394,7 +2091,7 @@ msgstr "Schattenversatz"
 #: src/qml/Settings/SubtitlesSettings.qml:403
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
-msgstr "Auf 0 (null) setzen zum Deaktivieren."
+msgstr "Auf 0 (Null) setzen zum Deaktivieren."
 
 #: src/qml/Settings/SubtitlesSettings.qml:331
 msgctxt "@label:textbox"
@@ -2417,19 +2114,14 @@ msgid "path to image"
 msgstr "Pfad zu Bilddatei"
 
 #: src/qml/Settings/VideoSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Used for music files that don't have a video track, an embedded cover "
-#| "image or a cover/folder image in the same folder as the played file."
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
-"Wird bei Musikdateien verwendet, die keine Videospur enthalten. Ein "
-"eingebettetes Titelbild oder ein Titel-/Ordnerbild im selben Ordner wie die "
-"abgespielte Datei."
+"Wird bei Musikdateien verwendet, die keine Videospur, kein eingebettetes "
+"Titelbild oder ein Titel-/Ordnerbild im selben Ordner wie die abgespielte "
+"Datei besitzen."
 
 #: src/qml/Settings/VideoSettings.qml:80
 msgctxt "@title"
