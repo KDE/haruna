@@ -139,7 +139,7 @@ SettingsBasePage {
                 width: parent.width
 
                 Label {
-                    text: i18nc("@label", "Mouse button")
+                    text: i18nc("@label:listbox", "Mouse button")
                 }
 
                 ComboBox {
@@ -151,13 +151,13 @@ SettingsBasePage {
                         "ScrollUp", "ScrollDown"
                     ]
                     model: [
-                        i18nc("@label:listbox left mouse button", "Left"),
-                        i18nc("@label:listbox middle mouse button", "Middle"),
-                        i18nc("@label:listbox right mouse button", "Right"),
-                        i18nc("@label:listbox forward mouse button", "Forward"),
-                        i18nc("@label:listbox back mouse button", "Back"),
-                        i18nc("@label:listbox mouse scroll up", "Scroll up"),
-                        i18nc("@label:listbox mouse scroll down", "Scroll down")
+                        i18nc("@item:listbox left mouse button", "Left"),
+                        i18nc("@item:listbox middle mouse button", "Middle"),
+                        i18nc("@item:listbox right mouse button", "Right"),
+                        i18nc("@item:listbox forward mouse button", "Forward"),
+                        i18nc("@item:listbox back mouse button", "Back"),
+                        i18nc("@item:listbox mouse scroll up", "Scroll up"),
+                        i18nc("@item:listbox mouse scroll down", "Scroll down")
                     ]
                     onActivated: {
                         Q_EMIT: root.newMouseActionChanged()
@@ -166,7 +166,7 @@ SettingsBasePage {
                 }
 
                 Label {
-                    text: i18nc("@label", "Modifier key")
+                    text: i18nc("@label:listbox", "Modifier key")
                 }
 
                 ComboBox {
@@ -174,11 +174,11 @@ SettingsBasePage {
                     property string value: modelValues[currentIndex]
                     property list<string> modelValues: ["NoModifier", "Control", "Shift", "Alt", "Meta"]
                     model: [
-                        i18nc("@label:listbox no modifier key", "No modifier"),
-                        i18nc("@label:listbox control modifier key", "Control"),
-                        i18nc("@label:listbox shift modifier key", "Shift"),
-                        i18nc("@label:listbox alt modifier key", "Alt"),
-                        i18nc("@label:listbox meta modifier key", "Meta")
+                        i18nc("@item:listbox no modifier key", "No modifier"),
+                        i18nc("@item:listbox control modifier key", "Control"),
+                        i18nc("@item:listbox shift modifier key", "Shift"),
+                        i18nc("@item:listbox alt modifier key", "Alt"),
+                        i18nc("@item:listbox meta modifier key", "Meta")
                     ]
                     onActivated: {
                         Q_EMIT: root.newMouseActionChanged()
