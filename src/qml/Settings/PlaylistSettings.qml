@@ -26,19 +26,27 @@ SettingsBasePage {
         }
 
         ComboBox {
-            textRole: "key"
+            textRole: "text"
+            valueRole: "value"
             model: ListModel {
-                ListElement { key: "Left"; value: "left" }
-                ListElement { key: "Right"; value: "right" }
+                id: positionModel
             }
             Component.onCompleted: {
-                for (let i = 0; i < model.count; ++i) {
-                    if (model.get(i).value === PlaylistSettings.position) {
-                        currentIndex = i
-                        break
-                    }
+                const left = {
+                    text: i18nc("@item:listbox playlist position", "Left"),
+                    value: "left"
                 }
+                positionModel.append(left)
+
+                const right = {
+                    text: i18nc("@item:listbox playlist position", "Right"),
+                    value: "right"
+                }
+                positionModel.append(right)
+
+                currentIndex = indexOfValue(PlaylistSettings.position)
             }
+
             onActivated: function(index) {
                 PlaylistSettings.position = model.get(index).value
                 PlaylistSettings.save()
@@ -51,19 +59,31 @@ SettingsBasePage {
         }
 
         ComboBox {
-            textRole: "display"
+            textRole: "text"
+            valueRole: "value"
             model: ListModel {
-                ListElement { display: "Default"; value: "default" }
-                ListElement { display: "With thumbnails"; value: "withThumbnails" }
-                ListElement { display: "Compact"; value: "compact" }
+                id: styleModel
             }
             Component.onCompleted: {
-                for (let i = 0; i < model.count; ++i) {
-                    if (model.get(i).value === PlaylistSettings.style) {
-                        currentIndex = i
-                        break
-                    }
+                const defaultStyle = {
+                    text: i18nc("@item:listbox the style of the playlist", "Default"),
+                    value: "default"
                 }
+                styleModel.append(defaultStyle)
+
+                const thumbnail = {
+                    text: i18nc("@item:listbox the style of the playlist", "With thumbnails"),
+                    value: "withThumbnails"
+                }
+                styleModel.append(thumbnail)
+
+                const compact = {
+                    text: i18nc("@item:listbox the style of the playlist", "Compact"),
+                    value: "compact"
+                }
+                styleModel.append(compact)
+
+                currentIndex = indexOfValue(PlaylistSettings.style)
             }
             onActivated: function(index) {
                 PlaylistSettings.style = model.get(index).value
