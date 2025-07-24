@@ -183,18 +183,25 @@ SettingsBasePage {
         }
 
         ComboBox {
-            textRole: "display"
+            textRole: "text"
+            valueRole: "value"
             model: ListModel {
-                ListElement { display: "Default"; value: "default" }
-                ListElement { display: "Floating"; value: "floating" }
+                id: footerStyleModel
             }
             Component.onCompleted: {
-                for (let i = 0; i < model.count; ++i) {
-                    if (model.get(i).value === GeneralSettings.footerStyle) {
-                        currentIndex = i
-                        break
-                    }
+                const defaultStyle = {
+                    text: i18nc("@item:listbox the footer style", "Default"),
+                    value: "default"
                 }
+                footerStyleModel.append(defaultStyle)
+
+                const floatingStyle = {
+                    text: i18nc("@item:listbox the footer style", "Floating"),
+                    value: "floating"
+                }
+                footerStyleModel.append(floatingStyle)
+
+                currentIndex = indexOfValue(GeneralSettings.footerStyle)
             }
             onActivated: function(index) {
                 GeneralSettings.footerStyle = model.get(index).value
@@ -203,26 +210,33 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Show floating footer on")
+            text: i18nc("@label:listbox", "Show floating footer on")
             Layout.alignment: Qt.AlignRight
         }
 
         RowLayout {
             ComboBox {
-                textRole: "display"
+                textRole: "text"
+                valueRole: "value"
                 enabled: GeneralSettings.footerStyle === "floating"
                 model: ListModel {
-                    ListElement { display: "Every mouse movement"; value: "EveryMouseMovement" }
-                    ListElement { display: "Bottom mouse movement"; value: "BottomMouseMovement" }
+                    id: floatingFooterTriggerModel
                 }
 
                 Component.onCompleted: {
-                    for (let i = 0; i < model.count; ++i) {
-                        if (model.get(i).value === GeneralSettings.floatingFooterTrigger) {
-                            currentIndex = i
-                            break
-                        }
+                    const everyMovement = {
+                        text: i18nc("@item:listbox how to trigger the floating footer", "Every mouse movement"),
+                        value: "EveryMouseMovement"
                     }
+                    floatingFooterTriggerModel.append(everyMovement)
+
+                    const bottomMovement = {
+                        text: i18nc("@item:listbox how to trigger the floating footer", "Bottom mouse movement"),
+                        value: "BottomMouseMovement"
+                    }
+                    floatingFooterTriggerModel.append(bottomMovement)
+
+                    currentIndex = indexOfValue(GeneralSettings.floatingFooterTrigger)
                 }
                 onActivated: function(index) {
                     GeneralSettings.floatingFooterTrigger = model.get(index).value
@@ -491,15 +505,14 @@ SettingsBasePage {
         ComboBox {
             id: guiStyleComboBox
 
-            textRole: "key"
+            textRole: "text"
+            valueRole: "value"
             model: ListModel {
                 id: stylesModel
-
-                ListElement { key: "Default"; }
             }
 
             onActivated: function(index) {
-                GeneralSettings.guiStyle = model.get(index).key
+                GeneralSettings.guiStyle = model.get(index).value
                 HarunaApp.setGuiStyle(GeneralSettings.guiStyle)
                 // some themes can cause a crash
                 // the timer prevents saving the crashing theme,
@@ -517,18 +530,25 @@ SettingsBasePage {
             }
 
             Component.onCompleted: {
+                const defaultStyle = {
+                    text: i18nc("@item:listbox default GUI style", "Default"),
+                    value: "Default"
+                }
+                stylesModel.append(defaultStyle)
+
+
                 // populate the model with the available styles
-                for (let i = 0; i < HarunaApp.availableGuiStyles().length; ++i) {
-                    stylesModel.append({key: HarunaApp.availableGuiStyles()[i]})
+                const styles = HarunaApp.availableGuiStyles()
+                for (let i = 0; i < styles.length; ++i) {
+                    const style = {
+                        text: styles[i],
+                        value: styles[i]
+                    }
+                    stylesModel.append(style)
                 }
 
                 // set the saved style as the current item in the combo box
-                for (let j = 0; j < stylesModel.count; ++j) {
-                    if (stylesModel.get(j).key === GeneralSettings.guiStyle) {
-                        currentIndex = j
-                        break
-                    }
-                }
+                currentIndex = indexOfValue(GeneralSettings.guiStyle)
             }
         }
 
