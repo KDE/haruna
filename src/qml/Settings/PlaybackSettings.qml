@@ -411,35 +411,42 @@ SettingsBasePage {
         ComboBox {
             id: ytdlFormatComboBox
 
-            property string hCurrentvalue: ""
-
-            textRole: "key"
+            textRole: "text"
+            valueRole: "value"
             model: ListModel {
-                id: leftButtonModel
-                ListElement { key: "Custom"; value: "" }
-                ListElement { key: "Default"; value: "bestvideo+bestaudio/best" }
-                ListElement { key: "2160"; value: "bestvideo[height<=2160]+bestaudio/best" }
-                ListElement { key: "1440"; value: "bestvideo[height<=1440]+bestaudio/best" }
-                ListElement { key: "1080"; value: "bestvideo[height<=1080]+bestaudio/best" }
-                ListElement { key: "720"; value: "bestvideo[height<=720]+bestaudio/best" }
-                ListElement { key: "480"; value: "bestvideo[height<=480]+bestaudio/best" }
+                id: formatModel
             }
 
             onActivated: function(index) {
-                hCurrentvalue = model.get(index).value
                 if (index === 0) {
-                    ytdlFormatField.text = PlaybackSettings.ytdlFormatCustom
+                    PlaybackSettings.ytdlFormat = PlaybackSettings.ytdlFormatCustom
+                } else {
+                    PlaybackSettings.ytdlFormat = ytdlFormatComboBox.valueAt(currentIndex)
                 }
-                if (index > 0) {
-                    ytdlFormatField.focus = true
-                    ytdlFormatField.text = model.get(index).value
-                }
-                PlaybackSettings.ytdlFormat = ytdlFormatField.text
-                PlaybackSettings.save()
+
                 mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
+                PlaybackSettings.save()
             }
 
             Component.onCompleted: {
+                const defaultSelection = {
+                    text: i18nc("@item:listbox the default youtube-dl format selection", "Default"),
+                    value: "bestvideo+bestaudio/best"
+                }
+                formatModel.append(defaultSelection)
+
+                const customSelection = {
+                    text: i18nc("@item:listbox the custom youtube-dl format selection", "Custom"),
+                    value: ""
+                }
+                formatModel.append(customSelection)
+
+                formatModel.append({ text: "2160", value: "bestvideo[height<=2160]+bestaudio/best" })
+                formatModel.append({ text: "1440", value: "bestvideo[height<=1440]+bestaudio/best" })
+                formatModel.append({ text: "1080", value: "bestvideo[height<=1080]+bestaudio/best" })
+                formatModel.append({ text: "720",  value: "bestvideo[height<=720]+bestaudio/best" })
+                formatModel.append({ text: "480",  value: "bestvideo[height<=480]+bestaudio/best" })
+
                 currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
             }
 
@@ -470,41 +477,35 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1 }
 
         TextField {
-            id: ytdlFormatField
+            id: ytdlCustomFormatField
 
-            text: PlaybackSettings.ytdlFormat
+            text: PlaybackSettings.ytdlFormatCustom
+            visible: ytdlFormatComboBox.currentIndex === 0
             placeholderText: "bestvideo+bestaudio/best"
+
             Layout.fillWidth: true
-            onEditingFinished: save()
 
             onTextChanged: {
-                if (ytdlFormatComboBox.hCurrentvalue !== ytdlFormatField.text) {
-                    // text doesn't match any of the combobox's preset values
-                    // meaning there's a custom value, set the index to the custom entry
-                    // and save the text to PlaybackSettings.ytdlFormatCustom
-                    ytdlFormatComboBox.currentIndex = 0
-                    PlaybackSettings.ytdlFormatCustom = text
-                    return;
-                }
-                if (ytdlFormatComboBox.hIndexOfValue(ytdlFormatField.text) !== -1) {
-                    // text matches one of the combobox's preset values
-                    // set the index of the matched entry as the current one
-                    ytdlFormatComboBox.currentIndex = ytdlFormatComboBox.hIndexOfValue(ytdlFormatField.text)
-                    return;
-                }
+                PlaybackSettings.ytdlFormatCustom = ytdlCustomFormatField.text
+                PlaybackSettings.ytdlFormat = ytdlCustomFormatField.text
+                mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
+                PlaybackSettings.save()
             }
 
             Connections {
                 target: root
                 function onSave() {
-                    ytdlFormatField.save()
+                    PlaybackSettings.ytdlFormatCustom = ytdlCustomFormatField.text
+                    PlaybackSettings.save()
                 }
             }
+        }
 
-            function save() : void {
-                PlaybackSettings.ytdlFormat = text
-                PlaybackSettings.save()
-            }
+        Kirigami.SelectableLabel {
+            text: PlaybackSettings.ytdlFormat
+            visible: ytdlFormatComboBox.currentIndex > 0
+
+            Layout.fillWidth: true
         }
 
         // ------------------------------------
