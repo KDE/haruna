@@ -224,7 +224,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     }
 
     QStringList siblingFiles;
-    QDirIterator it(openedFileInfo.absolutePath(), QDir::Files, QDirIterator::NoIteratorFlags);
+    QDirIterator it(openedFileInfo.absolutePath(), QDir::Files | QDir::Hidden, QDirIterator::NoIteratorFlags);
     while (it.hasNext()) {
         QString siblingFile = it.next();
         QFileInfo siblingFileInfo(siblingFile);
