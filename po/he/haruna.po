@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-14 00:41+0000\n"
+"POT-Creation-Date: 2025-07-25 00:42+0000\n"
 "PO-Revision-Date: 2025-07-14 10:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1421,12 +1421,38 @@ msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "סגנון כותרת תחתונה"
 
-#: src/qml/Settings/GeneralSettings.qml:206
-msgctxt "@label:spinbox"
+#: src/qml/Settings/GeneralSettings.qml:193
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the footer style"
+msgid "Default"
+msgstr "כריכת ברירת מחדל"
+
+#: src/qml/Settings/GeneralSettings.qml:199
+msgctxt "@item:listbox the footer style"
+msgid "Floating"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:213
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Show floating footer on"
+msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "הצגת כותרת תחתונה צפה ב־"
 
-#: src/qml/Settings/GeneralSettings.qml:235
+#: src/qml/Settings/GeneralSettings.qml:228
+msgctxt "@item:listbox how to trigger the floating footer"
+msgid "Every mouse movement"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:234
+msgctxt "@item:listbox how to trigger the floating footer"
+msgid "Bottom mouse movement"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:249
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1437,52 +1463,52 @@ msgstr ""
 "תנועת עכבר על גבי אזור הווידאו<br><strong>תנועת עכבר למטה</strong> — תנועת "
 "עכבר בחלק התחתון של אזור הווידאו"
 
-#: src/qml/Settings/GeneralSettings.qml:243
+#: src/qml/Settings/GeneralSettings.qml:257
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "תמונה ממוזערת להמחשה"
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:262
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "הצגת תמונה ממוזערת להמחשה"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:269
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "הצגת תצוגה מקדימה תוך ריחוף על סרגל החתירה/ההתקדמות."
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:278
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "להשתמש בהמחשה מדויקת"
 
-#: src/qml/Settings/GeneralSettings.qml:281
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "יצירת המחשה מדויקת היא איטית"
 
-#: src/qml/Settings/GeneralSettings.qml:291
+#: src/qml/Settings/GeneralSettings.qml:305
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "רוחב תמונה ממוזערת"
 
-#: src/qml/Settings/GeneralSettings.qml:309
+#: src/qml/Settings/GeneralSettings.qml:323
 msgctxt "@label"
 msgid "Window"
 msgstr "חלון"
 
-#: src/qml/Settings/GeneralSettings.qml:315
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "שינוי גודל להתאמה לסרטןו"
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "לא נתמך ב־Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:334
+#: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1491,12 +1517,12 @@ msgstr ""
 "גודל החלון ישתנה בהתאם לרזולוציית הווידאו.\n"
 "הגודל המרבי לא נאכף, הוא לשיקול מערכת ההפעלה."
 
-#: src/qml/Settings/GeneralSettings.qml:347
+#: src/qml/Settings/GeneralSettings.qml:361
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "התחלה במסך מלא"
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1506,19 +1532,19 @@ msgstr ""
 "להתחיל במסך מלא עם עליית היישום.\n"
 "ההגדרה הזאת קודמת לשינוי גודל להתאמה לסרטון ולזכירת גודל ומקום החלון."
 
-#: src/qml/Settings/GeneralSettings.qml:376
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "שמירת גודל ומקום החלון"
 
-#: src/qml/Settings/GeneralSettings.qml:396
+#: src/qml/Settings/GeneralSettings.qml:410
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>שחזור המקום לא נתמך ב־Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1527,38 +1553,46 @@ msgstr ""
 "שינויים לגודל ומקום החלון נשמרים ונעשה בהם שימוש בחלונות חדשים שנפתחים."
 "<br><br>%1ההגדרה „שינוי גודל להתאמה לסרטון” קודמת לזאת."
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "הצגת סרגל תפריטים"
 
-#: src/qml/Settings/GeneralSettings.qml:423
-#: src/qml/Settings/PlaylistSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:437
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "הצגת סרגל כלים"
 
-#: src/qml/Settings/GeneralSettings.qml:434
+#: src/qml/Settings/GeneralSettings.qml:448
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "הצגת סמני פרקים"
 
-#: src/qml/Settings/GeneralSettings.qml:443
+#: src/qml/Settings/GeneralSettings.qml:457
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "ערכת צבעים"
 
-#: src/qml/Settings/GeneralSettings.qml:487
+#: src/qml/Settings/GeneralSettings.qml:501
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "סגנון ממשק משתמש"
 
-#: src/qml/Settings/GeneralSettings.qml:538
+#: src/qml/Settings/GeneralSettings.qml:534
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox default GUI style"
+msgid "Default"
+msgstr "כריכת ברירת מחדל"
+
+#: src/qml/Settings/GeneralSettings.qml:558
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "להשתמש בערכת הסמלים בריזה"
 
-#: src/qml/Settings/GeneralSettings.qml:546
+#: src/qml/Settings/GeneralSettings.qml:566
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1583,72 +1617,114 @@ msgid "Add mouse button action"
 msgstr "הוספת פעולה לחצני עכבר"
 
 #: src/qml/Settings/MouseSettings.qml:142
-msgctxt "@label"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Mouse button"
+msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "לחצן עכבר"
 
 #: src/qml/Settings/MouseSettings.qml:154
-msgctxt "@label:listbox left mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox left mouse button"
+#| msgid "Left"
+msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "שמאלי"
 
 #: src/qml/Settings/MouseSettings.qml:155
-msgctxt "@label:listbox middle mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox middle mouse button"
+#| msgid "Middle"
+msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "אמצעי"
 
 #: src/qml/Settings/MouseSettings.qml:156
-msgctxt "@label:listbox right mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox right mouse button"
+#| msgid "Right"
+msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "ימני"
 
 #: src/qml/Settings/MouseSettings.qml:157
-msgctxt "@label:listbox forward mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox forward mouse button"
+#| msgid "Forward"
+msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "קדימה"
 
 #: src/qml/Settings/MouseSettings.qml:158
-msgctxt "@label:listbox back mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox back mouse button"
+#| msgid "Back"
+msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "אחורה"
 
 #: src/qml/Settings/MouseSettings.qml:159
-msgctxt "@label:listbox mouse scroll up"
+#, fuzzy
+#| msgctxt "@label:listbox mouse scroll up"
+#| msgid "Scroll up"
+msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "גלילה למעלה"
 
 #: src/qml/Settings/MouseSettings.qml:160
-msgctxt "@label:listbox mouse scroll down"
+#, fuzzy
+#| msgctxt "@label:listbox mouse scroll down"
+#| msgid "Scroll down"
+msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "גלילה למטה"
 
 #: src/qml/Settings/MouseSettings.qml:169
-msgctxt "@label"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Modifier key"
+msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "מקש החלפה"
 
 #: src/qml/Settings/MouseSettings.qml:177
-msgctxt "@label:listbox no modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox no modifier key"
+#| msgid "No modifier"
+msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "אין החלפה"
 
 #: src/qml/Settings/MouseSettings.qml:178
-msgctxt "@label:listbox control modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox control modifier key"
+#| msgid "Control"
+msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
 #: src/qml/Settings/MouseSettings.qml:179
-msgctxt "@label:listbox shift modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox shift modifier key"
+#| msgid "Shift"
+msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
-msgctxt "@label:listbox alt modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox alt modifier key"
+#| msgid "Alt"
+msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
-msgctxt "@label:listbox meta modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox meta modifier key"
+#| msgid "Meta"
+msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "מטא"
 
@@ -1934,7 +2010,20 @@ msgstr "Youtube-dl"
 msgid "Format selection"
 msgstr "בחירת תסדיר"
 
-#: src/qml/Settings/PlaybackSettings.qml:447
+#: src/qml/Settings/PlaybackSettings.qml:433
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the default youtube-dl format selection"
+msgid "Default"
+msgstr "כריכת ברירת מחדל"
+
+#: src/qml/Settings/PlaybackSettings.qml:439
+msgctxt "@item:listbox the custom youtube-dl format selection"
+msgid "Custom"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:454
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "בוחר את מקור הווידאו שהכי קרוב לתצורה הנבחרת."
@@ -1944,17 +2033,54 @@ msgctxt "@label:listbox"
 msgid "Position"
 msgstr "מקום"
 
-#: src/qml/Settings/PlaylistSettings.qml:49
+#: src/qml/Settings/PlaylistSettings.qml:36
+#, fuzzy
+#| msgctxt "@label:listbox left mouse button"
+#| msgid "Left"
+msgctxt "@item:listbox playlist position"
+msgid "Left"
+msgstr "שמאלי"
+
+#: src/qml/Settings/PlaylistSettings.qml:42
+#, fuzzy
+#| msgctxt "@label:listbox right mouse button"
+#| msgid "Right"
+msgctxt "@item:listbox playlist position"
+msgid "Right"
+msgstr "ימני"
+
+#: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "סגנון רשימת נגינה"
 
-#: src/qml/Settings/PlaylistSettings.qml:87
+#: src/qml/Settings/PlaylistSettings.qml:69
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the style of the playlist"
+msgid "Default"
+msgstr "כריכת ברירת מחדל"
+
+#: src/qml/Settings/PlaylistSettings.qml:75
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Preview thumbnail"
+msgctxt "@item:listbox the style of the playlist"
+msgid "With thumbnails"
+msgstr "תמונה ממוזערת להמחשה"
+
+#: src/qml/Settings/PlaylistSettings.qml:81
+msgctxt "@item:listbox the style of the playlist"
+msgid "Compact"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:107
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "ציפה מעל הסרטון"
 
-#: src/qml/Settings/PlaylistSettings.qml:94
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1963,59 +2089,59 @@ msgstr ""
 "כשהאפשרות מסוימת, רשימת הנגינה תצוף מעל הסרטון\n"
 "כשהאפשרות לא מסומנת גודל הווידאו ישתנה"
 
-#: src/qml/Settings/PlaylistSettings.qml:101
+#: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "הצגת כותרת מדיה במקום את שם הקובץ"
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:131
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "לטעון סרטונים אוטומטית מאותה התיקייה"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:141
 msgctxt "@option:check"
 msgid "Autoplay"
 msgstr "נגינה אוטומטית"
 
-#: src/qml/Settings/PlaylistSettings.qml:128
+#: src/qml/Settings/PlaylistSettings.qml:148
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
 msgstr "כשהאפשרות מסומנת הסרטון הבא יתנגן אוטומטית"
 
-#: src/qml/Settings/PlaylistSettings.qml:136
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "חזרה"
 
-#: src/qml/Settings/PlaylistSettings.qml:146
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "הצגת מספר שורה"
 
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:176
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "החלפה עם העכבר"
 
-#: src/qml/Settings/PlaylistSettings.qml:165
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "הגדלת הכתב במסך מלא"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:198
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "לזכור את המצב האחרון של רשימת הנגינה"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:205
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "כשהאפשרות מסומנת מצב רשימת הנגינה (גלויה/מוסתרת) נשמר בין הפעלות"
 
-#: src/qml/Settings/PlaylistSettings.qml:193
+#: src/qml/Settings/PlaylistSettings.qml:213
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "פתיחת פריטים בלחיצה בודדת"

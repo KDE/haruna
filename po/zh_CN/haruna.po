@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-14 00:41+0000\n"
+"POT-Creation-Date: 2025-07-25 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1419,12 +1419,38 @@ msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "页脚样式"
 
-#: src/qml/Settings/GeneralSettings.qml:206
-msgctxt "@label:spinbox"
+#: src/qml/Settings/GeneralSettings.qml:193
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the footer style"
+msgid "Default"
+msgstr "音乐文件默认封面"
+
+#: src/qml/Settings/GeneralSettings.qml:199
+msgctxt "@item:listbox the footer style"
+msgid "Floating"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:213
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Show floating footer on"
+msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "显示浮动页脚的操作"
 
-#: src/qml/Settings/GeneralSettings.qml:235
+#: src/qml/Settings/GeneralSettings.qml:228
+msgctxt "@item:listbox how to trigger the floating footer"
+msgid "Every mouse movement"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:234
+msgctxt "@item:listbox how to trigger the floating footer"
+msgid "Bottom mouse movement"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:249
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1434,52 +1460,52 @@ msgstr ""
 "用于显示页脚的操作<br><strong>Every mouse movement</strong> — 在视频区域之上"
 "移动鼠标<br><strong>在画面底部移动鼠标</strong> - 在视频底部区域移动鼠标"
 
-#: src/qml/Settings/GeneralSettings.qml:243
+#: src/qml/Settings/GeneralSettings.qml:257
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:262
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "显示预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:269
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "光标悬停在播放进度条上时显示预览"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:278
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "使用精确预览图"
 
-#: src/qml/Settings/GeneralSettings.qml:281
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "精确预览图的生成速度较慢"
 
-#: src/qml/Settings/GeneralSettings.qml:291
+#: src/qml/Settings/GeneralSettings.qml:305
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "缩略图宽度"
 
-#: src/qml/Settings/GeneralSettings.qml:309
+#: src/qml/Settings/GeneralSettings.qml:323
 msgctxt "@label"
 msgid "Window"
 msgstr "窗口"
 
-#: src/qml/Settings/GeneralSettings.qml:315
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "调整窗口大小以适应视频"
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "在 Wayland 环境中不支持。"
 
-#: src/qml/Settings/GeneralSettings.qml:334
+#: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1488,12 +1514,12 @@ msgstr ""
 "根据视频分辨率调整窗口大小。\n"
 "最大尺寸不作限制，由操作系统决定。"
 
-#: src/qml/Settings/GeneralSettings.qml:347
+#: src/qml/Settings/GeneralSettings.qml:361
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "启动为全屏模式"
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1503,19 +1529,19 @@ msgstr ""
 "应用程序启动时进入全屏模式。\n"
 "此选项的优先级高于“调整窗口大小以适应视频”和“记住窗口大小和位置”。"
 
-#: src/qml/Settings/GeneralSettings.qml:376
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
-#: src/qml/Settings/GeneralSettings.qml:396
+#: src/qml/Settings/GeneralSettings.qml:410
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b> 在 Wayland 环境中不支持恢复位置。</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1524,38 +1550,46 @@ msgstr ""
 "窗口的大小和位置的更改将被保存并用于新打开的窗口。<br><br>%1“调整窗口大小以适"
 "应视频”选项的优先级更高。"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
-#: src/qml/Settings/GeneralSettings.qml:423
-#: src/qml/Settings/PlaylistSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:437
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/Settings/GeneralSettings.qml:434
+#: src/qml/Settings/GeneralSettings.qml:448
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
-#: src/qml/Settings/GeneralSettings.qml:443
+#: src/qml/Settings/GeneralSettings.qml:457
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
-#: src/qml/Settings/GeneralSettings.qml:487
+#: src/qml/Settings/GeneralSettings.qml:501
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面样式"
 
-#: src/qml/Settings/GeneralSettings.qml:538
+#: src/qml/Settings/GeneralSettings.qml:534
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox default GUI style"
+msgid "Default"
+msgstr "音乐文件默认封面"
+
+#: src/qml/Settings/GeneralSettings.qml:558
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "使用 Breeze 微风图标主题"
 
-#: src/qml/Settings/GeneralSettings.qml:546
+#: src/qml/Settings/GeneralSettings.qml:566
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1580,72 +1614,114 @@ msgid "Add mouse button action"
 msgstr "添加鼠标按钮操作"
 
 #: src/qml/Settings/MouseSettings.qml:142
-msgctxt "@label"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Mouse button"
+msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "鼠标按键"
 
 #: src/qml/Settings/MouseSettings.qml:154
-msgctxt "@label:listbox left mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox left mouse button"
+#| msgid "Left"
+msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "左键"
 
 #: src/qml/Settings/MouseSettings.qml:155
-msgctxt "@label:listbox middle mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox middle mouse button"
+#| msgid "Middle"
+msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "中键"
 
 #: src/qml/Settings/MouseSettings.qml:156
-msgctxt "@label:listbox right mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox right mouse button"
+#| msgid "Right"
+msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "右键"
 
 #: src/qml/Settings/MouseSettings.qml:157
-msgctxt "@label:listbox forward mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox forward mouse button"
+#| msgid "Forward"
+msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "前进键"
 
 #: src/qml/Settings/MouseSettings.qml:158
-msgctxt "@label:listbox back mouse button"
+#, fuzzy
+#| msgctxt "@label:listbox back mouse button"
+#| msgid "Back"
+msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "后退键"
 
 #: src/qml/Settings/MouseSettings.qml:159
-msgctxt "@label:listbox mouse scroll up"
+#, fuzzy
+#| msgctxt "@label:listbox mouse scroll up"
+#| msgid "Scroll up"
+msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "滚轮向上"
 
 #: src/qml/Settings/MouseSettings.qml:160
-msgctxt "@label:listbox mouse scroll down"
+#, fuzzy
+#| msgctxt "@label:listbox mouse scroll down"
+#| msgid "Scroll down"
+msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "滚轮向下"
 
 #: src/qml/Settings/MouseSettings.qml:169
-msgctxt "@label"
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Modifier key"
+msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "修饰键"
 
 #: src/qml/Settings/MouseSettings.qml:177
-msgctxt "@label:listbox no modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox no modifier key"
+#| msgid "No modifier"
+msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "无修饰键"
 
 #: src/qml/Settings/MouseSettings.qml:178
-msgctxt "@label:listbox control modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox control modifier key"
+#| msgid "Control"
+msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Ctrl"
 
 #: src/qml/Settings/MouseSettings.qml:179
-msgctxt "@label:listbox shift modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox shift modifier key"
+#| msgid "Shift"
+msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
-msgctxt "@label:listbox alt modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox alt modifier key"
+#| msgid "Alt"
+msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
-msgctxt "@label:listbox meta modifier key"
+#, fuzzy
+#| msgctxt "@label:listbox meta modifier key"
+#| msgid "Meta"
+msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
@@ -1911,7 +1987,20 @@ msgstr "Youtube-dl"
 msgid "Format selection"
 msgstr "格式选择"
 
-#: src/qml/Settings/PlaybackSettings.qml:447
+#: src/qml/Settings/PlaybackSettings.qml:433
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the default youtube-dl format selection"
+msgid "Default"
+msgstr "音乐文件默认封面"
+
+#: src/qml/Settings/PlaybackSettings.qml:439
+msgctxt "@item:listbox the custom youtube-dl format selection"
+msgid "Custom"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:454
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "选择一个最接近选定格式的视频来源。"
@@ -1921,17 +2010,54 @@ msgctxt "@label:listbox"
 msgid "Position"
 msgstr "播放列表位置"
 
-#: src/qml/Settings/PlaylistSettings.qml:49
+#: src/qml/Settings/PlaylistSettings.qml:36
+#, fuzzy
+#| msgctxt "@label:listbox left mouse button"
+#| msgid "Left"
+msgctxt "@item:listbox playlist position"
+msgid "Left"
+msgstr "左键"
+
+#: src/qml/Settings/PlaylistSettings.qml:42
+#, fuzzy
+#| msgctxt "@label:listbox right mouse button"
+#| msgid "Right"
+msgctxt "@item:listbox playlist position"
+msgid "Right"
+msgstr "右键"
+
+#: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "播放列表样式"
 
-#: src/qml/Settings/PlaylistSettings.qml:87
+#: src/qml/Settings/PlaylistSettings.qml:69
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the style of the playlist"
+msgid "Default"
+msgstr "音乐文件默认封面"
+
+#: src/qml/Settings/PlaylistSettings.qml:75
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Preview thumbnail"
+msgctxt "@item:listbox the style of the playlist"
+msgid "With thumbnails"
+msgstr "预览缩略图"
+
+#: src/qml/Settings/PlaylistSettings.qml:81
+msgctxt "@item:listbox the style of the playlist"
+msgid "Compact"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:107
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "播放列表在视频上方叠加显示"
 
-#: src/qml/Settings/PlaylistSettings.qml:94
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -1940,59 +2066,59 @@ msgstr ""
 "勾选时，播放列表将叠加显示在视频的上方\n"
 "不勾选时，视频画面将缩小以容纳播放列表"
 
-#: src/qml/Settings/PlaylistSettings.qml:101
+#: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "显示媒体文件的标题，而不是文件名称"
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:131
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "自动加载相同文件夹中的视频"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:141
 msgctxt "@option:check"
 msgid "Autoplay"
 msgstr "自动播放"
 
-#: src/qml/Settings/PlaylistSettings.qml:128
+#: src/qml/Settings/PlaylistSettings.qml:148
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
 msgstr "勾选后，播放器将自动播放下一条视频"
 
-#: src/qml/Settings/PlaylistSettings.qml:136
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "循环播放"
 
-#: src/qml/Settings/PlaylistSettings.qml:146
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "显示行号"
 
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:176
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "鼠标悬停边缘时显示播放列表"
 
-#: src/qml/Settings/PlaylistSettings.qml:165
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "全屏时增加字体大小"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:198
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "记住播放列表的显示/隐藏状态"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:205
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "勾选后，播放列表的显示/隐藏状态将跨会话保存"
 
-#: src/qml/Settings/PlaylistSettings.qml:193
+#: src/qml/Settings/PlaylistSettings.qml:213
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "单击打开项目"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-14 00:41+0000\n"
+"POT-Creation-Date: 2025-07-25 00:42+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1613,12 +1613,38 @@ msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "पादशैली"
 
-#: src/qml/Settings/GeneralSettings.qml:206
-msgctxt "@label:spinbox"
+#: src/qml/Settings/GeneralSettings.qml:193
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the footer style"
+msgid "Default"
+msgstr "पूर्वनिर्धारित आवरण"
+
+#: src/qml/Settings/GeneralSettings.qml:199
+msgctxt "@item:listbox the footer style"
+msgid "Floating"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:213
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Show floating footer on"
+msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "प्लवमानं पादलेखं दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:235
+#: src/qml/Settings/GeneralSettings.qml:228
+msgctxt "@item:listbox how to trigger the floating footer"
+msgid "Every mouse movement"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:234
+msgctxt "@item:listbox how to trigger the floating footer"
+msgid "Bottom mouse movement"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:249
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1635,52 +1661,52 @@ msgstr ""
 "विडियो क्षेत्रस्य उपरि<br> <strong>अधः मूषकस्य गतिः</strong> - विडियोक्षेत्रस्य अधः "
 "मूषकस्य गतिः"
 
-#: src/qml/Settings/GeneralSettings.qml:243
+#: src/qml/Settings/GeneralSettings.qml:257
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "पूर्वावलोकन लघुचित्र"
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:262
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "पूर्वावलोकनलघुचित्रं दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:255
+#: src/qml/Settings/GeneralSettings.qml:269
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "seek/progress bar इत्यत्र भ्रमन् पूर्वावलोकनं दर्शयति ।"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/qml/Settings/GeneralSettings.qml:278
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "सटीकपूर्वावलोकनस्य उपयोगं कुर्वन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:281
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "समीचीनं पूर्वावलोकनं जनयितुं मन्दं भवति"
 
-#: src/qml/Settings/GeneralSettings.qml:291
+#: src/qml/Settings/GeneralSettings.qml:305
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "लघुचित्रविस्तारः"
 
-#: src/qml/Settings/GeneralSettings.qml:309
+#: src/qml/Settings/GeneralSettings.qml:323
 msgctxt "@label"
 msgid "Window"
 msgstr "कोष्ठ"
 
-#: src/qml/Settings/GeneralSettings.qml:315
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "विडियो फिट् कर्तुं आकारं परिवर्तयन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:333
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "वेलैण्ड् इत्यत्र समर्थितं नास्ति ।"
 
-#: src/qml/Settings/GeneralSettings.qml:334
+#: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.\n"
@@ -1689,12 +1715,12 @@ msgstr ""
 "विण्डो इत्यस्य आकारः विडियो संकल्पानुसारं परिवर्तितः भवति ।\n"
 "अधिकतमः आकारः बाध्यः नास्ति, एतत् प्रचालनतन्त्राय अवशिष्टम् अस्ति ।"
 
-#: src/qml/Settings/GeneralSettings.qml:347
+#: src/qml/Settings/GeneralSettings.qml:361
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "पूर्णपर्दे मोड् मध्ये आरभत"
 
-#: src/qml/Settings/GeneralSettings.qml:362
+#: src/qml/Settings/GeneralSettings.qml:376
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.\n"
@@ -1705,12 +1731,12 @@ msgstr ""
 "एतत् विडियो फिट् कर्तुं Resize इत्यस्य अपेक्षया प्राधान्यं प्राप्नोति, तथा च Remember "
 "window size and position settings इत्येतयोः अपेक्षया ।"
 
-#: src/qml/Settings/GeneralSettings.qml:376
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "विण्डो आकारं स्थानं च स्मर्यताम्"
 
-#: src/qml/Settings/GeneralSettings.qml:396
+#: src/qml/Settings/GeneralSettings.qml:410
 #, fuzzy
 #| msgctxt ""
 #| "@info:tooltip extra wayland info for the \"Remember window size and "
@@ -1722,7 +1748,7 @@ msgctxt ""
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>वेलैण्ड् इत्यत्र स्थानस्य पुनर्स्थापनं समर्थितं नास्ति।</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:412
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1737,38 +1763,46 @@ msgstr ""
 "विण्डो इत्यस्य आकारे स्थाने च परिवर्तनं रक्षितं भवति, नव उद्घाटितविण्डोषु च उपयुज्यते।"
 "<br><br>%1\"Resize to fit video\" सेटिंग् प्राधान्यं प्राप्नोति।"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:426
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "मेनूबारं दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:423
-#: src/qml/Settings/PlaylistSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:437
+#: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "साधनपट्टिकां दर्शयतु"
 
-#: src/qml/Settings/GeneralSettings.qml:434
+#: src/qml/Settings/GeneralSettings.qml:448
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "अध्यायचिह्नानि दर्शयन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:443
+#: src/qml/Settings/GeneralSettings.qml:457
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "वर्ण योजना"
 
-#: src/qml/Settings/GeneralSettings.qml:487
+#: src/qml/Settings/GeneralSettings.qml:501
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI शैली"
 
-#: src/qml/Settings/GeneralSettings.qml:538
+#: src/qml/Settings/GeneralSettings.qml:534
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox default GUI style"
+msgid "Default"
+msgstr "पूर्वनिर्धारित आवरण"
+
+#: src/qml/Settings/GeneralSettings.qml:558
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Breeze चिह्न विषयस्य उपयोगं कुर्वन्तु"
 
-#: src/qml/Settings/GeneralSettings.qml:546
+#: src/qml/Settings/GeneralSettings.qml:566
 msgctxt "@info:tooltip"
 msgid ""
 "Sets the icon theme to breeze.\n"
@@ -1796,52 +1830,52 @@ msgid "Add mouse button action"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:142
-msgctxt "@label"
+msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:154
-msgctxt "@label:listbox left mouse button"
+msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:155
-msgctxt "@label:listbox middle mouse button"
+msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:156
-msgctxt "@label:listbox right mouse button"
+msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:157
-msgctxt "@label:listbox forward mouse button"
+msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:158
-msgctxt "@label:listbox back mouse button"
+msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:159
-msgctxt "@label:listbox mouse scroll up"
+msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:160
-msgctxt "@label:listbox mouse scroll down"
+msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:169
-msgctxt "@label"
+msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:177
-msgctxt "@label:listbox no modifier key"
+msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr ""
 
@@ -1849,22 +1883,22 @@ msgstr ""
 #, fuzzy
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
-msgctxt "@label:listbox control modifier key"
+msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "विप्रकर्ष"
 
 #: src/qml/Settings/MouseSettings.qml:179
-msgctxt "@label:listbox shift modifier key"
+msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:180
-msgctxt "@label:listbox alt modifier key"
+msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:181
-msgctxt "@label:listbox meta modifier key"
+msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr ""
 
@@ -2182,7 +2216,20 @@ msgstr "Youtube-dl"
 msgid "Format selection"
 msgstr "प्रारूपचयनम्"
 
-#: src/qml/Settings/PlaybackSettings.qml:447
+#: src/qml/Settings/PlaybackSettings.qml:433
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the default youtube-dl format selection"
+msgid "Default"
+msgstr "पूर्वनिर्धारित आवरण"
+
+#: src/qml/Settings/PlaybackSettings.qml:439
+msgctxt "@item:listbox the custom youtube-dl format selection"
+msgid "Custom"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:454
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "चयनितस्वरूपस्य समीपस्थं विडियो स्रोतः चिनोति ।"
@@ -2192,17 +2239,48 @@ msgctxt "@label:listbox"
 msgid "Position"
 msgstr "स्थितिः"
 
-#: src/qml/Settings/PlaylistSettings.qml:49
+#: src/qml/Settings/PlaylistSettings.qml:36
+msgctxt "@item:listbox playlist position"
+msgid "Left"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:42
+msgctxt "@item:listbox playlist position"
+msgid "Right"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "प्लेलिस्ट शैली"
 
-#: src/qml/Settings/PlaylistSettings.qml:87
+#: src/qml/Settings/PlaylistSettings.qml:69
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@item:listbox the style of the playlist"
+msgid "Default"
+msgstr "पूर्वनिर्धारित आवरण"
+
+#: src/qml/Settings/PlaylistSettings.qml:75
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Preview thumbnail"
+msgctxt "@item:listbox the style of the playlist"
+msgid "With thumbnails"
+msgstr "पूर्वावलोकन लघुचित्र"
+
+#: src/qml/Settings/PlaylistSettings.qml:81
+msgctxt "@item:listbox the style of the playlist"
+msgid "Compact"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:107
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "ओवरले विडियो"
 
-#: src/qml/Settings/PlaylistSettings.qml:94
+#: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2211,59 +2289,59 @@ msgstr ""
 "यदा परीक्षितं भवति तदा प्लेलिस्ट् विडियो उपरि गच्छति\n"
 "यदा अनचेक् भवति तदा विडियो आकारः परिवर्तितः भवति"
 
-#: src/qml/Settings/PlaylistSettings.qml:101
+#: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "सञ्चिकानामस्य स्थाने मीडिया शीर्षकं दर्शयतु"
 
-#: src/qml/Settings/PlaylistSettings.qml:111
+#: src/qml/Settings/PlaylistSettings.qml:131
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "एकस्मिन् एव समुच्चय तः विडियो स्वतः लोड् कुर्वन्तु"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:141
 msgctxt "@option:check"
 msgid "Autoplay"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:128
+#: src/qml/Settings/PlaylistSettings.qml:148
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:136
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
 msgid "Repeat"
 msgstr "परिहरन"
 
-#: src/qml/Settings/PlaylistSettings.qml:146
+#: src/qml/Settings/PlaylistSettings.qml:166
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "पङ्क्तिसङ्ख्यां दर्शयतु"
 
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:176
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "मूषकेन सह टॉगलं कुर्वन्तु"
 
-#: src/qml/Settings/PlaylistSettings.qml:165
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "पूर्णपर्दे फ़ॉन्ट आकारं वर्धयन्तु"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:198
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "अन्तिम प्लेलिस्ट् अवस्थां स्मर्यताम्"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:205
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "यदा परीक्षितं भवति तदा प्लेलिस्ट् स्थितिः (दृश्यमानः/गुप्तः) प्रक्षेपणेषु स्मर्यते"
 
-#: src/qml/Settings/PlaylistSettings.qml:193
+#: src/qml/Settings/PlaylistSettings.qml:213
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "एकेन क्लिक् कृत्वा वस्तूनि उद्घाटयन्तु"
