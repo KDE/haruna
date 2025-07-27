@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:42+0000\n"
-"PO-Revision-Date: 2025-07-14 12:40+0100\n"
+"PO-Revision-Date: 2025-07-27 00:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1436,22 +1436,16 @@ msgid "Footer style"
 msgstr "Estilo del pie"
 
 #: src/qml/Settings/GeneralSettings.qml:193
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "Carátula predeterminada"
+msgstr "Predeterminado"
 
 #: src/qml/Settings/GeneralSettings.qml:199
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Flotante"
 
 #: src/qml/Settings/GeneralSettings.qml:213
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Mostrar pie flotante"
@@ -1459,12 +1453,12 @@ msgstr "Mostrar pie flotante"
 #: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Con cualquier movimiento del ratón"
 
 #: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Al mover el ratón por la parte inferior"
 
 #: src/qml/Settings/GeneralSettings.qml:249
 msgctxt "@info:tooltip"
@@ -1473,10 +1467,10 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
-"La acción que muestra el pie.<br><strong>Cada movimiento del ratón</strong>: "
-"todos los movimientos del ratón sobre el área de vídeo<br><strong>Movimiento "
-"inferior del ratón</strong>: movimiento del ratón en la parte inferior del "
-"área de vídeo."
+"La acción que muestra el pie.<br><strong>Cualquier movimiento del ratón</"
+"strong>: todos los movimientos del ratón sobre el área de "
+"vídeo<br><strong>Mover el ratón por la parte inferior</strong>: movimiento "
+"del ratón en la parte inferior del área de vídeo."
 
 #: src/qml/Settings/GeneralSettings.qml:257
 msgctxt "@label:spinbox"
@@ -1601,12 +1595,9 @@ msgid "GUI style"
 msgstr "Estilo de la interfaz de usuario"
 
 #: src/qml/Settings/GeneralSettings.qml:534
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "Carátula predeterminada"
+msgstr "Predeterminado"
 
 #: src/qml/Settings/GeneralSettings.qml:558
 msgctxt "@option:check"
@@ -1638,113 +1629,71 @@ msgid "Add mouse button action"
 msgstr "Añadir acción de botón del ratón"
 
 #: src/qml/Settings/MouseSettings.qml:142
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Mouse button"
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Botón del ratón"
 
 #: src/qml/Settings/MouseSettings.qml:154
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Izquierdo"
 
 #: src/qml/Settings/MouseSettings.qml:155
-#, fuzzy
-#| msgctxt "@label:listbox middle mouse button"
-#| msgid "Middle"
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Central"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Derecho"
 
 #: src/qml/Settings/MouseSettings.qml:157
-#, fuzzy
-#| msgctxt "@label:listbox forward mouse button"
-#| msgid "Forward"
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "Adelante"
 
 #: src/qml/Settings/MouseSettings.qml:158
-#, fuzzy
-#| msgctxt "@label:listbox back mouse button"
-#| msgid "Back"
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Atrás"
 
 #: src/qml/Settings/MouseSettings.qml:159
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll up"
-#| msgid "Scroll up"
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Desplazamiento hacia arriba"
 
 #: src/qml/Settings/MouseSettings.qml:160
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll down"
-#| msgid "Scroll down"
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Desplazamiento hacia abajo"
 
 #: src/qml/Settings/MouseSettings.qml:169
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Modifier key"
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "Tecla modificadora"
 
 #: src/qml/Settings/MouseSettings.qml:177
-#, fuzzy
-#| msgctxt "@label:listbox no modifier key"
-#| msgid "No modifier"
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "Sin tecla modificadora"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:listbox control modifier key"
-#| msgid "Control"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
 #: src/qml/Settings/MouseSettings.qml:179
-#, fuzzy
-#| msgctxt "@label:listbox shift modifier key"
-#| msgid "Shift"
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Mayúsculas"
 
 #: src/qml/Settings/MouseSettings.qml:180
-#, fuzzy
-#| msgctxt "@label:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
-#, fuzzy
-#| msgctxt "@label:listbox meta modifier key"
-#| msgid "Meta"
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -2043,17 +1992,14 @@ msgid "Format selection"
 msgstr "Selección del formato"
 
 #: src/qml/Settings/PlaybackSettings.qml:433
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "Carátula predeterminada"
+msgstr "Predeterminada"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Personalizada"
 
 #: src/qml/Settings/PlaybackSettings.qml:454
 msgctxt "@info:tooltip format selection setting"
@@ -2066,20 +2012,14 @@ msgid "Position"
 msgstr "Posición"
 
 #: src/qml/Settings/PlaylistSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr "Izquierdo"
+msgstr "Izquierda"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr "Derecho"
+msgstr "Derecha"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
@@ -2087,25 +2027,19 @@ msgid "Playlist style"
 msgstr "Estilo de la lista de reproducción"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "Carátula predeterminada"
+msgstr "Predeterminado"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "Miniaturas de vistas previas"
+msgstr "Con miniaturas"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Compacto"
 
 #: src/qml/Settings/PlaylistSettings.qml:107
 msgctxt "@option:check"
