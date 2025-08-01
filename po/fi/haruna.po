@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:42+0000\n"
-"PO-Revision-Date: 2025-07-07 16:45+0300\n"
+"PO-Revision-Date: 2025-07-17 18:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -82,18 +82,14 @@ msgid "File to open"
 msgstr "Avattava tiedosto"
 
 #: src/application.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Sallii väliaikaisesti ohittaa Youtube-dl-muotovalinta-asetuksen. "
-"Sivuutetaan, jos asetusta muutetaan käyttöliittymässä"
+"Sallii väliaikaisesti ohittaa yt-dlp-muotovalinta-asetuksen. Sivuutetaan, "
+"jos asetusta muutetaan käyttöliittymässä"
 
 #: src/lockmanager.cpp:34
 #, kde-format
@@ -127,20 +123,16 @@ msgid "Sponsor Haruna"
 msgstr "Sponsoroi Harunaa"
 
 #: src/models/actionsmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "Ääniraita"
+msgstr "Kierrätä ääniraita ylöspäin"
 
-# *** TARKISTA: Täysi arvaus. ”Audio up/down” voi olla jotain muutakin.
 #: src/models/actionsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Cycle Audio Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Kierrätä ääniraita alaspäin"
 
 #: src/models/actionsmodel.cpp:66
 #, kde-format
@@ -161,17 +153,13 @@ msgid "Exit Fullscreen"
 msgstr "Poistu koko näytöltä"
 
 #: src/models/actionsmodel.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "Kuva-askel eteenpäin"
 
 #: src/models/actionsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "Kuva-askel taaksepäin"
@@ -219,28 +207,22 @@ msgid "Open URL"
 msgstr "Avaa verkko-osoite"
 
 #: src/models/actionsmodel.cpp:146
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "Toistonopeus"
+msgstr "Lisää toistonopeutta"
 
 #: src/models/actionsmodel.cpp:153
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "Toistonopeus"
+msgstr "Vähennä toistonopeutta"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "Toistonopeus"
+msgstr "Palauta toistonopeus"
 
 #: src/models/actionsmodel.cpp:167
 #, kde-format
@@ -309,17 +291,13 @@ msgid "Seek Big Step Backward"
 msgstr "Hyppää suuri askel taaksepäin"
 
 #: src/models/actionsmodel.cpp:244
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Hyppää seuraavaan lukuun"
 
 #: src/models/actionsmodel.cpp:251
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Hyppää edelliseen lukuun"
@@ -355,72 +333,58 @@ msgid "Screenshot"
 msgstr "Ruutukaappaus"
 
 #: src/models/actionsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "Tekstitykset"
+msgstr "Näytä tai piilota tekstitys"
 
 #: src/models/actionsmodel.cpp:300
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Kasvata tekstitysfontin kokoa"
 
 #: src/models/actionsmodel.cpp:307
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Pienennä tekstitysfontin kokoa"
 
 #: src/models/actionsmodel.cpp:314
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
-msgstr "Nosta tekstitystä ylemmäs"
+msgstr "Nosta tekstitystä"
 
 #: src/models/actionsmodel.cpp:321
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
-msgstr "Laske tekstitystä alemmas"
+msgstr "Laske tekstitystä"
 
 #: src/models/actionsmodel.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "Valitse tekstitystiedosto"
+msgstr "Aienna tekstitystä"
 
 #: src/models/actionsmodel.cpp:335
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "Valitse tekstitystiedosto"
+msgstr "Viivästä tekstitystä"
 
 #: src/models/actionsmodel.cpp:342
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "Nosta tekstitystä"
+msgstr "Kierrätä tekstitystä ylöspäin"
 
 #: src/models/actionsmodel.cpp:349
-#, fuzzy, kde-format
-#| msgid "Cycle Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "Nosta tekstitystä"
+msgstr "Kierrätä tekstitystä alaspäin"
 
 #: src/models/actionsmodel.cpp:356
 #, kde-format
@@ -453,34 +417,28 @@ msgid "Playlist"
 msgstr "Toistolista"
 
 #: src/models/actionsmodel.cpp:391
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Siirrä videota vasemmalle"
 
 #: src/models/actionsmodel.cpp:398
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Siirrä videota oikealle"
 
 #: src/models/actionsmodel.cpp:405
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr "Nosta tekstitystä ylemmäs"
+msgstr "Siirrä videota ylemmäs"
 
 #: src/models/actionsmodel.cpp:412
-#, fuzzy, kde-format
-#| msgid "Move Subtitle Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr "Laske tekstitystä alemmas"
+msgstr "Siirrä videota alemmas"
 
 #: src/models/actionsmodel.cpp:419
 #, kde-format
@@ -522,99 +480,79 @@ msgstr "Loitonna"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Palauta lähennys"
 
 #: src/models/actionsmodel.cpp:468
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "Kontrasti"
+msgstr "Lisää kontrastia"
 
 #: src/models/actionsmodel.cpp:475
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "Kontrasti"
+msgstr "Vähennä kontrastia"
 
 #: src/models/actionsmodel.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "Kontrasti"
+msgstr "Palauta kontrasti"
 
 #: src/models/actionsmodel.cpp:489
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "Kirkkaus"
+msgstr "Lisää kirkkautta"
 
 #: src/models/actionsmodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "Kirkkaus"
+msgstr "Vähennä kirkkautta"
 
 #: src/models/actionsmodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "Kirkkaus"
+msgstr "Palauta kirkkaus"
 
 #: src/models/actionsmodel.cpp:510
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Lisää gammaa"
 
 #: src/models/actionsmodel.cpp:517
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Vähennä gammaa"
 
 #: src/models/actionsmodel.cpp:524
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "Gamma"
+msgstr "Palauta gamma"
 
 #: src/models/actionsmodel.cpp:531
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "Värikylläisyys"
+msgstr "Lisää kylläisyyttä"
 
 #: src/models/actionsmodel.cpp:538
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "Värikylläisyys"
+msgstr "Vähennä kylläisyyttä"
 
 #: src/models/actionsmodel.cpp:545
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "Värikylläisyys"
+msgstr "Palauta kylläisyys"
 
 #: src/models/actionsmodel.cpp:694
 #, kde-format
@@ -633,9 +571,7 @@ msgid "Reassign"
 msgstr "Sijoita uudelleen"
 
 #: src/mpv/mpvitem.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ei voitu toistaa: %1"
@@ -666,9 +602,7 @@ msgid "Screenshot taken"
 msgstr "Kaapattiin ruutu"
 
 #: src/mpv/mpvitem.cpp:542
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ruutukaappaus: %1"
@@ -690,9 +624,6 @@ msgid "Skipped chapter: %1"
 msgstr "Ohitettiin luku: %1"
 
 #: src/qml/Actions.qml:92 src/qml/Actions.qml:110
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Ääni: %1 %2"
@@ -710,9 +641,6 @@ msgid "Playback speed: %1"
 msgstr "Toistonopeus: %1"
 
 #: src/qml/Actions.qml:288
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Silmukan alku: %1"
@@ -743,9 +671,6 @@ msgid "Subtitle: None"
 msgstr "Tekstitys: ei"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Tekstitys: %1 %2"
@@ -884,12 +809,9 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ei löytynyt."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:28
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from:"
-msgstr "Lataa tekstitykset tiedostosta"
+msgstr "Lataa tekstitykset tiedostosta:"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:105
 msgctxt "@action:button"
@@ -1381,12 +1303,9 @@ msgid "OSD Message"
 msgstr "Ruutuviesti"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "Äänenvoimakkuus: %1"
+msgstr "Tiedostonimi: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1444,9 +1363,6 @@ msgid "&Save"
 msgstr "&Tallenna"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "Ruutunäytön fonttikoko"
@@ -2040,19 +1956,11 @@ msgid ""
 msgstr "Ohita automaattisesti tiettyjä sanoja tai merkkejä sisältävät luvut."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Näytä ohitettaessa ruutuviesti"
 
 #: src/qml/Settings/PlaybackSettings.qml:356
-#, fuzzy
-#| msgctxt "@info:tooltip show osd message on skip setting"
-#| msgid ""
-#| "When skipping chapters an osd message will show the title of the skipped "
-#| "chapter."
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2062,7 +1970,7 @@ msgstr "Näytä lukuja sivuutettaessa ruutuviestissä sivuutetun luvun otsikko."
 #: src/qml/Settings/PlaybackSettings.qml:362
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "Hakusanat"
 
 #: src/qml/Settings/PlaybackSettings.qml:371
 #, fuzzy
