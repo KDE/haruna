@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:42+0000\n"
-"PO-Revision-Date: 2025-07-16 14:15+0400\n"
+"PO-Revision-Date: 2025-08-03 11:18+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -651,7 +651,7 @@ msgstr "الحلقة: %1–%2"
 #: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
-msgstr "امسح الحلقة"
+msgstr "امحُ الحلقة"
 
 #: src/qml/Actions.qml:320
 msgctxt "@info:tooltip"
@@ -666,7 +666,7 @@ msgstr "الترجمة مفعلة"
 #: src/qml/Actions.qml:329 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
-msgstr "الترجمة: بدون"
+msgstr "الترجمة: لا توجد"
 
 #: src/qml/Actions.qml:333 src/qml/Actions.qml:345
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
@@ -926,7 +926,7 @@ msgstr "الملفات الحديثة"
 #: src/qml/Menus/FileMenu.qml:56 src/qml/Menus/Global/GlobalFileMenu.qml:67
 msgctxt "@action:inmenu"
 msgid "Clear List"
-msgstr "امسح القائمة"
+msgstr "امحُ القائمة"
 
 #: src/qml/Menus/Global/GlobalHelpMenu.qml:14 src/qml/Menus/HelpMenu.qml:14
 msgctxt "@title:menu"
@@ -1116,7 +1116,7 @@ msgstr "المدة تنازليًّا"
 #: src/qml/PlayList.qml:129
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "امسح"
+msgstr "امحُ"
 
 #: src/qml/PlayList.qml:137
 msgctxt "@action:button"
@@ -1425,22 +1425,16 @@ msgid "Footer style"
 msgstr "نمط التذييل"
 
 #: src/qml/Settings/GeneralSettings.qml:193
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "الغلاف المبدئي"
+msgstr "المبدئيّ"
 
 #: src/qml/Settings/GeneralSettings.qml:199
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "عائم"
 
 #: src/qml/Settings/GeneralSettings.qml:213
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "اعرض التذييل العائم على"
@@ -1448,12 +1442,12 @@ msgstr "اعرض التذييل العائم على"
 #: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "كل حركة من الفأرة"
 
 #: src/qml/Settings/GeneralSettings.qml:234
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "حركة الفأرة السفلية"
 
 #: src/qml/Settings/GeneralSettings.qml:249
 msgctxt "@info:tooltip"
@@ -1584,12 +1578,9 @@ msgid "GUI style"
 msgstr "نمط الواجهة"
 
 #: src/qml/Settings/GeneralSettings.qml:534
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "الغلاف المبدئي"
+msgstr "المبدئيّ"
 
 #: src/qml/Settings/GeneralSettings.qml:558
 msgctxt "@option:check"
@@ -1621,113 +1612,71 @@ msgid "Add mouse button action"
 msgstr "أضف إجراء زر الفأرة"
 
 #: src/qml/Settings/MouseSettings.qml:142
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Mouse button"
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "زر الفأرة"
 
 #: src/qml/Settings/MouseSettings.qml:154
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "يسار"
 
 #: src/qml/Settings/MouseSettings.qml:155
-#, fuzzy
-#| msgctxt "@label:listbox middle mouse button"
-#| msgid "Middle"
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "الأوسط"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "يمين"
 
 #: src/qml/Settings/MouseSettings.qml:157
-#, fuzzy
-#| msgctxt "@label:listbox forward mouse button"
-#| msgid "Forward"
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "تقدّم"
 
 #: src/qml/Settings/MouseSettings.qml:158
-#, fuzzy
-#| msgctxt "@label:listbox back mouse button"
-#| msgid "Back"
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "عُد"
 
 #: src/qml/Settings/MouseSettings.qml:159
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll up"
-#| msgid "Scroll up"
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "لف لأعلى"
 
 #: src/qml/Settings/MouseSettings.qml:160
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll down"
-#| msgid "Scroll down"
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "لف لأسفل"
 
 #: src/qml/Settings/MouseSettings.qml:169
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Modifier key"
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "المفتاح المغيِّر"
 
 #: src/qml/Settings/MouseSettings.qml:177
-#, fuzzy
-#| msgctxt "@label:listbox no modifier key"
-#| msgid "No modifier"
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "لا يوجد مغير"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:listbox control modifier key"
-#| msgid "Control"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
 #: src/qml/Settings/MouseSettings.qml:179
-#, fuzzy
-#| msgctxt "@label:listbox shift modifier key"
-#| msgid "Shift"
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
-#, fuzzy
-#| msgctxt "@label:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
-#, fuzzy
-#| msgctxt "@label:listbox meta modifier key"
-#| msgid "Meta"
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -2033,17 +1982,14 @@ msgid "Format selection"
 msgstr "اختيار التنسيق"
 
 #: src/qml/Settings/PlaybackSettings.qml:433
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "الغلاف المبدئي"
+msgstr "المبدئيّ"
 
 #: src/qml/Settings/PlaybackSettings.qml:439
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "مخصّص"
 
 #: src/qml/Settings/PlaybackSettings.qml:454
 msgctxt "@info:tooltip format selection setting"
@@ -2056,17 +2002,11 @@ msgid "Position"
 msgstr "الموضع"
 
 #: src/qml/Settings/PlaylistSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox playlist position"
 msgid "Left"
 msgstr "يسار"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
 msgstr "يمين"
@@ -2077,25 +2017,19 @@ msgid "Playlist style"
 msgstr "نمط قائمة التشغيل"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "الغلاف المبدئي"
+msgstr "المبدئيّ"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "مصغرة المعاينة"
+msgstr "بالمصغرات"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "مُدمج"
 
 #: src/qml/Settings/PlaylistSettings.qml:107
 msgctxt "@option:check"
@@ -2388,32 +2322,31 @@ msgid ""
 msgstr ""
 "حدد قالب اسم الملف المستخدم لحفظ لقطات الشاشة. يحدد القالب اسم الملف دون "
 "امتداد الملف، ويمكن أن يحتوي على مواصفات تنسيق، والتي سيتم استبدالها عند "
-"التقاط لقطة شاشة. بشكل افتراضي، يكون القالب هو “%F-%n”. <br>يمكن أن يبدأ "
+"التقاط لقطة شاشة. بشكل مبدئي، يكون القالب هو “%F-%n”. <br>يمكن أن يبدأ "
 "القالب بمسار نسبي أو مطلق، لتحديد موقع الدليل حيث يجب حفظ لقطات الشاشة."
-"<br>إذا كان اسم ملف لقطة الشاشة النهائي يشير إلى ملف موجود بالفعل، فلن يتم "
-"الكتابة فوق الملف. لن يتم حفظ لقطة الشاشة، أو إذا كان القالب يحتوي على %n، "
-"فسيتم حفظه باستخدام اسم ملف مختلف تم إنشاؤه حديثًا.<br>للحصول على معلومات "
-"كاملة، راجع <a href='https://mpv.io/manual/stable/#options-screenshot-"
-"template'>https://mpv.io/manual/stable/#options-screenshot-template</"
-"a><br><br><strong>مواصفات التنسيق المسموح بها:</strong><br><ul><li><strong>"
-"%[#][0X]n</strong> رقم تسلسلي، مبطن بالأصفار بطول X.<br><li><strong>%f</"
-"strong> اسم ملف الفيديو الذي يتم تشغيله حاليًا.<br><li><strong>%F</strong> "
-"نفس %f، ولكن بدون امتداد الملف.<br><li><strong>%x</strong> مسار الدليل "
-"للفيديو الذي يتم تشغيله حاليًا. إذا لم يكن الفيديو موجودًا على نظام الملفات "
-"(http:// urls)، فسيتم توسيع هذا إلى سلسلة فارغة.<br><li><strong>%X{fallback}"
-"</strong> نفس %x، ولكن إذا لم يكن ملف الفيديو موجودًا على نظام الملفات، فقم "
-"بإرجاع السلسلة البديلة داخل {…}””.<br><li><strong>%p</strong> وقت التشغيل "
-"الحالي. النتيجة عبارة عن سلسلة من النموذج “HH:MM:SS”.<br><li><strong>%P</"
-"strong> مشابهة لـ %p، ولكنها ممتدة بوقت التشغيل بالمللي ثانية \"HH:MM:SS.mmm"
-"\".<br><li><strong>%wX</strong> حدد وقت التشغيل الحالي باستخدام سلسلة "
-"التنسيق X.<br>مواصفات التنسيق الصالحة:<br><ul><li><strong>%wH</strong> ساعة "
-"(مبطنة من 0 إلى رقمين)</li><li><strong>%wh</strong> ساعة (غير مبطنة)</"
-"li><li><strong>%wM</strong> دقيقة (00–59)</li><li><strong>%wm</strong> "
-"إجمالي الدقائق (يشمل الساعات، على عكس %wM)</li><li><strong>%wS</strong> "
-"ثانية (00–59)</li><li><strong>%ws</strong> إجمالي الثواني (يتضمن الساعات "
-"والدقائق)</li><li><strong>%wf</strong> مثل %ws، ولكن كعدد عشري</"
-"li><li><strong>%wT</strong> مللي ثانية (000–999)</li><li><strong>%%</strong> "
-"تم استبداله بحرف % نفسه.</li></ul><br>"
+"<br>إذا كان اسم ملف لقطة الشاشة النهائي يشير إلى ملف موجود بالفعل، فلن يكتب "
+"فوق الملف. لن تُحفظ لقطة الشاشة، أو إذا كان القالب يحتوي على %n، فسيحفظ "
+"باستخدام اسم ملف مختلف منشئ حديثًا.<br>للحصول على معلومات كاملة، راجع <a "
+"href='https://mpv.io/manual/stable/#options-screenshot-template'>https://mpv."
+"io/manual/stable/#options-screenshot-template</a><br><br><strong>مواصفات "
+"التنسيق المسموح بها:</strong><br><ul><li><strong>%[#][0X]n</strong> رقم "
+"تسلسلي، مبطن بالأصفار بطول X.<br><li><strong>%f</strong> اسم ملف الفيديو "
+"الذي يتم تشغيله حاليًا.<br><li><strong>%F</strong> نفس %f، ولكن دون امتداد "
+"الملف.<br><li><strong>%x</strong> مسار الدليل للفيديو الذي يتم تشغيله حاليًا. "
+"إذا لم يكن الفيديو موجودًا على نظام الملفات (http:// urls)، فسيتم توسيع هذا "
+"إلى سلسلة فارغة.<br><li><strong>%X{fallback}</strong> نفس %x، ولكن إذا لم "
+"يكن ملف الفيديو موجودًا على نظام الملفات، فقم بإرجاع السلسلة البديلة داخل "
+"{…}””.<br><li><strong>%p</strong> وقت التشغيل الحالي. النتيجة عبارة عن سلسلة "
+"من النموذج “HH:MM:SS”.<br><li><strong>%P</strong> مشابهة لـ %p، ولكنها ممتدة "
+"بوقت التشغيل بالمللي ثانية \"HH:MM:SS.mmm\".<br><li><strong>%wX</strong> حدد "
+"وقت التشغيل الحالي باستخدام سلسلة التنسيق X.<br>مواصفات التنسيق الصالحة:"
+"<br><ul><li><strong>%wH</strong> ساعة (مبطنة من 0 إلى رقمين)</li><li><strong>"
+"%wh</strong> ساعة (غير مبطنة)</li><li><strong>%wM</strong> دقيقة (00–59)</"
+"li><li><strong>%wm</strong> إجمالي الدقائق (يشمل الساعات، على عكس %wM)</"
+"li><li><strong>%wS</strong> ثانية (00–59)</li><li><strong>%ws</strong> "
+"إجمالي الثواني (يتضمن الساعات والدقائق)</li><li><strong>%wf</strong> مثل "
+"%ws، ولكن كعدد عشري</li><li><strong>%wT</strong> مللي ثانية (000–999)</"
+"li><li><strong>%%</strong> مستبدل بنفس الحرف % .</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:195
 msgctxt "@title"
