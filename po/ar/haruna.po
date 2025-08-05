@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:42+0000\n"
-"PO-Revision-Date: 2025-08-03 11:18+0400\n"
+"PO-Revision-Date: 2025-08-04 18:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1370,8 +1370,8 @@ msgid ""
 "The default location of the open file dialog. If empty, the file dialog will "
 "try to open to the last opened location."
 msgstr ""
-"الموقع الافتراضي لمربع حوار فتح الملف. إذا كان مربع حوار الملف فارغًا، "
-"فسيحاول فتحه على آخر موقع مفتوح."
+"الموقع المبدئي لمربع حوار فتح الملف. إذا كان مربع حوار الملف فارغًا، فسيحاول "
+"فتحه على آخر موقع مفتوح."
 
 #: src/qml/Settings/GeneralSettings.qml:81
 msgctxt "@label:spinbox"
@@ -1796,9 +1796,9 @@ msgstr ""
 "أمكن. يعتمد ما إذا كان فك التشفير المادي يتم بالفعل على برنامج ترميز "
 "الفيديو. إذا لم يكن فك التشفير المادي ممكنًا، فسوف يعتمد mpv على فك التشفير "
 "البرمجي.<br><br><ul><li><strong>auto</strong> يحاول تمكين فك التشفير المادي "
-"تلقائيًا باستخدام أول طريقة متاحة.</li><li><strong>auto-safe</strong> مشابه "
-"لـ auto، لكنه يسمح فقط بالطرق المدرجة في القائمة البيضاء والتي تعتبر ”آمنة“."
-"</li><li><strong>vaapi</strong> يعمل فقط مع وحدات معالجة الرسوميات Intel و "
+"آليًّا باستخدام أول طريقة متاحة.</li><li><strong>auto-safe</strong> مشابه لـ "
+"auto، لكنه يسمح فقط بالطرق المدرجة في القائمة البيضاء والتي تعتبر ”آمنة“.</"
+"li><li><strong>vaapi</strong> يعمل فقط مع وحدات معالجة الرسوميات Intel و "
 "AMD. كما يتطلب أيضًا واجهة OpenGL الخلفية EGL.</li><li><strong>nvdec</strong> "
 "هي الطريقة الأحدث والموصى بها لفك تشفير الأجهزة على وحدات معالجة الرسومات "
 "Nvidia.</li><li><strong>cuda</strong> هي تنفيذ أقدم لفك تشفير الأجهزة على "
@@ -1937,7 +1937,7 @@ msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
-msgstr "عند تمكينه، فإنه يتخطى تلقائيًا الفصول التي تحتوي على كلمات/أحرف معينة."
+msgstr "عند تمكينه، فإنه يتخطى آليًّا الفصول التي تحتوي على كلمات/أحرف معينة."
 
 #: src/qml/Settings/PlaybackSettings.qml:347
 msgctxt "@option:check"
@@ -2053,17 +2053,17 @@ msgstr "اعرض عنوان الوسيط عوضا عن اسم الملف"
 #: src/qml/Settings/PlaylistSettings.qml:131
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
-msgstr "تحميل آلي للفيدوهات من نفس المجلد"
+msgstr "تحميل آليّ للفيدوهات من نفس المجلد"
 
 #: src/qml/Settings/PlaylistSettings.qml:141
 msgctxt "@option:check"
 msgid "Autoplay"
-msgstr "التشغيل الآلي"
+msgstr "التشغيل الآليّ"
 
 #: src/qml/Settings/PlaylistSettings.qml:148
 msgctxt "@info:tooltip"
 msgid "When checked the next video will play automatically"
-msgstr "عند تحديده سيُعرض الفيديو التالي آلياً"
+msgstr "عند تحديده سيُعرض الفيديو التالي آليّاً"
 
 #: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@option:check"
@@ -2162,13 +2162,13 @@ msgstr "عن"
 #: src/qml/Settings/SubtitlesSettings.qml:35
 msgctxt "@label:check"
 msgid "Auto select track"
-msgstr "تحديد المسار تلقائيًا"
+msgstr "تحديد المسار آليًّا"
 
 #: src/qml/Settings/SubtitlesSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr "عند تحديد هذا الخيار، سيتم تحديد مسار الترجمة تلقائيًا وعرضه"
+msgstr "عند تحديد هذا الخيار، سيتم تحديد مسار الترجمة آليًّا وعرضه"
 
 #: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@option:check"
