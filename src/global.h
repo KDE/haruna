@@ -23,6 +23,7 @@ public:
         CustomCommands,
         RecentFiles,
         Shortcuts,
+        Database,
     };
 
     const QString appConfigDirPath();

@@ -53,6 +53,10 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
         auto path = QStandardPaths::writableLocation(m_shortcutsConfig->locationType()).append(u"/"_s);
         return path.append(m_shortcutsConfig->name());
     }
+    case ConfigFile::Database: {
+        auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/"_s);
+        return path.append(u"haruna/haruna.db"_s);
+    }
     default:
         return QString();
     }
