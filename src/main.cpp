@@ -19,7 +19,6 @@
 
 #include "application.h"
 #include "generalsettings.h"
-#include "qqmlpropertymap.h"
 #include "thumbnailimageprovider.h"
 
 using namespace Qt::StringLiterals;
