@@ -43,6 +43,9 @@ set_package_properties(Qt6Quick PROPERTIES TYPE REQUIRED)
 find_package(Qt6QuickControls2 ${QT_MIN_VERSION})
 set_package_properties(Qt6QuickControls2 PROPERTIES TYPE REQUIRED)
 
+find_package(Qt6Sql ${QT_MIN_VERSION})
+set_package_properties(Qt6Sql PROPERTIES TYPE REQUIRED)
+
 set(HAVE_DBUS FALSE)
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     find_package(Qt6DBus ${QT_MIN_VERSION})

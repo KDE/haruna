@@ -14,6 +14,7 @@ qt_add_executable(haruna)
 target_sources(haruna
     PRIVATE
     application.h application.cpp
+    database.h database.cpp
     framedecoder.h framedecoder.cpp
     global.h global.cpp
     main.cpp
@@ -31,6 +32,11 @@ target_sources(haruna
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
     ${ICONS_SRCS}
+)
+
+qt_add_resources(haruna sql_files
+    FILES
+        sql/create-recent_files-table.sql
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
@@ -139,6 +145,7 @@ target_link_libraries(haruna PRIVATE
     Qt6::Qml
     Qt6::Quick
     Qt6::QuickControls2
+    Qt6::Sql
 
     KF6::ColorScheme
     KF6::ConfigCore
