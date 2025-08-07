@@ -117,4 +117,10 @@ void Database::addRecentFile(const QUrl &url, const QString &filename, const QSt
     }
 }
 
+void Database::deleteRecentFiles()
+{
+    QSqlQuery query(db());
+    query.exec(u"DELETE FROM recent_files"_s);
+}
+
 #include "moc_database.cpp"

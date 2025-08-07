@@ -23,6 +23,7 @@ public:
 
     QList<RecentFile> recentFiles(uint limit);
     void addRecentFile(const QUrl &url, const QString &filename, const QString &openedFrom, qint64 timestamp);
+    void deleteRecentFiles();
 
 private:
     Database(QObject *parent = nullptr);
