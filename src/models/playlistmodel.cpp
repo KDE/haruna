@@ -325,7 +325,7 @@ void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
         bool matchFound{false};
         for (int i = 0; i < entries.toArray().size(); ++i) {
             auto id = entries[i][u"id"_s].toString();
-            auto url = u"https://youtu.be/%1"_s.arg(entries[i][u"id"_s].toString());
+            auto url = u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(id, playlistId);
             auto title = entries[i][u"title"_s].toString();
             auto duration = entries[i][u"duration"_s].toDouble();
 
