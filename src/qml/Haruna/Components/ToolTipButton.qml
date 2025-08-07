@@ -7,14 +7,13 @@
 import QtQuick
 import QtQuick.Controls
 
-import org.kde.haruna
-
 ToolButton {
     id: root
 
     required property string toolTipText
     property alias toolTipWidth: toolTip.width
     property alias toolTipHeight: toolTip.height
+    property alias iconColor: root.icon.color
     readonly property int maxWidth: 300
 
     icon.name: "documentinfo"
@@ -29,7 +28,6 @@ ToolButton {
         padding: 0
         implicitWidth: Math.min(root.maxWidth, textArea.contentWidth)
         implicitHeight: textArea.implicitHeight
-
 
         delay: 0
         timeout: -1
