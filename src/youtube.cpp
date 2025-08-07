@@ -13,6 +13,10 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 
+#include <KLocalizedString>
+
+#include "application.h"
+
 using namespace Qt::StringLiterals;
 
 YouTube::YouTube()
@@ -58,16 +62,26 @@ void YouTube::getPlaylist(const QUrl &url)
 
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = std::make_shared<QProcess>();
-    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << playlistPath;
+    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << playlistId;
     ytdlProcess->setProgram(youtubeDlExecutable());
     ytdlProcess->setArguments(args);
     ytdlProcess->start();
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
-        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[u"entries"_s];
+        const auto output = ytdlProcess->readAllStandardOutput();
+        const auto error = ytdlProcess->readAllStandardError();
+        const QString json = QString::fromUtf8(output);
+        const QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[u"entries"_s];
         // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[u"title")].toString();
-        auto playlist = entries.toArray();
+        const auto playlist = entries.toArray();
+
+        if (output.contains("null\n")) {
+            Application::instance()->error(i18nc("@info:tooltip; error when yt-dlp fails to get playlist",
+                                                 "Could not retrieve playlist with id: %1\n\n%2",
+                                                 playlistId,
+                                                 QString::fromUtf8(error)));
+        }
+
         if (playlist.isEmpty()) {
             return;
         }
