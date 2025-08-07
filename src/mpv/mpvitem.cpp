@@ -464,6 +464,14 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT currentUrlChanged();
     }
 
+    QFileInfo fi{url.toString(QUrl::PreferLocalFile)};
+    if (url.isLocalFile() && !fi.exists()) {
+        m_currentUrl = {};
+        Q_EMIT currentUrlChanged();
+        Q_EMIT Application::instance()->error(i18nc("@info:tooltip; %1 is an absolute path", "File doesn't exist: %1", file));
+        return;
+    }
+
     // store the mute property so it can be restored after loading file
     auto mute = m_mute;
     // mute to avoid popping sound while loading files
