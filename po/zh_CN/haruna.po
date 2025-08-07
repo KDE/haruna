@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:42+0000\n"
+"POT-Creation-Date: 2025-08-07 18:29+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -579,32 +579,38 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕偏移：%1 秒"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:471
+#, kde-format
+msgctxt "@info:tooltip; %1 is an absolute path"
+msgid "File doesn't exist: %1"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:504
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:535
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "截图失败"
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:548
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图已保存"
 
-#: src/mpv/mpvitem.cpp:542
+#: src/mpv/mpvitem.cpp:550
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "截图：%1"
 
-#: src/mpv/mpvitem.cpp:569
+#: src/mpv/mpvitem.cpp:577
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -613,7 +619,7 @@ msgid ""
 msgstr ""
 "没有检测到视频轨道。这大概率是因为缺少编解码器而导致视频轨道无法被解码/播放。"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:610
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -771,31 +777,31 @@ msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "最近文件"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:83
+#: src/qml/Haruna/Components/HamburgerMenu.qml:92
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "主字幕"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:89
+#: src/qml/Haruna/Components/HamburgerMenu.qml:98
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "副字幕"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:98
+#: src/qml/Haruna/Components/HamburgerMenu.qml:107
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "音轨"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:121
+#: src/qml/Haruna/Components/HamburgerMenu.qml:130
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "更多(&M)"
 
-#: src/qml/Haruna/Components/InputPopup.qml:31
+#: src/qml/Haruna/Components/InputPopup.qml:35
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -896,7 +902,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "选择字幕文件"
 
-#: src/qml/Main.qml:356
+#: src/qml/Main.qml:360
 msgctxt "@action:button"
 msgid "Open"
 msgstr "打开"
@@ -921,7 +927,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "最近文件"
 
-#: src/qml/Menus/FileMenu.qml:56 src/qml/Menus/Global/GlobalFileMenu.qml:67
+#: src/qml/Menus/FileMenu.qml:64 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "清空列表"
@@ -1374,77 +1380,102 @@ msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "最近文件数目"
 
-#: src/qml/Settings/GeneralSettings.qml:98
-msgctxt "@info:tooltip"
-msgid "The number of recent files to store. Enter 0 (zero) to disable."
-msgstr "“最近文件”列表的文件数量上限。输入 0 时禁止记录最近文件。"
+#: src/qml/Settings/GeneralSettings.qml:100
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Clear"
+msgctxt "@action:button clear (delete from database) recent files"
+msgid "Clear"
+msgstr "清除"
 
-#: src/qml/Settings/GeneralSettings.qml:106
+#: src/qml/Settings/GeneralSettings.qml:104
+msgctxt "@info:tooltip"
+msgid "Deletes recent files from the database"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:109
+msgctxt "@info:tooltip"
+msgid ""
+"The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
+"opened file is stored.<br>Bold entries are files opened from the open file/"
+"url actions and from external apps (command line, file manager, drag and "
+"drop etc.)."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "仅运行一个实例"
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:131
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Trying to open another Haruna instance will do nothing.\n"
+#| "Trying to open another file with Haruna will open the file in the running "
+#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
-"Trying to open another Haruna instance will do nothing.\n"
-"Trying to open another file with Haruna will open the file in the running "
-"instance."
+"Trying to open another Haruna instance will do nothing.<br>Trying to open "
+"another file with Haruna will open the file in the running instance."
 msgstr ""
 "尝试打开另一个 Haruna 实例时将不会发生任何事情。\n"
 "尝试用 Haruna 打开另一个文件时将用正在运行的实例打开。"
 
-#: src/qml/Settings/GeneralSettings.qml:136
+#: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "添加文件至播放列表"
 
 #: src/qml/Settings/GeneralSettings.qml:152
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
-msgid "File will be added to the end of the playlist"
+msgid "File will be added to the end of the playlist."
 msgstr "文件将被添加到播放列表末尾"
 
-#: src/qml/Settings/GeneralSettings.qml:164
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "播放新文件"
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:172
 msgctxt "@title"
 msgid "Interface"
 msgstr "界面"
 
-#: src/qml/Settings/GeneralSettings.qml:181
+#: src/qml/Settings/GeneralSettings.qml:178
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "页脚样式"
 
-#: src/qml/Settings/GeneralSettings.qml:193
+#: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "默认"
 
-#: src/qml/Settings/GeneralSettings.qml:199
+#: src/qml/Settings/GeneralSettings.qml:196
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr "悬浮"
 
-#: src/qml/Settings/GeneralSettings.qml:213
+#: src/qml/Settings/GeneralSettings.qml:210
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "显示悬浮页脚的条件"
 
-#: src/qml/Settings/GeneralSettings.qml:228
+#: src/qml/Settings/GeneralSettings.qml:225
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr "所有鼠标移动"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:231
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr "底部鼠标移动"
 
-#: src/qml/Settings/GeneralSettings.qml:249
+#: src/qml/Settings/GeneralSettings.qml:246
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1454,88 +1485,98 @@ msgstr ""
 "用于显示页脚的操作<br><strong>Every mouse movement</strong> — 在视频区域之上"
 "移动鼠标<br><strong>在画面底部移动鼠标</strong> - 在视频底部区域移动鼠标"
 
-#: src/qml/Settings/GeneralSettings.qml:257
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:262
+#: src/qml/Settings/GeneralSettings.qml:259
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "显示预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:269
+#: src/qml/Settings/GeneralSettings.qml:266
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "光标悬停在播放进度条上时显示预览"
 
-#: src/qml/Settings/GeneralSettings.qml:278
+#: src/qml/Settings/GeneralSettings.qml:275
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "使用精确预览图"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:285
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "精确预览图的生成速度较慢"
 
-#: src/qml/Settings/GeneralSettings.qml:305
+#: src/qml/Settings/GeneralSettings.qml:293
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "缩略图宽度"
 
-#: src/qml/Settings/GeneralSettings.qml:323
+#: src/qml/Settings/GeneralSettings.qml:311
 msgctxt "@label"
 msgid "Window"
 msgstr "窗口"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "调整窗口大小以适应视频"
 
-#: src/qml/Settings/GeneralSettings.qml:347
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "在 Wayland 环境中不支持。"
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:330
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The window is resized according to the video resolution.\n"
+#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
-"The window is resized according to the video resolution.\n"
-"The maximum size is not constrained, this is left to the operating system."
+"The window is resized according to the video resolution.<br>The maximum size "
+"is not constrained, this is left to the operating system."
 msgstr ""
 "根据视频分辨率调整窗口大小。\n"
 "最大尺寸不作限制，由操作系统决定。"
 
-#: src/qml/Settings/GeneralSettings.qml:361
+#: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "启动为全屏模式"
 
-#: src/qml/Settings/GeneralSettings.qml:376
+#: src/qml/Settings/GeneralSettings.qml:349
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Enter fullscreen mode when the application starts.\n"
+#| "This takes precedence over Resize to fit video, and Remember window size "
+#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
-"Enter fullscreen mode when the application starts.\n"
-"This takes precedence over Resize to fit video, and Remember window size and "
-"position settings."
+"Enter fullscreen mode when the application starts.<br>This takes precedence "
+"over Resize to fit video, and Remember window size and position settings."
 msgstr ""
 "应用程序启动时进入全屏模式。\n"
 "此选项的优先级高于“调整窗口大小以适应视频”和“记住窗口大小和位置”。"
 
-#: src/qml/Settings/GeneralSettings.qml:390
+#: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
-#: src/qml/Settings/GeneralSettings.qml:410
+#: src/qml/Settings/GeneralSettings.qml:373
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b> 在 Wayland 环境中不支持恢复位置。</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1544,47 +1585,50 @@ msgstr ""
 "窗口的大小和位置的更改将被保存并用于新打开的窗口。<br><br>%1“调整窗口大小以适"
 "应视频”选项的优先级更高。"
 
-#: src/qml/Settings/GeneralSettings.qml:426
+#: src/qml/Settings/GeneralSettings.qml:387
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
-#: src/qml/Settings/GeneralSettings.qml:437
+#: src/qml/Settings/GeneralSettings.qml:398
 #: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/Settings/GeneralSettings.qml:448
+#: src/qml/Settings/GeneralSettings.qml:409
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
-#: src/qml/Settings/GeneralSettings.qml:457
+#: src/qml/Settings/GeneralSettings.qml:418
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
-#: src/qml/Settings/GeneralSettings.qml:501
+#: src/qml/Settings/GeneralSettings.qml:462
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面样式"
 
-#: src/qml/Settings/GeneralSettings.qml:534
+#: src/qml/Settings/GeneralSettings.qml:495
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "默认"
 
-#: src/qml/Settings/GeneralSettings.qml:558
+#: src/qml/Settings/GeneralSettings.qml:519
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "使用 Breeze 微风图标主题"
 
-#: src/qml/Settings/GeneralSettings.qml:566
+#: src/qml/Settings/GeneralSettings.qml:527
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Sets the icon theme to breeze.\n"
+#| "Requires restart."
 msgctxt "@info:tooltip"
-msgid ""
-"Sets the icon theme to breeze.\n"
-"Requires restart."
+msgid "Sets the icon theme to breeze.<br>Requires restart."
 msgstr ""
 "设置图标主题为 Breeze 微风。\n"
 "需要重启才能生效。"
@@ -2324,3 +2368,16 @@ msgstr "饱和度"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键点击滑块可以重置"
+
+#: src/youtube.cpp:80
+#, kde-format
+msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
+msgid ""
+"Could not retrieve playlist with id: %1\n"
+"\n"
+"%2"
+msgstr ""
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "The number of recent files to store. Enter 0 (zero) to disable."
+#~ msgstr "“最近文件”列表的文件数量上限。输入 0 时禁止记录最近文件。"

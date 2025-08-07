@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:42+0000\n"
+"POT-Creation-Date: 2025-08-07 18:29+0000\n"
 "PO-Revision-Date: 2025-07-28 18:00+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -581,32 +581,38 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Textningstiming: %1 sekunder"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:471
+#, kde-format
+msgctxt "@info:tooltip; %1 is an absolute path"
+msgid "File doesn't exist: %1"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:504
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ingen"
 
-#: src/mpv/mpvitem.cpp:535
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Skärmbild misslyckades"
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:548
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
-#: src/mpv/mpvitem.cpp:542
+#: src/mpv/mpvitem.cpp:550
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Skärmbild: %1"
 
-#: src/mpv/mpvitem.cpp:569
+#: src/mpv/mpvitem.cpp:577
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -616,7 +622,7 @@ msgstr ""
 "Inget videospår upptäckt, troligen kan videospåret inte avkodas eller spelas "
 "på grund av saknade avkodare."
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:610
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -774,31 +780,31 @@ msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Senaste filer"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:83
+#: src/qml/Haruna/Components/HamburgerMenu.qml:92
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Primär textning"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:89
+#: src/qml/Haruna/Components/HamburgerMenu.qml:98
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Sekundär textning"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:98
+#: src/qml/Haruna/Components/HamburgerMenu.qml:107
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "Ljudspår"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:121
+#: src/qml/Haruna/Components/HamburgerMenu.qml:130
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Mer"
 
-#: src/qml/Haruna/Components/InputPopup.qml:31
+#: src/qml/Haruna/Components/InputPopup.qml:35
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -899,7 +905,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Välj textningsfil"
 
-#: src/qml/Main.qml:356
+#: src/qml/Main.qml:360
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Öppna"
@@ -924,7 +930,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Senaste filer"
 
-#: src/qml/Menus/FileMenu.qml:56 src/qml/Menus/Global/GlobalFileMenu.qml:67
+#: src/qml/Menus/FileMenu.qml:64 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Rensa lista"
@@ -1384,77 +1390,102 @@ msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Maximalt antal senaste filer"
 
-#: src/qml/Settings/GeneralSettings.qml:98
-msgctxt "@info:tooltip"
-msgid "The number of recent files to store. Enter 0 (zero) to disable."
-msgstr "Antal senaste filer att lagra. Ange 0 (noll) för att inaktivera."
+#: src/qml/Settings/GeneralSettings.qml:100
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Clear"
+msgctxt "@action:button clear (delete from database) recent files"
+msgid "Clear"
+msgstr "Rensa"
 
-#: src/qml/Settings/GeneralSettings.qml:106
+#: src/qml/Settings/GeneralSettings.qml:104
+msgctxt "@info:tooltip"
+msgid "Deletes recent files from the database"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:109
+msgctxt "@info:tooltip"
+msgid ""
+"The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
+"opened file is stored.<br>Bold entries are files opened from the open file/"
+"url actions and from external apps (command line, file manager, drag and "
+"drop etc.)."
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Tillåt bara en instans"
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:131
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Trying to open another Haruna instance will do nothing.\n"
+#| "Trying to open another file with Haruna will open the file in the running "
+#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
-"Trying to open another Haruna instance will do nothing.\n"
-"Trying to open another file with Haruna will open the file in the running "
-"instance."
+"Trying to open another Haruna instance will do nothing.<br>Trying to open "
+"another file with Haruna will open the file in the running instance."
 msgstr ""
 "Försök att starta en annan instans av Haruna gör ingenting.\n"
 "Försök att öppna en annan fil med Haruna öppnar filen i instansen som kör."
 
-#: src/qml/Settings/GeneralSettings.qml:136
+#: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Lägg till fil i spellista"
 
 #: src/qml/Settings/GeneralSettings.qml:152
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
-msgid "File will be added to the end of the playlist"
+msgid "File will be added to the end of the playlist."
 msgstr "Filen läggs till sist i spellistan"
 
-#: src/qml/Settings/GeneralSettings.qml:164
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "Spela ny fil"
 
-#: src/qml/Settings/GeneralSettings.qml:175
+#: src/qml/Settings/GeneralSettings.qml:172
 msgctxt "@title"
 msgid "Interface"
 msgstr "Gränssnitt"
 
-#: src/qml/Settings/GeneralSettings.qml:181
+#: src/qml/Settings/GeneralSettings.qml:178
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Sidfotsstil"
 
-#: src/qml/Settings/GeneralSettings.qml:193
+#: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "Förval"
 
-#: src/qml/Settings/GeneralSettings.qml:199
+#: src/qml/Settings/GeneralSettings.qml:196
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr "Fristående"
 
-#: src/qml/Settings/GeneralSettings.qml:213
+#: src/qml/Settings/GeneralSettings.qml:210
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Visa fristående sidfot vid"
 
-#: src/qml/Settings/GeneralSettings.qml:228
+#: src/qml/Settings/GeneralSettings.qml:225
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr "Varje musrörelse"
 
-#: src/qml/Settings/GeneralSettings.qml:234
+#: src/qml/Settings/GeneralSettings.qml:231
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr "Musrörelse längst ner"
 
-#: src/qml/Settings/GeneralSettings.qml:249
+#: src/qml/Settings/GeneralSettings.qml:246
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1465,91 +1496,101 @@ msgstr ""
 "musrörelse över videoområdet<br><strong>Nedre musrörelse</strong> – "
 "musrörelse längst ner i videoområdet."
 
-#: src/qml/Settings/GeneralSettings.qml:257
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Förhandsgranskningsminiatyrbild"
 
-#: src/qml/Settings/GeneralSettings.qml:262
+#: src/qml/Settings/GeneralSettings.qml:259
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Visa förhandsgranskningsminiatyrbild"
 
-#: src/qml/Settings/GeneralSettings.qml:269
+#: src/qml/Settings/GeneralSettings.qml:266
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 "Visar en förhandsgranskning när muspekaren hålls över sök- eller "
 "förloppsraden."
 
-#: src/qml/Settings/GeneralSettings.qml:278
+#: src/qml/Settings/GeneralSettings.qml:275
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Använd naturtrogen förhandsgranskning"
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/qml/Settings/GeneralSettings.qml:285
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Att generera en naturtrogen förhandsgranskning går långsamt."
 
-#: src/qml/Settings/GeneralSettings.qml:305
+#: src/qml/Settings/GeneralSettings.qml:293
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Miniatyrbildens bredd"
 
-#: src/qml/Settings/GeneralSettings.qml:323
+#: src/qml/Settings/GeneralSettings.qml:311
 msgctxt "@label"
 msgid "Window"
 msgstr "Fönster"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:317
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Ändra storlek för att passa video"
 
-#: src/qml/Settings/GeneralSettings.qml:347
+#: src/qml/Settings/GeneralSettings.qml:329
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Stöds inte på Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:348
+#: src/qml/Settings/GeneralSettings.qml:330
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The window is resized according to the video resolution.\n"
+#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
-"The window is resized according to the video resolution.\n"
-"The maximum size is not constrained, this is left to the operating system."
+"The window is resized according to the video resolution.<br>The maximum size "
+"is not constrained, this is left to the operating system."
 msgstr ""
 "Fönstrets storlek ändras enligt videons upplösning.\n"
 "Den maximala storleken begränsas inte, det överlämnas till operativsystemet."
 
-#: src/qml/Settings/GeneralSettings.qml:361
+#: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Starta i fullskärmsläge"
 
-#: src/qml/Settings/GeneralSettings.qml:376
+#: src/qml/Settings/GeneralSettings.qml:349
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Enter fullscreen mode when the application starts.\n"
+#| "This takes precedence over Resize to fit video, and Remember window size "
+#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
-"Enter fullscreen mode when the application starts.\n"
-"This takes precedence over Resize to fit video, and Remember window size and "
-"position settings."
+"Enter fullscreen mode when the application starts.<br>This takes precedence "
+"over Resize to fit video, and Remember window size and position settings."
 msgstr ""
 "Gå till fullskärmsläge när programmet startar.\n"
 "Det har företräde framför inställningarna Ändra storlek för att passa video "
 "och Kom ihåg fönsterstorlek och position."
 
-#: src/qml/Settings/GeneralSettings.qml:390
+#: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Kom ihåg fönsterstorlek och position"
 
-#: src/qml/Settings/GeneralSettings.qml:410
+#: src/qml/Settings/GeneralSettings.qml:373
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>Återställa position stöds inte på Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:412
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1559,47 +1600,50 @@ msgstr ""
 "fönster.<br><br>%1Inställningen \"Ändra storlek för att passa video\" har "
 "företräde."
 
-#: src/qml/Settings/GeneralSettings.qml:426
+#: src/qml/Settings/GeneralSettings.qml:387
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Visa menyrad"
 
-#: src/qml/Settings/GeneralSettings.qml:437
+#: src/qml/Settings/GeneralSettings.qml:398
 #: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Visa verktygsrad"
 
-#: src/qml/Settings/GeneralSettings.qml:448
+#: src/qml/Settings/GeneralSettings.qml:409
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Visa kapitelmarkörer"
 
-#: src/qml/Settings/GeneralSettings.qml:457
+#: src/qml/Settings/GeneralSettings.qml:418
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Färgschema"
 
-#: src/qml/Settings/GeneralSettings.qml:501
+#: src/qml/Settings/GeneralSettings.qml:462
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Stil för grafiskt användargränssnitt"
 
-#: src/qml/Settings/GeneralSettings.qml:534
+#: src/qml/Settings/GeneralSettings.qml:495
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Förval"
 
-#: src/qml/Settings/GeneralSettings.qml:558
+#: src/qml/Settings/GeneralSettings.qml:519
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Använd Breeze ikontema"
 
-#: src/qml/Settings/GeneralSettings.qml:566
+#: src/qml/Settings/GeneralSettings.qml:527
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Sets the icon theme to breeze.\n"
+#| "Requires restart."
 msgctxt "@info:tooltip"
-msgid ""
-"Sets the icon theme to breeze.\n"
-"Requires restart."
+msgid "Sets the icon theme to breeze.<br>Requires restart."
 msgstr ""
 "Ställer in ikontemat till Breeze.\n"
 "Kräver omstart."
@@ -2372,6 +2416,19 @@ msgstr "Färgmättnad"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Mittenklicka på skjutreglagen för att återställa dem"
+
+#: src/youtube.cpp:80
+#, kde-format
+msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
+msgid ""
+"Could not retrieve playlist with id: %1\n"
+"\n"
+"%2"
+msgstr ""
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "The number of recent files to store. Enter 0 (zero) to disable."
+#~ msgstr "Antal senaste filer att lagra. Ange 0 (noll) för att inaktivera."
 
 #~ msgctxt "@title"
 #~ msgid "Double Click to Set Action"
