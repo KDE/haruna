@@ -82,20 +82,35 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        SpinBox {
-            id: maxRecentFiles
+        RowLayout {
+            SpinBox {
+                id: maxRecentFiles
 
-            from: 0
-            to: 100
-            value: GeneralSettings.maxRecentFiles
-            onValueModified: {
-                GeneralSettings.maxRecentFiles = maxRecentFiles.value
-                GeneralSettings.save()
-                recentFilesModel.populate()
+                from: 0
+                to: 100
+                value: GeneralSettings.maxRecentFiles
+                onValueModified: {
+                    GeneralSettings.maxRecentFiles = maxRecentFiles.value
+                    GeneralSettings.save()
+                    recentFilesModel.getItems()
+                }
             }
 
-            ToolTip {
-                text: i18nc("@info:tooltip", "The number of recent files to store. Enter 0 (zero) to disable.")
+            ToolButton {
+                icon.name: "documentinfo"
+                checkable: true
+                checked: false
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "The number of recent files to display. Enter 0 (zero) to disable.\n" +
+                                "Every opened file is stored.\nBold entries are files opened from the open file/url " +
+                                "actions and from external apps (command line, file manager, drag and drop etc.).")
+                    visible: (parent as ToolButton).checked
+                    delay: 0
+                    timeout: -1
+                    closePolicy: Popup.NoAutoClose
+                }
             }
         }
 
