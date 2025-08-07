@@ -8,24 +8,26 @@
 
 #include <QJsonDocument>
 #include <QJsonValue>
-#include <QMenu>
 #include <QProcess>
-
-#include <KSharedConfig>
+#include <QUrlQuery>
 
 #include "application.h"
+#include "database.h"
 #include "generalsettings.h"
-#include "global.h"
 
 using namespace Qt::StringLiterals;
+
+// clang-format off
+const QString OpenAction  = u"OpenAction"_s;
+const QString ExternalApp = u"ExternalApp"_s;
+const QString Playlist    = u"Playlist"_s;
+const QString Other       = u"Other"_s;
+// clang-format on
 
 RecentFilesModel::RecentFilesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    auto config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath(Global::ConfigFile::RecentFiles));
-    m_recentFilesConfigGroup = config->group(u"RecentFiles"_s);
-    setMaxRecentFiles(GeneralSettings::maxRecentFiles());
-    populate();
+    getItems();
 }
 
 int RecentFilesModel::rowCount(const QModelIndex &parent) const
@@ -34,7 +36,7 @@ int RecentFilesModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_urls.count();
+    return m_data.count();
 }
 
 QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
@@ -43,13 +45,15 @@ QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    RecentFile recentFile = m_urls.at(index.row());
+    const auto item = m_data.at(index.row());
 
     switch (role) {
-    case PathRole:
-        return QVariant(recentFile.url);
+    case UrlRole:
+        return QVariant(item.url);
     case NameRole:
-        return QVariant(recentFile.name);
+        return QVariant(item.filename);
+    case OpenedFromRole:
+        return QVariant::fromValue(stringToOpenedFrom(item.openedFrom));
     }
 
     return QVariant();
@@ -58,128 +62,89 @@ QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> RecentFilesModel::roleNames() const
 {
     QHash<int, QByteArray> roles{
-        {PathRole, QByteArrayLiteral("path")},
-        {NameRole, QByteArrayLiteral("name")},
+        {UrlRole, QByteArrayLiteral("url")},
+        {NameRole, QByteArrayLiteral("filename")},
+        {OpenedFromRole, QByteArrayLiteral("openedFrom")},
     };
 
     return roles;
 }
 
-void RecentFilesModel::populate()
+void RecentFilesModel::getItems()
 {
-    if (GeneralSettings::maxRecentFiles() <= 0) {
-        deleteEntries();
-        return;
-    }
-
     clear();
-    setMaxRecentFiles(GeneralSettings::maxRecentFiles());
 
-    for (int i = 0; i < maxRecentFiles(); i++) {
-        auto file = m_recentFilesConfigGroup.readPathEntry(u"File%1"_s.arg(i + 1), QString());
-        auto name = m_recentFilesConfigGroup.readPathEntry(u"Name%1"_s.arg(i + 1), QString());
-        if (file.isEmpty()) {
-            break;
-        }
-        QUrl url(file);
-        if (!url.isLocalFile() && url.scheme().isEmpty()) {
-            url.setScheme(u"file"_s);
-        }
-        RecentFile recentFile;
-        recentFile.url = url;
-        recentFile.name = name;
-
-        beginInsertRows(QModelIndex(), i, i);
-        m_urls.append(recentFile);
-        endInsertRows();
-    }
+    const auto recentFiles = Database::instance()->recentFiles(GeneralSettings::maxRecentFiles());
+    beginInsertRows(QModelIndex(), recentFiles.count(), recentFiles.count());
+    m_data = recentFiles;
+    endInsertRows();
 }
 
-void RecentFilesModel::addUrl(const QString &path, const QString &name)
+void RecentFilesModel::addUrl(const QUrl &url, OpenedFrom openedFrom, const QString &name)
 {
-    if (maxRecentFiles() == 0) {
+    if (url.scheme().isEmpty()) {
+        qDebug() << "No scheme for:" << url << openedFrom;
         return;
     }
 
-    auto url = QUrl::fromUserInput(path);
-    if (!url.isValid()) {
+    if (url.scheme().startsWith(u"http"_s) && !url.toString().contains(u"list="_s) && name.isEmpty()) {
+        getHttpItemInfo(url, openedFrom);
         return;
     }
 
-    if (url.scheme().startsWith(u"http"_s) && name.isEmpty()) {
-        getHttpItemInfo(url);
-    }
-
-    auto _name = name == QString() ? url.fileName() : name;
-
-    for (int i{0}; i < m_urls.count(); ++i) {
-        if (url == m_urls[i].url) {
-            beginRemoveRows(QModelIndex(), i, i);
-            m_urls.takeAt(i);
-            endRemoveRows();
-            break;
+    int i{0};
+    for (const auto &rf : std::as_const(m_data)) {
+        if (rf.url == url) {
+            auto item = m_data.takeAt(i);
+            item.timestamp = QDateTime::currentMSecsSinceEpoch();
+            m_data.prepend(item);
+            Q_EMIT dataChanged(index(0, 0), index(i, 0));
+            Database::instance()->addRecentFile(item.url, item.filename, item.openedFrom, item.timestamp);
+            return;
         }
+        i++;
     }
 
-    RecentFile recentFile;
-    recentFile.url = url;
-    recentFile.name = _name;
-
-    if (m_urls.count() == maxRecentFiles()) {
-        beginRemoveRows(QModelIndex(), m_urls.count() - 1, m_urls.count() - 1);
-        m_urls.removeLast();
-        endRemoveRows();
-    }
+    RecentFile rf;
+    rf.url = url;
+    rf.filename = name.isEmpty() ? url.fileName() : name;
+    rf.openedFrom = openedFromToString(openedFrom);
+    rf.timestamp = QDateTime::currentMSecsSinceEpoch();
 
     beginInsertRows(QModelIndex(), 0, 0);
-    m_urls.prepend(recentFile);
+    m_data.prepend(rf);
     endInsertRows();
 
-    saveEntries();
+    Database::instance()->addRecentFile(rf.url, rf.filename, rf.openedFrom, rf.timestamp);
 }
 
 void RecentFilesModel::clear()
 {
     beginResetModel();
-    m_urls.clear();
+    m_data.clear();
     endResetModel();
 }
 
 void RecentFilesModel::deleteEntries()
 {
     clear();
-    m_recentFilesConfigGroup.deleteGroup();
-    m_recentFilesConfigGroup.sync();
+    Database::instance()->deleteRecentFiles();
 }
 
-void RecentFilesModel::saveEntries()
+void RecentFilesModel::getHttpItemInfo(const QUrl &url, OpenedFrom openedFrom)
 {
-    m_recentFilesConfigGroup.deleteGroup();
-    int i = 1;
-    for (const auto &[url, name] : std::as_const(m_urls)) {
-        m_recentFilesConfigGroup.writePathEntry(u"File%1"_s.arg(i), url.toDisplayString(QUrl::PreferLocalFile));
-        m_recentFilesConfigGroup.writePathEntry(u"Name%1"_s.arg(i), name);
+    QUrlQuery query{url.query()};
+    QString playlistId{query.queryItemValue(u"list"_s)};
+    QString videoId{query.queryItemValue(u"v"_s)};
 
-        ++i;
+    QUrl urlWithoutPlaylist = url;
+    if ((url.host() == u"www.youtube.com"_s || url.host() == u"youtu.be"_s) && !playlistId.isEmpty()) {
+        urlWithoutPlaylist = QUrl{u"https://www.youtube.com/watch?v=%1"_s.arg(videoId)};
     }
-    m_recentFilesConfigGroup.sync();
-}
 
-int RecentFilesModel::maxRecentFiles() const
-{
-    return m_maxRecentFiles;
-}
-
-void RecentFilesModel::setMaxRecentFiles(int _maxRecentFiles)
-{
-    m_maxRecentFiles = _maxRecentFiles;
-}
-
-void RecentFilesModel::getHttpItemInfo(const QUrl &url)
-{
     auto ytdlProcess = std::make_shared<QProcess>();
     ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << u"-j"_s << url.toString());
+    ytdlProcess->setArguments(QStringList() << u"-j"_s << urlWithoutPlaylist.toString());
     ytdlProcess->start();
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
@@ -189,8 +154,42 @@ void RecentFilesModel::getHttpItemInfo(const QUrl &url)
             return;
         }
 
-        addUrl(url.toString(), title);
+        addUrl(url, openedFrom, title);
     });
+}
+
+QString RecentFilesModel::openedFromToString(OpenedFrom from) const
+{
+    switch (from) {
+    case OpenedFrom::OpenAction:
+        return OpenAction;
+    case OpenedFrom::ExternalApp:
+        return ExternalApp;
+    case OpenedFrom::Playlist:
+        return Playlist;
+    case OpenedFrom::Other:
+        return QString{};
+    }
+
+    return QString{};
+}
+
+RecentFilesModel::OpenedFrom RecentFilesModel::stringToOpenedFrom(const QString &from) const
+{
+    if (from == OpenAction) {
+        return OpenedFrom::OpenAction;
+    }
+    if (from == ExternalApp) {
+        return OpenedFrom::ExternalApp;
+    }
+    if (from == Playlist) {
+        return OpenedFrom::Playlist;
+    }
+    if (from == Other) {
+        return OpenedFrom::Other;
+    }
+
+    return OpenedFrom::Other;
 }
 
 #include "moc_recentfilesmodel.cpp"

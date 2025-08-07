@@ -11,14 +11,7 @@
 #include <QUrl>
 #include <QtQml/qqmlregistration.h>
 
-#include <KConfigGroup>
-
-class KRecentFilesAction;
-
-struct RecentFile {
-    QUrl url;
-    QString name;
-};
+#include "recentfile.h"
 
 class RecentFilesModel : public QAbstractListModel
 {
@@ -29,27 +22,32 @@ public:
     explicit RecentFilesModel(QObject *parent = nullptr);
 
     enum Roles {
-        PathRole = Qt::UserRole + 1,
+        UrlRole = Qt::UserRole + 1,
         NameRole,
+        OpenedFromRole,
     };
+
+    enum class OpenedFrom {
+        Other,
+        OpenAction,
+        ExternalApp,
+        Playlist,
+    };
+    Q_ENUM(OpenedFrom)
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
-    Q_INVOKABLE void addUrl(const QString &path, const QString &name = QString());
+    Q_INVOKABLE void addUrl(const QUrl &url, OpenedFrom openedFrom, const QString &name = QString());
     Q_INVOKABLE void clear();
     Q_INVOKABLE void deleteEntries();
-    Q_INVOKABLE void populate();
-
-    int maxRecentFiles() const;
-    void setMaxRecentFiles(int _maxRecentFiles);
+    Q_INVOKABLE void getItems();
 
 private:
-    void saveEntries();
-    void getHttpItemInfo(const QUrl &url);
-    QList<RecentFile> m_urls;
-    KConfigGroup m_recentFilesConfigGroup;
-    int m_maxRecentFiles{10};
+    void getHttpItemInfo(const QUrl &url, OpenedFrom openedFrom);
+    QString openedFromToString(OpenedFrom from) const;
+    OpenedFrom stringToOpenedFrom(const QString &from) const;
+    QList<RecentFile> m_data;
 };
 
 #endif // RECENTFILESMODEL_H
