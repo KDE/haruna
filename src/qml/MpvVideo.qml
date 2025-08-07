@@ -53,7 +53,7 @@ MpvItem {
     onPlayNext: { HarunaApp.actions.playNextAction.trigger() }
     onPlayPrevious: { HarunaApp.actions.playPreviousAction.trigger() }
     onOpenUri: {
-        root.window.openFile(uri)
+        root.window.openFile(uri, RecentFilesModel.OpenedFrom.ExternalApp)
     }
 
     Timer {
@@ -173,7 +173,7 @@ MpvItem {
             }
 
             if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-                root.window.openFile(drop.urls[0], true)
+                root.window.openFile(drop.urls[0], RecentFilesModel.OpenedFrom.ExternalApp)
             }
         }
     }

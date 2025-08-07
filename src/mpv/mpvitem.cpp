@@ -28,6 +28,7 @@
 #include "playbacksettings.h"
 #include "playlistmodel.h"
 #include "playlistsettings.h"
+#include "recentfilesmodel.h"
 #include "subtitlessettings.h"
 #include "tracksmodel.h"
 #include "videosettings.h"
@@ -226,7 +227,10 @@ void MpvItem::setupConnections()
             this, &MpvItem::onChapterChanged);
 
     connect(m_playlistModel.get(), &PlaylistModel::playingItemChanged, this, [=]() {
-        loadFile(m_playlistModel->m_playlist[m_playlistModel->m_playingItem].url.toString());
+        const auto url = m_playlistModel->m_playlist[m_playlistModel->m_playingItem].url;
+        const auto mediaTitle = m_playlistModel->m_playlist[m_playlistModel->m_playingItem].mediaTitle;
+        loadFile(url.toString());
+        Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::Playlist, mediaTitle);
     });
 
 
@@ -298,7 +302,7 @@ void MpvItem::onReady()
     QUrl url{Application::instance()->url(0)};
     if (!url.isEmpty() && url.isValid()) {
         playlistModel()->addItem(Application::instance()->url(0), PlaylistModel::Clear);
-        Q_EMIT addToRecentFiles(url);
+        Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
     } else {
         if (PlaybackSettings::openLastPlayedFile()) {
             // if both lastPlaylist and lastPlayedFile are set the playlist is loaded

@@ -66,11 +66,20 @@ ToolButton {
                     delegate: MenuItem {
                         id: delegate
 
-                        required property string name
-                        required property string path
+                        required property string url
+                        required property string filename
+                        required property int openedFrom
 
-                        text: delegate.name
-                        onClicked: window.openFile(delegate.path)
+                        text: openedFrom === RecentFilesModel.OpenedFrom.OpenAction
+                              || openedFrom === RecentFilesModel.OpenedFrom.ExternalApp
+                              ? `<strong>${delegate.filename}</strong>`
+                              : delegate.filename
+
+                        onClicked: {
+                            recentFilesMenu.dismiss()
+                            const mainWindow = Window.window as Main
+                            mainWindow.openFile(delegate.url, RecentFilesModel.OpenedFrom.Other)
+                        }
                     }
                 }
             }

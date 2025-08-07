@@ -110,8 +110,8 @@ ApplicationWindow {
             window.resizeWindow()
         }
 
-        onAddToRecentFiles: function(url) {
-            recentFilesModel.addUrl(url)
+        onAddToRecentFiles: function(url, openedFrom, name) {
+            recentFilesModel.addUrl(url, openedFrom, name)
         }
 
         Osd {
@@ -303,7 +303,7 @@ ApplicationWindow {
                 return
             }
 
-            window.openFile(url)
+            window.openFile(url, RecentFilesModel.OpenedFrom.ExternalApp)
         }
     }
 
@@ -319,7 +319,7 @@ ApplicationWindow {
         fileMode: FileDialog.OpenFile
 
         onAccepted: {
-            openFile(fileDialog.selectedFile, true)
+            window.openFile(fileDialog.selectedFile, RecentFilesModel.OpenedFrom.OpenAction)
             mpv.focus = true
 
             GeneralSettings.fileDialogLastLocation = HarunaApp.parentUrl(fileDialog.selectedFile)
@@ -356,7 +356,8 @@ ApplicationWindow {
         buttonText: i18nc("@action:button", "Open")
 
         onUrlOpened: function(url) {
-            window.openFile(url, true)
+            window.openFile(HarunaApp.normalizeYoutubeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
+
             GeneralSettings.lastUrl = url
             GeneralSettings.save()
         }
@@ -373,11 +374,8 @@ ApplicationWindow {
         }
     }
 
-    function openFile(path: string, addToRecentFiles = false) : void {
-        if (addToRecentFiles) {
-            recentFilesModel.addUrl(path)
-        }
-
+    function openFile(path: string, openedFrom: int) : void {
+        recentFilesModel.addUrl(path, openedFrom)
         mpv.playlistModel.addItem(path, PlaylistModel.Clear)
     }
 

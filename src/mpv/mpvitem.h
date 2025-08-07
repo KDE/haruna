@@ -11,6 +11,8 @@
 
 #include <memory>
 
+#include "recentfilesmodel.h"
+
 class ChaptersModel;
 class PlaylistModel;
 class PlaylistProxyModel;
@@ -181,7 +183,7 @@ Q_SIGNALS:
     void syncConfigValue(QString path, QString group, QString key, QVariant value);
 
     void osdMessage(const QString &text);
-    void addToRecentFiles(const QUrl &url);
+    void addToRecentFiles(const QUrl &url, RecentFilesModel::OpenedFrom from, const QString &name);
 
     // signals used for mpris
     void raise();

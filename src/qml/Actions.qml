@@ -138,7 +138,7 @@ Item {
             }
 
             const mainWindow = root.Window.window as Main
-            mainWindow.openFile(GeneralSettings.lastPlayedFile)
+            mainWindow.openFile(GeneralSettings.lastPlayedFile, RecentFilesModel.OpenedFrom.Other)
         }
 
         function onMuteAction() {

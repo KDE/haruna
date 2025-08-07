@@ -36,15 +36,23 @@ Menu {
             delegate: MenuItem {
                 id: delegate
 
-                required property string name
-                required property string path
+                required property string url
+                required property string filename
+                required property int openedFrom
 
-                text: delegate.name
+                text: openedFrom === RecentFilesModel.OpenedFrom.OpenAction
+                      || openedFrom === RecentFilesModel.OpenedFrom.ExternalApp
+                      ? `<strong>${delegate.filename}</strong>`
+                      : delegate.filename
 
                 onClicked: {
                     recentFilesMenu.dismiss()
                     const mainWindow = Window.window as Main
-                    mainWindow.openFile(delegate.path)
+                    mainWindow.openFile(delegate.url, RecentFilesModel.OpenedFrom.Other)
+                }
+
+                ToolTip {
+                    text: delegate.url
                 }
             }
             onObjectAdded: (index, object) => recentFilesMenu.insertItem(index, object)
