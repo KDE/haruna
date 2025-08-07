@@ -97,6 +97,15 @@ SettingsBasePage {
             }
 
             ToolButton {
+                text: i18nc("@action:button clear (delete from database) recent files", "Clear")
+                onClicked: recentFilesModel.deleteEntries()
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "Deletes recent files from the database")
+                }
+            }
+
+            ToolButton {
                 icon.name: "documentinfo"
                 checkable: true
                 checked: false
