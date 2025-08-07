@@ -283,7 +283,7 @@ SettingsBasePage {
 
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip", "Generating an accurate preview is slow")
-                iconColor: Kirigami.Theme.negativeTextColor
+                icon.color: Kirigami.Theme.negativeTextColor
 
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
