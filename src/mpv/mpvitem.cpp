@@ -305,13 +305,7 @@ void MpvItem::onReady()
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
     } else {
         if (PlaybackSettings::openLastPlayedFile()) {
-            // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
-            // and the lastPlayedFile is searched in the playlist
-            if (!GeneralSettings::lastPlaylist().isEmpty()) {
-                playlistModel()->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
-            } else {
-                playlistModel()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
-            }
+            playlistModel()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
         }
     }
 }
