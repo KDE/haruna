@@ -24,6 +24,7 @@
 #include "application.h"
 #include "framedecoder.h"
 #include "subtitlessettings.h"
+#include "youtube.h"
 
 using namespace Qt::StringLiterals;
 
@@ -185,7 +186,8 @@ void Worker::syncConfigValue(QString path, QString group, QString key, QVariant 
 void Worker::getYtdlpVersion()
 {
     QProcess ytdlpProcess;
-    ytdlpProcess.setProgram(Application::youtubeDlExecutable());
+    YouTube yt;
+    ytdlpProcess.setProgram(yt.youtubeDlExecutable());
     ytdlpProcess.setArguments({u"--version"_s});
     ytdlpProcess.start();
     ytdlpProcess.waitForFinished();

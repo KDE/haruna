@@ -33,6 +33,7 @@
 #include "tracksmodel.h"
 #include "videosettings.h"
 #include "worker.h"
+#include "youtube.h"
 
 #if defined(Q_OS_UNIX)
 #include <QDBusConnection>
@@ -137,7 +138,8 @@ void MpvItem::initProperties()
     Q_EMIT setProperty(MpvProperties::self()->VolumeMax, 100);
 
     // set ytdl_path to yt-dlp or fallback to youtube-dl
-    Q_EMIT setProperty(MpvProperties::self()->ScriptOpts, u"ytdl_hook-ytdl_path=%1"_s.arg(Application::youtubeDlExecutable()));
+    YouTube yt;
+    Q_EMIT setProperty(MpvProperties::self()->ScriptOpts, u"ytdl_hook-ytdl_path=%1"_s.arg(yt.youtubeDlExecutable()));
     QCommandLineParser *cmdParser = Application::instance()->parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
     if (cmdParser->isSet(u"ytdl-format-selection"_s)) {

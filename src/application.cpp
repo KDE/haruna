@@ -261,26 +261,6 @@ QString Application::version()
     return QString::fromStdString(HARUNA_VERSION_STRING);
 }
 
-bool Application::hasYoutubeDl()
-{
-    return !youtubeDlExecutable().isEmpty();
-}
-
-QString Application::youtubeDlExecutable()
-{
-    auto ytDlp = QStandardPaths::findExecutable(u"yt-dlp"_s);
-    if (!ytDlp.isEmpty()) {
-        return ytDlp;
-    }
-
-    auto youtubeDl = QStandardPaths::findExecutable(u"youtube-dl"_s);
-    if (!youtubeDl.isEmpty()) {
-        return youtubeDl;
-    }
-
-    return QString();
-}
-
 QUrl Application::parentUrl(const QString &path)
 {
     QUrl url(path);
@@ -297,33 +277,6 @@ QUrl Application::parentUrl(const QString &path)
     parentFolderUrl.setScheme(u"file"_s);
 
     return parentFolderUrl;
-}
-
-bool Application::isYoutubePlaylist(const QUrl &url)
-{
-    QUrlQuery query{url.query()};
-    const auto listId = query.queryItemValue(u"list"_s);
-    return !listId.isEmpty();
-}
-
-QUrl Application::normalizeYoutubeUrl(const QUrl &url)
-{
-    QUrlQuery query{url.query()};
-    QString playlistId{query.queryItemValue(u"list"_s)};
-    QString videoId{query.queryItemValue(u"v"_s)};
-
-    if (videoId.isEmpty() && url.host().contains(u"youtu.be"_s)) {
-        videoId = url.fileName();
-    }
-
-    QUrl normalizedUrl;
-    if (playlistId.isEmpty()) {
-        normalizedUrl = QUrl{u"https://www.youtube.com/watch?v=%1"_s.arg(videoId)};
-    } else {
-        normalizedUrl = QUrl{u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(videoId, playlistId)};
-    }
-
-    return normalizedUrl;
 }
 
 QString Application::formatTime(const double time)

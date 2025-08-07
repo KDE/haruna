@@ -12,6 +12,10 @@
 #include <QUrl>
 #include <QtQml/qqmlregistration.h>
 
+#include "youtube.h"
+
+struct YTVideoInfo;
+
 struct PlaylistItem {
     QUrl url;
     QString filename;
@@ -97,8 +101,8 @@ private:
     void appendItem(const QUrl &url);
     void getSiblingItems(const QUrl &url);
     void addM3uItems(const QUrl &url);
-    void getYouTubePlaylist(const QUrl &url, PlaylistModel::Behaviour behaviour);
-    void getHttpItemInfo(const QUrl &url, uint row);
+    void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);
+    void updateFileInfo(YTVideoInfo info, QVariantMap data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
     void setPlayingItem(uint i);
 
@@ -106,6 +110,7 @@ private:
     uint m_playingItem{0};
     QString m_playlistPath;
     int m_httpItemCounter{0};
+    YouTube youtube;
 };
 
 Q_DECLARE_METATYPE(PlaylistModel::Behaviour)

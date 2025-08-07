@@ -13,8 +13,6 @@
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QJsonArray>
-#include <QJsonDocument>
-#include <QJsonValue>
 #include <QProcess>
 #include <QUrlQuery>
 
@@ -29,6 +27,7 @@
 #include "generalsettings.h"
 #include "playlistsettings.h"
 #include "worker.h"
+#include "youtube.h"
 
 using namespace Qt::StringLiterals;
 
@@ -36,6 +35,8 @@ PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
+    connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
+    connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
 
     connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, const QUrl &url, KFileMetaData::PropertyMultiMap metaData) {
         if (m_playlist.isEmpty() || i > m_playlist.size()) {
@@ -165,8 +166,8 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
     }
 
     if (url.scheme() == u"http"_s || url.scheme() == u"https"_s) {
-        if (Application::isYoutubePlaylist(url)) {
-            getYouTubePlaylist(url, behaviour);
+        if (youtube.isPlaylist(url)) {
+            youtube.getPlaylist(url);
         } else {
             if (behaviour == Behaviour::Clear) {
                 appendItem(url);
@@ -198,7 +199,8 @@ void PlaylistModel::appendItem(const QUrl &url)
             item.filename = url.toString();
             // causes issues with lots of links
             if (m_httpItemCounter < 20) {
-                getHttpItemInfo(url, row);
+                QVariantMap data{{u"row"_s, row}};
+                youtube.getVideoInfo(url, data);
                 ++m_httpItemCounter;
             }
         }
@@ -300,93 +302,64 @@ void PlaylistModel::addM3uItems(const QUrl &url)
     }
 }
 
-void PlaylistModel::getYouTubePlaylist(const QUrl &url, Behaviour behaviour)
+void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId)
 {
-    QUrlQuery query{url.query()};
-    QString playlistId{query.queryItemValue(u"list"_s)};
-    QString videoId{query.queryItemValue(u"v"_s)};
-    m_playlistPath = u"https://www.youtube.com/playlist?list=%1"_s.arg(playlistId);
+    bool matchFound{false};
+    for (int i = 0; i < playlist.size(); ++i) {
+        auto id = playlist[i][u"id"_s].toString();
+        auto url = u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(id, playlistId);
+        auto title = playlist[i][u"title"_s].toString();
+        auto duration = playlist[i][u"duration"_s].toDouble();
 
-    // use youtube-dl to get the required playlist info as json
-    auto ytdlProcess = std::make_shared<QProcess>();
-    auto args = QStringList() << u"-J"_s << u"--flat-playlist"_s << m_playlistPath;
-    ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(args);
-    ytdlProcess->start();
+        PlaylistItem item;
+        item.url = QUrl::fromUserInput(url);
+        item.filename = !title.isEmpty() ? title : url;
+        item.mediaTitle = !title.isEmpty() ? title : url;
+        item.formattedDuration = Application::formatTime(duration);
+        item.duration = duration;
 
-    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
-        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[u"entries"_s];
-        // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[u"title")].toString();
-        if (entries.toArray().isEmpty()) {
-            return;
-        }
+        beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
+        m_playlist.append(item);
+        Q_EMIT itemAdded(i, item.url.toString());
+        endInsertRows();
 
-        bool matchFound{false};
-        for (int i = 0; i < entries.toArray().size(); ++i) {
-            auto id = entries[i][u"id"_s].toString();
-            auto url = u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(id, playlistId);
-            auto title = entries[i][u"title"_s].toString();
-            auto duration = entries[i][u"duration"_s].toDouble();
-
-            PlaylistItem item;
-            item.url = QUrl::fromUserInput(url);
-            item.filename = !title.isEmpty() ? title : url;
-            item.mediaTitle = !title.isEmpty() ? title : url;
-            item.formattedDuration = Application::formatTime(duration);
-            item.duration = duration;
-
-            beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
-            m_playlist.append(item);
-            Q_EMIT itemAdded(i, item.url.toString());
-            endInsertRows();
-
-            if (videoId.isEmpty()) {
-                // when videoId is not available check if GeneralSettings::lastPlayedFile()
-                // is part of the playlist and set the matching item as playing
-                if (GeneralSettings::lastPlayedFile().contains(id) && !matchFound && behaviour == Behaviour::Clear) {
-                    setPlayingItem(i);
-                    matchFound = true;
-                }
-            } else {
-                // when videoId is available set the item with the same id as playing
-                if (videoId == id && !matchFound && behaviour == Behaviour::Clear) {
-                    setPlayingItem(i);
-                    matchFound = true;
-                }
+        if (videoId.isEmpty()) {
+            // when videoId is not available check if GeneralSettings::lastPlayedFile()
+            // is part of the playlist and set the matching item as playing
+            if (GeneralSettings::lastPlayedFile().contains(id) && !matchFound) {
+                setPlayingItem(i);
+                matchFound = true;
+            }
+        } else {
+            // when videoId is available set the item with the same id as playing
+            if (videoId == id && !matchFound) {
+                setPlayingItem(i);
+                matchFound = true;
             }
         }
+    }
 
-        if (!matchFound && behaviour == Behaviour::Clear) {
-            setPlayingItem(0);
-        }
-    });
+    if (!matchFound) {
+        setPlayingItem(0);
+    }
 }
 
-void PlaylistModel::getHttpItemInfo(const QUrl &url, uint row)
+void PlaylistModel::updateFileInfo(YTVideoInfo info, QVariantMap data)
 {
-    auto ytdlProcess = std::make_shared<QProcess>();
-    ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << u"-j"_s << url.toString());
-    ytdlProcess->start();
+    const auto row = data.value(u"row"_s).toUInt();
+    const auto item{m_playlist[row]};
+    if (info.url != item.url) {
+        return;
+    }
 
-    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
-        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QString title = QJsonDocument::fromJson(json.toUtf8())[u"title"_s].toString();
-        auto duration = QJsonDocument::fromJson(json.toUtf8())[u"duration"_s].toDouble();
-        if (title.isEmpty()) {
-            // todo: log if can't get title
-            return;
-        }
-        m_playlist[row].mediaTitle = title;
-        m_playlist[row].filename = title;
-        m_playlist[row].formattedDuration = Application::formatTime(duration);
-        m_playlist[row].duration = duration;
+    m_playlist[row].mediaTitle = info.mediaTitle;
+    m_playlist[row].filename = info.mediaTitle;
+    m_playlist[row].formattedDuration = Application::formatTime(info.duration);
+    m_playlist[row].duration = info.duration;
 
-        --m_httpItemCounter;
+    --m_httpItemCounter;
 
-        Q_EMIT dataChanged(index(row, 0), index(row, 0));
-    });
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)

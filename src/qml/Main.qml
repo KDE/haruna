@@ -346,6 +346,10 @@ ApplicationWindow {
         onRejected: mpv.focus = true
     }
 
+    YouTube {
+        id: youtube
+    }
+
     InputPopup {
         id: openUrlPopup
 
@@ -356,7 +360,7 @@ ApplicationWindow {
         buttonText: i18nc("@action:button", "Open")
 
         onUrlOpened: function(url) {
-            window.openFile(HarunaApp.normalizeYoutubeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
+            window.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
 
             GeneralSettings.lastUrl = url
             GeneralSettings.save()

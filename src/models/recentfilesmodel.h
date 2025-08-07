@@ -12,6 +12,7 @@
 #include <QtQml/qqmlregistration.h>
 
 #include "recentfile.h"
+#include "youtube.h"
 
 class RecentFilesModel : public QAbstractListModel
 {
@@ -44,10 +45,10 @@ public:
     Q_INVOKABLE void getItems();
 
 private:
-    void getHttpItemInfo(const QUrl &url, OpenedFrom openedFrom);
     QString openedFromToString(OpenedFrom from) const;
     OpenedFrom stringToOpenedFrom(const QString &from) const;
     QList<RecentFile> m_data;
+    YouTube youtube;
 };
 
 #endif // RECENTFILESMODEL_H

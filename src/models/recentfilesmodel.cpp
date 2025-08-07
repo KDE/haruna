@@ -11,9 +11,9 @@
 #include <QProcess>
 #include <QUrlQuery>
 
-#include "application.h"
 #include "database.h"
 #include "generalsettings.h"
+#include "youtube.h"
 
 using namespace Qt::StringLiterals;
 
@@ -27,6 +27,9 @@ const QString Other       = u"Other"_s;
 RecentFilesModel::RecentFilesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    connect(&youtube, &YouTube::videoInfoRetrieved, this, [this](YTVideoInfo info, QVariantMap data) {
+        addRecentFile(info.url, data.value(u"openedFrom"_s).value<OpenedFrom>(), info.mediaTitle);
+    });
     getItems();
 }
 
@@ -99,7 +102,8 @@ void RecentFilesModel::addRecentFile(const QUrl &url, OpenedFrom openedFrom, con
 
     if (url.scheme().startsWith(u"http"_s) && name.isEmpty()) {
         if (!url.toString().contains(u"list="_s)) {
-            getHttpItemInfo(url, openedFrom);
+            QVariantMap data{{u"openedFrom"_s, QVariant::fromValue(openedFrom)}};
+            youtube.getVideoInfo(url, data);
         }
         return;
     }
@@ -141,33 +145,6 @@ void RecentFilesModel::deleteEntries()
 {
     clear();
     Database::instance()->deleteRecentFiles();
-}
-
-void RecentFilesModel::getHttpItemInfo(const QUrl &url, OpenedFrom openedFrom)
-{
-    QUrlQuery query{url.query()};
-    QString playlistId{query.queryItemValue(u"list"_s)};
-    QString videoId{query.queryItemValue(u"v"_s)};
-
-    QUrl urlWithoutPlaylist = url;
-    if ((url.host() == u"www.youtube.com"_s || url.host() == u"youtu.be"_s) && !playlistId.isEmpty()) {
-        urlWithoutPlaylist = QUrl{u"https://www.youtube.com/watch?v=%1"_s.arg(videoId)};
-    }
-
-    auto ytdlProcess = std::make_shared<QProcess>();
-    ytdlProcess->setProgram(Application::youtubeDlExecutable());
-    ytdlProcess->setArguments(QStringList() << u"-j"_s << urlWithoutPlaylist.toString());
-    ytdlProcess->start();
-
-    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
-        QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QString title = QJsonDocument::fromJson(json.toUtf8())[u"title"_s].toString();
-        if (title.isEmpty()) {
-            return;
-        }
-
-        addRecentFile(url, openedFrom, title);
-    });
 }
 
 QString RecentFilesModel::openedFromToString(OpenedFrom from) const

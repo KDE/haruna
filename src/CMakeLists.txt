@@ -31,6 +31,7 @@ target_sources(haruna
     mpv/mpvproperties.h
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
+    youtube.h youtube.cpp
     ${ICONS_SRCS}
 )
 

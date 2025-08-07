@@ -68,10 +68,6 @@ public:
     Q_INVOKABLE bool isPlatformWayland();
 
     static QString version();
-    Q_INVOKABLE static bool hasYoutubeDl();
-    Q_INVOKABLE static QString youtubeDlExecutable();
-    Q_INVOKABLE static bool isYoutubePlaylist(const QUrl &url);
-    Q_INVOKABLE static QUrl normalizeYoutubeUrl(const QUrl &url);
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(QUrl url);
 

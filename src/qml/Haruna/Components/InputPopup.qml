@@ -24,12 +24,16 @@ Popup {
         openUrlTextField.selectAll()
     }
 
+    YouTube {
+        id: youtube
+    }
+
     RowLayout {
         anchors.fill: parent
 
         Label {
             text: i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
-            visible: !HarunaApp.hasYoutubeDl()
+            visible: !youtube.hasYoutubeDl()
             onLinkActivated: (link) => Qt.openUrlExternally(link)
         }
 
@@ -37,7 +41,7 @@ Popup {
             id: openUrlTextField
 
             text: root.lastUrl
-            visible: HarunaApp.hasYoutubeDl()
+            visible: youtube.hasYoutubeDl()
             Layout.preferredWidth: 400
             Layout.fillWidth: true
 
@@ -57,7 +61,7 @@ Popup {
         Button {
             id: openUrlButton
 
-            visible: HarunaApp.hasYoutubeDl()
+            visible: youtube.hasYoutubeDl()
             text: root.buttonText
 
             onClicked: {
