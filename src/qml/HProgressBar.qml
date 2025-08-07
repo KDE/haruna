@@ -182,14 +182,14 @@ RowLayout {
                 return
             }
 
-            root.m_mpv.command(["seek", slider.value, "absolute"])
+            root.m_mpv.commandAsync(["seek", slider.value, "absolute"])
             progressBarToolTip.text = HarunaApp.formatTime(slider.value)
 
             const previewItem = previewMpvLoader.item as MpvPreview
             if (previewItem === null || !previewItem.isLocalFile) {
                 return
             }
-            previewItem.command(["seek", slider.value, "absolute"])
+            previewItem.commandAsync(["seek", slider.value, "absolute"])
         }
 
         onPressedChanged: {
