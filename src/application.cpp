@@ -306,6 +306,26 @@ bool Application::isYoutubePlaylist(const QUrl &url)
     return !listId.isEmpty();
 }
 
+QUrl Application::normalizeYoutubeUrl(const QUrl &url)
+{
+    QUrlQuery query{url.query()};
+    QString playlistId{query.queryItemValue(u"list"_s)};
+    QString videoId{query.queryItemValue(u"v"_s)};
+
+    if (videoId.isEmpty() && url.host().contains(u"youtu.be"_s)) {
+        videoId = url.fileName();
+    }
+
+    QUrl normalizedUrl;
+    if (playlistId.isEmpty()) {
+        normalizedUrl = QUrl{u"https://www.youtube.com/watch?v=%1"_s.arg(videoId)};
+    } else {
+        normalizedUrl = QUrl{u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(videoId, playlistId)};
+    }
+
+    return normalizedUrl;
+}
+
 QString Application::formatTime(const double time)
 {
     int totalNumberOfSeconds = static_cast<int>(time);
