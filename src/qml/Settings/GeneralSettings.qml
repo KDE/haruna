@@ -105,21 +105,13 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip", "The number of recent files to display. Enter 0 (zero) to disable.<br>" +
+                            "Every opened file is stored.<br>Bold entries are files opened from the open file/url " +
+                            "actions and from external apps (command line, file manager, drag and drop etc.).")
+                toolTipWidth: 450
 
-                ToolTip {
-                    text: i18nc("@info:tooltip", "The number of recent files to display. Enter 0 (zero) to disable.\n" +
-                                "Every opened file is stored.\nBold entries are files opened from the open file/url " +
-                                "actions and from external apps (command line, file manager, drag and drop etc.).")
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -135,21 +127,11 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip", "Trying to open another Haruna instance will do nothing.<br>"+
+                                   "Trying to open another file with Haruna will open the file in the running instance.")
 
-                ToolTip {
-                    text: i18nc("@info:tooltip",
-                                "Trying to open another Haruna instance will do nothing.\n"+
-                                "Trying to open another file with Haruna will open the file in the running instance.")
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -166,19 +148,10 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip", "File will be added to the end of the playlist.")
 
-                ToolTip {
-                    text: i18nc("@info:tooltip", "File will be added to the end of the playlist")
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -308,20 +281,11 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                icon.color: Kirigami.Theme.negativeTextColor
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip", "Generating an accurate preview is slow")
+                iconColor: Kirigami.Theme.negativeTextColor
 
-                ToolTip {
-                    text: i18nc("@info:tooltip", "Generating an accurate preview is slow")
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -360,22 +324,13 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            ToolTipButton {
+                toolTipText: HarunaApp.isPlatformWayland()
+                             ? i18nc("@info:tooltip","Not supported on Wayland.")
+                             : i18nc("@info:tooltip", "The window is resized according to the video resolution.<br>" +
+                                     "The maximum size is not constrained, this is left to the operating system.")
 
-                ToolTip {
-                    text: HarunaApp.isPlatformWayland()
-                          ? i18nc("@info:tooltip","Not supported on Wayland.")
-                          : i18nc("@info:tooltip", "The window is resized according to the video resolution.\n" +
-                                  "The maximum size is not constrained, this is left to the operating system.")
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -390,20 +345,11 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip", "Enter fullscreen mode when the application starts.<br>" +
+                                   "This takes precedence over Resize to fit video, and Remember window size and position settings.")
 
-                ToolTip {
-                    text: i18nc("@info:tooltip", "Enter fullscreen mode when the application starts.\n" +
-                                "This takes precedence over Resize to fit video, and Remember window size and position settings.")
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -420,27 +366,18 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                icon.name: "documentinfo"
+            ToolTipButton {
+                readonly property
+                string waylandMessage: HarunaApp.isPlatformWayland()
+                                       ? i18nc("@info:tooltip extra wayland info for the “Remember window size and position” setting",
+                                               "<b>Restoring position is not supported on Wayland.</b><br><br>")
+                                       : ""
+                toolTipText: i18nc("@info:tooltip", "Changes to the window’s size and position "
+                            +"are saved and used for newly opened windows.<br><br>"
+                            +"%1The “Resize to fit video” setting takes precedence.", waylandMessage)
                 icon.color: HarunaApp.isPlatformWayland() ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.textColor
-                checkable: true
-                checked: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
-                ToolTip {
-                    readonly property
-                    string waylandMessage: HarunaApp.isPlatformWayland()
-                                           ? i18nc("@info:tooltip extra wayland info for the “Remember window size and position” setting",
-                                                   "<b>Restoring position is not supported on Wayland.</b><br><br>")
-                                           : ""
-                    text: i18nc("@info:tooltip", "Changes to the window’s size and position "
-                                +"are saved and used for newly opened windows.<br><br>"
-                                +"%1The “Resize to fit video” setting takes precedence.", waylandMessage)
-                    visible: (parent as ToolButton).checked
-                    delay: 0
-                    timeout: -1
-                    closePolicy: Popup.NoAutoClose
-                }
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }
         }
 
@@ -587,7 +524,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "Sets the icon theme to breeze.\nRequires restart.")
+                text: i18nc("@info:tooltip", "Sets the icon theme to breeze.<br>Requires restart.")
             }
         }
 
