@@ -85,7 +85,7 @@ void RecentFilesModel::getItems()
     endInsertRows();
 }
 
-void RecentFilesModel::addUrl(const QUrl &url, OpenedFrom openedFrom, const QString &name)
+void RecentFilesModel::addRecentFile(const QUrl &url, OpenedFrom openedFrom, const QString &name)
 {
     const auto maxFiles{GeneralSettings::maxRecentFiles()};
     if (maxFiles <= 0) {
@@ -164,7 +164,7 @@ void RecentFilesModel::getHttpItemInfo(const QUrl &url, OpenedFrom openedFrom)
             return;
         }
 
-        addUrl(url, openedFrom, title);
+        addRecentFile(url, openedFrom, title);
     });
 }
 

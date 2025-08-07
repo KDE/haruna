@@ -111,7 +111,7 @@ ApplicationWindow {
         }
 
         onAddToRecentFiles: function(url, openedFrom, name) {
-            recentFilesModel.addUrl(url, openedFrom, name)
+            recentFilesModel.addRecentFile(url, openedFrom, name)
         }
 
         Osd {
@@ -375,7 +375,7 @@ ApplicationWindow {
     }
 
     function openFile(path: string, openedFrom: int) : void {
-        recentFilesModel.addUrl(path, openedFrom)
+        recentFilesModel.addRecentFile(path, openedFrom)
         mpv.playlistModel.addItem(path, PlaylistModel.Clear)
     }
 

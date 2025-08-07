@@ -38,7 +38,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
-    Q_INVOKABLE void addUrl(const QUrl &url, OpenedFrom openedFrom, const QString &name = QString());
+    Q_INVOKABLE void addRecentFile(const QUrl &url, OpenedFrom openedFrom, const QString &name = QString());
     Q_INVOKABLE void clear();
     Q_INVOKABLE void deleteEntries();
     Q_INVOKABLE void getItems();
