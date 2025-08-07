@@ -72,16 +72,26 @@ QHash<int, QByteArray> RecentFilesModel::roleNames() const
 
 void RecentFilesModel::getItems()
 {
+    const auto maxFiles{GeneralSettings::maxRecentFiles()};
+    if (maxFiles <= 0) {
+        return;
+    }
+
     clear();
 
     const auto recentFiles = Database::instance()->recentFiles(GeneralSettings::maxRecentFiles());
-    beginInsertRows(QModelIndex(), recentFiles.count(), recentFiles.count());
+    beginInsertRows(QModelIndex(), 0, recentFiles.count() - 1);
     m_data = recentFiles;
     endInsertRows();
 }
 
 void RecentFilesModel::addUrl(const QUrl &url, OpenedFrom openedFrom, const QString &name)
 {
+    const auto maxFiles{GeneralSettings::maxRecentFiles()};
+    if (maxFiles <= 0) {
+        return;
+    }
+
     if (url.scheme().isEmpty()) {
         qDebug() << "No scheme for:" << url << openedFrom;
         return;
