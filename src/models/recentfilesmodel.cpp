@@ -97,8 +97,10 @@ void RecentFilesModel::addRecentFile(const QUrl &url, OpenedFrom openedFrom, con
         return;
     }
 
-    if (url.scheme().startsWith(u"http"_s) && !url.toString().contains(u"list="_s) && name.isEmpty()) {
-        getHttpItemInfo(url, openedFrom);
+    if (url.scheme().startsWith(u"http"_s) && name.isEmpty()) {
+        if (!url.toString().contains(u"list="_s)) {
+            getHttpItemInfo(url, openedFrom);
+        }
         return;
     }
 
