@@ -140,7 +140,7 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
-    action.name = u"openSubtitlesFileAction"_s;
+    action.name = u"addExternalSubtitleAction"_s;
     action.text = i18nc("@action", "Add External Subtitle…");
     action.iconName = u"add-subtitle"_s;
     action.defaultShortcut = Qt::ALT | Qt::Key_S;

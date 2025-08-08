@@ -32,7 +32,7 @@ Menu {
     MenuSeparator {}
 
     MenuItem {
-        action: HarunaApp.actions.openSubtitlesFileAction
+        action: HarunaApp.actions.addExternalSubtitleAction
         enabled: root.m_mpv.currentUrl.toString() !== ""
     }
     MenuItem { action: HarunaApp.actions.subtitleIncreaseFontSizeAction }

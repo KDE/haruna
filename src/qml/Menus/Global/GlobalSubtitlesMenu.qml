@@ -90,9 +90,9 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.MenuItem {
-        icon.name: HarunaApp.actions.openSubtitlesFileAction.icon.name
-        text: HarunaApp.actions.openSubtitlesFileAction.text
-        onTriggered: HarunaApp.actions.openSubtitlesFileAction.trigger()
+        icon.name: HarunaApp.actions.addExternalSubtitleAction.icon.name
+        text: HarunaApp.actions.addExternalSubtitleAction.text
+        onTriggered: HarunaApp.actions.addExternalSubtitleAction.trigger()
     }
 
     Labs.MenuItem {
