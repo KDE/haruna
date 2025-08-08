@@ -14,6 +14,7 @@ import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
+
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -124,17 +125,7 @@ ApplicationWindow {
         SelectActionPopup {
             id: triggerActionPopup
 
-            property int minHeight: mpv.height * 0.5
-            property int maxHeight: mpv.height * 0.9
-
-            x: mpv.width * 0.5 - width * 0.5
-            y: Kirigami.Units.largeSpacing
-            width: Kirigami.Units.gridUnit * 20
-            height: minHeight < Kirigami.Units.gridUnit * 16 ? maxHeight : minHeight
-            title: ""
-            subtitle: ""
-
-            onActionSelected: function (actionName) {
+            onActionSelected: function(actionName) {
                 HarunaApp.actions[actionName].trigger()
             }
         }

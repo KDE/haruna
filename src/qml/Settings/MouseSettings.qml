@@ -210,8 +210,6 @@ SettingsBasePage {
                         text: i18nc("@action:button select mouse button action", "Select action")
                         visible: !selectedActionLabel.text
                         onClicked: {
-                            selectActionPopup.title = i18nc("@title:window select mouse button action",
-                                                            "Select action")
                             selectActionPopup.open()
                         }
                     }
@@ -224,11 +222,9 @@ SettingsBasePage {
                     }
 
                     Button {
-                        text: "Change action"
+                        text: i18nc("@action:button", "Change action")
                         visible: selectedActionLabel.text
                         onClicked: {
-                            selectActionPopup.title = i18nc("@action:button change mouse button action ",
-                                                            "Change action")
                             selectActionPopup.open()
                         }
                     }
@@ -276,8 +272,6 @@ SettingsBasePage {
             SelectActionPopup {
                 id: selectActionPopup
 
-                width: Math.min(parent.width, 400)
-                height: Math.min(parent.height, 600)
                 onActionSelected: function(actionName) {
                     selectedActionLabel.text = HarunaApp.actions[actionName].text
                     selectedActionLabel.actionName = actionName
