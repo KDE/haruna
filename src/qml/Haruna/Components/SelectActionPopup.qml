@@ -4,124 +4,105 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+
 import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
 import org.kde.haruna
 
-Popup {
+Kirigami.SearchDialog {
     id: root
-
-    property string title: ""
-    property string subtitle: ""
-    property int buttonIndex: -1
 
     signal actionSelected(string actionName)
 
-    implicitHeight: parent.height * 0.9
-    implicitWidth: parent.width * 0.9
-    modal: true
-    anchors.centerIn: parent
-    focus: true
-
-    onOpened: {
-        actionsListView.positionViewAtBeginning()
-        filterActionsField.selectAll()
-        filterActionsField.focus = true
+    onActionSelected: function(actionName) {
+        close()
     }
 
-    onActionSelected: close()
+    emptyText: i18nc("@info:placeholder", "No action found.")
+    model: KItemModels.KSortFilterProxyModel {
+        id: sortModel
 
-    ColumnLayout {
-        anchors.fill: parent
+        sourceModel: ActionsModel {}
+        filterRoleName: "searchString"
+        filterCaseSensitivity: Qt.CaseInsensitive
+        sortRoleName: "actionText"
+        sortOrder: Qt.AscendingOrder
+    }
 
-        Kirigami.Heading {
-            text: root.title
-            visible: text !== ""
-        }
+    onTextChanged: {
+        sortModel.filterString = text
+    }
 
-        Label {
-            text: root.subtitle
-            visible: text !== ""
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignTop
-        }
+    delegate: Loader {
+        id: actionDelegateLoader
 
-        Kirigami.SearchField {
-            id: filterActionsField
+        required property int index
+        required property string actionName
+        required property string actionText
+        required property string actionShortcut
+        required property string actionDescription
+        required property string actionType
 
-            focus: true
-            onAccepted: selectActionModel.setNameFilter(text)
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignTop
-            KeyNavigation.up: actionsListView
-            KeyNavigation.down: actionsListView
-            KeyNavigation.tab: actionsListView
-            Keys.onReturnPressed: {
-                actionSelected(actionsListView.currentItem.actionName)
-            }
-            Keys.onEnterPressed: {
-                actionSelected(actionsListView.currentItem.actionName)
-            }
-        }
+        active: true
+        asynchronous: true
+        width: ListView.view.width
+        height: actionDescription === "" ? Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit * 3
 
-        ScrollView {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            Layout.alignment: Qt.AlignTop
+        Keys.forwardTo: [item]
 
-            ListView {
-                id: actionsListView
+        sourceComponent: ItemDelegate {
+            id: actionDelegate
 
-                model: ProxyActionsModel {
-                    id: selectActionModel
+            highlighted: actionDelegateLoader.ListView.view.currentIndex === actionDelegateLoader.index
 
-                    sourceModel: actionsModel
+            onClicked: root.actionSelected(actionDelegateLoader.actionName)
+            Keys.onEnterPressed: root.actionSelected(actionDelegateLoader.actionName)
+            Keys.onReturnPressed: root.actionSelected(actionDelegateLoader.actionName)
+
+            contentItem: RowLayout {
+
+                ColumnLayout {
+                    Layout.fillWidth: true
+
+                    Label {
+                        id: shortcutTextLabel
+
+                        text: actionDelegateLoader.actionText
+                        Layout.fillWidth: true
+                    }
+                    Label {
+                        text: actionDelegateLoader.actionDescription
+                        visible: text !== ""
+                        opacity: 0.9
+                        font.pointSize: shortcutTextLabel.font.pointSize - 1
+                    }
                 }
 
-                spacing: 1
-                clip: true
-                delegate: ItemDelegate {
-                    id: delegate
+                Repeater {
+                    model: actionDelegateLoader.actionShortcut.split("+")
+                    delegate: Kirigami.Chip {
+                        id: shortcutDelgate
 
-                    required property string actionName
-                    required property string actionText
-                    required property string actionDescription
-                    required property string actionShortcut
-                    required property string actionIcon
-                    required property string actionType
+                        required property string modelData
 
-                    width: actionsListView.width
+                        Layout.preferredWidth: actionShortcutLabel.width + Kirigami.Units.largeSpacing
+                        Layout.preferredHeight: actionShortcutLabel.height + Kirigami.Units.largeSpacing
 
-                    contentItem: RowLayout {
-                        Label {
-                            text: delegate.actionText
-
-                            Layout.fillWidth: true
-                        }
+                        closable: false
+                        checkable: false
 
                         Label {
-                            text: delegate.actionShortcut
-                            opacity: 0.7
-                        }
-                    }
-                    onClicked: actionSelected(delegate.actionName)
-                    Keys.onEnterPressed: actionSelected(delegate.actionName)
-                    Keys.onReturnPressed: actionSelected(delegate.actionName)
-                }
+                            id: actionShortcutLabel
 
-                KeyNavigation.up: filterActionsField
-                KeyNavigation.down: filterActionsField
-                Keys.onPressed: function(event) {
-                    if (event.key === Qt.Key_End) {
-                        actionsListView.currentIndex = actionsListView.count - 1
-                        actionsListView.positionViewAtEnd()
-                    }
-                    if (event.key === Qt.Key_Home) {
-                        actionsListView.currentIndex = 0
-                        actionsListView.positionViewAtBeginning()
+                            text: shortcutDelgate.modelData
+                            anchors.centerIn: parent
+                        }
                     }
                 }
             }
