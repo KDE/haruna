@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: CC0-1.0
 app-id: org.kde.haruna
 runtime: org.kde.Platform
-runtime-version: 6.8
+runtime-version: 6.9
 sdk: org.kde.Sdk
 command: haruna
 rename-icon: haruna
@@ -15,18 +15,18 @@ add-extensions:
 cleanup-commands:
   - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 finish-args:
+  - --device=dri
+  - --filesystem=home
+  - --filesystem=host:ro
+  - --own-name=org.mpris.MediaPlayer2.haruna
   - --share=ipc
   - --share=network
   - --socket=fallback-x11
-  - --socket=wayland
   - --socket=pulseaudio
-  - --device=dri
-  - --filesystem=host:ro
-  - --filesystem=home
-  - --talk-name=org.freedesktop.ScreenSaver
-  - --talk-name=org.freedesktop.FileManager1
-  - --own-name=org.mpris.MediaPlayer2.haruna
+  - --socket=wayland
   - --system-talk-name=org.freedesktop.UDisks2
+  - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.freedesktop.ScreenSaver
 cleanup:
   - '*.a'
   - '*.la'
@@ -39,7 +39,7 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: dir
-        path: '.'
+        path: .
       # - type: archive
       #   url: https://download.kde.org/stable/haruna/1.2.1/haruna-1.2.1.tar.xz
       #   sha256: eb01261a3498c6e25c28064e6ccea37aeb38cd8aa5006f02c92760b124c362fb
@@ -52,8 +52,8 @@ modules:
         buildsystem: cmake-ninja
         sources:
           - type: archive
-            url: https://download.kde.org/stable/mpvqt/mpvqt-1.0.1.tar.xz
-            sha256: 9f37b85f319c27f6244743c4259402b0aa2474ed851f0d833d9bd2a0731c178c
+            url: https://download.kde.org/stable/mpvqt/mpvqt-1.1.1.tar.xz
+            sha256: bdd1ea69338cf3017f628a886218b8c185ca24e8257f03207a3cf1bbb51e3d32
             x-checker-data:
               type: anitya
               project-id: 370634
@@ -67,14 +67,14 @@ modules:
               - -DKDSingleApplication_QT6=ON
               - -DKDSingleApplication_EXAMPLES=OFF
             sources:
-            - type: archive
-              url: https://github.com/KDAB/KDSingleApplication/releases/download/v1.2.0/kdsingleapplication-1.2.0.tar.gz
-              sha256: ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
-              x-checker-data:
-                type: anitya
-                project-id: 370439
-                stable-only: true
-                url-template: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v$version.tar.gz
+              - type: archive
+                url: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v1.2.0.tar.gz
+                sha256: ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
+                x-checker-data:
+                  type: anitya
+                  project-id: 370439
+                  stable-only: true
+                  url-template: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v$version.tar.gz
 
           - name: libmpv
             cleanup:
@@ -111,8 +111,8 @@ modules:
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20250117
-                    commit: 93162f34e7424cd0ea3c4046a9ffacce621626bc
+                    tag: v2.1-20250529
+                    commit: afc74313c6f919f713e2a25003cf0066852bb24a
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.-]+)$
@@ -203,8 +203,8 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.06.09.tar.gz
-            sha256: f823d212dda8fe905b7ddbc72b5a0cffef0c9fa7d32eb1b6885b4314928bc6d0
+            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.07.21.tar.gz
+            sha256: 04732b85bb56e107f6a718cdfcd069a152c86e87b9ca9606383555e0c65f78dc
             x-checker-data:
               type: anitya
               project-id: 143399
