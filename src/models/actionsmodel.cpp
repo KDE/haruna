@@ -655,6 +655,8 @@ QVariant ActionsModel::data(const QModelIndex &index, int role) const
         return QVariant(action.description);
     case TypeRole:
         return QVariant(action.type);
+    case SearchStringRole:
+        return QVariant(u"%1 %2 %3 %4"_s.arg(action.text, action.name, action.description, action.shortcut.toString(QKeySequence::PortableText)));
     }
 
     return QVariant();
@@ -671,6 +673,7 @@ QHash<int, QByteArray> ActionsModel::roleNames() const
         {DefaultShortcutRole, QByteArrayLiteral("actionDefaultShortcut")},
         {DescriptionRole,     QByteArrayLiteral("actionDescription")},
         {TypeRole,            QByteArrayLiteral("actionType")},
+        {SearchStringRole,    QByteArrayLiteral("searchString")},
     };
     // clang-format on
 

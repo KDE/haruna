@@ -62,6 +62,7 @@ public:
         DefaultShortcutRole,
         DescriptionRole,
         TypeRole,
+        SearchStringRole,
     };
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
