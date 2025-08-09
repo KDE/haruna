@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:29+0000\n"
-"PO-Revision-Date: 2025-07-25 09:00+0200\n"
+"PO-Revision-Date: 2025-08-08 08:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -588,7 +588,7 @@ msgstr "Temps dels subtítols: %1 segons"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "El fitxer no existeix: %1"
 
 #: src/mpv/mpvitem.cpp:504
 #, kde-format
@@ -1394,9 +1394,6 @@ msgid "Maximum recent files"
 msgstr "Nombre màxim de fitxers recents"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Neteja"
@@ -1404,7 +1401,7 @@ msgstr "Neteja"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Suprimeix els fitxers recents de la base de dades"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1414,6 +1411,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"El nombre de fitxers recents a mostrar. Introduïu 0 (zero) per a desactivar."
+"<br>Cada fitxer obert s'emmagatzema.<br>Les entrades en negreta són fitxers "
+"oberts des de les accions d'obertura de fitxer/URL i des d'aplicacions "
+"externes (línia d'ordres, gestor de fitxers, arrossegar i deixar anar, etc.)."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1421,20 +1422,14 @@ msgid "Allow only one instance"
 msgstr "Permet només una única instància"
 
 #: src/qml/Settings/GeneralSettings.qml:131
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Intentar obrir una altra instància de l'Haruna no farà res.\n"
-"En intentar obrir un altre fitxer amb l'Haruna s'obrirà el fitxer en la "
-"instància en execució."
+"Intentar obrir una altra instància de l'Haruna no farà res.<br>En intentar "
+"obrir un altre fitxer amb l'Haruna s'obrirà el fitxer en la instància en "
+"execució."
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1442,12 +1437,9 @@ msgid "Add file to playlist"
 msgstr "Afegeix un fitxer a la llista de reproducció"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "El fitxer s'afegirà al final de la llista de reproducció"
+msgstr "El fitxer s'afegirà al final de la llista de reproducció."
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1548,18 +1540,13 @@ msgid "Not supported on Wayland."
 msgstr "No admès en el Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:330
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"La finestra es redimensiona d'acord amb la resolució del vídeo.\n"
-"La mida màxima no està restringida, es deixa al sistema operatiu."
+"La finestra es redimensiona d'acord amb la resolució del vídeo.<br>La mida "
+"màxima no està restringida, es deixa al sistema operatiu."
 
 #: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
@@ -1567,20 +1554,14 @@ msgid "Start in fullscreen mode"
 msgstr "Inicia en el mode de pantalla completa"
 
 #: src/qml/Settings/GeneralSettings.qml:349
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Entra en el mode de pantalla completa quan s'inicia l'aplicació.\n"
-"Això té prioritat sobre els paràmetres «Redimensiona per a ajustar-se al "
-"vídeo», i «Recorda la mida i la posició de la finestra»."
+"Entra en el mode de pantalla completa quan s'inicia l'aplicació.<br>Això té "
+"prioritat sobre els paràmetres «Redimensiona per a ajustar-se al vídeo», i "
+"«Recorda la mida i la posició de la finestra»."
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1641,16 +1622,9 @@ msgid "Use Breeze icon theme"
 msgstr "Empra el tema d'icones Brisa"
 
 #: src/qml/Settings/GeneralSettings.qml:527
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Estableix el tema d'icones al Brisa.\n"
-"Requereix reiniciar."
+msgstr "Estableix el tema d'icones al Brisa.<br>Requereix reiniciar."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -2442,6 +2416,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"No s'ha pogut recuperar la llista de reproducció amb ID: %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "The number of recent files to store. Enter 0 (zero) to disable."

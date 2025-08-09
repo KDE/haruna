@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:29+0000\n"
-"PO-Revision-Date: 2025-07-25 07:09+0200\n"
+"PO-Revision-Date: 2025-08-08 06:55+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -587,7 +587,7 @@ msgstr "Čas podnapisa: %1 sekund"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Datoteka ne obstaja: %1"
 
 #: src/mpv/mpvitem.cpp:504
 #, kde-format
@@ -1391,9 +1391,6 @@ msgid "Maximum recent files"
 msgstr "Največ nedavnih datotek"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Počisti"
@@ -1401,7 +1398,7 @@ msgstr "Počisti"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Izbriše nedavne datoteke iz baze podatkov"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1411,6 +1408,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Število nedavnih datotek za prikaz. Vnesite 0 (nič), da onemogočite."
+"<br>Shrani se vsaka odprta datoteka.<br>Krepki vnosi so datoteke, odprte z "
+"dejanji odpiranja datoteke/URL-ja in iz zunanjih aplikacij (ukazna vrstica, "
+"upravljalnik datotek, povleci in spusti itd.)."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1418,20 +1419,13 @@ msgid "Allow only one instance"
 msgstr "Dovoli samo en pojavek"
 
 #: src/qml/Settings/GeneralSettings.qml:131
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Poskus odpiranja drugega pojavka Haruna ne bo naredil nič.\n"
-"Če s Haruno poskusite odpreti drugo datoteko, se bo datoteka odprla v "
-"tekočem pojavku."
+"Poskus odpiranja drugega pojavka Haruna ne bo naredil nič.<br>Če poskušate "
+"odpreti drugo datoteko s Haruno, bo odprla datoteko v tekočem pojavku."
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1439,12 +1433,9 @@ msgid "Add file to playlist"
 msgstr "Dodaj datoteko v seznam predvajanja"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "Datoteka bo dodana na konec seznama predvajanja"
+msgstr "Datoteka bo dodana na konec seznama predvajanja."
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1544,18 +1535,13 @@ msgid "Not supported on Wayland."
 msgstr "Ni podprto na Waylandu."
 
 #: src/qml/Settings/GeneralSettings.qml:330
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"Velikost okna je spremenjena glede na ločljivost videa.\n"
-"Največja velikost ni omejena, to je prepuščeno operacijskemu sistemu."
+"Velikost okna je spremenjena glede na ločljivost videa.<br>Največja velikost "
+"ni omejena, to je prepuščeno operacijskemu sistemu."
 
 #: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
@@ -1563,20 +1549,14 @@ msgid "Start in fullscreen mode"
 msgstr "Začni v celozaslonskem načinu"
 
 #: src/qml/Settings/GeneralSettings.qml:349
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Vstopi v celozaslonski način, ko se aplikacija zažene.\n"
-"To ima prednost pred Spremeni velikost, da se prilega videu in Zapomni si "
-"nastavitve velikosti in položaja okna."
+"Vstopi v celozaslonski način, ko se aplikacija zažene.<br>To ima prednost "
+"pred Spremeni velikost, da se prilega videu in Zapomni si nastavitve "
+"velikosti in položaja okna."
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1637,16 +1617,9 @@ msgid "Use Breeze icon theme"
 msgstr "Uporabi temo ikon Sapica"
 
 #: src/qml/Settings/GeneralSettings.qml:527
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Nastavi temo ikon na Sapica\n"
-"Zahteva ponovni zagon."
+msgstr "Nastavi temo ikone na Sapica.<br>Zahteva ponovni zagon."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -2437,6 +2410,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Ni bilo mogoče pridobiti seznama predvajanja z določilnikom: %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "The number of recent files to store. Enter 0 (zero) to disable."

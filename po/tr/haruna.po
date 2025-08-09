@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:29+0000\n"
-"PO-Revision-Date: 2025-07-26 09:33+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-08-07 22:18+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -585,7 +585,7 @@ msgstr "Altyazı zamanlaması: %1 saniye"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Dosya yok: %1"
 
 #: src/mpv/mpvitem.cpp:504
 #, kde-format
@@ -1392,9 +1392,6 @@ msgid "Maximum recent files"
 msgstr "En çok son kullanılan dosya sayısı"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Temizle"
@@ -1402,7 +1399,7 @@ msgstr "Temizle"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Veritabanından son kullanılan dosyaları siler"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1412,6 +1409,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Görüntülenecek son kullanılan dosyalar sayısı. Devre dışı bırakmak için 0 "
+"(sıfır) girin.<br>Her açılan dosya buraya eklenir.<br>Kalın girdiler; dosya "
+"açma/URL eylemlerinden ve dış uygulamalardan (komut satırı, dosya "
+"yöneticisi, sürükle ve bırak) gelen dosyaları belirtir."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1419,19 +1420,13 @@ msgid "Allow only one instance"
 msgstr "Yalnızca bir örneğe izin ver"
 
 #: src/qml/Settings/GeneralSettings.qml:131
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Başka bir Haruna örneği açmaya çalışmak bir şey yapmayacaktır.\n"
-"Haruna ile başka bir dosyayı açmaya çalışmak, dosyayı çalışan örnekte açar."
+"Başka bir Haruna örneği açmaya çalışmak bir şey yapmayacaktır.<br>Haruna ile "
+"başka bir dosyayı açmaya çalışmak, dosyayı çalışan örnekte açar."
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1439,12 +1434,9 @@ msgid "Add file to playlist"
 msgstr "Dosyayı oynatma listesine ekle"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "Dosya, oynatma listesinin sonuna eklenir"
+msgstr "Dosya, oynatma listesinin sonuna eklenir."
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1543,18 +1535,13 @@ msgid "Not supported on Wayland."
 msgstr "Wayland üzerinde desteklenmiyor."
 
 #: src/qml/Settings/GeneralSettings.qml:330
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"Pencere, video çözünürlüğüne göre yeniden boyutlandırıldı.\n"
-"En büyük boyut kısıtlanmaz; bu işletim sistemine bırakılmıştır."
+"Pencere, video çözünürlüğüne göre yeniden boyutlandırıldı.<br>En büyük boyut "
+"kısıtlanmaz; bu işletim sistemine bırakılmıştır."
 
 #: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
@@ -1562,20 +1549,14 @@ msgid "Start in fullscreen mode"
 msgstr "Tam ekran kipinde başlat"
 
 #: src/qml/Settings/GeneralSettings.qml:349
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Uygulama başlatıldığında tam ekran kipine girin.\n"
-"Bu, “Videoyu sığdırmak için yeniden boyutlandır” ve “Pencere boyutunu ve "
-"konumunu anımsa” ayarlarından önce gelir."
+"Uygulama başlatıldığında tam ekran kipine girin.<br>Bu, “Videoyu sığdırmak "
+"için yeniden boyutlandır” ve “Pencere boyutunu ve konumunu anımsa” "
+"ayarlarından önce gelir."
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1636,16 +1617,9 @@ msgid "Use Breeze icon theme"
 msgstr "Esinti simge temasını kullan"
 
 #: src/qml/Settings/GeneralSettings.qml:527
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Simge temasını Esinti yapar.\n"
-"Yeniden başlatma gerektirir."
+msgstr "Simge temasını Esinti yapar.<br>Yeniden başlatma gerektirir."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -2425,6 +2399,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Şu kimliğe sahip oynatma listesi alınamadı: %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "The number of recent files to store. Enter 0 (zero) to disable."

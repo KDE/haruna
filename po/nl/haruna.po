@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:29+0000\n"
-"PO-Revision-Date: 2025-07-25 11:08+0200\n"
+"PO-Revision-Date: 2025-08-08 13:35+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -585,7 +585,7 @@ msgstr "Timing van ondertiteling: %1 seconden"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Bestand bestaat niet: %1"
 
 #: src/mpv/mpvitem.cpp:504
 #, kde-format
@@ -1391,9 +1391,6 @@ msgid "Maximum recent files"
 msgstr "Maximale recente bestanden"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Wissen"
@@ -1401,7 +1398,7 @@ msgstr "Wissen"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Recente bestanden verwijderen uit de database"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1411,6 +1408,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Het aantal te tonen recente bestandsnaam. Voer 0 (zero) in om uit te "
+"schakelen.<br>Elke geopende bestand wordt opgeslagen.<br>Vette items zijn "
+"bestanden geopend uit de acties open bestand/url en uit externe toepassingen "
+"(opdrachtregel, bestandsbeheerder, slepen en loslaten etc.)."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1418,20 +1419,13 @@ msgid "Allow only one instance"
 msgstr "Slecht één exemplaar toestaan"
 
 #: src/qml/Settings/GeneralSettings.qml:131
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Een ander exemplaar van Haruna openen zal niets doen.\n"
-"Proberen een ander bestand met Haruna te openen zal het bestand openen in "
-"het actieve exemplaar."
+"Een ander exemplaar van Haruna openen zal niets doen.<br>Proberen een ander "
+"bestand met Haruna te openen zal het bestand openen in het actieve exemplaar."
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1439,12 +1433,9 @@ msgid "Add file to playlist"
 msgstr "Bestand aan afspeellijst toevoegen"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "Bestand zal aan het einde van de afspeellijst worden toegevoegd"
+msgstr "Bestand zal aan het einde van de afspeellijst worden toegevoegd."
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1543,18 +1534,13 @@ msgid "Not supported on Wayland."
 msgstr "Niet ondersteund onder Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:330
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"Het venster is van grootte gewijzigd volgens de resolutie van de video.\n"
-"De maximum grootte is niet beperkt, dit wordt overgelaten aan het "
+"Het venster is van grootte gewijzigd volgens de resolutie van de video."
+"<br>De maximum grootte is niet beperkt, dit wordt overgelaten aan het "
 "besturingssysteem."
 
 #: src/qml/Settings/GeneralSettings.qml:340
@@ -1563,20 +1549,14 @@ msgid "Start in fullscreen mode"
 msgstr "In modus volledig-scherm starten"
 
 #: src/qml/Settings/GeneralSettings.qml:349
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Ga in modus volledig-scherm wanneer de toepassing start.\n"
-"Dit gaat boven Grootte opnieuw bepalen om video te laten passen en Onthoud "
-"venstergrootte en positie-instellingen."
+"Ga in modus volledig-scherm wanneer de toepassing start.<br>Dit gaat boven "
+"Grootte opnieuw bepalen om video te laten passen en Onthoud venstergrootte "
+"en positie-instellingen."
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1638,16 +1618,9 @@ msgid "Use Breeze icon theme"
 msgstr "Thema Breeze-pictogrammen gebruiken"
 
 #: src/qml/Settings/GeneralSettings.qml:527
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Stelt het pictogramthema in op breeze.\n"
-"Vereist een opnieuw starten."
+msgstr "Stelt het pictogramthema in op breeze.<br>Vereist een opnieuw starten."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -2441,6 +2414,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Kon afspeellijst met id \"%1\" niet ophalen\n"
+"\n"
+"%2"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "The number of recent files to store. Enter 0 (zero) to disable."

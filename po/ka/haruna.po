@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:29+0000\n"
-"PO-Revision-Date: 2025-07-25 06:12+0200\n"
+"PO-Revision-Date: 2025-08-08 07:44+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -587,7 +587,7 @@ msgstr "სუბტიტრების დრო: %1 წმ"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "ფაილი არ არსებობს: %1"
 
 #: src/mpv/mpvitem.cpp:504
 #, kde-format
@@ -1394,9 +1394,6 @@ msgid "Maximum recent files"
 msgstr "მაქსიმალური უახლესი ფაილები"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "გასუფთავება"
@@ -1404,7 +1401,7 @@ msgstr "გასუფთავება"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "წაშლის უახლეს ფაილებს მონაცემთა ბაზიდან"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1414,6 +1411,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"საჩვენებელი უახლესი ფაილების რაოდენობა. შეიყვანეთ 0 (ნული) გასათიშად."
+"<br>ხდება ყველა გახსნილი ფაილის დამახსოვრება.<br>სქელი ფონტით ჩანაწერები "
+"ფაილებია, რომლებიც გაიხსნა ფაილის/ბმულის გახსნის ქმედებით და გარე აპებიდან "
+"(ბრძანების სტრიქონიდან, ფაილების მმართველიდან, გადათრევა/დაგდებით და ა.შ.)."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1421,19 +1422,13 @@ msgid "Allow only one instance"
 msgstr "მხოლოდ ერთი გაშვებული ასლის დაშვება"
 
 #: src/qml/Settings/GeneralSettings.qml:131
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Haruna-ის კიდევ ერთხელ გაშვება არაფერს იზამს.\n"
-"Haruna-ით სხვა ფაილის გაშვება ფაილს მიმდინარე გაშვებულ ასლში გახსნის."
+"Haruna-ის კიდევ ერთხელ გაშვება არაფერს იზამს.<br>Haruna-ით სხვა ფაილის "
+"გაშვება ფაილს მიმდინარე გაშვებულ ასლში გახსნის."
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1441,12 +1436,9 @@ msgid "Add file to playlist"
 msgstr "ფაილის დამატება დასაკრავ სიაში"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "ფაილი დასაკრავი სიის ბოლოში დაემატება"
+msgstr "ფაილი დასაკრავი სიის ბოლოში დაემატება."
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1547,18 +1539,13 @@ msgid "Not supported on Wayland."
 msgstr "Wayland-ზე მხარდაჭერილი არაა."
 
 #: src/qml/Settings/GeneralSettings.qml:330
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"ფანჯრის ზომები ვიდეოს გაფართოების შესაბამისად შეიცვლება.\n"
-"მაქსიმალური ზომა შეზღუდული არაა, ამას ოპერაციული სისტემა წყვეტს."
+"ფანჯრის ზომები ვიდეოს გაფართოების შესაბამისად შეიცვლება.<br>მაქსიმალური ზომა "
+"შეზღუდული არაა, ამას ოპერაციული სისტემა წყვეტს."
 
 #: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
@@ -1566,20 +1553,14 @@ msgid "Start in fullscreen mode"
 msgstr "მთელ ეკრანზე გაშვება"
 
 #: src/qml/Settings/GeneralSettings.qml:349
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"სრულეკრანიან რეჟიმზე გადასვლა, როცა აპლიკაცია გაეშვება.\n"
-"ამას აქვს უფრო მეტი პრიორიტეტი, ვიდრე პარამეტრებს 'ვიდეოს ზომის შეცვლა მის "
-"ჩასატევად' და 'ფანჯრის ზომისა და მდებარეობის დამახსოვრება'."
+"სრულეკრანიან რეჟიმზე გადასვლა, როცა აპლიკაცია გაეშვება.<br>ამას აქვს უფრო "
+"მეტი პრიორიტეტი, ვიდრე პარამეტრებს 'ვიდეოს ზომის შეცვლა მის ჩასატევად' და "
+"'ფანჯრის ზომისა და მდებარეობის დამახსოვრება'."
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1640,16 +1621,9 @@ msgid "Use Breeze icon theme"
 msgstr "Breeze ხატულების თემის გამოყენება"
 
 #: src/qml/Settings/GeneralSettings.qml:527
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"ხატულების თემის Breeze-ზე დაყენება.\n"
-"თავიდან გაშვება აუცილებელია."
+msgstr "ხატულების თემის Breeze-ზე დაყენება.<br>თავიდან გაშვება აუცილებელია."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -2425,6 +2399,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"მიღების შეცდომა დასაკრავი სიისთვის ID-ით: %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "The number of recent files to store. Enter 0 (zero) to disable."
