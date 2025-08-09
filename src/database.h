@@ -8,11 +8,11 @@
 #define DATABASE_H
 
 #include <QObject>
+#include <QSqlDatabase>
 #include <QtQml/qqmlregistration.h>
 
 class QQmlEngine;
 class QJSEngine;
-struct QSqlDatabase;
 struct RecentFile;
 
 class Database : public QObject
@@ -30,6 +30,10 @@ public:
     QList<RecentFile> recentFiles(uint limit);
     void addRecentFile(const QUrl &url, const QString &filename, const QString &openedFrom, qint64 timestamp);
     void deleteRecentFiles();
+
+    double playbackPosition(const QString &md5Hash);
+    void addPlaybackPosition(const QString &md5Hash, const QString &path, double position, QSqlDatabase dbConnection = QSqlDatabase{});
+    void deletePlaybackPositions();
 
 private:
     Database(QObject *parent = nullptr);

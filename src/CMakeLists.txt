@@ -38,6 +38,7 @@ target_sources(haruna
 qt_add_resources(haruna sql_files
     FILES
         sql/create-recent_files-table.sql
+        sql/create-playback_position-table.sql
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)

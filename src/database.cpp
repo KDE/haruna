@@ -19,6 +19,7 @@
 using namespace Qt::StringLiterals;
 
 const QString RECENT_FILES_TABLE = u"recent_files"_s;
+const QString PLAYBACK_POSITION_TABLE = u"playback_position"_s;
 
 QString getLastExecutedQuery(const QSqlQuery &query)
 {
@@ -64,10 +65,15 @@ void Database::createTables()
     QStringList tables = db().tables();
 
     if (!tables.contains(u"recent_files"_s)) {
-        qDebug() << 11;
         QFile sqlFile(u":sql/create-recent_files-table.sql"_s);
         if (sqlFile.open(QFile::ReadOnly)) {
-            qDebug() << 22;
+            QSqlQuery qManga(db());
+            qManga.exec(QString::fromUtf8(sqlFile.readAll()));
+        }
+    }
+    if (!tables.contains(u"playback_position"_s)) {
+        QFile sqlFile(u":sql/create-playback_position-table.sql"_s);
+        if (sqlFile.open(QFile::ReadOnly)) {
             QSqlQuery qManga(db());
             qManga.exec(QString::fromUtf8(sqlFile.readAll()));
         }
@@ -126,7 +132,50 @@ void Database::addRecentFile(const QUrl &url, const QString &filename, const QSt
 void Database::deleteRecentFiles()
 {
     QSqlQuery query(db());
-    query.exec(u"DELETE FROM recent_files"_s);
+    query.exec(u"DELETE FROM "_s % RECENT_FILES_TABLE);
+}
+
+double Database::playbackPosition(const QString &md5Hash)
+{
+    QSqlQuery query(db());
+    query.prepare(u"SELECT * FROM "_s % PLAYBACK_POSITION_TABLE % u" WHERE md5_hash = :md5Hash LIMIT 1"_s);
+    query.bindValue(u":md5Hash"_s, md5Hash);
+    query.exec();
+
+    if (query.lastError().isValid()) {
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+    }
+
+    while (query.first()) {
+        return query.value(u"position"_s).toDouble();
+    }
+
+    return 0.0;
+}
+
+void Database::addPlaybackPosition(const QString &md5Hash, const QString &path, double position, QSqlDatabase dbConnection)
+{
+    QSqlDatabase database = dbConnection.isValid() ? dbConnection : db();
+    QSqlQuery query(database);
+    query.prepare(u"INSERT INTO "_s % PLAYBACK_POSITION_TABLE %
+                  u" (md5_hash, path, position) "
+                  "VALUES (:md5Hash, :path, :position) "
+                  "ON CONFLICT(md5_hash) DO UPDATE SET "
+                  "position = excluded.position"_s);
+    query.bindValue(u":md5Hash"_s, md5Hash);
+    query.bindValue(u":path"_s, path);
+    query.bindValue(u":position"_s, position);
+    query.exec();
+
+    if (query.lastError().isValid()) {
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+    }
+}
+
+void Database::deletePlaybackPositions()
+{
+    QSqlQuery query(db());
+    query.exec(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE);
 }
 
 #include "moc_database.cpp"
