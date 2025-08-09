@@ -157,7 +157,7 @@ QString RecentFilesModel::openedFromToString(OpenedFrom from) const
     case OpenedFrom::Playlist:
         return Playlist;
     case OpenedFrom::Other:
-        return QString{};
+        return Other;
     }
 
     return QString{};
