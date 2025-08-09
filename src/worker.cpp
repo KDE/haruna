@@ -135,7 +135,8 @@ void Worker::mprisThumbnail(const QString &path, int width)
 void Worker::findRecursiveSubtitles(const QUrl &url)
 {
     QStringList subs;
-    auto parentFolder = QFileInfo(url.toLocalFile()).absolutePath();
+    const auto currentFI = QFileInfo(url.toLocalFile());
+    const auto parentFolder = currentFI.absolutePath();
     const auto subFolders = SubtitlesSettings::self()->subtitlesFolders();
     for (const auto &subFolder : subFolders) {
         if (subFolder.startsWith(u"/"_s)) {
@@ -157,7 +158,6 @@ void Worker::findRecursiveSubtitles(const QUrl &url)
             auto url = QUrl::fromLocalFile(fi.absoluteFilePath());
             QString mimeType = Application::mimeType(url);
             if (mimeType.startsWith(u"application/x-subrip"_s) || mimeType.startsWith(u"text/x-ssa"_s)) {
-                auto currentFI = QFileInfo(url.toLocalFile());
                 // The subtitles path must contain the name of the playing file
                 if (fi.absoluteFilePath().contains(currentFI.baseName())) {
                     subs.append(fi.absoluteFilePath());
