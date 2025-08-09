@@ -8,6 +8,7 @@
 #define WORKER_H
 
 #include <QObject>
+#include <QSqlDatabase>
 
 #include <KFileMetaData/Properties>
 
@@ -35,7 +36,7 @@ public Q_SLOTS:
     void getMetaData(uint index, const QString &path);
     void makePlaylistThumbnail(const QString &path, int width);
     QImage frameToImage(const QString &path, int width);
-    void syncConfigValue(QString path, QString group, QString key, QVariant value);
+    void savePositionToDB(const QString &md5Hash, const QString &path, double position);
     void mprisThumbnail(const QString &path, int width);
     void findRecursiveSubtitles(const QUrl &url);
     void getYtdlpVersion();
@@ -49,8 +50,7 @@ private:
     Worker(Worker &&) = delete;
     Worker &operator=(Worker &&) = delete;
 
-private:
-    std::unique_ptr<KConfig> m_cachedConf;
+    QSqlDatabase getDBConnection();
 };
 
 #endif // WORKER_H

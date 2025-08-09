@@ -180,7 +180,7 @@ Q_SIGNALS:
     void videoWidthChanged();
     void videoHeightChanged();
     void eofReachedChanged();
-    void syncConfigValue(QString path, QString group, QString key, QVariant value);
+    void savePositionToDB(const QString &md5Hash, const QString &path, double position);
 
     void osdMessage(const QString &text);
     void addToRecentFiles(const QUrl &url, RecentFilesModel::OpenedFrom from, const QString &name);

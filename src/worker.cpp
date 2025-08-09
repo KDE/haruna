@@ -22,7 +22,9 @@
 #include <KWindowConfig>
 
 #include "application.h"
+#include "database.h"
 #include "framedecoder.h"
+#include "global.h"
 #include "subtitlessettings.h"
 #include "youtube.h"
 
@@ -173,14 +175,9 @@ void Worker::findRecursiveSubtitles(const QUrl &url)
     Q_EMIT subtitlesFound(subs);
 }
 
-void Worker::syncConfigValue(QString path, QString group, QString key, QVariant value)
+void Worker::savePositionToDB(const QString &md5Hash, const QString &path, double position)
 {
-    if (!m_cachedConf || m_cachedConf->name() != path) {
-        m_cachedConf.reset(new KConfig(path));
-    }
-
-    m_cachedConf->group(group).writeEntry(key, value);
-    m_cachedConf->sync();
+    Database::instance()->addPlaybackPosition(md5Hash, path, position, getDBConnection());
 }
 
 void Worker::getYtdlpVersion()
@@ -196,4 +193,15 @@ void Worker::getYtdlpVersion()
     Q_EMIT ytdlpVersionRetrived(ytdlpVersion);
 }
 
+QSqlDatabase Worker::getDBConnection()
+{
+    static const auto dbFile{Global::instance()->appConfigFilePath(Global::ConfigFile::Database)};
+    static auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"worker_connection"_s);
+    if (!db.isOpen()) {
+        db.setDatabaseName(dbFile);
+        db.open();
+    }
+
+    return db;
+}
 #include "moc_worker.cpp"

@@ -22,6 +22,7 @@
 #include "audiosettings.h"
 #include "chaptersmodel.h"
 #include "config-haruna.h"
+#include "database.h"
 #include "generalsettings.h"
 #include "global.h"
 #include "mpvproperties.h"
@@ -293,7 +294,7 @@ connect(this, &MpvItem::pauseChanged, this, [=]() {
 });
 #endif
 
-    connect(this, &MpvItem::syncConfigValue, Worker::instance(), &Worker::syncConfigValue, Qt::QueuedConnection);
+    connect(this, &MpvItem::savePositionToDB, Worker::instance(), &Worker::savePositionToDB, Qt::QueuedConnection);
     // clang-format on
 }
 
@@ -534,8 +535,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     }
     case AsyncIds::SavePosition: {
         auto hash = md5(currentUrl().toString());
-        auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
-        Q_EMIT syncConfigValue(watchLaterConfig, QString(), u"TimePosition"_s, data.toString());
+        Q_EMIT savePositionToDB(hash, currentUrl().toString(), data.toDouble());
         break;
     }
     case AsyncIds::Screenshot: {
@@ -649,11 +649,7 @@ double MpvItem::loadTimePosition()
     }
 
     auto hash = md5(currentUrl().toString());
-    auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
-    KConfig config(watchLaterConfig);
-    auto pos = config.group(QString()).readEntry("TimePosition", QString::number(0)).toDouble();
-
-    return pos;
+    return Database::instance()->playbackPosition(hash);
 }
 
 void MpvItem::resetTimePosition()
