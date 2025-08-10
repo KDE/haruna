@@ -221,9 +221,9 @@ void MpvItem::setupConnections()
 
     connect(Worker::instance(), &Worker::subtitlesFound, this, [this](QStringList subs) {
         for (const auto &sub : std::as_const(subs)) {
-            command({u"sub-add"_s, sub, u"select"_s});
-            loadTracks(getProperty(MpvProperties::self()->TrackList).toList());
+            commandBlocking(QStringList{u"sub-add"_s, sub, u"select"_s});
         }
+        getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
     });
 
     connect(this, &MpvItem::chapterChanged,
