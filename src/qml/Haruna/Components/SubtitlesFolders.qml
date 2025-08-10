@@ -22,11 +22,17 @@ ColumnLayout {
 
     implicitHeight: sectionTitle.height + sfListView.implicitHeight + sfAddFolder.height + 25
 
-    Label {
-        id: sectionTitle
+    RowLayout {
+        Label {
+            id: sectionTitle
 
-        text: i18nc("@label; Below is a list of folders containing subtitles", "Load subtitles from:")
-        bottomPadding: 10
+            text: i18nc("@label; Below is a list of folders containing subtitles", "Load subtitles from")
+        }
+        ToolTipButton {
+            toolTipText: i18nc("@info:tooltip;", "When a relative folder name starts with * (asterisk) "+
+                               "and recursive search is enabled, all folders containig that name will be searched.\n"+
+                               "Relative folders are relative to the playing file's folder.")
+        }
     }
 
     ScrollView {
@@ -164,7 +170,7 @@ ColumnLayout {
             root.canAddFolder = false
         }
 
-        ToolTip.text: i18nc("@info:tooltip add new sutbtitle folder setting",
+        ToolTip.text: i18nc("@info:tooltip add new subtitle folder setting",
                             "Add a folder in which to look for subtitles.")
         ToolTip.visible: hovered
         ToolTip.delay: 700
@@ -191,7 +197,7 @@ ColumnLayout {
 
             ToolTip {
                 text: i18nc("@info:tooltip",
-                            "Subtitles are searched recursively in the “%1” settings.\n" +
+                            "Subtitles are searched recursively in the folders defined by the “%1” setting.\n" +
                             "Only relative folders are searched.", sectionTitle.text)
                 visible: (parent as ToolButton).checked
                 delay: 0
