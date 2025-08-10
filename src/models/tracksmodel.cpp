@@ -13,44 +13,48 @@ TracksModel::TracksModel(QObject *parent)
 {
 }
 
-int TracksModel::rowCount(const QModelIndex & /*parent*/) const
+int TracksModel::rowCount(const QModelIndex &parent) const
 {
-    return m_tracks.size();
+    if (parent.isValid()) {
+        return 0;
+    }
+
+    return m_data.size();
 }
 
 QVariant TracksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || m_tracks.isEmpty()) {
+    if (!index.isValid() || m_data.isEmpty()) {
         return QVariant();
     }
 
-    Track track = m_tracks[index.row()];
+    const auto item = m_data.at(index.row());
 
     switch (role) {
     case IdRole:
-        return track.trackid;
+        return item.trackid;
     case TextRole: {
         QString text;
-        auto title = track.title;
+        auto title = item.title;
         if (!title.isEmpty()) {
             text += title.append(u" "_s);
         }
-        auto lang = track.lang;
+        auto lang = item.lang;
         if (!lang.isEmpty()) {
             text += lang.append(u" "_s);
         }
-        auto codec = track.codec;
+        auto codec = item.codec;
         if (!codec.isEmpty()) {
             text += codec;
         }
         return text;
     }
     case LanguageRole:
-        return track.lang;
+        return item.lang;
     case TitleRole:
-        return track.title;
+        return item.title;
     case CodecRole:
-        return track.codec;
+        return item.codec;
     }
 
     return QVariant();
@@ -74,14 +78,14 @@ QHash<int, QByteArray> TracksModel::roleNames() const
 void TracksModel::clear()
 {
     beginResetModel();
-    m_tracks.clear();
+    m_data.clear();
     endResetModel();
 }
 
 void TracksModel::addTrack(Track track)
 {
-    beginInsertRows(QModelIndex(), m_tracks.count(), m_tracks.count());
-    m_tracks.append(track);
+    beginInsertRows(QModelIndex(), m_data.count(), m_data.count());
+    m_data.append(track);
     endInsertRows();
     Q_EMIT rowCountChanged();
 }
@@ -89,7 +93,7 @@ void TracksModel::addTrack(Track track)
 void TracksModel::setTracks(QList<Track> tracks)
 {
     beginResetModel();
-    m_tracks = tracks;
+    m_data = tracks;
     endResetModel();
     Q_EMIT rowCountChanged();
 }

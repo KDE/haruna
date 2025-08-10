@@ -49,7 +49,7 @@ public Q_SLOTS:
     void setTracks(QList<Track> tracks);
 
 private:
-    QList<Track> m_tracks;
+    QList<Track> m_data;
 };
 
 #endif // TRACKSMODEL_H
