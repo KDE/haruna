@@ -160,7 +160,30 @@ void MpvItem::initProperties()
     Q_EMIT setProperty(MpvProperties::self()->SubtitleBorderSize, SubtitlesSettings::borderSize());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleBold, SubtitlesSettings::isBold());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleItalic, SubtitlesSettings::isItalic());
-    Q_EMIT setProperty(MpvProperties::self()->SubtitleFilePaths, SubtitlesSettings::subtitlesFolders().join(u":"_s).remove(u"*"_s));
+
+    auto setSubPaths = [this]() {
+        QString subFoldersString;
+        const auto subFolders{SubtitlesSettings::subtitlesFolders()};
+
+        for (const auto &sf : subFolders) {
+            if (sf.startsWith(u"*"_s)) {
+                if (!SubtitlesSettings::recursiveSubtitlesSearch()) {
+                    // only add relative folders starting with * if recursive search is disabled
+                    // otherwise both recursive search and mpv will find and add the same sub file
+                    QString _sf{sf};
+                    _sf = _sf.removeFirst();
+                    subFoldersString.append(u"%1:"_s.arg(_sf));
+                }
+            } else {
+                subFoldersString.append(u"%1:"_s.arg(sf));
+            }
+        }
+        subFoldersString.removeLast();
+
+        Q_EMIT setProperty(MpvProperties::self()->SubtitleFilePaths, subFoldersString);
+    };
+    setSubPaths();
+    connect(SubtitlesSettings::self(), &SubtitlesSettings::RecursiveSubtitlesSearchChanged, this, setSubPaths);
     selectSubtitleTrack();
 
     Q_EMIT setProperty(MpvProperties::self()->ScreenshotTemplate, VideoSettings::screenshotTemplate());
