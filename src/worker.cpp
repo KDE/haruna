@@ -143,27 +143,33 @@ void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
     QDirIterator it{parentFolder, QDir::Dirs | QDir::NoDotAndDotDot, QDirIterator::NoIteratorFlags};
     while (it.hasNext()) {
         auto folder = it.nextFileInfo();
-        const auto subFolders = SubtitlesSettings::self()->subtitlesFolders();
+        const auto subFolders = SubtitlesSettings::subtitlesFolders();
         for (const auto &sf : subFolders) {
             if (sf.startsWith(u"/"_s)) {
                 // ignore absolute paths
                 continue;
             }
 
-            if (folder.fileName().contains(sf, Qt::CaseInsensitive)) {
+            if (folder.fileName() == sf) {
+                // exact match
                 searchFolders.append(folder.absoluteFilePath());
+                continue;
+            }
+
+            QString _sf{sf};
+            if (sf.startsWith(u"*"_s)) {
+                _sf = _sf.removeFirst();
+                if (folder.fileName().contains(_sf, Qt::CaseInsensitive)) {
+                    searchFolders.append(folder.absoluteFilePath());
+                }
             }
         }
     }
 
     QStringList foundSubs;
     for (const auto &searchFolder : searchFolders) {
-        uint j{0};
         QDirIterator it{searchFolder, QDir::Files, QDirIterator::Subdirectories};
         while (it.hasNext()) {
-            if (j > 10000) {
-                break;
-            }
             auto fi = it.nextFileInfo();
             auto url = QUrl::fromLocalFile(fi.absoluteFilePath());
             QString mimeType = Application::mimeType(url);
@@ -173,7 +179,6 @@ void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
                     foundSubs.append(fi.absoluteFilePath());
                 }
             }
-            j++;
         }
     }
 
