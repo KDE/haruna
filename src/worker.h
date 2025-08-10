@@ -38,7 +38,7 @@ public Q_SLOTS:
     QImage frameToImage(const QString &path, int width);
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
     void mprisThumbnail(const QString &path, int width);
-    void findRecursiveSubtitles(const QUrl &url);
+    void findRecursiveSubtitles(const QUrl &playingUrl);
     void getYtdlpVersion();
 
 private:

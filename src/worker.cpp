@@ -134,45 +134,54 @@ void Worker::mprisThumbnail(const QString &path, int width)
     Q_EMIT mprisThumbnailSuccess(image);
 }
 
-void Worker::findRecursiveSubtitles(const QUrl &url)
+void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
 {
-    QStringList subs;
-    const auto currentFI = QFileInfo(url.toLocalFile());
-    const auto parentFolder = currentFI.absolutePath();
-    const auto subFolders = SubtitlesSettings::self()->subtitlesFolders();
-    for (const auto &subFolder : subFolders) {
-        if (subFolder.startsWith(u"/"_s)) {
-            // ignore absolute paths
-            continue;
-        }
+    const auto playingFileInfo = QFileInfo(playingUrl.toLocalFile());
+    const auto parentFolder = playingFileInfo.absolutePath();
 
-        auto searchFolder = QString(parentFolder).append(u"/%1"_s.arg(subFolder));
+    QStringList searchFolders;
+    QDirIterator it{parentFolder, QDir::Dirs | QDir::NoDotAndDotDot, QDirIterator::NoIteratorFlags};
+    while (it.hasNext()) {
+        auto folder = it.nextFileInfo();
+        const auto subFolders = SubtitlesSettings::self()->subtitlesFolders();
+        for (const auto &sf : subFolders) {
+            if (sf.startsWith(u"/"_s)) {
+                // ignore absolute paths
+                continue;
+            }
 
-        QFileInfo fi(searchFolder);
-        if (!fi.exists()) {
-            continue;
-        }
-
-        QDirIterator it{searchFolder, QDir::Files, QDirIterator::Subdirectories};
-        while (it.hasNext()) {
-            auto fi = it.nextFileInfo();
-
-            auto url = QUrl::fromLocalFile(fi.absoluteFilePath());
-            QString mimeType = Application::mimeType(url);
-            if (mimeType.startsWith(u"application/x-subrip"_s) || mimeType.startsWith(u"text/x-ssa"_s)) {
-                // The subtitles path must contain the name of the playing file
-                if (fi.absoluteFilePath().contains(currentFI.baseName())) {
-                    subs.append(fi.absoluteFilePath());
-                }
+            if (folder.fileName().contains(sf, Qt::CaseInsensitive)) {
+                searchFolders.append(folder.absoluteFilePath());
             }
         }
     }
 
-    if (subs.isEmpty()) {
+    QStringList foundSubs;
+    for (const auto &searchFolder : searchFolders) {
+        uint j{0};
+        QDirIterator it{searchFolder, QDir::Files, QDirIterator::Subdirectories};
+        while (it.hasNext()) {
+            if (j > 10000) {
+                break;
+            }
+            auto fi = it.nextFileInfo();
+            auto url = QUrl::fromLocalFile(fi.absoluteFilePath());
+            QString mimeType = Application::mimeType(url);
+            if (mimeType.startsWith(u"application/x-subrip"_s) || mimeType.startsWith(u"text/x-ssa"_s)) {
+                // The subtitles path must contain the name of the playing file
+                if (fi.absoluteFilePath().contains(playingFileInfo.baseName(), Qt::CaseInsensitive)) {
+                    foundSubs.append(fi.absoluteFilePath());
+                }
+            }
+            j++;
+        }
+    }
+
+    if (foundSubs.isEmpty()) {
         return;
     }
 
-    Q_EMIT subtitlesFound(subs);
+    Q_EMIT subtitlesFound(foundSubs);
 }
 
 void Worker::savePositionToDB(const QString &md5Hash, const QString &path, double position)
