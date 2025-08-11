@@ -30,7 +30,7 @@ ColumnLayout {
         }
         ToolTipButton {
             toolTipText: i18nc("@info:tooltip;", "When a relative folder name starts with * (asterisk) "+
-                               "and recursive search is enabled, all folders containig that name will be searched.\n"+
+                               "and recursive search is enabled, all folders containing that name will be searched.\n"+
                                "Relative folders are relative to the playing file's folder.")
         }
     }
