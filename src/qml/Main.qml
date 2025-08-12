@@ -115,6 +115,51 @@ ApplicationWindow {
             mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
         }
     }
+    Connections {
+        target: PlaybackSettings
+        function onAutoSelectSubtitlesChanged() {
+            mpv.selectSubtitleTrack()
+        }
+        function onPreferredLanguageChanged() {
+            mpv.setProperty(MpvProperties.SubtitleLanguage, SubtitlesSettings.preferredLanguage.replace(/\s+/g, ''))
+        }
+        function onPreferredTrackChanged() {
+            mpv.subtitleId = SubtitlesSettings.preferredTrack === 0
+                    ? "auto"
+                    : SubtitlesSettings.preferredTrack
+        }
+        function onAllowOnBlackBordersChanged() {
+            mpv.setProperty(MpvProperties.SubtitleUseMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
+            mpv.setProperty(MpvProperties.SubtitleAssForceMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
+        }
+        function onFontFamilyChanged() {
+            mpv.setProperty(MpvProperties.SubtitleFont, SubtitlesSettings.fontFamily)
+        }
+        function onFontSizeChanged() {
+            mpv.setProperty(MpvProperties.SubtitleFontSize, SubtitlesSettings.fontSize)
+        }
+        function onIsBoldChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBold, SubtitlesSettings.isBold)
+        }
+        function onIsItalicChanged() {
+            mpv.setProperty(MpvProperties.SubtitleItalic, SubtitlesSettings.isItalic)
+        }
+        function onFontColorChanged() {
+            mpv.setProperty(MpvProperties.SubtitleColor, SubtitlesSettings.fontColor)
+        }
+        function onShadowColorChanged() {
+            mpv.setProperty(MpvProperties.SubtitleShadowColor, SubtitlesSettings.shadowColor)
+        }
+        function onShadowOffsetChanged() {
+            mpv.setProperty(MpvProperties.SubtitleShadowOffset, SubtitlesSettings.shadowOffset)
+        }
+        function onBorderColorChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBorderColor, SubtitlesSettings.borderColor)
+        }
+        function onBorderSizeChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBorderSize, SubtitlesSettings.borderSize)
+        }
+    }
 
     Loader {
         active: false
