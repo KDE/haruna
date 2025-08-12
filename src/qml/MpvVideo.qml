@@ -82,7 +82,7 @@ MpvItem {
             hideCursor = false
             hideCursorTimer.restart()
 
-            if (!PlaylistSettings.canToggleWithMouse || playlist.playlistView.count <= 1) {
+            if (!PlaylistSettings.canToggleWithMouse || playlist.playlistView.count > 0) {
                 return
             }
             if (PlaylistSettings.position === "right") {
