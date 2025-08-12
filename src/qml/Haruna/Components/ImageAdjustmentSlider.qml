@@ -24,6 +24,8 @@ RowLayout {
         stepSize: 1
         onValueChanged: root.sliderValueChanged(value.toFixed(0))
 
+        Layout.fillWidth: true
+
         MouseArea {
             anchors.fill: parent
             acceptedButtons: Qt.MiddleButton
