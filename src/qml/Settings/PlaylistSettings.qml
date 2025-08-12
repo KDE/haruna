@@ -188,7 +188,6 @@ SettingsBasePage {
             onClicked: {
                 PlaylistSettings.bigFontFullscreen = checked
                 PlaylistSettings.save()
-                playlist.playlistView.forceLayout()
             }
         }
 
