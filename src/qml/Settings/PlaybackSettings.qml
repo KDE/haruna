@@ -124,12 +124,10 @@ SettingsBasePage {
                 }
 
                 onActivated: function(index) {
-                    console.log(999)
                     PlaybackSettings.hWDecoding = model.get(index).key === "disabled"
                             ? "no"
                             : model.get(index).key
                     PlaybackSettings.save()
-                    mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
                 }
 
                 Component.onCompleted: {
@@ -424,22 +422,21 @@ SettingsBasePage {
                     PlaybackSettings.ytdlFormat = ytdlFormatComboBox.valueAt(currentIndex)
                 }
 
-                mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
                 PlaybackSettings.save()
             }
 
             Component.onCompleted: {
-                const defaultSelection = {
-                    text: i18nc("@item:listbox the default youtube-dl format selection", "Default"),
-                    value: "bestvideo+bestaudio/best"
-                }
-                formatModel.append(defaultSelection)
-
                 const customSelection = {
                     text: i18nc("@item:listbox the custom youtube-dl format selection", "Custom"),
                     value: ""
                 }
                 formatModel.append(customSelection)
+
+                const defaultSelection = {
+                    text: i18nc("@item:listbox the default youtube-dl format selection", "Default"),
+                    value: "bestvideo+bestaudio/best"
+                }
+                formatModel.append(defaultSelection)
 
                 formatModel.append({ text: "2160", value: "bestvideo[height<=2160]+bestaudio/best" })
                 formatModel.append({ text: "1440", value: "bestvideo[height<=1440]+bestaudio/best" })
@@ -488,7 +485,6 @@ SettingsBasePage {
             onTextChanged: {
                 PlaybackSettings.ytdlFormatCustom = ytdlCustomFormatField.text
                 PlaybackSettings.ytdlFormat = ytdlCustomFormatField.text
-                mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
                 PlaybackSettings.save()
             }
 

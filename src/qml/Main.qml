@@ -106,6 +106,15 @@ ApplicationWindow {
             mpv.setProperty(MpvProperties.AudioLanguage, AudioSettings.preferredLanguage.replace(/\s+/g, ''))
         }
     }
+    Connections {
+        target: PlaybackSettings
+        function onYtdlFormatChanged() {
+            mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
+        }
+        function onHWDecodingChanged() {
+            mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
+        }
+    }
 
     Loader {
         active: false
