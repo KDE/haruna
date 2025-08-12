@@ -43,7 +43,6 @@ SettingsBasePage {
             function save() {
                 AudioSettings.preferredLanguage = text
                 AudioSettings.save()
-                mpv.setProperty(MpvProperties.AudioLanguage, text.replace(/\s+/g, ''))
             }
         }
 
@@ -60,12 +59,6 @@ SettingsBasePage {
             onValueModified: {
                 AudioSettings.preferredTrack = value
                 AudioSettings.save()
-                if (value === 0) {
-                    mpv.audioId = "auto"
-
-                } else {
-                    mpv.audioId = value
-                }
             }
         }
 
@@ -82,10 +75,8 @@ SettingsBasePage {
             to: 100
             value: AudioSettings.volumeStep
             onValueModified: {
-                if (root.visible) {
-                    AudioSettings.volumeStep = volumeStep.value
-                    AudioSettings.save()
-                }
+                AudioSettings.volumeStep = volumeStep.value
+                AudioSettings.save()
             }
         }
 

@@ -95,6 +95,17 @@ ApplicationWindow {
             HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
         }
     }
+    Connections {
+        target: GeneralSettings
+        function onPreferredTrackChanged() {
+            mpv.audioId = AudioSettings.preferredTrack === 0
+                    ? "auto"
+                    : AudioSettings.preferredTrack
+        }
+        function onPreferredLanguageChanged() {
+            mpv.setProperty(MpvProperties.AudioLanguage, AudioSettings.preferredLanguage.replace(/\s+/g, ''))
+        }
+    }
 
     Loader {
         active: false
