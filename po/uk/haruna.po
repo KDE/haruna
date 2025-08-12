@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:42+0000\n"
-"PO-Revision-Date: 2025-08-08 21:42+0300\n"
+"POT-Creation-Date: 2025-08-12 00:42+0000\n"
+"PO-Revision-Date: 2025-08-11 16:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -817,28 +817,31 @@ msgstr ""
 "<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "Не вибрано жодної дії"
+msgstr "Не знайдено жодної дії."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:29
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "Завантажити субтитри з:"
+msgstr "Завантажити субтитри з"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:32
+#, fuzzy
+#| msgctxt "@info:tooltip;"
+#| msgid ""
+#| "When a relative folder name starts with * (asterisk) and recursive search "
+#| "is enabled, all folders containig that name will be searched.\n"
+#| "Relative folders are relative to the playing file's folder."
 msgctxt "@info:tooltip;"
 msgid ""
 "When a relative folder name starts with * (asterisk) and recursive search is "
-"enabled, all folders containig that name will be searched.\n"
+"enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Якщо відносна назва теки починається з * (зірочки), і увімкнено рекурсивний "
+"пошук, пошук відбуватиметься в усіх теках, які містять відповідну назву.\n"
+"Відносні теки буде визначено відносно теки файла, що відтворюється."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:111
 msgctxt "@action:button"
@@ -865,9 +868,6 @@ msgid "Add New Folder"
 msgstr "Додати нову теку"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:174
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Додати теку, у якій слід шукати субтитри."
@@ -878,18 +878,14 @@ msgid "Search subtitles recursively"
 msgstr "Шукати субтитри рекурсивно"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"За параметрів «%1» пошук субтитрів буде виконано рекурсивно.\n"
+"Пошук субтитрів буде виконано рекурсивно у теках, які визначено параметром "
+"«%1».\n"
 "Пошук відбуватиметься лише у відносних теках"
 
 #: src/qml/Header.qml:78
@@ -1760,9 +1756,6 @@ msgid "Select action"
 msgstr "Вибрати дію"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Змінити дію"

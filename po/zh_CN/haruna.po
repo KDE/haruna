@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:42+0000\n"
+"POT-Creation-Date: 2025-08-12 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -583,7 +583,7 @@ msgstr "字幕偏移：%1 秒"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "文件不存在：%1"
 
 #: src/mpv/mpvitem.cpp:528
 #, kde-format
@@ -811,26 +811,20 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "没有选择操作"
+msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:29
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "字幕文件来源位置："
+msgstr "字幕文件来源位置"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:32
 msgctxt "@info:tooltip;"
 msgid ""
 "When a relative folder name starts with * (asterisk) and recursive search is "
-"enabled, all folders containig that name will be searched.\n"
+"enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
 
@@ -859,12 +853,9 @@ msgid "Add New Folder"
 msgstr "添加文件夹"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:174
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr "添加用于查找字幕的文件夹。"
+msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:183
 msgctxt "@label:check"
@@ -872,19 +863,12 @@ msgid "Search subtitles recursively"
 msgstr "递归搜索字幕"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"按照“%1”设置递归搜索字幕。\n"
-"仅搜索相对文件夹。"
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1416,7 +1400,7 @@ msgstr "清除"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "删除数据库中的最近文件"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1426,6 +1410,9 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"显示的最近文件数量。输入 0 (零) 以禁用。<br>每个打开过的文件都会被保存。<br>"
+"加粗的项目是从“打开文件/ URL”操作以及从外部应用程序 (命令行、文件管理器、拖放"
+"等) 打开的文件。"
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1438,6 +1425,8 @@ msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
+"尝试打开另一个 Haruna 实例时将不会发生任何事情。<br>尝试用 Haruna 打开另一个"
+"文件时将用正在运行的实例打开。"
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1447,7 +1436,7 @@ msgstr "添加文件至播放列表"
 #: src/qml/Settings/GeneralSettings.qml:152
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr ""
+msgstr "文件将被添加到播放列表末尾。"
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1549,7 +1538,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
-msgstr ""
+msgstr " 窗口将根据视频分辨率调整大小。<br>最大尺寸没有限制，由操作系统控制。"
 
 #: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
@@ -1562,6 +1551,8 @@ msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
+"应用程序启动时进入全屏模式。<br>此选项的优先级高于“调整窗口大小以适应视"
+"频”和“记住窗口大小和位置”。"
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1623,7 +1614,7 @@ msgstr "使用 Breeze 微风图标主题"
 #: src/qml/Settings/GeneralSettings.qml:527
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
+msgstr "设置图标主题为“Breeze 微风”。<br>需要重启才能生效。"
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -1727,12 +1718,9 @@ msgid "Select action"
 msgstr "选择操作"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "更改操作"
+msgstr ""
 
 #: src/qml/Settings/MouseSettings.qml:236
 msgctxt "@info"
@@ -2367,7 +2355,6 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
-
-#~ msgctxt "@title:window select mouse button action"
-#~ msgid "Select action"
-#~ msgstr "选择操作"
+"无法获取此 ID 的播放列表：%1\n"
+"\n"
+"%2"

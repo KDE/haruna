@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:42+0000\n"
-"PO-Revision-Date: 2025-07-25 09:00+0200\n"
+"POT-Creation-Date: 2025-08-12 00:42+0000\n"
+"PO-Revision-Date: 2025-08-11 18:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -588,7 +588,7 @@ msgstr "Temps dels subtítols: %1 segons"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "El fitxer no existix: %1"
 
 #: src/mpv/mpvitem.cpp:528
 #, kde-format
@@ -817,28 +817,32 @@ msgstr ""
 "ni el <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "No s'ha seleccionat cap acció"
+msgstr "No s'ha trobat cap acció."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:29
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "Carrega els subtítols de:"
+msgstr "Carrega els subtítols des de"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:32
+#, fuzzy
+#| msgctxt "@info:tooltip;"
+#| msgid ""
+#| "When a relative folder name starts with * (asterisk) and recursive search "
+#| "is enabled, all folders containig that name will be searched.\n"
+#| "Relative folders are relative to the playing file's folder."
 msgctxt "@info:tooltip;"
 msgid ""
 "When a relative folder name starts with * (asterisk) and recursive search is "
-"enabled, all folders containig that name will be searched.\n"
+"enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Quan un nom de carpeta relativa comença per * (asterisc) i la busca "
+"recursiva està activada, es buscaran totes les carpetes que contenen este "
+"nom.\n"
+"Les carpetes relatives són relatives a la carpeta del fitxer en reproducció."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:111
 msgctxt "@action:button"
@@ -865,9 +869,6 @@ msgid "Add New Folder"
 msgstr "Afig una carpeta nova"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:174
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Afig una carpeta en la qual buscar els subtítols."
@@ -878,18 +879,14 @@ msgid "Search subtitles recursively"
 msgstr "Busca recursivament els subtítols"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"Els subtítols es busquen recursivament a les opcions «%1»\n"
+"Els subtítols es busquen recursivament a les carpetes definides a l'opció "
+"«%1».\n"
 "Només es busquen carpetes relatives."
 
 #: src/qml/Header.qml:78
@@ -1422,9 +1419,6 @@ msgid "Maximum recent files"
 msgstr "Nombre màxim de fitxers recents"
 
 #: src/qml/Settings/GeneralSettings.qml:100
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Neteja"
@@ -1432,7 +1426,7 @@ msgstr "Neteja"
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Suprimix els fitxers recents de la base de dades"
 
 #: src/qml/Settings/GeneralSettings.qml:109
 msgctxt "@info:tooltip"
@@ -1442,6 +1436,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"El nombre de fitxers recents a mostrar. Introduïu 0 (zero) per a desactivar."
+"<br>Cada fitxer obert s'emmagatzema.<br>Les entrades en negreta són fitxers "
+"oberts des de les accions d'obertura de fitxer/URL i des d'aplicacions "
+"externes (línia d'ordres, gestor de fitxers, arrossegar i deixar anar, etc.)."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1449,20 +1447,14 @@ msgid "Allow only one instance"
 msgstr "Permet només una única instància"
 
 #: src/qml/Settings/GeneralSettings.qml:131
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Intentar obrir una altra instància d'Haruna no farà res.\n"
-"En intentar obrir un altre fitxer amb Haruna s'obrirà el fitxer en la "
-"instància en execució."
+"Intentar obrir una altra instància d'Haruna no farà res.<br>En intentar "
+"obrir un altre fitxer amb Haruna s'obrirà el fitxer en la instància en "
+"execució."
 
 #: src/qml/Settings/GeneralSettings.qml:142
 msgctxt "@option:check"
@@ -1470,12 +1462,9 @@ msgid "Add file to playlist"
 msgstr "Afig un fitxer a la llista de reproducció"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "El fitxer s'afegirà al final de la llista de reproducció"
+msgstr "El fitxer s'afegirà al final de la llista de reproducció."
 
 #: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@option:check"
@@ -1576,18 +1565,13 @@ msgid "Not supported on Wayland."
 msgstr "No admés en Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:330
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"La finestra es redimensiona d'acord amb la resolució del vídeo.\n"
-"La mida màxima no està restringida, es deixa al sistema operatiu."
+"La finestra es redimensiona d'acord amb la resolució del vídeo.<br>La mida "
+"màxima no està restringida, es deixa al sistema operatiu."
 
 #: src/qml/Settings/GeneralSettings.qml:340
 msgctxt "@option:check"
@@ -1595,20 +1579,14 @@ msgid "Start in fullscreen mode"
 msgstr "Inicia en el mode de pantalla completa"
 
 #: src/qml/Settings/GeneralSettings.qml:349
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Entra en el mode de pantalla completa quan s'inicia l'aplicació.\n"
-"Açò té prioritat sobre els paràmetres «Redimensiona per a ajustar-se al "
-"vídeo», i «Recorda la mida i la posició de la finestra»."
+"Entra en el mode de pantalla completa quan s'inicia l'aplicació.<br>Açò té "
+"prioritat sobre els paràmetres «Redimensiona per a ajustar-se al vídeo», i "
+"«Recorda la mida i la posició de la finestra»."
 
 #: src/qml/Settings/GeneralSettings.qml:360
 msgctxt "@option:check"
@@ -1669,16 +1647,9 @@ msgid "Use Breeze icon theme"
 msgstr "Utilitza el tema d'icones Brisa"
 
 #: src/qml/Settings/GeneralSettings.qml:527
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Establix el tema d'icones a Brisa.\n"
-"Requerix reiniciar."
+msgstr "Establix el tema d'icones a Brisa.<br>Requerix reiniciar."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -1782,9 +1753,6 @@ msgid "Select action"
 msgstr "Seleccioneu una acció"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Canvia l'acció"
@@ -2468,13 +2436,6 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
-
-#~ msgctxt "@title:window select mouse button action"
-#~ msgid "Select action"
-#~ msgstr "Seleccioneu una acció"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "The number of recent files to store. Enter 0 (zero) to disable."
-#~ msgstr ""
-#~ "Nombre de fitxers recents a emmagatzemar. Introduïu 0 (zero) per a "
-#~ "desactivar-ho."
+"No s'ha pogut recuperar la llista de reproducció amb ID: %1\n"
+"\n"
+"%2"

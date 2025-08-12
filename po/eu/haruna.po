@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:42+0000\n"
-"PO-Revision-Date: 2025-08-09 19:05+0200\n"
+"POT-Creation-Date: 2025-08-12 00:42+0000\n"
+"PO-Revision-Date: 2025-08-11 14:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -817,28 +817,33 @@ msgstr ""
 "<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ere."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "Ez da ekintzarik hautatu"
+msgstr "Ez da ekintzarik aurkitu."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:29
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "Zamatu azpidatziak hemendik:"
+msgstr "Zamatu azpidatziak hemendik,"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:32
+#, fuzzy
+#| msgctxt "@info:tooltip;"
+#| msgid ""
+#| "When a relative folder name starts with * (asterisk) and recursive search "
+#| "is enabled, all folders containig that name will be searched.\n"
+#| "Relative folders are relative to the playing file's folder."
 msgctxt "@info:tooltip;"
 msgid ""
 "When a relative folder name starts with * (asterisk) and recursive search is "
-"enabled, all folders containig that name will be searched.\n"
+"enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Karpeta erlatibo baten izena * (asterikoa) batekin hasi eta bilaketa "
+"errekurtsiboa gaituta dagoenean, izen hori duten karpeta guztietan bilatuko "
+"da.\n"
+"Karpeta erlatiboak jotzen ari den fitxategiaren karpetarekiko erlatiboak "
+"dira."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:111
 msgctxt "@action:button"
@@ -865,9 +870,6 @@ msgid "Add New Folder"
 msgstr "Gehitu karpeta berria"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:174
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Gehitu azpidatziak bilatzeko karpeta bat."
@@ -878,19 +880,15 @@ msgid "Search subtitles recursively"
 msgstr "Bilatu azpidatziak errekurtsiboki"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"Azpidatziak errekurtsiboki bilatzen dira \"%1\" ezarpenetan\n"
-"Karpeta erlatiboak bakarrik bilatzen dira."
+"Azpidatziak errekurtsiboki bilatzen dira \"%1\" ezarpenean definitutako "
+"karpetetan.\n"
+"Karpeta erlatiboetan bakarrik bilatzen dira."
 
 #: src/qml/Header.qml:78
 msgctxt "@action:intoolbar"
@@ -1757,9 +1755,6 @@ msgid "Select action"
 msgstr "Hautatu ekintza"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Aldatu ekintza"
