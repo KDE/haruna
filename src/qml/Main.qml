@@ -96,7 +96,7 @@ ApplicationWindow {
         }
     }
     Connections {
-        target: GeneralSettings
+        target: AudioSettings
         function onPreferredTrackChanged() {
             mpv.audioId = AudioSettings.preferredTrack === 0
                     ? "auto"
@@ -116,7 +116,7 @@ ApplicationWindow {
         }
     }
     Connections {
-        target: PlaybackSettings
+        target: SubtitlesSettings
         function onAutoSelectSubtitlesChanged() {
             mpv.selectSubtitleTrack()
         }
