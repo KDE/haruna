@@ -387,17 +387,19 @@ SettingsBasePage {
             delegate: ItemDelegate {
                 id: delegate
 
+                required property var model
+
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
-                width: colorThemeSwitcher.width
-                highlighted: model.display === GeneralSettings.colorScheme
+                width: ListView.view.width
+                highlighted: delegate.model.display === GeneralSettings.colorScheme
                 contentItem: RowLayout {
                     Kirigami.Icon {
-                        source: model.decoration
+                        source: delegate.model.decoration
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                     }
                     Label {
-                        text: model.display
+                        text: delegate.model.display
                         color: delegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                         Layout.fillWidth: true
                     }
