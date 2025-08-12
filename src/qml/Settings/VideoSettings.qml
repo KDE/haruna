@@ -104,7 +104,6 @@ SettingsBasePage {
             onActivated: function(index) {
                 VideoSettings.screenshotFormat = model.get(index).value
                 VideoSettings.save()
-                root.m_mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
             }
 
             Component.onCompleted: {
@@ -149,7 +148,6 @@ SettingsBasePage {
                 function save() : void {
                     VideoSettings.screenshotTemplate = text
                     VideoSettings.save()
-                    root.m_mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
                 }
             }
 

@@ -160,6 +160,15 @@ ApplicationWindow {
             mpv.setProperty(MpvProperties.SubtitleBorderSize, SubtitlesSettings.borderSize)
         }
     }
+    Connections {
+        target: VideoSettings
+        function onScreenshotTemplateChanged() {
+            mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
+        }
+        function onScreenshotFormatChanged() {
+            mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
+        }
+    }
 
     Loader {
         active: false
