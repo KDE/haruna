@@ -136,6 +136,18 @@ ApplicationWindow {
 
         m_mpv: mpv
         height: mpv.height
+
+        Connections {
+            target: mpv
+            function onOpenPlaylist() {
+                if (playlist.playlistView.count > 0) {
+                    playlist.state = "visible"
+                }
+            }
+            function onClosePlaylist() {
+                playlist.state = "hidden"
+            }
+        }
     }
 
     Footer {
