@@ -5,12 +5,9 @@
  */
 
 import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
 import QtQml
 
 import org.kde.kirigami as Kirigami
-import org.kde.haruna
 
 Kirigami.ScrollablePage {
     id: root

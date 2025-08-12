@@ -6,7 +6,6 @@
 
 import QtQuick
 import QtQuick.Window
-import QtQuick.Controls
 
 import org.kde.haruna
 import org.kde.haruna.settings
