@@ -24,6 +24,8 @@ MpvItem {
     property alias mouseY: mouseArea.mouseY
 
     signal mousePositionChanged(double x, double y)
+    signal openPlaylist()
+    signal closePlaylist()
 
     enum PlaybackState {
         Playing,
@@ -82,20 +84,20 @@ MpvItem {
             hideCursor = false
             hideCursorTimer.restart()
 
-            if (!PlaylistSettings.canToggleWithMouse || playlist.playlistView.count > 0) {
+            if (!PlaylistSettings.canToggleWithMouse) {
                 return
             }
             if (PlaylistSettings.position === "right") {
                 if (mouseX > width - 50) {
-                    playlist.state = "visible"
+                    root.openPlaylist()
                 } else {
-                    playlist.state = "hidden"
+                    root.closePlaylist()
                 }
             } else {
                 if (mouseX < 50) {
-                    playlist.state = "visible"
+                    root.openPlaylist()
                 } else {
-                    playlist.state = "hidden"
+                    root.closePlaylist()
                 }
             }
         }
