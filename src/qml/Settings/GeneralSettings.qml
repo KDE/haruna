@@ -48,36 +48,6 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:textbox", "File dialog location")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        TextField {
-            id: fileDialogLocation
-
-            text: GeneralSettings.fileDialogLocation
-            Layout.fillWidth: true
-            onEditingFinished: save()
-
-            Connections {
-                target: root
-                function onSave() {
-                    fileDialogLocation.save()
-                }
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip", "The default location of the open file dialog. If empty, " +
-                            "the file dialog will try to open to the last opened location.")
-            }
-
-            function save() : void {
-                GeneralSettings.fileDialogLocation = fileDialogLocation.text
-                GeneralSettings.save()
-            }
-        }
-
-        Label {
             text: i18nc("@label:spinbox", "Maximum recent files")
             Layout.alignment: Qt.AlignRight
         }
