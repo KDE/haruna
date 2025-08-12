@@ -17,7 +17,6 @@ Item {
     required property int maxWidth
 
     property bool active: false
-    property alias label: label
 
     Label {
         id: label

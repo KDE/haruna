@@ -80,6 +80,22 @@ ApplicationWindow {
         m_settingsLoader: settingsLoader
     }
 
+    Connections {
+        target: GeneralSettings
+        function onOsdFontSizeChanged() {
+            osd.message("Test osd font size")
+        }
+        function onMaxRecentFilesChanged() {
+            recentFilesModel.getItems()
+        }
+        function onResizeWindowToVideoChanged() {
+            window.resizeWindow()
+        }
+        function onColorSchemeChanged() {
+            HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
+        }
+    }
+
     Loader {
         active: false
         sourceComponent: KConfig.WindowStateSaver {

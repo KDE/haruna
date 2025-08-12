@@ -29,22 +29,14 @@ SettingsBasePage {
         SpinBox {
             id: osdFontSize
 
-            // used to prevent osd showing when opening the page
-            property bool completed: false
-
             editable: true
             from: 0
             to: 100
             value: GeneralSettings.osdFontSize
             onValueModified: {
-                if (completed) {
-                    osd.label.font.pointSize = osdFontSize.value
-                    osd.message("Test osd font size")
-                    GeneralSettings.osdFontSize = osdFontSize.value
-                    GeneralSettings.save()
-                }
+                GeneralSettings.osdFontSize = osdFontSize.value
+                GeneralSettings.save()
             }
-            Component.onCompleted: completed = true
         }
 
         Label {
@@ -62,7 +54,6 @@ SettingsBasePage {
                 onValueModified: {
                     GeneralSettings.maxRecentFiles = maxRecentFiles.value
                     GeneralSettings.save()
-                    recentFilesModel.getItems()
                 }
             }
 
@@ -290,7 +281,6 @@ SettingsBasePage {
                 onClicked: {
                     GeneralSettings.resizeWindowToVideo = checked
                     GeneralSettings.save()
-                    window.resizeWindow()
                 }
             }
 
@@ -417,7 +407,6 @@ SettingsBasePage {
             onActivated: function(index) {
                 GeneralSettings.colorScheme = colorThemeSwitcher.textAt(index)
                 GeneralSettings.save()
-                HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
             }
 
             Component.onCompleted: {
