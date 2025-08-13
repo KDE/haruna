@@ -261,21 +261,17 @@ RowLayout {
 
             property int itemHeight
             property int itemBiggestWidth: 1
-            property var checkedItem
-            property int maxWidth: slider.Window.window.width * 0.7 > Kirigami.Units.gridUnit * 40
-                                   ? Kirigami.Units.gridUnit * 40
-                                   : slider.Window.window.width * 0.7
+            property int maxWidth: Math.max(Kirigami.Units.gridUnit * 40, root.width * 0.8)
 
             y: -height - slider.height
             z: 20
-            width: itemBiggestWidth > maxWidth ? maxWidth : itemBiggestWidth
-            height: itemHeight * root.m_mpv.chaptersModel.rowCount + listViewPage.footer.height > root.m_mpv.height - Kirigami.Units.gridUnit
-                    ? root.m_mpv.height - Kirigami.Units.gridUnit - listViewPage.footer.height * 2
-                    : itemHeight * root.m_mpv.chaptersModel.rowCount + listViewPage.footer.height
+            width: Math.min(itemBiggestWidth, maxWidth)
+            height: Math.min(root.m_mpv.height - Kirigami.Units.gridUnit * 2,
+                             listViewPage.contentHeight + listViewPage.footer.height)
             modal: true
             padding: 0
             onOpened: {
-                listView.positionViewAtIndex(checkedItem, ListView.Beginning)
+                listView.positionViewAtIndex(root.m_mpv.chapter, ListView.Beginning)
             }
 
             Kirigami.ScrollablePage {
@@ -288,6 +284,7 @@ RowLayout {
                     z: 100
                     width: parent.width
                     CheckBox {
+                        anchors.verticalCenter: parent.verticalCenter
                         text: i18nc("@action:inmenu", "Skip Chapters")
                         checked: PlaybackSettings.skipChapters
                         onCheckedChanged: {
@@ -306,7 +303,7 @@ RowLayout {
 
                     model: root.m_mpv.chaptersModel
                     reuseItems: true
-                    delegate: CheckDelegate {
+                    delegate: RadioDelegate {
                         id: menuitem
 
                         required property int index
@@ -316,18 +313,16 @@ RowLayout {
                         property int scrollBarWidth: listViewPage.contentItem.ScrollBar.vertical.width
 
                         text: `${HarunaApp.formatTime(menuitem.startTime)} - ${menuitem.title}`
-                        checked: menuitem.index === chaptersPopup.checkedItem
+                        checked: menuitem.index === root.m_mpv.chapter
                         width: listViewPage.width - scrollBarWidth
                         onClicked: {
                             chaptersPopup.close()
                             root.m_mpv.chapter = menuitem.index
                         }
-                        Component.onCompleted: {
-                            chaptersPopup.itemBiggestWidth = menuitem.implicitWidth + scrollBarWidth > chaptersPopup.width
-                                    ? menuitem.implicitWidth + scrollBarWidth
-                                    : chaptersPopup.width
-
-                            chaptersPopup.itemHeight = height
+                        onImplicitWidthChanged: {
+                            let popup = chaptersPopup
+                            popup.itemBiggestWidth = Math.max(implicitWidth + scrollBarWidth, popup.width)
+                            popup.itemHeight = height
                         }
                     }
                 }
@@ -340,9 +335,6 @@ RowLayout {
                 loopIndicator.startPosition = -1
                 loopIndicator.endPosition = -1
                 previewMpvLoader.file = root.m_mpv.currentUrl
-            }
-            function onChapterChanged() {
-                chaptersPopup.checkedItem = root.m_mpv.chapter
             }
             function onPositionChanged() {
                 if (!slider.seekStarted) {
