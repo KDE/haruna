@@ -185,28 +185,14 @@ MpvItem {
         visible: false
         anchors.centerIn: parent
         color: Kirigami.Theme.backgroundColor
-        opacity: 0.6
 
-        Kirigami.Icon {
-            id: loadingIndicator
-
-            source: "view-refresh"
+        Kirigami.LoadingPlaceholder {
+            determinate: false
             anchors.centerIn: parent
-            width: Kirigami.Units.iconSizes.large
-            height: Kirigami.Units.iconSizes.large
-
-            RotationAnimator {
-                target: loadingIndicator
-                from: 0
-                to: 360
-                duration: 1500
-                loops: Animation.Infinite
-                running: loadingIndicatorParent.visible
-            }
 
             Component.onCompleted: {
-                parent.width = width + 10
-                parent.height = height + 10
+                parent.width = width + 20
+                parent.height = height + 20
             }
         }
     }
