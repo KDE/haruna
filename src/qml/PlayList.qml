@@ -386,13 +386,10 @@ Page {
     FileDialog {
         id: fileDialog
 
-        property url location: GeneralSettings.fileDialogLocation
-                               ? HarunaApp.pathToUrl(GeneralSettings.fileDialogLocation)
-                               : HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
         property string fileType: "video"
 
         title: i18nc("@title:window", "Select file")
-        currentFolder: location
+        currentFolder: HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
         fileMode: FileDialog.OpenFile
 
         onAccepted: {
