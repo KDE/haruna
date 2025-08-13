@@ -170,7 +170,7 @@ MpvItem {
         onDropped: drop => {
             const mimeType = HarunaApp.mimeType(drop.urls[0])
             if (root.window.acceptedSubtitleTypes.includes(mimeType)) {
-                commandAsync(["sub-add", drop.urls[0], "select"], MpvItem.AsyncIds.AddSubtitleTrack)
+                root.commandAsync(["sub-add", drop.urls[0], "select"], MpvItem.AsyncIds.AddSubtitleTrack)
             }
 
             if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
