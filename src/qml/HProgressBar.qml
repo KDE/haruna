@@ -23,6 +23,8 @@ RowLayout {
 
     property alias loopIndicator: loopIndicator
     property alias chaptersPopupIsOpen: chaptersPopup.visible
+    property bool showChapterMarkers: GeneralSettings.showChapterMarkers
+                                      && m_mpv.chaptersModel.rowCount * 20 < width
 
     function openChapterPopup(triggerItem: Item) {
         chaptersPopup.x = (chaptersPopup.width + triggerItem.width) * -0.5
@@ -192,7 +194,7 @@ RowLayout {
         // create markers for the chapters
         Repeater {
             id: chaptersInstantiator
-            model: GeneralSettings.showChapterMarkers && root.m_mpv.chaptersModel.rowCount < 50
+            model: root.showChapterMarkers
                    ? root.m_mpv.chaptersModel
                    : 0
             delegate: Shape {
