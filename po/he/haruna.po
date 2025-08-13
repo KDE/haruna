@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:42+0000\n"
-"PO-Revision-Date: 2025-08-10 09:36+0300\n"
+"PO-Revision-Date: 2025-08-11 09:18+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -810,20 +810,14 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "לא נבחרה פעולה"
+msgstr "לא נמצאה פעולה."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:29
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "טעינת כתוביות מתוך:"
+msgstr "טעינת כתוביות מתוך"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:32
 msgctxt "@info:tooltip;"
@@ -832,6 +826,9 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"כאשר שם של תיקייה יחסית מתחיל ב־* (כוכבית) וחיפוש בנסיגה פעיל, החיפוש יתבצע "
+"בכל התיקיות שמכילות את השם הזה.\n"
+"תיקיות יחסיות הן ביחס לתיקיית הקובץ שמתנגן."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:111
 msgctxt "@action:button"
@@ -858,9 +855,6 @@ msgid "Add New Folder"
 msgstr "הוספת תיקייה חדשה"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:174
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "הוספת תיקייה בה יתבצע חיפוש אחר כתוביות."
@@ -871,18 +865,13 @@ msgid "Search subtitles recursively"
 msgstr "חיפוש כתוביות בנסיגה"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:200
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"מתבצע חיפוש בנסיגה אחר כתוביות בהגדרות „%1”.\n"
+"מתבצע חיפוש בנסיגה אחר כתוביות בתיקיות שהוגדרו תחת „%1”.\n"
 "יתבצע חיפוש רק בתיקיות יחסיות."
 
 #: src/qml/Header.qml:78
@@ -1739,12 +1728,9 @@ msgid "Select action"
 msgstr "בחירת פעולה"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "החלפת פעולה"
+msgstr "החלפת פעולה."
 
 #: src/qml/Settings/MouseSettings.qml:236
 msgctxt "@info"
