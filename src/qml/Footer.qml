@@ -180,6 +180,20 @@ Item {
                     }
                 }
 
+                ToolButton {
+                    icon.name: "overflow-menu"
+                    focusPolicy: Qt.NoFocus
+                    visible: root.m_mpv.chaptersModel.rowCount >= 50
+
+                    onClicked: {
+                        progressBar.openChapterPopup(this)
+                    }
+
+                    ToolTip {
+                        text: i18nc("@info:tooltip", "Open chapters menu")
+                    }
+                }
+
                 HProgressBar {
                     id: progressBar
 

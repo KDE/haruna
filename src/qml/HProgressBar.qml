@@ -24,24 +24,12 @@ RowLayout {
     property alias loopIndicator: loopIndicator
     property alias chaptersPopupIsOpen: chaptersPopup.visible
 
-    spacing: Kirigami.Units.smallSpacing
-
-    ToolButton {
-        id: openChaptersMenu
-
-        icon.name: "overflow-menu"
-        focusPolicy: Qt.NoFocus
-        visible: root.m_mpv.chaptersModel.rowCount >= 50
-
-        onClicked: {
-            chaptersPopup.x = (chaptersPopup.width + width) * -0.5
-            chaptersPopup.open()
-        }
-
-        ToolTip {
-            text: i18nc("@info:tooltip", "Open chapters menu")
-        }
+    function openChapterPopup(triggerItem: Item) {
+        chaptersPopup.x = (chaptersPopup.width + triggerItem.width) * -0.5
+        chaptersPopup.open()
     }
+
+    spacing: Kirigami.Units.smallSpacing
 
     Slider {
         id: slider
