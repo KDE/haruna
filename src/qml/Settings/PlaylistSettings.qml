@@ -91,6 +91,50 @@ SettingsBasePage {
             }
         }
 
+        Label {
+            text: i18nc("@label:listbox", "Playback order")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        ComboBox {
+            textRole: "text"
+            valueRole: "value"
+            model: ListModel {
+                id: playOrderModel
+            }
+            Component.onCompleted: {
+                const repeat = {
+                    text: i18nc("@item:listbox the playback order of the playlist", "Repeat playlist"),
+                    value: "RepeatPlaylist"
+                }
+                playOrderModel.append(repeat)
+
+                const stopAfterLast = {
+                    text: i18nc("@item:listbox the playback order of the playlist", "Stop after last item"),
+                    value: "StopAfterLast"
+                }
+                playOrderModel.append(stopAfterLast)
+
+                const repeatItem = {
+                    text: i18nc("@item:listbox the playback order of the playlist", "Repeat item"),
+                    value: "RepeatItem"
+                }
+                playOrderModel.append(repeatItem)
+
+                const stopAfterItem = {
+                    text: i18nc("@item:listbox the playback order of the playlist", "Stop after item"),
+                    value: "StopAfterItem"
+                }
+                playOrderModel.append(stopAfterItem)
+
+                currentIndex = indexOfValue(PlaylistSettings.playOrder)
+            }
+            onActivated: function(index) {
+                PlaylistSettings.playOrder = model.get(index).value
+                PlaylistSettings.save()
+            }
+        }
+
         Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: PlaylistSettings.showToolbar
