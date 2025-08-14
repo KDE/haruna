@@ -17,41 +17,41 @@ apps:
       - home
       - audio-record
       - removable-media
-environment:
-    PYTHONPYCACHEPREFIX: "$SNAP_USER_COMMON/.pycache"
-    PYTHONUSERBASE: $SNAP_USER_COMMON/.local
-    PIP_USER: 1
-    PYTHONPATH: ${SNAP}/usr/lib/python3/dist-packages:${PYTHONPATH}
-    GST_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
-    GST_PLUGIN_SYSTEM_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
-    GST_PLUGIN_SCANNER: $SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
-    QT_QUICK_CONTROLS_STYLE: org.kde.breeze
-    ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
-    LD_LIBRARY_PATH: "$SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/ffmpeg-platform/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib:$SNAP/lib/:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/blas:/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio:${LD_LIBRARY_PATH}"
-    PATH: $SNAP/ffmpeg-platform/usr/bin:$SNAP/usr/bin:${PATH}
+    environment:
+      PYTHONPYCACHEPREFIX: "$SNAP_USER_COMMON/.pycache"
+      PYTHONUSERBASE: $SNAP_USER_COMMON/.local
+      PIP_USER: 1
+      PYTHONPATH: ${SNAP}/usr/lib/python3/dist-packages:${PYTHONPATH}
+      GST_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
+      GST_PLUGIN_SYSTEM_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0
+      GST_PLUGIN_SCANNER: $SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner
+      QT_QUICK_CONTROLS_STYLE: org.kde.breeze
+      ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
+      LD_LIBRARY_PATH: "$SNAP/kf6/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/ffmpeg-platform/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib:$SNAP/lib/:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/blas:/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio:${LD_LIBRARY_PATH}"
+      PATH: $SNAP/ffmpeg-platform/usr/bin:$SNAP/usr/bin:${PATH}
 plugs:
   ffmpeg-2404:
     interface: content
     target: ffmpeg-platform # the folder where this content snap will be mounted
     default-provider: ffmpeg-2404
 layout:
-    "/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib":
-        bind: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib"
-    "/usr/share/alsa":
-        bind: "$SNAP/usr/share/alsa"
-    "/etc/alsa/conf.d":
-        bind: "$SNAP/etc/alsa/conf.d"
+  "/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib":
+    bind: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib"
+  "/usr/share/alsa":
+    bind: "$SNAP/usr/share/alsa"
+  "/etc/alsa/conf.d":
+    bind: "$SNAP/etc/alsa/conf.d"
 slots:
-    session-dbus-interface:
-        interface: dbus
-        name: org.kde.haruna
-        bus: session
+  session-dbus-interface:
+    interface: dbus
+    name: org.kde.haruna
+    bus: session
 package-repositories:
--   type: apt
+  - type: apt
     components:
-    - main
+      - main
     suites:
-    - noble
+      - noble
     key-id: 444DABCF3667D0283F894EDDE6D4736255751E5D
     url: http://origin.archive.neon.kde.org/user
     key-server: keyserver.ubuntu.com
@@ -85,6 +85,28 @@ parts:
     organize:
       bin: usr/bin
       lib/python3.12/site-packages: usr/lib/python3/dist-packages
+  kdsingleapplication:
+    plugin: cmake
+    source: https://github.com/KDAB/KDSingleApplication.git
+    source-branch: master
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DQT_MAJOR_VERSION=6
+      - -DBUILD_WITH_QT6=ON
+      - -DBUILD_TESTING=OFF
+      - -DKDSingleApplication_EXAMPLES=FALSE
+      - -DCMAKE_INSTALL_SYSCONFDIR=/etc
+      - -DCMAKE_INSTALL_LOCALSTATEDIR=/var
+      - -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF
+      - -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_INSTALL_RUNSTATEDIR=/run
+      - -DCMAKE_SKIP_INSTALL_ALL_DEPENDENCY=ON
+      - -DCMAKE_VERBOSE_MAKEFILE=ON
+      - -DCMAKE_INSTALL_LIBDIR=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+      - --log-level=STATUS
+      - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
   mpvqt:
     plugin: cmake
     source: https://invent.kde.org/libraries/mpvqt.git
@@ -110,6 +132,7 @@ parts:
       - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
   haruna:
     after:
+      - kdsingleapplication
       - mpvqt
       - python-deps
     parse-info:
@@ -159,7 +182,6 @@ parts:
       - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
       - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
       - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
-
     prime:
       - "-usr/lib/*/cmake/*"
       - "-usr/include/*"
