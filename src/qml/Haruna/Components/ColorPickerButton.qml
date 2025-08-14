@@ -47,9 +47,9 @@ Rectangle {
         id: colorPicker
 
         title: i18nc("@title:window", "Select Color")
-        onAccepted: colorChosen(colorPicker.selectedColor)
+        onAccepted: root.colorChosen(colorPicker.selectedColor)
         selectedColor: root.color
-        parentWindow: settingsLoader.item
+        parentWindow: root.Window.window
     }
 
 }
