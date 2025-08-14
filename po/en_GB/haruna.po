@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:42+0000\n"
+"POT-Creation-Date: 2025-08-14 00:41+0000\n"
 "PO-Revision-Date: 2024-11-01 13:59+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -849,7 +849,15 @@ msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Play next file"
 
-#: src/qml/Footer.qml:243
+#: src/qml/Footer.qml:193
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Skip chapters"
+msgctxt "@info:tooltip"
+msgid "Open chapters menu"
+msgstr "Skip chapters"
+
+#: src/qml/Footer.qml:257
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Remaining: %1"
@@ -867,31 +875,31 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "Select a colour"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:62
+#: src/qml/Haruna/Components/HamburgerMenu.qml:61
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Recent Files"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:92
+#: src/qml/Haruna/Components/HamburgerMenu.qml:91
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Primary Subtitle"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:98
+#: src/qml/Haruna/Components/HamburgerMenu.qml:97
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Secondary Subtitle"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:107
+#: src/qml/Haruna/Components/HamburgerMenu.qml:106
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "Audio Track"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:130
+#: src/qml/Haruna/Components/HamburgerMenu.qml:129
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&More"
@@ -996,20 +1004,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:42
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Skip chapters"
-msgctxt "@info:tooltip"
-msgid "Open chapters menu"
-msgstr "Skip chapters"
-
-#: src/qml/HProgressBar.qml:291
+#: src/qml/HProgressBar.qml:276
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Skip Chapters"
 
-#: src/qml/HProgressBar.qml:299
+#: src/qml/HProgressBar.qml:284
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1023,12 +1023,12 @@ msgstr ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check 'Playback' settings for more details"
 
-#: src/qml/Main.qml:30
+#: src/qml/Main.qml:29
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:308
+#: src/qml/Main.qml:405
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1036,7 +1036,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Select file"
 
-#: src/qml/Main.qml:327
+#: src/qml/Main.qml:422
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1044,7 +1044,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Select subtitles file"
 
-#: src/qml/Main.qml:351
+#: src/qml/Main.qml:446
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Open"
@@ -1212,7 +1212,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Playback speed"
 
-#: src/qml/MpvVideo.qml:34
+#: src/qml/MpvVideo.qml:35
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
@@ -1361,24 +1361,24 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:391 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Select file"
 
 #: src/qml/Settings/AudioSettings.qml:24
-#: src/qml/Settings/SubtitlesSettings.qml:50
+#: src/qml/Settings/SubtitlesSettings.qml:49
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Preferred language"
 
-#: src/qml/Settings/AudioSettings.qml:51
-#: src/qml/Settings/SubtitlesSettings.qml:78
+#: src/qml/Settings/AudioSettings.qml:50
+#: src/qml/Settings/SubtitlesSettings.qml:76
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Preferred track"
 
-#: src/qml/Settings/AudioSettings.qml:74
+#: src/qml/Settings/AudioSettings.qml:67
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Volume step"
@@ -1560,31 +1560,12 @@ msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "Osd font size"
 
-#: src/qml/Settings/GeneralSettings.qml:51
-msgctxt "@label:textbox"
-msgid "File dialog location"
-msgstr "File dialog location"
-
-#: src/qml/Settings/GeneralSettings.qml:70
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The default location of the open file dialog. If empty the file dialog "
-#| "will try to open to the last opened location."
-msgctxt "@info:tooltip"
-msgid ""
-"The default location of the open file dialog. If empty, the file dialog will "
-"try to open to the last opened location."
-msgstr ""
-"The default location of the open file dialog. If empty the file dialog will "
-"try to open to the last opened location."
-
-#: src/qml/Settings/GeneralSettings.qml:81
+#: src/qml/Settings/GeneralSettings.qml:43
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Maximum recent files"
 
-#: src/qml/Settings/GeneralSettings.qml:100
+#: src/qml/Settings/GeneralSettings.qml:61
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Clear"
@@ -1592,12 +1573,12 @@ msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Clear"
 
-#: src/qml/Settings/GeneralSettings.qml:104
+#: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:109
+#: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -1606,12 +1587,12 @@ msgid ""
 "drop etc.)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Allow only one instance"
 
-#: src/qml/Settings/GeneralSettings.qml:131
+#: src/qml/Settings/GeneralSettings.qml:92
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1627,12 +1608,12 @@ msgstr ""
 "Trying to open another file with Haruna will open the file in the running "
 "instance."
 
-#: src/qml/Settings/GeneralSettings.qml:142
+#: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Add file to playlist"
 
-#: src/qml/Settings/GeneralSettings.qml:152
+#: src/qml/Settings/GeneralSettings.qml:113
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "File will be added to the end of the playlist"
@@ -1640,7 +1621,7 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "File will be added to the end of the playlist"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:122
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Play next file"
@@ -1648,17 +1629,17 @@ msgctxt "@option:check"
 msgid "Play new file"
 msgstr "Play next file"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:133
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interface"
 
-#: src/qml/Settings/GeneralSettings.qml:178
+#: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Footer style"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:151
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -1666,12 +1647,12 @@ msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "Default cover"
 
-#: src/qml/Settings/GeneralSettings.qml:196
+#: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:210
+#: src/qml/Settings/GeneralSettings.qml:171
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Show floating footer on"
@@ -1679,17 +1660,17 @@ msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Show floating footer on"
 
-#: src/qml/Settings/GeneralSettings.qml:225
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:231
+#: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:207
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1706,47 +1687,47 @@ msgstr ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> - mouse movement on the bottom of the video area"
 
-#: src/qml/Settings/GeneralSettings.qml:254
+#: src/qml/Settings/GeneralSettings.qml:215
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Preview thumbnail"
 
-#: src/qml/Settings/GeneralSettings.qml:259
+#: src/qml/Settings/GeneralSettings.qml:220
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Show preview thumbnail"
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:227
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "Shows a preview while hovering the seek/progress bar."
 
-#: src/qml/Settings/GeneralSettings.qml:275
+#: src/qml/Settings/GeneralSettings.qml:236
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Use accurate preview"
 
-#: src/qml/Settings/GeneralSettings.qml:285
+#: src/qml/Settings/GeneralSettings.qml:246
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Generating an accurate preview is slow"
 
-#: src/qml/Settings/GeneralSettings.qml:293
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Thumbnail width"
 
-#: src/qml/Settings/GeneralSettings.qml:311
+#: src/qml/Settings/GeneralSettings.qml:272
 msgctxt "@label"
 msgid "Window"
 msgstr "Window"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:278
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Resize to fit video"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:289
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "<b>Not supported on Wayland.</b>"
@@ -1754,7 +1735,7 @@ msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "<b>Not supported on Wayland.</b>"
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:290
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1768,12 +1749,12 @@ msgstr ""
 "%1 The window is resized according to the video resolution.\n"
 "The maximum size is not constrained, this is left to the operating system."
 
-#: src/qml/Settings/GeneralSettings.qml:340
+#: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Start in fullscreen mode"
 
-#: src/qml/Settings/GeneralSettings.qml:349
+#: src/qml/Settings/GeneralSettings.qml:309
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1789,12 +1770,12 @@ msgstr ""
 "This takes precedence over Resize to fit video, and Remember window size and "
 "position settings."
 
-#: src/qml/Settings/GeneralSettings.qml:360
+#: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Remember window size and position"
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:333
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "<b>Not supported on Wayland.</b>"
@@ -1804,7 +1785,7 @@ msgctxt ""
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>Not supported on Wayland.</b>"
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/qml/Settings/GeneralSettings.qml:335
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1824,33 +1805,33 @@ msgstr ""
 "\n"
 "The \"Resize to fit video\" setting takes precedence.\n"
 
-#: src/qml/Settings/GeneralSettings.qml:387
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Show menubar"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:358
 #: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Show toolbar"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:369
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Show chapter markers"
 
-#: src/qml/Settings/GeneralSettings.qml:418
+#: src/qml/Settings/GeneralSettings.qml:378
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Colour scheme"
 
-#: src/qml/Settings/GeneralSettings.qml:462
+#: src/qml/Settings/GeneralSettings.qml:423
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI style"
 
-#: src/qml/Settings/GeneralSettings.qml:495
+#: src/qml/Settings/GeneralSettings.qml:456
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -1858,12 +1839,12 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Default cover"
 
-#: src/qml/Settings/GeneralSettings.qml:519
+#: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Use Breeze icon theme"
 
-#: src/qml/Settings/GeneralSettings.qml:527
+#: src/qml/Settings/GeneralSettings.qml:488
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2069,7 +2050,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Hardware decoding"
 
-#: src/qml/Settings/PlaybackSettings.qml:149
+#: src/qml/Settings/PlaybackSettings.qml:147
 #, fuzzy
 #| msgctxt "@info:tooltip hardware decoding setting"
 #| msgid ""
@@ -2126,12 +2107,12 @@ msgstr ""
 "another hardware decoder by creating a startup custom command <strong>set "
 "hwdec <i>decoder_name</i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:173
+#: src/qml/Settings/PlaybackSettings.qml:171
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Open last played file on startup"
 
-#: src/qml/Settings/PlaybackSettings.qml:182
+#: src/qml/Settings/PlaybackSettings.qml:180
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
@@ -2140,12 +2121,12 @@ msgstr ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 
-#: src/qml/Settings/PlaybackSettings.qml:191
+#: src/qml/Settings/PlaybackSettings.qml:189
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Pause on minimise"
 
-#: src/qml/Settings/PlaybackSettings.qml:200
+#: src/qml/Settings/PlaybackSettings.qml:198
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -2154,7 +2135,7 @@ msgstr ""
 "Pauses the player while the window is minimised, playback resumes when "
 "restored."
 
-#: src/qml/Settings/PlaybackSettings.qml:209
+#: src/qml/Settings/PlaybackSettings.qml:207
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Save playback position"
@@ -2162,7 +2143,7 @@ msgctxt "@title"
 msgid "Playback position"
 msgstr "Save playback position"
 
-#: src/qml/Settings/PlaybackSettings.qml:219
+#: src/qml/Settings/PlaybackSettings.qml:217
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Seek to last playback position"
@@ -2170,7 +2151,7 @@ msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Seek to last playback position"
 
-#: src/qml/Settings/PlaybackSettings.qml:228
+#: src/qml/Settings/PlaybackSettings.qml:226
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -2185,17 +2166,17 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/Settings/PlaybackSettings.qml:242
+#: src/qml/Settings/PlaybackSettings.qml:240
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Start playing"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:250
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:275
+#: src/qml/Settings/PlaybackSettings.qml:273
 #, fuzzy
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -2203,7 +2184,7 @@ msgctxt "@info"
 msgid "For any duration"
 msgstr "Saturation"
 
-#: src/qml/Settings/PlaybackSettings.qml:278
+#: src/qml/Settings/PlaybackSettings.qml:276
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "For files longer than %1 minute"
@@ -2214,12 +2195,12 @@ msgid_plural "If duration is longer than %1 minutes"
 msgstr[0] "For files longer than %1 minute"
 msgstr[1] "For files longer than %1 minutes"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
+#: src/qml/Settings/PlaybackSettings.qml:285
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:309
+#: src/qml/Settings/PlaybackSettings.qml:307
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Save position every %1 second"
@@ -2230,7 +2211,7 @@ msgid_plural "Save position every %1 seconds"
 msgstr[0] "Save position every %1 second"
 msgstr[1] "Save position every %1 seconds"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:320
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Skip Chapters"
@@ -2238,7 +2219,7 @@ msgctxt "@title"
 msgid "Chapters"
 msgstr "Skip Chapters"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:329
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Skip chapters"
@@ -2246,7 +2227,7 @@ msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Skip chapters"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:337
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -2255,7 +2236,7 @@ msgstr ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:345
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Show osd message on skip"
@@ -2263,7 +2244,7 @@ msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Show OSD message on skip"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:354
 #, fuzzy
 #| msgctxt "@info:tooltip show osd message on skip setting"
 #| msgid ""
@@ -2277,17 +2258,17 @@ msgstr ""
 "When skipping chapters an osd message will show the title of the skipped "
 "chapter."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:375
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2298,16 +2279,21 @@ msgstr ""
 "exact, meaning <strong>op</strong> will match words containing it like "
 "<strong><u>op</u>ening</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:399
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:405
 msgid "Format selection"
 msgstr "Format selection"
 
-#: src/qml/Settings/PlaybackSettings.qml:433
+#: src/qml/Settings/PlaybackSettings.qml:430
+msgctxt "@item:listbox the custom youtube-dl format selection"
+msgid "Custom"
+msgstr ""
+
+#: src/qml/Settings/PlaybackSettings.qml:436
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -2315,12 +2301,7 @@ msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "Default cover"
 
-#: src/qml/Settings/PlaybackSettings.qml:439
-msgctxt "@item:listbox the custom youtube-dl format selection"
-msgid "Custom"
-msgstr ""
-
-#: src/qml/Settings/PlaybackSettings.qml:454
+#: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Selects a video source that is closest to the selected format."
@@ -2422,12 +2403,12 @@ msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Increase font size when fullscreen"
 
-#: src/qml/Settings/PlaylistSettings.qml:198
+#: src/qml/Settings/PlaylistSettings.qml:197
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Remember last playlist state"
 
-#: src/qml/Settings/PlaylistSettings.qml:205
+#: src/qml/Settings/PlaylistSettings.qml:204
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2435,7 +2416,7 @@ msgid ""
 msgstr ""
 "When ticked the playlist state (visible/hidden) is remembered across launches"
 
-#: src/qml/Settings/PlaylistSettings.qml:213
+#: src/qml/Settings/PlaylistSettings.qml:212
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Open items with single click"
@@ -2503,18 +2484,18 @@ msgctxt "@label:check"
 msgid "Auto select track"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:45
+#: src/qml/Settings/SubtitlesSettings.qml:44
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:102
+#: src/qml/Settings/SubtitlesSettings.qml:95
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Allow subtitles in black borders"
 
-#: src/qml/Settings/SubtitlesSettings.qml:111
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -2523,70 +2504,70 @@ msgstr ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 
-#: src/qml/Settings/SubtitlesSettings.qml:116
+#: src/qml/Settings/SubtitlesSettings.qml:107
 msgctxt "@title"
 msgid "Styling"
 msgstr "Styling"
 
-#: src/qml/Settings/SubtitlesSettings.qml:122
+#: src/qml/Settings/SubtitlesSettings.qml:113
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Font family"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:144
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Font size"
 
-#: src/qml/Settings/SubtitlesSettings.qml:170
+#: src/qml/Settings/SubtitlesSettings.qml:159
 msgctxt "@label"
 msgid "Font style"
 msgstr "Font style"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:164
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Bold"
 
-#: src/qml/Settings/SubtitlesSettings.qml:187
+#: src/qml/Settings/SubtitlesSettings.qml:175
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Italic"
 
-#: src/qml/Settings/SubtitlesSettings.qml:197
+#: src/qml/Settings/SubtitlesSettings.qml:184
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Font colour"
 
-#: src/qml/Settings/SubtitlesSettings.qml:248
-#: src/qml/Settings/SubtitlesSettings.qml:304
-#: src/qml/Settings/SubtitlesSettings.qml:381
+#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:289
+#: src/qml/Settings/SubtitlesSettings.qml:364
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Set default value"
 
-#: src/qml/Settings/SubtitlesSettings.qml:254
+#: src/qml/Settings/SubtitlesSettings.qml:240
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Shadow colour"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
+#: src/qml/Settings/SubtitlesSettings.qml:295
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Shadow offset"
 
-#: src/qml/Settings/SubtitlesSettings.qml:326
-#: src/qml/Settings/SubtitlesSettings.qml:403
+#: src/qml/Settings/SubtitlesSettings.qml:310
+#: src/qml/Settings/SubtitlesSettings.qml:385
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Set to 0 (zero) to disable."
 
-#: src/qml/Settings/SubtitlesSettings.qml:331
+#: src/qml/Settings/SubtitlesSettings.qml:315
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Border colour"
 
-#: src/qml/Settings/SubtitlesSettings.qml:387
+#: src/qml/Settings/SubtitlesSettings.qml:370
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Border width"
@@ -2625,12 +2606,12 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Format"
 
-#: src/qml/Settings/VideoSettings.qml:130
+#: src/qml/Settings/VideoSettings.qml:129
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Template"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:158
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2730,32 +2711,32 @@ msgstr ""
 "li><li><strong>%wT</strong> milliseconds (000-999)</li><li><strong>%%</"
 "strong> Replaced with the % character itself.</li></ul><br>"
 
-#: src/qml/Settings/VideoSettings.qml:195
+#: src/qml/Settings/VideoSettings.qml:193
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Image adjustments"
 
-#: src/qml/Settings/VideoSettings.qml:205
+#: src/qml/Settings/VideoSettings.qml:203
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Contrast"
 
-#: src/qml/Settings/VideoSettings.qml:224
+#: src/qml/Settings/VideoSettings.qml:222
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Brightness"
 
-#: src/qml/Settings/VideoSettings.qml:243
+#: src/qml/Settings/VideoSettings.qml:241
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
-#: src/qml/Settings/VideoSettings.qml:262
+#: src/qml/Settings/VideoSettings.qml:260
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Saturation"
 
-#: src/qml/Settings/VideoSettings.qml:278
+#: src/qml/Settings/VideoSettings.qml:276
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Middle click on the sliders to reset them"
@@ -2768,6 +2749,23 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#~ msgctxt "@label:textbox"
+#~ msgid "File dialog location"
+#~ msgstr "File dialog location"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "The default location of the open file dialog. If empty the file dialog "
+#~| "will try to open to the last opened location."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The default location of the open file dialog. If empty, the file dialog "
+#~ "will try to open to the last opened location."
+#~ msgstr ""
+#~ "The default location of the open file dialog. If empty the file dialog "
+#~ "will try to open to the last opened location."
 
 #, fuzzy
 #~| msgctxt "@info:tooltip"

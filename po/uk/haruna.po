@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:42+0000\n"
+"POT-Creation-Date: 2025-08-14 00:41+0000\n"
 "PO-Revision-Date: 2025-08-12 09:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -763,7 +763,12 @@ msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Відтворити наступний файл"
 
-#: src/qml/Footer.qml:243
+#: src/qml/Footer.qml:193
+msgctxt "@info:tooltip"
+msgid "Open chapters menu"
+msgstr "Відкрити меню розділів"
+
+#: src/qml/Footer.qml:257
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Залишилось: %1"
@@ -778,31 +783,31 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "Вибір кольору"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:62
+#: src/qml/Haruna/Components/HamburgerMenu.qml:61
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "Нещодавні файли"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:92
+#: src/qml/Haruna/Components/HamburgerMenu.qml:91
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Основні субтитри"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:98
+#: src/qml/Haruna/Components/HamburgerMenu.qml:97
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Вторинні субтитри"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:107
+#: src/qml/Haruna/Components/HamburgerMenu.qml:106
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "Звукова доріжка"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:130
+#: src/qml/Haruna/Components/HamburgerMenu.qml:129
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Більше"
@@ -892,17 +897,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Звук"
 
-#: src/qml/HProgressBar.qml:42
-msgctxt "@info:tooltip"
-msgid "Open chapters menu"
-msgstr "Відкрити меню розділів"
-
-#: src/qml/HProgressBar.qml:291
+#: src/qml/HProgressBar.qml:276
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Пропустити розділи"
 
-#: src/qml/HProgressBar.qml:299
+#: src/qml/HProgressBar.qml:284
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -911,22 +911,22 @@ msgstr ""
 "Автоматично пропускає глави, що містять певні слова або символи.\n"
 "Ознайомтеся з параметрами відтворення, щоб дізнатися більше"
 
-#: src/qml/Main.qml:30
+#: src/qml/Main.qml:29
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:308
+#: src/qml/Main.qml:405
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Виберіть файл"
 
-#: src/qml/Main.qml:327
+#: src/qml/Main.qml:422
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Виберіть файл субтитрів"
 
-#: src/qml/Main.qml:351
+#: src/qml/Main.qml:446
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Відкрити"
@@ -1091,7 +1091,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Швидкість програвання"
 
-#: src/qml/MpvVideo.qml:34
+#: src/qml/MpvVideo.qml:35
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Гучність: %1"
@@ -1201,24 +1201,24 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Пересунути файл до смітника"
 
-#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:391 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Виберіть файл"
 
 #: src/qml/Settings/AudioSettings.qml:24
-#: src/qml/Settings/SubtitlesSettings.qml:50
+#: src/qml/Settings/SubtitlesSettings.qml:49
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Бажана мова"
 
-#: src/qml/Settings/AudioSettings.qml:51
-#: src/qml/Settings/SubtitlesSettings.qml:78
+#: src/qml/Settings/AudioSettings.qml:50
+#: src/qml/Settings/SubtitlesSettings.qml:76
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Бажана доріжка"
 
-#: src/qml/Settings/AudioSettings.qml:74
+#: src/qml/Settings/AudioSettings.qml:67
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Крок гучності"
@@ -1392,37 +1392,22 @@ msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "Розмір шрифту екранної панелі"
 
-#: src/qml/Settings/GeneralSettings.qml:51
-msgctxt "@label:textbox"
-msgid "File dialog location"
-msgstr "Місце для вікна роботи з файлами"
-
-#: src/qml/Settings/GeneralSettings.qml:70
-msgctxt "@info:tooltip"
-msgid ""
-"The default location of the open file dialog. If empty, the file dialog will "
-"try to open to the last opened location."
-msgstr ""
-"Типове розташування діалогового вікна відкриття файлів. Якщо порожнє, "
-"програма спробує відкрити діалогове вікно відкриття файлів в останній "
-"використаній позиції."
-
-#: src/qml/Settings/GeneralSettings.qml:81
+#: src/qml/Settings/GeneralSettings.qml:43
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Максимальна кількість нещодавніх файлів"
 
-#: src/qml/Settings/GeneralSettings.qml:100
+#: src/qml/Settings/GeneralSettings.qml:61
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Спорожнити"
 
-#: src/qml/Settings/GeneralSettings.qml:104
+#: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
 msgstr "Вилучає записи нещодавніх файлів з бази даних"
 
-#: src/qml/Settings/GeneralSettings.qml:109
+#: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -1436,12 +1421,12 @@ msgstr ""
 "допомогою дій з відкриття файла або адреси і з зовнішніх програм (командний "
 "рядок, програма для керування файлами, перетягування зі скиданням тощо)."
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Дозволяти лише один екземпляр"
 
-#: src/qml/Settings/GeneralSettings.qml:131
+#: src/qml/Settings/GeneralSettings.qml:92
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
@@ -1451,57 +1436,57 @@ msgstr ""
 "<br>Спроба відкриття ще одного файла за допомогою Haruna призведе до "
 "відкриття файла у вже запущеному екземплярі."
 
-#: src/qml/Settings/GeneralSettings.qml:142
+#: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Додати файл до списку відтворення"
 
-#: src/qml/Settings/GeneralSettings.qml:152
+#: src/qml/Settings/GeneralSettings.qml:113
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "Файл буде додано наприкінці списку відтворення."
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "Відтворювати новий файл"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:133
 msgctxt "@title"
 msgid "Interface"
 msgstr "Інтерфейс"
 
-#: src/qml/Settings/GeneralSettings.qml:178
+#: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Стиль нижнього колонтитула"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:151
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "Типовий"
 
-#: src/qml/Settings/GeneralSettings.qml:196
+#: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr "Рухомий"
 
-#: src/qml/Settings/GeneralSettings.qml:210
+#: src/qml/Settings/GeneralSettings.qml:171
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Показувати рухомий нижній колонтитул при"
 
-#: src/qml/Settings/GeneralSettings.qml:225
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr "Будь-якому руху мишею"
 
-#: src/qml/Settings/GeneralSettings.qml:231
+#: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr "Руху мишею внизу"
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1512,54 +1497,54 @@ msgstr ""
 "який рух мишею</strong> — будь-який рух миші в області відео<br><strong>Рух "
 "мишею внизу</strong> — рух мишею у нижній частині області відео"
 
-#: src/qml/Settings/GeneralSettings.qml:254
+#: src/qml/Settings/GeneralSettings.qml:215
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Попередній перегляд мініатюр"
 
-#: src/qml/Settings/GeneralSettings.qml:259
+#: src/qml/Settings/GeneralSettings.qml:220
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Показувати попередній перегляд мініатюр"
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:227
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 "Показує попередній перегляд у відповідь на наведення вказівника на певну "
 "позицію на смужці позиціювання або поступу відтворення."
 
-#: src/qml/Settings/GeneralSettings.qml:275
+#: src/qml/Settings/GeneralSettings.qml:236
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Точний попередній перегляд"
 
-#: src/qml/Settings/GeneralSettings.qml:285
+#: src/qml/Settings/GeneralSettings.qml:246
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Створення зображень точного попереднього перегляду є повільним"
 
-#: src/qml/Settings/GeneralSettings.qml:293
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Ширина мініатюри"
 
-#: src/qml/Settings/GeneralSettings.qml:311
+#: src/qml/Settings/GeneralSettings.qml:272
 msgctxt "@label"
 msgid "Window"
 msgstr "Вікно"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:278
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Змінити розмір відповідно до відео"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:289
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Немає підтримки у Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
@@ -1568,12 +1553,12 @@ msgstr ""
 "%1 Розмір вікна буде змінено відповідно до роздільної здатності відео."
 "<br>Максимальний розмір не обмежено, його встановлює операційна система."
 
-#: src/qml/Settings/GeneralSettings.qml:340
+#: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Запускати в повноекранному режимі"
 
-#: src/qml/Settings/GeneralSettings.qml:349
+#: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
@@ -1583,19 +1568,19 @@ msgstr ""
 "пріоритет за «Змінити розмір відповідно до відео» і «Запам'ятати останній "
 "розмір вікна і його позицію»."
 
-#: src/qml/Settings/GeneralSettings.qml:360
+#: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Запам'ятати останній розмір вікна і його позицію"
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>У Wayland підтримки відновлення позиції не передбачено.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/qml/Settings/GeneralSettings.qml:335
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1605,43 +1590,43 @@ msgstr ""
 "відкритих вікон.<br><br>%1Параметр «Змінити розмір відповідно до відео» має "
 "вищий пріоритет."
 
-#: src/qml/Settings/GeneralSettings.qml:387
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Показати смужку меню"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:358
 #: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Показати панель інструментів"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:369
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Показати позначки розділів"
 
-#: src/qml/Settings/GeneralSettings.qml:418
+#: src/qml/Settings/GeneralSettings.qml:378
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Схема кольорів"
 
-#: src/qml/Settings/GeneralSettings.qml:462
+#: src/qml/Settings/GeneralSettings.qml:423
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Стиль графічного інтерфейсу"
 
-#: src/qml/Settings/GeneralSettings.qml:495
+#: src/qml/Settings/GeneralSettings.qml:456
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Типовий"
 
-#: src/qml/Settings/GeneralSettings.qml:519
+#: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "Використовувати тему піктограм Breeze"
 
-#: src/qml/Settings/GeneralSettings.qml:527
+#: src/qml/Settings/GeneralSettings.qml:488
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
 msgstr ""
@@ -1820,7 +1805,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "Апаратне декодування"
 
-#: src/qml/Settings/PlaybackSettings.qml:149
+#: src/qml/Settings/PlaybackSettings.qml:147
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1859,12 +1844,12 @@ msgstr ""
 "встановити інший апаратний декодер створенням нетипової команди запуску: "
 "<strong>set hwdec <i>назва_декодера</i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:173
+#: src/qml/Settings/PlaybackSettings.qml:171
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "Відкривати попередній відтворюваний файл під час запуску"
 
-#: src/qml/Settings/PlaybackSettings.qml:182
+#: src/qml/Settings/PlaybackSettings.qml:180
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
@@ -1873,12 +1858,12 @@ msgstr ""
 "Під час запуску відкриває файл, який відтворювався, коли вікно програми було "
 "закрито."
 
-#: src/qml/Settings/PlaybackSettings.qml:191
+#: src/qml/Settings/PlaybackSettings.qml:189
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Призупиняти при мінімізації"
 
-#: src/qml/Settings/PlaybackSettings.qml:200
+#: src/qml/Settings/PlaybackSettings.qml:198
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -1887,17 +1872,17 @@ msgstr ""
 "Призупиняє відтворення, якщо вікно мінімізовано. Відтворення відновиться, "
 "щойно вікно буде знову розгорнуто."
 
-#: src/qml/Settings/PlaybackSettings.qml:209
+#: src/qml/Settings/PlaybackSettings.qml:207
 msgctxt "@title"
 msgid "Playback position"
 msgstr "Позиція відтворення"
 
-#: src/qml/Settings/PlaybackSettings.qml:219
+#: src/qml/Settings/PlaybackSettings.qml:217
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Відновлювати позицію відтворення"
 
-#: src/qml/Settings/PlaybackSettings.qml:228
+#: src/qml/Settings/PlaybackSettings.qml:226
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1926,22 +1911,22 @@ msgstr[3] ""
 "призведе до позиціювання у збереженій позиції.\n"
 "Місце зберігатиметься кожну секунду, окрім останніх 10 секунд відео."
 
-#: src/qml/Settings/PlaybackSettings.qml:242
+#: src/qml/Settings/PlaybackSettings.qml:240
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Почати відтворення"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:250
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "Файл буде відтворено після відновлення позиції відтворення"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
+#: src/qml/Settings/PlaybackSettings.qml:273
 msgctxt "@info"
 msgid "For any duration"
 msgstr "Для будь-якої тривалості"
 
-#: src/qml/Settings/PlaybackSettings.qml:278
+#: src/qml/Settings/PlaybackSettings.qml:276
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
@@ -1950,12 +1935,12 @@ msgstr[1] "Якщо тривалість перевищує %1 хвилини"
 msgstr[2] "Якщо тривалість перевищує %1 хвилин"
 msgstr[3] "Якщо тривалість перевищує %1 хвилину"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
+#: src/qml/Settings/PlaybackSettings.qml:285
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "Місце для віддалених файлів для відновлення, незалежно від тривалості."
 
-#: src/qml/Settings/PlaybackSettings.qml:309
+#: src/qml/Settings/PlaybackSettings.qml:307
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1964,29 +1949,29 @@ msgstr[1] "Зберігати позицію кожні %1 секунди"
 msgstr[2] "Зберігати позицію кожну %1 секунд"
 msgstr[3] "Зберігати позицію кожну %1 секунду"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:320
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Розділи"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:329
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Пропустити розділи"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:337
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr "Автоматично пропускає глави, що містять певні слова або символи."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:345
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Показати екранне повідомлення при пропусканні"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1995,17 +1980,17 @@ msgstr ""
 "При пропусканні глав контекстне повідомлення показуватиме заголовок "
 "пропущеної глави."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "Ключові слова"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:375
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2017,26 +2002,26 @@ msgstr ""
 "усім словам, що містять цю комбінацію літер, зокрема слову <strong><u>від</"
 "u>криття</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:399
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:405
 msgid "Format selection"
 msgstr "Вибір формату"
 
-#: src/qml/Settings/PlaybackSettings.qml:433
-msgctxt "@item:listbox the default youtube-dl format selection"
-msgid "Default"
-msgstr "Типовий"
-
-#: src/qml/Settings/PlaybackSettings.qml:439
+#: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "Нетиповий"
 
-#: src/qml/Settings/PlaybackSettings.qml:454
+#: src/qml/Settings/PlaybackSettings.qml:436
+msgctxt "@item:listbox the default youtube-dl format selection"
+msgid "Default"
+msgstr "Типовий"
+
+#: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Вибирає джерело відео, яке є найближчим до вибраного формату."
@@ -2130,12 +2115,12 @@ msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Збільшити розмір шрифту у повноекранному режимі"
 
-#: src/qml/Settings/PlaylistSettings.qml:198
+#: src/qml/Settings/PlaylistSettings.qml:197
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Запам'ятовувати останній стан списку відтворення"
 
-#: src/qml/Settings/PlaylistSettings.qml:205
+#: src/qml/Settings/PlaylistSettings.qml:204
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2144,7 +2129,7 @@ msgstr ""
 "Якщо позначено, стан списку відтворення (видимий/прихований) буде "
 "зберігатися між запусками програми"
 
-#: src/qml/Settings/PlaylistSettings.qml:213
+#: src/qml/Settings/PlaylistSettings.qml:212
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Відкривати записи одинарним клацанням"
@@ -2209,18 +2194,18 @@ msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "Вибирати доріжку автоматично"
 
-#: src/qml/Settings/SubtitlesSettings.qml:45
+#: src/qml/Settings/SubtitlesSettings.qml:44
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr "Якщо позначено, доріжку субтитрів буде вибрано і показано автоматично"
 
-#: src/qml/Settings/SubtitlesSettings.qml:102
+#: src/qml/Settings/SubtitlesSettings.qml:95
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Дозволити субтитри у чорних рамках"
 
-#: src/qml/Settings/SubtitlesSettings.qml:111
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -2229,70 +2214,70 @@ msgstr ""
 "Якщо позначено, субтитри може бути показано поза відео у чорних рамках. Може "
 "працювати не для усіх субтитрів .ass."
 
-#: src/qml/Settings/SubtitlesSettings.qml:116
+#: src/qml/Settings/SubtitlesSettings.qml:107
 msgctxt "@title"
 msgid "Styling"
 msgstr "Стилізація"
 
-#: src/qml/Settings/SubtitlesSettings.qml:122
+#: src/qml/Settings/SubtitlesSettings.qml:113
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Гарнітура шрифту"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:144
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Розмір шрифту"
 
-#: src/qml/Settings/SubtitlesSettings.qml:170
+#: src/qml/Settings/SubtitlesSettings.qml:159
 msgctxt "@label"
 msgid "Font style"
 msgstr "Стиль шрифту"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:164
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Напівжирний"
 
-#: src/qml/Settings/SubtitlesSettings.qml:187
+#: src/qml/Settings/SubtitlesSettings.qml:175
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Курсив"
 
-#: src/qml/Settings/SubtitlesSettings.qml:197
+#: src/qml/Settings/SubtitlesSettings.qml:184
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Колір шрифту"
 
-#: src/qml/Settings/SubtitlesSettings.qml:248
-#: src/qml/Settings/SubtitlesSettings.qml:304
-#: src/qml/Settings/SubtitlesSettings.qml:381
+#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:289
+#: src/qml/Settings/SubtitlesSettings.qml:364
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "Встановити типове значення"
 
-#: src/qml/Settings/SubtitlesSettings.qml:254
+#: src/qml/Settings/SubtitlesSettings.qml:240
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Колір тіні"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
+#: src/qml/Settings/SubtitlesSettings.qml:295
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Зсув тіні"
 
-#: src/qml/Settings/SubtitlesSettings.qml:326
-#: src/qml/Settings/SubtitlesSettings.qml:403
+#: src/qml/Settings/SubtitlesSettings.qml:310
+#: src/qml/Settings/SubtitlesSettings.qml:385
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Встановіть 0 (нуль), щоб вимкнути."
 
-#: src/qml/Settings/SubtitlesSettings.qml:331
+#: src/qml/Settings/SubtitlesSettings.qml:315
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Колір рамки"
 
-#: src/qml/Settings/SubtitlesSettings.qml:387
+#: src/qml/Settings/SubtitlesSettings.qml:370
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Ширина рамки"
@@ -2327,12 +2312,12 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Формат"
 
-#: src/qml/Settings/VideoSettings.qml:130
+#: src/qml/Settings/VideoSettings.qml:129
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Шаблон"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:158
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -2399,32 +2384,32 @@ msgstr ""
 "дійсного числа</li><li><strong>%wT</strong> — мілісекунди (000-999)</"
 "li><li><strong>%%</strong> — буде замінено самим символом %.</li></ul><br>"
 
-#: src/qml/Settings/VideoSettings.qml:195
+#: src/qml/Settings/VideoSettings.qml:193
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Коригування зображення"
 
-#: src/qml/Settings/VideoSettings.qml:205
+#: src/qml/Settings/VideoSettings.qml:203
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Контрастність"
 
-#: src/qml/Settings/VideoSettings.qml:224
+#: src/qml/Settings/VideoSettings.qml:222
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Яскравість"
 
-#: src/qml/Settings/VideoSettings.qml:243
+#: src/qml/Settings/VideoSettings.qml:241
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Гамма"
 
-#: src/qml/Settings/VideoSettings.qml:262
+#: src/qml/Settings/VideoSettings.qml:260
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Насиченість"
 
-#: src/qml/Settings/VideoSettings.qml:278
+#: src/qml/Settings/VideoSettings.qml:276
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
@@ -2441,6 +2426,19 @@ msgstr ""
 "Не вдалося отримати список відтворення з таким ідентифікатором: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "File dialog location"
+#~ msgstr "Місце для вікна роботи з файлами"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The default location of the open file dialog. If empty, the file dialog "
+#~ "will try to open to the last opened location."
+#~ msgstr ""
+#~ "Типове розташування діалогового вікна відкриття файлів. Якщо порожнє, "
+#~ "програма спробує відкрити діалогове вікно відкриття файлів в останній "
+#~ "використаній позиції."
 
 #~ msgctxt "@title:window select mouse button action"
 #~ msgid "Select action"

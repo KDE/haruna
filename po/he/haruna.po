@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:42+0000\n"
+"POT-Creation-Date: 2025-08-14 00:41+0000\n"
 "PO-Revision-Date: 2025-08-11 09:18+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -756,7 +756,12 @@ msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "ניגון הקובץ הבא"
 
-#: src/qml/Footer.qml:243
+#: src/qml/Footer.qml:193
+msgctxt "@info:tooltip"
+msgid "Open chapters menu"
+msgstr "פתיחת תפריט פרקים"
+
+#: src/qml/Footer.qml:257
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "נותרו: %1"
@@ -771,31 +776,31 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "בחירת צבע"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:62
+#: src/qml/Haruna/Components/HamburgerMenu.qml:61
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "קבצים אחרונים"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:92
+#: src/qml/Haruna/Components/HamburgerMenu.qml:91
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "כתובית עיקרית"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:98
+#: src/qml/Haruna/Components/HamburgerMenu.qml:97
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "כתובית משנית"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:107
+#: src/qml/Haruna/Components/HamburgerMenu.qml:106
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "רצועת שמע"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:130
+#: src/qml/Haruna/Components/HamburgerMenu.qml:129
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&עוד"
@@ -884,17 +889,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "שמע"
 
-#: src/qml/HProgressBar.qml:42
-msgctxt "@info:tooltip"
-msgid "Open chapters menu"
-msgstr "פתיחת תפריט פרקים"
-
-#: src/qml/HProgressBar.qml:291
+#: src/qml/HProgressBar.qml:276
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "דילוג על פרקים"
 
-#: src/qml/HProgressBar.qml:299
+#: src/qml/HProgressBar.qml:284
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -903,22 +903,22 @@ msgstr ""
 "דילוג אוטומטי על פרקים שמכילים מילים/תווים מסוימים.\n"
 "אפשר לגשת אל הגדרות „נגינה” לפרטים נוספים"
 
-#: src/qml/Main.qml:30
+#: src/qml/Main.qml:29
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:308
+#: src/qml/Main.qml:405
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "בחירת קובץ"
 
-#: src/qml/Main.qml:327
+#: src/qml/Main.qml:422
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "בחירת קובץ כתוביות"
 
-#: src/qml/Main.qml:351
+#: src/qml/Main.qml:446
 msgctxt "@action:button"
 msgid "Open"
 msgstr "פתיחה"
@@ -1083,7 +1083,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "מהירות נגינה"
 
-#: src/qml/MpvVideo.qml:34
+#: src/qml/MpvVideo.qml:35
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "עוצמת שמע: %1"
@@ -1193,24 +1193,24 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "העברת קובץ לאשפה"
 
-#: src/qml/PlayList.qml:394 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:391 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "בחירת קובץ"
 
 #: src/qml/Settings/AudioSettings.qml:24
-#: src/qml/Settings/SubtitlesSettings.qml:50
+#: src/qml/Settings/SubtitlesSettings.qml:49
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "שפה מועדפת"
 
-#: src/qml/Settings/AudioSettings.qml:51
-#: src/qml/Settings/SubtitlesSettings.qml:78
+#: src/qml/Settings/AudioSettings.qml:50
+#: src/qml/Settings/SubtitlesSettings.qml:76
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "רצועה מועדפת"
 
-#: src/qml/Settings/AudioSettings.qml:74
+#: src/qml/Settings/AudioSettings.qml:67
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "פסיעת עוצמת שמע"
@@ -1380,36 +1380,22 @@ msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "גודל כתב בשכבת על המסך"
 
-#: src/qml/Settings/GeneralSettings.qml:51
-msgctxt "@label:textbox"
-msgid "File dialog location"
-msgstr "מקום חלונית קובץ"
-
-#: src/qml/Settings/GeneralSettings.qml:70
-msgctxt "@info:tooltip"
-msgid ""
-"The default location of the open file dialog. If empty, the file dialog will "
-"try to open to the last opened location."
-msgstr ""
-"מקום ברירת המחדל של חלונית פתיחת הקבצים. אם נשאר ריק, חלונית הקבצים תזכור את "
-"המקום האחרון בו נפתחה."
-
-#: src/qml/Settings/GeneralSettings.qml:81
+#: src/qml/Settings/GeneralSettings.qml:43
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "כמות קבצים אחרונים מרבית"
 
-#: src/qml/Settings/GeneralSettings.qml:100
+#: src/qml/Settings/GeneralSettings.qml:61
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "פינוי"
 
-#: src/qml/Settings/GeneralSettings.qml:104
+#: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
 msgstr "מחיקת קבצים אחרונים ממסד הנתונים"
 
-#: src/qml/Settings/GeneralSettings.qml:109
+#: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -1421,12 +1407,12 @@ msgstr ""
 "מאוחסן.<br>רשומות מודגשות הן קבצים שנפתחו מפעולות פתיחת קובץ/כתובת ומיישומים "
 "חיצוניים (שורת פקודות, מנהל קבצים, גרירה וכן הלאה)."
 
-#: src/qml/Settings/GeneralSettings.qml:122
+#: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "לאפשר רק מופע אחד"
 
-#: src/qml/Settings/GeneralSettings.qml:131
+#: src/qml/Settings/GeneralSettings.qml:92
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
@@ -1435,57 +1421,57 @@ msgstr ""
 "ניסיון לפתוח מופע נוסף של Haruna לא יעשה כלום.<br>ניסיון לפתוח קובץ אחר עם "
 "Haruna יפתח את הקובץ במופע הפעיל."
 
-#: src/qml/Settings/GeneralSettings.qml:142
+#: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "הוספת קובץ לרשימת נגינה"
 
-#: src/qml/Settings/GeneralSettings.qml:152
+#: src/qml/Settings/GeneralSettings.qml:113
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "הקובץ יתווסף לסוף רשימת הנגינה."
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "ניגון קובץ חדש"
 
-#: src/qml/Settings/GeneralSettings.qml:172
+#: src/qml/Settings/GeneralSettings.qml:133
 msgctxt "@title"
 msgid "Interface"
 msgstr "ממשק"
 
-#: src/qml/Settings/GeneralSettings.qml:178
+#: src/qml/Settings/GeneralSettings.qml:139
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "סגנון כותרת תחתונה"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/qml/Settings/GeneralSettings.qml:151
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: src/qml/Settings/GeneralSettings.qml:196
+#: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr "צף"
 
-#: src/qml/Settings/GeneralSettings.qml:210
+#: src/qml/Settings/GeneralSettings.qml:171
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "הצגת כותרת תחתונה צפה ב־"
 
-#: src/qml/Settings/GeneralSettings.qml:225
+#: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr "כל תנועת עכבר"
 
-#: src/qml/Settings/GeneralSettings.qml:231
+#: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr "תנועת עכבר למטה"
 
-#: src/qml/Settings/GeneralSettings.qml:246
+#: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -1496,52 +1482,52 @@ msgstr ""
 "תנועת עכבר על גבי אזור הווידאו<br><strong>תנועת עכבר למטה</strong> — תנועת "
 "עכבר בחלק התחתון של אזור הווידאו"
 
-#: src/qml/Settings/GeneralSettings.qml:254
+#: src/qml/Settings/GeneralSettings.qml:215
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "תמונה ממוזערת להמחשה"
 
-#: src/qml/Settings/GeneralSettings.qml:259
+#: src/qml/Settings/GeneralSettings.qml:220
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "הצגת תמונה ממוזערת להמחשה"
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:227
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "הצגת תצוגה מקדימה תוך ריחוף על סרגל החתירה/ההתקדמות."
 
-#: src/qml/Settings/GeneralSettings.qml:275
+#: src/qml/Settings/GeneralSettings.qml:236
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "להשתמש בהמחשה מדויקת"
 
-#: src/qml/Settings/GeneralSettings.qml:285
+#: src/qml/Settings/GeneralSettings.qml:246
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "יצירת המחשה מדויקת היא איטית"
 
-#: src/qml/Settings/GeneralSettings.qml:293
+#: src/qml/Settings/GeneralSettings.qml:254
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "רוחב תמונה ממוזערת"
 
-#: src/qml/Settings/GeneralSettings.qml:311
+#: src/qml/Settings/GeneralSettings.qml:272
 msgctxt "@label"
 msgid "Window"
 msgstr "חלון"
 
-#: src/qml/Settings/GeneralSettings.qml:317
+#: src/qml/Settings/GeneralSettings.qml:278
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "שינוי גודל להתאמה לסרטןו"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:289
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "לא נתמך ב־Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:330
+#: src/qml/Settings/GeneralSettings.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
@@ -1550,12 +1536,12 @@ msgstr ""
 "גודל החלון ישתנה בהתאם לרזולוציית הווידאו.<br>הגודל המרבי לא נאכף, הוא "
 "לשיקול מערכת ההפעלה."
 
-#: src/qml/Settings/GeneralSettings.qml:340
+#: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "התחלה במסך מלא"
 
-#: src/qml/Settings/GeneralSettings.qml:349
+#: src/qml/Settings/GeneralSettings.qml:309
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
@@ -1564,19 +1550,19 @@ msgstr ""
 "להתחיל במסך מלא עם עליית היישום.<br>ההגדרה הזאת קודמת לשינוי גודל להתאמה "
 "לסרטון ולזכירת גודל ומקום החלון."
 
-#: src/qml/Settings/GeneralSettings.qml:360
+#: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "שמירת גודל ומקום החלון"
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:333
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>שחזור המקום לא נתמך ב־Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/qml/Settings/GeneralSettings.qml:335
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -1585,43 +1571,43 @@ msgstr ""
 "שינויים לגודל ומקום החלון נשמרים ונעשה בהם שימוש בחלונות חדשים שנפתחים."
 "<br><br>%1ההגדרה „שינוי גודל להתאמה לסרטון” קודמת לזאת."
 
-#: src/qml/Settings/GeneralSettings.qml:387
+#: src/qml/Settings/GeneralSettings.qml:347
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "הצגת סרגל תפריטים"
 
-#: src/qml/Settings/GeneralSettings.qml:398
+#: src/qml/Settings/GeneralSettings.qml:358
 #: src/qml/Settings/PlaylistSettings.qml:97
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "הצגת סרגל כלים"
 
-#: src/qml/Settings/GeneralSettings.qml:409
+#: src/qml/Settings/GeneralSettings.qml:369
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "הצגת סמני פרקים"
 
-#: src/qml/Settings/GeneralSettings.qml:418
+#: src/qml/Settings/GeneralSettings.qml:378
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "ערכת צבעים"
 
-#: src/qml/Settings/GeneralSettings.qml:462
+#: src/qml/Settings/GeneralSettings.qml:423
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "סגנון ממשק משתמש"
 
-#: src/qml/Settings/GeneralSettings.qml:495
+#: src/qml/Settings/GeneralSettings.qml:456
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: src/qml/Settings/GeneralSettings.qml:519
+#: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
 msgid "Use Breeze icon theme"
 msgstr "להשתמש בערכת הסמלים בריזה"
 
-#: src/qml/Settings/GeneralSettings.qml:527
+#: src/qml/Settings/GeneralSettings.qml:488
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
 msgstr "הגדרת ערכת הסמלים לבריזה.<br>דורשת הפעלה מחדש."
@@ -1794,7 +1780,7 @@ msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "פענוח חומרה"
 
-#: src/qml/Settings/PlaybackSettings.qml:149
+#: src/qml/Settings/PlaybackSettings.qml:147
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -1830,41 +1816,41 @@ msgstr ""
 "מפענח חומרה אחר על ידי יצירת פקודת טעינה מותאמת אישית עם <strong>set hwdec "
 "<i>decoder_name</i></strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:173
+#: src/qml/Settings/PlaybackSettings.qml:171
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "פתיחת הקובץ האחרון שהתנגנן בעלייה"
 
-#: src/qml/Settings/PlaybackSettings.qml:182
+#: src/qml/Settings/PlaybackSettings.qml:180
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr "עם העלייה לפתוח את הקובץ שהתנגן בזמן שהיישום נסגר."
 
-#: src/qml/Settings/PlaybackSettings.qml:191
+#: src/qml/Settings/PlaybackSettings.qml:189
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "השהיה עם המזעור"
 
-#: src/qml/Settings/PlaybackSettings.qml:200
+#: src/qml/Settings/PlaybackSettings.qml:198
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr "משהה את הנגן כשהחלון ממוזער, הנגינה חוזרת עם שחזורו."
 
-#: src/qml/Settings/PlaybackSettings.qml:209
+#: src/qml/Settings/PlaybackSettings.qml:207
 msgctxt "@title"
 msgid "Playback position"
 msgstr "נקודת הנגינה"
 
-#: src/qml/Settings/PlaybackSettings.qml:219
+#: src/qml/Settings/PlaybackSettings.qml:217
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "שחזור נקודת הנגינה האחרון"
 
-#: src/qml/Settings/PlaybackSettings.qml:228
+#: src/qml/Settings/PlaybackSettings.qml:226
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -1889,22 +1875,22 @@ msgstr[3] ""
 "נקודת הנגינה בקובץ נשמרת, פתיחת אותו הקובץ שוב תחתור למקום שנשמר.\n"
 "המקום נשמר כל %1 שניות, למעט עשר השניות האחרונות של הסרטון."
 
-#: src/qml/Settings/PlaybackSettings.qml:242
+#: src/qml/Settings/PlaybackSettings.qml:240
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "התחלת נגינה"
 
-#: src/qml/Settings/PlaybackSettings.qml:252
+#: src/qml/Settings/PlaybackSettings.qml:250
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "הקובץ יתנגן לאחר שחזור נקודת הנגינה"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
+#: src/qml/Settings/PlaybackSettings.qml:273
 msgctxt "@info"
 msgid "For any duration"
 msgstr "לכל משך שהוא"
 
-#: src/qml/Settings/PlaybackSettings.qml:278
+#: src/qml/Settings/PlaybackSettings.qml:276
 msgctxt "@info"
 msgid "If duration is longer than %1 minute"
 msgid_plural "If duration is longer than %1 minutes"
@@ -1913,12 +1899,12 @@ msgstr[1] "אם האורך הוא יותר משתי דקות"
 msgstr[2] "אם האורך הוא יותר מ־%1 דקות"
 msgstr[3] "אם הארוך הוא יותר מ־%1 דקות"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
+#: src/qml/Settings/PlaybackSettings.qml:285
 msgctxt "@info:tooltip restore playback position > duration"
 msgid "Position for remote files is restored regardless of duration."
 msgstr "מקום לקבצים מרוחקים נשמר ללא תלות באורכם."
 
-#: src/qml/Settings/PlaybackSettings.qml:309
+#: src/qml/Settings/PlaybackSettings.qml:307
 msgctxt "@info:tooltip restore playback position > save interval"
 msgid "Save position every %1 second"
 msgid_plural "Save position every %1 seconds"
@@ -1927,17 +1913,17 @@ msgstr[1] "לשמור את המקום כל שתי שניות"
 msgstr[2] "לשמור את המקום כל %1 שניות"
 msgstr[3] "לשמור את המקום כל %1 שניות"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:320
 msgctxt "@title"
 msgid "Chapters"
 msgstr "פרקים"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:329
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "דילוג על פרקים"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:337
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -1945,12 +1931,12 @@ msgid ""
 msgstr ""
 "כשהאפשרות פעילה הנגן ידלג אוטומטית על פרקים שמכילים מילים/תווים מסוימים."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:345
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "הצגת הודעה על גבי המסך עם הדילוג"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:354
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -1958,17 +1944,17 @@ msgid ""
 msgstr ""
 "בעת דילוג על פרקים תופיע הודעה מרחפת על המסך שתציג את כותרת הפרק שדולג."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:360
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "מילות מפתח"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "פרק 1, פרסומת, הצגה"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:375
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -1979,26 +1965,26 @@ msgstr ""
 "מדויקת כלומר ש־<strong>פת</strong> יכול לתפוס גם מילים כמו <strong><u>פת</"
 "u>יחה</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:399
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:405
 msgid "Format selection"
 msgstr "בחירת תסדיר"
 
-#: src/qml/Settings/PlaybackSettings.qml:433
-msgctxt "@item:listbox the default youtube-dl format selection"
-msgid "Default"
-msgstr "ברירת מחדל"
-
-#: src/qml/Settings/PlaybackSettings.qml:439
+#: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "מותאם אישית"
 
-#: src/qml/Settings/PlaybackSettings.qml:454
+#: src/qml/Settings/PlaybackSettings.qml:436
+msgctxt "@item:listbox the default youtube-dl format selection"
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "בוחר את מקור הווידאו שהכי קרוב לתצורה הנבחרת."
@@ -2092,19 +2078,19 @@ msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "הגדלת הכתב במסך מלא"
 
-#: src/qml/Settings/PlaylistSettings.qml:198
+#: src/qml/Settings/PlaylistSettings.qml:197
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "לזכור את המצב האחרון של רשימת הנגינה"
 
-#: src/qml/Settings/PlaylistSettings.qml:205
+#: src/qml/Settings/PlaylistSettings.qml:204
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr "כשהאפשרות מסומנת מצב רשימת הנגינה (גלויה/מוסתרת) נשמר בין הפעלות"
 
-#: src/qml/Settings/PlaylistSettings.qml:213
+#: src/qml/Settings/PlaylistSettings.qml:212
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "פתיחת פריטים בלחיצה בודדת"
@@ -2169,18 +2155,18 @@ msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "בחירת רצועה אוטומטית"
 
-#: src/qml/Settings/SubtitlesSettings.qml:45
+#: src/qml/Settings/SubtitlesSettings.qml:44
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr "כשהאפשרות מסומנת רצועת כתוביות תיבחר ותוצג אוטומטית"
 
-#: src/qml/Settings/SubtitlesSettings.qml:102
+#: src/qml/Settings/SubtitlesSettings.qml:95
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "לאפשר כתוביות על המסגרות השחורות"
 
-#: src/qml/Settings/SubtitlesSettings.qml:111
+#: src/qml/Settings/SubtitlesSettings.qml:102
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -2189,70 +2175,70 @@ msgstr ""
 "כשהאפשרות מסומנת אפשר לעבר כתוביות מחוץ לסרטון, על השוליים השחורים. אולי זה "
 "לא יעבוד על כל כתוביות מסוג ‎.ass."
 
-#: src/qml/Settings/SubtitlesSettings.qml:116
+#: src/qml/Settings/SubtitlesSettings.qml:107
 msgctxt "@title"
 msgid "Styling"
 msgstr "סגנון"
 
-#: src/qml/Settings/SubtitlesSettings.qml:122
+#: src/qml/Settings/SubtitlesSettings.qml:113
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "משפחת גופנים"
 
-#: src/qml/Settings/SubtitlesSettings.qml:154
+#: src/qml/Settings/SubtitlesSettings.qml:144
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "גודל כתב"
 
-#: src/qml/Settings/SubtitlesSettings.qml:170
+#: src/qml/Settings/SubtitlesSettings.qml:159
 msgctxt "@label"
 msgid "Font style"
 msgstr "סגנון כתב"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:164
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "מודגש"
 
-#: src/qml/Settings/SubtitlesSettings.qml:187
+#: src/qml/Settings/SubtitlesSettings.qml:175
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "נטוי"
 
-#: src/qml/Settings/SubtitlesSettings.qml:197
+#: src/qml/Settings/SubtitlesSettings.qml:184
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "צבע כתב"
 
-#: src/qml/Settings/SubtitlesSettings.qml:248
-#: src/qml/Settings/SubtitlesSettings.qml:304
-#: src/qml/Settings/SubtitlesSettings.qml:381
+#: src/qml/Settings/SubtitlesSettings.qml:234
+#: src/qml/Settings/SubtitlesSettings.qml:289
+#: src/qml/Settings/SubtitlesSettings.qml:364
 msgctxt "@info:tooltip"
 msgid "Set default value"
 msgstr "הגדרת ערך ברירת מחדל"
 
-#: src/qml/Settings/SubtitlesSettings.qml:254
+#: src/qml/Settings/SubtitlesSettings.qml:240
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "צבע צל"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
+#: src/qml/Settings/SubtitlesSettings.qml:295
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "היסט צל"
 
-#: src/qml/Settings/SubtitlesSettings.qml:326
-#: src/qml/Settings/SubtitlesSettings.qml:403
+#: src/qml/Settings/SubtitlesSettings.qml:310
+#: src/qml/Settings/SubtitlesSettings.qml:385
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "0 (אפס) להשבתה."
 
-#: src/qml/Settings/SubtitlesSettings.qml:331
+#: src/qml/Settings/SubtitlesSettings.qml:315
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "צבע מסגרת"
 
-#: src/qml/Settings/SubtitlesSettings.qml:387
+#: src/qml/Settings/SubtitlesSettings.qml:370
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "עובי מסגרת"
@@ -2286,12 +2272,12 @@ msgctxt "@label:listbox"
 msgid "Format"
 msgstr "תסדיר"
 
-#: src/qml/Settings/VideoSettings.qml:130
+#: src/qml/Settings/VideoSettings.qml:129
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "תבנית"
 
-#: src/qml/Settings/VideoSettings.qml:160
+#: src/qml/Settings/VideoSettings.qml:158
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -2351,32 +2337,32 @@ msgstr ""
 "כשבר עשרוני</li><li><strong>%wT</strong> מילישניות (000-999)</li><li><strong>"
 "%%</strong> מוחלף בתו % בכבודו ובעצמו.</li></ul><br>"
 
-#: src/qml/Settings/VideoSettings.qml:195
+#: src/qml/Settings/VideoSettings.qml:193
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "כוונוני תמונה"
 
-#: src/qml/Settings/VideoSettings.qml:205
+#: src/qml/Settings/VideoSettings.qml:203
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "ניגודיות"
 
-#: src/qml/Settings/VideoSettings.qml:224
+#: src/qml/Settings/VideoSettings.qml:222
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "בהירות"
 
-#: src/qml/Settings/VideoSettings.qml:243
+#: src/qml/Settings/VideoSettings.qml:241
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "גאמה"
 
-#: src/qml/Settings/VideoSettings.qml:262
+#: src/qml/Settings/VideoSettings.qml:260
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "רוויה"
 
-#: src/qml/Settings/VideoSettings.qml:278
+#: src/qml/Settings/VideoSettings.qml:276
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "לחיצה אמצעית על המחוונים תאפס אותם"
@@ -2392,6 +2378,18 @@ msgstr ""
 "לא ניתן למשוך רשימת נגינה עם המזהה: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "File dialog location"
+#~ msgstr "מקום חלונית קובץ"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The default location of the open file dialog. If empty, the file dialog "
+#~ "will try to open to the last opened location."
+#~ msgstr ""
+#~ "מקום ברירת המחדל של חלונית פתיחת הקבצים. אם נשאר ריק, חלונית הקבצים תזכור "
+#~ "את המקום האחרון בו נפתחה."
 
 #~ msgctxt "@title:window select mouse button action"
 #~ msgid "Select action"
