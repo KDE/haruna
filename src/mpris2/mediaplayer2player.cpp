@@ -81,10 +81,15 @@ void MediaPlayer2Player::propertiesChanged(const QString &property, const QVaria
 QVariantMap MediaPlayer2Player::Metadata()
 {
     auto url = m_mpv->currentUrl();
+    QString mimeType = Application::mimeType(url);
 
     m_metadata.insert(u"xesam:title"_s, m_mpv->mediaTitle());
     m_metadata.insert(u"mpris:trackid"_s, QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(u"/org/kde/haruna"_s)));
-    m_metadata.insert(u"mpris:artUrl"_s, getThumbnail(url.toLocalFile()));
+    if (mimeType.startsWith(u"audio"_s)) {
+        m_metadata.insert(u"mpris:artUrl"_s, getThumbnail(url.toLocalFile()));
+    } else {
+        m_metadata.insert(u"mpris:artUrl"_s, QString{});
+    }
     m_metadata.insert(u"xesam:url"_s, url.toString());
 
     return m_metadata;
