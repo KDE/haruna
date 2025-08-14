@@ -43,11 +43,12 @@ ToolButton {
         sourceComponent: Menu {
             id: menu
 
+            parent: root
             y: root.position === HamburgerMenu.Position.Header
                ? root.height + Kirigami.Units.largeSpacing
                : -height - Kirigami.Units.largeSpacing
             visible:  root.isOpen
-            closePolicy: Popup.CloseOnReleaseOutsideParent
+            closePolicy: Popup.CloseOnReleaseOutside
             onClosed: root.isOpen = menu.visible
             modal: true
 
