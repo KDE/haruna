@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -115,7 +117,7 @@ Item {
 
                     m_mpv: root.m_mpv
                     m_recentFilesModel: root.m_recentFilesModel
-                    m_settingsLoader: settingsLoader
+                    m_settingsLoader: root.m_settingsLoader
 
                     position: HamburgerMenu.Position.Footer
                     visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible
