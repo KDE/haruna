@@ -28,7 +28,7 @@ public:
         return &p;
     }
 
-    Q_PROPERTY(QString VO MEMBER Pause CONSTANT)
+    Q_PROPERTY(QString VO MEMBER VO CONSTANT)
     const QString VO{u"vo"_s};
 
     Q_PROPERTY(QString Pause MEMBER Pause CONSTANT)
