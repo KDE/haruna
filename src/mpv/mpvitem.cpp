@@ -386,6 +386,7 @@ void MpvItem::onEndOfFileReadched()
         if (PlaylistSettings::repeat()) {
             if (playlistProxyModel()->rowCount() == 1) {
                 setPropertyBlocking(MpvProperties::self()->Position, 0);
+                return;
             }
         } else {
             seekToStartAndPause();
