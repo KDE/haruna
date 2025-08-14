@@ -29,7 +29,10 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
 {
     connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
         if (m_mpv->currentUrl().isLocalFile()) {
-            Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
+            QString mimeType = Application::mimeType(m_mpv->currentUrl());
+            if (mimeType.startsWith(u"audio"_s)) {
+                Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
+            }
         }
     });
 
