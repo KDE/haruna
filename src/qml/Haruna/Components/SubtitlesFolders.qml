@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
@@ -156,7 +158,7 @@ ColumnLayout {
     Item {
         id: spacer
 
-        height: 5
+        Layout.preferredHeight: 5
     }
 
     Button {
