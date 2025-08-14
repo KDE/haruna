@@ -239,7 +239,7 @@ ApplicationWindow {
         }
 
         Connections {
-            target: actions
+            target: HarunaApp
             function onQmlApplicationMouseLeave() {
                 if (PlaylistSettings.canToggleWithMouse && (window.isFullScreen() || window.isMaximized())) {
                     playlist.state = "hidden"
