@@ -47,7 +47,8 @@ ToolBar {
         HamburgerMenu {
             m_mpv: root.m_mpv
             m_recentFilesModel: root.m_recentFilesModel
-            m_settingsLoader: settingsLoader
+            m_settingsLoader: root.m_settingsLoader
+            m_menuBarLoader: root.m_menuBarLoader
 
             position: HamburgerMenu.Position.Header
             visible: !root.m_menuBarLoader.visible || root.m_menuBarLoader.isShowAnimationRunning

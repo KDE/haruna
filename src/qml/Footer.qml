@@ -118,6 +118,7 @@ Item {
                     m_mpv: root.m_mpv
                     m_recentFilesModel: root.m_recentFilesModel
                     m_settingsLoader: root.m_settingsLoader
+                    m_menuBarLoader: root.m_menuBarLoader
 
                     position: HamburgerMenu.Position.Footer
                     visible: root.m_menuBarLoader.state === "hidden" && !root.m_header.visible

@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 
@@ -16,6 +18,7 @@ ToolButton {
     required property MpvVideo m_mpv
     required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
+    required property MenuBarLoader m_menuBarLoader
 
     property int position: HamburgerMenu.Position.Header
     property bool isOpen: false
@@ -36,7 +39,7 @@ ToolButton {
         id: menuLoader
 
         asynchronous: true
-        active: menuBarLoader.state === "hidden"
+        active: root.m_menuBarLoader.state === "hidden"
         sourceComponent: Menu {
             id: menu
 
@@ -61,7 +64,7 @@ ToolButton {
                 title: i18nc("@action:inmenu", "Recent Files")
 
                 Repeater {
-                    model: recentFilesModel
+                    model: root.m_recentFilesModel
                     delegate: MenuItem {
                         id: delegate
 
@@ -75,7 +78,6 @@ ToolButton {
                               : delegate.filename
 
                         onClicked: {
-                            recentFilesMenu.dismiss()
                             const mainWindow = Window.window as Main
                             mainWindow.openFile(delegate.url, RecentFilesModel.OpenedFrom.Other)
                         }
@@ -104,8 +106,8 @@ ToolButton {
                 m_mpv: root.m_mpv
 
                 title: i18nc("@title:menu", "Audio Track")
-                model: mpv.audioTracksModel
-                enabled: mpv.audioTracksModel.rowCount > 0
+                model: m_mpv.audioTracksModel
+                enabled: m_mpv.audioTracksModel.rowCount > 0
             }
 
             MenuSeparator {}
@@ -141,7 +143,7 @@ ToolButton {
                     m_mpv: root.m_mpv
                 }
                 SettingsMenu {
-                    m_settingsLoader: settingsLoader
+                    m_settingsLoader: root.m_settingsLoader
                 }
                 HelpMenu {}
             }
