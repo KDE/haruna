@@ -27,7 +27,9 @@ RowLayout {
                                       && m_mpv.chaptersModel.rowCount * 20 < width
 
     function openChapterPopup(triggerItem: Item) {
-        chaptersPopup.x = (chaptersPopup.width + triggerItem.width) * -0.5
+        const x = (chaptersPopup.width + triggerItem.width) * -0.5
+        const globalPoint = root.mapToGlobal(x, 0)
+        chaptersPopup.x = globalPoint.x < 0 ? root.mapFromGlobal(0, 0).x : x
         chaptersPopup.open()
     }
 
