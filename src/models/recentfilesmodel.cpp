@@ -82,10 +82,13 @@ void RecentFilesModel::getItems()
 
     clear();
 
-    const auto recentFiles = Database::instance()->recentFiles(GeneralSettings::maxRecentFiles());
-    beginInsertRows(QModelIndex(), 0, recentFiles.count() - 1);
-    m_data = recentFiles;
-    endInsertRows();
+    const auto recentFiles = Database::instance()->recentFiles(maxFiles);
+    const auto numRecentFiles = recentFiles.count();
+    if (numRecentFiles > 0) {
+        beginInsertRows(QModelIndex(), 0, numRecentFiles - 1);
+        m_data = recentFiles;
+        endInsertRows();
+    }
 }
 
 void RecentFilesModel::addRecentFile(const QUrl &url, OpenedFrom openedFrom, const QString &name)
