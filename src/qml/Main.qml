@@ -239,6 +239,15 @@ ApplicationWindow {
         }
 
         Connections {
+            target: actions
+            function onQmlApplicationMouseLeave() {
+                if (PlaylistSettings.canToggleWithMouse && (window.isFullScreen() || window.isMaximized())) {
+                    playlist.state = "hidden"
+                }
+            }
+        }
+
+        Connections {
             target: mpv
             function onOpenPlaylist() {
                 if (playlist.playlistView.count > 0) {
@@ -387,9 +396,6 @@ ApplicationWindow {
     Connections {
         target: HarunaApp
         function onQmlApplicationMouseLeave() {
-            if (PlaylistSettings.canToggleWithMouse && window.isFullScreen()) {
-                playlist.state = "hidden"
-            }
             window.containsMouse = false
         }
         function onQmlApplicationMouseEnter() {
@@ -485,6 +491,10 @@ ApplicationWindow {
 
     function isFullScreen() : bool {
         return window.visibility === Window.FullScreen
+    }
+
+    function isMaximized() : bool {
+        return window.visibility === Window.Maximized
     }
 
     function toggleFullScreen() : void {
