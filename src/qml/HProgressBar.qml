@@ -29,7 +29,8 @@ RowLayout {
     function openChapterPopup(triggerItem: Item) {
         const x = (chaptersPopup.width + triggerItem.width) * -0.5
         const globalPoint = root.mapToGlobal(x, 0)
-        chaptersPopup.x = globalPoint.x < 0 ? root.mapFromGlobal(0, 0).x : x
+        const localPoint = root.mapFromGlobal(Kirigami.Units.largeSpacing, 0)
+        chaptersPopup.x = globalPoint.x < 0 ? localPoint.x : x
         chaptersPopup.open()
     }
 
