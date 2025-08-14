@@ -25,6 +25,7 @@ Item {
 
     signal openFileDialog()
     signal openSubtitleDialog()
+    signal togglePlaylist()
 
     Instantiator {
         model: root.m_actionsModel
@@ -388,11 +389,7 @@ Item {
         }
 
         function onTogglePlaylistAction() {
-            if (playlist.state === "visible") {
-                playlist.state = "hidden"
-            } else {
-                playlist.state = "visible"
-            }
+            root.togglePlaylist()
         }
 
         function onVideoPanXLeftAction() {

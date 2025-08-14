@@ -226,6 +226,18 @@ ApplicationWindow {
         m_mpv: mpv
         height: mpv.height
 
+
+        Connections {
+            target: actions
+            function onTogglePlaylist() {
+                if (playlist.state === "visible") {
+                    playlist.state = "hidden"
+                } else {
+                    playlist.state = "visible"
+                }
+            }
+        }
+
         Connections {
             target: mpv
             function onOpenPlaylist() {
@@ -253,6 +265,8 @@ ApplicationWindow {
     }
 
     Actions {
+        id: actions
+
         m_actionsModel: actionsModel
         m_mpv: mpv
         m_mpvContextMenuLoader: mpvContextMenuLoader
