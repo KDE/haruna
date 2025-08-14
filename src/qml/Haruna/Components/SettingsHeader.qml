@@ -19,16 +19,16 @@ ColumnLayout {
     spacing: 0
 
     Item {
-        width: 1
-        height: root.topMargin
         visible: root.topMargin > 0
+        Layout.preferredWidth: 1
+        Layout.preferredHeight: root.topMargin
     }
 
     RowLayout {
         Rectangle {
-            width: Kirigami.Units.gridUnit
-            height: 1
             color: Kirigami.Theme.alternateBackgroundColor
+            Layout.preferredWidth: Kirigami.Units.gridUnit
+            Layout.preferredHeight: 1
         }
 
         Kirigami.Heading {
@@ -36,8 +36,8 @@ ColumnLayout {
         }
 
         Rectangle {
-            height: 1
             color: Kirigami.Theme.alternateBackgroundColor
+            Layout.preferredHeight: 1
             Layout.fillWidth: true
         }
     }
