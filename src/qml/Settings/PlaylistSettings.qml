@@ -199,31 +199,6 @@ SettingsBasePage {
 
         Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
-            checked: PlaylistSettings.autoplay
-            text: i18nc("@option:check", "Autoplay")
-            onClicked: {
-                PlaylistSettings.autoplay = checked
-                PlaylistSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip", "When checked the next video will play automatically")
-            }
-        }
-
-        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
-        CheckBox {
-            enabled: PlaylistSettings.autoplay
-            checked: PlaylistSettings.repeat
-            text: i18nc("@option:check", "Repeat")
-            onClicked: {
-                PlaylistSettings.repeat = checked
-                PlaylistSettings.save()
-            }
-        }
-
-        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
-        CheckBox {
             checked: PlaylistSettings.showRowNumber
             text: i18nc("@option:check", "Show row number")
             onClicked: {
