@@ -92,52 +92,64 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:listbox", "Playback order")
+            text: i18nc("@label:listbox", "Play order")
             Layout.alignment: Qt.AlignRight
         }
 
-        ComboBox {
-            textRole: "text"
-            valueRole: "value"
-            model: ListModel {
-                id: playOrderModel
+        RowLayout {
+            ComboBox {
+                textRole: "text"
+                valueRole: "value"
+                model: ListModel {
+                    id: playOrderModel
+                }
+                Component.onCompleted: {
+                    const repeat = {
+                        text: i18nc("@item:listbox the playback order of the playlist", "Repeat playlist"),
+                        value: "RepeatPlaylist"
+                    }
+                    playOrderModel.append(repeat)
+
+                    const stopAfterLast = {
+                        text: i18nc("@item:listbox the playback order of the playlist", "Stop after last item"),
+                        value: "StopAfterLast"
+                    }
+                    playOrderModel.append(stopAfterLast)
+
+                    const repeatItem = {
+                        text: i18nc("@item:listbox the playback order of the playlist", "Repeat item"),
+                        value: "RepeatItem"
+                    }
+                    playOrderModel.append(repeatItem)
+
+                    const stopAfterItem = {
+                        text: i18nc("@item:listbox the playback order of the playlist", "Stop after item"),
+                        value: "StopAfterItem"
+                    }
+                    playOrderModel.append(stopAfterItem)
+
+                    const random = {
+                        text: i18nc("@item:listbox the playback order of the playlist", "Random"),
+                        value: "Random"
+                    }
+                    playOrderModel.append(random)
+
+                    currentIndex = indexOfValue(PlaylistSettings.playOrder)
+                }
+                onActivated: function(index) {
+                    PlaylistSettings.playOrder = model.get(index).value
+                    PlaylistSettings.save()
+                }
             }
-            Component.onCompleted: {
-                const repeat = {
-                    text: i18nc("@item:listbox the playback order of the playlist", "Repeat playlist"),
-                    value: "RepeatPlaylist"
-                }
-                playOrderModel.append(repeat)
 
-                const stopAfterLast = {
-                    text: i18nc("@item:listbox the playback order of the playlist", "Stop after last item"),
-                    value: "StopAfterLast"
-                }
-                playOrderModel.append(stopAfterLast)
-
-                const repeatItem = {
-                    text: i18nc("@item:listbox the playback order of the playlist", "Repeat item"),
-                    value: "RepeatItem"
-                }
-                playOrderModel.append(repeatItem)
-
-                const stopAfterItem = {
-                    text: i18nc("@item:listbox the playback order of the playlist", "Stop after item"),
-                    value: "StopAfterItem"
-                }
-                playOrderModel.append(stopAfterItem)
-
-                const random = {
-                    text: i18nc("@item:listbox the playback order of the playlist", "Random"),
-                    value: "Random"
-                }
-                playOrderModel.append(random)
-
-                currentIndex = indexOfValue(PlaylistSettings.playOrder)
-            }
-            onActivated: function(index) {
-                PlaylistSettings.playOrder = model.get(index).value
-                PlaylistSettings.save()
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip playback description",
+                                   "<strong>Repeat playlist</strong>: playlist is repeated indefinitely<br>" +
+                                   "<strong>Stop after last item</strong>: playback stops after the last item in the playlist<br>" +
+                                   "<strong>Repeat item</strong>: current playing item is repeated indefinitely<br>" +
+                                   "<strong>Stop after item</strong>: playback stops after the current playing item<br>" +
+                                   "<strong>Random</strong>: playlist items are play randomly indefinitely")
+                toolTipWidth: Math.min(450, root.width)
             }
         }
 
