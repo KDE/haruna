@@ -127,6 +127,12 @@ SettingsBasePage {
                 }
                 playOrderModel.append(stopAfterItem)
 
+                const random = {
+                    text: i18nc("@item:listbox the playback order of the playlist", "Random"),
+                    value: "Random"
+                }
+                playOrderModel.append(random)
+
                 currentIndex = indexOfValue(PlaylistSettings.playOrder)
             }
             onActivated: function(index) {

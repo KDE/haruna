@@ -106,11 +106,43 @@ private:
     bool isVideoOrAudioMimeType(const QString &mimeType);
     void setPlayingItem(uint i);
 
-    QList<PlaylistItem> m_playlist;
+    std::vector<PlaylistItem> m_playlist;
     uint m_playingItem{0};
     QString m_playlistPath;
     int m_httpItemCounter{0};
     YouTube youtube;
+
+    // shuffling
+    // when shuffling is on, instead of using an m_playlist index to determine
+    // the next and previous item to play, an index (m_currentShuffledRow) of m_shuffledIndexes is used
+
+    // m_playlist          m_shuffledIndexes
+    // 0 file_0            0 m_playlist.index_4 (file_4}
+    // 1 file_1            1 m_playlist.index_3 (file_3)
+    // 2 file_2            2 m_playlist.index_1 (file_1)
+    // 3 file_3            3 m_playlist.index_2 (file_2)
+    // 4 file_4            4 m_playlist.index_0 (file_0)
+    //
+    // if the current file is file_3 at index m_playlist.index_3
+    // when shuffle if OFF m_playlist.index_3 in incremented/decremented by 1 for the next/previous item
+    // previous file: m_playlist.index_2 file_2
+    //  current file: m_playlist.index_3 file_3
+    //     next file: m_playlist.index_4 file_4
+    //
+    // when shuffle if ON m_shuffledIndexes.index_1 in incremented/decremented by 1 for the next/previous item
+    // previous file: m_shuffledIndexes.index_0 -> m_playlist.index_4 file_4
+    //  current file: m_shuffledIndexes.index_1 -> m_playlist.index_3 file_3
+    //     next file: m_shuffledIndexes.index_2 -> m_playlist.index_1 file_1
+    bool isShuffleOn() const;
+    // when shuffling the playing item is moved to the front
+    void shuffleIndexes();
+    std::vector<int> shuffledIndexes() const;
+    int currentShuffledIndex() const;
+    void setCurrentShuffledIndex(int shuffledIndex);
+
+    bool m_isShuffleOn{false};
+    std::vector<int> m_shuffledIndexes;
+    int m_currentShuffledIndex{-1};
 };
 
 Q_DECLARE_METATYPE(PlaylistModel::Behaviour)

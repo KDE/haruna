@@ -342,7 +342,7 @@ void MpvItem::setupEofBehaviour()
 {
     const auto order = PlaylistSettings::playOrder();
 
-    if (order == u"RepeatPlaylist"_s) {
+    if (order == u"RepeatPlaylist"_s || order == u"Random"_s) {
         // when file ends it's unloaded from mpv and onEndFile runs
         Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"no"_s);
         Q_EMIT setProperty(MpvProperties::self()->LoopFile, u"no"_s);

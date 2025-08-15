@@ -13,15 +13,14 @@
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QJsonArray>
-#include <QProcess>
-#include <QUrlQuery>
 
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KIO/DeleteOrTrashJob>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
-#include <kio_version.h>
+
+#include <random>
 
 #include "application.h"
 #include "generalsettings.h"
@@ -34,12 +33,23 @@ using namespace Qt::StringLiterals;
 PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    if (PlaylistSettings::playOrder() == u"Random"_s) {
+        m_isShuffleOn = true;
+        shuffleIndexes();
+    }
+
+    connect(PlaylistSettings::self(), &PlaylistSettings::PlayOrderChanged, this, [this]() {
+        if (PlaylistSettings::playOrder() == u"Random"_s) {
+            m_isShuffleOn = true;
+            shuffleIndexes();
+        }
+    });
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
     connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
     connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
 
     connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, const QUrl &url, KFileMetaData::PropertyMultiMap metaData) {
-        if (m_playlist.isEmpty() || i > m_playlist.size()) {
+        if (m_playlist.empty() || i > m_playlist.size()) {
             return;
         }
         if (m_playlist[i].url == url) {
@@ -64,7 +74,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
 int PlaylistModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return m_playlist.count();
+    return m_playlist.size();
 }
 
 QVariant PlaylistModel::data(const QModelIndex &index, int role) const
@@ -158,7 +168,7 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
             }
             if (behaviour == Behaviour::AppendAndPlay) {
                 appendItem(url);
-                setPlayingItem(m_playlist.count() - 1);
+                setPlayingItem(m_playlist.size() - 1);
             }
 
             return;
@@ -178,7 +188,7 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
             }
             if (behaviour == Behaviour::AppendAndPlay) {
                 appendItem(url);
-                setPlayingItem(m_playlist.count() - 1);
+                setPlayingItem(m_playlist.size() - 1);
             }
         }
     }
@@ -188,7 +198,7 @@ void PlaylistModel::appendItem(const QUrl &url)
 {
     PlaylistItem item;
     QFileInfo itemInfo(url.toLocalFile());
-    auto row{m_playlist.count()};
+    auto row{m_playlist.size()};
     if (itemInfo.exists() && itemInfo.isFile()) {
         item.url = url;
         item.filename = itemInfo.fileName();
@@ -199,7 +209,7 @@ void PlaylistModel::appendItem(const QUrl &url)
             item.filename = url.toString();
             // causes issues with lots of links
             if (m_httpItemCounter < 20) {
-                QVariantMap data{{u"row"_s, row}};
+                QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
                 youtube.getVideoInfo(url, data);
                 ++m_httpItemCounter;
             }
@@ -210,12 +220,16 @@ void PlaylistModel::appendItem(const QUrl &url)
         return;
     }
 
-    beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
+    beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
 
-    m_playlist.append(item);
+    m_playlist.push_back(item);
     Q_EMIT itemAdded(row, item.url.toString());
 
     endInsertRows();
+
+    if (m_isShuffleOn) {
+        shuffleIndexes();
+    }
 }
 
 void PlaylistModel::getSiblingItems(const QUrl &url)
@@ -244,6 +258,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     collator.setNumericMode(true);
     std::sort(siblingFiles.begin(), siblingFiles.end(), collator);
 
+    uint playingItem{0};
     beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
     for (const auto &file : siblingFiles) {
         QFileInfo fileInfo(file);
@@ -252,15 +267,21 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         item.url = fileUrl;
         item.filename = fileInfo.fileName();
         item.folderPath = fileInfo.absolutePath();
-        m_playlist.append(item);
+        m_playlist.push_back(item);
         // in flatpak the file dialog gives a percent encoded path
         // use toLocalFile to normalize the urls
         if (url.toLocalFile() == fileUrl.toLocalFile()) {
-            setPlayingItem(m_playlist.count() - 1);
+            playingItem = m_playlist.size() - 1;
         }
-        Q_EMIT itemAdded(m_playlist.count() - 1, item.url.toString());
+        Q_EMIT itemAdded(m_playlist.size() - 1, item.url.toString());
     }
     endInsertRows();
+
+    setPlayingItem(playingItem);
+
+    if (m_isShuffleOn) {
+        shuffleIndexes();
+    }
 }
 
 void PlaylistModel::addM3uItems(const QUrl &url)
@@ -275,6 +296,7 @@ void PlaylistModel::addM3uItems(const QUrl &url)
         return;
     }
 
+    uint playingItem{0};
     int i{0};
     bool matchFound{false};
     while (!m3uFile.atEnd()) {
@@ -290,15 +312,17 @@ void PlaylistModel::addM3uItems(const QUrl &url)
         addItem(url, Behaviour::Append);
 
         if (!matchFound && url == QUrl::fromUserInput(GeneralSettings::lastPlayedFile())) {
-            setPlayingItem(i);
+            playingItem = i;
             matchFound = true;
         }
         ++i;
     }
     m3uFile.close();
 
-    if (!matchFound) {
-        setPlayingItem(0);
+    setPlayingItem(playingItem);
+
+    if (m_isShuffleOn) {
+        shuffleIndexes();
     }
 }
 
@@ -318,8 +342,8 @@ void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &video
         item.formattedDuration = Application::formatTime(duration);
         item.duration = duration;
 
-        beginInsertRows(QModelIndex(), m_playlist.count(), m_playlist.count());
-        m_playlist.append(item);
+        beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
+        m_playlist.push_back(item);
         Q_EMIT itemAdded(i, item.url.toString());
         endInsertRows();
 
@@ -389,6 +413,45 @@ void PlaylistModel::setPlayingItem(uint i)
     GeneralSettings::self()->save();
 }
 
+bool PlaylistModel::isShuffleOn() const
+{
+    return m_isShuffleOn;
+}
+
+void PlaylistModel::shuffleIndexes()
+{
+    if (m_playlist.size() <= 0) {
+        return;
+    }
+    m_currentShuffledIndex = 0;
+    m_shuffledIndexes.resize(m_playlist.size());
+    std::iota(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), 0);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::shuffle(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), gen);
+
+    // Move current item to start
+    auto it = std::find(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), m_playingItem);
+    if (it != m_shuffledIndexes.end()) {
+        std::rotate(m_shuffledIndexes.begin(), it, it + 1);
+    }
+}
+
+std::vector<int> PlaylistModel::shuffledIndexes() const
+{
+    return m_shuffledIndexes;
+}
+
+int PlaylistModel::currentShuffledIndex() const
+{
+    return m_currentShuffledIndex;
+}
+
+void PlaylistModel::setCurrentShuffledIndex(int shuffledIndex)
+{
+    m_currentShuffledIndex = shuffledIndex;
+}
+
 PlaylistProxyModel::PlaylistProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
@@ -436,26 +499,43 @@ void PlaylistProxyModel::setPlayingItem(uint i)
 void PlaylistProxyModel::playNext()
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
-
-    auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
-    auto nextIndex = currentIndex + 1;
-
-    if (nextIndex < rowCount()) {
-        model->setPlayingItem(mapToSource(index(nextIndex, 0)).row());
+    if (model->isShuffleOn()) {
+        auto nextIndex = model->currentShuffledIndex() + 1;
+        if (nextIndex >= static_cast<int>(model->shuffledIndexes().size())) {
+            nextIndex = 0;
+        }
+        auto shuffledIndex = model->shuffledIndexes().at(nextIndex);
+        model->setCurrentShuffledIndex(nextIndex);
+        model->setPlayingItem(shuffledIndex);
     } else {
-        setPlayingItem(0);
+        auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
+        auto nextIndex = currentIndex + 1;
+        if (nextIndex < rowCount()) {
+            setPlayingItem(nextIndex);
+        } else {
+            setPlayingItem(0);
+        }
     }
 }
 
 void PlaylistProxyModel::playPrevious()
 {
     auto model = qobject_cast<PlaylistModel *>(sourceModel());
+    if (model->isShuffleOn()) {
+        auto previousIndex = model->currentShuffledIndex() - 1;
+        if (previousIndex < 0) {
+            previousIndex = model->shuffledIndexes().size() - 1;
+        }
+        auto shuffledIndex = model->shuffledIndexes().at(previousIndex);
+        model->setCurrentShuffledIndex(previousIndex);
+        model->setPlayingItem(shuffledIndex);
+    } else {
+        auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
+        auto previousIndex = currentIndex - 1;
 
-    auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
-    auto previousIndex = currentIndex - 1;
-
-    if (previousIndex >= 0) {
-        model->setPlayingItem(mapToSource(index(previousIndex, 0)).row());
+        if (previousIndex >= 0) {
+            setPlayingItem(index(previousIndex, 0).row());
+        }
     }
 }
 
@@ -486,7 +566,7 @@ void PlaylistProxyModel::removeItem(uint row)
     auto sourceRow = mapFromSource(model->index(row)).row();
 
     beginRemoveRows(QModelIndex(), sourceRow, sourceRow);
-    model->m_playlist.removeAt(sourceRow);
+    model->m_playlist.erase(model->m_playlist.begin() + sourceRow);
     endRemoveRows();
 }
 
@@ -529,7 +609,7 @@ void PlaylistProxyModel::trashFile(uint row)
             auto model = qobject_cast<PlaylistModel *>(sourceModel());
             auto sourceRow = mapToSource(index(row, 0)).row();
             beginRemoveRows(QModelIndex(), sourceRow, sourceRow);
-            model->m_playlist.removeAt(sourceRow);
+            model->m_playlist.erase(model->m_playlist.begin() + sourceRow);
             endRemoveRows();
         }
     });
