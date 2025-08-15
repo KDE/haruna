@@ -468,6 +468,13 @@ Page {
         title: i18nc("@title:window", "Select file")
         currentFolder: HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
         fileMode: FileDialog.OpenFile
+        nameFilters: {
+            if (fileType === "playlist" ) {
+                return ["m3u (*.m3u *.m3u8)"]
+            } else {
+                return []
+            }
+        }
 
         onAccepted: {
             switch (fileType) {
