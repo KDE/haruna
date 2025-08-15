@@ -100,7 +100,7 @@ Q_SIGNALS:
 private:
     void appendItem(const QUrl &url);
     void getSiblingItems(const QUrl &url);
-    void addM3uItems(const QUrl &url);
+    void addM3uItems(const QUrl &url, PlaylistModel::Behaviour behaviour);
     void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(YTVideoInfo info, QVariantMap data);
     bool isVideoOrAudioMimeType(const QString &mimeType);

@@ -150,7 +150,7 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
 
         if (mimeType == u"audio/x-mpegurl"_s) {
             m_playlistPath = url.toString();
-            addM3uItems(url);
+            addM3uItems(url, behaviour);
             return;
         }
 
@@ -284,7 +284,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     }
 }
 
-void PlaylistModel::addM3uItems(const QUrl &url)
+void PlaylistModel::addM3uItems(const QUrl &url, Behaviour behaviour)
 {
     if (url.scheme() != u"file"_s || Application::mimeType(url) != u"audio/x-mpegurl"_s) {
         return;
@@ -319,7 +319,9 @@ void PlaylistModel::addM3uItems(const QUrl &url)
     }
     m3uFile.close();
 
-    setPlayingItem(playingItem);
+    if (behaviour == Behaviour::Clear) {
+        setPlayingItem(playingItem);
+    }
 
     if (m_isShuffleOn) {
         shuffleIndexes();
