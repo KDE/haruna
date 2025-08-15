@@ -414,6 +414,7 @@ void PlaylistModel::setPlayingItem(uint i)
     Q_EMIT playingItemChanged();
 
     GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
+    GeneralSettings::setLastPlaylist(m_playlistPath);
     GeneralSettings::self()->save();
 }
 
