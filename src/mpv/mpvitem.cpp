@@ -373,16 +373,17 @@ void MpvItem::setupEofBehavior()
 void MpvItem::onEndFile(const QString &reason)
 {
     // this runs after the file has been unloaded from mpv
-    uint currentItem = playlistProxyModel()->getPlayingItem();
     if (reason == u"error"_s) {
         if (playlistModel()->rowCount() == 0) {
             return;
         }
 
+        uint currentItem = playlistProxyModel()->getPlayingItem();
         const auto index = playlistProxyModel()->index(currentItem, 0);
         const auto title = playlistModel()->data(playlistProxyModel()->mapToSource(index), PlaylistModel::TitleRole);
 
-        Q_EMIT osdMessage(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
+        Q_EMIT Application::instance()->error(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
+        return;
     }
 
     playlistProxyModel()->playNext();
