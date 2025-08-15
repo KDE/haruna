@@ -42,6 +42,8 @@ PlaylistModel::PlaylistModel(QObject *parent)
         if (PlaylistSettings::playOrder() == u"Random"_s) {
             m_isShuffleOn = true;
             shuffleIndexes();
+        } else {
+            m_isShuffleOn = false;
         }
     });
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
