@@ -92,7 +92,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:listbox", "Play order")
+            text: i18nc("@label:listbox", "Playback behavior")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -105,31 +105,31 @@ SettingsBasePage {
                 }
                 Component.onCompleted: {
                     const repeat = {
-                        text: i18nc("@item:listbox the playback order of the playlist", "Repeat playlist"),
+                        text: i18nc("@item:listbox the playback behavior of the playlist", "Repeat playlist"),
                         value: "RepeatPlaylist"
                     }
                     playOrderModel.append(repeat)
 
                     const stopAfterLast = {
-                        text: i18nc("@item:listbox the playback order of the playlist", "Stop after last item"),
+                        text: i18nc("@item:listbox the playback behavior of the playlist", "Stop after last item"),
                         value: "StopAfterLast"
                     }
                     playOrderModel.append(stopAfterLast)
 
                     const repeatItem = {
-                        text: i18nc("@item:listbox the playback order of the playlist", "Repeat item"),
+                        text: i18nc("@item:listbox the playback behavior of the playlist", "Repeat item"),
                         value: "RepeatItem"
                     }
                     playOrderModel.append(repeatItem)
 
                     const stopAfterItem = {
-                        text: i18nc("@item:listbox the playback order of the playlist", "Stop after item"),
+                        text: i18nc("@item:listbox the playback behavior of the playlist", "Stop after item"),
                         value: "StopAfterItem"
                     }
                     playOrderModel.append(stopAfterItem)
 
                     const random = {
-                        text: i18nc("@item:listbox the playback order of the playlist", "Random"),
+                        text: i18nc("@item:listbox the playback behavior of the playlist", "Random"),
                         value: "Random"
                     }
                     playOrderModel.append(random)
@@ -148,7 +148,7 @@ SettingsBasePage {
                                    "<strong>Stop after last item</strong>: playback stops after the last item in the playlist<br>" +
                                    "<strong>Repeat item</strong>: current playing item is repeated indefinitely<br>" +
                                    "<strong>Stop after item</strong>: playback stops after the current playing item<br>" +
-                                   "<strong>Random</strong>: playlist items are play randomly indefinitely")
+                                   "<strong>Random</strong>: playlist items play randomly indefinitely")
                 toolTipWidth: Math.min(450, root.width)
             }
         }
