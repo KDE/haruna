@@ -195,7 +195,7 @@ private:
     void initProperties();
     void setupConnections();
     void onReady();
-    void setupEofBehaviour();
+    void setupEofBehavior();
     void onEndFile(const QString &reason);
     void onEndOfFileReadched();
     void onPropertyChanged(const QString &property, const QVariant &value);

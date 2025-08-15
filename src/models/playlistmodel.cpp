@@ -130,18 +130,18 @@ void PlaylistModel::clear()
     endResetModel();
 }
 
-void PlaylistModel::addItem(const QString &path, Behaviour behaviour)
+void PlaylistModel::addItem(const QString &path, Behavior behavior)
 {
     auto url = QUrl::fromUserInput(path);
-    addItem(url, behaviour);
+    addItem(url, behavior);
 }
 
-void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
+void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
 {
     if (!url.isValid() || url.isEmpty()) {
         return;
     }
-    if (behaviour == Behaviour::Clear) {
+    if (behavior == Behavior::Clear) {
         clear();
     }
 
@@ -150,12 +150,12 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
 
         if (mimeType == u"audio/x-mpegurl"_s) {
             m_playlistPath = url.toString();
-            addM3uItems(url, behaviour);
+            addM3uItems(url, behavior);
             return;
         }
 
         if (isVideoOrAudioMimeType(mimeType)) {
-            if (behaviour == Behaviour::Clear) {
+            if (behavior == Behavior::Clear) {
                 if (PlaylistSettings::loadSiblings()) {
                     getSiblingItems(url);
                 } else {
@@ -163,10 +163,10 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
                     setPlayingItem(0);
                 }
             }
-            if (behaviour == Behaviour::Append) {
+            if (behavior == Behavior::Append) {
                 appendItem(url);
             }
-            if (behaviour == Behaviour::AppendAndPlay) {
+            if (behavior == Behavior::AppendAndPlay) {
                 appendItem(url);
                 setPlayingItem(m_playlist.size() - 1);
             }
@@ -179,14 +179,14 @@ void PlaylistModel::addItem(const QUrl &url, Behaviour behaviour)
         if (youtube.isPlaylist(url)) {
             youtube.getPlaylist(url);
         } else {
-            if (behaviour == Behaviour::Clear) {
+            if (behavior == Behavior::Clear) {
                 appendItem(url);
                 setPlayingItem(0);
             }
-            if (behaviour == Behaviour::Append) {
+            if (behavior == Behavior::Append) {
                 appendItem(url);
             }
-            if (behaviour == Behaviour::AppendAndPlay) {
+            if (behavior == Behavior::AppendAndPlay) {
                 appendItem(url);
                 setPlayingItem(m_playlist.size() - 1);
             }
@@ -284,7 +284,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     }
 }
 
-void PlaylistModel::addM3uItems(const QUrl &url, Behaviour behaviour)
+void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
 {
     if (url.scheme() != u"file"_s || Application::mimeType(url) != u"audio/x-mpegurl"_s) {
         return;
@@ -309,7 +309,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behaviour behaviour)
         // always set the working directory
         // it doesn't affect absolute paths and it's required for relative paths
         auto url = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath());
-        addItem(url, Behaviour::Append);
+        addItem(url, Behavior::Append);
 
         if (!matchFound && url == QUrl::fromUserInput(GeneralSettings::lastPlayedFile())) {
             playingItem = i;
@@ -319,7 +319,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behaviour behaviour)
     }
     m3uFile.close();
 
-    if (behaviour == Behaviour::Clear) {
+    if (behavior == Behavior::Clear) {
         setPlayingItem(playingItem);
     }
 

@@ -82,7 +82,7 @@ MpvItem::MpvItem(QQuickItem *parent)
 
     setupConnections();
     initProperties();
-    setupEofBehaviour();
+    setupEofBehavior();
 
     m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
     m_saveTimePositionTimer->start();
@@ -199,7 +199,7 @@ void MpvItem::setupConnections()
 {
     // clang-format off
     connect(PlaylistSettings::self(), &PlaylistSettings::PlayOrderChanged,
-            this, &MpvItem::setupEofBehaviour);
+            this, &MpvItem::setupEofBehavior);
 
     connect(mpvController(), &MpvController::propertyChanged,
             this, &MpvItem::onPropertyChanged, Qt::QueuedConnection);
@@ -338,7 +338,7 @@ void MpvItem::onReady()
     }
 }
 
-void MpvItem::setupEofBehaviour()
+void MpvItem::setupEofBehavior()
 {
     const auto order = PlaylistSettings::playOrder();
 

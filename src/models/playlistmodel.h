@@ -78,20 +78,20 @@ public:
     };
     Q_ENUM(Roles)
 
-    enum Behaviour {
+    enum Behavior {
         Append,
         AppendAndPlay,
         Clear,
     };
-    Q_ENUM(Behaviour)
+    Q_ENUM(Behavior)
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void clear();
-    Q_INVOKABLE void addItem(const QString &path, PlaylistModel::Behaviour behaviour);
-    Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behaviour behaviour);
+    Q_INVOKABLE void addItem(const QString &path, PlaylistModel::Behavior behavior);
+    Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
 
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path);
@@ -100,7 +100,7 @@ Q_SIGNALS:
 private:
     void appendItem(const QUrl &url);
     void getSiblingItems(const QUrl &url);
-    void addM3uItems(const QUrl &url, PlaylistModel::Behaviour behaviour);
+    void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
     void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(YTVideoInfo info, QVariantMap data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
@@ -145,5 +145,5 @@ private:
     int m_currentShuffledIndex{-1};
 };
 
-Q_DECLARE_METATYPE(PlaylistModel::Behaviour)
+Q_DECLARE_METATYPE(PlaylistModel::Behavior)
 #endif // PLAYLISTMODEL_H
