@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:41+0000\n"
+"POT-Creation-Date: 2025-08-15 00:44+0000\n"
 "PO-Revision-Date: 2025-06-09 00:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -644,38 +644,38 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "無法播放：%1"
 
-#: src/mpv/mpvitem.cpp:462 src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕延遲：%1 秒"
 
-#: src/mpv/mpvitem.cpp:495
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:528
+#: src/mpv/mpvitem.cpp:529
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "無"
 
-#: src/mpv/mpvitem.cpp:566
+#: src/mpv/mpvitem.cpp:567
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "螢幕截圖失敗"
 
-#: src/mpv/mpvitem.cpp:571
+#: src/mpv/mpvitem.cpp:572
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "已擷取螢幕截圖"
 
-#: src/mpv/mpvitem.cpp:573
+#: src/mpv/mpvitem.cpp:574
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -683,7 +683,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "螢幕截圖：%1"
 
-#: src/mpv/mpvitem.cpp:600
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -691,13 +691,13 @@ msgid ""
 "due to missing codecs"
 msgstr "未偵測到視訊軌，這大概是因為缺乏解碼器而無法解碼/播放視訊軌"
 
-#: src/mpv/mpvitem.cpp:633
+#: src/mpv/mpvitem.cpp:634
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "已跳過章節：%1"
 
-#: src/qml/Actions.qml:92 src/qml/Actions.qml:110
+#: src/qml/Actions.qml:93 src/qml/Actions.qml:111
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -705,19 +705,19 @@ msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "音效：%1 %2"
 
-#: src/qml/Actions.qml:163
+#: src/qml/Actions.qml:164
 msgctxt ""
 "osd message when trying to open subtile selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "無法在沒有開啟檔案時載入字幕"
 
-#: src/qml/Actions.qml:182 src/qml/Actions.qml:188 src/qml/Actions.qml:193
+#: src/qml/Actions.qml:183 src/qml/Actions.qml:189 src/qml/Actions.qml:194
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
-#: src/qml/Actions.qml:288
+#: src/qml/Actions.qml:289
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop start: %1"
@@ -725,32 +725,32 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "循環開始：%1"
 
-#: src/qml/Actions.qml:294
+#: src/qml/Actions.qml:295
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "循環：%1–%2"
 
-#: src/qml/Actions.qml:300
+#: src/qml/Actions.qml:301
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "已清除循環"
 
-#: src/qml/Actions.qml:320
+#: src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "字幕關閉"
 
-#: src/qml/Actions.qml:320
+#: src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "字幕開啟"
 
-#: src/qml/Actions.qml:329 src/qml/Actions.qml:341
+#: src/qml/Actions.qml:330 src/qml/Actions.qml:342
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "字幕：無"
 
-#: src/qml/Actions.qml:333 src/qml/Actions.qml:345
+#: src/qml/Actions.qml:334 src/qml/Actions.qml:346
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -758,92 +758,92 @@ msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/qml/Actions.qml:352 src/qml/Actions.qml:358
+#: src/qml/Actions.qml:353 src/qml/Actions.qml:359
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕縮放：%1"
 
-#: src/qml/Actions.qml:372
+#: src/qml/Actions.qml:373
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "解交錯：%1"
 
-#: src/qml/Actions.qml:437 src/qml/Actions.qml:443
+#: src/qml/Actions.qml:434 src/qml/Actions.qml:440
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "縮放：%1"
 
-#: src/qml/Actions.qml:448
+#: src/qml/Actions.qml:445
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "縮放：0"
 
-#: src/qml/Actions.qml:455 src/qml/Actions.qml:461
+#: src/qml/Actions.qml:452 src/qml/Actions.qml:458
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "對比度：%1"
 
-#: src/qml/Actions.qml:466
+#: src/qml/Actions.qml:463
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "對比度：0"
 
-#: src/qml/Actions.qml:472 src/qml/Actions.qml:478
+#: src/qml/Actions.qml:469 src/qml/Actions.qml:475
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:483
+#: src/qml/Actions.qml:480
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:489 src/qml/Actions.qml:495
+#: src/qml/Actions.qml:486 src/qml/Actions.qml:492
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma：%1"
 
-#: src/qml/Actions.qml:500
+#: src/qml/Actions.qml:497
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma：0"
 
-#: src/qml/Actions.qml:506 src/qml/Actions.qml:512
+#: src/qml/Actions.qml:503 src/qml/Actions.qml:509
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "飽和度：%1"
 
-#: src/qml/Actions.qml:517
+#: src/qml/Actions.qml:514
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "飽和度：0"
 
-#: src/qml/Footer.qml:147
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "開始播放"
 
-#: src/qml/Footer.qml:147
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "暫停播放"
 
-#: src/qml/Footer.qml:163
+#: src/qml/Footer.qml:166
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "播放上一個檔案"
 
-#: src/qml/Footer.qml:179
+#: src/qml/Footer.qml:182
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "播放下一個檔案"
 
-#: src/qml/Footer.qml:193
+#: src/qml/Footer.qml:196
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "開啟章節選單"
 
-#: src/qml/Footer.qml:257
+#: src/qml/Footer.qml:260
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "剩餘：%1"
@@ -858,31 +858,31 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "選擇顏色"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:61
+#: src/qml/Haruna/Components/HamburgerMenu.qml:65
 msgctxt "@action:inmenu"
 msgid "Recent Files"
 msgstr "最近使用的檔案"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:91
+#: src/qml/Haruna/Components/HamburgerMenu.qml:94
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:25
 #: src/qml/Menus/SubtitlesMenu.qml:23
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "主字幕"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:97
+#: src/qml/Haruna/Components/HamburgerMenu.qml:100
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:59
 #: src/qml/Menus/SubtitlesMenu.qml:29
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "第二字幕"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:106
+#: src/qml/Haruna/Components/HamburgerMenu.qml:109
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "音效軌"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:129
+#: src/qml/Haruna/Components/HamburgerMenu.qml:132
 msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "更多(&M)"
@@ -904,7 +904,7 @@ msgctxt "@info:placeholder"
 msgid "No action found."
 msgstr "未設定動作"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:29
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:31
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Load subtitles from"
@@ -912,7 +912,7 @@ msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
 msgstr "從何處載入字幕"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:32
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:34
 msgctxt "@info:tooltip;"
 msgid ""
 "When a relative folder name starts with * (asterisk) and recursive search is "
@@ -920,31 +920,31 @@ msgid ""
 "Relative folders are relative to the playing file's folder."
 msgstr ""
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:111
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "確認刪除"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:122
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:124
 msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "從列表裡刪除這個資料夾"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:138
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:140
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "儲存變更"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:148
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:150
 msgid "No folder set"
 msgstr "未設定資料夾"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:166
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:168
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "新增資料夾"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:174
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:176
 #, fuzzy
 #| msgctxt "@info:tooltip add new sutbtitle folder setting"
 #| msgid "Add a folder in which to look for subtitles."
@@ -952,12 +952,12 @@ msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "新增尋找字幕用的資料夾。"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:183
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:185
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
 msgstr "遞迴搜尋字幕"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:200
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:202
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -972,22 +972,22 @@ msgstr ""
 "字幕因「%1」設定值而遞迴搜尋。\n"
 "只會搜尋相對資料夾。"
 
-#: src/qml/Header.qml:78
+#: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "字幕"
 
-#: src/qml/Header.qml:102
+#: src/qml/Header.qml:103
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "音效"
 
-#: src/qml/HProgressBar.qml:276
+#: src/qml/HProgressBar.qml:281
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "跳過章節"
 
-#: src/qml/HProgressBar.qml:284
+#: src/qml/HProgressBar.qml:289
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1001,17 +1001,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:405
+#: src/qml/Main.qml:425
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "選擇檔案"
 
-#: src/qml/Main.qml:422
+#: src/qml/Main.qml:442
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "選擇字幕檔案"
 
-#: src/qml/Main.qml:446
+#: src/qml/Main.qml:466
 msgctxt "@action:button"
 msgid "Open"
 msgstr "開啟"
