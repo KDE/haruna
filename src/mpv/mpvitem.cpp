@@ -379,11 +379,7 @@ void MpvItem::onEndFile(const QString &reason)
         Q_EMIT osdMessage(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
     }
 
-    if (!playlistProxyModel()->isLastItem(currentItem)) {
-        playlistProxyModel()->playNext();
-    } else {
-        playlistProxyModel()->setPlayingItem(0);
-    }
+    playlistProxyModel()->playNext();
 }
 
 void MpvItem::onEndOfFileReadched()
