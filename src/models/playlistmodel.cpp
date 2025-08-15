@@ -33,13 +33,13 @@ using namespace Qt::StringLiterals;
 PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    if (PlaylistSettings::playOrder() == u"Random"_s) {
+    if (PlaylistSettings::playbackBehavior() == u"Random"_s) {
         m_isShuffleOn = true;
         shuffleIndexes();
     }
 
-    connect(PlaylistSettings::self(), &PlaylistSettings::PlayOrderChanged, this, [this]() {
-        if (PlaylistSettings::playOrder() == u"Random"_s) {
+    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [this]() {
+        if (PlaylistSettings::playbackBehavior() == u"Random"_s) {
             m_isShuffleOn = true;
             shuffleIndexes();
         } else {

@@ -198,7 +198,7 @@ void MpvItem::initProperties()
 void MpvItem::setupConnections()
 {
     // clang-format off
-    connect(PlaylistSettings::self(), &PlaylistSettings::PlayOrderChanged,
+    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged,
             this, &MpvItem::setupEofBehavior);
 
     connect(mpvController(), &MpvController::propertyChanged,
@@ -340,7 +340,7 @@ void MpvItem::onReady()
 
 void MpvItem::setupEofBehavior()
 {
-    const auto order = PlaylistSettings::playOrder();
+    const auto order = PlaylistSettings::playbackBehavior();
 
     if (order == u"RepeatPlaylist"_s || order == u"Random"_s) {
         // when file ends it's unloaded from mpv and onEndFile runs
@@ -390,7 +390,7 @@ void MpvItem::onEndOfFileReadched()
         return;
     }
 
-    if (PlaylistSettings::playOrder() == u"StopAfterLast"_s) {
+    if (PlaylistSettings::playbackBehavior() == u"StopAfterLast"_s) {
         uint currentItem = playlistProxyModel()->getPlayingItem();
         if (!playlistProxyModel()->isLastItem(currentItem)) {
             playlistProxyModel()->playNext();
@@ -400,7 +400,7 @@ void MpvItem::onEndOfFileReadched()
         }
     }
 
-    if (PlaylistSettings::playOrder() == u"StopAfterItem"_s) {
+    if (PlaylistSettings::playbackBehavior() == u"StopAfterItem"_s) {
         setPropertyBlocking(MpvProperties::self()->Position, 0);
         setPropertyBlocking(MpvProperties::self()->Pause, true);
     }

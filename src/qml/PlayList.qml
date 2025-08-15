@@ -153,9 +153,9 @@ Page {
                             icon.name: "media-playlist-repeat"
                             autoExclusive: true
                             checkable: true
-                            checked: PlaylistSettings.playOrder === "RepeatPlaylist"
+                            checked: PlaylistSettings.playbackBehavior === "RepeatPlaylist"
                             onTriggered: {
-                                PlaylistSettings.playOrder = "RepeatPlaylist"
+                                PlaylistSettings.playbackBehavior = "RepeatPlaylist"
                                 PlaylistSettings.save()
                             }
                         }
@@ -163,9 +163,9 @@ Page {
                             text: i18nc("@action:button", "Stop after last item")
                             autoExclusive: true
                             checkable: true
-                            checked: PlaylistSettings.playOrder === "StopAfterLast"
+                            checked: PlaylistSettings.playbackBehavior === "StopAfterLast"
                             onTriggered: {
-                                PlaylistSettings.playOrder = "StopAfterLast"
+                                PlaylistSettings.playbackBehavior = "StopAfterLast"
                                 PlaylistSettings.save()
                             }
                         }
@@ -173,10 +173,10 @@ Page {
                             text: i18nc("@action:button", "Repeat item")
                             autoExclusive: true
                             checkable: true
-                            checked: PlaylistSettings.playOrder === "RepeatItem"
+                            checked: PlaylistSettings.playbackBehavior === "RepeatItem"
                             icon.name: "media-playlist-repeat-song"
                             onTriggered: {
-                                PlaylistSettings.playOrder = "RepeatItem"
+                                PlaylistSettings.playbackBehavior = "RepeatItem"
                                 PlaylistSettings.save()
                             }
                         }
@@ -184,9 +184,9 @@ Page {
                             text: i18nc("@action:button", "Stop after item")
                             autoExclusive: true
                             checkable: true
-                            checked: PlaylistSettings.playOrder === "StopAfterItem"
+                            checked: PlaylistSettings.playbackBehavior === "StopAfterItem"
                             onTriggered: {
-                                PlaylistSettings.playOrder = "StopAfterItem"
+                                PlaylistSettings.playbackBehavior = "StopAfterItem"
                                 PlaylistSettings.save()
                             }
                         }
@@ -194,10 +194,10 @@ Page {
                             text: i18nc("@action:button", "Random")
                             autoExclusive: true
                             checkable: true
-                            checked: PlaylistSettings.playOrder === "Random"
+                            checked: PlaylistSettings.playbackBehavior === "Random"
                             icon.name: "randomize"
                             onTriggered: {
-                                PlaylistSettings.playOrder = "Random"
+                                PlaylistSettings.playbackBehavior = "Random"
                                 PlaylistSettings.save()
                             }
                         }

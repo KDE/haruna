@@ -101,43 +101,43 @@ SettingsBasePage {
                 textRole: "text"
                 valueRole: "value"
                 model: ListModel {
-                    id: playOrderModel
+                    id: playbackBehaviorModel
                 }
                 Component.onCompleted: {
                     const repeat = {
                         text: i18nc("@item:listbox the playback behavior of the playlist", "Repeat playlist"),
                         value: "RepeatPlaylist"
                     }
-                    playOrderModel.append(repeat)
+                    playbackBehaviorModel.append(repeat)
 
                     const stopAfterLast = {
                         text: i18nc("@item:listbox the playback behavior of the playlist", "Stop after last item"),
                         value: "StopAfterLast"
                     }
-                    playOrderModel.append(stopAfterLast)
+                    playbackBehaviorModel.append(stopAfterLast)
 
                     const repeatItem = {
                         text: i18nc("@item:listbox the playback behavior of the playlist", "Repeat item"),
                         value: "RepeatItem"
                     }
-                    playOrderModel.append(repeatItem)
+                    playbackBehaviorModel.append(repeatItem)
 
                     const stopAfterItem = {
                         text: i18nc("@item:listbox the playback behavior of the playlist", "Stop after item"),
                         value: "StopAfterItem"
                     }
-                    playOrderModel.append(stopAfterItem)
+                    playbackBehaviorModel.append(stopAfterItem)
 
                     const random = {
                         text: i18nc("@item:listbox the playback behavior of the playlist", "Random"),
                         value: "Random"
                     }
-                    playOrderModel.append(random)
+                    playbackBehaviorModel.append(random)
 
-                    currentIndex = indexOfValue(PlaylistSettings.playOrder)
+                    currentIndex = indexOfValue(PlaylistSettings.playbackBehavior)
                 }
                 onActivated: function(index) {
-                    PlaylistSettings.playOrder = model.get(index).value
+                    PlaylistSettings.playbackBehavior = model.get(index).value
                     PlaylistSettings.save()
                 }
             }
