@@ -21,6 +21,8 @@ Page {
 
     required property MpvVideo m_mpv
 
+    property bool isSmallWindowSize: Window.window.width < 600
+    property int buttonSize: isSmallWindowSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
 
@@ -67,7 +69,12 @@ Page {
                 actions: [
                     Kirigami.Action {
                         text: i18nc("@action:button", "Open Playlist")
+                        displayHint: root.isSmallWindowSize
+                                     ? Kirigami.DisplayHint.IconOnly
+                                     : Kirigami.DisplayHint.NoPreference
                         icon.name: "media-playlist-append"
+                        icon.width: root.buttonSize
+                        icon.height: root.buttonSize
                         onTriggered: {
                             fileDialog.fileType = "playlist"
                             fileDialog.fileMode = FileDialog.OpenFile
@@ -76,7 +83,12 @@ Page {
                     },
                     Kirigami.Action {
                         text: i18nc("@action:button", "Add…")
+                        displayHint: root.isSmallWindowSize
+                                     ? Kirigami.DisplayHint.IconOnly
+                                     : Kirigami.DisplayHint.NoPreference
                         icon.name: "list-add"
+                        icon.width: root.buttonSize
+                        icon.height: root.buttonSize
                         Kirigami.Action {
                             text: i18nc("@action:button", "File")
                             onTriggered: {
@@ -98,7 +110,12 @@ Page {
                     },
                     Kirigami.Action {
                         text: i18nc("@action:button", "Sort")
+                        displayHint: root.isSmallWindowSize
+                                     ? Kirigami.DisplayHint.IconOnly
+                                     : Kirigami.DisplayHint.NoPreference
                         icon.name: "view-sort"
+                        icon.width: root.buttonSize
+                        icon.height: root.buttonSize
 
                         Kirigami.Action {
                             text: i18nc("@action:button", "Name, ascending")
@@ -122,6 +139,66 @@ Page {
                             text: i18nc("@action:button", "Duration, descending")
                             onTriggered: {
                                 root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
+                            }
+                        }
+                    },
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Playback")
+                        icon.name: ""
+                        icon.width: root.buttonSize
+                        icon.height: root.buttonSize
+                        displayHint: Kirigami.DisplayHint.KeepVisible
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Repeat playlist")
+                            icon.name: "media-playlist-repeat"
+                            autoExclusive: true
+                            checkable: true
+                            checked: PlaylistSettings.playOrder === "RepeatPlaylist"
+                            onTriggered: {
+                                PlaylistSettings.playOrder = "RepeatPlaylist"
+                                PlaylistSettings.save()
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Stop after last item")
+                            autoExclusive: true
+                            checkable: true
+                            checked: PlaylistSettings.playOrder === "StopAfterLast"
+                            onTriggered: {
+                                PlaylistSettings.playOrder = "StopAfterLast"
+                                PlaylistSettings.save()
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Repeat item")
+                            autoExclusive: true
+                            checkable: true
+                            checked: PlaylistSettings.playOrder === "RepeatItem"
+                            icon.name: "media-playlist-repeat-song"
+                            onTriggered: {
+                                PlaylistSettings.playOrder = "RepeatItem"
+                                PlaylistSettings.save()
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Stop after item")
+                            autoExclusive: true
+                            checkable: true
+                            checked: PlaylistSettings.playOrder === "StopAfterItem"
+                            onTriggered: {
+                                PlaylistSettings.playOrder = "StopAfterItem"
+                                PlaylistSettings.save()
+                            }
+                        }
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Random")
+                            autoExclusive: true
+                            checkable: true
+                            checked: PlaylistSettings.playOrder === "Random"
+                            icon.name: "randomize"
+                            onTriggered: {
+                                PlaylistSettings.playOrder = "Random"
+                                PlaylistSettings.save()
                             }
                         }
                     },
