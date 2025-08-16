@@ -298,7 +298,6 @@ void MpvItem::setupConnections()
     });
 #endif
 
-#if defined(Q_OS_UNIX)
     connect(this, &MpvItem::pauseChanged, this, [=]() {
         static LockManager lockManager;
         if (!pause() && !m_currentUrl.isEmpty()) {
@@ -307,17 +306,6 @@ void MpvItem::setupConnections()
             lockManager.setInhibitionOff();
         }
     });
-#endif
-
-#if defined(Q_OS_WIN32)
-connect(this, &MpvItem::pauseChanged, this, [=]() {
-    if (!pause() && !m_currentUrl.isEmpty()) {
-        SetThreadExecutionState(ES_CONTINUOUS | ES_DISPLAY_REQUIRED);
-    } else {
-        SetThreadExecutionState(ES_CONTINUOUS);
-    }
-});
-#endif
 
     connect(this, &MpvItem::savePositionToDB, Worker::instance(), &Worker::savePositionToDB, Qt::QueuedConnection);
     // clang-format on
