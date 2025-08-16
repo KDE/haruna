@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-12 07:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -571,50 +571,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Predodeli"
 
-#: src/mpv/mpvitem.cpp:351
+#: src/mpv/mpvitem.cpp:379
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ni bilo mogoče predvajati: %1"
 
-#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Čas podnapisa: %1 sekund"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Datoteka ne obstaja: %1"
 
-#: src/mpv/mpvitem.cpp:529
+#: src/mpv/mpvitem.cpp:536
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Noben"
 
-#: src/mpv/mpvitem.cpp:567
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Posnetek zaslona ni uspel"
 
-#: src/mpv/mpvitem.cpp:572
+#: src/mpv/mpvitem.cpp:579
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Posnetek zaslona narejen"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:581
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Posnetek zaslona: %1"
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:608
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -624,7 +624,7 @@ msgstr ""
 "Ni bilo zaznanega video posnetka, najverjetneje video posnetka ni mogoče "
 "dekodirati/predvajati zaradi manjkajočih kodirnikov"
 
-#: src/mpv/mpvitem.cpp:634
+#: src/mpv/mpvitem.cpp:641
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1094,112 +1094,151 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Glasnost: %1"
 
-#: src/qml/PlayList.qml:69
+#: src/qml/PlayList.qml:71
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Odpri seznam predvajanja"
 
-#: src/qml/PlayList.qml:78
+#: src/qml/PlayList.qml:85
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Dodaj…"
 
-#: src/qml/PlayList.qml:81
+#: src/qml/PlayList.qml:93
 msgctxt "@action:button"
 msgid "File"
 msgstr "Datoteka"
 
-#: src/qml/PlayList.qml:89
+#: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:100
+#: src/qml/PlayList.qml:112
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Razvrsti"
 
-#: src/qml/PlayList.qml:104
+#: src/qml/PlayList.qml:121
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Naraščajoče po imenu"
 
-#: src/qml/PlayList.qml:110
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Padajoče po imenu"
 
-#: src/qml/PlayList.qml:116
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Naraščajoče po trajanju"
 
-#: src/qml/PlayList.qml:122
+#: src/qml/PlayList.qml:139
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Padajoče po trajanju"
 
-#: src/qml/PlayList.qml:129
+#: src/qml/PlayList.qml:146
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Playback"
+msgctxt "@action:button"
+msgid "Playback"
+msgstr "Predvajanje"
+
+#: src/qml/PlayList.qml:152
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open Playlist"
+msgctxt "@action:button"
+msgid "Repeat playlist"
+msgstr "Odpri seznam predvajanja"
+
+#: src/qml/PlayList.qml:163
+msgctxt "@action:button"
+msgid "Stop after last item"
+msgstr ""
+
+#: src/qml/PlayList.qml:173
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Repeat"
+msgctxt "@action:button"
+msgid "Repeat item"
+msgstr "Ponovi"
+
+#: src/qml/PlayList.qml:184
+msgctxt "@action:button"
+msgid "Stop after item"
+msgstr ""
+
+#: src/qml/PlayList.qml:194
+msgctxt "@action:button"
+msgid "Random"
+msgstr ""
+
+#: src/qml/PlayList.qml:206
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Počisti"
 
-#: src/qml/PlayList.qml:137
+#: src/qml/PlayList.qml:214
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Shrani kot"
 
-#: src/qml/PlayList.qml:158
+#: src/qml/PlayList.qml:235
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/qml/PlayList.qml:243
+#: src/qml/PlayList.qml:320
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Odpri vsebovano mapo"
 
-#: src/qml/PlayList.qml:249
+#: src/qml/PlayList.qml:326
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Odpri v brskalniku"
 
-#: src/qml/PlayList.qml:258
+#: src/qml/PlayList.qml:335
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopiraj ime"
 
-#: src/qml/PlayList.qml:263
+#: src/qml/PlayList.qml:340
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopiraj pot"
 
-#: src/qml/PlayList.qml:264
+#: src/qml/PlayList.qml:341
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopiraj url"
 
-#: src/qml/PlayList.qml:269
+#: src/qml/PlayList.qml:346
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Odstrani s seznama predvajanja"
 
-#: src/qml/PlayList.qml:274
+#: src/qml/PlayList.qml:351
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Preimenuj"
 
-#: src/qml/PlayList.qml:280
+#: src/qml/PlayList.qml:357
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Premakni se do predmeta predvajanja"
 
-#: src/qml/PlayList.qml:290
+#: src/qml/PlayList.qml:367
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Prenesi datoteko v smeti"
 
-#: src/qml/PlayList.qml:391 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:468 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
@@ -1589,7 +1628,7 @@ msgid "Show menubar"
 msgstr "Pokaži menijsko letvico"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:97
+#: src/qml/Settings/PlaylistSettings.qml:159
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Pokaži orodno letvico"
@@ -2048,12 +2087,62 @@ msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
 msgstr "Kompaktno"
 
-#: src/qml/Settings/PlaylistSettings.qml:107
+#: src/qml/Settings/PlaylistSettings.qml:95
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@label:listbox"
+msgid "Playback behavior"
+msgstr "Položaj predvajanja"
+
+#: src/qml/Settings/PlaylistSettings.qml:108
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open Playlist"
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Repeat playlist"
+msgstr "Odpri seznam predvajanja"
+
+#: src/qml/Settings/PlaylistSettings.qml:114
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Stop after last item"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:120
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Repeat"
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Repeat item"
+msgstr "Ponovi"
+
+#: src/qml/Settings/PlaylistSettings.qml:126
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Stop after item"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:132
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Random"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:147
+msgctxt "@info:tooltip playback description"
+msgid ""
+"<strong>Repeat playlist</strong>: playlist is repeated "
+"indefinitely<br><strong>Stop after last item</strong>: playback stops after "
+"the last item in the playlist<br><strong>Repeat item</strong>: current "
+"playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
+"playback stops after the current playing item<br><strong>Random</strong>: "
+"playlist items play randomly indefinitely"
+msgstr ""
+
+#: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Prekrij video"
 
-#: src/qml/Settings/PlaylistSettings.qml:114
+#: src/qml/Settings/PlaylistSettings.qml:176
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2062,52 +2151,37 @@ msgstr ""
 "Kadar je odkljukano, je seznam predvajanj na vrhu videov\n"
 "Kadar ni odkljukano, ima video spremenjeno velikost"
 
-#: src/qml/Settings/PlaylistSettings.qml:121
+#: src/qml/Settings/PlaylistSettings.qml:183
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Pokaži naslov videa namesto imena datoteke"
 
-#: src/qml/Settings/PlaylistSettings.qml:131
+#: src/qml/Settings/PlaylistSettings.qml:193
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Samodejno naloži videoposnetke iz iste mape"
 
-#: src/qml/Settings/PlaylistSettings.qml:141
-msgctxt "@option:check"
-msgid "Autoplay"
-msgstr "Samodejno predvajaj"
-
-#: src/qml/Settings/PlaylistSettings.qml:148
-msgctxt "@info:tooltip"
-msgid "When checked the next video will play automatically"
-msgstr "Ko je označeno, se bo naslednji videoposnetek predvajal samodejno"
-
-#: src/qml/Settings/PlaylistSettings.qml:156
-msgctxt "@option:check"
-msgid "Repeat"
-msgstr "Ponovi"
-
-#: src/qml/Settings/PlaylistSettings.qml:166
+#: src/qml/Settings/PlaylistSettings.qml:203
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Pokaži številko vrstice"
 
-#: src/qml/Settings/PlaylistSettings.qml:176
+#: src/qml/Settings/PlaylistSettings.qml:213
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Preklopi z miško"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:222
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Povečaj velikost pisave v celozaslonskem načinu"
 
-#: src/qml/Settings/PlaylistSettings.qml:197
+#: src/qml/Settings/PlaylistSettings.qml:234
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Zapomni si zadnje stanje seznama predvajanja"
 
-#: src/qml/Settings/PlaylistSettings.qml:204
+#: src/qml/Settings/PlaylistSettings.qml:241
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2116,7 +2190,7 @@ msgstr ""
 "Kadar je odkljukano, je stanje seznama predvajanja (vidno/skrito) zapomnjeno "
 "med izvajanji"
 
-#: src/qml/Settings/PlaylistSettings.qml:212
+#: src/qml/Settings/PlaylistSettings.qml:249
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Odpri elemente s samo enim klikom"
@@ -2411,6 +2485,14 @@ msgstr ""
 "Ni bilo mogoče pridobiti seznama predvajanja z določilnikom: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@option:check"
+#~ msgid "Autoplay"
+#~ msgstr "Samodejno predvajaj"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "When checked the next video will play automatically"
+#~ msgstr "Ko je označeno, se bo naslednji videoposnetek predvajal samodejno"
 
 #~ msgctxt "@label:textbox"
 #~ msgid "File dialog location"
