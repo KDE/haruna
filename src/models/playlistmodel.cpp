@@ -196,6 +196,12 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
     }
 }
 
+void PlaylistModel::addItems(const QList<QUrl> &urls, Behavior behavior)
+{
+    for (const auto &url : urls) {
+        addItem(url, behavior);
+    }
+}
 void PlaylistModel::appendItem(const QUrl &url)
 {
     PlaylistItem item;

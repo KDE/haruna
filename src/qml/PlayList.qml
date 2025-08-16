@@ -90,10 +90,10 @@ Page {
                         icon.width: root.buttonSize
                         icon.height: root.buttonSize
                         Kirigami.Action {
-                            text: i18nc("@action:button", "File")
+                            text: i18nc("@action:button", "Files")
                             onTriggered: {
                                 fileDialog.fileType = "video"
-                                fileDialog.fileMode = FileDialog.OpenFile
+                                fileDialog.fileMode = FileDialog.OpenFiles
                                 fileDialog.open()
                             }
                         }
@@ -479,7 +479,7 @@ Page {
         onAccepted: {
             switch (fileType) {
             case "video":
-                root.m_mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
+                root.m_mpv.playlistModel.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === FileDialog.OpenFile) {

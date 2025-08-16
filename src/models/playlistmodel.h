@@ -92,6 +92,7 @@ public:
     Q_INVOKABLE void clear();
     Q_INVOKABLE void addItem(const QString &path, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
+    Q_INVOKABLE void addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior);
 
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path);
