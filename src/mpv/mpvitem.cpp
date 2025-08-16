@@ -25,6 +25,7 @@
 #include "database.h"
 #include "generalsettings.h"
 #include "global.h"
+#include "lockmanager.h"
 #include "mpvproperties.h"
 #include "playbacksettings.h"
 #include "playlistmodel.h"
@@ -39,13 +40,8 @@
 #if defined(Q_OS_UNIX)
 #include <QDBusConnection>
 
-#include "lockmanager.h"
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
-#endif
-
-#if defined(Q_OS_WIN32)
-#include <Windows.h>
 #endif
 
 using namespace Qt::StringLiterals;

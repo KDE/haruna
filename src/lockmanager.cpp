@@ -12,6 +12,10 @@
 
 #include "screensaverdbusinterface.h"
 
+#if defined(Q_OS_WIN32)
+#include <Windows.h>
+#endif
+
 using namespace Qt::StringLiterals;
 
 LockManager::LockManager(QObject *parent)
