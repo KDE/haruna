@@ -24,8 +24,10 @@ public Q_SLOTS:
     void setInhibitionOff();
 
 private:
+#if defined(Q_OS_UNIX)
     OrgFreedesktopScreenSaverInterface *m_iface{nullptr};
     int m_cookie{-1};
+#endif
 };
 
 #endif // LOCKMANAGER_H

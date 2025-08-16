@@ -6,11 +6,13 @@
 
 #include "lockmanager.h"
 
-#include <QDBusConnection>
-
 #include <KLocalizedString>
 
+#if defined(Q_OS_UNIX)
+#include <QDBusConnection>
+
 #include "screensaverdbusinterface.h"
+#endif
 
 #if defined(Q_OS_WIN32)
 #include <Windows.h>

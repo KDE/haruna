@@ -17,6 +17,7 @@ target_sources(haruna
     database.h database.cpp
     framedecoder.h framedecoder.cpp
     global.h global.cpp
+    lockmanager.h lockmanager.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp
     models/chaptersmodel.h models/chaptersmodel.cpp
@@ -45,7 +46,6 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
     target_sources(haruna
         PRIVATE
-        lockmanager.h lockmanager.cpp
         mpris2/mediaplayer2.h mpris2/mediaplayer2.cpp
         mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
         ${haruna_screensaver_inhibit_SRCS}
