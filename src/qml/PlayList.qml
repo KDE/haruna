@@ -446,9 +446,27 @@ Page {
             visible: PlaylistSettings.overlayVideo
             anchors.fill: playlistScrollView
             sourceItem: root.m_mpv
-            sourceRect: PlaylistSettings.position === "right"
-                        ? Qt.rect(root.m_mpv.width - root.width, root.m_mpv.y, root.width, root.height)
-                        : Qt.rect(0, 0, root.width, root.height)
+            sourceRect: {
+                var rectTopLeftY = toolbar.visible ? toolbar.height : 0
+                // future proof
+                // let rectBotLeftY = footbar.visible ? footbar.height : 0
+                if (PlaylistSettings.position === "right") {
+                    return Qt.rect(
+                        root.x,
+                        root.m_mpv.y + rectTopLeftY,
+                        root.width,
+                        root.height - rectTopLeftY// - rectBotLeftY
+                        )
+                }
+                else {
+                    return Qt.rect(
+                        root.x,
+                        rectTopLeftY,
+                        root.width,
+                        root.height - rectTopLeftY// - rectBotLeftY
+                        )
+                }
+            }
         }
 
         FastBlur {
