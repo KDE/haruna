@@ -300,10 +300,14 @@ void MpvItem::setupConnections()
 
     connect(this, &MpvItem::pauseChanged, this, [=]() {
         static LockManager lockManager;
-        if (!pause() && !m_currentUrl.isEmpty()) {
-            lockManager.setInhibitionOn();
-        } else {
+        if (pause()) {
             lockManager.setInhibitionOff();
+            setPropertyBlocking(MpvProperties::self()->KeepOpen, u"always"_s);
+        } else {
+            if (!m_currentUrl.isEmpty()) {
+                lockManager.setInhibitionOn();
+            }
+            setPropertyBlocking(MpvProperties::self()->KeepOpen, u"no"_s);
         }
     });
 
