@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:42+0000\n"
-"PO-Revision-Date: 2025-08-12 05:09+0200\n"
+"POT-Creation-Date: 2025-08-17 00:41+0000\n"
+"PO-Revision-Date: 2025-08-16 06:38+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -93,7 +93,7 @@ msgstr ""
 "საშუალებას გაძლევთ დროებით გადაფაროთ yt-dlp ფორმატის არჩევანის პარამეტრი. "
 "ჩანაცვლდება, თუ პარამეტრი გრაფიკული ინტერფეისით შეიცვალა"
 
-#: src/lockmanager.cpp:34
+#: src/lockmanager.cpp:49
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -571,50 +571,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "თავიდან მინიჭება"
 
-#: src/mpv/mpvitem.cpp:379
+#: src/mpv/mpvitem.cpp:373
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "ვერ ვუკრავ: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:467 src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "სუბტიტრების დრო: %1 წმ"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "ფაილი არ არსებობს: %1"
 
-#: src/mpv/mpvitem.cpp:536
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "არაფერი"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "ეკრანის ანაბეჭდი ჩავარდა"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "ეკრანის ანაბეჭდი აღებულია"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "ეკრანის ანაბეჭდი: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -624,7 +624,7 @@ msgstr ""
 "ვიდეოტრეკი აღმოჩენილი არაა. ალბათ, ვიდეოტრეკის გაშიფვრა/დაკვრა შეუძლებელია "
 "შესაბამისი კოდეკების არარსებობის გამო"
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1106,8 +1106,11 @@ msgid "Add…"
 msgstr "დამატება…"
 
 #: src/qml/PlayList.qml:93
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "File"
+msgid "Files"
 msgstr "ფაილი"
 
 #: src/qml/PlayList.qml:101
@@ -1141,30 +1144,21 @@ msgid "Duration, descending"
 msgstr "ხანგრძლივობით, დაღმავალი"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "დაკვრა"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "დასაკრავი სიის გახსნა"
+msgstr "დასაკრავი სიის გამეორება"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "გაჩერება ბოლო ელემენტის შემდეგ"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "გამეორება"
@@ -1172,12 +1166,12 @@ msgstr "გამეორება"
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "გაჩერება ელემენტის შემდეგ"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "შემთხვევითი"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1239,7 +1233,7 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "ფაილის გადატანა ნაგვის ყუთში"
 
-#: src/qml/PlayList.qml:468 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
@@ -2078,30 +2072,21 @@ msgid "Compact"
 msgstr "კომპაქტური"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "დაკვრის მდებარეობა"
+msgstr "დაკვრის ქცევა"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "დასაკრავი სიის გახსნა"
+msgstr "დასაკრავი სიის გამეორება"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "გაჩერება ბოლო ელემენტის შემდეგ"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
 msgstr "გამეორება"
@@ -2109,12 +2094,12 @@ msgstr "გამეორება"
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "გაჩერება ელემენტის შემდეგ"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "შემთხვევითი"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2126,6 +2111,13 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>დასაკრავი სიის გამეორება</strong>: დასაკრავი სია გამეორდება "
+"უსასრულოდ<br><strong>გაჩერება ბოლო ელემენტის შემდეგ</strong>: დაკვრა "
+"გაჩერდება დასაკრავ სიაში ბოლო ელემენტის შემდეგ<br><strong>ელემენტის "
+"გამეორება</strong>: მიმდინარე ელემენტი უსასრულოდ "
+"გამეორდება<br><strong>გაჩერება ელემენტის შემდეგ</strong>: დაკვრა გაჩერდება "
+"მიმდინარე ელემენტის შემდეგ<br><strong>შემთხვევითი</strong>: დასაკრავი სიის "
+"ელემენტების დაკვრა შემთხვევით, დაუსრულებლად მოხდება"
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"

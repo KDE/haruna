@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:42+0000\n"
-"PO-Revision-Date: 2025-08-12 07:09+0200\n"
+"POT-Creation-Date: 2025-08-17 00:41+0000\n"
+"PO-Revision-Date: 2025-08-16 07:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -91,7 +91,7 @@ msgstr ""
 "Tillåter att inställningen av yt-dlp formatval tillfälligt överskrids. "
 "Skrivs över om inställningen ändras via det grafiska gränssnittet."
 
-#: src/lockmanager.cpp:34
+#: src/lockmanager.cpp:49
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -569,50 +569,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ändra tilldelning"
 
-#: src/mpv/mpvitem.cpp:379
+#: src/mpv/mpvitem.cpp:373
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kunde inte spela: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:467 src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Textningstiming: %1 sekunder"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Filen finns inte: %1"
 
-#: src/mpv/mpvitem.cpp:536
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ingen"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Skärmbild misslyckades"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Skärmbild: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -622,7 +622,7 @@ msgstr ""
 "Inget videospår upptäckt, troligen kan videospåret inte avkodas eller spelas "
 "på grund av saknade avkodare."
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1104,8 +1104,11 @@ msgid "Add…"
 msgstr "Lägg till…"
 
 #: src/qml/PlayList.qml:93
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "File"
+msgid "Files"
 msgstr "Fil"
 
 #: src/qml/PlayList.qml:101
@@ -1139,43 +1142,34 @@ msgid "Duration, descending"
 msgstr "Längd, fallande"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Uppspelning"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Öppna spellista"
+msgstr "Upprepa spellista"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Stoppa efter sista objekt"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "Upprepa"
+msgstr "Upprepa objekt"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "Stoppa efter objekt"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "Slumpmässigt"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1237,7 +1231,7 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Flytta fil till papperskorgen"
 
-#: src/qml/PlayList.qml:468 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Välj fil"
@@ -2080,43 +2074,34 @@ msgid "Compact"
 msgstr "Kompakt"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Uppspelningsposition"
+msgstr "Uppspelningsbeteende"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Öppna spellista"
+msgstr "Upprepa spellista"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Stoppa efter sista objekt"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Upprepa"
+msgstr "Upprepa objekt"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "Stoppa efter objekt"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "Slumpmässigt"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2128,6 +2113,13 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>Upprepa spellista</strong>: spellistan upprepas i all "
+"oändlighet<br><strong>Stoppa efter sista objekt</strong>: uppspelningen "
+"stoppas efter det sista objektet i spellistan<br><strong>Upprepa objekt</"
+"strong>: objektet som spelas upp upprepas i all oändlighet<br><strong>Stoppa "
+"efter objekt</strong>: uppspelningen stoppas efter objektet som spelas "
+"upp<br><strong>Slumpmässigt</strong>: objekt i spellistan spelas upp "
+"slumpmässigt i all oändlighet"
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"

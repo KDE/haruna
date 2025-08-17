@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:42+0000\n"
+"POT-Creation-Date: 2025-08-17 00:41+0000\n"
 "PO-Revision-Date: 2025-08-12 08:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -94,7 +94,7 @@ msgstr ""
 "Permet sobreescriure temporalment la configuració de selecció del format «yt-"
 "dlp». Se sobreescriurà si la configuració es canvia a través de la IGU"
 
-#: src/lockmanager.cpp:34
+#: src/lockmanager.cpp:49
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -572,50 +572,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Torna a assignar"
 
-#: src/mpv/mpvitem.cpp:379
+#: src/mpv/mpvitem.cpp:373
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "No s'ha pogut reproduir: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:467 src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Temps dels subtítols: %1 segons"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "El fitxer no existix: %1"
 
-#: src/mpv/mpvitem.cpp:536
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Sense"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla ha fallat"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "S'ha pres una captura de pantalla"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -625,7 +625,7 @@ msgstr ""
 "No s'ha detectat cap pista de vídeo, és molt probable que la pista de vídeo "
 "no es puga descodificar o reproduir a causa de còdecs que falten"
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1108,8 +1108,11 @@ msgid "Add…"
 msgstr "Afig…"
 
 #: src/qml/PlayList.qml:93
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "File"
+msgid "Files"
 msgstr "Fitxer"
 
 #: src/qml/PlayList.qml:101
@@ -1241,7 +1244,7 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Mou el fitxer cap a dins de la paperera"
 
-#: src/qml/PlayList.qml:468 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccioneu un fitxer"

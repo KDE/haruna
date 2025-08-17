@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:42+0000\n"
-"PO-Revision-Date: 2025-08-12 11:22+0200\n"
+"POT-Creation-Date: 2025-08-17 00:41+0000\n"
+"PO-Revision-Date: 2025-08-16 19:03+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -91,7 +91,7 @@ msgstr ""
 "Staat toe de instelling van het yt-dlp-formaat te overschrijven. Zal "
 "overschreven worden als de instelling gewijzigd is via de GUI"
 
-#: src/lockmanager.cpp:34
+#: src/lockmanager.cpp:49
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -569,50 +569,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Opnieuw toewijzen"
 
-#: src/mpv/mpvitem.cpp:379
+#: src/mpv/mpvitem.cpp:373
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kon niet afgespeeld worden: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:467 src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Timing van ondertiteling: %1 seconden"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Bestand bestaat niet: %1"
 
-#: src/mpv/mpvitem.cpp:536
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Geen"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Schermafdruk maken is mislukt"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Schermafdruk maken"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Schermafdruk: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -622,7 +622,7 @@ msgstr ""
 "Geen videotrack gedetecteerd, waarschijnlijk kan de videotrack niet "
 "gedecodeerd/afgespeeld worden vanwege ontbrekende codecs"
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1104,8 +1104,11 @@ msgid "Add…"
 msgstr "Toevoegen…"
 
 #: src/qml/PlayList.qml:93
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "File"
+msgid "Files"
 msgstr "Bestand"
 
 #: src/qml/PlayList.qml:101
@@ -1139,43 +1142,34 @@ msgid "Duration, descending"
 msgstr "Tijdsduur, aflopende"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Afspelen"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Afspeellijst openen"
+msgstr "Afspeellijst herhalen"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Stoppen na laatste item"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "Herhalen"
+msgstr "Item herhalen"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "Stoppen na item"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "Willekeurig"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1237,7 +1231,7 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Bestand naar prullenbak verplaatsen"
 
-#: src/qml/PlayList.qml:468 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Bestand selecteren"
@@ -2087,43 +2081,34 @@ msgid "Compact"
 msgstr "Compact"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Afspeelpositie"
+msgstr "Afspeelgedrag"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Afspeellijst openen"
+msgstr "Afspeellijst herhalen"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Stoppen na laatste item"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Herhalen"
+msgstr "Item herhalen"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "Stoppen na item"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "Willekeurig"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2135,6 +2120,12 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>Afspeellijst herhalen</strong>: afspeellijst wordt oneindig "
+"herhaald<br><strong>Stoppen na laatste item</strong>: afspelen stopt na het "
+"laatste item in de afspeellijst<br><strong>Item herhalen</strong>: nu "
+"spelend item wordt oneindig herhaald<br><strong>Stoppen na item</strong>: "
+"afspelen stopt na het nu spelende item<br><strong>Willekeurig</strong>: "
+"items in afspeellist worden oneindig willekeurig afgespeeld"
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"

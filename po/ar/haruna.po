@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:42+0000\n"
+"POT-Creation-Date: 2025-08-17 00:41+0000\n"
 "PO-Revision-Date: 2025-08-10 22:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -90,7 +90,7 @@ msgstr ""
 "يسمح بتجاوز مؤقتًا لإعداد اختيار تنسيق yt-dlp. سيستبدل إذا غُيّر الإعداد من "
 "خلال واجهة المستخدم الرسومية"
 
-#: src/lockmanager.cpp:34
+#: src/lockmanager.cpp:49
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
@@ -568,50 +568,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: src/mpv/mpvitem.cpp:379
+#: src/mpv/mpvitem.cpp:373
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:467 src/mpv/mpvitem.cpp:469
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "توقيت الترجمة:  : %1ث"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "الملف غير موجود: %1"
 
-#: src/mpv/mpvitem.cpp:536
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "لا يوجد"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:569
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "فشل أخذ اللقطة"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -621,7 +621,7 @@ msgstr ""
 "لم يكتشف أي مسار فيديو، وعلى الأرجح لا يمكن فك ترميز/تشغيل مسار الفيديو بسبب "
 "فقدان برامج الترميز"
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1113,8 +1113,11 @@ msgid "Add…"
 msgstr "أضف…"
 
 #: src/qml/PlayList.qml:93
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "File"
 msgctxt "@action:button"
-msgid "File"
+msgid "Files"
 msgstr "ملف"
 
 #: src/qml/PlayList.qml:101
@@ -1246,7 +1249,7 @@ msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "انقل إلى المهملات"
 
-#: src/qml/PlayList.qml:468 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "اختر ملفّا"
