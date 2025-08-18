@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-17 00:41+0000\n"
-"PO-Revision-Date: 2025-08-10 22:12+0400\n"
+"PO-Revision-Date: 2025-08-17 22:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -818,20 +818,14 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "لم يختر أي إجراء"
+msgstr "لم يعثر على أي إجراء"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "حمّل الترجمة من:"
+msgstr "حمّل الترجمة من"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:34
 msgctxt "@info:tooltip;"
@@ -840,6 +834,9 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"عندما يبدأ اسم مجلد نسبي بعلامة * (النجمة) ويكون البحث داخل المجلدات الفرعية "
+"ممكّنًا، سيُبحث في جميع المجلدات التي تحتوي على هذا الاسم.\n"
+" المجلدات النسبية هي مجلدات نسبية إلى مجلد الملف المشغل."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -866,9 +863,6 @@ msgid "Add New Folder"
 msgstr "أضف مجلدًا جديدًا"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "أضف مجلدًا للبحث عن الترجمات."
@@ -879,18 +873,13 @@ msgid "Search subtitles recursively"
 msgstr "ابحث عن الترجمات في المجلدات الفرعية"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"سيُبحث عن الترجمات في المجلدات الفرعية في الإعداد ”%1“\n"
+"سيُبحث عن الترجمات في المجلدات الفرعية المعرفة في الإعداد ”%1“\n"
 "البحث سيكون في المجلدات ذات الصلة فقط."
 
 #: src/qml/Header.qml:79
@@ -1113,12 +1102,9 @@ msgid "Add…"
 msgstr "أضف…"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "ملف"
+msgstr "الملفات"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
@@ -1151,43 +1137,34 @@ msgid "Duration, descending"
 msgstr "المدة تنازليًّا"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "تشغيل"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "افتح قائمة التّشغيل"
+msgstr "كرّر قائمة التّشغيل"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "توقف بعد أخر عنصر"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "التكرار"
+msgstr "كرر العنصر"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "توقف بعد عنصر"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "عشوائي"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1770,9 +1747,6 @@ msgid "Select action"
 msgstr "اختر إجراء"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "غيّر إجراء"
@@ -2102,43 +2076,34 @@ msgid "Compact"
 msgstr "مُدمج"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "موضع التشغيل"
+msgstr "سلوك التشغيل"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "افتح قائمة التّشغيل"
+msgstr "كرّر قائمة التّشغيل"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "توقف بعد أخر عنصر"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "التكرار"
+msgstr "كرر العنصر"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "توقف بعد عنصر"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "عشوائي"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"

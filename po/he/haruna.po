@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-17 00:41+0000\n"
-"PO-Revision-Date: 2025-08-11 09:18+0300\n"
+"PO-Revision-Date: 2025-08-17 10:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -1099,12 +1099,9 @@ msgid "Add…"
 msgstr "הוספה…"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "קובץ"
+msgstr "קבצים"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
@@ -1137,43 +1134,34 @@ msgid "Duration, descending"
 msgstr "יורד לפי משך"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "נגינה"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "פתיחת רשימת נגינה"
+msgstr "חזרה על רשימת נגינה"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "לעצור אחרי הפריט האחרון"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "חזרה"
+msgstr "חזרה על פריט"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "לעצור אחרי פריט"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "אקראי"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -2067,43 +2055,34 @@ msgid "Compact"
 msgstr "מצומצם"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "נקודת הנגינה"
+msgstr "התנהגות נגינה"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "פתיחת רשימת נגינה"
+msgstr "חזרה על רשימת נגינה"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "לעצור אחרי הפריט האחרון"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "חזרה"
+msgstr "חזרה על פריט"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "לעצור אחרי פריט"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "אקראי"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2115,6 +2094,12 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>חזרה על רשימת נגינה</strong>: רשימת הנגינה תתנגן במחזוריות ללא "
+"הפסקה<br><strong>לעצור אחרי הפריט האחרון</strong>: הנגינה נעצרת אחרי הפריט "
+"האחרון ברשימת הנגינה<br><strong>חזרה על פריט</strong>: הפריט הנוכחי מתנגן "
+"במחזוריות ללא הפסקה<br><strong>לעצור אחרי פריט</strong>: הנגינה נעצרת אחרי "
+"הפריט שמתנגן כרגע<br><strong>אקראי</strong>: פריטי רשימת הנגינה יתנגנו ללא "
+"הפסקה באקראי"
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
