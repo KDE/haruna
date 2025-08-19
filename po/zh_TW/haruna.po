@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-17 00:41+0000\n"
-"PO-Revision-Date: 2025-08-16 13:36+0900\n"
+"PO-Revision-Date: 2025-08-19 05:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -83,17 +83,12 @@ msgid "File to open"
 msgstr "要開啟的檔案"
 
 #: src/application.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
-msgstr ""
-"允許暫時無視 youtube-dl 的格式選取設定。該設定從圖形介面中修改時會被覆寫"
+msgstr "允許暫時無視 yt-dlp 的格式選取設定。該設定從圖形介面中修改時會被覆寫"
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -156,17 +151,13 @@ msgid "Exit Fullscreen"
 msgstr "離開全螢幕"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "下一個影格"
 
 #: src/models/actionsmodel.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "上一個影格"
@@ -214,28 +205,22 @@ msgid "Open URL"
 msgstr "開啟網址"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "播放速度"
+msgstr "提高播放速度"
 
 #: src/models/actionsmodel.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "播放速度"
+msgstr "降低播放速度"
 
 #: src/models/actionsmodel.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "播放速度"
+msgstr "重設播放速度"
 
 #: src/models/actionsmodel.cpp:184
 #, kde-format
@@ -346,76 +331,58 @@ msgid "Screenshot"
 msgstr "螢幕截圖"
 
 #: src/models/actionsmodel.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "字幕"
+msgstr "切換字幕"
 
 #: src/models/actionsmodel.cpp:336
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
-msgstr "字幕字型大小提高"
+msgstr "提高字幕字型大小"
 
 #: src/models/actionsmodel.cpp:344
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
-msgstr "字幕字型大小降低"
+msgstr "降低字幕字型大小"
 
 #: src/models/actionsmodel.cpp:352
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
-msgstr "字幕向上移動"
+msgstr "向上移動字幕"
 
 #: src/models/actionsmodel.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
-msgstr "字幕開啟"
+msgstr "向下移動字幕"
 
 #: src/models/actionsmodel.cpp:368
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "選擇字幕檔案"
+msgstr "更早顯示字幕"
 
 #: src/models/actionsmodel.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "選擇字幕檔案"
+msgstr "更晚顯示字幕"
 
 #: src/models/actionsmodel.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "字幕"
+msgstr "向上循環切換字幕"
 
 #: src/models/actionsmodel.cpp:392
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "第二字幕"
+msgstr "向下循環切換字幕"
 
 #: src/models/actionsmodel.cpp:400
 #, kde-format
@@ -448,36 +415,28 @@ msgid "Playlist"
 msgstr "播放清單"
 
 #: src/models/actionsmodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
-msgstr "影片向左移動"
+msgstr "向左移動影片"
 
 #: src/models/actionsmodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
-msgstr "影片向右移動"
+msgstr "向右移動影片"
 
 #: src/models/actionsmodel.cpp:456
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr "影片向上移動"
+msgstr "向上移動影片"
 
 #: src/models/actionsmodel.cpp:464
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr "影片向下移動"
+msgstr "向下移動影片"
 
 #: src/models/actionsmodel.cpp:472
 #, kde-format
@@ -519,99 +478,79 @@ msgstr "縮小"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "重設縮放"
 
 #: src/models/actionsmodel.cpp:528
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "對比度"
+msgstr "提高對比度"
 
 #: src/models/actionsmodel.cpp:536
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "對比度"
+msgstr "降低對比度"
 
 #: src/models/actionsmodel.cpp:544
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "對比度"
+msgstr "重設對比度"
 
 #: src/models/actionsmodel.cpp:552
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "亮度"
+msgstr "提高亮度"
 
 #: src/models/actionsmodel.cpp:560
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "亮度"
+msgstr "降低亮度"
 
 #: src/models/actionsmodel.cpp:568
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "亮度"
+msgstr "重設亮度"
 
 #: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "提升 Gamma"
 
 #: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "降低 Gamma"
 
 #: src/models/actionsmodel.cpp:592
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "Gamma"
+msgstr "重設 Gamma"
 
 #: src/models/actionsmodel.cpp:600
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "飽和度"
+msgstr "提高飽和度"
 
 #: src/models/actionsmodel.cpp:608
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "飽和度"
+msgstr "降低飽和度"
 
 #: src/models/actionsmodel.cpp:616
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "飽和度"
+msgstr "重設飽和度"
 
 #: src/models/actionsmodel.cpp:769
 #, kde-format
@@ -629,9 +568,7 @@ msgid "Reassign"
 msgstr "重新指派"
 
 #: src/mpv/mpvitem.cpp:373
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "無法播放：%1"
@@ -646,7 +583,7 @@ msgstr "字幕延遲：%1 秒"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "檔案不存在：%1"
 
 #: src/mpv/mpvitem.cpp:531
 #, kde-format
@@ -668,9 +605,7 @@ msgid "Screenshot taken"
 msgstr "已擷取螢幕截圖"
 
 #: src/mpv/mpvitem.cpp:576
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "螢幕截圖：%1"
@@ -690,12 +625,9 @@ msgid "Skipped chapter: %1"
 msgstr "已跳過章節：%1"
 
 #: src/qml/Actions.qml:93 src/qml/Actions.qml:111
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
-msgstr "音效：%1 %2"
+msgstr "音訊：%1 %2"
 
 #: src/qml/Actions.qml:164
 msgctxt ""
@@ -710,9 +642,6 @@ msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
 #: src/qml/Actions.qml:289
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "循環開始：%1"
@@ -743,9 +672,6 @@ msgid "Subtitle: None"
 msgstr "字幕：無"
 
 #: src/qml/Actions.qml:334 src/qml/Actions.qml:346
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
@@ -889,17 +815,11 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "未設定動作"
+msgstr "未找到動作。"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
 msgstr "從何處載入字幕"
@@ -911,6 +831,9 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"當相對資料夾名稱以 *（星號）開頭且已啟用遞迴搜尋的時候，所有包含該名稱的資料"
+"夾皆會被搜尋。\n"
+"相對資料夾路徑是相對於正在播放的檔案所位於的資料夾。"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -937,9 +860,6 @@ msgid "Add New Folder"
 msgstr "新增資料夾"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "新增尋找字幕用的資料夾。"
@@ -950,18 +870,13 @@ msgid "Search subtitles recursively"
 msgstr "遞迴搜尋字幕"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"字幕因「%1」設定值而遞迴搜尋。\n"
+"字幕會在「%1」設定值定義的資料夾裡遞迴搜尋。\n"
 "只會搜尋相對資料夾。"
 
 #: src/qml/Header.qml:79
@@ -1184,9 +1099,6 @@ msgid "Add…"
 msgstr "新增…"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
 msgstr "檔案"
@@ -1222,43 +1134,34 @@ msgid "Duration, descending"
 msgstr "長度，遞減"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "播放"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "開啟播放清單"
+msgstr "重複播放清單"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "在最後一個項目之後停止"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "重複"
+msgstr "重複播放項目"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "在項目之後停止"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "隨機"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1443,12 +1346,9 @@ msgid "OSD Message"
 msgstr "OSD 訊息"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "音量：%1"
+msgstr "檔案名稱：%1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1503,9 +1403,6 @@ msgid "&Save"
 msgstr "儲存(&S)"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "OSD 字型大小"
@@ -1516,9 +1413,6 @@ msgid "Maximum recent files"
 msgstr "最近檔案數量"
 
 #: src/qml/Settings/GeneralSettings.qml:61
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "清除"
@@ -1526,7 +1420,7 @@ msgstr "清除"
 #: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "從資料庫刪除最近使用紀錄"
 
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
@@ -1536,6 +1430,9 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"要顯示幾個最近使用的檔案。輸入 0（數字零）來停用。<br>每個開過的檔案都會記"
+"住。<br>粗體項目是用開啟檔案/網址動作與從外部應用程式（命令列、檔案管理員、拖"
+"放等等）來開啟的檔案。"
 
 #: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
@@ -1543,19 +1440,13 @@ msgid "Allow only one instance"
 msgstr "只允許一個實體"
 
 #: src/qml/Settings/GeneralSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"嘗試開啟另一個 Haruna 實體時不會做任何事。\n"
-"嘗試用 Haruna 開啟另一個檔案時會在執行中的實體內開啟該檔案。"
+"嘗試開啟另一個 Haruna 實體時不會做任何事。<br>嘗試用 Haruna 開啟另一個檔案時"
+"會在執行中的實體內開啟該檔案。"
 
 #: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
@@ -1563,12 +1454,9 @@ msgid "Add file to playlist"
 msgstr "將檔案新增至播放清單"
 
 #: src/qml/Settings/GeneralSettings.qml:113
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "檔案會被加到播放清單尾端"
+msgstr "檔案會被加到播放清單尾端。"
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1586,22 +1474,16 @@ msgid "Footer style"
 msgstr "頁尾樣式"
 
 #: src/qml/Settings/GeneralSettings.qml:151
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "預設封面"
+msgstr "預設"
 
 #: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "浮動"
 
 #: src/qml/Settings/GeneralSettings.qml:171
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "顯示浮動頁尾時機"
@@ -1609,12 +1491,12 @@ msgstr "顯示浮動頁尾時機"
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "在任何地方移動滑鼠時"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "在底部移動滑鼠時"
 
 #: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
@@ -1673,18 +1555,13 @@ msgid "Not supported on Wayland."
 msgstr "Wayland 上不支援。"
 
 #: src/qml/Settings/GeneralSettings.qml:290
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"視窗會依影片解析度調整大小。\n"
-"最大的大小不受 Haruna 限制，交給作業系統處理。"
+"視窗會依影片解析度調整大小。<br>最大的大小不受 Haruna 限制，交給作業系統處"
+"理。"
 
 #: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
@@ -1692,19 +1569,13 @@ msgid "Start in fullscreen mode"
 msgstr "以全螢幕模式開始"
 
 #: src/qml/Settings/GeneralSettings.qml:309
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"應用程式啟動時進入全螢幕模式。\n"
-"這會在「將大小調整到符合影片」與「記住視窗大小和位置」設定值之前優先套用。"
+"應用程式啟動時進入全螢幕模式。<br>這會在「將大小調整到符合影片」與「記住視窗"
+"大小和位置」設定值之前優先套用。"
 
 #: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
@@ -1754,12 +1625,9 @@ msgid "GUI style"
 msgstr "介面風格"
 
 #: src/qml/Settings/GeneralSettings.qml:456
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "預設封面"
+msgstr "預設"
 
 #: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
@@ -1767,26 +1635,16 @@ msgid "Use Breeze icon theme"
 msgstr "使用 Breeze 圖示主題"
 
 #: src/qml/Settings/GeneralSettings.qml:488
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"將圖示主題設為 Breeze。\n"
-"需要重新啟動。"
+msgstr "將圖示主題設為 Breeze。<br>需要重新啟動。"
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
-msgstr ""
+msgstr "移除滑鼠按鈕動作"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "新增(&A)"
@@ -1794,120 +1652,108 @@ msgstr "新增(&A)"
 #: src/qml/Settings/MouseSettings.qml:125
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "新增滑鼠按鈕動作"
 
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label:listbox"
 msgid "Mouse button"
-msgstr ""
+msgstr "滑鼠按鈕"
 
 #: src/qml/Settings/MouseSettings.qml:154
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "左鍵"
 
 #: src/qml/Settings/MouseSettings.qml:155
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "中鍵"
 
 #: src/qml/Settings/MouseSettings.qml:156
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
-msgstr ""
+msgstr "右鍵"
 
 #: src/qml/Settings/MouseSettings.qml:157
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "往前"
 
 #: src/qml/Settings/MouseSettings.qml:158
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "往後"
 
 #: src/qml/Settings/MouseSettings.qml:159
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "向上捲動"
 
 #: src/qml/Settings/MouseSettings.qml:160
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "向下捲動"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@label:listbox"
 msgid "Modifier key"
-msgstr ""
+msgstr "修飾鍵"
 
 #: src/qml/Settings/MouseSettings.qml:177
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "無修飾鍵"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
-msgstr "對比度"
+msgstr "Ctrl"
 
 #: src/qml/Settings/MouseSettings.qml:179
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
 msgctxt ""
 "@label:check whether mouse button action shoud trigger on double click"
 msgid "Trigger on double click"
-msgstr ""
+msgstr "雙擊觸發"
 
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "動作"
 
 #: src/qml/Settings/MouseSettings.qml:210
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "選擇顏色"
+msgstr "選擇動作"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "清除動作"
+msgstr "變更動作"
 
 #: src/qml/Settings/MouseSettings.qml:236
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info"
 msgid "No action selected"
-msgstr "未設定動作"
+msgstr "沒有選取動作"
 
 #: src/qml/Settings/MouseSettings.qml:259
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "滑鼠按鈕組合已經指派給「%1」"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -2095,19 +1941,11 @@ msgid ""
 msgstr "啟用時自動跳過包含某些單詞/字元的章節。"
 
 #: src/qml/Settings/PlaybackSettings.qml:345
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "跳過時在螢幕顯示 OSD 訊息"
 
 #: src/qml/Settings/PlaybackSettings.qml:354
-#, fuzzy
-#| msgctxt "@info:tooltip show osd message on skip setting"
-#| msgid ""
-#| "When skipping chapters an osd message will show the title of the skipped "
-#| "chapter."
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2117,7 +1955,7 @@ msgstr "跳過章節時跳出螢幕顯示訊息，來顯示跳過的章節的標
 #: src/qml/Settings/PlaybackSettings.qml:360
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "關鍵字"
 
 #: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "placeholder text"
@@ -2147,15 +1985,12 @@ msgstr "格式選取"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "自訂"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "預設封面"
+msgstr "預設"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2170,12 +2005,12 @@ msgstr "位置"
 #: src/qml/Settings/PlaylistSettings.qml:36
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr ""
+msgstr "左側"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr ""
+msgstr "右側"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
@@ -2183,64 +2018,49 @@ msgid "Playlist style"
 msgstr "播放清單風格"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "預設封面"
+msgstr "預設"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "預覽縮圖"
+msgstr "包含縮圖"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "簡潔"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "播放位置"
+msgstr "播放行為"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "開啟播放清單"
+msgstr "重複播放清單"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "在最後一個項目之後停止"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "重複"
+msgstr "重複播放項目"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "在項目之後停止"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "隨機"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2252,6 +2072,10 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>重複播放清單</strong>：不斷重複播放播放清單<br><strong>在最後一個項目"
+"之後停止</strong>：到播放清單最後一個項目之後停止播放<br><strong>重複播放項目"
+"</strong>：不斷重複播放目前項目<br><strong>在項目之後停止</strong>：目前播放"
+"項目結束之後即停止播放<br><strong>隨機</strong>：不斷隨機播放播放清單內的項目"
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
@@ -2588,6 +2412,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"無法取得此 ID 的播放清單：%1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"
