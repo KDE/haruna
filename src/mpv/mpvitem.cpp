@@ -310,7 +310,10 @@ void MpvItem::setupConnections()
             if (!m_currentUrl.isEmpty()) {
                 lockManager.setInhibitionOn();
             }
-            setPropertyBlocking(MpvProperties::self()->KeepOpen, u"no"_s);
+            const auto order = PlaylistSettings::playbackBehavior();
+            if (order != u"StopAfterLast"_s && order != u"StopAfterItem"_s) {
+                setPropertyBlocking(MpvProperties::self()->KeepOpen, u"no"_s);
+            }
         }
     });
 
