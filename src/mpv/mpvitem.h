@@ -15,7 +15,9 @@
 
 class ChaptersModel;
 class PlaylistModel;
+class PlaylistSortProxyModel;
 class PlaylistProxyModel;
+class PlaylistFilterProxyModel;
 class TracksModel;
 class MpvRenderer;
 
@@ -39,13 +41,10 @@ public:
     };
     Q_ENUM(AsyncIds)
 
-    Q_PROPERTY(PlaylistModel *playlistModel READ playlistModel WRITE setPlaylistModel NOTIFY playlistModelChanged)
-    PlaylistModel *playlistModel();
-    void setPlaylistModel(PlaylistModel *model);
-
-    Q_PROPERTY(PlaylistProxyModel *playlistProxyModel READ playlistProxyModel WRITE setPlaylistProxyModel NOTIFY playlistProxyModelChanged)
-    PlaylistProxyModel *playlistProxyModel();
-    void setPlaylistProxyModel(PlaylistProxyModel *model);
+    Q_PROPERTY(PlaylistFilterProxyModel *playlistFilterProxyModel READ playlistFilterProxyModel WRITE setPlaylistFilterProxyModel NOTIFY
+                   playlistFilterProxyModelChanged)
+    PlaylistFilterProxyModel *playlistFilterProxyModel();
+    void setPlaylistFilterProxyModel(PlaylistFilterProxyModel *model);
 
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     TracksModel *audioTracksModel() const;
@@ -151,8 +150,7 @@ public:
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
-    void playlistModelChanged();
-    void playlistProxyModelChanged();
+    void playlistFilterProxyModelChanged();
     void chaptersModelChanged();
     void finishedLoadingChanged();
     void playlistTitleChanged();
@@ -212,7 +210,9 @@ private:
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
     std::unique_ptr<PlaylistModel> m_playlistModel;
+    std::unique_ptr<PlaylistSortProxyModel> m_playlistSortProxyModel;
     std::unique_ptr<PlaylistProxyModel> m_playlistProxyModel;
+    std::unique_ptr<PlaylistFilterProxyModel> m_playlistFilterProxyModel;
 
     double m_position{0.0};
     QString m_formattedPosition;

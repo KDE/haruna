@@ -199,11 +199,11 @@ Item {
         }
 
         function onPlayNextAction() {
-            root.m_mpv.playlistProxyModel.playNext()
+            root.m_mpv.playlistFilterProxyModel.playNext()
         }
 
         function onPlayPreviousAction() {
-            root.m_mpv.playlistProxyModel.playPrevious()
+            root.m_mpv.playlistFilterProxyModel.playPrevious()
         }
 
         function onQuitApplicationAction() {

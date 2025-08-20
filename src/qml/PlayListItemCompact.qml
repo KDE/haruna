@@ -57,13 +57,13 @@ ItemDelegate {
 
     onClicked: {
         if (PlaylistSettings.openWithSingleClick) {
-            root.m_mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistFilterProxyModel.setPlayingItem(index)
         }
     }
 
     onDoubleClicked: {
         if (!PlaylistSettings.openWithSingleClick) {
-            root.m_mpv.playlistProxyModel.setPlayingItem(index)
+            root.m_mpv.playlistFilterProxyModel.setPlayingItem(index)
         }
     }
 

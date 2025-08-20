@@ -8,7 +8,6 @@
 #define PLAYLISTMODEL_H
 
 #include <QAbstractListModel>
-#include <QSortFilterProxyModel>
 #include <QUrl>
 #include <QtQml/qqmlregistration.h>
 
@@ -25,38 +24,6 @@ struct PlaylistItem {
     double duration{0.0};
 };
 
-class PlaylistProxyModel : public QSortFilterProxyModel
-{
-    Q_OBJECT
-    QML_NAMED_ELEMENT(PlaylistProxyModel)
-
-public:
-    explicit PlaylistProxyModel(QObject *parent = nullptr);
-
-    enum class Sort {
-        NameAscending,
-        NameDescending,
-        DurationAscending,
-        DurationDescending,
-    };
-    Q_ENUM(Sort)
-
-    Q_INVOKABLE void sortItems(Sort sortMode);
-    Q_INVOKABLE uint getPlayingItem();
-    Q_INVOKABLE void setPlayingItem(uint i);
-    Q_INVOKABLE void playNext();
-    Q_INVOKABLE void playPrevious();
-    Q_INVOKABLE void saveM3uFile(const QString &path);
-    Q_INVOKABLE void highlightInFileManager(uint row);
-    Q_INVOKABLE void removeItem(uint row);
-    Q_INVOKABLE void renameFile(uint row);
-    Q_INVOKABLE void trashFile(uint row);
-    Q_INVOKABLE void copyFileName(uint row);
-    Q_INVOKABLE void copyFilePath(uint row);
-    Q_INVOKABLE QString getFilePath(uint row);
-    Q_INVOKABLE bool isLastItem(uint row);
-};
-
 class PlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -64,7 +31,9 @@ class PlaylistModel : public QAbstractListModel
 
 public:
     explicit PlaylistModel(QObject *parent = nullptr);
+    friend class PlaylistFilterProxyModel;
     friend class PlaylistProxyModel;
+    friend class PlaylistSortProxyModel;
     friend class MpvItem;
 
     enum Roles {
@@ -89,10 +58,8 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE void clear();
-    Q_INVOKABLE void addItem(const QString &path, PlaylistModel::Behavior behavior);
-    Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
-    Q_INVOKABLE void addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior);
+    void clear();
+    void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
 
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path);
@@ -100,6 +67,7 @@ Q_SIGNALS:
 
 private:
     void appendItem(const QUrl &url);
+    void removeItem(const uint row);
     void getSiblingItems(const QUrl &url);
     void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
     void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);

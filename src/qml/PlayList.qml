@@ -120,25 +120,25 @@ Page {
                         Kirigami.Action {
                             text: i18nc("@action:button", "Name, ascending")
                             onTriggered: {
-                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameAscending)
+                                root.m_mpv.playlistFilterProxyModel.sortItems(PlaylistSortProxyModel.NameAscending)
                             }
                         }
                         Kirigami.Action {
                             text: i18nc("@action:button", "Name, descending")
                             onTriggered: {
-                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.NameDescending)
+                                root.m_mpv.playlistFilterProxyModel.sortItems(PlaylistSortProxyModel.NameDescending)
                             }
                         }
                         Kirigami.Action {
                             text: i18nc("@action:button", "Duration, ascending")
                             onTriggered: {
-                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationAscending)
+                                root.m_mpv.playlistFilterProxyModel.sortItems(PlaylistSortProxyModel.DurationAscending)
                             }
                         }
                         Kirigami.Action {
                             text: i18nc("@action:button", "Duration, descending")
                             onTriggered: {
-                                root.m_mpv.playlistProxyModel.sortItems(PlaylistProxyModel.DurationDescending)
+                                root.m_mpv.playlistFilterProxyModel.sortItems(PlaylistSortProxyModel.DurationDescending)
                             }
                         }
                     },
@@ -207,7 +207,7 @@ Page {
                         icon.name: "edit-clear-all"
                         displayHint: Kirigami.DisplayHint.AlwaysHide
                         onTriggered: {
-                            root.m_mpv.playlistModel.clear()
+                            root.m_mpv.playlistFilterProxyModel.clear()
                         }
                     },
                     Kirigami.Action {
@@ -235,7 +235,7 @@ Page {
         buttonText: i18nc("@action:button", "Add")
 
         onUrlOpened: function(url) {
-            root.m_mpv.playlistModel.addItem(url, PlaylistModel.Append)
+            root.m_mpv.playlistFilterProxyModel.addItem(url, PlaylistModel.Append)
         }
     }
 
@@ -263,10 +263,10 @@ Page {
 
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 100
-                model: root.m_mpv.playlistProxyModel
+                model: root.m_mpv.playlistFilterProxyModel
                 reuseItems: true
                 spacing: 1
-                currentIndex: root.m_mpv.playlistProxyModel.getPlayingItem()
+                currentIndex: root.m_mpv.playlistFilterProxyModel.getPlayingItem()
 
                 delegate: {
                     switch (PlaylistSettings.style) {
@@ -288,7 +288,7 @@ Page {
                     onClicked: function(mouse) {
                         switch (mouse.button) {
                         case Qt.MiddleButton:
-                            const index = root.m_mpv.playlistProxyModel.getPlayingItem()
+                            const index = root.m_mpv.playlistFilterProxyModel.getPlayingItem()
                             playlistView.positionViewAtIndex(index, ListView.Beginning)
                             break
                         case Qt.RightButton:
@@ -320,43 +320,43 @@ Page {
                     text: i18nc("@action:inmenu", "Open Containing Folder")
                     icon.name: "folder"
                     visible: contextMenuLoader.isLocal
-                    onClicked: root.m_mpv.playlistProxyModel.highlightInFileManager(contextMenuLoader.row)
+                    onClicked: root.m_mpv.playlistFilterProxyModel.highlightInFileManager(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Open in Browser")
                     icon.name: "link"
                     visible: !contextMenuLoader.isLocal
                     onClicked: {
-                        const modelIndex = root.m_mpv.playlistProxyModel.index(contextMenuLoader.row, 0)
+                        const modelIndex = root.m_mpv.playlistFilterProxyModel.index(contextMenuLoader.row, 0)
                         Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
                     }
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Copy Name")
-                    onClicked: root.m_mpv.playlistProxyModel.copyFileName(contextMenuLoader.row)
+                    onClicked: root.m_mpv.playlistFilterProxyModel.copyFileName(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: contextMenuLoader.isLocal
                           ? i18nc("@action:inmenu", "Copy Path")
                           : i18nc("@action:inmenu", "Copy URL")
-                    onClicked: root.m_mpv.playlistProxyModel.copyFilePath(contextMenuLoader.row)
+                    onClicked: root.m_mpv.playlistFilterProxyModel.copyFilePath(contextMenuLoader.row)
                 }
                 MenuSeparator {}
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove from Playlist")
                     icon.name: "remove"
-                    onClicked: root.m_mpv.playlistProxyModel.removeItem(contextMenuLoader.row)
+                    onClicked: root.m_mpv.playlistFilterProxyModel.removeItem(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Rename")
                     icon.name: "edit-rename"
                     visible: contextMenuLoader.isLocal
-                    onClicked: root.m_mpv.playlistProxyModel.renameFile(contextMenuLoader.row)
+                    onClicked: root.m_mpv.playlistFilterProxyModel.renameFile(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Scroll to Playing Item")
                     onClicked: {
-                        const index = root.m_mpv.playlistProxyModel.getPlayingItem()
+                        const index = root.m_mpv.playlistFilterProxyModel.getPlayingItem()
                         playlistView.positionViewAtIndex(index, ListView.Beginning)
                     }
                 }
@@ -367,7 +367,7 @@ Page {
                     text: i18nc("@action:inmenu", "Move File to Trash")
                     icon.name: "delete"
                     visible: contextMenuLoader.isLocal
-                    onClicked: root.m_mpv.playlistProxyModel.trashFile(contextMenuLoader.row)
+                    onClicked: root.m_mpv.playlistFilterProxyModel.trashFile(contextMenuLoader.row)
                 }
             }
 
@@ -497,13 +497,13 @@ Page {
         onAccepted: {
             switch (fileType) {
             case "video":
-                root.m_mpv.playlistModel.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
+                root.m_mpv.playlistFilterProxyModel.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === FileDialog.OpenFile) {
-                    root.m_mpv.playlistModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
+                    root.m_mpv.playlistFilterProxyModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 } else {
-                    root.m_mpv.playlistProxyModel.saveM3uFile(fileDialog.selectedFile)
+                    root.m_mpv.playlistFilterProxyModel.saveM3uFile(fileDialog.selectedFile)
                 }
 
                 break

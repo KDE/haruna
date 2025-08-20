@@ -28,8 +28,11 @@
 #include "lockmanager.h"
 #include "mpvproperties.h"
 #include "playbacksettings.h"
+#include "playlistfilterproxymodel.h"
 #include "playlistmodel.h"
+#include "playlistproxymodel.h"
 #include "playlistsettings.h"
+#include "playlistsortproxymodel.h"
 #include "recentfilesmodel.h"
 #include "subtitlessettings.h"
 #include "tracksmodel.h"
@@ -51,12 +54,16 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_audioTracksModel{std::make_unique<TracksModel>()}
     , m_subtitleTracksModel{std::make_unique<TracksModel>()}
     , m_playlistModel{std::make_unique<PlaylistModel>()}
+    , m_playlistSortProxyModel{std::make_unique<PlaylistSortProxyModel>()}
     , m_playlistProxyModel{std::make_unique<PlaylistProxyModel>()}
+    , m_playlistFilterProxyModel{std::make_unique<PlaylistFilterProxyModel>()}
     , m_chaptersModel{std::make_unique<ChaptersModel>()}
     , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(u"/watch-later/"_s)}
     , m_saveTimePositionTimer{std::make_unique<QTimer>()}
 {
-    m_playlistProxyModel->setSourceModel(m_playlistModel.get());
+    m_playlistSortProxyModel->setSourceModel(m_playlistModel.get());
+    m_playlistProxyModel->setSourceModel(m_playlistSortProxyModel.get());
+    m_playlistFilterProxyModel->setSourceModel(m_playlistProxyModel.get());
     Q_EMIT observeProperty(MpvProperties::self()->MediaTitle, MPV_FORMAT_STRING);
     Q_EMIT observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
     Q_EMIT observeProperty(MpvProperties::self()->Remaining, MPV_FORMAT_DOUBLE);
@@ -317,16 +324,16 @@ void MpvItem::onReady()
 
     QUrl url{Application::instance()->url(0)};
     if (!url.isEmpty() && url.isValid()) {
-        playlistModel()->addItem(Application::instance()->url(0), PlaylistModel::Clear);
+        playlistFilterProxyModel()->addItem(Application::instance()->url(0), PlaylistModel::Clear);
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
     } else {
         if (PlaybackSettings::openLastPlayedFile()) {
             // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
             // and the lastPlayedFile is searched in the playlist
             if (!GeneralSettings::lastPlaylist().isEmpty()) {
-                playlistModel()->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
+                playlistFilterProxyModel()->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
             } else {
-                playlistModel()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
+                playlistFilterProxyModel()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
             }
         }
     }
@@ -362,19 +369,19 @@ void MpvItem::onEndFile(const QString &reason)
 {
     // this runs after the file has been unloaded from mpv
     if (reason == u"error"_s) {
-        if (playlistModel()->rowCount() == 0) {
+        if (playlistFilterProxyModel()->rowCount() == 0) {
             return;
         }
 
-        uint currentItem = playlistProxyModel()->getPlayingItem();
-        const auto index = playlistProxyModel()->index(currentItem, 0);
-        const auto title = playlistModel()->data(playlistProxyModel()->mapToSource(index), PlaylistModel::TitleRole);
+        uint currentItem = playlistFilterProxyModel()->getPlayingItem();
+        const auto index = playlistFilterProxyModel()->index(currentItem, 0);
+        const auto title = playlistFilterProxyModel()->data(index, PlaylistModel::TitleRole);
 
         Q_EMIT Application::instance()->error(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
         return;
     }
 
-    playlistProxyModel()->playNext();
+    playlistFilterProxyModel()->playNext();
 }
 
 void MpvItem::onEndOfFileReadched()
@@ -386,9 +393,9 @@ void MpvItem::onEndOfFileReadched()
     }
 
     if (PlaylistSettings::playbackBehavior() == u"StopAfterLast"_s) {
-        uint currentItem = playlistProxyModel()->getPlayingItem();
-        if (!playlistProxyModel()->isLastItem(currentItem)) {
-            playlistProxyModel()->playNext();
+        uint currentItem = playlistFilterProxyModel()->getPlayingItem();
+        if (!playlistFilterProxyModel()->isLastItem(currentItem)) {
+            playlistFilterProxyModel()->playNext();
         } else {
             setPropertyBlocking(MpvProperties::self()->Position, 0);
             setPropertyBlocking(MpvProperties::self()->Pause, true);
@@ -713,24 +720,14 @@ QString MpvItem::md5(const QString &str)
     return QString::fromUtf8(md5.toHex());
 }
 
-PlaylistModel *MpvItem::playlistModel()
+PlaylistFilterProxyModel *MpvItem::playlistFilterProxyModel()
 {
-    return m_playlistModel.get();
+    return m_playlistFilterProxyModel.get();
 }
 
-void MpvItem::setPlaylistModel(PlaylistModel *model)
+void MpvItem::setPlaylistFilterProxyModel(PlaylistFilterProxyModel *model)
 {
-    m_playlistModel.reset(model);
-}
-
-PlaylistProxyModel *MpvItem::playlistProxyModel()
-{
-    return m_playlistProxyModel.get();
-}
-
-void MpvItem::setPlaylistProxyModel(PlaylistProxyModel *model)
-{
-    m_playlistProxyModel.reset(model);
+    m_playlistFilterProxyModel.reset(model);
 }
 
 ChaptersModel *MpvItem::chaptersModel() const

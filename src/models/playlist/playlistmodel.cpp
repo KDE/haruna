@@ -132,12 +132,6 @@ void PlaylistModel::clear()
     endResetModel();
 }
 
-void PlaylistModel::addItem(const QString &path, Behavior behavior)
-{
-    auto url = QUrl::fromUserInput(path);
-    addItem(url, behavior);
-}
-
 void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
 {
     if (!url.isValid() || url.isEmpty()) {
@@ -196,12 +190,6 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
     }
 }
 
-void PlaylistModel::addItems(const QList<QUrl> &urls, Behavior behavior)
-{
-    for (const auto &url : urls) {
-        addItem(url, behavior);
-    }
-}
 void PlaylistModel::appendItem(const QUrl &url)
 {
     PlaylistItem item;
@@ -238,6 +226,13 @@ void PlaylistModel::appendItem(const QUrl &url)
     if (m_isShuffleOn) {
         shuffleIndexes();
     }
+}
+
+void PlaylistModel::removeItem(const uint row)
+{
+    beginRemoveRows(QModelIndex(), row, row);
+    m_playlist.erase(m_playlist.begin() + row);
+    endRemoveRows();
 }
 
 void PlaylistModel::getSiblingItems(const QUrl &url)
@@ -461,195 +456,6 @@ int PlaylistModel::currentShuffledIndex() const
 void PlaylistModel::setCurrentShuffledIndex(int shuffledIndex)
 {
     m_currentShuffledIndex = shuffledIndex;
-}
-
-PlaylistProxyModel::PlaylistProxyModel(QObject *parent)
-    : QSortFilterProxyModel(parent)
-{
-    setDynamicSortFilter(true);
-}
-
-void PlaylistProxyModel::sortItems(Sort sortMode)
-{
-    switch (sortMode) {
-    case Sort::NameAscending: {
-        setSortRole(PlaylistModel::NameRole);
-        sort(0, Qt::AscendingOrder);
-        break;
-    }
-    case Sort::NameDescending: {
-        setSortRole(PlaylistModel::NameRole);
-        sort(0, Qt::DescendingOrder);
-        break;
-    }
-    case Sort::DurationAscending: {
-        setSortRole(PlaylistModel::DurationRole);
-        sort(0, Qt::AscendingOrder);
-        break;
-    }
-    case Sort::DurationDescending: {
-        setSortRole(PlaylistModel::DurationRole);
-        sort(0, Qt::DescendingOrder);
-        break;
-    }
-    }
-}
-
-uint PlaylistProxyModel::getPlayingItem()
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    return mapFromSource(model->index(model->m_playingItem, 0)).row();
-}
-
-void PlaylistProxyModel::setPlayingItem(uint i)
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    model->setPlayingItem(mapToSource(index(i, 0)).row());
-}
-
-void PlaylistProxyModel::playNext()
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    if (model->isShuffleOn()) {
-        auto nextIndex = model->currentShuffledIndex() + 1;
-        if (nextIndex >= static_cast<int>(model->shuffledIndexes().size())) {
-            nextIndex = 0;
-        }
-        auto shuffledIndex = model->shuffledIndexes().at(nextIndex);
-        model->setCurrentShuffledIndex(nextIndex);
-        model->setPlayingItem(shuffledIndex);
-    } else {
-        auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
-        auto nextIndex = currentIndex + 1;
-        if (nextIndex < rowCount()) {
-            setPlayingItem(nextIndex);
-        } else {
-            setPlayingItem(0);
-        }
-    }
-}
-
-void PlaylistProxyModel::playPrevious()
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    if (model->isShuffleOn()) {
-        auto previousIndex = model->currentShuffledIndex() - 1;
-        if (previousIndex < 0) {
-            previousIndex = model->shuffledIndexes().size() - 1;
-        }
-        auto shuffledIndex = model->shuffledIndexes().at(previousIndex);
-        model->setCurrentShuffledIndex(previousIndex);
-        model->setPlayingItem(shuffledIndex);
-    } else {
-        auto currentIndex = mapFromSource(model->index(model->m_playingItem, 0)).row();
-        auto previousIndex = currentIndex - 1;
-
-        if (previousIndex >= 0) {
-            setPlayingItem(index(previousIndex, 0).row());
-        }
-    }
-}
-
-void PlaylistProxyModel::saveM3uFile(const QString &path)
-{
-    QUrl url(path);
-    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
-    if (!m3uFile.open(QFile::WriteOnly)) {
-        return;
-    }
-    for (int i{0}; i < rowCount(); ++i) {
-        QString itemPath = data(index(i, 0), PlaylistModel::PathRole).toString();
-        m3uFile.write(itemPath.toUtf8().append("\n"));
-    }
-    m3uFile.close();
-}
-
-void PlaylistProxyModel::highlightInFileManager(uint row)
-{
-    QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
-    KIO::highlightInFileManager({QUrl::fromUserInput(path)});
-}
-
-void PlaylistProxyModel::removeItem(uint row)
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-
-    auto sourceRow = mapFromSource(model->index(row)).row();
-
-    beginRemoveRows(QModelIndex(), sourceRow, sourceRow);
-    model->m_playlist.erase(model->m_playlist.begin() + sourceRow);
-    endRemoveRows();
-}
-
-void PlaylistProxyModel::renameFile(uint row)
-{
-    QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
-    QUrl url(path);
-    if (url.scheme().isEmpty()) {
-        url.setScheme(u"file"_s);
-    }
-    KFileItem item(url);
-    auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
-    renameDialog->open();
-
-    connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
-        auto model = qobject_cast<PlaylistModel *>(sourceModel());
-        auto sourceRow = mapToSource(index(row, 0)).row();
-        auto item = model->m_playlist.at(sourceRow);
-        item.url = QUrl::fromUserInput(urls.first().path());
-        item.filename = urls.first().fileName();
-
-        Q_EMIT dataChanged(index(row, 0), index(row, 0));
-    });
-}
-
-void PlaylistProxyModel::trashFile(uint row)
-{
-    QList<QUrl> urls;
-    QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
-    QUrl url(path);
-    if (url.scheme().isEmpty()) {
-        url.setScheme(u"file"_s);
-    }
-    urls << url;
-    auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);
-    job->start();
-
-    connect(job, &KJob::result, this, [=]() {
-        if (job->error() == 0) {
-            auto model = qobject_cast<PlaylistModel *>(sourceModel());
-            auto sourceRow = mapToSource(index(row, 0)).row();
-            beginRemoveRows(QModelIndex(), sourceRow, sourceRow);
-            model->m_playlist.erase(model->m_playlist.begin() + sourceRow);
-            endRemoveRows();
-        }
-    });
-}
-
-void PlaylistProxyModel::copyFileName(uint row)
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    auto item = model->m_playlist.at(row);
-    QGuiApplication::clipboard()->setText(item.filename);
-}
-
-void PlaylistProxyModel::copyFilePath(uint row)
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    auto item = model->m_playlist.at(row);
-    QGuiApplication::clipboard()->setText(item.url.toString());
-}
-
-QString PlaylistProxyModel::getFilePath(uint row)
-{
-    auto model = qobject_cast<PlaylistModel *>(sourceModel());
-    auto item = model->m_playlist.at(row);
-    return item.url.toString();
-}
-
-bool PlaylistProxyModel::isLastItem(uint row)
-{
-    return static_cast<int>(row) == rowCount() - 1;
 }
 
 #include "moc_playlistmodel.cpp"

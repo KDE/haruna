@@ -411,7 +411,7 @@ ApplicationWindow {
                     ? PlaylistModel.AppendAndPlay
                     : PlaylistModel.Append
 
-                mpv.playlistModel.addItem(url.toString(), behavior)
+                mpv.playlistFilterProxyModel.addItem(url.toString(), behavior)
                 return
             }
 
@@ -486,7 +486,7 @@ ApplicationWindow {
 
     function openFile(path: string, openedFrom: int) : void {
         recentFilesModel.addRecentFile(path, openedFrom)
-        mpv.playlistModel.addItem(path, PlaylistModel.Clear)
+        mpv.playlistFilterProxyModel.addItem(path, PlaylistModel.Clear)
     }
 
     function isFullScreen() : bool {

@@ -26,7 +26,10 @@ target_sources(haruna
     models/recentfilesmodel.h models/recentfilesmodel.cpp
     models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp
     models/tracksmodel.h models/tracksmodel.cpp
-    models/playlistmodel.h models/playlistmodel.cpp
+    models/playlist/playlistmodel.h models/playlist/playlistmodel.cpp
+    models/playlist/playlistsortproxymodel.h models/playlist/playlistsortproxymodel.cpp
+    models/playlist/playlistproxymodel.h models/playlist/playlistproxymodel.cpp
+    models/playlist/playlistfilterproxymodel.h models/playlist/playlistfilterproxymodel.cpp
     mpv/mpvitem.h mpv/mpvitem.cpp
     mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvproperties.h
@@ -134,6 +137,7 @@ qt_add_qml_module(haruna
 target_include_directories(haruna
     PRIVATE
         models
+        models/playlist
         mpv
         ${FFMPEG_INCLUDE_DIRS}
 )
