@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-17 00:41+0000\n"
-"PO-Revision-Date: 2025-08-17 22:15+0400\n"
+"POT-Creation-Date: 2025-08-21 00:42+0000\n"
+"PO-Revision-Date: 2025-08-20 19:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -568,50 +568,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: src/mpv/mpvitem.cpp:373
+#: src/mpv/mpvitem.cpp:383
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
-#: src/mpv/mpvitem.cpp:467 src/mpv/mpvitem.cpp:469
+#: src/mpv/mpvitem.cpp:477 src/mpv/mpvitem.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "توقيت الترجمة:  : %1ث"
 
-#: src/mpv/mpvitem.cpp:498
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "الملف غير موجود: %1"
 
-#: src/mpv/mpvitem.cpp:531
+#: src/mpv/mpvitem.cpp:541
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "لا يوجد"
 
-#: src/mpv/mpvitem.cpp:569
+#: src/mpv/mpvitem.cpp:579
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "فشل أخذ اللقطة"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:584
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
-#: src/mpv/mpvitem.cpp:576
+#: src/mpv/mpvitem.cpp:586
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
 
-#: src/mpv/mpvitem.cpp:603
+#: src/mpv/mpvitem.cpp:613
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -621,7 +621,7 @@ msgstr ""
 "لم يكتشف أي مسار فيديو، وعلى الأرجح لا يمكن فك ترميز/تشغيل مسار الفيديو بسبب "
 "فقدان برامج الترميز"
 
-#: src/mpv/mpvitem.cpp:636
+#: src/mpv/mpvitem.cpp:646
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -2115,6 +2115,12 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>كرر قائمة التشغيل</strong>: تتكرر قائمة التشغيل إلى ما لا نهاية."
+"<br><strong>توقف بعد آخر عنصر</strong>: يتوقف التشغيل بعد آخر عنصر في قائمة "
+"التشغيل.<br><strong>كرر العنصر</strong>: يتكرر العنصر الحالي قيد التشغيل إلى "
+"ما لا نهاية.<br><strong>توقف بعد العنصر</strong>: يتوقف التشغيل بعد العنصر "
+"الحالي قيد التشغيل.<br><strong>عشوائي</strong>: يُتشغل عناصر قائمة التشغيل "
+"عشوائيًا إلى ما لا نهاية."
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
