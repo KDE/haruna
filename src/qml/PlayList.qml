@@ -261,6 +261,9 @@ Page {
             ListView {
                 id: playlistView
 
+                // During drag, in order not to 'reuse' dragged items, cache them
+                property var delegateCache: ({})
+
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 100
                 model: root.m_mpv.playlistFilterProxyModel
@@ -283,7 +286,8 @@ Page {
                 }
 
                 MouseArea {
-                    anchors.fill: playlistView.contentItem
+                    z: -1
+                    anchors.fill: playlistView
                     acceptedButtons: Qt.MiddleButton | Qt.RightButton
                     onClicked: function(mouse) {
                         switch (mouse.button) {
@@ -292,15 +296,19 @@ Page {
                             playlistView.positionViewAtIndex(index, ListView.Beginning)
                             break
                         case Qt.RightButton:
-                            const item = playlistView.itemAt(mouseX, mouseY)
-                            if (!item) {
-                                return
-                            }
-
-                            contextMenuLoader.open(item)
+                            // Open the menu just to present options like selection
+                            contextMenuLoader.open(null)
                             break
                         }
                     }
+                }
+
+                function openContextMenu(item) {
+                    item = item as PlaylistItemDelegate
+                    if (!item) {
+                        return
+                    }
+                    contextMenuLoader.open(item)
                 }
 
             }
@@ -319,13 +327,13 @@ Page {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Open Containing Folder")
                     icon.name: "folder"
-                    visible: contextMenuLoader.isLocal
+                    visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     onClicked: root.m_mpv.playlistFilterProxyModel.highlightInFileManager(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Open in Browser")
                     icon.name: "link"
-                    visible: !contextMenuLoader.isLocal
+                    visible: !contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     onClicked: {
                         const modelIndex = root.m_mpv.playlistFilterProxyModel.index(contextMenuLoader.row, 0)
                         Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
@@ -334,23 +342,55 @@ Page {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Copy Name")
                     onClicked: root.m_mpv.playlistFilterProxyModel.copyFileName(contextMenuLoader.row)
+                    visible: contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: contextMenuLoader.isLocal
                           ? i18nc("@action:inmenu", "Copy Path")
                           : i18nc("@action:inmenu", "Copy URL")
                     onClicked: root.m_mpv.playlistFilterProxyModel.copyFilePath(contextMenuLoader.row)
+                    visible: contextMenuLoader.row != -1
                 }
-                MenuSeparator {}
+                MenuSeparator {
+                    visible: contextMenuLoader.row != -1
+                }
+
+                // Selection manipulators
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Select All")
+                    onClicked: root.m_mpv.playlistFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.All)
+                    // visible: root.m_mpv.playlistFilterProxyModel.selectionCount !== 0
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Deselect All")
+                    onClicked: root.m_mpv.playlistFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.Clear)
+                    // visible: root.m_mpv.playlistFilterProxyModel.selectionCount !== 0
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Invert Selection")
+                    onClicked: root.m_mpv.playlistFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.Invert)
+                    // visible: root.m_mpv.playlistFilterProxyModel.selectionCount !== 0
+                }
+                //
+                MenuSeparator {
+                    // visible: contextMenuLoader.row != -1
+                }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove from Playlist")
                     icon.name: "remove"
                     onClicked: root.m_mpv.playlistFilterProxyModel.removeItem(contextMenuLoader.row)
+                    visible: root.m_mpv.playlistFilterProxyModel.selectionCount === 1 && contextMenuLoader.row != -1
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Remove Selected from Playlist")
+                    icon.name: "remove"
+                    onClicked: root.m_mpv.playlistFilterProxyModel.removeItems()
+                    visible: root.m_mpv.playlistFilterProxyModel.selectionCount > 1 && contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Rename")
                     icon.name: "edit-rename"
-                    visible: contextMenuLoader.isLocal
+                    visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     onClicked: root.m_mpv.playlistFilterProxyModel.renameFile(contextMenuLoader.row)
                 }
                 MenuItem {
@@ -361,17 +401,23 @@ Page {
                     }
                 }
                 MenuSeparator {
-                    visible: contextMenuLoader.isLocal
+                    visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Move File to Trash")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal
+                    visible: contextMenuLoader.isLocal && root.m_mpv.playlistFilterProxyModel.selectionCount === 1 && contextMenuLoader.row != -1
                     onClicked: root.m_mpv.playlistFilterProxyModel.trashFile(contextMenuLoader.row)
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Move Selected Files to Trash")
+                    icon.name: "delete"
+                    visible: contextMenuLoader.isLocal && root.m_mpv.playlistFilterProxyModel.selectionCount > 1 && contextMenuLoader.row != -1
+                    onClicked: root.m_mpv.playlistFilterProxyModel.trashFiles()
                 }
             }
 
-            function open(item: ItemDelegate) : void {
+            function open(item: PlaylistItemDelegate) : void {
                 if (!contextMenuLoader.active) {
                     contextMenuLoader.active = true
                     contextMenuLoader.loaded.connect(function() {
@@ -379,27 +425,14 @@ Page {
                     })
                     return
                 }
-                let playlistItem = null
-                switch (PlaylistSettings.style) {
-                case "default": {
-                    playlistItem = item as PlayListItem
-                    break
-                }
-                case "withThumbnails": {
-                    playlistItem = item as PlayListItemWithThumbnail
-                    break
-                }
-                case "compact": {
-                    playlistItem = item as PlayListItemCompact
-                    break
-                }
-                }
-                if (playlistItem === null) {
-                    return
-                }
 
-                contextMenuLoader.row = item.index
-                contextMenuLoader.isLocal = item.isLocal
+                if (item) {
+                    contextMenuLoader.row = item.index
+                    contextMenuLoader.isLocal = item.isLocal
+                }
+                else {
+                    contextMenuLoader.row = -1
+                }
 
                 const contextMenu = contextMenuLoader.item as Menu
                 contextMenu.popup()

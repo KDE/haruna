@@ -117,6 +117,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {DurationRole,   QByteArrayLiteral("duration")},
         {PlayingRole,    QByteArrayLiteral("isPlaying")},
         {IsLocalRole,    QByteArrayLiteral("isLocal")},
+        {IsSelectedRole, QByteArrayLiteral("isSelected")},
     };
     // clang-format on
 

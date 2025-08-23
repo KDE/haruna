@@ -44,6 +44,7 @@ public:
         FolderPathRole,
         PlayingRole,
         IsLocalRole,
+        IsSelectedRole,
     };
     Q_ENUM(Roles)
 

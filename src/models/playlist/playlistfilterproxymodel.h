@@ -10,6 +10,7 @@
 #include "playlistmodel.h"
 #include "playlistproxymodel.h"
 #include "playlistsortproxymodel.h"
+#include <QItemSelectionModel>
 
 class PlaylistModel;
 class PlaylistSortProxyModel;
@@ -21,6 +22,25 @@ class PlaylistFilterProxyModel : public QSortFilterProxyModel
 public:
     explicit PlaylistFilterProxyModel(QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+
+    // clang-format off
+    enum class Selection {
+        Clear,          // Clears the selection
+        ClearSingle,    // Clears the selection and selects the item
+        Single,         // Selects the item if it is unselected just like 'ClearSingle' option, but does nothing if it is already selected
+        Toggle,         // Toggles the selection
+        Range,          // Selects a range from anchor to the new selection
+        RangeStart,     // Not a selection, just updates the anchor
+        Invert,         // Inverts the selection
+        All,            // Selects all items
+    };
+    Q_ENUM(Selection)
+    // clang-format on
+
+    Q_PROPERTY(uint selectionCount READ selectionCount NOTIFY selectionCountChanged)
+    uint selectionCount();
+
     Q_INVOKABLE uint getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
     Q_INVOKABLE void playNext();
@@ -28,12 +48,16 @@ public:
     Q_INVOKABLE void saveM3uFile(const QString &path);
     Q_INVOKABLE void highlightInFileManager(uint row);
     Q_INVOKABLE void removeItem(uint row);
+    Q_INVOKABLE void removeItems();
     Q_INVOKABLE void renameFile(uint row);
     Q_INVOKABLE void trashFile(uint row);
+    Q_INVOKABLE void trashFiles();
     Q_INVOKABLE void copyFileName(uint row);
     Q_INVOKABLE void copyFilePath(uint row);
     Q_INVOKABLE QString getFilePath(uint row);
     Q_INVOKABLE bool isLastItem(uint row);
+    Q_INVOKABLE void moveItems(uint row, uint destinationRow);
+    Q_INVOKABLE void selectItem(uint row, Selection selectionMode);
 
     // PlaylistSortProxyModel
     Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortMode);
@@ -44,7 +68,12 @@ public:
     Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior);
 
+Q_SIGNALS:
+    void selectionCountChanged();
+
 private:
+    void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+
     // Model getters for convenience
     PlaylistProxyModel *playlistProxyModel() const;
     PlaylistSortProxyModel *sortFilterModel() const;
@@ -52,6 +81,12 @@ private:
 
     QModelIndex mapFromPlaylistModel(uint row) const;
     QModelIndex mapToPlaylistModel(uint row) const;
+
+    // Splits the selection from the given index
+    void splitItemSelection(const QModelIndexList &original, int splitRow, bool isTopDown, QModelIndexList &lowerPart, QModelIndexList &upperPart);
+    QModelIndexList selectedRows() const;
+
+    QItemSelectionModel m_selectionModel;
 };
 
 #endif // PLAYLISTFILTERPROXYMODEL_H

@@ -94,6 +94,26 @@ QModelIndex PlaylistProxyModel::mapFromSource(const QModelIndex &sourceIndex) co
     return index(remapRowFromSource(sourceIndex.row()), 0);
 }
 
+// Note that unlike the signature function, row and destinationRow are local indices. Calculated inside FilterProxyModel
+// We always expect 1 row movement so count is ignored.
+bool PlaylistProxyModel::moveRows(const QModelIndex &sourceParent, int row, int count, const QModelIndex &destinationParent, int destinationRow)
+{
+    Q_UNUSED(sourceParent)
+    Q_UNUSED(count)
+    Q_UNUSED(destinationParent)
+
+    if (row < 0 || row >= rowCount()) {
+        return false;
+    }
+
+    if (destinationRow == -1) {
+        destinationRow = rowCount() - 1;
+    }
+
+    m_layout.move(row, destinationRow);
+    return true;
+}
+
 void PlaylistProxyModel::resetLayout()
 {
     std::sort(m_layout.begin(), m_layout.end());
@@ -145,9 +165,6 @@ void PlaylistProxyModel::onRowsAboutToBeInserted(const QModelIndex &, int first,
         m_layout.append(i);
     }
     endInsertRows();
-
-    // m_selection.shiftIndices(local_first, rowsInserted);
-    // Q_EMIT dataChanged(index(local_first, 0), index(local_last, 0));
 }
 
 void PlaylistProxyModel::onRowsInserted(const QModelIndex &, int /*first*/, int /*last*/)

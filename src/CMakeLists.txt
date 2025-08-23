@@ -83,9 +83,6 @@ qt_add_qml_module(haruna
         qml/MpvVideo.qml
         qml/Osd.qml
         qml/PlayList.qml
-        qml/PlayListItem.qml
-        qml/PlayListItemCompact.qml
-        qml/PlayListItemWithThumbnail.qml
         qml/VolumeSlider.qml
         qml/Main.qml
 
@@ -101,6 +98,11 @@ qt_add_qml_module(haruna
         qml/Haruna/Components/SubtitlesFolders.qml
         qml/Haruna/Components/SubtitleTracksMenu.qml
         qml/Haruna/Components/ToolTipButton.qml
+
+        qml/Haruna/PlaylistItems/PlaylistItemDelegate.qml
+        qml/Haruna/PlaylistItems/PlayListItem.qml
+        qml/Haruna/PlaylistItems/PlayListItemCompact.qml
+        qml/Haruna/PlaylistItems/PlayListItemWithThumbnail.qml
 
         qml/Menus/AudioMenu.qml
         qml/Menus/MpvContextMenu.qml

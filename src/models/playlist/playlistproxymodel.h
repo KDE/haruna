@@ -27,6 +27,7 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
     QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
+    bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
 
 private:
     // Callbacks
