@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-21 00:42+0000\n"
+"POT-Creation-Date: 2025-08-24 00:41+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1340,13 +1340,13 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Pridať"
 
-#: src/qml/PlayList.qml:320
+#: src/qml/PlayList.qml:328
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
 
-#: src/qml/PlayList.qml:326
+#: src/qml/PlayList.qml:334
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1354,7 +1354,7 @@ msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Otvoriť v prehliadači"
 
-#: src/qml/PlayList.qml:335
+#: src/qml/PlayList.qml:343
 #, fuzzy
 #| msgctxt "NAME OF TRANSLATORS"
 #| msgid "Your names"
@@ -1362,13 +1362,13 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Roman Paholík"
 
-#: src/qml/PlayList.qml:340
+#: src/qml/PlayList.qml:349
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopírovať cestu"
 
-#: src/qml/PlayList.qml:341
+#: src/qml/PlayList.qml:350
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -1376,31 +1376,67 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopírovať URL adresu"
 
-#: src/qml/PlayList.qml:346
+#: src/qml/PlayList.qml:360
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr "Vyberte súbor"
+
+#: src/qml/PlayList.qml:365
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
+msgctxt "@action:inmenu"
+msgid "Deselect All"
+msgstr "Vyberte súbor"
+
+#: src/qml/PlayList.qml:370
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Confirm deletion"
+msgctxt "@action:inmenu"
+msgid "Invert Selection"
+msgstr "Potvrdiť vymazanie"
+
+#: src/qml/PlayList.qml:379
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Odstrániť zo zoznamu skladieb"
 
-#: src/qml/PlayList.qml:351
+#: src/qml/PlayList.qml:385
+#, fuzzy
+#| msgid "Playlist"
+msgctxt "@action:inmenu"
+msgid "Remove Selected from Playlist"
+msgstr "Odstrániť zo zoznamu skladieb"
+
+#: src/qml/PlayList.qml:391
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Premenovať"
 
-#: src/qml/PlayList.qml:357
+#: src/qml/PlayList.qml:397
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Spustiť prehrávanie"
 
-#: src/qml/PlayList.qml:367
+#: src/qml/PlayList.qml:407
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:413
+msgctxt "@action:inmenu"
+msgid "Move Selected Files to Trash"
+msgstr ""
+
+#: src/qml/PlayList.qml:519 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vyberte súbor"

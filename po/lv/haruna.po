@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-21 00:42+0000\n"
+"POT-Creation-Date: 2025-08-24 00:41+0000\n"
 "PO-Revision-Date: 2025-05-26 16:22+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1287,52 +1287,91 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Pievienot"
 
-#: src/qml/PlayList.qml:320
+#: src/qml/PlayList.qml:328
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Atvērt saturošo mapi"
 
-#: src/qml/PlayList.qml:326
+#: src/qml/PlayList.qml:334
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Atvērt pārlūkā"
 
-#: src/qml/PlayList.qml:335
+#: src/qml/PlayList.qml:343
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopēt nosaukumu"
 
-#: src/qml/PlayList.qml:340
+#: src/qml/PlayList.qml:349
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopēt ceļu"
 
-#: src/qml/PlayList.qml:341
+#: src/qml/PlayList.qml:350
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopēt URL"
 
-#: src/qml/PlayList.qml:346
+#: src/qml/PlayList.qml:360
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select File"
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr "Atlasiet datni"
+
+#: src/qml/PlayList.qml:365
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select File"
+msgctxt "@action:inmenu"
+msgid "Deselect All"
+msgstr "Atlasiet datni"
+
+#: src/qml/PlayList.qml:370
+#, fuzzy
+#| msgid "Format selection"
+msgctxt "@action:inmenu"
+msgid "Invert Selection"
+msgstr "Formāta atlase"
+
+#: src/qml/PlayList.qml:379
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Noņemt no repertuāra"
 
-#: src/qml/PlayList.qml:351
+#: src/qml/PlayList.qml:385
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Remove from Playlist"
+msgctxt "@action:inmenu"
+msgid "Remove Selected from Playlist"
+msgstr "Noņemt no repertuāra"
+
+#: src/qml/PlayList.qml:391
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pārdēvēt"
 
-#: src/qml/PlayList.qml:357
+#: src/qml/PlayList.qml:397
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Ritināt līdz atskaņotajam vienumam"
 
-#: src/qml/PlayList.qml:367
+#: src/qml/PlayList.qml:407
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Pārvietot datni uz atkritni"
 
-#: src/qml/PlayList.qml:486 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:413
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Move File to Trash"
+msgctxt "@action:inmenu"
+msgid "Move Selected Files to Trash"
+msgstr "Pārvietot datni uz atkritni"
+
+#: src/qml/PlayList.qml:519 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Atlasiet datni"
