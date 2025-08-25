@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-24 00:41+0000\n"
-"PO-Revision-Date: 2025-05-26 16:22+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2025-08-19 14:57+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -83,17 +83,13 @@ msgid "File to open"
 msgstr "Atveramā datne"
 
 #: src/application.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
+#, kde-format
 msgctxt "@info:shell"
 msgid ""
 "Allows to temporarily override the yt-dlp format selection setting. Will be "
 "overwritten if the setting is changed through the GUI"
 msgstr ""
-"Atļauj uz brīdi pārrakstīt „ytdl“ formāta atlases iestatījumi. Šis "
+"Atļauj uz brīdi pārrakstīt „yt-dlp“ formāta atlases iestatījumu. Šis "
 "iestatījums nebūs spēkā, ja tiks izmainīts no lietotāja saskarnes."
 
 #: src/lockmanager.cpp:49
@@ -127,20 +123,16 @@ msgid "Sponsor Haruna"
 msgstr "Sponsorēt „Haruna“"
 
 #: src/models/actionsmodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "Audio celiņš"
+msgstr "Pārslēgties uz audio celiņu augšup"
 
 #: src/models/actionsmodel.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "Audio celiņš"
+msgstr "Pārslēgties uz audio celiņu lejup"
 
 #: src/models/actionsmodel.cpp:72
 #, kde-format
@@ -161,20 +153,16 @@ msgid "Exit Fullscreen"
 msgstr "Iziet no pilnekrāna"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
-msgstr "Kadrs uz priekšu"
+msgstr "Paiet kadru uz priekšu"
 
 #: src/models/actionsmodel.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
-msgstr "Kadrs atpakaļ"
+msgstr "Paiet kadru atpakaļ"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
@@ -219,28 +207,22 @@ msgid "Open URL"
 msgstr "Atvērt URL"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "Atskaņošanas ātrums"
+msgstr "Palielināt atskaņošanas ātrumu"
 
 #: src/models/actionsmodel.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "Atskaņošanas ātrums"
+msgstr "Samazināt atskaņošanas ātrumu"
 
 #: src/models/actionsmodel.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback Speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "Atskaņošanas ātrums"
+msgstr "Atiestatīt atskaņošanas ātrumu"
 
 #: src/models/actionsmodel.cpp:184
 #, kde-format
@@ -309,17 +291,13 @@ msgid "Seek Big Step Backward"
 msgstr "Iet lielu soli atpakaļ"
 
 #: src/models/actionsmodel.cpp:272
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Iet uz nākamo nodaļu"
 
 #: src/models/actionsmodel.cpp:280
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Iet uz iepriekšējo nodaļu"
@@ -355,76 +333,58 @@ msgid "Screenshot"
 msgstr "Ekrānattēls"
 
 #: src/models/actionsmodel.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "Subtitri"
+msgstr "Pārslēgt subtitrus"
 
 #: src/models/actionsmodel.cpp:336
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Increase Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
-msgstr "Palielināt subtitra fontu izmēru"
+msgstr "Palielināt subtitra fonta izmēru"
 
 #: src/models/actionsmodel.cpp:344
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Decrease Font Size"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Samazināt subtitru fonta izmēru"
 
 #: src/models/actionsmodel.cpp:352
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitle Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Pārvietot subtitru augšup"
 
 #: src/models/actionsmodel.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
-msgstr "Subtitri ir ieslēgti"
+msgstr "Pārvietot subtitru lejup"
 
 #: src/models/actionsmodel.cpp:368
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "Atlasiet subtitru datni"
+msgstr "Rādīt subtitrus agrāk"
 
 #: src/models/actionsmodel.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "Atlasiet subtitru datni"
+msgstr "Rādīt subtitrus vēlāk"
 
 #: src/models/actionsmodel.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "Subtitri"
+msgstr "Pārslēgt uz iepriekšējo subtitru"
 
 #: src/models/actionsmodel.cpp:392
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "Sekundārie subtitri"
+msgstr "Pārslēgt uz nākamo subtitru"
 
 #: src/models/actionsmodel.cpp:400
 #, kde-format
@@ -457,33 +417,25 @@ msgid "Playlist"
 msgstr "Repertuārs"
 
 #: src/models/actionsmodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Left"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Pārvietot video pa kreisi"
 
 #: src/models/actionsmodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Right"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Pārvietot video pa labi"
 
 #: src/models/actionsmodel.cpp:456
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Pārvietot video augšup"
 
 #: src/models/actionsmodel.cpp:464
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Down"
+#, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Pārvietot video lejup"
@@ -528,99 +480,79 @@ msgstr "Tālināt"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Atiestatīt tālummaiņu"
 
 #: src/models/actionsmodel.cpp:528
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr "Kontrasts"
+msgstr "Palielināt kontrastu"
 
 #: src/models/actionsmodel.cpp:536
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr "Kontrasts"
+msgstr "Samazināt kontrastu"
 
 #: src/models/actionsmodel.cpp:544
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "Kontrasts"
+msgstr "Atiestatīt kontrastu"
 
 #: src/models/actionsmodel.cpp:552
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
-msgstr "Gaišums"
+msgstr "Palielināt gaišumu"
 
 #: src/models/actionsmodel.cpp:560
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "Gaišums"
+msgstr "Samazināt gaišumu"
 
 #: src/models/actionsmodel.cpp:568
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Brightness"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "Gaišums"
+msgstr "Atiestatīt gaišumu"
 
 #: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Palielināt gammu"
 
 #: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Samazināt gammu"
 
 #: src/models/actionsmodel.cpp:592
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Gamma"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "Gamma"
+msgstr "Atiestatīt gammu"
 
 #: src/models/actionsmodel.cpp:600
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr "Piesātinājums"
+msgstr "Palielināt piesātinājumu"
 
 #: src/models/actionsmodel.cpp:608
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "Piesātinājums"
+msgstr "Samazināt piesātinājumu"
 
 #: src/models/actionsmodel.cpp:616
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "Piesātinājums"
+msgstr "Atiestatīt piesātinājumu"
 
 #: src/models/actionsmodel.cpp:769
 #, kde-format
@@ -639,9 +571,7 @@ msgid "Reassign"
 msgstr "Norādīt jaunu"
 
 #: src/mpv/mpvitem.cpp:383
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Nevarēja atskaņot: %1"
@@ -656,7 +586,7 @@ msgstr "Subtitru laiks: %1 sekundes"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Datne nepastāv: %1"
 
 #: src/mpv/mpvitem.cpp:541
 #, kde-format
@@ -678,9 +608,7 @@ msgid "Screenshot taken"
 msgstr "Ekrānattēls ir uzņemts"
 
 #: src/mpv/mpvitem.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekrānattēls: %1"
@@ -702,9 +630,6 @@ msgid "Skipped chapter: %1"
 msgstr "Izlaista nodaļa: %1"
 
 #: src/qml/Actions.qml:93 src/qml/Actions.qml:111
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
@@ -722,9 +647,6 @@ msgid "Playback speed: %1"
 msgstr "Atskaņošanas ātrums: %1"
 
 #: src/qml/Actions.qml:289
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Cikla sākums: %1"
@@ -755,9 +677,6 @@ msgid "Subtitle: None"
 msgstr "Subtitri: nav"
 
 #: src/qml/Actions.qml:334 src/qml/Actions.qml:346
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Subtitri: %1 %2"
@@ -901,17 +820,11 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>“ nav atrasts."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "Nav iestatīta darbība"
+msgstr "Darbība nav atrasta."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
 msgstr "Ielādēt subtitrus no"
@@ -923,6 +836,9 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Kad relatīvas mapes nosaukums sākas ar * (zvaigznīti) un ir ieslēgta "
+"rekursīva meklēšana, tiks meklēts visās mapēs, kas satur šo vārdu.\n"
+"Relatīvās mapes atrodas relatīvi atskaņotās datnes mapei."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -949,9 +865,6 @@ msgid "Add New Folder"
 msgstr "Pievienot jaunu mapi"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Pievienot mapi, kurā meklēt subtitrus."
@@ -962,18 +875,13 @@ msgid "Search subtitles recursively"
 msgstr "Subtitrus meklēt rekursīvi"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"Subtitrus meklē rekursīvi „%1“ iestatījumā\n"
+"Subtitrus meklē rekursīvi mapē, kas ir norādīta „%1“ iestatījumā\n"
 "Meklē tikai relatīvās mapēs."
 
 #: src/qml/Header.qml:79
@@ -1196,12 +1104,9 @@ msgid "Add…"
 msgstr "Pievienot…"
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "Datne"
+msgstr "Datnes"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
@@ -1234,43 +1139,34 @@ msgid "Duration, descending"
 msgstr "Pēc ilguma dilstoši"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Atskaņošana"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Atvērt repertuāru"
+msgstr "Atkārtot repertuāru"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Apturēt pēc pēdējā vienuma"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "Atkārtot"
+msgstr "Atkārtot vienumu"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "Apturēt pēc vienuma"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "Nejauša secība"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1498,12 +1394,9 @@ msgid "OSD Message"
 msgstr "OSD ziņojums"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "Skaļums: %1"
+msgstr "Datnes nosaukums: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -1560,9 +1453,6 @@ msgid "&Save"
 msgstr "&Saglabāt"
 
 #: src/qml/Settings/GeneralSettings.qml:25
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "OSD fonta izmērs"
@@ -1573,9 +1463,6 @@ msgid "Maximum recent files"
 msgstr "Maksimālais neseno datņu skaits"
 
 #: src/qml/Settings/GeneralSettings.qml:61
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Notīrīt"
@@ -1583,7 +1470,7 @@ msgstr "Notīrīt"
 #: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Dzēš datubāzē saglabātās nesenās datnes"
 
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
@@ -1593,6 +1480,10 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Parādāmais neseno datņu skaits. Rakstiet 0 (nulle), lai izslēgtu.<br>Tiek "
+"saglabāta katra atvērtā datne.<br>Ierakst treknrakstā ir datnes, kas "
+"atvērtas caur datnes/URL atvēršanas darbībām un no ārējām programmām "
+"(komandrindas, datņu pārvaldnieka, vilkšanas un nomešanas u.c.)."
 
 #: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
@@ -1600,19 +1491,13 @@ msgid "Allow only one instance"
 msgstr "Atļaut tikai vienu instanci"
 
 #: src/qml/Settings/GeneralSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Citas „Haruna“ instances mēģinājums neko neatvērs.\n"
-"Citas datnes atvēršana ar „Haruna“ to atvērs jau esošajā instancē."
+"Citas „Haruna“ instances atvēršanas mēģinājums neko neatvērs.<br>Citas "
+"datnes atvēršana ar „Haruna“ to atvērs jau esošajā instancē."
 
 #: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
@@ -1620,20 +1505,14 @@ msgid "Add file to playlist"
 msgstr "Pievienot datni repertuāram"
 
 #: src/qml/Settings/GeneralSettings.qml:113
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "Datne tiks pievienota repertuāra beigām"
+msgstr "Datne tiks pievienota repertuāra beigām."
 
 #: src/qml/Settings/GeneralSettings.qml:122
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
-msgstr "Atskaņot nākamo datni"
+msgstr "Atskaņot jaunu datni"
 
 #: src/qml/Settings/GeneralSettings.qml:133
 msgctxt "@title"
@@ -1646,22 +1525,16 @@ msgid "Footer style"
 msgstr "Kājenes stils"
 
 #: src/qml/Settings/GeneralSettings.qml:151
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "Noklusējuma vāciņš"
+msgstr "Noklusējums"
 
 #: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Peldošs"
 
 #: src/qml/Settings/GeneralSettings.qml:171
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Rādīt peldošu kājeni pēc"
@@ -1669,12 +1542,12 @@ msgstr "Rādīt peldošu kājeni pēc"
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Katras peles kustības"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Peles kustības apakšējā daļā"
 
 #: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
@@ -1736,18 +1609,13 @@ msgid "Not supported on Wayland."
 msgstr "Nav atbalstīts ar „Wayland“."
 
 #: src/qml/Settings/GeneralSettings.qml:290
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"Loga izmērs ir mainīts atbilstoši video izšķirtspējai.\n"
-"Maksimālais izmērs nav ierobežots — šo iestatījumu pārvalda operētājsistēma."
+"Loga izmērs ir mainīts atbilstoši video izšķirtspējai.<br>Maksimālais izmērs "
+"nav ierobežots — šo iestatījumu pārvalda operētājsistēma."
 
 #: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
@@ -1755,20 +1623,14 @@ msgid "Start in fullscreen mode"
 msgstr "Palaist pilnekrāna režīmā"
 
 #: src/qml/Settings/GeneralSettings.qml:309
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Programmu ieslēgt jau uzreiz pilnekrāna režīmā.\n"
-"Šim iestatījumam ir priekšroka pār iestatījumiem „Mainīt izmēru, lai "
-"ietilpinātu video“ un „Atcerēties loga izmēru un novietojumu“."
+"Programmu ieslēgt pilnekrāna režīmā.<br>Šim iestatījumam ir priekšroka pār "
+"iestatījumiem „Mainīt izmēru, lai ietilpinātu video“ un „Atcerēties loga "
+"izmēru un novietojumu“."
 
 #: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
@@ -1820,12 +1682,9 @@ msgid "GUI style"
 msgstr "Lietotāja saskarnes stils"
 
 #: src/qml/Settings/GeneralSettings.qml:456
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "Noklusējuma vāciņš"
+msgstr "Noklusējums"
 
 #: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
@@ -1833,26 +1692,16 @@ msgid "Use Breeze icon theme"
 msgstr "Lietot „Breeze“ ikonu motīvu"
 
 #: src/qml/Settings/GeneralSettings.qml:488
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Iestata ikonu motīvu uz „Breeze“.\n"
-"Programma jāpārstartē."
+msgstr "Iestata ikonu motīvu uz „Breeze“.<br>Programma jāpārstartē."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
-msgstr ""
+msgstr "Noņemt peles pogas darbību"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Pievienot"
@@ -1860,120 +1709,108 @@ msgstr "&Pievienot"
 #: src/qml/Settings/MouseSettings.qml:125
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "Pievienot peles pogas darbību"
 
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label:listbox"
 msgid "Mouse button"
-msgstr ""
+msgstr "Peles poga"
 
 #: src/qml/Settings/MouseSettings.qml:154
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Kreisā"
 
 #: src/qml/Settings/MouseSettings.qml:155
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Vidējā"
 
 #: src/qml/Settings/MouseSettings.qml:156
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
-msgstr ""
+msgstr "Labā"
 
 #: src/qml/Settings/MouseSettings.qml:157
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "Uz priekšu"
 
 #: src/qml/Settings/MouseSettings.qml:158
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Atpakaļ"
 
 #: src/qml/Settings/MouseSettings.qml:159
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "Ritināt augšup"
 
 #: src/qml/Settings/MouseSettings.qml:160
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "Ritināt lejup"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@label:listbox"
 msgid "Modifier key"
-msgstr ""
+msgstr "Modifikatora taustiņš"
 
 #: src/qml/Settings/MouseSettings.qml:177
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "Bez modifikatora taustiņa"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
-msgstr "Kontrasts"
+msgstr "Ctrl"
 
 #: src/qml/Settings/MouseSettings.qml:179
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
 msgctxt ""
 "@label:check whether mouse button action shoud trigger on double click"
 msgid "Trigger on double click"
-msgstr ""
+msgstr "Ieslēgt ar dubultklikšķi"
 
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "Darbība"
 
 #: src/qml/Settings/MouseSettings.qml:210
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "Atlasīt krāsu"
+msgstr "Atlasīt darbību"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "Notīrīt darbību"
+msgstr "Mainīt darbību"
 
 #: src/qml/Settings/MouseSettings.qml:236
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info"
 msgid "No action selected"
-msgstr "Nav iestatīta darbība"
+msgstr "Darbība nav atlasīta"
 
 #: src/qml/Settings/MouseSettings.qml:259
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "Šī peles pogas kombinācija jau ir piešķirta „%1“"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -2190,19 +2027,11 @@ msgstr ""
 "rakstzīmes."
 
 #: src/qml/Settings/PlaybackSettings.qml:345
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Show osd message on skip"
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Izlaižot parādīt OSD ziņojumu"
 
 #: src/qml/Settings/PlaybackSettings.qml:354
-#, fuzzy
-#| msgctxt "@info:tooltip show osd message on skip setting"
-#| msgid ""
-#| "When skipping chapters an osd message will show the title of the skipped "
-#| "chapter."
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2212,7 +2041,7 @@ msgstr "Izlaižot nodaļas, parādās OSD ziņojums ar izlaistās nodaļas nosau
 #: src/qml/Settings/PlaybackSettings.qml:360
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "Atslēgvārdi"
 
 #: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "placeholder text"
@@ -2242,15 +2071,12 @@ msgstr "Formāta atlase"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Pielāgots"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "Noklusējuma vāciņš"
+msgstr "Noklusējums"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2265,12 +2091,12 @@ msgstr "Novietojums"
 #: src/qml/Settings/PlaylistSettings.qml:36
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr ""
+msgstr "Pa kreisi"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr ""
+msgstr "Pa labi"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
@@ -2278,64 +2104,49 @@ msgid "Playlist style"
 msgstr "Repertuāra stils"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "Noklusējuma vāciņš"
+msgstr "Noklusējums"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "Priekšskatīt sīktēlu"
+msgstr "Ar sīktēliem"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Kompakts"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Atskaņošanas pozīcija"
+msgstr "Atskaņošanas uzvedība"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Atvērt repertuāru"
+msgstr "Atkārtot repertuāru"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Apturēt pēc pēdējā vienuma"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Atkārtot"
+msgstr "Atkārtot vienumu"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "Apturēt pēc vienuma"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "Nejauša secība"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2347,11 +2158,19 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>Atkārtot repertuāru</strong>: repertuārs tiek visu laiku atkārtots "
+"(sākts no sākuma)<br><strong>Apturēt pēc pēdējā vienuma</strong>: "
+"atskaņošana beidzas, kad ir atskaņots pēdējais repertuāra "
+"vienums<br><strong>Atkārtot vienumu</strong>: programma visu laiku atkārtos "
+"pašreiz atskaņoto vienumu<br><strong>Apturēt pēc vienuma</strong>: "
+"atskaņošana apstāsies pēc pašreizējā vienuma atskaņošanas<br><strong>Nejauša "
+"secība</strong>: repertuāra vienumu atskaņošana notiks nejaušā secībā bez "
+"apstāšanās"
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr "Pārklājas pāri video"
+msgstr "Pārklāt pāri video"
 
 #: src/qml/Settings/PlaylistSettings.qml:176
 msgctxt "@info:tooltip"
@@ -2693,6 +2512,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Neizdevās izgūt repertuāru ar ID: %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@label:textbox"
 #~ msgid "File dialog location"
