@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-24 00:41+0000\n"
-"PO-Revision-Date: 2025-07-15 07:47+0200\n"
+"PO-Revision-Date: 2025-08-25 13:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.07.80\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -586,7 +586,7 @@ msgstr "Cadencement des sous-titres : %1 secondes"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Le fichier n'existe pas : %1"
 
 #: src/mpv/mpvitem.cpp:541
 #, kde-format
@@ -820,20 +820,14 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> n'a été trouvé."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "Aucune action sélectionnée"
+msgstr "Aucune action trouvée."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "Charger les sous-titres à partir de :"
+msgstr "Charger les sous-titres à partir de"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:34
 msgctxt "@info:tooltip;"
@@ -842,6 +836,10 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Lorsqu'un nom de dossier relatif commence par le caractère "
+"« * » (Astérisque) et que la recherche récursive est activée, tous les "
+"dossiers contenant ce nom seront parcourus.\n"
+"Les dossiers relatifs sont limités au dossier du fichier en cours de lecture."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -868,9 +866,6 @@ msgid "Add New Folder"
 msgstr "Ajouter un nouveau dossier"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Ajoutez un dossier dans lequel rechercher des sous-titres."
@@ -881,19 +876,15 @@ msgid "Search subtitles recursively"
 msgstr "Rechercher récursivement des sous-titres"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"Les sous-titres sont recherchés de manière récursive suivant le paramètre\n"
-"« %1 ». Seuls les dossiers relatifs sont recherchés."
+"Les sous-titres sont recherchés de manière récursive dans les dossiers "
+"définis par le paramètre « %1 ».\n"
+"Seuls les dossiers relatifs sont recherchés."
 
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
@@ -1115,12 +1106,9 @@ msgid "Add…"
 msgstr "Ajouter..."
 
 #: src/qml/PlayList.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "Fichier"
+msgstr "Fichiers"
 
 #: src/qml/PlayList.qml:101
 msgctxt "@action:button"
@@ -1153,43 +1141,34 @@ msgid "Duration, descending"
 msgstr "Par durée décroissante"
 
 #: src/qml/PlayList.qml:146
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Lecture"
 
 #: src/qml/PlayList.qml:152
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Ouvrir une liste de lecture"
+msgstr "Répéter la liste de lecture"
 
 #: src/qml/PlayList.qml:163
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "S'arrêter après le dernier élément"
 
 #: src/qml/PlayList.qml:173
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "Répéter"
+msgstr "Répéter l'élément"
 
 #: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "S'arrêter après l’élément"
 
 #: src/qml/PlayList.qml:194
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "Aléatoire"
 
 #: src/qml/PlayList.qml:206
 msgctxt "@action:button"
@@ -1232,27 +1211,19 @@ msgid "Copy URL"
 msgstr "Copier l'URL"
 
 #: src/qml/PlayList.qml:360
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "Sélectionnez un fichier"
+msgstr "Tout sélectionner"
 
 #: src/qml/PlayList.qml:365
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr "Sélectionnez un fichier"
+msgstr "Tout désélectionner"
 
 #: src/qml/PlayList.qml:370
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
-msgstr "Sélection du format"
+msgstr "Inverser la sélection"
 
 #: src/qml/PlayList.qml:379
 msgctxt "@action:inmenu"
@@ -1260,12 +1231,9 @@ msgid "Remove from Playlist"
 msgstr "Supprimer de la liste de lecture"
 
 #: src/qml/PlayList.qml:385
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
-msgstr "Supprimer de la liste de lecture"
+msgstr "Supprimer les éléments sélectionnés de la liste de lecture"
 
 #: src/qml/PlayList.qml:391
 msgctxt "@action:inmenu"
@@ -1283,12 +1251,9 @@ msgid "Move File to Trash"
 msgstr "Déplacer le fichier dans la corbeille"
 
 #: src/qml/PlayList.qml:413
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Move File to Trash"
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
-msgstr "Déplacer le fichier dans la corbeille"
+msgstr "Déplacer les fichiers sélectionnés vers la corbeille"
 
 #: src/qml/PlayList.qml:519 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1400,10 +1365,10 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
-"Quelle commande de PMV lancer. Veuillez consulter la page <a href=\"https://"
-"mpv.io/manual/stable/#list-of-input-commands\">Commandes de MPV</a> pour "
+"Quelle commande de mpv lancer ? Veuillez consulter la page <a href=\"https://"
+"mpv.io/manual/stable/#list-of-input-commands\">Commandes de mpv</a> pour "
 "obtenir la liste des commandes disponibles. <br>Toutes les commandes ne "
-"fonctionneront pas car certaines sont spécifiques à MPV.<br>Les commandes "
+"fonctionneront pas car certaines sont spécifiques à mpv.<br>Les commandes "
 "les plus utiles sont celles permettant de manipuler les propriétés, comme "
 "<strong>set</strong>, <strong>add</strong>, <strong>cycle</strong>."
 "<br><strong>set</strong>: définit la valeur d'une propriété <strong>set "
@@ -1490,9 +1455,6 @@ msgid "Maximum recent files"
 msgstr "Nombre maximum de fichiers récents"
 
 #: src/qml/Settings/GeneralSettings.qml:61
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Effacer"
@@ -1500,7 +1462,7 @@ msgstr "Effacer"
 #: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Supprime les fichiers récents de la base de données"
 
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
@@ -1510,6 +1472,11 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Le nombre de fichiers récents à afficher. Saisissez 0 (zéro) pour désactiver."
+"<br>Chaque fichier ouvert est enregistré.<br>Les entrées en gras sont des "
+"fichiers ouverts à partir des actions d'ouverture de fichier / URL et à "
+"partir d'applications externes (Ligne de commandes, gestionnaire de "
+"fichiers, glisser-déposer, etc.)."
 
 #: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
@@ -1517,19 +1484,13 @@ msgid "Allow only one instance"
 msgstr "Ne permettre qu'une seule instance"
 
 #: src/qml/Settings/GeneralSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Une tentative d'ouverture d'une autre instance de Haruna sera sans effet.\n"
-"Une tentative d'ouverture d'un autre fichier par Haruna l'ouvrira dans "
+"Une tentative d'ouverture d'une autre instance de Haruna sera sans effet."
+"<br>Une tentative d'ouverture d'un autre fichier par Haruna l'ouvrira dans "
 "l'instance en cours d'exécution."
 
 #: src/qml/Settings/GeneralSettings.qml:103
@@ -1538,9 +1499,6 @@ msgid "Add file to playlist"
 msgstr "Ajouter un fichier à la liste de lecture"
 
 #: src/qml/Settings/GeneralSettings.qml:113
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "Le fichier sera ajouté à la fin de la liste de lecture."
@@ -1561,35 +1519,29 @@ msgid "Footer style"
 msgstr "Style de pied de page"
 
 #: src/qml/Settings/GeneralSettings.qml:151
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "Couverture par défaut"
+msgstr "Par défaut"
 
 #: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Flottant"
 
 #: src/qml/Settings/GeneralSettings.qml:171
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
-msgstr "Afficher un pied de page flottant sur"
+msgstr "Afficher un pied de page flottant dessus"
 
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Chaque mouvement de souris"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Mouvement du bas de la souris"
 
 #: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
@@ -1650,19 +1602,14 @@ msgid "Not supported on Wayland."
 msgstr "Non pris en charge sous Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:290
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"La fenêtre est re-dimensionnée selon la résolution vidéo. \n"
-"La taille maximale n'est pas limitée. Ceci est laissé sous la responsabilité "
-"du système d'exploitation."
+"La fenêtre est re-dimensionnée selon la résolution vidéo. <br>La taille "
+"maximale n'est pas limitée. Ceci est laissé sous la responsabilité du "
+"système d'exploitation."
 
 #: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
@@ -1670,21 +1617,15 @@ msgid "Start in fullscreen mode"
 msgstr "Démarrer en mode « Plein écran »"
 
 #: src/qml/Settings/GeneralSettings.qml:309
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Basculez en mode « Plein écran » lors du démarrage de l'application.\n"
-"Cela a préséance sur les options « Redimensionner » pour s'adapter à la "
-"vidéo et « Se rappeler la configuration concernant la taille et la position "
-"des fenêtres »."
+"Basculez en mode « Plein écran » lors du démarrage de l'application.<br>Cela "
+"a préséance sur les options « Redimensionner » pour s'adapter à la vidéo et "
+"« Se rappeler la configuration concernant la taille et la position des "
+"fenêtres »."
 
 #: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
@@ -1738,12 +1679,9 @@ msgid "GUI style"
 msgstr "Style pour l'interface graphique utilisateur"
 
 #: src/qml/Settings/GeneralSettings.qml:456
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "Couverture par défaut"
+msgstr "Par défaut"
 
 #: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
@@ -1751,16 +1689,9 @@ msgid "Use Breeze icon theme"
 msgstr "Utiliser le thème d'icônes « Breeze »"
 
 #: src/qml/Settings/GeneralSettings.qml:488
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Définit « Breeze » comme thème d'icônes.\n"
-"Nécessite un redémarrage."
+msgstr "Définit « Breeze » comme thème d'icônes.<br>Nécessite un redémarrage."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -1778,113 +1709,71 @@ msgid "Add mouse button action"
 msgstr "Ajouter une action au bouton gauche de la souris"
 
 #: src/qml/Settings/MouseSettings.qml:142
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Mouse button"
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Bouton de souris"
 
 #: src/qml/Settings/MouseSettings.qml:154
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Gauche"
 
 #: src/qml/Settings/MouseSettings.qml:155
-#, fuzzy
-#| msgctxt "@label:listbox middle mouse button"
-#| msgid "Middle"
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr "Milieu"
+msgstr "Central"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Droite"
 
 #: src/qml/Settings/MouseSettings.qml:157
-#, fuzzy
-#| msgctxt "@label:listbox forward mouse button"
-#| msgid "Forward"
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "En avant"
 
 #: src/qml/Settings/MouseSettings.qml:158
-#, fuzzy
-#| msgctxt "@label:listbox back mouse button"
-#| msgid "Back"
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Retour"
 
 #: src/qml/Settings/MouseSettings.qml:159
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll up"
-#| msgid "Scroll up"
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Faire défiler vers le haut"
 
 #: src/qml/Settings/MouseSettings.qml:160
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll down"
-#| msgid "Scroll down"
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Faire défiler vers le bas"
 
 #: src/qml/Settings/MouseSettings.qml:169
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Modifier key"
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "Touche modificatrice"
 
 #: src/qml/Settings/MouseSettings.qml:177
-#, fuzzy
-#| msgctxt "@label:listbox no modifier key"
-#| msgid "No modifier"
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "Aucun modificateur"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:listbox control modifier key"
-#| msgid "Control"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Contrôle"
 
 #: src/qml/Settings/MouseSettings.qml:179
-#, fuzzy
-#| msgctxt "@label:listbox shift modifier key"
-#| msgid "Shift"
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr "Màj"
+msgstr "Maj"
 
 #: src/qml/Settings/MouseSettings.qml:180
-#, fuzzy
-#| msgctxt "@label:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "ALT"
 
 #: src/qml/Settings/MouseSettings.qml:181
-#, fuzzy
-#| msgctxt "@label:listbox meta modifier key"
-#| msgid "Meta"
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -1906,12 +1795,9 @@ msgid "Select action"
 msgstr "Sélectionnez une action"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "Changer d'action"
+msgstr "Modifier l'action"
 
 #: src/qml/Settings/MouseSettings.qml:236
 msgctxt "@info"
@@ -2184,15 +2070,12 @@ msgstr "Sélection du format"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Personnalisé"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "Couverture par défaut"
+msgstr "Par défaut"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2205,17 +2088,11 @@ msgid "Position"
 msgstr "Position"
 
 #: src/qml/Settings/PlaylistSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox playlist position"
 msgid "Left"
 msgstr "Gauche"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
 msgstr "Droite"
@@ -2226,64 +2103,49 @@ msgid "Playlist style"
 msgstr "Style de la liste de lecture"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "Couverture par défaut"
+msgstr "Par défaut"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "Vignettes d'aperçu"
+msgstr "Avec vignettes"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Synthétique"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Position de lecture"
+msgstr "Comportement de la lecture"
 
 #: src/qml/Settings/PlaylistSettings.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Ouvrir une liste de lecture"
+msgstr "Répéter la liste de lecture"
 
 #: src/qml/Settings/PlaylistSettings.qml:114
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "S'arrêter après le dernier élément"
 
 #: src/qml/Settings/PlaylistSettings.qml:120
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Répéter"
+msgstr "Répéter l'élément"
 
 #: src/qml/Settings/PlaylistSettings.qml:126
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "S'arrêter après l’élément"
 
 #: src/qml/Settings/PlaylistSettings.qml:132
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "Aléatoire"
 
 #: src/qml/Settings/PlaylistSettings.qml:147
 msgctxt "@info:tooltip playback description"
@@ -2295,6 +2157,14 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>Répéter la liste de lecture</strong> : la liste de lecture est "
+"répétée indéfiniment<br><strong>Arrêter après le dernier élément</strong> : "
+"la lecture s'arrête après le dernier élément de la liste de "
+"lecture<strong>Répéter l'élément : l'élément</strong> en<br>cours de lecture "
+"est répété indéfiniment<br><strong>Arrêter après l'élément</strong> : la "
+"lecture s'arrête après l'élément en cours de lecture<br><strong> Aléatoire</"
+"strong> : les éléments de la liste de lecture sont lus indéfiniment de façon "
+"aléatoire."
 
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
@@ -2649,6 +2519,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Impossible de charger la liste de lecture avec l'identifiant : %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"
