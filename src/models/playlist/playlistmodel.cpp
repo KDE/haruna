@@ -50,27 +50,33 @@ PlaylistModel::PlaylistModel(QObject *parent)
     connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
     connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
 
-    connect(Worker::instance(), &Worker::metaDataReady, this, [=](int i, const QUrl &url, KFileMetaData::PropertyMultiMap metaData) {
-        if (m_playlist.empty() || i > m_playlist.size()) {
-            return;
-        }
-        if (m_playlist[i].url == url) {
-            auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
-            auto title = metaData.value(KFileMetaData::Property::Title).toString();
+    connect(Worker::instance(),
+            &Worker::metaDataReady,
+            this,
+            [=](int i, const QUrl &url, const QString playlistName, KFileMetaData::PropertyMultiMap metaData) {
+                if (m_playlist.empty() || static_cast<unsigned long>(i) > m_playlist.size()) {
+                    return;
+                }
+                if (m_playlistName != playlistName) {
+                    return;
+                }
+                if (m_playlist[i].url == url) {
+                    auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
+                    auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
-            m_playlist[i].formattedDuration = Application::formatTime(duration);
-            m_playlist[i].duration = duration;
-            m_playlist[i].mediaTitle = title;
+                    m_playlist[i].formattedDuration = Application::formatTime(duration);
+                    m_playlist[i].duration = duration;
+                    m_playlist[i].mediaTitle = title;
 
-            Q_EMIT dataChanged(index(i, 0), index(i, 0));
-        } else {
-            qDebug() << "\n"
-                     << u"Data missmatch: the url at position %1 received from the worker thread:"_s.arg(i) << "\n"
-                     << u"%1"_s.arg(url.toString()) << "\n"
-                     << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
-                     << u"%1"_s.arg(m_playlist[i].url.toString());
-        }
-    });
+                    Q_EMIT dataChanged(index(i, 0), index(i, 0));
+                } else {
+                    qDebug() << "\n"
+                             << u"Data missmatch: the url at position %1 received from the worker thread:"_s.arg(i) << "\n"
+                             << u"%1"_s.arg(url.toString()) << "\n"
+                             << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
+                             << u"%1"_s.arg(m_playlist[i].url.toString());
+                }
+            });
 }
 
 int PlaylistModel::rowCount(const QModelIndex &parent) const
@@ -96,7 +102,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case DurationRole:
         return QVariant(item.formattedDuration);
     case PlayingRole:
-        return QVariant(static_cast<int>(m_playingItem) == index.row());
+        return QVariant(static_cast<int>(m_playingItem) == index.row() && m_isPlaying);
     case FolderPathRole:
         return QVariant(item.folderPath);
     case IsLocalRole:
@@ -191,6 +197,12 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
     }
 }
 
+void PlaylistModel::stop()
+{
+    m_isPlaying = false;
+    Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
+}
+
 void PlaylistModel::appendItem(const QUrl &url)
 {
     PlaylistItem item;
@@ -220,7 +232,7 @@ void PlaylistModel::appendItem(const QUrl &url)
     beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
 
     m_playlist.push_back(item);
-    Q_EMIT itemAdded(row, item.url.toString());
+    Q_EMIT itemAdded(row, item.url.toString(), m_playlistName);
 
     endInsertRows();
 
@@ -277,7 +289,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         if (url.toLocalFile() == fileUrl.toLocalFile()) {
             playingItem = m_playlist.size() - 1;
         }
-        Q_EMIT itemAdded(m_playlist.size() - 1, item.url.toString());
+        Q_EMIT itemAdded(m_playlist.size() - 1, item.url.toString(), m_playlistName);
     }
     endInsertRows();
 
@@ -350,7 +362,7 @@ void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &video
 
         beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
         m_playlist.push_back(item);
-        Q_EMIT itemAdded(i, item.url.toString());
+        Q_EMIT itemAdded(i, item.url.toString(), m_playlistName);
         endInsertRows();
 
         if (videoId.isEmpty()) {
@@ -410,10 +422,11 @@ void PlaylistModel::setPlayingItem(uint i)
 
     uint previousItem{m_playingItem};
     m_playingItem = i;
+    m_isPlaying = true;
     Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
 
-    Q_EMIT playingItemChanged();
+    Q_EMIT playingItemChanged(m_playlistName);
 
     GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
     GeneralSettings::setLastPlaylist(m_playlistPath);

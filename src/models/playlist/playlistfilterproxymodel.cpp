@@ -7,6 +7,7 @@
 #include "playlistfilterproxymodel.h"
 
 #include <QClipboard>
+#include <QDir>
 #include <QFile>
 #include <QGuiApplication>
 #include <QMap>
@@ -20,8 +21,15 @@
 using namespace Qt::StringLiterals;
 PlaylistFilterProxyModel::PlaylistFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel{parent}
+    , m_playlistModel{std::make_unique<PlaylistModel>()}
+    , m_playlistSortProxyModel{std::make_unique<PlaylistSortProxyModel>()}
+    , m_playlistProxyModel{std::make_unique<PlaylistProxyModel>()}
     , m_selectionModel(this)
 {
+    m_playlistSortProxyModel->setSourceModel(m_playlistModel.get());
+    m_playlistProxyModel->setSourceModel(m_playlistSortProxyModel.get());
+    setSourceModel(m_playlistProxyModel.get());
+
     connect(&m_selectionModel, &QItemSelectionModel::selectionChanged, this, &PlaylistFilterProxyModel::onSelectionChanged);
 }
 
@@ -36,6 +44,11 @@ QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) cons
 uint PlaylistFilterProxyModel::selectionCount()
 {
     return m_selectionModel.selectedRows().count();
+}
+
+uint PlaylistFilterProxyModel::itemCount()
+{
+    return rowCount();
 }
 
 uint PlaylistFilterProxyModel::getPlayingItem()
@@ -117,6 +130,8 @@ void PlaylistFilterProxyModel::removeItem(uint row)
 {
     auto model = playlistModel();
     model->removeItem(mapToPlaylistModel(row).row());
+    Q_EMIT itemsRemoved();
+    Q_EMIT itemCountChanged();
 }
 
 void PlaylistFilterProxyModel::removeItems()
@@ -133,6 +148,8 @@ void PlaylistFilterProxyModel::removeItems()
     for (auto row : std::as_const(rows)) {
         model->removeItem(row);
     }
+    Q_EMIT itemsRemoved();
+    Q_EMIT itemCountChanged();
 }
 
 void PlaylistFilterProxyModel::renameFile(uint row)
@@ -297,6 +314,7 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
         }
         rowOffset++;
     }
+    Q_EMIT itemsMoved();
 }
 
 void PlaylistFilterProxyModel::selectItem(uint row, Selection selectionMode)
@@ -348,25 +366,39 @@ void PlaylistFilterProxyModel::selectItem(uint row, Selection selectionMode)
     }
 }
 
+// Used by QML::ListView, inside onModelChanged. When the visible playlist is scrolled down and another
+// tab is pressed, the new tab will use pooled items without updating them. This updates the list as whole.
+void PlaylistFilterProxyModel::refreshData()
+{
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
+}
+
 void PlaylistFilterProxyModel::sortItems(PlaylistSortProxyModel::Sort sortMode)
 {
-    sortFilterModel()->sortItems(sortMode);
+    playlistSortProxyModel()->sortItems(sortMode);
+    Q_EMIT itemsSorted();
 }
 
 void PlaylistFilterProxyModel::clear()
 {
     playlistModel()->clear();
+    Q_EMIT itemsRemoved();
+    Q_EMIT itemCountChanged();
 }
 
 void PlaylistFilterProxyModel::addItem(const QString &path, PlaylistModel::Behavior behavior)
 {
     auto url = QUrl::fromUserInput(path);
     playlistModel()->addItem(url, behavior);
+    Q_EMIT itemsInserted();
+    Q_EMIT itemCountChanged();
 }
 
 void PlaylistFilterProxyModel::addItem(const QUrl &url, PlaylistModel::Behavior behavior)
 {
     playlistModel()->addItem(url, behavior);
+    Q_EMIT itemsInserted();
+    Q_EMIT itemCountChanged();
 }
 
 void PlaylistFilterProxyModel::addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior)
@@ -374,6 +406,8 @@ void PlaylistFilterProxyModel::addItems(const QList<QUrl> &urls, PlaylistModel::
     for (const auto &url : urls) {
         playlistModel()->addItem(url, behavior);
     }
+    Q_EMIT itemsInserted();
+    Q_EMIT itemCountChanged();
 }
 
 void PlaylistFilterProxyModel::onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
@@ -389,23 +423,23 @@ void PlaylistFilterProxyModel::onSelectionChanged(const QItemSelection &selected
 
 PlaylistProxyModel *PlaylistFilterProxyModel::playlistProxyModel() const
 {
-    return qobject_cast<PlaylistProxyModel *>(sourceModel());
+    return m_playlistProxyModel.get();
 }
 
-PlaylistSortProxyModel *PlaylistFilterProxyModel::sortFilterModel() const
+PlaylistSortProxyModel *PlaylistFilterProxyModel::playlistSortProxyModel() const
 {
-    return qobject_cast<PlaylistSortProxyModel *>(playlistProxyModel()->sourceModel());
+    return m_playlistSortProxyModel.get();
 }
 
 PlaylistModel *PlaylistFilterProxyModel::playlistModel() const
 {
-    return qobject_cast<PlaylistModel *>(sortFilterModel()->sourceModel());
+    return m_playlistModel.get();
 }
 
 QModelIndex PlaylistFilterProxyModel::mapFromPlaylistModel(uint row) const
 {
     QModelIndex playlistIndex = playlistModel()->index(row, 0);
-    QModelIndex sortProxyIndex = sortFilterModel()->mapFromSource(playlistIndex);
+    QModelIndex sortProxyIndex = playlistSortProxyModel()->mapFromSource(playlistIndex);
     QModelIndex playlistProxyIndex = playlistProxyModel()->mapFromSource(sortProxyIndex);
     QModelIndex filterProxyIndex = mapFromSource(playlistProxyIndex);
     return filterProxyIndex;
@@ -416,7 +450,7 @@ QModelIndex PlaylistFilterProxyModel::mapToPlaylistModel(uint row) const
     QModelIndex filterProxyIndex = index(row, 0);
     QModelIndex playlistProxyIndex = mapToSource(filterProxyIndex);
     QModelIndex sortProxyIndex = playlistProxyModel()->mapToSource(playlistProxyIndex);
-    QModelIndex playlistIndex = sortFilterModel()->mapToSource(sortProxyIndex);
+    QModelIndex playlistIndex = playlistSortProxyModel()->mapToSource(sortProxyIndex);
     return playlistIndex;
 }
 
@@ -452,6 +486,47 @@ QModelIndexList PlaylistFilterProxyModel::selectedRows() const
         return a.row() < b.row();
     });
     return selection;
+}
+
+void PlaylistFilterProxyModel::saveInternalPlaylist(const QString &path, const QString &playlistName)
+{
+    // path must be the config folder
+    QUrl url(path);
+
+    QFile configPath(url.toString(QUrl::PreferLocalFile));
+    QFileInfo fileInfo(configPath);
+
+    // Check if the directory exists and create it if it does not
+    QDir dir = fileInfo.dir();
+    if (!dir.exists()) {
+        if (!dir.mkpath(dir.absolutePath())) {
+            qWarning() << "Failed to create playlist directory:" << dir.path();
+            return;
+        }
+    }
+    saveM3uFile(url.toString(QUrl::PreferLocalFile) + playlistName + u".m3u");
+}
+
+void PlaylistFilterProxyModel::renameInternalPlaylist(const QString &path, const QString &playlistOldName, const QString &playlistNewName)
+{
+    // path must be the config folder
+    QUrl url(path);
+
+    auto oldFilePath = url.toString(QUrl::PreferLocalFile) + playlistOldName + u".m3u";
+    QFile oldFile(oldFilePath);
+
+    if (!oldFile.exists()) {
+        qWarning() << "Internal playlist does not exist:" << oldFilePath;
+        return;
+    }
+    if (!oldFile.copy(url.toString(QUrl::PreferLocalFile) + playlistNewName + u".m3u")) {
+        qWarning() << "Copy failed:" << oldFile.errorString();
+        return;
+    }
+    if (!oldFile.remove()) {
+        qWarning() << "Remove original failed:" << oldFile.errorString();
+        return;
+    }
 }
 
 #include "moc_playlistfilterproxymodel.cpp"

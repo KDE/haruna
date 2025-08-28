@@ -21,6 +21,8 @@ class PlaylistFilterProxyModel : public QSortFilterProxyModel
     QML_NAMED_ELEMENT(PlaylistFilterProxyModel)
 public:
     explicit PlaylistFilterProxyModel(QObject *parent = nullptr);
+    friend class PlaylistMultiProxiesModel;
+    friend class MpvItem;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -41,6 +43,9 @@ public:
     Q_PROPERTY(uint selectionCount READ selectionCount NOTIFY selectionCountChanged)
     uint selectionCount();
 
+    Q_PROPERTY(uint itemCount READ itemCount NOTIFY itemCountChanged)
+    uint itemCount();
+
     Q_INVOKABLE uint getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
     Q_INVOKABLE void playNext();
@@ -58,6 +63,7 @@ public:
     Q_INVOKABLE bool isLastItem(uint row);
     Q_INVOKABLE void moveItems(uint row, uint destinationRow);
     Q_INVOKABLE void selectItem(uint row, Selection selectionMode);
+    Q_INVOKABLE void refreshData();
 
     // PlaylistSortProxyModel
     Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortMode);
@@ -70,13 +76,18 @@ public:
 
 Q_SIGNALS:
     void selectionCountChanged();
+    void itemCountChanged();
+    void itemsSorted();
+    void itemsMoved();
+    void itemsRemoved();
+    void itemsInserted();
 
 private:
     void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
     // Model getters for convenience
     PlaylistProxyModel *playlistProxyModel() const;
-    PlaylistSortProxyModel *sortFilterModel() const;
+    PlaylistSortProxyModel *playlistSortProxyModel() const;
     PlaylistModel *playlistModel() const;
 
     QModelIndex mapFromPlaylistModel(uint row) const;
@@ -85,7 +96,12 @@ private:
     // Splits the selection from the given index
     void splitItemSelection(const QModelIndexList &original, int splitRow, bool isTopDown, QModelIndexList &lowerPart, QModelIndexList &upperPart);
     QModelIndexList selectedRows() const;
+    void saveInternalPlaylist(const QString &path, const QString &playlistName);
+    void renameInternalPlaylist(const QString &path, const QString &playlistOldName, const QString &playlistNewName);
 
+    std::unique_ptr<PlaylistModel> m_playlistModel;
+    std::unique_ptr<PlaylistSortProxyModel> m_playlistSortProxyModel;
+    std::unique_ptr<PlaylistProxyModel> m_playlistProxyModel;
     QItemSelectionModel m_selectionModel;
 };
 

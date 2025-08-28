@@ -30,6 +30,8 @@ target_sources(haruna
     models/playlist/playlistsortproxymodel.h models/playlist/playlistsortproxymodel.cpp
     models/playlist/playlistproxymodel.h models/playlist/playlistproxymodel.cpp
     models/playlist/playlistfilterproxymodel.h models/playlist/playlistfilterproxymodel.cpp
+    models/playlist/playlistmultiproxiesmodel.h models/playlist/playlistmultiproxiesmodel.cpp
+    models/playlist/playlistrenamevalidator.h models/playlist/playlistrenamevalidator.cpp
     mpv/mpvitem.h mpv/mpvitem.cpp
     mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvproperties.h
@@ -103,6 +105,7 @@ qt_add_qml_module(haruna
         qml/Haruna/PlaylistItems/PlayListItem.qml
         qml/Haruna/PlaylistItems/PlayListItemCompact.qml
         qml/Haruna/PlaylistItems/PlayListItemWithThumbnail.qml
+        qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml
 
         qml/Menus/AudioMenu.qml
         qml/Menus/MpvContextMenu.qml

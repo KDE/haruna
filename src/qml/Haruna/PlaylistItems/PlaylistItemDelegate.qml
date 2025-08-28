@@ -123,8 +123,10 @@ Item {
         }
 
         function scrollToPlayingItem() {
-            const index = root.m_mpv.playlistFilterProxyModel.getPlayingItem()
-            root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
+            if (root.m_mpv.visibleFilterProxyModel === root.m_mpv.activeFilterProxyModel) {
+                const index = root.m_mpv.visibleFilterProxyModel.getPlayingItem()
+                root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
+            }
         }
 
         function openContextMenu() {
@@ -132,7 +134,7 @@ Item {
         }
 
         function setPlayingItem(pIndex) {
-            root.m_mpv.playlistFilterProxyModel.setPlayingItem(pIndex)
+            root.m_mpv.visibleFilterProxyModel.setPlayingItem(pIndex)
         }
     }
 
@@ -175,11 +177,11 @@ Item {
     }
 
     function moveItems(pFrom, pTo) {
-        root.m_mpv.playlistFilterProxyModel.moveItems(pFrom, pTo)
+        root.m_mpv.visibleFilterProxyModel.moveItems(pFrom, pTo)
     }
 
     function selectItem(pIndex, pSelectionType) {
-        root.m_mpv.playlistFilterProxyModel.selectItem(pIndex, pSelectionType)
+        root.m_mpv.visibleFilterProxyModel.selectItem(pIndex, pSelectionType)
     }
 
     function cacheItem() {

@@ -25,7 +25,7 @@ public:
     static Worker *instance();
 
 Q_SIGNALS:
-    void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
+    void metaDataReady(uint index, const QUrl &url, const QString playlistName, KFileMetaData::PropertyMultiMap metadata);
     void thumbnailSuccess(const QString &path, const QImage &image);
     void thumbnailFail();
     void mprisThumbnailSuccess(const QImage &image);
@@ -33,7 +33,7 @@ Q_SIGNALS:
     void ytdlpVersionRetrived(const QByteArray &version);
 
 public Q_SLOTS:
-    void getMetaData(uint index, const QString &path);
+    void getMetaData(uint index, const QString &path, const QString playlistName);
     void makePlaylistThumbnail(const QString &path, int width);
     QImage frameToImage(const QString &path, int width);
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);

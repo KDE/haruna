@@ -31,6 +31,7 @@ class PlaylistModel : public QAbstractListModel
 
 public:
     explicit PlaylistModel(QObject *parent = nullptr);
+    friend class PlaylistMultiProxiesModel;
     friend class PlaylistFilterProxyModel;
     friend class PlaylistProxyModel;
     friend class PlaylistSortProxyModel;
@@ -61,10 +62,11 @@ public:
 
     void clear();
     void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
+    void stop();
 
 Q_SIGNALS:
-    void itemAdded(uint index, const QString &path);
-    void playingItemChanged();
+    void itemAdded(uint index, const QString &path, QString playlistName);
+    void playingItemChanged(QString playlistName);
 
 private:
     void appendItem(const QUrl &url);
@@ -77,6 +79,9 @@ private:
     void setPlayingItem(uint i);
 
     std::vector<PlaylistItem> m_playlist;
+    QString m_playlistName{u"Default"};
+    // The flag to check if this is the active playlist.
+    bool m_isPlaying{false};
     uint m_playingItem{0};
     QString m_playlistPath;
     int m_httpItemCounter{0};

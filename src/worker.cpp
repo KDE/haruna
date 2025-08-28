@@ -36,7 +36,7 @@ Worker *Worker::instance()
     return &w;
 }
 
-void Worker::getMetaData(uint index, const QString &path)
+void Worker::getMetaData(uint index, const QString &path, const QString playlistName)
 {
     using namespace KFileMetaData;
 
@@ -56,7 +56,7 @@ void Worker::getMetaData(uint index, const QString &path)
 
     auto properties = result.properties();
 
-    Q_EMIT metaDataReady(index, url, properties);
+    Q_EMIT metaDataReady(index, url, playlistName, properties);
 }
 
 void Worker::makePlaylistThumbnail(const QString &path, int width)

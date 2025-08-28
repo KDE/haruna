@@ -160,7 +160,7 @@ Item {
                     icon.height: root.buttonSize
                     display: AbstractButton.IconOnly
                     focusPolicy: Qt.NoFocus
-                    enabled: root.m_playlist.playlistView.count > 1
+                    enabled: root.m_mpv.activeFilterProxyModel.itemCount > 1
 
                     ToolTip {
                         text: i18nc("@info:tooltip", "Play previous file")
@@ -176,7 +176,7 @@ Item {
                     icon.height: root.buttonSize
                     display: AbstractButton.IconOnly
                     focusPolicy: Qt.NoFocus
-                    enabled: root.m_playlist.playlistView.count > 1
+                    enabled: root.m_mpv.activeFilterProxyModel.itemCount > 1
 
                     ToolTip {
                         text: i18nc("@info:tooltip", "Play next file")

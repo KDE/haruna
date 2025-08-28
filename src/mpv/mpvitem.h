@@ -14,10 +14,8 @@
 #include "recentfilesmodel.h"
 
 class ChaptersModel;
-class PlaylistModel;
-class PlaylistSortProxyModel;
-class PlaylistProxyModel;
 class PlaylistFilterProxyModel;
+class PlaylistMultiProxiesModel;
 class TracksModel;
 class MpvRenderer;
 
@@ -41,10 +39,18 @@ public:
     };
     Q_ENUM(AsyncIds)
 
-    Q_PROPERTY(PlaylistFilterProxyModel *playlistFilterProxyModel READ playlistFilterProxyModel WRITE setPlaylistFilterProxyModel NOTIFY
-                   playlistFilterProxyModelChanged)
-    PlaylistFilterProxyModel *playlistFilterProxyModel();
-    void setPlaylistFilterProxyModel(PlaylistFilterProxyModel *model);
+    Q_PROPERTY(PlaylistFilterProxyModel *activeFilterProxyModel READ activeFilterProxyModel NOTIFY activeFilterProxyModelChanged)
+    PlaylistFilterProxyModel *activeFilterProxyModel();
+
+    Q_PROPERTY(PlaylistFilterProxyModel *visibleFilterProxyModel READ visibleFilterProxyModel NOTIFY visibleFilterProxyModelChanged)
+    PlaylistFilterProxyModel *visibleFilterProxyModel();
+
+    Q_PROPERTY(PlaylistFilterProxyModel *defaultFilterProxyModel READ defaultFilterProxyModel NOTIFY defaultFilterProxyModelChanged)
+    PlaylistFilterProxyModel *defaultFilterProxyModel();
+
+    Q_PROPERTY(PlaylistMultiProxiesModel *playlists READ playlists WRITE setPlaylists NOTIFY playlistsChanged)
+    PlaylistMultiProxiesModel *playlists();
+    void setPlaylists(PlaylistMultiProxiesModel *model);
 
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     TracksModel *audioTracksModel() const;
@@ -150,7 +156,10 @@ public:
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
-    void playlistFilterProxyModelChanged();
+    void activeFilterProxyModelChanged();
+    void visibleFilterProxyModelChanged();
+    void defaultFilterProxyModelChanged();
+    void playlistsChanged();
     void chaptersModelChanged();
     void finishedLoadingChanged();
     void playlistTitleChanged();
@@ -195,7 +204,7 @@ private:
     void onReady();
     void setupEofBehavior();
     void onEndFile(const QString &reason);
-    void onEndOfFileReadched();
+    void onEndOfFileReached();
     void onPropertyChanged(const QString &property, const QVariant &value);
     void saveTimePosition();
     double loadTimePosition();
@@ -209,10 +218,7 @@ private:
     std::unique_ptr<TracksModel> m_subtitleTracksModel;
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
-    std::unique_ptr<PlaylistModel> m_playlistModel;
-    std::unique_ptr<PlaylistSortProxyModel> m_playlistSortProxyModel;
-    std::unique_ptr<PlaylistProxyModel> m_playlistProxyModel;
-    std::unique_ptr<PlaylistFilterProxyModel> m_playlistFilterProxyModel;
+    std::unique_ptr<PlaylistMultiProxiesModel> m_playlists;
 
     double m_position{0.0};
     QString m_formattedPosition;
