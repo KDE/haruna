@@ -28,6 +28,12 @@ SettingsBasePage {
         model: root.m_customCommandsModel
         delegate: customCommandDelegate
 
+        displaced: Transition {
+            NumberAnimation {
+                properties: "y"
+                duration: Kirigami.Units.shortDuration
+            }
+        }
 
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
