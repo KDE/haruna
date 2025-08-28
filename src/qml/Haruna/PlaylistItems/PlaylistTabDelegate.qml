@@ -6,6 +6,7 @@
 
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
@@ -28,126 +29,178 @@ TabButton {
     property bool leftDrag: dragHandler.activeTranslation.x < dragCenter
     property int maximumTabWidth: 150
 
-    implicitWidth: calculateWidth()
-    text: index === 0
-              ? i18nc("@label:title name of default playlist tab", "Default")
-              : name
-
-
-    TextMetrics {
-        id: metrics
-        font: root.font
-        text: root.name
-    }
+    implicitWidth: Math.min(maximumTabWidth, contentItem.implicitWidth)
 
     Drag.active: dragHandler.active
     Drag.hotSpot.x: calculateHotSpot()
 
-    Item {
-        id: leftItem
+    contentItem: RowLayout {
+        Item {
+            id: leftItem
 
-        anchors {
-            left: root.left
-            verticalCenter: root.verticalCenter
-            leftMargin: leftItem.state !== "Drag" ? Kirigami.Units.largeSpacing : Kirigami.Units.mediumSpacing
-        }
+            property int iconSize: Kirigami.Units.iconSizes.small
 
-        width: state !== "Drag" ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
-        height: state !== "Drag" ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
+            Layout.leftMargin: Kirigami.Units.smallSpacing
+            Layout.preferredWidth: iconSize
+            Layout.preferredHeight: iconSize
 
-        states: [
-            State {
-                name: "Play"; when: root.isActive && (root.index === 0 || !leftItemHover.hovered)
-            },
-            State {
-                name: "Drag"; when: root.index !== 0
-            },
-            State {
-                name: "Empty"
-            }
-
-        ]
-
-        Kirigami.Icon {
-            id: dragIcon
-            z: 4
-
-            anchors.fill: parent
-
-            source: {
-                switch(leftItem.state){
-                case "Empty":
-                    return ""
-                case "Play":
-                    return "media-playback-start"
-                case "Drag":
-                    return "handle-sort"
+            states: [
+                State {
+                    name: "Play"
+                    when: root.isActive && (root.index === 0 || !leftItemHover.hovered)
+                },
+                State {
+                    name: "Drag"
+                    when: root.index !== 0
+                },
+                State {
+                    name: "Empty"
                 }
-            }
 
-            width: leftItem.state !== "Drag" ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
-            height: leftItem.state !== "Drag" ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
-            transform: leftItem.state !== "Drag" ? [] : rotateIcon
+            ]
 
-            Rotation {
-                id: rotateIcon
-                origin.x: dragIcon.width * 0.5
-                origin.y: dragIcon.height * 0.5
-                angle: 90
-            }
-        }
+            Kirigami.Icon {
+                id: dragIcon
 
-        HoverHandler {
-            id: leftItemHover
-            cursorShape: root.index !== 0 ? Qt.OpenHandCursor : Qt.ArrowCursor
-        }
+                z: 4
+                anchors.fill: parent
+                width: leftItem.iconSize
+                height: leftItem.iconSize
 
-        DragHandler {
-            id: dragHandler
-
-            acceptedButtons: Qt.LeftButton
-            dragThreshold: 10
-            cursorShape: active ? Qt.ClosedHandCursor : Qt.OpenHandCursor
-            enabled: root.index !== 0
-
-            target: root
-            yAxis.enabled: false
-            xAxis {
-                enabled: true
-                minimum: 0
-                maximum: root.TabBar.tabBar?.contentWidth
-            }
-
-            onGrabChanged: function(transition, eventPoint) {
-                switch(transition){
-                case PointerDevice.GrabExclusive:
-                case PointerDevice.GrabPassive:
-                    root.z = 100
-                    break
-                case PointerDevice.CancelGrabExclusive:
-                case PointerDevice.CancelGrabPassive:
-                case PointerDevice.UngrabExclusive:
-                case PointerDevice.UngrabPassive:
-                    root.z = 0
-                    if (root.index !== 0) {
-                        var prevItem = root.TabBar.tabBar.itemAt(root.index - 1)
-                        root.x = prevItem.x + prevItem.width
+                source: {
+                    switch(leftItem.state){
+                    case "Empty":
+                        return ""
+                    case "Play":
+                        return "media-playback-start"
+                    case "Drag":
+                        return "drag-surface"
                     }
-                    root.dragCenter = 0
-                    break
                 }
             }
+
+            HoverHandler {
+                id: leftItemHover
+
+                cursorShape: root.index !== 0 ? Qt.OpenHandCursor : Qt.ArrowCursor
+            }
+
+            DragHandler {
+                id: dragHandler
+
+                acceptedButtons: Qt.LeftButton
+                dragThreshold: 10
+                cursorShape: active ? Qt.ClosedHandCursor : Qt.OpenHandCursor
+                enabled: root.index !== 0
+
+                target: root
+                yAxis.enabled: false
+                xAxis {
+                    enabled: true
+                    minimum: 0
+                    maximum: root.TabBar.tabBar?.contentWidth
+                }
+
+                onGrabChanged: function(transition, eventPoint) {
+                    switch(transition){
+                    case PointerDevice.GrabExclusive:
+                    case PointerDevice.GrabPassive:
+                        root.z = 100
+                        break
+                    case PointerDevice.CancelGrabExclusive:
+                    case PointerDevice.CancelGrabPassive:
+                    case PointerDevice.UngrabExclusive:
+                    case PointerDevice.UngrabPassive:
+                        root.z = 0
+                        if (root.index !== 0) {
+                            var prevItem = root.TabBar.tabBar.itemAt(root.index - 1)
+                            root.x = prevItem.x + prevItem.width
+                        }
+                        root.dragCenter = 0
+                        break
+                    }
+                }
+            }
+        }
+
+        Text {
+            id: tabText
+
+            text: root.index === 0
+                      ? i18nc("@label:title name of default playlist tab", "Default")
+                      : root.name
+            font: root.font
+            elide: Text.ElideRight
+
+            Layout.fillWidth: true
+
+            ToolTip {
+                text: root.name
+                visible: tabText.truncated && root.hovered
+            }
+        }
+
+        Rectangle {
+            id: rightItem
+
+            visible: root.index !== 0
+            radius: Kirigami.Units.iconSizes.small
+            color: rightItemHover.hovered ? Kirigami.Theme.negativeTextColor : "transparent"
+
+            Layout.rightMargin: Kirigami.Units.largeSpacing
+            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+
+            Kirigami.Icon {
+                id: closeIcon
+
+                z: 4
+                anchors.fill: parent
+                width: Kirigami.Units.iconSizes.small
+                height: Kirigami.Units.iconSizes.small
+
+                source: "dialog-close"
+                color: rightItemHover.hovered ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
+            }
+
+            HoverHandler {
+                id: rightItemHover
+            }
+
+            TapHandler {
+                id: rightItemTap
+
+                dragThreshold: Kirigami.Units.iconSizes.small * 0.75
+                onPressedChanged: {
+                    if (pressed) {
+                        progressTimer.start()
+                        progressTimer.heldAmount = 0.0
+                    }
+                    else {
+                        progressTimer.stop()
+                        progressTimer.heldAmount = 0.0
+                    }
+                }
+            }
+        }
+
+        // ensures there's enough space after the text
+        // when the close button is hidden
+        Item {
+            visible: root.index === 0
+            Layout.preferredWidth: leftItem.width + Kirigami.Units.largeSpacing
         }
     }
 
     DropArea {
         id: dropArea
-        anchors.fill: parent
 
+        anchors.fill: parent
         onEntered: function (drag) {
-            const from = drag.source.index
+            const sourceItem = (drag.source as PlaylistTabDelegate)
+            const from = sourceItem.index
             const to = root.index
-            const leftDrag = drag.source.leftDrag
+            const leftDrag = sourceItem.leftDrag
 
             if (to === 0) {
                 return
@@ -160,65 +213,20 @@ TabButton {
             // We want to re-check from the new position, after the tab move. dragCenter effectively updates
             // the dragHandler.activeTranslation.x
             if (leftDrag) {
-                if (from < to) return
-                drag.source.dragCenter -= root.width
+                if (from < to) {
+                    return
+                }
+                sourceItem.dragCenter -= root.width
             }
             if (!leftDrag) {
-                if (from > to) return
-                drag.source.dragCenter += root.width
+                if (from > to) {
+                    return
+                }
+                sourceItem.dragCenter += root.width
             }
 
             root.TabBar.tabBar.movePlaylistItem(from, to)
             root.movePlaylist(from, to)
-        }
-    }
-
-    Rectangle {
-        id: rightItem
-        visible: root.index !== 0
-
-        anchors {
-            right: root.right
-            verticalCenter: root.verticalCenter
-            rightMargin: Kirigami.Units.largeSpacing
-        }
-
-        width: Kirigami.Units.iconSizes.small
-        height: Kirigami.Units.iconSizes.small
-        radius: Kirigami.Units.iconSizes.small
-
-        color: rightItemHover.hovered ? Kirigami.Theme.negativeTextColor : "transparent"
-
-        Kirigami.Icon {
-            id: closeIcon
-            z: 4
-
-            anchors.fill: parent
-            source: "dialog-close"
-            color: rightItemHover.hovered ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
-
-            width: Kirigami.Units.iconSizes.small
-            height: Kirigami.Units.iconSizes.small
-        }
-
-        HoverHandler {
-            id: rightItemHover
-        }
-
-        TapHandler {
-            id: rightItemTap
-            dragThreshold: Kirigami.Units.iconSizes.small * 0.75
-
-            onPressedChanged: {
-                if (pressed) {
-                    progressTimer.start()
-                    progressTimer.heldAmount = 0.0
-                }
-                else {
-                    progressTimer.stop()
-                    progressTimer.heldAmount = 0.0
-                }
-            }
         }
     }
 
@@ -244,6 +252,7 @@ TabButton {
 
     Rectangle {
         id: removingProgressOverlay
+
         z: 0
         visible: progressTimer.progress > 0.0
         color: Qt.alpha(Kirigami.Theme.negativeTextColor, 0.5)
@@ -258,6 +267,7 @@ TabButton {
 
     Item {
         anchors.fill: parent
+
         TapHandler {
             enabled: root.index !== 0
             acceptedButtons: Qt.MiddleButton
@@ -317,15 +327,5 @@ TabButton {
             return -(item.width - root.width)
         }
         return defaultSpot
-    }
-
-    function calculateWidth() {
-        let margins = leftItem.anchors.leftMargin + leftItem.width + rightItem.width + rightItem.anchors.rightMargin
-        return Math.min( // cap by maximumTabWidth
-                Math.min( // calculate text width and add handlerMargins+spacing VS. default implicit
-                    metrics.tightBoundingRect.width + Kirigami.Units.mediumSpacing * 2,
-                    implicitBackgroundWidth)
-                + margins,
-                maximumTabWidth)
     }
 }
