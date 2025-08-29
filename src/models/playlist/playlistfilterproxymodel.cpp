@@ -1,5 +1,6 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -505,28 +506,6 @@ void PlaylistFilterProxyModel::saveInternalPlaylist(const QString &path, const Q
         }
     }
     saveM3uFile(url.toString(QUrl::PreferLocalFile) + playlistName + u".m3u");
-}
-
-void PlaylistFilterProxyModel::renameInternalPlaylist(const QString &path, const QString &playlistOldName, const QString &playlistNewName)
-{
-    // path must be the config folder
-    QUrl url(path);
-
-    auto oldFilePath = url.toString(QUrl::PreferLocalFile) + playlistOldName + u".m3u";
-    QFile oldFile(oldFilePath);
-
-    if (!oldFile.exists()) {
-        qWarning() << "Internal playlist does not exist:" << oldFilePath;
-        return;
-    }
-    if (!oldFile.copy(url.toString(QUrl::PreferLocalFile) + playlistNewName + u".m3u")) {
-        qWarning() << "Copy failed:" << oldFile.errorString();
-        return;
-    }
-    if (!oldFile.remove()) {
-        qWarning() << "Remove original failed:" << oldFile.errorString();
-        return;
-    }
 }
 
 #include "moc_playlistfilterproxymodel.cpp"

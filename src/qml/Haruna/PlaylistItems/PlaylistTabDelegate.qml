@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -131,6 +131,7 @@ TabButton {
                       : root.name
             font: root.font
             elide: Text.ElideRight
+            color: Kirigami.Theme.textColor
 
             Layout.fillWidth: true
 
@@ -296,7 +297,6 @@ TabButton {
             }
         }
     }
-
 
     function movePlaylist(from, to) {
         root.m_mpv.playlists.movePlaylist(from, to)

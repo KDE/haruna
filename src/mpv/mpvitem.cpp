@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -333,12 +334,19 @@ void MpvItem::onReady()
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
     } else {
         if (PlaybackSettings::openLastPlayedFile()) {
-            // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
-            // and the lastPlayedFile is searched in the playlist
-            if (!GeneralSettings::lastPlaylist().isEmpty()) {
-                proxyModel->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
+            // Internal playlists are read at this point and active playlist is set. If an internal playlist
+            // is active, make it visible too and start playing.
+            if (m_playlists->m_activeIndex != 0) {
+                m_playlists->setVisibleIndex(m_playlists->m_activeIndex);
+                activeFilterProxyModel()->setPlayingItem(activeFilterProxyModel()->playlistModel()->m_playingItem);
             } else {
-                proxyModel->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
+                // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
+                // and the lastPlayedFile is searched in the playlist
+                if (!GeneralSettings::lastPlaylist().isEmpty()) {
+                    proxyModel->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
+                } else {
+                    proxyModel->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -97,7 +98,6 @@ private:
     void splitItemSelection(const QModelIndexList &original, int splitRow, bool isTopDown, QModelIndexList &lowerPart, QModelIndexList &upperPart);
     QModelIndexList selectedRows() const;
     void saveInternalPlaylist(const QString &path, const QString &playlistName);
-    void renameInternalPlaylist(const QString &path, const QString &playlistOldName, const QString &playlistNewName);
 
     std::unique_ptr<PlaylistModel> m_playlistModel;
     std::unique_ptr<PlaylistSortProxyModel> m_playlistSortProxyModel;

@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -7,6 +7,8 @@
 #include "playlistmultiproxiesmodel.h"
 
 #include <QDir>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QLineEdit>
 #include <QStandardPaths>
 
@@ -35,20 +37,42 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
         return;
     }
 
-    while (!cacheFile.atEnd()) {
-        QByteArray line = QByteArray::fromPercentEncoding(cacheFile.readLine().simplified());
-        QString playlistName = QString::fromUtf8(line);
-        if (playlistName == u"Default"_s) {
-            continue;
-        }
-        QUrl playlistUrl = getPlaylistUrl(playlistName);
-        if (playlistUrl.isEmpty()) {
-            continue;
-        }
-        addPlaylist(playlistName, playlistUrl);
-    }
+    const QByteArray data = cacheFile.readAll();
     cacheFile.close();
-    savePlaylistCache();
+
+    QJsonParseError parseErr;
+    QJsonDocument doc = QJsonDocument::fromJson(data, &parseErr);
+    if (parseErr.error != QJsonParseError::NoError) {
+        qWarning() << "Failed loading playlist cache";
+        savePlaylistCache();
+        return;
+    }
+
+    if (doc.isArray()) {
+        for (int i = 0; i < doc.array().count(); ++i) {
+            const QJsonValue &value = doc.array()[i];
+            if (!value.isObject()) {
+                continue;
+            }
+            QJsonObject playlist = value.toObject();
+            QString playlistName = playlist.value(u"name").toString();
+            if (playlistName == u"Default"_s) {
+                continue;
+            }
+            QUrl playlistUrl = getPlaylistUrl(playlistName);
+            if (playlistUrl.isEmpty()) {
+                continue;
+            }
+            addPlaylist(playlistName, playlistUrl);
+
+            bool active = playlist.value(u"isActive").toBool();
+            if (active) {
+                uint index = playlist.value(u"currentItem").toInt();
+                setActiveIndex(i);
+                activeFilterProxy()->setPlayingItem(index);
+            }
+        }
+    }
 }
 
 uint PlaylistMultiProxiesModel::activeIndex()
@@ -58,6 +82,10 @@ uint PlaylistMultiProxiesModel::activeIndex()
 
 void PlaylistMultiProxiesModel::setActiveIndex(uint pIndex)
 {
+    if (m_activeIndex == pIndex) {
+        return;
+    }
+
     uint prev = m_activeIndex;
     m_activeIndex = pIndex;
 
@@ -74,6 +102,10 @@ uint PlaylistMultiProxiesModel::visibleIndex()
 
 void PlaylistMultiProxiesModel::setVisibleIndex(uint pIndex)
 {
+    if (m_visibleIndex == pIndex) {
+        return;
+    }
+
     uint prev = m_visibleIndex;
     m_visibleIndex = pIndex;
 
@@ -135,7 +167,7 @@ void PlaylistMultiProxiesModel::addPlaylist(QString playlistName, QUrl internalU
     filterModel->playlistModel()->m_playlistName = playlistName;
 
     if (!internalUrl.isEmpty()) {
-        filterModel->playlistModel()->addM3uItems(internalUrl, PlaylistModel::Behavior::Clear);
+        filterModel->playlistModel()->addM3uItems(internalUrl, PlaylistModel::Behavior::Append);
     }
 
     connect(filterModel->playlistModel(), &PlaylistModel::playingItemChanged, this, [=](QString pName) {
@@ -143,10 +175,17 @@ void PlaylistMultiProxiesModel::addPlaylist(QString playlistName, QUrl internalU
         // playlist. If not, we stop that playlist and update the active one.
         QString activePlaylistName = m_playlistFilterProxyModels[m_activeIndex]->playlistModel()->m_playlistName;
         if (activePlaylistName != pName) {
-            // Double clicked on an item in a different list
+            // Either changed the item via GUI, or loaded as last played item internally.
+            // Get the tab index by checking the name
             activeFilterProxy()->playlistModel()->stop();
-            setActiveIndex(m_visibleIndex);
+            for (uint i = 0; i < m_playlistFilterProxyModels.size(); ++i) {
+                if (m_playlistFilterProxyModels[i]->playlistModel()->m_playlistName == pName) {
+                    setActiveIndex(i);
+                    break;
+                }
+            }
         }
+        savePlaylistCache();
         Q_EMIT playingItemChanged();
     });
 
@@ -302,10 +341,21 @@ PlaylistFilterProxyModel *PlaylistMultiProxiesModel::defaultFilterProxy()
     return m_playlistFilterProxyModels[0].get();
 }
 
+PlaylistFilterProxyModel *PlaylistMultiProxiesModel::getFilterProxy(QString playlistName)
+{
+    uint playlistsSize = m_playlistFilterProxyModels.size();
+    for (uint i = 0; i < playlistsSize; ++i) {
+        if (playlistName == m_playlistFilterProxyModels[i]->playlistModel()->m_playlistName) {
+            return m_playlistFilterProxyModels[i].get();
+        }
+    }
+    return defaultFilterProxy();
+}
+
 QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 {
     auto configPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    auto filePath = configPath.append(u"/haruna/playlist.cache"_s);
+    auto filePath = configPath.append(u"/haruna/playlist.json"_s);
     QUrl url = QUrl::fromLocalFile(filePath);
     QFile cacheFile(url.toString(QUrl::PreferLocalFile));
 
@@ -315,7 +365,13 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
             qWarning() << "Failed to create playlist cache";
             return QUrl();
         }
-        cacheFile.write(QString(u"Default").toUtf8());
+        QJsonObject json;
+        json[u"name"] = u"Default"_s;
+        json[u"isActive"] = QJsonValue(true);
+        json[u"currentItem"] = double(0);
+        QJsonDocument doc(json);
+
+        cacheFile.write(doc.toJson(QJsonDocument::Indented));
         cacheFile.close();
     }
     return url;
@@ -364,12 +420,17 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
         return;
     }
 
+    QJsonArray array;
     uint playlistsSize = m_playlistFilterProxyModels.size();
     for (uint i = 0; i < playlistsSize; ++i) {
-        QString playlistName = m_playlistFilterProxyModels[i]->playlistModel()->m_playlistName;
-        cacheFile.write(playlistName.toUtf8().append("\n"));
+        QJsonObject json;
+        json[u"name"] = m_playlistFilterProxyModels[i]->playlistModel()->m_playlistName;
+        json[u"isActive"] = QJsonValue(m_activeIndex == i);
+        json[u"currentItem"] = double(m_playlistFilterProxyModels[i]->playlistModel()->m_playingItem);
+        array.append(json);
     }
-
+    QJsonDocument doc(array);
+    cacheFile.write(doc.toJson(QJsonDocument::Indented));
     cacheFile.close();
 }
 

@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2023 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -243,7 +244,6 @@ Page {
 
                 Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
                 Layout.fillWidth: true
-
                 clip: true
 
                 onCurrentIndexChanged: {
@@ -277,6 +277,15 @@ Page {
 
                     if (contextMenu.count > 3) {
                         contextMenu.moveItem(from + 3, to + 3)
+                    }
+                }
+
+                // This connection is only necessary for the startup. If the last played item is inside
+                // an internal tab, then the TabBar should set its current index to that tab.
+                Connections {
+                    target: root.m_mpv.playlists
+                    function onVisibleIndexChanged() {
+                        playlistTabView.currentIndex = root.m_mpv.playlists.visibleIndex
                     }
                 }
             }
@@ -446,7 +455,6 @@ Page {
                     }
                     contextMenuLoader.open(item)
                 }
-
             }
         }
 
@@ -494,15 +502,15 @@ Page {
                 // Selection manipulators
                 MenuItem {
                     text: i18nc("@action:inmenu", "Select All")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, visibleFilterProxyModel.All)
+                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.All)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Deselect All")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, visibleFilterProxyModel.Clear)
+                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.Clear)
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Invert Selection")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, visibleFilterProxyModel.Invert)
+                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.Invert)
                 }
                 MenuSeparator {
                 }
