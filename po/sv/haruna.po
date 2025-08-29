@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-24 00:41+0000\n"
+"POT-Creation-Date: 2025-08-29 00:42+0000\n"
 "PO-Revision-Date: 2025-08-24 17:13+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -569,50 +569,56 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ändra tilldelning"
 
-#: src/mpv/mpvitem.cpp:383
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:129
+#, kde-format
+msgctxt "@info:tooltip; %1 playlist with same name"
+msgid "Playlists with same name is not allowed: %1"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:386
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kunde inte spela: %1"
 
-#: src/mpv/mpvitem.cpp:477 src/mpv/mpvitem.cpp:479
+#: src/mpv/mpvitem.cpp:480 src/mpv/mpvitem.cpp:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Textningstiming: %1 sekunder"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:511
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Filen finns inte: %1"
 
-#: src/mpv/mpvitem.cpp:541
+#: src/mpv/mpvitem.cpp:544
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ingen"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:582
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Skärmbild misslyckades"
 
-#: src/mpv/mpvitem.cpp:584
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
-#: src/mpv/mpvitem.cpp:586
+#: src/mpv/mpvitem.cpp:589
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Skärmbild: %1"
 
-#: src/mpv/mpvitem.cpp:613
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -622,7 +628,7 @@ msgstr ""
 "Inget videospår upptäckt, troligen kan videospåret inte avkodas eller spelas "
 "på grund av saknade avkodare."
 
-#: src/mpv/mpvitem.cpp:646
+#: src/mpv/mpvitem.cpp:649
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -884,6 +890,14 @@ msgstr ""
 "\"%1\".\n"
 "Endast relativa kataloger genomsöks"
 
+#: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
+#, fuzzy
+#| msgctxt "@item:listbox the footer style"
+#| msgid "Default"
+msgctxt "@label:title name of default playlist tab"
+msgid "Default"
+msgstr "Förval"
+
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -1093,167 +1107,180 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volym: %1"
 
-#: src/qml/PlayList.qml:71
+#: src/qml/PlayList.qml:76
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Öppna spellista"
 
-#: src/qml/PlayList.qml:85
+#: src/qml/PlayList.qml:90
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Lägg till…"
 
-#: src/qml/PlayList.qml:93
+#: src/qml/PlayList.qml:98
 msgctxt "@action:button"
 msgid "Files"
 msgstr "Filer"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:106
 msgctxt "@action:button"
 msgid "URL"
 msgstr "Webbadress"
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:116
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:button"
+msgid "Playlist"
+msgstr "Spellista"
+
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sortera"
 
-#: src/qml/PlayList.qml:121
+#: src/qml/PlayList.qml:136
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Namn, stigande"
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:142
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Namn, fallande"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:148
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Längd, stigande"
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:154
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Längd, fallande"
 
-#: src/qml/PlayList.qml:146
+#: src/qml/PlayList.qml:161
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Uppspelning"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:167
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Upprepa spellista"
 
-#: src/qml/PlayList.qml:163
+#: src/qml/PlayList.qml:178
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "Stoppa efter sista objekt"
 
-#: src/qml/PlayList.qml:173
+#: src/qml/PlayList.qml:188
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Upprepa objekt"
 
-#: src/qml/PlayList.qml:184
+#: src/qml/PlayList.qml:199
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "Stoppa efter objekt"
 
-#: src/qml/PlayList.qml:194
+#: src/qml/PlayList.qml:209
 msgctxt "@action:button"
 msgid "Random"
 msgstr "Slumpmässigt"
 
-#: src/qml/PlayList.qml:206
+#: src/qml/PlayList.qml:221
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Rensa"
 
-#: src/qml/PlayList.qml:214
+#: src/qml/PlayList.qml:229
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Spara som"
 
-#: src/qml/PlayList.qml:235
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Lägg till"
-
-#: src/qml/PlayList.qml:328
-msgctxt "@action:inmenu"
-msgid "Open Containing Folder"
-msgstr "Öppna katalog med innehåll"
-
-#: src/qml/PlayList.qml:334
-msgctxt "@action:inmenu"
-msgid "Open in Browser"
-msgstr "Öppna i webbläsare"
-
-#: src/qml/PlayList.qml:343
-msgctxt "@action:inmenu"
-msgid "Copy Name"
-msgstr "Kopiera namn"
-
-#: src/qml/PlayList.qml:349
-msgctxt "@action:inmenu"
-msgid "Copy Path"
-msgstr "Kopiera sökväg"
-
-#: src/qml/PlayList.qml:350
-msgctxt "@action:inmenu"
-msgid "Copy URL"
-msgstr "Kopiera webbadress"
-
-#: src/qml/PlayList.qml:360
-msgctxt "@action:inmenu"
-msgid "Select All"
-msgstr "Markera alla"
-
-#: src/qml/PlayList.qml:365
-msgctxt "@action:inmenu"
-msgid "Deselect All"
-msgstr "Avmarkera alla"
-
-#: src/qml/PlayList.qml:370
-msgctxt "@action:inmenu"
-msgid "Invert Selection"
-msgstr "Invertera markering"
-
-#: src/qml/PlayList.qml:379
-msgctxt "@action:inmenu"
-msgid "Remove from Playlist"
-msgstr "Ta bort från spellista"
-
-#: src/qml/PlayList.qml:385
-msgctxt "@action:inmenu"
-msgid "Remove Selected from Playlist"
-msgstr "Ta bort markerade från spellista"
-
-#: src/qml/PlayList.qml:391
+#: src/qml/PlayList.qml:294 src/qml/PlayList.qml:522
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Byt namn"
 
-#: src/qml/PlayList.qml:397
+#: src/qml/PlayList.qml:300
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr ""
+
+#: src/qml/PlayList.qml:356 src/qml/PlayList.qml:369
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Lägg till"
+
+#: src/qml/PlayList.qml:464
+msgctxt "@action:inmenu"
+msgid "Open Containing Folder"
+msgstr "Öppna katalog med innehåll"
+
+#: src/qml/PlayList.qml:470
+msgctxt "@action:inmenu"
+msgid "Open in Browser"
+msgstr "Öppna i webbläsare"
+
+#: src/qml/PlayList.qml:479
+msgctxt "@action:inmenu"
+msgid "Copy Name"
+msgstr "Kopiera namn"
+
+#: src/qml/PlayList.qml:485
+msgctxt "@action:inmenu"
+msgid "Copy Path"
+msgstr "Kopiera sökväg"
+
+#: src/qml/PlayList.qml:486
+msgctxt "@action:inmenu"
+msgid "Copy URL"
+msgstr "Kopiera webbadress"
+
+#: src/qml/PlayList.qml:496
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr "Markera alla"
+
+#: src/qml/PlayList.qml:500
+msgctxt "@action:inmenu"
+msgid "Deselect All"
+msgstr "Avmarkera alla"
+
+#: src/qml/PlayList.qml:504
+msgctxt "@action:inmenu"
+msgid "Invert Selection"
+msgstr "Invertera markering"
+
+#: src/qml/PlayList.qml:510
+msgctxt "@action:inmenu"
+msgid "Remove from Playlist"
+msgstr "Ta bort från spellista"
+
+#: src/qml/PlayList.qml:516
+msgctxt "@action:inmenu"
+msgid "Remove Selected from Playlist"
+msgstr "Ta bort markerade från spellista"
+
+#: src/qml/PlayList.qml:528
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Gå till objekt som spelas upp"
 
-#: src/qml/PlayList.qml:407
+#: src/qml/PlayList.qml:538
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Flytta fil till papperskorgen"
 
-#: src/qml/PlayList.qml:413
+#: src/qml/PlayList.qml:544
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Flytta markerade filer till papperskorgen"
 
-#: src/qml/PlayList.qml:519 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:650 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Välj fil"
@@ -1275,17 +1302,17 @@ msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Volymsteg"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:35
+#: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Inga egna kommandon ännu"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:37
+#: src/qml/Settings/CustomCommandsSettings.qml:43
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "&Lägg till kommando"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:88
+#: src/qml/Settings/CustomCommandsSettings.qml:94
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
@@ -1294,7 +1321,7 @@ msgstr ""
 "Markerad: egenskapen ställs in vid start\n"
 "Avmarkerad: egenskapen ställs inte in vid start"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:168
+#: src/qml/Settings/CustomCommandsSettings.qml:174
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Lägg till"

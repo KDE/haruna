@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-24 00:41+0000\n"
+"POT-Creation-Date: 2025-08-29 00:42+0000\n"
 "PO-Revision-Date: 2025-06-21 12:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -639,7 +639,13 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reasignar"
 
-#: src/mpv/mpvitem.cpp:383
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:129
+#, kde-format
+msgctxt "@info:tooltip; %1 playlist with same name"
+msgid "Playlists with same name is not allowed: %1"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:386
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -647,38 +653,38 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Non foi posíbel reproducir: %1"
 
-#: src/mpv/mpvitem.cpp:477 src/mpv/mpvitem.cpp:479
+#: src/mpv/mpvitem.cpp:480 src/mpv/mpvitem.cpp:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Axuste dos subtítulos: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:511
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:541
+#: src/mpv/mpvitem.cpp:544
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nada"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:582
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "A captura de pantalla fallou."
 
-#: src/mpv/mpvitem.cpp:584
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Capturouse a pantalla."
 
-#: src/mpv/mpvitem.cpp:586
+#: src/mpv/mpvitem.cpp:589
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -686,7 +692,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:613
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -696,7 +702,7 @@ msgstr ""
 "Non se detectou ningunha pista de vídeo, o máis probábel é que a pista de "
 "vídeo non poida descodificarse ou reproducirse por faltar códecs."
 
-#: src/mpv/mpvitem.cpp:646
+#: src/mpv/mpvitem.cpp:649
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1001,6 +1007,14 @@ msgstr ""
 "Búscase recursivamente nos subtítulos na opción «%1».\n"
 "Só se busca nos cartafoles relativos."
 
+#: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@label:title name of default playlist tab"
+msgid "Default"
+msgstr "Portada predeterminada"
+
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -1224,7 +1238,7 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
 
-#: src/qml/PlayList.qml:71
+#: src/qml/PlayList.qml:76
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -1232,12 +1246,12 @@ msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Abrir unha lista de reprodución"
 
-#: src/qml/PlayList.qml:85
+#: src/qml/PlayList.qml:90
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
-#: src/qml/PlayList.qml:93
+#: src/qml/PlayList.qml:98
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1245,17 +1259,25 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "Ficheiro"
 
-#: src/qml/PlayList.qml:101
+#: src/qml/PlayList.qml:106
 msgctxt "@action:button"
 msgid "URL"
 msgstr ""
 
-#: src/qml/PlayList.qml:112
+#: src/qml/PlayList.qml:116
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:button"
+msgid "Playlist"
+msgstr "Lista de reprodución"
+
+#: src/qml/PlayList.qml:127
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Ordenar"
 
-#: src/qml/PlayList.qml:121
+#: src/qml/PlayList.qml:136
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -1263,7 +1285,7 @@ msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Nome ascendente"
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:142
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name descending"
@@ -1271,7 +1293,7 @@ msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Nome descendente"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:148
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration ascending"
@@ -1279,7 +1301,7 @@ msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Duración ascendente"
 
-#: src/qml/PlayList.qml:139
+#: src/qml/PlayList.qml:154
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration descending"
@@ -1287,7 +1309,7 @@ msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Duración descendente"
 
-#: src/qml/PlayList.qml:146
+#: src/qml/PlayList.qml:161
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -1295,7 +1317,7 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "Reprodución"
 
-#: src/qml/PlayList.qml:152
+#: src/qml/PlayList.qml:167
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -1303,12 +1325,12 @@ msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Abrir unha lista de reprodución"
 
-#: src/qml/PlayList.qml:163
+#: src/qml/PlayList.qml:178
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/qml/PlayList.qml:173
+#: src/qml/PlayList.qml:188
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Repeat"
@@ -1316,22 +1338,22 @@ msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Repetir"
 
-#: src/qml/PlayList.qml:184
+#: src/qml/PlayList.qml:199
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/qml/PlayList.qml:194
+#: src/qml/PlayList.qml:209
 msgctxt "@action:button"
 msgid "Random"
 msgstr ""
 
-#: src/qml/PlayList.qml:206
+#: src/qml/PlayList.qml:221
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Baleirar"
 
-#: src/qml/PlayList.qml:214
+#: src/qml/PlayList.qml:229
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Save as"
@@ -1339,12 +1361,22 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "Gardar como"
 
-#: src/qml/PlayList.qml:235
+#: src/qml/PlayList.qml:294 src/qml/PlayList.qml:522
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "Renomear"
+
+#: src/qml/PlayList.qml:300
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr ""
+
+#: src/qml/PlayList.qml:356 src/qml/PlayList.qml:369
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Engadir"
 
-#: src/qml/PlayList.qml:328
+#: src/qml/PlayList.qml:464
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open containing folder"
@@ -1352,7 +1384,7 @@ msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Abrir o cartafol contedor"
 
-#: src/qml/PlayList.qml:334
+#: src/qml/PlayList.qml:470
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1360,7 +1392,7 @@ msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Abrir no navegador"
 
-#: src/qml/PlayList.qml:343
+#: src/qml/PlayList.qml:479
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy name"
@@ -1368,7 +1400,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Copiar o nome"
 
-#: src/qml/PlayList.qml:349
+#: src/qml/PlayList.qml:485
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy path"
@@ -1376,7 +1408,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Copiar a ruta"
 
-#: src/qml/PlayList.qml:350
+#: src/qml/PlayList.qml:486
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -1384,7 +1416,7 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Copiar o URL"
 
-#: src/qml/PlayList.qml:360
+#: src/qml/PlayList.qml:496
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1392,7 +1424,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Seleccionar un ficheiro"
 
-#: src/qml/PlayList.qml:365
+#: src/qml/PlayList.qml:500
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1400,14 +1432,14 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Seleccionar un ficheiro"
 
-#: src/qml/PlayList.qml:370
+#: src/qml/PlayList.qml:504
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Selección de formato"
 
-#: src/qml/PlayList.qml:379
+#: src/qml/PlayList.qml:510
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1415,7 +1447,7 @@ msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Retirar da lista de reprodución"
 
-#: src/qml/PlayList.qml:385
+#: src/qml/PlayList.qml:516
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1423,12 +1455,7 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Retirar da lista de reprodución"
 
-#: src/qml/PlayList.qml:391
-msgctxt "@action:inmenu"
-msgid "Rename"
-msgstr "Renomear"
-
-#: src/qml/PlayList.qml:397
+#: src/qml/PlayList.qml:528
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Scroll to playing item"
@@ -1436,17 +1463,17 @@ msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Desprazar ao elemento en reprodución"
 
-#: src/qml/PlayList.qml:407
+#: src/qml/PlayList.qml:538
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:413
+#: src/qml/PlayList.qml:544
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:519 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:650 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Seleccionar un ficheiro"
@@ -1468,12 +1495,12 @@ msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Chanzo de volume"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:35
+#: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Aínda non hai ordes personalizadas."
 
-#: src/qml/Settings/CustomCommandsSettings.qml:37
+#: src/qml/Settings/CustomCommandsSettings.qml:43
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Add command"
@@ -1481,7 +1508,7 @@ msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "Eng&adir unha orde"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:88
+#: src/qml/Settings/CustomCommandsSettings.qml:94
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
@@ -1490,7 +1517,7 @@ msgstr ""
 "Se se marca, a propiedade definirase no inicio.\n"
 "Se non se marca, a propiedade non se definirá no inicio."
 
-#: src/qml/Settings/CustomCommandsSettings.qml:168
+#: src/qml/Settings/CustomCommandsSettings.qml:174
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "Eng&adir"
