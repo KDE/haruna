@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-29 00:42+0000\n"
+"POT-Creation-Date: 2025-08-30 00:41+0000\n"
 "PO-Revision-Date: 2025-08-19 14:57+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -570,56 +570,56 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Norādīt jaunu"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:129
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:161
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:386
+#: src/mpv/mpvitem.cpp:394
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Nevarēja atskaņot: %1"
 
-#: src/mpv/mpvitem.cpp:480 src/mpv/mpvitem.cpp:482
+#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Subtitru laiks: %1 sekundes"
 
-#: src/mpv/mpvitem.cpp:511
+#: src/mpv/mpvitem.cpp:519
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Datne nepastāv: %1"
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:552
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nav"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:590
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekrānattēls neizdevās"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:595
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekrānattēls ir uzņemts"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:597
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekrānattēls: %1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:624
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -629,7 +629,7 @@ msgstr ""
 "Nav atrasts video celiņš. Iespējams, video celiņu neizdodas atkodēt/atskaņot "
 "trūkstoša kodeka dēļ."
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:657
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1107,27 +1107,27 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Skaļums: %1"
 
-#: src/qml/PlayList.qml:76
+#: src/qml/PlayList.qml:77
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Atvērt repertuāru"
 
-#: src/qml/PlayList.qml:90
+#: src/qml/PlayList.qml:91
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Pievienot…"
 
-#: src/qml/PlayList.qml:98
+#: src/qml/PlayList.qml:99
 msgctxt "@action:button"
 msgid "Files"
 msgstr "Datnes"
 
-#: src/qml/PlayList.qml:106
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:116
+#: src/qml/PlayList.qml:117
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -1135,112 +1135,112 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Repertuārs"
 
-#: src/qml/PlayList.qml:127
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Kārtot"
 
-#: src/qml/PlayList.qml:136
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Pēc nosaukuma augoši"
 
-#: src/qml/PlayList.qml:142
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Pēc nosaukuma dilstoši"
 
-#: src/qml/PlayList.qml:148
+#: src/qml/PlayList.qml:149
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Pēc ilguma augoši"
 
-#: src/qml/PlayList.qml:154
+#: src/qml/PlayList.qml:155
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Pēc ilguma dilstoši"
 
-#: src/qml/PlayList.qml:161
+#: src/qml/PlayList.qml:162
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Atskaņošana"
 
-#: src/qml/PlayList.qml:167
+#: src/qml/PlayList.qml:168
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Atkārtot repertuāru"
 
-#: src/qml/PlayList.qml:178
+#: src/qml/PlayList.qml:179
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "Apturēt pēc pēdējā vienuma"
 
-#: src/qml/PlayList.qml:188
+#: src/qml/PlayList.qml:189
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Atkārtot vienumu"
 
-#: src/qml/PlayList.qml:199
+#: src/qml/PlayList.qml:200
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "Apturēt pēc vienuma"
 
-#: src/qml/PlayList.qml:209
+#: src/qml/PlayList.qml:210
 msgctxt "@action:button"
 msgid "Random"
 msgstr "Nejauša secība"
 
-#: src/qml/PlayList.qml:221
+#: src/qml/PlayList.qml:222
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Notīrīt"
 
-#: src/qml/PlayList.qml:229
+#: src/qml/PlayList.qml:230
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Saglabāt kā"
 
-#: src/qml/PlayList.qml:294 src/qml/PlayList.qml:522
+#: src/qml/PlayList.qml:303 src/qml/PlayList.qml:530
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pārdēvēt"
 
-#: src/qml/PlayList.qml:300
+#: src/qml/PlayList.qml:309
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 
-#: src/qml/PlayList.qml:356 src/qml/PlayList.qml:369
+#: src/qml/PlayList.qml:365 src/qml/PlayList.qml:378
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Pievienot"
 
-#: src/qml/PlayList.qml:464
+#: src/qml/PlayList.qml:472
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Atvērt saturošo mapi"
 
-#: src/qml/PlayList.qml:470
+#: src/qml/PlayList.qml:478
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Atvērt pārlūkā"
 
-#: src/qml/PlayList.qml:479
+#: src/qml/PlayList.qml:487
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopēt nosaukumu"
 
-#: src/qml/PlayList.qml:485
+#: src/qml/PlayList.qml:493
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopēt ceļu"
 
-#: src/qml/PlayList.qml:486
+#: src/qml/PlayList.qml:494
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopēt URL"
 
-#: src/qml/PlayList.qml:496
+#: src/qml/PlayList.qml:504
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select File"
@@ -1248,7 +1248,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Atlasiet datni"
 
-#: src/qml/PlayList.qml:500
+#: src/qml/PlayList.qml:508
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select File"
@@ -1256,19 +1256,19 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Atlasiet datni"
 
-#: src/qml/PlayList.qml:504
+#: src/qml/PlayList.qml:512
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Formāta atlase"
 
-#: src/qml/PlayList.qml:510
+#: src/qml/PlayList.qml:518
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Noņemt no repertuāra"
 
-#: src/qml/PlayList.qml:516
+#: src/qml/PlayList.qml:524
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from Playlist"
@@ -1276,17 +1276,17 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Noņemt no repertuāra"
 
-#: src/qml/PlayList.qml:528
+#: src/qml/PlayList.qml:536
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Ritināt līdz atskaņotajam vienumam"
 
-#: src/qml/PlayList.qml:538
+#: src/qml/PlayList.qml:546
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Pārvietot datni uz atkritni"
 
-#: src/qml/PlayList.qml:544
+#: src/qml/PlayList.qml:552
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Move File to Trash"
@@ -1294,7 +1294,7 @@ msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Pārvietot datni uz atkritni"
 
-#: src/qml/PlayList.qml:650 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:658 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Atlasiet datni"
