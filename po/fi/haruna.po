@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-30 00:41+0000\n"
-"PO-Revision-Date: 2025-07-17 18:25+0300\n"
+"PO-Revision-Date: 2025-07-31 09:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -1586,22 +1586,16 @@ msgid "Footer style"
 msgstr "Alatunnistetyyli"
 
 #: src/qml/Settings/GeneralSettings.qml:151
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "Oletuskansi"
+msgstr "Oletus"
 
 #: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Kelluva"
 
 #: src/qml/Settings/GeneralSettings.qml:171
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Näytä leijuva alatunniste"
@@ -1609,12 +1603,12 @@ msgstr "Näytä leijuva alatunniste"
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Hiiren jokainen liike"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Hiiren liike alhaalla"
 
 #: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
@@ -1756,12 +1750,9 @@ msgid "GUI style"
 msgstr "Käyttöliittymätyyli"
 
 #: src/qml/Settings/GeneralSettings.qml:456
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "Oletuskansi"
+msgstr "Oletus"
 
 #: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
@@ -1783,12 +1774,9 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
-msgstr ""
+msgstr "Poista hiiripainiketoiminto"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Lisää"
@@ -1796,101 +1784,93 @@ msgstr "&Lisää"
 #: src/qml/Settings/MouseSettings.qml:125
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "Lisää hiiripainiketoiminto"
 
 #: src/qml/Settings/MouseSettings.qml:142
 msgctxt "@label:listbox"
 msgid "Mouse button"
-msgstr ""
+msgstr "Hiiren painike"
 
 #: src/qml/Settings/MouseSettings.qml:154
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Vasen"
 
 #: src/qml/Settings/MouseSettings.qml:155
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Keski"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
-#| msgid "Row height"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
-msgstr "Rivin korkeus"
+msgstr "Oikea"
 
 #: src/qml/Settings/MouseSettings.qml:157
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "Eteenpäin"
 
 #: src/qml/Settings/MouseSettings.qml:158
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Taaksepäin"
 
 #: src/qml/Settings/MouseSettings.qml:159
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "Vieritä ylöspäin"
 
 #: src/qml/Settings/MouseSettings.qml:160
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "Vieritä alaspäin"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@label:listbox"
 msgid "Modifier key"
-msgstr ""
+msgstr "Muuntonäppäin"
 
 #: src/qml/Settings/MouseSettings.qml:177
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "Ei muuntonäppäintä"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Contrast"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
-msgstr "Kontrasti"
+msgstr "Ctrl"
 
 #: src/qml/Settings/MouseSettings.qml:179
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Vaihto"
 
 #: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
 msgctxt ""
 "@label:check whether mouse button action shoud trigger on double click"
 msgid "Trigger on double click"
-msgstr ""
+msgstr "Käynnistä kaksoisnapsautuksesta"
 
 #: src/qml/Settings/MouseSettings.qml:202
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "Toiminto"
 
 #: src/qml/Settings/MouseSettings.qml:210
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "Valitse väri"
+msgstr "Valitse toiminto"
 
 #: src/qml/Settings/MouseSettings.qml:225
 #, fuzzy
@@ -1901,17 +1881,14 @@ msgid "Change action"
 msgstr "Tyhjennä toiminto"
 
 #: src/qml/Settings/MouseSettings.qml:236
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info"
 msgid "No action selected"
-msgstr "Toimintoa ei ole asetettu"
+msgstr "Toimintoa ei ole valittu"
 
 #: src/qml/Settings/MouseSettings.qml:259
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "Hiiripainike on jo kytketty toimintoon ”%1”"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -2160,15 +2137,12 @@ msgstr "Tiedostomuodon valinta"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Mukautettu"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "Oletuskansi"
+msgstr "Oletus"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2183,14 +2157,12 @@ msgstr "Sijainti"
 #: src/qml/Settings/PlaylistSettings.qml:36
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr ""
+msgstr "Vasen"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgid "Row height"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr "Rivin korkeus"
+msgstr "Oikea"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
@@ -2198,25 +2170,19 @@ msgid "Playlist style"
 msgstr "Toistolistan tyyli"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "Oletuskansi"
+msgstr "Oletus"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "Esikatsele pienoiskuvaa"
+msgstr "Pienoiskuvilla"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Tiivis"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
 #, fuzzy
