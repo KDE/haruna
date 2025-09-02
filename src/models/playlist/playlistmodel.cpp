@@ -438,14 +438,19 @@ bool PlaylistModel::isShuffleOn() const
     return m_isShuffleOn;
 }
 
-void PlaylistModel::shuffleIndexes()
+void PlaylistModel::shuffleIndexes(std::vector<int> includedIndices)
 {
     if (m_playlist.size() <= 0) {
         return;
     }
     m_currentShuffledIndex = 0;
-    m_shuffledIndexes.resize(m_playlist.size());
-    std::iota(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), 0);
+    if (includedIndices.empty()) {
+        // All indices are included, no filtering
+        m_shuffledIndexes.resize(m_playlist.size());
+        std::iota(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), 0);
+    } else {
+        m_shuffledIndexes = includedIndices;
+    }
     std::random_device rd;
     std::mt19937 gen(rd());
     std::shuffle(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), gen);

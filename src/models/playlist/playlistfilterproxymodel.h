@@ -41,11 +41,21 @@ public:
     Q_ENUM(Selection)
     // clang-format on
 
+    enum Filter {
+        Name = Qt::UserRole,
+        Title,
+    };
+    Q_ENUM(Filter)
+
     Q_PROPERTY(uint selectionCount READ selectionCount NOTIFY selectionCountChanged)
     uint selectionCount();
 
     Q_PROPERTY(uint itemCount READ itemCount NOTIFY itemCountChanged)
     uint itemCount();
+
+    Q_PROPERTY(QString searchText READ searchText WRITE setSearchText NOTIFY searchTextChanged)
+    QString searchText();
+    void setSearchText(QString text);
 
     Q_INVOKABLE uint getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
@@ -82,9 +92,11 @@ Q_SIGNALS:
     void itemsMoved();
     void itemsRemoved();
     void itemsInserted();
+    void searchTextChanged();
 
 private:
     void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    void shufflePlaylistModel();
 
     // Model getters for convenience
     PlaylistProxyModel *playlistProxyModel() const;
@@ -103,6 +115,7 @@ private:
     std::unique_ptr<PlaylistSortProxyModel> m_playlistSortProxyModel;
     std::unique_ptr<PlaylistProxyModel> m_playlistProxyModel;
     QItemSelectionModel m_selectionModel;
+    bool m_scheduledReshuffle{false};
 };
 
 #endif // PLAYLISTFILTERPROXYMODEL_H

@@ -66,13 +66,32 @@ Page {
 
         bottomPadding: 0
 
-
         ColumnLayout {
             anchors.fill: parent
             spacing: 0
 
             Kirigami.ActionToolBar {
                 actions: [
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Search")
+                        icon.name: "search"
+                        icon.width: root.buttonSize
+                        icon.height: root.buttonSize
+                        displayHint: Kirigami.DisplayHint.IconOnly
+                        displayComponent: Kirigami.SearchField {
+                            id: searchComponent
+                            delaySearch: true
+
+                            onTextChanged: {
+                                root.m_mpv.visibleFilterProxyModel.searchText = text
+                                playlistView.positionViewAtIndex(0, ListView.Beginning)
+                            }
+
+                            Component.onCompleted: {
+                                text = root.m_mpv.visibleFilterProxyModel.searchText
+                            }
+                        }
+                    },
                     Kirigami.Action {
                         text: i18nc("@action:button", "Open Playlist")
                         displayHint: root.isSmallWindowSize

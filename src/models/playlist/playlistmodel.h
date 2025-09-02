@@ -110,7 +110,7 @@ private:
     //     next file: m_shuffledIndexes.index_2 -> m_playlist.index_1 file_1
     bool isShuffleOn() const;
     // when shuffling the playing item is moved to the front
-    void shuffleIndexes();
+    void shuffleIndexes(std::vector<int> included = std::vector<int>());
     std::vector<int> shuffledIndexes() const;
     int currentShuffledIndex() const;
     void setCurrentShuffledIndex(int shuffledIndex);

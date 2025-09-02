@@ -12,12 +12,15 @@
 #include <QFile>
 #include <QGuiApplication>
 #include <QMap>
+#include <QTimer>
 
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KIO/DeleteOrTrashJob>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
+
+#include "playlistsettings.h"
 
 using namespace Qt::StringLiterals;
 PlaylistFilterProxyModel::PlaylistFilterProxyModel(QObject *parent)
@@ -31,7 +34,13 @@ PlaylistFilterProxyModel::PlaylistFilterProxyModel(QObject *parent)
     m_playlistProxyModel->setSourceModel(m_playlistSortProxyModel.get());
     setSourceModel(m_playlistProxyModel.get());
 
+    setDynamicSortFilter(true);
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+    invalidate();
+
     connect(&m_selectionModel, &QItemSelectionModel::selectionChanged, this, &PlaylistFilterProxyModel::onSelectionChanged);
+    connect(this, &QSortFilterProxyModel::rowsInserted, this, &PlaylistFilterProxyModel::shufflePlaylistModel);
+    connect(this, &QSortFilterProxyModel::rowsRemoved, this, &PlaylistFilterProxyModel::shufflePlaylistModel);
 }
 
 QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) const
@@ -50,6 +59,20 @@ uint PlaylistFilterProxyModel::selectionCount()
 uint PlaylistFilterProxyModel::itemCount()
 {
     return rowCount();
+}
+
+QString PlaylistFilterProxyModel::searchText()
+{
+    return filterRegularExpression().pattern();
+}
+
+void PlaylistFilterProxyModel::setSearchText(QString text)
+{
+    Filter filter = PlaylistSettings::showMediaTitle() ? Filter::Title : Filter::Name;
+    setFilterRole(filter);
+    setFilterRegularExpression(text);
+    invalidateFilter();
+    Q_EMIT searchTextChanged();
 }
 
 uint PlaylistFilterProxyModel::getPlayingItem()
@@ -114,8 +137,8 @@ void PlaylistFilterProxyModel::saveM3uFile(const QString &path)
     if (!m3uFile.open(QFile::WriteOnly)) {
         return;
     }
-    for (int i{0}; i < rowCount(); ++i) {
-        QString itemPath = data(index(i, 0), PlaylistModel::PathRole).toString();
+    for (int i{0}; i < playlistProxyModel()->rowCount(); ++i) {
+        QString itemPath = playlistProxyModel()->data(playlistProxyModel()->index(i, 0), PlaylistModel::PathRole).toString();
         m3uFile.write(itemPath.toUtf8().append("\n"));
     }
     m3uFile.close();
@@ -280,6 +303,18 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
     QModelIndexList bottomSelection;
     splitItemSelection(selection, destinationRow, topDownDrag, topSelection, bottomSelection);
 
+    /* Playlist: A, B, C, D, E
+     * Selected: A, C, E
+     * Dragged item: C
+     *
+     * Drag Over:
+     *     B -> topDownDrag = true  -> topSelection = A,   bottomSelection = C, E
+     *     D -> topDownDrag = false -> topSelection = A, C bottomSelection = E
+     *
+     * A or E can be a chunk of selection, it doesn't matter
+     */
+
+    std::vector<uint> updatedSelectedRows;
     int rowOffset = 0;
     for (const auto &iTopSelection : std::as_const(topSelection)) {
         // These indices are located above the destination. Each move will reduce index of the
@@ -287,6 +322,28 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
         // We take this into account by using rowOffset
         int first = iTopSelection.row();
         int destination = topDownDrag ? destinationRow : destinationRow - 1;
+
+        /* Playlist: A, B, C, D, E
+         * Selected: A, B, D
+         * Selected indices: 0, 1, 3
+         * Dragged on: E (topDownDrag true in this case)
+         * Destination index: 4 (not 3 since topDownDrag is true)
+         *  Order of operations will be as follows:
+         *
+         *  (1)     (2)     (3)     (4)
+         *  0. A    0. B    0. C    0. C
+         *  1. B    1. C    1. D    1. E
+         *  2. C -> 2. D -> 2. E -> 2. A
+         *  3. D    3. E    3. A    3. B
+         *  4. E    4. A    4. B    4. D
+         *
+         * Index movement: (1) 0->4, (2) 0->4, (3) 1->4
+         * Indices 0, 1, 3 are decreased by 1 after each item move operation
+         * so, do (index - offset) for each item to move them properly
+         *
+         * The final selection is: 2, 3, 4
+         * That is (destinationIndex - itemCount + N) for Nth item
+         */
 
         // Qt expects the movement to be on top of the destination row, which is not the case for
         // topSelection rows for THIS logic, since we set it by considering the Proxy's layout vector.
@@ -298,6 +355,7 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
             playlistProxyModel()->moveRows(QModelIndex(), sourceFirst - rowOffset, 1, QModelIndex(), sourceDestination);
             endMoveRows();
         }
+        updatedSelectedRows.push_back(destination - topSelection.size() + rowOffset + 1);
         rowOffset++;
     }
     rowOffset = 0;
@@ -307,14 +365,45 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
         int first = iBottomSelection.row();
         int destination = topDownDrag ? destinationRow + 1 : destinationRow;
 
+        /* Playlist: A, B, C, D, E
+         * Selected: B, D, E
+         * Selected indices: 1, 3, 4
+         * Dragged on: A (topDownDrag false in this case)
+         * Destination index: 0 (not 1 since topDownDrag is false)
+         *  Order of operations will be as follows:
+         *
+         *  (1)     (2)     (3)     (4)
+         *  0. A    0. B    0. B    0. B
+         *  1. B    1. A    1. D    1. D
+         *  2. C -> 2. C -> 2. A -> 2. E
+         *  3. D    3. D    3. C    3. A
+         *  4. E    4. E    4. E    4. C
+         *
+         * Index movements (1) 1->0, (2) 3->1, (3) 4->2
+         * Indices 1, 3, 4 are the same but destination is increased by 1 after each item move operation
+         * so, do (destination + offset) for each item
+         *
+         * The final selection is: 0, 1, 2
+         * That is (destinationIndex + offset) for each item
+         */
+
         if (beginMoveRows(QModelIndex(), first, first, QModelIndex(), destination + rowOffset)) {
             int sourceFirst = mapToSource(index(first, 0)).row();
             int sourceDestination = mapToSource(index(destination, 0)).row();
             playlistProxyModel()->moveRows(QModelIndex(), sourceFirst, 1, QModelIndex(), sourceDestination + rowOffset);
             endMoveRows();
         }
+        updatedSelectedRows.push_back(destination + rowOffset);
         rowOffset++;
     }
+
+    invalidateRowsFilter();
+    QItemSelection updatedSelection;
+    for (const auto &row : std::as_const(updatedSelectedRows)) {
+        updatedSelection.select(index(row, 0), index(row, 0));
+    }
+    m_selectionModel.select(updatedSelection, QItemSelectionModel::SelectionFlag::Select | QItemSelectionModel::SelectionFlag::Clear);
+
     Q_EMIT itemsMoved();
 }
 
@@ -420,6 +509,32 @@ void PlaylistFilterProxyModel::onSelectionChanged(const QItemSelection &selected
         Q_EMIT dataChanged(index, index);
     }
     Q_EMIT selectionCountChanged();
+}
+
+void PlaylistFilterProxyModel::shufflePlaylistModel()
+{
+    if (m_scheduledReshuffle) {
+        return;
+    }
+    m_scheduledReshuffle = true;
+
+    // rowsInserted/rowsRemoved signals will be called for each filtered item
+    // this queues the shuffle event to be executed once at the end of the event loop
+    QTimer::singleShot(0, this, [this]() {
+        // Do the normal shuffle if filter is removed
+        if (searchText().isEmpty()) {
+            playlistModel()->shuffleIndexes();
+            m_scheduledReshuffle = false;
+            return;
+        }
+
+        std::vector<int> indices;
+        for (int i = 0; i < rowCount(); ++i) {
+            indices.push_back(mapToPlaylistModel(index(i, 0).row()).row());
+        }
+        playlistModel()->shuffleIndexes(indices);
+        m_scheduledReshuffle = false;
+    });
 }
 
 PlaylistProxyModel *PlaylistFilterProxyModel::playlistProxyModel() const
