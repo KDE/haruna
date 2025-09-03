@@ -413,6 +413,20 @@ Page {
         anchors.fill: parent
         color: Kirigami.Theme.backgroundColor
 
+        DropArea {
+            id: playlistDropArea
+
+            anchors.fill: playlistScrollView
+            keys: ["text/uri-list"]
+
+            onDropped: drop => {
+                if(!containsDrag){
+                    return
+                }
+                root.m_mpv.visibleFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Append)
+            }
+        }
+
         ScrollView {
             id: playlistScrollView
 

@@ -17,6 +17,7 @@ class PlaylistProxyModel : public QAbstractProxyModel
 
 public:
     explicit PlaylistProxyModel(QObject *parent = nullptr);
+    friend class PlaylistFilterProxyModel;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     using QAbstractProxyModel::QAbstractProxyModel;
@@ -28,6 +29,7 @@ public:
     QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
     QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
     bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
+    void setInsertOffset(uint offset);
 
 private:
     // Callbacks
@@ -46,6 +48,8 @@ private:
     int remapRowFromSource(int row) const;
 
     QList<uint> m_layout;
+    uint m_insertOffset{0};
+    bool m_insert{false};
 };
 
 #endif // PLAYLISTPROXYMODEL_H

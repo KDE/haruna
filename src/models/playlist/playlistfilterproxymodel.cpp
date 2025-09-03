@@ -8,7 +8,9 @@
 #include "playlistfilterproxymodel.h"
 
 #include <QClipboard>
+#include <QCollator>
 #include <QDir>
+#include <QDirIterator>
 #include <QFile>
 #include <QGuiApplication>
 #include <QMap>
@@ -20,6 +22,7 @@
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
 
+#include "application.h"
 #include "playlistsettings.h"
 
 using namespace Qt::StringLiterals;
@@ -461,6 +464,92 @@ void PlaylistFilterProxyModel::selectItem(uint row, Selection selectionMode)
 void PlaylistFilterProxyModel::refreshData()
 {
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
+}
+
+void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistModel::Behavior behavior, uint insertOffset)
+{
+    auto getCanonicalOrAbsolutePath = [](const QFileInfo &fi) -> QString {
+        const QString cannonical = fi.canonicalFilePath();
+        if (cannonical.isEmpty()) {
+            return fi.absoluteFilePath();
+        }
+        return cannonical;
+    };
+
+    auto isAcceptedMime = [](const QString &path) -> bool {
+        QString mimeType = Application::mimeType(QUrl::fromLocalFile(path));
+        if (mimeType == u"audio/x-mpegurl"_s) {
+            return false;
+        }
+        return (mimeType.startsWith(u"video/") || mimeType.startsWith(u"audio/"));
+    };
+
+    QList<QFileInfo> dirs;
+    QList<QString> files;
+    QSet<QString> visitedPaths; // prevent infinite symlink loops
+    for (const auto &url : urls) {
+        QFileInfo fileInfo(url.toLocalFile());
+        if (!fileInfo.exists()) {
+            continue;
+        }
+
+        auto key = getCanonicalOrAbsolutePath(fileInfo);
+        if (visitedPaths.contains(key)) {
+            continue;
+        }
+        visitedPaths.insert(key);
+
+        if (fileInfo.isDir()) {
+            dirs.append(fileInfo);
+            continue;
+        }
+
+        if (fileInfo.isFile()) {
+            if (isAcceptedMime(url.toString())) {
+                files.append(url.toString());
+            }
+            continue;
+        }
+    }
+
+    for (const auto &dir : dirs) {
+        QFileInfo fileInfo(dir);
+        QDirIterator it(fileInfo.absoluteFilePath(), QDir::Files, QDirIterator::Subdirectories | QDirIterator::FollowSymlinks);
+        while (it.hasNext()) {
+            QString file = it.next();
+            QFileInfo fileInfo(file);
+
+            if (!fileInfo.exists()) {
+                continue;
+            }
+
+            auto key = getCanonicalOrAbsolutePath(fileInfo);
+            if (visitedPaths.contains(key)) {
+                continue;
+            }
+            visitedPaths.insert(key);
+
+            if (isAcceptedMime(file)) {
+                files.append(file);
+            }
+        }
+    }
+
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::sort(files.begin(), files.end(), collator);
+
+    int localOffset = 0;
+    for (const auto &file : std::as_const(files)) {
+        if (behavior == PlaylistModel::Insert) {
+            // Initalize proxy model to insert the items at the dropped index. After each insertion, the index should increase
+            playlistProxyModel()->setInsertOffset(insertOffset + localOffset++);
+            // When the addItem is called from the playlistModel, rowsAboutToBeInserted signal will reach playlistProxyModel
+            // for this item. If offset it set, instead of appending, the proxy will insert it to the given index
+        }
+        // PlaylistModel can just append the items
+        playlistModel()->addItem(QUrl::fromLocalFile(file), PlaylistModel::Append);
+    }
 }
 
 void PlaylistFilterProxyModel::sortItems(PlaylistSortProxyModel::Sort sortMode)

@@ -52,6 +52,7 @@ public:
     enum Behavior {
         Append,
         AppendAndPlay,
+        Insert,
         Clear,
     };
     Q_ENUM(Behavior)

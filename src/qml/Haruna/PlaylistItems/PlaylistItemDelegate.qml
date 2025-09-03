@@ -5,6 +5,7 @@
  */
 
 import QtQuick
+import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
@@ -71,6 +72,78 @@ Item {
         // Derived items must override this
         Item {
             id: contentItem
+        }
+    }
+
+    DropArea {
+        id: itemDropArea
+
+        anchors.fill: parent
+        keys: ["text/uri-list"]
+
+        onDropped: function (drop) {
+            if(!containsDrag){
+                return
+            }
+            root.m_mpv.visibleFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Insert, root.index)
+        }
+    }
+
+    Shape {
+        visible: itemDropArea.containsDrag
+        antialiasing: true
+        z: 1
+        ShapePath {
+            id: shape
+
+            property int arrowWidth: 6
+            property int arrowHeight: 6
+            property int centerThickness: 1
+            property int listViewSpacing: root.ListView?.view.spacing
+            strokeWidth: 0
+            startX: 0
+            startY: 0
+            fillColor: Kirigami.Theme.highlightColor
+            /* Order of PathLines:
+              8\                  /5
+              | \                / |
+              |  7--------------6  |
+              |  2--------------3  |
+              | /                \ |
+              1/                  \4
+            */
+            PathLine {
+                x: 0;
+                y: shape.arrowHeight
+            }
+            PathLine {
+                x: shape.arrowWidth
+                y: shape.centerThickness
+            }
+            PathLine {
+                x: root.width - shape.arrowWidth
+                y: shape.centerThickness
+            }
+            PathLine {
+                x: root.width;
+                y: shape.arrowHeight
+            }
+            PathLine {
+                x: root.width;
+                y: -(shape.arrowHeight + shape.listViewSpacing)
+            }
+            PathLine {
+                x: root.width - shape.arrowWidth;
+                y: -(shape.centerThickness + shape.listViewSpacing)
+            }
+            PathLine {
+                x: shape.arrowWidth;
+                y: -(shape.centerThickness + shape.listViewSpacing)
+            }
+            PathLine {
+                x: 0;
+                y: -(shape.arrowHeight + shape.listViewSpacing)
+            }
         }
     }
 

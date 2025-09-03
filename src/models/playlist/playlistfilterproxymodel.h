@@ -75,6 +75,7 @@ public:
     Q_INVOKABLE void moveItems(uint row, uint destinationRow);
     Q_INVOKABLE void selectItem(uint row, Selection selectionMode);
     Q_INVOKABLE void refreshData();
+    Q_INVOKABLE void addFilesAndFolders(QList<QUrl> urls, PlaylistModel::Behavior behavior, uint insertOffset = 0);
 
     // PlaylistSortProxyModel
     Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortMode);

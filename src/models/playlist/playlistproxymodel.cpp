@@ -114,6 +114,12 @@ bool PlaylistProxyModel::moveRows(const QModelIndex &sourceParent, int row, int 
     return true;
 }
 
+void PlaylistProxyModel::setInsertOffset(uint offset)
+{
+    m_insertOffset = offset;
+    m_insert = true;
+}
+
 void PlaylistProxyModel::resetLayout()
 {
     std::sort(m_layout.begin(), m_layout.end());
@@ -156,15 +162,24 @@ void PlaylistProxyModel::onRowsAboutToBeInserted(const QModelIndex &, int first,
         }
     }
 
-    int local_first = m_layout.size();
-    int local_last = m_layout.size() + last - first;
+    int insertPosition;
+    if (m_insert) {
+        insertPosition = m_insertOffset;
+    } else {
+        insertPosition = m_layout.size();
+    }
 
-    // Always insert new items at the end
+    int local_first = insertPosition;
+    int local_last = insertPosition + last - first;
+
     beginInsertRows(QModelIndex(), local_first, local_last);
+    int offset = 0; // we are adding items one-by-one for now, so this is unnecessary. But it doesn't hurt.
     for (int i = first; i <= last; ++i) {
-        m_layout.append(i);
+        m_layout.insert(insertPosition + offset++, i);
     }
     endInsertRows();
+    // Reset insert mode
+    m_insert = false;
 }
 
 void PlaylistProxyModel::onRowsInserted(const QModelIndex &, int /*first*/, int /*last*/)
