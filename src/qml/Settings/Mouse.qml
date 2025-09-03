@@ -44,7 +44,7 @@ Item {
                     Layout.fillWidth: true
                 }
             }
-            delegate: Kirigami.BasicListItem {
+            delegate: ItemDelegate {
                 property alias actionLabel: actionLabel
                 property alias buttonLabel: buttonLabel
 

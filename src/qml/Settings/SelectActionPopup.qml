@@ -79,11 +79,10 @@ Popup {
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignTop
             currentIndex: focus ? 0 : -1
-            delegate: Kirigami.BasicListItem {
+            delegate: ItemDelegate {
                 height: 30
                 width: parent.width
-                label: modelData
-                reserveSpaceForIcon: false
+                text: modelData
                 onDoubleClicked: actionSelected(modelData)
                 Keys.onEnterPressed: actionSelected(modelData)
                 Keys.onReturnPressed: actionSelected(modelData)

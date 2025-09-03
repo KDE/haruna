@@ -8,7 +8,7 @@ import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Window 2.13
 import QtQuick.Layouts 1.13
-import QtGraphicalEffects 1.13
+import Qt5Compat.GraphicalEffects
 import Qt.labs.platform 1.0 as PlatformDialog
 import org.kde.kirigami 2.11 as Kirigami
 

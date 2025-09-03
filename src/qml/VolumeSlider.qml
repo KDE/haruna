@@ -6,10 +6,8 @@
 
 import QtQuick 2.13
 import QtQuick.Controls 2.13
-import QtQuick.Layouts 1.13
 import QtQml 2.13
-import QtQuick.Shapes 1.13
-import QtGraphicalEffects 1.13
+import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.11 as Kirigami
 
 Slider {

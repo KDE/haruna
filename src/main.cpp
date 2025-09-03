@@ -4,15 +4,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "_debug.h"
 #include "application.h"
 #include "lockmanager.h"
 #include "mpvobject.h"
-#include "tracksmodel.h"
-#include "subtitlesfoldersmodel.h"
-#include "playlist/playlistitem.h"
 #include "playlist/playlistmodel.h"
 #include "settings.h"
+#include "subtitlesfoldersmodel.h"
+#include "tracksmodel.h"
 #include "worker.h"
 
 #include <QApplication>
@@ -26,7 +24,7 @@
 #include <QThread>
 
 #include <KAboutData>
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 int main(int argc, char *argv[])
 {
@@ -68,8 +66,8 @@ int main(int argc, char *argv[])
     std::setlocale(LC_NUMERIC, "C");
 
     qmlRegisterType<MpvObject>("mpv", 1, 0, "MpvObject");
-    qmlRegisterInterface<QAction>("QAction");
-    qmlRegisterInterface<TracksModel>("TracksModel");
+    qRegisterMetaType<QAction>("QAction");
+    qRegisterMetaType<TracksModel>("TracksModel");
 
     std::unique_ptr<Application> myApp = std::make_unique<Application>();
     std::unique_ptr<LockManager> lockManager = std::make_unique<LockManager>();

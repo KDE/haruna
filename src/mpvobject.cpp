@@ -20,6 +20,7 @@
 #include <QDir>
 
 #include "mpvobject.h"
+#include "qthelper.h"
 #include "track.h"
 #include "tracksmodel.h"
 
@@ -47,8 +48,6 @@ MpvRenderer::~MpvRenderer()
 
 void MpvRenderer::render()
 {
-    obj->window()->resetOpenGLState();
-
     QOpenGLFramebufferObject *fbo = framebufferObject();
     mpv_opengl_fbo mpfbo{.fbo = static_cast<int>(fbo->handle()), .w = fbo->width(), .h = fbo->height(), .internal_format = 0};
     int flip_y{0};
@@ -66,8 +65,6 @@ void MpvRenderer::render()
     // See render_gl.h on what OpenGL environment mpv expects, and
     // other API details.
     mpv_render_context_render(obj->mpv_gl, params);
-
-    obj->window()->resetOpenGLState();
 }
 
 QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &size)
@@ -75,7 +72,7 @@ QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &siz
     // init mpv_gl:
     if (!obj->mpv_gl)
     {
-        mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr, nullptr};
+        mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr};
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
             {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &gl_init_params},
@@ -102,7 +99,8 @@ MpvObject::MpvObject(QQuickItem * parent)
 
 //    mpv_set_option_string(mpv, "terminal", "yes");
 //    mpv_set_option_string(mpv, "msg-level", "all=v");
-    mpv::qt::set_option_variant(mpv, "hwdec", "auto");
+    setProperty("vo", "libmpv");
+    setProperty("hwdec", "auto");
 
     mpv_observe_property(mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
     mpv_observe_property(mpv, 0, "time-remaining", MPV_FORMAT_DOUBLE);
@@ -340,7 +338,6 @@ QVariant MpvObject::getProperty(const QString& name)
 
 QQuickFramebufferObject::Renderer *MpvObject::createRenderer() const
 {
-    window()->setPersistentOpenGLContext(true);
     window()->setPersistentSceneGraph(true);
     return new MpvRenderer(const_cast<MpvObject *>(this));
 }
