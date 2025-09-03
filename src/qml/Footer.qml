@@ -11,6 +11,8 @@ import QtQuick.Layouts 1.13
 ToolBar {
     id: root
 
+    required property MpvVideo mpv
+
     property alias progressBar: progressBar
     property alias footerRow: footerRow
     property alias timeInfo: timeInfo
@@ -85,6 +87,7 @@ ToolBar {
 
         HProgressBar {
             id: progressBar
+            mpv: root.mpv
             Layout.fillWidth: true
         }
 

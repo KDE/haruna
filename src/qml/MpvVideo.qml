@@ -225,7 +225,7 @@ MpvObject {
             }
         }
 
-        onPressed: {
+        onPressed: function(mouse) {
             focus = true
             if (mouse.button === Qt.LeftButton) {
                 if (settings.get("Mouse", "Left")) {

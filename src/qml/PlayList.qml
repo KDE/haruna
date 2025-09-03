@@ -7,11 +7,12 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Window 2.13
-import QtQuick.Layouts 1.13
 import Qt5Compat.GraphicalEffects
 
 Rectangle {
     id: root
+
+    required property MpvVideo mpv
 
     property alias tableView: tableView
     property bool canToggleWithMouse: settings.get("Playlist", "CanToogleWithMouse")
@@ -54,9 +55,9 @@ Rectangle {
     ShaderEffectSource {
         id: shaderEffect
         anchors.fill: parent
-        sourceItem: mpv
-        sourceRect: position === "right"
-                    ? Qt.rect(mpv.width - root.width, mpv.y, root.width, root.height)
+        sourceItem: root.mpv
+        sourceRect: root.position === "right"
+                    ? Qt.rect(root.mpv.width - root.width, root.mpv.y, root.width, root.height)
                     : Qt.rect(0, 0, root.width, root.height)
     }
 
@@ -70,13 +71,13 @@ Rectangle {
     states: [
         State {
             name: "hidden"
-            PropertyChanges { target: root; x: position === "right" ? parent.width : -width }
-            PropertyChanges { target: root; visible: false }
+            PropertyChanges { root.x: position === "right" ? parent.width : -width }
+            PropertyChanges { root.visible: false }
         },
         State {
             name : "visible"
-            PropertyChanges { target: root; x: position === "right" ? parent.width - root.width : mpv.x }
-            PropertyChanges { target: root; visible: true }
+            PropertyChanges { root.x: position === "right" ? parent.width - root.width : mpv.x }
+            PropertyChanges { root.visible: true }
         }
     ]
 

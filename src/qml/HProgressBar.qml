@@ -4,16 +4,18 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQml 2.13
 import QtQuick 2.13
 import QtQuick.Controls 2.13
-import QtQuick.Layouts 1.13
 import QtQuick.Shapes 1.13
 import org.kde.kirigami 2.11 as Kirigami
 
 Slider {
     id: root
 
+    required property MpvVideo mpv
     property var chapters
     property bool seekStarted: false
 
@@ -31,7 +33,7 @@ Slider {
         color: Kirigami.Theme.alternateBackgroundColor
 
         Rectangle {
-            width: visualPosition * parent.width
+            width: root.visualPosition * parent.width
             height: parent.height
             color: Kirigami.Theme.highlightColor
             radius: 0
@@ -52,12 +54,12 @@ Slider {
             hoverEnabled: true
             acceptedButtons: Qt.MiddleButton | Qt.RightButton
 
-            onClicked: {
+            onClicked: function(mouse) {
                 if (mouse.button === Qt.MiddleButton) {
                     const time = mouseX * 100 / progressBarBackground.width * root.to / 100
-                    const chapters = mpv.getProperty("chapter-list")
+                    const chapters = root.mpv.getProperty("chapter-list")
                     const nextChapter = chapters.findIndex(chapter => chapter.time > time)
-                    mpv.setProperty("chapter", nextChapter)
+                    root.mpv.setProperty("chapter", nextChapter)
                 }
                 if (mouse.button === Qt.RightButton && root.chapters.length > 0) {
                     const menuX = mouse.x-chaptersMenu.width * 0.5
@@ -70,7 +72,7 @@ Slider {
                 progressBarToolTip.x = mouseX - (progressBarToolTip.width * 0.5)
 
                 const time = mouseX * 100 / progressBarBackground.width * root.to / 100
-                progressBarToolTip.text = mpv.formatTime(time)
+                progressBarToolTip.text = root.mpv.formatTime(time)
             }
 
             onEntered: {
@@ -83,14 +85,17 @@ Slider {
     // create markers for the chapters
     Instantiator {
         id: chaptersInstantiator
-        model: chapters
+        model: root.chapters
         delegate: Shape {
             id: chapterMarkerShape
+
+            required property int index
+            required property var modelData
 
             // modelData.time * 100 / mpv.duration is chapter-time percentage
             //  multiplied with progressBarBackground.width / 100 is the percentage at which
             // the chapter marker shoud be positioned on the progress bar
-            property int position: modelData.time * 100 / mpv.duration * progressBarBackground.width / 100
+            property int position: modelData.time * 100 / root.mpv.duration * progressBarBackground.width / 100
 
             antialiasing: true
             parent: progressBarBackground
@@ -113,7 +118,7 @@ Slider {
                 color: "transparent"
                 ToolTip {
                     id: chapterTitleToolTip
-                    text: modelData.title
+                    text: chapterMarkerShape.modelData.title
                     visible: false
                     delay: 0
                     timeout: 10000
@@ -123,7 +128,7 @@ Slider {
                     hoverEnabled: true
                     onEntered: chapterTitleToolTip.visible = true
                     onExited: chapterTitleToolTip.visible = false
-                    onClicked: mpv.setProperty("chapter", index)
+                    onClicked: root.mpv.setProperty("chapter", chapterMarkerShape.index)
                 }
             }
         }
@@ -171,9 +176,12 @@ Slider {
             delegate: MenuItem {
                 id: menuitem
 
+                required property int index
+                required property var modelData
+
                 checkable: true
                 checked: index === chaptersMenu.checkedItem
-                text: `${mpv.formatTime(modelData.time)} - ${modelData.title}`
+                text: `${root.mpv.formatTime(modelData.time)} - ${modelData.title}`
                 Component.onCompleted: {
                     chaptersMenu.width = menuitem.width > chaptersMenu.width
                             ? menuitem.width
@@ -181,7 +189,7 @@ Slider {
                     chaptersMenu.menuItemHeight = height
                 }
                 onClicked: {
-                    mpv.setProperty("chapter", index)
+                    root.mpv.setProperty("chapter", index)
                 }
             }
             onObjectAdded: chaptersMenu.insertItem(index, object)
@@ -190,14 +198,14 @@ Slider {
     }
 
     Connections {
-        target: mpv
-        onFileLoaded: chapters = mpv.getProperty("chapter-list")
+        target: root.mpv
+        onFileLoaded: root.chapters = root.mpv.getProperty("chapter-list")
         onChapterChanged: {
-            chaptersMenu.checkedItem = mpv.chapter
+            chaptersMenu.checkedItem = root.mpv.chapter
         }
         onPositionChanged: {
             if (!root.seekStarted) {
-                root.value = mpv.position
+                root.value = root.mpv.position
             }
         }
     }

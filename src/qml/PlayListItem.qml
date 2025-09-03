@@ -7,28 +7,31 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Window 2.13
-import QtQuick.Layouts 1.13
-import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.11 as Kirigami
 
 Item {
     id: root
 
+    required property int row
+    required property int column
+    required property var model
+
+    property int rowHeight: 30
     property string path: model.path
 
-    implicitHeight: playList.rowHeight + label.font.pointSize / 1.5
+    implicitHeight: rowHeight + label.font.pointSize / 1.5
 
     Rectangle {
         anchors.fill: parent
 
         color: {
-            if (model.isHovered && model.isPlaying) {
+            if (root.model.isHovered && root.model.isPlaying) {
                 let color = Kirigami.Theme.backgroundColor
                 Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, 0.8)
-            } else if (model.isHovered && !model.isPlaying) {
+            } else if (root.model.isHovered && !root.model.isPlaying) {
                 let color = Kirigami.Theme.backgroundColor
                 Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, 0.8)
-            } else if (!model.isHovered && model.isPlaying) {
+            } else if (!root.model.isHovered && root.model.isPlaying) {
                 Kirigami.Theme.highlightColor
             } else {
                 let color = Kirigami.Theme.alternateBackgroundColor
@@ -41,16 +44,16 @@ Item {
 
             anchors.fill: parent
             color: Kirigami.Theme.textColor
-            horizontalAlignment: column === 0 ? Qt.AlignLeft : Qt.AlignCenter
+            horizontalAlignment: root.column === 0 ? Qt.AlignLeft : Qt.AlignCenter
             verticalAlignment: Qt.AlignVCenter
             elide: Text.ElideRight
             font.bold: true
-            text: model.name
+            text: root.model.name
             leftPadding: 10
-            rightPadding: column === 1 ? scrollBar.width : 10
+            rightPadding: root.column === 1 ? scrollBar.width : 10
             layer.enabled: true
             font.pointSize: {
-                if (window.visibility === Window.FullScreen && playList.bigFont) {
+                if (Window.window.visibility === Window.FullScreen && playList.bigFont) {
                     return 18
                 }
                 return 12
@@ -59,7 +62,7 @@ Item {
                 id: toolTip
                 delay: 250
                 visible: false
-                text: model.name
+                text: root.model.name
                 font.pointSize: label.font.pointSize + 2
             }
         }
@@ -71,21 +74,21 @@ Item {
         hoverEnabled: true
 
         onEntered: {
-            playListModel.setHoveredVideo(row)
-            if (column === 0 && label.truncated) {
+            playListModel.setHoveredVideo(root.row)
+            if (root.column === 0 && label.truncated) {
                 toolTip.visible = true
             }
         }
 
         onExited: {
-            playListModel.clearHoveredVideo(row)
+            playListModel.clearHoveredVideo(root.row)
             toolTip.visible = false
         }
 
         onDoubleClicked: {
             if (mouse.button === Qt.LeftButton) {
-                window.openFile(model.path, true, false)
-                playListModel.setPlayingVideo(row)
+                window.openFile(root.model.path, true, false)
+                playListModel.setPlayingVideo(root.row)
             }
         }
     }

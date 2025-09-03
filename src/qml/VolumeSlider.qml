@@ -29,7 +29,7 @@ Slider {
         color: Kirigami.Theme.backgroundColor
 
         Rectangle {
-            width: visualPosition * parent.width
+            width: root.visualPosition * parent.width
             height: parent.height
             color: Kirigami.Theme.highlightColor
             radius: 0
@@ -59,10 +59,10 @@ Slider {
 
     Connections {
         target: mpv
-        onVolumeChanged: value = mpv.volume
+        onVolumeChanged: root.value = mpv.volume
     }
     Connections {
         target: app
-        onSettingsChanged: stepSize = settings.get("General", "VolumeStep")
+        onSettingsChanged: root.stepSize = settings.get("General", "VolumeStep")
     }
 }

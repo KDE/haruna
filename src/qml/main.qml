@@ -8,7 +8,6 @@ import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Window 2.13
 import QtQuick.Layouts 1.13
-import Qt5Compat.GraphicalEffects
 import Qt.labs.platform 1.0 as PlatformDialog
 import org.kde.kirigami 2.11 as Kirigami
 
@@ -30,7 +29,7 @@ Kirigami.ApplicationWindow {
     minimumHeight: 450
     color: Kirigami.Theme.backgroundColor
 
-    onVisibilityChanged: {
+    onVisibilityChanged: function(visibility) {
         if (visibility !== Window.FullScreen) {
             preFullScreenVisibility = visibility
         }
@@ -76,9 +75,17 @@ Kirigami.ApplicationWindow {
         Osd { id: osd }
     }
 
-    PlayList { id: playList }
+    PlayList {
+        id: playList
 
-    Footer { id: footer }
+        mpv: mpv
+    }
+
+    Footer {
+        id: footer
+
+        mpv: mpv
+    }
 
     PlatformDialog.FileDialog {
         id: fileDialog
@@ -87,7 +94,7 @@ Kirigami.ApplicationWindow {
         fileMode: PlatformDialog.FileDialog.OpenFile
 
         onAccepted: {
-            openFile(fileDialog.file.toString(), true, true)
+            window.openFile(fileDialog.file.toString(), true, true)
             // the timer scrolls the playlist to the playing file
             // once the table view rows are loaded
             mpv.scrollPositionTimer.start()
@@ -114,9 +121,9 @@ Kirigami.ApplicationWindow {
                 Layout.fillWidth: true
                 Component.onCompleted: text = settings.get("General", "LastUrl")
 
-                Keys.onPressed: {
+                Keys.onPressed: function(event) {
                     if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                        openFile(openUrlTextField.text, true, false)
+                        window.openFile(openUrlTextField.text, true, false)
                         settings.set("General", "LastUrl", openUrlTextField.text)
                         openUrlPopup.close()
                         openUrlTextField.clear()
@@ -134,7 +141,7 @@ Kirigami.ApplicationWindow {
                 text: qsTr("Open")
 
                 onClicked: {
-                    openFile(openUrlTextField.text, true, false)
+                    window.openFile(openUrlTextField.text, true, false)
                     settings.set("General", "LastUrl", openUrlTextField.text)
                     openUrlPopup.close()
                     openUrlTextField.clear()
