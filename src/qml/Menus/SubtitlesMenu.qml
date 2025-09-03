@@ -24,7 +24,7 @@ Menu {
 
             menu: primarySubtitleMenu
             isFirst: true
-            onSubtitleChanged: {
+            onSubtitleChanged: function(id, index) {
                 mpv.setSubtitle(id)
                 mpv.subtitleTracksModel().updateFirstTrack(index)
             }
@@ -42,7 +42,7 @@ Menu {
 
             menu: secondarySubtitleMenu
             isFirst: false
-            onSubtitleChanged: {
+            onSubtitleChanged: function(id, index) {
                 mpv.setSecondarySubtitle(id)
                 mpv.subtitleTracksModel().updateSecondTrack(index)
             }

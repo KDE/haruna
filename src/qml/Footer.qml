@@ -54,7 +54,7 @@ ToolBar {
                 id: playPauseButtonToolTip
                 Connections {
                     target: mpv
-                    onPauseChanged: {
+                    function onPauseChanged() {
                         if (mpv.pause) {
                             playPauseButtonToolTip.text = "Start Playback"
                         } else {

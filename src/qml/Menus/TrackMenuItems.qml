@@ -1,3 +1,5 @@
+pragma ComponentBehavior: Bound
+
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQml 2.13
@@ -14,9 +16,11 @@ Instantiator {
     onObjectAdded: menu.addItem( object )
     onObjectRemoved: menu.removeItem( object )
     delegate: MenuItem {
+        required property var model
+
         checkable: true
-        checked: isFirst ? model.isFirstTrack : model.isSecondTrack
+        checked: root.isFirst ? model.isFirstTrack : model.isSecondTrack
         text: model.text
-        onTriggered: subtitleChanged(model.id, model.index)
+        onTriggered: root.subtitleChanged(model.id, model.index)
     }
 }

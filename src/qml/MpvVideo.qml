@@ -24,7 +24,7 @@ MpvObject {
     anchors.left: hSettings.right
     anchors.right: parent.right
 
-    onSetSubtitle: {
+    onSetSubtitle: function(id) {
         if (id !== -1) {
             setProperty("sid", id)
         } else {
@@ -32,7 +32,7 @@ MpvObject {
         }
     }
 
-    onSetSecondarySubtitle: {
+    onSetSecondarySubtitle: function(id) {
         if (id !== -1) {
             setProperty("secondary-sid", id)
         } else {
@@ -40,7 +40,7 @@ MpvObject {
         }
     }
 
-    onSetAudio: {
+    onSetAudio: function(id) {
         setProperty("aid", id)
     }
 
@@ -142,8 +142,8 @@ MpvObject {
     Timer {
         id: hideCursorTimer
 
-        property int tx: mx
-        property int ty: my
+        property int tx: root.mx
+        property int ty: root.my
         property int timeNotMoved: 0
 
         interval: 50; running: true; repeat: true
@@ -152,7 +152,7 @@ MpvObject {
             if (window.visibility !== Window.FullScreen) {
                 return;
             }
-            if (mx === tx && my === ty) {
+            if (root.mx === tx && root.my === ty) {
                 if (timeNotMoved > 2000) {
                     app.hideCursor()
                 }
@@ -160,8 +160,8 @@ MpvObject {
                 app.showCursor()
                 timeNotMoved = 0
             }
-            tx = mx
-            ty = my
+            tx = root.mx
+            ty = root.my
             timeNotMoved += interval
         }
     }
@@ -177,7 +177,7 @@ MpvObject {
 
         onMouseXChanged: {
             focus = true
-            mx = mouseX
+            root.mx = mouseX
             if (playList.position === "right") {
                 if (mouseX > width - 50 && playList.tableView.rows > 1) {
                     if (playList.canToggleWithMouse) {
@@ -205,7 +205,7 @@ MpvObject {
 
         onMouseYChanged: {
             focus = true
-            my = mouseY
+            root.my = mouseY
             if (mouseY > window.height - footer.height && window.visibility === Window.FullScreen) {
                 footer.visible = true
             } else if (mouseY < window.height - footer.height && window.visibility === Window.FullScreen) {
@@ -213,7 +213,7 @@ MpvObject {
             }
         }
 
-        onWheel: {
+        onWheel: function(wheel) {
             if (wheel.angleDelta.y > 0) {
                 if (settings.get("Mouse", "ScrollUp")) {
                     actions.list[settings.get("Mouse", "ScrollUp")].trigger()
@@ -242,7 +242,7 @@ MpvObject {
             }
         }
 
-        onDoubleClicked: {
+        onDoubleClicked: function(mouse) {
             if (mouse.button === Qt.LeftButton) {
                 if (settings.get("Mouse", "Left.x2")) {
                     actions.list[settings.get("Mouse", "Left.x2")].trigger()
@@ -264,13 +264,13 @@ MpvObject {
         anchors.fill: parent
         keys: ["text/uri-list"]
 
-        onDropped: {
+        onDropped: function(drop) {
             window.openFile(drop.urls[0], true, true)
         }
     }
 
     function toggleFullScreen() {
-        if (window.visibility !== Window.FullScreen) {
+        if (Window.window.visibility !== Window.FullScreen) {
             hSettings.state = "hidden"
             window.showFullScreen()
             menuBar.visible = false
@@ -280,11 +280,11 @@ MpvObject {
             anchors.fill = parent
         } else {
             if (window.preFullScreenVisibility === Window.Windowed) {
-                window.showNormal()
+                Window.window.showNormal()
             }
             if (window.preFullScreenVisibility == Window.Maximized) {
-                window.show()
-                window.showMaximized()
+                Window.window.show()
+                Window.window.showMaximized()
             }
             menuBar.visible = settings.get("View", "MenuBarVisible")
             header.visible = settings.get("View", "HeaderVisible")

@@ -52,13 +52,15 @@ ToolBar {
             }
 
             ToolSeparator {
+                id: toolSeparator
+
                 padding: vertical ? 10 : 2
                 topPadding: vertical ? 2 : 10
                 bottomPadding: vertical ? 2 : 10
 
                 contentItem: Rectangle {
-                    implicitWidth: parent.vertical ? 1 : 24
-                    implicitHeight: parent.vertical ? 24 : 1
+                    implicitWidth: toolSeparator.vertical ? 1 : 24
+                    implicitHeight: toolSeparator.vertical ? 24 : 1
                     color: Kirigami.Theme.textColor
                 }
             }
@@ -92,7 +94,7 @@ ToolBar {
 
                             menu: secondarySubtitleMenu
                             isFirst: false
-                            onSubtitleChanged: {
+                            onSubtitleChanged: function(id, index) {
                                 mpv.setSecondarySubtitle(id)
                                 mpv.subtitleTracksModel().updateSecondTrack(index)
                             }
@@ -111,7 +113,7 @@ ToolBar {
                         menu: subtitleMenu
                         isFirst: true
 
-                        onSubtitleChanged: {
+                        onSubtitleChanged: function(id, index) {
                             mpv.setSubtitle(id)
                             mpv.subtitleTracksModel().updateFirstTrack(index)
                         }
@@ -142,10 +144,13 @@ ToolBar {
                         id: audioMenuInstantiator
 
                         model: 0
-                        onObjectAdded: audioMenu.insertItem( index, object )
+                        onObjectAdded: (index, object) => audioMenu.insertItem( index, object )
                         onObjectRemoved: audioMenu.removeItem( object )
                         delegate: MenuItem {
                             id: audioMenuItem
+
+                            required property var model
+
                             checkable: true
                             checked: model.isFirstTrack
                             text: model.text

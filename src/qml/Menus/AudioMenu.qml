@@ -21,10 +21,13 @@ Menu {
         Instantiator {
             id: audioMenuInstantiator
             model: 0
-            onObjectAdded: audioMenu.insertItem( index, object )
+            onObjectAdded: (index, object) => audioMenu.insertItem( index, object )
             onObjectRemoved: audioMenu.removeItem( object )
             delegate: MenuItem {
                 id: audioMenuItem
+
+                required property var model
+
                 checkable: true
                 checked: model.isFirstTrack
                 text: model.text
@@ -36,7 +39,7 @@ Menu {
         }
         Connections {
             target: mpv
-            onFileLoaded: {
+            function onFileLoaded() {
                 audioMenuInstantiator.model = mpv.audioTracksModel()
             }
         }
