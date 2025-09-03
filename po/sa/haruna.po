@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:41+0000\n"
+"POT-Creation-Date: 2025-09-03 00:42+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1238,7 +1238,12 @@ msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "आयतनम् : %1"
 
-#: src/qml/PlayList.qml:77
+#: src/qml/PlayList.qml:76
+msgctxt "@action:button"
+msgid "Search"
+msgstr ""
+
+#: src/qml/PlayList.qml:96
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -1246,12 +1251,12 @@ msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "प्लेलिस्ट् उद्घाटयन्तु"
 
-#: src/qml/PlayList.qml:91
+#: src/qml/PlayList.qml:110
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
-#: src/qml/PlayList.qml:99
+#: src/qml/PlayList.qml:118
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1259,12 +1264,12 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "सञ्चिका"
 
-#: src/qml/PlayList.qml:107
+#: src/qml/PlayList.qml:126
 msgctxt "@action:button"
 msgid "URL"
 msgstr ""
 
-#: src/qml/PlayList.qml:117
+#: src/qml/PlayList.qml:136
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -1272,12 +1277,12 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "प्लेलिस्ट्"
 
-#: src/qml/PlayList.qml:128
+#: src/qml/PlayList.qml:147
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "प्रकारं"
 
-#: src/qml/PlayList.qml:137
+#: src/qml/PlayList.qml:156
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -1285,7 +1290,7 @@ msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "नाम आरोहणम्"
 
-#: src/qml/PlayList.qml:143
+#: src/qml/PlayList.qml:162
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name descending"
@@ -1293,7 +1298,7 @@ msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "नाम अवरोहति"
 
-#: src/qml/PlayList.qml:149
+#: src/qml/PlayList.qml:168
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration ascending"
@@ -1301,7 +1306,7 @@ msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "अवधिः आरोही"
 
-#: src/qml/PlayList.qml:155
+#: src/qml/PlayList.qml:174
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration descending"
@@ -1309,7 +1314,7 @@ msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "अवरोहति अवधिः"
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:181
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -1317,7 +1322,7 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "प्लेबैक"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:187
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -1325,12 +1330,12 @@ msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "प्लेलिस्ट् उद्घाटयन्तु"
 
-#: src/qml/PlayList.qml:179
+#: src/qml/PlayList.qml:198
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/qml/PlayList.qml:189
+#: src/qml/PlayList.qml:208
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Repeat"
@@ -1338,22 +1343,22 @@ msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "परिहरन"
 
-#: src/qml/PlayList.qml:200
+#: src/qml/PlayList.qml:219
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/qml/PlayList.qml:210
+#: src/qml/PlayList.qml:229
 msgctxt "@action:button"
 msgid "Random"
 msgstr ""
 
-#: src/qml/PlayList.qml:222
+#: src/qml/PlayList.qml:241
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "स्पष्टः"
 
-#: src/qml/PlayList.qml:230
+#: src/qml/PlayList.qml:249
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Save as"
@@ -1361,22 +1366,22 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "यथा रक्षतु"
 
-#: src/qml/PlayList.qml:303 src/qml/PlayList.qml:530
+#: src/qml/PlayList.qml:322 src/qml/PlayList.qml:549
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "पुनर्नाम"
 
-#: src/qml/PlayList.qml:309
+#: src/qml/PlayList.qml:328
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 
-#: src/qml/PlayList.qml:365 src/qml/PlayList.qml:378
+#: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
 msgctxt "@action:button"
 msgid "Add"
 msgstr "संयोजयति"
 
-#: src/qml/PlayList.qml:472
+#: src/qml/PlayList.qml:491
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open containing folder"
@@ -1384,7 +1389,7 @@ msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "युक्तं पुटं उद्घाटयन्तु"
 
-#: src/qml/PlayList.qml:478
+#: src/qml/PlayList.qml:497
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1392,7 +1397,7 @@ msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "ब्राउजर् मध्ये उद्घाटयन्तु"
 
-#: src/qml/PlayList.qml:487
+#: src/qml/PlayList.qml:506
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy name"
@@ -1400,7 +1405,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "प्रतिलिपि नाम"
 
-#: src/qml/PlayList.qml:493
+#: src/qml/PlayList.qml:512
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy path"
@@ -1408,7 +1413,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "प्रतिलिपि मार्ग"
 
-#: src/qml/PlayList.qml:494
+#: src/qml/PlayList.qml:513
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -1416,7 +1421,7 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "url प्रतिलिपि कुर्वन्तु"
 
-#: src/qml/PlayList.qml:504
+#: src/qml/PlayList.qml:523
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1424,7 +1429,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "सञ्चिकां चिनोतु"
 
-#: src/qml/PlayList.qml:508
+#: src/qml/PlayList.qml:527
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1432,14 +1437,14 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "सञ्चिकां चिनोतु"
 
-#: src/qml/PlayList.qml:512
+#: src/qml/PlayList.qml:531
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "प्रारूपचयनम्"
 
-#: src/qml/PlayList.qml:518
+#: src/qml/PlayList.qml:537
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1447,7 +1452,7 @@ msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "प्लेलिस्ट् तः निष्कासयन्तु"
 
-#: src/qml/PlayList.qml:524
+#: src/qml/PlayList.qml:543
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1455,7 +1460,7 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "प्लेलिस्ट् तः निष्कासयन्तु"
 
-#: src/qml/PlayList.qml:536
+#: src/qml/PlayList.qml:555
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Scroll to playing item"
@@ -1463,17 +1468,17 @@ msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "प्लेइंग आइटम् प्रति स्क्रॉल कुर्वन्तु"
 
-#: src/qml/PlayList.qml:546
+#: src/qml/PlayList.qml:565
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:552
+#: src/qml/PlayList.qml:571
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:658 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:677 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "सञ्चिकां चिनोतु"
