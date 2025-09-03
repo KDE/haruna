@@ -37,10 +37,6 @@
 <arg direction="in" type="u" name="cookie"/>
 </method>
 </interface>
-<interface name="org.kde.screensaver">
-<method name="SwitchUser"/>
-<method name="configure"/>
-</interface>
 <interface name="org.freedesktop.DBus.Properties">
 <method name="Get">
 <arg name="interface_name" type="s" direction="in"/>
