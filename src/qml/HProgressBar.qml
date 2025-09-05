@@ -187,10 +187,10 @@ RowLayout {
 
         onPressedChanged: {
             if (pressed) {
-                slider.prePressPause = root.m_mpv.pause
-                root.m_mpv.pause = true
+                slider.prePressPause = root.m_mpv.getProperty(MpvProperties.Pause)
+                root.m_mpv.setPropertyBlocking(MpvProperties.Pause, true)
             } else {
-                root.m_mpv.pause = slider.prePressPause
+                root.m_mpv.setPropertyBlocking(MpvProperties.Pause, slider.prePressPause)
             }
         }
 
