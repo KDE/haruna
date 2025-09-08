@@ -76,6 +76,7 @@ public:
     Q_INVOKABLE void selectItem(uint row, Selection selectionMode);
     Q_INVOKABLE void refreshData();
     Q_INVOKABLE void addFilesAndFolders(QList<QUrl> urls, PlaylistModel::Behavior behavior, uint insertOffset = 0);
+    Q_INVOKABLE bool isDirectory(const QUrl &url);
 
     // PlaylistSortProxyModel
     Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortMode);

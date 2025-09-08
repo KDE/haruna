@@ -506,7 +506,7 @@ void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistMode
 
         if (fileInfo.isFile()) {
             if (isAcceptedMime(url.toString())) {
-                files.append(url.toString());
+                files.append(url.toLocalFile());
             }
             continue;
         }
@@ -539,6 +539,10 @@ void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistMode
     collator.setNumericMode(true);
     std::sort(files.begin(), files.end(), collator);
 
+    if (behavior == PlaylistModel::Clear) {
+        playlistModel()->clear();
+    }
+
     int localOffset = 0;
     for (const auto &file : std::as_const(files)) {
         if (behavior == PlaylistModel::Insert) {
@@ -550,6 +554,12 @@ void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistMode
         // PlaylistModel can just append the items
         playlistModel()->addItem(QUrl::fromLocalFile(file), PlaylistModel::Append);
     }
+}
+
+bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)
+{
+    QFileInfo fileInfo(url.toLocalFile());
+    return fileInfo.exists() && fileInfo.isDir();
 }
 
 void PlaylistFilterProxyModel::sortItems(PlaylistSortProxyModel::Sort sortMode)

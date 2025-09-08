@@ -5,7 +5,9 @@
  */
 
 import QtQuick
+import QtQuick.Controls
 import QtQuick.Window
+import Qt5Compat.GraphicalEffects
 
 import org.kde.haruna
 import org.kde.haruna.settings
@@ -164,18 +166,171 @@ MpvItem {
     DropArea {
         id: dropArea
 
+        property bool dragMedia: false
+        property bool dragSubtitle: false
+        property int subtitleIndex: -1
+        property bool mouseOnTopPart: containsDrag && dragMedia && drag.y <= height * 0.25
+        property bool mouseOnBottomPart: containsDrag && dragMedia && drag.y > height * 0.25
+
         anchors.fill: parent
         keys: ["text/uri-list"]
 
-        onDropped: drop => {
-            const mimeType = HarunaApp.mimeType(drop.urls[0])
-            if (root.window.acceptedSubtitleTypes.includes(mimeType)) {
-                root.commandAsync(["sub-add", drop.urls[0], "select"], MpvItem.AsyncIds.AddSubtitleTrack)
+        onEntered: function (drag) {
+            for (var i = 0; i < drag.urls.length; ++i) {
+                let mimeType = HarunaApp.mimeType(drag.urls[i])
+                let isDir = root.defaultFilterProxyModel.isDirectory(drag.urls[i])
+                if (mimeType.startsWith("video/") || mimeType.startsWith("audio/") || isDir) {
+                    dragMedia = true
+                    return
+                }
+                if (root.window.acceptedSubtitleTypes.includes(mimeType)) {
+                    dragSubtitle = true
+                    subtitleIndex = i
+                }
+            }
+        }
+
+        onExited: {
+            dragMedia = false
+            dragSubtitle = false
+            subtitleIndex = -1
+        }
+
+        onDropped: function (drop){
+            if (dragSubtitle && !dragMedia) {
+                // If dragging multiple items and none of them is a media, and if there is a subtitle, load it
+                root.commandAsync(["sub-add", drop.urls[subtitleIndex], "select"], MpvItem.AsyncIds.AddSubtitleTrack)
+                return
+            }
+            if (mouseOnTopPart) {
+                // Append to playlist
+                root.defaultFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Append)
+                return
+            }
+            if (mouseOnBottomPart) {
+                // Clear the playlist
+                let isDir = root.defaultFilterProxyModel.isDirectory(drop.urls[0])
+                if (drop.urls.length > 1 || isDir) {
+                    // More than one file/folder dragged. Or at least one folder dragged.
+                    root.defaultFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Clear)
+                }
+                else {
+                    // One file dragged
+                    root.window.openFile(drop.urls[0], RecentFilesModel.OpenedFrom.ExternalApp)
+                }
+                return
+            }
+        }
+
+        Rectangle {
+            id: topDropRect
+
+            visible: dropArea.containsDrag
+            color: "transparent"
+            width: parent.width
+            height: parent.height * 0.25
+            radius: Kirigami.Units.cornerRadius
+
+            anchors {
+                top: dropArea.top
+                left: dropArea.left
+                right: dropArea.right
+                margins: Kirigami.Units.smallSpacing
             }
 
-            if (mimeType.startsWith("video/") || mimeType.startsWith("audio/")) {
-                root.window.openFile(drop.urls[0], RecentFilesModel.OpenedFrom.ExternalApp)
+            border {
+                color: dropArea.mouseOnTopPart
+                       ? Kirigami.Theme.activeTextColor
+                       : "transparent"
+                width: dropArea.mouseOnTopPart ? 3 : 0
             }
+
+            Label {
+                anchors.fill: parent
+                anchors.centerIn: parent
+
+                text: i18nc("@info:drag&drop append items", "Add to Playlist")
+                elide: Text.ElideRight
+                color: dropArea.mouseOnTopPart
+                       ? Qt.alpha(Kirigami.Theme.activeTextColor, 0.75)
+                       : Qt.alpha(Kirigami.Theme.textColor, 0.75)
+
+                font.pointSize: dropArea.calculateAdaptiveFontSize(12, 30, 400, 1200)
+                horizontalAlignment: Qt.AlignCenter
+                verticalAlignment: Qt.AlignVCenter
+            }
+
+            layer.enabled: true
+            layer.effect: DropShadow {
+                verticalOffset: 1
+                color: "#111"
+                radius: Kirigami.Units.cornerRadius
+                spread: 0.3
+                samples: 17
+            }
+        }
+
+        Rectangle {
+            id: bottomDropRect
+
+            visible: dropArea.containsDrag
+            width: parent.width
+            color: "transparent"
+            radius: Kirigami.Units.cornerRadius
+
+            anchors {
+                top: topDropRect.bottom
+                left: dropArea.left
+                right: dropArea.right
+                bottom: dropArea.bottom
+                margins: Kirigami.Units.smallSpacing
+            }
+
+            border {
+                color: dropArea.mouseOnBottomPart
+                       ? Kirigami.Theme.activeTextColor
+                       : "transparent"
+                width: dropArea.mouseOnBottomPart ? 3 : 0
+            }
+
+            Label {
+                anchors.fill: parent
+                anchors.centerIn: parent
+
+                text: i18nc("@info:drag&drop play now", "Play Now")
+                elide: Text.ElideRight
+                color: dropArea.mouseOnBottomPart
+                       ? Qt.alpha(Kirigami.Theme.activeTextColor, 0.75)
+                       : Qt.alpha(Kirigami.Theme.textColor, 0.75)
+
+                font.pointSize: dropArea.calculateAdaptiveFontSize(18, 36, 400, 1200)
+                horizontalAlignment: Qt.AlignCenter
+                verticalAlignment: Qt.AlignVCenter
+            }
+
+            layer.enabled: true
+            layer.effect: DropShadow {
+                verticalOffset: 1
+                color: "#111"
+                radius: Kirigami.Units.cornerRadius
+                spread: 0.3
+                samples: 17
+            }
+        }
+
+        function calculateAdaptiveFontSize(minPoint, maxPoint, maxWinHeight, maxWinWidth) {
+            let width = root.window.width
+            let height = root.window.height
+            let cappedWidth = Math.min(Math.max(root.window.minimumWidth, width), maxWinWidth)
+            let cappedHeight = Math.min(Math.max(root.window.minimumHeight, height), maxWinHeight)
+            const widthScale = maxWinWidth - root.window.minimumWidth
+            const heightScale = maxWinHeight - root.window.minimumHeight
+            const pointScale = maxPoint - minPoint
+
+            // calculate a font point size separately by considering both current width and height
+            let wPoint = (((cappedWidth - root.window.minimumWidth) * pointScale) / widthScale) + minPoint
+            let hPoint = (((cappedHeight - root.window.minimumHeight) * pointScale) / heightScale) + minPoint
+            return Math.min(wPoint, hPoint)
         }
     }
 
