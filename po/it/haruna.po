@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:42+0000\n"
-"PO-Revision-Date: 2025-08-24 18:17+0200\n"
+"PO-Revision-Date: 2025-08-31 00:22+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -577,7 +577,7 @@ msgstr "Riassegna"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "Non sono ammesse scalette aventi lo stesso nome: %1"
 
 #: src/mpv/mpvitem.cpp:394
 #, kde-format
@@ -896,12 +896,9 @@ msgstr ""
 "La ricerca viene eseguita solo nelle cartelle relative."
 
 #: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
-#, fuzzy
-#| msgctxt "@item:listbox the footer style"
-#| msgid "Default"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
-msgstr "Predefinito"
+msgstr "Predefinita"
 
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
@@ -1138,9 +1135,6 @@ msgid "URL"
 msgstr "URL"
 
 #: src/qml/PlayList.qml:136
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Scaletta"
@@ -1218,7 +1212,7 @@ msgstr "Rinomina"
 #: src/qml/PlayList.qml:328
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 #: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
 msgctxt "@action:button"
