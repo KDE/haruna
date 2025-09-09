@@ -33,6 +33,8 @@ public:
     Q_PROPERTY(bool CanPause READ CanPause CONSTANT)
     Q_PROPERTY(bool CanSeek READ CanSeek CONSTANT)
     Q_PROPERTY(bool CanControl READ CanControl CONSTANT)
+    Q_PROPERTY(bool Shuffle READ Shuffle WRITE setShuffle NOTIFY shuffleChanged)
+    Q_PROPERTY(QString LoopStatus READ LoopStatus WRITE setLoopStatus NOTIFY loopStatusChanged)
 
     void propertiesChanged(const QString &property, const QVariant &value);
 
@@ -56,8 +58,12 @@ public Q_SLOTS:
     bool CanPause();
     bool CanSeek();
     bool CanControl();
+    bool Shuffle();
+    QString LoopStatus();
     void setPosition(int pos);
     void setVolume(double vol);
+    void setShuffle(bool shuffle);
+    void setLoopStatus(QString loop);
 
 Q_SIGNALS:
     void next();
@@ -72,6 +78,8 @@ Q_SIGNALS:
     void metadataChanged();
     void volumeChanged();
     void requestMprisThumbnail(const QString &path, int width);
+    void shuffleChanged(bool shuffle);
+    void loopStatusChanged(QString loop);
 
 private:
     QString getThumbnail(const QString &path);

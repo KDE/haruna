@@ -98,6 +98,7 @@ SettingsBasePage {
 
         RowLayout {
             ComboBox {
+                id: playbackBehaviorComboBox
                 textRole: "text"
                 valueRole: "value"
                 model: ListModel {
@@ -139,6 +140,14 @@ SettingsBasePage {
                 onActivated: function(index) {
                     PlaylistSettings.playbackBehavior = model.get(index).value
                     PlaylistSettings.save()
+                }
+                // When changed from mpris or toolbar, sync the GUI:
+                Connections {
+                    target: PlaylistSettings
+                    function onPlaybackBehaviorChanged() {
+                        const comboBox = playbackBehaviorComboBox
+                        comboBox.currentIndex = comboBox.indexOfValue(PlaylistSettings.playbackBehavior)
+                    }
                 }
             }
 

@@ -18,6 +18,7 @@
 #include "application.h"
 #include "mpvitem.h"
 #include "mpvproperties.h"
+#include "playlistsettings.h"
 #include "videosettings.h"
 #include "worker.h"
 
@@ -67,6 +68,11 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
         propertiesChanged(u"Volume"_s, Volume());
         Q_EMIT volumeChanged();
+    });
+
+    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [=]() {
+        propertiesChanged(u"Shuffle"_s, Shuffle());
+        propertiesChanged(u"LoopStatus"_s, LoopStatus());
     });
 }
 
@@ -208,6 +214,32 @@ void MediaPlayer2Player::setVolume(double vol)
     Q_EMIT m_mpv->setProperty(MpvProperties::self()->Volume, vol * 100);
 }
 
+void MediaPlayer2Player::setShuffle(bool shuffle)
+{
+    if (shuffle) {
+        PlaylistSettings::self()->setPlaybackBehavior(u"Random"_s);
+    } else {
+        return setLoopStatus(u"Playlist"_s);
+    }
+    PlaylistSettings::self()->save();
+    Q_EMIT PlaylistSettings::self()->PlaybackBehaviorChanged();
+}
+
+void MediaPlayer2Player::setLoopStatus(QString loop)
+{
+    if (loop == u"None"_s) {
+        loop = u"StopAfterLast"_s;
+    } else if (loop == u"Track"_s) {
+        loop = u"RepeatItem"_s;
+    } else if (loop == u"Playlist"_s) {
+        loop = u"RepeatPlaylist"_s;
+    }
+
+    PlaylistSettings::self()->setPlaybackBehavior(loop);
+    PlaylistSettings::self()->save();
+    Q_EMIT PlaylistSettings::self()->PlaybackBehaviorChanged();
+}
+
 qlonglong MediaPlayer2Player::Position()
 {
     return m_mpv->position() * 1000 * 1000;
@@ -246,6 +278,23 @@ bool MediaPlayer2Player::CanSeek()
 bool MediaPlayer2Player::CanControl()
 {
     return true;
+}
+
+bool MediaPlayer2Player::Shuffle()
+{
+    return PlaylistSettings::playbackBehavior() == u"Random"_s;
+}
+
+QString MediaPlayer2Player::LoopStatus()
+{
+    if (PlaylistSettings::playbackBehavior() == u"RepeatItem"_s) {
+        return u"Track"_s;
+    }
+    if (PlaylistSettings::playbackBehavior() == u"RepeatPlaylist"_s || PlaylistSettings::playbackBehavior() == u"Random"_s) {
+        return u"Playlist"_s;
+    }
+    // StopAfterLast or StopAfterItem
+    return u"None"_s;
 }
 
 #include "moc_mediaplayer2player.cpp"
