@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:42+0000\n"
+"POT-Creation-Date: 2025-09-09 00:51+0000\n"
 "PO-Revision-Date: 2023-07-14 22:00+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1288,10 +1288,26 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Velocidade de reprodução"
 
-#: src/qml/MpvVideo.qml:35
+#: src/qml/MpvVideo.qml:37
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
+
+#: src/qml/MpvVideo.qml:252
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@info:drag&drop append items"
+msgid "Add to Playlist"
+msgstr "Abrir a lista de reprodução"
+
+#: src/qml/MpvVideo.qml:300
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Play Next"
+msgctxt "@info:drag&drop play now"
+msgid "Play Now"
+msgstr "Reproduzir o Seguinte"
 
 #: src/qml/PlayList.qml:76
 msgctxt "@action:button"
