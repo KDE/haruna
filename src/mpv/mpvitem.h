@@ -203,7 +203,6 @@ private:
     void initProperties();
     void setupConnections();
     void onReady();
-    void setupEofBehavior();
     void onEndFile(const QString &reason);
     void onEndOfFileReached();
     void onPropertyChanged(const QString &property, const QVariant &value);

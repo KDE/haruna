@@ -79,7 +79,6 @@ MpvItem::MpvItem(QQuickItem *parent)
 
     setupConnections();
     initProperties();
-    setupEofBehavior();
 
     m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
     m_saveTimePositionTimer->start();
@@ -195,9 +194,6 @@ void MpvItem::initProperties()
 void MpvItem::setupConnections()
 {
     // clang-format off
-    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged,
-            this, &MpvItem::setupEofBehavior);
-
     connect(mpvController(), &MpvController::propertyChanged,
             this, &MpvItem::onPropertyChanged, Qt::QueuedConnection);
 
@@ -308,14 +304,12 @@ void MpvItem::setupConnections()
         static LockManager lockManager;
         if (pause()) {
             lockManager.setInhibitionOff();
-            setPropertyBlocking(MpvProperties::self()->KeepOpen, u"always"_s);
         } else {
             if (!m_currentUrl.isEmpty()) {
                 lockManager.setInhibitionOn();
             }
             const auto order = PlaylistSettings::playbackBehavior();
             if (order != u"StopAfterLast"_s && order != u"StopAfterItem"_s) {
-                setPropertyBlocking(MpvProperties::self()->KeepOpen, u"no"_s);
             }
         }
     });
@@ -352,37 +346,11 @@ void MpvItem::onReady()
     }
 }
 
-void MpvItem::setupEofBehavior()
-{
-    const auto order = PlaylistSettings::playbackBehavior();
-
-    if (order == u"RepeatPlaylist"_s || order == u"Random"_s) {
-        // when file ends it's unloaded from mpv and onEndFile runs
-        Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"no"_s);
-        Q_EMIT setProperty(MpvProperties::self()->LoopFile, u"no"_s);
-        return;
-    }
-
-    if (order == u"StopAfterLast"_s || order == u"StopAfterItem"_s) {
-        // when file ends mpv keeps it open and onEndOfFileReached runs
-        Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"always"_s);
-        Q_EMIT setProperty(MpvProperties::self()->LoopFile, u"no"_s);
-        return;
-    }
-
-    if (order == u"RepeatItem"_s) {
-        // when file ends mpv repeats it without unloading
-        Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"no"_s);
-        Q_EMIT setProperty(MpvProperties::self()->LoopFile, u"inf"_s);
-        return;
-    }
-}
-
 void MpvItem::onEndFile(const QString &reason)
 {
-    auto proxyModel = activeFilterProxyModel();
     // this runs after the file has been unloaded from mpv
     if (reason == u"error"_s) {
+        auto proxyModel = activeFilterProxyModel();
         if (proxyModel->rowCount() == 0) {
             return;
         }
@@ -394,32 +362,39 @@ void MpvItem::onEndFile(const QString &reason)
         Q_EMIT Application::instance()->error(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
         return;
     }
-
-    proxyModel->playNext();
 }
 
 void MpvItem::onEndOfFileReached()
 {
-    // this runs before the file is unloaded from mpv,
-    // only when KeepOpen is enabled
+    // this runs before the file is unloaded from mpv
     if (!m_eofReached) {
         return;
     }
+
     auto proxyModel = activeFilterProxyModel();
-    if (PlaylistSettings::playbackBehavior() == u"StopAfterLast"_s) {
+    const auto behavior = PlaylistSettings::playbackBehavior();
+    if (behavior == u"StopAfterLast"_s) {
         uint currentItem = proxyModel->getPlayingItem();
-        if (!proxyModel->isLastItem(currentItem)) {
-            proxyModel->playNext();
-        } else {
+        if (proxyModel->isLastItem(currentItem)) {
             setPropertyBlocking(MpvProperties::self()->Position, 0);
             setPropertyBlocking(MpvProperties::self()->Pause, true);
+            return;
         }
     }
 
-    if (PlaylistSettings::playbackBehavior() == u"StopAfterItem"_s) {
+    if (behavior == u"RepeatItem"_s) {
+        setPropertyBlocking(MpvProperties::self()->Position, 0);
+        setPropertyBlocking(MpvProperties::self()->Pause, false);
+        return;
+    }
+
+    if (behavior == u"StopAfterItem"_s) {
         setPropertyBlocking(MpvProperties::self()->Position, 0);
         setPropertyBlocking(MpvProperties::self()->Pause, true);
+        return;
     }
+
+    proxyModel->playNext();
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
@@ -506,6 +481,9 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
 void MpvItem::loadFile(const QString &file)
 {
+    // must be set to always for the playback behavior to work as intended
+    Q_EMIT setProperty(MpvProperties::self()->KeepOpen, u"always"_s);
+
     auto url = QUrl::fromUserInput(file);
     if (m_currentUrl != url) {
         m_currentUrl = url;
