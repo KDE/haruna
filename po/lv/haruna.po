@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-09 00:51+0000\n"
+"POT-Creation-Date: 2025-09-11 00:41+0000\n"
 "PO-Revision-Date: 2025-08-19 14:57+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -576,50 +576,50 @@ msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:394
+#: src/mpv/mpvitem.cpp:362
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Nevarēja atskaņot: %1"
 
-#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Subtitru laiks: %1 sekundes"
 
-#: src/mpv/mpvitem.cpp:519
+#: src/mpv/mpvitem.cpp:497
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Datne nepastāv: %1"
 
-#: src/mpv/mpvitem.cpp:552
+#: src/mpv/mpvitem.cpp:530
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nav"
 
-#: src/mpv/mpvitem.cpp:590
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekrānattēls neizdevās"
 
-#: src/mpv/mpvitem.cpp:595
+#: src/mpv/mpvitem.cpp:573
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekrānattēls ir uzņemts"
 
-#: src/mpv/mpvitem.cpp:597
+#: src/mpv/mpvitem.cpp:575
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekrānattēls: %1"
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -629,7 +629,7 @@ msgstr ""
 "Nav atrasts video celiņš. Iespējams, video celiņu neizdodas atkodēt/atskaņot "
 "trūkstoša kodeka dēļ."
 
-#: src/mpv/mpvitem.cpp:657
+#: src/mpv/mpvitem.cpp:635
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1709,7 +1709,7 @@ msgid "Show menubar"
 msgstr "Rādīt izvēļņu joslu"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:159
+#: src/qml/Settings/PlaylistSettings.qml:168
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Rādīt rīkjoslu"
@@ -2171,32 +2171,32 @@ msgctxt "@label:listbox"
 msgid "Playback behavior"
 msgstr "Atskaņošanas uzvedība"
 
-#: src/qml/Settings/PlaylistSettings.qml:108
+#: src/qml/Settings/PlaylistSettings.qml:109
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
 msgstr "Atkārtot repertuāru"
 
-#: src/qml/Settings/PlaylistSettings.qml:114
+#: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
 msgstr "Apturēt pēc pēdējā vienuma"
 
-#: src/qml/Settings/PlaylistSettings.qml:120
+#: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
 msgstr "Atkārtot vienumu"
 
-#: src/qml/Settings/PlaylistSettings.qml:126
+#: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr "Apturēt pēc vienuma"
 
-#: src/qml/Settings/PlaylistSettings.qml:132
+#: src/qml/Settings/PlaylistSettings.qml:133
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
 msgstr "Nejauša secība"
 
-#: src/qml/Settings/PlaylistSettings.qml:147
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2215,12 +2215,12 @@ msgstr ""
 "secība</strong>: repertuāra vienumu atskaņošana notiks nejaušā secībā bez "
 "apstāšanās"
 
-#: src/qml/Settings/PlaylistSettings.qml:169
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Pārklāt pāri video"
 
-#: src/qml/Settings/PlaylistSettings.qml:176
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2229,37 +2229,37 @@ msgstr ""
 "Kad atzīmēts, repertuārs pārklājas video\n"
 "Kad nav atzīmēts, video maina izmēru"
 
-#: src/qml/Settings/PlaylistSettings.qml:183
+#: src/qml/Settings/PlaylistSettings.qml:192
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Datnes nosaukuma vietā rādīt multivides nosaukumu"
 
-#: src/qml/Settings/PlaylistSettings.qml:193
+#: src/qml/Settings/PlaylistSettings.qml:202
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Automātiski ielādēt video no tās pašas datnes"
 
-#: src/qml/Settings/PlaylistSettings.qml:203
+#: src/qml/Settings/PlaylistSettings.qml:212
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Rādīt rindu numuru"
 
-#: src/qml/Settings/PlaylistSettings.qml:213
+#: src/qml/Settings/PlaylistSettings.qml:222
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Pārslēgt ar peli"
 
-#: src/qml/Settings/PlaylistSettings.qml:222
+#: src/qml/Settings/PlaylistSettings.qml:231
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Palielināt fonta izmēru, atrodoties pilnekrāna režīmā"
 
-#: src/qml/Settings/PlaylistSettings.qml:234
+#: src/qml/Settings/PlaylistSettings.qml:243
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Atcerēties pēdējo repertuāra stāvokli"
 
-#: src/qml/Settings/PlaylistSettings.qml:241
+#: src/qml/Settings/PlaylistSettings.qml:250
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2268,7 +2268,7 @@ msgstr ""
 "Kad atzīmēts, repertuāra stāvoklis (redzams/slēpts) nemainīsies, atkārtoti "
 "ieslēdzot programmu"
 
-#: src/qml/Settings/PlaylistSettings.qml:249
+#: src/qml/Settings/PlaylistSettings.qml:258
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Atvērt vienumus ar vienu klikšķi"

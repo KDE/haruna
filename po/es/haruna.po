@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-09 00:51+0000\n"
+"POT-Creation-Date: 2025-09-11 00:41+0000\n"
 "PO-Revision-Date: 2025-09-09 22:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -577,50 +577,50 @@ msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "No se permiten listas de reproducción con el mismo nombre: %1"
 
-#: src/mpv/mpvitem.cpp:394
+#: src/mpv/mpvitem.cpp:362
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "No se puede reproducir: %1"
 
-#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Ritmo de subtítulos: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:519
+#: src/mpv/mpvitem.cpp:497
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "El archivo no existe: %1"
 
-#: src/mpv/mpvitem.cpp:552
+#: src/mpv/mpvitem.cpp:530
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ninguna"
 
-#: src/mpv/mpvitem.cpp:590
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla ha fallado"
 
-#: src/mpv/mpvitem.cpp:595
+#: src/mpv/mpvitem.cpp:573
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Captura de pantalla realizada"
 
-#: src/mpv/mpvitem.cpp:597
+#: src/mpv/mpvitem.cpp:575
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -630,7 +630,7 @@ msgstr ""
 "No se ha detectado la pista de vídeo, seguramente porque no se puede "
 "descodificar o reproducir debido a la ausencia de códecs."
 
-#: src/mpv/mpvitem.cpp:657
+#: src/mpv/mpvitem.cpp:635
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1692,7 +1692,7 @@ msgid "Show menubar"
 msgstr "Mostrar la barra de menú"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:159
+#: src/qml/Settings/PlaylistSettings.qml:168
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Mostrar la barra de herramientas"
@@ -2155,32 +2155,32 @@ msgctxt "@label:listbox"
 msgid "Playback behavior"
 msgstr "Comportamiento de la reproducción"
 
-#: src/qml/Settings/PlaylistSettings.qml:108
+#: src/qml/Settings/PlaylistSettings.qml:109
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
 msgstr "Repetir lista de reproducción"
 
-#: src/qml/Settings/PlaylistSettings.qml:114
+#: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
 msgstr "Parar tras el último elemento"
 
-#: src/qml/Settings/PlaylistSettings.qml:120
+#: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
 msgstr "Repetir elemento"
 
-#: src/qml/Settings/PlaylistSettings.qml:126
+#: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr "Parar tras el elemento"
 
-#: src/qml/Settings/PlaylistSettings.qml:132
+#: src/qml/Settings/PlaylistSettings.qml:133
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
 msgstr "De forma aleatoria"
 
-#: src/qml/Settings/PlaylistSettings.qml:147
+#: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2199,12 +2199,12 @@ msgstr ""
 "reproduciendo<br><strong>De forma aleatoria</strong>: los elementos de la "
 "lista de reproducción se repiten indefinidamente de forma aleatoria"
 
-#: src/qml/Settings/PlaylistSettings.qml:169
+#: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Vídeo superpuesto"
 
-#: src/qml/Settings/PlaylistSettings.qml:176
+#: src/qml/Settings/PlaylistSettings.qml:185
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2213,37 +2213,37 @@ msgstr ""
 "Si está marcada, la lista de reproducción se muestra encima del vídeo.\n"
 "Si no está marcada, se cambia el tamaño del vídeo."
 
-#: src/qml/Settings/PlaylistSettings.qml:183
+#: src/qml/Settings/PlaylistSettings.qml:192
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Mostrar el título del medio en lugar del nombre de archivo"
 
-#: src/qml/Settings/PlaylistSettings.qml:193
+#: src/qml/Settings/PlaylistSettings.qml:202
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Cargar automáticamente los vídeos de la misma carpeta"
 
-#: src/qml/Settings/PlaylistSettings.qml:203
+#: src/qml/Settings/PlaylistSettings.qml:212
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Mostrar el número de filas"
 
-#: src/qml/Settings/PlaylistSettings.qml:213
+#: src/qml/Settings/PlaylistSettings.qml:222
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Conmutar con el ratón"
 
-#: src/qml/Settings/PlaylistSettings.qml:222
+#: src/qml/Settings/PlaylistSettings.qml:231
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Aumentar el tamaño del texto en pantalla completa"
 
-#: src/qml/Settings/PlaylistSettings.qml:234
+#: src/qml/Settings/PlaylistSettings.qml:243
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Recordar el estado de la última lista de reproducción"
 
-#: src/qml/Settings/PlaylistSettings.qml:241
+#: src/qml/Settings/PlaylistSettings.qml:250
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2252,7 +2252,7 @@ msgstr ""
 "Cuando se marca, el estado de la lista de reproducción (visible/oculta) se "
 "recuerda entre inicios"
 
-#: src/qml/Settings/PlaylistSettings.qml:249
+#: src/qml/Settings/PlaylistSettings.qml:258
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Abrir elementos con un solo clic"
