@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:41+0000\n"
-"PO-Revision-Date: 2025-07-31 09:27+0300\n"
+"PO-Revision-Date: 2025-09-04 10:31+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -574,7 +574,7 @@ msgstr "Sijoita uudelleen"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "Samannimisiä soittolistoja ei sallita: %1"
 
 #: src/mpv/mpvitem.cpp:362
 #, kde-format
@@ -592,7 +592,7 @@ msgstr "Tekstityksen ajoitus: %1 sekuntia"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Tiedostoa ei ole olemassa: %1"
 
 #: src/mpv/mpvitem.cpp:530
 #, kde-format
@@ -826,20 +826,14 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> ei löytynyt."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "No action set"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "Toimintoa ei ole asetettu"
+msgstr "Toimintoa ei löytynyt."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "Lataa tekstitykset tiedostosta:"
+msgstr "Lataa tekstitykset tiedostosta"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:34
 msgctxt "@info:tooltip;"
@@ -848,6 +842,9 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Suhteellisen sijainnin alkaessa tähdellä (*) ja alikansiohaun ollessa "
+"käytössä etsitään kaikista tämän nimisistä kansioista.\n"
+"Suhteelliset kansiot esitetään suhteessa toistettavan tiedoston kansioon."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -874,12 +871,9 @@ msgid "Add New Folder"
 msgstr "Lisää uusi kansio"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr "Kysy kansio, josta etsiä tekstityksiä."
+msgstr "Lisää kansio, josta etsiä tekstityksiä."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:185
 msgctxt "@label:check"
@@ -888,27 +882,19 @@ msgstr "Etsi tekstityksiä alikansioistakin"
 
 # *** TARKISTA: ”Relative folders” on epäselvä; tässä heitetään arvaus.
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"Tekstityksiä etsitään kansiorakenteesta asetuksella ”%1”.\n"
+"Tekstityksiä etsitään kansiorakenteesta asetuksen ”%1” mukaan.\n"
 "Vain alikansioista etsitään."
 
 #: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
-msgstr "Oletuskansi"
+msgstr "Oletus"
 
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
@@ -1151,12 +1137,9 @@ msgid "Add…"
 msgstr "Lisää…"
 
 #: src/qml/PlayList.qml:118
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "Tiedosto"
+msgstr "Tiedostot"
 
 #: src/qml/PlayList.qml:126
 msgctxt "@action:button"
@@ -1164,12 +1147,9 @@ msgid "URL"
 msgstr "Verkko-osoite"
 
 #: src/qml/PlayList.qml:136
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Playlist"
-msgstr "Toistolista"
+msgstr "Soittolista"
 
 #: src/qml/PlayList.qml:147
 msgctxt "@action:button"
@@ -1197,44 +1177,35 @@ msgid "Duration, descending"
 msgstr "Kesto, laskeva"
 
 #: src/qml/PlayList.qml:181
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Toisto"
 
 #: src/qml/PlayList.qml:187
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Avaa soittolista"
+msgstr "Toista soittolistaa"
 
 #: src/qml/PlayList.qml:198
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Lopeta viimeisen jälkeen"
 
 # *** TARKISTA: Sekä play että repeat = toista, aiheuttaako ongelmia?
 #: src/qml/PlayList.qml:208
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "Toista"
+msgstr "Toista kohdetta"
 
 #: src/qml/PlayList.qml:219
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "Lopeta tämän jälkeen"
 
 #: src/qml/PlayList.qml:229
 msgctxt "@action:button"
 msgid "Random"
-msgstr ""
+msgstr "Satunnainen"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -1254,7 +1225,7 @@ msgstr "Muuta nimeä"
 #: src/qml/PlayList.qml:328
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "Poista"
 
 #: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
 msgctxt "@action:button"
@@ -1287,27 +1258,19 @@ msgid "Copy URL"
 msgstr "Kopioi verkko-osoite"
 
 #: src/qml/PlayList.qml:537
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "Valitse tiedosto"
+msgstr "Valitse kaikki"
 
 #: src/qml/PlayList.qml:541
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr "Valitse tiedosto"
+msgstr "Poista kaikki valinnat"
 
 #: src/qml/PlayList.qml:545
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
-msgstr "Tiedostomuodon valinta"
+msgstr "Käännä valinta"
 
 #: src/qml/PlayList.qml:551
 msgctxt "@action:inmenu"
@@ -1315,12 +1278,9 @@ msgid "Remove from Playlist"
 msgstr "Poista soittolistasta"
 
 #: src/qml/PlayList.qml:557
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
-msgstr "Poista soittolistasta"
+msgstr "Poista valitut soittolistasta"
 
 #: src/qml/PlayList.qml:569
 msgctxt "@action:inmenu"
@@ -1333,12 +1293,9 @@ msgid "Move File to Trash"
 msgstr "Siirrä tiedosto roskakoriin"
 
 #: src/qml/PlayList.qml:585
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Move File to Trash"
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
-msgstr "Siirrä tiedosto roskakoriin"
+msgstr "Siirrä valitut tiedostot roskakoriin"
 
 #: src/qml/PlayList.qml:691 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1537,9 +1494,6 @@ msgid "Maximum recent files"
 msgstr "Viimeaikaisia tiedostoja enintään"
 
 #: src/qml/Settings/GeneralSettings.qml:61
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Tyhjennä"
@@ -1547,7 +1501,7 @@ msgstr "Tyhjennä"
 #: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Poistaa äskettäiset tiedostot tietokannasta"
 
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
@@ -1557,6 +1511,11 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Näytettävä äskettäisten tiedostojen määrä. Poista käytöstä arvolla 0 (nolla)."
+"<br>Jokainen avattu tiedosto talletetaan.<br>Lihavoidut tietueet ovat ”avaa "
+"tiedosto/verkko-osoite” -toiminnolla tai ulkoisista sovelluksista "
+"(komentoriviltä, tiedostonhallinnasta, vetämällä ja pudottamalla jne.) "
+"avattuja tiedostoja."
 
 #: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
@@ -1564,19 +1523,13 @@ msgid "Allow only one instance"
 msgstr "Salli vain yksi ilmentymä"
 
 #: src/qml/Settings/GeneralSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"Yritys avata uusi Haruna-ilmentymä ei johda mihinkään.\n"
-"Yritys avata uusi tiedosto Harunaan avaa tiedoston nykyisen ilmentymään."
+"Yritys avata uusi Haruna-ilmentymä ei johda mihinkään.<br>Yritys avata uusi "
+"tiedosto Harunaan avaa tiedoston nykyisen ilmentymään."
 
 #: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
@@ -1584,12 +1537,9 @@ msgid "Add file to playlist"
 msgstr "Avaa tiedosto soittolistalle"
 
 #: src/qml/Settings/GeneralSettings.qml:113
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr "Tiedosto lisätään soittolistan loppuun"
+msgstr "Tiedosto lisätään soittolistan loppuun."
 
 #: src/qml/Settings/GeneralSettings.qml:122
 msgctxt "@option:check"
@@ -1689,18 +1639,13 @@ msgstr "Ei tueta Waylandissä."
 
 # *** TARKISTA: Mitä ”%1” tässä on?
 #: src/qml/Settings/GeneralSettings.qml:290
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"Ikkunan kokoa muutetaan videon tarkkuuden mukaan.\n"
-"Enimmäiskokoa ei rajoiteta, vaan se jätetään käyttöjärjestelmälle."
+"Ikkunan kokoa muutetaan videon tarkkuuden mukaan.<br>Enimmäiskokoa ei "
+"rajoiteta, vaan se jätetään käyttöjärjestelmälle."
 
 #: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
@@ -1708,20 +1653,13 @@ msgid "Start in fullscreen mode"
 msgstr "Aloita koko näytön tilassa"
 
 #: src/qml/Settings/GeneralSettings.qml:309
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"Aloita sovelluksen käynnistyessä koko näytön tilassa.\n"
-"Tämä ohittaa asetukset ”Sovita videon kokoon” ja ”Muista ikkunan koko ja "
-"sijainti”."
+"Aloita sovelluksen käynnistyessä koko näytön tilassa.<br>Tämä ohittaa "
+"asetukset ”Sovita videon kokoon” ja ”Muista ikkunan koko ja sijainti”."
 
 #: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
@@ -1781,16 +1719,9 @@ msgid "Use Breeze icon theme"
 msgstr "Käytä Breeze-kuvaketeemaa"
 
 #: src/qml/Settings/GeneralSettings.qml:488
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"Asettaa kuvaketeemaksi Breezen.\n"
-"Vaatii uudelleenkäynnistyksen."
+msgstr "Asettaa kuvaketeemaksi Breezen.<br>Vaatii uudelleenkäynnistyksen."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -1894,12 +1825,9 @@ msgid "Select action"
 msgstr "Valitse toiminto"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "Tyhjennä toiminto"
+msgstr "Vaihda toiminto"
 
 #: src/qml/Settings/MouseSettings.qml:236
 msgctxt "@info"
@@ -2206,44 +2134,35 @@ msgid "Compact"
 msgstr "Tiivis"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Toistokohta"
+msgstr "Toistotoiminta"
 
 #: src/qml/Settings/PlaylistSettings.qml:109
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Avaa soittolista"
+msgstr "Toista soittolistaa"
 
 #: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Lopeta viimeisen jälkeen"
 
 # *** TARKISTA: Sekä play että repeat = toista, aiheuttaako ongelmia?
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Toista"
+msgstr "Toista kohdetta"
 
 #: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "Lopeta tämän jälkeen"
 
 #: src/qml/Settings/PlaylistSettings.qml:133
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random"
-msgstr ""
+msgstr "Satunnainen"
 
 #: src/qml/Settings/PlaylistSettings.qml:156
 msgctxt "@info:tooltip playback description"
@@ -2255,6 +2174,12 @@ msgid ""
 "playback stops after the current playing item<br><strong>Random</strong>: "
 "playlist items play randomly indefinitely"
 msgstr ""
+"<strong>Toista soittolistaa</strong>: soittolistaa toistetaan "
+"loputtomasti<br><strong>Lopeta viimeisen jälkeen</strong>: soittolista "
+"lopetetaan viimeisen kohteen jälkeen<br><strong>Toista kohdetta</strong>: "
+"nykyistä kohdetta toistetaan loputtomasti<br><strong>Lopeta tämän jälkeen</"
+"strong>: toisto päättyy nykyisen kohteen jälkeen<br><strong>Satunnainen</"
+"strong>: soittolistaa toistetaan satunnaisesti loputtomasti"
 
 #: src/qml/Settings/PlaylistSettings.qml:178
 msgctxt "@option:check"
@@ -2599,6 +2524,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Ei saatu noudetuksi soittolistaa, jonka tunniste on: %1\n"
+"\n"
+"%2"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"
