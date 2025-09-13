@@ -14,6 +14,9 @@ add-extensions:
     add-ld-path: .
 cleanup-commands:
   - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
+tags:
+  - 'nightly'
+desktop-file-name-suffix: ' (Nightly)'
 finish-args:
   - --device=dri
   - --filesystem=home
