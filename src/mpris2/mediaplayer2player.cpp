@@ -71,8 +71,10 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     });
 
     connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [=]() {
-        propertiesChanged(u"Shuffle"_s, Shuffle());
         propertiesChanged(u"LoopStatus"_s, LoopStatus());
+    });
+    connect(PlaylistSettings::self(), &PlaylistSettings::RandomPlaybackChanged, this, [=]() {
+        propertiesChanged(u"Shuffle"_s, Shuffle());
     });
 }
 
@@ -216,13 +218,9 @@ void MediaPlayer2Player::setVolume(double vol)
 
 void MediaPlayer2Player::setShuffle(bool shuffle)
 {
-    if (shuffle) {
-        PlaylistSettings::self()->setPlaybackBehavior(u"Random"_s);
-    } else {
-        return setLoopStatus(u"Playlist"_s);
-    }
+    PlaylistSettings::setRandomPlayback(shuffle);
     PlaylistSettings::self()->save();
-    Q_EMIT PlaylistSettings::self()->PlaybackBehaviorChanged();
+    Q_EMIT PlaylistSettings::self()->RandomPlaybackChanged();
 }
 
 void MediaPlayer2Player::setLoopStatus(QString loop)
@@ -235,7 +233,7 @@ void MediaPlayer2Player::setLoopStatus(QString loop)
         loop = u"RepeatPlaylist"_s;
     }
 
-    PlaylistSettings::self()->setPlaybackBehavior(loop);
+    PlaylistSettings::setPlaybackBehavior(loop);
     PlaylistSettings::self()->save();
     Q_EMIT PlaylistSettings::self()->PlaybackBehaviorChanged();
 }
@@ -282,7 +280,7 @@ bool MediaPlayer2Player::CanControl()
 
 bool MediaPlayer2Player::Shuffle()
 {
-    return PlaylistSettings::playbackBehavior() == u"Random"_s;
+    return PlaylistSettings::randomPlayback();
 }
 
 QString MediaPlayer2Player::LoopStatus()
@@ -290,7 +288,7 @@ QString MediaPlayer2Player::LoopStatus()
     if (PlaylistSettings::playbackBehavior() == u"RepeatItem"_s) {
         return u"Track"_s;
     }
-    if (PlaylistSettings::playbackBehavior() == u"RepeatPlaylist"_s || PlaylistSettings::playbackBehavior() == u"Random"_s) {
+    if (PlaylistSettings::playbackBehavior() == u"RepeatPlaylist"_s) {
         return u"Playlist"_s;
     }
     // StopAfterLast or StopAfterItem

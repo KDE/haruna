@@ -226,13 +226,13 @@ Page {
                             }
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Random")
-                            autoExclusive: true
+                            text: i18nc("@action:button", "Random Playback")
                             checkable: true
-                            checked: PlaylistSettings.playbackBehavior === "Random"
+                            enabled: ["StopAfterLast", "RepeatPlaylist"].includes(PlaylistSettings.playbackBehavior)
+                            checked: PlaylistSettings.randomPlayback
                             icon.name: "randomize"
                             onTriggered: {
-                                PlaylistSettings.playbackBehavior = "Random"
+                                PlaylistSettings.randomPlayback = checked
                                 PlaylistSettings.save()
                             }
                         }

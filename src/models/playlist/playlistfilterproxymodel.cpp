@@ -93,7 +93,7 @@ void PlaylistFilterProxyModel::setPlayingItem(uint i)
 void PlaylistFilterProxyModel::playNext()
 {
     auto model = playlistModel();
-    if (model->isShuffleOn()) {
+    if (PlaylistSettings::randomPlayback()) {
         auto nextIndex = model->currentShuffledIndex() + 1;
         if (nextIndex >= static_cast<int>(model->shuffledIndexes().size())) {
             nextIndex = 0;
@@ -115,7 +115,7 @@ void PlaylistFilterProxyModel::playNext()
 void PlaylistFilterProxyModel::playPrevious()
 {
     auto model = playlistModel();
-    if (model->isShuffleOn()) {
+    if (PlaylistSettings::randomPlayback()) {
         auto previousIndex = model->currentShuffledIndex() - 1;
         if (previousIndex < 0) {
             previousIndex = model->shuffledIndexes().size() - 1;
@@ -280,6 +280,9 @@ QString PlaylistFilterProxyModel::getFilePath(uint row)
 
 bool PlaylistFilterProxyModel::isLastItem(uint row)
 {
+    if (PlaylistSettings::randomPlayback()) {
+        return static_cast<int>(row) == playlistModel()->shuffledIndexes().back();
+    }
     return static_cast<int>(row) == rowCount() - 1;
 }
 

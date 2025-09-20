@@ -33,17 +33,13 @@ using namespace Qt::StringLiterals;
 PlaylistModel::PlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    if (PlaylistSettings::playbackBehavior() == u"Random"_s) {
-        m_isShuffleOn = true;
+    if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
     }
 
-    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [this]() {
-        if (PlaylistSettings::playbackBehavior() == u"Random"_s) {
-            m_isShuffleOn = true;
+    connect(PlaylistSettings::self(), &PlaylistSettings::RandomPlaybackChanged, this, [this]() {
+        if (PlaylistSettings::randomPlayback()) {
             shuffleIndexes();
-        } else {
-            m_isShuffleOn = false;
         }
     });
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
@@ -236,7 +232,7 @@ void PlaylistModel::appendItem(const QUrl &url)
 
     endInsertRows();
 
-    if (m_isShuffleOn) {
+    if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
     }
 }
@@ -295,7 +291,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
 
     setPlayingItem(playingItem);
 
-    if (m_isShuffleOn) {
+    if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
     }
 }
@@ -339,7 +335,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
         setPlayingItem(playingItem);
     }
 
-    if (m_isShuffleOn) {
+    if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
     }
 }
@@ -431,11 +427,6 @@ void PlaylistModel::setPlayingItem(uint i)
     GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
     GeneralSettings::setLastPlaylist(m_playlistPath);
     GeneralSettings::self()->save();
-}
-
-bool PlaylistModel::isShuffleOn() const
-{
-    return m_isShuffleOn;
 }
 
 void PlaylistModel::shuffleIndexes(std::vector<int> includedIndices)

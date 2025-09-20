@@ -129,12 +129,6 @@ SettingsBasePage {
                     }
                     playbackBehaviorModel.append(stopAfterItem)
 
-                    const random = {
-                        text: i18nc("@item:listbox the playback behavior of the playlist", "Random"),
-                        value: "Random"
-                    }
-                    playbackBehaviorModel.append(random)
-
                     currentIndex = indexOfValue(PlaylistSettings.playbackBehavior)
                 }
                 onActivated: function(index) {
@@ -156,9 +150,19 @@ SettingsBasePage {
                                    "<strong>Repeat playlist</strong>: playlist is repeated indefinitely<br>" +
                                    "<strong>Stop after last item</strong>: playback stops after the last item in the playlist<br>" +
                                    "<strong>Repeat item</strong>: current playing item is repeated indefinitely<br>" +
-                                   "<strong>Stop after item</strong>: playback stops after the current playing item<br>" +
-                                   "<strong>Random</strong>: playlist items play randomly indefinitely")
+                                   "<strong>Stop after item</strong>: playback stops after the current playing item")
                 toolTipWidth: Math.min(450, root.width)
+            }
+        }
+
+        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
+        CheckBox {
+            checked: PlaylistSettings.randomPlayback
+            enabled: ["StopAfterLast", "RepeatPlaylist"].includes(PlaylistSettings.playbackBehavior)
+            text: i18nc("@item:listbox the playback behavior of the playlist", "Random Playback")
+            onClicked: {
+                PlaylistSettings.randomPlayback = checked
+                PlaylistSettings.save()
             }
         }
 
