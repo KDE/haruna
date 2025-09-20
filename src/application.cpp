@@ -30,7 +30,6 @@
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KLocalizedString>
-#include <KWindowConfig>
 #include <KWindowSystem>
 
 #include <MpvAbstractItem>

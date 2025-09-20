@@ -62,14 +62,7 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     )
 endif()
 
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/audiosettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/generalsettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/informationsettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/mousesettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playbacksettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/playlistsettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/subtitlessettings.kcfgc)
-kconfig_add_kcfg_files(haruna GENERATE_MOC settings/videosettings.kcfgc)
+add_subdirectory(settings)
 
 qt_policy(SET QTP0001 NEW)
 
@@ -178,6 +171,8 @@ target_link_libraries(haruna PRIVATE
     ${AVFORMAT_LIBRARIES}
     ${AVCODEC_LIBRARIES}
     ${SWSCALE_LIBRARIES}
+
+    settingsplugin
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)

@@ -19,7 +19,6 @@
 #include <KConfigGroup>
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
-#include <KWindowConfig>
 
 #include "application.h"
 #include "database.h"
