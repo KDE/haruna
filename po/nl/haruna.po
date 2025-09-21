@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:41+0000\n"
+"POT-Creation-Date: 2025-09-21 00:41+0000\n"
 "PO-Revision-Date: 2025-09-09 09:38+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,61 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: src/application.cpp:124
+#: src/application.cpp:123
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Audio/video-downloader voor de opdrachtregel rijk aan mogelijkheden"
 
-#: src/application.cpp:137
+#: src/application.cpp:136
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:139
+#: src/application.cpp:138
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Haruna mediaspeler"
 
-#: src/application.cpp:141
+#: src/application.cpp:140
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:146
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:147
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Ontwikkelaar"
 
-#: src/application.cpp:155
+#: src/application.cpp:154
 #, kde-format
 msgid "Command line video player"
 msgstr "Videospeler voor de opdrachtregel"
 
-#: src/application.cpp:161
+#: src/application.cpp:160
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Cross-platform oplossing om geluid en video op te nemen, te converteren en "
 "te streamen"
 
-#: src/application.cpp:173
+#: src/application.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Te openen bestand"
 
-#: src/application.cpp:177
+#: src/application.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -1195,9 +1195,12 @@ msgid "Stop after item"
 msgstr "Stoppen na item"
 
 #: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
 msgctxt "@action:button"
-msgid "Random"
-msgstr "Willekeurig"
+msgid "Random Playback"
+msgstr "Afspelen herstarten"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -1682,7 +1685,7 @@ msgid "Show menubar"
 msgstr "Menubalk tonen"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:168
+#: src/qml/Settings/PlaylistSettings.qml:172
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Werkbalk tonen"
@@ -2163,20 +2166,23 @@ msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr "Stoppen na item"
 
-#: src/qml/Settings/PlaylistSettings.qml:133
-msgctxt "@item:listbox the playback behavior of the playlist"
-msgid "Random"
-msgstr "Willekeurig"
-
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:150
+#, fuzzy
+#| msgctxt "@info:tooltip playback description"
+#| msgid ""
+#| "<strong>Repeat playlist</strong>: playlist is repeated "
+#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
+#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
+#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
+#| "strong>: playback stops after the current playing item<br><strong>Random</"
+#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
 "indefinitely<br><strong>Stop after last item</strong>: playback stops after "
 "the last item in the playlist<br><strong>Repeat item</strong>: current "
 "playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
-"playback stops after the current playing item<br><strong>Random</strong>: "
-"playlist items play randomly indefinitely"
+"playback stops after the current playing item"
 msgstr ""
 "<strong>Afspeellijst herhalen</strong>: afspeellijst wordt oneindig "
 "herhaald<br><strong>Stoppen na laatste item</strong>: afspelen stopt na het "
@@ -2185,12 +2191,20 @@ msgstr ""
 "afspelen stopt na het nu spelende item<br><strong>Willekeurig</strong>: "
 "items in afspeellist worden oneindig willekeurig afgespeeld"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:162
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Random Playback"
+msgstr "Afspelen herstarten"
+
+#: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Video over elkaar"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:189
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2199,37 +2213,37 @@ msgstr ""
 "Indien geactiveerd gaat de afspeellijst bovenop de video\n"
 "Indien niet geactiveerd wordt de video van grootte gewijzigd"
 
-#: src/qml/Settings/PlaylistSettings.qml:192
+#: src/qml/Settings/PlaylistSettings.qml:196
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Titel van medium tonen in plaats van bestandsnaam"
 
-#: src/qml/Settings/PlaylistSettings.qml:202
+#: src/qml/Settings/PlaylistSettings.qml:206
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Video's automatisch uit dezelfde map laden"
 
-#: src/qml/Settings/PlaylistSettings.qml:212
+#: src/qml/Settings/PlaylistSettings.qml:216
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Rijnummer tonen"
 
-#: src/qml/Settings/PlaylistSettings.qml:222
+#: src/qml/Settings/PlaylistSettings.qml:226
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Omschakelen met muis"
 
-#: src/qml/Settings/PlaylistSettings.qml:231
+#: src/qml/Settings/PlaylistSettings.qml:235
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Tekengrootte vergroten bij volledig scherm"
 
-#: src/qml/Settings/PlaylistSettings.qml:243
+#: src/qml/Settings/PlaylistSettings.qml:247
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Status van laatste afspeellijst onthouden"
 
-#: src/qml/Settings/PlaylistSettings.qml:250
+#: src/qml/Settings/PlaylistSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2238,7 +2252,7 @@ msgstr ""
 "Indien geactiveerd wordt de status (zichtbaar/verborgen) van de afspeellijst "
 "onthouden bij elke keer starten"
 
-#: src/qml/Settings/PlaylistSettings.qml:258
+#: src/qml/Settings/PlaylistSettings.qml:262
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Items openen met een enkele klik"
@@ -2538,6 +2552,14 @@ msgstr ""
 "Kon afspeellijst met id \"%1\" niet ophalen\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Random"
+#~ msgstr "Willekeurig"
+
+#~ msgctxt "@item:listbox the playback behavior of the playlist"
+#~ msgid "Random"
+#~ msgstr "Willekeurig"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"

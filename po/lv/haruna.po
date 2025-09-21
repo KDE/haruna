@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:41+0000\n"
-"PO-Revision-Date: 2025-08-19 14:57+0300\n"
+"POT-Creation-Date: 2025-09-21 00:41+0000\n"
+"PO-Revision-Date: 2025-08-30 16:24+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -28,61 +28,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toms.trasuns@posteo.net"
 
-#: src/application.cpp:124
+#: src/application.cpp:123
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Iespējām bagāts komandrindas audio/video lejupielādētājs"
 
-#: src/application.cpp:137
+#: src/application.cpp:136
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:139
+#: src/application.cpp:138
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Multivides atskaņotājs"
 
-#: src/application.cpp:141
+#: src/application.cpp:140
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019—2025"
 
-#: src/application.cpp:146
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:147
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Izstrādātājs"
 
-#: src/application.cpp:155
+#: src/application.cpp:154
 #, kde-format
 msgid "Command line video player"
 msgstr "Komandrindas video atskaņotājs"
 
-#: src/application.cpp:161
+#: src/application.cpp:160
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Vairākplatformu rīks audio un video ierakstīšanai, pārveidošanai un "
 "straumēšanai"
 
-#: src/application.cpp:173
+#: src/application.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Atveramā datne"
 
-#: src/application.cpp:177
+#: src/application.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -574,7 +574,7 @@ msgstr "Norādīt jaunu"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "Nav atļauti repertuāri ar vienādiem nosaukumiem: %1"
 
 #: src/mpv/mpvitem.cpp:362
 #, kde-format
@@ -891,9 +891,6 @@ msgstr ""
 "Meklē tikai relatīvās mapēs."
 
 #: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
-#, fuzzy
-#| msgctxt "@item:listbox the footer style"
-#| msgid "Default"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Noklusējums"
@@ -1149,9 +1146,6 @@ msgid "URL"
 msgstr "URL"
 
 #: src/qml/PlayList.qml:136
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Repertuārs"
@@ -1207,9 +1201,12 @@ msgid "Stop after item"
 msgstr "Apturēt pēc vienuma"
 
 #: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
 msgctxt "@action:button"
-msgid "Random"
-msgstr "Nejauša secība"
+msgid "Random Playback"
+msgstr "Pārstartēt atskaņošanu"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -1229,7 +1226,7 @@ msgstr "Pārdēvēt"
 #: src/qml/PlayList.qml:328
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "Noņemt"
 
 #: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
 msgctxt "@action:button"
@@ -1262,27 +1259,19 @@ msgid "Copy URL"
 msgstr "Kopēt URL"
 
 #: src/qml/PlayList.qml:537
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "Atlasiet datni"
+msgstr "Atlasīt visu"
 
 #: src/qml/PlayList.qml:541
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr "Atlasiet datni"
+msgstr "Noņemt atlasi visam"
 
 #: src/qml/PlayList.qml:545
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
-msgstr "Formāta atlase"
+msgstr "Invertēt atlasi"
 
 #: src/qml/PlayList.qml:551
 msgctxt "@action:inmenu"
@@ -1290,12 +1279,9 @@ msgid "Remove from Playlist"
 msgstr "Noņemt no repertuāra"
 
 #: src/qml/PlayList.qml:557
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
-msgstr "Noņemt no repertuāra"
+msgstr "Noņemt atlasīto no repertuāra"
 
 #: src/qml/PlayList.qml:569
 msgctxt "@action:inmenu"
@@ -1308,12 +1294,9 @@ msgid "Move File to Trash"
 msgstr "Pārvietot datni uz atkritni"
 
 #: src/qml/PlayList.qml:585
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Move File to Trash"
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
-msgstr "Pārvietot datni uz atkritni"
+msgstr "Pārvietot atlasītās datnes uz atkritni"
 
 #: src/qml/PlayList.qml:691 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1709,7 +1692,7 @@ msgid "Show menubar"
 msgstr "Rādīt izvēļņu joslu"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:168
+#: src/qml/Settings/PlaylistSettings.qml:172
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Rādīt rīkjoslu"
@@ -2191,20 +2174,23 @@ msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr "Apturēt pēc vienuma"
 
-#: src/qml/Settings/PlaylistSettings.qml:133
-msgctxt "@item:listbox the playback behavior of the playlist"
-msgid "Random"
-msgstr "Nejauša secība"
-
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:150
+#, fuzzy
+#| msgctxt "@info:tooltip playback description"
+#| msgid ""
+#| "<strong>Repeat playlist</strong>: playlist is repeated "
+#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
+#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
+#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
+#| "strong>: playback stops after the current playing item<br><strong>Random</"
+#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
 "indefinitely<br><strong>Stop after last item</strong>: playback stops after "
 "the last item in the playlist<br><strong>Repeat item</strong>: current "
 "playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
-"playback stops after the current playing item<br><strong>Random</strong>: "
-"playlist items play randomly indefinitely"
+"playback stops after the current playing item"
 msgstr ""
 "<strong>Atkārtot repertuāru</strong>: repertuārs tiek visu laiku atkārtots "
 "(sākts no sākuma)<br><strong>Apturēt pēc pēdējā vienuma</strong>: "
@@ -2215,12 +2201,20 @@ msgstr ""
 "secība</strong>: repertuāra vienumu atskaņošana notiks nejaušā secībā bez "
 "apstāšanās"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:162
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Random Playback"
+msgstr "Pārstartēt atskaņošanu"
+
+#: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Pārklāt pāri video"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:189
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2229,37 +2223,37 @@ msgstr ""
 "Kad atzīmēts, repertuārs pārklājas video\n"
 "Kad nav atzīmēts, video maina izmēru"
 
-#: src/qml/Settings/PlaylistSettings.qml:192
+#: src/qml/Settings/PlaylistSettings.qml:196
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Datnes nosaukuma vietā rādīt multivides nosaukumu"
 
-#: src/qml/Settings/PlaylistSettings.qml:202
+#: src/qml/Settings/PlaylistSettings.qml:206
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Automātiski ielādēt video no tās pašas datnes"
 
-#: src/qml/Settings/PlaylistSettings.qml:212
+#: src/qml/Settings/PlaylistSettings.qml:216
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Rādīt rindu numuru"
 
-#: src/qml/Settings/PlaylistSettings.qml:222
+#: src/qml/Settings/PlaylistSettings.qml:226
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Pārslēgt ar peli"
 
-#: src/qml/Settings/PlaylistSettings.qml:231
+#: src/qml/Settings/PlaylistSettings.qml:235
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Palielināt fonta izmēru, atrodoties pilnekrāna režīmā"
 
-#: src/qml/Settings/PlaylistSettings.qml:243
+#: src/qml/Settings/PlaylistSettings.qml:247
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Atcerēties pēdējo repertuāra stāvokli"
 
-#: src/qml/Settings/PlaylistSettings.qml:250
+#: src/qml/Settings/PlaylistSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2268,7 +2262,7 @@ msgstr ""
 "Kad atzīmēts, repertuāra stāvoklis (redzams/slēpts) nemainīsies, atkārtoti "
 "ieslēdzot programmu"
 
-#: src/qml/Settings/PlaylistSettings.qml:258
+#: src/qml/Settings/PlaylistSettings.qml:262
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Atvērt vienumus ar vienu klikšķi"
@@ -2563,6 +2557,14 @@ msgstr ""
 "Neizdevās izgūt repertuāru ar ID: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Random"
+#~ msgstr "Nejauša secība"
+
+#~ msgctxt "@item:listbox the playback behavior of the playlist"
+#~ msgid "Random"
+#~ msgstr "Nejauša secība"
 
 #~ msgctxt "@label:textbox"
 #~ msgid "File dialog location"

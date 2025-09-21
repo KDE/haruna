@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:41+0000\n"
+"POT-Creation-Date: 2025-09-21 00:41+0000\n"
 "PO-Revision-Date: 2025-09-09 15:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -28,63 +28,63 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: src/application.cpp:124
+#: src/application.cpp:123
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr ""
 "Багатий на можливості інструмент командного рядка для отримання звукових "
 "даних та відеоданих"
 
-#: src/application.cpp:137
+#: src/application.cpp:136
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:139
+#: src/application.cpp:138
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Мультимедійний програвач"
 
-#: src/application.cpp:141
+#: src/application.cpp:140
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019-2025"
 
-#: src/application.cpp:146
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:147
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Розробник"
 
-#: src/application.cpp:155
+#: src/application.cpp:154
 #, kde-format
 msgid "Command line video player"
 msgstr "Відеопрогравач з керуванням з командного рядка"
 
-#: src/application.cpp:161
+#: src/application.cpp:160
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Багатоплатформове рішення для запису, перетворення та трансляції звукових та "
 "відеоданих"
 
-#: src/application.cpp:173
+#: src/application.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Файл, який слід відкрити"
 
-#: src/application.cpp:177
+#: src/application.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -1198,9 +1198,12 @@ msgid "Stop after item"
 msgstr "Зупинитися після пункту"
 
 #: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
 msgctxt "@action:button"
-msgid "Random"
-msgstr "Випадково"
+msgid "Random Playback"
+msgstr "Перезапустити відтворення"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -1687,7 +1690,7 @@ msgid "Show menubar"
 msgstr "Показати смужку меню"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:168
+#: src/qml/Settings/PlaylistSettings.qml:172
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Показати панель інструментів"
@@ -2177,20 +2180,23 @@ msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr "Зупинитися після пункту"
 
-#: src/qml/Settings/PlaylistSettings.qml:133
-msgctxt "@item:listbox the playback behavior of the playlist"
-msgid "Random"
-msgstr "Випадково"
-
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:150
+#, fuzzy
+#| msgctxt "@info:tooltip playback description"
+#| msgid ""
+#| "<strong>Repeat playlist</strong>: playlist is repeated "
+#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
+#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
+#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
+#| "strong>: playback stops after the current playing item<br><strong>Random</"
+#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
 "indefinitely<br><strong>Stop after last item</strong>: playback stops after "
 "the last item in the playlist<br><strong>Repeat item</strong>: current "
 "playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
-"playback stops after the current playing item<br><strong>Random</strong>: "
-"playlist items play randomly indefinitely"
+"playback stops after the current playing item"
 msgstr ""
 "<strong>Повторювати список відтворення</strong>: список відтворення буде "
 "повторюватися до нескінченності<br><strong>Зупинитися після останнього "
@@ -2201,12 +2207,20 @@ msgstr ""
 "відтворення<br><strong>Випадково</strong>: пункти у списку відтворення "
 "відтворюватимуться у випадковому порядку нескінченно"
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:162
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Random Playback"
+msgstr "Перезапустити відтворення"
+
+#: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Накладка на відео"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:189
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2215,37 +2229,37 @@ msgstr ""
 "Якщо позначено, список відтворення буде показано поверх відео\n"
 "Якщо не позначено, буде змінено розміри відео"
 
-#: src/qml/Settings/PlaylistSettings.qml:192
+#: src/qml/Settings/PlaylistSettings.qml:196
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Показувати заголовок мультимедіа, а не назву файла"
 
-#: src/qml/Settings/PlaylistSettings.qml:202
+#: src/qml/Settings/PlaylistSettings.qml:206
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Автоматично завантажувати відео із тієї самої теки"
 
-#: src/qml/Settings/PlaylistSettings.qml:212
+#: src/qml/Settings/PlaylistSettings.qml:216
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Показати номер рядка"
 
-#: src/qml/Settings/PlaylistSettings.qml:222
+#: src/qml/Settings/PlaylistSettings.qml:226
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Перемикання за допомогою миші"
 
-#: src/qml/Settings/PlaylistSettings.qml:231
+#: src/qml/Settings/PlaylistSettings.qml:235
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Збільшити розмір шрифту у повноекранному режимі"
 
-#: src/qml/Settings/PlaylistSettings.qml:243
+#: src/qml/Settings/PlaylistSettings.qml:247
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Запам'ятовувати останній стан списку відтворення"
 
-#: src/qml/Settings/PlaylistSettings.qml:250
+#: src/qml/Settings/PlaylistSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2254,7 +2268,7 @@ msgstr ""
 "Якщо позначено, стан списку відтворення (видимий/прихований) буде "
 "зберігатися між запусками програми"
 
-#: src/qml/Settings/PlaylistSettings.qml:258
+#: src/qml/Settings/PlaylistSettings.qml:262
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Відкривати записи одинарним клацанням"
@@ -2551,6 +2565,14 @@ msgstr ""
 "Не вдалося отримати список відтворення з таким ідентифікатором: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Random"
+#~ msgstr "Випадково"
+
+#~ msgctxt "@item:listbox the playback behavior of the playlist"
+#~ msgid "Random"
+#~ msgstr "Випадково"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"

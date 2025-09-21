@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:41+0000\n"
+"POT-Creation-Date: 2025-09-21 00:41+0000\n"
 "PO-Revision-Date: 2025-06-14 13:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -28,61 +28,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
-#: src/application.cpp:124
+#: src/application.cpp:123
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Bogaty w przełączniki pobieracz dźwięku/filmów w wierszu poleceń"
 
-#: src/application.cpp:137
+#: src/application.cpp:136
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:139
+#: src/application.cpp:138
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Odtwarzacz multimedialny"
 
-#: src/application.cpp:141
+#: src/application.cpp:140
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:146
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:147
+#: src/application.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Programista"
 
-#: src/application.cpp:155
+#: src/application.cpp:154
 #, kde-format
 msgid "Command line video player"
 msgstr "Odtwarzacz filmów w wierszu poleceń"
 
-#: src/application.cpp:161
+#: src/application.cpp:160
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Wieloplatformowe rozwiązanie do nagrywania, przekształcania i "
 "strumieniowania dźwięku i obrazu"
 
-#: src/application.cpp:173
+#: src/application.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Plik do otwarcia"
 
-#: src/application.cpp:177
+#: src/application.cpp:176
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid ""
@@ -1304,9 +1304,12 @@ msgid "Stop after item"
 msgstr ""
 
 #: src/qml/PlayList.qml:229
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
 msgctxt "@action:button"
-msgid "Random"
-msgstr ""
+msgid "Random Playback"
+msgstr "Rozpocznij odtwarzanie od nowa"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -1836,7 +1839,7 @@ msgid "Show menubar"
 msgstr "Pokaż pasek menu"
 
 #: src/qml/Settings/GeneralSettings.qml:358
-#: src/qml/Settings/PlaylistSettings.qml:168
+#: src/qml/Settings/PlaylistSettings.qml:172
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Pokaż pasek narzędzi"
@@ -2377,28 +2380,30 @@ msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:133
-msgctxt "@item:listbox the playback behavior of the playlist"
-msgid "Random"
-msgstr ""
-
-#: src/qml/Settings/PlaylistSettings.qml:156
+#: src/qml/Settings/PlaylistSettings.qml:150
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
 "indefinitely<br><strong>Stop after last item</strong>: playback stops after "
 "the last item in the playlist<br><strong>Repeat item</strong>: current "
 "playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
-"playback stops after the current playing item<br><strong>Random</strong>: "
-"playlist items play randomly indefinitely"
+"playback stops after the current playing item"
 msgstr ""
 
-#: src/qml/Settings/PlaylistSettings.qml:178
+#: src/qml/Settings/PlaylistSettings.qml:162
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
+msgctxt "@item:listbox the playback behavior of the playlist"
+msgid "Random Playback"
+msgstr "Rozpocznij odtwarzanie od nowa"
+
+#: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "Nakładka na film"
 
-#: src/qml/Settings/PlaylistSettings.qml:185
+#: src/qml/Settings/PlaylistSettings.qml:189
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2407,37 +2412,37 @@ msgstr ""
 "Po zaznaczeniu, lista odtwarzania przechodzi na górę filmu\n"
 "Po odznaczeniu, zmieniany jest rozmiar filmu"
 
-#: src/qml/Settings/PlaylistSettings.qml:192
+#: src/qml/Settings/PlaylistSettings.qml:196
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Pokaż tytuł treści pliku zamiast jego nazwy"
 
-#: src/qml/Settings/PlaylistSettings.qml:202
+#: src/qml/Settings/PlaylistSettings.qml:206
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Sam wczytuj filmy z tego samego katalogu"
 
-#: src/qml/Settings/PlaylistSettings.qml:212
+#: src/qml/Settings/PlaylistSettings.qml:216
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Pokaż numer wiersza"
 
-#: src/qml/Settings/PlaylistSettings.qml:222
+#: src/qml/Settings/PlaylistSettings.qml:226
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Przełącz przy użyciu myszy"
 
-#: src/qml/Settings/PlaylistSettings.qml:231
+#: src/qml/Settings/PlaylistSettings.qml:235
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Zwiększ rozmiar czcionki w trybie pełnoekranowym"
 
-#: src/qml/Settings/PlaylistSettings.qml:243
+#: src/qml/Settings/PlaylistSettings.qml:247
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Zapamiętaj ostatni stan listy odtwarzania"
 
-#: src/qml/Settings/PlaylistSettings.qml:250
+#: src/qml/Settings/PlaylistSettings.qml:254
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2446,7 +2451,7 @@ msgstr ""
 "Po zaznaczeniu stan listy odtwarzania (widoczna/ukryta) będzie zapamiętywany "
 "pomiędzy uruchomieniami"
 
-#: src/qml/Settings/PlaylistSettings.qml:258
+#: src/qml/Settings/PlaylistSettings.qml:262
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Otwieraj rzeczy jednokrotnym naciśnięciem"
