@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:41+0000\n"
-"PO-Revision-Date: 2025-09-12 10:10+0300\n"
+"PO-Revision-Date: 2025-09-21 19:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1194,12 +1194,9 @@ msgid "Stop after item"
 msgstr "Ögeden Sonra Dur"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "Oynatmayı Yeniden Başlat"
+msgstr "Rastgele Oynat"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -2158,15 +2155,6 @@ msgid "Stop after item"
 msgstr "Ögeden sonra dur"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip playback description"
-#| msgid ""
-#| "<strong>Repeat playlist</strong>: playlist is repeated "
-#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
-#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
-#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
-#| "strong>: playback stops after the current playing item<br><strong>Random</"
-#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2179,16 +2167,12 @@ msgstr ""
 "yinelenir.<br><strong>Son ögeden sonra dur</strong>: Oynatma, listedeki son "
 "ögeden sonra durur.<br><strong>Ögeyi yinele</strong>: Şu anda oynatılan öge "
 "sonsuza dek yinelenir.<br><strong>Ögeden sonra dur</strong>: Oynatma, şu "
-"anda oynatılan ögeden sonra durur.<br><strong>Rastgele</strong>: Oynatma "
-"listesinde ögeler sonsuza dek karışık olarak oynatılır."
+"anda oynatılan ögeden sonra durur."
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random Playback"
-msgstr "Oynatmayı Yeniden Başlat"
+msgstr "Rastgele oynat"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"

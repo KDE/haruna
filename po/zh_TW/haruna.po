@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:41+0000\n"
-"PO-Revision-Date: 2025-09-05 17:08+0900\n"
+"PO-Revision-Date: 2025-09-22 03:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1100,20 +1100,14 @@ msgid "Volume: %1"
 msgstr "音量：%1"
 
 #: src/qml/MpvVideo.qml:252
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
-msgstr "將檔案新增至播放清單"
+msgstr "新增至播放清單"
 
 #: src/qml/MpvVideo.qml:300
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Play Next"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
-msgstr "播放下一個"
+msgstr "現在播放"
 
 #: src/qml/PlayList.qml:76
 msgctxt "@action:button"
@@ -1196,12 +1190,9 @@ msgid "Stop after item"
 msgstr "在項目之後停止"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "從頭重新開始播放"
+msgstr "隨機播放"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -2128,15 +2119,6 @@ msgid "Stop after item"
 msgstr "在項目之後停止"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip playback description"
-#| msgid ""
-#| "<strong>Repeat playlist</strong>: playlist is repeated "
-#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
-#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
-#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
-#| "strong>: playback stops after the current playing item<br><strong>Random</"
-#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2148,15 +2130,12 @@ msgstr ""
 "<strong>重複播放清單</strong>：不斷重複播放播放清單<br><strong>在最後一個項目"
 "之後停止</strong>：到播放清單最後一個項目之後停止播放<br><strong>重複播放項目"
 "</strong>：不斷重複播放目前項目<br><strong>在項目之後停止</strong>：目前播放"
-"項目結束之後即停止播放<br><strong>隨機</strong>：不斷隨機播放播放清單內的項目"
+"項目結束之後即停止播放"
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random Playback"
-msgstr "從頭重新開始播放"
+msgstr "隨機播放"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"

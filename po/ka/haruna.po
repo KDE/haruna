@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:41+0000\n"
-"PO-Revision-Date: 2025-09-09 04:55+0200\n"
+"PO-Revision-Date: 2025-09-21 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1197,12 +1197,9 @@ msgid "Stop after item"
 msgstr "გაჩერება ელემენტის შემდეგ"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "დაკვრის თავიდან დაწყება"
+msgstr "შემთხვევითი დაკვრა"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -2158,15 +2155,6 @@ msgid "Stop after item"
 msgstr "გაჩერება ელემენტის შემდეგ"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip playback description"
-#| msgid ""
-#| "<strong>Repeat playlist</strong>: playlist is repeated "
-#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
-#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
-#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
-#| "strong>: playback stops after the current playing item<br><strong>Random</"
-#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2180,16 +2168,12 @@ msgstr ""
 "გაჩერდება დასაკრავ სიაში ბოლო ელემენტის შემდეგ<br><strong>ელემენტის "
 "გამეორება</strong>: მიმდინარე ელემენტი უსასრულოდ "
 "გამეორდება<br><strong>გაჩერება ელემენტის შემდეგ</strong>: დაკვრა გაჩერდება "
-"მიმდინარე ელემენტის შემდეგ<br><strong>შემთხვევითი</strong>: დასაკრავი სიის "
-"ელემენტების დაკვრა შემთხვევით, დაუსრულებლად მოხდება"
+"მიმდინარე ელემენტის შემდეგ"
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random Playback"
-msgstr "დაკვრის თავიდან დაწყება"
+msgstr "შემთხვევითი დაკვრა"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
