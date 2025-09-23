@@ -159,7 +159,7 @@ SettingsBasePage {
         CheckBox {
             checked: PlaylistSettings.randomPlayback
             enabled: ["StopAfterLast", "RepeatPlaylist"].includes(PlaylistSettings.playbackBehavior)
-            text: i18nc("@item:listbox the playback behavior of the playlist", "Random Playback")
+            text: i18nc("@item:listbox the playback behavior of the playlist", "Random playback")
             onClicked: {
                 PlaylistSettings.randomPlayback = checked
                 PlaylistSettings.save()
