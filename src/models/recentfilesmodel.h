@@ -24,6 +24,7 @@ public:
 
     enum Roles {
         UrlRole = Qt::UserRole + 1,
+        ToolTipTextRole,
         NameRole,
         OpenedFromRole,
     };

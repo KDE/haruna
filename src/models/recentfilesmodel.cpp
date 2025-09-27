@@ -53,6 +53,8 @@ QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case UrlRole:
         return QVariant(item.url);
+    case ToolTipTextRole:
+        return QVariant(item.url.toString(QUrl::PreferLocalFile));
     case NameRole:
         return QVariant(item.filename);
     case OpenedFromRole:
@@ -66,6 +68,7 @@ QHash<int, QByteArray> RecentFilesModel::roleNames() const
 {
     QHash<int, QByteArray> roles{
         {UrlRole, QByteArrayLiteral("url")},
+        {ToolTipTextRole, QByteArrayLiteral("toolTipText")},
         {NameRole, QByteArrayLiteral("filename")},
         {OpenedFromRole, QByteArrayLiteral("openedFrom")},
     };
