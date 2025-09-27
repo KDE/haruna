@@ -250,9 +250,7 @@ ApplicationWindow {
         Connections {
             target: mpv
             function onOpenPlaylist() {
-                if (playlist.playlistView.count > 0) {
-                    playlist.state = "visible"
-                }
+                playlist.state = "visible"
             }
             function onClosePlaylist() {
                 playlist.state = "hidden"
