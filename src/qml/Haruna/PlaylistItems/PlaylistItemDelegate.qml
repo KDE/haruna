@@ -237,14 +237,14 @@ Item {
 
     function getFontSize() {
         if (Window.window === null) {
-            return Kirigami.Units.gridUnit
+            return 13
         }
 
         const mainWindow = Window.window as Main
         if (mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen) {
-            return Kirigami.Units.gridUnit
+            return 19
         } else {
-            return Kirigami.Units.gridUnit - 6
+            return 13
         }
     }
 
