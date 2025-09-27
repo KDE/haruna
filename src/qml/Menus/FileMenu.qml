@@ -37,6 +37,7 @@ Menu {
                 id: delegate
 
                 required property string url
+                required property string toolTipText
                 required property string filename
                 required property int openedFrom
 
@@ -52,7 +53,7 @@ Menu {
                 }
 
                 ToolTip {
-                    text: delegate.url
+                    text: delegate.toolTipText
                 }
             }
             onObjectAdded: (index, object) => recentFilesMenu.insertItem(index, object)
