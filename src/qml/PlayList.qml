@@ -449,6 +449,13 @@ Page {
                 spacing: 1
                 currentIndex: root.m_mpv.visibleFilterProxyModel.getPlayingItem()
 
+                displaced: Transition {
+                    NumberAnimation {
+                        properties: "y"
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
+
                 delegate: {
                     switch (PlaylistSettings.style) {
                     case "default":
