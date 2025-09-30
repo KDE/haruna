@@ -571,7 +571,7 @@ msgstr "重新分配"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "不允许存在同名播放列表：%1"
 
 #: src/mpv/mpvitem.cpp:362
 #, kde-format
@@ -887,9 +887,6 @@ msgstr ""
 "仅搜索相对文件夹。"
 
 #: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
-#, fuzzy
-#| msgctxt "@item:listbox the footer style"
-#| msgid "Default"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "默认"
@@ -1104,25 +1101,19 @@ msgid "Volume: %1"
 msgstr "音量：%1"
 
 #: src/qml/MpvVideo.qml:252
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
-msgstr "添加文件至播放列表"
+msgstr "添加至播放列表"
 
 #: src/qml/MpvVideo.qml:300
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Play Next"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
-msgstr "播放下一个"
+msgstr "立即播放"
 
 #: src/qml/PlayList.qml:76
 msgctxt "@action:button"
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: src/qml/PlayList.qml:96
 msgctxt "@action:button"
@@ -1145,9 +1136,6 @@ msgid "URL"
 msgstr "URL"
 
 #: src/qml/PlayList.qml:136
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "播放列表"
@@ -1203,12 +1191,9 @@ msgid "Stop after item"
 msgstr "当前项目之后停止"
 
 #: src/qml/PlayList.qml:229
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "重新开始播放"
+msgstr "随机播放"
 
 #: src/qml/PlayList.qml:241
 msgctxt "@action:button"
@@ -1228,7 +1213,7 @@ msgstr "重命名"
 #: src/qml/PlayList.qml:328
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
 msgctxt "@action:button"
@@ -2131,15 +2116,6 @@ msgid "Stop after item"
 msgstr "当前项目之后停止"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip playback description"
-#| msgid ""
-#| "<strong>Repeat playlist</strong>: playlist is repeated "
-#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
-#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
-#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
-#| "strong>: playback stops after the current playing item<br><strong>Random</"
-#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2151,15 +2127,12 @@ msgstr ""
 "<strong>播放列表循环</strong>：无限循环播放播放列表<br><strong>最后一个项目之"
 "后停止</strong>：播放至播放列表的最后一项后停止<br><strong>当前项目循环</"
 "strong>：无限循环播放当前播放的项目<br><strong>当前项目之后停止</strong>：播"
-"放当前项目之后停止<br><strong>随机</strong>：无限随机播放播放列表中的项目"
+"放当前项目之后停止<br>"
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random playback"
-msgstr "重新开始播放"
+msgstr "随机播放"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
@@ -2496,11 +2469,3 @@ msgstr ""
 "无法获取此 ID 的播放列表：%1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@action:button"
-#~ msgid "Random"
-#~ msgstr "随机"
-
-#~ msgctxt "@item:listbox the playback behavior of the playlist"
-#~ msgid "Random"
-#~ msgstr "随机"
