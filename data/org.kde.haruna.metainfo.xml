@@ -77,42 +77,11 @@
   <summary xml:lang="uk">Мультимедійний програвач</summary>
   <summary xml:lang="zh-CN">媒体播放器</summary>
   <summary xml:lang="zh-TW">媒體播放器</summary>
-  <developer_name>George Florea Bănuș</developer_name>
-  <developer_name xml:lang="ar">جورج فلوريا بونوي</developer_name>
-  <developer_name xml:lang="ca">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="ca-valencia">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="cs">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="de">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="en-GB">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="eo">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="es">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="eu">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="fi">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="fr">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="gl">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="he">ג׳ורג׳ פלוריאה באנוש</developer_name>
-  <developer_name xml:lang="hi">जॉर्ज फ्लोरिया बानुश</developer_name>
-  <developer_name xml:lang="ia">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="id">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="it">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="ka">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="ko">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="lv">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="nl">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="pl">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="pt">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="pt-BR">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="ro">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="ru">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="sa">जॉर्ज फ्लोरेआ बनुș</developer_name>
-  <developer_name xml:lang="sl">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="sv">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="tr">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="uk">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="zh-CN">George Florea Bănuș</developer_name>
-  <developer_name xml:lang="zh-TW">George Florea Bănuș</developer_name>
+  <developer id="org.kde">
+    <name translate="no">George Florea Bănuș</name>
+  </developer>
   <description>
-    <p>Open source media player built with Qt/QML and libmpv.</p>
+    <p>Open source media player with lots of options to make it work the way you want it.</p>
     <p xml:lang="ar">مشغل وسائط مفتوح المصدر مصمم باستخدام Qt / QML و libmpv.</p>
     <p xml:lang="ca">Reproductor multimèdia de codi obert construït amb Qt/QML i la libmpv.</p>
     <p xml:lang="ca-valencia">Reproductor multimèdia de codi obert construït amb Qt/QML i la libmpv.</p>
@@ -376,6 +345,60 @@
     </ul>
   </description>
   <releases>
+    <release version="1.5.0" date="2025-09-30">
+      <description>
+        <p>Features</p>
+        <p>Settings</p>
+        <ul>
+          <li>General: added single instance setting to play new file when appending to the playlist</li>
+          <li>General: removed the <code>File dialog location setting</code></li>
+          <li>Playlist: added settings to control playback behavior</li>
+          <li>Mouse: refactored to allow modifier keys</li>
+          <li>Mouse: added support for Mouse Forward and Back buttons</li>
+          <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an <em> (asterisk) then subtitles will be searched in all folders contaning the folder name. Example: If the <code>Load subtitle from</code> list contains an entry `</em>sub<code>and you have the following folders next to the video file</code>subs<code>,</code>more subs<code>and</code>subtitles` all of these folders will be searched.</li>
+          <li>the settings window now has a minimum width and height</li>
+        </ul>
+        <p>PlayList</p>
+        <ul>
+          <li>added support for multiple playlists</li>
+          <li>items can be reordered manually through drag and dropdown</li>
+          <li>items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
+          <li>items can be filtered</li>
+          <li>added setings to control playback behavior when a file ends</li>
+          <li>when saving the playlist the file extension is set to m3u</li>
+          <li>can add files and folders through drag and drop</li>
+          <li>multiple files can be added through the option in the header</li>
+          <li>hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
+        </ul>
+        <p>Playback</p>
+        <ul>
+          <li>if a file can't be played now an error is shown and playback stops instead of trying to play the next file (prevents a potential infinite loop when no file in the playlist can be played)</li>
+          <li>can play files starting with a dot (hidden files)</li>
+          <li>an error is shown when failing to get youtube playlist</li>
+        </ul>
+        <p>Other</p>
+        <ul>
+          <li>mpris: add support for Shuffle and LoopStatus</li>
+          <li>changed the action selection popup to use Kirigami.SearchDialog</li>
+          <li>replaced the spinning icon with a progress bar and label</li>
+          <li>the drop area of the video is split in 2 parts now</li>
+          <li>top part always appends to the default playlist</li>
+          <li>bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
+          <li>recent files are now stored in a sqlite database</li>
+          <li>time positions used to restore videos are also stored in the database</li>
+          <li>sleep is blocked on Windows too</li>
+          <li>all strings should be translatable now</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>fixed the loop action, osd was not showing and progress bar was not highlighting the loop range</li>
+          <li>before loading check that the file exists </li>
+          <li>fixed loading wrong subtitles when using recursive subs </li>
+          <li>fixed the progress bar getting taller when the chapters menu becomes visible</li>
+          <li>fixed a bug where the video would pause after clicking the progress/seek bar</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.0" date="2025-04-15">
       <description>
         <p>Features</p>
