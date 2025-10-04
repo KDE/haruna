@@ -71,7 +71,6 @@ PlaylistItemDelegate {
                 elide: Text.ElideRight
                 font.pointSize: root.getFontSize()
                 text: PlaylistSettings.showMediaTitle ? root.title : root.name
-                layer.enabled: true
                 Layout.fillWidth: true
                 Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
             }

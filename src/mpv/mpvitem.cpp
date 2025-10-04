@@ -394,6 +394,12 @@ void MpvItem::onEndOfFileReached()
         return;
     }
 
+    if (behavior == u"RepeatPlaylist"_s && activeFilterProxyModel()->rowCount() == 1) {
+        setPropertyBlocking(MpvProperties::self()->Position, 0);
+        setPropertyBlocking(MpvProperties::self()->Pause, false);
+        return;
+    }
+
     proxyModel->playNext();
 }
 
@@ -502,13 +508,17 @@ void MpvItem::loadFile(const QString &file)
     auto mute = m_mute;
     // mute to avoid popping sound while loading files
     setPropertyBlocking(MpvProperties::self()->Mute, true);
-    setPropertyBlocking(MpvProperties::self()->Pause, false);
     setWatchLaterPosition(loadTimePosition());
     if (PlaybackSettings::restoreFilePosition()) {
-        setPropertyBlocking(MpvProperties::self()->Pause, !PlaybackSettings::playOnResume() && watchLaterPosition() > 1);
         setPropertyBlocking(u"start"_s, QVariant(u"+"_s + QString::number(m_watchLaterPosition)));
     }
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
+    // clang-format off
+    auto pause = PlaybackSettings::restoreFilePosition()
+            ? !PlaybackSettings::playOnResume() && watchLaterPosition() > 1
+            : false;
+    // clang-format on
+    setPropertyBlocking(MpvProperties::self()->Pause, pause);
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
     if (SubtitlesSettings::recursiveSubtitlesSearch()) {
