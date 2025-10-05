@@ -220,12 +220,24 @@ ApplicationWindow {
         }
     }
 
+    // extra space outside the playlist so that the playlist is not closed
+    // when the mouse leaves it by mistake (dragging items, resizing the playlist)
+    Item {
+        // when window width is very small, there is only 50 pixels not covered by the playlist
+        // in that case the extra space is reduced to 30 to allow the playlist to be closed with the mouse
+        width: playlist.width >= Window.window.width - 70 ? 30 : 50
+        height: playlist.height
+        anchors.right: PlaylistSettings.position === "right" ? playlist.left : undefined
+        anchors.left: PlaylistSettings.position === "left" ? playlist.right : undefined
+        visible: playlist.visible
+        HoverHandler {}
+    }
+
     PlayList {
         id: playlist
 
         m_mpv: mpv
         height: mpv.height
-
 
         Connections {
             target: actions
