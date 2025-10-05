@@ -26,22 +26,20 @@ Page {
     property int buttonSize: isSmallWindowSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
+    property real customWidth: PlaylistSettings.playlistWidth
+    property real fsScale: Window.window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
 
     height: m_mpv.height
-    width: {
+    width: limitWidth(customWidth) * fsScale
+
+    function limitWidth(pWidth) {
         if (PlaylistSettings.style === "compact") {
             return 380
         } else {
-            let playlistWidth = Window.window.width - 50
-            if (Window.window.width > 600) {
-                playlistWidth = 550
-            }
-            if (Window.window.width * 0.35 > playlistWidth) {
-                playlistWidth = Window.window.width * 0.35
-            }
-            return playlistWidth
+            return Math.min(Math.max(pWidth, 260), Window.window.width - 50)
         }
     }
+
     x: PlaylistSettings.position === "right" ? Window.window.width : -width
     y: 0
     padding: 0
@@ -401,9 +399,60 @@ Page {
         }
     }
 
-    Rectangle {
+    Item {
+        id: rescaleHandler
 
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+
+        x: PlaylistSettings.position === "right" ? 0 : root.width - rescaleHandler.width
+        y: 0
+        z: 999
+        width: 8
+        height: root.height
+
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.LeftButton
+            cursorShape: Qt.SizeHorCursor
+
+            drag {
+                target: rescaleHandler
+                axis: Drag.XAxis
+                threshold: 0
+            }
+
+            onPositionChanged: {
+                if (!drag.active) {
+                    return
+                }
+                
+                if (PlaylistSettings.position === "right") {
+                    let mX = root.m_mpv.mapFromItem(this, mouseX, mouseY).x
+                    var w = root.limitWidth(Window.window.width - mX)
+                } else {
+                    let mX = playlistView.mapFromItem(this, mouseX, mouseY).x
+                    var w = root.limitWidth(mX)
+                }
+                root.customWidth = w / root.fsScale
+            }
+
+            onReleased: {
+                rescaleHandler.x = Qt.binding( function () {
+                    return PlaylistSettings.position === "right" ? 0 : root.width - rescaleHandler.width
+                })
+
+                PlaylistSettings.playlistWidth = root.customWidth
+                PlaylistSettings.save()
+            }
+        }
+    }
+
+    Rectangle {
         Rectangle {
+            id: playlistEdgeBorder
+
+            x: PlaylistSettings.position === "right" ? 0 : parent.width - width
             z: 20
             width: 1
             height: parent.height
@@ -432,6 +481,11 @@ Page {
 
             z: 20
             anchors.fill: parent
+            anchors {
+                leftMargin: playlistEdgeBorder.width
+                rightMargin: playlistEdgeBorder.width
+            }
+
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
             ListView {
