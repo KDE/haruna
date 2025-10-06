@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-01 00:44+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2025-09-21 13:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -644,7 +644,7 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "இதனை இயக்க முடியவில்லை: %1"
 
-#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:469 src/mpv/mpvitem.cpp:471
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles on"
@@ -652,32 +652,32 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "துணை உரையை காட்டு"
 
-#: src/mpv/mpvitem.cpp:497
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:530
+#: src/mpv/mpvitem.cpp:540
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:578
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "திரைப்பிடிப்பு தோல்வியடைந்தது"
 
-#: src/mpv/mpvitem.cpp:573
+#: src/mpv/mpvitem.cpp:583
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "திரைப்பிடிப்பு எடுக்கப்பட்டது"
 
-#: src/mpv/mpvitem.cpp:575
+#: src/mpv/mpvitem.cpp:585
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -685,7 +685,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "திரைப்பிடிப்பு: %1"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:612
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -693,7 +693,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:635
+#: src/mpv/mpvitem.cpp:645
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1026,7 +1026,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "ஹருணா"
 
-#: src/qml/Main.qml:423
+#: src/qml/Main.qml:435
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1034,7 +1034,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "கோப்பை தேர்ந்தெடு"
 
-#: src/qml/Main.qml:440
+#: src/qml/Main.qml:452
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1042,7 +1042,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "துணையுரை கோப்பைத் தேர்ந்தெடுப்பது"
 
-#: src/qml/Main.qml:464
+#: src/qml/Main.qml:476
 msgctxt "@action:button"
 msgid "Open"
 msgstr "திற"
@@ -1234,12 +1234,12 @@ msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "அடுத்த‍தை இயக்கு"
 
-#: src/qml/PlayList.qml:76
+#: src/qml/PlayList.qml:73
 msgctxt "@action:button"
 msgid "Search"
 msgstr ""
 
-#: src/qml/PlayList.qml:96
+#: src/qml/PlayList.qml:93
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -1247,12 +1247,12 @@ msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "பாடல்வரிசையை திற"
 
-#: src/qml/PlayList.qml:110
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
-#: src/qml/PlayList.qml:118
+#: src/qml/PlayList.qml:115
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1260,12 +1260,12 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "கோப்பு"
 
-#: src/qml/PlayList.qml:126
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "URL"
 msgstr ""
 
-#: src/qml/PlayList.qml:136
+#: src/qml/PlayList.qml:133
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -1273,12 +1273,12 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "பாடல்வரிசை"
 
-#: src/qml/PlayList.qml:147
+#: src/qml/PlayList.qml:144
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "வரிசைப்படுத்து"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:153
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -1286,7 +1286,7 @@ msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "பெயர், ஏறுவரிசை"
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:159
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name descending"
@@ -1294,7 +1294,7 @@ msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "பெயர், இறங்குவரிசை"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:165
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration ascending"
@@ -1302,7 +1302,7 @@ msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "நீளம், ஏறுவரிசை"
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:171
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration descending"
@@ -1310,7 +1310,7 @@ msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "நீளம், இறங்குவரிசை"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:178
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -1318,7 +1318,7 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "இயக்குதல்"
 
-#: src/qml/PlayList.qml:187
+#: src/qml/PlayList.qml:184
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -1326,22 +1326,22 @@ msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "பாடல்வரிசையை திற"
 
-#: src/qml/PlayList.qml:198
+#: src/qml/PlayList.qml:195
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/qml/PlayList.qml:208
+#: src/qml/PlayList.qml:205
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr ""
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:216
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/qml/PlayList.qml:229
+#: src/qml/PlayList.qml:226
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Restart Playback"
@@ -1349,12 +1349,12 @@ msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "இயக்குவதை மீள்துவக்கு"
 
-#: src/qml/PlayList.qml:241
+#: src/qml/PlayList.qml:238
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "காலியாக்கு"
 
-#: src/qml/PlayList.qml:249
+#: src/qml/PlayList.qml:246
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Save as"
@@ -1362,22 +1362,22 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "வேறு பெயரில் சேமி"
 
-#: src/qml/PlayList.qml:322 src/qml/PlayList.qml:570
+#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:631
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "மறுபெயரிடு"
 
-#: src/qml/PlayList.qml:328
+#: src/qml/PlayList.qml:325
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 
-#: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
+#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:394
 msgctxt "@action:button"
 msgid "Add"
 msgstr "சேர்"
 
-#: src/qml/PlayList.qml:512
+#: src/qml/PlayList.qml:573
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open containing folder"
@@ -1385,7 +1385,7 @@ msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
-#: src/qml/PlayList.qml:518
+#: src/qml/PlayList.qml:579
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1393,7 +1393,7 @@ msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "உலாவியில் திற"
 
-#: src/qml/PlayList.qml:527
+#: src/qml/PlayList.qml:588
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy name"
@@ -1401,7 +1401,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "பெயரை நகலெடு"
 
-#: src/qml/PlayList.qml:533
+#: src/qml/PlayList.qml:594
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy path"
@@ -1409,7 +1409,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "பாதையை நகலெடு"
 
-#: src/qml/PlayList.qml:534
+#: src/qml/PlayList.qml:595
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -1417,7 +1417,7 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "முகவரியை நகலெடு"
 
-#: src/qml/PlayList.qml:544
+#: src/qml/PlayList.qml:605
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1425,7 +1425,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "கோப்பை தேர்ந்தெடு"
 
-#: src/qml/PlayList.qml:548
+#: src/qml/PlayList.qml:609
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1433,7 +1433,7 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "கோப்பை தேர்ந்தெடு"
 
-#: src/qml/PlayList.qml:552
+#: src/qml/PlayList.qml:613
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Confirm deletion"
@@ -1441,7 +1441,7 @@ msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "நீக்குவதை உறுதி செய்"
 
-#: src/qml/PlayList.qml:558
+#: src/qml/PlayList.qml:619
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1449,7 +1449,7 @@ msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "பாடல்வரிசையிலிருந்து நீக்கு"
 
-#: src/qml/PlayList.qml:564
+#: src/qml/PlayList.qml:625
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1457,7 +1457,7 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "பாடல்வரிசையிலிருந்து நீக்கு"
 
-#: src/qml/PlayList.qml:576
+#: src/qml/PlayList.qml:637
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Scroll to playing item"
@@ -1465,17 +1465,17 @@ msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "தற்போதைய உருப்படிக்கு உருள்"
 
-#: src/qml/PlayList.qml:586
+#: src/qml/PlayList.qml:647
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:592
+#: src/qml/PlayList.qml:653
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:698 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:759 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "கோப்பை தேர்ந்தெடு"

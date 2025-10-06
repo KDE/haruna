@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-01 00:44+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2025-09-25 11:27+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -582,44 +582,44 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Lecture impossible : %1"
 
-#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:469 src/mpv/mpvitem.cpp:471
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Cadencement des sous-titres : %1 secondes"
 
-#: src/mpv/mpvitem.cpp:497
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Le fichier n'existe pas : %1"
 
-#: src/mpv/mpvitem.cpp:530
+#: src/mpv/mpvitem.cpp:540
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Aucun"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:578
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Impossible de faire une copie d'écran"
 
-#: src/mpv/mpvitem.cpp:573
+#: src/mpv/mpvitem.cpp:583
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Copie d'écran effectuée"
 
-#: src/mpv/mpvitem.cpp:575
+#: src/mpv/mpvitem.cpp:585
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Copie d'écran : %1"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:612
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -629,7 +629,7 @@ msgstr ""
 "Aucune piste vidéo n'a été détectée. Il est très probable que la piste vidéo "
 "n'a pu être décodée / lue en raison de codecs manquants."
 
-#: src/mpv/mpvitem.cpp:635
+#: src/mpv/mpvitem.cpp:645
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -926,17 +926,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:423
+#: src/qml/Main.qml:435
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Sélectionnez un fichier"
 
-#: src/qml/Main.qml:440
+#: src/qml/Main.qml:452
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Sélectionnez un fichier de sous-titres"
 
-#: src/qml/Main.qml:464
+#: src/qml/Main.qml:476
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ouvrir"
@@ -1116,182 +1116,182 @@ msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Lire maintenant"
 
-#: src/qml/PlayList.qml:76
+#: src/qml/PlayList.qml:73
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Rechercher"
 
-#: src/qml/PlayList.qml:96
+#: src/qml/PlayList.qml:93
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Ouvrir une liste de lecture"
 
-#: src/qml/PlayList.qml:110
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Ajouter..."
 
-#: src/qml/PlayList.qml:118
+#: src/qml/PlayList.qml:115
 msgctxt "@action:button"
 msgid "Files"
 msgstr "Fichiers"
 
-#: src/qml/PlayList.qml:126
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:136
+#: src/qml/PlayList.qml:133
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Liste de lecture"
 
-#: src/qml/PlayList.qml:147
+#: src/qml/PlayList.qml:144
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Trier"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Par nom croissant"
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:159
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Par nom décroissant"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:165
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Par durée croissante"
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:171
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Par durée décroissante"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:178
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Lecture"
 
-#: src/qml/PlayList.qml:187
+#: src/qml/PlayList.qml:184
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Répéter la liste de lecture"
 
-#: src/qml/PlayList.qml:198
+#: src/qml/PlayList.qml:195
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "S'arrêter après le dernier élément"
 
-#: src/qml/PlayList.qml:208
+#: src/qml/PlayList.qml:205
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Répéter l'élément"
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:216
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "S'arrêter après l’élément"
 
-#: src/qml/PlayList.qml:229
+#: src/qml/PlayList.qml:226
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Lecture aléatoire"
 
-#: src/qml/PlayList.qml:241
+#: src/qml/PlayList.qml:238
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Effacer"
 
-#: src/qml/PlayList.qml:249
+#: src/qml/PlayList.qml:246
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Enregistrer sous"
 
-#: src/qml/PlayList.qml:322 src/qml/PlayList.qml:570
+#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:631
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Renommer"
 
-#: src/qml/PlayList.qml:328
+#: src/qml/PlayList.qml:325
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Supprimer"
 
-#: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
+#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:394
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Ajouter"
 
-#: src/qml/PlayList.qml:512
+#: src/qml/PlayList.qml:573
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Ouvrir le dossier contenant"
 
-#: src/qml/PlayList.qml:518
+#: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Ouvrir dans un navigateur"
 
-#: src/qml/PlayList.qml:527
+#: src/qml/PlayList.qml:588
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Copier le nom"
 
-#: src/qml/PlayList.qml:533
+#: src/qml/PlayList.qml:594
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Copier l'emplacement"
 
-#: src/qml/PlayList.qml:534
+#: src/qml/PlayList.qml:595
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Copier l'URL"
 
-#: src/qml/PlayList.qml:544
+#: src/qml/PlayList.qml:605
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Tout sélectionner"
 
-#: src/qml/PlayList.qml:548
+#: src/qml/PlayList.qml:609
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Tout désélectionner"
 
-#: src/qml/PlayList.qml:552
+#: src/qml/PlayList.qml:613
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Inverser la sélection"
 
-#: src/qml/PlayList.qml:558
+#: src/qml/PlayList.qml:619
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Supprimer de la liste de lecture"
 
-#: src/qml/PlayList.qml:564
+#: src/qml/PlayList.qml:625
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Supprimer les éléments sélectionnés de la liste de lecture"
 
-#: src/qml/PlayList.qml:576
+#: src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Dérouler jusqu'à l'élément en lecture"
 
-#: src/qml/PlayList.qml:586
+#: src/qml/PlayList.qml:647
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Déplacer le fichier dans la corbeille"
 
-#: src/qml/PlayList.qml:592
+#: src/qml/PlayList.qml:653
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Déplacer les fichiers sélectionnés vers la corbeille"
 
-#: src/qml/PlayList.qml:698 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:759 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Sélectionnez un fichier"

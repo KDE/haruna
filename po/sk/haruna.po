@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-01 00:44+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -623,48 +623,48 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kontrast: %1"
 
-#: src/mpv/mpvitem.cpp:463 src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:469 src/mpv/mpvitem.cpp:471
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Podtitulok: %1 %2"
 
-#: src/mpv/mpvitem.cpp:497
+#: src/mpv/mpvitem.cpp:503
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:530
+#: src/mpv/mpvitem.cpp:540
 #, fuzzy, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Žiadne"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:578
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:573
+#: src/mpv/mpvitem.cpp:583
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:575
+#: src/mpv/mpvitem.cpp:585
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:612
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -672,7 +672,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:635
+#: src/mpv/mpvitem.cpp:645
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1023,7 +1023,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:423
+#: src/qml/Main.qml:435
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1031,14 +1031,14 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Vyberte súbor"
 
-#: src/qml/Main.qml:440
+#: src/qml/Main.qml:452
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Titulky"
 
-#: src/qml/Main.qml:464
+#: src/qml/Main.qml:476
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otvoriť"
@@ -1250,24 +1250,24 @@ msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr ""
 
-#: src/qml/PlayList.qml:76
+#: src/qml/PlayList.qml:73
 msgctxt "@action:button"
 msgid "Search"
 msgstr ""
 
-#: src/qml/PlayList.qml:96
+#: src/qml/PlayList.qml:93
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Open Playlist"
 msgstr "Otvoriť zoznam skladieb..."
 
-#: src/qml/PlayList.qml:110
+#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
-#: src/qml/PlayList.qml:118
+#: src/qml/PlayList.qml:115
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1275,12 +1275,12 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "Súbor"
 
-#: src/qml/PlayList.qml:126
+#: src/qml/PlayList.qml:123
 msgctxt "@action:button"
 msgid "URL"
 msgstr ""
 
-#: src/qml/PlayList.qml:136
+#: src/qml/PlayList.qml:133
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -1288,39 +1288,39 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Zoznam skladieb"
 
-#: src/qml/PlayList.qml:147
+#: src/qml/PlayList.qml:144
 #, fuzzy
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Triediť"
 
-#: src/qml/PlayList.qml:156
+#: src/qml/PlayList.qml:153
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr ""
 
-#: src/qml/PlayList.qml:162
+#: src/qml/PlayList.qml:159
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Sýtosť"
 
-#: src/qml/PlayList.qml:168
+#: src/qml/PlayList.qml:165
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Sýtosť"
 
-#: src/qml/PlayList.qml:174
+#: src/qml/PlayList.qml:171
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Sýtosť"
 
-#: src/qml/PlayList.qml:181
+#: src/qml/PlayList.qml:178
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -1328,44 +1328,44 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "Prehrávanie"
 
-#: src/qml/PlayList.qml:187
+#: src/qml/PlayList.qml:184
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Otvoriť zoznam skladieb..."
 
-#: src/qml/PlayList.qml:198
+#: src/qml/PlayList.qml:195
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/qml/PlayList.qml:208
+#: src/qml/PlayList.qml:205
 #, fuzzy
 #| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Opakovanie"
 
-#: src/qml/PlayList.qml:219
+#: src/qml/PlayList.qml:216
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/qml/PlayList.qml:229
+#: src/qml/PlayList.qml:226
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Spustiť prehrávanie"
 
-#: src/qml/PlayList.qml:241
+#: src/qml/PlayList.qml:238
 #, fuzzy
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Vyčistiť"
 
-#: src/qml/PlayList.qml:249
+#: src/qml/PlayList.qml:246
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Save as"
@@ -1373,28 +1373,28 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "Uložiť ako"
 
-#: src/qml/PlayList.qml:322 src/qml/PlayList.qml:570
+#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:631
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Premenovať"
 
-#: src/qml/PlayList.qml:328
+#: src/qml/PlayList.qml:325
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 
-#: src/qml/PlayList.qml:384 src/qml/PlayList.qml:397
+#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:394
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Pridať"
 
-#: src/qml/PlayList.qml:512
+#: src/qml/PlayList.qml:573
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
 
-#: src/qml/PlayList.qml:518
+#: src/qml/PlayList.qml:579
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1402,7 +1402,7 @@ msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Otvoriť v prehliadači"
 
-#: src/qml/PlayList.qml:527
+#: src/qml/PlayList.qml:588
 #, fuzzy
 #| msgctxt "NAME OF TRANSLATORS"
 #| msgid "Your names"
@@ -1410,13 +1410,13 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Roman Paholík"
 
-#: src/qml/PlayList.qml:533
+#: src/qml/PlayList.qml:594
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopírovať cestu"
 
-#: src/qml/PlayList.qml:534
+#: src/qml/PlayList.qml:595
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -1424,7 +1424,7 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopírovať URL adresu"
 
-#: src/qml/PlayList.qml:544
+#: src/qml/PlayList.qml:605
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1432,7 +1432,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Vyberte súbor"
 
-#: src/qml/PlayList.qml:548
+#: src/qml/PlayList.qml:609
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1440,7 +1440,7 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Vyberte súbor"
 
-#: src/qml/PlayList.qml:552
+#: src/qml/PlayList.qml:613
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Confirm deletion"
@@ -1448,38 +1448,38 @@ msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Potvrdiť vymazanie"
 
-#: src/qml/PlayList.qml:558
+#: src/qml/PlayList.qml:619
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Odstrániť zo zoznamu skladieb"
 
-#: src/qml/PlayList.qml:564
+#: src/qml/PlayList.qml:625
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Odstrániť zo zoznamu skladieb"
 
-#: src/qml/PlayList.qml:576
+#: src/qml/PlayList.qml:637
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Spustiť prehrávanie"
 
-#: src/qml/PlayList.qml:586
+#: src/qml/PlayList.qml:647
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:592
+#: src/qml/PlayList.qml:653
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr ""
 
-#: src/qml/PlayList.qml:698 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:759 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vyberte súbor"
