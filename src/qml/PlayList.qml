@@ -29,7 +29,6 @@ Page {
     property real customWidth: PlaylistSettings.playlistWidth
     property real fsScale: Window.window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
 
-    height: m_mpv.height
     width: limitWidth(customWidth) * fsScale
 
     function limitWidth(pWidth) {
@@ -399,25 +398,14 @@ Page {
         }
     }
 
-    Item {
-        id: rescaleHandler
-
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-
-        x: PlaylistSettings.position === "right" ? 0 : root.width - rescaleHandler.width
-        y: 0
-        z: 999
-        width: 8
-        height: root.height
-
+    component ResizeHandler: Item {
         MouseArea {
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton
             cursorShape: Qt.SizeHorCursor
 
             drag {
-                target: rescaleHandler
+                target: parent
                 axis: Drag.XAxis
                 threshold: 0
             }
@@ -426,7 +414,7 @@ Page {
                 if (!drag.active) {
                     return
                 }
-                
+
                 if (PlaylistSettings.position === "right") {
                     let mX = root.m_mpv.mapFromItem(this, mouseX, mouseY).x
                     var w = root.limitWidth(Window.window.width - mX)
@@ -438,10 +426,6 @@ Page {
             }
 
             onReleased: {
-                rescaleHandler.x = Qt.binding( function () {
-                    return PlaylistSettings.position === "right" ? 0 : root.width - rescaleHandler.width
-                })
-
                 PlaylistSettings.playlistWidth = root.customWidth
                 PlaylistSettings.save()
             }
@@ -452,11 +436,34 @@ Page {
         Rectangle {
             id: playlistEdgeBorder
 
-            x: PlaylistSettings.position === "right" ? 0 : parent.width - width
-            z: 20
+            x: PlaylistSettings.position === "right" ? 0 : parent.width
+            y: -root.implicitHeaderHeight
+            z: 30
             width: 1
-            height: parent.height
+            height: root.height
             color: Kirigami.Theme.backgroundColor
+
+            ResizeHandler {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: 8
+                height: parent.height
+            }
+
+            Rectangle {
+                id: dragHandle
+
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                width: 5
+                height: 50
+                color: Kirigami.Theme.backgroundColor
+
+                ResizeHandler {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: 18
+                    height: parent.height
+                }
+            }
         }
 
         anchors.fill: parent
