@@ -472,11 +472,11 @@ void PlaylistFilterProxyModel::refreshData()
 void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistModel::Behavior behavior, uint insertOffset)
 {
     auto getCanonicalOrAbsolutePath = [](const QFileInfo &fi) -> QString {
-        const QString cannonical = fi.canonicalFilePath();
-        if (cannonical.isEmpty()) {
+        const QString canonical = fi.canonicalFilePath();
+        if (canonical.isEmpty()) {
             return fi.absoluteFilePath();
         }
-        return cannonical;
+        return canonical;
     };
 
     auto isAcceptedMime = [](const QString &path) -> bool {
@@ -549,7 +549,7 @@ void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistMode
     int localOffset = 0;
     for (const auto &file : std::as_const(files)) {
         if (behavior == PlaylistModel::Insert) {
-            // Initalize proxy model to insert the items at the dropped index. After each insertion, the index should increase
+            // Initialize proxy model to insert the items at the dropped index. After each insertion, the index should increase
             playlistProxyModel()->setInsertOffset(insertOffset + localOffset++);
             // When the addItem is called from the playlistModel, rowsAboutToBeInserted signal will reach playlistProxyModel
             // for this item. If offset it set, instead of appending, the proxy will insert it to the given index

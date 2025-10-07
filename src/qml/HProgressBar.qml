@@ -207,7 +207,7 @@ RowLayout {
                 required property string title
                 required property double startTime
 
-                // where the chapter marker shoud be positioned on the progress bar
+                // where the chapter marker should be positioned on the progress bar
                 property int position: slider.mirrored
                                        ? progressBarBG.width - (chapterMarkerShape.startTime / root.m_mpv.duration * progressBarBG.width)
                                        : chapterMarkerShape.startTime / root.m_mpv.duration * progressBarBG.width

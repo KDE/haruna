@@ -188,7 +188,7 @@ SettingsBasePage {
 
                 CheckBox {
                     id: isDoubleClickCheckBox
-                    text: i18nc("@label:check whether mouse button action shoud trigger on double click",
+                    text: i18nc("@label:check whether mouse button action should trigger on double click",
                                 "Trigger on double click")
                     enabled: mouseButtonComboBox.currentIndex < 5
                     onClicked: {

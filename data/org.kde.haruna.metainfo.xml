@@ -338,7 +338,7 @@
           <li>Playlist: added settings to control playback behavior</li>
           <li>Mouse: refactored to allow modifier keys</li>
           <li>Mouse: added support for Mouse Forward and Back buttons</li>
-          <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an <em> (asterisk) then subtitles will be searched in all folders contaning the folder name. Example: If the <code>Load subtitle from</code> list contains an entry `</em>sub<code>and you have the following folders next to the video file</code>subs<code>,</code>more subs<code>and</code>subtitles` all of these folders will be searched.</li>
+          <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an <em> (asterisk) then subtitles will be searched in all folders containing the folder name. Example: If the <code>Load subtitle from</code> list contains an entry `</em>sub<code>and you have the following folders next to the video file</code>subs<code>,</code>more subs<code>and</code>subtitles` all of these folders will be searched.</li>
           <li>the settings window now has a minimum width and height</li>
         </ul>
         <p>PlayList</p>
@@ -347,7 +347,7 @@
           <li>items can be reordered manually through drag and dropdown</li>
           <li>items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
           <li>items can be filtered</li>
-          <li>added setings to control playback behavior when a file ends</li>
+          <li>added settings to control playback behavior when a file ends</li>
           <li>when saving the playlist the file extension is set to m3u</li>
           <li>can add files and folders through drag and drop</li>
           <li>multiple files can be added through the option in the header</li>
@@ -442,7 +442,7 @@
         </ul>
         <p>Bugfixes:</p>
         <ul>
-          <li>Imporved scrolling performace of playlist, shortcuts and seekbar's chapters menu</li>
+          <li>Improved scrolling performance of playlist, shortcuts and seekbar's chapters menu</li>
           <li>Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
           <li>Fixed active audio and subtitle tracks not being correctly checked</li>
           <li>Removed empty header toolbar from settings window</li>
@@ -513,7 +513,7 @@
         <p>Bugfixes:</p>
         <ul>
           <li>Hiding/showing Playlist toolbar setting</li>
-          <li>Track sub-menus in Audio and Subtiles global menus being empty</li>
+          <li>Track sub-menus in Audio and Subtitles global menus being empty</li>
           <li>Freeze when opening HamburgerMenu</li>
         </ul>
       </description>
@@ -676,7 +676,7 @@
           <li>Fixed durations longer than 24 hours not displaying correctly and messing up with chapter labels.</li>
           <li>Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
           <li>Fixed opening relative paths from a playlist file.</li>
-          <li>Fixed opening files containig # characters.</li>
+          <li>Fixed opening files containing # characters.</li>
         </ul>
       </description>
     </release>
@@ -739,9 +739,9 @@
           <li>Setting to set the "time-position" saving interval</li>
           <li>Recent files menu inside the file menu</li>
           <li>More actions to the menubar</li>
-          <li>Action to load last played file (Ctrl+Shift+L), usefull when loading last played file on startup is disabled</li>
+          <li>Action to load last played file (Ctrl+Shift+L), useful when loading last played file on startup is disabled</li>
           <li>Action to restart playback/seek to beginning (F5 key)</li>
-          <li>Action to seek to watch later position (Ctrl+Shift+P), usefull when resume playback on startup is disabled</li>
+          <li>Action to seek to watch later position (Ctrl+Shift+P), useful when resume playback on startup is disabled</li>
         </ul>
         <p>Bugfixes:</p>
         <ul>

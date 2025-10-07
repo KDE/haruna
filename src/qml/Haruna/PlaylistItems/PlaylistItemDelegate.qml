@@ -258,7 +258,7 @@ Item {
 
     function cacheItem() {
         // ListView::reuseItems=true, pools invisible items. During a drag, sometimes
-        // the dragged item gets out of vision and pooled, breaking the drag behaivour.
+        // the dragged item gets out of vision and pooled, breaking the drag behaviour.
         // This prevents pooling of the dragged item.
         ListView.view.currentIndex = index
     }

@@ -67,7 +67,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
                     Q_EMIT dataChanged(index(i, 0), index(i, 0));
                 } else {
                     qDebug() << "\n"
-                             << u"Data missmatch: the url at position %1 received from the worker thread:"_s.arg(i) << "\n"
+                             << u"Data mismatch: the url at position %1 received from the worker thread:"_s.arg(i) << "\n"
                              << u"%1"_s.arg(url.toString()) << "\n"
                              << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
                              << u"%1"_s.arg(m_playlist[i].url.toString());

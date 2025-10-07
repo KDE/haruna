@@ -160,7 +160,7 @@ Item {
 
         function onAddExternalSubtitleAction() {
             if (root.m_mpv.currentUrl.toString() === "") {
-                const osdMsg = i18nc("osd message when trying to open subtile selection dialog while no file is open",
+                const osdMsg = i18nc("osd message when trying to open subtitle selection dialog while no file is open",
                                      "Can’t load subtitle when no file is open")
                 root.m_osd.message(osdMsg)
                 return
@@ -288,7 +288,7 @@ Item {
                 footer.progressBar.loopIndicator.startPosition = root.m_mpv.position
                 root.m_osd.message(i18nc("@info:tooltip; %1 is the timestamp where the loop starts", "Loop start: %1", HarunaApp.formatTime(root.m_mpv.position)))
             } else if (aIsSet && !bIsSet) {
-                // set b position sligthly ahead to ensure the loop section is not skipped
+                // set b position slightly ahead to ensure the loop section is not skipped
                 const bPosition = root.m_mpv.position + 0.1
                 root.m_mpv.setPropertyBlocking(MpvProperties.ABLoopB, bPosition)
                 footer.progressBar.loopIndicator.endPosition = bPosition
