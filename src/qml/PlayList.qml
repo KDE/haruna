@@ -436,7 +436,7 @@ Page {
         Rectangle {
             id: playlistEdgeBorder
 
-            x: PlaylistSettings.position === "right" ? 0 : parent.width
+            x: PlaylistSettings.position === "right" ? 0 : parent.width - width
             y: -root.implicitHeaderHeight
             z: 30
             width: 1
@@ -456,7 +456,12 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
                 width: 5
                 height: 50
-                color: Kirigami.Theme.backgroundColor
+                color: Kirigami.Theme.alternateBackgroundColor
+                radius: Kirigami.Units.cornerRadius
+                border {
+                    width: 1
+                    color: Kirigami.Theme.backgroundColor
+                }
 
                 ResizeHandler {
                     anchors.horizontalCenter: parent.horizontalCenter
