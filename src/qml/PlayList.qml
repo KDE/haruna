@@ -90,20 +90,6 @@ Page {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action:button", "Open Playlist")
-                        displayHint: root.isSmallWindowSize
-                                     ? Kirigami.DisplayHint.IconOnly
-                                     : Kirigami.DisplayHint.NoPreference
-                        icon.name: "media-playlist-append"
-                        icon.width: root.buttonSize
-                        icon.height: root.buttonSize
-                        onTriggered: {
-                            fileDialog.fileType = "playlist"
-                            fileDialog.fileMode = FileDialog.OpenFile
-                            fileDialog.open()
-                        }
-                    },
-                    Kirigami.Action {
                         text: i18nc("@action:button", "Add…")
                         displayHint: root.isSmallWindowSize
                                      ? Kirigami.DisplayHint.IconOnly
@@ -132,11 +118,9 @@ Page {
                         Kirigami.Action {
                             text: i18nc("@action:button", "Playlist")
                             onTriggered: {
-                                if (addPlaylistPopup.opened) {
-                                    addPlaylistPopup.close()
-                                } else {
-                                    addPlaylistPopup.open()
-                                }
+                                fileDialog.fileType = "playlist"
+                                fileDialog.fileMode = FileDialog.OpenFile
+                                fileDialog.open()
                             }
                         }
                     },
@@ -255,6 +239,7 @@ Page {
                 ]
             }
 
+            RowLayout {
             TabBar {
                 id: playlistTabView
 
@@ -302,6 +287,21 @@ Page {
                     target: root.m_mpv.playlists
                     function onVisibleIndexChanged() {
                         playlistTabView.currentIndex = root.m_mpv.playlists.visibleIndex
+                    }
+                }
+                }
+                ToolButton {
+                    icon.name: "list-add"
+                    onClicked: {
+                        if (addPlaylistPopup.opened) {
+                            addPlaylistPopup.close()
+                        } else {
+                            addPlaylistPopup.open()
+                        }
+                    }
+
+                    ToolTip {
+                        text: i18nc("@action:button", "Add new playlist")
                     }
                 }
             }
@@ -391,6 +391,7 @@ Page {
         x: Kirigami.Units.largeSpacing
         y: Kirigami.Units.largeSpacing
         width: toolbar.width - Kirigami.Units.largeSpacing * 2
+        placeholderText: i18nc("@placeholder", "playlist name")
         buttonText: i18nc("@action:button", "Add")
 
         onUrlOpened: function(url) {
