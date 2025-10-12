@@ -15,6 +15,7 @@ Popup {
 
     signal urlOpened(string url)
     property string lastUrl: ""
+    property string placeholderText: ""
     property string buttonText: ""
 
     modal: true
@@ -41,6 +42,7 @@ Popup {
             id: openUrlTextField
 
             text: root.lastUrl
+            placeholderText: root.placeholderText
             visible: youtube.hasYoutubeDl()
             Layout.preferredWidth: 400
             Layout.fillWidth: true
