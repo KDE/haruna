@@ -176,7 +176,7 @@ Page {
                     },
                     Kirigami.Action {
                         text: i18nc("@action:button", "Playback")
-                        icon.name: ""
+                        icon.name: "media-playback-start"
                         icon.width: root.buttonSize
                         icon.height: root.buttonSize
                         displayHint: Kirigami.DisplayHint.KeepVisible
