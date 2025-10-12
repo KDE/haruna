@@ -557,6 +557,8 @@ void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistMode
         // PlaylistModel can just append the items
         playlistModel()->addItem(QUrl::fromLocalFile(file), PlaylistModel::Append);
     }
+    Q_EMIT itemsInserted();
+    Q_EMIT itemCountChanged();
 }
 
 bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)

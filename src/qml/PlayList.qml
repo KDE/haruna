@@ -395,7 +395,7 @@ Page {
         buttonText: i18nc("@action:button", "Add")
 
         onUrlOpened: function(url) {
-            root.m_mpv.playlists.addPlaylist(url)
+            root.m_mpv.playlists.createNewPlaylist(url)
         }
     }
 

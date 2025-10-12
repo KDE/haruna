@@ -24,7 +24,7 @@ using namespace Qt::StringLiterals;
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    addPlaylist(QString(u"Default"_s));
+    addPlaylist(QString(u"Default"_s), QUrl());
 
     QUrl cacheUrl = getPlaylistCacheUrl();
     if (cacheUrl.isEmpty()) {
@@ -200,6 +200,13 @@ void PlaylistMultiProxiesModel::addPlaylist(QString playlistName, QUrl internalU
     beginInsertRows(QModelIndex(), playlistsSize, playlistsSize);
     m_playlistFilterProxyModels.push_back(std::move(filterModel));
     endInsertRows();
+}
+
+// Used by QML side. Makes sure newly added playlists are saved.
+void PlaylistMultiProxiesModel::createNewPlaylist(QString playlistName)
+{
+    addPlaylist(playlistName, QUrl());
+    savePlaylist(playlistName, m_playlistFilterProxyModels.back().get());
 }
 
 void PlaylistMultiProxiesModel::removePlaylist(uint pIndex)
@@ -394,15 +401,20 @@ QUrl PlaylistMultiProxiesModel::getPlaylistUrl(QString playlistName)
 
 void PlaylistMultiProxiesModel::saveVisiblePlaylist()
 {
+    QString visiblePlaylistName = m_playlistFilterProxyModels[m_visibleIndex]->playlistModel()->m_playlistName;
+    savePlaylist(visiblePlaylistName, visibleFilterProxy());
+}
+
+void PlaylistMultiProxiesModel::savePlaylist(QString playlistName, PlaylistFilterProxyModel *proxyModel)
+{
     // Note: this method saves unfiltered whole list.
     auto configPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna/playlists/"_s);
 
-    QString visiblePlaylistName = m_playlistFilterProxyModels[m_visibleIndex]->playlistModel()->m_playlistName;
-    if (visiblePlaylistName == u"Default") {
+    if (playlistName == u"Default") {
         return;
     }
-    visibleFilterProxy()->saveInternalPlaylist(configPath, visiblePlaylistName);
 
+    proxyModel->saveInternalPlaylist(configPath, playlistName);
     savePlaylistCache();
     Q_EMIT dataChanged(index(m_visibleIndex, 0), index(m_visibleIndex, 0));
 }
