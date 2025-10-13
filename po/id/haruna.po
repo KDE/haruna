@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-11 09:06+0000\n"
+"POT-Creation-Date: 2025-10-13 00:41+0000\n"
 "PO-Revision-Date: 2025-05-04 09:31+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -900,7 +900,7 @@ msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&Selebihnya"
 
-#: src/qml/Haruna/Components/InputPopup.qml:35
+#: src/qml/Haruna/Components/InputPopup.qml:36
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1225,15 +1225,10 @@ msgstr ""
 
 #: src/qml/PlayList.qml:93
 msgctxt "@action:button"
-msgid "Open Playlist"
-msgstr "Buka Playlist"
-
-#: src/qml/PlayList.qml:107
-msgctxt "@action:button"
 msgid "Add…"
 msgstr "Tambah..."
 
-#: src/qml/PlayList.qml:115
+#: src/qml/PlayList.qml:101
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1241,12 +1236,12 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "File"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:109
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:119
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -1254,32 +1249,32 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Playlist"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Urutkan"
 
-#: src/qml/PlayList.qml:153
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "Nama, menaik"
 
-#: src/qml/PlayList.qml:159
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "Nama, menurun"
 
-#: src/qml/PlayList.qml:165
+#: src/qml/PlayList.qml:149
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "Durasi, menaik"
 
-#: src/qml/PlayList.qml:171
+#: src/qml/PlayList.qml:155
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "Durasi, menurun"
 
-#: src/qml/PlayList.qml:178
+#: src/qml/PlayList.qml:162
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -1287,7 +1282,7 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "Pemutaran"
 
-#: src/qml/PlayList.qml:184
+#: src/qml/PlayList.qml:168
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open Playlist"
@@ -1295,12 +1290,12 @@ msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Buka Playlist"
 
-#: src/qml/PlayList.qml:195
+#: src/qml/PlayList.qml:179
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/qml/PlayList.qml:205
+#: src/qml/PlayList.qml:189
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Repeat"
@@ -1308,12 +1303,12 @@ msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Ulangi"
 
-#: src/qml/PlayList.qml:216
+#: src/qml/PlayList.qml:200
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/qml/PlayList.qml:226
+#: src/qml/PlayList.qml:210
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Restart Playback"
@@ -1321,17 +1316,25 @@ msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Mulai Ulang Pemutaran"
 
-#: src/qml/PlayList.qml:238
+#: src/qml/PlayList.qml:222
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: src/qml/PlayList.qml:246
+#: src/qml/PlayList.qml:230
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Simpan Sebagai"
 
-#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:636
+#: src/qml/PlayList.qml:304
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Add file to playlist"
+msgctxt "@action:button"
+msgid "Add new playlist"
+msgstr "Tambahkan ke playlist"
+
+#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Ubah nama"
@@ -1341,37 +1344,45 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 
-#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:394
+#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:395
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Tambah"
 
-#: src/qml/PlayList.qml:578
+#: src/qml/PlayList.qml:394
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Playlist style"
+msgctxt "@placeholder"
+msgid "playlist name"
+msgstr "Gaya playlist"
+
+#: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Buka Folder Konten"
 
-#: src/qml/PlayList.qml:584
+#: src/qml/PlayList.qml:585
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Buka di Browser"
 
-#: src/qml/PlayList.qml:593
+#: src/qml/PlayList.qml:594
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Salin Nama"
 
-#: src/qml/PlayList.qml:599
+#: src/qml/PlayList.qml:600
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Salin Alur"
 
-#: src/qml/PlayList.qml:600
+#: src/qml/PlayList.qml:601
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Salin URL"
 
-#: src/qml/PlayList.qml:610
+#: src/qml/PlayList.qml:611
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select File"
@@ -1379,7 +1390,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Pilih File"
 
-#: src/qml/PlayList.qml:614
+#: src/qml/PlayList.qml:615
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select File"
@@ -1387,19 +1398,19 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Pilih File"
 
-#: src/qml/PlayList.qml:618
+#: src/qml/PlayList.qml:619
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Pemilihan format"
 
-#: src/qml/PlayList.qml:624
+#: src/qml/PlayList.qml:625
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Singkirkan dari Playlist"
 
-#: src/qml/PlayList.qml:630
+#: src/qml/PlayList.qml:631
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from Playlist"
@@ -1407,17 +1418,17 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Singkirkan dari Playlist"
 
-#: src/qml/PlayList.qml:642
+#: src/qml/PlayList.qml:643
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Gulir ke Item Berputar"
 
-#: src/qml/PlayList.qml:652
+#: src/qml/PlayList.qml:653
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Pindahkan File ke Tong Sampah"
 
-#: src/qml/PlayList.qml:658
+#: src/qml/PlayList.qml:659
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Move File to Trash"
@@ -1425,7 +1436,7 @@ msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Pindahkan File ke Tong Sampah"
 
-#: src/qml/PlayList.qml:764 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:765 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Pilih file"
@@ -2747,6 +2758,10 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "Open Playlist"
+#~ msgstr "Buka Playlist"
 
 #~ msgctxt "@label:textbox"
 #~ msgid "File dialog location"

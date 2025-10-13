@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-11 09:06+0000\n"
+"POT-Creation-Date: 2025-10-13 00:41+0000\n"
 "PO-Revision-Date: 2025-10-08 09:35+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -811,7 +811,7 @@ msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "&עוד"
 
-#: src/qml/Haruna/Components/InputPopup.qml:35
+#: src/qml/Haruna/Components/InputPopup.qml:36
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1116,95 +1116,98 @@ msgstr "חיפוש"
 
 #: src/qml/PlayList.qml:93
 msgctxt "@action:button"
-msgid "Open Playlist"
-msgstr "פתיחת רשימת נגינה"
-
-#: src/qml/PlayList.qml:107
-msgctxt "@action:button"
 msgid "Add…"
 msgstr "הוספה…"
 
-#: src/qml/PlayList.qml:115
+#: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "Files"
 msgstr "קבצים"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:109
 msgctxt "@action:button"
 msgid "URL"
 msgstr "כתובת"
 
-#: src/qml/PlayList.qml:133
+#: src/qml/PlayList.qml:119
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "רשימת נגינה"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "מיון"
 
-#: src/qml/PlayList.qml:153
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "עולה לפי שם"
 
-#: src/qml/PlayList.qml:159
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "יורד לפי שם"
 
-#: src/qml/PlayList.qml:165
+#: src/qml/PlayList.qml:149
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "עולה לפי משך"
 
-#: src/qml/PlayList.qml:171
+#: src/qml/PlayList.qml:155
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "יורד לפי משך"
 
-#: src/qml/PlayList.qml:178
+#: src/qml/PlayList.qml:162
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "נגינה"
 
-#: src/qml/PlayList.qml:184
+#: src/qml/PlayList.qml:168
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "חזרה על רשימת נגינה"
 
-#: src/qml/PlayList.qml:195
+#: src/qml/PlayList.qml:179
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "לעצור אחרי הפריט האחרון"
 
-#: src/qml/PlayList.qml:205
+#: src/qml/PlayList.qml:189
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "חזרה על פריט"
 
-#: src/qml/PlayList.qml:216
+#: src/qml/PlayList.qml:200
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "לעצור אחרי פריט"
 
-#: src/qml/PlayList.qml:226
+#: src/qml/PlayList.qml:210
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "נגינה אקראית"
 
-#: src/qml/PlayList.qml:238
+#: src/qml/PlayList.qml:222
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "פינוי"
 
-#: src/qml/PlayList.qml:246
+#: src/qml/PlayList.qml:230
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "שמירה בשם"
 
-#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:636
+#: src/qml/PlayList.qml:304
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Add file to playlist"
+msgctxt "@action:button"
+msgid "Add new playlist"
+msgstr "הוספת קובץ לרשימת נגינה"
+
+#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "שינוי שם"
@@ -1214,77 +1217,85 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "הסרה"
 
-#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:394
+#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:395
 msgctxt "@action:button"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/qml/PlayList.qml:578
+#: src/qml/PlayList.qml:394
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Playlist style"
+msgctxt "@placeholder"
+msgid "playlist name"
+msgstr "סגנון רשימת נגינה"
+
+#: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
-#: src/qml/PlayList.qml:584
+#: src/qml/PlayList.qml:585
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "פתיחה בדפדפן"
 
-#: src/qml/PlayList.qml:593
+#: src/qml/PlayList.qml:594
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "העתקת השם"
 
-#: src/qml/PlayList.qml:599
+#: src/qml/PlayList.qml:600
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "העתקת הנתיב"
 
-#: src/qml/PlayList.qml:600
+#: src/qml/PlayList.qml:601
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "העתקת הכתובת"
 
-#: src/qml/PlayList.qml:610
+#: src/qml/PlayList.qml:611
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "בחירה בהכול"
 
-#: src/qml/PlayList.qml:614
+#: src/qml/PlayList.qml:615
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "ביטול בחירה"
 
-#: src/qml/PlayList.qml:618
+#: src/qml/PlayList.qml:619
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "היפוך בחירה"
 
-#: src/qml/PlayList.qml:624
+#: src/qml/PlayList.qml:625
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "הסרה מרשימת הנגינה"
 
-#: src/qml/PlayList.qml:630
+#: src/qml/PlayList.qml:631
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "הסרת הנבחרים מרשימת הנגינה"
 
-#: src/qml/PlayList.qml:642
+#: src/qml/PlayList.qml:643
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "יש לגלול כדי לנגן פריט"
 
-#: src/qml/PlayList.qml:652
+#: src/qml/PlayList.qml:653
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "העברת קובץ לאשפה"
 
-#: src/qml/PlayList.qml:658
+#: src/qml/PlayList.qml:659
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "העברת הקבצים הנבחרים לאשפה"
 
-#: src/qml/PlayList.qml:764 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:765 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "בחירת קובץ"
@@ -2499,6 +2510,10 @@ msgstr ""
 "לא ניתן למשוך רשימת נגינה עם המזהה: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Open Playlist"
+#~ msgstr "פתיחת רשימת נגינה"
 
 #~ msgctxt "@action:button"
 #~ msgid "Random"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-11 09:06+0000\n"
-"PO-Revision-Date: 2025-07-20 01:03+0200\n"
+"POT-Creation-Date: 2025-10-13 00:41+0000\n"
+"PO-Revision-Date: 2025-10-12 14:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -571,7 +571,7 @@ msgstr "재할당"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "같은 이름의 재생 목록을 사용할 수 없음: %1"
 
 #: src/mpv/mpvitem.cpp:362
 #, kde-format
@@ -589,7 +589,7 @@ msgstr "자막 시간 조정: %1초"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "파일이 없음: %1"
 
 #: src/mpv/mpvitem.cpp:540
 #, kde-format
@@ -638,11 +638,6 @@ msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
 #: src/qml/Actions.qml:164
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can’t load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
@@ -818,7 +813,7 @@ msgctxt "@action:inmenu"
 msgid "&More"
 msgstr "더 보기(&M)"
 
-#: src/qml/Haruna/Components/InputPopup.qml:35
+#: src/qml/Haruna/Components/InputPopup.qml:36
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -828,20 +823,14 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>을 찾을 수 없습니다."
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "선택한 동작 없음"
+msgstr "동작을 찾을 수 없습니다."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "다음에서 자막 불러오기:"
+msgstr "다음에서 자막 불러오기"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:34
 msgctxt "@info:tooltip;"
@@ -850,6 +839,9 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"상대 경로 폴더 이름이 *로 시작하고 재귀적 검색이 활성화되어 있다면 해당 이름"
+"을 포함하는 모든 폴더를 검색합니다.\n"
+"상대 폴더는 현재 재생 중인 파일이 포함된 폴더를 기준으로 합니다."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -876,9 +868,6 @@ msgid "Add New Folder"
 msgstr "새 폴더 추가"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "자막을 찾을 폴더를 추가합니다."
@@ -889,27 +878,19 @@ msgid "Search subtitles recursively"
 msgstr "재귀적으로 자막 검색"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Subtitles are searched recursively in the “%1” settings.\n"
-#| "Only relative folders are searched."
 msgctxt "@info:tooltip"
 msgid ""
 "Subtitles are searched recursively in the folders defined by the “%1” "
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"자막을 \"%1\" 설정에서 재귀적으로 검색합니다.\n"
+"자막을 \"%1\" 설정에서 정의한 경로에서 재귀적으로 검색합니다.\n"
 "상대 경로 폴더만 검색합니다."
 
 #: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:130
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
-msgstr "기본 커버"
+msgstr "기본값"
 
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
@@ -1121,135 +1102,114 @@ msgid "Volume: %1"
 msgstr "음량: %1"
 
 #: src/qml/MpvVideo.qml:252
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
-msgstr "재생 목록에 파일 추가"
+msgstr "재생 목록에 추가"
 
 #: src/qml/MpvVideo.qml:300
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Play Next"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
-msgstr "다음 재생"
+msgstr "지금 재생"
 
 #: src/qml/PlayList.qml:73
 msgctxt "@action:button"
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: src/qml/PlayList.qml:93
-msgctxt "@action:button"
-msgid "Open Playlist"
-msgstr "재생 목록 열기"
-
-#: src/qml/PlayList.qml:107
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "추가…"
 
-#: src/qml/PlayList.qml:115
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
+#: src/qml/PlayList.qml:101
 msgctxt "@action:button"
 msgid "Files"
 msgstr "파일"
 
-#: src/qml/PlayList.qml:123
+#: src/qml/PlayList.qml:109
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/qml/PlayList.qml:133
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
+#: src/qml/PlayList.qml:119
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "재생 목록"
 
-#: src/qml/PlayList.qml:144
+#: src/qml/PlayList.qml:128
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "정렬"
 
-#: src/qml/PlayList.qml:153
+#: src/qml/PlayList.qml:137
 msgctxt "@action:button"
 msgid "Name, ascending"
 msgstr "이름, 오름차순"
 
-#: src/qml/PlayList.qml:159
+#: src/qml/PlayList.qml:143
 msgctxt "@action:button"
 msgid "Name, descending"
 msgstr "이름, 내림차순"
 
-#: src/qml/PlayList.qml:165
+#: src/qml/PlayList.qml:149
 msgctxt "@action:button"
 msgid "Duration, ascending"
 msgstr "시간, 오름차순"
 
-#: src/qml/PlayList.qml:171
+#: src/qml/PlayList.qml:155
 msgctxt "@action:button"
 msgid "Duration, descending"
 msgstr "시간, 내림차순"
 
-#: src/qml/PlayList.qml:178
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
+#: src/qml/PlayList.qml:162
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "재생"
 
-#: src/qml/PlayList.qml:184
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#: src/qml/PlayList.qml:168
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "재생 목록 열기"
+msgstr "재생 목록 반복"
 
-#: src/qml/PlayList.qml:195
+#: src/qml/PlayList.qml:179
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "마지막 항목 이후 정지"
 
-#: src/qml/PlayList.qml:205
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
+#: src/qml/PlayList.qml:189
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "반복"
+msgstr "항목 반복"
 
-#: src/qml/PlayList.qml:216
+#: src/qml/PlayList.qml:200
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "항목 이후 정지"
 
-#: src/qml/PlayList.qml:226
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
+#: src/qml/PlayList.qml:210
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "재생 다시 시작"
+msgstr "무작위 순서 재생"
 
-#: src/qml/PlayList.qml:238
+#: src/qml/PlayList.qml:222
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "지우기"
 
-#: src/qml/PlayList.qml:246
+#: src/qml/PlayList.qml:230
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
-#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:636
+#: src/qml/PlayList.qml:304
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Add file to playlist"
+msgctxt "@action:button"
+msgid "Add new playlist"
+msgstr "재생 목록에 파일 추가"
+
+#: src/qml/PlayList.qml:319 src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "이름 바꾸기"
@@ -1257,93 +1217,87 @@ msgstr "이름 바꾸기"
 #: src/qml/PlayList.qml:325
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "삭제"
 
-#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:394
+#: src/qml/PlayList.qml:381 src/qml/PlayList.qml:395
 msgctxt "@action:button"
 msgid "Add"
 msgstr "추가"
 
-#: src/qml/PlayList.qml:578
+#: src/qml/PlayList.qml:394
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Playlist style"
+msgctxt "@placeholder"
+msgid "playlist name"
+msgstr "재생 목록 스타일"
+
+#: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: src/qml/PlayList.qml:584
+#: src/qml/PlayList.qml:585
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "브라우저로 열기"
 
-#: src/qml/PlayList.qml:593
+#: src/qml/PlayList.qml:594
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "이름 복사"
 
-#: src/qml/PlayList.qml:599
+#: src/qml/PlayList.qml:600
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "경로 복사"
 
-#: src/qml/PlayList.qml:600
+#: src/qml/PlayList.qml:601
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL 복사"
 
-#: src/qml/PlayList.qml:610
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
+#: src/qml/PlayList.qml:611
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "파일 선택"
+msgstr "모두 선택"
 
-#: src/qml/PlayList.qml:614
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
+#: src/qml/PlayList.qml:615
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr "파일 선택"
+msgstr "모두 선택 해제"
 
-#: src/qml/PlayList.qml:618
-#, fuzzy
-#| msgid "Format selection"
+#: src/qml/PlayList.qml:619
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
-msgstr "형식 선택"
+msgstr "선택 반전"
 
-#: src/qml/PlayList.qml:624
+#: src/qml/PlayList.qml:625
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "재생 목록에서 삭제"
 
-#: src/qml/PlayList.qml:630
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from Playlist"
+#: src/qml/PlayList.qml:631
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
-msgstr "재생 목록에서 삭제"
+msgstr "재생 목록에서 선택 항목 삭제"
 
-#: src/qml/PlayList.qml:642
+#: src/qml/PlayList.qml:643
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "현재 재생 중인 항목으로 스크롤"
 
-#: src/qml/PlayList.qml:652
+#: src/qml/PlayList.qml:653
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "파일을 휴지통으로 이동"
 
-#: src/qml/PlayList.qml:658
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Move File to Trash"
+#: src/qml/PlayList.qml:659
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
-msgstr "파일을 휴지통으로 이동"
+msgstr "선택한 파일을 휴지통으로 이동"
 
-#: src/qml/PlayList.qml:764 src/qml/Settings/VideoSettings.qml:69
+#: src/qml/PlayList.qml:765 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
@@ -1538,9 +1492,6 @@ msgid "Maximum recent files"
 msgstr "최대 최근 파일"
 
 #: src/qml/Settings/GeneralSettings.qml:61
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "지우기"
@@ -1548,7 +1499,7 @@ msgstr "지우기"
 #: src/qml/Settings/GeneralSettings.qml:65
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "데이터베이스에서 최근 파일 삭제"
 
 #: src/qml/Settings/GeneralSettings.qml:70
 msgctxt "@info:tooltip"
@@ -1558,6 +1509,9 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"표시할 최근 파일의 개수입니다. 0을 입력하면 비활성화됩니다.<br>모든 열린 파일"
+"을 저장합니다.<br>굵게 표시된 항목은 파일/URL 열기 동작이나 외부 앱(명령행, "
+"파일 관리자, 끌어다 놓기 등)으로 연 파일입니다."
 
 #: src/qml/Settings/GeneralSettings.qml:83
 msgctxt "@option:check"
@@ -1565,19 +1519,13 @@ msgid "Allow only one instance"
 msgstr "인스턴스 한 개만 허용"
 
 #: src/qml/Settings/GeneralSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Trying to open another Haruna instance will do nothing.\n"
-#| "Trying to open another file with Haruna will open the file in the running "
-#| "instance."
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
-"다른 Haruna 인스턴스를 열려고 할 때 아무것도 일어나지 않습니다.\n"
-"Haruna로 다른 파일을 열려고 할 때 현재 실행 중인 인스턴스에서 파일을 엽니다."
+"다른 Haruna 인스턴스를 열려고 할 때 아무것도 일어나지 않습니다.<br>Haruna로 "
+"다른 파일을 열려고 할 때 현재 실행 중인 인스턴스에서 파일을 엽니다."
 
 #: src/qml/Settings/GeneralSettings.qml:103
 msgctxt "@option:check"
@@ -1585,9 +1533,6 @@ msgid "Add file to playlist"
 msgstr "재생 목록에 파일 추가"
 
 #: src/qml/Settings/GeneralSettings.qml:113
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "File will be added to the end of the playlist"
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "파일을 재생 목록의 맨 끝에 추가합니다"
@@ -1608,22 +1553,16 @@ msgid "Footer style"
 msgstr "바닥글 스타일"
 
 #: src/qml/Settings/GeneralSettings.qml:151
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "기본 커버"
+msgstr "기본값"
 
 #: src/qml/Settings/GeneralSettings.qml:157
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "떠다님"
 
 #: src/qml/Settings/GeneralSettings.qml:171
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "떠다니는 바닥글 표시"
@@ -1631,12 +1570,12 @@ msgstr "떠다니는 바닥글 표시"
 #: src/qml/Settings/GeneralSettings.qml:186
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "항상 마우스가 움직일 때"
 
 #: src/qml/Settings/GeneralSettings.qml:192
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "아래쪽에서 마우스가 움직일 때"
 
 #: src/qml/Settings/GeneralSettings.qml:207
 msgctxt "@info:tooltip"
@@ -1695,18 +1634,13 @@ msgid "Not supported on Wayland."
 msgstr "Wayland에서는 지원하지 않습니다."
 
 #: src/qml/Settings/GeneralSettings.qml:290
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The window is resized according to the video resolution.\n"
-#| "The maximum size is not constrained, this is left to the operating system."
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"창 크기를 동영상 해상도에 맞게 조정합니다.\n"
-"최대 크기는 제한되어 있지 않으며 운영 체제에 의존합니다."
+"창 크기를 동영상 해상도에 맞게 조정합니다.<br>최대 크기는 제한되어 있지 않으"
+"며 운영 체제에 의존합니다."
 
 #: src/qml/Settings/GeneralSettings.qml:300
 msgctxt "@option:check"
@@ -1714,20 +1648,13 @@ msgid "Start in fullscreen mode"
 msgstr "전체 화면 모드에서 시작하기"
 
 #: src/qml/Settings/GeneralSettings.qml:309
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Enter fullscreen mode when the application starts.\n"
-#| "This takes precedence over Resize to fit video, and Remember window size "
-#| "and position settings."
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
-"앱을 시작할 때 전체 화면 모드로 시작합니다.\n"
-"동영상 크기에 맞게 조정, 창 크기와 위치 기억 설정보다 더 우선적으로 적용됩니"
-"다."
+"앱을 시작할 때 전체 화면 모드로 시작합니다.<br>동영상 크기에 맞게 조정, 창 크"
+"기와 위치 기억 설정보다 더 우선적으로 적용됩니다."
 
 #: src/qml/Settings/GeneralSettings.qml:320
 msgctxt "@option:check"
@@ -1777,12 +1704,9 @@ msgid "GUI style"
 msgstr "GUI 스타일"
 
 #: src/qml/Settings/GeneralSettings.qml:456
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "기본 커버"
+msgstr "기본값"
 
 #: src/qml/Settings/GeneralSettings.qml:480
 msgctxt "@option:check"
@@ -1790,16 +1714,9 @@ msgid "Use Breeze icon theme"
 msgstr "Breeze 아이콘 테마 사용"
 
 #: src/qml/Settings/GeneralSettings.qml:488
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Sets the icon theme to breeze.\n"
-#| "Requires restart."
 msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
-msgstr ""
-"아이콘 테마를 Breeze로 설정합니다.\n"
-"적용하려면 다시 시작해야 합니다."
+msgstr "아이콘 테마를 Breeze로 설정합니다.<br>적용하려면 다시 시작해야 합니다."
 
 #: src/qml/Settings/MouseSettings.qml:83
 msgctxt "@info:tooltip"
@@ -1817,122 +1734,76 @@ msgid "Add mouse button action"
 msgstr "마우스 단추 동작 추가"
 
 #: src/qml/Settings/MouseSettings.qml:142
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Mouse button"
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "마우스 단추"
 
 #: src/qml/Settings/MouseSettings.qml:154
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "왼쪽"
 
 #: src/qml/Settings/MouseSettings.qml:155
-#, fuzzy
-#| msgctxt "@label:listbox middle mouse button"
-#| msgid "Middle"
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "가운데"
 
 #: src/qml/Settings/MouseSettings.qml:156
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "오른쪽"
 
 #: src/qml/Settings/MouseSettings.qml:157
-#, fuzzy
-#| msgctxt "@label:listbox forward mouse button"
-#| msgid "Forward"
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "앞으로"
 
 #: src/qml/Settings/MouseSettings.qml:158
-#, fuzzy
-#| msgctxt "@label:listbox back mouse button"
-#| msgid "Back"
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "뒤로"
 
 #: src/qml/Settings/MouseSettings.qml:159
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll up"
-#| msgid "Scroll up"
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "위로 스크롤"
 
 #: src/qml/Settings/MouseSettings.qml:160
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll down"
-#| msgid "Scroll down"
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "아래로 스크롤"
 
 #: src/qml/Settings/MouseSettings.qml:169
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Modifier key"
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "수정자 키"
 
 #: src/qml/Settings/MouseSettings.qml:177
-#, fuzzy
-#| msgctxt "@label:listbox no modifier key"
-#| msgid "No modifier"
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "수정자 키 없음"
 
 #: src/qml/Settings/MouseSettings.qml:178
-#, fuzzy
-#| msgctxt "@label:listbox control modifier key"
-#| msgid "Control"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
 #: src/qml/Settings/MouseSettings.qml:179
-#, fuzzy
-#| msgctxt "@label:listbox shift modifier key"
-#| msgid "Shift"
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:180
-#, fuzzy
-#| msgctxt "@label:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:181
-#, fuzzy
-#| msgctxt "@label:listbox meta modifier key"
-#| msgid "Meta"
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:192
-#, fuzzy
-#| msgctxt ""
-#| "@label:check whether mouse button action shoud trigger on double click"
-#| msgid "Trigger on double click"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
@@ -1949,9 +1820,6 @@ msgid "Select action"
 msgstr "동작 선택"
 
 #: src/qml/Settings/MouseSettings.qml:225
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "동작 변경"
@@ -2203,15 +2071,12 @@ msgstr "형식 선택"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "사용자 정의"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "기본 커버"
+msgstr "기본값"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2224,17 +2089,11 @@ msgid "Position"
 msgstr "위치"
 
 #: src/qml/Settings/PlaylistSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox playlist position"
 msgid "Left"
 msgstr "왼쪽"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
 msgstr "오른쪽"
@@ -2245,59 +2104,44 @@ msgid "Playlist style"
 msgstr "재생 목록 스타일"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "기본 커버"
+msgstr "기본값"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "미리 보기 섬네일"
+msgstr "섬네일 포함"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "축소됨"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "재생 위치"
+msgstr "재생 행동"
 
 #: src/qml/Settings/PlaylistSettings.qml:109
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "재생 목록 열기"
+msgstr "재생 목록 반복"
 
 #: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "마지막 항목 이후 정지"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "반복"
+msgstr "항목 반복"
 
 #: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "항목 이후 정지"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
 msgctxt "@info:tooltip playback description"
@@ -2308,14 +2152,15 @@ msgid ""
 "playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
 "playback stops after the current playing item"
 msgstr ""
+"<strong>재생 목록 반복</strong>: 재생 목록을 영원히 반복합니다<br><strong>마"
+"지막 항목 이후 정지</strong>: 재생 목록의 마지막 항목을 재생한 후 정지합니다"
+"<br><strong>항목 반복</strong>: 현재 항목을 영원히 반복합니다<br><strong>항"
+"목 이후 정지</strong>: 현재 재생 항목을 재생한 후 재생을 정지합니다"
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random playback"
-msgstr "재생 다시 시작"
+msgstr "무작위 순서 재생"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
@@ -2655,6 +2500,13 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"ID가 %1인 재생 목록을 가져올 수 없음\n"
+"\n"
+"%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Open Playlist"
+#~ msgstr "재생 목록 열기"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"
