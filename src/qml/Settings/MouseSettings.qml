@@ -35,6 +35,7 @@ SettingsBasePage {
             delegate: ItemDelegate {
                 id: delegate
 
+                required property mouseAction mouseAction
                 required property int index
                 required property string actionName
                 required property string button
@@ -44,6 +45,10 @@ SettingsBasePage {
 
                 width: ListView.view.width
                 highlighted: false
+
+                onClicked: {
+                    addActionComponent.createObject(root, {action: mouseAction, isEditMode: true})
+                }
 
                 contentItem: RowLayout {
                     Kirigami.Chip {
@@ -118,11 +123,15 @@ SettingsBasePage {
         id: addActionComponent
 
         Dialog {
-            id: newMouseActionDialog
+            id: mouseActionDialog
 
             property bool canBeSaved: !noActionSelectedMessage.visible && !actionExistsMessage.visible
+            property bool isEditMode: false
+            property mouseAction action
 
-            title: i18nc("@title:window", "Add mouse button action")
+            title: isEditMode
+                   ? i18nc("@title:window", "Edit mouse button action")
+                   : i18nc("@title:window", "Add mouse button action")
             parent: content
             width: Math.min(parent.width, 400)
             height: Math.min(parent.height, 600)
@@ -144,23 +153,89 @@ SettingsBasePage {
 
                 ComboBox {
                     id: mouseButtonComboBox
-                    property string value: modelValues[currentIndex]
-                    property list<string> modelValues: [
-                        "Left", "Middle", "Right",
-                        "Forward", "Back",
-                        "ScrollUp", "ScrollDown"
-                    ]
-                    model: [
-                        i18nc("@item:listbox left mouse button", "Left"),
-                        i18nc("@item:listbox middle mouse button", "Middle"),
-                        i18nc("@item:listbox right mouse button", "Right"),
-                        i18nc("@item:listbox forward mouse button", "Forward"),
-                        i18nc("@item:listbox back mouse button", "Back"),
-                        i18nc("@item:listbox mouse scroll up", "Scroll up"),
-                        i18nc("@item:listbox mouse scroll down", "Scroll down")
-                    ]
+
+                    enabled: !mouseActionDialog.isEditMode
+                    textRole: "text"
+                    valueRole: "value"
+                    model: ListModel {
+                        id: mouseButtonsModel
+                    }
                     onActivated: {
                         Q_EMIT: root.newMouseActionChanged()
+                    }
+                    Component.onCompleted: {
+                        const left = {
+                            text: i18nc("@item:listbox left mouse button", "Left"),
+                            value: "Left"
+                        }
+                        mouseButtonsModel.append(left)
+
+                        const middle = {
+                            text: i18nc("@item:listbox middle mouse button", "Middle"),
+                            value: "Middle"
+                        }
+                        mouseButtonsModel.append(middle)
+
+                        const right = {
+                            text: i18nc("@item:listbox right mouse button", "Right"),
+                            value: "Right"
+                        }
+                        mouseButtonsModel.append(right)
+
+                        const forward = {
+                            text: i18nc("@item:listbox forward mouse button", "Forward"),
+                            value: "Forward"
+                        }
+                        mouseButtonsModel.append(forward)
+
+                        const back = {
+                            text: i18nc("@item:listbox back mouse button", "Back"),
+                            value: "Back"
+                        }
+                        mouseButtonsModel.append(back)
+
+                        const scrollUp = {
+                            text: i18nc("@item:listbox mouse scroll up", "Scroll up"),
+                            value: "ScrollUp"
+                        }
+                        mouseButtonsModel.append(scrollUp)
+
+                        const scrollDown = {
+                            text: i18nc("@item:listbox mouse scroll down", "Scroll down"),
+                            value: "ScrollDown"
+                        }
+                        mouseButtonsModel.append(scrollDown)
+
+                        switch(mouseActionDialog.action.mouseButton) {
+                            case MouseActionsModel.Left: {
+                                currentIndex = indexOfValue("Left")
+                                break
+                            }
+                            case MouseActionsModel.Middle: {
+                                currentIndex = indexOfValue("Middle")
+                                break
+                            }
+                            case MouseActionsModel.Right: {
+                                currentIndex = indexOfValue("Right")
+                                break
+                            }
+                            case MouseActionsModel.Forward: {
+                                currentIndex = indexOfValue("Forward")
+                                break
+                            }
+                            case MouseActionsModel.Back: {
+                                currentIndex = indexOfValue("Back")
+                                break
+                            }
+                            case MouseActionsModel.ScrollUp: {
+                                currentIndex = indexOfValue("ScrollUp")
+                                break
+                            }
+                            case MouseActionsModel.ScrollDown: {
+                                currentIndex = indexOfValue("ScrollDown")
+                                break
+                            }
+                        }
                     }
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                 }
@@ -171,26 +246,81 @@ SettingsBasePage {
 
                 ComboBox {
                     id: modifierComboBox
-                    property string value: modelValues[currentIndex]
-                    property list<string> modelValues: ["NoModifier", "Control", "Shift", "Alt", "Meta"]
-                    model: [
-                        i18nc("@item:listbox no modifier key", "No modifier"),
-                        i18nc("@item:listbox control modifier key", "Control"),
-                        i18nc("@item:listbox shift modifier key", "Shift"),
-                        i18nc("@item:listbox alt modifier key", "Alt"),
-                        i18nc("@item:listbox meta modifier key", "Meta")
-                    ]
+
+                    enabled: !mouseActionDialog.isEditMode
+                    textRole: "text"
+                    valueRole: "value"
+                    model: ListModel {
+                        id: modifiersModel
+                    }
                     onActivated: {
                         Q_EMIT: root.newMouseActionChanged()
+                    }
+
+                    Component.onCompleted: {
+                        const noModifier = {
+                            text: i18nc("@item:listbox no modifier key", "No modifier"),
+                            value: "NoModifier"
+                        }
+                        modifiersModel.append(noModifier)
+
+                        const control = {
+                            text: i18nc("@item:listbox control modifier key", "Control"),
+                            value: "Control"
+                        }
+                        modifiersModel.append(control)
+
+                        const shift = {
+                            text: i18nc("@item:listbox shift modifier key", "Shift"),
+                            value: "Shift"
+                        }
+                        modifiersModel.append(shift)
+
+                        const alt = {
+                            text: i18nc("@item:listbox alt modifier key", "Alt"),
+                            value: "Alt"
+                        }
+                        modifiersModel.append(alt)
+
+                        const meta = {
+                            text: i18nc("@item:listbox meta modifier key", "Meta"),
+                            value: "Meta"
+                        }
+                        modifiersModel.append(meta)
+
+                        switch(mouseActionDialog.action.modifier) {
+                            case Qt.NoModifier: {
+                                currentIndex = indexOfValue("NoModifier")
+                                break
+                            }
+                            case Qt.ControlModifier: {
+                                currentIndex = indexOfValue("Control")
+                                break
+                            }
+                            case Qt.ShiftModifier: {
+                                currentIndex = indexOfValue("Shift")
+                                break
+                            }
+                            case Qt.AltModifier: {
+                                currentIndex = indexOfValue("Alt")
+                                break
+                            }
+                            case Qt.MetaModifier: {
+                                currentIndex = indexOfValue("Meta")
+                                break
+                            }
+                        }
                     }
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                 }
 
                 CheckBox {
                     id: isDoubleClickCheckBox
+
                     text: i18nc("@label:check whether mouse button action should trigger on double click",
                                 "Trigger on double click")
-                    enabled: mouseButtonComboBox.currentIndex < 5
+                    enabled: !mouseActionDialog.isEditMode && mouseButtonComboBox.currentIndex < 5
+                    checked: mouseActionDialog.action.isDoubleClick
                     onClicked: {
                         Q_EMIT: root.newMouseActionChanged()
                     }
@@ -216,7 +346,8 @@ SettingsBasePage {
 
                     Label {
                         id: selectedActionLabel
-                        property string actionName
+
+                        text: mouseActionDialog.action.actionName
                         font.weight: Font.Bold
                         Layout.fillWidth: true
                     }
@@ -235,7 +366,7 @@ SettingsBasePage {
 
                     text: i18nc("@info", "No action selected")
                     type: Kirigami.MessageType.Warning
-                    visible: selectedActionLabel.actionName === ""
+                    visible: selectedActionLabel.text === ""
 
                     Layout.fillWidth: true
                     Layout.preferredHeight: 50
@@ -247,8 +378,8 @@ SettingsBasePage {
 
                     text: {
                         const model = root.m_mouseActionsModel
-                        const button = mouseButtonComboBox.value
-                        const modifier = modifierComboBox.value
+                        const button = mouseButtonComboBox.currentValue
+                        const modifier = modifierComboBox.currentValue
                         const isDoubleClick = isDoubleClickCheckBox.checked
                         const actionName = model.getAction(model.stringToMouseButton(button),
                                                            model.stringToModifier(modifier),
@@ -273,8 +404,8 @@ SettingsBasePage {
                 id: selectActionPopup
 
                 onActionSelected: function(actionName) {
+                    mouseActionDialog.action.actionName = actionName
                     selectedActionLabel.text = HarunaApp.actions[actionName].text
-                    selectedActionLabel.actionName = actionName
                     Q_EMIT: root.newMouseActionChanged()
                 }
             }
@@ -282,24 +413,33 @@ SettingsBasePage {
             Connections {
                 target: root
                 function onNewMouseActionChanged() {
-                    const button = mouseButtonComboBox.value
-                    const modifier = modifierComboBox.value
+                    const button = mouseButtonComboBox.currentValue
+                    const modifier = modifierComboBox.currentValue
                     const isDoubleClick = isDoubleClickCheckBox.checked
+
+                    if (mouseActionDialog.isEditMode) {
+                        return
+                    }
 
                     if (root.m_mouseActionsModel.actionExists(button, modifier, isDoubleClick)) {
                         actionExistsMessage.visible = true
                     } else {
                         actionExistsMessage.visible = false
                     }
-                    let okBtn = newMouseActionDialog.standardButton(Dialog.Ok)
-                    okBtn.enabled = newMouseActionDialog.canBeSaved
+                    let okBtn = mouseActionDialog.standardButton(Dialog.Ok)
+                    okBtn.enabled = mouseActionDialog.canBeSaved
                 }
             }
 
             onAccepted: {
-                root.m_mouseActionsModel.addAction(selectedActionLabel.actionName,
-                                                   mouseButtonComboBox.value,
-                                                   modifierComboBox.value,
+                if (mouseActionDialog.isEditMode) {
+                    root.m_mouseActionsModel.editAction(mouseActionDialog.action)
+                    return
+                }
+
+                root.m_mouseActionsModel.addAction(mouseActionDialog.action.actionName,
+                                                   mouseButtonComboBox.currentValue,
+                                                   modifierComboBox.currentValue,
                                                    isDoubleClickCheckBox.checked)
             }
         }
