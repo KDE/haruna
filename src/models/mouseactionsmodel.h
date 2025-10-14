@@ -15,9 +15,19 @@
 using namespace Qt::StringLiterals;
 
 struct MouseAction {
+    Q_GADGET
+    QML_VALUE_TYPE(mouseAction)
+public:
+    Q_PROPERTY(QString actionName MEMBER actionName)
     QString actionName;
+
+    Q_PROPERTY(int mouseButton MEMBER mouseButton)
     int mouseButton{Qt::LeftButton};
-    Qt::KeyboardModifier modifier{Qt::NoModifier};
+
+    Q_PROPERTY(int modifier MEMBER modifier)
+    int modifier{Qt::NoModifier};
+
+    Q_PROPERTY(bool isDoubleClick MEMBER isDoubleClick)
     bool isDoubleClick{false};
 };
 
@@ -44,6 +54,7 @@ public:
     explicit MouseActionsModel(QObject *parent = nullptr);
 
     enum Roles {
+        MouseActionRole,
         ActionName,
         Button,
         Modifier,
@@ -69,6 +80,7 @@ public:
 
 public Q_SLOTS:
     void addAction(const QString &actionName, const QString &button, const QString &modifier, bool isDoubleClick);
+    void editAction(MouseAction mouseAction);
     void removeAction(uint row);
     QString getAction(MouseActionsModel::MouseButton button, Qt::KeyboardModifier modifier = Qt::NoModifier, bool isDoubleClick = false);
     bool actionExists(const QString &button, const QString &modifier, bool isDoubleClick);

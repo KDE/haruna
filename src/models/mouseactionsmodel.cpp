@@ -79,6 +79,9 @@ QVariant MouseActionsModel::data(const QModelIndex &index, int role) const
     const auto item = m_data.at(index.row());
 
     switch (role) {
+    case MouseActionRole:
+        return QVariant::fromValue(item);
+        break;
     case ActionName:
         return item.actionName;
         break;
@@ -86,7 +89,7 @@ QVariant MouseActionsModel::data(const QModelIndex &index, int role) const
         return mouseButtonToString(static_cast<MouseButton>(item.mouseButton));
         break;
     case Modifier:
-        return modifierToString(item.modifier);
+        return modifierToString(static_cast<Qt::KeyboardModifier>(item.modifier));
         break;
     case IsDoubleClick:
         return item.isDoubleClick;
@@ -99,6 +102,7 @@ QVariant MouseActionsModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> MouseActionsModel::roleNames() const
 {
     static QHash<int, QByteArray> roles{
+        {MouseActionRole, QByteArrayLiteral("mouseAction")},
         {ActionName, QByteArrayLiteral("actionName")},
         {Button, QByteArrayLiteral("button")},
         {Modifier, QByteArrayLiteral("modifier")},
@@ -123,6 +127,25 @@ void MouseActionsModel::addAction(const QString &actionName, const QString &butt
     auto configGroup{m_config->group(u"Mouse"_s)};
     configGroup.writeEntry(configKey(btnAction), actionName);
     configGroup.sync();
+}
+
+void MouseActionsModel::editAction(MouseAction mouseAction)
+{
+    auto key = configKey(mouseAction);
+    for (int i = 0; i < rowCount(); ++i) {
+        auto &a = m_data[i];
+        auto currentKey = configKey(a);
+        if (currentKey == key) {
+            a.actionName = mouseAction.actionName;
+
+            auto configGroup{m_config->group(u"Mouse"_s)};
+            configGroup.writeEntry(key, a.actionName);
+            configGroup.sync();
+
+            Q_EMIT dataChanged(index(i, 0), index(i, 0));
+            return;
+        }
+    }
 }
 
 void MouseActionsModel::removeAction(uint row)
@@ -283,5 +306,5 @@ QString MouseActionsModel::configKey(MouseButton button, Qt::KeyboardModifier mo
 
 QString MouseActionsModel::configKey(MouseAction ba)
 {
-    return configKey(static_cast<MouseButton>(ba.mouseButton), ba.modifier, ba.isDoubleClick);
+    return configKey(static_cast<MouseButton>(ba.mouseButton), static_cast<Qt::KeyboardModifier>(ba.modifier), ba.isDoubleClick);
 };
