@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-13 00:41+0000\n"
-"PO-Revision-Date: 2025-10-08 10:13+0200\n"
+"PO-Revision-Date: 2025-10-13 09:04+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1209,12 +1209,9 @@ msgid "Save As"
 msgstr "Anomena i guarda"
 
 #: src/qml/PlayList.qml:304
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "Afig un fitxer a la llista de reproducció"
+msgstr "Afig una llista de reproducció nova"
 
 #: src/qml/PlayList.qml:319 src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
@@ -1232,12 +1229,9 @@ msgid "Add"
 msgstr "Afig"
 
 #: src/qml/PlayList.qml:394
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "Estil de la llista de reproducció"
+msgstr "nom de la llista de reproducció"
 
 #: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
@@ -2552,7 +2546,3 @@ msgstr ""
 "No s'ha pogut recuperar la llista de reproducció amb ID: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@action:button"
-#~ msgid "Open Playlist"
-#~ msgstr "Obri la llista de reproducció"
