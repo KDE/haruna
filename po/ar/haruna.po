@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:41+0000\n"
-"PO-Revision-Date: 2025-10-08 21:32+0400\n"
+"POT-Creation-Date: 2025-10-16 00:41+0000\n"
+"PO-Revision-Date: 2025-10-15 20:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1203,12 +1203,9 @@ msgid "Save As"
 msgstr "احفظ كَ‍"
 
 #: src/qml/PlayList.qml:304
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "أضف الملف إلى قائمة التّشغيل"
+msgstr "أضف قائمة تشغيل"
 
 #: src/qml/PlayList.qml:319 src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
@@ -1226,12 +1223,9 @@ msgid "Add"
 msgstr "أضِف"
 
 #: src/qml/PlayList.qml:394
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "نمط قائمة التشغيل"
+msgstr "اسم قائمة التشغيل"
 
 #: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
@@ -1717,118 +1711,126 @@ msgctxt "@info:tooltip"
 msgid "Sets the icon theme to breeze.<br>Requires restart."
 msgstr "تعين سمة الأيقونات للنسيم.<br>ستحتاج لإعادة التشغيل"
 
-#: src/qml/Settings/MouseSettings.qml:83
+#: src/qml/Settings/MouseSettings.qml:88
 msgctxt "@info:tooltip"
 msgid "Remove mouse button action"
 msgstr "أزل إجراء زر الفأرة"
 
-#: src/qml/Settings/MouseSettings.qml:106
+#: src/qml/Settings/MouseSettings.qml:111
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "أ&ضف"
 
-#: src/qml/Settings/MouseSettings.qml:125
+#: src/qml/Settings/MouseSettings.qml:133
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Add mouse button action"
+msgctxt "@title:window"
+msgid "Edit mouse button action"
+msgstr "أضف إجراء زر الفأرة"
+
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "أضف إجراء زر الفأرة"
 
-#: src/qml/Settings/MouseSettings.qml:142
+#: src/qml/Settings/MouseSettings.qml:151
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "زر الفأرة"
 
-#: src/qml/Settings/MouseSettings.qml:154
+#: src/qml/Settings/MouseSettings.qml:168
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "يسار"
 
-#: src/qml/Settings/MouseSettings.qml:155
+#: src/qml/Settings/MouseSettings.qml:174
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "الأوسط"
 
-#: src/qml/Settings/MouseSettings.qml:156
+#: src/qml/Settings/MouseSettings.qml:180
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "يمين"
 
-#: src/qml/Settings/MouseSettings.qml:157
+#: src/qml/Settings/MouseSettings.qml:186
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "تقدّم"
 
-#: src/qml/Settings/MouseSettings.qml:158
+#: src/qml/Settings/MouseSettings.qml:192
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "عُد"
 
-#: src/qml/Settings/MouseSettings.qml:159
+#: src/qml/Settings/MouseSettings.qml:198
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "لف لأعلى"
 
-#: src/qml/Settings/MouseSettings.qml:160
+#: src/qml/Settings/MouseSettings.qml:204
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "لف لأسفل"
 
-#: src/qml/Settings/MouseSettings.qml:169
+#: src/qml/Settings/MouseSettings.qml:244
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "المفتاح المغيِّر"
 
-#: src/qml/Settings/MouseSettings.qml:177
+#: src/qml/Settings/MouseSettings.qml:262
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "لا يوجد مغير"
 
-#: src/qml/Settings/MouseSettings.qml:178
+#: src/qml/Settings/MouseSettings.qml:268
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
-#: src/qml/Settings/MouseSettings.qml:179
+#: src/qml/Settings/MouseSettings.qml:274
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:280
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
-#: src/qml/Settings/MouseSettings.qml:181
+#: src/qml/Settings/MouseSettings.qml:286
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:321
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
 msgstr "أطلق عن النقر المزدوج"
 
-#: src/qml/Settings/MouseSettings.qml:202
+#: src/qml/Settings/MouseSettings.qml:332
 msgctxt "@label"
 msgid "Action"
 msgstr "الإجراء"
 
-#: src/qml/Settings/MouseSettings.qml:210
+#: src/qml/Settings/MouseSettings.qml:340
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "اختر إجراء"
 
-#: src/qml/Settings/MouseSettings.qml:225
+#: src/qml/Settings/MouseSettings.qml:356
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "غيّر إجراء"
 
-#: src/qml/Settings/MouseSettings.qml:236
+#: src/qml/Settings/MouseSettings.qml:367
 msgctxt "@info"
 msgid "No action selected"
 msgstr "لم يختر أي إجراء"
 
-#: src/qml/Settings/MouseSettings.qml:259
+#: src/qml/Settings/MouseSettings.qml:390
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "مجموعة أزرار الفأرة مخصصة مسبقًا لـ ”%1“"
