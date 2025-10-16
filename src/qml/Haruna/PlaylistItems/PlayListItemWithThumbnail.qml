@@ -114,7 +114,6 @@ PlaylistItemDelegate {
                 elide: Text.ElideRight
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                 font.pointSize: root.getLabelFontSize()
-                layer.enabled: true
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.topMargin: Kirigami.Units.largeSpacing
