@@ -22,10 +22,9 @@
 #include <QThread>
 #include <QUrlQuery>
 
+#include "kconfig_version.h"
 #include <KAboutData>
 #include <KColorSchemeManager>
-#include <KConfig>
-#include <KConfigGroup>
 #include <KCrash>
 #include <KFileItem>
 #include <KFileMetaData/Properties>
@@ -74,7 +73,6 @@ Application *Application::create(QQmlEngine *, QJSEngine *)
 Application::Application()
     : QObject{nullptr}
     , m_app(qApp)
-    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
 #if KCOLORSCHEME_VERSION < QT_VERSION_CHECK(6, 6, 0)
     , m_schemes(new KColorSchemeManager(this))
 #else
