@@ -73,11 +73,7 @@ Application *Application::create(QQmlEngine *, QJSEngine *)
 Application::Application()
     : QObject{nullptr}
     , m_app(qApp)
-#if KCOLORSCHEME_VERSION < QT_VERSION_CHECK(6, 6, 0)
-    , m_schemes(new KColorSchemeManager(this))
-#else
     , m_schemes(KColorSchemeManager::instance())
-#endif
     , m_systemDefaultStyle(m_app->style()->objectName())
     , m_appEventFilter{std::make_unique<ApplicationEventFilter>()}
 {
