@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-17 00:41+0000\n"
-"PO-Revision-Date: 2025-10-12 20:34+0300\n"
+"PO-Revision-Date: 2025-10-13 20:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -641,16 +641,11 @@ msgid "Audio: %1 %2"
 msgstr "Ääni: %1 %2"
 
 #: src/qml/Actions.qml:164
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can’t load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr "Tekstitystä ei voi ladata, kun tiedostoja ei ole auki"
+msgstr "Tekstitystä ei voi ladata, kun tiedostoa ei ole auki"
 
 #: src/qml/Actions.qml:183 src/qml/Actions.qml:189 src/qml/Actions.qml:194
 msgctxt "@info:tooltip"
@@ -1197,12 +1192,9 @@ msgid "Stop after item"
 msgstr "Lopeta tämän jälkeen"
 
 #: src/qml/PlayList.qml:210
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "Käynnistä toisto uudelleen"
+msgstr "Satunnaistoisto"
 
 #: src/qml/PlayList.qml:222
 msgctxt "@action:button"
@@ -1215,12 +1207,9 @@ msgid "Save As"
 msgstr "Tallenna nimellä"
 
 #: src/qml/PlayList.qml:304
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "Avaa tiedosto soittolistalle"
+msgstr "Lisää uusi soittolista"
 
 #: src/qml/PlayList.qml:319 src/qml/PlayList.qml:637
 msgctxt "@action:inmenu"
@@ -1238,12 +1227,9 @@ msgid "Add"
 msgstr "Lisää"
 
 #: src/qml/PlayList.qml:394
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "Toistolistan tyyli"
+msgstr "soittolistan nimi"
 
 #: src/qml/PlayList.qml:579
 msgctxt "@action:inmenu"
@@ -1830,10 +1816,6 @@ msgid "Meta"
 msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:321
-#, fuzzy
-#| msgctxt ""
-#| "@label:check whether mouse button action shoud trigger on double click"
-#| msgid "Trigger on double click"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
@@ -2185,15 +2167,6 @@ msgid "Stop after item"
 msgstr "Lopeta tämän jälkeen"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip playback description"
-#| msgid ""
-#| "<strong>Repeat playlist</strong>: playlist is repeated "
-#| "indefinitely<br><strong>Stop after last item</strong>: playback stops "
-#| "after the last item in the playlist<br><strong>Repeat item</strong>: "
-#| "current playing item is repeated indefinitely<br><strong>Stop after item</"
-#| "strong>: playback stops after the current playing item<br><strong>Random</"
-#| "strong>: playlist items play randomly indefinitely"
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2206,16 +2179,12 @@ msgstr ""
 "loputtomasti<br><strong>Lopeta viimeisen jälkeen</strong>: soittolista "
 "lopetetaan viimeisen kohteen jälkeen<br><strong>Toista kohdetta</strong>: "
 "nykyistä kohdetta toistetaan loputtomasti<br><strong>Lopeta tämän jälkeen</"
-"strong>: toisto päättyy nykyisen kohteen jälkeen<br><strong>Satunnainen</"
-"strong>: soittolistaa toistetaan satunnaisesti loputtomasti"
+"strong>: toisto päättyy nykyisen kohteen jälkeen<br>"
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random playback"
-msgstr "Käynnistä toisto uudelleen"
+msgstr "Satunnaissoittolista"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
