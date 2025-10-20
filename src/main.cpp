@@ -40,9 +40,7 @@ int main(int argc, char *argv[])
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
     }
     QQuickStyle::setFallbackStyle(u"Fusion"_s);
-    if (GeneralSettings::useBreezeIconTheme()) {
-        QIcon::setThemeName(u"breeze"_s);
-    }
+    QIcon::setFallbackThemeName(u"breeze"_s);
 
     QApplication qApplication(argc, argv);
     QApplication::setWindowIcon(QIcon::fromTheme(u"haruna"_s));
