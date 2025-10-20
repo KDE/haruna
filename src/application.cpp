@@ -70,6 +70,20 @@ Application *Application::create(QQmlEngine *, QJSEngine *)
     return instance();
 }
 
+bool Application::actionsEnabled()
+{
+    return m_actionsEnabled;
+}
+
+void Application::setActionsEnabled(bool enable)
+{
+    if (enable == actionsEnabled()) {
+        return;
+    }
+    m_actionsEnabled = enable;
+    Q_EMIT actionsEnabledChanged();
+}
+
 Application::Application()
     : QObject{nullptr}
     , m_app(qApp)

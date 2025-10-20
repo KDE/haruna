@@ -73,6 +73,9 @@ SettingsBasePage {
                     VideoSettings.defaultCover = fileDialog.selectedFile
                 }
                 onRejected: root.m_mpv.focus = true
+                onVisibleChanged: {
+                    HarunaApp.actionsEnabled = !visible
+                }
             }
         }
 

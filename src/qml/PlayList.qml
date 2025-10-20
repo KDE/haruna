@@ -796,6 +796,9 @@ Page {
             }
         }
         onRejected: root.m_mpv.focus = true
+        onVisibleChanged: {
+            HarunaApp.actionsEnabled = !visible
+        }
     }
 
     states: [

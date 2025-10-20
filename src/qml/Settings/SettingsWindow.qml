@@ -200,6 +200,7 @@ Kirigami.ApplicationWindow {
 
     Shortcut {
         sequence: "Esc"
+        enabled: HarunaApp.actionsEnabled
         onActivated: root.close()
     }
 }

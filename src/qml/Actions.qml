@@ -39,6 +39,7 @@ Item {
             required property string actionIcon
             required property string actionType
 
+            enabled: HarunaApp.actionsEnabled
             objectName: delegate.actionName
             text: delegate.actionText
             shortcut: delegate.actionShortcut

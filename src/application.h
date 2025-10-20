@@ -44,6 +44,9 @@ public:
 
     Q_PROPERTY(QAbstractItemModel *colorSchemesModel READ colorSchemesModel CONSTANT)
     Q_PROPERTY(QQmlPropertyMap *actions MEMBER m_actions CONSTANT)
+    Q_PROPERTY(bool actionsEnabled READ actionsEnabled WRITE setActionsEnabled NOTIFY actionsEnabledChanged)
+    bool actionsEnabled();
+    void setActionsEnabled(bool enable);
 
     Q_INVOKABLE bool urlExists(const QUrl &url);
     Q_INVOKABLE bool pathExists(const QString &url);
@@ -81,6 +84,7 @@ Q_SIGNALS:
     void qmlApplicationMouseEnter();
     void error(const QString &message);
     void openUrl(const QUrl &url);
+    void actionsEnabledChanged();
 
 private:
     explicit Application();
@@ -105,6 +109,7 @@ private:
     QQmlApplicationEngine *m_qmlEngine{nullptr};
     std::unique_ptr<ApplicationEventFilter> m_appEventFilter;
     QQmlPropertyMap *m_actions{new QQmlPropertyMap};
+    bool m_actionsEnabled{true};
 };
 
 #endif // APPLICATION_H

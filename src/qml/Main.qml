@@ -444,6 +444,9 @@ ApplicationWindow {
             GeneralSettings.save()
         }
         onRejected: mpv.focus = true
+        onVisibleChanged: {
+            HarunaApp.actionsEnabled = !visible
+        }
     }
 
     FileDialog {
@@ -460,6 +463,9 @@ ApplicationWindow {
             }
         }
         onRejected: mpv.focus = true
+        onVisibleChanged: {
+            HarunaApp.actionsEnabled = !visible
+        }
     }
 
     YouTube {
