@@ -136,13 +136,14 @@ Item {
                 ToolButton {
                     id: playPauseButton
 
-                    action: HarunaApp.actions.playPauseAction
                     display: AbstractButton.IconOnly
                     icon.name: root.m_mpv.pause ? "media-playback-start" : "media-playback-pause"
                     icon.width: root.buttonSize
                     icon.height: root.buttonSize
                     focusPolicy: Qt.NoFocus
                     enabled: root.m_mpv.duration !== 0
+
+                    onClicked: HarunaApp.actions.playPauseAction.trigger()
 
                     ToolTip {
                         id: playPauseButtonToolTip
@@ -154,13 +155,14 @@ Item {
                 ToolButton {
                     id: playPreviousFile
 
-                    action: HarunaApp.actions.playPreviousAction
                     icon.name: footer.LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                     icon.width: root.buttonSize
                     icon.height: root.buttonSize
                     display: AbstractButton.IconOnly
                     focusPolicy: Qt.NoFocus
                     enabled: root.m_mpv.activeFilterProxyModel.itemCount > 1
+
+                    onClicked: HarunaApp.actions.playPreviousAction.trigger()
 
                     ToolTip {
                         text: i18nc("@info:tooltip", "Play previous file")
@@ -170,13 +172,14 @@ Item {
                 ToolButton {
                     id: playNextFile
 
-                    action: HarunaApp.actions.playNextAction
                     icon.name: footer.LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                     icon.width: root.buttonSize
                     icon.height: root.buttonSize
                     display: AbstractButton.IconOnly
                     focusPolicy: Qt.NoFocus
                     enabled: root.m_mpv.activeFilterProxyModel.itemCount > 1
+
+                    onClicked: HarunaApp.actions.playNextAction.trigger()
 
                     ToolTip {
                         text: i18nc("@info:tooltip", "Play next file")
