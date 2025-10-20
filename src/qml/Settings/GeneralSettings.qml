@@ -474,21 +474,6 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1 }
-
-        CheckBox {
-            text: i18nc("@option:check", "Use Breeze icon theme")
-            checked: GeneralSettings.useBreezeIconTheme
-            onClicked: {
-                GeneralSettings.useBreezeIconTheme = checked
-                GeneralSettings.save()
-            }
-
-            ToolTip {
-                text: i18nc("@info:tooltip", "Sets the icon theme to breeze.<br>Requires restart.")
-            }
-        }
-
         Item {
             Layout.preferredWidth: Kirigami.Units.gridUnit
             Layout.preferredHeight: Kirigami.Units.gridUnit
