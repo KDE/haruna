@@ -8,6 +8,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.kirigami as Kirigami
+
 Popup {
     id: root
 
@@ -24,14 +26,19 @@ Popup {
         textField.selectAll()
     }
 
-    RowLayout {
+    contentItem: RowLayout {
         anchors.fill: parent
+        anchors.leftMargin: Kirigami.Units.largeSpacing
+        anchors.rightMargin: Kirigami.Units.largeSpacing
 
         Label {
             id: warningMessage
 
             visible: text !== ""
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             onLinkActivated: (link) => Qt.openUrlExternally(link)
+
+            Layout.fillWidth: true
         }
 
         TextField {
@@ -40,7 +47,7 @@ Popup {
             text: root.lastText
             placeholderText: root.placeholderText
             visible: root.warningText === ""
-            Layout.preferredWidth: 400
+
             Layout.fillWidth: true
 
             Keys.onPressed: function(event) {
