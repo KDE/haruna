@@ -23,7 +23,7 @@ ApplicationWindow {
     property bool containsMouse: false
 
     property int previousVisibility: Window.Windowed
-    property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa"]
+    property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa", "text/x-microdvd"]
 
     visible: true
     title: mpv.mediaTitle || i18nc("@title:window", "Haruna")
@@ -455,11 +455,11 @@ ApplicationWindow {
         title: i18nc("@title:window", "Select Subtitles File")
         currentFolder: HarunaApp.parentUrl(mpv.currentUrl)
         fileMode: FileDialog.OpenFile
-        nameFilters: ["Subtitles (*.srt *.ssa *.ass)"]
+        nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
 
         onAccepted: {
             if (window.acceptedSubtitleTypes.includes(HarunaApp.mimeType(subtitlesFileDialog.selectedFile))) {
-                mpv.command(["sub-add", subtitlesFileDialog.selectedFile, "select"])
+                mpv.commandAsync(["sub-add", subtitlesFileDialog.selectedFile, "select"], MpvItem.AsyncIds.AddSubtitleTrack)
             }
         }
         onRejected: mpv.focus = true
