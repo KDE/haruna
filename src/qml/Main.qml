@@ -472,13 +472,16 @@ ApplicationWindow {
         x: 10
         y: 10
         width: Math.min(window.width * 0.9, 600)
-        lastUrl: GeneralSettings.lastUrl
+        lastText: GeneralSettings.lastUrl
         buttonText: i18nc("@action:button", "Open")
+        warningText: youtube.hasYoutubeDl()
+                     ? ""
+                     : i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
 
-        onUrlOpened: function(url) {
+        onSubmitted: function(url) {
             window.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
 
-            GeneralSettings.lastUrl = url
+            GeneralSettings.lastText = url
             GeneralSettings.save()
         }
     }

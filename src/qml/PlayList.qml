@@ -379,9 +379,16 @@ Page {
         y: Kirigami.Units.largeSpacing
         width: toolbar.width - Kirigami.Units.largeSpacing * 2
         buttonText: i18nc("@action:button", "Add")
+        warningText: youtube.hasYoutubeDl()
+                     ? ""
+                     : i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
 
-        onUrlOpened: function(url) {
+        onSubmitted: function(url) {
             root.m_mpv.visibleFilterProxyModel.addItem(url, PlaylistModel.Append)
+        }
+
+        YouTube {
+            id: youtube
         }
     }
 
@@ -394,8 +401,8 @@ Page {
         placeholderText: i18nc("@placeholder", "playlist name")
         buttonText: i18nc("@action:button", "Add")
 
-        onUrlOpened: function(url) {
-            root.m_mpv.playlists.createNewPlaylist(url)
+        onSubmitted: function(plName) {
+            root.m_mpv.playlists.createNewPlaylist(plName)
         }
     }
 

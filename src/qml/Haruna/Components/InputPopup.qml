@@ -8,42 +8,38 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-import org.kde.haruna
-
 Popup {
     id: root
 
-    signal urlOpened(string url)
-    property string lastUrl: ""
+    signal submitted(string text)
+    property string lastText: ""
     property string placeholderText: ""
     property string buttonText: ""
+    property alias warningText: warningMessage.text
 
     modal: true
 
     onOpened: {
-        openUrlTextField.forceActiveFocus(Qt.MouseFocusReason)
-        openUrlTextField.selectAll()
-    }
-
-    YouTube {
-        id: youtube
+        textField.forceActiveFocus(Qt.MouseFocusReason)
+        textField.selectAll()
     }
 
     RowLayout {
         anchors.fill: parent
 
         Label {
-            text: i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
-            visible: !youtube.hasYoutubeDl()
+            id: warningMessage
+
+            visible: text !== ""
             onLinkActivated: (link) => Qt.openUrlExternally(link)
         }
 
         TextField {
-            id: openUrlTextField
+            id: textField
 
-            text: root.lastUrl
+            text: root.lastText
             placeholderText: root.placeholderText
-            visible: youtube.hasYoutubeDl()
+            visible: root.warningText === ""
             Layout.preferredWidth: 400
             Layout.fillWidth: true
 
@@ -51,7 +47,7 @@ Popup {
                 switch(event.key) {
                 case Qt.Key_Enter:
                 case Qt.Key_Return:
-                    openUrlButton.clicked()
+                    submitButton.clicked()
                     return;
                 case Qt.Key_Escape:
                     root.close()
@@ -61,15 +57,15 @@ Popup {
         }
 
         Button {
-            id: openUrlButton
+            id: submitButton
 
-            visible: youtube.hasYoutubeDl()
+            visible: root.warningText === ""
             text: root.buttonText
 
             onClicked: {
-                root.urlOpened(openUrlTextField.text)
+                root.submitted(textField.text)
                 root.close()
-                openUrlTextField.clear()
+                textField.clear()
             }
         }
     }
