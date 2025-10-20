@@ -459,7 +459,7 @@ ApplicationWindow {
 
         onAccepted: {
             if (window.acceptedSubtitleTypes.includes(HarunaApp.mimeType(subtitlesFileDialog.selectedFile))) {
-                mpv.commandAsync(["sub-add", subtitlesFileDialog.selectedFile, "select"], MpvItem.AsyncIds.AddSubtitleTrack)
+                mpv.addSubtitles(subtitlesFileDialog.selectedFile)
             }
         }
         onRejected: mpv.focus = true

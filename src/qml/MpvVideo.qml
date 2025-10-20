@@ -199,7 +199,7 @@ MpvItem {
         onDropped: function (drop){
             if (dragSubtitle && !dragMedia) {
                 // If dragging multiple items and none of them is a media, and if there is a subtitle, load it
-                root.commandAsync(["sub-add", drop.urls[subtitleIndex], "select"], MpvItem.AsyncIds.AddSubtitleTrack)
+                mpv.addSubtitles(drop.urls[subtitleIndex])
                 return
             }
             if (mouseOnTopPart) {

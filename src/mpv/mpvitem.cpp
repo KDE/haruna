@@ -716,6 +716,11 @@ void MpvItem::selectSubtitleTrack()
     }
 }
 
+void MpvItem::addSubtitles(const QString &subtitlesFile)
+{
+    commandAsync({u"sub-add"_s, subtitlesFile, u"select"_s}, static_cast<int>(MpvItem::AsyncIds::AddSubtitleTrack));
+}
+
 QString MpvItem::md5(const QString &str)
 {
     auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
