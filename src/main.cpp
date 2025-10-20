@@ -36,7 +36,9 @@ int main(int argc, char *argv[])
     // required by mpv
     QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
 
-    QQuickStyle::setStyle(u"org.kde.desktop"_s);
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(u"org.kde.desktop"_s);
+    }
     QQuickStyle::setFallbackStyle(u"Fusion"_s);
     if (GeneralSettings::useBreezeIconTheme()) {
         QIcon::setThemeName(u"breeze"_s);
