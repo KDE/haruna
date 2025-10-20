@@ -10,7 +10,6 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
-import org.kde.haruna.settings
 
 TabButton {
     id: root
@@ -98,7 +97,7 @@ TabButton {
                 xAxis {
                     enabled: true
                     minimum: 0
-                    maximum: root.TabBar.tabBar?.contentWidth
+                    maximum: root.TabBar.tabBar?.contentWidth ?? 0
                 }
 
                 onGrabChanged: function(transition, eventPoint) {
@@ -199,6 +198,10 @@ TabButton {
         anchors.fill: parent
         onEntered: function (drag) {
             const sourceItem = (drag.source as PlaylistTabDelegate)
+            if (sourceItem === null) {
+                return
+            }
+
             const from = sourceItem.index
             const to = root.index
             const leftDrag = sourceItem.leftDrag
