@@ -129,6 +129,8 @@ void PlaylistFilterProxyModel::playPrevious()
 
         if (previousIndex >= 0) {
             setPlayingItem(index(previousIndex, 0).row());
+        } else {
+            setPlayingItem(index(rowCount() - 1, 0).row());
         }
     }
 }
