@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
@@ -251,22 +253,23 @@ MpvItem {
 
                 text: i18nc("@info:drag&drop append items", "Add to Playlist")
                 elide: Text.ElideRight
-                color: dropArea.mouseOnTopPart
-                       ? Qt.alpha(Kirigami.Theme.activeTextColor, 0.75)
-                       : Qt.alpha(Kirigami.Theme.textColor, 0.75)
+                color: Kirigami.Theme.textColor
+                opacity: dropArea.mouseOnTopPart ? 1 : 0.7
 
                 font.pointSize: dropArea.calculateAdaptiveFontSize(12, 30, 400, 1200)
+                font.bold: true
                 horizontalAlignment: Qt.AlignCenter
                 verticalAlignment: Qt.AlignVCenter
-            }
-
-            layer.enabled: true
-            layer.effect: DropShadow {
-                verticalOffset: 1
-                color: "#111"
-                radius: Kirigami.Units.cornerRadius
-                spread: 0.3
-                samples: 17
+                layer.enabled: true
+                layer.effect: DropShadow {
+                    cached: true
+                    verticalOffset: 1
+                    horizontalOffset: 1
+                    color: Kirigami.Theme.backgroundColor
+                    radius: 12
+                    spread: 0.4
+                    samples: 20
+                }
             }
         }
 
@@ -299,22 +302,24 @@ MpvItem {
 
                 text: i18nc("@info:drag&drop play now", "Play Now")
                 elide: Text.ElideRight
-                color: dropArea.mouseOnBottomPart
-                       ? Qt.alpha(Kirigami.Theme.activeTextColor, 0.75)
-                       : Qt.alpha(Kirigami.Theme.textColor, 0.75)
+                color: Kirigami.Theme.textColor
+                opacity: dropArea.mouseOnBottomPart ? 1 : 0.7
 
                 font.pointSize: dropArea.calculateAdaptiveFontSize(18, 36, 400, 1200)
+                font.bold: true
                 horizontalAlignment: Qt.AlignCenter
                 verticalAlignment: Qt.AlignVCenter
-            }
-
-            layer.enabled: true
-            layer.effect: DropShadow {
-                verticalOffset: 1
-                color: "#111"
-                radius: Kirigami.Units.cornerRadius
-                spread: 0.3
-                samples: 17
+                layer.enabled: true
+                layer.smooth: true
+                layer.effect: DropShadow {
+                    cached: true
+                    verticalOffset: 1
+                    horizontalOffset: 1
+                    color: Kirigami.Theme.backgroundColor
+                    radius: 12
+                    spread: 0.4
+                    samples: 20
+                }
             }
         }
 
