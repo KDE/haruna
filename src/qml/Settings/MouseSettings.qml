@@ -144,8 +144,6 @@ SettingsBasePage {
             id: mouseActionDialog
 
             property bool canBeSaved: !noActionSelectedMessage.visible && !actionExistsMessage.visible
-            property bool isEditMode: false
-            property mouseAction action
 
             function selectAction() {
                 const actionHandler = function (actionName) {
@@ -153,7 +151,7 @@ SettingsBasePage {
                         return
                     }
 
-                    mouseActionDialog.action.actionName = actionName
+                    selectedActionLabel.actionName = actionName
                     selectedActionLabel.text = HarunaApp.actions[actionName].text
                     Q_EMIT: root.newMouseActionChanged()
 
@@ -163,9 +161,7 @@ SettingsBasePage {
                 selectActionPopup.open()
             }
 
-            title: isEditMode
-                   ? i18nc("@title:window", "Edit mouse button action")
-                   : i18nc("@title:window", "Add mouse button action")
+            title: i18nc("@title:window", "Add mouse button action")
             parent: content
             width: Math.min(parent.width, 400)
             height: Math.min(parent.height, 600)
@@ -173,10 +169,6 @@ SettingsBasePage {
             standardButtons: Dialog.Ok | Dialog.Cancel
             closePolicy: Popup.NoAutoClose | Popup.CloseOnEscape
             modal: true
-
-            Component.onCompleted: {
-                Q_EMIT: root.newMouseActionChanged()
-            }
 
             ColumnLayout {
                 width: parent.width
@@ -188,9 +180,9 @@ SettingsBasePage {
                 ComboBox {
                     id: mouseButtonComboBox
 
-                    enabled: !mouseActionDialog.isEditMode
                     textRole: "text"
                     valueRole: "value"
+                    currentIndex: 0
                     model: ListModel {
                         id: mouseButtonsModel
                     }
@@ -239,37 +231,6 @@ SettingsBasePage {
                             value: "ScrollDown"
                         }
                         mouseButtonsModel.append(scrollDown)
-
-                        switch(mouseActionDialog.action.mouseButton) {
-                            case MouseActionsModel.Left: {
-                                currentIndex = indexOfValue("Left")
-                                break
-                            }
-                            case MouseActionsModel.Middle: {
-                                currentIndex = indexOfValue("Middle")
-                                break
-                            }
-                            case MouseActionsModel.Right: {
-                                currentIndex = indexOfValue("Right")
-                                break
-                            }
-                            case MouseActionsModel.Forward: {
-                                currentIndex = indexOfValue("Forward")
-                                break
-                            }
-                            case MouseActionsModel.Back: {
-                                currentIndex = indexOfValue("Back")
-                                break
-                            }
-                            case MouseActionsModel.ScrollUp: {
-                                currentIndex = indexOfValue("ScrollUp")
-                                break
-                            }
-                            case MouseActionsModel.ScrollDown: {
-                                currentIndex = indexOfValue("ScrollDown")
-                                break
-                            }
-                        }
                     }
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                 }
@@ -281,9 +242,9 @@ SettingsBasePage {
                 ComboBox {
                     id: modifierComboBox
 
-                    enabled: !mouseActionDialog.isEditMode
                     textRole: "text"
                     valueRole: "value"
+                    currentIndex: 0
                     model: ListModel {
                         id: modifiersModel
                     }
@@ -321,29 +282,6 @@ SettingsBasePage {
                             value: "Meta"
                         }
                         modifiersModel.append(meta)
-
-                        switch(mouseActionDialog.action.modifier) {
-                            case Qt.NoModifier: {
-                                currentIndex = indexOfValue("NoModifier")
-                                break
-                            }
-                            case Qt.ControlModifier: {
-                                currentIndex = indexOfValue("Control")
-                                break
-                            }
-                            case Qt.ShiftModifier: {
-                                currentIndex = indexOfValue("Shift")
-                                break
-                            }
-                            case Qt.AltModifier: {
-                                currentIndex = indexOfValue("Alt")
-                                break
-                            }
-                            case Qt.MetaModifier: {
-                                currentIndex = indexOfValue("Meta")
-                                break
-                            }
-                        }
                     }
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                 }
@@ -353,8 +291,7 @@ SettingsBasePage {
 
                     text: i18nc("@label:check whether mouse button action should trigger on double click",
                                 "Trigger on double click")
-                    enabled: !mouseActionDialog.isEditMode && mouseButtonComboBox.currentIndex < 5
-                    checked: mouseActionDialog.action.isDoubleClick
+                    enabled: mouseButtonComboBox.currentIndex < 5
                     onClicked: {
                         Q_EMIT: root.newMouseActionChanged()
                     }
@@ -381,7 +318,7 @@ SettingsBasePage {
                     Label {
                         id: selectedActionLabel
 
-                        text: mouseActionDialog.action.actionName
+                        property string actionName
                         font.weight: Font.Bold
                         Layout.fillWidth: true
                     }
@@ -424,7 +361,7 @@ SettingsBasePage {
                         return i18nc("@info", "Mouse button combination is already assigned to “%1”",
                                      HarunaApp.actions[actionName].text)
                     }
-
+                    visible: text !== ""
                     type: Kirigami.MessageType.Warning
 
                     Layout.fillWidth: true
@@ -441,10 +378,6 @@ SettingsBasePage {
                     const modifier = modifierComboBox.currentValue
                     const isDoubleClick = isDoubleClickCheckBox.checked
 
-                    if (mouseActionDialog.isEditMode) {
-                        return
-                    }
-
                     if (root.m_mouseActionsModel.actionExists(button, modifier, isDoubleClick)) {
                         actionExistsMessage.visible = true
                     } else {
@@ -456,12 +389,7 @@ SettingsBasePage {
             }
 
             onAccepted: {
-                if (mouseActionDialog.isEditMode) {
-                    root.m_mouseActionsModel.editAction(mouseActionDialog.action)
-                    return
-                }
-
-                root.m_mouseActionsModel.addAction(mouseActionDialog.action.actionName,
+                root.m_mouseActionsModel.addAction(selectedActionLabel.actionName,
                                                    mouseButtonComboBox.currentValue,
                                                    modifierComboBox.currentValue,
                                                    isDoubleClickCheckBox.checked)
