@@ -21,6 +21,8 @@ SettingsBasePage {
 
     signal newMouseActionChanged()
 
+    padding: 0
+
     SelectActionPopup {
         id: selectActionPopup
     }
@@ -48,8 +50,9 @@ SettingsBasePage {
                 required property bool isDoubleClick
                 property string dc: delegate.isDoubleClick ? " x2" : ""
 
-                width: ListView.view.width - scrollBar.width
+                width: scrollBar.visible ? ListView.view.width - scrollBar.width : ListView.view.width
                 highlighted: false
+                Kirigami.Theme.useAlternateBackgroundColor: true
 
                 contentItem: RowLayout {
                     Kirigami.Chip {
@@ -131,7 +134,7 @@ SettingsBasePage {
                 text: i18nc("@action:intoolbar add a mouse button action", "&Add")
                 icon.name: "list-add"
                 onClicked: {
-                    addActionComponent.createObject()
+                    addActionComponent.createObject(root)
                 }
 
                 Layout.alignment: Qt.AlignRight
