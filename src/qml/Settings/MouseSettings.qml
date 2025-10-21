@@ -147,6 +147,22 @@ SettingsBasePage {
             property bool isEditMode: false
             property mouseAction action
 
+            function selectAction() {
+                const actionHandler = function (actionName) {
+                    if (mouseActionDialog === null) {
+                        return
+                    }
+
+                    mouseActionDialog.action.actionName = actionName
+                    selectedActionLabel.text = HarunaApp.actions[actionName].text
+                    Q_EMIT: root.newMouseActionChanged()
+
+                    selectActionPopup.actionSelected.disconnect(actionHandler)
+                }
+                selectActionPopup.actionSelected.connect(actionHandler)
+                selectActionPopup.open()
+            }
+
             title: isEditMode
                    ? i18nc("@title:window", "Edit mouse button action")
                    : i18nc("@title:window", "Add mouse button action")
@@ -358,7 +374,7 @@ SettingsBasePage {
                         text: i18nc("@action:button select mouse button action", "Select action")
                         visible: !selectedActionLabel.text
                         onClicked: {
-                            selectActionPopup.open()
+                            mouseActionDialog.selectAction()
                         }
                     }
 
@@ -374,7 +390,7 @@ SettingsBasePage {
                         text: i18nc("@action:button", "Change action")
                         visible: selectedActionLabel.text
                         onClicked: {
-                            selectActionPopup.open()
+                            mouseActionDialog.selectAction()
                         }
                     }
                 }
@@ -416,16 +432,6 @@ SettingsBasePage {
                     Layout.topMargin: Kirigami.Units.largeSpacing
                 }
 
-            }
-
-            SelectActionPopup {
-                id: selectActionPopup
-
-                onActionSelected: function(actionName) {
-                    mouseActionDialog.action.actionName = actionName
-                    selectedActionLabel.text = HarunaApp.actions[actionName].text
-                    Q_EMIT: root.newMouseActionChanged()
-                }
             }
 
             Connections {
