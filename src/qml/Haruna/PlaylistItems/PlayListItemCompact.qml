@@ -58,7 +58,7 @@ PlaylistItemDelegate {
     function mainText() : string {
         const rowNumber = "%1. ".arg(root.padRowNumberAsString())
 
-        if(PlaylistSettings.showRowNumber) {
+        if (PlaylistSettings.showRowNumber) {
             return rowNumber + (PlaylistSettings.showMediaTitle ? root.title : root.name)
         }
         return (PlaylistSettings.showMediaTitle ? root.title : root.name)

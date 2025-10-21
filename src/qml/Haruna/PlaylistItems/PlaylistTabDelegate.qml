@@ -55,7 +55,6 @@ TabButton {
                 State {
                     name: "Empty"
                 }
-
             ]
 
             Kirigami.Icon {
@@ -67,7 +66,7 @@ TabButton {
                 height: leftItem.iconSize
 
                 source: {
-                    switch(leftItem.state){
+                    switch(leftItem.state) {
                     case "Empty":
                         return ""
                     case "Play":
@@ -101,7 +100,7 @@ TabButton {
                 }
 
                 onGrabChanged: function(transition, eventPoint) {
-                    switch(transition){
+                    switch(transition) {
                     case PointerDevice.GrabExclusive:
                     case PointerDevice.GrabPassive:
                         root.z = 100

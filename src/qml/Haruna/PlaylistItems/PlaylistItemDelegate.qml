@@ -82,7 +82,7 @@ Item {
         keys: ["text/uri-list"]
 
         onDropped: function (drop) {
-            if(!containsDrag){
+            if (!containsDrag) {
                 return
             }
             root.m_mpv.visibleFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Insert, root.index)

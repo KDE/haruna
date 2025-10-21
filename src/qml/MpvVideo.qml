@@ -198,7 +198,7 @@ MpvItem {
             subtitleIndex = -1
         }
 
-        onDropped: function (drop){
+        onDropped: function (drop) {
             if (dragSubtitle && !dragMedia) {
                 // If dragging multiple items and none of them is a media, and if there is a subtitle, load it
                 mpv.addSubtitles(drop.urls[subtitleIndex])

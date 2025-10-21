@@ -489,7 +489,7 @@ Page {
             keys: ["text/uri-list"]
 
             onDropped: drop => {
-                if(!containsDrag){
+                if (!containsDrag) {
                     return
                 }
                 root.m_mpv.visibleFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Append)
