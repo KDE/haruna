@@ -13,7 +13,6 @@ import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
-import org.kde.haruna.settings
 
 SettingsBasePage {
     id: root
@@ -21,6 +20,10 @@ SettingsBasePage {
     required property MouseActionsModel m_mouseActionsModel
 
     signal newMouseActionChanged()
+
+    SelectActionPopup {
+        id: selectActionPopup
+    }
 
     ColumnLayout {
         id: content
@@ -46,10 +49,6 @@ SettingsBasePage {
                 width: ListView.view.width
                 highlighted: false
 
-                onClicked: {
-                    addActionComponent.createObject(root, {action: mouseAction, isEditMode: true})
-                }
-
                 contentItem: RowLayout {
                     Kirigami.Chip {
                         text: delegate.modifier
@@ -58,34 +57,53 @@ SettingsBasePage {
                         checkable: false
                     }
 
-                    Label {
-                        text: "+"
-                        visible: delegate.modifier
-                    }
-
                     Kirigami.Chip {
                         text: delegate.button + delegate.dc
                         closable: false
                         checkable: false
                     }
 
-                    Item {
+                    Label {
+                        text: HarunaApp.actions[delegate.actionName].text
+                        elide: Text.ElideRight
+                        horizontalAlignment: Qt.AlignRight
                         Layout.fillWidth: true
                     }
 
-                    Label {
-                        text: HarunaApp.actions[delegate.actionName].text
-                    }
-
                     ToolButton {
-                        visible: delegate.actionName
-                        icon.name: "delete"
+                        icon.name: "overflow-menu"
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
                         onClicked: {
-                            root.m_mouseActionsModel.removeAction(delegate.index)
+                            delegateMenu.open()
                         }
 
-                        ToolTip {
-                            text: i18nc("@info:tooltip", "Remove mouse button action")
+                        Menu {
+                            id: delegateMenu
+
+                            y: parent.height
+
+                            MenuItem {
+                                text: i18nc("@label:action change action associated with mouse event", "Change action")
+                                icon.name: "edit-entry"
+                                onTriggered: {
+                                    const actionHandler = function (actionName) {
+                                        delegate.mouseAction.actionName = actionName
+                                        root.m_mouseActionsModel.editAction(delegate.mouseAction)
+                                        selectActionPopup.actionSelected.disconnect(actionHandler)
+                                    }
+                                    selectActionPopup.actionSelected.connect(actionHandler)
+                                    selectActionPopup.open()
+                                }
+                            }
+
+                            MenuItem {
+                                text: i18nc("@label:action delete mouse event", "Delete")
+                                icon.name: "delete"
+                                onTriggered: {
+                                    root.m_mouseActionsModel.removeAction(delegate.index)
+                                }
+                            }
                         }
                     }
                 }
