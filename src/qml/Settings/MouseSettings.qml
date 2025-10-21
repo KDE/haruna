@@ -34,6 +34,8 @@ SettingsBasePage {
         ListView {
             id: mouseActionsListView
 
+            ScrollBar.vertical: ScrollBar { id: scrollBar }
+
             model: root.m_mouseActionsModel
             delegate: ItemDelegate {
                 id: delegate
@@ -46,7 +48,7 @@ SettingsBasePage {
                 required property bool isDoubleClick
                 property string dc: delegate.isDoubleClick ? " x2" : ""
 
-                width: ListView.view.width
+                width: ListView.view.width - scrollBar.width
                 highlighted: false
 
                 contentItem: RowLayout {
