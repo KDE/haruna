@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:42+0000\n"
 "PO-Revision-Date: 2024-11-01 13:59+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -1976,12 +1976,23 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Default cover"
 
-#: src/qml/Settings/MouseSettings.qml:88
-msgctxt "@info:tooltip"
-msgid "Remove mouse button action"
-msgstr ""
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Clear action"
+msgctxt "@label:action change action associated with mouse event"
+msgid "Change action"
+msgstr "Clear action"
 
-#: src/qml/Settings/MouseSettings.qml:111
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Delete"
+msgctxt "@label:action delete mouse event"
+msgid "Delete"
+msgstr "Delete"
+
+#: src/qml/Settings/MouseSettings.qml:134
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "&Add"
@@ -1989,56 +2000,51 @@ msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Add"
 
-#: src/qml/Settings/MouseSettings.qml:133
-msgctxt "@title:window"
-msgid "Edit mouse button action"
-msgstr ""
-
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:151
+#: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:168
+#: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:174
+#: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:211
 #, fuzzy
 #| msgid "Row height"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Row height"
 
-#: src/qml/Settings/MouseSettings.qml:186
+#: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:198
+#: src/qml/Settings/MouseSettings.qml:229
 #, fuzzy
 #| msgid "Action for scroll down"
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Action for scroll down"
 
-#: src/qml/Settings/MouseSettings.qml:204
+#: src/qml/Settings/MouseSettings.qml:235
 #, fuzzy
 #| msgid "Action for scroll down"
 msgctxt "@item:listbox mouse scroll down"
@@ -2078,7 +2084,7 @@ msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:321
+#: src/qml/Settings/MouseSettings.qml:298
 #, fuzzy
 #| msgid "Action for left double click"
 msgctxt ""
@@ -2086,12 +2092,12 @@ msgctxt ""
 msgid "Trigger on double click"
 msgstr "Action for left double click"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
 msgstr ""
 
-#: src/qml/Settings/MouseSettings.qml:340
+#: src/qml/Settings/MouseSettings.qml:316
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Select a color"
@@ -2099,7 +2105,7 @@ msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "Select a colour"
 
-#: src/qml/Settings/MouseSettings.qml:356
+#: src/qml/Settings/MouseSettings.qml:332
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Clear action"
@@ -2107,7 +2113,7 @@ msgctxt "@action:button"
 msgid "Change action"
 msgstr "Clear action"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/qml/Settings/MouseSettings.qml:343
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "No action set"
@@ -2115,7 +2121,7 @@ msgctxt "@info"
 msgid "No action selected"
 msgstr "No action set"
 
-#: src/qml/Settings/MouseSettings.qml:390
+#: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr ""

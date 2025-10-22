@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:42+0000\n"
 "PO-Revision-Date: 2025-10-18 16:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1719,62 +1719,68 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Lehenetsia"
 
-#: src/qml/Settings/MouseSettings.qml:88
-msgctxt "@info:tooltip"
-msgid "Remove mouse button action"
-msgstr "Kendu sagu-botoiaren ekintza"
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Change action"
+msgctxt "@label:action change action associated with mouse event"
+msgid "Change action"
+msgstr "Aldatu ekintza"
 
-#: src/qml/Settings/MouseSettings.qml:111
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Delete"
+msgctxt "@label:action delete mouse event"
+msgid "Delete"
+msgstr "Ezabatu"
+
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Gehitu"
 
-#: src/qml/Settings/MouseSettings.qml:133
-msgctxt "@title:window"
-msgid "Edit mouse button action"
-msgstr "Editatu sagu-botoiaren ekintza"
-
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "Gehitu sagu-botoiaren ekintza"
 
-#: src/qml/Settings/MouseSettings.qml:151
+#: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Saguaren botoia"
 
-#: src/qml/Settings/MouseSettings.qml:168
+#: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Ezkerrekoa"
 
-#: src/qml/Settings/MouseSettings.qml:174
+#: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Erdikoa"
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:211
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Eskuinekoa"
 
-#: src/qml/Settings/MouseSettings.qml:186
+#: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "Aurrera"
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Atzera"
 
-#: src/qml/Settings/MouseSettings.qml:198
+#: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Kiribildu gora"
 
-#: src/qml/Settings/MouseSettings.qml:204
+#: src/qml/Settings/MouseSettings.qml:235
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Kiribildu behera"
@@ -1809,33 +1815,33 @@ msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:321
+#: src/qml/Settings/MouseSettings.qml:298
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
 msgstr "Eragin klik-bikoitzarekin"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
 msgstr "Ekintza"
 
-#: src/qml/Settings/MouseSettings.qml:340
+#: src/qml/Settings/MouseSettings.qml:316
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "Hautatu ekintza"
 
-#: src/qml/Settings/MouseSettings.qml:356
+#: src/qml/Settings/MouseSettings.qml:332
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Aldatu ekintza"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
 msgid "No action selected"
 msgstr "Ez da ekintzarik hautatu"
 
-#: src/qml/Settings/MouseSettings.qml:390
+#: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "Saguaren botoien konbinazioa dagoeneko \"%1\"(e)rako esleituta dago"
@@ -2538,6 +2544,14 @@ msgstr ""
 "Ezin izan du ondoko ID duen jotze-zerrenda eskuratu: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Remove mouse button action"
+#~ msgstr "Kendu sagu-botoiaren ekintza"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit mouse button action"
+#~ msgstr "Editatu sagu-botoiaren ekintza"
 
 #~ msgctxt "@option:check"
 #~ msgid "Use Breeze icon theme"

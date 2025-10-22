@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:42+0000\n"
 "PO-Revision-Date: 2025-10-16 21:30+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -1714,62 +1714,68 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Numatytasis"
 
-#: src/qml/Settings/MouseSettings.qml:88
-msgctxt "@info:tooltip"
-msgid "Remove mouse button action"
-msgstr "Šalinti pelės mygtuko veiksmą"
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Change action"
+msgctxt "@label:action change action associated with mouse event"
+msgid "Change action"
+msgstr "Keisti veiksmą"
 
-#: src/qml/Settings/MouseSettings.qml:111
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Delete"
+msgctxt "@label:action delete mouse event"
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Pridėti"
 
-#: src/qml/Settings/MouseSettings.qml:133
-msgctxt "@title:window"
-msgid "Edit mouse button action"
-msgstr "Taisyti pelės mygtuko veiksmą"
-
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "Pridėti pelės mygtuko veiksmą"
 
-#: src/qml/Settings/MouseSettings.qml:151
+#: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Pelės mygtukas"
 
-#: src/qml/Settings/MouseSettings.qml:168
+#: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Kairysis"
 
-#: src/qml/Settings/MouseSettings.qml:174
+#: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Vidurinysis"
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:211
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Dešinysis"
 
-#: src/qml/Settings/MouseSettings.qml:186
+#: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "Pirmyn"
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Atgal"
 
-#: src/qml/Settings/MouseSettings.qml:198
+#: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Slinkti aukštyn"
 
-#: src/qml/Settings/MouseSettings.qml:204
+#: src/qml/Settings/MouseSettings.qml:235
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Slinkti žemyn"
@@ -1804,33 +1810,33 @@ msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:321
+#: src/qml/Settings/MouseSettings.qml:298
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
 msgstr "Paleisti spustelėjus du kartus"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
 msgstr "Veiksmas"
 
-#: src/qml/Settings/MouseSettings.qml:340
+#: src/qml/Settings/MouseSettings.qml:316
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "Pasirinkti veiksmą"
 
-#: src/qml/Settings/MouseSettings.qml:356
+#: src/qml/Settings/MouseSettings.qml:332
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Keisti veiksmą"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
 msgid "No action selected"
 msgstr "Nepasirinktas joks veiksmas"
 
-#: src/qml/Settings/MouseSettings.qml:390
+#: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "Pelės mygtukų kombinacija jau priskirta veiksmui „%1“"
@@ -2550,6 +2556,14 @@ msgstr ""
 "Nepavyko gauti grojaraščio, kurio id: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Remove mouse button action"
+#~ msgstr "Šalinti pelės mygtuko veiksmą"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit mouse button action"
+#~ msgstr "Taisyti pelės mygtuko veiksmą"
 
 #~ msgctxt "@option:check"
 #~ msgid "Use Breeze icon theme"

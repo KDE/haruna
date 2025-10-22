@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1704,65 +1704,68 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "默认"
 
-#: src/qml/Settings/MouseSettings.qml:88
-msgctxt "@info:tooltip"
-msgid "Remove mouse button action"
-msgstr "移除鼠标按钮操作"
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Change action"
+msgctxt "@label:action change action associated with mouse event"
+msgid "Change action"
+msgstr "更改操作"
 
-#: src/qml/Settings/MouseSettings.qml:111
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Delete"
+msgctxt "@label:action delete mouse event"
+msgid "Delete"
+msgstr "删除"
+
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "添加(&A)"
 
-#: src/qml/Settings/MouseSettings.qml:133
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Add mouse button action"
-msgctxt "@title:window"
-msgid "Edit mouse button action"
-msgstr "添加鼠标按钮操作"
-
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "添加鼠标按钮操作"
 
-#: src/qml/Settings/MouseSettings.qml:151
+#: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "鼠标按键"
 
-#: src/qml/Settings/MouseSettings.qml:168
+#: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "左键"
 
-#: src/qml/Settings/MouseSettings.qml:174
+#: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "中键"
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:211
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "右键"
 
-#: src/qml/Settings/MouseSettings.qml:186
+#: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "前进键"
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "后退键"
 
-#: src/qml/Settings/MouseSettings.qml:198
+#: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "滚轮向上"
 
-#: src/qml/Settings/MouseSettings.qml:204
+#: src/qml/Settings/MouseSettings.qml:235
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "滚轮向下"
@@ -1797,7 +1800,7 @@ msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:321
+#: src/qml/Settings/MouseSettings.qml:298
 #, fuzzy
 #| msgctxt ""
 #| "@label:check whether mouse button action shoud trigger on double click"
@@ -1807,27 +1810,27 @@ msgctxt ""
 msgid "Trigger on double click"
 msgstr "双击时触发"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
 msgstr "操作"
 
-#: src/qml/Settings/MouseSettings.qml:340
+#: src/qml/Settings/MouseSettings.qml:316
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "选择操作"
 
-#: src/qml/Settings/MouseSettings.qml:356
+#: src/qml/Settings/MouseSettings.qml:332
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "更改操作"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
 msgid "No action selected"
 msgstr "没有选择操作"
 
-#: src/qml/Settings/MouseSettings.qml:390
+#: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "鼠标按键组合已分配给“%1”"
@@ -2487,6 +2490,17 @@ msgstr ""
 "无法获取此 ID 的播放列表：%1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Remove mouse button action"
+#~ msgstr "移除鼠标按钮操作"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add mouse button action"
+#~ msgctxt "@title:window"
+#~ msgid "Edit mouse button action"
+#~ msgstr "添加鼠标按钮操作"
 
 #~ msgctxt "@option:check"
 #~ msgid "Use Breeze icon theme"

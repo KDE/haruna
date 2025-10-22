@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:42+0000\n"
 "PO-Revision-Date: 2025-07-21 11:22+0300\n"
 "Last-Translator: Olesya Gerasimenko <goa@altlinux.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -1815,30 +1815,33 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Обложка по умолчанию"
 
-#: src/qml/Settings/MouseSettings.qml:88
-msgctxt "@info:tooltip"
-msgid "Remove mouse button action"
-msgstr "Удалить действие по кнопке мыши"
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button change mouse button action "
+#| msgid "Change action"
+msgctxt "@label:action change action associated with mouse event"
+msgid "Change action"
+msgstr "Изменить действие"
 
-#: src/qml/Settings/MouseSettings.qml:111
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Delete"
+msgctxt "@label:action delete mouse event"
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Добавить"
 
-#: src/qml/Settings/MouseSettings.qml:133
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Add mouse button action"
-msgctxt "@title:window"
-msgid "Edit mouse button action"
-msgstr "Добавление действия по нажатию кнопки мыши"
-
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "Добавление действия по нажатию кнопки мыши"
 
-#: src/qml/Settings/MouseSettings.qml:151
+#: src/qml/Settings/MouseSettings.qml:182
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Mouse button"
@@ -1846,7 +1849,7 @@ msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Кнопка мыши"
 
-#: src/qml/Settings/MouseSettings.qml:168
+#: src/qml/Settings/MouseSettings.qml:199
 #, fuzzy
 #| msgctxt "@label:listbox left mouse button"
 #| msgid "Left"
@@ -1854,7 +1857,7 @@ msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Левая"
 
-#: src/qml/Settings/MouseSettings.qml:174
+#: src/qml/Settings/MouseSettings.qml:205
 #, fuzzy
 #| msgctxt "@label:listbox middle mouse button"
 #| msgid "Middle"
@@ -1862,7 +1865,7 @@ msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Средняя"
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:211
 #, fuzzy
 #| msgctxt "@label:listbox right mouse button"
 #| msgid "Right"
@@ -1870,7 +1873,7 @@ msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Правая"
 
-#: src/qml/Settings/MouseSettings.qml:186
+#: src/qml/Settings/MouseSettings.qml:217
 #, fuzzy
 #| msgctxt "@label:listbox forward mouse button"
 #| msgid "Forward"
@@ -1878,7 +1881,7 @@ msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "Вперёд"
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:223
 #, fuzzy
 #| msgctxt "@label:listbox back mouse button"
 #| msgid "Back"
@@ -1886,7 +1889,7 @@ msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Назад"
 
-#: src/qml/Settings/MouseSettings.qml:198
+#: src/qml/Settings/MouseSettings.qml:229
 #, fuzzy
 #| msgctxt "@label:listbox mouse scroll up"
 #| msgid "Scroll up"
@@ -1894,7 +1897,7 @@ msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Прокрутка вверх"
 
-#: src/qml/Settings/MouseSettings.qml:204
+#: src/qml/Settings/MouseSettings.qml:235
 #, fuzzy
 #| msgctxt "@label:listbox mouse scroll down"
 #| msgid "Scroll down"
@@ -1950,7 +1953,7 @@ msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:321
+#: src/qml/Settings/MouseSettings.qml:298
 #, fuzzy
 #| msgctxt ""
 #| "@label:check whether mouse button action shoud trigger on double click"
@@ -1960,17 +1963,17 @@ msgctxt ""
 msgid "Trigger on double click"
 msgstr "Запуск по двойному щелчку"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
 msgstr "Действие"
 
-#: src/qml/Settings/MouseSettings.qml:340
+#: src/qml/Settings/MouseSettings.qml:316
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "Выбрать действие"
 
-#: src/qml/Settings/MouseSettings.qml:356
+#: src/qml/Settings/MouseSettings.qml:332
 #, fuzzy
 #| msgctxt "@action:button change mouse button action "
 #| msgid "Change action"
@@ -1978,12 +1981,12 @@ msgctxt "@action:button"
 msgid "Change action"
 msgstr "Изменить действие"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
 msgid "No action selected"
 msgstr "Действие не выбрано"
 
-#: src/qml/Settings/MouseSettings.qml:390
+#: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "Эта комбинация кнопок мыши уже назначена действию «%1»"
@@ -2719,6 +2722,17 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Remove mouse button action"
+#~ msgstr "Удалить действие по кнопке мыши"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add mouse button action"
+#~ msgctxt "@title:window"
+#~ msgid "Edit mouse button action"
+#~ msgstr "Добавление действия по нажатию кнопки мыши"
 
 #~ msgctxt "@option:check"
 #~ msgid "Use Breeze icon theme"

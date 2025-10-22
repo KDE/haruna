@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:42+0000\n"
 "PO-Revision-Date: 2025-09-25 01:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1706,65 +1706,68 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "預設"
 
-#: src/qml/Settings/MouseSettings.qml:88
-msgctxt "@info:tooltip"
-msgid "Remove mouse button action"
-msgstr "移除滑鼠按鈕動作"
+#: src/qml/Settings/MouseSettings.qml:92
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Change action"
+msgctxt "@label:action change action associated with mouse event"
+msgid "Change action"
+msgstr "變更動作"
 
-#: src/qml/Settings/MouseSettings.qml:111
+#: src/qml/Settings/MouseSettings.qml:106
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Delete"
+msgctxt "@label:action delete mouse event"
+msgid "Delete"
+msgstr "刪除"
+
+#: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "新增(&A)"
 
-#: src/qml/Settings/MouseSettings.qml:133
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Add mouse button action"
-msgctxt "@title:window"
-msgid "Edit mouse button action"
-msgstr "新增滑鼠按鈕動作"
-
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "新增滑鼠按鈕動作"
 
-#: src/qml/Settings/MouseSettings.qml:151
+#: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "滑鼠按鈕"
 
-#: src/qml/Settings/MouseSettings.qml:168
+#: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "左鍵"
 
-#: src/qml/Settings/MouseSettings.qml:174
+#: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "中鍵"
 
-#: src/qml/Settings/MouseSettings.qml:180
+#: src/qml/Settings/MouseSettings.qml:211
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "右鍵"
 
-#: src/qml/Settings/MouseSettings.qml:186
+#: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "往前"
 
-#: src/qml/Settings/MouseSettings.qml:192
+#: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "往後"
 
-#: src/qml/Settings/MouseSettings.qml:198
+#: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "向上捲動"
 
-#: src/qml/Settings/MouseSettings.qml:204
+#: src/qml/Settings/MouseSettings.qml:235
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "向下捲動"
@@ -1799,7 +1802,7 @@ msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:321
+#: src/qml/Settings/MouseSettings.qml:298
 #, fuzzy
 #| msgctxt ""
 #| "@label:check whether mouse button action shoud trigger on double click"
@@ -1809,27 +1812,27 @@ msgctxt ""
 msgid "Trigger on double click"
 msgstr "雙擊觸發"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
 msgstr "動作"
 
-#: src/qml/Settings/MouseSettings.qml:340
+#: src/qml/Settings/MouseSettings.qml:316
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "選擇動作"
 
-#: src/qml/Settings/MouseSettings.qml:356
+#: src/qml/Settings/MouseSettings.qml:332
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "變更動作"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
 msgid "No action selected"
 msgstr "沒有選取動作"
 
-#: src/qml/Settings/MouseSettings.qml:390
+#: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "滑鼠按鈕組合已經指派給「%1」"
@@ -2493,6 +2496,17 @@ msgstr ""
 "無法取得此 ID 的播放清單：%1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Remove mouse button action"
+#~ msgstr "移除滑鼠按鈕動作"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add mouse button action"
+#~ msgctxt "@title:window"
+#~ msgid "Edit mouse button action"
+#~ msgstr "新增滑鼠按鈕動作"
 
 #~ msgctxt "@option:check"
 #~ msgid "Use Breeze icon theme"
