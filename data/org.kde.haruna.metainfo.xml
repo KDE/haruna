@@ -341,6 +341,28 @@
     </ul>
   </description>
   <releases>
+    <release version="1.6.0" date="2025-10-24">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>Added option to resize playlist</li>
+          <li>Moved the action to add a new playlist/tab to the tabbar</li>
+          <li>Moved the action to open a playlist in the "Add" menu</li>
+          <li>Added an icon for playback action in playlist header</li>
+          <li>Mouse settings: action asssigned to a mouse event can be changed</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>Fixed looping playlist with a single files</li>
+          <li>Fixed playlist tabs not being saved</li>
+          <li>Fixed renaming playlists right after adding them</li>
+          <li>Fixed next/previous buttons being disabled while adding items via dropping in "Add to Playlist" drop area</li>
+          <li>Fixed play previous action not wrapping from first item in playlist to the last item</li>
+          <li>Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
+          <li>Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.0" date="2025-09-30">
       <description>
         <p>Features</p>
