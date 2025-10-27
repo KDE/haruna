@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 #
 
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.16...3.30)
 
 cmake_policy(SET CMP0048 NEW)
 project(haruna VERSION 1.6.0 LANGUAGES CXX)
