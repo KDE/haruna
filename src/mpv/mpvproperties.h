@@ -226,6 +226,18 @@ public:
     Q_PROPERTY(QString EofReached MEMBER EofReached CONSTANT)
     const QString EofReached{u"eof-reached"_s};
 
+    Q_PROPERTY(QString ReplayGain MEMBER ReplayGain CONSTANT)
+    const QString ReplayGain{u"replaygain"_s};
+
+    Q_PROPERTY(QString ReplayGainPreamp MEMBER ReplayGainPreamp CONSTANT)
+    const QString ReplayGainPreamp{u"replaygain-preamp"_s};
+
+    Q_PROPERTY(QString ReplayGainClip MEMBER ReplayGainClip CONSTANT)
+    const QString ReplayGainClip{u"replaygain-clip"_s};
+
+    Q_PROPERTY(QString ReplayGainFallback MEMBER ReplayGainFallback CONSTANT)
+    const QString ReplayGainFallback{u"replaygain-fallback"_s};
+
 private:
     Q_DISABLE_COPY_MOVE(MpvProperties)
 };

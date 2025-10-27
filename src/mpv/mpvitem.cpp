@@ -156,6 +156,10 @@ void MpvItem::initProperties()
     Q_EMIT setProperty(MpvProperties::self()->SubtitleBorderSize, SubtitlesSettings::borderSize());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleBold, SubtitlesSettings::isBold());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleItalic, SubtitlesSettings::isItalic());
+    Q_EMIT setProperty(MpvProperties::self()->ReplayGain, AudioSettings::replayGain());
+    Q_EMIT setProperty(MpvProperties::self()->ReplayGainClip, !AudioSettings::replayGainPreventClip());
+    Q_EMIT setProperty(MpvProperties::self()->ReplayGainPreamp, AudioSettings::replayGainPreamp());
+    Q_EMIT setProperty(MpvProperties::self()->ReplayGainFallback, AudioSettings::replayGainFallback());
 
     auto setSubPaths = [this]() {
         QString subFoldersString;

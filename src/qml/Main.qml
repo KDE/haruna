@@ -105,6 +105,18 @@ ApplicationWindow {
         function onPreferredLanguageChanged() {
             mpv.setProperty(MpvProperties.AudioLanguage, AudioSettings.preferredLanguage.replace(/\s+/g, ''))
         }
+        function onReplayGainChanged() {
+            mpv.setProperty(MpvProperties.ReplayGain, AudioSettings.replayGain)
+        }
+        function onReplayGainPreampChanged() {
+            mpv.setProperty(MpvProperties.ReplayGainPreamp, AudioSettings.replayGainPreamp)
+        }
+        function onReplayGainPreventClipChanged() {
+            mpv.setProperty(MpvProperties.ReplayGainClip, !AudioSettings.replayGainPreventClip)
+        }
+        function onReplayGainFallbackChanged() {
+            mpv.setProperty(MpvProperties.ReplayGainFallback, AudioSettings.replayGainFallback)
+        }
     }
     Connections {
         target: PlaybackSettings
