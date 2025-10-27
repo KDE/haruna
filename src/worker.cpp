@@ -174,7 +174,7 @@ void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
             QString mimeType = Application::mimeType(url);
             if (mimeType.startsWith(u"application/x-subrip"_s) || mimeType.startsWith(u"text/x-ssa"_s)) {
                 // The subtitles path must contain the name of the playing file
-                if (fi.absoluteFilePath().contains(playingFileInfo.baseName(), Qt::CaseInsensitive)) {
+                if (fi.absoluteFilePath().contains(playingFileInfo.completeBaseName(), Qt::CaseInsensitive)) {
                     foundSubs.append(fi.absoluteFilePath());
                 }
             }
