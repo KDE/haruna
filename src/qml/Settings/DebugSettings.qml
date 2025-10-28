@@ -21,50 +21,38 @@ SettingsBasePage {
     ColumnLayout {
         id: content
 
-        Label {
-            text: i18nc("@label:textbox", "Config folder")
-        }
-
-        RowLayout {
-            Kirigami.ActionTextField {
-                id: configFolderField
-
-                text: HarunaApp.configFolderPath()
-                readOnly: true
-                rightActions: Kirigami.Action {
-                    icon.name: "document-open-folder"
-                    visible: configFolderField.text !== ""
-                    text: i18nc("@info:tooltip", "Open config folder")
-                    onTriggered: {
-                        Qt.openUrlExternally(HarunaApp.configFolderPath())
-                    }
-                }
-                Layout.fillWidth: true
-            }
-        }
-
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
             text: i18nc("@label:textbox", "Config file")
         }
 
-        RowLayout {
-            Kirigami.ActionTextField {
-                id: configFileField
+        Kirigami.ActionTextField {
+            id: configFileField
 
-                text: HarunaApp.configFilePath()
-                readOnly: true
-                rightActions: Kirigami.Action {
+            text: Global.configFilePath(Global.ConfigFile.Main)
+            readOnly: true
+            rightActions: [
+                Kirigami.Action {
                     icon.name: "document-open"
                     visible: configFileField.text !== ""
                     text: i18nc("@info:tooltip", "Open config file")
                     onTriggered: {
-                        Qt.openUrlExternally(HarunaApp.configFilePath())
+                        const url = HarunaApp.pathToUrl(Global.configFilePath(Global.ConfigFile.Main))
+                        Qt.openUrlExternally(url)
+                    }
+                },
+                Kirigami.Action {
+                    icon.name: "document-open-folder"
+                    visible: configFileField.text !== ""
+                    text: i18nc("@info:tooltip", "Open parent folder")
+                    onTriggered: {
+                        const url = HarunaApp.pathToUrl(Global.configFileParentPath(Global.ConfigFile.Main))
+                        Qt.openUrlExternally(url)
                     }
                 }
-                Layout.fillWidth: true
-            }
+            ]
+            Layout.fillWidth: true
         }
 
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
@@ -73,22 +61,32 @@ SettingsBasePage {
             text: i18nc("@label:textbox", "Custom commands config file")
         }
 
-        RowLayout {
-            Kirigami.ActionTextField {
-                id: ccConfigFileField
+        Kirigami.ActionTextField {
+            id: ccConfigFileField
 
-                text: HarunaApp.ccConfigFilePath()
-                readOnly: true
-                rightActions: Kirigami.Action {
+            text: Global.configFilePath(Global.ConfigFile.CustomCommands)
+            readOnly: true
+            rightActions: [
+                Kirigami.Action {
                     icon.name: "document-open"
                     visible: ccConfigFileField.text !== ""
                     text: i18nc("@info:tooltip", "Open custom commands config file")
                     onTriggered: {
-                        Qt.openUrlExternally(HarunaApp.ccConfigFilePath())
+                        const url = HarunaApp.pathToUrl(Global.configFilePath(Global.ConfigFile.CustomCommands))
+                        Qt.openUrlExternally(url)
+                    }
+                },
+                Kirigami.Action {
+                    icon.name: "document-open-folder"
+                    visible: ccConfigFileField.text !== ""
+                    text: i18nc("@info:tooltip", "Open parent folder")
+                    onTriggered: {
+                        const url = HarunaApp.pathToUrl(Global.configFileParentPath(Global.ConfigFile.CustomCommands))
+                        Qt.openUrlExternally(url)
                     }
                 }
-                Layout.fillWidth: true
-            }
+            ]
+            Layout.fillWidth: true
         }
 
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
