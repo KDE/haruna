@@ -19,10 +19,10 @@
 #include <KFileItem>
 #include <KFileMetaData/Properties>
 #include <KIO/DeleteOrTrashJob>
-#include <KIO/OpenFileManagerWindowJob>
 #include <KIO/RenameFileDialog>
 
 #include "application.h"
+#include "global.h"
 #include "playlistsettings.h"
 
 using namespace Qt::StringLiterals;
@@ -152,7 +152,7 @@ void PlaylistFilterProxyModel::saveM3uFile(const QString &path)
 void PlaylistFilterProxyModel::highlightInFileManager(uint row)
 {
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
-    KIO::highlightInFileManager({QUrl::fromUserInput(path)});
+    Global::instance()->highlightInFileManager(path);
 }
 
 void PlaylistFilterProxyModel::removeItem(uint row)
