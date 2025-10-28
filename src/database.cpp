@@ -179,4 +179,17 @@ void Database::deletePlaybackPositions()
     query.exec(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE);
 }
 
+void Database::deletePlaybackPosition(const QString &md5Hash)
+{
+    QSqlQuery query(db());
+    query.prepare(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE %
+                  u" WHERE md5_hash = :md5Hash"_s);
+    query.bindValue(u":md5Hash"_s, md5Hash);
+    query.exec();
+
+    if (query.lastError().isValid()) {
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+    }
+}
+
 #include "moc_database.cpp"
