@@ -18,7 +18,7 @@ using namespace Qt::StringLiterals;
 
 ActionsModel::ActionsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath(Global::ConfigFile::Shortcuts)))
+    , m_config(KSharedConfig::openConfig(Global::instance()->configFilePath(Global::ConfigFile::Shortcuts)))
 {
     Action action;
     action.name = u"openActionsDialogAction"_s;

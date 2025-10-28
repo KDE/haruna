@@ -86,7 +86,7 @@ void CustomCommandsModel::init()
         }
     });
 
-    QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    QString ccConfig = Global::instance()->configFilePath(Global::ConfigFile::CustomCommands);
     m_customCommandsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customCommandsConfig->groupList();
 
@@ -220,7 +220,7 @@ void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
     m_customCommands.removeAt(row);
     endRemoveRows();
 
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(Global::instance()->appConfigFilePath());
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(Global::instance()->configFilePath());
     config->group(u"Shortcuts"_s).deleteEntry(groupName);
     config->sync();
 }

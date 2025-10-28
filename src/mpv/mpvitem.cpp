@@ -55,7 +55,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_subtitleTracksModel{std::make_unique<TracksModel>()}
     , m_playlists{std::make_unique<PlaylistMultiProxiesModel>()}
     , m_chaptersModel{std::make_unique<ChaptersModel>()}
-    , m_watchLaterPath{QString(Global::instance()->appConfigDirPath()).append(u"/watch-later/"_s)}
+    , m_watchLaterPath{QString(Global::instance()->configFileParentPath()).append(u"/watch-later/"_s)}
     , m_saveTimePositionTimer{std::make_unique<QTimer>()}
 {
     Q_EMIT observeProperty(MpvProperties::self()->MediaTitle, MPV_FORMAT_STRING);
@@ -105,7 +105,7 @@ MpvItem::MpvItem(QQuickItem *parent)
 
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
-    QString ccConfig = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    QString ccConfig = Global::instance()->configFilePath(Global::ConfigFile::CustomCommands);
     m_customPropsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customPropsConfig->groupList();
     for (const QString &_group : std::as_const(groups)) {

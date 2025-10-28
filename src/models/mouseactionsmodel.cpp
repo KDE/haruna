@@ -12,7 +12,7 @@
 
 MouseActionsModel::MouseActionsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_config(KSharedConfig::openConfig(Global::instance()->appConfigFilePath()))
+    , m_config(KSharedConfig::openConfig(Global::instance()->configFilePath()))
 {
     auto configGroup{m_config->group(u"Mouse"_s)};
     const auto keys{configGroup.keyList()};

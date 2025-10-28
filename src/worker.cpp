@@ -208,7 +208,7 @@ void Worker::getYtdlpVersion()
 
 QSqlDatabase Worker::getDBConnection()
 {
-    static const auto dbFile{Global::instance()->appConfigFilePath(Global::ConfigFile::Database)};
+    static const auto dbFile{Global::instance()->configFilePath(Global::ConfigFile::Database)};
     static auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"worker_connection"_s);
     if (!db.isOpen()) {
         db.setDatabaseName(dbFile);

@@ -24,7 +24,7 @@ Global::Global()
 {
 }
 
-const QString Global::appConfigDirPath(ConfigFile configFile)
+const QString Global::configFileParentPath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
@@ -58,7 +58,7 @@ const QString Global::appConfigDirPath(ConfigFile configFile)
     return {};
 }
 
-const QString Global::appConfigFilePath(ConfigFile configFile)
+const QString Global::configFilePath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {

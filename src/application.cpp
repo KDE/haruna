@@ -223,7 +223,7 @@ bool Application::pathExists(const QString &path)
 
 QUrl Application::configFilePath()
 {
-    auto file = Global::instance()->appConfigFilePath();
+    auto file = Global::instance()->configFilePath();
     if (pathExists(file)) {
         return pathToUrl(file);
     }
@@ -232,7 +232,7 @@ QUrl Application::configFilePath()
 
 QUrl Application::ccConfigFilePath()
 {
-    auto file = Global::instance()->appConfigFilePath(Global::ConfigFile::CustomCommands);
+    auto file = Global::instance()->configFilePath(Global::ConfigFile::CustomCommands);
     if (pathExists(file)) {
         return pathToUrl(file);
     }
@@ -241,7 +241,7 @@ QUrl Application::ccConfigFilePath()
 
 QUrl Application::configFolderPath()
 {
-    auto folder = Global::instance()->appConfigDirPath();
+    auto folder = Global::instance()->configFileParentPath();
     if (pathExists(folder)) {
         return pathToUrl(folder);
     }
@@ -259,7 +259,7 @@ QUrl Application::pathToUrl(const QString &path)
 
 bool Application::configFolderExists()
 {
-    QFileInfo fi(Global::instance()->appConfigDirPath());
+    QFileInfo fi(Global::instance()->configFileParentPath());
     return fi.exists();
 }
 
