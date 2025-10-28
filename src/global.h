@@ -21,7 +21,6 @@ public:
     enum class ConfigFile {
         Main,
         CustomCommands,
-        RecentFiles,
         Shortcuts,
         Database,
     };
@@ -43,7 +42,6 @@ private:
 
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;
-    KSharedConfig::Ptr m_rfConfig;
     KSharedConfig::Ptr m_shortcutsConfig;
 };
 

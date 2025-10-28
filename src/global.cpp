@@ -19,7 +19,6 @@ Global *Global::instance()
 Global::Global()
     : m_config(KSharedConfig::openConfig(u"haruna/haruna.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
     , m_ccConfig(KSharedConfig::openConfig(u"haruna/custom-commands.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
-    , m_rfConfig(KSharedConfig::openConfig(u"haruna/recent-files.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericDataLocation))
     , m_shortcutsConfig(KSharedConfig::openConfig(u"haruna/shortcuts.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
 {
 }
@@ -44,10 +43,6 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
     case ConfigFile::CustomCommands: {
         auto path = QStandardPaths::writableLocation(m_ccConfig->locationType()).append(u"/"_s);
         return path.append(m_ccConfig->name());
-    }
-    case ConfigFile::RecentFiles: {
-        auto path = QStandardPaths::writableLocation(m_rfConfig->locationType()).append(u"/"_s);
-        return path.append(m_rfConfig->name());
     }
     case ConfigFile::Shortcuts: {
         auto path = QStandardPaths::writableLocation(m_shortcutsConfig->locationType()).append(u"/"_s);
