@@ -112,8 +112,8 @@ SettingsBasePage {
                 visible: configFileField.text !== ""
                 text: i18nc("@info:tooltip", "Open parent folder")
                 onTriggered: {
-                    const url = HarunaApp.pathToUrl(Global.configFileParentPath(configFileField.configFile))
-                    Qt.openUrlExternally(url)
+                    const path = Global.configFilePath(configFileField.configFile)
+                    Global.highlightInFileManager(path)
                 }
             }
         ]
