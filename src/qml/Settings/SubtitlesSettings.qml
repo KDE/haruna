@@ -132,10 +132,14 @@ SettingsBasePage {
             }
 
             Button {
-                icon.name: "edit-clear-all"
+                icon.name: "edit-reset"
                 onClicked: {
                     const index = subtitleFont.find(subtitleFont.defaultFamily)
                     subtitleFont.currentIndex = index
+                }
+
+                ToolTip {
+                    text: i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
@@ -227,11 +231,11 @@ SettingsBasePage {
             }
 
             Button {
-                icon.name: "edit-clear-all"
+                icon.name: "edit-reset"
                 onClicked: subtitleColor.text = subtitleColor.defaultColor
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Set default value")
+                    text: i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
@@ -282,11 +286,11 @@ SettingsBasePage {
             }
 
             Button {
-                icon.name: "edit-clear-all"
+                icon.name: "edit-reset"
                 onClicked: shadowColor.text = shadowColor.defaultColor
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Set default value")
+                    text: i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
@@ -357,11 +361,11 @@ SettingsBasePage {
             }
 
             Button {
-                icon.name: "edit-clear-all"
+                icon.name: "edit-reset"
                 onClicked: borderColor.text = borderColor.defaultColor
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Set default value")
+                    text: i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
