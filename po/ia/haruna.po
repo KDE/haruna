@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:42+0000\n"
+"POT-Creation-Date: 2025-10-28 00:42+0000\n"
 "PO-Revision-Date: 2025-09-02 18:10+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -613,50 +613,50 @@ msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:362
+#: src/mpv/mpvitem.cpp:366
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:469 src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Tempore de subtitulo: %1 secundas"
 
-#: src/mpv/mpvitem.cpp:503
+#: src/mpv/mpvitem.cpp:507
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:544
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Necun"
 
-#: src/mpv/mpvitem.cpp:578
+#: src/mpv/mpvitem.cpp:582
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:583
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:585
+#: src/mpv/mpvitem.cpp:589
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Instantanee de schermo: %1"
 
-#: src/mpv/mpvitem.cpp:612
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -664,7 +664,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:645
+#: src/mpv/mpvitem.cpp:649
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -946,22 +946,22 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:435
+#: src/qml/Main.qml:447
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Selige File"
 
-#: src/qml/Main.qml:455
+#: src/qml/Main.qml:467
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Selige File de Subtitulos"
 
-#: src/qml/Main.qml:482
+#: src/qml/Main.qml:494
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aperi"
 
-#: src/qml/Main.qml:485 src/qml/PlayList.qml:384
+#: src/qml/Main.qml:497 src/qml/PlayList.qml:384
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1380,6 +1380,80 @@ msgstr ""
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Passo de volumine"
+
+#: src/qml/Settings/AudioSettings.qml:86
+msgctxt "@title"
+msgid "Replay gain"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:92
+msgctxt "@label:listbox"
+msgid "Mode"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:104
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Disabled"
+msgctxt "@item:listbox replay gain"
+msgid "Disabled"
+msgstr "Dishabilitate"
+
+#: src/qml/Settings/AudioSettings.qml:110
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "&Track"
+msgctxt "@item:listbox replay gain"
+msgid "Track"
+msgstr "&Tracia"
+
+#: src/qml/Settings/AudioSettings.qml:116
+msgctxt "@item:listbox replay gain"
+msgid "Album"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:130
+msgctxt "@info:tooltip"
+msgid ""
+"Adjust volume gain according to <i>replaygain</i> values stored in the file "
+"metadata. If set to album gain, apply album gain if present and fallback to "
+"track gain otherwise."
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:143
+msgctxt "@label:spinbox"
+msgid "Prevent clipping"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:151
+msgctxt "@info:tooltip"
+msgid "Prevent clipping by lowering the gain"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:160
+msgctxt "@label:spinbox"
+msgid "Preamp (dB)"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:181
+#: src/qml/Settings/AudioSettings.qml:214
+msgctxt "@info:tooltip"
+msgid "Reset to default value"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:193
+msgctxt "@label:spinbox"
+msgid "Fallback (dB)"
+msgstr ""
+
+#: src/qml/Settings/AudioSettings.qml:218
+msgctxt "@info:tooltip"
+msgid ""
+"Gain in dB to apply if the file has no replay gain tags.<br><br>This setting "
+"is in effect only when:<br>- the replaygain setting is disabled<br>- the "
+"replaygain setting is enabled and the file has no replaygain metadata<br>If "
+"this is in effect, other replaygain settings are ignored."
+msgstr ""
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -2544,10 +2618,6 @@ msgstr ""
 #~ msgctxt "@option:check"
 #~ msgid "Enabled"
 #~ msgstr "Habilitate"
-
-#~ msgctxt "@option:check"
-#~ msgid "Disabled"
-#~ msgstr "Dishabilitate"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"
