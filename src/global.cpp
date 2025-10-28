@@ -62,6 +62,19 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
 
         return {};
     }
+    case ConfigFile::PlaylistCache: {
+        auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna/"_s);
+
+        QDir dir(path);
+        if (dir.exists()) {
+            return path.append(u"playlist.json"_s);
+        }
+        if (dir.mkpath(path)) {
+            return path.append(u"playlist.json"_s);
+        }
+
+        return {};
+    }
     default:
         return QString();
     }

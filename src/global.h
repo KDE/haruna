@@ -23,6 +23,7 @@ public:
         CustomCommands,
         Shortcuts,
         Database,
+        PlaylistCache,
     };
 
     const QString appConfigDirPath();
