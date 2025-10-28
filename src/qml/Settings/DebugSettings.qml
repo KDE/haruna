@@ -46,6 +46,30 @@ SettingsBasePage {
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
+            text: i18nc("@label:textbox", "Shortcuts config file")
+        }
+
+        ConfigFileField {
+            configFile: Global.ConfigFile.Shortcuts
+
+            Layout.fillWidth: true
+        }
+
+        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
+
+        Label {
+            text: i18nc("@label:textbox", "Playlists config file")
+        }
+
+        ConfigFileField {
+            configFile: Global.ConfigFile.PlaylistCache
+
+            Layout.fillWidth: true
+        }
+
+        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
+
+        Label {
             text: i18nc("@info:usagetip", "If fields are empty that means there is no config file/folder (e.g when using the default settings).")
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             Layout.fillWidth: true
