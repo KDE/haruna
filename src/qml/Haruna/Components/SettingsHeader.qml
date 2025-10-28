@@ -6,7 +6,6 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 
@@ -14,17 +13,12 @@ ColumnLayout {
     id: root
 
     property string text: ""
-    property int topMargin: Kirigami.Units.gridUnit
 
     spacing: 0
 
-    Item {
-        visible: root.topMargin > 0
-        Layout.preferredWidth: 1
-        Layout.preferredHeight: root.topMargin
-    }
-
     RowLayout {
+        Layout.topMargin: Kirigami.Units.gridUnit
+
         Rectangle {
             color: Kirigami.Theme.alternateBackgroundColor
             Layout.preferredWidth: Kirigami.Units.gridUnit

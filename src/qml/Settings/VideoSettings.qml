@@ -81,7 +81,6 @@ SettingsBasePage {
 
         SettingsHeader {
             text: i18nc("@title", "Screenshots")
-            topMargin: 0
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
