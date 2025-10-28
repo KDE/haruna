@@ -16,9 +16,6 @@
 
 #include <KFileItem>
 #include <KFileMetaData/Properties>
-#include <KIO/DeleteOrTrashJob>
-#include <KIO/OpenFileManagerWindowJob>
-#include <KIO/RenameFileDialog>
 
 #include <random>
 
