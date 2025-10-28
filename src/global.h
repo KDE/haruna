@@ -26,7 +26,7 @@ public:
         PlaylistCache,
     };
 
-    const QString appConfigDirPath();
+    const QString appConfigDirPath(ConfigFile configFile = ConfigFile::Main);
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
 
 Q_SIGNALS:

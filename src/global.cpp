@@ -24,14 +24,38 @@ Global::Global()
 {
 }
 
-const QString Global::appConfigDirPath()
+const QString Global::appConfigDirPath(ConfigFile configFile)
 {
-    auto path = QStandardPaths::writableLocation(m_config->locationType()).append(u"/haruna"_s);
-    QFileInfo configFolder(path);
-    if (configFolder.exists()) {
-        return configFolder.absoluteFilePath();
+    switch (configFile) {
+    case ConfigFile::Main: {
+        auto path = QStandardPaths::writableLocation(m_config->locationType()).append(u"/haruna"_s);
+        if (QFileInfo::exists(path)) {
+            return path;
+        }
     }
-    return QString();
+    case ConfigFile::CustomCommands: {
+        auto path = QStandardPaths::writableLocation(m_ccConfig->locationType()).append(u"/haruna"_s);
+        if (QFileInfo::exists(path)) {
+            return path;
+        }
+    }
+    case ConfigFile::Shortcuts: {
+        auto path = QStandardPaths::writableLocation(m_shortcutsConfig->locationType()).append(u"/haruna"_s);
+        if (QFileInfo::exists(path)) {
+            return path;
+        }
+    }
+    case ConfigFile::Database:
+    case ConfigFile::PlaylistCache: {
+        auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna"_s);
+
+        if (QFileInfo::exists(path)) {
+            return path;
+        }
+    }
+    }
+
+    return {};
 }
 
 const QString Global::appConfigFilePath(ConfigFile configFile)
@@ -75,9 +99,9 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
 
         return {};
     }
-    default:
-        return QString();
     }
+
+    return {};
 }
 
 #include "moc_global.cpp"
