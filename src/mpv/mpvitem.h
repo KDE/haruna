@@ -246,7 +246,6 @@ private:
     QUrl m_currentUrl;
     std::unique_ptr<ChaptersModel> m_chaptersModel;
     bool m_finishedLoading{false};
-    QString m_watchLaterPath;
     std::unique_ptr<QTimer> m_saveTimePositionTimer;
 };
 

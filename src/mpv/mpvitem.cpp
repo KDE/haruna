@@ -55,7 +55,6 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_subtitleTracksModel{std::make_unique<TracksModel>()}
     , m_playlists{std::make_unique<PlaylistMultiProxiesModel>()}
     , m_chaptersModel{std::make_unique<ChaptersModel>()}
-    , m_watchLaterPath{QString(Global::instance()->configFileParentPath()).append(u"/watch-later/"_s)}
     , m_saveTimePositionTimer{std::make_unique<QTimer>()}
 {
     Q_EMIT observeProperty(MpvProperties::self()->MediaTitle, MPV_FORMAT_STRING);
@@ -695,13 +694,7 @@ double MpvItem::loadTimePosition()
 void MpvItem::resetTimePosition()
 {
     auto hash = md5(currentUrl().toString());
-    auto watchLaterConfig = QString(m_watchLaterPath).append(hash);
-    QFile f(watchLaterConfig);
-
-    if (f.exists()) {
-        f.remove();
-    }
-    f.close();
+    Database::instance()->deletePlaybackPosition(hash);
 }
 
 void MpvItem::userCommand(const QString &commandString)
