@@ -51,6 +51,7 @@ Database::Database(QObject *parent)
     : QObject(parent)
 {
     const auto dbFile{Global::instance()->appConfigFilePath(Global::ConfigFile::Database)};
+
     auto mangaDB = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"haruna"_s);
     mangaDB.setDatabaseName(dbFile);
     if (mangaDB.open()) {

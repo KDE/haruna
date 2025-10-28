@@ -6,6 +6,7 @@
 
 #include "global.h"
 
+#include <QDir>
 #include <QFileInfo>
 
 using namespace Qt::StringLiterals;
@@ -49,8 +50,17 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
         return path.append(m_shortcutsConfig->name());
     }
     case ConfigFile::Database: {
-        auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/"_s);
-        return path.append(u"haruna/haruna.db"_s);
+        auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna/"_s);
+
+        QDir dir(path);
+        if (dir.exists()) {
+            return path.append(u"haruna.db"_s);
+        }
+        if (dir.mkpath(path)) {
+            return path.append(u"haruna.db"_s);
+        }
+
+        return {};
     }
     default:
         return QString();
