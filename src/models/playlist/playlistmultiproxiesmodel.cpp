@@ -17,6 +17,7 @@
 #include <KLocalizedString>
 
 #include "application.h"
+#include "global.h"
 #include "playlistrenamevalidator.h"
 
 using namespace Qt::StringLiterals;
@@ -304,8 +305,8 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
     }
 
     QString tabName = m_playlistFilterProxyModels[pIndex]->playlistModel()->m_playlistName;
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna/playlists/"_s);
-    QUrl url(configPath + tabName + u".m3u"_s);
+    auto playlistsPath = Global::instance()->playlistsFolder();
+    QUrl url(playlistsPath + tabName + u".m3u"_s);
     if (url.scheme().isEmpty()) {
         url.setScheme(u"file"_s);
     }
@@ -361,8 +362,7 @@ PlaylistFilterProxyModel *PlaylistMultiProxiesModel::getFilterProxy(QString play
 
 QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 {
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    auto filePath = configPath.append(u"/haruna/playlist.json"_s);
+    auto filePath = Global::instance()->configFilePath(Global::ConfigFile::PlaylistCache);
     QUrl url = QUrl::fromLocalFile(filePath);
     QFile cacheFile(url.toString(QUrl::PreferLocalFile));
 
@@ -386,8 +386,7 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 
 QUrl PlaylistMultiProxiesModel::getPlaylistUrl(QString playlistName)
 {
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    auto playlistsPath = configPath.append(u"/haruna/playlists/"_s);
+    auto playlistsPath = Global::instance()->playlistsFolder();
     auto filePath = playlistsPath.append(playlistName).append(u".m3u"_s);
 
     QUrl url = QUrl::fromLocalFile(filePath);
@@ -408,13 +407,13 @@ void PlaylistMultiProxiesModel::saveVisiblePlaylist()
 void PlaylistMultiProxiesModel::savePlaylist(QString playlistName, PlaylistFilterProxyModel *proxyModel)
 {
     // Note: this method saves unfiltered whole list.
-    auto configPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna/playlists/"_s);
+    auto playlistsPath = Global::instance()->playlistsFolder();
 
     if (playlistName == u"Default") {
         return;
     }
 
-    proxyModel->saveInternalPlaylist(configPath, playlistName);
+    proxyModel->saveInternalPlaylist(playlistsPath, playlistName);
     savePlaylistCache();
     Q_EMIT dataChanged(index(m_visibleIndex, 0), index(m_visibleIndex, 0));
 }
