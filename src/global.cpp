@@ -8,6 +8,7 @@
 
 #include <QDir>
 #include <QFileInfo>
+#include <QQmlEngine>
 
 using namespace Qt::StringLiterals;
 
@@ -15,6 +16,12 @@ Global *Global::instance()
 {
     static Global g;
     return &g;
+}
+
+Global *Global::create(QQmlEngine *, QJSEngine *)
+{
+    QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+    return instance();
 }
 
 Global::Global()

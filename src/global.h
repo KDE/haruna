@@ -9,14 +9,22 @@
 #define GLOBALS_H
 
 #include <QStandardPaths>
+#include <QtQml/qqmlregistration.h>
 
 #include <KSharedConfig>
+
+class QQmlEngine;
+class QJSEngine;
 
 class Global : public QObject
 {
     Q_OBJECT
+    QML_SINGLETON
+    QML_ELEMENT
+
 public:
     static Global *instance();
+    static Global *create(QQmlEngine *, QJSEngine *);
 
     enum class ConfigFile {
         Main,
@@ -25,10 +33,11 @@ public:
         Database,
         PlaylistCache,
     };
+    Q_ENUM(ConfigFile)
 
-    const QString configFileParentPath(ConfigFile configFile = ConfigFile::Main);
-    const QString configFilePath(ConfigFile configFile = ConfigFile::Main);
-    const QString playlistsFolder();
+    Q_INVOKABLE const QString configFileParentPath(ConfigFile configFile = ConfigFile::Main);
+    Q_INVOKABLE const QString configFilePath(ConfigFile configFile = ConfigFile::Main);
+    Q_INVOKABLE const QString playlistsFolder();
 
 Q_SIGNALS:
     void error(const QString &message);
