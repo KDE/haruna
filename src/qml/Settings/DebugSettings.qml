@@ -110,7 +110,7 @@ SettingsBasePage {
             Kirigami.Action {
                 icon.name: "document-open-folder"
                 visible: configFileField.text !== ""
-                text: i18nc("@info:tooltip", "Open parent folder")
+                text: i18nc("@info:tooltip", "Open containing folder")
                 onTriggered: {
                     const path = Global.configFilePath(configFileField.configFile)
                     Global.highlightInFileManager(path)
