@@ -21,37 +21,13 @@ SettingsBasePage {
     ColumnLayout {
         id: content
 
-        Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
-
         Label {
             text: i18nc("@label:textbox", "Config file")
         }
 
-        Kirigami.ActionTextField {
-            id: configFileField
+        ConfigFileField {
+            configFile: Global.ConfigFile.Main
 
-            text: Global.configFilePath(Global.ConfigFile.Main)
-            readOnly: true
-            rightActions: [
-                Kirigami.Action {
-                    icon.name: "document-open"
-                    visible: configFileField.text !== ""
-                    text: i18nc("@info:tooltip", "Open config file")
-                    onTriggered: {
-                        const url = HarunaApp.pathToUrl(Global.configFilePath(Global.ConfigFile.Main))
-                        Qt.openUrlExternally(url)
-                    }
-                },
-                Kirigami.Action {
-                    icon.name: "document-open-folder"
-                    visible: configFileField.text !== ""
-                    text: i18nc("@info:tooltip", "Open parent folder")
-                    onTriggered: {
-                        const url = HarunaApp.pathToUrl(Global.configFileParentPath(Global.ConfigFile.Main))
-                        Qt.openUrlExternally(url)
-                    }
-                }
-            ]
             Layout.fillWidth: true
         }
 
@@ -61,31 +37,9 @@ SettingsBasePage {
             text: i18nc("@label:textbox", "Custom commands config file")
         }
 
-        Kirigami.ActionTextField {
-            id: ccConfigFileField
+        ConfigFileField {
+            configFile: Global.ConfigFile.CustomCommands
 
-            text: Global.configFilePath(Global.ConfigFile.CustomCommands)
-            readOnly: true
-            rightActions: [
-                Kirigami.Action {
-                    icon.name: "document-open"
-                    visible: ccConfigFileField.text !== ""
-                    text: i18nc("@info:tooltip", "Open custom commands config file")
-                    onTriggered: {
-                        const url = HarunaApp.pathToUrl(Global.configFilePath(Global.ConfigFile.CustomCommands))
-                        Qt.openUrlExternally(url)
-                    }
-                },
-                Kirigami.Action {
-                    icon.name: "document-open-folder"
-                    visible: ccConfigFileField.text !== ""
-                    text: i18nc("@info:tooltip", "Open parent folder")
-                    onTriggered: {
-                        const url = HarunaApp.pathToUrl(Global.configFileParentPath(Global.ConfigFile.CustomCommands))
-                        Qt.openUrlExternally(url)
-                    }
-                }
-            ]
             Layout.fillWidth: true
         }
 
@@ -109,5 +63,35 @@ SettingsBasePage {
                 InformationSettings.save()
             }
         }
+    }
+
+
+    component ConfigFileField: Kirigami.ActionTextField {
+        id: configFileField
+
+        property int configFile: Global.ConfigFile.Main
+
+        text: Global.configFilePath(configFile)
+        readOnly: true
+        rightActions: [
+            Kirigami.Action {
+                icon.name: "document-open"
+                visible: configFileField.text !== ""
+                text: i18nc("@info:tooltip", "Open file")
+                onTriggered: {
+                    const url = HarunaApp.pathToUrl(Global.configFilePath(configFileField.configFile))
+                    Qt.openUrlExternally(url)
+                }
+            },
+            Kirigami.Action {
+                icon.name: "document-open-folder"
+                visible: configFileField.text !== ""
+                text: i18nc("@info:tooltip", "Open parent folder")
+                onTriggered: {
+                    const url = HarunaApp.pathToUrl(Global.configFileParentPath(configFileField.configFile))
+                    Qt.openUrlExternally(url)
+                }
+            }
+        ]
     }
 }
