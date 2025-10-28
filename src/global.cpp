@@ -104,4 +104,20 @@ const QString Global::appConfigFilePath(ConfigFile configFile)
     return {};
 }
 
+const QString Global::playlistsFolder()
+{
+    auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    path.append(u"/haruna/playlists"_s);
+
+    QDir dir(path);
+    if (dir.exists()) {
+        return path;
+    }
+    if (dir.mkpath(path)) {
+        return path;
+    }
+
+    return {};
+}
+
 #include "moc_global.cpp"

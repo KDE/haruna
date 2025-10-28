@@ -28,6 +28,7 @@ public:
 
     const QString appConfigDirPath(ConfigFile configFile = ConfigFile::Main);
     const QString appConfigFilePath(ConfigFile configFile = ConfigFile::Main);
+    const QString playlistsFolder();
 
 Q_SIGNALS:
     void error(const QString &message);
