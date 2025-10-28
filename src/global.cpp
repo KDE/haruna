@@ -10,6 +10,8 @@
 #include <QFileInfo>
 #include <QQmlEngine>
 
+#include <KIO/OpenFileManagerWindowJob>
+
 using namespace Qt::StringLiterals;
 
 Global *Global::instance()
@@ -125,6 +127,11 @@ const QString Global::playlistsFolder()
     }
 
     return {};
+}
+
+void Global::highlightInFileManager(const QString &path)
+{
+    KIO::highlightInFileManager({QUrl::fromUserInput(path)});
 }
 
 #include "moc_global.cpp"

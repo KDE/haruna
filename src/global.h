@@ -38,6 +38,7 @@ public:
     Q_INVOKABLE const QString configFileParentPath(ConfigFile configFile = ConfigFile::Main);
     Q_INVOKABLE const QString configFilePath(ConfigFile configFile = ConfigFile::Main);
     Q_INVOKABLE const QString playlistsFolder();
+    Q_INVOKABLE void highlightInFileManager(const QString &path);
 
 Q_SIGNALS:
     void error(const QString &message);
