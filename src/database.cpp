@@ -13,7 +13,7 @@
 #include <QSqlQuery>
 #include <QStringBuilder>
 
-#include "global.h"
+#include "pathutils.h"
 #include "recentfile.h"
 
 using namespace Qt::StringLiterals;
@@ -50,7 +50,7 @@ Database *Database::create(QQmlEngine *, QJSEngine *)
 Database::Database(QObject *parent)
     : QObject(parent)
 {
-    const auto dbFile{Global::instance()->configFilePath(Global::ConfigFile::Database)};
+    const auto dbFile{PathUtils::instance()->configFilePath(PathUtils::ConfigFile::Database)};
 
     auto mangaDB = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"haruna"_s);
     mangaDB.setDatabaseName(dbFile);

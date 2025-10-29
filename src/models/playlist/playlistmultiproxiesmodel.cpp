@@ -15,7 +15,7 @@
 #include <KLocalizedString>
 
 #include "application.h"
-#include "global.h"
+#include "pathutils.h"
 #include "playlistrenamevalidator.h"
 
 using namespace Qt::StringLiterals;
@@ -303,7 +303,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
     }
 
     QString tabName = m_playlistFilterProxyModels[pIndex]->playlistModel()->m_playlistName;
-    auto playlistsPath = Global::instance()->playlistsFolder();
+    auto playlistsPath = PathUtils::instance()->playlistsFolder();
     QUrl url(playlistsPath + tabName + u".m3u"_s);
     if (url.scheme().isEmpty()) {
         url.setScheme(u"file"_s);
@@ -360,7 +360,7 @@ PlaylistFilterProxyModel *PlaylistMultiProxiesModel::getFilterProxy(QString play
 
 QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 {
-    auto filePath = Global::instance()->configFilePath(Global::ConfigFile::PlaylistCache);
+    auto filePath = PathUtils::instance()->configFilePath(PathUtils::ConfigFile::PlaylistCache);
     QUrl url = QUrl::fromLocalFile(filePath);
     QFile cacheFile(url.toString(QUrl::PreferLocalFile));
 
@@ -384,7 +384,7 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 
 QUrl PlaylistMultiProxiesModel::getPlaylistUrl(QString playlistName)
 {
-    auto playlistsPath = Global::instance()->playlistsFolder();
+    auto playlistsPath = PathUtils::instance()->playlistsFolder();
     auto filePath = playlistsPath.append(playlistName).append(u".m3u"_s);
 
     QUrl url = QUrl::fromLocalFile(filePath);
@@ -405,7 +405,7 @@ void PlaylistMultiProxiesModel::saveVisiblePlaylist()
 void PlaylistMultiProxiesModel::savePlaylist(QString playlistName, PlaylistFilterProxyModel *proxyModel)
 {
     // Note: this method saves unfiltered whole list.
-    auto playlistsPath = Global::instance()->playlistsFolder();
+    auto playlistsPath = PathUtils::instance()->playlistsFolder();
 
     if (playlistName == u"Default") {
         return;

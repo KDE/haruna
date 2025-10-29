@@ -11,6 +11,7 @@ import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
 SettingsBasePage {
@@ -26,7 +27,7 @@ SettingsBasePage {
         }
 
         ConfigFileField {
-            configFile: Global.ConfigFile.Main
+            configFile: PathUtils.ConfigFile.Main
 
             Layout.fillWidth: true
         }
@@ -38,7 +39,7 @@ SettingsBasePage {
         }
 
         ConfigFileField {
-            configFile: Global.ConfigFile.CustomCommands
+            configFile: PathUtils.ConfigFile.CustomCommands
 
             Layout.fillWidth: true
         }
@@ -50,7 +51,7 @@ SettingsBasePage {
         }
 
         ConfigFileField {
-            configFile: Global.ConfigFile.Shortcuts
+            configFile: PathUtils.ConfigFile.Shortcuts
 
             Layout.fillWidth: true
         }
@@ -62,7 +63,7 @@ SettingsBasePage {
         }
 
         ConfigFileField {
-            configFile: Global.ConfigFile.PlaylistCache
+            configFile: PathUtils.ConfigFile.PlaylistCache
 
             Layout.fillWidth: true
         }
@@ -93,9 +94,9 @@ SettingsBasePage {
     component ConfigFileField: Kirigami.ActionTextField {
         id: configFileField
 
-        property int configFile: Global.ConfigFile.Main
+        property int configFile: PathUtils.ConfigFile.Main
 
-        text: Global.configFilePath(configFile)
+        text: PathUtils.configFilePath(configFile)
         readOnly: true
         rightActions: [
             Kirigami.Action {
@@ -103,7 +104,7 @@ SettingsBasePage {
                 visible: configFileField.text !== ""
                 text: i18nc("@info:tooltip", "Open file")
                 onTriggered: {
-                    const url = HarunaApp.pathToUrl(Global.configFilePath(configFileField.configFile))
+                    const url = HarunaApp.pathToUrl(PathUtils.configFilePath(configFileField.configFile))
                     Qt.openUrlExternally(url)
                 }
             },
@@ -112,8 +113,8 @@ SettingsBasePage {
                 visible: configFileField.text !== ""
                 text: i18nc("@info:tooltip", "Open containing folder")
                 onTriggered: {
-                    const path = Global.configFilePath(configFileField.configFile)
-                    Global.highlightInFileManager(path)
+                    const path = PathUtils.configFilePath(configFileField.configFile)
+                    PathUtils.highlightInFileManager(path)
                 }
             }
         ]

@@ -21,7 +21,7 @@
 #include <KIO/RenameFileDialog>
 
 #include "application.h"
-#include "global.h"
+#include "pathutils.h"
 #include "playlistsettings.h"
 
 using namespace Qt::StringLiterals;
@@ -151,7 +151,7 @@ void PlaylistFilterProxyModel::saveM3uFile(const QString &path)
 void PlaylistFilterProxyModel::highlightInFileManager(uint row)
 {
     QString path = data(index(row, 0), PlaylistModel::PathRole).toString();
-    Global::instance()->highlightInFileManager(path);
+    PathUtils::instance()->highlightInFileManager(path);
 }
 
 void PlaylistFilterProxyModel::removeItem(uint row)

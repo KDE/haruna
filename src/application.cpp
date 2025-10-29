@@ -35,7 +35,7 @@
 
 #include "audiosettings.h"
 #include "generalsettings.h"
-#include "global.h"
+#include "pathutils.h"
 #include "haruna-version.h"
 #include "informationsettings.h"
 #include "mousesettings.h"
@@ -108,7 +108,7 @@ Application::Application()
 
     KCrash::initialize();
 
-    connect(Global::instance(), &Global::error, this, &Application::error);
+    connect(PathUtils::instance(), &PathUtils::error, this, &Application::error);
 }
 
 Application::~Application()
@@ -228,12 +228,6 @@ QUrl Application::pathToUrl(const QString &path)
         return QUrl();
     }
     return url;
-}
-
-bool Application::configFolderExists()
-{
-    QFileInfo fi(Global::instance()->configFileParentPath());
-    return fi.exists();
 }
 
 QString Application::version()

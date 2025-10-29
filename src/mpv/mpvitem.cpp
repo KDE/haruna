@@ -25,9 +25,9 @@
 #include "config-haruna.h"
 #include "database.h"
 #include "generalsettings.h"
-#include "global.h"
 #include "lockmanager.h"
 #include "mpvproperties.h"
+#include "pathutils.h"
 #include "playbacksettings.h"
 #include "playlistfilterproxymodel.h"
 #include "playlistmodel.h"
@@ -104,7 +104,7 @@ MpvItem::MpvItem(QQuickItem *parent)
 
     // run user commands
     KSharedConfig::Ptr m_customPropsConfig;
-    QString ccConfig = Global::instance()->configFilePath(Global::ConfigFile::CustomCommands);
+    QString ccConfig = PathUtils::instance()->configFilePath(PathUtils::ConfigFile::CustomCommands);
     m_customPropsConfig = KSharedConfig::openConfig(ccConfig, KConfig::SimpleConfig);
     QStringList groups = m_customPropsConfig->groupList();
     for (const QString &_group : std::as_const(groups)) {

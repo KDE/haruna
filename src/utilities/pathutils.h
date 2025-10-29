@@ -16,15 +16,15 @@
 class QQmlEngine;
 class QJSEngine;
 
-class Global : public QObject
+class PathUtils : public QObject
 {
     Q_OBJECT
     QML_SINGLETON
     QML_ELEMENT
 
 public:
-    static Global *instance();
-    static Global *create(QQmlEngine *, QJSEngine *);
+    static PathUtils *instance();
+    static PathUtils *create(QQmlEngine *, QJSEngine *);
 
     enum class ConfigFile {
         Main,
@@ -44,13 +44,13 @@ Q_SIGNALS:
     void error(const QString &message);
 
 private:
-    Global();
-    ~Global() = default;
+    PathUtils();
+    ~PathUtils() = default;
 
-    Global(const Global &) = delete;
-    Global &operator=(const Global &) = delete;
-    Global(Global &&) = delete;
-    Global &operator=(Global &&) = delete;
+    PathUtils(const PathUtils &) = delete;
+    PathUtils &operator=(const PathUtils &) = delete;
+    PathUtils(PathUtils &&) = delete;
+    PathUtils &operator=(PathUtils &&) = delete;
 
     KSharedConfig::Ptr m_config;
     KSharedConfig::Ptr m_ccConfig;

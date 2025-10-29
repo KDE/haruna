@@ -16,7 +16,6 @@ target_sources(haruna
     application.h application.cpp
     database.h database.cpp
     framedecoder.h framedecoder.cpp
-    global.h global.cpp
     lockmanager.h lockmanager.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp
@@ -61,6 +60,7 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     )
 endif()
 
+add_subdirectory(utilities)
 add_subdirectory(settings)
 add_subdirectory(youtube)
 
@@ -172,6 +172,7 @@ target_link_libraries(haruna PRIVATE
     ${AVCODEC_LIBRARIES}
     ${SWSCALE_LIBRARIES}
 
+    utilitiesplugin
     settingsplugin
     youtubeplugin
 )

@@ -8,11 +8,11 @@
 
 #include <KConfigGroup>
 
-#include "global.h"
+#include "pathutils.h"
 
 MouseActionsModel::MouseActionsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_config(KSharedConfig::openConfig(Global::instance()->configFilePath()))
+    , m_config(KSharedConfig::openConfig(PathUtils::instance()->configFilePath()))
 {
     auto configGroup{m_config->group(u"Mouse"_s)};
     const auto keys{configGroup.keyList()};

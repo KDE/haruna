@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "global.h"
+#include "pathutils.h"
 
 #include <QDir>
 #include <QFileInfo>
@@ -14,26 +14,26 @@
 
 using namespace Qt::StringLiterals;
 
-Global *Global::instance()
+PathUtils *PathUtils::instance()
 {
-    static Global g;
+    static PathUtils g;
     return &g;
 }
 
-Global *Global::create(QQmlEngine *, QJSEngine *)
+PathUtils *PathUtils::create(QQmlEngine *, QJSEngine *)
 {
     QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
     return instance();
 }
 
-Global::Global()
+PathUtils::PathUtils()
     : m_config(KSharedConfig::openConfig(u"haruna/haruna.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
     , m_ccConfig(KSharedConfig::openConfig(u"haruna/custom-commands.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
     , m_shortcutsConfig(KSharedConfig::openConfig(u"haruna/shortcuts.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
 {
 }
 
-const QString Global::configFileParentPath(ConfigFile configFile)
+const QString PathUtils::configFileParentPath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
@@ -67,7 +67,7 @@ const QString Global::configFileParentPath(ConfigFile configFile)
     return {};
 }
 
-const QString Global::configFilePath(ConfigFile configFile)
+const QString PathUtils::configFilePath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
@@ -113,7 +113,7 @@ const QString Global::configFilePath(ConfigFile configFile)
     return {};
 }
 
-const QString Global::playlistsFolder()
+const QString PathUtils::playlistsFolder()
 {
     auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     path.append(u"/haruna/playlists"_s);
@@ -129,9 +129,9 @@ const QString Global::playlistsFolder()
     return {};
 }
 
-void Global::highlightInFileManager(const QString &path)
+void PathUtils::highlightInFileManager(const QString &path)
 {
     KIO::highlightInFileManager({QUrl::fromUserInput(path)});
 }
 
-#include "moc_global.cpp"
+#include "moc_pathutils.cpp"
