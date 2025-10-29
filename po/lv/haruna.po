@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:42+0000\n"
+"POT-Creation-Date: 2025-10-29 00:42+0000\n"
 "PO-Revision-Date: 2025-09-24 15:19+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -570,56 +570,56 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Norādīt jaunu"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:161
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:162
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "Nav atļauti repertuāri ar vienādiem nosaukumiem: %1"
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:365
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Nevarēja atskaņot: %1"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Subtitru laiks: %1 sekundes"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:506
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Datne nepastāv: %1"
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nav"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:581
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekrānattēls neizdevās"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:586
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekrānattēls ir uzņemts"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:588
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekrānattēls: %1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:615
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -629,7 +629,7 @@ msgstr ""
 "Nav atrasts video celiņš. Iespējams, video celiņu neizdodas atkodēt/atskaņot "
 "trūkstoša kodeka dēļ."
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:648
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1383,6 +1383,10 @@ msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
+#: src/qml/Settings/SubtitlesSettings.qml:142
+#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:368
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Set default value"
@@ -1430,35 +1434,31 @@ msgstr "&Pievienot"
 
 #: src/qml/Settings/DebugSettings.qml:25
 msgctxt "@label:textbox"
-msgid "Config folder"
-msgstr "Konfigurācijas mape"
-
-#: src/qml/Settings/DebugSettings.qml:37
-msgctxt "@info:tooltip"
-msgid "Open config folder"
-msgstr "Atvērt konfigurācijas mapi"
-
-#: src/qml/Settings/DebugSettings.qml:49
-msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "Konfigurācijas datne"
 
-#: src/qml/Settings/DebugSettings.qml:61
-msgctxt "@info:tooltip"
-msgid "Open config file"
-msgstr "Atvērt konfigurācijas datni"
-
-#: src/qml/Settings/DebugSettings.qml:73
+#: src/qml/Settings/DebugSettings.qml:37
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "Pielāgoto komandu konfigurācijas datne"
 
-#: src/qml/Settings/DebugSettings.qml:85
-msgctxt "@info:tooltip"
-msgid "Open custom commands config file"
-msgstr "Atvērt pielāgoto komandu konfigurācijas datni"
+#: src/qml/Settings/DebugSettings.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Shortcuts config file"
+msgstr "Atvērt konfigurācijas datni"
 
-#: src/qml/Settings/DebugSettings.qml:97
+#: src/qml/Settings/DebugSettings.qml:61
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Playlists config file"
+msgstr "Atvērt konfigurācijas datni"
+
+#: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
@@ -1467,10 +1467,26 @@ msgstr ""
 "Ja lauki ir tukši, tas nozīmē, ka nav konfigurācijas datnes/mapes (piemēram, "
 "izmantojot noklusējuma iestatījumus)."
 
-#: src/qml/Settings/DebugSettings.qml:105
+#: src/qml/Settings/DebugSettings.qml:81
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "Ieslēgt „mpv“ žurnalēšanu"
+
+#: src/qml/Settings/DebugSettings.qml:104
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open file"
+msgstr "Atvērt datni"
+
+#: src/qml/Settings/DebugSettings.qml:113
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open Containing Folder"
+msgctxt "@info:tooltip"
+msgid "Open containing folder"
+msgstr "Atvērt saturošo mapi"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -2432,60 +2448,53 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Fonta saime"
 
-#: src/qml/Settings/SubtitlesSettings.qml:144
+#: src/qml/Settings/SubtitlesSettings.qml:148
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Fonta izmērs"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:163
 msgctxt "@label"
 msgid "Font style"
 msgstr "Fonta stils"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:168
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Treknraksts"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:179
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Kursīvs"
 
-#: src/qml/Settings/SubtitlesSettings.qml:184
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Fonta krāsa"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
-#: src/qml/Settings/SubtitlesSettings.qml:289
-#: src/qml/Settings/SubtitlesSettings.qml:364
-msgctxt "@info:tooltip"
-msgid "Set default value"
-msgstr "Iestatīt noklusējuma vērtību"
-
-#: src/qml/Settings/SubtitlesSettings.qml:240
+#: src/qml/Settings/SubtitlesSettings.qml:244
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Ēnas krāsa"
 
-#: src/qml/Settings/SubtitlesSettings.qml:295
+#: src/qml/Settings/SubtitlesSettings.qml:299
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Ēnas nobīde"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:385
+#: src/qml/Settings/SubtitlesSettings.qml:314
+#: src/qml/Settings/SubtitlesSettings.qml:389
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Norādiet 0 (nulle), lai izslēgtu."
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:319
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Apmales krāsa"
 
-#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:374
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Apmales platums"
@@ -2632,6 +2641,22 @@ msgstr ""
 "Neizdevās izgūt repertuāru ar ID: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Config folder"
+#~ msgstr "Konfigurācijas mape"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open config folder"
+#~ msgstr "Atvērt konfigurācijas mapi"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open custom commands config file"
+#~ msgstr "Atvērt pielāgoto komandu konfigurācijas datni"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set default value"
+#~ msgstr "Iestatīt noklusējuma vērtību"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Remove mouse button action"

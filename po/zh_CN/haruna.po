@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:42+0000\n"
+"POT-Creation-Date: 2025-10-29 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -567,56 +567,56 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "重新分配"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:161
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:162
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "不允许存在同名播放列表：%1"
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:365
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕偏移：%1 秒"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:506
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "文件不存在：%1"
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:581
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "截图失败"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:586
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图已保存"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:588
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "截图：%1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:615
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -625,7 +625,7 @@ msgid ""
 msgstr ""
 "没有检测到视频轨道。这大概率是因为缺少编解码器而导致视频轨道无法被解码/播放。"
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:648
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1376,6 +1376,10 @@ msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
+#: src/qml/Settings/SubtitlesSettings.qml:142
+#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:368
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Set default value"
@@ -1423,45 +1427,57 @@ msgstr "添加(&A)"
 
 #: src/qml/Settings/DebugSettings.qml:25
 msgctxt "@label:textbox"
-msgid "Config folder"
-msgstr "配置文件夹"
-
-#: src/qml/Settings/DebugSettings.qml:37
-msgctxt "@info:tooltip"
-msgid "Open config folder"
-msgstr "打开配置文件夹"
-
-#: src/qml/Settings/DebugSettings.qml:49
-msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:61
-msgctxt "@info:tooltip"
-msgid "Open config file"
-msgstr "打开配置文件"
-
-#: src/qml/Settings/DebugSettings.qml:73
+#: src/qml/Settings/DebugSettings.qml:37
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "自定义命令配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:85
-msgctxt "@info:tooltip"
-msgid "Open custom commands config file"
-msgstr "打开自定义命令配置文件"
+#: src/qml/Settings/DebugSettings.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Shortcuts config file"
+msgstr "打开配置文件"
 
-#: src/qml/Settings/DebugSettings.qml:97
+#: src/qml/Settings/DebugSettings.qml:61
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Playlists config file"
+msgstr "打开配置文件"
+
+#: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr "如果字段为空，意味着没有创建配置文件/文件夹 (例如在使用默认设置时)。"
 
-#: src/qml/Settings/DebugSettings.qml:105
+#: src/qml/Settings/DebugSettings.qml:81
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "启用 mpv 日志记录"
+
+#: src/qml/Settings/DebugSettings.qml:104
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open file"
+msgstr "打开文件"
+
+#: src/qml/Settings/DebugSettings.qml:113
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open Containing Folder"
+msgctxt "@info:tooltip"
+msgid "Open containing folder"
+msgstr "打开所在文件夹"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -2374,60 +2390,53 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "字体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:144
+#: src/qml/Settings/SubtitlesSettings.qml:148
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "字体大小"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:163
 msgctxt "@label"
 msgid "Font style"
 msgstr "字体样式"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:168
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "粗体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:179
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "斜体"
 
-#: src/qml/Settings/SubtitlesSettings.qml:184
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "字体颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
-#: src/qml/Settings/SubtitlesSettings.qml:289
-#: src/qml/Settings/SubtitlesSettings.qml:364
-msgctxt "@info:tooltip"
-msgid "Set default value"
-msgstr "设置为默认值"
-
-#: src/qml/Settings/SubtitlesSettings.qml:240
+#: src/qml/Settings/SubtitlesSettings.qml:244
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "阴影颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:295
+#: src/qml/Settings/SubtitlesSettings.qml:299
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "阴影偏移"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:385
+#: src/qml/Settings/SubtitlesSettings.qml:314
+#: src/qml/Settings/SubtitlesSettings.qml:389
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "设置为 0 以禁用。"
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:319
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "边框颜色"
 
-#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:374
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "边框宽度"
@@ -2564,6 +2573,22 @@ msgstr ""
 "无法获取此 ID 的播放列表：%1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Config folder"
+#~ msgstr "配置文件夹"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open config folder"
+#~ msgstr "打开配置文件夹"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open custom commands config file"
+#~ msgstr "打开自定义命令配置文件"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set default value"
+#~ msgstr "设置为默认值"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Remove mouse button action"

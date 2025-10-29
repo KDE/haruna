@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:42+0000\n"
-"PO-Revision-Date: 2025-10-22 07:04+0200\n"
+"POT-Creation-Date: 2025-10-29 00:42+0000\n"
+"PO-Revision-Date: 2025-10-28 07:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -571,56 +571,56 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Predodeli"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:161
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:162
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "Seznami predvajanja z istim imenom niso dovoljeni: %1"
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:365
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ni bilo mogoče predvajati: %1"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Čas podnapisa: %1 sekund"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:506
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Datoteka ne obstaja: %1"
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Noben"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:581
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Posnetek zaslona ni uspel"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:586
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Posnetek zaslona narejen"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:588
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Posnetek zaslona: %1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:615
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -630,7 +630,7 @@ msgstr ""
 "Ni bilo zaznanega video posnetka, najverjetneje video posnetka ni mogoče "
 "dekodirati/predvajati zaradi manjkajočih kodirnikov"
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:648
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1320,33 +1320,27 @@ msgstr "Korak glasnosti"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Ojačanje pri ponovnem predvajanju"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Način"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "Posnetek"
+msgstr "Sled"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1355,35 +1349,40 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Prilagodi ojačanje glasnosti glede na vrednosti <i>ojačanje ponovnega "
+"predvajanja</i>, shranjene v metapodatkih datoteke. Če je nastavljeno na "
+"ojačanje albuma, uporabi ojačanje albuma, če je prisotno, sicer pa uporabi "
+"ojačanje sledi."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Prepreči clipping"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Prepreči clipping z znižanjem ojačenja"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Predojačevalnik (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
+#: src/qml/Settings/SubtitlesSettings.qml:142
+#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:368
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Nastavi privzeto vrednost"
+msgstr "Nastavi na privzeto vrednost"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Fallback (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1393,6 +1392,12 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Ojačanje v dB, ki se uporabi, če datoteka nima oznak za ojačanje ponovnega "
+"predvajanja.<br><br>Ta nastavitev velja le, če:<br>- je nastavitev ojačenja "
+"ponovnega predvajanja onemogočena<br>- je nastavitev ojačenja ponovnega "
+"predvajanja omogočena in datoteka nima metapodatkov o ojačenju ponovnega "
+"predvajanja<br>Če je to v veljavi, se druge nastavitve ojačenja ponovnega "
+"predvajanja prezrejo."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1420,35 +1425,31 @@ msgstr "Dod&aj"
 
 #: src/qml/Settings/DebugSettings.qml:25
 msgctxt "@label:textbox"
-msgid "Config folder"
-msgstr "Mapa konfiguracije"
-
-#: src/qml/Settings/DebugSettings.qml:37
-msgctxt "@info:tooltip"
-msgid "Open config folder"
-msgstr "Odpri mapo config"
-
-#: src/qml/Settings/DebugSettings.qml:49
-msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "Datoteka config"
 
-#: src/qml/Settings/DebugSettings.qml:61
-msgctxt "@info:tooltip"
-msgid "Open config file"
-msgstr "Odpri datoteko config"
-
-#: src/qml/Settings/DebugSettings.qml:73
+#: src/qml/Settings/DebugSettings.qml:37
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "Ukazi po meri v datoteki config"
 
-#: src/qml/Settings/DebugSettings.qml:85
-msgctxt "@info:tooltip"
-msgid "Open custom commands config file"
-msgstr "Odpri datoteko config ukazov po meri"
+#: src/qml/Settings/DebugSettings.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Shortcuts config file"
+msgstr "Odpri datoteko config"
 
-#: src/qml/Settings/DebugSettings.qml:97
+#: src/qml/Settings/DebugSettings.qml:61
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Playlists config file"
+msgstr "Odpri datoteko config"
+
+#: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
@@ -1457,10 +1458,26 @@ msgstr ""
 "Če so polja prazna, to pomeni, da ni datoteke/mape config (npr. kadar "
 "uporabljate privzete nastavitve)."
 
-#: src/qml/Settings/DebugSettings.qml:105
+#: src/qml/Settings/DebugSettings.qml:81
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "Omogoči zapisovanje dnevnika mpv"
+
+#: src/qml/Settings/DebugSettings.qml:104
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open file"
+msgstr "Odpri datoteko"
+
+#: src/qml/Settings/DebugSettings.qml:113
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open Containing Folder"
+msgctxt "@info:tooltip"
+msgid "Open containing folder"
+msgstr "Odpri vsebovano mapo"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -2411,60 +2428,53 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Družina pisav"
 
-#: src/qml/Settings/SubtitlesSettings.qml:144
+#: src/qml/Settings/SubtitlesSettings.qml:148
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Velikost pisave"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:163
 msgctxt "@label"
 msgid "Font style"
 msgstr "Slog pisave"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:168
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Krepko"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:179
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Ležeče"
 
-#: src/qml/Settings/SubtitlesSettings.qml:184
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Barva pisave"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
-#: src/qml/Settings/SubtitlesSettings.qml:289
-#: src/qml/Settings/SubtitlesSettings.qml:364
-msgctxt "@info:tooltip"
-msgid "Set default value"
-msgstr "Nastavi privzeto vrednost"
-
-#: src/qml/Settings/SubtitlesSettings.qml:240
+#: src/qml/Settings/SubtitlesSettings.qml:244
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Barva sence"
 
-#: src/qml/Settings/SubtitlesSettings.qml:295
+#: src/qml/Settings/SubtitlesSettings.qml:299
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Odmik sence"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:385
+#: src/qml/Settings/SubtitlesSettings.qml:314
+#: src/qml/Settings/SubtitlesSettings.qml:389
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Vnesite 0 (nič) za onemogočenje."
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:319
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Barva roba"
 
-#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:374
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Širina roba"
@@ -2610,6 +2620,22 @@ msgstr ""
 "Ni bilo mogoče pridobiti seznama predvajanja z določilnikom: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Config folder"
+#~ msgstr "Mapa konfiguracije"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open config folder"
+#~ msgstr "Odpri mapo config"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open custom commands config file"
+#~ msgstr "Odpri datoteko config ukazov po meri"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set default value"
+#~ msgstr "Nastavi privzeto vrednost"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Remove mouse button action"

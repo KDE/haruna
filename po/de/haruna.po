@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:42+0000\n"
+"POT-Creation-Date: 2025-10-29 00:42+0000\n"
 "PO-Revision-Date: 2025-07-18 11:54+0200\n"
 "Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -570,56 +570,56 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Neu zuweisen"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:161
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:162
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:365
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kann „%1“ nicht abspielen"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Untertitel-Timing: %1 Sekunden"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:506
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Keiner"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:581
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Bildschirmfoto fehlgeschlagen"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:586
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Bildschirmfoto erstellt"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:588
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Bildschirmfoto: %1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:615
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -627,7 +627,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:648
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1416,6 +1416,10 @@ msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
+#: src/qml/Settings/SubtitlesSettings.qml:142
+#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:368
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Set default value"
@@ -1461,45 +1465,57 @@ msgstr "&Hinzufügen"
 
 #: src/qml/Settings/DebugSettings.qml:25
 msgctxt "@label:textbox"
-msgid "Config folder"
-msgstr "Einstellungsordner"
-
-#: src/qml/Settings/DebugSettings.qml:37
-msgctxt "@info:tooltip"
-msgid "Open config folder"
-msgstr "Einstellungsordner öffnen"
-
-#: src/qml/Settings/DebugSettings.qml:49
-msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "Einstellungsdatei"
 
-#: src/qml/Settings/DebugSettings.qml:61
-msgctxt "@info:tooltip"
-msgid "Open config file"
-msgstr "Einstellungsdatei öffnen"
-
-#: src/qml/Settings/DebugSettings.qml:73
+#: src/qml/Settings/DebugSettings.qml:37
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "Konfigurationsdatei für benutzerdefinierte Befehle"
 
-#: src/qml/Settings/DebugSettings.qml:85
-msgctxt "@info:tooltip"
-msgid "Open custom commands config file"
-msgstr "Konfigurationsdatei für benutzerdefinierte Befehle öffnen"
+#: src/qml/Settings/DebugSettings.qml:49
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Shortcuts config file"
+msgstr "Einstellungsdatei öffnen"
 
-#: src/qml/Settings/DebugSettings.qml:97
+#: src/qml/Settings/DebugSettings.qml:61
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Open config file"
+msgctxt "@label:textbox"
+msgid "Playlists config file"
+msgstr "Einstellungsdatei öffnen"
+
+#: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
 
-#: src/qml/Settings/DebugSettings.qml:105
+#: src/qml/Settings/DebugSettings.qml:81
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "mpv-Protokoll aktivieren"
+
+#: src/qml/Settings/DebugSettings.qml:104
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open file"
+msgstr "Datei öffnen"
+
+#: src/qml/Settings/DebugSettings.qml:113
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open Containing Folder"
+msgctxt "@info:tooltip"
+msgid "Open containing folder"
+msgstr "Ordner mit diesem Inhalt öffnen"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -2445,60 +2461,53 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Schriftart"
 
-#: src/qml/Settings/SubtitlesSettings.qml:144
+#: src/qml/Settings/SubtitlesSettings.qml:148
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Schriftgröße"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:163
 msgctxt "@label"
 msgid "Font style"
 msgstr "Schriftstil"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:168
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Fett"
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:179
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Kursiv"
 
-#: src/qml/Settings/SubtitlesSettings.qml:184
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Schriftfarbe"
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
-#: src/qml/Settings/SubtitlesSettings.qml:289
-#: src/qml/Settings/SubtitlesSettings.qml:364
-msgctxt "@info:tooltip"
-msgid "Set default value"
-msgstr "Standardwert"
-
-#: src/qml/Settings/SubtitlesSettings.qml:240
+#: src/qml/Settings/SubtitlesSettings.qml:244
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Schattenfarbe"
 
-#: src/qml/Settings/SubtitlesSettings.qml:295
+#: src/qml/Settings/SubtitlesSettings.qml:299
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Schattenversatz"
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:385
+#: src/qml/Settings/SubtitlesSettings.qml:314
+#: src/qml/Settings/SubtitlesSettings.qml:389
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Auf 0 (Null) setzen zum Deaktivieren."
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:319
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Rahmenfarbe"
 
-#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:374
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Rahmenbreite"
@@ -2611,6 +2620,22 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Config folder"
+#~ msgstr "Einstellungsordner"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open config folder"
+#~ msgstr "Einstellungsordner öffnen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open custom commands config file"
+#~ msgstr "Konfigurationsdatei für benutzerdefinierte Befehle öffnen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set default value"
+#~ msgstr "Standardwert"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Remove mouse button action"

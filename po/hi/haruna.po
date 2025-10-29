@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:42+0000\n"
+"POT-Creation-Date: 2025-10-29 00:42+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -623,61 +623,61 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:161
+#: src/models/playlist/playlistmultiproxiesmodel.cpp:162
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:365
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:506
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:543
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:581
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:586
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:588
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:615
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -685,7 +685,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:648
 #, fuzzy, kde-format
 #| msgid "Skip chapters"
 msgctxt "@info:tooltip osd"
@@ -1616,6 +1616,10 @@ msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
+#: src/qml/Settings/SubtitlesSettings.qml:142
+#: src/qml/Settings/SubtitlesSettings.qml:238
+#: src/qml/Settings/SubtitlesSettings.qml:293
+#: src/qml/Settings/SubtitlesSettings.qml:368
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
 msgstr ""
@@ -1666,53 +1670,55 @@ msgstr "जोड़ें (&A)"
 #, fuzzy
 #| msgid "Configure"
 msgctxt "@label:textbox"
-msgid "Config folder"
-msgstr "विन्यस्त करें"
-
-#: src/qml/Settings/DebugSettings.qml:37
-msgctxt "@info:tooltip"
-msgid "Open config folder"
-msgstr ""
-
-#: src/qml/Settings/DebugSettings.qml:49
-#, fuzzy
-#| msgid "Configure"
-msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "विन्यस्त करें"
 
-#: src/qml/Settings/DebugSettings.qml:61
-#, fuzzy
-#| msgid "Open File"
-msgctxt "@info:tooltip"
-msgid "Open config file"
-msgstr "फ़ाइल खोलें"
-
-#: src/qml/Settings/DebugSettings.qml:73
+#: src/qml/Settings/DebugSettings.qml:37
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "तदनुकूल समादेश"
 
-#: src/qml/Settings/DebugSettings.qml:85
+#: src/qml/Settings/DebugSettings.qml:49
 #, fuzzy
-#| msgid "Custom commands"
-msgctxt "@info:tooltip"
-msgid "Open custom commands config file"
-msgstr "तदनुकूल समादेश"
+#| msgid "Open File"
+msgctxt "@label:textbox"
+msgid "Shortcuts config file"
+msgstr "फ़ाइल खोलें"
 
-#: src/qml/Settings/DebugSettings.qml:97
+#: src/qml/Settings/DebugSettings.qml:61
+#, fuzzy
+#| msgid "Open File"
+msgctxt "@label:textbox"
+msgid "Playlists config file"
+msgstr "फ़ाइल खोलें"
+
+#: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
 
-#: src/qml/Settings/DebugSettings.qml:105
+#: src/qml/Settings/DebugSettings.qml:81
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr ""
+
+#: src/qml/Settings/DebugSettings.qml:104
+#, fuzzy
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open file"
+msgstr "फ़ाइल खोलें"
+
+#: src/qml/Settings/DebugSettings.qml:113
+#, fuzzy
+#| msgid "Open File"
+msgctxt "@info:tooltip"
+msgid "Open containing folder"
+msgstr "फ़ाइल खोलें"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 #, fuzzy
@@ -2675,66 +2681,59 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "ओएसडी फ़ॉन्ट आकार"
 
-#: src/qml/Settings/SubtitlesSettings.qml:144
+#: src/qml/Settings/SubtitlesSettings.qml:148
 #, fuzzy
 #| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "ओएसडी फ़ॉन्ट आकार"
 
-#: src/qml/Settings/SubtitlesSettings.qml:159
+#: src/qml/Settings/SubtitlesSettings.qml:163
 #, fuzzy
 #| msgid "Osd font size"
 msgctxt "@label"
 msgid "Font style"
 msgstr "ओएसडी फ़ॉन्ट आकार"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:168
 msgctxt "@option:check"
 msgid "Bold"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:175
+#: src/qml/Settings/SubtitlesSettings.qml:179
 msgctxt "@option:check"
 msgid "Italic"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:184
+#: src/qml/Settings/SubtitlesSettings.qml:188
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:234
-#: src/qml/Settings/SubtitlesSettings.qml:289
-#: src/qml/Settings/SubtitlesSettings.qml:364
-msgctxt "@info:tooltip"
-msgid "Set default value"
-msgstr ""
-
-#: src/qml/Settings/SubtitlesSettings.qml:240
+#: src/qml/Settings/SubtitlesSettings.qml:244
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Settings/SubtitlesSettings.qml:295
+#: src/qml/Settings/SubtitlesSettings.qml:299
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:310
-#: src/qml/Settings/SubtitlesSettings.qml:385
+#: src/qml/Settings/SubtitlesSettings.qml:314
+#: src/qml/Settings/SubtitlesSettings.qml:389
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
+#: src/qml/Settings/SubtitlesSettings.qml:319
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:374
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr ""
@@ -2860,6 +2859,18 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@label:textbox"
+#~ msgid "Config folder"
+#~ msgstr "विन्यस्त करें"
+
+#, fuzzy
+#~| msgid "Custom commands"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open custom commands config file"
+#~ msgstr "तदनुकूल समादेश"
 
 #, fuzzy
 #~| msgid "Playlist"
