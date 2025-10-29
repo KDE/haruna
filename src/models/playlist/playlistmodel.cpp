@@ -14,7 +14,6 @@
 #include <QGuiApplication>
 #include <QJsonArray>
 
-#include <KFileItem>
 #include <KFileMetaData/Properties>
 
 #include <random>

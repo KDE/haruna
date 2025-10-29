@@ -6,11 +6,9 @@
 
 #include "playlistmultiproxiesmodel.h"
 
-#include <QDir>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLineEdit>
-#include <QStandardPaths>
 
 #include <KFileItem>
 #include <KIO/RenameFileDialog>

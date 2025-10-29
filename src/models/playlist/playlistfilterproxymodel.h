@@ -8,10 +8,11 @@
 #ifndef PLAYLISTFILTERPROXYMODEL_H
 #define PLAYLISTFILTERPROXYMODEL_H
 
+#include <QItemSelectionModel>
+
 #include "playlistmodel.h"
 #include "playlistproxymodel.h"
 #include "playlistsortproxymodel.h"
-#include <QItemSelectionModel>
 
 class PlaylistModel;
 class PlaylistSortProxyModel;

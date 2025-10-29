@@ -17,7 +17,6 @@
 #include <QTimer>
 
 #include <KFileItem>
-#include <KFileMetaData/Properties>
 #include <KIO/DeleteOrTrashJob>
 #include <KIO/RenameFileDialog>
 
