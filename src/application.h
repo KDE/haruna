@@ -50,11 +50,7 @@ public:
 
     Q_INVOKABLE bool urlExists(const QUrl &url);
     Q_INVOKABLE bool pathExists(const QString &url);
-    Q_INVOKABLE QUrl configFilePath();
-    Q_INVOKABLE QUrl ccConfigFilePath();
-    Q_INVOKABLE QUrl configFolderPath();
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
-    Q_INVOKABLE bool configFolderExists();
     Q_INVOKABLE QUrl parentUrl(const QString &path);
     Q_INVOKABLE QUrl url(int key);
     Q_INVOKABLE void addUrl(int key, const QString &value);
