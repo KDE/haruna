@@ -16,6 +16,7 @@ import QtQuick.Dialogs
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
+import org.kde.haruna.youtube
 
 Page {
     id: root

@@ -16,6 +16,7 @@ import org.kde.config as KConfig
 
 import org.kde.haruna
 import org.kde.haruna.settings
+import org.kde.haruna.youtube
 
 ApplicationWindow {
     id: window

@@ -37,7 +37,6 @@ target_sources(haruna
     mpv/mpvproperties.h
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
-    youtube.h youtube.cpp
     ${ICONS_SRCS}
 )
 
@@ -63,6 +62,7 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
 endif()
 
 add_subdirectory(settings)
+add_subdirectory(youtube)
 
 qt_policy(SET QTP0001 NEW)
 
@@ -173,6 +173,7 @@ target_link_libraries(haruna PRIVATE
     ${SWSCALE_LIBRARIES}
 
     settingsplugin
+    youtubeplugin
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)

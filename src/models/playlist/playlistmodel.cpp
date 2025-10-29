@@ -42,6 +42,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
     connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
     connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
     connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
+    connect(&youtube, &YouTube::error, Application::instance(), &Application::error);
 
     connect(Worker::instance(),
             &Worker::metaDataReady,

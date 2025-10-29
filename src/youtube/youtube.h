@@ -39,6 +39,7 @@ public:
 Q_SIGNALS:
     void playlistRetrieved(QJsonArray playlist, const QString &videoId, const QString &playlistId);
     void videoInfoRetrieved(YTVideoInfo info, QVariantMap data);
+    void error(const QString &message);
 
 private:
 };

@@ -15,8 +15,6 @@
 
 #include <KLocalizedString>
 
-#include "application.h"
-
 using namespace Qt::StringLiterals;
 
 YouTube::YouTube()
@@ -69,17 +67,17 @@ void YouTube::getPlaylist(const QUrl &url)
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         const auto output = ytdlProcess->readAllStandardOutput();
-        const auto error = ytdlProcess->readAllStandardError();
+        const auto errorString = ytdlProcess->readAllStandardError();
         const QString json = QString::fromUtf8(output);
         const QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[u"entries"_s];
         // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[u"title")].toString();
         const auto playlist = entries.toArray();
 
         if (output.contains("null\n")) {
-            Application::instance()->error(i18nc("@info:tooltip; error when yt-dlp fails to get playlist",
-                                                 "Could not retrieve playlist with id: %1\n\n%2",
-                                                 playlistId,
-                                                 QString::fromUtf8(error)));
+            Q_EMIT error(i18nc("@info:tooltip; error when yt-dlp fails to get playlist",
+                        "Could not retrieve playlist with id: %1\n\n%2",
+                        playlistId,
+                        QString::fromUtf8(errorString)));
         }
 
         if (playlist.isEmpty()) {
