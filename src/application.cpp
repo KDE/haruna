@@ -238,15 +238,6 @@ void Application::addUrl(int key, const QString &value)
     m_urls.insert(key, QUrl::fromUserInput(value, QDir::currentPath()));
 }
 
-QString Application::getFileContent(const QString &file)
-{
-    QFile f(file);
-    f.open(QIODevice::ReadOnly);
-    QString content = QString::fromUtf8(f.readAll());
-    f.close();
-    return content;
-}
-
 QString Application::mimeType(QUrl url)
 {
     KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
