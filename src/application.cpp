@@ -25,7 +25,6 @@
 #include <KColorSchemeManager>
 #include <KCrash>
 #include <KFileItem>
-#include <KFileMetaData/Properties>
 #include <KLocalizedString>
 #include <KWindowSystem>
 
