@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2025 George Florea Bănuș <georgefb899@gmail.com>
+#
+# SPDX-License-Identifier: BSD-3-Clause
+#
 
 find_package(Qt6 REQUIRED COMPONENTS Core)
 
