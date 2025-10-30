@@ -12,8 +12,6 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QFileInfo>
-#include <QFontDatabase>
-#include <QGuiApplication>
 #include <QMimeDatabase>
 #include <QQuickView>
 #include <QStandardPaths>
@@ -306,11 +304,6 @@ void Application::activateColorScheme(const QString &name)
     m_schemes->activateScheme(m_schemes->indexForScheme(name));
 }
 
-QStringList Application::getFonts()
-{
-    return QFontDatabase::families();
-}
-
 int Application::frameworksVersionMinor()
 {
     return KCONFIG_VERSION_MINOR;
@@ -319,11 +312,6 @@ int Application::frameworksVersionMinor()
 int Application::qtMajorVersion()
 {
     return QT_VERSION_MAJOR;
-}
-
-QString Application::platformName()
-{
-    return QGuiApplication::platformName();
 }
 
 void Application::raiseWindow()
@@ -338,11 +326,6 @@ void Application::raiseWindow()
         KWindowSystem::updateStartupId(window);
         KWindowSystem::activateWindow(window);
     }
-}
-
-bool Application::isPlatformWayland()
-{
-    return KWindowSystem::isPlatformWayland();
 }
 
 #include "moc_application.cpp"

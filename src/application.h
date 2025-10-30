@@ -54,12 +54,9 @@ public:
     Q_INVOKABLE QStringList availableGuiStyles();
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
-    Q_INVOKABLE QStringList getFonts();
     Q_INVOKABLE int frameworksVersionMinor();
     Q_INVOKABLE int qtMajorVersion();
-    Q_INVOKABLE QString platformName();
     Q_INVOKABLE void raiseWindow();
-    Q_INVOKABLE bool isPlatformWayland();
 
     static QString version();
     Q_INVOKABLE static QString formatTime(const double time);

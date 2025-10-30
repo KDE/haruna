@@ -548,7 +548,7 @@ ApplicationWindow {
     }
 
     function resizeWindow() : void {
-        if (HarunaApp.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
+        if (SystemUtils.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
             return
         }
 

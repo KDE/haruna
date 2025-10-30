@@ -10,6 +10,7 @@ import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
 SettingsBasePage {
@@ -277,7 +278,7 @@ SettingsBasePage {
             CheckBox {
                 text: i18nc("@option:check", "Resize to fit video")
                 checked: GeneralSettings.resizeWindowToVideo
-                enabled: !HarunaApp.isPlatformWayland()
+                enabled: !SystemUtils.isPlatformWayland()
                 onClicked: {
                     GeneralSettings.resizeWindowToVideo = checked
                     GeneralSettings.save()
@@ -285,7 +286,7 @@ SettingsBasePage {
             }
 
             ToolTipButton {
-                toolTipText: HarunaApp.isPlatformWayland()
+                toolTipText: SystemUtils.isPlatformWayland()
                              ? i18nc("@info:tooltip","Not supported on Wayland.")
                              : i18nc("@info:tooltip", "The window is resized according to the video resolution.<br>" +
                                      "The maximum size is not constrained, this is left to the operating system.")
@@ -328,14 +329,14 @@ SettingsBasePage {
 
             ToolTipButton {
                 readonly property
-                string waylandMessage: HarunaApp.isPlatformWayland()
+                string waylandMessage: SystemUtils.isPlatformWayland()
                                        ? i18nc("@info:tooltip extra wayland info for the “Remember window size and position” setting",
                                                "<b>Restoring position is not supported on Wayland.</b><br><br>")
                                        : ""
                 toolTipText: i18nc("@info:tooltip", "Changes to the window’s size and position "
                             +"are saved and used for newly opened windows.<br><br>"
                             +"%1The “Resize to fit video” setting takes precedence.", waylandMessage)
-                icon.color: HarunaApp.isPlatformWayland() ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.textColor
+                icon.color: SystemUtils.isPlatformWayland() ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.textColor
 
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             }

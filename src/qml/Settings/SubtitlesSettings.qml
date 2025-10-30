@@ -10,6 +10,7 @@ import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
 SettingsBasePage {
@@ -122,7 +123,7 @@ SettingsBasePage {
 
                 property string defaultFamily: "Sans Serif"
 
-                model: HarunaApp.getFonts()
+                model: SystemUtils.getFonts()
                 onActivated: function(index) {
                     SubtitlesSettings.fontFamily = currentText
                     SubtitlesSettings.save()

@@ -11,6 +11,7 @@ import Qt.labs.platform as Platform
 import org.kde.kirigami as Kirigami
 
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
 Loader {
@@ -21,7 +22,7 @@ Loader {
     required property Loader m_settingsLoader
 
     property bool isShowAnimationRunning: false
-    property bool showGlobalMenu: HarunaApp.platformName() !== "windows"
+    property bool showGlobalMenu: SystemUtils.platformName() !== "windows"
                                     && Kirigami.Settings.hasPlatformMenuBar
                                     && !Kirigami.Settings.isMobile
 
