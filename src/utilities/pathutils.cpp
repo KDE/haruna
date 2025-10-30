@@ -134,4 +134,31 @@ void PathUtils::highlightInFileManager(const QString &path)
     KIO::highlightInFileManager({QUrl::fromUserInput(path)});
 }
 
+bool PathUtils::pathExists(const QString &path)
+{
+    return QFileInfo::exists(path);
+}
+
+QUrl PathUtils::pathToUrl(const QString &path)
+{
+    return QUrl::fromUserInput(path);
+}
+
+QString PathUtils::urlToPath(const QUrl &url)
+{
+    return url.toLocalFile();
+}
+
+QString PathUtils::parentPath(const QString &path)
+{
+    QString _path = path;
+    if (_path.endsWith(u"/"_s)) {
+        _path.removeLast();
+    }
+
+    QFileInfo fileInfo(_path);
+
+    return fileInfo.absolutePath();
+}
+
 #include "moc_pathutils.cpp"
