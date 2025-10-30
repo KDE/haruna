@@ -161,4 +161,16 @@ QString PathUtils::parentPath(const QString &path)
     return fileInfo.absolutePath();
 }
 
+QUrl PathUtils::parentUrl(const QUrl &url)
+{
+    if (!url.isLocalFile()) {
+        return url;
+    }
+    const auto _filePath = urlToPath(url);
+    const auto _parentPath = parentPath(_filePath);
+    const auto _url = pathToUrl(_parentPath);
+
+    return _url;
+}
+
 #include "moc_pathutils.cpp"

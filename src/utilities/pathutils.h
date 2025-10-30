@@ -44,6 +44,7 @@ public:
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE QString urlToPath(const QUrl &url);
     Q_INVOKABLE QString parentPath(const QString &path);
+    Q_INVOKABLE QUrl parentUrl(const QUrl &url);
 
 Q_SIGNALS:
     void error(const QString &message);
