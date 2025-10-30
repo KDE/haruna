@@ -220,7 +220,8 @@ void CustomCommandsModel::deleteCustomCommand(const QString &groupName, int row)
     m_customCommands.removeAt(row);
     endRemoveRows();
 
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(PathUtils::instance()->configFilePath());
+    const auto shortcutsConfigFile = PathUtils::instance()->configFilePath(PathUtils::ConfigFile::Shortcuts);
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(shortcutsConfigFile);
     config->group(u"Shortcuts"_s).deleteEntry(groupName);
     config->sync();
 }
