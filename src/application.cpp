@@ -207,50 +207,9 @@ void Application::setupQmlSettingsTypes()
     qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "VideoSettings", VideoSettings::self());
 }
 
-bool Application::urlExists(const QUrl &url)
-{
-    return pathExists(url.toLocalFile());
-}
-
-bool Application::pathExists(const QString &path)
-{
-    QFileInfo fileInfo(path);
-    if (fileInfo.exists()) {
-        return true;
-    }
-    return false;
-}
-
-QUrl Application::pathToUrl(const QString &path)
-{
-    auto url = QUrl::fromUserInput(path);
-    if (!url.isValid()) {
-        return QUrl();
-    }
-    return url;
-}
-
 QString Application::version()
 {
     return QString::fromStdString(HARUNA_VERSION_STRING);
-}
-
-QUrl Application::parentUrl(const QString &path)
-{
-    QUrl url(path);
-    if (!url.isValid()) {
-        return QUrl(QStandardPaths::writableLocation(QStandardPaths::MoviesLocation));
-    }
-    QFileInfo fileInfo;
-    if (url.isLocalFile()) {
-        fileInfo.setFile(url.toLocalFile());
-    } else {
-        fileInfo.setFile(url.toString());
-    }
-    QUrl parentFolderUrl(fileInfo.absolutePath());
-    parentFolderUrl.setScheme(u"file"_s);
-
-    return parentFolderUrl;
 }
 
 QString Application::formatTime(const double time)
