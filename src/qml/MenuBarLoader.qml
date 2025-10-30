@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import Qt.labs.platform as Platform
@@ -63,7 +65,7 @@ Loader {
                 m_mpv: root.m_mpv
             }
             SettingsMenu {
-                m_settingsLoader: settingsLoader
+                m_settingsLoader: root.m_settingsLoader
             }
             HelpMenu {}
         }
@@ -86,7 +88,7 @@ Loader {
                 m_mpv: root.m_mpv
             }
             GlobalSettingsMenu {
-                m_settingsLoader: settingsLoader
+                m_settingsLoader: root.m_settingsLoader
             }
             GlobalHelpMenu {}
         }
