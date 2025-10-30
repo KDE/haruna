@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:42+0000\n"
-"PO-Revision-Date: 2025-10-22 16:56+0300\n"
+"PO-Revision-Date: 2025-10-29 08:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1318,33 +1318,27 @@ msgstr "Ses düzeyi çentiği"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Ses Düzeyi Dengeleme"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Kip"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Devre dışı"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Parça"
+msgstr "Parça"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Albüm"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1353,21 +1347,24 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Ses düzeyi dengesini, dosya üst verisinde depolanan <i>replaygain</i> "
+"değerlerine göre ayarlayın. Albüm dengesine ayarlanmışsa varsa albüm dengesi "
+"uygulanır; yoksa parça dengesine dönülür."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Kırpmayı önle"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Dengeyi düşürerek kırpılmayı önle"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Ön amplifikatör (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1375,17 +1372,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:238
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #: src/qml/Settings/SubtitlesSettings.qml:368
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Öntanımlı değeri ayarla"
+msgstr "Öntanımlı değere sıfırla"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Yedek (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1395,6 +1389,10 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Dosyada ses düzeyi dengesi künyeleri yoksa uygulanacak dB türünden denge."
+"<br><br>Bu seçenek yalnızca:<br>- ses düzeyi dengesi ayarı devre "
+"dışıysa<br>- ses düzeyi dengesi ayarı etkinse ve dosyanın denge üst verisi "
+"yoksa etkili olur<br>Bu etkinse diğer denge ayarları yok sayılır."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1431,20 +1429,14 @@ msgid "Custom commands config file"
 msgstr "Özel komutlar yapılandırma dosyası"
 
 #: src/qml/Settings/DebugSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Yapılandırma dosyasını aç"
+msgstr "Kısayollar yapılandırma dosyası"
 
 #: src/qml/Settings/DebugSettings.qml:61
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Yapılandırma dosyasını aç"
+msgstr "Oynatma listeleri yapılandırma dosyası"
 
 #: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
@@ -1461,20 +1453,14 @@ msgid "Enable mpv logging"
 msgstr "mpv günlüklemesini etkinleştir"
 
 #: src/qml/Settings/DebugSettings.qml:104
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
-msgstr "Dosya Aç"
+msgstr "Dosya aç"
 
 #: src/qml/Settings/DebugSettings.qml:113
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
-msgstr "İçeren Klasörü Aç"
+msgstr "İçeren klasörü aç"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"

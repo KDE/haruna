@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:42+0000\n"
-"PO-Revision-Date: 2025-10-14 11:06+0200\n"
+"PO-Revision-Date: 2025-10-29 22:49+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1324,33 +1324,27 @@ msgstr "Passo volume"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "ReplayGain"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Modo"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
-msgstr "Disabilitata"
+msgstr "Disabilitato"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Traccia"
+msgstr "Traccia"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1359,21 +1353,24 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Regola il guadagno di volume conformemente ai valori <i>replaygain</i> "
+"memorizzati nei metadati del file. Se impostato ad album, applica il "
+"guadagno album se presente, in caso contrario ripiega al guadagno traccia."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Previeni clipping"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Previene il clipping abbassando il guadagno"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Preamp (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1381,17 +1378,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:238
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #: src/qml/Settings/SubtitlesSettings.qml:368
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Imposta valore predefinito"
+msgstr "Riporta ai valori predefiniti"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Ripiego (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1401,6 +1395,11 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Guadagno in dB da applicare se il file non contiene tag replaygain."
+"<br><br>Questa impostazione è valida solo quando:<br>- l'impostazione "
+"replaygain è disabilitata<br>- l'impostazione replaygain è abilitata e il "
+"file non contiene metadati replaygain<br>Se quanto sopra è valido, le altre "
+"impostazioni replaygain vengono ignorate."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1437,20 +1436,14 @@ msgid "Custom commands config file"
 msgstr "File di configurazione dei comandi personalizzati"
 
 #: src/qml/Settings/DebugSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Apri file di configurazione"
+msgstr "File di configurazione delle scorciatoie"
 
 #: src/qml/Settings/DebugSettings.qml:61
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Apri file di configurazione"
+msgstr "File di configurazione delle scalette"
 
 #: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
@@ -1467,17 +1460,11 @@ msgid "Enable mpv logging"
 msgstr "Abilita registro mpv"
 
 #: src/qml/Settings/DebugSettings.qml:104
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Apri file"
 
 #: src/qml/Settings/DebugSettings.qml:113
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Apri cartella contenitore"
@@ -1814,17 +1801,11 @@ msgid "Default"
 msgstr "Predefinita"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Change action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "Cambia azione"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Delete"
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Elimina"

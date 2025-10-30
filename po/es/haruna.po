@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:42+0000\n"
-"PO-Revision-Date: 2025-10-22 22:58+0100\n"
+"PO-Revision-Date: 2025-10-29 12:04+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1328,25 +1328,22 @@ msgstr ""
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Modo"
 
 #: src/qml/Settings/AudioSettings.qml:104
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Pista"
+msgstr "Pista"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Álbum"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1359,12 +1356,12 @@ msgstr ""
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Evitar recorte"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Evitar recorte bajando la ganancia"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
@@ -1377,12 +1374,9 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:238
 #: src/qml/Settings/SubtitlesSettings.qml:293
 #: src/qml/Settings/SubtitlesSettings.qml:368
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Definir el valor predeterminado"
+msgstr "Reiniciar al valor predeterminado"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
@@ -1433,20 +1427,14 @@ msgid "Custom commands config file"
 msgstr "Archivo de configuración de órdenes personalizadas"
 
 #: src/qml/Settings/DebugSettings.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Abrir archivo de configuración"
+msgstr "Archivo de configuración de atajos de teclado"
 
 #: src/qml/Settings/DebugSettings.qml:61
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Abrir archivo de configuración"
+msgstr "Archivo de configuración de listas de reproducción"
 
 #: src/qml/Settings/DebugSettings.qml:73
 msgctxt "@info:usagetip"
@@ -1464,17 +1452,11 @@ msgid "Enable mpv logging"
 msgstr "Activar registro de mpv"
 
 #: src/qml/Settings/DebugSettings.qml:104
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Abrir archivo"
 
 #: src/qml/Settings/DebugSettings.qml:113
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Abrir la carpeta contenedora"
@@ -2636,19 +2618,3 @@ msgstr ""
 "No se ha podido obtener la lista de reproducción con el id: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Config folder"
-#~ msgstr "Carpeta de configuración"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Open config folder"
-#~ msgstr "Abrir la carpeta de configuración"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Open custom commands config file"
-#~ msgstr "Abrir archivo de configuración de órdenes personalizadas"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set default value"
-#~ msgstr "Definir el valor predeterminado"
