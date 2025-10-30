@@ -104,7 +104,7 @@ SettingsBasePage {
                 visible: configFileField.text !== ""
                 text: i18nc("@info:tooltip", "Open file")
                 onTriggered: {
-                    const url = HarunaApp.pathToUrl(PathUtils.configFilePath(configFileField.configFile))
+                    const url = PathUtils.pathToUrl(PathUtils.configFilePath(configFileField.configFile))
                     Qt.openUrlExternally(url)
                 }
             },

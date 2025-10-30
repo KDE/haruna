@@ -15,6 +15,7 @@ import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 import org.kde.haruna.youtube
 
@@ -771,7 +772,7 @@ Page {
         property string fileType: "video"
 
         title: i18nc("@title:window", "Select file")
-        currentFolder: HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
+        currentFolder: GeneralSettings.fileDialogLastLocation
         fileMode: FileDialog.OpenFile
         nameFilters: {
             if (fileType === "playlist" ) {
@@ -795,6 +796,8 @@ Page {
 
                 break
             }
+            GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(fileDialog.selectedFile)
+            GeneralSettings.save()
         }
         onRejected: root.m_mpv.focus = true
         onVisibleChanged: {

@@ -15,6 +15,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 import org.kde.haruna.youtube
 
@@ -446,14 +447,14 @@ ApplicationWindow {
         id: fileDialog
 
         title: i18nc("@title:window", "Select File")
-        currentFolder: HarunaApp.pathToUrl(GeneralSettings.fileDialogLastLocation)
+        currentFolder: GeneralSettings.fileDialogLastLocation
         fileMode: FileDialog.OpenFile
 
         onAccepted: {
             window.openFile(fileDialog.selectedFile, RecentFilesModel.OpenedFrom.OpenAction)
             mpv.focus = true
 
-            GeneralSettings.fileDialogLastLocation = HarunaApp.parentUrl(fileDialog.selectedFile)
+            GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(fileDialog.selectedFile)
             GeneralSettings.save()
         }
         onRejected: mpv.focus = true
@@ -466,7 +467,7 @@ ApplicationWindow {
         id: subtitlesFileDialog
 
         title: i18nc("@title:window", "Select Subtitles File")
-        currentFolder: HarunaApp.parentUrl(mpv.currentUrl)
+        currentFolder: PathUtils.parentUrl(mpv.currentUrl)
         fileMode: FileDialog.OpenFile
         nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
 
