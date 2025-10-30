@@ -6,12 +6,10 @@
 
 #include "playlistmodel.h"
 
-#include <QClipboard>
 #include <QCollator>
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
-#include <QGuiApplication>
 #include <QJsonArray>
 
 #include <KFileMetaData/Properties>
