@@ -8,13 +8,15 @@
 #define APPLICATION_H
 
 #include <QObject>
-#include <QQmlApplicationEngine>
 #include <QQmlPropertyMap>
 
 #include <KAboutData>
 
 class QAbstractItemModel;
 class QApplication;
+class QJSEngine;
+class QQmlApplicationEngine;
+class QQmlEngine;
 class QQuickWindow;
 class KActionCollection;
 class KConfigDialog;

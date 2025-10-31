@@ -13,6 +13,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QMimeDatabase>
+#include <QQmlApplicationEngine>
 #include <QQuickView>
 #include <QStandardPaths>
 #include <QStyle>
