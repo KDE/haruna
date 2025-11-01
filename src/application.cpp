@@ -210,21 +210,6 @@ QString Application::version()
     return QString::fromStdString(HARUNA_VERSION_STRING);
 }
 
-QString Application::formatTime(const double time)
-{
-    int totalNumberOfSeconds = static_cast<int>(time);
-    int seconds = totalNumberOfSeconds % 60;
-    int minutes = (totalNumberOfSeconds / 60) % 60;
-    int hours = (totalNumberOfSeconds / 60 / 60);
-
-    QString hoursString = u"%1"_s.arg(hours, 2, 10, QLatin1Char('0'));
-    QString minutesString = u"%1"_s.arg(minutes, 2, 10, QLatin1Char('0'));
-    QString secondsString = u"%1"_s.arg(seconds, 2, 10, QLatin1Char('0'));
-    QString timeString = u"%1:%2:%3"_s.arg(hoursString, minutesString, secondsString);
-
-    return timeString;
-}
-
 QUrl Application::url(int key)
 {
     if (m_urls.contains(key)) {
@@ -237,12 +222,6 @@ QUrl Application::url(int key)
 void Application::addUrl(int key, const QString &value)
 {
     m_urls.insert(key, QUrl::fromUserInput(value, QDir::currentPath()));
-}
-
-QString Application::mimeType(QUrl url)
-{
-    KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
-    return fileItem.mimetype();
 }
 
 void Application::handleSecondayInstanceMessage(const QByteArray &message, const QString activationToken)

@@ -14,6 +14,7 @@ import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
 RowLayout {
@@ -155,7 +156,7 @@ RowLayout {
                 onMouseXChanged: {
                     const time = mouseX / progressBarBG.width * slider.to
                     previewMpvLoader.position = time
-                    progressBarToolTip.text = HarunaApp.formatTime(time)
+                    progressBarToolTip.text = MiscUtilities.formatTime(time)
                 }
 
                 onWheel: function(wheel) {
@@ -176,7 +177,7 @@ RowLayout {
             }
 
             root.m_mpv.commandAsync(["seek", slider.value, "absolute"])
-            progressBarToolTip.text = HarunaApp.formatTime(slider.value)
+            progressBarToolTip.text = MiscUtilities.formatTime(slider.value)
 
             const previewItem = previewMpvLoader.item as MpvPreview
             if (previewItem === null || !previewItem.isLocalFile) {
@@ -305,7 +306,7 @@ RowLayout {
 
                         property int scrollBarWidth: listViewPage.contentItem.ScrollBar.vertical.width
 
-                        text: `${HarunaApp.formatTime(menuitem.startTime)} - ${menuitem.title}`
+                        text: `${MiscUtilities.formatTime(menuitem.startTime)} - ${menuitem.title}`
                         checked: menuitem.index === root.m_mpv.chapter
                         width: listViewPage.width - scrollBarWidth
                         onClicked: {

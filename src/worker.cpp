@@ -20,7 +20,7 @@
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 
-#include "application.h"
+#include "miscutilities.h"
 #include "database.h"
 #include "framedecoder.h"
 #include "pathutils.h"
@@ -43,7 +43,7 @@ void Worker::getMetaData(uint index, const QString &path, const QString playlist
     if (url.scheme() != u"file"_s) {
         return;
     }
-    QString mimeType = Application::mimeType(url);
+    QString mimeType = MiscUtilities::mimeType(url);
     ExtractorCollection exCol;
     QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
     SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
@@ -171,7 +171,7 @@ void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
         while (it.hasNext()) {
             auto fi = it.nextFileInfo();
             auto url = QUrl::fromLocalFile(fi.absoluteFilePath());
-            QString mimeType = Application::mimeType(url);
+            QString mimeType = MiscUtilities::mimeType(url);
             if (mimeType.startsWith(u"application/x-subrip"_s) || mimeType.startsWith(u"text/x-ssa"_s)) {
                 // The subtitles path must contain the name of the playing file
                 if (fi.absoluteFilePath().contains(playingFileInfo.completeBaseName(), Qt::CaseInsensitive)) {

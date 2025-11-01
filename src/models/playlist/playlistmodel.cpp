@@ -18,6 +18,7 @@
 
 #include "application.h"
 #include "generalsettings.h"
+#include "miscutilities.h"
 #include "playlistsettings.h"
 #include "worker.h"
 #include "youtube.h"
@@ -55,7 +56,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
                     auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
                     auto title = metaData.value(KFileMetaData::Property::Title).toString();
 
-                    m_playlist[i].formattedDuration = Application::formatTime(duration);
+                    m_playlist[i].formattedDuration = MiscUtilities::formatTime(duration);
                     m_playlist[i].duration = duration;
                     m_playlist[i].mediaTitle = title;
 
@@ -140,7 +141,7 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
     }
 
     if (url.scheme() == u"file"_s) {
-        auto mimeType = Application::mimeType(url);
+        auto mimeType = MiscUtilities::mimeType(url);
 
         if (mimeType == u"audio/x-mpegurl"_s) {
             m_playlistPath = url.toString();
@@ -252,7 +253,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         QString siblingFile = it.next();
         QFileInfo siblingFileInfo(siblingFile);
         auto siblingUrl = QUrl::fromLocalFile(siblingFile);
-        QString mimeType = Application::mimeType(siblingUrl);
+        QString mimeType = MiscUtilities::mimeType(siblingUrl);
         if (!siblingFileInfo.exists()) {
             continue;
         }
@@ -293,7 +294,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
 
 void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
 {
-    if (url.scheme() != u"file"_s || Application::mimeType(url) != u"audio/x-mpegurl"_s) {
+    if (url.scheme() != u"file"_s || MiscUtilities::mimeType(url) != u"audio/x-mpegurl"_s) {
         return;
     }
 
@@ -348,7 +349,7 @@ void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &video
         item.url = QUrl::fromUserInput(url);
         item.filename = !title.isEmpty() ? title : url;
         item.mediaTitle = !title.isEmpty() ? title : url;
-        item.formattedDuration = Application::formatTime(duration);
+        item.formattedDuration = MiscUtilities::formatTime(duration);
         item.duration = duration;
 
         beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
@@ -387,7 +388,7 @@ void PlaylistModel::updateFileInfo(YTVideoInfo info, QVariantMap data)
 
     m_playlist[row].mediaTitle = info.mediaTitle;
     m_playlist[row].filename = info.mediaTitle;
-    m_playlist[row].formattedDuration = Application::formatTime(info.duration);
+    m_playlist[row].formattedDuration = MiscUtilities::formatTime(info.duration);
     m_playlist[row].duration = info.duration;
 
     --m_httpItemCounter;

@@ -26,6 +26,7 @@
 #include "database.h"
 #include "generalsettings.h"
 #include "lockmanager.h"
+#include "miscutilities.h"
 #include "mpvproperties.h"
 #include "pathutils.h"
 #include "playbacksettings.h"
@@ -414,17 +415,17 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
     } else if (property == MpvProperties::self()->Position) {
         m_position = value.toDouble();
-        m_formattedPosition = Application::formatTime(m_position);
+        m_formattedPosition = MiscUtilities::formatTime(m_position);
         Q_EMIT positionChanged();
 
     } else if (property == MpvProperties::self()->Remaining) {
         m_remaining = value.toDouble();
-        m_formattedRemaining = Application::formatTime(m_remaining);
+        m_formattedRemaining = MiscUtilities::formatTime(m_remaining);
         Q_EMIT remainingChanged();
 
     } else if (property == MpvProperties::self()->Duration) {
         m_duration = value.toDouble();
-        m_formattedDuration = Application::formatTime(m_duration);
+        m_formattedDuration = MiscUtilities::formatTime(m_duration);
         Q_EMIT durationChanged();
 
     } else if (property == MpvProperties::self()->Pause) {
@@ -609,7 +610,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         if (!data.toBool()) {
             // there's no video track
             // either because the file is an audio file or the video track can't be decoded
-            auto mimeType = Application::mimeType(currentUrl());
+            auto mimeType = MiscUtilities::mimeType(currentUrl());
             if (mimeType.startsWith(u"video/"_s)) {
                 auto errMsg = i18nc("Error message when video can't be decoded/played",
                                     "No video track detected, most likely the video track can't be decoded/played due to missing codecs");
@@ -669,7 +670,7 @@ double MpvItem::loadTimePosition()
     auto duration{item.duration};
 
     if (qFuzzyCompare(duration, 0.0)) {
-        QString mimeType = Application::mimeType(m_currentUrl);
+        QString mimeType = MiscUtilities::mimeType(m_currentUrl);
         KFileMetaData::ExtractorCollection exCol;
         QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
         KFileMetaData::SimpleExtractionResult result(m_currentUrl.toLocalFile(), mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);

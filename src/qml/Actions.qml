@@ -10,6 +10,7 @@ import QtQuick
 import QtQuick.Controls
 
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
 Item {
@@ -287,13 +288,13 @@ Item {
             if (!aIsSet && !bIsSet) {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, root.m_mpv.position)
                 footer.progressBar.loopIndicator.startPosition = root.m_mpv.position
-                root.m_osd.message(i18nc("@info:tooltip; %1 is the timestamp where the loop starts", "Loop start: %1", HarunaApp.formatTime(root.m_mpv.position)))
+                root.m_osd.message(i18nc("@info:tooltip; %1 is the timestamp where the loop starts", "Loop start: %1", MiscUtilities.formatTime(root.m_mpv.position)))
             } else if (aIsSet && !bIsSet) {
                 // set b position slightly ahead to ensure the loop section is not skipped
                 const bPosition = root.m_mpv.position + 0.1
                 root.m_mpv.setPropertyBlocking(MpvProperties.ABLoopB, bPosition)
                 footer.progressBar.loopIndicator.endPosition = bPosition
-                root.m_osd.message(i18nc("@info:tooltip, use en dash for the range", "Loop: %1–%2", HarunaApp.formatTime(a), HarunaApp.formatTime(bPosition)))
+                root.m_osd.message(i18nc("@info:tooltip, use en dash for the range", "Loop: %1–%2", MiscUtilities.formatTime(a), MiscUtilities.formatTime(bPosition)))
             } else {
                 root.m_mpv.setProperty(MpvProperties.ABLoopA, "no")
                 root.m_mpv.setProperty(MpvProperties.ABLoopB, "no")

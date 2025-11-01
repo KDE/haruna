@@ -5,6 +5,7 @@
 #
 
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_add_library(utilities STATIC)
 qt_add_qml_module(utilities
@@ -12,6 +13,8 @@ qt_add_qml_module(utilities
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/utilities
     IMPORT_PATH ${CMAKE_BINARY_DIR}
     SOURCES
+        miscutilities.h
+        miscutilities.cpp
         pathutils.h
         pathutils.cpp
         systemutils.h

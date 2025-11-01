@@ -472,7 +472,7 @@ ApplicationWindow {
         nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
 
         onAccepted: {
-            if (window.acceptedSubtitleTypes.includes(HarunaApp.mimeType(subtitlesFileDialog.selectedFile))) {
+            if (window.acceptedSubtitleTypes.includes(MiscUtilities.mimeType(subtitlesFileDialog.selectedFile))) {
                 mpv.addSubtitles(subtitlesFileDialog.selectedFile)
             }
         }

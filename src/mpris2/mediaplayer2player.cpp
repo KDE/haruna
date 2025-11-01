@@ -15,7 +15,7 @@
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
 
-#include "application.h"
+#include "miscutilities.h"
 #include "mpvitem.h"
 #include "mpvproperties.h"
 #include "playlistsettings.h"
@@ -30,7 +30,7 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
 {
     connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
         if (m_mpv->currentUrl().isLocalFile()) {
-            QString mimeType = Application::mimeType(m_mpv->currentUrl());
+            QString mimeType = MiscUtilities::mimeType(m_mpv->currentUrl());
             if (mimeType.startsWith(u"audio"_s)) {
                 Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
             }
@@ -92,7 +92,7 @@ void MediaPlayer2Player::propertiesChanged(const QString &property, const QVaria
 QVariantMap MediaPlayer2Player::Metadata()
 {
     auto url = m_mpv->currentUrl();
-    QString mimeType = Application::mimeType(url);
+    QString mimeType = MiscUtilities::mimeType(url);
 
     m_metadata.insert(u"xesam:title"_s, m_mpv->mediaTitle());
     m_metadata.insert(u"mpris:trackid"_s, QVariant::fromValue<QDBusObjectPath>(QDBusObjectPath(u"/org/kde/haruna"_s)));
@@ -113,7 +113,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
         return QString();
     }
 
-    QString mimeType = Application::mimeType(url);
+    QString mimeType = MiscUtilities::mimeType(url);
     KFileMetaData::ExtractorCollection exCol;
     QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
     KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractImageData);

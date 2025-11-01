@@ -12,10 +12,10 @@ import QtQuick.Window
 import Qt5Compat.GraphicalEffects
 
 import org.kde.haruna
+import org.kde.haruna.utilities
 import org.kde.haruna.settings
-import org.kde.kirigami as Kirigami
 
-import org.kde.haruna
+import org.kde.kirigami as Kirigami
 
 MpvItem {
     id: root
@@ -179,7 +179,7 @@ MpvItem {
 
         onEntered: function (drag) {
             for (var i = 0; i < drag.urls.length; ++i) {
-                let mimeType = HarunaApp.mimeType(drag.urls[i])
+                let mimeType = MiscUtilities.mimeType(drag.urls[i])
                 let isDir = root.defaultFilterProxyModel.isDirectory(drag.urls[i])
                 if (mimeType.startsWith("video/") || mimeType.startsWith("audio/") || isDir) {
                     dragMedia = true
