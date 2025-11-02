@@ -35,29 +35,6 @@ Worker *Worker::instance()
     return &w;
 }
 
-void Worker::getMetaData(uint index, const QString &path, const QString playlistName)
-{
-    using namespace KFileMetaData;
-
-    auto url = QUrl::fromUserInput(path);
-    if (url.scheme() != u"file"_s) {
-        return;
-    }
-    QString mimeType = MiscUtilities::mimeType(url);
-    ExtractorCollection exCol;
-    QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
-    SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
-    if (extractors.size() == 0) {
-        return;
-    }
-    Extractor *ex = extractors.first();
-    ex->extract(&result);
-
-    auto properties = result.properties();
-
-    Q_EMIT metaDataReady(index, url, playlistName, properties);
-}
-
 void Worker::makePlaylistThumbnail(const QString &path, int width)
 {
     QImage image;

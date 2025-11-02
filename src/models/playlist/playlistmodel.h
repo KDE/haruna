@@ -8,8 +8,11 @@
 #define PLAYLISTMODEL_H
 
 #include <QAbstractListModel>
+#include <QThreadPool>
 #include <QUrl>
 #include <QtQml/qqmlregistration.h>
+
+#include <KFileMetaData/Properties>
 
 #include "youtube.h"
 
@@ -31,6 +34,7 @@ class PlaylistModel : public QAbstractListModel
 
 public:
     explicit PlaylistModel(QObject *parent = nullptr);
+    ~PlaylistModel();
     friend class PlaylistMultiProxiesModel;
     friend class PlaylistFilterProxyModel;
     friend class PlaylistProxyModel;
@@ -68,6 +72,7 @@ public:
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path, QString playlistName);
     void playingItemChanged(QString playlistName);
+    void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
 
 private:
     void appendItem(const QUrl &url);
@@ -78,6 +83,8 @@ private:
     void updateFileInfo(YTVideoInfo info, QVariantMap data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
     void setPlayingItem(uint i);
+    void getMetaData(uint i, const QString &path);
+    void onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties);
 
     std::vector<PlaylistItem> m_playlist;
     QString m_playlistName{u"Default"};
@@ -87,6 +94,7 @@ private:
     QString m_playlistPath;
     int m_httpItemCounter{0};
     YouTube youtube;
+    QThreadPool m_threadPool;
 
     // shuffling
     // when shuffling is on, instead of using an m_playlist index to determine

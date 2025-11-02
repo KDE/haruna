@@ -11,8 +11,10 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QJsonArray>
+#include <QtConcurrent>
 
-#include <KFileMetaData/Properties>
+#include <KFileMetaData/ExtractorCollection>
+#include <KFileMetaData/SimpleExtractionResult>
 
 #include <random>
 
@@ -20,7 +22,6 @@
 #include "generalsettings.h"
 #include "miscutilities.h"
 #include "playlistsettings.h"
-#include "worker.h"
 #include "youtube.h"
 
 using namespace Qt::StringLiterals;
@@ -37,38 +38,17 @@ PlaylistModel::PlaylistModel(QObject *parent)
             shuffleIndexes();
         }
     });
-    connect(this, &PlaylistModel::itemAdded, Worker::instance(), &Worker::getMetaData);
+    connect(this, &PlaylistModel::itemAdded, this, &PlaylistModel::getMetaData, Qt::QueuedConnection);
+    connect(this, &PlaylistModel::metaDataReady, this, &PlaylistModel::onMetaDataReady, Qt::QueuedConnection);
     connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
     connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
     connect(&youtube, &YouTube::error, Application::instance(), &Application::error);
+}
 
-    connect(Worker::instance(),
-            &Worker::metaDataReady,
-            this,
-            [=](int i, const QUrl &url, const QString playlistName, KFileMetaData::PropertyMultiMap metaData) {
-                if (m_playlist.empty() || static_cast<unsigned long>(i) > m_playlist.size()) {
-                    return;
-                }
-                if (m_playlistName != playlistName) {
-                    return;
-                }
-                if (m_playlist[i].url == url) {
-                    auto duration = metaData.value(KFileMetaData::Property::Duration).toInt();
-                    auto title = metaData.value(KFileMetaData::Property::Title).toString();
-
-                    m_playlist[i].formattedDuration = MiscUtilities::formatTime(duration);
-                    m_playlist[i].duration = duration;
-                    m_playlist[i].mediaTitle = title;
-
-                    Q_EMIT dataChanged(index(i, 0), index(i, 0));
-                } else {
-                    qDebug() << "\n"
-                             << u"Data mismatch: the url at position %1 received from the worker thread:"_s.arg(i) << "\n"
-                             << u"%1"_s.arg(url.toString()) << "\n"
-                             << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
-                             << u"%1"_s.arg(m_playlist[i].url.toString());
-                }
-            });
+PlaylistModel::~PlaylistModel()
+{
+    m_threadPool.clear();
+    m_threadPool.waitForDone();
 }
 
 int PlaylistModel::rowCount(const QModelIndex &parent) const
@@ -124,6 +104,8 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
 
 void PlaylistModel::clear()
 {
+    m_threadPool.clear();
+
     m_playlistPath = QString();
     m_playingItem = -1;
     beginResetModel();
@@ -423,6 +405,56 @@ void PlaylistModel::setPlayingItem(uint i)
     GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
     GeneralSettings::setLastPlaylist(m_playlistPath);
     GeneralSettings::self()->save();
+}
+
+void PlaylistModel::getMetaData(uint i, const QString &path)
+{
+    QtConcurrent::run(&m_threadPool, [this, i, path]() {
+        using namespace KFileMetaData;
+
+        auto url = QUrl::fromUserInput(path);
+        if (url.scheme() != u"file"_s) {
+            return;
+        }
+
+        QString mimeType = MiscUtilities::mimeType(url);
+        ExtractorCollection exCol;
+        QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
+        SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
+
+        if (extractors.isEmpty()) {
+            return;
+        }
+
+        Extractor *ex = extractors.first();
+        ex->extract(&result);
+
+        Q_EMIT metaDataReady(i, url, result.properties());
+    });
+}
+
+void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties)
+{
+    if (m_playlist.empty() || static_cast<uint>(i) >= m_playlist.size()) {
+        return;
+    }
+
+    if (m_playlist[i].url == url) {
+        auto duration = properties.value(KFileMetaData::Property::Duration).toInt();
+        auto title = properties.value(KFileMetaData::Property::Title).toString();
+
+        m_playlist[i].formattedDuration = MiscUtilities::formatTime(duration);
+        m_playlist[i].duration = duration;
+        m_playlist[i].mediaTitle = title;
+
+        Q_EMIT dataChanged(index(i, 0), index(i, 0));
+    } else {
+        qDebug() << "\n"
+                 << u"Data mismatch: the url at position %1 received from the threadpool:"_s.arg(i) << "\n"
+                 << u"%1"_s.arg(url.toString()) << "\n"
+                 << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
+                 << u"%1"_s.arg(m_playlist[i].url.toString());
+    }
 }
 
 void PlaylistModel::shuffleIndexes(std::vector<int> includedIndices)
