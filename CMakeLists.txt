@@ -25,6 +25,9 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 set(DBUS_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 
+find_package(Qt6Concurrent ${QT_MIN_VERSION})
+set_package_properties(Qt6Concurrent PROPERTIES TYPE REQUIRED)
+
 find_package(Qt6Core ${QT_MIN_VERSION})
 set_package_properties(Qt6Core PROPERTIES TYPE REQUIRED)
 

@@ -143,6 +143,7 @@ target_include_directories(haruna
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
+    Qt6::Concurrent
     Qt6::Core
     Qt6::Core5Compat
     Qt6::Gui
