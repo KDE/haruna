@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-31 00:41+0000\n"
-"PO-Revision-Date: 2025-10-29 12:04+0100\n"
+"PO-Revision-Date: 2025-11-01 22:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1323,7 +1323,7 @@ msgstr "Paso de volumen"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Ganancia de reproducción"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
@@ -1352,6 +1352,10 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Ajustar la ganancia del volumen según los valores <i>replaygain</i> "
+"guardados en los metadatos del archivo. Si es «ganancia del álbum», se "
+"aplica la ganancia del álbum si está presente, o la ganancia de la pista en "
+"caso contrario."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
@@ -1366,7 +1370,7 @@ msgstr "Evitar recorte bajando la ganancia"
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Preamplificar (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1381,7 +1385,7 @@ msgstr "Reiniciar al valor predeterminado"
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Alternativa (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1391,6 +1395,12 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Ganancia en dB que se aplica si el archivo no tiene etiquetas de ganancia de "
+"reproducción.<br><br>Este ajuste solo entra en efecto cuando:<br>- el ajuste "
+"de ganancia de reproducción está desactivado<br>- el ajuste de ganancia de "
+"reproducción está activado y el archivo no tiene metadatos de ganancia de "
+"reproducción<br>Si esto está en vigor, se ignoran los demás ajustes de "
+"ganancia de reproducción."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
