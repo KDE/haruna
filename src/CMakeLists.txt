@@ -123,7 +123,6 @@ qt_add_qml_module(haruna
 target_include_directories(haruna
     PRIVATE
         models
-        models/playlist
         mpv
         ${FFMPEG_INCLUDE_DIRS}
 )
