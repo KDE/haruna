@@ -41,18 +41,21 @@ const QString PathUtils::configFileParentPath(ConfigFile configFile)
         if (QFileInfo::exists(path)) {
             return path;
         }
+        break;
     }
     case ConfigFile::CustomCommands: {
         auto path = QStandardPaths::writableLocation(m_ccConfig->locationType()).append(u"/haruna"_s);
         if (QFileInfo::exists(path)) {
             return path;
         }
+        break;
     }
     case ConfigFile::Shortcuts: {
         auto path = QStandardPaths::writableLocation(m_shortcutsConfig->locationType()).append(u"/haruna"_s);
         if (QFileInfo::exists(path)) {
             return path;
         }
+        break;
     }
     case ConfigFile::Database:
     case ConfigFile::PlaylistCache: {
@@ -61,6 +64,7 @@ const QString PathUtils::configFileParentPath(ConfigFile configFile)
         if (QFileInfo::exists(path)) {
             return path;
         }
+        break;
     }
     }
 
