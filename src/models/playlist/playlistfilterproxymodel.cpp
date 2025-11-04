@@ -20,7 +20,7 @@
 #include <KIO/DeleteOrTrashJob>
 #include <KIO/RenameFileDialog>
 
-#include "miscutilities.h"
+#include "miscutils.h"
 #include "pathutils.h"
 #include "playlistsettings.h"
 
@@ -481,7 +481,7 @@ void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistMode
     };
 
     auto isAcceptedMime = [](const QString &path) -> bool {
-        QString mimeType = MiscUtilities::mimeType(QUrl::fromLocalFile(path));
+        QString mimeType = MiscUtils::mimeType(QUrl::fromLocalFile(path));
         if (mimeType == u"audio/x-mpegurl"_s) {
             return false;
         }

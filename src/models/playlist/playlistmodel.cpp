@@ -20,7 +20,7 @@
 
 #include "application.h"
 #include "generalsettings.h"
-#include "miscutilities.h"
+#include "miscutils.h"
 #include "playlistsettings.h"
 #include "youtube.h"
 
@@ -123,7 +123,7 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
     }
 
     if (url.scheme() == u"file"_s) {
-        auto mimeType = MiscUtilities::mimeType(url);
+        auto mimeType = MiscUtils::mimeType(url);
 
         if (mimeType == u"audio/x-mpegurl"_s) {
             m_playlistPath = url.toString();
@@ -235,7 +235,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         QString siblingFile = it.next();
         QFileInfo siblingFileInfo(siblingFile);
         auto siblingUrl = QUrl::fromLocalFile(siblingFile);
-        QString mimeType = MiscUtilities::mimeType(siblingUrl);
+        QString mimeType = MiscUtils::mimeType(siblingUrl);
         if (!siblingFileInfo.exists()) {
             continue;
         }
@@ -276,7 +276,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
 
 void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
 {
-    if (url.scheme() != u"file"_s || MiscUtilities::mimeType(url) != u"audio/x-mpegurl"_s) {
+    if (url.scheme() != u"file"_s || MiscUtils::mimeType(url) != u"audio/x-mpegurl"_s) {
         return;
     }
 
@@ -331,7 +331,7 @@ void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &video
         item.url = QUrl::fromUserInput(url);
         item.filename = !title.isEmpty() ? title : url;
         item.mediaTitle = !title.isEmpty() ? title : url;
-        item.formattedDuration = MiscUtilities::formatTime(duration);
+        item.formattedDuration = MiscUtils::formatTime(duration);
         item.duration = duration;
 
         beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
@@ -370,7 +370,7 @@ void PlaylistModel::updateFileInfo(YTVideoInfo info, QVariantMap data)
 
     m_playlist[row].mediaTitle = info.mediaTitle;
     m_playlist[row].filename = info.mediaTitle;
-    m_playlist[row].formattedDuration = MiscUtilities::formatTime(info.duration);
+    m_playlist[row].formattedDuration = MiscUtils::formatTime(info.duration);
     m_playlist[row].duration = info.duration;
 
     --m_httpItemCounter;
@@ -417,7 +417,7 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
             return;
         }
 
-        QString mimeType = MiscUtilities::mimeType(url);
+        QString mimeType = MiscUtils::mimeType(url);
         ExtractorCollection exCol;
         QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
         SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
@@ -443,7 +443,7 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::Prop
         auto duration = properties.value(KFileMetaData::Property::Duration).toInt();
         auto title = properties.value(KFileMetaData::Property::Title).toString();
 
-        m_playlist[i].formattedDuration = MiscUtilities::formatTime(duration);
+        m_playlist[i].formattedDuration = MiscUtils::formatTime(duration);
         m_playlist[i].duration = duration;
         m_playlist[i].mediaTitle = title;
 

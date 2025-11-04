@@ -9,7 +9,7 @@
 #include <QFile>
 #include <QIcon>
 
-#include "miscutilities.h"
+#include "miscutils.h"
 #include "worker.h"
 
 using namespace Qt::StringLiterals;
@@ -47,7 +47,7 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
             if (url.scheme() != u"file"_s) {
                 return;
             }
-            QString mimeType = MiscUtilities::mimeType(url);
+            QString mimeType = MiscUtils::mimeType(url);
             QString iconName;
             if (mimeType.startsWith(u"video/"_s)) {
                 iconName = u"video-x-generic"_s;

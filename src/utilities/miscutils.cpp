@@ -4,19 +4,19 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "miscutilities.h"
+#include "miscutils.h"
 
 #include <KFileItem>
 
 using namespace Qt::StringLiterals;
 
-MiscUtilities::MiscUtilities(QObject *parent)
+MiscUtils::MiscUtils(QObject *parent)
     : QObject{parent}
 {
 
 }
 
-QString MiscUtilities::formatTime(const double time)
+QString MiscUtils::formatTime(const double time)
 {
     int totalNumberOfSeconds = static_cast<int>(time);
     int seconds = totalNumberOfSeconds % 60;
@@ -31,7 +31,7 @@ QString MiscUtilities::formatTime(const double time)
     return timeString;
 }
 
-QString MiscUtilities::mimeType(QUrl url)
+QString MiscUtils::mimeType(QUrl url)
 {
     KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
     return fileItem.mimetype();

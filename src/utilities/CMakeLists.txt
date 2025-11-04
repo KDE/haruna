@@ -13,8 +13,8 @@ qt_add_qml_module(utilities
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/utilities
     IMPORT_PATH ${CMAKE_BINARY_DIR}
     SOURCES
-        miscutilities.h
-        miscutilities.cpp
+        miscutils.h
+        miscutils.cpp
         pathutils.h
         pathutils.cpp
         systemutils.h
