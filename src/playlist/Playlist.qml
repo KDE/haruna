@@ -15,6 +15,7 @@ import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 import org.kde.haruna.youtube
@@ -696,21 +697,21 @@ Page {
 
         Component {
             id: playlistItemWithThumbnail
-            PlayListItemWithThumbnail {
+            PlaylistItemWithThumbnail {
                 m_mpv: root.m_mpv
             }
         }
 
         Component {
             id: playlistItemSimple
-            PlayListItem {
+            PlaylistItem {
                 m_mpv: root.m_mpv
             }
         }
 
         Component {
             id: playlistItemCompact
-            PlayListItemCompact {
+            PlaylistItemCompact {
                 m_mpv: root.m_mpv
             }
         }

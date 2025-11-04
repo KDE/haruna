@@ -18,7 +18,6 @@ Item {
     id: root
 
     required property MpvVideo m_mpv
-    required property PlayList m_playlist
     required property MenuBarLoader m_menuBarLoader
     required property Header m_header
     required property RecentFilesModel m_recentFilesModel

@@ -11,7 +11,6 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QJsonArray>
-#include <QtConcurrent>
 
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
@@ -408,7 +407,7 @@ void PlaylistModel::setPlayingItem(uint i)
 
 void PlaylistModel::getMetaData(uint i, const QString &path)
 {
-    QtConcurrent::run(&m_threadPool, [this, i, path]() {
+    m_threadPool.start([this, i, path]() {
         using namespace KFileMetaData;
 
         auto url = QUrl::fromUserInput(path);

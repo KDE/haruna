@@ -15,6 +15,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 import org.kde.haruna.youtube
@@ -247,7 +248,7 @@ ApplicationWindow {
         HoverHandler {}
     }
 
-    PlayList {
+    Playlist {
         id: playlist
 
         m_mpv: mpv
@@ -290,7 +291,6 @@ ApplicationWindow {
         anchors.bottom: window.contentItem.bottom
 
         m_mpv: mpv
-        m_playlist: playlist
         m_menuBarLoader: menuBarLoader
         m_header: header
         m_recentFilesModel: recentFilesModel

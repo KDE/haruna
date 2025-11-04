@@ -24,12 +24,6 @@ target_sources(haruna
     models/recentfilesmodel.h models/recentfilesmodel.cpp
     models/subtitlesfoldersmodel.h models/subtitlesfoldersmodel.cpp
     models/tracksmodel.h models/tracksmodel.cpp
-    models/playlist/playlistmodel.h models/playlist/playlistmodel.cpp
-    models/playlist/playlistsortproxymodel.h models/playlist/playlistsortproxymodel.cpp
-    models/playlist/playlistproxymodel.h models/playlist/playlistproxymodel.cpp
-    models/playlist/playlistfilterproxymodel.h models/playlist/playlistfilterproxymodel.cpp
-    models/playlist/playlistmultiproxiesmodel.h models/playlist/playlistmultiproxiesmodel.cpp
-    models/playlist/playlistrenamevalidator.h models/playlist/playlistrenamevalidator.cpp
     mpv/mpvitem.h mpv/mpvitem.cpp
     mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvproperties.h
@@ -60,6 +54,7 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
 endif()
 
 add_subdirectory(framedecoder)
+add_subdirectory(playlist)
 add_subdirectory(utilities)
 add_subdirectory(settings)
 add_subdirectory(youtube)
@@ -77,7 +72,6 @@ qt_add_qml_module(haruna
         qml/MenuBarLoader.qml
         qml/MpvVideo.qml
         qml/Osd.qml
-        qml/PlayList.qml
         qml/VolumeSlider.qml
         qml/Main.qml
 
@@ -93,12 +87,6 @@ qt_add_qml_module(haruna
         qml/Haruna/Components/SubtitlesFolders.qml
         qml/Haruna/Components/SubtitleTracksMenu.qml
         qml/Haruna/Components/ToolTipButton.qml
-
-        qml/Haruna/PlaylistItems/PlaylistItemDelegate.qml
-        qml/Haruna/PlaylistItems/PlayListItem.qml
-        qml/Haruna/PlaylistItems/PlayListItemCompact.qml
-        qml/Haruna/PlaylistItems/PlayListItemWithThumbnail.qml
-        qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml
 
         qml/Menus/AudioMenu.qml
         qml/Menus/MpvContextMenu.qml
@@ -143,7 +131,6 @@ target_include_directories(haruna
 target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
-    Qt6::Concurrent
     Qt6::Core
     Qt6::Core5Compat
     Qt6::Gui
@@ -169,6 +156,7 @@ target_link_libraries(haruna PRIVATE
     MpvQt::MpvQt
 
     framedecoderplugin
+    playlistplugin
     utilitiesplugin
     settingsplugin
     youtubeplugin
