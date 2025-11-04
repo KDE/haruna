@@ -14,7 +14,7 @@
 #include <KIO/RenameFileDialog>
 #include <KLocalizedString>
 
-#include "application.h"
+#include "miscutils.h"
 #include "pathutils.h"
 #include "playlistrenamevalidator.h"
 
@@ -156,7 +156,7 @@ void PlaylistMultiProxiesModel::addPlaylist(QString playlistName, QUrl internalU
     for (uint i = 0; i < playlistsSize; ++i) {
         QString pName = m_playlistFilterProxyModels[i]->playlistModel()->m_playlistName;
         if (playlistName == pName) {
-            Q_EMIT Application::instance()->error(
+            Q_EMIT MiscUtils::instance()->error(
                 i18nc("@info:tooltip; %1 playlist with same name", "Playlists with same name is not allowed: %1", playlistName));
             return;
         }

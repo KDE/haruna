@@ -179,7 +179,7 @@ MpvItem {
 
         onEntered: function (drag) {
             for (var i = 0; i < drag.urls.length; ++i) {
-                let mimeType = MiscUtilities.mimeType(drag.urls[i])
+                let mimeType = MiscUtils.mimeType(drag.urls[i])
                 let isDir = root.defaultFilterProxyModel.isDirectory(drag.urls[i])
                 if (mimeType.startsWith("video/") || mimeType.startsWith("audio/") || isDir) {
                     dragMedia = true

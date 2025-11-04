@@ -36,6 +36,7 @@
 #include "pathutils.h"
 #include "haruna-version.h"
 #include "informationsettings.h"
+#include "miscutils.h"
 #include "mousesettings.h"
 #include "playbacksettings.h"
 #include "playlistsettings.h"
@@ -106,7 +107,7 @@ Application::Application()
 
     KCrash::initialize();
 
-    connect(PathUtils::instance(), &PathUtils::error, this, &Application::error);
+    connect(PathUtils::instance(), &PathUtils::error, MiscUtils::instance(), &MiscUtils::error);
 }
 
 Application::~Application()

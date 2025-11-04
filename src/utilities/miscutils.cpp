@@ -10,10 +10,21 @@
 
 using namespace Qt::StringLiterals;
 
-MiscUtils::MiscUtils(QObject *parent)
-    : QObject{parent}
+MiscUtils *MiscUtils::instance()
 {
+    static MiscUtils i;
+    return &i;
+}
 
+MiscUtils *MiscUtils::create(QQmlEngine *, QJSEngine *)
+{
+    QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+    return instance();
+}
+
+MiscUtils::MiscUtils()
+    : QObject{nullptr}
+{
 }
 
 QString MiscUtils::formatTime(const double time)
@@ -37,4 +48,4 @@ QString MiscUtils::mimeType(QUrl url)
     return fileItem.mimetype();
 }
 
-// #include "moc_miscutilities.h"
+// #include "moc_miscutils.h"

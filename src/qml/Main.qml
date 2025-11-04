@@ -350,6 +350,14 @@ ApplicationWindow {
             Layout.fillHeight: true
             type: Kirigami.MessageType.Error
             showCloseButton: true
+
+            Connections {
+                target: MiscUtils
+                function onError(message) {
+                    messageBox.visible = true
+                    messageBox.text = message
+                }
+            }
         }
     }
 
@@ -425,10 +433,6 @@ ApplicationWindow {
         function onQmlApplicationMouseEnter() {
             window.containsMouse = true
         }
-        function onError(message) {
-            messageBox.visible = true
-            messageBox.text = message
-        }
         function onOpenUrl(url) {
             if (GeneralSettings.appendVideoToSingleInstance) {
                 let behavior = GeneralSettings.playNewFileInSingleInstance
@@ -472,7 +476,7 @@ ApplicationWindow {
         nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
 
         onAccepted: {
-            if (window.acceptedSubtitleTypes.includes(MiscUtilities.mimeType(subtitlesFileDialog.selectedFile))) {
+            if (window.acceptedSubtitleTypes.includes(MiscUtils.mimeType(subtitlesFileDialog.selectedFile))) {
                 mpv.addSubtitles(subtitlesFileDialog.selectedFile)
             }
         }

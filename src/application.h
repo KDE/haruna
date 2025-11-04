@@ -70,7 +70,6 @@ public:
 Q_SIGNALS:
     void qmlApplicationMouseLeave();
     void qmlApplicationMouseEnter();
-    void error(const QString &message);
     void openUrl(const QUrl &url);
     void actionsEnabledChanged();
 

@@ -18,7 +18,6 @@
 
 #include <random>
 
-#include "application.h"
 #include "generalsettings.h"
 #include "miscutils.h"
 #include "playlistsettings.h"
@@ -42,7 +41,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
     connect(this, &PlaylistModel::metaDataReady, this, &PlaylistModel::onMetaDataReady, Qt::QueuedConnection);
     connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
     connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
-    connect(&youtube, &YouTube::error, Application::instance(), &Application::error);
+    connect(&youtube, &YouTube::error, MiscUtils::instance(), &MiscUtils::error);
 }
 
 PlaylistModel::~PlaylistModel()

@@ -156,7 +156,7 @@ RowLayout {
                 onMouseXChanged: {
                     const time = mouseX / progressBarBG.width * slider.to
                     previewMpvLoader.position = time
-                    progressBarToolTip.text = MiscUtilities.formatTime(time)
+                    progressBarToolTip.text = MiscUtils.formatTime(time)
                 }
 
                 onWheel: function(wheel) {
@@ -177,7 +177,7 @@ RowLayout {
             }
 
             root.m_mpv.commandAsync(["seek", slider.value, "absolute"])
-            progressBarToolTip.text = MiscUtilities.formatTime(slider.value)
+            progressBarToolTip.text = MiscUtils.formatTime(slider.value)
 
             const previewItem = previewMpvLoader.item as MpvPreview
             if (previewItem === null || !previewItem.isLocalFile) {
@@ -306,7 +306,7 @@ RowLayout {
 
                         property int scrollBarWidth: listViewPage.contentItem.ScrollBar.vertical.width
 
-                        text: `${MiscUtilities.formatTime(menuitem.startTime)} - ${menuitem.title}`
+                        text: `${MiscUtils.formatTime(menuitem.startTime)} - ${menuitem.title}`
                         checked: menuitem.index === root.m_mpv.chapter
                         width: listViewPage.width - scrollBarWidth
                         onClicked: {

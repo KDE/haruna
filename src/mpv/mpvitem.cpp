@@ -363,7 +363,7 @@ void MpvItem::onEndFile(const QString &reason)
         const auto index = proxyModel->index(currentItem, 0);
         const auto title = proxyModel->data(index, PlaylistModel::TitleRole);
 
-        Q_EMIT Application::instance()->error(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
+        Q_EMIT MiscUtils::instance()->error(i18nc("@info:tooltip; %1 is a video title/filename", "Could not play: %1", title.toString()));
         return;
     }
 }
@@ -504,7 +504,7 @@ void MpvItem::loadFile(const QString &file)
     if (url.isLocalFile() && !fi.exists()) {
         m_currentUrl = {};
         Q_EMIT currentUrlChanged();
-        Q_EMIT Application::instance()->error(i18nc("@info:tooltip; %1 is an absolute path", "File doesn't exist: %1", file));
+        Q_EMIT MiscUtils::instance()->error(i18nc("@info:tooltip; %1 is an absolute path", "File doesn't exist: %1", file));
         return;
     }
 
@@ -614,7 +614,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
             if (mimeType.startsWith(u"video/"_s)) {
                 auto errMsg = i18nc("Error message when video can't be decoded/played",
                                     "No video track detected, most likely the video track can't be decoded/played due to missing codecs");
-                Q_EMIT Application::instance()->error(errMsg);
+                Q_EMIT MiscUtils::instance()->error(errMsg);
                 break;
             }
             Q_EMIT command(QStringList{u"video-add"_s, VideoSettings::defaultCover()});
