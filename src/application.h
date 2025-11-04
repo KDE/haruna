@@ -9,6 +9,7 @@
 
 #include <QObject>
 #include <QQmlPropertyMap>
+#include <QtQml/qqmlregistration.h>
 
 #include <KAboutData>
 
