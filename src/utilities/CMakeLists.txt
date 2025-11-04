@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 #
 
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-
 qt_add_library(utilities STATIC)
 qt_add_qml_module(utilities
     URI org.kde.haruna.utilities
