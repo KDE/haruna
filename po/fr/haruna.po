@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-31 00:41+0000\n"
-"PO-Revision-Date: 2025-09-25 11:27+0200\n"
+"PO-Revision-Date: 2025-10-30 09:23+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -102,7 +102,7 @@ msgstr "Lecture d'un fichier multi-média"
 #, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Ouvrir une boîte de dialogue pour les actions"
+msgstr "Ouvrir une boite de dialogue pour les actions"
 
 #: src/models/actionsmodel.cpp:32
 #, kde-format
@@ -641,11 +641,6 @@ msgid "Audio: %1 %2"
 msgstr "Audio : %1 %2"
 
 #: src/qml/Actions.qml:165
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can’t load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
@@ -1212,12 +1207,9 @@ msgid "Save As"
 msgstr "Enregistrer sous"
 
 #: src/qml/PlayList.qml:306
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "Ajouter un fichier à la liste de lecture"
+msgstr "Ajouter une nouvelle liste de lecture"
 
 #: src/qml/PlayList.qml:321 src/qml/PlayList.qml:646
 msgctxt "@action:inmenu"
@@ -1235,12 +1227,9 @@ msgid "Add"
 msgstr "Ajouter"
 
 #: src/qml/PlayList.qml:403
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "Style de la liste de lecture"
+msgstr "Nom de la liste de lecture"
 
 #: src/qml/PlayList.qml:588
 msgctxt "@action:inmenu"
@@ -1332,33 +1321,27 @@ msgstr "Pas de volume"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Gain de relecture"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Mode"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Désactivé"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "Pis&te"
+msgstr "Piste"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1367,21 +1350,25 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Ajustez le gain de volume en fonction des valeurs du paramètre "
+"« <i>replaygain</i> » enregistrées dans les métadonnées du fichier. Si ce "
+"paramètre est défini comme le gain de l'album, appliquez ce dernier, s'il "
+"est présent, et en solution de repli, appliquez le gain de la piste."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Empêcher l'écrêtage"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Empêcher l'écrêtage par diminution du gain"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Préampli (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1389,17 +1376,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:239
 #: src/qml/Settings/SubtitlesSettings.qml:294
 #: src/qml/Settings/SubtitlesSettings.qml:369
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Définir une valeur par défaut"
+msgstr "ré-initialiser à la valeur par défaut"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Solution de repli (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1409,6 +1393,12 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Gain en dB à appliquer si le fichier ne possède aucune balise de gain de "
+"relecture.<br><br>Ce paramètre est utilisé uniquement lorsque : <br>- le "
+"paramètre « replaygain » est désactivé, <br>- le paramètre « replaygain » "
+"est activé et le fichier ne possède aucune métadonnée de gain de relecture. "
+"<br>Si cela est le cas, les autres paramètres de gain de relecture sont "
+"ignorés."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1445,20 +1435,14 @@ msgid "Custom commands config file"
 msgstr "Fichier de configuration pour des commandes personnalisées"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Ouvrir un fichier de configuration"
+msgstr "Fichier de configuration des raccourcis"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Ouvrir un fichier de configuration"
+msgstr "Fichier de configuration des listes de lecture"
 
 #: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@info:usagetip"
@@ -1476,20 +1460,14 @@ msgid "Enable mpv logging"
 msgstr "Activer la connexion « mpv »"
 
 #: src/qml/Settings/DebugSettings.qml:105
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Ouvrir un fichier"
 
 #: src/qml/Settings/DebugSettings.qml:114
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
-msgstr "Ouvrir le dossier contenant"
+msgstr "Ouvrir le dossier englobant"
 
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
@@ -1829,17 +1807,11 @@ msgid "Default"
 msgstr "Par défaut"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Change action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "Modifier l'action"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Delete"
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Supprimer"
@@ -1925,10 +1897,6 @@ msgid "Meta"
 msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:298
-#, fuzzy
-#| msgctxt ""
-#| "@label:check whether mouse button action shoud trigger on double click"
-#| msgid "Trigger on double click"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
@@ -2604,13 +2572,13 @@ msgstr ""
 "Identique à %f, mais sans l'extension de fichier. <br><li><strong>%x</"
 "strong> Emplacement du dossier de la vidéo en cours de lecture. Si la vidéo "
 "n'est pas sur le système de fichiers (http : // url), il sera défini comme "
-"une chaîne vide. <br><li><strong>%X{fallback}</strong> Identique à %x, mais "
-"si le fichier vidéo n'est pas sur le système de fichiers, renvoie la chaîne "
+"une chaine vide. <br><li><strong>%X{fallback}</strong> Identique à %x, mais "
+"si le fichier vidéo n'est pas sur le système de fichiers, renvoie la chaine "
 "de remplacement à l'intérieur de {...}. <br><li><strong>%p</strong> Durée "
-"courante de lecture. Le résultat est une chaîne de la forme « HH:MM:SS ». "
+"courante de lecture. Le résultat est une chaine de la forme « HH:MM:SS ». "
 "<br><li><strong>%P</strong> Similaire à %p, mais étendu avec la durée de "
 "lecture en millisecondes « HH:MM:SS.mmm ». <br><li><strong>%wX</strong> "
-"Spécifier la durée courante de lecture en utilisant la chaîne de format X."
+"Spécifier la durée courante de lecture en utilisant la chaine de format X."
 "<br>Spécificateurs de format valable :<br><ul><li><strong>%wH</strong> heure "
 "(Remplie par des 0 jusqu'à 2 chiffres)</li><li><strong>%wh</strong> heure "
 "(Sans remplissage)</li><li><strong>%wM</strong> minutes (00 - 59)</"
