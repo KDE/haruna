@@ -77,7 +77,7 @@ Q_SIGNALS:
     void playbackStatusChanged();
     void metadataChanged();
     void volumeChanged();
-    void requestMprisThumbnail(const QString &path, int width);
+    // void requestMprisThumbnail(const QString &path, int width);
     void shuffleChanged(bool shuffle);
     void loopStatusChanged(QString loop);
 
