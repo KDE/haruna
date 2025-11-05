@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-31 00:41+0000\n"
+"POT-Creation-Date: 2025-11-05 00:43+0000\n"
 "PO-Revision-Date: 2025-10-12 14:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,59 +27,59 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: src/application.cpp:128
+#: src/application.cpp:130
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "다기능 명령행 오디오/비디오 다운로더"
 
-#: src/application.cpp:141
+#: src/application.cpp:143
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:143
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "미디어 재생기"
 
-#: src/application.cpp:145
+#: src/application.cpp:147
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:150
+#: src/application.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:151
+#: src/application.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "개발자"
 
-#: src/application.cpp:159
+#: src/application.cpp:161
 #, kde-format
 msgid "Command line video player"
 msgstr "명령행 동영상 재생기"
 
-#: src/application.cpp:165
+#: src/application.cpp:167
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
-#: src/application.cpp:177
+#: src/application.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "열 파일"
 
-#: src/application.cpp:181
+#: src/application.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -567,56 +567,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "재할당"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:160
-#, kde-format
-msgctxt "@info:tooltip; %1 playlist with same name"
-msgid "Playlists with same name is not allowed: %1"
-msgstr "같은 이름의 재생 목록을 사용할 수 없음: %1"
-
-#: src/mpv/mpvitem.cpp:365
+#: src/mpv/mpvitem.cpp:366
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "자막 시간 조정: %1초"
 
-#: src/mpv/mpvitem.cpp:506
+#: src/mpv/mpvitem.cpp:507
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "파일이 없음: %1"
 
-#: src/mpv/mpvitem.cpp:543
+#: src/mpv/mpvitem.cpp:544
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:582
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:586
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:588
+#: src/mpv/mpvitem.cpp:589
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:615
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -626,150 +620,361 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:648
+#: src/mpv/mpvitem.cpp:649
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
-#: src/qml/Actions.qml:94 src/qml/Actions.qml:112
+#: src/playlist/Playlist.qml:76
+msgctxt "@action:button"
+msgid "Search"
+msgstr "검색"
+
+#: src/playlist/Playlist.qml:96
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "추가…"
+
+#: src/playlist/Playlist.qml:104
+msgctxt "@action:button"
+msgid "Files"
+msgstr "파일"
+
+#: src/playlist/Playlist.qml:112
+msgctxt "@action:button"
+msgid "URL"
+msgstr "URL"
+
+#: src/playlist/Playlist.qml:122
+msgctxt "@action:button"
+msgid "Playlist"
+msgstr "재생 목록"
+
+#: src/playlist/Playlist.qml:131
+msgctxt "@action:button"
+msgid "Sort"
+msgstr "정렬"
+
+#: src/playlist/Playlist.qml:140
+msgctxt "@action:button"
+msgid "Name, ascending"
+msgstr "이름, 오름차순"
+
+#: src/playlist/Playlist.qml:146
+msgctxt "@action:button"
+msgid "Name, descending"
+msgstr "이름, 내림차순"
+
+#: src/playlist/Playlist.qml:152
+msgctxt "@action:button"
+msgid "Duration, ascending"
+msgstr "시간, 오름차순"
+
+#: src/playlist/Playlist.qml:158
+msgctxt "@action:button"
+msgid "Duration, descending"
+msgstr "시간, 내림차순"
+
+#: src/playlist/Playlist.qml:165
+msgctxt "@action:button"
+msgid "Playback"
+msgstr "재생"
+
+#: src/playlist/Playlist.qml:171
+msgctxt "@action:button"
+msgid "Repeat playlist"
+msgstr "재생 목록 반복"
+
+#: src/playlist/Playlist.qml:182
+msgctxt "@action:button"
+msgid "Stop after last item"
+msgstr "마지막 항목 이후 정지"
+
+#: src/playlist/Playlist.qml:192
+msgctxt "@action:button"
+msgid "Repeat item"
+msgstr "항목 반복"
+
+#: src/playlist/Playlist.qml:203
+msgctxt "@action:button"
+msgid "Stop after item"
+msgstr "항목 이후 정지"
+
+#: src/playlist/Playlist.qml:213
+msgctxt "@action:button"
+msgid "Random Playback"
+msgstr "무작위 순서 재생"
+
+#: src/playlist/Playlist.qml:225
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "지우기"
+
+#: src/playlist/Playlist.qml:233
+msgctxt "@action:button"
+msgid "Save As"
+msgstr "다른 이름으로 저장"
+
+#: src/playlist/Playlist.qml:307
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Add file to playlist"
+msgctxt "@action:button"
+msgid "Add new playlist"
+msgstr "재생 목록에 파일 추가"
+
+#: src/playlist/Playlist.qml:322 src/playlist/Playlist.qml:647
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "이름 바꾸기"
+
+#: src/playlist/Playlist.qml:328
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr "삭제"
+
+#: src/playlist/Playlist.qml:384 src/playlist/Playlist.qml:405
+msgctxt "@action:button"
+msgid "Add"
+msgstr "추가"
+
+#: src/playlist/Playlist.qml:387 src/qml/Main.qml:503
+msgctxt "@info"
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
+msgstr ""
+"<a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 또는 <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>을 찾을 수 없습니다."
+
+#: src/playlist/Playlist.qml:404
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Playlist style"
+msgctxt "@placeholder"
+msgid "playlist name"
+msgstr "재생 목록 스타일"
+
+#: src/playlist/Playlist.qml:589
+msgctxt "@action:inmenu"
+msgid "Open Containing Folder"
+msgstr "포함하는 폴더 열기"
+
+#: src/playlist/Playlist.qml:595
+msgctxt "@action:inmenu"
+msgid "Open in Browser"
+msgstr "브라우저로 열기"
+
+#: src/playlist/Playlist.qml:604
+msgctxt "@action:inmenu"
+msgid "Copy Name"
+msgstr "이름 복사"
+
+#: src/playlist/Playlist.qml:610
+msgctxt "@action:inmenu"
+msgid "Copy Path"
+msgstr "경로 복사"
+
+#: src/playlist/Playlist.qml:611
+msgctxt "@action:inmenu"
+msgid "Copy URL"
+msgstr "URL 복사"
+
+#: src/playlist/Playlist.qml:621
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr "모두 선택"
+
+#: src/playlist/Playlist.qml:625
+msgctxt "@action:inmenu"
+msgid "Deselect All"
+msgstr "모두 선택 해제"
+
+#: src/playlist/Playlist.qml:629
+msgctxt "@action:inmenu"
+msgid "Invert Selection"
+msgstr "선택 반전"
+
+#: src/playlist/Playlist.qml:635
+msgctxt "@action:inmenu"
+msgid "Remove from Playlist"
+msgstr "재생 목록에서 삭제"
+
+#: src/playlist/Playlist.qml:641
+msgctxt "@action:inmenu"
+msgid "Remove Selected from Playlist"
+msgstr "재생 목록에서 선택 항목 삭제"
+
+#: src/playlist/Playlist.qml:653
+msgctxt "@action:inmenu"
+msgid "Scroll to Playing Item"
+msgstr "현재 재생 중인 항목으로 스크롤"
+
+#: src/playlist/Playlist.qml:663
+msgctxt "@action:inmenu"
+msgid "Move File to Trash"
+msgstr "파일을 휴지통으로 이동"
+
+#: src/playlist/Playlist.qml:669
+msgctxt "@action:inmenu"
+msgid "Move Selected Files to Trash"
+msgstr "선택한 파일을 휴지통으로 이동"
+
+#: src/playlist/Playlist.qml:775 src/qml/Settings/VideoSettings.qml:69
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "파일 선택"
+
+#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#, kde-format
+msgctxt "@info:tooltip; %1 playlist with same name"
+msgid "Playlists with same name is not allowed: %1"
+msgstr "같은 이름의 재생 목록을 사용할 수 없음: %1"
+
+#: src/playlist/PlaylistTabDelegate.qml:128
+msgctxt "@label:title name of default playlist tab"
+msgid "Default"
+msgstr "기본값"
+
+#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
-#: src/qml/Actions.qml:165
+#: src/qml/Actions.qml:166
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "연 파일이 없을 때 자막을 불러올 수 없음"
 
-#: src/qml/Actions.qml:184 src/qml/Actions.qml:190 src/qml/Actions.qml:195
+#: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "재생 속도: %1"
 
-#: src/qml/Actions.qml:290
+#: src/qml/Actions.qml:291
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "반복 시작: %1"
 
-#: src/qml/Actions.qml:296
+#: src/qml/Actions.qml:297
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "반복: %1 - %2"
 
-#: src/qml/Actions.qml:302
+#: src/qml/Actions.qml:303
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "반복 해제됨"
 
-#: src/qml/Actions.qml:322
+#: src/qml/Actions.qml:323
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "자막 꺼짐"
 
-#: src/qml/Actions.qml:322
+#: src/qml/Actions.qml:323
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "자막 켜짐"
 
-#: src/qml/Actions.qml:331 src/qml/Actions.qml:343
+#: src/qml/Actions.qml:332 src/qml/Actions.qml:344
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "자막: 없음"
 
-#: src/qml/Actions.qml:335 src/qml/Actions.qml:347
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "자막: %1 %2"
 
-#: src/qml/Actions.qml:354 src/qml/Actions.qml:360
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "자막 크기 조정: %1"
 
-#: src/qml/Actions.qml:374
+#: src/qml/Actions.qml:375
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "디인터레이스: %1"
 
-#: src/qml/Actions.qml:435 src/qml/Actions.qml:441
+#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "확대: %1"
 
-#: src/qml/Actions.qml:446
+#: src/qml/Actions.qml:447
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "확대: 0"
 
-#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "명암: %1"
 
-#: src/qml/Actions.qml:464
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "명암: 0"
 
-#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "밝기: %1"
 
-#: src/qml/Actions.qml:481
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "밝기: 0"
 
-#: src/qml/Actions.qml:487 src/qml/Actions.qml:493
+#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "감마: %1"
 
-#: src/qml/Actions.qml:498
+#: src/qml/Actions.qml:499
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "감마: 0"
 
-#: src/qml/Actions.qml:504 src/qml/Actions.qml:510
+#: src/qml/Actions.qml:505 src/qml/Actions.qml:511
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "채도: %1"
 
-#: src/qml/Actions.qml:515
+#: src/qml/Actions.qml:516
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "채도: 0"
 
-#: src/qml/Footer.qml:151
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "재생 시작"
 
-#: src/qml/Footer.qml:151
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "재생 일시 정지"
 
-#: src/qml/Footer.qml:168
+#: src/qml/Footer.qml:167
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "이전 파일 재생"
 
-#: src/qml/Footer.qml:185
+#: src/qml/Footer.qml:184
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "다음 파일 재생"
 
-#: src/qml/Footer.qml:199
+#: src/qml/Footer.qml:198
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "챕터 메뉴 열기"
 
-#: src/qml/Footer.qml:263
+#: src/qml/Footer.qml:262
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "남은 시간: %1"
@@ -878,11 +1083,6 @@ msgstr ""
 "자막을 \"%1\" 설정에서 정의한 경로에서 재귀적으로 검색합니다.\n"
 "상대 경로 폴더만 검색합니다."
 
-#: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:128
-msgctxt "@label:title name of default playlist tab"
-msgid "Default"
-msgstr "기본값"
-
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -893,12 +1093,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:281
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:289
+#: src/qml/HProgressBar.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -907,34 +1107,25 @@ msgstr ""
 "특정한 단어/문자를 포함하는 챕터를 자동으로 건너뜁니다.\n"
 "자세한 사항은 \"재생\" 설정을 참조하십시오."
 
-#: src/qml/Main.qml:31
+#: src/qml/Main.qml:32
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:449
+#: src/qml/Main.qml:453
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
-#: src/qml/Main.qml:469
+#: src/qml/Main.qml:473
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
 
-#: src/qml/Main.qml:496
+#: src/qml/Main.qml:500
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
-
-#: src/qml/Main.qml:499 src/qml/PlayList.qml:386
-msgctxt "@info"
-msgid ""
-"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
-"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
-msgstr ""
-"<a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 또는 <a href="
-"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>을 찾을 수 없습니다."
 
 #: src/qml/Menus/AudioMenu.qml:18 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 msgctxt "@title:menu"
@@ -1110,197 +1301,6 @@ msgstr "재생 목록에 추가"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "지금 재생"
-
-#: src/qml/PlayList.qml:75
-msgctxt "@action:button"
-msgid "Search"
-msgstr "검색"
-
-#: src/qml/PlayList.qml:95
-msgctxt "@action:button"
-msgid "Add…"
-msgstr "추가…"
-
-#: src/qml/PlayList.qml:103
-msgctxt "@action:button"
-msgid "Files"
-msgstr "파일"
-
-#: src/qml/PlayList.qml:111
-msgctxt "@action:button"
-msgid "URL"
-msgstr "URL"
-
-#: src/qml/PlayList.qml:121
-msgctxt "@action:button"
-msgid "Playlist"
-msgstr "재생 목록"
-
-#: src/qml/PlayList.qml:130
-msgctxt "@action:button"
-msgid "Sort"
-msgstr "정렬"
-
-#: src/qml/PlayList.qml:139
-msgctxt "@action:button"
-msgid "Name, ascending"
-msgstr "이름, 오름차순"
-
-#: src/qml/PlayList.qml:145
-msgctxt "@action:button"
-msgid "Name, descending"
-msgstr "이름, 내림차순"
-
-#: src/qml/PlayList.qml:151
-msgctxt "@action:button"
-msgid "Duration, ascending"
-msgstr "시간, 오름차순"
-
-#: src/qml/PlayList.qml:157
-msgctxt "@action:button"
-msgid "Duration, descending"
-msgstr "시간, 내림차순"
-
-#: src/qml/PlayList.qml:164
-msgctxt "@action:button"
-msgid "Playback"
-msgstr "재생"
-
-#: src/qml/PlayList.qml:170
-msgctxt "@action:button"
-msgid "Repeat playlist"
-msgstr "재생 목록 반복"
-
-#: src/qml/PlayList.qml:181
-msgctxt "@action:button"
-msgid "Stop after last item"
-msgstr "마지막 항목 이후 정지"
-
-#: src/qml/PlayList.qml:191
-msgctxt "@action:button"
-msgid "Repeat item"
-msgstr "항목 반복"
-
-#: src/qml/PlayList.qml:202
-msgctxt "@action:button"
-msgid "Stop after item"
-msgstr "항목 이후 정지"
-
-#: src/qml/PlayList.qml:212
-msgctxt "@action:button"
-msgid "Random Playback"
-msgstr "무작위 순서 재생"
-
-#: src/qml/PlayList.qml:224
-msgctxt "@action:button"
-msgid "Clear"
-msgstr "지우기"
-
-#: src/qml/PlayList.qml:232
-msgctxt "@action:button"
-msgid "Save As"
-msgstr "다른 이름으로 저장"
-
-#: src/qml/PlayList.qml:306
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
-msgctxt "@action:button"
-msgid "Add new playlist"
-msgstr "재생 목록에 파일 추가"
-
-#: src/qml/PlayList.qml:321 src/qml/PlayList.qml:646
-msgctxt "@action:inmenu"
-msgid "Rename"
-msgstr "이름 바꾸기"
-
-#: src/qml/PlayList.qml:327
-msgctxt "@action:inmenu"
-msgid "Remove"
-msgstr "삭제"
-
-#: src/qml/PlayList.qml:383 src/qml/PlayList.qml:404
-msgctxt "@action:button"
-msgid "Add"
-msgstr "추가"
-
-#: src/qml/PlayList.qml:403
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
-msgctxt "@placeholder"
-msgid "playlist name"
-msgstr "재생 목록 스타일"
-
-#: src/qml/PlayList.qml:588
-msgctxt "@action:inmenu"
-msgid "Open Containing Folder"
-msgstr "포함하는 폴더 열기"
-
-#: src/qml/PlayList.qml:594
-msgctxt "@action:inmenu"
-msgid "Open in Browser"
-msgstr "브라우저로 열기"
-
-#: src/qml/PlayList.qml:603
-msgctxt "@action:inmenu"
-msgid "Copy Name"
-msgstr "이름 복사"
-
-#: src/qml/PlayList.qml:609
-msgctxt "@action:inmenu"
-msgid "Copy Path"
-msgstr "경로 복사"
-
-#: src/qml/PlayList.qml:610
-msgctxt "@action:inmenu"
-msgid "Copy URL"
-msgstr "URL 복사"
-
-#: src/qml/PlayList.qml:620
-msgctxt "@action:inmenu"
-msgid "Select All"
-msgstr "모두 선택"
-
-#: src/qml/PlayList.qml:624
-msgctxt "@action:inmenu"
-msgid "Deselect All"
-msgstr "모두 선택 해제"
-
-#: src/qml/PlayList.qml:628
-msgctxt "@action:inmenu"
-msgid "Invert Selection"
-msgstr "선택 반전"
-
-#: src/qml/PlayList.qml:634
-msgctxt "@action:inmenu"
-msgid "Remove from Playlist"
-msgstr "재생 목록에서 삭제"
-
-#: src/qml/PlayList.qml:640
-msgctxt "@action:inmenu"
-msgid "Remove Selected from Playlist"
-msgstr "재생 목록에서 선택 항목 삭제"
-
-#: src/qml/PlayList.qml:652
-msgctxt "@action:inmenu"
-msgid "Scroll to Playing Item"
-msgstr "현재 재생 중인 항목으로 스크롤"
-
-#: src/qml/PlayList.qml:662
-msgctxt "@action:inmenu"
-msgid "Move File to Trash"
-msgstr "파일을 휴지통으로 이동"
-
-#: src/qml/PlayList.qml:668
-msgctxt "@action:inmenu"
-msgid "Move Selected Files to Trash"
-msgstr "선택한 파일을 휴지통으로 이동"
-
-#: src/qml/PlayList.qml:774 src/qml/Settings/VideoSettings.qml:69
-msgctxt "@title:window"
-msgid "Select file"
-msgstr "파일 선택"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50

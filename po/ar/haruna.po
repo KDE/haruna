@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-31 00:41+0000\n"
+"POT-Creation-Date: 2025-11-05 00:43+0000\n"
 "PO-Revision-Date: 2025-10-30 11:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -28,59 +28,59 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: src/application.cpp:128
+#: src/application.cpp:130
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "أداة تنزيل الصوت والفيديو الغنية بالميزات عبر سطر الأوامر"
 
-#: src/application.cpp:141
+#: src/application.cpp:143
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/application.cpp:143
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "مشغل وسائط"
 
-#: src/application.cpp:145
+#: src/application.cpp:147
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019-2025"
 
-#: src/application.cpp:150
+#: src/application.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "جورج فلوريا بونوي"
 
-#: src/application.cpp:151
+#: src/application.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "مطوّر"
 
-#: src/application.cpp:159
+#: src/application.cpp:161
 #, kde-format
 msgid "Command line video player"
 msgstr "مشغل فيديو سطر الأوامر"
 
-#: src/application.cpp:165
+#: src/application.cpp:167
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "حل متعدد الأنظمة لتسجيل وتحويل وبث الصوت والفيديو"
 
-#: src/application.cpp:177
+#: src/application.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "الملف المراد فتحه"
 
-#: src/application.cpp:181
+#: src/application.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -568,56 +568,50 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:160
-#, kde-format
-msgctxt "@info:tooltip; %1 playlist with same name"
-msgid "Playlists with same name is not allowed: %1"
-msgstr "القوائم ذات نفس الاسم غير مسموح بها: %1"
-
-#: src/mpv/mpvitem.cpp:365
+#: src/mpv/mpvitem.cpp:366
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "توقيت الترجمة:  : %1ث"
 
-#: src/mpv/mpvitem.cpp:506
+#: src/mpv/mpvitem.cpp:507
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "الملف غير موجود: %1"
 
-#: src/mpv/mpvitem.cpp:543
+#: src/mpv/mpvitem.cpp:544
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "لا يوجد"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:582
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "فشل أخذ اللقطة"
 
-#: src/mpv/mpvitem.cpp:586
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
-#: src/mpv/mpvitem.cpp:588
+#: src/mpv/mpvitem.cpp:589
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
 
-#: src/mpv/mpvitem.cpp:615
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -627,150 +621,355 @@ msgstr ""
 "لم يكتشف أي مسار فيديو، وعلى الأرجح لا يمكن فك ترميز/تشغيل مسار الفيديو بسبب "
 "فقدان برامج الترميز"
 
-#: src/mpv/mpvitem.cpp:648
+#: src/mpv/mpvitem.cpp:649
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
 
-#: src/qml/Actions.qml:94 src/qml/Actions.qml:112
+#: src/playlist/Playlist.qml:76
+msgctxt "@action:button"
+msgid "Search"
+msgstr "ابحث"
+
+#: src/playlist/Playlist.qml:96
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "أضف…"
+
+#: src/playlist/Playlist.qml:104
+msgctxt "@action:button"
+msgid "Files"
+msgstr "الملفات"
+
+#: src/playlist/Playlist.qml:112
+msgctxt "@action:button"
+msgid "URL"
+msgstr "رابط"
+
+#: src/playlist/Playlist.qml:122
+msgctxt "@action:button"
+msgid "Playlist"
+msgstr "قائمة التشغيل"
+
+#: src/playlist/Playlist.qml:131
+msgctxt "@action:button"
+msgid "Sort"
+msgstr "افرز"
+
+#: src/playlist/Playlist.qml:140
+msgctxt "@action:button"
+msgid "Name, ascending"
+msgstr "بالاسم، تصاعدياً"
+
+#: src/playlist/Playlist.qml:146
+msgctxt "@action:button"
+msgid "Name, descending"
+msgstr "بالاسم، تنازلياً"
+
+#: src/playlist/Playlist.qml:152
+msgctxt "@action:button"
+msgid "Duration, ascending"
+msgstr "المدة تصاعديًّا"
+
+#: src/playlist/Playlist.qml:158
+msgctxt "@action:button"
+msgid "Duration, descending"
+msgstr "المدة تنازليًّا"
+
+#: src/playlist/Playlist.qml:165
+msgctxt "@action:button"
+msgid "Playback"
+msgstr "تشغيل"
+
+#: src/playlist/Playlist.qml:171
+msgctxt "@action:button"
+msgid "Repeat playlist"
+msgstr "كرّر قائمة التّشغيل"
+
+#: src/playlist/Playlist.qml:182
+msgctxt "@action:button"
+msgid "Stop after last item"
+msgstr "توقف بعد أخر عنصر"
+
+#: src/playlist/Playlist.qml:192
+msgctxt "@action:button"
+msgid "Repeat item"
+msgstr "كرر العنصر"
+
+#: src/playlist/Playlist.qml:203
+msgctxt "@action:button"
+msgid "Stop after item"
+msgstr "توقف بعد عنصر"
+
+#: src/playlist/Playlist.qml:213
+msgctxt "@action:button"
+msgid "Random Playback"
+msgstr "تشغيل عشوائي"
+
+#: src/playlist/Playlist.qml:225
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "امحُ"
+
+#: src/playlist/Playlist.qml:233
+msgctxt "@action:button"
+msgid "Save As"
+msgstr "احفظ كَ‍"
+
+#: src/playlist/Playlist.qml:307
+msgctxt "@action:button"
+msgid "Add new playlist"
+msgstr "أضف قائمة تشغيل"
+
+#: src/playlist/Playlist.qml:322 src/playlist/Playlist.qml:647
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "أعد التّسمية"
+
+#: src/playlist/Playlist.qml:328
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr "أزل"
+
+#: src/playlist/Playlist.qml:384 src/playlist/Playlist.qml:405
+msgctxt "@action:button"
+msgid "Add"
+msgstr "أضِف"
+
+#: src/playlist/Playlist.qml:387 src/qml/Main.qml:503
+msgctxt "@info"
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
+msgstr ""
+"لم يعثر على <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> أو <a "
+"href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
+
+#: src/playlist/Playlist.qml:404
+msgctxt "@placeholder"
+msgid "playlist name"
+msgstr "اسم قائمة التشغيل"
+
+#: src/playlist/Playlist.qml:589
+msgctxt "@action:inmenu"
+msgid "Open Containing Folder"
+msgstr "افتح المجلد الحاوي"
+
+#: src/playlist/Playlist.qml:595
+msgctxt "@action:inmenu"
+msgid "Open in Browser"
+msgstr "افتح في المتصفّح"
+
+#: src/playlist/Playlist.qml:604
+msgctxt "@action:inmenu"
+msgid "Copy Name"
+msgstr "انسخ الاسم"
+
+#: src/playlist/Playlist.qml:610
+msgctxt "@action:inmenu"
+msgid "Copy Path"
+msgstr "نسخ المسار"
+
+#: src/playlist/Playlist.qml:611
+msgctxt "@action:inmenu"
+msgid "Copy URL"
+msgstr "انسخ الرابط"
+
+#: src/playlist/Playlist.qml:621
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr "حدّد الكل"
+
+#: src/playlist/Playlist.qml:625
+msgctxt "@action:inmenu"
+msgid "Deselect All"
+msgstr "ألغِ الكلّ"
+
+#: src/playlist/Playlist.qml:629
+msgctxt "@action:inmenu"
+msgid "Invert Selection"
+msgstr "اعكس التّحديد"
+
+#: src/playlist/Playlist.qml:635
+msgctxt "@action:inmenu"
+msgid "Remove from Playlist"
+msgstr "أزل من قائمة التّشغيل"
+
+#: src/playlist/Playlist.qml:641
+msgctxt "@action:inmenu"
+msgid "Remove Selected from Playlist"
+msgstr "أزل من قائمة التّشغيل"
+
+#: src/playlist/Playlist.qml:653
+msgctxt "@action:inmenu"
+msgid "Scroll to Playing Item"
+msgstr "مرّر إلى العنصر المشغل"
+
+#: src/playlist/Playlist.qml:663
+msgctxt "@action:inmenu"
+msgid "Move File to Trash"
+msgstr "انقل إلى المهملات"
+
+#: src/playlist/Playlist.qml:669
+msgctxt "@action:inmenu"
+msgid "Move Selected Files to Trash"
+msgstr "انقل الملفات المحددة إلى المهملات"
+
+#: src/playlist/Playlist.qml:775 src/qml/Settings/VideoSettings.qml:69
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "اختر ملفّا"
+
+#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#, kde-format
+msgctxt "@info:tooltip; %1 playlist with same name"
+msgid "Playlists with same name is not allowed: %1"
+msgstr "القوائم ذات نفس الاسم غير مسموح بها: %1"
+
+#: src/playlist/PlaylistTabDelegate.qml:128
+msgctxt "@label:title name of default playlist tab"
+msgid "Default"
+msgstr "المبدئيّ"
+
+#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "صوت: %1 %2"
 
-#: src/qml/Actions.qml:165
+#: src/qml/Actions.qml:166
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "لا يمكن تحميل الترجمة عندما لا يكون هناك ملف مفتوح"
 
-#: src/qml/Actions.qml:184 src/qml/Actions.qml:190 src/qml/Actions.qml:195
+#: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "سرعة التشغيل: %1"
 
-#: src/qml/Actions.qml:290
+#: src/qml/Actions.qml:291
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "الحلقة تبدأ: %1"
 
-#: src/qml/Actions.qml:296
+#: src/qml/Actions.qml:297
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "الحلقة: %1–%2"
 
-#: src/qml/Actions.qml:302
+#: src/qml/Actions.qml:303
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "امحُ الحلقة"
 
-#: src/qml/Actions.qml:322
+#: src/qml/Actions.qml:323
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "الترجمة مغلقة"
 
-#: src/qml/Actions.qml:322
+#: src/qml/Actions.qml:323
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "الترجمة مفعلة"
 
-#: src/qml/Actions.qml:331 src/qml/Actions.qml:343
+#: src/qml/Actions.qml:332 src/qml/Actions.qml:344
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "الترجمة: لا توجد"
 
-#: src/qml/Actions.qml:335 src/qml/Actions.qml:347
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "الترجمة: %1 %2"
 
-#: src/qml/Actions.qml:354 src/qml/Actions.qml:360
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "تكبير الترجمة: %1"
 
-#: src/qml/Actions.qml:374
+#: src/qml/Actions.qml:375
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "التشابك: %1"
 
-#: src/qml/Actions.qml:435 src/qml/Actions.qml:441
+#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "التكبير: %1"
 
-#: src/qml/Actions.qml:446
+#: src/qml/Actions.qml:447
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "التكبير:  0"
 
-#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "التباين: %1"
 
-#: src/qml/Actions.qml:464
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "التباين: 0"
 
-#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "السطوع: %1"
 
-#: src/qml/Actions.qml:481
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "السطوع: 0"
 
-#: src/qml/Actions.qml:487 src/qml/Actions.qml:493
+#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "غاما: %1"
 
-#: src/qml/Actions.qml:498
+#: src/qml/Actions.qml:499
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "غاما: 0"
 
-#: src/qml/Actions.qml:504 src/qml/Actions.qml:510
+#: src/qml/Actions.qml:505 src/qml/Actions.qml:511
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "التّشبّع: %1"
 
-#: src/qml/Actions.qml:515
+#: src/qml/Actions.qml:516
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "التّشبّع: 0"
 
-#: src/qml/Footer.qml:151
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "ابدأ التشغيل"
 
-#: src/qml/Footer.qml:151
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "ألبث التّشغيل"
 
-#: src/qml/Footer.qml:168
+#: src/qml/Footer.qml:167
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "شغل الملف السابق"
 
-#: src/qml/Footer.qml:185
+#: src/qml/Footer.qml:184
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "شغل الملف التالي"
 
-#: src/qml/Footer.qml:199
+#: src/qml/Footer.qml:198
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "افتح قائمة الفصول"
 
-#: src/qml/Footer.qml:263
+#: src/qml/Footer.qml:262
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "الباقي: %1"
@@ -879,11 +1078,6 @@ msgstr ""
 "سيُبحث عن الترجمات في المجلدات الفرعية المعرفة في الإعداد ”%1“\n"
 "البحث سيكون في المجلدات ذات الصلة فقط."
 
-#: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:128
-msgctxt "@label:title name of default playlist tab"
-msgid "Default"
-msgstr "المبدئيّ"
-
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -894,12 +1088,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "صوت"
 
-#: src/qml/HProgressBar.qml:281
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "تخط الفصول"
 
-#: src/qml/HProgressBar.qml:289
+#: src/qml/HProgressBar.qml:290
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -908,34 +1102,25 @@ msgstr ""
 "تخطَ الفصول التي تحوي كلمات/حروف معينة.\n"
 "راجع إعدادات ”التشغيل“ لمزيد من التفاصيل"
 
-#: src/qml/Main.qml:31
+#: src/qml/Main.qml:32
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/qml/Main.qml:449
+#: src/qml/Main.qml:453
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "اختر ملفًّا"
 
-#: src/qml/Main.qml:469
+#: src/qml/Main.qml:473
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "اختر ملف ترجمة"
 
-#: src/qml/Main.qml:496
+#: src/qml/Main.qml:500
 msgctxt "@action:button"
 msgid "Open"
 msgstr "افتح"
-
-#: src/qml/Main.qml:499 src/qml/PlayList.qml:386
-msgctxt "@info"
-msgid ""
-"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
-"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
-msgstr ""
-"لم يعثر على <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> أو <a "
-"href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Menus/AudioMenu.qml:18 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 msgctxt "@title:menu"
@@ -1111,191 +1296,6 @@ msgstr "أضف إلى قائمة التّشغيل"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "شغّل الآن"
-
-#: src/qml/PlayList.qml:75
-msgctxt "@action:button"
-msgid "Search"
-msgstr "ابحث"
-
-#: src/qml/PlayList.qml:95
-msgctxt "@action:button"
-msgid "Add…"
-msgstr "أضف…"
-
-#: src/qml/PlayList.qml:103
-msgctxt "@action:button"
-msgid "Files"
-msgstr "الملفات"
-
-#: src/qml/PlayList.qml:111
-msgctxt "@action:button"
-msgid "URL"
-msgstr "رابط"
-
-#: src/qml/PlayList.qml:121
-msgctxt "@action:button"
-msgid "Playlist"
-msgstr "قائمة التشغيل"
-
-#: src/qml/PlayList.qml:130
-msgctxt "@action:button"
-msgid "Sort"
-msgstr "افرز"
-
-#: src/qml/PlayList.qml:139
-msgctxt "@action:button"
-msgid "Name, ascending"
-msgstr "بالاسم، تصاعدياً"
-
-#: src/qml/PlayList.qml:145
-msgctxt "@action:button"
-msgid "Name, descending"
-msgstr "بالاسم، تنازلياً"
-
-#: src/qml/PlayList.qml:151
-msgctxt "@action:button"
-msgid "Duration, ascending"
-msgstr "المدة تصاعديًّا"
-
-#: src/qml/PlayList.qml:157
-msgctxt "@action:button"
-msgid "Duration, descending"
-msgstr "المدة تنازليًّا"
-
-#: src/qml/PlayList.qml:164
-msgctxt "@action:button"
-msgid "Playback"
-msgstr "تشغيل"
-
-#: src/qml/PlayList.qml:170
-msgctxt "@action:button"
-msgid "Repeat playlist"
-msgstr "كرّر قائمة التّشغيل"
-
-#: src/qml/PlayList.qml:181
-msgctxt "@action:button"
-msgid "Stop after last item"
-msgstr "توقف بعد أخر عنصر"
-
-#: src/qml/PlayList.qml:191
-msgctxt "@action:button"
-msgid "Repeat item"
-msgstr "كرر العنصر"
-
-#: src/qml/PlayList.qml:202
-msgctxt "@action:button"
-msgid "Stop after item"
-msgstr "توقف بعد عنصر"
-
-#: src/qml/PlayList.qml:212
-msgctxt "@action:button"
-msgid "Random Playback"
-msgstr "تشغيل عشوائي"
-
-#: src/qml/PlayList.qml:224
-msgctxt "@action:button"
-msgid "Clear"
-msgstr "امحُ"
-
-#: src/qml/PlayList.qml:232
-msgctxt "@action:button"
-msgid "Save As"
-msgstr "احفظ كَ‍"
-
-#: src/qml/PlayList.qml:306
-msgctxt "@action:button"
-msgid "Add new playlist"
-msgstr "أضف قائمة تشغيل"
-
-#: src/qml/PlayList.qml:321 src/qml/PlayList.qml:646
-msgctxt "@action:inmenu"
-msgid "Rename"
-msgstr "أعد التّسمية"
-
-#: src/qml/PlayList.qml:327
-msgctxt "@action:inmenu"
-msgid "Remove"
-msgstr "أزل"
-
-#: src/qml/PlayList.qml:383 src/qml/PlayList.qml:404
-msgctxt "@action:button"
-msgid "Add"
-msgstr "أضِف"
-
-#: src/qml/PlayList.qml:403
-msgctxt "@placeholder"
-msgid "playlist name"
-msgstr "اسم قائمة التشغيل"
-
-#: src/qml/PlayList.qml:588
-msgctxt "@action:inmenu"
-msgid "Open Containing Folder"
-msgstr "افتح المجلد الحاوي"
-
-#: src/qml/PlayList.qml:594
-msgctxt "@action:inmenu"
-msgid "Open in Browser"
-msgstr "افتح في المتصفّح"
-
-#: src/qml/PlayList.qml:603
-msgctxt "@action:inmenu"
-msgid "Copy Name"
-msgstr "انسخ الاسم"
-
-#: src/qml/PlayList.qml:609
-msgctxt "@action:inmenu"
-msgid "Copy Path"
-msgstr "نسخ المسار"
-
-#: src/qml/PlayList.qml:610
-msgctxt "@action:inmenu"
-msgid "Copy URL"
-msgstr "انسخ الرابط"
-
-#: src/qml/PlayList.qml:620
-msgctxt "@action:inmenu"
-msgid "Select All"
-msgstr "حدّد الكل"
-
-#: src/qml/PlayList.qml:624
-msgctxt "@action:inmenu"
-msgid "Deselect All"
-msgstr "ألغِ الكلّ"
-
-#: src/qml/PlayList.qml:628
-msgctxt "@action:inmenu"
-msgid "Invert Selection"
-msgstr "اعكس التّحديد"
-
-#: src/qml/PlayList.qml:634
-msgctxt "@action:inmenu"
-msgid "Remove from Playlist"
-msgstr "أزل من قائمة التّشغيل"
-
-#: src/qml/PlayList.qml:640
-msgctxt "@action:inmenu"
-msgid "Remove Selected from Playlist"
-msgstr "أزل من قائمة التّشغيل"
-
-#: src/qml/PlayList.qml:652
-msgctxt "@action:inmenu"
-msgid "Scroll to Playing Item"
-msgstr "مرّر إلى العنصر المشغل"
-
-#: src/qml/PlayList.qml:662
-msgctxt "@action:inmenu"
-msgid "Move File to Trash"
-msgstr "انقل إلى المهملات"
-
-#: src/qml/PlayList.qml:668
-msgctxt "@action:inmenu"
-msgid "Move Selected Files to Trash"
-msgstr "انقل الملفات المحددة إلى المهملات"
-
-#: src/qml/PlayList.qml:774 src/qml/Settings/VideoSettings.qml:69
-msgctxt "@title:window"
-msgid "Select file"
-msgstr "اختر ملفّا"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50

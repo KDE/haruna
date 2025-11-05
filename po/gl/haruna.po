@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-31 00:41+0000\n"
+"POT-Creation-Date: 2025-11-05 00:43+0000\n"
 "PO-Revision-Date: 2025-06-21 12:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -27,25 +27,25 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adrian@chaves.gal"
 
-#: src/application.cpp:128
+#: src/application.cpp:130
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr ""
 "Descargador de son e vídeo da liña de ordes con moitas funcionalidades."
 
-#: src/application.cpp:141
+#: src/application.cpp:143
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:143
+#: src/application.cpp:145
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Reprodutor multimedia"
 
-#: src/application.cpp:145
+#: src/application.cpp:147
 #, fuzzy, kde-format
 #| msgctxt "copyright statement"
 #| msgid "(c) 2019-2025"
@@ -54,36 +54,36 @@ msgctxt ""
 msgid "© 2019–2025"
 msgstr "© 2019-2025"
 
-#: src/application.cpp:150
+#: src/application.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:151
+#: src/application.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Desenvolvemento."
 
-#: src/application.cpp:159
+#: src/application.cpp:161
 #, kde-format
 msgid "Command line video player"
 msgstr "Reprodutor de vídeo da liña de ordes"
 
-#: src/application.cpp:165
+#: src/application.cpp:167
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Unha solución multiplataforma para gravar, converter e emitir son e vídeo."
 
-#: src/application.cpp:177
+#: src/application.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Ficheiro para abrir"
 
-#: src/application.cpp:181
+#: src/application.cpp:183
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid ""
@@ -639,13 +639,7 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reasignar"
 
-#: src/models/playlist/playlistmultiproxiesmodel.cpp:160
-#, kde-format
-msgctxt "@info:tooltip; %1 playlist with same name"
-msgid "Playlists with same name is not allowed: %1"
-msgstr ""
-
-#: src/mpv/mpvitem.cpp:365
+#: src/mpv/mpvitem.cpp:366
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -653,38 +647,38 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Non foi posíbel reproducir: %1"
 
-#: src/mpv/mpvitem.cpp:472 src/mpv/mpvitem.cpp:474
+#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Axuste dos subtítulos: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:506
+#: src/mpv/mpvitem.cpp:507
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:543
+#: src/mpv/mpvitem.cpp:544
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nada"
 
-#: src/mpv/mpvitem.cpp:581
+#: src/mpv/mpvitem.cpp:582
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "A captura de pantalla fallou."
 
-#: src/mpv/mpvitem.cpp:586
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Capturouse a pantalla."
 
-#: src/mpv/mpvitem.cpp:588
+#: src/mpv/mpvitem.cpp:589
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -692,7 +686,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:615
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -702,13 +696,292 @@ msgstr ""
 "Non se detectou ningunha pista de vídeo, o máis probábel é que a pista de "
 "vídeo non poida descodificarse ou reproducirse por faltar códecs."
 
-#: src/mpv/mpvitem.cpp:648
+#: src/mpv/mpvitem.cpp:649
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Saltouse o capítulo: %1"
 
-#: src/qml/Actions.qml:94 src/qml/Actions.qml:112
+#: src/playlist/Playlist.qml:76
+msgctxt "@action:button"
+msgid "Search"
+msgstr ""
+
+#: src/playlist/Playlist.qml:96
+msgctxt "@action:button"
+msgid "Add…"
+msgstr ""
+
+#: src/playlist/Playlist.qml:104
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "File"
+msgctxt "@action:button"
+msgid "Files"
+msgstr "Ficheiro"
+
+#: src/playlist/Playlist.qml:112
+msgctxt "@action:button"
+msgid "URL"
+msgstr ""
+
+#: src/playlist/Playlist.qml:122
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@action:button"
+msgid "Playlist"
+msgstr "Lista de reprodución"
+
+#: src/playlist/Playlist.qml:131
+msgctxt "@action:button"
+msgid "Sort"
+msgstr "Ordenar"
+
+#: src/playlist/Playlist.qml:140
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name ascending"
+msgctxt "@action:button"
+msgid "Name, ascending"
+msgstr "Nome ascendente"
+
+#: src/playlist/Playlist.qml:146
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Name descending"
+msgctxt "@action:button"
+msgid "Name, descending"
+msgstr "Nome descendente"
+
+#: src/playlist/Playlist.qml:152
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration ascending"
+msgctxt "@action:button"
+msgid "Duration, ascending"
+msgstr "Duración ascendente"
+
+#: src/playlist/Playlist.qml:158
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Duration descending"
+msgctxt "@action:button"
+msgid "Duration, descending"
+msgstr "Duración descendente"
+
+#: src/playlist/Playlist.qml:165
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Playback"
+msgctxt "@action:button"
+msgid "Playback"
+msgstr "Reprodución"
+
+#: src/playlist/Playlist.qml:171
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Open playlist"
+msgctxt "@action:button"
+msgid "Repeat playlist"
+msgstr "Abrir unha lista de reprodución"
+
+#: src/playlist/Playlist.qml:182
+msgctxt "@action:button"
+msgid "Stop after last item"
+msgstr ""
+
+#: src/playlist/Playlist.qml:192
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Repeat"
+msgctxt "@action:button"
+msgid "Repeat item"
+msgstr "Repetir"
+
+#: src/playlist/Playlist.qml:203
+msgctxt "@action:button"
+msgid "Stop after item"
+msgstr ""
+
+#: src/playlist/Playlist.qml:213
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Restart Playback"
+msgctxt "@action:button"
+msgid "Random Playback"
+msgstr "Reiniciar a reprodución"
+
+#: src/playlist/Playlist.qml:225
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Baleirar"
+
+#: src/playlist/Playlist.qml:233
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Save as"
+msgctxt "@action:button"
+msgid "Save As"
+msgstr "Gardar como"
+
+#: src/playlist/Playlist.qml:307
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Add file to playlist"
+msgctxt "@action:button"
+msgid "Add new playlist"
+msgstr "Engadir o ficheiro á lista de reprodución."
+
+#: src/playlist/Playlist.qml:322 src/playlist/Playlist.qml:647
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "Renomear"
+
+#: src/playlist/Playlist.qml:328
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr ""
+
+#: src/playlist/Playlist.qml:384 src/playlist/Playlist.qml:405
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Engadir"
+
+#: src/playlist/Playlist.qml:387 src/qml/Main.qml:503
+msgctxt "@info"
+msgid ""
+"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
+"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
+msgstr ""
+"Non se atoparon nin <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> "
+"nin <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
+
+#: src/playlist/Playlist.qml:404
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Playlist style"
+msgctxt "@placeholder"
+msgid "playlist name"
+msgstr "Estilo da lista de reprodución"
+
+#: src/playlist/Playlist.qml:589
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open containing folder"
+msgctxt "@action:inmenu"
+msgid "Open Containing Folder"
+msgstr "Abrir o cartafol contedor"
+
+#: src/playlist/Playlist.qml:595
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open in browser"
+msgctxt "@action:inmenu"
+msgid "Open in Browser"
+msgstr "Abrir no navegador"
+
+#: src/playlist/Playlist.qml:604
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy name"
+msgctxt "@action:inmenu"
+msgid "Copy Name"
+msgstr "Copiar o nome"
+
+#: src/playlist/Playlist.qml:610
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy path"
+msgctxt "@action:inmenu"
+msgid "Copy Path"
+msgstr "Copiar a ruta"
+
+#: src/playlist/Playlist.qml:611
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Copy url"
+msgctxt "@action:inmenu"
+msgid "Copy URL"
+msgstr "Copiar o URL"
+
+#: src/playlist/Playlist.qml:621
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr "Seleccionar un ficheiro"
+
+#: src/playlist/Playlist.qml:625
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select file"
+msgctxt "@action:inmenu"
+msgid "Deselect All"
+msgstr "Seleccionar un ficheiro"
+
+#: src/playlist/Playlist.qml:629
+#, fuzzy
+#| msgid "Format selection"
+msgctxt "@action:inmenu"
+msgid "Invert Selection"
+msgstr "Selección de formato"
+
+#: src/playlist/Playlist.qml:635
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Remove from playlist"
+msgctxt "@action:inmenu"
+msgid "Remove from Playlist"
+msgstr "Retirar da lista de reprodución"
+
+#: src/playlist/Playlist.qml:641
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Remove from playlist"
+msgctxt "@action:inmenu"
+msgid "Remove Selected from Playlist"
+msgstr "Retirar da lista de reprodución"
+
+#: src/playlist/Playlist.qml:653
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Scroll to playing item"
+msgctxt "@action:inmenu"
+msgid "Scroll to Playing Item"
+msgstr "Desprazar ao elemento en reprodución"
+
+#: src/playlist/Playlist.qml:663
+msgctxt "@action:inmenu"
+msgid "Move File to Trash"
+msgstr ""
+
+#: src/playlist/Playlist.qml:669
+msgctxt "@action:inmenu"
+msgid "Move Selected Files to Trash"
+msgstr ""
+
+#: src/playlist/Playlist.qml:775 src/qml/Settings/VideoSettings.qml:69
+msgctxt "@title:window"
+msgid "Select file"
+msgstr "Seleccionar un ficheiro"
+
+#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#, kde-format
+msgctxt "@info:tooltip; %1 playlist with same name"
+msgid "Playlists with same name is not allowed: %1"
+msgstr ""
+
+#: src/playlist/PlaylistTabDelegate.qml:128
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Default cover"
+msgctxt "@label:title name of default playlist tab"
+msgid "Default"
+msgstr "Portada predeterminada"
+
+#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -716,7 +989,7 @@ msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Son: %1 %2"
 
-#: src/qml/Actions.qml:165
+#: src/qml/Actions.qml:166
 #, fuzzy
 #| msgctxt ""
 #| "osd message when trying to open subtile selection dialog while no file is "
@@ -728,12 +1001,12 @@ msgctxt ""
 msgid "Can’t load subtitle when no file is open"
 msgstr "Non á posíbel cargar un subtítulo sen abrir antes un ficheiro."
 
-#: src/qml/Actions.qml:184 src/qml/Actions.qml:190 src/qml/Actions.qml:195
+#: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocidade de reprodución: %1"
 
-#: src/qml/Actions.qml:290
+#: src/qml/Actions.qml:291
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop start: %1"
@@ -741,7 +1014,7 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Inicio do bucle: %1"
 
-#: src/qml/Actions.qml:296
+#: src/qml/Actions.qml:297
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop: %1 - %2"
@@ -750,27 +1023,27 @@ msgid "Loop: %1–%2"
 msgstr "Bucle: %1 — %2"
 
 # skip-rule: trasno-disable_reverse
-#: src/qml/Actions.qml:302
+#: src/qml/Actions.qml:303
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Desactivouse o bucle"
 
-#: src/qml/Actions.qml:322
+#: src/qml/Actions.qml:323
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Subtítulos desactivados"
 
-#: src/qml/Actions.qml:322
+#: src/qml/Actions.qml:323
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Subtítulos activados"
 
-#: src/qml/Actions.qml:331 src/qml/Actions.qml:343
+#: src/qml/Actions.qml:332 src/qml/Actions.qml:344
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Subtítulos: ningún"
 
-#: src/qml/Actions.qml:335 src/qml/Actions.qml:347
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -778,67 +1051,67 @@ msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Subtítulos: %1 %2"
 
-#: src/qml/Actions.qml:354 src/qml/Actions.qml:360
+#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Escala dos subtítulos: %1"
 
-#: src/qml/Actions.qml:374
+#: src/qml/Actions.qml:375
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrelazar: %1"
 
-#: src/qml/Actions.qml:435 src/qml/Actions.qml:441
+#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Ampliación: %1"
 
-#: src/qml/Actions.qml:446
+#: src/qml/Actions.qml:447
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Ampliación: 0"
 
-#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
+#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contraste. %1"
 
-#: src/qml/Actions.qml:464
+#: src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contraste: 0"
 
-#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
+#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brillo: %1"
 
-#: src/qml/Actions.qml:481
+#: src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brillo: 0"
 
-#: src/qml/Actions.qml:487 src/qml/Actions.qml:493
+#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:498
+#: src/qml/Actions.qml:499
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:504 src/qml/Actions.qml:510
+#: src/qml/Actions.qml:505 src/qml/Actions.qml:511
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturación: %1"
 
-#: src/qml/Actions.qml:515
+#: src/qml/Actions.qml:516
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturación: 0"
 
-#: src/qml/Footer.qml:151
+#: src/qml/Footer.qml:150
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Start Playback"
@@ -846,7 +1119,7 @@ msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Iniciar a reprodución"
 
-#: src/qml/Footer.qml:151
+#: src/qml/Footer.qml:150
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Pause Playback"
@@ -854,22 +1127,22 @@ msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Pausar a reprodución"
 
-#: src/qml/Footer.qml:168
+#: src/qml/Footer.qml:167
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Reproducir o ficheiro anterior"
 
-#: src/qml/Footer.qml:185
+#: src/qml/Footer.qml:184
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Reproducir o seguinte ficheiro"
 
-#: src/qml/Footer.qml:199
+#: src/qml/Footer.qml:198
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "Abrir o menú de capítulos."
 
-#: src/qml/Footer.qml:263
+#: src/qml/Footer.qml:262
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Faltan : %1"
@@ -998,14 +1271,6 @@ msgstr ""
 "Búscase recursivamente nos subtítulos na opción «%1».\n"
 "Só se busca nos cartafoles relativos."
 
-#: src/qml/Haruna/PlaylistItems/PlaylistTabDelegate.qml:128
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
-msgctxt "@label:title name of default playlist tab"
-msgid "Default"
-msgstr "Portada predeterminada"
-
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
@@ -1016,12 +1281,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Son"
 
-#: src/qml/HProgressBar.qml:281
+#: src/qml/HProgressBar.qml:282
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Saltar capítulos"
 
-#: src/qml/HProgressBar.qml:289
+#: src/qml/HProgressBar.qml:290
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1035,12 +1300,12 @@ msgstr ""
 "Omite automaticamente capítulos que conteñen certas palabras ou caracteres.\n"
 "Consulte a configuración de «Reprodución» para máis información."
 
-#: src/qml/Main.qml:31
+#: src/qml/Main.qml:32
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:449
+#: src/qml/Main.qml:453
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1048,7 +1313,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Seleccionar un ficheiro"
 
-#: src/qml/Main.qml:469
+#: src/qml/Main.qml:473
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1056,19 +1321,10 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Seleccionar un ficheiro de subtítulos"
 
-#: src/qml/Main.qml:496
+#: src/qml/Main.qml:500
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"
-
-#: src/qml/Main.qml:499 src/qml/PlayList.qml:386
-msgctxt "@info"
-msgid ""
-"Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
-"\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
-msgstr ""
-"Non se atoparon nin <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> "
-"nin <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/qml/Menus/AudioMenu.qml:18 src/qml/Menus/Global/GlobalAudioMenu.qml:20
 msgctxt "@title:menu"
@@ -1253,262 +1509,6 @@ msgstr "Engadir o ficheiro á lista de reprodución."
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Reproducir a seguinte"
-
-#: src/qml/PlayList.qml:75
-msgctxt "@action:button"
-msgid "Search"
-msgstr ""
-
-#: src/qml/PlayList.qml:95
-msgctxt "@action:button"
-msgid "Add…"
-msgstr ""
-
-#: src/qml/PlayList.qml:103
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
-msgctxt "@action:button"
-msgid "Files"
-msgstr "Ficheiro"
-
-#: src/qml/PlayList.qml:111
-msgctxt "@action:button"
-msgid "URL"
-msgstr ""
-
-#: src/qml/PlayList.qml:121
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
-msgctxt "@action:button"
-msgid "Playlist"
-msgstr "Lista de reprodución"
-
-#: src/qml/PlayList.qml:130
-msgctxt "@action:button"
-msgid "Sort"
-msgstr "Ordenar"
-
-#: src/qml/PlayList.qml:139
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name ascending"
-msgctxt "@action:button"
-msgid "Name, ascending"
-msgstr "Nome ascendente"
-
-#: src/qml/PlayList.qml:145
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name descending"
-msgctxt "@action:button"
-msgid "Name, descending"
-msgstr "Nome descendente"
-
-#: src/qml/PlayList.qml:151
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration ascending"
-msgctxt "@action:button"
-msgid "Duration, ascending"
-msgstr "Duración ascendente"
-
-#: src/qml/PlayList.qml:157
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration descending"
-msgctxt "@action:button"
-msgid "Duration, descending"
-msgstr "Duración descendente"
-
-#: src/qml/PlayList.qml:164
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
-msgctxt "@action:button"
-msgid "Playback"
-msgstr "Reprodución"
-
-#: src/qml/PlayList.qml:170
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
-msgctxt "@action:button"
-msgid "Repeat playlist"
-msgstr "Abrir unha lista de reprodución"
-
-#: src/qml/PlayList.qml:181
-msgctxt "@action:button"
-msgid "Stop after last item"
-msgstr ""
-
-#: src/qml/PlayList.qml:191
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
-msgctxt "@action:button"
-msgid "Repeat item"
-msgstr "Repetir"
-
-#: src/qml/PlayList.qml:202
-msgctxt "@action:button"
-msgid "Stop after item"
-msgstr ""
-
-#: src/qml/PlayList.qml:212
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
-msgctxt "@action:button"
-msgid "Random Playback"
-msgstr "Reiniciar a reprodución"
-
-#: src/qml/PlayList.qml:224
-msgctxt "@action:button"
-msgid "Clear"
-msgstr "Baleirar"
-
-#: src/qml/PlayList.qml:232
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
-msgctxt "@action:button"
-msgid "Save As"
-msgstr "Gardar como"
-
-#: src/qml/PlayList.qml:306
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
-msgctxt "@action:button"
-msgid "Add new playlist"
-msgstr "Engadir o ficheiro á lista de reprodución."
-
-#: src/qml/PlayList.qml:321 src/qml/PlayList.qml:646
-msgctxt "@action:inmenu"
-msgid "Rename"
-msgstr "Renomear"
-
-#: src/qml/PlayList.qml:327
-msgctxt "@action:inmenu"
-msgid "Remove"
-msgstr ""
-
-#: src/qml/PlayList.qml:383 src/qml/PlayList.qml:404
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Engadir"
-
-#: src/qml/PlayList.qml:403
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
-msgctxt "@placeholder"
-msgid "playlist name"
-msgstr "Estilo da lista de reprodución"
-
-#: src/qml/PlayList.qml:588
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
-msgctxt "@action:inmenu"
-msgid "Open Containing Folder"
-msgstr "Abrir o cartafol contedor"
-
-#: src/qml/PlayList.qml:594
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in browser"
-msgctxt "@action:inmenu"
-msgid "Open in Browser"
-msgstr "Abrir no navegador"
-
-#: src/qml/PlayList.qml:603
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy name"
-msgctxt "@action:inmenu"
-msgid "Copy Name"
-msgstr "Copiar o nome"
-
-#: src/qml/PlayList.qml:609
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy path"
-msgctxt "@action:inmenu"
-msgid "Copy Path"
-msgstr "Copiar a ruta"
-
-#: src/qml/PlayList.qml:610
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy url"
-msgctxt "@action:inmenu"
-msgid "Copy URL"
-msgstr "Copiar o URL"
-
-#: src/qml/PlayList.qml:620
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
-msgctxt "@action:inmenu"
-msgid "Select All"
-msgstr "Seleccionar un ficheiro"
-
-#: src/qml/PlayList.qml:624
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
-msgctxt "@action:inmenu"
-msgid "Deselect All"
-msgstr "Seleccionar un ficheiro"
-
-#: src/qml/PlayList.qml:628
-#, fuzzy
-#| msgid "Format selection"
-msgctxt "@action:inmenu"
-msgid "Invert Selection"
-msgstr "Selección de formato"
-
-#: src/qml/PlayList.qml:634
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
-msgctxt "@action:inmenu"
-msgid "Remove from Playlist"
-msgstr "Retirar da lista de reprodución"
-
-#: src/qml/PlayList.qml:640
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
-msgctxt "@action:inmenu"
-msgid "Remove Selected from Playlist"
-msgstr "Retirar da lista de reprodución"
-
-#: src/qml/PlayList.qml:652
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Scroll to playing item"
-msgctxt "@action:inmenu"
-msgid "Scroll to Playing Item"
-msgstr "Desprazar ao elemento en reprodución"
-
-#: src/qml/PlayList.qml:662
-msgctxt "@action:inmenu"
-msgid "Move File to Trash"
-msgstr ""
-
-#: src/qml/PlayList.qml:668
-msgctxt "@action:inmenu"
-msgid "Move Selected Files to Trash"
-msgstr ""
-
-#: src/qml/PlayList.qml:774 src/qml/Settings/VideoSettings.qml:69
-msgctxt "@title:window"
-msgid "Select file"
-msgstr "Seleccionar un ficheiro"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
