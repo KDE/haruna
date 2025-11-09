@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-05 00:43+0000\n"
-"PO-Revision-Date: 2025-09-24 15:19+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2025-11-07 18:03+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -720,12 +720,9 @@ msgid "Save As"
 msgstr "Saglabāt kā"
 
 #: src/playlist/Playlist.qml:307
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "Pievienot datni repertuāram"
+msgstr "Pievienot jaunu repertuāru"
 
 #: src/playlist/Playlist.qml:322 src/playlist/Playlist.qml:647
 msgctxt "@action:inmenu"
@@ -752,12 +749,9 @@ msgstr ""
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>“ nav atrasts."
 
 #: src/playlist/Playlist.qml:404
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "Repertuāra stils"
+msgstr "repertuāra nosaukums"
 
 #: src/playlist/Playlist.qml:589
 msgctxt "@action:inmenu"
@@ -846,11 +840,6 @@ msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
 #: src/qml/Actions.qml:166
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can’t load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
@@ -1330,33 +1319,27 @@ msgstr "Skaļuma solis"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Skaļuma normalizēšana"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Režīms"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Izslēgts"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Celiņš"
+msgstr "Celiņš"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Albums"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1365,21 +1348,25 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Regulēt skaļumu saskaņā ar <i>ReplayGain</i> skaļuma normalizēšanas "
+"vērtībām, kas ir saglabātas datnes metadatos. Ja iestatīts uz albuma līmeņa "
+"normalizēšanu, ja iespējams, tiks izmantotas albuma normalizēšanas vērtības, "
+"ja ne, tad kā rezerves variants — celiņa normalizēšanas vērtības."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Novērst apgriešanu"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Novērst apgriešanu, samazinot skaļumu"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Priekšpastiprināšana (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1387,17 +1374,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:239
 #: src/qml/Settings/SubtitlesSettings.qml:294
 #: src/qml/Settings/SubtitlesSettings.qml:369
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Iestatīt noklusējuma vērtību"
+msgstr "Iestatīt uz noklusējuma vērtību"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Rezerves (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1407,6 +1391,12 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Pastiprinājums decibelos, ko izmantot, ja datnei nav atskaņošanas "
+"normalizēšanas („ReplayGain“) birku.<br><br>Šis iestatījums tiek izmantots "
+"tikai tad, kad:<br>— skaļuma normalizēšana ir izslēgta<br>— skaļuma "
+"normalizēšana ir ieslēgta, bet datnei nav skaļuma normalizēšanas "
+"metadatu<br>Kad šis iestatījums ir spēkā, visi pārēji skaļuma normalizēšanas "
+"iestatījumi tiek ignorēti."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1443,20 +1433,14 @@ msgid "Custom commands config file"
 msgstr "Pielāgoto komandu konfigurācijas datne"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Atvērt konfigurācijas datni"
+msgstr "Saīšņu konfigurācijas datne"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Atvērt konfigurācijas datni"
+msgstr "Repertuāru konfigurēšanas datne"
 
 #: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@info:usagetip"
@@ -1473,17 +1457,11 @@ msgid "Enable mpv logging"
 msgstr "Ieslēgt „mpv“ žurnalēšanu"
 
 #: src/qml/Settings/DebugSettings.qml:105
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Atvērt datni"
 
 #: src/qml/Settings/DebugSettings.qml:114
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Atvērt saturošo mapi"
@@ -1818,17 +1796,11 @@ msgid "Default"
 msgstr "Noklusējums"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Change action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "Mainīt darbību"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Delete"
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Dzēst"
@@ -1914,10 +1886,6 @@ msgid "Meta"
 msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:298
-#, fuzzy
-#| msgctxt ""
-#| "@label:check whether mouse button action shoud trigger on double click"
-#| msgid "Trigger on double click"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"

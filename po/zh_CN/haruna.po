@@ -520,19 +520,19 @@ msgstr "重置亮度"
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr "提高伽玛值"
+msgstr "提高伽马"
 
 #: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr "降低伽玛值"
+msgstr "降低伽马"
 
 #: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr "重置伽玛值"
+msgstr "重置伽马"
 
 #: src/models/actionsmodel.cpp:600
 #, kde-format
@@ -716,12 +716,9 @@ msgid "Save As"
 msgstr "另存为"
 
 #: src/playlist/Playlist.qml:307
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "添加文件至播放列表"
+msgstr "添加播放列表"
 
 #: src/playlist/Playlist.qml:322 src/playlist/Playlist.qml:647
 msgctxt "@action:inmenu"
@@ -748,12 +745,9 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
 #: src/playlist/Playlist.qml:404
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "播放列表样式"
+msgstr "播放列表名称"
 
 #: src/playlist/Playlist.qml:589
 msgctxt "@action:inmenu"
@@ -842,11 +836,6 @@ msgid "Audio: %1 %2"
 msgstr "音频：%1 %2"
 
 #: src/qml/Actions.qml:166
-#, fuzzy
-#| msgctxt ""
-#| "osd message when trying to open subtile selection dialog while no file is "
-#| "open"
-#| msgid "Can’t load subtitle when no file is open"
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
@@ -936,12 +925,12 @@ msgstr "亮度：0"
 #: src/qml/Actions.qml:488 src/qml/Actions.qml:494
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
-msgstr "伽玛值：%1"
+msgstr "伽马：%1"
 
 #: src/qml/Actions.qml:499
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr "伽玛值：0"
+msgstr "伽马：0"
 
 #: src/qml/Actions.qml:505 src/qml/Actions.qml:511
 msgctxt "@info:tooltip"
@@ -1326,30 +1315,27 @@ msgstr "音量调整步长"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "重放增益"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "模式"
 
 #: src/qml/Settings/AudioSettings.qml:104
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
-msgstr ""
+msgstr "已禁用"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "音轨(&T)"
+msgstr "曲目"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "专辑"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1358,21 +1344,23 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"根据文件元数据中存储的 <i>重放增益</i> 值调整音量增益。如果设置为专辑增益，则"
+"在存在专辑增益时应用专辑增益，否则回退到曲目增益。"
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "防止削波"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "通过降低增益防止削波"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "前置放大 (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1380,17 +1368,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:239
 #: src/qml/Settings/SubtitlesSettings.qml:294
 #: src/qml/Settings/SubtitlesSettings.qml:369
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "设置为默认值"
+msgstr "重置为默认值"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "回退增益 (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1400,6 +1385,9 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"文件没有重放增益标签时要应用的增益 (单位：分贝)。<br><br>此设置仅在以下情况生"
+"效：<br>- 重放增益设置已禁用<br>- 重放增益设置已启用但文件没有重放增益元数据"
+"<br>若此设置生效，则其他重放增益设置将被忽略。"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1436,20 +1424,14 @@ msgid "Custom commands config file"
 msgstr "自定义命令配置文件"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "打开配置文件"
+msgstr "快捷键配置文件"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "打开配置文件"
+msgstr "播放列表配置文件"
 
 #: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@info:usagetip"
@@ -1464,17 +1446,11 @@ msgid "Enable mpv logging"
 msgstr "启用 mpv 日志记录"
 
 #: src/qml/Settings/DebugSettings.qml:105
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "打开文件"
 
 #: src/qml/Settings/DebugSettings.qml:114
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "打开所在文件夹"
@@ -1795,17 +1771,11 @@ msgid "Default"
 msgstr "默认"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Change action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "更改操作"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Delete"
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "删除"
@@ -1891,10 +1861,6 @@ msgid "Meta"
 msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:298
-#, fuzzy
-#| msgctxt ""
-#| "@label:check whether mouse button action shoud trigger on double click"
-#| msgid "Trigger on double click"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
@@ -2550,7 +2516,7 @@ msgstr "亮度"
 #: src/qml/Settings/VideoSettings.qml:243
 msgctxt "@label:slider"
 msgid "Gamma"
-msgstr "伽玛值"
+msgstr "伽马"
 
 #: src/qml/Settings/VideoSettings.qml:262
 msgctxt "@label:slider"
@@ -2573,42 +2539,3 @@ msgstr ""
 "无法获取此 ID 的播放列表：%1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Config folder"
-#~ msgstr "配置文件夹"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Open config folder"
-#~ msgstr "打开配置文件夹"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Open custom commands config file"
-#~ msgstr "打开自定义命令配置文件"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set default value"
-#~ msgstr "设置为默认值"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Remove mouse button action"
-#~ msgstr "移除鼠标按钮操作"
-
-#, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Add mouse button action"
-#~ msgctxt "@title:window"
-#~ msgid "Edit mouse button action"
-#~ msgstr "添加鼠标按钮操作"
-
-#~ msgctxt "@option:check"
-#~ msgid "Use Breeze icon theme"
-#~ msgstr "使用 Breeze 微风图标主题"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Sets the icon theme to breeze.<br>Requires restart."
-#~ msgstr "设置图标主题为“Breeze 微风”。<br>需要重启才能生效。"
-
-#~ msgctxt "@action:button"
-#~ msgid "Open Playlist"
-#~ msgstr "打开播放列表"
