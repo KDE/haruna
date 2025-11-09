@@ -103,7 +103,6 @@ Application::Application()
     setupWorkerThread();
     setupAboutData();
     setupCommandLineParser();
-    setupQmlSettingsTypes();
 
     KCrash::initialize();
 
@@ -192,18 +191,6 @@ void Application::setupCommandLineParser()
     for (auto i = 0; i < m_parser->positionalArguments().size(); ++i) {
         addUrl(i, m_parser->positionalArguments().at(i));
     }
-}
-
-void Application::setupQmlSettingsTypes()
-{
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "AudioSettings", AudioSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "GeneralSettings", GeneralSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "InformationSettings", InformationSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "MouseSettings", MouseSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "PlaybackSettings", PlaybackSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "PlaylistSettings", PlaylistSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "SubtitlesSettings", SubtitlesSettings::self());
-    qmlRegisterSingletonInstance("org.kde.haruna.settings", 1, 0, "VideoSettings", VideoSettings::self());
 }
 
 QString Application::version()
