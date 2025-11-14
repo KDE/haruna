@@ -1,21 +1,21 @@
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2021 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022 Frank Steinmetzger <dev-kde@felsenfleischer.de>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-05 00:43+0000\n"
-"PO-Revision-Date: 2025-07-18 11:54+0200\n"
-"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
+"PO-Revision-Date: 2025-11-07 12:48+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,7 +30,7 @@ msgstr "kde-i18n-de@kde.org"
 #: src/application.cpp:130
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr ""
+msgstr "Funktionsreicher Audio-/Video-Downloader für die Befehlszeile"
 
 #: src/application.cpp:143
 #, kde-format
@@ -72,6 +72,8 @@ msgstr "Befehlszeilen-Videoplayer"
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Plattformübergreifende Lösung für das Aufnehmen, Konvertieren und Streamen "
+"von Audio und Video"
 
 #: src/application.cpp:179
 #, kde-format
@@ -97,12 +99,10 @@ msgid "Playing media file"
 msgstr "Mediendatei wird abgespielt"
 
 #: src/models/actionsmodel.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Actions Dialog"
-msgstr "Einstellungsdatei öffnen"
+msgstr "Aktionen-Dialog öffnen"
 
 #: src/models/actionsmodel.cpp:32
 #, kde-format
@@ -586,7 +586,7 @@ msgstr "Untertitel-Timing: %1 Sekunden"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Datei existiert nicht: %1"
 
 #: src/mpv/mpvitem.cpp:544
 #, kde-format
@@ -620,6 +620,8 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"Keine Videospur gefunden. Wahrscheinlich kann die Videospur aufgrund "
+"fehlender Codecs nicht decodiert/abgespielt werden"
 
 #: src/mpv/mpvitem.cpp:649
 #, kde-format
@@ -630,7 +632,7 @@ msgstr "Kapitel übersprungen: %1"
 #: src/playlist/Playlist.qml:76
 msgctxt "@action:button"
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: src/playlist/Playlist.qml:96
 msgctxt "@action:button"
@@ -638,12 +640,9 @@ msgid "Add…"
 msgstr "Hinzufügen …"
 
 #: src/playlist/Playlist.qml:104
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "Datei"
+msgstr "Dateien"
 
 #: src/playlist/Playlist.qml:112
 msgctxt "@action:button"
@@ -651,9 +650,6 @@ msgid "URL"
 msgstr "URL"
 
 #: src/playlist/Playlist.qml:122
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Wiedergabeliste"
@@ -684,46 +680,34 @@ msgid "Duration, descending"
 msgstr "Dauer, absteigend"
 
 #: src/playlist/Playlist.qml:165
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Wiedergabe"
 
 #: src/playlist/Playlist.qml:171
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Wiedergabeliste wiederholen"
 
 #: src/playlist/Playlist.qml:182
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Nach dem letzten Element anhalten"
 
 #: src/playlist/Playlist.qml:192
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr "Wiederholen"
+msgstr "Element wiederholen"
 
 #: src/playlist/Playlist.qml:203
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "Nach Element anhalten"
 
 #: src/playlist/Playlist.qml:213
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "Wiedergabe neu starten"
+msgstr "Zufällige Wiedergabe"
 
 #: src/playlist/Playlist.qml:225
 msgctxt "@action:button"
@@ -736,12 +720,9 @@ msgid "Save As"
 msgstr "Speichern unter"
 
 #: src/playlist/Playlist.qml:307
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "Datei zur Wiedergabeliste hinzufügen"
+msgstr "Neue Wiedergabeliste hinzufügen"
 
 #: src/playlist/Playlist.qml:322 src/playlist/Playlist.qml:647
 msgctxt "@action:inmenu"
@@ -751,7 +732,7 @@ msgstr "Umbenennen"
 #: src/playlist/Playlist.qml:328
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 #: src/playlist/Playlist.qml:384 src/playlist/Playlist.qml:405
 msgctxt "@action:button"
@@ -768,12 +749,9 @@ msgstr ""
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> wurde gefunden."
 
 #: src/playlist/Playlist.qml:404
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Playlist style"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "Wiedergabelisten-Stil"
+msgstr "Name der Wiedergabeliste"
 
 #: src/playlist/Playlist.qml:589
 msgctxt "@action:inmenu"
@@ -801,27 +779,19 @@ msgid "Copy URL"
 msgstr "URL kopieren"
 
 #: src/playlist/Playlist.qml:621
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "Datei auswählen"
+msgstr "Alles auswählen"
 
 #: src/playlist/Playlist.qml:625
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select File"
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr "Datei auswählen"
+msgstr "Auswahl aufheben"
 
 #: src/playlist/Playlist.qml:629
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
-msgstr "Formatauswahl"
+msgstr "Auswahl umkehren"
 
 #: src/playlist/Playlist.qml:635
 msgctxt "@action:inmenu"
@@ -829,12 +799,9 @@ msgid "Remove from Playlist"
 msgstr "Aus Wiedergabeliste entfernen"
 
 #: src/playlist/Playlist.qml:641
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
-msgstr "Aus Wiedergabeliste entfernen"
+msgstr "Ausgewählte aus Wiedergabeliste entfernen"
 
 #: src/playlist/Playlist.qml:653
 msgctxt "@action:inmenu"
@@ -847,12 +814,9 @@ msgid "Move File to Trash"
 msgstr "Datei in den Papierkorb verschieben"
 
 #: src/playlist/Playlist.qml:669
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Move File to Trash"
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
-msgstr "Datei in den Papierkorb verschieben"
+msgstr "Ausgewählte Dateien in den Papierkorb verschieben"
 
 #: src/playlist/Playlist.qml:775 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -863,15 +827,12 @@ msgstr "Datei auswählen"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "Wiedergabelisten mit dem gleichen Namen sind nicht erlaubt: %1"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
-msgstr "Standard-Titelbild"
+msgstr "Standard"
 
 #: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
@@ -883,7 +844,7 @@ msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr ""
+msgstr "Untertitel kann nicht geladen werden, wenn keine Datei geöffnet ist"
 
 #: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
 msgctxt "@info:tooltip"
@@ -1055,20 +1016,14 @@ msgid "&More"
 msgstr "&Mehr"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "No action selected"
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr "Keine Aktion ausgewählt"
+msgstr "Keine Aktionen gefunden."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@label; Below is a list of folders containing subtitles"
-#| msgid "Load subtitles from:"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
-msgstr "Untertitel laden von:"
+msgstr "Untertitel laden von"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:34
 msgctxt "@info:tooltip;"
@@ -1105,7 +1060,7 @@ msgstr "Neuen Ordner hinzufügen"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Einen Ordner hinzufügen, in dem nach Untertiteln gesucht wird."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:185
 msgctxt "@label:check"
@@ -1328,20 +1283,14 @@ msgid "Volume: %1"
 msgstr "Lautstärke: %1"
 
 #: src/qml/MpvVideo.qml:254
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Add file to playlist"
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
-msgstr "Datei zur Wiedergabeliste hinzufügen"
+msgstr "Zur Wiedergabeliste hinzufügen"
 
 #: src/qml/MpvVideo.qml:303
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Play Next"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
-msgstr "Nächstes Element wiedergeben"
+msgstr "Jetzt wiedergeben"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1360,36 +1309,31 @@ msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "Lautstärkeschritte"
 
+# https://de.wikipedia.org/wiki/Replay_Gain
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Replay Gain"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Modus"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Spur"
+msgstr "Spur"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1398,21 +1342,25 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Die Verstärkung (Gain) anhand von in den Metadaten gespeicherten "
+"<i>replaygain</i>-Werten anpassen. Wenn dieser Wert auf „Album“ gesetzt ist, "
+"wird der Album-Gain angewendet und der Spur-Gain als Rückfallebene "
+"eingesetzt."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Übersteuern verhindern"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Übersteuern durch Gain-Verringerung verhindern"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Vorverstärker (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1420,17 +1368,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:239
 #: src/qml/Settings/SubtitlesSettings.qml:294
 #: src/qml/Settings/SubtitlesSettings.qml:369
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Standardwert"
+msgstr "Auf Standardwert zurücksetzen"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Rückfallebene (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1457,6 +1402,8 @@ msgid ""
 "Checked: property will be set at startup\n"
 "Unchecked: property will not be set at startup"
 msgstr ""
+"Aktiviert: Einstellung wird beim Start angewendet\n"
+"Deaktiviert: Einstellung wird beim Start nicht angewendet"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:174
 msgctxt "@action:intoolbar"
@@ -1474,20 +1421,14 @@ msgid "Custom commands config file"
 msgstr "Konfigurationsdatei für benutzerdefinierte Befehle"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Einstellungsdatei öffnen"
+msgstr "Einstellungsdatei für Kurzbefehle"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Einstellungsdatei öffnen"
+msgstr "Einstellungsdatei für Wiedergabelisten"
 
 #: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@info:usagetip"
@@ -1495,6 +1436,8 @@ msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
 "using the default settings)."
 msgstr ""
+"Wenn Felder leer sind, existiert keine Einstellungsdatei/kein "
+"Einstellungsordner (z. B. wenn die Standardeinstellungen verwendet werden)."
 
 #: src/qml/Settings/DebugSettings.qml:82
 msgctxt "@option:check"
@@ -1502,17 +1445,11 @@ msgid "Enable mpv logging"
 msgstr "mpv-Protokoll aktivieren"
 
 #: src/qml/Settings/DebugSettings.qml:105
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Datei öffnen"
 
 #: src/qml/Settings/DebugSettings.qml:114
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
@@ -1580,7 +1517,7 @@ msgstr "Beim Starten ausführen"
 #: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Der Befehl wird beim Start der Anwendung ausgeführt."
 
 #: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
@@ -1608,9 +1545,6 @@ msgid "Maximum recent files"
 msgstr "Maximale Anzahl zuletzt geöffneter Dateien"
 
 #: src/qml/Settings/GeneralSettings.qml:62
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Leeren"
@@ -1649,7 +1583,7 @@ msgstr "Datei zur Wiedergabeliste hinzufügen"
 #: src/qml/Settings/GeneralSettings.qml:114
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr ""
+msgstr "Die Datei wird am Ende der Wiedergabeliste hinzugefügt."
 
 #: src/qml/Settings/GeneralSettings.qml:123
 msgctxt "@option:check"
@@ -1667,32 +1601,29 @@ msgid "Footer style"
 msgstr "Stil der Fußzeile"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "Standard-Titelbild"
+msgstr "Standard"
 
 #: src/qml/Settings/GeneralSettings.qml:158
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Schwebend"
 
 #: src/qml/Settings/GeneralSettings.qml:172
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
-msgstr ""
+msgstr "Schwebende Fußzeile anzeigen bei"
 
 #: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Jeder Mausbewegung"
 
 #: src/qml/Settings/GeneralSettings.qml:193
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Mausbewegung unten"
 
 #: src/qml/Settings/GeneralSettings.qml:208
 msgctxt "@info:tooltip"
@@ -1720,12 +1651,12 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:237
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Genaue Vorschau verwenden"
 
 #: src/qml/Settings/GeneralSettings.qml:247
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Eine genaue Vorschau zu erstellen dauert lange"
 
 #: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@label:spinbox"
@@ -1812,25 +1743,16 @@ msgid "GUI style"
 msgstr "Oberflächenstil"
 
 #: src/qml/Settings/GeneralSettings.qml:457
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "Standard-Titelbild"
+msgstr "Standard"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "Aktion ändern"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Delete"
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Löschen"
@@ -1846,113 +1768,71 @@ msgid "Add mouse button action"
 msgstr "Maustatstenaktion hinzufügen"
 
 #: src/qml/Settings/MouseSettings.qml:182
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Mouse button"
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Maustaste"
 
 #: src/qml/Settings/MouseSettings.qml:199
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Links"
 
 #: src/qml/Settings/MouseSettings.qml:205
-#, fuzzy
-#| msgctxt "@label:listbox middle mouse button"
-#| msgid "Middle"
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Mitte"
 
 #: src/qml/Settings/MouseSettings.qml:211
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Rechts"
 
 #: src/qml/Settings/MouseSettings.qml:217
-#, fuzzy
-#| msgctxt "@label:listbox forward mouse button"
-#| msgid "Forward"
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "Vorwärts"
 
 #: src/qml/Settings/MouseSettings.qml:223
-#, fuzzy
-#| msgctxt "@label:listbox back mouse button"
-#| msgid "Back"
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Zurück"
 
 #: src/qml/Settings/MouseSettings.qml:229
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll up"
-#| msgid "Scroll up"
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Nach oben scrollen"
 
 #: src/qml/Settings/MouseSettings.qml:235
-#, fuzzy
-#| msgctxt "@label:listbox mouse scroll down"
-#| msgid "Scroll down"
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Nach unten scrollen"
 
 #: src/qml/Settings/MouseSettings.qml:244
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Modifier key"
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "Sondertaste"
 
 #: src/qml/Settings/MouseSettings.qml:262
-#, fuzzy
-#| msgctxt "@label:listbox no modifier key"
-#| msgid "No modifier"
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "Keine Sondertaste"
 
 #: src/qml/Settings/MouseSettings.qml:268
-#, fuzzy
-#| msgctxt "@label:listbox control modifier key"
-#| msgid "Control"
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Strg"
 
 #: src/qml/Settings/MouseSettings.qml:274
-#, fuzzy
-#| msgctxt "@label:listbox shift modifier key"
-#| msgid "Shift"
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Umschalt"
 
 #: src/qml/Settings/MouseSettings.qml:280
-#, fuzzy
-#| msgctxt "@label:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:286
-#, fuzzy
-#| msgctxt "@label:listbox meta modifier key"
-#| msgid "Meta"
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -1961,7 +1841,7 @@ msgstr "Meta"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
-msgstr ""
+msgstr "Bei Doppelklick auslösen"
 
 #: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
@@ -1974,9 +1854,6 @@ msgid "Select action"
 msgstr "Aktion auswählen"
 
 #: src/qml/Settings/MouseSettings.qml:332
-#, fuzzy
-#| msgctxt "@action:button change mouse button action "
-#| msgid "Change action"
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Aktion ändern"
@@ -1989,7 +1866,7 @@ msgstr "Keine Aktion ausgewählt"
 #: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "Die Maustastenkombination ist bereits „%1“ zugewiesen"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -2201,15 +2078,12 @@ msgstr "Formatauswahl"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "Standard-Titelbild"
+msgstr "Standard"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2222,17 +2096,11 @@ msgid "Position"
 msgstr "Position"
 
 #: src/qml/Settings/PlaylistSettings.qml:36
-#, fuzzy
-#| msgctxt "@label:listbox left mouse button"
-#| msgid "Left"
 msgctxt "@item:listbox playlist position"
 msgid "Left"
 msgstr "Links"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgctxt "@label:listbox right mouse button"
-#| msgid "Right"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
 msgstr "Rechts"
@@ -2243,59 +2111,44 @@ msgid "Playlist style"
 msgstr "Wiedergabelisten-Stil"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "Standard-Titelbild"
+msgstr "Standard"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preview thumbnail"
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr "Vorschaubild"
+msgstr "Mit Vorschaubildern"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Kompakt"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Abspielposition"
+msgstr "Wiedergabeverhalten"
 
 #: src/qml/Settings/PlaylistSettings.qml:109
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Wiedergabeliste wiederholen"
 
 #: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Nach dem letzten Element anhalten"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Wiederholen"
+msgstr "Element wiederholen"
 
 #: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "Nach Element anhalten"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
 msgctxt "@info:tooltip playback description"
@@ -2308,12 +2161,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random playback"
-msgstr "Wiedergabe neu starten"
+msgstr "Zufällige Wiedergabe"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
@@ -2366,12 +2216,12 @@ msgid ""
 "launches"
 msgstr ""
 "Wenn aktiviert, wird der Zustand der Wiedergabeliste (sichtbar/ausgeblendet) "
-"über den Programmstart hinaus gespeichert"
+"beim Beenden der Anwendung gespeichert"
 
 #: src/qml/Settings/PlaylistSettings.qml:262
 msgctxt "@option:check"
 msgid "Open items with single click"
-msgstr ""
+msgstr "Elemente mit einem einzigen Klick öffnen"
 
 #: src/qml/Settings/SettingsWindow.qml:45
 msgctxt "@title:window"
@@ -2442,7 +2292,7 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
-msgstr ""
+msgstr "Untertitel in schwarzen Rändern erlauben"
 
 #: src/qml/Settings/SubtitlesSettings.qml:103
 msgctxt "@info:tooltip"
