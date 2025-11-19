@@ -505,7 +505,7 @@ ApplicationWindow {
         onSubmitted: function(url) {
             window.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
 
-            GeneralSettings.lastText = url
+            GeneralSettings.lastUrl = url
             GeneralSettings.save()
         }
     }
