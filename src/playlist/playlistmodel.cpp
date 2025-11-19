@@ -124,7 +124,6 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
         auto mimeType = MiscUtils::mimeType(url);
 
         if (mimeType == u"audio/x-mpegurl"_s) {
-            m_playlistPath = url.toString();
             addM3uItems(url, behavior);
             return;
         }
@@ -278,6 +277,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
         return;
     }
 
+    m_playlistPath = url.toString();
     QFile m3uFile(url.toString(QUrl::PreferLocalFile));
     if (!m3uFile.open(QFile::ReadOnly)) {
         qDebug() << "can't open playlist file";
