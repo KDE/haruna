@@ -77,6 +77,28 @@ void PlaylistFilterProxyModel::setSearchText(QString text)
     Q_EMIT searchTextChanged();
 }
 
+uint PlaylistFilterProxyModel::sortRole()
+{
+    return playlistSortProxyModel()->m_sortRole;
+}
+
+Qt::SortOrder PlaylistFilterProxyModel::sortOrder()
+{
+    return playlistSortProxyModel()->m_sortingOrder;
+}
+
+void PlaylistFilterProxyModel::changeSortOrder(Qt::SortOrder order)
+{
+    if (sortOrder() == order) {
+        // Reset custom ordering
+        playlistProxyModel()->onLayoutAboutToBeChanged();
+        return;
+    }
+    playlistSortProxyModel()->sortItems(order);
+    Q_EMIT itemsSorted();
+    Q_EMIT sortOrderChanged();
+}
+
 uint PlaylistFilterProxyModel::getPlayingItem()
 {
     auto model = playlistModel();
@@ -568,9 +590,14 @@ bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)
     return fileInfo.exists() && fileInfo.isDir();
 }
 
-void PlaylistFilterProxyModel::sortItems(PlaylistSortProxyModel::Sort sortMode)
+void PlaylistFilterProxyModel::sortItems(PlaylistSortProxyModel::Sort pSortRole)
 {
-    playlistSortProxyModel()->sortItems(sortMode);
+    if (sortRole() == pSortRole) {
+        // Reset custom ordering
+        playlistProxyModel()->onLayoutAboutToBeChanged();
+        return;
+    }
+    playlistSortProxyModel()->sortItems(pSortRole);
     Q_EMIT itemsSorted();
 }
 

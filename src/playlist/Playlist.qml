@@ -71,6 +71,8 @@ Page {
             spacing: 0
 
             Kirigami.ActionToolBar {
+                ActionGroup { id: sortOrderGroup }
+                ActionGroup { id: sortRoleGroup }
                 actions: [
                     Kirigami.Action {
                         text: i18nc("@action:button", "Search")
@@ -137,30 +139,135 @@ Page {
                         icon.height: root.buttonSize
 
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Name, ascending")
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.NameAscending)
+                            text: i18nc("@action:button", "Ascending")
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.AscendingOrder
+
+                            icon {
+                                name: "view-sort-ascending-name"
+                                width: root.buttonSize
+                                height: root.buttonSize
                             }
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.AscendingOrder
+                            }
+
+                            ActionGroup.group: sortOrderGroup
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Name, descending")
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.NameDescending)
+                            text: i18nc("@action:button", "Descending")
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.DescendingOrder
+
+                            icon {
+                                name: "view-sort-descending-name"
+                                width: root.buttonSize
+                                height: root.buttonSize
                             }
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.DescendingOrder
+                            }
+
+                            ActionGroup.group: sortOrderGroup
+                        }
+
+                        Kirigami.Action {
+                            separator: true
+                        }
+
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.None
+                            text: i18nc("@action:button", "None")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.None)
+                            }
+                            ActionGroup.group: sortRoleGroup
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Duration, ascending")
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.FileName
+                            text: i18nc("@action:button", "File Name")
+
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.DurationAscending)
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.FileName)
                             }
+                            ActionGroup.group: sortRoleGroup
                         }
                         Kirigami.Action {
-                            text: i18nc("@action:button", "Duration, descending")
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Title
+                            text: i18nc("@action:button", "Title")
+
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.DurationDescending)
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Title)
                             }
+                            ActionGroup.group: sortRoleGroup
+                        }
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Duration
+                            text: i18nc("@action:button", "Duration")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Duration)
+                            }
+                            ActionGroup.group: sortRoleGroup
+                        }
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Date
+                            text: i18nc("@action:button", "Modified Date")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Date)
+                            }
+                            ActionGroup.group: sortRoleGroup
+                        }
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.FileSize
+                            text: i18nc("@action:button", "File Size")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.FileSize)
+                            }
+                            ActionGroup.group: sortRoleGroup
+                        }
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.TrackNo
+                            text: i18nc("@action:button", "Track No")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.TrackNo)
+                            }
+                            ActionGroup.group: sortRoleGroup
+                        }
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.SampleRate
+                            text: i18nc("@action:button", "Sample Rate")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.SampleRate)
+                            }
+                            ActionGroup.group: sortRoleGroup
+                        }
+                        Kirigami.Action {
+                            checkable: true
+                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Bitrate
+                            text: i18nc("@action:button", "Bitrate")
+
+                            onTriggered: {
+                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Bitrate)
+                            }
+                            ActionGroup.group: sortRoleGroup
                         }
                     },
+
                     Kirigami.Action {
                         text: i18nc("@action:button", "Playback")
                         icon.name: "media-playback-start"

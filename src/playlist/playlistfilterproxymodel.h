@@ -58,6 +58,13 @@ public:
     QString searchText();
     void setSearchText(QString text);
 
+    Q_PROPERTY(uint sortRole READ sortRole NOTIFY sortRoleChanged)
+    uint sortRole();
+
+    Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE changeSortOrder NOTIFY sortOrderChanged)
+    Qt::SortOrder sortOrder();
+    void changeSortOrder(Qt::SortOrder order);
+
     Q_INVOKABLE uint getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
     Q_INVOKABLE void playNext();
@@ -80,7 +87,7 @@ public:
     Q_INVOKABLE bool isDirectory(const QUrl &url);
 
     // PlaylistSortProxyModel
-    Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortMode);
+    Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortRole);
 
     // PlaylistModel
     Q_INVOKABLE void clear();
@@ -96,6 +103,8 @@ Q_SIGNALS:
     void itemsRemoved();
     void itemsInserted();
     void searchTextChanged();
+    void sortRoleChanged();
+    void sortOrderChanged();
 
 private:
     void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
