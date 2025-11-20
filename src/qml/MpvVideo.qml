@@ -12,6 +12,7 @@ import QtQuick.Window
 import Qt5Compat.GraphicalEffects
 
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
