@@ -14,17 +14,28 @@
 
 #include <KFileMetaData/Properties>
 
+#include "playlistmetadata.h"
 #include "youtube.h"
 
 struct YTVideoInfo;
+struct AudioMetaData;
+struct VideoMetaData;
 
 struct PlaylistItem {
     QUrl url;
     QString filename;
     QString mediaTitle;
     QString folderPath;
+    QString dirName;
     QString formattedDuration;
     double duration{0.0};
+    qint64 fileSize{0};
+    QDateTime modifiedDate;
+    QString extension;
+    QString fileType;
+
+    AudioMetaData audio;
+    VideoMetaData video;
 };
 
 class PlaylistModel : public QAbstractListModel
@@ -43,13 +54,38 @@ public:
 
     enum Roles {
         NameRole = Qt::UserRole,
-        TitleRole,
+        // General
         DurationRole,
         PathRole,
         FolderPathRole,
+        DirNameRole,
+        DateRole,
+        FileSizeRole,
+        TypeRole,
+        ExtensionRole,
         PlayingRole,
         IsLocalRole,
         IsSelectedRole,
+        // Audio
+        TrackNoRole,
+        DiscNoRole,
+        GenreRole,
+        TitleRole,
+        ReleaseYearRole,
+        AlbumRole,
+        ArtistRole,
+        AlbumArtistRole,
+        ComposerRole,
+        LyricistRole,
+        AudioCodecRole,
+        SampleRateRole,
+        BitrateRole,
+        // Video
+        DisplayedWidthRole,
+        DisplayedHeightRole,
+        FramerateRole,
+        VideoCodecRole,
+        OrientationRole,
     };
     Q_ENUM(Roles)
 

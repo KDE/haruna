@@ -65,18 +65,64 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case NameRole:
         return QVariant(item.filename);
-    case TitleRole:
-        return item.mediaTitle.isEmpty() ? QVariant(item.filename) : QVariant(item.mediaTitle);
     case PathRole:
         return QVariant(item.url);
     case DurationRole:
         return QVariant(item.formattedDuration);
+    case DateRole:
+        return QVariant(item.modifiedDate);
+    case FileSizeRole:
+        return QVariant(item.fileSize);
+    case TypeRole:
+        return QVariant(item.fileType);
+    case ExtensionRole:
+        return QVariant(item.extension);
     case PlayingRole:
         return QVariant(static_cast<int>(m_playingItem) == index.row() && m_isPlaying);
     case FolderPathRole:
         return QVariant(item.folderPath);
+    case DirNameRole:
+        return QVariant(item.dirName);
     case IsLocalRole:
         return QVariant(!item.url.scheme().startsWith(u"http"_s));
+    // Audio
+    case TrackNoRole:
+        return QVariant(item.audio.trackNo);
+    case DiscNoRole:
+        return QVariant(item.audio.discNo);
+    case TitleRole:
+        return item.mediaTitle.isEmpty() ? QVariant(item.filename) : QVariant(item.mediaTitle);
+    case ReleaseYearRole:
+        return QVariant(item.audio.releaseYear);
+    case GenreRole:
+        return QVariant(item.audio.genre);
+    case AlbumRole:
+        return QVariant(item.audio.album);
+    case ArtistRole:
+        return QVariant(item.audio.artist);
+    case AlbumArtistRole:
+        return QVariant(item.audio.albumArtist);
+    case ComposerRole:
+        return QVariant(item.audio.composer);
+    case LyricistRole:
+        return QVariant(item.audio.lyricist);
+    case AudioCodecRole:
+        return QVariant(item.audio.audioCodec);
+    case SampleRateRole:
+        return QVariant(item.audio.sampleRate);
+    case BitrateRole:
+        return QVariant(item.audio.bitrate);
+    case FramerateRole:
+        return QVariant(item.video.frameRate);
+    // Video
+    case VideoCodecRole:
+        return QVariant(item.video.videoCodec);
+    case OrientationRole:
+        return QVariant(item.video.displayedOrientation);
+    case DisplayedHeightRole:
+        return QVariant(item.video.displayHeight);
+    case DisplayedWidthRole:
+        return QVariant(item.video.displayWidth);
     }
 
     return QVariant();
@@ -86,14 +132,37 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
 {
     // clang-format off
     QHash<int, QByteArray> roles = {
-        {NameRole,       QByteArrayLiteral("name")},
-        {TitleRole,      QByteArrayLiteral("title")},
-        {PathRole,       QByteArrayLiteral("path")},
-        {FolderPathRole, QByteArrayLiteral("folderPath")},
-        {DurationRole,   QByteArrayLiteral("duration")},
-        {PlayingRole,    QByteArrayLiteral("isPlaying")},
-        {IsLocalRole,    QByteArrayLiteral("isLocal")},
-        {IsSelectedRole, QByteArrayLiteral("isSelected")},
+        {NameRole,              QByteArrayLiteral("name")},
+        {TitleRole,             QByteArrayLiteral("title")},
+        {PathRole,              QByteArrayLiteral("path")},
+        {FolderPathRole,        QByteArrayLiteral("folderPath")},
+        {DirNameRole,           QByteArrayLiteral("dirName")},
+        {DurationRole,          QByteArrayLiteral("duration")},
+        {DateRole,              QByteArrayLiteral("date")},
+        {FileSizeRole,          QByteArrayLiteral("fileSize")},
+        {TypeRole,              QByteArrayLiteral("fileType")},
+        {ExtensionRole,         QByteArrayLiteral("extension")},
+        {PlayingRole,           QByteArrayLiteral("isPlaying")},
+        {IsLocalRole,           QByteArrayLiteral("isLocal")},
+        {IsSelectedRole,        QByteArrayLiteral("isSelected")},
+        {TrackNoRole,           QByteArrayLiteral("trackNo")},
+        {DiscNoRole,            QByteArrayLiteral("discNo")},
+        {TitleRole,             QByteArrayLiteral("title")},
+        {ReleaseYearRole,       QByteArrayLiteral("releaseYear")},
+        {GenreRole,             QByteArrayLiteral("album")},
+        {AlbumRole,             QByteArrayLiteral("album")},
+        {ArtistRole,            QByteArrayLiteral("artist")},
+        {AlbumArtistRole,       QByteArrayLiteral("albumArtist")},
+        {ComposerRole,          QByteArrayLiteral("composer")},
+        {LyricistRole,          QByteArrayLiteral("lyricist")},
+        {AudioCodecRole,        QByteArrayLiteral("audioCodec")},
+        {SampleRateRole,        QByteArrayLiteral("sampleRate")},
+        {BitrateRole,           QByteArrayLiteral("bitrate")},
+        {DisplayedWidthRole,    QByteArrayLiteral("displayedWidth")},
+        {DisplayedHeightRole,   QByteArrayLiteral("displayedHeight")},
+        {FramerateRole,         QByteArrayLiteral("frameRate")},
+        {VideoCodecRole,        QByteArrayLiteral("videoCodec")},
+        {OrientationRole,       QByteArrayLiteral("orientation")},
     };
     // clang-format on
 
@@ -178,15 +247,22 @@ void PlaylistModel::appendItem(const QUrl &url)
 {
     PlaylistItem item;
     QFileInfo itemInfo(url.toLocalFile());
+    QDir itemDir(itemInfo.absolutePath());
     auto row{m_playlist.size()};
     if (itemInfo.exists() && itemInfo.isFile()) {
         item.url = url;
         item.filename = itemInfo.fileName();
         item.folderPath = itemInfo.absolutePath();
+        item.dirName = itemDir.dirName();
+        item.modifiedDate = itemInfo.lastModified();
+        item.fileSize = itemInfo.size();
+        item.extension = itemInfo.suffix();
+        item.fileType = MiscUtils::mimeType(url).split(u"/"_s)[0];
     } else {
         if (url.scheme().startsWith(u"http"_s)) {
             item.url = url;
             item.filename = url.toString();
+            item.fileType = u"http"_s;
             // causes issues with lots of links
             if (m_httpItemCounter < 20) {
                 QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
@@ -249,11 +325,17 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
     for (const auto &file : siblingFiles) {
         QFileInfo fileInfo(file);
+        QDir itemDir(fileInfo.absolutePath());
         auto fileUrl = QUrl::fromLocalFile(file);
         PlaylistItem item;
         item.url = fileUrl;
         item.filename = fileInfo.fileName();
         item.folderPath = fileInfo.absolutePath();
+        item.dirName = itemDir.dirName();
+        item.modifiedDate = fileInfo.lastModified();
+        item.fileSize = fileInfo.size();
+        item.extension = fileInfo.suffix();
+        item.fileType = MiscUtils::mimeType(fileUrl).split(u"/"_s)[0];
         m_playlist.push_back(item);
         // in flatpak the file dialog gives a percent encoded path
         // use toLocalFile to normalize the urls
@@ -442,8 +524,10 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::Prop
         auto title = properties.value(KFileMetaData::Property::Title).toString();
 
         m_playlist[i].formattedDuration = MiscUtils::formatTime(duration);
-        m_playlist[i].duration = duration;
         m_playlist[i].mediaTitle = title;
+        m_playlist[i].duration = duration;
+        m_playlist[i].audio.setMetaData(properties);
+        m_playlist[i].video.setMetaData(properties);
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
     } else {

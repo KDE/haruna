@@ -29,6 +29,7 @@ qt_add_qml_module(playlist
         playlistmultiproxiesmodel.cpp
         playlistrenamevalidator.h
         playlistrenamevalidator.cpp
+        playlistmetadata.h
 )
 
 target_link_libraries(playlist PRIVATE
