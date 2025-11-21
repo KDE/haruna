@@ -144,7 +144,7 @@ void MpvItem::initProperties()
     }
     Q_EMIT setProperty(MpvProperties::self()->YtdlFormat, ytdlFormat);
 
-    Q_EMIT setProperty(MpvProperties::self()->SubtitleAuto, u"exact"_s);
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleAuto, u"fuzzy"_s);
     Q_EMIT setProperty(MpvProperties::self()->SubtitleUseMargins, SubtitlesSettings::allowOnBlackBorders());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleAssForceMargins, SubtitlesSettings::allowOnBlackBorders());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleFont, SubtitlesSettings::fontFamily());
