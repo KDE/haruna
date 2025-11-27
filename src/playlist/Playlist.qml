@@ -24,6 +24,7 @@ Page {
     id: root
 
     required property MpvVideo m_mpv
+    required property Loader m_advancedSortWindowLoader
 
     property bool isSmallWindowSize: Window.window.width < 600
     property int buttonSize: isSmallWindowSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
@@ -182,7 +183,7 @@ Page {
                             text: i18nc("@action:button", "None")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.None)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.None
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -192,7 +193,7 @@ Page {
                             text: i18nc("@action:button", "File Name")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.FileName)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.FileName
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -202,7 +203,7 @@ Page {
                             text: i18nc("@action:button", "Title")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Title)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Title
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -212,7 +213,7 @@ Page {
                             text: i18nc("@action:button", "Duration")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Duration)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Duration
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -222,7 +223,7 @@ Page {
                             text: i18nc("@action:button", "Modified Date")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Date)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Date
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -232,7 +233,7 @@ Page {
                             text: i18nc("@action:button", "File Size")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.FileSize)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.FileSize
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -242,7 +243,7 @@ Page {
                             text: i18nc("@action:button", "Track No")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.TrackNo)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.TrackNo
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -252,7 +253,7 @@ Page {
                             text: i18nc("@action:button", "Sample Rate")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.SampleRate)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.SampleRate
                             }
                             ActionGroup.group: sortRoleGroup
                         }
@@ -262,9 +263,20 @@ Page {
                             text: i18nc("@action:button", "Bitrate")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortItems(PlaylistSortProxyModel.Bitrate)
+                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Bitrate
                             }
                             ActionGroup.group: sortRoleGroup
+                        }
+
+                        Kirigami.Action {
+                            separator: true
+                        }
+
+                        Kirigami.Action {
+                            text: i18nc("@action:button", "Advanced…")
+                            onTriggered: {
+                                root.m_advancedSortWindowLoader.openSortWindow()
+                            }
                         }
                     },
 

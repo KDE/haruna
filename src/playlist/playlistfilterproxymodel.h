@@ -14,6 +14,9 @@
 #include "playlistproxymodel.h"
 #include "playlistsortproxymodel.h"
 
+using Sort = PlaylistSortProxyModel::Sort;
+using Group = PlaylistSortProxyModel::Group;
+
 class PlaylistModel;
 class PlaylistSortProxyModel;
 class PlaylistProxyModel;
@@ -58,8 +61,9 @@ public:
     QString searchText();
     void setSearchText(QString text);
 
-    Q_PROPERTY(uint sortRole READ sortRole NOTIFY sortRoleChanged)
-    uint sortRole();
+    Q_PROPERTY(Sort sortRole READ sortRole WRITE sortItems NOTIFY itemsSorted)
+    Sort sortRole();
+    void sortItems(Sort sortRole);
 
     Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE changeSortOrder NOTIFY sortOrderChanged)
     Qt::SortOrder sortOrder();
@@ -87,7 +91,12 @@ public:
     Q_INVOKABLE bool isDirectory(const QUrl &url);
 
     // PlaylistSortProxyModel
-    Q_INVOKABLE void sortItems(PlaylistSortProxyModel::Sort sortRole);
+    Q_INVOKABLE PlaylistGroupPropertyModel *activeGroupModel();
+    Q_INVOKABLE PlaylistGroupPropertyProxyModel *availableGroupProxyModel();
+    Q_INVOKABLE void addToActiveGroup(Group group) const;
+    Q_INVOKABLE void removeFromActiveGroup(uint index) const;
+    Q_INVOKABLE void setGroupDisplay(uint index, int display) const;
+    Q_INVOKABLE void setGroupSortOrder(uint index, int order) const;
 
     // PlaylistModel
     Q_INVOKABLE void clear();
@@ -103,7 +112,6 @@ Q_SIGNALS:
     void itemsRemoved();
     void itemsInserted();
     void searchTextChanged();
-    void sortRoleChanged();
     void sortOrderChanged();
 
 private:

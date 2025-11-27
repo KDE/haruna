@@ -63,7 +63,9 @@ ApplicationWindow {
 
     onClosing: {
         const settingsWindow = settingsLoader.item as Window
+        const sortConfigWindow = advancedSortWindowLoader.item as PlaylistAdvancedSortWindow
         settingsWindow?.close()
+        sortConfigWindow?.close()
     }
 
     header: Header {
@@ -252,6 +254,7 @@ ApplicationWindow {
         id: playlist
 
         m_mpv: mpv
+        m_advancedSortWindowLoader: advancedSortWindowLoader
         height: mpv.height
 
         Connections {
@@ -421,6 +424,33 @@ ApplicationWindow {
                 settingsWindow.raise()
             } else {
                 settingsWindow.visible = true
+            }
+        }
+    }
+
+    Loader {
+        id: advancedSortWindowLoader
+        active: false
+        asynchronous: true
+        sourceComponent: PlaylistAdvancedSortWindow {
+            m_mpv: mpv
+        }
+
+        function openSortWindow() : void {
+            if (!advancedSortWindowLoader.active) {
+                advancedSortWindowLoader.active = true
+                advancedSortWindowLoader.loaded.connect(function() {
+                    advancedSortWindowLoader.openSortWindow()
+                    advancedSortWindowLoader.item.calculatePostLayout()
+                })
+                return
+            }
+
+            const advancedSortWindow = advancedSortWindowLoader.item as PlaylistAdvancedSortWindow
+            if (advancedSortWindow.visible) {
+                advancedSortWindow.raise()
+            } else {
+                advancedSortWindow.visible = true
             }
         }
     }
