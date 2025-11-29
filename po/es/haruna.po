@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:42+0000\n"
-"PO-Revision-Date: 2025-11-22 11:56+0100\n"
+"PO-Revision-Date: 2025-11-28 02:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -718,7 +718,7 @@ msgstr "Tasa de bits"
 #: src/playlist/Playlist.qml:276
 msgctxt "@action:button"
 msgid "Advanced…"
-msgstr ""
+msgstr "Avanzado…"
 
 #: src/playlist/Playlist.qml:284
 msgctxt "@action:button"
@@ -867,93 +867,59 @@ msgstr "Seleccionar archivo"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Ordenar y agrupar avanzados"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:64
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Ascendente"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:77
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Descending"
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Descendente"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:121
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:inmenu"
 msgid "None"
-msgstr "Ninguna"
+msgstr "Ninguno"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:133
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File Name"
 msgctxt "@action:inmenu"
 msgid "File Name"
 msgstr "Nombre de archivo"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:145
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Title"
 msgctxt "@action:inmenu"
 msgid "Title"
 msgstr "Título"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:157
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration"
 msgctxt "@action:inmenu"
 msgid "Duration"
 msgstr "Duración"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:169
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Modified Date"
 msgctxt "@action:inmenu"
 msgid "Modified Date"
 msgstr "Fecha de modificación"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File Size"
 msgctxt "@action:inmenu"
 msgid "File Size"
 msgstr "Tamaño de archivo"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:193
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@action:inmenu"
 msgid "Track No"
 msgstr "Número de pista"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:205
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
 msgctxt "@action:inmenu"
 msgid "Sample Rate"
 msgstr "Frecuencia de muestreo"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:217
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
 msgctxt "@action:inmenu"
 msgid "Bitrate"
 msgstr "Tasa de bits"
@@ -965,54 +931,42 @@ msgid ""
 "order and each group <br>is sorted within by the primary sort configuration "
 "set above."
 msgstr ""
+"Los elementos de la lista de reproducción se agruparán por<br>las "
+"propiedades activas en el orden indicado y cada grupo<br>se ordena "
+"internamente por el ajuste de orden principal indicado arriba."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:258
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add New Folder"
 msgctxt "@sort:group add new line button"
 msgid "Add New Line"
-msgstr "Añadir nueva carpeta"
+msgstr "Añadir nueva línea"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:275
 msgctxt "@label availabe grouping properties"
 msgid "Available Groups"
-msgstr ""
+msgstr "Grupos disponibles"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:304
 #: src/playlist/PlaylistAdvancedSortWindow.qml:323
 msgctxt "@sort:filter"
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:330
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@sort:filter all"
 msgid "All"
-msgstr "Alt"
+msgstr "Todo"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:341
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@sort:filter file"
 msgid "File"
-msgstr "Archivos"
+msgstr "Archivo"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:352
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@sort:filter audio"
 msgid "Audio"
 msgstr "Sonido"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:363
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@sort:filter video"
 msgid "Video"
 msgstr "Vídeo"
@@ -1020,28 +974,22 @@ msgstr "Vídeo"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:376
 msgctxt "@label active grouping properties"
 msgid "Active Groups:"
-msgstr ""
+msgstr "Grupos activos:"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:652
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "Ascendente"
+msgstr "Orden ascendente"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:654
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "Descendente"
+msgstr "Orden descendente"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:656
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "Igual que el orden principal"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:160
 #, kde-format
@@ -1053,12 +1001,10 @@ msgstr "No se permiten listas de reproducción con el mismo nombre: %1"
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
-msgstr ""
+msgstr "Carpeta"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Tipo"
@@ -1067,30 +1013,28 @@ msgstr "Tipo"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Extensión"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "Número de disco"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Año de publicación"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Género"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
+#, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "Álbum"
@@ -1099,69 +1043,61 @@ msgstr "Álbum"
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Artista"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Artista del álbum"
 
 #: src/playlist/playlistsortproxymodel.cpp:80
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Compositor"
 
 #: src/playlist/playlistsortproxymodel.cpp:86
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Letrista"
 
 #: src/playlist/playlistsortproxymodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Pista de sonido"
+msgstr "Códec de sonido"
 
 #: src/playlist/playlistsortproxymodel.cpp:98
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Tasa de fotogramas"
 
 #: src/playlist/playlistsortproxymodel.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Vídeo"
+msgstr "Códec de vídeo"
 
 #: src/playlist/playlistsortproxymodel.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "Duración"
+msgstr "Orientación"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "Reiniciar la saturación"
+msgstr "Resolución"
 
 #: src/playlist/playlistsortproxymodel.cpp:219
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
-msgstr ""
+msgstr "Nueva línea"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"

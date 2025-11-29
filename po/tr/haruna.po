@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:42+0000\n"
-"PO-Revision-Date: 2025-11-21 22:08+0300\n"
+"PO-Revision-Date: 2025-11-28 12:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -716,7 +716,7 @@ msgstr "Bit Hızı"
 #: src/playlist/Playlist.qml:276
 msgctxt "@action:button"
 msgid "Advanced…"
-msgstr ""
+msgstr "Gelişmiş…"
 
 #: src/playlist/Playlist.qml:284
 msgctxt "@action:button"
@@ -865,93 +865,59 @@ msgstr "Dosya Seç"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Gelişmiş Sırala ve Grupla"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:64
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Artan"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:77
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Descending"
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Azalan"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:121
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:inmenu"
 msgid "None"
 msgstr "Yok"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:133
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File Name"
 msgctxt "@action:inmenu"
 msgid "File Name"
 msgstr "Dosya Adı"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:145
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Title"
 msgctxt "@action:inmenu"
 msgid "Title"
 msgstr "Başlık"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:157
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration"
 msgctxt "@action:inmenu"
 msgid "Duration"
 msgstr "Süre"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:169
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Modified Date"
 msgctxt "@action:inmenu"
 msgid "Modified Date"
 msgstr "Değiştirilme Tarihi"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File Size"
 msgctxt "@action:inmenu"
 msgid "File Size"
 msgstr "Dosya Büyüklüğü"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:193
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@action:inmenu"
 msgid "Track No"
 msgstr "Parça №"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:205
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
 msgctxt "@action:inmenu"
 msgid "Sample Rate"
 msgstr "Örnekleme Hızı"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:217
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
 msgctxt "@action:inmenu"
 msgid "Bitrate"
 msgstr "Bit Hızı"
@@ -963,54 +929,42 @@ msgid ""
 "order and each group <br>is sorted within by the primary sort configuration "
 "set above."
 msgstr ""
+"Oynatma listesi ögeleri, sağlanan sırayla etkin özelliklere<br> göre "
+"gruplandırılacak ve her grup, yukarıda ayarlanan birincil<br> sıralama "
+"yapılandırmasına göre sıralanacaktır."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:258
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add New Folder"
 msgctxt "@sort:group add new line button"
 msgid "Add New Line"
-msgstr "Yeni Klasör Ekle"
+msgstr "Yeni Satır Ekle"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:275
 msgctxt "@label availabe grouping properties"
 msgid "Available Groups"
-msgstr ""
+msgstr "Kullanılabilir gruplar"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:304
 #: src/playlist/PlaylistAdvancedSortWindow.qml:323
 msgctxt "@sort:filter"
 msgid "Filter"
-msgstr ""
+msgstr "Süz"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:330
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@sort:filter all"
 msgid "All"
-msgstr "Seçenek"
+msgstr "Tümü"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:341
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@sort:filter file"
 msgid "File"
-msgstr "Dosyalar"
+msgstr "Dosya"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:352
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@sort:filter audio"
 msgid "Audio"
 msgstr "Ses"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:363
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@sort:filter video"
 msgid "Video"
 msgstr "Video"
@@ -1018,28 +972,22 @@ msgstr "Video"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:376
 msgctxt "@label active grouping properties"
 msgid "Active Groups:"
-msgstr ""
+msgstr "Etkin gruplar:"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:652
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "Süre, artan"
+msgstr "Artan biçimde sırala"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:654
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "Süre, azalan"
+msgstr "Azalan biçimde sırala"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:656
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "Ana sıralama düzeniyle aynı"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:160
 #, kde-format
@@ -1051,12 +999,10 @@ msgstr "Aynı adlı oynatma listelerine izin verilmez: %1"
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
-msgstr ""
+msgstr "Klasör"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Tür"
@@ -1065,30 +1011,28 @@ msgstr "Tür"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Uzantı"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "Disk №"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Çıkış Yılı"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Tür"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
+#, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "Albüm"
@@ -1097,69 +1041,61 @@ msgstr "Albüm"
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Sanatçı"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Albüm Sanatçısı"
 
 #: src/playlist/playlistsortproxymodel.cpp:80
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Besteci"
 
 #: src/playlist/playlistsortproxymodel.cpp:86
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Söz Yazarı"
 
 #: src/playlist/playlistsortproxymodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Ses Yukarı Çevir"
+msgstr "Ses Kodlayıcısı"
 
 #: src/playlist/playlistsortproxymodel.cpp:98
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Kare Hızı"
 
 #: src/playlist/playlistsortproxymodel.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Video"
+msgstr "Video Kodlayıcısı"
 
 #: src/playlist/playlistsortproxymodel.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "Süre"
+msgstr "Yönelim"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "Doygunluğu Sıfırla"
+msgstr "Çözünürlük"
 
 #: src/playlist/playlistsortproxymodel.cpp:219
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
-msgstr ""
+msgstr "Yeni Satır"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
