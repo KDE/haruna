@@ -304,6 +304,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
 
     QString tabName = m_playlistFilterProxyModels[pIndex]->playlistModel()->m_playlistName;
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
+    playlistsPath.append(u"/"_s);
     QUrl url(playlistsPath + tabName + u".m3u"_s);
     if (url.scheme().isEmpty()) {
         url.setScheme(u"file"_s);
@@ -385,6 +386,7 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 QUrl PlaylistMultiProxiesModel::getPlaylistUrl(QString playlistName)
 {
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
+    playlistsPath.append(u"/"_s);
     auto filePath = playlistsPath.append(playlistName).append(u".m3u"_s);
 
     QUrl url = QUrl::fromLocalFile(filePath);
@@ -406,6 +408,7 @@ void PlaylistMultiProxiesModel::savePlaylist(QString playlistName, PlaylistFilte
 {
     // Note: this method saves unfiltered whole list.
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
+    playlistsPath.append(u"/"_s);
 
     if (playlistName == u"Default") {
         return;
