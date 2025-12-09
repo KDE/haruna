@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:42+0000\n"
-"PO-Revision-Date: 2025-10-23 00:41+0200\n"
+"PO-Revision-Date: 2025-12-08 22:28+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -662,90 +662,64 @@ msgid "Sort"
 msgstr "Sailkatu"
 
 #: src/playlist/Playlist.qml:143
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Ascending"
-msgstr "Izena, goranzkoa"
+msgstr "Goranzkoa"
 
 #: src/playlist/Playlist.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Descending"
-msgstr "Izena, goranzkoa"
+msgstr "Beheranzkoa"
 
 #: src/playlist/Playlist.qml:183
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:button"
 msgid "None"
 msgstr "Bat ere ez"
 
 #: src/playlist/Playlist.qml:193
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
 msgctxt "@action:button"
 msgid "File Name"
-msgstr "Fitxategi-izena: %1"
+msgstr "Fitxategi-izena"
 
 #: src/playlist/Playlist.qml:203
 msgctxt "@action:button"
 msgid "Title"
-msgstr ""
+msgstr "Titulua"
 
 #: src/playlist/Playlist.qml:213
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration"
-msgstr "Asetasuna"
+msgstr "Iraupena"
 
 #: src/playlist/Playlist.qml:223
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Modifier key"
 msgctxt "@action:button"
 msgid "Modified Date"
-msgstr "Tekla aldatzailea"
+msgstr "Aldatze data"
 
 #: src/playlist/Playlist.qml:233
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File Size"
-msgstr "Fitxategia"
+msgstr "Fitxategi-neurria"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@action:button"
 msgid "Track No"
-msgstr "&Pista"
+msgstr "Pista zk."
 
 #: src/playlist/Playlist.qml:253
 msgctxt "@action:button"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Lagin-emaria"
 
 #: src/playlist/Playlist.qml:263
 msgctxt "@action:button"
 msgid "Bitrate"
-msgstr ""
+msgstr "Bit-emaria"
 
 #: src/playlist/Playlist.qml:276
 msgctxt "@action:button"
 msgid "Advanced…"
-msgstr ""
+msgstr "Aurreratua..."
 
 #: src/playlist/Playlist.qml:284
 msgctxt "@action:button"
@@ -894,88 +868,62 @@ msgstr "Hautatu fitxategia"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Sailkatze eta taldekatze aurreratua"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:64
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
-msgstr "Izena, goranzkoa"
+msgstr "Goranzkoa"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:77
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Descending"
-msgstr "Izena, goranzkoa"
+msgstr "Beheranzkoa"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:121
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:inmenu"
 msgid "None"
 msgstr "Bat ere ez"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:133
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
 msgctxt "@action:inmenu"
 msgid "File Name"
-msgstr "Fitxategi-izena: %1"
+msgstr "Fitxategi-izena"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:145
 msgctxt "@action:inmenu"
 msgid "Title"
-msgstr ""
+msgstr "Titulua"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:157
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@action:inmenu"
 msgid "Duration"
-msgstr "Asetasuna"
+msgstr "Iraupena"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:169
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Modifier key"
 msgctxt "@action:inmenu"
 msgid "Modified Date"
-msgstr "Tekla aldatzailea"
+msgstr "Aldatze data"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "File"
 msgctxt "@action:inmenu"
 msgid "File Size"
-msgstr "Fitxategia"
+msgstr "Fitxategi-neurria"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:193
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@action:inmenu"
 msgid "Track No"
-msgstr "&Pista"
+msgstr "Pista zk."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:205
 msgctxt "@action:inmenu"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Lagin-emaria"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:217
 msgctxt "@action:inmenu"
 msgid "Bitrate"
-msgstr ""
+msgstr "Bit-emaria"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:238
 msgctxt "@info:tooltip"
@@ -984,54 +932,42 @@ msgid ""
 "order and each group <br>is sorted within by the primary sort configuration "
 "set above."
 msgstr ""
+"Jotze-zerrendako elementuak propietate aktiboen arabera<br>  taldekatuko "
+"dira emandako ordenan, eta talde bakoitza<br> barrutik goian ezarritako "
+"ordenazio- konfigurazio nagusiaren arabera ordenatuko da."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:258
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add New Folder"
 msgctxt "@sort:group add new line button"
 msgid "Add New Line"
-msgstr "Gehitu karpeta berria"
+msgstr "Gehitu lerro berria"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:275
 msgctxt "@label availabe grouping properties"
 msgid "Available Groups"
-msgstr ""
+msgstr "Talde erabilgarriak"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:304
 #: src/playlist/PlaylistAdvancedSortWindow.qml:323
 msgctxt "@sort:filter"
 msgid "Filter"
-msgstr ""
+msgstr "Iragazkia"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:330
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@sort:filter all"
 msgid "All"
-msgstr "Alt"
+msgstr "Dena"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:341
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@sort:filter file"
 msgid "File"
-msgstr "Fitxategiak"
+msgstr "Fitxategia"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:352
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@sort:filter audio"
 msgid "Audio"
 msgstr "Audioa"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:363
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@sort:filter video"
 msgid "Video"
 msgstr "Bideoa"
@@ -1039,28 +975,22 @@ msgstr "Bideoa"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:376
 msgctxt "@label active grouping properties"
 msgid "Active Groups:"
-msgstr ""
+msgstr "Talde aktiboak:"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:652
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "Irupena, goranzkoa"
+msgstr "Sailkatu gorantz"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:654
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "Iraupena, beheranzkoa"
+msgstr "Sailkatu beherantz"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:656
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "Sailkatze orden nagusiaren berdina"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:160
 #, kde-format
@@ -1069,17 +999,13 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr "Ez dira onartzen izen bereko jotze-zerrendak: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Folder"
+#, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr "Karpeta"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Mota"
@@ -1088,99 +1014,91 @@ msgstr "Mota"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Luzapena"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "Disko zk."
 
 #: src/playlist/playlistsortproxymodel.cpp:50
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Argitaratze urtea"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Generoa"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
-msgstr ""
+msgstr "Albuma"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Artista"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Albumeko artista"
 
 #: src/playlist/playlistsortproxymodel.cpp:80
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Konposatzailea"
 
 #: src/playlist/playlistsortproxymodel.cpp:86
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Hitzen egilea"
 
 #: src/playlist/playlistsortproxymodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Audio-zikloa gorantz"
+msgstr "Audio kodeka"
 
 #: src/playlist/playlistsortproxymodel.cpp:98
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Fotograma-emaria"
 
 #: src/playlist/playlistsortproxymodel.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Bideoa gora eraman"
+msgstr "Bideoa kodeka"
 
 #: src/playlist/playlistsortproxymodel.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "Asetasuna"
+msgstr "Orientazioa"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "Berrezarri asetasuna"
+msgstr "Bereizmena"
 
 #: src/playlist/playlistsortproxymodel.cpp:219
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
-msgstr ""
+msgstr "Lerro berria"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1675,33 +1593,27 @@ msgstr "Bolumenaren urratsa"
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Berriz jotze irabazia"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Modua"
 
 #: src/qml/Settings/AudioSettings.qml:104
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Pista"
+msgstr "Pista"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Albuma"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1710,21 +1622,25 @@ msgid ""
 "metadata. If set to album gain, apply album gain if present and fallback to "
 "track gain otherwise."
 msgstr ""
+"Doitu bolumenaren irabazia fitxategiaren metadatuetan gordetako "
+"<i>replaygain</i> balioen arabera. Albumaren irabazia ezarrita badago, "
+"aplikatu albumaren irabazia presente badago eta bestela atzera pistaren "
+"irabazira itzuli."
 
 #: src/qml/Settings/AudioSettings.qml:143
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
-msgstr ""
+msgstr "Saihestu mozketa"
 
 #: src/qml/Settings/AudioSettings.qml:151
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
-msgstr ""
+msgstr "Saihestu mozketa irabazia jaitsiz"
 
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Aurreanp. (dB9)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1732,17 +1648,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:239
 #: src/qml/Settings/SubtitlesSettings.qml:294
 #: src/qml/Settings/SubtitlesSettings.qml:369
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Ezarri balio lehenetsia"
+msgstr "Berrezarri balio lehenetsian"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "Atzera egitea (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1752,6 +1665,11 @@ msgid ""
 "replaygain setting is enabled and the file has no replaygain metadata<br>If "
 "this is in effect, other replaygain settings are ignored."
 msgstr ""
+"Fitxategiak berriz jotze irabazia etiketarik ez badu aplikatu beharreko "
+"irabazia dBtan.<br><br>Ezarpen honek eragiten du:<br>- replaygain ezarpena "
+"ezgaituta dagoenean<br>- replaygain ezarpena gaituta dagoenan eta "
+"fitxategiak replaygain metadaturik ez duenean<br>Hau indarrean badago, beste "
+"replaygain ezarpenei ez zaie jaramonik egiten."
 
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
@@ -1788,20 +1706,14 @@ msgid "Custom commands config file"
 msgstr "Neurrira ipinitako komandoen konfigurazio-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:50
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr "Ireki konfigurazio-fitxategia"
+msgstr "Lasterbideen konfigurazio-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:62
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Open config file"
 msgctxt "@label:textbox"
 msgid "Playlists config file"
-msgstr "Ireki konfigurazio-fitxategia"
+msgstr "Jotze-zerrenden konfigurazio-fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:74
 msgctxt "@info:usagetip"
@@ -1818,17 +1730,11 @@ msgid "Enable mpv logging"
 msgstr "Gaitu mpv erregistratzea"
 
 #: src/qml/Settings/DebugSettings.qml:105
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Ireki fitxategia"
 
 #: src/qml/Settings/DebugSettings.qml:114
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Ireki hau barnean duen karpeta"
