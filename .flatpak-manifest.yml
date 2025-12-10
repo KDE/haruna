@@ -2,20 +2,13 @@
 # SPDX-License-Identifier: CC0-1.0
 app-id: org.kde.haruna
 runtime: org.kde.Platform
-runtime-version: 6.9
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: haruna
 rename-icon: haruna
 copy-icon: true
-add-extensions:
-  org.freedesktop.Platform.ffmpeg-full:
-    version: '24.08'
-    directory: lib/ffmpeg
-    add-ld-path: .
-cleanup-commands:
-  - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 tags:
-  - 'nightly'
+  - nightly
 desktop-file-name-suffix: ' (Nightly)'
 finish-args:
   - --device=dri
@@ -114,8 +107,8 @@ modules:
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20250529
-                    commit: afc74313c6f919f713e2a25003cf0066852bb24a
+                    tag: v2.1-20251030
+                    commit: 71fae383f6c4637d64b03a6d0ec76ae8c19d6821
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.-]+)$
@@ -130,13 +123,15 @@ modules:
                   - -Ddemos=False
                 sources:
                   - type: archive
-                    url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.349.0/libplacebo-v7.349.0.tar.gz
-                    sha256: 79120e685a1836344b51b13b6a5661622486a84e4d4a35f6c8d01679a20fbc86
+                    url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.351.0/libplacebo-v7.351.0.tar.gz
+                    sha256: 4efe1c8d4da3c61295eb5fdfa50e6037409d8425eb3c15dd86788679c4ce59ee
                     x-checker-data:
                       type: anitya
                       project-id: 20101
                       stable-only: true
                       url-template: https://code.videolan.org/videolan/libplacebo/-/archive/v$version/libplacebo-v$version.tar.gz
+                  - type: patch
+                    path: libplacebo-vulkan-python-xml.patch
                   - type: archive
                     url: https://github.com/pallets/jinja/archive/refs/tags/3.1.6.tar.gz
                     sha256: 2074b22a72caa65474902234b320d73463d6d4c223ee49f4b433495758356337
@@ -184,6 +179,7 @@ modules:
                 config-opts:
                   - -DCMAKE_BUILD_TYPE=Release
                   - -DBUILD_STATIC=0
+                  - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
                 cleanup:
                   - /bin
                 sources:
@@ -206,8 +202,8 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.07.21.tar.gz
-            sha256: 04732b85bb56e107f6a718cdfcd069a152c86e87b9ca9606383555e0c65f78dc
+            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.11.12.tar.gz
+            sha256: 6f5f2d716968d6c84d05d179fc1ce50ccca23706b9dbbc3c57fec97a8b9ea440
             x-checker-data:
               type: anitya
               project-id: 143399
