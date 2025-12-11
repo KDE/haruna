@@ -61,13 +61,17 @@ public:
     QString searchText();
     void setSearchText(QString text);
 
-    Q_PROPERTY(Sort sortRole READ sortRole WRITE sortItems NOTIFY itemsSorted)
-    Sort sortRole();
-    void sortItems(Sort sortRole);
+    Q_PROPERTY(Sort sortPreset READ sortPreset WRITE setSortPreset NOTIFY itemsSorted)
+    Sort sortPreset();
+    void setSortPreset(Sort preset);
 
     Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE changeSortOrder NOTIFY sortOrderChanged)
     Qt::SortOrder sortOrder();
     void changeSortOrder(Qt::SortOrder order);
+
+    Q_PROPERTY(bool showSections READ showSections WRITE setShowSections NOTIFY showSectionsChanged)
+    bool showSections();
+    void setShowSections(bool split);
 
     Q_INVOKABLE uint getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
@@ -91,12 +95,17 @@ public:
     Q_INVOKABLE bool isDirectory(const QUrl &url);
 
     // PlaylistSortProxyModel
-    Q_INVOKABLE PlaylistGroupPropertyModel *activeGroupModel();
-    Q_INVOKABLE PlaylistGroupPropertyProxyModel *availableGroupProxyModel();
+    Q_INVOKABLE PlaylistSortPropertyModel *activeSortPropertiesModel();
+    Q_INVOKABLE PlaylistSortPropertyModel *activeGroupModel();
+    Q_INVOKABLE PlaylistSortPropertyProxyModel *availableSortPropertiesProxyModel();
+    Q_INVOKABLE PlaylistSortPropertyProxyModel *availableGroupProxyModel();
+    Q_INVOKABLE void addToActiveSortProperties(int sort);
     Q_INVOKABLE void addToActiveGroup(Group group) const;
+    Q_INVOKABLE void removeFromActiveSortProperties(uint index);
     Q_INVOKABLE void removeFromActiveGroup(uint index) const;
-    Q_INVOKABLE void setGroupDisplay(uint index, int display) const;
-    Q_INVOKABLE void setGroupSortOrder(uint index, int order) const;
+    Q_INVOKABLE void setGroupHideBlank(uint index, bool hide) const;
+    Q_INVOKABLE void setSortPropertySortingOrder(uint index, int order) const;
+    Q_INVOKABLE QStringList getSectionList(QString sectionKey) const;
 
     // PlaylistModel
     Q_INVOKABLE void clear();
@@ -113,6 +122,7 @@ Q_SIGNALS:
     void itemsInserted();
     void searchTextChanged();
     void sortOrderChanged();
+    void showSectionsChanged();
 
 private:
     void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);

@@ -50,7 +50,7 @@ QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) cons
     if (role == PlaylistModel::IsSelectedRole) {
         return QVariant(m_selectionModel.isSelected(index));
     }
-    return playlistModel()->data(mapToPlaylistModel(index.row()), role);
+    return sourceModel()->data(mapToSource(index), role);
 }
 
 uint PlaylistFilterProxyModel::selectionCount()
@@ -77,19 +77,19 @@ void PlaylistFilterProxyModel::setSearchText(QString text)
     Q_EMIT searchTextChanged();
 }
 
-Sort PlaylistFilterProxyModel::sortRole()
+Sort PlaylistFilterProxyModel::sortPreset()
 {
-    return playlistSortProxyModel()->m_sortRole;
+    return playlistSortProxyModel()->m_sortPreset;
 }
 
-void PlaylistFilterProxyModel::sortItems(PlaylistSortProxyModel::Sort pSortRole)
+void PlaylistFilterProxyModel::setSortPreset(PlaylistSortProxyModel::Sort pSortRole)
 {
-    if (sortRole() == pSortRole) {
+    if (sortPreset() == pSortRole) {
         // Reset custom ordering
         playlistProxyModel()->onLayoutAboutToBeChanged();
         return;
     }
-    playlistSortProxyModel()->sortItems(pSortRole);
+    playlistSortProxyModel()->setSortPreset(pSortRole);
     Q_EMIT itemsSorted();
 }
 
@@ -105,9 +105,24 @@ void PlaylistFilterProxyModel::changeSortOrder(Qt::SortOrder order)
         playlistProxyModel()->onLayoutAboutToBeChanged();
         return;
     }
-    playlistSortProxyModel()->sortItems(order);
+    playlistSortProxyModel()->setSortOrder(order);
     Q_EMIT itemsSorted();
     Q_EMIT sortOrderChanged();
+}
+
+bool PlaylistFilterProxyModel::showSections()
+{
+    return playlistSortProxyModel()->m_showSections;
+}
+
+void PlaylistFilterProxyModel::setShowSections(bool split)
+{
+    if (playlistSortProxyModel()->m_showSections == split) {
+        return;
+    }
+    playlistSortProxyModel()->m_showSections = split;
+    playlistSortProxyModel()->recreateSections();
+    Q_EMIT showSectionsChanged();
 }
 
 uint PlaylistFilterProxyModel::getPlayingItem()
@@ -601,16 +616,34 @@ bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)
     return fileInfo.exists() && fileInfo.isDir();
 }
 
-PlaylistGroupPropertyModel *PlaylistFilterProxyModel::activeGroupModel()
+PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeSortPropertiesModel()
+{
+    auto sortModel = playlistSortProxyModel();
+    return sortModel->m_activeSortProperties.get();
+}
+
+PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeGroupModel()
 {
     auto sortModel = playlistSortProxyModel();
     return sortModel->m_activeGroups.get();
 }
 
-PlaylistGroupPropertyProxyModel *PlaylistFilterProxyModel::availableGroupProxyModel()
+PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableSortPropertiesProxyModel()
+{
+    auto sortModel = playlistSortProxyModel();
+    return sortModel->m_availableSortPropertiesProxy.get();
+}
+
+PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableGroupProxyModel()
 {
     auto sortModel = playlistSortProxyModel();
     return sortModel->m_availableGroupsProxy.get();
+}
+
+void PlaylistFilterProxyModel::addToActiveSortProperties(int sort)
+{
+    playlistSortProxyModel()->addToActiveSortProperties(sort);
+    Q_EMIT itemsSorted();
 }
 
 void PlaylistFilterProxyModel::addToActiveGroup(Group group) const
@@ -618,21 +651,31 @@ void PlaylistFilterProxyModel::addToActiveGroup(Group group) const
     playlistSortProxyModel()->addToActiveGroup(group);
 }
 
+void PlaylistFilterProxyModel::removeFromActiveSortProperties(uint index)
+{
+    playlistSortProxyModel()->removeFromActiveSortProperties(index);
+    Q_EMIT itemsSorted();
+}
+
 void PlaylistFilterProxyModel::removeFromActiveGroup(uint index) const
 {
     playlistSortProxyModel()->removeFromActiveGroup(index);
 }
 
-void PlaylistFilterProxyModel::setGroupDisplay(uint index, int display) const
+void PlaylistFilterProxyModel::setGroupHideBlank(uint index, bool hide) const
 {
-    // no need to map the index, active group properties are not sorted by a proxy
-    playlistSortProxyModel()->setGroupDisplay(index, display);
+    playlistSortProxyModel()->setGroupHideBlank(index, hide);
 }
 
-void PlaylistFilterProxyModel::setGroupSortOrder(uint index, int order) const
+void PlaylistFilterProxyModel::setSortPropertySortingOrder(uint index, int order) const
 {
     // no need to map the index, active group properties are not sorted by a proxy
-    playlistSortProxyModel()->setGroupSortOrder(index, order);
+    playlistSortProxyModel()->setSortPropertySortingOrder(index, order);
+}
+
+QStringList PlaylistFilterProxyModel::getSectionList(QString sectionKey) const
+{
+    return playlistSortProxyModel()->m_sectionMap[sectionKey];
 }
 
 void PlaylistFilterProxyModel::clear()

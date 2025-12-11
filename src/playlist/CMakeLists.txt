@@ -17,6 +17,7 @@ qt_add_qml_module(playlist
         PlaylistItemWithThumbnail.qml
         PlaylistTabDelegate.qml
         PlaylistAdvancedSortWindow.qml
+        PlaylistSectionDelegate.qml
     SOURCES
         playlistmodel.h
         playlistmodel.cpp
@@ -31,10 +32,10 @@ qt_add_qml_module(playlist
         playlistrenamevalidator.h
         playlistrenamevalidator.cpp
         playlistmetadata.h
-        playlistgrouppropertymodel.h
-        playlistgrouppropertymodel.cpp
-        playlistgrouppropertyproxymodel.h
-        playlistgrouppropertyproxymodel.cpp
+        playlistsortpropertymodel.h
+        playlistsortpropertymodel.cpp
+        playlistsortpropertyproxymodel.h
+        playlistsortpropertyproxymodel.cpp
 )
 
 target_link_libraries(playlist PRIVATE

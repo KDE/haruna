@@ -85,6 +85,8 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
         return QVariant(item.dirName);
     case IsLocalRole:
         return QVariant(!item.url.scheme().startsWith(u"http"_s));
+    case SectionRole:
+        return QVariant(); // Should be handled within PlaylistSortProxyModel
     // Audio
     case TrackNoRole:
         return QVariant(item.audio.trackNo);
@@ -145,6 +147,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {PlayingRole,           QByteArrayLiteral("isPlaying")},
         {IsLocalRole,           QByteArrayLiteral("isLocal")},
         {IsSelectedRole,        QByteArrayLiteral("isSelected")},
+        {SectionRole,           QByteArrayLiteral("section")},
         {TrackNoRole,           QByteArrayLiteral("trackNo")},
         {DiscNoRole,            QByteArrayLiteral("discNo")},
         {TitleRole,             QByteArrayLiteral("title")},

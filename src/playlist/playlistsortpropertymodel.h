@@ -4,84 +4,78 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#ifndef PLAYLISTGROUPPROPERTYMODEL_H
-#define PLAYLISTGROUPPROPERTYMODEL_H
+#ifndef PLAYLISTSORTPROPERTYMODEL_H
+#define PLAYLISTSORTPROPERTYMODEL_H
 
 #include <QAbstractListModel>
 #include <QtQml/qqmlregistration.h>
 
-struct GroupProperty {
+struct SortProperty {
     enum Type {
         StringType,
         IntType,
         RealType,
+        DateType,
     };
 
     QString text;
-    int group{0};
+    int sort{0};
     int category{0};
-    int display{0};
     int order{0};
+    bool hideBlank{false};
     Type type{Type::StringType};
 };
 
-class PlaylistGroupPropertyModel : public QAbstractListModel
+class PlaylistSortPropertyModel : public QAbstractListModel
 {
     Q_OBJECT
     QML_ELEMENT
 
 public:
-    explicit PlaylistGroupPropertyModel(QObject *parent = nullptr);
+    explicit PlaylistSortPropertyModel(QObject *parent = nullptr);
     friend class PlaylistSortProxyModel;
 
     enum Roles {
         LabelRole = Qt::UserRole,
-        GroupRole,
+        SortRole,
         CategoryRole,
-        LabelDisplayRole,
         OrderRole,
+        HideBlankRole,
     };
     Q_ENUM(Roles)
 
-    enum GroupSortOrder {
+    enum SortOrder {
         SameAsPrimary,
         Ascending,
         Descending,
     };
-    Q_ENUM(GroupSortOrder)
+    Q_ENUM(SortOrder)
 
-    enum GroupDisplay {
-        AlwaysDisplay,
-        PartialDisplay,
-        NoDisplay,
-    };
-    Q_ENUM(GroupDisplay)
-
-    enum GroupCategory {
+    enum Category {
         All = Qt::UserRole,
         FileCategory,
         AudioCategory,
         VideoCategory,
         SeparatorCategory,
     };
-    Q_ENUM(GroupCategory)
+    Q_ENUM(Category)
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::UserRole) const override;
     QHash<int, QByteArray> roleNames() const override;
     bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
 
-    GroupProperty takeGroupProperty(const int group);
-    void appendGroupProperty(GroupProperty property);
+    SortProperty takeSortProperty(const int group);
+    void appendSortProperty(SortProperty property);
     void removeProperty(uint index);
 
     Q_INVOKABLE bool hasProperty(const int group);
-    Q_INVOKABLE void moveGroupProperty(int sourceRow, int destinationRow);
+    Q_INVOKABLE void moveSortProperty(int sourceRow, int destinationRow);
 
 Q_SIGNALS:
     void propertiesChanged();
 
 private:
-    QList<GroupProperty> m_properties;
+    QList<SortProperty> m_properties;
 };
-#endif // PLAYLISTGROUPPROPERTYMODEL_H
+#endif // PLAYLISTSORTPROPERTYMODEL_H

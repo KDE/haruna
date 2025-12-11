@@ -66,6 +66,7 @@ public:
         PlayingRole,
         IsLocalRole,
         IsSelectedRole,
+        SectionRole,
         // Audio
         TrackNoRole,
         DiscNoRole,

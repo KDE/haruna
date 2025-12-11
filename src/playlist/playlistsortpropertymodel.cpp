@@ -4,20 +4,20 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "playlistgrouppropertymodel.h"
+#include "playlistsortpropertymodel.h"
 
-PlaylistGroupPropertyModel::PlaylistGroupPropertyModel(QObject *parent)
+PlaylistSortPropertyModel::PlaylistSortPropertyModel(QObject *parent)
     : QAbstractListModel{parent}
 {
 }
 
-int PlaylistGroupPropertyModel::rowCount(const QModelIndex &parent) const
+int PlaylistSortPropertyModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     return m_properties.size();
 }
 
-QVariant PlaylistGroupPropertyModel::data(const QModelIndex &index, int role) const
+QVariant PlaylistSortPropertyModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return QVariant();
@@ -27,35 +27,35 @@ QVariant PlaylistGroupPropertyModel::data(const QModelIndex &index, int role) co
     switch (role) {
     case LabelRole:
         return QVariant(property.text);
-    case GroupRole:
-        return QVariant(property.group);
+    case SortRole:
+        return QVariant(property.sort);
     case CategoryRole:
         return QVariant(property.category);
-    case LabelDisplayRole:
-        return QVariant(property.display);
     case OrderRole:
         return QVariant(property.order);
+    case HideBlankRole:
+        return QVariant(property.hideBlank);
     }
 
     return QVariant();
 }
 
-QHash<int, QByteArray> PlaylistGroupPropertyModel::roleNames() const
+QHash<int, QByteArray> PlaylistSortPropertyModel::roleNames() const
 {
     // clang-format off
     QHash<int, QByteArray> roles = {
-    {LabelRole,         QByteArrayLiteral("label")},
-    {GroupRole,         QByteArrayLiteral("group")},
-    {CategoryRole,      QByteArrayLiteral("category")},
-    {LabelDisplayRole,  QByteArrayLiteral("display")},
-    {OrderRole,         QByteArrayLiteral("order")},
+    {LabelRole,     QByteArrayLiteral("label")},
+    {SortRole,      QByteArrayLiteral("sort")},
+    {CategoryRole,  QByteArrayLiteral("category")},
+    {OrderRole,     QByteArrayLiteral("order")},
+    {HideBlankRole, QByteArrayLiteral("hideBlank")},
     };
     // clang-format on
 
     return roles;
 }
 
-bool PlaylistGroupPropertyModel::moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild)
+bool PlaylistSortPropertyModel::moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild)
 {
     Q_UNUSED(sourceParent)
     Q_UNUSED(count)
@@ -87,19 +87,19 @@ bool PlaylistGroupPropertyModel::moveRows(const QModelIndex &sourceParent, int s
     return true;
 }
 
-GroupProperty PlaylistGroupPropertyModel::takeGroupProperty(const int group)
+SortProperty PlaylistSortPropertyModel::takeSortProperty(const int sort)
 {
     for (qsizetype i = 0; i < m_properties.size(); ++i) {
-        GroupProperty property = m_properties[i];
-        if (property.group == group) {
+        SortProperty property = m_properties[i];
+        if (property.sort == sort) {
             removeProperty(i);
             return property;
         }
     }
-    return GroupProperty();
+    return SortProperty();
 }
 
-void PlaylistGroupPropertyModel::appendGroupProperty(GroupProperty property)
+void PlaylistSortPropertyModel::appendSortProperty(SortProperty property)
 {
     beginInsertRows(QModelIndex(), m_properties.size(), m_properties.size());
     m_properties.push_back(property);
@@ -107,7 +107,7 @@ void PlaylistGroupPropertyModel::appendGroupProperty(GroupProperty property)
     Q_EMIT propertiesChanged();
 }
 
-void PlaylistGroupPropertyModel::removeProperty(uint index)
+void PlaylistSortPropertyModel::removeProperty(uint index)
 {
     beginRemoveRows(QModelIndex(), index, index);
     m_properties.erase(m_properties.begin() + index);
@@ -115,22 +115,22 @@ void PlaylistGroupPropertyModel::removeProperty(uint index)
     Q_EMIT propertiesChanged();
 }
 
-bool PlaylistGroupPropertyModel::hasProperty(const int group)
+bool PlaylistSortPropertyModel::hasProperty(const int sort)
 {
     for (qsizetype i = 0; i < m_properties.size(); ++i) {
-        GroupProperty property = m_properties[i];
-        if (property.group == group) {
+        SortProperty property = m_properties[i];
+        if (property.sort == sort) {
             return true;
         }
     }
     return false;
 }
 
-void PlaylistGroupPropertyModel::moveGroupProperty(int sourceRow, int destinationRow)
+void PlaylistSortPropertyModel::moveSortProperty(int sourceRow, int destinationRow)
 {
     if (moveRows(QModelIndex(), sourceRow, 1, QModelIndex(), destinationRow)) {
         Q_EMIT propertiesChanged();
     }
 }
 
-#include "moc_playlistgrouppropertymodel.cpp"
+#include "moc_playlistsortpropertymodel.cpp"

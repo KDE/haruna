@@ -31,256 +31,22 @@ Kirigami.ApplicationWindow {
         onActivated: root.close()
     }
 
-    header: ToolBar {
-        width: root.width
-
-        RowLayout {
-            anchors.fill: parent
-            spacing: 0
-
-            Kirigami.ActionToolBar {
-                alignment: Qt.AlignLeft
-                Layout.margins: Kirigami.Units.largeSpacing
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignLeft
-
-                actions: [
-                    Kirigami.Action {
-                        text: {
-                            switch(root.m_mpv.visibleFilterProxyModel.sortOrder){
-                                case Qt.AscendingOrder:
-                                    return actionAscending.text
-                                case Qt.DescendingOrder:
-                                    return actionDescending.text
-                                default:
-                                    return ""
-                            }
-                        }
-                        displayHint: Kirigami.DisplayHint.KeepVisible
-
-                        Kirigami.Action {
-                            id: actionAscending
-
-                            text: i18nc("@action:inmenu", "Ascending")
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.AscendingOrder
-                            icon.name: "view-sort-ascending-name"
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.AscendingOrder
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionDescending
-
-                            text: i18nc("@action:inmenu", "Descending")
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.DescendingOrder
-                            icon.name: "view-sort-descending-name"
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.DescendingOrder
-                            }
-                        }
-                    },
-                    Kirigami.Action {
-                        text: {
-                            switch(root.m_mpv.visibleFilterProxyModel.sortRole){
-                                case (PlaylistSortProxyModel.None):
-                                    return actionSource.text
-                                case (PlaylistSortProxyModel.FileName):
-                                    return actionFileName.text
-                                case (PlaylistSortProxyModel.Duration):
-                                    return actionDuration.text
-                                case (PlaylistSortProxyModel.Date):
-                                    return actionDate.text
-                                case (PlaylistSortProxyModel.FileSize):
-                                    return actionFileSize.text
-                                case (PlaylistSortProxyModel.Title):
-                                    return actionTitle.text
-                                case (PlaylistSortProxyModel.TrackNo):
-                                    return actionTrackNo.text
-                                case (PlaylistSortProxyModel.SampleRate):
-                                    return actionSampleRate.text
-                                case (PlaylistSortProxyModel.Bitrate):
-                                    return actionBitrate.text
-                                default:
-                                    return ""
-                            }
-                        }
-                        displayHint: Kirigami.DisplayHint.KeepVisible
-
-                        Kirigami.Action {
-                            id: actionSource
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.None
-                            text: i18nc("@action:inmenu", "None")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.None
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionFileName
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.FileName
-                            text: i18nc("@action:inmenu", "File Name")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.FileName
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionTitle
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Title
-                            text: i18nc("@action:inmenu", "Title")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Title
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionDuration
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Duration
-                            text: i18nc("@action:inmenu", "Duration")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Duration
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionDate
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Date
-                            text: i18nc("@action:inmenu", "Modified Date")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Date
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionFileSize
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.FileSize
-                            text: i18nc("@action:inmenu", "File Size")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.FileSize
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionTrackNo
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.TrackNo
-                            text: i18nc("@action:inmenu", "Track No")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.TrackNo
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionSampleRate
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.SampleRate
-                            text: i18nc("@action:inmenu", "Sample Rate")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.SampleRate
-                            }
-                        }
-                        Kirigami.Action {
-                            id: actionBitrate
-
-                            autoExclusive: true
-                            checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortRole === PlaylistSortProxyModel.Bitrate
-                            text: i18nc("@action:inmenu", "Bitrate")
-
-                            onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortRole = PlaylistSortProxyModel.Bitrate
-                            }
-                        }
-                    }
-                ]
-            }
-        }
-    }
-
-    footer: ToolBar {
-        width: root.width
-
-        RowLayout {
-            anchors.fill: parent
-            spacing: 0
-
-            ToolTipButton {
-                toolTipText: i18nc("@info:tooltip",
-                                   "Playlist items will be grouped by the active <br>" +
-                                   "properties in the provided order and each group <br>" +
-                                   "is sorted within by the primary sort configuration set above.")
-                toolTipWidth: 450
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                Layout.alignment: Qt.AlignLeft
-            }
-
-            Kirigami.ActionToolBar {
-                alignment: Qt.AlignRight
-                Layout.margins: Kirigami.Units.largeSpacing
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignRight
-
-                actions: [
-                    Kirigami.Action {
-                        id: addNewLine
-
-                        displayHint: Kirigami.DisplayHint.KeepVisible
-                        icon.name: "newline"
-                        text: i18nc("@sort:group add new line button", "Add New Line")
-
-                        onTriggered: {
-                            root.m_mpv.visibleFilterProxyModel.addToActiveGroup(PlaylistSortProxyModel.Separator)
-                        }
-                    }
-                ]
-            }
-        }
-    }
-
     GridLayout {
         columns: 2
         anchors.fill: parent
         anchors.margins: Kirigami.Units.largeSpacing
 
-        Label {
-            text: i18nc("@label availabe grouping properties", "Available Groups")
-            elide: Text.ElideLeft
-            Layout.alignment: Qt.AlignLeft
+
+        SettingsHeader {
+            Layout.columnSpan: 2
+            headingLevel: 2
+            text: i18nc("@label sort", "Sorting")
+            topMargin: Kirigami.Units.smallSpacing
         }
 
-        Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
 
         Kirigami.SearchField {
-            id: availableGroupSearch
+            id: availableSortSearch
 
             placeholderText: "Search"
             delaySearch: true
@@ -288,20 +54,18 @@ Kirigami.ApplicationWindow {
             Layout.fillWidth: true
 
             onTextChanged: {
-                var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
                 model.searchText = text
             }
 
             Component.onCompleted: {
-                var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
                 text = model.searchText
             }
 
             rightActions: [
                 Kirigami.Action {
-                    id: filterAction
-
-                    text: i18nc("@sort:filter", "Filter")
+                    text: i18nc("@action:inmenu", "Filter")
 
                     icon {
                         name: "view-filter-symbolic"
@@ -310,77 +74,133 @@ Kirigami.ApplicationWindow {
                     }
 
                     onTriggered: {
-                        filterMenu.open()
+                        sortFilterMenu.open()
                     }
                 }
             ]
 
             Menu {
-                id: filterMenu
+                id: sortFilterMenu
 
-                x: availableGroupSearch.width - Kirigami.Units.iconSizes.medium
-                y: availableGroupSearch.height
-                title: i18nc("@sort:filter", "Filter")
+                x: availableSortSearch.width - Kirigami.Units.iconSizes.medium
+                y: availableSortSearch.height
+                title: i18nc("@action:inmenu", "Filter")
 
-                ActionGroup { id: filterActionGroup }
+                ActionGroup { id: sortFilterActionGroup }
 
                 Kirigami.Action {
                     checked: true
                     checkable: true
-                    text: i18nc("@sort:filter all", "All")
+                    text: i18nc("@action:inmenu all", "All")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
-                        model.filterCategory = PlaylistGroupPropertyModel.All
+                        var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.All
                     }
 
-                    ActionGroup.group: filterActionGroup
+                    ActionGroup.group: sortFilterActionGroup
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@sort:filter file", "File")
+                    text: i18nc("@action:inmenu file", "File")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
-                        model.filterCategory = PlaylistGroupPropertyModel.FileCategory
+                        var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.FileCategory
                     }
 
-                    ActionGroup.group: filterActionGroup
+                    ActionGroup.group: sortFilterActionGroup
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@sort:filter audio", "Audio")
+                    text: i18nc("@action:inmenu audio", "Audio")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
-                        model.filterCategory = PlaylistGroupPropertyModel.AudioCategory
+                        var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.AudioCategory
                     }
 
-                    ActionGroup.group: filterActionGroup
+                    ActionGroup.group: sortFilterActionGroup
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@sort:filter video", "Video")
+                    text: i18nc("@action:inmenu video", "Video")
 
                     onTriggered: {
-                        const model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
-                        model.filterCategory = PlaylistGroupPropertyModel.VideoCategory
+                        const model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.VideoCategory
                     }
 
-                    ActionGroup.group: filterActionGroup
+                    ActionGroup.group: sortFilterActionGroup
                 }
             }
         }
 
-        Label {
-            text: i18nc("@label active grouping properties", "Active Groups:")
-            elide: Text.ElideLeft
+        Kirigami.ActionToolBar {
+            alignment: Qt.AlignLeft
+            Layout.margins: Kirigami.Units.largeSpacing
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignLeft
-            Layout.leftMargin: Kirigami.Units.largeSpacing
+
+            actions: [
+                Kirigami.Action {
+                    text: {
+                        switch(root.m_mpv.visibleFilterProxyModel.sortOrder){
+                            case Qt.AscendingOrder:
+                            return actionAscending.text
+                            case Qt.DescendingOrder:
+                            return actionDescending.text
+                            default:
+                            return ""
+                        }
+                    }
+
+                    icon.name: {
+                        switch(root.m_mpv.visibleFilterProxyModel.sortOrder){
+                            case Qt.AscendingOrder:
+                            return "view-sort-ascending-name"
+                            case Qt.DescendingOrder:
+                            return "view-sort-descending-name"
+                            default:
+                            return ""
+                        }
+                    }
+
+                    displayHint: Kirigami.DisplayHint.KeepVisible
+
+                    Kirigami.Action {
+                        id: actionAscending
+
+                        text: i18nc("@action:inmenu", "Ascending")
+                        autoExclusive: true
+                        checkable: true
+                        checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.AscendingOrder
+                        icon.name: "view-sort-ascending-name"
+
+                        onTriggered: {
+                            root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.AscendingOrder
+                        }
+                    }
+                    Kirigami.Action {
+                        id: actionDescending
+
+                        text: i18nc("@action:inmenu", "Descending")
+                        autoExclusive: true
+                        checkable: true
+                        checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.DescendingOrder
+                        icon.name: "view-sort-descending-name"
+
+                        onTriggered: {
+                            root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.DescendingOrder
+                        }
+                    }
+                }
+            ]
         }
 
+
         ScrollView {
-            id: availableScrollView
+            id: availableSortScrollView
 
             z: 10
             clip: true
@@ -404,13 +224,12 @@ Kirigami.ApplicationWindow {
             ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
             ListView {
-                id: availableListView
-
-                readonly property real scrollbarWidth: availableScrollView.effectiveScrollBarWidth
-                readonly property bool isActiveGroup: false
+                readonly property real scrollbarWidth: availableSortScrollView.effectiveScrollBarWidth
+                readonly property bool isActiveModel: false
+                readonly property bool isGroup: false
 
                 anchors.fill: parent
-                model: root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                model: root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
                 delegate: benchedItemDelegate
 
                 displaced: Transition {
@@ -428,7 +247,7 @@ Kirigami.ApplicationWindow {
         }
 
         ScrollView {
-            id: activeScrollView
+            id: activeSortScrollView
 
             z: 10
             clip: true
@@ -453,11 +272,12 @@ Kirigami.ApplicationWindow {
             ListView {
                 id: activeListView
 
-                readonly property real scrollbarWidth: activeScrollView.effectiveScrollBarWidth
-                readonly property bool isActiveGroup: true
+                readonly property real scrollbarWidth: activeSortScrollView.effectiveScrollBarWidth
+                readonly property bool isActiveModel: true
+                readonly property bool isGroup: false
 
                 anchors.fill: parent
-                model: root.m_mpv.visibleFilterProxyModel.activeGroupModel()
+                model: root.m_mpv.visibleFilterProxyModel.activeSortPropertiesModel()
                 delegate: benchedItemDelegate
 
                 displaced: Transition {
@@ -473,6 +293,240 @@ Kirigami.ApplicationWindow {
                 bottomMargin: Kirigami.Units.largeSpacing
             }
         }
+
+        SettingsHeader {
+            Layout.columnSpan: 2
+            headingLevel: 2
+            text: i18nc("@label group", "Grouping")
+            topMargin: Kirigami.Units.smallSpacing
+        }
+
+        Kirigami.SearchField {
+            id: availableGroupSearch
+
+            placeholderText: "Search"
+            delaySearch: true
+            Layout.preferredWidth: parent.width / 2
+            Layout.fillWidth: true
+
+            onTextChanged: {
+                var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                model.searchText = text
+            }
+
+            Component.onCompleted: {
+                var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                text = model.searchText
+            }
+
+            rightActions: [
+                Kirigami.Action {
+                    text: i18nc("@action:inmenu", "Filter")
+
+                    icon {
+                        name: "view-filter-symbolic"
+                        width: Kirigami.Units.iconSizes.medium
+                        height: Kirigami.Units.iconSizes.medium
+                    }
+
+                    onTriggered: {
+                        groupFilterMenu.open()
+                    }
+                }
+            ]
+
+            Menu {
+                id: groupFilterMenu
+
+                x: availableGroupSearch.width - Kirigami.Units.iconSizes.medium
+                y: availableGroupSearch.height
+                title: i18nc("@action:inmenu", "Filter")
+
+                ActionGroup { id: groupFilterActionGroup }
+
+                Kirigami.Action {
+                    checked: true
+                    checkable: true
+                    text: i18nc("@action:inmenu all", "All")
+
+                    onTriggered: {
+                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.All
+                    }
+
+                    ActionGroup.group: groupFilterActionGroup
+                }
+                Kirigami.Action {
+                    checkable: true
+                    text: i18nc("@action:inmenu file", "File")
+
+                    onTriggered: {
+                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.FileCategory
+                    }
+
+                    ActionGroup.group: groupFilterActionGroup
+                }
+                Kirigami.Action {
+                    checkable: true
+                    text: i18nc("@action:inmenu audio", "Audio")
+
+                    onTriggered: {
+                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.AudioCategory
+                    }
+
+                    ActionGroup.group: groupFilterActionGroup
+                }
+                Kirigami.Action {
+                    checkable: true
+                    text: i18nc("@action:inmenu video", "Video")
+
+                    onTriggered: {
+                        const model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        model.filterCategory = PlaylistSortPropertyModel.VideoCategory
+                    }
+
+                    ActionGroup.group: groupFilterActionGroup
+                }
+            }
+        }
+
+        RowLayout {
+            Layout.margins: Kirigami.Units.largeSpacing
+            CheckBox {
+                text: i18nc("@action:inmenu", "Show Sections")
+                checked: root.m_mpv.visibleFilterProxyModel.showSections
+
+                onCheckedChanged: {
+                    root.m_mpv.visibleFilterProxyModel.showSections = checked
+                }
+
+            }
+            ToolTipButton {
+                toolTipText: i18nc("@info:tooltip",
+                                   "Show/Hide section labels in the playlist view. This <br>" +
+                                   "does not affect sorting. Properties to include in the <br>" +
+                                   "section labels can be selected below. If the playlist <br>" +
+                                   "is not sorted by the included group properties in the <br>" +
+                                   "same order, then the sections might not be unique.")
+                toolTipWidth: 450
+                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            }
+        }
+
+        ScrollView {
+            id: availableGroupScrollView
+
+            z: 10
+            clip: true
+
+            background: Rectangle {
+                radius: Kirigami.Units.cornerRadius
+                color: Kirigami.Theme.backgroundColor
+
+                border {
+                    width: 1
+                    color: Qt.alpha(Kirigami.Theme.textColor, 0.25)
+                }
+            }
+
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: parent.width / 2
+            Layout.preferredHeight: parent.height
+            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+            ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+
+            ListView {
+                readonly property real scrollbarWidth: availableGroupScrollView.effectiveScrollBarWidth
+                readonly property bool isActiveModel: false
+                readonly property bool isGroup: true
+
+                anchors.fill: parent
+                model: root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                delegate: benchedItemDelegate
+
+                displaced: Transition {
+                    NumberAnimation {
+                        properties: "y"
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
+
+                leftMargin: Kirigami.Units.largeSpacing
+                rightMargin: Kirigami.Units.largeSpacing
+                topMargin: Kirigami.Units.largeSpacing
+                bottomMargin: Kirigami.Units.largeSpacing
+            }
+        }
+
+        ColumnLayout {
+            spacing: 0
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredHeight: parent.height
+            Layout.preferredWidth: parent.width / 2
+
+            ScrollView {
+                id: activeGroupScrollView
+
+                z: 10
+                clip: true
+
+                background: Rectangle {
+                    topLeftRadius: Kirigami.Units.cornerRadius
+                    topRightRadius: Kirigami.Units.cornerRadius
+                    color: Kirigami.Theme.backgroundColor
+                    border {
+                        width: 1
+                        color: Qt.alpha(Kirigami.Theme.textColor, 0.25)
+                    }
+                }
+
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+                ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+
+                ListView {
+                    id: activeGroupListView
+
+                    readonly property real scrollbarWidth: activeGroupScrollView.effectiveScrollBarWidth
+                    readonly property bool isActiveModel: true
+                    readonly property bool isGroup: true
+
+                    anchors.fill: parent
+                    model: root.m_mpv.visibleFilterProxyModel.activeGroupModel()
+                    delegate: benchedItemDelegate
+
+                    displaced: Transition {
+                        NumberAnimation {
+                            properties: "y"
+                            duration: Kirigami.Units.shortDuration
+                        }
+                    }
+
+                    leftMargin: Kirigami.Units.largeSpacing
+                    rightMargin: Kirigami.Units.largeSpacing
+                    topMargin: Kirigami.Units.largeSpacing
+                    bottomMargin: Kirigami.Units.largeSpacing
+                }
+            }
+
+            ToolButton {
+                icon.name: "newline"
+                text: i18nc("@action:inmenu add new line button", "Add New Line")
+                Layout.alignment: Qt.AlignRight
+
+                onClicked: {
+                    root.m_mpv.visibleFilterProxyModel.addToActiveGroup(PlaylistSortProxyModel.Separator)
+                }
+            }
+
+        }
     }
 
     Component {
@@ -483,12 +537,14 @@ Kirigami.ApplicationWindow {
 
             required property int index
             required property string label
-            required property int group
+            required property int sort
             required property int category
-            required property int display
             required property int order
+            required property bool hideBlank
             // which listview is this delegate is in?
-            readonly property bool isActiveGroup: ListView.view.isActiveGroup
+            readonly property bool isActiveModel: ListView.view.isActiveModel
+            readonly property bool isGroup: ListView.view.isGroup
+
             implicitHeight: Kirigami.Units.gridUnit * 2
             width: ListView.view.width - (ListView.view.scrollbarWidth + ListView.view.leftMargin + ListView.view.rightMargin)
 
@@ -508,7 +564,7 @@ Kirigami.ApplicationWindow {
                     if (itemDelegateDragHandle.dragActive) {
                         return Kirigami.Theme.positiveBackgroundColor
                     }
-                    if (itemDelegate.isActiveGroup && itemDelegateHoverHandler.hovered) {
+                    if (itemDelegate.isActiveModel && itemDelegateHoverHandler.hovered) {
                         return Kirigami.Theme.negativeBackgroundColor
                     }
                     return "transparent"
@@ -521,14 +577,19 @@ Kirigami.ApplicationWindow {
                     Kirigami.ListItemDragHandle {
                         id: itemDelegateDragHandle
 
-                        visible: itemDelegate.isActiveGroup
-                        enabled: itemDelegate.isActiveGroup
+                        visible: itemDelegate.isActiveModel
+                        enabled: itemDelegate.isActiveModel
                         listItem: itemDelegateBackgroundRect
                         listView: itemDelegate.ListView?.view
 
                         onMoveRequested: function(oldIndex, newIndex) {
-                            var model = root.m_mpv.visibleFilterProxyModel.activeGroupModel()
-                            model.moveGroupProperty(oldIndex, newIndex)
+                            if (itemDelegate.isGroup) {
+                                var model = root.m_mpv.visibleFilterProxyModel.activeGroupModel()
+                            }
+                            else {
+                                var model = root.m_mpv.visibleFilterProxyModel.activeSortPropertiesModel()
+                            }
+                            model.moveSortProperty(oldIndex, newIndex)
                         }
 
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
@@ -537,7 +598,7 @@ Kirigami.ApplicationWindow {
                     }
 
                     Kirigami.Separator {
-                        visible: itemDelegate.isActiveGroup
+                        visible: itemDelegate.isActiveModel
                         Layout.fillHeight: true
                         Layout.topMargin: Kirigami.Units.largeSpacing
                         Layout.bottomMargin: Kirigami.Units.largeSpacing
@@ -549,10 +610,10 @@ Kirigami.ApplicationWindow {
 
                         icon.name: {
                             switch(itemDelegate.category) {
-                                case (PlaylistGroupPropertyModel.FileCategory):
+                                case (PlaylistSortPropertyModel.FileCategory):
                                     return "folder-documents-symbolic"
-                                case (PlaylistGroupPropertyModel.AudioCategory):
-                                switch(itemDelegate.group) {
+                                case (PlaylistSortPropertyModel.AudioCategory):
+                                switch(itemDelegate.sort) {
                                     case (PlaylistSortProxyModel.Genre):
                                         return "view-media-genre"
                                     case (PlaylistSortProxyModel.Album):
@@ -567,9 +628,9 @@ Kirigami.ApplicationWindow {
                                     default:
                                         return "folder-music-symbolic"
                                 }
-                                case (PlaylistGroupPropertyModel.VideoCategory):
+                                case (PlaylistSortPropertyModel.VideoCategory):
                                     return "folder-video-symbolic"
-                                case (PlaylistGroupPropertyModel.SeparatorCategory):
+                                case (PlaylistSortPropertyModel.SeparatorCategory):
                                     return ""
                                 default:
                                     return ""
@@ -579,7 +640,7 @@ Kirigami.ApplicationWindow {
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        Layout.leftMargin: itemDelegate.isActiveGroup ? 0 : Kirigami.Units.largeSpacing
+                        Layout.leftMargin: itemDelegate.isActiveModel ? 0 : Kirigami.Units.largeSpacing
 
                         TapHandler {
                             id: itemDelegateTapHandler
@@ -589,10 +650,19 @@ Kirigami.ApplicationWindow {
                             onSingleTapped: function(eventPoint, mouseButton) {
                                 switch (mouseButton) {
                                 case Qt.LeftButton:
-                                    if (itemDelegate.isActiveGroup) {
-                                        root.m_mpv.visibleFilterProxyModel.removeFromActiveGroup(itemDelegate.index)
-                                    } else {
-                                        root.m_mpv.visibleFilterProxyModel.addToActiveGroup(itemDelegate.group)
+                                    if (itemDelegate.isGroup) {
+                                        if (itemDelegate.isActiveModel) {
+                                            root.m_mpv.visibleFilterProxyModel.removeFromActiveGroup(itemDelegate.index)
+                                        } else {
+                                            root.m_mpv.visibleFilterProxyModel.addToActiveGroup(itemDelegate.sort)
+                                        }
+                                    }
+                                    else {
+                                        if (itemDelegate.isActiveModel) {
+                                            root.m_mpv.visibleFilterProxyModel.removeFromActiveSortProperties(itemDelegate.index)
+                                        } else {
+                                            root.m_mpv.visibleFilterProxyModel.addToActiveSortProperties(itemDelegate.sort)
+                                        }
                                     }
                                 }
                             }
@@ -604,40 +674,51 @@ Kirigami.ApplicationWindow {
                     }
 
                     Button {
-                        id: sortOrderButton
-
                         flat: true
                         hoverEnabled: true
-                        visible: itemDelegate.isActiveGroup && itemDelegate.category != PlaylistGroupPropertyModel.SeparatorCategory
+                        visible: itemDelegate.isActiveModel
                         icon.width: Kirigami.Units.iconSizes.small
                         icon.height: Kirigami.Units.iconSizes.small
 
                         icon.name: {
-                            switch(itemDelegate.order){
-                                case (PlaylistGroupPropertyModel.Ascending):
-                                    return "view-sort-ascending-name"
-                                case (PlaylistGroupPropertyModel.Descending):
-                                    return "view-sort-descending-name"
-                                case (PlaylistGroupPropertyModel.SameAsPrimary):
-                                    return "view-sort"
-                                default:
-                                    return ""
+                            if (itemDelegate.isGroup) {
+                                if (itemDelegate.hideBlank){
+                                    return "password-show-off"
+                                } else {
+                                    return "password-show-on"
+                                }
+                            } else {
+                                switch(itemDelegate.order){
+                                    case (PlaylistSortPropertyModel.Ascending):
+                                        return "view-sort-ascending-name"
+                                    case (PlaylistSortPropertyModel.Descending):
+                                        return "view-sort-descending-name"
+                                    case (PlaylistSortPropertyModel.SameAsPrimary):
+                                        return "view-sort"
+                                    default:
+                                        return ""
+                                }
                             }
                         }
 
                         onClicked: {
-                            switch(itemDelegate.order){
-                                case (PlaylistGroupPropertyModel.Ascending):
-                                    root.m_mpv.visibleFilterProxyModel.setGroupSortOrder(itemDelegate.index, PlaylistGroupPropertyModel.Descending)
-                                    return
-                                case (PlaylistGroupPropertyModel.Descending):
-                                    root.m_mpv.visibleFilterProxyModel.setGroupSortOrder(itemDelegate.index, PlaylistGroupPropertyModel.SameAsPrimary)
-                                    return
-                                case (PlaylistGroupPropertyModel.SameAsPrimary):
-                                    root.m_mpv.visibleFilterProxyModel.setGroupSortOrder(itemDelegate.index, PlaylistGroupPropertyModel.Ascending)
-                                    return
-                                default:
-                                    return
+                            if (itemDelegate.isGroup) {
+                                root.m_mpv.visibleFilterProxyModel.setGroupHideBlank(itemDelegate.index, !itemDelegate.hideBlank)
+                                return
+                            } else {
+                                switch(itemDelegate.order){
+                                    case (PlaylistSortPropertyModel.Ascending):
+                                        root.m_mpv.visibleFilterProxyModel.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Descending)
+                                        return
+                                    case (PlaylistSortPropertyModel.Descending):
+                                        root.m_mpv.visibleFilterProxyModel.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.SameAsPrimary)
+                                        return
+                                    case (PlaylistSortPropertyModel.SameAsPrimary):
+                                        root.m_mpv.visibleFilterProxyModel.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Ascending)
+                                        return
+                                    default:
+                                        return
+                                }
                             }
                         }
 
@@ -647,15 +728,23 @@ Kirigami.ApplicationWindow {
                         ToolTip.delay: Kirigami.Units.shortDuration
 
                         ToolTip.text: {
-                            switch(itemDelegate.order){
-                                case (PlaylistGroupPropertyModel.Ascending):
-                                    return i18nc("@info:tooltip group order", "Sort ascending")
-                                case (PlaylistGroupPropertyModel.Descending):
-                                    return i18nc("@info:tooltip group order", "Sort descending")
-                                case (PlaylistGroupPropertyModel.SameAsPrimary):
-                                    return i18nc("@info:tooltip group order", "Same as primary sort order")
-                                default:
-                                    return ""
+                            if (itemDelegate.isGroup) {
+                                if (itemDelegate.hideBlank) {
+                                    return i18nc("@info:tooltip show blank", "Hide this group property in the <br> section label when it is empty <br> or not unique.")
+                                } else {
+                                    return i18nc("@info:tooltip hide blank", "Show the group property in the <br> section label even if it is empty.")
+                                }
+                            } else {
+                                switch(itemDelegate.order){
+                                    case (PlaylistSortPropertyModel.Ascending):
+                                        return i18nc("@info:tooltip group order", "Sort ascending")
+                                    case (PlaylistSortPropertyModel.Descending):
+                                        return i18nc("@info:tooltip group order", "Sort descending")
+                                    case (PlaylistSortPropertyModel.SameAsPrimary):
+                                        return i18nc("@info:tooltip group order", "Same as primary sort order")
+                                    default:
+                                        return ""
+                                }
                             }
                         }
                     }
@@ -668,7 +757,9 @@ Kirigami.ApplicationWindow {
         // effectiveScrollBarWidth is always 0 at load time because of the Loader.
         // We set vertical scroll policy to ScrollBar.AlwaysOff initially then
         // set them back to ScrollBar.AsNeeded after the item is loaded via this function
-        availableScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
-        activeScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
+        availableSortScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
+        activeSortScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
+        availableGroupScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
+        activeGroupScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
     }
 }

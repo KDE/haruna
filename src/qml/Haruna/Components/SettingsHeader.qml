@@ -12,12 +12,14 @@ import org.kde.kirigami as Kirigami
 ColumnLayout {
     id: root
 
+    property int headingLevel: 1
     property string text: ""
+    property int topMargin: Kirigami.Units.gridUnit
 
     spacing: 0
 
     RowLayout {
-        Layout.topMargin: Kirigami.Units.gridUnit
+        Layout.topMargin: root.topMargin
 
         Rectangle {
             color: Kirigami.Theme.alternateBackgroundColor
@@ -27,6 +29,7 @@ ColumnLayout {
 
         Kirigami.Heading {
             text: root.text
+            level: root.headingLevel
         }
 
         Rectangle {

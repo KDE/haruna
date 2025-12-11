@@ -22,12 +22,14 @@ Item {
     required property bool isLocal
     required property bool isPlaying
     required property bool isSelected
+    required property string section
     required property MpvVideo m_mpv
 
     property alias contentItem: contentItem.data
     property alias dragRect: backgroundRect
     property string rowNumber: (index + 1).toString()
     property real alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
+    property real cachedHeight: height
 
     implicitWidth: ListView.view.width
 
@@ -45,6 +47,34 @@ Item {
             name: "Selected"; when: root.isSelected
         }
     ]
+
+    SequentialAnimation {
+        id: removeAnimation
+
+        PropertyAction { target: root; property: "ListView.delayRemove"; value: true }
+
+        ParallelAnimation {
+            NumberAnimation { target: root; property: "height"; to: 0; duration: Kirigami.Units.shortDuration }
+            NumberAnimation { target: root; property: "opacity"; to: 0; duration: Kirigami.Units.shortDuration }
+        }
+
+        PropertyAction { target: root; property: "ListView.delayRemove"; value: false }
+    }
+
+    ListView.onRemove: {
+        root.cachedHeight = root.height
+        removeAnimation.start()
+    }
+
+    ListView.onPooled: {
+        root.opacity = 1.0
+        root.height = root.cachedHeight
+    }
+
+    ListView.onReused: {
+        root.opacity = 1.0
+        root.height = root.cachedHeight
+    }
 
     Rectangle {
         id: backgroundRect

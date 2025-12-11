@@ -4,19 +4,19 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#ifndef PLAYLISTGROUPPROPERTYPROXYMODEL_H
-#define PLAYLISTGROUPPROPERTYPROXYMODEL_H
+#ifndef PLAYLISTSORTPROPERTYPROXYMODEL_H
+#define PLAYLISTSORTPROPERTYPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>
 
-class PlaylistGroupPropertyProxyModel : public QSortFilterProxyModel
+class PlaylistSortPropertyProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
     QML_ELEMENT
 
 public:
-    explicit PlaylistGroupPropertyProxyModel(QObject *parent = nullptr);
+    explicit PlaylistSortPropertyProxyModel(QObject *parent = nullptr);
 
     Q_PROPERTY(QString searchText READ searchText WRITE setSearchText NOTIFY searchTextChanged)
     QString searchText();
@@ -37,4 +37,4 @@ private:
     uint m_filterCategory{Qt::DisplayRole};
 };
 
-#endif // PLAYLISTGROUPPROPERTYPROXYMODEL_H
+#endif // PLAYLISTSORTPROPERTYPROXYMODEL_H
