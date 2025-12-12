@@ -534,10 +534,15 @@ Page {
     }
 
     component ResizeHandler: Item {
+        property alias hovered: resizeHandlerMouseArea.containsMouse
+
         MouseArea {
+            id: resizeHandlerMouseArea
+
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton
             cursorShape: Qt.SizeHorCursor
+            hoverEnabled: true
 
             drag {
                 target: parent
@@ -579,6 +584,8 @@ Page {
             color: Kirigami.Theme.backgroundColor
 
             ResizeHandler {
+                id: resizeHandlerTall
+
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: 8
                 height: parent.height
@@ -591,7 +598,7 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
                 width: 5
                 height: 50
-                color: Kirigami.Theme.alternateBackgroundColor
+                color: (resizeHandlerTall.hovered || resizeHandlerCentral.hovered) ? Kirigami.Theme.highlightColor : Kirigami.Theme.alternateBackgroundColor
                 radius: Kirigami.Units.cornerRadius
                 border {
                     width: 1
@@ -599,6 +606,8 @@ Page {
                 }
 
                 ResizeHandler {
+                    id: resizeHandlerCentral
+
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: 18
                     height: parent.height
