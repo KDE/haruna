@@ -43,6 +43,12 @@ RowLayout {
         property bool seekStarted: false
         property bool prePressPause: root.m_mpv.pause
 
+        function updateTooltip() : string {
+            const time = progressBarMouseArea.mouseX / progressBarBG.width * slider.to
+            previewMpvLoader.position = time
+            progressBarToolTip.text = MiscUtils.formatTime(time)
+        }
+
         from: 0
         to: root.m_mpv.duration
         implicitWidth: root.width
@@ -154,9 +160,7 @@ RowLayout {
                 }
 
                 onMouseXChanged: {
-                    const time = mouseX / progressBarBG.width * slider.to
-                    previewMpvLoader.position = time
-                    progressBarToolTip.text = MiscUtils.formatTime(time)
+                    slider.updateTooltip()
                 }
 
                 onWheel: function(wheel) {
@@ -169,7 +173,10 @@ RowLayout {
             }
         }
 
-        onToChanged: value = root.m_mpv.position
+        onToChanged: {
+            value = root.m_mpv.position
+            slider.updateTooltip()
+        }
 
         onMoved: {
             if (!pressed) {
