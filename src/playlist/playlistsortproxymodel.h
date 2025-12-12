@@ -80,6 +80,9 @@ public:
     void removeFromActiveSortProperties(uint index);
     void removeFromActiveGroup(uint index);
 
+Q_SIGNALS:
+    void groupingChanged();
+
 private:
     Qt::SortOrder m_sortingOrder{Qt::SortOrder::AscendingOrder};
     Sort m_sortPreset{Sort::None};

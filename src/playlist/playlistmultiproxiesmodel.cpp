@@ -20,6 +20,13 @@
 
 using namespace Qt::StringLiterals;
 
+inline void swap(QJsonValueRef v1, QJsonValueRef v2)
+{
+    QJsonValue temp(v1);
+    v1 = QJsonValue(v2);
+    v2 = temp;
+}
+
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
@@ -69,6 +76,46 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                 uint index = playlist.value(u"currentItem").toInt();
                 setActiveIndex(i);
                 activeFilterProxy()->setPlayingItem(index);
+            }
+
+            if (playlist.contains(u"showSections")) {
+                bool showSections = playlist.value(u"showSections").toBool();
+                m_playlistFilterProxyModels[i]->setShowSections(showSections);
+            }
+
+            auto sortJsonArray = [](const QJsonValue &v1, const QJsonValue &v2) -> bool {
+                QJsonObject obj1 = v1.toObject();
+                QJsonObject obj2 = v2.toObject();
+
+                QString val1 = obj1.value(u"index").toString();
+                QString val2 = obj2.value(u"index").toString();
+
+                return val1 < val2;
+            };
+
+            if (playlist.contains(u"sortBy")) {
+                QJsonArray sortProperties = playlist.value(u"sortBy").toArray();
+                std::sort(sortProperties.begin(), sortProperties.end(), sortJsonArray);
+                for (auto property : std::as_const(sortProperties)) {
+                    QJsonObject sortProperty = property.toObject();
+                    int index = sortProperty.value(u"index").toInt();
+                    int sort = sortProperty.value(u"sort").toInt();
+                    int order = sortProperty.value(u"order").toInt();
+                    m_playlistFilterProxyModels[i]->addToActiveSortProperties(sort);
+                    m_playlistFilterProxyModels[i]->setSortPropertySortingOrder(index, order);
+                }
+            }
+            if (playlist.contains(u"groupBy")) {
+                QJsonArray groups = playlist.value(u"groupBy").toArray();
+                std::sort(groups.begin(), groups.end(), sortJsonArray);
+                for (auto property : std::as_const(groups)) {
+                    QJsonObject groupProperty = property.toObject();
+                    int index = groupProperty.value(u"index").toInt();
+                    Group group = Group(groupProperty.value(u"group").toInt());
+                    bool hideBlank = groupProperty.value(u"hideBlank").toBool();
+                    m_playlistFilterProxyModels[i]->addToActiveGroup(group);
+                    m_playlistFilterProxyModels[i]->setGroupHideBlank(index, hideBlank);
+                }
             }
         }
     }
@@ -193,6 +240,7 @@ void PlaylistMultiProxiesModel::addPlaylist(QString playlistName, QUrl internalU
     connect(filterModel.get(), &PlaylistFilterProxyModel::itemsMoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
     connect(filterModel.get(), &PlaylistFilterProxyModel::itemsRemoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
     connect(filterModel.get(), &PlaylistFilterProxyModel::itemsInserted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(filterModel->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
 
     filterModel->playlistModel()->stop();
 
@@ -439,6 +487,33 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
         json[u"name"] = m_playlistFilterProxyModels[i]->playlistModel()->m_playlistName;
         json[u"isActive"] = QJsonValue(m_activeIndex == i);
         json[u"currentItem"] = double(m_playlistFilterProxyModels[i]->playlistModel()->m_playingItem);
+        json[u"showSections"] = QJsonValue(m_playlistFilterProxyModels[i]->showSections());
+
+        // Save sorting and grouping for non-default playlists
+        if (json[u"name"] != u"Default"_s) {
+            QJsonArray sortProperties;
+            QJsonArray groups;
+            int index = 0;
+            for (auto property : std::as_const(m_playlistFilterProxyModels[i]->activeSortPropertiesModel()->m_properties)) {
+                QJsonObject propertyStruct;
+                propertyStruct[u"index"] = index;
+                propertyStruct[u"sort"] = property.sort;
+                propertyStruct[u"order"] = property.order;
+                sortProperties.append(propertyStruct);
+                index++;
+            }
+            index = 0;
+            for (auto property : std::as_const(m_playlistFilterProxyModels[i]->activeGroupModel()->m_properties)) {
+                QJsonObject groupStruct;
+                groupStruct[u"index"] = index;
+                groupStruct[u"group"] = property.sort;
+                groupStruct[u"hideBlank"] = QJsonValue(property.hideBlank);
+                groups.append(groupStruct);
+                index++;
+            }
+            json[u"sortBy"] = sortProperties;
+            json[u"groupBy"] = groups;
+        }
         array.append(json);
     }
     QJsonDocument doc(array);

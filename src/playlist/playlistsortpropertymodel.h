@@ -33,6 +33,7 @@ class PlaylistSortPropertyModel : public QAbstractListModel
 
 public:
     explicit PlaylistSortPropertyModel(QObject *parent = nullptr);
+    friend class PlaylistMultiProxiesModel;
     friend class PlaylistSortProxyModel;
 
     enum Roles {

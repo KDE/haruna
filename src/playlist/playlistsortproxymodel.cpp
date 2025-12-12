@@ -442,6 +442,7 @@ void PlaylistSortProxyModel::recreateSections()
 
     if (!m_showSections || m_activeGroups->m_properties.isEmpty()) {
         Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
+        Q_EMIT groupingChanged();
         return;
     }
 
@@ -460,6 +461,7 @@ void PlaylistSortProxyModel::recreateSections()
         }
     }
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
+    Q_EMIT groupingChanged();
 }
 
 void PlaylistSortProxyModel::scheduleSectionRecreation()
