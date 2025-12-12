@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:42+0000\n"
+"POT-Creation-Date: 2025-12-12 00:42+0000\n"
 "PO-Revision-Date: 2025-11-28 10:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -716,72 +716,75 @@ msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "Бітова швидкість"
 
-#: src/playlist/Playlist.qml:276
+#: src/playlist/Playlist.qml:278
+#, fuzzy
+#| msgctxt "@item:listbox the custom youtube-dl format selection"
+#| msgid "Custom"
 msgctxt "@action:button"
-msgid "Advanced…"
-msgstr "Додатково…"
+msgid "Custom…"
+msgstr "Нетиповий"
 
-#: src/playlist/Playlist.qml:284
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Відтворення"
 
-#: src/playlist/Playlist.qml:290
+#: src/playlist/Playlist.qml:295
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Повторювати список відтворення"
 
-#: src/playlist/Playlist.qml:301
+#: src/playlist/Playlist.qml:306
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "Зупинитися після останнього пункту"
 
-#: src/playlist/Playlist.qml:311
+#: src/playlist/Playlist.qml:316
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Повторити пункт"
 
-#: src/playlist/Playlist.qml:322
+#: src/playlist/Playlist.qml:327
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "Зупинитися після пункту"
 
-#: src/playlist/Playlist.qml:332
+#: src/playlist/Playlist.qml:337
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Відтворити у випадковому порядку"
 
-#: src/playlist/Playlist.qml:344
+#: src/playlist/Playlist.qml:349
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Спорожнити"
 
-#: src/playlist/Playlist.qml:352
+#: src/playlist/Playlist.qml:357
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Зберегти як"
 
-#: src/playlist/Playlist.qml:426
+#: src/playlist/Playlist.qml:431
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Додати новий список відтворення"
 
-#: src/playlist/Playlist.qml:441 src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Перейменувати"
 
-#: src/playlist/Playlist.qml:447
+#: src/playlist/Playlist.qml:452
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Вилучити"
 
-#: src/playlist/Playlist.qml:503 src/playlist/Playlist.qml:524
+#: src/playlist/Playlist.qml:508 src/playlist/Playlist.qml:529
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Додати"
 
-#: src/playlist/Playlist.qml:506 src/qml/Main.qml:533
+#: src/playlist/Playlist.qml:511 src/qml/Main.qml:533
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -790,77 +793,77 @@ msgstr ""
 "Не знайдено ні <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a>, ні "
 "<a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
-#: src/playlist/Playlist.qml:523
+#: src/playlist/Playlist.qml:528
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "назва списку відтворення"
 
-#: src/playlist/Playlist.qml:708
+#: src/playlist/Playlist.qml:720
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Відкрити теку файла"
 
-#: src/playlist/Playlist.qml:714
+#: src/playlist/Playlist.qml:726
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Відкрити у переглядачі"
 
-#: src/playlist/Playlist.qml:723
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Копіювати назву"
 
-#: src/playlist/Playlist.qml:729
+#: src/playlist/Playlist.qml:741
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Копіювати шлях"
 
-#: src/playlist/Playlist.qml:730
+#: src/playlist/Playlist.qml:742
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Копіювати адресу"
 
-#: src/playlist/Playlist.qml:740
+#: src/playlist/Playlist.qml:752
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Позначити все"
 
-#: src/playlist/Playlist.qml:744
+#: src/playlist/Playlist.qml:756
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Зняти позначення з усього"
 
-#: src/playlist/Playlist.qml:748
+#: src/playlist/Playlist.qml:760
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Інвертувати позначення"
 
-#: src/playlist/Playlist.qml:754
+#: src/playlist/Playlist.qml:766
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Вилучити зі списку"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:772
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Вилучити позначене зі списку відтворення"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Гортати до запису, що відтворюється"
 
-#: src/playlist/Playlist.qml:782
+#: src/playlist/Playlist.qml:794
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Пересунути файл до смітника"
 
-#: src/playlist/Playlist.qml:788
+#: src/playlist/Playlist.qml:800
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Пересунути позначені файли до Смітника"
 
-#: src/playlist/Playlist.qml:894 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Виберіть файл"
@@ -870,124 +873,121 @@ msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
 msgstr "Розширене упорядковування та групування"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:64
+#: src/playlist/PlaylistAdvancedSortWindow.qml:43
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Sort"
+msgctxt "@label sort"
+msgid "Sorting"
+msgstr "Упорядкувати"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:68
+#: src/playlist/PlaylistAdvancedSortWindow.qml:87
+#: src/playlist/PlaylistAdvancedSortWindow.qml:324
+#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+#, fuzzy
+#| msgctxt "@sort:filter"
+#| msgid "Filter"
+msgctxt "@action:inmenu"
+msgid "Filter"
+msgstr "Фільтр"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#, fuzzy
+#| msgctxt "@sort:filter all"
+#| msgid "All"
+msgctxt "@action:inmenu all"
+msgid "All"
+msgstr "Усі"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:105
+#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#, fuzzy
+#| msgctxt "@sort:filter file"
+#| msgid "File"
+msgctxt "@action:inmenu file"
+msgid "File"
+msgstr "Файл"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:116
+#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#, fuzzy
+#| msgctxt "@sort:filter audio"
+#| msgid "Audio"
+msgctxt "@action:inmenu audio"
+msgid "Audio"
+msgstr "Звук"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:127
+#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#, fuzzy
+#| msgctxt "@sort:filter video"
+#| msgid "Video"
+msgctxt "@action:inmenu video"
+msgid "Video"
+msgstr "Відео"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:174
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "За зростанням"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:77
+#: src/playlist/PlaylistAdvancedSortWindow.qml:187
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "За спаданням"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:121
-msgctxt "@action:inmenu"
-msgid "None"
-msgstr "Немає"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+msgctxt "@label group"
+msgid "Grouping"
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:133
+#: src/playlist/PlaylistAdvancedSortWindow.qml:398
 msgctxt "@action:inmenu"
-msgid "File Name"
-msgstr "Назва файла"
+msgid "Show Sections"
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:145
-msgctxt "@action:inmenu"
-msgid "Title"
-msgstr "Заголовок"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:157
-msgctxt "@action:inmenu"
-msgid "Duration"
-msgstr "Тривалість"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:169
-msgctxt "@action:inmenu"
-msgid "Modified Date"
-msgstr "Дата зміни"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:181
-msgctxt "@action:inmenu"
-msgid "File Size"
-msgstr "Розмір файла"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:193
-msgctxt "@action:inmenu"
-msgid "Track No"
-msgstr "Номер композиції"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:205
-msgctxt "@action:inmenu"
-msgid "Sample Rate"
-msgstr "Частота дискретизації"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:217
-msgctxt "@action:inmenu"
-msgid "Bitrate"
-msgstr "Бітова швидкість"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:238
+#: src/playlist/PlaylistAdvancedSortWindow.qml:408
 msgctxt "@info:tooltip"
 msgid ""
-"Playlist items will be grouped by the active <br>properties in the provided "
-"order and each group <br>is sorted within by the primary sort configuration "
-"set above."
+"Show/Hide section labels in the playlist view. This <br>does not affect "
+"sorting. Properties to include in the <br>section labels can be selected "
+"below. If the playlist <br>is not sorted by the included group properties in "
+"the <br>same order, then the sections might not be unique."
 msgstr ""
-"Пункти списку відтворення буде згруповано за активними <br>властивостями у "
-"вказаному порядку, а кожну групу <br>буде впорядкованою за параметрами "
-"упорядкування основної групи, встановленими вище."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:258
-msgctxt "@sort:group add new line button"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:521
+#, fuzzy
+#| msgctxt "@sort:group add new line button"
+#| msgid "Add New Line"
+msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Додати новий рядок"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:275
-msgctxt "@label availabe grouping properties"
-msgid "Available Groups"
-msgstr "Доступні групи"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+msgctxt "@info:tooltip show blank"
+msgid ""
+"Hide this group property in the <br> section label when it is empty <br> or "
+"not unique."
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:304
-#: src/playlist/PlaylistAdvancedSortWindow.qml:323
-msgctxt "@sort:filter"
-msgid "Filter"
-msgstr "Фільтр"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+msgctxt "@info:tooltip hide blank"
+msgid "Show the group property in the <br> section label even if it is empty."
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:330
-msgctxt "@sort:filter all"
-msgid "All"
-msgstr "Усі"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:341
-msgctxt "@sort:filter file"
-msgid "File"
-msgstr "Файл"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:352
-msgctxt "@sort:filter audio"
-msgid "Audio"
-msgstr "Звук"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:363
-msgctxt "@sort:filter video"
-msgid "Video"
-msgstr "Відео"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:376
-msgctxt "@label active grouping properties"
-msgid "Active Groups:"
-msgstr "Активні групи:"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:652
+#: src/playlist/PlaylistAdvancedSortWindow.qml:740
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Впорядкувати за зростанням"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:654
+#: src/playlist/PlaylistAdvancedSortWindow.qml:742
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Впорядкувати за спаданням"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:656
+#: src/playlist/PlaylistAdvancedSortWindow.qml:744
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Те саме впорядкування, що і основне"
@@ -998,107 +998,291 @@ msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "Не можна використовувати списки відтворення з однаковими назвами: %1"
 
-#: src/playlist/playlistsortproxymodel.cpp:26
+#: src/playlist/playlistsortproxymodel.cpp:32
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "File Name"
+msgctxt "@label:button file name"
+msgid "File Name"
+msgstr "Назва файла"
+
+#: src/playlist/playlistsortproxymodel.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Duration"
+msgctxt "@label:button duration"
+msgid "Duration"
+msgstr "Тривалість"
+
+#: src/playlist/playlistsortproxymodel.cpp:44
+#, kde-format
+msgctxt "@label:button date"
+msgid "Date"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:50
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "File Size"
+msgctxt "@label:button file size"
+msgid "File Size"
+msgstr "Розмір файла"
+
+#: src/playlist/playlistsortproxymodel.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Title"
+msgctxt "@label:button title"
+msgid "Title"
+msgstr "Заголовок"
+
+#: src/playlist/playlistsortproxymodel.cpp:62
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Track No"
+msgctxt "@label:button track no"
+msgid "Track No"
+msgstr "Номер композиції"
+
+#: src/playlist/playlistsortproxymodel.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Sample Rate"
+msgctxt "@label:button sample rate"
+msgid "Sample Rate"
+msgstr "Частота дискретизації"
+
+#: src/playlist/playlistsortproxymodel.cpp:74
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Bitrate"
+msgctxt "@label:button bitrate"
+msgid "Bitrate"
+msgstr "Бітова швидкість"
+
+#: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr "Тека"
 
-#: src/playlist/playlistsortproxymodel.cpp:32
+#: src/playlist/playlistsortproxymodel.cpp:88
 #, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Тип"
 
-#: src/playlist/playlistsortproxymodel.cpp:38
+#: src/playlist/playlistsortproxymodel.cpp:95
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
 msgstr "Суфікс"
 
-#: src/playlist/playlistsortproxymodel.cpp:44
+#: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
 msgstr "Номер диска"
 
-#: src/playlist/playlistsortproxymodel.cpp:50
+#: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
 msgstr "Рік випуску"
 
-#: src/playlist/playlistsortproxymodel.cpp:56
+#: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
 msgstr "Жанр"
 
-#: src/playlist/playlistsortproxymodel.cpp:62
+#: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "Альбом"
 
-#: src/playlist/playlistsortproxymodel.cpp:68
+#: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
 msgstr "Виконавець"
 
-#: src/playlist/playlistsortproxymodel.cpp:74
+#: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
 msgstr "Виконавець альбому"
 
-#: src/playlist/playlistsortproxymodel.cpp:80
+#: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
 msgstr "Композитор"
 
-#: src/playlist/playlistsortproxymodel.cpp:86
+#: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
 msgstr "Автор тексту"
 
-#: src/playlist/playlistsortproxymodel.cpp:92
+#: src/playlist/playlistsortproxymodel.cpp:158
 #, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
 msgstr "Аудіокодек"
 
-#: src/playlist/playlistsortproxymodel.cpp:98
+#: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
 msgstr "Частота кадрів"
 
-#: src/playlist/playlistsortproxymodel.cpp:104
+#: src/playlist/playlistsortproxymodel.cpp:172
 #, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
 msgstr "Відеокодек"
 
-#: src/playlist/playlistsortproxymodel.cpp:110
+#: src/playlist/playlistsortproxymodel.cpp:179
 #, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
 msgstr "Орієнтація"
 
-#: src/playlist/playlistsortproxymodel.cpp:116
+#: src/playlist/playlistsortproxymodel.cpp:186
 #, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
 msgstr "Роздільність"
 
-#: src/playlist/playlistsortproxymodel.cpp:219
+#: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "Новий рядок"
+
+#: src/playlist/playlistsortproxymodel.cpp:494
+#, fuzzy, kde-format
+#| msgctxt "@label:button genre"
+#| msgid "Genre"
+msgctxt "@title:group"
+msgid "No Genre"
+msgstr "Жанр"
+
+#: src/playlist/playlistsortproxymodel.cpp:495
+#, fuzzy, kde-format
+#| msgctxt "@label:button album"
+#| msgid "Album"
+msgctxt "@title:group"
+msgid "No Album"
+msgstr "Альбом"
+
+#: src/playlist/playlistsortproxymodel.cpp:496
+#, fuzzy, kde-format
+#| msgctxt "@label:button artist"
+#| msgid "Artist"
+msgctxt "@title:group"
+msgid "No Artist"
+msgstr "Виконавець"
+
+#: src/playlist/playlistsortproxymodel.cpp:497
+#, fuzzy, kde-format
+#| msgctxt "@label:button album artist"
+#| msgid "Album Artist"
+msgctxt "@title:group"
+msgid "No Album Artist"
+msgstr "Виконавець альбому"
+
+#: src/playlist/playlistsortproxymodel.cpp:498
+#, fuzzy, kde-format
+#| msgctxt "@label:button composer"
+#| msgid "Composer"
+msgctxt "@title:group"
+msgid "No Composer"
+msgstr "Композитор"
+
+#: src/playlist/playlistsortproxymodel.cpp:499
+#, fuzzy, kde-format
+#| msgctxt "@label:button lyricist"
+#| msgid "Lyricist"
+msgctxt "@title:group"
+msgid "No Lyricist"
+msgstr "Автор тексту"
+
+#: src/playlist/playlistsortproxymodel.cpp:500
+#, fuzzy, kde-format
+#| msgctxt "@label:button release year"
+#| msgid "Release Year"
+msgctxt "@title:group"
+msgid "No Release Year"
+msgstr "Рік випуску"
+
+#: src/playlist/playlistsortproxymodel.cpp:501
+#, fuzzy, kde-format
+#| msgctxt "@sort:filter video"
+#| msgid "Video"
+msgctxt "@title:group"
+msgid "Not a Video"
+msgstr "Відео"
+
+#: src/playlist/playlistsortproxymodel.cpp:502
+#, fuzzy, kde-format
+#| msgctxt "@label:button audio codec"
+#| msgid "Audio Codec"
+msgctxt "@title:group"
+msgid "No Audio Codec"
+msgstr "Аудіокодек"
+
+#: src/playlist/playlistsortproxymodel.cpp:503
+#, fuzzy, kde-format
+#| msgctxt "@label:button video codec"
+#| msgid "Video Codec"
+msgctxt "@title:group"
+msgid "No Video Codec"
+msgstr "Відеокодек"
+
+#: src/playlist/playlistsortproxymodel.cpp:525
+#, fuzzy, kde-format
+#| msgctxt "@label:button disc no"
+#| msgid "Disc No"
+msgctxt "@title:group disc"
+msgid "Disc"
+msgstr "Номер диска"
+
+#: src/playlist/playlistsortproxymodel.cpp:580
+#, fuzzy, kde-format
+#| msgctxt "@label:button video codec"
+#| msgid "Video Codec"
+msgctxt "@title:group"
+msgid "Video File"
+msgstr "Відеокодек"
+
+#: src/playlist/playlistsortproxymodel.cpp:583
+#, fuzzy, kde-format
+#| msgctxt "@label:button audio codec"
+#| msgid "Audio Codec"
+msgctxt "@title:group"
+msgid "Audio File"
+msgstr "Аудіокодек"
+
+#: src/playlist/playlistsortproxymodel.cpp:607
+#, kde-format
+msgctxt "@title:group"
+msgid "Landscape"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:611
+#, kde-format
+msgctxt "@title:group"
+msgid "Portrait"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:615
+#, kde-format
+msgctxt "@title:group"
+msgid "Square"
+msgstr ""
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -2890,6 +3074,64 @@ msgstr ""
 "Не вдалося отримати список відтворення з таким ідентифікатором: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Advanced…"
+#~ msgstr "Додатково…"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "None"
+#~ msgstr "Немає"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "File Name"
+#~ msgstr "Назва файла"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Title"
+#~ msgstr "Заголовок"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Duration"
+#~ msgstr "Тривалість"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Modified Date"
+#~ msgstr "Дата зміни"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "File Size"
+#~ msgstr "Розмір файла"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Track No"
+#~ msgstr "Номер композиції"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sample Rate"
+#~ msgstr "Частота дискретизації"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Bitrate"
+#~ msgstr "Бітова швидкість"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Playlist items will be grouped by the active <br>properties in the "
+#~ "provided order and each group <br>is sorted within by the primary sort "
+#~ "configuration set above."
+#~ msgstr ""
+#~ "Пункти списку відтворення буде згруповано за активними <br>властивостями "
+#~ "у вказаному порядку, а кожну групу <br>буде впорядкованою за параметрами "
+#~ "упорядкування основної групи, встановленими вище."
+
+#~ msgctxt "@label availabe grouping properties"
+#~ msgid "Available Groups"
+#~ msgstr "Доступні групи"
+
+#~ msgctxt "@label active grouping properties"
+#~ msgid "Active Groups:"
+#~ msgstr "Активні групи:"
 
 #~ msgctxt "@action:button"
 #~ msgid "Name, descending"

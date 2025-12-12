@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:42+0000\n"
+"POT-Creation-Date: 2025-12-12 00:42+0000\n"
 "PO-Revision-Date: 2025-10-16 21:30+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -738,72 +738,75 @@ msgctxt "@action:button"
 msgid "Bitrate"
 msgstr ""
 
-#: src/playlist/Playlist.qml:276
+#: src/playlist/Playlist.qml:278
+#, fuzzy
+#| msgctxt "@item:listbox the custom youtube-dl format selection"
+#| msgid "Custom"
 msgctxt "@action:button"
-msgid "Advanced…"
-msgstr ""
+msgid "Custom…"
+msgstr "Tinkintas"
 
-#: src/playlist/Playlist.qml:284
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Atkūrimas"
 
-#: src/playlist/Playlist.qml:290
+#: src/playlist/Playlist.qml:295
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Kartoti grojaraštį"
 
-#: src/playlist/Playlist.qml:301
+#: src/playlist/Playlist.qml:306
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "Stabdyti po paskutinio elemento"
 
-#: src/playlist/Playlist.qml:311
+#: src/playlist/Playlist.qml:316
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Kartoti elementą"
 
-#: src/playlist/Playlist.qml:322
+#: src/playlist/Playlist.qml:327
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "Stabdyti po elemento"
 
-#: src/playlist/Playlist.qml:332
+#: src/playlist/Playlist.qml:337
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Atsitiktinis atkūrimas"
 
-#: src/playlist/Playlist.qml:344
+#: src/playlist/Playlist.qml:349
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Išvalyti"
 
-#: src/playlist/Playlist.qml:352
+#: src/playlist/Playlist.qml:357
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Įrašyti kaip"
 
-#: src/playlist/Playlist.qml:426
+#: src/playlist/Playlist.qml:431
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Pridėti naują grojaraštį"
 
-#: src/playlist/Playlist.qml:441 src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pervadinti"
 
-#: src/playlist/Playlist.qml:447
+#: src/playlist/Playlist.qml:452
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Šalinti"
 
-#: src/playlist/Playlist.qml:503 src/playlist/Playlist.qml:524
+#: src/playlist/Playlist.qml:508 src/playlist/Playlist.qml:529
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/playlist/Playlist.qml:506 src/qml/Main.qml:533
+#: src/playlist/Playlist.qml:511 src/qml/Main.qml:533
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -812,77 +815,77 @@ msgstr ""
 "Nerasta nei <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a>, nei <a "
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
-#: src/playlist/Playlist.qml:523
+#: src/playlist/Playlist.qml:528
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "grojaraščio pavadinimas"
 
-#: src/playlist/Playlist.qml:708
+#: src/playlist/Playlist.qml:720
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
-#: src/playlist/Playlist.qml:714
+#: src/playlist/Playlist.qml:726
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Atverti naršyklėje"
 
-#: src/playlist/Playlist.qml:723
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopijuoti pavadinimą"
 
-#: src/playlist/Playlist.qml:729
+#: src/playlist/Playlist.qml:741
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopijuoti kelią"
 
-#: src/playlist/Playlist.qml:730
+#: src/playlist/Playlist.qml:742
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopijuoti URL"
 
-#: src/playlist/Playlist.qml:740
+#: src/playlist/Playlist.qml:752
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Žymėti visus"
 
-#: src/playlist/Playlist.qml:744
+#: src/playlist/Playlist.qml:756
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Nuimti žymėjimą nuo visų"
 
-#: src/playlist/Playlist.qml:748
+#: src/playlist/Playlist.qml:760
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Invertuoti žymėjimą"
 
-#: src/playlist/Playlist.qml:754
+#: src/playlist/Playlist.qml:766
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Šalinti iš grojaraščio"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:772
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Šalinti pažymėtus iš grojaraščio"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Peršokti prie atkuriamo elemento"
 
-#: src/playlist/Playlist.qml:782
+#: src/playlist/Playlist.qml:794
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Perkelti failą į šiukšlinę"
 
-#: src/playlist/Playlist.qml:788
+#: src/playlist/Playlist.qml:800
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Perkelti pažymetus failus į šiukšlinę"
 
-#: src/playlist/Playlist.qml:894 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Pasirinkite failą"
@@ -892,7 +895,59 @@ msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:64
+#: src/playlist/PlaylistAdvancedSortWindow.qml:43
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Sort"
+msgctxt "@label sort"
+msgid "Sorting"
+msgstr "Rikiuoti"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:68
+#: src/playlist/PlaylistAdvancedSortWindow.qml:87
+#: src/playlist/PlaylistAdvancedSortWindow.qml:324
+#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+msgctxt "@action:inmenu"
+msgid "Filter"
+msgstr ""
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#, fuzzy
+#| msgctxt "@item:listbox alt modifier key"
+#| msgid "Alt"
+msgctxt "@action:inmenu all"
+msgid "All"
+msgstr "Alt"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:105
+#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Files"
+msgctxt "@action:inmenu file"
+msgid "File"
+msgstr "Failai"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:116
+#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Audio"
+msgctxt "@action:inmenu audio"
+msgid "Audio"
+msgstr "Garsas"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:127
+#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Video"
+msgctxt "@action:inmenu video"
+msgid "Video"
+msgstr "Vaizdas"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:174
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name, ascending"
@@ -900,7 +955,7 @@ msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Pavadinimas, didėjančiai"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:77
+#: src/playlist/PlaylistAdvancedSortWindow.qml:187
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name, ascending"
@@ -908,137 +963,46 @@ msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Pavadinimas, didėjančiai"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:121
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
-msgctxt "@action:inmenu"
-msgid "None"
-msgstr "Nėra"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:133
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
-msgctxt "@action:inmenu"
-msgid "File Name"
-msgstr "Failo pavadinimas: %1"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:145
-msgctxt "@action:inmenu"
-msgid "Title"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+msgctxt "@label group"
+msgid "Grouping"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:157
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:398
 msgctxt "@action:inmenu"
-msgid "Duration"
-msgstr "Grynis"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:169
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Modifier key"
-msgctxt "@action:inmenu"
-msgid "Modified Date"
-msgstr "Modifikavimo klavišas"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
-msgctxt "@action:inmenu"
-msgid "File Size"
-msgstr "Failo pavadinimas: %1"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:193
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
-msgctxt "@action:inmenu"
-msgid "Track No"
-msgstr "&Takelis"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:205
-msgctxt "@action:inmenu"
-msgid "Sample Rate"
+msgid "Show Sections"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:217
-msgctxt "@action:inmenu"
-msgid "Bitrate"
-msgstr ""
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:238
+#: src/playlist/PlaylistAdvancedSortWindow.qml:408
 msgctxt "@info:tooltip"
 msgid ""
-"Playlist items will be grouped by the active <br>properties in the provided "
-"order and each group <br>is sorted within by the primary sort configuration "
-"set above."
+"Show/Hide section labels in the playlist view. This <br>does not affect "
+"sorting. Properties to include in the <br>section labels can be selected "
+"below. If the playlist <br>is not sorted by the included group properties in "
+"the <br>same order, then the sections might not be unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:258
+#: src/playlist/PlaylistAdvancedSortWindow.qml:521
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Add New Folder"
-msgctxt "@sort:group add new line button"
+msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Pridėti naują aplanką"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:275
-msgctxt "@label availabe grouping properties"
-msgid "Available Groups"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+msgctxt "@info:tooltip show blank"
+msgid ""
+"Hide this group property in the <br> section label when it is empty <br> or "
+"not unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:304
-#: src/playlist/PlaylistAdvancedSortWindow.qml:323
-msgctxt "@sort:filter"
-msgid "Filter"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+msgctxt "@info:tooltip hide blank"
+msgid "Show the group property in the <br> section label even if it is empty."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:330
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
-msgctxt "@sort:filter all"
-msgid "All"
-msgstr "Alt"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:341
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
-msgctxt "@sort:filter file"
-msgid "File"
-msgstr "Failai"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:352
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
-msgctxt "@sort:filter audio"
-msgid "Audio"
-msgstr "Garsas"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:363
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
-msgctxt "@sort:filter video"
-msgid "Video"
-msgstr "Vaizdas"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:376
-msgctxt "@label active grouping properties"
-msgid "Active Groups:"
-msgstr ""
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:652
+#: src/playlist/PlaylistAdvancedSortWindow.qml:740
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration, ascending"
@@ -1046,7 +1010,7 @@ msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Trukmė, didėjančiai"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:654
+#: src/playlist/PlaylistAdvancedSortWindow.qml:742
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration, descending"
@@ -1054,7 +1018,7 @@ msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Trukmė, mažėjančiai"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:656
+#: src/playlist/PlaylistAdvancedSortWindow.qml:744
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
@@ -1065,13 +1029,71 @@ msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "Grojaraščiai tokiu pačiu pavadinimu yra neleidžiami: %1"
 
-#: src/playlist/playlistsortproxymodel.cpp:26
+#: src/playlist/playlistsortproxymodel.cpp:32
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "placeholder text; %1 is an example of how to display an mpv property"
+#| msgid "Filename: %1"
+msgctxt "@label:button file name"
+msgid "File Name"
+msgstr "Failo pavadinimas: %1"
+
+#: src/playlist/playlistsortproxymodel.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Saturation"
+msgctxt "@label:button duration"
+msgid "Duration"
+msgstr "Grynis"
+
+#: src/playlist/playlistsortproxymodel.cpp:44
+#, kde-format
+msgctxt "@label:button date"
+msgid "Date"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:50
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "placeholder text; %1 is an example of how to display an mpv property"
+#| msgid "Filename: %1"
+msgctxt "@label:button file size"
+msgid "File Size"
+msgstr "Failo pavadinimas: %1"
+
+#: src/playlist/playlistsortproxymodel.cpp:56
+#, kde-format
+msgctxt "@label:button title"
+msgid "Title"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:62
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "&Track"
+msgctxt "@label:button track no"
+msgid "Track No"
+msgstr "&Takelis"
+
+#: src/playlist/playlistsortproxymodel.cpp:68
+#, kde-format
+msgctxt "@label:button sample rate"
+msgid "Sample Rate"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:74
+#, kde-format
+msgctxt "@label:button bitrate"
+msgid "Bitrate"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:32
+#: src/playlist/playlistsortproxymodel.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Type"
@@ -1079,61 +1101,61 @@ msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Tipas"
 
-#: src/playlist/playlistsortproxymodel.cpp:38
+#: src/playlist/playlistsortproxymodel.cpp:95
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:44
+#: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:50
+#: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:56
+#: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:62
+#: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:68
+#: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:74
+#: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:80
+#: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:86
+#: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:92
+#: src/playlist/playlistsortproxymodel.cpp:158
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Audio Track"
@@ -1141,13 +1163,13 @@ msgctxt "@label:button audio codec"
 msgid "Audio Codec"
 msgstr "Garso įrašo takelis"
 
-#: src/playlist/playlistsortproxymodel.cpp:98
+#: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:104
+#: src/playlist/playlistsortproxymodel.cpp:172
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Video"
@@ -1155,7 +1177,7 @@ msgctxt "@label:button video codec"
 msgid "Video Codec"
 msgstr "Vaizdas"
 
-#: src/playlist/playlistsortproxymodel.cpp:110
+#: src/playlist/playlistsortproxymodel.cpp:179
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -1163,7 +1185,7 @@ msgctxt "@label:button video orientation"
 msgid "Orientation"
 msgstr "Grynis"
 
-#: src/playlist/playlistsortproxymodel.cpp:116
+#: src/playlist/playlistsortproxymodel.cpp:186
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Reset Saturation"
@@ -1171,10 +1193,116 @@ msgctxt "@label:button resolution"
 msgid "Resolution"
 msgstr "Atstatyti grynį"
 
-#: src/playlist/playlistsortproxymodel.cpp:219
+#: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:494
+#, kde-format
+msgctxt "@title:group"
+msgid "No Genre"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:495
+#, kde-format
+msgctxt "@title:group"
+msgid "No Album"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:496
+#, kde-format
+msgctxt "@title:group"
+msgid "No Artist"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:497
+#, kde-format
+msgctxt "@title:group"
+msgid "No Album Artist"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:498
+#, kde-format
+msgctxt "@title:group"
+msgid "No Composer"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:499
+#, kde-format
+msgctxt "@title:group"
+msgid "No Lyricist"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:500
+#, kde-format
+msgctxt "@title:group"
+msgid "No Release Year"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:501
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Video"
+msgctxt "@title:group"
+msgid "Not a Video"
+msgstr "Vaizdas"
+
+#: src/playlist/playlistsortproxymodel.cpp:502
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Audio Track"
+msgctxt "@title:group"
+msgid "No Audio Codec"
+msgstr "Garso įrašo takelis"
+
+#: src/playlist/playlistsortproxymodel.cpp:503
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Video"
+msgctxt "@title:group"
+msgid "No Video Codec"
+msgstr "Vaizdas"
+
+#: src/playlist/playlistsortproxymodel.cpp:525
+#, kde-format
+msgctxt "@title:group disc"
+msgid "Disc"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:580
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Video"
+msgctxt "@title:group"
+msgid "Video File"
+msgstr "Vaizdas"
+
+#: src/playlist/playlistsortproxymodel.cpp:583
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Audio Track"
+msgctxt "@title:group"
+msgid "Audio File"
+msgstr "Garso įrašo takelis"
+
+#: src/playlist/playlistsortproxymodel.cpp:607
+#, kde-format
+msgctxt "@title:group"
+msgid "Landscape"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:611
+#, kde-format
+msgctxt "@title:group"
+msgid "Portrait"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:615
+#, kde-format
+msgctxt "@title:group"
+msgid "Square"
 msgstr ""
 
 #: src/playlist/PlaylistTabDelegate.qml:128
@@ -2986,6 +3114,43 @@ msgstr ""
 "Nepavyko gauti grojaraščio, kurio id: %1\n"
 "\n"
 "%2"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@action The \"None\" subtitle track is used to clear/unset selected track"
+#~| msgid "None"
+#~ msgctxt "@action:inmenu"
+#~ msgid "None"
+#~ msgstr "Nėra"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "placeholder text; %1 is an example of how to display an mpv property"
+#~| msgid "Filename: %1"
+#~ msgctxt "@action:inmenu"
+#~ msgid "File Name"
+#~ msgstr "Failo pavadinimas: %1"
+
+#, fuzzy
+#~| msgctxt "@label:slider"
+#~| msgid "Saturation"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Duration"
+#~ msgstr "Grynis"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Modifier key"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Modified Date"
+#~ msgstr "Modifikavimo klavišas"
+
+#, fuzzy
+#~| msgctxt "@title:menu"
+#~| msgid "&Track"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Track No"
+#~ msgstr "&Takelis"
 
 #~ msgctxt "@action:button"
 #~ msgid "Name, descending"

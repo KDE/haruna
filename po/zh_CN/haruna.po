@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:42+0000\n"
+"POT-Creation-Date: 2025-12-12 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -710,72 +710,75 @@ msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "码率"
 
-#: src/playlist/Playlist.qml:276
+#: src/playlist/Playlist.qml:278
+#, fuzzy
+#| msgctxt "@item:listbox the custom youtube-dl format selection"
+#| msgid "Custom"
 msgctxt "@action:button"
-msgid "Advanced…"
-msgstr "高级…"
+msgid "Custom…"
+msgstr "自定义"
 
-#: src/playlist/Playlist.qml:284
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "播放"
 
-#: src/playlist/Playlist.qml:290
+#: src/playlist/Playlist.qml:295
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "播放列表循环"
 
-#: src/playlist/Playlist.qml:301
+#: src/playlist/Playlist.qml:306
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "最后一个项目之后停止"
 
-#: src/playlist/Playlist.qml:311
+#: src/playlist/Playlist.qml:316
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "当前项目循环"
 
-#: src/playlist/Playlist.qml:322
+#: src/playlist/Playlist.qml:327
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "当前项目之后停止"
 
-#: src/playlist/Playlist.qml:332
+#: src/playlist/Playlist.qml:337
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "随机播放"
 
-#: src/playlist/Playlist.qml:344
+#: src/playlist/Playlist.qml:349
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "清除"
 
-#: src/playlist/Playlist.qml:352
+#: src/playlist/Playlist.qml:357
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "另存为"
 
-#: src/playlist/Playlist.qml:426
+#: src/playlist/Playlist.qml:431
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "添加播放列表"
 
-#: src/playlist/Playlist.qml:441 src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "重命名"
 
-#: src/playlist/Playlist.qml:447
+#: src/playlist/Playlist.qml:452
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "移除"
 
-#: src/playlist/Playlist.qml:503 src/playlist/Playlist.qml:524
+#: src/playlist/Playlist.qml:508 src/playlist/Playlist.qml:529
 msgctxt "@action:button"
 msgid "Add"
 msgstr "添加"
 
-#: src/playlist/Playlist.qml:506 src/qml/Main.qml:533
+#: src/playlist/Playlist.qml:511 src/qml/Main.qml:533
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -784,77 +787,77 @@ msgstr ""
 "找不到 <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 或者 <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
-#: src/playlist/Playlist.qml:523
+#: src/playlist/Playlist.qml:528
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "播放列表名称"
 
-#: src/playlist/Playlist.qml:708
+#: src/playlist/Playlist.qml:720
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "打开所在文件夹"
 
-#: src/playlist/Playlist.qml:714
+#: src/playlist/Playlist.qml:726
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "用浏览器打开"
 
-#: src/playlist/Playlist.qml:723
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "复制名称"
 
-#: src/playlist/Playlist.qml:729
+#: src/playlist/Playlist.qml:741
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "复制路径"
 
-#: src/playlist/Playlist.qml:730
+#: src/playlist/Playlist.qml:742
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "复制 URL"
 
-#: src/playlist/Playlist.qml:740
+#: src/playlist/Playlist.qml:752
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "选择全部"
 
-#: src/playlist/Playlist.qml:744
+#: src/playlist/Playlist.qml:756
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "取消选择全部"
 
-#: src/playlist/Playlist.qml:748
+#: src/playlist/Playlist.qml:760
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "反向选择"
 
-#: src/playlist/Playlist.qml:754
+#: src/playlist/Playlist.qml:766
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "从播放列表中移除"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:772
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "从播放列表中移除所选内容"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "滚动到正在播放的项目"
 
-#: src/playlist/Playlist.qml:782
+#: src/playlist/Playlist.qml:794
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "移动文件到回收站"
 
-#: src/playlist/Playlist.qml:788
+#: src/playlist/Playlist.qml:800
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "将所选文件移动到回收站"
 
-#: src/playlist/Playlist.qml:894 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "选择文件"
@@ -864,123 +867,121 @@ msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
 msgstr "高级排序和分组方式"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:64
+#: src/playlist/PlaylistAdvancedSortWindow.qml:43
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Sort"
+msgctxt "@label sort"
+msgid "Sorting"
+msgstr "排序"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:68
+#: src/playlist/PlaylistAdvancedSortWindow.qml:87
+#: src/playlist/PlaylistAdvancedSortWindow.qml:324
+#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+#, fuzzy
+#| msgctxt "@sort:filter"
+#| msgid "Filter"
+msgctxt "@action:inmenu"
+msgid "Filter"
+msgstr "过滤"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#, fuzzy
+#| msgctxt "@sort:filter all"
+#| msgid "All"
+msgctxt "@action:inmenu all"
+msgid "All"
+msgstr "全部"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:105
+#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#, fuzzy
+#| msgctxt "@sort:filter file"
+#| msgid "File"
+msgctxt "@action:inmenu file"
+msgid "File"
+msgstr "文件"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:116
+#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#, fuzzy
+#| msgctxt "@sort:filter audio"
+#| msgid "Audio"
+msgctxt "@action:inmenu audio"
+msgid "Audio"
+msgstr "音频"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:127
+#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#, fuzzy
+#| msgctxt "@sort:filter video"
+#| msgid "Video"
+msgctxt "@action:inmenu video"
+msgid "Video"
+msgstr "视频"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:174
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "升序排列"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:77
+#: src/playlist/PlaylistAdvancedSortWindow.qml:187
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "降序排列"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:121
-msgctxt "@action:inmenu"
-msgid "None"
-msgstr "无"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+msgctxt "@label group"
+msgid "Grouping"
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:133
+#: src/playlist/PlaylistAdvancedSortWindow.qml:398
 msgctxt "@action:inmenu"
-msgid "File Name"
-msgstr "文件名"
+msgid "Show Sections"
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:145
-msgctxt "@action:inmenu"
-msgid "Title"
-msgstr "标题"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:157
-msgctxt "@action:inmenu"
-msgid "Duration"
-msgstr "时长"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:169
-msgctxt "@action:inmenu"
-msgid "Modified Date"
-msgstr "修改日期"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:181
-msgctxt "@action:inmenu"
-msgid "File Size"
-msgstr "文件大小"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:193
-msgctxt "@action:inmenu"
-msgid "Track No"
-msgstr "音轨编号"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:205
-msgctxt "@action:inmenu"
-msgid "Sample Rate"
-msgstr "采样率"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:217
-msgctxt "@action:inmenu"
-msgid "Bitrate"
-msgstr "码率"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:238
+#: src/playlist/PlaylistAdvancedSortWindow.qml:408
 msgctxt "@info:tooltip"
 msgid ""
-"Playlist items will be grouped by the active <br>properties in the provided "
-"order and each group <br>is sorted within by the primary sort configuration "
-"set above."
+"Show/Hide section labels in the playlist view. This <br>does not affect "
+"sorting. Properties to include in the <br>section labels can be selected "
+"below. If the playlist <br>is not sorted by the included group properties in "
+"the <br>same order, then the sections might not be unique."
 msgstr ""
-"播放列表项目将按照提供的顺序<br>按活动属性分组，并且每组按照上面<br>设置的主"
-"要排序配置进行排序。 "
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:258
-msgctxt "@sort:group add new line button"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:521
+#, fuzzy
+#| msgctxt "@sort:group add new line button"
+#| msgid "Add New Line"
+msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "添加新行"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:275
-msgctxt "@label availabe grouping properties"
-msgid "Available Groups"
-msgstr "可用的分组"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+msgctxt "@info:tooltip show blank"
+msgid ""
+"Hide this group property in the <br> section label when it is empty <br> or "
+"not unique."
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:304
-#: src/playlist/PlaylistAdvancedSortWindow.qml:323
-msgctxt "@sort:filter"
-msgid "Filter"
-msgstr "过滤"
+#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+msgctxt "@info:tooltip hide blank"
+msgid "Show the group property in the <br> section label even if it is empty."
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:330
-msgctxt "@sort:filter all"
-msgid "All"
-msgstr "全部"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:341
-msgctxt "@sort:filter file"
-msgid "File"
-msgstr "文件"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:352
-msgctxt "@sort:filter audio"
-msgid "Audio"
-msgstr "音频"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:363
-msgctxt "@sort:filter video"
-msgid "Video"
-msgstr "视频"
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:376
-msgctxt "@label active grouping properties"
-msgid "Active Groups:"
-msgstr "活动分组："
-
-#: src/playlist/PlaylistAdvancedSortWindow.qml:652
+#: src/playlist/PlaylistAdvancedSortWindow.qml:740
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "升序排列"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:654
+#: src/playlist/PlaylistAdvancedSortWindow.qml:742
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "降序排列"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:656
+#: src/playlist/PlaylistAdvancedSortWindow.qml:744
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "与主排序顺序相同"
@@ -991,107 +992,291 @@ msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "不允许存在同名播放列表：%1"
 
-#: src/playlist/playlistsortproxymodel.cpp:26
+#: src/playlist/playlistsortproxymodel.cpp:32
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "File Name"
+msgctxt "@label:button file name"
+msgid "File Name"
+msgstr "文件名"
+
+#: src/playlist/playlistsortproxymodel.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Duration"
+msgctxt "@label:button duration"
+msgid "Duration"
+msgstr "时长"
+
+#: src/playlist/playlistsortproxymodel.cpp:44
+#, kde-format
+msgctxt "@label:button date"
+msgid "Date"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:50
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "File Size"
+msgctxt "@label:button file size"
+msgid "File Size"
+msgstr "文件大小"
+
+#: src/playlist/playlistsortproxymodel.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Title"
+msgctxt "@label:button title"
+msgid "Title"
+msgstr "标题"
+
+#: src/playlist/playlistsortproxymodel.cpp:62
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Track No"
+msgctxt "@label:button track no"
+msgid "Track No"
+msgstr "音轨编号"
+
+#: src/playlist/playlistsortproxymodel.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Sample Rate"
+msgctxt "@label:button sample rate"
+msgid "Sample Rate"
+msgstr "采样率"
+
+#: src/playlist/playlistsortproxymodel.cpp:74
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Bitrate"
+msgctxt "@label:button bitrate"
+msgid "Bitrate"
+msgstr "码率"
+
+#: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr "文件夹"
 
-#: src/playlist/playlistsortproxymodel.cpp:32
+#: src/playlist/playlistsortproxymodel.cpp:88
 #, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "类型"
 
-#: src/playlist/playlistsortproxymodel.cpp:38
+#: src/playlist/playlistsortproxymodel.cpp:95
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
 msgstr "扩展名"
 
-#: src/playlist/playlistsortproxymodel.cpp:44
+#: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
 msgstr "盘片编号"
 
-#: src/playlist/playlistsortproxymodel.cpp:50
+#: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
 msgstr "发行年份"
 
-#: src/playlist/playlistsortproxymodel.cpp:56
+#: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
 msgstr "流派​​"
 
-#: src/playlist/playlistsortproxymodel.cpp:62
+#: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "专辑"
 
-#: src/playlist/playlistsortproxymodel.cpp:68
+#: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
 msgstr "艺人"
 
-#: src/playlist/playlistsortproxymodel.cpp:74
+#: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
 msgstr "专辑艺人"
 
-#: src/playlist/playlistsortproxymodel.cpp:80
+#: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
 msgstr "作曲"
 
-#: src/playlist/playlistsortproxymodel.cpp:86
+#: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
 msgstr "填词"
 
-#: src/playlist/playlistsortproxymodel.cpp:92
+#: src/playlist/playlistsortproxymodel.cpp:158
 #, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
 msgstr "音频编码"
 
-#: src/playlist/playlistsortproxymodel.cpp:98
+#: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
 msgstr "帧率"
 
-#: src/playlist/playlistsortproxymodel.cpp:104
+#: src/playlist/playlistsortproxymodel.cpp:172
 #, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
 msgstr "视频编码"
 
-#: src/playlist/playlistsortproxymodel.cpp:110
+#: src/playlist/playlistsortproxymodel.cpp:179
 #, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
 msgstr "画面方向"
 
-#: src/playlist/playlistsortproxymodel.cpp:116
+#: src/playlist/playlistsortproxymodel.cpp:186
 #, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
 msgstr "分辨率"
 
-#: src/playlist/playlistsortproxymodel.cpp:219
+#: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "新行"
+
+#: src/playlist/playlistsortproxymodel.cpp:494
+#, fuzzy, kde-format
+#| msgctxt "@label:button genre"
+#| msgid "Genre"
+msgctxt "@title:group"
+msgid "No Genre"
+msgstr "流派​​"
+
+#: src/playlist/playlistsortproxymodel.cpp:495
+#, fuzzy, kde-format
+#| msgctxt "@label:button album"
+#| msgid "Album"
+msgctxt "@title:group"
+msgid "No Album"
+msgstr "专辑"
+
+#: src/playlist/playlistsortproxymodel.cpp:496
+#, fuzzy, kde-format
+#| msgctxt "@label:button artist"
+#| msgid "Artist"
+msgctxt "@title:group"
+msgid "No Artist"
+msgstr "艺人"
+
+#: src/playlist/playlistsortproxymodel.cpp:497
+#, fuzzy, kde-format
+#| msgctxt "@label:button album artist"
+#| msgid "Album Artist"
+msgctxt "@title:group"
+msgid "No Album Artist"
+msgstr "专辑艺人"
+
+#: src/playlist/playlistsortproxymodel.cpp:498
+#, fuzzy, kde-format
+#| msgctxt "@label:button composer"
+#| msgid "Composer"
+msgctxt "@title:group"
+msgid "No Composer"
+msgstr "作曲"
+
+#: src/playlist/playlistsortproxymodel.cpp:499
+#, fuzzy, kde-format
+#| msgctxt "@label:button lyricist"
+#| msgid "Lyricist"
+msgctxt "@title:group"
+msgid "No Lyricist"
+msgstr "填词"
+
+#: src/playlist/playlistsortproxymodel.cpp:500
+#, fuzzy, kde-format
+#| msgctxt "@label:button release year"
+#| msgid "Release Year"
+msgctxt "@title:group"
+msgid "No Release Year"
+msgstr "发行年份"
+
+#: src/playlist/playlistsortproxymodel.cpp:501
+#, fuzzy, kde-format
+#| msgctxt "@sort:filter video"
+#| msgid "Video"
+msgctxt "@title:group"
+msgid "Not a Video"
+msgstr "视频"
+
+#: src/playlist/playlistsortproxymodel.cpp:502
+#, fuzzy, kde-format
+#| msgctxt "@label:button audio codec"
+#| msgid "Audio Codec"
+msgctxt "@title:group"
+msgid "No Audio Codec"
+msgstr "音频编码"
+
+#: src/playlist/playlistsortproxymodel.cpp:503
+#, fuzzy, kde-format
+#| msgctxt "@label:button video codec"
+#| msgid "Video Codec"
+msgctxt "@title:group"
+msgid "No Video Codec"
+msgstr "视频编码"
+
+#: src/playlist/playlistsortproxymodel.cpp:525
+#, fuzzy, kde-format
+#| msgctxt "@label:button disc no"
+#| msgid "Disc No"
+msgctxt "@title:group disc"
+msgid "Disc"
+msgstr "盘片编号"
+
+#: src/playlist/playlistsortproxymodel.cpp:580
+#, fuzzy, kde-format
+#| msgctxt "@label:button video codec"
+#| msgid "Video Codec"
+msgctxt "@title:group"
+msgid "Video File"
+msgstr "视频编码"
+
+#: src/playlist/playlistsortproxymodel.cpp:583
+#, fuzzy, kde-format
+#| msgctxt "@label:button audio codec"
+#| msgid "Audio Codec"
+msgctxt "@title:group"
+msgid "Audio File"
+msgstr "音频编码"
+
+#: src/playlist/playlistsortproxymodel.cpp:607
+#, kde-format
+msgctxt "@title:group"
+msgid "Landscape"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:611
+#, kde-format
+msgctxt "@title:group"
+msgid "Portrait"
+msgstr ""
+
+#: src/playlist/playlistsortproxymodel.cpp:615
+#, kde-format
+msgctxt "@title:group"
+msgid "Square"
+msgstr ""
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -2807,3 +2992,60 @@ msgstr ""
 "无法获取此 ID 的播放列表：%1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:button"
+#~ msgid "Advanced…"
+#~ msgstr "高级…"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "None"
+#~ msgstr "无"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "File Name"
+#~ msgstr "文件名"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Title"
+#~ msgstr "标题"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Duration"
+#~ msgstr "时长"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Modified Date"
+#~ msgstr "修改日期"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "File Size"
+#~ msgstr "文件大小"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Track No"
+#~ msgstr "音轨编号"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sample Rate"
+#~ msgstr "采样率"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Bitrate"
+#~ msgstr "码率"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Playlist items will be grouped by the active <br>properties in the "
+#~ "provided order and each group <br>is sorted within by the primary sort "
+#~ "configuration set above."
+#~ msgstr ""
+#~ "播放列表项目将按照提供的顺序<br>按活动属性分组，并且每组按照上面<br>设置的"
+#~ "主要排序配置进行排序。 "
+
+#~ msgctxt "@label availabe grouping properties"
+#~ msgid "Available Groups"
+#~ msgstr "可用的分组"
+
+#~ msgctxt "@label active grouping properties"
+#~ msgid "Active Groups:"
+#~ msgstr "活动分组："
