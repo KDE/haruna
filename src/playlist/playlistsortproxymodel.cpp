@@ -354,6 +354,7 @@ void PlaylistSortProxyModel::onActiveSortPropertiesChanged()
     if (m_activeSortProperties->m_properties.isEmpty()) {
         m_sortPreset = Sort::None;
         sort(-1, Qt::SortOrder::AscendingOrder);
+        recreateSections();
         return;
     }
     // Check if the change is a preset
