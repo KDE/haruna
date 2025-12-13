@@ -19,8 +19,8 @@ Kirigami.ApplicationWindow {
 
     required property MpvItem m_mpv
 
-    width: 500
-    height: 500
+    width: 550
+    height: 600
     minimumWidth: 250
     minimumHeight: 250
     title: i18nc("@title:configure sort window", "Advanced Sort and Group By")
@@ -36,6 +36,13 @@ Kirigami.ApplicationWindow {
         anchors.fill: parent
         anchors.margins: Kirigami.Units.largeSpacing
 
+        SettingsHeader {
+            Layout.columnSpan: 2
+            headingLevel: 1
+            text: i18nc("@label which playlist is affected, %1 is the playlist name",
+                        "Playlist: %1", root.m_mpv.visibleFilterProxyModel.playlistName())
+            topMargin: Kirigami.Units.smallSpacing
+        }
 
         SettingsHeader {
             Layout.columnSpan: 2
@@ -292,6 +299,11 @@ Kirigami.ApplicationWindow {
                 topMargin: Kirigami.Units.largeSpacing
                 bottomMargin: Kirigami.Units.largeSpacing
             }
+        }
+
+        Item {
+            Layout.columnSpan: 2
+            Layout.topMargin: Kirigami.Units.largeSpacing
         }
 
         SettingsHeader {
