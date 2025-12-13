@@ -52,10 +52,12 @@ PlaylistItemDelegate {
             }
 
             Rectangle {
-                color: Qt.alpha(Kirigami.Theme.alternateBackgroundColor, 0.6)
+                color: Qt.alpha(Kirigami.Theme.textColor, 0.2)
                 visible: PlaylistSettings.showRowNumber
                 Layout.preferredWidth: 1
                 Layout.fillHeight: true
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.bottomMargin: Kirigami.Units.smallSpacing
             }
 
             Item {
