@@ -43,6 +43,8 @@ PlaylistItemDelegate {
             Kirigami.IconTitleSubtitle {
                 icon.name: root.isPlaying ? "media-playback-start" : ""
                 icon.color: root.getLabelColor()
+                icon.width: Kirigami.Units.iconSizes.small
+                icon.height: Kirigami.Units.iconSizes.small
                 title: root.mainText()
                 subtitle: root.duration
                 color: root.getLabelColor()
