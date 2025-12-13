@@ -71,13 +71,6 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
             }
             addPlaylist(playlistName, playlistUrl);
 
-            bool active = playlist.value(u"isActive").toBool();
-            if (active) {
-                uint index = playlist.value(u"currentItem").toInt();
-                setActiveIndex(i);
-                activeFilterProxy()->setPlayingItem(index);
-            }
-
             if (playlist.contains(u"showSections")) {
                 bool showSections = playlist.value(u"showSections").toBool();
                 m_playlistFilterProxyModels[i]->setShowSections(showSections);
@@ -105,6 +98,7 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                     m_playlistFilterProxyModels[i]->setSortPropertySortingOrder(index, order);
                 }
             }
+
             if (playlist.contains(u"groupBy")) {
                 QJsonArray groups = playlist.value(u"groupBy").toArray();
                 std::sort(groups.begin(), groups.end(), sortJsonArray);
@@ -116,6 +110,16 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                     m_playlistFilterProxyModels[i]->addToActiveGroup(group);
                     m_playlistFilterProxyModels[i]->setGroupHideBlank(index, hideBlank);
                 }
+            }
+
+            // this code must be run after the sorting and grouping have been setup, else when
+            // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
+            // the sorting and grouping data is not available on the playlist and will be lost
+            bool active = playlist.value(u"isActive").toBool();
+            if (active) {
+                uint index = playlist.value(u"currentItem").toInt();
+                setActiveIndex(i);
+                activeFilterProxy()->setPlayingItem(index);
             }
         }
     }
