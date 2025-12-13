@@ -678,6 +678,11 @@ QStringList PlaylistFilterProxyModel::getSectionList(QString sectionKey) const
     return playlistSortProxyModel()->m_sectionMap[sectionKey];
 }
 
+QString PlaylistFilterProxyModel::playlistName() const
+{
+    return playlistModel()->m_playlistName;
+}
+
 void PlaylistFilterProxyModel::clear()
 {
     playlistModel()->clear();

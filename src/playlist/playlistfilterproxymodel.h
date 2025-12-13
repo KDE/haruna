@@ -106,6 +106,7 @@ public:
     Q_INVOKABLE void setGroupHideBlank(uint index, bool hide) const;
     Q_INVOKABLE void setSortPropertySortingOrder(uint index, int order) const;
     Q_INVOKABLE QStringList getSectionList(QString sectionKey) const;
+    Q_INVOKABLE QString playlistName() const;
 
     // PlaylistModel
     Q_INVOKABLE void clear();
