@@ -21,7 +21,8 @@ public:
     Q_INVOKABLE QStringList getFonts();
     Q_INVOKABLE QString platformName();
     Q_INVOKABLE bool isPlatformWayland();
-
+    Q_INVOKABLE static bool isHanaInstalled();
+    Q_INVOKABLE static bool openHana(QUrl url);
 };
 
 #endif // SYSTEMUTILS_H

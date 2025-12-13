@@ -9,7 +9,11 @@
 #include <QFontDatabase>
 #include <QGuiApplication>
 
+#include <KIO/ApplicationLauncherJob>
+#include <KService>
 #include <KWindowSystem>
+
+using namespace Qt::StringLiterals;
 
 SystemUtils::SystemUtils(QObject *parent)
     : QObject{parent}
@@ -30,4 +34,28 @@ QString SystemUtils::platformName()
 bool SystemUtils::isPlatformWayland()
 {
     return KWindowSystem::isPlatformWayland();
+}
+
+bool SystemUtils::isHanaInstalled()
+{
+    auto service = KService::serviceByDesktopName(u"org.kde.hana"_s);
+    if (!service) {
+        return false;
+    }
+
+    return true;
+}
+
+bool SystemUtils::openHana(QUrl url)
+{
+    auto service = KService::serviceByDesktopName(u"org.kde.hana"_s);
+    if (!service) {
+        return false;
+    }
+
+    auto *job = new KIO::ApplicationLauncherJob(service);
+    job->setUrls(QList<QUrl>() << url);
+    job->start();
+
+    return true;
 }
