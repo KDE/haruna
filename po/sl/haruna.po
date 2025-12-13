@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:42+0000\n"
-"PO-Revision-Date: 2025-11-28 07:01+0100\n"
+"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"PO-Revision-Date: 2025-12-12 07:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -716,12 +716,9 @@ msgid "Bitrate"
 msgstr "Bitna hitrost"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "Po meri"
+msgstr "Po meri…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -768,7 +765,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Dodaj nov seznam predvajanja"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Preimenuj"
@@ -797,72 +794,72 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "ime seznama predvajanja"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:729
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Odpri vsebovano mapo"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Odpri v brskalniku"
 
-#: src/playlist/Playlist.qml:735
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopiraj ime"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:750
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopiraj pot"
 
-#: src/playlist/Playlist.qml:742
+#: src/playlist/Playlist.qml:751
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopiraj url"
 
-#: src/playlist/Playlist.qml:752
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Izberite vse"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:765
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Od-izberite vse"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:769
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Obrni izbiro"
 
-#: src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Odstrani s seznama predvajanja"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Odstrani izbrano iz seznama predvajanja"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:793
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Premakni se do predmeta predvajanja"
 
-#: src/playlist/Playlist.qml:794
+#: src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Prenesi datoteko v smeti"
 
-#: src/playlist/Playlist.qml:800
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Prenesi izbrane datoteke v smeti"
 
-#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
@@ -873,56 +870,38 @@ msgid "Advanced Sort and Group By"
 msgstr "Napredno razvrščanje in grupiranje po"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
-msgstr "Razvrsti"
+msgstr "Razvrščanje"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:68
 #: src/playlist/PlaylistAdvancedSortWindow.qml:87
 #: src/playlist/PlaylistAdvancedSortWindow.qml:324
 #: src/playlist/PlaylistAdvancedSortWindow.qml:343
-#, fuzzy
-#| msgctxt "@sort:filter"
-#| msgid "Filter"
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "Filter"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
 #: src/playlist/PlaylistAdvancedSortWindow.qml:350
-#, fuzzy
-#| msgctxt "@sort:filter all"
-#| msgid "All"
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "Vse"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:105
 #: src/playlist/PlaylistAdvancedSortWindow.qml:361
-#, fuzzy
-#| msgctxt "@sort:filter file"
-#| msgid "File"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Datoteka"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:116
 #: src/playlist/PlaylistAdvancedSortWindow.qml:372
-#, fuzzy
-#| msgctxt "@sort:filter audio"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Zvok"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:127
 #: src/playlist/PlaylistAdvancedSortWindow.qml:383
-#, fuzzy
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
@@ -940,12 +919,12 @@ msgstr "Padajoče"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:300
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "Grupiranje"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:398
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "Prikaži razdelke"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:408
 msgctxt "@info:tooltip"
@@ -955,11 +934,12 @@ msgid ""
 "below. If the playlist <br>is not sorted by the included group properties in "
 "the <br>same order, then the sections might not be unique."
 msgstr ""
+"Prikaži/skrij oznake razdelkov v pogledu seznama predvajanja. To ne vpliva "
+"na razvrščanje. Lastnosti, ki jih želite vključiti v oznake razdelkov, lahko "
+"izberete spodaj. Če seznam predvajanja ni razvrščen po lastnostih vključenih "
+"skupin v istem vrstnem redu, razdelki morda niso enolični."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:521
-#, fuzzy
-#| msgctxt "@sort:group add new line button"
-#| msgid "Add New Line"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Dodaj novo vrsto"
@@ -970,11 +950,13 @@ msgid ""
 "Hide this group property in the <br> section label when it is empty <br> or "
 "not unique."
 msgstr ""
+"Skrij to lastnost skupine v oznaki razdelka <br>, ko je prazna <br> ali ni "
+"enolična."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:735
 msgctxt "@info:tooltip hide blank"
 msgid "Show the group property in the <br> section label even if it is empty."
-msgstr ""
+msgstr "Prikaži lastnost skupine v oznaki razdelka <br>, tudi če je prazen."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:740
 msgctxt "@info:tooltip group order"
@@ -991,24 +973,20 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Enako kot primarni vrstni red razvrščanja"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#: src/playlist/playlistmultiproxiesmodel.cpp:207
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "Seznami predvajanja z istim imenom niso dovoljeni: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Name"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "Ime datoteke"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "Trajanje"
@@ -1017,44 +995,34 @@ msgstr "Trajanje"
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Size"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "Velikost datoteke"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Title"
+#, kde-format
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "Naslov"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
+#, kde-format
 msgctxt "@label:button track no"
 msgid "Track No"
 msgstr "Št. sledi"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
+#, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
 msgstr "Hitrost vzorčenja"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
+#, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "Bitna hitrost"
@@ -1161,127 +1129,101 @@ msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "Nova vrsta"
 
-#: src/playlist/playlistsortproxymodel.cpp:494
-#, fuzzy, kde-format
-#| msgctxt "@label:button genre"
-#| msgid "Genre"
+#: src/playlist/playlistsortproxymodel.cpp:497
+#, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr "Zvrst"
-
-#: src/playlist/playlistsortproxymodel.cpp:495
-#, fuzzy, kde-format
-#| msgctxt "@label:button album"
-#| msgid "Album"
-msgctxt "@title:group"
-msgid "No Album"
-msgstr "Album"
-
-#: src/playlist/playlistsortproxymodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:button artist"
-#| msgid "Artist"
-msgctxt "@title:group"
-msgid "No Artist"
-msgstr "Izvajalec"
-
-#: src/playlist/playlistsortproxymodel.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "@label:button album artist"
-#| msgid "Album Artist"
-msgctxt "@title:group"
-msgid "No Album Artist"
-msgstr "Izvajalec albuma"
+msgstr "Ni zvrsti"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
-#, fuzzy, kde-format
-#| msgctxt "@label:button composer"
-#| msgid "Composer"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Composer"
-msgstr "Skladatelj"
+msgid "No Album"
+msgstr "Ni albuma"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@label:button lyricist"
-#| msgid "Lyricist"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Lyricist"
-msgstr "Pisec besedila"
+msgid "No Artist"
+msgstr "Ni izvajalca"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
-#, fuzzy, kde-format
-#| msgctxt "@label:button release year"
-#| msgid "Release Year"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Release Year"
-msgstr "Leto izdaje"
+msgid "No Album Artist"
+msgstr "Ni izvajalca albuma"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
-msgid "Not a Video"
-msgstr "Video"
+msgid "No Composer"
+msgstr "Ni skladatelja"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Audio Codec"
-msgstr "Zvočni kodek"
+msgid "No Lyricist"
+msgstr "Ni pisca besedila"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
+#, kde-format
+msgctxt "@title:group"
+msgid "No Release Year"
+msgstr "Ni leta izdaje"
+
+#: src/playlist/playlistsortproxymodel.cpp:504
+#, kde-format
+msgctxt "@title:group"
+msgid "Not a Video"
+msgstr "Ni video"
+
+#: src/playlist/playlistsortproxymodel.cpp:505
+#, kde-format
+msgctxt "@title:group"
+msgid "No Audio Codec"
+msgstr "Ni zvočnega kodeka"
+
+#: src/playlist/playlistsortproxymodel.cpp:506
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "Video kodek"
+msgstr "Ni video kodeka"
 
-#: src/playlist/playlistsortproxymodel.cpp:525
-#, fuzzy, kde-format
-#| msgctxt "@label:button disc no"
-#| msgid "Disc No"
+#: src/playlist/playlistsortproxymodel.cpp:528
+#, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr "Št. diska"
-
-#: src/playlist/playlistsortproxymodel.cpp:580
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
-msgctxt "@title:group"
-msgid "Video File"
-msgstr "Video kodek"
+msgstr "Disk"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
+msgctxt "@title:group"
+msgid "Video File"
+msgstr "Video datoteka"
+
+#: src/playlist/playlistsortproxymodel.cpp:586
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "Zvočni kodek"
+msgstr "Zvočna datoteka"
 
-#: src/playlist/playlistsortproxymodel.cpp:607
+#: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Ležeče"
 
-#: src/playlist/playlistsortproxymodel.cpp:611
+#: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Pokončno"
 
-#: src/playlist/playlistsortproxymodel.cpp:615
+#: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Kvadrat"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1544,12 +1486,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Zvok"
 
-#: src/qml/HProgressBar.qml:282
+#: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Preskoči poglavja"
 
-#: src/qml/HProgressBar.qml:290
+#: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"

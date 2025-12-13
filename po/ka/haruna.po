@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:42+0000\n"
-"PO-Revision-Date: 2025-11-28 04:38+0100\n"
+"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"PO-Revision-Date: 2025-12-12 05:42+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -716,12 +716,9 @@ msgid "Bitrate"
 msgstr "ბიტური სიჩქარე"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "ხელით"
+msgstr "ხელით…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -768,7 +765,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "ახალი დასაკრავი სიის დამატება"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "სახელის გადარქმევა"
@@ -797,72 +794,72 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "დასაკრავი სიის სახელი"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:729
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "შემცველი საქაღალდის გახსნა"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "ბრაუზერში გახსნა"
 
-#: src/playlist/Playlist.qml:735
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "სახელის კოპირება"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:750
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "ბილიკის კოპირება"
 
-#: src/playlist/Playlist.qml:742
+#: src/playlist/Playlist.qml:751
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL-ის კოპირება"
 
-#: src/playlist/Playlist.qml:752
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "ყველაფრის მონიშვნა"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:765
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "მონიშვნის მოხსნა"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:769
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "მონიშვნის ინვერსია"
 
-#: src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "დასაკრავი სიიდან წაშლა"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "მონიშნულის წაშლა დასაკრავი"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:793
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "დაკვრად ელემენტზე გადახვევა"
 
-#: src/playlist/Playlist.qml:794
+#: src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "ფაილის გადატანა ნაგვის ყუთში"
 
-#: src/playlist/Playlist.qml:800
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "მონიშნული ფაილების გადატანა ნაგვის ყუთში"
 
-#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
@@ -873,9 +870,6 @@ msgid "Advanced Sort and Group By"
 msgstr "გაფართოებული დალაგება და დაჯგუფება"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "დალაგება"
@@ -884,45 +878,30 @@ msgstr "დალაგება"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:87
 #: src/playlist/PlaylistAdvancedSortWindow.qml:324
 #: src/playlist/PlaylistAdvancedSortWindow.qml:343
-#, fuzzy
-#| msgctxt "@sort:filter"
-#| msgid "Filter"
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "ფილტრი"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
 #: src/playlist/PlaylistAdvancedSortWindow.qml:350
-#, fuzzy
-#| msgctxt "@sort:filter all"
-#| msgid "All"
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "ყველა"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:105
 #: src/playlist/PlaylistAdvancedSortWindow.qml:361
-#, fuzzy
-#| msgctxt "@sort:filter file"
-#| msgid "File"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "ფაილი"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:116
 #: src/playlist/PlaylistAdvancedSortWindow.qml:372
-#, fuzzy
-#| msgctxt "@sort:filter audio"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "აუდიო"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:127
 #: src/playlist/PlaylistAdvancedSortWindow.qml:383
-#, fuzzy
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "ვიდეო"
@@ -940,12 +919,12 @@ msgstr "დაღმავალი"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:300
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "დაჯგუფება"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:398
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "სექციების ჩვენება"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:408
 msgctxt "@info:tooltip"
@@ -955,11 +934,12 @@ msgid ""
 "below. If the playlist <br>is not sorted by the included group properties in "
 "the <br>same order, then the sections might not be unique."
 msgstr ""
+"სექციების ჭდეების ჩვენება/დამალვა დასაკრავი სიის ხედში.<br>ეს არ მოქმედებს "
+"დალაგებაზე. სექციის ჭდეებში ჩასასმელი<br>თვისებების არჩევა ქვემოთ შეგიძლიათ. "
+"თუ დასაკრავი სია<br>დალაგებული არაა ჩასმული ჯგუფის თვისებების მიმდევრობით,"
+"<br>სექცია, შეიძლება, უნიკალური არ იყოს."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:521
-#, fuzzy
-#| msgctxt "@sort:group add new line button"
-#| msgid "Add New Line"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "ახალი ხაზის დამატება"
@@ -970,11 +950,14 @@ msgid ""
 "Hide this group property in the <br> section label when it is empty <br> or "
 "not unique."
 msgstr ""
+"ამ ჯგუფის თვისების დამალვა<br>სექციის ჭდეში, როცა ის ცარიელია, <br>ან "
+"უნიკალური არაა."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:735
 msgctxt "@info:tooltip hide blank"
 msgid "Show the group property in the <br> section label even if it is empty."
 msgstr ""
+"ჯგუფის თვისების ჩვენება <br>სექციის ჭდეში მაშინაც კი, როცა ის ცარიელია."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:740
 msgctxt "@info:tooltip group order"
@@ -991,24 +974,20 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "იგივე, რაც ძირითადი დალაგების მიმდევრობა"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#: src/playlist/playlistmultiproxiesmodel.cpp:207
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "დასაკრავი სიები იგივე სახელით დაშვებული არაა: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Name"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "ფაილის სახელი"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "ხანგრძლივობა"
@@ -1017,44 +996,34 @@ msgstr "ხანგრძლივობა"
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "თარიღი"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Size"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "ფაილის ზომა"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Title"
+#, kde-format
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "სათაური"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
+#, kde-format
 msgctxt "@label:button track no"
 msgid "Track No"
 msgstr "აუდიობილიკის #"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
+#, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
 msgstr "სემპლების სიხშირე"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
+#, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "ბიტური სიჩქარე"
@@ -1161,127 +1130,101 @@ msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "ახალი ხაზი"
 
-#: src/playlist/playlistsortproxymodel.cpp:494
-#, fuzzy, kde-format
-#| msgctxt "@label:button genre"
-#| msgid "Genre"
+#: src/playlist/playlistsortproxymodel.cpp:497
+#, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr "ჟანრი"
-
-#: src/playlist/playlistsortproxymodel.cpp:495
-#, fuzzy, kde-format
-#| msgctxt "@label:button album"
-#| msgid "Album"
-msgctxt "@title:group"
-msgid "No Album"
-msgstr "ალბომი"
-
-#: src/playlist/playlistsortproxymodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:button artist"
-#| msgid "Artist"
-msgctxt "@title:group"
-msgid "No Artist"
-msgstr "შემსრულებელი"
-
-#: src/playlist/playlistsortproxymodel.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "@label:button album artist"
-#| msgid "Album Artist"
-msgctxt "@title:group"
-msgid "No Album Artist"
-msgstr "ალბომის შემსრულებელი"
+msgstr "ჟანრის გარეშე"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
-#, fuzzy, kde-format
-#| msgctxt "@label:button composer"
-#| msgid "Composer"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Composer"
-msgstr "კომპოზიტორი"
+msgid "No Album"
+msgstr "ალბომის გარეშე"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@label:button lyricist"
-#| msgid "Lyricist"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Lyricist"
-msgstr "ლირიკოსი"
+msgid "No Artist"
+msgstr "შემსრულებლის გარეშე"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
-#, fuzzy, kde-format
-#| msgctxt "@label:button release year"
-#| msgid "Release Year"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Release Year"
-msgstr "გამოშვების წელი"
+msgid "No Album Artist"
+msgstr "ალბომის შემსრულებლის გარეშე"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
-msgid "Not a Video"
-msgstr "ვიდეო"
+msgid "No Composer"
+msgstr "კომპოზიტორის გარეშე"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Audio Codec"
-msgstr "აუდიოკოდეკი"
+msgid "No Lyricist"
+msgstr "ლირიკოსის გარეშე"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
+#, kde-format
+msgctxt "@title:group"
+msgid "No Release Year"
+msgstr "გამოშვების წლის გარეშე"
+
+#: src/playlist/playlistsortproxymodel.cpp:504
+#, kde-format
+msgctxt "@title:group"
+msgid "Not a Video"
+msgstr "ვიდეო არაა"
+
+#: src/playlist/playlistsortproxymodel.cpp:505
+#, kde-format
+msgctxt "@title:group"
+msgid "No Audio Codec"
+msgstr "აუდიოკოდეკის გარეშე"
+
+#: src/playlist/playlistsortproxymodel.cpp:506
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "ვიდეოკოდეკი"
+msgstr "ვიდეოკოდეკის გარეშე"
 
-#: src/playlist/playlistsortproxymodel.cpp:525
-#, fuzzy, kde-format
-#| msgctxt "@label:button disc no"
-#| msgid "Disc No"
+#: src/playlist/playlistsortproxymodel.cpp:528
+#, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr "დისკის #"
-
-#: src/playlist/playlistsortproxymodel.cpp:580
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
-msgctxt "@title:group"
-msgid "Video File"
-msgstr "ვიდეოკოდეკი"
+msgstr "დისკი"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
+msgctxt "@title:group"
+msgid "Video File"
+msgstr "ვიდეოფაილი"
+
+#: src/playlist/playlistsortproxymodel.cpp:586
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "აუდიოკოდეკი"
+msgstr "აუდიო ფაილი"
 
-#: src/playlist/playlistsortproxymodel.cpp:607
+#: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "ლანდშაფტი"
 
-#: src/playlist/playlistsortproxymodel.cpp:611
+#: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "პორტრეტი"
 
-#: src/playlist/playlistsortproxymodel.cpp:615
+#: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "კვადრატი"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1544,12 +1487,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "აუდიო"
 
-#: src/qml/HProgressBar.qml:282
+#: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "თავების გამოტოვება"
 
-#: src/qml/HProgressBar.qml:290
+#: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"

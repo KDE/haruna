@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:42+0000\n"
+"POT-Creation-Date: 2025-12-13 00:43+0000\n"
 "PO-Revision-Date: 2025-10-13 20:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -793,7 +793,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Lisää uusi soittolista"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Muuta nimeä"
@@ -822,72 +822,72 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "soittolistan nimi"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:729
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Avaa yläkansio"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Avaa selaimeen"
 
-#: src/playlist/Playlist.qml:735
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopioi nimi"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:750
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopioi sijainti"
 
-#: src/playlist/Playlist.qml:742
+#: src/playlist/Playlist.qml:751
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopioi verkko-osoite"
 
-#: src/playlist/Playlist.qml:752
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Valitse kaikki"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:765
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Poista kaikki valinnat"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:769
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Käännä valinta"
 
-#: src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Poista soittolistasta"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Poista valitut soittolistasta"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:793
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Vieritä toistettavaan kohteeseen"
 
-#: src/playlist/Playlist.qml:794
+#: src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Siirrä tiedosto roskakoriin"
 
-#: src/playlist/Playlist.qml:800
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Siirrä valitut tiedostot roskakoriin"
 
-#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Valitse tiedosto"
@@ -1025,7 +1025,7 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#: src/playlist/playlistmultiproxiesmodel.cpp:207
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -1200,49 +1200,49 @@ msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:494
+#: src/playlist/playlistsortproxymodel.cpp:497
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:495
+#: src/playlist/playlistsortproxymodel.cpp:498
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:496
+#: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:497
+#: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:498
+#: src/playlist/playlistsortproxymodel.cpp:501
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:499
+#: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:500
+#: src/playlist/playlistsortproxymodel.cpp:503
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:501
+#: src/playlist/playlistsortproxymodel.cpp:504
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Video"
@@ -1250,7 +1250,7 @@ msgctxt "@title:group"
 msgid "Not a Video"
 msgstr "Video"
 
-#: src/playlist/playlistsortproxymodel.cpp:502
+#: src/playlist/playlistsortproxymodel.cpp:505
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Audio Cycle Up"
@@ -1258,7 +1258,7 @@ msgctxt "@title:group"
 msgid "No Audio Codec"
 msgstr "Lisää äänenvoimakkuutta"
 
-#: src/playlist/playlistsortproxymodel.cpp:503
+#: src/playlist/playlistsortproxymodel.cpp:506
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Up"
@@ -1266,13 +1266,13 @@ msgctxt "@title:group"
 msgid "No Video Codec"
 msgstr "Siirrä videota ylemmäs"
 
-#: src/playlist/playlistsortproxymodel.cpp:525
+#: src/playlist/playlistsortproxymodel.cpp:528
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:580
+#: src/playlist/playlistsortproxymodel.cpp:583
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Up"
@@ -1280,7 +1280,7 @@ msgctxt "@title:group"
 msgid "Video File"
 msgstr "Siirrä videota ylemmäs"
 
-#: src/playlist/playlistsortproxymodel.cpp:583
+#: src/playlist/playlistsortproxymodel.cpp:586
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Audio Cycle Up"
@@ -1288,19 +1288,19 @@ msgctxt "@title:group"
 msgid "Audio File"
 msgstr "Lisää äänenvoimakkuutta"
 
-#: src/playlist/playlistsortproxymodel.cpp:607
+#: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:611
+#: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:615
+#: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
@@ -1568,12 +1568,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Ääni"
 
-#: src/qml/HProgressBar.qml:282
+#: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Ohita luvut"
 
-#: src/qml/HProgressBar.qml:290
+#: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"

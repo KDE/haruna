@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:42+0000\n"
+"POT-Creation-Date: 2025-12-13 00:43+0000\n"
 "PO-Revision-Date: 2025-10-12 14:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -792,7 +792,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "재생 목록에 파일 추가"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "이름 바꾸기"
@@ -824,72 +824,72 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "재생 목록 스타일"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:729
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "브라우저로 열기"
 
-#: src/playlist/Playlist.qml:735
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "이름 복사"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:750
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "경로 복사"
 
-#: src/playlist/Playlist.qml:742
+#: src/playlist/Playlist.qml:751
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL 복사"
 
-#: src/playlist/Playlist.qml:752
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "모두 선택"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:765
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "모두 선택 해제"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:769
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "선택 반전"
 
-#: src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "재생 목록에서 삭제"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "재생 목록에서 선택 항목 삭제"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:793
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "현재 재생 중인 항목으로 스크롤"
 
-#: src/playlist/Playlist.qml:794
+#: src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "파일을 휴지통으로 이동"
 
-#: src/playlist/Playlist.qml:800
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "선택한 파일을 휴지통으로 이동"
 
-#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
@@ -1027,7 +1027,7 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#: src/playlist/playlistmultiproxiesmodel.cpp:207
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -1202,49 +1202,49 @@ msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:494
+#: src/playlist/playlistsortproxymodel.cpp:497
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:495
+#: src/playlist/playlistsortproxymodel.cpp:498
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:496
+#: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:497
+#: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:498
+#: src/playlist/playlistsortproxymodel.cpp:501
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:499
+#: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:500
+#: src/playlist/playlistsortproxymodel.cpp:503
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:501
+#: src/playlist/playlistsortproxymodel.cpp:504
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Video"
@@ -1252,7 +1252,7 @@ msgctxt "@title:group"
 msgid "Not a Video"
 msgstr "비디오"
 
-#: src/playlist/playlistsortproxymodel.cpp:502
+#: src/playlist/playlistsortproxymodel.cpp:505
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Audio Cycle Up"
@@ -1260,7 +1260,7 @@ msgctxt "@title:group"
 msgid "No Audio Codec"
 msgstr "다음 오디오로 전환"
 
-#: src/playlist/playlistsortproxymodel.cpp:503
+#: src/playlist/playlistsortproxymodel.cpp:506
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Up"
@@ -1268,13 +1268,13 @@ msgctxt "@title:group"
 msgid "No Video Codec"
 msgstr "동영상 위로 이동"
 
-#: src/playlist/playlistsortproxymodel.cpp:525
+#: src/playlist/playlistsortproxymodel.cpp:528
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:580
+#: src/playlist/playlistsortproxymodel.cpp:583
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Up"
@@ -1282,7 +1282,7 @@ msgctxt "@title:group"
 msgid "Video File"
 msgstr "동영상 위로 이동"
 
-#: src/playlist/playlistsortproxymodel.cpp:583
+#: src/playlist/playlistsortproxymodel.cpp:586
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Audio Cycle Up"
@@ -1290,19 +1290,19 @@ msgctxt "@title:group"
 msgid "Audio File"
 msgstr "다음 오디오로 전환"
 
-#: src/playlist/playlistsortproxymodel.cpp:607
+#: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:611
+#: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:615
+#: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
@@ -1569,12 +1569,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:282
+#: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:290
+#: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"

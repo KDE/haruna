@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:42+0000\n"
-"PO-Revision-Date: 2025-11-28 16:08+0100\n"
+"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"PO-Revision-Date: 2025-12-12 09:44+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -33,7 +33,7 @@ msgstr "antonibella5@yahoo.com"
 #: src/application.cpp:129
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
-msgstr "Descarregador d'àudio/vídeo ric en funcions de línia d'ordres"
+msgstr "Descarregador d'àudio/vídeo ric en característiques de línia d'ordres"
 
 #: src/application.cpp:142
 #, kde-format
@@ -717,12 +717,9 @@ msgid "Bitrate"
 msgstr "Taxa de bits"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "Personalitzat"
+msgstr "Personalitzat…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -769,7 +766,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Afig una llista de reproducció nova"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Canvia el nom"
@@ -798,72 +795,72 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "nom de la llista de reproducció"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:729
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Obri la carpeta contenidora"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Obri en el navegador"
 
-#: src/playlist/Playlist.qml:735
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Copia el nom"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:750
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Copia el camí"
 
-#: src/playlist/Playlist.qml:742
+#: src/playlist/Playlist.qml:751
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Copia l'URL"
 
-#: src/playlist/Playlist.qml:752
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Selecciona-ho tot"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:765
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Desselecciona-ho tot"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:769
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Invertix la selecció"
 
-#: src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Elimina de la llista de reproducció"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Elimina la selecció de la llista de reproducció"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:793
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Desplaceu-vos per a reproduir l'element"
 
-#: src/playlist/Playlist.qml:794
+#: src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Mou el fitxer cap a dins de la paperera"
 
-#: src/playlist/Playlist.qml:800
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Mou els fitxers seleccionats a la paperera"
 
-#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Trieu un fitxer"
@@ -874,56 +871,38 @@ msgid "Advanced Sort and Group By"
 msgstr "Ordenació i agrupació avançada"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
-msgstr "Ordena"
+msgstr "Ordenació"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:68
 #: src/playlist/PlaylistAdvancedSortWindow.qml:87
 #: src/playlist/PlaylistAdvancedSortWindow.qml:324
 #: src/playlist/PlaylistAdvancedSortWindow.qml:343
-#, fuzzy
-#| msgctxt "@sort:filter"
-#| msgid "Filter"
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "Filtre"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
 #: src/playlist/PlaylistAdvancedSortWindow.qml:350
-#, fuzzy
-#| msgctxt "@sort:filter all"
-#| msgid "All"
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "Tot"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:105
 #: src/playlist/PlaylistAdvancedSortWindow.qml:361
-#, fuzzy
-#| msgctxt "@sort:filter file"
-#| msgid "File"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Fitxer"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:116
 #: src/playlist/PlaylistAdvancedSortWindow.qml:372
-#, fuzzy
-#| msgctxt "@sort:filter audio"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Àudio"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:127
 #: src/playlist/PlaylistAdvancedSortWindow.qml:383
-#, fuzzy
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Vídeo"
@@ -941,12 +920,12 @@ msgstr "Descendent"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:300
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "Agrupament"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:398
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "Mostra les seccions"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:408
 msgctxt "@info:tooltip"
@@ -956,11 +935,13 @@ msgid ""
 "below. If the playlist <br>is not sorted by the included group properties in "
 "the <br>same order, then the sections might not be unique."
 msgstr ""
+"Mostra o oculta les etiquetes de les seccions a la vista de la llista de "
+"reproducció.<br>Açò no afecta l'ordenació. Les propietats que s'inclouran a "
+"les etiquetes de secció <br>es poden seleccionar a continuació. Si la llista "
+"de reproducció <br>no està ordenada per les propietats de grup incloses en "
+"el mateix ordre, <br>llavors les seccions podrien no ser úniques."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:521
-#, fuzzy
-#| msgctxt "@sort:group add new line button"
-#| msgid "Add New Line"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Afig una línia nova"
@@ -971,11 +952,14 @@ msgid ""
 "Hide this group property in the <br> section label when it is empty <br> or "
 "not unique."
 msgstr ""
+"Oculta esta propietat del grup a <br> l'etiqueta de secció quan siga buida."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:735
 msgctxt "@info:tooltip hide blank"
 msgid "Show the group property in the <br> section label even if it is empty."
 msgstr ""
+"Mostra la propietat del grup a <br> l'etiqueta de secció encara que siga "
+"buida."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:740
 msgctxt "@info:tooltip group order"
@@ -992,24 +976,20 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "El mateix que el criteri d'ordenació primari"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#: src/playlist/playlistmultiproxiesmodel.cpp:207
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "No es permeten llistes de reproducció amb el mateix nom: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Name"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "Nom del fitxer"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "Duració"
@@ -1018,44 +998,34 @@ msgstr "Duració"
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Size"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "Mida del fitxer"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Title"
+#, kde-format
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "Títol"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
+#, kde-format
 msgctxt "@label:button track no"
 msgid "Track No"
 msgstr "Núm. de pista"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
+#, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
-msgstr "Freqüència del mostreig"
+msgstr "Freqüència de mostreig"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
+#, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "Taxa de bits"
@@ -1162,127 +1132,101 @@ msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "Línia nova"
 
-#: src/playlist/playlistsortproxymodel.cpp:494
-#, fuzzy, kde-format
-#| msgctxt "@label:button genre"
-#| msgid "Genre"
+#: src/playlist/playlistsortproxymodel.cpp:497
+#, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr "Gènere"
-
-#: src/playlist/playlistsortproxymodel.cpp:495
-#, fuzzy, kde-format
-#| msgctxt "@label:button album"
-#| msgid "Album"
-msgctxt "@title:group"
-msgid "No Album"
-msgstr "Àlbum"
-
-#: src/playlist/playlistsortproxymodel.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "@label:button artist"
-#| msgid "Artist"
-msgctxt "@title:group"
-msgid "No Artist"
-msgstr "Artista"
-
-#: src/playlist/playlistsortproxymodel.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "@label:button album artist"
-#| msgid "Album Artist"
-msgctxt "@title:group"
-msgid "No Album Artist"
-msgstr "Artista de l'àlbum"
+msgstr "Sense gènere"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
-#, fuzzy, kde-format
-#| msgctxt "@label:button composer"
-#| msgid "Composer"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Composer"
-msgstr "Editor"
+msgid "No Album"
+msgstr "Sense àlbum"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@label:button lyricist"
-#| msgid "Lyricist"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Lyricist"
-msgstr "Lletrista"
+msgid "No Artist"
+msgstr "Sense artista"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
-#, fuzzy, kde-format
-#| msgctxt "@label:button release year"
-#| msgid "Release Year"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Release Year"
-msgstr "Any d'edició"
+msgid "No Album Artist"
+msgstr "Sense artista d'àlbum"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
-msgid "Not a Video"
-msgstr "Vídeo"
+msgid "No Composer"
+msgstr "Sense compositor"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
 msgctxt "@title:group"
-msgid "No Audio Codec"
-msgstr "Còdec d'àudio"
+msgid "No Lyricist"
+msgstr "Sense lletrista"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
+#, kde-format
+msgctxt "@title:group"
+msgid "No Release Year"
+msgstr "Sense any d'edició"
+
+#: src/playlist/playlistsortproxymodel.cpp:504
+#, kde-format
+msgctxt "@title:group"
+msgid "Not a Video"
+msgstr "No té vídeo"
+
+#: src/playlist/playlistsortproxymodel.cpp:505
+#, kde-format
+msgctxt "@title:group"
+msgid "No Audio Codec"
+msgstr "Sense còdec d'àudio"
+
+#: src/playlist/playlistsortproxymodel.cpp:506
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "Còdec de vídeo"
+msgstr "Sense còdec de vídeo"
 
-#: src/playlist/playlistsortproxymodel.cpp:525
-#, fuzzy, kde-format
-#| msgctxt "@label:button disc no"
-#| msgid "Disc No"
+#: src/playlist/playlistsortproxymodel.cpp:528
+#, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr "Núm. disc"
-
-#: src/playlist/playlistsortproxymodel.cpp:580
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
-msgctxt "@title:group"
-msgid "Video File"
-msgstr "Còdec de vídeo"
+msgstr "Disc"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
+msgctxt "@title:group"
+msgid "Video File"
+msgstr "Fitxer de vídeo"
+
+#: src/playlist/playlistsortproxymodel.cpp:586
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "Còdec d'àudio"
+msgstr "Fitxer d'àudio"
 
-#: src/playlist/playlistsortproxymodel.cpp:607
+#: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Horitzontal"
 
-#: src/playlist/playlistsortproxymodel.cpp:611
+#: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Vertical"
 
-#: src/playlist/playlistsortproxymodel.cpp:615
+#: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Quadrat"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1547,12 +1491,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Àudio"
 
-#: src/qml/HProgressBar.qml:282
+#: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Omet els capítols"
 
-#: src/qml/HProgressBar.qml:290
+#: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -3068,61 +3012,3 @@ msgstr ""
 "No s'ha pogut recuperar la llista de reproducció amb ID: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@action:button"
-#~ msgid "Advanced…"
-#~ msgstr "Avançat…"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "None"
-#~ msgstr "Sense"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "File Name"
-#~ msgstr "Nom del fitxer"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Title"
-#~ msgstr "Títol"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Duration"
-#~ msgstr "Duració"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Modified Date"
-#~ msgstr "Data de modificació"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "File Size"
-#~ msgstr "Mida del fitxer"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Track No"
-#~ msgstr "Núm. de pista"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Sample Rate"
-#~ msgstr "Freqüència de mostreig"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Bitrate"
-#~ msgstr "Taxa de bits"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Playlist items will be grouped by the active <br>properties in the "
-#~ "provided order and each group <br>is sorted within by the primary sort "
-#~ "configuration set above."
-#~ msgstr ""
-#~ "Els elements de la llista de reproducció s'agruparan per les "
-#~ "<br>propietats actives en l'ordre proporcionat i cada grup <br>s'ordenarà "
-#~ "segons la configuració d'ordenació primària establida anteriorment."
-
-#~ msgctxt "@label availabe grouping properties"
-#~ msgid "Available Groups"
-#~ msgstr "Grups disponibles"
-
-#~ msgctxt "@label active grouping properties"
-#~ msgid "Active Groups:"
-#~ msgstr "Grups actius:"

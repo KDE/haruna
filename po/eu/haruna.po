@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:42+0000\n"
+"POT-Creation-Date: 2025-12-13 00:43+0000\n"
 "PO-Revision-Date: 2025-12-08 22:28+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -769,7 +769,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Gehitu jotze-zerrenda berria"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:778
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Berrizendatu"
@@ -798,72 +798,72 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "Jotze-zerrendaren izena"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:729
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Ireki hau barnean duen karpeta"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Ireki arakatzailean"
 
-#: src/playlist/Playlist.qml:735
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopiatu izena"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:750
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopiatu bide-izena"
 
-#: src/playlist/Playlist.qml:742
+#: src/playlist/Playlist.qml:751
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopiatu URL"
 
-#: src/playlist/Playlist.qml:752
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Hautatu dena"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:765
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Desautatu dena"
 
-#: src/playlist/Playlist.qml:760
+#: src/playlist/Playlist.qml:769
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Alderantzikatu hautapena"
 
-#: src/playlist/Playlist.qml:766
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Kendu jotze-zerrendatik"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Kendu hautatutakoak jotze-zerrendatik"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:793
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Kiribildu jotzen ari den elementuraino"
 
-#: src/playlist/Playlist.qml:794
+#: src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Mugitu fitxategia zakarrontzira"
 
-#: src/playlist/Playlist.qml:800
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Eraman hautatutako fitxategiak zakarrontzira"
 
-#: src/playlist/Playlist.qml:906 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"
@@ -992,7 +992,7 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Sailkatze orden nagusiaren berdina"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:160
+#: src/playlist/playlistmultiproxiesmodel.cpp:207
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -1162,7 +1162,7 @@ msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "Lerro berria"
 
-#: src/playlist/playlistsortproxymodel.cpp:494
+#: src/playlist/playlistsortproxymodel.cpp:497
 #, fuzzy, kde-format
 #| msgctxt "@label:button genre"
 #| msgid "Genre"
@@ -1170,7 +1170,7 @@ msgctxt "@title:group"
 msgid "No Genre"
 msgstr "Generoa"
 
-#: src/playlist/playlistsortproxymodel.cpp:495
+#: src/playlist/playlistsortproxymodel.cpp:498
 #, fuzzy, kde-format
 #| msgctxt "@label:button album"
 #| msgid "Album"
@@ -1178,7 +1178,7 @@ msgctxt "@title:group"
 msgid "No Album"
 msgstr "Albuma"
 
-#: src/playlist/playlistsortproxymodel.cpp:496
+#: src/playlist/playlistsortproxymodel.cpp:499
 #, fuzzy, kde-format
 #| msgctxt "@label:button artist"
 #| msgid "Artist"
@@ -1186,7 +1186,7 @@ msgctxt "@title:group"
 msgid "No Artist"
 msgstr "Artista"
 
-#: src/playlist/playlistsortproxymodel.cpp:497
+#: src/playlist/playlistsortproxymodel.cpp:500
 #, fuzzy, kde-format
 #| msgctxt "@label:button album artist"
 #| msgid "Album Artist"
@@ -1194,7 +1194,7 @@ msgctxt "@title:group"
 msgid "No Album Artist"
 msgstr "Albumeko artista"
 
-#: src/playlist/playlistsortproxymodel.cpp:498
+#: src/playlist/playlistsortproxymodel.cpp:501
 #, fuzzy, kde-format
 #| msgctxt "@label:button composer"
 #| msgid "Composer"
@@ -1202,7 +1202,7 @@ msgctxt "@title:group"
 msgid "No Composer"
 msgstr "Konposatzailea"
 
-#: src/playlist/playlistsortproxymodel.cpp:499
+#: src/playlist/playlistsortproxymodel.cpp:502
 #, fuzzy, kde-format
 #| msgctxt "@label:button lyricist"
 #| msgid "Lyricist"
@@ -1210,7 +1210,7 @@ msgctxt "@title:group"
 msgid "No Lyricist"
 msgstr "Hitzen egilea"
 
-#: src/playlist/playlistsortproxymodel.cpp:500
+#: src/playlist/playlistsortproxymodel.cpp:503
 #, fuzzy, kde-format
 #| msgctxt "@label:button release year"
 #| msgid "Release Year"
@@ -1218,7 +1218,7 @@ msgctxt "@title:group"
 msgid "No Release Year"
 msgstr "Argitaratze urtea"
 
-#: src/playlist/playlistsortproxymodel.cpp:501
+#: src/playlist/playlistsortproxymodel.cpp:504
 #, fuzzy, kde-format
 #| msgctxt "@sort:filter video"
 #| msgid "Video"
@@ -1226,7 +1226,7 @@ msgctxt "@title:group"
 msgid "Not a Video"
 msgstr "Bideoa"
 
-#: src/playlist/playlistsortproxymodel.cpp:502
+#: src/playlist/playlistsortproxymodel.cpp:505
 #, fuzzy, kde-format
 #| msgctxt "@label:button audio codec"
 #| msgid "Audio Codec"
@@ -1234,7 +1234,7 @@ msgctxt "@title:group"
 msgid "No Audio Codec"
 msgstr "Audio kodeka"
 
-#: src/playlist/playlistsortproxymodel.cpp:503
+#: src/playlist/playlistsortproxymodel.cpp:506
 #, fuzzy, kde-format
 #| msgctxt "@label:button video codec"
 #| msgid "Video Codec"
@@ -1242,7 +1242,7 @@ msgctxt "@title:group"
 msgid "No Video Codec"
 msgstr "Bideoa kodeka"
 
-#: src/playlist/playlistsortproxymodel.cpp:525
+#: src/playlist/playlistsortproxymodel.cpp:528
 #, fuzzy, kde-format
 #| msgctxt "@label:button disc no"
 #| msgid "Disc No"
@@ -1250,7 +1250,7 @@ msgctxt "@title:group disc"
 msgid "Disc"
 msgstr "Disko zk."
 
-#: src/playlist/playlistsortproxymodel.cpp:580
+#: src/playlist/playlistsortproxymodel.cpp:583
 #, fuzzy, kde-format
 #| msgctxt "@label:button video codec"
 #| msgid "Video Codec"
@@ -1258,7 +1258,7 @@ msgctxt "@title:group"
 msgid "Video File"
 msgstr "Bideoa kodeka"
 
-#: src/playlist/playlistsortproxymodel.cpp:583
+#: src/playlist/playlistsortproxymodel.cpp:586
 #, fuzzy, kde-format
 #| msgctxt "@label:button audio codec"
 #| msgid "Audio Codec"
@@ -1266,19 +1266,19 @@ msgctxt "@title:group"
 msgid "Audio File"
 msgstr "Audio kodeka"
 
-#: src/playlist/playlistsortproxymodel.cpp:607
+#: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:611
+#: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
 msgstr ""
 
-#: src/playlist/playlistsortproxymodel.cpp:615
+#: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
@@ -1548,12 +1548,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audioa"
 
-#: src/qml/HProgressBar.qml:282
+#: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Saltatu atalak"
 
-#: src/qml/HProgressBar.qml:290
+#: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
