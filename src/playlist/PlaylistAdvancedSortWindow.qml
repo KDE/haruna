@@ -417,10 +417,8 @@ Kirigami.ApplicationWindow {
             }
             ToolTipButton {
                 toolTipText: i18nc("@info:tooltip",
-                                   "Show/Hide section labels in the playlist view. This <br>" +
-                                   "does not affect sorting. Properties to include in the <br>" +
-                                   "section labels can be selected below. If the playlist <br>" +
-                                   "is not sorted by the included group properties in the <br>" +
+                                   "Show/Hide section labels in the playlist view. <br>" +
+                                   "If the playlist is not sorted by the included group properties in the " +
                                    "same order, then the sections might not be unique.")
                 toolTipWidth: 450
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
@@ -742,9 +740,9 @@ Kirigami.ApplicationWindow {
                         ToolTip.text: {
                             if (itemDelegate.isGroup) {
                                 if (itemDelegate.hideBlank) {
-                                    return i18nc("@info:tooltip show blank", "Hide this group property in the <br> section label when it is empty <br> or not unique.")
+                                    return i18nc("@info:tooltip show blank", "Property is hidden if empty or not unique.")
                                 } else {
-                                    return i18nc("@info:tooltip hide blank", "Show the group property in the <br> section label even if it is empty.")
+                                    return i18nc("@info:tooltip hide blank", "Property is shown, if empty a placeholder will be shown.")
                                 }
                             } else {
                                 switch(itemDelegate.order){
