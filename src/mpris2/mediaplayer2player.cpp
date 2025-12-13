@@ -56,7 +56,7 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     });
 
     connect(m_mpv, &MpvItem::durationChanged, this, [=]() {
-        m_metadata.insert(u"mpris:length"_s, m_mpv->duration() * 1000 * 1000);
+        m_metadata.insert(u"mpris:length"_s, static_cast<qint64>(m_mpv->duration() * 1000 * 1000));
         propertiesChanged(u"Metadata"_s, m_metadata);
     });
 
