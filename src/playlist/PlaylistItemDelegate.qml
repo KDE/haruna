@@ -97,8 +97,6 @@ Item {
             return Qt.alpha(Kirigami.Theme.backgroundColor, root.alpha)
         }
 
-        Behavior on color { ColorAnimation { duration: Kirigami.Units.shortDuration } }
-
         // Derived items must override this
         Item {
             id: contentItem
