@@ -741,6 +741,17 @@ Page {
                     }
                 }
                 MenuItem {
+                    text: i18nc("@action:inmenu", "Open in Thumbnail Generator")
+                    icon.name: "hana"
+                    visible: SystemUtils.isHanaInstalled() && SystemUtils.platformName() !== "windows"
+                             && contextMenuLoader.isLocal && contextMenuLoader.row != -1
+                    onClicked: {
+                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const url = modelIndex.data(PlaylistModel.PathRole)
+                        SystemUtils.openHana(url)
+                    }
+                }
+                MenuItem {
                     text: i18nc("@action:inmenu", "Copy Name")
                     onClicked: root.m_mpv.visibleFilterProxyModel.copyFileName(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1
