@@ -22,23 +22,17 @@ Item {
     property real alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
 
     implicitWidth: ListView.view.width
-    implicitHeight: content.implicitHeight
-
-    anchors {
-        topMargin: 1
-        bottomMargin: 1
-    }
+    implicitHeight: content.implicitHeight + Kirigami.Units.largeSpacing * 3
 
     Rectangle {
         id: backgroundRect
 
         anchors {
             fill: parent
-            topMargin: 1
             bottomMargin: 1
         }
 
-        color: Qt.alpha(Kirigami.Theme.backgroundColor, root.alpha)
+        color: Qt.alpha(Qt.darker(Kirigami.Theme.backgroundColor, 1.1), root.alpha)
 
         ColumnLayout {
             id: content
@@ -49,31 +43,8 @@ Item {
                 spacing: 1
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                Layout.leftMargin: Kirigami.Units.mediumSpacing
+                Layout.leftMargin: Kirigami.Units.largeSpacing * 2
                 Layout.rightMargin: Kirigami.Units.mediumSpacing
-                Layout.topMargin: Kirigami.Units.mediumSpacing
-
-                Rectangle {
-                    color: Qt.alpha(Kirigami.Theme.activeTextColor, root.alpha)
-                    Layout.preferredWidth: 5
-                    Layout.fillWidth: false
-                    Layout.fillHeight: true
-                }
-
-                Kirigami.Separator {
-                    color: Qt.alpha(Kirigami.Theme.activeTextColor, root.alpha)
-                    weight: Kirigami.Separator.Weight.Normal
-                    Layout.fillHeight: true
-                    Layout.fillWidth: false
-                }
-
-                Kirigami.Separator {
-                    color: Qt.alpha(Kirigami.Theme.activeTextColor, root.alpha)
-                    weight: Kirigami.Separator.Weight.Light
-                    Layout.fillHeight: true
-                    Layout.fillWidth: false
-                    Layout.rightMargin: Kirigami.Units.smallSpacing
-                }
 
                 ColumnLayout {
                     id: sectionColumn
@@ -82,7 +53,6 @@ Item {
 
                     Repeater {
                         model: root.model.getSectionList(root.section)
-                        Layout.fillWidth: true
 
                         delegate: Kirigami.Heading {
                             required property int index
@@ -100,19 +70,6 @@ Item {
                         }
                     }
                 }
-            }
-
-            Rectangle {
-                id: bottomLine
-
-                color: Qt.alpha(Kirigami.Theme.activeTextColor, root.alpha)
-                Layout.preferredHeight: 1
-                Layout.fillWidth: true
-                Layout.fillHeight: false
-                Layout.alignment: Qt.AlignBottom
-                Layout.leftMargin: Kirigami.Units.mediumSpacing
-                Layout.rightMargin: Kirigami.Units.mediumSpacing
-                Layout.bottomMargin: Kirigami.Units.mediumSpacing
             }
         }
     }
