@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"POT-Creation-Date: 2025-12-14 00:41+0000\n"
 "PO-Revision-Date: 2025-12-12 07:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -765,7 +765,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Dodaj nov seznam predvajanja"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:798
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Preimenuj"
@@ -806,60 +806,65 @@ msgstr "Odpri v brskalniku"
 
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
+msgid "Open in Thumbnail Generator"
+msgstr ""
+
+#: src/playlist/Playlist.qml:755
+msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopiraj ime"
 
-#: src/playlist/Playlist.qml:750
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopiraj pot"
 
-#: src/playlist/Playlist.qml:751
+#: src/playlist/Playlist.qml:762
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopiraj url"
 
-#: src/playlist/Playlist.qml:761
+#: src/playlist/Playlist.qml:772
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Izberite vse"
 
-#: src/playlist/Playlist.qml:765
+#: src/playlist/Playlist.qml:776
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Od-izberite vse"
 
-#: src/playlist/Playlist.qml:769
+#: src/playlist/Playlist.qml:780
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Obrni izbiro"
 
-#: src/playlist/Playlist.qml:775
+#: src/playlist/Playlist.qml:786
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Odstrani s seznama predvajanja"
 
-#: src/playlist/Playlist.qml:781
+#: src/playlist/Playlist.qml:792
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Odstrani izbrano iz seznama predvajanja"
 
-#: src/playlist/Playlist.qml:793
+#: src/playlist/Playlist.qml:804
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Premakni se do predmeta predvajanja"
 
-#: src/playlist/Playlist.qml:803
+#: src/playlist/Playlist.qml:814
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Prenesi datoteko v smeti"
 
-#: src/playlist/Playlist.qml:809
+#: src/playlist/Playlist.qml:820
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Prenesi izbrane datoteke v smeti"
 
-#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:926 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Izberite datoteko"
@@ -870,110 +875,120 @@ msgid "Advanced Sort and Group By"
 msgstr "Napredno razvrščanje in grupiranje po"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@label which playlist is affected, %1 is the playlist name"
+msgid "Playlist: %1"
+msgstr "Seznam predvajanja"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:50
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "Razvrščanje"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:68
-#: src/playlist/PlaylistAdvancedSortWindow.qml:87
-#: src/playlist/PlaylistAdvancedSortWindow.qml:324
-#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+#: src/playlist/PlaylistAdvancedSortWindow.qml:75
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:336
+#: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "Filter"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:94
-#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#: src/playlist/PlaylistAdvancedSortWindow.qml:101
+#: src/playlist/PlaylistAdvancedSortWindow.qml:362
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "Vse"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:105
-#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#: src/playlist/PlaylistAdvancedSortWindow.qml:112
+#: src/playlist/PlaylistAdvancedSortWindow.qml:373
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Datoteka"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:116
-#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#: src/playlist/PlaylistAdvancedSortWindow.qml:123
+#: src/playlist/PlaylistAdvancedSortWindow.qml:384
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Zvok"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:127
-#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#: src/playlist/PlaylistAdvancedSortWindow.qml:134
+#: src/playlist/PlaylistAdvancedSortWindow.qml:395
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:174
+#: src/playlist/PlaylistAdvancedSortWindow.qml:181
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Naraščajoče"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:187
+#: src/playlist/PlaylistAdvancedSortWindow.qml:194
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Padajoče"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+#: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
 msgstr "Grupiranje"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:398
+#: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr "Prikaži razdelke"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:408
+#: src/playlist/PlaylistAdvancedSortWindow.qml:420
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Show/Hide section labels in the playlist view. This <br>does not affect "
+#| "sorting. Properties to include in the <br>section labels can be selected "
+#| "below. If the playlist <br>is not sorted by the included group properties "
+#| "in the <br>same order, then the sections might not be unique."
 msgctxt "@info:tooltip"
 msgid ""
-"Show/Hide section labels in the playlist view. This <br>does not affect "
-"sorting. Properties to include in the <br>section labels can be selected "
-"below. If the playlist <br>is not sorted by the included group properties in "
-"the <br>same order, then the sections might not be unique."
+"Show/Hide section labels in the playlist view. <br>If the playlist is not "
+"sorted by the included group properties in the same order, then the sections "
+"might not be unique."
 msgstr ""
 "Prikaži/skrij oznake razdelkov v pogledu seznama predvajanja. To ne vpliva "
 "na razvrščanje. Lastnosti, ki jih želite vključiti v oznake razdelkov, lahko "
 "izberete spodaj. Če seznam predvajanja ni razvrščen po lastnostih vključenih "
 "skupin v istem vrstnem redu, razdelki morda niso enolični."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:521
+#: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Dodaj novo vrsto"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+#: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
-msgid ""
-"Hide this group property in the <br> section label when it is empty <br> or "
-"not unique."
+msgid "Property is hidden if empty or not unique."
 msgstr ""
-"Skrij to lastnost skupine v oznaki razdelka <br>, ko je prazna <br> ali ni "
-"enolična."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+#: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
-msgid "Show the group property in the <br> section label even if it is empty."
-msgstr "Prikaži lastnost skupine v oznaki razdelka <br>, tudi če je prazen."
+msgid "Property is shown, if empty a placeholder will be shown."
+msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:740
+#: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Razvrsti naraščajoče"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:742
+#: src/playlist/PlaylistAdvancedSortWindow.qml:752
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Razvrsti padajoče"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:744
+#: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Enako kot primarni vrstni red razvrščanja"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:207
+#: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -3003,6 +3018,19 @@ msgstr ""
 "Ni bilo mogoče pridobiti seznama predvajanja z določilnikom: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip show blank"
+#~ msgid ""
+#~ "Hide this group property in the <br> section label when it is empty <br> "
+#~ "or not unique."
+#~ msgstr ""
+#~ "Skrij to lastnost skupine v oznaki razdelka <br>, ko je prazna <br> ali "
+#~ "ni enolična."
+
+#~ msgctxt "@info:tooltip hide blank"
+#~ msgid ""
+#~ "Show the group property in the <br> section label even if it is empty."
+#~ msgstr "Prikaži lastnost skupine v oznaki razdelka <br>, tudi če je prazen."
 
 #~ msgctxt "@action:button"
 #~ msgid "Advanced…"

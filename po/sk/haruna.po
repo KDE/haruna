@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"POT-Creation-Date: 2025-12-14 00:41+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -843,7 +843,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Zoznam skladieb"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:798
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Premenovať"
@@ -887,6 +887,11 @@ msgid "Open in Browser"
 msgstr "Otvoriť v prehliadači"
 
 #: src/playlist/Playlist.qml:744
+msgctxt "@action:inmenu"
+msgid "Open in Thumbnail Generator"
+msgstr ""
+
+#: src/playlist/Playlist.qml:755
 #, fuzzy
 #| msgctxt "NAME OF TRANSLATORS"
 #| msgid "Your names"
@@ -894,13 +899,13 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Roman Paholík"
 
-#: src/playlist/Playlist.qml:750
+#: src/playlist/Playlist.qml:761
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopírovať cestu"
 
-#: src/playlist/Playlist.qml:751
+#: src/playlist/Playlist.qml:762
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -908,7 +913,7 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopírovať URL adresu"
 
-#: src/playlist/Playlist.qml:761
+#: src/playlist/Playlist.qml:772
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -916,7 +921,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Vyberte súbor"
 
-#: src/playlist/Playlist.qml:765
+#: src/playlist/Playlist.qml:776
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -924,7 +929,7 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Vyberte súbor"
 
-#: src/playlist/Playlist.qml:769
+#: src/playlist/Playlist.qml:780
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Confirm deletion"
@@ -932,38 +937,38 @@ msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Potvrdiť vymazanie"
 
-#: src/playlist/Playlist.qml:775
+#: src/playlist/Playlist.qml:786
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Odstrániť zo zoznamu skladieb"
 
-#: src/playlist/Playlist.qml:781
+#: src/playlist/Playlist.qml:792
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Odstrániť zo zoznamu skladieb"
 
-#: src/playlist/Playlist.qml:793
+#: src/playlist/Playlist.qml:804
 #, fuzzy
 #| msgid "Start Playback"
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Spustiť prehrávanie"
 
-#: src/playlist/Playlist.qml:803
+#: src/playlist/Playlist.qml:814
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/playlist/Playlist.qml:809
+#: src/playlist/Playlist.qml:820
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr ""
 
-#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:926 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Vyberte súbor"
@@ -975,26 +980,34 @@ msgstr ""
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
 #, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@label which playlist is affected, %1 is the playlist name"
+msgid "Playlist: %1"
+msgstr "Zoznam skladieb"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:50
+#, fuzzy
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "Triediť"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:68
-#: src/playlist/PlaylistAdvancedSortWindow.qml:87
-#: src/playlist/PlaylistAdvancedSortWindow.qml:324
-#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+#: src/playlist/PlaylistAdvancedSortWindow.qml:75
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:336
+#: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:94
-#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#: src/playlist/PlaylistAdvancedSortWindow.qml:101
+#: src/playlist/PlaylistAdvancedSortWindow.qml:362
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:105
-#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#: src/playlist/PlaylistAdvancedSortWindow.qml:112
+#: src/playlist/PlaylistAdvancedSortWindow.qml:373
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1002,16 +1015,16 @@ msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Súbor"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:116
-#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#: src/playlist/PlaylistAdvancedSortWindow.qml:123
+#: src/playlist/PlaylistAdvancedSortWindow.qml:384
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:127
-#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#: src/playlist/PlaylistAdvancedSortWindow.qml:134
+#: src/playlist/PlaylistAdvancedSortWindow.qml:395
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Video"
@@ -1019,76 +1032,73 @@ msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:174
+#: src/playlist/PlaylistAdvancedSortWindow.qml:181
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Sýtosť"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:187
+#: src/playlist/PlaylistAdvancedSortWindow.qml:194
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Sýtosť"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+#: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:398
+#: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:408
+#: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
 msgid ""
-"Show/Hide section labels in the playlist view. This <br>does not affect "
-"sorting. Properties to include in the <br>section labels can be selected "
-"below. If the playlist <br>is not sorted by the included group properties in "
-"the <br>same order, then the sections might not be unique."
+"Show/Hide section labels in the playlist view. <br>If the playlist is not "
+"sorted by the included group properties in the same order, then the sections "
+"might not be unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:521
+#: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+#: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
-msgid ""
-"Hide this group property in the <br> section label when it is empty <br> or "
-"not unique."
+msgid "Property is hidden if empty or not unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+#: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
-msgid "Show the group property in the <br> section label even if it is empty."
+msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:740
+#: src/playlist/PlaylistAdvancedSortWindow.qml:750
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Sýtosť"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:742
+#: src/playlist/PlaylistAdvancedSortWindow.qml:752
 #, fuzzy
 #| msgid "Saturation"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Sýtosť"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:744
+#: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:207
+#: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"

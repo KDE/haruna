@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"POT-Creation-Date: 2025-12-14 00:41+0000\n"
 "PO-Revision-Date: 2025-10-13 20:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -793,7 +793,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Lisää uusi soittolista"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:798
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Muuta nimeä"
@@ -834,60 +834,65 @@ msgstr "Avaa selaimeen"
 
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
+msgid "Open in Thumbnail Generator"
+msgstr ""
+
+#: src/playlist/Playlist.qml:755
+msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopioi nimi"
 
-#: src/playlist/Playlist.qml:750
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopioi sijainti"
 
-#: src/playlist/Playlist.qml:751
+#: src/playlist/Playlist.qml:762
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopioi verkko-osoite"
 
-#: src/playlist/Playlist.qml:761
+#: src/playlist/Playlist.qml:772
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Valitse kaikki"
 
-#: src/playlist/Playlist.qml:765
+#: src/playlist/Playlist.qml:776
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Poista kaikki valinnat"
 
-#: src/playlist/Playlist.qml:769
+#: src/playlist/Playlist.qml:780
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Käännä valinta"
 
-#: src/playlist/Playlist.qml:775
+#: src/playlist/Playlist.qml:786
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Poista soittolistasta"
 
-#: src/playlist/Playlist.qml:781
+#: src/playlist/Playlist.qml:792
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Poista valitut soittolistasta"
 
-#: src/playlist/Playlist.qml:793
+#: src/playlist/Playlist.qml:804
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Vieritä toistettavaan kohteeseen"
 
-#: src/playlist/Playlist.qml:803
+#: src/playlist/Playlist.qml:814
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Siirrä tiedosto roskakoriin"
 
-#: src/playlist/Playlist.qml:809
+#: src/playlist/Playlist.qml:820
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Siirrä valitut tiedostot roskakoriin"
 
-#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:926 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Valitse tiedosto"
@@ -899,22 +904,30 @@ msgstr ""
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
 #, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@label which playlist is affected, %1 is the playlist name"
+msgid "Playlist: %1"
+msgstr "Toistolista"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:50
+#, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "Lajittele"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:68
-#: src/playlist/PlaylistAdvancedSortWindow.qml:87
-#: src/playlist/PlaylistAdvancedSortWindow.qml:324
-#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+#: src/playlist/PlaylistAdvancedSortWindow.qml:75
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:336
+#: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:94
-#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#: src/playlist/PlaylistAdvancedSortWindow.qml:101
+#: src/playlist/PlaylistAdvancedSortWindow.qml:362
 #, fuzzy
 #| msgctxt "@item:listbox alt modifier key"
 #| msgid "Alt"
@@ -922,8 +935,8 @@ msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "Alt"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:105
-#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#: src/playlist/PlaylistAdvancedSortWindow.qml:112
+#: src/playlist/PlaylistAdvancedSortWindow.qml:373
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Files"
@@ -931,8 +944,8 @@ msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Tiedostot"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:116
-#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#: src/playlist/PlaylistAdvancedSortWindow.qml:123
+#: src/playlist/PlaylistAdvancedSortWindow.qml:384
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Audio"
@@ -940,8 +953,8 @@ msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Ääni"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:127
-#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#: src/playlist/PlaylistAdvancedSortWindow.qml:134
+#: src/playlist/PlaylistAdvancedSortWindow.qml:395
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Video"
@@ -949,7 +962,7 @@ msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:174
+#: src/playlist/PlaylistAdvancedSortWindow.qml:181
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name, ascending"
@@ -957,7 +970,7 @@ msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Nimi, nouseva"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:187
+#: src/playlist/PlaylistAdvancedSortWindow.qml:194
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name, ascending"
@@ -965,26 +978,25 @@ msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Nimi, nouseva"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+#: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:398
+#: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:408
+#: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
 msgid ""
-"Show/Hide section labels in the playlist view. This <br>does not affect "
-"sorting. Properties to include in the <br>section labels can be selected "
-"below. If the playlist <br>is not sorted by the included group properties in "
-"the <br>same order, then the sections might not be unique."
+"Show/Hide section labels in the playlist view. <br>If the playlist is not "
+"sorted by the included group properties in the same order, then the sections "
+"might not be unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:521
+#: src/playlist/PlaylistAdvancedSortWindow.qml:531
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Add New Folder"
@@ -992,19 +1004,17 @@ msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Lisää uusi kansio"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+#: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
-msgid ""
-"Hide this group property in the <br> section label when it is empty <br> or "
-"not unique."
+msgid "Property is hidden if empty or not unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+#: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
-msgid "Show the group property in the <br> section label even if it is empty."
+msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:740
+#: src/playlist/PlaylistAdvancedSortWindow.qml:750
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration, ascending"
@@ -1012,7 +1022,7 @@ msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Kesto, nouseva"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:742
+#: src/playlist/PlaylistAdvancedSortWindow.qml:752
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration, descending"
@@ -1020,12 +1030,12 @@ msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Kesto, laskeva"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:744
+#: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:207
+#: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"

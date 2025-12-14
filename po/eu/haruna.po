@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 00:43+0000\n"
+"POT-Creation-Date: 2025-12-14 00:41+0000\n"
 "PO-Revision-Date: 2025-12-08 22:28+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -769,7 +769,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Gehitu jotze-zerrenda berria"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:787
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:798
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Berrizendatu"
@@ -810,60 +810,65 @@ msgstr "Ireki arakatzailean"
 
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
+msgid "Open in Thumbnail Generator"
+msgstr ""
+
+#: src/playlist/Playlist.qml:755
+msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopiatu izena"
 
-#: src/playlist/Playlist.qml:750
+#: src/playlist/Playlist.qml:761
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopiatu bide-izena"
 
-#: src/playlist/Playlist.qml:751
+#: src/playlist/Playlist.qml:762
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopiatu URL"
 
-#: src/playlist/Playlist.qml:761
+#: src/playlist/Playlist.qml:772
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Hautatu dena"
 
-#: src/playlist/Playlist.qml:765
+#: src/playlist/Playlist.qml:776
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Desautatu dena"
 
-#: src/playlist/Playlist.qml:769
+#: src/playlist/Playlist.qml:780
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Alderantzikatu hautapena"
 
-#: src/playlist/Playlist.qml:775
+#: src/playlist/Playlist.qml:786
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Kendu jotze-zerrendatik"
 
-#: src/playlist/Playlist.qml:781
+#: src/playlist/Playlist.qml:792
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Kendu hautatutakoak jotze-zerrendatik"
 
-#: src/playlist/Playlist.qml:793
+#: src/playlist/Playlist.qml:804
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Kiribildu jotzen ari den elementuraino"
 
-#: src/playlist/Playlist.qml:803
+#: src/playlist/Playlist.qml:814
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Mugitu fitxategia zakarrontzira"
 
-#: src/playlist/Playlist.qml:809
+#: src/playlist/Playlist.qml:820
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Eraman hautatutako fitxategiak zakarrontzira"
 
-#: src/playlist/Playlist.qml:915 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:926 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"
@@ -875,16 +880,24 @@ msgstr "Sailkatze eta taldekatze aurreratua"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
 #, fuzzy
+#| msgctxt "@action"
+#| msgid "Playlist"
+msgctxt "@label which playlist is affected, %1 is the playlist name"
+msgid "Playlist: %1"
+msgstr "Jotze-zerrenda"
+
+#: src/playlist/PlaylistAdvancedSortWindow.qml:50
+#, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "Sailkatu"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:68
-#: src/playlist/PlaylistAdvancedSortWindow.qml:87
-#: src/playlist/PlaylistAdvancedSortWindow.qml:324
-#: src/playlist/PlaylistAdvancedSortWindow.qml:343
+#: src/playlist/PlaylistAdvancedSortWindow.qml:75
+#: src/playlist/PlaylistAdvancedSortWindow.qml:94
+#: src/playlist/PlaylistAdvancedSortWindow.qml:336
+#: src/playlist/PlaylistAdvancedSortWindow.qml:355
 #, fuzzy
 #| msgctxt "@sort:filter"
 #| msgid "Filter"
@@ -892,8 +905,8 @@ msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "Iragazkia"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:94
-#: src/playlist/PlaylistAdvancedSortWindow.qml:350
+#: src/playlist/PlaylistAdvancedSortWindow.qml:101
+#: src/playlist/PlaylistAdvancedSortWindow.qml:362
 #, fuzzy
 #| msgctxt "@sort:filter all"
 #| msgid "All"
@@ -901,8 +914,8 @@ msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "Dena"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:105
-#: src/playlist/PlaylistAdvancedSortWindow.qml:361
+#: src/playlist/PlaylistAdvancedSortWindow.qml:112
+#: src/playlist/PlaylistAdvancedSortWindow.qml:373
 #, fuzzy
 #| msgctxt "@sort:filter file"
 #| msgid "File"
@@ -910,8 +923,8 @@ msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Fitxategia"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:116
-#: src/playlist/PlaylistAdvancedSortWindow.qml:372
+#: src/playlist/PlaylistAdvancedSortWindow.qml:123
+#: src/playlist/PlaylistAdvancedSortWindow.qml:384
 #, fuzzy
 #| msgctxt "@sort:filter audio"
 #| msgid "Audio"
@@ -919,8 +932,8 @@ msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Audioa"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:127
-#: src/playlist/PlaylistAdvancedSortWindow.qml:383
+#: src/playlist/PlaylistAdvancedSortWindow.qml:134
+#: src/playlist/PlaylistAdvancedSortWindow.qml:395
 #, fuzzy
 #| msgctxt "@sort:filter video"
 #| msgid "Video"
@@ -928,36 +941,35 @@ msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Bideoa"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:174
+#: src/playlist/PlaylistAdvancedSortWindow.qml:181
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Goranzkoa"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:187
+#: src/playlist/PlaylistAdvancedSortWindow.qml:194
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Beheranzkoa"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:300
+#: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:398
+#: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:408
+#: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
 msgid ""
-"Show/Hide section labels in the playlist view. This <br>does not affect "
-"sorting. Properties to include in the <br>section labels can be selected "
-"below. If the playlist <br>is not sorted by the included group properties in "
-"the <br>same order, then the sections might not be unique."
+"Show/Hide section labels in the playlist view. <br>If the playlist is not "
+"sorted by the included group properties in the same order, then the sections "
+"might not be unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:521
+#: src/playlist/PlaylistAdvancedSortWindow.qml:531
 #, fuzzy
 #| msgctxt "@sort:group add new line button"
 #| msgid "Add New Line"
@@ -965,34 +977,32 @@ msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Gehitu lerro berria"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:733
+#: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
-msgid ""
-"Hide this group property in the <br> section label when it is empty <br> or "
-"not unique."
+msgid "Property is hidden if empty or not unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:735
+#: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
-msgid "Show the group property in the <br> section label even if it is empty."
+msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:740
+#: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Sailkatu gorantz"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:742
+#: src/playlist/PlaylistAdvancedSortWindow.qml:752
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Sailkatu beherantz"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:744
+#: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Sailkatze orden nagusiaren berdina"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:207
+#: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
