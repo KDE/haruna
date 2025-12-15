@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-14 00:41+0000\n"
-"PO-Revision-Date: 2025-12-12 12:02+0100\n"
+"PO-Revision-Date: 2025-12-14 14:35+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -805,7 +805,7 @@ msgstr "In browser openen"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "In generator van miniaturen openen"
 
 #: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
@@ -873,12 +873,9 @@ msgid "Advanced Sort and Group By"
 msgstr "Geavanceerd sorteren en groeperen op"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "Afspeellijst"
+msgstr "Afspeellijst: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
 msgctxt "@label sort"
@@ -938,24 +935,15 @@ msgid "Show Sections"
 msgstr "Secties tonen"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Show/Hide section labels in the playlist view. This <br>does not affect "
-#| "sorting. Properties to include in the <br>section labels can be selected "
-#| "below. If the playlist <br>is not sorted by the included group properties "
-#| "in the <br>same order, then the sections might not be unique."
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
-"Toon/verberg sectielabels in de afspeellijstweergave. Dit heeft geen invloed "
-"op de sortering. Eigenschappen die in de sectielabels moeten worden "
-"opgenomen, kunnen hieronder worden geselecteerd. Als de afspeellijst niet "
-"gesorteerd is op de geselecteerde groepseigenschappen in dezelfde volgorde, "
-"dan zijn de secties mogelijk niet uniek."
+"Toon/verberg sectielabels in de afspeellijstweergave. <br>Als de "
+"afspeellijst niet gesorteerd is op de geselecteerde groepseigenschappen in "
+"dezelfde volgorde, dan zijn de secties mogelijk niet uniek."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
@@ -965,12 +953,13 @@ msgstr "Nieuwe regel toevoegen"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "Eigenschap is verborgen indien leeg of niet uniek."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
+"Eigenschap wordt getoond, indien leeg zal er een plaatshouder worden getoond."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"

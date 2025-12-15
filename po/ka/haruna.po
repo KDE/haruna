@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-14 00:41+0000\n"
-"PO-Revision-Date: 2025-12-12 05:42+0100\n"
+"PO-Revision-Date: 2025-12-14 06:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -807,7 +807,7 @@ msgstr "ბრაუზერში გახსნა"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "გახსნა მინიატურების გენერატორში"
 
 #: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
@@ -875,12 +875,9 @@ msgid "Advanced Sort and Group By"
 msgstr "გაფართოებული დალაგება და დაჯგუფება"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "დასაკრავი სია"
+msgstr "დასაკრავი სია: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
 msgctxt "@label sort"
@@ -940,23 +937,15 @@ msgid "Show Sections"
 msgstr "სექციების ჩვენება"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Show/Hide section labels in the playlist view. This <br>does not affect "
-#| "sorting. Properties to include in the <br>section labels can be selected "
-#| "below. If the playlist <br>is not sorted by the included group properties "
-#| "in the <br>same order, then the sections might not be unique."
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
-"სექციების ჭდეების ჩვენება/დამალვა დასაკრავი სიის ხედში.<br>ეს არ მოქმედებს "
-"დალაგებაზე. სექციის ჭდეებში ჩასასმელი<br>თვისებების არჩევა ქვემოთ შეგიძლიათ. "
-"თუ დასაკრავი სია<br>დალაგებული არაა ჩასმული ჯგუფის თვისებების მიმდევრობით,"
-"<br>სექცია, შეიძლება, უნიკალური არ იყოს."
+"სექციების ჭდეების ჩვენება/დამალვა დასაკრავი სიის ხედში.<br>თუ დასაკრავი სია "
+"დალაგებული არაა ჩასმული ჯგუფის თვისებების მიმდევრობით, სექციები, შეიძლება, "
+"უნიკალური არ იყოს."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
@@ -966,12 +955,12 @@ msgstr "ახალი ხაზის დამატება"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "თვისება დამალულია, თუ ის ან ცარიელია, ან უნიკალური არაა."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "თვისება ნაჩვენებია, თუ ნაჩვენებია ადგილმჭერის დაცარიელება."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"

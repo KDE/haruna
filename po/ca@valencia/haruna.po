@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-14 00:41+0000\n"
-"PO-Revision-Date: 2025-12-12 09:44+0100\n"
+"PO-Revision-Date: 2025-12-14 12:22+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -808,7 +808,7 @@ msgstr "Obri en el navegador"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "Obri el generador de miniatures"
 
 #: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
@@ -876,12 +876,9 @@ msgid "Advanced Sort and Group By"
 msgstr "Ordenació i agrupació avançada"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "Llista de reproducció"
+msgstr "Llista de reproducció: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
 msgctxt "@label sort"
@@ -941,13 +938,6 @@ msgid "Show Sections"
 msgstr "Mostra les seccions"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Show/Hide section labels in the playlist view. This <br>does not affect "
-#| "sorting. Properties to include in the <br>section labels can be selected "
-#| "below. If the playlist <br>is not sorted by the included group properties "
-#| "in the <br>same order, then the sections might not be unique."
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
@@ -955,10 +945,9 @@ msgid ""
 "might not be unique."
 msgstr ""
 "Mostra o oculta les etiquetes de les seccions a la vista de la llista de "
-"reproducció.<br>Açò no afecta l'ordenació. Les propietats que s'inclouran a "
-"les etiquetes de secció <br>es poden seleccionar a continuació. Si la llista "
-"de reproducció <br>no està ordenada per les propietats de grup incloses en "
-"el mateix ordre, <br>llavors les seccions podrien no ser úniques."
+"reproducció. <br>Si la llista de reproducció no està ordenada per les "
+"propietats de grup incloses en el mateix ordre, llavors les seccions podrien "
+"no ser úniques."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
@@ -968,12 +957,14 @@ msgstr "Afig una línia nova"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "La propietat està oculta si està buida o no única."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
+"La propietat es mostra, si està buida es mostrarà una variable de "
+"substitució."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
@@ -3026,18 +3017,3 @@ msgstr ""
 "No s'ha pogut recuperar la llista de reproducció amb ID: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@info:tooltip show blank"
-#~ msgid ""
-#~ "Hide this group property in the <br> section label when it is empty <br> "
-#~ "or not unique."
-#~ msgstr ""
-#~ "Oculta esta propietat del grup a <br> l'etiqueta de secció quan siga "
-#~ "buida."
-
-#~ msgctxt "@info:tooltip hide blank"
-#~ msgid ""
-#~ "Show the group property in the <br> section label even if it is empty."
-#~ msgstr ""
-#~ "Mostra la propietat del grup a <br> l'etiqueta de secció encara que siga "
-#~ "buida."
