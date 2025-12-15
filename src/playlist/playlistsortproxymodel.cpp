@@ -59,7 +59,7 @@ PlaylistSortProxyModel::PlaylistSortProxyModel(QObject *parent)
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
-    sortProperty.text = i18nc("@label:button track no", "Track No");
+    sortProperty.text = i18nc("@label:button, as in 'Track no on a Audio CD', not 'subtitle track'", "Track No");
     sortProperty.sort = Sort::TrackNo;
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::IntType;

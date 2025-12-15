@@ -240,7 +240,7 @@ Page {
                         Kirigami.Action {
                             checkable: true
                             checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.TrackNo
-                            text: i18nc("@action:button", "Track No")
+                            text: i18nc("@action:button, as in 'Track no on a Audio CD', not 'subtitle track'", "Track No")
 
                             onTriggered: {
                                 root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.TrackNo
