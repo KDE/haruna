@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-16 06:50+0000\n"
-"PO-Revision-Date: 2025-11-24 17:40+0900\n"
+"PO-Revision-Date: 2025-12-16 22:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -695,9 +695,6 @@ msgid "File Size"
 msgstr "檔案大小"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "音軌編號"
@@ -713,12 +710,9 @@ msgid "Bitrate"
 msgstr "位元率"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "自訂"
+msgstr "自訂…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -807,7 +801,7 @@ msgstr "在瀏覽器開啟"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "在縮圖產生器中開啟"
 
 #: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
@@ -872,20 +866,14 @@ msgstr "選擇檔案"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "進階排序與分組"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "播放清單"
+msgstr "播放清單：%1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "排序"
@@ -896,56 +884,38 @@ msgstr "排序"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
-msgstr ""
+msgstr "過濾"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@action:inmenu all"
 msgid "All"
-msgstr "Alt"
+msgstr "全部"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "檔案"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "音效"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "影片"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "遞增"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:194
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Descending"
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "遞減"
@@ -953,12 +923,12 @@ msgstr "遞減"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "分組"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "顯示區塊"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
@@ -967,6 +937,8 @@ msgid ""
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
+"在播放清單檢視中顯示/隱藏區塊標題。<br>如果播放清單並非以內含的群組屬性以相同"
+"方向排序，則區塊可能會重複。"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
 #, fuzzy
@@ -979,33 +951,27 @@ msgstr "新增資料夾"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "屬性空白或重複時隱藏。"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "屬性已顯示，空白時會顯示佔位文字。"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "長度，遞增"
+msgstr "遞增排序"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:752
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "長度，遞減"
+msgstr "遞減排序"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "與主排序方向相同"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
@@ -1014,17 +980,13 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr "不允許播放清單名稱相同：%1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Name"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "檔案名稱"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "長度"
@@ -1033,44 +995,34 @@ msgstr "長度"
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Size"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "檔案大小"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Title"
+#, kde-format
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "標題"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
+#, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "音軌編號"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
+#, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
 msgstr "取樣頻率"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
+#, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "位元率"
@@ -1079,12 +1031,10 @@ msgstr "位元率"
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
-msgstr ""
+msgstr "資料夾"
 
 #: src/playlist/playlistsortproxymodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "類型"
@@ -1093,30 +1043,28 @@ msgstr "類型"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "副檔名"
 
 #: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "碟片編號"
 
 #: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "發行年份"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "曲風"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
+#, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "專輯"
@@ -1125,63 +1073,55 @@ msgstr "專輯"
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "藝人"
 
 #: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "專輯藝人"
 
 #: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "作曲者"
 
 #: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "作詞者"
 
 #: src/playlist/playlistsortproxymodel.cpp:158
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "切換上一個音訊"
+msgstr "音訊編碼器"
 
 #: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "影格率"
 
 #: src/playlist/playlistsortproxymodel.cpp:172
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "影片"
+msgstr "視訊編碼器"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "長度"
+msgstr "方向"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "重設飽和度"
+msgstr "解析度"
 
 #: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
@@ -1193,109 +1133,97 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr ""
+msgstr "無曲風"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Album"
-msgstr "專輯"
+msgstr "沒有專輯"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr ""
+msgstr "沒有藝人"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
-msgstr ""
+msgstr "沒有專輯藝人"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
-msgstr ""
+msgstr "沒有作曲家"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
-msgstr ""
+msgstr "沒有作詞家"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
-msgstr ""
+msgstr "沒有發行年份"
 
 #: src/playlist/playlistsortproxymodel.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
-msgstr "影片"
+msgstr "不是影片"
 
 #: src/playlist/playlistsortproxymodel.cpp:505
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
-msgstr "切換上一個音訊"
+msgstr "沒有音訊編碼器"
 
 #: src/playlist/playlistsortproxymodel.cpp:506
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "影片"
+msgstr "沒有視訊編碼器"
 
 #: src/playlist/playlistsortproxymodel.cpp:528
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr ""
+msgstr "碟片"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Video File"
-msgstr "影片"
+msgstr "影片檔"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "切換上一個音訊"
+msgstr "音效檔"
 
 #: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "橫向"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "縱向"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "正方形"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
