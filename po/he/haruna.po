@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-14 00:41+0000\n"
-"PO-Revision-Date: 2025-11-28 23:13+0200\n"
+"POT-Creation-Date: 2025-12-16 06:50+0000\n"
+"PO-Revision-Date: 2025-12-14 15:14+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -695,7 +695,10 @@ msgid "File Size"
 msgstr "גודל קובץ"
 
 #: src/playlist/Playlist.qml:243
-msgctxt "@action:button"
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Track No"
+msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "מס׳ רצועה"
 
@@ -710,12 +713,9 @@ msgid "Bitrate"
 msgstr "קצב סיביות"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "מותאם אישית"
+msgstr "התאמה אישית…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -804,7 +804,7 @@ msgstr "פתיחה בדפדפן"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "פתיחה ביצרן תמונות ממוזערות"
 
 #: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
@@ -872,17 +872,11 @@ msgid "Advanced Sort and Group By"
 msgstr "סידור וקיבוץ מתקדמים"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "רשימת נגינה"
+msgstr "רשימת נגינה: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "מיון"
@@ -891,45 +885,30 @@ msgstr "מיון"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
 #: src/playlist/PlaylistAdvancedSortWindow.qml:336
 #: src/playlist/PlaylistAdvancedSortWindow.qml:355
-#, fuzzy
-#| msgctxt "@sort:filter"
-#| msgid "Filter"
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "מסנן"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
-#, fuzzy
-#| msgctxt "@sort:filter all"
-#| msgid "All"
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "הכול"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#, fuzzy
-#| msgctxt "@sort:filter file"
-#| msgid "File"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "קובץ"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#, fuzzy
-#| msgctxt "@sort:filter audio"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "שמע"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#, fuzzy
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "וידאו"
@@ -947,12 +926,12 @@ msgstr "יורד"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "קיבוץ"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "הצגת מקטעים"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
@@ -961,11 +940,10 @@ msgid ""
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
+"הצגת/הסתרת תוויות מקטעים בתצוגת רשימת הנגינה.<br>אם רשימת הנגינה לא מסודרת "
+"לפי מאפייני הקבוצה שנכללים באותו הסדר, אז יכול להיות שהסעיפים לא ייחודיים."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
-#, fuzzy
-#| msgctxt "@sort:group add new line button"
-#| msgid "Add New Line"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "הוספת שורה חדשה"
@@ -973,12 +951,12 @@ msgstr "הוספת שורה חדשה"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "המאפיין מוסתר אם ריק או לא ייחודי."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "המאפיין מוצג, אם ריק יופיע ממלא מקום."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
@@ -1002,17 +980,13 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr "אסור רשימות נגינה באותו השם: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Name"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "שם קובץ"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "משך"
@@ -1021,20 +995,16 @@ msgstr "משך"
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "תאריך"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Size"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "גודל קובץ"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Title"
+#, kde-format
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "כותרת"
@@ -1043,22 +1013,18 @@ msgstr "כותרת"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Track No"
-msgctxt "@label:button track no"
+msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "מס׳ רצועה"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
+#, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
 msgstr "קצב דגימה"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
+#, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "קצב סיביות"
@@ -1166,126 +1132,100 @@ msgid "New Line"
 msgstr "שורה חדשה"
 
 #: src/playlist/playlistsortproxymodel.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "@label:button genre"
-#| msgid "Genre"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr "סוגה"
+msgstr "אין סוגה"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
-#, fuzzy, kde-format
-#| msgctxt "@label:button album"
-#| msgid "Album"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Album"
-msgstr "אלבום"
+msgstr "אין אלבום"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@label:button artist"
-#| msgid "Artist"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr "אומן/נית"
+msgstr "אין אומן/נית"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
-#, fuzzy, kde-format
-#| msgctxt "@label:button album artist"
-#| msgid "Album Artist"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
-msgstr "אומן/ית האלבום"
+msgstr "אין אומן/ית האלבום"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@label:button composer"
-#| msgid "Composer"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
-msgstr "מלחין/נה"
+msgstr "אין מלחין/נה"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
-#, fuzzy, kde-format
-#| msgctxt "@label:button lyricist"
-#| msgid "Lyricist"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
-msgstr "פזמונאי/ת"
+msgstr "אין פזמונאי/ת"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@label:button release year"
-#| msgid "Release Year"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
-msgstr "שנת הוצאה לאור"
+msgstr "אין שנת הוצאה לאור"
 
 #: src/playlist/playlistsortproxymodel.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@sort:filter video"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
-msgstr "וידאו"
+msgstr "לא וידאו"
 
 #: src/playlist/playlistsortproxymodel.cpp:505
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
-msgstr "מפענח שמע"
+msgstr "אין מפענח שמע"
 
 #: src/playlist/playlistsortproxymodel.cpp:506
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "מפענח וידאו"
+msgstr "אין מפענח וידאו"
 
 #: src/playlist/playlistsortproxymodel.cpp:528
-#, fuzzy, kde-format
-#| msgctxt "@label:button disc no"
-#| msgid "Disc No"
+#, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr "מס׳ תקליטור"
+msgstr "תקליטור"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@label:button video codec"
-#| msgid "Video Codec"
+#, kde-format
 msgctxt "@title:group"
 msgid "Video File"
-msgstr "מפענח וידאו"
+msgstr "קובץ וידאו"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@label:button audio codec"
-#| msgid "Audio Codec"
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "מפענח שמע"
+msgstr "קובץ שמע"
 
 #: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "לרוחב"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "לאורך"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "ריבוע"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -3034,6 +2974,12 @@ msgstr ""
 "לא ניתן למשוך רשימת נגינה עם המזהה: %1\n"
 "\n"
 "%2"
+
+#~| msgctxt "@action:button"
+#~| msgid "Track No"
+#~ msgctxt "@label:button track no"
+#~ msgid "Track No"
+#~ msgstr "מס׳ רצועה"
 
 #~ msgctxt "@action:button"
 #~ msgid "Advanced…"

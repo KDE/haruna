@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-14 00:41+0000\n"
+"POT-Creation-Date: 2025-12-16 06:50+0000\n"
 "PO-Revision-Date: 2025-11-28 12:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -699,7 +699,10 @@ msgid "File Size"
 msgstr "Dosya Büyüklüğü"
 
 #: src/playlist/Playlist.qml:243
-msgctxt "@action:button"
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Track No"
+msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "Parça №"
 
@@ -1047,7 +1050,7 @@ msgstr "Başlık"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Track No"
-msgctxt "@label:button track no"
+msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "Parça №"
 
@@ -3056,6 +3059,13 @@ msgstr ""
 "Şu kimliğe sahip oynatma listesi alınamadı: %1\n"
 "\n"
 "%2"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Track No"
+#~ msgctxt "@label:button track no"
+#~ msgid "Track No"
+#~ msgstr "Parça №"
 
 #~ msgctxt "@action:button"
 #~ msgid "Advanced…"
