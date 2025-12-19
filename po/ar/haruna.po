@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-16 06:50+0000\n"
-"PO-Revision-Date: 2025-12-13 16:47+0400\n"
+"PO-Revision-Date: 2025-12-18 10:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -698,9 +698,6 @@ msgid "File Size"
 msgstr "حجم الملفّ"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "رقم المسار"
@@ -807,7 +804,7 @@ msgstr "افتح في المتصفّح"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "افتح مولد المصغرات"
 
 #: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
@@ -875,12 +872,9 @@ msgid "Advanced Sort and Group By"
 msgstr "فرز وتجميع متقدم حسب"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "قائمة التشغيل"
+msgstr "قائمة التشغيل: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
 msgctxt "@label sort"
@@ -940,23 +934,14 @@ msgid "Show Sections"
 msgstr "اعرض الأقسام"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Show/Hide section labels in the playlist view. This <br>does not affect "
-#| "sorting. Properties to include in the <br>section labels can be selected "
-#| "below. If the playlist <br>is not sorted by the included group properties "
-#| "in the <br>same order, then the sections might not be unique."
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
-"اعرض/أخفِ تسميات الأقسام في عرض قائمة التشغيل. هذا <br>لا يؤثر على الترتيب. "
-"يمكن تحديد الخصائص المراد تضمينها في <br>تسميات الأقسام أدناه. إذا لم تُرتب "
-"قائمة التشغيل <br>حسب خصائص المجموعة المضمنة في <br>نفس الترتيب، فقد لا تكون "
-"الأقسام فريدة."
+"اعرض/أخفِ تسميات الأقسام في عرض قائمة التشغيل. هذا <br>إذا لم تُرتب قائمة "
+"التشغيل حسب خصائص المجموعة المضمنة في نفس الترتيب، فقد لا تكون الأقسام فريدة."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
@@ -966,12 +951,12 @@ msgstr "أضف سطرًا جديدًا"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "تُخفى الخاصية إذا كانت فارغة أو غير فريدة."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "تُعرض الخاصية، وإذا كانت فارغة، سيُعرض عنصر نائب."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
@@ -1025,9 +1010,7 @@ msgid "Title"
 msgstr "العنوان"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
+#, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "رقم المسار"
