@@ -327,15 +327,15 @@ void MpvItem::onReady()
     setIsReady(true);
     auto proxyModel = m_playlists->defaultFilterProxy();
     QUrl url{Application::instance()->url(0)};
+    // set last session's active playlist as visible
+    m_playlists->setVisibleIndex(m_playlists->m_activeIndex);
     if (!url.isEmpty() && url.isValid()) {
         proxyModel->addItem(Application::instance()->url(0), PlaylistModel::Clear);
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
     } else {
         if (PlaybackSettings::openLastPlayedFile()) {
-            // Internal playlists are read at this point and active playlist is set. If an internal playlist
-            // is active, make it visible too and start playing.
             if (m_playlists->m_activeIndex != 0) {
-                m_playlists->setVisibleIndex(m_playlists->m_activeIndex);
+                // restore last session's playing item
                 activeFilterProxyModel()->setPlayingItem(activeFilterProxyModel()->playlistModel()->m_playingItem);
             } else {
                 // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
