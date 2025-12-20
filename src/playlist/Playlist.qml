@@ -743,8 +743,13 @@ Page {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Open in Thumbnail Generator")
                     icon.name: "hana"
-                    visible: SystemUtils.isHanaInstalled() && SystemUtils.platformName() !== "windows"
+                    visible: {
+                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        return modelIndex.data(PlaylistModel.TypeRole) === "video"
+                             && SystemUtils.isHanaInstalled()
+                             && SystemUtils.platformName() !== "windows"
                              && contextMenuLoader.isLocal && contextMenuLoader.row != -1
+                    }
                     onClicked: {
                         const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
