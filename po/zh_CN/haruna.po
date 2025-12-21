@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 06:50+0000\n"
+"POT-Creation-Date: 2025-12-21 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -696,9 +696,6 @@ msgid "File Size"
 msgstr "文件大小"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "音轨编号"
@@ -763,7 +760,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "添加播放列表"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:798
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:803
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "重命名"
@@ -805,64 +802,64 @@ msgstr "用浏览器打开"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "用缩略图生成器打开"
 
-#: src/playlist/Playlist.qml:755
+#: src/playlist/Playlist.qml:760
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "复制名称"
 
-#: src/playlist/Playlist.qml:761
+#: src/playlist/Playlist.qml:766
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "复制路径"
 
-#: src/playlist/Playlist.qml:762
+#: src/playlist/Playlist.qml:767
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "复制 URL"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:777
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "选择全部"
 
-#: src/playlist/Playlist.qml:776
+#: src/playlist/Playlist.qml:781
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "取消选择全部"
 
-#: src/playlist/Playlist.qml:780
+#: src/playlist/Playlist.qml:785
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "反向选择"
 
-#: src/playlist/Playlist.qml:786
+#: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "从播放列表中移除"
 
-#: src/playlist/Playlist.qml:792
+#: src/playlist/Playlist.qml:797
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "从播放列表中移除所选内容"
 
-#: src/playlist/Playlist.qml:804
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "滚动到正在播放的项目"
 
-#: src/playlist/Playlist.qml:814
+#: src/playlist/Playlist.qml:819
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "移动文件到回收站"
 
-#: src/playlist/Playlist.qml:820
+#: src/playlist/Playlist.qml:825
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "将所选文件移动到回收站"
 
-#: src/playlist/Playlist.qml:926 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:931 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "选择文件"
@@ -873,12 +870,9 @@ msgid "Advanced Sort and Group By"
 msgstr "高级排序和分组方式"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "播放列表"
+msgstr "播放列表：%1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
 msgctxt "@label sort"
@@ -938,22 +932,14 @@ msgid "Show Sections"
 msgstr "显示分段"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Show/Hide section labels in the playlist view. This <br>does not affect "
-#| "sorting. Properties to include in the <br>section labels can be selected "
-#| "below. If the playlist <br>is not sorted by the included group properties "
-#| "in the <br>same order, then the sections might not be unique."
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
-"㫫示/隐藏播放列表中的分段标签。<br>这不影响排序。<br>分段标签中包含的属性可在"
-"下方选择。<br>如果播放列表不按包含属性的顺序排序<br>则显示的分段可能会不唯"
-"一。"
+"㫫示/隐藏播放列表中的分段标签。<br>如果播放列表不按包含属性的顺序排序，则显示"
+"的分段可能会不唯一。"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
 msgctxt "@action:inmenu add new line button"
@@ -963,12 +949,12 @@ msgstr "添加新行"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "隐藏为空或不唯一的属性。"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "显示属性，如果为空则显示占位符。"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
@@ -1022,9 +1008,7 @@ msgid "Title"
 msgstr "标题"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
+#, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "音轨编号"
@@ -2953,18 +2937,3 @@ msgstr ""
 "无法获取此 ID 的播放列表：%1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@label:button track no"
-#~ msgid "Track No"
-#~ msgstr "音轨编号"
-
-#~ msgctxt "@info:tooltip show blank"
-#~ msgid ""
-#~ "Hide this group property in the <br> section label when it is empty <br> "
-#~ "or not unique."
-#~ msgstr "如果为空或不唯一，<br>则在分段标签中<br>隐藏此分组属性。"
-
-#~ msgctxt "@info:tooltip hide blank"
-#~ msgid ""
-#~ "Show the group property in the <br> section label even if it is empty."
-#~ msgstr "即使为空也在分段标签中<br>显示分组属性"
