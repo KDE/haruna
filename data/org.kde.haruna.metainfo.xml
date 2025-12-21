@@ -345,6 +345,30 @@
     </ul>
   </description>
   <releases>
+    <release version="1.7.0" date="2025-12-21">
+      <description>
+        <p>Features</p>
+        <p>PlayList</p>
+        <ul>
+          <li>added advanced sorting and grouping</li>
+          <li>added context menu to open file in Hana (thumbnail generator, only if it's installed)</li>
+          <li>the last active playlist will be set as visible when starting the app</li>
+        </ul>
+        <p>Other</p>
+        <ul>
+          <li>added replay gain settings</li>
+          <li>mpris thumbnail is only set for audio files, this allows the os taskbar preview to show the actual live window</li>
+          <li>decreased the size of the play icon in the compact playlist</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>fixed database folder not being created</li>
+          <li>fixed seekbar tooltip not updating when file changes and the mouse is not moved</li>
+          <li>fixed deleting custom commands</li>
+          <li>fixed saving last opened url</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.6.0" date="2025-10-24">
       <description>
         <p>Features</p>
