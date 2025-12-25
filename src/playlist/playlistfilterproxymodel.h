@@ -46,8 +46,8 @@ public:
     // clang-format on
 
     enum Filter {
-        Name = Qt::UserRole,
-        Title,
+        Name = PlaylistModel::NameRole,
+        Title = PlaylistModel::TitleRole,
     };
     Q_ENUM(Filter)
 
