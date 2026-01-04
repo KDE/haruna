@@ -37,9 +37,6 @@ ToolButton {
                 id: textArea
 
                 text: root.toolTipText
-                background: Rectangle {
-                    color: "transparent"
-                }
                 readOnly: true
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap
