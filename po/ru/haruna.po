@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 25.04.3\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%10>=2"
-" && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -706,8 +706,6 @@ msgid "File Size"
 msgstr "Размер файла"
 
 #: src/playlist/Playlist.qml:243
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "Номер дорожки"
@@ -723,8 +721,6 @@ msgid "Bitrate"
 msgstr "Битрейт"
 
 #: src/playlist/Playlist.qml:278
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "Пользовательский…"
@@ -884,15 +880,11 @@ msgid "Advanced Sort and Group By"
 msgstr "Дополнительные параметры сортировки и группировки"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
 msgstr "Список воспроизведения: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "Сортировка"
@@ -907,46 +899,34 @@ msgstr "Фильтр"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "Все"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Файл"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Аудио"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Видео"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#| msgctxt "@action:button"
-#| msgid "Ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "По возрастанию"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:194
-#| msgctxt "@action:button"
-#| msgid "Descending"
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "По убыванию"
@@ -968,13 +948,11 @@ msgid ""
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
-"Показать или скрыть метки разделов на панели просмотра списка воспроизведения."
-" <br>Если список воспроизведения не упорядочен по включённым свойствам групп в"
-" том же порядке, может быть нарушена уникальность разделов."
+"Показать или скрыть метки разделов на панели просмотра списка "
+"воспроизведения. <br>Если список воспроизведения не упорядочен по включённым "
+"свойствам групп в том же порядке, может быть нарушена уникальность разделов."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
-#| msgctxt "@action:button"
-#| msgid "Add New Folder"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Добавить новую строку"
@@ -990,15 +968,11 @@ msgid "Property is shown, if empty a placeholder will be shown."
 msgstr "Свойство будет показано; если оно пустое, будет показан заполнитель."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
-#| msgctxt "@action:button"
-#| msgid "Duration, ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "По возрастанию"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:752
-#| msgctxt "@action:button"
-#| msgid "Duration, descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "По убыванию"
@@ -1016,16 +990,12 @@ msgstr "Нельзя создать списки воспроизведения 
 
 #: src/playlist/playlistsortproxymodel.cpp:32
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Name"
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "Имя файла"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "Продолжительность"
@@ -1038,56 +1008,42 @@ msgstr "Дата"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "File Size"
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "Размер файла"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Title"
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "Заголовок"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Track No"
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "Номер дорожки"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sample Rate"
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
 msgstr "Частота дискретизации"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Bitrate"
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "Битрейт"
 
 #: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Folder"
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr "Папка"
 
 #: src/playlist/playlistsortproxymodel.cpp:88
 #, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Тип"
@@ -1118,8 +1074,6 @@ msgstr "Жанр"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "Альбом"
@@ -1150,8 +1104,6 @@ msgstr "Автор текста"
 
 #: src/playlist/playlistsortproxymodel.cpp:158
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
 msgstr "Аудиокодек"
@@ -1164,24 +1116,18 @@ msgstr "Частота кадров"
 
 #: src/playlist/playlistsortproxymodel.cpp:172
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
 msgctxt "@label:button video codec"
 msgid "Video Codec"
 msgstr "Видеокодек"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Duration"
 msgctxt "@label:button video orientation"
 msgid "Orientation"
 msgstr "Ориентация"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
 msgctxt "@label:button resolution"
 msgid "Resolution"
 msgstr "Разрешение"
@@ -1200,8 +1146,6 @@ msgstr "Без жанра"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
 #, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
 msgctxt "@title:group"
 msgid "No Album"
 msgstr "Без альбома"
@@ -1238,24 +1182,18 @@ msgstr "Без года выпуска"
 
 #: src/playlist/playlistsortproxymodel.cpp:504
 #, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@title:group"
 msgid "Not a Video"
 msgstr "Не видео"
 
 #: src/playlist/playlistsortproxymodel.cpp:505
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
 msgctxt "@title:group"
 msgid "No Audio Codec"
 msgstr "Без аудиокодека"
 
 #: src/playlist/playlistsortproxymodel.cpp:506
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
 msgctxt "@title:group"
 msgid "No Video Codec"
 msgstr "Без видеокодека"
@@ -1268,16 +1206,12 @@ msgstr "Диск"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
 msgctxt "@title:group"
 msgid "Video File"
 msgstr "Видеофайл"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
 #, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
 msgctxt "@title:group"
 msgid "Audio File"
 msgstr "Аудиофайл"
