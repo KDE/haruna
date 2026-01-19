@@ -8,6 +8,7 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import QtQuick.Window
 import Qt5Compat.GraphicalEffects
 
@@ -43,12 +44,14 @@ MpvItem {
     onFileStarted: {
         const url = currentUrl.toString()
         if (typeof url === "string" && url.startsWith("http")) {
-            loadingIndicatorParent.visible = true
+            loadingIndicator.visible = true
+            loadingIndicator.play = true
         }
     }
 
     onFileLoaded: {
-        loadingIndicatorParent.visible = false
+        loadingIndicator.visible = false
+        loadingIndicator.play = false
     }
 
     onOsdMessage: function(text) {
@@ -341,19 +344,68 @@ MpvItem {
     }
 
     Rectangle {
-        id: loadingIndicatorParent
+        id: loadingIndicator
 
-        visible: false
+        property bool play: false
+        property int size: 200
+
+        visible: true
         anchors.centerIn: parent
-        color: Kirigami.Theme.backgroundColor
+        radius: Kirigami.Units.cornerRadius
+        width: root.width > size ? size : root.width - 10
+        height: root.height > size ? size : root.height - 10
+        color: play ? Qt.alpha(Kirigami.Theme.backgroundColor, 0.6) : "transparent"
 
-        Kirigami.LoadingPlaceholder {
-            determinate: false
+        ColumnLayout {
             anchors.centerIn: parent
 
-            Component.onCompleted: {
-                parent.width = width + 20
-                parent.height = height + 20
+            Item {
+                property int spriteSize: {
+                    const _paddedMaxHeight = root.height - Kirigami.Units.largeSpacing * 2 - loadingText.implicitHeight
+                    const _clampedHeight = Math.min(Kirigami.Units.iconSizes.enormous, _paddedMaxHeight)
+                    return Math.max(Kirigami.Units.iconSizes.small, _clampedHeight)
+                }
+                Layout.alignment: Qt.AlignHCenter
+                Layout.preferredWidth: spriteSize
+                Layout.preferredHeight: spriteSize
+
+                AnimatedSprite {
+                    anchors.fill: parent
+                    currentFrame: 0
+                    finishBehavior: AnimatedSprite.FinishAtInitialFrame
+                    frameCount: 8
+                    // Do NOT use frameRate. It causes flickering. Use frameDuration instead
+                    frameDuration: Math.round(1000.0 / 30.0)
+                    frameHeight: 192
+                    frameWidth: 192
+                    interpolate: false
+                    source: "qrc:/data/animations/192-haruna-animation-sliding.png"
+                    reverse: false
+                    running: loadingIndicator.play
+                }
+            }
+
+            Text {
+                id: loadingText
+
+                text: i18nc("@label:title", "Loading…")
+                visible: loadingIndicator.play
+
+                font {
+                    bold: true
+                    pointSize: 16
+                }
+
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            layer.enabled: true
+            layer.samplerName: "maskSource"
+            layer.effect: ShaderEffect {
+                property color colorSource: loadingIndicator.play ? Qt.alpha(Kirigami.Theme.textColor, 0.65) : "#222"
+                fragmentShader: "qrc:/shader/colorfill.frag.qsb"
+                Kirigami.Theme.inherit: false
+                Kirigami.Theme.colorSet: Kirigami.Theme.Window
             }
         }
     }

@@ -38,6 +38,20 @@ qt_add_resources(haruna sql_files
         sql/create-playback_position-table.sql
 )
 
+qt_add_resources(haruna animations
+    FILES
+        ../data/animations/192-haruna-animation-sliding.png
+)
+
+qt6_add_shaders(haruna
+    URI org.kde.haruna
+    VERSION 1.0
+    PREFIX
+        "/"
+    FILES
+        shader/colorfill.frag
+)
+
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
     target_sources(haruna
@@ -118,6 +132,9 @@ qt_add_qml_module(haruna
         qml/Settings/EditCustomCommand.qml
         qml/Settings/DebugSettings.qml
         qml/Settings/SettingsWindow.qml
+
+    RESOURCES
+        ${COMPILED_SHADERS}
 )
 
 target_include_directories(haruna
@@ -136,6 +153,7 @@ target_link_libraries(haruna PRIVATE
     Qt6::Qml
     Qt6::Quick
     Qt6::QuickControls2
+    Qt6::ShaderTools
     Qt6::Sql
 
     KF6::ColorScheme
