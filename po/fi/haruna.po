@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-21 00:42+0000\n"
-"PO-Revision-Date: 2025-11-13 13:45+0200\n"
+"POT-Creation-Date: 2026-01-20 00:42+0000\n"
+"PO-Revision-Date: 2026-01-02 11:54+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -660,92 +660,64 @@ msgid "Sort"
 msgstr "Lajittele"
 
 #: src/playlist/Playlist.qml:143
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Ascending"
-msgstr "Nimi, nouseva"
+msgstr "Nouseva"
 
 #: src/playlist/Playlist.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Descending"
-msgstr "Nimi, nouseva"
+msgstr "Laskeva"
 
 #: src/playlist/Playlist.qml:183
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:button"
 msgid "None"
 msgstr "Ei mitään"
 
 #: src/playlist/Playlist.qml:193
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
 msgctxt "@action:button"
 msgid "File Name"
-msgstr "Tiedostonimi: %1"
+msgstr "Tiedostonimi"
 
 #: src/playlist/Playlist.qml:203
 msgctxt "@action:button"
 msgid "Title"
-msgstr ""
+msgstr "Kappaleen nimi"
 
 #: src/playlist/Playlist.qml:213
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration"
-msgstr "Värikylläisyys"
+msgstr "Kesto"
 
 #: src/playlist/Playlist.qml:223
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Modifier key"
 msgctxt "@action:button"
 msgid "Modified Date"
-msgstr "Muuntonäppäin"
+msgstr "Muutospäivä"
 
 #: src/playlist/Playlist.qml:233
-#, fuzzy
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File Size"
-msgstr "Tiedosto"
+msgstr "Tiedostokoko"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "&Raita"
+msgstr "Raidan numero"
 
 #: src/playlist/Playlist.qml:253
 msgctxt "@action:button"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Näytteenottotaajuus"
 
 #: src/playlist/Playlist.qml:263
 msgctxt "@action:button"
 msgid "Bitrate"
-msgstr ""
+msgstr "Bittinopeus"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "Mukautettu"
+msgstr "Mukautettu…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -835,7 +807,7 @@ msgstr "Avaa selaimeen"
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "Avaa pienoiskuvan luontiin"
 
 #: src/playlist/Playlist.qml:760
 msgctxt "@action:inmenu"
@@ -900,23 +872,17 @@ msgstr "Valitse tiedosto"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Edistyneen lajittelun ja ryhmityksen peruste"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "Toistolista"
+msgstr "Soittolista: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
-msgstr "Lajittele"
+msgstr "Lajittelu"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:75
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
@@ -924,69 +890,51 @@ msgstr "Lajittele"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
-msgstr ""
+msgstr "Suodata"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@action:inmenu all"
 msgid "All"
-msgstr "Alt"
+msgstr "Kaikki"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@action:inmenu file"
 msgid "File"
-msgstr "Tiedostot"
+msgstr "Tiedosto"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Ääni"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
-msgstr "Nimi, nouseva"
+msgstr "Nouseva"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:194
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Descending"
-msgstr "Nimi, nouseva"
+msgstr "Laskeva"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "Ryhmittely"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "Näytä osiot"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
@@ -995,45 +943,39 @@ msgid ""
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
+"Näytä tai piilota soittolistanäkymässä osioiden nimet.<br>Ellei soittolistaa "
+"ole lajiteltu sisällytettyjen ryhmäominaisuuksien mukaan samaan "
+"järjestykseen, osiot eivät ehkä ole ainutkertaisia."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add New Folder"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
-msgstr "Lisää uusi kansio"
+msgstr "Lisää uusi rivi"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "Tyhjä tai ei-ainutkertainen ominaisuus piilotetaan."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "Ominaisuus näytetään, ja jos se on tyhjä, näytetään paikkamerkki."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "Kesto, nouseva"
+msgstr "Lajittele nousevasti"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:752
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "Kesto, laskeva"
+msgstr "Lajittele laskevasti"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "Sama kuin ensisijainen lajittelujärjestys"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
@@ -1042,72 +984,61 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr "Samannimisiä soittolistoja ei sallita: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
-msgstr "Tiedostonimi: %1"
+msgstr "Tiedostonimi"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
-msgstr "Värikylläisyys"
+msgstr "Kesto"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "Päiväys"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
-msgstr "Tiedosto"
+msgstr "Tiedostokoko"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button title"
 msgid "Title"
-msgstr ""
+msgstr "Kappaleen nimi"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Track"
+#, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "&Raita"
+msgstr "Raidan numero"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
 #, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Näytteenottotaajuus"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
-msgstr ""
+msgstr "Bittinopeus"
 
 #: src/playlist/playlistsortproxymodel.cpp:81
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr "Kansio"
 
 #: src/playlist/playlistsortproxymodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Tyyppi"
@@ -1116,205 +1047,187 @@ msgstr "Tyyppi"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Tiedostopääte"
 
 #: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "Levyn numero"
 
 #: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Julkaisuvuosi"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Tyylilaji"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
-msgstr ""
+msgstr "Albumi"
 
 #: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Artisti"
 
 #: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Albumin artisti"
 
 #: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Säveltäjä"
 
 #: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Sanoittaja"
 
 #: src/playlist/playlistsortproxymodel.cpp:158
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Äänikoodekki"
 
 #: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Kuvanopeus"
 
 #: src/playlist/playlistsortproxymodel.cpp:172
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Siirrä videota ylemmäs"
+msgstr "Videokoodekki"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "Värikylläisyys"
+msgstr "Suunta"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "Palauta kylläisyys"
+msgstr "Tarkkuus"
 
 #: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
-msgstr ""
+msgstr "Uusi rivi"
 
 #: src/playlist/playlistsortproxymodel.cpp:497
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr ""
+msgstr "Ei tyylilajia"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
-msgstr ""
+msgstr "Ei albumia"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr ""
+msgstr "Ei artistia"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
-msgstr ""
+msgstr "Ei albumin artistia"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
-msgstr ""
+msgstr "Ei säveltäjää"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
-msgstr ""
+msgstr "Ei sanoittajaa"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
-msgstr ""
+msgstr "Ei julkaisuvuotta"
 
 #: src/playlist/playlistsortproxymodel.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
-msgstr "Video"
+msgstr "Ei video"
 
 #: src/playlist/playlistsortproxymodel.cpp:505
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Ei äänikoodekkia"
 
 #: src/playlist/playlistsortproxymodel.cpp:506
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "Siirrä videota ylemmäs"
+msgstr "Ei videokoodekkia"
 
 #: src/playlist/playlistsortproxymodel.cpp:528
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr ""
+msgstr "Levy"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "Video File"
-msgstr "Siirrä videota ylemmäs"
+msgstr "Videotiedosto"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "Lisää äänenvoimakkuutta"
+msgstr "Äänitiedosto"
 
 #: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Vaaka"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Pysty"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Neliö"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1772,20 +1685,25 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Toistonopeus"
 
-#: src/qml/MpvVideo.qml:40
+#: src/qml/MpvVideo.qml:41
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Äänenvoimakkuus: %1"
 
-#: src/qml/MpvVideo.qml:255
+#: src/qml/MpvVideo.qml:258
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
 msgstr "Lisää soittolistalle"
 
-#: src/qml/MpvVideo.qml:304
+#: src/qml/MpvVideo.qml:307
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Toista nyt"
+
+#: src/qml/MpvVideo.qml:391
+msgctxt "@label:title"
+msgid "Loading…"
+msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50

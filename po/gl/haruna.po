@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-21 00:42+0000\n"
+"POT-Creation-Date: 2026-01-20 00:42+0000\n"
 "PO-Revision-Date: 2025-06-21 12:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1950,12 +1950,12 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Velocidade de reprodución"
 
-#: src/qml/MpvVideo.qml:40
+#: src/qml/MpvVideo.qml:41
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
 
-#: src/qml/MpvVideo.qml:255
+#: src/qml/MpvVideo.qml:258
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Add file to playlist"
@@ -1963,13 +1963,18 @@ msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
 msgstr "Engadir o ficheiro á lista de reprodución."
 
-#: src/qml/MpvVideo.qml:304
+#: src/qml/MpvVideo.qml:307
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Play Next"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Reproducir a seguinte"
+
+#: src/qml/MpvVideo.qml:391
+msgctxt "@label:title"
+msgid "Loading…"
+msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
