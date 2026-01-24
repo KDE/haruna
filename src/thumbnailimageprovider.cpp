@@ -69,7 +69,13 @@ void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize
 {
     auto url = QUrl::fromUserInput(id);
     if (QFile(url.toLocalFile()).exists()) {
-        Worker::instance()->makePlaylistThumbnail(url.toLocalFile(), requestedSize.width());
+        // clang-format off
+        QMetaObject::invokeMethod(Worker::instance(),
+                                  &Worker::makePlaylistThumbnail,
+                                  Qt::QueuedConnection,
+                                  url.toLocalFile(),
+                                  requestedSize.width());
+        // clang-format on
     }
 
     if (url.scheme() == u"http"_s || url.scheme() == u"https"_s) {
