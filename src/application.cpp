@@ -29,8 +29,6 @@
 #include <KLocalizedString>
 #include <KWindowSystem>
 
-#include <MpvAbstractItem>
-
 #include "audiosettings.h"
 #include "generalsettings.h"
 #include "pathutils.h"
