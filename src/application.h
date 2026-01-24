@@ -59,6 +59,7 @@ public:
     Q_INVOKABLE int frameworksVersionMinor();
     Q_INVOKABLE int qtMajorVersion();
     Q_INVOKABLE void raiseWindow();
+    Q_INVOKABLE void aboutDataAddComponent(KAboutComponent component);
 
     static QString version();
 

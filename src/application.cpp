@@ -136,6 +136,11 @@ void Application::setupWorkerThread()
     thread->start();
 }
 
+void Application::aboutDataAddComponent(KAboutComponent component)
+{
+    m_aboutData.addComponent(component);
+}
+
 void Application::setupAboutData()
 {
     m_aboutData.setComponentName(u"haruna"_s);
@@ -154,19 +159,6 @@ void Application::setupAboutData()
                           u"https://georgefb.com"_s);
 
     QMetaObject::invokeMethod(Worker::instance(), &Worker::getYtdlpVersion, Qt::QueuedConnection);
-
-    MpvAbstractItem mpvItem;
-    m_aboutData.addComponent(u"mpv"_s,
-                             i18n("Command line video player"),
-                             mpvItem.getProperty(u"mpv-version"_s).toString().replace(u"mpv "_s, QString{}),
-                             u"https://mpv.io"_s,
-                             KAboutLicense::GPL);
-
-    m_aboutData.addComponent(u"ffmpeg"_s,
-                             i18n("Cross-platform solution to record, convert and stream audio and video"),
-                             mpvItem.getProperty(u"ffmpeg-version"_s).toString(),
-                             u"https://www.ffmpeg.org"_s,
-                             KAboutLicense::GPL);
 
     KAboutData::setApplicationData(m_aboutData);
 }

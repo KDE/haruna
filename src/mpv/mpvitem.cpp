@@ -80,6 +80,20 @@ MpvItem::MpvItem(QQuickItem *parent)
     setupConnections();
     initProperties();
 
+    KAboutComponent mpvComponent(u"mpv"_s,
+                                 i18n("Command line video player"),
+                                 getProperty(u"mpv-version"_s).toString().replace(u"mpv "_s, QString{}),
+                                 u"https://mpv.io"_s,
+                                 KAboutLicense::GPL);
+    Application::instance()->aboutDataAddComponent(mpvComponent);
+
+    KAboutComponent ffmpegComponent(u"ffmpeg"_s,
+                                    i18n("Cross-platform solution to record, convert and stream audio and video"),
+                                    getProperty(u"ffmpeg-version"_s).toString(),
+                                    u"https://www.ffmpeg.org"_s,
+                                    KAboutLicense::GPL);
+    Application::instance()->aboutDataAddComponent(ffmpegComponent);
+
     m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
     m_saveTimePositionTimer->start();
 
