@@ -58,6 +58,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     image = frameToImage(path, width);
 
     if (image.isNull()) {
+        Q_EMIT thumbnailFail();
         qDebug() << u"Failed to create thumbnail for file: %1"_s.arg(path);
         return;
     }
