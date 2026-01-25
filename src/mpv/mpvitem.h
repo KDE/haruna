@@ -154,6 +154,7 @@ public:
     Q_INVOKABLE void userCommand(const QString &commandString);
     Q_INVOKABLE void selectSubtitleTrack();
     Q_INVOKABLE void addSubtitles(const QString &subtitlesFile);
+    Q_INVOKABLE void stop();
 
 Q_SIGNALS:
     void audioTracksModelChanged();
