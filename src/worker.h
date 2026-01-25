@@ -10,8 +10,6 @@
 #include <QObject>
 #include <QSqlDatabase>
 
-#include <KFileMetaData/Properties>
-
 #include <memory>
 
 class KConfig;

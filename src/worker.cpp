@@ -17,8 +17,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
 
 #include "miscutils.h"
 #include "database.h"
