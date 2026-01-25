@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:42+0000\n"
-"PO-Revision-Date: 2025-12-18 10:23+0400\n"
+"POT-Creation-Date: 2026-01-25 00:43+0000\n"
+"PO-Revision-Date: 2026-01-24 11:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -28,59 +28,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: src/application.cpp:129
+#: src/application.cpp:127
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "أداة تنزيل الصوت والفيديو الغنية بالميزات عبر سطر الأوامر"
 
-#: src/application.cpp:142
+#: src/application.cpp:145
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "هارونا"
 
-#: src/application.cpp:144
+#: src/application.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "مشغل وسائط"
 
-#: src/application.cpp:146
+#: src/application.cpp:149
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019-2025"
 
-#: src/application.cpp:151
+#: src/application.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "جورج فلوريا بونوي"
 
-#: src/application.cpp:152
+#: src/application.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "مطوّر"
 
-#: src/application.cpp:160
-#, kde-format
-msgid "Command line video player"
-msgstr "مشغل فيديو سطر الأوامر"
-
-#: src/application.cpp:166
-#, kde-format
-msgid "Cross-platform solution to record, convert and stream audio and video"
-msgstr "حل متعدد الأنظمة لتسجيل وتحويل وبث الصوت والفيديو"
-
-#: src/application.cpp:178
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "الملف المراد فتحه"
 
-#: src/application.cpp:182
+#: src/application.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -568,50 +558,60 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:84
+#, kde-format
+msgid "Command line video player"
+msgstr "مشغل فيديو سطر الأوامر"
+
+#: src/mpv/mpvitem.cpp:91
+#, kde-format
+msgid "Cross-platform solution to record, convert and stream audio and video"
+msgstr "حل متعدد الأنظمة لتسجيل وتحويل وبث الصوت والفيديو"
+
+#: src/mpv/mpvitem.cpp:380
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "لا يمكن تشغيل: %1"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:487 src/mpv/mpvitem.cpp:489
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "توقيت الترجمة:  : %1ث"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:521
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "الملف غير موجود: %1"
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:558
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "لا يوجد"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:596
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "فشل أخذ اللقطة"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:630
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -621,7 +621,7 @@ msgstr ""
 "لم يكتشف أي مسار فيديو، وعلى الأرجح لا يمكن فك ترميز/تشغيل مسار الفيديو بسبب "
 "فقدان برامج الترميز"
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:663
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1698,7 +1698,7 @@ msgstr "شغّل الآن"
 #: src/qml/MpvVideo.qml:391
 msgctxt "@label:title"
 msgid "Loading…"
-msgstr ""
+msgstr "يُحمّل..."
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50

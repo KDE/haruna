@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:42+0000\n"
+"POT-Creation-Date: 2026-01-25 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,59 +28,49 @@ msgid "Your emails"
 msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zhouwenqing655@gmail.com"
 
-#: src/application.cpp:129
+#: src/application.cpp:127
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "功能丰富的命令行音频/视频下载器"
 
-#: src/application.cpp:142
+#: src/application.cpp:145
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:144
+#: src/application.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "媒体播放器"
 
-#: src/application.cpp:146
+#: src/application.cpp:149
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:151
+#: src/application.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:152
+#: src/application.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "开发人员"
 
-#: src/application.cpp:160
-#, kde-format
-msgid "Command line video player"
-msgstr "命令行视频播放器"
-
-#: src/application.cpp:166
-#, kde-format
-msgid "Cross-platform solution to record, convert and stream audio and video"
-msgstr "用于对音频和视频进行录制、转换和推流的跨平台解决方案"
-
-#: src/application.cpp:178
+#: src/application.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "要打开的文件"
 
-#: src/application.cpp:182
+#: src/application.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -567,50 +557,60 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "重新分配"
 
-#: src/mpv/mpvitem.cpp:366
+#: src/mpv/mpvitem.cpp:84
+#, kde-format
+msgid "Command line video player"
+msgstr "命令行视频播放器"
+
+#: src/mpv/mpvitem.cpp:91
+#, kde-format
+msgid "Cross-platform solution to record, convert and stream audio and video"
+msgstr "用于对音频和视频进行录制、转换和推流的跨平台解决方案"
+
+#: src/mpv/mpvitem.cpp:380
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
 
-#: src/mpv/mpvitem.cpp:473 src/mpv/mpvitem.cpp:475
+#: src/mpv/mpvitem.cpp:487 src/mpv/mpvitem.cpp:489
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕偏移：%1 秒"
 
-#: src/mpv/mpvitem.cpp:507
+#: src/mpv/mpvitem.cpp:521
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "文件不存在：%1"
 
-#: src/mpv/mpvitem.cpp:544
+#: src/mpv/mpvitem.cpp:558
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:596
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "截图失败"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:601
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图已保存"
 
-#: src/mpv/mpvitem.cpp:589
+#: src/mpv/mpvitem.cpp:603
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "截图：%1"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:630
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -619,7 +619,7 @@ msgid ""
 msgstr ""
 "没有检测到视频轨道。这大概率是因为缺少编解码器而导致视频轨道无法被解码/播放。"
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:663
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
