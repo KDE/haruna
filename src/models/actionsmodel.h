@@ -101,6 +101,7 @@ Q_SIGNALS:
     void playbackSpeedResetAction();
     void playPauseAction();
     void playNextAction();
+    void stopAction();
     void playPreviousAction();
     void quitApplicationAction();
     void restartPlaybackAction();

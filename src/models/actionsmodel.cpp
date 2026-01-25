@@ -188,6 +188,14 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
+    action.name = u"stopAction"_s;
+    action.text = i18nc("@action", "Stop");
+    action.iconName = u"media-playback-stop"_s;
+    action.defaultShortcut = Qt::Key_Stop;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
     action.name = u"playNextAction"_s;
     action.text = i18nc("@action", "Play Next");
     action.iconName = u"media-skip-forward"_s;

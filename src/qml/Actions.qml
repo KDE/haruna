@@ -204,6 +204,10 @@ Item {
             root.m_mpv.activeFilterProxyModel.playNext()
         }
 
+        function onStopAction() {
+            root.m_mpv.stop()
+        }
+
         function onPlayPreviousAction() {
             root.m_mpv.activeFilterProxyModel.playPrevious()
         }
