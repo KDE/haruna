@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:43+0000\n"
-"PO-Revision-Date: 2026-01-24 13:41+0100\n"
+"POT-Creation-Date: 2026-01-26 00:42+0000\n"
+"PO-Revision-Date: 2026-01-25 14:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -223,328 +223,334 @@ msgstr "Jo/Eten"
 #: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
+msgid "Stop"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:200
+#, kde-format
+msgctxt "@action"
 msgid "Play Next"
 msgstr "Jo hurrengoa"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Jo aurrekoa"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Irten"
 
-#: src/models/actionsmodel.cpp:216
+#: src/models/actionsmodel.cpp:224
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Berrekin atzera-jotzea"
 
-#: src/models/actionsmodel.cpp:224
+#: src/models/actionsmodel.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "Eman urrats txikia aurrera"
 
-#: src/models/actionsmodel.cpp:232
+#: src/models/actionsmodel.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Eman urrats txikia atzera"
 
-#: src/models/actionsmodel.cpp:240
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "Eman urrats ertaina aurrera"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Eman urrats ertaina atzera"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "Eman urrats handia aurrera"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Eman urrats handia atzera"
 
-#: src/models/actionsmodel.cpp:272
+#: src/models/actionsmodel.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Joan hurrengo atalera"
 
-#: src/models/actionsmodel.cpp:280
+#: src/models/actionsmodel.cpp:288
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Joan aurreko atalera"
 
-#: src/models/actionsmodel.cpp:288
+#: src/models/actionsmodel.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Joan hurrengo azpidatzira"
 
-#: src/models/actionsmodel.cpp:296
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Joan aurreko azpidatzira"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Joan azken kokapenetik ikustera"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Ezarri begizta"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Pantaila-argazkia"
 
-#: src/models/actionsmodel.cpp:328
+#: src/models/actionsmodel.cpp:336
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "Txandakatu azpidatziak"
 
-#: src/models/actionsmodel.cpp:336
+#: src/models/actionsmodel.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Handitu azpidatzien letra-tipoa"
 
-#: src/models/actionsmodel.cpp:344
+#: src/models/actionsmodel.cpp:352
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Txikitu azpidatzien letra-tipoa"
 
-#: src/models/actionsmodel.cpp:352
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Mugitu azpidatzia gora"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:368
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Mugitu azpidatzia behera"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "Erakutsi azpidatzia lehenago"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:384
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "Erakutsi azpidatziak beranduago"
 
-#: src/models/actionsmodel.cpp:384
+#: src/models/actionsmodel.cpp:392
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "Azpidatzi zikloan gora"
 
-#: src/models/actionsmodel.cpp:392
+#: src/models/actionsmodel.cpp:400
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "Azpidatzi zikloan behera"
 
-#: src/models/actionsmodel.cpp:400
+#: src/models/actionsmodel.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Txandakatu Gurutzelarkagetzea"
 
-#: src/models/actionsmodel.cpp:408
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Txandakatu Pantaila-osoa"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:424
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Txandakatu Menu-barra"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:432
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Txandakatu Goiburua"
 
-#: src/models/actionsmodel.cpp:432 src/qml/Settings/SettingsWindow.qml:108
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:108
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
-#: src/models/actionsmodel.cpp:440
+#: src/models/actionsmodel.cpp:448
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Mugitu bideoa ezkerrera"
 
-#: src/models/actionsmodel.cpp:448
+#: src/models/actionsmodel.cpp:456
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Mugitu bideoa eskuinera"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:464
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Mugitu bideoa gora"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Mugitu bideoa behera"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "Biratu erlojuaren noranzkoan"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "Biratu erloju-orratzen aurkako noranzkoan"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Bolumena igo"
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Bolumena jaitsi"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Zooma gerturatu"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Zooma urrundu"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr "Berrezarri zooma"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Handitu kontrastea"
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Txikitu kontrastea"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Berrezarri kontrastea"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Handitu distira"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Txikitu distira"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Berrezarri distira"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr "Handitu gamma"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr "Txikitu gamma"
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Berrezarri gamma"
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Handitu asetasuna"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Txikitu asetasuna"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Berrezarri asetasuna"
 
-#: src/models/actionsmodel.cpp:769
+#: src/models/actionsmodel.cpp:777
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -554,7 +560,7 @@ msgstr ""
 "Hautatutako lasterbideak <b>%1</b> ekintzako lasterbidearekin gatazka du. "
 "<br><br>Lasterbidea berresleitu nahi duzu?"
 
-#: src/models/actionsmodel.cpp:775
+#: src/models/actionsmodel.cpp:783
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -1252,97 +1258,97 @@ msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Atzera-jotzeko abiadura: %1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:295
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Begizta hasi: %1"
 
-#: src/qml/Actions.qml:297
+#: src/qml/Actions.qml:301
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Begizta: %1–%2"
 
-#: src/qml/Actions.qml:303
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Begizta garbitu da"
 
-#: src/qml/Actions.qml:323
+#: src/qml/Actions.qml:327
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Azpidatziak itzalita"
 
-#: src/qml/Actions.qml:323
+#: src/qml/Actions.qml:327
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Azpidatziak piztuta"
 
-#: src/qml/Actions.qml:332 src/qml/Actions.qml:344
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Azpidatzia: Bat ere ez"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
+#: src/qml/Actions.qml:340 src/qml/Actions.qml:352
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Azpidatzia: %1 %2"
 
-#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
+#: src/qml/Actions.qml:359 src/qml/Actions.qml:365
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Azpidatziaren eskala: %1"
 
-#: src/qml/Actions.qml:375
+#: src/qml/Actions.qml:379
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Gurutzelarkagetzea: %1"
 
-#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
+#: src/qml/Actions.qml:440 src/qml/Actions.qml:446
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zooma: %1"
 
-#: src/qml/Actions.qml:447
+#: src/qml/Actions.qml:451
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zooma: 0"
 
-#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
+#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrastea: %1"
 
-#: src/qml/Actions.qml:465
+#: src/qml/Actions.qml:469
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrastea: 0"
 
-#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
+#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Distira: %1"
 
-#: src/qml/Actions.qml:482
+#: src/qml/Actions.qml:486
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Distira: 0"
 
-#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
+#: src/qml/Actions.qml:492 src/qml/Actions.qml:498
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:499
+#: src/qml/Actions.qml:503
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:505 src/qml/Actions.qml:511
+#: src/qml/Actions.qml:509 src/qml/Actions.qml:515
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Asetasuna: %1"
 
-#: src/qml/Actions.qml:516
+#: src/qml/Actions.qml:520
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Asetasuna: 0"
@@ -1480,7 +1486,7 @@ msgid ""
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
-"Azpidatziak errekurtsiboki bilatzen dira \"%1\" ezarpenean definitutako "
+"Azpidatziak errekurtsiboki bilatzen dira “%1” ezarpenean definitutako "
 "karpetetan.\n"
 "Karpeta erlatiboetan bakarrik bilatzen dira."
 
@@ -1506,7 +1512,7 @@ msgid ""
 "Check “Playback” settings for more details."
 msgstr ""
 "Hitz/karaktere jaki batzuk dituzten atalak automatikoki saihesten ditu.\n"
-"Markatu '\"Atzera-Jotzea\" ezarpenak xehetasun gehiagorako."
+"Markatu “Atzera-Jotzea” ezarpenak xehetasun gehiagorako."
 
 #: src/qml/Main.qml:32
 msgctxt "@title:window"
@@ -2170,8 +2176,8 @@ msgid ""
 "opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 "Leihoaren neurriari eta kokalekuari egindako aldaketak gorde egiten dira eta "
-"leiho ireki berrietarako erabiltzen dira.<br><br>%1 \"Handiera aldatu "
-"bideora egokitzeko\" ezarpenak lehentasuna hartzen du."
+"leiho ireki berrietarako erabiltzen dira.<br><br>%1 “Handiera aldatu bideora "
+"egokitzeko” ezarpenak lehentasuna hartzen du."
 
 #: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@option:check"
@@ -2323,7 +2329,7 @@ msgstr "Ez da ekintzarik hautatu"
 #: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr "Saguaren botoien konbinazioa dagoeneko \"%1\"(e)rako esleituta dago"
+msgstr "Saguaren botoien konbinazioa dagoeneko “%1”(e)rako esleituta dago"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -2406,7 +2412,7 @@ msgstr ""
 "joko du.<br><br><ul><li><strong>auto</strong> lehenengo metodo erabilgarria "
 "erabiliz hardware bidez deskodetzea automatikoki gaitzen saiatzen da.</"
 "li><li><strong>auto-safe</strong> auto-ren antzekoa, baina zerrenda-zurian "
-"ipinitako, \"segurutzat\" jotzen diren metodoak bakarrik baimentzen ditu.</"
+"ipinitako, “segurutzat” jotzen diren metodoak bakarrik baimentzen ditu.</"
 "li><li><strong>vaapi</strong> Intel eta AMD GPUekin bakarrik dabil. OpenGL "
 "EGL bizkarraldekoa ere behar du. </li><li><strong>nvdec</strong> berriena, "
 "eta Nvidia GPUetan hardware bidez deskodetzeko metodo gomendatua.</"
@@ -2944,7 +2950,7 @@ msgstr ""
 "Zehaztu pantaila-argazkiak gordetzeko erabiliko den fitxategi-izenaren "
 "txantiloia. Txantiloiak fitxategi-izena fitxategi-luzapenik gabe zehazten "
 "du, eta pantaila-argazkia hartzean ordezkatuko diren formatu-adierazleak "
-"izan ditzake. Era lehenetsian txantiloia \"%F-%n\" da.<br>Pantaila-argazkiak "
+"izan ditzake. Era lehenetsian txantiloia “%F-%n” da.<br>Pantaila-argazkiak "
 "gordetzeko direktorio-kokapen bat zehazteko, txantiloia bide-izen erlatibo "
 "zein absolutu batekin has daiteke.<br>Pantaila-argazkiaren bukaerako "
 "fitxategi-izenak jada dagoen fitxategi bat erakusten badu, fitxategia ez da "
@@ -2961,9 +2967,9 @@ msgstr ""
 "urls) ez badago, kate huts batera zabaltzen da.<br><li><strong>"
 "%X{erreserbakoa}</strong> %x(r)en berdina, baina bideo-fitxategia fitxategi-"
 "sisteman ez badago, but if the, {…} barruko erreserbako katea itzultzen du."
-"<br><li><strong>%p</strong>Atzera-jotzearen uneko denbora. Emaitza \"HH:MM:SS"
-"\" formako kate bat da.<br><li><strong>%P</strong> %p(e)ren antzekoa, baina "
-"hedatua, denbora milisegundotan duela \"HH:MM:SS.mmm\".<br><li><strong>%wX</"
+"<br><li><strong>%p</strong>Atzera-jotzearen uneko denbora. Emaitza “HH:MM:"
+"SS”formako kate bat da.<br><li><strong>%P</strong> %p(e)ren antzekoa, baina "
+"hedatua, denbora milisegundotan duela “HH:MM:SS.mmm”.<br><li><strong>%wX</"
 "strong> Zehaztu uneko atzera-jotze denbora X formatu-katea erabiliz."
 "<br>Balizko formatu-adierazleak:<br><ul><li><strong>%wH</strong>ordua (bi "
 "digitu arte 0 betegarriarekin)</li><li><strong>%wh</strong> ordua "

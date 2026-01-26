@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:43+0000\n"
+"POT-Creation-Date: 2026-01-26 00:42+0000\n"
 "PO-Revision-Date: 2023-07-14 22:00+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -255,64 +255,70 @@ msgstr "Tocar/Pausa"
 #: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
+msgid "Stop"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:200
+#, kde-format
+msgctxt "@action"
 msgid "Play Next"
 msgstr "Reproduzir o Seguinte"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Reproduzir o Anterior"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Sair"
 
-#: src/models/actionsmodel.cpp:216
+#: src/models/actionsmodel.cpp:224
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Reiniciar a Reprodução"
 
-#: src/models/actionsmodel.cpp:224
+#: src/models/actionsmodel.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "Avançar um Passo Pequeno"
 
-#: src/models/actionsmodel.cpp:232
+#: src/models/actionsmodel.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Recuar um Passo Pequeno"
 
-#: src/models/actionsmodel.cpp:240
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "Avançar um Passo Médio"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Recuar um Passo Médio"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "Avançar um Passo Grande"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Recuar um Passo Grande"
 
-#: src/models/actionsmodel.cpp:272
+#: src/models/actionsmodel.cpp:280
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Seek Next Chapter"
@@ -320,7 +326,7 @@ msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Ir para o Capítulo Seguinte"
 
-#: src/models/actionsmodel.cpp:280
+#: src/models/actionsmodel.cpp:288
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Seek Previous Chapter"
@@ -328,37 +334,37 @@ msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Ir para o Capítulo Anterior"
 
-#: src/models/actionsmodel.cpp:288
+#: src/models/actionsmodel.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Ir para a Legenda Seguinte"
 
-#: src/models/actionsmodel.cpp:296
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Ir para a Legenda Anterior"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Avançar para a Posição para Ver Mais Tarde"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Configurar o Ciclo"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Imagem"
 
-#: src/models/actionsmodel.cpp:328
+#: src/models/actionsmodel.cpp:336
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitles"
@@ -366,7 +372,7 @@ msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "Legendas"
 
-#: src/models/actionsmodel.cpp:336
+#: src/models/actionsmodel.cpp:344
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitle Increase Font Size"
@@ -374,7 +380,7 @@ msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Aumentar o Tamanho do Texto das Legendas"
 
-#: src/models/actionsmodel.cpp:344
+#: src/models/actionsmodel.cpp:352
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitle Decrease Font Size"
@@ -382,7 +388,7 @@ msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Diminuir o Tamanho do Texto das Legendas"
 
-#: src/models/actionsmodel.cpp:352
+#: src/models/actionsmodel.cpp:360
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitle Move Up"
@@ -390,7 +396,7 @@ msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Subir as Legendas"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:368
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles off"
@@ -398,7 +404,7 @@ msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Legendas desligadas"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:376
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -406,7 +412,7 @@ msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "Seleccionar o ficheiro de legendas"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:384
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -414,7 +420,7 @@ msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "Seleccionar o ficheiro de legendas"
 
-#: src/models/actionsmodel.cpp:384
+#: src/models/actionsmodel.cpp:392
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subtitles"
@@ -422,7 +428,7 @@ msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "Legendas"
 
-#: src/models/actionsmodel.cpp:392
+#: src/models/actionsmodel.cpp:400
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -430,37 +436,37 @@ msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "Legenda Secundária"
 
-#: src/models/actionsmodel.cpp:400
+#: src/models/actionsmodel.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Comutar o Desentrelaçamento"
 
-#: src/models/actionsmodel.cpp:408
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Comutar o Ecrã Completo"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:424
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Comutar o Menu"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:432
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Comutar o Cabeçalho"
 
-#: src/models/actionsmodel.cpp:432 src/qml/Settings/SettingsWindow.qml:108
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:108
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Lista de Reprodução"
 
-#: src/models/actionsmodel.cpp:440
+#: src/models/actionsmodel.cpp:448
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Left"
@@ -468,7 +474,7 @@ msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Deslocar o Vídeo à Esquerda"
 
-#: src/models/actionsmodel.cpp:448
+#: src/models/actionsmodel.cpp:456
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Right"
@@ -476,7 +482,7 @@ msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Deslocar o Vídeo à Direita"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:464
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Up"
@@ -484,7 +490,7 @@ msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Deslocar o Vídeo para Cima"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:472
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Down"
@@ -492,49 +498,49 @@ msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Deslocar o Vídeo para Baixo"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Aumentar o Volume"
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Diminuir o Volume"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Ampliar"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Reduzir"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -542,7 +548,7 @@ msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Contraste"
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -550,7 +556,7 @@ msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Contraste"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -558,7 +564,7 @@ msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Contraste"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -566,7 +572,7 @@ msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Brilho"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -574,7 +580,7 @@ msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Brilho"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -582,19 +588,19 @@ msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Brilho"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Gamma"
@@ -602,7 +608,7 @@ msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Gama"
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -610,7 +616,7 @@ msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Saturação"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -618,7 +624,7 @@ msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Saturação"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -626,7 +632,7 @@ msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Saturação"
 
-#: src/models/actionsmodel.cpp:769
+#: src/models/actionsmodel.cpp:777
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -636,7 +642,7 @@ msgstr ""
 "O atalho escolhido entra em conflito com o atalho da acção <b>%1</b>."
 "<br><br>Deseja atribuir de novo o atalho?"
 
-#: src/models/actionsmodel.cpp:775
+#: src/models/actionsmodel.cpp:783
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -1484,7 +1490,7 @@ msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Velocidade de reprodução: %1"
 
-#: src/qml/Actions.qml:291
+#: src/qml/Actions.qml:295
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop start: %1"
@@ -1492,7 +1498,7 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Início do ciclo: %1"
 
-#: src/qml/Actions.qml:297
+#: src/qml/Actions.qml:301
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop: %1 - %2"
@@ -1500,17 +1506,17 @@ msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Ciclo: %1 - %2"
 
-#: src/qml/Actions.qml:303
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Ciclo limpo"
 
-#: src/qml/Actions.qml:323
+#: src/qml/Actions.qml:327
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Legendas desligadas"
 
-#: src/qml/Actions.qml:323
+#: src/qml/Actions.qml:327
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitles off"
@@ -1518,12 +1524,12 @@ msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Legendas desligadas"
 
-#: src/qml/Actions.qml:332 src/qml/Actions.qml:344
+#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
 msgctxt "@info:tooltip"
 msgid "Subtitle: None"
 msgstr "Legendas: Nenhumas"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
+#: src/qml/Actions.qml:340 src/qml/Actions.qml:352
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -1531,62 +1537,62 @@ msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Legendas: %1 %2"
 
-#: src/qml/Actions.qml:355 src/qml/Actions.qml:361
+#: src/qml/Actions.qml:359 src/qml/Actions.qml:365
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Escala das legendas: %1"
 
-#: src/qml/Actions.qml:375
+#: src/qml/Actions.qml:379
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Desentrelaçamento: %1"
 
-#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
+#: src/qml/Actions.qml:440 src/qml/Actions.qml:446
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Ampliação: %1"
 
-#: src/qml/Actions.qml:447
+#: src/qml/Actions.qml:451
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Ampliação: 0"
 
-#: src/qml/Actions.qml:454 src/qml/Actions.qml:460
+#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contraste: %1"
 
-#: src/qml/Actions.qml:465
+#: src/qml/Actions.qml:469
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contraste: 0"
 
-#: src/qml/Actions.qml:471 src/qml/Actions.qml:477
+#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brilho: %1"
 
-#: src/qml/Actions.qml:482
+#: src/qml/Actions.qml:486
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brilho: 0"
 
-#: src/qml/Actions.qml:488 src/qml/Actions.qml:494
+#: src/qml/Actions.qml:492 src/qml/Actions.qml:498
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:499
+#: src/qml/Actions.qml:503
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:505 src/qml/Actions.qml:511
+#: src/qml/Actions.qml:509 src/qml/Actions.qml:515
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturação: %1"
 
-#: src/qml/Actions.qml:516
+#: src/qml/Actions.qml:520
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturação: 0"
