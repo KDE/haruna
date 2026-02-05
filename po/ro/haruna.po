@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# Sergiu Bivol <sergiu@cip.md>, 2024.
+# SPDX-FileCopyrightText: 2024, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:42+0000\n"
-"PO-Revision-Date: 2024-02-24 16:34+0000\n"
+"PO-Revision-Date: 2026-02-04 16:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,29 +34,23 @@ msgid "Feature-rich command-line audio/video downloader"
 msgstr ""
 
 #: src/application.cpp:145
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Haruna"
+#, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
 #: src/application.cpp:147
-#, fuzzy, kde-format
-#| msgctxt "application title/display name"
-#| msgid "Haruna Media Player"
+#, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Lector multimedia Haruna"
+msgstr "Lector multimedia"
 
 #: src/application.cpp:149
-#, fuzzy, kde-format
-#| msgctxt "copyright statement"
-#| msgid "(c) 2019-2023"
+#, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr "(c) 2019-2023"
+msgstr "© 2019–2025"
 
 #: src/application.cpp:154
 #, kde-format
@@ -88,7 +82,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr ""
+msgstr "Se redă fișier multimedia"
 
 #: src/models/actionsmodel.cpp:25
 #, kde-format
@@ -106,39 +100,31 @@ msgstr "Despre Haruna"
 #, kde-format
 msgctxt "@action"
 msgid "Report bug"
-msgstr ""
+msgstr "Raportați un defect"
 
 #: src/models/actionsmodel.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "About Haruna"
+#, kde-format
 msgctxt "@action"
 msgid "Sponsor Haruna"
-msgstr "Despre Haruna"
+msgstr "Sponsorizați Haruna"
 
 #: src/models/actionsmodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Audio Track"
-msgstr "Pistă &audio"
+msgstr "Pornește piesa precedentă"
 
 #: src/models/actionsmodel.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Audio Track"
-msgstr "Pistă &audio"
+msgstr "Pornește piesa următoare"
 
 #: src/models/actionsmodel.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Settings"
-msgstr "&Configurări"
+msgstr "Configurări"
 
 #: src/models/actionsmodel.cpp:80
 #, kde-format
@@ -153,17 +139,13 @@ msgid "Exit Fullscreen"
 msgstr "Ieși din ecran complet"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Forward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "Pășește cu un cadru înainte"
 
 #: src/models/actionsmodel.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Frame Step Backward"
+#, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "Pășește cu un cadru înapoi"
@@ -205,36 +187,28 @@ msgid "Add External Subtitle…"
 msgstr "Adaugă subtitre externe…"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open Url"
+#, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "Deschide URL"
 
 #: src/models/actionsmodel.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr "Viteza redării"
+msgstr "Mărește viteza redării"
 
 #: src/models/actionsmodel.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr "Viteza redării"
+msgstr "Micșorează viteza redării"
 
 #: src/models/actionsmodel.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
-msgstr "Viteza redării"
+msgstr "Reinițializează viteza redării"
 
 #: src/models/actionsmodel.cpp:184
 #, kde-format
@@ -246,7 +220,7 @@ msgstr "Redare/Pauză"
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
-msgstr ""
+msgstr "Oprește"
 
 #: src/models/actionsmodel.cpp:200
 #, kde-format
@@ -309,17 +283,13 @@ msgid "Seek Big Step Backward"
 msgstr "Derulează cu pas mare înapoi"
 
 #: src/models/actionsmodel.cpp:280
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Next Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Derulează la capitolul următor"
 
 #: src/models/actionsmodel.cpp:288
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Seek Previous Chapter"
+#, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Derulează la capitolul precedent"
@@ -355,76 +325,58 @@ msgid "Screenshot"
 msgstr "Captură de ecran"
 
 #: src/models/actionsmodel.cpp:336
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
-msgstr "Subtitre"
+msgstr "Comută subtitrele"
 
 #: src/models/actionsmodel.cpp:344
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
-msgstr "Alege fișier cu subtitre"
+msgstr "Mărește dimensiunea fontului subtitrelor"
 
 #: src/models/actionsmodel.cpp:352
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
-msgstr "Alege fișier cu subtitre"
+msgstr "Micșorează dimensiunea fontului subtitrelor"
 
 #: src/models/actionsmodel.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
-msgstr "Subtitre dezactivate"
+msgstr "Mută subtitrele mai sus"
 
 #: src/models/actionsmodel.cpp:368
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
+#, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
-msgstr "Subtitre dezactivate"
+msgstr "Mută subtitrele mai jos"
 
 #: src/models/actionsmodel.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
-msgstr "Alege fișier cu subtitre"
+msgstr "Arată subtitrele mai devreme"
 
 #: src/models/actionsmodel.cpp:384
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
+#, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
-msgstr "Alege fișier cu subtitre"
+msgstr "Arată subtitrele mai târziu"
 
 #: src/models/actionsmodel.cpp:392
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subtitles"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
-msgstr "Subtitre"
+msgstr "Schimbă la subtitrele precedente"
 
 #: src/models/actionsmodel.cpp:400
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
-msgstr "Subtitre secundare"
+msgstr "Schimbă la subtitrele următoare"
 
 #: src/models/actionsmodel.cpp:408
 #, kde-format
@@ -460,37 +412,37 @@ msgstr "Listă de redare"
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
-msgstr ""
+msgstr "Mută video la stânga"
 
 #: src/models/actionsmodel.cpp:456
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
-msgstr ""
+msgstr "Mută video la dreapta"
 
 #: src/models/actionsmodel.cpp:464
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
-msgstr ""
+msgstr "Mută video în sus"
 
 #: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
-msgstr ""
+msgstr "Mută video în jos"
 
 #: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Întoarce pe ceas"
 
 #: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Rotește împotriva ceasului"
 
 #: src/models/actionsmodel.cpp:496
 #, kde-format
@@ -520,93 +472,79 @@ msgstr "Îndepărtează"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Reinițializează nivelul de apropiere"
 
 #: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr ""
+msgstr "Mărește contrastul"
 
 #: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr ""
+msgstr "Micșorează contrastul"
 
 #: src/models/actionsmodel.cpp:552
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Contrast Up"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
-msgstr "Mărește contrastul"
+msgstr "Reinițializează contrastul"
 
 #: src/models/actionsmodel.cpp:560
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Mărește luminozitatea"
 
 #: src/models/actionsmodel.cpp:568
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
-msgstr "Mărește luminozitatea"
+msgstr "Micșorează luminozitatea"
 
 #: src/models/actionsmodel.cpp:576
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Brightness Up"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
-msgstr "Mărește luminozitatea"
+msgstr "Reinițializează luminozitatea"
 
 #: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Mărește gamma"
 
 #: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Micșorează gamma"
 
 #: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
-msgstr ""
+msgstr "Reinițializează gamma"
 
 #: src/models/actionsmodel.cpp:608
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Mărește saturația"
 
 #: src/models/actionsmodel.cpp:616
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr "Mărește saturația"
+msgstr "Micșorează saturația"
 
 #: src/models/actionsmodel.cpp:624
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
-msgstr "Mărește saturația"
+msgstr "Reinițializează saturația"
 
 #: src/models/actionsmodel.cpp:777
 #, kde-format
@@ -633,9 +571,7 @@ msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
 #: src/mpv/mpvitem.cpp:380
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Nu s-a putut reda: %1"
@@ -652,7 +588,7 @@ msgstr "Subtitre: %1 %2"
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
-msgstr ""
+msgstr "Fișierul nu există: %1"
 
 #: src/mpv/mpvitem.cpp:558
 #, kde-format
@@ -674,9 +610,7 @@ msgid "Screenshot taken"
 msgstr "Captura ecranului a reușit"
 
 #: src/mpv/mpvitem.cpp:603
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captură de ecran: %1"
@@ -698,30 +632,24 @@ msgstr ""
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
 msgid "Search"
-msgstr ""
+msgstr "Caută"
 
 #: src/playlist/Playlist.qml:99
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Adaugă…"
 
 #: src/playlist/Playlist.qml:107
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:button"
 msgid "Files"
-msgstr "Fișier"
+msgstr "Fișiere"
 
 #: src/playlist/Playlist.qml:115
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/playlist/Playlist.qml:125
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Listă de redare"
@@ -734,117 +662,92 @@ msgstr "Sortează"
 #: src/playlist/Playlist.qml:143
 msgctxt "@action:button"
 msgid "Ascending"
-msgstr ""
+msgstr "Crescător"
 
 #: src/playlist/Playlist.qml:160
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@action:button"
 msgid "Descending"
-msgstr "Reinițializează saturația"
+msgstr "Descrescător"
 
 #: src/playlist/Playlist.qml:183
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:button"
 msgid "None"
-msgstr "Fără"
+msgstr "Niciunul"
 
 #: src/playlist/Playlist.qml:193
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "@action:button"
 msgid "File Name"
-msgstr "Volum: %1"
+msgstr "Denumire fișier"
 
 #: src/playlist/Playlist.qml:203
 msgctxt "@action:button"
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 #: src/playlist/Playlist.qml:213
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Saturation: 0"
 msgctxt "@action:button"
 msgid "Duration"
-msgstr "Saturație: 0"
+msgstr "Durată"
 
 #: src/playlist/Playlist.qml:223
 msgctxt "@action:button"
 msgid "Modified Date"
-msgstr ""
+msgstr "Dată modificare"
 
 #: src/playlist/Playlist.qml:233
 msgctxt "@action:button"
 msgid "File Size"
-msgstr ""
+msgstr "Dimensiune fișier"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "&Piesă"
+msgstr "Nr. piesă"
 
 #: src/playlist/Playlist.qml:253
 msgctxt "@action:button"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Rată de eșantionare"
 
 #: src/playlist/Playlist.qml:263
 msgctxt "@action:button"
 msgid "Bitrate"
-msgstr ""
+msgstr "Rată de biți"
 
 #: src/playlist/Playlist.qml:278
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr ""
+msgstr "Personalizat…"
 
 #: src/playlist/Playlist.qml:289
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Playback"
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Redare"
 
 #: src/playlist/Playlist.qml:295
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr "Deschide listă"
+msgstr "Repetă lista"
 
 #: src/playlist/Playlist.qml:306
 msgctxt "@action:button"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Oprește după ultimul element"
 
 #: src/playlist/Playlist.qml:316
 msgctxt "@action:button"
 msgid "Repeat item"
-msgstr ""
+msgstr "Repetă elementul"
 
 #: src/playlist/Playlist.qml:327
 msgctxt "@action:button"
 msgid "Stop after item"
-msgstr ""
+msgstr "Oprește după element"
 
 #: src/playlist/Playlist.qml:337
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@action:button"
 msgid "Random Playback"
-msgstr "Reîncepe redarea"
+msgstr "Redare aleatorie"
 
 #: src/playlist/Playlist.qml:349
 msgctxt "@action:button"
@@ -852,33 +755,24 @@ msgid "Clear"
 msgstr "Șterge"
 
 #: src/playlist/Playlist.qml:357
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Save as"
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Salvează ca"
 
 #: src/playlist/Playlist.qml:431
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr "Listă de redare"
+msgstr "Adaugă listă de redare nouă"
 
 #: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:803
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Rename file"
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "Redenumește fișierul"
+msgstr "Redenumește"
 
 #: src/playlist/Playlist.qml:452
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "Elimină"
 
 #: src/playlist/Playlist.qml:508 src/playlist/Playlist.qml:529
 msgctxt "@action:button"
@@ -891,19 +785,15 @@ msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found."
 msgstr ""
+"Nu a fost găsit nici <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</"
+"a>, nici <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
 #: src/playlist/Playlist.qml:528
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr "Listă de redare"
+msgstr "denumirea listei"
 
 #: src/playlist/Playlist.qml:729
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
@@ -911,91 +801,67 @@ msgstr "Deschide dosarul conținător"
 #: src/playlist/Playlist.qml:735
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
-msgstr ""
+msgstr "Deschide în navigator"
 
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "Deschide în generatorul de miniaturi"
 
 #: src/playlist/Playlist.qml:760
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file name"
 msgctxt "@action:inmenu"
 msgid "Copy Name"
-msgstr "Copiază denumirea fișierului"
+msgstr "Copiază denumirea"
 
 #: src/playlist/Playlist.qml:766
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Copy file path"
 msgctxt "@action:inmenu"
 msgid "Copy Path"
-msgstr "Copiază calea fișierului"
+msgstr "Copiază calea"
 
 #: src/playlist/Playlist.qml:767
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Url"
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr "Deschide URL"
+msgstr "Copiază URL-ul"
 
 #: src/playlist/Playlist.qml:777
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "Alege fișier"
+msgstr "Selectează tot"
 
 #: src/playlist/Playlist.qml:781
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr "Alege fișier"
+msgstr "Deselectează tot"
 
 #: src/playlist/Playlist.qml:785
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
-msgstr "Confirmă ștergerea"
+msgstr "Inversează selecția"
 
 #: src/playlist/Playlist.qml:791
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Elimină din listă"
 
 #: src/playlist/Playlist.qml:797
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove from playlist"
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
-msgstr "Elimină din listă"
+msgstr "Elimină din listă pe cel ales"
 
 #: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
-msgstr ""
+msgstr "Derulează la elementul în redare"
 
 #: src/playlist/Playlist.qml:819
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
-msgstr ""
+msgstr "Mută fișierul la gunoi"
 
 #: src/playlist/Playlist.qml:825
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
-msgstr ""
+msgstr "Mută fișierele alese la gunoi"
 
 #: src/playlist/Playlist.qml:931 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
@@ -1005,23 +871,17 @@ msgstr "Alege fișier"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Grupare și sortare avansată"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "Listă de redare"
+msgstr "Listă de redare: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
-msgstr "Sortează"
+msgstr "Sortare"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:75
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
@@ -1029,66 +889,51 @@ msgstr "Sortează"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
-msgstr ""
+msgstr "Filtru"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
 msgctxt "@action:inmenu all"
 msgid "All"
-msgstr ""
+msgstr "Toate"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Fișier"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Audio"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
-msgstr "Imagine"
+msgstr "Video"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@action:inmenu"
 msgid "Ascending"
-msgstr "Reinițializează saturația"
+msgstr "Crescător"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:194
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@action:inmenu"
 msgid "Descending"
-msgstr "Reinițializează saturația"
+msgstr "Descrescător"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "Grupare"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "Arată secțiuni"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
@@ -1099,12 +944,9 @@ msgid ""
 msgstr ""
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
-msgstr "Adaugă dosar nou"
+msgstr "Adaugă linie nouă"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
@@ -1117,25 +959,19 @@ msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "Reinițializează saturația"
+msgstr "Sortează crescător"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:752
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Saturation Reset"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "Reinițializează saturația"
+msgstr "Sortează descrescător"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "La fel ca ordinea de sortare primară"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
@@ -1144,108 +980,100 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr ""
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
-msgstr "Volum: %1"
+msgstr "Denumire fișier"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Saturation: 0"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
-msgstr "Saturație: 0"
+msgstr "Durată"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "Dată"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
-msgstr "Volum: %1"
+msgstr "Dimensiune fișier"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button title"
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "&Track"
+#, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "&Piesă"
+msgstr "Nr. piesă"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
 #, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Rată de eșantionare"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
-msgstr ""
+msgstr "Rată de biți"
 
 #: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
-msgstr ""
+msgstr "Dosar"
 
 #: src/playlist/playlistsortproxymodel.cpp:88
 #, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #: src/playlist/playlistsortproxymodel.cpp:95
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Extensie"
 
 #: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "Nr. disc"
 
 #: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Anul lansării"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Gen"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Artist"
 
 #: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
@@ -1257,176 +1085,152 @@ msgstr ""
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Compozitor"
 
 #: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Textier"
 
 #: src/playlist/playlistsortproxymodel.cpp:158
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Ciclează volumul în sus"
+msgstr "Codec audio"
 
 #: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Rată de cadre"
 
 #: src/playlist/playlistsortproxymodel.cpp:172
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Imagine"
+msgstr "Codec video"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Saturation: 0"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "Saturație: 0"
+msgstr "Orientare"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Saturation Up"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "Mărește saturația"
+msgstr "Rezoluție"
 
 #: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
-msgstr ""
+msgstr "Linie nouă"
 
 #: src/playlist/playlistsortproxymodel.cpp:497
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr ""
+msgstr "Fără gen"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
-msgstr ""
+msgstr "Fără album"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr ""
+msgstr "Fără artist"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
-msgstr ""
+msgstr "Fără artist de album"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
-msgstr ""
+msgstr "Fără compozitor"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
-msgstr ""
+msgstr "Fără textier"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
-msgstr ""
+msgstr "Fără an de lansare"
 
 #: src/playlist/playlistsortproxymodel.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
-msgstr "Imagine"
+msgstr "Nu e video"
 
 #: src/playlist/playlistsortproxymodel.cpp:505
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
-msgstr "Ciclează volumul în sus"
+msgstr "Fără codec audio"
 
 #: src/playlist/playlistsortproxymodel.cpp:506
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "Imagine"
+msgstr "Fără codec video"
 
 #: src/playlist/playlistsortproxymodel.cpp:528
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr ""
+msgstr "Disc"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Video File"
-msgstr "Imagine"
+msgstr "Fișier video"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "Ciclează volumul în sus"
+msgstr "Fișier audio"
 
 #: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Peisaj"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Portret"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Pătrat"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
-msgstr "Copertă implicită"
+msgstr "Implicit"
 
 #: src/qml/Actions.qml:95 src/qml/Actions.qml:113
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
@@ -1436,7 +1240,7 @@ msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
-msgstr ""
+msgstr "Nu se pot încărca subtitre când nu e deschis niciun fișier"
 
 #: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
 msgctxt "@info:tooltip"
@@ -1444,20 +1248,14 @@ msgid "Playback speed: %1"
 msgstr "Viteza redării: %1"
 
 #: src/qml/Actions.qml:295
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Început buclă: %1"
 
 #: src/qml/Actions.qml:301
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
-msgstr "Buclă: %1 - %2"
+msgstr "Buclă: %1–%2"
 
 #: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
@@ -1470,12 +1268,9 @@ msgid "Subtitles off"
 msgstr "Subtitre dezactivate"
 
 #: src/qml/Actions.qml:327
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
-msgstr "Subtitre dezactivate"
+msgstr "Subtitre activate"
 
 #: src/qml/Actions.qml:336 src/qml/Actions.qml:348
 msgctxt "@info:tooltip"
@@ -1483,9 +1278,6 @@ msgid "Subtitle: None"
 msgstr "Subtitre: fără"
 
 #: src/qml/Actions.qml:340 src/qml/Actions.qml:352
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
 msgstr "Subtitre: %1 %2"
@@ -1533,12 +1325,12 @@ msgstr "Luminozitate: 0"
 #: src/qml/Actions.qml:492 src/qml/Actions.qml:498
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "Gamma: %1"
 
 #: src/qml/Actions.qml:503
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
-msgstr ""
+msgstr "Gamma: 0"
 
 #: src/qml/Actions.qml:509 src/qml/Actions.qml:515
 msgctxt "@info:tooltip"
@@ -1551,17 +1343,11 @@ msgid "Saturation: 0"
 msgstr "Saturație: 0"
 
 #: src/qml/Footer.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Start Playback"
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "Începe redarea"
 
 #: src/qml/Footer.qml:150
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Pause Playback"
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Întrerupe redarea"
@@ -1577,12 +1363,9 @@ msgid "Play next file"
 msgstr "Redă fișierul următor"
 
 #: src/qml/Footer.qml:198
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open Context Menu"
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
-msgstr "Deschide meniul contextual"
+msgstr "Deschide meniul cu capitole"
 
 #: src/qml/Footer.qml:262
 msgctxt "@info:tooltip"
@@ -1595,12 +1378,9 @@ msgid "Select a color"
 msgstr "Alege o culoare"
 
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr "Alege o culoare"
+msgstr "Alege culoarea"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:65
 msgctxt "@action:inmenu"
@@ -1622,12 +1402,9 @@ msgid "Secondary Subtitle"
 msgstr "Subtitre secundare"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:109
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Audio Track"
 msgctxt "@title:menu"
 msgid "Audio Track"
-msgstr "Pistă &audio"
+msgstr "Pistă audio"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:132
 msgctxt "@action:inmenu"
@@ -1637,12 +1414,9 @@ msgstr "&Mai mult"
 #: src/qml/Haruna/Components/SelectActionPopup.qml:27
 msgctxt "@info:placeholder"
 msgid "No action found."
-msgstr ""
+msgstr "Nicio acțiune găsită."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:31
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
 msgstr "Încarcă subtitre din"
@@ -1656,9 +1430,6 @@ msgid ""
 msgstr ""
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Confirm deletion"
 msgctxt "@action:button"
 msgid "Confirm Deletion"
 msgstr "Confirmă ștergerea"
@@ -1675,12 +1446,9 @@ msgstr "Salvează modificările"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:150
 msgid "No folder set"
-msgstr ""
+msgstr "Niciun dosar stabilit"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:168
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add new folder"
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Adaugă dosar nou"
@@ -1734,20 +1502,14 @@ msgid "Haruna"
 msgstr "Haruna"
 
 #: src/qml/Main.qml:483
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
-msgstr "Alege fișier"
+msgstr "Alegeți fișierul"
 
 #: src/qml/Main.qml:503
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
-msgstr "Alege fișier cu subtitre"
+msgstr "Alegeți fișier cu subtitre"
 
 #: src/qml/Main.qml:530
 msgctxt "@action:button"
@@ -1910,9 +1672,6 @@ msgid "Show Toolbar"
 msgstr "Arată bara de unelte"
 
 #: src/qml/Menus/MpvContextMenu.qml:21
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "Playback speed"
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Viteza redării"
@@ -1923,25 +1682,19 @@ msgid "Volume: %1"
 msgstr "Volum: %1"
 
 #: src/qml/MpvVideo.qml:258
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
-msgstr "Listă de redare"
+msgstr "Adaugă la lista de redare"
 
 #: src/qml/MpvVideo.qml:307
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Play Next"
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
-msgstr "Redă următoarea"
+msgstr "Redă acum"
 
 #: src/qml/MpvVideo.qml:391
 msgctxt "@label:title"
 msgid "Loading…"
-msgstr ""
+msgstr "Se încarcă…"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1953,40 +1706,37 @@ msgstr "Limbă preferată"
 #: src/qml/Settings/SubtitlesSettings.qml:77
 msgctxt "@label:spinbox"
 msgid "Preferred track"
-msgstr ""
+msgstr "Pista preferată"
 
 #: src/qml/Settings/AudioSettings.qml:67
 msgctxt "@label:spinbox"
 msgid "Volume step"
-msgstr ""
+msgstr "Pas volum"
 
 #: src/qml/Settings/AudioSettings.qml:86
 msgctxt "@title"
 msgid "Replay gain"
-msgstr ""
+msgstr "Normalizarea sunetului"
 
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Regim"
 
 #: src/qml/Settings/AudioSettings.qml:104
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
-msgstr ""
+msgstr "Dezactivat"
 
 #: src/qml/Settings/AudioSettings.qml:110
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&Track"
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "&Piesă"
+msgstr "Piesă"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -2058,22 +1808,22 @@ msgstr ""
 #: src/qml/Settings/CustomCommandsSettings.qml:174
 msgctxt "@action:intoolbar"
 msgid "&Add"
-msgstr ""
+msgstr "&Adaugă"
 
 #: src/qml/Settings/DebugSettings.qml:26
 msgctxt "@label:textbox"
 msgid "Config file"
-msgstr ""
+msgstr "Fișier de configurare"
 
 #: src/qml/Settings/DebugSettings.qml:38
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr ""
+msgstr "Fișier de configurare cu comenzi personalizate"
 
 #: src/qml/Settings/DebugSettings.qml:50
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
-msgstr ""
+msgstr "Fișier de configurare cu scurtături"
 
 #: src/qml/Settings/DebugSettings.qml:62
 #, fuzzy
@@ -2096,17 +1846,11 @@ msgid "Enable mpv logging"
 msgstr ""
 
 #: src/qml/Settings/DebugSettings.qml:105
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Deschide fișier"
 
 #: src/qml/Settings/DebugSettings.qml:114
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Deschide dosarul conținător"
@@ -2114,7 +1858,7 @@ msgstr "Deschide dosarul conținător"
 #: src/qml/Settings/EditCustomCommand.qml:42
 msgctxt "@label:textbox"
 msgid "Command"
-msgstr ""
+msgstr "Comandă"
 
 #: src/qml/Settings/EditCustomCommand.qml:58
 msgctxt "@info:tooltip"
@@ -2134,15 +1878,12 @@ msgstr ""
 #: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
 msgid "OSD Message"
-msgstr ""
+msgstr "Mesaj pentru indiciu pe ecran"
 
 #: src/qml/Settings/EditCustomCommand.qml:85
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Volume: %1"
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
-msgstr "Volum: %1"
+msgstr "Denumire fișier: %1"
 
 #: src/qml/Settings/EditCustomCommand.qml:91
 msgctxt "@info:tooltip"
@@ -2155,12 +1896,12 @@ msgstr ""
 #: src/qml/Settings/EditCustomCommand.qml:100
 msgctxt "@label"
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #: src/qml/Settings/EditCustomCommand.qml:121
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
-msgstr ""
+msgstr "Scurtătură de taste"
 
 #: src/qml/Settings/EditCustomCommand.qml:122
 msgctxt "@info:tooltip"
@@ -2172,7 +1913,7 @@ msgstr ""
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
 msgid "Run at startup"
-msgstr ""
+msgstr "Rulează la pornire"
 
 #: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
@@ -2182,17 +1923,17 @@ msgstr ""
 #: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
 msgid "Delete"
-msgstr ""
+msgstr "Șterge"
 
 #: src/qml/Settings/EditCustomCommand.qml:160
 msgctxt "@action:intoolbar"
 msgid "Cancel"
-msgstr ""
+msgstr "Renunță"
 
 #: src/qml/Settings/EditCustomCommand.qml:168
 msgctxt "@action:intoolbar"
 msgid "&Save"
-msgstr ""
+msgstr "&Salvează"
 
 #: src/qml/Settings/GeneralSettings.qml:26
 #, fuzzy
@@ -2208,9 +1949,6 @@ msgid "Maximum recent files"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:62
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
 msgstr "Șterge"
@@ -2252,17 +1990,14 @@ msgid "File will be added to the end of the playlist."
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:123
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
-msgstr "Redă fișierul următor"
+msgstr "Redă fișier nou"
 
 #: src/qml/Settings/GeneralSettings.qml:134
 msgctxt "@title"
 msgid "Interface"
-msgstr ""
+msgstr "Interfață"
 
 #: src/qml/Settings/GeneralSettings.qml:140
 #, fuzzy
@@ -2273,17 +2008,14 @@ msgid "Footer style"
 msgstr "Stil font"
 
 #: src/qml/Settings/GeneralSettings.qml:152
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr "Copertă implicită"
+msgstr "Implicit"
 
 #: src/qml/Settings/GeneralSettings.qml:158
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Flotant"
 
 #: src/qml/Settings/GeneralSettings.qml:172
 msgctxt "@label:listbox"
@@ -2341,7 +2073,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:273
 msgctxt "@label"
 msgid "Window"
-msgstr ""
+msgstr "Fereastră"
 
 #: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@option:check"
@@ -2394,13 +2126,13 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@option:check"
 msgid "Show menubar"
-msgstr ""
+msgstr "Arată bara de meniu"
 
 #: src/qml/Settings/GeneralSettings.qml:359
 #: src/qml/Settings/PlaylistSettings.qml:172
 msgctxt "@option:check"
 msgid "Show toolbar"
-msgstr ""
+msgstr "Arată bara de unelte"
 
 #: src/qml/Settings/GeneralSettings.qml:370
 msgctxt "@option:check"
@@ -2410,145 +2142,133 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:379
 msgctxt "@label:listbox"
 msgid "Color scheme"
-msgstr ""
+msgstr "Schemă de culori"
 
 #: src/qml/Settings/GeneralSettings.qml:424
 msgctxt "@label:listbox"
 msgid "GUI style"
-msgstr ""
+msgstr "Stilul interfeței"
 
 #: src/qml/Settings/GeneralSettings.qml:457
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr "Copertă implicită"
+msgstr "Implicit"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
-msgstr "Alege o culoare"
+msgstr "Schimbă acțiunea"
 
 #: src/qml/Settings/MouseSettings.qml:106
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
-msgstr ""
+msgstr "Șterge"
 
 #: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
-msgstr ""
+msgstr "&Adaugă"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "Adaugă acțiune pentru buton de șoricel"
 
 #: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
-msgstr ""
+msgstr "Buton de șoricel"
 
 #: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Stâng"
 
 #: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Mijlociu"
 
 #: src/qml/Settings/MouseSettings.qml:211
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
-msgstr ""
+msgstr "Drept"
 
 #: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "Înainte"
 
 #: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Înapoi"
 
 #: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "Derulează în sus"
 
 #: src/qml/Settings/MouseSettings.qml:235
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "Derulează în jos"
 
 #: src/qml/Settings/MouseSettings.qml:244
 msgctxt "@label:listbox"
 msgid "Modifier key"
-msgstr ""
+msgstr "Tastă modificatoare"
 
 #: src/qml/Settings/MouseSettings.qml:262
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "Fără modificator"
 
 #: src/qml/Settings/MouseSettings.qml:268
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
 #: src/qml/Settings/MouseSettings.qml:274
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:280
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:286
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:298
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
-msgstr ""
+msgstr "Declanșează la dublu-clic"
 
 #: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "Acțiune"
 
 #: src/qml/Settings/MouseSettings.qml:316
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "Alege o culoare"
+msgstr "Alege acțiunea"
 
 #: src/qml/Settings/MouseSettings.qml:332
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "Alege o culoare"
+msgstr "Schimbă acțiunea"
 
 #: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
 msgid "No action selected"
-msgstr ""
+msgstr "Nicio acțiunea aleasă"
 
 #: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
@@ -2772,15 +2492,12 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Personalizat"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr "Copertă implicită"
+msgstr "Implicit"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2790,71 +2507,62 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:24
 msgctxt "@label:listbox"
 msgid "Position"
-msgstr ""
+msgstr "Poziție"
 
 #: src/qml/Settings/PlaylistSettings.qml:36
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr ""
+msgstr "Stânga"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr ""
+msgstr "Dreapta"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
 msgid "Playlist style"
-msgstr ""
+msgstr "Stilul listei de redare"
 
 #: src/qml/Settings/PlaylistSettings.qml:69
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Default cover"
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr "Copertă implicită"
+msgstr "Implicit"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
-msgstr ""
+msgstr "Cu pictograme"
 
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Compact"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playback Speed Reset"
 msgctxt "@label:listbox"
 msgid "Playback behavior"
-msgstr "Reinițializează viteza redării"
+msgstr "Comportamentul redării"
 
 #: src/qml/Settings/PlaylistSettings.qml:109
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open playlist"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr "Deschide listă"
+msgstr "Repetă lista"
 
 #: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Oprește după ultimul element"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr ""
+msgstr "Repetă elementul"
 
 #: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
-msgstr ""
+msgstr "Oprește după element"
 
 #: src/qml/Settings/PlaylistSettings.qml:150
 msgctxt "@info:tooltip playback description"
@@ -2867,17 +2575,14 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/PlaylistSettings.qml:162
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Restart Playback"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random playback"
-msgstr "Reîncepe redarea"
+msgstr "Redare aleatorie"
 
 #: src/qml/Settings/PlaylistSettings.qml:182
 msgctxt "@option:check"
 msgid "Overlay video"
-msgstr ""
+msgstr "Suprapune video"
 
 #: src/qml/Settings/PlaylistSettings.qml:189
 msgctxt "@info:tooltip"
@@ -2931,27 +2636,27 @@ msgstr ""
 #: src/qml/Settings/SettingsWindow.qml:45
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Configurări"
 
 #: src/qml/Settings/SettingsWindow.qml:62
 msgctxt "@action"
 msgid "General"
-msgstr ""
+msgstr "Generale"
 
 #: src/qml/Settings/SettingsWindow.qml:71
 msgctxt "@action"
 msgid "Playback"
-msgstr ""
+msgstr "Redare"
 
 #: src/qml/Settings/SettingsWindow.qml:80
 msgctxt "@action"
 msgid "Video"
-msgstr ""
+msgstr "Imagine"
 
 #: src/qml/Settings/SettingsWindow.qml:90
 msgctxt "@action"
 msgid "Audio"
-msgstr ""
+msgstr "Sunet"
 
 #: src/qml/Settings/SettingsWindow.qml:99
 msgctxt "@action"
@@ -2961,17 +2666,14 @@ msgstr "Subtitre"
 #: src/qml/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Mouse"
-msgstr ""
+msgstr "Șoricel"
 
 #: src/qml/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Scurtături"
 
 #: src/qml/Settings/SettingsWindow.qml:137
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Custom Commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Comenzi personalizate"
@@ -2979,17 +2681,17 @@ msgstr "Comenzi personalizate"
 #: src/qml/Settings/SettingsWindow.qml:147
 msgctxt "@action"
 msgid "Debug"
-msgstr ""
+msgstr "Depanare"
 
 #: src/qml/Settings/SettingsWindow.qml:157
 msgctxt "@action"
 msgid "About"
-msgstr ""
+msgstr "Despre"
 
 #: src/qml/Settings/SubtitlesSettings.qml:36
 msgctxt "@label:check"
 msgid "Auto select track"
-msgstr ""
+msgstr "Alege pista automat"
 
 #: src/qml/Settings/SubtitlesSettings.qml:45
 msgctxt "@info:tooltip"
@@ -3090,17 +2792,17 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:83
 msgctxt "@title"
 msgid "Screenshots"
-msgstr ""
+msgstr "Capturi de ecran"
 
 #: src/qml/Settings/VideoSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: src/qml/Settings/VideoSettings.qml:131
 msgctxt "@label:textbox"
 msgid "Template"
-msgstr ""
+msgstr "Șablon"
 
 #: src/qml/Settings/VideoSettings.qml:160
 msgctxt "@info:tooltip"
@@ -3140,27 +2842,27 @@ msgstr ""
 #: src/qml/Settings/VideoSettings.qml:195
 msgctxt "@title"
 msgid "Image adjustments"
-msgstr ""
+msgstr "Ajustări imagine"
 
 #: src/qml/Settings/VideoSettings.qml:205
 msgctxt "@label:slider"
 msgid "Contrast"
-msgstr ""
+msgstr "Contrast"
 
 #: src/qml/Settings/VideoSettings.qml:224
 msgctxt "@label:slider"
 msgid "Brightness"
-msgstr ""
+msgstr "Luminozitate"
 
 #: src/qml/Settings/VideoSettings.qml:243
 msgctxt "@label:slider"
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 #: src/qml/Settings/VideoSettings.qml:262
 msgctxt "@label:slider"
 msgid "Saturation"
-msgstr ""
+msgstr "Saturație"
 
 #: src/qml/Settings/VideoSettings.qml:278
 msgctxt "@info"
