@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:42+0000\n"
-"PO-Revision-Date: 2026-02-04 16:23+0000\n"
+"PO-Revision-Date: 2026-02-09 16:16+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -627,7 +627,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
-msgstr ""
+msgstr "Capitol sărit: %1"
 
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
@@ -951,12 +951,12 @@ msgstr "Adaugă linie nouă"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "Proprietatea e ascunsă dacă e goală sau nu e unică."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
-msgstr ""
+msgstr "E arătată proprietatea, iar dacă aceasta e goală – un substituent."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
@@ -977,7 +977,7 @@ msgstr "La fel ca ordinea de sortare primară"
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
-msgstr ""
+msgstr "Nu sunt permise liste de redare cu aceeași denumire: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
 #, kde-format
@@ -1079,7 +1079,7 @@ msgstr "Artist"
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Artist album"
 
 #: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
@@ -1285,7 +1285,7 @@ msgstr "Subtitre: %1 %2"
 #: src/qml/Actions.qml:359 src/qml/Actions.qml:365
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
-msgstr ""
+msgstr "Scară subtitlu: %1"
 
 #: src/qml/Actions.qml:379
 msgctxt "@info:tooltip"
@@ -1456,15 +1456,12 @@ msgstr "Adaugă dosar nou"
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:176
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
-msgstr ""
+msgstr "Adăugați un dosar în care să fie căutate subtitluri."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:185
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select subtitles file"
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
-msgstr "Alege fișier cu subtitre"
+msgstr "Caută subtitluri recursiv"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:202
 msgctxt "@info:tooltip"
@@ -1477,7 +1474,7 @@ msgstr ""
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
-msgstr "Subtitre"
+msgstr "Subtitluri"
 
 #: src/qml/Header.qml:103
 msgctxt "@action:intoolbar"
