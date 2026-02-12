@@ -1,13 +1,13 @@
 # SPDX-FileCopyrightText: 2021 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2021, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022 Frank Steinmetzger <dev-kde@felsenfleischer.de>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:42+0000\n"
-"PO-Revision-Date: 2025-12-27 21:35+0100\n"
+"PO-Revision-Date: 2026-02-07 13:59+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,7 +42,7 @@ msgstr "Haruna"
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
-msgstr "Medienspieler"
+msgstr "Medienwiedergabe"
 
 #: src/application.cpp:149
 #, kde-format
@@ -84,7 +84,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen slocking"
 msgid "Playing media file"
-msgstr "Mediendatei wird abgespielt"
+msgstr "Mediendatei wird wiedergegeben"
 
 #: src/models/actionsmodel.cpp:25
 #, kde-format
@@ -156,7 +156,7 @@ msgstr "Einzelbild zurück"
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
-msgstr "Zuletzt abgespielte Datei öffnen"
+msgstr "Zuletzt wiedergegebene Datei öffnen"
 
 #: src/models/actionsmodel.cpp:120
 #, kde-format
@@ -192,7 +192,7 @@ msgstr "Externen Untertitel hinzufügen …"
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
-msgstr "URL öffnen"
+msgstr "Adresse öffnen"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
@@ -580,7 +580,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
-msgstr "Kann „%1“ nicht abspielen"
+msgstr "„%1“ kann nicht wiedergegeben werden"
 
 #: src/mpv/mpvitem.cpp:487 src/mpv/mpvitem.cpp:489
 #, kde-format
@@ -627,7 +627,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 "Keine Videospur gefunden. Wahrscheinlich kann die Videospur aufgrund "
-"fehlender Codecs nicht decodiert/abgespielt werden"
+"fehlender Codecs nicht decodiert/wiedergegeben werden"
 
 #: src/mpv/mpvitem.cpp:663
 #, kde-format
@@ -653,7 +653,7 @@ msgstr "Dateien"
 #: src/playlist/Playlist.qml:115
 msgctxt "@action:button"
 msgid "URL"
-msgstr "URL"
+msgstr "Adresse"
 
 #: src/playlist/Playlist.qml:125
 msgctxt "@action:button"
@@ -725,12 +725,9 @@ msgid "Bitrate"
 msgstr "Bitrate"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "Benutzerdefiniert"
+msgstr "Benutzerdefiniert …"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -834,7 +831,7 @@ msgstr "Pfad kopieren"
 #: src/playlist/Playlist.qml:767
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr "URL kopieren"
+msgstr "Adresse kopieren"
 
 #: src/playlist/Playlist.qml:777
 msgctxt "@action:inmenu"
@@ -864,7 +861,7 @@ msgstr "Ausgewählte aus Wiedergabeliste entfernen"
 #: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
-msgstr "Zu aktuellem Element gehen"
+msgstr "Zum aktuell wiedergegebenen Element gehen"
 
 #: src/playlist/Playlist.qml:819
 msgctxt "@action:inmenu"
@@ -884,23 +881,17 @@ msgstr "Datei auswählen"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Erweitertes Sortieren und Gruppieren"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "Wiedergabeliste"
+msgstr "Wiedergabeliste: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
-msgstr "Sortieren"
+msgstr "Sortierung"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:75
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
@@ -970,12 +961,14 @@ msgstr "Neue Zeile hinzufügen"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "Eigenschaft wird ausgeblendet, wenn sie leer oder nicht eindeutig ist."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
+"Eigenschaft wird immer anzezeigt. Wenn sie leer ist, wird ein Platzhalter "
+"verwendet."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
 msgctxt "@info:tooltip group order"
@@ -1230,19 +1223,19 @@ msgstr "Audio-Datei"
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Querformat"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Hochformat"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Quadrat"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1374,12 +1367,12 @@ msgstr "Wiedergabe pausieren"
 #: src/qml/Footer.qml:167
 msgctxt "@info:tooltip"
 msgid "Play previous file"
-msgstr "Vorherige Datei abspielen"
+msgstr "Vorherige Datei wiedergeben"
 
 #: src/qml/Footer.qml:184
 msgctxt "@info:tooltip"
 msgid "Play next file"
-msgstr "Nächste Datei abspielen"
+msgstr "Nächste Datei wiedergeben"
 
 #: src/qml/Footer.qml:198
 msgctxt "@info:tooltip"
@@ -1447,6 +1440,10 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
+"Wenn ein relativer Ordnername mit „*“ (Sternchen) beginnt und die rekursive "
+"Suche aktiviert ist, werden alle Ordner, die diesen Namen beinhalten, "
+"durchsucht.\n"
+"Relative Ordner sind relativ zum Ordner der aktuell wiedergegebenen Datei."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
@@ -1511,6 +1508,8 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
+"Überspringt automatisch Kapitel, die bestimmte Worte/Zeichen enthalten.\n"
+"Überprüfen Sie die „Wiedergabe“-Einstellungen für weitere Details."
 
 #: src/qml/Main.qml:32
 msgctxt "@title:window"
@@ -1710,7 +1709,7 @@ msgstr "Jetzt wiedergeben"
 #: src/qml/MpvVideo.qml:391
 msgctxt "@label:title"
 msgid "Loading…"
-msgstr ""
+msgstr "Wird geladen …"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1928,6 +1927,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Der Befehl wird mit einem Kurzbefehl ausgelöst. Der Kurzbefehl kann nach dem "
+"Speichern festgelegt werden."
 
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
@@ -1972,7 +1973,7 @@ msgstr "Leeren"
 #: src/qml/Settings/GeneralSettings.qml:66
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Löscht kürzlich verwendete Dateien aus der Datenbank"
 
 #: src/qml/Settings/GeneralSettings.qml:71
 msgctxt "@info:tooltip"
@@ -1982,6 +1983,11 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Die Anzahl der anzuzeigenden kürzlich verwendeten Dateien. Geben Sie 0 "
+"(null) ein, um diese Funktion zu deaktivieren.<br>Jede geöffnete Datei wird "
+"gespeichert.<br>Einträge in fetter Schrift sind Dateien, die über die „Datei/"
+"Adresse öffnen“-Aktionen und von externen Anwendungen (Befehlszeile, "
+"Dateiverwaltung, Ziehen und Ablegen etc.) geöffnet wurden."
 
 #: src/qml/Settings/GeneralSettings.qml:84
 msgctxt "@option:check"
@@ -2008,7 +2014,7 @@ msgstr "Die Datei wird am Ende der Wiedergabeliste hinzugefügt."
 #: src/qml/Settings/GeneralSettings.qml:123
 msgctxt "@option:check"
 msgid "Play new file"
-msgstr "Neue Datei abspielen"
+msgstr "Neue Datei wiedergeben"
 
 #: src/qml/Settings/GeneralSettings.qml:134
 msgctxt "@title"
@@ -2116,6 +2122,8 @@ msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
+"Die Anwendung im Vollbildmodus starten.<br>Das hat Vorrang vor den "
+"Einstellungen „An Video anpassen“ und „Fensterposition und -größe speichern“."
 
 #: src/qml/Settings/GeneralSettings.qml:321
 msgctxt "@option:check"
@@ -2357,7 +2365,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:171
 msgctxt "@option:check"
 msgid "Open last played file on startup"
-msgstr "Zuletzt abgespielte Datei beim Starten öffnen"
+msgstr "Zuletzt wiedergegebene Datei beim Starten öffnen"
 
 #: src/qml/Settings/PlaybackSettings.qml:180
 msgctxt "@info:tooltip open last played file setting"
@@ -2383,12 +2391,12 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:207
 msgctxt "@title"
 msgid "Playback position"
-msgstr "Abspielposition"
+msgstr "Wiedergabeposition"
 
 #: src/qml/Settings/PlaybackSettings.qml:217
 msgctxt "@option:check"
 msgid "Restore playback position"
-msgstr "Abspielposition wiederherstellen"
+msgstr "Wiedergabeposition wiederherstellen"
 
 #: src/qml/Settings/PlaybackSettings.qml:226
 msgctxt "@info:tooltip save playback position"
@@ -2414,6 +2422,7 @@ msgstr "Wiedergabe starten"
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
+"Die Datei wird nach dem Wiederherstellen der Wiedergabeposition wiedergegeben"
 
 #: src/qml/Settings/PlaybackSettings.qml:273
 msgctxt "@info"
@@ -2708,6 +2717,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr ""
+"Wenn aktiviert, wird automatisch eine Untertitelspur ausgewählt und angezeigt"
 
 #: src/qml/Settings/SubtitlesSettings.qml:96
 msgctxt "@option:check"
@@ -2720,6 +2730,9 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
+"Wenn aktiviert, können die Untertitel außerhalb des Videos in den schwarzen "
+"Rändern dargestellt werden. Dies funktioniert möglicherweise nicht mit allen "
+"„.ass“-Untertiteln."
 
 #: src/qml/Settings/SubtitlesSettings.qml:108
 msgctxt "@title"
@@ -2799,7 +2812,7 @@ msgid ""
 "or a cover/folder image in the same folder as the played file."
 msgstr ""
 "Wird bei Musikdateien verwendet, die keine Videospur, kein eingebettetes "
-"Titelbild oder ein Titel-/Ordnerbild im selben Ordner wie die abgespielte "
+"Titelbild und kein Titel-/Ordnerbild im selben Ordner wie die wiedergegebene "
 "Datei besitzen."
 
 #: src/qml/Settings/VideoSettings.qml:83
@@ -2890,6 +2903,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Die Wiedergabeliste mit der Kennung „%1“ kann nicht abgerufen werden\n"
+"\n"
+"%2"
 
 #, fuzzy
 #~| msgctxt "@item:listbox replay gain"
