@@ -352,8 +352,12 @@
     <release version="1.7.1" date="2026-01-14">
       <description>
         <p>Bugfixes</p>
+        <p xml:lang="he">תיקוני תקלות</p>
+        <p xml:lang="ka">შეცდომების გასწორება</p>
         <ul>
           <li>fixed searching playlist</li>
+          <li xml:lang="he">חיפוש ברשימות נגינה תוקן</li>
+          <li xml:lang="uk">виправлено пошуку у списку відтворення</li>
           <li>fixed tooltip background being same color as its text</li>
         </ul>
       </description>
@@ -399,18 +403,22 @@
         <p xml:lang="zh-CN">功能介绍</p>
         <p xml:lang="zh-TW">功能</p>
         <p>PlayList</p>
+        <p xml:lang="ka">დასაკრავი სია</p>
         <ul>
           <li>added advanced sorting and grouping</li>
           <li>added context menu to open file in Hana (thumbnail generator, only if it's installed)</li>
           <li>the last active playlist will be set as visible when starting the app</li>
         </ul>
         <p>Other</p>
+        <p xml:lang="ka">სხვა</p>
         <ul>
           <li>added replay gain settings</li>
           <li>mpris thumbnail is only set for audio files, this allows the os taskbar preview to show the actual live window</li>
           <li>decreased the size of the play icon in the compact playlist</li>
         </ul>
         <p>Bugfixes</p>
+        <p xml:lang="he">תיקוני תקלות</p>
+        <p xml:lang="ka">შეცდომების გასწორება</p>
         <ul>
           <li>fixed database folder not being created</li>
           <li>fixed seekbar tooltip not updating when file changes and the mouse is not moved</li>
@@ -467,6 +475,8 @@
           <li>Mouse settings: action asssigned to a mouse event can be changed</li>
         </ul>
         <p>Bugfixes</p>
+        <p xml:lang="he">תיקוני תקלות</p>
+        <p xml:lang="ka">შეცდომების გასწორება</p>
         <ul>
           <li>Fixed looping playlist with a single files</li>
           <li>Fixed playlist tabs not being saved</li>
@@ -519,6 +529,8 @@
         <p xml:lang="zh-CN">功能介绍</p>
         <p xml:lang="zh-TW">功能</p>
         <p>Settings</p>
+        <p xml:lang="he">הגדרות</p>
+        <p xml:lang="ka">მორგება</p>
         <ul>
           <li>General: added single instance setting to play new file when appending to the playlist</li>
           <li>General: removed the <code>File dialog location setting</code></li>
@@ -529,8 +541,12 @@
           <li>the settings window now has a minimum width and height</li>
         </ul>
         <p>PlayList</p>
+        <p xml:lang="ka">დასაკრავი სია</p>
         <ul>
           <li>added support for multiple playlists</li>
+          <li xml:lang="he">נוספה תמיכה בריבוי רשימות נגינה</li>
+          <li xml:lang="ka">დაემატა ერთზე მეტი დასაკრავი სიის მხარდაჭერა</li>
+          <li xml:lang="uk">додано підтримку декількох списків відтворення</li>
           <li>items can be reordered manually through drag and dropdown</li>
           <li>items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
           <li>items can be filtered</li>
@@ -541,12 +557,14 @@
           <li>hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
         </ul>
         <p>Playback</p>
+        <p xml:lang="ka">დაკვრა</p>
         <ul>
           <li>if a file can't be played now an error is shown and playback stops instead of trying to play the next file (prevents a potential infinite loop when no file in the playlist can be played)</li>
           <li>can play files starting with a dot (hidden files)</li>
           <li>an error is shown when failing to get youtube playlist</li>
         </ul>
         <p>Other</p>
+        <p xml:lang="ka">სხვა</p>
         <ul>
           <li>mpris: add support for Shuffle and LoopStatus</li>
           <li>changed the action selection popup to use Kirigami.SearchDialog</li>
@@ -560,6 +578,7 @@
           <li>all strings should be translatable now</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>fixed the loop action, osd was not showing and progress bar was not highlighting the loop range</li>
           <li>before loading check that the file exists </li>
@@ -615,6 +634,8 @@
           <li>Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
         </ul>
         <p>Bugfixes</p>
+        <p xml:lang="he">תיקוני תקלות</p>
+        <p xml:lang="ka">შეცდომების გასწორება</p>
         <ul>
           <li>Fix tracks menus showing tracks from previously opened files</li>
           <li>Fix subtitles added by drag and drop not being added to the subtitles menu</li>
@@ -625,6 +646,7 @@
     <release version="1.3.3" date="2025-02-24">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed app not getting focused when opening a file while single instance is enabled and player is open</li>
           <li>Fixed overlapping the window title with the duration info in the footer</li>
@@ -635,6 +657,7 @@
     <release version="1.3.2" date="2025-01-22">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed shortcuts not working with non english system language</li>
           <li>Fixed restoring playback position</li>
@@ -644,6 +667,7 @@
     <release version="1.3.1" date="2025-01-21">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed screen inhibition not working</li>
           <li>Fixed setting volume through mpris2</li>
@@ -654,6 +678,9 @@
       <description>
         <p>There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Changed the settings related to restoring the playback position, if you changed the defaults you might have to redo them</li>
           <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed (from the playlist)</li>
@@ -665,6 +692,7 @@
           <li>Replaced hardware decoding checkbox with an option in the hardware decoding combobox/drop-down</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Improved scrolling performance of playlist, shortcuts and seekbar's chapters menu</li>
           <li>Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
@@ -679,6 +707,7 @@
     <release version="1.2.1" date="2024-09-27">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed thumbnail preview popup not resizing after disabling the previews</li>
           <li>Use the same volume component for both footer styles</li>
@@ -688,6 +717,9 @@
     <release version="1.2.0" date="2024-08-26">
       <description>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Added floating footer/bottom toolbar style</li>
           <li>Removed the docbook and moved its content to tooltips</li>
@@ -698,6 +730,7 @@
     <release version="1.1.2" date="2024-06-03">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Disabled track selection menus and buttons when there are no tracks to be selected</li>
           <li>Fixed custom command toggling</li>
@@ -710,6 +743,7 @@
     <release version="1.1.1" date="2024-05-17">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Subtitles menu not including manually added subtitles</li>
           <li>Duration in the playlist being 0</li>
@@ -721,10 +755,14 @@
     <release version="1.1.0" date="2024-04-19">
       <description>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Setting to open playlist items with single click</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Video opening in a separate window when using mpv version 0.38.0</li>
           <li>Mute resetting when opening a new file</li>
@@ -735,6 +773,7 @@
     <release version="1.0.2" date="2024-03-25">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Hiding/showing Playlist toolbar setting</li>
           <li>Track sub-menus in Audio and Subtitles global menus being empty</li>
@@ -747,11 +786,15 @@
         <p>Ported to Qt6.</p>
         <p>Some hwdec options have been removed, if needed they can be set in the settings under "Custom commands" as `set hwdec decoding_method_name` and choose "Run at startup"</p>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Opening items from the playlist is faster</li>
           <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Opening file through "Open File" action was not playing the file</li>
           <li>Opening playlist file from playlist header was not doing anything</li>
@@ -761,6 +804,7 @@
     <release version="0.12.3" date="2023-11-15">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed subtitle chooser dialog not opening in the folder the current playing file is in</li>
           <li>Fixed playlist covering the footer/bottom toolbar and making it hard to close the playlist when toggling it with the mouse is turned off</li>
@@ -768,6 +812,9 @@
           <li>Fixed url not being added to recent files when opened through the "Open Url" action</li>
         </ul>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Added "Escape" shortcut to close the settings window</li>
         </ul>
@@ -776,6 +823,7 @@
     <release version="0.12.2" date="2023-11-02">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Don't show preview popup when no filee is loaded or when playing an online video</li>
           <li>Fixed thumbnails not working in the playlist</li>
@@ -785,6 +833,7 @@
     <release version="0.12.1" date="2023-08-31">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed file being paused on startup in certain cases</li>
           <li>Fixed text color of the progress bar tooltip</li>
@@ -796,6 +845,9 @@
     <release version="0.12.0" date="2023-08-25">
       <description>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Added preview thumbnail to the progress bar, can be configured in the general settings page</li>
           <li>Added setting to allow only a single instance, can be configured in the general settings page</li>
@@ -810,6 +862,7 @@
           <li>Added track selection menu entries to the hamburger menu</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed not blocking inhibition (turning the display off, sleep etc.) during playback</li>
         </ul>
@@ -818,6 +871,7 @@
     <release version="0.11.3" date="2023-07-12">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed color picker buttons in subtitles settings not reflecting the current color</li>
           <li>Fixed subtitles color changes not applying immediately</li>
@@ -827,6 +881,7 @@
     <release version="0.11.2" date="2023-07-08">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed osd not showing</li>
           <li>Fixed adding items to the playlist</li>
@@ -840,6 +895,7 @@
     <release version="0.11.1" date="2023-05-28">
       <description>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed quit action not working</li>
           <li>Fixed osd not showing</li>
@@ -851,11 +907,15 @@
       <description>
         <p>The mpv code has been refactored to improve performance, there might still be some bugs, do report any at bugs.kde.org</p>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>When restoring from minimized state, playback state is set to what it was when the minimization happened (only applies if the "Pause on minimize" setting is turned on)</li>
           <li>Added Debug settings page, shows the paths to config files and allows to open them</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Fixed not being able to open files whose path contained certain characters</li>
           <li>Fixed not being able to open .ts and .rm files</li>
@@ -869,6 +929,9 @@
     <release version="0.10.3" date="2023-01-29">
       <description>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Playlist: added options to open m3u files (without support for extended attributes), add files and urls (only the url path will be displayed, no title and no duration), sort, clear and save the playlist</li>
           <li>Playlist: added context menu for the playlist items</li>
@@ -879,6 +942,7 @@
           <li>Added MPRIS thumbnail</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>Recent files: fixed ordering, showing duplicates, clearing and adding when list is full</li>
           <li>Fixed OSD showing without text</li>
@@ -907,6 +971,9 @@
     <release version="0.9.3" date="2022-10-06">
       <description>
         <p>Features 0.9.0:</p>
+        <p xml:lang="he">יכולות ב־0.9.0:</p>
+        <p xml:lang="ka">0.9.0-ის თვისებები:</p>
+        <p xml:lang="uk">Можливості 0.9.0:</p>
         <ul>
           <li>Refactored the shortcuts configuration, now it's available in the settings window with the other settings, instead of opening another window</li>
           <li>Hamburger menu now only show a few actions, the rest are available in a submenu</li>
@@ -923,6 +990,9 @@
           <li>In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
         </ul>
         <p>Features 0.9.2:</p>
+        <p xml:lang="he">יכולות ב־0.9.2:</p>
+        <p xml:lang="ka">0.9.2-ის თვისებები:</p>
+        <p xml:lang="uk">Можливості 0.9.2:</p>
         <ul>
           <li>Added action to load a subtitle from a file dialog</li>
         </ul>
@@ -937,10 +1007,13 @@
         <ul>
           <li>Fixed two broken actions in the global menu</li>
           <li>Fixed translations</li>
+          <li xml:lang="he">התרגומים תוקנו</li>
         </ul>
         <p>Bugfixes 0.9.2:</p>
+        <p xml:lang="he">תיקוני תקלות ב־0.9.2:</p>
         <ul>
           <li>Improved right to left layout</li>
+          <li xml:lang="he">הפריסה מימין לשמאל השתפרה</li>
           <li>The window now scales when changing the system font size</li>
           <li>Fixed a crash when changing the maximum recent files setting to 0</li>
           <li>Fixed subtitles folders setting (these folders are used to search for subtitles)</li>
@@ -957,6 +1030,9 @@
     <release version="0.8.0" date="2022-04-20">
       <description>
         <p>Features:</p>
+        <p xml:lang="he">יכולות:</p>
+        <p xml:lang="ka">თვისებები:</p>
+        <p xml:lang="uk">Можливості:</p>
         <ul>
           <li>Support for global menu</li>
           <li>Setting to pause playback when minimized</li>
@@ -968,6 +1044,7 @@
           <li>Action to seek to watch later position (Ctrl+Shift+P), useful when resume playback on startup is disabled</li>
         </ul>
         <p>Bugfixes:</p>
+        <p xml:lang="ka">შეცდომების გასწორება:</p>
         <ul>
           <li>There were two "remember time position" settings, doing different things, renamed the startup one to "resume playback"</li>
           <li>Fixed a case where the playlist could not be closed with mouse hover anymore</li>
@@ -980,6 +1057,7 @@
     <release version="0.1.0" date="2020-02-28">
       <description>
         <p>First release.</p>
+        <p xml:lang="he">מהדורה ראשונית.</p>
       </description>
     </release>
   </releases>
