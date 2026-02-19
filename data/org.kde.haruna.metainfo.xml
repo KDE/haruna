@@ -745,6 +745,7 @@
         <ul>
           <li>added support for multiple playlists</li>
           <li xml:lang="ar">إضافة دعم لقوائم تشغيل متعددة</li>
+          <li xml:lang="ca">s'ha afegit el suport per a llistes de reproducció múltiples</li>
           <li xml:lang="he">נוספה תמיכה בריבוי רשימות נגינה</li>
           <li xml:lang="ka">დაემატა ერთზე მეტი დასაკრავი სიის მხარდაჭერა</li>
           <li xml:lang="nl">Ondersteuning voor meerdere afspeellijsten toegevoegd</li>
@@ -812,6 +813,7 @@
         <ul>
           <li>if a file can't be played now an error is shown and playback stops instead of trying to play the next file (prevents a potential infinite loop when no file in the playlist can be played)</li>
           <li xml:lang="ar">إذا تعذر تشغيل ملف الآن، يُعرض خطأ ويتوقف التشغيل بدلاً من محاولة تشغيل الملف التالي (يمنع حدوث حلقة مفرغة محتملة عند تعذر تشغيل أي ملف في القائمة)</li>
+          <li xml:lang="ka">თუ ფაილის დაკვრა შეუძლებელია, გამოჩნდება შეცდომა და დაკვრა შეწყდება შემდეგი ფაილის დაკვრის მცდელობის ნაცვლად (ეს თავიდან აიცილებს პოტენციურ უსასრულო ციკლს, როცა დასაკრავ სიაში არცერთი ფაილის დაკვრაა შესაძლებელი)</li>
           <li xml:lang="pt-BR">se um arquivo não puder ser reproduzido, um erro será exibido e a reprodução será interrompida em vez de tentar reproduzir o próximo arquivo (isso evita um possível loop infinito quando nenhum arquivo na lista de reprodução puder ser reproduzido)</li>
           <li xml:lang="sl">če datoteke zdaj ni mogoče predvajati, se prikaže napaka in se playback ustavi, namesto da bi poskušali predvajati naslednjo datoteko (preprečuje morebitno neskončno zanko, ko ni mogoče predvajati nobene datoteke na seznamu predvajanja)</li>
           <li xml:lang="zh-CN">如果文件无法播放，显示错误信息并停止播放，而不是尝试播放下一个文件 (防止在播放列表中没有一个文件能够播放时可能发生的无限循环问题)</li>
@@ -845,6 +847,7 @@
           <li xml:lang="zh-CN">mpris：添加随机播放和循环状态的支持</li>
           <li>changed the action selection popup to use Kirigami.SearchDialog</li>
           <li xml:lang="ar">تغيير منبثقة اختيار الإجراء لتستخدم Kirigami.SearchDialog</li>
+          <li xml:lang="ka">შეიცვალა ქმედების არჩევის მხტუნარა, რომ გამოიყენოს Kirigami.SearchDialog</li>
           <li xml:lang="pt-BR">alteração da janela pop-up de seleção de ações para usar Kirigami.SearchDialog</li>
           <li xml:lang="sl">spremenil pojavno okno za izbiro dejanja za uporabo Kirigami.SearchDialog</li>
           <li xml:lang="zh-CN">将操作选择弹窗改为使用 Kirigami.SearchDialog</li>
@@ -868,6 +871,7 @@
           <li xml:lang="zh-CN">拖放到上半部分将附加到默认播放列表</li>
           <li>bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
           <li xml:lang="ar">الجزء السفلي يمسح قائمة التشغيل المبدئية ويضيف الملفات والمجلدات المفلتة، وعند إفلات ملف واحد فقط فإنه يسلك سلوك إجراء فتح الملف (يمسح القائمة ويحمل الملفات الشقيقة إذا كان ذلك مفعلاً في الإعدادات)</li>
+          <li xml:lang="ka">ქვედა ნაწილი ასუფთავებს ნაგულისხმევ დასაკრავ სიას და ამატებს ჩაყრილ ფაილებსა და საქაღალდეებს. მხოლოდ, ერთი ფაილის ჩაგდებისას, ის იქცევა როგორც ფაილის გახსნის ქმედება (ასუფთავებს დასაკრავ სიას და ტვირთავს იმავე საქაღალდეში არსებულ ფაილებს, თუ ეს ჩართულია პარამეტრებში)</li>
           <li xml:lang="pt-BR">a parte inferior limpa a lista de reprodução padrão e adiciona os arquivos e pastas soltos; quando apenas um arquivo é solto, o comportamento é o mesmo da ação de abrir arquivo (limpa a lista de reprodução e carrega os arquivos irmãos, se essa opção estiver habilitada nas configurações)</li>
           <li xml:lang="sl">spodnji del počisti privzeti seznam predvajanja in doda izpuščene datoteke in mape, ko je izpuščena samo ena datoteka, se obnaša kot dejanje odprte datoteke (počisti seznam predvajanja in naloži sorodne datoteke, če je omogočeno v nastavitvah)</li>
           <li xml:lang="zh-CN">拖放到下半部分将清空默认播放列表并添加拖放的文件和文件夹。如果仅拖放了单个文件，其行为与打开文件操作相同 (清空播放列表并加载姐妹文件，如果在设置中启用的话)</li>
@@ -879,6 +883,7 @@
           <li xml:lang="zh-CN">最近文件现在被保存在一个 sqlite 数据库中</li>
           <li>time positions used to restore videos are also stored in the database</li>
           <li xml:lang="ar">تخزين المواضع الزمنية المستخدمة لاستعادة الفيديوهات في قاعدة البيانات أيضاً</li>
+          <li xml:lang="ka">ვიდეოების აღსადგენად გამოყენებული დროის პოზიციები ასევე ინახება მონაცემთა ბაზაში</li>
           <li xml:lang="pt-BR">posições temporais usadas para restaurar vídeos também são armazenadas no banco de dados</li>
           <li xml:lang="sl">časovni položaji uporabljeni za obnovitev videoposnetkov o tudi shranjeni v bazi podatkov</li>
           <li xml:lang="zh-CN">恢复播放进度的时间位置也保存在该数据库中</li>
@@ -979,16 +984,19 @@
         <ul>
           <li>Added setting to search subtitles recursively. Searches folders relative to the parent folder of the playing file and folders defined by the `Load subtitles from` setting</li>
           <li xml:lang="ar">إضافة إعداد للبحث عن الترجمات تكرارياً. يبحث في المجلدات بالنسبة للمجلد الأب للملف المشغل وفي المجلدات المحددة في إعداد `تحميل الترجمة من`</li>
+          <li xml:lang="ka">დაემატა პარამეტრი სუბტიტრების რეკურსიული ძიებისთვის. ძებნა ხორციელდება დაკვრადი ფაილის მშობელი საქაღალდის მიმართულებით და იმ საქაღალდეებში, რომლებიც განსაზღვრულია პარამეტრით 'სუბტიტრების ჩატვირთვა საიდან'</li>
           <li xml:lang="pt-BR">Adicionada configuração para busca recursiva de legendas. Busca pastas relativas à pasta principal do arquivo em reprodução e pastas definidas pela configuração `Carregar legendas de`</li>
           <li xml:lang="sl">Dodana nastavitev za rekurzivno iskanje podnapisov. Išče mape glede na nadrejeno mapo predvajane datoteke in mape, določene z nastavitvijo `Naloži podnapise iz`</li>
           <li xml:lang="zh-CN">新增用于递归搜索字幕的设置。搜索由“加载字幕来源”设置中定义的相对正在播放文件的父文件夹的文件和文件夹</li>
           <li>Added support for opening youtube playlists from urls containing a playlist id</li>
           <li xml:lang="ar">إضافة دعم لفتح قوائم تشغيل يوتيوب من مسارات (URLs) تحتوي على معرف قائمة التشغيل</li>
+          <li xml:lang="ka">დაემატა მხარდაჭერა YouTube-ის დასაკრავი სიების გახსნისთვის იმ URL-ებიდან, რომლებიც დასაკრავი სიის ID-ს შეიცავენ</li>
           <li xml:lang="pt-BR">Adicionada a possibilidade de abrir listas de reprodução do YouTube a partir de URLs que contenham o ID da lista de reprodução</li>
           <li xml:lang="sl">Dodana podpora za odpiranje youtube seznamov predvajanja iz URL-jev, ki vsebujejo ID seznama predvajanja</li>
           <li xml:lang="zh-CN">新增从包含播放列表 ID 的 URL 打开 Youtube 播放列表的支持</li>
           <li>Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
           <li xml:lang="ar">إضافة إجراءات لتدوير الفيديو باتجاه عقارب الساعة (Ctrl + R) وعكس اتجاه عقارب الساعة (Ctrl + E)</li>
+          <li xml:lang="ka">დაემატა ქმედებები ვიდეოს საათის ისრის მიმართულებით (ctrl + r) და საათის ისრის საწინააღმდეგო მიმართულებით (ctrl + e) დასატრიალებლად</li>
           <li xml:lang="pt-BR">Adicionadas ações para girar o vídeo no sentido horário (ctrl + r) e no sentido anti-horário (ctrl + e)</li>
           <li xml:lang="sl">Dodana dejanja za vrtenje videa v smeri urinega kazalca (ctrl + r) in nasprotni smeri urinega kazalca (ctrl + e)</li>
           <li xml:lang="zh-CN">新增操作以旋转视频，顺时针 (Ctrl+R)、逆时针 (Ctrl+E)</li>
@@ -1017,6 +1025,7 @@
           <li xml:lang="zh-CN">修复通过拖放添加的字幕不被添加到字幕菜单的问题</li>
           <li>While the progress/seek slider is pressed the video is paused, fixes continuously opening the next video when dragged and held all the why to the end</li>
           <li xml:lang="ar">إيقاف الفيديو مؤقتاً عند الضغط على منزلق التقدم/السعي، مما يصلح الفتح المستمر للفيديو التالي عند السحب والإمساك حتى النهاية</li>
+          <li xml:lang="ka">გასწორდა მიმდინარეობსი/გადახვევის სლაიდერზე დაჭერისას ვიდეოს დაპაუზება. ასევე გასწორდა შემდეგი ვიდეოს უწყვეტად გახსნა სლაიდერის ბოლომდე გადათრევისა და გაჩერებისას</li>
           <li xml:lang="pt-BR">Enquanto o botão de progresso/busca estiver pressionado, o vídeo é pausado, corrigindo o problema de abertura contínua do próximo vídeo ao arrastar e segurar o botão até o final</li>
           <li xml:lang="sl">Medtem ko je drsnik za napredovanje/iskanje pritisnjen, se videoposnetek začasno ustavi, popravlja neprekinjeno odpiranje naslednjega videoposnetka, ko povlečete in zadržite vse zakaj do konca</li>
           <li xml:lang="zh-CN">当进度条被按下时视频暂停，修复拖放时按住不放直至结束连续打开下一条视频</li>
@@ -1035,11 +1044,13 @@
         <ul>
           <li>Fixed app not getting focused when opening a file while single instance is enabled and player is open</li>
           <li xml:lang="ar">إصلاح عدم تركيز التطبيق عند فتح ملف مع تفعيل خيار النسخة الواحدة والمشغل مفتوح</li>
+          <li xml:lang="ka">გასწორდა აპლიკაციის ფოკუსში არმოქცევა ფაილის გახსნისას, როდესაც ერთი ასლის რეჟიმი ჩართულია და დამკვრელი ღიაა</li>
           <li xml:lang="pt-BR">Corrigido o problema em que o aplicativo não recebia o foco ao abrir um arquivo com a instância única ativada e o reprodutor aberto</li>
           <li xml:lang="sl">Odpravljena aplikacija, ki ni bila fokusirana pri odpiranju datoteke, ko je omogočen en primerek in je predvajalnik odprt</li>
           <li xml:lang="zh-CN">修复在启用了单个实例且播放器打开时，打开文件不会聚焦应用窗口的问题</li>
           <li>Fixed overlapping the window title with the duration info in the footer</li>
           <li xml:lang="ar">إصلاح تداخل عنوان النافذة مع معلومات المدة في التذييل</li>
+          <li xml:lang="ka">გასწორდა ფანჯრის სათაურის გადაფარვა ხანგრძლივობის ინფორმაციაზე ქვედა პანელში</li>
           <li xml:lang="pt-BR">Corrigido o problema de sobreposição do título da janela com as informações de duração no rodapé</li>
           <li xml:lang="sl">Popravljeno prekrivanje naslova okna z informacijami o trajanju v nogi</li>
           <li xml:lang="zh-CN">修复了窗口标题和页脚的持续时间信息重叠的问题</li>
@@ -1106,11 +1117,13 @@
       <description>
         <p>There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
         <p xml:lang="ar">أُجريت الكثير من عمليات إعادة صياغة الشيفرة، لذا يرجى الإبلاغ عن أي علل تواجهها. يوجد مدخل لقائمة "أبلغ عن علة" تحت قائمة "مساعدة" أو في صفحة "عن" في الإعدادات.</p>
+        <p xml:lang="ka">განხორციელდა კოდის მნიშვნელოვანი რეფაქტორინგი, ამიტომ, რაიმე შეცდომის აღმოჩენის შემთხვევაში, გთხოვთ, შეგვატყობინეთ. მენიუს პუნქტი „შეცდომის ანგარიში“ შეგიძლიათ იპოვოთ მენიუში „დახმარება“ ან მორგების დიალოგში გვერდზე 'შესახებ'.</p>
         <p xml:lang="pt-BR">Houve muita refatoração de código, então certifique-se de relatar quaisquer erros que encontrar. Há uma opção "Relatar bug" no menu "Ajuda" ou nas configurações da página "Sobre".</p>
         <p xml:lang="sl">Bilo je veliko preoblikovanja kode, zato ne pozabite prijaviti vseh napak, na katere naletite. V meniju "Pomoč" ali v nastavitvah na strani z informacijami je vnos menija "Prijavi napako".</p>
         <p xml:lang="zh-CN">因为进行了大量的代码重构，请在遇到问题时向我们报告。您可以在程序的“帮助”菜单中找到“报告程序缺陷”条目，也可以在设置对话框的“关于”页面中报告。</p>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1123,11 +1136,13 @@
         <ul>
           <li>Changed the settings related to restoring the playback position, if you changed the defaults you might have to redo them</li>
           <li xml:lang="ar">تغيير الإعدادات المتعلقة باستعادة موضع التشغيل، إذا كنت قد غيرت القيم المبدئية فقد تضطر لإعادة ضبطها</li>
+          <li xml:lang="ka">შეიცვალა დაკვრის პოზიციის აღდგენასთან დაკავშირებული პარამეტრები. თუ თქვენ შეცვლილი გქონდათ ნაგულისხმევი მნიშვნელობები, შესაძლოა, მათი ხელახლა დაყენება დაგჭირდეთ</li>
           <li xml:lang="pt-BR">As configurações relacionadas à restauração da posição de reprodução foram alteradas. Se você alterou as configurações padrão, talvez precise refazê-las</li>
           <li xml:lang="sl">Spremenjene nastavitve v zvezi z obnovitvijo položaja predvajanja; če ste spremenili privzete nastavitve, jih boste morda morali spet nastaviti</li>
           <li xml:lang="zh-CN">更改了与恢复播放位置有关的设置，如果您更改过相关设置，可能需要重新修改</li>
           <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed (from the playlist)</li>
           <li xml:lang="ar">قائمة التشغيل: إضافة مدخلات للقائمة السياقية للمسارات (URLs) غير المحلية لفتحها في المتصفح أو إزالتها (من قائمة التشغيل)</li>
+          <li xml:lang="ka">დასაკრავი სია: დაემატა კონტექსტური მენიუს პუნქტები არალოკალური URL-ებისთვის, რომ ისინი ბრაუზერში გაიხსნას, ან წაიშალოს (დასაკრავი სიიდან)</li>
           <li xml:lang="pt-BR">Lista de reprodução: adicionadas entradas ao menu de contexto para URLs não locais, permitindo abri-las no navegador e removê-las (da lista de reprodução)</li>
           <li xml:lang="sl">Seznam predvajanja: dodani vnosi kontekstnega menija za nelokalne URL-je, ki se odprejo v brskalniku in naj se odstranijo (s seznama predvajanja)</li>
           <li xml:lang="zh-CN">播放列表：新增右键菜单条目以在浏览器中打开非本地 URL 或移除它们</li>
@@ -1139,16 +1154,19 @@
           <li xml:lang="zh-CN">新增常规设置以在全屏模式下启动应用</li>
           <li>Added setting (in Subtitles) to control subtitle auto selection</li>
           <li xml:lang="ar">إضافة إعداد (في الترجمات) للتحكم في الاختيار الآلي للترجمة</li>
+          <li xml:lang="ka">დაემატა პარამეტრი (სუბტიტრებში) სუბტიტრების ავტოამორჩევის სამართავად</li>
           <li xml:lang="pt-BR">Adicionada configuração (em Legendas) para controlar a seleção automática de legendas</li>
           <li xml:lang="sl">Dodana nastavitev (v podnapisih) za nadzor samodejne izbire podnapisov</li>
           <li xml:lang="zh-CN">新增字幕设置以控制字幕自动选择功能</li>
           <li>Changed left and right mouse button default actions: left click is now play/pause and right click opens the context menu. Actions can be changed in settings Mouse page</li>
           <li xml:lang="ar">تغيير الإجراءات المبدئية لزري الفأرة الأيسر والأيمن: النقر الأيسر للتشغيل/الإيقاف المؤقت والنقر الأيمن لفتح القائمة السياقية. يمكن تغيير الإجراءات في صفحة الفأرة في الإعدادات</li>
+          <li xml:lang="ka">შეიცვალა თაგუნას მარცხენა და მარჯვენა ღილაკების ნაგულისხმევი ქმედებები: მარცხენა წკაპი ახლა არის დაკვრა/პაუზა, მარჯვენა წკაპი კი ხსნის კონტექსტურ მენიუს. ქმედებების შეცვლა შესაძლებელია მორგების დიალოგის გვერდზე 'თაგუნა'</li>
           <li xml:lang="pt-BR">Alteradas as ações padrão dos botões esquerdo e direito do mouse: o clique esquerdo agora reproduz/pausa e o clique direito abre o menu de contexto. As ações podem ser alteradas na página Mouse nas configurações</li>
           <li xml:lang="sl">Spremenjena privzeta dejanja levega in desnega gumba miške: levi klik je zdaj predvajanje/pavza, desni klik pa odpre kontekstni meni. Dejanja lahko spremenite na strani z nastavitvami miške</li>
           <li xml:lang="zh-CN">更改默认的鼠标左键和右键操作：左键点击现在是播放/暂停，右键点击现在是打开右键菜单。这些操作可在设置对话框的鼠标页面修改。</li>
           <li>Dragging the seek/progress bar will update the main view as well as the seekbar preview</li>
           <li xml:lang="ar">سحب شريط السعي/التقدم سيحدث العرض الرئيسي بالإضافة إلى معاينة شريط السعي</li>
+          <li xml:lang="ka">გადახვევის/მიმდინარეობის ზოლის გადათრევა განაახლებს, როგორც, მთავარ ხედს, ისე გადახვევის ზოლის მინიატურას</li>
           <li xml:lang="pt-BR">Arrastar a barra de progresso/busca atualizará a visualização principal, bem como a pré-visualização da barra de progresso</li>
           <li xml:lang="sl">Če povlečete vrstico za iskanje/napredek, boste posodobili glavni pogled in predogled vrstice za iskanje</li>
           <li xml:lang="zh-CN">在进度条上拖动将更新主视图和进度条预览图</li>
@@ -1160,6 +1178,7 @@
           <li xml:lang="zh-CN">减小最小窗口大小</li>
           <li>Replaced hardware decoding checkbox with an option in the hardware decoding combobox/drop-down</li>
           <li xml:lang="ar">استبدال مربع اختيار فك الترميز العتادي بخيار في القائمة المنسدلة لفك الترميز العتادي</li>
+          <li xml:lang="ka">აპარატურული დეკოდირების მოსანიშნი თოლია ჩანაცვლდა პარამეტრით აპარატურული დეკოდირების ჩამოსაშლელ მენიუში</li>
           <li xml:lang="pt-BR">Substituição da caixa de seleção de decodificação por hardware por uma opção na caixa de combinação/menu suspenso de decodificação por hardware</li>
           <li xml:lang="sl">Potrditveno polje za dekodiranje strojne opreme je bilo zamenjano z možnostjo v kombiniranem/spustnem meniju za dekodiranje strojne opreme</li>
           <li xml:lang="zh-CN">将硬件解码复选框替换为在硬件解码下拉列表中中的选项</li>
@@ -1174,16 +1193,19 @@
         <ul>
           <li>Improved scrolling performance of playlist, shortcuts and seekbar's chapters menu</li>
           <li xml:lang="ar">تحسين أداء التمرير لقائمة التشغيل والاختصارات وقائمة فصول شريط السعي</li>
+          <li xml:lang="ka">გაუმჯობესდა დასაკრავი სიის, მალსახმობებისა და გადახვევის ზოლის თავების მენიუს გადახვევის წარმადობა</li>
           <li xml:lang="pt-BR">Melhoria no desempenho de rolagem da lista de reprodução, dos atalhos e do menu de capítulos da barra de busca</li>
           <li xml:lang="sl">Izboljšana zmogljivost drsenja seznama predvajanja, bližnjic in menija poglavij v iskalni vrstici</li>
           <li xml:lang="zh-CN">改进了播放列表、快捷键和进度条的章节菜单的滚动性能</li>
           <li>Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
           <li xml:lang="ar">إصلاح مشكلة ضبط الاختصارات مع مفاتيح المبدلات (Ctrl, Alt إلخ)</li>
+          <li xml:lang="ka">გასწორდა მოდიფიკატორი ღილაკებით (ctrl, alt და ა.შ.) მალსახმობების დაყენების პრობლემა</li>
           <li xml:lang="pt-BR">Corrigido problema com a configuração de atalhos usando teclas modificadoras (ctrl, alt etc.)</li>
           <li xml:lang="sl">Odpravljena težava z nastavitvijo bližnjic z modifikacijskimi tipkami (ctrl, alt itd.)</li>
           <li xml:lang="zh-CN">修复设置带有修饰键 (Ctrl、Alt 等) 的快捷键时的问题</li>
           <li>Fixed active audio and subtitle tracks not being correctly checked</li>
           <li xml:lang="ar">إصلاح عدم التحقق بشكل صحيح من مسارات الصوت والترجمة النشطة</li>
+          <li xml:lang="ka">გასწორდა აქტიური აუდიო და სუბტიტრების ტრეკების არასწორად შემოწმების პრობლემა</li>
           <li xml:lang="pt-BR">Corrigido o problema em que as faixas de áudio e legendas ativas não eram verificadas corretamente</li>
           <li xml:lang="sl">Popravljeno nepravilno preverjanje aktivnih zvočnih in podnapisnih posnetkov</li>
           <li xml:lang="zh-CN">修复活动音频和字幕轨道不被正确勾选的问题</li>
@@ -1195,6 +1217,7 @@
           <li xml:lang="zh-CN">移除设置窗口的空标题工具栏</li>
           <li>Fixed a bug where the app would freeze when loading a file with lots of tracks</li>
           <li xml:lang="ar">إصلاح علة تسبب تجمد التطبيق عند تحميل ملف يحتوي على مسارات كثيرة</li>
+          <li xml:lang="ka">გასწორდა შეცდომა, რომლის დროსაც აპლიკაცია იყინებოდა ბევრი ტრეკის შემცველი ფაილის ჩატვირთვისას</li>
           <li xml:lang="pt-BR">Corrigido um bug que fazia o aplicativo travar ao carregar um arquivo com muitas faixas</li>
           <li xml:lang="sl">Odpravljena napaka, zaradi katere je aplikacija zamrznila pri nalaganju datoteke z veliko skladbami</li>
           <li xml:lang="zh-CN">修复在加载带有大量轨道的单个文件时应用程序会卡死的问题</li>
@@ -1206,6 +1229,7 @@
           <li xml:lang="zh-CN">改进菜单栏动画</li>
           <li>The floating footer now hides when the mouse leaves the app</li>
           <li xml:lang="ar">التذييل العائم يختفي الآن عندما تغادر الفأرة التطبيق</li>
+          <li xml:lang="ka">მცურავი ქვედა პანელი ახლა იმალება, როცა თაგუნა აპლიკაციას ტოვებს</li>
           <li xml:lang="pt-BR">O rodapé flutuante agora fica oculto quando o cursor sai do aplicativo</li>
           <li xml:lang="sl">Plavajoča noga se zdaj skrije, ko miška zapusti aplikacijo</li>
           <li xml:lang="zh-CN">鼠标离开应用时隐藏浮动页脚</li>
@@ -1224,6 +1248,7 @@
         <ul>
           <li>Fixed thumbnail preview popup not resizing after disabling the previews</li>
           <li xml:lang="ar">إصلاح عدم تغيير حجم منبثقة معاينة الصور المصغرة بعد تعطيل المعاينات</li>
+          <li xml:lang="ka">გამოსწორდა მინიატურის წინასწარი ნახვის მხტუნარა ფანჯრის ზომის არშეცვლა მინიატურების გამორთვის შემდეგ</li>
           <li xml:lang="pt-BR">Corrigido o problema em que a janela de pré-visualização em miniatura não redimensionava após a desativação das pré-visualizações</li>
           <li xml:lang="sl">Popravljeno pojavno okno s predogledom sličic, ki ni spremenilo velikosti po onemogočanju predogledov</li>
           <li xml:lang="zh-CN">修复在禁用预览后缩略图预览弹窗不调整大小的问题</li>
@@ -1240,6 +1265,7 @@
       <description>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1258,6 +1284,7 @@
           <li xml:lang="zh-CN">新增浮动页脚/底部工具栏样式</li>
           <li>Removed the docbook and moved its content to tooltips</li>
           <li xml:lang="ar">إزالة docbook ونقل محتواه إلى تلميحات الأدوات</li>
+          <li xml:lang="ka">წაიშალა docbook და მისი შიგთავსი გადატანილია მინიშნებებში</li>
           <li xml:lang="pt-BR">Removido o docbook e seu conteúdo foi movido para as dicas de ferramentas</li>
           <li xml:lang="sl">Odstranjen docbook in vsebina premaknjena v namige orodij</li>
           <li xml:lang="zh-CN">移除使用手册并将其内容移动到悬停信息中</li>
@@ -1282,6 +1309,7 @@
         <ul>
           <li>Disabled track selection menus and buttons when there are no tracks to be selected</li>
           <li xml:lang="ar">تعطيل قوائم وأزرار اختيار المسار عند عدم وجود مسارات ليتم اختيارها</li>
+          <li xml:lang="ka">გამოირთო ტრეკის არჩევის მენიუები და ღილაკები, როცა ასარჩევი ტრეკები არ არსებობს</li>
           <li xml:lang="pt-BR">Os menus e botões de seleção de faixas ficam desativados quando não há faixas para selecionar</li>
           <li xml:lang="sl">Onemogočeni meniji in gumbi za izbiro skladbe, ko ni skladb za izbiro</li>
           <li xml:lang="zh-CN">当没有轨道可选时禁用轨道选择菜单和按钮</li>
@@ -1293,11 +1321,13 @@
           <li xml:lang="zh-CN">修复自定义命令切换</li>
           <li>Re-added "Scroll to playing item" and "Trash file" options to playlist context menu, lost during Qt6 port</li>
           <li xml:lang="ar">إعادة إضافة خياري "مرر إلى العنصر المشغل" و "انقل الملف إلى المهملات" إلى القائمة السياقية لقائمة التشغيل، واللذان فُقدا أثناء النقل إلى Qt6</li>
+          <li xml:lang="ka">დაბრუნდა „დაკვრად ელემენტზე გადახვევის“ და „ფაილის ნაგვის ყუთში გადატანის“ პარამეტრები დაკვრის სიის კონტექსტურ მენიუში, რომლებიც Qt6-ზე გადატანისას დაიკარგა</li>
           <li xml:lang="pt-BR">As opções "Rolar para o item em reprodução" e "Lixeira", que haviam sido perdidas durante a migração para o Qt6, foram readicionadas ao menu de contexto da lista de reprodução</li>
           <li xml:lang="sl">V kontekstni meni seznama predvajanja sta bili znova dodani možnosti »Pomakni se do predmeta predvajanja« in »Datoteka v smeti«, izgubljeni med prenosom Qt6</li>
           <li xml:lang="zh-CN">重新加入“滚动到正在播放项目”和“移动项目到回收站”到播放列表的右键菜单。这些项目在进行 Qt6 移植时丢失了。</li>
           <li>Fixed some mpv properties not being correctly set at startup</li>
           <li xml:lang="ar">إصلاح بعض خصائص mpv التي لم تكن تُعين بشكل صحيح عند بدء التشغيل</li>
+          <li xml:lang="ka">გასწორდა გაშვებისას ზოგიერთი mpv-ის თვისების არასწორად დაყენება</li>
           <li xml:lang="pt-BR">Correção de algumas propriedades do mpv que não estavam sendo definidas corretamente na inicialização</li>
           <li xml:lang="sl">Popravljene nekatere lastnosti mpv, ki ob zagonu niso bile pravilno nastavljene</li>
           <li xml:lang="zh-CN">修复在启动时没有正确设置某些 mpv 属性的问题</li>
@@ -1322,6 +1352,7 @@
         <ul>
           <li>Subtitles menu not including manually added subtitles</li>
           <li xml:lang="ar">قائمة الترجمات لا تشمل الترجمات المضافة يدوياً</li>
+          <li xml:lang="ka">სუბტიტრების მენიუ ხელით დამატებულ სუბტიტრების არჩათვლით</li>
           <li xml:lang="pt-BR">O menu de legendas não inclui legendas adicionadas manualmente</li>
           <li xml:lang="sl">Meni s podnapisi ne vključuje ročno dodanih podnapisov</li>
           <li xml:lang="zh-CN">字幕菜单不包含手动添加的字幕</li>
@@ -1350,6 +1381,7 @@
       <description>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1377,6 +1409,7 @@
         <ul>
           <li>Video opening in a separate window when using mpv version 0.38.0</li>
           <li xml:lang="ar">فتح الفيديو في نافذة منفصلة عند استخدام إصدارة mpv 0.38.0</li>
+          <li xml:lang="ka">ვიდეო იხსნებოდა ცალკე ფანჯარაში mpv-ის 0.38.0 ვერსიის გამოყენებისას</li>
           <li xml:lang="pt-BR">O vídeo abre em uma janela separada ao usar a versão 0.38.0 do mpv</li>
           <li xml:lang="sl">Video se odpre v ločenem oknu pri uporabi mpv različice 0.38.0</li>
           <li xml:lang="zh-CN">当使用 mpv 0.38.0 时在单独窗口中打开视频时的问题</li>
@@ -1388,6 +1421,7 @@
           <li xml:lang="zh-CN">打开新文件时静音状态会被重置</li>
           <li>Playing item in playlist is no longer bold, it made text hard to read under certain conditions</li>
           <li xml:lang="ar">العنصر المشغل في قائمة التشغيل لم يعد بخط عريض، حيث كان ذلك يجعل النص صعب القراءة في ظروف معينة</li>
+          <li xml:lang="ka">დაკვრის სიაში მიმდინარე ელემენტი აღარ არის გამუქებული, რადგან ის გარკვეულ პირობებში ტექსტის წაკითხვას ართულებდა</li>
           <li xml:lang="pt-BR">O item em reprodução na lista de reprodução deixou de estar em negrito, o que dificulta a leitura do texto em determinadas condições</li>
           <li xml:lang="sl">Predvajanje elementa na seznamu predvajanja ni več krepko, zaradi česar je bilo besedilo pod določenimi pogoji težko brati</li>
           <li xml:lang="zh-CN">播放列表中的正在播放项目不再加粗，因为这会导致某些情况下文字难以识别</li>
@@ -1412,6 +1446,7 @@
           <li xml:lang="zh-CN">隐藏/显示播放列表工具栏设置</li>
           <li>Track sub-menus in Audio and Subtitles global menus being empty</li>
           <li xml:lang="ar">القوائم الفرعية للمسارات في القوائم العالمية للصوت والترجمات فارغة</li>
+          <li xml:lang="ka">ტრეკის ქვემენიუების სიცარიელე აუდიოსა და სუბტიტრების გლობალურ მენიუებში</li>
           <li xml:lang="pt-BR">Os submenus de faixas nos menus globais de Áudio e Legendas estão vazios</li>
           <li xml:lang="sl">Sledite temu, da so podmeniji v globalnih menijih za zvok in podnapise prazni</li>
           <li xml:lang="zh-CN">在音频和字幕菜单中的轨道子菜单为空</li>
@@ -1434,11 +1469,13 @@
         <p xml:lang="zh-CN">移植到 Qt6</p>
         <p>Some hwdec options have been removed, if needed they can be set in the settings under "Custom commands" as `set hwdec decoding_method_name` and choose "Run at startup"</p>
         <p xml:lang="ar">أُزيلت بعض خيارات فك الترميز العتادي (hwdec)، وإذا لزم الأمر يمكن ضبطها في الإعدادات تحت "أوامر مخصصة" كـ `set hwdec decoding_method_name` واختيار "شغل عند بدء التشغيل"</p>
+        <p xml:lang="ka">რამდენიმე hwdec პარამეტრი წაიშალა. საჭიროების შემთხვევაში ისინი, შეიძლება, დაყენდეს პარამეტრებში „მორგებულ ბრძანებებში“, როგორც `set hwdec decoding_method_name` და აირჩიეთ „ჩატვირთვისას გაშვება“</p>
         <p xml:lang="pt-BR">Algumas opções de decodificação de hardware foram removidas. Caso necessário, elas podem ser configuradas nas opções em "Comandos personalizados" como `set hwdec nome_do_método_de_decodificação` e selecionando "Executar na inicialização"</p>
         <p xml:lang="sl">Nekatere možnosti hwdec so bile odstranjene, po potrebi jih lahko nastavite v nastavitvah pod "Ukazi po meri" kot `set hwdec decoding_method_name` in izberete "Zaženi ob zagonu"</p>
         <p xml:lang="zh-CN">移除了某些 hwdec 选项，如果需要使用它们，可在“自定义命令”页面中设置为“set hwdec decoding_method_name”并选择在“启动时运行”</p>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1457,6 +1494,7 @@
           <li xml:lang="zh-CN">从播放列表中打开项目的速度更快</li>
           <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
           <li xml:lang="ar">إذا ضُبط إعداد "أقصى عدد للملفات الأخيرة" على صفر، تُزال الملفات الأخيرة من ملف التشكيلة</li>
+          <li xml:lang="ka">თუ პარამეტრი „მაქს. უარყოფითი ფაილები“ დაყენებულია ნულზე, ბოლო ფაილები წაიშლება კონფიგურაციის ფაილიდან</li>
           <li xml:lang="pt-BR">Se a configuração "Número máximo de arquivos recentes" estiver definida como zero, os arquivos recentes serão removidos do arquivo de configuração</li>
           <li xml:lang="sl">Če je nastavitev "Največje število nedavnih datotek" nastavljena na nič, so nedavne datoteke odstranjene iz datoteke config</li>
           <li xml:lang="zh-CN">如果“最近文件数目”设置为 0，最近文件历史记录将从配置文件中删除</li>
@@ -1471,11 +1509,13 @@
         <ul>
           <li>Opening file through "Open File" action was not playing the file</li>
           <li xml:lang="ar">فتح الملف عبر إجراء "افتح ملفاً" لم يكن يشغل الملف</li>
+          <li xml:lang="ka">ფაილის გახსნა ქმედებით „ფაილის გახსნა“ ფაილს არ უკრავდა</li>
           <li xml:lang="pt-BR">Abrir o arquivo através da opção "Abrir arquivo" não reproduzia o arquivo</li>
           <li xml:lang="sl">Odpiranje datoteke prek dejanja "Odpri datoteko" ni predvajalo datoteke</li>
           <li xml:lang="zh-CN">通过“打开文件”操作打开文件时不会播放该文件</li>
           <li>Opening playlist file from playlist header was not doing anything</li>
           <li xml:lang="ar">فتح ملف قائمة التشغيل من ترويسة قائمة التشغيل لم يكن يفعل شيئاً</li>
+          <li xml:lang="ka">დაკვრის სიის ფაილის გახსნა დაკვრის სიის სათაურიდან არაფერს აკეთებდა</li>
           <li xml:lang="pt-BR">Abrir o arquivo da lista de reprodução a partir do cabeçalho da lista não estava fazendo nada</li>
           <li xml:lang="sl">Odpiranje datoteke seznama predvajanja iz glave seznama predvajanja ni naredilo ničesar</li>
           <li xml:lang="zh-CN">从播放列表表头打开播放列表文件不做任何事情</li>
@@ -1494,11 +1534,13 @@
         <ul>
           <li>Fixed subtitle chooser dialog not opening in the folder the current playing file is in</li>
           <li xml:lang="ar">إصلاح حوار اختيار الترجمة الذي لم يكن يفتح في المجلد الذي يوجد فيه الملف المشغل حالياً</li>
+          <li xml:lang="ka">გასწორდა სუბტიტრების ამრჩევი დიალოგური ფანჯრის არგახსნა იმ საქაღალდეში, რომელშიც მოცემული დაკვრადი ფაილი იმყოფება</li>
           <li xml:lang="pt-BR">Corrigido o problema em que a caixa de diálogo de seleção de legendas não abria na pasta onde o arquivo em reprodução estava localizado</li>
           <li xml:lang="sl">Popravljeno pogovorno okno izbirnika podnapisov, ki se ne odpre v mapi, v kateri je trenutno predvajana datoteka</li>
           <li xml:lang="zh-CN">修复字幕选择器对话框不在当前正在播放文件所在的位置打开的问题</li>
           <li>Fixed playlist covering the footer/bottom toolbar and making it hard to close the playlist when toggling it with the mouse is turned off</li>
           <li xml:lang="ar">إصلاح تغطية قائمة التشغيل للتذييل/شريط الأدوات السفلي مما يجعل من الصعب إغلاق القائمة عند إيقاف تبديلها بواسطة الفأرة</li>
+          <li xml:lang="ka">გასწორდა დასაკრავი სიის მიერ ქვედა პანელის/ინსტრუმენტების ზოლის გადაფარვა, რაც ართულებდა დასაკრავი სიის დახურვას, როდესაც თაგუნათი მისი გადართვა გამორთული იყო</li>
           <li xml:lang="pt-BR">Corrigida lista de reprodução que cobria o rodapé/barra de ferramentas inferior e dificultava o fechamento da lista quando a alternância com o mouse estava desativada</li>
           <li xml:lang="sl">Popravljen seznam predvajanja, ki prekriva nogo/spodnjo orodno vrstico in otežuje zapiranje seznama predvajanja, ko ga preklapljate z miško, je izklopljen</li>
           <li xml:lang="zh-CN">修复播放列表覆盖页脚/底部工具栏，导致在鼠标难以关闭播放列表</li>
@@ -1510,12 +1552,14 @@
           <li xml:lang="zh-CN">修复清空播放列表不工作的问题</li>
           <li>Fixed url not being added to recent files when opened through the "Open Url" action</li>
           <li xml:lang="ar">إصلاح عدم إضافة المسار (URL) إلى الملفات الأخيرة عند فتحه عبر إجراء "افتح مساراً"</li>
+          <li xml:lang="ka">გასწორდა URL-ის ბოლო დროს გამოყენებულ ფაილებში არჩამატება, როცა ის იხსნებოდა ქმედებით „URL-ის გახსნა“</li>
           <li xml:lang="pt-BR">Corrigido o problema em que o URL não era adicionado aos arquivos recentes ao ser aberto pela ação "Abrir URL"</li>
           <li xml:lang="sl">Odpravljeno je bilo, da URL ni bil dodan nedavnim datotekam, ko jih odprete z dejanjem »Odpri URL«</li>
           <li xml:lang="zh-CN">修复在通过“打开 URL”操作打开的 URL 不会被添加到最近文件的问题</li>
         </ul>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1528,6 +1572,7 @@
         <ul>
           <li>Added "Escape" shortcut to close the settings window</li>
           <li xml:lang="ar">إضافة اختصار "Escape" لإغلاق نافذة الإعدادات</li>
+          <li xml:lang="ka">დაემატა მალსახმობი „Escape“ მორგების ფანჯრის დასახურად</li>
           <li xml:lang="pt-BR">Adicionado atalho "Esc" para fechar a janela de configurações</li>
           <li xml:lang="sl">Dodana je bližnjica »Escape« za zapiranje okna z nastavitvami</li>
           <li xml:lang="zh-CN">添加 ESC 键作为关闭设置窗口的快捷键</li>
@@ -1546,6 +1591,7 @@
         <ul>
           <li>Don't show preview popup when no filee is loaded or when playing an online video</li>
           <li xml:lang="ar">عدم إظهار منبثقة المعاينة عند عدم تحميل أي ملف أو عند تشغيل فيديو من الشابكة</li>
+          <li xml:lang="ka">არ გამოჩნდეს მინიატურის მხტუნარა, როდესაც ფაილი ჩატვირთული არაა, ან მიმდინარეობს ონლაინვიდეოს დაკვრა</li>
           <li xml:lang="pt-BR">Não mostrar janela de pré-visualização quando nenhum arquivo estiver carregado ou durante a reprodução de um vídeo online</li>
           <li xml:lang="sl">Ne prikaži pojavnega okna za predogled, ko ni naložena nobena datoteka ali ko predvajate spletni video</li>
           <li xml:lang="zh-CN">当没有加载文件或正在播放在线视频时不显示预览弹窗</li>
@@ -1582,11 +1628,13 @@
           <li xml:lang="zh-CN">修复进度条悬停信息的文本颜色</li>
           <li>Fixed move video up/down and decrease subtitle font size actions</li>
           <li xml:lang="ar">إصلاح إجراءات تحريك الفيديو للأعلى/الأسفل وتقليل حجم خط الترجمة</li>
+          <li xml:lang="ka">გასწორდა ვიდეოს ზევით/ქვევით გადაადგილების და სუბტიტრების ფონტის ზომის შემცირების ქმედებები</li>
           <li xml:lang="pt-BR">Correção das ações de mover o vídeo para cima/para baixo e diminuir o tamanho da fonte da legenda</li>
           <li xml:lang="sl">Popravljena dejanja premikanja videa gor/dol in zmanjšanja velikosti pisave podnapisov</li>
           <li xml:lang="zh-CN">修复上移/下移视频和减小字幕字体大小的操作</li>
           <li>Fixed playlist opening on top of the video when the overlay setting is turned off</li>
           <li xml:lang="ar">إصلاح فتح قائمة التشغيل فوق الفيديو عند إيقاف تشغيل إعداد التراكب</li>
+          <li xml:lang="ka">გასწორდა დასაკრავი სიის ვიდეოს ზემოდან გახსნა, როდესაც გადადების პარამეტრი გამორთულია</li>
           <li xml:lang="pt-BR">Correção do problema de abertura da lista de reprodução sobre o vídeo quando a configuração de sobreposição está desativada</li>
           <li xml:lang="sl">Popravljeno odpiranje seznama predvajanja na vrhu videoposnetka, ko je nastavitev prekrivanja izklopljena</li>
           <li xml:lang="zh-CN">修复在叠加显示设置关闭时播放列表在视频顶部打开的问题</li>
@@ -1597,6 +1645,7 @@
       <description>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1609,21 +1658,25 @@
         <ul>
           <li>Added preview thumbnail to the progress bar, can be configured in the general settings page</li>
           <li xml:lang="ar">إضافة صورة معاينة مصغرة لشريط التقدم، يمكن ضبطها في صفحة الإعدادات العامة</li>
+          <li xml:lang="ka">დაემატა მინიატურა მიმდინარეობის ზოლზე, რომლის მორგებაც ზოგადი მორგების გვერდზე შეგიძლიათ</li>
           <li xml:lang="pt-BR">Adicionada miniatura de pré-visualização à barra de progresso, pode ser configurada na página de configurações gerais</li>
           <li xml:lang="sl">Dodana sličica predogleda v vrstico napredka, lahko jo konfigurirate na strani s splošnimi nastavitvami</li>
           <li xml:lang="zh-CN">添加预览缩略图到进度条，可以在常规设置页面配置</li>
           <li>Added setting to allow only a single instance, can be configured in the general settings page</li>
           <li xml:lang="ar">إضافة إعداد للسماح بنسخة واحدة فقط، يمكن ضبطه في صفحة الإعدادات العامة</li>
+          <li xml:lang="ka">დაემატა მხოლოდ ერთი ასლის დაშვების პარამეტრი, რომლის კონფიგურაციაც ზოგადი მორგების გვერდზე შეგიძლიათ</li>
           <li xml:lang="pt-BR">Adicionada configuração para permitir apenas uma única instância, que pode ser configurada na página de configurações gerais</li>
           <li xml:lang="sl">Dodana nastavitev, ki omogoča samo enemu pojavku, da lahko konfigurirate na strani s splošnimi nastavitvami</li>
           <li xml:lang="zh-CN">新增设置以仅运行单个实例，可在常规设置页面进行配置</li>
           <li>Added action selection popup where you can search all available actions and trigger them (open with Ctrl+` (backtick), similar to KCommandBar)</li>
           <li xml:lang="ar">إضافة منبثقة اختيار الإجراء حيث يمكنك البحث في جميع الإجراءات المتاحة وتشغيلها (تُفتح بـ Ctrl+` (الذال)، تشبه KCommandBar)</li>
+          <li xml:lang="ka">დაემატა ქმედებების შერჩევის მხტუნარა, სადაც შეგიძლიათ მოძებნოთ და გაააქტიუროთ ყველა ხელმისაწვდომი მოქმედება (გახსნა Ctrl+` (backtick) კომბინაციით, KCommandBar-ის მსგავსად)</li>
           <li xml:lang="pt-BR">Adicionada janela pop-up de seleção de ações, onde você pode pesquisar todas as ações disponíveis e executá-las (abra com Ctrl+` (acento grave), semelhante à KCommandBar)</li>
           <li xml:lang="sl">Dodano pojavno okno za izbiro dejanj, kjer lahko iščete vsa razpoložljiva dejanja in jih sprožite (odprite s Ctrl+` (povratna kljukica), podobno kot KCommandBar)</li>
           <li xml:lang="zh-CN">新增操作选择弹窗，用于搜索所有可用的操作并触发它们 (按 Ctrl+` 打开，类似 KCommandBar)</li>
           <li>Added setting to auto resize window to the video resolution, on Wayland the maximum size is not constrained</li>
           <li xml:lang="ar">إضافة إعداد لتغيير حجم النافذة آلياً وفقاً لدقة الفيديو، في Wayland لا يتم تقييد الحجم الأقصى</li>
+          <li xml:lang="ka">დაემატა ფანჯრის ვიდეოს რეზოლუციაზე ავტომატური მორგების პარამეტრი, Wayland-ზე მაქსიმალური ზომა შეზღუდული არაა</li>
           <li xml:lang="pt-BR">Adicionada configuração para redimensionar automaticamente a janela de acordo com a resolução do vídeo. No Wayland, o tamanho máximo não é limitado</li>
           <li xml:lang="sl">Dodana nastavitev za samodejno spreminjanje velikosti okna na video ločljivost, pri Waylandu največja velikost ni omejena</li>
           <li xml:lang="zh-CN">新增设置以自动调整窗口大小为视频分辨率，在 Wayland 环境中最大尺寸不受限制</li>
@@ -1641,26 +1694,31 @@
           <li xml:lang="zh-CN">在设置菜单下为每个设置页面新增菜单项</li>
           <li>The screenshot path is shown in the osd when using mpv 0.36.0 or later versions</li>
           <li xml:lang="ar">يظهر مسار لقطة الشاشة في العرض على الشاشة (OSD) عند استخدام mpv 0.36.0 أو إصدارات أحدث</li>
+          <li xml:lang="ka">ეკრანის ანაბეჭდის ბილიკი გამოჩნდება OSD-ზე mpv 0.36.0-ის ან უფრო ახალი ვერსიების გამოყენებისას</li>
           <li xml:lang="pt-BR">O caminho da captura de tela é exibido no OSD ao usar o mpv 0.36.0 ou versões posteriores</li>
           <li xml:lang="sl">Pot posnetka zaslona je prikazana v zaslonskem meniju, če uporabljate mpv 0.36.0 ali novejše različice</li>
           <li xml:lang="zh-CN">使用 mpv 0.36.0 或更新版本时，截图路径将显示在屏幕叠加信息中</li>
           <li>Added a "Scroll to playing item" entry to the playlist context menu</li>
           <li xml:lang="ar">إضافة مدخل "مرر إلى العنصر المشغل" إلى القائمة السياقية لقائمة التشغيل</li>
+          <li xml:lang="ka">დასაკრავი სიის კონტექსტურ მენიუში დაემატა პუნქტი „გადახვევა დაკვრად ელემენტზე“</li>
           <li xml:lang="pt-BR">Adicionada a opção "Rolar até o item em reprodução" ao menu de contexto da lista de reprodução</li>
           <li xml:lang="sl">V kontekstni meni seznama predvajanja je dodan vnos »Pomakni se do predmeta predvajanja«</li>
           <li xml:lang="zh-CN">新增“滚动到正在播放项目”到播放列表的右键菜单中</li>
           <li>Added a "Open url" entry to the playlist context menu for online url</li>
           <li xml:lang="ar">إضافة مدخل "افتح مساراً" إلى القائمة السياقية لقائمة التشغيل للمسارات الشابكية</li>
+          <li xml:lang="ka">დასაკრავი სიის კონტექსტურ მენიუში ონლაინ URL-ებისთვის დაემატა პუნქტი „URL-ის გახსნა“</li>
           <li xml:lang="pt-BR">Adicionada a opção "Abrir URL" ao menu de contexto da lista de reprodução para URLs online</li>
           <li xml:lang="sl">Dodan vnos »Odpri url« v kontekstni meni seznama predvajanja za spletni url</li>
           <li xml:lang="zh-CN">新增“打开 URL”到播放列表右键菜单中，用于打开在线 URL</li>
           <li>Hiding/showing the menubar, top toolbar and bottom toolbar is now animated</li>
           <li xml:lang="ar">إخفاء/إظهار شريط القائمة وشريط الأدوات العلوي والسفلي صار متحركاً الآن</li>
+          <li xml:lang="ka">მენიუს ზოლის, ზედა პანელისა და ქვედა ინსტრუმენტების ზოლის დამალვა/ჩვენება ახლა ანიმირებულია</li>
           <li xml:lang="pt-BR">Agora, ocultar/exibir a barra de menus, a barra de ferramentas superior e a barra de ferramentas inferior é animado</li>
           <li xml:lang="sl">Skrivanje/prikazovanje menijske vrstice, zgornje in spodnje orodne vrstice je zdaj animirano</li>
           <li xml:lang="zh-CN">给隐藏/显示菜单栏、顶部工具栏、底部工具栏加入动效</li>
           <li>Added track selection menu entries to the hamburger menu</li>
           <li xml:lang="ar">إضافة مدخلات قائمة اختيار المسار إلى قائمة الهامبرغر</li>
+          <li xml:lang="ka">დაემატა ტრეკების შერჩევის მენიუს პუნქტები ჰამბურგერის მენიუში</li>
           <li xml:lang="pt-BR">Adicionadas opções de seleção de faixas ao menu hambúrguer</li>
           <li xml:lang="sl">Dodani vnosi menija za izbiro skladbe v meni hamburgerja</li>
           <li xml:lang="zh-CN">新增轨道选择菜单项到汉堡菜单</li>
@@ -1675,6 +1733,7 @@
         <ul>
           <li>Fixed not blocking inhibition (turning the display off, sleep etc.) during playback</li>
           <li xml:lang="ar">إصلاح عدم حظر المنع (إطفاء الشاشة، النوم إلخ) أثناء التشغيل</li>
+          <li xml:lang="ka">გასწორდა დაკვრის დროს ეკრანის ჩაქრობის (ეკრანის გამორთვა, ძილის რეჟიმი და ა.შ.) არდაბლოკვის პრობლემა</li>
           <li xml:lang="pt-BR">Corrigido o problema de bloqueio da inibição (desligamento da tela, suspensão etc.) durante a reprodução</li>
           <li xml:lang="sl">Popravljeno neblokiranje zaviranja (izklop zaslona, spanje itd.) med predvajanjem</li>
           <li xml:lang="zh-CN">修复在播放中无法阻止熄屏 (关闭屏幕、睡眠等) 的问题</li>
@@ -1693,6 +1752,7 @@
         <ul>
           <li>Fixed color picker buttons in subtitles settings not reflecting the current color</li>
           <li xml:lang="ar">إصلاح أزرار منتقي الألوان في إعدادات الترجمة التي لم تكن تعكس اللون الحالي</li>
+          <li xml:lang="ka">გასწორდა სუბტიტრების პარამეტრებში ფერის ასარჩევი ღილაკების მიერ მიმდინარე ფერის არაასახვა</li>
           <li xml:lang="pt-BR">Corrigido o problema dos botões de seleção de cores nas configurações de legendas não refletirem a cor atual</li>
           <li xml:lang="sl">Popravljeni gumbi za izbiro barv v nastavitvah podnapisov, ki ne odražajo trenutne barve</li>
           <li xml:lang="zh-CN">修复字幕设置中的拾色器按钮不反映当前颜色的问题</li>
@@ -1741,11 +1801,13 @@
           <li xml:lang="zh-CN">修复字幕字体大小设置无法从配置文件中加载的问题</li>
           <li>Fixed progress bar changing size when not using a monospaced/fixed-width font</li>
           <li xml:lang="ar">إصلاح تغير حجم شريط التقدم عند عدم استخدام خط أحادي المسافة/ثابت العرض</li>
+          <li xml:lang="ka">გასწორდა მიმდინარეობის ზოლის ზომის ცვლილება, როდესაც არ გამოიყენება თანაბარზომიანი/ერთსიგანიანი ფონტი</li>
           <li xml:lang="pt-BR">Corrigido a alteração do tamanho da barra de progresso quando não se usa uma fonte monoespaçada/de largura fixa</li>
           <li xml:lang="sl">Popravljeno spreminjanje velikosti vrstice napredka, ko ne uporabljate pisave s fiksno širino</li>
           <li xml:lang="zh-CN">修复在使用非等宽字体时进度条更改大小的问题</li>
           <li>Fixed footer/bottom toolbar not hiding when moving to the monitor below, while Haruna is in fullscreen</li>
           <li xml:lang="ar">إصلاح عدم إخفاء التذييل/شريط الأدوات السفلي عند الانتقال إلى الشاشة بالأسفل، بينما يكون هارونا في وضع ملء الشاشة</li>
+          <li xml:lang="ka">გასწორდა ქვედა პანელის დამალვის პრობლემა ქვედა ეკრანზე გადასვლისას, როდესაც Haruna სრულ ეკრანზეა</li>
           <li xml:lang="pt-BR">Corrigido o problema em que a barra de ferramentas inferior/rodapé não ocultava ao passar para o monitor de baixo enquanto o Haruna estava em tela cheia</li>
           <li xml:lang="sl">Popravljena noga/spodnja orodna vrstica, ki se ne skriva, ko se premaknete na spodnji monitor, medtem ko je Haruna v celozaslonskem načinu</li>
           <li xml:lang="zh-CN">修复全屏状态下移动到下方屏幕时页脚/底部工具栏不隐藏的问题</li>
@@ -1776,6 +1838,7 @@
           <li xml:lang="zh-CN">修复屏显信息不显示的问题</li>
           <li>Fixed playlist repeating when the repeat setting was turned off</li>
           <li xml:lang="ar">إصلاح تكرار قائمة التشغيل عندما يكون إعداد التكرار مطفأً</li>
+          <li xml:lang="ka">გასწორდა დასაკრავი სიის გამეორება, როდესაც გამეორების პარამეტრი გამორთული იყო</li>
           <li xml:lang="pt-BR">Corrigido o problema de repetição da lista de reprodução quando a configuração de repetição estava desativada</li>
           <li xml:lang="sl">Popravljeno ponavljanje seznama predvajanja, ko je bila nastavitev ponavljanja izklopljena</li>
           <li xml:lang="zh-CN">修复在重复播放设置关闭后播放列表仍然重复播放的问题</li>
@@ -1786,11 +1849,13 @@
       <description>
         <p>The mpv code has been refactored to improve performance, there might still be some bugs, do report any at bugs.kde.org</p>
         <p xml:lang="ar">أُعيدت صياغة شيفرة mpv لتحسين الأداء، قد تظل هناك بعض العلل، يرجى الإبلاغ عن أي منها في bugs.kde.org</p>
+        <p xml:lang="ka">მოხდა mpv-ის კოდის გადაწერა წარმადობის გასაუმჯობესებლად. გარკვეული ხარვეზები, შეიძლება, ჯერ კიდევ არსებობდეს. შეგვატყობინეთ მათ შესახებ bugs.kde.org-ზე</p>
         <p xml:lang="pt-BR">O código do mpv foi refatorado para melhorar o desempenho, mas ainda podem existir alguns erros. Por favor, reporte qualquer um deles em bugs.kde.org</p>
         <p xml:lang="sl">Koda mpv je bila preoblikovana za izboljšanje zmogljivosti, morda je še nekaj napak, prijavite jih na bugs.kde.org</p>
         <p xml:lang="zh-CN">重构 mpv 代码以提高性能，可能会存在一些相关程序缺陷，遇到问题请报告</p>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1803,11 +1868,13 @@
         <ul>
           <li>When restoring from minimized state, playback state is set to what it was when the minimization happened (only applies if the "Pause on minimize" setting is turned on)</li>
           <li xml:lang="ar">عند الاستعادة من حالة التصغير، تُعين حالة التشغيل إلى ما كانت عليه عند حدوث التصغير (ينطبق فقط إذا كان إعداد "إيقاف مؤقت عند التصغير" مفعلاً)</li>
+          <li xml:lang="ka">ჩაკეცილი მდგომარეობიდან აღდგენისას დაკვრის სტატუსი უბრუნდება იმ ნიშნულს, რომელიც იყო ჩაკეცვის მომენტში (მოქმედებს, მხოლოდ მაშინ, თუ ჩართულია პარამეტრი 'დაპაუზება ჩაკეცვისას')</li>
           <li xml:lang="pt-BR">Ao restaurar a reprodução a partir do estado minimizado, o estado de reprodução é definido como estava no momento da minimização (aplica-se somente se a configuração "Pausar ao minimizar" estiver ativada)</li>
           <li xml:lang="sl">Pri obnavljanju iz strnjenega stanja je stanje predvajanja nastavljeno na tisto, v katerem je bilo, ko je prišlo do pomanjšanja (velja samo, če je vklopljena nastavitev »Premor ob pomanjšanju«)</li>
           <li xml:lang="zh-CN">当从最小化中恢复时，播放状态会设置为最小化发生时的状态 (仅在“最小化时暂停”设置启用时有效)</li>
           <li>Added Debug settings page, shows the paths to config files and allows to open them</li>
           <li xml:lang="ar">إضافة صفحة إعدادات التنقيح، تظهر مسارات ملفات التشكيلة وتسمح بفتحها</li>
+          <li xml:lang="ka">დაემატა გამართვის მორგების გვერდი. აჩვენებს ბილიკებს კონფიგურაციის ფაილებამდე და საშუალებას გაძლევთ, გახსნათ ისინი</li>
           <li xml:lang="pt-BR">Adicionada página de configurações de depuração, que exibe os caminhos para os arquivos de configuração e permite abri-los</li>
           <li xml:lang="sl">Dodana stran z nastavitvami za odpravljanje napak, prikazuje poti do datotek config in omogoča njihovo odpiranje</li>
           <li xml:lang="zh-CN">新增调试设置页面，显示配置文件的路径并允许打开它们</li>
@@ -1822,6 +1889,7 @@
         <ul>
           <li>Fixed not being able to open files whose path contained certain characters</li>
           <li xml:lang="ar">إصلاح عدم القدرة على فتح الملفات التي تحتوي مساراتها على محارف معينة</li>
+          <li xml:lang="ka">გასწორდა იმ ფაილების გახსნის შეუძლებლობა, რომელთა ბილიკიც გარკვეულ სიმბოლოებს შეიცავდა</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia a abertura de arquivos cujo caminho continha determinados caracteres</li>
           <li xml:lang="sl">Odpravljena je bila nezmožnost odpiranja datotek, katerih pot je vsebovala določene znake</li>
           <li xml:lang="zh-CN">修复无法打开路径中包含某些字符的的文件</li>
@@ -1833,6 +1901,7 @@
           <li xml:lang="zh-CN">修复无法打开 .ts 和 .rm 文件的问题</li>
           <li>Fixed some text fields not saving their value under certain circumstances</li>
           <li xml:lang="ar">إصلاح بعض حقول النص التي لم تكن تحفظ قيمتها في ظروف معينة</li>
+          <li xml:lang="ka">გასწორდა გარკვეულ პირობებში ზოგიერთი ტექსტური ველის მიერ მნიშვნელობის არშენახვის პრობლემა</li>
           <li xml:lang="pt-BR">Corrigido o problema em que alguns campos de texto não salvavam seus valores em determinadas circunstâncias</li>
           <li xml:lang="sl">Popravljena so nekatera besedilna polja, ki v določenih okoliščinah niso shranila svojih vrednosti</li>
           <li xml:lang="zh-CN">修复某些文本字段在某些情况下不保存其值的问题</li>
@@ -1861,6 +1930,7 @@
       <description>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1873,6 +1943,7 @@
         <ul>
           <li>Playlist: added options to open m3u files (without support for extended attributes), add files and urls (only the url path will be displayed, no title and no duration), sort, clear and save the playlist</li>
           <li xml:lang="ar">قائمة التشغيل: إضافة خيارات لفتح ملفات m3u (دون دعم للسمات الممتدة)، وإضافة ملفات ومسارات (سيُعرض مسار URL فقط، بدون عنوان أو مدة)، وفرز ومسح وحفظ قائمة التشغيل</li>
+          <li xml:lang="ka">დასაკრავი სია: დაემატა m3u ფაილების გახსნის (გაფართოებული ატრიბუტების მხარდაჭერის გარეშე), ფაილებისა და URL-ების დამატების (გამოჩნდება, მხოლოდ, URL მისამართი, სათაურისა და ხანგრძლივობის გარეშე), დასაკრავი სიის დალაგების, გასუფთავებისა და შენახვის პარამეტრები</li>
           <li xml:lang="pt-BR">Lista de reprodução: adicionadas opções para abrir arquivos m3u (sem suporte para atributos estendidos), adicionar arquivos e URLs (apenas o caminho da URL será exibido, sem título e sem duração), classificar, limpar e salvar a lista de reprodução</li>
           <li xml:lang="sl">Seznam predvajanja: dodane možnosti za odpiranje datotek m3u (brez podpore za razširjene atribute), dodajanje datotek in URL-jev (prikazana bo samo pot URL-ja, brez naslova in brez trajanja), razvrščanje, čiščenja in shranjevanje seznama predvajanja</li>
           <li xml:lang="zh-CN">播放列表：新增选项以打开 m3u 文件 (不支持扩展属性)、添加文件和 URL (仅显示 URL 的路径，不显示标题和持续时长)、排序、清空和保存播放列表</li>
@@ -1902,6 +1973,7 @@
           <li xml:lang="zh-CN">视频：新增设置以为音乐文件设置默认封面</li>
           <li>Added command line option to override the ytdl format selection setting (this option is overwritten if the GUI setting is changed)</li>
           <li xml:lang="ar">إضافة خيار سطر الأوامر لتجاوز إعداد اختيار تنسيق ytdl (يتم الكتابة فوق هذا الخيار إذا تم تغيير إعداد واجهة المستخدم الرسومية)</li>
+          <li xml:lang="ka">დაემატა ბრძანების სტრიქონის პარამეტრი ytdl ფორმატის შერჩევის პარამეტრის გადასაფარად (ეს პარამეტრი გადაიფარება, თუ GUI პარამეტრი შეიცვლება)</li>
           <li xml:lang="pt-BR">Adicionada opção de linha de comando para substituir a configuração de seleção do formato ytdl (essa opção é sobrescrita se a configuração da interface gráfica for alterada)</li>
           <li xml:lang="sl">Dodana možnost ukazne vrstice za preglasitev nastavitve izbire formata ytdl (ta možnost je prepisana, če se spremeni nastavitev GUI)</li>
           <li xml:lang="zh-CN">新增命令行选项以覆盖 ytdl 格式选择设置 (如果图形界面的设置更改，此选项将被覆盖)</li>
@@ -1922,6 +1994,7 @@
         <ul>
           <li>Recent files: fixed ordering, showing duplicates, clearing and adding when list is full</li>
           <li xml:lang="ar">الملفات الأخيرة: إصلاح الترتيب، وإظهار التكرارات، والمسح والإضافة عندما تكون القائمة ممتلئة</li>
+          <li xml:lang="ka">ბოლო დროს გამოყენებული ფაილები: გასწორდა დალაგების, დუბლიკატების ჩვენების, სიის გასუფთავებისა და სავსე სიის შემთხვევაში ახალი ფაილების დამატების პრობლემები</li>
           <li xml:lang="pt-BR">Arquivos recentes: ordenação corrigida, exibição de duplicados, limpeza e adição de arquivos quando a lista estiver cheia</li>
           <li xml:lang="sl">Nedavne datoteke: popravljeno razvrščanje, prikaz dvojnikov, čiščenja in dodajanje, ko je seznam poln</li>
           <li xml:lang="zh-CN">最近文件：修复排序、选择重复项目、清空列表和在列表满时添加项目</li>
@@ -1953,11 +2026,13 @@
         <ul>
           <li>Fixed not auto playing next file in playlist, when current file ends</li>
           <li xml:lang="ar">إصلاح عدم التشغيل الآلي للملف التالي في قائمة التشغيل عند انتهاء الملف الحالي</li>
+          <li xml:lang="ka">გასწორდა დასაკრავ სიაში შემდეგი ფაილის ავტომატურად არდაკვრის პრობლემა მიმდინარე ფაილის დასრულებისას</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia a reprodução automática do próximo arquivo na lista de reprodução quando o arquivo atual terminava</li>
           <li xml:lang="sl">Popravljeno je bilo samodejno predvajanje naslednje datoteke na seznamu predvajanja, ko se trenutna datoteka konča</li>
           <li xml:lang="zh-CN">修复当当前文件播放完毕后不自动播放在播放列表中的下一个文件的问题</li>
           <li>Fixed opened file not playing when "Auto load videos from same folder" setting is disabled</li>
           <li xml:lang="ar">إصلاح عدم تشغيل الملف المفتوح عند تعطيل إعداد "تحميل الفيديوهات آلياً من نفس المجلد"</li>
+          <li xml:lang="ka">გასწორდა გახსნილი ფაილის არდაკვრის პრობლემა, როცა პარამეტრი „ვიდეოების ავტოჩატვირთვა იგივე საქაღალდიდან“ გამორთულია</li>
           <li xml:lang="pt-BR">Corrigido o problema de arquivo aberto não reproduzir quando a configuração "Carregar vídeos automaticamente da mesma pasta" está desativada</li>
           <li xml:lang="sl">Odpravljena napaka pri predvajanju odprte datoteke, ko je nastavitev »Samodejno nalaganje videoposnetkov iz iste mape« onemogočena</li>
           <li xml:lang="zh-CN">修复在“自动加载相同文件夹中的视频”设置被禁用时打开的文件不播放的问题</li>
@@ -1997,6 +2072,7 @@
           <li xml:lang="zh-CN">修复持续时间超过 24 小时时将显示异常并干扰章节标签的问题</li>
           <li>Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
           <li xml:lang="ar">أُعيدت كتابة قائمة الفصول لتكون أكثر استجابة مع وجود الكثير من الفصول.</li>
+          <li xml:lang="ka">თავების მენიუ თავიდან დაიწერა, რომ უფრო სწრაფი და მოქნილი იყოს თავების დიდი რაოდენობის შემთხვევაში.</li>
           <li xml:lang="pt-BR">O menu de capítulos foi reescrito para ser mais responsivo e lidar melhor com muitos capítulos</li>
           <li xml:lang="sl">Meni poglavij je bil na novo napisan tako, da je bolj odziven z veliko poglavji.</li>
           <li xml:lang="zh-CN">章节菜单重写以在章节众多时响应更快</li>
@@ -2019,6 +2095,7 @@
       <description>
         <p>Features 0.9.0:</p>
         <p xml:lang="ar">الميزات 0.9.0:</p>
+        <p xml:lang="ca">Característiques 0.9.0:</p>
         <p xml:lang="he">יכולות ב־0.9.0:</p>
         <p xml:lang="ia">Characteristicas 0.9.0:</p>
         <p xml:lang="ka">0.9.0-ის თვისებები:</p>
@@ -2030,16 +2107,19 @@
         <ul>
           <li>Refactored the shortcuts configuration, now it's available in the settings window with the other settings, instead of opening another window</li>
           <li xml:lang="ar">إعادة صياغة تهيئة الاختصارات، وهي متوفرة الآن في نافذة الإعدادات مع الإعدادات الأخرى، بدلاً من فتح نافذة أخرى</li>
+          <li xml:lang="ka">მოხდა მალსახმობების მორგების გადაწერა. ახლა ის ხელმისაწვდომია პარამეტრების ფანჯარაში სხვა პარამეტრებთან ერთად, ცალკე ფანჯრის გახსნის ნაცვლად</li>
           <li xml:lang="pt-BR">Refatoração da configuração de atalhos; agora ela está disponível na janela de configurações, junto com as outras configurações, em vez de abrir uma janela separada</li>
           <li xml:lang="sl">Preoblikovana konfiguracija bližnjic, zdaj je na voljo v oknu z nastavitvami z drugimi nastavitvami, namesto da bi odprli drugo okno</li>
           <li xml:lang="zh-CN">重构快捷键配置，现在它在设置窗口中与其他设置一起，而不是打开单独窗口配置</li>
           <li>Hamburger menu now only show a few actions, the rest are available in a submenu</li>
           <li xml:lang="ar">قائمة الهامبرغر تظهر الآن بضعة إجراءات فقط، والبقية متوفرة في قائمة فرعية</li>
+          <li xml:lang="ka">ჰამბურგერის მენიუ ახლა, მხოლოდ, რამდენიმე მოქმედებას აჩვენებს. დანარჩენები კი - ქვემენიუშია ხელმისაწვდომი</li>
           <li xml:lang="pt-BR">O menu hambúrguer agora exibe apenas algumas ações; as demais estão disponíveis em um submenu</li>
           <li xml:lang="sl">Meni Hamburger zdaj prikazuje le nekaj dejanj, ostala so na voljo v podmeniju</li>
           <li xml:lang="zh-CN">汉堡菜单仅显示少量操作，其余操作均在子菜单中</li>
           <li>When menubar is hidden the hamburger menu will be shown in the header/toolbar and when the header is hidden it's shown in the footer</li>
           <li xml:lang="ar">عند إخفاء شريط القائمة، تظهر قائمة الهامبرغر في الترويسة/شريط الأدوات، وعند إخفاء الترويسة تظهر في التذييل</li>
+          <li xml:lang="ka">მენიუს ზოლის დამალვისას ჰამბურგერის მენიუ გამოჩნდება ზედა პანელში, ხოლო ზედა პანელის დამალვის შემთხვევაში — ქვედა პანელში</li>
           <li xml:lang="pt-BR">Quando a barra de menus está oculta, o menu hambúrguer é exibido no cabeçalho/barra de ferramentas e, quando o cabeçalho está oculto, ele é exibido no rodapé</li>
           <li xml:lang="sl">Ko je menijska vrstica skrita, bo meni hamburgerja prikazan v glavi/orodni vrstici in ko je glava skrita, je prikazan v nogi</li>
           <li xml:lang="zh-CN">菜单栏隐藏时汉堡菜单自动显示在顶部工具栏，如果隐藏了顶部工具栏，则显示在底部工具栏中</li>
@@ -2051,6 +2131,7 @@
           <li xml:lang="zh-CN">为视频新增合适的右键菜单</li>
           <li>Added setting to start playback when resuming playback of a file</li>
           <li xml:lang="ar">إضافة إعداد لبدء التشغيل عند استئناف تشغيل ملف ما</li>
+          <li xml:lang="ka">დაემატა პარამეტრი ფაილის დაკვრის გაგრძელებისას დაკვრის დასაწყებად</li>
           <li xml:lang="pt-BR">Adicionada configuração para iniciar a reprodução ao retomar a reprodução de um arquivo</li>
           <li xml:lang="sl">Dodana nastavitev za začetek predvajanja ob nadaljevanju predvajanja datoteke</li>
           <li xml:lang="zh-CN">新增设置以在继续播放一个文件时开始播放</li>
@@ -2074,6 +2155,7 @@
           <li xml:lang="zh-CN">新增选项以恢复窗口大小和位置</li>
           <li>Added settings to customize the subtitle font family, size, style (bold, italic), color, shadow color, shadow offset, border color, border width</li>
           <li xml:lang="ar">إضافة إعدادات لتخصيص عائلة خط الترجمة، وحجمه، ونمطه (عريض، مائل)، ولونه، ولون الظل، وإزاحة الظل، ولون الحدود، وعرض الحدود</li>
+          <li xml:lang="ka">დაემატა პარამეტრები სუბტიტრების შრიფტის ოჯახის, ზომის, სტილის (სქელი, კურსივი), ფერის, ჩრდილის ფერის, ჩრდილის წანაცვლების, საზღვრის ფერისა და საზღვრის სისქის მოსარგებად</li>
           <li xml:lang="pt-BR">Adicionadas configurações para personalizar a família da fonte da legenda, tamanho, estilo (negrito, itálico), cor, cor da sombra, deslocamento da sombra, cor da borda e largura da borda</li>
           <li xml:lang="sl">Dodane nastavitve za prilagoditev družine pisav podnapisov, velikosti, sloga (krepko, poševno), barve, barve sence, odmika sence, barve obrobe, širine obrobe</li>
           <li xml:lang="zh-CN">新增选项一自定义字幕字体系列、样式 (加粗、斜体)、颜色、投影颜色、投影偏移、边框颜色、边框宽度等</li>
@@ -2091,17 +2173,20 @@
           <li xml:lang="zh-CN">移动音量步进设置到音量设置页面</li>
           <li>Custom commands that run on startup can be turned off so they are not set on next run</li>
           <li xml:lang="ar">الأوامر المخصصة التي تعمل عند بدء التشغيل يمكن إطفاؤها حتى لا تُعين في المرة القادمة</li>
+          <li xml:lang="ka">პროგრამის გაშვებისას შესასრულებელი მომხმარებლის ბრძანებების გამორთვა შესაძლებელია, რომ შემდეგი გაშვებისას ისინი აღარ შესრულდეს</li>
           <li xml:lang="pt-BR">Os comandos personalizados que são executados na inicialização podem ser desativados para que não sejam aplicados na próxima execução</li>
           <li xml:lang="sl">Ukaze po meri, ki se izvajajo ob zagonu, je mogoče izklopiti, tako da niso nastavljeni ob naslednjem zagonu</li>
           <li xml:lang="zh-CN">启动时运行的自定义命令可以关闭以防止它们在下次运行时设置</li>
           <li>In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
           <li xml:lang="ar">في إعدادات الفأرة، يظهر نص الإجراء، وهو قابل للترجمة، بدلاً من اسمه الداخلي</li>
+          <li xml:lang="ka">თაგუნას პარამეტრებში, შიდა სახელის ნაცვლად, ნაჩვენებია მოქმედების აღმწერი ტექსტი, რომლის თარგმნაც შესაძლებელია</li>
           <li xml:lang="pt-BR">Nas configurações do mouse, o texto da ação, que pode ser traduzido, é exibido em vez de seu nome interno</li>
           <li xml:lang="sl">V nastavitvah miške se namesto njenega internega imena prikaže besedilo dejanja, ki ga je mogoče prevesti</li>
           <li xml:lang="zh-CN">在鼠标设置中的操作文本尽管可翻译，却显示为其内部名称</li>
         </ul>
         <p>Features 0.9.2:</p>
         <p xml:lang="ar">الميزات 0.9.2:</p>
+        <p xml:lang="ca">Característiques 0.9.2:</p>
         <p xml:lang="he">יכולות ב־0.9.2:</p>
         <p xml:lang="ia">Characteristicas  0.9.2:</p>
         <p xml:lang="ka">0.9.2-ის თვისებები:</p>
@@ -2120,6 +2205,7 @@
         </ul>
         <p>Bugfixes 0.9.0:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.0:</p>
+        <p xml:lang="ca">Correcció d'errors 0.9.0:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.0-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.0:</p>
         <p xml:lang="sl">Popravki napak 0.9.0:</p>
@@ -2127,6 +2213,7 @@
         <ul>
           <li>Toggling menubar and header/toolbar through actions remembers the state on next run</li>
           <li xml:lang="ar">تبديل شريط القائمة والترويسة/شريط الأدوات عبر الإجراءات يتذكر الحالة في المرة القادمة</li>
+          <li xml:lang="ka">მენიუს ზოლისა და ზედა პანელის გადართვა ქმედებების მეშვეობით ინახავს მათ მდგომარეობას შემდეგი გაშვებისას</li>
           <li xml:lang="pt-BR">Alternar entre a barra de menus e o cabeçalho/barra de ferramentas por meio de ações mantém o estado salvo na próxima execução</li>
           <li xml:lang="sl">Preklapljanje menijske vrstice in glave/orodne vrstice med dejanji si zapomni stanje ob naslednjem zagonu</li>
           <li xml:lang="zh-CN">通过操作切换菜单栏、工具栏的显示/隐藏状态将在下次启动程序时记住状态</li>
@@ -2144,12 +2231,14 @@
           <li xml:lang="zh-CN">改进 mpv 初始化以更好地支持硬件解码</li>
           <li>Ytdl-format property can be overwritten by a custom command action</li>
           <li xml:lang="ar">خاصية تنسيق Ytdl يمكن الكتابة فوقها عبر إجراء أمر مخصص</li>
+          <li xml:lang="ka">შესაძლებელია ytdl-format თვისების გადაფარვა მორგებული ბრძანების ქმედებით</li>
           <li xml:lang="pt-BR">A propriedade ytdl-format pode ser sobrescrita por uma ação de comando personalizada</li>
           <li xml:lang="sl">Lastnost formata Ytdl je mogoče prepisati z ukazom po meri</li>
           <li xml:lang="zh-CN">Ytdl-format 属性可被自定义命令操作覆盖</li>
         </ul>
         <p>Bugfixes 0.9.1:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.1:</p>
+        <p xml:lang="ca">Correcció d'errors 0.9.1:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.1-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.1:</p>
         <p xml:lang="sl">Popravki napak 0.9.1:</p>
@@ -2171,6 +2260,7 @@
         </ul>
         <p>Bugfixes 0.9.2:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.2:</p>
+        <p xml:lang="ca">Correcció d'errors 0.9.2:</p>
         <p xml:lang="he">תיקוני תקלות ב־0.9.2:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.2-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.2:</p>
@@ -2192,32 +2282,38 @@
           <li xml:lang="zh-CN">更改系统字体大小时缩放窗口</li>
           <li>Fixed a crash when changing the maximum recent files setting to 0</li>
           <li xml:lang="ar">إصلاح انهيار عند تغيير إعداد أقصى عدد للملفات الأخيرة إلى 0</li>
+          <li xml:lang="ka">გასწორდა პროგრამის გათიშვის პრობლემა უახლესი ფაილების მაქს. რაოდენობის 0-ზე შეცვლისას</li>
           <li xml:lang="pt-BR">Corrigido um erro que causava o fechamento inesperado do aplicativo ao alterar a configuração de número máximo de arquivos recentes para 0</li>
           <li xml:lang="sl">Odpravljena je zrušitev pri spreminjanju največjega števila nedavnih datotek na 0</li>
           <li xml:lang="zh-CN">修复在把最近文件数量设为 0 时的崩溃</li>
           <li>Fixed subtitles folders setting (these folders are used to search for subtitles)</li>
           <li xml:lang="ar">إصلاح إعداد مجلدات الترجمات (هذه المجلدات تُستخدم للبحث عن الترجمات)</li>
+          <li xml:lang="ka">გასწორდა სუბტიტრების საქაღალდეების პარამეტრი (ეს საქაღალდეები სუბტიტრების მოსაძებნად გამოიყენება)</li>
           <li xml:lang="pt-BR">Configuração corrigida das pastas de legendas (essas pastas são usadas para pesquisar legendas)</li>
           <li xml:lang="sl">Popravljena nastavitev map s podnapisi (te mape se uporabljajo za iskanje podnapisov)</li>
           <li xml:lang="zh-CN">修复字幕文件夹设置 (这些文件夹用于搜索字幕)</li>
           <li>Improved duration info font size scaling in footer, now its size should be closer to that of other components in the footer</li>
           <li xml:lang="ar">تحسين تحجيم حجم خط معلومات المدة في التذييل، ويُفترض أن يكون حجمه الآن أقرب لحجم المكونات الأخرى في التذييل</li>
+          <li xml:lang="ka">გაუმჯობესდა ხანგრძლივობის ინფორმაციის ფონტის ზომის მასშტაბირება ქვედა პანელში. ახლა მისი ზომა უფრო ახლოს უნდა იყოს ქვედა პანელის სხვა კომპონენტების ზომასთან</li>
           <li xml:lang="pt-BR">Melhoria da escala do tamanho da fonte das informações de duração no rodapé; agora, seu tamanho deve estar mais próximo do tamanho dos outros componentes do rodapé</li>
           <li xml:lang="sl">Izboljšano prilagajanje velikosti pisave informacij o trajanju v nogi, zdaj bi morala biti njena velikost bližje velikosti drugih komponent v nogi</li>
           <li xml:lang="zh-CN">改进页脚/底部工具栏的持续时长信息，现在其信息将与其他位于页脚的信息显示效果一致。</li>
           <li>Fixed an issue with determining mime types, which caused .ts video files to be treated as text files</li>
           <li xml:lang="ar">إصلاح مشكلة في تحديد أنواع mime، مما تسبب في معاملة ملفات فيديو .ts كملفات نصية</li>
+          <li xml:lang="ka">გასწორდა mime ტიპების დადგენის პრობლემა, რაც იწვევდა .ts ვიდეო ფაილების ტექსტურ ფაილებად აღქმას</li>
           <li xml:lang="pt-BR">Corrigido um problema na determinação dos tipos MIME, que fazia com que arquivos de vídeo .ts fossem tratados como arquivos de texto</li>
           <li xml:lang="sl">Odpravljena je težava z določanjem vrst mime, zaradi katere so bile video datoteke .ts obravnavane kot besedilne datoteke</li>
           <li xml:lang="zh-CN">修复确定 MIME 类型时 .ts 视频文件被当作文本文件的问题</li>
           <li>Fixed not being able to click the add custom command button when there are no custom commands</li>
           <li xml:lang="ar">إصلاح عدم القدرة على النقر على زر إضافة أمر مخصص عند عدم وجود أوامر مخصصة</li>
+          <li xml:lang="ka">გასწორდა სამომხმარებლო ბრძანების დამატების ღილაკზე დაჭერის შეუძლებლობა, როცა მორგებული ბრძანებები არ არსებობს</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia clicar no botão "Adicionar comando personalizado" quando não havia comandos personalizados</li>
           <li xml:lang="sl">Odpravljeno je bilo, da ni bilo mogoče klikniti gumba za dodajanje ukazov po meri, ko ni ukazov po meri</li>
           <li xml:lang="zh-CN">修复在没有自定义命令时无法点击添加自定义命令按钮的问题</li>
         </ul>
         <p>Bugfixes 0.9.3:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.3:</p>
+        <p xml:lang="ca">Correcció d'errors 0.9.3:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.3-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.3:</p>
         <p xml:lang="sl">Popravki napak 0.9.3:</p>
@@ -2225,6 +2321,7 @@
         <ul>
           <li>Fixed playlist not loading videos from the same folder as the opened file</li>
           <li xml:lang="ar">إصلاح قائمة التشغيل التي لم تكن تحمل فيديوهات من نفس مجلد الملف المفتوح</li>
+          <li xml:lang="ka">გასწორდა დასაკრავ სიაში გახსნილი ფაილის იმავე საქაღალდიდან ვიდეოების არჩატვირთვის პრობლემა</li>
           <li xml:lang="pt-BR">Corrigido o problema da lista de reprodução que não carregava vídeos da mesma pasta que o arquivo aberto</li>
           <li xml:lang="sl">Popravljen seznam predvajanja, ki ne nalaga videoposnetkov iz iste mape kot odprta datoteka</li>
           <li xml:lang="zh-CN">修复播放列表不加载已打开文件所在的同一文件夹中的视频的问题</li>
@@ -2235,6 +2332,7 @@
       <description>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
+        <p xml:lang="ca">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -2277,6 +2375,7 @@
           <li xml:lang="zh-CN">新增更多操作到菜单栏</li>
           <li>Action to load last played file (Ctrl+Shift+L), useful when loading last played file on startup is disabled</li>
           <li xml:lang="ar">إجراء لتحميل آخر ملف مُشغل (Ctrl+Shift+L)، مفيد عند تعطيل تحميل آخر ملف مُشغل عند بدء التشغيل</li>
+          <li xml:lang="ka">ქმედება ბოლოს დაკრული ფაილის ჩასატვირთად (Ctrl+Shift+L). სასარგებლოა მაშინ, როცა პროგრამის გაშვებისას ბოლო დაკრული ფაილის ავტომატური ჩატვირთვა გათიშულია</li>
           <li xml:lang="pt-BR">Ação para carregar o último arquivo reproduzido (Ctrl+Shift+L), útil quando a opção de carregar o último arquivo reproduzido na inicialização está desativada</li>
           <li xml:lang="sl">Dejanje za nalaganje zadnje predvajane datoteke (Ctrl+Shift+L), uporabno, ko je nalaganje zadnje predvajane datoteke ob zagonu onemogočeno</li>
           <li xml:lang="zh-CN">新增操作以加载上次播放的文件 (Ctrl+Shift+L)，在启动时加载上次播放文件选项禁用时有用。</li>
@@ -2288,6 +2387,7 @@
           <li xml:lang="zh-CN">新增操作以重新开始播放/时移到开头 (F5 键)</li>
           <li>Action to seek to watch later position (Ctrl+Shift+P), useful when resume playback on startup is disabled</li>
           <li xml:lang="ar">إجراء للسعي إلى موضع المشاهدة لاحقاً (Ctrl+Shift+P)، مفيد عند تعطيل استئناف التشغيل عند بدء التشغيل</li>
+          <li xml:lang="ka">მოგვიანებით სანახავი პოზიციის მოსაძებნი ქმედება (Ctrl+Shift+P). სასარგებლოა მაშინ, როცა პროგრამის გაშვებისას დაკვრის გაგრძელება გათიშულია</li>
           <li xml:lang="pt-BR">Ação para buscar a posição de visualização posterior (Ctrl+Shift+P), útil quando a opção "Retomar reprodução na inicialização" está desativada</li>
           <li xml:lang="sl">Dejanje za iskanje položaja za poznejši ogled (Ctrl+Shift+P), uporabno, ko je onemogočeno nadaljevanje predvajanja ob zagonu</li>
           <li xml:lang="zh-CN">新增操作以时移到“之后观看”位置 (Ctrl+Shift+P)，在启动时继续播放选项被禁用时有用</li>
@@ -2302,16 +2402,19 @@
         <ul>
           <li>There were two "remember time position" settings, doing different things, renamed the startup one to "resume playback"</li>
           <li xml:lang="ar">كان هناك إعدادان لـ "تذكر الموضع الزمني" يقومان بأشياء مختلفة، أُعيدت تسمية الإعداد الخاص ببدء التشغيل إلى "استئناف التشغيل"</li>
+          <li xml:lang="ka">არსებობდა "დროის პოზიციის დამახსოვრების" ორი პარამეტრი, რომლებიც სხვადასხვა ფუნქციას ასრულებდა. პროგრამის გაშვების პარამეტრს სახელი შეეცვალა და დაერქვა „დაკვრის გაგრძელება“</li>
           <li xml:lang="pt-BR">Existiam duas configurações de "lembrar posição no tempo", que faziam coisas diferentes; renomeei a de inicialização para "retomar reprodução"</li>
           <li xml:lang="sl">Obstajali sta dve nastavitvi »zapomni si časovni položaj«, ki sta počeli različne stvari, preimenovali zagonsko v »nadaljevanje predvajanja«</li>
           <li xml:lang="zh-CN">存在两个“记住时间位置”的选项，功能相同，将启动时的那个项目改名为“恢复播放”</li>
           <li>Fixed a case where the playlist could not be closed with mouse hover anymore</li>
           <li xml:lang="ar">إصلاح حالة لم يكن بالإمكان فيها إغلاق قائمة التشغيل عبر تمرير الفأرة</li>
+          <li xml:lang="ka">გასწორდა შემთხვევა, როდესაც დასაკრავი სიის დახურვა თაგუნას ზედ გაჩერებით, აღარ ხდებოდა</li>
           <li xml:lang="pt-BR">Corrigido um problema que impedia o fechamento da lista de reprodução ao passar o cursor do mouse sobre ela</li>
           <li xml:lang="sl">Odpravljen primer, ko seznama predvajanja ni bilo več mogoče zapreti z miško</li>
           <li xml:lang="zh-CN">修复播放列表无法通过鼠标悬停关闭的情况</li>
           <li>OSD: When file can't be played show filename if there's no title</li>
           <li xml:lang="ar">العرض على الشاشة (OSD): عند تعذر تشغيل ملف، يظهر اسم الملف إذا لم يوجد عنوان</li>
+          <li xml:lang="ka">OSD: როდესაც ფაილის დაკვრა ვერ ხერხდება, სათაურის არარსებობის შემთხვევაში გამოჩნდეს ფაილის სახელი</li>
           <li xml:lang="pt-BR">OSD: Quando o arquivo não puder ser reproduzido, mostrar o nome do arquivo se não houver título</li>
           <li xml:lang="sl">OSD: Ko datoteke ni mogoče predvajati, prikaži ime datoteke, če ni naslova</li>
           <li xml:lang="zh-CN">屏显信息：如果文件没有标题，无法播放时显示文件名</li>
@@ -2334,6 +2437,7 @@
       <description>
         <p>First release.</p>
         <p xml:lang="ar">الإصدار الأول.</p>
+        <p xml:lang="ca">Primer llançament.</p>
         <p xml:lang="he">מהדורה ראשונית.</p>
         <p xml:lang="ia">Prime version</p>
         <p xml:lang="ka">პირველი რელიზი.</p>
