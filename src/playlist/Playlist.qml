@@ -647,6 +647,8 @@ Page {
             ListView {
                 id: playlistView
 
+                property bool startupScrollDone: false
+
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 100
 
@@ -658,6 +660,7 @@ Page {
                 reuseItems: true
                 spacing: 1
                 currentIndex: root.m_mpv.visibleFilterProxyModel.getPlayingItem()
+                highlightFollowsCurrentItem: false
 
                 moveDisplaced: Transition {
                     NumberAnimation {
@@ -685,6 +688,13 @@ Page {
                     delegate: PlaylistSectionDelegate {
                         model: root.m_mpv.visibleFilterProxyModel
                     }
+                }
+
+                onCountChanged: {
+                    if (startupScrollDone || count <= 0) {
+                        return
+                    }
+                    Qt.callLater(() => positionViewAtIndex(currentIndex, ListView.Beginning))
                 }
 
                 MouseArea {
