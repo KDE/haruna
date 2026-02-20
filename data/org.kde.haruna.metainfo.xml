@@ -353,6 +353,7 @@
       <description>
         <p>Bugfixes</p>
         <p xml:lang="ar">إصلاحات العلل</p>
+        <p xml:lang="ca">Correcció d'errors</p>
         <p xml:lang="cs">Opravy chyb</p>
         <p xml:lang="he">תיקוני תקלות</p>
         <p xml:lang="ka">შეცდომების გასწორება</p>
@@ -363,6 +364,7 @@
         <ul>
           <li>fixed searching playlist</li>
           <li xml:lang="ar">إصلاح البحث في قائمة التشغيل</li>
+          <li xml:lang="ca">s'ha corregit la cerca a la llista de reproducció</li>
           <li xml:lang="he">חיפוש ברשימות נגינה תוקן</li>
           <li xml:lang="ka">გასწორდა დასაკრავ სიაში ძებნა</li>
           <li xml:lang="nl">zoeken in afspeellijst gerepareerd</li>
@@ -372,6 +374,7 @@
           <li xml:lang="zh-CN">修复搜索播放列表</li>
           <li>fixed tooltip background being same color as its text</li>
           <li xml:lang="ar">إصلاح خلفية تلميحات الأدوات التي كانت بنفس لون نصها</li>
+          <li xml:lang="ca">s'ha corregit el fons del consell d'eina amb el mateix color que el seu text</li>
           <li xml:lang="ka">გასწორდა მინიშნების ფონი, რომელიც მისი ტექსტის ფერის იყო</li>
           <li xml:lang="nl">achtergrond van tekstballon die dezelfde kleur heeft als zijn tekst gerepareerd</li>
           <li xml:lang="pt-BR">correção da cor de fundo da dica de ferramenta sendo a mesma cor que o texto</li>
@@ -422,6 +425,7 @@
         <p xml:lang="zh-TW">功能</p>
         <p>PlayList</p>
         <p xml:lang="ar">قائمة التشغيل</p>
+        <p xml:lang="ca">Llista de reproducció</p>
         <p xml:lang="ia">Lista de reproduction</p>
         <p xml:lang="ka">დასაკრავი სია</p>
         <p xml:lang="nl">Afspeellijst</p>
@@ -431,6 +435,7 @@
         <ul>
           <li>added advanced sorting and grouping</li>
           <li xml:lang="ar">إضافة الفرز والتجميع المتقدم</li>
+          <li xml:lang="ca">s'ha afegit l'ordenació avançada i l'agrupament</li>
           <li xml:lang="ka">დაემატა გაფართოებული დალაგება და დაჯგუფება</li>
           <li xml:lang="nl">geavanceerd sorteren en groepering toegevoegd</li>
           <li xml:lang="pt-BR">adicionadas funcionalidades avançadas de classificação e agrupamento</li>
@@ -438,12 +443,14 @@
           <li xml:lang="zh-CN">新增高级排序和分组</li>
           <li>added context menu to open file in Hana (thumbnail generator, only if it's installed)</li>
           <li xml:lang="ar">إضافة قائمة سياقية لفتح الملف في Hana (مولد الصور المصغرة، فقط في حال تثبيته)</li>
+          <li xml:lang="ca">s'ha afegit el menú contextual per a obrir el fitxer al Hana (generador de miniatures, només si està instal·lat)</li>
           <li xml:lang="ka">დაემატა კონტექსტური მენიუ ფაილის Hana-ში გასახსნელად (მინიატურების გენერატორი. მხოლოდ იმ შემთხვევაში, თუ ის დაყენებულია)</li>
           <li xml:lang="pt-BR">adicionado menu de contexto para abrir arquivos no Hana (gerador de miniaturas, somente se estiver instalado)</li>
           <li xml:lang="sl">dodan kontekstni meni za odpiranje datoteke v Hana (generator sličic, samo če je nameščen)</li>
           <li xml:lang="zh-CN">如果安装了 Hana 缩略图生成器，添加在 Hana 中打开文件的右键菜单</li>
           <li>the last active playlist will be set as visible when starting the app</li>
           <li xml:lang="ar">جعل آخر قائمة تشغيل نشطة مرئية عند بدء التطبيق</li>
+          <li xml:lang="ca">l'última llista de reproducció activa s'establirà com a visible en iniciar l'aplicació</li>
           <li xml:lang="ka">აპლიკაციის გაშვებისას ბოლო აქტიური დასაკრავი სია ხილული გახდება</li>
           <li xml:lang="pt-BR">a última lista de reprodução ativa será definida como visível ao iniciar o aplicativo</li>
           <li xml:lang="sl">zadnji aktivni seznam predvajanja bo nastavljen kot viden ob zagonu aplikacije</li>
@@ -451,6 +458,7 @@
         </ul>
         <p>Other</p>
         <p xml:lang="ar">أخرى</p>
+        <p xml:lang="ca">Altres</p>
         <p xml:lang="cs">Jiné</p>
         <p xml:lang="ia">Altere</p>
         <p xml:lang="ka">სხვა</p>
@@ -460,18 +468,21 @@
         <ul>
           <li>added replay gain settings</li>
           <li xml:lang="ar">إضافة إعدادات زيادة مستوى الصوت (replay gain)</li>
+          <li xml:lang="ca">s'han afegit els paràmetres de guany de repetició</li>
           <li xml:lang="ka">დაემატა ხმის გაძლიერების პარამეტრები</li>
           <li xml:lang="pt-BR">adicionadas configurações de ganho de reprodução</li>
           <li xml:lang="sl">dodane nastavitve povečanja ponovitve</li>
           <li xml:lang="zh-CN">新增重放增益设置</li>
           <li>mpris thumbnail is only set for audio files, this allows the os taskbar preview to show the actual live window</li>
           <li xml:lang="ar">تعيين صورة mpris المصغرة للملفات الصوتية فقط، مما يسمح لمعاينة شريط مهام نظام التشغيل بإظهار النافذة الحية الفعلية</li>
+          <li xml:lang="ca">la miniatura del mpris només s'estableix per als fitxers d'àudio, això permet que la vista prèvia de la barra de tasques del SO mostri la finestra real</li>
           <li xml:lang="ka">mpris მინიატურა, მხოლოდ, აუდიო ფაილებისთვის ყენდება, რაც ოპერაციული სისტემის დავალებების პანელის წინასწარი დათვალიერების რეჟიმში რეალური ცოცხალი ფანჯრის ჩვენების საშუალებას იძლევა</li>
           <li xml:lang="pt-BR">miniatura do MPRIS só é definida para arquivos de áudio, o que permite que a pré-visualização da barra de tarefas do sistema operacional mostre a janela real em execução</li>
           <li xml:lang="sl">Sličica mpris je nastavljena samo za zvočne datoteke, kar omogoča, da predogled opravilne vrstice OS prikaže dejansko okno v živo</li>
           <li xml:lang="zh-CN">mpris 缩略图仅为音频文件设置，这使得操作系统任务栏预览能够显示实际的实时窗口</li>
           <li>decreased the size of the play icon in the compact playlist</li>
           <li xml:lang="ar">تصغير حجم أيقونة التشغيل في قائمة التشغيل المضغوطة</li>
+          <li xml:lang="ca">disminueix la mida de la icona de reproducció a la llista de reproducció compacta</li>
           <li xml:lang="ka">შემცირდა დაკვრის ხატულას ზომა კომპაქტურ დასაკრავ სიაში</li>
           <li xml:lang="pt-BR">diminuição do tamanho do ícone de reprodução na lista de reprodução compacta</li>
           <li xml:lang="sl">zmanjšal velikost ikone za predvajanje na kompaktnem seznamu predvajanja</li>
@@ -479,6 +490,7 @@
         </ul>
         <p>Bugfixes</p>
         <p xml:lang="ar">إصلاحات العلل</p>
+        <p xml:lang="ca">Correcció d'errors</p>
         <p xml:lang="cs">Opravy chyb</p>
         <p xml:lang="he">תיקוני תקלות</p>
         <p xml:lang="ka">შეცდომების გასწორება</p>
@@ -489,24 +501,28 @@
         <ul>
           <li>fixed database folder not being created</li>
           <li xml:lang="ar">إصلاح عدم إنشاء مجلد قاعدة البيانات</li>
+          <li xml:lang="ca">s'ha corregit que no es creava la carpeta de base de dades</li>
           <li xml:lang="ka">გასწორდა მონაცემთა ბაზის საქაღალდის არშექმნა</li>
           <li xml:lang="pt-BR">corrigido o problema que impedia a criação da pasta do banco de dados</li>
           <li xml:lang="sl">popravljena mapa zbirke podatkov, ki ni bila ustvarjena</li>
           <li xml:lang="zh-CN">修复没有创建数据库文件夹</li>
           <li>fixed seekbar tooltip not updating when file changes and the mouse is not moved</li>
           <li xml:lang="ar">إصلاح عدم تحديث تلميح شريط السعي عند تغير الملف دون تحريك الفأرة</li>
+          <li xml:lang="ca">s'ha corregit el consell de la barra de cerca que no s'actualitzava quan el fitxer canviava i el ratolí no es movia</li>
           <li xml:lang="ka">გასწორდა გადახვევის ზოლის მინიშნების განუახლებლობა ფაილის შეცვლისას როცა თაგუნა არ მოძრაობს</li>
           <li xml:lang="pt-BR">corrigido o problema em que a dica de ferramenta da barra de busca não atualizava quando o arquivo era alterado e o mouse não era movido</li>
           <li xml:lang="sl">popravljen opis orodja iskalne vrstice, ki se ne posodablja, ko se datoteka spremeni in se miška ne premakne</li>
           <li xml:lang="zh-CN">修复当文件更改且鼠标未移动时，进度条提示不更新的问题</li>
           <li>fixed deleting custom commands</li>
           <li xml:lang="ar">إصلاح حذف الأوامر المخصصة</li>
+          <li xml:lang="ca">S'ha corregit la supressió de les ordres personalitzades</li>
           <li xml:lang="ka">გასწორდა მორგებული ბრძანებების წაშლა</li>
           <li xml:lang="pt-BR">correção na exclusão de comandos personalizados</li>
           <li xml:lang="sl">popravljeno brisanje ukazov po meri</li>
           <li xml:lang="zh-CN">修复删除自定义命令</li>
           <li>fixed saving last opened url</li>
           <li xml:lang="ar">إصلاح حفظ آخر مسار (URL) فُتح</li>
+          <li xml:lang="ca">s'ha corregit el desament de l'últim URL obert</li>
           <li xml:lang="ka">გასწორდა ბოლო გახსნილი ბმულის შენახვა</li>
           <li xml:lang="pt-BR">correção no salvamento do último URL acessado</li>
           <li xml:lang="sl">popravljeno shranjevanje zadnjega odprtega url-ja</li>
@@ -557,6 +573,7 @@
         <ul>
           <li>Added option to resize playlist</li>
           <li xml:lang="ar">إضافة خيار لتغيير حجم قائمة التشغيل</li>
+          <li xml:lang="ca">S'ha afegit una opció per a canviar la mida de la llista de reproducció</li>
           <li xml:lang="ka">დაემატა დასაკრავი სიის ზომის შეცვლის პარამეტრი</li>
           <li xml:lang="pt-BR">Adicionada opção para redimensionar a lista de reprodução</li>
           <li xml:lang="sl">Dodana možnost za spreminjanje velikosti seznama predvajanja</li>
@@ -588,6 +605,7 @@
         </ul>
         <p>Bugfixes</p>
         <p xml:lang="ar">إصلاحات العلل</p>
+        <p xml:lang="ca">Correcció d'errors</p>
         <p xml:lang="cs">Opravy chyb</p>
         <p xml:lang="he">תיקוני תקלות</p>
         <p xml:lang="ka">შეცდომების გასწორება</p>
@@ -683,6 +701,7 @@
         <p xml:lang="zh-TW">功能</p>
         <p>Settings</p>
         <p xml:lang="ar">الإعدادات</p>
+        <p xml:lang="ca">Configuració</p>
         <p xml:lang="cs">Nastavení</p>
         <p xml:lang="he">הגדרות</p>
         <p xml:lang="ia">Preferentias</p>
@@ -697,8 +716,10 @@
           <li xml:lang="pt-BR">Geral: adicionada configuração de instância única para reproduzir um novo arquivo ao adicioná-lo à lista de reprodução</li>
           <li xml:lang="sl">Splošno: dodana nastavitev posameznega primerka za predvajanje nove datoteke ob dodajanju na seznam predvajanja</li>
           <li xml:lang="zh-CN">常规：新增单个实例设置以播放附加到播放列表的新文件</li>
-          <li>General: removed the <code>File dialog location setting</code></li>
-          <li xml:lang="ar">عام: أُزيل <code>إعداد موقع حوار الملف</code></li>
+          <li>General: removed the </li>
+          <li xml:lang="ar">عام: أُزيل 
+          إعداد موقع حوار الملف</li>
+          <li xml:lang="ca">General: s'ha eliminat el <code>File dialog location setting</code></li>
           <li xml:lang="ka">ზოგადი: წაიშალა <code>ფაილის დიალოგის მდებარეობის პარამეტრი</code></li>
           <li xml:lang="pt-BR">Geral: removido o <code>Configuração de local do arquivo da caixa de diálogo</code></li>
           <li xml:lang="sl">Splošno: odstranjeno <code>Nastavitev lokacije pogovornega okna datoteke</code></li>
@@ -722,9 +743,6 @@
           <li xml:lang="sl">Miška: dodana podpora za gumba miške Naprej in Nazaj</li>
           <li xml:lang="zh-CN">鼠标：新增鼠标的前进和后退键的支持</li>
           <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an <em>(*) 然后在包含该文件夹名称的所有文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含一个条目 `</em>sub<code>and you have the following folders next to the video file</code>subs<code>,</code>more subs<code>and</code>subtitles` all of these folders will be searched.</li>
-          <li xml:lang="ar">الترجمات: إذا كان اسم المجلد النسبي في قائمة <code>تحميل الترجمة من</code> يبدأ بـ <em>(*) 然后在包含该文件夹名称的所有文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含一个条目 `</em>sub<code>ولديك المجلدات التالية بجانب ملف الفيديو</code>subs<code>،</code>more subs<code>و</code>subtitles` فسيُبحث في كل هذه المجلدات.</li>
-          <li xml:lang="ka">სუბტიტრები: თუ <code>სუბტიტრების ჩატვირთვა საიდან</code> სიაში საქაღალდის ფარდობითი სახელი იწყება <em>(*) 然后在包含该文件夹名称的所有文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含一个条目 `</em>-ით, მაშინ ყველა ეს საქაღალდე — sub<code>და ვიდეოფაილთან გაქვთ შემდეგი საქაღალდეები</code>subs<code>,</code>more subs<code>და</code>subtitles — გადამოწმდება სუბტიტრების მოსაძებნად.</li>
-          <li xml:lang="pt-BR">Legendas: se um nome de pasta relativo na lista começar com um <em>(*) 然后在包含该文件夹名称的所有文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含一个条目 `</em>sub<code>e você tem as seguintes pastas ao lado do arquivo de vídeo</code>subs<code>,</code>more subs<code>e</code>subtitles`, todas essas pastas serão pesquisadas.</li>
           <li xml:lang="sl">Podnapisi: če se relativno ime mape na seznamu <code>Naloži podnapis iz</code> začne s <em>(*) 然后在包含该文件夹名称的所有文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含一个条目 `</em>sub<code>in poleg video datoteke imate naslednje mape</code>subs<code>,</code>more subs<code>and</code>subtitles`, bodo vse te mape preiskane.</li>
           <li xml:lang="zh-CN">字幕：如果在 <code>字幕文件来源位置</code> 列表中的一个相对路径文件夹名称以 <em>(*) 然后在包含该文件夹名称的所有文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含一个条目 `</em>sub<code>且在该视频文件所在文件夹中存在以下文件夹</code>subs<code>、</code>more subs<code>和</code>subtitles` 开头，所有的这些文件夹都将被搜索。</li>
           <li>the settings window now has a minimum width and height</li>
@@ -736,6 +754,7 @@
         </ul>
         <p>PlayList</p>
         <p xml:lang="ar">قائمة التشغيل</p>
+        <p xml:lang="ca">Llista de reproducció</p>
         <p xml:lang="ia">Lista de reproduction</p>
         <p xml:lang="ka">დასაკრავი სია</p>
         <p xml:lang="nl">Afspeellijst</p>
@@ -746,6 +765,7 @@
           <li>added support for multiple playlists</li>
           <li xml:lang="ar">إضافة دعم لقوائم تشغيل متعددة</li>
           <li xml:lang="ca">s'ha afegit el suport per a llistes de reproducció múltiples</li>
+          <li xml:lang="ca-valencia">s'ha afegit el suport per a llistes de reproducció múltiples</li>
           <li xml:lang="he">נוספה תמיכה בריבוי רשימות נגינה</li>
           <li xml:lang="ka">დაემატა ერთზე მეტი დასაკრავი სიის მხარდაჭერა</li>
           <li xml:lang="nl">Ondersteuning voor meerdere afspeellijsten toegevoegd</li>
@@ -767,6 +787,7 @@
           <li xml:lang="zh-CN">项目可被选中，Ctrl+点击可选择多个项目，Shift+点击可以选择一定范围内的项目</li>
           <li>items can be filtered</li>
           <li xml:lang="ar">إمكانية ترشيح العناصر</li>
+          <li xml:lang="ca">es poden filtrar els elements</li>
           <li xml:lang="ka">შესაძლებელია ელემენტების გაფილტვრა</li>
           <li xml:lang="pt-BR">itens podem ser filtrados</li>
           <li xml:lang="sl">elementov je mogoče filtrirati</li>
@@ -804,6 +825,7 @@
         </ul>
         <p>Playback</p>
         <p xml:lang="ar">التشغيل</p>
+        <p xml:lang="ca">Reproducció</p>
         <p xml:lang="cs">Přehrávání</p>
         <p xml:lang="ia">Reproduce</p>
         <p xml:lang="ka">დაკვრა</p>
@@ -832,6 +854,7 @@
         </ul>
         <p>Other</p>
         <p xml:lang="ar">أخرى</p>
+        <p xml:lang="ca">Altres</p>
         <p xml:lang="cs">Jiné</p>
         <p xml:lang="ia">Altere</p>
         <p xml:lang="ka">სხვა</p>
@@ -902,6 +925,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1003,6 +1027,7 @@
         </ul>
         <p>Bugfixes</p>
         <p xml:lang="ar">إصلاحات العلل</p>
+        <p xml:lang="ca">Correcció d'errors</p>
         <p xml:lang="cs">Opravy chyb</p>
         <p xml:lang="he">תיקוני תקלות</p>
         <p xml:lang="ka">შეცდომების გასწორება</p>
@@ -1036,6 +1061,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1067,6 +1093,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1092,6 +1119,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1124,6 +1152,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1185,6 +1214,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1223,6 +1253,7 @@
           <li xml:lang="zh-CN">修复在加载带有大量轨道的单个文件时应用程序会卡死的问题</li>
           <li>Improved menubar animation</li>
           <li xml:lang="ar">تحسين تحريك شريط القائمة</li>
+          <li xml:lang="ca">Animació millorada de la barra de menús</li>
           <li xml:lang="ka">გაუმჯობესდა მენიუს ზოლის ანიმაცია</li>
           <li xml:lang="pt-BR">Animação da barra de menus aprimorada</li>
           <li xml:lang="sl">Izboljšana animacija menijske vrstice</li>
@@ -1240,6 +1271,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1266,6 +1298,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1301,6 +1334,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1344,6 +1378,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1382,6 +1417,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1401,6 +1437,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1432,6 +1469,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1463,6 +1501,7 @@
       <description>
         <p>Ported to Qt6.</p>
         <p xml:lang="ar">نُقل إلى Qt6.</p>
+        <p xml:lang="ca">Adaptació a les Qt6.</p>
         <p xml:lang="ka">გადატანილია Qt6-ზე.</p>
         <p xml:lang="pt-BR">Porte para o Qt6.</p>
         <p xml:lang="sl">Preneseno v Qt6.</p>
@@ -1476,6 +1515,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1501,6 +1541,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1526,6 +1567,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1560,6 +1602,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1583,6 +1626,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1608,6 +1652,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1646,6 +1691,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1725,6 +1771,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1744,6 +1791,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1769,6 +1817,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1818,6 +1867,7 @@
       <description>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1856,6 +1906,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1881,6 +1932,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -1931,6 +1983,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -1986,6 +2039,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -2019,6 +2073,7 @@
         </ul>
         <p>Bugfixes 0.10.1:</p>
         <p xml:lang="ar">إصلاحات العلل 0.10.1:</p>
+        <p xml:lang="ca">Correcció d'errors 0.10.1:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.10.1-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.10.1:</p>
         <p xml:lang="sl">Popravki napak 0.10.1:</p>
@@ -2039,6 +2094,7 @@
         </ul>
         <p>Bugfixes 0.10.2:</p>
         <p xml:lang="ar">إصلاحات العلل 0.10.2:</p>
+        <p xml:lang="ca">Correcció d'errors 0.10.2:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.10.2-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.10.2:</p>
         <p xml:lang="sl">Popravki napak 0.10.2:</p>
@@ -2053,6 +2109,7 @@
         </ul>
         <p>Bugfixes 0.10.3:</p>
         <p xml:lang="ar">إصلاحات العلل 0.10.3:</p>
+        <p xml:lang="ca">Correcció d'errors 0.10.3:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.10.3-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.10.3:</p>
         <p xml:lang="sl">Popravki napak 0.10.3:</p>
@@ -2096,6 +2153,7 @@
         <p>Features 0.9.0:</p>
         <p xml:lang="ar">الميزات 0.9.0:</p>
         <p xml:lang="ca">Característiques 0.9.0:</p>
+        <p xml:lang="ca-valencia">Característiques 0.9.0:</p>
         <p xml:lang="he">יכולות ב־0.9.0:</p>
         <p xml:lang="ia">Characteristicas 0.9.0:</p>
         <p xml:lang="ka">0.9.0-ის თვისებები:</p>
@@ -2187,6 +2245,7 @@
         <p>Features 0.9.2:</p>
         <p xml:lang="ar">الميزات 0.9.2:</p>
         <p xml:lang="ca">Característiques 0.9.2:</p>
+        <p xml:lang="ca-valencia">Característiques 0.9.2:</p>
         <p xml:lang="he">יכולות ב־0.9.2:</p>
         <p xml:lang="ia">Characteristicas  0.9.2:</p>
         <p xml:lang="ka">0.9.2-ის თვისებები:</p>
@@ -2206,6 +2265,7 @@
         <p>Bugfixes 0.9.0:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.0:</p>
         <p xml:lang="ca">Correcció d'errors 0.9.0:</p>
+        <p xml:lang="ca-valencia">Esmena d'errors 0.9.0:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.0-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.0:</p>
         <p xml:lang="sl">Popravki napak 0.9.0:</p>
@@ -2239,6 +2299,7 @@
         <p>Bugfixes 0.9.1:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.1:</p>
         <p xml:lang="ca">Correcció d'errors 0.9.1:</p>
+        <p xml:lang="ca-valencia">Esmena d'errors 0.9.1:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.1-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.1:</p>
         <p xml:lang="sl">Popravki napak 0.9.1:</p>
@@ -2261,6 +2322,7 @@
         <p>Bugfixes 0.9.2:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.2:</p>
         <p xml:lang="ca">Correcció d'errors 0.9.2:</p>
+        <p xml:lang="ca-valencia">Esmena d'errors 0.9.2:</p>
         <p xml:lang="he">תיקוני תקלות ב־0.9.2:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.2-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.2:</p>
@@ -2314,6 +2376,7 @@
         <p>Bugfixes 0.9.3:</p>
         <p xml:lang="ar">إصلاحات العلل 0.9.3:</p>
         <p xml:lang="ca">Correcció d'errors 0.9.3:</p>
+        <p xml:lang="ca-valencia">Esmena d'errors 0.9.3:</p>
         <p xml:lang="ka">გასწორებული შეცდომები 0.9.3-ში:</p>
         <p xml:lang="pt-BR">Correções de bugs da versão 0.9.3:</p>
         <p xml:lang="sl">Popravki napak 0.9.3:</p>
@@ -2333,6 +2396,7 @@
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
         <p xml:lang="ca">Característiques:</p>
+        <p xml:lang="ca-valencia">Característiques:</p>
         <p xml:lang="cs">Vlastnosti:</p>
         <p xml:lang="he">יכולות:</p>
         <p xml:lang="ia">Characteristicas:</p>
@@ -2369,6 +2433,7 @@
           <li xml:lang="zh-CN">新增最近文件子菜单到文件菜单</li>
           <li>More actions to the menubar</li>
           <li xml:lang="ar">المزيد من الإجراءات لشريط القائمة</li>
+          <li xml:lang="ca">Més accions a la barra de menús</li>
           <li xml:lang="ka">მეტი ქმედება მენიუს ზოლზე</li>
           <li xml:lang="pt-BR">Mais ações na barra de menus</li>
           <li xml:lang="sl">Več dejanj v menijski vrstici</li>
@@ -2394,6 +2459,7 @@
         </ul>
         <p>Bugfixes:</p>
         <p xml:lang="ar">إصلاحات العلل:</p>
+        <p xml:lang="ca">Correcció d'errors:</p>
         <p xml:lang="cs">Opravy chyb:</p>
         <p xml:lang="ka">შეცდომების გასწორება:</p>
         <p xml:lang="pt-BR">Correções de bugs:</p>
@@ -2438,6 +2504,7 @@
         <p>First release.</p>
         <p xml:lang="ar">الإصدار الأول.</p>
         <p xml:lang="ca">Primer llançament.</p>
+        <p xml:lang="ca-valencia">Primer llançament.</p>
         <p xml:lang="he">מהדורה ראשונית.</p>
         <p xml:lang="ia">Prime version</p>
         <p xml:lang="ka">პირველი რელიზი.</p>
