@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:43+0000\n"
-"PO-Revision-Date: 2026-01-08 10:48+0100\n"
+"PO-Revision-Date: 2026-03-02 08:38+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -49,7 +49,7 @@ msgstr "Přehrávač médií"
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
-msgstr ""
+msgstr "© 2019–2025"
 
 #: src/application.cpp:154
 #, kde-format
@@ -189,19 +189,19 @@ msgstr "Přidat externí titulky..."
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
-msgstr ""
+msgstr "Otevřít URL"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
-msgstr ""
+msgstr "Zvýšit rychlost přehrávání"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
-msgstr ""
+msgstr "Snížit rychlost přehrávání"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -285,13 +285,13 @@ msgstr "Posuv o velký krok zpět"
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
-msgstr ""
+msgstr "Přejít na další kapitolu"
 
 #: src/models/actionsmodel.cpp:288
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
-msgstr ""
+msgstr "Přejít na předchozí kapitolu"
 
 #: src/models/actionsmodel.cpp:296
 #, kde-format
@@ -435,13 +435,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
-msgstr ""
+msgstr "Otočit ve směru hodinových ručiček"
 
 #: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
-msgstr ""
+msgstr "Rotovat proti směru hodin"
 
 #: src/models/actionsmodel.cpp:496
 #, kde-format
@@ -471,19 +471,19 @@ msgstr "Oddálit"
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Původní přiblížení"
 
 #: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
-msgstr ""
+msgstr "Zvýšit kontrast"
 
 #: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
-msgstr ""
+msgstr "Snížit kontrast"
 
 #: src/models/actionsmodel.cpp:552
 #, kde-format
@@ -531,13 +531,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
-msgstr ""
+msgstr "Zvýšit nasycení barev"
 
 #: src/models/actionsmodel.cpp:616
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
-msgstr ""
+msgstr "Snížit nasycení barev"
 
 #: src/models/actionsmodel.cpp:624
 #, kde-format
@@ -640,17 +640,17 @@ msgstr "Přidat…"
 #: src/playlist/Playlist.qml:107
 msgctxt "@action:button"
 msgid "Files"
-msgstr ""
+msgstr "Soubory"
 
 #: src/playlist/Playlist.qml:115
 msgctxt "@action:button"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/playlist/Playlist.qml:125
 msgctxt "@action:button"
 msgid "Playlist"
-msgstr ""
+msgstr "Seznam skladeb"
 
 #: src/playlist/Playlist.qml:134
 msgctxt "@action:button"
@@ -660,7 +660,7 @@ msgstr "Seřadit"
 #: src/playlist/Playlist.qml:143
 msgctxt "@action:button"
 msgid "Ascending"
-msgstr ""
+msgstr "Vzestupně"
 
 #: src/playlist/Playlist.qml:160
 msgctxt "@action:button"
@@ -669,10 +669,6 @@ msgstr "Sestupně"
 
 # žádné parametry funkce v inspektoru funkcí
 #: src/playlist/Playlist.qml:183
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:button"
 msgid "None"
 msgstr "Nic"
@@ -680,20 +676,17 @@ msgstr "Nic"
 #: src/playlist/Playlist.qml:193
 msgctxt "@action:button"
 msgid "File Name"
-msgstr ""
+msgstr "Název souboru"
 
 #: src/playlist/Playlist.qml:203
 msgctxt "@action:button"
 msgid "Title"
-msgstr ""
+msgstr "Název"
 
 #: src/playlist/Playlist.qml:213
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration"
-msgstr "Nasycení"
+msgstr "Doba trvání"
 
 #: src/playlist/Playlist.qml:223
 msgctxt "@action:button"
@@ -703,7 +696,7 @@ msgstr ""
 #: src/playlist/Playlist.qml:233
 msgctxt "@action:button"
 msgid "File Size"
-msgstr ""
+msgstr "Velikost souboru"
 
 #: src/playlist/Playlist.qml:243
 #, fuzzy
@@ -716,27 +709,27 @@ msgstr "S&topa"
 #: src/playlist/Playlist.qml:253
 msgctxt "@action:button"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Vzorkovací frekvence"
 
 #: src/playlist/Playlist.qml:263
 msgctxt "@action:button"
 msgid "Bitrate"
-msgstr ""
+msgstr "Datový tok"
 
 #: src/playlist/Playlist.qml:278
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr ""
+msgstr "Vlastní…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "Playback"
-msgstr ""
+msgstr "Přehrávání"
 
 #: src/playlist/Playlist.qml:295
 msgctxt "@action:button"
 msgid "Repeat playlist"
-msgstr ""
+msgstr "Opakovat seznam skladeb"
 
 #: src/playlist/Playlist.qml:306
 msgctxt "@action:button"
@@ -766,12 +759,12 @@ msgstr "Vyprázdnit"
 #: src/playlist/Playlist.qml:357
 msgctxt "@action:button"
 msgid "Save As"
-msgstr ""
+msgstr "Uložit jako"
 
 #: src/playlist/Playlist.qml:431
 msgctxt "@action:button"
 msgid "Add new playlist"
-msgstr ""
+msgstr "Přidat nový seznam skladeb"
 
 #: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:813
 msgctxt "@action:inmenu"
@@ -798,7 +791,7 @@ msgstr ""
 #: src/playlist/Playlist.qml:528
 msgctxt "@placeholder"
 msgid "playlist name"
-msgstr ""
+msgstr "název seznamu skladeb"
 
 #: src/playlist/Playlist.qml:739
 msgctxt "@action:inmenu"
@@ -808,7 +801,7 @@ msgstr "Otevřít odpovídající složku"
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
-msgstr ""
+msgstr "Otevřít v prohlížeči"
 
 #: src/playlist/Playlist.qml:754
 msgctxt "@action:inmenu"
@@ -818,17 +811,17 @@ msgstr ""
 #: src/playlist/Playlist.qml:770
 msgctxt "@action:inmenu"
 msgid "Copy Name"
-msgstr ""
+msgstr "Kopírovat název"
 
 #: src/playlist/Playlist.qml:776
 msgctxt "@action:inmenu"
 msgid "Copy Path"
-msgstr ""
+msgstr "Kopírovat cestu"
 
 #: src/playlist/Playlist.qml:777
 msgctxt "@action:inmenu"
 msgid "Copy URL"
-msgstr ""
+msgstr "Kopírovat URL"
 
 #: src/playlist/Playlist.qml:787
 msgctxt "@action:inmenu"
@@ -838,7 +831,7 @@ msgstr "Vybrat vše"
 #: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Deselect All"
-msgstr ""
+msgstr "Zrušit výběr"
 
 #: src/playlist/Playlist.qml:795
 msgctxt "@action:inmenu"
@@ -848,7 +841,7 @@ msgstr "Obrátit výběr"
 #: src/playlist/Playlist.qml:801
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
-msgstr ""
+msgstr "Odstranit ze seznamu skladeb"
 
 #: src/playlist/Playlist.qml:807
 msgctxt "@action:inmenu"
@@ -899,37 +892,28 @@ msgstr "Řazení"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
-msgstr ""
+msgstr "Filtr"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
 msgctxt "@action:inmenu all"
 msgid "All"
-msgstr ""
+msgstr "Vše"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#, fuzzy
-#| msgctxt "@title:menu"
-#| msgid "&File"
 msgctxt "@action:inmenu file"
 msgid "File"
-msgstr "&Soubor"
+msgstr "Soubor"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Zvuk"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
@@ -937,17 +921,17 @@ msgstr "Video"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
 msgctxt "@action:inmenu"
 msgid "Ascending"
-msgstr ""
+msgstr "Vzestupně"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:194
 msgctxt "@action:inmenu"
 msgid "Descending"
-msgstr ""
+msgstr "Sestupně"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "Seskupování"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
@@ -1002,33 +986,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
-msgstr ""
+msgstr "Název souboru"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
-msgstr "Nasycení"
+msgstr "Trvání"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
 #, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
-msgstr ""
+msgstr "Velikost souboru"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button title"
 msgid "Title"
-msgstr ""
+msgstr "Název"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
 #, fuzzy, kde-format
@@ -1042,24 +1024,22 @@ msgstr "S&topa"
 #, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Vzorkovací frekvence"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
-msgstr ""
+msgstr "Datový tok"
 
 #: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
-msgstr ""
+msgstr "Složka"
 
 #: src/playlist/playlistsortproxymodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Typ"
@@ -1068,7 +1048,7 @@ msgstr "Typ"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Přípona"
 
 #: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
@@ -1080,77 +1060,73 @@ msgstr ""
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Rok vydání"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Žánr"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Umělec"
 
 #: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Umělec alba"
 
 #: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Skladatel"
 
 #: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Textař"
 
 #: src/playlist/playlistsortproxymodel.cpp:158
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Audio Track"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Audio stopa"
+msgstr "Kodek zvuku"
 
 #: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Snímkovací frekvence"
 
 #: src/playlist/playlistsortproxymodel.cpp:172
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Video"
+msgstr "Video kodek"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
 #, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr ""
+msgstr "Orientace"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
 #, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr ""
+msgstr "Rozlišení"
 
 #: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
@@ -1168,13 +1144,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
-msgstr ""
+msgstr "Žádné album"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr ""
+msgstr "Žádný umělec"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
@@ -1224,46 +1200,42 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr ""
+msgstr "Disk"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Video File"
-msgstr "Video"
+msgstr "Soubor videa"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "Zvuk"
+msgstr "Zvukový soubor"
 
 #: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Na šířku"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Na výšku"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Čtverec"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: src/qml/Actions.qml:95 src/qml/Actions.qml:113
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
@@ -1315,7 +1287,7 @@ msgstr "Titulky: Žádné"
 #: src/qml/Actions.qml:340 src/qml/Actions.qml:352
 msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 msgid "Subtitle: %1 %2"
-msgstr ""
+msgstr "Titulky: %1 %2"
 
 #: src/qml/Actions.qml:359 src/qml/Actions.qml:365
 msgctxt "@info:tooltip"
@@ -1380,12 +1352,12 @@ msgstr "Nasycení: 0"
 #: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Start playback"
-msgstr ""
+msgstr "Začít přehrávání"
 
 #: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Pause playback"
-msgstr ""
+msgstr "Pozastavit přehrávání"
 
 #: src/qml/Footer.qml:167
 msgctxt "@info:tooltip"
@@ -1415,7 +1387,7 @@ msgstr "Vyberte barvu"
 #: src/qml/Haruna/Components/ColorPickerButton.qml:49
 msgctxt "@title:window"
 msgid "Select Color"
-msgstr ""
+msgstr "Vyberte barvu"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:65
 msgctxt "@action:inmenu"
@@ -1467,7 +1439,7 @@ msgstr ""
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:113
 msgctxt "@action:button"
 msgid "Confirm Deletion"
-msgstr ""
+msgstr "Potvrdit smazání"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:124
 msgctxt "@info:tooltip"
@@ -1716,17 +1688,17 @@ msgstr "Hlasitost: %1"
 #: src/qml/MpvVideo.qml:258
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
-msgstr ""
+msgstr "Přidat do seznamu skladeb"
 
 #: src/qml/MpvVideo.qml:307
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
-msgstr ""
+msgstr "Přehrát nyní"
 
 #: src/qml/MpvVideo.qml:391
 msgctxt "@label:title"
 msgid "Loading…"
-msgstr ""
+msgstr "Probíhá načítání…"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
@@ -1753,22 +1725,22 @@ msgstr ""
 #: src/qml/Settings/AudioSettings.qml:92
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "Režim"
 
 #: src/qml/Settings/AudioSettings.qml:104
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 #: src/qml/Settings/AudioSettings.qml:110
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr ""
+msgstr "Stopa"
 
 #: src/qml/Settings/AudioSettings.qml:116
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: src/qml/Settings/AudioSettings.qml:130
 msgctxt "@info:tooltip"
@@ -1974,7 +1946,7 @@ msgstr "Maximum nedávných souborů´"
 #: src/qml/Settings/GeneralSettings.qml:62
 msgctxt "@action:button clear (delete from database) recent files"
 msgid "Clear"
-msgstr ""
+msgstr "Vyprázdnit"
 
 #: src/qml/Settings/GeneralSettings.qml:66
 msgctxt "@info:tooltip"
@@ -2030,12 +2002,12 @@ msgstr "Styl zápatí"
 #: src/qml/Settings/GeneralSettings.qml:152
 msgctxt "@item:listbox the footer style"
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: src/qml/Settings/GeneralSettings.qml:158
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
-msgstr ""
+msgstr "Plovoucí"
 
 #: src/qml/Settings/GeneralSettings.qml:172
 msgctxt "@label:listbox"
@@ -2115,7 +2087,7 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Spustit v celoobrazovkovém režimu"
 
 #: src/qml/Settings/GeneralSettings.qml:310
 msgctxt "@info:tooltip"
@@ -2172,7 +2144,7 @@ msgstr "Styl prostředí"
 #: src/qml/Settings/GeneralSettings.qml:457
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: src/qml/Settings/MouseSettings.qml:92
 msgctxt "@label:action change action associated with mouse event"
@@ -2182,12 +2154,12 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:106
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: src/qml/Settings/MouseSettings.qml:134
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
-msgstr ""
+msgstr "Přid&at"
 
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
@@ -2202,37 +2174,37 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Vlevo"
 
 #: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Uprostřed"
 
 #: src/qml/Settings/MouseSettings.qml:211
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 #: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
-msgstr ""
+msgstr "Vpřed"
 
 #: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Zpět"
 
 #: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
-msgstr ""
+msgstr "Posunout nahoru"
 
 #: src/qml/Settings/MouseSettings.qml:235
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr ""
+msgstr "Rolovat dolů"
 
 #: src/qml/Settings/MouseSettings.qml:244
 msgctxt "@label:listbox"
@@ -2247,22 +2219,22 @@ msgstr ""
 #: src/qml/Settings/MouseSettings.qml:268
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
-msgstr ""
+msgstr "Ovládání"
 
 #: src/qml/Settings/MouseSettings.qml:274
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:280
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:286
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:298
 msgctxt ""
@@ -2450,12 +2422,12 @@ msgstr[2] ""
 #: src/qml/Settings/PlaybackSettings.qml:320
 msgctxt "@title"
 msgid "Chapters"
-msgstr ""
+msgstr "Kapitoly"
 
 #: src/qml/Settings/PlaybackSettings.qml:329
 msgctxt "@option:check"
 msgid "Skip chapters"
-msgstr ""
+msgstr "Přeskakovat kapitoly"
 
 #: src/qml/Settings/PlaybackSettings.qml:337
 msgctxt "@info:tooltip skip chapters setting"
@@ -2479,7 +2451,7 @@ msgstr ""
 #: src/qml/Settings/PlaybackSettings.qml:360
 msgctxt "@label:textbox"
 msgid "Keywords"
-msgstr ""
+msgstr "Klíčová slova"
 
 #: src/qml/Settings/PlaybackSettings.qml:369
 msgctxt "placeholder text"
@@ -2506,12 +2478,12 @@ msgstr "Výběr formátu"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Vlastní"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: src/qml/Settings/PlaybackSettings.qml:451
 msgctxt "@info:tooltip format selection setting"
@@ -2526,12 +2498,12 @@ msgstr "Pozice"
 #: src/qml/Settings/PlaylistSettings.qml:36
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr ""
+msgstr "Vlevo"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
@@ -2541,7 +2513,7 @@ msgstr "Styl seznamu skladeb"
 #: src/qml/Settings/PlaylistSettings.qml:69
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: src/qml/Settings/PlaylistSettings.qml:75
 msgctxt "@item:listbox the style of the playlist"
@@ -2551,7 +2523,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:81
 msgctxt "@item:listbox the style of the playlist"
 msgid "Compact"
-msgstr ""
+msgstr "Kompaktní"
 
 #: src/qml/Settings/PlaylistSettings.qml:95
 msgctxt "@label:listbox"
@@ -2561,7 +2533,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:109
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
-msgstr ""
+msgstr "Opakovat seznam skladeb"
 
 #: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
@@ -2690,7 +2662,7 @@ msgstr "Zkratky"
 #: src/qml/Settings/SettingsWindow.qml:137
 msgctxt "@action"
 msgid "Custom Commands"
-msgstr ""
+msgstr "Vlastní příkazy"
 
 #: src/qml/Settings/SettingsWindow.qml:147
 msgctxt "@action"
