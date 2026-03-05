@@ -475,6 +475,7 @@
           <li xml:lang="he">נוסף תפריט הקשר לפתיחת קובץ ב־Hana (יצרנית תמונות ממוזערות, רק אם מותקנת)</li>
           <li xml:lang="it">aggiunto menu contestuale per aprire file in Hana (generatore di miniature, solo se installato)</li>
           <li xml:lang="ka">დაემატა კონტექსტური მენიუ ფაილის Hana-ში გასახსნელად (მინიატურების გენერატორი. მხოლოდ იმ შემთხვევაში, თუ ის დაყენებულია)</li>
+          <li xml:lang="nl">contextmenu toegevoegd om bestand te openen in Hana (miniatuurgenerator, alleen als deze is geïnstalleerd)</li>
           <li xml:lang="pt-BR">adicionado menu de contexto para abrir arquivos no Hana (gerador de miniaturas, somente se estiver instalado)</li>
           <li xml:lang="sl">dodan kontekstni meni za odpiranje datoteke v Hana (generator sličic, samo če je nameščen)</li>
           <li xml:lang="tr">added context menu to open file in Hana (thumbnail generator, only if it's installed)</li>
@@ -487,6 +488,7 @@
           <li xml:lang="he">רשימת הנגינה הפעילה אחרונה תוגדר לגלויה בעת הפעלת היישום</li>
           <li xml:lang="it">l'ultima scaletta attiva viene impostata come visibile quando si avvia l'applicazione</li>
           <li xml:lang="ka">აპლიკაციის გაშვებისას ბოლო აქტიური დასაკრავი სია ხილული გახდება</li>
+          <li xml:lang="nl">de laatst actieve afspeellijst wordt als zichtbaar ingesteld bij het opstarten van de toepassing</li>
           <li xml:lang="pt-BR">a última lista de reprodução ativa será definida como visível ao iniciar o aplicativo</li>
           <li xml:lang="sl">zadnji aktivni seznam predvajanja bo nastavljen kot viden ob zagonu aplikacije</li>
           <li xml:lang="tr">the last active playlist will be set as visible when starting the app</li>
@@ -504,6 +506,7 @@
         <p xml:lang="ia">Altere</p>
         <p xml:lang="it">Altro</p>
         <p xml:lang="ka">სხვა</p>
+        <p xml:lang="nl">Overig</p>
         <p xml:lang="pt-BR">Outros</p>
         <p xml:lang="sl">Drugo</p>
         <p xml:lang="tr">Other</p>
@@ -518,6 +521,7 @@
           <li xml:lang="he">נוספו הגדרות איזון שמע</li>
           <li xml:lang="it">aggiunte impostazioni di replay gain</li>
           <li xml:lang="ka">დაემატა ხმის გაძლიერების პარამეტრები</li>
+          <li xml:lang="nl">afspeelversterkingsinstellingen toegevoegd</li>
           <li xml:lang="pt-BR">adicionadas configurações de ganho de reprodução</li>
           <li xml:lang="sl">dodane nastavitve povečanja ponovitve</li>
           <li xml:lang="tr">added replay gain settings</li>
@@ -697,6 +701,12 @@
           <li xml:lang="uk">Додано піктограму для дії з відтворення у заголовок списку відтворення</li>
           <li xml:lang="zh-CN">在播放列表头添加一个图标用于播放操作</li>
           <li>Mouse settings: action assigned to a mouse event can be changed</li>
+          <li xml:lang="ca">Configuració del ratolí: es pot canviar l'acció assignada a un esdeveniment de ratolí</li>
+          <li xml:lang="ca-valencia">Configureu el ratolí: es pot canviar l'acció assignada a un esdeveniment de ratolí</li>
+          <li xml:lang="ka">თაგუნას პარამეტრები: შესაძლებელია თაგუნას მოვლენაზე მინიჭებული ქმედების შეცვლა</li>
+          <li xml:lang="pt-BR">Configurações do mouse: a ação atribuída a um evento do mouse pode ser alterada</li>
+          <li xml:lang="sl">Nastavitve miške: dejanje, dodeljeno dogodku miške, je mogoče spremeniti</li>
+          <li xml:lang="tr">Fare ayarları: Bir fare olayına atanan eylem değiştirilebilir</li>
         </ul>
         <p>Bugfixes</p>
         <p xml:lang="ar">إصلاحات العلل</p>
@@ -866,6 +876,7 @@
           <li xml:lang="sl">Splošno: odstranjeno</li>
           <li xml:lang="tr">General: removed the</li>
           <li xml:lang="uk">Загальне: вилучено «the»</li>
+          <li xml:lang="zh-CN">常规：移除</li>
           <li>Playlist: added settings to control playback behavior</li>
           <li xml:lang="ar">قائمة التشغيل: إضافة إعدادات للتحكم في سلوك التشغيل</li>
           <li xml:lang="ca">Llista de reproducció: s'han afegit paràmetres per a controlar el comportament de la reproducció</li>
@@ -898,10 +909,12 @@
           <li xml:lang="zh-CN">鼠标：新增鼠标的前进和后退键的支持</li>
           <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an * (asterisk) then subtitles will be searched in all folders containing the folder name. Example: If the <code>Load subtitle from</code> list contains an entry <code>*sub</code> and you have the following folders next to the video file <code>subs</code>, <code>more subs</code> and <code>subtitles</code> all of these folders will be searched.</li>
           <li xml:lang="ca">Subtítols: si un nom de carpeta relatiu a la llista <code>Carrega els subtítols des de</code> comença amb un * (asterisc) llavors els subtítols se cercaran en totes les carpetes que continguin el nom de carpeta. Exemple: si la llista <code>Carrega els subtítols des de</code> conté l'entrada <code>*subtítol</code> i teniu les carpetes següents al costat del fitxer de vídeo <code>subtítols</code>, <code>més subtítols</code> i <code>subtítols</code>, se cercaran totes aquestes carpetes.</li>
+          <li xml:lang="ca-valencia">Subtítols: si un nom de carpeta relatiu a la llista <code>Carrega els subtítols des de</code> comença amb un * (asterisc) llavors els subtítols es buscaran en totes les carpetes que continguen el nom de carpeta. Exemple: si la llista <code>Carrega els subtítols des de</code> conté l'entrada <code>*subtítol</code> i teniu les carpetes següents al costat del fitxer de vídeo <code>subtítols</code>, <code>més subtítols</code> i <code>subtítols</code>, es buscaran totes estes carpetes.</li>
           <li xml:lang="ka">სუბტიტრები: თუ ფარდობითი საქაღალდის სახელი <code>სუბტიტრების ჩატვირთვა საიდან</code>-ის სიაში იწყება სიმბოლოთი * (ვარსკვლავი), მაშინ სუბტიტრების ძებნა მოხდება ყველა საქაღალდეში, რომელიც ამ საქაღალდის სახელს შეიცავს. მაგ: თუ <code>სუბტიტრების ჩატვირთვა საიდან</code> სია შეიცავს ჩანაწერს <code>*სუბ</code> და თქვენ გაქვთ შემდეგი საქაღალდეები ვიფეოფაილთან: <code>სუბტიტრ</code>, <code>მეტი სუბტიტრი</code> და <code>სუბტიტრები</code>`, ძებნა ყველა ამ საქაღალდეში მოხდება.</li>
           <li xml:lang="pt-BR">Legendas: se o nome de uma pasta relativa na lista <code>Carregar legenda de</code> começar com um * (asterisco), as legendas serão pesquisadas em todas as pastas que contêm o nome da pasta. Exemplo: se a lista <code>Carregar legenda de</code> contiver uma entrada <code>*sub</code> e você tiver as seguintes pastas ao lado do arquivo de vídeo <code>subs</code>, <code>mais subs</code> e <code>legendas</code>, todas essas pastas serão pesquisadas.</li>
           <li xml:lang="sl">Podnapisi: če se ime relativne mape na seznamu <code>Naloži podnapis iz</code> začne z * (zvezdico), bodo podnapisi iskani v vseh mapah, ki vsebujejo ime mape. Primer: Če seznam <code>Naloži podnapis iz</code> vsebuje vnos <code>*sub</code> in imate poleg video datoteke <code>subs</code>, <code>več podnapisov</code> in <code>podnapisi</code> naslednje mape, bodo preiskane vse te mape.</li>
           <li xml:lang="tr">Altyazılar: <code>Load subtitle from</code> listesindeki göreceli bir klasör adı bir * (yıldız) ile başlıyorsa altyazılar, klasör adını içeren tüm klasörlerde aranırlar. Örnek: <code>Load subtitle from</code> listesi, <code>*sub</code> girdisini içeriyorsa ve <code>altyazılar</code>, <code>daha fazla altyazı</code> ve <code>altyazılar</code> video dosyalarının yanında aşağıdaki klasörlere sahipseniz bu klasörlerin hepsi aranır.</li>
+          <li xml:lang="zh-CN">字幕：如果在 <code>字幕文件来源位置</code> 列表中的相对文件夹名称以 * (半角星号) 开始，则在所有包含该名称的文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含条目 <code>*sub</code> 而视频文件的同级文件夹中存在下列文件夹：<code>subs</code>、<code>more subs</code> 和 <code>字幕</code> ，则所有这些文件夹都会被搜索。</li>
           <li>the settings window now has a minimum width and height</li>
           <li xml:lang="ar">نافذة الإعدادات تمتلك الآن حداً أدنى للعرض والارتفاع</li>
           <li xml:lang="ca">la finestra de configuració ara té una amplada i alçada mínimes</li>
@@ -1086,6 +1099,7 @@
         <p xml:lang="ia">Altere</p>
         <p xml:lang="it">Altro</p>
         <p xml:lang="ka">სხვა</p>
+        <p xml:lang="nl">Overig</p>
         <p xml:lang="pt-BR">Outros</p>
         <p xml:lang="sl">Drugo</p>
         <p xml:lang="tr">Other</p>
@@ -2253,6 +2267,12 @@
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <ul>
           <li>Don't show preview popup when no file is loaded or when playing an online video</li>
+          <li xml:lang="ca">No mostra la finestra emergent de vista prèvia quan no es carrega cap fitxer o quan es reprodueix un vídeo en línia</li>
+          <li xml:lang="ca-valencia">No mostra la finestra emergent de vista prèvia quan no es carrega cap fitxer o quan es reproduïx un vídeo en línia</li>
+          <li xml:lang="ka">არ გამოჩნდეს მინიატურის მხტუნარა, როდესაც ფაილი ჩატვირთული არაა, ან მიმდინარეობს ონლაინვიდეოს დაკვრა</li>
+          <li xml:lang="pt-BR">Não mostrar janela de pré-visualização quando nenhum arquivo estiver carregado ou durante a reprodução de um vídeo online</li>
+          <li xml:lang="sl">Ne prikaži pojavnega okna za predogled, ko ni naložena nobena datoteka ali ko se predvaja spletni video</li>
+          <li xml:lang="tr">Yüklü dosya yokken veya çevrimiçi bir video oynatırken önizleme açılır penceresini gösterme</li>
           <li>Fixed thumbnails not working in the playlist</li>
           <li xml:lang="ar">إصلاح عدم عمل الصور المصغرة في قائمة التشغيل</li>
           <li xml:lang="ca">S'ha corregit que les miniatures no funcionaven a la llista de reproducció</li>
