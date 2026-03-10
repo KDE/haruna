@@ -117,6 +117,7 @@ Q_SIGNALS:
     void seekPreviousSubtitleAction();
     void seekToWatchLaterPositionAction();
     void setLoopAction();
+    void toggleLoopFileAction();
     void screenshotAction();
     void subtitleToggleAction();
     void subtitleIncreaseFontSizeAction();

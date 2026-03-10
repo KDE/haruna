@@ -5,49 +5,52 @@
  SPDX-License-Identifier: GPL-3.0-or-later
  -->
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name="haruna/haruna.conf" />
-  <group name="Playback">
-  <entry name="RestoreFilePosition" type="bool">
-    <default>false</default>
-  </entry>
-    <entry name="MinDurationToSavePosition" type="int">
-      <default>1</default>
-    </entry>
-    <entry name="SavePositionInterval" type="int">
-      <default>1</default>
-    </entry>
-    <entry name="SkipChapters" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="ChaptersToSkip" type="String"></entry>
-    <entry name="ShowOsdOnSkipChapters" type="bool">
-      <default>true</default>
-    </entry>
-    <entry name="YtdlFormat" type="String"></entry>
-    <entry name="YtdlFormatCustom" type="String"></entry>
-    <entry name="HWDecoding" type="String">
-      <default>auto</default>
-    </entry>
-    <entry name="SeekSmallStep" type="Int">
-      <default>5</default>
-    </entry>
-    <entry name="SeekMediumStep" type="Int">
-      <default>15</default>
-    </entry>
-    <entry name="SeekBigStep" type="Int">
-      <default>30</default>
-    </entry>
-    <entry name="OpenLastPlayedFile" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="PauseWhileMinimized" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="PlayOnResume" type="bool">
-      <default>true</default>
-    </entry>
-  </group>
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+						  http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+	<kcfgfile name="haruna/haruna.conf" />
+	<group name="Playback">
+		<entry name="RestoreFilePosition" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="MinDurationToSavePosition" type="int">
+			<default>1</default>
+		</entry>
+		<entry name="SavePositionInterval" type="int">
+			<default>1</default>
+		</entry>
+		<entry name="SkipChapters" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="ChaptersToSkip" type="String"></entry>
+		<entry name="ShowOsdOnSkipChapters" type="bool">
+			<default>true</default>
+		</entry>
+		<entry name="YtdlFormat" type="String"></entry>
+		<entry name="YtdlFormatCustom" type="String"></entry>
+		<entry name="HWDecoding" type="String">
+			<default>auto</default>
+		</entry>
+		<entry name="SeekSmallStep" type="Int">
+			<default>5</default>
+		</entry>
+		<entry name="SeekMediumStep" type="Int">
+			<default>15</default>
+		</entry>
+		<entry name="SeekBigStep" type="Int">
+			<default>30</default>
+		</entry>
+		<entry name="OpenLastPlayedFile" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="PauseWhileMinimized" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="PlayOnResume" type="bool">
+			<default>true</default>
+		</entry>
+		<entry name="LoopFile" type="bool">
+			<default>true</default>
+		</entry>
+	</group>
 </kcfg>
