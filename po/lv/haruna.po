@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:43+0000\n"
-"PO-Revision-Date: 2025-11-07 18:03+0200\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-03-04 17:35+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -222,7 +222,7 @@ msgstr "Atskaņot/pauzēt"
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
-msgstr ""
+msgstr "Apturēt"
 
 #: src/models/actionsmodel.cpp:200
 #, kde-format
@@ -666,90 +666,64 @@ msgid "Sort"
 msgstr "Kārtot"
 
 #: src/playlist/Playlist.qml:143
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Ascending"
-msgstr "Pēc nosaukuma augoši"
+msgstr "Augoši"
 
 #: src/playlist/Playlist.qml:160
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Descending"
-msgstr "Pēc nosaukuma augoši"
+msgstr "Dilstoši"
 
 #: src/playlist/Playlist.qml:183
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:button"
 msgid "None"
 msgstr "Nav"
 
 #: src/playlist/Playlist.qml:193
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
 msgctxt "@action:button"
 msgid "File Name"
-msgstr "Datnes nosaukums: %1"
+msgstr "Datnes nosaukums"
 
 #: src/playlist/Playlist.qml:203
 msgctxt "@action:button"
 msgid "Title"
-msgstr ""
+msgstr "Nosaukums"
 
 #: src/playlist/Playlist.qml:213
-#, fuzzy
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
 msgctxt "@action:button"
 msgid "Duration"
-msgstr "Piesātinājums"
+msgstr "Ilgums"
 
 #: src/playlist/Playlist.qml:223
-#, fuzzy
-#| msgctxt "@label:listbox"
-#| msgid "Modifier key"
 msgctxt "@action:button"
 msgid "Modified Date"
-msgstr "Modifikatora taustiņš"
+msgstr "Modificēšanas datums"
 
 #: src/playlist/Playlist.qml:233
 msgctxt "@action:button"
 msgid "File Size"
-msgstr ""
+msgstr "Datnes izmērs"
 
 #: src/playlist/Playlist.qml:243
-#, fuzzy
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Track"
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "Celiņš"
+msgstr "Celiņa Nr."
 
 #: src/playlist/Playlist.qml:253
 msgctxt "@action:button"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Diskretizācijas ātrums"
 
 #: src/playlist/Playlist.qml:263
 msgctxt "@action:button"
 msgid "Bitrate"
-msgstr ""
+msgstr "Bitātrums"
 
 #: src/playlist/Playlist.qml:278
-#, fuzzy
-#| msgctxt "@item:listbox the custom youtube-dl format selection"
-#| msgid "Custom"
 msgctxt "@action:button"
 msgid "Custom…"
-msgstr "Pielāgots"
+msgstr "Pielāgots…"
 
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
@@ -838,7 +812,7 @@ msgstr "Atvērt pārlūkā"
 #: src/playlist/Playlist.qml:754
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "Atvērt sīktēlu ģeneratorā"
 
 #: src/playlist/Playlist.qml:770
 msgctxt "@action:inmenu"
@@ -903,23 +877,17 @@ msgstr "Atlasiet datni"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:26
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
-msgstr ""
+msgstr "Paplašināta kārtošana un grupēšana"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:43
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Playlist"
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
-msgstr "Repertuārs"
+msgstr "Repertuārs: %1"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:50
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
-msgstr "Kārtot"
+msgstr "Kārtošana"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:75
 #: src/playlist/PlaylistAdvancedSortWindow.qml:94
@@ -927,69 +895,51 @@ msgstr "Kārtot"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:355
 msgctxt "@action:inmenu"
 msgid "Filter"
-msgstr ""
+msgstr "FIltrēt"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:101
 #: src/playlist/PlaylistAdvancedSortWindow.qml:362
-#, fuzzy
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
 msgctxt "@action:inmenu all"
 msgid "All"
-msgstr "Alt"
+msgstr "Visi"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:112
 #: src/playlist/PlaylistAdvancedSortWindow.qml:373
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@action:inmenu file"
 msgid "File"
-msgstr "Datnes"
+msgstr "Datne"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:123
 #: src/playlist/PlaylistAdvancedSortWindow.qml:384
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Audio"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:134
 #: src/playlist/PlaylistAdvancedSortWindow.qml:395
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:181
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
-msgstr "Pēc nosaukuma augoši"
+msgstr "Augoši"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:194
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Descending"
-msgstr "Pēc nosaukuma augoši"
+msgstr "Dilstoši"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:312
 msgctxt "@label group"
 msgid "Grouping"
-msgstr ""
+msgstr "Grupēšana"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu"
 msgid "Show Sections"
-msgstr ""
+msgstr "Rādīt sadaļas"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:420
 msgctxt "@info:tooltip"
@@ -998,45 +948,40 @@ msgid ""
 "sorted by the included group properties in the same order, then the sections "
 "might not be unique."
 msgstr ""
+"Repertuāra skatā rādīt/slēpt sadaļu etiķetes. <br>Ja repertuārs netiek "
+"kārtots pēc iekļautajām grupu tādā pašā kārtībā, tad sadaļas var nebūt "
+"unikālas."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:531
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add New Folder"
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
-msgstr "Pievienot jaunu mapi"
+msgstr "Pievienot jaunu rindu"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:743
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
-msgstr ""
+msgstr "Īpašība ir paslēpta, ja tā ir tukša vai nav unikāla."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:745
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
+"Īpašība tiek rādīta, ja tā ir tukša, tās vietā tiks parādīts vietturis."
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:750
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, ascending"
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
-msgstr "Pēc ilguma augoši"
+msgstr "Kārtot augoši"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:752
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Duration, descending"
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
-msgstr "Pēc ilguma dilstoši"
+msgstr "Kārtot dilstoši"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:754
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
-msgstr ""
+msgstr "Vienāds ar primāro kārtošanas secību"
 
 #: src/playlist/playlistmultiproxiesmodel.cpp:211
 #, kde-format
@@ -1045,73 +990,61 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr "Nav atļauti repertuāri ar vienādiem nosaukumiem: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
-msgstr "Datnes nosaukums: %1"
+msgstr "Datnes nosaukums"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
-msgstr "Piesātinājums"
+msgstr "Ilgums"
 
 #: src/playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "Datums"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
-msgstr "Datnes nosaukums: %1"
+msgstr "Datnes izmērs"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button title"
 msgid "Title"
-msgstr ""
+msgstr "Nosaukums"
 
 #: src/playlist/playlistsortproxymodel.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Track"
+#, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "Celiņš"
+msgstr "Celiņa Nr."
 
 #: src/playlist/playlistsortproxymodel.cpp:68
 #, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
-msgstr ""
+msgstr "Diskretizācijas ātrums"
 
 #: src/playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
-msgstr ""
+msgstr "Bitātrums"
 
 #: src/playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
-msgstr ""
+msgstr "Mape"
 
 #: src/playlist/playlistsortproxymodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Type"
+#, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "Tips"
@@ -1120,30 +1053,28 @@ msgstr "Tips"
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
-msgstr ""
+msgstr "Paplašinājums"
 
 #: src/playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
-msgstr ""
+msgstr "Diska Nr."
 
 #: src/playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "Izdošanas gads"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "Žanrs"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
+#, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "Albums"
@@ -1152,177 +1083,157 @@ msgstr "Albums"
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
-msgstr ""
+msgstr "Izpildītājs"
 
 #: src/playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "Albuma izpildītājs"
 
 #: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
-msgstr ""
+msgstr "Mūzikas autors"
 
 #: src/playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
-msgstr ""
+msgstr "Vārdu autors"
 
 #: src/playlist/playlistsortproxymodel.cpp:158
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "Audio ciklu palielināt"
+msgstr "Audio kodeks"
 
 #: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
-msgstr ""
+msgstr "Kadru ātrums"
 
 #: src/playlist/playlistsortproxymodel.cpp:172
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "Video"
+msgstr "Video kodeks"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "Piesātinājums"
+msgstr "Orientācija"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "Atiestatīt piesātinājumu"
+msgstr "Izšķirtspēja"
 
 #: src/playlist/playlistsortproxymodel.cpp:325
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
-msgstr ""
+msgstr "Jauna rinda"
 
 #: src/playlist/playlistsortproxymodel.cpp:497
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
-msgstr ""
+msgstr "Bez žanra"
 
 #: src/playlist/playlistsortproxymodel.cpp:498
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox replay gain"
-#| msgid "Album"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Album"
-msgstr "Albums"
+msgstr "Bez albuma"
 
 #: src/playlist/playlistsortproxymodel.cpp:499
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr ""
+msgstr "Bez izpildītāja"
 
 #: src/playlist/playlistsortproxymodel.cpp:500
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
-msgstr ""
+msgstr "Bez albuma izpildītāja"
 
 #: src/playlist/playlistsortproxymodel.cpp:501
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
-msgstr ""
+msgstr "Bez mūzika autora"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
-msgstr ""
+msgstr "Bez vārdu autora"
 
 #: src/playlist/playlistsortproxymodel.cpp:503
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
-msgstr ""
+msgstr "Bez izdošanas gada"
 
 #: src/playlist/playlistsortproxymodel.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
-msgstr "Video"
+msgstr "Nav video"
 
 #: src/playlist/playlistsortproxymodel.cpp:505
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
-msgstr "Audio ciklu palielināt"
+msgstr "Nav audio kodeks"
 
 #: src/playlist/playlistsortproxymodel.cpp:506
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
-msgstr "Video"
+msgstr "Nav video kodeks"
 
 #: src/playlist/playlistsortproxymodel.cpp:528
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr ""
+msgstr "Disks"
 
 #: src/playlist/playlistsortproxymodel.cpp:583
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Video"
+#, kde-format
 msgctxt "@title:group"
 msgid "Video File"
-msgstr "Video"
+msgstr "Video datne"
 
 #: src/playlist/playlistsortproxymodel.cpp:586
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
-msgstr "Audio ciklu palielināt"
+msgstr "Audio datne"
 
 #: src/playlist/playlistsortproxymodel.cpp:610
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
-msgstr ""
+msgstr "Ainava"
 
 #: src/playlist/playlistsortproxymodel.cpp:614
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
-msgstr ""
+msgstr "Portrets"
 
 #: src/playlist/playlistsortproxymodel.cpp:618
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
-msgstr ""
+msgstr "Kvadrāts"
 
 #: src/playlist/PlaylistTabDelegate.qml:128
 msgctxt "@label:title name of default playlist tab"
@@ -1797,7 +1708,7 @@ msgstr "Atskaņot tagad"
 #: src/qml/MpvVideo.qml:391
 msgctxt "@label:title"
 msgid "Loading…"
-msgstr ""
+msgstr "Ielādē…"
 
 #: src/qml/Settings/AudioSettings.qml:24
 #: src/qml/Settings/SubtitlesSettings.qml:50
