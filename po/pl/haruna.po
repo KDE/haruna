@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:43+0000\n"
-"PO-Revision-Date: 2026-03-07 09:11+0100\n"
+"PO-Revision-Date: 2026-03-14 06:31+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -222,7 +222,7 @@ msgstr "Odtwórz/wstrzymaj"
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
-msgstr ""
+msgstr "Zatrzymaj"
 
 #: src/models/actionsmodel.cpp:200
 #, kde-format
@@ -2064,12 +2064,12 @@ msgstr "Pokaż pływającą stopkę na"
 #: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Każdy ruch myszy"
 
 #: src/qml/Settings/GeneralSettings.qml:193
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Ruchy myszy w dół"
 
 #: src/qml/Settings/GeneralSettings.qml:208
 msgctxt "@info:tooltip"
@@ -2205,25 +2205,16 @@ msgid "Default"
 msgstr "Domyślny"
 
 #: src/qml/Settings/MouseSettings.qml:92
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
-msgstr "Wyczyść działanie"
+msgstr "Zmień działanie"
 
 #: src/qml/Settings/MouseSettings.qml:106
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Delete"
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Usuń"
 
 #: src/qml/Settings/MouseSettings.qml:134
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "&Add"
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "Dod&aj"
@@ -2231,29 +2222,27 @@ msgstr "Dod&aj"
 #: src/qml/Settings/MouseSettings.qml:169
 msgctxt "@title:window"
 msgid "Add mouse button action"
-msgstr ""
+msgstr "Dodaj działanie do przycisku myszy"
 
 #: src/qml/Settings/MouseSettings.qml:182
 msgctxt "@label:listbox"
 msgid "Mouse button"
-msgstr ""
+msgstr "Przycisk myszy"
 
 #: src/qml/Settings/MouseSettings.qml:199
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
-msgstr ""
+msgstr "Lewy"
 
 #: src/qml/Settings/MouseSettings.qml:205
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
-msgstr ""
+msgstr "Środkowy"
 
 #: src/qml/Settings/MouseSettings.qml:211
-#, fuzzy
-#| msgid "Row height"
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
-msgstr "Wysokość wiersza"
+msgstr "Prawy"
 
 #: src/qml/Settings/MouseSettings.qml:217
 msgctxt "@item:listbox forward mouse button"
@@ -2263,7 +2252,7 @@ msgstr "Wprzód"
 #: src/qml/Settings/MouseSettings.qml:223
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: src/qml/Settings/MouseSettings.qml:229
 msgctxt "@item:listbox mouse scroll up"
@@ -2271,11 +2260,9 @@ msgid "Scroll up"
 msgstr "Przewiń w górę"
 
 #: src/qml/Settings/MouseSettings.qml:235
-#, fuzzy
-#| msgid "Action for scroll down"
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
-msgstr "Działanie na przewinięcie w dół"
+msgstr "Przewiń w dół"
 
 #: src/qml/Settings/MouseSettings.qml:244
 msgctxt "@label:listbox"
@@ -2285,7 +2272,7 @@ msgstr "Klawisz odmieniający"
 #: src/qml/Settings/MouseSettings.qml:262
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
-msgstr ""
+msgstr "Bez klawisza odmieniającego"
 
 #: src/qml/Settings/MouseSettings.qml:268
 msgctxt "@item:listbox control modifier key"
@@ -2295,46 +2282,38 @@ msgstr "Control"
 #: src/qml/Settings/MouseSettings.qml:274
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: src/qml/Settings/MouseSettings.qml:280
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: src/qml/Settings/MouseSettings.qml:286
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: src/qml/Settings/MouseSettings.qml:298
-#, fuzzy
-#| msgid "Action for left double click"
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
-msgstr "Działanie na dwukrotne naciśnięcie lewym"
+msgstr "Wyzwól po dwukrotnym naciśnięciu"
 
 #: src/qml/Settings/MouseSettings.qml:308
 msgctxt "@label"
 msgid "Action"
-msgstr ""
+msgstr "Działanie"
 
 #: src/qml/Settings/MouseSettings.qml:316
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Select a color"
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
-msgstr "Wybierz barwę"
+msgstr "Wybierz działanie"
 
 #: src/qml/Settings/MouseSettings.qml:332
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Clear action"
 msgctxt "@action:button"
 msgid "Change action"
-msgstr "Wyczyść działanie"
+msgstr "Zmień działanie"
 
 #: src/qml/Settings/MouseSettings.qml:343
 msgctxt "@info"
@@ -2344,7 +2323,7 @@ msgstr "Nie wybrano żadnego działania"
 #: src/qml/Settings/MouseSettings.qml:366
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
-msgstr ""
+msgstr "Przyciski myszy są już przypisane do “%1”"
 
 #: src/qml/Settings/PlaybackSettings.qml:25
 msgctxt "@label:spinbox"
@@ -2603,7 +2582,7 @@ msgstr "Wybór formatu"
 #: src/qml/Settings/PlaybackSettings.qml:430
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
-msgstr ""
+msgstr "Własny"
 
 #: src/qml/Settings/PlaybackSettings.qml:436
 msgctxt "@item:listbox the default youtube-dl format selection"
@@ -2623,14 +2602,12 @@ msgstr "Położenie"
 #: src/qml/Settings/PlaylistSettings.qml:36
 msgctxt "@item:listbox playlist position"
 msgid "Left"
-msgstr ""
+msgstr "Po lewej"
 
 #: src/qml/Settings/PlaylistSettings.qml:42
-#, fuzzy
-#| msgid "Row height"
 msgctxt "@item:listbox playlist position"
 msgid "Right"
-msgstr "Wysokość wiersza"
+msgstr "Po prawej"
 
 #: src/qml/Settings/PlaylistSettings.qml:57
 msgctxt "@label:listbox"
@@ -2665,15 +2642,12 @@ msgstr "Powtarzaj listę odtwarzania"
 #: src/qml/Settings/PlaylistSettings.qml:115
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
-msgstr ""
+msgstr "Zatrzymaj po ostatnim elemencie"
 
 #: src/qml/Settings/PlaylistSettings.qml:121
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Repeat"
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
-msgstr "Powtórz"
+msgstr "Powtórz element"
 
 #: src/qml/Settings/PlaylistSettings.qml:127
 msgctxt "@item:listbox the playback behavior of the playlist"
@@ -2689,6 +2663,12 @@ msgid ""
 "playing item is repeated indefinitely<br><strong>Stop after item</strong>: "
 "playback stops after the current playing item"
 msgstr ""
+"<strong>Powtórz listę odtwarzania</strong>: lista odtwarzania będzie "
+"powtarzana w nieskończoność<br><strong>Zatrzymaj po ostatnim elemencie</"
+"strong>: odtwarzanie zatrzyma się po ostatnim elemencie na "
+"liście<br><strong>Powtórz element</strong>: obecny element będzie powtarzany "
+"w nieskończoność<br><strong>Zatrzymaj po elemencie</strong>: odtwarzanie "
+"zatrzyma się po obecnie odtwarzanym elemencie"
 
 #: src/qml/Settings/PlaylistSettings.qml:162
 msgctxt "@item:listbox the playback behavior of the playlist"
@@ -3031,6 +3011,9 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Nie można było pobrać listy odtwarzania o id: %1\n"
+"\n"
+"%2"
 
 #, fuzzy
 #~| msgctxt "@title:menu"
