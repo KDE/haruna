@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:43+0000\n"
-"PO-Revision-Date: 2026-02-09 16:16+0000\n"
+"PO-Revision-Date: 2026-03-04 13:20+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -553,6 +553,8 @@ msgid ""
 "The chosen shortcut conflicts with the shortcut of the <b>%1</b> action."
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
+"Scurtătura aleasă e în conflict cu scurtătura acțiunii <b>%1</b>."
+"<br><br>Doriți să reatribuiți scurtătura?"
 
 #: src/models/actionsmodel.cpp:783
 #, kde-format
@@ -563,12 +565,14 @@ msgstr "Reatribuie"
 #: src/mpv/mpvitem.cpp:84
 #, kde-format
 msgid "Command line video player"
-msgstr ""
+msgstr "Lector video în linie de comandă"
 
 #: src/mpv/mpvitem.cpp:91
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
+"Soluție multiplatformă pentru înregistrarea, convertirea și difuzarea în "
+"flux a sunetului și imaginii"
 
 #: src/mpv/mpvitem.cpp:380
 #, kde-format
@@ -577,12 +581,10 @@ msgid "Could not play: %1"
 msgstr "Nu s-a putut reda: %1"
 
 #: src/mpv/mpvitem.cpp:487 src/mpv/mpvitem.cpp:489
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Subtitre: %1 %2"
+msgstr "Timpul subtitlului: %1 secunde"
 
 #: src/mpv/mpvitem.cpp:521
 #, kde-format
@@ -622,6 +624,8 @@ msgid ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 msgstr ""
+"Nu a fost depistată nicio pistă video, cel mai probabil pista video nu poate "
+"fi decodată sau redată din cauza lipsei codecurilor"
 
 #: src/mpv/mpvitem.cpp:663
 #, kde-format
@@ -1484,7 +1488,7 @@ msgstr "Audio"
 #: src/qml/HProgressBar.qml:289
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
-msgstr ""
+msgstr "Sari peste capitole"
 
 #: src/qml/HProgressBar.qml:297
 msgctxt "@info:tooltip"
@@ -1492,6 +1496,8 @@ msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
 "Check “Playback” settings for more details."
 msgstr ""
+"Sare automat peste capitole ce conțin anumite cuvinte/caractere.\n"
+"Verificați configurările de redare pentru detalii suplimentare."
 
 #: src/qml/Main.qml:32
 msgctxt "@title:window"
@@ -1756,7 +1762,7 @@ msgstr ""
 #: src/qml/Settings/AudioSettings.qml:160
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
-msgstr ""
+msgstr "Preamplificare (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
@@ -1764,17 +1770,14 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:239
 #: src/qml/Settings/SubtitlesSettings.qml:294
 #: src/qml/Settings/SubtitlesSettings.qml:369
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "Stabilește valoarea implicită"
+msgstr "Reinițializează la valoarea implicită"
 
 #: src/qml/Settings/AudioSettings.qml:193
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
-msgstr ""
+msgstr "De rezervă (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:218
 msgctxt "@info:tooltip"
@@ -1788,12 +1791,12 @@ msgstr ""
 #: src/qml/Settings/CustomCommandsSettings.qml:41
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
-msgstr ""
+msgstr "Încă nu sunt comenzi personalizate"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:43
 msgctxt "@action:button"
 msgid "&Add Command"
-msgstr ""
+msgstr "&Adaugă comandă"
 
 #: src/qml/Settings/CustomCommandsSettings.qml:94
 msgctxt "@info:tooltip"
@@ -1906,6 +1909,8 @@ msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
 "saving."
 msgstr ""
+"Comanda va fi declanșată cu o scurtătură. Scurtătura poate fi stabilită după "
+"salvare."
 
 #: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
@@ -1915,7 +1920,7 @@ msgstr "Rulează la pornire"
 #: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
-msgstr ""
+msgstr "Comanda va fi rulată la lansarea aplicației."
 
 #: src/qml/Settings/EditCustomCommand.qml:144
 msgctxt "@action:intoolbar"
@@ -1933,17 +1938,14 @@ msgid "&Save"
 msgstr "&Salvează"
 
 #: src/qml/Settings/GeneralSettings.qml:26
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Font size"
 msgctxt "@label:spinbox"
 msgid "OSD font size"
-msgstr "Dimensiune font"
+msgstr "Dimensiune font OSD"
 
 #: src/qml/Settings/GeneralSettings.qml:44
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
-msgstr ""
+msgstr "Maxim de fișiere recente"
 
 #: src/qml/Settings/GeneralSettings.qml:62
 msgctxt "@action:button clear (delete from database) recent files"
@@ -1953,7 +1955,7 @@ msgstr "Șterge"
 #: src/qml/Settings/GeneralSettings.qml:66
 msgctxt "@info:tooltip"
 msgid "Deletes recent files from the database"
-msgstr ""
+msgstr "Șterge fișierele recente din baza de date"
 
 #: src/qml/Settings/GeneralSettings.qml:71
 msgctxt "@info:tooltip"
@@ -1963,11 +1965,15 @@ msgid ""
 "url actions and from external apps (command line, file manager, drag and "
 "drop etc.)."
 msgstr ""
+"Numărul de fișiere recente de afișat. Introduceți zero (0) pentru a "
+"dezactiva.<br>Fiecare fișier deschis e stocat.<br>Înregistrările aldine sunt "
+"fișiere deschise din acțiunile de deschidere fișier/URL și din aplicații "
+"externe (linie de comandă, gestionar de fișiere, tragere-și-lăsare, etc.)."
 
 #: src/qml/Settings/GeneralSettings.qml:84
 msgctxt "@option:check"
 msgid "Allow only one instance"
-msgstr ""
+msgstr "Permite o singură instanță"
 
 #: src/qml/Settings/GeneralSettings.qml:93
 msgctxt "@info:tooltip"
@@ -1975,16 +1981,19 @@ msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
+"Încercarea de a deschide o instanță Haruna suplimentară nu va face nimic."
+"<br>Încercarea de a deschide alt fișier cu Haruna va deschide fișierul în "
+"instanța de rulează."
 
 #: src/qml/Settings/GeneralSettings.qml:104
 msgctxt "@option:check"
 msgid "Add file to playlist"
-msgstr ""
+msgstr "Adaugă fișierul la lista de redare"
 
 #: src/qml/Settings/GeneralSettings.qml:114
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
-msgstr ""
+msgstr "Fișierul va fi adăugat la sfârșitul listei de redare."
 
 #: src/qml/Settings/GeneralSettings.qml:123
 msgctxt "@option:check"
@@ -2022,12 +2031,12 @@ msgstr ""
 #: src/qml/Settings/GeneralSettings.qml:187
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
-msgstr ""
+msgstr "Fiecare mișcare a șoricelului"
 
 #: src/qml/Settings/GeneralSettings.qml:193
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
-msgstr ""
+msgstr "Mișcarea șoricelului pe jos"
 
 #: src/qml/Settings/GeneralSettings.qml:208
 msgctxt "@info:tooltip"
@@ -2036,36 +2045,41 @@ msgid ""
 "every mouse movement over the video area<br><strong>Bottom mouse movement</"
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
+"Ce acțiune arată subsolul.<br><strong>Fiecare mișcare a șoricelului</strong> "
+"— fiecare mișcare a șoricelului peste zona cu imagine<br><strong>Mișcarea "
+"șoricelului pe jos</strong> — mișcarea șoricelului peste partea de jos a "
+"zonei cu imagine"
 
 #: src/qml/Settings/GeneralSettings.qml:216
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
-msgstr ""
+msgstr "Miniatura de previzualizare"
 
 #: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
-msgstr ""
+msgstr "Arată miniatura de previzualizare"
 
 #: src/qml/Settings/GeneralSettings.qml:228
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
+"Arată o previzualizare în timpul planării peste bara de derulare/progres."
 
 #: src/qml/Settings/GeneralSettings.qml:237
 msgctxt "@option:check"
 msgid "Use accurate preview"
-msgstr ""
+msgstr "Folosește previzualizare exactă"
 
 #: src/qml/Settings/GeneralSettings.qml:247
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
-msgstr ""
+msgstr "Generarea unei previzualizări exacte este lentă"
 
 #: src/qml/Settings/GeneralSettings.qml:255
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
-msgstr ""
+msgstr "Lățimea miniaturii"
 
 #: src/qml/Settings/GeneralSettings.qml:273
 msgctxt "@label"
@@ -2075,12 +2089,12 @@ msgstr "Fereastră"
 #: src/qml/Settings/GeneralSettings.qml:279
 msgctxt "@option:check"
 msgid "Resize to fit video"
-msgstr ""
+msgstr "Redimensionează pentru potrivirea imaginii"
 
 #: src/qml/Settings/GeneralSettings.qml:290
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
-msgstr ""
+msgstr "Nu este susținut pe Wayland."
 
 #: src/qml/Settings/GeneralSettings.qml:291
 msgctxt "@info:tooltip"
@@ -2088,11 +2102,13 @@ msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
+"Fereastra e redimensionată conform rezoluției imaginii.<br>Dimensiunea "
+"maximă nu e limitată, acest lucru e lăsat la discreția sistemului de operare."
 
 #: src/qml/Settings/GeneralSettings.qml:301
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
-msgstr ""
+msgstr "Pornește în regim de ecran complet"
 
 #: src/qml/Settings/GeneralSettings.qml:310
 msgctxt "@info:tooltip"
@@ -2100,18 +2116,21 @@ msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
+"Intră în regimul de ecran complet la pornirea aplicației.<br>Aceasta are "
+"prioritate în raport cu opțiunile „Redimensionează pentru potrivirea "
+"imaginii” și „Reține dimensiunea și poziția ferestrei”."
 
 #: src/qml/Settings/GeneralSettings.qml:321
 msgctxt "@option:check"
 msgid "Remember window size and position"
-msgstr ""
+msgstr "Reține dimensiunea și poziția ferestrei"
 
 #: src/qml/Settings/GeneralSettings.qml:334
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
-msgstr ""
+msgstr "<b>Restabilirea poziției nu e susținută pe Wayland.</b><br><br>"
 
 #: src/qml/Settings/GeneralSettings.qml:336
 msgctxt "@info:tooltip"
@@ -2119,6 +2138,9 @@ msgid ""
 "Changes to the window’s size and position are saved and used for newly "
 "opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
+"Modificările dimensiunii și poziției ferestrei sun salvate și folosite "
+"pentru ferestrele nou deschise.<br><br>%1 Opțiunea „Redimensionează pentru "
+"potrivirea imaginii” are prioritate."
 
 #: src/qml/Settings/GeneralSettings.qml:348
 msgctxt "@option:check"
@@ -2134,7 +2156,7 @@ msgstr "Arată bara de unelte"
 #: src/qml/Settings/GeneralSettings.qml:370
 msgctxt "@option:check"
 msgid "Show chapter markers"
-msgstr ""
+msgstr "Arată semnele pentru capitole"
 
 #: src/qml/Settings/GeneralSettings.qml:379
 msgctxt "@label:listbox"
@@ -2616,7 +2638,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:247
 msgctxt "@option:check"
 msgid "Remember last playlist state"
-msgstr ""
+msgstr "Reține ultima stare a listei de redare"
 
 #: src/qml/Settings/PlaylistSettings.qml:254
 msgctxt "@info:tooltip"
@@ -2624,6 +2646,8 @@ msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
 "launches"
 msgstr ""
+"Când e bifat, starea listei de redare (vizibilă/ascunsă) e reținută între "
+"lansări"
 
 #: src/qml/Settings/PlaylistSettings.qml:262
 msgctxt "@option:check"
