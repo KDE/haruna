@@ -828,6 +828,7 @@
           <li xml:lang="pt-BR">Corrigido o problema em que a ação anterior não retornava do primeiro item da lista de reprodução para o último item</li>
           <li xml:lang="sl">Popravljeno prejšnje dejanje predvajanja, ki se ne preliva od prvega elementa na seznamu predvajanja do zadnjega elementa</li>
           <li xml:lang="tr">Fixed play previous action not wrapping from first item in playlist to the last item</li>
+          <li xml:lang="uk">Виправлено помилку дії відтворення попередньої композиції, яка не переносилася з першого елемента у списку відтворення на останній.</li>
           <li xml:lang="zh-CN">修复播放上一个操作不能从播放列表中的第一项循环切换到最后一项</li>
           <li>Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
           <li xml:lang="ar">إصلاح عدم القدرة على إضافة لسان قائمة تشغيل جديد عند عدم تثبيت yt-dlp</li>
@@ -840,6 +841,7 @@
           <li xml:lang="pt-BR">Corrigido o problema que impedia a adição de uma nova aba de lista de reprodução quando o yt-dlp não estava instalado</li>
           <li xml:lang="sl">Odpravljeno je bilo, da ni bilo mogoče dodati novega zavihka seznama predvajanja, ko yt-dlp ni nameščen</li>
           <li xml:lang="tr">Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
+          <li xml:lang="uk">Виправлено помилку, пов'язану із тим, що не можна було додати новий список відтворення, якщо не встановлено yt-dlp</li>
           <li xml:lang="zh-CN">修复在 yt-dlp 没有安装时无法添加新播放列表标签页的问题</li>
           <li>Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
           <li xml:lang="ar">إضافة حل مؤقت لحوارات الملفات التي لا تستقبل أحداث المفاتيح؛ حيث لم يكن مفتاح الهروب والأسهم يعملان</li>
@@ -852,6 +854,7 @@
           <li xml:lang="pt-BR">Adicionada uma solução alternativa para o problema de diálogos de arquivos que não recebiam eventos de teclado; as teclas Esc e de seta não estavam funcionando</li>
           <li xml:lang="sl">Dodana rešitev za pogovorna okna datotek, ki ne prejemajo ključnih dogodkov; escape in puščična tipka nista delovali</li>
           <li xml:lang="tr">Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
+          <li xml:lang="uk">Додано тимчасове рішення для проблеми із неможливістю отримання подій клавіатури у діалогових вікнах для роботи з файлами — не працювали клавіші escape та клавіші зі стрілками</li>
           <li xml:lang="zh-CN">新增针对文件对话框接受不到按键事件导致 ESC 键和方向键不起作用的优化</li>
         </ul>
       </description>
@@ -2941,6 +2944,7 @@
           <li xml:lang="ca-valencia">S'ha corregit l'addició d'elements a la llista de reproducció</li>
           <li xml:lang="fr">Correction de l'ajout d'éléments à la liste de lecture</li>
           <li xml:lang="he">תוקנה בעיה בהוספת פריטים לרשימת נגינה</li>
+          <li xml:lang="it">Corretta l'aggiunta di elementi alla scaletta</li>
           <li xml:lang="ka">გასწორდა დასაკრავ სიაში ელემენტების ჩამატების პრობლემა</li>
           <li xml:lang="lv">Labota vienumu pievienošana repertuāram</li>
           <li xml:lang="pt-BR">Corrigido o problema ao adicionar itens à lista de reprodução</li>
@@ -2953,6 +2957,7 @@
           <li xml:lang="ca-valencia">S'han corregit els valors incorrectes que es mostraven a OSD</li>
           <li xml:lang="fr">Correction des valeurs incorrectes affichées dans l'incrustation vidéo OSD</li>
           <li xml:lang="he">תוקנה בעיה שערכים שגויים הופיעו בחיווי על המסך (OSD)</li>
+          <li xml:lang="it">Corretti valori sbagliati che venivano mostrati nell'OSD</li>
           <li xml:lang="ka">გასწორდა osd-ზე არასწორი მნიშვნელობების პრობლემა</li>
           <li xml:lang="lv">Labota nepareizu vērtību parādīšana virsekrāna paziņojumā</li>
           <li xml:lang="pt-BR">Corrigido o problema que exibia valores incorretos no OSD</li>
@@ -2964,6 +2969,7 @@
           <li xml:lang="ca">S'ha corregit la configuració de la mida de la lletra dels subtítols que no es carregava des de la configuració</li>
           <li xml:lang="ca-valencia">S'ha corregit la configuració de la mida de la lletra dels subtítols que no es carregava des de la configuració</li>
           <li xml:lang="fr">Correction d'un paramètre pour la taille de fonte des sous-titres ne se chargeant pas depuis la configuration</li>
+          <li xml:lang="it">Corretta impostazioni dimensione caratteri sottotitoli che non veniva caricata dalla configurazione</li>
           <li xml:lang="ka">გასწორდა პრობლემა სუბტიტრების ფონტის ზომის კონფიგურაციიდან წაკითხვასთან</li>
           <li xml:lang="lv">Labota subtitru fonta izmēra neielādēšana no konfigurācijas</li>
           <li xml:lang="pt-BR">Corrigido o problema em que a configuração do tamanho da fonte das legendas não estava sendo carregada a partir da configuração</li>
@@ -2975,6 +2981,7 @@
           <li xml:lang="ca">S'ha corregit el canvi de mida de la barra de progrés quan no s'utilitzava una lletra monoespaiada/amplada fixa</li>
           <li xml:lang="ca-valencia">S'ha corregit el canvi de mida de la barra de progrés quan no s'utilitzava una lletra monoespaiada/amplària fixa</li>
           <li xml:lang="fr">Correction de la barre de progression ne modifiant pas sa taille en dehors de l'utilisation d'une fonte à chasse fixe</li>
+          <li xml:lang="it">Corretta dimensione modifica barra avanzamento quando non si utilizza carattere a larghezza fissa/monospace</li>
           <li xml:lang="ka">გასწორდა მიმდინარეობის ზოლის ზომის ცვლილება, როდესაც არ გამოიყენება თანაბარზომიანი/ერთსიგანიანი ფონტი</li>
           <li xml:lang="lv">Labota progresa joslas izmēra maiņa, neizmantojot vienplatuma/fiskēta platuma fontu</li>
           <li xml:lang="pt-BR">Corrigido a alteração do tamanho da barra de progresso quando não se usa uma fonte monoespaçada/de largura fixa</li>
@@ -2986,6 +2993,7 @@
           <li xml:lang="ca">S'ha corregit la barra d'eines de peu de pàgina/baix que no s'oculta quan es mou al monitor de sota, mentre que el Haruna estava a pantalla completa</li>
           <li xml:lang="ca-valencia">S'ha corregit la barra d'eines de peu de pàgina/baix que no s'oculta quan es mou cap al monitor de davall, mentre que el Haruna estava a pantalla completa</li>
           <li xml:lang="fr">Correction du pied de page / barre inférieure d'outils fixe ne se masquant pas lors du passage sur l'écran inférieur bien que Haruna soit en plein écran</li>
+          <li xml:lang="it">Corretta barra degli strumenti inferiore/piè di pagina che non viene nascosta quando si sposta al monitor sotto, mentre Haruna è a schermo intero</li>
           <li xml:lang="ka">გასწორდა ქვედა პანელის დამალვის პრობლემა ქვედა ეკრანზე გადასვლისას, როდესაც Haruna სრულ ეკრანზეა</li>
           <li xml:lang="lv">Labota apakšējās/augšējās rīkjoslas nepaslēpšanās, pārvietojoties uz zemāk esošu monitoru, „Haruna“ atrodoties pilnekrāna režīmā</li>
           <li xml:lang="pt-BR">Corrigido o problema em que a barra de ferramentas inferior/rodapé não ocultava ao passar para o monitor de baixo enquanto o Haruna estava em tela cheia</li>
@@ -3020,6 +3028,7 @@
           <li xml:lang="ca-valencia">S'ha corregit que l'acció d'eixida no funcionava</li>
           <li xml:lang="fr">Correction du fonctionnement défaillant de l'action « Quitter »</li>
           <li xml:lang="he">תוקנה בעיה שפעולת היציאה לא עובדת</li>
+          <li xml:lang="it">Corretta azione uscita non funzionante</li>
           <li xml:lang="ka">გასწორდა სწრაფი ქმედების არმუშაობა</li>
           <li xml:lang="lv">Labota iziešanas darbības nestrādāšana</li>
           <li xml:lang="pt-BR">Corrigida a ação de sair que não estava funcionando</li>
@@ -3045,6 +3054,7 @@
           <li xml:lang="ca">S'ha corregit la repetició de la llista de reproducció quan s'havia desactivat l'opció de repetició</li>
           <li xml:lang="ca-valencia">S'ha corregit la repetició de la llista de reproducció quan s'havia desmmarcat l'opció de repetició</li>
           <li xml:lang="fr">Correction de la répétition de la liste de lecture lorsque l'option de répétition était désactivée</li>
+          <li xml:lang="it">Corretta scaletta che che si ripete quando l'impostazione di ripetizione è disattiva</li>
           <li xml:lang="ka">გასწორდა დასაკრავი სიის გამეორება, როდესაც გამეორების პარამეტრი გამორთული იყო</li>
           <li xml:lang="lv">Labota repertuāra atkārtošanās, kad repertuāra atkārtošanās iestatījumos ir izslēgta</li>
           <li xml:lang="pt-BR">Corrigido o problema de repetição da lista de reprodução quando a configuração de repetição estava desativada</li>
@@ -3061,6 +3071,7 @@
         <p xml:lang="ca">S'ha reestructurat el codi del mpv per a millorar-ne el rendiment, encara hi pot haver alguns errors, informeu-ho a bugs.kde.org</p>
         <p xml:lang="ca-valencia">S'ha reestructurat el codi de mpv per a millorar-ne el rendiment, encara hi pot haver alguns errors, informeu-ho a bugs.kde.org</p>
         <p xml:lang="fr">Le code de « mpv » a été refondu pour améliorer les performances. Il pourrait encore y avoir quelques bogues. Veuillez signaler tout problème sur le site « bugs.kde.org »</p>
+        <p xml:lang="it">Codice mpv rivisto per migliorare le prestazioni, sono presenti ancora alcuni bug, segnalali a bugs.kde.org</p>
         <p xml:lang="ka">მოხდა mpv-ის კოდის გადაწერა წარმადობის გასაუმჯობესებლად. გარკვეული ხარვეზები, შეიძლება, ჯერ კიდევ არსებობდეს. შეგვატყობინეთ მათ შესახებ bugs.kde.org-ზე</p>
         <p xml:lang="lv">„mpv“ kods ir pārstruturēts, lai uzlabotu veiktspēju. Tajā joprojām var būt kļūdas, par kurām lūdzam ziņot „bugs.kde.org“</p>
         <p xml:lang="pt-BR">O código do mpv foi refatorado para melhorar o desempenho, mas ainda podem existir alguns erros. Por favor, reporte qualquer um deles em bugs.kde.org</p>
@@ -3091,6 +3102,7 @@
           <li xml:lang="ca">Quan es restaura des de l'estat minimitzat, l'estat de reproducció s'estableix al que era quan va passar la minimització (només s'aplica si l'opció «En minimitzar fes pausa» està activada)</li>
           <li xml:lang="ca-valencia">Quan es restaura des de l'estat minimitzat, l'estat de reproducció s'establix al que era quan va passar la minimització (només s'aplica si l'opció «En minimitzar fes pausa» està activada)</li>
           <li xml:lang="fr">Lors de la restauration depuis l'état minimisé, l'état de lecture est rétabli à celui qu'il avait lors de la minimisation (Cela ne s'applique que si l'option « Mettre en pause lors de la minimisation » est activée)</li>
+          <li xml:lang="it">Durante il ripristino dallo stato minimizzato lo stato della riproduzione è impostato a quello in riproduzione quando si è minimizzato (si applica solo se è attiva l'opzione «Pausa se minimizzi»)</li>
           <li xml:lang="ka">ჩაკეცილი მდგომარეობიდან აღდგენისას დაკვრის სტატუსი უბრუნდება იმ ნიშნულს, რომელიც იყო ჩაკეცვის მომენტში (მოქმედებს, მხოლოდ მაშინ, თუ ჩართულია პარამეტრი 'დაპაუზება ჩაკეცვისას')</li>
           <li xml:lang="lv">Atjaunojot programmu no minimizēta stāvokļa, atskaņošanas stāvoklis ir iestatīts tāds, kāds tas bija pirms minimizēšanas (piemērojams tikai tad, ja ir ieslēgts iestatījumu „Pauzēt minimizējot“)</li>
           <li xml:lang="pt-BR">Ao restaurar a reprodução a partir do estado minimizado, o estado de reprodução é definido como estava no momento da minimização (aplica-se somente se a configuração "Pausar ao minimizar" estiver ativada)</li>
@@ -3102,6 +3114,7 @@
           <li xml:lang="ca">S'ha afegit la pàgina de configuració de depuració, es mostren els camins als fitxers de configuració i es permet obrir-los</li>
           <li xml:lang="ca-valencia">S'ha afegit la pàgina de configuració de depuració, es mostren els camins cap als fitxers de configuració i es permet obrir-los</li>
           <li xml:lang="fr">Ajout de la page des paramètres de débogage. Celle-ci affiche les emplacements des fichiers de configuration et permet de leurs ouvertures</li>
+          <li xml:lang="it">Aggiunta pagina impostazioni Debug, che mostra i percorsi ai file di configurazione e ne consente l'apertura</li>
           <li xml:lang="ka">დაემატა გამართვის მორგების გვერდი. აჩვენებს ბილიკებს კონფიგურაციის ფაილებამდე და საშუალებას გაძლევთ, გახსნათ ისინი</li>
           <li xml:lang="lv">Pievienota atkļūdošanas iestatījumu lapa, kurā redzami ceļi uz konfigurācijas datnēm un no kuras tās iespējams atvērt</li>
           <li xml:lang="pt-BR">Adicionada página de configurações de depuração, que exibe os caminhos para os arquivos de configuração e permite abri-los</li>
@@ -3131,6 +3144,7 @@
           <li xml:lang="ca">S'ha corregit no poder obrir fitxers el camí dels quals conté alguns caràcters determinats</li>
           <li xml:lang="ca-valencia">S'ha corregit no poder obrir fitxers el camí dels quals conté alguns caràcters determinats</li>
           <li xml:lang="fr">Correction de l'impossibilité d'ouvrir des fichiers dont l'emplacement contenait certains caractères</li>
+          <li xml:lang="it">Corretta apertura non possibile dei file il cui percorso contiene determinati caratteri</li>
           <li xml:lang="ka">გასწორდა იმ ფაილების გახსნის შეუძლებლობა, რომელთა ბილიკიც გარკვეულ სიმბოლოებს შეიცავდა</li>
           <li xml:lang="lv">Labota programmas nespēja atvērt datnes, kuru ceļš satur noteiktas rakstzīmes</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia a abertura de arquivos cujo caminho continha determinados caracteres</li>
@@ -3142,6 +3156,7 @@
           <li xml:lang="ca">S'ha corregit no poder obrir fitxers .ts i .rm</li>
           <li xml:lang="ca-valencia">S'ha corregit no poder obrir fitxers .ts i .rm</li>
           <li xml:lang="fr">Correction de l’impossibilité d’ouvrir les fichiers « .ts » et « .rm »</li>
+          <li xml:lang="it">Corretta apertura non possibile dei file .ts e .rm</li>
           <li xml:lang="ka">გასწორდა პრობლემა .ts და .rm ფაილების გახსნასთან</li>
           <li xml:lang="lv">Labota nespēja atvērt .ts un .rm datnes</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia a abertura de arquivos .ts e .rm</li>
@@ -3153,6 +3168,7 @@
           <li xml:lang="ca">S'han corregit alguns camps de text que no desaven el seu valor en determinades circumstàncies</li>
           <li xml:lang="ca-valencia">S'han corregit alguns camps de text que no guardaven el seu valor en determinades circumstàncies</li>
           <li xml:lang="fr">Correction de certains champs de texte qui n'enregistraient pas leurs valeurs dans certaines circonstances</li>
+          <li xml:lang="it">Corretti alcuni campi di testo che non salvavano i valori sotto determinate circostanze</li>
           <li xml:lang="ka">გასწორდა გარკვეულ პირობებში ზოგიერთი ტექსტური ველის მიერ მნიშვნელობის არშენახვის პრობლემა</li>
           <li xml:lang="lv">Laboti daži teksta lauki, kas noteiktos apstākļos nesaglabāja savas vērtības</li>
           <li xml:lang="pt-BR">Corrigido o problema em que alguns campos de texto não salvavam seus valores em determinadas circunstâncias</li>
@@ -3164,6 +3180,7 @@
           <li xml:lang="ca">S'ha corregit la configuració del format de les captures de pantalla que no funcionava</li>
           <li xml:lang="ca-valencia">S'ha corregit la configuració del format de les captures de pantalla que no funcionava</li>
           <li xml:lang="fr">Correction du paramètre de format de copie d'écran qui ne fonctionnait pas</li>
+          <li xml:lang="it">Corretta impostazione formato schermata non funzionante</li>
           <li xml:lang="ka">გასწორდა ეკრანის ანაბეჭდის ფორმატის პარამეტრის დაყენების პრობლემა</li>
           <li xml:lang="lv">Novērsta ekrānattēla formāta iestatījumu nestrādāšana</li>
           <li xml:lang="pt-BR">Corrigido o problema com a configuração de formato de captura de tela</li>
@@ -3175,6 +3192,7 @@
           <li xml:lang="ca">S'ha corregit el menú de fitxers recents que no es tancava</li>
           <li xml:lang="ca-valencia">S'ha corregit el menú de fitxers recents que no es tancava</li>
           <li xml:lang="fr">Correction du menu des fichiers récents qui ne se fermait pas</li>
+          <li xml:lang="it">Corretto menu file recenti che non si chiudeva</li>
           <li xml:lang="ka">გასწორდა პრობლემა უახლესი ფაილების მენიუს დახურვასთან</li>
           <li xml:lang="lv">Labota neseno datņu izvēlnes neaizvēršanās</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia o fechamento do menu de arquivos recentes</li>
