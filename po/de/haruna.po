@@ -1,13 +1,13 @@
 # SPDX-FileCopyrightText: 2021 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2021-2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022 Frank Steinmetzger <dev-kde@felsenfleischer.de>
-# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:43+0000\n"
-"PO-Revision-Date: 2026-02-07 13:59+0100\n"
+"PO-Revision-Date: 2026-03-18 20:25+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -222,7 +222,7 @@ msgstr "Wiedergabe/Pause"
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
-msgstr ""
+msgstr "Stopp"
 
 #: src/models/actionsmodel.cpp:200
 #, kde-format
@@ -816,7 +816,7 @@ msgstr "Im Browser öffnen"
 #: src/playlist/Playlist.qml:754
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
-msgstr ""
+msgstr "Im Vorschaubild-Generator öffnen"
 
 #: src/playlist/Playlist.qml:770
 msgctxt "@action:inmenu"
@@ -1486,6 +1486,9 @@ msgid ""
 "setting.\n"
 "Only relative folders are searched."
 msgstr ""
+"Untertitel werden rekursiv in den Ordnern gesucht, die in der Einstellung "
+"„%1“ festgelegt werden.\n"
+"Nur relative Ordner werden durchsucht."
 
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
@@ -1837,7 +1840,7 @@ msgstr "Einstellungsdatei"
 #: src/qml/Settings/DebugSettings.qml:38
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
-msgstr "Konfigurationsdatei für benutzerdefinierte Befehle"
+msgstr "Einstellungsdatei für benutzerdefinierte Befehle"
 
 #: src/qml/Settings/DebugSettings.qml:50
 msgctxt "@label:textbox"
@@ -1892,6 +1895,18 @@ msgid ""
 "strong>.<br><strong>cycle</strong>: cycle through the values of a property "
 "<strong>cycle aid up</strong>."
 msgstr ""
+"Welcher MPV-Befehl ausgeführt werden soll. Siehe <a href=\"https://mpv.io/"
+"manual/stable/#list-of-input-commands\">MPV-Befehle</a> für eine Auflistung "
+"aller verfügbaren Befehle.<br>Nicht alle Befehle funktionieren, da einige "
+"speziell für MPV gedacht sind.<br>Befehle, die Eigenschaften verändern, sind "
+"am nützlichsten (z. B. <strong>set</strong>, <strong>add</strong> oder "
+"<strong>cycle</strong>.<br><strong>set</strong>: Legt den Wert einer "
+"Eigenschaft fest, z. B. <strong>set volume-max 150</strong>.<br><strong>add</"
+"strong>: Erhöht/verringert den Wert einer Eigenschaft, z. B. erhöht "
+"<strong>add volume 15</strong> die Lautstärke um 15. Um den Wert zu "
+"verringern, verwenden Sie <strong>add volume -15</strong>.<br><strong>cycle</"
+"strong>: Wechselt durch die Werte einer Eigenschaft, z. B. <strong>cycle aid "
+"up</strong>."
 
 #: src/qml/Settings/EditCustomCommand.qml:75
 msgctxt "@label:textbox"
