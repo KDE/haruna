@@ -767,6 +767,20 @@ Page {
                     }
                 }
                 MenuItem {
+                    text: i18nc("@action:inmenu %1 is 'MediaInfo' (app name)", "Open in %1", "MediaInfo")
+                    visible: {
+                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        return SystemUtils.isMediaInfoInstalled()
+                             && SystemUtils.platformName() !== "windows"
+                             && contextMenuLoader.isLocal && contextMenuLoader.row != -1
+                    }
+                    onClicked: {
+                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const url = modelIndex.data(PlaylistModel.PathRole)
+                        SystemUtils.openMediaInfo(url)
+                    }
+                }
+                MenuItem {
                     text: i18nc("@action:inmenu", "Copy Name")
                     onClicked: root.m_mpv.visibleFilterProxyModel.copyFileName(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1

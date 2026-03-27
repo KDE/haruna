@@ -59,3 +59,38 @@ bool SystemUtils::openHana(QUrl url)
 
     return true;
 }
+
+bool SystemUtils::isMediaInfoInstalled()
+{
+    auto service1 = KService::serviceByDesktopName(u"net.mediaarea.MediaInfo"_s);
+    if (service1) {
+        return true;
+    }
+    auto service2 = KService::serviceByDesktopName(u"mediainfo-gui"_s);
+    if (service2) {
+        return true;
+    }
+
+    return false;
+}
+
+bool SystemUtils::openMediaInfo(QUrl url)
+{
+    auto service1 = KService::serviceByDesktopName(u"net.mediaarea.MediaInfo"_s);
+    if (service1) {
+        auto *job = new KIO::ApplicationLauncherJob(service1);
+        job->setUrls(QList<QUrl>() << url);
+        job->start();
+        return true;
+    }
+
+    auto service2 = KService::serviceByDesktopName(u"mediainfo-gui"_s);
+    if (service2) {
+        auto *job = new KIO::ApplicationLauncherJob(service2);
+        job->setUrls(QList<QUrl>() << url);
+        job->start();
+        return true;
+    }
+
+    return false;
+}
