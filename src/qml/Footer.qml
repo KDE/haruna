@@ -188,7 +188,7 @@ Item {
                 ToolButton {
                     icon.name: "overflow-menu"
                     focusPolicy: Qt.NoFocus
-                    visible: !progressBar.showChapterMarkers
+                    visible: !progressBar.showChapterMarkers && root.m_mpv.chaptersModel.rowCount > 0
 
                     onClicked: {
                         progressBar.openChapterPopup(this)
