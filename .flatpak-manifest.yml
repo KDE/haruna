@@ -11,18 +11,20 @@ tags:
   - nightly
 desktop-file-name-suffix: ' (Nightly)'
 finish-args:
-  - --device=dri
-  - --filesystem=home
-  - --filesystem=host:ro
-  - --own-name=org.mpris.MediaPlayer2.haruna
   - --share=ipc
   - --share=network
   - --socket=fallback-x11
-  - --socket=pulseaudio
   - --socket=wayland
-  - --system-talk-name=org.freedesktop.UDisks2
-  - --talk-name=org.freedesktop.FileManager1
+  - --socket=pulseaudio
+  - --device=dri
+  - --filesystem=host:ro
+  - --filesystem=home
+  - --filesystem=xdg-run/pipewire-0:ro
+  - --filesystem=xdg-data/Trash
   - --talk-name=org.freedesktop.ScreenSaver
+  - --talk-name=org.freedesktop.FileManager1
+  - --own-name=org.mpris.MediaPlayer2.haruna
+  - --system-talk-name=org.freedesktop.UDisks2
 cleanup:
   - '*.a'
   - '*.la'
@@ -30,6 +32,7 @@ cleanup:
   - /lib/cmake
   - /lib/pkgconfig
   - /share/man
+  - /mkspecs
 modules:
   - name: haruna
     buildsystem: cmake-ninja
@@ -44,6 +47,25 @@ modules:
       #     project-id: 267594
       #     url-template: https://download.kde.org/stable/haruna/$version/haruna-$version.tar.xz
     modules:
+      - name: KDSingleApplication
+        buildsystem: cmake-ninja
+        cleanup:
+          - /share/doc
+        builddir: true
+        config-opts:
+          - -DCMAKE_BUILD_TYPE=Release
+          - -DKDSingleApplication_QT6=ON
+          - -DKDSingleApplication_EXAMPLES=OFF
+        sources:
+          - type: archive
+            url: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v1.2.0.tar.gz
+            sha256: ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
+            x-checker-data:
+              type: anitya
+              project-id: 370439
+              stable-only: true
+              url-template: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v$version.tar.gz
+
       - name: mpvqt
         buildsystem: cmake-ninja
         sources:
@@ -55,26 +77,10 @@ modules:
               project-id: 370634
               url-template: https://download.kde.org/stable/mpvqt/mpvqt-$version.tar.xz
         modules:
-          - name: KDSingleApplication
-            buildsystem: cmake-ninja
-            builddir: true
-            config-opts:
-              - -DCMAKE_BUILD_TYPE=Release
-              - -DKDSingleApplication_QT6=ON
-              - -DKDSingleApplication_EXAMPLES=OFF
-            sources:
-              - type: archive
-                url: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v1.2.0.tar.gz
-                sha256: ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
-                x-checker-data:
-                  type: anitya
-                  project-id: 370439
-                  stable-only: true
-                  url-template: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v$version.tar.gz
-
           - name: libmpv
             cleanup:
               - /share/bash-completion
+              - /share/fish
               - /share/zsh
               - /share/doc
               - /share/icons
@@ -89,8 +95,8 @@ modules:
               - -Dmanpage-build=disabled
             sources:
               - type: archive
-                url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.40.0.tar.gz
-                sha256: 10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3
+                url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz
+                sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
                 x-checker-data:
                   type: anitya
                   project-id: 5348
@@ -107,8 +113,8 @@ modules:
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20251030
-                    commit: 71fae383f6c4637d64b03a6d0ec76ae8c19d6821
+                    tag: v2.1-20260311
+                    commit: 3640b6c590f9c383ffa5d0955f35e646f684a1da
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.-]+)$
@@ -119,42 +125,25 @@ modules:
               - name: libplacebo
                 buildsystem: meson
                 config-opts:
-                  - -Dd3d11=disabled
-                  - -Ddemos=False
+                  - -Ddemos=false
+                cleanup:
+                  - /include
+                  - /lib/pkgconfig
                 sources:
-                  - type: archive
-                    url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.351.0/libplacebo-v7.351.0.tar.gz
-                    sha256: 4efe1c8d4da3c61295eb5fdfa50e6037409d8425eb3c15dd86788679c4ce59ee
+                  - type: git
+                    url: https://github.com/haasn/libplacebo.git
+                    tag: v7.360.1
+                    commit: cee9b076f2c63104ccfd497fa79c39a867293ec4
                     x-checker-data:
-                      type: anitya
-                      project-id: 20101
-                      stable-only: true
-                      url-template: https://code.videolan.org/videolan/libplacebo/-/archive/v$version/libplacebo-v$version.tar.gz
-                  - type: patch
-                    path: libplacebo-vulkan-python-xml.patch
-                  - type: archive
-                    url: https://github.com/pallets/jinja/archive/refs/tags/3.1.6.tar.gz
-                    sha256: 2074b22a72caa65474902234b320d73463d6d4c223ee49f4b433495758356337
-                    dest: 3rdparty/jinja
-                    x-checker-data:
-                      type: anitya
-                      project-id: 3894
-                      url-template: https://github.com/pallets/jinja/archive/refs/tags/$version.tar.gz
-                  - type: archive
-                    url: https://github.com/Dav1dde/glad/archive/refs/tags/v2.0.8.tar.gz
-                    sha256: 44f06f9195427c7017f5028d0894f57eb216b0a8f7c4eda7ce883732aeb2d0fc
-                    dest: 3rdparty/glad
-                    x-checker-data:
-                      type: anitya
-                      project-id: 300234
-                      url-template: https://github.com/Dav1dde/glad/archive/refs/tags/v$version.tar.gz
+                      type: git
+                      tag-pattern: ^v([\d.]+)$
 
               - name: libXpresent
                 buildsystem: autotools
                 sources:
                   - type: archive
-                    url: https://xorg.freedesktop.org/archive/individual/lib/libXpresent-1.0.1.tar.xz
-                    sha256: b964df9e5a066daa5e08d2dc82692c57ca27d00b8cc257e8e960c9f1cf26231b
+                    url: https://xorg.freedesktop.org/archive/individual/lib/libXpresent-1.0.2.tar.xz
+                    sha256: 4e5b21b4812206a4b223013606ae31170502c1043038777a1ef8f70c09d37602
                     x-checker-data:
                       type: anitya
                       project-id: 17166
@@ -202,8 +191,8 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.11.12.tar.gz
-            sha256: 6f5f2d716968d6c84d05d179fc1ce50ccca23706b9dbbc3c57fec97a8b9ea440
+            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2026.03.17.tar.gz
+            sha256: 924483986441d8a1e669a0e4371d753a9256ce4bdc06032394ccb7b793342434
             x-checker-data:
               type: anitya
               project-id: 143399
