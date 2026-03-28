@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:43+0000\n"
+"POT-Creation-Date: 2026-03-28 00:43+0000\n"
 "PO-Revision-Date: 2026-03-08 15:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -578,50 +578,50 @@ msgstr ""
 "Audioa eta bideoa grabatzeko, bihurtzeko eta transmisiorako plataforma "
 "anitzeko soluzioa"
 
-#: src/mpv/mpvitem.cpp:380
+#: src/mpv/mpvitem.cpp:381
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ezin izan du jo: %1"
 
-#: src/mpv/mpvitem.cpp:487 src/mpv/mpvitem.cpp:489
+#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Azpidatzien denbora: %1"
 
-#: src/mpv/mpvitem.cpp:521
+#: src/mpv/mpvitem.cpp:522
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Fitxategia ez da existitzen: %1"
 
-#: src/mpv/mpvitem.cpp:558
+#: src/mpv/mpvitem.cpp:559
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: src/mpv/mpvitem.cpp:596
+#: src/mpv/mpvitem.cpp:597
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Pantaila-argazkiak huts egin du"
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Pantaila-argazkia atera du"
 
-#: src/mpv/mpvitem.cpp:603
+#: src/mpv/mpvitem.cpp:604
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Pantaila-argazkia: %1"
 
-#: src/mpv/mpvitem.cpp:630
+#: src/mpv/mpvitem.cpp:631
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -631,7 +631,7 @@ msgstr ""
 "Ez da bideo-pistarik hauteman, ziurrenik bideo-pista ezin da, falta diren "
 "kodeken ondorioz deskodetu/jo"
 
-#: src/mpv/mpvitem.cpp:663
+#: src/mpv/mpvitem.cpp:664
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -772,7 +772,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Gehitu jotze-zerrenda berria"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:813
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:827
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Berrizendatu"
@@ -817,61 +817,69 @@ msgid "Open in Thumbnail Generator"
 msgstr "Ireki koadro-txiki sortzailean"
 
 #: src/playlist/Playlist.qml:770
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open in Browser"
+msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
+msgid "Open in %1"
+msgstr "Ireki arakatzailean"
+
+#: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopiatu izena"
 
-#: src/playlist/Playlist.qml:776
+#: src/playlist/Playlist.qml:790
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopiatu bide-izena"
 
-#: src/playlist/Playlist.qml:777
+#: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopiatu URL"
 
-#: src/playlist/Playlist.qml:787
+#: src/playlist/Playlist.qml:801
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Hautatu dena"
 
-#: src/playlist/Playlist.qml:791
+#: src/playlist/Playlist.qml:805
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Desautatu dena"
 
-#: src/playlist/Playlist.qml:795
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Alderantzikatu hautapena"
 
-#: src/playlist/Playlist.qml:801
+#: src/playlist/Playlist.qml:815
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Kendu jotze-zerrendatik"
 
-#: src/playlist/Playlist.qml:807
+#: src/playlist/Playlist.qml:821
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Kendu hautatutakoak jotze-zerrendatik"
 
-#: src/playlist/Playlist.qml:819
+#: src/playlist/Playlist.qml:833
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Kiribildu jotzen ari den elementuraino"
 
-#: src/playlist/Playlist.qml:829
+#: src/playlist/Playlist.qml:843
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Mugitu fitxategia zakarrontzira"
 
-#: src/playlist/Playlist.qml:835
+#: src/playlist/Playlist.qml:849
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Eraman hautatutako fitxategiak zakarrontzira"
 
-#: src/playlist/Playlist.qml:941 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:955 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Hautatu fitxategia"

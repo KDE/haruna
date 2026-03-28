@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:43+0000\n"
+"POT-Creation-Date: 2026-03-28 00:43+0000\n"
 "PO-Revision-Date: 2025-10-12 14:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -573,50 +573,50 @@ msgstr "명령행 동영상 재생기"
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
-#: src/mpv/mpvitem.cpp:380
+#: src/mpv/mpvitem.cpp:381
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:487 src/mpv/mpvitem.cpp:489
+#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "자막 시간 조정: %1초"
 
-#: src/mpv/mpvitem.cpp:521
+#: src/mpv/mpvitem.cpp:522
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "파일이 없음: %1"
 
-#: src/mpv/mpvitem.cpp:558
+#: src/mpv/mpvitem.cpp:559
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:596
+#: src/mpv/mpvitem.cpp:597
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:601
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:603
+#: src/mpv/mpvitem.cpp:604
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:630
+#: src/mpv/mpvitem.cpp:631
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -626,7 +626,7 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:663
+#: src/mpv/mpvitem.cpp:664
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -798,7 +798,7 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "재생 목록에 파일 추가"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:813
+#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:827
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "이름 바꾸기"
@@ -846,61 +846,69 @@ msgid "Open in Thumbnail Generator"
 msgstr ""
 
 #: src/playlist/Playlist.qml:770
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Open in Browser"
+msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
+msgid "Open in %1"
+msgstr "브라우저로 열기"
+
+#: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "이름 복사"
 
-#: src/playlist/Playlist.qml:776
+#: src/playlist/Playlist.qml:790
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "경로 복사"
 
-#: src/playlist/Playlist.qml:777
+#: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL 복사"
 
-#: src/playlist/Playlist.qml:787
+#: src/playlist/Playlist.qml:801
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "모두 선택"
 
-#: src/playlist/Playlist.qml:791
+#: src/playlist/Playlist.qml:805
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "모두 선택 해제"
 
-#: src/playlist/Playlist.qml:795
+#: src/playlist/Playlist.qml:809
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "선택 반전"
 
-#: src/playlist/Playlist.qml:801
+#: src/playlist/Playlist.qml:815
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "재생 목록에서 삭제"
 
-#: src/playlist/Playlist.qml:807
+#: src/playlist/Playlist.qml:821
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "재생 목록에서 선택 항목 삭제"
 
-#: src/playlist/Playlist.qml:819
+#: src/playlist/Playlist.qml:833
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "현재 재생 중인 항목으로 스크롤"
 
-#: src/playlist/Playlist.qml:829
+#: src/playlist/Playlist.qml:843
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "파일을 휴지통으로 이동"
 
-#: src/playlist/Playlist.qml:835
+#: src/playlist/Playlist.qml:849
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "선택한 파일을 휴지통으로 이동"
 
-#: src/playlist/Playlist.qml:941 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:955 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
