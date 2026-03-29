@@ -178,8 +178,9 @@ void Application::setupCommandLineParser()
     m_parser->process(*m_app);
     m_aboutData.processCommandLine(m_parser.get());
 
-    for (auto i = 0; i < m_parser->positionalArguments().size(); ++i) {
-        addUrl(i, m_parser->positionalArguments().at(i));
+    const auto args = m_parser->positionalArguments();
+    for (const auto &arg : args) {
+        addUrl(arg);
     }
 }
 
@@ -188,18 +189,23 @@ QString Application::version()
     return QString::fromStdString(HARUNA_VERSION_STRING);
 }
 
-QUrl Application::url(int key)
+QList<QUrl> Application::urls()
 {
-    if (m_urls.contains(key)) {
-        return m_urls[key];
-    }
-
-    return {};
+    return m_urls;
 }
 
-void Application::addUrl(int key, const QString &value)
+QUrl Application::url(uint index)
 {
-    m_urls.insert(key, QUrl::fromUserInput(value, QDir::currentPath()));
+    if (m_urls.isEmpty() || index >= m_urls.size()) {
+        return {};
+    }
+
+    return m_urls.at(index);
+}
+
+void Application::addUrl(const QString &value)
+{
+    m_urls.append(QUrl::fromUserInput(value, QDir::currentPath()));
 }
 
 void Application::handleSecondayInstanceMessage(const QByteArray &message, const QString activationToken)

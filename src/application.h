@@ -51,8 +51,9 @@ public:
     bool actionsEnabled();
     void setActionsEnabled(bool enable);
 
-    Q_INVOKABLE QUrl url(int key);
-    Q_INVOKABLE void addUrl(int key, const QString &value);
+    Q_INVOKABLE QList<QUrl> urls();
+    Q_INVOKABLE QUrl url(uint index);
+    Q_INVOKABLE void addUrl(const QString &value);
     Q_INVOKABLE QStringList availableGuiStyles();
     Q_INVOKABLE void setGuiStyle(const QString &style);
     Q_INVOKABLE void activateColorScheme(const QString &name);
@@ -91,7 +92,7 @@ private:
     QApplication *m_app{nullptr};
     KAboutData m_aboutData;
     std::unique_ptr<QCommandLineParser> m_parser;
-    QMap<int, QUrl> m_urls;
+    QList<QUrl> m_urls;
     KColorSchemeManager *m_schemes{nullptr};
     QString m_systemDefaultStyle;
     QQmlApplicationEngine *m_qmlEngine{nullptr};
