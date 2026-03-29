@@ -340,10 +340,16 @@ void MpvItem::onReady()
 {
     setIsReady(true);
     auto proxyModel = m_playlists->defaultFilterProxy();
-    QUrl url{Application::instance()->url(0)};
-    if (!url.isEmpty() && url.isValid()) {
-        proxyModel->addItem(Application::instance()->url(0), PlaylistModel::Clear);
-        Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
+    const auto urls = Application::instance()->urls();
+    if (!urls.isEmpty()) {
+        const auto playlistAddMode = urls.size() == 1 ? PlaylistModel::Clear : PlaylistModel::Append;
+        for (const auto &url : urls) {
+            if (!url.isValid()) {
+                continue;
+            }
+            proxyModel->addItem(url, playlistAddMode);
+            Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
+        }
     } else {
         // set last session's active playlist as visible
         m_playlists->setVisibleIndex(m_playlists->m_activeIndex);
