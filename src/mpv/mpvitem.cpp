@@ -350,6 +350,9 @@ void MpvItem::onReady()
             proxyModel->addItem(url, playlistAddMode);
             Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::ExternalApp, url.fileName());
         }
+        if (urls.size() > 1) {
+            defaultFilterProxyModel()->setPlayingItem(0);
+        }
     } else {
         // set last session's active playlist as visible
         m_playlists->setVisibleIndex(m_playlists->m_activeIndex);
