@@ -42,8 +42,10 @@ RowLayout {
 
         property bool seekStarted: false
         property bool prePressPause: root.m_mpv.pause
+        property double mouseX: 0
 
         function updateTooltip() : string {
+            slider.mouseX = progressBarMouseArea.mouseX
             const time = progressBarMouseArea.mouseX / progressBarBG.width * slider.to
             previewMpvLoader.position = time
             progressBarToolTip.text = MiscUtils.formatTime(time)
@@ -83,23 +85,34 @@ RowLayout {
                 color: Kirigami.Theme.highlightColor
             }
 
-            ToolTip {
+            Rectangle {
                 id: progressBarToolTip
+
+                property string text
 
                 x: {
                     if (slider.pressed) {
-                        const xPos = (slider.value * 100 / slider.to) / 100 * slider.width
+                        const xPos = (slider.value / slider.to) * slider.width
+                        slider.mouseX = xPos
                         return xPos - (progressBarToolTip.width * 0.5)
                     }
 
-                    return progressBarMouseArea.mouseX - (progressBarToolTip.width * 0.5)
+                    return slider.mouseX - (progressBarToolTip.width * 0.5)
                 }
                 y: -height - Kirigami.Units.largeSpacing
                 z: 10
+                width: GeneralSettings.previewThumbnailWidth + (Kirigami.Units.smallSpacing * 2)
+                height: Math.ceil(width / previewMpvLoader.aspectRatio) + (Kirigami.Units.smallSpacing * 2) + 20
                 visible: progressBarMouseArea.containsMouse && root.m_mpv.duration > 0
-                timeout: -1
-                delay: 0
-                contentItem: ColumnLayout {
+
+                color: Kirigami.Theme.backgroundColor
+                radius: Kirigami.Units.cornerRadius
+                border.width: 1
+                border.color: Qt.darker(Kirigami.Theme.backgroundColor, 1.2)
+
+                ColumnLayout {
+                    anchors.centerIn: parent
+                    width: GeneralSettings.previewThumbnailWidth
 
                     Loader {
                         id: previewMpvLoader
@@ -123,7 +136,6 @@ RowLayout {
                         Layout.preferredWidth: GeneralSettings.previewThumbnailWidth
                         Layout.preferredHeight: Math.ceil(Layout.preferredWidth / previewMpvLoader.aspectRatio)
                         Layout.alignment: Qt.AlignCenter
-
                     }
 
                     Label {
@@ -132,7 +144,6 @@ RowLayout {
                         Layout.alignment: Qt.AlignCenter
                     }
                 }
-
             }
 
             MouseArea {

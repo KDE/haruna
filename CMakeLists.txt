@@ -92,9 +92,9 @@ configure_file(
 # -- KF6 dependencies
 #
 # -------------------------------
-find_package(MpvQt)
-set_package_properties(MpvQt PROPERTIES TYPE REQUIRED
-    URL "https://invent.kde.org/libraries/mpvqt")
+# find_package(MpvQt)
+# set_package_properties(MpvQt PROPERTIES TYPE REQUIRED
+#     URL "https://invent.kde.org/libraries/mpvqt")
 
 find_package(Breeze)
 set_package_properties(Breeze PROPERTIES TYPE RECOMMENDED
@@ -162,6 +162,13 @@ set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
     DESCRIPTION "needed to play videos from youtube and other online sources")
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+include(FetchContent)
+FetchContent_Declare(
+    MpvQt
+    GIT_REPOSITORY "https://invent.kde.org/libraries/mpvqt"
+    GIT_TAG "master")
+FetchContent_MakeAvailable(MpvQt)
 
 ki18n_install(po)
 
