@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:43+0000\n"
+"POT-Creation-Date: 2026-03-30 00:42+0000\n"
 "PO-Revision-Date: 2026-01-26 17:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -563,6 +563,94 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Yeniden Ata"
 
+#: src/models/mouseactionsmodel.cpp:261
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox left mouse button"
+#| msgid "Left"
+msgctxt "@label left mouse button"
+msgid "Left"
+msgstr "Sol"
+
+#: src/models/mouseactionsmodel.cpp:263
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox right mouse button"
+#| msgid "Right"
+msgctxt "@label right mouse button"
+msgid "Right"
+msgstr "Sağ"
+
+#: src/models/mouseactionsmodel.cpp:265
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox middle mouse button"
+#| msgid "Middle"
+msgctxt "@label middle mouse button"
+msgid "Middle"
+msgstr "Orta"
+
+#: src/models/mouseactionsmodel.cpp:267
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox forward mouse button"
+#| msgid "Forward"
+msgctxt "@label forward mouse button"
+msgid "Forward"
+msgstr "İleri"
+
+#: src/models/mouseactionsmodel.cpp:269
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox back mouse button"
+#| msgid "Back"
+msgctxt "@label back mouse button"
+msgid "Back"
+msgstr "Geri"
+
+#: src/models/mouseactionsmodel.cpp:271
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox mouse scroll up"
+#| msgid "Scroll up"
+msgctxt "@label mouse scroll up"
+msgid "ScrollUp"
+msgstr "Yukarı sar"
+
+#: src/models/mouseactionsmodel.cpp:273
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox mouse scroll down"
+#| msgid "Scroll down"
+msgctxt "@label mouse scroll down"
+msgid "ScrollDown"
+msgstr "Aşağı sar"
+
+#: src/models/mouseactionsmodel.cpp:321
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox control modifier key"
+#| msgid "Control"
+msgctxt "@label control modifier key"
+msgid "Control"
+msgstr "Kontrol"
+
+#: src/models/mouseactionsmodel.cpp:323
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox shift modifier key"
+#| msgid "Shift"
+msgctxt "@label shift modifier key"
+msgid "Shift"
+msgstr "Üst Karakter"
+
+#: src/models/mouseactionsmodel.cpp:325
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox alt modifier key"
+#| msgid "Alt"
+msgctxt "@label alt modifier key"
+msgid "Alt"
+msgstr "Seçenek"
+
+#: src/models/mouseactionsmodel.cpp:327
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox meta modifier key"
+#| msgid "Meta"
+msgctxt "@label meta modifier key"
+msgid "Meta"
+msgstr "Meta"
+
 #: src/mpv/mpvitem.cpp:84
 #, kde-format
 msgid "Command line video player"
@@ -575,50 +663,50 @@ msgstr ""
 "Ses ve video kaydetmek, dönüştürmek ve akışını sağlamak için bir çapraz "
 "platform çözüm"
 
-#: src/mpv/mpvitem.cpp:381
+#: src/mpv/mpvitem.cpp:390
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Oynatılamadı: %1"
 
-#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:497 src/mpv/mpvitem.cpp:499
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Altyazı zamanlaması: %1 saniye"
 
-#: src/mpv/mpvitem.cpp:522
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Dosya yok: %1"
 
-#: src/mpv/mpvitem.cpp:559
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Yok"
 
-#: src/mpv/mpvitem.cpp:597
+#: src/mpv/mpvitem.cpp:606
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekran görüntüsü alınamadı"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:611
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekran görüntüsü alındı"
 
-#: src/mpv/mpvitem.cpp:604
+#: src/mpv/mpvitem.cpp:613
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekran görüntüsü: %1"
 
-#: src/mpv/mpvitem.cpp:631
+#: src/mpv/mpvitem.cpp:640
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -628,7 +716,7 @@ msgstr ""
 "Algılanan video parçası yok; büyük olasılıkla parça eksik kod çözücüler "
 "nedeniyle oynatılamıyor."
 
-#: src/mpv/mpvitem.cpp:664
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1502,12 +1590,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Ses"
 
-#: src/qml/HProgressBar.qml:289
+#: src/qml/HProgressBar.qml:300
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Fasılları Atla"
 
-#: src/qml/HProgressBar.qml:297
+#: src/qml/HProgressBar.qml:308
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2207,123 +2295,128 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: src/qml/Settings/MouseSettings.qml:92
+#: src/qml/Settings/MouseSettings.qml:51
+msgctxt "@label represents a mouse double click, for example `Right x2`"
+msgid "x2"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "Eylemi Değiştir"
 
-#: src/qml/Settings/MouseSettings.qml:106
+#: src/qml/Settings/MouseSettings.qml:107
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Sil"
 
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:135
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Ekle"
 
-#: src/qml/Settings/MouseSettings.qml:169
+#: src/qml/Settings/MouseSettings.qml:170
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "Fare Düğmesi Eylemi Ekle"
 
-#: src/qml/Settings/MouseSettings.qml:182
+#: src/qml/Settings/MouseSettings.qml:183
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Fare düğmesi"
 
-#: src/qml/Settings/MouseSettings.qml:199
+#: src/qml/Settings/MouseSettings.qml:200
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Sol"
 
-#: src/qml/Settings/MouseSettings.qml:205
+#: src/qml/Settings/MouseSettings.qml:206
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Orta"
 
-#: src/qml/Settings/MouseSettings.qml:211
+#: src/qml/Settings/MouseSettings.qml:212
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Sağ"
 
-#: src/qml/Settings/MouseSettings.qml:217
+#: src/qml/Settings/MouseSettings.qml:218
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "İleri"
 
-#: src/qml/Settings/MouseSettings.qml:223
+#: src/qml/Settings/MouseSettings.qml:224
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Geri"
 
-#: src/qml/Settings/MouseSettings.qml:229
+#: src/qml/Settings/MouseSettings.qml:230
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Yukarı sar"
 
-#: src/qml/Settings/MouseSettings.qml:235
+#: src/qml/Settings/MouseSettings.qml:236
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Aşağı sar"
 
-#: src/qml/Settings/MouseSettings.qml:244
+#: src/qml/Settings/MouseSettings.qml:245
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "Niteleyici düğme"
 
-#: src/qml/Settings/MouseSettings.qml:262
+#: src/qml/Settings/MouseSettings.qml:263
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "Niteleyici yok"
 
-#: src/qml/Settings/MouseSettings.qml:268
+#: src/qml/Settings/MouseSettings.qml:269
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Kontrol"
 
-#: src/qml/Settings/MouseSettings.qml:274
+#: src/qml/Settings/MouseSettings.qml:275
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Üst Karakter"
 
-#: src/qml/Settings/MouseSettings.qml:280
+#: src/qml/Settings/MouseSettings.qml:281
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Seçenek"
 
-#: src/qml/Settings/MouseSettings.qml:286
+#: src/qml/Settings/MouseSettings.qml:287
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:298
+#: src/qml/Settings/MouseSettings.qml:299
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
 msgstr "Çift tıklamada tetikle"
 
-#: src/qml/Settings/MouseSettings.qml:308
+#: src/qml/Settings/MouseSettings.qml:309
 msgctxt "@label"
 msgid "Action"
 msgstr "Eylem"
 
-#: src/qml/Settings/MouseSettings.qml:316
+#: src/qml/Settings/MouseSettings.qml:317
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "Eylem Seç"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:333
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Eylemi Değiştir"
 
-#: src/qml/Settings/MouseSettings.qml:343
+#: src/qml/Settings/MouseSettings.qml:344
 msgctxt "@info"
 msgid "No action selected"
 msgstr "Seçili eylem yok"
 
-#: src/qml/Settings/MouseSettings.qml:366
+#: src/qml/Settings/MouseSettings.qml:367
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "Fare düğmesi kombinasyonu halihazırda “%1” ögesine atanmış"

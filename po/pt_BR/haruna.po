@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:43+0000\n"
+"POT-Creation-Date: 2026-03-30 00:42+0000\n"
 "PO-Revision-Date: 2026-03-28 07:31-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -568,6 +568,94 @@ msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reatribuir"
 
+#: src/models/mouseactionsmodel.cpp:261
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox left mouse button"
+#| msgid "Left"
+msgctxt "@label left mouse button"
+msgid "Left"
+msgstr "Esquerdo"
+
+#: src/models/mouseactionsmodel.cpp:263
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox right mouse button"
+#| msgid "Right"
+msgctxt "@label right mouse button"
+msgid "Right"
+msgstr "Direito"
+
+#: src/models/mouseactionsmodel.cpp:265
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox middle mouse button"
+#| msgid "Middle"
+msgctxt "@label middle mouse button"
+msgid "Middle"
+msgstr "Meio"
+
+#: src/models/mouseactionsmodel.cpp:267
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox forward mouse button"
+#| msgid "Forward"
+msgctxt "@label forward mouse button"
+msgid "Forward"
+msgstr "Avançar"
+
+#: src/models/mouseactionsmodel.cpp:269
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox back mouse button"
+#| msgid "Back"
+msgctxt "@label back mouse button"
+msgid "Back"
+msgstr "Voltar"
+
+#: src/models/mouseactionsmodel.cpp:271
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox mouse scroll up"
+#| msgid "Scroll up"
+msgctxt "@label mouse scroll up"
+msgid "ScrollUp"
+msgstr "Rolar para cima"
+
+#: src/models/mouseactionsmodel.cpp:273
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox mouse scroll down"
+#| msgid "Scroll down"
+msgctxt "@label mouse scroll down"
+msgid "ScrollDown"
+msgstr "Rolar para baixo"
+
+#: src/models/mouseactionsmodel.cpp:321
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox control modifier key"
+#| msgid "Control"
+msgctxt "@label control modifier key"
+msgid "Control"
+msgstr "Control"
+
+#: src/models/mouseactionsmodel.cpp:323
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox shift modifier key"
+#| msgid "Shift"
+msgctxt "@label shift modifier key"
+msgid "Shift"
+msgstr "Shift"
+
+#: src/models/mouseactionsmodel.cpp:325
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox alt modifier key"
+#| msgid "Alt"
+msgctxt "@label alt modifier key"
+msgid "Alt"
+msgstr "Alt"
+
+#: src/models/mouseactionsmodel.cpp:327
+#, fuzzy, kde-format
+#| msgctxt "@item:listbox meta modifier key"
+#| msgid "Meta"
+msgctxt "@label meta modifier key"
+msgid "Meta"
+msgstr "Meta"
+
 #: src/mpv/mpvitem.cpp:84
 #, kde-format
 msgid "Command line video player"
@@ -579,50 +667,50 @@ msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Solução multiplataforma para gravar, converter e transmitir áudio e vídeo"
 
-#: src/mpv/mpvitem.cpp:381
+#: src/mpv/mpvitem.cpp:390
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Não foi possível reproduzir: %1"
 
-#: src/mpv/mpvitem.cpp:488 src/mpv/mpvitem.cpp:490
+#: src/mpv/mpvitem.cpp:497 src/mpv/mpvitem.cpp:499
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Ritmo da legenda: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:522
+#: src/mpv/mpvitem.cpp:531
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "O arquivo não existe: %1"
 
-#: src/mpv/mpvitem.cpp:559
+#: src/mpv/mpvitem.cpp:568
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nenhuma"
 
-#: src/mpv/mpvitem.cpp:597
+#: src/mpv/mpvitem.cpp:606
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Falha na captura de tela"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:611
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Captura de tela efetuada"
 
-#: src/mpv/mpvitem.cpp:604
+#: src/mpv/mpvitem.cpp:613
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de tela: %1"
 
-#: src/mpv/mpvitem.cpp:631
+#: src/mpv/mpvitem.cpp:640
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -632,7 +720,7 @@ msgstr ""
 "Nenhuma faixa de vídeo detectada, provavelmente a faixa de vídeo não pode "
 "ser decodificada/reproduzida devido à ausência de codecs"
 
-#: src/mpv/mpvitem.cpp:664
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -1506,12 +1594,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Áudio"
 
-#: src/qml/HProgressBar.qml:289
+#: src/qml/HProgressBar.qml:300
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Pular capítulos"
 
-#: src/qml/HProgressBar.qml:297
+#: src/qml/HProgressBar.qml:308
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2215,123 +2303,128 @@ msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Padrão"
 
-#: src/qml/Settings/MouseSettings.qml:92
+#: src/qml/Settings/MouseSettings.qml:51
+msgctxt "@label represents a mouse double click, for example `Right x2`"
+msgid "x2"
+msgstr ""
+
+#: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "Alterar ação"
 
-#: src/qml/Settings/MouseSettings.qml:106
+#: src/qml/Settings/MouseSettings.qml:107
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "Excluir"
 
-#: src/qml/Settings/MouseSettings.qml:134
+#: src/qml/Settings/MouseSettings.qml:135
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "&Adicionar"
 
-#: src/qml/Settings/MouseSettings.qml:169
+#: src/qml/Settings/MouseSettings.qml:170
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "Adicionar ação do botão do mouse"
 
-#: src/qml/Settings/MouseSettings.qml:182
+#: src/qml/Settings/MouseSettings.qml:183
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "Botão do mouse"
 
-#: src/qml/Settings/MouseSettings.qml:199
+#: src/qml/Settings/MouseSettings.qml:200
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "Esquerdo"
 
-#: src/qml/Settings/MouseSettings.qml:205
+#: src/qml/Settings/MouseSettings.qml:206
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "Meio"
 
-#: src/qml/Settings/MouseSettings.qml:211
+#: src/qml/Settings/MouseSettings.qml:212
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "Direito"
 
-#: src/qml/Settings/MouseSettings.qml:217
+#: src/qml/Settings/MouseSettings.qml:218
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "Avançar"
 
-#: src/qml/Settings/MouseSettings.qml:223
+#: src/qml/Settings/MouseSettings.qml:224
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "Voltar"
 
-#: src/qml/Settings/MouseSettings.qml:229
+#: src/qml/Settings/MouseSettings.qml:230
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "Rolar para cima"
 
-#: src/qml/Settings/MouseSettings.qml:235
+#: src/qml/Settings/MouseSettings.qml:236
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "Rolar para baixo"
 
-#: src/qml/Settings/MouseSettings.qml:244
+#: src/qml/Settings/MouseSettings.qml:245
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "Tecla modificadora"
 
-#: src/qml/Settings/MouseSettings.qml:262
+#: src/qml/Settings/MouseSettings.qml:263
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "Sem modificador"
 
-#: src/qml/Settings/MouseSettings.qml:268
+#: src/qml/Settings/MouseSettings.qml:269
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
-#: src/qml/Settings/MouseSettings.qml:274
+#: src/qml/Settings/MouseSettings.qml:275
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
-#: src/qml/Settings/MouseSettings.qml:280
+#: src/qml/Settings/MouseSettings.qml:281
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
-#: src/qml/Settings/MouseSettings.qml:286
+#: src/qml/Settings/MouseSettings.qml:287
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:298
+#: src/qml/Settings/MouseSettings.qml:299
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
 msgstr "Disparar no duplo-clique"
 
-#: src/qml/Settings/MouseSettings.qml:308
+#: src/qml/Settings/MouseSettings.qml:309
 msgctxt "@label"
 msgid "Action"
 msgstr "Ação"
 
-#: src/qml/Settings/MouseSettings.qml:316
+#: src/qml/Settings/MouseSettings.qml:317
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "Selecionar ação"
 
-#: src/qml/Settings/MouseSettings.qml:332
+#: src/qml/Settings/MouseSettings.qml:333
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "Alterar ação"
 
-#: src/qml/Settings/MouseSettings.qml:343
+#: src/qml/Settings/MouseSettings.qml:344
 msgctxt "@info"
 msgid "No action selected"
 msgstr "Nenhuma ação selecionada"
 
-#: src/qml/Settings/MouseSettings.qml:366
+#: src/qml/Settings/MouseSettings.qml:367
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "A combinação com o botão do mouse já está atribuída a “%1”"
