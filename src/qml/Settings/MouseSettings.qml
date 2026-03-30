@@ -45,10 +45,11 @@ SettingsBasePage {
                 required property mouseAction mouseAction
                 required property int index
                 required property string actionName
-                required property string button
-                required property string modifier
+                required property string i18nButton
+                required property string i18nModifier
                 required property bool isDoubleClick
-                property string dc: delegate.isDoubleClick ? " x2" : ""
+                readonly property string doubleClickString: i18nc("@label represents a mouse double click, for example `Right x2`", "x2")
+                property string dc: delegate.isDoubleClick ? doubleClickString : ""
 
                 width: scrollBar.visible ? ListView.view.width - scrollBar.width : ListView.view.width
                 highlighted: false
@@ -56,14 +57,14 @@ SettingsBasePage {
 
                 contentItem: RowLayout {
                     Kirigami.Chip {
-                        text: delegate.modifier
+                        text: delegate.i18nModifier
                         visible: text
                         closable: false
                         checkable: false
                     }
 
                     Kirigami.Chip {
-                        text: delegate.button + delegate.dc
+                        text: `${delegate.i18nButton} ${delegate.dc}`
                         closable: false
                         checkable: false
                     }

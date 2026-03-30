@@ -57,7 +57,9 @@ public:
         MouseActionRole,
         ActionName,
         Button,
+        I18nButton,
         Modifier,
+        I18nModifier,
         IsDoubleClick,
     };
     Q_ENUM(Roles)
@@ -89,7 +91,9 @@ public Q_SLOTS:
 
 private:
     QString mouseButtonToString(MouseButton button) const;
+    QString mouseButtonToI18nString(MouseButton button) const;
     QString modifierToString(Qt::KeyboardModifier modifier) const;
+    QString modifierToI18nString(Qt::KeyboardModifier modifier) const;
     QString configKey(MouseButton button, Qt::KeyboardModifier modifier, bool isDoubleClick);
     QString configKey(MouseAction ba);
     bool isDefaultAction(const QString &actionKey);

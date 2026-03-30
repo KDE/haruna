@@ -7,6 +7,7 @@
 #include "mouseactionsmodel.h"
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 
 #include "pathutils.h"
 
@@ -81,19 +82,18 @@ QVariant MouseActionsModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case MouseActionRole:
         return QVariant::fromValue(item);
-        break;
     case ActionName:
         return item.actionName;
-        break;
     case Button:
         return mouseButtonToString(static_cast<MouseButton>(item.mouseButton));
-        break;
+    case I18nButton:
+        return mouseButtonToI18nString(static_cast<MouseButton>(item.mouseButton));
     case Modifier:
+        return modifierToI18nString(static_cast<Qt::KeyboardModifier>(item.modifier));
+    case I18nModifier:
         return modifierToString(static_cast<Qt::KeyboardModifier>(item.modifier));
-        break;
     case IsDoubleClick:
         return item.isDoubleClick;
-        break;
     }
 
     return QVariant();
@@ -105,7 +105,9 @@ QHash<int, QByteArray> MouseActionsModel::roleNames() const
         {MouseActionRole, QByteArrayLiteral("mouseAction")},
         {ActionName, QByteArrayLiteral("actionName")},
         {Button, QByteArrayLiteral("button")},
+        {I18nButton, QByteArrayLiteral("i18nButton")},
         {Modifier, QByteArrayLiteral("modifier")},
+        {I18nModifier, QByteArrayLiteral("i18nModifier")},
         {IsDoubleClick, QByteArrayLiteral("isDoubleClick")},
     };
 
@@ -252,6 +254,30 @@ QString MouseActionsModel::mouseButtonToString(MouseButton button) const
     return {};
 }
 
+QString MouseActionsModel::mouseButtonToI18nString(MouseButton button) const
+{
+    switch (button) {
+    case MouseButton::Left:
+        return i18nc("@label left mouse button", "Left");
+    case MouseButton::Right:
+        return i18nc("@label right mouse button", "Right");
+    case MouseButton::Middle:
+        return i18nc("@label middle mouse button", "Middle");
+    case MouseButton::Forward:
+        return i18nc("@label forward mouse button", "Forward");
+    case MouseButton::Back:
+        return i18nc("@label back mouse button", "Back");
+    case MouseButton::ScrollUp:
+        return i18nc("@label mouse scroll up", "ScrollUp");
+    case MouseButton::ScrollDown:
+        return i18nc("@label mouse scroll down", "ScrollDown");
+    case NoButton:
+        return {};
+    }
+
+    return {};
+}
+
 Qt::KeyboardModifier MouseActionsModel::stringToModifier(const QString &token)
 {
     if (token == u"Control"_s) {
@@ -278,6 +304,27 @@ QString MouseActionsModel::modifierToString(Qt::KeyboardModifier modifier) const
         return u"Alt"_s;
     case Qt::KeyboardModifier::MetaModifier:
         return u"Meta"_s;
+    case Qt::NoModifier:
+    case Qt::KeypadModifier:
+    case Qt::GroupSwitchModifier:
+    case Qt::KeyboardModifierMask:
+        return {};
+    }
+
+    return {};
+}
+
+QString MouseActionsModel::modifierToI18nString(Qt::KeyboardModifier modifier) const
+{
+    switch (modifier) {
+    case Qt::KeyboardModifier::ControlModifier:
+        return i18nc("@label control modifier key", "Control");
+    case Qt::KeyboardModifier::ShiftModifier:
+        return i18nc("@label shift modifier key", "Shift");
+    case Qt::KeyboardModifier::AltModifier:
+        return i18nc("@label alt modifier key", "Alt");
+    case Qt::KeyboardModifier::MetaModifier:
+        return i18nc("@label meta modifier key", "Meta");
     case Qt::NoModifier:
     case Qt::KeypadModifier:
     case Qt::GroupSwitchModifier:
