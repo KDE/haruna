@@ -627,7 +627,7 @@
           <li>fixed seekbar tooltip not updating when file changes and the mouse is not moved</li>
           <li xml:lang="ar">إصلاح عدم تحديث تلميح شريط السعي عند تغير الملف دون تحريك الفأرة</li>
           <li xml:lang="ca">s'ha corregit el consell de la barra de cerca que no s'actualitzava quan el fitxer canviava i el ratolí no es movia</li>
-          <li xml:lang="ca-valencia">s'ha corregit el consell de la barra de busca que no s'actualitzava quan el fitxer canviava i el ratolí no es movia</li>
+          <li xml:lang="ca-valencia">s'ha corregit el consell d'eina de la barra de busca que no s'actualitzava quan el fitxer canviava i el ratolí no es movia</li>
           <li xml:lang="cs">opravena chyba, kdy se popisek posuvníku neaktualizoval při změně souboru, pokud se nepohnulo myší</li>
           <li xml:lang="fr">Correction de l'infobulle de la barre de recherche qui ne se met pas à jour lors d'une modification de fichier et en l'absence de déplacement de la souris</li>
           <li xml:lang="it">corretto suggerimento barra della ricerca che non si aggiornava alla modifica del file e il mouse non veniva spostato</li>
@@ -641,8 +641,8 @@
           <li xml:lang="zh-CN">修复当文件更改且鼠标未移动时，进度条提示不更新的问题</li>
           <li>fixed deleting custom commands</li>
           <li xml:lang="ar">إصلاح حذف الأوامر المخصصة</li>
-          <li xml:lang="ca">S'ha corregit la supressió de les ordres personalitzades</li>
-          <li xml:lang="ca-valencia">S'ha corregit la supressió de les ordres personalitzades</li>
+          <li xml:lang="ca">s'ha corregit la supressió de les ordres personalitzades</li>
+          <li xml:lang="ca-valencia">s'ha corregit la supressió de les ordres personalitzades</li>
           <li xml:lang="cs">opraveno mazání vlastních příkazů</li>
           <li xml:lang="fr">Correction de la suppression des commandes personnalisées</li>
           <li xml:lang="it">corretta eliminazione di comandi personalizzati</li>
@@ -1051,9 +1051,12 @@
           <li xml:lang="zh-CN">鼠标：新增鼠标的前进和后退键的支持</li>
           <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an * (asterisk) then subtitles will be searched in all folders containing the folder name. Example: If the <code>Load subtitle from</code> list contains an entry  and you have the following folders next to the video file ,  and <code>subtitles</code> all of these folders will be searched.</li>
           <li xml:lang="ca">Subtítols: si un nom de carpeta relatiu a la llista <code>Carrega els subtítols des de</code> comença amb un * (asterisc) llavors els subtítols se cercaran en totes les carpetes que continguin el nom de carpeta. Exemple: si la llista <code>Carrega els subtítols des de</code> conté una entrada i teniu les carpetes següents al costat del fitxer de vídeo i <code>subtítols</code>, se cercaran totes aquestes carpetes.</li>
+          <li xml:lang="ca-valencia">Subtítols: si un nom de carpeta relatiu a la llista <code>Carrega els subtítols des de</code> comença amb un * (asterisc) llavors els subtítols es buscaran en totes les carpetes que continguen el nom de carpeta. Exemple: si la llista <code>Carrega els subtítols des de</code> conté una entrada i teniu les carpetes següents al costat del fitxer de vídeo i <code>subtítols</code>, es buscaran totes estes carpetes.</li>
+          <li xml:lang="cs">Titulky: Pokud relativní název složky v seznamu <code>Načtení titulků z</code> začíná hvězdičkou * (*), budou titulky prohledávány ve všech složkách obsahujících daný název složky. Příklad: Pokud seznam <code>Načtení titulků z</code> obsahuje položku a vedle video souboru máte následující složky a <code>titulky</code>, budou prohledávány všechny tyto složky.</li>
           <li xml:lang="ka">სუბტიტრები: თუ ფარდობითი საქაღალდის სახელი <code>სუბტიტრების ჩატვირთვა საიდან</code>-ის სიაში იწყება სიმბოლოთი * (ვარსკვლავი), მაშინ სუბტიტრების ძებნა მოხდება ყველა საქაღალდეში, რომელიც ამ საქაღალდის სახელს შეიცავს. მაგ: თუ <code>სუბტიტრების ჩატვირთვა საიდან</code> სია შეიცავს ჩანაწერს და თქვენ გაქვთ შემდეგი საქაღალდეები ვიფეოფაილთან და <code>სუბტიტრები</code>`, ძებნა ყველა ამ საქაღალდეში მოხდება.</li>
           <li xml:lang="pt-BR">Legendas: se o nome de uma pasta relativa na lista <code>Carregar legenda de</code> começar com um * (asterisco), as legendas serão pesquisadas em todas as pastas que contêm o nome da pasta. Exemplo: Se a lista <code>Carregar legenda de</code> contiver uma entrada e você tiver as seguintes pastas ao lado do arquivo de vídeo, e <code>legendas</code> todas essas pastas serão pesquisadas.</li>
           <li xml:lang="sl">Podnapisi: če se relativno ime mape na seznamu <code>Naloži podnapis iz</code> začne z zvezdico * (*), bodo podnapisi iskani v vseh mapah, ki vsebujejo ime mape. Primer: Če seznam <code>Naloži podnapis iz</code> vsebuje vnos in imate poleg video datoteke naslednje mape in <code>podnapisi</code>, bodo iskane vse te mape.</li>
+          <li xml:lang="zh-CN">字幕：如果在 <code>字幕文件来源位置</code> 列表中的相对文件夹名称以 * (半角星号) 开始，则在所有包含该名称的文件夹中搜索字幕。示例：如果 <code>字幕文件来源位置</code> 列表包含条目而视频文件的同级文件夹中存在下列文件夹和 <code>字幕</code>，则所有这些文件夹都会被搜索。</li>
           <li>the settings window now has a minimum width and height</li>
           <li xml:lang="ar">نافذة الإعدادات تمتلك الآن حداً أدنى للعرض والارتفاع</li>
           <li xml:lang="ca">la finestra de configuració ara té una amplada i alçada mínimes</li>
@@ -1870,7 +1873,7 @@
           <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed (from the playlist)</li>
           <li xml:lang="ar">قائمة التشغيل: إضافة مدخلات للقائمة السياقية للمسارات (URLs) غير المحلية لفتحها في المتصفح أو إزالتها (من قائمة التشغيل)</li>
           <li xml:lang="ca">Llista de reproducció: s'han afegit entrades de menú contextual per als URL no locals que s'obriran al navegador i que s'eliminaran (de la llista de reproducció)</li>
-          <li xml:lang="ca-valencia">Llista de reproducció: s'han afegit entrades de menú contextual per als URL no locals que s'obriran al navegador i que s'eliminaran (de la llista de reproducció)</li>
+          <li xml:lang="ca-valencia">Llista de reproducció: s'han afegit entrades de menú contextual per als URL no locals que s'obriran en el navegador i que s'eliminaran (de la llista de reproducció)</li>
           <li xml:lang="cs">Seznam médií: přidány položky do kontextového menu pro otevření nelokálních adres URL v prohlížeči a pro jejich odstranění (ze seznamu médií)</li>
           <li xml:lang="fr">Liste de lecture : ajout d’entrées dans le menu contextuel pour les URL non locales afin de les ouvrir dans le navigateur et de les supprimer (De la liste de lecture)</li>
           <li xml:lang="it">Scaletta: aggiunte voci di menu contestuale per gli URL non locali da aprire nel browser e da rimuovere (dalla scaletta)</li>
@@ -3717,7 +3720,7 @@
           <li>Fixed crash when "Maximum recent files" setting was set to zero.</li>
           <li xml:lang="ar">إصلاح انهيار عند ضبط إعداد "أقصى عدد للملفات الأخيرة" على صفر.</li>
           <li xml:lang="ca">S'ha corregit una fallada quan el paràmetre «Nombre màxim de fitxers recents» s'ha establert a zero.</li>
-          <li xml:lang="ca-valencia">S'ha corregit una fallada quan el paràmetre «Nombre màxim de fitxers recents» s'ha establit a zero.</li>
+          <li xml:lang="ca-valencia">S'ha esmenat una fallada quan el paràmetre «Nombre màxim de fitxers recents» s'ha establit a zero.</li>
           <li xml:lang="cs">Opravena chyba, která způsobovala pád aplikace, pokud byla hodnota nastavení maximálního počtu posledních souborů nastavena na nulu.</li>
           <li xml:lang="fr">Correction du plantage lorsque le paramètre « Fichiers récents maximum » était réglé sur zéro.</li>
           <li xml:lang="it">Corretto crash quando l'impostazione «File recenti max.» era impostata a zero.</li>
@@ -4220,7 +4223,7 @@
           <li>Fixed a crash when changing the maximum recent files setting to 0</li>
           <li xml:lang="ar">إصلاح انهيار عند تغيير إعداد أقصى عدد للملفات الأخيرة إلى 0</li>
           <li xml:lang="ca">S'ha corregit una fallada en canviar la configuració del nombre màxim de fitxers recents a 0</li>
-          <li xml:lang="ca-valencia">S'ha corregit una fallada en canviar la configuració del nombre màxim de fitxers recents a 0</li>
+          <li xml:lang="ca-valencia">S'ha esmenat una fallada mentre es canviava la configuració del nombre màxim de fitxers recents a 0</li>
           <li xml:lang="cs">Opravena chyba, která způsobovala pád aplikace při změně nastavení maximálního počtu naposledy otevřených souborů na 0</li>
           <li xml:lang="fr">Correction d'un plantage lors de la modification du paramètre du nombre maximum de fichiers récents à 0</li>
           <li xml:lang="he">תוקנה קריסה בעת שינוי כמות הקבצים האחרונים המרבית ל־0</li>
