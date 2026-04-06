@@ -76,6 +76,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     Q_EMIT observeProperty(MpvProperties::self()->TracksCount, MPV_FORMAT_NODE);
     Q_EMIT observeProperty(MpvProperties::self()->SubtitleDelay, MPV_FORMAT_DOUBLE);
     Q_EMIT observeProperty(MpvProperties::self()->EofReached, MPV_FORMAT_FLAG);
+    Q_EMIT observeProperty(MpvProperties::self()->VoConfigured, MPV_FORMAT_FLAG);
 
     setupConnections();
     initProperties();
@@ -510,6 +511,13 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->EofReached) {
         m_eofReached = value.toBool();
         Q_EMIT eofReachedChanged();
+    } else if (property == MpvProperties::self()->VoConfigured) {
+        // needed to ensure the video output is cleared
+        // since calling update() after the stop command is not enough
+        bool voConfigured = value.toBool();
+        if (!voConfigured) {
+            update();
+        }
     }
 }
 

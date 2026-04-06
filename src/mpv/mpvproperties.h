@@ -31,6 +31,9 @@ public:
     Q_PROPERTY(QString VO MEMBER VO CONSTANT)
     const QString VO{u"vo"_s};
 
+    Q_PROPERTY(QString VoConfigured MEMBER VoConfigured CONSTANT)
+    const QString VoConfigured{u"vo-configured"_s};
+
     Q_PROPERTY(QString Pause MEMBER Pause CONSTANT)
     const QString Pause{u"pause"_s};
 
