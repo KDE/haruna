@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-30 00:42+0000\n"
-"PO-Revision-Date: 2026-03-20 08:13+0200\n"
+"POT-Creation-Date: 2026-04-07 00:43+0000\n"
+"PO-Revision-Date: 2026-04-03 14:05+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -564,147 +564,125 @@ msgid "Reassign"
 msgstr "הקצאה מחדש"
 
 #: src/models/mouseactionsmodel.cpp:261
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox left mouse button"
-#| msgid "Left"
+#, kde-format
 msgctxt "@label left mouse button"
 msgid "Left"
 msgstr "שמאלי"
 
 #: src/models/mouseactionsmodel.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox right mouse button"
-#| msgid "Right"
+#, kde-format
 msgctxt "@label right mouse button"
 msgid "Right"
 msgstr "ימני"
 
 #: src/models/mouseactionsmodel.cpp:265
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox middle mouse button"
-#| msgid "Middle"
+#, kde-format
 msgctxt "@label middle mouse button"
 msgid "Middle"
 msgstr "אמצעי"
 
 #: src/models/mouseactionsmodel.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox forward mouse button"
-#| msgid "Forward"
+#, kde-format
 msgctxt "@label forward mouse button"
 msgid "Forward"
 msgstr "קדימה"
 
 #: src/models/mouseactionsmodel.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox back mouse button"
-#| msgid "Back"
+#, kde-format
 msgctxt "@label back mouse button"
 msgid "Back"
 msgstr "אחורה"
 
 #: src/models/mouseactionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll up"
-#| msgid "Scroll up"
+#, kde-format
 msgctxt "@label mouse scroll up"
 msgid "ScrollUp"
 msgstr "גלילה למעלה"
 
 #: src/models/mouseactionsmodel.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll down"
-#| msgid "Scroll down"
+#, kde-format
 msgctxt "@label mouse scroll down"
 msgid "ScrollDown"
 msgstr "גלילה למטה"
 
 #: src/models/mouseactionsmodel.cpp:321
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox control modifier key"
-#| msgid "Control"
+#, kde-format
 msgctxt "@label control modifier key"
 msgid "Control"
-msgstr "Control"
+msgstr "Ctrl"
 
 #: src/models/mouseactionsmodel.cpp:323
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox shift modifier key"
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/models/mouseactionsmodel.cpp:325
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/models/mouseactionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox meta modifier key"
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "מטא"
 
-#: src/mpv/mpvitem.cpp:84
+#: src/mpv/mpvitem.cpp:85
 #, kde-format
 msgid "Command line video player"
 msgstr "נגן וידאו בשורת הפקודות"
 
-#: src/mpv/mpvitem.cpp:91
+#: src/mpv/mpvitem.cpp:92
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "פתרון חוצה פלטפורמות להקלטה, המרה והזרמה של וידאו ושמע"
 
-#: src/mpv/mpvitem.cpp:390
+#: src/mpv/mpvitem.cpp:391
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "לא ניתן לנגן: %1"
 
-#: src/mpv/mpvitem.cpp:497 src/mpv/mpvitem.cpp:499
+#: src/mpv/mpvitem.cpp:498 src/mpv/mpvitem.cpp:500
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "תזמון כתובית: %1 שניות"
 
-#: src/mpv/mpvitem.cpp:531
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "הקובץ לא קיים: %1"
 
-#: src/mpv/mpvitem.cpp:568
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "אין"
 
-#: src/mpv/mpvitem.cpp:606
+#: src/mpv/mpvitem.cpp:614
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "צילום המסך נכשל"
 
-#: src/mpv/mpvitem.cpp:611
+#: src/mpv/mpvitem.cpp:619
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
-#: src/mpv/mpvitem.cpp:613
+#: src/mpv/mpvitem.cpp:621
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "צילום מסך: %1"
 
-#: src/mpv/mpvitem.cpp:640
+#: src/mpv/mpvitem.cpp:648
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -712,7 +690,7 @@ msgid ""
 "due to missing codecs"
 msgstr "לא זוהתה רצועת וידאו, כנראה שאי אפשר לפענח/לנגן עקב בעיית מפענחים"
 
-#: src/mpv/mpvitem.cpp:673
+#: src/mpv/mpvitem.cpp:681
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -898,12 +876,9 @@ msgid "Open in Thumbnail Generator"
 msgstr "פתיחה ביצרן תמונות ממוזערות"
 
 #: src/playlist/Playlist.qml:770
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in Browser"
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
-msgstr "פתיחה בדפדפן"
+msgstr "פתיחה ב־%1"
 
 #: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
@@ -2285,7 +2260,7 @@ msgstr "ברירת מחדל"
 #: src/qml/Settings/MouseSettings.qml:51
 msgctxt "@label represents a mouse double click, for example `Right x2`"
 msgid "x2"
-msgstr ""
+msgstr "×2"
 
 #: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@label:action change action associated with mouse event"
