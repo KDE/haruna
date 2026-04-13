@@ -268,34 +268,33 @@ TabButton {
         width: Math.min(progressTimer.progress * root.width, root.width)
     }
 
-    Item {
-        anchors.fill: parent
+    TapHandler {
+        acceptedButtons: Qt.MiddleButton | Qt.LeftButton | Qt.RightButton
+        acceptedModifiers: Qt.NoModifier
+        gesturePolicy: TapHandler.WithinBounds
 
-        TapHandler {
-            enabled: root.index !== 0
-            acceptedButtons: Qt.MiddleButton
-            acceptedModifiers: Qt.NoModifier
-            grabPermissions: PointerHandler.TakeOverForbidden
+        onPressedChanged: {
+            if (point.pressedButtons & Qt.LeftButton || point.pressedButtons & Qt.RightButton) {
+                return
+            }
 
-            onPressedChanged: {
-                if (pressed) {
-                    progressTimer.start()
-                    progressTimer.heldAmount = 0.0
-                }
-                else {
-                    progressTimer.stop()
-                    progressTimer.heldAmount = 0.0
-                }
+            if (pressed) {
+                progressTimer.start()
+                progressTimer.heldAmount = 0.0
+            } else {
+                progressTimer.stop()
+                progressTimer.heldAmount = 0.0
             }
         }
 
-        TapHandler {
-            acceptedButtons: Qt.RightButton
-            acceptedModifiers: Qt.NoModifier
-            grabPermissions: PointerHandler.TakeOverForbidden
-
-            onTapped: {
+        onTapped: function(point, button) {
+            switch (button) {
+            case Qt.LeftButton:
+                root.click()
+                break
+            case Qt.RightButton:
                 root.TabBar.tabBar.openContextMenu(root)
+                break
             }
         }
     }
