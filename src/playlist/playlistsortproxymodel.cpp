@@ -263,6 +263,14 @@ bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QMod
         }
     }
 
+    if (m_sortPreset == Sort::None) {
+        switch (m_sortingOrder) {
+        case Qt::AscendingOrder:
+            return source_left.row() < source_right.row();
+        case Qt::DescendingOrder:
+            return source_left.row() > source_right.row();
+        }
+    }
     return source_left.row() < source_right.row(); // fallback
 }
 
@@ -285,10 +293,7 @@ void PlaylistSortProxyModel::setSortPreset(Sort preset)
         removeFromActiveSortProperties(0);
     }
 
-    if (preset == Sort::None) {
-        sort(-1, Qt::SortOrder::AscendingOrder);
-        return;
-    } else {
+    if (preset != Sort::None) {
         addToActiveSortProperties(preset);
     }
     sortItems();
@@ -297,11 +302,8 @@ void PlaylistSortProxyModel::setSortPreset(Sort preset)
 void PlaylistSortProxyModel::setSortOrder(Qt::SortOrder order)
 {
     m_sortingOrder = order;
-    if (m_sortPreset == Sort::None) {
-        return;
-    } else {
-        sortItems();
-    }
+    sortItems();
+    recreateSections();
 }
 
 void PlaylistSortProxyModel::sortItems()
@@ -353,7 +355,7 @@ void PlaylistSortProxyModel::onActiveSortPropertiesChanged()
 {
     if (m_activeSortProperties->m_properties.isEmpty()) {
         m_sortPreset = Sort::None;
-        sort(-1, Qt::SortOrder::AscendingOrder);
+        sortItems();
         recreateSections();
         return;
     }
