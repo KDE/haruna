@@ -294,6 +294,7 @@ void MpvItem::setupConnections()
     connect(mp2Player, &MediaPlayer2Player::stop, this, [=]() {
         setPosition(0);
         setPause(true);
+        stop();
     });
     connect(mp2Player, &MediaPlayer2Player::next, this, [=]() {
         Q_EMIT playNext();
@@ -410,6 +411,7 @@ void MpvItem::onEndOfFileReached()
         if (proxyModel->isLastItem(currentItem)) {
             setPropertyBlocking(MpvProperties::self()->Position, 0);
             setPropertyBlocking(MpvProperties::self()->Pause, true);
+            stop();
             return;
         }
     }
@@ -423,6 +425,7 @@ void MpvItem::onEndOfFileReached()
     if (behavior == u"StopAfterItem"_s) {
         setPropertyBlocking(MpvProperties::self()->Position, 0);
         setPropertyBlocking(MpvProperties::self()->Pause, true);
+        stop();
         return;
     }
 
