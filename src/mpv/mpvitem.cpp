@@ -234,17 +234,8 @@ void MpvItem::setupConnections()
         setFinishedLoading(false);
     });
 
-    connect(mpvController(), &MpvController::fileLoaded, this, [this]() {
-        getPropertyAsync(MpvProperties::self()->ChapterList, static_cast<int>(AsyncIds::ChapterList));
-        getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
-        getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
-
-        Q_EMIT setProperty(MpvProperties::self()->ABLoopA, u"no"_s);
-        Q_EMIT setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
-
-        setFinishedLoading(true);
-        Q_EMIT fileLoaded();
-    }, Qt::QueuedConnection);
+    connect(mpvController(), &MpvController::fileLoaded,
+            this, &MpvItem::onFileLoaded, Qt::QueuedConnection);
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
         auto pos = static_cast<int>(position());
@@ -372,6 +363,19 @@ void MpvItem::onReady()
             }
         }
     }
+}
+
+void MpvItem::onFileLoaded()
+{
+    getPropertyAsync(MpvProperties::self()->ChapterList, static_cast<int>(AsyncIds::ChapterList));
+    getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
+    getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
+
+    Q_EMIT setProperty(MpvProperties::self()->ABLoopA, u"no"_s);
+    Q_EMIT setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
+
+    setFinishedLoading(true);
+    Q_EMIT fileLoaded();
 }
 
 void MpvItem::onEndFile(const QString &reason)
