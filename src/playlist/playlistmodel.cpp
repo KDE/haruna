@@ -7,6 +7,7 @@
 #include "playlistmodel.h"
 
 #include <QCollator>
+#include <QCryptographicHash>
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
@@ -17,6 +18,7 @@
 
 #include <random>
 
+#include "../database.h"
 #include "generalsettings.h"
 #include "miscutils.h"
 #include "playlistsettings.h"
@@ -87,6 +89,8 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
         return QVariant(!item.url.scheme().startsWith(u"http"_s));
     case SectionRole:
         return QVariant(); // Should be handled within PlaylistSortProxyModel
+    case PlaybackPositionRole:
+        return QVariant(item.playbackPosition);
     // Audio
     case TrackNoRole:
         return QVariant(item.audio.trackNo);
@@ -148,6 +152,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {IsLocalRole,           QByteArrayLiteral("isLocal")},
         {IsSelectedRole,        QByteArrayLiteral("isSelected")},
         {SectionRole,           QByteArrayLiteral("section")},
+        {PlaybackPositionRole,  QByteArrayLiteral("playbackPosition")},
         {TrackNoRole,           QByteArrayLiteral("trackNo")},
         {DiscNoRole,            QByteArrayLiteral("discNo")},
         {TitleRole,             QByteArrayLiteral("title")},
@@ -243,6 +248,10 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
 void PlaylistModel::stop()
 {
     m_isPlaying = false;
+    if (m_playlist.empty()) {
+        return;
+    }
+    m_playlist[m_playingItem].playbackPosition = getPlaybackPosition(m_playingItem);
     Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
 }
 
@@ -480,9 +489,11 @@ void PlaylistModel::setPlayingItem(uint i)
     uint previousItem{m_playingItem};
     m_playingItem = i;
     m_isPlaying = true;
+
+    m_playlist[previousItem].playbackPosition = getPlaybackPosition(previousItem);
+
     Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
-
     Q_EMIT playingItemChanged(m_playlistName);
 
     GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
@@ -531,6 +542,7 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::Prop
         m_playlist[i].duration = duration;
         m_playlist[i].audio.setMetaData(properties);
         m_playlist[i].video.setMetaData(properties);
+        m_playlist[i].playbackPosition = getPlaybackPosition(i);
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
     } else {
@@ -540,6 +552,20 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::Prop
                  << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
                  << u"%1"_s.arg(m_playlist[i].url.toString());
     }
+}
+
+double PlaylistModel::getPlaybackPosition(const uint row)
+{
+    auto duration = m_playlist[row].duration;
+    auto url = QUrl::fromUserInput(m_playlist[row].url.toString());
+
+    if (duration <= 0) {
+        return 0.0;
+    }
+
+    auto md5 = QCryptographicHash::hash((url.toString().toUtf8()), QCryptographicHash::Md5);
+    auto hash = QString::fromUtf8(md5.toHex());
+    return Database::instance()->playbackPosition(hash) / duration;
 }
 
 void PlaylistModel::shuffleIndexes(std::vector<int> includedIndices)

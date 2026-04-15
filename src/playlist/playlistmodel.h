@@ -28,6 +28,7 @@ struct PlaylistItem {
     QString folderPath;
     QString dirName;
     QString formattedDuration;
+    double playbackPosition{0.0};
     double duration{0.0};
     qint64 fileSize{0};
     QDateTime modifiedDate;
@@ -67,6 +68,7 @@ public:
         IsLocalRole,
         IsSelectedRole,
         SectionRole,
+        PlaybackPositionRole,
         // Audio
         TrackNoRole,
         DiscNoRole,
@@ -122,6 +124,7 @@ private:
     void setPlayingItem(uint i);
     void getMetaData(uint i, const QString &path);
     void onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties);
+    double getPlaybackPosition(const uint row);
 
     std::vector<PlaylistItem> m_playlist;
     QString m_playlistName{u"Default"};

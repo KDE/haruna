@@ -41,6 +41,7 @@ qt_add_qml_module(playlist
 target_link_libraries(playlist PRIVATE
     Qt6::Core
     Qt6::Gui
+    Qt6::Sql
 
     KF6::ConfigCore
     KF6::ConfigGui

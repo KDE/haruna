@@ -66,33 +66,42 @@ PlaylistItemDelegate {
 
                 Image {
                     anchors.fill: parent
-                    anchors.margins: Kirigami.Units.largeSpacing
+                    anchors.margins: Kirigami.Units.mediumSpacing
                     source: "image://thumbnail/%1".arg(root.path)
                     sourceSize.width: parent.width
                     sourceSize.height: parent.height
-                    width: parent.width
-                    height: parent.height
                     asynchronous: true
                     fillMode: Image.PreserveAspectCrop
 
                     Rectangle {
                         visible: root.duration.length > 0
-                        height: durationLabel.font.pointSize + (Kirigami.Units.smallSpacing * 2)
+                        height: root.getImageFontSize() + (Kirigami.Units.smallSpacing * 2) + 4
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
                         anchors.right: parent.right
                         color: Qt.alpha(Kirigami.Theme.backgroundColor, 0.7)
 
-                        Label {
-                            id: durationLabel
+                        ColumnLayout {
+                            anchors.fill: parent
 
-                            anchors.centerIn: parent
-                            anchors.margins: Kirigami.Units.largeSpacing
-                            color: Kirigami.Theme.textColor
-                            horizontalAlignment: Qt.AlignCenter
-                            text: root.duration
-                            font.pointSize: root.getImageFontSize()
-                            Layout.margins: Kirigami.Units.largeSpacing
+                            Label {
+                                Layout.alignment: Qt.AlignCenter
+                                Layout.fillHeight: true
+                                color: Kirigami.Theme.textColor
+                                horizontalAlignment: Qt.AlignCenter
+                                text: root.duration
+                                font.pointSize: root.getImageFontSize()
+                            }
+
+                            Rectangle {
+                                visible: PlaybackSettings.restoreFilePosition
+                                color: Qt.alpha(Kirigami.Theme.visitedLinkColor, 1.0)
+                                Layout.preferredWidth: root.isPlaying
+                                                       ? root.m_mpv.position/root.m_mpv.duration * parent.width
+                                                       : root.playbackPosition * parent.width
+                                Layout.preferredHeight: 2
+                                Layout.alignment: Qt.AlignLeft
+                            }
                         }
                     }
                 }
@@ -104,7 +113,6 @@ PlaylistItemDelegate {
                 visible: root.isPlaying
                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
-
                 Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
 

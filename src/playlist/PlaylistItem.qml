@@ -82,6 +82,24 @@ PlaylistItemDelegate {
                 color: root.getLabelColor()
                 font.pointSize: root.getFontSize()
                 Layout.margins: Kirigami.Units.largeSpacing
+
+                Rectangle {
+                    visible: PlaybackSettings.restoreFilePosition
+                    anchors.right: parent.right
+                    anchors.top: parent.bottom
+                    height: 2
+                    width: parent.width
+                    color: Kirigami.Theme.visitedLinkBackgroundColor
+
+                    Rectangle {
+                        height: 2
+                        width: root.isPlaying
+                               ? root.m_mpv.position/root.m_mpv.duration * parent.width
+                               : root.playbackPosition * parent.width
+                        color: Kirigami.Theme.visitedLinkColor
+                    }
+                }
+
             }
         }
     }

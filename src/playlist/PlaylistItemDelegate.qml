@@ -23,6 +23,7 @@ Item {
     required property bool isPlaying
     required property bool isSelected
     required property string section
+    required property real playbackPosition
     required property MpvVideo m_mpv
 
     property alias contentItem: contentItem.data
