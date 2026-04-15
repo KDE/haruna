@@ -25,33 +25,31 @@ MpvItem {
     required property Osd osd
     required property MouseActionsModel mouseActionsModel
     property var window: Window.window
-    property int preMinimizePlaybackState: MpvVideo.PlaybackState.Playing
+    property int preMinimizePlaybackState: MpvItem.PlaybackState.Playing
     property alias mouseY: mouseArea.mouseY
 
     signal mousePositionChanged(double x, double y)
     signal openPlaylist()
     signal closePlaylist()
 
-    enum PlaybackState {
-        Playing,
-        Paused
+    onPlaybackStateChanged: {
+        switch(playbackState) {
+        case MpvItem.PlaybackState.Playing:
+            loadingIndicator.visible = false
+            loadingIndicator.play = false
+            break
+        case MpvItem.PlaybackState.Loading:
+            const url = currentUrl.toString()
+            if (typeof url === "string" && url.startsWith("http")) {
+                loadingIndicator.visible = true
+                loadingIndicator.play = true
+            }
+            break
+        }
     }
 
     onVolumeChanged: {
         osd.message(i18nc("@info:tooltip", "Volume: %1", root.volume))
-    }
-
-    onFileStarted: {
-        const url = currentUrl.toString()
-        if (typeof url === "string" && url.startsWith("http")) {
-            loadingIndicator.visible = true
-            loadingIndicator.play = true
-        }
-    }
-
-    onFileLoaded: {
-        loadingIndicator.visible = false
-        loadingIndicator.play = false
     }
 
     onOsdMessage: function(text) {
