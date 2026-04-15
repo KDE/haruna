@@ -779,6 +779,7 @@ void MpvItem::stop()
 {
     command({u"stop"_s});
     setPlaybackState(PlaybackState::Stopped);
+    setPause(true);
     update();
 }
 
