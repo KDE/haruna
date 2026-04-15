@@ -543,25 +543,33 @@ void MpvItem::loadFile(const QString &file)
         return;
     }
 
+    setWatchLaterPosition(loadTimePosition());
+    if (PlaybackSettings::restoreFilePosition()) {
+        // faster than seeking after loading the file
+        setPropertyBlocking(u"start"_s, QString::number(m_watchLaterPosition));
+    } else {
+        // `start` persists through `stop` for the same file
+        // if a file is reopened after being stopped the last `start` value will be used
+        // which is not the wanted behavior when PlaybackSettings::restoreFilePosition if disabled
+        setPropertyBlocking(u"start"_s, QString::number(0));
+    }
+
     // store the mute property so it can be restored after loading file
     auto mute = m_mute;
     // mute to avoid popping sound while loading files
     setPropertyBlocking(MpvProperties::self()->Mute, true);
-    setWatchLaterPosition(loadTimePosition());
-    if (PlaybackSettings::restoreFilePosition()) {
-        setPropertyBlocking(u"start"_s, QVariant(u"+"_s + QString::number(m_watchLaterPosition)));
-    }
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
+    setPropertyBlocking(MpvProperties::self()->Mute, mute);
+
     // clang-format off
     auto pause = PlaybackSettings::restoreFilePosition()
             ? !PlaybackSettings::playOnResume() && watchLaterPosition() > 1
             : false;
     // clang-format on
     setPropertyBlocking(MpvProperties::self()->Pause, pause);
-    setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
     if (SubtitlesSettings::recursiveSubtitlesSearch()) {
-        QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, url);
+        QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, m_currentUrl);
     }
 
     GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
