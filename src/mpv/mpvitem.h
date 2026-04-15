@@ -214,7 +214,6 @@ private:
     void loadTracks(QList<QVariant> tracks);
     void onAsyncReply(const QVariant &data, mpv_event event);
     void onChapterChanged();
-    QString md5(const QString &str);
 
     std::unique_ptr<TracksModel> m_audioTracksModel;
     std::unique_ptr<TracksModel> m_subtitleTracksModel;

@@ -9,7 +9,6 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QCryptographicHash>
 #include <QDir>
 #include <QTimer>
 
@@ -605,7 +604,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         break;
     }
     case AsyncIds::SavePosition: {
-        auto hash = md5(currentUrl().toString());
+        auto hash = MiscUtils::md5(currentUrl().toString());
         Q_EMIT savePositionToDB(hash, currentUrl().toString(), data.toDouble());
         break;
     }
@@ -720,13 +719,13 @@ double MpvItem::loadTimePosition()
         return 0;
     }
 
-    auto hash = md5(currentUrl().toString());
+    auto hash = MiscUtils::md5(currentUrl().toString());
     return Database::instance()->playbackPosition(hash);
 }
 
 void MpvItem::resetTimePosition()
 {
-    auto hash = md5(currentUrl().toString());
+    auto hash = MiscUtils::md5(currentUrl().toString());
     Database::instance()->deletePlaybackPosition(hash);
 }
 
@@ -755,13 +754,6 @@ void MpvItem::stop()
 {
     command({u"stop"_s});
     update();
-}
-
-QString MpvItem::md5(const QString &str)
-{
-    auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
-
-    return QString::fromUtf8(md5.toHex());
 }
 
 PlaylistFilterProxyModel *MpvItem::activeFilterProxyModel()

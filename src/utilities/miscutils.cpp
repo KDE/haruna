@@ -6,6 +6,8 @@
 
 #include "miscutils.h"
 
+#include <QCryptographicHash>
+
 #include <KFileItem>
 
 using namespace Qt::StringLiterals;
@@ -46,6 +48,13 @@ QString MiscUtils::mimeType(QUrl url)
 {
     KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
     return fileItem.mimetype();
+}
+
+QString MiscUtils::md5(const QString &str)
+{
+    auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
+
+    return QString::fromUtf8(md5.toHex());
 }
 
 // #include "moc_miscutils.h"

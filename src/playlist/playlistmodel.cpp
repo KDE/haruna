@@ -7,7 +7,6 @@
 #include "playlistmodel.h"
 
 #include <QCollator>
-#include <QCryptographicHash>
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
@@ -563,8 +562,7 @@ double PlaylistModel::getPlaybackPosition(const uint row)
         return 0.0;
     }
 
-    auto md5 = QCryptographicHash::hash((url.toString().toUtf8()), QCryptographicHash::Md5);
-    auto hash = QString::fromUtf8(md5.toHex());
+    auto hash = MiscUtils::md5(url.toString());
     return Database::instance()->playbackPosition(hash) / duration;
 }
 
