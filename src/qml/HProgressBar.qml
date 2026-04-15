@@ -343,7 +343,7 @@ RowLayout {
 
         Connections {
             target: root.m_mpv
-            function onFileLoaded() {
+            function onFileStarted() {
                 loopIndicator.startPosition = -1
                 loopIndicator.endPosition = -1
                 previewMpvLoader.file = root.m_mpv.currentUrl
