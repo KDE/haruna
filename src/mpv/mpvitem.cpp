@@ -375,9 +375,23 @@ void MpvItem::onFileLoaded()
     Q_EMIT setProperty(MpvProperties::self()->ABLoopA, u"no"_s);
     Q_EMIT setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
 
-    setFinishedLoading(true);
-    auto state = getProperty(MpvProperties::self()->Pause).toBool() ? PlaybackState::Paused : PlaybackState::Playing;
+    // clang-format off
+    auto pause = PlaybackSettings::restoreFilePosition()
+            ? !PlaybackSettings::playOnResume() && watchLaterPosition() > 1
+            : false;
+    // clang-format on
+    setPause(pause);
+
+    if (SubtitlesSettings::recursiveSubtitlesSearch()) {
+        QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, m_currentUrl);
+    }
+
+    GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
+    GeneralSettings::self()->save();
+    auto state = pause ? PlaybackState::Paused : PlaybackState::Playing;
     setPlaybackState(state);
+
+    setFinishedLoading(true);
 }
 
 void MpvItem::onEndFile(const QString &reason)
@@ -573,20 +587,6 @@ void MpvItem::loadFile(const QString &file)
     setPropertyBlocking(MpvProperties::self()->Mute, true);
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
-
-    // clang-format off
-    auto pause = PlaybackSettings::restoreFilePosition()
-            ? !PlaybackSettings::playOnResume() && watchLaterPosition() > 1
-            : false;
-    // clang-format on
-    setPropertyBlocking(MpvProperties::self()->Pause, pause);
-
-    if (SubtitlesSettings::recursiveSubtitlesSearch()) {
-        QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, m_currentUrl);
-    }
-
-    GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
-    GeneralSettings::self()->save();
 }
 
 void MpvItem::loadTracks(QList<QVariant> tracks)
