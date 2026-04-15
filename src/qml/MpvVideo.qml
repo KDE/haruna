@@ -34,14 +34,16 @@ MpvItem {
 
     onPlaybackStateChanged: {
         switch(playbackState) {
+        case MpvItem.PlaybackState.Stopped:
+            loadingIndicator.play = false
+            loadingIndicatorSprite.currentFrame = 0
+            break
         case MpvItem.PlaybackState.Playing:
-            loadingIndicator.visible = false
             loadingIndicator.play = false
             break
         case MpvItem.PlaybackState.Loading:
             const url = currentUrl.toString()
             if (typeof url === "string" && url.startsWith("http")) {
-                loadingIndicator.visible = true
                 loadingIndicator.play = true
             }
             break
@@ -347,7 +349,7 @@ MpvItem {
         property bool play: false
         property int size: 200
 
-        visible: true
+        visible: root.playbackState === MpvItem.PlaybackState.Stopped || root.playbackState === MpvItem.PlaybackState.Loading
         anchors.centerIn: parent
         radius: Kirigami.Units.cornerRadius
         width: root.width > size ? size : root.width - 10
@@ -368,6 +370,8 @@ MpvItem {
                 Layout.preferredHeight: spriteSize
 
                 AnimatedSprite {
+                    id: loadingIndicatorSprite
+
                     anchors.fill: parent
                     currentFrame: 0
                     finishBehavior: AnimatedSprite.FinishAtInitialFrame
