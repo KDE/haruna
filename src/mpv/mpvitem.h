@@ -40,6 +40,14 @@ public:
     };
     Q_ENUM(AsyncIds)
 
+    enum class PlaybackState {
+        Stopped,
+        Paused,
+        Playing,
+        Loading,
+    };
+    Q_ENUM(PlaybackState)
+
     Q_PROPERTY(PlaylistFilterProxyModel *activeFilterProxyModel READ activeFilterProxyModel NOTIFY activeFilterProxyModelChanged)
     PlaylistFilterProxyModel *activeFilterProxyModel();
 
@@ -150,6 +158,10 @@ public:
     bool isReady() const;
     void setIsReady(bool _isReady);
 
+    Q_PROPERTY(PlaybackState playbackState READ playbackState WRITE setPlaybackState NOTIFY playbackStateChanged FINAL)
+    PlaybackState playbackState() const;
+    void setPlaybackState(PlaybackState newPlaybackState);
+
     Q_INVOKABLE void loadFile(const QString &file);
     Q_INVOKABLE void userCommand(const QString &commandString);
     Q_INVOKABLE void selectSubtitleTrack();
@@ -184,8 +196,8 @@ Q_SIGNALS:
     void subtitleIdChanged();
     void secondarySubtitleIdChanged();
     void isReadyChanged();
+    void playbackStateChanged();
     void fileStarted();
-    void fileLoaded();
     void videoReconfig();
     void videoWidthChanged();
     void videoHeightChanged();
@@ -248,6 +260,7 @@ private:
     std::unique_ptr<ChaptersModel> m_chaptersModel;
     bool m_finishedLoading{false};
     std::unique_ptr<QTimer> m_saveTimePositionTimer;
+    PlaybackState m_playbackState{PlaybackState::Stopped};
 };
 
 #endif // MPVOBJECT_H

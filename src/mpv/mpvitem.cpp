@@ -376,7 +376,8 @@ void MpvItem::onFileLoaded()
     Q_EMIT setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
 
     setFinishedLoading(true);
-    Q_EMIT fileLoaded();
+    auto state = getProperty(MpvProperties::self()->Pause).toBool() ? PlaybackState::Paused : PlaybackState::Playing;
+    setPlaybackState(state);
 }
 
 void MpvItem::onEndFile(const QString &reason)
@@ -461,6 +462,13 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
     } else if (property == MpvProperties::self()->Pause) {
         m_pause = value.toBool();
+
+        auto state = m_pause ? PlaybackState::Paused : PlaybackState::Playing;
+        if (playbackState() == PlaybackState::Stopped) {
+            state = PlaybackState::Stopped;
+        }
+        setPlaybackState(state);
+
         Q_EMIT pauseChanged();
 
     } else if (property == MpvProperties::self()->Volume) {
@@ -545,6 +553,8 @@ void MpvItem::loadFile(const QString &file)
         Q_EMIT MiscUtils::instance()->error(i18nc("@info:tooltip; %1 is an absolute path", "File doesn't exist: %1", file));
         return;
     }
+    // must be called after m_currentUrl changes
+    setPlaybackState(PlaybackState::Loading);
 
     setWatchLaterPosition(loadTimePosition());
     if (PlaybackSettings::restoreFilePosition()) {
@@ -768,6 +778,7 @@ void MpvItem::addSubtitles(const QString &subtitlesFile)
 void MpvItem::stop()
 {
     command({u"stop"_s});
+    setPlaybackState(PlaybackState::Stopped);
     update();
 }
 
@@ -985,6 +996,21 @@ inline void MpvItem::setIsReady(bool _isReady)
     }
     m_isReady = _isReady;
     Q_EMIT isReadyChanged();
+}
+
+MpvItem::PlaybackState MpvItem::playbackState() const
+{
+    return m_playbackState;
+}
+
+void MpvItem::setPlaybackState(PlaybackState newPlaybackState)
+{
+    if (m_playbackState == newPlaybackState) {
+        return;
+    }
+
+    m_playbackState = newPlaybackState;
+    Q_EMIT playbackStateChanged();
 }
 
 double MpvItem::watchLaterPosition() const
