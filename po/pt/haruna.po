@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:42+0000\n"
+"POT-Creation-Date: 2026-04-16 00:42+0000\n"
 "PO-Revision-Date: 2023-07-14 22:00+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -716,17 +716,17 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:85
+#: src/mpv/mpvitem.cpp:84
 #, kde-format
 msgid "Command line video player"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:92
+#: src/mpv/mpvitem.cpp:91
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:391
+#: src/mpv/mpvitem.cpp:410
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -734,7 +734,7 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Não foi possível reproduzir: %1"
 
-#: src/mpv/mpvitem.cpp:498 src/mpv/mpvitem.cpp:500
+#: src/mpv/mpvitem.cpp:530 src/mpv/mpvitem.cpp:532
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1"
@@ -742,20 +742,20 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Tempo das legendas: %1"
 
-#: src/mpv/mpvitem.cpp:539
+#: src/mpv/mpvitem.cpp:571
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:576
+#: src/mpv/mpvitem.cpp:604
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nenhuma"
 
-#: src/mpv/mpvitem.cpp:614
+#: src/mpv/mpvitem.cpp:642
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -763,7 +763,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Imagem"
 
-#: src/mpv/mpvitem.cpp:619
+#: src/mpv/mpvitem.cpp:647
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -771,7 +771,7 @@ msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Imagem"
 
-#: src/mpv/mpvitem.cpp:621
+#: src/mpv/mpvitem.cpp:649
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Screenshot"
@@ -779,7 +779,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Imagem"
 
-#: src/mpv/mpvitem.cpp:648
+#: src/mpv/mpvitem.cpp:676
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -787,7 +787,7 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:681
+#: src/mpv/mpvitem.cpp:709
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Skipped chapter: %1"
@@ -2090,7 +2090,7 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Velocidade de reprodução"
 
-#: src/qml/MpvVideo.qml:41
+#: src/qml/MpvVideo.qml:54
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
@@ -2111,7 +2111,7 @@ msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Reproduzir o Seguinte"
 
-#: src/qml/MpvVideo.qml:391
+#: src/qml/MpvVideo.qml:393
 msgctxt "@label:title"
 msgid "Loading…"
 msgstr ""
