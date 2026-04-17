@@ -108,6 +108,9 @@ MpvItem::MpvItem(QQuickItem *parent)
     });
 
     connect(QApplication::instance(), &QApplication::aboutToQuit, this, [=]() {
+        if (playbackState() == PlaybackState::Stopped) {
+            return;
+        }
         if (position() < duration() - 10) {
             saveTimePosition();
         } else {
