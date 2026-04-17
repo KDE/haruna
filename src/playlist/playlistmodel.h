@@ -121,16 +121,16 @@ private:
     void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(YTVideoInfo info, QVariantMap data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
-    void setPlayingItem(uint i);
+    void setPlayingItem(int i);
     void getMetaData(uint i, const QString &path);
     void onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties);
-    double getPlaybackPosition(const uint row);
+    double getPlaybackPosition(const int row);
 
     QList<PlaylistItem> m_playlist;
     QString m_playlistName{u"Default"};
     // The flag to check if this is the active playlist.
     bool m_isPlaying{false};
-    uint m_playingItem{0};
+    int m_playingItem{0};
     QString m_playlistPath;
     int m_httpItemCounter{0};
     YouTube youtube;

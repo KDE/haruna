@@ -131,7 +131,7 @@ uint PlaylistFilterProxyModel::getPlayingItem()
     return mapFromPlaylistModel(model->m_playingItem).row();
 }
 
-void PlaylistFilterProxyModel::setPlayingItem(uint i)
+void PlaylistFilterProxyModel::setPlayingItem(int i)
 {
     auto model = playlistModel();
     model->setPlayingItem(mapToPlaylistModel(i).row());

@@ -74,7 +74,7 @@ public:
     void setShowSections(bool split);
 
     Q_INVOKABLE uint getPlayingItem();
-    Q_INVOKABLE void setPlayingItem(uint i);
+    Q_INVOKABLE void setPlayingItem(int i);
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void saveM3uFile(const QString &path);
