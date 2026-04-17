@@ -126,7 +126,7 @@ private:
     void onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties);
     double getPlaybackPosition(const uint row);
 
-    std::vector<PlaylistItem> m_playlist;
+    QList<PlaylistItem> m_playlist;
     QString m_playlistName{u"Default"};
     // The flag to check if this is the active playlist.
     bool m_isPlaying{false};

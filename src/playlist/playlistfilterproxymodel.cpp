@@ -242,7 +242,7 @@ void PlaylistFilterProxyModel::renameFile(uint row)
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
         auto model = playlistModel();
         auto sourceRow = mapToPlaylistModel(row).row();
-        auto &item = model->m_playlist.at(sourceRow);
+        auto &item = model->m_playlist[sourceRow];
         item.url = QUrl::fromUserInput(urls.first().path());
         item.filename = urls.first().fileName();
 
