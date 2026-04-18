@@ -33,22 +33,8 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case IdRole:
         return item.trackid;
-    case TextRole: {
-        QString text;
-        auto title = item.title;
-        if (!title.isEmpty()) {
-            text += title.append(u" "_s);
-        }
-        auto lang = item.lang;
-        if (!lang.isEmpty()) {
-            text += lang.append(u" "_s);
-        }
-        auto codec = item.codec;
-        if (!codec.isEmpty()) {
-            text += codec;
-        }
-        return text;
-    }
+    case TextRole:
+        return item.display();
     case LanguageRole:
         return item.lang;
     case TitleRole:
@@ -131,27 +117,6 @@ int TracksModel::activeRow() const
 void TracksModel::setActiveRow(int newActiveTrack)
 {
     m_activeRow = newActiveTrack;
-}
-
-QString TracksModel::trackInfo(int row)
-{
-    const auto item = m_data.at(row);
-
-    QString text;
-    auto title = item.title;
-    if (!title.isEmpty()) {
-        text += title.append(u" "_s);
-    }
-    auto lang = item.lang;
-    if (!lang.isEmpty()) {
-        text += lang.append(u" "_s);
-    }
-    auto codec = item.codec;
-    if (!codec.isEmpty()) {
-        text += codec;
-    }
-
-    return text;
 }
 
 #include "moc_tracksmodel.cpp"

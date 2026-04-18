@@ -815,7 +815,7 @@ void MpvItem::setTrack(int row, TrackType type)
             "%2 is a string in the form: `track.title track.language track.codec`",
             "Audio: %1 %2",
             row + 1,
-            m_audioTracksModel->trackInfo(row));
+            track.display());
         Q_EMIT osdMessage(msg);
         break;
     }
@@ -831,7 +831,7 @@ void MpvItem::setTrack(int row, TrackType type)
                 "%2 is a string in the form: `track.title track.language track.codec`",
                 "Subtitle: %1 %2",
                 row,
-                m_subtitleTracksModel->trackInfo(row));
+                track.display());
             Q_EMIT osdMessage(msg);
         }
         break;
@@ -847,7 +847,7 @@ void MpvItem::setTrack(int row, TrackType type)
                 "%2 is a string in the form: `track.title track.language track.codec`",
                 "Subtitle: %1 %2",
                 row,
-                m_subtitleTracksModel->trackInfo(row));
+                track.display());
             Q_EMIT osdMessage(msg);
         }
         break;
