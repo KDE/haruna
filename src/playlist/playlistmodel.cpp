@@ -181,7 +181,7 @@ void PlaylistModel::clear()
     m_threadPool.clear();
 
     m_playlistPath = QString();
-    m_playingItem = -1;
+    m_playingItem = 0;
     beginResetModel();
     m_playlist.clear();
     endResetModel();
