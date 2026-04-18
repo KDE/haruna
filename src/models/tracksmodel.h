@@ -44,12 +44,20 @@ public:
 
     void clear();
     void addTrack(Track track);
+    const Track track(int row) const;
+    QString trackInfo(int row);
+
+    int activeRow() const;
+    void setActiveRow(int newActiveTrack);
+    int nextRow();
+    int previousRow();
 
 public Q_SLOTS:
     void setTracks(QList<Track> tracks);
 
 private:
     QList<Track> m_data;
+    int m_activeRow{-1};
 };
 
 #endif // TRACKSMODEL_H

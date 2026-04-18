@@ -90,12 +90,68 @@ void TracksModel::addTrack(Track track)
     Q_EMIT rowCountChanged();
 }
 
+const Track TracksModel::track(int row) const
+{
+    return m_data.at(row);
+}
+
 void TracksModel::setTracks(QList<Track> tracks)
 {
     beginResetModel();
     m_data = tracks;
     endResetModel();
     Q_EMIT rowCountChanged();
+}
+
+int TracksModel::nextRow()
+{
+    auto row = activeRow() + 1;
+    if (row < 0 || row >= rowCount()) {
+        return 0;
+    }
+
+    return row;
+}
+
+int TracksModel::previousRow()
+{
+    auto row = activeRow() - 1;
+    if (row < 0 || row >= rowCount()) {
+        return rowCount() - 1;
+    }
+
+    return row;
+}
+
+int TracksModel::activeRow() const
+{
+    return m_activeRow;
+}
+
+void TracksModel::setActiveRow(int newActiveTrack)
+{
+    m_activeRow = newActiveTrack;
+}
+
+QString TracksModel::trackInfo(int row)
+{
+    const auto item = m_data.at(row);
+
+    QString text;
+    auto title = item.title;
+    if (!title.isEmpty()) {
+        text += title.append(u" "_s);
+    }
+    auto lang = item.lang;
+    if (!lang.isEmpty()) {
+        text += lang.append(u" "_s);
+    }
+    auto codec = item.codec;
+    if (!codec.isEmpty()) {
+        text += codec;
+    }
+
+    return text;
 }
 
 #include "moc_tracksmodel.cpp"
