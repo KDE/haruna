@@ -14,6 +14,9 @@ import org.kde.haruna.settings
 
 PlaylistItemDelegate {
     id: root
+
+    property real dragHandleWidth: Kirigami.Units.iconSizes.smallMedium
+
     implicitHeight: Kirigami.Units.iconSizes.medium
 
     contentItem: Rectangle {
@@ -33,11 +36,8 @@ PlaylistItemDelegate {
                 Layout.topMargin: Kirigami.Units.largeSpacing
 
                 Layout.preferredWidth: {
-                    if (icon.visible) {
-                        return Math.max(dragHandle.implicitWidth, icon.width)
-                    }
-                    if (root.hovered) {
-                        return dragHandle.implicitWidth
+                    if (icon.visible || root.hovered) {
+                        return root.dragHandleWidth
                     }
                     return 0
                 }
@@ -51,20 +51,9 @@ PlaylistItemDelegate {
 
                 Row {
                     height: parent.height
-                    spacing: Kirigami.Units.largeSpacing
+                    spacing: 0
 
-                    x: {
-                        if (icon.visible) {
-                            // Center to the row
-                            if (root.hovered) {
-                                return (parent.width - dragHandle.implicitWidth) * 0.5
-                            }
-                            return (parent.width - icon.width) * 0.5 - (dragHandle.implicitWidth + Kirigami.Units.largeSpacing)
-                        }
-                        else {
-                            return 0
-                        }
-                    }
+                    x: root.hovered ? 0 : -parent.width
 
                     Behavior on x {
                         NumberAnimation {
@@ -78,6 +67,7 @@ PlaylistItemDelegate {
 
                         listItem: root.dragRect
                         listView: root.ListView?.view
+                        width: root.dragHandleWidth
 
                         onMoveRequested: function (oldIndex, newIndex) {
                             root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
@@ -91,16 +81,21 @@ PlaylistItemDelegate {
                         anchors.verticalCenter: parent.verticalCenter
                     }
 
-                    Kirigami.Icon {
-                        id: icon
-
-                        source: "media-playback-start"
-                        color: root.getLabelColor()
-                        visible: root.isPlaying
-                        width: Kirigami.Units.iconSizes.small
-                        height: Kirigami.Units.iconSizes.small
-
+                    Item {
+                        width: root.dragHandleWidth
+                        height: parent.height
                         anchors.verticalCenter: parent.verticalCenter
+
+                        Kirigami.Icon {
+                            id: icon
+
+                            source: "media-playback-start"
+                            color: root.getLabelColor()
+                            visible: root.isPlaying
+                            width: Kirigami.Units.iconSizes.small
+                            height: Kirigami.Units.iconSizes.small
+                            anchors.centerIn: parent
+                        }
                     }
                 }
             }
