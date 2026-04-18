@@ -48,6 +48,14 @@ public:
     };
     Q_ENUM(PlaybackState)
 
+    enum class TrackType {
+        Video,
+        Audio,
+        Subtitle,
+        SecondarySubtitle,
+    };
+    Q_ENUM(TrackType)
+
     Q_PROPERTY(PlaylistFilterProxyModel *activeFilterProxyModel READ activeFilterProxyModel NOTIFY activeFilterProxyModelChanged)
     PlaylistFilterProxyModel *activeFilterProxyModel();
 
@@ -167,6 +175,10 @@ public:
     Q_INVOKABLE void selectSubtitleTrack();
     Q_INVOKABLE void addSubtitles(const QString &subtitlesFile);
     Q_INVOKABLE void stop();
+
+    Q_INVOKABLE void setTrack(int row, TrackType type);
+    Q_INVOKABLE void setNextTrack(TrackType type);
+    Q_INVOKABLE void setPreviousTrack(TrackType type);
 
 Q_SIGNALS:
     void audioTracksModelChanged();

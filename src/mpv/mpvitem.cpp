@@ -609,6 +609,8 @@ void MpvItem::loadTracks(QList<QVariant> tracks)
     };
     m_subtitleTracksModel->addTrack(noneTrack);
 
+    uint ar = 0;
+    uint sr = 0;
     for (const auto &item : tracks) {
         const auto map = item.toMap();
         Track track = {
@@ -618,10 +620,18 @@ void MpvItem::loadTracks(QList<QVariant> tracks)
             map[u"codec"_s].toString(),
         };
         if (map[u"type"_s] == u"sub"_s) {
+            if (track.trackid == subtitleId()) {
+                m_subtitleTracksModel->setActiveRow(sr);
+            }
             m_subtitleTracksModel->addTrack(track);
+            sr++;
         }
         if (map[u"type"_s] == u"audio"_s) {
+            if (track.trackid == audioId()) {
+                m_audioTracksModel->setActiveRow(ar);
+            }
             m_audioTracksModel->addTrack(track);
+            ar++;
         }
     }
 
@@ -791,6 +801,104 @@ void MpvItem::stop()
 
     const auto playlistModel = activeFilterProxyModel()->playlistModel();
     playlistModel->setIsPlaying(false);
+}
+
+void MpvItem::setTrack(int row, TrackType type)
+{
+    switch (type) {
+    case TrackType::Audio: {
+        auto track = m_audioTracksModel->track(row);
+        setProperty(MpvProperties::self()->AudioId, track.trackid);
+        m_audioTracksModel->setActiveRow(row);
+        auto msg = i18nc(
+            "@info:tooltip; %1 is the track number, "
+            "%2 is a string in the form: `track.title track.language track.codec`",
+            "Audio: %1 %2",
+            row + 1,
+            m_audioTracksModel->trackInfo(row));
+        Q_EMIT osdMessage(msg);
+        break;
+    }
+    case TrackType::Subtitle: {
+        auto track = m_subtitleTracksModel->track(row);
+        setProperty(MpvProperties::self()->SubtitleId, track.trackid);
+        m_subtitleTracksModel->setActiveRow(row);
+        if (row == 0) {
+            Q_EMIT osdMessage(i18nc("@info:tooltip; osd message when no sub is selected", "Subtitle: none"));
+        } else {
+            auto msg = i18nc(
+                "@info:tooltip; %1 is the track number, "
+                "%2 is a string in the form: `track.title track.language track.codec`",
+                "Subtitle: %1 %2",
+                row,
+                m_subtitleTracksModel->trackInfo(row));
+            Q_EMIT osdMessage(msg);
+        }
+        break;
+    }
+    case TrackType::SecondarySubtitle: {
+        auto track = m_subtitleTracksModel->track(row);
+        setProperty(MpvProperties::self()->SecondarySubtitleId, track.trackid);
+        if (row == 0) {
+            Q_EMIT osdMessage(i18nc("@info:tooltip; osd message when no sub is selected", "Secondary subtitle: none"));
+        } else {
+            auto msg = i18nc(
+                "@info:tooltip; %1 is the track number, "
+                "%2 is a string in the form: `track.title track.language track.codec`",
+                "Subtitle: %1 %2",
+                row,
+                m_subtitleTracksModel->trackInfo(row));
+            Q_EMIT osdMessage(msg);
+        }
+        break;
+    }
+    case TrackType::Video:
+        break;
+    default:
+        break;
+    }
+}
+
+void MpvItem::setNextTrack(TrackType type)
+{
+    switch (type) {
+    case TrackType::Audio: {
+        auto nextRow = m_audioTracksModel->nextRow();
+        setTrack(nextRow, type);
+        break;
+    }
+    case TrackType::Subtitle: {
+        auto nextRow = m_subtitleTracksModel->nextRow();
+        setTrack(nextRow, type);
+        break;
+    }
+    case TrackType::SecondarySubtitle:
+    case TrackType::Video:
+        break;
+    default:
+        break;
+    }
+}
+
+void MpvItem::setPreviousTrack(TrackType type)
+{
+    switch (type) {
+    case TrackType::Audio: {
+        auto previousRow = m_audioTracksModel->previousRow();
+        setTrack(previousRow, type);
+        break;
+    }
+    case TrackType::Subtitle: {
+        auto previousRow = m_subtitleTracksModel->previousRow();
+        setTrack(previousRow, type);
+        break;
+    }
+    case TrackType::SecondarySubtitle:
+    case TrackType::Video:
+        break;
+    default:
+        break;
+    }
 }
 
 PlaylistFilterProxyModel *MpvItem::activeFilterProxyModel()
