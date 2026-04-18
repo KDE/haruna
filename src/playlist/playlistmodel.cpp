@@ -566,6 +566,17 @@ double PlaylistModel::getPlaybackPosition(const uint row)
     return Database::instance()->playbackPosition(hash) / duration;
 }
 
+bool PlaylistModel::isPlaying() const
+{
+    return m_isPlaying;
+}
+
+void PlaylistModel::setIsPlaying(bool newIsPlaying)
+{
+    m_isPlaying = newIsPlaying;
+    Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
+}
+
 void PlaylistModel::shuffleIndexes(std::vector<int> includedIndices)
 {
     if (m_playlist.size() <= 0) {

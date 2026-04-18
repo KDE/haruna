@@ -108,6 +108,9 @@ public:
     void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
     void stop();
 
+    bool isPlaying() const;
+    void setIsPlaying(bool newIsPlaying);
+
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path, QString playlistName);
     void playingItemChanged(QString playlistName);
