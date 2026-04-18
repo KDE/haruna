@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the haruna package.
 # Automatically generated, 2022.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:42+0000\n"
-"PO-Revision-Date: 2026-01-28 20:15+0900\n"
+"POT-Creation-Date: 2026-04-18 00:44+0000\n"
+"PO-Revision-Date: 2026-04-17 19:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -564,89 +564,67 @@ msgid "Reassign"
 msgstr "重新指派"
 
 #: src/models/mouseactionsmodel.cpp:261
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox left mouse button"
-#| msgid "Left"
+#, kde-format
 msgctxt "@label left mouse button"
 msgid "Left"
 msgstr "左鍵"
 
 #: src/models/mouseactionsmodel.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox right mouse button"
-#| msgid "Right"
+#, kde-format
 msgctxt "@label right mouse button"
 msgid "Right"
 msgstr "右鍵"
 
 #: src/models/mouseactionsmodel.cpp:265
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox middle mouse button"
-#| msgid "Middle"
+#, kde-format
 msgctxt "@label middle mouse button"
 msgid "Middle"
 msgstr "中鍵"
 
 #: src/models/mouseactionsmodel.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox forward mouse button"
-#| msgid "Forward"
+#, kde-format
 msgctxt "@label forward mouse button"
 msgid "Forward"
 msgstr "往前"
 
 #: src/models/mouseactionsmodel.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox back mouse button"
-#| msgid "Back"
+#, kde-format
 msgctxt "@label back mouse button"
 msgid "Back"
 msgstr "往後"
 
 #: src/models/mouseactionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll up"
-#| msgid "Scroll up"
+#, kde-format
 msgctxt "@label mouse scroll up"
 msgid "ScrollUp"
 msgstr "向上捲動"
 
 #: src/models/mouseactionsmodel.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll down"
-#| msgid "Scroll down"
+#, kde-format
 msgctxt "@label mouse scroll down"
 msgid "ScrollDown"
 msgstr "向下捲動"
 
 #: src/models/mouseactionsmodel.cpp:321
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox control modifier key"
-#| msgid "Control"
+#, kde-format
 msgctxt "@label control modifier key"
 msgid "Control"
 msgstr "Ctrl"
 
 #: src/models/mouseactionsmodel.cpp:323
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox shift modifier key"
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/models/mouseactionsmodel.cpp:325
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/models/mouseactionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox meta modifier key"
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -661,50 +639,50 @@ msgstr "命令列影片播放器"
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "跨平台的影音錄製、轉換與串流解決方案"
 
-#: src/mpv/mpvitem.cpp:410
+#: src/mpv/mpvitem.cpp:413
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "無法播放：%1"
 
-#: src/mpv/mpvitem.cpp:530 src/mpv/mpvitem.cpp:532
+#: src/mpv/mpvitem.cpp:533 src/mpv/mpvitem.cpp:535
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕延遲：%1 秒"
 
-#: src/mpv/mpvitem.cpp:571
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "檔案不存在：%1"
 
-#: src/mpv/mpvitem.cpp:604
+#: src/mpv/mpvitem.cpp:607
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "無"
 
-#: src/mpv/mpvitem.cpp:642
+#: src/mpv/mpvitem.cpp:645
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "螢幕截圖失敗"
 
-#: src/mpv/mpvitem.cpp:647
+#: src/mpv/mpvitem.cpp:650
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "已擷取螢幕截圖"
 
-#: src/mpv/mpvitem.cpp:649
+#: src/mpv/mpvitem.cpp:652
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "螢幕截圖：%1"
 
-#: src/mpv/mpvitem.cpp:676
+#: src/mpv/mpvitem.cpp:679
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -712,7 +690,7 @@ msgid ""
 "due to missing codecs"
 msgstr "未偵測到視訊軌，這大概是因為缺乏解碼器而無法解碼/播放視訊軌"
 
-#: src/mpv/mpvitem.cpp:709
+#: src/mpv/mpvitem.cpp:712
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
@@ -898,12 +876,9 @@ msgid "Open in Thumbnail Generator"
 msgstr "在縮圖產生器中開啟"
 
 #: src/playlist/Playlist.qml:770
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in Browser"
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
-msgstr "在瀏覽器開啟"
+msgstr "在 %1 開啟"
 
 #: src/playlist/Playlist.qml:784
 msgctxt "@action:inmenu"
@@ -2281,7 +2256,7 @@ msgstr "預設"
 #: src/qml/Settings/MouseSettings.qml:51
 msgctxt "@label represents a mouse double click, for example `Right x2`"
 msgid "x2"
-msgstr ""
+msgstr "x2"
 
 #: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@label:action change action associated with mouse event"
