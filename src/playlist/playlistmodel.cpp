@@ -79,7 +79,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case ExtensionRole:
         return QVariant(item.extension);
     case PlayingRole:
-        return QVariant(m_playingItem == index.row() && m_isPlaying);
+        return QVariant(static_cast<int>(m_playingItem) == index.row() && m_isPlaying);
     case FolderPathRole:
         return QVariant(item.folderPath);
     case DirNameRole:
@@ -479,31 +479,19 @@ bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
     // clang-format on
 }
 
-void PlaylistModel::setPlayingItem(int i)
+void PlaylistModel::setPlayingItem(uint i)
 {
     if (i >= m_playlist.size()) {
         return;
     }
 
-    int previousItem = m_playingItem;
+    uint previousItem{m_playingItem};
     m_playingItem = i;
-
-    if (i < 0) {
-        // playback was stopped, there should be no valid playing item
-        m_isPlaying = false;
-        if (previousItem >= 0) {
-            Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
-        }
-        return;
-    }
-
     m_isPlaying = true;
 
-    if (previousItem >= 0) {
-        m_playlist[previousItem].playbackPosition = getPlaybackPosition(previousItem);
-        Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
-    }
+    m_playlist[previousItem].playbackPosition = getPlaybackPosition(previousItem);
 
+    Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
     Q_EMIT playingItemChanged(m_playlistName);
 
@@ -565,12 +553,8 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::Prop
     }
 }
 
-double PlaylistModel::getPlaybackPosition(const int row)
+double PlaylistModel::getPlaybackPosition(const uint row)
 {
-    if (row < 0) {
-        return 0.0;
-    }
-
     auto duration = m_playlist[row].duration;
     auto url = QUrl::fromUserInput(m_playlist[row].url.toString());
 

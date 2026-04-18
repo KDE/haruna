@@ -788,8 +788,6 @@ void MpvItem::stop()
     setPlaybackState(PlaybackState::Stopped);
     setPause(true);
     update();
-
-    activeFilterProxyModel()->setPlayingItem(-1);
 }
 
 PlaylistFilterProxyModel *MpvItem::activeFilterProxyModel()
