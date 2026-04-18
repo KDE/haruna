@@ -24,33 +24,94 @@ PlaylistItemDelegate {
             anchors.rightMargin: Kirigami.Units.mediumSpacing
             Layout.maximumWidth: root.width - Kirigami.Units.largeSpacing * 4
 
-            Kirigami.ListItemDragHandle {
-                id: dragHandle
-                listItem: root.dragRect
-                listView: root.ListView?.view
-                onMoveRequested: function (oldIndex, newIndex) {
-                    root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
-                    root.moveItems(oldIndex, newIndex)
-                }
+            Item {
+                clip: true
                 Layout.alignment: Qt.AlignCenter
+                Layout.fillHeight: true
                 Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.bottomMargin: Kirigami.Units.largeSpacing
+                Layout.topMargin: Kirigami.Units.largeSpacing
 
-                onDragActiveChanged: {
-                    root.cacheItem()
+                Layout.preferredWidth: {
+                    if (icon.visible) {
+                        return Math.max(dragHandle.implicitWidth, icon.width)
+                    }
+                    if (root.hovered) {
+                        return dragHandle.implicitWidth
+                    }
+                    return 0
+                }
+
+                Behavior on Layout.preferredWidth {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.OutCubic
+                    }
+                }
+
+                Row {
+                    height: parent.height
+                    spacing: Kirigami.Units.largeSpacing
+
+                    x: {
+                        if (icon.visible) {
+                            // Center to the row
+                            if (root.hovered) {
+                                return (parent.width - dragHandle.implicitWidth) * 0.5
+                            }
+                            return (parent.width - icon.width) * 0.5 - (dragHandle.implicitWidth + Kirigami.Units.largeSpacing)
+                        }
+                        else {
+                            return 0
+                        }
+                    }
+
+                    Behavior on x {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration
+                            easing.type: Easing.OutCubic
+                        }
+                    }
+
+                    Kirigami.ListItemDragHandle {
+                        id: dragHandle
+
+                        listItem: root.dragRect
+                        listView: root.ListView?.view
+
+                        onMoveRequested: function (oldIndex, newIndex) {
+                            root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
+                            root.moveItems(oldIndex, newIndex)
+                        }
+
+                        onDragActiveChanged: {
+                            root.cacheItem()
+                        }
+
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    Kirigami.Icon {
+                        id: icon
+
+                        source: "media-playback-start"
+                        color: root.getLabelColor()
+                        visible: root.isPlaying
+                        width: Kirigami.Units.iconSizes.small
+                        height: Kirigami.Units.iconSizes.small
+
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
                 }
             }
 
-            Kirigami.IconTitleSubtitle {
-                icon.name: root.isPlaying ? "media-playback-start" : ""
-                icon.color: root.getLabelColor()
-                icon.width: Kirigami.Units.iconSizes.small
-                icon.height: Kirigami.Units.iconSizes.small
-                title: root.mainText()
-                subtitle: root.duration
+            Kirigami.TitleSubtitle {
                 color: root.getLabelColor()
-                ToolTip.text: root.title
-                ToolTip.visible: root.state === "Hovered"
                 elide: Text.ElideRight
+                subtitle: root.duration
+                title: root.mainText()
+                ToolTip.text: root.title
+                ToolTip.visible: root.hovered
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
             }

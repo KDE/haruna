@@ -31,6 +31,7 @@ Item {
     property string rowNumber: (index + 1).toString()
     property real alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
     property real cachedHeight: height
+    property bool hovered: hoverHandler.hovered
 
     implicitWidth: ListView.view.width
 

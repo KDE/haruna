@@ -23,29 +23,83 @@ PlaylistItemDelegate {
             anchors.fill: parent
             spacing: Kirigami.Units.largeSpacing
 
-            Kirigami.ListItemDragHandle {
-                id: dragHandle
-                listItem: root.dragRect
-                listView: root.ListView?.view
-                onMoveRequested: function (oldIndex, newIndex) {
-                    root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
-                    root.moveItems(oldIndex, newIndex)
-                }
+            Item {
+                clip: true
                 Layout.alignment: Qt.AlignCenter
+                Layout.fillHeight: true
                 Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.bottomMargin: Kirigami.Units.largeSpacing
+                Layout.topMargin: Kirigami.Units.largeSpacing
 
-                onDragActiveChanged: {
-                    root.cacheItem()
+                Layout.preferredWidth: {
+                    if (rowNumber.visible) {
+                        return Math.max(dragHandle.implicitWidth, rowNumber.implicitWidth)
+                    }
+                    if (root.hovered) {
+                        return dragHandle.implicitWidth
+                    }
+                    return 0
                 }
-            }
 
-            Label {
-                text: root.padRowNumberAsString()
-                color: root.getLabelColor()
-                visible: PlaylistSettings.showRowNumber
-                font.pointSize: root.getFontSize()
-                horizontalAlignment: Qt.AlignCenter
-                verticalAlignment: Qt.AlignVCenter
+                Behavior on Layout.preferredWidth {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.OutCubic
+                    }
+                }
+
+                Row {
+                    height: parent.height
+                    spacing: Kirigami.Units.largeSpacing
+
+                    x: {
+                        if (rowNumber.visible) {
+                            // Center to the row
+                            if (root.hovered) {
+                                return (parent.width - dragHandle.implicitWidth) * 0.5
+                            }
+                            return (parent.width - rowNumber.implicitWidth) * 0.5 - (dragHandle.implicitWidth + Kirigami.Units.largeSpacing)
+                        }
+                        else {
+                            return 0
+                        }
+                    }
+
+                    Behavior on x {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration
+                            easing.type: Easing.OutCubic
+                        }
+                    }
+
+                    Kirigami.ListItemDragHandle {
+                        id: dragHandle
+
+                        listItem: root.dragRect
+                        listView: root.ListView?.view
+
+                        onMoveRequested: function (oldIndex, newIndex) {
+                            root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
+                            root.moveItems(oldIndex, newIndex)
+                        }
+
+                        onDragActiveChanged: {
+                            root.cacheItem()
+                        }
+
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    Label {
+                        id: rowNumber
+
+                        text: root.padRowNumberAsString()
+                        color: root.getLabelColor()
+                        visible: PlaylistSettings.showRowNumber
+                        font.pointSize: root.getFontSize()
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
             }
 
             Rectangle {
@@ -63,7 +117,6 @@ PlaylistItemDelegate {
                 visible: root.isPlaying
                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                Layout.leftMargin: PlaylistSettings.showRowNumber ? 0 : Kirigami.Units.largeSpacing
             }
 
             LabelWithTooltip {
@@ -74,7 +127,6 @@ PlaylistItemDelegate {
                 font.pointSize: root.getFontSize()
                 text: PlaylistSettings.showMediaTitle ? root.title : root.name
                 Layout.fillWidth: true
-                Layout.leftMargin: PlaylistSettings.showRowNumber || root.isPlaying ? 0 : Kirigami.Units.largeSpacing
             }
 
             Label {
