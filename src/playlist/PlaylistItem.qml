@@ -14,6 +14,9 @@ import org.kde.haruna.settings
 
 PlaylistItemDelegate {
     id: root
+
+    property real dragHandleWidth: Math.max(rowNumber.implicitWidth, dragHandle.implicitWidth)
+
     implicitHeight: (getFontSize() * 3)
 
     contentItem: Rectangle {
@@ -32,11 +35,8 @@ PlaylistItemDelegate {
                 Layout.topMargin: Kirigami.Units.largeSpacing
 
                 Layout.preferredWidth: {
-                    if (rowNumber.visible) {
-                        return Math.max(dragHandle.implicitWidth, rowNumber.implicitWidth)
-                    }
-                    if (root.hovered) {
-                        return dragHandle.implicitWidth
+                    if (rowNumber.visible || root.hovered) {
+                        return root.dragHandleWidth
                     }
                     return 0
                 }
@@ -50,20 +50,9 @@ PlaylistItemDelegate {
 
                 Row {
                     height: parent.height
-                    spacing: Kirigami.Units.largeSpacing
+                    spacing: 0
 
-                    x: {
-                        if (rowNumber.visible) {
-                            // Center to the row
-                            if (root.hovered) {
-                                return (parent.width - dragHandle.implicitWidth) * 0.5
-                            }
-                            return (parent.width - rowNumber.implicitWidth) * 0.5 - (dragHandle.implicitWidth + Kirigami.Units.largeSpacing)
-                        }
-                        else {
-                            return 0
-                        }
-                    }
+                    x: root.hovered ? 0 : -parent.width
 
                     Behavior on x {
                         NumberAnimation {
@@ -77,6 +66,7 @@ PlaylistItemDelegate {
 
                         listItem: root.dragRect
                         listView: root.ListView?.view
+                        width: root.dragHandleWidth
 
                         onMoveRequested: function (oldIndex, newIndex) {
                             root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
@@ -98,6 +88,7 @@ PlaylistItemDelegate {
                         visible: PlaylistSettings.showRowNumber
                         font.pointSize: root.getFontSize()
                         anchors.verticalCenter: parent.verticalCenter
+                        width: root.dragHandleWidth
                     }
                 }
             }
