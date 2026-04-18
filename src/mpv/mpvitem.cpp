@@ -788,6 +788,9 @@ void MpvItem::stop()
     setPlaybackState(PlaybackState::Stopped);
     setPause(true);
     update();
+
+    const auto playlistModel = activeFilterProxyModel()->playlistModel();
+    playlistModel->setIsPlaying(false);
 }
 
 PlaylistFilterProxyModel *MpvItem::activeFilterProxyModel()
