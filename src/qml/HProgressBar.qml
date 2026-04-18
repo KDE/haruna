@@ -89,6 +89,7 @@ RowLayout {
                 id: progressBarToolTip
 
                 property string text
+                property int margin: Kirigami.Units.smallSpacing
 
                 x: {
                     if (slider.pressed) {
@@ -101,8 +102,12 @@ RowLayout {
                 }
                 y: -height - Kirigami.Units.largeSpacing
                 z: 10
-                width: GeneralSettings.previewThumbnailWidth + (Kirigami.Units.smallSpacing * 2)
-                height: Math.ceil(width / previewMpvLoader.aspectRatio) + (Kirigami.Units.smallSpacing * 2) + 20
+                width: previewMpvLoader.visible
+                       ? GeneralSettings.previewThumbnailWidth + (margin * 2)
+                       : timePositionLabel.width + (margin * 2)
+                height: previewMpvLoader.visible
+                        ? Math.ceil(width / previewMpvLoader.aspectRatio) + (margin * 3) + timePositionLabel.height
+                        : timePositionLabel.height + (margin * 2)
                 visible: progressBarMouseArea.containsMouse && root.m_mpv.duration > 0
 
                 color: Kirigami.Theme.backgroundColor
@@ -139,6 +144,8 @@ RowLayout {
                     }
 
                     Label {
+                        id: timePositionLabel
+
                         text: progressBarToolTip.text
                         Kirigami.Theme.colorSet: Kirigami.Theme.Tooltip
                         Layout.alignment: Qt.AlignCenter
