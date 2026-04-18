@@ -79,39 +79,11 @@ Item {
         }
 
         function onAudioCycleUpAction() {
-            const tracks = root.m_mpv.getProperty(MpvProperties.TrackList)
-            let audioTracksCount = 0
-            tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
-
-            if (audioTracksCount > 1) {
-                root.m_mpv.command(["cycle", "aid", "up"])
-                const currentTrackId = root.m_mpv.getProperty(MpvProperties.AudioId)
-
-                if (currentTrackId === false) {
-                    root.m_actionsModel.signalEmitter("audioCycleUpAction")
-                    return
-                }
-                const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Audio: %1 %2", currentTrackId, track.lang || ""))
-            }
+            root.m_mpv.setNextTrack(MpvItem.TrackType.Audio)
         }
 
         function onAudioCycleDownAction() {
-            const tracks = root.m_mpv.getProperty(MpvProperties.TrackList)
-            let audioTracksCount = 0
-            tracks.forEach(t => { if(t.type === "audio") ++audioTracksCount })
-
-            if (audioTracksCount > 1) {
-                root.m_mpv.command(["cycle", "aid", "down"])
-                const currentTrackId = root.m_mpv.getProperty(MpvProperties.AudioId)
-
-                if (currentTrackId === false) {
-                    root.m_actionsModel.signalEmitter("audioCycleDownAction")
-                    return
-                }
-                const track = tracks.find(t => t.type === "audio" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Audio: %1 %2", currentTrackId, track.lang || ""))
-            }
+            root.m_mpv.setPreviousTrack(MpvItem.TrackType.Audio)
         }
 
         function onConfigureAction() {
@@ -330,27 +302,11 @@ Item {
         }
 
         function onSubtitleCycleUpAction() {
-            root.m_mpv.command(["cycle", "sid", "up"])
-            const currentTrackId = root.m_mpv.getProperty(MpvProperties.SubtitleId)
-            if (currentTrackId === false) {
-                root.m_osd.message(i18nc("@info:tooltip", "Subtitle: None"))
-            } else {
-                const tracks = root.m_mpv.getProperty(MpvProperties.TrackList)
-                const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
-            }
+            root.m_mpv.setNextTrack(MpvItem.TrackType.Subtitle)
         }
 
         function onSubtitleCycleDownAction() {
-            root.m_mpv.command(["cycle", "sid", "down"])
-            const currentTrackId = root.m_mpv.getProperty(MpvProperties.SubtitleId)
-            if (currentTrackId === false) {
-                root.m_osd.message(i18nc("@info:tooltip", "Subtitle: None"))
-            } else {
-                const tracks = root.m_mpv.getProperty(MpvProperties.TrackList)
-                const track = tracks.find(t => t.type === "sub" && t.id === currentTrackId)
-                root.m_osd.message(i18nc("@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)", "Subtitle: %1 %2", currentTrackId, track.lang || ""))
-            }
+            root.m_mpv.setPreviousTrack(MpvItem.TrackType.Subtitle)
         }
 
         function onSubtitleIncreaseFontSizeAction() {
