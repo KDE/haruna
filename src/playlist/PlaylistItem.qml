@@ -87,6 +87,7 @@ PlaylistItemDelegate {
                         color: root.getLabelColor()
                         visible: PlaylistSettings.showRowNumber
                         font.pointSize: root.getFontSize()
+                        horizontalAlignment: Qt.AlignHCenter
                         anchors.verticalCenter: parent.verticalCenter
                         width: root.dragHandleWidth
                     }
