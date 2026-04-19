@@ -173,6 +173,7 @@ void MpvItem::initProperties()
     Q_EMIT setProperty(MpvProperties::self()->SubtitleBorderSize, SubtitlesSettings::borderSize());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleBold, SubtitlesSettings::isBold());
     Q_EMIT setProperty(MpvProperties::self()->SubtitleItalic, SubtitlesSettings::isItalic());
+    Q_EMIT setProperty(MpvProperties::self()->SubtitleBorderStyle, SubtitlesSettings::borderStyle());
     Q_EMIT setProperty(MpvProperties::self()->ReplayGain, AudioSettings::replayGain());
     Q_EMIT setProperty(MpvProperties::self()->ReplayGainClip, !AudioSettings::replayGainPreventClip());
     Q_EMIT setProperty(MpvProperties::self()->ReplayGainPreamp, AudioSettings::replayGainPreamp());

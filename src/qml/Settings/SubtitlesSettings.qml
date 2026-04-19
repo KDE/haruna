@@ -391,6 +391,45 @@ SettingsBasePage {
             }
         }
 
+        Label {
+            text: i18nc("@label:listbox", "Border style")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        ComboBox {
+            textRole: "text"
+            valueRole: "value"
+            model: ListModel {
+                id: borderStyleModel
+            }
+            Component.onCompleted: {
+                const outlineAndShadow = {
+                    text: i18nc("@item:listbox border style", "Outline and Shadow"),
+                    value: "outline-and-shadow"
+                }
+                borderStyleModel.append(outlineAndShadow)
+
+                const opaqueBox = {
+                    text: i18nc("@item:listbox border style", "Opaque Box"),
+                    value: "opaque-box"
+                }
+                borderStyleModel.append(opaqueBox)
+
+                const bgBox = {
+                    text: i18nc("@item:listbox border style", "Background Box"),
+                    value: "background-box"
+                }
+                borderStyleModel.append(bgBox)
+
+                currentIndex = indexOfValue(SubtitlesSettings.borderStyle)
+            }
+
+            onActivated: function(index) {
+                SubtitlesSettings.borderStyle = model.get(index).value
+                SubtitlesSettings.save()
+            }
+        }
+
         Item {
             Layout.preferredWidth: Kirigami.Units.gridUnit
             Layout.preferredHeight: Kirigami.Units.gridUnit

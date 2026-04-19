@@ -148,6 +148,9 @@ public:
     Q_PROPERTY(QString SubtitleAssForceMargins MEMBER SubtitleAssForceMargins CONSTANT)
     const QString SubtitleAssForceMargins{u"sub-ass-force-margins"_s};
 
+    Q_PROPERTY(QString SubtitleBorderStyle MEMBER SubtitleBorderStyle CONSTANT)
+    const QString SubtitleBorderStyle{u"sub-border-style"_s};
+
     Q_PROPERTY(QString ScreenshotFormat MEMBER ScreenshotFormat CONSTANT)
     const QString ScreenshotFormat{u"screenshot-format"_s};
 

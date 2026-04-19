@@ -176,6 +176,9 @@ ApplicationWindow {
         function onBorderSizeChanged() {
             mpv.setProperty(MpvProperties.SubtitleBorderSize, SubtitlesSettings.borderSize)
         }
+        function onBorderStyleChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBorderStyle, SubtitlesSettings.borderStyle)
+        }
     }
     Connections {
         target: VideoSettings
