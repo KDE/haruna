@@ -125,15 +125,18 @@ public:
     const QString SubtitleColor{u"sub-color"_s};
 
     Q_PROPERTY(QString SubtitleShadowColor MEMBER SubtitleShadowColor CONSTANT)
+    // `sub-shadow-color` is an alias of `sub-back-color`
     const QString SubtitleShadowColor{u"sub-shadow-color"_s};
 
     Q_PROPERTY(QString SubtitleShadowOffset MEMBER SubtitleShadowOffset CONSTANT)
     const QString SubtitleShadowOffset{u"sub-shadow-offset"_s};
 
     Q_PROPERTY(QString SubtitleBorderColor MEMBER SubtitleBorderColor CONSTANT)
+    // `sub-border-color` is an alias of `sub-outline-color`
     const QString SubtitleBorderColor{u"sub-border-color"_s};
 
     Q_PROPERTY(QString SubtitleBorderSize MEMBER SubtitleBorderSize CONSTANT)
+    // `sub-border-size` is an alias of `sub-outline-size`
     const QString SubtitleBorderSize{u"sub-border-size"_s};
 
     Q_PROPERTY(QString SubtitleBold MEMBER SubtitleBold CONSTANT)
