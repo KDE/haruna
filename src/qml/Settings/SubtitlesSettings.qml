@@ -125,11 +125,16 @@ SettingsBasePage {
 
                 model: SystemUtils.getFonts()
                 onActivated: function(index) {
-                    SubtitlesSettings.fontFamily = currentText
-                    SubtitlesSettings.save()
+                    setFontFamily()
                 }
 
                 Component.onCompleted: currentIndex = indexOfValue(SubtitlesSettings.fontFamily)
+                Layout.fillWidth: true
+
+                function setFontFamily() {
+                    SubtitlesSettings.fontFamily = currentText
+                    SubtitlesSettings.save()
+                }
             }
 
             Button {
@@ -137,6 +142,7 @@ SettingsBasePage {
                 onClicked: {
                     const index = subtitleFont.find(subtitleFont.defaultFamily)
                     subtitleFont.currentIndex = index
+                    subtitleFont.setFontFamily()
                 }
 
                 ToolTip {
