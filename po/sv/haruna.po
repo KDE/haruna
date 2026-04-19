@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-18 00:44+0000\n"
+"POT-Creation-Date: 2026-04-19 00:43+0000\n"
 "PO-Revision-Date: 2025-10-22 20:09+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -688,25 +688,25 @@ msgctxt ""
 msgid "None"
 msgstr "Ingen"
 
-#: src/mpv/mpvitem.cpp:645
+#: src/mpv/mpvitem.cpp:655
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Skärmbild misslyckades"
 
-#: src/mpv/mpvitem.cpp:650
+#: src/mpv/mpvitem.cpp:660
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
-#: src/mpv/mpvitem.cpp:652
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Skärmbild: %1"
 
-#: src/mpv/mpvitem.cpp:679
+#: src/mpv/mpvitem.cpp:689
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -716,11 +716,47 @@ msgstr ""
 "Inget videospår upptäckt, troligen kan videospåret inte avkodas eller spelas "
 "på grund av saknade avkodare."
 
-#: src/mpv/mpvitem.cpp:712
+#: src/mpv/mpvitem.cpp:722
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Hoppade över kapitel: %1"
+
+#: src/mpv/mpvitem.cpp:816
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
+#| msgid "Audio: %1 %2"
+msgctxt ""
+"@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
+"title track.language track.codec`"
+msgid "Audio: %1 %2"
+msgstr "Ljud: %1 %2"
+
+#: src/mpv/mpvitem.cpp:827
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: None"
+msgctxt "@info:tooltip; osd message when no sub is selected"
+msgid "Subtitle: none"
+msgstr "Textning: Ingen"
+
+#: src/mpv/mpvitem.cpp:832 src/mpv/mpvitem.cpp:848
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
+#| msgid "Subtitle: %1 %2"
+msgctxt ""
+"@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
+"title track.language track.codec`"
+msgid "Subtitle: %1 %2"
+msgstr "Textning: %1 %2"
+
+#: src/mpv/mpvitem.cpp:843
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Secondary Subtitle"
+msgctxt "@info:tooltip; osd message when no sub is selected"
+msgid "Secondary subtitle: none"
+msgstr "Sekundär textning"
 
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
@@ -1421,114 +1457,99 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Förval"
 
-#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
-msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-msgid "Audio: %1 %2"
-msgstr "Ljud: %1 %2"
-
-#: src/qml/Actions.qml:166
+#: src/qml/Actions.qml:138
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "Kan inte läsa in textning när ingen fil är öppen"
 
-#: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
+#: src/qml/Actions.qml:157 src/qml/Actions.qml:163 src/qml/Actions.qml:168
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Uppspelningshastighet: %1"
 
-#: src/qml/Actions.qml:295
+#: src/qml/Actions.qml:267
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Start av upprepning: %1"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:273
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Upprepa: %1 – %2"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:279
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Upprepning borttagen"
 
-#: src/qml/Actions.qml:327
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Textning av"
 
-#: src/qml/Actions.qml:327
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Textning på"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
-msgctxt "@info:tooltip"
-msgid "Subtitle: None"
-msgstr "Textning: Ingen"
-
-#: src/qml/Actions.qml:340 src/qml/Actions.qml:352
-msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-msgid "Subtitle: %1 %2"
-msgstr "Textning: %1 %2"
-
-#: src/qml/Actions.qml:359 src/qml/Actions.qml:365
+#: src/qml/Actions.qml:315 src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Textningsskala: %1"
 
-#: src/qml/Actions.qml:379
+#: src/qml/Actions.qml:335
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Ta bort inflätning: %1"
 
-#: src/qml/Actions.qml:440 src/qml/Actions.qml:446
+#: src/qml/Actions.qml:396 src/qml/Actions.qml:402
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:451
+#: src/qml/Actions.qml:407
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:414 src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:431 src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Ljusstyrka: %1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Ljusstyrka: 0"
 
-#: src/qml/Actions.qml:492 src/qml/Actions.qml:498
+#: src/qml/Actions.qml:448 src/qml/Actions.qml:454
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:503
+#: src/qml/Actions.qml:459
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:509 src/qml/Actions.qml:515
+#: src/qml/Actions.qml:465 src/qml/Actions.qml:471
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Färgmättnad: %1"
 
-#: src/qml/Actions.qml:520
+#: src/qml/Actions.qml:476
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Färgmättnad: 0"
@@ -1678,12 +1699,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Ljud"
 
-#: src/qml/HProgressBar.qml:300
+#: src/qml/HProgressBar.qml:310
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Hoppa över kapitel"
 
-#: src/qml/HProgressBar.qml:308
+#: src/qml/HProgressBar.qml:318
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"

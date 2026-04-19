@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-18 00:44+0000\n"
+"POT-Creation-Date: 2026-04-19 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -664,25 +664,25 @@ msgctxt ""
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:645
+#: src/mpv/mpvitem.cpp:655
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "截图失败"
 
-#: src/mpv/mpvitem.cpp:650
+#: src/mpv/mpvitem.cpp:660
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图已保存"
 
-#: src/mpv/mpvitem.cpp:652
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "截图：%1"
 
-#: src/mpv/mpvitem.cpp:679
+#: src/mpv/mpvitem.cpp:689
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -691,11 +691,47 @@ msgid ""
 msgstr ""
 "没有检测到视频轨道。这大概率是因为缺少编解码器而导致视频轨道无法被解码/播放。"
 
-#: src/mpv/mpvitem.cpp:712
+#: src/mpv/mpvitem.cpp:722
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "跳过的章节：%1"
+
+#: src/mpv/mpvitem.cpp:816
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
+#| msgid "Audio: %1 %2"
+msgctxt ""
+"@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
+"title track.language track.codec`"
+msgid "Audio: %1 %2"
+msgstr "音频：%1 %2"
+
+#: src/mpv/mpvitem.cpp:827
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: None"
+msgctxt "@info:tooltip; osd message when no sub is selected"
+msgid "Subtitle: none"
+msgstr "字幕：无"
+
+#: src/mpv/mpvitem.cpp:832 src/mpv/mpvitem.cpp:848
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
+#| msgid "Subtitle: %1 %2"
+msgctxt ""
+"@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
+"title track.language track.codec`"
+msgid "Subtitle: %1 %2"
+msgstr "字幕：%1 %2"
+
+#: src/mpv/mpvitem.cpp:843
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Secondary Subtitle"
+msgctxt "@info:tooltip; osd message when no sub is selected"
+msgid "Secondary subtitle: none"
+msgstr "副字幕"
 
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
@@ -1305,114 +1341,99 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "默认"
 
-#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
-msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-msgid "Audio: %1 %2"
-msgstr "音频：%1 %2"
-
-#: src/qml/Actions.qml:166
+#: src/qml/Actions.qml:138
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "没有打开文件时无法加载字幕"
 
-#: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
+#: src/qml/Actions.qml:157 src/qml/Actions.qml:163 src/qml/Actions.qml:168
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
-#: src/qml/Actions.qml:295
+#: src/qml/Actions.qml:267
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "循环起点：%1"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:273
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "循环：%1–%2"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:279
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "循环已清除"
 
-#: src/qml/Actions.qml:327
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "字幕关闭"
 
-#: src/qml/Actions.qml:327
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "字幕开启"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
-msgctxt "@info:tooltip"
-msgid "Subtitle: None"
-msgstr "字幕：无"
-
-#: src/qml/Actions.qml:340 src/qml/Actions.qml:352
-msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-msgid "Subtitle: %1 %2"
-msgstr "字幕：%1 %2"
-
-#: src/qml/Actions.qml:359 src/qml/Actions.qml:365
+#: src/qml/Actions.qml:315 src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕缩放：%1"
 
-#: src/qml/Actions.qml:379
+#: src/qml/Actions.qml:335
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "反交错：%1"
 
-#: src/qml/Actions.qml:440 src/qml/Actions.qml:446
+#: src/qml/Actions.qml:396 src/qml/Actions.qml:402
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "缩放：%1"
 
-#: src/qml/Actions.qml:451
+#: src/qml/Actions.qml:407
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "缩放：0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:414 src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "对比度：%1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "对比度：0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:431 src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:492 src/qml/Actions.qml:498
+#: src/qml/Actions.qml:448 src/qml/Actions.qml:454
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "伽马：%1"
 
-#: src/qml/Actions.qml:503
+#: src/qml/Actions.qml:459
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "伽马：0"
 
-#: src/qml/Actions.qml:509 src/qml/Actions.qml:515
+#: src/qml/Actions.qml:465 src/qml/Actions.qml:471
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "饱和度：%1"
 
-#: src/qml/Actions.qml:520
+#: src/qml/Actions.qml:476
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "饱和度：0"
@@ -1561,12 +1582,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "音频"
 
-#: src/qml/HProgressBar.qml:300
+#: src/qml/HProgressBar.qml:310
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "跳过章节"
 
-#: src/qml/HProgressBar.qml:308
+#: src/qml/HProgressBar.qml:318
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"

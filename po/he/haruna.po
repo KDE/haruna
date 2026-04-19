@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-18 00:44+0000\n"
+"POT-Creation-Date: 2026-04-19 00:43+0000\n"
 "PO-Revision-Date: 2026-04-03 14:05+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -664,25 +664,25 @@ msgctxt ""
 msgid "None"
 msgstr "אין"
 
-#: src/mpv/mpvitem.cpp:645
+#: src/mpv/mpvitem.cpp:655
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "צילום המסך נכשל"
 
-#: src/mpv/mpvitem.cpp:650
+#: src/mpv/mpvitem.cpp:660
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
-#: src/mpv/mpvitem.cpp:652
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "צילום מסך: %1"
 
-#: src/mpv/mpvitem.cpp:679
+#: src/mpv/mpvitem.cpp:689
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -690,11 +690,47 @@ msgid ""
 "due to missing codecs"
 msgstr "לא זוהתה רצועת וידאו, כנראה שאי אפשר לפענח/לנגן עקב בעיית מפענחים"
 
-#: src/mpv/mpvitem.cpp:712
+#: src/mpv/mpvitem.cpp:722
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "פרק שנפסח: %1"
+
+#: src/mpv/mpvitem.cpp:816
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
+#| msgid "Audio: %1 %2"
+msgctxt ""
+"@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
+"title track.language track.codec`"
+msgid "Audio: %1 %2"
+msgstr "שמע: %1 %2"
+
+#: src/mpv/mpvitem.cpp:827
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle: None"
+msgctxt "@info:tooltip; osd message when no sub is selected"
+msgid "Subtitle: none"
+msgstr "כתוביות: אין"
+
+#: src/mpv/mpvitem.cpp:832 src/mpv/mpvitem.cpp:848
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
+#| msgid "Subtitle: %1 %2"
+msgctxt ""
+"@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
+"title track.language track.codec`"
+msgid "Subtitle: %1 %2"
+msgstr "כתובית: %1 %2"
+
+#: src/mpv/mpvitem.cpp:843
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Secondary Subtitle"
+msgctxt "@info:tooltip; osd message when no sub is selected"
+msgid "Secondary subtitle: none"
+msgstr "כתובית משנית"
 
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
@@ -1304,114 +1340,99 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: src/qml/Actions.qml:95 src/qml/Actions.qml:113
-msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-msgid "Audio: %1 %2"
-msgstr "שמע: %1 %2"
-
-#: src/qml/Actions.qml:166
+#: src/qml/Actions.qml:138
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "לא ניתן לטעון כתוביות כשאף קובץ לא פתוח"
 
-#: src/qml/Actions.qml:185 src/qml/Actions.qml:191 src/qml/Actions.qml:196
+#: src/qml/Actions.qml:157 src/qml/Actions.qml:163 src/qml/Actions.qml:168
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "מהירות נגינה: %1"
 
-#: src/qml/Actions.qml:295
+#: src/qml/Actions.qml:267
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "תחילת לולאה: %1"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:273
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "לולאה: %1–%2"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:279
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "הלולאה נקטעה"
 
-#: src/qml/Actions.qml:327
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "כתוביות כבויות"
 
-#: src/qml/Actions.qml:327
+#: src/qml/Actions.qml:299
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "כתוביות פעילות"
 
-#: src/qml/Actions.qml:336 src/qml/Actions.qml:348
-msgctxt "@info:tooltip"
-msgid "Subtitle: None"
-msgstr "כתוביות: אין"
-
-#: src/qml/Actions.qml:340 src/qml/Actions.qml:352
-msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-msgid "Subtitle: %1 %2"
-msgstr "כתובית: %1 %2"
-
-#: src/qml/Actions.qml:359 src/qml/Actions.qml:365
+#: src/qml/Actions.qml:315 src/qml/Actions.qml:321
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "קנה מידה של כתוביות: %1"
 
-#: src/qml/Actions.qml:379
+#: src/qml/Actions.qml:335
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "ביטול שזירה: %1"
 
-#: src/qml/Actions.qml:440 src/qml/Actions.qml:446
+#: src/qml/Actions.qml:396 src/qml/Actions.qml:402
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "תקריב: %1"
 
-#: src/qml/Actions.qml:451
+#: src/qml/Actions.qml:407
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "תקריב: 0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:414 src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "ניגודיות: %1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "ניגודיות: 0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:431 src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "בהירות: %1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "בהירות: 0"
 
-#: src/qml/Actions.qml:492 src/qml/Actions.qml:498
+#: src/qml/Actions.qml:448 src/qml/Actions.qml:454
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "גאמה: %1"
 
-#: src/qml/Actions.qml:503
+#: src/qml/Actions.qml:459
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "גאמה: 0"
 
-#: src/qml/Actions.qml:509 src/qml/Actions.qml:515
+#: src/qml/Actions.qml:465 src/qml/Actions.qml:471
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "רוויה: %1"
 
-#: src/qml/Actions.qml:520
+#: src/qml/Actions.qml:476
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "רוויה: 0"
@@ -1560,12 +1581,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "שמע"
 
-#: src/qml/HProgressBar.qml:300
+#: src/qml/HProgressBar.qml:310
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "דילוג על פרקים"
 
-#: src/qml/HProgressBar.qml:308
+#: src/qml/HProgressBar.qml:318
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
