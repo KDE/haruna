@@ -596,16 +596,15 @@ void MpvItem::loadFile(const QString &file)
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
-    const auto playingRow = activeFilterProxyModel()->getPlayingItem();
-    const auto playingIndex = activeFilterProxyModel()->index(playingRow, 0);
-    const auto itemName = PlaylistSettings::showMediaTitle() ? activeFilterProxyModel()->data(playingIndex, PlaylistModel::Roles::TitleRole).toString()
-                                                             : activeFilterProxyModel()->data(playingIndex, PlaylistModel::Roles::NameRole).toString();
+    const auto model = activeFilterProxyModel();
+    const auto playingRow = model->getPlayingItem();
+    const auto playingIndex = model->index(playingRow, 0);
+    const auto title = model->data(playingIndex, PlaylistModel::Roles::TitleRole).toString();
+    const auto filename = model->data(playingIndex, PlaylistModel::Roles::NameRole).toString();
+    const auto itemName = PlaylistSettings::showMediaTitle() ? title : filename;
     // clang-format off
     const auto msg = i18nc("%1 current item number, %2 total items count, %3 item name",
-                           "[%1/%2] %3",
-                           playingRow + 1,
-                           activeFilterProxyModel()->rowCount(),
-                           itemName);
+                           "[%1/%2] %3", playingRow + 1, model->rowCount(), itemName);
     // clang-format on
     Q_EMIT osdMessage(msg);
 }
