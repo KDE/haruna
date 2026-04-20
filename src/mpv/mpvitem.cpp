@@ -601,10 +601,11 @@ void MpvItem::loadFile(const QString &file)
     const auto itemName = PlaylistSettings::showMediaTitle() ? activeFilterProxyModel()->data(playingIndex, PlaylistModel::Roles::TitleRole).toString()
                                                              : activeFilterProxyModel()->data(playingIndex, PlaylistModel::Roles::NameRole).toString();
     // clang-format off
-    const auto msg = QString::fromUtf8("[%1/%2] %3")
-                         .arg(playingRow + 1)
-                         .arg(activeFilterProxyModel()->rowCount())
-                         .arg(itemName);
+    const auto msg = i18nc("%1 current item number, %2 total items count, %3 item name",
+                           "[%1/%2] %3",
+                           playingRow + 1,
+                           activeFilterProxyModel()->rowCount(),
+                           itemName);
     // clang-format on
     Q_EMIT osdMessage(msg);
 }
