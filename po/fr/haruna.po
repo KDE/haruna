@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:43+0000\n"
+"POT-Creation-Date: 2026-04-20 00:46+0000\n"
 "PO-Revision-Date: 2026-03-31 07:23+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -642,50 +642,50 @@ msgstr ""
 "Solution multi-plate-forme pour enregistrer, convertir et diffuser de "
 "l'audio et de la vidéo"
 
-#: src/mpv/mpvitem.cpp:413
+#: src/mpv/mpvitem.cpp:414
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Lecture impossible : %1"
 
-#: src/mpv/mpvitem.cpp:533 src/mpv/mpvitem.cpp:535
+#: src/mpv/mpvitem.cpp:534 src/mpv/mpvitem.cpp:536
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Cadencement des sous-titres : %1 secondes"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:575
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Le fichier n'existe pas : %1"
 
-#: src/mpv/mpvitem.cpp:607
+#: src/mpv/mpvitem.cpp:608
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Aucun"
 
-#: src/mpv/mpvitem.cpp:655
+#: src/mpv/mpvitem.cpp:656
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Impossible de faire une copie d'écran"
 
-#: src/mpv/mpvitem.cpp:660
+#: src/mpv/mpvitem.cpp:661
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Copie d'écran effectuée"
 
-#: src/mpv/mpvitem.cpp:662
+#: src/mpv/mpvitem.cpp:663
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Copie d'écran : %1"
 
-#: src/mpv/mpvitem.cpp:689
+#: src/mpv/mpvitem.cpp:690
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -695,13 +695,13 @@ msgstr ""
 "Aucune piste vidéo n'a été détectée. Il est très probable que la piste vidéo "
 "n'a pu être décodée / lue en raison de codecs manquants."
 
-#: src/mpv/mpvitem.cpp:722
+#: src/mpv/mpvitem.cpp:723
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Chapitre ignoré : %1"
 
-#: src/mpv/mpvitem.cpp:816
+#: src/mpv/mpvitem.cpp:817
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 #| msgid "Audio: %1 %2"
@@ -711,7 +711,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Audio : %1 %2"
 
-#: src/mpv/mpvitem.cpp:827
+#: src/mpv/mpvitem.cpp:828
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -719,7 +719,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Sous-titres : aucun"
 
-#: src/mpv/mpvitem.cpp:832 src/mpv/mpvitem.cpp:848
+#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 #| msgid "Subtitle: %1 %2"
@@ -729,7 +729,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Sous-titres : %1 %2"
 
-#: src/mpv/mpvitem.cpp:843
+#: src/mpv/mpvitem.cpp:844
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -887,7 +887,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Ajouter"
 
-#: src/playlist/Playlist.qml:511 src/qml/Main.qml:533
+#: src/playlist/Playlist.qml:511 src/qml/Main.qml:536
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1611,17 +1611,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:483
+#: src/qml/Main.qml:486
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Sélectionnez un fichier"
 
-#: src/qml/Main.qml:503
+#: src/qml/Main.qml:506
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Sélectionnez un fichier de sous-titres"
 
-#: src/qml/Main.qml:530
+#: src/qml/Main.qml:533
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Ouvrir"
@@ -1877,10 +1877,10 @@ msgstr "Préampli (dB)"
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
-#: src/qml/Settings/SubtitlesSettings.qml:143
-#: src/qml/Settings/SubtitlesSettings.qml:239
-#: src/qml/Settings/SubtitlesSettings.qml:294
-#: src/qml/Settings/SubtitlesSettings.qml:369
+#: src/qml/Settings/SubtitlesSettings.qml:149
+#: src/qml/Settings/SubtitlesSettings.qml:245
+#: src/qml/Settings/SubtitlesSettings.qml:300
+#: src/qml/Settings/SubtitlesSettings.qml:375
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
 msgstr "ré-initialiser à la valeur par défaut"
@@ -2943,56 +2943,79 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Famille de polices"
 
-#: src/qml/Settings/SubtitlesSettings.qml:149
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Taille de police"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:170
 msgctxt "@label"
 msgid "Font style"
 msgstr "Style de police"
 
-#: src/qml/Settings/SubtitlesSettings.qml:169
+#: src/qml/Settings/SubtitlesSettings.qml:175
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Gras"
 
-#: src/qml/Settings/SubtitlesSettings.qml:180
+#: src/qml/Settings/SubtitlesSettings.qml:186
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Italique"
 
-#: src/qml/Settings/SubtitlesSettings.qml:189
+#: src/qml/Settings/SubtitlesSettings.qml:195
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Couleur de police"
 
-#: src/qml/Settings/SubtitlesSettings.qml:245
+#: src/qml/Settings/SubtitlesSettings.qml:251
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Couleur d'ombrage"
 
-#: src/qml/Settings/SubtitlesSettings.qml:300
+#: src/qml/Settings/SubtitlesSettings.qml:306
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Décalage de gradation"
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
-#: src/qml/Settings/SubtitlesSettings.qml:390
+#: src/qml/Settings/SubtitlesSettings.qml:321
+#: src/qml/Settings/SubtitlesSettings.qml:396
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Saisir 0 (Zéro) pour désactiver."
 
-#: src/qml/Settings/SubtitlesSettings.qml:320
+#: src/qml/Settings/SubtitlesSettings.qml:326
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Couleur de bordure"
 
-#: src/qml/Settings/SubtitlesSettings.qml:375
+#: src/qml/Settings/SubtitlesSettings.qml:381
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Épaisseur des bordures"
+
+#: src/qml/Settings/SubtitlesSettings.qml:401
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Footer style"
+msgctxt "@label:listbox"
+msgid "Border style"
+msgstr "Style de pied de page"
+
+#: src/qml/Settings/SubtitlesSettings.qml:413
+msgctxt "@item:listbox border style"
+msgid "Outline and Shadow"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:419
+msgctxt "@item:listbox border style"
+msgid "Opaque Box"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:425
+msgctxt "@item:listbox border style"
+msgid "Background Box"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:28
 msgctxt "@label:listbox"

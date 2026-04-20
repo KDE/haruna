@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:43+0000\n"
+"POT-Creation-Date: 2026-04-20 00:46+0000\n"
 "PO-Revision-Date: 2025-10-12 14:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -661,50 +661,50 @@ msgstr "명령행 동영상 재생기"
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
-#: src/mpv/mpvitem.cpp:413
+#: src/mpv/mpvitem.cpp:414
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:533 src/mpv/mpvitem.cpp:535
+#: src/mpv/mpvitem.cpp:534 src/mpv/mpvitem.cpp:536
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "자막 시간 조정: %1초"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:575
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "파일이 없음: %1"
 
-#: src/mpv/mpvitem.cpp:607
+#: src/mpv/mpvitem.cpp:608
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:655
+#: src/mpv/mpvitem.cpp:656
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:660
+#: src/mpv/mpvitem.cpp:661
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:662
+#: src/mpv/mpvitem.cpp:663
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:689
+#: src/mpv/mpvitem.cpp:690
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -714,13 +714,13 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:722
+#: src/mpv/mpvitem.cpp:723
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
-#: src/mpv/mpvitem.cpp:816
+#: src/mpv/mpvitem.cpp:817
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 #| msgid "Audio: %1 %2"
@@ -730,7 +730,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
-#: src/mpv/mpvitem.cpp:827
+#: src/mpv/mpvitem.cpp:828
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -738,7 +738,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "자막: 없음"
 
-#: src/mpv/mpvitem.cpp:832 src/mpv/mpvitem.cpp:848
+#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 #| msgid "Subtitle: %1 %2"
@@ -748,7 +748,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "자막: %1 %2"
 
-#: src/mpv/mpvitem.cpp:843
+#: src/mpv/mpvitem.cpp:844
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -937,7 +937,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "추가"
 
-#: src/playlist/Playlist.qml:511 src/qml/Main.qml:533
+#: src/playlist/Playlist.qml:511 src/qml/Main.qml:536
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1721,17 +1721,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:483
+#: src/qml/Main.qml:486
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
-#: src/qml/Main.qml:503
+#: src/qml/Main.qml:506
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
 
-#: src/qml/Main.qml:530
+#: src/qml/Main.qml:533
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
@@ -1989,10 +1989,10 @@ msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:181
 #: src/qml/Settings/AudioSettings.qml:214
-#: src/qml/Settings/SubtitlesSettings.qml:143
-#: src/qml/Settings/SubtitlesSettings.qml:239
-#: src/qml/Settings/SubtitlesSettings.qml:294
-#: src/qml/Settings/SubtitlesSettings.qml:369
+#: src/qml/Settings/SubtitlesSettings.qml:149
+#: src/qml/Settings/SubtitlesSettings.qml:245
+#: src/qml/Settings/SubtitlesSettings.qml:300
+#: src/qml/Settings/SubtitlesSettings.qml:375
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Set default value"
@@ -3022,56 +3022,79 @@ msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "글꼴 종류"
 
-#: src/qml/Settings/SubtitlesSettings.qml:149
+#: src/qml/Settings/SubtitlesSettings.qml:155
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "글꼴 크기"
 
-#: src/qml/Settings/SubtitlesSettings.qml:164
+#: src/qml/Settings/SubtitlesSettings.qml:170
 msgctxt "@label"
 msgid "Font style"
 msgstr "글꼴 스타일"
 
-#: src/qml/Settings/SubtitlesSettings.qml:169
+#: src/qml/Settings/SubtitlesSettings.qml:175
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "굵게"
 
-#: src/qml/Settings/SubtitlesSettings.qml:180
+#: src/qml/Settings/SubtitlesSettings.qml:186
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "이탤릭"
 
-#: src/qml/Settings/SubtitlesSettings.qml:189
+#: src/qml/Settings/SubtitlesSettings.qml:195
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "글자색"
 
-#: src/qml/Settings/SubtitlesSettings.qml:245
+#: src/qml/Settings/SubtitlesSettings.qml:251
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "그림자 색상"
 
-#: src/qml/Settings/SubtitlesSettings.qml:300
+#: src/qml/Settings/SubtitlesSettings.qml:306
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "그림자 오프셋"
 
-#: src/qml/Settings/SubtitlesSettings.qml:315
-#: src/qml/Settings/SubtitlesSettings.qml:390
+#: src/qml/Settings/SubtitlesSettings.qml:321
+#: src/qml/Settings/SubtitlesSettings.qml:396
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "0으로 설정하면 비활성화합니다."
 
-#: src/qml/Settings/SubtitlesSettings.qml:320
+#: src/qml/Settings/SubtitlesSettings.qml:326
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "테두리 색상"
 
-#: src/qml/Settings/SubtitlesSettings.qml:375
+#: src/qml/Settings/SubtitlesSettings.qml:381
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "경계선 두께"
+
+#: src/qml/Settings/SubtitlesSettings.qml:401
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Footer style"
+msgctxt "@label:listbox"
+msgid "Border style"
+msgstr "바닥글 스타일"
+
+#: src/qml/Settings/SubtitlesSettings.qml:413
+msgctxt "@item:listbox border style"
+msgid "Outline and Shadow"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:419
+msgctxt "@item:listbox border style"
+msgid "Opaque Box"
+msgstr ""
+
+#: src/qml/Settings/SubtitlesSettings.qml:425
+msgctxt "@item:listbox border style"
+msgid "Background Box"
+msgstr ""
 
 #: src/qml/Settings/VideoSettings.qml:28
 msgctxt "@label:listbox"
