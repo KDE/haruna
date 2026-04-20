@@ -595,6 +595,18 @@ void MpvItem::loadFile(const QString &file)
     setPropertyBlocking(MpvProperties::self()->Mute, true);
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
+
+    const auto playingRow = activeFilterProxyModel()->getPlayingItem();
+    const auto playingIndex = activeFilterProxyModel()->index(playingRow, 0);
+    const auto itemName = PlaylistSettings::showMediaTitle() ? activeFilterProxyModel()->data(playingIndex, PlaylistModel::Roles::TitleRole).toString()
+                                                             : activeFilterProxyModel()->data(playingIndex, PlaylistModel::Roles::NameRole).toString();
+    // clang-format off
+    const auto msg = QString::fromUtf8("[%1/%2] %3")
+                         .arg(playingRow + 1)
+                         .arg(activeFilterProxyModel()->rowCount())
+                         .arg(itemName);
+    // clang-format on
+    Q_EMIT osdMessage(msg);
 }
 
 void MpvItem::loadTracks(QList<QVariant> tracks)
