@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:46+0000\n"
+"POT-Creation-Date: 2026-04-21 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -735,26 +735,32 @@ msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:607
+#, kde-format
+msgctxt "%1 current item number, %2 total items count, %3 item name"
+msgid "[%1/%2] %3"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:620
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "न कश्चित्"
 
-#: src/mpv/mpvitem.cpp:656
+#: src/mpv/mpvitem.cpp:668
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट् विफलम् अभवत्"
 
-#: src/mpv/mpvitem.cpp:661
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट् गृहीतम्"
 
-#: src/mpv/mpvitem.cpp:663
+#: src/mpv/mpvitem.cpp:675
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -762,7 +768,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट्: %1"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:702
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -772,13 +778,13 @@ msgstr ""
 "कोऽपि विडियो ट्रैकः न ज्ञातः, अधिकतया विडियो ट्रैकः गम्यमानस्य कोडेक्स् इत्यस्य कारणेन "
 "डिकोड्/वादयितुं न शक्यते"
 
-#: src/mpv/mpvitem.cpp:723
+#: src/mpv/mpvitem.cpp:735
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "अध्यायः त्यक्तः: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:829
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -788,7 +794,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "श्रव्यः %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:840
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -796,7 +802,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "उपशीर्षकम् : कोऽपि नास्ति"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -806,7 +812,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "उपशीर्षकम् : %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:856
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"

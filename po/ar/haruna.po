@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:46+0000\n"
+"POT-Creation-Date: 2026-04-21 00:44+0000\n"
 "PO-Revision-Date: 2026-04-01 18:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -658,32 +658,38 @@ msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "الملف غير موجود: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:607
+#, kde-format
+msgctxt "%1 current item number, %2 total items count, %3 item name"
+msgid "[%1/%2] %3"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:620
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "لا يوجد"
 
-#: src/mpv/mpvitem.cpp:656
+#: src/mpv/mpvitem.cpp:668
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "فشل أخذ اللقطة"
 
-#: src/mpv/mpvitem.cpp:661
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "أخذت لقطة شاشة"
 
-#: src/mpv/mpvitem.cpp:663
+#: src/mpv/mpvitem.cpp:675
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "لقطة شاشة: %1"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:702
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -693,13 +699,13 @@ msgstr ""
 "لم يكتشف أي مسار فيديو، وعلى الأرجح لا يمكن فك ترميز/تشغيل مسار الفيديو بسبب "
 "فقدان برامج الترميز"
 
-#: src/mpv/mpvitem.cpp:723
+#: src/mpv/mpvitem.cpp:735
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "الفصل المُتخطى: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:829
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 #| msgid "Audio: %1 %2"
@@ -709,7 +715,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "صوت: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:840
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -717,7 +723,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "الترجمة: لا توجد"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
 #| msgid "Subtitle: %1 %2"
@@ -727,7 +733,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "الترجمة: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:856
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"

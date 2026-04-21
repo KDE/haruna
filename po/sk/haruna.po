@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:46+0000\n"
+"POT-Creation-Date: 2026-04-21 00:44+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -657,32 +657,38 @@ msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Súbor neexistuje: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:607
+#, kde-format
+msgctxt "%1 current item number, %2 total items count, %3 item name"
+msgid "[%1/%2] %3"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:620
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Žiadne"
 
-#: src/mpv/mpvitem.cpp:656
+#: src/mpv/mpvitem.cpp:668
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:661
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímka obrazovky"
 
-#: src/mpv/mpvitem.cpp:663
+#: src/mpv/mpvitem.cpp:675
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Snímka obrazovky: %1"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:702
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -692,47 +698,39 @@ msgstr ""
 "No video track detected, most likely the video track can't be decoded/played "
 "due to missing codecs"
 
-#: src/mpv/mpvitem.cpp:723
+#: src/mpv/mpvitem.cpp:735
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Preskočená kapitola: %1"
 
-#: src/mpv/mpvitem.cpp:817
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Audio: %1 %2"
+#: src/mpv/mpvitem.cpp:829
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
 msgid "Audio: %1 %2"
 msgstr "Zvuk: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: None"
+#: src/mpv/mpvitem.cpp:840
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
-msgstr "Titulky"
+msgstr "Titulky: žiadne"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Subtitle: %1 %2"
+#: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
 msgid "Subtitle: %1 %2"
 msgstr "Titulky: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#: src/mpv/mpvitem.cpp:856
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
-msgstr "Secondary Subtitle"
+msgstr "Sekundárne titulky: žiadne"
 
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
@@ -2962,27 +2960,24 @@ msgid "Border width"
 msgstr "Šírka okraja"
 
 #: src/qml/Settings/SubtitlesSettings.qml:401
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Footer style"
 msgctxt "@label:listbox"
 msgid "Border style"
-msgstr "Štýl päty"
+msgstr "Štýl ohraničenia"
 
 #: src/qml/Settings/SubtitlesSettings.qml:413
 msgctxt "@item:listbox border style"
 msgid "Outline and Shadow"
-msgstr ""
+msgstr "Obrys a tieň"
 
 #: src/qml/Settings/SubtitlesSettings.qml:419
 msgctxt "@item:listbox border style"
 msgid "Opaque Box"
-msgstr ""
+msgstr "Nepriehľadný rámček"
 
 #: src/qml/Settings/SubtitlesSettings.qml:425
 msgctxt "@item:listbox border style"
 msgid "Background Box"
-msgstr ""
+msgstr "Rámček pozadia"
 
 #: src/qml/Settings/VideoSettings.qml:28
 msgctxt "@label:listbox"

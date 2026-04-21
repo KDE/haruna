@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:46+0000\n"
+"POT-Creation-Date: 2026-04-21 00:44+0000\n"
 "PO-Revision-Date: 2025-06-21 12:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -733,26 +733,32 @@ msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:607
+#, kde-format
+msgctxt "%1 current item number, %2 total items count, %3 item name"
+msgid "[%1/%2] %3"
+msgstr ""
+
+#: src/mpv/mpvitem.cpp:620
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nada"
 
-#: src/mpv/mpvitem.cpp:656
+#: src/mpv/mpvitem.cpp:668
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "A captura de pantalla fallou."
 
-#: src/mpv/mpvitem.cpp:661
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Capturouse a pantalla."
 
-#: src/mpv/mpvitem.cpp:663
+#: src/mpv/mpvitem.cpp:675
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -760,7 +766,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:702
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -770,13 +776,13 @@ msgstr ""
 "Non se detectou ningunha pista de vídeo, o máis probábel é que a pista de "
 "vídeo non poida descodificarse ou reproducirse por faltar códecs."
 
-#: src/mpv/mpvitem.cpp:723
+#: src/mpv/mpvitem.cpp:735
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Saltouse o capítulo: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:829
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -786,7 +792,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Son: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:840
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -794,7 +800,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtítulos: ningún"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -804,7 +810,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtítulos: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:856
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
