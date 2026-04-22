@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-21 00:44+0000\n"
-"PO-Revision-Date: 2026-03-31 07:23+0200\n"
+"PO-Revision-Date: 2026-04-20 11:09+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -708,9 +708,7 @@ msgid "Skipped chapter: %1"
 msgstr "Chapitre ignoré : %1"
 
 #: src/mpv/mpvitem.cpp:829
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Audio: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -718,17 +716,13 @@ msgid "Audio: %1 %2"
 msgstr "Audio : %1 %2"
 
 #: src/mpv/mpvitem.cpp:840
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: None"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Sous-titres : aucun"
 
 #: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -736,12 +730,10 @@ msgid "Subtitle: %1 %2"
 msgstr "Sous-titres : %1 %2"
 
 #: src/mpv/mpvitem.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
-msgstr "Sous-titre secondaire"
+msgstr "Sous-titre secondaire : aucun"
 
 #: src/playlist/Playlist.qml:79
 msgctxt "@action:button"
