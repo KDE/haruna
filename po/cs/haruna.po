@@ -1,6 +1,6 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2026 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021-2024, 2026 Vit Pelcak <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-21 00:44+0000\n"
-"PO-Revision-Date: 2026-04-20 20:14+0200\n"
-"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-04-22 18:30+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,7 +80,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 "Umožňuje dočasně přepsat nastavení výběru formátu v yt-dlp. Nastavení bude "
-"přepsáno, pokud dojde ke změně nastavení prostřednictvím grafického rozhraní."
+"přepsáno, pokud dojde ke změně nastavení prostřednictvím grafického rozhraní"
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "Otevřít soubor"
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
-msgstr "Přidat externí titulky..."
+msgstr "Přidat externí titulky…"
 
 #: src/models/actionsmodel.cpp:152
 #, kde-format
@@ -666,7 +666,7 @@ msgstr "Soubor neexistuje: %1"
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
-msgstr ""
+msgstr "[%1/%2] %3"
 
 # žádné parametry funkce v inspektoru funkcí
 #: src/mpv/mpvitem.cpp:620
@@ -1404,7 +1404,7 @@ msgstr "Zvětšení: %1"
 #: src/qml/Actions.qml:407
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
-msgstr "Zvětšení: "
+msgstr "Zvětšení: 0"
 
 #: src/qml/Actions.qml:414 src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
@@ -2783,7 +2783,7 @@ msgid ""
 "When unchecked the video is resized"
 msgstr ""
 "Pokud je zaškrtnuto, seznam médií se zobrazí přes video.\n"
-"Pokud není zaškrtnuto, velikost videa se změní."
+"Pokud není zaškrtnuto, velikost videa se změní"
 
 #: src/qml/Settings/PlaylistSettings.qml:196
 msgctxt "@option:check"
@@ -3064,7 +3064,7 @@ msgstr ""
 "Zadejte šablonu názvu souboru použitou pro ukládání snímků obrazovky. "
 "Šablona určuje název souboru bez přípony souboru a může obsahovat "
 "specifikátory formátu, které budou použity při pořizování snímku obrazovky. "
-"Ve výchozím nastavení je šablona „%F-%n“. <br>Šablona může začínat relativní "
+"Ve výchozím nastavení je šablona “%F-%n”. <br>Šablona může začínat relativní "
 "nebo absolutní cestou, aby určila umístění adresáře, kam mají být snímky "
 "obrazovky uloženy.<br>Pokud konečný název souboru snímku obrazovky ukazuje "
 "na již existující soubor, soubor nebude přepsán. Snímek obrazovky se buď "
@@ -3077,7 +3077,7 @@ msgstr ""
 "souboru aktuálně přehrávaného videa.<br><li><strong>%F</strong> Stejné jako "
 "%f, ale bez přípony souboru.<br><li><strong>%x</strong> Cesta k adresáři "
 "aktuálně přehrávaného videa. Pokud se video nenachází v souborovém systému "
-"(http:// url), rozbalí se na prázdný řetězec.<br><li><strong>%X{fallback</"
+"(http:// url), rozbalí se na prázdný řetězec.<br><li><strong>%X{fallback}</"
 "strong> Stejné jako %x, ale pokud se video soubor nenachází v souborovém "
 "systému, vrátí se záložní řetězec uvnitř {…}.<br><li><strong>%p</strong> "
 "Aktuální čas přehrávání. Výsledkem je řetězec ve tvaru „HH:MM:SS“."
