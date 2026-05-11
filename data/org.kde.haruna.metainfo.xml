@@ -1641,6 +1641,7 @@
           <li xml:lang="sk">fixed the loop action, osd was not showing and progress bar was not highlighting the loop range</li>
           <li xml:lang="sl">popravljeno dejanje zanke, zaslonski meni ni bil prikazan in vrstica napredka ni označevala obsega zanke</li>
           <li xml:lang="tr">fixed the loop action, osd was not showing and progress bar was not highlighting the loop range</li>
+          <li xml:lang="uk">виправлено помилки, пов'язані із дією зациклювання, тим, що не було показано екранну панель, а панель поступу не підсвічувала діапазон циклічного відтворення</li>
           <li xml:lang="zh-CN">修复循环播放操作，OSD 不显示且进度条不高亮显示循环范围的问题</li>
           <li>before loading check that the file exists </li>
           <li xml:lang="ar">التحقق من وجود الملف قبل التحميل</li>
@@ -1764,6 +1765,7 @@
           <li xml:lang="sk">Added setting to search subtitles recursively. Searches folders relative to the parent folder of the playing file and folders defined by the `Load subtitles from` setting</li>
           <li xml:lang="sl">Dodana nastavitev za rekurzivno iskanje podnapisov. Išče mape glede na nadrejeno mapo predvajane datoteke in mape, določene z nastavitvijo `Naloži podnapise iz`</li>
           <li xml:lang="tr">Added setting to search subtitles recursively. Searches folders relative to the parent folder of the playing file and folders defined by the `Load subtitles from` setting</li>
+          <li xml:lang="uk">Додано параметр для рекурсивного пошуку субтитрів. Програма шукає теки відносно батьківської теки файла, що відтворюється, та теки, визначені параметром «Завантажувати субтитри з».</li>
           <li xml:lang="zh-CN">新增用于递归搜索字幕的设置。搜索由“加载字幕来源”设置中定义的相对正在播放文件的父文件夹的文件和文件夹</li>
           <li>Added support for opening youtube playlists from urls containing a playlist id</li>
           <li xml:lang="ar">إضافة دعم لفتح قوائم تشغيل يوتيوب من مسارات (URLs) تحتوي على معرف قائمة التشغيل</li>
@@ -1779,6 +1781,7 @@
           <li xml:lang="sk">Added support for opening youtube playlists from urls containing a playlist id</li>
           <li xml:lang="sl">Dodana podpora za odpiranje youtube seznamov predvajanja iz URL-jev, ki vsebujejo ID seznama predvajanja</li>
           <li xml:lang="tr">Added support for opening youtube playlists from urls containing a playlist id</li>
+          <li xml:lang="uk">Додано підтримку відкриття списків відтворення YouTube з адрес, що містять ідентифікатор списку відтворення</li>
           <li xml:lang="zh-CN">新增从包含播放列表 ID 的 URL 打开 Youtube 播放列表的支持</li>
           <li>Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
           <li xml:lang="ar">إضافة إجراءات لتدوير الفيديو باتجاه عقارب الساعة (Ctrl + R) وعكس اتجاه عقارب الساعة (Ctrl + E)</li>
@@ -1794,6 +1797,7 @@
           <li xml:lang="sk">Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
           <li xml:lang="sl">Dodana dejanja za vrtenje videa v smeri urinega kazalca (ctrl + r) in nasprotni smeri urinega kazalca (ctrl + e)</li>
           <li xml:lang="tr">Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
+          <li xml:lang="uk">Додано дії для обертання відео за годинниковою стрілкою (ctrl + r) та проти годинникової стрілки (ctrl + e)</li>
           <li xml:lang="zh-CN">新增操作以旋转视频，顺时针 (Ctrl+R)、逆时针 (Ctrl+E)</li>
         </ul>
         <p>Bugfixes</p>
@@ -1831,6 +1835,7 @@
           <li xml:lang="sk">Fix tracks menus showing tracks from previously opened files</li>
           <li xml:lang="sl">Popravite menije skladb, ki prikazujejo skladbe iz predhodno odprtih datotek</li>
           <li xml:lang="tr">Fix tracks menus showing tracks from previously opened files</li>
+          <li xml:lang="uk">Виправлено меню композицій — реалізовано показ композицій з раніше відкритих файлів</li>
           <li xml:lang="zh-CN">修复轨道菜单显示之前打开的文件的轨道</li>
           <li>Fix subtitles added by drag and drop not being added to the subtitles menu</li>
           <li xml:lang="ar">إصلاح الترجمات المضافة بالسحب والإفلات التي لم تكن تضاف إلى قائمة الترجمات</li>
@@ -1846,6 +1851,7 @@
           <li xml:lang="sk">Fix subtitles added by drag and drop not being added to the subtitles menu</li>
           <li xml:lang="sl">Popravite podnapise, dodane s povleci in spusti, ki niso dodani v meni s podnapisi</li>
           <li xml:lang="tr">Fix subtitles added by drag and drop not being added to the subtitles menu</li>
+          <li xml:lang="uk">Виправлено помилку, через яку субтитри, додані перетягуванням, не додавалися до меню субтитрів</li>
           <li xml:lang="zh-CN">修复通过拖放添加的字幕不被添加到字幕菜单的问题</li>
           <li>While the progress/seek slider is pressed the video is paused, fixes continuously opening the next video when dragged and held all the why to the end</li>
           <li xml:lang="ar">إيقاف الفيديو مؤقتاً عند الضغط على منزلق التقدم/السعي، مما يصلح الفتح المستمر للفيديو التالي عند السحب والإمساك حتى النهاية</li>
@@ -1861,6 +1867,7 @@
           <li xml:lang="sk">While the progress/seek slider is pressed the video is paused, fixes continuously opening the next video when dragged and held all the why to the end</li>
           <li xml:lang="sl">Medtem ko je drsnik za napredovanje/iskanje pritisnjen, se videoposnetek začasno ustavi, popravlja neprekinjeno odpiranje naslednjega videoposnetka, ko povlečete in zadržite vse zakaj do konca</li>
           <li xml:lang="tr">While the progress/seek slider is pressed the video is paused, fixes continuously opening the next video when dragged and held all the why to the end</li>
+          <li xml:lang="uk">Поки натиснуто повзунок поступу/позиціювання, відео призупиняється, виправлено постійне відкриття наступного відео при перетягуванні та утримуванні повзунка аж до кінця</li>
           <li xml:lang="zh-CN">当进度条被按下时视频暂停，修复拖放时按住不放直至结束连续打开下一条视频</li>
         </ul>
       </description>
@@ -1903,6 +1910,7 @@
           <li xml:lang="sk">Fixed app not getting focused when opening a file while single instance is enabled and player is open</li>
           <li xml:lang="sl">Odpravljena aplikacija, ki ni bila fokusirana pri odpiranju datoteke, ko je omogočen en primerek in je predvajalnik odprt</li>
           <li xml:lang="tr">Fixed app not getting focused when opening a file while single instance is enabled and player is open</li>
+          <li xml:lang="uk">Виправлено помилку, через яку програма не перебувала у фокусі при відкритті файла, якщо увімкнено режим єдиного екземпляра і відкрито програвач</li>
           <li xml:lang="zh-CN">修复在启用了单个实例且播放器打开时，打开文件不会聚焦应用窗口的问题</li>
           <li>Fixed overlapping the window title with the duration info in the footer</li>
           <li xml:lang="ar">إصلاح تداخل عنوان النافذة مع معلومات المدة في التذييل</li>
@@ -1918,6 +1926,7 @@
           <li xml:lang="sk">Fixed overlapping the window title with the duration info in the footer</li>
           <li xml:lang="sl">Popravljeno prekrivanje naslova okna z informacijami o trajanju v nogi</li>
           <li xml:lang="tr">Fixed overlapping the window title with the duration info in the footer</li>
+          <li xml:lang="uk">Виправлено перекриття заголовка вікна з інформацією про тривалість у нижньому колонтитулі</li>
           <li xml:lang="zh-CN">修复了窗口标题和页脚的持续时间信息重叠的问题</li>
           <li>Implemented screen inhibition on Windows</li>
           <li xml:lang="ar">تطبيق منع شاشة التوقف في ويندوز</li>
@@ -1933,6 +1942,7 @@
           <li xml:lang="sk">Implemented screen inhibition on Windows</li>
           <li xml:lang="sl">Izvedena zapora zaslona v sistemu Windows</li>
           <li xml:lang="tr">Implemented screen inhibition on Windows</li>
+          <li xml:lang="uk">Реалізовано блокування екрана у Windows</li>
           <li xml:lang="zh-CN">在 Windows 下实现阻止熄屏</li>
         </ul>
       </description>
@@ -1975,6 +1985,7 @@
           <li xml:lang="sk">Fixed shortcuts not working with non english system language</li>
           <li xml:lang="sl">Popravljene bližnjice, ki ne delujejo z neangleškim jezikom sistema</li>
           <li xml:lang="tr">Fixed shortcuts not working with non english system language</li>
+          <li xml:lang="uk">Виправлено проблеми з роботою комбінацій клавіш, якщо мовою системи не є англійська</li>
           <li xml:lang="zh-CN">修复系统语言为非英语时快捷键不工作的问题</li>
           <li>Fixed restoring playback position</li>
           <li xml:lang="ar">إصلاح استعادة موضع التشغيل</li>
@@ -1992,6 +2003,7 @@
           <li xml:lang="sk">Fixed restoring playback position</li>
           <li xml:lang="sl">Popravljena obnovitev položaja predvajanja</li>
           <li xml:lang="tr">Fixed restoring playback position</li>
+          <li xml:lang="uk">Виправлено відновлення позиції відтворення</li>
           <li xml:lang="zh-CN">修复恢复播放进度</li>
         </ul>
       </description>
@@ -2035,6 +2047,7 @@
           <li xml:lang="sk">Fixed screen inhibition not working</li>
           <li xml:lang="sl">Popravljeno zaviranje zaslona ne deluje</li>
           <li xml:lang="tr">Fixed screen inhibition not working</li>
+          <li xml:lang="uk">Виправлено працездатність блокування екрана</li>
           <li xml:lang="zh-CN">修复阻止熄屏不工作的问题</li>
           <li>Fixed setting volume through mpris2</li>
           <li xml:lang="ar">إصلاح ضبط مستوى الصوت عبر mpris2</li>
@@ -2051,6 +2064,7 @@
           <li xml:lang="sk">Fixed setting volume through mpris2</li>
           <li xml:lang="sl">Popravljena nastavitev glasnosti prek mpris2</li>
           <li xml:lang="tr">Fixed setting volume through mpris2</li>
+          <li xml:lang="uk">Виправлено встановлення гучності за допомогою mpris2</li>
           <li xml:lang="zh-CN">修复通过 mpris2 设置音量</li>
         </ul>
       </description>
@@ -2071,6 +2085,7 @@
         <p xml:lang="sk">There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
         <p xml:lang="sl">Bilo je veliko preoblikovanja kode, zato ne pozabite prijaviti vseh napak, na katere naletite. V meniju "Pomoč" ali v nastavitvah na strani z informacijami je vnos menija "Prijavi napako".</p>
         <p xml:lang="tr">There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
+        <p xml:lang="uk">Було виконано значне переформатування програмного коду, тому обов’язково повідомляйте про будь-які помилки, з якими ви зіткнулися. У меню «Довідка» або в налаштуваннях на сторінці «Про програму» є пункт «Надіслати звіт про помилку».</p>
         <p xml:lang="zh-CN">因为进行了大量的代码重构，请在遇到问题时向我们报告。您可以在程序的“帮助”菜单中找到“报告程序缺陷”条目，也可以在设置对话框的“关于”页面中报告。</p>
         <p>Features:</p>
         <p xml:lang="ar">الميزات:</p>
