@@ -395,40 +395,13 @@ ApplicationWindow {
         }
     }
 
-    Loader {
+    SettingsWindow {
         id: settingsLoader
 
-        property int page: SettingsWindow.Page.General
-
-        active: false
-        asynchronous: true
-        sourceComponent: SettingsWindow {
-            m_mpv: mpv
-            m_proxyActionsModel: proxyActionsModel
-            m_customCommandsModel: customCommandsModel
-            m_mouseActionsModel: mouseActionsModel
-
-            onClosing: settingsLoader.active = false
-            onCurrentPageChanged: settingsLoader.page = currentPage
-        }
-
-        function openSettingPage(page: int) : void {
-            if (!settingsLoader.active) {
-                settingsLoader.active = true
-                settingsLoader.loaded.connect(function() {
-                    settingsLoader.openSettingPage(page)
-                })
-                return
-            }
-
-            const settingsWindow = settingsLoader.item as SettingsWindow
-            settingsWindow.currentPage = page
-            if (settingsWindow.visible) {
-                settingsWindow.raise()
-            } else {
-                settingsWindow.visible = true
-            }
-        }
+        m_mpv: mpv
+        m_proxyActionsModel: proxyActionsModel
+        m_customCommandsModel: customCommandsModel
+        m_mouseActionsModel: mouseActionsModel
     }
 
     Loader {

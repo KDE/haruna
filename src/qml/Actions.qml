@@ -19,7 +19,7 @@ Item {
     required property ActionsModel m_actionsModel
     required property MpvItem m_mpv
     required property Loader m_mpvContextMenuLoader
-    required property Loader m_settingsLoader
+    required property SettingsWindow m_settingsLoader
     required property Osd m_osd
     required property SelectActionPopup m_triggerActionPopup
     required property InputPopup m_openUrlPopup
@@ -87,7 +87,7 @@ Item {
         }
 
         function onConfigureAction() {
-            root.m_settingsLoader.openSettingPage(root.m_settingsLoader.page)
+            root.m_settingsLoader.openSettingPage(root.m_settingsLoader.activePage)
         }
 
         function onConfigureShortcutsAction() {
