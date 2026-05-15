@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include <utility>
+
 #include "tracksmodel.h"
 
 using namespace Qt::StringLiterals;
@@ -68,7 +70,7 @@ void TracksModel::clear()
     endResetModel();
 }
 
-void TracksModel::addTrack(Track track)
+void TracksModel::addTrack(const Track &track)
 {
     beginInsertRows(QModelIndex(), m_data.count(), m_data.count());
     m_data.append(track);
@@ -84,7 +86,7 @@ const Track TracksModel::track(int row) const
 void TracksModel::setTracks(QList<Track> tracks)
 {
     beginResetModel();
-    m_data = tracks;
+    m_data = std::move(tracks);
     endResetModel();
     Q_EMIT rowCountChanged();
 }

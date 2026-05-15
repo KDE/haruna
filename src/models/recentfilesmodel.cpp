@@ -6,10 +6,6 @@
 
 #include "recentfilesmodel.h"
 
-#include <QJsonDocument>
-#include <QJsonValue>
-#include <QUrlQuery>
-
 #include "database.h"
 #include "generalsettings.h"
 #include "youtube.h"
@@ -26,7 +22,7 @@ const QString Other       = u"Other"_s;
 RecentFilesModel::RecentFilesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(&youtube, &YouTube::videoInfoRetrieved, this, [this](YTVideoInfo info, QVariantMap data) {
+    connect(&youtube, &YouTube::videoInfoRetrieved, this, [this](const YTVideoInfo &info, const QVariantMap &data) {
         addRecentFile(info.url, data.value(u"openedFrom"_s).value<OpenedFrom>(), info.mediaTitle);
     });
     getItems();

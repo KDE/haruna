@@ -17,7 +17,7 @@ class QJSEngine;
 struct YTVideoInfo {
     QUrl url;
     QString mediaTitle;
-    double duration;
+    double duration{0.0};
 };
 
 class YouTube : public QObject
@@ -34,7 +34,7 @@ public:
     Q_INVOKABLE void getPlaylist(const QUrl &url);
     Q_INVOKABLE QUrl normalizeUrl(const QUrl &url);
     Q_INVOKABLE bool isYoutubeUrl(const QUrl &url);
-    Q_INVOKABLE void getVideoInfo(const QUrl &url, QVariantMap data);
+    Q_INVOKABLE void getVideoInfo(const QUrl &url, const QVariantMap &data);
 
 Q_SIGNALS:
     void playlistRetrieved(QJsonArray playlist, const QString &videoId, const QString &playlistId);

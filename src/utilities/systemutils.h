@@ -22,9 +22,9 @@ public:
     Q_INVOKABLE QString platformName();
     Q_INVOKABLE bool isPlatformWayland();
     Q_INVOKABLE static bool isHanaInstalled();
-    Q_INVOKABLE static bool openHana(QUrl url);
+    Q_INVOKABLE static bool openHana(const QUrl &url);
     Q_INVOKABLE static bool isMediaInfoInstalled();
-    Q_INVOKABLE static bool openMediaInfo(QUrl url);
+    Q_INVOKABLE static bool openMediaInfo(const QUrl &url);
 };
 
 #endif // SYSTEMUTILS_H

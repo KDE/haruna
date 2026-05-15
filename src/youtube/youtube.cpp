@@ -8,6 +8,7 @@
 
 #include <QJsonDocument>
 #include <QJsonValue>
+#include <QJsonObject>
 #include <QProcess>
 #include <QQmlEngine>
 #include <QStandardPaths>
@@ -17,9 +18,7 @@
 
 using namespace Qt::StringLiterals;
 
-YouTube::YouTube()
-{
-}
+YouTube::YouTube() = default;
 
 bool YouTube::hasYoutubeDl()
 {
@@ -68,8 +67,9 @@ void YouTube::getPlaylist(const QUrl &url)
         const auto output = ytdlProcess->readAllStandardOutput();
         const auto errorString = ytdlProcess->readAllStandardError();
         const QString json = QString::fromUtf8(output);
-        const QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())[u"entries"_s];
-        // QString playlistTitle = QJsonDocument::fromJson(json.toUtf8())[u"title")].toString();
+        const auto jsonObject = QJsonDocument::fromJson(json.toUtf8()).object();
+        const QJsonValue entries = jsonObject.value(u"entries");
+        // QString playlistTitle = jsonObject.value(u"title").toString();
         const auto playlist = entries.toArray();
 
         if (output.contains("null\n")) {
@@ -119,7 +119,7 @@ bool YouTube::isYoutubeUrl(const QUrl &url)
     return false;
 }
 
-void YouTube::getVideoInfo(const QUrl &url, QVariantMap data)
+void YouTube::getVideoInfo(const QUrl &url, const QVariantMap &data)
 {
     QUrlQuery query{url.query()};
     QString playlistId{query.queryItemValue(u"list"_s)};
@@ -137,8 +137,9 @@ void YouTube::getVideoInfo(const QUrl &url, QVariantMap data)
 
     connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
-        QString title = QJsonDocument::fromJson(json.toUtf8())[u"title"_s].toString();
-        auto duration = QJsonDocument::fromJson(json.toUtf8())[u"duration"_s].toDouble();
+        const auto jsonObject = QJsonDocument::fromJson(json.toUtf8()).object();
+        QString title = jsonObject.value(u"title").toString();
+        auto duration = jsonObject.value(u"duration").toDouble();
         YTVideoInfo info;
         info.url = url;
         info.mediaTitle = title;

@@ -110,7 +110,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
 {
     auto url = QUrl::fromUserInput(path);
     if (!url.isLocalFile()) {
-        return QString();
+        return {};
     }
 
     QString mimeType = MiscUtils::mimeType(url);
@@ -123,20 +123,22 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
         ex->extract(&result);
         QString base64 = u"data:image/png;base64,"_s;
         auto imageData = result.imageData();
+        QByteArray data;
         if (!imageData.isEmpty()) {
             // look for image inside the file
             using namespace KFileMetaData;
             if (imageData.contains(EmbeddedImageData::MovieScreenCapture)) {
-                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::MovieScreenCapture].toBase64()));
+                data = imageData.value(EmbeddedImageData::MovieScreenCapture);
             } else if (imageData.contains(EmbeddedImageData::FrontCover)) {
-                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::FrontCover].toBase64()));
+                data = imageData.value(EmbeddedImageData::FrontCover);
             } else if (imageData.contains(EmbeddedImageData::BackCover)) {
-                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::BackCover].toBase64()));
+                data = imageData.value(EmbeddedImageData::BackCover);
             } else if (imageData.contains(EmbeddedImageData::Other)) {
-                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::Other].toBase64()));
+                data = imageData.value(EmbeddedImageData::Other);
             } else {
-                return base64.append(QString::fromUtf8(imageData[EmbeddedImageData::Unknown].toBase64()));
+                data = imageData.value(EmbeddedImageData::Unknown);
             }
+            return base64.append(QString::fromUtf8(data.toBase64()));
         } else {
             QImage image = m_image;
             if (image.isNull()) {
@@ -149,7 +151,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
             }
         }
     }
-    return QString();
+    return {};
 }
 
 void MediaPlayer2Player::Next()

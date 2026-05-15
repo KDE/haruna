@@ -59,7 +59,7 @@ public:
 
     Q_PROPERTY(QString searchText READ searchText WRITE setSearchText NOTIFY searchTextChanged)
     QString searchText();
-    void setSearchText(QString text);
+    void setSearchText(const QString &text);
 
     Q_PROPERTY(Sort sortPreset READ sortPreset WRITE setSortPreset NOTIFY itemsSorted)
     Sort sortPreset();
@@ -91,7 +91,7 @@ public:
     Q_INVOKABLE void moveItems(uint row, uint destinationRow);
     Q_INVOKABLE void selectItem(uint row, Selection selectionMode);
     Q_INVOKABLE void refreshData();
-    Q_INVOKABLE void addFilesAndFolders(QList<QUrl> urls, PlaylistModel::Behavior behavior, uint insertOffset = 0);
+    Q_INVOKABLE void addFilesAndFolders(const QList<QUrl> &urls, PlaylistModel::Behavior behavior, uint insertOffset = 0);
     Q_INVOKABLE bool isDirectory(const QUrl &url);
 
     // PlaylistSortProxyModel
@@ -105,7 +105,7 @@ public:
     Q_INVOKABLE void removeFromActiveGroup(uint index) const;
     Q_INVOKABLE void setGroupHideBlank(uint index, bool hide) const;
     Q_INVOKABLE void setSortPropertySortingOrder(uint index, int order) const;
-    Q_INVOKABLE QStringList getSectionList(QString sectionKey) const;
+    Q_INVOKABLE QStringList getSectionList(const QString &sectionKey) const;
     Q_INVOKABLE QString playlistName() const;
 
     // PlaylistModel

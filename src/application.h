@@ -60,11 +60,11 @@ public:
     Q_INVOKABLE int frameworksVersionMinor();
     Q_INVOKABLE int qtMajorVersion();
     Q_INVOKABLE void raiseWindow();
-    Q_INVOKABLE void aboutDataAddComponent(KAboutComponent component);
+    Q_INVOKABLE void aboutDataAddComponent(const KAboutComponent &component);
 
     static QString version();
 
-    void handleSecondayInstanceMessage(const QByteArray &message, const QString activationToken);
+    void handleSecondayInstanceMessage(const QByteArray &message, const QString &activationToken);
     QCommandLineParser *parser() const;
 
     QQmlApplicationEngine *qmlEngine() const;

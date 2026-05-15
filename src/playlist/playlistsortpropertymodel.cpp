@@ -20,35 +20,35 @@ int PlaylistSortPropertyModel::rowCount(const QModelIndex &parent) const
 QVariant PlaylistSortPropertyModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
-    auto property = m_properties.at(index.row());
+    const auto &property = m_properties.at(index.row());
     switch (role) {
     case LabelRole:
-        return QVariant(property.text);
+        return property.text;
     case SortRole:
-        return QVariant(property.sort);
+        return property.sort;
     case CategoryRole:
-        return QVariant(property.category);
+        return property.category;
     case OrderRole:
-        return QVariant(property.order);
+        return property.order;
     case HideBlankRole:
-        return QVariant(property.hideBlank);
+        return property.hideBlank;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> PlaylistSortPropertyModel::roleNames() const
 {
     // clang-format off
-    QHash<int, QByteArray> roles = {
-    {LabelRole,     QByteArrayLiteral("label")},
-    {SortRole,      QByteArrayLiteral("sort")},
-    {CategoryRole,  QByteArrayLiteral("category")},
-    {OrderRole,     QByteArrayLiteral("order")},
-    {HideBlankRole, QByteArrayLiteral("hideBlank")},
+    static QHash<int, QByteArray> roles = {
+        {LabelRole,     QByteArrayLiteral("label")},
+        {SortRole,      QByteArrayLiteral("sort")},
+        {CategoryRole,  QByteArrayLiteral("category")},
+        {OrderRole,     QByteArrayLiteral("order")},
+        {HideBlankRole, QByteArrayLiteral("hideBlank")},
     };
     // clang-format on
 
@@ -90,16 +90,16 @@ bool PlaylistSortPropertyModel::moveRows(const QModelIndex &sourceParent, int so
 SortProperty PlaylistSortPropertyModel::takeSortProperty(const int sort)
 {
     for (qsizetype i = 0; i < m_properties.size(); ++i) {
-        SortProperty property = m_properties[i];
+        SortProperty property = m_properties.at(i);
         if (property.sort == sort) {
             removeProperty(i);
             return property;
         }
     }
-    return SortProperty();
+    return {};
 }
 
-void PlaylistSortPropertyModel::appendSortProperty(SortProperty property)
+void PlaylistSortPropertyModel::appendSortProperty(const SortProperty &property)
 {
     beginInsertRows(QModelIndex(), m_properties.size(), m_properties.size());
     m_properties.push_back(property);
@@ -117,8 +117,7 @@ void PlaylistSortPropertyModel::removeProperty(uint index)
 
 bool PlaylistSortPropertyModel::hasProperty(const int sort)
 {
-    for (qsizetype i = 0; i < m_properties.size(); ++i) {
-        SortProperty property = m_properties[i];
+    for (const auto &property : std::as_const(m_properties)) {
         if (property.sort == sort) {
             return true;
         }

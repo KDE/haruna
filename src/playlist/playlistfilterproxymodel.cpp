@@ -48,7 +48,7 @@ PlaylistFilterProxyModel::PlaylistFilterProxyModel(QObject *parent)
 QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) const
 {
     if (role == PlaylistModel::IsSelectedRole) {
-        return QVariant(m_selectionModel.isSelected(index));
+        return {m_selectionModel.isSelected(index)};
     }
     return sourceModel()->data(mapToSource(index), role);
 }
@@ -68,7 +68,7 @@ QString PlaylistFilterProxyModel::searchText()
     return filterRegularExpression().pattern();
 }
 
-void PlaylistFilterProxyModel::setSearchText(QString text)
+void PlaylistFilterProxyModel::setSearchText(const QString &text)
 {
     Filter filter = PlaylistSettings::showMediaTitle() ? Filter::Title : Filter::Name;
     setFilterRole(filter);
@@ -213,9 +213,9 @@ void PlaylistFilterProxyModel::removeItem(uint row)
 void PlaylistFilterProxyModel::removeItems()
 {
     QList<int> rows;
-    QModelIndexList selected = selectedRows();
-    for (auto it = selected.begin(); it != selected.end(); ++it) {
-        auto sourceRow = mapToPlaylistModel(it->row()).row();
+    const QModelIndexList selected = selectedRows();
+    for (const auto &it : selected) {
+        auto sourceRow = mapToPlaylistModel(it.row()).row();
         rows.append(sourceRow);
     }
     // Need to remove items from bottom to top, in order not to mess with the indices
@@ -518,10 +518,10 @@ void PlaylistFilterProxyModel::refreshData()
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
 }
 
-void PlaylistFilterProxyModel::addFilesAndFolders(QList<QUrl> urls, PlaylistModel::Behavior behavior, uint insertOffset)
+void PlaylistFilterProxyModel::addFilesAndFolders(const QList<QUrl> &urls, PlaylistModel::Behavior behavior, uint insertOffset)
 {
     auto getCanonicalOrAbsolutePath = [](const QFileInfo &fi) -> QString {
-        const QString canonical = fi.canonicalFilePath();
+        QString canonical = fi.canonicalFilePath();
         if (canonical.isEmpty()) {
             return fi.absoluteFilePath();
         }
@@ -673,9 +673,9 @@ void PlaylistFilterProxyModel::setSortPropertySortingOrder(uint index, int order
     playlistSortProxyModel()->setSortPropertySortingOrder(index, order);
 }
 
-QStringList PlaylistFilterProxyModel::getSectionList(QString sectionKey) const
+QStringList PlaylistFilterProxyModel::getSectionList(const QString &sectionKey) const
 {
-    return playlistSortProxyModel()->m_sectionMap[sectionKey];
+    return playlistSortProxyModel()->m_sectionMap.value(sectionKey);
 }
 
 QString PlaylistFilterProxyModel::playlistName() const

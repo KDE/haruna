@@ -7,12 +7,12 @@
 #include "playlistproxymodel.h"
 
 struct Range {
-    uint first;
-    uint last;
+    uint first{0};
+    uint last{0};
     Range(uint a, uint b)
+        : first(a)
+        , last(b)
     {
-        first = a;
-        last = b;
     }
     uint length() const
     {
@@ -56,14 +56,14 @@ QVariant PlaylistProxyModel::data(const QModelIndex &index, int role) const
 QModelIndex PlaylistProxyModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (parent.isValid()) {
-        return QModelIndex();
+        return {};
     }
     return createIndex(row, column);
 }
 
 QModelIndex PlaylistProxyModel::parent(const QModelIndex & /* child */) const
 {
-    return QModelIndex();
+    return {};
 }
 
 int PlaylistProxyModel::rowCount(const QModelIndex & /* parent */) const
@@ -80,7 +80,7 @@ int PlaylistProxyModel::columnCount(const QModelIndex & /* parent */) const
 QModelIndex PlaylistProxyModel::mapToSource(const QModelIndex &proxyIndex) const
 {
     if (!proxyIndex.isValid()) {
-        return QModelIndex();
+        return {};
     }
     return sourceModel()->index(remapRowToSource(proxyIndex.row()), 0);
 }
@@ -88,7 +88,7 @@ QModelIndex PlaylistProxyModel::mapToSource(const QModelIndex &proxyIndex) const
 QModelIndex PlaylistProxyModel::mapFromSource(const QModelIndex &sourceIndex) const
 {
     if (!sourceIndex.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     return index(remapRowFromSource(sourceIndex.row()), 0);
@@ -129,7 +129,7 @@ void PlaylistProxyModel::resetLayout()
 int PlaylistProxyModel::remapRowToSource(int row) const
 {
     if (row < m_layout.size()) {
-        return m_layout[row];
+        return m_layout.at(row);
     }
     return row;
 }
@@ -156,13 +156,13 @@ void PlaylistProxyModel::onRowsAboutToBeInserted(const QModelIndex &, int first,
     // that are bigger than the new row index to keep the models synced.
     // Iterate the list and increment all indices that are greater than the indices of the new rows
     uint rowsInserted = last - first + 1;
-    for (auto itemRow = m_layout.begin(); itemRow != m_layout.end(); ++itemRow) {
-        if (*itemRow >= uint(first)) {
-            *itemRow += rowsInserted;
+    for (unsigned int &itemRow : m_layout) {
+        if (itemRow >= static_cast<uint>(first)) {
+            itemRow += rowsInserted;
         }
     }
 
-    int insertPosition;
+    int insertPosition = 0;
     if (m_insert) {
         insertPosition = m_insertOffset;
     } else {
@@ -224,9 +224,9 @@ void PlaylistProxyModel::onRowsAboutToBeRemoved(const QModelIndex &, int first, 
     // will be decreased by 3. (Indices 5,6,7... will become 2,3,4...) So our mappings to the old indices
     // must be updated accordingly by reducing the same amount from those indices
     uint deltaRow = last - first + 1;
-    for (auto itemRow = m_layout.begin(); itemRow != m_layout.end(); ++itemRow) {
-        if (*itemRow > uint(last)) {
-            *itemRow -= deltaRow;
+    for (unsigned int & itemRow : m_layout) {
+        if (itemRow > static_cast<uint>(last)) {
+            itemRow -= deltaRow;
         }
     }
 

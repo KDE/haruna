@@ -182,11 +182,11 @@ void FrameDecoder::seek(int timeInSeconds)
     }
 
     int keyFrameAttempts = 0;
-    bool gotFrame = 0;
+    bool gotFrame = false;
 
     do {
         int count = 0;
-        gotFrame = 0;
+        gotFrame = false;
 
         while (!gotFrame && count < 20) {
             getVideoPacket();
@@ -201,7 +201,7 @@ void FrameDecoder::seek(int timeInSeconds)
     } while ((!gotFrame || m_pFrame->flags & AV_FRAME_FLAG_KEY) && keyFrameAttempts < 200);
 #endif
 
-    if (gotFrame == 0) {
+    if (!gotFrame) {
         qDebug() << "Seeking in video failed";
     }
 }
@@ -342,7 +342,7 @@ bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVP
         return false;
     }
 
-    av_image_copy(dst->data, dst->linesize, (const uint8_t **)m_filterFrame->data, m_filterFrame->linesize, pixfmt, width, height);
+    av_image_copy(dst->data, dst->linesize, static_cast<uint8_t **>(m_filterFrame->data), m_filterFrame->linesize, pixfmt, width, height);
     av_frame_unref(m_filterFrame);
 
     return true;
@@ -355,10 +355,11 @@ void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio,
 #else
     if (m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) {
 #endif
-        processFilterGraph((AVFrame *)m_pFrame, (AVFrame *)m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
+        processFilterGraph(m_pFrame, m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
     }
 
-    int scaledWidth, scaledHeight;
+    int scaledWidth = -1;
+    int scaledHeight = -1;
     convertAndScaleFrame(AV_PIX_FMT_RGB24, scaledSize, maintainAspectRatio, scaledWidth, scaledHeight);
     // .copy() since QImage otherwise assumes the memory will continue to be available.
     // We could instead pass a custom deleter, but meh.
@@ -416,9 +417,9 @@ void FrameDecoder::calculateDimensions(int squareSize, bool maintainAspectRatio,
 
         if (srcWidth > srcHeight) {
             destWidth = squareSize;
-            destHeight = int(float(squareSize) / srcWidth * srcHeight);
+            destHeight = qRound(static_cast<float>(squareSize) / srcWidth * srcHeight);
         } else {
-            destWidth = int(float(squareSize) / srcHeight * srcWidth);
+            destWidth = qRound(static_cast<float>(squareSize) / srcHeight * srcWidth);
             destHeight = squareSize;
         }
     }
@@ -429,6 +430,6 @@ void FrameDecoder::createAVFrame(AVFrame **avFrame, quint8 **frameBuffer, int wi
     *avFrame = av_frame_alloc();
 
     int numBytes = av_image_get_buffer_size(format, width + 1, height + 1, 16);
-    *frameBuffer = reinterpret_cast<quint8 *>(av_malloc(numBytes));
+    *frameBuffer = static_cast<quint8 *>(av_malloc(numBytes));
     av_image_fill_arrays((*avFrame)->data, (*avFrame)->linesize, *frameBuffer, format, width, height, 1);
 }

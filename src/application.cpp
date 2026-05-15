@@ -110,9 +110,7 @@ Application::Application()
     connect(PathUtils::instance(), &PathUtils::error, MiscUtils::instance(), &MiscUtils::error);
 }
 
-Application::~Application()
-{
-}
+Application::~Application() = default;
 
 void Application::setupWorkerThread()
 {
@@ -124,7 +122,7 @@ void Application::setupWorkerThread()
     thread->start();
 }
 
-void Application::aboutDataAddComponent(KAboutComponent component)
+void Application::aboutDataAddComponent(const KAboutComponent &component)
 {
     m_aboutData.addComponent(component);
 }
@@ -227,7 +225,7 @@ void Application::addUrl(const QString &value)
     m_urls.append(QUrl::fromUserInput(value, QDir::currentPath()));
 }
 
-void Application::handleSecondayInstanceMessage(const QByteArray &message, const QString activationToken)
+void Application::handleSecondayInstanceMessage(const QByteArray &message, const QString &activationToken)
 {
     auto msgString = QString::fromStdString(message.data());
     QFileInfo fileInfo{msgString};

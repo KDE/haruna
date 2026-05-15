@@ -67,7 +67,7 @@ public:
     bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
 
     SortProperty takeSortProperty(const int group);
-    void appendSortProperty(SortProperty property);
+    void appendSortProperty(const SortProperty &property);
     void removeProperty(uint index);
 
     Q_INVOKABLE bool hasProperty(const int group);

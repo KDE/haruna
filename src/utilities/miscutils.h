@@ -21,7 +21,7 @@ public:
     static MiscUtils *create(QQmlEngine *, QJSEngine *);
 
     Q_INVOKABLE static QString formatTime(const double time);
-    Q_INVOKABLE static QString mimeType(QUrl url);
+    Q_INVOKABLE static QString mimeType(const QUrl &url);
     Q_INVOKABLE static QString md5(const QString &str);
 
 Q_SIGNALS:

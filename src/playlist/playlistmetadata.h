@@ -23,7 +23,7 @@ struct AudioMetaData {
     QString lyricist;
     QString audioCodec;
 
-    void setMetaData(KFileMetaData::PropertyMultiMap metaData)
+    void setMetaData(const KFileMetaData::PropertyMultiMap &metaData)
     {
         trackNo = metaData.value(KFileMetaData::Property::TrackNumber).toInt();
         discNo = metaData.value(KFileMetaData::Property::DiscNumber).toInt();
@@ -92,7 +92,7 @@ struct VideoMetaData {
         }
     }
 
-    void setMetaData(KFileMetaData::PropertyMultiMap metaData)
+    void setMetaData(const KFileMetaData::PropertyMultiMap &metaData)
     {
         width = metaData.value(KFileMetaData::Property::Width).toInt();
         height = metaData.value(KFileMetaData::Property::Height).toInt();

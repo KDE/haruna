@@ -133,7 +133,7 @@ void MouseActionsModel::addAction(const QString &actionName, const QString &butt
     configGroup.sync();
 }
 
-void MouseActionsModel::editAction(MouseAction mouseAction)
+void MouseActionsModel::editAction(const MouseAction &mouseAction)
 {
     auto key = configKey(mouseAction);
     for (int i = 0; i < rowCount(); ++i) {
@@ -353,7 +353,7 @@ QString MouseActionsModel::configKey(MouseButton button, Qt::KeyboardModifier mo
     return modifierString + buttonString + isDoubleClickString;
 };
 
-QString MouseActionsModel::configKey(MouseAction ba)
+QString MouseActionsModel::configKey(const MouseAction &ba)
 {
     return configKey(static_cast<MouseButton>(ba.mouseButton), static_cast<Qt::KeyboardModifier>(ba.modifier), ba.isDoubleClick);
 };

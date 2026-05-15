@@ -38,7 +38,7 @@ public:
 public Q_SLOTS:
     void setNameFilter(const QString &regExp);
     void setTypeFilter(const QString &regExp);
-    bool saveShortcut(int row, QKeySequence keySequence);
+    bool saveShortcut(int row, const QKeySequence &keySequence);
 
 private:
     QRegularExpression m_nameRegExp;
@@ -70,8 +70,8 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     void appendCustomAction(const Action &action);
     void editCustomAction(const QString &name, const QString &text, const QString &description);
-    Q_INVOKABLE bool saveShortcut(const QString &name, QKeySequence keySequence);
-    Q_INVOKABLE bool saveShortcut(int row, QKeySequence keySequence);
+    Q_INVOKABLE bool saveShortcut(const QString &name, const QKeySequence &keySequence);
+    Q_INVOKABLE bool saveShortcut(int row, const QKeySequence &keySequence);
     Q_INVOKABLE QKeySequence getShortcut(const QString &key, const QKeySequence &defaultValue) const;
     Q_INVOKABLE void signalEmitter(const QString &actionName);
 

@@ -197,20 +197,20 @@ PlaylistSortProxyModel::PlaylistSortProxyModel(QObject *parent)
 QVariant PlaylistSortProxyModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     // Only handle Section role here
     if (role == PlaylistModel::Roles::SectionRole) {
         if (m_indexToSection.empty()) {
-            return QVariant(u""_s);
+            return {};
         }
 
         QSharedPointer sectionPtr = m_indexToSection.value(index.row());
         if (!m_showSections || sectionPtr.isNull()) {
-            return QVariant(u""_s);
+            return {};
         }
-        return QVariant(*sectionPtr.data());
+        return *sectionPtr.data();
     }
 
     return sourceModel()->data(mapToSource(index), role);
@@ -361,7 +361,7 @@ void PlaylistSortProxyModel::onActiveSortPropertiesChanged()
     }
     // Check if the change is a preset
     if (m_activeSortProperties->m_properties.size() == 1) {
-        int preset = m_activeSortProperties->m_properties[0].sort;
+        int preset = m_activeSortProperties->m_properties.first().sort;
 
         switch (preset) {
         case Sort::FileName:
@@ -540,7 +540,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             int releaseYear = sourceModel()->data(mapToSource(index), sortProperty.sort).toInt();
             if (releaseYear <= 0) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders[Group(sortProperty.sort)];
+                    QString placeholder = placeholders.value(Group(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -553,7 +553,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
         }
         case Framerate: {
             double fps = sourceModel()->data(mapToSource(index), sortProperty.sort).toDouble();
-            int fpsDecimal = int(fps);
+            int fpsDecimal = static_cast<int>(fps);
             if (fps > fpsDecimal) {
                 // Values like 29.97 or 59.94. Show them as float
                 currentSectionRow.append(QString::number(fps, 'f', 3) + u"fps");
@@ -568,7 +568,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             int width = sourceModel()->data(mapToSource(index), PlaylistModel::DisplayedWidthRole).toInt();
             if (height == 0 || width == 0) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders[Group(sortProperty.sort)];
+                    QString placeholder = placeholders.value(Group(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -595,7 +595,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             QString codec = sourceModel()->data(mapToSource(index), sortProperty.sort).toString();
             if (codec.isEmpty()) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders[Group(sortProperty.sort)];
+                    QString placeholder = placeholders.value(Group(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -633,7 +633,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             QString itemString = sourceModel()->data(mapToSource(index), Group(sortProperty.sort)).toString();
             if (itemString.isEmpty()) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders[Group(sortProperty.sort)];
+                    QString placeholder = placeholders.value(Group(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -646,7 +646,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
                     break;
                 }
                 auto itemIndex = currentSectionRow.indexOf(itemString);
-                if (hideBlankRow[itemIndex]) {
+                if (hideBlankRow.at(itemIndex)) {
                     break;
                 }
             }

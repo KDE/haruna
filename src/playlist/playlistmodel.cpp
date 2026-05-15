@@ -11,6 +11,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QJsonArray>
+#include <QJsonObject>
 
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
@@ -268,7 +269,7 @@ void PlaylistModel::appendItem(const QUrl &url)
         item.modifiedDate = itemInfo.lastModified();
         item.fileSize = itemInfo.size();
         item.extension = itemInfo.suffix();
-        item.fileType = MiscUtils::mimeType(url).split(u"/"_s)[0];
+        item.fileType = MiscUtils::mimeType(url).split(u"/"_s).first();
     } else {
         if (url.scheme().startsWith(u"http"_s)) {
             item.url = url;
@@ -346,7 +347,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         item.modifiedDate = fileInfo.lastModified();
         item.fileSize = fileInfo.size();
         item.extension = fileInfo.suffix();
-        item.fileType = MiscUtils::mimeType(fileUrl).split(u"/"_s)[0];
+        item.fileType = MiscUtils::mimeType(fileUrl).split(u"/"_s).first();
         m_playlist.push_back(item);
         // in flatpak the file dialog gives a percent encoded path
         // use toLocalFile to normalize the urls
@@ -413,10 +414,11 @@ void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &video
 {
     bool matchFound{false};
     for (int i = 0; i < playlist.size(); ++i) {
-        auto id = playlist[i][u"id"_s].toString();
+        const auto _playlist = playlist.at(i).toObject();
+        auto id = _playlist.value(u"id"_s).toString();
         auto url = u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(id, playlistId);
-        auto title = playlist[i][u"title"_s].toString();
-        auto duration = playlist[i][u"duration"_s].toDouble();
+        auto title = _playlist.value(u"title"_s).toString();
+        auto duration = _playlist.value(u"duration"_s).toDouble();
 
         PlaylistItem item;
         item.url = QUrl::fromUserInput(url);
@@ -451,10 +453,10 @@ void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &video
     }
 }
 
-void PlaylistModel::updateFileInfo(YTVideoInfo info, QVariantMap data)
+void PlaylistModel::updateFileInfo(const YTVideoInfo &info, const QVariantMap &data)
 {
     const auto row = data.value(u"row"_s).toUInt();
-    const auto item{m_playlist[row]};
+    const auto item{m_playlist.at(row)};
     if (info.url != item.url) {
         return;
     }
@@ -495,7 +497,7 @@ void PlaylistModel::setPlayingItem(uint i)
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
     Q_EMIT playingItemChanged(m_playlistName);
 
-    GeneralSettings::setLastPlayedFile(m_playlist[i].url.toString());
+    GeneralSettings::setLastPlayedFile(m_playlist.at(i).url.toString());
     GeneralSettings::setLastPlaylist(m_playlistPath);
     GeneralSettings::self()->save();
 }
@@ -526,13 +528,13 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
     });
 }
 
-void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties)
+void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties)
 {
     if (m_playlist.empty() || static_cast<uint>(i) >= m_playlist.size()) {
         return;
     }
 
-    if (m_playlist[i].url == url) {
+    if (m_playlist.at(i).url == url) {
         auto duration = properties.value(KFileMetaData::Property::Duration).toInt();
         auto title = properties.value(KFileMetaData::Property::Title).toString();
 
@@ -549,14 +551,14 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, KFileMetaData::Prop
                  << u"Data mismatch: the url at position %1 received from the threadpool:"_s.arg(i) << "\n"
                  << u"%1"_s.arg(url.toString()) << "\n"
                  << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
-                 << u"%1"_s.arg(m_playlist[i].url.toString());
+                 << u"%1"_s.arg(m_playlist.at(i).url.toString());
     }
 }
 
 double PlaylistModel::getPlaybackPosition(const uint row)
 {
-    auto duration = m_playlist[row].duration;
-    auto url = QUrl::fromUserInput(m_playlist[row].url.toString());
+    auto duration = m_playlist.at(row).duration;
+    auto url = QUrl::fromUserInput(m_playlist.at(row).url.toString());
 
     if (duration <= 0) {
         return 0.0;
@@ -577,7 +579,7 @@ void PlaylistModel::setIsPlaying(bool newIsPlaying)
     Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
 }
 
-void PlaylistModel::shuffleIndexes(std::vector<int> includedIndices)
+void PlaylistModel::shuffleIndexes(const std::vector<int> &includedIndices)
 {
     if (m_playlist.size() <= 0) {
         return;

@@ -14,9 +14,7 @@
 
 using namespace Qt::StringLiterals;
 
-ThumbnailImageProvider::ThumbnailImageProvider()
-{
-}
+ThumbnailImageProvider::ThumbnailImageProvider() = default;
 
 QQuickImageResponse *ThumbnailImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {

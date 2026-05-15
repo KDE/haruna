@@ -12,7 +12,7 @@
 
 struct Chapter {
     QString title;
-    double startTime;
+    double startTime{0.0};
 };
 
 class ChaptersModel : public QAbstractListModel

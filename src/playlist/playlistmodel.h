@@ -122,11 +122,11 @@ private:
     void getSiblingItems(const QUrl &url);
     void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
     void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);
-    void updateFileInfo(YTVideoInfo info, QVariantMap data);
+    void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
     void setPlayingItem(uint i);
     void getMetaData(uint i, const QString &path);
-    void onMetaDataReady(uint i, const QUrl &url, KFileMetaData::PropertyMultiMap properties);
+    void onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
     double getPlaybackPosition(const uint row);
 
     QList<PlaylistItem> m_playlist;
@@ -162,7 +162,7 @@ private:
     //     next file: m_shuffledIndexes.index_2 -> m_playlist.index_1 file_1
 
     // when shuffling the playing item is moved to the front
-    void shuffleIndexes(std::vector<int> included = std::vector<int>());
+    void shuffleIndexes(const std::vector<int> &included = {});
     std::vector<int> shuffledIndexes() const;
     int currentShuffledIndex() const;
     void setCurrentShuffledIndex(int shuffledIndex);

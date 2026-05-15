@@ -83,7 +83,7 @@ public:
 
 public Q_SLOTS:
     void addAction(const QString &actionName, const QString &button, const QString &modifier, bool isDoubleClick);
-    void editAction(MouseAction mouseAction);
+    void editAction(const MouseAction &mouseAction);
     void removeAction(uint row);
     QString getAction(MouseActionsModel::MouseButton button, Qt::KeyboardModifier modifier = Qt::NoModifier, bool isDoubleClick = false);
     bool actionExists(const QString &button, const QString &modifier, bool isDoubleClick);
@@ -96,7 +96,7 @@ private:
     QString modifierToString(Qt::KeyboardModifier modifier) const;
     QString modifierToI18nString(Qt::KeyboardModifier modifier) const;
     QString configKey(MouseButton button, Qt::KeyboardModifier modifier, bool isDoubleClick);
-    QString configKey(MouseAction ba);
+    QString configKey(const MouseAction &ba);
     bool isDefaultAction(const QString &actionKey);
     QString getDefaultAction(const QString &actionKey);
     QList<MouseAction> m_data;

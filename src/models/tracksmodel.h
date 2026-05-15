@@ -63,7 +63,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     void clear();
-    void addTrack(Track track);
+    void addTrack(const Track &track);
     const Track track(int row) const;
     QString trackInfo(int row) const;
 

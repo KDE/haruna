@@ -46,7 +46,7 @@ bool SystemUtils::isHanaInstalled()
     return true;
 }
 
-bool SystemUtils::openHana(QUrl url)
+bool SystemUtils::openHana(const QUrl &url)
 {
     auto service = KService::serviceByDesktopName(u"org.kde.hana"_s);
     if (!service) {
@@ -74,7 +74,7 @@ bool SystemUtils::isMediaInfoInstalled()
     return false;
 }
 
-bool SystemUtils::openMediaInfo(QUrl url)
+bool SystemUtils::openMediaInfo(const QUrl &url)
 {
     auto service1 = KService::serviceByDesktopName(u"net.mediaarea.MediaInfo"_s);
     if (service1) {

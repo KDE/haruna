@@ -24,7 +24,7 @@ QString PlaylistSortPropertyProxyModel::searchText()
     return filterRegularExpression().pattern();
 }
 
-void PlaylistSortPropertyProxyModel::setSearchText(QString text)
+void PlaylistSortPropertyProxyModel::setSearchText(const QString &text)
 {
     setFilterRole(PlaylistSortPropertyModel::LabelRole);
     setFilterRegularExpression(text);

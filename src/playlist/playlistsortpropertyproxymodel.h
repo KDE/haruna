@@ -20,7 +20,7 @@ public:
 
     Q_PROPERTY(QString searchText READ searchText WRITE setSearchText NOTIFY searchTextChanged)
     QString searchText();
-    void setSearchText(QString text);
+    void setSearchText(const QString &text);
 
     Q_PROPERTY(uint filterCategory READ filterCategory WRITE setFilterCategory NOTIFY filterCategoryChanged)
     uint filterCategory();

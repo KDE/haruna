@@ -18,7 +18,7 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
 {
     connect(this, &QAbstractListModel::rowsMoved, this, [=]() {
         for (int i = 0; i < m_customCommands.size(); ++i) {
-            auto configGroup = m_customCommandsConfig->group(m_customCommands[i].commandId);
+            auto configGroup = m_customCommandsConfig->group(m_customCommands.at(i).commandId);
             configGroup.writeEntry("Order", i);
             configGroup.sync();
         }
@@ -80,7 +80,7 @@ void CustomCommandsModel::init()
 {
     connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [=](const QString &name, const QKeySequence &shortcut) {
         for (int i{0}; i < m_customCommands.count(); ++i) {
-            if (m_customCommands[i].commandId == name) {
+            if (m_customCommands.at(i).commandId == name) {
                 m_customCommands[i].shortcut = shortcut;
                 Q_EMIT dataChanged(index(i, 0), index(i, 0));
                 return;
@@ -115,7 +115,7 @@ void CustomCommandsModel::init()
         }
     }
 
-    std::sort(m_customCommands.begin(), m_customCommands.end(), [=](Command c1, Command c2) {
+    std::sort(m_customCommands.begin(), m_customCommands.end(), [=](const Command &c1, const Command &c2) {
         return c1.order < c2.order;
     });
 

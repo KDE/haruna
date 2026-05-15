@@ -44,7 +44,7 @@ QString MiscUtils::formatTime(const double time)
     return timeString;
 }
 
-QString MiscUtils::mimeType(QUrl url)
+QString MiscUtils::mimeType(const QUrl &url)
 {
     KFileItem fileItem(url, KFileItem::NormalMimeTypeDetermination);
     return fileItem.mimetype();

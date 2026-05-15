@@ -696,7 +696,7 @@ void ActionsModel::appendCustomAction(const Action &action)
 void ActionsModel::editCustomAction(const QString &name, const QString &text, const QString &description)
 {
     for (int i{0}; i < m_actions.count(); ++i) {
-        if (m_actions[i].name == name) {
+        if (m_actions.at(i).name == name) {
             m_actions[i].text = text;
             m_actions[i].description = description;
             Q_EMIT dataChanged(index(i, 0), index(i, 0));
@@ -705,17 +705,17 @@ void ActionsModel::editCustomAction(const QString &name, const QString &text, co
     }
 }
 
-bool ActionsModel::saveShortcut(const QString &name, QKeySequence keySequence)
+bool ActionsModel::saveShortcut(const QString &name, const QKeySequence &keySequence)
 {
     for (int i{0}; i < m_actions.count(); ++i) {
-        if (m_actions[i].name == name) {
+        if (m_actions.at(i).name == name) {
             return saveShortcut(i, keySequence);
         }
     }
     return false;
 }
 
-bool ActionsModel::saveShortcut(int row, QKeySequence keySequence)
+bool ActionsModel::saveShortcut(int row, const QKeySequence &keySequence)
 {
     auto group = m_config->group(u"Shortcuts"_s);
     // action whose shortcut is changed
@@ -727,7 +727,7 @@ bool ActionsModel::saveShortcut(int row, QKeySequence keySequence)
         Action *result = nullptr;
         int i{0};
         for (; i < m_actions.count(); ++i) {
-            if (m_actions[i].shortcut == keySequence) {
+            if (m_actions.at(i).shortcut == keySequence) {
                 result = &m_actions[i];
                 break;
             }
@@ -833,7 +833,7 @@ void ProxyActionsModel::setTypeFilter(const QString &regExp)
     invalidateFilter();
 }
 
-bool ProxyActionsModel::saveShortcut(int row, QKeySequence keySequence)
+bool ProxyActionsModel::saveShortcut(int row, const QKeySequence &keySequence)
 {
     auto actionsModel = qobject_cast<ActionsModel *>(sourceModel());
     return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), keySequence);

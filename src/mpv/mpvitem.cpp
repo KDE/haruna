@@ -135,9 +135,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     }
 }
 
-MpvItem::~MpvItem()
-{
-}
+MpvItem::~MpvItem() = default;
 
 void MpvItem::initProperties()
 {
@@ -263,8 +261,8 @@ void MpvItem::setupConnections()
 
     connect(m_playlists.get(), &PlaylistMultiProxiesModel::playingItemChanged, this, [=]() {
         const auto playlistModel = activeFilterProxyModel()->playlistModel();
-        const auto url = playlistModel->m_playlist[playlistModel->m_playingItem].url;
-        const auto mediaTitle = playlistModel->m_playlist[playlistModel->m_playingItem].mediaTitle;
+        const auto url = playlistModel->m_playlist.at(playlistModel->m_playingItem).url;
+        const auto mediaTitle = playlistModel->m_playlist.at(playlistModel->m_playingItem).mediaTitle;
         loadFile(url.toString());
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::Playlist, mediaTitle);
     });
@@ -609,7 +607,7 @@ void MpvItem::loadFile(const QString &file)
     Q_EMIT osdMessage(msg);
 }
 
-void MpvItem::loadTracks(QList<QVariant> tracks)
+void MpvItem::loadTracks(const QList<QVariant> &tracks)
 {
     m_subtitleTracksModel->clear();
     m_audioTracksModel->clear();
@@ -627,19 +625,20 @@ void MpvItem::loadTracks(QList<QVariant> tracks)
     for (const auto &item : tracks) {
         const auto map = item.toMap();
         Track track = {
-            map[u"id"_s].toInt(),
-            map[u"lang"_s].toString(),
-            map[u"title"_s].toString(),
-            map[u"codec"_s].toString(),
+            map.value(u"id"_s).toInt(),
+            map.value(u"lang"_s).toString(),
+            map.value(u"title"_s).toString(),
+            map.value(u"codec"_s).toString(),
         };
-        if (map[u"type"_s] == u"sub"_s) {
+        const auto type = map.value(u"type"_s).toString();
+        if (type == u"sub"_s) {
             if (track.trackid == subtitleId()) {
                 m_subtitleTracksModel->setActiveRow(sr);
             }
             m_subtitleTracksModel->addTrack(track);
             sr++;
         }
-        if (map[u"type"_s] == u"audio"_s) {
+        if (type == u"audio"_s) {
             if (track.trackid == audioId()) {
                 m_audioTracksModel->setActiveRow(ar);
             }
@@ -684,9 +683,10 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         m_chaptersList = data.toList();
         QList<Chapter> chaptersList;
         for (const auto &chapter : std::as_const(m_chaptersList)) {
+            const auto map = chapter.toMap();
             Chapter c;
-            c.title = chapter.toMap()[u"title"_s].toString();
-            c.startTime = chapter.toMap()[u"time"_s].toDouble();
+            c.title = map.value(u"title"_s).toString();
+            c.startTime = map.value(u"time"_s).toDouble();
             chaptersList.append(c);
         }
         m_chaptersModel->setChapters(chaptersList);
@@ -752,7 +752,7 @@ void MpvItem::saveTimePosition()
 double MpvItem::loadTimePosition()
 {
     const auto playlistModel = activeFilterProxyModel()->playlistModel();
-    PlaylistItem item{playlistModel->m_playlist[playlistModel->m_playingItem]};
+    PlaylistItem item{playlistModel->m_playlist.at(playlistModel->m_playingItem)};
     auto duration{item.duration};
 
     if (qFuzzyCompare(duration, 0.0)) {

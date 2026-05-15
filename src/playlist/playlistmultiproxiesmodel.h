@@ -37,7 +37,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE void createNewPlaylist(QString playlistName);
+    Q_INVOKABLE void createNewPlaylist(const QString &playlistName);
     Q_INVOKABLE void removePlaylist(uint pIndex);
     Q_INVOKABLE void movePlaylist(uint row, uint destinationRow);
     Q_INVOKABLE void renamePlaylist(uint pIndex);
@@ -52,13 +52,13 @@ private:
     PlaylistFilterProxyModel *activeFilterProxy();
     PlaylistFilterProxyModel *visibleFilterProxy();
     PlaylistFilterProxyModel *defaultFilterProxy();
-    PlaylistFilterProxyModel *getFilterProxy(QString playlistName);
+    PlaylistFilterProxyModel *getFilterProxy(const QString &playlistName);
 
-    void addPlaylist(QString playlistName, QUrl internalUrl);
+    void addPlaylist(const QString &playlistName, const QUrl &internalUrl);
     QUrl getPlaylistCacheUrl();
-    QUrl getPlaylistUrl(QString playlistName);
+    QUrl getPlaylistUrl(const QString &playlistName);
     void saveVisiblePlaylist();
-    void savePlaylist(QString playlistName, PlaylistFilterProxyModel *proxyModel);
+    void savePlaylist(const QString &playlistName, PlaylistFilterProxyModel *proxyModel);
     void savePlaylistCache();
 
     std::vector<std::unique_ptr<PlaylistFilterProxyModel>> m_playlistFilterProxyModels;

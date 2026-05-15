@@ -24,7 +24,7 @@ QValidator::State PlaylistRenameValidator::validate(QString &input, int &pos) co
         return QValidator::Invalid;
     }
 
-    QString extension = splitText.last();
+    const QString &extension = splitText.last();
     if (extension != u"m3u") {
         return QValidator::Invalid;
     }
