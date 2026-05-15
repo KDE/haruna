@@ -8,7 +8,6 @@
 
 #include <QJsonDocument>
 #include <QJsonValue>
-#include <QProcess>
 #include <QUrlQuery>
 
 #include "database.h"

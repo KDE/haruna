@@ -8,11 +8,12 @@
 #define RECENTFILESMODEL_H
 
 #include <QAbstractListModel>
-#include <QUrl>
 #include <QtQml/qqmlregistration.h>
 
 #include "recentfile.h"
 #include "youtube.h"
+
+class QUrl;
 
 class RecentFilesModel : public QAbstractListModel
 {
