@@ -19,20 +19,8 @@ extern "C" {
 using namespace std;
 
 FrameDecoder::FrameDecoder(const QString &filename, AVFormatContext *pavContext)
-    : m_VideoStream(-1)
-    , m_pFormatContext(pavContext)
-    , m_pVideoCodecContext(nullptr)
-    , m_pVideoCodec(nullptr)
-    , m_pFrame(nullptr)
-    , m_pFrameBuffer(nullptr)
-    , m_pPacket(nullptr)
+    : m_pFormatContext(pavContext)
     , m_FormatContextWasGiven(pavContext != nullptr)
-    , m_AllowSeek(true)
-    , m_initialized(false)
-    , m_bufferSinkContext(nullptr)
-    , m_bufferSourceContext(nullptr)
-    , m_filterGraph(nullptr)
-    , m_filterFrame(nullptr)
 {
     initialize(filename);
 }
@@ -44,10 +32,6 @@ FrameDecoder::~FrameDecoder()
 
 void FrameDecoder::initialize(const QString &filename)
 {
-    m_lastWidth = -1;
-    m_lastHeight = -1;
-    m_lastPixfmt = AV_PIX_FMT_NONE;
-
 #if (LIBAVFORMAT_VERSION_MAJOR < 58)
     av_register_all();
 #endif
