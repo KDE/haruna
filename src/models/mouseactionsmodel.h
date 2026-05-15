@@ -8,7 +8,7 @@
 #define MOUSEACTIONSMODEL_H
 
 #include <QAbstractListModel>
-#include <QtQmlIntegration/qqmlintegration.h>
+#include <qqmlregistration.h>
 
 #include <KSharedConfig>
 
@@ -17,6 +17,7 @@ using namespace Qt::StringLiterals;
 struct MouseAction {
     Q_GADGET
     QML_VALUE_TYPE(mouseAction)
+
 public:
     Q_PROPERTY(QString actionName MEMBER actionName)
     QString actionName;

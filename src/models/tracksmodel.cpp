@@ -19,16 +19,16 @@ int TracksModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_data.size();
+    return m_data.count();
 }
 
 QVariant TracksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || m_data.isEmpty()) {
-        return QVariant();
+    if (!index.isValid()) {
+        return {};
     }
 
-    const auto item = m_data.at(index.row());
+    const auto &item = m_data.at(index.row());
 
     switch (role) {
     case IdRole:
@@ -43,13 +43,13 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
         return item.codec;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> TracksModel::roleNames() const
 {
     // clang-format off
-    QHash<int, QByteArray> roles{
+    static QHash<int, QByteArray> roles{
         {IdRole,       QByteArrayLiteral("trackId")},
         {TextRole,     QByteArrayLiteral("displayText")},
         {LanguageRole, QByteArrayLiteral("language")},

@@ -27,41 +27,43 @@ CustomCommandsModel::CustomCommandsModel(QObject *parent)
 
 int CustomCommandsModel::rowCount(const QModelIndex &parent) const
 {
-    if (parent.isValid())
+    if (parent.isValid()) {
         return 0;
+    }
 
-    return m_customCommands.size();
+    return m_customCommands.count();
 }
 
 QVariant CustomCommandsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
-        return QVariant();
+    if (!index.isValid()) {
+        return {};
+    }
 
-    Command command = m_customCommands[index.row()];
+    const auto &command = m_customCommands.at(index.row());
 
     switch (role) {
     case CommandIdRole:
-        return QVariant(command.commandId);
+        return command.commandId;
     case CommandRole:
-        return QVariant(command.command);
+        return command.command;
     case OsdMessageRole:
-        return QVariant(command.osdMessage);
+        return command.osdMessage;
     case TypeRole:
-        return QVariant(command.type);
+        return command.type;
     case ShortcutRole:
-        return QVariant(command.shortcut);
+        return command.shortcut;
     case SetOnStartupRole:
-        return QVariant(command.setOnStartup);
+        return command.setOnStartup;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> CustomCommandsModel::roleNames() const
 {
     // clang-format off
-    QHash<int, QByteArray> roles{
+    static QHash<int, QByteArray> roles{
         {CommandIdRole,    QByteArrayLiteral("commandId")},
         {OsdMessageRole,   QByteArrayLiteral("osdMessage")},
         {CommandRole,      QByteArrayLiteral("command")},

@@ -44,33 +44,35 @@ int RecentFilesModel::rowCount(const QModelIndex &parent) const
 QVariant RecentFilesModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
-    const auto item = m_data.at(index.row());
+    const auto &item = m_data.at(index.row());
 
     switch (role) {
     case UrlRole:
-        return QVariant(item.url);
+        return item.url;
     case ToolTipTextRole:
-        return QVariant(item.url.toString(QUrl::PreferLocalFile));
+        return item.url.toString(QUrl::PreferLocalFile);
     case NameRole:
-        return QVariant(item.filename);
+        return item.filename;
     case OpenedFromRole:
         return QVariant::fromValue(stringToOpenedFrom(item.openedFrom));
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> RecentFilesModel::roleNames() const
 {
-    QHash<int, QByteArray> roles{
-        {UrlRole, QByteArrayLiteral("url")},
+    // clang-format off
+    static QHash<int, QByteArray> roles{
+        {UrlRole,         QByteArrayLiteral("url")},
         {ToolTipTextRole, QByteArrayLiteral("toolTipText")},
-        {NameRole, QByteArrayLiteral("filename")},
-        {OpenedFromRole, QByteArrayLiteral("openedFrom")},
+        {NameRole,        QByteArrayLiteral("filename")},
+        {OpenedFromRole,  QByteArrayLiteral("openedFrom")},
     };
+    // clang-format on
 
     return roles;
 }

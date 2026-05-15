@@ -74,10 +74,10 @@ int MouseActionsModel::rowCount(const QModelIndex &parent) const
 QVariant MouseActionsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
-    const auto item = m_data.at(index.row());
+    const auto &item = m_data.at(index.row());
 
     switch (role) {
     case MouseActionRole:
@@ -96,20 +96,22 @@ QVariant MouseActionsModel::data(const QModelIndex &index, int role) const
         return item.isDoubleClick;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> MouseActionsModel::roleNames() const
 {
+    // clang-format off
     static QHash<int, QByteArray> roles{
         {MouseActionRole, QByteArrayLiteral("mouseAction")},
-        {ActionName, QByteArrayLiteral("actionName")},
-        {Button, QByteArrayLiteral("button")},
-        {I18nButton, QByteArrayLiteral("i18nButton")},
-        {Modifier, QByteArrayLiteral("modifier")},
-        {I18nModifier, QByteArrayLiteral("i18nModifier")},
-        {IsDoubleClick, QByteArrayLiteral("isDoubleClick")},
+        {ActionName,      QByteArrayLiteral("actionName")},
+        {Button,          QByteArrayLiteral("button")},
+        {I18nButton,      QByteArrayLiteral("i18nButton")},
+        {Modifier,        QByteArrayLiteral("modifier")},
+        {I18nModifier,    QByteArrayLiteral("i18nModifier")},
+        {IsDoubleClick,   QByteArrayLiteral("isDoubleClick")},
     };
+    // clang-format on
 
     return roles;
 }
@@ -355,3 +357,5 @@ QString MouseActionsModel::configKey(MouseAction ba)
 {
     return configKey(static_cast<MouseButton>(ba.mouseButton), static_cast<Qt::KeyboardModifier>(ba.modifier), ba.isDoubleClick);
 };
+
+#include "moc_mouseactionsmodel.cpp"

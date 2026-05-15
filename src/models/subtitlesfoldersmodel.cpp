@@ -19,34 +19,35 @@ SubtitlesFoldersModel::SubtitlesFoldersModel(QObject *parent)
 
 int SubtitlesFoldersModel::rowCount(const QModelIndex &parent) const
 {
-    // For list models only the root node (an invalid parent) should return the list's size. For all
-    // other (valid) parents, rowCount() should return 0 so that it does not become a tree model.
     if (parent.isValid()) {
         return 0;
     }
 
-    return m_list.size();
+    return m_list.count();
 }
 
 QVariant SubtitlesFoldersModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
-    QString path = m_list[index.row()];
+    const auto &path = m_list.at(index.row());
 
     switch (role) {
     case PathRole:
-        return QVariant(path);
+        return path;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> SubtitlesFoldersModel::roleNames() const
 {
-    return {{Roles::PathRole, QByteArray("path")}};
+    static QHash<int, QByteArray> roles{
+        {Roles::PathRole, QByteArrayLiteral("path")},
+    };
+    return roles;
 }
 
 void SubtitlesFoldersModel::updateFolder(const QString &folder, int row)

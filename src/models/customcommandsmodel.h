@@ -10,28 +10,26 @@
 #include <QAbstractListModel>
 #include <QKeySequence>
 #include <QSortFilterProxyModel>
-#include <QtQml/qqmlregistration.h>
+#include <qqmlregistration.h>
 
 #include <KSharedConfig>
 
 class ActionsModel;
 
+struct Command {
+    QString commandId;
+    QString command;
+    QString osdMessage;
+    QKeySequence shortcut;
+    QString type;
+    bool setOnStartup{true};
+    int order{-1};
+};
+
 class CustomCommandsModel : public QAbstractListModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(CustomCommandsModel)
-
-    Q_PROPERTY(ActionsModel *appActionsModel READ appActionsModel WRITE setAppActionsModel NOTIFY appActionsModelChanged)
-
-    struct Command {
-        QString commandId;
-        QString command;
-        QString osdMessage;
-        QKeySequence shortcut;
-        QString type;
-        bool setOnStartup{true};
-        int order{-1};
-    };
+    QML_ELEMENT
 
 public:
     explicit CustomCommandsModel(QObject *parent = nullptr);
@@ -58,6 +56,7 @@ public:
     Q_INVOKABLE void toggleCustomCommand(const QString &groupName, int row, bool setOnStartup);
     Q_INVOKABLE void deleteCustomCommand(const QString &groupName, int row);
 
+    Q_PROPERTY(ActionsModel *appActionsModel READ appActionsModel WRITE setAppActionsModel NOTIFY appActionsModelChanged)
     ActionsModel *appActionsModel();
     void setAppActionsModel(ActionsModel *_appActionsModel);
 

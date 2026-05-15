@@ -23,26 +23,26 @@ int ChaptersModel::rowCount(const QModelIndex &parent) const
 QVariant ChaptersModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
-    auto chapter = m_chapters.at(index.row());
+    const auto &chapter = m_chapters.at(index.row());
 
     switch (role) {
     case TitleRole:
-        return QVariant(chapter.title);
+        return chapter.title;
 
     case StartTimeRole:
-        return QVariant(chapter.startTime);
+        return chapter.startTime;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> ChaptersModel::roleNames() const
 {
     // clang-format off
-    QHash<int, QByteArray> roles{
+    static QHash<int, QByteArray> roles{
         {TitleRole,     QByteArrayLiteral("title")},
         {StartTimeRole, QByteArrayLiteral("startTime")},
     };

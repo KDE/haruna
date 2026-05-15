@@ -10,7 +10,7 @@
 #include <QAbstractListModel>
 #include <QKeySequence>
 #include <QSortFilterProxyModel>
-#include <QtQml/qqmlregistration.h>
+#include <qqmlregistration.h>
 
 #include <KSharedConfig>
 
@@ -29,7 +29,7 @@ struct Action {
 class ProxyActionsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(ProxyActionsModel)
+    QML_ELEMENT
 
 public:
     explicit ProxyActionsModel(QObject *parent = nullptr);

@@ -631,8 +631,6 @@ ActionsModel::ActionsModel(QObject *parent)
 
 int ActionsModel::rowCount(const QModelIndex &parent) const
 {
-    // For list models only the root node (an invalid parent) should return the list's size. For all
-    // other (valid) parents, rowCount() should return 0 so that it does not become a tree model.
     if (parent.isValid()) {
         return 0;
     }
@@ -643,37 +641,37 @@ int ActionsModel::rowCount(const QModelIndex &parent) const
 QVariant ActionsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
-    auto action = m_actions.at(index.row());
+    const auto &action = m_actions.at(index.row());
 
     switch (role) {
     case NameRole:
-        return QVariant(action.name);
+        return action.name;
     case TextRole:
-        return QVariant(action.text);
+        return action.text;
     case IconRole:
-        return QVariant(action.iconName);
+        return action.iconName;
     case ShortcutRole:
-        return QVariant(action.shortcut.toString(QKeySequence::PortableText));
+        return action.shortcut.toString(QKeySequence::PortableText);
     case DefaultShortcutRole:
-        return QVariant(action.defaultShortcut.toString(QKeySequence::PortableText));
+        return action.defaultShortcut.toString(QKeySequence::PortableText);
     case DescriptionRole:
-        return QVariant(action.description);
+        return action.description;
     case TypeRole:
-        return QVariant(action.type);
+        return action.type;
     case SearchStringRole:
-        return QVariant(u"%1 %2 %3 %4"_s.arg(action.text, action.name, action.description, action.shortcut.toString(QKeySequence::PortableText)));
+        return u"%1 %2 %3 %4"_s.arg(action.text, action.name, action.description, action.shortcut.toString(QKeySequence::PortableText));
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> ActionsModel::roleNames() const
 {
     // clang-format off
-    QHash<int, QByteArray> roles{
+    static QHash<int, QByteArray> roles{
         {NameRole,            QByteArrayLiteral("actionName")},
         {TextRole,            QByteArrayLiteral("actionText")},
         {IconRole,            QByteArrayLiteral("actionIcon")},

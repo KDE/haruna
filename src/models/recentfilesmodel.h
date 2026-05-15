@@ -8,7 +8,7 @@
 #define RECENTFILESMODEL_H
 
 #include <QAbstractListModel>
-#include <QtQml/qqmlregistration.h>
+#include <qqmlregistration.h>
 
 #include "recentfile.h"
 #include "youtube.h"
@@ -18,7 +18,7 @@ class QUrl;
 class RecentFilesModel : public QAbstractListModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(RecentFilesModel)
+    QML_ELEMENT
 
 public:
     explicit RecentFilesModel(QObject *parent = nullptr);
