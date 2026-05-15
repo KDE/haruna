@@ -367,32 +367,10 @@ ApplicationWindow {
         }
     }
 
-    Loader {
+    MpvContextMenu {
         id: mpvContextMenuLoader
 
-        active: false
-        asynchronous: true
-        sourceComponent: MpvContextMenu {
-            m_mpv: mpv
-            onClosed: mpvContextMenuLoader.active = false
-        }
-
-        function openMpvContextMenuLoader() : void {
-            if (!mpvContextMenuLoader.active) {
-                mpvContextMenuLoader.active = true
-                mpvContextMenuLoader.loaded.connect(function() {
-                    openMpvContextMenuLoader()
-                })
-                return
-            }
-
-            const contextMenu = mpvContextMenuLoader.item as MpvContextMenu
-            contextMenu.popup()
-        }
-
-        function closeMpvContextMenuLoader() : void {
-            mpvContextMenuLoader.active = false
-        }
+        m_mpv: mpv
     }
 
     SettingsWindow {

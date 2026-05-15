@@ -18,7 +18,7 @@ Item {
 
     required property ActionsModel m_actionsModel
     required property MpvItem m_mpv
-    required property Loader m_mpvContextMenuLoader
+    required property MpvContextMenu m_mpvContextMenuLoader
     required property SettingsWindow m_settingsLoader
     required property Osd m_osd
     required property SelectActionPopup m_triggerActionPopup
@@ -124,8 +124,8 @@ Item {
             // if menu is open it will be closed because of the Popup.CloseOnPressOutside close policy
             // but that happens after the call to openMpvContextMenuLoader() below
             // resulting in the menu being opened for a very short time and then closed
-            root.m_mpvContextMenuLoader.closeMpvContextMenuLoader()
-            root.m_mpvContextMenuLoader.openMpvContextMenuLoader()
+            root.m_mpvContextMenuLoader.close()
+            root.m_mpvContextMenuLoader.open()
         }
 
         function onOpenFileAction() {
