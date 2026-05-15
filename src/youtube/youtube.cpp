@@ -56,7 +56,6 @@ void YouTube::getPlaylist(const QUrl &url)
     QUrlQuery query{url.query()};
     QString playlistId{query.queryItemValue(u"list"_s)};
     QString videoId{query.queryItemValue(u"v"_s)};
-    QString playlistPath = u"https://www.youtube.com/playlist?list=%1"_s.arg(playlistId);
 
     // use youtube-dl to get the required playlist info as json
     auto ytdlProcess = std::make_shared<QProcess>();
