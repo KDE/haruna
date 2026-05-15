@@ -13,12 +13,14 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QMimeDatabase>
+#include <QProcess>
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 #include <QStandardPaths>
 #include <QStyle>
 #include <QStyleFactory>
 #include <QThread>
+#include <QThreadPool>
 #include <QUrlQuery>
 
 #include "kconfig_version.h"
@@ -31,16 +33,17 @@
 
 #include "audiosettings.h"
 #include "generalsettings.h"
-#include "pathutils.h"
 #include "haruna-version.h"
 #include "informationsettings.h"
 #include "miscutils.h"
 #include "mousesettings.h"
+#include "pathutils.h"
 #include "playbacksettings.h"
 #include "playlistsettings.h"
 #include "subtitlessettings.h"
 #include "videosettings.h"
 #include "worker.h"
+#include "youtube.h"
 
 using namespace Qt::StringLiterals;
 
@@ -118,19 +121,6 @@ void Application::setupWorkerThread()
     worker->moveToThread(thread);
     QObject::connect(thread, &QThread::finished, worker, &Worker::deleteLater);
     QObject::connect(thread, &QThread::finished, thread, &QThread::deleteLater);
-    connect(
-        Worker::instance(),
-        &Worker::ytdlpVersionRetrived,
-        this,
-        [this](const QByteArray &version) {
-            m_aboutData.addComponent(u"yt-dlp"_s,
-                                     i18n("Feature-rich command-line audio/video downloader"),
-                                     QString::fromUtf8(version),
-                                     u"https://github.com/yt-dlp/yt-dlp"_s,
-                                     u"https://unlicense.org"_s);
-            KAboutData::setApplicationData(m_aboutData);
-        },
-        Qt::QueuedConnection);
     thread->start();
 }
 
@@ -156,7 +146,36 @@ void Application::setupAboutData()
                           u"georgefb899@gmail.com"_s,
                           u"https://georgefb.com"_s);
 
-    QMetaObject::invokeMethod(Worker::instance(), &Worker::getYtdlpVersion, Qt::QueuedConnection);
+    QPointer self(this);
+    QThreadPool::globalInstance()->start([self]() {
+        if (!self) {
+            return;
+        }
+
+        YouTube yt;
+        if (yt.youtubeDlExecutable().isEmpty()) {
+            return;
+        }
+        QProcess ytdlpProcess;
+        ytdlpProcess.setProgram(yt.youtubeDlExecutable());
+        ytdlpProcess.setArguments({u"--version"_s});
+        ytdlpProcess.start();
+        ytdlpProcess.waitForFinished(2000);
+
+        auto ytdlpVersion = ytdlpProcess.readAllStandardOutput().simplified();
+        QMetaObject::invokeMethod(self, [self, ytdlpVersion]() {
+            if (!self) {
+                return;
+            }
+
+            self->m_aboutData.addComponent(u"yt-dlp"_s,
+                                           i18n("Feature-rich command-line audio/video downloader"),
+                                           QString::fromUtf8(ytdlpVersion),
+                                           u"https://github.com/yt-dlp/yt-dlp"_s,
+                                           u"https://unlicense.org"_s);
+            KAboutData::setApplicationData(self->m_aboutData);
+        });
+    });
 
     KAboutData::setApplicationData(m_aboutData);
 }

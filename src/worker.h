@@ -10,8 +10,6 @@
 #include <QObject>
 #include <QSqlDatabase>
 
-#include <memory>
-
 class KConfig;
 class QImage;
 class QQuickWindow;
@@ -27,7 +25,6 @@ Q_SIGNALS:
     void thumbnailFail();
     void mprisThumbnailSuccess(const QImage &image);
     void subtitlesFound(QStringList subs);
-    void ytdlpVersionRetrived(const QByteArray &version);
 
 public Q_SLOTS:
     void makePlaylistThumbnail(const QString &path, int width);
@@ -35,7 +32,6 @@ public Q_SLOTS:
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
     void mprisThumbnail(const QString &path, int width);
     void findRecursiveSubtitles(const QUrl &playingUrl);
-    void getYtdlpVersion();
 
 private:
     Worker() = default;

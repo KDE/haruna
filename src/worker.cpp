@@ -11,19 +11,17 @@
 #include <QDirIterator>
 #include <QFileInfo>
 #include <QImage>
-#include <QProcess>
 #include <QQuickWindow>
 #include <QThread>
 
 #include <KConfig>
 #include <KConfigGroup>
 
-#include "miscutils.h"
 #include "database.h"
 #include "framedecoder.h"
+#include "miscutils.h"
 #include "pathutils.h"
 #include "subtitlessettings.h"
-#include "youtube.h"
 
 using namespace Qt::StringLiterals;
 
@@ -167,19 +165,6 @@ void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
 void Worker::savePositionToDB(const QString &md5Hash, const QString &path, double position)
 {
     Database::instance()->addPlaybackPosition(md5Hash, path, position, getDBConnection());
-}
-
-void Worker::getYtdlpVersion()
-{
-    QProcess ytdlpProcess;
-    YouTube yt;
-    ytdlpProcess.setProgram(yt.youtubeDlExecutable());
-    ytdlpProcess.setArguments({u"--version"_s});
-    ytdlpProcess.start();
-    ytdlpProcess.waitForFinished();
-    auto ytdlpVersion = ytdlpProcess.readAllStandardOutput().simplified();
-
-    Q_EMIT ytdlpVersionRetrived(ytdlpVersion);
 }
 
 QSqlDatabase Worker::getDBConnection()
