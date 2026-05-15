@@ -26,12 +26,13 @@ Page {
     required property MpvVideo m_mpv
     required property Loader m_advancedSortWindowLoader
 
-    property bool isSmallWindowSize: Window.window.width < 600
+    property Main mainWindow: Window.window as Main
+    property bool isSmallWindowSize: mainWindow.width < 600
     property int buttonSize: isSmallWindowSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
     property real customWidth: PlaylistSettings.playlistWidth
-    property real fsScale: Window.window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
+    property real fsScale: mainWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
 
     width: limitWidth(customWidth) * fsScale
 
@@ -39,11 +40,11 @@ Page {
         if (PlaylistSettings.style === "compact") {
             return 380
         } else {
-            return Math.min(Math.max(pWidth, 260), Window.window.width - 50)
+            return Math.min(Math.max(pWidth, 260), mainWindow.width - 50)
         }
     }
 
-    x: PlaylistSettings.position === "right" ? Window.window.width : -width
+    x: PlaylistSettings.position === "right" ? mainWindow.width : -width
     y: 0
     padding: 0
     state: PlaylistSettings.rememberState
@@ -557,7 +558,7 @@ Page {
 
                 if (PlaylistSettings.position === "right") {
                     let mX = root.m_mpv.mapFromItem(this, mouseX, mouseY).x
-                    var w = root.limitWidth(Window.window.width - mX)
+                    var w = root.limitWidth(root.mainWindow.width - mX)
                 } else {
                     let mX = playlistView.mapFromItem(this, mouseX, mouseY).x
                     var w = root.limitWidth(mX)
@@ -992,7 +993,7 @@ Page {
 
             PropertyChanges {
                 root.x: PlaylistSettings.position === "right"
-                        ? root.Window.window.width
+                        ? root.mainWindow.width
                         : -width
                 root.visible: false
             }
@@ -1002,7 +1003,7 @@ Page {
 
             PropertyChanges {
                 root.x: PlaylistSettings.position === "right"
-                        ? root.Window.window.width - root.width
+                        ? root.mainWindow.width - root.width
                         : 0
                 root.visible: true
             }
