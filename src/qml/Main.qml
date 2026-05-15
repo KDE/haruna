@@ -310,6 +310,7 @@ ApplicationWindow {
         m_mpv: mpv
         m_mpvContextMenuLoader: mpvContextMenuLoader
         m_osd: osd
+        m_footer: footer
         m_settingsLoader: settingsLoader
         m_triggerActionPopup: triggerActionPopup
         m_openUrlPopup: openUrlPopup
