@@ -86,14 +86,13 @@ void Application::setActionsEnabled(bool enable)
 
 Application::Application()
     : QObject{nullptr}
-    , m_app(qApp)
     , m_schemes(KColorSchemeManager::instance())
-    , m_systemDefaultStyle(m_app->style()->objectName())
+    , m_systemDefaultStyle(QApplication::style()->objectName())
     , m_appEventFilter{std::make_unique<ApplicationEventFilter>()}
 {
     // used to hide playlist when mouse leaves the application
     // while moving between monitors while in fullscreen
-    m_app->installEventFilter(m_appEventFilter.get());
+    QApplication::instance()->installEventFilter(m_appEventFilter.get());
     QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
     QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
 
@@ -192,7 +191,7 @@ void Application::setupCommandLineParser()
                                                  QString());
     m_parser->addOption(ytdlFormatSelectionOption);
 
-    m_parser->process(*m_app);
+    m_parser->process(*QApplication::instance());
     m_aboutData.processCommandLine(m_parser.get());
 
     const auto args = m_parser->positionalArguments();

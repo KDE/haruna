@@ -89,7 +89,6 @@ private:
     void setupAboutData();
     void setupCommandLineParser();
     QAbstractItemModel *colorSchemesModel();
-    QApplication *m_app{nullptr};
     KAboutData m_aboutData;
     std::unique_ptr<QCommandLineParser> m_parser;
     QList<QUrl> m_urls;
