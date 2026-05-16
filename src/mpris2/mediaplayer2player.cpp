@@ -118,7 +118,7 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
     QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
     KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractImageData);
 
-    if (extractors.size() > 0) {
+    if (!extractors.isEmpty()) {
         KFileMetaData::Extractor *ex = extractors.first();
         ex->extract(&result);
         QString base64 = u"data:image/png;base64,"_s;

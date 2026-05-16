@@ -46,11 +46,11 @@ int main(int argc, char *argv[])
     QApplication::setWindowIcon(QIcon::fromTheme(u"haruna"_s));
     KLocalizedString::setApplicationDomain("haruna");
 
-    auto application = Application::instance();
+    auto *application = Application::instance();
 
     KDSingleApplication kdsApp;
     if (kdsApp.isPrimaryInstance()) {
-        QObject::connect(&kdsApp, &KDSingleApplication::messageReceived, [=](const QByteArray &message) {
+        QObject::connect(&kdsApp, &KDSingleApplication::messageReceived, &qApplication, [=](const QByteArray &message) {
             QString file;
             QString token;
 
@@ -61,10 +61,10 @@ int main(int argc, char *argv[])
             application->handleSecondayInstanceMessage(file.toUtf8(), token);
         });
     } else {
-        if (GeneralSettings::self()->useSingleInstance()) {
+        if (GeneralSettings::useSingleInstance()) {
             QCommandLineParser clParser;
             clParser.process(qApplication);
-            if (clParser.positionalArguments().size() > 0) {
+            if (!clParser.positionalArguments().isEmpty()) {
                 const QString file = clParser.positionalArguments().constFirst();
                 const QString token = qEnvironmentVariable("XDG_ACTIVATION_TOKEN");
 
@@ -85,5 +85,5 @@ int main(int argc, char *argv[])
 
     application->setQmlEngine(&engine);
 
-    return qApplication.exec();
+    return QApplication::exec();
 }

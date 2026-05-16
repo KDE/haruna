@@ -127,19 +127,19 @@ void PlaylistFilterProxyModel::setShowSections(bool split)
 
 uint PlaylistFilterProxyModel::getPlayingItem()
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     return mapFromPlaylistModel(model->m_playingItem).row();
 }
 
 void PlaylistFilterProxyModel::setPlayingItem(uint i)
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     model->setPlayingItem(mapToPlaylistModel(i).row());
 }
 
 void PlaylistFilterProxyModel::playNext()
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     if (PlaylistSettings::randomPlayback()) {
         auto nextIndex = model->currentShuffledIndex() + 1;
         if (nextIndex >= static_cast<int>(model->shuffledIndexes().size())) {
@@ -161,7 +161,7 @@ void PlaylistFilterProxyModel::playNext()
 
 void PlaylistFilterProxyModel::playPrevious()
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     if (PlaylistSettings::randomPlayback()) {
         auto previousIndex = model->currentShuffledIndex() - 1;
         if (previousIndex < 0) {
@@ -204,7 +204,7 @@ void PlaylistFilterProxyModel::highlightInFileManager(uint row)
 
 void PlaylistFilterProxyModel::removeItem(uint row)
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     model->removeItem(mapToPlaylistModel(row).row());
     Q_EMIT itemsRemoved();
     Q_EMIT itemCountChanged();
@@ -220,7 +220,7 @@ void PlaylistFilterProxyModel::removeItems()
     }
     // Need to remove items from bottom to top, in order not to mess with the indices
     std::sort(rows.begin(), rows.end(), std::greater<>());
-    auto model = playlistModel();
+    auto *model = playlistModel();
     for (auto row : std::as_const(rows)) {
         model->removeItem(row);
     }
@@ -236,11 +236,11 @@ void PlaylistFilterProxyModel::renameFile(uint row)
         url.setScheme(u"file"_s);
     }
     KFileItem item(url);
-    auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
+    auto *renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
     renameDialog->open();
 
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [this, row](const QList<QUrl> &urls) {
-        auto model = playlistModel();
+        auto *model = playlistModel();
         auto sourceRow = mapToPlaylistModel(row).row();
         auto &item = model->m_playlist[sourceRow];
         item.url = QUrl::fromUserInput(urls.first().path());
@@ -264,7 +264,7 @@ void PlaylistFilterProxyModel::trashFile(uint row)
 
     connect(job, &KJob::result, this, [this, job, row]() {
         if (job->error() == 0) {
-            auto model = playlistModel();
+            auto *model = playlistModel();
             auto sourceRow = mapToPlaylistModel(row).row();
             model->removeItem(sourceRow);
         }
@@ -295,7 +295,7 @@ void PlaylistFilterProxyModel::trashFiles()
 
     connect(job, &KJob::result, this, [this, job, rows]() {
         if (job->error() == 0) {
-            auto model = playlistModel();
+            auto *model = playlistModel();
             for (auto row : std::as_const(rows)) {
                 model->removeItem(row);
             }
@@ -305,7 +305,7 @@ void PlaylistFilterProxyModel::trashFiles()
 
 void PlaylistFilterProxyModel::copyFileName(uint row)
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     auto sourceRow = mapToPlaylistModel(row).row();
     auto item = model->m_playlist.at(sourceRow);
     QGuiApplication::clipboard()->setText(item.filename);
@@ -313,7 +313,7 @@ void PlaylistFilterProxyModel::copyFileName(uint row)
 
 void PlaylistFilterProxyModel::copyFilePath(uint row)
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     auto sourceRow = mapToPlaylistModel(row).row();
     auto item = model->m_playlist.at(sourceRow);
     QGuiApplication::clipboard()->setText(item.url.toString());
@@ -321,7 +321,7 @@ void PlaylistFilterProxyModel::copyFilePath(uint row)
 
 QString PlaylistFilterProxyModel::getFilePath(uint row)
 {
-    auto model = playlistModel();
+    auto *model = playlistModel();
     auto sourceRow = mapToPlaylistModel(row).row();
     auto item = model->m_playlist.at(sourceRow);
     return item.url.toString();
@@ -618,25 +618,25 @@ bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)
 
 PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeSortPropertiesModel()
 {
-    auto sortModel = playlistSortProxyModel();
+    auto *sortModel = playlistSortProxyModel();
     return sortModel->m_activeSortProperties.get();
 }
 
 PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeGroupModel()
 {
-    auto sortModel = playlistSortProxyModel();
+    auto *sortModel = playlistSortProxyModel();
     return sortModel->m_activeGroups.get();
 }
 
 PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableSortPropertiesProxyModel()
 {
-    auto sortModel = playlistSortProxyModel();
+    auto *sortModel = playlistSortProxyModel();
     return sortModel->m_availableSortPropertiesProxy.get();
 }
 
 PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableGroupProxyModel()
 {
-    auto sortModel = playlistSortProxyModel();
+    auto *sortModel = playlistSortProxyModel();
     return sortModel->m_availableGroupsProxy.get();
 }
 
@@ -716,10 +716,12 @@ void PlaylistFilterProxyModel::addItems(const QList<QUrl> &urls, PlaylistModel::
 
 void PlaylistFilterProxyModel::onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
-    for (const auto &index : selected.indexes()) {
+    const auto sIndexes = selected.indexes();
+    for (const auto &index : sIndexes) {
         Q_EMIT dataChanged(index, index);
     }
-    for (const auto &index : deselected.indexes()) {
+    const auto dIndexes = deselected.indexes();
+    for (const auto &index : dIndexes) {
         Q_EMIT dataChanged(index, index);
     }
     Q_EMIT selectionCountChanged();

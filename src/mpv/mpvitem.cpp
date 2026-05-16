@@ -40,7 +40,7 @@
 #include "worker.h"
 #include "youtube.h"
 
-#if defined(Q_OS_UNIX)
+#ifdef Q_OS_UNIX
 #include <QDBusConnection>
 
 #include "mediaplayer2.h"
@@ -260,7 +260,7 @@ void MpvItem::setupConnections()
             this, &MpvItem::onChapterChanged);
 
     connect(m_playlists.get(), &PlaylistMultiProxiesModel::playingItemChanged, this, [this]() {
-        const auto playlistModel = activeFilterProxyModel()->playlistModel();
+        const auto *playlistModel = activeFilterProxyModel()->playlistModel();
         const auto url = playlistModel->m_playlist.at(playlistModel->m_playingItem).url;
         const auto mediaTitle = playlistModel->m_playlist.at(playlistModel->m_playingItem).mediaTitle;
         loadFile(url.toString());
@@ -281,9 +281,9 @@ void MpvItem::setupConnections()
     QDBusConnection::sessionBus().registerService(mspris2Name);
     QDBusConnection::sessionBus().registerObject(u"/org/mpris/MediaPlayer2"_s, this, QDBusConnection::ExportAdaptors);
     // org.mpris.MediaPlayer2 mpris2 interface
-    auto mp2 = new MediaPlayer2(this);
+    auto *mp2 = new MediaPlayer2(this);
     connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
-    auto mp2Player = new MediaPlayer2Player(this);
+    auto *mp2Player = new MediaPlayer2Player(this);
     connect(mp2Player, &MediaPlayer2Player::playpause, this, [this]() {
         setPause(!pause());
     });
@@ -333,7 +333,7 @@ void MpvItem::setupConnections()
 void MpvItem::onReady()
 {
     setIsReady(true);
-    auto proxyModel = m_playlists->defaultFilterProxy();
+    auto *proxyModel = m_playlists->defaultFilterProxy();
     const auto urls = Application::instance()->urls();
     if (!urls.isEmpty()) {
         const auto playlistAddMode = urls.size() == 1 ? PlaylistModel::Clear : PlaylistModel::Append;
@@ -400,7 +400,7 @@ void MpvItem::onEndFile(const QString &reason)
 {
     // this runs after the file has been unloaded from mpv
     if (reason == u"error"_s) {
-        auto proxyModel = activeFilterProxyModel();
+        auto *proxyModel = activeFilterProxyModel();
         if (proxyModel->rowCount() == 0) {
             return;
         }
@@ -421,7 +421,7 @@ void MpvItem::onEndOfFileReached()
         return;
     }
 
-    auto proxyModel = activeFilterProxyModel();
+    auto *proxyModel = activeFilterProxyModel();
     const auto behavior = PlaylistSettings::playbackBehavior();
     if (behavior == u"StopAfterLast"_s) {
         uint currentItem = proxyModel->getPlayingItem();
@@ -529,7 +529,7 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
         auto delay = QString::number(value.toDouble(), 'f', 2).toDouble();
         auto delayString = QLocale().toString(delay, 'f', 2);
         if (delay > 0) {
-            Q_EMIT osdMessage(i18nc("@info:tooltip", "Subtitle timing: %1 seconds", delayString.prepend(u"+"_s)));
+            Q_EMIT osdMessage(i18nc("@info:tooltip", "Subtitle timing: +%1 seconds", delayString));
         } else {
             Q_EMIT osdMessage(i18nc("@info:tooltip", "Subtitle timing: %1 seconds", delayString));
         }
@@ -594,7 +594,7 @@ void MpvItem::loadFile(const QString &file)
     Q_EMIT command(QStringList() << u"loadfile"_s << m_currentUrl.toString());
     setPropertyBlocking(MpvProperties::self()->Mute, mute);
 
-    const auto model = activeFilterProxyModel();
+    auto *const model = activeFilterProxyModel();
     const auto playingRow = model->getPlayingItem();
     const auto playingIndex = model->index(playingRow, 0);
     const auto title = model->data(playingIndex, PlaylistModel::Roles::TitleRole).toString();
@@ -751,7 +751,7 @@ void MpvItem::saveTimePosition()
 
 double MpvItem::loadTimePosition()
 {
-    const auto playlistModel = activeFilterProxyModel()->playlistModel();
+    auto *const playlistModel = activeFilterProxyModel()->playlistModel();
     PlaylistItem item{playlistModel->m_playlist.at(playlistModel->m_playingItem)};
     auto duration{item.duration};
 
@@ -760,7 +760,7 @@ double MpvItem::loadTimePosition()
         KFileMetaData::ExtractorCollection exCol;
         QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
         KFileMetaData::SimpleExtractionResult result(m_currentUrl.toLocalFile(), mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);
-        if (extractors.size() > 0) {
+        if (!extractors.isEmpty()) {
             KFileMetaData::Extractor *ex = extractors.first();
             ex->extract(&result);
             auto properties = result.properties();
@@ -812,7 +812,7 @@ void MpvItem::stop()
     setPause(true);
     update();
 
-    const auto playlistModel = activeFilterProxyModel()->playlistModel();
+    auto *const playlistModel = activeFilterProxyModel()->playlistModel();
     playlistModel->setIsPlaying(false);
 }
 
@@ -866,7 +866,6 @@ void MpvItem::setTrack(int row, TrackType type)
         break;
     }
     case TrackType::Video:
-        break;
     default:
         break;
     }
@@ -887,7 +886,6 @@ void MpvItem::setNextTrack(TrackType type)
     }
     case TrackType::SecondarySubtitle:
     case TrackType::Video:
-        break;
     default:
         break;
     }
@@ -908,7 +906,6 @@ void MpvItem::setPreviousTrack(TrackType type)
     }
     case TrackType::SecondarySubtitle:
     case TrackType::Video:
-        break;
     default:
         break;
     }

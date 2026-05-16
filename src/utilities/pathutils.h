@@ -35,9 +35,9 @@ public:
     };
     Q_ENUM(ConfigFile)
 
-    Q_INVOKABLE const QString configFileParentPath(ConfigFile configFile = ConfigFile::Main);
-    Q_INVOKABLE const QString configFilePath(ConfigFile configFile = ConfigFile::Main);
-    Q_INVOKABLE const QString playlistsFolder();
+    Q_INVOKABLE QString configFileParentPath(ConfigFile configFile = ConfigFile::Main);
+    Q_INVOKABLE QString configFilePath(ConfigFile configFile = ConfigFile::Main);
+    static Q_INVOKABLE QString playlistsFolder();
     Q_INVOKABLE void highlightInFileManager(const QString &path);
 
     Q_INVOKABLE bool pathExists(const QString &path);

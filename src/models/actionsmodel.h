@@ -158,6 +158,7 @@ Q_SIGNALS:
     void saturationResetAction();
 
 private:
+    bool extracted();
     bool keyConflictMessageBox(const QString &actionText);
     KSharedConfig::Ptr m_config;
     QList<Action> m_actions;

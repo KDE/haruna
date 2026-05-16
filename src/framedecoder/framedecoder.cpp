@@ -8,6 +8,7 @@
 
 #include <QFileInfo>
 #include <QImage>
+#include <algorithm>
 
 extern "C" {
 #include <libavfilter/buffersink.h>
@@ -54,7 +55,7 @@ void FrameDecoder::initialize(const QString &filename)
     }
     m_pFrame = av_frame_alloc();
 
-    if (m_pFrame) {
+    if (m_pFrame != nullptr) {
         m_initialized = true;
     }
 }
@@ -67,7 +68,7 @@ bool FrameDecoder::getInitialized()
 void FrameDecoder::destroy()
 {
     deleteFilterGraph();
-    if (m_pVideoCodecContext) {
+    if (m_pVideoCodecContext != nullptr) {
 #if LIBAVCODEC_VERSION_MAJOR < 61
         avcodec_close(m_pVideoCodecContext);
 #endif
@@ -80,18 +81,18 @@ void FrameDecoder::destroy()
         m_pFormatContext = nullptr;
     }
 
-    if (m_pPacket) {
+    if (m_pPacket != nullptr) {
         av_packet_unref(m_pPacket);
         delete m_pPacket;
         m_pPacket = nullptr;
     }
 
-    if (m_pFrame) {
+    if (m_pFrame != nullptr) {
         av_frame_free(&m_pFrame);
         m_pFrame = nullptr;
     }
 
-    if (m_pFrameBuffer) {
+    if (m_pFrameBuffer != nullptr) {
         av_free(m_pFrameBuffer);
         m_pFrameBuffer = nullptr;
     }
@@ -100,7 +101,7 @@ void FrameDecoder::destroy()
 QString FrameDecoder::getCodec()
 {
     QString codecName;
-    if (m_pVideoCodec) {
+    if (m_pVideoCodec != nullptr) {
         codecName = QString::fromLatin1(m_pVideoCodec->name);
     }
     return codecName;
@@ -136,7 +137,7 @@ bool FrameDecoder::initializeVideo()
 
 int FrameDecoder::getWidth()
 {
-    if (m_pVideoCodecContext) {
+    if (m_pVideoCodecContext != nullptr) {
         return m_pVideoCodecContext->width;
     }
 
@@ -145,7 +146,7 @@ int FrameDecoder::getWidth()
 
 int FrameDecoder::getHeight()
 {
-    if (m_pVideoCodecContext) {
+    if (m_pVideoCodecContext != nullptr) {
         return m_pVideoCodecContext->height;
     }
 
@@ -154,7 +155,7 @@ int FrameDecoder::getHeight()
 
 int FrameDecoder::getDuration()
 {
-    if (m_pFormatContext) {
+    if (m_pFormatContext != nullptr) {
         return static_cast<int>(m_pFormatContext->duration / AV_TIME_BASE);
     }
 
@@ -169,9 +170,7 @@ void FrameDecoder::seek(int timeInSeconds)
 
     qint64 timestamp = AV_TIME_BASE * static_cast<qint64>(timeInSeconds);
 
-    if (timestamp < 0) {
-        timestamp = 0;
-    }
+    timestamp = std::max<qint64>(timestamp, 0);
 
     int ret = av_seek_frame(m_pFormatContext, -1, timestamp, 0);
     if (ret >= 0) {
@@ -196,9 +195,9 @@ void FrameDecoder::seek(int timeInSeconds)
 
         ++keyFrameAttempts;
 #if (LIBAVFORMAT_VERSION_MAJOR < 61)
-    } while ((!gotFrame || m_pFrame->flags & AV_PKT_FLAG_KEY) && keyFrameAttempts < 200);
+    } while ((!gotFrame || ((m_pFrame->flags & AV_PKT_FLAG_KEY) != 0)) && keyFrameAttempts < 200);
 #else
-    } while ((!gotFrame || m_pFrame->flags & AV_FRAME_FLAG_KEY) && keyFrameAttempts < 200);
+    } while ((!gotFrame || ((m_pFrame->flags & AV_FRAME_FLAG_KEY) != 0)) && keyFrameAttempts < 200);
 #endif
 
     if (!gotFrame) {
@@ -245,7 +244,7 @@ bool FrameDecoder::getVideoPacket()
 
     int attempts = 0;
 
-    if (m_pPacket) {
+    if (m_pPacket != nullptr) {
         av_packet_unref(m_pPacket);
         delete m_pPacket;
     }
@@ -267,7 +266,7 @@ bool FrameDecoder::getVideoPacket()
 
 void FrameDecoder::deleteFilterGraph()
 {
-    if (m_filterGraph) {
+    if (m_filterGraph != nullptr) {
         av_frame_free(&m_filterFrame);
         avfilter_graph_free(&m_filterGraph);
         m_filterGraph = nullptr;
@@ -276,7 +275,8 @@ void FrameDecoder::deleteFilterGraph()
 
 bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int height)
 {
-    AVFilterInOut *inputs = nullptr, *outputs = nullptr;
+    AVFilterInOut *inputs = nullptr;
+    AVFilterInOut *outputs = nullptr;
 
     deleteFilterGraph();
     m_filterGraph = avfilter_graph_alloc();
@@ -294,7 +294,7 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
         return false;
     }
 
-    if (inputs || outputs) {
+    if ((inputs != nullptr) || (outputs != nullptr)) {
         return false;
     }
 
@@ -306,7 +306,7 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
 
     m_bufferSourceContext = avfilter_graph_get_filter(m_filterGraph, "Parsed_buffer_0");
     m_bufferSinkContext = avfilter_graph_get_filter(m_filterGraph, "Parsed_buffersink_2");
-    if (!m_bufferSourceContext || !m_bufferSinkContext) {
+    if ((m_bufferSourceContext == nullptr) || (m_bufferSinkContext == nullptr)) {
         qWarning() << "Unable to get source or sink";
         return false;
     }
@@ -320,7 +320,7 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
 
 bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVPixelFormat pixfmt, int width, int height)
 {
-    if (!m_filterGraph || width != m_lastWidth || height != m_lastHeight || pixfmt != m_lastPixfmt) {
+    if ((m_filterGraph == nullptr) || width != m_lastWidth || height != m_lastHeight || pixfmt != m_lastPixfmt) {
         if (!initFilterGraph(pixfmt, width, height)) {
             return false;
         }
@@ -353,7 +353,7 @@ void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio,
 #if (LIBAVFORMAT_VERSION_MAJOR < 61)
     if (m_pFrame->flags & AV_CODEC_FLAG_INTERLACED_ME) {
 #else
-    if (m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) {
+    if ((m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) != 0) {
 #endif
         processFilterGraph(m_pFrame, m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
     }

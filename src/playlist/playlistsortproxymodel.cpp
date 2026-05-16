@@ -8,8 +8,8 @@
 
 #include <KLocalizedString>
 
-#include "playlistsortproxymodel.h"
 #include "playlistmodel.h"
+#include "playlistsortproxymodel.h"
 
 using Category = PlaylistSortPropertyModel::Category;
 using namespace Qt::StringLiterals;
@@ -219,7 +219,7 @@ QVariant PlaylistSortProxyModel::data(const QModelIndex &index, int role) const
 bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
 {
     // Compare each group role in order
-    for (auto &sortProperty : std::as_const(m_activeSortProperties->m_properties)) {
+    for (const auto &sortProperty : std::as_const(m_activeSortProperties->m_properties)) {
         int compare = 0;
 
         // Handle special comparison cases
@@ -277,7 +277,7 @@ bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QMod
 void PlaylistSortProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
     QSortFilterProxyModel::setSourceModel(sourceModel);
-    auto playlistModel = qobject_cast<PlaylistModel *>(sourceModel);
+    auto *playlistModel = qobject_cast<PlaylistModel *>(sourceModel);
 
     // When a new item is inserted, recreate sections with the new metadata after it is ready
     connect(playlistModel, &PlaylistModel::metaDataReady, this, &PlaylistSortProxyModel::scheduleSectionRecreation);
@@ -509,7 +509,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
     };
     // clang-format on
 
-    for (auto &sortProperty : std::as_const(m_activeGroups->m_properties)) {
+    for (const auto &sortProperty : std::as_const(m_activeGroups->m_properties)) {
         bool hideBlank = sortProperty.hideBlank; // show in the section if and only if it exists
 
         switch (Group(sortProperty.sort)) {

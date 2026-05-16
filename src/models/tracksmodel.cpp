@@ -78,7 +78,7 @@ void TracksModel::addTrack(const Track &track)
     Q_EMIT rowCountChanged();
 }
 
-const Track TracksModel::track(int row) const
+Track TracksModel::track(int row) const
 {
     return m_data.at(row);
 }

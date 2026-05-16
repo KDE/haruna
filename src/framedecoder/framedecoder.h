@@ -49,7 +49,6 @@ private:
     bool initFilterGraph(enum AVPixelFormat pixfmt, int width, int height);
     bool processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVPixelFormat pixfmt, int width, int height);
 
-private:
     int m_VideoStream{-1};
     AVFormatContext *m_pFormatContext{nullptr};
     AVCodecContext *m_pVideoCodecContext{nullptr};

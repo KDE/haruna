@@ -362,10 +362,10 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
         url.setScheme(u"file"_s);
     }
     KFileItem item(url);
-    auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
+    auto *renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
     // Hack into line edit to override erasing '.m3u' extension
     auto *edit = renameDialog->findChild<QLineEdit *>();
-    if (edit) {
+    if (edit != nullptr) {
         edit->setValidator(new PlaylistRenameValidator());
     }
     renameDialog->open();

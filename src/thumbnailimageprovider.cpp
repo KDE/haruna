@@ -18,7 +18,7 @@ ThumbnailImageProvider::ThumbnailImageProvider() = default;
 
 QQuickImageResponse *ThumbnailImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {
-    auto response = new ThumbnailResponse(id, requestedSize);
+    auto *response = new ThumbnailResponse(id, requestedSize);
     return response;
 }
 

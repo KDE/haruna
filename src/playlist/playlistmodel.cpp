@@ -530,7 +530,7 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
 
 void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties)
 {
-    if (m_playlist.empty() || static_cast<uint>(i) >= m_playlist.size()) {
+    if (m_playlist.empty() || i >= m_playlist.size()) {
         return;
     }
 

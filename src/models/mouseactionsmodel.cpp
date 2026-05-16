@@ -344,7 +344,7 @@ QString MouseActionsModel::configKey(MouseButton button, Qt::KeyboardModifier mo
         modifierString.append(u"_"_s);
     }
 
-    QString buttonString{mouseButtonToString(static_cast<MouseButton>(button))};
+    QString buttonString{mouseButtonToString(button)};
     QString isDoubleClickString;
     if (isDoubleClick) {
         isDoubleClickString = u"x2"_s;

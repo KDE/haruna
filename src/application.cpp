@@ -113,8 +113,8 @@ Application::~Application() = default;
 
 void Application::setupWorkerThread()
 {
-    auto worker = Worker::instance();
-    auto thread = new QThread();
+    auto *worker = Worker::instance();
+    auto *thread = new QThread();
     worker->moveToThread(thread);
     QObject::connect(thread, &QThread::finished, worker, &Worker::deleteLater);
     QObject::connect(thread, &QThread::finished, thread, &QThread::deleteLater);
@@ -287,12 +287,12 @@ int Application::qtMajorVersion()
 void Application::raiseWindow()
 {
     QObject *rootObject = m_qmlEngine->rootObjects().constFirst();
-    if (!rootObject) {
+    if (rootObject == nullptr) {
         return;
     }
 
     QWindow *window = qobject_cast<QWindow *>(rootObject);
-    if (window) {
+    if (window != nullptr) {
         KWindowSystem::updateStartupId(window);
         KWindowSystem::activateWindow(window);
     }

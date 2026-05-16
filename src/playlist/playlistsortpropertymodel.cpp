@@ -117,12 +117,9 @@ void PlaylistSortPropertyModel::removeProperty(uint index)
 
 bool PlaylistSortPropertyModel::hasProperty(const int sort)
 {
-    for (const auto &property : std::as_const(m_properties)) {
-        if (property.sort == sort) {
-            return true;
-        }
-    }
-    return false;
+    return std::any_of(m_properties.constBegin(), m_properties.constEnd(), [sort](const SortProperty &sortProperty) {
+        return sortProperty.sort == sort;
+    });
 }
 
 void PlaylistSortPropertyModel::moveSortProperty(int sourceRow, int destinationRow)

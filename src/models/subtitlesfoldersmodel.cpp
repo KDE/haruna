@@ -58,7 +58,7 @@ void SubtitlesFoldersModel::updateFolder(const QString &folder, int row)
     // removing directly from m_list messes with the ui logic
     newList.removeAll(QString());
 
-    SubtitlesSettings::self()->setSubtitlesFolders(newList);
+    SubtitlesSettings::setSubtitlesFolders(newList);
     SubtitlesSettings::self()->save();
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));

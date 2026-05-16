@@ -719,7 +719,7 @@ bool ActionsModel::saveShortcut(int row, const QKeySequence &keySequence)
 {
     auto group = m_config->group(u"Shortcuts"_s);
     // action whose shortcut is changed
-    auto action = &m_actions[row];
+    auto *action = &m_actions[row];
 
     // if shortcut is being cleared, no need to search for a conflict
     if (!keySequence.isEmpty()) {
@@ -835,7 +835,7 @@ void ProxyActionsModel::setTypeFilter(const QString &regExp)
 
 bool ProxyActionsModel::saveShortcut(int row, const QKeySequence &keySequence)
 {
-    auto actionsModel = qobject_cast<ActionsModel *>(sourceModel());
+    auto *actionsModel = qobject_cast<ActionsModel *>(sourceModel());
     return actionsModel->saveShortcut(mapToSource(index(row, 0)).row(), keySequence);
 }
 

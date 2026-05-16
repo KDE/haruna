@@ -64,7 +64,7 @@ public:
 
     void clear();
     void addTrack(const Track &track);
-    const Track track(int row) const;
+    Track track(int row) const;
     QString trackInfo(int row) const;
 
     int activeRow() const;
