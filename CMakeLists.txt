@@ -17,6 +17,11 @@ set(KF6_MIN_VERSION 6.10.0)
 
 include(FeatureSummary)
 
+set(DBUS_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
+
+# -------------------------------
+# -- ECM
+# -------------------------------
 find_package(ECM ${KF6_MIN_VERSION} NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED
     URL "https://api.kde.org/ecm/"
@@ -44,8 +49,6 @@ if(ECM_FOUND)
         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/haruna-version.h"
     )
 endif()
-
-set(DBUS_PLATFORMS Linux FreeBSD GNU/kFreeBSD NetBSD OpenBSD)
 
 # -------------------------------
 #
@@ -82,10 +85,6 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     set_package_properties(Qt6DBus PROPERTIES TYPE REQUIRED)
     set(HAVE_DBUS TRUE)
 endif ()
-configure_file(
-   ${CMAKE_CURRENT_SOURCE_DIR}/config-haruna.h.cmake
-   ${CMAKE_CURRENT_BINARY_DIR}/src/config-haruna.h
-)
 
 # -------------------------------
 #
@@ -162,6 +161,11 @@ set_package_properties(Ytdlp PROPERTIES TYPE RUNTIME
     DESCRIPTION "needed to play videos from youtube and other online sources")
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+configure_file(
+   ${CMAKE_CURRENT_SOURCE_DIR}/config-haruna.h.cmake
+   ${CMAKE_CURRENT_BINARY_DIR}/src/config-haruna.h
+)
 
 ki18n_install(po)
 
