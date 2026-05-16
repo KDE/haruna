@@ -37,8 +37,8 @@ QString getLastExecutedQuery(const QSqlQuery &query)
 
 Database *Database::instance()
 {
-    static Database *db = new Database();
-    return db;
+    static Database db;
+    return &db;
 }
 
 Database *Database::create(QQmlEngine *, QJSEngine *)
