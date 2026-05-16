@@ -220,7 +220,7 @@ void PlaylistMultiProxiesModel::addPlaylist(const QString &playlistName, const Q
         filterModel->playlistModel()->addM3uItems(internalUrl, PlaylistModel::Behavior::Append);
     }
 
-    connect(filterModel->playlistModel(), &PlaylistModel::playingItemChanged, this, [=](const QString &pName) {
+    connect(filterModel->playlistModel(), &PlaylistModel::playingItemChanged, this, [this](const QString &pName) {
         // When playingItemChanged is emitted, we check if the new playing item is in the currently active
         // playlist. If not, we stop that playlist and update the active one.
         QString activePlaylistName = m_playlistFilterProxyModels.at(m_activeIndex)->playlistModel()->m_playlistName;
@@ -370,7 +370,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
     }
     renameDialog->open();
 
-    connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
+    connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [this, pIndex](const QList<QUrl> &urls) {
         QString inputText = urls.first().fileName();
         QString playlistName = inputText.first(inputText.length() - 4); // '.m3u' 4 chars
 

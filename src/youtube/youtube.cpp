@@ -63,28 +63,31 @@ void YouTube::getPlaylist(const QUrl &url)
     ytdlProcess->setArguments(args);
     ytdlProcess->start();
 
-    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
-        const auto output = ytdlProcess->readAllStandardOutput();
-        const auto errorString = ytdlProcess->readAllStandardError();
-        const QString json = QString::fromUtf8(output);
-        const auto jsonObject = QJsonDocument::fromJson(json.toUtf8()).object();
-        const QJsonValue entries = jsonObject.value(u"entries");
-        // QString playlistTitle = jsonObject.value(u"title").toString();
-        const auto playlist = entries.toArray();
+    connect(ytdlProcess.get(),
+            QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+            this,
+            [this, ytdlProcess, playlistId, videoId](int, QProcess::ExitStatus) {
+                const auto output = ytdlProcess->readAllStandardOutput();
+                const auto errorString = ytdlProcess->readAllStandardError();
+                const QString json = QString::fromUtf8(output);
+                const auto jsonObject = QJsonDocument::fromJson(json.toUtf8()).object();
+                const QJsonValue entries = jsonObject.value(u"entries");
+                // QString playlistTitle = jsonObject.value(u"title").toString();
+                const auto playlist = entries.toArray();
 
-        if (output.contains("null\n")) {
-            Q_EMIT error(i18nc("@info:tooltip; error when yt-dlp fails to get playlist",
-                        "Could not retrieve playlist with id: %1\n\n%2",
-                        playlistId,
-                        QString::fromUtf8(errorString)));
-        }
+                if (output.contains("null\n")) {
+                    Q_EMIT error(i18nc("@info:tooltip; error when yt-dlp fails to get playlist",
+                                       "Could not retrieve playlist with id: %1\n\n%2",
+                                       playlistId,
+                                       QString::fromUtf8(errorString)));
+                }
 
-        if (playlist.isEmpty()) {
-            return;
-        }
+                if (playlist.isEmpty()) {
+                    return;
+                }
 
-        Q_EMIT playlistRetrieved(playlist, videoId, playlistId);
-    });
+                Q_EMIT playlistRetrieved(playlist, videoId, playlistId);
+            });
 }
 
 QUrl YouTube::normalizeUrl(const QUrl &url)
@@ -135,7 +138,7 @@ void YouTube::getVideoInfo(const QUrl &url, const QVariantMap &data)
     ytdlProcess->setArguments(QStringList() << u"-j"_s << urlWithoutPlaylist.toString());
     ytdlProcess->start();
 
-    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [=](int, QProcess::ExitStatus) {
+    connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, ytdlProcess, url, data](int, QProcess::ExitStatus) {
         QString json = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
         const auto jsonObject = QJsonDocument::fromJson(json.toUtf8()).object();
         QString title = jsonObject.value(u"title").toString();

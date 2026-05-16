@@ -97,7 +97,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
     m_saveTimePositionTimer->start();
 
-    connect(m_saveTimePositionTimer.get(), &QTimer::timeout, this, [=]() {
+    connect(m_saveTimePositionTimer.get(), &QTimer::timeout, this, [this]() {
         if (finishedLoading() && duration() > 0 && !pause()) {
             if (position() < duration() - 10) {
                 saveTimePosition();
@@ -107,7 +107,7 @@ MpvItem::MpvItem(QQuickItem *parent)
         }
     });
 
-    connect(QApplication::instance(), &QApplication::aboutToQuit, this, [=]() {
+    connect(QApplication::instance(), &QApplication::aboutToQuit, this, [this]() {
         if (playbackState() == PlaybackState::Stopped) {
             return;
         }
@@ -232,7 +232,7 @@ void MpvItem::setupConnections()
     connect(mpvController(), &MpvController::asyncReply,
             this, &MpvItem::onAsyncReply, Qt::QueuedConnection);
 
-    connect(this, &MpvItem::currentUrlChanged, this, [=]() {
+    connect(this, &MpvItem::currentUrlChanged, this, [this]() {
         setFinishedLoading(false);
     });
 
@@ -259,7 +259,7 @@ void MpvItem::setupConnections()
     connect(this, &MpvItem::chapterChanged,
             this, &MpvItem::onChapterChanged);
 
-    connect(m_playlists.get(), &PlaylistMultiProxiesModel::playingItemChanged, this, [=]() {
+    connect(m_playlists.get(), &PlaylistMultiProxiesModel::playingItemChanged, this, [this]() {
         const auto playlistModel = activeFilterProxyModel()->playlistModel();
         const auto url = playlistModel->m_playlist.at(playlistModel->m_playingItem).url;
         const auto mediaTitle = playlistModel->m_playlist.at(playlistModel->m_playingItem).mediaTitle;
@@ -267,11 +267,11 @@ void MpvItem::setupConnections()
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::Playlist, mediaTitle);
     });
 
-    connect(m_playlists.get(), &PlaylistMultiProxiesModel::visibleIndexChanged, this, [=]() {
+    connect(m_playlists.get(), &PlaylistMultiProxiesModel::visibleIndexChanged, this, [this]() {
         Q_EMIT visibleFilterProxyModelChanged();
     });
 
-    connect(m_playlists.get(), &PlaylistMultiProxiesModel::activeIndexChanged, this, [=]() {
+    connect(m_playlists.get(), &PlaylistMultiProxiesModel::activeIndexChanged, this, [this]() {
         Q_EMIT activeFilterProxyModelChanged();
     });
 
@@ -284,35 +284,35 @@ void MpvItem::setupConnections()
     auto mp2 = new MediaPlayer2(this);
     connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
     auto mp2Player = new MediaPlayer2Player(this);
-    connect(mp2Player, &MediaPlayer2Player::playpause, this, [=]() {
+    connect(mp2Player, &MediaPlayer2Player::playpause, this, [this]() {
         setPause(!pause());
     });
-    connect(mp2Player, &MediaPlayer2Player::play, this, [=]() {
+    connect(mp2Player, &MediaPlayer2Player::play, this, [this]() {
         setPause(false);
     });
-    connect(mp2Player, &MediaPlayer2Player::pause, this, [=]() {
+    connect(mp2Player, &MediaPlayer2Player::pause, this, [this]() {
         setPause(true);
     });
-    connect(mp2Player, &MediaPlayer2Player::stop, this, [=]() {
+    connect(mp2Player, &MediaPlayer2Player::stop, this, [this]() {
         setPosition(0);
         setPause(true);
         stop();
     });
-    connect(mp2Player, &MediaPlayer2Player::next, this, [=]() {
+    connect(mp2Player, &MediaPlayer2Player::next, this, [this]() {
         Q_EMIT playNext();
     });
-    connect(mp2Player, &MediaPlayer2Player::previous, this, [=]() {
+    connect(mp2Player, &MediaPlayer2Player::previous, this, [this]() {
         Q_EMIT playPrevious();
     });
-    connect(mp2Player, &MediaPlayer2Player::seek, this, [=](int offset) {
+    connect(mp2Player, &MediaPlayer2Player::seek, this, [this](int offset) {
         Q_EMIT command(QStringList() << u"add"_s << u"time-pos"_s << QString::number(offset));
     });
-    connect(mp2Player, &MediaPlayer2Player::openUri, this, [=](const QString &uri) {
+    connect(mp2Player, &MediaPlayer2Player::openUri, this, [this](const QString &uri) {
         Q_EMIT openUri(uri);
     });
 #endif
 
-    connect(this, &MpvItem::pauseChanged, this, [=]() {
+    connect(this, &MpvItem::pauseChanged, this, [this]() {
         static LockManager lockManager;
         if (pause()) {
             lockManager.setInhibitionOff();

@@ -239,7 +239,7 @@ void PlaylistFilterProxyModel::renameFile(uint row)
     auto renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
     renameDialog->open();
 
-    connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [=](const QList<QUrl> &urls) {
+    connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [this, row](const QList<QUrl> &urls) {
         auto model = playlistModel();
         auto sourceRow = mapToPlaylistModel(row).row();
         auto &item = model->m_playlist[sourceRow];
@@ -262,7 +262,7 @@ void PlaylistFilterProxyModel::trashFile(uint row)
     auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);
     job->start();
 
-    connect(job, &KJob::result, this, [=]() {
+    connect(job, &KJob::result, this, [this, job, row]() {
         if (job->error() == 0) {
             auto model = playlistModel();
             auto sourceRow = mapToPlaylistModel(row).row();
@@ -293,7 +293,7 @@ void PlaylistFilterProxyModel::trashFiles()
     auto *job = new KIO::DeleteOrTrashJob(urls, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation, this);
     job->start();
 
-    connect(job, &KJob::result, this, [=]() {
+    connect(job, &KJob::result, this, [this, job, rows]() {
         if (job->error() == 0) {
             auto model = playlistModel();
             for (auto row : std::as_const(rows)) {

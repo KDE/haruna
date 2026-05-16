@@ -28,7 +28,7 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
     : QDBusAbstractAdaptor(parent)
     , m_mpv{static_cast<MpvItem *>(parent)}
 {
-    // connect(m_mpv, &MpvItem::fileLoaded, this, [=]() {
+    // connect(m_mpv, &MpvItem::fileLoaded, this, []() {
     //     if (m_mpv->currentUrl().isLocalFile()) {
     //         QString mimeType = MiscUtils::mimeType(m_mpv->currentUrl());
     //         if (mimeType.startsWith(u"audio"_s)) {
@@ -39,13 +39,13 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
 
     // connect(this, &MediaPlayer2Player::requestMprisThumbnail, Worker::instance(), &Worker::mprisThumbnail);
 
-    // connect(Worker::instance(), &Worker::mprisThumbnailSuccess, this, [=](const QImage &image) {
+    // connect(Worker::instance(), &Worker::mprisThumbnailSuccess, this, [](const QImage &image) {
     //     m_image = image;
     //     propertiesChanged(u"Metadata"_s, Metadata());
     //     Q_EMIT metadataChanged();
     // });
 
-    connect(m_mpv, &MpvItem::mediaTitleChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::mediaTitleChanged, this, [this]() {
         auto title = m_mpv->mediaTitle();
         if (title.isEmpty() || title.startsWith(u"watch"_s)) {
             return;
@@ -55,25 +55,25 @@ MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
         Q_EMIT metadataChanged();
     });
 
-    connect(m_mpv, &MpvItem::durationChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::durationChanged, this, [this]() {
         m_metadata.insert(u"mpris:length"_s, static_cast<qint64>(m_mpv->duration() * 1000 * 1000));
         propertiesChanged(u"Metadata"_s, m_metadata);
     });
 
-    connect(m_mpv, &MpvItem::pauseChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::pauseChanged, this, [this]() {
         propertiesChanged(u"PlaybackStatus"_s, PlaybackStatus());
         Q_EMIT playbackStatusChanged();
     });
 
-    connect(m_mpv, &MpvItem::volumeChanged, this, [=]() {
+    connect(m_mpv, &MpvItem::volumeChanged, this, [this]() {
         propertiesChanged(u"Volume"_s, Volume());
         Q_EMIT volumeChanged();
     });
 
-    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [=]() {
+    connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [this]() {
         propertiesChanged(u"LoopStatus"_s, LoopStatus());
     });
-    connect(PlaylistSettings::self(), &PlaylistSettings::RandomPlaybackChanged, this, [=]() {
+    connect(PlaylistSettings::self(), &PlaylistSettings::RandomPlaybackChanged, this, [this]() {
         propertiesChanged(u"Shuffle"_s, Shuffle());
     });
 }

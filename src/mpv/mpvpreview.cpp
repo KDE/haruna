@@ -37,14 +37,14 @@ MpvPreview::MpvPreview()
     Q_EMIT setProperty(MpvProperties::self()->UseTextOsd, false);
     Q_EMIT setProperty(MpvProperties::self()->AudioDisplay, false);
 
-    connect(mpvController(), &MpvController::propertyChanged, this, [=](const QString &property, const QVariant &value) {
+    connect(mpvController(), &MpvController::propertyChanged, this, [this](const QString &property, const QVariant &value) {
         Q_UNUSED(value)
         if (property == MpvProperties::self()->AspectRatio) {
             Q_EMIT aspectRatioChanged();
         }
     });
     connect(this, &MpvPreview::fileChanged, this, &MpvPreview::loadFile);
-    connect(this, &MpvPreview::ready, this, [=]() {
+    connect(this, &MpvPreview::ready, this, [this]() {
         m_isReady = true;
         loadFile();
     });

@@ -16,7 +16,7 @@ using namespace Qt::StringLiterals;
 CustomCommandsModel::CustomCommandsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(this, &QAbstractListModel::rowsMoved, this, [=]() {
+    connect(this, &QAbstractListModel::rowsMoved, this, [this]() {
         for (int i = 0; i < m_customCommands.size(); ++i) {
             auto configGroup = m_customCommandsConfig->group(m_customCommands.at(i).commandId);
             configGroup.writeEntry("Order", i);
@@ -78,7 +78,7 @@ QHash<int, QByteArray> CustomCommandsModel::roleNames() const
 
 void CustomCommandsModel::init()
 {
-    connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [=](const QString &name, const QKeySequence &shortcut) {
+    connect(appActionsModel(), &ActionsModel::shortcutChanged, this, [this](const QString &name, const QKeySequence &shortcut) {
         for (int i{0}; i < m_customCommands.count(); ++i) {
             if (m_customCommands.at(i).commandId == name) {
                 m_customCommands[i].shortcut = shortcut;
@@ -115,7 +115,7 @@ void CustomCommandsModel::init()
         }
     }
 
-    std::sort(m_customCommands.begin(), m_customCommands.end(), [=](const Command &c1, const Command &c2) {
+    std::sort(m_customCommands.begin(), m_customCommands.end(), [](const Command &c1, const Command &c2) {
         return c1.order < c2.order;
     });
 
