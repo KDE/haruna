@@ -121,7 +121,7 @@ private:
     void removeItem(const uint row);
     void getSiblingItems(const QUrl &url);
     void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
-    void addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId);
+    void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
     void setPlayingItem(uint i);

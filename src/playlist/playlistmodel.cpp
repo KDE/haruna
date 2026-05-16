@@ -54,90 +54,90 @@ PlaylistModel::~PlaylistModel()
 int PlaylistModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return m_playlist.size();
+    return m_playlist.count();
 }
 
 QVariant PlaylistModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     auto item = m_playlist.at(index.row());
     switch (role) {
     case NameRole:
-        return QVariant(item.filename);
+        return item.filename;
     case PathRole:
-        return QVariant(item.url);
+        return item.url;
     case DurationRole:
-        return QVariant(item.formattedDuration);
+        return item.formattedDuration;
     case DateRole:
-        return QVariant(item.modifiedDate);
+        return item.modifiedDate;
     case FileSizeRole:
-        return QVariant(item.fileSize);
+        return item.fileSize;
     case TypeRole:
-        return QVariant(item.fileType);
+        return item.fileType;
     case ExtensionRole:
-        return QVariant(item.extension);
+        return item.extension;
     case PlayingRole:
-        return QVariant(static_cast<int>(m_playingItem) == index.row() && m_isPlaying);
+        return static_cast<int>(m_playingItem) == index.row() && m_isPlaying;
     case FolderPathRole:
-        return QVariant(item.folderPath);
+        return item.folderPath;
     case DirNameRole:
-        return QVariant(item.dirName);
+        return item.dirName;
     case IsLocalRole:
-        return QVariant(!item.url.scheme().startsWith(u"http"_s));
+        return !item.url.scheme().startsWith(u"http"_s);
     case SectionRole:
-        return QVariant(); // Should be handled within PlaylistSortProxyModel
+        return {}; // Should be handled within PlaylistSortProxyModel
     case PlaybackPositionRole:
-        return QVariant(item.playbackPosition);
+        return item.playbackPosition;
     // Audio
     case TrackNoRole:
-        return QVariant(item.audio.trackNo);
+        return item.audio.trackNo;
     case DiscNoRole:
-        return QVariant(item.audio.discNo);
+        return item.audio.discNo;
     case TitleRole:
-        return item.mediaTitle.isEmpty() ? QVariant(item.filename) : QVariant(item.mediaTitle);
+        return item.mediaTitle.isEmpty() ? item.filename : item.mediaTitle;
     case ReleaseYearRole:
-        return QVariant(item.audio.releaseYear);
+        return item.audio.releaseYear;
     case GenreRole:
-        return QVariant(item.audio.genre);
+        return item.audio.genre;
     case AlbumRole:
-        return QVariant(item.audio.album);
+        return item.audio.album;
     case ArtistRole:
-        return QVariant(item.audio.artist);
+        return item.audio.artist;
     case AlbumArtistRole:
-        return QVariant(item.audio.albumArtist);
+        return item.audio.albumArtist;
     case ComposerRole:
-        return QVariant(item.audio.composer);
+        return item.audio.composer;
     case LyricistRole:
-        return QVariant(item.audio.lyricist);
+        return item.audio.lyricist;
     case AudioCodecRole:
-        return QVariant(item.audio.audioCodec);
+        return item.audio.audioCodec;
     case SampleRateRole:
-        return QVariant(item.audio.sampleRate);
+        return item.audio.sampleRate;
     case BitrateRole:
-        return QVariant(item.audio.bitrate);
+        return item.audio.bitrate;
     case FramerateRole:
-        return QVariant(item.video.frameRate);
+        return item.video.frameRate;
     // Video
     case VideoCodecRole:
-        return QVariant(item.video.videoCodec);
+        return item.video.videoCodec;
     case OrientationRole:
-        return QVariant(item.video.displayedOrientation);
+        return item.video.displayedOrientation;
     case DisplayedHeightRole:
-        return QVariant(item.video.displayHeight);
+        return item.video.displayHeight;
     case DisplayedWidthRole:
-        return QVariant(item.video.displayWidth);
+        return item.video.displayWidth;
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> PlaylistModel::roleNames() const
 {
     // clang-format off
-    QHash<int, QByteArray> roles = {
+    static QHash<int, QByteArray> roles = {
         {NameRole,              QByteArrayLiteral("name")},
         {TitleRole,             QByteArrayLiteral("title")},
         {PathRole,              QByteArrayLiteral("path")},
@@ -410,7 +410,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
     }
 }
 
-void PlaylistModel::addYouTubePlaylist(QJsonArray playlist, const QString &videoId, const QString &playlistId)
+void PlaylistModel::addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId)
 {
     bool matchFound{false};
     for (int i = 0; i < playlist.size(); ++i) {
