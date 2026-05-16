@@ -24,9 +24,9 @@
 
 using namespace Qt::StringLiterals;
 
-MediaPlayer2Player::MediaPlayer2Player(QObject *parent)
+MediaPlayer2Player::MediaPlayer2Player(MpvItem *parent)
     : QDBusAbstractAdaptor(parent)
-    , m_mpv{static_cast<MpvItem *>(parent)}
+    , m_mpv{parent}
 {
     // connect(m_mpv, &MpvItem::fileLoaded, this, []() {
     //     if (m_mpv->currentUrl().isLocalFile()) {

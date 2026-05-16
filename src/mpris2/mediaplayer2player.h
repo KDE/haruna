@@ -20,7 +20,7 @@ class MediaPlayer2Player : public QDBusAbstractAdaptor
     Q_CLASSINFO("D-Bus Interface", "org.mpris.MediaPlayer2.Player")
 
 public:
-    explicit MediaPlayer2Player(QObject *parent = nullptr);
+    explicit MediaPlayer2Player(MpvItem *parent = nullptr);
     ~MediaPlayer2Player() = default;
 
     Q_PROPERTY(QString PlaybackStatus READ PlaybackStatus NOTIFY playbackStatusChanged)
