@@ -74,6 +74,7 @@ Q_SIGNALS:
     void qmlApplicationMouseLeave();
     void qmlApplicationMouseEnter();
     void openUrl(const QUrl &url);
+    void openRecentFile(const QUrl &url);
     void actionsEnabledChanged();
 
 private:

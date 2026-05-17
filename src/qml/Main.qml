@@ -430,6 +430,9 @@ ApplicationWindow {
 
             window.openFile(url, RecentFilesModel.OpenedFrom.ExternalApp)
         }
+        function onOpenRecentFile(url) {
+            window.openFile(url, RecentFilesModel.OpenedFrom.Other)
+        }
     }
 
     FileDialog {
