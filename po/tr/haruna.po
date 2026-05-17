@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-21 00:44+0000\n"
+"POT-Creation-Date: 2026-05-17 00:42+0000\n"
 "PO-Revision-Date: 2026-05-02 18:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,49 +27,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
-#: src/application.cpp:127
-#, kde-format
-msgid "Feature-rich command-line audio/video downloader"
-msgstr "Çok özellikli komut satırında çalışan ses/video indiricisi"
-
-#: src/application.cpp:145
+#: src/application.cpp:132
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:147
+#: src/application.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Ortam Oynatıcısı"
 
-#: src/application.cpp:149
+#: src/application.cpp:136
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:154
+#: src/application.cpp:141
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:155
+#: src/application.cpp:142
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Geliştirici"
 
-#: src/application.cpp:168
+#: src/application.cpp:169
+#, kde-format
+msgid "Feature-rich command-line audio/video downloader"
+msgstr "Çok özellikli komut satırında çalışan ses/video indiricisi"
+
+#: src/application.cpp:184
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Açılacak dosya"
 
-#: src/application.cpp:172
+#: src/application.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -403,7 +403,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Üstbilgiyi Aç/Kapat"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:108
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:133
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -547,7 +547,7 @@ msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Doygunluğu Sıfırla"
 
-#: src/models/actionsmodel.cpp:777
+#: src/models/actionsmodel.cpp:775
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -557,73 +557,73 @@ msgstr ""
 "Seçili kısayol, <b>%1</b> eylemi kısayoluyla çakışıyor.<br><br>Kısayolu "
 "yeniden atamak istiyor musunuz?"
 
-#: src/models/actionsmodel.cpp:783
+#: src/models/actionsmodel.cpp:781
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Yeniden Ata"
 
-#: src/models/mouseactionsmodel.cpp:261
+#: src/models/mouseactionsmodel.cpp:263
 #, kde-format
 msgctxt "@label left mouse button"
 msgid "Left"
 msgstr "Sol"
 
-#: src/models/mouseactionsmodel.cpp:263
+#: src/models/mouseactionsmodel.cpp:265
 #, kde-format
 msgctxt "@label right mouse button"
 msgid "Right"
 msgstr "Sağ"
 
-#: src/models/mouseactionsmodel.cpp:265
+#: src/models/mouseactionsmodel.cpp:267
 #, kde-format
 msgctxt "@label middle mouse button"
 msgid "Middle"
 msgstr "Orta"
 
-#: src/models/mouseactionsmodel.cpp:267
+#: src/models/mouseactionsmodel.cpp:269
 #, kde-format
 msgctxt "@label forward mouse button"
 msgid "Forward"
 msgstr "İleri"
 
-#: src/models/mouseactionsmodel.cpp:269
+#: src/models/mouseactionsmodel.cpp:271
 #, kde-format
 msgctxt "@label back mouse button"
 msgid "Back"
 msgstr "Geri"
 
-#: src/models/mouseactionsmodel.cpp:271
+#: src/models/mouseactionsmodel.cpp:273
 #, kde-format
 msgctxt "@label mouse scroll up"
 msgid "ScrollUp"
 msgstr "Yukarı sar"
 
-#: src/models/mouseactionsmodel.cpp:273
+#: src/models/mouseactionsmodel.cpp:275
 #, kde-format
 msgctxt "@label mouse scroll down"
 msgid "ScrollDown"
 msgstr "Aşağı sar"
 
-#: src/models/mouseactionsmodel.cpp:321
+#: src/models/mouseactionsmodel.cpp:323
 #, kde-format
 msgctxt "@label control modifier key"
 msgid "Control"
 msgstr "Kontrol"
 
-#: src/models/mouseactionsmodel.cpp:323
+#: src/models/mouseactionsmodel.cpp:325
 #, kde-format
 msgctxt "@label shift modifier key"
 msgid "Shift"
 msgstr "Üst Karakter"
 
-#: src/models/mouseactionsmodel.cpp:325
+#: src/models/mouseactionsmodel.cpp:327
 #, kde-format
 msgctxt "@label alt modifier key"
 msgid "Alt"
 msgstr "Seçenek"
 
-#: src/models/mouseactionsmodel.cpp:327
+#: src/models/mouseactionsmodel.cpp:329
 #, kde-format
 msgctxt "@label meta modifier key"
 msgid "Meta"
@@ -641,50 +641,58 @@ msgstr ""
 "Ses ve video kaydetmek, dönüştürmek ve akışını sağlamak için bir çapraz "
 "platform çözüm"
 
-#: src/mpv/mpvitem.cpp:414
+#: src/mpv/mpvitem.cpp:412
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Oynatılamadı: %1"
 
-#: src/mpv/mpvitem.cpp:534 src/mpv/mpvitem.cpp:536
+#: src/mpv/mpvitem.cpp:532
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle timing: %1 seconds"
+msgctxt "@info:tooltip"
+msgid "Subtitle timing: +%1 seconds"
+msgstr "Altyazı zamanlaması: %1 saniye"
+
+#: src/mpv/mpvitem.cpp:534
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Altyazı zamanlaması: %1 saniye"
 
-#: src/mpv/mpvitem.cpp:575
+#: src/mpv/mpvitem.cpp:573
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Dosya yok: %1"
 
-#: src/mpv/mpvitem.cpp:607
+#: src/mpv/mpvitem.cpp:605
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:620
+#: src/mpv/mpvitem.cpp:618
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Yok"
 
-#: src/mpv/mpvitem.cpp:668
+#: src/mpv/mpvitem.cpp:667
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekran görüntüsü alınamadı"
 
-#: src/mpv/mpvitem.cpp:673
+#: src/mpv/mpvitem.cpp:672
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekran görüntüsü alındı"
 
-#: src/mpv/mpvitem.cpp:675
+#: src/mpv/mpvitem.cpp:674
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
@@ -734,157 +742,157 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
 msgstr "İkincil altyazı: Yok"
 
-#: src/playlist/Playlist.qml:79
+#: src/playlist/Playlist.qml:80
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Ara"
 
-#: src/playlist/Playlist.qml:99
+#: src/playlist/Playlist.qml:100
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Ekle…"
 
-#: src/playlist/Playlist.qml:107
+#: src/playlist/Playlist.qml:108
 msgctxt "@action:button"
 msgid "Files"
 msgstr "Dosyalar"
 
-#: src/playlist/Playlist.qml:115
+#: src/playlist/Playlist.qml:116
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/playlist/Playlist.qml:125
+#: src/playlist/Playlist.qml:126
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Oynatma Listesi"
 
-#: src/playlist/Playlist.qml:134
+#: src/playlist/Playlist.qml:135
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Sırala"
 
-#: src/playlist/Playlist.qml:143
+#: src/playlist/Playlist.qml:144
 msgctxt "@action:button"
 msgid "Ascending"
 msgstr "Artan"
 
-#: src/playlist/Playlist.qml:160
+#: src/playlist/Playlist.qml:161
 msgctxt "@action:button"
 msgid "Descending"
 msgstr "Azalan"
 
-#: src/playlist/Playlist.qml:183
+#: src/playlist/Playlist.qml:184
 msgctxt "@action:button"
 msgid "None"
 msgstr "Yok"
 
-#: src/playlist/Playlist.qml:193
+#: src/playlist/Playlist.qml:194
 msgctxt "@action:button"
 msgid "File Name"
 msgstr "Dosya Adı"
 
-#: src/playlist/Playlist.qml:203
+#: src/playlist/Playlist.qml:204
 msgctxt "@action:button"
 msgid "Title"
 msgstr "Başlık"
 
-#: src/playlist/Playlist.qml:213
+#: src/playlist/Playlist.qml:214
 msgctxt "@action:button"
 msgid "Duration"
 msgstr "Süre"
 
-#: src/playlist/Playlist.qml:223
+#: src/playlist/Playlist.qml:224
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr "Değiştirilme Tarihi"
 
-#: src/playlist/Playlist.qml:233
+#: src/playlist/Playlist.qml:234
 msgctxt "@action:button"
 msgid "File Size"
 msgstr "Dosya Büyüklüğü"
 
-#: src/playlist/Playlist.qml:243
+#: src/playlist/Playlist.qml:244
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "Parça №"
 
-#: src/playlist/Playlist.qml:253
+#: src/playlist/Playlist.qml:254
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr "Örnekleme Hızı"
 
-#: src/playlist/Playlist.qml:263
+#: src/playlist/Playlist.qml:264
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "Bit Hızı"
 
-#: src/playlist/Playlist.qml:278
+#: src/playlist/Playlist.qml:279
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "Özel…"
 
-#: src/playlist/Playlist.qml:289
+#: src/playlist/Playlist.qml:290
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Oynat"
 
-#: src/playlist/Playlist.qml:295
+#: src/playlist/Playlist.qml:296
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Oynatma Listesini Yinele"
 
-#: src/playlist/Playlist.qml:306
+#: src/playlist/Playlist.qml:307
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "Son Ögeden Sonra Dur"
 
-#: src/playlist/Playlist.qml:316
+#: src/playlist/Playlist.qml:317
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Ögeyi Yinele"
 
-#: src/playlist/Playlist.qml:327
+#: src/playlist/Playlist.qml:328
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "Ögeden Sonra Dur"
 
-#: src/playlist/Playlist.qml:337
+#: src/playlist/Playlist.qml:338
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Rastgele Oynat"
 
-#: src/playlist/Playlist.qml:349
+#: src/playlist/Playlist.qml:350
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Temizle"
 
-#: src/playlist/Playlist.qml:357
+#: src/playlist/Playlist.qml:358
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Farklı Kaydet"
 
-#: src/playlist/Playlist.qml:431
+#: src/playlist/Playlist.qml:432
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Yeni oynatma listesi ekle"
 
-#: src/playlist/Playlist.qml:446 src/playlist/Playlist.qml:827
+#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:828
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Yeniden Adlandır"
 
-#: src/playlist/Playlist.qml:452
+#: src/playlist/Playlist.qml:453
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Kaldır"
 
-#: src/playlist/Playlist.qml:508 src/playlist/Playlist.qml:529
+#: src/playlist/Playlist.qml:509 src/playlist/Playlist.qml:530
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Ekle"
 
-#: src/playlist/Playlist.qml:511 src/qml/Main.qml:536
+#: src/playlist/Playlist.qml:512 src/qml/Main.qml:488
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -893,87 +901,87 @@ msgstr ""
 "Ne <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> ne de <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> bulunamadı."
 
-#: src/playlist/Playlist.qml:528
+#: src/playlist/Playlist.qml:529
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "Oynatma listesi adı"
 
-#: src/playlist/Playlist.qml:739
+#: src/playlist/Playlist.qml:740
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "İçeren Klasörü Aç"
 
-#: src/playlist/Playlist.qml:745
+#: src/playlist/Playlist.qml:746
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Tarayıcıda Aç"
 
-#: src/playlist/Playlist.qml:754
+#: src/playlist/Playlist.qml:755
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr "Küçük Görsel Üretecinde Aç"
 
-#: src/playlist/Playlist.qml:770
+#: src/playlist/Playlist.qml:771
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "%1 İçinde Aç"
 
-#: src/playlist/Playlist.qml:784
+#: src/playlist/Playlist.qml:785
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Adı Kopyala"
 
-#: src/playlist/Playlist.qml:790
+#: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Yolu Kopyala"
 
-#: src/playlist/Playlist.qml:791
+#: src/playlist/Playlist.qml:792
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL’yi Kopyala"
 
-#: src/playlist/Playlist.qml:801
+#: src/playlist/Playlist.qml:802
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Tümünü Seç"
 
-#: src/playlist/Playlist.qml:805
+#: src/playlist/Playlist.qml:806
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Tümünün Seçimini Kaldır"
 
-#: src/playlist/Playlist.qml:809
+#: src/playlist/Playlist.qml:810
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Seçimi Ters Çevir"
 
-#: src/playlist/Playlist.qml:815
+#: src/playlist/Playlist.qml:816
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Oynatma Listesinden Kaldır"
 
-#: src/playlist/Playlist.qml:821
+#: src/playlist/Playlist.qml:822
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Seçiliyi Oynatma Listesinden Kaldır"
 
-#: src/playlist/Playlist.qml:833
+#: src/playlist/Playlist.qml:834
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Oynatılan Ögeye Sar"
 
-#: src/playlist/Playlist.qml:843
+#: src/playlist/Playlist.qml:844
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Dosyayı Çöp Kutusuna Taşı"
 
-#: src/playlist/Playlist.qml:849
+#: src/playlist/Playlist.qml:850
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Seçili Dosyaları Çöp Kutusuna Taşı"
 
-#: src/playlist/Playlist.qml:955 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:956 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya Seç"
@@ -1343,99 +1351,99 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: src/qml/Actions.qml:138
+#: src/qml/Actions.qml:139
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "Açık dosya yokken altyazı yüklenemez"
 
-#: src/qml/Actions.qml:157 src/qml/Actions.qml:163 src/qml/Actions.qml:168
+#: src/qml/Actions.qml:158 src/qml/Actions.qml:164 src/qml/Actions.qml:169
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Oynatma hızı: %1"
 
-#: src/qml/Actions.qml:267
+#: src/qml/Actions.qml:268
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Döngü başlangıcı: %1"
 
-#: src/qml/Actions.qml:273
+#: src/qml/Actions.qml:274
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Döngü: %1–%2"
 
-#: src/qml/Actions.qml:279
+#: src/qml/Actions.qml:280
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Döngü temizlendi"
 
-#: src/qml/Actions.qml:299
+#: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Altyazılar kapalı"
 
-#: src/qml/Actions.qml:299
+#: src/qml/Actions.qml:300
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Altyazılar açık"
 
-#: src/qml/Actions.qml:315 src/qml/Actions.qml:321
+#: src/qml/Actions.qml:316 src/qml/Actions.qml:322
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Altyazı ölçeği: %1"
 
-#: src/qml/Actions.qml:335
+#: src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Görüntü ayrıştırma: %1"
 
-#: src/qml/Actions.qml:396 src/qml/Actions.qml:402
+#: src/qml/Actions.qml:397 src/qml/Actions.qml:403
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Yakınlaştırma: %1"
 
-#: src/qml/Actions.qml:407
+#: src/qml/Actions.qml:408
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Yakınlaştırma: 0"
 
-#: src/qml/Actions.qml:414 src/qml/Actions.qml:420
+#: src/qml/Actions.qml:415 src/qml/Actions.qml:421
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Karşıtlık: %1"
 
-#: src/qml/Actions.qml:425
+#: src/qml/Actions.qml:426
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Karşıtlık: 0"
 
-#: src/qml/Actions.qml:431 src/qml/Actions.qml:437
+#: src/qml/Actions.qml:432 src/qml/Actions.qml:438
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Parlaklık: %1"
 
-#: src/qml/Actions.qml:442
+#: src/qml/Actions.qml:443
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Parlaklık: 0"
 
-#: src/qml/Actions.qml:448 src/qml/Actions.qml:454
+#: src/qml/Actions.qml:449 src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:459
+#: src/qml/Actions.qml:460
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:465 src/qml/Actions.qml:471
+#: src/qml/Actions.qml:466 src/qml/Actions.qml:472
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Doygunluk: %1"
 
-#: src/qml/Actions.qml:476
+#: src/qml/Actions.qml:477
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Doygunluk: 0"
@@ -1603,17 +1611,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:486
+#: src/qml/Main.qml:438
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Dosya Seç"
 
-#: src/qml/Main.qml:506
+#: src/qml/Main.qml:458
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Altyazı Dosyası Seç"
 
-#: src/qml/Main.qml:533
+#: src/qml/Main.qml:485
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aç"
@@ -1773,7 +1781,7 @@ msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "Araç Çubuğunu Göster"
 
-#: src/qml/Menus/MpvContextMenu.qml:21
+#: src/qml/Menus/MpvContextMenu.qml:46
 msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Oynatma Hızı"
@@ -2816,57 +2824,57 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Ögeleri tek tıkla aç"
 
-#: src/qml/Settings/SettingsWindow.qml:45
+#: src/qml/Settings/SettingsWindow.qml:70
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/qml/Settings/SettingsWindow.qml:62
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "General"
 msgstr "Genel"
 
-#: src/qml/Settings/SettingsWindow.qml:71
+#: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Playback"
 msgstr "Oynatma"
 
-#: src/qml/Settings/SettingsWindow.qml:80
+#: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:90
+#: src/qml/Settings/SettingsWindow.qml:115
 msgctxt "@action"
 msgid "Audio"
 msgstr "Ses"
 
-#: src/qml/Settings/SettingsWindow.qml:99
+#: src/qml/Settings/SettingsWindow.qml:124
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Altyazılar"
 
-#: src/qml/Settings/SettingsWindow.qml:117
+#: src/qml/Settings/SettingsWindow.qml:142
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Fare"
 
-#: src/qml/Settings/SettingsWindow.qml:127
+#: src/qml/Settings/SettingsWindow.qml:152
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: src/qml/Settings/SettingsWindow.qml:137
+#: src/qml/Settings/SettingsWindow.qml:162
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Özel Komutlar"
 
-#: src/qml/Settings/SettingsWindow.qml:147
+#: src/qml/Settings/SettingsWindow.qml:172
 msgctxt "@action"
 msgid "Debug"
 msgstr "Hata Ayıkla"
 
-#: src/qml/Settings/SettingsWindow.qml:157
+#: src/qml/Settings/SettingsWindow.qml:182
 msgctxt "@action"
 msgid "About"
 msgstr "Hakkında"
@@ -3107,7 +3115,7 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Sıfırlamak için sürgülerde orta tıklayın"
 
-#: src/youtube/youtube.cpp:78
+#: src/youtube/youtube.cpp:80
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
 msgid ""
