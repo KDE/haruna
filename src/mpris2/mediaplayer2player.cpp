@@ -10,7 +10,11 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusObjectPath>
+#include <QDir>
+#include <QDirIterator>
 #include <QImage>
+#include <QMimeDatabase>
+#include <QThreadPool>
 
 #include <KFileMetaData/ExtractorCollection>
 #include <KFileMetaData/SimpleExtractionResult>
@@ -44,13 +48,13 @@ MediaPlayer2Player::MediaPlayer2Player(MpvItem *parent)
     //     propertiesChanged(u"Metadata"_s, Metadata());
     //     Q_EMIT metadataChanged();
     // });
+    connect(this, &MediaPlayer2Player::findAudioCoverFinished, this, &MediaPlayer2Player::onFindAudioCoverFinished, Qt::QueuedConnection);
 
     connect(m_mpv, &MpvItem::mediaTitleChanged, this, [this]() {
         auto title = m_mpv->mediaTitle();
         if (title.isEmpty() || title.startsWith(u"watch"_s)) {
             return;
         }
-        m_image = QImage();
         propertiesChanged(u"Metadata"_s, Metadata());
         Q_EMIT metadataChanged();
     });
@@ -119,8 +123,8 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
     KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractImageData);
 
     if (!extractors.isEmpty()) {
-        KFileMetaData::Extractor *ex = extractors.first();
-        ex->extract(&result);
+        KFileMetaData::Extractor *extractor = extractors.first();
+        extractor->extract(&result);
         QString base64 = u"data:image/png;base64,"_s;
         auto imageData = result.imageData();
         QByteArray data;
@@ -139,19 +143,56 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
                 data = imageData.value(EmbeddedImageData::Unknown);
             }
             return base64.append(QString::fromUtf8(data.toBase64()));
-        } else {
-            QImage image = m_image;
-            if (image.isNull()) {
-                return VideoSettings::defaultCover();
-            } else {
-                QByteArray byteArray;
-                QBuffer buffer(&byteArray);
-                image.save(&buffer, "JPEG");
-                return base64.append(QString::fromUtf8(byteArray.toBase64().data()));
+        }
+
+        QPointer self(this);
+        QThreadPool::globalInstance()->start([self, path]() {
+            QFileInfo fileInfo(path);
+            if (fileInfo.isDir()) {
+                return;
+            }
+
+            QString image = self->findAudioCover(fileInfo.absolutePath());
+            if (!self) {
+                return;
+            }
+            QMetaObject::invokeMethod(self, &MediaPlayer2Player::findAudioCoverFinished, image);
+        });
+    }
+    return {};
+}
+
+QString MediaPlayer2Player::findAudioCover(const QString &filePath)
+{
+    static QMimeDatabase mimeDb;
+    static const QStringList coverNames = {u"cover"_s, u"front"_s, u"folder"_s};
+    static const QStringList extensions = {u"png"_s, u"jpeg"_s, u"jpg"_s, u"webp"_s};
+
+    for (const auto &name : coverNames) {
+        for (const auto &ext : extensions) {
+            const auto path = std::filesystem::path(filePath.toStdString());
+            const auto filePath = path / QString(name % u"."_s % ext).toStdString();
+
+            if (QFileInfo::exists(QString::fromStdString(filePath))) {
+                return QString::fromStdString(filePath);
             }
         }
     }
+
     return {};
+}
+
+void MediaPlayer2Player::onFindAudioCoverFinished(const QString &image)
+{
+    QImage img(image);
+    if (img.isNull()) {
+        m_metadata.insert(u"mpris:artUrl"_s, VideoSettings::defaultCover());
+        propertiesChanged(u"Metadata"_s, m_metadata);
+        return;
+    }
+
+    m_metadata.insert(u"mpris:artUrl"_s, {u"file://"_s % image});
+    propertiesChanged(u"Metadata"_s, m_metadata);
 }
 
 void MediaPlayer2Player::Next()

@@ -80,11 +80,13 @@ Q_SIGNALS:
     // void requestMprisThumbnail(const QString &path, int width);
     void shuffleChanged(bool shuffle);
     void loopStatusChanged(QString loop);
+    void findAudioCoverFinished(const QString &image);
 
 private:
     QString getThumbnail(const QString &path);
+    QString findAudioCover(const QString &filePath);
+    void onFindAudioCoverFinished(const QString &image);
     MpvItem *m_mpv;
-    QImage m_image;
     QVariantMap m_metadata;
 };
 
