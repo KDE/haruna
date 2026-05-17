@@ -695,6 +695,7 @@ Page {
                     if (startupScrollDone || count <= 0) {
                         return
                     }
+                    startupScrollDone = true
                     Qt.callLater(() => positionViewAtIndex(currentIndex, ListView.Beginning))
                 }
 

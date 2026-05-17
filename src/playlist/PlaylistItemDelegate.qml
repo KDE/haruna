@@ -30,9 +30,9 @@ Item {
     property alias dragRect: backgroundRect
     property string rowNumber: (index + 1).toString()
     property real alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
-    property real cachedHeight: height
     property bool hovered: hoverHandler.hovered
 
+    height: implicitHeight
     implicitWidth: ListView.view.width
 
     states: [
@@ -61,21 +61,15 @@ Item {
         }
 
         PropertyAction { target: root; property: "ListView.delayRemove"; value: false }
+
+        onFinished: {
+            root.opacity = 1.0
+            root.height = Qt.binding(function() { return root.implicitHeight })
+        }
     }
 
     ListView.onRemove: {
-        root.cachedHeight = root.height
         removeAnimation.start()
-    }
-
-    ListView.onPooled: {
-        root.opacity = 1.0
-        root.height = root.cachedHeight
-    }
-
-    ListView.onReused: {
-        root.opacity = 1.0
-        root.height = root.cachedHeight
     }
 
     Rectangle {
