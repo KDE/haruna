@@ -40,7 +40,7 @@
 #include "worker.h"
 #include "youtube.h"
 
-#ifdef HAVE_DBUS
+#if HAVE_DBUS
 #include <QDBusConnection>
 #include <QDBusMessage>
 
@@ -744,7 +744,7 @@ void MpvItem::onChapterChanged()
 
 void MpvItem::updateTaskbarPlaybackProgress()
 {
-#ifdef HAVE_DBUS
+#if HAVE_DBUS
     if (!GeneralSettings::showTaskbarProgress()) {
         return;
     }
