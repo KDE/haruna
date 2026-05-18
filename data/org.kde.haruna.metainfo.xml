@@ -361,6 +361,32 @@
     </ul>
   </description>
   <releases>
+    <release version="1.8.0" date="2026-05-18">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>open multiple files from command line, allows to open only the selected files in the file manager</li>
+          <li>stop action, available in the playback</li>
+          <li>setting to enable taskbar progress</li>
+          <li>show filename/title in OSD when opening a file</li>
+          <li>mpris: find and set cover from external image file for audio files without internal covers</li>
+          <li>custom loading animation</li>
+          <li>setting for mpv's sub-border-style property</li>
+          <li>Playlist: menu item to open file in MediaInfo app (if installed)</li>
+          <li>Playlist: allow sorting ascending/descending for None option</li>
+          <li>Playlist: indicator for resume playback position under the duration</li>
+          <li>Playlist: item drag handle is now shown on hover</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>hide chapters menu button when there are no chapters</li>
+          <li>font family reset button not saving the setting</li>
+          <li>Playlist: restore last active playlist only if opening without a file</li>
+          <li>Playlist: slow scroll to playing item on startup</li>
+          <li>Playlist: clicks triggering playlist item under the tab</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.7.1" date="2026-01-14">
       <description>
         <p>Bugfixes</p>
