@@ -34,6 +34,38 @@ TabButton {
     Drag.hotSpot.x: calculateHotSpot()
 
     contentItem: RowLayout {
+
+        TapHandler {
+            acceptedButtons: Qt.MiddleButton | Qt.LeftButton | Qt.RightButton
+            acceptedModifiers: Qt.NoModifier
+            gesturePolicy: TapHandler.WithinBounds
+
+            onPressedChanged: {
+                if (point.pressedButtons & Qt.LeftButton || point.pressedButtons & Qt.RightButton) {
+                    return
+                }
+
+                if (pressed) {
+                    progressTimer.start()
+                    progressTimer.heldAmount = 0.0
+                } else {
+                    progressTimer.stop()
+                    progressTimer.heldAmount = 0.0
+                }
+            }
+
+            onTapped: function(point, button) {
+                switch (button) {
+                case Qt.LeftButton:
+                    root.click()
+                    break
+                case Qt.RightButton:
+                    root.TabBar.tabBar.openContextMenu(root)
+                    break
+                }
+            }
+        }
+
         Item {
             id: leftItem
 
@@ -266,37 +298,6 @@ TabButton {
         }
 
         width: Math.min(progressTimer.progress * root.width, root.width)
-    }
-
-    TapHandler {
-        acceptedButtons: Qt.MiddleButton | Qt.LeftButton | Qt.RightButton
-        acceptedModifiers: Qt.NoModifier
-        gesturePolicy: TapHandler.WithinBounds
-
-        onPressedChanged: {
-            if (point.pressedButtons & Qt.LeftButton || point.pressedButtons & Qt.RightButton) {
-                return
-            }
-
-            if (pressed) {
-                progressTimer.start()
-                progressTimer.heldAmount = 0.0
-            } else {
-                progressTimer.stop()
-                progressTimer.heldAmount = 0.0
-            }
-        }
-
-        onTapped: function(point, button) {
-            switch (button) {
-            case Qt.LeftButton:
-                root.click()
-                break
-            case Qt.RightButton:
-                root.TabBar.tabBar.openContextMenu(root)
-                break
-            }
-        }
     }
 
     function movePlaylist(from, to) {
