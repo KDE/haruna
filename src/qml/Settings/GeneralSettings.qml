@@ -375,6 +375,17 @@ SettingsBasePage {
             }
         }
 
+        Item { Layout.preferredWidth: 1 }
+
+        CheckBox {
+            text: i18nc("@option:check", "Show progress on taskbar icon")
+            checked: GeneralSettings.showTaskbarProgress
+            onClicked: {
+                GeneralSettings.showTaskbarProgress = checked
+                GeneralSettings.save()
+            }
+        }
+
         Label {
             text: i18nc("@label:listbox", "Color scheme")
             Layout.alignment: Qt.AlignRight

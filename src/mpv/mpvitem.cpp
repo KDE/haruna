@@ -21,7 +21,6 @@
 #include "application.h"
 #include "audiosettings.h"
 #include "chaptersmodel.h"
-#include "config-haruna.h"
 #include "database.h"
 #include "generalsettings.h"
 #include "lockmanager.h"
@@ -45,6 +44,10 @@
 
 #include "mediaplayer2.h"
 #include "mediaplayer2player.h"
+#endif
+
+#ifdef HAVE_DBUS
+#include <QDBusMessage>
 #endif
 
 using namespace Qt::StringLiterals;
@@ -464,6 +467,11 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->Position) {
         m_position = value.toDouble();
         m_formattedPosition = MiscUtils::formatTime(m_position);
+#ifdef HAVE_DBUS
+        if (GeneralSettings::showTaskbarProgress()) {
+            updateTaskbarPlaybackProgress();
+        }
+#endif
         Q_EMIT positionChanged();
 
     } else if (property == MpvProperties::self()->Remaining) {
@@ -738,6 +746,21 @@ void MpvItem::onChapterChanged()
         }
     }
 }
+
+#ifdef HAVE_DBUS
+void MpvItem::updateTaskbarPlaybackProgress()
+{
+    QDBusMessage msg = QDBusMessage::createSignal(u"/org/kde/haruna"_s, u"com.canonical.Unity.LauncherEntry"_s, u"Update"_s);
+
+    bool isPlaying = playbackState() >= PlaybackState::Playing;
+    QVariantMap map;
+    map.insert(u"progress-visible"_s, isPlaying);
+    map.insert(u"progress"_s, position() / duration());
+    msg << u"application://org.kde.haruna.desktop"_s << map;
+
+    QDBusConnection::sessionBus().send(msg);
+}
+#endif
 
 void MpvItem::saveTimePosition()
 {

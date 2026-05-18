@@ -12,6 +12,7 @@
 
 #include <memory>
 
+#include "config-haruna.h"
 #include "recentfilesmodel.h"
 
 class ChaptersModel;
@@ -42,9 +43,9 @@ public:
 
     enum class PlaybackState {
         Stopped,
-        Paused,
-        Playing,
         Loading,
+        Playing,
+        Paused,
     };
     Q_ENUM(PlaybackState)
 
@@ -239,6 +240,9 @@ private:
     void loadTracks(const QList<QVariant> &tracks);
     void onAsyncReply(const QVariant &data, mpv_event event);
     void onChapterChanged();
+#ifdef HAVE_DBUS
+    void updateTaskbarPlaybackProgress();
+#endif
 
     std::unique_ptr<TracksModel> m_audioTracksModel;
     std::unique_ptr<TracksModel> m_subtitleTracksModel;
