@@ -14,6 +14,7 @@ Menu {
     title: i18nc("@title:menu", "&Playback")
 
     MenuItem { action: HarunaApp.actions.playPauseAction }
+    MenuItem { action: HarunaApp.actions.stopAction }
     MenuItem { action: HarunaApp.actions.playNextAction }
     MenuItem { action: HarunaApp.actions.playPreviousAction }
 

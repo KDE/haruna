@@ -20,6 +20,12 @@ Labs.Menu {
     }
 
     Labs.MenuItem {
+        icon.name: HarunaApp.actions.stopAction.icon.name
+        text: HarunaApp.actions.stopAction.text
+        onTriggered: HarunaApp.actions.stopAction.trigger()
+    }
+
+    Labs.MenuItem {
         icon.name: HarunaApp.actions.playNextAction.icon.name
         text: HarunaApp.actions.playNextAction.text
         onTriggered: HarunaApp.actions.playNextAction.trigger()
