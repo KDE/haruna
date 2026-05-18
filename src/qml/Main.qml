@@ -259,6 +259,8 @@ ApplicationWindow {
         m_mpv: mpv
         m_advancedSortWindowLoader: advancedSortWindowLoader
         height: mpv.height
+        mainWindowWidth: window.width
+        fsScale: window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
 
         Connections {
             target: actions
