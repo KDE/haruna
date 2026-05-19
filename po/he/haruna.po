@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-18 00:43+0000\n"
+"POT-Creation-Date: 2026-05-19 00:43+0000\n"
 "PO-Revision-Date: 2026-04-28 09:03+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -629,23 +629,23 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "מטא"
 
-#: src/mpv/mpvitem.cpp:84
+#: src/mpv/mpvitem.cpp:85
 #, kde-format
 msgid "Command line video player"
 msgstr "נגן וידאו בשורת הפקודות"
 
-#: src/mpv/mpvitem.cpp:91
+#: src/mpv/mpvitem.cpp:92
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "פתרון חוצה פלטפורמות להקלטה, המרה והזרמה של וידאו ושמע"
 
-#: src/mpv/mpvitem.cpp:412
+#: src/mpv/mpvitem.cpp:413
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "לא ניתן לנגן: %1"
 
-#: src/mpv/mpvitem.cpp:532
+#: src/mpv/mpvitem.cpp:535
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -653,50 +653,50 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "תזמון כתובית: %1 שניות"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "תזמון כתובית: %1 שניות"
 
-#: src/mpv/mpvitem.cpp:573
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "הקובץ לא קיים: %1"
 
-#: src/mpv/mpvitem.cpp:605
+#: src/mpv/mpvitem.cpp:608
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:618
+#: src/mpv/mpvitem.cpp:621
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "אין"
 
-#: src/mpv/mpvitem.cpp:667
+#: src/mpv/mpvitem.cpp:670
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "צילום המסך נכשל"
 
-#: src/mpv/mpvitem.cpp:672
+#: src/mpv/mpvitem.cpp:675
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
-#: src/mpv/mpvitem.cpp:674
+#: src/mpv/mpvitem.cpp:677
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "צילום מסך: %1"
 
-#: src/mpv/mpvitem.cpp:702
+#: src/mpv/mpvitem.cpp:705
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -704,13 +704,13 @@ msgid ""
 "due to missing codecs"
 msgstr "לא זוהתה רצועת וידאו, כנראה שאי אפשר לפענח/לנגן עקב בעיית מפענחים"
 
-#: src/mpv/mpvitem.cpp:735
+#: src/mpv/mpvitem.cpp:738
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "פרק שנפסח: %1"
 
-#: src/mpv/mpvitem.cpp:829
+#: src/mpv/mpvitem.cpp:856
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -718,13 +718,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "שמע: %1 %2"
 
-#: src/mpv/mpvitem.cpp:840
+#: src/mpv/mpvitem.cpp:867
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "כתוביות: אין"
 
-#: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
+#: src/mpv/mpvitem.cpp:872 src/mpv/mpvitem.cpp:888
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -732,7 +732,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "כתובית: %1 %2"
 
-#: src/mpv/mpvitem.cpp:856
+#: src/mpv/mpvitem.cpp:883
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -888,7 +888,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/playlist/Playlist.qml:512 src/qml/Main.qml:491
+#: src/playlist/Playlist.qml:512 src/qml/Main.qml:493
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1341,7 +1341,7 @@ msgctxt "@title:group"
 msgid "Square"
 msgstr "ריבוע"
 
-#: src/playlist/PlaylistTabDelegate.qml:128
+#: src/playlist/PlaylistTabDelegate.qml:160
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "ברירת מחדל"
@@ -1606,17 +1606,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:441
+#: src/qml/Main.qml:443
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "בחירת קובץ"
 
-#: src/qml/Main.qml:461
+#: src/qml/Main.qml:463
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "בחירת קובץ כתוביות"
 
-#: src/qml/Main.qml:488
+#: src/qml/Main.qml:490
 msgctxt "@action:button"
 msgid "Open"
 msgstr "פתיחה"
@@ -1657,8 +1657,8 @@ msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "&נגינה"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
-#: src/qml/Menus/PlaybackMenu.qml:32
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:75
+#: src/qml/Menus/PlaybackMenu.qml:33
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "חתירה"
@@ -2269,17 +2269,22 @@ msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "הצגת סמני פרקים"
 
-#: src/qml/Settings/GeneralSettings.qml:379
+#: src/qml/Settings/GeneralSettings.qml:381
+msgctxt "@option:check"
+msgid "Show progress on taskbar icon"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "ערכת צבעים"
 
-#: src/qml/Settings/GeneralSettings.qml:424
+#: src/qml/Settings/GeneralSettings.qml:435
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "סגנון ממשק משתמש"
 
-#: src/qml/Settings/GeneralSettings.qml:457
+#: src/qml/Settings/GeneralSettings.qml:468
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "ברירת מחדל"

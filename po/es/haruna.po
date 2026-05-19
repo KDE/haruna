@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-18 00:43+0000\n"
+"POT-Creation-Date: 2026-05-19 00:43+0000\n"
 "PO-Revision-Date: 2026-05-17 11:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -633,72 +633,72 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/mpv/mpvitem.cpp:84
+#: src/mpv/mpvitem.cpp:85
 #, kde-format
 msgid "Command line video player"
 msgstr "Reproductor de vídeo para la línea de órdenes"
 
-#: src/mpv/mpvitem.cpp:91
+#: src/mpv/mpvitem.cpp:92
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "Solución multiplataforma para grabar, convertir y emitir audio y vídeo"
 
-#: src/mpv/mpvitem.cpp:412
+#: src/mpv/mpvitem.cpp:413
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "No se puede reproducir: %1"
 
-#: src/mpv/mpvitem.cpp:532
+#: src/mpv/mpvitem.cpp:535
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Ritmo de subtítulos: +%1 segundos"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Ritmo de subtítulos: %1 segundos"
 
-#: src/mpv/mpvitem.cpp:573
+#: src/mpv/mpvitem.cpp:576
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "El archivo no existe: %1"
 
-#: src/mpv/mpvitem.cpp:605
+#: src/mpv/mpvitem.cpp:608
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:618
+#: src/mpv/mpvitem.cpp:621
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Ninguna"
 
-#: src/mpv/mpvitem.cpp:667
+#: src/mpv/mpvitem.cpp:670
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "La captura de pantalla ha fallado"
 
-#: src/mpv/mpvitem.cpp:672
+#: src/mpv/mpvitem.cpp:675
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Captura de pantalla realizada"
 
-#: src/mpv/mpvitem.cpp:674
+#: src/mpv/mpvitem.cpp:677
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
 
-#: src/mpv/mpvitem.cpp:702
+#: src/mpv/mpvitem.cpp:705
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -708,13 +708,13 @@ msgstr ""
 "No se ha detectado la pista de vídeo, seguramente porque no se puede "
 "descodificar o reproducir debido a la ausencia de códecs."
 
-#: src/mpv/mpvitem.cpp:735
+#: src/mpv/mpvitem.cpp:738
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Capítulo omitido: %1"
 
-#: src/mpv/mpvitem.cpp:829
+#: src/mpv/mpvitem.cpp:856
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -722,13 +722,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Sonido: %1 %2"
 
-#: src/mpv/mpvitem.cpp:840
+#: src/mpv/mpvitem.cpp:867
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtítulos: ninguno"
 
-#: src/mpv/mpvitem.cpp:845 src/mpv/mpvitem.cpp:861
+#: src/mpv/mpvitem.cpp:872 src/mpv/mpvitem.cpp:888
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -736,7 +736,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtítulos: %1 %2"
 
-#: src/mpv/mpvitem.cpp:856
+#: src/mpv/mpvitem.cpp:883
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -892,7 +892,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Añadir"
 
-#: src/playlist/Playlist.qml:512 src/qml/Main.qml:491
+#: src/playlist/Playlist.qml:512 src/qml/Main.qml:493
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1347,7 +1347,7 @@ msgctxt "@title:group"
 msgid "Square"
 msgstr "Cuadrado"
 
-#: src/playlist/PlaylistTabDelegate.qml:128
+#: src/playlist/PlaylistTabDelegate.qml:160
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Predeterminado"
@@ -1615,17 +1615,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:441
+#: src/qml/Main.qml:443
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Seleccionar archivo"
 
-#: src/qml/Main.qml:461
+#: src/qml/Main.qml:463
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Seleccionar archivo de subtítulos"
 
-#: src/qml/Main.qml:488
+#: src/qml/Main.qml:490
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Abrir"
@@ -1666,8 +1666,8 @@ msgctxt "@title:menu"
 msgid "&Playback"
 msgstr "&Lista de reproducción"
 
-#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:69
-#: src/qml/Menus/PlaybackMenu.qml:32
+#: src/qml/Menus/Global/GlobalPlaybackMenu.qml:75
+#: src/qml/Menus/PlaybackMenu.qml:33
 msgctxt "@title:menu"
 msgid "Seek"
 msgstr "Posición"
@@ -2296,17 +2296,22 @@ msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Mostrar marcadores de capítulos"
 
-#: src/qml/Settings/GeneralSettings.qml:379
+#: src/qml/Settings/GeneralSettings.qml:381
+msgctxt "@option:check"
+msgid "Show progress on taskbar icon"
+msgstr ""
+
+#: src/qml/Settings/GeneralSettings.qml:390
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Esquema de color"
 
-#: src/qml/Settings/GeneralSettings.qml:424
+#: src/qml/Settings/GeneralSettings.qml:435
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Estilo de la interfaz de usuario"
 
-#: src/qml/Settings/GeneralSettings.qml:457
+#: src/qml/Settings/GeneralSettings.qml:468
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "Predeterminado"
