@@ -9,6 +9,8 @@
 
 #include <QObject>
 
+#include "config-haruna.h"
+
 class OrgFreedesktopScreenSaverInterface;
 
 class LockManager : public QObject
@@ -24,7 +26,7 @@ public Q_SLOTS:
     void setInhibitionOff();
 
 private:
-#ifdef Q_OS_UNIX
+#if HAVE_DBUS
     OrgFreedesktopScreenSaverInterface *m_iface{nullptr};
     int m_cookie{-1};
 #endif

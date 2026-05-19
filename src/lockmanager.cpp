@@ -8,7 +8,7 @@
 
 #include <KLocalizedString>
 
-#ifdef Q_OS_UNIX
+#if HAVE_DBUS
 #include <QDBusConnection>
 
 #include "screensaverdbusinterface.h"
@@ -23,14 +23,14 @@ using namespace Qt::StringLiterals;
 LockManager::LockManager(QObject *parent)
     : QObject(parent)
 {
-#ifdef Q_OS_UNIX
+#if HAVE_DBUS
     m_iface = new OrgFreedesktopScreenSaverInterface(u"org.freedesktop.ScreenSaver"_s, u"/org/freedesktop/ScreenSaver"_s, QDBusConnection::sessionBus(), this);
 #endif
 }
 
 void LockManager::setInhibitionOff()
 {
-#ifdef Q_OS_UNIX
+#if HAVE_DBUS
     m_iface->UnInhibit(m_cookie);
     m_cookie = -1;
 #endif
@@ -42,7 +42,7 @@ void LockManager::setInhibitionOff()
 
 void LockManager::setInhibitionOn()
 {
-#ifdef Q_OS_UNIX
+#if HAVE_DBUS
     if (m_cookie != -1) {
         setInhibitionOff();
     }
