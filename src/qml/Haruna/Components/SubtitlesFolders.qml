@@ -86,7 +86,7 @@ ColumnLayout {
                             }
                         }
 
-                        Item { width: scrollBar.width }
+                        Item { Layout.preferredWidth: scrollBar.width }
                     }
                 } // Component: display
 
@@ -141,7 +141,7 @@ ColumnLayout {
                             }
                         }
 
-                        Item { width: scrollBar.width }
+                        Item { Layout.preferredWidth: scrollBar.width }
                     }
                 } // Component: edit
             } // ItemDelegate
