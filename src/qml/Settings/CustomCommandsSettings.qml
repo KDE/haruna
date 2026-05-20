@@ -18,9 +18,19 @@ SettingsBasePage {
     id: root
 
     required property MpvVideo m_mpv
+    required property Kirigami.ApplicationWindow m_settingsWindow
     required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
+
+    function loadEditCustomCommandPage() : void {
+        const props = {
+            m_mpv: root.m_mpv,
+            m_settingsWindow: root.m_settingsWindow,
+            m_customCommandsModel: root.m_customCommandsModel
+        }
+        root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, props)
+    }
 
     ListView {
         id: customCommandsView
@@ -42,13 +52,7 @@ SettingsBasePage {
             text: i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
                 text: i18nc("@action:button", "&Add Command")
-                onTriggered: {
-                    const props = {
-                        m_mpv: root.m_mpv,
-                        m_customCommandsModel: root.m_customCommandsModel
-                    }
-                    applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, props)
-                }
+                onTriggered: root.loadEditCustomCommandPage()
             }
         }
     }
@@ -151,6 +155,8 @@ SettingsBasePage {
                         Layout.rightMargin: Kirigami.Units.largeSpacing
                         onClicked: {
                             const properties = {
+                                m_mpv: root.m_mpv,
+                                m_settingsWindow: root.m_settingsWindow,
                                 m_customCommandsModel: root.m_customCommandsModel,
                                 command: delegate.command,
                                 osdMessage: delegate.osdMessage,
@@ -159,7 +165,7 @@ SettingsBasePage {
                                 index: delegate.index,
                                 mode: EditCustomCommand.Mode.Edit
                             }
-                            applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, properties)
+                            root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, properties)
                         }
                     }
                 }
@@ -178,8 +184,7 @@ SettingsBasePage {
 
                 text: i18nc("@action:intoolbar", "&Add")
                 icon.name: "list-add"
-                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`,
-                                                                 {m_customCommandsModel: root.m_customCommandsModel})
+                onClicked: root.loadEditCustomCommandPage()
                 Layout.alignment: Qt.AlignRight
             }
         }

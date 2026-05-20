@@ -164,6 +164,7 @@ Loader {
                         onTriggered: {
                             const props = {
                                 m_mpv: root.m_mpv,
+                                m_settingsWindow: settingsWindow,
                                 m_customCommandsModel: root.m_customCommandsModel
                             }
 

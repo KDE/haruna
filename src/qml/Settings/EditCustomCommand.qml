@@ -15,6 +15,7 @@ SettingsBasePage {
     id: root
 
     required property MpvVideo m_mpv
+    required property Kirigami.ApplicationWindow m_settingsWindow
     required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
@@ -30,10 +31,18 @@ SettingsBasePage {
         Edit
     }
 
+    function loadCustomCommandsPage() : void {
+        const props = {
+            m_mpv: root.m_mpv,
+            m_settingsWindow: root.m_settingsWindow,
+            m_customCommandsModel: root.m_customCommandsModel
+        }
+        root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`, props)
+    }
+
     Action {
         shortcut: "esc"
-        onTriggered: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
-                                                           {m_customCommandsModel: root.m_customCommandsModel})
+        onTriggered: root.loadCustomCommandsPage()
     }
 
     GridLayout {
@@ -147,8 +156,7 @@ SettingsBasePage {
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
                     root.m_customCommandsModel.deleteCustomCommand(root.commandId, root.index)
-                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
-                                                          {m_customCommandsModel: root.m_customCommandsModel})
+                    root.loadCustomCommandsPage()
                 }
             }
 
@@ -160,8 +168,7 @@ SettingsBasePage {
             ToolButton {
                 text: i18nc("@action:intoolbar", "Cancel")
                 icon.name: "dialog-cancel"
-                onClicked: applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
-                                                                 {m_customCommandsModel: root.m_customCommandsModel})
+                onClicked: root.loadCustomCommandsPage()
                 Layout.alignment: Qt.AlignRight
             }
 
@@ -198,8 +205,7 @@ SettingsBasePage {
                                                               optionName)
                         break
                     }
-                    applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
-                                                          {m_customCommandsModel: root.m_customCommandsModel})
+                    root.loadCustomCommandsPage()
                 }
 
             }
