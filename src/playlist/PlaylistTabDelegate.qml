@@ -19,6 +19,7 @@ TabButton {
     required property bool isVisible
     required property bool isActive
     required property MpvVideo m_mpv
+    property PlaylistTabBar playlistTabBar: TabBar.tabBar as PlaylistTabBar
 
     property bool aboutToBeRemoved: false
     property int dragCenter: 0
@@ -60,7 +61,7 @@ TabButton {
                     root.click()
                     break
                 case Qt.RightButton:
-                    root.TabBar.tabBar.openContextMenu(root)
+                    root.playlistTabBar.openContextMenu(root)
                     break
                 }
             }
@@ -128,7 +129,7 @@ TabButton {
                 xAxis {
                     enabled: true
                     minimum: 0
-                    maximum: root.TabBar.tabBar?.contentWidth ?? 0
+                    maximum: root.playlistTabBar?.contentWidth ?? 0
                 }
 
                 onGrabChanged: function(transition, eventPoint) {
@@ -143,7 +144,7 @@ TabButton {
                     case PointerDevice.UngrabPassive:
                         root.z = 0
                         if (root.index !== 0) {
-                            var prevItem = root.TabBar.tabBar.itemAt(root.index - 1)
+                            var prevItem = root.playlistTabBar.itemAt(root.index - 1)
                             root.x = prevItem.x + prevItem.width
                         }
                         root.dragCenter = 0
@@ -260,7 +261,7 @@ TabButton {
                 sourceItem.dragCenter += root.width
             }
 
-            root.TabBar.tabBar.movePlaylistItem(from, to)
+            root.playlistTabBar.movePlaylistItem(from, to)
             root.movePlaylist(from, to)
         }
     }
@@ -318,14 +319,14 @@ TabButton {
             if (root.index === 0) {
                 return dragIcon.x
             }
-            var item = root.TabBar.tabBar.itemAt(root.index - 1)
+            var item = root.playlistTabBar.itemAt(root.index - 1)
             return item.width - dragIcon.width
         }
         else {
-            if (root.index === root.TabBar.tabBar.count - 1) {
+            if (root.index === root.playlistTabBar.count - 1) {
                 return dragIcon.width + dragIcon.x
             }
-            var item = root.TabBar.tabBar.itemAt(root.index + 1)
+            var item = root.playlistTabBar.itemAt(root.index + 1)
             return -(item.width - root.width)
         }
         return defaultSpot

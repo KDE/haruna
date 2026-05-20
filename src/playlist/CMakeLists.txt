@@ -16,6 +16,7 @@ qt_add_qml_module(playlist
         PlaylistItemCompact.qml
         PlaylistItemWithThumbnail.qml
         PlaylistTabDelegate.qml
+        PlaylistTabBar.qml
         PlaylistAdvancedSortWindow.qml
         PlaylistSectionDelegate.qml
     SOURCES
