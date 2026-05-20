@@ -144,7 +144,7 @@ target_include_directories(haruna
         ${FFMPEG_INCLUDE_DIRS}
 )
 
-target_compile_definitions(haruna PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
+target_compile_definitions(haruna PRIVATE $<$<CONFIG:Debug>:QT_QML_DEBUG>)
 
 target_link_libraries(haruna PRIVATE
     Qt6::Core
