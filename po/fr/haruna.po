@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021-2026 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:43+0000\n"
-"PO-Revision-Date: 2026-05-03 12:06+0200\n"
+"PO-Revision-Date: 2026-05-18 10:09+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -649,12 +649,10 @@ msgid "Could not play: %1"
 msgstr "Lecture impossible : %1"
 
 #: src/mpv/mpvitem.cpp:535
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "Cadencement des sous-titres : %1 secondes"
+msgstr "Cadencement des sous-titres : + %1 secondes"
 
 #: src/mpv/mpvitem.cpp:537
 #, kde-format
