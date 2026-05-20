@@ -401,7 +401,8 @@ ApplicationWindow {
                 advancedSortWindowLoader.active = true
                 advancedSortWindowLoader.loaded.connect(function() {
                     advancedSortWindowLoader.openSortWindow()
-                    advancedSortWindowLoader.item.calculatePostLayout()
+                    const item = advancedSortWindowLoader.item as PlaylistAdvancedSortWindow
+                    item.calculatePostLayout()
                 })
                 return
             }
