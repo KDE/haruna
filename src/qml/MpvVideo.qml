@@ -52,7 +52,7 @@ MpvItem {
     onRaise: { HarunaApp.raiseWindow() }
     onPlayNext: { HarunaApp.actions.playNextAction.trigger() }
     onPlayPrevious: { HarunaApp.actions.playPreviousAction.trigger() }
-    onOpenUri: {
+    onOpenUri: function(uri) {
         root.window.openFile(uri, RecentFilesModel.OpenedFrom.ExternalApp)
     }
 
@@ -196,7 +196,7 @@ MpvItem {
         onDropped: function (drop) {
             if (dragSubtitle && !dragMedia) {
                 // If dragging multiple items and none of them is a media, and if there is a subtitle, load it
-                mpv.addSubtitles(drop.urls[subtitleIndex])
+                root.addSubtitles(drop.urls[subtitleIndex])
                 return
             }
             if (mouseOnTopPart) {
