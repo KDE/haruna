@@ -46,13 +46,6 @@ TabBar {
         root.m_mpv.playlists.visibleIndex = currentIndex
     }
 
-    Repeater {
-        model: root.m_mpv.playlists
-        delegate: PlaylistTabDelegate {
-            m_mpv: root.m_mpv
-        }
-    }
-
     // This connection is only necessary for the startup. If the last played item is inside
     // an internal tab, then the TabBar should set its current index to that tab.
     Connections {

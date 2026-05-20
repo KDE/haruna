@@ -374,6 +374,13 @@ Page {
                     m_mpv: root.m_mpv
                     Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
                     Layout.fillWidth: true
+
+                    Repeater {
+                        model: root.m_mpv.playlists
+                        delegate: PlaylistTabDelegate {
+                            m_mpv: root.m_mpv
+                        }
+                    }
                 }
 
                 ToolButton {
