@@ -81,7 +81,7 @@ SettingsBasePage {
                 id: osdMessageTextField
 
                 text: root.osdMessage
-                enabled: typeGroup.checkedButton.optionName === "shortcut"
+                enabled: (typeGroup.checkedButton as CommandRadioButton).optionName === "shortcut"
                 placeholderText: i18nc("placeholder text; %1 is an example of how to display an mpv property", "Filename: %1", "${filename}")
                 Layout.fillWidth: true
             }
@@ -114,8 +114,8 @@ SettingsBasePage {
             spacing: Kirigami.Units.largeSpacing
             visible: root.mode === EditCustomCommand.Mode.Create
 
-            RadioButton {
-                property string optionName: "shortcut"
+            CommandRadioButton {
+                optionName: "shortcut"
 
                 checked: optionName === root.type
                 text: i18nc("@option:radio", "Keyboard shortcut")
@@ -124,8 +124,8 @@ SettingsBasePage {
                 ToolTip.delay: 700
             }
 
-            RadioButton {
-                property string optionName: "startup"
+            CommandRadioButton {
+                optionName: "startup"
 
                 checked: optionName === root.type
                 text: i18nc("@option:radio", "Run at startup")
@@ -176,7 +176,9 @@ SettingsBasePage {
                     if (commandTextField.text === "") {
                         return
                     }
-                    if (typeGroup.checkedButton.optionName === "startup") {
+                    const button = typeGroup.checkedButton as CommandRadioButton
+                    const optionName = button.optionName
+                    if (optionName === "startup") {
                         // execute the user command
                         mpv.userCommand(commandTextField.text)
                     }
@@ -185,14 +187,14 @@ SettingsBasePage {
                         // save new command to config file
                         root.m_customCommandsModel.saveCustomCommand(commandTextField.text,
                                                               osdMessageTextField.text,
-                                                              typeGroup.checkedButton.optionName)
+                                                              optionName)
                         break
                     case EditCustomCommand.Mode.Edit:
                         // update existing command
                         root.m_customCommandsModel.editCustomCommand(root.index,
                                                               commandTextField.text,
                                                               osdMessageTextField.text,
-                                                              typeGroup.checkedButton.optionName)
+                                                              optionName)
                         break
                     }
                     applicationWindow().pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`,
@@ -201,5 +203,9 @@ SettingsBasePage {
 
             }
         }
+    }
+
+    component CommandRadioButton: RadioButton {
+        required property string optionName
     }
 }
