@@ -14,6 +14,7 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
+    required property MpvVideo m_mpv
     required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
@@ -180,7 +181,7 @@ SettingsBasePage {
                     const optionName = button.optionName
                     if (optionName === "startup") {
                         // execute the user command
-                        mpv.userCommand(commandTextField.text)
+                        root.m_mpv.userCommand(commandTextField.text)
                     }
                     switch (root.mode) {
                     case EditCustomCommand.Mode.Create:

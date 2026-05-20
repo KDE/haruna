@@ -17,6 +17,7 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
+    required property MpvVideo m_mpv
     required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
@@ -41,9 +42,13 @@ SettingsBasePage {
             text: i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
                 text: i18nc("@action:button", "&Add Command")
-                onTriggered: applicationWindow().pageStack.replace(
-                                 `${root.settingsPath}/EditCustomCommand.qml`,
-                                 {m_customCommandsModel: root.m_customCommandsModel})
+                onTriggered: {
+                    const props = {
+                        m_mpv: root.m_mpv,
+                        m_customCommandsModel: root.m_customCommandsModel
+                    }
+                    applicationWindow().pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, props)
+                }
             }
         }
     }

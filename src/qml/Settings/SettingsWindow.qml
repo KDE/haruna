@@ -162,10 +162,15 @@ Loader {
                         text: i18nc("@action", "Custom Commands")
                         icon.name: "configure"
                         onTriggered: {
+                            const props = {
+                                m_mpv: root.m_mpv,
+                                m_customCommandsModel: root.m_customCommandsModel
+                            }
+
                             root.activePage = SettingsWindow.Page.CustomCommands
                             settingsWindow.pageStack.removePage(1)
                             settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/CustomCommandsSettings.qml`,
-                                                               {m_customCommandsModel: root.m_customCommandsModel})
+                                                          props)
                         }
                     },
                     Kirigami.Action {
