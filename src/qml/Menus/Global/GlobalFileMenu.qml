@@ -46,6 +46,7 @@ Labs.Menu {
             id: recentFilesInstantiator
 
             model: 0
+            asynchronous: true
             onObjectAdded: (index, object) => recentFilesMenu.insertItem( index, object )
             onObjectRemoved: (index, object) => recentFilesMenu.removeItem( object )
             delegate: Labs.MenuItem {

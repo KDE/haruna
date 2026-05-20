@@ -33,6 +33,7 @@ Menu {
 
         Instantiator {
             model: root.m_recentFilesModel
+            asynchronous: true
             delegate: MenuItem {
                 id: delegate
 
