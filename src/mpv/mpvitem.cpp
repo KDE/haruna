@@ -501,6 +501,8 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
         AudioSettings::setVolume(m_volume);
         AudioSettings::self()->save();
 
+        Q_EMIT osdMessage(i18nc("@info:tooltip", "Volume: %1", m_volume));
+
     } else if (property == MpvProperties::self()->VolumeMax) {
         m_volumeMax = value.toInt();
         Q_EMIT volumeMaxChanged();

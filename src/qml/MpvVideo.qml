@@ -22,7 +22,6 @@ import org.kde.kirigami as Kirigami
 MpvItem {
     id: root
 
-    required property Osd osd
     required property MouseActionsModel mouseActionsModel
     property var window: Window.window
     property int preMinimizePlaybackState: MpvItem.PlaybackState.Playing
@@ -48,14 +47,6 @@ MpvItem {
             }
             break
         }
-    }
-
-    onVolumeChanged: {
-        osd.message(i18nc("@info:tooltip", "Volume: %1", root.volume))
-    }
-
-    onOsdMessage: function(text) {
-        osd.message(text);
     }
 
     onRaise: { HarunaApp.raiseWindow() }

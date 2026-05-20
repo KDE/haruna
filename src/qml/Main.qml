@@ -201,7 +201,6 @@ ApplicationWindow {
     MpvVideo {
         id: mpv
 
-        osd: osd
         mouseActionsModel: mouseActionsModel
 
         width: window.contentItem.width
@@ -222,6 +221,10 @@ ApplicationWindow {
 
         onAddToRecentFiles: function(url, openedFrom, name) {
             recentFilesModel.addRecentFile(url, openedFrom, name)
+        }
+
+        onOsdMessage: function(text) {
+            osd.message(text);
         }
 
         Osd {
