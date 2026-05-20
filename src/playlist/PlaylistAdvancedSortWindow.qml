@@ -230,10 +230,10 @@ Kirigami.ApplicationWindow {
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
-            ListView {
-                readonly property real scrollbarWidth: availableSortScrollView.effectiveScrollBarWidth
-                readonly property bool isActiveModel: false
-                readonly property bool isGroup: false
+            SortListView {
+                scrollbarWidth: availableSortScrollView.effectiveScrollBarWidth
+                isActiveModel: false
+                isGroup: false
 
                 anchors.fill: parent
                 model: root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
@@ -276,12 +276,12 @@ Kirigami.ApplicationWindow {
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
-            ListView {
+            SortListView {
                 id: activeListView
 
-                readonly property real scrollbarWidth: activeSortScrollView.effectiveScrollBarWidth
-                readonly property bool isActiveModel: true
-                readonly property bool isGroup: false
+                scrollbarWidth: activeSortScrollView.effectiveScrollBarWidth
+                isActiveModel: true
+                isGroup: false
 
                 anchors.fill: parent
                 model: root.m_mpv.visibleFilterProxyModel.activeSortPropertiesModel()
@@ -449,10 +449,10 @@ Kirigami.ApplicationWindow {
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
-            ListView {
-                readonly property real scrollbarWidth: availableGroupScrollView.effectiveScrollBarWidth
-                readonly property bool isActiveModel: false
-                readonly property bool isGroup: true
+            SortListView {
+                scrollbarWidth: availableGroupScrollView.effectiveScrollBarWidth
+                isActiveModel: false
+                isGroup: true
 
                 anchors.fill: parent
                 model: root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
@@ -501,12 +501,12 @@ Kirigami.ApplicationWindow {
                 ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
                 ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
-                ListView {
+                SortListView {
                     id: activeGroupListView
 
-                    readonly property real scrollbarWidth: activeGroupScrollView.effectiveScrollBarWidth
-                    readonly property bool isActiveModel: true
-                    readonly property bool isGroup: true
+                    scrollbarWidth: activeGroupScrollView.effectiveScrollBarWidth
+                    isActiveModel: true
+                    isGroup: true
 
                     anchors.fill: parent
                     model: root.m_mpv.visibleFilterProxyModel.activeGroupModel()
@@ -552,11 +552,12 @@ Kirigami.ApplicationWindow {
             required property int order
             required property bool hideBlank
             // which listview is this delegate is in?
-            readonly property bool isActiveModel: ListView.view.isActiveModel
-            readonly property bool isGroup: ListView.view.isGroup
+            readonly property SortListView view: ListView.view as SortListView
+            readonly property bool isActiveModel: view.isActiveModel
+            readonly property bool isGroup: view.isGroup
 
             implicitHeight: Kirigami.Units.gridUnit * 2
-            width: ListView.view.width - (ListView.view.scrollbarWidth + ListView.view.leftMargin + ListView.view.rightMargin)
+            width: view.width - (view.scrollbarWidth + view.leftMargin + view.rightMargin)
 
             Rectangle {
                 id: itemDelegateBackgroundRect
@@ -771,5 +772,11 @@ Kirigami.ApplicationWindow {
         activeSortScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
         availableGroupScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
         activeGroupScrollView.ScrollBar.vertical.policy = ScrollBar.AsNeeded
+    }
+
+    component SortListView: ListView {
+        required property real scrollbarWidth
+        required property bool isActiveModel
+        required property bool isGroup
     }
 }
