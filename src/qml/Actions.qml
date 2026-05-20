@@ -153,13 +153,13 @@ Item {
         }
 
         function onPlaybackSpeedIncreaseAction() {
-            const speed = root.m_mpv.getProperty(MpvProperties.Speed) + 0.1
+            const speed = parseFloat(root.m_mpv.getProperty(MpvProperties.Speed) + 0.1)
             root.m_mpv.setProperty(MpvProperties.Speed, speed)
             root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         function onPlaybackSpeedDecreaseAction() {
-            const speed = root.m_mpv.getProperty(MpvProperties.Speed) - 0.1
+            const speed = parseFloat(root.m_mpv.getProperty(MpvProperties.Speed) - 0.1)
             root.m_mpv.setProperty(MpvProperties.Speed, speed)
             root.m_osd.message(i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
@@ -311,13 +311,13 @@ Item {
         }
 
         function onSubtitleIncreaseFontSizeAction() {
-            const subScale = root.m_mpv.getProperty(MpvProperties.SubtitleScale) + 0.1
+            const subScale = parseFloat(root.m_mpv.getProperty(MpvProperties.SubtitleScale) + 0.1)
             root.m_mpv.setProperty(MpvProperties.SubtitleScale, subScale)
             root.m_osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
 
         function onSubtitleDecreaseFontSizeAction() {
-            const subScale = root.m_mpv.getProperty(MpvProperties.SubtitleScale) - 0.1
+            const subScale = parseFloat(root.m_mpv.getProperty(MpvProperties.SubtitleScale) - 0.1)
             root.m_mpv.setProperty(MpvProperties.SubtitleScale, subScale)
             root.m_osd.message(i18nc("@info:tooltip", "Subtitle scale: %1", subScale.toFixed(1)))
         }
@@ -392,13 +392,13 @@ Item {
         }
 
         function onZoomInAction() {
-            const zoom = root.m_mpv.getProperty(MpvProperties.VideoZoom) + 0.1
+            const zoom = parseFloat(root.m_mpv.getProperty(MpvProperties.VideoZoom) + 0.1)
             root.m_mpv.setProperty(MpvProperties.VideoZoom, zoom)
             root.m_osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
 
         function onZoomOutAction() {
-            const zoom = root.m_mpv.getProperty(MpvProperties.VideoZoom) - 0.1
+            const zoom = parseFloat(root.m_mpv.getProperty(MpvProperties.VideoZoom) - 0.1)
             root.m_mpv.setProperty(MpvProperties.VideoZoom, zoom)
             root.m_osd.message(i18nc("@info:tooltip", "Zoom: %1", zoom.toFixed(2)))
         }
@@ -407,7 +407,6 @@ Item {
             root.m_mpv.setProperty(MpvProperties.VideoZoom, 0)
             root.m_osd.message(i18nc("@info:tooltip", "Zoom: 0"))
         }
-
 
         function onContrastUpAction() {
             const contrast = parseInt(root.m_mpv.getProperty(MpvProperties.Contrast)) + 1
