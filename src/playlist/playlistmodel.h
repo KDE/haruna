@@ -42,7 +42,7 @@ struct PlaylistItem {
 class PlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(PlaylistModel)
+    QML_ELEMENT
 
 public:
     explicit PlaylistModel(QObject *parent = nullptr);

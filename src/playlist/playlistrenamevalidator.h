@@ -12,6 +12,7 @@
 class PlaylistRenameValidator : public QValidator
 {
     Q_OBJECT
+
 public:
     explicit PlaylistRenameValidator(QObject *parent = nullptr);
     QValidator::State validate(QString &input, int &pos) const override;

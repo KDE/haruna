@@ -12,7 +12,7 @@
 class PlaylistMultiProxiesModel : public QAbstractListModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(PlaylistMultiProxiesModel)
+    QML_ELEMENT
 
 public:
     explicit PlaylistMultiProxiesModel(QObject *parent = nullptr);

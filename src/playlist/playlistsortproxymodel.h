@@ -17,7 +17,7 @@
 class PlaylistSortProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(PlaylistSortProxyModel)
+    QML_ELEMENT
 
 public:
     explicit PlaylistSortProxyModel(QObject *parent = nullptr);

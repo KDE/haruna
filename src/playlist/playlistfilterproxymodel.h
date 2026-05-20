@@ -23,7 +23,8 @@ class PlaylistProxyModel;
 class PlaylistFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
-    QML_NAMED_ELEMENT(PlaylistFilterProxyModel)
+    QML_ELEMENT
+
 public:
     explicit PlaylistFilterProxyModel(QObject *parent = nullptr);
     friend class PlaylistMultiProxiesModel;
