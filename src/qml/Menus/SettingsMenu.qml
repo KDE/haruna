@@ -12,7 +12,7 @@ import org.kde.haruna
 Menu {
     id: root
 
-    required property Loader m_settingsLoader
+    required property SettingsWindow m_settingsLoader
 
     title: i18nc("@title:menu", "&Settings")
 
