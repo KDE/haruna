@@ -18,4 +18,6 @@ QtObject {
     property ProxyActionsModel proxyActionsModel: ProxyActionsModel {
         sourceModel: root.actionsModel
     }
+    property MouseActionsModel mouseActionsModel: MouseActionsModel {}
+
 }

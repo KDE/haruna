@@ -17,8 +17,6 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
-    required property MouseActionsModel m_mouseActionsModel
-
     signal newMouseActionChanged()
 
     padding: 0
@@ -38,7 +36,7 @@ SettingsBasePage {
 
             ScrollBar.vertical: ScrollBar { id: scrollBar }
 
-            model: root.m_mouseActionsModel
+            model: Models.mouseActionsModel
             delegate: ItemDelegate {
                 id: delegate
 
@@ -95,7 +93,7 @@ SettingsBasePage {
                                 onTriggered: {
                                     const actionHandler = function (actionName) {
                                         delegate.mouseAction.actionName = actionName
-                                        root.m_mouseActionsModel.editAction(delegate.mouseAction)
+                                        Models.mouseActionsModel.editAction(delegate.mouseAction)
                                         selectActionPopup.actionSelected.disconnect(actionHandler)
                                     }
                                     selectActionPopup.actionSelected.connect(actionHandler)
@@ -107,7 +105,7 @@ SettingsBasePage {
                                 text: i18nc("@label:action delete mouse event", "Delete")
                                 icon.name: "delete"
                                 onTriggered: {
-                                    root.m_mouseActionsModel.removeAction(delegate.index)
+                                    Models.mouseActionsModel.removeAction(delegate.index)
                                 }
                             }
                         }
@@ -354,7 +352,7 @@ SettingsBasePage {
                     id: actionExistsMessage
 
                     text: {
-                        const model = root.m_mouseActionsModel
+                        const model = Models.mouseActionsModel
                         const button = mouseButtonComboBox.currentValue
                         const modifier = modifierComboBox.currentValue
                         const isDoubleClick = isDoubleClickCheckBox.checked
@@ -384,7 +382,7 @@ SettingsBasePage {
                     const modifier = modifierComboBox.currentValue
                     const isDoubleClick = isDoubleClickCheckBox.checked
 
-                    if (root.m_mouseActionsModel.actionExists(button, modifier, isDoubleClick)) {
+                    if (Models.mouseActionsModel.actionExists(button, modifier, isDoubleClick)) {
                         actionExistsMessage.visible = true
                     } else {
                         actionExistsMessage.visible = false
@@ -395,7 +393,7 @@ SettingsBasePage {
             }
 
             onAccepted: {
-                root.m_mouseActionsModel.addAction(selectedActionLabel.actionName,
+                Models.mouseActionsModel.addAction(selectedActionLabel.actionName,
                                                    mouseButtonComboBox.currentValue,
                                                    modifierComboBox.currentValue,
                                                    isDoubleClickCheckBox.checked)

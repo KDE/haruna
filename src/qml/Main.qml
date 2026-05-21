@@ -199,8 +199,6 @@ ApplicationWindow {
     MpvVideo {
         id: mpv
 
-        mouseActionsModel: mouseActionsModel
-
         width: window.contentItem.width
         height: window.isFullScreen()
                 ? window.contentItem.height
@@ -320,10 +318,6 @@ ApplicationWindow {
         onOpenSubtitleDialog: subtitlesFileDialog.open()
     }
 
-    MouseActionsModel {
-        id: mouseActionsModel
-    }
-
     CustomCommandsModel {
         id: customCommandsModel
 
@@ -366,7 +360,6 @@ ApplicationWindow {
 
         m_mpv: mpv
         m_customCommandsModel: customCommandsModel
-        m_mouseActionsModel: mouseActionsModel
     }
 
     Loader {

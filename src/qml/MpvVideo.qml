@@ -22,7 +22,6 @@ import org.kde.kirigami as Kirigami
 MpvItem {
     id: root
 
-    required property MouseActionsModel mouseActionsModel
     property var window: Window.window
     property int preMinimizePlaybackState: MpvItem.PlaybackState.Playing
     property alias mouseY: mouseArea.mouseY
@@ -101,7 +100,7 @@ MpvItem {
         }
 
         onWheel: function(wheel) {
-            const model = root.mouseActionsModel
+            const model = Models.mouseActionsModel
             let actionName
             let modifier = wheel.modifiers
             if (wheel.angleDelta.y > 0) {
@@ -117,7 +116,7 @@ MpvItem {
 
         onPressed: function(mouse) {
             focus = true
-            const model = root.mouseActionsModel
+            const model = Models.mouseActionsModel
             let actionName
             let modifier = mouse.modifiers
             if (mouse.button === Qt.LeftButton) {
@@ -139,7 +138,7 @@ MpvItem {
 
         onDoubleClicked: function(mouse) {
             focus = true
-            const model = root.mouseActionsModel
+            const model = Models.mouseActionsModel
             let actionName
             let modifier = mouse.modifiers
             if (mouse.button === Qt.LeftButton) {

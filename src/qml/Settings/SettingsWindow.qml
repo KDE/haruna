@@ -19,7 +19,6 @@ Loader {
 
     required property MpvVideo m_mpv
     required property CustomCommandsModel m_customCommandsModel
-    required property MouseActionsModel m_mouseActionsModel
 
     property int activePage: SettingsWindow.Page.General
 
@@ -143,8 +142,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Mouse
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/MouseSettings.qml`,
-                                                {m_mouseActionsModel: root.m_mouseActionsModel})
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/MouseSettings.qml`)
                         }
                     },
                     Kirigami.Action {
