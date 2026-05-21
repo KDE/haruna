@@ -73,6 +73,9 @@ add_subdirectory(utilities)
 add_subdirectory(settings)
 add_subdirectory(youtube)
 
+set_source_files_properties(qml/Models.qml
+    PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
+
 qt_policy(SET QTP0001 NEW)
 
 qt_add_qml_module(haruna
@@ -88,6 +91,7 @@ qt_add_qml_module(haruna
         qml/Osd.qml
         qml/VolumeSlider.qml
         qml/Main.qml
+        qml/Models.qml
 
         qml/Haruna/Components/AudioTracksMenu.qml
         qml/Haruna/Components/ColorPickerButton.qml
