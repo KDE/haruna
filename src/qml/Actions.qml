@@ -16,7 +16,6 @@ import org.kde.haruna.settings
 Item {
     id: root
 
-    required property ActionsModel m_actionsModel
     required property MpvItem m_mpv
     required property MpvContextMenu m_mpvContextMenuLoader
     required property SettingsWindow m_settingsLoader
@@ -30,7 +29,7 @@ Item {
     signal togglePlaylist()
 
     Instantiator {
-        model: root.m_actionsModel
+        model: Models.actionsModel
         delegate: Action {
             id: delegate
 
@@ -48,7 +47,7 @@ Item {
             icon.name: delegate.actionIcon
             onTriggered: {
                 if (delegate.actionType === "NormalAction") {
-                    root.m_actionsModel.signalEmitter(objectName)
+                    Models.actionsModel.signalEmitter(objectName)
                 }
                 if (delegate.actionType === "CustomAction") {
                     root.m_mpv.userCommand(delegate.actionText)
@@ -61,7 +60,7 @@ Item {
     }
 
     Connections {
-        target: root.m_actionsModel
+        target: Models.actionsModel
 
         function onOpenActionsDialogAction() {
             root.m_triggerActionPopup.open()
@@ -222,7 +221,7 @@ Item {
             const currentChapter = root.m_mpv.getProperty(MpvProperties.Chapter)
             const nextChapter = currentChapter + 1
             if (nextChapter === chapters.length) {
-                root.m_actionsModel.signalEmitter("playNextAction")
+                Models.actionsModel.signalEmitter("playNextAction")
                 return
             }
             root.m_mpv.command(["add", "chapter", "1"])
@@ -236,7 +235,7 @@ Item {
             if (root.m_mpv.getProperty(MpvProperties.SubtitleId) !== false) {
                 root.m_mpv.command(["sub-seek", "1"])
             } else {
-                root.m_actionsModel.signalEmitter("seekForwardSmallAction")
+                Models.actionsModel.signalEmitter("seekForwardSmallAction")
             }
         }
 
@@ -244,7 +243,7 @@ Item {
             if (root.m_mpv.getProperty(MpvProperties.SubtitleId) !== false) {
                 root.m_mpv.command(["sub-seek", "-1"])
             } else {
-                root.m_actionsModel.signalEmitter("seekBackwardSmallAction")
+                Models.actionsModel.signalEmitter("seekBackwardSmallAction")
             }
         }
 

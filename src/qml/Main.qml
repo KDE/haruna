@@ -308,7 +308,6 @@ ApplicationWindow {
     Actions {
         id: actions
 
-        m_actionsModel: actionsModel
         m_mpv: mpv
         m_mpvContextMenuLoader: mpvContextMenuLoader
         m_osd: osd
@@ -325,20 +324,10 @@ ApplicationWindow {
         id: mouseActionsModel
     }
 
-    ActionsModel {
-        id: actionsModel
-    }
-
-    ProxyActionsModel {
-        id: proxyActionsModel
-
-        sourceModel: actionsModel
-    }
-
     CustomCommandsModel {
         id: customCommandsModel
 
-        appActionsModel: actionsModel
+        appActionsModel: Models.actionsModel
         Component.onCompleted: init()
     }
 
@@ -376,7 +365,6 @@ ApplicationWindow {
         id: settingsLoader
 
         m_mpv: mpv
-        m_proxyActionsModel: proxyActionsModel
         m_customCommandsModel: customCommandsModel
         m_mouseActionsModel: mouseActionsModel
     }

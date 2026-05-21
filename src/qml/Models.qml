@@ -11,5 +11,11 @@ import QtQuick
 import org.kde.haruna
 
 QtObject {
+    id: root
+
     property RecentFilesModel recentFilesModel: RecentFilesModel {}
+    property ActionsModel actionsModel: ActionsModel {}
+    property ProxyActionsModel proxyActionsModel: ProxyActionsModel {
+        sourceModel: root.actionsModel
+    }
 }

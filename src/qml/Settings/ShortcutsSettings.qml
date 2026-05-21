@@ -19,11 +19,9 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
-    required property ProxyActionsModel m_proxyActionsModel
-
     onVisibleChanged: {
         if (!visible) {
-            root.m_proxyActionsModel.setNameFilter("")
+            Models.proxyActionsModel.setNameFilter("")
         }
     }
 
@@ -37,7 +35,7 @@ SettingsBasePage {
                 id: searchField
 
                 focus: true
-                onAccepted: root.m_proxyActionsModel.setNameFilter(text)
+                onAccepted: Models.proxyActionsModel.setNameFilter(text)
                 Layout.fillWidth: true
                 KeyNavigation.up: actionsListView
                 KeyNavigation.down: actionsListView
@@ -48,7 +46,7 @@ SettingsBasePage {
     ListView {
         id: actionsListView
 
-        model: root.m_proxyActionsModel
+        model: Models.proxyActionsModel
         reuseItems: true
         delegate: ItemDelegate {
             id: delegate
@@ -82,7 +80,7 @@ SettingsBasePage {
                         }
 
                         if (keySequence.toString() !== delegate.actionShortcut) {
-                            if (!root.m_proxyActionsModel.saveShortcut(delegate.index, keySequence)) {
+                            if (!Models.proxyActionsModel.saveShortcut(delegate.index, keySequence)) {
                                 keySequence = delegate.actionShortcut
                             }
                         }

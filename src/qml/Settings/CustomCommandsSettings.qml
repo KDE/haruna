@@ -137,7 +137,7 @@ SettingsBasePage {
                                 }
                                 if (keySequence !== delegate.shortcut) {
                                     // use action name (commandId) since this changes the actionsModel
-                                    if (!actionsModel.saveShortcut(delegate.commandId, keySequence)) {
+                                    if (!Models.actionsModel.saveShortcut(delegate.commandId, keySequence)) {
                                         keySequence = delegate.shortcut
                                     }
                                 }

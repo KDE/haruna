@@ -18,7 +18,6 @@ Loader {
     id: root
 
     required property MpvVideo m_mpv
-    required property ProxyActionsModel m_proxyActionsModel
     required property CustomCommandsModel m_customCommandsModel
     required property MouseActionsModel m_mouseActionsModel
 
@@ -154,8 +153,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Shortcuts
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/ShortcutsSettings.qml`,
-                                                               {m_proxyActionsModel: root.m_proxyActionsModel})
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/ShortcutsSettings.qml`,)
                         }
                     },
                     Kirigami.Action {
