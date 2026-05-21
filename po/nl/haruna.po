@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:43+0000\n"
+"POT-Creation-Date: 2026-05-21 00:43+0000\n"
 "PO-Revision-Date: 2026-05-19 11:25+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -647,56 +647,62 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Kon niet afgespeeld worden: %1"
 
-#: src/mpv/mpvitem.cpp:535
+#: src/mpv/mpvitem.cpp:504
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Volume: %1"
+
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Timing van ondertiteling: +%1 seconden"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Timing van ondertiteling: %1 seconden"
 
-#: src/mpv/mpvitem.cpp:576
+#: src/mpv/mpvitem.cpp:578
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Bestand bestaat niet: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:610
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:621
+#: src/mpv/mpvitem.cpp:623
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Geen"
 
-#: src/mpv/mpvitem.cpp:670
+#: src/mpv/mpvitem.cpp:672
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Schermafdruk maken is mislukt"
 
-#: src/mpv/mpvitem.cpp:675
+#: src/mpv/mpvitem.cpp:677
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Schermafdruk maken"
 
-#: src/mpv/mpvitem.cpp:677
+#: src/mpv/mpvitem.cpp:679
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Schermafdruk: %1"
 
-#: src/mpv/mpvitem.cpp:705
+#: src/mpv/mpvitem.cpp:707
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -706,13 +712,13 @@ msgstr ""
 "Geen videotrack gedetecteerd, waarschijnlijk kan de videotrack niet "
 "gedecodeerd/afgespeeld worden vanwege ontbrekende codecs"
 
-#: src/mpv/mpvitem.cpp:738
+#: src/mpv/mpvitem.cpp:740
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Overgeslagen hoofdstuk: %1"
 
-#: src/mpv/mpvitem.cpp:856
+#: src/mpv/mpvitem.cpp:858
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -720,13 +726,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:867
+#: src/mpv/mpvitem.cpp:869
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Ondertiteling: geen"
 
-#: src/mpv/mpvitem.cpp:872 src/mpv/mpvitem.cpp:888
+#: src/mpv/mpvitem.cpp:874 src/mpv/mpvitem.cpp:890
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -734,7 +740,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Ondertitel: %1 %2"
 
-#: src/mpv/mpvitem.cpp:883
+#: src/mpv/mpvitem.cpp:885
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -870,27 +876,17 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "Opslaan als"
 
-#: src/playlist/Playlist.qml:432
+#: src/playlist/Playlist.qml:397
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Nieuwe afspeellijst toevoegen"
 
-#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:829
-msgctxt "@action:inmenu"
-msgid "Rename"
-msgstr "Hernoemen"
-
-#: src/playlist/Playlist.qml:453
-msgctxt "@action:inmenu"
-msgid "Remove"
-msgstr "Verwijderen"
-
-#: src/playlist/Playlist.qml:509 src/playlist/Playlist.qml:530
+#: src/playlist/Playlist.qml:410 src/playlist/Playlist.qml:431
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/playlist/Playlist.qml:512 src/qml/Main.qml:493
+#: src/playlist/Playlist.qml:413 src/qml/Main.qml:497
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -899,87 +895,92 @@ msgstr ""
 "Zowel <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> als <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> zijn niet gevonden."
 
-#: src/playlist/Playlist.qml:529
+#: src/playlist/Playlist.qml:430
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "afspeellijstnaam"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:642
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Map openen waarin het zich bevindt"
 
-#: src/playlist/Playlist.qml:747
+#: src/playlist/Playlist.qml:648
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "In browser openen"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:657
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr "In generator van miniaturen openen"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:673
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "In %1 openen"
 
-#: src/playlist/Playlist.qml:786
+#: src/playlist/Playlist.qml:687
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Naam kopiëren"
 
-#: src/playlist/Playlist.qml:792
+#: src/playlist/Playlist.qml:693
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Pad kopiëren"
 
-#: src/playlist/Playlist.qml:793
+#: src/playlist/Playlist.qml:694
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL kopiëren"
 
-#: src/playlist/Playlist.qml:803
+#: src/playlist/Playlist.qml:704
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Alles selecteren"
 
-#: src/playlist/Playlist.qml:807
+#: src/playlist/Playlist.qml:708
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Alles deselecteren"
 
-#: src/playlist/Playlist.qml:811
+#: src/playlist/Playlist.qml:712
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Selectie omkeren"
 
-#: src/playlist/Playlist.qml:817
+#: src/playlist/Playlist.qml:718
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Uit afspeellijst verwijderen"
 
-#: src/playlist/Playlist.qml:823
+#: src/playlist/Playlist.qml:724
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Geselecteerden uit afspeellijst verwijderen"
 
-#: src/playlist/Playlist.qml:835
+#: src/playlist/Playlist.qml:730 src/playlist/PlaylistTabBar.qml:70
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "Hernoemen"
+
+#: src/playlist/Playlist.qml:736
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Schuif naar het item dat wordt afgespeeld"
 
-#: src/playlist/Playlist.qml:845
+#: src/playlist/Playlist.qml:746
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Bestand naar prullenbak verplaatsen"
 
-#: src/playlist/Playlist.qml:851
+#: src/playlist/Playlist.qml:752
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Geselecteerde bestanden naar prullenbak verplaatsen"
 
-#: src/playlist/Playlist.qml:957 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:858 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Bestand selecteren"
@@ -1067,28 +1068,28 @@ msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Nieuwe regel toevoegen"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:743
+#: src/playlist/PlaylistAdvancedSortWindow.qml:744
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
 msgstr "Eigenschap is verborgen indien leeg of niet uniek."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:745
+#: src/playlist/PlaylistAdvancedSortWindow.qml:746
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
 "Eigenschap wordt getoond, indien leeg zal er een plaatshouder worden getoond."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:750
+#: src/playlist/PlaylistAdvancedSortWindow.qml:751
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Oplopend sorteren"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:752
+#: src/playlist/PlaylistAdvancedSortWindow.qml:753
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Aflopend sorteren"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:754
+#: src/playlist/PlaylistAdvancedSortWindow.qml:755
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Hetzelfde als de primaire sorteervolgorde"
@@ -1345,7 +1346,12 @@ msgctxt "@title:group"
 msgid "Square"
 msgstr "Vierkant"
 
-#: src/playlist/PlaylistTabDelegate.qml:160
+#: src/playlist/PlaylistTabBar.qml:76
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: src/playlist/PlaylistTabDelegate.qml:161
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Standaard"
@@ -1407,42 +1413,42 @@ msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoomen: 0"
 
-#: src/qml/Actions.qml:415 src/qml/Actions.qml:421
+#: src/qml/Actions.qml:414 src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Contrast: %1"
 
-#: src/qml/Actions.qml:426
+#: src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Contrast: 0"
 
-#: src/qml/Actions.qml:432 src/qml/Actions.qml:438
+#: src/qml/Actions.qml:431 src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Helderheid: %1"
 
-#: src/qml/Actions.qml:443
+#: src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Helderheid: 0"
 
-#: src/qml/Actions.qml:449 src/qml/Actions.qml:455
+#: src/qml/Actions.qml:448 src/qml/Actions.qml:454
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:460
+#: src/qml/Actions.qml:459
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:466 src/qml/Actions.qml:472
+#: src/qml/Actions.qml:465 src/qml/Actions.qml:471
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Verzadiging: %1"
 
-#: src/qml/Actions.qml:477
+#: src/qml/Actions.qml:476
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Verzadiging: 0"
@@ -1611,17 +1617,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:443
+#: src/qml/Main.qml:447
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Bestand selecteren"
 
-#: src/qml/Main.qml:463
+#: src/qml/Main.qml:467
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Bestand met ondertitels selecteren"
 
-#: src/qml/Main.qml:490
+#: src/qml/Main.qml:494
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Openen"
@@ -1646,7 +1652,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Recente bestanden"
 
-#: src/qml/Menus/FileMenu.qml:64 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:72
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Lijst wissen"
@@ -1786,22 +1792,17 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Afspeelsnelheid"
 
-#: src/qml/MpvVideo.qml:54
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Volume: %1"
-
-#: src/qml/MpvVideo.qml:258
+#: src/qml/MpvVideo.qml:249
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
 msgstr "Aan afspeellijst toevoegen"
 
-#: src/qml/MpvVideo.qml:307
+#: src/qml/MpvVideo.qml:298
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Nu afspelen"
 
-#: src/qml/MpvVideo.qml:393
+#: src/qml/MpvVideo.qml:384
 msgctxt "@label:title"
 msgid "Loading…"
 msgstr "Bezig met laden…"
@@ -1905,17 +1906,17 @@ msgstr ""
 "metagegevens afspeelversterking heeft<br>Als dit in effect is worden andere "
 "afspeelversterkingsinstellingen genegeerd."
 
-#: src/qml/Settings/CustomCommandsSettings.qml:41
+#: src/qml/Settings/CustomCommandsSettings.qml:52
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Nog geen aangepaste commando's"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:43
+#: src/qml/Settings/CustomCommandsSettings.qml:54
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "Commando &toevoegen"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:94
+#: src/qml/Settings/CustomCommandsSettings.qml:103
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
@@ -1924,7 +1925,7 @@ msgstr ""
 "Geactiveerd: eigenschap zal ingesteld worden bij opstarten\n"
 "Niet geactiveerd: eigenschap zal niet ingesteld worden bij opstarten"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:174
+#: src/qml/Settings/CustomCommandsSettings.qml:185
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Toevoegen"
@@ -1973,12 +1974,12 @@ msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Map openen waarin het zich bevindt"
 
-#: src/qml/Settings/EditCustomCommand.qml:42
+#: src/qml/Settings/EditCustomCommand.qml:52
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Commando"
 
-#: src/qml/Settings/EditCustomCommand.qml:58
+#: src/qml/Settings/EditCustomCommand.qml:68
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -2004,17 +2005,17 @@ msgstr ""
 "<strong>add volume -15</strong>.<br><strong>cycle</strong>: loop door de "
 "waarden van een eigenschap <strong>cycle aid up</strong>."
 
-#: src/qml/Settings/EditCustomCommand.qml:75
+#: src/qml/Settings/EditCustomCommand.qml:85
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "OSD-bericht"
 
-#: src/qml/Settings/EditCustomCommand.qml:85
+#: src/qml/Settings/EditCustomCommand.qml:95
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
 msgstr "Bestandsnaam: %1"
 
-#: src/qml/Settings/EditCustomCommand.qml:91
+#: src/qml/Settings/EditCustomCommand.qml:101
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -2025,17 +2026,17 @@ msgstr ""
 "<br>${property_name} gebruiken om de waarde van een eigenschap te tonen "
 "<strong>Volume: ${volume}</strong>"
 
-#: src/qml/Settings/EditCustomCommand.qml:100
+#: src/qml/Settings/EditCustomCommand.qml:110
 msgctxt "@label"
 msgid "Type"
 msgstr "Type"
 
-#: src/qml/Settings/EditCustomCommand.qml:121
+#: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "Sneltoets"
 
-#: src/qml/Settings/EditCustomCommand.qml:122
+#: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
@@ -2044,27 +2045,27 @@ msgstr ""
 "Het commando zal gestart worden met een sneltoets. De sneltoets kan "
 "ingesteld worden na opslaan."
 
-#: src/qml/Settings/EditCustomCommand.qml:131
+#: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "Bij opstarten uitvoeren"
 
-#: src/qml/Settings/EditCustomCommand.qml:132
+#: src/qml/Settings/EditCustomCommand.qml:142
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr "Het commando zal uitgevoerd worden bij opstarten van de toepassing."
 
-#: src/qml/Settings/EditCustomCommand.qml:144
+#: src/qml/Settings/EditCustomCommand.qml:154
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: src/qml/Settings/EditCustomCommand.qml:160
+#: src/qml/Settings/EditCustomCommand.qml:169
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/qml/Settings/EditCustomCommand.qml:168
+#: src/qml/Settings/EditCustomCommand.qml:176
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "Op&slaan"
@@ -2885,12 +2886,12 @@ msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Aangepaste commando's"
 
-#: src/qml/Settings/SettingsWindow.qml:172
+#: src/qml/Settings/SettingsWindow.qml:178
 msgctxt "@action"
 msgid "Debug"
 msgstr "Debuggen"
 
-#: src/qml/Settings/SettingsWindow.qml:182
+#: src/qml/Settings/SettingsWindow.qml:188
 msgctxt "@action"
 msgid "About"
 msgstr "Info over"

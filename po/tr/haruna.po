@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:43+0000\n"
+"POT-Creation-Date: 2026-05-21 00:43+0000\n"
 "PO-Revision-Date: 2026-05-19 13:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -647,56 +647,62 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Oynatılamadı: %1"
 
-#: src/mpv/mpvitem.cpp:535
+#: src/mpv/mpvitem.cpp:504
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Volume: %1"
+msgstr "Ses düzeyi: %1"
+
+#: src/mpv/mpvitem.cpp:537
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Altyazı zamanlaması: +%1 saniye"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Altyazı zamanlaması: %1 saniye"
 
-#: src/mpv/mpvitem.cpp:576
+#: src/mpv/mpvitem.cpp:578
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Dosya yok: %1"
 
-#: src/mpv/mpvitem.cpp:608
+#: src/mpv/mpvitem.cpp:610
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:621
+#: src/mpv/mpvitem.cpp:623
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Yok"
 
-#: src/mpv/mpvitem.cpp:670
+#: src/mpv/mpvitem.cpp:672
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekran görüntüsü alınamadı"
 
-#: src/mpv/mpvitem.cpp:675
+#: src/mpv/mpvitem.cpp:677
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekran görüntüsü alındı"
 
-#: src/mpv/mpvitem.cpp:677
+#: src/mpv/mpvitem.cpp:679
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekran görüntüsü: %1"
 
-#: src/mpv/mpvitem.cpp:705
+#: src/mpv/mpvitem.cpp:707
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -706,13 +712,13 @@ msgstr ""
 "Algılanan video parçası yok; büyük olasılıkla parça eksik kod çözücüler "
 "nedeniyle oynatılamıyor."
 
-#: src/mpv/mpvitem.cpp:738
+#: src/mpv/mpvitem.cpp:740
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Fasıl atlandı: %1"
 
-#: src/mpv/mpvitem.cpp:856
+#: src/mpv/mpvitem.cpp:858
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -720,13 +726,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Ses: %1 %2"
 
-#: src/mpv/mpvitem.cpp:867
+#: src/mpv/mpvitem.cpp:869
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Altyazı: Yok"
 
-#: src/mpv/mpvitem.cpp:872 src/mpv/mpvitem.cpp:888
+#: src/mpv/mpvitem.cpp:874 src/mpv/mpvitem.cpp:890
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -734,7 +740,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Altyazı: %1 %2"
 
-#: src/mpv/mpvitem.cpp:883
+#: src/mpv/mpvitem.cpp:885
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -870,27 +876,17 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "Farklı Kaydet"
 
-#: src/playlist/Playlist.qml:432
+#: src/playlist/Playlist.qml:397
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Yeni oynatma listesi ekle"
 
-#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:829
-msgctxt "@action:inmenu"
-msgid "Rename"
-msgstr "Yeniden Adlandır"
-
-#: src/playlist/Playlist.qml:453
-msgctxt "@action:inmenu"
-msgid "Remove"
-msgstr "Kaldır"
-
-#: src/playlist/Playlist.qml:509 src/playlist/Playlist.qml:530
+#: src/playlist/Playlist.qml:410 src/playlist/Playlist.qml:431
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Ekle"
 
-#: src/playlist/Playlist.qml:512 src/qml/Main.qml:493
+#: src/playlist/Playlist.qml:413 src/qml/Main.qml:497
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -899,87 +895,92 @@ msgstr ""
 "Ne <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> ne de <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> bulunamadı."
 
-#: src/playlist/Playlist.qml:529
+#: src/playlist/Playlist.qml:430
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "Oynatma listesi adı"
 
-#: src/playlist/Playlist.qml:741
+#: src/playlist/Playlist.qml:642
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "İçeren Klasörü Aç"
 
-#: src/playlist/Playlist.qml:747
+#: src/playlist/Playlist.qml:648
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Tarayıcıda Aç"
 
-#: src/playlist/Playlist.qml:756
+#: src/playlist/Playlist.qml:657
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr "Küçük Görsel Üretecinde Aç"
 
-#: src/playlist/Playlist.qml:772
+#: src/playlist/Playlist.qml:673
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "%1 İçinde Aç"
 
-#: src/playlist/Playlist.qml:786
+#: src/playlist/Playlist.qml:687
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Adı Kopyala"
 
-#: src/playlist/Playlist.qml:792
+#: src/playlist/Playlist.qml:693
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Yolu Kopyala"
 
-#: src/playlist/Playlist.qml:793
+#: src/playlist/Playlist.qml:694
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL’yi Kopyala"
 
-#: src/playlist/Playlist.qml:803
+#: src/playlist/Playlist.qml:704
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Tümünü Seç"
 
-#: src/playlist/Playlist.qml:807
+#: src/playlist/Playlist.qml:708
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Tümünün Seçimini Kaldır"
 
-#: src/playlist/Playlist.qml:811
+#: src/playlist/Playlist.qml:712
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Seçimi Ters Çevir"
 
-#: src/playlist/Playlist.qml:817
+#: src/playlist/Playlist.qml:718
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Oynatma Listesinden Kaldır"
 
-#: src/playlist/Playlist.qml:823
+#: src/playlist/Playlist.qml:724
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Seçiliyi Oynatma Listesinden Kaldır"
 
-#: src/playlist/Playlist.qml:835
+#: src/playlist/Playlist.qml:730 src/playlist/PlaylistTabBar.qml:70
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "Yeniden Adlandır"
+
+#: src/playlist/Playlist.qml:736
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Oynatılan Ögeye Sar"
 
-#: src/playlist/Playlist.qml:845
+#: src/playlist/Playlist.qml:746
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Dosyayı Çöp Kutusuna Taşı"
 
-#: src/playlist/Playlist.qml:851
+#: src/playlist/Playlist.qml:752
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Seçili Dosyaları Çöp Kutusuna Taşı"
 
-#: src/playlist/Playlist.qml:957 src/qml/Settings/VideoSettings.qml:69
+#: src/playlist/Playlist.qml:858 src/qml/Settings/VideoSettings.qml:69
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Dosya Seç"
@@ -1067,27 +1068,27 @@ msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Yeni Satır Ekle"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:743
+#: src/playlist/PlaylistAdvancedSortWindow.qml:744
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
 msgstr "Özellik, boş veya benzersiz değilse gizlenir."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:745
+#: src/playlist/PlaylistAdvancedSortWindow.qml:746
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr "Özellik gösterilir; boşsa bir yer tutucu koyulur."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:750
+#: src/playlist/PlaylistAdvancedSortWindow.qml:751
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Artan biçimde sırala"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:752
+#: src/playlist/PlaylistAdvancedSortWindow.qml:753
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Azalan biçimde sırala"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:754
+#: src/playlist/PlaylistAdvancedSortWindow.qml:755
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Ana sıralama düzeniyle aynı"
@@ -1344,7 +1345,12 @@ msgctxt "@title:group"
 msgid "Square"
 msgstr "Kare"
 
-#: src/playlist/PlaylistTabDelegate.qml:160
+#: src/playlist/PlaylistTabBar.qml:76
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr "Kaldır"
+
+#: src/playlist/PlaylistTabDelegate.qml:161
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Öntanımlı"
@@ -1406,42 +1412,42 @@ msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Yakınlaştırma: 0"
 
-#: src/qml/Actions.qml:415 src/qml/Actions.qml:421
+#: src/qml/Actions.qml:414 src/qml/Actions.qml:420
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Karşıtlık: %1"
 
-#: src/qml/Actions.qml:426
+#: src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Karşıtlık: 0"
 
-#: src/qml/Actions.qml:432 src/qml/Actions.qml:438
+#: src/qml/Actions.qml:431 src/qml/Actions.qml:437
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Parlaklık: %1"
 
-#: src/qml/Actions.qml:443
+#: src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Parlaklık: 0"
 
-#: src/qml/Actions.qml:449 src/qml/Actions.qml:455
+#: src/qml/Actions.qml:448 src/qml/Actions.qml:454
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:460
+#: src/qml/Actions.qml:459
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:466 src/qml/Actions.qml:472
+#: src/qml/Actions.qml:465 src/qml/Actions.qml:471
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Doygunluk: %1"
 
-#: src/qml/Actions.qml:477
+#: src/qml/Actions.qml:476
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Doygunluk: 0"
@@ -1609,17 +1615,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:443
+#: src/qml/Main.qml:447
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Dosya Seç"
 
-#: src/qml/Main.qml:463
+#: src/qml/Main.qml:467
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Altyazı Dosyası Seç"
 
-#: src/qml/Main.qml:490
+#: src/qml/Main.qml:494
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aç"
@@ -1644,7 +1650,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Son Kullanılan Dosyalar"
 
-#: src/qml/Menus/FileMenu.qml:64 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:72
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Listeyi Temizle"
@@ -1784,22 +1790,17 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Oynatma Hızı"
 
-#: src/qml/MpvVideo.qml:54
-msgctxt "@info:tooltip"
-msgid "Volume: %1"
-msgstr "Ses düzeyi: %1"
-
-#: src/qml/MpvVideo.qml:258
+#: src/qml/MpvVideo.qml:249
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
 msgstr "Oynatma listesine ekle"
 
-#: src/qml/MpvVideo.qml:307
+#: src/qml/MpvVideo.qml:298
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Şimdi oynat"
 
-#: src/qml/MpvVideo.qml:393
+#: src/qml/MpvVideo.qml:384
 msgctxt "@label:title"
 msgid "Loading…"
 msgstr "Yükleniyor…"
@@ -1900,17 +1901,17 @@ msgstr ""
 "dışıysa<br>- ses düzeyi dengesi ayarı etkinse ve dosyanın denge üst verisi "
 "yoksa etkili olur<br>Bu etkinse diğer denge ayarları yok sayılır."
 
-#: src/qml/Settings/CustomCommandsSettings.qml:41
+#: src/qml/Settings/CustomCommandsSettings.qml:52
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "Henüz eklenmiş özel bir komut yok"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:43
+#: src/qml/Settings/CustomCommandsSettings.qml:54
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "&Komut Ekle"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:94
+#: src/qml/Settings/CustomCommandsSettings.qml:103
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
@@ -1919,7 +1920,7 @@ msgstr ""
 "İşaretli: Özellik başlangıçta ayarlanacak\n"
 "İşaretsiz: Özellik başlangıçta ayarlanmayacak"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:174
+#: src/qml/Settings/CustomCommandsSettings.qml:185
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Ekle"
@@ -1968,12 +1969,12 @@ msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "İçeren klasörü aç"
 
-#: src/qml/Settings/EditCustomCommand.qml:42
+#: src/qml/Settings/EditCustomCommand.qml:52
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "Komut"
 
-#: src/qml/Settings/EditCustomCommand.qml:58
+#: src/qml/Settings/EditCustomCommand.qml:68
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -2000,17 +2001,17 @@ msgstr ""
 "strong>: Bir özelliğin değerleri arasında gezinin; örneğin, <strong>cycle "
 "aid up</strong>."
 
-#: src/qml/Settings/EditCustomCommand.qml:75
+#: src/qml/Settings/EditCustomCommand.qml:85
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "Ekran Üzeri İleti"
 
-#: src/qml/Settings/EditCustomCommand.qml:85
+#: src/qml/Settings/EditCustomCommand.qml:95
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
 msgstr "Dosya adı: %1"
 
-#: src/qml/Settings/EditCustomCommand.qml:91
+#: src/qml/Settings/EditCustomCommand.qml:101
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -2021,17 +2022,17 @@ msgstr ""
 "Görüntü iletisi.<br>Bir özelliğin değerini görüntülemek için "
 "${property_name} kullanın: <strong>Ses düzeyi: ${volume}</strong>"
 
-#: src/qml/Settings/EditCustomCommand.qml:100
+#: src/qml/Settings/EditCustomCommand.qml:110
 msgctxt "@label"
 msgid "Type"
 msgstr "Tür"
 
-#: src/qml/Settings/EditCustomCommand.qml:121
+#: src/qml/Settings/EditCustomCommand.qml:131
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "Klavye kısayolu"
 
-#: src/qml/Settings/EditCustomCommand.qml:122
+#: src/qml/Settings/EditCustomCommand.qml:132
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
@@ -2040,27 +2041,27 @@ msgstr ""
 "Komut bir kısayolla tetiklenecektir. Kısayol kaydettikten sonra "
 "ayarlanabilir."
 
-#: src/qml/Settings/EditCustomCommand.qml:131
+#: src/qml/Settings/EditCustomCommand.qml:141
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "Başlangıçta çalıştır"
 
-#: src/qml/Settings/EditCustomCommand.qml:132
+#: src/qml/Settings/EditCustomCommand.qml:142
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr "Komut, uygulama başlangıcında çalıştırılacaktır."
 
-#: src/qml/Settings/EditCustomCommand.qml:144
+#: src/qml/Settings/EditCustomCommand.qml:154
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "Sil"
 
-#: src/qml/Settings/EditCustomCommand.qml:160
+#: src/qml/Settings/EditCustomCommand.qml:169
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "İptal"
 
-#: src/qml/Settings/EditCustomCommand.qml:168
+#: src/qml/Settings/EditCustomCommand.qml:176
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&Kaydet"
@@ -2872,12 +2873,12 @@ msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Özel Komutlar"
 
-#: src/qml/Settings/SettingsWindow.qml:172
+#: src/qml/Settings/SettingsWindow.qml:178
 msgctxt "@action"
 msgid "Debug"
 msgstr "Hata Ayıkla"
 
-#: src/qml/Settings/SettingsWindow.qml:182
+#: src/qml/Settings/SettingsWindow.qml:188
 msgctxt "@action"
 msgid "About"
 msgstr "Hakkında"
