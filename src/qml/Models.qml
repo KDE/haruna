@@ -19,5 +19,9 @@ QtObject {
         sourceModel: root.actionsModel
     }
     property MouseActionsModel mouseActionsModel: MouseActionsModel {}
+    property CustomCommandsModel customCommandsModel: CustomCommandsModel {
+        appActionsModel: root.actionsModel
+        Component.onCompleted: init()
+    }
 
 }

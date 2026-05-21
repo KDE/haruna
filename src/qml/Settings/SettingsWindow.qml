@@ -18,7 +18,6 @@ Loader {
     id: root
 
     required property MpvVideo m_mpv
-    required property CustomCommandsModel m_customCommandsModel
 
     property int activePage: SettingsWindow.Page.General
 
@@ -160,8 +159,7 @@ Loader {
                         onTriggered: {
                             const props = {
                                 m_mpv: root.m_mpv,
-                                m_settingsWindow: settingsWindow,
-                                m_customCommandsModel: root.m_customCommandsModel
+                                m_settingsWindow: settingsWindow
                             }
 
                             root.activePage = SettingsWindow.Page.CustomCommands

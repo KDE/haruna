@@ -318,13 +318,6 @@ ApplicationWindow {
         onOpenSubtitleDialog: subtitlesFileDialog.open()
     }
 
-    CustomCommandsModel {
-        id: customCommandsModel
-
-        appActionsModel: Models.actionsModel
-        Component.onCompleted: init()
-    }
-
     RowLayout {
         width: window.width * 0.8 > Kirigami.Units.gridUnit * 50
                ? Kirigami.Units.gridUnit * 50
@@ -359,7 +352,6 @@ ApplicationWindow {
         id: settingsLoader
 
         m_mpv: mpv
-        m_customCommandsModel: customCommandsModel
     }
 
     Loader {

@@ -19,7 +19,6 @@ SettingsBasePage {
 
     required property MpvVideo m_mpv
     required property Kirigami.ApplicationWindow m_settingsWindow
-    required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
 
@@ -27,7 +26,6 @@ SettingsBasePage {
         const props = {
             m_mpv: root.m_mpv,
             m_settingsWindow: root.m_settingsWindow,
-            m_customCommandsModel: root.m_customCommandsModel
         }
         root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, props)
     }
@@ -36,7 +34,7 @@ SettingsBasePage {
         id: customCommandsView
 
         reuseItems: true
-        model: root.m_customCommandsModel
+        model: Models.customCommandsModel
         delegate: customCommandDelegate
 
         displaced: Transition {
@@ -87,8 +85,8 @@ SettingsBasePage {
                         listItem: customCommandItem
                         listView: customCommandsView
                         onMoveRequested: function (sourceRow, destinationRow) {
-                            const modelIndex = root.m_customCommandsModel.index(sourceRow, 0).parent
-                            root.m_customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
+                            const modelIndex = Models.customCommandsModel.index(sourceRow, 0).parent
+                            Models.customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
                         }
                     }
 
@@ -96,7 +94,7 @@ SettingsBasePage {
                         visible: delegate.type === "startup"
                         checked: delegate.setOnStartup
                         onClicked: {
-                            root.m_customCommandsModel.toggleCustomCommand(delegate.commandId, delegate.index, checked)
+                            Models.customCommandsModel.toggleCustomCommand(delegate.commandId, delegate.index, checked)
                         }
 
                         ToolTip {
@@ -157,7 +155,6 @@ SettingsBasePage {
                             const properties = {
                                 m_mpv: root.m_mpv,
                                 m_settingsWindow: root.m_settingsWindow,
-                                m_customCommandsModel: root.m_customCommandsModel,
                                 command: delegate.command,
                                 osdMessage: delegate.osdMessage,
                                 type: delegate.type,

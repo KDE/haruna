@@ -16,7 +16,6 @@ SettingsBasePage {
 
     required property MpvVideo m_mpv
     required property Kirigami.ApplicationWindow m_settingsWindow
-    required property CustomCommandsModel m_customCommandsModel
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
     property string command: ""
@@ -34,8 +33,7 @@ SettingsBasePage {
     function loadCustomCommandsPage() : void {
         const props = {
             m_mpv: root.m_mpv,
-            m_settingsWindow: root.m_settingsWindow,
-            m_customCommandsModel: root.m_customCommandsModel
+            m_settingsWindow: root.m_settingsWindow
         }
         root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`, props)
     }
@@ -155,7 +153,7 @@ SettingsBasePage {
                 icon.name: "delete"
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
-                    root.m_customCommandsModel.deleteCustomCommand(root.commandId, root.index)
+                    Models.customCommandsModel.deleteCustomCommand(root.commandId, root.index)
                     root.loadCustomCommandsPage()
                 }
             }
@@ -193,13 +191,13 @@ SettingsBasePage {
                     switch (root.mode) {
                     case EditCustomCommand.Mode.Create:
                         // save new command to config file
-                        root.m_customCommandsModel.saveCustomCommand(commandTextField.text,
+                        Models.customCommandsModel.saveCustomCommand(commandTextField.text,
                                                               osdMessageTextField.text,
                                                               optionName)
                         break
                     case EditCustomCommand.Mode.Edit:
                         // update existing command
-                        root.m_customCommandsModel.editCustomCommand(root.index,
+                        Models.customCommandsModel.editCustomCommand(root.index,
                                                               commandTextField.text,
                                                               osdMessageTextField.text,
                                                               optionName)
