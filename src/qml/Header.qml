@@ -18,7 +18,6 @@ ToolBar {
 
     required property MpvVideo m_mpv
     required property MenuBarLoader m_menuBarLoader
-    required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
 
     property bool isSmallSize: width < 600
@@ -46,7 +45,6 @@ ToolBar {
 
         HamburgerMenu {
             m_mpv: root.m_mpv
-            m_recentFilesModel: root.m_recentFilesModel
             m_settingsLoader: root.m_settingsLoader
             m_menuBarLoader: root.m_menuBarLoader
 

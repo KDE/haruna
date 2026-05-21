@@ -16,7 +16,6 @@ ToolButton {
     id: root
 
     required property MpvVideo m_mpv
-    required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
     required property MenuBarLoader m_menuBarLoader
 
@@ -65,7 +64,7 @@ ToolButton {
                 title: i18nc("@action:inmenu", "Recent Files")
 
                 Repeater {
-                    model: root.m_recentFilesModel
+                    model: Models.recentFilesModel
                     delegate: MenuItem {
                         id: delegate
 
@@ -131,9 +130,7 @@ ToolButton {
             Menu {
                 title: i18nc("@action:inmenu", "&More")
 
-                FileMenu {
-                    m_recentFilesModel: root.m_recentFilesModel
-                }
+                FileMenu {}
                 ViewMenu {}
                 PlaybackMenu {}
                 VideoMenu {}

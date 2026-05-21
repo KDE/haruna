@@ -20,7 +20,6 @@ Loader {
     id: root
 
     required property MpvVideo m_mpv
-    required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
 
     property bool isShowAnimationRunning: false
@@ -52,9 +51,7 @@ Loader {
             hoverEnabled: true
             Kirigami.Theme.colorSet: Kirigami.Theme.Header
 
-            FileMenu {
-                m_recentFilesModel: root.m_recentFilesModel
-            }
+            FileMenu {}
             ViewMenu {}
             PlaybackMenu {}
             VideoMenu {}
@@ -75,9 +72,7 @@ Loader {
         id: globalMenuBarComponent
 
         Platform.MenuBar {
-            GlobalFileMenu {
-                m_recentFilesModel: root.m_recentFilesModel
-            }
+            GlobalFileMenu {}
             GlobalViewMenu {}
             GlobalPlaybackMenu {}
             GlobalVideoMenu {}

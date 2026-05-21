@@ -20,7 +20,6 @@ Item {
     required property MpvVideo m_mpv
     required property MenuBarLoader m_menuBarLoader
     required property Header m_header
-    required property RecentFilesModel m_recentFilesModel
     required property Loader m_settingsLoader
 
     property alias progressBar: progressBar
@@ -115,7 +114,6 @@ Item {
                     id: hamburgerMenu
 
                     m_mpv: root.m_mpv
-                    m_recentFilesModel: root.m_recentFilesModel
                     m_settingsLoader: root.m_settingsLoader
                     m_menuBarLoader: root.m_menuBarLoader
 

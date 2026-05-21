@@ -11,5 +11,5 @@ import QtQuick
 import org.kde.haruna
 
 QtObject {
-
+    property RecentFilesModel recentFilesModel: RecentFilesModel {}
 }

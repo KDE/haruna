@@ -15,8 +15,6 @@ import org.kde.haruna.settings
 Menu {
     id: root
 
-    required property RecentFilesModel m_recentFilesModel
-
     title: i18nc("@title:menu", "&File")
 
     MenuItem { action: HarunaApp.actions.openFileAction }
@@ -32,7 +30,7 @@ Menu {
         title: i18nc("@title:menu", "Recent Files")
 
         Instantiator {
-            model: root.m_recentFilesModel
+            model: Models.recentFilesModel
             asynchronous: true
             delegate: MenuItem {
                 id: delegate
@@ -63,7 +61,7 @@ Menu {
         MenuSeparator {}
         MenuItem {
             text: i18nc("@action:inmenu", "Clear List")
-            onClicked: root.m_recentFilesModel.deleteEntries()
+            onClicked: Models.recentFilesModel.deleteEntries()
         }
     }
 

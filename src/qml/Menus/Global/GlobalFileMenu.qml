@@ -14,8 +14,6 @@ import org.kde.haruna
 Labs.Menu {
     id: root
 
-    required property RecentFilesModel m_recentFilesModel
-
     title: i18nc("@title:menu", "&File")
 
     Labs.MenuItem {
@@ -40,7 +38,7 @@ Labs.Menu {
         id: recentFilesMenu
 
         title: i18nc("@title:menu", "Recent Files")
-        onAboutToShow: recentFilesInstantiator.model = root.m_recentFilesModel
+        onAboutToShow: recentFilesInstantiator.model = Models.recentFilesModel
 
         Instantiator {
             id: recentFilesInstantiator
@@ -70,7 +68,7 @@ Labs.Menu {
         Labs.MenuSeparator {}
         Labs.MenuItem {
             text: i18nc("@action:inmenu", "Clear List")
-            onTriggered: root.m_recentFilesModel.deleteEntries()
+            onTriggered: Models.recentFilesModel.deleteEntries()
         }
     }
 

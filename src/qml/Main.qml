@@ -73,7 +73,6 @@ ApplicationWindow {
 
         m_mpv: mpv
         m_menuBarLoader: menuBarLoader
-        m_recentFilesModel: recentFilesModel
         m_settingsLoader: settingsLoader
     }
 
@@ -81,7 +80,6 @@ ApplicationWindow {
         id: menuBarLoader
 
         m_mpv: mpv
-        m_recentFilesModel: recentFilesModel
         m_settingsLoader: settingsLoader
     }
 
@@ -91,7 +89,7 @@ ApplicationWindow {
             osd.message("Test osd font size")
         }
         function onMaxRecentFilesChanged() {
-            recentFilesModel.getItems()
+            Models.recentFilesModel.getItems()
         }
         function onResizeWindowToVideoChanged() {
             window.resizeWindow()
@@ -220,7 +218,7 @@ ApplicationWindow {
         }
 
         onAddToRecentFiles: function(url, openedFrom, name) {
-            recentFilesModel.addRecentFile(url, openedFrom, name)
+            Models.recentFilesModel.addRecentFile(url, openedFrom, name)
         }
 
         onOsdMessage: function(text) {
@@ -304,7 +302,6 @@ ApplicationWindow {
         m_mpv: mpv
         m_menuBarLoader: menuBarLoader
         m_header: header
-        m_recentFilesModel: recentFilesModel
         m_settingsLoader: settingsLoader
     }
 
@@ -343,10 +340,6 @@ ApplicationWindow {
 
         appActionsModel: actionsModel
         Component.onCompleted: init()
-    }
-
-    RecentFilesModel {
-        id: recentFilesModel
     }
 
     RowLayout {
@@ -516,7 +509,7 @@ ApplicationWindow {
     }
 
     function openFile(path: string, openedFrom: int) : void {
-        recentFilesModel.addRecentFile(path, openedFrom)
+        Models.recentFilesModel.addRecentFile(path, openedFrom)
         mpv.defaultFilterProxyModel.addItem(path, PlaylistModel.Clear)
     }
 
