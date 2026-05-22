@@ -20,7 +20,7 @@ Loader {
     id: root
 
     required property MpvVideo m_mpv
-    required property Loader m_settingsLoader
+    required property SettingsWindow m_settingsLoader
 
     property bool isShowAnimationRunning: false
     property bool showGlobalMenu: SystemUtils.platformName() !== "windows"
