@@ -8,6 +8,8 @@ import QtQml
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Menu {
@@ -15,7 +17,7 @@ Menu {
 
     required property MpvVideo m_mpv
 
-    title: i18nc("@title:menu", "&Audio")
+    title: KI18n.i18nc("@title:menu", "&Audio")
 
     AudioTracksMenu {
         id: audioMenu
@@ -23,7 +25,7 @@ Menu {
         m_mpv: root.m_mpv
 
         y: parent.height
-        title: i18nc("@title:menu", "&Track")
+        title: KI18n.i18nc("@title:menu", "&Track")
     }
 
     MenuSeparator {}

@@ -7,12 +7,14 @@
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Menu {
     id: root
 
-    title: i18nc("@title:menu", "&View")
+    title: KI18n.i18nc("@title:menu", "&View")
 
     MenuItem { action: HarunaApp.actions.toggleFullscreenAction }
 
@@ -21,9 +23,9 @@ Menu {
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.menuBar.visible) {
-                return i18nc("@action:inmenu", "Hide Menubar")
+                return KI18n.i18nc("@action:inmenu", "Hide Menubar")
             } else {
-                return i18nc("@action:inmenu", "Show Menubar")
+                return KI18n.i18nc("@action:inmenu", "Show Menubar")
             }
         }
     }
@@ -32,9 +34,9 @@ Menu {
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.header.visible) {
-                return i18nc("@action:inmenu", "Hide Toolbar")
+                return KI18n.i18nc("@action:inmenu", "Hide Toolbar")
             } else {
-                return i18nc("@action:inmenu", "Show Toolbar")
+                return KI18n.i18nc("@action:inmenu", "Show Toolbar")
             }
         }
     }

@@ -10,7 +10,9 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import QtQuick.Dialogs
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -25,7 +27,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: i18nc("@label:listbox", "Default cover")
+            text: KI18n.i18nc("@label:listbox", "Default cover")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -34,7 +36,7 @@ SettingsBasePage {
                 id: defaultCover
 
                 text: VideoSettings.defaultCover
-                placeholderText: i18nc("placeholder text", "path to image")
+                placeholderText: KI18n.i18nc("placeholder text", "path to image")
                 Layout.fillWidth: true
                 onEditingFinished: save()
 
@@ -46,7 +48,7 @@ SettingsBasePage {
                 }
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Used for music files that don’t have a video track, "
+                    text: KI18n.i18nc("@info:tooltip", "Used for music files that don’t have a video track, "
                                 + "an embedded cover image or a cover/folder image "
                                 + "in the same folder as the played file.")
                 }
@@ -66,7 +68,7 @@ SettingsBasePage {
                 id: fileDialog
 
                 currentFolder: StandardPaths.writableLocation(StandardPaths.PicturesLocation)
-                title: i18nc("@title:window", "Select file")
+                title: KI18n.i18nc("@title:window", "Select file")
                 fileMode: FileDialog.OpenFile
 
                 onAccepted: {
@@ -80,7 +82,7 @@ SettingsBasePage {
         }
 
         SettingsHeader {
-            text: i18nc("@title", "Screenshots")
+            text: KI18n.i18nc("@title", "Screenshots")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -89,7 +91,7 @@ SettingsBasePage {
         // Screenshot Format
         // ------------------------------------
         Label {
-            text: i18nc("@label:listbox", "Format")
+            text: KI18n.i18nc("@label:listbox", "Format")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -128,7 +130,7 @@ SettingsBasePage {
         // Screenshot template
         // ------------------------------------
         Label {
-            text: i18nc("@label:textbox", "Template")
+            text: KI18n.i18nc("@label:textbox", "Template")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -156,7 +158,7 @@ SettingsBasePage {
             ToolTipButton {
                 toolTipWidth: 500
                 toolTipHeight: 300
-                toolTipText: i18nc("@info:tooltip",
+                toolTipText: KI18n.i18nc("@info:tooltip",
                                    "Specify the filename template used to save screenshots. The template specifies the " +
                                    "filename without file extension, and can contain format specifiers, which will be " +
                                    "substituted when taking a screenshot. By default, the template is “%F-%n”. <br>" +
@@ -192,7 +194,7 @@ SettingsBasePage {
         }
 
         SettingsHeader {
-            text: i18nc("@title", "Image adjustments")
+            text: KI18n.i18nc("@title", "Image adjustments")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -202,7 +204,7 @@ SettingsBasePage {
         // CONTRAST
         // ------------------------------------
         Label {
-            text: i18nc("@label:slider", "Contrast")
+            text: KI18n.i18nc("@label:slider", "Contrast")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -221,7 +223,7 @@ SettingsBasePage {
         // BRIGHTNESS
         // ------------------------------------
         Label {
-            text: i18nc("@label:slider", "Brightness")
+            text: KI18n.i18nc("@label:slider", "Brightness")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -240,7 +242,7 @@ SettingsBasePage {
         // GAMMA
         // ------------------------------------
         Label {
-            text: i18nc("@label:slider", "Gamma")
+            text: KI18n.i18nc("@label:slider", "Gamma")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -259,7 +261,7 @@ SettingsBasePage {
         // SATURATION
         // ------------------------------------
         Label {
-            text: i18nc("@label:slider", "Saturation")
+            text: KI18n.i18nc("@label:slider", "Saturation")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -275,7 +277,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@info", "Middle click on the sliders to reset them")
+            text: KI18n.i18nc("@info", "Middle click on the sliders to reset them")
             Layout.columnSpan: 2
             Layout.topMargin: Kirigami.Units.largeSpacing
         }

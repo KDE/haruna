@@ -164,6 +164,7 @@ target_link_libraries(haruna PRIVATE
     KF6::CoreAddons
     KF6::FileMetaData
     KF6::I18n
+    KF6::I18nQml
     KF6::IconThemes
     KF6::KIOWidgets
     KF6::Kirigami

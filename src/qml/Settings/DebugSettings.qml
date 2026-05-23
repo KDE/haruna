@@ -9,7 +9,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
@@ -23,7 +25,7 @@ SettingsBasePage {
         id: content
 
         Label {
-            text: i18nc("@label:textbox", "Config file")
+            text: KI18n.i18nc("@label:textbox", "Config file")
         }
 
         ConfigFileField {
@@ -35,7 +37,7 @@ SettingsBasePage {
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
-            text: i18nc("@label:textbox", "Custom commands config file")
+            text: KI18n.i18nc("@label:textbox", "Custom commands config file")
         }
 
         ConfigFileField {
@@ -47,7 +49,7 @@ SettingsBasePage {
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
-            text: i18nc("@label:textbox", "Shortcuts config file")
+            text: KI18n.i18nc("@label:textbox", "Shortcuts config file")
         }
 
         ConfigFileField {
@@ -59,7 +61,7 @@ SettingsBasePage {
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
-            text: i18nc("@label:textbox", "Playlists config file")
+            text: KI18n.i18nc("@label:textbox", "Playlists config file")
         }
 
         ConfigFileField {
@@ -71,7 +73,7 @@ SettingsBasePage {
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         Label {
-            text: i18nc("@info:usagetip", "If fields are empty that means there is no config file/folder (e.g when using the default settings).")
+            text: KI18n.i18nc("@info:usagetip", "If fields are empty that means there is no config file/folder (e.g when using the default settings).")
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             Layout.fillWidth: true
         }
@@ -79,7 +81,7 @@ SettingsBasePage {
         Item { Layout.preferredHeight: Kirigami.Units.largeSpacing }
 
         CheckBox {
-            text: i18nc("@option:check", "Enable mpv logging")
+            text: KI18n.i18nc("@option:check", "Enable mpv logging")
             checked: InformationSettings.mpvLogging
             visible: false
             onClicked: {
@@ -102,7 +104,7 @@ SettingsBasePage {
             Kirigami.Action {
                 icon.name: "document-open"
                 visible: configFileField.text !== ""
-                text: i18nc("@info:tooltip", "Open file")
+                text: KI18n.i18nc("@info:tooltip", "Open file")
                 onTriggered: {
                     const url = PathUtils.pathToUrl(PathUtils.configFilePath(configFileField.configFile))
                     Qt.openUrlExternally(url)
@@ -111,7 +113,7 @@ SettingsBasePage {
             Kirigami.Action {
                 icon.name: "document-open-folder"
                 visible: configFileField.text !== ""
-                text: i18nc("@info:tooltip", "Open containing folder")
+                text: KI18n.i18nc("@info:tooltip", "Open containing folder")
                 onTriggered: {
                     const path = PathUtils.configFilePath(configFileField.configFile)
                     PathUtils.highlightInFileManager(path)

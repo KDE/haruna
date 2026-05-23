@@ -6,12 +6,14 @@
 
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
     id: root
 
-    title: i18nc("@title:menu", "&Help")
+    title: KI18n.i18nc("@title:menu", "&Help")
 
     Labs.MenuItem {
         icon.name: HarunaApp.actions.aboutHarunaAction.icon.name

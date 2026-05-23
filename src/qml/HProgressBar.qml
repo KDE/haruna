@@ -12,7 +12,9 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Shapes
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
@@ -307,7 +309,7 @@ RowLayout {
                     width: parent.width
                     CheckBox {
                         anchors.verticalCenter: parent.verticalCenter
-                        text: i18nc("@action:inmenu", "Skip Chapters")
+                        text: KI18n.i18nc("@action:inmenu", "Skip Chapters")
                         checked: PlaybackSettings.skipChapters
                         onCheckedChanged: {
                             PlaybackSettings.skipChapters = checked
@@ -315,7 +317,7 @@ RowLayout {
                         }
 
                         ToolTip {
-                            text: i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
+                            text: KI18n.i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
                         }
                     }
                 }

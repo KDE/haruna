@@ -6,12 +6,14 @@
 
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Menu {
     id: root
 
-    title: i18nc("@title:menu", "&Video")
+    title: KI18n.i18nc("@title:menu", "&Video")
 
     MenuItem { action: HarunaApp.actions.toggleDeinterlacingAction }
     MenuItem { action: HarunaApp.actions.zoomInAction }
@@ -26,7 +28,7 @@ Menu {
     MenuItem { action: HarunaApp.actions.videoPanYDownAction }
 
     Menu {
-        title: i18nc("@title:menu", "Adjustments")
+        title: KI18n.i18nc("@title:menu", "Adjustments")
 
         MenuItem { action: HarunaApp.actions.contrastUpAction }
         MenuItem { action: HarunaApp.actions.contrastDownAction }

@@ -10,6 +10,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
@@ -24,7 +25,7 @@ Kirigami.SearchDialog {
         close()
     }
 
-    emptyText: i18nc("@info:placeholder", "No action found.")
+    emptyText: KI18n.i18nc("@info:placeholder", "No action found.")
     model: KItemModels.KSortFilterProxyModel {
         id: sortModel
 

@@ -11,7 +11,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 
 SettingsBasePage {
@@ -46,7 +48,7 @@ SettingsBasePage {
                 required property string i18nButton
                 required property string i18nModifier
                 required property bool isDoubleClick
-                readonly property string doubleClickString: i18nc("@label represents a mouse double click, for example `Right x2`", "x2")
+                readonly property string doubleClickString: KI18n.i18nc("@label represents a mouse double click, for example `Right x2`", "x2")
                 property string dc: delegate.isDoubleClick ? doubleClickString : ""
 
                 width: scrollBar.visible ? ListView.view.width - scrollBar.width : ListView.view.width
@@ -88,7 +90,7 @@ SettingsBasePage {
                             y: parent.height
 
                             MenuItem {
-                                text: i18nc("@label:action change action associated with mouse event", "Change action")
+                                text: KI18n.i18nc("@label:action change action associated with mouse event", "Change action")
                                 icon.name: "edit-entry"
                                 onTriggered: {
                                     const actionHandler = function (actionName) {
@@ -102,7 +104,7 @@ SettingsBasePage {
                             }
 
                             MenuItem {
-                                text: i18nc("@label:action delete mouse event", "Delete")
+                                text: KI18n.i18nc("@label:action delete mouse event", "Delete")
                                 icon.name: "delete"
                                 onTriggered: {
                                     Models.mouseActionsModel.removeAction(delegate.index)
@@ -130,7 +132,7 @@ SettingsBasePage {
             ToolButton {
                 id: addButton
 
-                text: i18nc("@action:intoolbar add a mouse button action", "&Add")
+                text: KI18n.i18nc("@action:intoolbar add a mouse button action", "&Add")
                 icon.name: "list-add"
                 onClicked: {
                     addActionComponent.createObject(root)
@@ -165,7 +167,7 @@ SettingsBasePage {
                 selectActionPopup.open()
             }
 
-            title: i18nc("@title:window", "Add mouse button action")
+            title: KI18n.i18nc("@title:window", "Add mouse button action")
             parent: content
             width: Math.min(parent.width, 400)
             height: Math.min(parent.height, 600)
@@ -178,7 +180,7 @@ SettingsBasePage {
                 width: parent.width
 
                 Label {
-                    text: i18nc("@label:listbox", "Mouse button")
+                    text: KI18n.i18nc("@label:listbox", "Mouse button")
                 }
 
                 ComboBox {
@@ -195,43 +197,43 @@ SettingsBasePage {
                     }
                     Component.onCompleted: {
                         const left = {
-                            text: i18nc("@item:listbox left mouse button", "Left"),
+                            text: KI18n.i18nc("@item:listbox left mouse button", "Left"),
                             value: "Left"
                         }
                         mouseButtonsModel.append(left)
 
                         const middle = {
-                            text: i18nc("@item:listbox middle mouse button", "Middle"),
+                            text: KI18n.i18nc("@item:listbox middle mouse button", "Middle"),
                             value: "Middle"
                         }
                         mouseButtonsModel.append(middle)
 
                         const right = {
-                            text: i18nc("@item:listbox right mouse button", "Right"),
+                            text: KI18n.i18nc("@item:listbox right mouse button", "Right"),
                             value: "Right"
                         }
                         mouseButtonsModel.append(right)
 
                         const forward = {
-                            text: i18nc("@item:listbox forward mouse button", "Forward"),
+                            text: KI18n.i18nc("@item:listbox forward mouse button", "Forward"),
                             value: "Forward"
                         }
                         mouseButtonsModel.append(forward)
 
                         const back = {
-                            text: i18nc("@item:listbox back mouse button", "Back"),
+                            text: KI18n.i18nc("@item:listbox back mouse button", "Back"),
                             value: "Back"
                         }
                         mouseButtonsModel.append(back)
 
                         const scrollUp = {
-                            text: i18nc("@item:listbox mouse scroll up", "Scroll up"),
+                            text: KI18n.i18nc("@item:listbox mouse scroll up", "Scroll up"),
                             value: "ScrollUp"
                         }
                         mouseButtonsModel.append(scrollUp)
 
                         const scrollDown = {
-                            text: i18nc("@item:listbox mouse scroll down", "Scroll down"),
+                            text: KI18n.i18nc("@item:listbox mouse scroll down", "Scroll down"),
                             value: "ScrollDown"
                         }
                         mouseButtonsModel.append(scrollDown)
@@ -240,7 +242,7 @@ SettingsBasePage {
                 }
 
                 Label {
-                    text: i18nc("@label:listbox", "Modifier key")
+                    text: KI18n.i18nc("@label:listbox", "Modifier key")
                 }
 
                 ComboBox {
@@ -258,31 +260,31 @@ SettingsBasePage {
 
                     Component.onCompleted: {
                         const noModifier = {
-                            text: i18nc("@item:listbox no modifier key", "No modifier"),
+                            text: KI18n.i18nc("@item:listbox no modifier key", "No modifier"),
                             value: "NoModifier"
                         }
                         modifiersModel.append(noModifier)
 
                         const control = {
-                            text: i18nc("@item:listbox control modifier key", "Control"),
+                            text: KI18n.i18nc("@item:listbox control modifier key", "Control"),
                             value: "Control"
                         }
                         modifiersModel.append(control)
 
                         const shift = {
-                            text: i18nc("@item:listbox shift modifier key", "Shift"),
+                            text: KI18n.i18nc("@item:listbox shift modifier key", "Shift"),
                             value: "Shift"
                         }
                         modifiersModel.append(shift)
 
                         const alt = {
-                            text: i18nc("@item:listbox alt modifier key", "Alt"),
+                            text: KI18n.i18nc("@item:listbox alt modifier key", "Alt"),
                             value: "Alt"
                         }
                         modifiersModel.append(alt)
 
                         const meta = {
-                            text: i18nc("@item:listbox meta modifier key", "Meta"),
+                            text: KI18n.i18nc("@item:listbox meta modifier key", "Meta"),
                             value: "Meta"
                         }
                         modifiersModel.append(meta)
@@ -293,7 +295,7 @@ SettingsBasePage {
                 CheckBox {
                     id: isDoubleClickCheckBox
 
-                    text: i18nc("@label:check whether mouse button action should trigger on double click",
+                    text: KI18n.i18nc("@label:check whether mouse button action should trigger on double click",
                                 "Trigger on double click")
                     enabled: mouseButtonComboBox.currentIndex < 5
                     onClicked: {
@@ -304,7 +306,7 @@ SettingsBasePage {
 
                 RowLayout {
                     Label {
-                        text: i18nc("@label", "Action")
+                        text: KI18n.i18nc("@label", "Action")
                     }
                 }
 
@@ -312,7 +314,7 @@ SettingsBasePage {
                     Layout.fillWidth: true
 
                     Button {
-                        text: i18nc("@action:button select mouse button action", "Select action")
+                        text: KI18n.i18nc("@action:button select mouse button action", "Select action")
                         visible: !selectedActionLabel.text
                         onClicked: {
                             mouseActionDialog.selectAction()
@@ -328,7 +330,7 @@ SettingsBasePage {
                     }
 
                     Button {
-                        text: i18nc("@action:button", "Change action")
+                        text: KI18n.i18nc("@action:button", "Change action")
                         visible: selectedActionLabel.text
                         onClicked: {
                             mouseActionDialog.selectAction()
@@ -339,7 +341,7 @@ SettingsBasePage {
                 Kirigami.InlineMessage {
                     id: noActionSelectedMessage
 
-                    text: i18nc("@info", "No action selected")
+                    text: KI18n.i18nc("@info", "No action selected")
                     type: Kirigami.MessageType.Warning
                     visible: selectedActionLabel.text === ""
 
@@ -362,7 +364,7 @@ SettingsBasePage {
                         if (actionName === "") {
                             return ""
                         }
-                        return i18nc("@info", "Mouse button combination is already assigned to “%1”",
+                        return KI18n.i18nc("@info", "Mouse button combination is already assigned to “%1”",
                                      HarunaApp.actions[actionName].text)
                     }
                     visible: text !== ""

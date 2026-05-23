@@ -8,7 +8,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -21,7 +23,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: i18nc("@label:textbox", "Preferred language")
+            text: KI18n.i18nc("@label:textbox", "Preferred language")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -47,7 +49,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Preferred track")
+            text: KI18n.i18nc("@label:spinbox", "Preferred track")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -64,7 +66,7 @@ SettingsBasePage {
 
         // Volume Step
         Label {
-            text: i18nc("@label:spinbox", "Volume step")
+            text: KI18n.i18nc("@label:spinbox", "Volume step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -83,13 +85,13 @@ SettingsBasePage {
         // Replay Gain
         // See: https://mpv.io/manual/stable/#options-replaygain
         SettingsHeader {
-            text: i18nc("@title", "Replay gain")
+            text: KI18n.i18nc("@title", "Replay gain")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
 
         Label {
-            text: i18nc("@label:listbox", "Mode")
+            text: KI18n.i18nc("@label:listbox", "Mode")
             Layout.alignment: Qt.AlignRight
         }
         RowLayout {
@@ -101,19 +103,19 @@ SettingsBasePage {
                 }
                 Component.onCompleted: {
                     const noAdjustment = {
-                        text: i18nc("@item:listbox replay gain", "Disabled"),
+                        text: KI18n.i18nc("@item:listbox replay gain", "Disabled"),
                         value: "no"
                     }
                     replayGainModel.append(noAdjustment)
 
                     const track = {
-                        text: i18nc("@item:listbox replay gain", "Track"),
+                        text: KI18n.i18nc("@item:listbox replay gain", "Track"),
                         value: "track"
                     }
                     replayGainModel.append(track)
 
                     const album = {
-                        text: i18nc("@item:listbox replay gain", "Album"),
+                        text: KI18n.i18nc("@item:listbox replay gain", "Album"),
                         value: "album"
                     }
                     replayGainModel.append(album)
@@ -127,7 +129,7 @@ SettingsBasePage {
                 }
             }
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip", "Adjust volume gain according to <i>replaygain</i> " +
+                toolTipText: KI18n.i18nc("@info:tooltip", "Adjust volume gain according to <i>replaygain</i> " +
                                    "values stored in the file metadata. If set to album gain, " +
                                    "apply album gain if present and fallback to track gain otherwise.")
                 toolTipWidth: 450
@@ -140,7 +142,7 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1 }
         RowLayout {
             CheckBox {
-                text: i18nc("@label:spinbox", "Prevent clipping")
+                text: KI18n.i18nc("@label:spinbox", "Prevent clipping")
                 checked: AudioSettings.replayGainPreventClip
                 onClicked: {
                     AudioSettings.replayGainPreventClip = checked
@@ -148,7 +150,7 @@ SettingsBasePage {
                 }
             }
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip", "Prevent clipping by lowering the gain")
+                toolTipText: KI18n.i18nc("@info:tooltip", "Prevent clipping by lowering the gain")
                 toolTipWidth: 450
 
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
@@ -157,7 +159,7 @@ SettingsBasePage {
 
         // Replay Gain Preamp
         Label {
-            text: i18nc("@label:spinbox", "Preamp (dB)")
+            text: KI18n.i18nc("@label:spinbox", "Preamp (dB)")
             Layout.alignment: Qt.AlignRight
         }
         RowLayout {
@@ -178,7 +180,7 @@ SettingsBasePage {
                     preamp.setPreamp(0)
                 }
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Reset to default value")
+                    text: KI18n.i18nc("@info:tooltip", "Reset to default value")
                 }
             }
 
@@ -190,7 +192,7 @@ SettingsBasePage {
 
         // Replay Gain Fallback
         Label {
-            text: i18nc("@label:spinbox", "Fallback (dB)")
+            text: KI18n.i18nc("@label:spinbox", "Fallback (dB)")
             Layout.alignment: Qt.AlignRight
         }
         RowLayout {
@@ -211,11 +213,11 @@ SettingsBasePage {
                     fallback.setFallback(0)
                 }
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Reset to default value")
+                    text: KI18n.i18nc("@info:tooltip", "Reset to default value")
                 }
             }
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip", "Gain in dB to apply if the file has no replay gain tags.<br><br>" +
+                toolTipText: KI18n.i18nc("@info:tooltip", "Gain in dB to apply if the file has no replay gain tags.<br><br>" +
                                    "This setting is in effect only when:<br>" +
                                    "- the replaygain setting is disabled<br>" +
                                    "- the replaygain setting is enabled and the file has no replaygain metadata<br>" +

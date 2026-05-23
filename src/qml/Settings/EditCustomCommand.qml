@@ -8,7 +8,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 
 SettingsBasePage {
@@ -47,7 +49,7 @@ SettingsBasePage {
         columns: 2
 
         Label {
-            text: i18nc("@label:textbox", "Command")
+            text: KI18n.i18nc("@label:textbox", "Command")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -62,7 +64,7 @@ SettingsBasePage {
             }
 
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip",
+                toolTipText: KI18n.i18nc("@info:tooltip",
                                    "What mpv command to run, " +
                                    "see <a href=\"https://mpv.io/manual/stable/#list-of-input-commands\">MPV Commands</a> " +
                                    "for a list of available commands.<br>" +
@@ -80,7 +82,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:textbox", "OSD Message")
+            text: KI18n.i18nc("@label:textbox", "OSD Message")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -90,12 +92,12 @@ SettingsBasePage {
 
                 text: root.osdMessage
                 enabled: (typeGroup.checkedButton as CommandRadioButton).optionName === "shortcut"
-                placeholderText: i18nc("placeholder text; %1 is an example of how to display an mpv property", "Filename: %1", "${filename}")
+                placeholderText: KI18n.i18nc("placeholder text; %1 is an example of how to display an mpv property", "Filename: %1", "${filename}")
                 Layout.fillWidth: true
             }
 
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip",
+                toolTipText: KI18n.i18nc("@info:tooltip",
                                    "An OSD message to display when triggering an action type custom command.<br>" +
                                    "Use ${property_name} to display the value of a property <strong>Volume: ${volume}</strong>")
                 toolTipWidth: 450
@@ -105,7 +107,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label", "Type")
+            text: KI18n.i18nc("@label", "Type")
             visible: root.mode === EditCustomCommand.Mode.Create
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
         }
@@ -126,8 +128,8 @@ SettingsBasePage {
                 optionName: "shortcut"
 
                 checked: optionName === root.type
-                text: i18nc("@option:radio", "Keyboard shortcut")
-                ToolTip.text: i18nc("@info:tooltip", "The command will be triggered with a shortcut. The shortcut can be set after saving.")
+                text: KI18n.i18nc("@option:radio", "Keyboard shortcut")
+                ToolTip.text: KI18n.i18nc("@info:tooltip", "The command will be triggered with a shortcut. The shortcut can be set after saving.")
                 ToolTip.visible: hovered
                 ToolTip.delay: 700
             }
@@ -136,8 +138,8 @@ SettingsBasePage {
                 optionName: "startup"
 
                 checked: optionName === root.type
-                text: i18nc("@option:radio", "Run at startup")
-                ToolTip.text: i18nc("@info:tooltip", "The command will be run at application startup.")
+                text: KI18n.i18nc("@option:radio", "Run at startup")
+                ToolTip.text: KI18n.i18nc("@info:tooltip", "The command will be run at application startup.")
                 ToolTip.visible: hovered
                 ToolTip.delay: 700
             }
@@ -149,7 +151,7 @@ SettingsBasePage {
             anchors.fill: parent
 
             ToolButton {
-                text: i18nc("@action:intoolbar", "Delete")
+                text: KI18n.i18nc("@action:intoolbar", "Delete")
                 icon.name: "delete"
                 visible: root.mode === EditCustomCommand.Mode.Edit
                 onClicked: {
@@ -164,14 +166,14 @@ SettingsBasePage {
             }
 
             ToolButton {
-                text: i18nc("@action:intoolbar", "Cancel")
+                text: KI18n.i18nc("@action:intoolbar", "Cancel")
                 icon.name: "dialog-cancel"
                 onClicked: root.loadCustomCommandsPage()
                 Layout.alignment: Qt.AlignRight
             }
 
             ToolButton {
-                text: i18nc("@action:intoolbar", "&Save")
+                text: KI18n.i18nc("@action:intoolbar", "&Save")
                 icon.name: "document-save"
                 enabled: commandTextField.text !== ""
                 onClicked: saveCustomCommand()

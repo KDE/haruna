@@ -8,6 +8,8 @@ import QtQml
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Menu {
@@ -15,18 +17,18 @@ Menu {
 
     required property MpvVideo m_mpv
 
-    title: i18nc("@title:menu", "&Subtitles")
+    title: KI18n.i18nc("@title:menu", "&Subtitles")
 
     SubtitleTracksMenu {
         m_mpv: root.m_mpv
         isPrimarySubtitleMenu: true
-        title: i18nc("@title:menu", "Primary Subtitle")
+        title: KI18n.i18nc("@title:menu", "Primary Subtitle")
     }
 
     SubtitleTracksMenu {
         m_mpv: root.m_mpv
         isPrimarySubtitleMenu: false
-        title: i18nc("@title:menu", "Secondary Subtitle")
+        title: KI18n.i18nc("@title:menu", "Secondary Subtitle")
     }
 
     MenuSeparator {}

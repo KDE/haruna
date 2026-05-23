@@ -8,7 +8,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -22,7 +24,7 @@ SettingsBasePage {
 
         // Seek Small Step
         Label {
-            text: i18nc("@label:spinbox", "Seek small step")
+            text: KI18n.i18nc("@label:spinbox", "Seek small step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -41,7 +43,7 @@ SettingsBasePage {
             }
 
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip seek small step setting",
+                toolTipText: KI18n.i18nc("@info:tooltip seek small step setting",
                                    "How much to seek when triggering the corresponding action. Seek mode is " +
                                    "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>")
             }
@@ -49,7 +51,7 @@ SettingsBasePage {
 
         // Seek Medium Step
         Label {
-            text: i18nc("@label:spinbox", "Seek medium step")
+            text: KI18n.i18nc("@label:spinbox", "Seek medium step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -68,7 +70,7 @@ SettingsBasePage {
             }
 
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip seek medium step setting",
+                toolTipText: KI18n.i18nc("@info:tooltip seek medium step setting",
                                    "How much to seek when triggering the corresponding action. Seek mode is " +
                                    "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>.<br>" +
                                    "This is also used for mouse wheel seeking, when mouse is over the progress bar.")
@@ -77,7 +79,7 @@ SettingsBasePage {
 
         // Seek Big Step
         Label {
-            text: i18nc("@label:spinbox", "Seek big step")
+            text: KI18n.i18nc("@label:spinbox", "Seek big step")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -95,14 +97,14 @@ SettingsBasePage {
             }
 
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip seek big step setting",
+                toolTipText: KI18n.i18nc("@info:tooltip seek big step setting",
                                    "How much to seek when triggering the corresponding action. Seek mode is " +
                                    "<a href='https://mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>")
             }
         }
 
         Label {
-            text: i18nc("@label", "Hardware decoding")
+            text: KI18n.i18nc("@label", "Hardware decoding")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -143,7 +145,7 @@ SettingsBasePage {
             ToolTipButton {
                 toolTipWidth: 450
                 toolTipHeight: 300
-                toolTipText: i18nc("@info:tooltip hardware decoding setting",
+                toolTipText: KI18n.i18nc("@info:tooltip hardware decoding setting",
                                    "Specify the hardware video decoding API that should be used if possible. " +
                                    "Whether hardware decoding is actually done depends on the video codec. " +
                                    "If hardware decoding is not possible, mpv will fall back on software decoding.<br><br>" +
@@ -168,7 +170,7 @@ SettingsBasePage {
         CheckBox {
             id: loadLastPlayedFileCheckBox
 
-            text: i18nc("@option:check", "Open last played file on startup")
+            text: KI18n.i18nc("@option:check", "Open last played file on startup")
             checked: PlaybackSettings.openLastPlayedFile
             onClicked: {
                 PlaybackSettings.openLastPlayedFile = checked
@@ -176,7 +178,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip open last played file setting",
+                text: KI18n.i18nc("@info:tooltip open last played file setting",
                             "On startup it opens the file that was playing when the application was closed.")
             }
         }
@@ -186,7 +188,7 @@ SettingsBasePage {
         CheckBox {
             id: pauseOnMinimizeCheckBox
 
-            text: i18nc("@option:check", "Pause on minimize")
+            text: KI18n.i18nc("@option:check", "Pause on minimize")
             checked: PlaybackSettings.pauseWhileMinimized
             onClicked: {
                 PlaybackSettings.pauseWhileMinimized = checked
@@ -194,7 +196,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip pause on minimize setting",
+                text: KI18n.i18nc("@info:tooltip pause on minimize setting",
                             "Pauses the player while the window is minimized, playback resumes when restored.")
             }
         }
@@ -204,7 +206,7 @@ SettingsBasePage {
         // ------------------------------------
 
         SettingsHeader {
-            text: i18nc("@title", "Playback position")
+            text: KI18n.i18nc("@title", "Playback position")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -214,14 +216,14 @@ SettingsBasePage {
         CheckBox {
             id: saveFilePositionCheckBox
 
-            text: i18nc("@option:check", "Restore playback position")
+            text: KI18n.i18nc("@option:check", "Restore playback position")
             checked: PlaybackSettings.restoreFilePosition
             onClicked: {
                 PlaybackSettings.restoreFilePosition = checked
                 PlaybackSettings.save()
             }
             ToolTip {
-                text: i18ncp("@info:tooltip save playback position",
+                text: KI18n.i18ncp("@info:tooltip save playback position",
                              // singular
                              "Saves the file position during playback, opening the same file again will seek to the saved position.\n"
                              +"Position is saved every %1 second, except for the last 10 seconds of the video.",
@@ -237,7 +239,7 @@ SettingsBasePage {
         CheckBox {
             id: playOnResumeCheckBox
 
-            text: i18nc("@option:check", "Start playing")
+            text: KI18n.i18nc("@option:check", "Start playing")
             checked: PlaybackSettings.playOnResume
             enabled: saveFilePositionCheckBox.checked
             onClicked: {
@@ -246,7 +248,7 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip start playing setting",
+                text: KI18n.i18nc("@info:tooltip start playing setting",
                             "The file will be playing after restoring the playback position")
             }
         }
@@ -270,9 +272,9 @@ SettingsBasePage {
             Label {
                 text: {
                     if (timePositionSaving.value === 0) {
-                        return i18nc("@info", "For any duration")
+                        return KI18n.i18nc("@info", "For any duration")
                     } else {
-                        return i18ncp("@info",
+                        return KI18n.i18ncp("@info",
                                       "If duration is longer than %1 minute",
                                       "If duration is longer than %1 minutes",
                                       timePositionSaving.value)
@@ -281,7 +283,7 @@ SettingsBasePage {
                 elide: Text.ElideRight
             }
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip restore playback position > duration",
+                toolTipText: KI18n.i18nc("@info:tooltip restore playback position > duration",
                              "Position for remote files is restored regardless of duration.")
             }
         }
@@ -303,7 +305,7 @@ SettingsBasePage {
             }
 
             LabelWithTooltip {
-                text: i18ncp("@info:tooltip restore playback position > save interval",
+                text: KI18n.i18ncp("@info:tooltip restore playback position > save interval",
                              "Save position every %1 second",
                              "Save position every %1 seconds",
                              timePositionSaveInterval.value)
@@ -317,7 +319,7 @@ SettingsBasePage {
         // ------------------------------------
 
         SettingsHeader {
-            text: i18nc("@title", "Chapters")
+            text: KI18n.i18nc("@title", "Chapters")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
@@ -326,14 +328,14 @@ SettingsBasePage {
 
         CheckBox {
             id: skipChaptersCheckBox
-            text: i18nc("@option:check", "Skip chapters")
+            text: KI18n.i18nc("@option:check", "Skip chapters")
             checked: PlaybackSettings.skipChapters
             onClicked: {
                 PlaybackSettings.skipChapters = checked
                 PlaybackSettings.save()
             }
 
-            ToolTip.text: i18nc("@info:tooltip skip chapters setting",
+            ToolTip.text: KI18n.i18nc("@info:tooltip skip chapters setting",
                                 "When enabled it automatically skips chapters containing certain words/characters.")
             ToolTip.visible: hovered
             ToolTip.delay: 700
@@ -342,7 +344,7 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1 }
 
         CheckBox {
-            text: i18nc("@option:check", "Show OSD message on skip")
+            text: KI18n.i18nc("@option:check", "Show OSD message on skip")
             enabled: skipChaptersCheckBox.checked
             checked: PlaybackSettings.showOsdOnSkipChapters
             onClicked: {
@@ -350,14 +352,14 @@ SettingsBasePage {
                 PlaybackSettings.save()
             }
 
-            ToolTip.text: i18nc("@info:tooltip show OSD message on skip setting",
+            ToolTip.text: KI18n.i18nc("@info:tooltip show OSD message on skip setting",
                                 "When skipping chapters an osd message will show the title of the skipped chapter.")
             ToolTip.visible: hovered
             ToolTip.delay: 700
         }
 
         Label {
-            text: i18nc("@label:textbox", "Keywords")
+            text: KI18n.i18nc("@label:textbox", "Keywords")
             enabled: skipChaptersCheckBox.checked
             Layout.alignment: Qt.AlignRight
         }
@@ -366,12 +368,12 @@ SettingsBasePage {
             id: chaptersToSkip
 
             text: PlaybackSettings.chaptersToSkip
-            placeholderText: i18nc("placeholder text", "op, ed, chapter 1")
+            placeholderText: KI18n.i18nc("placeholder text", "op, ed, chapter 1")
             enabled: skipChaptersCheckBox.checked
             Layout.fillWidth: true
             onEditingFinished: save()
 
-            ToolTip.text: i18nc("@info:tooltip skip words setting",
+            ToolTip.text: KI18n.i18nc("@info:tooltip skip words setting",
                                 "Skip chapters containing these words. Comma separated list. " +
                                 "The match is not exact, meaning <strong>op</strong> will match words containing it like <strong><u>op</u>ening</strong>.")
             ToolTip.visible: hovered
@@ -396,13 +398,13 @@ SettingsBasePage {
         // ------------------------------------
 
         SettingsHeader {
-            text: i18nc("@title", "Youtube-dl")
+            text: KI18n.i18nc("@title", "Youtube-dl")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
 
         Label {
-            text: i18n("Format selection")
+            text: KI18n.i18nc("@label", "Format selection")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -427,13 +429,13 @@ SettingsBasePage {
 
             Component.onCompleted: {
                 const customSelection = {
-                    text: i18nc("@item:listbox the custom youtube-dl format selection", "Custom"),
+                    text: KI18n.i18nc("@item:listbox the custom youtube-dl format selection", "Custom"),
                     value: ""
                 }
                 formatModel.append(customSelection)
 
                 const defaultSelection = {
-                    text: i18nc("@item:listbox the default youtube-dl format selection", "Default"),
+                    text: KI18n.i18nc("@item:listbox the default youtube-dl format selection", "Default"),
                     value: "bestvideo+bestaudio/best"
                 }
                 formatModel.append(defaultSelection)
@@ -447,7 +449,7 @@ SettingsBasePage {
                 currentIndex = hIndexOfValue(PlaybackSettings.ytdlFormat)
             }
 
-            ToolTip.text: i18nc("@info:tooltip format selection setting",
+            ToolTip.text: KI18n.i18nc("@info:tooltip format selection setting",
                                 "Selects a video source that is closest to the selected format.")
             ToolTip.visible: hovered
             ToolTip.delay: 700

@@ -10,8 +10,10 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.coreaddons as KCoreAddons
+
 import org.kde.haruna
 
 Loader {
@@ -64,7 +66,7 @@ Loader {
         height: 600
         minimumWidth: 750
         minimumHeight: 400
-        title: i18nc("@title:window", "Settings")
+        title: KI18n.i18nc("@title:window", "Settings")
         transientParent: null
         pageStack.initialPage: Kirigami.ScrollablePage {
             globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
@@ -81,7 +83,7 @@ Loader {
 
                 property list<Kirigami.Action> pages: [
                     Kirigami.Action {
-                        text: i18nc("@action", "General")
+                        text: KI18n.i18nc("@action", "General")
                         icon.name: "configure"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.General
@@ -90,7 +92,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Playback")
+                        text: KI18n.i18nc("@action", "Playback")
                         icon.name: "media-playback-start"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Playback
@@ -99,7 +101,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Video")
+                        text: KI18n.i18nc("@action", "Video")
                         icon.name: "video-x-generic"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Video
@@ -109,7 +111,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Audio")
+                        text: KI18n.i18nc("@action", "Audio")
                         icon.name: "player-volume"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Audio
@@ -118,7 +120,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Subtitles")
+                        text: KI18n.i18nc("@action", "Subtitles")
                         icon.name: "add-subtitle"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Subtitles
@@ -127,7 +129,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Playlist")
+                        text: KI18n.i18nc("@action", "Playlist")
                         icon.name: "view-media-playlist"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Playlist
@@ -136,7 +138,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Mouse")
+                        text: KI18n.i18nc("@action", "Mouse")
                         icon.name: "input-mouse"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Mouse
@@ -145,7 +147,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Shortcuts")
+                        text: KI18n.i18nc("@action", "Shortcuts")
                         icon.name: "configure-shortcuts"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Shortcuts
@@ -154,7 +156,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Custom Commands")
+                        text: KI18n.i18nc("@action", "Custom Commands")
                         icon.name: "configure"
                         onTriggered: {
                             const props = {
@@ -169,7 +171,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "Debug")
+                        text: KI18n.i18nc("@action", "Debug")
                         icon.name: "help-about"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Debug
@@ -179,7 +181,7 @@ Loader {
                         }
                     },
                     Kirigami.Action {
-                        text: i18nc("@action", "About")
+                        text: KI18n.i18nc("@action", "About")
                         icon.name: "help-about"
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.About

@@ -10,6 +10,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.ki18n
+
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.settings
@@ -145,7 +147,7 @@ Item {
                     ToolTip {
                         id: playPauseButtonToolTip
 
-                        text: root.m_mpv.pause ? i18nc("@info:tooltip", "Start playback") : i18nc("@info:tooltip", "Pause playback")
+                        text: root.m_mpv.pause ? KI18n.i18nc("@info:tooltip", "Start playback") : KI18n.i18nc("@info:tooltip", "Pause playback")
                     }
                 }
 
@@ -162,7 +164,7 @@ Item {
                     onClicked: HarunaApp.actions.playPreviousAction.trigger()
 
                     ToolTip {
-                        text: i18nc("@info:tooltip", "Play previous file")
+                        text: KI18n.i18nc("@info:tooltip", "Play previous file")
                     }
                 }
 
@@ -179,7 +181,7 @@ Item {
                     onClicked: HarunaApp.actions.playNextAction.trigger()
 
                     ToolTip {
-                        text: i18nc("@info:tooltip", "Play next file")
+                        text: KI18n.i18nc("@info:tooltip", "Play next file")
                     }
                 }
 
@@ -193,7 +195,7 @@ Item {
                     }
 
                     ToolTip {
-                        text: i18nc("@info:tooltip", "Open chapters menu")
+                        text: KI18n.i18nc("@info:tooltip", "Open chapters menu")
                     }
                 }
 
@@ -257,7 +259,7 @@ Item {
 
                     text: "%1 / %2".arg(root.m_mpv.formattedPosition).arg(root.m_mpv.formattedDuration)
                     font.pointSize: 9
-                    toolTipText: i18nc("@info:tooltip", "Remaining: %1", root.m_mpv.formattedRemaining)
+                    toolTipText: KI18n.i18nc("@info:tooltip", "Remaining: %1", root.m_mpv.formattedRemaining)
                     alwaysShowToolTip: true
                     horizontalAlignment: Qt.AlignHCenter
 

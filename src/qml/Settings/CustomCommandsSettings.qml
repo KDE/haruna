@@ -10,7 +10,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.kquickcontrols
 import org.kde.haruna
 
@@ -47,9 +49,9 @@ SettingsBasePage {
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
             visible: customCommandsView.count === 0
-            text: i18nc("@label:textbox", "No custom commands yet")
+            text: KI18n.i18nc("@label:textbox", "No custom commands yet")
             helpfulAction: Action {
-                text: i18nc("@action:button", "&Add Command")
+                text: KI18n.i18nc("@action:button", "&Add Command")
                 onTriggered: root.loadEditCustomCommandPage()
             }
         }
@@ -98,7 +100,7 @@ SettingsBasePage {
                         }
 
                         ToolTip {
-                            text: i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
+                            text: KI18n.i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
                                         "Unchecked: property will not be set at startup")
                         }
                     }
@@ -179,7 +181,7 @@ SettingsBasePage {
             ToolButton {
                 id: addButton
 
-                text: i18nc("@action:intoolbar", "&Add")
+                text: KI18n.i18nc("@action:intoolbar", "&Add")
                 icon.name: "list-add"
                 onClicked: root.loadEditCustomCommandPage()
                 Layout.alignment: Qt.AlignRight

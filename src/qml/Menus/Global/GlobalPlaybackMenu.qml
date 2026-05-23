@@ -6,12 +6,14 @@
 
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
     id: root
 
-    title: i18nc("@title:menu", "&Playback")
+    title: KI18n.i18nc("@title:menu", "&Playback")
 
     Labs.MenuItem {
         icon.name: HarunaApp.actions.playPauseAction.icon.name
@@ -72,7 +74,7 @@ Labs.Menu {
     Labs.MenuSeparator {}
 
     Labs.Menu {
-        title: i18nc("@title:menu", "Seek")
+        title: KI18n.i18nc("@title:menu", "Seek")
         Labs.MenuItem {
             icon.name: HarunaApp.actions.seekForwardSmallAction.icon.name
             text: HarunaApp.actions.seekForwardSmallAction.text

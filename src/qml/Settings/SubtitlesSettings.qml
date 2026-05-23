@@ -8,7 +8,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
@@ -33,7 +35,7 @@ SettingsBasePage {
         CheckBox {
             id: autoSelectSubtitles
 
-            text: i18nc("@label:check", "Auto select track")
+            text: KI18n.i18nc("@label:check", "Auto select track")
             checked: SubtitlesSettings.autoSelectSubtitles
             
             onClicked: {
@@ -42,12 +44,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "When checked a subtitle track will be automatically selected and displayed")
+                text: KI18n.i18nc("@info:tooltip", "When checked a subtitle track will be automatically selected and displayed")
             }
         }
 
         Label {
-            text: i18nc("@label:textbox", "Preferred language")
+            text: KI18n.i18nc("@label:textbox", "Preferred language")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -74,7 +76,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Preferred track")
+            text: KI18n.i18nc("@label:spinbox", "Preferred track")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -93,25 +95,25 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
             checked: SubtitlesSettings.allowOnBlackBorders
-            text: i18nc("@option:check", "Allow subtitles in black borders")
+            text: KI18n.i18nc("@option:check", "Allow subtitles in black borders")
             onClicked: {
                 SubtitlesSettings.allowOnBlackBorders = checked
                 SubtitlesSettings.save()
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "When checked the subtitles can be rendered outside the video, in the black borders. Might not work for all .ass subtitles.")
+                text: KI18n.i18nc("@info:tooltip", "When checked the subtitles can be rendered outside the video, in the black borders. Might not work for all .ass subtitles.")
             }
         }
 
         SettingsHeader {
-            text: i18nc("@title", "Styling")
+            text: KI18n.i18nc("@title", "Styling")
             Layout.columnSpan: 2
             Layout.fillWidth: true
         }
 
         Label {
-            text: i18nc("@label:listbox", "Font family")
+            text: KI18n.i18nc("@label:listbox", "Font family")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -146,13 +148,13 @@ SettingsBasePage {
                 }
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Reset to default value")
+                    text: KI18n.i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Font size")
+            text: KI18n.i18nc("@label:spinbox", "Font size")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -167,12 +169,12 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label", "Font style")
+            text: KI18n.i18nc("@label", "Font style")
             Layout.alignment: Qt.AlignRight
         }
 
         CheckBox {
-            text: i18nc("@option:check", "Bold")
+            text: KI18n.i18nc("@option:check", "Bold")
             checked: SubtitlesSettings.isBold
             onClicked: {
                 SubtitlesSettings.isBold = checked
@@ -183,7 +185,7 @@ SettingsBasePage {
         Item { Layout.preferredWidth: 1 }
 
         CheckBox {
-            text: i18nc("@option:check", "Italic")
+            text: KI18n.i18nc("@option:check", "Italic")
             checked: SubtitlesSettings.isItalic
             onClicked: {
                 SubtitlesSettings.isItalic = checked
@@ -192,7 +194,7 @@ SettingsBasePage {
         }
 
         Label {
-            text: i18nc("@label:textbox", "Font color")
+            text: KI18n.i18nc("@label:textbox", "Font color")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -242,13 +244,13 @@ SettingsBasePage {
                 onClicked: subtitleColor.text = subtitleColor.defaultColor
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Reset to default value")
+                    text: KI18n.i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
 
         Label {
-            text: i18nc("@label:textbox", "Shadow color")
+            text: KI18n.i18nc("@label:textbox", "Shadow color")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -297,13 +299,13 @@ SettingsBasePage {
                 onClicked: shadowColor.text = shadowColor.defaultColor
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Reset to default value")
+                    text: KI18n.i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Shadow offset")
+            text: KI18n.i18nc("@label:spinbox", "Shadow offset")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -318,12 +320,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
+                text: KI18n.i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
             }
         }
 
         Label {
-            text: i18nc("@label:textbox", "Border color")
+            text: KI18n.i18nc("@label:textbox", "Border color")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -372,13 +374,13 @@ SettingsBasePage {
                 onClicked: borderColor.text = borderColor.defaultColor
 
                 ToolTip {
-                    text: i18nc("@info:tooltip", "Reset to default value")
+                    text: KI18n.i18nc("@info:tooltip", "Reset to default value")
                 }
             }
         }
 
         Label {
-            text: i18nc("@label:spinbox", "Border width")
+            text: KI18n.i18nc("@label:spinbox", "Border width")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -393,12 +395,12 @@ SettingsBasePage {
             }
 
             ToolTip {
-                text: i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
+                text: KI18n.i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
             }
         }
 
         Label {
-            text: i18nc("@label:listbox", "Border style")
+            text: KI18n.i18nc("@label:listbox", "Border style")
             Layout.alignment: Qt.AlignRight
         }
 
@@ -410,19 +412,19 @@ SettingsBasePage {
             }
             Component.onCompleted: {
                 const outlineAndShadow = {
-                    text: i18nc("@item:listbox border style", "Outline and Shadow"),
+                    text: KI18n.i18nc("@item:listbox border style", "Outline and Shadow"),
                     value: "outline-and-shadow"
                 }
                 borderStyleModel.append(outlineAndShadow)
 
                 const opaqueBox = {
-                    text: i18nc("@item:listbox border style", "Opaque Box"),
+                    text: KI18n.i18nc("@item:listbox border style", "Opaque Box"),
                     value: "opaque-box"
                 }
                 borderStyleModel.append(opaqueBox)
 
                 const bgBox = {
-                    text: i18nc("@item:listbox border style", "Background Box"),
+                    text: KI18n.i18nc("@item:listbox border style", "Background Box"),
                     value: "background-box"
                 }
                 borderStyleModel.append(bgBox)

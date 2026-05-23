@@ -10,6 +10,8 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.playlist
@@ -23,7 +25,7 @@ Kirigami.ApplicationWindow {
     height: 600
     minimumWidth: 250
     minimumHeight: 250
-    title: i18nc("@title:configure sort window", "Advanced Sort and Group By")
+    title: KI18n.i18nc("@title:configure sort window", "Advanced Sort and Group By")
     transientParent: null
 
     Shortcut {
@@ -39,7 +41,7 @@ Kirigami.ApplicationWindow {
         SettingsHeader {
             Layout.columnSpan: 2
             headingLevel: 1
-            text: i18nc("@label which playlist is affected, %1 is the playlist name",
+            text: KI18n.i18nc("@label which playlist is affected, %1 is the playlist name",
                         "Playlist: %1", root.m_mpv.visibleFilterProxyModel.playlistName())
             topMargin: Kirigami.Units.smallSpacing
         }
@@ -47,7 +49,7 @@ Kirigami.ApplicationWindow {
         SettingsHeader {
             Layout.columnSpan: 2
             headingLevel: 2
-            text: i18nc("@label sort", "Sorting")
+            text: KI18n.i18nc("@label sort", "Sorting")
             topMargin: Kirigami.Units.smallSpacing
         }
 
@@ -72,7 +74,7 @@ Kirigami.ApplicationWindow {
 
             rightActions: [
                 Kirigami.Action {
-                    text: i18nc("@action:inmenu", "Filter")
+                    text: KI18n.i18nc("@action:inmenu", "Filter")
 
                     icon {
                         name: "view-filter-symbolic"
@@ -91,14 +93,14 @@ Kirigami.ApplicationWindow {
 
                 x: availableSortSearch.width - Kirigami.Units.iconSizes.medium
                 y: availableSortSearch.height
-                title: i18nc("@action:inmenu", "Filter")
+                title: KI18n.i18nc("@action:inmenu", "Filter")
 
                 ActionGroup { id: sortFilterActionGroup }
 
                 Kirigami.Action {
                     checked: true
                     checkable: true
-                    text: i18nc("@action:inmenu all", "All")
+                    text: KI18n.i18nc("@action:inmenu all", "All")
 
                     onTriggered: {
                         var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
@@ -109,7 +111,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@action:inmenu file", "File")
+                    text: KI18n.i18nc("@action:inmenu file", "File")
 
                     onTriggered: {
                         var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
@@ -120,7 +122,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@action:inmenu audio", "Audio")
+                    text: KI18n.i18nc("@action:inmenu audio", "Audio")
 
                     onTriggered: {
                         var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
@@ -131,7 +133,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@action:inmenu video", "Video")
+                    text: KI18n.i18nc("@action:inmenu video", "Video")
 
                     onTriggered: {
                         const model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
@@ -178,7 +180,7 @@ Kirigami.ApplicationWindow {
                     Kirigami.Action {
                         id: actionAscending
 
-                        text: i18nc("@action:inmenu", "Ascending")
+                        text: KI18n.i18nc("@action:inmenu", "Ascending")
                         autoExclusive: true
                         checkable: true
                         checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.AscendingOrder
@@ -191,7 +193,7 @@ Kirigami.ApplicationWindow {
                     Kirigami.Action {
                         id: actionDescending
 
-                        text: i18nc("@action:inmenu", "Descending")
+                        text: KI18n.i18nc("@action:inmenu", "Descending")
                         autoExclusive: true
                         checkable: true
                         checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.DescendingOrder
@@ -309,7 +311,7 @@ Kirigami.ApplicationWindow {
         SettingsHeader {
             Layout.columnSpan: 2
             headingLevel: 2
-            text: i18nc("@label group", "Grouping")
+            text: KI18n.i18nc("@label group", "Grouping")
             topMargin: Kirigami.Units.smallSpacing
         }
 
@@ -333,7 +335,7 @@ Kirigami.ApplicationWindow {
 
             rightActions: [
                 Kirigami.Action {
-                    text: i18nc("@action:inmenu", "Filter")
+                    text: KI18n.i18nc("@action:inmenu", "Filter")
 
                     icon {
                         name: "view-filter-symbolic"
@@ -352,14 +354,14 @@ Kirigami.ApplicationWindow {
 
                 x: availableGroupSearch.width - Kirigami.Units.iconSizes.medium
                 y: availableGroupSearch.height
-                title: i18nc("@action:inmenu", "Filter")
+                title: KI18n.i18nc("@action:inmenu", "Filter")
 
                 ActionGroup { id: groupFilterActionGroup }
 
                 Kirigami.Action {
                     checked: true
                     checkable: true
-                    text: i18nc("@action:inmenu all", "All")
+                    text: KI18n.i18nc("@action:inmenu all", "All")
 
                     onTriggered: {
                         var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
@@ -370,7 +372,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@action:inmenu file", "File")
+                    text: KI18n.i18nc("@action:inmenu file", "File")
 
                     onTriggered: {
                         var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
@@ -381,7 +383,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@action:inmenu audio", "Audio")
+                    text: KI18n.i18nc("@action:inmenu audio", "Audio")
 
                     onTriggered: {
                         var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
@@ -392,7 +394,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.Action {
                     checkable: true
-                    text: i18nc("@action:inmenu video", "Video")
+                    text: KI18n.i18nc("@action:inmenu video", "Video")
 
                     onTriggered: {
                         const model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
@@ -407,7 +409,7 @@ Kirigami.ApplicationWindow {
         RowLayout {
             Layout.margins: Kirigami.Units.largeSpacing
             CheckBox {
-                text: i18nc("@action:inmenu", "Show Sections")
+                text: KI18n.i18nc("@action:inmenu", "Show Sections")
                 checked: root.m_mpv.visibleFilterProxyModel.showSections
 
                 onCheckedChanged: {
@@ -416,7 +418,7 @@ Kirigami.ApplicationWindow {
 
             }
             ToolTipButton {
-                toolTipText: i18nc("@info:tooltip",
+                toolTipText: KI18n.i18nc("@info:tooltip",
                                    "Show/Hide section labels in the playlist view. <br>" +
                                    "If the playlist is not sorted by the included group properties in the " +
                                    "same order, then the sections might not be unique.")
@@ -528,7 +530,7 @@ Kirigami.ApplicationWindow {
 
             ToolButton {
                 icon.name: "newline"
-                text: i18nc("@action:inmenu add new line button", "Add New Line")
+                text: KI18n.i18nc("@action:inmenu add new line button", "Add New Line")
                 Layout.alignment: Qt.AlignRight
 
                 onClicked: {
@@ -741,18 +743,18 @@ Kirigami.ApplicationWindow {
                         ToolTip.text: {
                             if (itemDelegate.isGroup) {
                                 if (itemDelegate.hideBlank) {
-                                    return i18nc("@info:tooltip show blank", "Property is hidden if empty or not unique.")
+                                    return KI18n.i18nc("@info:tooltip show blank", "Property is hidden if empty or not unique.")
                                 } else {
-                                    return i18nc("@info:tooltip hide blank", "Property is shown, if empty a placeholder will be shown.")
+                                    return KI18n.i18nc("@info:tooltip hide blank", "Property is shown, if empty a placeholder will be shown.")
                                 }
                             } else {
                                 switch(itemDelegate.order){
                                     case (PlaylistSortPropertyModel.Ascending):
-                                        return i18nc("@info:tooltip group order", "Sort ascending")
+                                        return KI18n.i18nc("@info:tooltip group order", "Sort ascending")
                                     case (PlaylistSortPropertyModel.Descending):
-                                        return i18nc("@info:tooltip group order", "Sort descending")
+                                        return KI18n.i18nc("@info:tooltip group order", "Sort descending")
                                     case (PlaylistSortPropertyModel.SameAsPrimary):
-                                        return i18nc("@info:tooltip group order", "Same as primary sort order")
+                                        return KI18n.i18nc("@info:tooltip group order", "Same as primary sort order")
                                     default:
                                         return ""
                                 }

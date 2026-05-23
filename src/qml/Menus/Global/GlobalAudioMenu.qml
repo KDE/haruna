@@ -10,6 +10,8 @@ import QtQml
 import QtQuick
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
@@ -17,12 +19,12 @@ Labs.Menu {
 
     required property MpvVideo m_mpv
 
-    title: i18nc("@title:menu", "&Audio")
+    title: KI18n.i18nc("@title:menu", "&Audio")
 
     Labs.Menu {
         id: audioMenu
 
-        title: i18nc("@title:menu", "&Track")
+        title: KI18n.i18nc("@title:menu", "&Track")
         enabled: root.m_mpv.audioTracksModel.rowCount > 0
 
         Instantiator {

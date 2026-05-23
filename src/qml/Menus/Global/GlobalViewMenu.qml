@@ -7,12 +7,14 @@
 import QtQuick
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
     id: root
 
-    title: i18nc("@title:menu", "&View")
+    title: KI18n.i18nc("@title:menu", "&View")
 
     Labs.MenuItem {
         icon.name: HarunaApp.actions.toggleFullscreenAction.icon.name
@@ -25,9 +27,9 @@ Labs.Menu {
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.menuBar.visible) {
-                return i18nc("@action:inmenu", "Hide Menubar")
+                return KI18n.i18nc("@action:inmenu", "Hide Menubar")
             } else {
-                return i18nc("@action:inmenu", "Show Menubar")
+                return KI18n.i18nc("@action:inmenu", "Show Menubar")
             }
         }
         onTriggered: HarunaApp.actions.toggleMenuBarAction.trigger()
@@ -38,9 +40,9 @@ Labs.Menu {
         text: {
             const mainWindow = Window.window as Main
             if (mainWindow?.header.visible) {
-                return i18nc("@action:inmenu", "Hide Toolbar")
+                return KI18n.i18nc("@action:inmenu", "Hide Toolbar")
             } else {
-                return i18nc("@action:inmenu", "Show Toolbar")
+                return KI18n.i18nc("@action:inmenu", "Show Toolbar")
             }
         }
         onTriggered: HarunaApp.actions.toggleHeaderAction.trigger()

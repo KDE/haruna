@@ -9,12 +9,14 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
     id: root
 
-    title: i18nc("@title:menu", "&File")
+    title: KI18n.i18nc("@title:menu", "&File")
 
     Labs.MenuItem {
         icon.name: HarunaApp.actions.openFileAction.icon.name
@@ -37,7 +39,7 @@ Labs.Menu {
     Labs.Menu {
         id: recentFilesMenu
 
-        title: i18nc("@title:menu", "Recent Files")
+        title: KI18n.i18nc("@title:menu", "Recent Files")
         onAboutToShow: recentFilesInstantiator.model = Models.recentFilesModel
 
         Instantiator {
@@ -67,7 +69,7 @@ Labs.Menu {
         }
         Labs.MenuSeparator {}
         Labs.MenuItem {
-            text: i18nc("@action:inmenu", "Clear List")
+            text: KI18n.i18nc("@action:inmenu", "Clear List")
             onTriggered: Models.recentFilesModel.deleteEntries()
         }
     }

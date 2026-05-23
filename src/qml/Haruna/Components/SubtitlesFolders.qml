@@ -10,7 +10,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -28,10 +30,10 @@ ColumnLayout {
         Label {
             id: sectionTitle
 
-            text: i18nc("@label; Below is a list of folders containing subtitles", "Load subtitles from")
+            text: KI18n.i18nc("@label; Below is a list of folders containing subtitles", "Load subtitles from")
         }
         ToolTipButton {
-            toolTipText: i18nc("@info:tooltip;", "When a relative folder name starts with * (asterisk) "+
+            toolTipText: KI18n.i18nc("@info:tooltip;", "When a relative folder name starts with * (asterisk) "+
                                "and recursive search is enabled, all folders containing that name will be searched.\n"+
                                "Relative folders are relative to the playing file's folder.")
         }
@@ -110,7 +112,7 @@ ColumnLayout {
                             flat: true
                             onClicked: {
                                 if (!canDelete) {
-                                    text = i18nc("@action:button", "Confirm Deletion")
+                                    text = KI18n.i18nc("@action:button", "Confirm Deletion")
                                     canDelete = true
                                     return
                                 }
@@ -121,7 +123,7 @@ ColumnLayout {
                                 subtitlesFoldersModel.deleteFolder(sfDelegate.index)
                             }
                             ToolTip {
-                                text: i18nc("@info:tooltip", "Delete this folder from list")
+                                text: KI18n.i18nc("@info:tooltip", "Delete this folder from list")
                             }
                         }
 
@@ -137,7 +139,7 @@ ColumnLayout {
                                 }
                             }
                             ToolTip {
-                                text: i18nc("@info:tooltip", "Save changes")
+                                text: KI18n.i18nc("@info:tooltip", "Save changes")
                             }
                         }
 
@@ -147,7 +149,7 @@ ColumnLayout {
             } // ItemDelegate
 
             Label {
-                text: i18n("No folder set")
+                text: KI18n.i18n("No folder set")
                 anchors.verticalCenter: parent.verticalCenter
                 visible: sfListView.count === 0
                 opacity: 0.7
@@ -165,14 +167,14 @@ ColumnLayout {
         id: sfAddFolder
 
         icon.name: "list-add"
-        text: i18nc("@action:button", "Add New Folder")
+        text: KI18n.i18nc("@action:button", "Add New Folder")
         enabled: root.canAddFolder
         onClicked: {
             subtitlesFoldersModel.addFolder()
             root.canAddFolder = false
         }
 
-        ToolTip.text: i18nc("@info:tooltip add new subtitle folder setting",
+        ToolTip.text: KI18n.i18nc("@info:tooltip add new subtitle folder setting",
                             "Add a folder in which to look for subtitles.")
         ToolTip.visible: hovered
         ToolTip.delay: 700
@@ -182,7 +184,7 @@ ColumnLayout {
         CheckBox {
             id: recursiveSubtitlesSearch
 
-            text: i18nc("@label:check", "Search subtitles recursively")
+            text: KI18n.i18nc("@label:check", "Search subtitles recursively")
             checked: SubtitlesSettings.recursiveSubtitlesSearch
 
             onClicked: {
@@ -198,7 +200,7 @@ ColumnLayout {
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
             ToolTip {
-                text: i18nc("@info:tooltip",
+                text: KI18n.i18nc("@info:tooltip",
                             "Subtitles are searched recursively in the folders defined by the “%1” setting.\n" +
                             "Only relative folders are searched.", sectionTitle.text)
                 visible: (parent as ToolButton).checked

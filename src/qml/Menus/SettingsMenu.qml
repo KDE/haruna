@@ -7,6 +7,8 @@
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Menu {
@@ -14,71 +16,71 @@ Menu {
 
     required property SettingsWindow m_settingsLoader
 
-    title: i18nc("@title:menu", "&Settings")
+    title: KI18n.i18nc("@title:menu", "&Settings")
 
     MenuItem {
-        text: i18nc("@action:inmenu", "General")
+        text: KI18n.i18nc("@action:inmenu", "General")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.General)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Playback")
+        text: KI18n.i18nc("@action:inmenu", "Playback")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Playback)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Video")
+        text: KI18n.i18nc("@action:inmenu", "Video")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Video)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Audio")
+        text: KI18n.i18nc("@action:inmenu", "Audio")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Audio)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Subtitles")
+        text: KI18n.i18nc("@action:inmenu", "Subtitles")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Subtitles)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Playlist")
+        text: KI18n.i18nc("@action:inmenu", "Playlist")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Playlist)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Mouse")
+        text: KI18n.i18nc("@action:inmenu", "Mouse")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Mouse)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Shortcuts")
+        text: KI18n.i18nc("@action:inmenu", "Shortcuts")
         icon.name: "configure-shortcuts"
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Shortcuts)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Custom Commands")
+        text: KI18n.i18nc("@action:inmenu", "Custom Commands")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.CustomCommands)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "Debug")
+        text: KI18n.i18nc("@action:inmenu", "Debug")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Debug)
         }
     }
     MenuItem {
-        text: i18nc("@action:inmenu", "About")
+        text: KI18n.i18nc("@action:inmenu", "About")
         onTriggered: {
             root.m_settingsLoader.openSettingPage(SettingsWindow.Page.About)
         }

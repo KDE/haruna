@@ -10,6 +10,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 TabBar {
@@ -67,13 +69,13 @@ TabBar {
             id: tabMenu
 
             MenuItem {
-                text: i18nc("@action:inmenu", "Rename")
+                text: KI18n.i18nc("@action:inmenu", "Rename")
                 icon.name: "edit-rename"
                 visible: tabMenuLoader.row > 0
                 onClicked: root.m_mpv.playlists.renamePlaylist(tabMenuLoader.row)
             }
             MenuItem {
-                text: i18nc("@action:inmenu", "Remove")
+                text: KI18n.i18nc("@action:inmenu", "Remove")
                 icon.name: "remove"
                 visible: tabMenuLoader.row > 0
                 onClicked: root.m_mpv.playlists.removePlaylist(tabMenuLoader.row)

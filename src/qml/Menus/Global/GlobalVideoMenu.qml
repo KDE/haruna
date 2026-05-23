@@ -6,12 +6,14 @@
 
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
     id: root
 
-    title: i18nc("@title:menu", "&Video")
+    title: KI18n.i18nc("@title:menu", "&Video")
 
     Labs.MenuItem {
         icon.name: HarunaApp.actions.toggleDeinterlacingAction.icon.name
@@ -80,7 +82,7 @@ Labs.Menu {
     }
 
     Labs.Menu {
-        title: i18nc("@title:menu", "Adjustments")
+        title: KI18n.i18nc("@title:menu", "Adjustments")
 
         Labs.MenuItem {
             icon.name: HarunaApp.actions.contrastUpAction.icon.name

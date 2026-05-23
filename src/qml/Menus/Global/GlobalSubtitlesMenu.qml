@@ -10,6 +10,8 @@ import QtQml
 import QtQuick
 import Qt.labs.platform as Labs
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Labs.Menu {
@@ -17,12 +19,12 @@ Labs.Menu {
 
     required property MpvVideo m_mpv
 
-    title: i18nc("@title:menu", "&Subtitles")
+    title: KI18n.i18nc("@title:menu", "&Subtitles")
 
     Labs.Menu {
         id: primarySubtitleMenu
 
-        title: i18nc("@title:menu", "Primary Subtitle")
+        title: KI18n.i18nc("@title:menu", "Primary Subtitle")
         enabled: root.m_mpv.subtitleTracksModel.rowCount > 1
 
         Instantiator {
@@ -56,7 +58,7 @@ Labs.Menu {
     Labs.Menu {
         id: secondarySubtitleMenu
 
-        title: i18nc("@title:menu", "Secondary Subtitle")
+        title: KI18n.i18nc("@title:menu", "Secondary Subtitle")
         enabled: root.m_mpv.subtitleTracksModel.rowCount > 1
 
         Instantiator {

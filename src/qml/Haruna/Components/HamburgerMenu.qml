@@ -9,7 +9,9 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 
 ToolButton {
@@ -61,7 +63,7 @@ ToolButton {
             }
 
             Menu {
-                title: i18nc("@action:inmenu", "Recent Files")
+                title: KI18n.i18nc("@action:inmenu", "Recent Files")
 
                 Repeater {
                     model: Models.recentFilesModel
@@ -90,13 +92,13 @@ ToolButton {
 
                 m_mpv: root.m_mpv
                 isPrimarySubtitleMenu: true
-                title: i18nc("@title:menu", "Primary Subtitle")
+                title: KI18n.i18nc("@title:menu", "Primary Subtitle")
             }
 
             SubtitleTracksMenu {
                 m_mpv: root.m_mpv
                 isPrimarySubtitleMenu: false
-                title: i18nc("@title:menu", "Secondary Subtitle")
+                title: KI18n.i18nc("@title:menu", "Secondary Subtitle")
             }
 
 
@@ -105,7 +107,7 @@ ToolButton {
 
                 m_mpv: root.m_mpv
 
-                title: i18nc("@title:menu", "Audio Track")
+                title: KI18n.i18nc("@title:menu", "Audio Track")
                 model: m_mpv.audioTracksModel
                 enabled: m_mpv.audioTracksModel.rowCount > 0
             }
@@ -128,7 +130,7 @@ ToolButton {
             MenuSeparator {}
 
             Menu {
-                title: i18nc("@action:inmenu", "&More")
+                title: KI18n.i18nc("@action:inmenu", "&More")
 
                 FileMenu {}
                 ViewMenu {}

@@ -12,6 +12,8 @@ import QtQuick.Layouts
 import QtQuick.Window
 import Qt5Compat.GraphicalEffects
 
+import org.kde.ki18n
+
 import org.kde.haruna
 import org.kde.haruna.playlist
 import org.kde.haruna.utilities
@@ -245,7 +247,7 @@ MpvItem {
                 anchors.fill: parent
                 anchors.centerIn: parent
 
-                text: i18nc("@info:drag&drop append items", "Add to Playlist")
+                text: KI18n.i18nc("@info:drag&drop append items", "Add to Playlist")
                 elide: Text.ElideRight
                 color: Kirigami.Theme.textColor
                 opacity: dropArea.mouseOnTopPart ? 1 : 0.7
@@ -294,7 +296,7 @@ MpvItem {
                 anchors.fill: parent
                 anchors.centerIn: parent
 
-                text: i18nc("@info:drag&drop play now", "Play Now")
+                text: KI18n.i18nc("@info:drag&drop play now", "Play Now")
                 elide: Text.ElideRight
                 color: Kirigami.Theme.textColor
                 opacity: dropArea.mouseOnBottomPart ? 1 : 0.7
@@ -380,7 +382,7 @@ MpvItem {
             Text {
                 id: loadingText
 
-                text: i18nc("@label:title", "Loading…")
+                text: KI18n.i18nc("@label:title", "Loading…")
                 visible: loadingIndicator.play
 
                 font {

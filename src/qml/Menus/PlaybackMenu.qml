@@ -6,12 +6,14 @@
 
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Menu {
     id: root
 
-    title: i18nc("@title:menu", "&Playback")
+    title: KI18n.i18nc("@title:menu", "&Playback")
 
     MenuItem { action: HarunaApp.actions.playPauseAction }
     MenuItem { action: HarunaApp.actions.stopAction }
@@ -30,7 +32,7 @@ Menu {
     MenuSeparator {}
 
     Menu {
-        title: i18nc("@title:menu", "Seek")
+        title: KI18n.i18nc("@title:menu", "Seek")
         MenuItem { action: HarunaApp.actions.seekForwardSmallAction }
         MenuItem { action: HarunaApp.actions.seekBackwardSmallAction }
 

@@ -11,6 +11,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 
@@ -29,7 +30,7 @@ ApplicationWindow {
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa", "text/x-microdvd"]
 
     visible: true
-    title: mpv.mediaTitle || i18nc("@title:window", "Haruna")
+    title: mpv.mediaTitle || KI18n.i18nc("@title:window", "Haruna")
     width: 1000
     height: 600
     minimumWidth: 400
@@ -410,7 +411,7 @@ ApplicationWindow {
     FileDialog {
         id: fileDialog
 
-        title: i18nc("@title:window", "Select File")
+        title: KI18n.i18nc("@title:window", "Select File")
         currentFolder: GeneralSettings.fileDialogLastLocation
         fileMode: FileDialog.OpenFile
 
@@ -430,7 +431,7 @@ ApplicationWindow {
     FileDialog {
         id: subtitlesFileDialog
 
-        title: i18nc("@title:window", "Select Subtitles File")
+        title: KI18n.i18nc("@title:window", "Select Subtitles File")
         currentFolder: PathUtils.parentUrl(mpv.currentUrl)
         fileMode: FileDialog.OpenFile
         nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
@@ -457,10 +458,10 @@ ApplicationWindow {
         y: 10
         width: Math.min(window.width * 0.9, 600)
         lastText: GeneralSettings.lastUrl
-        buttonText: i18nc("@action:button", "Open")
+        buttonText: KI18n.i18nc("@action:button", "Open")
         warningText: youtube.hasYoutubeDl()
                      ? ""
-                     : i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
+                     : KI18n.i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
 
         onSubmitted: function(url) {
             window.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)

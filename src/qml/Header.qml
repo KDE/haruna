@@ -9,7 +9,9 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQml
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
 import org.kde.haruna.settings
 
@@ -74,7 +76,7 @@ ToolBar {
         ToolButton {
             id: subtitleMenuButton
 
-            text: i18nc("@action:intoolbar", "Subtitles")
+            text: KI18n.i18nc("@action:intoolbar", "Subtitles")
             icon.name: "add-subtitle"
             icon.width: root.buttonSize
             icon.height: root.buttonSize
@@ -98,7 +100,7 @@ ToolBar {
         }
 
         ToolButton {
-            text: i18nc("@action:intoolbar", "Audio")
+            text: KI18n.i18nc("@action:intoolbar", "Audio")
             icon.name: "audio-volume-high"
             icon.width: root.buttonSize
             icon.height: root.buttonSize

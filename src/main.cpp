@@ -13,6 +13,7 @@
 #include <QQuickStyle>
 #include <QQuickWindow>
 
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include <KDSingleApplication>
@@ -44,7 +45,6 @@ int main(int argc, char *argv[])
 
     QApplication qApplication(argc, argv);
     QApplication::setWindowIcon(QIcon::fromTheme(u"haruna"_s));
-    KLocalizedString::setApplicationDomain("haruna");
 
     auto *application = Application::instance();
 
@@ -79,8 +79,11 @@ int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine(&qApplication);
+
+    KLocalizedString::setApplicationDomain("haruna");
+    KLocalization::setupLocalizedContext(&engine);
+
     engine.addImageProvider(u"thumbnail"_s, new ThumbnailImageProvider());
-    engine.rootContext()->setContextObject(new KLocalizedContext(Application::instance()));
     engine.loadFromModule("org.kde.haruna", "Main");
 
     application->setQmlEngine(&engine);

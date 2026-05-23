@@ -9,6 +9,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 
+import org.kde.ki18n
+
 import org.kde.haruna
 
 Loader {
@@ -43,7 +45,7 @@ Loader {
         MenuItem { action: HarunaApp.actions.playNextAction }
         MenuItem { action: HarunaApp.actions.playPreviousAction }
         Menu {
-            title: i18nc("@title:menu", "Playback Speed")
+            title: KI18n.i18nc("@title:menu", "Playback Speed")
             MenuItem { action: HarunaApp.actions.playbackSpeedIncreaseAction }
             MenuItem { action: HarunaApp.actions.playbackSpeedDecreaseAction }
             MenuItem { action: HarunaApp.actions.playbackSpeedResetAction }

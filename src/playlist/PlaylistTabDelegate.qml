@@ -8,6 +8,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.ki18n
+
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 
@@ -158,7 +160,7 @@ TabButton {
             id: tabText
 
             text: root.index === 0
-                      ? i18nc("@label:title name of default playlist tab", "Default")
+                      ? KI18n.i18nc("@label:title name of default playlist tab", "Default")
                       : root.name
             font: root.font
             elide: Text.ElideRight
