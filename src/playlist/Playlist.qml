@@ -820,14 +820,12 @@ Page {
             sourceItem: root.m_mpv
             sourceRect: {
                 var rectTopLeftY = toolbar.visible ? toolbar.height : 0
-                // future proof
-                // let rectBotLeftY = footbar.visible ? footbar.height : 0
                 if (PlaylistSettings.position === "right") {
                     return Qt.rect(
                         root.x,
                         root.m_mpv.y + rectTopLeftY,
                         root.width,
-                        root.height - rectTopLeftY// - rectBotLeftY
+                        root.height - rectTopLeftY
                         )
                 }
                 else {
@@ -835,7 +833,7 @@ Page {
                         root.x,
                         rectTopLeftY,
                         root.width,
-                        root.height - rectTopLeftY// - rectBotLeftY
+                        root.height - rectTopLeftY
                         )
                 }
             }
