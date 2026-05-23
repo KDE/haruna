@@ -6,7 +6,6 @@
 
 cmake_minimum_required(VERSION 3.16...3.30)
 
-cmake_policy(SET CMP0048 NEW)
 project(haruna VERSION 1.8.1 LANGUAGES CXX)
 
 set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src)

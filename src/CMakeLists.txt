@@ -76,8 +76,6 @@ add_subdirectory(youtube)
 set_source_files_properties(qml/Models.qml
     PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
-qt_policy(SET QTP0001 NEW)
-
 qt_add_qml_module(haruna
     URI org.kde.haruna
     VERSION 1.0
