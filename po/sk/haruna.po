@@ -652,12 +652,10 @@ msgid "Volume: %1"
 msgstr "Hlasitosť: %1"
 
 #: src/mpv/mpvitem.cpp:537
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "Časovanie titulkov: %1 sekúnd"
+msgstr "Časovanie titulkov: +%1 sekúnd"
 
 #: src/mpv/mpvitem.cpp:539
 #, kde-format
@@ -2281,7 +2279,7 @@ msgstr "Zobraziť panel ponuky"
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
-msgstr ""
+msgstr "Zobraziť priebeh na ikone v paneli úloh"
 
 #: src/qml/Settings/GeneralSettings.qml:392
 msgctxt "@label:listbox"
@@ -2675,8 +2673,6 @@ msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:407
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Výber formátu"
