@@ -8,7 +8,7 @@
 #define PLAYLISTPROXYMODEL_H
 
 #include <QAbstractProxyModel>
-#include <QtQml/qqmlregistration.h>
+#include <qqmlregistration.h>
 
 class PlaylistProxyModel : public QAbstractProxyModel
 {
@@ -17,10 +17,8 @@ class PlaylistProxyModel : public QAbstractProxyModel
 
 public:
     explicit PlaylistProxyModel(QObject *parent = nullptr);
-    friend class PlaylistFilterProxyModel;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    using QAbstractProxyModel::QAbstractProxyModel;
     void setSourceModel(QAbstractItemModel *sourceModel) override;
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &child) const override;
@@ -30,6 +28,7 @@ public:
     QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
     bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
     void setInsertOffset(uint offset);
+    void onLayoutAboutToBeChanged();
 
 private:
     // Callbacks
@@ -40,7 +39,6 @@ private:
     void onRowsRemoved(const QModelIndex &, int first, int last);
     void onModelAboutToBeReset();
     void onModelReset();
-    void onLayoutAboutToBeChanged();
     void onLayoutChanged();
 
     void resetLayout();

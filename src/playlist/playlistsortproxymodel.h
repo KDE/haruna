@@ -21,7 +21,6 @@ class PlaylistSortProxyModel : public QSortFilterProxyModel
 
 public:
     explicit PlaylistSortProxyModel(QObject *parent = nullptr);
-    friend class PlaylistFilterProxyModel;
 
     // Properties that are mostly unique, ideal for sorting
     // clang-format off
@@ -71,14 +70,28 @@ public:
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
+    Sort sortPreset() const;
     void setSortPreset(Sort sortRole);
     void setSortOrder(Qt::SortOrder order);
     void sortItems();
+    Qt::SortOrder sortingOrder() const;
 
     void addToActiveSortProperties(int sort);
     void addToActiveGroup(Group group);
     void removeFromActiveSortProperties(uint index);
     void removeFromActiveGroup(uint index);
+
+    bool showSections() const;
+    void setShowSections(bool newShowSections);
+    QHash<QString, QStringList> sectionMap() const;
+    void recreateSections();
+
+    PlaylistSortPropertyModel *activeSortProperties() const;
+    PlaylistSortPropertyModel *activeGroups() const;
+    PlaylistSortPropertyProxyModel *availableSortPropertiesProxy() const;
+    PlaylistSortPropertyProxyModel *availableGroupsProxy() const;
+    void setGroupHideBlank(uint index, bool hide);
+    void setSortPropertySortingOrder(uint index, int order);
 
 Q_SIGNALS:
     void groupingChanged();
@@ -89,10 +102,7 @@ private:
 
     void onActiveSortPropertiesChanged();
     void onActiveGroupsChanged();
-    void setGroupHideBlank(uint index, bool hide);
-    void setSortPropertySortingOrder(uint index, int order);
     int compareVariants(const QVariant &l, const QVariant &r, SortProperty::Type type) const;
-    void recreateSections();
     void scheduleSectionRecreation();
     QStringList getSectionLists(const QModelIndex &index);
 

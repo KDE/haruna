@@ -79,7 +79,7 @@ void PlaylistFilterProxyModel::setSearchText(const QString &text)
 
 Sort PlaylistFilterProxyModel::sortPreset()
 {
-    return playlistSortProxyModel()->m_sortPreset;
+    return playlistSortProxyModel()->sortPreset();
 }
 
 void PlaylistFilterProxyModel::setSortPreset(PlaylistSortProxyModel::Sort pSortRole)
@@ -95,7 +95,7 @@ void PlaylistFilterProxyModel::setSortPreset(PlaylistSortProxyModel::Sort pSortR
 
 Qt::SortOrder PlaylistFilterProxyModel::sortOrder()
 {
-    return playlistSortProxyModel()->m_sortingOrder;
+    return playlistSortProxyModel()->sortingOrder();
 }
 
 void PlaylistFilterProxyModel::changeSortOrder(Qt::SortOrder order)
@@ -112,15 +112,15 @@ void PlaylistFilterProxyModel::changeSortOrder(Qt::SortOrder order)
 
 bool PlaylistFilterProxyModel::showSections()
 {
-    return playlistSortProxyModel()->m_showSections;
+    return playlistSortProxyModel()->showSections();
 }
 
 void PlaylistFilterProxyModel::setShowSections(bool split)
 {
-    if (playlistSortProxyModel()->m_showSections == split) {
+    if (playlistSortProxyModel()->showSections() == split) {
         return;
     }
-    playlistSortProxyModel()->m_showSections = split;
+    playlistSortProxyModel()->setShowSections(split);
     playlistSortProxyModel()->recreateSections();
     Q_EMIT showSectionsChanged();
 }
@@ -128,7 +128,7 @@ void PlaylistFilterProxyModel::setShowSections(bool split)
 uint PlaylistFilterProxyModel::getPlayingItem()
 {
     auto *model = playlistModel();
-    return mapFromPlaylistModel(model->m_playingItem).row();
+    return mapFromPlaylistModel(model->playingItem()).row();
 }
 
 void PlaylistFilterProxyModel::setPlayingItem(uint i)
@@ -149,7 +149,7 @@ void PlaylistFilterProxyModel::playNext()
         model->setCurrentShuffledIndex(nextIndex);
         model->setPlayingItem(shuffledIndex);
     } else {
-        auto currentIndex = mapFromPlaylistModel(model->m_playingItem).row();
+        auto currentIndex = mapFromPlaylistModel(model->playingItem()).row();
         auto nextIndex = currentIndex + 1;
         if (nextIndex < rowCount()) {
             setPlayingItem(nextIndex);
@@ -171,7 +171,7 @@ void PlaylistFilterProxyModel::playPrevious()
         model->setCurrentShuffledIndex(previousIndex);
         model->setPlayingItem(shuffledIndex);
     } else {
-        auto currentIndex = mapFromPlaylistModel(model->m_playingItem).row();
+        auto currentIndex = mapFromPlaylistModel(model->playingItem()).row();
         auto previousIndex = currentIndex - 1;
 
         if (previousIndex >= 0) {
@@ -242,7 +242,7 @@ void PlaylistFilterProxyModel::renameFile(uint row)
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [this, row](const QList<QUrl> &urls) {
         auto *model = playlistModel();
         auto sourceRow = mapToPlaylistModel(row).row();
-        auto &item = model->m_playlist[sourceRow];
+        auto &item = model->playlist()[sourceRow];
         item.url = QUrl::fromUserInput(urls.first().path());
         item.filename = urls.first().fileName();
 
@@ -307,7 +307,7 @@ void PlaylistFilterProxyModel::copyFileName(uint row)
 {
     auto *model = playlistModel();
     auto sourceRow = mapToPlaylistModel(row).row();
-    auto item = model->m_playlist.at(sourceRow);
+    auto item = model->playlist().at(sourceRow);
     QGuiApplication::clipboard()->setText(item.filename);
 }
 
@@ -315,7 +315,7 @@ void PlaylistFilterProxyModel::copyFilePath(uint row)
 {
     auto *model = playlistModel();
     auto sourceRow = mapToPlaylistModel(row).row();
-    auto item = model->m_playlist.at(sourceRow);
+    auto item = model->playlist().at(sourceRow);
     QGuiApplication::clipboard()->setText(item.url.toString());
 }
 
@@ -323,7 +323,7 @@ QString PlaylistFilterProxyModel::getFilePath(uint row)
 {
     auto *model = playlistModel();
     auto sourceRow = mapToPlaylistModel(row).row();
-    auto item = model->m_playlist.at(sourceRow);
+    auto item = model->playlist().at(sourceRow);
     return item.url.toString();
 }
 
@@ -619,25 +619,25 @@ bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)
 PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeSortPropertiesModel()
 {
     auto *sortModel = playlistSortProxyModel();
-    return sortModel->m_activeSortProperties.get();
+    return sortModel->activeSortProperties();
 }
 
 PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeGroupModel()
 {
     auto *sortModel = playlistSortProxyModel();
-    return sortModel->m_activeGroups.get();
+    return sortModel->activeGroups();
 }
 
 PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableSortPropertiesProxyModel()
 {
     auto *sortModel = playlistSortProxyModel();
-    return sortModel->m_availableSortPropertiesProxy.get();
+    return sortModel->availableSortPropertiesProxy();
 }
 
 PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableGroupProxyModel()
 {
     auto *sortModel = playlistSortProxyModel();
-    return sortModel->m_availableGroupsProxy.get();
+    return sortModel->availableGroupsProxy();
 }
 
 void PlaylistFilterProxyModel::addToActiveSortProperties(int sort)
@@ -675,12 +675,12 @@ void PlaylistFilterProxyModel::setSortPropertySortingOrder(uint index, int order
 
 QStringList PlaylistFilterProxyModel::getSectionList(const QString &sectionKey) const
 {
-    return playlistSortProxyModel()->m_sectionMap.value(sectionKey);
+    return playlistSortProxyModel()->sectionMap().value(sectionKey);
 }
 
 QString PlaylistFilterProxyModel::playlistName() const
 {
-    return playlistModel()->m_playlistName;
+    return playlistModel()->playlistName();
 }
 
 void PlaylistFilterProxyModel::clear()

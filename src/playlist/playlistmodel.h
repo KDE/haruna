@@ -47,10 +47,6 @@ class PlaylistModel : public QAbstractListModel
 public:
     explicit PlaylistModel(QObject *parent = nullptr);
     ~PlaylistModel();
-    friend class PlaylistMultiProxiesModel;
-    friend class PlaylistFilterProxyModel;
-    friend class PlaylistProxyModel;
-    friend class PlaylistSortProxyModel;
 
     enum Roles {
         NameRole = Qt::UserRole,
@@ -105,42 +101,18 @@ public:
 
     void clear();
     void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
+    void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
     void stop();
 
     uint playingItem() const;
     void setPlayingItem(uint i);
+    void removeItem(uint row);
 
     bool isPlaying() const;
     void setIsPlaying(bool newIsPlaying);
 
     QList<PlaylistItem> playlist() const;
-
-Q_SIGNALS:
-    void itemAdded(uint index, const QString &path, QString playlistName);
-    void playingItemChanged(QString playlistName);
-    void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
-
-private:
-    void appendItem(const QUrl &url);
-    void removeItem(const uint row);
-    void getSiblingItems(const QUrl &url);
-    void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
-    void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
-    void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
-    bool isVideoOrAudioMimeType(const QString &mimeType);
-    void getMetaData(uint i, const QString &path);
-    void onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
-    double getPlaybackPosition(const uint row);
-
-    QList<PlaylistItem> m_playlist;
-    QString m_playlistName{u"Default"};
-    // The flag to check if this is the active playlist.
-    bool m_isPlaying{false};
-    uint m_playingItem{0};
-    QString m_playlistPath;
-    int m_httpItemCounter{0};
-    YouTube youtube;
-    QThreadPool m_threadPool;
+    QString playlistName() const;
 
     // shuffling
     // when shuffling is on, instead of using an m_playlist index to determine
@@ -169,6 +141,31 @@ private:
     std::vector<int> shuffledIndexes() const;
     int currentShuffledIndex() const;
     void setCurrentShuffledIndex(int shuffledIndex);
+
+Q_SIGNALS:
+    void itemAdded(uint index, const QString &path, QString playlistName);
+    void playingItemChanged(QString playlistName);
+    void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
+
+private:
+    void appendItem(const QUrl &url);
+    void getSiblingItems(const QUrl &url);
+    void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
+    void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
+    bool isVideoOrAudioMimeType(const QString &mimeType);
+    void getMetaData(uint i, const QString &path);
+    void onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
+    double getPlaybackPosition(const uint row);
+
+    QList<PlaylistItem> m_playlist;
+    QString m_playlistName{u"Default"};
+    // The flag to check if this is the active playlist.
+    bool m_isPlaying{false};
+    uint m_playingItem{0};
+    QString m_playlistPath;
+    int m_httpItemCounter{0};
+    YouTube youtube;
+    QThreadPool m_threadPool;
 
     std::vector<int> m_shuffledIndexes;
     int m_currentShuffledIndex{-1};

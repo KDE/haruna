@@ -33,8 +33,6 @@ class PlaylistSortPropertyModel : public QAbstractListModel
 
 public:
     explicit PlaylistSortPropertyModel(QObject *parent = nullptr);
-    friend class PlaylistMultiProxiesModel;
-    friend class PlaylistSortProxyModel;
 
     enum Roles {
         LabelRole = Qt::UserRole,
@@ -72,6 +70,8 @@ public:
 
     Q_INVOKABLE bool hasProperty(const int group);
     Q_INVOKABLE void moveSortProperty(int sourceRow, int destinationRow);
+
+    QList<SortProperty> properties() const;
 
 Q_SIGNALS:
     void propertiesChanged();

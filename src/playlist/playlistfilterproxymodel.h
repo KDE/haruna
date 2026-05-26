@@ -27,7 +27,6 @@ class PlaylistFilterProxyModel : public QSortFilterProxyModel
 
 public:
     explicit PlaylistFilterProxyModel(QObject *parent = nullptr);
-    friend class PlaylistMultiProxiesModel;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -119,6 +118,8 @@ public:
     PlaylistSortProxyModel *playlistSortProxyModel() const;
     PlaylistModel *playlistModel() const;
 
+    void saveInternalPlaylist(const QString &path, const QString &playlistName);
+
 Q_SIGNALS:
     void selectionCountChanged();
     void itemCountChanged();
@@ -140,7 +141,6 @@ private:
     // Splits the selection from the given index
     void splitItemSelection(const QModelIndexList &original, int splitRow, bool isTopDown, QModelIndexList &lowerPart, QModelIndexList &upperPart);
     QModelIndexList selectedRows() const;
-    void saveInternalPlaylist(const QString &path, const QString &playlistName);
 
     std::unique_ptr<PlaylistModel> m_playlistModel;
     std::unique_ptr<PlaylistSortProxyModel> m_playlistSortProxyModel;

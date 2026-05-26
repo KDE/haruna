@@ -573,6 +573,11 @@ double PlaylistModel::getPlaybackPosition(const uint row)
     return Database::instance()->playbackPosition(hash) / duration;
 }
 
+QString PlaylistModel::playlistName() const
+{
+    return m_playlistName;
+}
+
 bool PlaylistModel::isPlaying() const
 {
     return m_isPlaying;

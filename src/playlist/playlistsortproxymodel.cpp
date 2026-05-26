@@ -219,7 +219,8 @@ QVariant PlaylistSortProxyModel::data(const QModelIndex &index, int role) const
 bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
 {
     // Compare each group role in order
-    for (const auto &sortProperty : std::as_const(m_activeSortProperties->m_properties)) {
+    const auto properties = m_activeSortProperties->properties();
+    for (const auto &sortProperty : properties) {
         int compare = 0;
 
         // Handle special comparison cases
@@ -285,10 +286,15 @@ void PlaylistSortProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
     connect(this, &QAbstractItemModel::rowsRemoved, this, &PlaylistSortProxyModel::scheduleSectionRecreation);
 }
 
+PlaylistSortProxyModel::Sort PlaylistSortProxyModel::sortPreset() const
+{
+    return m_sortPreset;
+}
+
 void PlaylistSortProxyModel::setSortPreset(Sort preset)
 {
     m_sortPreset = preset;
-    qsizetype size = m_activeSortProperties->m_properties.size();
+    qsizetype size = m_activeSortProperties->properties().size();
     for (auto i = 0; i < size; ++i) {
         removeFromActiveSortProperties(0);
     }
@@ -314,6 +320,11 @@ void PlaylistSortProxyModel::sortItems()
     sort(0, Qt::SortOrder::AscendingOrder);
 }
 
+Qt::SortOrder PlaylistSortProxyModel::sortingOrder() const
+{
+    return m_sortingOrder;
+}
+
 void PlaylistSortProxyModel::addToActiveSortProperties(int sort)
 {
     SortProperty property = m_availableSortProperties->takeSortProperty(sort);
@@ -336,14 +347,14 @@ void PlaylistSortProxyModel::addToActiveGroup(Group group)
 
 void PlaylistSortProxyModel::removeFromActiveSortProperties(uint index)
 {
-    SortProperty property = m_activeSortProperties->m_properties.at(index);
+    SortProperty property = m_activeSortProperties->properties().at(index);
     m_activeSortProperties->removeProperty(index);
     m_availableSortProperties->appendSortProperty(property);
 }
 
 void PlaylistSortProxyModel::removeFromActiveGroup(uint index)
 {
-    SortProperty property = m_activeGroups->m_properties.at(index);
+    SortProperty property = m_activeGroups->properties().at(index);
     m_activeGroups->removeProperty(index);
     if (property.sort == Group::Separator) {
         return;
@@ -353,15 +364,16 @@ void PlaylistSortProxyModel::removeFromActiveGroup(uint index)
 
 void PlaylistSortProxyModel::onActiveSortPropertiesChanged()
 {
-    if (m_activeSortProperties->m_properties.isEmpty()) {
+    const auto properties = m_activeSortProperties->properties();
+    if (properties.isEmpty()) {
         m_sortPreset = Sort::None;
         sortItems();
         recreateSections();
         return;
     }
     // Check if the change is a preset
-    if (m_activeSortProperties->m_properties.size() == 1) {
-        int preset = m_activeSortProperties->m_properties.first().sort;
+    if (properties.size() == 1) {
+        int preset = properties.first().sort;
 
         switch (preset) {
         case Sort::FileName:
@@ -394,7 +406,7 @@ void PlaylistSortProxyModel::onActiveGroupsChanged()
 
 void PlaylistSortProxyModel::setGroupHideBlank(uint index, bool hide)
 {
-    m_activeGroups->m_properties[index].hideBlank = hide;
+    m_activeGroups->properties()[index].hideBlank = hide;
     QModelIndex activeGroupIndex = m_activeGroups->index(index, 0);
     Q_EMIT m_activeGroups->dataChanged(activeGroupIndex, activeGroupIndex);
     onActiveGroupsChanged();
@@ -402,7 +414,7 @@ void PlaylistSortProxyModel::setGroupHideBlank(uint index, bool hide)
 
 void PlaylistSortProxyModel::setSortPropertySortingOrder(uint index, int order)
 {
-    m_activeSortProperties->m_properties[index].order = PlaylistSortPropertyModel::SortOrder(order);
+    m_activeSortProperties->properties()[index].order = PlaylistSortPropertyModel::SortOrder(order);
     QModelIndex activeSortPropertyIndex = m_activeSortProperties->index(index, 0);
     Q_EMIT m_activeSortProperties->dataChanged(activeSortPropertyIndex, activeSortPropertyIndex);
     onActiveSortPropertiesChanged();
@@ -442,7 +454,7 @@ void PlaylistSortProxyModel::recreateSections()
     m_sectionToPtr.clear();
     m_indexToSection.clear();
 
-    if (!m_showSections || m_activeGroups->m_properties.isEmpty()) {
+    if (!m_showSections || m_activeGroups->properties().isEmpty()) {
         Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
         Q_EMIT groupingChanged();
         return;
@@ -509,7 +521,8 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
     };
     // clang-format on
 
-    for (const auto &sortProperty : std::as_const(m_activeGroups->m_properties)) {
+    const auto properties = m_activeGroups->properties();
+    for (const auto &sortProperty : properties) {
         bool hideBlank = sortProperty.hideBlank; // show in the section if and only if it exists
 
         switch (Group(sortProperty.sort)) {
@@ -676,6 +689,41 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
     }
 
     return sectionRows;
+}
+
+QHash<QString, QStringList> PlaylistSortProxyModel::sectionMap() const
+{
+    return m_sectionMap;
+}
+
+PlaylistSortPropertyProxyModel *PlaylistSortProxyModel::availableGroupsProxy() const
+{
+    return m_availableGroupsProxy.get();
+}
+
+PlaylistSortPropertyProxyModel *PlaylistSortProxyModel::availableSortPropertiesProxy() const
+{
+    return m_availableSortPropertiesProxy.get();
+}
+
+PlaylistSortPropertyModel *PlaylistSortProxyModel::activeGroups() const
+{
+    return m_activeGroups.get();
+}
+
+PlaylistSortPropertyModel *PlaylistSortProxyModel::activeSortProperties() const
+{
+    return m_activeSortProperties.get();
+}
+
+bool PlaylistSortProxyModel::showSections() const
+{
+    return m_showSections;
+}
+
+void PlaylistSortProxyModel::setShowSections(bool newShowSections)
+{
+    m_showSections = newShowSections;
 }
 
 #include "moc_playlistsortproxymodel.cpp"
