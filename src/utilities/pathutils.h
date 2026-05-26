@@ -41,6 +41,8 @@ public:
     Q_INVOKABLE void highlightInFileManager(const QString &path);
 
     Q_INVOKABLE bool pathExists(const QString &path);
+    Q_INVOKABLE bool isFile(const QString &path);
+    Q_INVOKABLE bool isDir(const QString &path);
     Q_INVOKABLE QUrl pathToUrl(const QString &path);
     Q_INVOKABLE QString urlToPath(const QUrl &url);
     Q_INVOKABLE QString parentPath(const QString &path);

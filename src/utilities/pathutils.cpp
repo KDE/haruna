@@ -143,6 +143,18 @@ bool PathUtils::pathExists(const QString &path)
     return QFileInfo::exists(path);
 }
 
+bool PathUtils::isFile(const QString &path)
+{
+    QFileInfo fi(path);
+    return fi.isFile();
+}
+
+bool PathUtils::isDir(const QString &path)
+{
+    QFileInfo fi(path);
+    return fi.isDir();
+}
+
 QUrl PathUtils::pathToUrl(const QString &path)
 {
     return QUrl::fromUserInput(path);
