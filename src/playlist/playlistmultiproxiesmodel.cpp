@@ -214,7 +214,7 @@ void PlaylistMultiProxiesModel::addPlaylist(const QString &playlistName, const Q
     }
 
     auto filterModel = std::make_unique<PlaylistFilterProxyModel>();
-    filterModel->playlistModel()->playlistName() = playlistName;
+    filterModel->playlistModel()->setPlaylistName(playlistName);
 
     if (!internalUrl.isEmpty()) {
         filterModel->playlistModel()->addM3uItems(internalUrl, PlaylistModel::Behavior::Append);
@@ -374,7 +374,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
         QString inputText = urls.first().fileName();
         QString playlistName = inputText.first(inputText.length() - 4); // '.m3u' 4 chars
 
-        m_playlistFilterProxyModels.at(pIndex)->playlistModel()->playlistName() = playlistName;
+        m_playlistFilterProxyModels.at(pIndex)->playlistModel()->setPlaylistName(playlistName);
         savePlaylistCache();
         Q_EMIT dataChanged(index(pIndex, 0), index(pIndex, 0));
     });

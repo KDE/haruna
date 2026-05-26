@@ -113,6 +113,7 @@ public:
 
     QList<PlaylistItem> playlist() const;
     QString playlistName() const;
+    void setPlaylistName(const QString &newPlaylistName);
 
     // shuffling
     // when shuffling is on, instead of using an m_playlist index to determine

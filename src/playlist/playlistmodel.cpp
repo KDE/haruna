@@ -578,6 +578,11 @@ QString PlaylistModel::playlistName() const
     return m_playlistName;
 }
 
+void PlaylistModel::setPlaylistName(const QString &newPlaylistName)
+{
+    m_playlistName = newPlaylistName;
+}
+
 bool PlaylistModel::isPlaying() const
 {
     return m_isPlaying;
