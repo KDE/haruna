@@ -22,7 +22,7 @@ Item {
     required property MpvVideo m_mpv
     required property MenuBarLoader m_menuBarLoader
     required property Header m_header
-    required property Loader m_settingsLoader
+    required property SettingsWindow m_settingsLoader
 
     property alias progressBar: progressBar
     property string footerState: isFloating ? "hidden" : "visible"
