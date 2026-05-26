@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 00:43+0000\n"
-"PO-Revision-Date: 2025-10-12 14:56+0200\n"
+"PO-Revision-Date: 2026-05-25 19:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -221,7 +221,7 @@ msgstr "재생/일시 정지"
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
-msgstr ""
+msgstr "정지"
 
 #: src/models/actionsmodel.cpp:200
 #, kde-format
@@ -564,89 +564,67 @@ msgid "Reassign"
 msgstr "재할당"
 
 #: src/models/mouseactionsmodel.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox left mouse button"
-#| msgid "Left"
+#, kde-format
 msgctxt "@label left mouse button"
 msgid "Left"
 msgstr "왼쪽"
 
 #: src/models/mouseactionsmodel.cpp:265
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox right mouse button"
-#| msgid "Right"
+#, kde-format
 msgctxt "@label right mouse button"
 msgid "Right"
 msgstr "오른쪽"
 
 #: src/models/mouseactionsmodel.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox middle mouse button"
-#| msgid "Middle"
+#, kde-format
 msgctxt "@label middle mouse button"
 msgid "Middle"
 msgstr "가운데"
 
 #: src/models/mouseactionsmodel.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox forward mouse button"
-#| msgid "Forward"
+#, kde-format
 msgctxt "@label forward mouse button"
 msgid "Forward"
 msgstr "앞으로"
 
 #: src/models/mouseactionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox back mouse button"
-#| msgid "Back"
+#, kde-format
 msgctxt "@label back mouse button"
 msgid "Back"
 msgstr "뒤로"
 
 #: src/models/mouseactionsmodel.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll up"
-#| msgid "Scroll up"
+#, kde-format
 msgctxt "@label mouse scroll up"
 msgid "ScrollUp"
 msgstr "위로 스크롤"
 
 #: src/models/mouseactionsmodel.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll down"
-#| msgid "Scroll down"
+#, kde-format
 msgctxt "@label mouse scroll down"
 msgid "ScrollDown"
 msgstr "아래로 스크롤"
 
 #: src/models/mouseactionsmodel.cpp:323
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox control modifier key"
-#| msgid "Control"
+#, kde-format
 msgctxt "@label control modifier key"
 msgid "Control"
 msgstr "Control"
 
 #: src/models/mouseactionsmodel.cpp:325
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox shift modifier key"
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
 #: src/models/mouseactionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/models/mouseactionsmodel.cpp:329
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox meta modifier key"
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -674,12 +652,10 @@ msgid "Volume: %1"
 msgstr "음량: %1"
 
 #: src/mpv/mpvitem.cpp:537
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "자막 시간 조정: %1초"
+msgstr "자막 시간 조정: +%1초"
 
 #: src/mpv/mpvitem.cpp:539
 #, kde-format
@@ -697,7 +673,7 @@ msgstr "파일이 없음: %1"
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
-msgstr ""
+msgstr "[%1/%2] %3"
 
 #: src/mpv/mpvitem.cpp:623
 #, kde-format
@@ -741,9 +717,7 @@ msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
 #: src/mpv/mpvitem.cpp:858
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Audio: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -751,17 +725,13 @@ msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
 #: src/mpv/mpvitem.cpp:869
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: None"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "자막: 없음"
 
 #: src/mpv/mpvitem.cpp:874 src/mpv/mpvitem.cpp:890
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -807,20 +777,14 @@ msgid "Sort"
 msgstr "정렬"
 
 #: src/playlist/Playlist.qml:146
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Ascending"
-msgstr "이름, 오름차순"
+msgstr "오름차순"
 
 #: src/playlist/Playlist.qml:163
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:button"
 msgid "Descending"
-msgstr "이름, 오름차순"
+msgstr "내림차순"
 
 #: src/playlist/Playlist.qml:186
 #, fuzzy
@@ -832,13 +796,9 @@ msgid "None"
 msgstr "없음"
 
 #: src/playlist/Playlist.qml:196
-#, fuzzy
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
 msgctxt "@action:button"
 msgid "File Name"
-msgstr "파일 이름: %1"
+msgstr "파일 이름"
 
 #: src/playlist/Playlist.qml:206
 msgctxt "@action:button"
@@ -862,11 +822,9 @@ msgid "Modified Date"
 msgstr "수정자 키"
 
 #: src/playlist/Playlist.qml:236
-#, fuzzy
-#| msgid "File"
 msgctxt "@action:button"
 msgid "File Size"
-msgstr "파일"
+msgstr "파일 크기"
 
 #: src/playlist/Playlist.qml:246
 #, fuzzy
@@ -884,7 +842,7 @@ msgstr ""
 #: src/playlist/Playlist.qml:266
 msgctxt "@action:button"
 msgid "Bitrate"
-msgstr ""
+msgstr "비트 전송률"
 
 #: src/playlist/Playlist.qml:281
 #, fuzzy
@@ -980,12 +938,9 @@ msgid "Open in Thumbnail Generator"
 msgstr ""
 
 #: src/playlist/Playlist.qml:675
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in Browser"
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
-msgstr "브라우저로 열기"
+msgstr "%1에서 열기"
 
 #: src/playlist/Playlist.qml:689
 msgctxt "@action:inmenu"
@@ -1066,9 +1021,6 @@ msgid "Playlist: %1"
 msgstr "재생 목록"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:52
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Sort"
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "정렬"
@@ -1092,18 +1044,12 @@ msgstr "Alt"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:114
 #: src/playlist/PlaylistAdvancedSortWindow.qml:375
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Files"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "파일"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:125
 #: src/playlist/PlaylistAdvancedSortWindow.qml:386
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Audio"
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "오디오"
@@ -1118,20 +1064,14 @@ msgid "Video"
 msgstr "비디오"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:183
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Ascending"
-msgstr "이름, 오름차순"
+msgstr "오름차순"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:196
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Name, ascending"
 msgctxt "@action:inmenu"
 msgid "Descending"
-msgstr "이름, 오름차순"
+msgstr "내림차순"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:314
 msgctxt "@label group"
@@ -1197,13 +1137,10 @@ msgid "Playlists with same name is not allowed: %1"
 msgstr "같은 이름의 재생 목록을 사용할 수 없음: %1"
 
 #: src/playlist/playlistsortproxymodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "placeholder text; %1 is an example of how to display an mpv property"
-#| msgid "Filename: %1"
+#, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
-msgstr "파일 이름: %1"
+msgstr "파일 이름"
 
 #: src/playlist/playlistsortproxymodel.cpp:38
 #, fuzzy, kde-format
@@ -1217,14 +1154,13 @@ msgstr "채도"
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
-msgstr ""
+msgstr "날짜"
 
 #: src/playlist/playlistsortproxymodel.cpp:50
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
-msgstr "파일"
+msgstr "파일 크기"
 
 #: src/playlist/playlistsortproxymodel.cpp:56
 #, kde-format
@@ -1250,7 +1186,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
-msgstr ""
+msgstr "비트 전송률"
 
 #: src/playlist/playlistsortproxymodel.cpp:81
 #, fuzzy, kde-format
@@ -1283,19 +1219,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
-msgstr ""
+msgstr "발매 연도"
 
 #: src/playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
-msgstr ""
+msgstr "장르"
 
 #: src/playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
-msgstr ""
+msgstr "앨범"
 
 #: src/playlist/playlistsortproxymodel.cpp:130
 #, kde-format
@@ -1307,7 +1243,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
-msgstr ""
+msgstr "앨범 아티스트"
 
 #: src/playlist/playlistsortproxymodel.cpp:144
 #, kde-format
@@ -1322,12 +1258,10 @@ msgid "Lyricist"
 msgstr ""
 
 #: src/playlist/playlistsortproxymodel.cpp:158
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Audio Cycle Up"
+#, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
-msgstr "다음 오디오로 전환"
+msgstr "오디오 코덱"
 
 #: src/playlist/playlistsortproxymodel.cpp:165
 #, kde-format
@@ -1336,28 +1270,22 @@ msgid "Framerate"
 msgstr ""
 
 #: src/playlist/playlistsortproxymodel.cpp:172
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Video Move Up"
+#, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
-msgstr "동영상 위로 이동"
+msgstr "비디오 코덱"
 
 #: src/playlist/playlistsortproxymodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Saturation"
+#, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
-msgstr "채도"
+msgstr "방향"
 
 #: src/playlist/playlistsortproxymodel.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Reset Saturation"
+#, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
-msgstr "채도 초기화"
+msgstr "해상도"
 
 #: src/playlist/playlistsortproxymodel.cpp:327
 #, kde-format
@@ -1381,7 +1309,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
-msgstr ""
+msgstr "아티스트 없음"
 
 #: src/playlist/playlistsortproxymodel.cpp:502
 #, kde-format
@@ -1435,7 +1363,7 @@ msgstr "동영상 위로 이동"
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
-msgstr ""
+msgstr "원형"
 
 #: src/playlist/playlistsortproxymodel.cpp:585
 #, fuzzy, kde-format
@@ -1956,7 +1884,7 @@ msgstr ""
 #: src/qml/Settings/AudioSettings.qml:94
 msgctxt "@label:listbox"
 msgid "Mode"
-msgstr ""
+msgstr "모드"
 
 #: src/qml/Settings/AudioSettings.qml:106
 #, fuzzy
@@ -1977,7 +1905,7 @@ msgstr "트랙(&T)"
 #: src/qml/Settings/AudioSettings.qml:118
 msgctxt "@item:listbox replay gain"
 msgid "Album"
-msgstr ""
+msgstr "앨범"
 
 #: src/qml/Settings/AudioSettings.qml:132
 msgctxt "@info:tooltip"
@@ -2008,12 +1936,9 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:247
 #: src/qml/Settings/SubtitlesSettings.qml:302
 #: src/qml/Settings/SubtitlesSettings.qml:377
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Set default value"
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
-msgstr "기본값 설정"
+msgstr "기본값으로 초기화"
 
 #: src/qml/Settings/AudioSettings.qml:195
 msgctxt "@label:spinbox"
@@ -2094,17 +2019,11 @@ msgid "Enable mpv logging"
 msgstr "mpv 로그 활성화"
 
 #: src/qml/Settings/DebugSettings.qml:107
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Open File"
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "파일 열기"
 
 #: src/qml/Settings/DebugSettings.qml:116
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open Containing Folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "포함하는 폴더 열기"
@@ -2438,12 +2357,9 @@ msgstr "기본값"
 #: src/qml/Settings/MouseSettings.qml:51
 msgctxt "@label represents a mouse double click, for example `Right x2`"
 msgid "x2"
-msgstr ""
+msgstr "x2"
 
 #: src/qml/Settings/MouseSettings.qml:93
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Change action"
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "동작 변경"
@@ -2798,8 +2714,6 @@ msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:407
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "형식 선택"
