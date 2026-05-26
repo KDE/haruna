@@ -431,17 +431,36 @@ int PlaylistSortProxyModel::compareVariants(const QVariant &l, const QVariant &r
     case SortProperty::IntType: {
         int a = l.toInt();
         int b = r.toInt();
-        return (a < b) ? -1 : ((a > b) ? 1 : 0);
+
+        if (a < b) {
+            return -1;
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
     }
     case SortProperty::RealType: {
         double a = l.toDouble();
         double b = r.toDouble();
-        return (a < b) ? -1 : ((a > b) ? 1 : 0);
+        if (a < b) {
+            return -1;
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
     }
     case SortProperty::DateType: {
         QDateTime a = l.toDateTime();
         QDateTime b = r.toDateTime();
-        return (a < b) ? -1 : ((a > b) ? 1 : 0);
+        if (a < b) {
+            return -1;
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
     }
     default: {
         return 0;
