@@ -22,6 +22,8 @@ qt_add_qml_module(playlist
     SOURCES
         playlistmodel.h
         playlistmodel.cpp
+        playlistsmanager.h
+        playlistsmanager.cpp
         playlistsortproxymodel.h
         playlistsortproxymodel.cpp
         playlistproxymodel.h
