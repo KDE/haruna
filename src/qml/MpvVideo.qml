@@ -31,6 +31,7 @@ MpvItem {
     signal mousePositionChanged(double x, double y)
     signal openPlaylist()
     signal closePlaylist()
+    signal filesDropped(list<url> urls, int mode)
 
     onPlaybackStateChanged: {
         switch(playbackState) {
@@ -202,7 +203,7 @@ MpvItem {
             }
             if (mouseOnTopPart) {
                 // Append to playlist
-                root.defaultFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Append)
+                root.filesDropped(drop.urls, PlaylistModel.Append)
                 return
             }
             if (mouseOnBottomPart) {
@@ -210,13 +211,11 @@ MpvItem {
                 let isDir = PathUtils.isDir(drop.urls[0])
                 if (drop.urls.length > 1 || isDir) {
                     // More than one file/folder dragged. Or at least one folder dragged.
-                    root.defaultFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Clear)
-                }
-                else {
+                    root.filesDropped(drop.urls, PlaylistModel.Clear)
+                } else {
                     // One file dragged
                     root.window.openFile(drop.urls[0], RecentFilesModel.OpenedFrom.ExternalApp)
                 }
-                return
             }
         }
 

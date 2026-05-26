@@ -212,6 +212,10 @@ ApplicationWindow {
                        : (PlaylistSettings.position === "right" ? playlist.left : window.contentItem.right)
         anchors.top: window.contentItem.top
 
+        onFilesDropped: function(urls: list<url>, mode: int) {
+            defaultFilterProxyModel.addFilesAndFolders(urls, mode)
+        }
+
         onVideoReconfig: {
             window.resizeWindow()
         }
