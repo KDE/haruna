@@ -334,7 +334,7 @@ RowLayout {
                         required property string title
                         required property double startTime
 
-                        property int scrollBarWidth: listView.ScrollBar.vertical.width
+                        property int scrollBarWidth: listView.ScrollBar.vertical?.width ?? 0
 
                         text: `${MiscUtils.formatTime(menuitem.startTime)} - ${menuitem.title}`
                         checked: menuitem.index === root.m_mpv.chapter
