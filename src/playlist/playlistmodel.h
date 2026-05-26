@@ -51,7 +51,6 @@ public:
     friend class PlaylistFilterProxyModel;
     friend class PlaylistProxyModel;
     friend class PlaylistSortProxyModel;
-    friend class MpvItem;
 
     enum Roles {
         NameRole = Qt::UserRole,
@@ -108,8 +107,13 @@ public:
     void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
     void stop();
 
+    uint playingItem() const;
+    void setPlayingItem(uint i);
+
     bool isPlaying() const;
     void setIsPlaying(bool newIsPlaying);
+
+    QList<PlaylistItem> playlist() const;
 
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path, QString playlistName);
@@ -124,7 +128,6 @@ private:
     void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
-    void setPlayingItem(uint i);
     void getMetaData(uint i, const QString &path);
     void onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
     double getPlaybackPosition(const uint row);

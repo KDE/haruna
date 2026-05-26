@@ -16,7 +16,6 @@ class PlaylistMultiProxiesModel : public QAbstractListModel
 
 public:
     explicit PlaylistMultiProxiesModel(QObject *parent = nullptr);
-    friend class MpvItem;
 
     enum Roles {
         NameRole = Qt::UserRole,
@@ -43,15 +42,16 @@ public:
     Q_INVOKABLE void renamePlaylist(uint pIndex);
     Q_INVOKABLE void resetTabView();
 
+    PlaylistFilterProxyModel *activeFilterProxy();
+    PlaylistFilterProxyModel *visibleFilterProxy();
+    PlaylistFilterProxyModel *defaultFilterProxy();
+
 Q_SIGNALS:
     void playingItemChanged();
     void visibleIndexChanged();
     void activeIndexChanged();
 
 private:
-    PlaylistFilterProxyModel *activeFilterProxy();
-    PlaylistFilterProxyModel *visibleFilterProxy();
-    PlaylistFilterProxyModel *defaultFilterProxy();
     PlaylistFilterProxyModel *getFilterProxy(const QString &playlistName);
 
     void addPlaylist(const QString &playlistName, const QUrl &internalUrl);

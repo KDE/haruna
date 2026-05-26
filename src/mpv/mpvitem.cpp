@@ -262,8 +262,8 @@ void MpvItem::setupConnections()
 
     connect(m_playlists.get(), &PlaylistMultiProxiesModel::playingItemChanged, this, [this]() {
         const auto *playlistModel = activeFilterProxyModel()->playlistModel();
-        const auto url = playlistModel->m_playlist.at(playlistModel->m_playingItem).url;
-        const auto mediaTitle = playlistModel->m_playlist.at(playlistModel->m_playingItem).mediaTitle;
+        const auto url = playlistModel->playlist().at(playlistModel->playingItem()).url;
+        const auto mediaTitle = playlistModel->playlist().at(playlistModel->playingItem()).mediaTitle;
         loadFile(url.toString());
         Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::Playlist, mediaTitle);
     });
@@ -350,12 +350,12 @@ void MpvItem::onReady()
         }
     } else {
         // set last session's active playlist as visible
-        m_playlists->setVisibleIndex(m_playlists->m_activeIndex);
+        m_playlists->setVisibleIndex(m_playlists->activeIndex());
 
         if (PlaybackSettings::openLastPlayedFile()) {
-            if (m_playlists->m_activeIndex != 0) {
+            if (m_playlists->activeIndex() != 0) {
                 // restore last session's playing item
-                activeFilterProxyModel()->setPlayingItem(activeFilterProxyModel()->playlistModel()->m_playingItem);
+                activeFilterProxyModel()->setPlayingItem(activeFilterProxyModel()->playlistModel()->playingItem());
             } else {
                 // if both lastPlaylist and lastPlayedFile are set the playlist is loaded
                 // and the lastPlayedFile is searched in the playlist
@@ -781,7 +781,7 @@ void MpvItem::saveTimePosition()
 double MpvItem::loadTimePosition()
 {
     auto *const playlistModel = activeFilterProxyModel()->playlistModel();
-    PlaylistItem item{playlistModel->m_playlist.at(playlistModel->m_playingItem)};
+    PlaylistItem item{playlistModel->playlist().at(playlistModel->playingItem())};
     auto duration{item.duration};
 
     if (qFuzzyCompare(duration, 0.0)) {

@@ -28,7 +28,6 @@ class PlaylistFilterProxyModel : public QSortFilterProxyModel
 public:
     explicit PlaylistFilterProxyModel(QObject *parent = nullptr);
     friend class PlaylistMultiProxiesModel;
-    friend class MpvItem;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -115,6 +114,11 @@ public:
     Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior);
 
+    // Model getters for convenience
+    PlaylistProxyModel *playlistProxyModel() const;
+    PlaylistSortProxyModel *playlistSortProxyModel() const;
+    PlaylistModel *playlistModel() const;
+
 Q_SIGNALS:
     void selectionCountChanged();
     void itemCountChanged();
@@ -129,11 +133,6 @@ Q_SIGNALS:
 private:
     void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
     void shufflePlaylistModel();
-
-    // Model getters for convenience
-    PlaylistProxyModel *playlistProxyModel() const;
-    PlaylistSortProxyModel *playlistSortProxyModel() const;
-    PlaylistModel *playlistModel() const;
 
     QModelIndex mapFromPlaylistModel(uint row) const;
     QModelIndex mapToPlaylistModel(uint row) const;

@@ -481,6 +481,11 @@ bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
     // clang-format on
 }
 
+uint PlaylistModel::playingItem() const
+{
+    return m_playingItem;
+}
+
 void PlaylistModel::setPlayingItem(uint i)
 {
     if (i >= m_playlist.size()) {
@@ -616,6 +621,11 @@ int PlaylistModel::currentShuffledIndex() const
 void PlaylistModel::setCurrentShuffledIndex(int shuffledIndex)
 {
     m_currentShuffledIndex = shuffledIndex;
+}
+
+QList<PlaylistItem> PlaylistModel::playlist() const
+{
+    return m_playlist;
 }
 
 #include "moc_playlistmodel.cpp"
