@@ -511,7 +511,7 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
             }
 
             index = 0;
-            const auto activeGroupProperties = m_playlistFilterProxyModels.at(i)->activeSortPropertiesModel()->properties();
+            const auto activeGroupProperties = m_playlistFilterProxyModels.at(i)->activeGroupModel()->properties();
             for (const auto &property : activeGroupProperties) {
                 QJsonObject groupStruct;
                 groupStruct.insert(u"index", index);
