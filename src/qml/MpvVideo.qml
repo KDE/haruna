@@ -176,7 +176,7 @@ MpvItem {
         onEntered: function (drag) {
             for (var i = 0; i < drag.urls.length; ++i) {
                 let mimeType = MiscUtils.mimeType(drag.urls[i])
-                let isDir = root.defaultFilterProxyModel.isDirectory(drag.urls[i])
+                let isDir = PathUtils.isDir(drag.urls[i])
                 if (mimeType.startsWith("video/") || mimeType.startsWith("audio/") || isDir) {
                     dragMedia = true
                     return
@@ -207,7 +207,7 @@ MpvItem {
             }
             if (mouseOnBottomPart) {
                 // Clear the playlist
-                let isDir = root.defaultFilterProxyModel.isDirectory(drop.urls[0])
+                let isDir = PathUtils.isDir(drop.urls[0])
                 if (drop.urls.length > 1 || isDir) {
                     // More than one file/folder dragged. Or at least one folder dragged.
                     root.defaultFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Clear)
