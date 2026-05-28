@@ -224,6 +224,9 @@ ApplicationWindow {
 
         onFilesDropped: function(urls: list<url>, mode: int) {
             playlist.manager.defaultPlaylist.addFilesAndFolders(urls, mode)
+            if (mode === PlaylistModel.Behavior.Clear) {
+                Models.recentFilesModel.addRecentFile(playlist.manager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
+            }
         }
 
         onVideoReconfig: {
