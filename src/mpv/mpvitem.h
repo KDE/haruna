@@ -253,7 +253,6 @@ private:
     int m_secondarySubtitleId{0};
     int m_videoWidth{0};
     int m_videoHeight{0};
-    QList<QVariant> m_chaptersList;
 
     double m_watchLaterPosition{0.0};
     bool m_isReady{false};

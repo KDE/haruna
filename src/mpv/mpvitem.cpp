@@ -642,9 +642,8 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         break;
     }
     case AsyncIds::ChapterList: {
-        m_chaptersList = data.toList();
         QList<Chapter> chaptersList;
-        for (const auto &chapter : std::as_const(m_chaptersList)) {
+        for (const auto &chapter : data.toList()) {
             const auto map = chapter.toMap();
             Chapter c;
             c.title = map.value(u"title"_s).toString();
@@ -682,16 +681,20 @@ void MpvItem::onChapterChanged()
     }
 
     const QString chaptersToSkip = PlaybackSettings::chaptersToSkip();
-    if (m_chaptersList.count() == 0 || chaptersToSkip == QString()) {
+    if (m_chaptersModel->rowCount() == 0 || chaptersToSkip == QString()) {
         return;
     }
 
     const QStringList words = chaptersToSkip.split(u","_s);
-    auto ch = m_chaptersList.value(chapter()).toMap();
-    auto title = ch.value(u"title"_s).toString();
-    for (int i = 0; i < words.count(); ++i) {
-        QString word = words.at(i).toLower().simplified();
-        if (!ch.isEmpty() && title.contains(word, Qt::CaseInsensitive)) {
+    if (words.isEmpty()) {
+        return;
+    }
+
+    const auto modelIndex = m_chaptersModel->index(chapter(), 0);
+    const auto title = m_chaptersModel->data(modelIndex, ChaptersModel::Roles::TitleRole).toString();
+    for (const auto &word : words) {
+        const auto _word = word.simplified();
+        if (title.contains(_word, Qt::CaseInsensitive)) {
             command({u"add"_s, u"chapter"_s, u"1"_s});
             if (PlaybackSettings::showOsdOnSkipChapters()) {
                 Q_EMIT osdMessage(i18nc("@info:tooltip osd", "Skipped chapter: %1", title));
