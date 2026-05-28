@@ -33,6 +33,8 @@ public:
     void setPlaylists(PlaylistMultiProxiesModel *model);
 
     Q_INVOKABLE void initialize(QList<QUrl> urls = {});
+    Q_INVOKABLE void playNext();
+    Q_INVOKABLE void playPrevious();
 
 Q_SIGNALS:
     void playingItemChanged(const PlaylistItem &playlistItem);

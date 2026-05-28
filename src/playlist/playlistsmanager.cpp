@@ -82,3 +82,13 @@ void PlaylistsManager::initialize(const QList<QUrl> urls)
         defaultPlaylist()->setPlayingItem(0);
     }
 }
+
+void PlaylistsManager::playNext()
+{
+    activePlaylist()->playNext();
+}
+
+void PlaylistsManager::playPrevious()
+{
+    activePlaylist()->playPrevious();
+}

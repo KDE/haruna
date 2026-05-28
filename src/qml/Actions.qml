@@ -177,7 +177,7 @@ Item {
         }
 
         function onPlayNextAction() {
-            root.playlistsManager.activePlaylist.playNext()
+            root.playlistsManager.playNext()
         }
 
         function onStopAction() {
@@ -185,7 +185,7 @@ Item {
         }
 
         function onPlayPreviousAction() {
-            root.playlistsManager.activePlaylist.playPrevious()
+            root.playlistsManager.playPrevious()
         }
 
         function onQuitApplicationAction() {
