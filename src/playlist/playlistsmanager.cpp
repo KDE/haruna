@@ -92,3 +92,8 @@ void PlaylistsManager::playPrevious()
 {
     activePlaylist()->playPrevious();
 }
+
+QString PlaylistsManager::activeItemPath()
+{
+    return activePlaylist()->getFilePath(activePlaylist()->getPlayingItem());
+}

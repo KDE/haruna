@@ -35,6 +35,7 @@ public:
     Q_INVOKABLE void initialize(QList<QUrl> urls = {});
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
+    Q_INVOKABLE QString activeItemPath();
 
 Q_SIGNALS:
     void playingItemChanged(const PlaylistItem &playlistItem);
