@@ -178,6 +178,7 @@ Item {
 
         function onPlayNextAction() {
             root.playlistsManager.playNext()
+            Models.recentFilesModel.addRecentFile(root.playlistsManager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
         }
 
         function onStopAction() {
@@ -186,6 +187,7 @@ Item {
 
         function onPlayPreviousAction() {
             root.playlistsManager.playPrevious()
+            Models.recentFilesModel.addRecentFile(root.playlistsManager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
         }
 
         function onQuitApplicationAction() {

@@ -361,11 +361,10 @@ void MpvItem::onEndFile(const QString &reason)
 
 void MpvItem::onEndOfFileReached()
 {
-    auto *const playlistModel = playlistsManager()->activePlaylist();
-
     switch (endOfFileAction()) {
     case EndOfFileAction::PlayNext:
-        playlistModel->playNext();
+        playlistsManager()->playNext();
+        Q_EMIT eofPlayNext();
         break;
     case EndOfFileAction::Replay:
         setPropertyBlocking(MpvProperties::self()->Position, 0);

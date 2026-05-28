@@ -203,7 +203,7 @@ Q_SIGNALS:
     void videoHeightChanged();
     void eofReached();
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
-
+    void eofPlayNext();
     void osdMessage(const QString &text);
 
     // signals used for mpris

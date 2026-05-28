@@ -230,6 +230,10 @@ ApplicationWindow {
             window.resizeWindow()
         }
 
+        onEofPlayNext: {
+            Models.recentFilesModel.addRecentFile(playlist.manager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
+        }
+
         onOsdMessage: function(text) {
             osd.message(text);
         }

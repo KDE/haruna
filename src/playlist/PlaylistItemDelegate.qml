@@ -216,6 +216,7 @@ Item {
                 if (!PlaylistSettings.openWithSingleClick) {
                     setPlayingItem(root.index)
                     root.selectItem(root.index, PlaylistFilterProxyModel.Clear)
+                    Models.recentFilesModel.addRecentFile(root.playlistsManager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
                 }
             }
         }
