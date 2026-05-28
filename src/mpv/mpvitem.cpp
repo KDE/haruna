@@ -361,38 +361,54 @@ void MpvItem::onEndFile(const QString &reason)
 
 void MpvItem::onEndOfFileReached()
 {
-    auto *playlistModel = playlistsManager()->activePlaylist();
-    const auto behavior = PlaylistSettings::playbackBehavior();
-    if (behavior == u"StopAfterLast"_s) {
-        uint currentItem = playlistModel->getPlayingItem();
-        if (playlistModel->isLastItem(currentItem)) {
-            setPropertyBlocking(MpvProperties::self()->Position, 0);
-            setPropertyBlocking(MpvProperties::self()->Pause, true);
-            stop();
-            return;
-        }
-    }
+    auto *const playlistModel = playlistsManager()->activePlaylist();
 
-    if (behavior == u"RepeatItem"_s) {
+    switch (endOfFileAction()) {
+    case EndOfFileAction::PlayNext:
+        playlistModel->playNext();
+        break;
+    case EndOfFileAction::Replay:
         setPropertyBlocking(MpvProperties::self()->Position, 0);
         setPropertyBlocking(MpvProperties::self()->Pause, false);
-        return;
+        break;
+    case EndOfFileAction::Stop:
+        stop();
+        break;
+    default:
+        stop();
+        break;
+    }
+}
+
+MpvItem::EndOfFileAction MpvItem::endOfFileAction() const
+{
+    auto *const playlistModel = playlistsManager()->activePlaylist();
+    const auto behavior = PlaylistSettings::playbackBehavior();
+    if (behavior == u"RepeatItem"_s) {
+        return EndOfFileAction::Replay;
     }
 
     if (behavior == u"StopAfterItem"_s) {
-        setPropertyBlocking(MpvProperties::self()->Position, 0);
-        setPropertyBlocking(MpvProperties::self()->Pause, true);
-        stop();
-        return;
+        return EndOfFileAction::Stop;
     }
 
-    if (behavior == u"RepeatPlaylist"_s && playlistModel->rowCount() == 1) {
-        setPropertyBlocking(MpvProperties::self()->Position, 0);
-        setPropertyBlocking(MpvProperties::self()->Pause, false);
-        return;
+    if (behavior == u"StopAfterLast"_s) {
+        if (playlistModel->isLastItem(playlistModel->getPlayingItem())) {
+            return EndOfFileAction::Stop;
+        }
+
+        return EndOfFileAction::PlayNext;
     }
 
-    playlistModel->playNext();
+    if (behavior == u"RepeatPlaylist"_s) {
+        if (playlistModel->rowCount() == 1) {
+            return EndOfFileAction::Replay;
+        }
+
+        return EndOfFileAction::PlayNext;
+    }
+
+    return EndOfFileAction::Stop;
 }
 
 void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)

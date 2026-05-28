@@ -55,6 +55,12 @@ public:
     };
     Q_ENUM(TrackType)
 
+    enum class EndOfFileAction {
+        PlayNext,
+        Replay,
+        Stop,
+    };
+
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     TracksModel *audioTracksModel() const;
 
@@ -218,6 +224,7 @@ private:
     void onFileLoaded();
     void onEndFile(const QString &reason);
     void onEndOfFileReached();
+    MpvItem::EndOfFileAction endOfFileAction() const;
     void onPropertyChanged(const QString &property, const QVariant &value);
     void saveTimePosition();
     double loadTimePosition();
