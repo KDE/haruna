@@ -11,6 +11,7 @@ class PlaylistsManager : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
+
 public:
     explicit PlaylistsManager(QObject *parent = nullptr);
 
@@ -34,7 +35,7 @@ public:
     Q_INVOKABLE void initialize(QList<QUrl> urls = {});
 
 Q_SIGNALS:
-    void playingItemChanged();
+    void playingItemChanged(const PlaylistItem &playlistItem);
 
 private:
     std::unique_ptr<PlaylistMultiProxiesModel> m_playlists = std::make_unique<PlaylistMultiProxiesModel>(nullptr);

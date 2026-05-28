@@ -683,6 +683,11 @@ QString PlaylistFilterProxyModel::playlistName() const
     return playlistModel()->playlistName();
 }
 
+void PlaylistFilterProxyModel::setIsPlaying(bool newIsPlaying)
+{
+    playlistModel()->setIsPlaying(newIsPlaying);
+}
+
 void PlaylistFilterProxyModel::clear()
 {
     playlistModel()->clear();

@@ -29,6 +29,13 @@ ApplicationWindow {
     property int previousVisibility: Window.Windowed
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa", "text/x-microdvd"]
 
+    function initPlaylist() {
+        if (!playlist.isReady || !mpv.isReady) {
+            return
+        }
+        playlist.manager.initialize()
+    }
+
     visible: true
     title: mpv.mediaTitle || KI18n.i18nc("@title:window", "Haruna")
     width: 1000
@@ -200,6 +207,8 @@ ApplicationWindow {
     MpvVideo {
         id: mpv
 
+        playlistsManager: playlist.manager
+
         width: window.contentItem.width
         height: window.isFullScreen()
                 ? window.contentItem.height
@@ -213,7 +222,7 @@ ApplicationWindow {
         anchors.top: window.contentItem.top
 
         onFilesDropped: function(urls: list<url>, mode: int) {
-            defaultFilterProxyModel.addFilesAndFolders(urls, mode)
+            playlist.manager.defaultPlaylist.addFilesAndFolders(urls, mode)
         }
 
         onVideoReconfig: {
@@ -228,10 +237,14 @@ ApplicationWindow {
             osd.message(text);
         }
 
+        onIsReadyChanged: {
+            osd.active = true
+            window.initPlaylist()
+        }
+
         Osd {
             id: osd
 
-            active: mpv.isReady
             maxWidth: mpv.width
         }
 
@@ -260,11 +273,18 @@ ApplicationWindow {
     Playlist {
         id: playlist
 
+        property bool isReady: false
+
         m_mpv: mpv
         m_advancedSortWindowLoader: advancedSortWindowLoader
         height: mpv.height
         mainWindowWidth: window.width
         fsScale: window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
+
+        Component.onCompleted: {
+            isReady = true
+            window.initPlaylist()
+        }
 
         Connections {
             target: actions
@@ -303,6 +323,7 @@ ApplicationWindow {
         anchors.bottom: window.contentItem.bottom
 
         m_mpv: mpv
+        playlistsManager: playlist.manager
         m_menuBarLoader: menuBarLoader
         m_header: header
         m_settingsLoader: settingsLoader
@@ -312,6 +333,7 @@ ApplicationWindow {
         id: actions
 
         m_mpv: mpv
+        playlistsManager: playlist.manager
         m_mpvContextMenuLoader: mpvContextMenuLoader
         m_osd: osd
         m_footer: footer
@@ -364,7 +386,7 @@ ApplicationWindow {
         active: false
         asynchronous: true
         sourceComponent: PlaylistAdvancedSortWindow {
-            m_mpv: mpv
+            playlistsManager: playlist.manager
         }
 
         function openSortWindow() : void {
@@ -488,7 +510,7 @@ ApplicationWindow {
 
     function openFile(path: string, openedFrom: int) : void {
         Models.recentFilesModel.addRecentFile(path, openedFrom)
-        mpv.defaultFilterProxyModel.addItem(path, PlaylistModel.Clear)
+        playlist.manager.defaultPlaylist.addItem(path, PlaylistModel.Clear)
     }
 
     function isFullScreen() : bool {

@@ -19,7 +19,7 @@ import org.kde.haruna.playlist
 Kirigami.ApplicationWindow {
     id: root
 
-    required property MpvItem m_mpv
+    required property PlaylistsManager playlistsManager
 
     width: 550
     height: 600
@@ -42,7 +42,7 @@ Kirigami.ApplicationWindow {
             Layout.columnSpan: 2
             headingLevel: 1
             text: KI18n.i18nc("@label which playlist is affected, %1 is the playlist name",
-                        "Playlist: %1", root.m_mpv.visibleFilterProxyModel.playlistName())
+                        "Playlist: %1", root.playlistsManager.visiblePlaylist.playlistName())
             topMargin: Kirigami.Units.smallSpacing
         }
 
@@ -63,12 +63,12 @@ Kirigami.ApplicationWindow {
             Layout.fillWidth: true
 
             onTextChanged: {
-                var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                 model.searchText = text
             }
 
             Component.onCompleted: {
-                var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                 text = model.searchText
             }
 
@@ -103,7 +103,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu all", "All")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.All
                     }
 
@@ -114,7 +114,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu file", "File")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.FileCategory
                     }
 
@@ -125,7 +125,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu audio", "Audio")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.AudioCategory
                     }
 
@@ -136,7 +136,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu video", "Video")
 
                     onTriggered: {
-                        const model = root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                        const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.VideoCategory
                     }
 
@@ -154,7 +154,7 @@ Kirigami.ApplicationWindow {
             actions: [
                 Kirigami.Action {
                     text: {
-                        switch(root.m_mpv.visibleFilterProxyModel.sortOrder){
+                        switch(root.playlistsManager.visiblePlaylist.sortOrder){
                             case Qt.AscendingOrder:
                             return actionAscending.text
                             case Qt.DescendingOrder:
@@ -165,7 +165,7 @@ Kirigami.ApplicationWindow {
                     }
 
                     icon.name: {
-                        switch(root.m_mpv.visibleFilterProxyModel.sortOrder){
+                        switch(root.playlistsManager.visiblePlaylist.sortOrder){
                             case Qt.AscendingOrder:
                             return "view-sort-ascending-name"
                             case Qt.DescendingOrder:
@@ -183,11 +183,11 @@ Kirigami.ApplicationWindow {
                         text: KI18n.i18nc("@action:inmenu", "Ascending")
                         autoExclusive: true
                         checkable: true
-                        checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.AscendingOrder
+                        checked: root.playlistsManager.visiblePlaylist.sortOrder === Qt.AscendingOrder
                         icon.name: "view-sort-ascending-name"
 
                         onTriggered: {
-                            root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.AscendingOrder
+                            root.playlistsManager.visiblePlaylist.sortOrder = Qt.AscendingOrder
                         }
                     }
                     Kirigami.Action {
@@ -196,11 +196,11 @@ Kirigami.ApplicationWindow {
                         text: KI18n.i18nc("@action:inmenu", "Descending")
                         autoExclusive: true
                         checkable: true
-                        checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.DescendingOrder
+                        checked: root.playlistsManager.visiblePlaylist.sortOrder === Qt.DescendingOrder
                         icon.name: "view-sort-descending-name"
 
                         onTriggered: {
-                            root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.DescendingOrder
+                            root.playlistsManager.visiblePlaylist.sortOrder = Qt.DescendingOrder
                         }
                     }
                 }
@@ -238,7 +238,7 @@ Kirigami.ApplicationWindow {
                 isGroup: false
 
                 anchors.fill: parent
-                model: root.m_mpv.visibleFilterProxyModel.availableSortPropertiesProxyModel()
+                model: root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                 delegate: benchedItemDelegate
 
                 displaced: Transition {
@@ -286,7 +286,7 @@ Kirigami.ApplicationWindow {
                 isGroup: false
 
                 anchors.fill: parent
-                model: root.m_mpv.visibleFilterProxyModel.activeSortPropertiesModel()
+                model: root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
                 delegate: benchedItemDelegate
 
                 displaced: Transition {
@@ -324,12 +324,12 @@ Kirigami.ApplicationWindow {
             Layout.fillWidth: true
 
             onTextChanged: {
-                var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                 model.searchText = text
             }
 
             Component.onCompleted: {
-                var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                 text = model.searchText
             }
 
@@ -364,7 +364,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu all", "All")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.All
                     }
 
@@ -375,7 +375,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu file", "File")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.FileCategory
                     }
 
@@ -386,7 +386,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu audio", "Audio")
 
                     onTriggered: {
-                        var model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.AudioCategory
                     }
 
@@ -397,7 +397,7 @@ Kirigami.ApplicationWindow {
                     text: KI18n.i18nc("@action:inmenu video", "Video")
 
                     onTriggered: {
-                        const model = root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                        const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                         model.filterCategory = PlaylistSortPropertyModel.VideoCategory
                     }
 
@@ -410,10 +410,10 @@ Kirigami.ApplicationWindow {
             Layout.margins: Kirigami.Units.largeSpacing
             CheckBox {
                 text: KI18n.i18nc("@action:inmenu", "Show Sections")
-                checked: root.m_mpv.visibleFilterProxyModel.showSections
+                checked: root.playlistsManager.visiblePlaylist.showSections
 
                 onCheckedChanged: {
-                    root.m_mpv.visibleFilterProxyModel.showSections = checked
+                    root.playlistsManager.visiblePlaylist.showSections = checked
                 }
 
             }
@@ -457,7 +457,7 @@ Kirigami.ApplicationWindow {
                 isGroup: true
 
                 anchors.fill: parent
-                model: root.m_mpv.visibleFilterProxyModel.availableGroupProxyModel()
+                model: root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                 delegate: benchedItemDelegate
 
                 displaced: Transition {
@@ -511,7 +511,7 @@ Kirigami.ApplicationWindow {
                     isGroup: true
 
                     anchors.fill: parent
-                    model: root.m_mpv.visibleFilterProxyModel.activeGroupModel()
+                    model: root.playlistsManager.visiblePlaylist.activeGroupModel()
                     delegate: benchedItemDelegate
 
                     displaced: Transition {
@@ -534,7 +534,7 @@ Kirigami.ApplicationWindow {
                 Layout.alignment: Qt.AlignRight
 
                 onClicked: {
-                    root.m_mpv.visibleFilterProxyModel.addToActiveGroup(PlaylistSortProxyModel.Separator)
+                    root.playlistsManager.visiblePlaylist.addToActiveGroup(PlaylistSortProxyModel.Separator)
                 }
             }
 
@@ -597,10 +597,10 @@ Kirigami.ApplicationWindow {
 
                         onMoveRequested: function(oldIndex, newIndex) {
                             if (itemDelegate.isGroup) {
-                                var model = root.m_mpv.visibleFilterProxyModel.activeGroupModel()
+                                var model = root.playlistsManager.visiblePlaylist.activeGroupModel()
                             }
                             else {
-                                var model = root.m_mpv.visibleFilterProxyModel.activeSortPropertiesModel()
+                                var model = root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
                             }
                             model.moveSortProperty(oldIndex, newIndex)
                         }
@@ -665,16 +665,16 @@ Kirigami.ApplicationWindow {
                                 case Qt.LeftButton:
                                     if (itemDelegate.isGroup) {
                                         if (itemDelegate.isActiveModel) {
-                                            root.m_mpv.visibleFilterProxyModel.removeFromActiveGroup(itemDelegate.index)
+                                            root.playlistsManager.visiblePlaylist.removeFromActiveGroup(itemDelegate.index)
                                         } else {
-                                            root.m_mpv.visibleFilterProxyModel.addToActiveGroup(itemDelegate.sort)
+                                            root.playlistsManager.visiblePlaylist.addToActiveGroup(itemDelegate.sort)
                                         }
                                     }
                                     else {
                                         if (itemDelegate.isActiveModel) {
-                                            root.m_mpv.visibleFilterProxyModel.removeFromActiveSortProperties(itemDelegate.index)
+                                            root.playlistsManager.visiblePlaylist.removeFromActiveSortProperties(itemDelegate.index)
                                         } else {
-                                            root.m_mpv.visibleFilterProxyModel.addToActiveSortProperties(itemDelegate.sort)
+                                            root.playlistsManager.visiblePlaylist.addToActiveSortProperties(itemDelegate.sort)
                                         }
                                     }
                                 }
@@ -716,18 +716,18 @@ Kirigami.ApplicationWindow {
 
                         onClicked: {
                             if (itemDelegate.isGroup) {
-                                root.m_mpv.visibleFilterProxyModel.setGroupHideBlank(itemDelegate.index, !itemDelegate.hideBlank)
+                                root.playlistsManager.visiblePlaylist.setGroupHideBlank(itemDelegate.index, !itemDelegate.hideBlank)
                                 return
                             } else {
                                 switch(itemDelegate.order){
                                     case (PlaylistSortPropertyModel.Ascending):
-                                        root.m_mpv.visibleFilterProxyModel.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Descending)
+                                        root.playlistsManager.visiblePlaylist.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Descending)
                                         return
                                     case (PlaylistSortPropertyModel.Descending):
-                                        root.m_mpv.visibleFilterProxyModel.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.SameAsPrimary)
+                                        root.playlistsManager.visiblePlaylist.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.SameAsPrimary)
                                         return
                                     case (PlaylistSortPropertyModel.SameAsPrimary):
-                                        root.m_mpv.visibleFilterProxyModel.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Ascending)
+                                        root.playlistsManager.visiblePlaylist.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Ascending)
                                         return
                                     default:
                                         return

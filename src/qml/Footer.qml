@@ -14,12 +14,14 @@ import org.kde.ki18n
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.settings
 
 Item {
     id: root
 
     required property MpvVideo m_mpv
+    required property PlaylistsManager playlistsManager
     required property MenuBarLoader m_menuBarLoader
     required property Header m_header
     required property SettingsWindow m_settingsLoader
@@ -159,7 +161,7 @@ Item {
                     icon.height: root.buttonSize
                     display: AbstractButton.IconOnly
                     focusPolicy: Qt.NoFocus
-                    enabled: root.m_mpv.activeFilterProxyModel.itemCount > 1
+                    enabled: root.playlistsManager.activePlaylist.itemCount > 1
 
                     onClicked: HarunaApp.actions.playPreviousAction.trigger()
 
@@ -176,7 +178,7 @@ Item {
                     icon.height: root.buttonSize
                     display: AbstractButton.IconOnly
                     focusPolicy: Qt.NoFocus
-                    enabled: root.m_mpv.activeFilterProxyModel.itemCount > 1
+                    enabled: root.playlistsManager.activePlaylist.itemCount > 1
 
                     onClicked: HarunaApp.actions.playNextAction.trigger()
 

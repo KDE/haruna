@@ -24,7 +24,9 @@ Item {
     required property bool isSelected
     required property string section
     required property real playbackPosition
+
     required property MpvVideo m_mpv
+    required property PlaylistsManager playlistsManager
 
     property alias contentItem: contentItem.data
     property alias dragRect: backgroundRect
@@ -109,7 +111,7 @@ Item {
             if (!containsDrag) {
                 return
             }
-            root.m_mpv.visibleFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Insert, root.index)
+            root.playlistsManager.visiblePlaylist.addFilesAndFolders(drop.urls, PlaylistModel.Insert, root.index)
         }
     }
 
@@ -219,8 +221,8 @@ Item {
         }
 
         function scrollToPlayingItem() {
-            if (root.m_mpv.visibleFilterProxyModel === root.m_mpv.activeFilterProxyModel) {
-                const index = root.m_mpv.visibleFilterProxyModel.getPlayingItem()
+            if (root.playlistsManager.visiblePlaylist === root.m_mpv.activeFilterProxyModel) {
+                const index = root.playlistsManager.visiblePlaylist.getPlayingItem()
                 root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
             }
         }
@@ -230,7 +232,7 @@ Item {
         }
 
         function setPlayingItem(pIndex) {
-            root.m_mpv.visibleFilterProxyModel.setPlayingItem(pIndex)
+            root.playlistsManager.visiblePlaylist.setPlayingItem(pIndex)
         }
     }
 
@@ -273,11 +275,11 @@ Item {
     }
 
     function moveItems(pFrom, pTo) {
-        root.m_mpv.visibleFilterProxyModel.moveItems(pFrom, pTo)
+        root.playlistsManager.visiblePlaylist.moveItems(pFrom, pTo)
     }
 
     function selectItem(pIndex, pSelectionType) {
-        root.m_mpv.visibleFilterProxyModel.selectItem(pIndex, pSelectionType)
+        root.playlistsManager.visiblePlaylist.selectItem(pIndex, pSelectionType)
     }
 
     function cacheItem() {

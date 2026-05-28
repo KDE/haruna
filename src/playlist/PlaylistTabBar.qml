@@ -17,7 +17,7 @@ import org.kde.haruna
 TabBar {
     id: root
 
-    required property MpvVideo m_mpv
+    required property PlaylistsManager playlistsManager
 
     function openContextMenu(tab) {
         tab = tab as PlaylistTabDelegate
@@ -44,19 +44,10 @@ TabBar {
 
     clip: true
 
+    currentIndex: root.playlistsManager.playlists.visibleIndex
     onCurrentIndexChanged: {
-        root.m_mpv.playlists.visibleIndex = currentIndex
+        root.playlistsManager.playlists.visibleIndex = currentIndex
     }
-
-    // This connection is only necessary for the startup. If the last played item is inside
-    // an internal tab, then the TabBar should set its current index to that tab.
-    Connections {
-        target: root.m_mpv.playlists
-        function onVisibleIndexChanged() {
-            root.currentIndex = root.m_mpv.playlists.visibleIndex
-        }
-    }
-
 
     Loader {
         id: tabMenuLoader
@@ -72,13 +63,13 @@ TabBar {
                 text: KI18n.i18nc("@action:inmenu", "Rename")
                 icon.name: "edit-rename"
                 visible: tabMenuLoader.row > 0
-                onClicked: root.m_mpv.playlists.renamePlaylist(tabMenuLoader.row)
+                onClicked: root.playlistsManager.playlists.renamePlaylist(tabMenuLoader.row)
             }
             MenuItem {
                 text: KI18n.i18nc("@action:inmenu", "Remove")
                 icon.name: "remove"
                 visible: tabMenuLoader.row > 0
-                onClicked: root.m_mpv.playlists.removePlaylist(tabMenuLoader.row)
+                onClicked: root.playlistsManager.playlists.removePlaylist(tabMenuLoader.row)
             }
 
             MenuSeparator {
@@ -87,7 +78,7 @@ TabBar {
 
             // Playlists
             Instantiator {
-                model: root.m_mpv.playlists
+                model: root.playlistsManager.playlists
                 delegate: MenuItem {
                     required property int index
                     required property string name

@@ -106,6 +106,7 @@ public:
     Q_INVOKABLE void setSortPropertySortingOrder(uint index, int order) const;
     Q_INVOKABLE QStringList getSectionList(const QString &sectionKey) const;
     Q_INVOKABLE QString playlistName() const;
+    Q_INVOKABLE void setIsPlaying(bool newIsPlaying);
 
     // PlaylistModel
     Q_INVOKABLE void clear();

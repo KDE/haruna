@@ -15,10 +15,9 @@
 #include "recentfilesmodel.h"
 
 class ChaptersModel;
-class PlaylistFilterProxyModel;
-class PlaylistMultiProxiesModel;
 class TracksModel;
 class MpvRenderer;
+class PlaylistsManager;
 
 class MpvItem : public MpvAbstractItem
 {
@@ -56,19 +55,6 @@ public:
     };
     Q_ENUM(TrackType)
 
-    Q_PROPERTY(PlaylistFilterProxyModel *activeFilterProxyModel READ activeFilterProxyModel NOTIFY activeFilterProxyModelChanged)
-    PlaylistFilterProxyModel *activeFilterProxyModel();
-
-    Q_PROPERTY(PlaylistFilterProxyModel *visibleFilterProxyModel READ visibleFilterProxyModel NOTIFY visibleFilterProxyModelChanged)
-    PlaylistFilterProxyModel *visibleFilterProxyModel();
-
-    Q_PROPERTY(PlaylistFilterProxyModel *defaultFilterProxyModel READ defaultFilterProxyModel NOTIFY defaultFilterProxyModelChanged)
-    PlaylistFilterProxyModel *defaultFilterProxyModel();
-
-    Q_PROPERTY(PlaylistMultiProxiesModel *playlists READ playlists WRITE setPlaylists NOTIFY playlistsChanged)
-    PlaylistMultiProxiesModel *playlists();
-    void setPlaylists(PlaylistMultiProxiesModel *model);
-
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     TracksModel *audioTracksModel() const;
 
@@ -78,6 +64,10 @@ public:
     Q_PROPERTY(ChaptersModel *chaptersModel READ chaptersModel WRITE setChaptersModel NOTIFY chaptersModelChanged)
     ChaptersModel *chaptersModel() const;
     void setChaptersModel(ChaptersModel *_chaptersModel);
+
+    Q_PROPERTY(PlaylistsManager *playlistsManager READ playlistsManager WRITE setPlaylistsManager NOTIFY playlistsManagerChanged FINAL REQUIRED)
+    PlaylistsManager *playlistsManager() const;
+    void setPlaylistsManager(PlaylistsManager *newPlaylistsManager);
 
     Q_PROPERTY(QString mediaTitle READ mediaTitle NOTIFY mediaTitleChanged)
     QString mediaTitle();
@@ -183,14 +173,8 @@ public:
 Q_SIGNALS:
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
-    void activeFilterProxyModelChanged();
-    void visibleFilterProxyModelChanged();
-    void defaultFilterProxyModelChanged();
-    void playlistsChanged();
     void chaptersModelChanged();
     void finishedLoadingChanged();
-    void playlistTitleChanged();
-    void playlistUrlChanged();
     void mediaTitleChanged();
     void currentUrlChanged();
     void watchPercentageChanged();
@@ -213,7 +197,7 @@ Q_SIGNALS:
     void videoReconfig();
     void videoWidthChanged();
     void videoHeightChanged();
-    void eofReachedChanged();
+    void eofReached();
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
 
     void osdMessage(const QString &text);
@@ -224,6 +208,8 @@ Q_SIGNALS:
     void playNext();
     void playPrevious();
     void openUri(const QString &uri);
+
+    void playlistsManagerChanged();
 
 private:
     void initProperties();
@@ -245,7 +231,6 @@ private:
     std::unique_ptr<TracksModel> m_subtitleTracksModel;
     QList<int> m_secondsWatched;
     double m_watchPercentage{0.0};
-    std::unique_ptr<PlaylistMultiProxiesModel> m_playlists;
 
     double m_position{0.0};
     QString m_formattedPosition;
@@ -264,7 +249,6 @@ private:
     int m_secondarySubtitleId{0};
     int m_videoWidth{0};
     int m_videoHeight{0};
-    bool m_eofReached{false};
     QList<QVariant> m_chaptersList;
 
     double m_watchLaterPosition{0.0};
@@ -274,6 +258,7 @@ private:
     bool m_finishedLoading{false};
     std::unique_ptr<QTimer> m_saveTimePositionTimer;
     PlaybackState m_playbackState{PlaybackState::Stopped};
+    PlaylistsManager *m_playlistsManager = nullptr;
 };
 
 #endif // MPVOBJECT_H

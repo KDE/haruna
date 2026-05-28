@@ -145,7 +145,7 @@ public:
 
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path, QString playlistName);
-    void playingItemChanged(QString playlistName);
+    void playingItemChanged(QString playlistName, const PlaylistItem &playlistItem);
     void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
 
 private:

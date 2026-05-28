@@ -30,6 +30,7 @@ Page {
     required property real fsScale
     required property int mainWindowWidth
 
+    property alias manager: playlistsManager
     property bool isSmallWindowSize: mainWindowWidth < 600
     property int buttonSize: isSmallWindowSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
     property alias scrollPositionTimer: scrollPositionTimer
@@ -61,6 +62,10 @@ Page {
         }
     }
 
+    PlaylistsManager {
+        id: playlistsManager
+    }
+
     header: ToolBar {
         id: toolbar
 
@@ -89,12 +94,12 @@ Page {
                             delaySearch: true
 
                             onTextChanged: {
-                                root.m_mpv.visibleFilterProxyModel.searchText = text
+                                playlistsManager.visiblePlaylist.searchText = text
                                 playlistView.positionViewAtIndex(0, ListView.Beginning)
                             }
 
                             Component.onCompleted: {
-                                text = root.m_mpv.visibleFilterProxyModel.searchText
+                                text = playlistsManager.visiblePlaylist.searchText
                             }
                         }
                     },
@@ -145,7 +150,7 @@ Page {
                         Kirigami.Action {
                             text: KI18n.i18nc("@action:button", "Ascending")
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.AscendingOrder
+                            checked: playlistsManager.visiblePlaylist.sortOrder === Qt.AscendingOrder
 
                             icon {
                                 name: "view-sort-ascending-name"
@@ -154,7 +159,7 @@ Page {
                             }
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.AscendingOrder
+                                playlistsManager.visiblePlaylist.sortOrder = Qt.AscendingOrder
                             }
 
                             ActionGroup.group: sortOrderGroup
@@ -162,7 +167,7 @@ Page {
                         Kirigami.Action {
                             text: KI18n.i18nc("@action:button", "Descending")
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortOrder === Qt.DescendingOrder
+                            checked: playlistsManager.visiblePlaylist.sortOrder === Qt.DescendingOrder
 
                             icon {
                                 name: "view-sort-descending-name"
@@ -170,7 +175,7 @@ Page {
                                 height: root.buttonSize
                             }
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortOrder = Qt.DescendingOrder
+                                playlistsManager.visiblePlaylist.sortOrder = Qt.DescendingOrder
                             }
 
                             ActionGroup.group: sortOrderGroup
@@ -182,91 +187,91 @@ Page {
 
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.None
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.None
                             text: KI18n.i18nc("@action:button", "None")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.None
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.None
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.FileName
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.FileName
                             text: KI18n.i18nc("@action:button", "File Name")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.FileName
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.FileName
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.Title
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Title
                             text: KI18n.i18nc("@action:button", "Title")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.Title
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Title
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.Duration
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Duration
                             text: KI18n.i18nc("@action:button", "Duration")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.Duration
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Duration
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.Date
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Date
                             text: KI18n.i18nc("@action:button", "Modified Date")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.Date
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Date
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.FileSize
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.FileSize
                             text: KI18n.i18nc("@action:button", "File Size")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.FileSize
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.FileSize
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.TrackNo
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.TrackNo
                             text: KI18n.i18nc("@action:button, as in 'Track no on a Audio CD', not 'subtitle track'", "Track No")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.TrackNo
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.TrackNo
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.SampleRate
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.SampleRate
                             text: KI18n.i18nc("@action:button", "Sample Rate")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.SampleRate
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.SampleRate
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.Bitrate
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Bitrate
                             text: KI18n.i18nc("@action:button", "Bitrate")
 
                             onTriggered: {
-                                root.m_mpv.visibleFilterProxyModel.sortPreset = PlaylistSortProxyModel.Bitrate
+                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Bitrate
                             }
                             ActionGroup.group: sortPresetGroup
                         }
@@ -277,12 +282,12 @@ Page {
 
                         Kirigami.Action {
                             checkable: true
-                            checked: root.m_mpv.visibleFilterProxyModel.sortPreset === PlaylistSortProxyModel.Custom
+                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Custom
                             text: KI18n.i18nc("@action:button", "Custom…")
 
                             onTriggered: {
                                 root.m_advancedSortWindowLoader.openSortWindow()
-                                root.m_mpv.visibleFilterProxyModel.itemsSorted()
+                                playlistsManager.visiblePlaylist.itemsSorted()
                             }
                             ActionGroup.group: sortPresetGroup
                         }
@@ -353,7 +358,7 @@ Page {
                         icon.name: "edit-clear-all"
                         displayHint: Kirigami.DisplayHint.AlwaysHide
                         onTriggered: {
-                            root.m_mpv.visibleFilterProxyModel.clear()
+                            playlistsManager.visiblePlaylist.clear()
                         }
                     },
                     Kirigami.Action {
@@ -373,12 +378,12 @@ Page {
                 PlaylistTabBar {
                     id: playlistTabView
 
-                    m_mpv: root.m_mpv
+                    playlistsManager: playlistsManager
                     Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
                     Layout.fillWidth: true
 
                     Repeater {
-                        model: root.m_mpv.playlists
+                        model: playlistsManager.playlists
                         delegate: PlaylistTabDelegate {
                             m_mpv: root.m_mpv
                         }
@@ -415,7 +420,7 @@ Page {
                      : KI18n.i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
 
         onSubmitted: function(url) {
-            root.m_mpv.visibleFilterProxyModel.addItem(url, PlaylistModel.Append)
+            playlistsManager.visiblePlaylist.addItem(url, PlaylistModel.Append)
         }
 
         YouTube {
@@ -433,7 +438,7 @@ Page {
         buttonText: KI18n.i18nc("@action:button", "Add")
 
         onSubmitted: function(plName) {
-            root.m_mpv.playlists.createNewPlaylist(plName)
+            playlistsManager.playlists.createNewPlaylist(plName)
         }
     }
 
@@ -532,7 +537,7 @@ Page {
                 if (!containsDrag) {
                     return
                 }
-                root.m_mpv.visibleFilterProxyModel.addFilesAndFolders(drop.urls, PlaylistModel.Append)
+                playlistsManager.visiblePlaylist.addFilesAndFolders(drop.urls, PlaylistModel.Append)
             }
         }
 
@@ -556,14 +561,14 @@ Page {
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 100
 
-                model: root.m_mpv.visibleFilterProxyModel
+                model: playlistsManager.visiblePlaylist
                 onModelChanged: {
-                    Qt.callLater(root.m_mpv.visibleFilterProxyModel.refreshData)
+                    Qt.callLater(playlistsManager.visiblePlaylist.refreshData)
                 }
 
                 reuseItems: true
                 spacing: 1
-                currentIndex: root.m_mpv.visibleFilterProxyModel.getPlayingItem()
+                currentIndex: playlistsManager.visiblePlaylist.getPlayingItem()
                 highlightFollowsCurrentItem: false
 
                 moveDisplaced: Transition {
@@ -590,7 +595,7 @@ Page {
                 section {
                     property: "section"
                     delegate: PlaylistSectionDelegate {
-                        model: root.m_mpv.visibleFilterProxyModel
+                        model: playlistsManager.visiblePlaylist
                     }
                 }
 
@@ -609,7 +614,7 @@ Page {
                     onClicked: function(mouse) {
                         switch (mouse.button) {
                         case Qt.MiddleButton:
-                            const index = root.m_mpv.visibleFilterProxyModel.getPlayingItem()
+                            const index = playlistsManager.visiblePlaylist.getPlayingItem()
                             playlistView.positionViewAtIndex(index, ListView.Beginning)
                             break
                         case Qt.RightButton:
@@ -644,14 +649,14 @@ Page {
                     text: KI18n.i18nc("@action:inmenu", "Open Containing Folder")
                     icon.name: "folder"
                     visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
-                    onClicked: root.m_mpv.visibleFilterProxyModel.highlightInFileManager(contextMenuLoader.row)
+                    onClicked: playlistsManager.visiblePlaylist.highlightInFileManager(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Open in Browser")
                     icon.name: "link"
                     visible: !contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     onClicked: {
-                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
                     }
                 }
@@ -659,14 +664,14 @@ Page {
                     text: KI18n.i18nc("@action:inmenu", "Open in Thumbnail Generator")
                     icon.name: "hana"
                     visible: {
-                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         return modelIndex.data(PlaylistModel.TypeRole) === "video"
                              && SystemUtils.isHanaInstalled()
                              && SystemUtils.platformName() !== "windows"
                              && contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     }
                     onClicked: {
-                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
                         SystemUtils.openHana(url)
                     }
@@ -674,27 +679,27 @@ Page {
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu %1 is 'MediaInfo' (app name)", "Open in %1", "MediaInfo")
                     visible: {
-                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         return SystemUtils.isMediaInfoInstalled()
                              && SystemUtils.platformName() !== "windows"
                              && contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     }
                     onClicked: {
-                        const modelIndex = root.m_mpv.visibleFilterProxyModel.index(contextMenuLoader.row, 0)
+                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
                         SystemUtils.openMediaInfo(url)
                     }
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Copy Name")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.copyFileName(contextMenuLoader.row)
+                    onClicked: playlistsManager.visiblePlaylist.copyFileName(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: contextMenuLoader.isLocal
                           ? KI18n.i18nc("@action:inmenu", "Copy Path")
                           : KI18n.i18nc("@action:inmenu", "Copy URL")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.copyFilePath(contextMenuLoader.row)
+                    onClicked: playlistsManager.visiblePlaylist.copyFilePath(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1
                 }
                 MenuSeparator {
@@ -704,40 +709,40 @@ Page {
                 // Selection manipulators
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Select All")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.All)
+                    onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.All)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Deselect All")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.Clear)
+                    onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Clear)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Invert Selection")
-                    onClicked: root.m_mpv.visibleFilterProxyModel.selectItem(0, PlaylistFilterProxyModel.Invert)
+                    onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Invert)
                 }
                 MenuSeparator {
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Remove from Playlist")
                     icon.name: "remove"
-                    onClicked: root.m_mpv.visibleFilterProxyModel.removeItem(contextMenuLoader.row)
-                    visible: root.m_mpv.visibleFilterProxyModel.selectionCount === 1 && contextMenuLoader.row != -1
+                    onClicked: playlistsManager.visiblePlaylist.removeItem(contextMenuLoader.row)
+                    visible: playlistsManager.visiblePlaylist.selectionCount === 1 && contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Remove Selected from Playlist")
                     icon.name: "remove"
-                    onClicked: root.m_mpv.visibleFilterProxyModel.removeItems()
-                    visible: root.m_mpv.visibleFilterProxyModel.selectionCount > 1 && contextMenuLoader.row != -1
+                    onClicked: playlistsManager.visiblePlaylist.removeItems()
+                    visible: playlistsManager.visiblePlaylist.selectionCount > 1 && contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Rename")
                     icon.name: "edit-rename"
                     visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
-                    onClicked: root.m_mpv.visibleFilterProxyModel.renameFile(contextMenuLoader.row)
+                    onClicked: playlistsManager.visiblePlaylist.renameFile(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Scroll to Playing Item")
                     onClicked: {
-                        const index = root.m_mpv.visibleFilterProxyModel.getPlayingItem()
+                        const index = playlistsManager.visiblePlaylist.getPlayingItem()
                         playlistView.positionViewAtIndex(index, ListView.Beginning)
                     }
                 }
@@ -747,14 +752,14 @@ Page {
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Move File to Trash")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal && root.m_mpv.visibleFilterProxyModel.selectionCount === 1 && contextMenuLoader.row != -1
-                    onClicked: root.m_mpv.visibleFilterProxyModel.trashFile(contextMenuLoader.row)
+                    visible: contextMenuLoader.isLocal && playlistsManager.visiblePlaylist.selectionCount === 1 && contextMenuLoader.row != -1
+                    onClicked: playlistsManager.visiblePlaylist.trashFile(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Move Selected Files to Trash")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal && root.m_mpv.visibleFilterProxyModel.selectionCount > 1 && contextMenuLoader.row != -1
-                    onClicked: root.m_mpv.visibleFilterProxyModel.trashFiles()
+                    visible: contextMenuLoader.isLocal && playlistsManager.visiblePlaylist.selectionCount > 1 && contextMenuLoader.row != -1
+                    onClicked: playlistsManager.visiblePlaylist.trashFiles()
                 }
             }
 
@@ -784,6 +789,7 @@ Page {
             id: playlistItemWithThumbnail
             PlaylistItemWithThumbnail {
                 m_mpv: root.m_mpv
+                playlistsManager: playlistsManager
             }
         }
 
@@ -791,6 +797,7 @@ Page {
             id: playlistItemSimple
             PlaylistItem {
                 m_mpv: root.m_mpv
+                playlistsManager: playlistsManager
             }
         }
 
@@ -798,6 +805,7 @@ Page {
             id: playlistItemCompact
             PlaylistItemCompact {
                 m_mpv: root.m_mpv
+                playlistsManager: playlistsManager
             }
         }
 
@@ -869,13 +877,13 @@ Page {
         onAccepted: {
             switch (fileType) {
             case "video":
-                root.m_mpv.visibleFilterProxyModel.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
+                playlistsManager.visiblePlaylist.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === FileDialog.OpenFile) {
-                    root.m_mpv.visibleFilterProxyModel.addItem(fileDialog.selectedFile, PlaylistModel.Append)
+                    playlistsManager.visiblePlaylist.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 } else {
-                    root.m_mpv.visibleFilterProxyModel.saveM3uFile(fileDialog.selectedFile)
+                    playlistsManager.visiblePlaylist.saveM3uFile(fileDialog.selectedFile)
                 }
 
                 break

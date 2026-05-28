@@ -12,6 +12,7 @@ import QtQuick.Controls
 import org.kde.ki18n
 
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
@@ -19,6 +20,7 @@ Item {
     id: root
 
     required property MpvItem m_mpv
+    required property PlaylistsManager playlistsManager
     required property MpvContextMenu m_mpvContextMenuLoader
     required property SettingsWindow m_settingsLoader
     required property Osd m_osd
@@ -175,7 +177,7 @@ Item {
         }
 
         function onPlayNextAction() {
-            root.m_mpv.activeFilterProxyModel.playNext()
+            root.playlistsManager.activePlaylist.playNext()
         }
 
         function onStopAction() {
@@ -183,7 +185,7 @@ Item {
         }
 
         function onPlayPreviousAction() {
-            root.m_mpv.activeFilterProxyModel.playPrevious()
+            root.playlistsManager.activePlaylist.playPrevious()
         }
 
         function onQuitApplicationAction() {
