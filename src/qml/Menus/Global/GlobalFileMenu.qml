@@ -62,8 +62,7 @@ Labs.Menu {
                       : delegate.filename
                 onTriggered: {
                     recentFilesMenu.close()
-                    const mainWindow = Window.window as Main
-                    mainWindow.openFile(delegate.url, RecentFilesModel.OpenedFrom.Other)
+                    HarunaApp.openRecentFile(delegate.url)
                 }
             }
         }
