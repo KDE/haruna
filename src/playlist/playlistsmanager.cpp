@@ -66,15 +66,19 @@ void PlaylistsManager::initialize(const QList<QUrl> urls)
             return;
         }
         defaultPlaylist()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
-        return;
     }
 
-    const auto playlistAddMode = urls.size() == 1 ? PlaylistModel::Clear : PlaylistModel::Append;
-    for (const auto &url : urls) {
-        if (!url.isValid()) {
-            continue;
-        }
-        defaultPlaylist()->addItem(url, playlistAddMode);
+    if (urls.count() == 1) {
+        defaultPlaylist()->addItem(urls.first(), PlaylistModel::Clear);
     }
-    defaultPlaylist()->setPlayingItem(0);
+
+    if (urls.count() > 1) {
+        for (const auto &url : urls) {
+            if (!url.isValid()) {
+                continue;
+            }
+            defaultPlaylist()->addItem(url, PlaylistModel::Append);
+        }
+        defaultPlaylist()->setPlayingItem(0);
+    }
 }
