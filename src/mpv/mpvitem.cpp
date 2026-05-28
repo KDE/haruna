@@ -444,6 +444,7 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
 
         if (state == PlaybackState::Stopped && !m_pause && m_currentUrl.isValid()) {
             loadFile(m_currentUrl.toString());
+            playlistsManager()->activePlaylist()->setIsPlaying(true);
         }
 
         Q_EMIT pauseChanged();
