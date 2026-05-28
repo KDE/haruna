@@ -221,7 +221,7 @@ Item {
         }
 
         function scrollToPlayingItem() {
-            if (root.playlistsManager.visiblePlaylist === root.m_mpv.activeFilterProxyModel) {
+            if (root.playlistsManager.visiblePlaylist === root.playlistsManager.activePlaylist) {
                 const index = root.playlistsManager.visiblePlaylist.getPlayingItem()
                 root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
             }

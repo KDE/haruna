@@ -419,7 +419,7 @@ ApplicationWindow {
                     ? PlaylistModel.AppendAndPlay
                     : PlaylistModel.Append
 
-                mpv.defaultFilterProxyModel.addItem(url.toString(), behavior)
+                playlist.manager.defaultPlaylist.addItem(url.toString(), behavior)
                 return
             }
 
