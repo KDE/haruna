@@ -12,8 +12,6 @@
 
 #include <memory>
 
-#include "recentfilesmodel.h"
-
 class ChaptersModel;
 class TracksModel;
 class MpvRenderer;
@@ -207,7 +205,6 @@ Q_SIGNALS:
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
 
     void osdMessage(const QString &text);
-    void addToRecentFiles(const QUrl &url, RecentFilesModel::OpenedFrom from, const QString &name);
 
     // signals used for mpris
     void raise();

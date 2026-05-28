@@ -937,7 +937,6 @@ void MpvItem::setPlaylistsManager(PlaylistsManager *newPlaylistsManager)
         const auto url = playlistItem.url;
         const auto mediaTitle = playlistItem.mediaTitle.isEmpty() ? playlistItem.filename : playlistItem.mediaTitle;
         loadFile(url.toString());
-        Q_EMIT addToRecentFiles(url, RecentFilesModel::OpenedFrom::Playlist, mediaTitle);
     });
 
     Q_EMIT playlistsManagerChanged();

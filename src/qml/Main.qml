@@ -229,10 +229,6 @@ ApplicationWindow {
             window.resizeWindow()
         }
 
-        onAddToRecentFiles: function(url, openedFrom, name) {
-            Models.recentFilesModel.addRecentFile(url, openedFrom, name)
-        }
-
         onOsdMessage: function(text) {
             osd.message(text);
         }
