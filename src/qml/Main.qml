@@ -33,7 +33,7 @@ ApplicationWindow {
         if (!playlist.isReady || !mpv.isReady) {
             return
         }
-        playlist.manager.initialize()
+        playlist.manager.initialize(HarunaApp.urls())
     }
 
     visible: true
