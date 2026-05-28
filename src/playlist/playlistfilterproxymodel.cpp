@@ -610,12 +610,6 @@ void PlaylistFilterProxyModel::addFilesAndFolders(const QList<QUrl> &urls, Playl
     Q_EMIT itemCountChanged();
 }
 
-bool PlaylistFilterProxyModel::isDirectory(const QUrl &url)
-{
-    QFileInfo fileInfo(url.toLocalFile());
-    return fileInfo.exists() && fileInfo.isDir();
-}
-
 PlaylistSortPropertyModel *PlaylistFilterProxyModel::activeSortPropertiesModel()
 {
     auto *sortModel = playlistSortProxyModel();
