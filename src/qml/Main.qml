@@ -34,6 +34,7 @@ ApplicationWindow {
             return
         }
         playlist.manager.initialize(HarunaApp.urls())
+        Models.recentFilesModel.addRecentFile(HarunaApp.urls()[0], RecentFilesModel.OpenedFrom.ExternalApp)
     }
 
     visible: true
