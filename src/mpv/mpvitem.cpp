@@ -139,6 +139,8 @@ void MpvItem::initProperties()
     //    setProperty(u"terminal"_s, InformationSettings::mpvLogging());
     //    setProperty(u"msg-level"_s, u"all=v"_s);
 
+    setProperty(u"reset-on-next-file"_s, QStringList{MpvProperties::self()->ABLoopA, MpvProperties::self()->ABLoopB});
+
     setProperty(MpvProperties::self()->VO, u"libmpv"_s);
     setProperty(MpvProperties::self()->Pause, m_pause);
 
@@ -318,9 +320,6 @@ void MpvItem::onFileLoaded()
     getPropertyAsync(MpvProperties::self()->ChapterList, static_cast<int>(AsyncIds::ChapterList));
     getPropertyAsync(MpvProperties::self()->VideoId, static_cast<int>(AsyncIds::VideoId));
     getPropertyAsync(MpvProperties::self()->TrackList, static_cast<int>(AsyncIds::TrackList));
-
-    setProperty(MpvProperties::self()->ABLoopA, u"no"_s);
-    setProperty(MpvProperties::self()->ABLoopB, u"no"_s);
 
     // clang-format off
     auto pause = PlaybackSettings::restoreFilePosition()
