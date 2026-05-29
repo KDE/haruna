@@ -47,6 +47,10 @@ RowLayout {
         property double mouseX: 0
 
         function updateTooltip() : string {
+            if (progressBarBG.width === 0) {
+                return
+            }
+
             slider.mouseX = progressBarMouseArea.mouseX
             const time = progressBarMouseArea.mouseX / progressBarBG.width * slider.to
             previewMpvLoader.position = time
