@@ -110,7 +110,7 @@ RowLayout {
                 z: 10
                 width: previewMpvLoader.visible
                        ? GeneralSettings.previewThumbnailWidth + (margin * 2)
-                       : timePositionLabel.width + (margin * 2)
+                       : timePositionLabel.implicitWidth + (margin * 2)
                 height: previewMpvLoader.visible
                         ? Math.ceil(width / previewMpvLoader.aspectRatio) + (margin * 3) + timePositionLabel.height
                         : timePositionLabel.height + (margin * 2)
