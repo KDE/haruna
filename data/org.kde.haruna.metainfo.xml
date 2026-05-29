@@ -1300,7 +1300,7 @@
           <li xml:lang="pt-BR">Corrigido o problema em que os botões "próximo" e "anterior" ficavam desativados ao adicionar itens arrastando e soltando na área "Adicionar à lista de reprodução"</li>
           <li xml:lang="sk">Fixed next/previous buttons being disabled while adding items via dropping in "Add to Playlist" drop area</li>
           <li xml:lang="sl">Odpravljeno je bilo onemogočanje gumbov za naslednji/prejšnji med dodajanjem elementov s spuščanjem v spustnem območju "Dodaj na seznam predvajanja"</li>
-          <li xml:lang="tr">Fixed next/previous buttons being disabled while adding items via dropping in "Add to Playlist" drop area</li>
+          <li xml:lang="tr">“Oynatma Listesine Ekle” sürükle bırak alanına öge eklerken sonraki/önceki düğmelerinin devre dışı kalması sorununu düzelt</li>
           <li xml:lang="uk">Виправлено вимкнення кнопок «Далі/Назад» при додаванні записів скиданням на ділянку «Додати до списку відтворення»</li>
           <li xml:lang="zh-CN">修复在通过“添加到播放列表”拖放区拖放的方式添加项目时上一个/下一个按钮被禁用的问题</li>
           <li>Fixed play previous action not wrapping from first item in playlist to the last item</li>
@@ -1317,7 +1317,7 @@
           <li xml:lang="pt-BR">Corrigido o problema em que a ação anterior não retornava do primeiro item da lista de reprodução para o último item</li>
           <li xml:lang="sk">Fixed play previous action not wrapping from first item in playlist to the last item</li>
           <li xml:lang="sl">Popravljeno prejšnje dejanje predvajanja, ki se ne preliva od prvega elementa na seznamu predvajanja do zadnjega elementa</li>
-          <li xml:lang="tr">Fixed play previous action not wrapping from first item in playlist to the last item</li>
+          <li xml:lang="tr">önceki oynatma eyleminin, oynatma listesindeki ilk ögeden son ögeye kadar otomatik olarak sarılmaması sorununu düzelt</li>
           <li xml:lang="uk">Виправлено помилку дії відтворення попередньої композиції, яка не переносилася з першого елемента у списку відтворення на останній.</li>
           <li xml:lang="zh-CN">修复播放上一个操作不能从播放列表中的第一项循环切换到最后一项</li>
           <li>Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
@@ -1334,7 +1334,7 @@
           <li xml:lang="pt-BR">Corrigido o problema que impedia a adição de uma nova aba de lista de reprodução quando o yt-dlp não estava instalado</li>
           <li xml:lang="sk">Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
           <li xml:lang="sl">Odpravljeno je bilo, da ni bilo mogoče dodati novega zavihka seznama predvajanja, ko yt-dlp ni nameščen</li>
-          <li xml:lang="tr">Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
+          <li xml:lang="tr">yt-dlp kurulu olmadığında yeni oynatma listesi sekmesi eklenememesi sorununu düzelt</li>
           <li xml:lang="uk">Виправлено помилку, пов'язану із тим, що не можна було додати новий список відтворення, якщо не встановлено yt-dlp</li>
           <li xml:lang="zh-CN">修复在 yt-dlp 没有安装时无法添加新播放列表标签页的问题</li>
           <li>Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
@@ -1351,7 +1351,7 @@
           <li xml:lang="pt-BR">Adicionada uma solução alternativa para o problema de diálogos de arquivos que não recebiam eventos de teclado; as teclas Esc e de seta não estavam funcionando</li>
           <li xml:lang="sk">Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
           <li xml:lang="sl">Dodana rešitev za pogovorna okna datotek, ki ne prejemajo ključnih dogodkov; escape in puščična tipka nista delovali</li>
-          <li xml:lang="tr">Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
+          <li xml:lang="tr">dosya iletişim kutularının düğme olaylarını algılamaması sorununa geçici bir çözüm eklendi; Escape ve ok tuşları çalışmıyordu</li>
           <li xml:lang="uk">Додано тимчасове рішення для проблеми із неможливістю отримання подій клавіатури у діалогових вікнах для роботи з файлами — не працювали клавіші escape та клавіші зі стрілками</li>
           <li xml:lang="zh-CN">新增针对文件对话框接受不到按键事件导致 ESC 键和方向键不起作用的优化</li>
         </ul>
@@ -1416,7 +1416,7 @@
         <p xml:lang="pt-BR">Configurações</p>
         <p xml:lang="sk">Nastavenia</p>
         <p xml:lang="sl">Nastavitve</p>
-        <p xml:lang="tr">Settings</p>
+        <p xml:lang="tr">Ayarlar</p>
         <p xml:lang="uk">Параметри</p>
         <p xml:lang="zh-CN">设置</p>
         <p xml:lang="zh-TW">設定</p>
@@ -1435,7 +1435,7 @@
           <li xml:lang="pt-BR">Geral: adicionada configuração de instância única para reproduzir um novo arquivo ao adicioná-lo à lista de reprodução</li>
           <li xml:lang="sk">General: added single instance setting to play new file when appending to the playlist</li>
           <li xml:lang="sl">Splošno: dodana nastavitev posameznega primerka za predvajanje nove datoteke ob dodajanju na seznam predvajanja</li>
-          <li xml:lang="tr">General: added single instance setting to play new file when appending to the playlist</li>
+          <li xml:lang="tr">Genel: Oynatma listesine yeni dosya eklendiğinde tek örnek oynatma ayarı eklendi.</li>
           <li xml:lang="uk">Загальне: додано параметр одного екземпляра для відтворення нових файлів при дописуванні до списку відтворення</li>
           <li xml:lang="zh-CN">常规：新增单个实例设置以播放附加到播放列表的新文件</li>
           <li>General: removed the </li>
@@ -1452,7 +1452,7 @@
           <li xml:lang="pt-BR">Geral: removido o</li>
           <li xml:lang="sk">Všeobecné: odstránené</li>
           <li xml:lang="sl">Splošno: odstranjeno</li>
-          <li xml:lang="tr">General: removed the</li>
+          <li xml:lang="tr">Genel: The kaldırıldı</li>
           <li xml:lang="uk">Загальне: вилучено «the»</li>
           <li xml:lang="zh-CN">常规：移除</li>
           <li>Playlist: added settings to control playback behavior</li>
@@ -1470,7 +1470,7 @@
           <li xml:lang="pt-BR">Lista de reprodução: adicionadas configurações para controlar o comportamento de reprodução</li>
           <li xml:lang="sk">Playlist: added settings to control playback behavior</li>
           <li xml:lang="sl">Seznam predvajanja: dodane nastavitve za nadzor predvajanja</li>
-          <li xml:lang="tr">Playlist: added settings to control playback behavior</li>
+          <li xml:lang="tr">Oynatma listesi: Oynatma davranışını kontrol etmek için ayarlar eklendi.</li>
           <li xml:lang="uk">Список відтворення: додано параметри для керування поведінкою відтворення</li>
           <li xml:lang="zh-CN">播放列表：新增设置以控制播放行为</li>
           <li>Mouse: refactored to allow modifier keys</li>
@@ -1487,7 +1487,7 @@
           <li xml:lang="pt-BR">Mouse: reformulado para permitir teclas modificadoras</li>
           <li xml:lang="sk">Mouse: refactored to allow modifier keys</li>
           <li xml:lang="sl">Miška: spremenjena tako, da omogoča modifikacijske tipke</li>
-          <li xml:lang="tr">Mouse: refactored to allow modifier keys</li>
+          <li xml:lang="tr">Fare: Niteleyici düğmelere izin verecek şekilde yeniden düzenlendi.</li>
           <li xml:lang="uk">Миша: переписано для уможливлення використання клавіш-модифікаторів</li>
           <li xml:lang="zh-CN">鼠标：重构以允许修饰键</li>
           <li>Mouse: added support for Mouse Forward and Back buttons</li>
@@ -1504,7 +1504,7 @@
           <li xml:lang="pt-BR">Mouse: adicionado suporte para os botões Avançar e Voltar do mouse</li>
           <li xml:lang="sk">Mouse: added support for Mouse Forward and Back buttons</li>
           <li xml:lang="sl">Miška: dodana podpora za gumba miške Naprej in Nazaj</li>
-          <li xml:lang="tr">Mouse: added support for Mouse Forward and Back buttons</li>
+          <li xml:lang="tr">Fare: İleri ve Geri fare düğmeleri için destek eklendi.</li>
           <li xml:lang="uk">Миша: додано підтримку кнопок «Вперед» і «Назад» на миші</li>
           <li xml:lang="zh-CN">鼠标：新增鼠标的前进和后退键的支持</li>
           <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an * (asterisk) then subtitles will be searched in all folders containing the folder name. Example: If the <code>Load subtitle from</code> list contains an entry  and you have the following folders next to the video file ,  and <code>subtitles</code> all of these folders will be searched.</li>
@@ -1536,7 +1536,7 @@
           <li xml:lang="pt-BR">a janela de configuração agora possui largura e altura mínimas</li>
           <li xml:lang="sk">the settings window now has a minimum width and height</li>
           <li xml:lang="sl">okno z nastavitvami ima zdaj minimalno širino in višino</li>
-          <li xml:lang="tr">the settings window now has a minimum width and height</li>
+          <li xml:lang="tr">ayarlar penceresinin artık en küçük/büyük ölçüleri var</li>
           <li xml:lang="uk">у новій версії вікно параметрів має мінімальну ширину і висоту</li>
           <li xml:lang="zh-CN">设置窗口现在具有最小宽度和高度</li>
         </ul>
@@ -1581,7 +1581,7 @@
           <li xml:lang="pt-BR">adicionado suporte para múltiplas listas de reprodução</li>
           <li xml:lang="sk">added support for multiple playlists</li>
           <li xml:lang="sl">dodana podpora za več seznamov predvajanja</li>
-          <li xml:lang="tr">added support for multiple playlists</li>
+          <li xml:lang="tr">çoklu oynatma listeleri için destek</li>
           <li xml:lang="uk">додано підтримку декількох списків відтворення</li>
           <li xml:lang="zh-CN">添加多播放列表支持</li>
           <li xml:lang="zh-TW">新增多播放清單的支援</li>
@@ -1599,7 +1599,7 @@
           <li xml:lang="pt-BR">itens podem ser reordenados manualmente através do recurso de arrastar e soltar</li>
           <li xml:lang="sk">items can be reordered manually through drag and dropdown</li>
           <li xml:lang="sl">elemente je mogoče ročno preurediti z vlečenjem in spustnim menijem</li>
-          <li xml:lang="tr">items can be reordered manually through drag and dropdown</li>
+          <li xml:lang="tr">ögeler artık sürükleyip bırakılarak elle sıralanabiliyor</li>
           <li xml:lang="uk">пункти можна перевпорядковувати перетягуванням зі скиданням</li>
           <li xml:lang="zh-CN">项目可以通过拖放和下拉菜单进行排序</li>
           <li>items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
@@ -1617,7 +1617,7 @@
           <li xml:lang="pt-BR">itens podem ser selecionados, Ctrl+clique para selecionar vários itens, Shift+clique para selecionar um intervalo</li>
           <li xml:lang="sk">items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
           <li xml:lang="sl">elemente je mogoče izbrati, ctrl+klik, da izberete več elementov, shift+klik, da izberete obseg</li>
-          <li xml:lang="tr">items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
+          <li xml:lang="tr">Ögeler artık seçilebiliyor; birden çok öge seçmek için kontrol+tık, erim seçmek için üst karakter+tık</li>
           <li xml:lang="uk">пункти можна позначати; за допомогою ctrl+клацання можна позначити декілька пунктів, за допомогою shift+клацання — діапазон пунктів</li>
           <li xml:lang="zh-CN">项目可被选中，Ctrl+点击可选择多个项目，Shift+点击可以选择一定范围内的项目</li>
           <li>items can be filtered</li>
@@ -1635,7 +1635,7 @@
           <li xml:lang="pt-BR">itens podem ser filtrados</li>
           <li xml:lang="sk">položky je možné filtrovať</li>
           <li xml:lang="sl">elementov je mogoče filtrirati</li>
-          <li xml:lang="tr">items can be filtered</li>
+          <li xml:lang="tr">ögeler artık süzülebiliyor</li>
           <li xml:lang="uk">пункти можна фільтрувати</li>
           <li xml:lang="zh-CN">项目可以进行过滤显示</li>
           <li>added settings to control playback behavior when a file ends</li>
@@ -1652,7 +1652,7 @@
           <li xml:lang="pt-BR">adicionadas configurações para controlar o comportamento de reprodução quando um arquivo termina</li>
           <li xml:lang="sk">added settings to control playback behavior when a file ends</li>
           <li xml:lang="sl">dodane nastavitve za nadzor obnašanja predvajanja, ko se datoteka konča</li>
-          <li xml:lang="tr">added settings to control playback behavior when a file ends</li>
+          <li xml:lang="tr">dosya bittiğinde oynatma davranışını denetlemek için ayarlar eklendi</li>
           <li xml:lang="uk">додано параметри керування поведінкою відтворення після завершення відтворення файла</li>
           <li xml:lang="zh-CN">新增设置以控制文件播放完毕后的播放行为</li>
           <li>when saving the playlist the file extension is set to m3u</li>
@@ -1669,7 +1669,7 @@
           <li xml:lang="pt-BR">ao salvar a lista de reprodução, a extensão do arquivo é definida como m3u</li>
           <li xml:lang="sk">when saving the playlist the file extension is set to m3u</li>
           <li xml:lang="sl">pri shranjevanju seznama predvajanja je končnica datoteke nastavljena na m3u</li>
-          <li xml:lang="tr">when saving the playlist the file extension is set to m3u</li>
+          <li xml:lang="tr">oynatma listesi dosyasını kaydederken uzantı m3u olarak ayarlanıyor</li>
           <li xml:lang="uk">при збереженні списку відтворення встановлено суфікс назви файла m3u</li>
           <li xml:lang="zh-CN">当保存播放列表时将文件扩展名设置为 m3u</li>
           <li>can add files and folders through drag and drop</li>
@@ -1686,7 +1686,7 @@
           <li xml:lang="pt-BR">pode adicionar arquivos e pastas arrastando e soltando</li>
           <li xml:lang="sk">can add files and folders through drag and drop</li>
           <li xml:lang="sl">lahko dodaja datoteke in mape s funkcijo povleci in spusti</li>
-          <li xml:lang="tr">can add files and folders through drag and drop</li>
+          <li xml:lang="tr">sürükleyip bırakarak dosyalar ve klasörler eklenebiliyor</li>
           <li xml:lang="uk">уможливлено додавання файлів і тек перетягуванням зі скиданням</li>
           <li xml:lang="zh-CN">允许通过拖放添加文件和文件夹</li>
           <li>multiple files can be added through the option in the header</li>
@@ -1703,7 +1703,7 @@
           <li xml:lang="pt-BR">múltiplos arquivos arquivos podem ser adicionados através da opção no cabeçalho</li>
           <li xml:lang="sk">multiple files can be added through the option in the header</li>
           <li xml:lang="sl">prek možnosti v glavi lahko dodate več datotek</li>
-          <li xml:lang="tr">multiple files can be added through the option in the header</li>
+          <li xml:lang="tr">başlıktaki seçenek ile birden çok dosya eklenebiliyor</li>
           <li xml:lang="uk">кілька файлів можна додати за допомогою пункту в заголовку</li>
           <li xml:lang="zh-CN">允许通过在表头中的选项添加多个文件</li>
           <li>hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
@@ -1720,7 +1720,7 @@
           <li xml:lang="pt-BR">oculta a lista de reprodução quando o cursor sai da janela maximizada, impedindo que a lista seja aberta ao mover o cursor para outro monitor</li>
           <li xml:lang="sk">hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
           <li xml:lang="sl">skrij seznam predvajanja, ko miška zapusti okno, medtem ko je povečano, prepreči odpiranje seznama predvajanja, ko premaknete miško na drug monitor</li>
-          <li xml:lang="tr">hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
+          <li xml:lang="tr">pencere tam ekran kipindeyken fare pencereden ayrıldığında oynatma listesini gizler, fare başka bir monitöre taşındığında oynatma listesinin açılmasını engeller</li>
           <li xml:lang="uk">приховування списку відтворення, якщо вказівник миші залишає вікно під час розгортання, запобігає відкриттю списку відтворення під час пересування вказівника миші на інший монітор</li>
           <li xml:lang="zh-CN">当窗口最大化时，鼠标移出窗口范围将隐藏播放列表，以防止将鼠标移动到另一个屏幕时打开播放列表</li>
         </ul>
@@ -1742,7 +1742,7 @@
         <p xml:lang="nl">Afspelen</p>
         <p xml:lang="pt-BR">Reprodução</p>
         <p xml:lang="sl">Playback</p>
-        <p xml:lang="tr">Playback</p>
+        <p xml:lang="tr">Oynatma</p>
         <p xml:lang="uk">Відтворення</p>
         <p xml:lang="zh-CN">播放</p>
         <ul>
@@ -1760,7 +1760,7 @@
           <li xml:lang="pt-BR">se um arquivo não puder ser reproduzido, um erro será exibido e a reprodução será interrompida em vez de tentar reproduzir o próximo arquivo (isso evita um possível loop infinito quando nenhum arquivo na lista de reprodução puder ser reproduzido)</li>
           <li xml:lang="sk">if a file can't be played now an error is shown and playback stops instead of trying to play the next file (prevents a potential infinite loop when no file in the playlist can be played)</li>
           <li xml:lang="sl">če datoteke zdaj ni mogoče predvajati, se prikaže napaka in se playback ustavi, namesto da bi poskušali predvajati naslednjo datoteko (preprečuje morebitno neskončno zanko, ko ni mogoče predvajati nobene datoteke na seznamu predvajanja)</li>
-          <li xml:lang="tr">if a file can't be played now an error is shown and playback stops instead of trying to play the next file (prevents a potential infinite loop when no file in the playlist can be played)</li>
+          <li xml:lang="tr">eğer bir dosya şu anda oynatılamıyorsa bir hata iletisi gösterilir ve bir sonraki dosyayı oynatmaya çalışmak yerine oynatma durdurulur (bu, oynatma listesindeki hiçbir dosya oynatılamadığında oluşabilecek olası sonsuz döngüyü önler)</li>
           <li xml:lang="uk">якщо файл зараз не вдається відтворити, буде показано повідомлення про помилку, і відтворення зупиняється замість спроби відтворити наступний файл (це запобігає потенційному нескінченному циклу, коли жоден файл у списку відтворення не вдається відтворити)</li>
           <li xml:lang="zh-CN">如果文件无法播放，显示错误信息并停止播放，而不是尝试播放下一个文件 (防止在播放列表中没有一个文件能够播放时可能发生的无限循环问题)</li>
           <li>can play files starting with a dot (hidden files)</li>
@@ -1777,7 +1777,7 @@
           <li xml:lang="pt-BR">pode reproduzir arquivos que começam com um ponto (arquivos ocultos)</li>
           <li xml:lang="sk">can play files starting with a dot (hidden files)</li>
           <li xml:lang="sl">lahko predvaja datoteke, ki se začnejo s piko (skrite datoteke)</li>
-          <li xml:lang="tr">can play files starting with a dot (hidden files)</li>
+          <li xml:lang="tr">nokta ile başlayan dosyalar (gizli dosyalar) oynatılabilir</li>
           <li xml:lang="uk">можливість відтворення файлів, назви яких починаються з крапки (прихованих файлів)</li>
           <li xml:lang="zh-CN">允许播放以 . 开头的文件 (隐藏文件)</li>
           <li>an error is shown when failing to get youtube playlist</li>
@@ -1794,7 +1794,7 @@
           <li xml:lang="pt-BR">um erro é exibido ao tentar obter a lista de reprodução do YouTube</li>
           <li xml:lang="sk">an error is shown when failing to get youtube playlist</li>
           <li xml:lang="sl">se prikaže napaka, ko ni mogoče pridobiti youtube seznama predvajanja</li>
-          <li xml:lang="tr">an error is shown when failing to get youtube playlist</li>
+          <li xml:lang="tr">YouTube oynatma listesini alma işlemi başarısız olduğunda bir hata iletisi görüntülenir</li>
           <li xml:lang="uk">реалізовано показ повідомлення про помилку, якщо не вдається отримати список відтворення youtube</li>
           <li xml:lang="zh-CN">获取 Youtube 播放列表失败时显示错误信息</li>
         </ul>
@@ -1836,7 +1836,7 @@
           <li xml:lang="pt-BR">mpris: adicionado suporte para Shuffle e LoopStatus</li>
           <li xml:lang="sk">mpris: add support for Shuffle and LoopStatus</li>
           <li xml:lang="sl">mpris: dodajte podporo za Shuffle in LoopStatus</li>
-          <li xml:lang="tr">mpris: add support for Shuffle and LoopStatus</li>
+          <li xml:lang="tr">mpris: Karıştır ve Döngü Durumu desteği</li>
           <li xml:lang="uk">mpris: додано підтримку Shuffle і LoopStatus</li>
           <li xml:lang="zh-CN">mpris：添加随机播放和循环状态的支持</li>
           <li>changed the action selection popup to use Kirigami.SearchDialog</li>
@@ -1853,7 +1853,7 @@
           <li xml:lang="pt-BR">alteração da janela pop-up de seleção de ações para usar Kirigami.SearchDialog</li>
           <li xml:lang="sk">changed the action selection popup to use Kirigami.SearchDialog</li>
           <li xml:lang="sl">spremenil pojavno okno za izbiro dejanja za uporabo Kirigami.SearchDialog</li>
-          <li xml:lang="tr">changed the action selection popup to use Kirigami.SearchDialog</li>
+          <li xml:lang="tr">eylem seçim açılır penceresi Kirigami.SearchDialog olarak değiştirildi</li>
           <li xml:lang="uk">змінено контекстну панель вибору дії так, щоб було використано Kirigami.SearchDialog</li>
           <li xml:lang="zh-CN">将操作选择弹窗改为使用 Kirigami.SearchDialog</li>
           <li>replaced the spinning icon with a progress bar and label</li>
@@ -1870,7 +1870,7 @@
           <li xml:lang="pt-BR">substituição do ícone giratório por uma barra de progresso e um rótulo</li>
           <li xml:lang="sk">replaced the spinning icon with a progress bar and label</li>
           <li xml:lang="sl">zamenjal vrtečo se ikono z vrstico napredka in oznako</li>
-          <li xml:lang="tr">replaced the spinning icon with a progress bar and label</li>
+          <li xml:lang="tr">dönen simge bir ilerleme çubuğu ve etiketiyle değiştirildi</li>
           <li xml:lang="uk">замінено піктограму обертання на панель поступу і мітку</li>
           <li xml:lang="zh-CN">将旋转图标替换为进度条和文本标签</li>
           <li>the drop area of the video is split in 2 parts now</li>
@@ -1887,7 +1887,7 @@
           <li xml:lang="pt-BR">a área de exibição do vídeo agora está dividida em duas partes</li>
           <li xml:lang="sk">the drop area of the video is split in 2 parts now</li>
           <li xml:lang="sl">spustno območje videa je zdaj razdeljeno na 2 dela</li>
-          <li xml:lang="tr">the drop area of the video is split in 2 parts now</li>
+          <li xml:lang="tr">videonun bırakma alanı artık iki parça</li>
           <li xml:lang="uk">у новій версії область скидання відео поділено на 2 частини</li>
           <li xml:lang="zh-CN">视频的拖放区域分为两个部分</li>
           <li>top part always appends to the default playlist</li>
@@ -1904,7 +1904,7 @@
           <li xml:lang="pt-BR">a parte superior é sempre adicionada à lista de reprodução padrão</li>
           <li xml:lang="sk">top part always appends to the default playlist</li>
           <li xml:lang="sl">zgornji del se vedno doda privzetemu seznamu predvajanja</li>
-          <li xml:lang="tr">top part always appends to the default playlist</li>
+          <li xml:lang="tr">üst kısım artık her zaman öntanımlı oynatma listesine iliştiriliyor</li>
           <li xml:lang="uk">верхня частина завжди дописується до типового списку відтворення</li>
           <li xml:lang="zh-CN">拖放到上半部分将附加到默认播放列表</li>
           <li>bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
@@ -1921,7 +1921,7 @@
           <li xml:lang="pt-BR">a parte inferior limpa a lista de reprodução padrão e adiciona os arquivos e pastas soltos; quando apenas um arquivo é solto, o comportamento é o mesmo da ação de abrir arquivo (limpa a lista de reprodução e carrega os arquivos irmãos, se essa opção estiver habilitada nas configurações)</li>
           <li xml:lang="sk">bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
           <li xml:lang="sl">spodnji del počisti privzeti seznam predvajanja in doda izpuščene datoteke in mape, ko je izpuščena samo ena datoteka, se obnaša kot dejanje odprte datoteke (počisti seznam predvajanja in naloži sorodne datoteke, če je omogočeno v nastavitvah)</li>
-          <li xml:lang="tr">bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
+          <li xml:lang="tr">alttaki kısım varsayılan oynatma listesini temizler ve bırakılan dosya ve klasörleri ekler; yalnızca bir dosya bırakıldığında, dosya açma işlemi gibi davranır (oynatma listesini temizler ve ayarlarda etkinleştirilmişse kardeş dosyaları yükler)</li>
           <li xml:lang="uk">нижня частина спорожнює типовий список відтворення і додає перетягнуті файли та теки, коли перетягується лише один файл; вона поводиться як дія з відкриття файла (спорожнює список відтворення і завантажує подібні файли, якщо це увімкнено в налаштуваннях)</li>
           <li xml:lang="zh-CN">拖放到下半部分将清空默认播放列表并添加拖放的文件和文件夹。如果仅拖放了单个文件，其行为与打开文件操作相同 (清空播放列表并加载姐妹文件，如果在设置中启用的话)</li>
           <li>recent files are now stored in a sqlite database</li>
@@ -1938,7 +1938,7 @@
           <li xml:lang="pt-BR">arquivos recentes agora são armazenados em um banco de dados SQLite</li>
           <li xml:lang="sk">recent files are now stored in a sqlite database</li>
           <li xml:lang="sl">nedavne datoteke so zdaj shranjene v bazi podatkov sqlite</li>
-          <li xml:lang="tr">recent files are now stored in a sqlite database</li>
+          <li xml:lang="tr">son dosyalar artık bir SQLite veritabanında saklanıyor</li>
           <li xml:lang="uk">у новій версії останні використані файли зберігаються у базі даних sqlite</li>
           <li xml:lang="zh-CN">最近文件现在被保存在一个 sqlite 数据库中</li>
           <li>time positions used to restore videos are also stored in the database</li>
@@ -1955,7 +1955,7 @@
           <li xml:lang="pt-BR">posições temporais usadas para restaurar vídeos também são armazenadas no banco de dados</li>
           <li xml:lang="sk">time positions used to restore videos are also stored in the database</li>
           <li xml:lang="sl">časovni položaji uporabljeni za obnovitev videoposnetkov o tudi shranjeni v bazi podatkov</li>
-          <li xml:lang="tr">time positions used to restore videos are also stored in the database</li>
+          <li xml:lang="tr">videoları geri yüklemek için kullanılan zaman konumları da veri tabanında saklanır</li>
           <li xml:lang="uk">позиції за часом, які використовуються для відновлення відтворення відео, також зберігаються у базі даних</li>
           <li xml:lang="zh-CN">恢复播放进度的时间位置也保存在该数据库中</li>
           <li>sleep is blocked on Windows too</li>
@@ -1973,7 +1973,7 @@
           <li xml:lang="pt-BR">modo de suspensão também está bloqueado no Windows</li>
           <li xml:lang="sk">sleep is blocked on Windows too</li>
           <li xml:lang="sl">spanje je blokirano tudi v sistemu Windows</li>
-          <li xml:lang="tr">sleep is blocked on Windows too</li>
+          <li xml:lang="tr">uyku artık Windows üzerinde de engelleniyor</li>
           <li xml:lang="uk">присипляння заблоковано також і у Windows</li>
           <li xml:lang="zh-CN">在 Windows 环境中也阻止睡眠</li>
           <li>all strings should be translatable now</li>
@@ -1991,7 +1991,7 @@
           <li xml:lang="pt-BR">todas as strings agora devem ser traduzíveis</li>
           <li xml:lang="sk">all strings should be translatable now</li>
           <li xml:lang="sl">zdaj bi morali biti vsi nizi prevedljivi</li>
-          <li xml:lang="tr">all strings should be translatable now</li>
+          <li xml:lang="tr">tüm diziler artık başka dillere çevrilebilir</li>
           <li xml:lang="uk">у новій версії можливий переклад усіх рядків повідомлень інтерфейсу</li>
           <li xml:lang="zh-CN">所有字符串现在应该均可翻译</li>
         </ul>
@@ -2013,7 +2013,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -2295,7 +2295,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -2374,7 +2374,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -2438,7 +2438,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -2681,7 +2681,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -2830,7 +2830,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -2972,7 +2972,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3087,7 +3087,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3225,7 +3225,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3304,7 +3304,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3481,7 +3481,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3543,7 +3543,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3682,7 +3682,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -3744,7 +3744,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -4053,7 +4053,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -4098,7 +4098,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -4160,7 +4160,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -4290,7 +4290,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -4445,7 +4445,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -4721,7 +4721,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
@@ -5818,7 +5818,7 @@
         <p xml:lang="pt-BR">Correções de bugs:</p>
         <p xml:lang="sk">Opravy chýb:</p>
         <p xml:lang="sl">Popravki napak:</p>
-        <p xml:lang="tr">Bugfixes:</p>
+        <p xml:lang="tr">Hata düzeltmeleri:</p>
         <p xml:lang="uk">Виправлення вад:</p>
         <p xml:lang="zh-CN">程序缺陷修复：</p>
         <p xml:lang="zh-TW">錯誤修正：</p>
