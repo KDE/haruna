@@ -385,7 +385,7 @@ Page {
                     Repeater {
                         model: playlistsManager.playlists
                         delegate: PlaylistTabDelegate {
-                            m_mpv: root.m_mpv
+                            playlistsManager: playlistsManager
                         }
                     }
                 }

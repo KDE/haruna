@@ -20,7 +20,7 @@ TabButton {
     required property string name
     required property bool isVisible
     required property bool isActive
-    required property MpvVideo m_mpv
+    required property PlaylistsManager playlistsManager
     property PlaylistTabBar playlistTabBar: TabBar.tabBar as PlaylistTabBar
 
     property bool aboutToBeRemoved: false
@@ -304,11 +304,11 @@ TabButton {
     }
 
     function movePlaylist(from, to) {
-        root.m_mpv.playlists.movePlaylist(from, to)
+        root.playlistsManager.playlists.movePlaylist(from, to)
     }
 
     function removePlaylist() {
-        root.m_mpv.playlists.removePlaylist(root.index)
+        root.playlistsManager.playlists.removePlaylist(root.index)
     }
 
     function calculateHotSpot() {
