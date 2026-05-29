@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-24 00:43+0000\n"
+"POT-Creation-Date: 2026-05-29 00:42+0000\n"
 "PO-Revision-Date: 2026-05-24 07:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -629,78 +629,78 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "מטא"
 
-#: src/mpv/mpvitem.cpp:85
+#: src/mpv/mpvitem.cpp:81
 #, kde-format
 msgid "Command line video player"
 msgstr "נגן וידאו בשורת הפקודות"
 
-#: src/mpv/mpvitem.cpp:92
+#: src/mpv/mpvitem.cpp:88
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "פתרון חוצה פלטפורמות להקלטה, המרה והזרמה של וידאו ושמע"
 
-#: src/mpv/mpvitem.cpp:413
+#: src/mpv/mpvitem.cpp:356
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "לא ניתן לנגן: %1"
 
-#: src/mpv/mpvitem.cpp:504
+#: src/mpv/mpvitem.cpp:458
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "עוצמת שמע: %1"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:491
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "תזמון כתובית: +%1 שניות"
 
-#: src/mpv/mpvitem.cpp:539
+#: src/mpv/mpvitem.cpp:493
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "תזמון כתובית: %1 שניות"
 
-#: src/mpv/mpvitem.cpp:578
+#: src/mpv/mpvitem.cpp:534
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "הקובץ לא קיים: %1"
 
-#: src/mpv/mpvitem.cpp:610
+#: src/mpv/mpvitem.cpp:566
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:623
+#: src/mpv/mpvitem.cpp:579
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "אין"
 
-#: src/mpv/mpvitem.cpp:672
+#: src/mpv/mpvitem.cpp:628
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "צילום המסך נכשל"
 
-#: src/mpv/mpvitem.cpp:677
+#: src/mpv/mpvitem.cpp:633
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
-#: src/mpv/mpvitem.cpp:679
+#: src/mpv/mpvitem.cpp:635
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "צילום מסך: %1"
 
-#: src/mpv/mpvitem.cpp:707
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -708,13 +708,13 @@ msgid ""
 "due to missing codecs"
 msgstr "לא זוהתה רצועת וידאו, כנראה שאי אפשר לפענח/לנגן עקב בעיית מפענחים"
 
-#: src/mpv/mpvitem.cpp:740
+#: src/mpv/mpvitem.cpp:699
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "פרק שנפסח: %1"
 
-#: src/mpv/mpvitem.cpp:858
+#: src/mpv/mpvitem.cpp:817
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -722,13 +722,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "שמע: %1 %2"
 
-#: src/mpv/mpvitem.cpp:869
+#: src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "כתוביות: אין"
 
-#: src/mpv/mpvitem.cpp:874 src/mpv/mpvitem.cpp:890
+#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -736,153 +736,153 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "כתובית: %1 %2"
 
-#: src/mpv/mpvitem.cpp:885
+#: src/mpv/mpvitem.cpp:844
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
 msgstr "כתובית משנית: אין"
 
-#: src/playlist/Playlist.qml:82
+#: src/playlist/Playlist.qml:87
 msgctxt "@action:button"
 msgid "Search"
 msgstr "חיפוש"
 
-#: src/playlist/Playlist.qml:102
+#: src/playlist/Playlist.qml:107
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "הוספה…"
 
-#: src/playlist/Playlist.qml:110
+#: src/playlist/Playlist.qml:115
 msgctxt "@action:button"
 msgid "Files"
 msgstr "קבצים"
 
-#: src/playlist/Playlist.qml:118
+#: src/playlist/Playlist.qml:123
 msgctxt "@action:button"
 msgid "URL"
 msgstr "כתובת"
 
-#: src/playlist/Playlist.qml:128
+#: src/playlist/Playlist.qml:133
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "רשימת נגינה"
 
-#: src/playlist/Playlist.qml:137
+#: src/playlist/Playlist.qml:142
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "מיון"
 
-#: src/playlist/Playlist.qml:146
+#: src/playlist/Playlist.qml:151
 msgctxt "@action:button"
 msgid "Ascending"
 msgstr "עולה"
 
-#: src/playlist/Playlist.qml:163
+#: src/playlist/Playlist.qml:168
 msgctxt "@action:button"
 msgid "Descending"
 msgstr "יורד"
 
-#: src/playlist/Playlist.qml:186
+#: src/playlist/Playlist.qml:191
 msgctxt "@action:button"
 msgid "None"
 msgstr "אין"
 
-#: src/playlist/Playlist.qml:196
+#: src/playlist/Playlist.qml:201
 msgctxt "@action:button"
 msgid "File Name"
 msgstr "שם קובץ"
 
-#: src/playlist/Playlist.qml:206
+#: src/playlist/Playlist.qml:211
 msgctxt "@action:button"
 msgid "Title"
 msgstr "כותרת"
 
-#: src/playlist/Playlist.qml:216
+#: src/playlist/Playlist.qml:221
 msgctxt "@action:button"
 msgid "Duration"
 msgstr "משך"
 
-#: src/playlist/Playlist.qml:226
+#: src/playlist/Playlist.qml:231
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr "מועד עריכה"
 
-#: src/playlist/Playlist.qml:236
+#: src/playlist/Playlist.qml:241
 msgctxt "@action:button"
 msgid "File Size"
 msgstr "גודל קובץ"
 
-#: src/playlist/Playlist.qml:246
+#: src/playlist/Playlist.qml:251
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "מס׳ רצועה"
 
-#: src/playlist/Playlist.qml:256
+#: src/playlist/Playlist.qml:261
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr "קצב דגימה"
 
-#: src/playlist/Playlist.qml:266
+#: src/playlist/Playlist.qml:271
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "קצב סיביות"
 
-#: src/playlist/Playlist.qml:281
+#: src/playlist/Playlist.qml:286
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "התאמה אישית…"
 
-#: src/playlist/Playlist.qml:292
+#: src/playlist/Playlist.qml:297
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "נגינה"
 
-#: src/playlist/Playlist.qml:298
+#: src/playlist/Playlist.qml:303
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "חזרה על רשימת נגינה"
 
-#: src/playlist/Playlist.qml:309
+#: src/playlist/Playlist.qml:314
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "לעצור אחרי הפריט האחרון"
 
-#: src/playlist/Playlist.qml:319
+#: src/playlist/Playlist.qml:324
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "חזרה על פריט"
 
-#: src/playlist/Playlist.qml:330
+#: src/playlist/Playlist.qml:335
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "לעצור אחרי פריט"
 
-#: src/playlist/Playlist.qml:340
+#: src/playlist/Playlist.qml:345
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "נגינה אקראית"
 
-#: src/playlist/Playlist.qml:352
+#: src/playlist/Playlist.qml:357
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "פינוי"
 
-#: src/playlist/Playlist.qml:360
+#: src/playlist/Playlist.qml:365
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "שמירה בשם"
 
-#: src/playlist/Playlist.qml:399
+#: src/playlist/Playlist.qml:404
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "הוספת רשימת נגינה חדשה"
 
-#: src/playlist/Playlist.qml:412 src/playlist/Playlist.qml:433
+#: src/playlist/Playlist.qml:417 src/playlist/Playlist.qml:438
 msgctxt "@action:button"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/playlist/Playlist.qml:415 src/qml/Main.qml:464
+#: src/playlist/Playlist.qml:420 src/qml/Main.qml:496
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -891,92 +891,92 @@ msgstr ""
 "לא נמצאו <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> או <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
-#: src/playlist/Playlist.qml:432
+#: src/playlist/Playlist.qml:437
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "שם רשימת נגינה"
 
-#: src/playlist/Playlist.qml:644
+#: src/playlist/Playlist.qml:649
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
-#: src/playlist/Playlist.qml:650
+#: src/playlist/Playlist.qml:655
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "פתיחה בדפדפן"
 
-#: src/playlist/Playlist.qml:659
+#: src/playlist/Playlist.qml:664
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr "פתיחה ביצרן תמונות ממוזערות"
 
-#: src/playlist/Playlist.qml:675
+#: src/playlist/Playlist.qml:680
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "פתיחה ב־%1"
 
-#: src/playlist/Playlist.qml:689
+#: src/playlist/Playlist.qml:694
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "העתקת השם"
 
-#: src/playlist/Playlist.qml:695
+#: src/playlist/Playlist.qml:700
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "העתקת הנתיב"
 
-#: src/playlist/Playlist.qml:696
+#: src/playlist/Playlist.qml:701
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "העתקת הכתובת"
 
-#: src/playlist/Playlist.qml:706
+#: src/playlist/Playlist.qml:711
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "בחירה בהכול"
 
-#: src/playlist/Playlist.qml:710
+#: src/playlist/Playlist.qml:715
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "ביטול בחירה"
 
-#: src/playlist/Playlist.qml:714
+#: src/playlist/Playlist.qml:719
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "היפוך בחירה"
 
-#: src/playlist/Playlist.qml:720
+#: src/playlist/Playlist.qml:725
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "הסרה מרשימת הנגינה"
 
-#: src/playlist/Playlist.qml:726
+#: src/playlist/Playlist.qml:731
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "הסרת הנבחרים מרשימת הנגינה"
 
-#: src/playlist/Playlist.qml:732 src/playlist/PlaylistTabBar.qml:72
+#: src/playlist/Playlist.qml:737 src/playlist/PlaylistTabBar.qml:63
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "שינוי שם"
 
-#: src/playlist/Playlist.qml:738
+#: src/playlist/Playlist.qml:743
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "יש לגלול כדי לנגן פריט"
 
-#: src/playlist/Playlist.qml:748
+#: src/playlist/Playlist.qml:753
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "העברת קובץ לאשפה"
 
-#: src/playlist/Playlist.qml:754
+#: src/playlist/Playlist.qml:759
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "העברת הקבצים הנבחרים לאשפה"
 
-#: src/playlist/Playlist.qml:858 src/qml/Settings/VideoSettings.qml:71
+#: src/playlist/Playlist.qml:866 src/qml/Settings/VideoSettings.qml:71
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "בחירת קובץ"
@@ -1238,109 +1238,109 @@ msgctxt "@label:button resolution"
 msgid "Resolution"
 msgstr "רזולוציה"
 
-#: src/playlist/playlistsortproxymodel.cpp:327
+#: src/playlist/playlistsortproxymodel.cpp:338
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "שורה חדשה"
 
-#: src/playlist/playlistsortproxymodel.cpp:499
+#: src/playlist/playlistsortproxymodel.cpp:532
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
 msgstr "אין סוגה"
 
-#: src/playlist/playlistsortproxymodel.cpp:500
+#: src/playlist/playlistsortproxymodel.cpp:533
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
 msgstr "אין אלבום"
 
-#: src/playlist/playlistsortproxymodel.cpp:501
+#: src/playlist/playlistsortproxymodel.cpp:534
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
 msgstr "אין אומן/נית"
 
-#: src/playlist/playlistsortproxymodel.cpp:502
+#: src/playlist/playlistsortproxymodel.cpp:535
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
 msgstr "אין אומן/ית האלבום"
 
-#: src/playlist/playlistsortproxymodel.cpp:503
+#: src/playlist/playlistsortproxymodel.cpp:536
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
 msgstr "אין מלחין/נה"
 
-#: src/playlist/playlistsortproxymodel.cpp:504
+#: src/playlist/playlistsortproxymodel.cpp:537
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
 msgstr "אין פזמונאי/ת"
 
-#: src/playlist/playlistsortproxymodel.cpp:505
+#: src/playlist/playlistsortproxymodel.cpp:538
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
 msgstr "אין שנת הוצאה לאור"
 
-#: src/playlist/playlistsortproxymodel.cpp:506
+#: src/playlist/playlistsortproxymodel.cpp:539
 #, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
 msgstr "לא וידאו"
 
-#: src/playlist/playlistsortproxymodel.cpp:507
+#: src/playlist/playlistsortproxymodel.cpp:540
 #, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
 msgstr "אין מפענח שמע"
 
-#: src/playlist/playlistsortproxymodel.cpp:508
+#: src/playlist/playlistsortproxymodel.cpp:541
 #, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
 msgstr "אין מפענח וידאו"
 
-#: src/playlist/playlistsortproxymodel.cpp:530
+#: src/playlist/playlistsortproxymodel.cpp:564
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
 msgstr "תקליטור"
 
-#: src/playlist/playlistsortproxymodel.cpp:585
+#: src/playlist/playlistsortproxymodel.cpp:619
 #, kde-format
 msgctxt "@title:group"
 msgid "Video File"
 msgstr "קובץ וידאו"
 
-#: src/playlist/playlistsortproxymodel.cpp:588
+#: src/playlist/playlistsortproxymodel.cpp:622
 #, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
 msgstr "קובץ שמע"
 
-#: src/playlist/playlistsortproxymodel.cpp:612
+#: src/playlist/playlistsortproxymodel.cpp:646
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
 msgstr "לרוחב"
 
-#: src/playlist/playlistsortproxymodel.cpp:616
+#: src/playlist/playlistsortproxymodel.cpp:650
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
 msgstr "לאורך"
 
-#: src/playlist/playlistsortproxymodel.cpp:620
+#: src/playlist/playlistsortproxymodel.cpp:654
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
 msgstr "ריבוע"
 
-#: src/playlist/PlaylistTabBar.qml:78
+#: src/playlist/PlaylistTabBar.qml:69
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "הסרה"
@@ -1350,129 +1350,129 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: src/qml/Actions.qml:140
+#: src/qml/Actions.qml:142
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "לא ניתן לטעון כתוביות כשאף קובץ לא פתוח"
 
-#: src/qml/Actions.qml:159 src/qml/Actions.qml:165 src/qml/Actions.qml:170
+#: src/qml/Actions.qml:161 src/qml/Actions.qml:167 src/qml/Actions.qml:172
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "מהירות נגינה: %1"
 
-#: src/qml/Actions.qml:269
+#: src/qml/Actions.qml:273
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "תחילת לולאה: %1"
 
-#: src/qml/Actions.qml:275
+#: src/qml/Actions.qml:279
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "לולאה: %1–%2"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:285
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "הלולאה נקטעה"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:305
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "כתוביות כבויות"
 
-#: src/qml/Actions.qml:301
+#: src/qml/Actions.qml:305
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "כתוביות פעילות"
 
-#: src/qml/Actions.qml:317 src/qml/Actions.qml:323
+#: src/qml/Actions.qml:321 src/qml/Actions.qml:327
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "קנה מידה של כתוביות: %1"
 
-#: src/qml/Actions.qml:337
+#: src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "ביטול שזירה: %1"
 
-#: src/qml/Actions.qml:398 src/qml/Actions.qml:404
+#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "תקריב: %1"
 
-#: src/qml/Actions.qml:409
+#: src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "תקריב: 0"
 
-#: src/qml/Actions.qml:415 src/qml/Actions.qml:421
+#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "ניגודיות: %1"
 
-#: src/qml/Actions.qml:426
+#: src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "ניגודיות: 0"
 
-#: src/qml/Actions.qml:432 src/qml/Actions.qml:438
+#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "בהירות: %1"
 
-#: src/qml/Actions.qml:443
+#: src/qml/Actions.qml:447
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "בהירות: 0"
 
-#: src/qml/Actions.qml:449 src/qml/Actions.qml:455
+#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "גאמה: %1"
 
-#: src/qml/Actions.qml:460
+#: src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "גאמה: 0"
 
-#: src/qml/Actions.qml:466 src/qml/Actions.qml:472
+#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "רוויה: %1"
 
-#: src/qml/Actions.qml:477
+#: src/qml/Actions.qml:481
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "רוויה: 0"
 
-#: src/qml/Footer.qml:150
+#: src/qml/Footer.qml:152
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "התחלת נגינה"
 
-#: src/qml/Footer.qml:150
+#: src/qml/Footer.qml:152
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "השהיית נגינה"
 
-#: src/qml/Footer.qml:167
+#: src/qml/Footer.qml:169
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "ניגון הקובץ הקודם"
 
-#: src/qml/Footer.qml:184
+#: src/qml/Footer.qml:186
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "ניגון הקובץ הבא"
 
-#: src/qml/Footer.qml:198
+#: src/qml/Footer.qml:200
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "פתיחת תפריט פרקים"
 
-#: src/qml/Footer.qml:262
+#: src/qml/Footer.qml:264
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "נותרו: %1"
@@ -1605,22 +1605,22 @@ msgstr ""
 "דילוג אוטומטי על פרקים שמכילים מילים/תווים מסוימים.\n"
 "אפשר לגשת אל הגדרות „נגינה” לפרטים נוספים"
 
-#: src/qml/Main.qml:33
+#: src/qml/Main.qml:43
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:414
+#: src/qml/Main.qml:446
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "בחירת קובץ"
 
-#: src/qml/Main.qml:434
+#: src/qml/Main.qml:466
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "בחירת קובץ כתוביות"
 
-#: src/qml/Main.qml:461
+#: src/qml/Main.qml:493
 msgctxt "@action:button"
 msgid "Open"
 msgstr "פתיחה"
@@ -1645,7 +1645,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "קבצים אחרונים"
 
-#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:72
+#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "פינוי הרשימה"
@@ -1785,17 +1785,17 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "מהירות נגינה"
 
-#: src/qml/MpvVideo.qml:250
+#: src/qml/MpvVideo.qml:249
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
 msgstr "הוספה לרשימת נגינה"
 
-#: src/qml/MpvVideo.qml:299
+#: src/qml/MpvVideo.qml:298
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "לנגן כעת"
 
-#: src/qml/MpvVideo.qml:385
+#: src/qml/MpvVideo.qml:384
 msgctxt "@label:title"
 msgid "Loading…"
 msgstr "בטעינה…"
