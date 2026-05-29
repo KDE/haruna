@@ -33,9 +33,12 @@ cleanup:
   - /lib/pkgconfig
   - /share/man
   - /mkspecs
+
 modules:
   - name: haruna
     buildsystem: cmake-ninja
+    post-install:
+      - cp -r LICENSES $FLATPAK_DEST/share/licenses/$FLATPAK_ID/haruna/
     sources:
       - type: dir
         path: .
@@ -58,8 +61,8 @@ modules:
           - -DKDSingleApplication_EXAMPLES=OFF
         sources:
           - type: archive
-            url: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v1.2.0.tar.gz
-            sha256: ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
+            url: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v1.2.1.tar.gz
+            sha256: e3254ce9dc5ecf6d61ef83264bc61d486a307f0e3c9ed1bb2176f068cdbcbe09
             x-checker-data:
               type: anitya
               project-id: 370439
@@ -70,8 +73,8 @@ modules:
         buildsystem: cmake-ninja
         sources:
           - type: archive
-            url: https://download.kde.org/stable/mpvqt/mpvqt-1.1.1.tar.xz
-            sha256: bdd1ea69338cf3017f628a886218b8c185ca24e8257f03207a3cf1bbb51e3d32
+            url: https://download.kde.org/stable/mpvqt/mpvqt-1.2.0.tar.xz
+            sha256: 8660ad79c0d60fed77f29b36e1742841466af5405de702c81a121e6eeb625ebb
             x-checker-data:
               type: anitya
               project-id: 370634
@@ -113,8 +116,8 @@ modules:
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20260311
-                    commit: 3640b6c590f9c383ffa5d0955f35e646f684a1da
+                    tag: v2.1-20260415
+                    commit: 7fcf52f5bc7a91d938312ed76b18f3d76cb78483
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.-]+)$
@@ -126,9 +129,6 @@ modules:
                 buildsystem: meson
                 config-opts:
                   - -Ddemos=false
-                cleanup:
-                  - /include
-                  - /lib/pkgconfig
                 sources:
                   - type: git
                     url: https://github.com/haasn/libplacebo.git
