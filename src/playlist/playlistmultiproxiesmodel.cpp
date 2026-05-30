@@ -439,16 +439,13 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 QUrl PlaylistMultiProxiesModel::getPlaylistUrl(const QString &playlistName)
 {
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
-    playlistsPath.append(u"/"_s);
-    auto filePath = playlistsPath.append(playlistName).append(u".m3u"_s);
+    playlistsPath.append(u"/"_s).append(playlistName).append(u".m3u"_s);
 
-    QUrl url = QUrl::fromLocalFile(filePath);
-    QFile playlistFile(url.toString(QUrl::PreferLocalFile));
-
-    if (!playlistFile.exists()) {
+    if (!QFile::exists(playlistsPath)) {
         return {};
     }
-    return url;
+
+    return QUrl::fromLocalFile(playlistsPath);
 }
 
 void PlaylistMultiProxiesModel::saveVisiblePlaylist()
