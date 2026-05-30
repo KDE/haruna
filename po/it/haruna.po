@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-29 00:42+0000\n"
-"PO-Revision-Date: 2026-04-23 17:53+0200\n"
+"POT-Creation-Date: 2026-05-30 00:44+0000\n"
+"PO-Revision-Date: 2026-05-25 19:06+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -658,12 +658,10 @@ msgid "Volume: %1"
 msgstr "Volume: %1"
 
 #: src/mpv/mpvitem.cpp:491
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "Tempo dei sottotitoli: %1 secondi"
+msgstr "Tempo dei sottotitoli: +%1 secondi"
 
 #: src/mpv/mpvitem.cpp:493
 #, kde-format
@@ -1604,12 +1602,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:312
+#: src/qml/HProgressBar.qml:316
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Salta capitoli"
 
-#: src/qml/HProgressBar.qml:320
+#: src/qml/HProgressBar.qml:324
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2297,7 +2295,7 @@ msgstr "Mostra marcatori capitoli"
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
-msgstr ""
+msgstr "Mostra avanzamento sull'icona della barra delle attività"
 
 #: src/qml/Settings/GeneralSettings.qml:392
 msgctxt "@label:listbox"
@@ -2691,8 +2689,6 @@ msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:407
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Selezione formato"
