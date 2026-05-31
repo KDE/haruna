@@ -713,17 +713,19 @@ void MpvItem::updateTaskbarPlaybackProgress()
         return;
     }
 
-    static QList<PlaybackState> activeStates = {PlaybackState::Playing, PlaybackState::Paused};
-    bool isProgressVisible = activeStates.contains(playbackState());
+    QThreadPool::globalInstance()->start([this]() {
+        static QList<PlaybackState> activeStates = {PlaybackState::Playing, PlaybackState::Paused};
+        bool isProgressVisible = activeStates.contains(playbackState());
 
-    QVariantMap map;
-    map.insert(u"progress-visible"_s, isProgressVisible);
-    map.insert(u"progress"_s, position() / duration());
+        QVariantMap map;
+        map.insert(u"progress-visible"_s, isProgressVisible);
+        map.insert(u"progress"_s, position() / duration());
 
-    QDBusMessage msg = QDBusMessage::createSignal(u"/org/kde/haruna"_s, u"com.canonical.Unity.LauncherEntry"_s, u"Update"_s);
-    msg << u"application://org.kde.haruna.desktop"_s << map;
+        QDBusMessage msg = QDBusMessage::createSignal(u"/org/kde/haruna"_s, u"com.canonical.Unity.LauncherEntry"_s, u"Update"_s);
+        msg << u"application://org.kde.haruna.desktop"_s << map;
 
-    QDBusConnection::sessionBus().send(msg);
+        QDBusConnection::sessionBus().send(msg);
+    });
 #endif
 }
 
