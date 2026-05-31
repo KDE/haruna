@@ -739,29 +739,6 @@ void MpvItem::saveTimePosition()
 
 double MpvItem::loadTimePosition()
 {
-    auto *const playlistModel = playlistsManager()->activePlaylist()->playlistModel();
-    PlaylistItem item{playlistModel->playlist().at(playlistModel->playingItem())};
-    auto duration{item.duration};
-
-    if (qFuzzyCompare(duration, 0.0)) {
-        QString mimeType = MiscUtils::mimeType(m_currentUrl);
-        KFileMetaData::ExtractorCollection exCol;
-        QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
-        KFileMetaData::SimpleExtractionResult result(m_currentUrl.toLocalFile(), mimeType, KFileMetaData::ExtractionResult::ExtractMetaData);
-        if (!extractors.isEmpty()) {
-            KFileMetaData::Extractor *ex = extractors.first();
-            ex->extract(&result);
-            auto properties = result.properties();
-            duration = properties.value(KFileMetaData::Property::Duration).toDouble();
-        }
-    }
-
-    // position for files with a duration lower than
-    // PlaybackSettings::minDurationToSavePosition() is not restored
-    if (m_currentUrl.isLocalFile() && duration < PlaybackSettings::minDurationToSavePosition() * 60) {
-        return 0;
-    }
-
     auto hash = MiscUtils::md5(currentUrl().toString());
     return Database::instance()->playbackPosition(hash);
 }
