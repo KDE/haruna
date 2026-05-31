@@ -253,7 +253,10 @@ SettingsBasePage {
             }
         }
 
-        Item { Layout.preferredWidth: 1 }
+        Label {
+            text: KI18n.i18nc("@label:spinbox when to save position", "Save position")
+            Layout.alignment: Qt.AlignRight
+        }
 
         RowLayout {
             enabled: saveFilePositionCheckBox.checked
@@ -272,19 +275,15 @@ SettingsBasePage {
             Label {
                 text: {
                     if (timePositionSaving.value === 0) {
-                        return KI18n.i18nc("@info", "For any duration")
+                        return KI18n.i18nc("@info when to save position", "for any duration")
                     } else {
-                        return KI18n.i18ncp("@info",
-                                      "If duration is longer than %1 minute",
-                                      "If duration is longer than %1 minutes",
+                        return KI18n.i18ncp("@info when to save position",
+                                      "if duration is longer than %1 minute",
+                                      "if duration is longer than %1 minutes",
                                       timePositionSaving.value)
                     }
                 }
                 elide: Text.ElideRight
-            }
-            ToolTipButton {
-                toolTipText: KI18n.i18nc("@info:tooltip restore playback position > duration",
-                             "Position for remote files is restored regardless of duration.")
             }
         }
 
@@ -295,7 +294,7 @@ SettingsBasePage {
             SpinBox {
                 id: timePositionSaveInterval
                 from: 1
-                to: 300
+                to: 9999
                 value: PlaybackSettings.savePositionInterval
 
                 onValueModified: {
@@ -305,9 +304,9 @@ SettingsBasePage {
             }
 
             LabelWithTooltip {
-                text: KI18n.i18ncp("@info:tooltip restore playback position > save interval",
-                             "Save position every %1 second",
-                             "Save position every %1 seconds",
+                text: KI18n.i18ncp("@info:tooltip how often to save position",
+                             "every %1 second",
+                             "every %1 seconds",
                              timePositionSaveInterval.value)
                 elide: Text.ElideRight
                 Layout.fillWidth: true
