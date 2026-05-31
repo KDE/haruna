@@ -935,10 +935,8 @@ void MpvItem::setPlaylistsManager(PlaylistsManager *newPlaylistsManager)
     }
     m_playlistsManager = newPlaylistsManager;
 
-    connect(playlistsManager(), &PlaylistsManager::playingItemChanged, this, [this](const PlaylistItem &playlistItem) {
-        const auto url = playlistItem.url;
-        const auto mediaTitle = playlistItem.mediaTitle.isEmpty() ? playlistItem.filename : playlistItem.mediaTitle;
-        loadFile(url.toString());
+    connect(playlistsManager(), &PlaylistsManager::playingItemChanged, this, [this]() {
+        loadFile(playlistsManager()->activeItemPath());
     });
 
     Q_EMIT playlistsManagerChanged();

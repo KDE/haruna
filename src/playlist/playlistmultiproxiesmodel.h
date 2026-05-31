@@ -47,7 +47,7 @@ public:
     PlaylistFilterProxyModel *defaultFilterProxy();
 
 Q_SIGNALS:
-    void playingItemChanged(const PlaylistItem &playlistItem);
+    void playingItemChanged();
     void visibleIndexChanged();
     void activeIndexChanged();
 

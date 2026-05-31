@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE QString activeItemPath();
 
 Q_SIGNALS:
-    void playingItemChanged(const PlaylistItem &playlistItem);
+    void playingItemChanged();
 
 private:
     std::unique_ptr<PlaylistMultiProxiesModel> m_playlists = std::make_unique<PlaylistMultiProxiesModel>(nullptr);

@@ -500,7 +500,7 @@ void PlaylistModel::setPlayingItem(uint i)
 
     Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
-    Q_EMIT playingItemChanged(m_playlistName, m_playlist[i]);
+    Q_EMIT playingItemChanged(m_playlistName);
 
     GeneralSettings::setLastPlayedFile(m_playlist.at(i).url.toString());
     GeneralSettings::setLastPlaylist(m_playlistPath);

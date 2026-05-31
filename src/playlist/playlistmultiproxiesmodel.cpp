@@ -220,7 +220,7 @@ void PlaylistMultiProxiesModel::addPlaylist(const QString &playlistName, const Q
         filterModel->playlistModel()->addM3uItems(internalUrl, PlaylistModel::Behavior::Append);
     }
 
-    connect(filterModel->playlistModel(), &PlaylistModel::playingItemChanged, this, [this](const QString &pName, const PlaylistItem &playlistItem) {
+    connect(filterModel->playlistModel(), &PlaylistModel::playingItemChanged, this, [this](const QString &pName) {
         // When playingItemChanged is emitted, we check if the new playing item is in the currently active
         // playlist. If not, we stop that playlist and update the active one.
         QString activePlaylistName = m_playlistFilterProxyModels.at(m_activeIndex)->playlistModel()->playlistName();
@@ -236,7 +236,7 @@ void PlaylistMultiProxiesModel::addPlaylist(const QString &playlistName, const Q
             }
         }
         savePlaylistCache();
-        Q_EMIT playingItemChanged(playlistItem);
+        Q_EMIT playingItemChanged();
     });
 
     // When underlying models change, either by remove, insert, move or sort: save the playlist
