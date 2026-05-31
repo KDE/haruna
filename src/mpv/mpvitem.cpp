@@ -332,8 +332,6 @@ void MpvItem::onFileLoaded()
         QMetaObject::invokeMethod(Worker::instance(), &Worker::findRecursiveSubtitles, Qt::QueuedConnection, m_currentUrl);
     }
 
-    GeneralSettings::setLastPlayedFile(m_currentUrl.toString());
-    GeneralSettings::self()->save();
     auto state = pause ? PlaybackState::Paused : PlaybackState::Playing;
     setPlaybackState(state);
 
