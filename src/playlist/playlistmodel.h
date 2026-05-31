@@ -150,6 +150,9 @@ Q_SIGNALS:
 
 private:
     void appendItem(const QUrl &url);
+    void appendWithBehavior(const QUrl &url, Behavior behavior);
+    void handleRemoteUrl(const QUrl &url, Behavior behavior);
+    void handleLocalFile(const QUrl &url, Behavior behavior);
     void getSiblingItems(const QUrl &url);
     void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);

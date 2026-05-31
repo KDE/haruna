@@ -193,55 +193,67 @@ void PlaylistModel::addItem(const QUrl &url, Behavior behavior)
     if (!url.isValid() || url.isEmpty()) {
         return;
     }
+
     if (behavior == Behavior::Clear) {
         clear();
     }
 
     if (url.scheme() == u"file"_s) {
-        auto mimeType = MiscUtils::mimeType(url);
-
-        if (mimeType == u"audio/x-mpegurl"_s) {
-            addM3uItems(url, behavior);
-            return;
-        }
-
-        if (isVideoOrAudioMimeType(mimeType)) {
-            if (behavior == Behavior::Clear) {
-                if (PlaylistSettings::loadSiblings()) {
-                    getSiblingItems(url);
-                } else {
-                    appendItem(url);
-                    setPlayingItem(0);
-                }
-            }
-            if (behavior == Behavior::Append) {
-                appendItem(url);
-            }
-            if (behavior == Behavior::AppendAndPlay) {
-                appendItem(url);
-                setPlayingItem(m_playlist.size() - 1);
-            }
-
-            return;
-        }
+        handleLocalFile(url, behavior);
+        return;
     }
 
     if (url.scheme() == u"http"_s || url.scheme() == u"https"_s) {
-        if (youtube.isPlaylist(url)) {
-            youtube.getPlaylist(url);
-        } else {
-            if (behavior == Behavior::Clear) {
-                appendItem(url);
-                setPlayingItem(0);
-            }
-            if (behavior == Behavior::Append) {
-                appendItem(url);
-            }
-            if (behavior == Behavior::AppendAndPlay) {
-                appendItem(url);
-                setPlayingItem(m_playlist.size() - 1);
-            }
-        }
+        handleRemoteUrl(url, behavior);
+    }
+}
+
+void PlaylistModel::handleLocalFile(const QUrl &url, Behavior behavior)
+{
+    const auto mimeType = MiscUtils::mimeType(url);
+
+    if (mimeType == u"audio/x-mpegurl"_s) {
+        addM3uItems(url, behavior);
+        return;
+    }
+
+    if (!isVideoOrAudioMimeType(mimeType)) {
+        return;
+    }
+
+    if (behavior == Behavior::Clear && PlaylistSettings::loadSiblings()) {
+        getSiblingItems(url);
+        return;
+    }
+
+    appendWithBehavior(url, behavior);
+}
+
+void PlaylistModel::handleRemoteUrl(const QUrl &url, Behavior behavior)
+{
+    if (youtube.isPlaylist(url)) {
+        youtube.getPlaylist(url);
+        return;
+    }
+
+    appendWithBehavior(url, behavior);
+}
+
+void PlaylistModel::appendWithBehavior(const QUrl &url, Behavior behavior)
+{
+    appendItem(url);
+
+    switch (behavior) {
+    case Behavior::Clear:
+        setPlayingItem(0);
+        break;
+
+    case Behavior::AppendAndPlay:
+        setPlayingItem(m_playlist.size() - 1);
+        break;
+
+    case Behavior::Append:
+        break;
     }
 }
 
