@@ -95,12 +95,14 @@ MpvItem::MpvItem(QQuickItem *parent)
     m_saveTimePositionTimer->start();
 
     connect(m_saveTimePositionTimer.get(), &QTimer::timeout, this, [this]() {
-        if (finishedLoading() && duration() > 0 && !pause()) {
-            if (position() < duration() - 10) {
-                saveTimePosition();
-            } else {
-                resetTimePosition();
-            }
+        if (!finishedLoading() || duration() < 1 || pause()) {
+            return;
+        }
+
+        if (position() < duration() - 10) {
+            saveTimePosition();
+        } else {
+            resetTimePosition();
         }
     });
 
