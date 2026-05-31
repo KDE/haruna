@@ -271,17 +271,11 @@ void PlaylistModel::appendItem(const QUrl &url)
 {
     PlaylistItem item;
     QFileInfo itemInfo(url.toLocalFile());
-    QDir itemDir(itemInfo.absolutePath());
     auto row{m_playlist.size()};
-    if (itemInfo.exists() && itemInfo.isFile()) {
-        item.url = url;
-        item.filename = itemInfo.fileName();
-        item.folderPath = itemInfo.absolutePath();
-        item.dirName = itemDir.dirName();
-        item.modifiedDate = itemInfo.lastModified();
-        item.fileSize = itemInfo.size();
-        item.extension = itemInfo.suffix();
-        item.fileType = MiscUtils::mimeType(url).split(u"/"_s).first();
+
+    const std::optional<PlaylistItem> optionalItem = localFileToPlaylistItem(itemInfo);
+    if (optionalItem.has_value()) {
+        item = optionalItem.value();
     } else {
         if (url.scheme().startsWith(u"http"_s)) {
             item.url = url;
@@ -302,7 +296,7 @@ void PlaylistModel::appendItem(const QUrl &url)
 
     beginInsertRows(QModelIndex(), m_playlist.size(), m_playlist.size());
 
-    m_playlist.push_back(item);
+    m_playlist.append(item);
     Q_EMIT itemAdded(row, item.url.toString(), m_playlistName);
 
     endInsertRows();
@@ -349,24 +343,20 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
     for (const auto &file : siblingFiles) {
         QFileInfo fileInfo(file);
-        QDir itemDir(fileInfo.absolutePath());
-        auto fileUrl = QUrl::fromLocalFile(file);
-        PlaylistItem item;
-        item.url = fileUrl;
-        item.filename = fileInfo.fileName();
-        item.folderPath = fileInfo.absolutePath();
-        item.dirName = itemDir.dirName();
-        item.modifiedDate = fileInfo.lastModified();
-        item.fileSize = fileInfo.size();
-        item.extension = fileInfo.suffix();
-        item.fileType = MiscUtils::mimeType(fileUrl).split(u"/"_s).first();
-        m_playlist.push_back(item);
+        const std::optional<PlaylistItem> item = localFileToPlaylistItem(fileInfo);
+
+        if (!item.has_value()) {
+            continue;
+        }
+
         // in flatpak the file dialog gives a percent encoded path
         // use toLocalFile to normalize the urls
-        if (url.toLocalFile() == fileUrl.toLocalFile()) {
-            playingItem = m_playlist.size() - 1;
+        const auto itemUrl = item.value().url;
+        if (url.toLocalFile() == itemUrl.toLocalFile()) {
+            playingItem = m_playlist.size();
         }
-        Q_EMIT itemAdded(m_playlist.size() - 1, item.url.toString(), m_playlistName);
+        m_playlist.append(item.value());
+        Q_EMIT itemAdded(m_playlist.size() - 1, itemUrl.toString(), m_playlistName);
     }
     endInsertRows();
 
@@ -375,6 +365,31 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
     }
+}
+
+std::optional<PlaylistItem> PlaylistModel::localFileToPlaylistItem(const QFileInfo &fileInfo)
+{
+    if (!fileInfo.isFile() || !fileInfo.exists()) {
+        return {};
+    }
+
+    const auto filePath = fileInfo.absoluteFilePath();
+    const auto url = QUrl::fromLocalFile(filePath);
+    if (!url.isValid()) {
+        return {};
+    }
+
+    PlaylistItem item;
+    item.url = url;
+    item.filename = fileInfo.fileName();
+    item.folderPath = fileInfo.absolutePath();
+    item.dirName = fileInfo.absoluteDir().dirName();
+    item.modifiedDate = fileInfo.lastModified();
+    item.fileSize = fileInfo.size();
+    item.extension = fileInfo.suffix();
+    item.fileType = MiscUtils::mimeType(url).split(u"/"_s).first();
+
+    return {item};
 }
 
 void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
