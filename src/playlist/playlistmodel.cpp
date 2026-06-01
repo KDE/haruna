@@ -321,7 +321,6 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         return;
     }
 
-    uint playingItem{0};
     QList<PlaylistItem> playlist;
     QDirIterator it(openedFileInfo.absolutePath(), QDir::Files | QDir::Hidden, QDirIterator::NoIteratorFlags);
     while (it.hasNext()) {
@@ -332,12 +331,6 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
             continue;
         }
 
-        // in flatpak the file dialog gives a percent encoded path
-        // use toLocalFile to normalize the urls
-        const auto itemUrl = item.value().url;
-        if (url.toLocalFile() == itemUrl.toLocalFile()) {
-            playingItem = playlist.size();
-        }
         playlist.append(item.value());
     }
 
@@ -348,7 +341,17 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     });
 
     setPlaylist(playlist);
-    setPlayingItem(playingItem);
+
+    uint i = 0;
+    for (const auto &item : std::as_const(playlist)) {
+        // in flatpak the file dialog gives a percent encoded path
+        // use toLocalFile to normalize the urls
+        if (url.toLocalFile() == item.url.toLocalFile()) {
+            setPlayingItem(i);
+        }
+        getMetaData(i, item.url.toString());
+        i++;
+    }
 
     if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
@@ -527,16 +530,6 @@ void PlaylistModel::setPlayingItem(uint i)
     GeneralSettings::self()->save();
 }
 
-void PlaylistModel::getAllMetaData()
-{
-    uint i = 0;
-    const QList<PlaylistItem> &pl = playlist();
-    for (const auto &item : pl) {
-        getMetaData(i, item.url.toString());
-        i++;
-    }
-}
-
 void PlaylistModel::getMetaData(uint i, const QString &path)
 {
     m_threadPool.start([this, i, path]() {
@@ -608,7 +601,6 @@ void PlaylistModel::setPlaylist(const QList<PlaylistItem> &newPlaylist)
     beginResetModel();
     m_playlist = newPlaylist;
     endResetModel();
-    getAllMetaData();
 }
 
 QString PlaylistModel::playlistName() const
