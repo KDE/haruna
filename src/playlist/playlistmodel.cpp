@@ -320,29 +320,11 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         return;
     }
 
-    QStringList siblingFiles;
+    uint playingItem{0};
+    QList<PlaylistItem> playlist;
     QDirIterator it(openedFileInfo.absolutePath(), QDir::Files | QDir::Hidden, QDirIterator::NoIteratorFlags);
     while (it.hasNext()) {
-        QString siblingFile = it.next();
-        QFileInfo siblingFileInfo(siblingFile);
-        auto siblingUrl = QUrl::fromLocalFile(siblingFile);
-        QString mimeType = MiscUtils::mimeType(siblingUrl);
-        if (!siblingFileInfo.exists()) {
-            continue;
-        }
-        if (isVideoOrAudioMimeType(mimeType)) {
-            siblingFiles.append(siblingFileInfo.absoluteFilePath());
-        }
-    }
-
-    QCollator collator;
-    collator.setNumericMode(true);
-    std::sort(siblingFiles.begin(), siblingFiles.end(), collator);
-
-    uint playingItem{0};
-    beginInsertRows(QModelIndex(), 0, siblingFiles.count() - 1);
-    for (const auto &file : siblingFiles) {
-        QFileInfo fileInfo(file);
+        const auto fileInfo = it.nextFileInfo();
         const std::optional<PlaylistItem> item = localFileToPlaylistItem(fileInfo);
 
         if (!item.has_value()) {
@@ -353,13 +335,18 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         // use toLocalFile to normalize the urls
         const auto itemUrl = item.value().url;
         if (url.toLocalFile() == itemUrl.toLocalFile()) {
-            playingItem = m_playlist.size();
+            playingItem = playlist.size();
         }
-        m_playlist.append(item.value());
-        Q_EMIT itemAdded(m_playlist.size() - 1, itemUrl.toString(), m_playlistName);
+        playlist.append(item.value());
     }
-    endInsertRows();
 
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::sort(playlist.begin(), playlist.end(), [&collator](const PlaylistItem &a, const PlaylistItem &b) {
+        return collator.compare(a.url.toLocalFile(), b.url.toLocalFile()) < 0;
+    });
+
+    setPlaylist(playlist);
     setPlayingItem(playingItem);
 
     if (PlaylistSettings::randomPlayback()) {
@@ -379,6 +366,11 @@ std::optional<PlaylistItem> PlaylistModel::localFileToPlaylistItem(const QFileIn
         return {};
     }
 
+    QString mimeType = MiscUtils::mimeType(url);
+    if (!isVideoOrAudioMimeType(mimeType)) {
+        return {};
+    }
+
     PlaylistItem item;
     item.url = url;
     item.filename = fileInfo.fileName();
@@ -387,7 +379,7 @@ std::optional<PlaylistItem> PlaylistModel::localFileToPlaylistItem(const QFileIn
     item.modifiedDate = fileInfo.lastModified();
     item.fileSize = fileInfo.size();
     item.extension = fileInfo.suffix();
-    item.fileType = MiscUtils::mimeType(url).split(u"/"_s).first();
+    item.fileType = mimeType.split(u"/"_s).first();
 
     return {item};
 }
@@ -534,6 +526,16 @@ void PlaylistModel::setPlayingItem(uint i)
     GeneralSettings::self()->save();
 }
 
+void PlaylistModel::getAllMetaData()
+{
+    uint i = 0;
+    const QList<PlaylistItem> &pl = playlist();
+    for (const auto &item : pl) {
+        getMetaData(i, item.url.toString());
+        i++;
+    }
+}
+
 void PlaylistModel::getMetaData(uint i, const QString &path)
 {
     m_threadPool.start([this, i, path]() {
@@ -598,6 +600,14 @@ double PlaylistModel::getPlaybackPosition(const uint row)
 
     auto hash = MiscUtils::md5(url.toString());
     return Database::instance()->playbackPosition(hash) / duration;
+}
+
+void PlaylistModel::setPlaylist(const QList<PlaylistItem> &newPlaylist)
+{
+    beginResetModel();
+    m_playlist = newPlaylist;
+    endResetModel();
+    getAllMetaData();
 }
 
 QString PlaylistModel::playlistName() const

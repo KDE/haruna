@@ -113,6 +113,7 @@ public:
     void setIsPlaying(bool newIsPlaying);
 
     QList<PlaylistItem> playlist() const;
+    void setPlaylist(const QList<PlaylistItem> &newPlaylist);
     QString playlistName() const;
     void setPlaylistName(const QString &newPlaylistName);
 
@@ -159,6 +160,7 @@ private:
     void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
     void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
+    void getAllMetaData();
     void getMetaData(uint i, const QString &path);
     void onMetaDataReady(uint i, const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
     double getPlaybackPosition(const uint row);
