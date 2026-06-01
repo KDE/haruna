@@ -253,6 +253,7 @@ void PlaylistModel::appendWithBehavior(const QUrl &url, Behavior behavior)
         break;
 
     case Behavior::Append:
+    case Behavior::Insert:
         break;
     }
 }
