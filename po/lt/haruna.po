@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-30 00:44+0000\n"
+"POT-Creation-Date: 2026-06-01 00:42+0000\n"
 "PO-Revision-Date: 2026-05-21 16:16+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -720,7 +720,7 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Praleistas skyrius: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:796
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -728,13 +728,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Garso įrašas: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:807
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtitrai: nėra"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -742,7 +742,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtitrai: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:823
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -2607,45 +2607,59 @@ msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "Failas bus atkuriamas po to, kai bus atkurta atkūrimo pozicija"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
-msgctxt "@info"
-msgid "For any duration"
-msgstr "Bet kokiai trukmei"
+#: src/qml/Settings/PlaybackSettings.qml:257
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@label:spinbox when to save position"
+msgid "Save position"
+msgstr "Atkūrimo pozicija"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-msgctxt "@info"
-msgid "If duration is longer than %1 minute"
-msgid_plural "If duration is longer than %1 minutes"
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For any duration"
+msgctxt "@info when to save position"
+msgid "for any duration"
+msgstr "Bet kokiai trukmei"
+
+#: src/qml/Settings/PlaybackSettings.qml:281
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "If duration is longer than %1 minute"
+#| msgid_plural "If duration is longer than %1 minutes"
+msgctxt "@info when to save position"
+msgid "if duration is longer than %1 minute"
+msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "Jei trukmė ilgesnė nei %1 minutė"
 msgstr[1] "Jei trukmė ilgesnė nei %1 minutės"
 msgstr[2] "Jei trukmė ilgesnė nei %1 minučių"
 msgstr[3] "Jei trukmė ilgesnė nei %1 minutė"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
-msgctxt "@info:tooltip restore playback position > duration"
-msgid "Position for remote files is restored regardless of duration."
-msgstr "Nuotolinių failų pozicija yra atkuriama nepriklausomai nuo trukmės."
-
-#: src/qml/Settings/PlaybackSettings.qml:309
-msgctxt "@info:tooltip restore playback position > save interval"
-msgid "Save position every %1 second"
-msgid_plural "Save position every %1 seconds"
+#: src/qml/Settings/PlaybackSettings.qml:308
+#, fuzzy
+#| msgctxt "@info:tooltip restore playback position > save interval"
+#| msgid "Save position every %1 second"
+#| msgid_plural "Save position every %1 seconds"
+msgctxt "@info:tooltip how often to save position"
+msgid "every %1 second"
+msgid_plural "every %1 seconds"
 msgstr[0] "Įrašyti poziciją kas %1 sekundę"
 msgstr[1] "Įrašyti poziciją kas %1 sekundes"
 msgstr[2] "Įrašyti poziciją kas %1 sekundžių"
 msgstr[3] "Įrašyti poziciją kas %1 sekundę"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Skyriai"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:330
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Praleisti skyrius"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -2654,12 +2668,12 @@ msgstr ""
 "Kai įjungta, tai automatiškai praleidžia skyrius, kuriuose yra tam tikri "
 "žodžiai/simboliai."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Praleidžiant rodyti pranešimą ekrane"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2668,17 +2682,17 @@ msgstr ""
 "Praleidžiant skyrius, ekrane bus rodomas iškylantysis pranešimas su "
 "praleisto skyriaus pavadinimu."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:361
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "Raktažodžiai"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "įž, op, ed, skyrius 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:376
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2690,29 +2704,29 @@ msgstr ""
 "atitiks žodžius, kuriuose jis bus rastas, pavyzdžiui, <strong><u>įž</u>anga</"
 "strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:400
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:406
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Formato pasirinkimas"
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:431
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "Tinkintas"
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:437
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "Numatytasis"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:452
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Pasirenka vaizdo šaltinį artimiausią nurodytam formatui."
@@ -3162,6 +3176,10 @@ msgstr ""
 "Nepavyko gauti grojaraščio, kurio id: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip restore playback position > duration"
+#~ msgid "Position for remote files is restored regardless of duration."
+#~ msgstr "Nuotolinių failų pozicija yra atkuriama nepriklausomai nuo trukmės."
 
 #, fuzzy
 #~| msgctxt "@title:menu"

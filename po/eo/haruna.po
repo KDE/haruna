@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-30 00:44+0000\n"
+"POT-Creation-Date: 2026-06-01 00:42+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -796,7 +796,7 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Saltita ĉapitro: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:796
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -806,7 +806,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Aŭdio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:807
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -814,7 +814,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtitolo: Neniu"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -824,7 +824,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtitolo: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:823
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -2982,41 +2982,55 @@ msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "La dosiero estos ludanta post restaŭro de la reprodukta pozicio"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
-msgctxt "@info"
-msgid "For any duration"
-msgstr "Por ajna daŭro"
+#: src/qml/Settings/PlaybackSettings.qml:257
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@label:spinbox when to save position"
+msgid "Save position"
+msgstr "Reproduktan pozicion"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-msgctxt "@info"
-msgid "If duration is longer than %1 minute"
-msgid_plural "If duration is longer than %1 minutes"
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For any duration"
+msgctxt "@info when to save position"
+msgid "for any duration"
+msgstr "Por ajna daŭro"
+
+#: src/qml/Settings/PlaybackSettings.qml:281
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "If duration is longer than %1 minute"
+#| msgid_plural "If duration is longer than %1 minutes"
+msgctxt "@info when to save position"
+msgid "if duration is longer than %1 minute"
+msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "Se daŭro estas pli longa ol %1 minuto"
 msgstr[1] "Se daŭro estas pli longa ol %1 minutoj"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
-msgctxt "@info:tooltip restore playback position > duration"
-msgid "Position for remote files is restored regardless of duration."
-msgstr "Pozicio por foraj dosieroj estas restarigita sendepende de daŭro."
-
-#: src/qml/Settings/PlaybackSettings.qml:309
-msgctxt "@info:tooltip restore playback position > save interval"
-msgid "Save position every %1 second"
-msgid_plural "Save position every %1 seconds"
+#: src/qml/Settings/PlaybackSettings.qml:308
+#, fuzzy
+#| msgctxt "@info:tooltip restore playback position > save interval"
+#| msgid "Save position every %1 second"
+#| msgid_plural "Save position every %1 seconds"
+msgctxt "@info:tooltip how often to save position"
+msgid "every %1 second"
+msgid_plural "every %1 seconds"
 msgstr[0] "Konservi pozicion ĉiun %1 sekundon"
 msgstr[1] "Konservi pozicion ĉiujn %1 sekundojn"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Ĉapitroj"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:330
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Preterlasi ĉapitrojn"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -3025,7 +3039,7 @@ msgstr ""
 "Kiam ebligita, ĝi aŭtomate preterlasas ĉapitrojn enhavantajn certajn vortojn/"
 "signojn."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Show osd message on skip"
@@ -3033,7 +3047,7 @@ msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Montri osd-mesaĝon ĉe skip"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:355
 #, fuzzy
 #| msgctxt "@info:tooltip show osd message on skip setting"
 #| msgid ""
@@ -3046,17 +3060,17 @@ msgid ""
 msgstr ""
 "Saltante ĉapitrojn, osd-mesaĝo montros la titolon de la preterlasita ĉapitro."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:361
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, red, ĉapitro 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:376
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -3067,24 +3081,24 @@ msgstr ""
 "kongruo ne estas preciza, kio signifas <strong>op</strong> kongruos kun "
 "vortoj enhavantaj ĝin kiel <strong><u>op</u>ening</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:400
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:406
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Elekto de formato"
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:431
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:437
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -3092,7 +3106,7 @@ msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "Defaŭlta kovrilo"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:452
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr ""
@@ -3593,6 +3607,10 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#~ msgctxt "@info:tooltip restore playback position > duration"
+#~ msgid "Position for remote files is restored regardless of duration."
+#~ msgstr "Pozicio por foraj dosieroj estas restarigita sendepende de daŭro."
 
 #, fuzzy
 #~| msgctxt "@title:menu"

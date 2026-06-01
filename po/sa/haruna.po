@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-30 00:44+0000\n"
+"POT-Creation-Date: 2026-06-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -798,7 +798,7 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "अध्यायः त्यक्तः: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:796
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -808,7 +808,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "श्रव्यः %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:807
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -816,7 +816,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "उपशीर्षकम् : कोऽपि नास्ति"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -826,7 +826,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "उपशीर्षकम् : %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:823
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -2971,48 +2971,62 @@ msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:275
-msgctxt "@info"
-msgid "For any duration"
-msgstr "कस्यापि अवधिपर्यन्तं"
+#: src/qml/Settings/PlaybackSettings.qml:257
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@label:spinbox when to save position"
+msgid "Save position"
+msgstr "प्लेबैक स्थिति"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-msgctxt "@info"
-msgid "If duration is longer than %1 minute"
-msgid_plural "If duration is longer than %1 minutes"
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For any duration"
+msgctxt "@info when to save position"
+msgid "for any duration"
+msgstr "कस्यापि अवधिपर्यन्तं"
+
+#: src/qml/Settings/PlaybackSettings.qml:281
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "If duration is longer than %1 minute"
+#| msgid_plural "If duration is longer than %1 minutes"
+msgctxt "@info when to save position"
+msgid "if duration is longer than %1 minute"
+msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "यदि अवधिः %1 निमेषात् अधिका अस्ति"
 msgstr[1] "यदि अवधिः %1 निमेषाभ्यः अधिका अस्ति"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
-msgctxt "@info:tooltip restore playback position > duration"
-msgid "Position for remote files is restored regardless of duration."
-msgstr "दूरस्थसञ्चिकानां कृते स्थानं अवधिं न कृत्वा पुनः स्थापितं भवति ।"
-
-#: src/qml/Settings/PlaybackSettings.qml:309
-msgctxt "@info:tooltip restore playback position > save interval"
-msgid "Save position every %1 second"
-msgid_plural "Save position every %1 seconds"
+#: src/qml/Settings/PlaybackSettings.qml:308
+#, fuzzy
+#| msgctxt "@info:tooltip restore playback position > save interval"
+#| msgid "Save position every %1 second"
+#| msgid_plural "Save position every %1 seconds"
+msgctxt "@info:tooltip how often to save position"
+msgid "every %1 second"
+msgid_plural "every %1 seconds"
 msgstr[0] "प्रत्येकं %1 सेकण्ड् स्थानं रक्षन्तु"
 msgstr[1] "प्रत्येकं %1 सेकेण्ड् मध्ये स्थानं रक्षन्तु"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
 msgid "Chapters"
 msgstr "अध्यायाः"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:330
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "अध्यायान् लङ्घयन्तु"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
 "characters."
 msgstr "यदा सक्षमं भवति तदा स्वयमेव कतिपयशब्दान्/वर्णान् युक्तान् अध्यायान् लङ्घयति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Show osd message on skip"
@@ -3020,7 +3034,7 @@ msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "skip इत्यत्र od सन्देशं दर्शयतु"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:355
 #, fuzzy
 #| msgctxt "@info:tooltip show osd message on skip setting"
 #| msgid ""
@@ -3032,17 +3046,17 @@ msgid ""
 "chapter."
 msgstr "अध्यायान् त्यक्त्वा osd सन्देशः त्यक्तस्य अध्यायस्य शीर्षकं दर्शयिष्यति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:361
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, अध्याय 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:376
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -3053,24 +3067,24 @@ msgstr ""
 "अर्थात् <strong>op</strong> <strong><u>op</u> ening</strong> इत्यादीनां तत्युक्तानां "
 "शब्दानां मेलनं करिष्यति ।"
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:400
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:406
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "प्रारूपचयनम्"
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:431
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:437
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -3078,7 +3092,7 @@ msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "पूर्वनिर्धारित आवरण"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:452
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "चयनितस्वरूपस्य समीपस्थं विडियो स्रोतः चिनोति ।"
@@ -3578,6 +3592,10 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+
+#~ msgctxt "@info:tooltip restore playback position > duration"
+#~ msgid "Position for remote files is restored regardless of duration."
+#~ msgstr "दूरस्थसञ्चिकानां कृते स्थानं अवधिं न कृत्वा पुनः स्थापितं भवति ।"
 
 #, fuzzy
 #~| msgctxt "@title:menu"

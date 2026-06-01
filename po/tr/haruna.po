@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-30 00:44+0000\n"
+"POT-Creation-Date: 2026-06-01 00:42+0000\n"
 "PO-Revision-Date: 2026-05-24 13:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -718,7 +718,7 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Fasıl atlandı: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:796
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -726,13 +726,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Ses: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:807
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Altyazı: Yok"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -740,7 +740,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Altyazı: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:823
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -2587,42 +2587,55 @@ msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "Dosya, oynatma konumunu geri yükledikten sonra oynatılır."
 
-#: src/qml/Settings/PlaybackSettings.qml:275
-msgctxt "@info"
-msgid "For any duration"
-msgstr "Herhangi bir süre için"
+#: src/qml/Settings/PlaybackSettings.qml:257
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@label:spinbox when to save position"
+msgid "Save position"
+msgstr "Oynatma Konumu"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-msgctxt "@info"
-msgid "If duration is longer than %1 minute"
-msgid_plural "If duration is longer than %1 minutes"
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For any duration"
+msgctxt "@info when to save position"
+msgid "for any duration"
+msgstr "Herhangi bir süre için"
+
+#: src/qml/Settings/PlaybackSettings.qml:281
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "If duration is longer than %1 minute"
+#| msgid_plural "If duration is longer than %1 minutes"
+msgctxt "@info when to save position"
+msgid "if duration is longer than %1 minute"
+msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "Süre %1 dakikadan daha uzunsa"
 msgstr[1] "Süre %1 dakikadan daha uzunsa"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
-msgctxt "@info:tooltip restore playback position > duration"
-msgid "Position for remote files is restored regardless of duration."
-msgstr ""
-"Süreden bağımsız olarak, uzak dosyalardaki konum her şekilde geri yüklenir."
-
-#: src/qml/Settings/PlaybackSettings.qml:309
-msgctxt "@info:tooltip restore playback position > save interval"
-msgid "Save position every %1 second"
-msgid_plural "Save position every %1 seconds"
+#: src/qml/Settings/PlaybackSettings.qml:308
+#, fuzzy
+#| msgctxt "@info:tooltip restore playback position > save interval"
+#| msgid "Save position every %1 second"
+#| msgid_plural "Save position every %1 seconds"
+msgctxt "@info:tooltip how often to save position"
+msgid "every %1 second"
+msgid_plural "every %1 seconds"
 msgstr[0] "Konumu her %1 saniyede bir kaydet"
 msgstr[1] "Konumu her %1 saniyede bir kaydet"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Fasıllar"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:330
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Fasılları atla"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -2631,12 +2644,12 @@ msgstr ""
 "Etkinleştirildiğinde,belirli sözcükleri/karakterleri içeren fasılları "
 "kendiliğinden atlar."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "İlerlerken EÜG iletisi göster"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2645,17 +2658,17 @@ msgstr ""
 "Fasılları atlarken, bir Ekran Üzeri Görüntü, atlanan faslın başlığını "
 "gösterir."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:361
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "Anahtar sözcükler"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op., ed., fasıl 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:376
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2666,27 +2679,27 @@ msgstr ""
 "Eşleşme tam değildir; demek olur ki, <strong>aç</strong>, <strong><u>aç</"
 "u>ılış</strong> gibi terimlerle de eşleşir."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:400
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:406
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Seçimi biçimlendir"
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:431
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "Özel"
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:437
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:452
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Seçili biçime en yakın olan bir video kaynağı seçer."
@@ -3131,3 +3144,9 @@ msgstr ""
 "Şu kimliğe sahip oynatma listesi alınamadı: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip restore playback position > duration"
+#~ msgid "Position for remote files is restored regardless of duration."
+#~ msgstr ""
+#~ "Süreden bağımsız olarak, uzak dosyalardaki konum her şekilde geri "
+#~ "yüklenir."

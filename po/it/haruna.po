@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-30 00:44+0000\n"
+"POT-Creation-Date: 2026-06-01 00:42+0000\n"
 "PO-Revision-Date: 2026-05-25 19:06+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -722,7 +722,7 @@ msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Capitolo saltato: %1"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:796
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -730,13 +730,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:807
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Sottotitolo: nessuno"
 
-#: src/mpv/mpvitem.cpp:833 src/mpv/mpvitem.cpp:849
+#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -744,7 +744,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Sottotitolo: %1 %2"
 
-#: src/mpv/mpvitem.cpp:844
+#: src/mpv/mpvitem.cpp:823
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -2603,42 +2603,55 @@ msgid "The file will be playing after restoring the playback position"
 msgstr ""
 "Il file sarà riprodotto dopo il ripristino della posizione di riproduzione"
 
-#: src/qml/Settings/PlaybackSettings.qml:275
-msgctxt "@info"
-msgid "For any duration"
-msgstr "Per qualsiasi durata"
+#: src/qml/Settings/PlaybackSettings.qml:257
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Playback position"
+msgctxt "@label:spinbox when to save position"
+msgid "Save position"
+msgstr "Posizione di riproduzione"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-msgctxt "@info"
-msgid "If duration is longer than %1 minute"
-msgid_plural "If duration is longer than %1 minutes"
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "For any duration"
+msgctxt "@info when to save position"
+msgid "for any duration"
+msgstr "Per qualsiasi durata"
+
+#: src/qml/Settings/PlaybackSettings.qml:281
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "If duration is longer than %1 minute"
+#| msgid_plural "If duration is longer than %1 minutes"
+msgctxt "@info when to save position"
+msgid "if duration is longer than %1 minute"
+msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "Se la durata è più lunga di un minuto"
 msgstr[1] "Se la durata è più lunga di %1 minuti"
 
-#: src/qml/Settings/PlaybackSettings.qml:287
-msgctxt "@info:tooltip restore playback position > duration"
-msgid "Position for remote files is restored regardless of duration."
-msgstr ""
-"La posizione per i file remoti è ripristinata a prescindere dalla durata."
-
-#: src/qml/Settings/PlaybackSettings.qml:309
-msgctxt "@info:tooltip restore playback position > save interval"
-msgid "Save position every %1 second"
-msgid_plural "Save position every %1 seconds"
+#: src/qml/Settings/PlaybackSettings.qml:308
+#, fuzzy
+#| msgctxt "@info:tooltip restore playback position > save interval"
+#| msgid "Save position every %1 second"
+#| msgid_plural "Save position every %1 seconds"
+msgctxt "@info:tooltip how often to save position"
+msgid "every %1 second"
+msgid_plural "every %1 seconds"
 msgstr[0] "Salva la posizione ogni secondo"
 msgstr[1] "Salva la posizione ogni %1 secondi"
 
-#: src/qml/Settings/PlaybackSettings.qml:322
+#: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Capitoli"
 
-#: src/qml/Settings/PlaybackSettings.qml:331
+#: src/qml/Settings/PlaybackSettings.qml:330
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Salta capitoli"
 
-#: src/qml/Settings/PlaybackSettings.qml:339
+#: src/qml/Settings/PlaybackSettings.qml:338
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -2647,12 +2660,12 @@ msgstr ""
 "Se abilitata, salta automaticamente i capitoli contenenti determinate parole/"
 "caratteri."
 
-#: src/qml/Settings/PlaybackSettings.qml:347
+#: src/qml/Settings/PlaybackSettings.qml:346
 msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Mostra messaggio OSD al salto"
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/qml/Settings/PlaybackSettings.qml:355
 msgctxt "@info:tooltip show OSD message on skip setting"
 msgid ""
 "When skipping chapters an osd message will show the title of the skipped "
@@ -2661,17 +2674,17 @@ msgstr ""
 "Quando si saltano i capitoli, un messaggio OSD mostrerà il titolo del "
 "capitolo saltato."
 
-#: src/qml/Settings/PlaybackSettings.qml:362
+#: src/qml/Settings/PlaybackSettings.qml:361
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "Parole chiave"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/qml/Settings/PlaybackSettings.qml:370
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "ap, ed, capitolo 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:377
+#: src/qml/Settings/PlaybackSettings.qml:376
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2683,27 +2696,27 @@ msgstr ""
 "corrisponderà alle parole che lo contengono come <strong><u>ap</u>ertura</"
 "strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/qml/Settings/PlaybackSettings.qml:400
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:407
+#: src/qml/Settings/PlaybackSettings.qml:406
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Selezione formato"
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/qml/Settings/PlaybackSettings.qml:431
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: src/qml/Settings/PlaybackSettings.qml:438
+#: src/qml/Settings/PlaybackSettings.qml:437
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "Predefinito"
 
-#: src/qml/Settings/PlaybackSettings.qml:453
+#: src/qml/Settings/PlaybackSettings.qml:452
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Seleziona la sorgente video più vicina al formato selezionato."
@@ -3154,6 +3167,11 @@ msgstr ""
 "Impossibile recuperare la scaletta con ID: %1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@info:tooltip restore playback position > duration"
+#~ msgid "Position for remote files is restored regardless of duration."
+#~ msgstr ""
+#~ "La posizione per i file remoti è ripristinata a prescindere dalla durata."
 
 #, fuzzy
 #~| msgctxt "@action:button"
