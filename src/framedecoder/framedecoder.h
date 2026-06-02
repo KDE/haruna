@@ -61,7 +61,6 @@ private:
     quint8 *m_pFrameBuffer{nullptr};
     AVPacket *m_pPacket{nullptr};
     bool m_FormatContextWasGiven{false};
-    bool m_AllowSeek{false};
     bool m_initialized{false};
     AVFilterContext *m_bufferSinkContext{nullptr};
     AVFilterContext *m_bufferSourceContext{nullptr};

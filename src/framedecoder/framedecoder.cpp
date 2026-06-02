@@ -164,10 +164,6 @@ int FrameDecoder::getDuration()
 
 void FrameDecoder::seek(int timeInSeconds)
 {
-    if (!m_AllowSeek) {
-        return;
-    }
-
     qint64 timestamp = AV_TIME_BASE * static_cast<qint64>(timeInSeconds);
 
     timestamp = std::max<qint64>(timestamp, 0);

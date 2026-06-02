@@ -24,6 +24,10 @@ QQuickImageResponse *ThumbnailImageProvider::requestImageResponse(const QString 
 
 ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSize)
 {
+    if (requestedSize.width() == 0 || requestedSize.height() == 0) {
+        return;
+    }
+
     connect(
         Worker::instance(),
         &Worker::thumbnailSuccess,
