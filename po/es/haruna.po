@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-01 00:42+0000\n"
-"PO-Revision-Date: 2026-05-24 09:50+0100\n"
+"POT-Creation-Date: 2026-06-02 00:42+0000\n"
+"PO-Revision-Date: 2026-06-01 19:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1656,7 +1656,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Archivos recientes"
 
-#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:75 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Borrar lista"
@@ -2611,42 +2611,28 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "El archivo se reproducirá tras restaurar la posición de reproducción."
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Posición de reproducción"
+msgstr "Guardar posición"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Para cualquier duración"
+msgstr "para cualquier duración"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Si la duración es superior a %1 minuto"
-msgstr[1] "Si la duración es superior a %1 minutos"
+msgstr[0] "si la duración es superior a %1 minuto"
+msgstr[1] "si la duración es superior a %1 minutos"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Guardar la posición cada segundo"
-msgstr[1] "Guardar la posición cada %1 segundos"
+msgstr[0] "cada segundo"
+msgstr[1] "cada %1 segundos"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
@@ -3179,9 +3165,3 @@ msgstr ""
 "No se ha podido obtener la lista de reproducción con el id: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@info:tooltip restore playback position > duration"
-#~ msgid "Position for remote files is restored regardless of duration."
-#~ msgstr ""
-#~ "La posición de los archivos remotos se restaura sin tener en cuenta la "
-#~ "duración."

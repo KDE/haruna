@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-01 00:42+0000\n"
-"PO-Revision-Date: 2026-05-24 06:18-0300\n"
+"POT-Creation-Date: 2026-06-02 00:42+0000\n"
+"PO-Revision-Date: 2026-06-01 06:42-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -1657,7 +1657,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Arquivos recentes"
 
-#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:75 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Limpar lista"
@@ -2603,42 +2603,28 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "O arquivo será reproduzido após a restauração da posição de reprodução"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Posição de reprodução"
+msgstr "Salvar posição"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Para qualquer duração"
+msgstr "para qualquer duração"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Se a duração for maior que %1 minuto"
-msgstr[1] "Se a duração for maior que %1 minutos"
+msgstr[0] "se a duração for maior que %1 minuto"
+msgstr[1] "se a duração for maior que %1 minutos"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Salvar posição a cada %1 segundo"
-msgstr[1] "Salvar posição a cada %1 segundos"
+msgstr[0] "a cada %1 segundo"
+msgstr[1] "a cada %1 segundos"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"

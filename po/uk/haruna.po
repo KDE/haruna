@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-01 00:42+0000\n"
-"PO-Revision-Date: 2026-05-24 16:29+0300\n"
+"POT-Creation-Date: 2026-06-02 00:42+0000\n"
+"PO-Revision-Date: 2026-06-01 08:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1655,7 +1655,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Нещодавні файли"
 
-#: src/qml/Menus/FileMenu.qml:65 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:75 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Спорожнити список"
@@ -2610,46 +2610,32 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "Файл буде відтворено після відновлення позиції відтворення"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Позиція відтворення"
+msgstr "Зберігати позицію"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Для будь-якої тривалості"
+msgstr "для будь-якої тривалості"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Якщо тривалість перевищує %1 хвилину"
-msgstr[1] "Якщо тривалість перевищує %1 хвилини"
-msgstr[2] "Якщо тривалість перевищує %1 хвилин"
-msgstr[3] "Якщо тривалість перевищує %1 хвилину"
+msgstr[0] "якщо тривалість перевищує %1 хвилину"
+msgstr[1] "якщо тривалість перевищує %1 хвилини"
+msgstr[2] "якщо тривалість перевищує %1 хвилин"
+msgstr[3] "якщо тривалість перевищує %1 хвилину"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Зберігати позицію кожну %1 секунду"
-msgstr[1] "Зберігати позицію кожні %1 секунди"
-msgstr[2] "Зберігати позицію кожну %1 секунд"
-msgstr[3] "Зберігати позицію кожну %1 секунду"
+msgstr[0] "кожну %1 секунду"
+msgstr[1] "кожні %1 секунди"
+msgstr[2] "кожні %1 секунд"
+msgstr[3] "кожну %1 секунду"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
