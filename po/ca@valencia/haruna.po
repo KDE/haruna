@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-02 00:42+0000\n"
-"PO-Revision-Date: 2026-05-24 09:50+0200\n"
+"PO-Revision-Date: 2026-06-01 09:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -2604,42 +2604,28 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "El fitxer es reproduirà després de restaurar la posició de reproducció"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Posició de reproducció"
+msgstr "Guarda la posició"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Per a qualsevol duració"
+msgstr "per a qualsevol duració"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Si la duració és superior a %1 minut"
-msgstr[1] "Si la duració és superior a %1 minuts"
+msgstr[0] "si la duració és superior a %1 minut"
+msgstr[1] "si la duració és superior a %1 minuts"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Guarda la posició cada %1 segon"
-msgstr[1] "Guarda la posició cada %1 segons"
+msgstr[0] "cada %1 segon"
+msgstr[1] "cada %1 segons"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
@@ -3169,8 +3155,3 @@ msgstr ""
 "No s'ha pogut recuperar la llista de reproducció amb ID: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@info:tooltip restore playback position > duration"
-#~ msgid "Position for remote files is restored regardless of duration."
-#~ msgstr ""
-#~ "La posició dels fitxers remots es restaura independentment de la duració."

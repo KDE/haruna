@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-02 00:42+0000\n"
-"PO-Revision-Date: 2026-05-25 20:25+0200\n"
+"PO-Revision-Date: 2026-06-02 20:15+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -2601,44 +2601,30 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "Po obnovení pozice přehrávání se soubor začne přehrávat"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Pozice přehrávání"
+msgstr "Uložit pozici"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Pro jakoukoliv délku"
+msgstr "pro jakoukoliv délku"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Pro soubory delší než %1 minuta"
-msgstr[1] "Pro soubory delší než %1 minuty"
-msgstr[2] "Pro soubory delší než %1 minut"
+msgstr[0] "pokud délka přesáhne %1 minutu"
+msgstr[1] "pokud délka přesáhne %1 minuty"
+msgstr[2] "pokud délka přesáhne %1 minut"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Uložit pozici každou %1 sekundu"
-msgstr[1] "Uložit pozici každé %1 sekundy"
-msgstr[2] "Uložit pozici každých %1 sekund"
+msgstr[0] "každou %1 vteřinu"
+msgstr[1] "každé %1 vteřiny"
+msgstr[2] "každých %1 vteřin"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
