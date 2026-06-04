@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-02 00:42+0000\n"
-"PO-Revision-Date: 2026-05-24 14:09+0200\n"
+"PO-Revision-Date: 2026-06-02 10:31+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -2599,42 +2599,28 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "Het bestand zal worden afgespeeld na herstel van de afspeelpositie"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Afspeelpositie"
+msgstr "Positie opslaan"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Voor elke tijdsduur"
+msgstr "voor elke tijdsduur"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Als de tijdsduur langer is dan %1 minuut"
-msgstr[1] "Als de tijdsduur langer is dan %1 minuten"
+msgstr[0] "als de tijdsduur langer is dan %1 minuut"
+msgstr[1] "als de tijdsduur langer is dan %1 minuten"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
 msgstr[0] "Positie elke %1 seconde opslaan"
-msgstr[1] "Positie elke %1 seconden opslaan"
+msgstr[1] "%1 seconden"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
