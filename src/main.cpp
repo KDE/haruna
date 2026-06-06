@@ -80,7 +80,6 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine(&qApplication);
 
-    KLocalizedString::setApplicationDomain("haruna");
     KLocalization::setupLocalizedContext(&engine);
 
     engine.addImageProvider(u"thumbnail"_s, new ThumbnailImageProvider());

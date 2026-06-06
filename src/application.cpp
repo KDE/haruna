@@ -100,6 +100,8 @@ Application::Application()
         QApplication::setStyle(GeneralSettings::guiStyle());
     }
 
+    KLocalizedString::setApplicationDomain("haruna");
+
     setupWorkerThread();
     setupAboutData();
     setupCommandLineParser();
