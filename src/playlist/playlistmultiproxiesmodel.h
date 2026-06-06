@@ -7,7 +7,17 @@
 #ifndef PLAYLISTMULTIPROXIESMODEL_H
 #define PLAYLISTMULTIPROXIESMODEL_H
 
+#include <QJsonObject>
+
 #include "playlistfilterproxymodel.h"
+
+struct PlaylistsModelItem {
+    QString playlistName;
+    QUrl playlistUrl;
+    bool isInitialized{false};
+    QJsonObject jsonData;
+    std::unique_ptr<PlaylistFilterProxyModel> playlist;
+};
 
 class PlaylistMultiProxiesModel : public QAbstractListModel
 {
@@ -54,14 +64,15 @@ Q_SIGNALS:
 private:
     PlaylistFilterProxyModel *getFilterProxy(const QString &playlistName);
 
-    void addPlaylist(const QString &playlistName, const QUrl &internalUrl);
+    void addPlaylist(PlaylistsModelItem newItem);
+    void initPlaylist(uint row);
     QUrl getPlaylistCacheUrl();
     QUrl getPlaylistUrl(const QString &playlistName);
     void saveVisiblePlaylist();
     void savePlaylist(const QString &playlistName, PlaylistFilterProxyModel *proxyModel);
     void savePlaylistCache();
 
-    std::vector<std::unique_ptr<PlaylistFilterProxyModel>> m_playlistFilterProxyModels;
+    std::vector<PlaylistsModelItem> m_data;
     uint m_activeIndex{0};
     uint m_visibleIndex{0};
 };

@@ -7,7 +7,6 @@
 #include "playlistmultiproxiesmodel.h"
 
 #include <QJsonDocument>
-#include <QJsonObject>
 #include <QLineEdit>
 
 #include <KFileItem>
@@ -30,7 +29,11 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    addPlaylist(QString(u"Default"_s), QUrl());
+    PlaylistsModelItem item;
+    item.playlistName = u"Default"_s;
+
+    addPlaylist(std::move(item));
+    initPlaylist(0);
 
     QUrl cacheUrl = getPlaylistCacheUrl();
     if (cacheUrl.isEmpty()) {
@@ -61,6 +64,8 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                 continue;
             }
             QJsonObject playlist = value.toObject();
+            bool active = playlist.value(u"isActive").toBool();
+
             QString playlistName = playlist.value(u"name").toString();
             if (playlistName == u"Default"_s) {
                 continue;
@@ -69,57 +74,15 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
             if (playlistUrl.isEmpty()) {
                 continue;
             }
-            addPlaylist(playlistName, playlistUrl);
 
-            if (playlist.contains(u"showSections")) {
-                bool showSections = playlist.value(u"showSections").toBool();
-                m_playlistFilterProxyModels.at(i)->setShowSections(showSections);
-            }
+            PlaylistsModelItem item;
+            item.playlistName = playlistName;
+            item.playlistUrl = playlistUrl;
+            item.jsonData = playlist;
 
-            auto sortJsonArray = [](const QJsonValue &v1, const QJsonValue &v2) -> bool {
-                QJsonObject obj1 = v1.toObject();
-                QJsonObject obj2 = v2.toObject();
-
-                QString val1 = obj1.value(u"index").toString();
-                QString val2 = obj2.value(u"index").toString();
-
-                return val1 < val2;
-            };
-
-            if (playlist.contains(u"sortBy")) {
-                QJsonArray sortProperties = playlist.value(u"sortBy").toArray();
-                std::sort(sortProperties.begin(), sortProperties.end(), sortJsonArray);
-                for (auto property : std::as_const(sortProperties)) {
-                    QJsonObject sortProperty = property.toObject();
-                    int index = sortProperty.value(u"index").toInt();
-                    int sort = sortProperty.value(u"sort").toInt();
-                    int order = sortProperty.value(u"order").toInt();
-                    m_playlistFilterProxyModels.at(i)->addToActiveSortProperties(sort);
-                    m_playlistFilterProxyModels.at(i)->setSortPropertySortingOrder(index, order);
-                }
-            }
-
-            if (playlist.contains(u"groupBy")) {
-                QJsonArray groups = playlist.value(u"groupBy").toArray();
-                std::sort(groups.begin(), groups.end(), sortJsonArray);
-                for (auto property : std::as_const(groups)) {
-                    QJsonObject groupProperty = property.toObject();
-                    int index = groupProperty.value(u"index").toInt();
-                    Group group = Group(groupProperty.value(u"group").toInt());
-                    bool hideBlank = groupProperty.value(u"hideBlank").toBool();
-                    m_playlistFilterProxyModels.at(i)->addToActiveGroup(group);
-                    m_playlistFilterProxyModels.at(i)->setGroupHideBlank(index, hideBlank);
-                }
-            }
-
-            // this code must be run after the sorting and grouping have been setup, else when
-            // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
-            // the sorting and grouping data is not available on the playlist and will be lost
-            bool active = playlist.value(u"isActive").toBool();
+            addPlaylist(std::move(item));
             if (active) {
-                uint index = playlist.value(u"currentItem").toInt();
-                setActiveIndex(i);
-                activeFilterProxy()->setPlayingItem(index);
+                initPlaylist(i);
             }
         }
     }
@@ -168,7 +131,7 @@ void PlaylistMultiProxiesModel::setVisibleIndex(uint pIndex)
 int PlaylistMultiProxiesModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return m_playlistFilterProxyModels.size();
+    return m_data.size();
 }
 
 QVariant PlaylistMultiProxiesModel::data(const QModelIndex &index, int role) const
@@ -178,7 +141,7 @@ QVariant PlaylistMultiProxiesModel::data(const QModelIndex &index, int role) con
     }
     switch (role) {
     case NameRole:
-        return m_playlistFilterProxyModels.at(index.row())->playlistModel()->playlistName();
+        return m_data.at(index.row()).playlistName;
     case VisibleRole:
         return static_cast<int>(m_visibleIndex) == index.row();
     case ActiveRole:
@@ -201,35 +164,42 @@ QHash<int, QByteArray> PlaylistMultiProxiesModel::roleNames() const
     return roles;
 }
 
-void PlaylistMultiProxiesModel::addPlaylist(const QString &playlistName, const QUrl &internalUrl)
+void PlaylistMultiProxiesModel::addPlaylist(PlaylistsModelItem newItem)
 {
-    uint playlistsSize = m_playlistFilterProxyModels.size();
-    for (uint i = 0; i < playlistsSize; ++i) {
-        QString pName = m_playlistFilterProxyModels.at(i)->playlistModel()->playlistName();
-        if (playlistName == pName) {
+    for (const auto &item : m_data) {
+        if (newItem.playlistName == item.playlistName) {
             Q_EMIT MiscUtils::instance()->error(
-                i18nc("@info:tooltip; %1 playlist with same name", "Playlists with same name is not allowed: %1", playlistName));
+                i18nc("@info:tooltip; %1 playlist with same name", "Playlists with same name is not allowed: %1", newItem.playlistName));
             return;
         }
     }
 
-    auto filterModel = std::make_unique<PlaylistFilterProxyModel>();
-    filterModel->playlistModel()->setPlaylistName(playlistName);
+    beginInsertRows(QModelIndex(), m_data.size(), m_data.size());
+    m_data.push_back(std::move(newItem));
+    endInsertRows();
+}
 
-    if (!internalUrl.isEmpty()) {
-        filterModel->playlistModel()->addM3uItems(internalUrl, PlaylistModel::Behavior::Append);
+void PlaylistMultiProxiesModel::initPlaylist(uint row)
+{
+    auto &item = m_data[row];
+    item.playlist = std::make_unique<PlaylistFilterProxyModel>();
+    item.isInitialized = true;
+    item.playlist->playlistModel()->setPlaylistName(item.playlistName);
+
+    if (!item.playlistUrl.isEmpty()) {
+        item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
     }
 
-    connect(filterModel->playlistModel(), &PlaylistModel::playingItemChanged, this, [this](const QString &pName) {
+    connect(item.playlist->playlistModel(), &PlaylistModel::playingItemChanged, this, [this](const QString &pName) {
         // When playingItemChanged is emitted, we check if the new playing item is in the currently active
         // playlist. If not, we stop that playlist and update the active one.
-        QString activePlaylistName = m_playlistFilterProxyModels.at(m_activeIndex)->playlistModel()->playlistName();
+        QString activePlaylistName = m_data.at(m_activeIndex).playlistName;
         if (activePlaylistName != pName) {
             // Either changed the item via GUI, or loaded as last played item internally.
             // Get the tab index by checking the name
             activeFilterProxy()->playlistModel()->stop();
-            for (uint i = 0; i < m_playlistFilterProxyModels.size(); ++i) {
-                if (m_playlistFilterProxyModels.at(i)->playlistModel()->playlistName() == pName) {
+            for (uint i = 0; i < m_data.size(); ++i) {
+                if (m_data.at(i).playlistName == pName) {
                     setActiveIndex(i);
                     break;
                 }
@@ -240,30 +210,82 @@ void PlaylistMultiProxiesModel::addPlaylist(const QString &playlistName, const Q
     });
 
     // When underlying models change, either by remove, insert, move or sort: save the playlist
-    connect(filterModel.get(), &PlaylistFilterProxyModel::itemsSorted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(filterModel.get(), &PlaylistFilterProxyModel::itemsMoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(filterModel.get(), &PlaylistFilterProxyModel::itemsRemoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(filterModel.get(), &PlaylistFilterProxyModel::itemsInserted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(filterModel->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsSorted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsMoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsRemoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
 
-    filterModel->playlistModel()->stop();
+    item.playlist->playlistModel()->stop();
 
-    beginInsertRows(QModelIndex(), playlistsSize, playlistsSize);
-    m_playlistFilterProxyModels.push_back(std::move(filterModel));
-    endInsertRows();
+    if (item.jsonData.contains(u"showSections")) {
+        bool showSections = item.jsonData.value(u"showSections").toBool();
+        item.playlist->setShowSections(showSections);
+    }
+
+    auto sortJsonArray = [](const QJsonValue &v1, const QJsonValue &v2) -> bool {
+        QJsonObject obj1 = v1.toObject();
+        QJsonObject obj2 = v2.toObject();
+
+        QString val1 = obj1.value(u"index").toString();
+        QString val2 = obj2.value(u"index").toString();
+
+        return val1 < val2;
+    };
+
+    if (item.jsonData.contains(u"sortBy")) {
+        QJsonArray sortProperties = item.jsonData.value(u"sortBy").toArray();
+        std::sort(sortProperties.begin(), sortProperties.end(), sortJsonArray);
+        for (auto property : std::as_const(sortProperties)) {
+            QJsonObject sortProperty = property.toObject();
+            int index = sortProperty.value(u"index").toInt();
+            int sort = sortProperty.value(u"sort").toInt();
+            int order = sortProperty.value(u"order").toInt();
+            item.playlist->addToActiveSortProperties(sort);
+            item.playlist->setSortPropertySortingOrder(index, order);
+        }
+    }
+
+    if (item.jsonData.contains(u"groupBy")) {
+        QJsonArray groups = item.jsonData.value(u"groupBy").toArray();
+        std::sort(groups.begin(), groups.end(), sortJsonArray);
+        for (auto property : std::as_const(groups)) {
+            QJsonObject groupProperty = property.toObject();
+            int index = groupProperty.value(u"index").toInt();
+            Group group = Group(groupProperty.value(u"group").toInt());
+            bool hideBlank = groupProperty.value(u"hideBlank").toBool();
+            item.playlist->addToActiveGroup(group);
+            item.playlist->setGroupHideBlank(index, hideBlank);
+        }
+    }
+
+    // this code must be run after the sorting and grouping have been setup, else when
+    // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
+    // the sorting and grouping data is not available on the playlist and will be lost
+    bool active = item.jsonData.value(u"isActive").toBool();
+    if (active) {
+        uint index = item.jsonData.value(u"currentItem").toInt();
+        setActiveIndex(row);
+        activeFilterProxy()->setPlayingItem(index);
+    }
+
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 // Used by QML side. Makes sure newly added playlists are saved.
 void PlaylistMultiProxiesModel::createNewPlaylist(const QString &playlistName)
 {
-    addPlaylist(playlistName, QUrl());
-    savePlaylist(playlistName, m_playlistFilterProxyModels.back().get());
+    PlaylistsModelItem item;
+    item.playlistName = playlistName;
+    addPlaylist(std::move(item));
+    initPlaylist(m_data.size() - 1);
+    savePlaylist(playlistName, m_data.back().playlist.get());
 }
 
 void PlaylistMultiProxiesModel::removePlaylist(uint pIndex)
 {
     // Cannot and should not delete default
-    QString playlistName = m_playlistFilterProxyModels.at(pIndex)->playlistModel()->playlistName();
+    QString playlistName = m_data.at(pIndex).playlistName;
     if (playlistName == u"Default"_s) {
         return;
     }
@@ -295,7 +317,7 @@ void PlaylistMultiProxiesModel::removePlaylist(uint pIndex)
     }
 
     beginRemoveRows(QModelIndex(), pIndex, pIndex);
-    m_playlistFilterProxyModels.erase(m_playlistFilterProxyModels.cbegin() + pIndex);
+    m_data.erase(m_data.cbegin() + pIndex);
     endRemoveRows();
     savePlaylistCache();
 }
@@ -309,13 +331,13 @@ void PlaylistMultiProxiesModel::movePlaylist(uint row, uint destinationRow)
     if (row == 0 || destinationRow == 0) {
         return;
     }
-    if (row > m_playlistFilterProxyModels.size() || destinationRow > m_playlistFilterProxyModels.size()) {
+    if (row > m_data.size() || destinationRow > m_data.size()) {
         return;
     }
 
-    QString activePlaylistName = m_playlistFilterProxyModels.at(m_activeIndex)->playlistModel()->playlistName();
+    QString activePlaylistName = m_data.at(m_activeIndex).playlistName;
 
-    auto bFProxy = m_playlistFilterProxyModels.begin();
+    auto bFProxy = m_data.begin();
     bool leftDrag = destinationRow < row;
     if (leftDrag) {
         if (beginMoveRows(QModelIndex(), row, row, QModelIndex(), destinationRow)) {
@@ -331,9 +353,9 @@ void PlaylistMultiProxiesModel::movePlaylist(uint row, uint destinationRow)
         Q_EMIT dataChanged(index(row, 0), index(destinationRow, 0));
     }
 
-    uint playlistsSize = m_playlistFilterProxyModels.size();
+    uint playlistsSize = m_data.size();
     for (uint i = 0; i < playlistsSize; ++i) {
-        QString pName = m_playlistFilterProxyModels.at(i)->playlistModel()->playlistName();
+        QString pName = m_data.at(i).playlistName;
         if (activePlaylistName == pName) {
             uint prev = m_activeIndex;
             m_activeIndex = i;
@@ -354,7 +376,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
         return;
     }
 
-    QString tabName = m_playlistFilterProxyModels.at(pIndex)->playlistModel()->playlistName();
+    QString tabName = m_data.at(pIndex).playlistName;
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
     playlistsPath.append(u"/"_s);
     QUrl url(playlistsPath + tabName + u".m3u"_s);
@@ -374,7 +396,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
         QString inputText = urls.first().fileName();
         QString playlistName = inputText.first(inputText.length() - 4); // '.m3u' 4 chars
 
-        m_playlistFilterProxyModels.at(pIndex)->playlistModel()->setPlaylistName(playlistName);
+        m_data.at(pIndex).playlist->playlistModel()->setPlaylistName(playlistName);
         savePlaylistCache();
         Q_EMIT dataChanged(index(pIndex, 0), index(pIndex, 0));
     });
@@ -387,24 +409,33 @@ void PlaylistMultiProxiesModel::resetTabView()
 
 PlaylistFilterProxyModel *PlaylistMultiProxiesModel::activeFilterProxy()
 {
-    return m_playlistFilterProxyModels.at(m_activeIndex).get();
+    if (!m_data.at(m_activeIndex).isInitialized) {
+        initPlaylist(m_activeIndex);
+    }
+    return m_data.at(m_activeIndex).playlist.get();
 }
 
 PlaylistFilterProxyModel *PlaylistMultiProxiesModel::visibleFilterProxy()
 {
-    return m_playlistFilterProxyModels.at(m_visibleIndex).get();
+    if (!m_data.at(m_visibleIndex).isInitialized) {
+        initPlaylist(m_visibleIndex);
+    }
+    return m_data.at(m_visibleIndex).playlist.get();
 }
 
 PlaylistFilterProxyModel *PlaylistMultiProxiesModel::defaultFilterProxy()
 {
-    return m_playlistFilterProxyModels.front().get();
+    if (!m_data.front().isInitialized) {
+        initPlaylist(0);
+    }
+    return m_data.front().playlist.get();
 }
 
 PlaylistFilterProxyModel *PlaylistMultiProxiesModel::getFilterProxy(const QString &playlistName)
 {
-    for (const auto &playlist : m_playlistFilterProxyModels) {
-        if (playlistName == playlist->playlistModel()->playlistName()) {
-            return playlist.get();
+    for (const auto &playlist : m_data) {
+        if (playlistName == playlist.playlistName) {
+            return playlist.playlist.get();
         }
     }
     return defaultFilterProxy();
@@ -450,7 +481,7 @@ QUrl PlaylistMultiProxiesModel::getPlaylistUrl(const QString &playlistName)
 
 void PlaylistMultiProxiesModel::saveVisiblePlaylist()
 {
-    QString visiblePlaylistName = m_playlistFilterProxyModels.at(m_visibleIndex)->playlistModel()->playlistName();
+    QString visiblePlaylistName = m_data.at(m_visibleIndex).playlistName;
     savePlaylist(visiblePlaylistName, visibleFilterProxy());
 }
 
@@ -483,20 +514,24 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
     }
 
     QJsonArray array;
-    uint playlistsSize = m_playlistFilterProxyModels.size();
+    uint playlistsSize = m_data.size();
     for (uint i = 0; i < playlistsSize; ++i) {
+        if (!m_data.at(i).isInitialized) {
+            array.append(m_data.at(i).jsonData);
+            continue;
+        }
         QJsonObject json;
-        json.insert(u"name", m_playlistFilterProxyModels.at(i)->playlistModel()->playlistName());
+        json.insert(u"name", m_data.at(i).playlistName);
         json.insert(u"isActive", (m_activeIndex == i));
-        json.insert(u"currentItem", static_cast<int>(m_playlistFilterProxyModels.at(i)->playlistModel()->playingItem()));
-        json.insert(u"showSections", m_playlistFilterProxyModels.at(i)->showSections());
+        json.insert(u"currentItem", static_cast<int>(m_data.at(i).playlist->playlistModel()->playingItem()));
+        json.insert(u"showSections", m_data.at(i).playlist->showSections());
 
         // Save sorting and grouping for non-default playlists
         if (json.value(u"name") != u"Default"_s) {
             QJsonArray sortProperties;
             QJsonArray groups;
             int index = 0;
-            const auto activeSortProperties = m_playlistFilterProxyModels.at(i)->activeSortPropertiesModel()->properties();
+            const auto activeSortProperties = m_data.at(i).playlist->activeSortPropertiesModel()->properties();
             for (const auto &property : activeSortProperties) {
                 QJsonObject propertyStruct;
                 propertyStruct.insert(u"index", index);
@@ -508,7 +543,7 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
             }
 
             index = 0;
-            const auto activeGroupProperties = m_playlistFilterProxyModels.at(i)->activeGroupModel()->properties();
+            const auto activeGroupProperties = m_data.at(i).playlist->activeGroupModel()->properties();
             for (const auto &property : activeGroupProperties) {
                 QJsonObject groupStruct;
                 groupStruct.insert(u"index", index);
