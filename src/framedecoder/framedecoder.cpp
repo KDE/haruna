@@ -21,6 +21,7 @@ using namespace std;
 
 FrameDecoder::FrameDecoder(const QString &filename, AVFormatContext *pavContext)
     : m_pFormatContext(pavContext)
+    , m_pPacket(av_packet_alloc())
     , m_FormatContextWasGiven(pavContext != nullptr)
 {
     initialize(filename);
@@ -75,9 +76,7 @@ void FrameDecoder::destroy()
     }
 
     if (m_pPacket != nullptr) {
-        av_packet_unref(m_pPacket);
-        delete m_pPacket;
-        m_pPacket = nullptr;
+        av_packet_free(&m_pPacket);
     }
 
     if (m_pFrame != nullptr) {
@@ -109,7 +108,16 @@ bool FrameDecoder::initializeVideo()
     }
 
     m_pVideoCodecContext = avcodec_alloc_context3(m_pVideoCodec);
-    avcodec_parameters_to_context(m_pVideoCodecContext, m_pFormatContext->streams[m_VideoStream]->codecpar);
+    if (m_pVideoCodecContext == nullptr) {
+        qDebug() << "m_pVideoCodecContext is nullptr";
+        return false;
+    }
+    const auto result = avcodec_parameters_to_context(m_pVideoCodecContext, m_pFormatContext->streams[m_VideoStream]->codecpar);
+    if (result < 0) {
+        m_pVideoCodecContext = nullptr;
+        qDebug() << "avcodec_parameters_to_context failed";
+        return false;
+    }
 
     if (m_pVideoCodec == nullptr) {
         // set to nullptr, otherwise avcodec_close(m_pVideoCodecContext) crashes
@@ -158,7 +166,6 @@ int FrameDecoder::getDuration()
 void FrameDecoder::seek(int timeInSeconds)
 {
     qint64 timestamp = AV_TIME_BASE * static_cast<qint64>(timeInSeconds);
-
     timestamp = std::max<qint64>(timestamp, 0);
 
     int ret = av_seek_frame(m_pFormatContext, -1, timestamp, 0);
@@ -169,21 +176,10 @@ void FrameDecoder::seek(int timeInSeconds)
         return;
     }
 
-    int keyFrameAttempts = 0;
     bool gotFrame = false;
-
-    do {
-        int count = 0;
-        gotFrame = false;
-
-        while (!gotFrame && count < 20) {
-            getVideoPacket();
-            gotFrame = decodeVideoPacket();
-            ++count;
-        }
-
-        ++keyFrameAttempts;
-    } while ((!gotFrame || ((m_pFrame->flags & AV_FRAME_FLAG_KEY) != 0)) && keyFrameAttempts < 200);
+    while (!gotFrame && getVideoPacket()) {
+        gotFrame = decodeVideoPacket();
+    }
 
     if (!gotFrame) {
         qDebug() << "Seeking in video failed";
@@ -213,9 +209,16 @@ bool FrameDecoder::decodeVideoPacket()
 
     av_frame_unref(m_pFrame);
 
-    avcodec_send_packet(m_pVideoCodecContext, m_pPacket);
-    int ret = avcodec_receive_frame(m_pVideoCodecContext, m_pFrame);
-    if (ret == AVERROR(EAGAIN)) {
+    int ret = avcodec_send_packet(m_pVideoCodecContext, m_pPacket);
+    if (ret < 0) {
+        return false;
+    }
+    ret = avcodec_receive_frame(m_pVideoCodecContext, m_pFrame);
+    if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF) {
+        return false;
+    }
+
+    if (ret < 0) {
         return false;
     }
 
@@ -229,12 +232,7 @@ bool FrameDecoder::getVideoPacket()
 
     int attempts = 0;
 
-    if (m_pPacket != nullptr) {
-        av_packet_unref(m_pPacket);
-        delete m_pPacket;
-    }
-
-    m_pPacket = new AVPacket();
+    av_packet_unref(m_pPacket);
 
     while (framesAvailable && !frameDecoded && (attempts++ < 1000)) {
         framesAvailable = av_read_frame(m_pFormatContext, m_pPacket) >= 0;
@@ -256,6 +254,9 @@ void FrameDecoder::deleteFilterGraph()
         avfilter_graph_free(&m_filterGraph);
         m_filterGraph = nullptr;
     }
+    m_filterFrame = nullptr;
+    m_bufferSourceContext = nullptr;
+    m_bufferSinkContext = nullptr;
 }
 
 bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int height)
@@ -263,8 +264,18 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
     AVFilterInOut *inputs = nullptr;
     AVFilterInOut *outputs = nullptr;
 
+    auto cleanup = [&]() {
+        deleteFilterGraph();
+        avfilter_inout_free(&inputs);
+        avfilter_inout_free(&outputs);
+    };
     deleteFilterGraph();
     m_filterGraph = avfilter_graph_alloc();
+    if (!m_filterGraph) {
+        cleanup();
+        qWarning() << "Unable to allocate filter graph";
+        return false;
+    }
 
     QByteArray arguments("buffer=");
     arguments += "video_size=" + QByteArray::number(width) + 'x' + QByteArray::number(height) + ':';
@@ -275,16 +286,19 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
 
     int ret = avfilter_graph_parse2(m_filterGraph, arguments.constData(), &inputs, &outputs);
     if (ret < 0) {
+        cleanup();
         qWarning() << "Unable to parse filter graph";
         return false;
     }
 
     if ((inputs != nullptr) || (outputs != nullptr)) {
+        cleanup();
         return false;
     }
 
     ret = avfilter_graph_config(m_filterGraph, nullptr);
     if (ret < 0) {
+        cleanup();
         qWarning() << "Unable to validate filter graph";
         return false;
     }
@@ -292,13 +306,22 @@ bool FrameDecoder::initFilterGraph(enum AVPixelFormat pixfmt, int width, int hei
     m_bufferSourceContext = avfilter_graph_get_filter(m_filterGraph, "Parsed_buffer_0");
     m_bufferSinkContext = avfilter_graph_get_filter(m_filterGraph, "Parsed_buffersink_2");
     if ((m_bufferSourceContext == nullptr) || (m_bufferSinkContext == nullptr)) {
+        cleanup();
         qWarning() << "Unable to get source or sink";
         return false;
     }
     m_filterFrame = av_frame_alloc();
+    if (!m_filterFrame) {
+        cleanup();
+        qWarning() << "Unable to allocate filter frame";
+        return false;
+    }
     m_lastWidth = width;
     m_lastHeight = height;
     m_lastPixfmt = pixfmt;
+
+    avfilter_inout_free(&inputs);
+    avfilter_inout_free(&outputs);
 
     return true;
 }
@@ -412,5 +435,5 @@ void FrameDecoder::createAVFrame(AVFrame **avFrame, quint8 **frameBuffer, int wi
 
     int numBytes = av_image_get_buffer_size(format, width + 1, height + 1, 16);
     *frameBuffer = static_cast<quint8 *>(av_malloc(numBytes));
-    av_image_fill_arrays((*avFrame)->data, (*avFrame)->linesize, *frameBuffer, format, width, height, 1);
+    av_image_fill_arrays((*avFrame)->data, (*avFrame)->linesize, *frameBuffer, format, width, height, 16);
 }
