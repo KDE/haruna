@@ -33,10 +33,6 @@ FrameDecoder::~FrameDecoder()
 
 void FrameDecoder::initialize(const QString &filename)
 {
-#if (LIBAVFORMAT_VERSION_MAJOR < 58)
-    av_register_all();
-#endif
-
     QFileInfo fileInfo(filename);
 
     if ((!m_FormatContextWasGiven) && avformat_open_input(&m_pFormatContext, fileInfo.absoluteFilePath().toLocal8Bit().data(), nullptr, nullptr) != 0) {
@@ -69,9 +65,6 @@ void FrameDecoder::destroy()
 {
     deleteFilterGraph();
     if (m_pVideoCodecContext != nullptr) {
-#if LIBAVCODEC_VERSION_MAJOR < 61
-        avcodec_close(m_pVideoCodecContext);
-#endif
         avcodec_free_context(&m_pVideoCodecContext);
         m_pVideoCodecContext = nullptr;
     }
@@ -190,11 +183,7 @@ void FrameDecoder::seek(int timeInSeconds)
         }
 
         ++keyFrameAttempts;
-#if (LIBAVFORMAT_VERSION_MAJOR < 61)
-    } while ((!gotFrame || ((m_pFrame->flags & AV_PKT_FLAG_KEY) != 0)) && keyFrameAttempts < 200);
-#else
     } while ((!gotFrame || ((m_pFrame->flags & AV_FRAME_FLAG_KEY) != 0)) && keyFrameAttempts < 200);
-#endif
 
     if (!gotFrame) {
         qDebug() << "Seeking in video failed";
@@ -346,11 +335,7 @@ bool FrameDecoder::processFilterGraph(AVFrame *dst, const AVFrame *src, enum AVP
 
 void FrameDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, QImage &videoFrame)
 {
-#if (LIBAVFORMAT_VERSION_MAJOR < 61)
-    if (m_pFrame->flags & AV_CODEC_FLAG_INTERLACED_ME) {
-#else
     if ((m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) != 0) {
-#endif
         processFilterGraph(m_pFrame, m_pFrame, m_pVideoCodecContext->pix_fmt, m_pVideoCodecContext->width, m_pVideoCodecContext->height);
     }
 

@@ -52,11 +52,7 @@ private:
     int m_VideoStream{-1};
     AVFormatContext *m_pFormatContext{nullptr};
     AVCodecContext *m_pVideoCodecContext{nullptr};
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(59, 0, 100)
-    AVCodec *m_pVideoCodec{nullptr};
-#else
     const AVCodec *m_pVideoCodec{nullptr};
-#endif
     AVFrame *m_pFrame{nullptr};
     quint8 *m_pFrameBuffer{nullptr};
     AVPacket *m_pPacket{nullptr};
