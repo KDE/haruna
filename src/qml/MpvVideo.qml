@@ -27,6 +27,7 @@ MpvItem {
     property var window: Window.window
     property int preMinimizePlaybackState: MpvItem.PlaybackState.Playing
     property alias mouseY: mouseArea.mouseY
+    property bool isRemoteUrl: typeof currentUrl.toString() === "string" && currentUrl.toString().startsWith("http")
 
     signal mousePositionChanged(double x, double y)
     signal openPlaylist()
@@ -43,8 +44,7 @@ MpvItem {
             loadingIndicator.play = false
             break
         case MpvItem.PlaybackState.Loading:
-            const url = currentUrl.toString()
-            if (typeof url === "string" && url.startsWith("http")) {
+            if (root.isRemoteUrl) {
                 loadingIndicator.play = true
             }
             break
@@ -340,7 +340,8 @@ MpvItem {
         property bool play: false
         property int size: 200
 
-        visible: root.playbackState === MpvItem.PlaybackState.Stopped || root.playbackState === MpvItem.PlaybackState.Loading
+        visible: root.playbackState === MpvItem.PlaybackState.Stopped
+                 || (root.playbackState === MpvItem.PlaybackState.Loading && root.isRemoteUrl)
         anchors.centerIn: parent
         radius: Kirigami.Units.cornerRadius
         width: root.width > size ? size : root.width - 10
