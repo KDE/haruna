@@ -406,6 +406,9 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
     bool matchFound{false};
     while (!m3uFile.atEnd()) {
         QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine());
+        while (line.endsWith('\n') || line.endsWith('\r')) {
+            line.chop(1);
+        }
         // ignore comments
         if (line.startsWith("#")) {
             continue;
