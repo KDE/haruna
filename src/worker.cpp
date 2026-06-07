@@ -35,13 +35,18 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
 {
     QImage image;
 
+    QFileInfo fi(path);
+    if (!fi.exists()) {
+        return;
+    }
+
     auto file = QUrl::fromUserInput(path);
 
     // figure out absolute path of the thumbnail
     auto md5Hash = QCryptographicHash::hash(file.toString().toUtf8(), QCryptographicHash::Md5);
     QString cacheDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation));
     QString appDir(u"haruna"_s);
-    QString fileDir(QString::fromUtf8(md5Hash.toHex()));
+    QString fileDir(fi.absoluteDir().dirName());
     QString filename(QString::fromUtf8(md5Hash.toHex()).append(u".png"_s));
     QString cachedFilePath = u"%1/%2/%3/%4"_s.arg(cacheDir, appDir, fileDir, filename);
 
@@ -60,7 +65,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     }
     Q_EMIT thumbnailSuccess(path, image);
 
-    QFileInfo fi(cachedFilePath);
+    fi.setFile(cachedFilePath);
     // create folders where the file will be saved
     if (QDir().mkpath(fi.absolutePath())) {
         if (!image.save(cachedFilePath)) {
