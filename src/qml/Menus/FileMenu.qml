@@ -30,20 +30,12 @@ Menu {
         id: recentFilesMenu
 
         title: KI18n.i18nc("@title:menu", "Recent Files")
-
-        onVisibleChanged: {
-            // enable Instantiator when the menu becomes visible
-            // can't use asynchronous property because it messes with the item order
-            if (!instantiator.active) {
-                instantiator.active = true
-            }
-        }
+        onAboutToShow: instantiator.model = Models.recentFilesModel
 
         Instantiator {
             id: instantiator
 
-            active: false
-            model: Models.recentFilesModel
+            model: 0
             delegate: MenuItem {
                 id: delegate
 
