@@ -515,6 +515,7 @@ ApplicationWindow {
     }
 
     function openFile(path: string, openedFrom: int) : void {
+        mpv.stop()
         Models.recentFilesModel.addRecentFile(path, openedFrom)
         playlist.manager.defaultPlaylist.addItem(path, PlaylistModel.Clear)
     }
