@@ -157,7 +157,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {DiscNoRole,            QByteArrayLiteral("discNo")},
         {TitleRole,             QByteArrayLiteral("title")},
         {ReleaseYearRole,       QByteArrayLiteral("releaseYear")},
-        {GenreRole,             QByteArrayLiteral("album")},
+        {GenreRole,             QByteArrayLiteral("genre")},
         {AlbumRole,             QByteArrayLiteral("album")},
         {ArtistRole,            QByteArrayLiteral("artist")},
         {AlbumArtistRole,       QByteArrayLiteral("albumArtist")},
