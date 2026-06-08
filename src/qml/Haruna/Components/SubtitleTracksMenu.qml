@@ -49,9 +49,9 @@ Menu {
             text: delegate.displayText
             onTriggered: {
                 if (root.isPrimarySubtitleMenu) {
-                    root.m_mpv.subtitleId = delegate.trackId
+                    root.m_mpv.subtitleId = delegate.trackId === root.m_mpv.subtitleId ? -1 : delegate.trackId
                 } else {
-                    root.m_mpv.secondarySubtitleId = delegate.trackId
+                    root.m_mpv.secondarySubtitleId = delegate.trackId === root.m_mpv.secondarySubtitleId ? -1 : delegate.trackId
                 }
             }
         }

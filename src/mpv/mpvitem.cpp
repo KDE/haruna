@@ -207,8 +207,6 @@ void MpvItem::initProperties()
     setProperty(MpvProperties::self()->ScreenshotFormat, VideoSettings::screenshotFormat());
 
     setProperty(MpvProperties::self()->AudioClientName, u"haruna"_s);
-    const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
-    setProperty(MpvProperties::self()->AudioId, preferredAudioTrack == 0 ? u"auto"_s : preferredAudioTrack);
     setProperty(MpvProperties::self()->AudioLanguage, AudioSettings::preferredLanguage().remove(u" "_s));
 }
 
@@ -585,12 +583,12 @@ void MpvItem::loadTracks(const QList<QVariant> &tracks)
     uint sr = 0;
     for (const auto &item : tracks) {
         const auto map = item.toMap();
-        Track track = {
-            map.value(u"id"_s).toInt(),
-            map.value(u"lang"_s).toString(),
-            map.value(u"title"_s).toString(),
-            map.value(u"codec"_s).toString(),
-        };
+        Track track;
+        track.trackid = map.value(u"id"_s).toInt();
+        track.lang = map.value(u"lang"_s).toString();
+        track.title = map.value(u"title"_s).toString();
+        track.codec = map.value(u"codec"_s).toString();
+
         const auto type = map.value(u"type"_s).toString();
         if (type == u"sub"_s) {
             if (track.trackid == subtitleId()) {
@@ -638,6 +636,12 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     }
     case AsyncIds::TrackList: {
         loadTracks(data.toList());
+
+        const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
+        setAudioId(preferredAudioTrack.toInt());
+
+        const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
+        setSubtitleId(preferredSubTrack.toInt());
         break;
     }
     case AsyncIds::ChapterList: {
@@ -761,8 +765,6 @@ void MpvItem::selectSubtitleTrack()
 {
     setProperty(MpvProperties::self()->SubtitleId, u"no"_s);
     if (SubtitlesSettings::autoSelectSubtitles()) {
-        const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
-        setProperty(MpvProperties::self()->SubtitleId, preferredSubTrack == 0 ? u"auto"_s : preferredSubTrack);
         setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(u" "_s));
     }
 }
@@ -1025,6 +1027,18 @@ void MpvItem::setAudioId(int value)
     if (value == audioId()) {
         return;
     }
+
+    if (value == -1) {
+        // value is -1 when unchecking the selected track in the GUI
+        setProperty(MpvProperties::self()->AudioId, u"no"_s);
+        return;
+    }
+
+    if (!m_audioTracksModel->hasTrackId(value)) {
+        // when preferred track id set in the settings is not a valid track id
+        setProperty(MpvProperties::self()->AudioId, u"auto"_s);
+        return;
+    }
     setProperty(MpvProperties::self()->AudioId, value);
 }
 
@@ -1036,6 +1050,17 @@ int MpvItem::subtitleId()
 void MpvItem::setSubtitleId(int value)
 {
     if (value == subtitleId()) {
+        return;
+    }
+    if (value == -1) {
+        // value is -1 when unchecking the selected track in the GUI
+        setProperty(MpvProperties::self()->SubtitleId, u"no"_s);
+        return;
+    }
+
+    if (!m_subtitleTracksModel->hasTrackId(value)) {
+        // when preferred track id set in the settings is not a valid track id
+        setProperty(MpvProperties::self()->SubtitleId, u"auto"_s);
         return;
     }
     setProperty(MpvProperties::self()->SubtitleId, value);

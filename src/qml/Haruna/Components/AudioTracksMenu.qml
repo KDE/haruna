@@ -42,7 +42,7 @@ Menu {
             checked: delegate.trackId === root.m_mpv.audioId
             text: delegate.displayText
             onTriggered: {
-                root.m_mpv.audioId = delegate.trackId
+                root.m_mpv.audioId = delegate.trackId === root.m_mpv.audioId ? -1 : delegate.trackId
             }
         }
     }

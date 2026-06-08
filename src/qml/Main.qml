@@ -112,9 +112,7 @@ ApplicationWindow {
     Connections {
         target: AudioSettings
         function onPreferredTrackChanged() {
-            mpv.audioId = AudioSettings.preferredTrack === 0
-                    ? "auto"
-                    : AudioSettings.preferredTrack
+            mpv.audioId = AudioSettings.preferredTrack
         }
         function onPreferredLanguageChanged() {
             mpv.setProperty(MpvProperties.AudioLanguage, AudioSettings.preferredLanguage.replace(/\s+/g, ''))
@@ -150,9 +148,7 @@ ApplicationWindow {
             mpv.setProperty(MpvProperties.SubtitleLanguage, SubtitlesSettings.preferredLanguage.replace(/\s+/g, ''))
         }
         function onPreferredTrackChanged() {
-            mpv.subtitleId = SubtitlesSettings.preferredTrack === 0
-                    ? "auto"
-                    : SubtitlesSettings.preferredTrack
+            mpv.subtitleId = SubtitlesSettings.preferredTrack
         }
         function onAllowOnBlackBordersChanged() {
             mpv.setProperty(MpvProperties.SubtitleUseMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
