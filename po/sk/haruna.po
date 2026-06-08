@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:42+0000\n"
+"POT-Creation-Date: 2026-06-08 00:43+0000\n"
 "PO-Revision-Date: 2024-11-11 17:46+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,49 +25,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: src/application.cpp:132
+#: src/application.cpp:134
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:134
+#: src/application.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Prehrávač médií"
 
-#: src/application.cpp:136
+#: src/application.cpp:138
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "(c) 2019-2023"
 
-#: src/application.cpp:141
+#: src/application.cpp:143
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:142
+#: src/application.cpp:144
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Vývojár"
 
-#: src/application.cpp:169
+#: src/application.cpp:171
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Funkciami bohatý sťahovač zvuku/videa príkazového riadku"
 
-#: src/application.cpp:184
+#: src/application.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "Súbor na otvorenie"
 
-#: src/application.cpp:188
+#: src/application.cpp:190
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -1091,7 +1091,7 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "Rovnaké ako primárne poradie zoradenia"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:211
+#: src/playlist/playlistmultiproxiesmodel.cpp:172
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -1799,7 +1799,7 @@ msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Play Now"
 
-#: src/qml/MpvVideo.qml:384
+#: src/qml/MpvVideo.qml:385
 msgctxt "@label:title"
 msgid "Loading…"
 msgstr "Načítava sa…"
@@ -2588,44 +2588,30 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "The file will be playing after restoring the playback position"
 
 #: src/qml/Settings/PlaybackSettings.qml:257
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "&Prehrávanie"
+msgstr "Uložiť pozíciu"
 
 #: src/qml/Settings/PlaybackSettings.qml:278
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Sýtosť"
+msgstr "pre akékoľvek trvanie"
 
 #: src/qml/Settings/PlaybackSettings.qml:281
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Ak je trvanie dlhšie ako %1 minúta"
-msgstr[1] "Ak je trvanie dlhšie ako %1 minúty"
-msgstr[2] "Ak je trvanie dlhšie ako %1 minút"
+msgstr[0] "ak je trvanie dlhšie ako %1 minúta"
+msgstr[1] "ak je trvanie dlhšie ako %1 minúty"
+msgstr[2] "ak je trvanie dlhšie ako %1 minút"
 
 #: src/qml/Settings/PlaybackSettings.qml:308
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Uložiť pozíciu každú %1 sekundu"
-msgstr[1] "Uložiť pozíciu každé %1 sekundy"
-msgstr[2] "Uložiť pozíciu každých %1 sekúnd"
+msgstr[0] "každú %1 sekundu"
+msgstr[1] "každé %1 sekundy"
+msgstr[2] "každých %1 sekúnd"
 
 #: src/qml/Settings/PlaybackSettings.qml:321
 msgctxt "@title"
