@@ -65,6 +65,8 @@ public:
     void clear();
     void addTrack(const Track &track);
     Track track(int row) const;
+    void addTrackId(int trackId);
+    bool hasTrackId(int trackId);
     QString trackInfo(int row) const;
 
     int activeRow() const;
@@ -77,6 +79,7 @@ public Q_SLOTS:
 
 private:
     QList<Track> m_data;
+    QList<int> m_trackIds;
     int m_activeRow{-1};
 };
 

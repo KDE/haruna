@@ -67,6 +67,7 @@ void TracksModel::clear()
 {
     beginResetModel();
     m_data.clear();
+    m_trackIds.clear();
     endResetModel();
 }
 
@@ -74,6 +75,7 @@ void TracksModel::addTrack(const Track &track)
 {
     beginInsertRows(QModelIndex(), m_data.count(), m_data.count());
     m_data.append(track);
+    addTrackId(track.trackid);
     endInsertRows();
     Q_EMIT rowCountChanged();
 }
@@ -89,6 +91,19 @@ void TracksModel::setTracks(QList<Track> tracks)
     m_data = std::move(tracks);
     endResetModel();
     Q_EMIT rowCountChanged();
+}
+
+void TracksModel::addTrackId(int trackId)
+{
+    if (hasTrackId(trackId)) {
+        return;
+    }
+    m_trackIds.append(trackId);
+}
+
+bool TracksModel::hasTrackId(int trackId)
+{
+    return m_trackIds.contains(trackId);
 }
 
 int TracksModel::nextRow()
