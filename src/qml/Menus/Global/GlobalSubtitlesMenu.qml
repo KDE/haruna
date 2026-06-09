@@ -43,7 +43,7 @@ Labs.Menu {
                 checked: primarySubDelegate.trackId === root.m_mpv.subtitleId
                 text: primarySubDelegate.displayText
                 onTriggered: {
-                    root.m_mpv.subtitleId = primarySubDelegate.trackId
+                    root.m_mpv.subtitleId = primarySubDelegate.trackId === root.m_mpv.subtitleId ? -1 : primarySubDelegate.trackId
                 }
             }
             onObjectAdded: function(index, object) {
@@ -77,7 +77,7 @@ Labs.Menu {
                 checked: secondarySubDelegate.trackId === root.m_mpv.secondarySubtitleId
                 text: secondarySubDelegate.displayText
                 onTriggered: {
-                    root.m_mpv.secondarySubtitleId = secondarySubDelegate.trackId
+                    root.m_mpv.secondarySubtitleId = secondarySubDelegate.trackId === root.m_mpv.secondarySubtitleId ? -1 : secondarySubDelegate.trackId
                 }
             }
             onObjectAdded: function(index, object) {
