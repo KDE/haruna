@@ -105,6 +105,10 @@ bool PlaylistProxyModel::moveRows(const QModelIndex &sourceParent, int row, int 
     if (row < 0 || row >= rowCount()) {
         return false;
     }
+    if (m_layout.isEmpty()) {
+        qDebug() << "PlaylistProxyModel::moveRows: m_layout isEmpty";
+        return false;
+    }
 
     if (destinationRow == -1) {
         destinationRow = rowCount() - 1;
