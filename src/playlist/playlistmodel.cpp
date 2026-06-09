@@ -601,9 +601,9 @@ double PlaylistModel::getPlaybackPosition(const uint row)
 
 void PlaylistModel::setPlaylist(const QList<PlaylistItem> &newPlaylist)
 {
-    beginResetModel();
+    beginInsertRows(QModelIndex(), 0, newPlaylist.size() - 1);
     m_playlist = newPlaylist;
-    endResetModel();
+    endInsertRows();
 }
 
 QString PlaylistModel::playlistName() const
