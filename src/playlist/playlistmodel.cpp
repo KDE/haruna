@@ -394,8 +394,8 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
         return;
     }
 
-    QStringList allowedMimeTypes{u"audio/x-mpegurl"_s, u"application/vnd.apple.mpegurl"_s};
-    if (!allowedMimeTypes.contains(MiscUtils::mimeType(url))) {
+    const QStringList m3uMimeTypes = {u"audio/x-mpegurl"_s, u"audio/mpegurl"_s, u"application/vnd.apple.mpegurl"_s, u"application/x-mpegurl"_s};
+    if (!m3uMimeTypes.contains(MiscUtils::mimeType(url))) {
         return;
     }
 
