@@ -156,7 +156,7 @@ void MpvItem::initProperties()
     YouTube yt;
     setProperty(MpvProperties::self()->ScriptOpts, u"ytdl_hook-ytdl_path=%1"_s.arg(yt.youtubeDlExecutable()));
 
-    const auto cmdParser = CommandLineOptions::instance()->parser();
+    const auto cmdParser = CommandLineOptions::instance().parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
     if (cmdParser->isSet(u"ytdl-format-selection"_s)) {
         ytdlFormat = cmdParser->value(u"ytdl-format-selection"_s);

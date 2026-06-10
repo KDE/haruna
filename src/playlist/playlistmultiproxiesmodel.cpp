@@ -34,7 +34,7 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    const auto urls = CommandLineOptions::instance()->startupUrls();
+    const auto urls = CommandLineOptions::instance().startupUrls();
 
     QUrl cacheUrl = getPlaylistCacheUrl();
     if (cacheUrl.isEmpty()) {

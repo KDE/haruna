@@ -176,7 +176,7 @@ void Application::setupAboutData()
         });
     });
 
-    const auto parser = CommandLineOptions::instance()->parser();
+    const auto parser = CommandLineOptions::instance().parser();
     m_aboutData.setupCommandLine(parser.get());
     m_aboutData.processCommandLine(parser.get());
 

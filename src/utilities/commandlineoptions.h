@@ -16,7 +16,7 @@ class CommandLineOptions : public QObject
     QML_SINGLETON
 
 public:
-    static CommandLineOptions *instance();
+    static CommandLineOptions &instance();
     static CommandLineOptions *create(QQmlEngine *, QJSEngine *);
 
     Q_PROPERTY(QList<QUrl> startupUrls READ startupUrls WRITE setStartupUrls NOTIFY startupUrlsChanged FINAL)

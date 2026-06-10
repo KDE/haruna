@@ -3,20 +3,22 @@
 
 #include <QApplication>
 #include <QDir>
+#include <QQmlEngine>
 
 #include <KLocalizedString>
 
 using namespace Qt::StringLiterals;
 
-CommandLineOptions *CommandLineOptions::instance()
+CommandLineOptions &CommandLineOptions::instance()
 {
     static CommandLineOptions clo;
-    return &clo;
+    return clo;
 }
 
 CommandLineOptions *CommandLineOptions::create(QQmlEngine *, QJSEngine *)
 {
-    return instance();
+    QQmlEngine::setObjectOwnership(&instance(), QQmlEngine::CppOwnership);
+    return &instance();
 }
 
 CommandLineOptions::CommandLineOptions(QObject *parent)
