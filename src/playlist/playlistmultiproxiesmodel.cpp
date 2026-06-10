@@ -16,6 +16,8 @@
 #include <KIO/RenameFileDialog>
 #include <KLocalizedString>
 
+#include <commandlineoptions.h>
+
 #include "miscutils.h"
 #include "pathutils.h"
 #include "playlistrenamevalidator.h"
@@ -32,13 +34,7 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    QCommandLineParser parser;
-    parser.process(*QApplication::instance());
-    QList<QUrl> urls;
-    const auto args = parser.positionalArguments();
-    for (const auto &arg : args) {
-        urls.append(QUrl::fromUserInput(arg, QDir::currentPath()));
-    }
+    const auto urls = CommandLineOptions::instance()->startupUrls();
 
     QUrl cacheUrl = getPlaylistCacheUrl();
     if (cacheUrl.isEmpty()) {
