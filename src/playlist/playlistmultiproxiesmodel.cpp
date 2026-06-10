@@ -11,6 +11,7 @@
 #include <QDir>
 #include <QJsonDocument>
 #include <QLineEdit>
+#include <playbacksettings.h>
 
 #include <KFileItem>
 #include <KIO/RenameFileDialog>
@@ -95,6 +96,9 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                 setActiveIndex(i);
                 setVisibleIndex(i);
 
+                if (!PlaybackSettings::openLastPlayedFile()) {
+                    continue;
+                }
                 uint index = playlist.value(u"currentItem").toInt();
                 activeFilterProxy()->setPlayingItem(index);
             }
@@ -226,7 +230,9 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
     connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
     connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
 
-    if (addItemsToPlaylist && !item.playlistUrl.isEmpty()) {
+    // when openLastPlayedFile setting is off don't load items for default playlist (row == 0)
+    bool loadItems = addItemsToPlaylist && (PlaybackSettings::openLastPlayedFile() || row > 0);
+    if (loadItems && !item.playlistUrl.isEmpty()) {
         item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
     }
 
