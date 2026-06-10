@@ -135,7 +135,6 @@ RowLayout {
                         active: GeneralSettings.showPreviewThumbnail
                                 && root.m_mpv.playbackState !== MpvItem.PlaybackState.Stopped
                                 && previewMpvLoader.file !== ""
-                                && root.m_mpv.videoWidth > 0
                         visible: active && (item as MpvPreview).isLocalFile && (item as MpvPreview).isVideo
                         asynchronous: true
                         sourceComponent: MpvPreview {
