@@ -52,19 +52,13 @@ void PlaylistsManager::setPlaylists(PlaylistMultiProxiesModel *model)
 void PlaylistsManager::initialize(const QList<QUrl> urls)
 {
     if (urls.isEmpty()) {
-        // set last session's active playlist as visible
-        m_playlists->setVisibleIndex(m_playlists->activeIndex());
-
         if (!PlaybackSettings::openLastPlayedFile()) {
             return;
         }
 
         // restore last session's non default playlist and its playing item
-        if (m_playlists->activeIndex() > 0) {
-            const auto playingItem = activePlaylist()->playlistModel()->playingItem();
-            activePlaylist()->setPlayingItem(playingItem);
-            return;
-        }
+        const auto playingItem = activePlaylist()->playlistModel()->playingItem();
+        activePlaylist()->setPlayingItem(playingItem);
         return;
     }
 

@@ -65,7 +65,6 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                 continue;
             }
             QJsonObject playlist = value.toObject();
-            bool active = playlist.value(u"isActive").toBool();
 
             QString playlistName = playlist.value(u"name").toString();
             QUrl playlistUrl = getPlaylistUrl(playlistName);
@@ -86,8 +85,18 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
                 initPlaylist(0, false);
                 continue;
             }
+            // this code must be run after the sorting and grouping have been setup, else when
+            // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
+            // the sorting and grouping data is not available on the playlist and will be lost
+            bool active = playlist.value(u"isActive").toBool();
             if (active) {
                 initPlaylist(i);
+
+                setActiveIndex(i);
+                setVisibleIndex(i);
+
+                uint index = playlist.value(u"currentItem").toInt();
+                activeFilterProxy()->setPlayingItem(index);
             }
         }
     }
@@ -191,10 +200,6 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
     item.isInitialized = true;
     item.playlist->playlistModel()->setPlaylistName(item.playlistName);
 
-    if (addItemsToPlaylist && !item.playlistUrl.isEmpty()) {
-        item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
-    }
-
     connect(item.playlist->playlistModel(), &PlaylistModel::playingItemChanged, this, [this](const QString &pName) {
         // When playingItemChanged is emitted, we check if the new playing item is in the currently active
         // playlist. If not, we stop that playlist and update the active one.
@@ -220,6 +225,10 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
     connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsRemoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
     connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
     connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+
+    if (addItemsToPlaylist && !item.playlistUrl.isEmpty()) {
+        item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
+    }
 
     item.playlist->playlistModel()->stop();
 
@@ -262,16 +271,6 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
             item.playlist->addToActiveGroup(group);
             item.playlist->setGroupHideBlank(index, hideBlank);
         }
-    }
-
-    // this code must be run after the sorting and grouping have been setup, else when
-    // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
-    // the sorting and grouping data is not available on the playlist and will be lost
-    bool active = item.jsonData.value(u"isActive").toBool();
-    if (active) {
-        uint index = item.jsonData.value(u"currentItem").toInt();
-        setActiveIndex(row);
-        setVisibleIndex(row);
     }
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
@@ -533,6 +532,10 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
     uint playlistsSize = m_data.size();
     for (uint i = 0; i < playlistsSize; ++i) {
         if (!m_data.at(i).isInitialized) {
+            // is it's not initialized then it's not active
+            // happens when starting the app with files passed to the command line
+            // in which case the default playlist is active and the previous active playlist in left uninitialized
+            m_data.at(i).jsonData[u"isActive"_s] = false;
             array.append(m_data.at(i).jsonData);
             continue;
         }
