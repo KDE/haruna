@@ -65,13 +65,7 @@ void PlaylistsManager::initialize(const QList<QUrl> urls)
             activePlaylist()->setPlayingItem(playingItem);
             return;
         }
-
-        // restore last session's default playlist
-        if (!GeneralSettings::lastPlaylist().isEmpty()) {
-            defaultPlaylist()->addItem(GeneralSettings::lastPlaylist(), PlaylistModel::Clear);
-            return;
-        }
-        defaultPlaylist()->addItem(GeneralSettings::lastPlayedFile(), PlaylistModel::Clear);
+        return;
     }
 
     if (urls.count() == 1) {

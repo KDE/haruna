@@ -6,6 +6,9 @@
 
 #include "playlistmultiproxiesmodel.h"
 
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QDir>
 #include <QJsonDocument>
 #include <QLineEdit>
 
@@ -29,11 +32,13 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    PlaylistsModelItem item;
-    item.playlistName = u"Default"_s;
-
-    addPlaylist(std::move(item));
-    initPlaylist(0);
+    QCommandLineParser parser;
+    parser.process(*QApplication::instance());
+    QList<QUrl> urls;
+    const auto args = parser.positionalArguments();
+    for (const auto &arg : args) {
+        urls.append(QUrl::fromUserInput(arg, QDir::currentPath()));
+    }
 
     QUrl cacheUrl = getPlaylistCacheUrl();
     if (cacheUrl.isEmpty()) {
@@ -67,10 +72,10 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
             bool active = playlist.value(u"isActive").toBool();
 
             QString playlistName = playlist.value(u"name").toString();
-            if (playlistName == u"Default"_s) {
-                continue;
-            }
             QUrl playlistUrl = getPlaylistUrl(playlistName);
+            if (playlistName == u"Default"_s) {
+                playlistUrl = getDefaultPlaylistUrl();
+            }
             if (playlistUrl.isEmpty()) {
                 continue;
             }
@@ -81,6 +86,10 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
             item.jsonData = playlist;
 
             addPlaylist(std::move(item));
+            if (!urls.isEmpty()) {
+                initPlaylist(0, false);
+                continue;
+            }
             if (active) {
                 initPlaylist(i);
             }
@@ -179,14 +188,14 @@ void PlaylistMultiProxiesModel::addPlaylist(PlaylistsModelItem newItem)
     endInsertRows();
 }
 
-void PlaylistMultiProxiesModel::initPlaylist(uint row)
+void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
 {
     auto &item = m_data[row];
     item.playlist = std::make_unique<PlaylistFilterProxyModel>();
     item.isInitialized = true;
     item.playlist->playlistModel()->setPlaylistName(item.playlistName);
 
-    if (!item.playlistUrl.isEmpty()) {
+    if (addItemsToPlaylist && !item.playlistUrl.isEmpty()) {
         item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
     }
 
@@ -266,7 +275,7 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row)
     if (active) {
         uint index = item.jsonData.value(u"currentItem").toInt();
         setActiveIndex(row);
-        activeFilterProxy()->setPlayingItem(index);
+        setVisibleIndex(row);
     }
 
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
@@ -467,6 +476,21 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
     return url;
 }
 
+QUrl PlaylistMultiProxiesModel::getDefaultPlaylistUrl()
+{
+    auto playlistsPath = PathUtils::instance()->playlistsFolder();
+    playlistsPath.append(u"/"_s).append(u"Default"_s).append(u".m3u"_s);
+
+    if (!QFile::exists(playlistsPath)) {
+        createNewPlaylist(u"Default"_s);
+    }
+    if (!QFile::exists(playlistsPath)) {
+        qDebug() << "PlaylistMultiProxiesModel::getDefaultPlaylistUrl: failed to create Default playlist file:" << playlistsPath;
+    }
+
+    return QUrl::fromLocalFile(playlistsPath);
+}
+
 QUrl PlaylistMultiProxiesModel::getPlaylistUrl(const QString &playlistName)
 {
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
@@ -490,10 +514,6 @@ void PlaylistMultiProxiesModel::savePlaylist(const QString &playlistName, Playli
     // Note: this method saves unfiltered whole list.
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
     playlistsPath.append(u"/"_s);
-
-    if (playlistName == u"Default") {
-        return;
-    }
 
     proxyModel->saveInternalPlaylist(playlistsPath, playlistName);
     savePlaylistCache();
@@ -527,35 +547,33 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
         json.insert(u"showSections", m_data.at(i).playlist->showSections());
 
         // Save sorting and grouping for non-default playlists
-        if (json.value(u"name") != u"Default"_s) {
-            QJsonArray sortProperties;
-            QJsonArray groups;
-            int index = 0;
-            const auto activeSortProperties = m_data.at(i).playlist->activeSortPropertiesModel()->properties();
-            for (const auto &property : activeSortProperties) {
-                QJsonObject propertyStruct;
-                propertyStruct.insert(u"index", index);
-                propertyStruct.insert(u"sort", property.sort);
-                propertyStruct.insert(u"order", property.order);
+        QJsonArray sortProperties;
+        QJsonArray groups;
+        int index = 0;
+        const auto activeSortProperties = m_data.at(i).playlist->activeSortPropertiesModel()->properties();
+        for (const auto &property : activeSortProperties) {
+            QJsonObject propertyStruct;
+            propertyStruct.insert(u"index", index);
+            propertyStruct.insert(u"sort", property.sort);
+            propertyStruct.insert(u"order", property.order);
 
-                sortProperties.append(propertyStruct);
-                index++;
-            }
-
-            index = 0;
-            const auto activeGroupProperties = m_data.at(i).playlist->activeGroupModel()->properties();
-            for (const auto &property : activeGroupProperties) {
-                QJsonObject groupStruct;
-                groupStruct.insert(u"index", index);
-                groupStruct.insert(u"group", property.sort);
-                groupStruct.insert(u"hideBlank", property.hideBlank);
-
-                groups.append(groupStruct);
-                index++;
-            }
-            json.insert(u"sortBy", sortProperties);
-            json.insert(u"groupBy", groups);
+            sortProperties.append(propertyStruct);
+            index++;
         }
+
+        index = 0;
+        const auto activeGroupProperties = m_data.at(i).playlist->activeGroupModel()->properties();
+        for (const auto &property : activeGroupProperties) {
+            QJsonObject groupStruct;
+            groupStruct.insert(u"index", index);
+            groupStruct.insert(u"group", property.sort);
+            groupStruct.insert(u"hideBlank", property.hideBlank);
+
+            groups.append(groupStruct);
+            index++;
+        }
+        json.insert(u"sortBy", sortProperties);
+        json.insert(u"groupBy", groups);
         array.append(json);
     }
     QJsonDocument doc(array);

@@ -65,8 +65,9 @@ private:
     PlaylistFilterProxyModel *getFilterProxy(const QString &playlistName);
 
     void addPlaylist(PlaylistsModelItem newItem);
-    void initPlaylist(uint row);
+    void initPlaylist(uint row, bool addItemsToPlaylist = true);
     QUrl getPlaylistCacheUrl();
+    QUrl getDefaultPlaylistUrl();
     QUrl getPlaylistUrl(const QString &playlistName);
     void saveVisiblePlaylist();
     void savePlaylist(const QString &playlistName, PlaylistFilterProxyModel *proxyModel);
