@@ -65,7 +65,6 @@ public:
     static QString version();
 
     void handleSecondayInstanceMessage(const QByteArray &message, const QString &activationToken);
-    QCommandLineParser *parser() const;
 
     QQmlApplicationEngine *qmlEngine() const;
     void setQmlEngine(QQmlApplicationEngine *_qmlEngine);
@@ -88,10 +87,8 @@ private:
 
     void setupWorkerThread();
     void setupAboutData();
-    void setupCommandLineParser();
     QAbstractItemModel *colorSchemesModel();
     KAboutData m_aboutData;
-    std::unique_ptr<QCommandLineParser> m_parser;
     QList<QUrl> m_urls;
     KColorSchemeManager *m_schemes{nullptr};
     QString m_systemDefaultStyle;

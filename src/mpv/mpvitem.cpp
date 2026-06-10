@@ -18,6 +18,8 @@
 #include <KShell>
 #include <MpvController>
 
+#include <commandlineoptions.h>
+
 #include "application.h"
 #include "audiosettings.h"
 #include "chaptersmodel.h"
@@ -153,7 +155,8 @@ void MpvItem::initProperties()
     // set ytdl_path to yt-dlp or fallback to youtube-dl
     YouTube yt;
     setProperty(MpvProperties::self()->ScriptOpts, u"ytdl_hook-ytdl_path=%1"_s.arg(yt.youtubeDlExecutable()));
-    QCommandLineParser *cmdParser = Application::instance()->parser();
+
+    const auto cmdParser = CommandLineOptions::instance()->parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
     if (cmdParser->isSet(u"ytdl-format-selection"_s)) {
         ytdlFormat = cmdParser->value(u"ytdl-format-selection"_s);

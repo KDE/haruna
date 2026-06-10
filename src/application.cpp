@@ -22,6 +22,7 @@
 #include <QThread>
 #include <QThreadPool>
 #include <QUrlQuery>
+#include <commandlineoptions.h>
 
 #include "kconfig_version.h"
 #include <KAboutData>
@@ -104,7 +105,6 @@ Application::Application()
 
     setupWorkerThread();
     setupAboutData();
-    setupCommandLineParser();
 
     KCrash::initialize();
 
@@ -176,30 +176,11 @@ void Application::setupAboutData()
         });
     });
 
+    const auto parser = CommandLineOptions::instance()->parser();
+    m_aboutData.setupCommandLine(parser.get());
+    m_aboutData.processCommandLine(parser.get());
+
     KAboutData::setApplicationData(m_aboutData);
-}
-
-void Application::setupCommandLineParser()
-{
-    m_parser = std::make_unique<QCommandLineParser>();
-    m_aboutData.setupCommandLine(m_parser.get());
-    m_parser->addPositionalArgument(u"file"_s, i18nc("@info:shell", "File to open"));
-
-    QCommandLineOption ytdlFormatSelectionOption(QStringList() << u"ytdl-format-selection"_s << u"ytdlfs"_s,
-                                                 i18nc("@info:shell",
-                                                       "Allows to temporarily override the yt-dlp format selection setting. "
-                                                       "Will be overwritten if the setting is changed through the GUI"),
-                                                 u"bestvideo+bestaudio/best"_s,
-                                                 QString());
-    m_parser->addOption(ytdlFormatSelectionOption);
-
-    m_parser->process(*QApplication::instance());
-    m_aboutData.processCommandLine(m_parser.get());
-
-    const auto args = m_parser->positionalArguments();
-    for (const auto &arg : args) {
-        addUrl(arg);
-    }
 }
 
 QString Application::version()
@@ -264,11 +245,6 @@ QQmlApplicationEngine *Application::qmlEngine() const
 void Application::setQmlEngine(QQmlApplicationEngine *_qmlEngine)
 {
     m_qmlEngine = _qmlEngine;
-}
-
-QCommandLineParser *Application::parser() const
-{
-    return m_parser.get();
 }
 
 void Application::activateColorScheme(const QString &name)

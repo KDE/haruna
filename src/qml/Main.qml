@@ -33,9 +33,9 @@ ApplicationWindow {
         if (!playlist.isReady || !mpv.isReady) {
             return
         }
-        playlist.manager.initialize(HarunaApp.urls())
-        if (HarunaApp.urls().length > 0) {
-            Models.recentFilesModel.addRecentFile(HarunaApp.urls()[0], RecentFilesModel.OpenedFrom.ExternalApp)
+        playlist.manager.initialize(CommandLineOptions.startupUrls)
+        if (CommandLineOptions.startupUrls.length > 0) {
+            Models.recentFilesModel.addRecentFile(CommandLineOptions.startupUrls[0], RecentFilesModel.OpenedFrom.ExternalApp)
         }
     }
 
