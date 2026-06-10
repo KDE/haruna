@@ -361,21 +361,27 @@ MpvItem {
                 Layout.preferredWidth: spriteSize
                 Layout.preferredHeight: spriteSize
 
-                AnimatedSprite {
+                Loader {
                     id: loadingIndicatorSprite
 
+                    property int currentFrame: 0
+
                     anchors.fill: parent
-                    currentFrame: 0
-                    finishBehavior: AnimatedSprite.FinishAtInitialFrame
-                    frameCount: 8
-                    // Do NOT use frameRate. It causes flickering. Use frameDuration instead
-                    frameDuration: Math.round(1000.0 / 30.0)
-                    frameHeight: 192
-                    frameWidth: 192
-                    interpolate: false
-                    source: "qrc:/data/animations/192-haruna-animation-sliding.png"
-                    reverse: false
-                    running: loadingIndicator.play
+                    active: true
+                    asynchronous: true
+                    sourceComponent: AnimatedSprite {
+                        currentFrame: loadingIndicatorSprite.currentFrame
+                        finishBehavior: AnimatedSprite.FinishAtInitialFrame
+                        frameCount: 8
+                        // Do NOT use frameRate. It causes flickering. Use frameDuration instead
+                        frameDuration: Math.round(1000.0 / 30.0)
+                        frameHeight: 192
+                        frameWidth: 192
+                        interpolate: false
+                        source: "qrc:/data/animations/192-haruna-animation-sliding.png"
+                        reverse: false
+                        running: loadingIndicator.play
+                    }
                 }
             }
 
