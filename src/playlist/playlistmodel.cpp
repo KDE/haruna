@@ -390,7 +390,12 @@ std::optional<PlaylistItem> PlaylistModel::localFileToPlaylistItem(const QFileIn
 
 void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
 {
-    if (url.scheme() != u"file"_s || MiscUtils::mimeType(url) != u"audio/x-mpegurl"_s) {
+    if (url.scheme() != u"file"_s) {
+        return;
+    }
+
+    QStringList allowedMimeTypes{u"audio/x-mpegurl"_s, u"application/vnd.apple.mpegurl"_s};
+    if (!allowedMimeTypes.contains(MiscUtils::mimeType(url))) {
         return;
     }
 
@@ -417,9 +422,10 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
         // always set the working directory
         // it doesn't affect absolute paths and it's required for relative paths
         auto url = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath());
+        auto lastUrl = QUrl::fromUserInput(GeneralSettings::lastPlayedFile());
         addItem(url, Behavior::Append);
 
-        if (!matchFound && url == QUrl::fromUserInput(GeneralSettings::lastPlayedFile())) {
+        if (!matchFound && url.toLocalFile() == lastUrl.toLocalFile()) {
             playingItem = i;
             matchFound = true;
         }
