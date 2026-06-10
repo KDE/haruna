@@ -38,7 +38,6 @@ MpvItem {
         switch(playbackState) {
         case MpvItem.PlaybackState.Stopped:
             loadingIndicator.play = false
-            loadingIndicatorSprite.currentFrame = 0
             break
         case MpvItem.PlaybackState.Playing:
             loadingIndicator.play = false
@@ -364,13 +363,10 @@ MpvItem {
                 Loader {
                     id: loadingIndicatorSprite
 
-                    property int currentFrame: 0
-
                     anchors.fill: parent
                     active: true
                     asynchronous: true
                     sourceComponent: AnimatedSprite {
-                        currentFrame: loadingIndicatorSprite.currentFrame
                         finishBehavior: AnimatedSprite.FinishAtInitialFrame
                         frameCount: 8
                         // Do NOT use frameRate. It causes flickering. Use frameDuration instead
@@ -381,6 +377,7 @@ MpvItem {
                         source: "qrc:/data/animations/192-haruna-animation-sliding.png"
                         reverse: false
                         running: loadingIndicator.play
+                        onRunningChanged: currentFrame = 0
                     }
                 }
             }
