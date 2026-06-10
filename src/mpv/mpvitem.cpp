@@ -338,6 +338,10 @@ void MpvItem::onFileLoaded()
     auto state = pause ? PlaybackState::Paused : PlaybackState::Playing;
     setPlaybackState(state);
 
+    QString mimeType = MiscUtils::instance()->mimeType(m_currentUrl);
+    setIsVideo(mimeType.startsWith(u"video/"_s));
+    setIsLocalFile(m_currentUrl.isLocalFile());
+
     setFinishedLoading(true);
 }
 
@@ -1181,6 +1185,34 @@ int MpvItem::videoWidth()
 int MpvItem::videoHeight()
 {
     return m_videoHeight;
+}
+
+bool MpvItem::isLocalFile() const
+{
+    return m_isLocalFile;
+}
+
+void MpvItem::setIsLocalFile(bool newIsLocalFile)
+{
+    if (m_isLocalFile == newIsLocalFile) {
+        return;
+    }
+    m_isLocalFile = newIsLocalFile;
+    Q_EMIT isLocalFileChanged();
+}
+
+bool MpvItem::isVideo() const
+{
+    return m_isVideo;
+}
+
+void MpvItem::setIsVideo(bool newIsVideo)
+{
+    if (m_isVideo == newIsVideo) {
+        return;
+    }
+    m_isVideo = newIsVideo;
+    Q_EMIT isVideoChanged();
 }
 
 #include "moc_mpvitem.cpp"

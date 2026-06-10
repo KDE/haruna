@@ -133,9 +133,11 @@ RowLayout {
                         property double aspectRatio: 2
 
                         active: GeneralSettings.showPreviewThumbnail
-                                && root.m_mpv.playbackState !== MpvItem.PlaybackState.Stopped
                                 && previewMpvLoader.file !== ""
-                        visible: active && (item as MpvPreview).isLocalFile && (item as MpvPreview).isVideo
+                                && root.m_mpv.playbackState !== MpvItem.PlaybackState.Stopped
+                                && root.m_mpv.isLocalFile
+                                && root.m_mpv.isVideo
+                        visible: active
                         asynchronous: true
                         sourceComponent: MpvPreview {
                             id: mpvPreview

@@ -164,6 +164,14 @@ public:
     PlaybackState playbackState() const;
     void setPlaybackState(PlaybackState newPlaybackState);
 
+    Q_PROPERTY(bool isLocalFile READ isLocalFile WRITE setIsLocalFile NOTIFY isLocalFileChanged)
+    bool isLocalFile() const;
+    void setIsLocalFile(bool newIsLocalFile);
+
+    Q_PROPERTY(bool isVideo READ isVideo WRITE setIsVideo NOTIFY isVideoChanged)
+    bool isVideo() const;
+    void setIsVideo(bool newIsVideo);
+
     Q_INVOKABLE void loadFile(const QString &file);
     Q_INVOKABLE void userCommand(const QString &commandString);
     Q_INVOKABLE void selectSubtitleTrack();
@@ -214,6 +222,10 @@ Q_SIGNALS:
 
     void playlistsManagerChanged();
 
+    void isLocalFileChanged();
+
+    void isVideoChanged();
+
 private:
     void initProperties();
     void setupConnections();
@@ -262,6 +274,8 @@ private:
     std::unique_ptr<QTimer> m_saveTimePositionTimer;
     PlaybackState m_playbackState{PlaybackState::Stopped};
     PlaylistsManager *m_playlistsManager = nullptr;
+    bool m_isLocalFile;
+    bool m_isVideo;
 };
 
 #endif // MPVOBJECT_H

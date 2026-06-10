@@ -52,7 +52,7 @@ MpvPreview::MpvPreview()
 
 void MpvPreview::loadFile()
 {
-    if (m_isReady && m_isVideo && !m_file.isEmpty()) {
+    if (m_isReady && !m_file.isEmpty()) {
         command(QStringList() << u"loadfile"_s << m_file);
     }
 }
@@ -87,12 +87,6 @@ void MpvPreview::setFile(const QString &_file)
     }
     m_file = _file;
     auto url = QUrl::fromUserInput(m_file);
-    setIsLocalFile(url.isLocalFile());
-
-    QMimeDatabase mimeDb;
-    QString mimeType = mimeDb.mimeTypeForFile(m_file).name();
-    setIsVideo(mimeType.startsWith(u"video/"_s));
-
     Q_EMIT fileChanged();
 }
 
@@ -109,34 +103,6 @@ void MpvPreview::setAccuratePreview(bool _accuratePreview)
     m_accuratePreview = _accuratePreview;
     setProperty(MpvProperties::self()->AccurateSeek, _accuratePreview);
     Q_EMIT accuratePreviewChanged();
-}
-
-bool MpvPreview::isLocalFile() const
-{
-    return m_isLocalFile;
-}
-
-void MpvPreview::setIsLocalFile(bool _isLocalFile)
-{
-    if (m_isLocalFile == _isLocalFile) {
-        return;
-    }
-    m_isLocalFile = _isLocalFile;
-    Q_EMIT isLocalFileChanged();
-}
-
-bool MpvPreview::isVideo() const
-{
-    return m_isVideo;
-}
-
-void MpvPreview::setIsVideo(bool _isVideo)
-{
-    if (m_isVideo == _isVideo) {
-        return;
-    }
-    m_isVideo = _isVideo;
-    Q_EMIT isVideoChanged();
 }
 
 #include "moc_mpvpreview.cpp"
