@@ -70,7 +70,7 @@ ThumbnailResponse::ThumbnailResponse(const QString &id, const QSize &requestedSi
 void ThumbnailResponse::getPreview(const QString &id, const QSize &requestedSize)
 {
     auto url = QUrl::fromUserInput(id);
-    if (QFile(url.toLocalFile()).exists()) {
+    if (url.scheme() == u"file"_s) {
         // clang-format off
         QMetaObject::invokeMethod(Worker::instance(),
                                   &Worker::makePlaylistThumbnail,
