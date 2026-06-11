@@ -28,7 +28,8 @@ Item {
         width: textWidth > root.maxWidth ? root.maxWidth : undefined
         visible: false
         background: Rectangle {
-            color: Kirigami.Theme.backgroundColor
+            color: Qt.alpha(Kirigami.Theme.backgroundColor, 0.8)
+            radius: Kirigami.Units.cornerRadius
         }
         padding: Kirigami.Units.largeSpacing
         font.pointSize: parseInt(GeneralSettings.osdFontSize)
