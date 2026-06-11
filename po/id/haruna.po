@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 00:43+0000\n"
+"POT-Creation-Date: 2026-06-11 00:44+0000\n"
 "PO-Revision-Date: 2025-05-04 09:31+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -62,26 +62,6 @@ msgstr "Pengembang"
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Baris perintah kaya fitur pengunduh audio/video"
-
-#: src/application.cpp:186
-#, kde-format
-msgctxt "@info:shell"
-msgid "File to open"
-msgstr "File untuk dibuka"
-
-#: src/application.cpp:190
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid ""
-#| "Allows to temporarily override the ytdl format selection setting. Will be "
-#| "overwritten if the setting is changed through the GUI"
-msgctxt "@info:shell"
-msgid ""
-"Allows to temporarily override the yt-dlp format selection setting. Will be "
-"overwritten if the setting is changed through the GUI"
-msgstr ""
-"Izinkan penimpaan secara sementara pengaturan pemilihan format ytdl. Akan "
-"menimpa jika pengaturan telah diubah melalui GUI"
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -700,18 +680,18 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:83
 #, kde-format
 msgid "Command line video player"
 msgstr "Baris perintah pemutar video"
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:90
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Solusi lintas platform untuk rekam, konversi dan stream audio dan video"
 
-#: src/mpv/mpvitem.cpp:356
+#: src/mpv/mpvitem.cpp:361
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -719,13 +699,13 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Tidak bisa memutar: %1"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
 
-#: src/mpv/mpvitem.cpp:491
+#: src/mpv/mpvitem.cpp:496
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -733,44 +713,44 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Perwaktuan subtitel: %1 detik"
 
-#: src/mpv/mpvitem.cpp:493
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Perwaktuan subtitel: %1 detik"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:566
+#: src/mpv/mpvitem.cpp:571
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:584
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nihil"
 
-#: src/mpv/mpvitem.cpp:628
+#: src/mpv/mpvitem.cpp:633
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Gagal menjepret layar"
 
-#: src/mpv/mpvitem.cpp:633
+#: src/mpv/mpvitem.cpp:638
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Pengambilan jepretan layar"
 
-#: src/mpv/mpvitem.cpp:635
+#: src/mpv/mpvitem.cpp:640
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -778,7 +758,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Jepretan layar: %1"
 
-#: src/mpv/mpvitem.cpp:662
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -788,13 +768,13 @@ msgstr ""
 "Tidak ada trek video yang terdeteksi, sepertinya trek video tidak bisa "
 "didekode/diputar karena codec yang hilang"
 
-#: src/mpv/mpvitem.cpp:699
+#: src/mpv/mpvitem.cpp:710
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Chapter yang dilewati: %1"
 
-#: src/mpv/mpvitem.cpp:796
+#: src/mpv/mpvitem.cpp:805
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -804,7 +784,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:807
+#: src/mpv/mpvitem.cpp:816
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -812,7 +792,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtitel: Nihil"
 
-#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:821 src/mpv/mpvitem.cpp:837
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -822,7 +802,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtitel: %1 %2"
 
-#: src/mpv/mpvitem.cpp:823
+#: src/mpv/mpvitem.cpp:832
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -1013,7 +993,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Tambah"
 
-#: src/playlist/Playlist.qml:420 src/qml/Main.qml:496
+#: src/playlist/Playlist.qml:420 src/qml/Main.qml:492
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1267,7 +1247,7 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:172
+#: src/playlist/playlistmultiproxiesmodel.cpp:190
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -1822,12 +1802,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:316
+#: src/qml/HProgressBar.qml:317
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Lewati Bab"
 
-#: src/qml/HProgressBar.qml:324
+#: src/qml/HProgressBar.qml:325
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1841,17 +1821,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:446
+#: src/qml/Main.qml:442
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Pilih File"
 
-#: src/qml/Main.qml:466
+#: src/qml/Main.qml:462
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Pilih File Subtitel"
 
-#: src/qml/Main.qml:493
+#: src/qml/Main.qml:489
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Buka"
@@ -1876,7 +1856,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "File Baru-baru Ini"
 
-#: src/qml/Menus/FileMenu.qml:75 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:67 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Bersihkan Daftar"
@@ -3475,6 +3455,26 @@ msgstr "Saturasi"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Klik tengah pada penggeser untuk mengeset ulang"
+
+#: src/utilities/commandlineoptions.cpp:33
+#, kde-format
+msgctxt "@info:shell"
+msgid "File to open"
+msgstr "File untuk dibuka"
+
+#: src/utilities/commandlineoptions.cpp:37
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid ""
+#| "Allows to temporarily override the ytdl format selection setting. Will be "
+#| "overwritten if the setting is changed through the GUI"
+msgctxt "@info:shell"
+msgid ""
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
+"overwritten if the setting is changed through the GUI"
+msgstr ""
+"Izinkan penimpaan secara sementara pengaturan pemilihan format ytdl. Akan "
+"menimpa jika pengaturan telah diubah melalui GUI"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format

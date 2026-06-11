@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 00:43+0000\n"
+"POT-Creation-Date: 2026-06-11 00:44+0000\n"
 "PO-Revision-Date: 2026-05-25 19:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -62,22 +62,6 @@ msgstr "개발자"
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "다기능 명령행 오디오/비디오 다운로더"
-
-#: src/application.cpp:186
-#, kde-format
-msgctxt "@info:shell"
-msgid "File to open"
-msgstr "열 파일"
-
-#: src/application.cpp:190
-#, kde-format
-msgctxt "@info:shell"
-msgid ""
-"Allows to temporarily override the yt-dlp format selection setting. Will be "
-"overwritten if the setting is changed through the GUI"
-msgstr ""
-"yt-dlp 형식 설정 문자열을 재정의합니다. GUI에서 설정을 변경하면 이 설정이 무"
-"시됩니다"
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -629,78 +613,78 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:83
 #, kde-format
 msgid "Command line video player"
 msgstr "명령행 동영상 재생기"
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:90
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
-#: src/mpv/mpvitem.cpp:356
+#: src/mpv/mpvitem.cpp:361
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:458
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "음량: %1"
 
-#: src/mpv/mpvitem.cpp:491
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "자막 시간 조정: +%1초"
 
-#: src/mpv/mpvitem.cpp:493
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "자막 시간 조정: %1초"
 
-#: src/mpv/mpvitem.cpp:534
+#: src/mpv/mpvitem.cpp:539
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "파일이 없음: %1"
 
-#: src/mpv/mpvitem.cpp:566
+#: src/mpv/mpvitem.cpp:571
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:579
+#: src/mpv/mpvitem.cpp:584
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:628
+#: src/mpv/mpvitem.cpp:633
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:633
+#: src/mpv/mpvitem.cpp:638
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:635
+#: src/mpv/mpvitem.cpp:640
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:662
+#: src/mpv/mpvitem.cpp:673
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -710,13 +694,13 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:699
+#: src/mpv/mpvitem.cpp:710
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
-#: src/mpv/mpvitem.cpp:796
+#: src/mpv/mpvitem.cpp:805
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -724,13 +708,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
-#: src/mpv/mpvitem.cpp:807
+#: src/mpv/mpvitem.cpp:816
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "자막: 없음"
 
-#: src/mpv/mpvitem.cpp:812 src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:821 src/mpv/mpvitem.cpp:837
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -738,7 +722,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "자막: %1 %2"
 
-#: src/mpv/mpvitem.cpp:823
+#: src/mpv/mpvitem.cpp:832
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -905,7 +889,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "추가"
 
-#: src/playlist/Playlist.qml:420 src/qml/Main.qml:496
+#: src/playlist/Playlist.qml:420 src/qml/Main.qml:492
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1130,7 +1114,7 @@ msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:172
+#: src/playlist/playlistmultiproxiesmodel.cpp:190
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
@@ -1650,12 +1634,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:316
+#: src/qml/HProgressBar.qml:317
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:324
+#: src/qml/HProgressBar.qml:325
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1669,17 +1653,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:446
+#: src/qml/Main.qml:442
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
-#: src/qml/Main.qml:466
+#: src/qml/Main.qml:462
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
 
-#: src/qml/Main.qml:493
+#: src/qml/Main.qml:489
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
@@ -1704,7 +1688,7 @@ msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "최근 파일"
 
-#: src/qml/Menus/FileMenu.qml:75 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:67 src/qml/Menus/Global/GlobalFileMenu.qml:71
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "목록 비우기"
@@ -3171,6 +3155,22 @@ msgstr "채도"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
+
+#: src/utilities/commandlineoptions.cpp:33
+#, kde-format
+msgctxt "@info:shell"
+msgid "File to open"
+msgstr "열 파일"
+
+#: src/utilities/commandlineoptions.cpp:37
+#, kde-format
+msgctxt "@info:shell"
+msgid ""
+"Allows to temporarily override the yt-dlp format selection setting. Will be "
+"overwritten if the setting is changed through the GUI"
+msgstr ""
+"yt-dlp 형식 설정 문자열을 재정의합니다. GUI에서 설정을 변경하면 이 설정이 무"
+"시됩니다"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format
