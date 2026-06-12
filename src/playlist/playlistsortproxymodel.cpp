@@ -254,6 +254,7 @@ bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QMod
                 case Qt::DescendingOrder:
                     return compare > 0;
                 }
+                return compare < 0;
             case PlaylistSortPropertyModel::Ascending: {
                 return compare < 0;
             }
