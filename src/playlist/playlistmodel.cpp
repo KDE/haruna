@@ -340,7 +340,7 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
         return collator.compare(a.url.toLocalFile(), b.url.toLocalFile()) < 0;
     });
 
-    setPlaylist(playlist);
+    addPlaylist(playlist);
 
     uint i = 0;
     for (const auto &item : std::as_const(playlist)) {
@@ -600,10 +600,10 @@ double PlaylistModel::getPlaybackPosition(const uint row)
     return Database::instance()->playbackPosition(hash) / duration;
 }
 
-void PlaylistModel::setPlaylist(const QList<PlaylistItem> &newPlaylist)
+void PlaylistModel::addPlaylist(const QList<PlaylistItem> &newPlaylist)
 {
-    beginInsertRows(QModelIndex(), 0, newPlaylist.size() - 1);
-    m_playlist = newPlaylist;
+    beginInsertRows(QModelIndex(), m_playlist.size(), newPlaylist.size() - 1);
+    m_playlist.append(newPlaylist);
     endInsertRows();
 }
 

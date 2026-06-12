@@ -113,7 +113,7 @@ public:
     void setIsPlaying(bool newIsPlaying);
 
     QList<PlaylistItem> playlist() const;
-    void setPlaylist(const QList<PlaylistItem> &newPlaylist);
+    void addPlaylist(const QList<PlaylistItem> &newPlaylist);
     QString playlistName() const;
     void setPlaylistName(const QString &newPlaylistName);
 
