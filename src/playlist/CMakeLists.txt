@@ -20,6 +20,8 @@ qt_add_qml_module(playlist
         PlaylistAdvancedSortWindow.qml
         PlaylistSectionDelegate.qml
     SOURCES
+        m3uparser.h
+        m3uparser.cpp
         playlistmodel.h
         playlistmodel.cpp
         playlistsmanager.h
