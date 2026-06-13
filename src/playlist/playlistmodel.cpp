@@ -459,7 +459,7 @@ void PlaylistModel::addYouTubePlaylist(const QJsonArray &playlist, const QString
     for (int i = 0; i < playlist.size(); ++i) {
         const auto _playlist = playlist.at(i).toObject();
         auto id = _playlist.value(u"id"_s).toString();
-        auto url = u"https://www.youtube.com/watch?v=%1&list=%2"_s.arg(id, playlistId);
+        auto url = _playlist.value(u"url"_s).toString();
         auto title = _playlist.value(u"title"_s).toString();
         auto duration = _playlist.value(u"duration"_s).toDouble();
 
@@ -494,6 +494,8 @@ void PlaylistModel::addYouTubePlaylist(const QJsonArray &playlist, const QString
     if (!matchFound) {
         setPlayingItem(0);
     }
+
+    Q_EMIT youtubePlaylistFinished();
 }
 
 void PlaylistModel::updateFileInfo(const YTVideoInfo &info, const QVariantMap &data)
