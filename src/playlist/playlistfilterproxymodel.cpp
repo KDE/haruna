@@ -20,6 +20,7 @@
 #include <KIO/DeleteOrTrashJob>
 #include <KIO/RenameFileDialog>
 
+#include "m3uparser.h"
 #include "miscutils.h"
 #include "pathutils.h"
 #include "playlistsettings.h"
@@ -184,16 +185,9 @@ void PlaylistFilterProxyModel::playPrevious()
 
 void PlaylistFilterProxyModel::saveM3uFile(const QString &path)
 {
-    QUrl url(path);
-    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
-    if (!m3uFile.open(QFile::WriteOnly)) {
-        return;
-    }
-    for (int i{0}; i < playlistProxyModel()->rowCount(); ++i) {
-        QString itemPath = playlistProxyModel()->data(playlistProxyModel()->index(i, 0), PlaylistModel::PathRole).toString();
-        m3uFile.write(itemPath.toUtf8().append("\n"));
-    }
-    m3uFile.close();
+    QUrl url = QUrl::fromLocalFile(path);
+    M3uParser parser;
+    parser.write(this, url.toLocalFile().toStdString());
 }
 
 void PlaylistFilterProxyModel::highlightInFileManager(uint row)
@@ -839,7 +833,7 @@ void PlaylistFilterProxyModel::saveInternalPlaylist(const QString &path, const Q
             return;
         }
     }
-    saveM3uFile(url.toString(QUrl::PreferLocalFile) + playlistName + u".m3u");
+    saveM3uFile(url.toString(QUrl::PreferLocalFile) + playlistName + u".m3u8");
 }
 
 #include "moc_playlistfilterproxymodel.cpp"

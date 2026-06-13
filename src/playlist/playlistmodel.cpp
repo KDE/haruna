@@ -20,6 +20,7 @@
 
 #include "../database.h"
 #include "generalsettings.h"
+#include "m3uparser.h"
 #include "miscutils.h"
 #include "playlistsettings.h"
 #include "youtube.h"
@@ -394,39 +395,51 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
         return;
     }
 
-    m_playlistPath = url.toString();
-    QFile m3uFile(url.toString(QUrl::PreferLocalFile));
-    if (!m3uFile.open(QFile::ReadOnly)) {
-        qDebug() << "can't open playlist file";
-        return;
-    }
+    m_httpItemCounter = 0;
+    m_playlistPath = url.toLocalFile();
+
+    M3uParser parser;
+    parser.read(m_playlistPath.toStdString());
 
     uint playingItem{0};
-    int i{0};
-    bool matchFound{false};
-    while (!m3uFile.atEnd()) {
-        QByteArray line = QByteArray::fromPercentEncoding(m3uFile.readLine());
-        while (line.endsWith('\n') || line.endsWith('\r')) {
-            line.chop(1);
-        }
-        // ignore comments
-        if (line.startsWith("#")) {
-            continue;
+    const auto data = parser.data();
+    for (const auto &metadata : data) {
+        const auto row = m_playlist.size();
+        auto url = QUrl::fromUserInput(metadata.path, QFileInfo(m_playlistPath).absolutePath());
+        PlaylistItem item;
+        if (url.isLocalFile()) {
+            auto _item = localFileToPlaylistItem(QFileInfo(url.toLocalFile()));
+            if (!_item.has_value()) {
+                continue;
+            }
+            item = _item.value();
+        } else {
+            item.url = url;
+            item.duration = metadata.duration.value_or(0.0);
+            item.formattedDuration = item.duration == 0.0 ? QString{} : MiscUtils::formatTime(item.duration);
+            item.mediaTitle = metadata.title.value_or(url.toString());
+            item.filename = item.mediaTitle;
+            item.fileType = u"http"_s;
+
+            if (!metadata.duration.has_value() || !metadata.title.has_value()) {
+                if (m_httpItemCounter < 20) {
+                    QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
+                    youtube.getVideoInfo(url, data);
+                    ++m_httpItemCounter;
+                }
+            }
         }
 
-        // always set the working directory
-        // it doesn't affect absolute paths and it's required for relative paths
-        auto url = QUrl::fromUserInput(QString::fromUtf8(line), QFileInfo(m3uFile).absolutePath());
+        beginInsertRows(QModelIndex(), row, row);
+        m_playlist.append(item);
+        Q_EMIT itemAdded(row, item.url.toString(), m_playlistName);
+        endInsertRows();
+
         auto lastUrl = QUrl::fromUserInput(GeneralSettings::lastPlayedFile());
-        addItem(url, Behavior::Append);
-
-        if (!matchFound && url.toLocalFile() == lastUrl.toLocalFile()) {
-            playingItem = i;
-            matchFound = true;
+        if (playingItem == 0 && url.toLocalFile() == lastUrl.toLocalFile()) {
+            playingItem = row;
         }
-        ++i;
     }
-    m3uFile.close();
 
     if (behavior == Behavior::Clear) {
         setPlayingItem(playingItem);
