@@ -870,7 +870,7 @@ Page {
             if (fileType === "playlist" ) {
                 return ["m3u (*.m3u *.m3u8)"]
             } else {
-                return []
+                return [""]
             }
         }
 
