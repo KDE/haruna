@@ -8,6 +8,7 @@
 #define PLAYLISTMULTIPROXIESMODEL_H
 
 #include <QJsonObject>
+#include <QTimer>
 
 #include "playlistfilterproxymodel.h"
 
@@ -76,6 +77,7 @@ private:
     std::vector<PlaylistsModelItem> m_data;
     uint m_activeIndex{0};
     uint m_visibleIndex{0};
+    QTimer m_savePlaylistTimer;
 };
 
 #endif // PLAYLISTMULTIPROXIESMODEL_H

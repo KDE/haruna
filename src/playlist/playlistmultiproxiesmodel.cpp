@@ -35,6 +35,12 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
     : QAbstractListModel{parent}
 {
+    m_savePlaylistTimer.setInterval(1000);
+    m_savePlaylistTimer.setSingleShot(true);
+    connect(&m_savePlaylistTimer, &QTimer::timeout, this, [this]() {
+        saveVisiblePlaylist();
+    });
+
     const auto urls = CommandLineOptions::instance().startupUrls();
 
     QUrl cacheUrl = getPlaylistCacheUrl();
@@ -223,12 +229,19 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
         Q_EMIT playingItemChanged();
     });
 
+    const auto savePlaylistTimer = [this]() {
+        m_savePlaylistTimer.start(1000);
+    };
+    const auto savePlaylistTimerSlow = [this]() {
+        m_savePlaylistTimer.start(5000);
+    };
     // When underlying models change, either by remove, insert, move or sort: save the playlist
-    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsSorted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsMoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsRemoved, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
-    connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsSorted, this, savePlaylistTimer);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsMoved, this, savePlaylistTimer);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsRemoved, this, savePlaylistTimer);
+    connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, savePlaylistTimer);
+    connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, savePlaylistTimer);
+    connect(item.playlist->playlistModel(), &PlaylistModel::metaDataReady, this, savePlaylistTimerSlow);
 
     // when openLastPlayedFile setting is off don't load items for default playlist (row == 0)
     bool loadItems = addItemsToPlaylist && (PlaybackSettings::openLastPlayedFile() || row > 0);
