@@ -566,7 +566,8 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, const KFileMetaData
         return;
     }
 
-    if (m_playlist.at(i).url == url) {
+    auto &item = m_playlist[i];
+    if (item.url.toLocalFile() == url.toLocalFile() || item.url == url) {
         auto duration = properties.value(KFileMetaData::Property::Duration).toInt();
         auto title = properties.value(KFileMetaData::Property::Title).toString();
 
