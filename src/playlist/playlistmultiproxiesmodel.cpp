@@ -389,13 +389,13 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
     QString tabName = m_data.at(pIndex).playlistName;
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
     playlistsPath.append(u"/"_s);
-    QUrl url(playlistsPath + tabName + u".m3u"_s);
+    QUrl url(playlistsPath + tabName + u".m3u8"_s);
     if (url.scheme().isEmpty()) {
         url.setScheme(u"file"_s);
     }
     KFileItem item(url);
     auto *renameDialog = new KIO::RenameFileDialog(KFileItemList({item}), nullptr);
-    // Hack into line edit to override erasing '.m3u' extension
+    // Hack into line edit to override erasing '.m3u8' extension
     auto *edit = renameDialog->findChild<QLineEdit *>();
     if (edit != nullptr) {
         edit->setValidator(new PlaylistRenameValidator());
@@ -404,7 +404,7 @@ void PlaylistMultiProxiesModel::renamePlaylist(uint pIndex)
 
     connect(renameDialog, &KIO::RenameFileDialog::renamingFinished, this, [this, pIndex](const QList<QUrl> &urls) {
         QString inputText = urls.first().fileName();
-        QString playlistName = inputText.first(inputText.length() - 4); // '.m3u' 4 chars
+        QString playlistName = inputText.first(inputText.length() - 5); // '.m3u8' 5 chars
 
         m_data.at(pIndex).playlist->playlistModel()->setPlaylistName(playlistName);
         savePlaylistCache();
@@ -480,7 +480,7 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
 QUrl PlaylistMultiProxiesModel::getDefaultPlaylistUrl()
 {
     auto playlistsPath = PathUtils::instance()->playlistsFolder();
-    playlistsPath.append(u"/"_s).append(u"Default"_s).append(u".m3u"_s);
+    playlistsPath.append(u"/"_s).append(u"Default"_s).append(u".m3u8"_s);
 
     if (!QFile::exists(playlistsPath)) {
         createNewPlaylist(u"Default"_s);
@@ -494,14 +494,19 @@ QUrl PlaylistMultiProxiesModel::getDefaultPlaylistUrl()
 
 QUrl PlaylistMultiProxiesModel::getPlaylistUrl(const QString &playlistName)
 {
-    auto playlistsPath = PathUtils::instance()->playlistsFolder();
-    playlistsPath.append(u"/"_s).append(playlistName).append(u".m3u"_s);
+    const auto playlistsPath = PathUtils::instance()->playlistsFolder();
 
-    if (!QFile::exists(playlistsPath)) {
-        return {};
+    const auto newPath = u"%1/%2.m3u8"_s.arg(playlistsPath, playlistName);
+    if (QFile::exists(newPath)) {
+        return QUrl::fromLocalFile(newPath);
     }
 
-    return QUrl::fromLocalFile(playlistsPath);
+    const auto oldPath = u"%1/%2.m3u"_s.arg(playlistsPath, playlistName);
+    if (QFile::exists(oldPath)) {
+        return QUrl::fromLocalFile(oldPath);
+    }
+
+    return {};
 }
 
 void PlaylistMultiProxiesModel::saveVisiblePlaylist()
