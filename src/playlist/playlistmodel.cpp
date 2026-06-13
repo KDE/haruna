@@ -360,6 +360,8 @@ void PlaylistModel::getSiblingItems(const QUrl &url)
     if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
     }
+
+    Q_EMIT siblingsPlaylistFinished();
 }
 
 std::optional<PlaylistItem> PlaylistModel::localFileToPlaylistItem(const QFileInfo &fileInfo)

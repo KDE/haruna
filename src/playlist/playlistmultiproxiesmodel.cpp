@@ -229,6 +229,9 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
         Q_EMIT playingItemChanged();
     });
 
+    const auto savePlaylistTimerFast = [this]() {
+        m_savePlaylistTimer.start(100);
+    };
     const auto savePlaylistTimer = [this]() {
         m_savePlaylistTimer.start(1000);
     };
@@ -242,7 +245,8 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
     connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, savePlaylistTimer);
     connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, savePlaylistTimer);
     connect(item.playlist->playlistModel(), &PlaylistModel::metaDataReady, this, savePlaylistTimerSlow);
-    connect(item.playlist->playlistModel(), &PlaylistModel::youtubePlaylistFinished, this, savePlaylistTimerSlow);
+    connect(item.playlist->playlistModel(), &PlaylistModel::siblingsPlaylistFinished, this, savePlaylistTimerFast);
+    connect(item.playlist->playlistModel(), &PlaylistModel::youtubePlaylistFinished, this, savePlaylistTimerFast);
 
     // when openLastPlayedFile setting is off don't load items for default playlist (row == 0)
     bool loadItems = addItemsToPlaylist && (PlaybackSettings::openLastPlayedFile() || row > 0);

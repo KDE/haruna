@@ -151,6 +151,7 @@ Q_SIGNALS:
     void playingItemChanged(QString playlistName);
     void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
     void youtubePlaylistFinished();
+    void siblingsPlaylistFinished();
 
 private:
     void appendItem(const QUrl &url);
