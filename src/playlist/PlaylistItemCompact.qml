@@ -103,7 +103,7 @@ PlaylistItemDelegate {
             Kirigami.TitleSubtitle {
                 color: root.getLabelColor()
                 elide: Text.ElideRight
-                subtitle: root.duration
+                subtitle: root.formattedDuration
                 title: root.mainText()
                 ToolTip.text: root.title
                 ToolTip.visible: root.hovered

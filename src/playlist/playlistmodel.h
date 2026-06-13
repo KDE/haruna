@@ -53,6 +53,7 @@ public:
         NameRole = Qt::UserRole,
         // General
         DurationRole,
+        FormattedDurationRole,
         PathRole,
         FolderPathRole,
         DirNameRole,

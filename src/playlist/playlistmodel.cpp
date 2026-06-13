@@ -71,6 +71,8 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case PathRole:
         return item.url;
     case DurationRole:
+        return item.duration;
+    case FormattedDurationRole:
         return item.formattedDuration;
     case DateRole:
         return item.modifiedDate;
@@ -145,6 +147,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {FolderPathRole,        QByteArrayLiteral("folderPath")},
         {DirNameRole,           QByteArrayLiteral("dirName")},
         {DurationRole,          QByteArrayLiteral("duration")},
+        {FormattedDurationRole, QByteArrayLiteral("formattedDuration")},
         {DateRole,              QByteArrayLiteral("date")},
         {FileSizeRole,          QByteArrayLiteral("fileSize")},
         {TypeRole,              QByteArrayLiteral("fileType")},

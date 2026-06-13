@@ -17,7 +17,8 @@ Item {
     required property int index
     required property string title
     required property string name
-    required property string duration
+    required property double duration
+    required property string formattedDuration
     required property string path
     required property bool isLocal
     required property bool isPlaying

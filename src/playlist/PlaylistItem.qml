@@ -122,7 +122,7 @@ PlaylistItemDelegate {
             }
 
             Label {
-                text: root.duration.length > 0 ? root.duration : ""
+                text: root.formattedDuration.length > 0 ? root.formattedDuration : ""
                 color: root.getLabelColor()
                 font.pointSize: root.getFontSize()
                 Layout.margins: Kirigami.Units.largeSpacing

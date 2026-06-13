@@ -119,7 +119,7 @@ PlaylistItemDelegate {
                     fillMode: Image.PreserveAspectCrop
 
                     Rectangle {
-                        visible: root.duration.length > 0
+                        visible: root.formattedDuration.length > 0
                         height: root.getImageFontSize() + (Kirigami.Units.smallSpacing * 2) + 4
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
@@ -134,7 +134,7 @@ PlaylistItemDelegate {
                                 Layout.fillHeight: true
                                 color: Kirigami.Theme.textColor
                                 horizontalAlignment: Qt.AlignCenter
-                                text: root.duration
+                                text: root.formattedDuration
                                 font.pointSize: root.getImageFontSize()
                             }
 
