@@ -66,18 +66,27 @@ void Database::createTables()
     QStringList tables = db().tables();
 
     if (!tables.contains(u"recent_files"_s)) {
-        QFile sqlFile(u":sql/create-recent_files-table.sql"_s);
-        if (sqlFile.open(QFile::ReadOnly)) {
-            QSqlQuery qManga(db());
-            qManga.exec(QString::fromUtf8(sqlFile.readAll()));
-        }
+        createTable(u":sql/create-recent_files-table.sql"_s);
     }
     if (!tables.contains(u"playback_position"_s)) {
-        QFile sqlFile(u":sql/create-playback_position-table.sql"_s);
-        if (sqlFile.open(QFile::ReadOnly)) {
-            QSqlQuery qManga(db());
-            qManga.exec(QString::fromUtf8(sqlFile.readAll()));
-        }
+        createTable(u":sql/create-playback_position-table.sql"_s);
+    }
+}
+
+void Database::createTable(const QString &filename)
+{
+    QFile sqlFile(filename);
+    if (!sqlFile.open(QFile::ReadOnly)) {
+        qDebug() << sqlFile.fileName() << sqlFile.errorString();
+    }
+
+    auto content = QString::fromUtf8(sqlFile.readAll());
+
+    QSqlQuery query(db());
+    const auto result = query.exec(content);
+
+    if (!result) {
+        qDebug() << sqlFile.fileName() << query.lastError().text() << getLastExecutedQuery(query);
     }
 }
 

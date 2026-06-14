@@ -39,6 +39,7 @@ public:
 private:
     Database(QObject *parent = nullptr);
     void createTables();
+    void createTable(const QString &filename);
 
     Q_DISABLE_COPY_MOVE(Database)
 };
