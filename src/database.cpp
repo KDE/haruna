@@ -65,6 +65,9 @@ void Database::createTables()
 {
     QStringList tables = db().tables();
 
+    if (!tables.contains(u"metadata_cache"_s)) {
+        createTable(u":sql/create-metadata_cache-table.sql"_s);
+    }
     if (!tables.contains(u"recent_files"_s)) {
         createTable(u":sql/create-recent_files-table.sql"_s);
     }
