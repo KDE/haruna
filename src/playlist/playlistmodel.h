@@ -118,6 +118,8 @@ public:
     QString playlistName() const;
     void setPlaylistName(const QString &newPlaylistName);
 
+    void updateMetadata();
+
     // shuffling
     // when shuffling is on, instead of using an m_playlist index to determine
     // the next and previous item to play, an index (m_currentShuffledRow) of m_shuffledIndexes is used
@@ -152,6 +154,7 @@ Q_SIGNALS:
     void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
     void youtubePlaylistFinished();
     void siblingsPlaylistFinished();
+    void metadataUpdateFinished();
 
 private:
     void appendItem(const QUrl &url);

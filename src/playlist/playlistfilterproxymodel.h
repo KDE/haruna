@@ -72,6 +72,10 @@ public:
     bool showSections();
     void setShowSections(bool split);
 
+    Q_PROPERTY(bool isUpdatingMetadata READ isUpdatingMetadata WRITE setIsUpdatingMetadata NOTIFY isUpdatingMetadataChanged FINAL)
+    bool isUpdatingMetadata() const;
+    void setIsUpdatingMetadata(bool newIsUpdatingMetadata);
+
     Q_INVOKABLE uint getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
     Q_INVOKABLE void playNext();
@@ -112,6 +116,7 @@ public:
     Q_INVOKABLE void addItem(const QString &path, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior);
+    Q_INVOKABLE void updateMetadata();
 
     // Model getters for convenience
     PlaylistProxyModel *playlistProxyModel() const;
@@ -130,6 +135,7 @@ Q_SIGNALS:
     void searchTextChanged();
     void sortOrderChanged();
     void showSectionsChanged();
+    void isUpdatingMetadataChanged();
 
 private:
     void onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
@@ -147,6 +153,7 @@ private:
     std::unique_ptr<PlaylistProxyModel> m_playlistProxyModel;
     QItemSelectionModel m_selectionModel;
     bool m_scheduledReshuffle{false};
+    bool m_isUpdatingMetadata{false};
 };
 
 #endif // PLAYLISTFILTERPROXYMODEL_H

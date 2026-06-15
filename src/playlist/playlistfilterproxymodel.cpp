@@ -44,6 +44,9 @@ PlaylistFilterProxyModel::PlaylistFilterProxyModel(QObject *parent)
     connect(&m_selectionModel, &QItemSelectionModel::selectionChanged, this, &PlaylistFilterProxyModel::onSelectionChanged);
     connect(this, &QSortFilterProxyModel::rowsInserted, this, &PlaylistFilterProxyModel::shufflePlaylistModel);
     connect(this, &QSortFilterProxyModel::rowsRemoved, this, &PlaylistFilterProxyModel::shufflePlaylistModel);
+    connect(playlistModel(), &PlaylistModel::metadataUpdateFinished, this, [this]() {
+        setIsUpdatingMetadata(false);
+    });
 }
 
 QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) const
@@ -124,6 +127,20 @@ void PlaylistFilterProxyModel::setShowSections(bool split)
     playlistSortProxyModel()->setShowSections(split);
     playlistSortProxyModel()->recreateSections();
     Q_EMIT showSectionsChanged();
+}
+
+bool PlaylistFilterProxyModel::isUpdatingMetadata() const
+{
+    return m_isUpdatingMetadata;
+}
+
+void PlaylistFilterProxyModel::setIsUpdatingMetadata(bool newIsUpdatingMetadata)
+{
+    if (m_isUpdatingMetadata == newIsUpdatingMetadata) {
+        return;
+    }
+    m_isUpdatingMetadata = newIsUpdatingMetadata;
+    Q_EMIT isUpdatingMetadataChanged();
 }
 
 uint PlaylistFilterProxyModel::getPlayingItem()
@@ -709,6 +726,12 @@ void PlaylistFilterProxyModel::addItems(const QList<QUrl> &urls, PlaylistModel::
     }
     Q_EMIT itemsInserted();
     Q_EMIT itemCountChanged();
+}
+
+void PlaylistFilterProxyModel::updateMetadata()
+{
+    setIsUpdatingMetadata(true);
+    playlistModel()->updateMetadata();
 }
 
 void PlaylistFilterProxyModel::onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)

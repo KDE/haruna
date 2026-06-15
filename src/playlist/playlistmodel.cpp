@@ -647,6 +647,17 @@ void PlaylistModel::setPlaylistName(const QString &newPlaylistName)
     m_playlistName = newPlaylistName;
 }
 
+void PlaylistModel::updateMetadata()
+{
+    const auto playlist = m_playlist;
+    m_threadPool.start([this, playlist = std::move(playlist)]() {
+        for (const auto &item : playlist) {
+            Database::instance()->updateMetadata(item.url);
+        }
+        Q_EMIT metadataUpdateFinished();
+    });
+}
+
 bool PlaylistModel::isPlaying() const
 {
     return m_isPlaying;

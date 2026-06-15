@@ -402,6 +402,17 @@ Page {
                             fileDialog.fileMode = FileDialog.SaveFile
                             fileDialog.open()
                         }
+                    },
+                    Kirigami.Action {
+                        text: KI18n.i18nc("@action:inmenu", "Update all metadata")
+                        icon.name: "view-refresh"
+                        enabled: !playlistsManager.visiblePlaylist.isUpdatingMetadata
+                        onTriggered: {
+                            playlistsManager.visiblePlaylist.updateMetadata()
+                        }
+                        tooltip: KI18n.i18nc("@info:tooltip", "Update metadata for all files in the playlist\n\n"+
+                                              "Update metadata in the database with metadata inside the file.\n" +
+                                              "Metadata is stored in the database for faster retrival.")
                     }
                 ]
             }
