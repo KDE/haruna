@@ -10,6 +10,15 @@
 #include <QObject>
 #include <QQmlEngine>
 
+#include <KFileMetaData/SimpleExtractionResult>
+
+struct Metadata {
+    qint64 metadataId = 0;
+    QUrl url;
+    KFileMetaData::PropertyMultiMap properties;
+    QMap<KFileMetaData::EmbeddedImageData::ImageType, QByteArray> imageData;
+};
+
 class MiscUtils : public QObject
 {
     Q_OBJECT
@@ -23,6 +32,7 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(const QUrl &url);
     Q_INVOKABLE static QString md5(const QString &str);
+    Q_INVOKABLE static std::optional<Metadata> metadata(const QUrl &url);
 
 Q_SIGNALS:
     void error(const QString &message);

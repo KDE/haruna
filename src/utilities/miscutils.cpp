@@ -9,6 +9,7 @@
 #include <QCryptographicHash>
 
 #include <KFileItem>
+#include <KFileMetaData/ExtractorCollection>
 
 using namespace Qt::StringLiterals;
 
@@ -55,6 +56,29 @@ QString MiscUtils::md5(const QString &str)
     auto md5 = QCryptographicHash::hash((str.toUtf8()), QCryptographicHash::Md5);
 
     return QString::fromUtf8(md5.toHex());
+}
+
+std::optional<Metadata> MiscUtils::metadata(const QUrl &url)
+{
+    QString mimeType = MiscUtils::mimeType(url);
+
+    using namespace KFileMetaData;
+    ExtractorCollection exCol;
+    QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
+    if (extractors.isEmpty()) {
+        return {};
+    }
+    SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
+
+    Extractor *ex = extractors.first();
+    ex->extract(&result);
+
+    Metadata m;
+    m.url = url;
+    m.imageData = result.imageData();
+    m.properties = result.properties();
+
+    return {m};
 }
 
 // #include "moc_miscutils.h"
