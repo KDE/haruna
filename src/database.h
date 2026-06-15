@@ -44,7 +44,7 @@ public:
 
     double playbackPosition(const QString &md5Hash);
     void addPlaybackPosition(const QString &md5Hash, const QString &path, double position, QSqlDatabase dbConnection = QSqlDatabase{});
-    void deletePlaybackPositions();
+    Q_INVOKABLE void deletePlaybackPositions();
     void deletePlaybackPosition(const QString &md5Hash);
 
     int insertMetadata(const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);

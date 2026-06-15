@@ -33,6 +33,7 @@ Loader {
         Mouse,
         Shortcuts,
         CustomCommands,
+        Database,
         Debug,
         About
     }
@@ -168,6 +169,15 @@ Loader {
                             settingsWindow.pageStack.removePage(1)
                             settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/CustomCommandsSettings.qml`,
                                                           props)
+                        }
+                    },
+                    Kirigami.Action {
+                        text: KI18n.i18nc("@action", "Database")
+                        icon.name: "server-database"
+                        onTriggered: {
+                            root.activePage = SettingsWindow.Page.Database
+                            settingsWindow.pageStack.removePage(1)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DatabaseSettings.qml`)
                         }
                     },
                     Kirigami.Action {

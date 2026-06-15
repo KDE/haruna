@@ -123,6 +123,7 @@ qt_add_qml_module(haruna
         qml/Menus/Global/GlobalVideoMenu.qml
         qml/Menus/Global/GlobalViewMenu.qml
 
+        qml/Settings/DatabaseSettings.qml
         qml/Settings/GeneralSettings.qml
         qml/Settings/PlaybackSettings.qml
         qml/Settings/VideoSettings.qml

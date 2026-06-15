@@ -60,15 +60,6 @@ SettingsBasePage {
                 }
             }
 
-            ToolButton {
-                text: KI18n.i18nc("@action:button clear (delete from database) recent files", "Clear")
-                onClicked: Models.recentFilesModel.deleteEntries()
-
-                ToolTip {
-                    text: KI18n.i18nc("@info:tooltip", "Deletes recent files from the database")
-                }
-            }
-
             ToolTipButton {
                 toolTipText: KI18n.i18nc("@info:tooltip", "The number of recent files to display. Enter 0 (zero) to disable.<br>" +
                             "Every opened file is stored.<br>Bold entries are files opened from the open file/url " +
