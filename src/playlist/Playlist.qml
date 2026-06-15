@@ -32,7 +32,7 @@ Page {
 
     property alias manager: playlistsManager
     property bool isSmallWindowSize: mainWindowWidth < 600
-    property int buttonSize: isSmallWindowSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
+    property int buttonSize: Kirigami.Units.iconSizes.small
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
     property real customWidth: PlaylistSettings.playlistWidth
@@ -78,6 +78,38 @@ Page {
         ColumnLayout {
             anchors.fill: parent
             spacing: 0
+
+            RowLayout {
+                PlaylistTabBar {
+                    id: playlistTabView
+
+                    playlistsManager: playlistsManager
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
+                    Layout.fillWidth: true
+
+                    Repeater {
+                        model: playlistsManager.playlists
+                        delegate: PlaylistTabDelegate {
+                            playlistsManager: playlistsManager
+                        }
+                    }
+                }
+
+                ToolButton {
+                    icon.name: "list-add"
+                    onClicked: {
+                        if (addPlaylistPopup.opened) {
+                            addPlaylistPopup.close()
+                        } else {
+                            addPlaylistPopup.open()
+                        }
+                    }
+
+                    ToolTip {
+                        text: KI18n.i18nc("@action:button", "Add new playlist")
+                    }
+                }
+            }
 
             Kirigami.ActionToolBar {
                 ActionGroup { id: sortOrderGroup }
@@ -372,38 +404,6 @@ Page {
                         }
                     }
                 ]
-            }
-
-            RowLayout {
-                PlaylistTabBar {
-                    id: playlistTabView
-
-                    playlistsManager: playlistsManager
-                    Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
-                    Layout.fillWidth: true
-
-                    Repeater {
-                        model: playlistsManager.playlists
-                        delegate: PlaylistTabDelegate {
-                            playlistsManager: playlistsManager
-                        }
-                    }
-                }
-
-                ToolButton {
-                    icon.name: "list-add"
-                    onClicked: {
-                        if (addPlaylistPopup.opened) {
-                            addPlaylistPopup.close()
-                        } else {
-                            addPlaylistPopup.open()
-                        }
-                    }
-
-                    ToolTip {
-                        text: KI18n.i18nc("@action:button", "Add new playlist")
-                    }
-                }
             }
         }
     }
