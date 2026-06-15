@@ -22,10 +22,18 @@
 #include "generalsettings.h"
 #include "thumbnailimageprovider.h"
 
+#ifdef QT_DEBUG
+#include <QElapsedTimer>
+#endif
+
 using namespace Qt::StringLiterals;
 
 int main(int argc, char *argv[])
 {
+#ifdef QT_DEBUG
+    QElapsedTimer timer;
+    timer.start();
+#endif
     qSetMessagePattern(u"%{function}() : %{message}\n"_s);
 
     QApplication::setOrganizationName(u"KDE"_s);
@@ -87,5 +95,8 @@ int main(int argc, char *argv[])
 
     application->setQmlEngine(&engine);
 
+#ifdef QT_DEBUG
+    qDebug() << timer.elapsed() << "ms elapsed";
+#endif
     return QApplication::exec();
 }
