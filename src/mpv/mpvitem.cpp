@@ -12,8 +12,6 @@
 #include <QDir>
 #include <QTimer>
 
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
 #include <KLocalizedString>
 #include <KShell>
 #include <MpvController>
