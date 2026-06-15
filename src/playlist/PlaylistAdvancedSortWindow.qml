@@ -93,7 +93,7 @@ Kirigami.ApplicationWindow {
 
                 x: availableSortSearch.width - Kirigami.Units.iconSizes.medium
                 y: availableSortSearch.height
-                title: KI18n.i18nc("@action:inmenu", "Filter")
+                title: KI18n.i18nc("@title:menu", "Filter")
 
                 ActionGroup { id: sortFilterActionGroup }
 
@@ -354,7 +354,7 @@ Kirigami.ApplicationWindow {
 
                 x: availableGroupSearch.width - Kirigami.Units.iconSizes.medium
                 y: availableGroupSearch.height
-                title: KI18n.i18nc("@action:inmenu", "Filter")
+                title: KI18n.i18nc("@title:menu", "Filter")
 
                 ActionGroup { id: groupFilterActionGroup }
 
