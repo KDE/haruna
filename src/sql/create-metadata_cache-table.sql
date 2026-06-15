@@ -6,7 +6,6 @@ CREATE TABLE metadata_cache (
     url                 TEXT NOT NULL UNIQUE,
     title               TEXT,
     duration            INTEGER NOT NULL,
-    formatted_duration  TEXT,
     width               INTEGER,
     height              INTEGER,
     aspect_ratio        REAL,

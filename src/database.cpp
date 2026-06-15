@@ -28,12 +28,12 @@ const QString PLAYBACK_POSITION_TABLE = u"playback_position"_s;
 const QString METADATA_CACHE_TABLE = u"metadata_cache"_s;
 
 static const QString insertMetadataCacheSql = u"INSERT INTO " % METADATA_CACHE_TABLE % u" " %
-    u"(url, title, duration, formatted_duration, "
+    u"(url, title, duration, "
     u"width, height, aspect_ratio, framerate, video_codec, orientation, "
     u"track_no, disc_no, album, artist, album_artist, audio_codec, "
     "bitrate, sample_rate, genre, release_year, composer, lyricist) "
     u"VALUES "
-    u"(:url, :title, :duration, :formatted_duration, "
+    u"(:url, :title, :duration, "
     ":width, :height, :aspect_ratio, :framerate, :video_codec, :orientation, "
     ":track_no, :disc_no, :album, :artist, :album_artist, :audio_codec, "
     ":bitrate, :sample_rate, :genre, :release_year, :composer, :lyricist);";
@@ -245,9 +245,7 @@ int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMulti
     query.prepare(insertMetadataCacheSql);
     query.bindValue(u":url"_s, url);
     query.bindValue(u":title"_s, properties.value(KFileMetaData::Property::Title));
-    const auto duration = properties.value(KFileMetaData::Property::Duration);
-    query.bindValue(u":duration"_s, duration);
-    query.bindValue(u":formatted_duration"_s, MiscUtils::formatTime(duration.toDouble()));
+    query.bindValue(u":duration"_s, properties.value(KFileMetaData::Property::Duration));
     query.bindValue(u":width"_s, properties.value(KFileMetaData::Property::Width));
     query.bindValue(u":height"_s, properties.value(KFileMetaData::Property::Height));
     query.bindValue(u":aspect_ratio"_s, properties.value(KFileMetaData::Property::AspectRatio));
@@ -347,7 +345,6 @@ CachedMetadata Database::getMetadata(const QUrl &url)
     CachedMetadata cachedMetadata;
     cachedMetadata.properties = properties;
     cachedMetadata.url = url;
-    cachedMetadata.formattedDuration = query.value(u"formatted_duration").toString();
     cachedMetadata.metadataId = query.value(u"metadata_id").toInt();
 
     return cachedMetadata;

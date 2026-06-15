@@ -22,7 +22,6 @@ struct RecentFile;
 struct CachedMetadata {
     KFileMetaData::PropertyMultiMap properties;
     QUrl url;
-    QString formattedDuration;
     qint64 metadataId;
 };
 
