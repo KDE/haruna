@@ -14,6 +14,9 @@
 #include <QStringBuilder>
 #include <QThread>
 
+#include <KFileMetaData/ExtractorCollection>
+#include <KFileMetaData/SimpleExtractionResult>
+
 #include "miscutils.h"
 #include "pathutils.h"
 #include "recentfile.h"
@@ -268,6 +271,35 @@ int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMulti
     }
 
     return query.lastInsertId().toInt();
+}
+
+bool Database::updateMetadata(const QUrl &url)
+{
+    if (url.scheme() != u"file"_s) {
+        return false;
+    }
+
+    QString mimeType = MiscUtils::mimeType(url);
+
+    using namespace KFileMetaData;
+    ExtractorCollection exCol;
+    QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
+    SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
+
+    if (extractors.isEmpty()) {
+        return false;
+    }
+
+    Extractor *ex = extractors.first();
+    ex->extract(&result);
+
+    if (!deleteMetadata(url)) {
+        return false;
+    }
+
+    const auto lastInsertId = insertMetadata(url, result.properties());
+
+    return lastInsertId > 0;
 }
 
 CachedMetadata Database::getMetadata(const QUrl &url)

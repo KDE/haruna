@@ -48,9 +48,10 @@ public:
     void deletePlaybackPosition(const QString &md5Hash);
 
     int insertMetadata(const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
-    CachedMetadata getMetadata(const QUrl &url);
-    bool deleteMetadata(const QUrl &url);
-    bool deleteAllMetadata();
+    Q_INVOKABLE bool updateMetadata(const QUrl &url);
+    Q_INVOKABLE CachedMetadata getMetadata(const QUrl &url);
+    Q_INVOKABLE bool deleteMetadata(const QUrl &url);
+    Q_INVOKABLE bool deleteAllMetadata();
 
 private:
     Database(QObject *parent = nullptr);
