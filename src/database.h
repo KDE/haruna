@@ -9,11 +9,22 @@
 
 #include <QObject>
 #include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QUrl>
 #include <QtQml/qqmlregistration.h>
+
+#include <KFileMetaData/Properties>
 
 class QQmlEngine;
 class QJSEngine;
 struct RecentFile;
+
+struct CachedMetadata {
+    KFileMetaData::PropertyMultiMap properties;
+    QUrl url;
+    QString formattedDuration;
+    qint64 metadataId;
+};
 
 class Database : public QObject
 {
@@ -35,6 +46,11 @@ public:
     void addPlaybackPosition(const QString &md5Hash, const QString &path, double position, QSqlDatabase dbConnection = QSqlDatabase{});
     void deletePlaybackPositions();
     void deletePlaybackPosition(const QString &md5Hash);
+
+    int insertMetadata(const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
+    CachedMetadata getMetadata(const QUrl &url);
+    bool deleteMetadata(const QUrl &url);
+    bool deleteAllMetadata();
 
 private:
     Database(QObject *parent = nullptr);
