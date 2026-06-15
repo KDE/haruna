@@ -94,6 +94,9 @@ QSqlDatabase Database::connection()
     if (!query.exec(u"PRAGMA foreign_keys = '1';"_s)) {
         qDebug() << "Failed to enable foreign keys:" << query.lastError().text();
     }
+    if (!query.exec(u"PRAGMA journal_mode=WAL;"_s)) {
+        qDebug() << "Failed to enable WAL mode:" << query.lastError().text();
+    }
 
     return db;
 }
