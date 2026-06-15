@@ -25,7 +25,7 @@ public:
     static Database *instance();
     static Database *create(QQmlEngine *, QJSEngine *);
 
-    QSqlDatabase db();
+    QSqlDatabase connection();
 
     QList<RecentFile> recentFiles(uint limit);
     void addRecentFile(const QUrl &url, const QString &filename, const QString &openedFrom, qint64 timestamp);

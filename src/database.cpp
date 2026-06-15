@@ -12,6 +12,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QStringBuilder>
+#include <QThread>
 
 #include "pathutils.h"
 #include "recentfile.h"
@@ -50,20 +51,40 @@ Database *Database::create(QQmlEngine *, QJSEngine *)
 Database::Database(QObject *parent)
     : QObject(parent)
 {
-    const auto dbFile{PathUtils::instance()->configFilePath(PathUtils::ConfigFile::Database)};
-
-    auto mangaDB = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"haruna"_s);
-    mangaDB.setDatabaseName(dbFile);
-    if (mangaDB.open()) {
+    if (connection().open()) {
         createTables();
     } else {
-        qDebug() << "Could not open database:" << mangaDB.lastError();
+        qDebug() << "Could not open database:" << connection().lastError();
     }
+}
+
+QSqlDatabase Database::connection()
+{
+    const QString connName = u"thread_connection_%1"_s.arg((quintptr)QThread::currentThreadId());
+
+    if (QSqlDatabase::contains(connName)) {
+        return QSqlDatabase::database(connName);
+    }
+
+    const auto dbFile{PathUtils::instance()->configFilePath(PathUtils::ConfigFile::Database)};
+    QSqlDatabase db = QSqlDatabase::addDatabase(u"QSQLITE"_s, connName);
+    db.setDatabaseName(dbFile);
+
+    if (!db.open()) {
+        qWarning() << "Failed to open DB in thread" << QThread::currentThread() << db.lastError();
+    }
+
+    QSqlQuery query(db);
+    if (!query.exec(u"PRAGMA foreign_keys = '1';"_s)) {
+        qDebug() << "Failed to enable foreign keys:" << query.lastError().text();
+    }
+
+    return db;
 }
 
 void Database::createTables()
 {
-    QStringList tables = db().tables();
+    QStringList tables = connection().tables();
 
     if (!tables.contains(u"metadata_cache"_s)) {
         createTable(u":sql/create-metadata_cache-table.sql"_s);
@@ -85,7 +106,7 @@ void Database::createTable(const QString &filename)
 
     auto content = QString::fromUtf8(sqlFile.readAll());
 
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     const auto result = query.exec(content);
 
     if (!result) {
@@ -93,14 +114,9 @@ void Database::createTable(const QString &filename)
     }
 }
 
-QSqlDatabase Database::db()
-{
-    return QSqlDatabase::database(u"haruna"_s);
-}
-
 QList<RecentFile> Database::recentFiles(uint limit)
 {
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     query.prepare(u"SELECT * FROM "_s % RECENT_FILES_TABLE % u" ORDER BY timestamp DESC LIMIT "_s % QString::number(limit));
     query.exec();
 
@@ -125,7 +141,7 @@ QList<RecentFile> Database::recentFiles(uint limit)
 
 void Database::addRecentFile(const QUrl &url, const QString &filename, const QString &openedFrom, qint64 timestamp)
 {
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     query.prepare(u"INSERT INTO "_s % RECENT_FILES_TABLE %
                   u" (url, filename, opened_from, timestamp) "
                   "VALUES (:url, :filename, :openedFrom, :timestamp) "
@@ -144,13 +160,13 @@ void Database::addRecentFile(const QUrl &url, const QString &filename, const QSt
 
 void Database::deleteRecentFiles()
 {
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     query.exec(u"DELETE FROM "_s % RECENT_FILES_TABLE);
 }
 
 double Database::playbackPosition(const QString &md5Hash)
 {
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     query.prepare(u"SELECT * FROM "_s % PLAYBACK_POSITION_TABLE % u" WHERE md5_hash = :md5Hash LIMIT 1"_s);
     query.bindValue(u":md5Hash"_s, md5Hash);
     query.exec();
@@ -168,7 +184,7 @@ double Database::playbackPosition(const QString &md5Hash)
 
 void Database::addPlaybackPosition(const QString &md5Hash, const QString &path, double position, QSqlDatabase dbConnection)
 {
-    QSqlDatabase database = dbConnection.isValid() ? dbConnection : db();
+    QSqlDatabase database = dbConnection.isValid() ? dbConnection : connection();
     QSqlQuery query(database);
     query.prepare(u"INSERT INTO "_s % PLAYBACK_POSITION_TABLE %
                   u" (md5_hash, path, position) "
@@ -187,13 +203,13 @@ void Database::addPlaybackPosition(const QString &md5Hash, const QString &path, 
 
 void Database::deletePlaybackPositions()
 {
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     query.exec(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE);
 }
 
 void Database::deletePlaybackPosition(const QString &md5Hash)
 {
-    QSqlQuery query(db());
+    QSqlQuery query(connection());
     query.prepare(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE %
                   u" WHERE md5_hash = :md5Hash"_s);
     query.bindValue(u":md5Hash"_s, md5Hash);
