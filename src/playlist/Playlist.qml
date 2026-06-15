@@ -702,6 +702,22 @@ Page {
                     onClicked: playlistsManager.visiblePlaylist.copyFilePath(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1
                 }
+
+                MenuItem {
+                    text: KI18n.i18nc("@action:inmenu", "Update metadata")
+                    icon.name: "view-refresh"
+                    onClicked: {
+                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
+                        const url = modelIndex.data(PlaylistModel.PathRole)
+                        Database.updateMetadata(url)
+                    }
+
+                    ToolTip {
+                        text: KI18n.i18nc("@info:tooltip", "Update metadata in the database with metadata inside the file.\n" +
+                                          "Metadata is stored in the database for faster retrival.")
+                    }
+                }
+
                 MenuSeparator {
                     visible: contextMenuLoader.row != -1
                 }
