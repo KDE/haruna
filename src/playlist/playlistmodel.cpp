@@ -556,10 +556,17 @@ void PlaylistModel::setPlayingItem(uint i)
 
 void PlaylistModel::getMetaData(uint i, const QString &path)
 {
-    m_threadPool.start([this, i, path]() {
+    auto url = QUrl::fromUserInput(path);
+    const auto metadata = Database::instance()->getMetadata(url);
+    const auto duration = metadata.properties.value(KFileMetaData::Property::Duration).toInt();
+    if (duration > 0) {
+        onMetaDataReady(i, url, metadata.properties);
+        return;
+    }
+
+    m_threadPool.start([this, i, url]() {
         using namespace KFileMetaData;
 
-        auto url = QUrl::fromUserInput(path);
         if (url.scheme() != u"file"_s) {
             return;
         }
@@ -575,6 +582,8 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
 
         Extractor *ex = extractors.first();
         ex->extract(&result);
+
+        Database::instance()->insertMetadata(url, result.properties());
 
         Q_EMIT metaDataReady(i, url, result.properties());
     });
