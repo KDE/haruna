@@ -14,10 +14,8 @@
 #include <QStringBuilder>
 #include <QThread>
 
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
+#include <KFileMetaData/Properties>
 
-#include "miscutils.h"
 #include "pathutils.h"
 #include "recentfile.h"
 
@@ -280,30 +278,20 @@ bool Database::updateMetadata(const QUrl &url)
         return false;
     }
 
-    QString mimeType = MiscUtils::mimeType(url);
-
-    using namespace KFileMetaData;
-    ExtractorCollection exCol;
-    QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
-    SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
-
-    if (extractors.isEmpty()) {
-        return false;
-    }
-
-    Extractor *ex = extractors.first();
-    ex->extract(&result);
-
     if (!deleteMetadata(url)) {
         return false;
     }
 
-    const auto lastInsertId = insertMetadata(url, result.properties());
+    const auto metadata = MiscUtils::metadata(url);
+    if (!metadata.has_value()) {
+        return false;
+    }
+    const auto lastInsertId = insertMetadata(url, metadata.value().properties);
 
     return lastInsertId > 0;
 }
 
-CachedMetadata Database::getMetadata(const QUrl &url)
+Metadata Database::getMetadata(const QUrl &url)
 {
     QSqlQuery query(connection());
     query.prepare(u"SELECT * FROM " % METADATA_CACHE_TABLE % u" WHERE url = :url");
@@ -342,12 +330,12 @@ CachedMetadata Database::getMetadata(const QUrl &url)
     properties.insert(KFileMetaData::Property::Composer, query.value(u"composer"_s).toString());
     properties.insert(KFileMetaData::Property::Lyricist, query.value(u"lyricist"_s).toString());
 
-    CachedMetadata cachedMetadata;
-    cachedMetadata.properties = properties;
-    cachedMetadata.url = url;
-    cachedMetadata.metadataId = query.value(u"metadata_id").toInt();
+    Metadata metadata;
+    metadata.metadataId = query.value(u"metadata_id").toInt();
+    metadata.url = url;
+    metadata.properties = properties;
 
-    return cachedMetadata;
+    return metadata;
 }
 
 bool Database::deleteMetadata(const QUrl &url)

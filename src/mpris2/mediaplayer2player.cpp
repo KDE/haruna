@@ -16,8 +16,7 @@
 #include <QMimeDatabase>
 #include <QThreadPool>
 
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
+#include <KFileMetaData/EmbeddedImageData>
 
 #include "miscutils.h"
 #include "mpvitem.h"
@@ -117,16 +116,10 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
         return {};
     }
 
-    QString mimeType = MiscUtils::mimeType(url);
-    KFileMetaData::ExtractorCollection exCol;
-    QList<KFileMetaData::Extractor *> extractors = exCol.fetchExtractors(mimeType);
-    KFileMetaData::SimpleExtractionResult result(path, mimeType, KFileMetaData::ExtractionResult::ExtractImageData);
-
-    if (!extractors.isEmpty()) {
-        KFileMetaData::Extractor *extractor = extractors.first();
-        extractor->extract(&result);
+    const auto metadata = MiscUtils::metadata(url);
+    if (metadata.has_value()) {
         QString base64 = u"data:image/png;base64,"_s;
-        auto imageData = result.imageData();
+        auto imageData = metadata.value().imageData;
         QByteArray data;
         if (!imageData.isEmpty()) {
             // look for image inside the file

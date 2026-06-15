@@ -13,8 +13,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 
-#include <KFileMetaData/ExtractorCollection>
-#include <KFileMetaData/SimpleExtractionResult>
+#include <KFileMetaData/Properties>
 
 #include <random>
 
@@ -565,27 +564,15 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
     }
 
     m_threadPool.start([this, i, url]() {
-        using namespace KFileMetaData;
-
         if (url.scheme() != u"file"_s) {
             return;
         }
 
-        QString mimeType = MiscUtils::mimeType(url);
-        ExtractorCollection exCol;
-        QList<Extractor *> extractors = exCol.fetchExtractors(mimeType);
-        SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
-
-        if (extractors.isEmpty()) {
-            return;
+        const auto metadata = MiscUtils::metadata(url);
+        if (metadata.has_value()) {
+            Database::instance()->insertMetadata(url, metadata.value().properties);
+            Q_EMIT metaDataReady(i, url, metadata.value().properties);
         }
-
-        Extractor *ex = extractors.first();
-        ex->extract(&result);
-
-        Database::instance()->insertMetadata(url, result.properties());
-
-        Q_EMIT metaDataReady(i, url, result.properties());
     });
 }
 

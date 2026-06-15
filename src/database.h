@@ -9,21 +9,14 @@
 
 #include <QObject>
 #include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QUrl>
 #include <QtQml/qqmlregistration.h>
 
-#include <KFileMetaData/Properties>
+#include "miscutils.h"
 
 class QQmlEngine;
 class QJSEngine;
+class QUrl;
 struct RecentFile;
-
-struct CachedMetadata {
-    KFileMetaData::PropertyMultiMap properties;
-    QUrl url;
-    qint64 metadataId;
-};
 
 class Database : public QObject
 {
@@ -48,7 +41,7 @@ public:
 
     int insertMetadata(const QUrl &url, const KFileMetaData::PropertyMultiMap &properties);
     Q_INVOKABLE bool updateMetadata(const QUrl &url);
-    Q_INVOKABLE CachedMetadata getMetadata(const QUrl &url);
+    Q_INVOKABLE Metadata getMetadata(const QUrl &url);
     Q_INVOKABLE bool deleteMetadata(const QUrl &url);
     Q_INVOKABLE bool deleteAllMetadata();
 
