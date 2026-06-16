@@ -695,12 +695,9 @@ Page {
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu %1 is 'MediaInfo' (app name)", "Open in %1", "MediaInfo")
-                    visible: {
-                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
-                        return SystemUtils.isMediaInfoInstalled()
+                    visible: SystemUtils.isMediaInfoInstalled()
                              && SystemUtils.platformName() !== "windows"
                              && contextMenuLoader.isLocal && contextMenuLoader.row != -1
-                    }
                     onClicked: {
                         const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
@@ -725,6 +722,7 @@ Page {
 
                     text: KI18n.i18nc("@action:inmenu", "Update metadata")
                     icon.name: "view-refresh"
+                    visible: contextMenuLoader.row != -1
                     onClicked: {
                         const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
@@ -755,8 +753,7 @@ Page {
                     text: KI18n.i18nc("@action:inmenu", "Invert Selection")
                     onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Invert)
                 }
-                MenuSeparator {
-                }
+                MenuSeparator {}
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Remove from Playlist")
                     icon.name: "remove"
