@@ -359,6 +359,26 @@ SettingsBasePage {
 
         Item { Layout.preferredWidth: 1 }
 
+        RowLayout {
+            CheckBox {
+                text: KI18n.i18nc("@option:check", "Show explanatory tooltips")
+                checked: GeneralSettings.showExplanatoryToolTips
+                onClicked: {
+                    GeneralSettings.showExplanatoryToolTips = checked
+                    GeneralSettings.save()
+                }
+            }
+            ToolTipButton {
+                toolTipText: KI18n.i18nc("@info:tooltip",
+                                         "Only affects tooltips that explain how something works or what it does.<br><br>"+
+                                         "Tooltips that show extra information will not be disabled " +
+                                         "(e.g. the seekbar tooltip showing the time at the mouse position, " +
+                                         "tooltips for truncated text).")
+            }
+        }
+
+        Item { Layout.preferredWidth: 1 }
+
         CheckBox {
             text: KI18n.i18nc("@option:check", "Show chapter markers")
             checked: GeneralSettings.showChapterMarkers

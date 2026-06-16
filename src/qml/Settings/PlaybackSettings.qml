@@ -180,6 +180,7 @@ SettingsBasePage {
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip open last played file setting",
                             "On startup it opens the file that was playing when the application was closed.")
+                visible: loadLastPlayedFileCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -198,6 +199,7 @@ SettingsBasePage {
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip pause on minimize setting",
                             "Pauses the player while the window is minimized, playback resumes when restored.")
+                visible: pauseOnMinimizeCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -231,6 +233,7 @@ SettingsBasePage {
                              "Saves the file position during playback, opening the same file again will seek to the saved position.\n"
                              +"Position is saved every %1 seconds, except for the last 10 seconds of the video.",
                              timePositionSaveInterval.value)
+                visible: saveFilePositionCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -250,6 +253,7 @@ SettingsBasePage {
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip start playing setting",
                             "The file will be playing after restoring the playback position")
+                visible: playOnResumeCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 

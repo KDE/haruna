@@ -107,7 +107,10 @@ ColumnLayout {
                         }
 
                         Button {
+                            id: deleteButton
+
                             property bool canDelete: editField.text === ""
+
                             icon.name: "delete"
                             flat: true
                             onClicked: {
@@ -124,10 +127,13 @@ ColumnLayout {
                             }
                             ToolTip {
                                 text: KI18n.i18nc("@info:tooltip", "Delete this folder from list")
+                                visible: deleteButton.hovered && GeneralSettings.showExplanatoryToolTips
                             }
                         }
 
                         Button {
+                            id: saveButton
+
                             icon.name: "dialog-ok"
                             flat: true
                             enabled: editField.text !== "" ? true : false
@@ -140,6 +146,7 @@ ColumnLayout {
                             }
                             ToolTip {
                                 text: KI18n.i18nc("@info:tooltip", "Save changes")
+                                visible: saveButton.hovered && GeneralSettings.showExplanatoryToolTips
                             }
                         }
 
@@ -193,21 +200,10 @@ ColumnLayout {
             }
         }
 
-        ToolButton {
-            icon.name: "documentinfo"
-            checkable: true
-            checked: false
-            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-
-            ToolTip {
-                text: KI18n.i18nc("@info:tooltip",
-                            "Subtitles are searched recursively in the folders defined by the “%1” setting.\n" +
-                            "Only relative folders are searched.", sectionTitle.text)
-                visible: (parent as ToolButton).checked
-                delay: 0
-                timeout: -1
-                closePolicy: Popup.NoAutoClose
-            }
+        ToolTipButton {
+            toolTipText: KI18n.i18nc("@info:tooltip",
+                                       "Subtitles are searched recursively in the folders defined by the “%1” setting.\n" +
+                                       "Only relative folders are searched.", sectionTitle.text)
         }
     }
     Item { Layout.preferredWidth: 1; Layout.preferredHeight: 10 }

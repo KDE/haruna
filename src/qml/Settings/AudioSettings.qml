@@ -174,6 +174,8 @@ SettingsBasePage {
                 }
             }
             Button {
+                id: resetPreampButton
+
                 flat: true
                 icon.name: "edit-reset"
                 onClicked: {
@@ -181,6 +183,7 @@ SettingsBasePage {
                 }
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
+                    visible: resetPreampButton.hovered && GeneralSettings.showExplanatoryToolTips
                 }
             }
 
@@ -207,6 +210,8 @@ SettingsBasePage {
                 }
             }
             Button {
+                id: resetFallbackButton
+
                 flat: true
                 icon.name: "edit-reset"
                 onClicked: {
@@ -214,6 +219,7 @@ SettingsBasePage {
                 }
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
+                    visible: resetFallbackButton.hovered && GeneralSettings.showExplanatoryToolTips
                 }
             }
             ToolTipButton {

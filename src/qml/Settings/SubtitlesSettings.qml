@@ -45,6 +45,7 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked a subtitle track will be automatically selected and displayed")
+                visible: autoSelectSubtitles.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -94,6 +95,8 @@ SettingsBasePage {
 
         Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
+            id: allowOnBlackBordersCheckBox
+
             checked: SubtitlesSettings.allowOnBlackBorders
             text: KI18n.i18nc("@option:check", "Allow subtitles in black borders")
             onClicked: {
@@ -103,6 +106,7 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked the subtitles can be rendered outside the video, in the black borders. Might not work for all .ass subtitles.")
+                visible: allowOnBlackBordersCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -140,6 +144,8 @@ SettingsBasePage {
             }
 
             Button {
+                id: resetSubtitleFontButton
+
                 icon.name: "edit-reset"
                 onClicked: {
                     const index = subtitleFont.find(subtitleFont.defaultFamily)
@@ -149,6 +155,7 @@ SettingsBasePage {
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
+                    visible: resetSubtitleFontButton.hovered && GeneralSettings.showExplanatoryToolTips
                 }
             }
         }
@@ -240,11 +247,14 @@ SettingsBasePage {
             }
 
             Button {
+                id: resetSubtitleColorButton
+
                 icon.name: "edit-reset"
                 onClicked: subtitleColor.text = subtitleColor.defaultColor
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
+                    visible: resetSubtitleColorButton.hovered && GeneralSettings.showExplanatoryToolTips
                 }
             }
         }
@@ -295,11 +305,14 @@ SettingsBasePage {
             }
 
             Button {
+                id: resetShadowColorButton
+
                 icon.name: "edit-reset"
                 onClicked: shadowColor.text = shadowColor.defaultColor
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
+                    visible: resetShadowColorButton.hovered && GeneralSettings.showExplanatoryToolTips
                 }
             }
         }
@@ -310,6 +323,8 @@ SettingsBasePage {
         }
 
         SpinBox {
+            id: shadowOffsetSpinBox
+
             from: 0
             to: 25
             value: SubtitlesSettings.shadowOffset
@@ -321,6 +336,7 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
+                visible: shadowOffsetSpinBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -370,11 +386,14 @@ SettingsBasePage {
             }
 
             Button {
+                id: resetBorderColorButton
+
                 icon.name: "edit-reset"
                 onClicked: borderColor.text = borderColor.defaultColor
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
+                    visible: resetBorderColorButton.hovered && GeneralSettings.showExplanatoryToolTips
                 }
             }
         }
@@ -385,6 +404,8 @@ SettingsBasePage {
         }
 
         SpinBox {
+            id: borderSizeSpinBox
+
             from: 0
             to: 25
             value: SubtitlesSettings.borderSize
@@ -396,6 +417,7 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
+                visible: borderSizeSpinBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 

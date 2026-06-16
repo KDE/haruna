@@ -96,6 +96,8 @@ Page {
                 }
 
                 ToolButton {
+                    id: addPlaylistButton
+
                     icon.name: "list-add"
                     onClicked: {
                         if (addPlaylistPopup.opened) {
@@ -107,6 +109,7 @@ Page {
 
                     ToolTip {
                         text: KI18n.i18nc("@action:button", "Add new playlist")
+                        visible: addPlaylistButton.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
             }
@@ -715,6 +718,8 @@ Page {
                 }
 
                 MenuItem {
+                    id: updateMetadataMenuItem
+
                     text: KI18n.i18nc("@action:inmenu", "Update metadata")
                     icon.name: "view-refresh"
                     onClicked: {
@@ -726,6 +731,7 @@ Page {
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Update metadata in the database with metadata inside the file.\n" +
                                           "Metadata is stored in the database for faster retrival.")
+                        visible: updateMetadataMenuItem.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
 

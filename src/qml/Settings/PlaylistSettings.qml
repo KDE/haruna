@@ -180,6 +180,8 @@ SettingsBasePage {
 
         Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
+            id: overlayVideoCheckBox
+
             checked: PlaylistSettings.overlayVideo
             text: KI18n.i18nc("@option:check", "Overlay video")
             onClicked: {
@@ -189,6 +191,7 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked the playlist goes on top of the video\nWhen unchecked the video is resized")
+                visible: overlayVideoCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
@@ -245,6 +248,8 @@ SettingsBasePage {
 
         Item { Layout.preferredWidth: 1; Layout.preferredHeight: 1 }
         CheckBox {
+            id: rememberStateCheckBox
+
             checked: PlaylistSettings.rememberState
             text: KI18n.i18nc("@option:check", "Remember last playlist state")
             onClicked: {
@@ -255,6 +260,7 @@ SettingsBasePage {
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked the playlist state (visible/hidden) "
                             + "is remembered across launches")
+                visible: rememberStateCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 

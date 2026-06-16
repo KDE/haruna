@@ -15,6 +15,7 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.kquickcontrols
 import org.kde.haruna
+import org.kde.haruna.settings
 
 SettingsBasePage {
     id: root
@@ -93,6 +94,8 @@ SettingsBasePage {
                     }
 
                     CheckBox {
+                        id: toggleCommandCheckBox
+
                         visible: delegate.type === "startup"
                         checked: delegate.setOnStartup
                         onClicked: {
@@ -102,6 +105,7 @@ SettingsBasePage {
                         ToolTip {
                             text: KI18n.i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
                                         "Unchecked: property will not be set at startup")
+                            visible: toggleCommandCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
                         }
                     }
 

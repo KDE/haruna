@@ -41,7 +41,7 @@ Rectangle {
 
     ToolTip {
         text: KI18n.i18nc("@info:tooltip", "Select a color")
-        visible: ma.containsMouse
+        visible: ma.containsMouse && GeneralSettings.showExplanatoryToolTips
     }
 
     ColorDialog {

@@ -150,6 +150,7 @@ Item {
                         id: playPauseButtonToolTip
 
                         text: root.m_mpv.pause ? KI18n.i18nc("@info:tooltip", "Start playback") : KI18n.i18nc("@info:tooltip", "Pause playback")
+                        visible: playPauseButton.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
 
@@ -167,6 +168,7 @@ Item {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Play previous file")
+                        visible: playPreviousFile.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
 
@@ -184,10 +186,13 @@ Item {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Play next file")
+                        visible: playNextFile.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
 
                 ToolButton {
+                    id: chaptersMenuButton
+
                     icon.name: "overflow-menu"
                     focusPolicy: Qt.NoFocus
                     visible: !progressBar.showChapterMarkers && root.m_mpv.chaptersModel.rowCount > 0
@@ -198,6 +203,7 @@ Item {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Open chapters menu")
+                        visible: chaptersMenuButton.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
 
@@ -222,6 +228,7 @@ Item {
 
                     ToolTip {
                         text: HarunaApp.actions.muteAction.text
+                        visible: mute.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
 

@@ -313,6 +313,8 @@ RowLayout {
                     z: 100
                     width: parent.width
                     CheckBox {
+                        id: skipChaptersCheckBox
+
                         anchors.verticalCenter: parent.verticalCenter
                         text: KI18n.i18nc("@action:inmenu", "Skip Chapters")
                         checked: PlaybackSettings.skipChapters
@@ -323,6 +325,7 @@ RowLayout {
 
                         ToolTip {
                             text: KI18n.i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
+                            visible: skipChaptersCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
                         }
                     }
                 }
