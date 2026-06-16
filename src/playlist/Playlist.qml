@@ -69,10 +69,11 @@ Page {
     header: ToolBar {
         id: toolbar
 
-        width: parent.width
         visible: PlaylistSettings.showToolbar
-        height: visible ? implicitHeight : 0
 
+        leftPadding: 1
+        topPadding: 1
+        rightPadding: 1
         bottomPadding: 0
 
         ColumnLayout {
@@ -99,6 +100,8 @@ Page {
                     id: addPlaylistButton
 
                     icon.name: "list-add"
+                    icon.width: root.buttonSize
+                    icon.height: root.buttonSize
                     onClicked: {
                         if (addPlaylistPopup.opened) {
                             addPlaylistPopup.close()
