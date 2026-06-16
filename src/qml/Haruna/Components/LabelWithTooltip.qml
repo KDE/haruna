@@ -17,16 +17,12 @@ QQC2.Label {
     QQC2.ToolTip {
         id: toolTip
 
-        visible: (root.alwaysShowToolTip && mouseArea.containsMouse) || (mouseArea.containsMouse && root.truncated)
+        visible: hh.hovered && (root.alwaysShowToolTip || root.truncated)
         text: root.toolTipText ? root.toolTipText : root.text
         font.pointSize: root.toolTipFontSize ? root.toolTipFontSize : root.font.pointSize
     }
 
-    MouseArea {
-        id: mouseArea
-
-        anchors.fill: parent
-        acceptedButtons: Qt.NoButton
-        hoverEnabled: true
+    HoverHandler {
+        id: hh
     }
 }
