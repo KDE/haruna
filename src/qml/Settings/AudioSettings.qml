@@ -27,40 +27,61 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        TextField {
-            id: preferredLanguage
+        RowLayout {
+            TextField {
+                id: preferredLanguage
 
-            text: AudioSettings.preferredLanguage
-            placeholderText: "eng, ger etc."
-            Layout.fillWidth: true
-            onEditingFinished: save()
+                text: AudioSettings.preferredLanguage
+                placeholderText: "eng, ger etc."
+                onEditingFinished: save()
 
-            Connections {
-                target: root
-                function onSave() {
-                    preferredLanguage.save()
+                Connections {
+                    target: root
+                    function onSave() {
+                        preferredLanguage.save()
+                    }
+                }
+
+                function save() {
+                    AudioSettings.preferredLanguage = text
+                    AudioSettings.save()
                 }
             }
-
-            function save() {
-                AudioSettings.preferredLanguage = text
-                AudioSettings.save()
+            ToolTipButton {
+                toolTipWidth: 400
+                toolTipText: KI18n.i18nc("@info:tooltip",
+                                         "Track selection priority:<br>" +
+                                         "- preferred track id<br>" +
+                                         "- track matching the preferred language<br>" +
+                                         "- default track<br>" +
+                                         "- no track")
             }
         }
 
         Label {
-            text: KI18n.i18nc("@label:spinbox", "Preferred track")
+            text: KI18n.i18nc("@label:spinbox", "Preferred track id")
             Layout.alignment: Qt.AlignRight
         }
 
-        SpinBox {
-            from: 0
-            to: 100
-            value: AudioSettings.preferredTrack
-            editable: true
-            onValueModified: {
-                AudioSettings.preferredTrack = value
-                AudioSettings.save()
+        RowLayout {
+            SpinBox {
+                from: 0
+                to: 100
+                value: AudioSettings.preferredTrack
+                editable: true
+                onValueModified: {
+                    AudioSettings.preferredTrack = value
+                    AudioSettings.save()
+                }
+            }
+            ToolTipButton {
+                toolTipWidth: 400
+                toolTipText: KI18n.i18nc("@info:tooltip",
+                                         "Track selection priority:<br>" +
+                                         "- preferred track id<br>" +
+                                         "- track matching the preferred language<br>" +
+                                         "- default track<br>" +
+                                         "- no track")
             }
         }
 

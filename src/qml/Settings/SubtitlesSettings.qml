@@ -54,25 +54,36 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        TextField {
-            id: preferredLanguage
+        RowLayout {
+            TextField {
+                id: preferredLanguage
 
-            text: SubtitlesSettings.preferredLanguage
-            placeholderText: "eng, ger etc."
-            Layout.fillWidth: true
-            onEditingFinished: save()
-            enabled: autoSelectSubtitles.checked
+                text: SubtitlesSettings.preferredLanguage
+                placeholderText: "eng, ger etc."
+                Layout.fillWidth: true
+                onEditingFinished: save()
+                enabled: autoSelectSubtitles.checked
 
-            Connections {
-                target: root
-                function onSave() {
-                    preferredLanguage.save()
+                Connections {
+                    target: root
+                    function onSave() {
+                        preferredLanguage.save()
+                    }
+                }
+
+                function save() : void {
+                    SubtitlesSettings.preferredLanguage = text
+                    SubtitlesSettings.save()
                 }
             }
-
-            function save() : void {
-                SubtitlesSettings.preferredLanguage = text
-                SubtitlesSettings.save()
+            ToolTipButton {
+                toolTipWidth: 400
+                toolTipText: KI18n.i18nc("@info:tooltip",
+                                         "Track selection priority:<br>" +
+                                         "- preferred track id<br>" +
+                                         "- track matching the preferred language<br>" +
+                                         "- default track<br>" +
+                                         "- no track")
             }
         }
 
@@ -81,15 +92,26 @@ SettingsBasePage {
             Layout.alignment: Qt.AlignRight
         }
 
-        SpinBox {
-            from: 0
-            to: 100
-            value: SubtitlesSettings.preferredTrack
-            editable: true
-            enabled: autoSelectSubtitles.checked
-            onValueModified: {
-                SubtitlesSettings.preferredTrack = value
-                SubtitlesSettings.save()
+        RowLayout {
+            SpinBox {
+                from: 0
+                to: 100
+                value: SubtitlesSettings.preferredTrack
+                editable: true
+                enabled: autoSelectSubtitles.checked
+                onValueModified: {
+                    SubtitlesSettings.preferredTrack = value
+                    SubtitlesSettings.save()
+                }
+            }
+            ToolTipButton {
+                toolTipWidth: 400
+                toolTipText: KI18n.i18nc("@info:tooltip",
+                                         "Track selection priority:<br>" +
+                                         "- preferred track id<br>" +
+                                         "- track matching the preferred language<br>" +
+                                         "- default track<br>" +
+                                         "- no track")
             }
         }
 
