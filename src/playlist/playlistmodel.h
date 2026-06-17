@@ -176,10 +176,14 @@ private:
     QString m_playlistPath;
     int m_httpItemCounter{0};
     YouTube youtube;
-    QThreadPool m_threadPool;
 
     std::vector<int> m_shuffledIndexes;
     int m_currentShuffledIndex{-1};
+    QThreadPool m_threadPool;
+    // incremented when playlist is cleared, worker threads abort if this value changes
+    std::atomic<int> m_playlistVersion{0};
+    // set to true in the destructor, worker threads abort if this value is true
+    std::atomic<bool> m_isShuttingDown{false};
 };
 
 Q_DECLARE_METATYPE(PlaylistModel::Behavior)

@@ -47,6 +47,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
 
 PlaylistModel::~PlaylistModel()
 {
+    m_isShuttingDown = true;
     m_threadPool.clear();
     m_threadPool.waitForDone();
 }
@@ -182,6 +183,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
 
 void PlaylistModel::clear()
 {
+    m_playlistVersion++;
     m_threadPool.clear();
 
     m_playlistPath = QString();
@@ -563,14 +565,25 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
         return;
     }
 
-    m_threadPool.start([this, i, url]() {
+    const auto expectedPlaylistVersion = m_playlistVersion.load();
+    m_threadPool.start([this, i, url, expectedPlaylistVersion]() {
         if (url.scheme() != u"file"_s) {
             return;
         }
 
+        if (m_isShuttingDown || m_playlistVersion != expectedPlaylistVersion) {
+            return;
+        }
         const auto metadata = MiscUtils::metadata(url);
+        if (m_isShuttingDown || m_playlistVersion != expectedPlaylistVersion) {
+            return;
+        }
         if (metadata.has_value()) {
             Database::instance()->insertMetadata(url, metadata.value().properties);
+
+            if (m_isShuttingDown || m_playlistVersion != expectedPlaylistVersion) {
+                return;
+            }
             Q_EMIT metaDataReady(i, url, metadata.value().properties);
         }
     });
@@ -637,8 +650,12 @@ void PlaylistModel::setPlaylistName(const QString &newPlaylistName)
 void PlaylistModel::updateMetadata()
 {
     const auto playlist = m_playlist;
-    m_threadPool.start([this, playlist = std::move(playlist)]() {
+    const auto expectedPlaylistVersion = m_playlistVersion.load();
+    m_threadPool.start([this, playlist = std::move(playlist), expectedPlaylistVersion]() {
         for (const auto &item : playlist) {
+            if (m_isShuttingDown || m_playlistVersion != expectedPlaylistVersion) {
+                return;
+            }
             Database::instance()->updateMetadata(item.url);
         }
         Q_EMIT metadataUpdateFinished();
