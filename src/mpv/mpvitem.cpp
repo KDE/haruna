@@ -763,7 +763,7 @@ void MpvItem::resetTimePosition()
 void MpvItem::userCommand(const QString &commandString)
 {
     QStringList args = KShell::splitArgs(commandString.simplified());
-    command(args);
+    commandBlocking(args);
 }
 
 void MpvItem::selectSubtitleTrack()
