@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-02 10:31+0200\n"
+"PO-Revision-Date: 2026-06-18 14:18+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -868,7 +868,7 @@ msgstr "Opslaan als"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Alle metagegevens bijwerken"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -878,6 +878,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Metagegevens voor alle bestanden in de afspeellijst bijwerken\n"
+"\n"
+"Metagegevens in de database bijwerken met de metagegevens in het bestand.\n"
+"De metagegevens worden in de database opgeslagen voor snellere toegang."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -936,7 +940,7 @@ msgstr "URL kopiëren"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Metagegevens bijwerken"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -944,6 +948,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Metagegevens in de database bijwerken met de metagegevens in het bestand.\n"
+"De metagegevens worden in de database opgeslagen voor snellere toegang."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1018,9 +1024,6 @@ msgstr "Filter"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filter"
@@ -1536,9 +1539,6 @@ msgid "Audio Track"
 msgstr "Audiotrack"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Meer"
@@ -1827,7 +1827,7 @@ msgstr "Bezig met laden…"
 #: src/qml/Settings/SubtitlesSettings.qml:53
 msgctxt "@label:textbox"
 msgid "Preferred language"
-msgstr "Voorkeurtaal"
+msgstr "Voorkeurstaal"
 
 #: src/qml/Settings/AudioSettings.qml:53 src/qml/Settings/AudioSettings.qml:80
 #: src/qml/Settings/SubtitlesSettings.qml:82
@@ -1837,14 +1837,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Prioriteit bij trackselectie:<br>- voorkeurstrack-ID<br>- track die "
+"overeenkomt met de voorkeurstaal<br>- standaardtrack<br>- geen track"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Track met voorkeur"
+msgstr "Voorkeurstrack-ID"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1958,56 +1957,41 @@ msgid "&Add"
 msgstr "&Toevoegen"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Maximale recente bestanden"
+msgstr "Recente bestanden wissen"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Wissen"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Recente bestanden verwijderen uit de database"
+msgstr "Alle recente bestanden verwijderen uit de database"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Metagegevens wissen"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Recente bestanden verwijderen uit de database"
+msgstr "Verwijdert alle metagegevens opgeslagen in de database"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Afspeelpositie herstellen"
+msgstr "Afspeelpositie wissen"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Verwijdert alle afspeelposities opgeslagen in de database"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2354,7 +2338,7 @@ msgstr "Werkbalk tonen"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Tekstballonnen met uitleg tonen"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2364,6 +2348,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Dit heeft alleen invloed op tekstballonnen die uitleggen hoe iets werkt of "
+"wat het doet.<br><br>Tekstballonnen die extra informatie weergeven, worden "
+"niet uitgeschakeld (bijv. de tekstballon van de zoekbalk die de tijd op de "
+"muispositie toont, tekstballonnen voor afgekorte tekst)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2972,7 +2960,7 @@ msgstr "Aangepaste commando's"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Database"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"

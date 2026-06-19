@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-01 05:42+0200\n"
+"PO-Revision-Date: 2026-06-18 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -870,7 +870,7 @@ msgstr "შენახვა, როგორც"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "ყველა მეტამონაცემის განახლება"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -880,6 +880,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"ყველა მეტამონაცემის განახლება დასაკრავი სიის ყველა ფაილისთვის\n"
+"\n"
+"მეტამონაცემების განახლება მონაცემთა ბაზაში, როცა მეტამონაცემები ფაილშია.\n"
+"უფრო სწრაფი მიღებისთვის მეტამონაცემების შენახვა მონაცემთა ბაზაში მოხდება."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -938,7 +942,7 @@ msgstr "URL-ის კოპირება"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "მეტამონაცემების განახლება"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -946,6 +950,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"მეტამონაცემების განახლება მონაცემთა ბაზაში, როცა მეტამონაცემები ფაილშია.\n"
+"უფრო სწრაფი მიღებისთვის მეტამონაცემების შენახვა მონაცემთა ბაზაში მოხდება."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1020,9 +1026,6 @@ msgstr "ფილტრი"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "ფილტრი"
@@ -1537,9 +1540,6 @@ msgid "Audio Track"
 msgstr "აუდიობილიკი"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&მეტი"
@@ -1838,14 +1838,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"ტრეის არჩევის პრიორიტეტი:<br>- სასურველი ტრეკის id<br>- ტრეკი, რომელიც "
+"სასურველ ენას ემთხვევა<br>- ნაგულისხმევი ტრეკი<br>- ტრეკის გარეშე"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "სასურველი ტრეკი"
+msgstr "სასურველი ტრეკის id"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1957,56 +1956,41 @@ msgid "&Add"
 msgstr "&დამატება"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "მაქსიმალური უახლესი ფაილები"
+msgstr "ბოლო ფაილების გასუფთავება"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "გასუფთავება"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "წაშლის უახლეს ფაილებს მონაცემთა ბაზიდან"
+msgstr "წაშლის ყველა უახლეს ფაილს მონაცემთა ბაზიდან"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "მეტამონაცემების გასუფთავება"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "წაშლის უახლეს ფაილებს მონაცემთა ბაზიდან"
+msgstr "წაშლის მონაცემთა ბაზაში შენახულ ყველა მეტამონაცემს"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "დაკვრის პოზიციის აღდგენა"
+msgstr "დაკვრის პოზიციების გასუფთავება"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "წაშლის მონაცემთა ბაზაში შენახულ ყველა დაკვრის მდებარეობას"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2353,7 +2337,7 @@ msgstr "ხელსაწყოთა ზოლის ჩვენება"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "ახსნის მინიშნებების ჩვენება"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2363,6 +2347,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"მხოლოდ, ეხება მინიშნებებს, რომლებიც ხსნან, რას აკეთებს რაიმე, ან როგორ "
+"მუშაობს ის.<br><br>მინიშნებები, რომლებიც დამატებით ინფორმაციას აჩვენებენ, არ "
+"გაითიშება (მაგ: გადახვევის მინიშნება, რომელიც აჩვენებს დროს თაგუნას "
+"მდებარეობისთვის და მინიშნებები წაკვეთილი ტექსტისთვის)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2962,7 +2950,7 @@ msgstr "მორგებული ბრძანებები"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "მონაცემთა ბაზა"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"

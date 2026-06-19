@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-01 06:52+0200\n"
+"PO-Revision-Date: 2026-06-18 07:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -810,7 +810,7 @@ msgstr "Velikost datoteke"
 #: src/playlist/Playlist.qml:289
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "Št. sledi"
+msgstr "Št. posnetka"
 
 #: src/playlist/Playlist.qml:299
 msgctxt "@action:button"
@@ -870,7 +870,7 @@ msgstr "Shrani kot"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Posodobi vse metapodatke"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -880,6 +880,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Posodobi metapodatke za vse datoteke na seznamu predvajanja\n"
+"\n"
+"Posodobi metapodatke v zbirki podatkov z metapodatki znotraj datoteke.\n"
+"Metapodatki so shranjeni v zbirki podatkov za hitrejše pridobivanje."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -938,7 +942,7 @@ msgstr "Kopiraj url"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Posodobi metapodatke"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -946,6 +950,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Posodobi metapodatke v zbirki podatkov z metapodatki znotraj datoteke.\n"
+"Metapodatki so shranjeni v zbirki podatkov za hitrejše pridobivanje."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1020,9 +1026,6 @@ msgstr "Filter"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filter"
@@ -1152,7 +1155,7 @@ msgstr "Naslov"
 #, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
-msgstr "Št. sledi"
+msgstr "Št. posnetka"
 
 #: src/playlist/playlistsortproxymodel.cpp:68
 #, kde-format
@@ -1537,12 +1540,9 @@ msgid "Audio Track"
 msgstr "Zvočni posnetek"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
-msgstr "Dodatno"
+msgstr "Več"
 
 #: src/qml/Haruna/Components/SelectActionPopup.qml:28
 msgctxt "@info:placeholder"
@@ -1837,14 +1837,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Prednost izbire posnetka:<br>- želen id posnetka<br>- posnetek, ki se ujema "
+"z želenim jezikom<br>- privzet posnetek<br>- ni posnetka"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Želeni posnetek"
+msgstr "Želeni id posnetka"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1869,7 +1868,7 @@ msgstr "Onemogočeno"
 #: src/qml/Settings/AudioSettings.qml:133
 msgctxt "@item:listbox replay gain"
 msgid "Track"
-msgstr "Sled"
+msgstr "Posnetek"
 
 #: src/qml/Settings/AudioSettings.qml:139
 msgctxt "@item:listbox replay gain"
@@ -1886,7 +1885,7 @@ msgstr ""
 "Prilagodi ojačanje glasnosti glede na vrednosti <i>ojačanje ponovnega "
 "predvajanja</i>, shranjene v metapodatkih datoteke. Če je nastavljeno na "
 "ojačanje albuma, uporabi ojačanje albuma, če je prisotno, sicer pa uporabi "
-"ojačanje sledi."
+"ojačanje posnetka."
 
 #: src/qml/Settings/AudioSettings.qml:166
 msgctxt "@label:spinbox"
@@ -1958,56 +1957,41 @@ msgid "&Add"
 msgstr "Dod&aj"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Največ nedavnih datotek"
+msgstr "Počisti nedavne datoteke"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Počisti"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Izbriše nedavne datoteke iz baze podatkov"
+msgstr "Izbriše vse nedavne datoteke shranjene v bazo podatkov"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Počisti metapodatke"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Izbriše nedavne datoteke iz baze podatkov"
+msgstr "Izbriše vse metapodatke shranjene v zbirki podatkov"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Obnovi zadnji položaj predvajanja"
+msgstr "Počisti položaje predvajanja"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Izbriše vse položaje predvajanja shranjene v podatkovni bazi"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2351,7 +2335,7 @@ msgstr "Pokaži orodno letvico"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Prikazuj pojasnjevalne opise orodij"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2361,6 +2345,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Vpliva samo na opise orodij, ki pojasnjujejo, kako nekaj deluje ali kaj "
+"počne.<br><br>Opisi orodij, ki prikazujejo dodatne informacije, ne bodo "
+"onemogočeni (npr. opis iskalne vrstice, ki prikazuje čas na položaju miške, "
+"opisi orodij za okrnjeno besedilo)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2974,7 +2962,7 @@ msgstr "Ukazi po meri"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Podatkovna baza"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
@@ -2995,13 +2983,12 @@ msgstr "Samodejna izbira posnetka"
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
-msgstr ""
-"Ko je odkljukano, bo samodejno izbrana in prikazana skladba s podnapisi"
+msgstr "Ko je odkljukano, bo samodejno izbran in prikazan posnetek s podnapisi"
 
 #: src/qml/Settings/SubtitlesSettings.qml:91
 msgctxt "@label:spinbox"
 msgid "Preferred track"
-msgstr "Želeni posnetek"
+msgstr "Prednostni posnetek"
 
 #: src/qml/Settings/SubtitlesSettings.qml:123
 msgctxt "@option:check"

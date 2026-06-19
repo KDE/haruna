@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-01 06:42-0300\n"
+"PO-Revision-Date: 2026-06-18 06:23-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -872,7 +872,7 @@ msgstr "Salvar como"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Atualizar todos os metadados"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -882,6 +882,11 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Atualizar metadados para todos os arquivos na lista de reprodução\n"
+"\n"
+"Atualizar metadados no banco de dados com os metadados presentes no "
+"arquivo.\n"
+"Os metadados são armazenados no banco de dados para recuperação mais rápida."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -940,7 +945,7 @@ msgstr "Copiar URL"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Atualizar metadados"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -948,6 +953,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Atualiza os metadados no banco de dados com os metadados contidos no "
+"arquivo.\n"
+"Os metadados são armazenados no banco de dados para uma recuperação mais "
+"rápida."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1018,13 +1027,10 @@ msgstr "Ordenação"
 #: src/playlist/PlaylistAdvancedSortWindow.qml:338
 msgctxt "@action:inmenu"
 msgid "Filter"
-msgstr "Filtro"
+msgstr "Filtrar"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filtro"
@@ -1540,9 +1546,6 @@ msgid "Audio Track"
 msgstr "Faixa de áudio"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Mais"
@@ -1842,14 +1845,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Prioridade de seleção de faixas:<br>- ID da faixa preferida<br>- faixa que "
+"corresponde ao idioma preferido<br>- faixa padrão<br>- nenhuma faixa"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Faixa preferida"
+msgstr "ID da faixa preferida"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1963,56 +1965,41 @@ msgid "&Add"
 msgstr "&Adicionar"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Máximo de arquivos recentes"
+msgstr "Limpar arquivos recentes"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Limpar"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Exclui arquivos recentes do banco de dados"
+msgstr "Exclui arquivos recentes salvos no banco de dados"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Limpar metadados"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Exclui arquivos recentes do banco de dados"
+msgstr "Exclui todos os metadados salvos no banco de dados"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Restaura a posição de reprodução"
+msgstr "Limpar posições de reprodução"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Exclui todas as posições de reprodução salvas no banco de dados"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2359,7 +2346,7 @@ msgstr "Mostrar barra de ferramentas"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Mostrar dicas explicativas"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2369,6 +2356,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Apenas afeta dicas que explicam como algo funciona ou o que faz."
+"<br><br>Dicas que mostram informações extras não serão desativadas (por "
+"exemplo, a dica da barra de busca mostrando a hora na posição do mouse ou "
+"dicas para texto truncado)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2972,7 +2963,7 @@ msgstr "Comandos personalizados"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Banco de dados"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"

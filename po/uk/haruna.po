@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-01 08:41+0300\n"
+"PO-Revision-Date: 2026-06-18 09:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -871,7 +871,7 @@ msgstr "Зберегти як"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Оновити усі метадані"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -881,6 +881,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Оновити метадані для всіх файлів у списку відтворення\n"
+"\n"
+"Оновити метадані в базі даних, додавши метадані з самого файла.\n"
+"Для пришвидшення доступу метадані зберігаються у базі даних."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -939,7 +943,7 @@ msgstr "Копіювати адресу"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Оновити метадані"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -947,6 +951,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Оновити метадані в базі даних, додавши метадані з самого файла.\n"
+"Для пришвидшення доступу метадані зберігаються у базі даних."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1021,9 +1027,6 @@ msgstr "Фільтр"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Фільтр"
@@ -1539,9 +1542,6 @@ msgid "Audio Track"
 msgstr "Звукова доріжка"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Більше"
@@ -1840,14 +1840,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Пріоритет вибору доріжки:<br>- ідентифікатор бажаної доріжки<br>- доріжка, "
+"що відповідає бажаній мові<br>- типова доріжка<br>- без доріжки"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Бажана доріжка"
+msgstr "Ідентифікатор бажаної доріжки"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1960,56 +1959,41 @@ msgid "&Add"
 msgstr "&Додати"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Максимальна кількість нещодавніх файлів"
+msgstr "Очистити недавні файли"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Спорожнити"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Вилучає записи нещодавніх файлів з бази даних"
+msgstr "Вилучає усі записи нещодавніх файлів з бази даних"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Вилучити метадані"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Вилучає записи нещодавніх файлів з бази даних"
+msgstr "Вилучити усі метадані, які зберігаються у базі даних"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Відновлювати позицію відтворення"
+msgstr "Вилучити позиції відтворення"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Вилучає усі позиції відтворення, які збережено у базі даних"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2358,7 +2342,7 @@ msgstr "Показати панель інструментів"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Показувати пояснювальні підказки"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2368,6 +2352,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Впливає лише на підказки, які пояснюють, як щось працює або яким є його "
+"призначення.<br><br>Підказки, що показують додаткові відомості, не буде "
+"вимкнено (наприклад, підказку панелі пошуку, що показує час у позиції "
+"вказівника миші, підказки для обрізаного тексту)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2986,7 +2974,7 @@ msgstr "Нетипові команди"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "База даних"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"

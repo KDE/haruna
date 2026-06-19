@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-01 19:59+0100\n"
+"PO-Revision-Date: 2026-06-18 16:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -869,7 +869,7 @@ msgstr "Guardar como"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Actualizar todos los metadatos"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -879,6 +879,11 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Actualizar los metadatos de todos los archivos de la lista de reproducción.\n"
+"\n"
+"Actualizar los metadatos de la base de datos con los que contienen los "
+"archivos.\n"
+"Los metadatos se guardan en la base de datos para obtenerlos más rápidamente."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -937,7 +942,7 @@ msgstr "Copiar URL"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Actualizar metadatos"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -945,6 +950,9 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Actualizar los metadatos de la base de datos con los que contiene el "
+"archivo.\n"
+"Los metadatos se guardan en la base de datos para obtenerlos más rápidamente."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1019,9 +1027,6 @@ msgstr "Filtrar"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filtrar"
@@ -1537,9 +1542,6 @@ msgid "Audio Track"
 msgstr "Pista de sonido"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Más"
@@ -1840,14 +1842,14 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Prioridad de selección de pista:<br>- id de pista preferido<br>- pista que "
+"coincida con el lenguaje preferido<br>- pista predeterminada<br>- ninguna "
+"pista"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Pista preferida"
+msgstr "Id de pista preferido"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1961,56 +1963,42 @@ msgid "&Add"
 msgstr "&Añadir"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Número máximo de archivos recientes"
+msgstr "Borrar lista de archivos recientes"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
-msgstr "Borrar todo"
+msgstr "Limpiar"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Borra los archivos recientes de la base de datos"
+msgstr "Borra todos los archivos recientes guardados en la base de datos"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Limpiar metadatos"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Borra los archivos recientes de la base de datos"
+msgstr "Borra todos los metadatos guardados en la base de datos"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Restaurar la posición de reproducción"
+msgstr "Limpiar posiciones de reproducción"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
 msgstr ""
+"Borra todas las posiciones de reproducción guardadas en la base de datos"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2363,7 +2351,7 @@ msgstr "Mostrar la barra de herramientas"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Mostrar ayudas emergentes explicativas"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2373,6 +2361,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Solo afecta a las ayudas emergentes que explican cómo funciona algo o qué es "
+"lo que hace.<br><br>Las ayudas emergentes que muestran información adicional "
+"no se desactivarán (como las de la barra de posición que muestran el tiempo "
+"en la posición del ratón o las del texto truncado)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2984,7 +2976,7 @@ msgstr "Órdenes personalizadas"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Base de datos"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
@@ -3274,11 +3266,3 @@ msgstr ""
 "No se ha podido obtener la lista de reproducción con el id: %1\n"
 "\n"
 "%2"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Recent Files"
-#~ msgstr "Archivos recientes"
-
-#~ msgctxt "@action:button clear (delete from database) recent files"
-#~ msgid "Clear"
-#~ msgstr "Borrar"
