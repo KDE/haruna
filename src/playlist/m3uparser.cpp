@@ -134,3 +134,5 @@ QList<MetaData> M3uParser::data() const
 {
     return m_data;
 }
+
+#include "moc_m3uparser.cpp"
