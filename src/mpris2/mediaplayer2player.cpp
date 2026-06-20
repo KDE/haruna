@@ -23,7 +23,6 @@
 #include "mpvproperties.h"
 #include "playlistsettings.h"
 #include "videosettings.h"
-// #include "worker.h"
 
 using namespace Qt::StringLiterals;
 
@@ -31,22 +30,6 @@ MediaPlayer2Player::MediaPlayer2Player(MpvItem *parent)
     : QDBusAbstractAdaptor(parent)
     , m_mpv{parent}
 {
-    // connect(m_mpv, &MpvItem::fileLoaded, this, []() {
-    //     if (m_mpv->currentUrl().isLocalFile()) {
-    //         QString mimeType = MiscUtils::mimeType(m_mpv->currentUrl());
-    //         if (mimeType.startsWith(u"audio"_s)) {
-    //             Q_EMIT requestMprisThumbnail(m_mpv->currentUrl().toLocalFile(), 250);
-    //         }
-    //     }
-    // });
-
-    // connect(this, &MediaPlayer2Player::requestMprisThumbnail, Worker::instance(), &Worker::mprisThumbnail);
-
-    // connect(Worker::instance(), &Worker::mprisThumbnailSuccess, this, [](const QImage &image) {
-    //     m_image = image;
-    //     propertiesChanged(u"Metadata"_s, Metadata());
-    //     Q_EMIT metadataChanged();
-    // });
     connect(this, &MediaPlayer2Player::findAudioCoverFinished, this, &MediaPlayer2Player::onFindAudioCoverFinished, Qt::QueuedConnection);
 
     connect(m_mpv, &MpvItem::mediaTitleChanged, this, [this]() {
