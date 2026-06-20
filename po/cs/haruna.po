@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-02 20:15+0200\n"
+"PO-Revision-Date: 2026-06-19 10:38+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -873,7 +873,7 @@ msgstr "Uložit jako"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Aktualizovat všechna metadata"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -883,6 +883,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Aktualizovat metadata všech souborů v seznamu médií\n"
+"\n"
+"Aktualizovat metadata v databázi podle metadat obsažených v souboru.\n"
+"Metadata se ukládají do databáze, aby se zrychlilo jejich načítání."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -941,7 +945,7 @@ msgstr "Kopírovat URL"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Aktualizovat metadata"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -949,6 +953,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Aktualizujte metadata v databázi podle metadat obsažených v souboru.\n"
+"Metadata se ukládají do databáze, aby bylo možné je rychleji vyhledat."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1023,9 +1029,6 @@ msgstr "Filtr"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filtr"
@@ -1541,9 +1544,6 @@ msgid "Audio Track"
 msgstr "Audio stopa"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Více"
@@ -1844,11 +1844,10 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Priorita výběru stopy:<br>- preferované ID stopy<br>- stopa odpovídající "
+"preferovanému jazyku<br>- výchozí stopa<br>- žádná stopa"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
 msgstr "Preferovaná stopa"
@@ -1963,56 +1962,41 @@ msgid "&Add"
 msgstr "Přid&at"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Maximum nedávných souborů"
+msgstr "Vymazat nedávné soubory"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
-msgstr "Vyprázdnit"
+msgstr "Vymazat"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Odstranit poslední soubory z databáze"
+msgstr "Odstranit všechny nedávno uložené soubory z databáze"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Vymazat metadata"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Odstranit poslední soubory z databáze"
+msgstr "Vymazat všechny metadata uložené v databázi"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Obnovit pozici přehrávání"
+msgstr "Vymazat pozice přehrávání"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Vymazat všechny pozice přehrávání uložené v databázi"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2355,7 +2339,7 @@ msgstr "Zobrazit panel nástrojů"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Zobrazit vysvětlující popisky"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2365,6 +2349,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Týká se pouze popisků, které vysvětlují, jak něco funguje nebo k čemu slouží."
+"<br><br>Popisky zobrazující doplňkové informace nebudou deaktivovány (např. "
+"popisek posuvníku zobrazující čas v místě, kde se nachází kurzor myši, "
+"popisky u zkráceného textu)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2973,7 +2961,7 @@ msgstr "Vlastní příkazy"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Databáze"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
