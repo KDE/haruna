@@ -266,36 +266,11 @@ void MpvItem::setupConnections()
     QString mspris2Name(u"org.mpris.MediaPlayer2.haruna"_s);
     QDBusConnection::sessionBus().registerService(mspris2Name);
     QDBusConnection::sessionBus().registerObject(u"/org/mpris/MediaPlayer2"_s, this, QDBusConnection::ExportAdaptors);
+
     // org.mpris.MediaPlayer2 mpris2 interface
-    auto *mp2 = new MediaPlayer2(this);
-    connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
-    auto *mp2Player = new MediaPlayer2Player(this);
-    connect(mp2Player, &MediaPlayer2Player::playpause, this, [this]() {
-        setPause(!pause());
-    });
-    connect(mp2Player, &MediaPlayer2Player::play, this, [this]() {
-        setPause(false);
-    });
-    connect(mp2Player, &MediaPlayer2Player::pause, this, [this]() {
-        setPause(true);
-    });
-    connect(mp2Player, &MediaPlayer2Player::stop, this, [this]() {
-        setPosition(0);
-        setPause(true);
-        stop();
-    });
-    connect(mp2Player, &MediaPlayer2Player::next, this, [this]() {
-        Q_EMIT playNext();
-    });
-    connect(mp2Player, &MediaPlayer2Player::previous, this, [this]() {
-        Q_EMIT playPrevious();
-    });
-    connect(mp2Player, &MediaPlayer2Player::seek, this, [this](int offset) {
-        command(QStringList() << u"add"_s << u"time-pos"_s << QString::number(offset));
-    });
-    connect(mp2Player, &MediaPlayer2Player::openUri, this, [this](const QString &uri) {
-        Q_EMIT openUri(uri);
-    });
+    static MediaPlayer2 mp2(this);
+    connect(&mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
+    static MediaPlayer2Player mp2Player(this);
 #endif
 
     connect(this, &MpvItem::pauseChanged, this, [this]() {

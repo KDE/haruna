@@ -56,6 +56,27 @@ MediaPlayer2Player::MediaPlayer2Player(MpvItem *parent)
         Q_EMIT volumeChanged();
     });
 
+    connect(this, &MediaPlayer2Player::playpause, this, [this]() {
+        m_mpv->setPause(!m_mpv->pause());
+    });
+    connect(this, &MediaPlayer2Player::play, this, [this]() {
+        m_mpv->setPause(false);
+    });
+    connect(this, &MediaPlayer2Player::pause, this, [this]() {
+        m_mpv->setPause(true);
+    });
+    connect(this, &MediaPlayer2Player::stop, this, [this]() {
+        m_mpv->setPosition(0);
+        m_mpv->setPause(true);
+        m_mpv->stop();
+    });
+    connect(this, &MediaPlayer2Player::next, m_mpv, &MpvItem::playNext);
+    connect(this, &MediaPlayer2Player::previous, m_mpv, &MpvItem::playPrevious);
+    connect(this, &MediaPlayer2Player::seek, this, [this](int offset) {
+        m_mpv->command(QStringList() << u"add"_s << u"time-pos"_s << QString::number(offset));
+    });
+    connect(this, &MediaPlayer2Player::openUri, m_mpv, &MpvItem::openUri);
+
     connect(PlaylistSettings::self(), &PlaylistSettings::PlaybackBehaviorChanged, this, [this]() {
         propertiesChanged(u"LoopStatus"_s, LoopStatus());
     });
