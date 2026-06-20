@@ -27,6 +27,7 @@ target_sources(haruna
     mpv/mpvitem.h mpv/mpvitem.cpp
     mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvproperties.h
+    mpv/seekablerangesmodel.h mpv/seekablerangesmodel.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
     ${ICONS_SRCS}

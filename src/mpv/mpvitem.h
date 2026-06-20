@@ -12,6 +12,7 @@
 
 #include <memory>
 
+class SeekableRangesModel;
 class ChaptersModel;
 class TracksModel;
 class MpvRenderer;
@@ -58,6 +59,9 @@ public:
         Replay,
         Stop,
     };
+
+    Q_PROPERTY(SeekableRangesModel *seekableRangesModel READ seekableRangesModel NOTIFY seekableRangesModelChanged FINAL)
+    SeekableRangesModel *seekableRangesModel() const;
 
     Q_PROPERTY(TracksModel *audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     TracksModel *audioTracksModel() const;
@@ -183,9 +187,11 @@ public:
     Q_INVOKABLE void setPreviousTrack(TrackType type);
 
 Q_SIGNALS:
+    void seekableRangesModelChanged();
     void audioTracksModelChanged();
     void subtitleTracksModelChanged();
     void chaptersModelChanged();
+    void playlistsManagerChanged();
     void finishedLoadingChanged();
     void mediaTitleChanged();
     void currentUrlChanged();
@@ -213,18 +219,14 @@ Q_SIGNALS:
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
     void eofPlayNext();
     void osdMessage(const QString &text);
+    void isLocalFileChanged();
+    void isVideoChanged();
 
     // signals used for mpris
     void raise();
     void playNext();
     void playPrevious();
     void openUri(const QString &uri);
-
-    void playlistsManagerChanged();
-
-    void isLocalFileChanged();
-
-    void isVideoChanged();
 
 private:
     void initProperties();
@@ -276,6 +278,7 @@ private:
     PlaylistsManager *m_playlistsManager = nullptr;
     bool m_isLocalFile;
     bool m_isVideo;
+    std::unique_ptr<SeekableRangesModel> m_seekableRangesModel;
 };
 
 #endif // MPVOBJECT_H

@@ -85,6 +85,23 @@ RowLayout {
                 z: 110
             }
 
+            Repeater {
+                model: root.m_mpv.seekableRangesModel
+                delegate: Rectangle {
+                    required property double start
+                    required property double end
+
+                    objectName: "seekableRangeDelegate"
+
+                    x: start / root.m_mpv.duration * progressBarBG.width
+                    y: (progressBarBG.height - height) / 2
+                    z: 200
+                    width: end / root.m_mpv.duration * progressBarBG.width - x
+                    height: 2
+                    color: Kirigami.Theme.textColor
+                }
+            }
+
             Rectangle {
                 width: slider.position * parent.width
                 height: parent.height

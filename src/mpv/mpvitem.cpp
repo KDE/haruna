@@ -31,6 +31,7 @@
 #include "playbacksettings.h"
 #include "playlistsettings.h"
 #include "playlistsmanager.h"
+#include "seekablerangesmodel.h"
 #include "subtitlessettings.h"
 #include "tracksmodel.h"
 #include "videosettings.h"
@@ -53,6 +54,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     , m_subtitleTracksModel{std::make_unique<TracksModel>()}
     , m_chaptersModel{std::make_unique<ChaptersModel>()}
     , m_saveTimePositionTimer{std::make_unique<QTimer>()}
+    , m_seekableRangesModel{std::make_unique<SeekableRangesModel>()}
 {
     observeProperty(MpvProperties::self()->MediaTitle, MPV_FORMAT_STRING);
     observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
@@ -73,6 +75,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     observeProperty(MpvProperties::self()->SubtitleDelay, MPV_FORMAT_DOUBLE);
     observeProperty(MpvProperties::self()->EofReached, MPV_FORMAT_FLAG);
     observeProperty(MpvProperties::self()->VoConfigured, MPV_FORMAT_FLAG);
+    observeProperty(u"demuxer-cache-state"_s, MPV_FORMAT_NODE);
 
     setupConnections();
     initProperties();
@@ -140,7 +143,6 @@ void MpvItem::initProperties()
 {
     //    setProperty(u"terminal"_s, InformationSettings::mpvLogging());
     //    setProperty(u"msg-level"_s, u"all=v"_s);
-
     setProperty(u"reset-on-next-file"_s, QStringList{MpvProperties::self()->ABLoopA, MpvProperties::self()->ABLoopB});
 
     setProperty(MpvProperties::self()->VO, u"libmpv"_s);
@@ -516,6 +518,9 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
         if (!voConfigured) {
             update();
         }
+    } else if (property == u"demuxer-cache-state"_s) {
+        const auto data = value.toMap().value(u"seekable-ranges"_s).toList();
+        m_seekableRangesModel->populate(data);
     }
 }
 
@@ -897,6 +902,11 @@ void MpvItem::setChaptersModel(ChaptersModel *_chaptersModel)
     }
     m_chaptersModel.reset(_chaptersModel);
     Q_EMIT chaptersModelChanged();
+}
+
+SeekableRangesModel *MpvItem::seekableRangesModel() const
+{
+    return m_seekableRangesModel.get();
 }
 
 TracksModel *MpvItem::subtitleTracksModel() const
