@@ -30,8 +30,8 @@ public:
     QList<MetaData> data() const;
 
 private:
-    void parseStandardLine(QByteArray &line);
-    void parseExtendedLine(QByteArray &line);
+    void parseStandardLine(const QString &line);
+    void parseExtendedLine(const QString &line);
 
     MetaData metadata;
     QList<MetaData> m_data;

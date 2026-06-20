@@ -19,22 +19,26 @@ M3uParser::M3uParser()
 void M3uParser::read(const std::filesystem::path &path)
 {
     QFile file(path);
-    if (!file.open(QIODevice::ReadOnly)) {
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qDebug() << "Couldn't open file:" << path.u16string() << file.errorString();
         return;
     }
 
-    auto firstLine = file.readLine();
-    if (firstLine.startsWith("#EXTM3U")) {
-        while (!file.atEnd()) {
-            auto line = file.readLine();
-            parseExtendedLine(line);
+    QTextStream in(&file);
+
+    if (in.atEnd()) {
+        return;
+    }
+
+    auto firstLine = in.readLine();
+    if (firstLine.startsWith(u"#EXTM3U")) {
+        while (!in.atEnd()) {
+            parseExtendedLine(in.readLine());
         }
     } else {
         parseStandardLine(firstLine);
-        while (!file.atEnd()) {
-            auto line = file.readLine();
-            parseStandardLine(line);
+        while (!in.atEnd()) {
+            parseStandardLine(in.readLine());
         }
     }
 }
@@ -51,57 +55,47 @@ void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::
     }
 
     QFile m3uFile(savePath);
-    if (!m3uFile.open(QFile::WriteOnly)) {
+    if (!m3uFile.open(QFile::WriteOnly | QIODevice::Text)) {
         qDebug() << "Couldn't open file:" << savePath << m3uFile.errorString();
         return;
     }
 
-    m3uFile.write("#EXTM3U\n");
+    QTextStream out(&m3uFile);
+    out.setEncoding(QStringConverter::Utf8);
+
+    out << "#EXTM3U\n";
     for (int i{0}; i < playlistModel->rowCount(); ++i) {
         const auto itemPath = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::PathRole).toString();
         const auto title = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::TitleRole).toString();
         const auto duration = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::DurationRole).toDouble();
 
         if (duration > 0) {
-            m3uFile.write(u"#EXTINF:%1,%2\n"_s.arg(duration).arg(title).toUtf8());
+            out << u"#EXTINF:%1,%2\n"_s.arg(duration).arg(title);
         }
-        m3uFile.write(itemPath.toUtf8().append("\n"));
+        out << itemPath << "\n";
     }
 
     m3uFile.close();
 }
 
-void M3uParser::parseStandardLine(QByteArray &line)
+void M3uParser::parseStandardLine(const QString &line)
 {
-    while (line.endsWith('\n') || line.endsWith('\r')) {
-        line.chop(1);
-    }
-
-    if (line.isEmpty()) {
+    if (line.isEmpty() || line.startsWith(u"#")) {
         return;
     }
 
-    // ignore comments
-    if (line.startsWith("#")) {
-        return;
-    }
-
-    metadata.path = QString::fromUtf8(line);
+    metadata.path = line;
     m_data.append(metadata);
 }
 
-void M3uParser::parseExtendedLine(QByteArray &line)
+void M3uParser::parseExtendedLine(const QString &line)
 {
-    while (line.endsWith('\n') || line.endsWith('\r')) {
-        line.chop(1);
-    }
-
     if (line.isEmpty()) {
         return;
     }
 
-    if (!line.startsWith("#")) {
-        metadata.path = QString::fromUtf8(line);
+    if (!line.startsWith(u"#")) {
+        metadata.path = line;
         m_data.append(std::move(metadata));
         metadata.duration.reset();
         metadata.title.reset();
@@ -112,17 +106,16 @@ void M3uParser::parseExtendedLine(QByteArray &line)
     QString key;
     QString value;
     bool colonFound{false};
-
     for (const auto &c : std::as_const(line)) {
-        if (c == u':') {
+        if (c == u':' && !colonFound) {
             colonFound = true;
             continue;
         }
 
         if (!colonFound) {
-            key += QChar::fromLatin1(c);
+            key += c;
         } else {
-            value += QChar::fromLatin1(c);
+            value += c;
         }
     }
 
