@@ -10,8 +10,6 @@
 
 #include <MpvAbstractItem>
 
-#include <memory>
-
 class SeekableRangesModel;
 class ChaptersModel;
 class TracksModel;
