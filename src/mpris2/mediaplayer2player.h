@@ -8,7 +8,6 @@
 #define MEDIAPLAYER2PLAYER_H
 
 #include <QDBusAbstractAdaptor>
-#include <QImage>
 
 class QDBusObjectPath;
 class QImage;

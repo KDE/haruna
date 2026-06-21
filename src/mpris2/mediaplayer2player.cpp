@@ -6,17 +6,16 @@
 
 #include "mediaplayer2player.h"
 
-#include <QBuffer>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusObjectPath>
-#include <QDir>
-#include <QDirIterator>
+#include <QFileInfo>
 #include <QImage>
-#include <QMimeDatabase>
 #include <QThreadPool>
 
 #include <KFileMetaData/EmbeddedImageData>
+
+#include <filesystem>
 
 #include "miscutils.h"
 #include "mpvitem.h"
@@ -161,7 +160,6 @@ QString MediaPlayer2Player::getThumbnail(const QString &path)
 
 QString MediaPlayer2Player::findAudioCover(const QString &filePath)
 {
-    static QMimeDatabase mimeDb;
     static const QStringList coverNames = {u"cover"_s, u"front"_s, u"folder"_s};
     static const QStringList extensions = {u"png"_s, u"jpeg"_s, u"jpg"_s, u"webp"_s};
 
