@@ -26,10 +26,10 @@ Page {
     id: root
 
     required property MpvVideo m_mpv
-    required property Loader m_advancedSortWindowLoader
     required property real fsScale
     required property int mainWindowWidth
 
+    property alias advancedSortWindow: advancedSortWindow
     property alias manager: playlistsManager
     property bool isSmallWindowSize: mainWindowWidth < 600
     property int buttonSize: Kirigami.Units.iconSizes.small
@@ -78,6 +78,12 @@ Page {
 
     PlaylistsManager {
         id: playlistsManager
+    }
+
+    PlaylistAdvancedSortWindow {
+        id: advancedSortWindow
+
+        playlistsManager: playlistsManager
     }
 
     header: ToolBar {
@@ -338,7 +344,7 @@ Page {
                             text: KI18n.i18nc("@action:button", "Custom…")
 
                             onTriggered: {
-                                root.m_advancedSortWindowLoader.openSortWindow()
+                                root.advancedSortWindow.open()
                                 playlistsManager.visiblePlaylist.itemsSorted()
                             }
                             ActionGroup.group: sortPresetGroup

@@ -74,7 +74,7 @@ ApplicationWindow {
 
     onClosing: {
         const settingsWindow = settingsLoader.item as Window
-        const sortConfigWindow = advancedSortWindowLoader.item as PlaylistAdvancedSortWindow
+        const sortConfigWindow = playlist.advancedSortWindow.item as Kirigami.ApplicationWindow
         settingsWindow?.close()
         sortConfigWindow?.close()
     }
@@ -278,7 +278,6 @@ ApplicationWindow {
         property bool isReady: false
 
         m_mpv: mpv
-        m_advancedSortWindowLoader: advancedSortWindowLoader
         height: mpv.height
         mainWindowWidth: window.width
         fsScale: window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
@@ -381,34 +380,6 @@ ApplicationWindow {
         id: settingsLoader
 
         m_mpv: mpv
-    }
-
-    Loader {
-        id: advancedSortWindowLoader
-        active: false
-        asynchronous: true
-        sourceComponent: PlaylistAdvancedSortWindow {
-            playlistsManager: playlist.manager
-        }
-
-        function openSortWindow() : void {
-            if (!advancedSortWindowLoader.active) {
-                advancedSortWindowLoader.active = true
-                advancedSortWindowLoader.loaded.connect(function() {
-                    advancedSortWindowLoader.openSortWindow()
-                    const item = advancedSortWindowLoader.item as PlaylistAdvancedSortWindow
-                    item.calculatePostLayout()
-                })
-                return
-            }
-
-            const advancedSortWindow = advancedSortWindowLoader.item as PlaylistAdvancedSortWindow
-            if (advancedSortWindow.visible) {
-                advancedSortWindow.raise()
-            } else {
-                advancedSortWindow.visible = true
-            }
-        }
     }
 
     Connections {
