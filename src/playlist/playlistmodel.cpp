@@ -456,7 +456,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
     }
 }
 
-void PlaylistModel::addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId)
+void PlaylistModel::addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId)
 {
     bool matchFound{false};
     for (int i = 0; i < playlist.size(); ++i) {

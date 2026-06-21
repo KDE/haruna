@@ -161,7 +161,7 @@ private:
     void handleLocalFile(const QUrl &url, Behavior behavior);
     void getSiblingItems(const QUrl &url);
     std::optional<PlaylistItem> localFileToPlaylistItem(const QFileInfo &fileInfo);
-    void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId, const QString &playlistId);
+    void addYouTubePlaylist(const QJsonArray &playlist, const QString &videoId);
     void updateFileInfo(const YTVideoInfo &info, const QVariantMap &data);
     bool isVideoOrAudioMimeType(const QString &mimeType);
     void getMetaData(uint i, const QString &path);
