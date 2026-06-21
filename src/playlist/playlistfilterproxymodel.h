@@ -60,7 +60,7 @@ public:
     QString searchText();
     void setSearchText(const QString &text);
 
-    Q_PROPERTY(Sort sortPreset READ sortPreset WRITE setSortPreset NOTIFY itemsSorted)
+    Q_PROPERTY(PlaylistSortProxyModel::Sort sortPreset READ sortPreset WRITE setSortPreset NOTIFY itemsSorted)
     Sort sortPreset();
     void setSortPreset(Sort preset);
 
