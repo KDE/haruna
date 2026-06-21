@@ -32,11 +32,6 @@ QString YouTube::youtubeDlExecutable()
         return ytDlp;
     }
 
-    auto youtubeDl = QStandardPaths::findExecutable(u"youtube-dl"_s);
-    if (!youtubeDl.isEmpty()) {
-        return youtubeDl;
-    }
-
     return QString{};
 }
 
