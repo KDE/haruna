@@ -36,7 +36,6 @@
 #include "tracksmodel.h"
 #include "videosettings.h"
 #include "worker.h"
-#include "youtube.h"
 
 #if HAVE_DBUS
 #include <QDBusConnection>
@@ -151,10 +150,6 @@ void MpvItem::initProperties()
     setProperty(MpvProperties::self()->HardwareDecoding, PlaybackSettings::hWDecoding());
     setProperty(MpvProperties::self()->Volume, AudioSettings::volume());
     setProperty(MpvProperties::self()->VolumeMax, 100);
-
-    // set ytdl_path to yt-dlp or fallback to youtube-dl
-    YouTube yt;
-    setProperty(MpvProperties::self()->ScriptOpts, u"ytdl_hook-ytdl_path=%1"_s.arg(yt.youtubeDlExecutable()));
 
     const auto cmdParser = CommandLineOptions::instance().parser();
     QString ytdlFormat = PlaybackSettings::ytdlFormat();
