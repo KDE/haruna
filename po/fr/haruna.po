@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-18 00:42+0000\n"
-"PO-Revision-Date: 2026-06-02 19:19+0200\n"
+"POT-Creation-Date: 2026-06-21 00:43+0000\n"
+"PO-Revision-Date: 2026-06-19 13:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -613,80 +613,80 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:84
 #, kde-format
 msgid "Command line video player"
 msgstr "Lecteur vidéo en ligne de commandes"
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:91
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Solution multi-plate-forme pour enregistrer, convertir et diffuser de "
 "l'audio et de la vidéo"
 
-#: src/mpv/mpvitem.cpp:359
+#: src/mpv/mpvitem.cpp:361
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Lecture impossible : %1"
 
-#: src/mpv/mpvitem.cpp:461
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume : %1"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Cadencement des sous-titres : + %1 secondes"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Cadencement des sous-titres : %1 secondes"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:542
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Le fichier n'existe pas : %1"
 
-#: src/mpv/mpvitem.cpp:569
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1 / %2] %3"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Aucun"
 
-#: src/mpv/mpvitem.cpp:631
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Impossible de faire une capture d'écran"
 
-#: src/mpv/mpvitem.cpp:636
+#: src/mpv/mpvitem.cpp:641
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Capture d'écran effectuée"
 
-#: src/mpv/mpvitem.cpp:638
+#: src/mpv/mpvitem.cpp:643
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Capture d'écran : %1"
 
-#: src/mpv/mpvitem.cpp:671
+#: src/mpv/mpvitem.cpp:676
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -696,13 +696,13 @@ msgstr ""
 "Aucune piste vidéo n'a été détectée. Il est très probable que la piste vidéo "
 "n'a pu être décodée / lue en raison de codecs manquants."
 
-#: src/mpv/mpvitem.cpp:708
+#: src/mpv/mpvitem.cpp:713
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Chapitre ignoré : %1"
 
-#: src/mpv/mpvitem.cpp:803
+#: src/mpv/mpvitem.cpp:808
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -710,13 +710,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Audio : %1 %2"
 
-#: src/mpv/mpvitem.cpp:814
+#: src/mpv/mpvitem.cpp:819
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Sous-titres : aucun"
 
-#: src/mpv/mpvitem.cpp:819 src/mpv/mpvitem.cpp:835
+#: src/mpv/mpvitem.cpp:824 src/mpv/mpvitem.cpp:840
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -724,7 +724,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Sous-titres : %1 %2"
 
-#: src/mpv/mpvitem.cpp:830
+#: src/mpv/mpvitem.cpp:835
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -868,7 +868,7 @@ msgstr "Enregistrer sous"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Mettre à jour toutes les métadonnées"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -878,6 +878,13 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Veuillez mettre à jour les métadonnées pour tous les fichiers de la liste de "
+"lecture.\n"
+"\n"
+"Veuillez mettre à jour les métadonnées dans la base de données avec celles à "
+"l'intérieur du fichier.\n"
+"Les métadonnées sont enregistrées dans la base de données pour un chargement "
+"plus rapide."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -936,7 +943,7 @@ msgstr "Copier l'URL"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Mettre à jour les métadonnées"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -944,6 +951,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Mettre à jour les métadonnées dans la base de données à l'intérieur du "
+"fichier.\n"
+"Les métadonnées sont enregistrées dans la base de données pour un chargement "
+"plus rapide."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1018,12 +1029,9 @@ msgstr "Filtre"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
-msgstr "Filtre"
+msgstr "Filtrer"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:103
 #: src/playlist/PlaylistAdvancedSortWindow.qml:364
@@ -1538,9 +1546,6 @@ msgid "Audio Track"
 msgstr "Piste audio"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Plus"
@@ -1622,12 +1627,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/HProgressBar.qml:319
+#: src/qml/HProgressBar.qml:336
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Ignorer des chapitres"
 
-#: src/qml/HProgressBar.qml:327
+#: src/qml/HProgressBar.qml:344
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1840,14 +1845,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Priorité de sélection des pistes : <br>- preferred Id-Piste<br>- track "
+"correspondant à la langue favorite<br>- preferred Id-Piste<br>- no track"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Piste préférée"
+msgstr "Identifiant de piste préférée"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1961,56 +1965,42 @@ msgid "&Add"
 msgstr "&Ajouter"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Nombre maximum de fichiers récents"
+msgstr "Effacer les fichiers récents"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Effacer"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Supprime les fichiers récents de la base de données"
+msgstr "Supprime tous les fichiers récents de la base de données"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Effacer les métadonnées"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Supprime les fichiers récents de la base de données"
+msgstr "Supprime toutes les métadonnées enregistrées dans la base de données"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Restaurer la position de lecture"
+msgstr "Effacer les positions de lecture"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
 msgstr ""
+"Supprime toutes les positions de lecture enregistrées dans la base de données"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2367,7 +2357,7 @@ msgstr "Afficher la barre d'outils"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Afficher les info-bulles explicatives"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2377,6 +2367,11 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"N'affecte que les info-bulles expliquant comment quelque chose fonctionne ou "
+"ce qu'il fait.<br><br>Les info-bulles affichant des informations "
+"supplémentaires ne seront pas désactivées (Par exemple, l'info-bulle de la "
+"barre de recherche affichant l'heure à la position de la souris, les info-"
+"bulles pour le texte tronqué)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2990,7 +2985,7 @@ msgstr "Commandes personnalisées"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Base de données"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"

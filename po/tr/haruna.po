@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-18 00:42+0000\n"
+"POT-Creation-Date: 2026-06-21 00:43+0000\n"
 "PO-Revision-Date: 2026-06-18 18:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -613,80 +613,80 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:84
 #, kde-format
 msgid "Command line video player"
 msgstr "Komut satırı için video oynatıcısı"
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:91
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Ses ve video kaydetmek, dönüştürmek ve akışını sağlamak için bir çapraz "
 "platform çözüm"
 
-#: src/mpv/mpvitem.cpp:359
+#: src/mpv/mpvitem.cpp:361
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Oynatılamadı: %1"
 
-#: src/mpv/mpvitem.cpp:461
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Ses düzeyi: %1"
 
-#: src/mpv/mpvitem.cpp:494
+#: src/mpv/mpvitem.cpp:496
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Altyazı zamanlaması: +%1 saniye"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:498
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Altyazı zamanlaması: %1 saniye"
 
-#: src/mpv/mpvitem.cpp:537
+#: src/mpv/mpvitem.cpp:542
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Dosya yok: %1"
 
-#: src/mpv/mpvitem.cpp:569
+#: src/mpv/mpvitem.cpp:574
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:582
+#: src/mpv/mpvitem.cpp:587
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Yok"
 
-#: src/mpv/mpvitem.cpp:631
+#: src/mpv/mpvitem.cpp:636
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekran görüntüsü alınamadı"
 
-#: src/mpv/mpvitem.cpp:636
+#: src/mpv/mpvitem.cpp:641
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekran görüntüsü alındı"
 
-#: src/mpv/mpvitem.cpp:638
+#: src/mpv/mpvitem.cpp:643
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekran görüntüsü: %1"
 
-#: src/mpv/mpvitem.cpp:671
+#: src/mpv/mpvitem.cpp:676
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -696,13 +696,13 @@ msgstr ""
 "Algılanan video parçası yok; büyük olasılıkla parça eksik kod çözücüler "
 "nedeniyle oynatılamıyor."
 
-#: src/mpv/mpvitem.cpp:708
+#: src/mpv/mpvitem.cpp:713
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Fasıl atlandı: %1"
 
-#: src/mpv/mpvitem.cpp:803
+#: src/mpv/mpvitem.cpp:808
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -710,13 +710,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Ses: %1 %2"
 
-#: src/mpv/mpvitem.cpp:814
+#: src/mpv/mpvitem.cpp:819
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Altyazı: Yok"
 
-#: src/mpv/mpvitem.cpp:819 src/mpv/mpvitem.cpp:835
+#: src/mpv/mpvitem.cpp:824 src/mpv/mpvitem.cpp:840
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -724,7 +724,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Altyazı: %1 %2"
 
-#: src/mpv/mpvitem.cpp:830
+#: src/mpv/mpvitem.cpp:835
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -1617,12 +1617,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Ses"
 
-#: src/qml/HProgressBar.qml:319
+#: src/qml/HProgressBar.qml:336
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Fasılları Atla"
 
-#: src/qml/HProgressBar.qml:327
+#: src/qml/HProgressBar.qml:344
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
