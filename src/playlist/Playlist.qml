@@ -436,9 +436,11 @@ Page {
                         onTriggered: {
                             playlistsManager.visiblePlaylist.updateMetadata()
                         }
-                        tooltip: KI18n.i18nc("@info:tooltip", "Update metadata for all files in the playlist\n\n"+
-                                              "Update metadata in the database with metadata inside the file.\n" +
-                                              "Metadata is stored in the database for faster retrival.")
+                        tooltip: GeneralSettings.showExplanatoryToolTips
+                                 ? KI18n.i18nc("@info:tooltip", "Update metadata for all files in the playlist\n\n"+
+                                               "Update metadata in the database with metadata inside the file.\n" +
+                                               "Metadata is stored in the database for faster retrival.")
+                                 : ""
                     }
                 ]
             }
