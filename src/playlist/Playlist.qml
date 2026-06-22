@@ -945,7 +945,7 @@ Page {
 
             PropertyChanges {
                 root.x: PlaylistSettings.position === "right"
-                        ? root.mainWindowWidth - root.width + 2
+                        ? root.mainWindowWidth - root.width + 1
                         : 0
                 root.visible: true
             }
