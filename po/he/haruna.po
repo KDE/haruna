@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:43+0000\n"
-"PO-Revision-Date: 2026-06-02 09:15+0300\n"
+"PO-Revision-Date: 2026-06-23 08:48+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -864,7 +864,7 @@ msgstr "שמירה בשם"
 #: src/playlist/Playlist.qml:413
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "עדכון כל נתוני העל"
 
 #: src/playlist/Playlist.qml:419
 msgctxt "@info:tooltip"
@@ -874,6 +874,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"לעדכן נתוני על לכל הקבצים ברשימת הנגינה\n"
+"\n"
+"לעדכן נתוני על במסד הנתונים עם נתוני על בתוך הקובץ.\n"
+"נתוני העל מאוחסנים במסד הנתונים כדי להאיץ את המשיכה שלהם."
 
 #: src/playlist/Playlist.qml:434 src/playlist/Playlist.qml:455
 msgctxt "@action:button"
@@ -932,7 +936,7 @@ msgstr "העתקת הכתובת"
 #: src/playlist/Playlist.qml:723
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "עדכון נתוני העל"
 
 #: src/playlist/Playlist.qml:733
 msgctxt "@info:tooltip"
@@ -940,6 +944,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"לעדכן נתוני על במסד הנתונים עם נתוני על בתוך הקובץ.\n"
+"נתוני העל מאוחסנים במסד הנתונים כדי להאיץ את המשיכה שלהם."
 
 #: src/playlist/Playlist.qml:745
 msgctxt "@action:inmenu"
@@ -1014,12 +1020,9 @@ msgstr "מסנן"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
-msgstr "מסנן"
+msgstr "סינון"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:103
 #: src/playlist/PlaylistAdvancedSortWindow.qml:364
@@ -1530,9 +1533,6 @@ msgid "Audio Track"
 msgstr "רצועת שמע"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&עוד"
@@ -1830,14 +1830,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"עדיפות בחירת רצועות:<br>- מזהה רצועה מועדפת<br>- רצועה שתואמת לשפה "
+"המועדפת<br>- רצועת ברירת מחדל<br>- אין רצועה"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "רצועה מועדפת"
+msgstr "מזהה רצועה מועדפת"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1948,56 +1947,41 @@ msgid "&Add"
 msgstr "הו&ספה"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "כמות קבצים אחרונים מרבית"
+msgstr "איפוס קבצים אחרונים"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
-msgstr "פינוי"
+msgstr "איפוס"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "מחיקת קבצים אחרונים ממסד הנתונים"
+msgstr "מחיקת כל הקבצים האחרונים שנשמרו במסד הנתונים"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "איפוס נתוני על"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "מחיקת קבצים אחרונים ממסד הנתונים"
+msgstr "מחיקת כל נתוני העל שנשמרו במסד הנתונים"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "שחזור נקודת הנגינה האחרון"
+msgstr "איפוס נקודות נגינה"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "מחיקת כל נקודות הנגינה שנשמרו במסד הנתונים"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2335,7 +2319,7 @@ msgstr "הצגת סרגל כלים"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "הצגת חלוניות צצות עם הסברים"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2345,6 +2329,9 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"משפיע רק על חלוניות עצה שמסבירות איך משהו עובד או מה הוא עושה."
+"<br><br>חלוניות עצה שמציגות פרטים נוספים לא תושבתנה (למשל: חלונית העצה של "
+"סרגל החתירה מציגה את הזמן בנקודה שבה נמצא סמן העכבר, חלוניות עצה לטקסט קטוע)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2943,7 +2930,7 @@ msgstr "פקודות משלך"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "מסד הנתונים"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
