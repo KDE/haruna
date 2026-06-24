@@ -237,12 +237,17 @@ void MpvItem::setupConnections()
             this, &MpvItem::onFileLoaded, Qt::QueuedConnection);
 
     connect(this, &MpvItem::positionChanged, this, [this]() {
-        auto pos = static_cast<int>(position());
-        if (!m_secondsWatched.contains(pos)) {
-            m_secondsWatched << pos;
-            if (m_duration != 0) {
-                setWatchPercentage(m_secondsWatched.count() * 100 / m_duration);
-            }
+        if (m_duration <= 0) {
+            return;
+        }
+
+        const auto pos = static_cast<int>(position());
+        const auto oldSize = m_secondsWatched.size();
+        m_secondsWatched.insert(pos);
+
+        if (m_secondsWatched.size() > oldSize) {
+            int percentage = (m_secondsWatched.size() * 100) / m_duration;
+            setWatchPercentage(std::min(percentage, 100));
         }
     });
 

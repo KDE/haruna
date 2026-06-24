@@ -245,7 +245,7 @@ private:
 
     std::unique_ptr<TracksModel> m_audioTracksModel;
     std::unique_ptr<TracksModel> m_subtitleTracksModel;
-    QList<int> m_secondsWatched;
+    QSet<int> m_secondsWatched;
     double m_watchPercentage{0.0};
 
     double m_position{0.0};
