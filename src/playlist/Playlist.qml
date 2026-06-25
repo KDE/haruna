@@ -37,7 +37,7 @@ Page {
     property alias playlistView: playlistView
     property real customWidth: PlaylistSettings.playlistWidth
 
-    width: limitWidth(customWidth) * fsScale
+    width: limitWidth(customWidth * fsScale)
 
     function limitWidth(pWidth) {
         if (PlaylistSettings.style === "compact") {
