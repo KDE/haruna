@@ -57,7 +57,7 @@ Page {
         // dragging left (pX is negative) expands a right-aligned playlist, but shrinks a left-aligned one
         const widthDelta = PlaylistSettings.position === "right" ? pX * -1 : pX;
         const width = root.limitWidth(root.customWidth + widthDelta)
-        root.customWidth = width / root.fsScale
+        root.customWidth = width
     }
 
 
