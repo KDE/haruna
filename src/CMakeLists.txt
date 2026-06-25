@@ -99,6 +99,7 @@ qt_add_qml_module(haruna
         qml/Haruna/Components/ImageAdjustmentSlider.qml
         qml/Haruna/Components/InputPopup.qml
         qml/Haruna/Components/LabelWithTooltip.qml
+        qml/Haruna/Components/ResizeHandler.qml
         qml/Haruna/Components/SelectActionPopup.qml
         qml/Haruna/Components/SettingsBasePage.qml
         qml/Haruna/Components/SettingsHeader.qml

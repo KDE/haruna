@@ -47,6 +47,20 @@ Page {
         }
     }
 
+    function saveWidth() {
+        PlaylistSettings.playlistWidth = root.customWidth ? root.customWidth : 260
+        PlaylistSettings.save()
+    }
+
+    function resizeHandlerPositionChanged(pX) {
+        // invert the drag delta when the playlist is anchored to the right
+        // dragging left (pX is negative) expands a right-aligned playlist, but shrinks a left-aligned one
+        const widthDelta = PlaylistSettings.position === "right" ? pX * -1 : pX;
+        const width = root.limitWidth(root.customWidth + widthDelta)
+        root.customWidth = width / root.fsScale
+    }
+
+
     x: PlaylistSettings.position === "right" ? mainWindowWidth : -width
     y: 0
     padding: 0
@@ -459,45 +473,6 @@ Page {
         }
     }
 
-    component ResizeHandler: Item {
-        property alias hovered: resizeHandlerMouseArea.containsMouse
-
-        MouseArea {
-            id: resizeHandlerMouseArea
-
-            anchors.fill: parent
-            acceptedButtons: Qt.LeftButton
-            cursorShape: Qt.SizeHorCursor
-            hoverEnabled: true
-
-            drag {
-                target: parent
-                axis: Drag.XAxis
-                threshold: 0
-            }
-
-            onPositionChanged: {
-                if (!drag.active) {
-                    return
-                }
-
-                if (PlaylistSettings.position === "right") {
-                    let mX = root.m_mpv.mapFromItem(this, mouseX, mouseY).x
-                    var w = root.limitWidth(root.mainWindowWidth - mX)
-                } else {
-                    let mX = playlistView.mapFromItem(this, mouseX, mouseY).x
-                    var w = root.limitWidth(mX)
-                }
-                root.customWidth = w / root.fsScale
-            }
-
-            onReleased: {
-                PlaylistSettings.playlistWidth = root.customWidth
-                PlaylistSettings.save()
-            }
-        }
-    }
-
     Rectangle {
         Rectangle {
             id: playlistEdgeBorder
@@ -515,6 +490,14 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: 8
                 height: parent.height
+
+                onPositionChanged: function (pX) {
+                    root.resizeHandlerPositionChanged(pX)
+                }
+
+                onReleased: {
+                    root.saveWidth()
+                }
             }
 
             Rectangle {
@@ -537,6 +520,14 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: 18
                     height: parent.height
+
+                    onPositionChanged: function (pX) {
+                        root.resizeHandlerPositionChanged(pX)
+                    }
+
+                    onReleased: {
+                        root.saveWidth()
+                    }
                 }
             }
         }
