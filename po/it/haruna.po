@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-26 00:44+0000\n"
-"PO-Revision-Date: 2026-06-01 16:49+0200\n"
+"PO-Revision-Date: 2026-06-18 18:19+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -871,7 +871,7 @@ msgstr "Salva come"
 #: src/playlist/Playlist.qml:427
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Aggiorna tutti i metadati"
 
 #: src/playlist/Playlist.qml:433
 msgctxt "@info:tooltip"
@@ -881,6 +881,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Aggiorna i metadati per tutti i file nella scaletta\n"
+"\n"
+"Aggiorna i metadati nella banca dati con metadati contenuti nel file.\n"
+"I metadati sono memorizzati nella banca dati per un recupero più rapido."
 
 #: src/playlist/Playlist.qml:448 src/playlist/Playlist.qml:469
 msgctxt "@action:button"
@@ -939,7 +943,7 @@ msgstr "Copia l'URL"
 #: src/playlist/Playlist.qml:714
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Aggiorna i metadati"
 
 #: src/playlist/Playlist.qml:724
 msgctxt "@info:tooltip"
@@ -947,6 +951,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Aggiorna i metadati nella banca dati con metadati contenuti nel file.\n"
+"I metadati sono memorizzati nella banca dati per un recupero più rapido."
 
 #: src/playlist/Playlist.qml:736
 msgctxt "@action:inmenu"
@@ -1021,9 +1027,6 @@ msgstr "Filtro"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:96
 #: src/playlist/PlaylistAdvancedSortWindow.qml:357
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filtro"
@@ -1538,9 +1541,6 @@ msgid "Audio Track"
 msgstr "Traccia audio"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Altro"
@@ -1840,14 +1840,14 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Priorità di selezione traccia:<br>- ID traccia preferita<br>- traccia che "
+"corrisponde alla lingua preferita<br>- traccia predefinita<br>- nessuna "
+"traccia"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Traccia preferita"
+msgstr "ID traccia preferita"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1959,56 +1959,41 @@ msgid "&Add"
 msgstr "&Aggiungi"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "File recenti max."
+msgstr "Pulisci i file recenti"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Pulisci"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Elimina i file recenti dalla banca dati"
+msgstr "Elimina tutti i file recenti salvati nella banca dati"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Pulisci metadati"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Elimina i file recenti dalla banca dati"
+msgstr "Elimina tutti i metadati salvati nella banca dati"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Ripristina la posizione della riproduzione"
+msgstr "Pulisci posizioni di riproduzione"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Elimina tutte le posizioni della riproduzione salvate nella banca dati"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2358,7 +2343,7 @@ msgstr "Mostra barra degli strumenti"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Mostra suggerimenti esplicativi"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2368,6 +2353,11 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Riguarda soltanto i suggerimenti che spiegano come funziona o cosa fa "
+"qualcosa.<br><br>I suggerimenti che mostrano informazioni aggiuntive non "
+"saranno disattivati (per es. il suggerimento della barra di ricerca che "
+"mostra il tempo alla posizione del mouse, o i suggerimenti relativi al testo "
+"troncato)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2976,7 +2966,7 @@ msgstr "Comandi personalizzati"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Banca dati"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
