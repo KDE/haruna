@@ -268,9 +268,9 @@ void MpvItem::setupConnections()
     QDBusConnection::sessionBus().registerObject(u"/org/mpris/MediaPlayer2"_s, this, QDBusConnection::ExportAdaptors);
 
     // org.mpris.MediaPlayer2 mpris2 interface
-    static MediaPlayer2 mp2(this);
-    connect(&mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
-    static MediaPlayer2Player mp2Player(this);
+    auto *mp2 = new MediaPlayer2(this);
+    connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
+    new MediaPlayer2Player(this);
 #endif
 
     connect(this, &MpvItem::pauseChanged, this, [this]() {
