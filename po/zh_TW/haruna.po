@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-26 00:44+0000\n"
+"POT-Creation-Date: 2026-06-30 00:42+0000\n"
 "PO-Revision-Date: 2026-05-12 03:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -615,29 +615,29 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/mpv/mpvitem.cpp:84
+#: src/mpv/mpvitem.cpp:83
 #, kde-format
 msgid "Command line video player"
 msgstr "命令列影片播放器"
 
-#: src/mpv/mpvitem.cpp:91
+#: src/mpv/mpvitem.cpp:90
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "跨平台的影音錄製、轉換與串流解決方案"
 
-#: src/mpv/mpvitem.cpp:361
+#: src/mpv/mpvitem.cpp:336
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "無法播放：%1"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:438
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "音量：%1"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:471
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -645,50 +645,50 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "字幕延遲：%1 秒"
 
-#: src/mpv/mpvitem.cpp:498
+#: src/mpv/mpvitem.cpp:473
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕延遲：%1 秒"
 
-#: src/mpv/mpvitem.cpp:542
+#: src/mpv/mpvitem.cpp:517
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "檔案不存在：%1"
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:549
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:562
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "無"
 
-#: src/mpv/mpvitem.cpp:636
+#: src/mpv/mpvitem.cpp:611
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "螢幕截圖失敗"
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "已擷取螢幕截圖"
 
-#: src/mpv/mpvitem.cpp:643
+#: src/mpv/mpvitem.cpp:618
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "螢幕截圖：%1"
 
-#: src/mpv/mpvitem.cpp:676
+#: src/mpv/mpvitem.cpp:651
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -696,13 +696,13 @@ msgid ""
 "due to missing codecs"
 msgstr "未偵測到視訊軌，這大概是因為缺乏解碼器而無法解碼/播放視訊軌"
 
-#: src/mpv/mpvitem.cpp:713
+#: src/mpv/mpvitem.cpp:688
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "已跳過章節：%1"
 
-#: src/mpv/mpvitem.cpp:808
+#: src/mpv/mpvitem.cpp:783
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -710,13 +710,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "音訊：%1 %2"
 
-#: src/mpv/mpvitem.cpp:819
+#: src/mpv/mpvitem.cpp:794
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "字幕：無"
 
-#: src/mpv/mpvitem.cpp:824 src/mpv/mpvitem.cpp:840
+#: src/mpv/mpvitem.cpp:799 src/mpv/mpvitem.cpp:815
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -724,153 +724,153 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/mpv/mpvitem.cpp:835
+#: src/mpv/mpvitem.cpp:810
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
 msgstr "第二字幕：無"
 
-#: src/playlist/Playlist.qml:128
+#: src/playlist/Playlist.qml:134
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "新增播放清單"
 
-#: src/playlist/Playlist.qml:139
+#: src/playlist/Playlist.qml:145
 msgctxt "@action:button"
 msgid "Search"
 msgstr "搜尋"
 
-#: src/playlist/Playlist.qml:159
+#: src/playlist/Playlist.qml:165
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "新增…"
 
-#: src/playlist/Playlist.qml:167
+#: src/playlist/Playlist.qml:173
 msgctxt "@action:button"
 msgid "Files"
 msgstr "檔案"
 
-#: src/playlist/Playlist.qml:175
+#: src/playlist/Playlist.qml:181
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/playlist/Playlist.qml:185
+#: src/playlist/Playlist.qml:191
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "播放清單"
 
-#: src/playlist/Playlist.qml:194
+#: src/playlist/Playlist.qml:200
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "排序"
 
-#: src/playlist/Playlist.qml:203
+#: src/playlist/Playlist.qml:209
 msgctxt "@action:button"
 msgid "Ascending"
 msgstr "遞增"
 
-#: src/playlist/Playlist.qml:220
+#: src/playlist/Playlist.qml:226
 msgctxt "@action:button"
 msgid "Descending"
 msgstr "遞減"
 
-#: src/playlist/Playlist.qml:243
+#: src/playlist/Playlist.qml:249
 msgctxt "@action:button"
 msgid "None"
 msgstr "無"
 
-#: src/playlist/Playlist.qml:253
+#: src/playlist/Playlist.qml:259
 msgctxt "@action:button"
 msgid "File Name"
 msgstr "檔案名稱"
 
-#: src/playlist/Playlist.qml:263
+#: src/playlist/Playlist.qml:269
 msgctxt "@action:button"
 msgid "Title"
 msgstr "標題"
 
-#: src/playlist/Playlist.qml:273
+#: src/playlist/Playlist.qml:279
 msgctxt "@action:button"
 msgid "Duration"
 msgstr "長度"
 
-#: src/playlist/Playlist.qml:283
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr "修改日期"
 
-#: src/playlist/Playlist.qml:293
+#: src/playlist/Playlist.qml:299
 msgctxt "@action:button"
 msgid "File Size"
 msgstr "檔案大小"
 
-#: src/playlist/Playlist.qml:303
+#: src/playlist/Playlist.qml:309
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "音軌編號"
 
-#: src/playlist/Playlist.qml:313
+#: src/playlist/Playlist.qml:319
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr "取樣頻率"
 
-#: src/playlist/Playlist.qml:323
+#: src/playlist/Playlist.qml:329
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "位元率"
 
-#: src/playlist/Playlist.qml:338
+#: src/playlist/Playlist.qml:344
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "自訂…"
 
-#: src/playlist/Playlist.qml:349
+#: src/playlist/Playlist.qml:355
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "播放"
 
-#: src/playlist/Playlist.qml:355
+#: src/playlist/Playlist.qml:361
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "重複播放清單"
 
-#: src/playlist/Playlist.qml:366
+#: src/playlist/Playlist.qml:372
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "在最後一個項目之後停止"
 
-#: src/playlist/Playlist.qml:376
+#: src/playlist/Playlist.qml:382
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "重複播放項目"
 
-#: src/playlist/Playlist.qml:387
+#: src/playlist/Playlist.qml:393
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "在項目之後停止"
 
-#: src/playlist/Playlist.qml:397
+#: src/playlist/Playlist.qml:403
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "隨機播放"
 
-#: src/playlist/Playlist.qml:409
+#: src/playlist/Playlist.qml:415
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "清除"
 
-#: src/playlist/Playlist.qml:417
+#: src/playlist/Playlist.qml:423
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "另存新檔"
 
-#: src/playlist/Playlist.qml:427
+#: src/playlist/Playlist.qml:433
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
 msgstr ""
 
-#: src/playlist/Playlist.qml:433
+#: src/playlist/Playlist.qml:440
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -879,12 +879,12 @@ msgid ""
 "Metadata is stored in the database for faster retrival."
 msgstr ""
 
-#: src/playlist/Playlist.qml:448 src/playlist/Playlist.qml:469
+#: src/playlist/Playlist.qml:456 src/playlist/Playlist.qml:477
 msgctxt "@action:button"
 msgid "Add"
 msgstr "新增"
 
-#: src/playlist/Playlist.qml:451 src/qml/Main.qml:492
+#: src/playlist/Playlist.qml:459 src/qml/Main.qml:463
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -893,131 +893,131 @@ msgstr ""
 "沒有找到 <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 或是 <a "
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>。"
 
-#: src/playlist/Playlist.qml:468
+#: src/playlist/Playlist.qml:476
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "播放清單名稱"
 
-#: src/playlist/Playlist.qml:657
+#: src/playlist/Playlist.qml:665
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
 
-#: src/playlist/Playlist.qml:663
+#: src/playlist/Playlist.qml:671
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "在瀏覽器開啟"
 
-#: src/playlist/Playlist.qml:672
+#: src/playlist/Playlist.qml:680
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr "在縮圖產生器中開啟"
 
-#: src/playlist/Playlist.qml:688
+#: src/playlist/Playlist.qml:696
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "在 %1 開啟"
 
-#: src/playlist/Playlist.qml:699
+#: src/playlist/Playlist.qml:707
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "複製名稱"
 
-#: src/playlist/Playlist.qml:705
+#: src/playlist/Playlist.qml:713
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "複製路徑"
 
-#: src/playlist/Playlist.qml:706
+#: src/playlist/Playlist.qml:714
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "複製 URL"
 
-#: src/playlist/Playlist.qml:714
+#: src/playlist/Playlist.qml:722
 msgctxt "@action:inmenu"
 msgid "Update metadata"
 msgstr ""
 
-#: src/playlist/Playlist.qml:724
+#: src/playlist/Playlist.qml:732
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
 
-#: src/playlist/Playlist.qml:736
+#: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "全部選取"
 
-#: src/playlist/Playlist.qml:740
+#: src/playlist/Playlist.qml:748
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "全部取消選取"
 
-#: src/playlist/Playlist.qml:744
+#: src/playlist/Playlist.qml:752
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "反轉選取"
 
-#: src/playlist/Playlist.qml:749
+#: src/playlist/Playlist.qml:757
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "從播放清單移除"
 
-#: src/playlist/Playlist.qml:755
+#: src/playlist/Playlist.qml:763
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "從播放清單移除所選"
 
-#: src/playlist/Playlist.qml:761 src/playlist/PlaylistTabBar.qml:63
+#: src/playlist/Playlist.qml:769 src/playlist/PlaylistTabBar.qml:63
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "重新命名"
 
-#: src/playlist/Playlist.qml:767
+#: src/playlist/Playlist.qml:775
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "捲動到目前播放的項目"
 
-#: src/playlist/Playlist.qml:777
+#: src/playlist/Playlist.qml:785
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "將檔案移到垃圾桶"
 
-#: src/playlist/Playlist.qml:783
+#: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "將所選檔案移到垃圾桶"
 
-#: src/playlist/Playlist.qml:890 src/qml/Settings/VideoSettings.qml:72
+#: src/playlist/Playlist.qml:898 src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "選擇檔案"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:28
+#: src/playlist/PlaylistAdvancedSortWindow.qml:52
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
 msgstr "進階排序與分組"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:45
+#: src/playlist/PlaylistAdvancedSortWindow.qml:69
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
 msgstr "播放清單：%1"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:52
+#: src/playlist/PlaylistAdvancedSortWindow.qml:76
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "排序"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:77
-#: src/playlist/PlaylistAdvancedSortWindow.qml:338
+#: src/playlist/PlaylistAdvancedSortWindow.qml:101
+#: src/playlist/PlaylistAdvancedSortWindow.qml:362
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "過濾"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:96
-#: src/playlist/PlaylistAdvancedSortWindow.qml:357
+#: src/playlist/PlaylistAdvancedSortWindow.qml:120
+#: src/playlist/PlaylistAdvancedSortWindow.qml:381
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Filter"
@@ -1025,51 +1025,51 @@ msgctxt "@title:menu"
 msgid "Filter"
 msgstr "過濾"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:103
-#: src/playlist/PlaylistAdvancedSortWindow.qml:364
+#: src/playlist/PlaylistAdvancedSortWindow.qml:127
+#: src/playlist/PlaylistAdvancedSortWindow.qml:388
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "全部"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:114
-#: src/playlist/PlaylistAdvancedSortWindow.qml:375
+#: src/playlist/PlaylistAdvancedSortWindow.qml:138
+#: src/playlist/PlaylistAdvancedSortWindow.qml:399
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "檔案"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:125
-#: src/playlist/PlaylistAdvancedSortWindow.qml:386
+#: src/playlist/PlaylistAdvancedSortWindow.qml:149
+#: src/playlist/PlaylistAdvancedSortWindow.qml:410
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "音效"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:136
-#: src/playlist/PlaylistAdvancedSortWindow.qml:397
+#: src/playlist/PlaylistAdvancedSortWindow.qml:160
+#: src/playlist/PlaylistAdvancedSortWindow.qml:421
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "影片"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:183
+#: src/playlist/PlaylistAdvancedSortWindow.qml:207
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "遞增"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:196
+#: src/playlist/PlaylistAdvancedSortWindow.qml:220
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "遞減"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:314
+#: src/playlist/PlaylistAdvancedSortWindow.qml:338
 msgctxt "@label group"
 msgid "Grouping"
 msgstr "分組"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:412
+#: src/playlist/PlaylistAdvancedSortWindow.qml:436
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr "顯示區塊"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:422
+#: src/playlist/PlaylistAdvancedSortWindow.qml:446
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
@@ -1079,32 +1079,32 @@ msgstr ""
 "在播放清單檢視中顯示/隱藏區塊標題。<br>如果播放清單並非以內含的群組屬性以相同"
 "方向排序，則區塊可能會重複。"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:533
+#: src/playlist/PlaylistAdvancedSortWindow.qml:557
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "新增行"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:746
+#: src/playlist/PlaylistAdvancedSortWindow.qml:770
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
 msgstr "屬性空白或重複時隱藏。"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:748
+#: src/playlist/PlaylistAdvancedSortWindow.qml:772
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr "屬性已顯示，空白時會顯示佔位文字。"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:753
+#: src/playlist/PlaylistAdvancedSortWindow.qml:777
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "遞增排序"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:755
+#: src/playlist/PlaylistAdvancedSortWindow.qml:779
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "遞減排序"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:757
+#: src/playlist/PlaylistAdvancedSortWindow.qml:781
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "與主排序方向相同"
@@ -1635,17 +1635,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:442
+#: src/qml/Main.qml:413
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "選擇檔案"
 
-#: src/qml/Main.qml:462
+#: src/qml/Main.qml:433
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "選擇字幕檔案"
 
-#: src/qml/Main.qml:489
+#: src/qml/Main.qml:460
 msgctxt "@action:button"
 msgid "Open"
 msgstr "開啟"
@@ -3199,7 +3199,7 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr "允許暫時無視 yt-dlp 的格式選取設定。該設定從圖形介面中修改時會被覆寫"
 
-#: src/youtube/youtube.cpp:80
+#: src/youtube/youtube.cpp:75
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
 msgid ""

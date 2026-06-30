@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-26 00:44+0000\n"
+"POT-Creation-Date: 2026-06-30 00:42+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -683,17 +683,17 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:84
+#: src/mpv/mpvitem.cpp:83
 #, kde-format
 msgid "Command line video player"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:91
+#: src/mpv/mpvitem.cpp:90
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:361
+#: src/mpv/mpvitem.cpp:336
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -701,13 +701,13 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ne eblis ludi: %1"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:438
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Laŭteco: %1"
 
-#: src/mpv/mpvitem.cpp:496
+#: src/mpv/mpvitem.cpp:471
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -715,44 +715,44 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Subtitola tempumado: %1 sekundoj"
 
-#: src/mpv/mpvitem.cpp:498
+#: src/mpv/mpvitem.cpp:473
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Subtitola tempumado: %1 sekundoj"
 
-#: src/mpv/mpvitem.cpp:542
+#: src/mpv/mpvitem.cpp:517
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:574
+#: src/mpv/mpvitem.cpp:549
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:587
+#: src/mpv/mpvitem.cpp:562
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Neniu"
 
-#: src/mpv/mpvitem.cpp:636
+#: src/mpv/mpvitem.cpp:611
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekrankopio malsukcesis"
 
-#: src/mpv/mpvitem.cpp:641
+#: src/mpv/mpvitem.cpp:616
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekrankopio prenita"
 
-#: src/mpv/mpvitem.cpp:643
+#: src/mpv/mpvitem.cpp:618
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -760,7 +760,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekrankopio: %1"
 
-#: src/mpv/mpvitem.cpp:676
+#: src/mpv/mpvitem.cpp:651
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -770,13 +770,13 @@ msgstr ""
 "Neniu videotrako detektita, plej verŝajne la videotrako ne povas esti "
 "malkodita/ludata pro mankantaj kodekoj"
 
-#: src/mpv/mpvitem.cpp:713
+#: src/mpv/mpvitem.cpp:688
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Saltita ĉapitro: %1"
 
-#: src/mpv/mpvitem.cpp:808
+#: src/mpv/mpvitem.cpp:783
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -786,7 +786,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Aŭdio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:819
+#: src/mpv/mpvitem.cpp:794
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -794,7 +794,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtitolo: Neniu"
 
-#: src/mpv/mpvitem.cpp:824 src/mpv/mpvitem.cpp:840
+#: src/mpv/mpvitem.cpp:799 src/mpv/mpvitem.cpp:815
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -804,7 +804,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtitolo: %1 %2"
 
-#: src/mpv/mpvitem.cpp:835
+#: src/mpv/mpvitem.cpp:810
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -812,7 +812,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
 msgstr "Malĉefa Subtitolo"
 
-#: src/playlist/Playlist.qml:128
+#: src/playlist/Playlist.qml:134
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Add file to playlist"
@@ -820,17 +820,17 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Aldoni dosieron al ludlisto"
 
-#: src/playlist/Playlist.qml:139
+#: src/playlist/Playlist.qml:145
 msgctxt "@action:button"
 msgid "Search"
 msgstr ""
 
-#: src/playlist/Playlist.qml:159
+#: src/playlist/Playlist.qml:165
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
-#: src/playlist/Playlist.qml:167
+#: src/playlist/Playlist.qml:173
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -838,12 +838,12 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "Dosiero"
 
-#: src/playlist/Playlist.qml:175
+#: src/playlist/Playlist.qml:181
 msgctxt "@action:button"
 msgid "URL"
 msgstr ""
 
-#: src/playlist/Playlist.qml:185
+#: src/playlist/Playlist.qml:191
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -851,12 +851,12 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Ludlisto"
 
-#: src/playlist/Playlist.qml:194
+#: src/playlist/Playlist.qml:200
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Ordigi"
 
-#: src/playlist/Playlist.qml:203
+#: src/playlist/Playlist.qml:209
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -864,7 +864,7 @@ msgctxt "@action:button"
 msgid "Ascending"
 msgstr "Nomo supreniranta"
 
-#: src/playlist/Playlist.qml:220
+#: src/playlist/Playlist.qml:226
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -872,7 +872,7 @@ msgctxt "@action:button"
 msgid "Descending"
 msgstr "Nomo supreniranta"
 
-#: src/playlist/Playlist.qml:243
+#: src/playlist/Playlist.qml:249
 #, fuzzy
 #| msgctxt ""
 #| "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -881,7 +881,7 @@ msgctxt "@action:button"
 msgid "None"
 msgstr "Neniu"
 
-#: src/playlist/Playlist.qml:253
+#: src/playlist/Playlist.qml:259
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Volume: %1"
@@ -889,12 +889,12 @@ msgctxt "@action:button"
 msgid "File Name"
 msgstr "Laŭteco: %1"
 
-#: src/playlist/Playlist.qml:263
+#: src/playlist/Playlist.qml:269
 msgctxt "@action:button"
 msgid "Title"
 msgstr ""
 
-#: src/playlist/Playlist.qml:273
+#: src/playlist/Playlist.qml:279
 #, fuzzy
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -902,17 +902,17 @@ msgctxt "@action:button"
 msgid "Duration"
 msgstr "Saturiĝo"
 
-#: src/playlist/Playlist.qml:283
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr ""
 
-#: src/playlist/Playlist.qml:293
+#: src/playlist/Playlist.qml:299
 msgctxt "@action:button"
 msgid "File Size"
 msgstr ""
 
-#: src/playlist/Playlist.qml:303
+#: src/playlist/Playlist.qml:309
 #, fuzzy
 #| msgctxt "@title:menu"
 #| msgid "&Track"
@@ -920,22 +920,22 @@ msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "&Trako"
 
-#: src/playlist/Playlist.qml:313
+#: src/playlist/Playlist.qml:319
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr ""
 
-#: src/playlist/Playlist.qml:323
+#: src/playlist/Playlist.qml:329
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr ""
 
-#: src/playlist/Playlist.qml:338
+#: src/playlist/Playlist.qml:344
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr ""
 
-#: src/playlist/Playlist.qml:349
+#: src/playlist/Playlist.qml:355
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -943,7 +943,7 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "Reproduktado"
 
-#: src/playlist/Playlist.qml:355
+#: src/playlist/Playlist.qml:361
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open playlist"
@@ -951,12 +951,12 @@ msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Malfermi ludliston"
 
-#: src/playlist/Playlist.qml:366
+#: src/playlist/Playlist.qml:372
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/playlist/Playlist.qml:376
+#: src/playlist/Playlist.qml:382
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Repeat"
@@ -964,12 +964,12 @@ msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Ripeti"
 
-#: src/playlist/Playlist.qml:387
+#: src/playlist/Playlist.qml:393
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/playlist/Playlist.qml:397
+#: src/playlist/Playlist.qml:403
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Restart Playback"
@@ -977,12 +977,12 @@ msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Rekomenci Reproduktadon"
 
-#: src/playlist/Playlist.qml:409
+#: src/playlist/Playlist.qml:415
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Forviŝi"
 
-#: src/playlist/Playlist.qml:417
+#: src/playlist/Playlist.qml:423
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Save as"
@@ -990,12 +990,12 @@ msgctxt "@action:button"
 msgid "Save As"
 msgstr "Konservi kiel"
 
-#: src/playlist/Playlist.qml:427
+#: src/playlist/Playlist.qml:433
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
 msgstr ""
 
-#: src/playlist/Playlist.qml:433
+#: src/playlist/Playlist.qml:440
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -1004,12 +1004,12 @@ msgid ""
 "Metadata is stored in the database for faster retrival."
 msgstr ""
 
-#: src/playlist/Playlist.qml:448 src/playlist/Playlist.qml:469
+#: src/playlist/Playlist.qml:456 src/playlist/Playlist.qml:477
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/playlist/Playlist.qml:451 src/qml/Main.qml:492
+#: src/playlist/Playlist.qml:459 src/qml/Main.qml:463
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1018,7 +1018,7 @@ msgstr ""
 "Nek <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nek <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> estis trovita."
 
-#: src/playlist/Playlist.qml:468
+#: src/playlist/Playlist.qml:476
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Playlist style"
@@ -1026,7 +1026,7 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "Stilo de ludlisto"
 
-#: src/playlist/Playlist.qml:657
+#: src/playlist/Playlist.qml:665
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open containing folder"
@@ -1034,7 +1034,7 @@ msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Malfermi enhavantan dosierujon"
 
-#: src/playlist/Playlist.qml:663
+#: src/playlist/Playlist.qml:671
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1042,12 +1042,12 @@ msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Malfermi en foliumilo"
 
-#: src/playlist/Playlist.qml:672
+#: src/playlist/Playlist.qml:680
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr ""
 
-#: src/playlist/Playlist.qml:688
+#: src/playlist/Playlist.qml:696
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in browser"
@@ -1055,7 +1055,7 @@ msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "Malfermi en foliumilo"
 
-#: src/playlist/Playlist.qml:699
+#: src/playlist/Playlist.qml:707
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy name"
@@ -1063,7 +1063,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Kopii nomon"
 
-#: src/playlist/Playlist.qml:705
+#: src/playlist/Playlist.qml:713
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy path"
@@ -1071,7 +1071,7 @@ msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Kopii vojon"
 
-#: src/playlist/Playlist.qml:706
+#: src/playlist/Playlist.qml:714
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Copy url"
@@ -1079,19 +1079,19 @@ msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Kopii url"
 
-#: src/playlist/Playlist.qml:714
+#: src/playlist/Playlist.qml:722
 msgctxt "@action:inmenu"
 msgid "Update metadata"
 msgstr ""
 
-#: src/playlist/Playlist.qml:724
+#: src/playlist/Playlist.qml:732
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
 
-#: src/playlist/Playlist.qml:736
+#: src/playlist/Playlist.qml:744
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1099,7 +1099,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Elekti dosieron"
 
-#: src/playlist/Playlist.qml:740
+#: src/playlist/Playlist.qml:748
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1107,14 +1107,14 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Elekti dosieron"
 
-#: src/playlist/Playlist.qml:744
+#: src/playlist/Playlist.qml:752
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Elekto de formato"
 
-#: src/playlist/Playlist.qml:749
+#: src/playlist/Playlist.qml:757
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1122,7 +1122,7 @@ msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Forigi el ludlisto"
 
-#: src/playlist/Playlist.qml:755
+#: src/playlist/Playlist.qml:763
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from playlist"
@@ -1130,12 +1130,12 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Forigi el ludlisto"
 
-#: src/playlist/Playlist.qml:761 src/playlist/PlaylistTabBar.qml:63
+#: src/playlist/Playlist.qml:769 src/playlist/PlaylistTabBar.qml:63
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Alinomi"
 
-#: src/playlist/Playlist.qml:767
+#: src/playlist/Playlist.qml:775
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Scroll to playing item"
@@ -1143,27 +1143,27 @@ msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Rulumi al ludanta ero"
 
-#: src/playlist/Playlist.qml:777
+#: src/playlist/Playlist.qml:785
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr ""
 
-#: src/playlist/Playlist.qml:783
+#: src/playlist/Playlist.qml:791
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr ""
 
-#: src/playlist/Playlist.qml:890 src/qml/Settings/VideoSettings.qml:72
+#: src/playlist/Playlist.qml:898 src/qml/Settings/VideoSettings.qml:72
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Elekti dosieron"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:28
+#: src/playlist/PlaylistAdvancedSortWindow.qml:52
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:45
+#: src/playlist/PlaylistAdvancedSortWindow.qml:69
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -1171,7 +1171,7 @@ msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
 msgstr "Ludlisto"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:52
+#: src/playlist/PlaylistAdvancedSortWindow.qml:76
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Sort"
@@ -1179,26 +1179,26 @@ msgctxt "@label sort"
 msgid "Sorting"
 msgstr "Ordigi"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:77
-#: src/playlist/PlaylistAdvancedSortWindow.qml:338
+#: src/playlist/PlaylistAdvancedSortWindow.qml:101
+#: src/playlist/PlaylistAdvancedSortWindow.qml:362
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:96
-#: src/playlist/PlaylistAdvancedSortWindow.qml:357
+#: src/playlist/PlaylistAdvancedSortWindow.qml:120
+#: src/playlist/PlaylistAdvancedSortWindow.qml:381
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:103
-#: src/playlist/PlaylistAdvancedSortWindow.qml:364
+#: src/playlist/PlaylistAdvancedSortWindow.qml:127
+#: src/playlist/PlaylistAdvancedSortWindow.qml:388
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:114
-#: src/playlist/PlaylistAdvancedSortWindow.qml:375
+#: src/playlist/PlaylistAdvancedSortWindow.qml:138
+#: src/playlist/PlaylistAdvancedSortWindow.qml:399
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -1206,8 +1206,8 @@ msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Dosiero"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:125
-#: src/playlist/PlaylistAdvancedSortWindow.qml:386
+#: src/playlist/PlaylistAdvancedSortWindow.qml:149
+#: src/playlist/PlaylistAdvancedSortWindow.qml:410
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Audio"
@@ -1215,8 +1215,8 @@ msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "Aŭdio"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:136
-#: src/playlist/PlaylistAdvancedSortWindow.qml:397
+#: src/playlist/PlaylistAdvancedSortWindow.qml:160
+#: src/playlist/PlaylistAdvancedSortWindow.qml:421
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Video"
@@ -1224,7 +1224,7 @@ msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "Video"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:183
+#: src/playlist/PlaylistAdvancedSortWindow.qml:207
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -1232,7 +1232,7 @@ msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "Nomo supreniranta"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:196
+#: src/playlist/PlaylistAdvancedSortWindow.qml:220
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name ascending"
@@ -1240,17 +1240,17 @@ msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "Nomo supreniranta"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:314
+#: src/playlist/PlaylistAdvancedSortWindow.qml:338
 msgctxt "@label group"
 msgid "Grouping"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:412
+#: src/playlist/PlaylistAdvancedSortWindow.qml:436
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:422
+#: src/playlist/PlaylistAdvancedSortWindow.qml:446
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
@@ -1258,7 +1258,7 @@ msgid ""
 "might not be unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:533
+#: src/playlist/PlaylistAdvancedSortWindow.qml:557
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Add new folder"
@@ -1266,17 +1266,17 @@ msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "Aldoni novan dosierujon"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:746
+#: src/playlist/PlaylistAdvancedSortWindow.qml:770
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:748
+#: src/playlist/PlaylistAdvancedSortWindow.qml:772
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr ""
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:753
+#: src/playlist/PlaylistAdvancedSortWindow.qml:777
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration ascending"
@@ -1284,7 +1284,7 @@ msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "Daŭro supreniranta"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:755
+#: src/playlist/PlaylistAdvancedSortWindow.qml:779
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Duration descending"
@@ -1292,7 +1292,7 @@ msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "Daŭro malsupreniranta"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:757
+#: src/playlist/PlaylistAdvancedSortWindow.qml:781
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr ""
@@ -1896,7 +1896,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:442
+#: src/qml/Main.qml:413
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1904,7 +1904,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Elekti dosieron"
 
-#: src/qml/Main.qml:462
+#: src/qml/Main.qml:433
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1912,7 +1912,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Elekti subtitolan dosieron"
 
-#: src/qml/Main.qml:489
+#: src/qml/Main.qml:460
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Malfermi"
@@ -3696,7 +3696,7 @@ msgstr ""
 "Permesas provizore anstataŭi la ytdl-formatan elekton. Estos anstataŭita se "
 "la agordo estas ŝanĝita per la GUI"
 
-#: src/youtube/youtube.cpp:80
+#: src/youtube/youtube.cpp:75
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
 msgid ""
