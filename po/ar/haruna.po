@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2026-06-21 20:28+0400\n"
+"PO-Revision-Date: 2026-06-30 21:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -867,7 +867,7 @@ msgstr "احفظ كَ‍"
 #: src/playlist/Playlist.qml:433
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "حدّث كل البيانات الوصفيّة"
 
 #: src/playlist/Playlist.qml:440
 msgctxt "@info:tooltip"
@@ -877,6 +877,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"حدّث بيانات الوصفية لجميع الملفات الموجودة في قائمة التشغيل\n"
+"\n"
+"حدّث بيانات الوصفية في قاعدة البيانات باستخدام البيانات الموجودة داخل الملف.\n"
+"تُخزّن بيانات الوصفية في قاعدة البيانات لتسريع عملية الاسترجاع."
 
 #: src/playlist/Playlist.qml:456 src/playlist/Playlist.qml:477
 msgctxt "@action:button"
@@ -943,6 +947,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"حدّث بيانات الوصفية في قاعدة البيانات باستخدام البيانات الموجودة داخل الملف.\n"
+"تُخزّن بيانات الوصفية في قاعدة البيانات لتسريع عملية الاسترجاع."
 
 #: src/playlist/Playlist.qml:744
 msgctxt "@action:inmenu"
@@ -1827,6 +1833,8 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"أولوية اختيار المسار:<br>- معرّف المسار المفضل<br>- المسار المطابق للغة "
+"المفضلة<br>- المسار المبدئي<br>- لا يوجد مسار"
 
 #: src/qml/Settings/AudioSettings.qml:62
 msgctxt "@label:spinbox"
@@ -1954,12 +1962,9 @@ msgid "Clear"
 msgstr "امحُ"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "يحذف الملفات الحديثة من قاعدة البيانات"
+msgstr "يحذف كل الملفات الحديثة في قاعدة البيانات"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
@@ -1967,25 +1972,19 @@ msgid "Clear metadata"
 msgstr "امحُ البيانات الوصفيّة"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "يحذف الملفات الحديثة من قاعدة البيانات"
+msgstr "يحذف كل البيانات الوصفية في قاعدة البيانات"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "استعد موضوع التشغيل"
+msgstr "امحُ مواضع التشغيل"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "يحذف جميع مواضع التشغيل المحفوظة في قاعدة البيانات"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2323,7 +2322,7 @@ msgstr "اعرض شريط الأدوات"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "اعرض تلميحات توضيحية"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2333,6 +2332,9 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"يقتصر تأثير هذا الإعداد على التلميحات التي تشرح كيفية عمل شيء ما أو وظيفته."
+"<br><br>لن تعطّل التلميحات التي تعرض معلومات إضافية (مثل تلميح شريط التمرير "
+"الذي يعرض الوقت عند موضع الفأرة، والتلميحات الخاصة بالنصوص المقتطعة)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
