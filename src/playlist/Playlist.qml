@@ -22,21 +22,16 @@ import org.kde.haruna.utilities
 import org.kde.haruna.settings
 import org.kde.haruna.youtube
 
-Page {
+ResizeablePage {
     id: root
-
-    required property MpvVideo m_mpv
-    required property real fsScale
-    required property int mainWindowWidth
 
     property alias advancedSortWindow: advancedSortWindow
     property alias manager: playlistsManager
-    property bool isSmallWindowSize: mainWindowWidth < 600
-    property int buttonSize: Kirigami.Units.iconSizes.small
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
-    property real customWidth: PlaylistSettings.playlistWidth
 
+    edge: PlaylistSettings.position === "right" ? Qt.RightEdge : Qt.LeftEdge
+    customWidth: PlaylistSettings.playlistWidth
     width: limitWidth(customWidth * fsScale)
 
     function limitWidth(pWidth) {
@@ -47,23 +42,18 @@ Page {
         }
     }
 
-    function saveWidth() {
+    onResize: function (delta) {
+        // invert the drag delta when the playlist is anchored to the right
+        // dragging left (pX is negative) expands a right-aligned playlist, but shrinks a left-aligned one
+        const widthDelta = root.edge === Qt.RightEdge ? delta * -1 : delta;
+        root.customWidth = root.limitWidth(root.customWidth + widthDelta)
+    }
+
+    onSaveWidth: {
         PlaylistSettings.playlistWidth = root.customWidth ? root.customWidth : 260
         PlaylistSettings.save()
     }
 
-    function resizeHandlerPositionChanged(pX) {
-        // invert the drag delta when the playlist is anchored to the right
-        // dragging left (pX is negative) expands a right-aligned playlist, but shrinks a left-aligned one
-        const widthDelta = PlaylistSettings.position === "right" ? pX * -1 : pX;
-        const width = root.limitWidth(root.customWidth + widthDelta)
-        root.customWidth = width
-    }
-
-
-    x: PlaylistSettings.position === "right" ? mainWindowWidth : -width
-    y: 0
-    padding: 0
     state: PlaylistSettings.rememberState
            ? (PlaylistSettings.visible ? "visible" : "hidden")
            : "hidden"
@@ -71,6 +61,7 @@ Page {
     onStateChanged: {
         PlaylistSettings.visible = state === "visible" ? true : false
         PlaylistSettings.save()
+
         if (state === "hidden") {
             contextMenuLoader.active = false
         }
@@ -481,81 +472,20 @@ Page {
         }
     }
 
-    Rectangle {
-        Rectangle {
-            id: playlistEdgeBorder
-
-            x: PlaylistSettings.position === "right" ? 0 : parent.width - width
-            y: -root.implicitHeaderHeight
-            z: 30
-            width: 1
-            height: root.height
-            color: Kirigami.Theme.backgroundColor
-
-            ResizeHandler {
-                id: resizeHandlerTall
-
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: 8
-                height: parent.height
-
-                onPositionChanged: function (pX) {
-                    root.resizeHandlerPositionChanged(pX)
-                }
-
-                onReleased: {
-                    root.saveWidth()
-                }
-            }
-
-            Rectangle {
-                id: dragHandle
-
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
-                width: 5
-                height: 50
-                color: (resizeHandlerTall.hovered || resizeHandlerCentral.hovered) ? Kirigami.Theme.highlightColor : Kirigami.Theme.alternateBackgroundColor
-                radius: Kirigami.Units.cornerRadius
-                border {
-                    width: 1
-                    color: Kirigami.Theme.backgroundColor
-                }
-
-                ResizeHandler {
-                    id: resizeHandlerCentral
-
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: 18
-                    height: parent.height
-
-                    onPositionChanged: function (pX) {
-                        root.resizeHandlerPositionChanged(pX)
-                    }
-
-                    onReleased: {
-                        root.saveWidth()
-                    }
-                }
-            }
-        }
-
-        anchors.fill: parent
-        color: Kirigami.Theme.backgroundColor
-
+    pageContent: [       
         DropArea {
             id: playlistDropArea
 
             anchors.fill: playlistScrollView
             keys: ["text/uri-list"]
 
-            onDropped: drop => {
+            onDropped: function(drop) {
                 if (!containsDrag) {
                     return
                 }
                 playlistsManager.visiblePlaylist.addFilesAndFolders(drop.urls, PlaylistModel.Append)
             }
-        }
+        },
 
         ScrollView {
             id: playlistScrollView
@@ -563,8 +493,8 @@ Page {
             z: 20
             anchors.fill: parent
             anchors {
-                leftMargin: playlistEdgeBorder.width
-                rightMargin: playlistEdgeBorder.width
+                leftMargin: root.pageEdgeBorder.width
+                rightMargin: root.pageEdgeBorder.width
             }
 
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
@@ -649,7 +579,7 @@ Page {
                     contextMenuLoader.open(item)
                 }
             }
-        }
+        },
 
         Loader {
             id: contextMenuLoader
@@ -815,7 +745,7 @@ Page {
                 const contextMenu = contextMenuLoader.item as Menu
                 contextMenu.popup()
             }
-        }
+        },
 
         Component {
             id: playlistItemWithThumbnail
@@ -823,7 +753,7 @@ Page {
                 m_mpv: root.m_mpv
                 playlistsManager: playlistsManager
             }
-        }
+        },
 
         Component {
             id: playlistItemSimple
@@ -831,7 +761,7 @@ Page {
                 m_mpv: root.m_mpv
                 playlistsManager: playlistsManager
             }
-        }
+        },
 
         Component {
             id: playlistItemCompact
@@ -839,7 +769,7 @@ Page {
                 m_mpv: root.m_mpv
                 playlistsManager: playlistsManager
             }
-        }
+        },
 
         // without a timer the scroll position is incorrect
         Timer {
@@ -852,7 +782,7 @@ Page {
             onTriggered: {
                 playlistView.positionViewAtIndex(playlistView.model.playingVideo, ListView.Beginning)
             }
-        }
+        },
 
         ShaderEffectSource {
             id: shaderEffect
@@ -864,31 +794,29 @@ Page {
                 var rectTopLeftY = toolbar.visible ? toolbar.height : 0
                 if (PlaylistSettings.position === "right") {
                     return Qt.rect(
-                        root.x,
-                        root.m_mpv.y + rectTopLeftY,
-                        root.width,
-                        root.height - rectTopLeftY
-                        )
-                }
-                else {
+                                root.x,
+                                root.m_mpv.y + rectTopLeftY,
+                                root.width,
+                                root.height - rectTopLeftY
+                                )
+                } else {
                     return Qt.rect(
-                        root.x,
-                        rectTopLeftY,
-                        root.width,
-                        root.height - rectTopLeftY
-                        )
+                                root.x,
+                                rectTopLeftY,
+                                root.width,
+                                root.height - rectTopLeftY
+                                )
                 }
             }
-        }
+        },
 
         FastBlur {
             visible: PlaylistSettings.overlayVideo
             anchors.fill: shaderEffect
             radius: 100
             source: shaderEffect
-            z: 10
         }
-    }
+    ]
 
     FileDialog {
         id: fileDialog
@@ -928,68 +856,4 @@ Page {
             HarunaApp.actionsEnabled = !visible
         }
     }
-
-    states: [
-        State {
-            name: "hidden"
-
-            PropertyChanges {
-                root.x: PlaylistSettings.position === "right"
-                        ? root.mainWindowWidth
-                        : -width
-                root.visible: false
-            }
-        },
-        State {
-            name : "visible"
-
-            PropertyChanges {
-                root.x: PlaylistSettings.position === "right"
-                        ? root.mainWindowWidth - root.width + 1
-                        : 0
-                root.visible: true
-            }
-        }
-    ]
-
-    transitions: [
-        Transition {
-            from: "visible"
-            to: "hidden"
-
-            SequentialAnimation {
-                NumberAnimation {
-                    target: root
-                    property: "x"
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InQuad
-                }
-
-                PropertyAction {
-                    target: root
-                    property: "visible"
-                    value: false
-                }
-            }
-        },
-        Transition {
-            from: "hidden"
-            to: "visible"
-
-            SequentialAnimation {
-                PropertyAction {
-                    target: root
-                    property: "visible"
-                    value: true
-                }
-
-                NumberAnimation {
-                    target: root
-                    property: "x"
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.OutQuad
-                }
-            }
-        }
-    ]
 }
