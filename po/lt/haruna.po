@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-03 00:44+0000\n"
-"PO-Revision-Date: 2026-06-02 17:30+0300\n"
+"PO-Revision-Date: 2026-07-04 21:14+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -870,7 +870,7 @@ msgstr "Įrašyti kaip"
 #: src/playlist/Playlist.qml:424
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Atnaujinti visus metaduomenis"
 
 #: src/playlist/Playlist.qml:431
 msgctxt "@info:tooltip"
@@ -880,6 +880,11 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Atnaujinti visų grojaraštyje esančių failų metaduomenis\n"
+"\n"
+"Atnaujinti duomenų bazėje esančius metaduomenis metaduomenimis failo "
+"viduje.\n"
+"Greitesnei prieigai metaduomenys yra saugomi duomenų bazėje."
 
 #: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:468
 msgctxt "@action:button"
@@ -938,7 +943,7 @@ msgstr "Kopijuoti URL"
 #: src/playlist/Playlist.qml:652
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Atnaujinti metaduomenis"
 
 #: src/playlist/Playlist.qml:662
 msgctxt "@info:tooltip"
@@ -946,6 +951,9 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrival."
 msgstr ""
+"Atnaujinti duomenų bazėje esančius metaduomenis metaduomenimis failo "
+"viduje.\n"
+"Greitesnei prieigai metaduomenys yra saugomi duomenų bazėje."
 
 #: src/playlist/Playlist.qml:674
 msgctxt "@action:inmenu"
@@ -1020,9 +1028,6 @@ msgstr "Filtruoti"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:120
 #: src/playlist/PlaylistAdvancedSortWindow.qml:381
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filtruoti"
@@ -1537,9 +1542,6 @@ msgid "Audio Track"
 msgstr "Garso įrašo takelis"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Daugiau"
@@ -1838,14 +1840,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Takelio pasirinkimo prioritetas:<br>- pageidaujamo takelio id<br>- takelis, "
+"atitinkantis pageidaujamą kalbą<br>- numatytasis takelis<br>- nėra takelio"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Pageidaujamas takelis"
+msgstr "Pageidaujamo takelio id"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1956,56 +1957,41 @@ msgid "&Add"
 msgstr "&Pridėti"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Daugiausiai paskiausiai naudotų failų"
+msgstr "Išvalyti paskiausiai naudotus failus"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Išvalyti"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Ištrina iš duomenų bazės paskiausiai naudotus failus"
+msgstr "Ištrina visus duomenų bazėje įrašytus paskiausiai naudotus failus"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Išvalyti metaduomenis"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Ištrina iš duomenų bazės paskiausiai naudotus failus"
+msgstr "Ištrina visus duomenų bazėje įrašytus metaduomenis"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Atkurti atkūrimo poziciją"
+msgstr "Išvalyti atkūrimo pozicijas"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Ištrina visas duomenų bazėje įrašytas atkūrimo pozicijas"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2352,7 +2338,7 @@ msgstr "Rodyti įrankių juostą"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Rodyti paaiškinimus"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2362,6 +2348,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Paveikia tik paaiškinimus, kurie paaiškina kaip kažkas veikia ar ką daro."
+"<br><br>Paaiškinimai, rodantys papildomą informaciją, nebus išjungti (pvz., "
+"persukimo juostos paaiškinimas rodantis laiką pelės pozicijoje, sutrumpinto "
+"teksto paaiškinimai)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2985,7 +2975,7 @@ msgstr "Tinkintos komandos"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Duomenų bazė"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
