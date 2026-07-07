@@ -794,7 +794,7 @@ ResizeablePage {
                 var rectTopLeftY = toolbar.visible ? toolbar.height : 0
                 if (PlaylistSettings.position === "right") {
                     return Qt.rect(
-                                root.x,
+                                root.x - root.m_mpv.x,
                                 root.m_mpv.y + rectTopLeftY,
                                 root.width,
                                 root.height - rectTopLeftY

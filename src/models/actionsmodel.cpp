@@ -444,6 +444,14 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
+    action.name = u"toggleTranscriptAction"_s;
+    action.text = i18nc("@action", "Toggle Transcript Panel");
+    action.iconName = u"text-frame-link"_s;
+    action.defaultShortcut = Qt::CTRL | Qt::Key_P;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
     action.name = u"videoPanXLeftAction"_s;
     action.text = i18nc("@action", "Move Video Left");
     action.iconName = QString();

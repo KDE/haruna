@@ -31,6 +31,7 @@ Item {
     signal openFileDialog()
     signal openSubtitleDialog()
     signal togglePlaylist()
+    signal toggleTranscript()
 
     Instantiator {
         model: Models.actionsModel
@@ -358,6 +359,10 @@ Item {
 
         function onTogglePlaylistAction() {
             root.togglePlaylist()
+        }
+
+        function onToggleTranscriptAction() {
+            root.toggleTranscript()
         }
 
         function onVideoPanXLeftAction() {

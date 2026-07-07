@@ -17,6 +17,7 @@ import org.kde.config as KConfig
 
 import org.kde.haruna
 import org.kde.haruna.playlist
+import org.kde.haruna.transcript
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 import org.kde.haruna.youtube
@@ -212,12 +213,12 @@ ApplicationWindow {
         height: window.isFullScreen()
                 ? window.contentItem.height
                 : window.contentItem.height - (footer.isFloating ? 0 : footer.height)
-        anchors.left: PlaylistSettings.overlayVideo
-                      ? window.contentItem.left
-                      : (PlaylistSettings.position === "left" ? playlist.right : window.contentItem.left)
-        anchors.right: PlaylistSettings.overlayVideo
-                       ? window.contentItem.right
-                       : (PlaylistSettings.position === "right" ? playlist.left : window.contentItem.right)
+        anchors.left: playlist.edge === Qt.LeftEdge
+                      ? PlaylistSettings.overlayVideo ? window.contentItem.left : playlist.right
+                      : transcript.right
+        anchors.right: playlist.edge === Qt.RightEdge
+                       ? PlaylistSettings.overlayVideo ? window.contentItem.right : playlist.left
+                       : transcript.left
         anchors.top: window.contentItem.top
 
         onFilesDropped: function(urls: list<url>, mode: int) {
@@ -270,6 +271,26 @@ ApplicationWindow {
         anchors.left: PlaylistSettings.position === "left" ? playlist.right : undefined
         visible: playlist.visible
         HoverHandler {}
+    }
+
+    Transcript {
+        id: transcript
+
+        m_mpv: mpv
+        height: mpv.height
+        mainWindowWidth: window.width
+        fsScale: window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
+
+        Connections {
+            target: actions
+            function onToggleTranscript() {
+                if (transcript.state === "visible") {
+                    transcript.state = "hidden"
+                } else {
+                    transcript.state = "visible"
+                }
+            }
+        }
     }
 
     Playlist {

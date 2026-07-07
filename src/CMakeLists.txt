@@ -71,6 +71,7 @@ endif()
 
 add_subdirectory(framedecoder)
 add_subdirectory(playlist)
+add_subdirectory(transcript)
 add_subdirectory(utilities)
 add_subdirectory(settings)
 add_subdirectory(youtube)
@@ -182,6 +183,7 @@ target_link_libraries(haruna PRIVATE
 
     framedecoderplugin
     playlistplugin
+    transcriptplugin
     utilitiesplugin
     settingsplugin
     youtubeplugin
