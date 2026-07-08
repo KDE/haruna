@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-03 00:44+0000\n"
+"POT-Creation-Date: 2026-07-08 00:43+0000\n"
 "PO-Revision-Date: 2026-06-18 09:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -399,142 +399,148 @@ msgstr "Список відтворення"
 #: src/models/actionsmodel.cpp:448
 #, kde-format
 msgctxt "@action"
+msgid "Toggle Transcript Panel"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:456
+#, kde-format
+msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Пересунути відео ліворуч"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:464
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Пересунути відео праворуч"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Пересунути відео вище"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Пересунути відео нижче"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "Обернути за годинниковою стрілкою"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "Обернути проти годинникової стрілки"
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Збільшити гучність"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Зменшити гучність"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Збільшити"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Зменшити"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr "Скинути масштаб"
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Збільшити контрастність"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Зменшити контрастність"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Скинути контрастність"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Збільшити яскравість"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Зменшити яскравість"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Скинути яскравість"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr "Збільшити гамму"
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr "Зменшити гамму"
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Скинути гамму"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Збільшити насиченість"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Зменшити насиченість"
 
-#: src/models/actionsmodel.cpp:624
+#: src/models/actionsmodel.cpp:632
 #, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Скинути насиченість"
 
-#: src/models/actionsmodel.cpp:775
+#: src/models/actionsmodel.cpp:783
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -544,7 +550,7 @@ msgstr ""
 "Вибрана комбінація клавіш конфліктує із комбінацією клавіш для дії <b>%1</b>."
 "<br><br>Хочете призначити іншу комбінацію клавіш?"
 
-#: src/models/actionsmodel.cpp:781
+#: src/models/actionsmodel.cpp:789
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -891,7 +897,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Додати"
 
-#: src/playlist/Playlist.qml:450 src/qml/Main.qml:463
+#: src/playlist/Playlist.qml:450 src/qml/Main.qml:484
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1379,99 +1385,99 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Типовий"
 
-#: src/qml/Actions.qml:142
+#: src/qml/Actions.qml:143
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "Неможливо завантажити субтитри, якщо не відкрито жодного файла"
 
-#: src/qml/Actions.qml:161 src/qml/Actions.qml:167 src/qml/Actions.qml:172
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Швидкість відтворення: %1"
 
-#: src/qml/Actions.qml:273
+#: src/qml/Actions.qml:274
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Початок циклу: %1"
 
-#: src/qml/Actions.qml:279
+#: src/qml/Actions.qml:280
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Цикл: %1–%2"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:286
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Циклічне відтворення знято"
 
-#: src/qml/Actions.qml:305
+#: src/qml/Actions.qml:306
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Субтитри вимкнено"
 
-#: src/qml/Actions.qml:305
+#: src/qml/Actions.qml:306
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Субтитри увімкнено"
 
-#: src/qml/Actions.qml:321 src/qml/Actions.qml:327
+#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Масштаб субтитрів: %1"
 
-#: src/qml/Actions.qml:341
+#: src/qml/Actions.qml:342
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Усування черезрядковості: %1"
 
-#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
+#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Масштаб: %1"
 
-#: src/qml/Actions.qml:413
+#: src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Масштаб: 0"
 
-#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
+#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Контрастність: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Контрастність: 0"
 
-#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
+#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Яскравість: %1"
 
-#: src/qml/Actions.qml:447
+#: src/qml/Actions.qml:452
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Яскравість: 0"
 
-#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
+#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Гамма: %1"
 
-#: src/qml/Actions.qml:464
+#: src/qml/Actions.qml:469
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Гамма: 0"
 
-#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
+#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Насиченість: %1"
 
-#: src/qml/Actions.qml:481
+#: src/qml/Actions.qml:486
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Насиченість: 0"
@@ -1636,22 +1642,22 @@ msgstr ""
 "Автоматично пропускає глави, що містять певні слова або символи.\n"
 "Ознайомтеся з параметрами відтворення, щоб дізнатися більше"
 
-#: src/qml/Main.qml:43
+#: src/qml/Main.qml:44
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:413
+#: src/qml/Main.qml:434
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Виберіть файл"
 
-#: src/qml/Main.qml:433
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Виберіть файл субтитрів"
 
-#: src/qml/Main.qml:460
+#: src/qml/Main.qml:481
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Відкрити"
@@ -3229,6 +3235,14 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
 "Клацніть середньою кнопкою миші на повзунках, щоб відновити типові значення"
+
+#: src/transcript/Transcript.qml:55
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select Subtitles File"
+msgctxt "@info:tooltip"
+msgid "Select subtitle"
+msgstr "Виберіть файл субтитрів"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format

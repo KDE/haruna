@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-03 00:44+0000\n"
+"POT-Creation-Date: 2026-07-08 00:43+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -439,158 +439,164 @@ msgstr "वीडियो-सूची"
 #: src/models/actionsmodel.cpp:448
 #, kde-format
 msgctxt "@action"
-msgid "Move Video Left"
+msgid "Toggle Transcript Panel"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:456
 #, kde-format
 msgctxt "@action"
-msgid "Move Video Right"
+msgid "Move Video Left"
 msgstr ""
 
 #: src/models/actionsmodel.cpp:464
+#, kde-format
+msgctxt "@action"
+msgid "Move Video Right"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:472
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "उपशीर्षक चालू"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, fuzzy, kde-format
 #| msgid "Volume Up"
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "आवाज़ बढ़ाएँ"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, fuzzy, kde-format
 #| msgid "Volume Down"
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "आवाज़ घटाएँ"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, fuzzy, kde-format
 #| msgid "Zoom In"
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "ज़ूम इन"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, fuzzy, kde-format
 #| msgid "Zoom Out"
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "ज़ूम आउट"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "व्यतिरेक"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "व्यतिरेक"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, fuzzy, kde-format
 #| msgid "Contrast"
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "व्यतिरेक"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "चमकीलापन"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "चमकीलापन"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, fuzzy, kde-format
 #| msgid "Brightness"
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "चमकीलापन"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, fuzzy, kde-format
 #| msgid "Gamma"
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "गामा"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "संतृप्ति"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "संतृप्ति"
 
-#: src/models/actionsmodel.cpp:624
+#: src/models/actionsmodel.cpp:632
 #, fuzzy, kde-format
 #| msgid "Saturation"
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "संतृप्ति"
 
-#: src/models/actionsmodel.cpp:775
+#: src/models/actionsmodel.cpp:783
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -598,7 +604,7 @@ msgid ""
 "<br><br>Do you want to reassign the shortcut?"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:781
+#: src/models/actionsmodel.cpp:789
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -981,7 +987,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "जोड़ें (&A)"
 
-#: src/playlist/Playlist.qml:450 src/qml/Main.qml:463
+#: src/playlist/Playlist.qml:450 src/qml/Main.qml:484
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1526,129 +1532,129 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr ""
 
-#: src/qml/Actions.qml:142
+#: src/qml/Actions.qml:143
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr ""
 
-#: src/qml/Actions.qml:161 src/qml/Actions.qml:167 src/qml/Actions.qml:172
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "प्लेबैक"
 
-#: src/qml/Actions.qml:273
+#: src/qml/Actions.qml:274
 #, fuzzy
 #| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "लूप आरंभ : %1"
 
-#: src/qml/Actions.qml:279
+#: src/qml/Actions.qml:280
 #, fuzzy
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "लूप : %1 - %2"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:286
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr ""
 
-#: src/qml/Actions.qml:305
+#: src/qml/Actions.qml:306
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "उपशीर्षक बंद"
 
-#: src/qml/Actions.qml:305
+#: src/qml/Actions.qml:306
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "उपशीर्षक बंद"
 
-#: src/qml/Actions.qml:321 src/qml/Actions.qml:327
+#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "उपशीर्षक चालू"
 
-#: src/qml/Actions.qml:341
+#: src/qml/Actions.qml:342
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr ""
 
-#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
+#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "ज़ूम : %1"
 
-#: src/qml/Actions.qml:413
+#: src/qml/Actions.qml:418
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "ज़ूम : 0"
 
-#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
+#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:435
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "व्यतिरेक : 0"
 
-#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
+#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "चमकीलापन: %1"
 
-#: src/qml/Actions.qml:447
+#: src/qml/Actions.qml:452
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "चमकीलापन: 0"
 
-#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
+#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "गामा : %1"
 
-#: src/qml/Actions.qml:464
+#: src/qml/Actions.qml:469
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "गामा : 0"
 
-#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
+#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "संतृप्ति: %1"
 
-#: src/qml/Actions.qml:481
+#: src/qml/Actions.qml:486
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
@@ -1847,28 +1853,28 @@ msgid ""
 "Check “Playback” settings for more details."
 msgstr ""
 
-#: src/qml/Main.qml:43
+#: src/qml/Main.qml:44
 #, fuzzy
 #| msgid "Haruna"
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/Main.qml:413
+#: src/qml/Main.qml:434
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:433
+#: src/qml/Main.qml:454
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:460
+#: src/qml/Main.qml:481
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -3506,6 +3512,13 @@ msgstr "संतृप्ति"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr ""
+
+#: src/transcript/Transcript.qml:55
+#, fuzzy
+#| msgid "Select file"
+msgctxt "@info:tooltip"
+msgid "Select subtitle"
+msgstr "फ़ाइल चुनें"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, fuzzy, kde-format

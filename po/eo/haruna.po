@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-03 00:44+0000\n"
+"POT-Creation-Date: 2026-07-08 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -434,6 +434,12 @@ msgid "Playlist"
 msgstr "Ludlisto"
 
 #: src/models/actionsmodel.cpp:448
+#, kde-format
+msgctxt "@action"
+msgid "Toggle Transcript Panel"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:456
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Left"
@@ -441,7 +447,7 @@ msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Video Movi Maldekstren"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:464
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Right"
@@ -449,7 +455,7 @@ msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Video Movi Dekstren"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:472
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Up"
@@ -457,7 +463,7 @@ msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Video Movi Supren"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Video Move Down"
@@ -465,49 +471,49 @@ msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Video Movi Malsupren"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Laŭteco Supre"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Laŭteco Malsupren"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Zomi"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Malzomi"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -515,7 +521,7 @@ msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Kontrasto"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -523,7 +529,7 @@ msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Kontrasto"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Contrast"
@@ -531,7 +537,7 @@ msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Kontrasto"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -539,7 +545,7 @@ msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Brilo"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -547,7 +553,7 @@ msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Brilo"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Brightness"
@@ -555,19 +561,19 @@ msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Brilo"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr ""
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Gamma"
@@ -575,7 +581,7 @@ msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Gamo"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -583,7 +589,7 @@ msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Saturiĝo"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -591,7 +597,7 @@ msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Saturiĝo"
 
-#: src/models/actionsmodel.cpp:624
+#: src/models/actionsmodel.cpp:632
 #, fuzzy, kde-format
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -599,7 +605,7 @@ msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Saturiĝo"
 
-#: src/models/actionsmodel.cpp:775
+#: src/models/actionsmodel.cpp:783
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -609,7 +615,7 @@ msgstr ""
 "La elektita ŝparvojo konfliktas kun la ŝparvojo de la ago <b>%1</b>."
 "<br><br>Ĉu vi volas reatribui la ŝparvojon?"
 
-#: src/models/actionsmodel.cpp:781
+#: src/models/actionsmodel.cpp:789
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -1009,7 +1015,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/playlist/Playlist.qml:450 src/qml/Main.qml:463
+#: src/playlist/Playlist.qml:450 src/qml/Main.qml:484
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1590,7 +1596,7 @@ msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "Defaŭlta kovrilo"
 
-#: src/qml/Actions.qml:142
+#: src/qml/Actions.qml:143
 #, fuzzy
 #| msgctxt ""
 #| "osd message when trying to open subtile selection dialog while no file is "
@@ -1602,12 +1608,12 @@ msgctxt ""
 msgid "Can’t load subtitle when no file is open"
 msgstr "Ne eblas ŝargi subtekston kiam neniu dosiero estas malfermata"
 
-#: src/qml/Actions.qml:161 src/qml/Actions.qml:167 src/qml/Actions.qml:172
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Reprodukta rapideco: %1"
 
-#: src/qml/Actions.qml:273
+#: src/qml/Actions.qml:274
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop start: %1"
@@ -1615,7 +1621,7 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Buklokomenco: %1"
 
-#: src/qml/Actions.qml:279
+#: src/qml/Actions.qml:280
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop: %1 - %2"
@@ -1623,77 +1629,77 @@ msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Buklo: %1 - %2"
 
-#: src/qml/Actions.qml:285
+#: src/qml/Actions.qml:286
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Buklo malbarita"
 
-#: src/qml/Actions.qml:305
+#: src/qml/Actions.qml:306
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Subtekstoj malŝaltitaj"
 
-#: src/qml/Actions.qml:305
+#: src/qml/Actions.qml:306
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Subtekstoj ŝaltitaj"
 
-#: src/qml/Actions.qml:321 src/qml/Actions.qml:327
+#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Subtitola skalo: %1"
 
-#: src/qml/Actions.qml:341
+#: src/qml/Actions.qml:342
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Malinterplekti: %1"
 
-#: src/qml/Actions.qml:402 src/qml/Actions.qml:408
+#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zomi: %1"
 
-#: src/qml/Actions.qml:413
+#: src/qml/Actions.qml:418
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zomo: 0"
 
-#: src/qml/Actions.qml:419 src/qml/Actions.qml:425
+#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrasto: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrasto: 0"
 
-#: src/qml/Actions.qml:436 src/qml/Actions.qml:442
+#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brilo: %1"
 
-#: src/qml/Actions.qml:447
+#: src/qml/Actions.qml:452
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brilo: 0"
 
-#: src/qml/Actions.qml:453 src/qml/Actions.qml:459
+#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamo: %1"
 
-#: src/qml/Actions.qml:464
+#: src/qml/Actions.qml:469
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamo: 0"
 
-#: src/qml/Actions.qml:470 src/qml/Actions.qml:476
+#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturiĝo: %1"
 
-#: src/qml/Actions.qml:481
+#: src/qml/Actions.qml:486
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturiĝo: 0"
@@ -1891,12 +1897,12 @@ msgstr ""
 "Aŭtomate preterlasas ĉapitrojn enhavantajn iujn vortojn/signojn.\n"
 "Kontrolu agordojn de 'Reproduktado' por pliaj detaloj"
 
-#: src/qml/Main.qml:43
+#: src/qml/Main.qml:44
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:413
+#: src/qml/Main.qml:434
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1904,7 +1910,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Elekti dosieron"
 
-#: src/qml/Main.qml:433
+#: src/qml/Main.qml:454
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1912,7 +1918,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Elekti subtitolan dosieron"
 
-#: src/qml/Main.qml:460
+#: src/qml/Main.qml:481
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Malfermi"
@@ -3675,6 +3681,14 @@ msgstr "Saturiĝo"
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Meze alklaku la glitilojn por restarigi ilin"
+
+#: src/transcript/Transcript.qml:55
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
+msgctxt "@info:tooltip"
+msgid "Select subtitle"
+msgstr "Elekti subtitolan dosieron"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
