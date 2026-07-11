@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:43+0000\n"
-"PO-Revision-Date: 2026-07-09 15:07+0300\n"
+"PO-Revision-Date: 2026-07-10 17:11+0300\n"
 "Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -403,7 +403,7 @@ msgstr "Список воспроизведения"
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Transcript Panel"
-msgstr ""
+msgstr "Включить или отключить панель текста"
 
 #: src/models/actionsmodel.cpp:456
 #, kde-format
@@ -1571,10 +1571,11 @@ msgid ""
 "enabled, all folders containing that name will be searched.\n"
 "Relative folders are relative to the playing file's folder."
 msgstr ""
-"Если относительное имя папки начинается с символа * (звёздочка) и включён "
-"рекурсивный поиск, будет выполнен поиск по всем папкам, содержащим это имя.\n"
-"Относительные папки будут определены относительно к папки воспроизводимого "
-"файла."
+"Если имя папки по относительному пути начинается с символа * (звёздочка) и "
+"включён рекурсивный поиск, будет выполнен поиск по всем папкам, содержащим "
+"это имя.\n"
+"Папки по относительному пути определяются относительно папки "
+"воспроизводимого файла."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:118
 msgctxt "@action:button"
@@ -1618,7 +1619,7 @@ msgid ""
 "Only relative folders are searched."
 msgstr ""
 "С параметром «%1» поиск субтитров будет выполняться рекурсивно.\n"
-"Поиск будет производиться только в относительных папках."
+"Поиск будет производиться только в папках по относительному пути."
 
 #: src/qml/Header.qml:79
 msgctxt "@action:intoolbar"
@@ -2260,8 +2261,8 @@ msgstr "Показывать миниатюру предварительного
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
-"Показывает предварительный просмотр при наведении курсора на индикатор "
-"перемотки/выполнения"
+"Показывает предварительный просмотр при наведении указателя мыши на "
+"индикатор перемотки/выполнения"
 
 #: src/qml/Settings/GeneralSettings.qml:230
 msgctxt "@option:check"
@@ -2370,7 +2371,7 @@ msgstr ""
 "предназначена или как работает какая-либо функция программы."
 "<br><br>Всплывающие подсказки с дополнительными сведениями не будут "
 "отключены (например, подсказка для индикатора перемотки, отображающая время "
-"в позиции курсора мыши, подсказки для усечённого текста)."
+"в позиции указателя мыши, подсказки для усечённого текста)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2555,7 +2556,7 @@ msgstr ""
 "Сколько проматывать при запуске соответствующего действия. Режим перемотки "
 "является <a href='https://mpv.io/manual/stable/#command-interface-seek-"
 "<target>-[<flags>]'>точным</a>. Перематывать также можно колесом мыши, когда "
-"курсор расположен над индикатором выполнения."
+"указатель расположен над индикатором выполнения."
 
 #: src/qml/Settings/PlaybackSettings.qml:82
 msgctxt "@label:spinbox"
@@ -3249,12 +3250,9 @@ msgid "Middle click on the sliders to reset them"
 msgstr "Щелчок средней кнопкой мыши по ползункам для сброса"
 
 #: src/transcript/Transcript.qml:55
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
-msgstr "Выбор файла субтитров"
+msgstr "Выбор субтитров"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
