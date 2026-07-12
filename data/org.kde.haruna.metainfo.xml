@@ -600,7 +600,7 @@
           <li xml:lang="ka">დასაკრავი სია: თაგუნას ზედ გაჩერებისას ახლა ელემენტის გადათრევის დამმუშავებელია ნაჩვენები</li>
           <li xml:lang="nl">Afspeellijst: de sleepgreep van het item wordt nu weergegeven wanneer u er met de muis overheen beweegt</li>
           <li xml:lang="pt-BR">Lista de reprodução: a alça de arrastar do item agora é exibida ao passar o cursor sobre ele</li>
-          <li xml:lang="ru">список воспроизведения: теперь при наведении курсора отображается элемент управления для перетаскивания записи</li>
+          <li xml:lang="ru">список воспроизведения: теперь при наведении указателя мыши отображается элемент управления для перетаскивания записи</li>
           <li xml:lang="sk">Zoznam skladieb: úchyt na presúvanie položky sa teraz zobrazuje pri prejdení myšou</li>
           <li xml:lang="sl">Seznam predvajanja: ročaj za vlečenje elementa se zdaj prikaže pod lebdenju miške</li>
           <li xml:lang="tr">oynatma listesi: öge sürükleme tutacı üzerine geldiğinde gösterilir</li>
@@ -1094,7 +1094,7 @@
           <li xml:lang="lv">labota situācija, ka pārvietošanās joslas paskaidre neatjauninās, ja, mainoties datnei, netiek pārvietots peles rādītājs</li>
           <li xml:lang="nl">opgelost: tekstballon van de schuifbalk wordt niet bijgewerkt wanneer er wijzigingen in het bestand optreden en de muis niet wordt verplaatst</li>
           <li xml:lang="pt-BR">corrigido o problema em que a dica de ferramenta da barra de busca não atualizava quando o arquivo era alterado e o mouse não era movido</li>
-          <li xml:lang="ru">исправлено отсутствие обновления всплывающей подсказки для индикатора перемотки при смене файла без изменения положения курсора мыши</li>
+          <li xml:lang="ru">исправлено отсутствие обновления всплывающей подсказки для индикатора перемотки при смене файла без изменения положения указателя мыши</li>
           <li xml:lang="sk">fixed seekbar tooltip not updating when file changes and the mouse is not moved</li>
           <li xml:lang="sl">popravljen opis orodja iskalne vrstice, ki se ne posodablja, ko se datoteka spremeni in se miška ne premakne</li>
           <li xml:lang="tr">dosya değişip fare oynamadığında arama çubuğu araç ipucunun güncellenmeme sorunu giderildi</li>
@@ -1589,6 +1589,7 @@
           <li xml:lang="lv">Pele: pārstrādāts, lai ļautu lietot modificētājtaustiņus</li>
           <li xml:lang="nl">Muis: aangepast om samensteltoetsen te ondersteunen</li>
           <li xml:lang="pt-BR">Mouse: reformulado para permitir teclas modificadoras</li>
+          <li xml:lang="ru">мышь: код переработан для обеспечения возможности использования клавиш-модификаторов</li>
           <li xml:lang="sk">Mouse: refactored to allow modifier keys</li>
           <li xml:lang="sl">Miška: spremenjena tako, da omogoča modifikacijske tipke</li>
           <li xml:lang="tr">Fare: Niteleyici düğmelere izin verecek şekilde yeniden düzenlendi.</li>
@@ -1625,6 +1626,7 @@
           <li xml:lang="ka">სუბტიტრები: თუ ფარდობითი საქაღალდის სახელი <code>სუბტიტრების ჩატვირთვა საიდან</code>-ის სიაში იწყება სიმბოლოთი * (ვარსკვლავი), მაშინ სუბტიტრების ძებნა მოხდება ყველა საქაღალდეში, რომელიც ამ საქაღალდის სახელს შეიცავს. მაგ: თუ <code>სუბტიტრების ჩატვირთვა საიდან</code> სია შეიცავს ჩანაწერს და თქვენ გაქვთ შემდეგი საქაღალდეები ვიფეოფაილთან და <code>სუბტიტრები</code>`, ძებნა ყველა ამ საქაღალდეში მოხდება.</li>
           <li xml:lang="nl">Ondertitels: als een relatieve mapnaam in de lijst <code>Ondertitel laden van</code> begint met een * (sterretje), dan wordt er in alle mappen die de mapnaam bevatten naar ondertitels gezocht. Voorbeeld: Als de lijst <code>Ondertitel laden van</code> een item bevat en u hebt de volgende mappen naast het videobestand , en <code>ondertiteling</code>, dan worden al deze mappen doorzocht.</li>
           <li xml:lang="pt-BR">Legendas: se o nome de uma pasta relativa na lista <code>Carregar legenda de</code> começar com um * (asterisco), as legendas serão pesquisadas em todas as pastas que contêm o nome da pasta. Exemplo: Se a lista <code>Carregar legenda de</code> contiver uma entrada e você tiver as seguintes pastas ao lado do arquivo de vídeo, e <code>legendas</code> todas essas pastas serão pesquisadas.</li>
+          <li xml:lang="ru">субтитры: если имя папки по относительному пути в списке <code>Загрузка субтитров из</code> начинается с символа * (звёздочка), поиск субтитров будет выполняться во всех папках, содержащих это имя. Пример: если список <code>Загрузка субтитров из</code> содержит запись и рядом с видеофайлом есть следующие папки, а также <code>субтитры</code> — будет выполнен поиск во всех этих папках.</li>
           <li xml:lang="sk">Subtitles: if a relative folder name in the <code>Načítať titulky z</code> list starts with an * (asterisk) then subtitles will be searched in all folders containing the folder name. Example: If the <code>Načítať titulky z</code> list contains an entry and you have the following folders next to the video file , and <code>subtitles</code> all of these folders will be searched.</li>
           <li xml:lang="sl">Podnapisi: če se relativno ime mape na seznamu <code>Naloži podnapis iz</code> začne z zvezdico * (*), bodo podnapisi iskani v vseh mapah, ki vsebujejo ime mape. Primer: Če seznam <code>Naloži podnapis iz</code> vsebuje vnos in imate poleg video datoteke naslednje mape in <code>podnapisi</code>, bodo iskane vse te mape.</li>
           <li xml:lang="uk">Субтитри: якщо відносна назва теки у списку <code>Завантаження субтитрів з</code> починається з * (зірочки), то пошук субтитрів здійснюватиметься у всіх теках, що містять цю назву теки. Приклад: якщо список <code>Завантаження субтитрів з</code> містить запис, і поруч із відеофайлом є такі теки, а <code>субтитрів</code>, пошук буде виконано у всіх цих теках.</li>
@@ -1843,6 +1845,7 @@
           <li xml:lang="lv">slēpt repertuāru, pelei atstājot maksimizētu logu, novēršot repertuāra atvēršanu, kad pele tiek pārvietota uz citu monitoru</li>
           <li xml:lang="nl">verberg de afspeellijst wanneer de muis het venster verlaat terwijl het gemaximaliseerd is, zodat de afspeellijst niet opnieuw wordt geopend wanneer de muis naar een ander scherm wordt verplaatst</li>
           <li xml:lang="pt-BR">oculta a lista de reprodução quando o cursor sai da janela maximizada, impedindo que a lista seja aberta ao mover o cursor para outro monitor</li>
+          <li xml:lang="ru">скрывать список воспроизведения при выходе указателя мыши за пределы развёрнутого окна; предотвращает открытие списка воспроизведения при перемещении указателя мыши на другой монитор</li>
           <li xml:lang="sk">hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
           <li xml:lang="sl">skrij seznam predvajanja, ko miška zapusti okno, medtem ko je povečano, prepreči odpiranje seznama predvajanja, ko premaknete miško na drug monitor</li>
           <li xml:lang="tr">pencere tam ekran kipindeyken fare pencereden ayrıldığında oynatma listesini gizler, fare başka bir monitöre taşındığında oynatma listesinin açılmasını engeller</li>
@@ -1866,6 +1869,7 @@
         <p xml:lang="lv">Atskaņošana</p>
         <p xml:lang="nl">Afspelen</p>
         <p xml:lang="pt-BR">Reprodução</p>
+        <p xml:lang="ru">Воспроизведение</p>
         <p xml:lang="sl">Playback</p>
         <p xml:lang="tr">Oynatma</p>
         <p xml:lang="ug">ياڭرات</p>
@@ -1988,6 +1992,7 @@
           <li xml:lang="lv">mainīts darbības atlases uzlecošais logs, lai turpmāk izmantotu „Kirigami.SearchDialog“</li>
           <li xml:lang="nl">de pop-up voor actieselectie is aangepast om Kirigami.SearchDialog te gebruiken</li>
           <li xml:lang="pt-BR">alteração da janela pop-up de seleção de ações para usar Kirigami.SearchDialog</li>
+          <li xml:lang="ru">всплывающее окно выбора действия теперь использует Kirigami.SearchDialog</li>
           <li xml:lang="sk">changed the action selection popup to use Kirigami.SearchDialog</li>
           <li xml:lang="sl">spremenil pojavno okno za izbiro dejanja za uporabo Kirigami.SearchDialog</li>
           <li xml:lang="tr">eylem seçim açılır penceresi Kirigami.SearchDialog olarak değiştirildi</li>
@@ -2006,6 +2011,7 @@
           <li xml:lang="lv">Nomainīta ikona ar griešanos pret progresa joslu un etiķeti</li>
           <li xml:lang="nl">Het draaiende pictogram is vervangen door een voortgangsbalk met label</li>
           <li xml:lang="pt-BR">substituição do ícone giratório por uma barra de progresso e um rótulo</li>
+          <li xml:lang="ru">вращающийся значок заменён на индикатор выполнения и подпись</li>
           <li xml:lang="sk">replaced the spinning icon with a progress bar and label</li>
           <li xml:lang="sl">zamenjal vrtečo se ikono z vrstico napredka in oznako</li>
           <li xml:lang="tr">dönen simge bir ilerleme çubuğu ve etiketiyle değiştirildi</li>
@@ -2024,6 +2030,7 @@
           <li xml:lang="lv">video nomešanas zona tagad ir sadalīta divās daļās</li>
           <li xml:lang="nl">het drop-gedeelte van de video is nu in twee delen gesplitst</li>
           <li xml:lang="pt-BR">a área de exibição do vídeo agora está dividida em duas partes</li>
+          <li xml:lang="ru">область для перетаскивания видео теперь разделена на две части</li>
           <li xml:lang="sk">the drop area of the video is split in 2 parts now</li>
           <li xml:lang="sl">spustno območje videa je zdaj razdeljeno na 2 dela</li>
           <li xml:lang="tr">videonun bırakma alanı artık iki parça</li>
@@ -2042,6 +2049,7 @@
           <li xml:lang="lv">augšējā daļa vienmēr pievienot noklusējuma repertuāram</li>
           <li xml:lang="nl">het bovenste gedeelte wordt altijd toegevoegd aan de standaard afspeellijst</li>
           <li xml:lang="pt-BR">a parte superior é sempre adicionada à lista de reprodução padrão</li>
+          <li xml:lang="ru">верхняя часть всегда прикрепляется к списку воспроизведения по умолчанию</li>
           <li xml:lang="sk">top part always appends to the default playlist</li>
           <li xml:lang="sl">zgornji del se vedno doda privzetemu seznamu predvajanja</li>
           <li xml:lang="tr">üst kısım artık her zaman öntanımlı oynatma listesine iliştiriliyor</li>
@@ -2060,6 +2068,7 @@
           <li xml:lang="lv">apakšējā daļa notīra noklusējuma repertuāru un pievieno nomestās datnes un mapes; tiekot pievienotai tikai vienai datnei, tā uzvedas kā atvērt datni darbība (notīra repertuāru un ielādē saistītās datnes, ja tas ir ieslēgts iestatījumos)</li>
           <li xml:lang="nl">het onderste gedeelte wist de standaardafspeellijst en voegt de losgelaten bestanden en mappen toe, wanneer er slechts één bestand wordt losgelaten, werkt het als de actie 'bestand openen' (het wist de afspeellijst en laadt de bestanden op hetzelfde niveau als wanneer dit in de instellingen is ingeschakeld)</li>
           <li xml:lang="pt-BR">a parte inferior limpa a lista de reprodução padrão e adiciona os arquivos e pastas soltos; quando apenas um arquivo é solto, o comportamento é o mesmo da ação de abrir arquivo (limpa a lista de reprodução e carrega os arquivos irmãos, se essa opção estiver habilitada nas configurações)</li>
+          <li xml:lang="ru">нижняя часть очищает список воспроизведения по умолчанию и добавляет перетащенные файлы и папки (когда перетащен только один файл, поведение аналогично действию по открытию файла — очищает список воспроизведения и загружает файлы одного уровня, если это разрешено параметрами настройки)</li>
           <li xml:lang="sk">bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
           <li xml:lang="sl">spodnji del počisti privzeti seznam predvajanja in doda izpuščene datoteke in mape, ko je izpuščena samo ena datoteka, se obnaša kot dejanje odprte datoteke (počisti seznam predvajanja in naloži sorodne datoteke, če je omogočeno v nastavitvah)</li>
           <li xml:lang="tr">alttaki kısım varsayılan oynatma listesini temizler ve bırakılan dosya ve klasörleri ekler; yalnızca bir dosya bırakıldığında, dosya açma işlemi gibi davranır (oynatma listesini temizler ve ayarlarda etkinleştirilmişse kardeş dosyaları yükler)</li>
@@ -2078,6 +2087,7 @@
           <li xml:lang="lv">nesenās datnes turpmāk glabājas „sqlite“ datubāzē</li>
           <li xml:lang="nl">recente bestanden worden nu opgeslagen in een SQLite-database</li>
           <li xml:lang="pt-BR">arquivos recentes agora são armazenados em um banco de dados SQLite</li>
+          <li xml:lang="ru">теперь последние файлы хранятся в базе данных sqlite</li>
           <li xml:lang="sk">recent files are now stored in a sqlite database</li>
           <li xml:lang="sl">nedavne datoteke so zdaj shranjene v bazi podatkov sqlite</li>
           <li xml:lang="tr">son dosyalar artık bir SQLite veritabanında saklanıyor</li>
@@ -2096,6 +2106,7 @@
           <li xml:lang="lv">datubāzē glabājas arī laika pozīcija, lai video atvērtu iepriekšējā atskaņošanas vietā</li>
           <li xml:lang="nl">de tijdsposities die gebruikt worden om video's te herstellen, worden ook in de database opgeslagen</li>
           <li xml:lang="pt-BR">posições temporais usadas para restaurar vídeos também são armazenadas no banco de dados</li>
+          <li xml:lang="ru">позиции по времени, используемые для восстановления воспроизведения видео, теперь тоже хранятся в базе данных</li>
           <li xml:lang="sk">time positions used to restore videos are also stored in the database</li>
           <li xml:lang="sl">časovni položaji uporabljeni za obnovitev videoposnetkov o tudi shranjeni v bazi podatkov</li>
           <li xml:lang="tr">videoları geri yüklemek için kullanılan zaman konumları da veri tabanında saklanır</li>
@@ -2347,6 +2358,7 @@
           <li xml:lang="lv">Pievienota darbība pagriezt video pulksteņrādītāja virzienā („Ctrl“+r) un pretēji pulksteņrādītāja virzienam („Ctrl“+e)</li>
           <li xml:lang="nl">Acties toegevoegd om video's rechtsom (Ctrl + R) en linksom (Ctrl + E) te roteren</li>
           <li xml:lang="pt-BR">Adicionadas ações para girar o vídeo no sentido horário (ctrl + r) e no sentido anti-horário (ctrl + e)</li>
+          <li xml:lang="ru">добавлены действия по повороту видео по часовой стрелке (Ctrl + R) и против часовой стрелки (Ctrl + E)</li>
           <li xml:lang="sk">Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
           <li xml:lang="sl">Dodana dejanja za vrtenje videa v smeri urinega kazalca (ctrl + r) in nasprotni smeri urinega kazalca (ctrl + e)</li>
           <li xml:lang="tr">Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
@@ -2556,6 +2568,7 @@
           <li xml:lang="lv">Labota saīšņu nestrādāšana, ja sistēmas valoda nav angļu</li>
           <li xml:lang="nl">Opgelost: sneltoetsen werkten niet meer wanneer de systeemtaal anders was dan Engels</li>
           <li xml:lang="pt-BR">Corrigido o problema de atalhos que não funcionavam em sistemas com idioma diferente do inglês</li>
+          <li xml:lang="ru">исправлены неработающие комбинации клавиш при использовании отличного от английского языка системы</li>
           <li xml:lang="sk">Fixed shortcuts not working with non english system language</li>
           <li xml:lang="sl">Popravljene bližnjice, ki ne delujejo z neangleškim jezikom sistema</li>
           <li xml:lang="tr">Fixed shortcuts not working with non english system language</li>
@@ -2643,6 +2656,7 @@
           <li xml:lang="lv">Labota skaļuma iestatīšana caur „mpris2“</li>
           <li xml:lang="nl">Opgelost: volume-instelling via mpris2</li>
           <li xml:lang="pt-BR">Corrigida a configuração do volume através do mpris2</li>
+          <li xml:lang="ru">исправлена установка громкости с помощью mpris2</li>
           <li xml:lang="sk">Fixed setting volume through mpris2</li>
           <li xml:lang="sl">Popravljena nastavitev glasnosti prek mpris2</li>
           <li xml:lang="tr">Fixed setting volume through mpris2</li>
@@ -2665,6 +2679,7 @@
         <p xml:lang="lv">Ir notikusi plaša koda restrukturizācija, tāpēc ziņojiet par kļūdām, ja ar tādām saskaraties. „Ziņot par kļūdu“ pogu varat atrast „Palīdzība“ izvēlnē vai iestatījumu „Par“ lapā.</p>
         <p xml:lang="nl">Er is veel code herzien, dus meld alle bugs die u tegenkomt. U vindt een optie 'Bug melden' in het menu 'Help' of in de instellingen op de pagina 'Info over'.</p>
         <p xml:lang="pt-BR">Houve muita refatoração de código, então certifique-se de relatar quaisquer erros que encontrar. Há uma opção "Relatar bug" no menu "Ajuda" ou nas configurações da página "Sobre".</p>
+        <p xml:lang="ru">Переработано много кода, поэтому просьба сообщать о появляющихся ошибках. В меню «Справка» и среди параметров в разделе «О программе» есть опция «Сообщить об ошибке».</p>
         <p xml:lang="sk">There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
         <p xml:lang="sl">Bilo je veliko preoblikovanja kode, zato ne pozabite prijaviti vseh napak, na katere naletite. V meniju "Pomoč" ali v nastavitvah na strani z informacijami je vnos menija "Prijavi napako".</p>
         <p xml:lang="tr">There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
@@ -2818,6 +2833,7 @@
           <li xml:lang="lv">Samazināts loga minimālais izmērs</li>
           <li xml:lang="nl">De minimale venstergrootte is verkleind</li>
           <li xml:lang="pt-BR">Diminuído o tamanho mínimo da janela</li>
+          <li xml:lang="ru">уменьшен минимальный размер окна</li>
           <li xml:lang="sk">Decreased the minimum window size</li>
           <li xml:lang="sl">Zmanjšana najmanjša velikost okna</li>
           <li xml:lang="tr">Decreased the minimum window size</li>
@@ -2896,6 +2912,7 @@
           <li xml:lang="lv">Labota problēma ar iestatījumu saīsnēm ar modificētājtaustiņiem („Ctrl“, „Alt“ u.c.)</li>
           <li xml:lang="nl">Probleem opgelost met het instellen van sneltoetsen met modificatietoetsen (Ctrl, Alt, enz.).</li>
           <li xml:lang="pt-BR">Corrigido problema com a configuração de atalhos usando teclas modificadoras (ctrl, alt etc.)</li>
+          <li xml:lang="ru">исправлена проблема с установкой комбинаций клавиш, содержащих клавиши-модификаторы (Ctrl, Alt и так далее)</li>
           <li xml:lang="sk">Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
           <li xml:lang="sl">Odpravljena težava z nastavitvijo bližnjic z modifikacijskimi tipkami (ctrl, alt itd.)</li>
           <li xml:lang="tr">Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
@@ -2987,7 +3004,7 @@
           <li xml:lang="lv">Peldošā kājene šobrīd tiek paslēpta, ja pele pamet programmas logu</li>
           <li xml:lang="nl">De zwevende voettekst verdwijnt nu wanneer de muis de toepassing verlaat</li>
           <li xml:lang="pt-BR">O rodapé flutuante agora fica oculto quando o cursor sai do aplicativo</li>
-          <li xml:lang="ru">теперь плавающий нижний колонтитул скрывается, когда курсор мыши выходит за пределы приложения</li>
+          <li xml:lang="ru">теперь плавающий нижний колонтитул скрывается, когда указатель мыши выходит за пределы приложения</li>
           <li xml:lang="sk">The floating footer now hides when the mouse leaves the app</li>
           <li xml:lang="sl">Plavajoča noga se zdaj skrije, ko miška zapusti aplikacijo</li>
           <li xml:lang="tr">The floating footer now hides when the mouse leaves the app</li>
@@ -3102,6 +3119,7 @@
           <li xml:lang="lv">Pievienots peldošas kājenes/apakšējās rīkjoslas stils</li>
           <li xml:lang="nl">Zwevende voettekst/onderste werkbalkstijl toegevoegd</li>
           <li xml:lang="pt-BR">Adicionado estilo de barra de ferramentas inferior/rodapé flutuante</li>
+          <li xml:lang="ru">добавлен стиль плавающего нижнего колонтитула/панели инструментов</li>
           <li xml:lang="sk">Added floating footer/bottom toolbar style</li>
           <li xml:lang="sl">Dodan slog plavajoče noge/spodnje orodne vrstice</li>
           <li xml:lang="tr">Added floating footer/bottom toolbar style</li>
@@ -3119,6 +3137,7 @@
           <li xml:lang="lv">Noņemta dokumentu grāmata un tās saturs pārvietots uz paskaidrēm</li>
           <li xml:lang="nl">Het docbook is verwijderd en de inhoud ervan is verplaatst naar tekstballonnen</li>
           <li xml:lang="pt-BR">Removido o docbook e seu conteúdo foi movido para as dicas de ferramentas</li>
+          <li xml:lang="ru">выполнено удаление docbook (содержимое перемещено во всплывающие подсказки)</li>
           <li xml:lang="sk">Removed the docbook and moved its content to tooltips</li>
           <li xml:lang="sl">Odstranjen docbook in vsebina premaknjena v namige orodij</li>
           <li xml:lang="tr">Removed the docbook and moved its content to tooltips</li>
@@ -4479,6 +4498,7 @@
           <li xml:lang="lv">Labota nepareizu vērtību parādīšana virsekrāna paziņojumā</li>
           <li xml:lang="nl">De onjuiste waarden die in het OSD werden weergegeven, zijn gecorrigeerd</li>
           <li xml:lang="pt-BR">Corrigido o problema que exibia valores incorretos no OSD</li>
+          <li xml:lang="ru">исправлен показ неверных значений на экранной панели</li>
           <li xml:lang="sk">Fixed wrong values being shown in the osd</li>
           <li xml:lang="sl">Odpravljene napačne vrednosti, prikazane v zaslonskem meniju</li>
           <li xml:lang="tr">Fixed wrong values being shown in the osd</li>
@@ -4514,6 +4534,7 @@
           <li xml:lang="lv">Labota progresa joslas izmēra maiņa, neizmantojot vienplatuma/fiskēta platuma fontu</li>
           <li xml:lang="nl">De voortgangsbalk verandert nu niet meer van formaat wanneer er geen lettertype met vaste breedte of monospace wordt gebruikt</li>
           <li xml:lang="pt-BR">Corrigido a alteração do tamanho da barra de progresso quando não se usa uma fonte monoespaçada/de largura fixa</li>
+          <li xml:lang="ru">исправлено изменение размера индикатора выполнения, если не был использован моноширинный шрифт</li>
           <li xml:lang="sk">Fixed progress bar changing size when not using a monospaced/fixed-width font</li>
           <li xml:lang="sl">Popravljeno spreminjanje velikosti vrstice napredka, ko ne uporabljate pisave s fiksno širino</li>
           <li xml:lang="tr">Fixed progress bar changing size when not using a monospaced/fixed-width font</li>
@@ -4531,6 +4552,7 @@
           <li xml:lang="lv">Labota apakšējās/augšējās rīkjoslas nepaslēpšanās, pārvietojoties uz zemāk esošu monitoru, „Haruna“ atrodoties pilnekrāna režīmā</li>
           <li xml:lang="nl">Probleem opgelost waarbij de voettekst/onderste werkbalk niet verdween bij het verplaatsen naar het scherm eronder, terwijl Haruna in de modus volledige scherm stond</li>
           <li xml:lang="pt-BR">Corrigido o problema em que a barra de ferramentas inferior/rodapé não ocultava ao passar para o monitor de baixo enquanto o Haruna estava em tela cheia</li>
+          <li xml:lang="ru">исправлено неработающее скрытие нижнего колонтитула/панели инструментов при переходе на монитор ниже, когда Haruna находится в полноэкранном режиме</li>
           <li xml:lang="sk">Fixed footer/bottom toolbar not hiding when moving to the monitor below, while Haruna is in fullscreen</li>
           <li xml:lang="sl">Popravljena noga/spodnja orodna vrstica, ki se ne skriva, ko se premaknete na spodnji monitor, medtem ko je Haruna v celozaslonskem načinu</li>
           <li xml:lang="tr">Fixed footer/bottom toolbar not hiding when moving to the monitor below, while Haruna is in fullscreen</li>
@@ -4577,6 +4599,7 @@
           <li xml:lang="lv">Labota iziešanas darbības nestrādāšana</li>
           <li xml:lang="nl">Het probleem met de afsluitactie is opgelost</li>
           <li xml:lang="pt-BR">Corrigida a ação de sair que não estava funcionando</li>
+          <li xml:lang="ru">исправлено неработающее действие по выходу</li>
           <li xml:lang="sk">Fixed quit action not working</li>
           <li xml:lang="sl">Popravljeno dejanje prenehanja, ki ne deluje</li>
           <li xml:lang="tr">Fixed quit action not working</li>
@@ -4612,6 +4635,7 @@
           <li xml:lang="lv">Labota repertuāra atkārtošanās, kad repertuāra atkārtošanās iestatījumos ir izslēgta</li>
           <li xml:lang="nl">Het probleem met het herhalen van afspeellijsten, zelfs wanneer de herhaalfunctie was uitgeschakeld, is opgelost</li>
           <li xml:lang="pt-BR">Corrigido o problema de repetição da lista de reprodução quando a configuração de repetição estava desativada</li>
+          <li xml:lang="ru">исправлен повтор списка воспроизведения, когда параметр повтора был отключён</li>
           <li xml:lang="sk">Fixed playlist repeating when the repeat setting was turned off</li>
           <li xml:lang="sl">Popravljeno ponavljanje seznama predvajanja, ko je bila nastavitev ponavljanja izklopljena</li>
           <li xml:lang="tr">Fixed playlist repeating when the repeat setting was turned off</li>
@@ -4634,6 +4658,7 @@
         <p xml:lang="lv">„mpv“ kods ir pārstruturēts, lai uzlabotu veiktspēju. Tajā joprojām var būt kļūdas, par kurām lūdzam ziņot „bugs.kde.org“</p>
         <p xml:lang="nl">De mpv-code is herzien om de prestaties te verbeteren, maar er kunnen nog steeds enkele bugs aanwezig zijn, meld deze op bugs.kde.org</p>
         <p xml:lang="pt-BR">O código do mpv foi refatorado para melhorar o desempenho, mas ainda podem existir alguns erros. Por favor, reporte qualquer um deles em bugs.kde.org</p>
+        <p xml:lang="ru">Код mpv был переработан для повышения производительности (могут сохраняться ошибки; просьба сообщать о них по адресу bugs.kde.org).</p>
         <p xml:lang="sk">The mpv code has been refactored to improve performance, there might still be some bugs, do report any at bugs.kde.org</p>
         <p xml:lang="sl">Koda mpv je bila preoblikovana za izboljšanje zmogljivosti, morda je še nekaj napak, prijavite jih na bugs.kde.org</p>
         <p xml:lang="tr">The mpv code has been refactored to improve performance, there might still be some bugs, do report any at bugs.kde.org</p>
@@ -4678,6 +4703,7 @@
           <li xml:lang="lv">Atjaunojot programmu no minimizēta stāvokļa, atskaņošanas stāvoklis ir iestatīts tāds, kāds tas bija pirms minimizēšanas (piemērojams tikai tad, ja ir ieslēgts iestatījumu „Pauzēt minimizējot“)</li>
           <li xml:lang="nl">Bij het herstellen vanuit de geminimaliseerde staat wordt de afspeelstatus teruggezet naar de status die deze had op het moment van minimaliseren (dit geldt alleen als de instelling "Pauzeren bij minimaliseren" is ingeschakeld)</li>
           <li xml:lang="pt-BR">Ao restaurar a reprodução a partir do estado minimizado, o estado de reprodução é definido como estava no momento da minimização (aplica-se somente se a configuração "Pausar ao minimizar" estiver ativada)</li>
+          <li xml:lang="ru">при восстановлении из свёрнутого окна состояние воспроизведения становится таким, каким оно было в момент сворачивания (применимо только в том случае, если параметр «Приостанавливать при сворачивании» включён)</li>
           <li xml:lang="sk">When restoring from minimized state, playback state is set to what it was when the minimization happened (only applies if the "Pause on minimize" setting is turned on)</li>
           <li xml:lang="sl">Pri obnavljanju iz strnjenega stanja je stanje predvajanja nastavljeno na tisto, v katerem je bilo, ko je prišlo do pomanjšanja (velja samo, če je vklopljena nastavitev »Premor ob pomanjšanju«)</li>
           <li xml:lang="tr">When restoring from minimized state, playback state is set to what it was when the minimization happened (only applies if the "Pause on minimize" setting is turned on)</li>
@@ -4774,6 +4800,7 @@
           <li xml:lang="lv">Laboti daži teksta lauki, kas noteiktos apstākļos nesaglabāja savas vērtības</li>
           <li xml:lang="nl">Er is een probleem opgelost waarbij tekstvelden onder bepaalde omstandigheden hun waarde niet opsloegen</li>
           <li xml:lang="pt-BR">Corrigido o problema em que alguns campos de texto não salvavam seus valores em determinadas circunstâncias</li>
+          <li xml:lang="ru">исправлено неработающее сохранение значений для некоторых текстовых полей, имевшее место при определённых условиях</li>
           <li xml:lang="sk">Fixed some text fields not saving their value under certain circumstances</li>
           <li xml:lang="sl">Popravljena so nekatera besedilna polja, ki v določenih okoliščinah niso shranila svojih vrednosti</li>
           <li xml:lang="tr">Fixed some text fields not saving their value under certain circumstances</li>
@@ -4792,6 +4819,7 @@
           <li xml:lang="lv">Novērsta ekrānattēla formāta iestatījumu nestrādāšana</li>
           <li xml:lang="nl">De instelling voor het opmaken van schermafbeeldingen werkt niet</li>
           <li xml:lang="pt-BR">Corrigido o problema com a configuração de formato de captura de tela</li>
+          <li xml:lang="ru">исправлен неработающий параметр формата снимков экрана</li>
           <li xml:lang="sk">Fixed screenshot format setting not working</li>
           <li xml:lang="sl">Popravljena nastavitev oblike posnetka zaslona, ki ne deluje</li>
           <li xml:lang="tr">Fixed screenshot format setting not working</li>
@@ -4809,6 +4837,7 @@
           <li xml:lang="lv">Labota neseno datņu izvēlnes neaizvēršanās</li>
           <li xml:lang="nl">Probleem opgelost waarbij het menu met recente bestanden niet meer sloot</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia o fechamento do menu de arquivos recentes</li>
+          <li xml:lang="ru">исправлено неработающее закрытие меню последних файлов</li>
           <li xml:lang="sk">Fixed recent files menu not closing</li>
           <li xml:lang="sl">Popravljeno je bilo, da se meni nedavnih datotek ni zapiral</li>
           <li xml:lang="tr">Fixed recent files menu not closing</li>
@@ -4826,6 +4855,7 @@
           <li xml:lang="lv">Labota repertuāra konteksta izvēlnes neaizvēršanās, paslēpjot repertuāru</li>
           <li xml:lang="nl">Opgelost: het contextmenu van de afspeellijst sluit niet meer wanneer de afspeellijst wordt verborgen</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia o fechamento do menu de contexto da lista de reprodução quando a lista era ocultada</li>
+          <li xml:lang="ru">исправлено неработающее закрытие контекстного меню списка воспроизведения при скрытии списка воспроизведения</li>
           <li xml:lang="sk">Fixed playlist context menu not closing when playlist hides</li>
           <li xml:lang="sl">Popravljen kontekstni meni seznama predvajanja, ki se ne zapre, ko se seznam predvajanja skrije</li>
           <li xml:lang="tr">Fixed playlist context menu not closing when playlist hides</li>
@@ -4947,6 +4977,7 @@
           <li xml:lang="lv">Video: pievienots iestatījums noklusējuma vāciņa iestatīšanai mūzikas datnēm</li>
           <li xml:lang="nl">Video: instelling toegevoegd om een ​​standaard albumhoes voor muziekbestanden in te stellen</li>
           <li xml:lang="pt-BR">Vídeo: adicionada configuração para definir uma capa padrão para arquivos de música</li>
+          <li xml:lang="ru">видео: добавлен параметр для установки обложки по умолчанию для музыкальных файлов</li>
           <li xml:lang="sk">Video: added setting to set a default cover for music files</li>
           <li xml:lang="sl">Video: dodana nastavitev za nastavitev privzete naslovnice za glasbene datoteke</li>
           <li xml:lang="tr">Video: added setting to set a default cover for music files</li>
@@ -4964,6 +4995,7 @@
           <li xml:lang="lv">Pievienots komandrindas opcijas „ytdl“ formāta atlases iestatījuma pārrakstīšanai (šī opcija tiek pārrakstīta, ja tiek izmainīti saskarnes iestatījumi)</li>
           <li xml:lang="nl">Er is een opdrachtregeloptie toegevoegd om de instelling voor de ytdl-formaatselectie te overschrijven. (Deze optie wordt overschreven als de GUI-instelling wordt gewijzigd)</li>
           <li xml:lang="pt-BR">Adicionada opção de linha de comando para substituir a configuração de seleção do formato ytdl (essa opção é sobrescrita se a configuração da interface gráfica for alterada)</li>
+          <li xml:lang="ru">добавлена опция командной строки для переопределения значения параметра выбора формата ytdl (значение этой опции переопределяется, если изменяется значение параметра графического интерфейса пользователя)</li>
           <li xml:lang="sk">Added command line option to override the ytdl format selection setting (this option is overwritten if the GUI setting is changed)</li>
           <li xml:lang="sl">Dodana možnost ukazne vrstice za preglasitev nastavitve izbire formata ytdl (ta možnost je prepisana, če se spremeni nastavitev GUI)</li>
           <li xml:lang="tr">Added command line option to override the ytdl format selection setting (this option is overwritten if the GUI setting is changed)</li>
@@ -4982,6 +5014,7 @@
           <li xml:lang="lv">Pievienots MPRIS sīktēls</li>
           <li xml:lang="nl">MPRIS-miniatuur toegevoegd</li>
           <li xml:lang="pt-BR">Adicionada miniatura MPRIS</li>
+          <li xml:lang="ru">добавлена миниатюра MPRIS</li>
           <li xml:lang="sk">Added MPRIS thumbnail</li>
           <li xml:lang="sl">Dodana MPRIS sličica</li>
           <li xml:lang="tr">Added MPRIS thumbnail</li>
@@ -5024,6 +5057,7 @@
           <li xml:lang="lv">Nesenās datnes: labota kārtošana, dublikātu parādīšana, notīrīšana un pievienošana, kad saraksts ir pilns</li>
           <li xml:lang="nl">Recente bestanden: volgorde, weergave van duplicaten, wissen en toevoegen wanneer de lijst vol is, gerepareerd</li>
           <li xml:lang="pt-BR">Arquivos recentes: ordenação corrigida, exibição de duplicados, limpeza e adição de arquivos quando a lista estiver cheia</li>
+          <li xml:lang="ru">последние файлы: исправлена сортировка, показ дубликатов, очистка и добавление при полном списке</li>
           <li xml:lang="sk">Recent files: fixed ordering, showing duplicates, clearing and adding when list is full</li>
           <li xml:lang="sl">Nedavne datoteke: popravljeno razvrščanje, prikaz dvojnikov, čiščenja in dodajanje, ko je seznam poln</li>
           <li xml:lang="tr">Son kullanılan dosyalar: Sıralamayı düzelt, liste doluyken yinelenenleri gösterme, temizleme ve ekleme</li>
@@ -5041,6 +5075,7 @@
           <li xml:lang="lv">Labots OSD parādīšana bez teksta</li>
           <li xml:lang="nl">Het probleem met het OSD-scherm zonder tekst is opgelost</li>
           <li xml:lang="pt-BR">Correção na exibição do OSD sem texto</li>
+          <li xml:lang="ru">исправлен показ экранной панели без текста</li>
           <li xml:lang="sk">Fixed OSD showing without text</li>
           <li xml:lang="sl">Popravljen prikaz OSD brez besedila</li>
           <li xml:lang="tr">Fixed OSD showing without text</li>
@@ -5058,6 +5093,7 @@
           <li xml:lang="lv">Repertuārs: novērsta „Palielināt fonta izmēru pilnekrāna režīmā“ iestatījuma nestrādāšana</li>
           <li xml:lang="nl">Afspeellijst: probleem opgelost met de instelling "Lettergrootte vergroten in volledig scherm".</li>
           <li xml:lang="pt-BR">Lista de reprodução: corrigida a configuração "Aumentar o tamanho da fonte em tela cheia" que não estava funcionando</li>
+          <li xml:lang="ru">список воспроизведения: исправлен неработающий параметр «Увеличивать размер шрифта в полноэкранном режиме»</li>
           <li xml:lang="sk">Playlist: fixed "Increase font size when fullscreen" setting not working</li>
           <li xml:lang="sl">Seznam predvajanja: popravljena nastavitev »Povečaj velikost pisave v celozaslonskem načinu«, ki ne deluje</li>
           <li xml:lang="tr">Playlist: fixed "Increase font size when fullscreen" setting not working</li>
@@ -5075,6 +5111,7 @@
           <li xml:lang="lv">Repertuārs: noņemts „rowHeight“ iestatījums</li>
           <li xml:lang="nl">Afspeellijst: instelling voor rijhoogte verwijderd</li>
           <li xml:lang="pt-BR">Lista de reprodução: configuração rowHeight removida</li>
+          <li xml:lang="ru">список воспроизведения: удалён параметр rowHeight</li>
           <li xml:lang="sk">Playlist: removed rowHeight setting</li>
           <li xml:lang="sl">Seznam predvajanja: odstranjena nastavitev rowHeight</li>
           <li xml:lang="tr">Playlist: removed rowHeight setting</li>
@@ -5117,6 +5154,7 @@
           <li xml:lang="lv">Labota nākamā vienuma repertuārā neatskaņošana, izbeidzoties pašreizējās datnes atskaņošanai</li>
           <li xml:lang="nl">Opgelost: het volgende bestand in de afspeellijst werd niet automatisch afgespeeld wanneer het huidige bestand eindigde</li>
           <li xml:lang="pt-BR">Corrigido o problema que impedia a reprodução automática do próximo arquivo na lista de reprodução quando o arquivo atual terminava</li>
+          <li xml:lang="ru">исправлено неработающее автоматическое воспроизведение следующего файла в списке воспроизведения по достижении конца текущего файла</li>
           <li xml:lang="sk">Fixed not auto playing next file in playlist, when current file ends</li>
           <li xml:lang="sl">Popravljeno je bilo samodejno predvajanje naslednje datoteke na seznamu predvajanja, ko se trenutna datoteka konča</li>
           <li xml:lang="tr">Fixed not auto playing next file in playlist, when current file ends</li>
@@ -5134,6 +5172,7 @@
           <li xml:lang="lv">Labota atvērtas datnes neatskaņošana, kad ir izslēgts iestatījums „Automātiski ielādēt video datnes no tās pašas mapes“</li>
           <li xml:lang="nl">Probleem opgelost waarbij geopende bestanden niet werden afgespeeld wanneer de instelling "Video's automatisch laden vanuit dezelfde map" was uitgeschakeld</li>
           <li xml:lang="pt-BR">Corrigido o problema de arquivo aberto não reproduzir quando a configuração "Carregar vídeos automaticamente da mesma pasta" está desativada</li>
+          <li xml:lang="ru">исправлено неработающее воспроизведение открытого файла, когда параметр «Автоматически загружать видео из этой же папки» отключён</li>
           <li xml:lang="sk">Fixed opened file not playing when "Auto load videos from same folder" setting is disabled</li>
           <li xml:lang="sl">Odpravljena napaka pri predvajanju odprte datoteke, ko je nastavitev »Samodejno nalaganje videoposnetkov iz iste mape« onemogočena</li>
           <li xml:lang="tr">Fixed opened file not playing when "Auto load videos from same folder" setting is disabled</li>
@@ -5255,6 +5294,7 @@
           <li xml:lang="lv">Nodaļu izvēlne ir pārrakstīta, lai strādātu ātrāk ar daudzām nodaļām.</li>
           <li xml:lang="nl">Het menu 'Hoofdstukken' is herschreven om beter te reageren op een groot aantal hoofdstukken.</li>
           <li xml:lang="pt-BR">O menu de capítulos foi reescrito para ser mais responsivo e lidar melhor com muitos capítulos</li>
+          <li xml:lang="ru">меню разделов было переписано для обеспечения более быстрого отклика при большом количестве разделов</li>
           <li xml:lang="sk">Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
           <li xml:lang="sl">Meni poglavij je bil na novo napisan tako, da je bolj odziven z veliko poglavji.</li>
           <li xml:lang="tr">Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
@@ -5558,6 +5598,7 @@
           <li xml:lang="lv">Peles iestatījumu logā tiek parādīts tulkojams darbības teksts, bet ne darbības iekšējais nosaukums</li>
           <li xml:lang="nl">In de muisinstellingen wordt de actietekst, die vertaalbaar is, weergegeven in plaats van de interne naam</li>
           <li xml:lang="pt-BR">Nas configurações do mouse, o texto da ação, que pode ser traduzido, é exibido em vez de seu nome interno</li>
+          <li xml:lang="ru">вместо внутреннего названия в параметрах мыши отображается доступное для перевода текстовое описание действия</li>
           <li xml:lang="sk">In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
           <li xml:lang="sl">V nastavitvah miške se namesto njenega internega imena prikaže besedilo dejanja, ki ga je mogoče prevesti</li>
           <li xml:lang="tr">In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
@@ -6196,7 +6237,7 @@
           <li xml:lang="lv">Labots gadījums, kad repertuāru nebija iespējams vairs aizvērt, pārliekot pāri peli</li>
           <li xml:lang="nl">Probleem opgelost waarbij de afspeellijst niet meer kon worden gesloten door met de muis over de afspeellijst te bewegen</li>
           <li xml:lang="pt-BR">Corrigido um problema que impedia o fechamento da lista de reprodução ao passar o cursor do mouse sobre ela</li>
-          <li xml:lang="ru">исправлена ситуация, когда список воспроизведения больше нельзя было закрыть при наведении курсора мыши</li>
+          <li xml:lang="ru">исправлена ситуация, когда список воспроизведения больше нельзя было закрыть при наведении указателя мыши</li>
           <li xml:lang="sk">Fixed a case where the playlist could not be closed with mouse hover anymore</li>
           <li xml:lang="sl">Odpravljen primer, ko seznama predvajanja ni bilo več mogoče zapreti z miško</li>
           <li xml:lang="tr">Fixed a case where the playlist could not be closed with mouse hover anymore</li>
