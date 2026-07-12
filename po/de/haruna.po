@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:43+0000\n"
-"PO-Revision-Date: 2026-03-18 20:25+0100\n"
+"PO-Revision-Date: 2026-07-02 18:58+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -554,89 +554,67 @@ msgid "Reassign"
 msgstr "Neu zuweisen"
 
 #: src/models/mouseactionsmodel.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox left mouse button"
-#| msgid "Left"
+#, kde-format
 msgctxt "@label left mouse button"
 msgid "Left"
 msgstr "Links"
 
 #: src/models/mouseactionsmodel.cpp:265
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox right mouse button"
-#| msgid "Right"
+#, kde-format
 msgctxt "@label right mouse button"
 msgid "Right"
 msgstr "Rechts"
 
 #: src/models/mouseactionsmodel.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox middle mouse button"
-#| msgid "Middle"
+#, kde-format
 msgctxt "@label middle mouse button"
 msgid "Middle"
 msgstr "Mitte"
 
 #: src/models/mouseactionsmodel.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox forward mouse button"
-#| msgid "Forward"
+#, kde-format
 msgctxt "@label forward mouse button"
 msgid "Forward"
 msgstr "Vorwärts"
 
 #: src/models/mouseactionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox back mouse button"
-#| msgid "Back"
+#, kde-format
 msgctxt "@label back mouse button"
 msgid "Back"
 msgstr "Zurück"
 
 #: src/models/mouseactionsmodel.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll up"
-#| msgid "Scroll up"
+#, kde-format
 msgctxt "@label mouse scroll up"
 msgid "ScrollUp"
 msgstr "Nach oben scrollen"
 
 #: src/models/mouseactionsmodel.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll down"
-#| msgid "Scroll down"
+#, kde-format
 msgctxt "@label mouse scroll down"
 msgid "ScrollDown"
 msgstr "Nach unten scrollen"
 
 #: src/models/mouseactionsmodel.cpp:323
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox control modifier key"
-#| msgid "Control"
+#, kde-format
 msgctxt "@label control modifier key"
 msgid "Control"
 msgstr "Strg"
 
 #: src/models/mouseactionsmodel.cpp:325
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox shift modifier key"
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label shift modifier key"
 msgid "Shift"
 msgstr "Umschalt"
 
 #: src/models/mouseactionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/models/mouseactionsmodel.cpp:329
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox meta modifier key"
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -666,12 +644,10 @@ msgid "Volume: %1"
 msgstr "Lautstärke: %1"
 
 #: src/mpv/mpvitem.cpp:471
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "Untertitel-Timing: %1 Sekunden"
+msgstr "Untertitel-Timing: +%1 Sekunden"
 
 #: src/mpv/mpvitem.cpp:473
 #, kde-format
@@ -689,7 +665,7 @@ msgstr "Datei existiert nicht: %1"
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
-msgstr ""
+msgstr "[%1/%2] %3"
 
 #: src/mpv/mpvitem.cpp:562
 #, kde-format
@@ -733,9 +709,7 @@ msgid "Skipped chapter: %1"
 msgstr "Kapitel übersprungen: %1"
 
 #: src/mpv/mpvitem.cpp:783
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Audio: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -743,17 +717,13 @@ msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
 #: src/mpv/mpvitem.cpp:794
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: None"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
-msgstr "Untertitel: keine"
+msgstr "Untertitel: kein"
 
 #: src/mpv/mpvitem.cpp:799 src/mpv/mpvitem.cpp:815
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -761,12 +731,10 @@ msgid "Subtitle: %1 %2"
 msgstr "Untertitel: %1 %2"
 
 #: src/mpv/mpvitem.cpp:810
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
-msgstr "Sekundärer Untertitel"
+msgstr "Sekundärer Untertitel: kein"
 
 #: src/playlist/Playlist.qml:125
 msgctxt "@action:button"
@@ -814,10 +782,6 @@ msgid "Descending"
 msgstr "Absteigend"
 
 #: src/playlist/Playlist.qml:240
-#, fuzzy
-#| msgctxt ""
-#| "@action The \"None\" subtitle track is used to clear/unset selected track"
-#| msgid "None"
 msgctxt "@action:button"
 msgid "None"
 msgstr "Keiner"
@@ -910,7 +874,7 @@ msgstr "Speichern unter"
 #: src/playlist/Playlist.qml:424
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Alle Metadaten aktualisieren"
 
 #: src/playlist/Playlist.qml:431
 msgctxt "@info:tooltip"
@@ -956,12 +920,9 @@ msgid "Open in Thumbnail Generator"
 msgstr "Im Vorschaubild-Generator öffnen"
 
 #: src/playlist/Playlist.qml:626
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in Browser"
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
-msgstr "Im Browser öffnen"
+msgstr "Mit %1 öffnen"
 
 #: src/playlist/Playlist.qml:637
 msgctxt "@action:inmenu"
@@ -981,7 +942,7 @@ msgstr "Adresse kopieren"
 #: src/playlist/Playlist.qml:652
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Metadaten aktualisieren"
 
 #: src/playlist/Playlist.qml:662
 msgctxt "@info:tooltip"
@@ -1063,9 +1024,6 @@ msgstr "Filter"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:120
 #: src/playlist/PlaylistAdvancedSortWindow.qml:381
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Filter"
@@ -1579,9 +1537,6 @@ msgid "Audio Track"
 msgstr "Audiospur"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Mehr"
@@ -1883,12 +1838,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Bevorzugte Spur"
+msgstr "ID der bevorzugten Spur"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1997,51 +1949,36 @@ msgid "&Add"
 msgstr "&Hinzufügen"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Maximale Anzahl zuletzt geöffneter Dateien"
+msgstr "Kürzlich verwendete Dateien leeren"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Leeren"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Löscht kürzlich verwendete Dateien aus der Datenbank"
+msgstr "Entfernt kürzlich verwendete Dateien aus der Datenbank"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Metadaten leeren"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Löscht kürzlich verwendete Dateien aus der Datenbank"
+msgstr "Entfernt alle in der Datenbank gespeicherten Metadaten"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Wiedergabeposition wiederherstellen"
+msgstr "Wiedergabepositionen leeren"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
@@ -2379,7 +2316,7 @@ msgstr "Werkzeugleiste anzeigen"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Erklärende Kurzinfos anzeigen"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2389,6 +2326,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Betrifft nur Kurzinfos, die erklären, wie etwas funktioniert oder was es "
+"bewirkt.<br><br>Kurzinfos, die zusätzliche Infrmationen anzeigen, werden "
+"dadurch nicht deaktiviert (z. B. die Anzeige der aktuellen Zeit auf der "
+"Wiedergabeleiste, Kurzinfos für abgeschnittenen Text)."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2418,7 +2359,7 @@ msgstr "Standard"
 #: src/qml/Settings/MouseSettings.qml:51
 msgctxt "@label represents a mouse double click, for example `Right x2`"
 msgid "x2"
-msgstr ""
+msgstr "×2"
 
 #: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@label:action change action associated with mouse event"
@@ -2670,42 +2611,28 @@ msgstr ""
 "Die Datei wird nach dem Wiederherstellen der Wiedergabeposition wiedergegeben"
 
 #: src/qml/Settings/PlaybackSettings.qml:261
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Wiedergabeposition"
+msgstr "Position speichern"
 
 #: src/qml/Settings/PlaybackSettings.qml:282
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Für beliebige Dauer"
+msgstr "für beliebige Dauer"
 
 #: src/qml/Settings/PlaybackSettings.qml:285
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Wenn die Dauer mehr als %1 Minute beträgt"
-msgstr[1] "Wenn die Dauer mehr als %1 Minuten beträgt"
+msgstr[0] "wenn die Dauer mehr als %1 Minute beträgt"
+msgstr[1] "wenn die Dauer mehr als %1 Minuten beträgt"
 
 #: src/qml/Settings/PlaybackSettings.qml:312
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Die Position jede Sekunde speichern"
-msgstr[1] "Die Position alle %1 Sekunden speichern"
+msgstr[0] "jede Sekunde"
+msgstr[1] "alle %1 Sekunden"
 
 #: src/qml/Settings/PlaybackSettings.qml:325
 msgctxt "@title"
@@ -2760,8 +2687,6 @@ msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:410
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Formatauswahl"
@@ -2962,7 +2887,7 @@ msgstr "Benutzerdefinierte Befehle"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Datenbank"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
@@ -3068,17 +2993,14 @@ msgid "Border width"
 msgstr "Rahmenbreite"
 
 #: src/qml/Settings/SubtitlesSettings.qml:447
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Footer style"
 msgctxt "@label:listbox"
 msgid "Border style"
-msgstr "Stil der Fußzeile"
+msgstr "Rahmenstil"
 
 #: src/qml/Settings/SubtitlesSettings.qml:459
 msgctxt "@item:listbox border style"
 msgid "Outline and Shadow"
-msgstr ""
+msgstr "Umriss und Schatten"
 
 #: src/qml/Settings/SubtitlesSettings.qml:465
 msgctxt "@item:listbox border style"
