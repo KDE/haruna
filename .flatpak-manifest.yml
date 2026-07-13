@@ -116,8 +116,8 @@ modules:
                 sources:
                   - type: git
                     url: https://github.com/openresty/luajit2.git
-                    tag: v2.1-20260606
-                    commit: a08100e7598451d4fd3a89a9826980f7c64117e7
+                    tag: v2.1-20260701
+                    commit: 2802aafe24b7c3b2892e616c2bee97a61e9c026e
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.-]+)$
@@ -155,8 +155,8 @@ modules:
                   - --disable-static
                 sources:
                   - type: archive
-                    url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.gz
-                    sha256: a886b3b80867f437bc55cff3280a652bfa0d37b43d2aff39ddf3c4f288b8c5a8
+                    url: https://github.com/libass/libass/releases/download/0.17.5/libass-0.17.5.tar.gz
+                    sha256: caab4b993dd7be6187c55623b789ed75dddefea6e65938af134637c732fe094a
                     x-checker-data:
                       type: anitya
                       project-id: 1560
@@ -191,8 +191,8 @@ modules:
           - install yt-dlp /app/bin
         sources:
           - type: archive
-            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2026.06.09.tar.gz
-            sha256: 6add707714c1d9a960cb6f4de1dcbd9fbf857f1bc488d26b43f0701246a06f38
+            url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2026.07.04.tar.gz
+            sha256: 7fb7ca0509dd8f21263246d3d749a346e049fa9d3cfdef072e05c7bbd88d6fc0
             x-checker-data:
               type: anitya
               project-id: 143399
