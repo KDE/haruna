@@ -19,7 +19,7 @@ For more screnshots go to [Haruna's website](https://haruna.kde.org)
 
 # Install
 
-https://flathub.org/apps/details/org.kde.haruna
+<a href='https://flathub.org/en/apps/org.kde.haruna'><img width='190px' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
 ```
 flatpak install flathub org.kde.haruna
