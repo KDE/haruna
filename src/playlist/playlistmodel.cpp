@@ -411,7 +411,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
     const auto data = parser.data();
     for (const auto &metadata : data) {
         const auto row = m_playlist.size();
-        auto url = QUrl::fromUserInput(metadata.path, QFileInfo(m_playlistPath).absolutePath());
+        auto url = metadata.url;
         PlaylistItem item;
         if (url.isLocalFile()) {
             auto _item = localFileToPlaylistItem(QFileInfo(url.toLocalFile()));

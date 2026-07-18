@@ -33,14 +33,15 @@ void M3uParser::read(const std::filesystem::path &path)
     auto firstLine = in.readLine();
     if (firstLine.startsWith(u"#EXTM3U")) {
         while (!in.atEnd()) {
-            parseExtendedLine(in.readLine());
+            parseExtendedLine(in.readLine(), QString::fromStdString(path));
         }
     } else {
-        parseStandardLine(firstLine);
+        parseStandardLine(firstLine, QString::fromStdString(path));
         while (!in.atEnd()) {
-            parseStandardLine(in.readLine());
+            parseStandardLine(in.readLine(), QString::fromStdString(path));
         }
     }
+    file.close();
 }
 
 void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::filesystem::path &savePath)
@@ -78,28 +79,28 @@ void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::
     m3uFile.close();
 }
 
-void M3uParser::parseStandardLine(const QString &line)
+void M3uParser::parseStandardLine(const QString &line, const QString &playlistPath)
 {
     if (line.isEmpty() || line.startsWith(u"#")) {
         return;
     }
 
-    metadata.path = line;
+    metadata.url = stringToUrl(line, playlistPath);
     m_data.append(metadata);
 }
 
-void M3uParser::parseExtendedLine(const QString &line)
+void M3uParser::parseExtendedLine(const QString &line, const QString &playlistPath)
 {
     if (line.isEmpty()) {
         return;
     }
 
     if (!line.startsWith(u"#")) {
-        metadata.path = line;
+        metadata.url = stringToUrl(line, playlistPath);
         m_data.append(std::move(metadata));
         metadata.duration.reset();
         metadata.title.reset();
-        metadata.path.clear();
+        metadata.url.clear();
         return;
     }
 
@@ -128,6 +129,25 @@ void M3uParser::parseExtendedLine(const QString &line)
             metadata.title = value.sliced(i + 1).simplified();
         }
     }
+}
+
+QUrl M3uParser::stringToUrl(const QString &urlString, const QString &parentPath)
+{
+    const QString decoded = QUrl::fromPercentEncoding(urlString.toUtf8());
+
+    const QUrl url(decoded);
+    if (url.isValid() && !url.scheme().isEmpty()) {
+        return url;
+    }
+
+    std::filesystem::path path(decoded.toStdString());
+    std::filesystem::path playlistParentPath(parentPath.toStdString());
+
+    if (path.is_relative()) {
+        path = playlistParentPath.parent_path() / path;
+    }
+
+    return QUrl::fromLocalFile(QString::fromStdString(path));
 }
 
 QList<MetaData> M3uParser::data() const

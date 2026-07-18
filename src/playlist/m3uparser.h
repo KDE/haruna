@@ -15,7 +15,7 @@
 #include "playlistfilterproxymodel.h"
 
 struct MetaData {
-    QString path;
+    QUrl url;
     std::optional<double> duration;
     std::optional<QString> title;
 };
@@ -30,8 +30,14 @@ public:
     QList<MetaData> data() const;
 
 private:
-    void parseStandardLine(const QString &line);
-    void parseExtendedLine(const QString &line);
+    void parseStandardLine(const QString &line, const QString &playlistPath);
+    void parseExtendedLine(const QString &line, const QString &playlistPath);
+    /**
+     * If urlString is a valid URL with a scheme, it is returned as-is.
+     * Otherwise, it is treated as a local file path.
+     * Relative paths are appended to parentPath.
+     */
+    QUrl stringToUrl(const QString &urlString, const QString &parentPath);
 
     MetaData metadata;
     QList<MetaData> m_data;
