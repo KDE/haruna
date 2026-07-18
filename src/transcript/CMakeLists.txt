@@ -12,8 +12,21 @@ qt_add_qml_module(transcript
     IMPORT_PATH ${CMAKE_BINARY_DIR}
     QML_FILES
         Transcript.qml
+    SOURCES
+        subtitleline.h
+        subtitleparser.h
+        subtitleparser.cpp
+)
+
+target_include_directories(transcript
+    PRIVATE
+        ${AVCODEC_INCLUDE_DIRS}
 )
 
 target_link_libraries(transcript PRIVATE
     Qt6::Core
+
+    KF6::FileMetaData
+
+    utilitiesplugin
 )
