@@ -20,7 +20,7 @@ void M3uParser::read(const std::filesystem::path &path)
 {
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Couldn't open file:" << path.u16string() << file.errorString();
+        qDebug() << "Couldn't open file:" << path.generic_u16string() << file.errorString();
         return;
     }
 
@@ -33,12 +33,12 @@ void M3uParser::read(const std::filesystem::path &path)
     auto firstLine = in.readLine();
     if (firstLine.startsWith(u"#EXTM3U")) {
         while (!in.atEnd()) {
-            parseExtendedLine(in.readLine(), QString::fromStdString(path));
+            parseExtendedLine(in.readLine(), QString(path.generic_u16string()));
         }
     } else {
-        parseStandardLine(firstLine, QString::fromStdString(path));
+        parseStandardLine(firstLine, QString(path.generic_u16string()));
         while (!in.atEnd()) {
-            parseStandardLine(in.readLine(), QString::fromStdString(path));
+            parseStandardLine(in.readLine(), QString(path.generic_u16string()));
         }
     }
     file.close();
@@ -147,7 +147,7 @@ QUrl M3uParser::stringToUrl(const QString &urlString, const QString &parentPath)
         path = playlistParentPath.parent_path() / path;
     }
 
-    return QUrl::fromLocalFile(QString::fromStdString(path));
+    return QUrl::fromLocalFile(QString(path.generic_u16string()));
 }
 
 QList<MetaData> M3uParser::data() const
