@@ -147,6 +147,10 @@ public:
     Q_PROPERTY(int videoHeight READ videoHeight NOTIFY videoHeightChanged)
     int videoHeight();
 
+    Q_PROPERTY(double playbackSpeed READ playbackSpeed WRITE setPlaybackSpeed NOTIFY playbackSpeedChanged FINAL)
+    double playbackSpeed() const;
+    Q_INVOKABLE void setPlaybackSpeed(double newSpeed);
+
     /**
      * Whether the file finished loading and it's safe to start certain events,
      * like auto skipping chapters, which otherwise skips wrong chapter due to the multithreaded code
@@ -214,6 +218,7 @@ Q_SIGNALS:
     void videoWidthChanged();
     void videoHeightChanged();
     void eofReached();
+    void playbackSpeedChanged();
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
     void eofPlayNext();
     void osdMessage(const QString &text);
@@ -221,7 +226,6 @@ Q_SIGNALS:
     void isVideoChanged();
 
     // signals used for mpris
-    void raise();
     void playNext();
     void playPrevious();
     void openUri(const QString &uri);
@@ -265,6 +269,7 @@ private:
     int m_secondarySubtitleId{0};
     int m_videoWidth{0};
     int m_videoHeight{0};
+    double m_playbackSpeed{1.0};
 
     double m_watchLaterPosition{0.0};
     bool m_isReady{false};

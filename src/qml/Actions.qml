@@ -157,14 +157,14 @@ Item {
         }
 
         function onPlaybackSpeedIncreaseAction() {
-            const speed = parseFloat(root.m_mpv.getProperty(MpvProperties.Speed) + 0.1)
-            root.m_mpv.setProperty(MpvProperties.Speed, speed)
+            const speed = parseFloat(root.m_mpv.playbackSpeed + 0.1)
+            root.m_mpv.setPlaybackSpeed(speed)
             root.m_osd.message(KI18n.i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 
         function onPlaybackSpeedDecreaseAction() {
-            const speed = parseFloat(root.m_mpv.getProperty(MpvProperties.Speed) - 0.1)
-            root.m_mpv.setProperty(MpvProperties.Speed, speed)
+            const speed = parseFloat(root.m_mpv.playbackSpeed - 0.1)
+            root.m_mpv.setPlaybackSpeed(speed)
             root.m_osd.message(KI18n.i18nc("@info:tooltip", "Playback speed: %1", speed.toFixed(2)))
         }
 

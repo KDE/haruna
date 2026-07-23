@@ -50,12 +50,8 @@ MpvItem {
         }
     }
 
-    onRaise: { HarunaApp.raiseWindow() }
     onPlayNext: { HarunaApp.actions.playNextAction.trigger() }
     onPlayPrevious: { HarunaApp.actions.playPreviousAction.trigger() }
-    onOpenUri: function(uri) {
-        root.window.openFile(uri, RecentFilesModel.OpenedFrom.ExternalApp)
-    }
 
     Timer {
         id: hideCursorTimer

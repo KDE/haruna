@@ -40,6 +40,8 @@ ApplicationWindow {
         }
     }
 
+    objectName: "HarunaMainWindow"
+
     visible: true
     title: mpv.mediaTitle || KI18n.i18nc("@title:window", "Haruna")
     width: 1000
@@ -202,6 +204,17 @@ ApplicationWindow {
             configGroupName: "MainWindow"
         }
         Component.onCompleted: active = GeneralSettings.rememberWindowGeometry
+    }
+
+    MprisItem {
+        mpv: mpv
+        window: window
+        activePlaylist: playlist.manager.activePlaylist
+
+        onRaise: { HarunaApp.raiseWindow() }
+        onOpenUri: function(uri) {
+            window.openFile(uri, RecentFilesModel.OpenedFrom.ExternalApp)
+        }
     }
 
     MpvVideo {

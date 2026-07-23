@@ -12,6 +12,8 @@
 
 #include <KFileMetaData/SimpleExtractionResult>
 
+using KFileMetaData::ExtractionResult;
+
 struct Metadata {
     qint64 metadataId = 0;
     QUrl url;
@@ -32,7 +34,8 @@ public:
     Q_INVOKABLE static QString formatTime(const double time);
     Q_INVOKABLE static QString mimeType(const QUrl &url);
     Q_INVOKABLE static QString md5(const QString &str);
-    Q_INVOKABLE static std::optional<Metadata> metadata(const QUrl &url);
+    Q_INVOKABLE static std::optional<Metadata>
+    metadata(const QUrl &url, const ExtractionResult::Flags &flags = ExtractionResult::ExtractPlainText | ExtractionResult::ExtractMetaData);
 
 Q_SIGNALS:
     void error(const QString &message);

@@ -40,9 +40,6 @@
 #if HAVE_DBUS
 #include <QDBusConnection>
 #include <QDBusMessage>
-
-#include "mediaplayer2.h"
-#include "mediaplayer2player.h"
 #endif
 
 using namespace Qt::StringLiterals;
@@ -74,6 +71,7 @@ MpvItem::MpvItem(QQuickItem *parent)
     observeProperty(MpvProperties::self()->SubtitleDelay, MPV_FORMAT_DOUBLE);
     observeProperty(MpvProperties::self()->EofReached, MPV_FORMAT_FLAG);
     observeProperty(MpvProperties::self()->VoConfigured, MPV_FORMAT_FLAG);
+    observeProperty(MpvProperties::self()->Speed, MPV_FORMAT_DOUBLE);
     observeProperty(u"demuxer-cache-state"_s, MPV_FORMAT_NODE);
 
     setupConnections();
@@ -260,18 +258,6 @@ void MpvItem::setupConnections()
 
     connect(this, &MpvItem::chapterChanged,
             this, &MpvItem::onChapterChanged);
-
-#if HAVE_DBUS
-    // register mpris dbus service
-    QString mspris2Name(u"org.mpris.MediaPlayer2.haruna"_s);
-    QDBusConnection::sessionBus().registerService(mspris2Name);
-    QDBusConnection::sessionBus().registerObject(u"/org/mpris/MediaPlayer2"_s, this, QDBusConnection::ExportAdaptors);
-
-    // org.mpris.MediaPlayer2 mpris2 interface
-    auto *mp2 = new MediaPlayer2(this);
-    connect(mp2, &MediaPlayer2::raise, this, &MpvItem::raise);
-    new MediaPlayer2Player(this);
-#endif
 
     connect(this, &MpvItem::pauseChanged, this, [this]() {
         static LockManager lockManager;
@@ -493,6 +479,11 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
         if (!voConfigured) {
             update();
         }
+
+    } else if (property == MpvProperties::self()->Speed) {
+        m_playbackSpeed = value.toDouble();
+        Q_EMIT playbackSpeedChanged();
+
     } else if (property == u"demuxer-cache-state"_s) {
         const auto data = value.toMap().value(u"seekable-ranges"_s).toList();
         m_seekableRangesModel->populate(data);
@@ -1168,6 +1159,19 @@ int MpvItem::videoWidth()
 int MpvItem::videoHeight()
 {
     return m_videoHeight;
+}
+
+double MpvItem::playbackSpeed() const
+{
+    return m_playbackSpeed;
+}
+
+void MpvItem::setPlaybackSpeed(double newSpeed)
+{
+    if (newSpeed == playbackSpeed()) {
+        return;
+    }
+    setProperty(MpvProperties::self()->Speed, newSpeed);
 }
 
 bool MpvItem::isLocalFile() const

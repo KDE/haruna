@@ -58,7 +58,7 @@ QString MiscUtils::md5(const QString &str)
     return QString::fromUtf8(md5.toHex());
 }
 
-std::optional<Metadata> MiscUtils::metadata(const QUrl &url)
+std::optional<Metadata> MiscUtils::metadata(const QUrl &url, const ExtractionResult::Flags &flags)
 {
     QString mimeType = MiscUtils::mimeType(url);
 
@@ -68,7 +68,7 @@ std::optional<Metadata> MiscUtils::metadata(const QUrl &url)
     if (extractors.isEmpty()) {
         return {};
     }
-    SimpleExtractionResult result(url.toLocalFile(), mimeType, ExtractionResult::ExtractMetaData);
+    SimpleExtractionResult result(url.toLocalFile(), mimeType, flags);
 
     Extractor *ex = extractors.first();
     ex->extract(&result);

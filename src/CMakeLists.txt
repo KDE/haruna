@@ -28,6 +28,7 @@ target_sources(haruna
     mpv/mpvpreview.h mpv/mpvpreview.cpp
     mpv/mpvproperties.h
     mpv/seekablerangesmodel.h mpv/seekablerangesmodel.cpp
+    mprisitem.h mprisitem.cpp
     thumbnailimageprovider.h thumbnailimageprovider.cpp
     worker.h worker.cpp
     ${ICONS_SRCS}
@@ -58,13 +59,10 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     qt_add_dbus_interface(haruna_screensaver_inhibit_SRCS ../org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
     target_sources(haruna
         PRIVATE
-        mpris2/mediaplayer2.h mpris2/mediaplayer2.cpp
-        mpris2/mediaplayer2player.h mpris2/mediaplayer2player.cpp
         ${haruna_screensaver_inhibit_SRCS}
     )
     target_include_directories(haruna
         PRIVATE
-            mpris2
             ${CMAKE_CURRENT_BINARY_DIR}
     )
 endif()
@@ -190,8 +188,10 @@ target_link_libraries(haruna PRIVATE
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
-    target_link_libraries(haruna PRIVATE
-        Qt6::DBus
+    add_subdirectory(mpris)
+    target_link_libraries(haruna
+        PUBLIC
+            mpris
     )
 endif()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
