@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-08 00:43+0000\n"
+"POT-Creation-Date: 2026-07-26 00:43+0000\n"
 "PO-Revision-Date: 2026-07-08 07:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -622,79 +622,79 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/mpv/mpvitem.cpp:83
+#: src/mpv/mpvitem.cpp:81
 #, kde-format
 msgid "Command line video player"
 msgstr "Video predvajalnik ukazne vrstice"
 
-#: src/mpv/mpvitem.cpp:90
+#: src/mpv/mpvitem.cpp:88
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Večplatformska rešitev za snemanje, pretvorbo in pretakanje zvoka in videa"
 
-#: src/mpv/mpvitem.cpp:336
+#: src/mpv/mpvitem.cpp:322
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ni bilo mogoče predvajati: %1"
 
-#: src/mpv/mpvitem.cpp:438
+#: src/mpv/mpvitem.cpp:424
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Glasnost: %1"
 
-#: src/mpv/mpvitem.cpp:471
+#: src/mpv/mpvitem.cpp:457
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Čas podnapisa: +%1 sekund"
 
-#: src/mpv/mpvitem.cpp:473
+#: src/mpv/mpvitem.cpp:459
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Čas podnapisa: %1 sekund"
 
-#: src/mpv/mpvitem.cpp:517
+#: src/mpv/mpvitem.cpp:508
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Datoteka ne obstaja: %1"
 
-#: src/mpv/mpvitem.cpp:549
+#: src/mpv/mpvitem.cpp:540
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:562
+#: src/mpv/mpvitem.cpp:553
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Noben"
 
-#: src/mpv/mpvitem.cpp:611
+#: src/mpv/mpvitem.cpp:602
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Posnetek zaslona ni uspel"
 
-#: src/mpv/mpvitem.cpp:616
+#: src/mpv/mpvitem.cpp:607
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Posnetek zaslona narejen"
 
-#: src/mpv/mpvitem.cpp:618
+#: src/mpv/mpvitem.cpp:609
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Posnetek zaslona: %1"
 
-#: src/mpv/mpvitem.cpp:651
+#: src/mpv/mpvitem.cpp:642
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -704,13 +704,13 @@ msgstr ""
 "Ni bilo zaznanega video posnetka, najverjetneje video posnetka ni mogoče "
 "dekodirati/predvajati zaradi manjkajočih kodirnikov"
 
-#: src/mpv/mpvitem.cpp:688
+#: src/mpv/mpvitem.cpp:679
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/mpv/mpvitem.cpp:783
+#: src/mpv/mpvitem.cpp:774
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -718,13 +718,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Zvok: %1 %2"
 
-#: src/mpv/mpvitem.cpp:794
+#: src/mpv/mpvitem.cpp:785
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Podnapis: brez"
 
-#: src/mpv/mpvitem.cpp:799 src/mpv/mpvitem.cpp:815
+#: src/mpv/mpvitem.cpp:790 src/mpv/mpvitem.cpp:806
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -732,7 +732,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Podnapis: %1 %2"
 
-#: src/mpv/mpvitem.cpp:810
+#: src/mpv/mpvitem.cpp:801
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -896,7 +896,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/playlist/Playlist.qml:450 src/qml/Main.qml:484
+#: src/playlist/Playlist.qml:450 src/qml/Main.qml:497
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1639,22 +1639,22 @@ msgstr ""
 "Samodejno preskoči poglavja, ki vsebujejo določene besede/znake.\n"
 "Preverite nastavitve 'Predvajanje' za več podrobnosti."
 
-#: src/qml/Main.qml:44
+#: src/qml/Main.qml:46
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:434
+#: src/qml/Main.qml:447
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Izberite datoteko"
 
-#: src/qml/Main.qml:454
+#: src/qml/Main.qml:467
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Izberite datoteko podnapisov"
 
-#: src/qml/Main.qml:481
+#: src/qml/Main.qml:494
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Odpri"
@@ -1814,17 +1814,17 @@ msgctxt "@title:menu"
 msgid "Playback Speed"
 msgstr "Hitrost predvajanja"
 
-#: src/qml/MpvVideo.qml:248
+#: src/qml/MpvVideo.qml:244
 msgctxt "@info:drag&drop append items"
 msgid "Add to Playlist"
 msgstr "Dodaj v seznam predvajanja"
 
-#: src/qml/MpvVideo.qml:297
+#: src/qml/MpvVideo.qml:293
 msgctxt "@info:drag&drop play now"
 msgid "Play Now"
 msgstr "Predvajaj zdaj"
 
-#: src/qml/MpvVideo.qml:388
+#: src/qml/MpvVideo.qml:384
 msgctxt "@label:title"
 msgid "Loading…"
 msgstr "Nalaganje…"
