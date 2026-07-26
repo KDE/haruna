@@ -482,12 +482,14 @@ QUrl PlaylistMultiProxiesModel::getPlaylistCacheUrl()
             return {};
         }
 
+        QJsonArray array;
         QJsonObject json;
         json.insert(u"name", u"Default"_s);
         json.insert(u"isActive", true);
         json.insert(u"currentItem", 0);
+        array.append(json);
 
-        QJsonDocument doc(json);
+        QJsonDocument doc(array);
 
         cacheFile.write(doc.toJson(QJsonDocument::Indented));
         cacheFile.close();
