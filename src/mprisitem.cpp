@@ -6,19 +6,23 @@
 
 #include "mprisitem.h"
 
+#include <QWindow>
+
+#include "mpvitem.h"
+#include "playlistfilterproxymodel.h"
+
+#if HAVE_DBUS
+
 #include <QApplication>
 #include <QBuffer>
 #include <QFileInfo>
 #include <QImageReader>
 #include <QPointer>
 #include <QThreadPool>
-#include <QWindow>
 
 #include "miscutils.h"
 #include "mpriscontroller.h"
-#include "mpvitem.h"
 #include "mpvproperties.h"
-#include "playlistfilterproxymodel.h"
 #include "playlistsettings.h"
 #include "videosettings.h"
 
@@ -413,5 +417,43 @@ QByteArray MprisItem::embeddedArtwork(const QUrl &url)
 
     return data;
 }
+
+#else
+
+MprisItem::MprisItem(QObject *parent)
+    : QObject(parent)
+{
+}
+
+MprisItem::~MprisItem() = default;
+
+MpvItem *MprisItem::mpv() const
+{
+    return {};
+}
+
+void MprisItem::setMpv(MpvItem *newMpv)
+{
+}
+
+PlaylistFilterProxyModel *MprisItem::activePlaylist() const
+{
+    return {};
+}
+
+void MprisItem::setActivePlaylist(PlaylistFilterProxyModel *newActivePlaylist)
+{
+}
+
+QWindow *MprisItem::window() const
+{
+    return {};
+}
+
+void MprisItem::setWindow(QWindow *newWindow)
+{
+}
+
+#endif
 
 #include "moc_mprisitem.cpp"

@@ -10,6 +10,8 @@
 #include <QObject>
 #include <qqmlintegration.h>
 
+#include "config-haruna.h"
+
 class MprisItemPrivate;
 class MpvItem;
 class PlaylistFilterProxyModel;
@@ -39,17 +41,18 @@ public:
     QWindow *window() const;
     void setWindow(QWindow *newWindow);
 
-    void setupMpvConnections();
-
     Q_SIGNAL void raise();
     Q_SIGNAL void openUri();
 
+#if HAVE_DBUS
 private:
+    void setupMpvConnections();
     void getAudioThumbnail(const QUrl &url);
     QString findAudioThumbnail(const QString &filePath);
     void setAudioThumbnail(const QString &image);
     QByteArray embeddedArtwork(const QUrl &url);
     std::unique_ptr<MprisItemPrivate> d_ptr;
+#endif
 };
 
 #endif // MPRISITEM_H
