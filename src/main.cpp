@@ -28,6 +28,8 @@
 
 using namespace Qt::StringLiterals;
 
+static const auto INITIAL_STYLE = QQuickStyle::name();
+
 int main(int argc, char *argv[])
 {
 #ifdef QT_DEBUG
@@ -45,14 +47,16 @@ int main(int argc, char *argv[])
     // required by mpv
     QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
 
-    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
-        QQuickStyle::setStyle(u"org.kde.desktop"_s);
-    }
-    QQuickStyle::setFallbackStyle(u"Fusion"_s);
     QIcon::setFallbackThemeName(u"breeze"_s);
 
     QApplication qApplication(argc, argv);
     QApplication::setWindowIcon(QIcon::fromTheme(u"haruna"_s));
+
+    bool handledByQPT = INITIAL_STYLE != QQuickStyle::name();
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && !handledByQPT) {
+        QQuickStyle::setStyle(u"org.kde.desktop"_s);
+        QQuickStyle::setFallbackStyle(u"Fusion"_s);
+    }
 
     auto *application = Application::instance();
 
