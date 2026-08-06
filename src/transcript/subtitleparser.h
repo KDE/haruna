@@ -18,10 +18,10 @@ class SubtitleParser : public QObject
 public:
     explicit SubtitleParser(QObject *parent = nullptr);
 
-    void parseSubtitle(const QUrl &url, const int streamIndex);
+    void parseSubtitle(const QUrl &url, const int streamIndex, const int transcriptModelVersion, const std::atomic<bool> &cancelRequested);
 
 Q_SIGNALS:
-    void transcriptItemReady(const SubtitleLine &item, const int streamIndex);
+    void transcriptItemReady(const SubtitleLine &item, const int transcriptModelVersion);
 
 private:
     QString formatASS(const QString in);

@@ -20,6 +20,8 @@ import org.kde.haruna.settings
 ResizeablePage {
     id: root
 
+    property TranscriptModel transcriptModel: TranscriptModel {}
+
     edge: PlaylistSettings.position === "right" ? Qt.LeftEdge : Qt.RightEdge
     customWidth: 380
     width: limitWidth(customWidth * fsScale)
@@ -65,7 +67,7 @@ ResizeablePage {
         ScrollView {
             id: transcriptScrollView
 
-            z: 1
+            z: 20
             anchors.fill: parent
             anchors {
                 leftMargin: root.pageEdgeBorder.width
@@ -76,7 +78,10 @@ ResizeablePage {
 
             ListView {
                 id: transcriptView
-                model: 0
+                model: root.transcriptModel
+                reuseItems: true
+                spacing: 1
+
                 delegate: Item {}
             }
         }

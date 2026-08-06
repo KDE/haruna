@@ -24,7 +24,7 @@ SubtitleParser::SubtitleParser(QObject *parent)
 {
 }
 
-void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex)
+void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const int transcriptModelVersion, const std::atomic<bool> &cancelRequested)
 {
     if (!url.isLocalFile()) {
         return;
@@ -43,6 +43,11 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex)
     }
 
     if (avformat_find_stream_info(fmt_ctx, nullptr) < 0) {
+        avformat_close_input(&fmt_ctx);
+        return;
+    }
+
+    if (cancelRequested) {
         avformat_close_input(&fmt_ctx);
         return;
     }
@@ -86,6 +91,14 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex)
     double timeMultiplier = 1.0 * timeBase.num / timeBase.den;
     int gotSub = 0;
     while (av_read_frame(fmt_ctx, packet) >= 0) {
+        if (cancelRequested) {
+            av_packet_unref(packet);
+            av_packet_free(&packet);
+            avcodec_free_context(&codecContext);
+            avformat_close_input(&fmt_ctx);
+            return;
+        }
+
         if (packet->stream_index == int(streamIndex)) {
             // Decode the subtitle packet
             int ret = avcodec_decode_subtitle2(codecContext, &subtitle, &gotSub, packet);
@@ -118,7 +131,17 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex)
                     }
                     }
 
+                    if (line.isEmpty()) {
+                        continue;
+                    }
+
                     text.append(line);
+                }
+
+                if (text.size() == 0) {
+                    avsubtitle_free(&subtitle);
+                    av_packet_unref(packet);
+                    continue;
                 }
 
                 SubtitleLine transcriptItem;
@@ -128,7 +151,7 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex)
                 transcriptItem.endTime = endSecs;
                 transcriptItem.formattedStartTime = MiscUtils::formatTime(startSecs * timeMultiplier);
                 transcriptItem.formattedEndTime = MiscUtils::formatTime(endSecs * timeMultiplier);
-                Q_EMIT transcriptItemReady(transcriptItem, streamIndex);
+                Q_EMIT transcriptItemReady(transcriptItem, transcriptModelVersion);
 
                 // must be freed when gotSub is set
                 avsubtitle_free(&subtitle);
@@ -148,6 +171,18 @@ QString SubtitleParser::formatASS(const QString in)
     // The text is always guaranteed to be the last one since it can contain commas.
     // We need to skip the first 8 columns and join the rest.
     QString text = in.section(QChar::fromLatin1(','), 8);
+
+    // Remove background drawings. They are sandwiched between \pn and \p0 where n>0 and is a scaling factor. p tag can also be inside any other number of other
+    // tags. Text can also be appended or prepended before the background drawing, therefore we need to carve out the drawing part. If p0 tag does not exist,
+    // the whole line is a drawing and should be discarded.
+    QRegularExpression drawing(u"\\{[^}]*\\\\p[1-9][^}]*\\}[^{]*(\\{[^}]*\\\\p0\\})*"_s);
+    while (drawing.match(text).hasMatch()) {
+        text.remove(drawing);
+    }
+
+    if (text.isEmpty()) {
+        return QString::fromUtf8(text.toUtf8());
+    }
 
     // Remove markup text
     QRegularExpression re(u"\\{[^}]*\\}"_s);

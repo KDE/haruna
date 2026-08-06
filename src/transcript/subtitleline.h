@@ -8,8 +8,12 @@
 #define SUBTITLELINE_H
 
 #include <QString>
+#include <qobjectdefs.h>
 
 struct SubtitleLine {
+    Q_GADGET
+
+public:
     QString text;
     double startTime;
     double endTime;

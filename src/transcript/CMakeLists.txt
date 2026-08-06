@@ -16,6 +16,8 @@ qt_add_qml_module(transcript
         subtitleline.h
         subtitleparser.h
         subtitleparser.cpp
+        transcriptmodel.h
+        transcriptmodel.cpp
 )
 
 target_include_directories(transcript
