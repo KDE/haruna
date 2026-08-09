@@ -8,6 +8,7 @@
 #define TRACKSMODEL_H
 
 #include <QAbstractListModel>
+#include <QUrl>
 #include <qqmlregistration.h>
 
 using namespace Qt::StringLiterals;
@@ -17,6 +18,8 @@ struct Track {
     QString lang;
     QString title;
     QString codec;
+    std::optional<QUrl> externalPath;
+    int streamIndex{-1};
 
     QString display() const
     {
@@ -51,7 +54,9 @@ public:
         TextRole,
         LanguageRole,
         TitleRole,
-        CodecRole
+        CodecRole,
+        ExternalPathRole,
+        StreamIndexRole,
     };
     Q_ENUM(Roles)
     // clang-format on

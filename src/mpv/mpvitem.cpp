@@ -552,6 +552,8 @@ void MpvItem::loadTracks(const QList<QVariant> &tracks)
         QString{},
         i18nc("@action The \"None\" subtitle track is used to clear/unset selected track", "None"),
         QString{},
+        std::nullopt,
+        0,
     };
     m_subtitleTracksModel->addTrack(noneTrack);
 
@@ -559,11 +561,19 @@ void MpvItem::loadTracks(const QList<QVariant> &tracks)
     uint sr = 0;
     for (const auto &item : tracks) {
         const auto map = item.toMap();
+
         Track track;
         track.trackid = map.value(u"id"_s).toInt();
         track.lang = map.value(u"lang"_s).toString();
         track.title = map.value(u"title"_s).toString();
         track.codec = map.value(u"codec"_s).toString();
+        track.streamIndex = map.value(u"ff-index"_s).toInt();
+        track.externalPath = std::nullopt;
+
+        auto externalPath = QUrl::fromUserInput(map[u"external-filename"_s].toString());
+        if (map[u"external"_s].toBool() && externalPath != m_currentUrl) {
+            track.externalPath = externalPath;
+        }
 
         const auto type = map.value(u"type"_s).toString();
         if (type == u"sub"_s) {

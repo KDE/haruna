@@ -43,6 +43,13 @@ QVariant TracksModel::data(const QModelIndex &index, int role) const
         return item.title;
     case CodecRole:
         return item.codec;
+    case ExternalPathRole:
+        if (item.externalPath.has_value()) {
+            return item.externalPath.value();
+        }
+        return {};
+    case StreamIndexRole:
+        return item.streamIndex;
     }
 
     return {};
@@ -52,11 +59,13 @@ QHash<int, QByteArray> TracksModel::roleNames() const
 {
     // clang-format off
     static QHash<int, QByteArray> roles{
-        {IdRole,       QByteArrayLiteral("trackId")},
-        {TextRole,     QByteArrayLiteral("displayText")},
-        {LanguageRole, QByteArrayLiteral("language")},
-        {TitleRole,    QByteArrayLiteral("title")},
-        {CodecRole,    QByteArrayLiteral("codec")},
+        {IdRole,            QByteArrayLiteral("trackId")},
+        {TextRole,          QByteArrayLiteral("displayText")},
+        {LanguageRole,      QByteArrayLiteral("language")},
+        {TitleRole,         QByteArrayLiteral("title")},
+        {CodecRole,         QByteArrayLiteral("codec")},
+        {ExternalPathRole,  QByteArrayLiteral("externalPath")},
+        {StreamIndexRole,   QByteArrayLiteral("streamIndex")},
     };
     // clang-format on
 
