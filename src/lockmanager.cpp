@@ -46,7 +46,7 @@ void LockManager::setInhibitionOn()
     if (m_cookie != -1) {
         setInhibitionOff();
     }
-    m_cookie = m_iface->Inhibit(u"org.kde.haruna"_s, i18nc("@info reason for blocking sleep and screen slocking", "Playing media file"));
+    m_cookie = m_iface->Inhibit(u"org.kde.haruna"_s, i18nc("@info reason for blocking sleep and screen locking", "Playing media file"));
 #endif
 
 #ifdef Q_OS_WIN32
