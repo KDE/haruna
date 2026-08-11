@@ -415,7 +415,7 @@ SettingsBasePage {
                 required property var model
 
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
-                width: ListView.view.width
+                width: parent.width
                 highlighted: delegate.model.display === GeneralSettings.colorScheme
                 contentItem: RowLayout {
                     Kirigami.Icon {
