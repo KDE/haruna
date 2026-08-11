@@ -12,8 +12,6 @@ import QtQuick.Controls
 
 import org.kde.ki18n
 
-import org.kde.haruna
-
 TabBar {
     id: root
 

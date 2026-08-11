@@ -12,6 +12,7 @@ import org.kde.ki18n
 
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.settings
 
 TabButton {
     id: root
@@ -43,24 +44,13 @@ TabButton {
             acceptedModifiers: Qt.NoModifier
             gesturePolicy: TapHandler.WithinBounds
 
-            onPressedChanged: {
-                if (point.pressedButtons & Qt.LeftButton || point.pressedButtons & Qt.RightButton) {
-                    return
-                }
-
-                if (pressed) {
-                    progressTimer.start()
-                    progressTimer.heldAmount = 0.0
-                } else {
-                    progressTimer.stop()
-                    progressTimer.heldAmount = 0.0
-                }
-            }
-
             onTapped: function(point, button) {
                 switch (button) {
                 case Qt.LeftButton:
                     root.click()
+                    break
+                case Qt.MiddleButton:
+                    root.removePlaylist()
                     break
                 case Qt.RightButton:
                     root.playlistTabBar.openContextMenu(root)
@@ -193,7 +183,7 @@ TabButton {
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
 
-                source: "dialog-close"
+                source: "tab-close"
                 color: rightItemHover.hovered ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
             }
 
@@ -215,6 +205,11 @@ TabButton {
                         progressTimer.heldAmount = 0.0
                     }
                 }
+            }
+
+            ToolTip {
+                text: KI18n.i18nc("@info:tooltip", "Click and hold")
+                visible: rightItemHover.hovered && GeneralSettings.showExplanatoryToolTips
             }
         }
 
