@@ -430,7 +430,7 @@ ResizeablePage {
                         tooltip: GeneralSettings.showExplanatoryToolTips
                                  ? KI18n.i18nc("@info:tooltip", "Update metadata for all files in the playlist\n\n"+
                                                "Update metadata in the database with metadata inside the file.\n" +
-                                               "Metadata is stored in the database for faster retrival.")
+                                               "Metadata is stored in the database for faster retrieval.")
                                  : ""
                     }
                 ]
@@ -472,7 +472,7 @@ ResizeablePage {
         }
     }
 
-    pageContent: [       
+    pageContent: [
         DropArea {
             id: playlistDropArea
 
@@ -660,7 +660,7 @@ ResizeablePage {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Update metadata in the database with metadata inside the file.\n" +
-                                          "Metadata is stored in the database for faster retrival.")
+                                          "Metadata is stored in the database for faster retrieval.")
                         visible: updateMetadataMenuItem.hovered && GeneralSettings.showExplanatoryToolTips
                     }
                 }
