@@ -16,22 +16,24 @@
 
 #include <KFileMetaData/Properties>
 
+#include "migrationmanager.h"
 #include "pathutils.h"
 #include "recentfile.h"
 
 using namespace Qt::StringLiterals;
 
+const QString URLS_TABLE = u"urls"_s;
 const QString RECENT_FILES_TABLE = u"recent_files"_s;
 const QString PLAYBACK_POSITION_TABLE = u"playback_position"_s;
 const QString METADATA_CACHE_TABLE = u"metadata_cache"_s;
 
 static const QString insertMetadataCacheSql = u"INSERT INTO " % METADATA_CACHE_TABLE % u" " %
-    u"(url, title, duration, "
+    u"(url_id, title, duration, "
     u"width, height, aspect_ratio, framerate, video_codec, orientation, "
     u"track_no, disc_no, album, artist, album_artist, audio_codec, "
     "bitrate, sample_rate, genre, release_year, composer, lyricist) "
     u"VALUES "
-    u"(:url, :title, :duration, "
+    u"(:url_id, :title, :duration, "
     ":width, :height, :aspect_ratio, :framerate, :video_codec, :orientation, "
     ":track_no, :disc_no, :album, :artist, :album_artist, :audio_codec, "
     ":bitrate, :sample_rate, :genre, :release_year, :composer, :lyricist);";
@@ -65,8 +67,13 @@ Database *Database::create(QQmlEngine *, QJSEngine *)
 Database::Database(QObject *parent)
     : QObject(parent)
 {
-    if (connection().open()) {
+    auto conn = connection();
+    if (conn.open()) {
         createTables();
+
+        MigrationManager manager;
+        manager.migrate(conn);
+
     } else {
         qDebug() << "Could not open database:" << connection().lastError();
     }
@@ -104,13 +111,13 @@ void Database::createTables()
     QStringList tables = connection().tables();
 
     if (!tables.contains(u"metadata_cache"_s)) {
-        createTable(u":sql/create-metadata_cache-table.sql"_s);
+        createTable(u":sql/v1/create-metadata_cache-table.sql"_s);
     }
     if (!tables.contains(u"recent_files"_s)) {
-        createTable(u":sql/create-recent_files-table.sql"_s);
+        createTable(u":sql/v1/create-recent_files-table.sql"_s);
     }
     if (!tables.contains(u"playback_position"_s)) {
-        createTable(u":sql/create-playback_position-table.sql"_s);
+        createTable(u":sql/v1/create-playback_position-table.sql"_s);
     }
 }
 
@@ -134,7 +141,10 @@ void Database::createTable(const QString &filename)
 QList<RecentFile> Database::recentFiles(uint limit)
 {
     QSqlQuery query(connection());
-    query.prepare(u"SELECT * FROM "_s % RECENT_FILES_TABLE % u" ORDER BY timestamp DESC LIMIT "_s % QString::number(limit));
+    query.prepare(u"SELECT * FROM "_s % RECENT_FILES_TABLE % u" rf "_s
+                  u"LEFT JOIN urls u ON u.url_id = rf.url_id "_s
+                  u"ORDER BY timestamp DESC LIMIT :limit"_s);
+    query.bindValue(u":limit"_s, limit);
     query.exec();
 
     QList<RecentFile> recentFiles;
@@ -158,21 +168,58 @@ QList<RecentFile> Database::recentFiles(uint limit)
 
 void Database::addRecentFile(const QUrl &url, const QString &filename, const QString &openedFrom, qint64 timestamp)
 {
-    QSqlQuery query(connection());
-    query.prepare(u"INSERT INTO "_s % RECENT_FILES_TABLE %
-                  u" (url, filename, opened_from, timestamp) "
-                  "VALUES (:url, :filename, :openedFrom, :timestamp) "
-                  "ON CONFLICT(url) DO UPDATE SET "
-                  "opened_from = :openedFrom, timestamp = :timestamp"_s);
+    auto db = connection();
+    db.transaction();
+
+    QSqlQuery query(db);
+    query.prepare(u"INSERT INTO "_s % URLS_TABLE % u" (url) VALUES (:url) "
+                  u"ON CONFLICT DO NOTHING"_s);
     query.bindValue(u":url"_s, url);
+    if (!query.exec()) {
+        db.rollback();
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+
+        return;
+    }
+    query.finish();
+
+    query.prepare(u"SELECT url_id FROM "_s % URLS_TABLE % u" WHERE url = :url LIMIT 1"_s);
+    query.bindValue(u":url"_s, url);
+    if (!query.exec()) {
+        db.rollback();
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+
+        return;
+    }
+
+    if (!query.first()) {
+        db.rollback();
+        qDebug() << "No url_id found for url:" << url;
+
+        return;
+    }
+
+    int urlId = query.value(0).toInt();
+    query.finish();
+
+    query.prepare(u"INSERT INTO "_s % RECENT_FILES_TABLE % u" "
+                  u"(url_id, filename, opened_from, timestamp) "
+                  u"VALUES (:url_id, :filename, :openedFrom, :timestamp) "
+                  u"ON CONFLICT(url_id) DO UPDATE SET "
+                  u"opened_from = :openedFrom, timestamp = :timestamp"_s);
+    query.bindValue(u":url_id"_s, urlId);
     query.bindValue(u":filename"_s, filename);
     query.bindValue(u":openedFrom"_s, openedFrom);
     query.bindValue(u":timestamp"_s, timestamp);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
+        db.rollback();
         qDebug() << query.lastError() << getLastExecutedQuery(query);
+
+        return;
     }
+
+    db.commit();
 }
 
 void Database::deleteRecentFiles()
@@ -239,9 +286,42 @@ void Database::deletePlaybackPosition(const QString &md5Hash)
 
 int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMultiMap &properties)
 {
-    QSqlQuery query(connection());
-    query.prepare(insertMetadataCacheSql);
+    auto db = connection();
+    db.transaction();
+
+    QSqlQuery query(db);
+    query.prepare(u"INSERT INTO "_s % URLS_TABLE % u" (url) VALUES (:url) "
+                  u"ON CONFLICT DO NOTHING"_s);
     query.bindValue(u":url"_s, url);
+    if (!query.exec()) {
+        db.rollback();
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+
+        return 0;
+    }
+    query.finish();
+
+    query.prepare(u"SELECT url_id FROM "_s % URLS_TABLE % u" WHERE url = :url LIMIT 1"_s);
+    query.bindValue(u":url"_s, url);
+    if (!query.exec()) {
+        db.rollback();
+        qDebug() << query.lastError() << getLastExecutedQuery(query);
+
+        return 0;
+    }
+
+    if (!query.first()) {
+        db.rollback();
+        qDebug() << "No url_id found for url:" << url;
+
+        return 0;
+    }
+
+    int urlId = query.value(0).toInt();
+    query.finish();
+
+    query.prepare(insertMetadataCacheSql);
+    query.bindValue(u":url_id"_s, urlId);
     query.bindValue(u":title"_s, properties.value(KFileMetaData::Property::Title));
     query.bindValue(u":duration"_s, properties.value(KFileMetaData::Property::Duration));
     query.bindValue(u":width"_s, properties.value(KFileMetaData::Property::Width));
@@ -263,11 +343,13 @@ int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMulti
     query.bindValue(u":composer"_s, properties.value(KFileMetaData::Property::Composer));
     query.bindValue(u":lyricist"_s, properties.value(KFileMetaData::Property::Lyricist));
 
-    const auto result = query.exec();
-    if (!result) {
+    if (!query.exec()) {
+        db.rollback();
         qDebug() << "Database::insertMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
         return 0;
     }
+
+    db.commit();
 
     return query.lastInsertId().toInt();
 }
@@ -294,7 +376,9 @@ bool Database::updateMetadata(const QUrl &url)
 Metadata Database::getMetadata(const QUrl &url)
 {
     QSqlQuery query(connection());
-    query.prepare(u"SELECT * FROM " % METADATA_CACHE_TABLE % u" WHERE url = :url");
+    query.prepare(u"SELECT * FROM " % METADATA_CACHE_TABLE % u" mc "
+                  u"LEFT JOIN urls u ON u.url_id = mc.url_id "_s
+                  u"WHERE url = :url");
     query.bindValue(u":url"_s, url);
 
     const auto result = query.exec();
@@ -304,7 +388,7 @@ Metadata Database::getMetadata(const QUrl &url)
     }
 
     if (!query.first()) {
-        // qDebug() << "Database::getMetadata: metadata not found for" << url;
+        qDebug() << "Database::getMetadata: metadata not found for" << url;
         return {};
     }
 
@@ -346,7 +430,7 @@ bool Database::deleteMetadata(const QUrl &url)
 
     const auto result = query.exec();
     if (!result) {
-        qDebug() << "Database::getMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
+        qDebug() << "Database::deleteMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
     }
 
     return result;
@@ -359,7 +443,7 @@ bool Database::deleteAllMetadata()
 
     const auto result = query.exec();
     if (!result) {
-        qDebug() << "Database::getMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
+        qDebug() << "Database::deleteAllMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
     }
 
     return result;

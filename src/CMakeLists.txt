@@ -15,6 +15,7 @@ target_sources(haruna
     PRIVATE
     application.h application.cpp
     database.h database.cpp
+    migrationmanager.h migrationmanager.cpp
     lockmanager.h lockmanager.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp
@@ -36,9 +37,13 @@ target_sources(haruna
 
 qt_add_resources(haruna sql_files
     FILES
-        sql/create-metadata_cache-table.sql
-        sql/create-recent_files-table.sql
-        sql/create-playback_position-table.sql
+        sql/v1/create-metadata_cache-table.sql
+        sql/v1/create-recent_files-table.sql
+        sql/v1/create-playback_position-table.sql
+
+        sql/v2/create-metadata_cache-table.sql
+        sql/v2/create-recent_files-table.sql
+        sql/v2/create-urls-table.sql
 )
 
 qt_add_resources(haruna animations
