@@ -136,4 +136,15 @@ void TracksModel::setActiveRow(int newActiveTrack)
     m_activeRow = newActiveTrack;
 }
 
+int TracksModel::findTrackRow(int trackId) const
+{
+    for (int row = 0; row < m_data.size(); ++row) {
+        if (m_data.at(row).trackid == trackId) {
+            return row;
+        }
+    }
+
+    return -1;
+}
+
 #include "moc_tracksmodel.cpp"

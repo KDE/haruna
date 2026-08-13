@@ -73,6 +73,7 @@ public:
     void setActiveRow(int newActiveTrack);
     int nextRow();
     int previousRow();
+    Q_INVOKABLE int findTrackRow(int trackId) const;
 
 public Q_SLOTS:
     void setTracks(QList<Track> tracks);
