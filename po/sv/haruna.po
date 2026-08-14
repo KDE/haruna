@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:46+0000\n"
-"PO-Revision-Date: 2026-08-12 16:53+0200\n"
+"POT-Creation-Date: 2026-08-14 00:44+0000\n"
+"PO-Revision-Date: 2026-08-13 17:08+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -674,25 +674,25 @@ msgctxt ""
 msgid "None"
 msgstr "Ingen"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:612
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Skärmbild misslyckades"
 
-#: src/mpv/mpvitem.cpp:607
+#: src/mpv/mpvitem.cpp:617
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
-#: src/mpv/mpvitem.cpp:609
+#: src/mpv/mpvitem.cpp:619
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Skärmbild: %1"
 
-#: src/mpv/mpvitem.cpp:642
+#: src/mpv/mpvitem.cpp:652
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -702,13 +702,13 @@ msgstr ""
 "Inget videospår upptäckt, troligen kan videospåret inte avkodas eller spelas "
 "på grund av saknade avkodare."
 
-#: src/mpv/mpvitem.cpp:679
+#: src/mpv/mpvitem.cpp:689
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Hoppade över kapitel: %1"
 
-#: src/mpv/mpvitem.cpp:774
+#: src/mpv/mpvitem.cpp:784
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -716,13 +716,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Ljud: %1 %2"
 
-#: src/mpv/mpvitem.cpp:785
+#: src/mpv/mpvitem.cpp:795
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Textning: ingen"
 
-#: src/mpv/mpvitem.cpp:790 src/mpv/mpvitem.cpp:806
+#: src/mpv/mpvitem.cpp:800 src/mpv/mpvitem.cpp:816
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -730,7 +730,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Textning: %1 %2"
 
-#: src/mpv/mpvitem.cpp:801
+#: src/mpv/mpvitem.cpp:811
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -877,13 +877,6 @@ msgid "Update all metadata"
 msgstr "Uppdatera all metadata"
 
 #: src/playlist/Playlist.qml:431
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Update metadata for all files in the playlist\n"
-#| "\n"
-#| "Update metadata in the database with metadata inside the file.\n"
-#| "Metadata is stored in the database for faster retrival."
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -956,11 +949,6 @@ msgid "Update metadata"
 msgstr "Uppdatera metadata"
 
 #: src/playlist/Playlist.qml:662
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Update metadata in the database with metadata inside the file.\n"
-#| "Metadata is stored in the database for faster retrival."
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata in the database with metadata inside the file.\n"
@@ -3227,7 +3215,7 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Mittenklicka på skjutreglagen för att återställa dem"
 
-#: src/transcript/Transcript.qml:57
+#: src/transcript/Transcript.qml:93
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "Välj textning"

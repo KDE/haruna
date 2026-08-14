@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:46+0000\n"
-"PO-Revision-Date: 2026-08-12 06:08+0200\n"
+"POT-Creation-Date: 2026-08-14 00:44+0000\n"
+"PO-Revision-Date: 2026-08-13 07:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -676,25 +676,25 @@ msgctxt ""
 msgid "None"
 msgstr "არცერთი"
 
-#: src/mpv/mpvitem.cpp:602
+#: src/mpv/mpvitem.cpp:612
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "ეკრანის ანაბეჭდი ჩავარდა"
 
-#: src/mpv/mpvitem.cpp:607
+#: src/mpv/mpvitem.cpp:617
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "ეკრანის ანაბეჭდი აღებულია"
 
-#: src/mpv/mpvitem.cpp:609
+#: src/mpv/mpvitem.cpp:619
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "ეკრანის ანაბეჭდი: %1"
 
-#: src/mpv/mpvitem.cpp:642
+#: src/mpv/mpvitem.cpp:652
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -704,13 +704,13 @@ msgstr ""
 "ვიდეოტრეკი აღმოჩენილი არაა. ალბათ, ვიდეოტრეკის გაშიფვრა/დაკვრა შეუძლებელია "
 "შესაბამისი კოდეკების არარსებობის გამო"
 
-#: src/mpv/mpvitem.cpp:679
+#: src/mpv/mpvitem.cpp:689
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "გამოტოვებული თავი: %1"
 
-#: src/mpv/mpvitem.cpp:774
+#: src/mpv/mpvitem.cpp:784
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -718,13 +718,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "აუდიო: %1 %2"
 
-#: src/mpv/mpvitem.cpp:785
+#: src/mpv/mpvitem.cpp:795
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "სუბტიტრები: არცერთი"
 
-#: src/mpv/mpvitem.cpp:790 src/mpv/mpvitem.cpp:806
+#: src/mpv/mpvitem.cpp:800 src/mpv/mpvitem.cpp:816
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -732,7 +732,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "სუბტიტრები: %1 %2"
 
-#: src/mpv/mpvitem.cpp:801
+#: src/mpv/mpvitem.cpp:811
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -879,13 +879,6 @@ msgid "Update all metadata"
 msgstr "ყველა მეტამონაცემის განახლება"
 
 #: src/playlist/Playlist.qml:431
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Update metadata for all files in the playlist\n"
-#| "\n"
-#| "Update metadata in the database with metadata inside the file.\n"
-#| "Metadata is stored in the database for faster retrival."
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -958,11 +951,6 @@ msgid "Update metadata"
 msgstr "მეტამონაცემების განახლება"
 
 #: src/playlist/Playlist.qml:662
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Update metadata in the database with metadata inside the file.\n"
-#| "Metadata is stored in the database for faster retrival."
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata in the database with metadata inside the file.\n"
@@ -3226,7 +3214,7 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "შუა-წკაპი სლაიდერების გასანულებლად"
 
-#: src/transcript/Transcript.qml:57
+#: src/transcript/Transcript.qml:93
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "აირჩიეთ სუბტიტრები"
