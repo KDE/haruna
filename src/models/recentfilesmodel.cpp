@@ -8,6 +8,7 @@
 
 #include "database.h"
 #include "generalsettings.h"
+#include "logging/general.h"
 #include "youtube.h"
 
 using namespace Qt::StringLiterals;
@@ -99,7 +100,7 @@ void RecentFilesModel::addRecentFile(const QUrl &url, OpenedFrom openedFrom, con
     }
 
     if (url.scheme().isEmpty()) {
-        qDebug() << "No scheme for:" << url << openedFrom;
+        qCDebug(HarunaGeneral) << "No scheme for:" << url << openedFrom;
         return;
     }
 

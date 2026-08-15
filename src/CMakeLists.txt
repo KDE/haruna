@@ -35,6 +35,20 @@ target_sources(haruna
     ${ICONS_SRCS}
 )
 
+ecm_qt_declare_logging_category(haruna
+    HEADER "logging/general.h"
+    IDENTIFIER "HarunaGeneral"
+    CATEGORY_NAME "org.kde.haruna.general"
+    DEFAULT_SEVERITY Info
+)
+
+ecm_qt_declare_logging_category(haruna
+    HEADER "logging/database.h"
+    IDENTIFIER "HarunaDatabase"
+    CATEGORY_NAME "org.kde.haruna.database"
+    DEFAULT_SEVERITY Info
+)
+
 qt_add_resources(haruna sql_files
     FILES
         sql/v1/create-metadata_cache-table.sql

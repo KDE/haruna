@@ -16,6 +16,7 @@
 
 #include <KFileMetaData/Properties>
 
+#include "logging/database.h"
 #include "migrationmanager.h"
 #include "pathutils.h"
 #include "recentfile.h"
@@ -75,7 +76,7 @@ Database::Database(QObject *parent)
         manager.migrate(conn);
 
     } else {
-        qDebug() << "Could not open database:" << connection().lastError();
+        qCDebug(HarunaDatabase) << "Could not open database:" << connection().lastError();
     }
 }
 
@@ -97,10 +98,10 @@ QSqlDatabase Database::connection()
 
     QSqlQuery query(db);
     if (!query.exec(u"PRAGMA foreign_keys = '1';"_s)) {
-        qDebug() << "Failed to enable foreign keys:" << query.lastError().text();
+        qCDebug(HarunaDatabase) << "Failed to enable foreign keys:" << query.lastError().text();
     }
     if (!query.exec(u"PRAGMA journal_mode=WAL;"_s)) {
-        qDebug() << "Failed to enable WAL mode:" << query.lastError().text();
+        qCDebug(HarunaDatabase) << "Failed to enable WAL mode:" << query.lastError().text();
     }
 
     return db;
@@ -125,7 +126,7 @@ void Database::createTable(const QString &filename)
 {
     QFile sqlFile(filename);
     if (!sqlFile.open(QFile::ReadOnly)) {
-        qDebug() << sqlFile.fileName() << sqlFile.errorString();
+        qCDebug(HarunaDatabase) << sqlFile.fileName() << sqlFile.errorString();
     }
 
     auto content = QString::fromUtf8(sqlFile.readAll());
@@ -134,7 +135,7 @@ void Database::createTable(const QString &filename)
     const auto result = query.exec(content);
 
     if (!result) {
-        qDebug() << sqlFile.fileName() << query.lastError().text() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << sqlFile.fileName() << query.lastError().text() << getLastExecutedQuery(query);
     }
 }
 
@@ -160,7 +161,7 @@ QList<RecentFile> Database::recentFiles(uint limit)
     }
 
     if (query.lastError().isValid()) {
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
     }
 
     return recentFiles;
@@ -177,7 +178,7 @@ void Database::addRecentFile(const QUrl &url, const QString &filename, const QSt
     query.bindValue(u":url"_s, url);
     if (!query.exec()) {
         db.rollback();
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
 
         return;
     }
@@ -187,14 +188,14 @@ void Database::addRecentFile(const QUrl &url, const QString &filename, const QSt
     query.bindValue(u":url"_s, url);
     if (!query.exec()) {
         db.rollback();
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
 
         return;
     }
 
     if (!query.first()) {
         db.rollback();
-        qDebug() << "No url_id found for url:" << url;
+        qCDebug(HarunaDatabase) << "No url_id found for url:" << url;
 
         return;
     }
@@ -214,7 +215,7 @@ void Database::addRecentFile(const QUrl &url, const QString &filename, const QSt
 
     if (!query.exec()) {
         db.rollback();
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
 
         return;
     }
@@ -236,7 +237,7 @@ double Database::playbackPosition(const QString &md5Hash)
     query.exec();
 
     if (query.lastError().isValid()) {
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
     }
 
     while (query.first()) {
@@ -261,7 +262,7 @@ void Database::addPlaybackPosition(const QString &md5Hash, const QString &path, 
     query.exec();
 
     if (query.lastError().isValid()) {
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
     }
 }
 
@@ -280,7 +281,7 @@ void Database::deletePlaybackPosition(const QString &md5Hash)
     query.exec();
 
     if (query.lastError().isValid()) {
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
     }
 }
 
@@ -295,7 +296,7 @@ int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMulti
     query.bindValue(u":url"_s, url);
     if (!query.exec()) {
         db.rollback();
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
 
         return 0;
     }
@@ -305,14 +306,14 @@ int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMulti
     query.bindValue(u":url"_s, url);
     if (!query.exec()) {
         db.rollback();
-        qDebug() << query.lastError() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
 
         return 0;
     }
 
     if (!query.first()) {
         db.rollback();
-        qDebug() << "No url_id found for url:" << url;
+        qCDebug(HarunaDatabase) << "No url_id found for url:" << url;
 
         return 0;
     }
@@ -345,7 +346,7 @@ int Database::insertMetadata(const QUrl &url, const KFileMetaData::PropertyMulti
 
     if (!query.exec()) {
         db.rollback();
-        qDebug() << "Database::insertMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError().text() << getLastExecutedQuery(query);
         return 0;
     }
 
@@ -383,12 +384,12 @@ Metadata Database::getMetadata(const QUrl &url)
 
     const auto result = query.exec();
     if (!result) {
-        qDebug() << "Database::getMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError().text() << getLastExecutedQuery(query);
         return {};
     }
 
     if (!query.first()) {
-        qDebug() << "Database::getMetadata: metadata not found for" << url;
+        qCInfo(HarunaDatabase) << "Metadata not found for" << url;
         return {};
     }
 
@@ -430,7 +431,7 @@ bool Database::deleteMetadata(const QUrl &url)
 
     const auto result = query.exec();
     if (!result) {
-        qDebug() << "Database::deleteMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError().text() << getLastExecutedQuery(query);
     }
 
     return result;
@@ -443,7 +444,7 @@ bool Database::deleteAllMetadata()
 
     const auto result = query.exec();
     if (!result) {
-        qDebug() << "Database::deleteAllMetadata:" << query.lastError().text() << getLastExecutedQuery(query);
+        qCDebug(HarunaDatabase) << query.lastError().text() << getLastExecutedQuery(query);
     }
 
     return result;

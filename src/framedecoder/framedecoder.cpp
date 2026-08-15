@@ -17,6 +17,8 @@ extern "C" {
 #include <libswscale/swscale.h>
 }
 
+#include "logging/framedecoder.h"
+
 using namespace std;
 
 FrameDecoder::FrameDecoder(const QString &filename, AVFormatContext *pavContext)
@@ -37,12 +39,12 @@ void FrameDecoder::initialize(const QString &filename)
     QFileInfo fileInfo(filename);
 
     if ((!m_FormatContextWasGiven) && avformat_open_input(&m_pFormatContext, fileInfo.absoluteFilePath().toLocal8Bit().data(), nullptr, nullptr) != 0) {
-        qDebug() << "Could not open input file: " << fileInfo.absoluteFilePath();
+        qCDebug(HarunaFrameDecoder) << "Could not open input file: " << fileInfo.absoluteFilePath();
         return;
     }
 
     if (avformat_find_stream_info(m_pFormatContext, nullptr) < 0) {
-        qDebug() << "Could not find stream information";
+        qCDebug(HarunaFrameDecoder) << "Could not find stream information";
         return;
     }
 
@@ -103,33 +105,33 @@ bool FrameDecoder::initializeVideo()
 {
     m_VideoStream = av_find_best_stream(m_pFormatContext, AVMEDIA_TYPE_VIDEO, -1, -1, &m_pVideoCodec, 0);
     if (m_VideoStream < 0) {
-        qDebug() << "Could not find video stream";
+        qCDebug(HarunaFrameDecoder) << "Could not find video stream";
         return false;
     }
 
     m_pVideoCodecContext = avcodec_alloc_context3(m_pVideoCodec);
     if (m_pVideoCodecContext == nullptr) {
-        qDebug() << "m_pVideoCodecContext is nullptr";
+        qCDebug(HarunaFrameDecoder) << "m_pVideoCodecContext is nullptr";
         return false;
     }
     const auto result = avcodec_parameters_to_context(m_pVideoCodecContext, m_pFormatContext->streams[m_VideoStream]->codecpar);
     if (result < 0) {
         m_pVideoCodecContext = nullptr;
-        qDebug() << "avcodec_parameters_to_context failed";
+        qCDebug(HarunaFrameDecoder) << "avcodec_parameters_to_context failed";
         return false;
     }
 
     if (m_pVideoCodec == nullptr) {
         // set to nullptr, otherwise avcodec_close(m_pVideoCodecContext) crashes
         m_pVideoCodecContext = nullptr;
-        qDebug() << "Video Codec not found";
+        qCDebug(HarunaFrameDecoder) << "Video Codec not found";
         return false;
     }
 
     m_pVideoCodecContext->workaround_bugs = 1;
 
     if (avcodec_open2(m_pVideoCodecContext, m_pVideoCodec, nullptr) < 0) {
-        qDebug() << "Could not open video codec";
+        qCDebug(HarunaFrameDecoder) << "Could not open video codec";
         return false;
     }
 
@@ -172,7 +174,7 @@ void FrameDecoder::seek(int timeInSeconds)
     if (ret >= 0) {
         avcodec_flush_buffers(m_pVideoCodecContext);
     } else {
-        qDebug() << "Seeking in video failed";
+        qCDebug(HarunaFrameDecoder) << "Seeking in video failed";
         return;
     }
 
@@ -182,7 +184,7 @@ void FrameDecoder::seek(int timeInSeconds)
     }
 
     if (!gotFrame) {
-        qDebug() << "Seeking in video failed";
+        qCDebug(HarunaFrameDecoder) << "Seeking in video failed";
     }
 }
 
@@ -195,7 +197,7 @@ bool FrameDecoder::decodeVideoFrame()
     }
 
     if (!frameFinished) {
-        qDebug() << "decodeVideoFrame() failed: frame not finished";
+        qCDebug(HarunaFrameDecoder) << "decodeVideoFrame() failed: frame not finished";
     }
 
     return frameFinished;
@@ -385,7 +387,7 @@ void FrameDecoder::convertAndScaleFrame(AVPixelFormat format, int scaledSize, bo
                                               nullptr);
 
     if (nullptr == scaleContext) {
-        qDebug() << "Failed to create resize context";
+        qCDebug(HarunaFrameDecoder) << "Failed to create resize context";
         return;
     }
 

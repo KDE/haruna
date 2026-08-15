@@ -19,6 +19,7 @@
 
 #include "database.h"
 #include "framedecoder.h"
+#include "logging/general.h"
 #include "miscutils.h"
 #include "pathutils.h"
 #include "subtitlessettings.h"
@@ -60,7 +61,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
 
     if (image.isNull()) {
         Q_EMIT thumbnailFail();
-        qDebug() << u"Failed to create thumbnail for file: %1"_s.arg(path);
+        qCDebug(HarunaGeneral) << u"Failed to create thumbnail for file: %1"_s.arg(path);
         return;
     }
     Q_EMIT thumbnailSuccess(path, image);
@@ -69,7 +70,7 @@ void Worker::makePlaylistThumbnail(const QString &path, int width)
     // create folders where the file will be saved
     if (QDir().mkpath(fi.absolutePath())) {
         if (!image.save(cachedFilePath)) {
-            qDebug() << u"Failed to save thumbnail for file: %1"_s.arg(path);
+            qCDebug(HarunaGeneral) << u"Failed to save thumbnail for file: %1"_s.arg(path);
         }
     }
 }

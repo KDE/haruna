@@ -34,6 +34,7 @@ if(ECM_FOUND)
     include(ECMAddAppIcon)
     include(KDECMakeSettings)
     include(KDECompilerSettings NO_POLICY_SCOPE)
+    include(ECMQtDeclareLoggingCategory)
 
     include(KDEClangFormat)
     file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.hpp *.c)

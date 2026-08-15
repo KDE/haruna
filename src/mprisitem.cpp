@@ -20,6 +20,7 @@
 #include <QPointer>
 #include <QThreadPool>
 
+#include "logging/general.h"
 #include "miscutils.h"
 #include "mpriscontroller.h"
 #include "mpvproperties.h"
@@ -331,7 +332,7 @@ void MprisItem::getAudioThumbnail(const QUrl &url)
         if (!imageData.isEmpty()) {
             QBuffer buffer(&imageData);
             if (!buffer.open(QBuffer::ReadOnly)) {
-                qDebug() << "MprisItem::getThumbnail : Failed to open buffer:" << buffer.errorString();
+                qCDebug(HarunaGeneral) << "Failed to open buffer:" << buffer.errorString();
             }
 
             const auto format = QImageReader::imageFormat(&buffer);

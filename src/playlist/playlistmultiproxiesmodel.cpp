@@ -11,16 +11,16 @@
 #include <QDir>
 #include <QJsonDocument>
 #include <QLineEdit>
-#include <playbacksettings.h>
 
 #include <KFileItem>
 #include <KIO/RenameFileDialog>
 #include <KLocalizedString>
 
-#include <commandlineoptions.h>
-
+#include "commandlineoptions.h"
+#include "logging/playlist.h"
 #include "miscutils.h"
 #include "pathutils.h"
+#include "playbacksettings.h"
 #include "playlistrenamevalidator.h"
 
 using namespace Qt::StringLiterals;
@@ -50,7 +50,7 @@ PlaylistMultiProxiesModel::PlaylistMultiProxiesModel(QObject *parent)
 
     QFile cacheFile(cacheUrl.toString(QUrl::PreferLocalFile));
     if (!cacheFile.open(QFile::ReadOnly)) {
-        qDebug() << "Can't open internal playlist cache";
+        qCDebug(HarunaPlaylist) << "Can't open internal playlist cache";
         return;
     }
 
@@ -506,7 +506,7 @@ QUrl PlaylistMultiProxiesModel::getDefaultPlaylistUrl()
         createNewPlaylist(u"Default"_s);
     }
     if (!QFile::exists(playlistsPath)) {
-        qDebug() << "PlaylistMultiProxiesModel::getDefaultPlaylistUrl: failed to create Default playlist file:" << playlistsPath;
+        qCDebug(HarunaPlaylist) << "PlaylistMultiProxiesModel::getDefaultPlaylistUrl: failed to create Default playlist file:" << playlistsPath;
     }
 
     return QUrl::fromLocalFile(playlistsPath);
@@ -555,7 +555,7 @@ void PlaylistMultiProxiesModel::savePlaylistCache()
 
     QFile cacheFile(cacheUrl.toString(QUrl::PreferLocalFile));
     if (!cacheFile.open(QFile::WriteOnly)) {
-        qDebug() << "Can't open internal playlist file";
+        qCDebug(HarunaPlaylist) << "Can't open internal playlist file";
         return;
     }
 

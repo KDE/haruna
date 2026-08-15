@@ -6,6 +6,8 @@
 
 #include "playlistproxymodel.h"
 
+#include "logging/playlist.h"
+
 struct Range {
     uint first{0};
     uint last{0};
@@ -106,7 +108,7 @@ bool PlaylistProxyModel::moveRows(const QModelIndex &sourceParent, int row, int 
         return false;
     }
     if (m_layout.isEmpty()) {
-        qDebug() << "PlaylistProxyModel::moveRows: m_layout isEmpty";
+        qCDebug(HarunaPlaylist) << "PlaylistProxyModel::moveRows: m_layout isEmpty";
         return false;
     }
 

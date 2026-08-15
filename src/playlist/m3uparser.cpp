@@ -6,9 +6,10 @@
 
 #include "m3uparser.h"
 
-#include <QDebug>
 #include <QDir>
 #include <QFile>
+
+#include "logging/playlist.h"
 
 using namespace Qt::StringLiterals;
 
@@ -20,7 +21,7 @@ void M3uParser::read(const std::filesystem::path &path)
 {
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Couldn't open file:" << path.generic_u16string() << file.errorString();
+        qCDebug(HarunaPlaylist) << "Couldn't open file:" << path.generic_u16string() << file.errorString();
         return;
     }
 
@@ -50,14 +51,14 @@ void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::
     QDir dir = fileInfo.dir();
     if (!dir.exists()) {
         if (!dir.mkpath(dir.absolutePath())) {
-            qDebug() << "Failed to create playlist directory:" << dir.path();
+            qCDebug(HarunaPlaylist) << "Failed to create playlist directory:" << dir.path();
             return;
         }
     }
 
     QFile m3uFile(savePath);
     if (!m3uFile.open(QFile::WriteOnly | QIODevice::Text)) {
-        qDebug() << "Couldn't open file:" << savePath << m3uFile.errorString();
+        qCDebug(HarunaPlaylist) << "Couldn't open file:" << savePath << m3uFile.errorString();
         return;
     }
 

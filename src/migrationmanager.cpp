@@ -11,6 +11,8 @@
 #include <QSqlError>
 #include <QSqlQuery>
 
+#include "logging/database.h"
+
 using namespace Qt::StringLiterals;
 
 MigrationManager::MigrationManager(QObject *parent)
@@ -36,7 +38,7 @@ void MigrationManager::migrateToV2(QSqlDatabase &db)
     {
         QFile sqlFile(u":sql/v2/create-urls-table.sql"_s);
         if (!sqlFile.open(QFile::ReadOnly)) {
-            qDebug() << sqlFile.fileName() << sqlFile.errorString();
+            qCDebug(HarunaDatabase) << sqlFile.fileName() << sqlFile.errorString();
         }
         migration = QString::fromUtf8(sqlFile.readAll());
         migrations.append(migration);
@@ -49,7 +51,7 @@ void MigrationManager::migrateToV2(QSqlDatabase &db)
     {
         QFile sqlFile(u":sql/v2/create-metadata_cache-table.sql"_s);
         if (!sqlFile.open(QFile::ReadOnly)) {
-            qDebug() << sqlFile.fileName() << sqlFile.errorString();
+            qCDebug(HarunaDatabase) << sqlFile.fileName() << sqlFile.errorString();
         }
         migration = QString::fromUtf8(sqlFile.readAll());
         migrations.append(migration);
@@ -62,7 +64,7 @@ void MigrationManager::migrateToV2(QSqlDatabase &db)
     {
         QFile sqlFile(u":sql/v2/create-recent_files-table.sql"_s);
         if (!sqlFile.open(QFile::ReadOnly)) {
-            qDebug() << sqlFile.fileName() << sqlFile.errorString();
+            qCDebug(HarunaDatabase) << sqlFile.fileName() << sqlFile.errorString();
         }
         migration = QString::fromUtf8(sqlFile.readAll());
         migrations.append(migration);
@@ -111,7 +113,7 @@ bool MigrationManager::setDatabaseVersion(QSqlDatabase &db, int version)
 {
     QSqlQuery query(db);
     if (!query.exec(u"PRAGMA user_version = %1;"_s.arg(version))) {
-        qDebug() << "MigrationManager::setDatabaseVersion:" << query.lastError() << query.lastQuery();
+        qCDebug(HarunaDatabase) << query.lastError() << query.lastQuery();
         return false;
     }
     return true;

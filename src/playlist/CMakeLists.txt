@@ -43,6 +43,13 @@ qt_add_qml_module(playlist
         playlistsortpropertyproxymodel.cpp
 )
 
+ecm_qt_declare_logging_category(playlist
+    HEADER "logging/playlist.h"
+    IDENTIFIER "HarunaPlaylist"
+    CATEGORY_NAME "org.kde.haruna.playlist"
+    DEFAULT_SEVERITY Info
+)
+
 target_link_libraries(playlist PRIVATE
     Qt6::Core
     Qt6::Gui

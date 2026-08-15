@@ -14,6 +14,13 @@ qt_add_qml_module(framedecoder
         framedecoder.cpp
 )
 
+ecm_qt_declare_logging_category(framedecoder
+    HEADER "logging/framedecoder.h"
+    IDENTIFIER "HarunaFrameDecoder"
+    CATEGORY_NAME "org.kde.haruna.framedecoder"
+    DEFAULT_SEVERITY Info
+)
+
 target_include_directories(framedecoder
     PRIVATE
         ${FFMPEG_INCLUDE_DIRS}

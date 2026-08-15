@@ -19,6 +19,7 @@
 
 #include "../database.h"
 #include "generalsettings.h"
+#include "logging/playlist.h"
 #include "m3uparser.h"
 #include "miscutils.h"
 #include "playlistsettings.h"
@@ -609,11 +610,11 @@ void PlaylistModel::onMetaDataReady(uint i, const QUrl &url, const KFileMetaData
 
         Q_EMIT dataChanged(index(i, 0), index(i, 0));
     } else {
-        qDebug() << "\n"
-                 << u"Data mismatch: the url at position %1 received from the threadpool:"_s.arg(i) << "\n"
-                 << u"%1"_s.arg(url.toString()) << "\n"
-                 << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
-                 << u"%1"_s.arg(m_playlist.at(i).url.toString());
+        qCDebug(HarunaPlaylist) << "\n"
+                                << u"Data mismatch: the url at position %1 received from the threadpool:"_s.arg(i) << "\n"
+                                << u"%1"_s.arg(url.toString()) << "\n"
+                                << u"is different than the url in m_playlist at position %2"_s.arg(i) << "\n"
+                                << u"%1"_s.arg(m_playlist.at(i).url.toString());
     }
 }
 
