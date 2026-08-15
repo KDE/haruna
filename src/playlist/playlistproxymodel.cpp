@@ -6,7 +6,7 @@
 
 #include "playlistproxymodel.h"
 
-#include "logging/playlist.h"
+#include "logging/_playlist.h"
 
 struct Range {
     uint first{0};

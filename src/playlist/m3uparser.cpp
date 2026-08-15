@@ -9,7 +9,7 @@
 #include <QDir>
 #include <QFile>
 
-#include "logging/playlist.h"
+#include "logging/_playlist.h"
 
 using namespace Qt::StringLiterals;
 

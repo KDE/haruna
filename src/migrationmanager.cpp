@@ -11,7 +11,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 
-#include "logging/database.h"
+#include "logging/_database.h"
 
 using namespace Qt::StringLiterals;
 

@@ -19,7 +19,7 @@
 
 #include "database.h"
 #include "framedecoder.h"
-#include "logging/general.h"
+#include "logging/_general.h"
 #include "miscutils.h"
 #include "pathutils.h"
 #include "subtitlessettings.h"

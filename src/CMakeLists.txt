@@ -36,14 +36,14 @@ target_sources(haruna
 )
 
 ecm_qt_declare_logging_category(haruna
-    HEADER "logging/general.h"
+    HEADER "logging/_general.h"
     IDENTIFIER "HarunaGeneral"
     CATEGORY_NAME "org.kde.haruna.general"
     DEFAULT_SEVERITY Info
 )
 
 ecm_qt_declare_logging_category(haruna
-    HEADER "logging/database.h"
+    HEADER "logging/_database.h"
     IDENTIFIER "HarunaDatabase"
     CATEGORY_NAME "org.kde.haruna.database"
     DEFAULT_SEVERITY Info

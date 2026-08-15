@@ -15,7 +15,7 @@ qt_add_qml_module(framedecoder
 )
 
 ecm_qt_declare_logging_category(framedecoder
-    HEADER "logging/framedecoder.h"
+    HEADER "logging/_framedecoder.h"
     IDENTIFIER "HarunaFrameDecoder"
     CATEGORY_NAME "org.kde.haruna.framedecoder"
     DEFAULT_SEVERITY Info

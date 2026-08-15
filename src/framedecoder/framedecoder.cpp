@@ -17,7 +17,7 @@ extern "C" {
 #include <libswscale/swscale.h>
 }
 
-#include "logging/framedecoder.h"
+#include "logging/_framedecoder.h"
 
 using namespace std;
 

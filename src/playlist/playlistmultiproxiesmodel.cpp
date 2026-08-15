@@ -17,7 +17,7 @@
 #include <KLocalizedString>
 
 #include "commandlineoptions.h"
-#include "logging/playlist.h"
+#include "logging/_playlist.h"
 #include "miscutils.h"
 #include "pathutils.h"
 #include "playbacksettings.h"

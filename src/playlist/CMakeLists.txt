@@ -44,7 +44,7 @@ qt_add_qml_module(playlist
 )
 
 ecm_qt_declare_logging_category(playlist
-    HEADER "logging/playlist.h"
+    HEADER "logging/_playlist.h"
     IDENTIFIER "HarunaPlaylist"
     CATEGORY_NAME "org.kde.haruna.playlist"
     DEFAULT_SEVERITY Info

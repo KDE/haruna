@@ -20,7 +20,7 @@
 #include <QPointer>
 #include <QThreadPool>
 
-#include "logging/general.h"
+#include "logging/_general.h"
 #include "miscutils.h"
 #include "mpriscontroller.h"
 #include "mpvproperties.h"

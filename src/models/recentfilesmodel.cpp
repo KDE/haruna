@@ -8,7 +8,7 @@
 
 #include "database.h"
 #include "generalsettings.h"
-#include "logging/general.h"
+#include "logging/_general.h"
 #include "youtube.h"
 
 using namespace Qt::StringLiterals;
