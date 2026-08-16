@@ -425,6 +425,7 @@ ResizeablePage {
                     Kirigami.Action {
                         text: KI18n.i18nc("@action:inmenu", "Update all metadata")
                         icon.name: "view-refresh"
+                        displayHint: Kirigami.DisplayHint.AlwaysHide
                         enabled: !playlistsManager.visiblePlaylist.isUpdatingMetadata
                         onTriggered: {
                             playlistsManager.visiblePlaylist.updateMetadata()
