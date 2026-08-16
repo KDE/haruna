@@ -30,6 +30,8 @@ class ApplicationEventFilter : public QObject
 Q_SIGNALS:
     void applicationMouseLeave();
     void applicationMouseEnter();
+    void altKeyPressed();
+    void altKeyReleased();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -51,6 +53,12 @@ public:
     bool actionsEnabled();
     void setActionsEnabled(bool enable);
 
+    Q_PROPERTY(bool isAltKeyPressed READ isAltKeyPressed WRITE setIsAltKeyPressed NOTIFY isAltKeyPressedChanged FINAL)
+    Q_SIGNAL void isAltKeyPressedChanged();
+    bool isAltKeyPressed() const;
+    void setIsAltKeyPressed(bool newIsAltKeyPressed);
+
+    Q_INVOKABLE void setupEventFilter(QObject *object);
     Q_INVOKABLE QList<QUrl> urls();
     Q_INVOKABLE QUrl url(uint index);
     Q_INVOKABLE void addUrl(const QString &value);
@@ -96,6 +104,7 @@ private:
     std::unique_ptr<ApplicationEventFilter> m_appEventFilter;
     QQmlPropertyMap *m_actions{new QQmlPropertyMap};
     bool m_actionsEnabled{true};
+    bool m_isAltKeyPressed;
 };
 
 #endif // APPLICATION_H

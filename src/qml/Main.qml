@@ -505,6 +505,7 @@ ApplicationWindow {
     }
 
     Component.onCompleted: {
+        HarunaApp.setupEventFilter(window)
         HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
 
         const hasCommandLineFile = HarunaApp.url(0).toString() !== ""

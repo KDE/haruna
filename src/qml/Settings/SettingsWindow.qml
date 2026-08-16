@@ -230,7 +230,10 @@ Loader {
 
         onClosing: root.active = false
 
-        Component.onCompleted: pageStack.columnView.columnWidth = Kirigami.Units.gridUnit * 15
+        Component.onCompleted: {
+            HarunaApp.setupEventFilter(settingsWindow)
+            pageStack.columnView.columnWidth = Kirigami.Units.gridUnit * 15
+        }
 
         Shortcut {
             sequence: "Esc"

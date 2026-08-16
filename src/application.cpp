@@ -50,11 +50,29 @@ using namespace Qt::StringLiterals;
 
 bool ApplicationEventFilter::eventFilter(QObject *obj, QEvent *event)
 {
-    if (event->type() == QEvent::Leave) {
-        Q_EMIT applicationMouseLeave();
+    switch (event->type()) {
+    case QEvent::KeyPress: {
+        const auto *keyEvent = static_cast<QKeyEvent *>(event);
+        if (keyEvent->key() == Qt::Key_Alt) {
+            Q_EMIT altKeyPressed();
+        }
+        break;
     }
-    if (event->type() == QEvent::Enter) {
+    case QEvent::KeyRelease: {
+        const auto *keyEvent = static_cast<QKeyEvent *>(event);
+        if (keyEvent->key() == Qt::Key_Alt) {
+            Q_EMIT altKeyReleased();
+        }
+        break;
+    }
+    case QEvent::Leave:
+        Q_EMIT applicationMouseLeave();
+        break;
+    case QEvent::Enter:
         Q_EMIT applicationMouseEnter();
+        break;
+    default:
+        break;
     }
     return QObject::eventFilter(obj, event);
 }
@@ -71,32 +89,12 @@ Application *Application::create(QQmlEngine *, QJSEngine *)
     return instance();
 }
 
-bool Application::actionsEnabled()
-{
-    return m_actionsEnabled;
-}
-
-void Application::setActionsEnabled(bool enable)
-{
-    if (enable == actionsEnabled()) {
-        return;
-    }
-    m_actionsEnabled = enable;
-    Q_EMIT actionsEnabledChanged();
-}
-
 Application::Application()
     : QObject{nullptr}
     , m_schemes(KColorSchemeManager::instance())
     , m_systemDefaultStyle(QApplication::style()->objectName())
     , m_appEventFilter{std::make_unique<ApplicationEventFilter>()}
 {
-    // used to hide playlist when mouse leaves the application
-    // while moving between monitors while in fullscreen
-    QApplication::instance()->installEventFilter(m_appEventFilter.get());
-    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
-    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
-
     if (GeneralSettings::guiStyle() != u"System"_s) {
         QApplication::setStyle(GeneralSettings::guiStyle());
     }
@@ -112,6 +110,52 @@ Application::Application()
 }
 
 Application::~Application() = default;
+
+bool Application::actionsEnabled()
+{
+    return m_actionsEnabled;
+}
+
+void Application::setActionsEnabled(bool enable)
+{
+    if (enable == actionsEnabled()) {
+        return;
+    }
+    m_actionsEnabled = enable;
+    Q_EMIT actionsEnabledChanged();
+}
+
+bool Application::isAltKeyPressed() const
+{
+    return m_isAltKeyPressed;
+}
+
+void Application::setIsAltKeyPressed(bool newIsAltKeyPressed)
+{
+    if (m_isAltKeyPressed == newIsAltKeyPressed) {
+        return;
+    }
+    m_isAltKeyPressed = newIsAltKeyPressed;
+    Q_EMIT isAltKeyPressedChanged();
+}
+
+void Application::setupEventFilter(QObject *object)
+{
+    // used to hide playlist when mouse leaves the application
+    // while moving between monitors while in fullscreen
+    // and detecting if alt key is pressed to show tooltips even when they are disabled in settings
+    object->installEventFilter(m_appEventFilter.get());
+
+    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseLeave, this, &Application::qmlApplicationMouseLeave);
+    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::applicationMouseEnter, this, &Application::qmlApplicationMouseEnter);
+
+    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::altKeyPressed, this, [this]() {
+        setIsAltKeyPressed(true);
+    });
+    QObject::connect(m_appEventFilter.get(), &ApplicationEventFilter::altKeyReleased, this, [this]() {
+        setIsAltKeyPressed(false);
+    });
+}
 
 void Application::setupWorkerThread()
 {
