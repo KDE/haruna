@@ -342,7 +342,9 @@ RowLayout {
 
                         ToolTip {
                             text: KI18n.i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
-                            visible: skipChaptersCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
+                            delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                            visible: skipChaptersCheckBox.hovered
+                                     && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                         }
                     }
                 }

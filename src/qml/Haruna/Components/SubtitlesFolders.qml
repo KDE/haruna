@@ -127,7 +127,9 @@ ColumnLayout {
                             }
                             ToolTip {
                                 text: KI18n.i18nc("@info:tooltip", "Delete this folder from list")
-                                visible: deleteButton.hovered && GeneralSettings.showExplanatoryToolTips
+                                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                                visible: deleteButton.hovered
+                                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                             }
                         }
 
@@ -146,7 +148,9 @@ ColumnLayout {
                             }
                             ToolTip {
                                 text: KI18n.i18nc("@info:tooltip", "Save changes")
-                                visible: saveButton.hovered && GeneralSettings.showExplanatoryToolTips
+                                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                                visible: saveButton.hovered
+                                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                             }
                         }
 

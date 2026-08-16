@@ -191,7 +191,9 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked the playlist goes on top of the video\nWhen unchecked the video is resized")
-                visible: overlayVideoCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: overlayVideoCheckBox.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 
@@ -260,7 +262,9 @@ SettingsBasePage {
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked the playlist state (visible/hidden) "
                             + "is remembered across launches")
-                visible: rememberStateCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: rememberStateCheckBox.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 

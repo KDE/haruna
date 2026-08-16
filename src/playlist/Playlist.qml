@@ -123,7 +123,9 @@ ResizeablePage {
 
                     ToolTip {
                         text: KI18n.i18nc("@action:button", "Add new playlist")
-                        visible: addPlaylistButton.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: addPlaylistButton.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
             }
@@ -427,7 +429,7 @@ ResizeablePage {
                         onTriggered: {
                             playlistsManager.visiblePlaylist.updateMetadata()
                         }
-                        tooltip: GeneralSettings.showExplanatoryToolTips
+                        tooltip: (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                                  ? KI18n.i18nc("@info:tooltip", "Update metadata for all files in the playlist\n\n"+
                                                "Update metadata in the database with metadata inside the file.\n" +
                                                "Metadata is stored in the database for faster retrieval.")
@@ -661,7 +663,9 @@ ResizeablePage {
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Update metadata in the database with metadata inside the file.\n" +
                                           "Metadata is stored in the database for faster retrieval.")
-                        visible: updateMetadataMenuItem.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: updateMetadataMenuItem.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
 

@@ -105,7 +105,9 @@ SettingsBasePage {
                         ToolTip {
                             text: KI18n.i18nc("@info:tooltip", "Checked: property will be set at startup\n" +
                                         "Unchecked: property will not be set at startup")
-                            visible: toggleCommandCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
+                            delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                            visible: toggleCommandCheckBox.hovered
+                                     && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                         }
                     }
 

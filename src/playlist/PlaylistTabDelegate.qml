@@ -209,7 +209,9 @@ TabButton {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "Click and hold")
-                visible: rightItemHover.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: rightItemHover.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 

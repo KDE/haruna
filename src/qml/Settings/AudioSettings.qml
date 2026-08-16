@@ -204,7 +204,9 @@ SettingsBasePage {
                 }
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
-                    visible: resetPreampButton.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: resetPreampButton.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
 
@@ -240,7 +242,9 @@ SettingsBasePage {
                 }
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
-                    visible: resetFallbackButton.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: resetFallbackButton.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
             ToolTipButton {

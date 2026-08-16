@@ -150,7 +150,9 @@ Item {
                         id: playPauseButtonToolTip
 
                         text: root.m_mpv.pause ? KI18n.i18nc("@info:tooltip", "Start playback") : KI18n.i18nc("@info:tooltip", "Pause playback")
-                        visible: playPauseButton.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: playPauseButton.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
 
@@ -168,7 +170,9 @@ Item {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Play previous file")
-                        visible: playPreviousFile.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: playPreviousFile.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
 
@@ -186,7 +190,9 @@ Item {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Play next file")
-                        visible: playNextFile.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: playNextFile.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
 
@@ -203,7 +209,9 @@ Item {
 
                     ToolTip {
                         text: KI18n.i18nc("@info:tooltip", "Open chapters menu")
-                        visible: chaptersMenuButton.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: chaptersMenuButton.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
 
@@ -228,7 +236,9 @@ Item {
 
                     ToolTip {
                         text: HarunaApp.actions.muteAction.text
-                        visible: mute.hovered && GeneralSettings.showExplanatoryToolTips
+                        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                        visible: mute.hovered
+                                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                     }
                 }
 

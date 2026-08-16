@@ -11,6 +11,9 @@ import QtQuick.Dialogs
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
+import org.kde.haruna
+import org.kde.haruna.settings
+
 Rectangle {
     id: root
 
@@ -41,7 +44,9 @@ Rectangle {
 
     ToolTip {
         text: KI18n.i18nc("@info:tooltip", "Select a color")
-        visible: ma.containsMouse && GeneralSettings.showExplanatoryToolTips
+        delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+        visible: ma.containsMouse
+                 && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
     }
 
     ColorDialog {

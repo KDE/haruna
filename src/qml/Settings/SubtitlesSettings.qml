@@ -45,7 +45,9 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked a subtitle track will be automatically selected and displayed")
-                visible: autoSelectSubtitles.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: autoSelectSubtitles.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 
@@ -128,7 +130,9 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "When checked the subtitles can be rendered outside the video, in the black borders. Might not work for all .ass subtitles.")
-                visible: allowOnBlackBordersCheckBox.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: allowOnBlackBordersCheckBox.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 
@@ -177,7 +181,9 @@ SettingsBasePage {
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
-                    visible: resetSubtitleFontButton.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: resetSubtitleFontButton.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
         }
@@ -276,7 +282,9 @@ SettingsBasePage {
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
-                    visible: resetSubtitleColorButton.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: resetSubtitleColorButton.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
         }
@@ -334,7 +342,9 @@ SettingsBasePage {
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
-                    visible: resetShadowColorButton.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: resetShadowColorButton.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
         }
@@ -358,7 +368,9 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
-                visible: shadowOffsetSpinBox.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: shadowOffsetSpinBox.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 
@@ -415,7 +427,9 @@ SettingsBasePage {
 
                 ToolTip {
                     text: KI18n.i18nc("@info:tooltip", "Reset to default value")
-                    visible: resetBorderColorButton.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: resetBorderColorButton.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
         }
@@ -439,7 +453,9 @@ SettingsBasePage {
 
             ToolTip {
                 text: KI18n.i18nc("@info:tooltip", "Set to 0 (zero) to disable.")
-                visible: borderSizeSpinBox.hovered && GeneralSettings.showExplanatoryToolTips
+                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                visible: borderSizeSpinBox.hovered
+                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
             }
         }
 

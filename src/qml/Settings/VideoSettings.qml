@@ -51,7 +51,9 @@ SettingsBasePage {
                     text: KI18n.i18nc("@info:tooltip", "Used for music files that don’t have a video track, "
                                 + "an embedded cover image or a cover/folder image "
                                 + "in the same folder as the played file.")
-                    visible: defaultCover.hovered && GeneralSettings.showExplanatoryToolTips
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: defaultCover.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
 
                 function save() : void {
