@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:44+0000\n"
+"POT-Creation-Date: 2026-08-17 00:44+0000\n"
 "PO-Revision-Date: 2025-05-04 09:31+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -27,38 +27,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
-#: src/application.cpp:134
+#: src/application.cpp:178
 #, kde-format
 msgctxt "application title/display name"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/application.cpp:136
+#: src/application.cpp:180
 #, kde-format
 msgctxt "@title"
 msgid "Media player"
 msgstr "Pemutar media"
 
-#: src/application.cpp:138
+#: src/application.cpp:182
 #, kde-format
 msgctxt ""
 "copyright statement, use copyright symbol and en dash for the year range"
 msgid "© 2019–2025"
 msgstr "© 2019–2025"
 
-#: src/application.cpp:143
+#: src/application.cpp:187
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Florea Bănuș"
 msgstr "George Florea Bănuș"
 
-#: src/application.cpp:144
+#: src/application.cpp:188
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr "Pengembang"
 
-#: src/application.cpp:171
+#: src/application.cpp:215
 #, kde-format
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Baris perintah kaya fitur pengunduh audio/video"
@@ -826,17 +826,17 @@ msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "Tambahkan ke playlist"
 
-#: src/playlist/Playlist.qml:136
+#: src/playlist/Playlist.qml:138
 msgctxt "@action:button"
 msgid "Search"
 msgstr ""
 
-#: src/playlist/Playlist.qml:156
+#: src/playlist/Playlist.qml:158
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Tambah..."
 
-#: src/playlist/Playlist.qml:164
+#: src/playlist/Playlist.qml:166
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "File"
@@ -844,12 +844,12 @@ msgctxt "@action:button"
 msgid "Files"
 msgstr "File"
 
-#: src/playlist/Playlist.qml:172
+#: src/playlist/Playlist.qml:174
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/playlist/Playlist.qml:182
+#: src/playlist/Playlist.qml:184
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Playlist"
@@ -857,12 +857,12 @@ msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Playlist"
 
-#: src/playlist/Playlist.qml:191
+#: src/playlist/Playlist.qml:193
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Urutkan"
 
-#: src/playlist/Playlist.qml:200
+#: src/playlist/Playlist.qml:202
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name, ascending"
@@ -870,7 +870,7 @@ msgctxt "@action:button"
 msgid "Ascending"
 msgstr "Nama, menaik"
 
-#: src/playlist/Playlist.qml:217
+#: src/playlist/Playlist.qml:219
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Name, ascending"
@@ -878,7 +878,7 @@ msgctxt "@action:button"
 msgid "Descending"
 msgstr "Nama, menaik"
 
-#: src/playlist/Playlist.qml:240
+#: src/playlist/Playlist.qml:242
 #, fuzzy
 #| msgctxt ""
 #| "@action The \"None\" subtitle track is used to clear/unset selected track"
@@ -887,7 +887,7 @@ msgctxt "@action:button"
 msgid "None"
 msgstr "Nihil"
 
-#: src/playlist/Playlist.qml:250
+#: src/playlist/Playlist.qml:252
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Volume: %1"
@@ -895,12 +895,12 @@ msgctxt "@action:button"
 msgid "File Name"
 msgstr "Volume: %1"
 
-#: src/playlist/Playlist.qml:260
+#: src/playlist/Playlist.qml:262
 msgctxt "@action:button"
 msgid "Title"
 msgstr ""
 
-#: src/playlist/Playlist.qml:270
+#: src/playlist/Playlist.qml:272
 #, fuzzy
 #| msgctxt "@label:slider"
 #| msgid "Saturation"
@@ -908,12 +908,12 @@ msgctxt "@action:button"
 msgid "Duration"
 msgstr "Saturasi"
 
-#: src/playlist/Playlist.qml:280
+#: src/playlist/Playlist.qml:282
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr ""
 
-#: src/playlist/Playlist.qml:290
+#: src/playlist/Playlist.qml:292
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "File"
@@ -921,7 +921,7 @@ msgctxt "@action:button"
 msgid "File Size"
 msgstr "File"
 
-#: src/playlist/Playlist.qml:300
+#: src/playlist/Playlist.qml:302
 #, fuzzy
 #| msgctxt "@title:menu"
 #| msgid "&Track"
@@ -929,22 +929,22 @@ msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "&Trek"
 
-#: src/playlist/Playlist.qml:310
+#: src/playlist/Playlist.qml:312
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr ""
 
-#: src/playlist/Playlist.qml:320
+#: src/playlist/Playlist.qml:322
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr ""
 
-#: src/playlist/Playlist.qml:335
+#: src/playlist/Playlist.qml:337
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr ""
 
-#: src/playlist/Playlist.qml:346
+#: src/playlist/Playlist.qml:348
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Playback"
@@ -952,7 +952,7 @@ msgctxt "@action:button"
 msgid "Playback"
 msgstr "Pemutaran"
 
-#: src/playlist/Playlist.qml:352
+#: src/playlist/Playlist.qml:354
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Open Playlist"
@@ -960,12 +960,12 @@ msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Buka Playlist"
 
-#: src/playlist/Playlist.qml:363
+#: src/playlist/Playlist.qml:365
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr ""
 
-#: src/playlist/Playlist.qml:373
+#: src/playlist/Playlist.qml:375
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Repeat"
@@ -973,12 +973,12 @@ msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Ulangi"
 
-#: src/playlist/Playlist.qml:384
+#: src/playlist/Playlist.qml:386
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr ""
 
-#: src/playlist/Playlist.qml:394
+#: src/playlist/Playlist.qml:396
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Restart Playback"
@@ -986,22 +986,22 @@ msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Mulai Ulang Pemutaran"
 
-#: src/playlist/Playlist.qml:406
+#: src/playlist/Playlist.qml:408
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: src/playlist/Playlist.qml:414
+#: src/playlist/Playlist.qml:416
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Simpan Sebagai"
 
-#: src/playlist/Playlist.qml:424
+#: src/playlist/Playlist.qml:426
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
 msgstr ""
 
-#: src/playlist/Playlist.qml:431
+#: src/playlist/Playlist.qml:434
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -1010,12 +1010,12 @@ msgid ""
 "Metadata is stored in the database for faster retrieval."
 msgstr ""
 
-#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:468
+#: src/playlist/Playlist.qml:450 src/playlist/Playlist.qml:471
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Tambah"
 
-#: src/playlist/Playlist.qml:450 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1024,7 +1024,7 @@ msgstr ""
 "Baik <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> maupun <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> telah ditemukan."
 
-#: src/playlist/Playlist.qml:467
+#: src/playlist/Playlist.qml:470
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Playlist style"
@@ -1032,22 +1032,22 @@ msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "Gaya playlist"
 
-#: src/playlist/Playlist.qml:595
+#: src/playlist/Playlist.qml:598
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "Buka Folder Konten"
 
-#: src/playlist/Playlist.qml:601
+#: src/playlist/Playlist.qml:604
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "Buka di Browser"
 
-#: src/playlist/Playlist.qml:610
+#: src/playlist/Playlist.qml:613
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr ""
 
-#: src/playlist/Playlist.qml:626
+#: src/playlist/Playlist.qml:629
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Open in Browser"
@@ -1055,34 +1055,34 @@ msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "Buka di Browser"
 
-#: src/playlist/Playlist.qml:637
+#: src/playlist/Playlist.qml:640
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "Salin Nama"
 
-#: src/playlist/Playlist.qml:643
+#: src/playlist/Playlist.qml:646
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "Salin Alur"
 
-#: src/playlist/Playlist.qml:644
+#: src/playlist/Playlist.qml:647
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "Salin URL"
 
-#: src/playlist/Playlist.qml:652
+#: src/playlist/Playlist.qml:655
 msgctxt "@action:inmenu"
 msgid "Update metadata"
 msgstr ""
 
-#: src/playlist/Playlist.qml:662
+#: src/playlist/Playlist.qml:665
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrieval."
 msgstr ""
 
-#: src/playlist/Playlist.qml:674
+#: src/playlist/Playlist.qml:679
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select File"
@@ -1090,7 +1090,7 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Pilih File"
 
-#: src/playlist/Playlist.qml:678
+#: src/playlist/Playlist.qml:683
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select File"
@@ -1098,19 +1098,19 @@ msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Pilih File"
 
-#: src/playlist/Playlist.qml:682
+#: src/playlist/Playlist.qml:687
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Pemilihan format"
 
-#: src/playlist/Playlist.qml:687
+#: src/playlist/Playlist.qml:692
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "Singkirkan dari Playlist"
 
-#: src/playlist/Playlist.qml:693
+#: src/playlist/Playlist.qml:698
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove from Playlist"
@@ -1118,22 +1118,22 @@ msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "Singkirkan dari Playlist"
 
-#: src/playlist/Playlist.qml:699 src/playlist/PlaylistTabBar.qml:61
+#: src/playlist/Playlist.qml:704 src/playlist/PlaylistTabBar.qml:61
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Ubah nama"
 
-#: src/playlist/Playlist.qml:705
+#: src/playlist/Playlist.qml:710
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Gulir ke Item Berputar"
 
-#: src/playlist/Playlist.qml:715
+#: src/playlist/Playlist.qml:720
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "Pindahkan File ke Tong Sampah"
 
-#: src/playlist/Playlist.qml:721
+#: src/playlist/Playlist.qml:726
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Move File to Trash"
@@ -1141,7 +1141,7 @@ msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "Pindahkan File ke Tong Sampah"
 
-#: src/playlist/Playlist.qml:826 src/qml/Settings/VideoSettings.qml:72
+#: src/playlist/Playlist.qml:831 src/qml/Settings/VideoSettings.qml:74
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Pilih file"
@@ -1700,32 +1700,32 @@ msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "Jeda pemutaran"
 
-#: src/qml/Footer.qml:170
+#: src/qml/Footer.qml:172
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "Putar file sebelumnya"
 
-#: src/qml/Footer.qml:188
+#: src/qml/Footer.qml:192
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "Putar file selanjutnya"
 
-#: src/qml/Footer.qml:205
+#: src/qml/Footer.qml:211
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "Buka menu bab-bab"
 
-#: src/qml/Footer.qml:271
+#: src/qml/Footer.qml:281
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "Tersisa: %1"
 
-#: src/qml/Haruna/Components/ColorPickerButton.qml:43
+#: src/qml/Haruna/Components/ColorPickerButton.qml:46
 msgctxt "@info:tooltip"
 msgid "Select a color"
 msgstr "Pilih warna"
 
-#: src/qml/Haruna/Components/ColorPickerButton.qml:50
+#: src/qml/Haruna/Components/ColorPickerButton.qml:55
 msgctxt "@title:window"
 msgid "Select Color"
 msgstr "Pilih Warna"
@@ -1797,21 +1797,21 @@ msgctxt "@info:tooltip"
 msgid "Delete this folder from list"
 msgstr "Hapus folder ini dari daftar"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:148
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:150
 msgctxt "@info:tooltip"
 msgid "Save changes"
 msgstr "Simpan perubahan"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:159
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:163
 msgid "No folder set"
 msgstr "Tidak ada folder yang diatur"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:177
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:181
 msgctxt "@action:button"
 msgid "Add New Folder"
 msgstr "Tambahkan Folder Baru"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:185
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:189
 #, fuzzy
 #| msgctxt "@info:tooltip add new sutbtitle folder setting"
 #| msgid "Add a folder in which to look for subtitles."
@@ -1819,12 +1819,12 @@ msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Tambahkan folder untuk mencari subtitel."
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:194
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:198
 msgctxt "@label:check"
 msgid "Search subtitles recursively"
 msgstr "Cari subtitel secara rekursif"
 
-#: src/qml/Haruna/Components/SubtitlesFolders.qml:205
+#: src/qml/Haruna/Components/SubtitlesFolders.qml:209
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2060,14 +2060,14 @@ msgid "Loading…"
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:26
-#: src/qml/Settings/SubtitlesSettings.qml:53
+#: src/qml/Settings/SubtitlesSettings.qml:55
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "Bahasa utama"
 
 #: src/qml/Settings/AudioSettings.qml:53 src/qml/Settings/AudioSettings.qml:80
-#: src/qml/Settings/SubtitlesSettings.qml:82
-#: src/qml/Settings/SubtitlesSettings.qml:110
+#: src/qml/Settings/SubtitlesSettings.qml:84
+#: src/qml/Settings/SubtitlesSettings.qml:112
 msgctxt "@info:tooltip"
 msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
@@ -2142,11 +2142,11 @@ msgid "Preamp (dB)"
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:206
-#: src/qml/Settings/AudioSettings.qml:242
-#: src/qml/Settings/SubtitlesSettings.qml:179
-#: src/qml/Settings/SubtitlesSettings.qml:278
-#: src/qml/Settings/SubtitlesSettings.qml:336
-#: src/qml/Settings/SubtitlesSettings.qml:417
+#: src/qml/Settings/AudioSettings.qml:244
+#: src/qml/Settings/SubtitlesSettings.qml:183
+#: src/qml/Settings/SubtitlesSettings.qml:284
+#: src/qml/Settings/SubtitlesSettings.qml:344
+#: src/qml/Settings/SubtitlesSettings.qml:429
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Set default value"
@@ -2154,12 +2154,12 @@ msgctxt "@info:tooltip"
 msgid "Reset to default value"
 msgstr "Setel nilai baku"
 
-#: src/qml/Settings/AudioSettings.qml:219
+#: src/qml/Settings/AudioSettings.qml:221
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
 msgstr ""
 
-#: src/qml/Settings/AudioSettings.qml:247
+#: src/qml/Settings/AudioSettings.qml:251
 msgctxt "@info:tooltip"
 msgid ""
 "Gain in dB to apply if the file has no replay gain tags.<br><br>This setting "
@@ -2187,7 +2187,7 @@ msgstr ""
 "Dicentang: properti akan disetel saat pemulaian\n"
 "Tak dicentang: properti tidak akan disetel saat pemulaian"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:188
+#: src/qml/Settings/CustomCommandsSettings.qml:190
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "&Tambah"
@@ -2922,12 +2922,12 @@ msgid ""
 msgstr ""
 "Saat pemulaian membuka file yang sedang diputar ketika aplikasi ditutup."
 
-#: src/qml/Settings/PlaybackSettings.qml:192
+#: src/qml/Settings/PlaybackSettings.qml:194
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "Jeda saat minimal"
 
-#: src/qml/Settings/PlaybackSettings.qml:201
+#: src/qml/Settings/PlaybackSettings.qml:203
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
@@ -2936,17 +2936,17 @@ msgstr ""
 "Menjeda pemutar selagi jendela diminimalkan, pemutaran dilanjutkan ketika "
 "dipulihkan."
 
-#: src/qml/Settings/PlaybackSettings.qml:211
+#: src/qml/Settings/PlaybackSettings.qml:215
 msgctxt "@title"
 msgid "Playback position"
 msgstr "Posisi pemutaran"
 
-#: src/qml/Settings/PlaybackSettings.qml:221
+#: src/qml/Settings/PlaybackSettings.qml:225
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "Kembalikan posisi pemutaran"
 
-#: src/qml/Settings/PlaybackSettings.qml:230
+#: src/qml/Settings/PlaybackSettings.qml:234
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -2967,17 +2967,17 @@ msgstr[1] ""
 "menjangka ke posisi tersimpan.\n"
 "Posisi akan disimpan setiap %1 detik, kecuali videonya kurang dari 10 detik."
 
-#: src/qml/Settings/PlaybackSettings.qml:245
+#: src/qml/Settings/PlaybackSettings.qml:251
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "Mulai memutar"
 
-#: src/qml/Settings/PlaybackSettings.qml:255
+#: src/qml/Settings/PlaybackSettings.qml:261
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "File akan diputar sesudah mengembalikan posisi pemutaran"
 
-#: src/qml/Settings/PlaybackSettings.qml:261
+#: src/qml/Settings/PlaybackSettings.qml:269
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Playback position"
@@ -2985,7 +2985,7 @@ msgctxt "@label:spinbox when to save position"
 msgid "Save position"
 msgstr "Posisi pemutaran"
 
-#: src/qml/Settings/PlaybackSettings.qml:282
+#: src/qml/Settings/PlaybackSettings.qml:290
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "For any duration"
@@ -2993,7 +2993,7 @@ msgctxt "@info when to save position"
 msgid "for any duration"
 msgstr "Untuk durasi apa pun"
 
-#: src/qml/Settings/PlaybackSettings.qml:285
+#: src/qml/Settings/PlaybackSettings.qml:293
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "If duration is longer than %1 minute"
@@ -3004,7 +3004,7 @@ msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "Jika durasi lebih panjang dari %1 menit"
 msgstr[1] "Jika durasi lebih panjang dari %1 menit"
 
-#: src/qml/Settings/PlaybackSettings.qml:312
+#: src/qml/Settings/PlaybackSettings.qml:320
 #, fuzzy
 #| msgctxt "@info:tooltip restore playback position > save interval"
 #| msgid "Save position every %1 second"
@@ -3015,17 +3015,17 @@ msgid_plural "every %1 seconds"
 msgstr[0] "Simpan posisi setiap %1 detik"
 msgstr[1] "Simpan posisi setiap %1 detik"
 
-#: src/qml/Settings/PlaybackSettings.qml:325
+#: src/qml/Settings/PlaybackSettings.qml:333
 msgctxt "@title"
 msgid "Chapters"
 msgstr "Bab"
 
-#: src/qml/Settings/PlaybackSettings.qml:334
+#: src/qml/Settings/PlaybackSettings.qml:342
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "Lewati bab-bab"
 
-#: src/qml/Settings/PlaybackSettings.qml:342
+#: src/qml/Settings/PlaybackSettings.qml:350
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -3034,7 +3034,7 @@ msgstr ""
 "Ketika difungsikan, lewati secara otomatis bab-bab yang mengandung kata/"
 "karakter tertentu."
 
-#: src/qml/Settings/PlaybackSettings.qml:350
+#: src/qml/Settings/PlaybackSettings.qml:358
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Show osd message on skip"
@@ -3042,7 +3042,7 @@ msgctxt "@option:check"
 msgid "Show OSD message on skip"
 msgstr "Tampilkan pesan osd saat lewati"
 
-#: src/qml/Settings/PlaybackSettings.qml:359
+#: src/qml/Settings/PlaybackSettings.qml:367
 #, fuzzy
 #| msgctxt "@info:tooltip show osd message on skip setting"
 #| msgid ""
@@ -3056,17 +3056,17 @@ msgstr ""
 "Ketika pelewatan bab-bab, pesan osd akan menampilkan judul-judul bab yang "
 "dilewati."
 
-#: src/qml/Settings/PlaybackSettings.qml:365
+#: src/qml/Settings/PlaybackSettings.qml:373
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:374
+#: src/qml/Settings/PlaybackSettings.qml:382
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, bab 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:380
+#: src/qml/Settings/PlaybackSettings.qml:388
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -3077,24 +3077,24 @@ msgstr ""
 "koma. Kecocokannya tidak tepat, artinya <strong>ko</strong> akan mencocokkan "
 "kata-kata yang berhubungan seperti <strong><u>ko</u>clok</strong>."
 
-#: src/qml/Settings/PlaybackSettings.qml:404
+#: src/qml/Settings/PlaybackSettings.qml:412
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:410
+#: src/qml/Settings/PlaybackSettings.qml:418
 #, fuzzy
 #| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Pemilihan format"
 
-#: src/qml/Settings/PlaybackSettings.qml:435
+#: src/qml/Settings/PlaybackSettings.qml:443
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:441
+#: src/qml/Settings/PlaybackSettings.qml:449
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -3102,7 +3102,7 @@ msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "Sampul baku"
 
-#: src/qml/Settings/PlaybackSettings.qml:456
+#: src/qml/Settings/PlaybackSettings.qml:464
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "Pilih sumber video yang paling dekat dengan format yang dipilih."
@@ -3216,37 +3216,37 @@ msgstr ""
 "Ketika dicentang, playlist akan berada di atas video\n"
 "Ketika dihapus centangnya, video akan diubah ukurannya"
 
-#: src/qml/Settings/PlaylistSettings.qml:201
+#: src/qml/Settings/PlaylistSettings.qml:203
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "Tampilkan judul media alih-alih nama file"
 
-#: src/qml/Settings/PlaylistSettings.qml:211
+#: src/qml/Settings/PlaylistSettings.qml:213
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "Auto muat video dari folder yang sama"
 
-#: src/qml/Settings/PlaylistSettings.qml:221
+#: src/qml/Settings/PlaylistSettings.qml:223
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "Tampilkan nomor baris"
 
-#: src/qml/Settings/PlaylistSettings.qml:231
+#: src/qml/Settings/PlaylistSettings.qml:233
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "Jungkit dengan mouse"
 
-#: src/qml/Settings/PlaylistSettings.qml:240
+#: src/qml/Settings/PlaylistSettings.qml:242
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "Tambahi ukuran font ketika layar penuh"
 
-#: src/qml/Settings/PlaylistSettings.qml:254
+#: src/qml/Settings/PlaylistSettings.qml:256
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "Ingat keadaan playlist terakhir"
 
-#: src/qml/Settings/PlaylistSettings.qml:261
+#: src/qml/Settings/PlaylistSettings.qml:263
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -3255,7 +3255,7 @@ msgstr ""
 "Ketika mencentang keadaan playlist (terlihat/tersembunyi) akan mengingat "
 "seluruh peluncuran"
 
-#: src/qml/Settings/PlaylistSettings.qml:270
+#: src/qml/Settings/PlaylistSettings.qml:274
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Buka item dengan klik tunggal"
@@ -3332,17 +3332,17 @@ msgid ""
 msgstr ""
 "Ketika dicentang, trek subtitel akan secara otomatis dipilih dan ditayangkan"
 
-#: src/qml/Settings/SubtitlesSettings.qml:91
+#: src/qml/Settings/SubtitlesSettings.qml:93
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "Trek utama"
 
-#: src/qml/Settings/SubtitlesSettings.qml:123
+#: src/qml/Settings/SubtitlesSettings.qml:125
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "Izinkan subtitel dalam bingkai hitam"
 
-#: src/qml/Settings/SubtitlesSettings.qml:130
+#: src/qml/Settings/SubtitlesSettings.qml:132
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -3351,68 +3351,68 @@ msgstr ""
 "Ketika dicentang, subtitel bisa dirender di luar video, dalam bingkai hitam. "
 "Kemungkinan tidak manjur untuk semua subtitel .ass."
 
-#: src/qml/Settings/SubtitlesSettings.qml:136
+#: src/qml/Settings/SubtitlesSettings.qml:140
 msgctxt "@title"
 msgid "Styling"
 msgstr "Gaya"
 
-#: src/qml/Settings/SubtitlesSettings.qml:142
+#: src/qml/Settings/SubtitlesSettings.qml:146
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "Famili font"
 
-#: src/qml/Settings/SubtitlesSettings.qml:186
+#: src/qml/Settings/SubtitlesSettings.qml:192
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "Ukuran font"
 
-#: src/qml/Settings/SubtitlesSettings.qml:201
+#: src/qml/Settings/SubtitlesSettings.qml:207
 msgctxt "@label"
 msgid "Font style"
 msgstr "Gaya font"
 
-#: src/qml/Settings/SubtitlesSettings.qml:206
+#: src/qml/Settings/SubtitlesSettings.qml:212
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "Tebal"
 
-#: src/qml/Settings/SubtitlesSettings.qml:217
+#: src/qml/Settings/SubtitlesSettings.qml:223
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "Miring"
 
-#: src/qml/Settings/SubtitlesSettings.qml:226
+#: src/qml/Settings/SubtitlesSettings.qml:232
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "Warna font"
 
-#: src/qml/Settings/SubtitlesSettings.qml:285
+#: src/qml/Settings/SubtitlesSettings.qml:293
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "Warna bayangan"
 
-#: src/qml/Settings/SubtitlesSettings.qml:343
+#: src/qml/Settings/SubtitlesSettings.qml:353
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "Ofset bayangan"
 
-#: src/qml/Settings/SubtitlesSettings.qml:360
-#: src/qml/Settings/SubtitlesSettings.qml:441
+#: src/qml/Settings/SubtitlesSettings.qml:370
+#: src/qml/Settings/SubtitlesSettings.qml:455
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "Setel ke 0 (nol) untuk menonfungsikan."
 
-#: src/qml/Settings/SubtitlesSettings.qml:366
+#: src/qml/Settings/SubtitlesSettings.qml:378
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "Warna tepi"
 
-#: src/qml/Settings/SubtitlesSettings.qml:424
+#: src/qml/Settings/SubtitlesSettings.qml:438
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "Lebar bing&kai:"
 
-#: src/qml/Settings/SubtitlesSettings.qml:447
+#: src/qml/Settings/SubtitlesSettings.qml:463
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Footer style"
@@ -3420,17 +3420,17 @@ msgctxt "@label:listbox"
 msgid "Border style"
 msgstr "Gaya footer"
 
-#: src/qml/Settings/SubtitlesSettings.qml:459
+#: src/qml/Settings/SubtitlesSettings.qml:475
 msgctxt "@item:listbox border style"
 msgid "Outline and Shadow"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:465
+#: src/qml/Settings/SubtitlesSettings.qml:481
 msgctxt "@item:listbox border style"
 msgid "Opaque Box"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:471
+#: src/qml/Settings/SubtitlesSettings.qml:487
 msgctxt "@item:listbox border style"
 msgid "Background Box"
 msgstr ""
@@ -3455,22 +3455,22 @@ msgstr ""
 "tersemat, atau gambar sampul/folder dalam folder yang sama dengan file yang "
 "diputar."
 
-#: src/qml/Settings/VideoSettings.qml:86
+#: src/qml/Settings/VideoSettings.qml:88
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "Jepretan layar"
 
-#: src/qml/Settings/VideoSettings.qml:95
+#: src/qml/Settings/VideoSettings.qml:97
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "Format"
 
-#: src/qml/Settings/VideoSettings.qml:134
+#: src/qml/Settings/VideoSettings.qml:136
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "Templat"
 
-#: src/qml/Settings/VideoSettings.qml:163
+#: src/qml/Settings/VideoSettings.qml:165
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -3536,32 +3536,32 @@ msgstr ""
 "li><li><strong>%wT</strong> millidetik (000-999)</li><li><strong>%%</strong> "
 "Digantikan dengan karakter % tersendiri.</li></ul><br>"
 
-#: src/qml/Settings/VideoSettings.qml:198
+#: src/qml/Settings/VideoSettings.qml:200
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "Penyetelan gambar"
 
-#: src/qml/Settings/VideoSettings.qml:208
+#: src/qml/Settings/VideoSettings.qml:210
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "Kontras"
 
-#: src/qml/Settings/VideoSettings.qml:227
+#: src/qml/Settings/VideoSettings.qml:229
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "Kecerahan"
 
-#: src/qml/Settings/VideoSettings.qml:246
+#: src/qml/Settings/VideoSettings.qml:248
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "Gamma"
 
-#: src/qml/Settings/VideoSettings.qml:265
+#: src/qml/Settings/VideoSettings.qml:267
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "Saturasi"
 
-#: src/qml/Settings/VideoSettings.qml:281
+#: src/qml/Settings/VideoSettings.qml:283
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Klik tengah pada penggeser untuk mengeset ulang"
