@@ -508,7 +508,7 @@ ResizeablePage {
                 property bool startupScrollDone: false
 
                 // set bottomMargin so that the footer doesn't block playlist items
-                bottomMargin: GeneralSettings.footerStyle === "default" ? 0 : 100
+                bottomMargin: 100
 
                 model: playlistsManager.visiblePlaylist
                 onModelChanged: {
