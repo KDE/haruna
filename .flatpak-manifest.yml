@@ -33,7 +33,6 @@ cleanup:
   - /lib/pkgconfig
   - /share/man
   - /mkspecs
-
 modules:
   - name: haruna
     buildsystem: cmake-ninja
@@ -42,13 +41,13 @@ modules:
     sources:
       - type: dir
         path: .
-      # - type: archive
-      #   url: https://download.kde.org/stable/haruna/1.2.1/haruna-1.2.1.tar.xz
-      #   sha256: eb01261a3498c6e25c28064e6ccea37aeb38cd8aa5006f02c92760b124c362fb
-      #   x-checker-data:
-      #     type: anitya
-      #     project-id: 267594
-      #     url-template: https://download.kde.org/stable/haruna/$version/haruna-$version.tar.xz
+        # - type: archive
+        #   url: https://download.kde.org/stable/haruna/1.2.1/haruna-1.2.1.tar.xz
+        #   sha256: eb01261a3498c6e25c28064e6ccea37aeb38cd8aa5006f02c92760b124c362fb
+        #   x-checker-data:
+        #     type: anitya
+        #     project-id: 267594
+        #     url-template: https://download.kde.org/stable/haruna/$version/haruna-$version.tar.xz
     modules:
       - name: KDSingleApplication
         buildsystem: cmake-ninja
@@ -68,7 +67,6 @@ modules:
               project-id: 370439
               stable-only: true
               url-template: https://github.com/KDAB/KDSingleApplication/archive/refs/tags/v$version.tar.gz
-
       - name: mpvqt
         buildsystem: cmake-ninja
         sources:
@@ -124,7 +122,6 @@ modules:
                       stable-only: false
                 cleanup:
                   - /bin
-
               - name: libplacebo
                 buildsystem: meson
                 config-opts:
@@ -137,7 +134,6 @@ modules:
                     x-checker-data:
                       type: git
                       tag-pattern: ^v([\d.]+)$
-
               - name: libXpresent
                 buildsystem: autotools
                 sources:
@@ -149,7 +145,6 @@ modules:
                       project-id: 17166
                       stable-only: true
                       url-template: https://xorg.freedesktop.org/archive/individual/lib/libXpresent-$version.tar.xz
-
               - name: libass
                 config-opts:
                   - --disable-static
@@ -162,7 +157,6 @@ modules:
                       project-id: 1560
                       stable-only: true
                       url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.gz
-
               - name: uchardet
                 buildsystem: cmake-ninja
                 config-opts:
@@ -180,7 +174,6 @@ modules:
                       project-id: 9265
                       stable-only: true
                       url-template: https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz
-
       - name: yt-dlp
         no-autogen: true
         no-make-install: true
