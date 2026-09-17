@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-17 00:44+0000\n"
-"PO-Revision-Date: 2026-05-12 03:28+0900\n"
+"PO-Revision-Date: 2026-09-17 03:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -67,9 +67,7 @@ msgid "Feature-rich command-line audio/video downloader"
 msgstr "多功能的命令列影音下載工具"
 
 #: src/lockmanager.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@info reason for blocking sleep and screen slocking"
-#| msgid "Playing media file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen locking"
 msgid "Playing media file"
 msgstr "正在播放媒體檔"
@@ -646,12 +644,10 @@ msgid "Volume: %1"
 msgstr "音量：%1"
 
 #: src/mpv/mpvitem.cpp:457
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "字幕延遲：%1 秒"
+msgstr "字幕延遲：+%1 秒"
 
 #: src/mpv/mpvitem.cpp:459
 #, kde-format
@@ -876,7 +872,7 @@ msgstr "另存新檔"
 #: src/playlist/Playlist.qml:426
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "更新所有中繼資料"
 
 #: src/playlist/Playlist.qml:434
 msgctxt "@info:tooltip"
@@ -944,7 +940,7 @@ msgstr "複製 URL"
 #: src/playlist/Playlist.qml:655
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "更新中繼資料"
 
 #: src/playlist/Playlist.qml:665
 msgctxt "@info:tooltip"
@@ -1026,9 +1022,6 @@ msgstr "過濾"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:120
 #: src/playlist/PlaylistAdvancedSortWindow.qml:381
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "過濾"
@@ -1382,7 +1375,7 @@ msgstr "預設"
 #: src/playlist/PlaylistTabDelegate.qml:211
 msgctxt "@info:tooltip"
 msgid "Click and hold"
-msgstr ""
+msgstr "點擊並按住"
 
 #: src/qml/Actions.qml:143
 msgctxt ""
@@ -1547,9 +1540,6 @@ msgid "Audio Track"
 msgstr "音效軌"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "更多(&M)"
@@ -1849,12 +1839,9 @@ msgid ""
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "偏好的軌道"
+msgstr "偏好的軌道 ID"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -1964,56 +1951,41 @@ msgid "&Add"
 msgstr "新增(&A)"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "最近檔案數量"
+msgstr "清除最近檔案"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "清除"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "從資料庫刪除最近使用紀錄"
+msgstr "刪除所有儲存在資料庫裡的最近檔案資訊"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "清除中繼資料"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "從資料庫刪除最近使用紀錄"
+msgstr "刪除所有儲存在資料庫裡的中繼資料"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "復原播放位置"
+msgstr "清除記住的播放位置"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "刪除所有儲存在資料庫裡的播放位置"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2348,7 +2320,7 @@ msgstr "顯示工具列"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "顯示說明工具提示"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2367,7 +2339,7 @@ msgstr "顯示章節標記"
 #: src/qml/Settings/GeneralSettings.qml:394
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
-msgstr ""
+msgstr "在工作列圖示上顯示進度"
 
 #: src/qml/Settings/GeneralSettings.qml:403
 msgctxt "@label:listbox"
@@ -2657,36 +2629,22 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "復原播放位置之後隨即開始播放檔案"
 
 #: src/qml/Settings/PlaybackSettings.qml:269
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "播放位置"
+msgstr "儲存位置"
 
 #: src/qml/Settings/PlaybackSettings.qml:290
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "不論影片長度"
+msgstr "不論長度"
 
 #: src/qml/Settings/PlaybackSettings.qml:293
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "長度超過 %1 分鐘時"
 
 #: src/qml/Settings/PlaybackSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
@@ -2748,8 +2706,6 @@ msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:418
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "格式選取"
@@ -2953,7 +2909,7 @@ msgstr "自訂指令"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "資料庫"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
@@ -3199,12 +3155,9 @@ msgid "Middle click on the sliders to reset them"
 msgstr "中鍵點擊滑條來重設它"
 
 #: src/transcript/Transcript.qml:93
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
-msgstr "選擇字幕檔案"
+msgstr "選取字幕"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
