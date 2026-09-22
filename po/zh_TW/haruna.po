@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-17 00:44+0000\n"
-"PO-Revision-Date: 2026-09-17 03:04+0900\n"
+"PO-Revision-Date: 2026-09-21 23:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -400,7 +400,7 @@ msgstr "播放清單"
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Transcript Panel"
-msgstr ""
+msgstr "切換逐字稿面板"
 
 #: src/models/actionsmodel.cpp:456
 #, kde-format
@@ -882,6 +882,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrieval."
 msgstr ""
+"更新播放清單所有檔案的中繼資料\n"
+"\n"
+"用檔案的中繼資料更新資料庫裡的中繼資料。\n"
+"中繼資料存在資料庫裡能讓資料取得更快。"
 
 #: src/playlist/Playlist.qml:450 src/playlist/Playlist.qml:471
 msgctxt "@action:button"
@@ -948,6 +952,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrieval."
 msgstr ""
+"用檔案的中繼資料更新資料庫裡的中繼資料。\n"
+"中繼資料存在資料庫裡能讓資料取得更快。"
 
 #: src/playlist/Playlist.qml:679
 msgctxt "@action:inmenu"
@@ -1661,7 +1667,7 @@ msgstr "音效(&A)"
 #: src/qml/Menus/AudioMenu.qml:28 src/qml/Menus/Global/GlobalAudioMenu.qml:27
 msgctxt "@title:menu"
 msgid "&Track"
-msgstr "軌道(&T)"
+msgstr "音軌(&T)"
 
 #: src/qml/Menus/FileMenu.qml:20 src/qml/Menus/Global/GlobalFileMenu.qml:19
 msgctxt "@title:menu"
@@ -1837,11 +1843,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"音軌選擇策略：<br>- 偏好的音軌 ID<br>- 符合偏好語言的音軌<br>- 預設音軌<br>- "
+"沒有音軌"
 
 #: src/qml/Settings/AudioSettings.qml:62
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "偏好的軌道 ID"
+msgstr "偏好的音軌 ID"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -2330,6 +2338,9 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"只影響解釋某功能如何運作或做什麼的工具提示。<br><br>顯示額外資訊用的工具提示"
+"不會被停用（像是跳轉列顯示滑鼠位置對應時間的工具提示，或是被截短的文字的工具"
+"提示）。"
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
