@@ -42,12 +42,12 @@ QVariant TranscriptModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case TextRole:
         return item.text;
+    case SplittedTextRole:
+        return item.text.split(u"\n"_s);
     case DurationRole:
         return item.duration;
     case StartTimeRole:
         return item.startTime;
-    case EndTimeRole:
-        return item.endTime;
     case FormattedStartTimeRole:
         return item.formattedStartTime;
     case FormattedEndTimeRole:
@@ -63,10 +63,10 @@ QHash<int, QByteArray> TranscriptModel::roleNames() const
 {
     // clang-format off
     QHash<int, QByteArray> roles = {
-    {TextRole,               QByteArrayLiteral("text")},
+    {TextRole,               QByteArrayLiteral("subtitleText")},
+    {SplittedTextRole,       QByteArrayLiteral("splittedText")},
     {DurationRole,           QByteArrayLiteral("duration")},
     {StartTimeRole,          QByteArrayLiteral("startTime")},
-    {EndTimeRole,            QByteArrayLiteral("endTime")},
     {FormattedStartTimeRole, QByteArrayLiteral("formattedStartTime")},
     {FormattedEndTimeRole,   QByteArrayLiteral("formattedEndTime")},
     {CurrentRole,            QByteArrayLiteral("isCurrent")},

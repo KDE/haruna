@@ -166,7 +166,11 @@ ResizeablePage {
                 reuseItems: true
                 spacing: 1
 
-                delegate: Item {}
+                delegate: TranscriptItemDelegate {
+                    onSeek: function (time) {
+                        root.m_mpv.command(["seek", time, "absolute"])
+                    }
+                }
             }
         }
     ]

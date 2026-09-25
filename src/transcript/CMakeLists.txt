@@ -12,6 +12,7 @@ qt_add_qml_module(transcript
     IMPORT_PATH ${CMAKE_BINARY_DIR}
     QML_FILES
         Transcript.qml
+        TranscriptItemDelegate.qml
     SOURCES
         subtitleline.h
         subtitleparser.h

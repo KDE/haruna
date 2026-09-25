@@ -25,9 +25,9 @@ public:
 
     enum Roles {
         TextRole = Qt::UserRole,
+        SplittedTextRole,
         DurationRole,
         StartTimeRole,
-        EndTimeRole,
         FormattedStartTimeRole,
         FormattedEndTimeRole,
         CurrentRole,

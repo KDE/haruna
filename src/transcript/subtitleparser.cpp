@@ -148,7 +148,6 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
                 transcriptItem.text = text;
                 transcriptItem.duration = duration;
                 transcriptItem.startTime = startSecs;
-                transcriptItem.endTime = endSecs;
                 transcriptItem.formattedStartTime = MiscUtils::formatTime(startSecs * timeMultiplier);
                 transcriptItem.formattedEndTime = MiscUtils::formatTime(endSecs * timeMultiplier);
                 Q_EMIT transcriptItemReady(transcriptItem, transcriptModelVersion);
