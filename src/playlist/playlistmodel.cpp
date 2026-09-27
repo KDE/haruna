@@ -273,7 +273,7 @@ void PlaylistModel::stop()
     if (m_playlist.empty()) {
         return;
     }
-    if (m_playingIndex.isValid()) {
+    if (!m_playingIndex.isValid()) {
         return;
     }
     m_playlist[m_playingIndex.row()].playbackPosition = getPlaybackPosition(m_playingIndex.row());

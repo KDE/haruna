@@ -104,7 +104,7 @@ public:
     void addM3uItems(const QUrl &url, PlaylistModel::Behavior behavior);
     void stop();
 
-    uint playingItem() const;
+    int playingItem() const;
     void setPlayingItem(uint i);
     void removeItem(uint row);
 
