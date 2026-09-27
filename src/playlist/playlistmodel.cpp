@@ -84,7 +84,10 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case ExtensionRole:
         return item.extension;
     case PlayingRole:
-        return static_cast<int>(m_playingItem) == index.row() && m_isPlaying;
+        if (!m_playingIndex.isValid()) {
+            return false;
+        }
+        return static_cast<int>(m_playingIndex.row()) == index.row() && m_isPlaying;
     case FolderPathRole:
         return item.folderPath;
     case DirNameRole:
@@ -188,7 +191,7 @@ void PlaylistModel::clear()
     m_threadPool.clear();
 
     m_playlistPath = QString();
-    m_playingItem = 0;
+    m_playingIndex = QPersistentModelIndex();
     beginResetModel();
     m_playlist.clear();
     endResetModel();
@@ -270,8 +273,11 @@ void PlaylistModel::stop()
     if (m_playlist.empty()) {
         return;
     }
-    m_playlist[m_playingItem].playbackPosition = getPlaybackPosition(m_playingItem);
-    Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
+    if (m_playingIndex.isValid()) {
+        return;
+    }
+    m_playlist[m_playingIndex.row()].playbackPosition = getPlaybackPosition(m_playingIndex.row());
+    Q_EMIT dataChanged(index(m_playingIndex.row(), 0), index(m_playingIndex.row(), 0));
 }
 
 void PlaylistModel::appendItem(const QUrl &url)
@@ -530,9 +536,12 @@ bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
     // clang-format on
 }
 
-uint PlaylistModel::playingItem() const
+int PlaylistModel::playingItem() const
 {
-    return m_playingItem;
+    if (!m_playingIndex.isValid()) {
+        return -1;
+    }
+    return m_playingIndex.row();
 }
 
 void PlaylistModel::setPlayingItem(uint i)
@@ -541,13 +550,15 @@ void PlaylistModel::setPlayingItem(uint i)
         return;
     }
 
-    uint previousItem{m_playingItem};
-    m_playingItem = i;
+    const auto previousIndex = m_playingIndex;
+    m_playingIndex = QPersistentModelIndex(index(i, 0));
     m_isPlaying = true;
 
-    m_playlist[previousItem].playbackPosition = getPlaybackPosition(previousItem);
+    if (previousIndex.isValid()) {
+        m_playlist[previousIndex.row()].playbackPosition = getPlaybackPosition(previousIndex.row());
+        Q_EMIT dataChanged(index(previousIndex.row(), 0), index(previousIndex.row(), 0));
+    }
 
-    Q_EMIT dataChanged(index(previousItem, 0), index(previousItem, 0));
     Q_EMIT dataChanged(index(i, 0), index(i, 0));
     Q_EMIT playingItemChanged(m_playlistName);
 
@@ -670,13 +681,19 @@ bool PlaylistModel::isPlaying() const
 
 void PlaylistModel::setIsPlaying(bool newIsPlaying)
 {
+    if (!m_playingIndex.isValid()) {
+        return;
+    }
     m_isPlaying = newIsPlaying;
-    Q_EMIT dataChanged(index(m_playingItem, 0), index(m_playingItem, 0));
+    Q_EMIT dataChanged(index(m_playingIndex.row(), 0), index(m_playingIndex.row(), 0));
 }
 
 void PlaylistModel::shuffleIndexes(const std::vector<int> &includedIndices)
 {
     if (m_playlist.size() <= 0) {
+        return;
+    }
+    if (!m_playingIndex.isValid()) {
         return;
     }
     m_currentShuffledIndex = 0;
@@ -692,7 +709,7 @@ void PlaylistModel::shuffleIndexes(const std::vector<int> &includedIndices)
     std::shuffle(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), gen);
 
     // Move current item to start
-    auto it = std::find(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), m_playingItem);
+    auto it = std::find(m_shuffledIndexes.begin(), m_shuffledIndexes.end(), m_playingIndex.row());
     if (it != m_shuffledIndexes.end()) {
         std::rotate(m_shuffledIndexes.begin(), it, it + 1);
     }

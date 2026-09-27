@@ -172,7 +172,7 @@ private:
     QString m_playlistName{u"Default"};
     // The flag to check if this is the active playlist.
     bool m_isPlaying{false};
-    uint m_playingItem{0};
+    QPersistentModelIndex m_playingIndex;
     QString m_playlistPath;
     int m_httpItemCounter{0};
     YouTube youtube;
