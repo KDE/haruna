@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-17 00:44+0000\n"
-"PO-Revision-Date: 2026-03-05 14:08+0200\n"
+"PO-Revision-Date: 2026-08-26 11:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -64,9 +64,7 @@ msgid "Feature-rich command-line audio/video downloader"
 msgstr "Monipuolinen komentorivin ääni- ja videolataaja"
 
 #: src/lockmanager.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@info reason for blocking sleep and screen slocking"
-#| msgid "Playing media file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen locking"
 msgid "Playing media file"
 msgstr "Toistetaan mediatiedostoa"
@@ -400,7 +398,7 @@ msgstr "Toistolista"
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Transcript Panel"
-msgstr ""
+msgstr "Näytä tai piilota transkriptiopaneeli"
 
 #: src/models/actionsmodel.cpp:456
 #, kde-format
@@ -557,89 +555,67 @@ msgid "Reassign"
 msgstr "Sijoita uudelleen"
 
 #: src/models/mouseactionsmodel.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox left mouse button"
-#| msgid "Left"
+#, kde-format
 msgctxt "@label left mouse button"
 msgid "Left"
 msgstr "Vasen"
 
 #: src/models/mouseactionsmodel.cpp:265
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox right mouse button"
-#| msgid "Right"
+#, kde-format
 msgctxt "@label right mouse button"
 msgid "Right"
 msgstr "Oikea"
 
 #: src/models/mouseactionsmodel.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox middle mouse button"
-#| msgid "Middle"
+#, kde-format
 msgctxt "@label middle mouse button"
 msgid "Middle"
 msgstr "Keski"
 
 #: src/models/mouseactionsmodel.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox forward mouse button"
-#| msgid "Forward"
+#, kde-format
 msgctxt "@label forward mouse button"
 msgid "Forward"
 msgstr "Eteenpäin"
 
 #: src/models/mouseactionsmodel.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox back mouse button"
-#| msgid "Back"
+#, kde-format
 msgctxt "@label back mouse button"
 msgid "Back"
 msgstr "Taaksepäin"
 
 #: src/models/mouseactionsmodel.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll up"
-#| msgid "Scroll up"
+#, kde-format
 msgctxt "@label mouse scroll up"
 msgid "ScrollUp"
 msgstr "Vieritä ylöspäin"
 
 #: src/models/mouseactionsmodel.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox mouse scroll down"
-#| msgid "Scroll down"
+#, kde-format
 msgctxt "@label mouse scroll down"
 msgid "ScrollDown"
 msgstr "Vieritä alaspäin"
 
 #: src/models/mouseactionsmodel.cpp:323
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox control modifier key"
-#| msgid "Control"
+#, kde-format
 msgctxt "@label control modifier key"
 msgid "Control"
 msgstr "Ctrl"
 
 #: src/models/mouseactionsmodel.cpp:325
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox shift modifier key"
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label shift modifier key"
 msgid "Shift"
 msgstr "Vaihto"
 
 #: src/models/mouseactionsmodel.cpp:327
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox alt modifier key"
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
 #: src/models/mouseactionsmodel.cpp:329
-#, fuzzy, kde-format
-#| msgctxt "@item:listbox meta modifier key"
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta"
@@ -669,12 +645,10 @@ msgid "Volume: %1"
 msgstr "Äänenvoimakkuus: %1"
 
 #: src/mpv/mpvitem.cpp:457
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "Tekstityksen ajoitus: %1 sekuntia"
+msgstr "Tekstityksen ajoitus: +%1 sekuntia"
 
 #: src/mpv/mpvitem.cpp:459
 #, kde-format
@@ -692,7 +666,7 @@ msgstr "Tiedostoa ei ole olemassa: %1"
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
-msgstr ""
+msgstr "[%1/%2] %3"
 
 #: src/mpv/mpvitem.cpp:553
 #, kde-format
@@ -736,9 +710,7 @@ msgid "Skipped chapter: %1"
 msgstr "Ohitettiin luku: %1"
 
 #: src/mpv/mpvitem.cpp:784
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Audio: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -746,17 +718,13 @@ msgid "Audio: %1 %2"
 msgstr "Ääni: %1 %2"
 
 #: src/mpv/mpvitem.cpp:795
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: None"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
-msgstr "Tekstitys: ei"
+msgstr "Tekstitys: ei mitään"
 
 #: src/mpv/mpvitem.cpp:800 src/mpv/mpvitem.cpp:816
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip; %1 is an ID, %2 is a language code (e.g. eng)"
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -764,12 +732,10 @@ msgid "Subtitle: %1 %2"
 msgstr "Tekstitys: %1 %2"
 
 #: src/mpv/mpvitem.cpp:811
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Secondary Subtitle"
+#, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
-msgstr "Toissijainen tekstitys"
+msgstr "Toissijainen tekstitys: ei mitään"
 
 #: src/playlist/Playlist.qml:125
 msgctxt "@action:button"
@@ -910,7 +876,7 @@ msgstr "Tallenna nimellä"
 #: src/playlist/Playlist.qml:426
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
-msgstr ""
+msgstr "Päivitä kaikki metatiedot"
 
 #: src/playlist/Playlist.qml:434
 msgctxt "@info:tooltip"
@@ -920,6 +886,10 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrieval."
 msgstr ""
+"Päivitä kaikkien soittolistan tiedostojen metatiedot\n"
+"\n"
+"Päivitä tietokannan metatiedot tiedostossa olevilla.\n"
+"Metatiedot talletetaan tietokantaa nopeampaa saantia varten."
 
 #: src/playlist/Playlist.qml:450 src/playlist/Playlist.qml:471
 msgctxt "@action:button"
@@ -956,12 +926,9 @@ msgid "Open in Thumbnail Generator"
 msgstr "Avaa pienoiskuvan luontiin"
 
 #: src/playlist/Playlist.qml:629
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open in Browser"
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
-msgstr "Avaa selaimeen"
+msgstr "Avaa ohjelmaan %1"
 
 #: src/playlist/Playlist.qml:640
 msgctxt "@action:inmenu"
@@ -981,7 +948,7 @@ msgstr "Kopioi verkko-osoite"
 #: src/playlist/Playlist.qml:655
 msgctxt "@action:inmenu"
 msgid "Update metadata"
-msgstr ""
+msgstr "Päivitä metatiedot"
 
 #: src/playlist/Playlist.qml:665
 msgctxt "@info:tooltip"
@@ -989,6 +956,8 @@ msgid ""
 "Update metadata in the database with metadata inside the file.\n"
 "Metadata is stored in the database for faster retrieval."
 msgstr ""
+"Päivitä tietokannan metatiedot tiedostossa olevilla.\n"
+"Metatiedot talletetaan tietokantaan nopeampaa saantia varten."
 
 #: src/playlist/Playlist.qml:679
 msgctxt "@action:inmenu"
@@ -1063,9 +1032,6 @@ msgstr "Suodata"
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:120
 #: src/playlist/PlaylistAdvancedSortWindow.qml:381
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Filter"
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "Suodata"
@@ -1420,7 +1386,7 @@ msgstr "Oletus"
 #: src/playlist/PlaylistTabDelegate.qml:211
 msgctxt "@info:tooltip"
 msgid "Click and hold"
-msgstr ""
+msgstr "Napsauta ja pidä"
 
 #: src/qml/Actions.qml:143
 msgctxt ""
@@ -1585,9 +1551,6 @@ msgid "Audio Track"
 msgstr "Ääniraita"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:133
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Lisää"
@@ -1886,14 +1849,13 @@ msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
 "preferred language<br>- default track<br>- no track"
 msgstr ""
+"Raidan valintajärjestys:<br>– ensisijainen raitatunniste<br>– ensisijaista "
+"kieltä vastaava raita<br>– oletusraita<br>– ei raitaa"
 
 #: src/qml/Settings/AudioSettings.qml:62
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Preferred track"
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
-msgstr "Suosittu raita"
+msgstr "Ensisijainen raitatunniste"
 
 #: src/qml/Settings/AudioSettings.qml:90
 msgctxt "@label:spinbox"
@@ -2005,56 +1967,41 @@ msgid "&Add"
 msgstr "&Lisää"
 
 #: src/qml/Settings/DatabaseSettings.qml:24
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum recent files"
 msgctxt "@label"
 msgid "Clear recent files"
-msgstr "Viimeaikaisia tiedostoja enintään"
+msgstr "Tyhjennä viimeaikaiset tiedostot"
 
 #: src/qml/Settings/DatabaseSettings.qml:31
 #: src/qml/Settings/DatabaseSettings.qml:47
 #: src/qml/Settings/DatabaseSettings.qml:63
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Clear"
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "Tyhjennä"
 
 #: src/qml/Settings/DatabaseSettings.qml:35
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
-msgstr "Poistaa äskettäiset tiedostot tietokannasta"
+msgstr "Poistaa tietokantaan tallennetut viimeaikaiset tiedostot"
 
 #: src/qml/Settings/DatabaseSettings.qml:40
 msgctxt "@label"
 msgid "Clear metadata"
-msgstr ""
+msgstr "Tyhjennä metatiedot"
 
 #: src/qml/Settings/DatabaseSettings.qml:51
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Deletes recent files from the database"
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
-msgstr "Poistaa äskettäiset tiedostot tietokannasta"
+msgstr "Poistaa tietokantaan tallennetut metatiedot"
 
 #: src/qml/Settings/DatabaseSettings.qml:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Restore playback position"
 msgctxt "@label"
 msgid "Clear playback positions"
-msgstr "Palauta viimeisin toistokohta"
+msgstr "Tyhjennä toistokohdat"
 
 #: src/qml/Settings/DatabaseSettings.qml:67
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
-msgstr ""
+msgstr "Poistaa kaikki tietokantaan tallennetut toistosijainnit"
 
 #: src/qml/Settings/DebugSettings.qml:28
 msgctxt "@label:textbox"
@@ -2399,7 +2346,7 @@ msgstr "Näytä työkalurivi"
 #: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
-msgstr ""
+msgstr "Näytä selittävät työkaluvihjeet"
 
 #: src/qml/Settings/GeneralSettings.qml:373
 msgctxt "@info:tooltip"
@@ -2409,6 +2356,10 @@ msgid ""
 "seekbar tooltip showing the time at the mouse position, tooltips for "
 "truncated text)."
 msgstr ""
+"Vaikuttaa vain työkaluvihjeisiin, jotka selittävät, miten jokin toimii tai "
+"mitä se tekee.<br><br>Lisätietoa näyttäviä työkaluvihjeitä (esim. hakurivin "
+"vihjettä, joka näyttää hiiren sijainnin ajan tai katkaistun tekstin "
+"vihjeitä) ei voi poistaa käytöstä."
 
 #: src/qml/Settings/GeneralSettings.qml:383
 msgctxt "@option:check"
@@ -2418,7 +2369,7 @@ msgstr "Näytä lukumerkit"
 #: src/qml/Settings/GeneralSettings.qml:394
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
-msgstr ""
+msgstr "Näytä eteneminen tehtäväpalkissa"
 
 #: src/qml/Settings/GeneralSettings.qml:403
 msgctxt "@label:listbox"
@@ -2438,7 +2389,7 @@ msgstr "Oletus"
 #: src/qml/Settings/MouseSettings.qml:51
 msgctxt "@label represents a mouse double click, for example `Right x2`"
 msgid "x2"
-msgstr ""
+msgstr "× 2"
 
 #: src/qml/Settings/MouseSettings.qml:93
 msgctxt "@label:action change action associated with mouse event"
@@ -2721,42 +2672,28 @@ msgid "The file will be playing after restoring the playback position"
 msgstr "Tiedosto toistetaan toistokohdan palautuksen jälkeen"
 
 #: src/qml/Settings/PlaybackSettings.qml:269
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Playback position"
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
-msgstr "Toistokohta"
+msgstr "Tallenna sijainti"
 
 #: src/qml/Settings/PlaybackSettings.qml:290
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "For any duration"
 msgctxt "@info when to save position"
 msgid "for any duration"
-msgstr "Kaikilla kestoilla"
+msgstr "mille tahansa kestolle"
 
 #: src/qml/Settings/PlaybackSettings.qml:293
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "If duration is longer than %1 minute"
-#| msgid_plural "If duration is longer than %1 minutes"
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
-msgstr[0] "Jos kesto on yli minuutin"
-msgstr[1] "Jos kesto on yli %1 minuuttia"
+msgstr[0] "jos kesto on yli minuutin"
+msgstr[1] "jos kesto on yli %1 minuuttia"
 
 #: src/qml/Settings/PlaybackSettings.qml:320
-#, fuzzy
-#| msgctxt "@info:tooltip restore playback position > save interval"
-#| msgid "Save position every %1 second"
-#| msgid_plural "Save position every %1 seconds"
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
-msgstr[0] "Tallenna toistokohta joka sekunti"
-msgstr[1] "Tallenna toistokohta %1 sekunnin välein"
+msgstr[0] "%1 sekunnin välein"
+msgstr[1] "%1 sekunnin välein"
 
 #: src/qml/Settings/PlaybackSettings.qml:333
 msgctxt "@title"
@@ -2815,9 +2752,8 @@ msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
+# *** TARKISTA: ”Format” voi olla myös verbi (”Muotoile valinta”)
 #: src/qml/Settings/PlaybackSettings.qml:418
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Tiedostomuodon valinta"
@@ -3024,7 +2960,7 @@ msgstr "Mukautetut komennot"
 #: src/qml/Settings/SettingsWindow.qml:175
 msgctxt "@action"
 msgid "Database"
-msgstr ""
+msgstr "Tietokanta"
 
 #: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
@@ -3128,27 +3064,24 @@ msgid "Border width"
 msgstr "Reunan paksuus"
 
 #: src/qml/Settings/SubtitlesSettings.qml:463
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Footer style"
 msgctxt "@label:listbox"
 msgid "Border style"
-msgstr "Alatunnistetyyli"
+msgstr "Reunatyyli"
 
 #: src/qml/Settings/SubtitlesSettings.qml:475
 msgctxt "@item:listbox border style"
 msgid "Outline and Shadow"
-msgstr ""
+msgstr "Ääriviiva ja varjo"
 
 #: src/qml/Settings/SubtitlesSettings.qml:481
 msgctxt "@item:listbox border style"
 msgid "Opaque Box"
-msgstr ""
+msgstr "Peittävä laatikko"
 
 #: src/qml/Settings/SubtitlesSettings.qml:487
 msgctxt "@item:listbox border style"
 msgid "Background Box"
-msgstr ""
+msgstr "Taustalaatikko"
 
 #: src/qml/Settings/VideoSettings.qml:30
 msgctxt "@label:listbox"
@@ -3280,12 +3213,9 @@ msgid "Middle click on the sliders to reset them"
 msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
 
 #: src/transcript/Transcript.qml:93
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Select Subtitles File"
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
-msgstr "Valitse tekstitystiedosto"
+msgstr "Valitse tekstitys"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
