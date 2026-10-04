@@ -304,6 +304,13 @@ ApplicationWindow {
                 }
             }
         }
+
+        Connections {
+            target: mpv
+            function onPositionChanged() {
+                transcript.updateCurrentEndTimes(mpv.position)
+            }
+        }
     }
 
     Playlist {

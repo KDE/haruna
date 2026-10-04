@@ -45,15 +45,26 @@ ResizeablePage {
         if (!modelIndex) {
             return
         }
+
         const externalPath = subtitleTracksModel.data(modelIndex, TracksModel.Roles.ExternalPathRole)
         const streamIndex = subtitleTracksModel.data(modelIndex, TracksModel.Roles.StreamIndexRole)
 
         if (externalPath && externalPath.toString() !== "") {
-            root.transcriptModel.loadSubtitle(externalPath, streamIndex)
+            root.transcriptModel.loadSubtitle(externalPath, streamIndex, root.m_mpv.position)
         } else {
-            root.transcriptModel.loadSubtitle(root.m_mpv.currentUrl, streamIndex)
+            root.transcriptModel.loadSubtitle(root.m_mpv.currentUrl, streamIndex, root.m_mpv.position)
         }
         subtitleMenu.loadedTrackId = selectedTrackId
+    }
+
+    function updateCurrentEndTimes(pPosition) {
+        if (root.state === "hidden") {
+            return
+        }
+
+        if (root.selectedTrackId > 0 || (root.selectedTrackId === -1 && root.m_mpv.subtitleId > 0)) {
+            root.transcriptModel.updateCurrentEndTimes(pPosition)
+        }
     }
 
     onResize: function (delta) {
@@ -71,6 +82,14 @@ ResizeablePage {
             root.transcriptModel.clearSubtitle()
             subtitleMenu.loadedTrackId = 0
         }
+    }
+
+    Connections {
+        target: root.transcriptModel
+        function onParsingFinished(lastIndex) {
+            Qt.callLater(transcriptView.positionViewAtIndex, lastIndex, ListView.Beginning)
+        }
+
     }
 
     header: ToolBar {
@@ -123,9 +142,9 @@ ResizeablePage {
                             onTriggered: {
                                 root.selectedTrackId = delegate.trackId
                                 if (delegate.externalPath && delegate.externalPath.toString() !== "") {
-                                    root.transcriptModel.loadSubtitle(delegate.externalPath, delegate.streamIndex)
+                                    root.transcriptModel.loadSubtitle(delegate.externalPath, delegate.streamIndex, root.m_mpv.position)
                                 } else {
-                                    root.transcriptModel.loadSubtitle(root.m_mpv.currentUrl, delegate.streamIndex)
+                                    root.transcriptModel.loadSubtitle(root.m_mpv.currentUrl, delegate.streamIndex, root.m_mpv.position)
                                 }
                             }
                         }
@@ -137,6 +156,28 @@ ResizeablePage {
                         onObjectRemoved: function (index, object) {
                             subtitleMenu.removeItem(object)
                         }
+                    }
+                }
+            }
+
+            ToolButton {
+                icon.name: "handle-move"
+                icon.width: root.buttonSize
+                icon.height: root.buttonSize
+                focusPolicy: Qt.NoFocus
+                display: AbstractButton.IconOnly
+                checkable: true
+                checked: SubtitlesSettings.transcriptFollowCurrentSubtitle
+
+                ToolTip.visible: hovered
+                ToolTip.text: KI18n.i18nc("@info:tooltip", "Follow active subtitle")
+
+                onToggled: {
+                    SubtitlesSettings.transcriptFollowCurrentSubtitle = checked
+                    SubtitlesSettings.save()
+
+                    if (checked) {
+                        Qt.callLater(transcriptView.positionViewAtIndex, transcriptView.currentIndex, ListView.Beginning)
                     }
                 }
             }
@@ -162,13 +203,31 @@ ResizeablePage {
 
             ListView {
                 id: transcriptView
+
+                // buffer is required for animations. Jumping from N to N+1 animates, but N to -1 to N+1 breaks.
+                // transcriptModel.currentIndex is -1 when no subtitle is displayed
+                property int currentIndexBuffer: root.transcriptModel.currentIndex
+
                 model: root.transcriptModel
                 reuseItems: true
                 spacing: 1
+                highlightFollowsCurrentItem: SubtitlesSettings.transcriptFollowCurrentSubtitle
+                highlightMoveDuration: Kirigami.Units.longDuration
+                highlightRangeMode: SubtitlesSettings.transcriptFollowCurrentSubtitle ? ListView.ApplyRange : ListView.NoHighlightRange
+                preferredHighlightBegin: 0
+                preferredHighlightEnd: 50
 
                 delegate: TranscriptItemDelegate {
+                    id: transcriptItemDelegate
+
                     onSeek: function (time) {
                         root.m_mpv.command(["seek", time, "absolute"])
+                    }
+                }
+
+                onCurrentIndexBufferChanged: {
+                    if (currentIndexBuffer >= 0) {
+                        currentIndex = currentIndexBuffer
                     }
                 }
             }
