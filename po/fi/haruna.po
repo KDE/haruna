@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2026-08-26 11:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -896,7 +896,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Lisää"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1650,17 +1650,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Valitse tiedosto"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Valitse tekstitystiedosto"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Avaa"
@@ -3212,10 +3212,18 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Palauta säädin hiiren keskipainikkeen napsautuksella"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "Valitse tekstitys"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Load subtitles from"
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
+msgstr "Lataa tekstitykset tiedostosta"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3559,13 +3567,6 @@ msgstr ""
 #~ "playing it automatically."
 #~ msgstr ""
 #~ "Aiemmin toistettua tiedostoa avattaessa aloita toisto automaattisesti."
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "Load subtitles from"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "Lataa tekstitykset tiedostosta"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"

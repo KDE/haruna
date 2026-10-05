@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2026-09-22 21:55+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -900,7 +900,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Добавить"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1655,17 +1655,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Выбор файла"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Выбор файла субтитров"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Открыть"
@@ -3254,10 +3254,16 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Щелчок средней кнопкой мыши по ползункам для сброса"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "Выбор субтитров"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
+msgstr "Загрузка субтитров из"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3618,11 +3624,6 @@ msgstr ""
 #~ msgstr ""
 #~ "При открытии файла, который воспроизводился ранее, воспроизведение "
 #~ "начнётся автоматически."
-
-#, fuzzy
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "Загрузка субтитров из"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1017,7 +1017,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1909,7 +1909,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1917,7 +1917,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Elekti dosieron"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1925,7 +1925,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Elekti subtitolan dosieron"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Malfermi"
@@ -3689,12 +3689,20 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Meze alklaku la glitilojn por restarigi ilin"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
+msgstr "Elekti subtitolan dosieron"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Select subtitles file"
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
 msgstr "Elekti subtitolan dosieron"
 
 #: src/utilities/commandlineoptions.cpp:33

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2026-08-13 07:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -896,7 +896,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "დამატება"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1650,17 +1650,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "აირჩიეთ ფაილი"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "აირჩიეთ სუბტიტრების ფაილი"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "გახსნა"
@@ -3214,10 +3214,18 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "შუა-წკაპი სლაიდერების გასანულებლად"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "აირჩიეთ სუბტიტრები"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Autoload subtitles"
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
+msgstr "სუბტიტრების ავტოჩატვირთვა"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3572,10 +3580,6 @@ msgstr ""
 #~ msgstr ""
 #~ "როცა აგრძელებთ დაკვრას და გადახვევას ბოლოს დაკრულ მდებარეობაზე, დაკვრა "
 #~ "ავტომატურად დაიწყება."
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "სუბტიტრების ავტოჩატვირთვა"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"

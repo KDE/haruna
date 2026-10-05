@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2026-09-21 23:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -892,7 +892,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "新增"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1644,17 +1644,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "選擇檔案"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "選擇字幕檔案"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "開啟"
@@ -3165,10 +3165,18 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中鍵點擊滑條來重設它"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "選取字幕"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Load subtitles from"
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
+msgstr "從何處載入字幕"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3515,13 +3523,6 @@ msgstr ""
 #~ "When resuming playback and seeking to last playback position, start "
 #~ "playing it automatically."
 #~ msgstr "恢復播放並跳到上次播放位置時，自動開始播放它。"
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "Load subtitles from"
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "從何處載入字幕"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2026-08-17 13:53+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -897,7 +897,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1652,17 +1652,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Pasirinkite failą"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Pasirinkite subtitrų failą"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Atverti"
@@ -3243,9 +3243,17 @@ msgid "Middle click on the sliders to reset them"
 msgstr ""
 "Spustelėkite ant slinktukų viduriniuoju pelės mygtuku norėdami juos atstatyti"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
+msgstr "Pasirinkti subtitrus"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Select subtitle"
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
 msgstr "Pasirinkti subtitrus"
 
 #: src/utilities/commandlineoptions.cpp:33

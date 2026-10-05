@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:44+0000\n"
+"POT-Creation-Date: 2026-10-05 00:44+0000\n"
 "PO-Revision-Date: 2026-08-13 14:06+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -894,7 +894,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/playlist/Playlist.qml:453 src/qml/Main.qml:497
+#: src/playlist/Playlist.qml:453 src/qml/Main.qml:504
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1649,17 +1649,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:447
+#: src/qml/Main.qml:454
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Bestand selecteren"
 
-#: src/qml/Main.qml:467
+#: src/qml/Main.qml:474
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Bestand met ondertitels selecteren"
 
-#: src/qml/Main.qml:494
+#: src/qml/Main.qml:501
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Openen"
@@ -3230,10 +3230,18 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Midden-klik op de schuifregelaars om ze te resetten"
 
-#: src/transcript/Transcript.qml:93
+#: src/transcript/Transcript.qml:112
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "Ondertitel selecteren"
+
+#: src/transcript/Transcript.qml:173
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Autoload subtitles"
+msgctxt "@info:tooltip"
+msgid "Follow active subtitle"
+msgstr "Ondertitels automatisch laden"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3599,10 +3607,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Bij hervatten van afspelen en gaan naar de laatste afspeelpositie, het "
 #~ "automatisch afspelen."
-
-#~ msgctxt "@label:spinbox"
-#~ msgid "Autoload subtitles"
-#~ msgstr "Ondertitels automatisch laden"
 
 #~ msgctxt "@info"
 #~ msgid "Disabled"
