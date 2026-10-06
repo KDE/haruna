@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 00:44+0000\n"
-"PO-Revision-Date: 2026-09-22 21:55+0200\n"
+"PO-Revision-Date: 2026-10-05 07:41+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -2307,8 +2307,8 @@ msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
-"Размер окна меняется в соответствии с разрешением видео.\n"
-"Максимальный размер не ограничен (устанавливается операционной системой)."
+"Размер окна меняется в соответствии с разрешением видео.<br>Максимальный "
+"размер не ограничен (устанавливается операционной системой)."
 
 #: src/qml/Settings/GeneralSettings.qml:294
 msgctxt "@option:check"
@@ -2560,8 +2560,8 @@ msgid ""
 msgstr ""
 "Сколько проматывать при запуске соответствующего действия. Режим перемотки "
 "является <a href='https://mpv.io/manual/stable/#command-interface-seek-"
-"<target>-[<flags>]'>точным</a>. Перематывать также можно колесом мыши, когда "
-"указатель расположен над индикатором выполнения."
+"<target>-[<flags>]'>точным</a>.<br>Перематывать также можно колесом мыши, "
+"когда указатель расположен над индикатором выполнения."
 
 #: src/qml/Settings/PlaybackSettings.qml:82
 msgctxt "@label:spinbox"
@@ -3260,10 +3260,9 @@ msgid "Select subtitle"
 msgstr "Выбор субтитров"
 
 #: src/transcript/Transcript.qml:173
-#, fuzzy
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
-msgstr "Загрузка субтитров из"
+msgstr "Следовать за текущими субтитрами"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
