@@ -52,8 +52,6 @@ set(Libmpv_VERSION ${PC_MPV_VERSION})
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Libmpv
-    FOUND_VAR
-        Libmpv_FOUND
     REQUIRED_VARS
         Libmpv_LIBRARIES
         Libmpv_INCLUDE_DIRS
