@@ -232,7 +232,7 @@ RowLayout {
             progressBarToolTip.text = MiscUtils.formatTime(slider.value)
 
             const previewItem = previewMpvLoader.item as MpvPreview
-            if (previewItem === null || !previewItem.isLocalFile) {
+            if (previewItem === null || !root.m_mpv.isLocalFile) {
                 return
             }
             previewItem.commandAsync(["seek", slider.value, "absolute"])
