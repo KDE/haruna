@@ -134,7 +134,7 @@ SettingsBasePage {
                         asynchronous: true
                         sourceComponent: KeySequenceItem {
                             checkForConflictsAgainst: ShortcutType.None
-                            modifierlessAllowed: true
+                            patterns: ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
                             keySequence: delegate.shortcut
 
                             onKeySequenceModified: {

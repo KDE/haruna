@@ -10,7 +10,6 @@ import QtQml
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
-import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
@@ -71,7 +70,7 @@ SettingsBasePage {
 
                 KeySequenceItem {
                     checkForConflictsAgainst: ShortcutType.None
-                    modifierlessAllowed: true
+                    patterns: ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
                     keySequence: delegate.actionShortcut
 
                     onKeySequenceModified: {
