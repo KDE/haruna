@@ -20,7 +20,7 @@ ToolBar {
 
     required property MpvVideo m_mpv
     required property MenuBarLoader m_menuBarLoader
-    required property Loader m_settingsLoader
+    required property SettingsWindow m_settingsLoader
 
     property bool isSmallSize: width < 600
     property int buttonSize: isSmallSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium

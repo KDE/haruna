@@ -18,7 +18,7 @@ ToolButton {
     id: root
 
     required property MpvVideo m_mpv
-    required property Loader m_settingsLoader
+    required property SettingsWindow m_settingsLoader
     required property MenuBarLoader m_menuBarLoader
 
     property int position: HamburgerMenu.Position.Header
