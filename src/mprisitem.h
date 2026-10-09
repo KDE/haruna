@@ -42,7 +42,7 @@ public:
     void setWindow(QWindow *newWindow);
 
     Q_SIGNAL void raise();
-    Q_SIGNAL void openUri();
+    Q_SIGNAL void openUri(const QString &uri);
 
 #if HAVE_DBUS
 private:
