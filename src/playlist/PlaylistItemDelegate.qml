@@ -31,7 +31,6 @@ Item {
 
     property alias contentItem: contentItem.data
     property alias dragRect: backgroundRect
-    property string rowNumber: (index + 1).toString()
     property real alpha: PlaylistSettings.overlayVideo ? 0.6 : 1
     property bool hovered: hoverHandler.hovered
 
@@ -250,7 +249,7 @@ Item {
     }
 
     function padRowNumberAsString() {
-        return pad(root.rowNumber, root.ListView.view.count.toString().length)
+        return pad((root.index + 1).toString(), root.ListView.view.count.toString().length)
     }
 
     function getLabelColor() {

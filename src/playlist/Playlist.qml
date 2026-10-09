@@ -26,9 +26,10 @@ ResizeablePage {
     id: root
 
     property alias advancedSortWindow: advancedSortWindow
-    property alias manager: playlistsManager
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView
+
+    property PlaylistsManager manager: PlaylistsManager {}
 
     edge: PlaylistSettings.position === "right" ? Qt.RightEdge : Qt.LeftEdge
     customWidth: PlaylistSettings.playlistWidth
@@ -67,14 +68,10 @@ ResizeablePage {
         }
     }
 
-    PlaylistsManager {
-        id: playlistsManager
-    }
-
     PlaylistAdvancedSortWindow {
         id: advancedSortWindow
 
-        playlistsManager: playlistsManager
+        playlistsManager: root.manager
     }
 
     header: ToolBar {
@@ -95,14 +92,14 @@ ResizeablePage {
                 PlaylistTabBar {
                     id: playlistTabView
 
-                    playlistsManager: playlistsManager
+                    playlistsManager: root.manager
                     Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
                     Layout.fillWidth: true
 
                     Repeater {
-                        model: playlistsManager.playlists
+                        model: root.manager.playlists
                         delegate: PlaylistTabDelegate {
-                            playlistsManager: playlistsManager
+                            playlistsManager: root.manager
                         }
                     }
                 }
@@ -145,12 +142,12 @@ ResizeablePage {
                             delaySearch: true
 
                             onTextChanged: {
-                                playlistsManager.visiblePlaylist.searchText = text
+                                root.manager.visiblePlaylist.searchText = text
                                 playlistView.positionViewAtIndex(0, ListView.Beginning)
                             }
 
                             Component.onCompleted: {
-                                text = playlistsManager.visiblePlaylist.searchText
+                                text = root.manager.visiblePlaylist.searchText
                             }
                         }
                     },
@@ -201,7 +198,7 @@ ResizeablePage {
                         Kirigami.Action {
                             text: KI18n.i18nc("@action:button", "Ascending")
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortOrder === Qt.AscendingOrder
+                            checked: root.manager.visiblePlaylist.sortOrder === Qt.AscendingOrder
 
                             icon {
                                 name: "view-sort-ascending-name"
@@ -210,7 +207,7 @@ ResizeablePage {
                             }
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortOrder = Qt.AscendingOrder
+                                root.manager.visiblePlaylist.sortOrder = Qt.AscendingOrder
                             }
 
                             ActionGroup.group: sortOrderGroup
@@ -218,7 +215,7 @@ ResizeablePage {
                         Kirigami.Action {
                             text: KI18n.i18nc("@action:button", "Descending")
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortOrder === Qt.DescendingOrder
+                            checked: root.manager.visiblePlaylist.sortOrder === Qt.DescendingOrder
 
                             icon {
                                 name: "view-sort-descending-name"
@@ -226,7 +223,7 @@ ResizeablePage {
                                 height: root.buttonSize
                             }
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortOrder = Qt.DescendingOrder
+                                root.manager.visiblePlaylist.sortOrder = Qt.DescendingOrder
                             }
 
                             ActionGroup.group: sortOrderGroup
@@ -238,91 +235,91 @@ ResizeablePage {
 
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.None
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.None
                             text: KI18n.i18nc("@action:button", "None")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.None
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.None
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.FileName
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.FileName
                             text: KI18n.i18nc("@action:button", "File Name")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.FileName
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.FileName
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Title
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Title
                             text: KI18n.i18nc("@action:button", "Title")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Title
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Title
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Duration
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Duration
                             text: KI18n.i18nc("@action:button", "Duration")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Duration
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Duration
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Date
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Date
                             text: KI18n.i18nc("@action:button", "Modified Date")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Date
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Date
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.FileSize
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.FileSize
                             text: KI18n.i18nc("@action:button", "File Size")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.FileSize
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.FileSize
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.TrackNo
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.TrackNo
                             text: KI18n.i18nc("@action:button, as in 'Track no on a Audio CD', not 'subtitle track'", "Track No")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.TrackNo
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.TrackNo
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.SampleRate
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.SampleRate
                             text: KI18n.i18nc("@action:button", "Sample Rate")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.SampleRate
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.SampleRate
                             }
                             ActionGroup.group: sortPresetGroup
                         }
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Bitrate
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Bitrate
                             text: KI18n.i18nc("@action:button", "Bitrate")
 
                             onTriggered: {
-                                playlistsManager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Bitrate
+                                root.manager.visiblePlaylist.sortPreset = PlaylistSortProxyModel.Bitrate
                             }
                             ActionGroup.group: sortPresetGroup
                         }
@@ -333,12 +330,12 @@ ResizeablePage {
 
                         Kirigami.Action {
                             checkable: true
-                            checked: playlistsManager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Custom
+                            checked: root.manager.visiblePlaylist.sortPreset === PlaylistSortProxyModel.Custom
                             text: KI18n.i18nc("@action:button", "Custom…")
 
                             onTriggered: {
                                 root.advancedSortWindow.open()
-                                playlistsManager.visiblePlaylist.itemsSorted()
+                                root.manager.visiblePlaylist.itemsSorted()
                             }
                             ActionGroup.group: sortPresetGroup
                         }
@@ -409,7 +406,7 @@ ResizeablePage {
                         icon.name: "edit-clear-all"
                         displayHint: Kirigami.DisplayHint.AlwaysHide
                         onTriggered: {
-                            playlistsManager.visiblePlaylist.clear()
+                            root.manager.visiblePlaylist.clear()
                         }
                     },
                     Kirigami.Action {
@@ -426,9 +423,9 @@ ResizeablePage {
                         text: KI18n.i18nc("@action:inmenu", "Update all metadata")
                         icon.name: "view-refresh"
                         displayHint: Kirigami.DisplayHint.AlwaysHide
-                        enabled: !playlistsManager.visiblePlaylist.isUpdatingMetadata
+                        enabled: !root.manager.visiblePlaylist.isUpdatingMetadata
                         onTriggered: {
-                            playlistsManager.visiblePlaylist.updateMetadata()
+                            root.manager.visiblePlaylist.updateMetadata()
                         }
                         tooltip: (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                                  ? KI18n.i18nc("@info:tooltip", "Update metadata for all files in the playlist\n\n"+
@@ -453,7 +450,7 @@ ResizeablePage {
                      : KI18n.i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
 
         onSubmitted: function(url) {
-            playlistsManager.visiblePlaylist.addItem(url, PlaylistModel.Append)
+            root.manager.visiblePlaylist.addItem(url, PlaylistModel.Append)
         }
 
         YouTube {
@@ -471,7 +468,7 @@ ResizeablePage {
         buttonText: KI18n.i18nc("@action:button", "Add")
 
         onSubmitted: function(plName) {
-            playlistsManager.playlists.createNewPlaylist(plName)
+            root.manager.playlists.createNewPlaylist(plName)
         }
     }
 
@@ -486,7 +483,7 @@ ResizeablePage {
                 if (!containsDrag) {
                     return
                 }
-                playlistsManager.visiblePlaylist.addFilesAndFolders(drop.urls, PlaylistModel.Append)
+                root.manager.visiblePlaylist.addFilesAndFolders(drop.urls, PlaylistModel.Append)
             }
         },
 
@@ -510,14 +507,14 @@ ResizeablePage {
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: 100
 
-                model: playlistsManager.visiblePlaylist
+                model: root.manager.visiblePlaylist
                 onModelChanged: {
-                    Qt.callLater(playlistsManager.visiblePlaylist.refreshData)
+                    Qt.callLater(root.manager.visiblePlaylist.refreshData)
                 }
 
                 reuseItems: true
                 spacing: 1
-                currentIndex: playlistsManager.visiblePlaylist.getPlayingItem()
+                currentIndex: root.manager.visiblePlaylist.getPlayingItem()
                 highlightFollowsCurrentItem: false
 
                 moveDisplaced: Transition {
@@ -530,21 +527,18 @@ ResizeablePage {
                 delegate: {
                     switch (PlaylistSettings.style) {
                     case "default":
-                        playlistItemSimple
-                        break
+                        return playlistItemSimple
                     case "withThumbnails":
-                        playlistItemWithThumbnail
-                        break
+                        return playlistItemWithThumbnail
                     case "compact":
-                        playlistItemCompact
-                        break
+                        return playlistItemCompact
                     }
                 }
 
                 section {
                     property: "section"
                     delegate: PlaylistSectionDelegate {
-                        model: playlistsManager.visiblePlaylist
+                        model: root.manager.visiblePlaylist
                     }
                 }
 
@@ -563,7 +557,7 @@ ResizeablePage {
                     onClicked: function(mouse) {
                         switch (mouse.button) {
                         case Qt.MiddleButton:
-                            const index = playlistsManager.visiblePlaylist.getPlayingItem()
+                            const index = root.manager.visiblePlaylist.getPlayingItem()
                             playlistView.positionViewAtIndex(index, ListView.Beginning)
                             break
                         case Qt.RightButton:
@@ -598,14 +592,14 @@ ResizeablePage {
                     text: KI18n.i18nc("@action:inmenu", "Open Containing Folder")
                     icon.name: "folder"
                     visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
-                    onClicked: playlistsManager.visiblePlaylist.highlightInFileManager(contextMenuLoader.row)
+                    onClicked: root.manager.visiblePlaylist.highlightInFileManager(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Open in Browser")
                     icon.name: "link"
                     visible: !contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     onClicked: {
-                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
+                        const modelIndex = root.manager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
                     }
                 }
@@ -613,14 +607,14 @@ ResizeablePage {
                     text: KI18n.i18nc("@action:inmenu", "Open in Thumbnail Generator")
                     icon.name: "hana"
                     visible: {
-                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
+                        const modelIndex = root.manager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         return modelIndex.data(PlaylistModel.TypeRole) === "video"
                              && SystemUtils.isHanaInstalled()
                              && SystemUtils.platformName() !== "windows"
                              && contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     }
                     onClicked: {
-                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
+                        const modelIndex = root.manager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
                         SystemUtils.openHana(url)
                     }
@@ -631,21 +625,21 @@ ResizeablePage {
                              && SystemUtils.platformName() !== "windows"
                              && contextMenuLoader.isLocal && contextMenuLoader.row != -1
                     onClicked: {
-                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
+                        const modelIndex = root.manager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
                         SystemUtils.openMediaInfo(url)
                     }
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Copy Name")
-                    onClicked: playlistsManager.visiblePlaylist.copyFileName(contextMenuLoader.row)
+                    onClicked: root.manager.visiblePlaylist.copyFileName(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: contextMenuLoader.isLocal
                           ? KI18n.i18nc("@action:inmenu", "Copy Path")
                           : KI18n.i18nc("@action:inmenu", "Copy URL")
-                    onClicked: playlistsManager.visiblePlaylist.copyFilePath(contextMenuLoader.row)
+                    onClicked: root.manager.visiblePlaylist.copyFilePath(contextMenuLoader.row)
                     visible: contextMenuLoader.row != -1
                 }
 
@@ -656,7 +650,7 @@ ResizeablePage {
                     icon.name: "view-refresh"
                     visible: contextMenuLoader.row != -1
                     onClicked: {
-                        const modelIndex = playlistsManager.visiblePlaylist.index(contextMenuLoader.row, 0)
+                        const modelIndex = root.manager.visiblePlaylist.index(contextMenuLoader.row, 0)
                         const url = modelIndex.data(PlaylistModel.PathRole)
                         Database.updateMetadata(url)
                     }
@@ -677,39 +671,39 @@ ResizeablePage {
                 // Selection manipulators
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Select All")
-                    onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.All)
+                    onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.All)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Deselect All")
-                    onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Clear)
+                    onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Clear)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Invert Selection")
-                    onClicked: playlistsManager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Invert)
+                    onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Invert)
                 }
                 MenuSeparator {}
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Remove from Playlist")
                     icon.name: "remove"
-                    onClicked: playlistsManager.visiblePlaylist.removeItem(contextMenuLoader.row)
-                    visible: playlistsManager.visiblePlaylist.selectionCount === 1 && contextMenuLoader.row != -1
+                    onClicked: root.manager.visiblePlaylist.removeItem(contextMenuLoader.row)
+                    visible: root.manager.visiblePlaylist.selectionCount === 1 && contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Remove Selected from Playlist")
                     icon.name: "remove"
-                    onClicked: playlistsManager.visiblePlaylist.removeItems()
-                    visible: playlistsManager.visiblePlaylist.selectionCount > 1 && contextMenuLoader.row != -1
+                    onClicked: root.manager.visiblePlaylist.removeItems()
+                    visible: root.manager.visiblePlaylist.selectionCount > 1 && contextMenuLoader.row != -1
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Rename")
                     icon.name: "edit-rename"
                     visible: contextMenuLoader.isLocal && contextMenuLoader.row != -1
-                    onClicked: playlistsManager.visiblePlaylist.renameFile(contextMenuLoader.row)
+                    onClicked: root.manager.visiblePlaylist.renameFile(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Scroll to Playing Item")
                     onClicked: {
-                        const index = playlistsManager.visiblePlaylist.getPlayingItem()
+                        const index = root.manager.visiblePlaylist.getPlayingItem()
                         playlistView.positionViewAtIndex(index, ListView.Beginning)
                     }
                 }
@@ -719,14 +713,14 @@ ResizeablePage {
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Move File to Trash")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal && playlistsManager.visiblePlaylist.selectionCount === 1 && contextMenuLoader.row != -1
-                    onClicked: playlistsManager.visiblePlaylist.trashFile(contextMenuLoader.row)
+                    visible: contextMenuLoader.isLocal && root.manager.visiblePlaylist.selectionCount === 1 && contextMenuLoader.row != -1
+                    onClicked: root.manager.visiblePlaylist.trashFile(contextMenuLoader.row)
                 }
                 MenuItem {
                     text: KI18n.i18nc("@action:inmenu", "Move Selected Files to Trash")
                     icon.name: "delete"
-                    visible: contextMenuLoader.isLocal && playlistsManager.visiblePlaylist.selectionCount > 1 && contextMenuLoader.row != -1
-                    onClicked: playlistsManager.visiblePlaylist.trashFiles()
+                    visible: contextMenuLoader.isLocal && root.manager.visiblePlaylist.selectionCount > 1 && contextMenuLoader.row != -1
+                    onClicked: root.manager.visiblePlaylist.trashFiles()
                 }
             }
 
@@ -756,7 +750,7 @@ ResizeablePage {
             id: playlistItemWithThumbnail
             PlaylistItemWithThumbnail {
                 m_mpv: root.m_mpv
-                playlistsManager: playlistsManager
+                playlistsManager: root.manager
             }
         },
 
@@ -764,7 +758,7 @@ ResizeablePage {
             id: playlistItemSimple
             PlaylistItem {
                 m_mpv: root.m_mpv
-                playlistsManager: playlistsManager
+                playlistsManager: root.manager
             }
         },
 
@@ -772,7 +766,7 @@ ResizeablePage {
             id: playlistItemCompact
             PlaylistItemCompact {
                 m_mpv: root.m_mpv
-                playlistsManager: playlistsManager
+                playlistsManager: root.manager
             }
         },
 
@@ -842,13 +836,13 @@ ResizeablePage {
         onAccepted: {
             switch (fileType) {
             case "video":
-                playlistsManager.visiblePlaylist.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
+                root.manager.visiblePlaylist.addItems(fileDialog.selectedFiles, PlaylistModel.Append)
                 break
             case "playlist":
                 if (fileMode === FileDialog.OpenFile) {
-                    playlistsManager.visiblePlaylist.addItem(fileDialog.selectedFile, PlaylistModel.Append)
+                    root.manager.visiblePlaylist.addItem(fileDialog.selectedFile, PlaylistModel.Append)
                 } else {
-                    playlistsManager.visiblePlaylist.saveM3uFile(fileDialog.selectedFile)
+                    root.manager.visiblePlaylist.saveM3uFile(fileDialog.selectedFile)
                 }
 
                 break

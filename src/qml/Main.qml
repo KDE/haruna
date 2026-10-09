@@ -23,7 +23,7 @@ import org.kde.haruna.settings
 import org.kde.haruna.youtube
 
 ApplicationWindow {
-    id: window
+    id: appWindow
 
     property bool containsMouse: false
 
@@ -83,7 +83,7 @@ ApplicationWindow {
     }
 
     header: Header {
-        id: header
+        id: headerItem
 
         m_mpv: mpv
         m_menuBarLoader: menuBarLoader
@@ -106,7 +106,7 @@ ApplicationWindow {
             Models.recentFilesModel.getItems()
         }
         function onResizeWindowToVideoChanged() {
-            window.resizeWindow()
+            appWindow.resizeWindow()
         }
         function onColorSchemeChanged() {
             HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
@@ -207,13 +207,13 @@ ApplicationWindow {
     }
 
     MprisItem {
-        mpv: mpv
-        window: window
+        mpvItem: mpv
+        window: appWindow
         activePlaylist: playlist.manager.activePlaylist
 
         onRaise: { HarunaApp.raiseWindow() }
         onOpenUri: function(uri) {
-            window.openFile(uri, RecentFilesModel.OpenedFrom.ExternalApp)
+            appWindow.openFile(uri, RecentFilesModel.OpenedFrom.ExternalApp)
         }
     }
 
@@ -222,17 +222,17 @@ ApplicationWindow {
 
         playlistsManager: playlist.manager
 
-        width: window.contentItem.width
-        height: window.isFullScreen()
-                ? window.contentItem.height
-                : window.contentItem.height - (footer.isFloating ? 0 : footer.height)
+        width: appWindow.contentItem.width
+        height: appWindow.isFullScreen()
+                ? appWindow.contentItem.height
+                : appWindow.contentItem.height - (footerItem.isFloating ? 0 : footerItem.height)
         anchors.left: playlist.edge === Qt.LeftEdge
-                      ? PlaylistSettings.overlayVideo ? window.contentItem.left : playlist.right
+                      ? PlaylistSettings.overlayVideo ? appWindow.contentItem.left : playlist.right
                       : transcript.right
         anchors.right: playlist.edge === Qt.RightEdge
-                       ? PlaylistSettings.overlayVideo ? window.contentItem.right : playlist.left
+                       ? PlaylistSettings.overlayVideo ? appWindow.contentItem.right : playlist.left
                        : transcript.left
-        anchors.top: window.contentItem.top
+        anchors.top: appWindow.contentItem.top
 
         onFilesDropped: function(urls: list<url>, mode: int) {
             playlist.manager.defaultPlaylist.addFilesAndFolders(urls, mode)
@@ -242,7 +242,7 @@ ApplicationWindow {
         }
 
         onVideoReconfig: {
-            window.resizeWindow()
+            appWindow.resizeWindow()
         }
 
         onEofPlayNext: {
@@ -255,7 +255,7 @@ ApplicationWindow {
 
         onIsReadyChanged: {
             osd.active = true
-            window.initPlaylist()
+            appWindow.initPlaylist()
         }
 
         Osd {
@@ -291,8 +291,8 @@ ApplicationWindow {
 
         m_mpv: mpv
         height: mpv.height
-        mainWindowWidth: window.width
-        fsScale: window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
+        mainWindowWidth: appWindow.width
+        fsScale: appWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
 
         Connections {
             target: actions
@@ -320,12 +320,12 @@ ApplicationWindow {
 
         m_mpv: mpv
         height: mpv.height
-        mainWindowWidth: window.width
-        fsScale: window.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
+        mainWindowWidth: appWindow.width
+        fsScale: appWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
 
         Component.onCompleted: {
             isReady = true
-            window.initPlaylist()
+            appWindow.initPlaylist()
         }
 
         Connections {
@@ -342,7 +342,7 @@ ApplicationWindow {
         Connections {
             target: HarunaApp
             function onQmlApplicationMouseLeave() {
-                if (PlaylistSettings.canToggleWithMouse && (window.isFullScreen() || window.isMaximized())) {
+                if (PlaylistSettings.canToggleWithMouse && (appWindow.isFullScreen() || appWindow.isMaximized())) {
                     playlist.state = "hidden"
                 }
             }
@@ -360,14 +360,14 @@ ApplicationWindow {
     }
 
     Footer {
-        id: footer
+        id: footerItem
 
-        anchors.bottom: window.contentItem.bottom
+        anchors.bottom: appWindow.contentItem.bottom
 
         m_mpv: mpv
         playlistsManager: playlist.manager
         m_menuBarLoader: menuBarLoader
-        m_header: header
+        m_header: headerItem
         m_settingsLoader: settingsLoader
     }
 
@@ -378,7 +378,7 @@ ApplicationWindow {
         playlistsManager: playlist.manager
         m_mpvContextMenuLoader: mpvContextMenuLoader
         m_osd: osd
-        m_footer: footer
+        m_footer: footerItem
         m_settingsLoader: settingsLoader
         m_triggerActionPopup: triggerActionPopup
         m_openUrlPopup: openUrlPopup
@@ -388,9 +388,9 @@ ApplicationWindow {
     }
 
     RowLayout {
-        width: window.width * 0.8 > Kirigami.Units.gridUnit * 50
+        width: appWindow.width * 0.8 > Kirigami.Units.gridUnit * 50
                ? Kirigami.Units.gridUnit * 50
-               : window.width * 0.8
+               : appWindow.width * 0.8
         anchors.centerIn: parent
 
         Kirigami.InlineMessage {
@@ -426,10 +426,10 @@ ApplicationWindow {
     Connections {
         target: HarunaApp
         function onQmlApplicationMouseLeave() {
-            window.containsMouse = false
+            appWindow.containsMouse = false
         }
         function onQmlApplicationMouseEnter() {
-            window.containsMouse = true
+            appWindow.containsMouse = true
         }
         function onOpenUrl(url) {
             if (GeneralSettings.appendVideoToSingleInstance) {
@@ -441,10 +441,10 @@ ApplicationWindow {
                 return
             }
 
-            window.openFile(url, RecentFilesModel.OpenedFrom.ExternalApp)
+            appWindow.openFile(url, RecentFilesModel.OpenedFrom.ExternalApp)
         }
         function onOpenRecentFile(url) {
-            window.openFile(url, RecentFilesModel.OpenedFrom.Other)
+            appWindow.openFile(url, RecentFilesModel.OpenedFrom.Other)
         }
     }
 
@@ -456,7 +456,7 @@ ApplicationWindow {
         fileMode: FileDialog.OpenFile
 
         onAccepted: {
-            window.openFile(fileDialog.selectedFile, RecentFilesModel.OpenedFrom.OpenAction)
+            appWindow.openFile(fileDialog.selectedFile, RecentFilesModel.OpenedFrom.OpenAction)
             mpv.focus = true
 
             GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(fileDialog.selectedFile)
@@ -477,7 +477,7 @@ ApplicationWindow {
         nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
 
         onAccepted: {
-            if (window.acceptedSubtitleTypes.includes(MiscUtils.mimeType(subtitlesFileDialog.selectedFile))) {
+            if (appWindow.acceptedSubtitleTypes.includes(MiscUtils.mimeType(subtitlesFileDialog.selectedFile))) {
                 mpv.addSubtitles(subtitlesFileDialog.selectedFile)
             }
         }
@@ -496,7 +496,7 @@ ApplicationWindow {
 
         x: 10
         y: 10
-        width: Math.min(window.width * 0.9, 600)
+        width: Math.min(appWindow.width * 0.9, 600)
         lastText: GeneralSettings.lastUrl
         buttonText: KI18n.i18nc("@action:button", "Open")
         warningText: youtube.hasYoutubeDl()
@@ -504,7 +504,7 @@ ApplicationWindow {
                      : KI18n.i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
 
         onSubmitted: function(url) {
-            window.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
+            appWindow.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
 
             GeneralSettings.lastUrl = url
             GeneralSettings.save()
@@ -512,7 +512,7 @@ ApplicationWindow {
     }
 
     Component.onCompleted: {
-        HarunaApp.setupEventFilter(window)
+        HarunaApp.setupEventFilter(appWindow)
         HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
 
         const hasCommandLineFile = HarunaApp.url(0).toString() !== ""
@@ -530,27 +530,27 @@ ApplicationWindow {
     }
 
     function isFullScreen() : bool {
-        return window.visibility === Window.FullScreen
+        return appWindow.visibility === Window.FullScreen
     }
 
     function isMaximized() : bool {
-        return window.visibility === Window.Maximized
+        return appWindow.visibility === Window.Maximized
     }
 
     function toggleFullScreen() : void {
         if (!isFullScreen()) {
-            window.showFullScreen()
+            appWindow.showFullScreen()
         } else {
             exitFullscreen()
         }
     }
 
     function exitFullscreen() : void {
-        if (window.previousVisibility === Window.Maximized) {
-            window.show()
-            window.showMaximized()
+        if (appWindow.previousVisibility === Window.Maximized) {
+            appWindow.show()
+            appWindow.showMaximized()
         } else {
-            window.showNormal()
+            appWindow.showNormal()
         }
     }
 
@@ -559,10 +559,10 @@ ApplicationWindow {
             return
         }
 
-        window.width = mpv.videoWidth
-        window.height = mpv.videoHeight
-                + (footer.isFloating ? 0 : footer.height)
-                + (header.visible ? header.height : 0)
+        appWindow.width = mpv.videoWidth
+        appWindow.height = mpv.videoHeight
+                + (footerItem.isFloating ? 0 : footerItem.height)
+                + (headerItem.visible ? headerItem.height : 0)
                 + (menuBar.visible ? menuBar.height : 0)
     }
 }

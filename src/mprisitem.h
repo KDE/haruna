@@ -26,7 +26,7 @@ public:
     explicit MprisItem(QObject *parent = nullptr);
     ~MprisItem();
 
-    Q_PROPERTY(MpvItem *mpv READ mpv WRITE setMpv NOTIFY mpvChanged FINAL REQUIRED)
+    Q_PROPERTY(MpvItem *mpvItem READ mpv WRITE setMpv NOTIFY mpvChanged FINAL REQUIRED)
     Q_SIGNAL void mpvChanged();
     MpvItem *mpv() const;
     void setMpv(MpvItem *newMpv);
