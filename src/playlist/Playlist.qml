@@ -550,6 +550,33 @@ ResizeablePage {
                     Qt.callLater(() => positionViewAtIndex(currentIndex, ListView.Beginning))
                 }
 
+                ContextMenu.menu: Menu {
+                    MenuItem {
+                        text: KI18n.i18nc("@action:inmenu", "Select All")
+                        onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.All)
+                    }
+
+                    MenuItem {
+                        text: KI18n.i18nc("@action:inmenu", "Deselect All")
+                        onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Clear)
+                    }
+
+                    MenuItem {
+                        text: KI18n.i18nc("@action:inmenu", "Invert Selection")
+                        onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Invert)
+                    }
+
+                    MenuSeparator {}
+
+                    MenuItem {
+                        text: KI18n.i18nc("@action:inmenu", "Scroll to Playing Item")
+                        onClicked: {
+                            const index = root.manager.visiblePlaylist.getPlayingItem()
+                            playlistView.positionViewAtIndex(index, ListView.Beginning)
+                        }
+                    }
+                }
+
                 TapHandler {
                     acceptedButtons: Qt.MiddleButton
                     onSingleTapped: function(eventPoint, mouseButton) {
