@@ -136,7 +136,7 @@ TabButton {
                     case PointerDevice.UngrabPassive:
                         root.z = 0
                         if (root.index !== 0) {
-                            var prevItem = root.playlistTabBar.itemAt(root.index - 1)
+                            const prevItem = root.playlistTabBar.itemAt(root.index - 1)
                             root.x = prevItem.x + prevItem.width
                         }
                         root.dragCenter = 0
@@ -318,14 +318,14 @@ TabButton {
             if (root.index === 0) {
                 return dragIcon.x
             }
-            var item = root.playlistTabBar.itemAt(root.index - 1)
+            const item = root.playlistTabBar.itemAt(root.index - 1)
             return item.width - dragIcon.width
         }
         else {
             if (root.index === root.playlistTabBar.count - 1) {
                 return dragIcon.width + dragIcon.x
             }
-            var item = root.playlistTabBar.itemAt(root.index + 1)
+            const item = root.playlistTabBar.itemAt(root.index + 1)
             return -(item.width - root.width)
         }
         return defaultSpot

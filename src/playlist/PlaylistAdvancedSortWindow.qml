@@ -87,12 +87,12 @@ Loader {
                 Layout.fillWidth: true
 
                 onTextChanged: {
-                    var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
+                    const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                     model.searchText = text
                 }
 
                 Component.onCompleted: {
-                    var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
+                    const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                     text = model.searchText
                 }
 
@@ -127,7 +127,7 @@ Loader {
                         text: KI18n.i18nc("@action:inmenu all", "All")
 
                         onTriggered: {
-                            var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
+                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                             model.filterCategory = PlaylistSortPropertyModel.All
                         }
 
@@ -138,7 +138,7 @@ Loader {
                         text: KI18n.i18nc("@action:inmenu file", "File")
 
                         onTriggered: {
-                            var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
+                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                             model.filterCategory = PlaylistSortPropertyModel.FileCategory
                         }
 
@@ -149,7 +149,7 @@ Loader {
                         text: KI18n.i18nc("@action:inmenu audio", "Audio")
 
                         onTriggered: {
-                            var model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
+                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
                             model.filterCategory = PlaylistSortPropertyModel.AudioCategory
                         }
 
@@ -348,12 +348,12 @@ Loader {
                 Layout.fillWidth: true
 
                 onTextChanged: {
-                    var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
+                    const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                     model.searchText = text
                 }
 
                 Component.onCompleted: {
-                    var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
+                    const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                     text = model.searchText
                 }
 
@@ -388,7 +388,7 @@ Loader {
                         text: KI18n.i18nc("@action:inmenu all", "All")
 
                         onTriggered: {
-                            var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
+                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                             model.filterCategory = PlaylistSortPropertyModel.All
                         }
 
@@ -399,7 +399,7 @@ Loader {
                         text: KI18n.i18nc("@action:inmenu file", "File")
 
                         onTriggered: {
-                            var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
+                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                             model.filterCategory = PlaylistSortPropertyModel.FileCategory
                         }
 
@@ -410,7 +410,7 @@ Loader {
                         text: KI18n.i18nc("@action:inmenu audio", "Audio")
 
                         onTriggered: {
-                            var model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
+                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
                             model.filterCategory = PlaylistSortPropertyModel.AudioCategory
                         }
 
