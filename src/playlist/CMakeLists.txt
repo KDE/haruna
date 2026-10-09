@@ -11,14 +11,15 @@ qt_add_qml_module(playlist
     IMPORT_PATH ${CMAKE_BINARY_DIR}
     QML_FILES
         Playlist.qml
-        PlaylistItemDelegate.qml
-        PlaylistItem.qml
-        PlaylistItemCompact.qml
-        PlaylistItemWithThumbnail.qml
-        PlaylistTabDelegate.qml
-        PlaylistTabBar.qml
         PlaylistAdvancedSortWindow.qml
+        PlaylistItem.qml
+        PlaylistItemContextMenu.qml
+        PlaylistItemCompact.qml
+        PlaylistItemDelegate.qml
+        PlaylistItemWithThumbnail.qml
         PlaylistSectionDelegate.qml
+        PlaylistTabBar.qml
+        PlaylistTabDelegate.qml
     SOURCES
         m3uparser.h
         m3uparser.cpp

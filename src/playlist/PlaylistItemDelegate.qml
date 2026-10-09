@@ -5,6 +5,7 @@
  */
 
 import QtQuick
+import QtQuick.Controls
 import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
@@ -72,6 +73,12 @@ Item {
 
     ListView.onRemove: {
         removeAnimation.start()
+    }
+
+    ContextMenu.menu: PlaylistItemContextMenu {
+        index: root.index
+        isLocal: root.isLocal
+        playlistsManager: root.playlistsManager
     }
 
     Rectangle {
@@ -175,7 +182,7 @@ Item {
 
     TapHandler {
         id: tapHandler
-        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
+        acceptedButtons: Qt.LeftButton | Qt.MiddleButton
         onSingleTapped: function(eventPoint, mouseButton) {
             switch (mouseButton) {
             case Qt.LeftButton:
@@ -193,17 +200,11 @@ Item {
                     if (PlaylistSettings.openWithSingleClick) {
                         setPlayingItem(root.index)
                         root.selectItem(root.index, PlaylistFilterProxyModel.Clear)
-                    }
-                    else {
+                    } else {
                         root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
                     }
                     break
                 }
-                break
-            case Qt.RightButton:
-                // If right-clicked on a selected item, this will do no-op. Otherwise it will only select this item.
-                root.selectItem(root.index, PlaylistFilterProxyModel.Single)
-                openContextMenu()
                 break
            case Qt.MiddleButton:
                 scrollToPlayingItem()
@@ -226,10 +227,6 @@ Item {
                 const index = root.playlistsManager.visiblePlaylist.getPlayingItem()
                 root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
             }
-        }
-
-        function openContextMenu() {
-            root.ListView.view.openContextMenu(root)
         }
 
         function setPlayingItem(pIndex) {
