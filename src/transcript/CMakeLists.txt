@@ -31,5 +31,8 @@ target_link_libraries(transcript PRIVATE
 
     KF6::FileMetaData
 
+    ${AVCODEC_LIBRARIES}
+    ${AVFORMAT_LIBRARIES}
+
     utilitiesplugin
 )
