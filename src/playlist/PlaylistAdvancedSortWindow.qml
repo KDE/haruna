@@ -620,13 +620,15 @@ Loader {
                             listView: itemDelegate.ListView?.view
 
                             onMoveRequested: function(oldIndex, newIndex) {
+                                let model
                                 if (itemDelegate.isGroup) {
-                                    var model = root.playlistsManager.visiblePlaylist.activeGroupModel()
+                                    model = root.playlistsManager.visiblePlaylist.activeGroupModel()
                                 }
                                 else {
-                                    var model = root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
+                                    model = root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
                                 }
-                                model.moveSortProperty(oldIndex, newIndex)
+                                const sortModel = model as PlaylistSortPropertyModel
+                                sortModel.moveSortProperty(oldIndex, newIndex)
                             }
 
                             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
