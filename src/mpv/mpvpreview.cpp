@@ -86,7 +86,6 @@ void MpvPreview::setFile(const QString &_file)
         return;
     }
     m_file = _file;
-    auto url = QUrl::fromUserInput(m_file);
     Q_EMIT fileChanged();
 }
 
