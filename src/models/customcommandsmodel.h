@@ -50,7 +50,8 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void init();
-    Q_INVOKABLE bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
+    bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
+    Q_INVOKABLE bool moveRows(int sourceRow, int count, int destinationChild);
     Q_INVOKABLE void saveCustomCommand(const QString &command, const QString &osdMessage, const QString &type);
     Q_INVOKABLE void editCustomCommand(int row, const QString &command, const QString &osdMessage, const QString &type);
     Q_INVOKABLE void toggleCustomCommand(const QString &groupName, int row, bool setOnStartup);

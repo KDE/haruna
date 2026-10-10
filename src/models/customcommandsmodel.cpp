@@ -144,6 +144,11 @@ bool CustomCommandsModel::moveRows(const QModelIndex &sourceParent, int sourceRo
     return true;
 }
 
+Q_INVOKABLE bool CustomCommandsModel::moveRows(int sourceRow, int count, int destinationChild)
+{
+    return moveRows({}, sourceRow, count, {}, destinationChild);
+}
+
 void CustomCommandsModel::saveCustomCommand(const QString &command, const QString &osdMessage, const QString &type)
 {
     int counter = m_customCommandsConfig->group(QString()).readEntry("Counter", 0);

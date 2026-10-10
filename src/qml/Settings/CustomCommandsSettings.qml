@@ -88,8 +88,7 @@ SettingsBasePage {
                         listItem: customCommandItem
                         listView: customCommandsView
                         onMoveRequested: function (sourceRow, destinationRow) {
-                            const modelIndex = Models.customCommandsModel.index(sourceRow, 0).parent
-                            Models.customCommandsModel.moveRows(modelIndex, sourceRow, 1, modelIndex, destinationRow)
+                            Models.customCommandsModel.moveRows(sourceRow, 1, destinationRow)
                         }
                     }
 
