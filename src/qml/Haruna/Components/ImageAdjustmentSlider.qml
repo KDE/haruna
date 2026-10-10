@@ -8,6 +8,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.kirigami as Kirigami
+
 RowLayout {
     id: root
 
@@ -24,6 +26,7 @@ RowLayout {
         stepSize: 1
         onValueChanged: root.sliderValueChanged(value.toFixed(0))
 
+        Kirigami.StyleHints.tickMarkStepSize: -1
         Layout.fillWidth: true
 
         MouseArea {
@@ -31,8 +34,6 @@ RowLayout {
             acceptedButtons: Qt.MiddleButton
             onClicked: slider.value = 0
         }
-
-        Component.onCompleted: background.activeControl = ""
     }
 
     Label {
