@@ -45,7 +45,9 @@ ToolButton {
                 onLinkActivated: function(link) {
                     Qt.openUrlExternally(link)
                 }
-                onHoveredLinkChanged: hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                HoverHandler {
+                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                }
             }
         }
     }
