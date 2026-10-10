@@ -16,6 +16,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.haruna
 import org.kde.haruna.settings
+import org.kde.haruna.utilities
 
 SettingsBasePage {
     id: root
@@ -134,16 +135,17 @@ SettingsBasePage {
                         sourceComponent: KeySequenceItem {
                             checkForConflictsAgainst: ShortcutType.None
                             patterns: ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
-                            keySequence: delegate.shortcut
+                            keySequence: MiscUtils.stringToKeySequence(delegate.shortcut)
 
                             onKeySequenceModified: {
-                                if (keySequence.toString() === "" ) {
+                                const keySequenceString = MiscUtils.keySequenceToString(keySequence)
+                                if (keySequenceString === "" ) {
                                     return
                                 }
-                                if (keySequence !== delegate.shortcut) {
+                                if (keySequenceString !== delegate.shortcut) {
                                     // use action name (commandId) since this changes the actionsModel
                                     if (!Models.actionsModel.saveShortcut(delegate.commandId, keySequence)) {
-                                        keySequence = delegate.shortcut
+                                        keySequence = MiscUtils.stringToKeySequence(delegate.shortcut)
                                     }
                                 }
                             }
