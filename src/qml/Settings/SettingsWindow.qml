@@ -12,7 +12,6 @@ import QtQuick.Controls
 
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
-import org.kde.coreaddons as KCoreAddons
 
 import org.kde.haruna
 
@@ -223,7 +222,7 @@ Loader {
                 id: aboutPage
 
                 Kirigami.AboutPage {
-                    aboutData: KCoreAddons.AboutData
+                    aboutData: HarunaApp.aboutData()
                 }
             }
         }

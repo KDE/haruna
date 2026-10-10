@@ -69,6 +69,7 @@ public:
     Q_INVOKABLE int qtMajorVersion();
     Q_INVOKABLE void raiseWindow();
     Q_INVOKABLE void aboutDataAddComponent(const KAboutComponent &component);
+    Q_INVOKABLE KAboutData aboutData();
 
     static QString version();
 

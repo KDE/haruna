@@ -172,6 +172,11 @@ void Application::aboutDataAddComponent(const KAboutComponent &component)
     m_aboutData.addComponent(component);
 }
 
+KAboutData Application::aboutData()
+{
+    return m_aboutData;
+}
+
 void Application::setupAboutData()
 {
     m_aboutData.setComponentName(u"haruna"_s);
