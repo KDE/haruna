@@ -32,8 +32,10 @@ Menu {
         icon.name: "link"
         visible: !root.isLocal && root.index != -1
         onClicked: {
-            const modelIndex = root.playlistsManager.visiblePlaylist.index(root.index, 0)
-            Qt.openUrlExternally(modelIndex.data(PlaylistModel.PathRole))
+            const playlist = root.playlistsManager.visiblePlaylist
+            const modelIndex = playlist.index(root.index, 0)
+            const url = playlist.data(modelIndex, PlaylistModel.PathRole)
+            Qt.openUrlExternally(url)
         }
     }
 
@@ -41,15 +43,17 @@ Menu {
         text: KI18n.i18nc("@action:inmenu", "Open in Thumbnail Generator")
         icon.name: "hana"
         visible: {
-            const modelIndex = root.playlistsManager.visiblePlaylist.index(root.index, 0)
-            return modelIndex.data(PlaylistModel.TypeRole) === "video"
+            const playlist = root.playlistsManager.visiblePlaylist
+            const modelIndex = playlist.index(root.index, 0)
+            return playlist.data(modelIndex, PlaylistModel.TypeRole) === "video"
                     && SystemUtils.isHanaInstalled()
                     && SystemUtils.platformName() !== "windows"
                     && root.isLocal && root.index != -1
         }
         onClicked: {
-            const modelIndex = root.playlistsManager.visiblePlaylist.index(root.index, 0)
-            const url = modelIndex.data(PlaylistModel.PathRole)
+            const playlist = root.playlistsManager.visiblePlaylist
+            const modelIndex = playlist.index(root.index, 0)
+            const url = playlist.data(modelIndex, PlaylistModel.PathRole)
             SystemUtils.openHana(url)
         }
     }
@@ -60,8 +64,9 @@ Menu {
                  && SystemUtils.platformName() !== "windows"
                  && root.isLocal && root.index != -1
         onClicked: {
-            const modelIndex = root.playlistsManager.visiblePlaylist.index(root.index, 0)
-            const url = modelIndex.data(PlaylistModel.PathRole)
+            const playlist = root.playlistsManager.visiblePlaylist
+            const modelIndex = playlist.index(root.index, 0)
+            const url = playlist.data(modelIndex, PlaylistModel.PathRole)
             SystemUtils.openMediaInfo(url)
         }
     }
@@ -87,8 +92,9 @@ Menu {
         icon.name: "view-refresh"
         visible: root.index != -1
         onClicked: {
-            const modelIndex = root.playlistsManager.visiblePlaylist.index(root.index, 0)
-            const url = modelIndex.data(PlaylistModel.PathRole)
+            const playlist = root.playlistsManager.visiblePlaylist
+            const modelIndex = playlist.index(root.index, 0)
+            const url = playlist.data(modelIndex, PlaylistModel.PathRole)
             Database.updateMetadata(url)
         }
 
