@@ -54,7 +54,7 @@ QVariant TranscriptModel::data(const QModelIndex &index, int role) const
     case FormattedEndTimeRole:
         return item.formattedEndTime;
     case CurrentRole:
-        for (auto &endTime : m_currentEndTimes) {
+        for (const auto &endTime : m_currentEndTimes) {
             if (endTime.index == index.row()) {
                 return true;
             }
@@ -173,14 +173,14 @@ void TranscriptModel::updateCurrentEndTimes(double pTime)
     // No seeks are made, check incrementally from the last position
     // Remove subtitles that are no longed displayed
     for (int i = 0; i < m_currentEndTimes.size(); ++i) {
-        auto &currentEndTime = m_currentEndTimes[i];
+        const auto &currentEndTime = m_currentEndTimes[i];
         if (currentEndTime.endTime < time) {
             removeEndTime(i);
         }
     }
 
     while (m_lastIndex < m_transcript.size() && m_transcript[m_lastIndex].startTime <= time) {
-        auto endTime = m_transcript[m_lastIndex].startTime + m_transcript[m_lastIndex].duration;
+        const auto endTime = m_transcript[m_lastIndex].startTime + m_transcript[m_lastIndex].duration;
         if (endTime >= time) {
             appendEndTime(m_lastIndex, endTime);
         }
@@ -202,7 +202,7 @@ void TranscriptModel::addItem(const SubtitleLine &item, const int transcriptMode
 
 void TranscriptModel::appendEndTime(int pIndex, double endTime)
 {
-    for (auto &currentEndTime : m_currentEndTimes) {
+    for (const auto &currentEndTime : std::as_const(m_currentEndTimes)) {
         if (currentEndTime.index == pIndex) {
             return;
         }
@@ -216,7 +216,7 @@ void TranscriptModel::appendEndTime(int pIndex, double endTime)
 
 void TranscriptModel::prependEndTime(int pIndex, double endTime)
 {
-    for (auto &currentEndTime : m_currentEndTimes) {
+    for (const auto &currentEndTime : std::as_const(m_currentEndTimes)) {
         if (currentEndTime.index == pIndex) {
             return;
         }
@@ -245,7 +245,7 @@ void TranscriptModel::clearEndTimes()
 
     m_currentEndTimes.clear();
 
-    for (auto &removedIndex : indexes) {
+    for (const auto &removedIndex : indexes) {
         Q_EMIT dataChanged(index(removedIndex, 0), index(removedIndex, 0));
     }
     Q_EMIT currentIndexChanged();
@@ -273,7 +273,7 @@ void TranscriptModel::binarySearchEndTimes(double pTime)
     int prevIndex = m_lastIndex;
     int searchDepth = std::min(prevIndex, 5);
     while (prevIndex > 0) {
-        auto &startTime = m_transcript[prevIndex].startTime;
+        auto startTime = m_transcript[prevIndex].startTime;
         auto endTime = startTime + m_transcript[prevIndex].duration;
         // Don't exit the loop immediately after finding an expired subtitle.
         // Continue scanning until 5 consecutive expired subtitles have been found.

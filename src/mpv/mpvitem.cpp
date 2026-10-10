@@ -632,7 +632,8 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
     }
     case AsyncIds::ChapterList: {
         QList<Chapter> chaptersList;
-        for (const auto &chapter : data.toList()) {
+        const auto chapters = data.toList();
+        for (const auto &chapter : chapters) {
             const auto map = chapter.toMap();
             Chapter c;
             c.title = map.value(u"title"_s).toString();
