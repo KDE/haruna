@@ -81,4 +81,14 @@ std::optional<Metadata> MiscUtils::metadata(const QUrl &url, const ExtractionRes
     return {m};
 }
 
+QKeySequence MiscUtils::keySequenceToString(const QKeySequence &keySequence)
+{
+    return keySequence.toString(QKeySequence::PortableText);
+}
+
+QKeySequence MiscUtils::stringToKeySequence(const QString &keyString)
+{
+    return QKeySequence(keyString);
+}
+
 // #include "moc_miscutils.h"

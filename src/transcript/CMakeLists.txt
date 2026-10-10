@@ -28,6 +28,7 @@ target_include_directories(transcript
 
 target_link_libraries(transcript PRIVATE
     Qt6::Core
+    Qt6::Gui
 
     KF6::FileMetaData
 

@@ -22,6 +22,7 @@ qt_add_qml_module(utilities
 
 target_link_libraries(utilities PRIVATE
     Qt6::Core
+    Qt6::Gui
 
     KF6::ConfigCore
     KF6::FileMetaData

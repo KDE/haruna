@@ -7,6 +7,7 @@
 #ifndef MISCUTILS_H
 #define MISCUTILS_H
 
+#include <QKeySequence>
 #include <QObject>
 #include <QQmlEngine>
 
@@ -36,6 +37,9 @@ public:
     Q_INVOKABLE static QString md5(const QString &str);
     Q_INVOKABLE static std::optional<Metadata>
     metadata(const QUrl &url, const ExtractionResult::Flags &flags = ExtractionResult::ExtractPlainText | ExtractionResult::ExtractMetaData);
+
+    Q_INVOKABLE QKeySequence stringToKeySequence(const QString &keyString);
+    Q_INVOKABLE QKeySequence keySequenceToString(const QKeySequence &keySequence);
 
 Q_SIGNALS:
     void error(const QString &message);
