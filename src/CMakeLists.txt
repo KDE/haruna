@@ -158,6 +158,9 @@ qt_add_qml_module(haruna
         qml/Settings/DebugSettings.qml
         qml/Settings/SettingsWindow.qml
 
+    DEPENDENCIES
+        org.kde.haruna.playlist
+
     RESOURCES
         ${COMPILED_SHADERS}
 )
