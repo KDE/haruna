@@ -62,10 +62,6 @@ ResizeablePage {
     onStateChanged: {
         PlaylistSettings.visible = state === "visible" ? true : false
         PlaylistSettings.save()
-
-        if (state === "hidden") {
-            contextMenuLoader.active = false
-        }
     }
 
     PlaylistAdvancedSortWindow {
