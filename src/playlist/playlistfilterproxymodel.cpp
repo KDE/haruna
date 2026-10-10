@@ -74,10 +74,12 @@ QString PlaylistFilterProxyModel::searchText()
 
 void PlaylistFilterProxyModel::setSearchText(const QString &text)
 {
+    beginFilterChange();
     Filter filter = PlaylistSettings::showMediaTitle() ? Filter::Title : Filter::Name;
     setFilterRole(filter);
     setFilterRegularExpression(text);
-    invalidateFilter();
+    endFilterChange();
+
     Q_EMIT searchTextChanged();
 }
 

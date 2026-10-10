@@ -26,9 +26,11 @@ QString PlaylistSortPropertyProxyModel::searchText()
 
 void PlaylistSortPropertyProxyModel::setSearchText(const QString &text)
 {
+    beginFilterChange();
     setFilterRole(PlaylistSortPropertyModel::LabelRole);
     setFilterRegularExpression(text);
-    invalidateFilter();
+    endFilterChange();
+
     Q_EMIT searchTextChanged();
 }
 
@@ -39,8 +41,10 @@ uint PlaylistSortPropertyProxyModel::filterCategory()
 
 void PlaylistSortPropertyProxyModel::setFilterCategory(uint category)
 {
+    beginFilterChange();
     m_filterCategory = category;
-    invalidateFilter();
+    endFilterChange();
+
     Q_EMIT filterCategoryChanged();
 }
 

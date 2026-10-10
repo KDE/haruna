@@ -831,14 +831,16 @@ bool ProxyActionsModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourc
 
 void ProxyActionsModel::setNameFilter(const QString &regExp)
 {
+    beginFilterChange();
     m_nameRegExp.setPattern(regExp);
-    invalidateFilter();
+    endFilterChange();
 }
 
 void ProxyActionsModel::setTypeFilter(const QString &regExp)
 {
+    beginFilterChange();
     m_typeRegExp.setPattern(regExp);
-    invalidateFilter();
+    endFilterChange();
 }
 
 bool ProxyActionsModel::saveShortcut(int row, const QKeySequence &keySequence)
