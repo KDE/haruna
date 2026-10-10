@@ -465,7 +465,6 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
         rowOffset++;
     }
 
-    invalidateRowsFilter();
     QItemSelection updatedSelection;
     for (const auto &row : std::as_const(updatedSelectedRows)) {
         updatedSelection.select(index(row, 0), index(row, 0));
