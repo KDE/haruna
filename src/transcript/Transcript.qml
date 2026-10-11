@@ -30,6 +30,19 @@ ResizeablePage {
     customWidth: 380
     width: limitWidth(customWidth * fsScale)
 
+    function toggle() {
+        if (state === "visible") {
+            cancelParsing()
+            state = "hidden"
+        } else {
+            state = "visible"
+        }
+    }
+
+    function cancelParsing() {
+        root.transcriptModel.cancelParsing()
+    }
+
     function limitWidth(pWidth) {
         return Math.min(Math.max(pWidth, 260), mainWindowWidth - 50)
     }

@@ -92,6 +92,7 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
     int gotSub = 0;
     while (av_read_frame(fmt_ctx, packet) >= 0) {
         if (cancelRequested) {
+            qDebug() << "Parsing cancelled";
             av_packet_unref(packet);
             av_packet_free(&packet);
             avcodec_free_context(&codecContext);

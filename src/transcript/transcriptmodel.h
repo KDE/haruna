@@ -48,6 +48,7 @@ public:
     Q_INVOKABLE void loadSubtitle(QUrl filePath, int streamIndex, double position);
     Q_INVOKABLE void clearSubtitle();
     Q_INVOKABLE void updateCurrentEndTimes(double time);
+    Q_INVOKABLE void cancelParsing();
 
 Q_SIGNALS:
     void currentIndexChanged();

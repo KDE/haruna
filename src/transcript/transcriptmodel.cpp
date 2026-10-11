@@ -194,6 +194,11 @@ void TranscriptModel::updateCurrentEndTimes(double pTime)
     m_lastTimePosition = pTime;
 }
 
+void TranscriptModel::cancelParsing()
+{
+    m_cancelRequested = true;
+}
+
 void TranscriptModel::addItem(const SubtitleLine &item, const int transcriptModelVersion)
 {
     if (transcriptModelVersion != m_transcriptModelVersion) {
