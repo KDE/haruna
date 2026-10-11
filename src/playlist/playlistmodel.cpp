@@ -141,6 +141,112 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
+bool PlaylistModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!index.isValid()) {
+        return false;
+    }
+
+    auto &item = m_playlist[index.row()];
+
+    switch (role) {
+    case NameRole:
+        item.filename = value.toString();
+        break;
+    case PathRole:
+        item.url = value.toUrl();
+        break;
+    case DurationRole:
+        item.duration = value.toDouble();
+        break;
+    case FormattedDurationRole:
+        item.formattedDuration = value.toString();
+        break;
+    case DateRole:
+        item.modifiedDate = value.toDateTime();
+        break;
+    case FileSizeRole:
+        item.fileSize = value.toLongLong();
+        break;
+    case TypeRole:
+        item.fileType = value.toString();
+        break;
+    case ExtensionRole:
+        item.extension = value.toString();
+        break;
+    case FolderPathRole:
+        item.folderPath = value.toString();
+        break;
+    case DirNameRole:
+        item.dirName = value.toString();
+        break;
+    case PlaybackPositionRole:
+        item.playbackPosition = value.toDouble();
+        break;
+    // Audio
+    case TrackNoRole:
+        item.audio.trackNo = value.toInt();
+        break;
+    case DiscNoRole:
+        item.audio.discNo = value.toInt();
+        break;
+    case TitleRole:
+        item.mediaTitle = value.toString();
+        break;
+    case ReleaseYearRole:
+        item.audio.releaseYear = value.toInt();
+        break;
+    case GenreRole:
+        item.audio.genre = value.toString();
+        break;
+    case AlbumRole:
+        item.audio.album = value.toString();
+        break;
+    case ArtistRole:
+        item.audio.artist = value.toString();
+        break;
+    case AlbumArtistRole:
+        item.audio.albumArtist = value.toString();
+        break;
+    case ComposerRole:
+        item.audio.composer = value.toString();
+        break;
+    case LyricistRole:
+        item.audio.lyricist = value.toString();
+        break;
+    case AudioCodecRole:
+        item.audio.audioCodec = value.toString();
+        break;
+    case SampleRateRole:
+        item.audio.sampleRate = value.toInt();
+        break;
+    case BitrateRole:
+        item.audio.bitrate = value.toInt();
+        break;
+    case FramerateRole:
+        item.video.frameRate = value.toDouble();
+        break;
+    // Video
+    case VideoCodecRole:
+        item.video.videoCodec = value.toString();
+        break;
+    case OrientationRole:
+        item.video.displayedOrientation = value.value<VideoMetaData::Orientation>();
+        break;
+    case DisplayedHeightRole:
+        item.video.displayHeight = value.toInt();
+        break;
+    case DisplayedWidthRole:
+        item.video.displayWidth = value.toInt();
+        break;
+    default:
+        return false;
+    }
+
+    Q_EMIT dataChanged(index, index, {role});
+    return true;
+}
+
 QHash<int, QByteArray> PlaylistModel::roleNames() const
 {
     // clang-format off
