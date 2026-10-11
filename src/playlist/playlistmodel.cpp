@@ -618,18 +618,17 @@ void PlaylistModel::updateFileInfo(const YTVideoInfo &info, const QVariantMap &d
 {
     const auto row = data.value(u"row"_s).toUInt();
     const auto item{m_playlist.at(row)};
-    if (info.url != item.url) {
+    if (info.url != m_playlist.at(row).url) {
         return;
     }
 
-    m_playlist[row].mediaTitle = info.mediaTitle;
-    m_playlist[row].filename = info.mediaTitle;
-    m_playlist[row].formattedDuration = MiscUtils::formatTime(info.duration);
-    m_playlist[row].duration = info.duration;
+    const auto formattedDuration = MiscUtils::formatTime(info.duration);
+    setData(index(row, 0), info.mediaTitle, NameRole);
+    setData(index(row, 0), info.mediaTitle, TitleRole);
+    setData(index(row, 0), formattedDuration, FormattedDurationRole);
+    setData(index(row, 0), info.duration, DurationRole);
 
     --m_httpItemCounter;
-
-    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)
