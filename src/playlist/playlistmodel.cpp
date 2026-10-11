@@ -382,8 +382,7 @@ void PlaylistModel::stop()
     if (!m_playingIndex.isValid()) {
         return;
     }
-    m_playlist[m_playingIndex.row()].playbackPosition = getPlaybackPosition(m_playingIndex.row());
-    Q_EMIT dataChanged(index(m_playingIndex.row(), 0), index(m_playingIndex.row(), 0));
+    setData(m_playingIndex, getPlaybackPosition(m_playingIndex.row()), PlaybackPositionRole);
 }
 
 void PlaylistModel::appendItem(const QUrl &url)
