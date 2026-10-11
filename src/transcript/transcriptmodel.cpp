@@ -54,12 +54,7 @@ QVariant TranscriptModel::data(const QModelIndex &index, int role) const
     case FormattedEndTimeRole:
         return item.formattedEndTime;
     case CurrentRole:
-        for (const auto &endTime : m_currentEndTimes) {
-            if (endTime.index == index.row()) {
-                return true;
-            }
-        }
-        return false;
+        return isCurrentEndTime(index.row());
     default:
         return QVariant();
     }
@@ -90,6 +85,16 @@ int TranscriptModel::currentIndex()
     // Return the smallest index. This value is used by a ListView as its currentItem and we are aligning the items to top.
     // When multiple items are highlighted, the smallest index should be aligned to top, assuming the list is sorted.
     return m_currentEndTimes[0].index;
+}
+
+bool TranscriptModel::isCurrentEndTime(int index) const
+{
+    for (auto &endTime : m_currentEndTimes) {
+        if (endTime.index == index) {
+            return true;
+        }
+    }
+    return false;
 }
 
 void TranscriptModel::loadSubtitle(QUrl filePath, int streamIndex, double position)

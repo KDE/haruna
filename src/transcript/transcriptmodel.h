@@ -43,9 +43,8 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentIndexChanged)
     int currentIndex();
-
+    bool isCurrentEndTime(int index) const;
     Q_INVOKABLE void loadSubtitle(QUrl filePath, int streamIndex, double position);
     Q_INVOKABLE void clearSubtitle();
     Q_INVOKABLE void updateCurrentEndTimes(double time);

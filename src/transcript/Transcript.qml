@@ -21,6 +21,9 @@ ResizeablePage {
     id: root
 
     property TranscriptModel transcriptModel: TranscriptModel {}
+    property TranscriptProxyModel transcriptProxyModel: TranscriptProxyModel {
+        transcriptModel: root.transcriptModel
+    }
     property int selectedTrackId: -1
 
     edge: PlaylistSettings.position === "right" ? Qt.LeftEdge : Qt.RightEdge
@@ -81,15 +84,15 @@ ResizeablePage {
         if (root.state === "hidden") {
             root.transcriptModel.clearSubtitle()
             subtitleMenu.loadedTrackId = 0
+            root.m_mpv.forceActiveFocus()
         }
     }
 
     Connections {
-        target: root.transcriptModel
+        target: root.transcriptProxyModel
         function onParsingFinished(lastIndex) {
             Qt.callLater(transcriptView.positionViewAtIndex, lastIndex, ListView.Beginning)
         }
-
     }
 
     header: ToolBar {
@@ -183,6 +186,13 @@ ResizeablePage {
             }
 
             Kirigami.SearchField {
+                delaySearch: true
+
+                onTextChanged: {
+                    root.transcriptProxyModel.searchText = text
+                    transcriptView.positionViewAtIndex(transcriptView.currentIndex, ListView.Beginning)
+                }
+
                 Layout.fillWidth: true
             }
         }
@@ -205,10 +215,10 @@ ResizeablePage {
                 id: transcriptView
 
                 // buffer is required for animations. Jumping from N to N+1 animates, but N to -1 to N+1 breaks.
-                // transcriptModel.currentIndex is -1 when no subtitle is displayed
-                property int currentIndexBuffer: root.transcriptModel.currentIndex
+                // transcriptProxyModel.currentIndex is -1 when no subtitle is displayed
+                property int currentIndexBuffer: root.transcriptProxyModel.currentIndex
 
-                model: root.transcriptModel
+                model: root.transcriptProxyModel
                 reuseItems: true
                 spacing: 1
                 highlightFollowsCurrentItem: SubtitlesSettings.transcriptFollowCurrentSubtitle
