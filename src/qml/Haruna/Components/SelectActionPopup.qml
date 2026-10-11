@@ -29,7 +29,7 @@ Kirigami.SearchDialog {
     model: KItemModels.KSortFilterProxyModel {
         id: sortModel
 
-        sourceModel: ActionsModel {}
+        sourceModel: Models.actionsModel
         filterRoleName: "searchString"
         filterCaseSensitivity: Qt.CaseInsensitive
         sortRoleName: "actionText"
