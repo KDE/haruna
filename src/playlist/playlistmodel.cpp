@@ -12,6 +12,7 @@
 #include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonObject>
+#include <QUrlQuery>
 
 #include <KFileMetaData/Properties>
 
@@ -44,6 +45,23 @@ PlaylistModel::PlaylistModel(QObject *parent)
     connect(&youtube, &YouTube::playlistRetrieved, this, &PlaylistModel::addYouTubePlaylist);
     connect(&youtube, &YouTube::videoInfoRetrieved, this, &PlaylistModel::updateFileInfo);
     connect(&youtube, &YouTube::error, MiscUtils::instance(), &MiscUtils::error);
+
+    connect(&youtube, &YouTube::videosInfoRetrieved, this, [this](YTResponsePayload payload) {
+        if (payload.playlistVersion != m_playlistVersion.load()) {
+            // playlist has changed
+            qDebug() << "Version mismatch";
+            return;
+        }
+        for (auto [row, info] : payload.pairs.asKeyValueRange()) {
+            if (row >= 0 && row < rowCount()) {
+                const YTVideoInfo value = info;
+                setData(index(row, 0), value.mediaTitle, NameRole);
+                setData(index(row, 0), value.mediaTitle, TitleRole);
+                setData(index(row, 0), MiscUtils::formatTime(value.duration), FormattedDurationRole);
+                setData(index(row, 0), value.duration, DurationRole);
+            }
+        }
+    });
 }
 
 PlaylistModel::~PlaylistModel()
@@ -399,12 +417,8 @@ void PlaylistModel::appendItem(const QUrl &url)
             item.url = url;
             item.filename = url.toString();
             item.fileType = u"http"_s;
-            // causes issues with lots of links
-            if (m_httpItemCounter < 20) {
-                QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
-                youtube.getVideoInfo(url, data);
-                ++m_httpItemCounter;
-            }
+            QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
+            youtube.getVideoInfo(url, data);
         }
     }
 
@@ -513,11 +527,16 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
         return;
     }
 
-    m_httpItemCounter = 0;
+    if (behavior == Behavior::Clear) {
+        youtube.cancelYtDlpProcesses();
+    }
+
     m_playlistPath = url.toLocalFile();
 
     M3uParser parser;
     parser.read(m_playlistPath.toStdString());
+
+    YouTubeIdRowPairs youTubeIdRowPairs;
 
     uint playingItem{0};
     const auto data = parser.data();
@@ -539,12 +558,10 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
             item.filename = item.mediaTitle;
             item.fileType = u"http"_s;
 
-            if (!metadata.duration.has_value() || !metadata.title.has_value()) {
-                if (m_httpItemCounter < 20) {
-                    QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
-                    youtube.getVideoInfo(url, data);
-                    ++m_httpItemCounter;
-                }
+            if (youtube.isYoutubeUrl(url) && (!metadata.duration.has_value() || !metadata.title.has_value())) {
+                QUrlQuery query{url.query()};
+                QString videoId{query.queryItemValue(u"v"_s)};
+                youTubeIdRowPairs.insert(videoId, {static_cast<int>(row)});
             }
         }
 
@@ -565,6 +582,14 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
 
     if (PlaylistSettings::randomPlayback()) {
         shuffleIndexes();
+    }
+
+    if (!youTubeIdRowPairs.isEmpty()) {
+        YTRequestPayload payload;
+        payload.playlistVersion = m_playlistVersion.load();
+        payload.pairs = youTubeIdRowPairs;
+
+        youtube.getVideoInfo(payload);
     }
 }
 
@@ -626,8 +651,6 @@ void PlaylistModel::updateFileInfo(const YTVideoInfo &info, const QVariantMap &d
     setData(index(row, 0), info.mediaTitle, TitleRole);
     setData(index(row, 0), formattedDuration, FormattedDurationRole);
     setData(index(row, 0), info.duration, DurationRole);
-
-    --m_httpItemCounter;
 }
 
 bool PlaylistModel::isVideoOrAudioMimeType(const QString &mimeType)

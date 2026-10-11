@@ -175,7 +175,6 @@ private:
     bool m_isPlaying{false};
     QPersistentModelIndex m_playingIndex;
     QString m_playlistPath;
-    int m_httpItemCounter{0};
     YouTube youtube;
 
     std::vector<int> m_shuffledIndexes;
