@@ -263,14 +263,6 @@ ApplicationWindow {
 
             maxWidth: mpv.width
         }
-
-        SelectActionPopup {
-            id: triggerActionPopup
-
-            onActionSelected: function(actionName) {
-                HarunaApp.actions[actionName].trigger()
-            }
-        }
     }
 
     // extra space outside the playlist so that the playlist is not closed
@@ -376,7 +368,6 @@ ApplicationWindow {
         m_osd: osd
         m_footer: footerItem
         m_settingsLoader: settingsLoader
-        m_triggerActionPopup: triggerActionPopup
         m_openUrlPopup: openUrlPopup
 
         onOpenFileDialog: fileDialog.open()
