@@ -77,20 +77,20 @@ QHash<int, QByteArray> TranscriptModel::roleNames() const
     return roles;
 }
 
-int TranscriptModel::currentIndex()
+int TranscriptModel::currentRow()
 {
     if (m_currentEndTimes.empty()) {
         return -1;
     }
-    // Return the smallest index. This value is used by a ListView as its currentItem and we are aligning the items to top.
-    // When multiple items are highlighted, the smallest index should be aligned to top, assuming the list is sorted.
-    return m_currentEndTimes[0].index;
+    // Return the smallest row. This value is used by a ListView as its currentItem and we are aligning the items to top.
+    // When multiple items are highlighted, the smallest row should be aligned to top, assuming the list is sorted.
+    return m_currentEndTimes[0].row;
 }
 
-bool TranscriptModel::isCurrentEndTime(int index) const
+bool TranscriptModel::isCurrentEndTime(int row) const
 {
     for (auto &endTime : m_currentEndTimes) {
-        if (endTime.index == index) {
+        if (endTime.row == row) {
             return true;
         }
     }
@@ -121,16 +121,16 @@ void TranscriptModel::loadSubtitle(QUrl filePath, int streamIndex, double positi
         // therefore queued signals from parseSubtitle should be waited before checking highlights.
         QTimer::singleShot(0, this, [this, position]() {
             m_lastTimePosition = -1.0;
-            m_lastIndex = 0;
+            m_lastRow = 0;
             m_parsingFinished = true;
 
             binarySearchEndTimes(position);
 
             if (m_currentEndTimes.empty()) {
                 // If no subtitle is shown, scroll to the current position
-                Q_EMIT parsingFinished(m_lastIndex);
+                Q_EMIT parsingFinished(m_lastRow);
             } else {
-                Q_EMIT parsingFinished(currentIndex());
+                Q_EMIT parsingFinished(currentRow());
             }
         });
     });
@@ -184,12 +184,12 @@ void TranscriptModel::updateCurrentEndTimes(double pTime)
         }
     }
 
-    while (m_lastIndex < m_transcript.size() && m_transcript[m_lastIndex].startTime <= time) {
-        const auto endTime = m_transcript[m_lastIndex].startTime + m_transcript[m_lastIndex].duration;
+    while (m_lastRow < m_transcript.size() && m_transcript[m_lastRow].startTime <= time) {
+        const auto endTime = m_transcript[m_lastRow].startTime + m_transcript[m_lastRow].duration;
         if (endTime >= time) {
-            appendEndTime(m_lastIndex, endTime);
+            appendEndTime(m_lastRow, endTime);
         }
-        m_lastIndex++;
+        m_lastRow++;
     }
     m_lastTimePosition = pTime;
 }
@@ -210,55 +210,55 @@ void TranscriptModel::addItem(const SubtitleLine &item, const int transcriptMode
     endInsertRows();
 }
 
-void TranscriptModel::appendEndTime(int pIndex, double endTime)
+void TranscriptModel::appendEndTime(int row, double endTime)
 {
     for (const auto &currentEndTime : std::as_const(m_currentEndTimes)) {
-        if (currentEndTime.index == pIndex) {
+        if (currentEndTime.row == row) {
             return;
         }
     }
 
-    m_currentEndTimes.append(EndTime(pIndex, endTime));
+    m_currentEndTimes.append(EndTime(row, endTime));
 
-    Q_EMIT dataChanged(index(pIndex, 0), index(pIndex, 0));
-    Q_EMIT currentIndexChanged();
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
+    Q_EMIT currentRowChanged();
 }
 
-void TranscriptModel::prependEndTime(int pIndex, double endTime)
+void TranscriptModel::prependEndTime(int row, double endTime)
 {
     for (const auto &currentEndTime : std::as_const(m_currentEndTimes)) {
-        if (currentEndTime.index == pIndex) {
+        if (currentEndTime.row == row) {
             return;
         }
     }
 
-    m_currentEndTimes.prepend(EndTime(pIndex, endTime));
+    m_currentEndTimes.prepend(EndTime(row, endTime));
 
-    Q_EMIT dataChanged(index(pIndex, 0), index(pIndex, 0));
-    Q_EMIT currentIndexChanged();
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
+    Q_EMIT currentRowChanged();
 }
 
-void TranscriptModel::removeEndTime(int pEndTimeIndex)
+void TranscriptModel::removeEndTime(int endTimeIndex)
 {
-    auto removedIndex = m_currentEndTimes[pEndTimeIndex].index;
-    m_currentEndTimes.remove(pEndTimeIndex);
-    Q_EMIT dataChanged(index(removedIndex, 0), index(removedIndex, 0));
-    Q_EMIT currentIndexChanged();
+    auto removedRow = m_currentEndTimes[endTimeIndex].row;
+    m_currentEndTimes.remove(endTimeIndex);
+    Q_EMIT dataChanged(index(removedRow, 0), index(removedRow, 0));
+    Q_EMIT currentRowChanged();
 }
 
 void TranscriptModel::clearEndTimes()
 {
-    QList<int> indexes;
+    QList<int> rows;
     for (int i = 0; i < m_currentEndTimes.size(); ++i) {
-        indexes.append(m_currentEndTimes[i].index);
+        rows.append(m_currentEndTimes[i].row);
     }
 
     m_currentEndTimes.clear();
 
-    for (const auto &removedIndex : indexes) {
-        Q_EMIT dataChanged(index(removedIndex, 0), index(removedIndex, 0));
+    for (const auto &removedRow : rows) {
+        Q_EMIT dataChanged(index(removedRow, 0), index(removedRow, 0));
     }
-    Q_EMIT currentIndexChanged();
+    Q_EMIT currentRowChanged();
 }
 
 // Finds all EndTimes containing pTime where {startTime < pTime < endTime}, and adds them to m_currentEndTimes
@@ -272,19 +272,19 @@ void TranscriptModel::binarySearchEndTimes(double pTime)
 
     // Lower bound actually returns the upcomping subtitle. Just get the previous item.
     it = std::prev(it);
-    m_lastIndex = std::distance(m_transcript.begin(), it);
-    if (m_lastIndex < 0) {
-        m_lastIndex = -1;
+    m_lastRow = std::distance(m_transcript.begin(), it);
+    if (m_lastRow < 0) {
+        m_lastRow = -1;
         m_lastTimePosition = -1;
         return;
     }
 
     // We can iterate backward from that point and check subtitles that falls within the EndTime.
-    int prevIndex = m_lastIndex;
-    int searchDepth = std::min(prevIndex, 5);
-    while (prevIndex > 0) {
-        auto startTime = m_transcript[prevIndex].startTime;
-        auto endTime = startTime + m_transcript[prevIndex].duration;
+    int prevRow = m_lastRow;
+    int searchDepth = std::min(prevRow, 5);
+    while (prevRow > 0) {
+        auto startTime = m_transcript[prevRow].startTime;
+        auto endTime = startTime + m_transcript[prevRow].duration;
         // Don't exit the loop immediately after finding an expired subtitle.
         // Continue scanning until 5 consecutive expired subtitles have been found.
         // An expired subtitle does not imply that earlier subtitles are also expired,
@@ -292,13 +292,13 @@ void TranscriptModel::binarySearchEndTimes(double pTime)
         // An expired subtitle is one whose endTime is less than pTime.
         // 5 is an arbitrary value.
         if (endTime >= pTime * 1000.0) {
-            prependEndTime(prevIndex, endTime);
-            prevIndex--;
-            searchDepth = std::min(prevIndex, 5);
+            prependEndTime(prevRow, endTime);
+            prevRow--;
+            searchDepth = std::min(prevRow, 5);
             continue;
         }
         searchDepth--;
-        prevIndex--;
+        prevRow--;
         if (searchDepth < 0) {
             break;
         }

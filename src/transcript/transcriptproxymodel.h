@@ -23,8 +23,8 @@ public:
     QString searchText();
     void setSearchText(QString text);
 
-    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentIndexChanged)
-    int currentIndex();
+    Q_PROPERTY(int currentRow READ currentRow NOTIFY currentRowChanged)
+    int currentRow();
 
     Q_PROPERTY(TranscriptModel *transcriptModel READ transcriptModel WRITE setTranscriptModel NOTIFY transcriptModelChanged FINAL REQUIRED)
     TranscriptModel *transcriptModel();
@@ -32,13 +32,13 @@ public:
 
 Q_SIGNALS:
     void searchTextChanged();
-    void currentIndexChanged();
+    void currentRowChanged();
     void transcriptModelChanged();
-    void parsingFinished(int index);
+    void parsingFinished(int row);
 
 private:
-    int mapCurrentIndex(int sourceIndex);
-    void onParsingFinished(int sourceIndex);
+    int mapCurrentRow(int row);
+    void onParsingFinished(int row);
 
     TranscriptModel *m_transcriptModel{nullptr};
     QString m_searchText;

@@ -228,8 +228,8 @@ ResizeablePage {
                 id: transcriptView
 
                 // buffer is required for animations. Jumping from N to N+1 animates, but N to -1 to N+1 breaks.
-                // transcriptProxyModel.currentIndex is -1 when no subtitle is displayed
-                property int currentIndexBuffer: root.transcriptProxyModel.currentIndex
+                // transcriptProxyModel.currentRow is -1 when no subtitle is displayed
+                property int currentIndexBuffer: root.transcriptProxyModel.currentRow
 
                 model: root.transcriptProxyModel
                 reuseItems: true
