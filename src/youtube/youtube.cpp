@@ -20,6 +20,11 @@ using namespace Qt::StringLiterals;
 
 YouTube::YouTube() = default;
 
+YouTube::~YouTube()
+{
+    cancelYtDlpProcesses();
+}
+
 bool YouTube::hasYoutubeDl()
 {
     return !youtubeDlExecutable().isEmpty();
@@ -144,4 +149,117 @@ void YouTube::getVideoInfo(const QUrl &url, const QVariantMap &data)
         info.duration = duration;
         Q_EMIT videoInfoRetrieved(info, data);
     });
+}
+
+void YouTube::getVideoInfo(YTRequestPayload payload)
+{
+    int i = 0;
+    int batchSize = 5;
+    QList<QStringList> youtubeIdsList;
+    QStringList currentBatch;
+
+    for (auto [videoId, row] : payload.pairs.asKeyValueRange()) {
+        currentBatch.append(videoId);
+        if (currentBatch.size() == batchSize) {
+            youtubeIdsList.append(currentBatch);
+            currentBatch.clear();
+            if (i == 2) {
+                batchSize = 10;
+            }
+            if (i == 5) {
+                batchSize = 20;
+            }
+            if (i == 10) {
+                batchSize = 30;
+            }
+            i++;
+        }
+    }
+    if (!currentBatch.isEmpty()) {
+        youtubeIdsList.append(currentBatch);
+    }
+
+    m_pendingYoutubeBatches.clear();
+
+    for (const auto &batch : std::as_const(youtubeIdsList)) {
+        m_pendingYoutubeBatches.enqueue(batch);
+    }
+
+    startNextYtDlpProcess(payload);
+}
+
+void YouTube::startNextYtDlpProcess(YTRequestPayload payload)
+{
+    while (m_runningYtDlpProcesses.size() < MaxConcurrentProcesses && !m_pendingYoutubeBatches.isEmpty()) {
+        const QStringList youtubeIds = m_pendingYoutubeBatches.dequeue();
+
+        QStringList arguments{
+            u"--skip-download"_s,
+            u"--print"_s,
+            u"id:%(id)s duration:%(duration)s title:%(title)s"_s,
+            u"--"_s,
+        };
+        arguments.append(youtubeIds);
+
+        auto ytdlProcess = std::make_shared<QProcess>();
+        ytdlProcess->setProgram(youtubeDlExecutable());
+        ytdlProcess->setArguments(arguments);
+
+        m_runningYtDlpProcesses.append(ytdlProcess);
+
+        const auto onYtDlpFinished = [this, ytdlProcess, youtubeIds, payload](int exitCode, QProcess::ExitStatus status) {
+            if (status != QProcess::NormalExit || exitCode != 0) {
+                qWarning() << "yt-dlp failed:" << exitCode << ytdlProcess->errorString();
+            }
+
+            const auto output = QString::fromUtf8(ytdlProcess->readAllStandardOutput());
+            const auto data = output.split(u'\n');
+
+            YTResponsePayload responsePayload;
+            responsePayload.playlistVersion = payload.playlistVersion;
+
+            for (const auto &string : data) {
+                if (string.isEmpty()) {
+                    continue;
+                }
+
+                QStringView line(string);
+                const qsizetype idStart = line.indexOf(u"id:") + 3;
+                const qsizetype durationStart = line.indexOf(u" duration:");
+                const qsizetype titleStart = line.indexOf(u" title:");
+                const QString id = line.mid(idStart, durationStart - idStart).toString();
+
+                YTVideoInfo info;
+                info.url = QUrl{u"https://www.youtube.com/watch?v=%1"_s.arg(id)};
+                info.mediaTitle = line.mid(titleStart + 7).toString();
+                info.duration = line.mid(durationStart + 10, titleStart - durationStart - 10).toDouble();
+
+                responsePayload.pairs.insert(payload.pairs.value(id), info);
+            }
+
+            Q_EMIT videosInfoRetrieved(responsePayload);
+
+            m_runningYtDlpProcesses.removeAll(ytdlProcess);
+            startNextYtDlpProcess(payload);
+        };
+
+        connect(ytdlProcess.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, onYtDlpFinished);
+
+        ytdlProcess->start();
+    }
+}
+
+void YouTube::cancelYtDlpProcesses()
+{
+    m_pendingYoutubeBatches.clear();
+
+    const auto processes = m_runningYtDlpProcesses;
+    m_runningYtDlpProcesses.clear();
+
+    for (const auto &process : processes) {
+        if (process->state() != QProcess::NotRunning) {
+            process->kill();
+            process->waitForFinished(1000);
+        }
+    }
 }
