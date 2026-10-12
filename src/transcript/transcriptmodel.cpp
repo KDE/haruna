@@ -77,7 +77,7 @@ QHash<int, QByteArray> TranscriptModel::roleNames() const
     return roles;
 }
 
-int TranscriptModel::currentRow()
+int TranscriptModel::currentRow() const
 {
     if (m_currentEndTimes.empty()) {
         return -1;
