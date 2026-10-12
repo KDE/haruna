@@ -132,6 +132,7 @@ MpvItem::MpvItem(QQuickItem *parent)
             userCommand(configGroup.readEntry("Command", QString()));
         }
     }
+    m_positionChangeTimer.start();
 }
 
 MpvItem::~MpvItem() = default;
@@ -382,10 +383,14 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
         Q_EMIT mediaTitleChanged();
 
     } else if (property == MpvProperties::self()->Position) {
-        m_position = value.toDouble();
-        m_formattedPosition = MiscUtils::formatTime(m_position);
-        updateTaskbarPlaybackProgress();
-        Q_EMIT positionChanged();
+        if (m_positionChangeTimer.elapsed() >= 200) {
+            m_positionChangeTimer.restart();
+
+            m_position = value.toDouble();
+            m_formattedPosition = MiscUtils::formatTime(m_position);
+            updateTaskbarPlaybackProgress();
+            Q_EMIT positionChanged();
+        }
 
     } else if (property == MpvProperties::self()->Remaining) {
         m_remaining = value.toDouble();

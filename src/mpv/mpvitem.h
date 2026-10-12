@@ -9,6 +9,7 @@
 #define MPVOBJECT_H
 
 #include <MpvAbstractItem>
+#include <QElapsedTimer>
 
 class SeekableRangesModel;
 class ChaptersModel;
@@ -282,6 +283,7 @@ private:
     bool m_isLocalFile;
     bool m_isVideo;
     std::unique_ptr<SeekableRangesModel> m_seekableRangesModel;
+    QElapsedTimer m_positionChangeTimer;
 };
 
 #endif // MPVOBJECT_H
