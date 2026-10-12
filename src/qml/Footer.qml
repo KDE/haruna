@@ -66,7 +66,7 @@ Item {
         Connections {
             target: root.m_mpv
             function onMousePositionChanged(x, y) {
-                Qt.callLater(() => footer.setState())
+                Qt.callLater(footer.setState)
             }
         }
 
@@ -75,7 +75,7 @@ Item {
             running: !root.isFloating
             repeat: true
             onTriggered: {
-                Qt.callLater(() => footer.staticState())
+                Qt.callLater(footer.staticState)
             }
         }
 

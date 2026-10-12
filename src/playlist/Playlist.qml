@@ -543,7 +543,7 @@ ResizeablePage {
                         return
                     }
                     startupScrollDone = true
-                    Qt.callLater(() => positionViewAtIndex(currentIndex, ListView.Beginning))
+                    Qt.callLater(positionViewAtIndex, currentIndex, ListView.Beginning)
                 }
 
                 ContextMenu.menu: Menu {
