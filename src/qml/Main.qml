@@ -374,27 +374,35 @@ ApplicationWindow {
         onOpenSubtitleDialog: subtitlesFileDialog.open()
     }
 
-    RowLayout {
-        width: appWindow.width * 0.8 > Kirigami.Units.gridUnit * 50
-               ? Kirigami.Units.gridUnit * 50
-               : appWindow.width * 0.8
-        anchors.centerIn: parent
+    Component {
+        id: messageBoxComponent
 
         Kirigami.InlineMessage {
             id: messageBox
 
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            width: Math.min(Kirigami.Units.gridUnit * 50, appWindow.width * 0.8)
+            anchors.centerIn: parent
+
             type: Kirigami.MessageType.Error
             showCloseButton: true
 
-            Connections {
-                target: MiscUtils
-                function onError(message) {
-                    messageBox.visible = true
-                    messageBox.text = message
+            onVisibleChanged: {
+                if (!visible) {
+                    destroy()
                 }
             }
+        }
+    }
+
+    Connections {
+        id: miscUtilsOnErrorConnection
+        target: MiscUtils
+        function onError(message) {
+            const item = messageBoxComponent.createObject(appWindow)
+            const messageBox = item as Kirigami.InlineMessage
+
+            messageBox.visible = true
+            messageBox.text = message
         }
     }
 
