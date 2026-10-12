@@ -10,6 +10,8 @@
 #include <QString>
 #include <QUrl>
 
+#include <KLocalizedString>
+
 #include "miscutils.h"
 #include "subtitleline.h"
 extern "C" {
@@ -90,6 +92,8 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
     const AVRational timeBase = fmt_ctx->streams[streamIndex]->time_base;
     double timeMultiplier = 1.0 * timeBase.num / timeBase.den;
     int gotSub = 0;
+    QStringList styles;
+    styles.append(i18nc("@item:listbox combobox option to show all ASS subtitle styles", "All"));
     while (av_read_frame(fmt_ctx, packet) >= 0) {
         if (cancelRequested) {
             qDebug() << "Parsing cancelled";
@@ -111,6 +115,7 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
 
                 QString text;
                 QString line;
+                QString style;
 
                 for (unsigned int i = 0; i < subtitle.num_rects; i++) {
                     // Note: Even though SUBTITLE_ASS sounds like they are for ASS/SSA only, that is not true.
@@ -123,6 +128,7 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
                     }
                     case SUBTITLE_ASS: {
                         line = QString::fromUtf8(subtitle.rects[i]->ass);
+                        style = line.section(QChar::fromLatin1(','), 2, 2);
                         line = formatASS(line);
                         break;
                     }
@@ -147,10 +153,14 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
 
                 SubtitleLine transcriptItem;
                 transcriptItem.text = text;
+                transcriptItem.style = style;
                 transcriptItem.duration = duration;
                 transcriptItem.startTime = startSecs;
                 transcriptItem.formattedStartTime = MiscUtils::formatTime(startSecs * timeMultiplier);
                 transcriptItem.formattedEndTime = MiscUtils::formatTime(endSecs * timeMultiplier);
+                if (!styles.contains(style)) {
+                    styles.append(style);
+                }
                 Q_EMIT transcriptItemReady(transcriptItem, transcriptModelVersion);
 
                 // must be freed when gotSub is set
@@ -159,6 +169,8 @@ void SubtitleParser::parseSubtitle(const QUrl &url, const int streamIndex, const
         }
         av_packet_unref(packet);
     }
+
+    Q_EMIT stylesReady(styles);
 
     av_packet_free(&packet);
     avcodec_free_context(&codecContext);

@@ -19,6 +19,7 @@ TranscriptModel::TranscriptModel(QObject *parent)
     , m_parser{std::make_unique<SubtitleParser>()}
 {
     connect(m_parser.get(), &SubtitleParser::transcriptItemReady, this, &TranscriptModel::addItem, Qt::QueuedConnection);
+    connect(m_parser.get(), &SubtitleParser::stylesReady, this, &TranscriptModel::setStyles, Qt::QueuedConnection);
 }
 
 TranscriptModel::~TranscriptModel()
@@ -43,6 +44,8 @@ QVariant TranscriptModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case TextRole:
         return item.text;
+    case StyleRole:
+        return item.style;
     case SplittedTextRole:
         return item.text.split(u"\n"_s);
     case DurationRole:
@@ -65,6 +68,7 @@ QHash<int, QByteArray> TranscriptModel::roleNames() const
     // clang-format off
     QHash<int, QByteArray> roles = {
     {TextRole,               QByteArrayLiteral("subtitleText")},
+    {StyleRole,              QByteArrayLiteral("style")},
     {SplittedTextRole,       QByteArrayLiteral("splittedText")},
     {DurationRole,           QByteArrayLiteral("duration")},
     {StartTimeRole,          QByteArrayLiteral("startTime")},
@@ -75,6 +79,20 @@ QHash<int, QByteArray> TranscriptModel::roleNames() const
     // clang-format on
 
     return roles;
+}
+
+QStringList TranscriptModel::styles() const
+{
+    return m_styles;
+}
+
+void TranscriptModel::setStyles(const QStringList &newStyles)
+{
+    if (m_styles == newStyles) {
+        return;
+    }
+    m_styles = newStyles;
+    Q_EMIT stylesChanged();
 }
 
 int TranscriptModel::currentRow() const

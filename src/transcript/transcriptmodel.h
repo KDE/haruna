@@ -30,6 +30,7 @@ public:
 
     enum Roles {
         TextRole = Qt::UserRole,
+        StyleRole,
         SplittedTextRole,
         DurationRole,
         StartTimeRole,
@@ -42,6 +43,11 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
+
+    Q_PROPERTY(QStringList styles READ styles WRITE setStyles NOTIFY stylesChanged FINAL)
+    Q_SIGNAL void stylesChanged();
+    QStringList styles() const;
+    void setStyles(const QStringList &newStyles);
 
     int currentRow() const;
     bool isCurrentEndTime(int row) const;
@@ -76,6 +82,7 @@ private:
     std::atomic<int> m_transcriptModelVersion{0};
     // abort worker threads if this value is true
     std::atomic<bool> m_cancelRequested{false};
+    QStringList m_styles;
 };
 
 #endif // TRANSCRIPTMODEL_H

@@ -15,6 +15,7 @@ struct SubtitleLine {
 
 public:
     QString text;
+    QString style;
     double startTime;
     QString formattedStartTime;
     QString formattedEndTime;

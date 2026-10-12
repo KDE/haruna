@@ -13,6 +13,7 @@ import QtQuick.Layouts
 
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
 import org.kde.haruna
 import org.kde.haruna.settings
@@ -23,6 +24,13 @@ ResizeablePage {
     property TranscriptModel transcriptModel: TranscriptModel {}
     property TranscriptProxyModel transcriptProxyModel: TranscriptProxyModel {
         transcriptModel: root.transcriptModel
+    }
+    property KItemModels.KSortFilterProxyModel transcriptStylesProxyModel: KItemModels.KSortFilterProxyModel {
+        sourceModel: root.transcriptProxyModel
+        filterRoleName: "style"
+        filterCaseSensitivity: Qt.CaseInsensitive
+        sortRoleName: "style"
+        sortOrder: Qt.AscendingOrder
     }
     property int selectedTrackId: -1
 
@@ -198,6 +206,20 @@ ResizeablePage {
                 }
             }
 
+            ComboBox {
+                model: root.transcriptModel.styles
+                visible: count > 0
+
+                onActivated: function(index) {
+                    let filter = index === 0 ? "" : displayText
+                    root.transcriptStylesProxyModel.filterString = filter
+                }
+
+                ToolTip{
+                    text: KI18n.i18nc("@info:tooltip", "ASS subtitle styles")
+                }
+            }
+
             Kirigami.SearchField {
                 delaySearch: true
 
@@ -231,7 +253,7 @@ ResizeablePage {
                 // transcriptProxyModel.currentRow is -1 when no subtitle is displayed
                 property int currentIndexBuffer: root.transcriptProxyModel.currentRow
 
-                model: root.transcriptProxyModel
+                model: root.transcriptStylesProxyModel
                 reuseItems: true
                 spacing: 1
                 highlightFollowsCurrentItem: SubtitlesSettings.transcriptFollowCurrentSubtitle

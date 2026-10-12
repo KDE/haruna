@@ -33,6 +33,7 @@ target_link_libraries(transcript PRIVATE
     Qt6::Gui
 
     KF6::FileMetaData
+    KF6::I18n
 
     ${AVCODEC_LIBRARIES}
     ${AVFORMAT_LIBRARIES}

@@ -22,6 +22,7 @@ public:
 
 Q_SIGNALS:
     void transcriptItemReady(const SubtitleLine &item, const int transcriptModelVersion);
+    void stylesReady(const QStringList &styles);
 
 private:
     QString formatASS(const QString in);
