@@ -117,6 +117,15 @@ ResizeablePage {
         }
     }
 
+
+    Connections {
+        target: root.m_mpv
+        enabled: root.visible
+        function onPositionChanged() {
+            root.updateCurrentEndTimes(root.m_mpv.position)
+        }
+    }
+
     header: ToolBar {
         id: toolbar
 
