@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-12 00:51+0000\n"
+"POT-Creation-Date: 2026-10-13 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -629,68 +629,68 @@ msgstr "命令行视频播放器"
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "用于对音频和视频进行录制、转换和推流的跨平台解决方案"
 
-#: src/mpv/mpvitem.cpp:322
+#: src/mpv/mpvitem.cpp:323
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
 
-#: src/mpv/mpvitem.cpp:424
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "音量：%1"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:462
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "字幕偏移：+%1 秒"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕偏移：%1 秒"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:513
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "文件不存在：%1"
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:545
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:553
+#: src/mpv/mpvitem.cpp:558
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:612
+#: src/mpv/mpvitem.cpp:617
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "截图失败"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:622
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图已保存"
 
-#: src/mpv/mpvitem.cpp:619
+#: src/mpv/mpvitem.cpp:624
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "截图：%1"
 
-#: src/mpv/mpvitem.cpp:653
+#: src/mpv/mpvitem.cpp:658
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -699,13 +699,13 @@ msgid ""
 msgstr ""
 "没有检测到视频轨道。这大概率是因为缺少编解码器而导致视频轨道无法被解码/播放。"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:695
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "跳过的章节：%1"
 
-#: src/mpv/mpvitem.cpp:785
+#: src/mpv/mpvitem.cpp:790
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -713,13 +713,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "音频：%1 %2"
 
-#: src/mpv/mpvitem.cpp:796
+#: src/mpv/mpvitem.cpp:801
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "字幕：无"
 
-#: src/mpv/mpvitem.cpp:801 src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -727,7 +727,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/mpv/mpvitem.cpp:812
+#: src/mpv/mpvitem.cpp:817
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -891,7 +891,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "添加"
 
-#: src/playlist/Playlist.qml:446 src/qml/Main.qml:500
+#: src/playlist/Playlist.qml:446 src/qml/Main.qml:498
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1383,99 +1383,99 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "单击并按住"
 
-#: src/qml/Actions.qml:143
+#: src/qml/Actions.qml:144
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "没有打开文件时无法加载字幕"
 
-#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
+#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
 
-#: src/qml/Actions.qml:274
+#: src/qml/Actions.qml:275
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "循环起点：%1"
 
-#: src/qml/Actions.qml:280
+#: src/qml/Actions.qml:281
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "循环：%1–%2"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:287
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "循环已清除"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "字幕关闭"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "字幕开启"
 
-#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
+#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕缩放：%1"
 
-#: src/qml/Actions.qml:342
+#: src/qml/Actions.qml:343
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "反交错：%1"
 
-#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
+#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "缩放：%1"
 
-#: src/qml/Actions.qml:418
+#: src/qml/Actions.qml:419
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "缩放：0"
 
-#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
+#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "对比度：%1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:436
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "对比度：0"
 
-#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
+#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:452
+#: src/qml/Actions.qml:453
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "伽马：%1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "伽马：0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "饱和度：%1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:487
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "饱和度：0"
@@ -1639,22 +1639,22 @@ msgstr ""
 "自动跳过包含某些单词/字符的章节。\n"
 "查看“播放”设置以获取更多详细信息。"
 
-#: src/qml/Main.qml:46
+#: src/qml/Main.qml:45
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:450
+#: src/qml/Main.qml:448
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "选择文件"
 
-#: src/qml/Main.qml:470
+#: src/qml/Main.qml:468
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "选择字幕文件"
 
-#: src/qml/Main.qml:497
+#: src/qml/Main.qml:495
 msgctxt "@action:button"
 msgid "Open"
 msgstr "打开"
@@ -3157,18 +3157,34 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "中键点击滑块可以重置"
 
-#: src/transcript/Transcript.qml:128
+#: src/transcript/subtitleparser.cpp:96
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu all"
+#| msgid "All"
+msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
+msgid "All"
+msgstr "全部"
+
+#: src/transcript/Transcript.qml:136
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "选择字幕"
 
-#: src/transcript/Transcript.qml:189
+#: src/transcript/Transcript.qml:197
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Select subtitle"
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
 msgstr "选择字幕"
+
+#: src/transcript/Transcript.qml:219
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle scale: %1"
+msgctxt "@info:tooltip"
+msgid "ASS subtitle styles"
+msgstr "字幕缩放：%1"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format

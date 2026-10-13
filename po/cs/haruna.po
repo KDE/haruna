@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-12 00:51+0000\n"
+"POT-Creation-Date: 2026-10-13 00:45+0000\n"
 "PO-Revision-Date: 2026-10-05 13:17+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -635,69 +635,69 @@ msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Multiplatformní řešení pro nahrávání, převod a streamování zvuku a videa"
 
-#: src/mpv/mpvitem.cpp:322
+#: src/mpv/mpvitem.cpp:323
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Nelze přehrát: %1"
 
-#: src/mpv/mpvitem.cpp:424
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Hlasitost: %1"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:462
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Časování titulků: +%1 sekund"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Časování titulků: %1 sekund"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:513
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "Soubor neexistuje: %1"
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:545
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
 # žádné parametry funkce v inspektoru funkcí
-#: src/mpv/mpvitem.cpp:553
+#: src/mpv/mpvitem.cpp:558
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nic"
 
-#: src/mpv/mpvitem.cpp:612
+#: src/mpv/mpvitem.cpp:617
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Snímání obrazovky selhalo"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:622
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Snímek obrazovky byl pořízen"
 
-#: src/mpv/mpvitem.cpp:619
+#: src/mpv/mpvitem.cpp:624
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Snímek obrazovky: %1"
 
-#: src/mpv/mpvitem.cpp:653
+#: src/mpv/mpvitem.cpp:658
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -707,13 +707,13 @@ msgstr ""
 "Nebyla zjištěna žádná video stopa; s největší pravděpodobností nelze video "
 "stopu dekódovat/přehrát kvůli chybějícím kodekům"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:695
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Přeskočena kapitola: %1"
 
-#: src/mpv/mpvitem.cpp:785
+#: src/mpv/mpvitem.cpp:790
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -721,13 +721,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Zvuk: %1 %2"
 
-#: src/mpv/mpvitem.cpp:796
+#: src/mpv/mpvitem.cpp:801
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Titulky: žádné"
 
-#: src/mpv/mpvitem.cpp:801 src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -735,7 +735,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Titulky: %1 %2"
 
-#: src/mpv/mpvitem.cpp:812
+#: src/mpv/mpvitem.cpp:817
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -900,7 +900,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Přidat"
 
-#: src/playlist/Playlist.qml:446 src/qml/Main.qml:500
+#: src/playlist/Playlist.qml:446 src/qml/Main.qml:498
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1394,99 +1394,99 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "Klikněte a držte"
 
-#: src/qml/Actions.qml:143
+#: src/qml/Actions.qml:144
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "Nelze načíst titulky, pokud není otevřen žádný soubor"
 
-#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
+#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Rychlost přehrávání: %1"
 
-#: src/qml/Actions.qml:274
+#: src/qml/Actions.qml:275
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Začátek smyčky: %1"
 
-#: src/qml/Actions.qml:280
+#: src/qml/Actions.qml:281
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Smyčka: %1–%2"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:287
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Smyčka byla vymazána"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Titulky vypnuty"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Titulky zapnuty"
 
-#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
+#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Měřítko titulků: %1"
 
-#: src/qml/Actions.qml:342
+#: src/qml/Actions.qml:343
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Zrušit proklad: %1"
 
-#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
+#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zvětšení: %1"
 
-#: src/qml/Actions.qml:418
+#: src/qml/Actions.qml:419
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zvětšení: 0"
 
-#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
+#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrast: %1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:436
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrast: 0"
 
-#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
+#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Jas: %1"
 
-#: src/qml/Actions.qml:452
+#: src/qml/Actions.qml:453
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Jas: 0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Sytost: %1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:487
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Nasycení: 0"
@@ -1653,22 +1653,22 @@ msgstr ""
 "Automaticky přeskočí kapitoly obsahující určitá slova/znaky.\n"
 "Další podrobnosti najdete v nastavení „Přehrávání“."
 
-#: src/qml/Main.qml:46
+#: src/qml/Main.qml:45
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:450
+#: src/qml/Main.qml:448
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Vybrat soubor"
 
-#: src/qml/Main.qml:470
+#: src/qml/Main.qml:468
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Vyberte soubor s titulky"
 
-#: src/qml/Main.qml:497
+#: src/qml/Main.qml:495
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Otevřít"
@@ -3230,15 +3230,31 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "Prostřední tlačítkem posuvníky resetujete"
 
-#: src/transcript/Transcript.qml:128
+#: src/transcript/subtitleparser.cpp:96
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu all"
+#| msgid "All"
+msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
+msgid "All"
+msgstr "Vše"
+
+#: src/transcript/Transcript.qml:136
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "Vybrat titulky"
 
-#: src/transcript/Transcript.qml:189
+#: src/transcript/Transcript.qml:197
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
 msgstr "Následovat aktivní titulky"
+
+#: src/transcript/Transcript.qml:219
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle scale: %1"
+msgctxt "@info:tooltip"
+msgid "ASS subtitle styles"
+msgstr "Měřítko titulků: %1"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format

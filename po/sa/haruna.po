@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-12 00:51+0000\n"
+"POT-Creation-Date: 2026-10-13 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -703,7 +703,7 @@ msgstr ""
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:322
+#: src/mpv/mpvitem.cpp:323
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -711,13 +711,13 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "क्रीडितुं न शक्तवान्: %1"
 
-#: src/mpv/mpvitem.cpp:424
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "आयतनम् : %1"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:462
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -725,44 +725,44 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "उपशीर्षकसमयः %1 सेकण्ड्"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षकसमयः %1 सेकण्ड्"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:513
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:545
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:553
+#: src/mpv/mpvitem.cpp:558
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "न कश्चित्"
 
-#: src/mpv/mpvitem.cpp:612
+#: src/mpv/mpvitem.cpp:617
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट् विफलम् अभवत्"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:622
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट् गृहीतम्"
 
-#: src/mpv/mpvitem.cpp:619
+#: src/mpv/mpvitem.cpp:624
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -770,7 +770,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट्: %1"
 
-#: src/mpv/mpvitem.cpp:653
+#: src/mpv/mpvitem.cpp:658
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -780,13 +780,13 @@ msgstr ""
 "कोऽपि विडियो ट्रैकः न ज्ञातः, अधिकतया विडियो ट्रैकः गम्यमानस्य कोडेक्स् इत्यस्य कारणेन "
 "डिकोड्/वादयितुं न शक्यते"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:695
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "अध्यायः त्यक्तः: %1"
 
-#: src/mpv/mpvitem.cpp:785
+#: src/mpv/mpvitem.cpp:790
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -796,7 +796,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "श्रव्यः %1 %2"
 
-#: src/mpv/mpvitem.cpp:796
+#: src/mpv/mpvitem.cpp:801
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -804,7 +804,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "उपशीर्षकम् : कोऽपि नास्ति"
 
-#: src/mpv/mpvitem.cpp:801 src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -814,7 +814,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "उपशीर्षकम् : %1 %2"
 
-#: src/mpv/mpvitem.cpp:812
+#: src/mpv/mpvitem.cpp:817
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -1019,7 +1019,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "संयोजयति"
 
-#: src/playlist/Playlist.qml:446 src/qml/Main.qml:500
+#: src/playlist/Playlist.qml:446 src/qml/Main.qml:498
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1606,7 +1606,7 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr ""
 
-#: src/qml/Actions.qml:143
+#: src/qml/Actions.qml:144
 #, fuzzy
 #| msgctxt ""
 #| "osd message when trying to open subtile selection dialog while no file is "
@@ -1618,12 +1618,12 @@ msgctxt ""
 msgid "Can’t load subtitle when no file is open"
 msgstr "यदा कोऽपि सञ्चिका उद्घाटिता नास्ति तदा उपशीर्षकं लोड् कर्तुं न शक्नोति"
 
-#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
+#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "प्लेबैकवेगः %1"
 
-#: src/qml/Actions.qml:274
+#: src/qml/Actions.qml:275
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop start: %1"
@@ -1631,7 +1631,7 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "पाशप्रारम्भः %1"
 
-#: src/qml/Actions.qml:280
+#: src/qml/Actions.qml:281
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop: %1 - %2"
@@ -1639,77 +1639,77 @@ msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "पाशः %1 - %2"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:287
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "पाशः स्वच्छः अभवत्"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "उपशीर्षकं बंद"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "उपशीर्षक पर"
 
-#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
+#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "उपशीर्षकपरिमाणः %1"
 
-#: src/qml/Actions.qml:342
+#: src/qml/Actions.qml:343
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Deinterlace: %1"
 
-#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
+#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "जूम: %1"
 
-#: src/qml/Actions.qml:418
+#: src/qml/Actions.qml:419
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "जूमः 0"
 
-#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
+#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "विपरीतता : %1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:436
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "विपरीतता : 0"
 
-#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
+#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "कान्तिः %1"
 
-#: src/qml/Actions.qml:452
+#: src/qml/Actions.qml:453
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "कान्तिः 0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "गामा: %1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "गामा: 0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "संतृप्ति: %1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:487
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "संतृप्ति: 0"
@@ -1906,12 +1906,12 @@ msgstr ""
 "कतिपयशब्दाः/वर्णाः युक्ताः अध्यायाः स्वयमेव लङ्घयति ।\n"
 "अधिकविवरणार्थं 'Playback' सेटिंग्स् पश्यन्तु"
 
-#: src/qml/Main.qml:46
+#: src/qml/Main.qml:45
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारून"
 
-#: src/qml/Main.qml:450
+#: src/qml/Main.qml:448
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1919,7 +1919,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "सञ्चिकां चिनोतु"
 
-#: src/qml/Main.qml:470
+#: src/qml/Main.qml:468
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1927,7 +1927,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 
-#: src/qml/Main.qml:497
+#: src/qml/Main.qml:495
 msgctxt "@action:button"
 msgid "Open"
 msgstr "उद्घाटित"
@@ -3675,7 +3675,13 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "स्लाइडर् रीसेट् कर्तुं मध्यं क्लिक् कुर्वन्तु"
 
-#: src/transcript/Transcript.qml:128
+#: src/transcript/subtitleparser.cpp:96
+#, kde-format
+msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
+msgid "All"
+msgstr ""
+
+#: src/transcript/Transcript.qml:136
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -3683,13 +3689,21 @@ msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "उपशीर्षकसञ्चिकां चिनोतु"
 
-#: src/transcript/Transcript.qml:189
+#: src/transcript/Transcript.qml:197
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Autoload subtitles"
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
 msgstr "उपशीर्षक स्वतः लोड करें"
+
+#: src/transcript/Transcript.qml:219
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Subtitle Cycle Up"
+msgctxt "@info:tooltip"
+msgid "ASS subtitle styles"
+msgstr "उपशीर्षक चक्र Up"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3889,10 +3903,6 @@ msgstr ""
 #~ msgctxt "@action"
 #~ msgid "Subtitle Delay"
 #~ msgstr "उपशीर्षक विलम्ब"
-
-#~ msgctxt "@action"
-#~ msgid "Subtitle Cycle Up"
-#~ msgstr "उपशीर्षक चक्र Up"
 
 #~ msgctxt "@action"
 #~ msgid "Subtitle Cycle Down"

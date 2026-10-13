@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-12 00:51+0000\n"
+"POT-Creation-Date: 2026-10-13 00:45+0000\n"
 "PO-Revision-Date: 2026-08-13 08:57+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -629,68 +629,68 @@ msgstr "נגן וידאו בשורת הפקודות"
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "פתרון חוצה פלטפורמות להקלטה, המרה והזרמה של וידאו ושמע"
 
-#: src/mpv/mpvitem.cpp:322
+#: src/mpv/mpvitem.cpp:323
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "לא ניתן לנגן: %1"
 
-#: src/mpv/mpvitem.cpp:424
+#: src/mpv/mpvitem.cpp:429
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "עוצמת שמע: %1"
 
-#: src/mpv/mpvitem.cpp:457
+#: src/mpv/mpvitem.cpp:462
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "תזמון כתובית: +%1 שניות"
 
-#: src/mpv/mpvitem.cpp:459
+#: src/mpv/mpvitem.cpp:464
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "תזמון כתובית: %1 שניות"
 
-#: src/mpv/mpvitem.cpp:508
+#: src/mpv/mpvitem.cpp:513
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "הקובץ לא קיים: %1"
 
-#: src/mpv/mpvitem.cpp:540
+#: src/mpv/mpvitem.cpp:545
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:553
+#: src/mpv/mpvitem.cpp:558
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "אין"
 
-#: src/mpv/mpvitem.cpp:612
+#: src/mpv/mpvitem.cpp:617
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "צילום המסך נכשל"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:622
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
-#: src/mpv/mpvitem.cpp:619
+#: src/mpv/mpvitem.cpp:624
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "צילום מסך: %1"
 
-#: src/mpv/mpvitem.cpp:653
+#: src/mpv/mpvitem.cpp:658
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -698,13 +698,13 @@ msgid ""
 "due to missing codecs"
 msgstr "לא זוהתה רצועת וידאו, כנראה שאי אפשר לפענח/לנגן עקב בעיית מפענחים"
 
-#: src/mpv/mpvitem.cpp:690
+#: src/mpv/mpvitem.cpp:695
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "פרק שנפסח: %1"
 
-#: src/mpv/mpvitem.cpp:785
+#: src/mpv/mpvitem.cpp:790
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -712,13 +712,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "שמע: %1 %2"
 
-#: src/mpv/mpvitem.cpp:796
+#: src/mpv/mpvitem.cpp:801
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "כתוביות: אין"
 
-#: src/mpv/mpvitem.cpp:801 src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -726,7 +726,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "כתובית: %1 %2"
 
-#: src/mpv/mpvitem.cpp:812
+#: src/mpv/mpvitem.cpp:817
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -890,7 +890,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/playlist/Playlist.qml:446 src/qml/Main.qml:500
+#: src/playlist/Playlist.qml:446 src/qml/Main.qml:498
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1382,99 +1382,99 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "ללחוץ ולהחזיק"
 
-#: src/qml/Actions.qml:143
+#: src/qml/Actions.qml:144
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "לא ניתן לטעון כתוביות כשאף קובץ לא פתוח"
 
-#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
+#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "מהירות נגינה: %1"
 
-#: src/qml/Actions.qml:274
+#: src/qml/Actions.qml:275
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "תחילת לולאה: %1"
 
-#: src/qml/Actions.qml:280
+#: src/qml/Actions.qml:281
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "לולאה: %1–%2"
 
-#: src/qml/Actions.qml:286
+#: src/qml/Actions.qml:287
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "הלולאה נקטעה"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "כתוביות כבויות"
 
-#: src/qml/Actions.qml:306
+#: src/qml/Actions.qml:307
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "כתוביות פעילות"
 
-#: src/qml/Actions.qml:322 src/qml/Actions.qml:328
+#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "קנה מידה של כתוביות: %1"
 
-#: src/qml/Actions.qml:342
+#: src/qml/Actions.qml:343
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "ביטול שזירה: %1"
 
-#: src/qml/Actions.qml:407 src/qml/Actions.qml:413
+#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "תקריב: %1"
 
-#: src/qml/Actions.qml:418
+#: src/qml/Actions.qml:419
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "תקריב: 0"
 
-#: src/qml/Actions.qml:424 src/qml/Actions.qml:430
+#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "ניגודיות: %1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:436
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "ניגודיות: 0"
 
-#: src/qml/Actions.qml:441 src/qml/Actions.qml:447
+#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "בהירות: %1"
 
-#: src/qml/Actions.qml:452
+#: src/qml/Actions.qml:453
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "בהירות: 0"
 
-#: src/qml/Actions.qml:458 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "גאמה: %1"
 
-#: src/qml/Actions.qml:469
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "גאמה: 0"
 
-#: src/qml/Actions.qml:475 src/qml/Actions.qml:481
+#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "רוויה: %1"
 
-#: src/qml/Actions.qml:486
+#: src/qml/Actions.qml:487
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "רוויה: 0"
@@ -1638,22 +1638,22 @@ msgstr ""
 "דילוג אוטומטי על פרקים שמכילים מילים/תווים מסוימים.\n"
 "אפשר לגשת אל הגדרות „נגינה” לפרטים נוספים"
 
-#: src/qml/Main.qml:46
+#: src/qml/Main.qml:45
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:450
+#: src/qml/Main.qml:448
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "בחירת קובץ"
 
-#: src/qml/Main.qml:470
+#: src/qml/Main.qml:468
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "בחירת קובץ כתוביות"
 
-#: src/qml/Main.qml:497
+#: src/qml/Main.qml:495
 msgctxt "@action:button"
 msgid "Open"
 msgstr "פתיחה"
@@ -3189,18 +3189,34 @@ msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "לחיצה אמצעית על המחוונים תאפס אותם"
 
-#: src/transcript/Transcript.qml:128
+#: src/transcript/subtitleparser.cpp:96
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu all"
+#| msgid "All"
+msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
+msgid "All"
+msgstr "הכול"
+
+#: src/transcript/Transcript.qml:136
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "בחירת כתוביות"
 
-#: src/transcript/Transcript.qml:189
+#: src/transcript/Transcript.qml:197
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Autoload subtitles"
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
 msgstr "טעינת כתוביות אוטומטית"
+
+#: src/transcript/Transcript.qml:219
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Subtitle Cycle Up"
+msgctxt "@info:tooltip"
+msgid "ASS subtitle styles"
+msgstr "מעבר לכתוביות המוגדרות הבאות"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3420,10 +3436,6 @@ msgstr ""
 #~ msgctxt "@action"
 #~ msgid "Subtitle Delay"
 #~ msgstr "השהיית כתוביות"
-
-#~ msgctxt "@action"
-#~ msgid "Subtitle Cycle Up"
-#~ msgstr "מעבר לכתוביות המוגדרות הבאות"
 
 #~ msgctxt "@action"
 #~ msgid "Subtitle Cycle Down"
