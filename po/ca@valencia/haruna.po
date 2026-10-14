@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-13 00:45+0000\n"
-"PO-Revision-Date: 2026-10-05 09:06+0200\n"
+"PO-Revision-Date: 2026-10-13 08:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -3022,7 +3022,7 @@ msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
 "borders. Might not work for all .ass subtitles."
 msgstr ""
-"Quan es marca, els subtítols es poden representar fora del vídeo, en la "
+"Quan es marca, els subtítols es poden representar fora del vídeo, en les "
 "vores negres. Podria no funcionar amb els subtítols «.ass»."
 
 #: src/qml/Settings/SubtitlesSettings.qml:140
@@ -3243,12 +3243,10 @@ msgstr ""
 "Feu clic del mig damunt dels controls lliscants per a reinicialitzar-los"
 
 #: src/transcript/subtitleparser.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu all"
-#| msgid "All"
+#, kde-format
 msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
 msgid "All"
-msgstr "Tot"
+msgstr "Tots"
 
 #: src/transcript/Transcript.qml:136
 msgctxt "@info:tooltip"
@@ -3261,12 +3259,9 @@ msgid "Follow active subtitle"
 msgstr "Seguix el subtítol actiu"
 
 #: src/transcript/Transcript.qml:219
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
 msgctxt "@info:tooltip"
 msgid "ASS subtitle styles"
-msgstr "Escala dels subtítols: %1"
+msgstr "Estils de subtítols ASS"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
