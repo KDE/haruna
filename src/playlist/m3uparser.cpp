@@ -71,7 +71,7 @@ void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::
         const auto title = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::TitleRole).toString();
         const auto duration = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::DurationRole).toDouble();
 
-        if (duration > 0) {
+        if (duration > 0 || !title.isEmpty()) {
             out << u"#EXTINF:%1,%2\n"_s.arg(duration).arg(title);
         }
         out << itemPath << "\n";
