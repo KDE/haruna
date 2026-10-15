@@ -204,7 +204,7 @@ void PlaylistFilterProxyModel::playPrevious()
 
 void PlaylistFilterProxyModel::saveM3uFile(const QString &path)
 {
-    QUrl url = QUrl::fromLocalFile(path);
+    QUrl url = path.startsWith(u"file:/"_s) ? QUrl(path) : QUrl::fromLocalFile(path);
     M3uParser parser;
     parser.write(this, url.toLocalFile().toStdString());
 }
