@@ -23,8 +23,8 @@ public:
     QString searchText();
     void setSearchText(QString text);
 
-    Q_PROPERTY(int currentRow READ currentRow NOTIFY currentRowChanged)
-    int currentRow();
+    Q_PROPERTY(QPersistentModelIndex currentIndex READ currentIndex NOTIFY currentIndexChanged)
+    QPersistentModelIndex currentIndex();
 
     Q_PROPERTY(TranscriptModel *transcriptModel READ transcriptModel WRITE setTranscriptModel NOTIFY transcriptModelChanged FINAL REQUIRED)
     TranscriptModel *transcriptModel();
@@ -32,16 +32,17 @@ public:
 
 Q_SIGNALS:
     void searchTextChanged();
-    void currentRowChanged();
+    void currentIndexChanged();
     void transcriptModelChanged();
-    void parsingFinished(int row);
+    void parsingFinished(QPersistentModelIndex row);
 
 private:
-    int mapCurrentRow(int row);
     void onParsingFinished(int row);
+    void onCurrentRowChanged();
 
     TranscriptModel *m_transcriptModel{nullptr};
     QString m_searchText;
+    QPersistentModelIndex m_currentIndex;
 };
 
 #endif // TRANSCRIPTPROXYMODEL_H

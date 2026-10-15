@@ -31,15 +31,12 @@ void TranscriptProxyModel::setSearchText(QString text = QString())
     endFilterChange();
 
     Q_EMIT searchTextChanged();
-    Q_EMIT currentRowChanged();
+    Q_EMIT currentIndexChanged();
 }
 
-int TranscriptProxyModel::currentRow()
+QPersistentModelIndex TranscriptProxyModel::currentIndex()
 {
-    if (!m_transcriptModel) {
-        return -1;
-    }
-    return mapCurrentRow(m_transcriptModel->currentRow());
+    return m_currentIndex;
 }
 
 TranscriptModel *TranscriptProxyModel::transcriptModel()
@@ -56,52 +53,48 @@ void TranscriptProxyModel::setTranscriptModel(TranscriptModel *model)
     m_transcriptModel = model;
     setSourceModel(m_transcriptModel);
 
-    connect(m_transcriptModel, &TranscriptModel::currentRowChanged, this, &TranscriptProxyModel::currentRowChanged, Qt::UniqueConnection);
+    connect(m_transcriptModel, &TranscriptModel::currentRowChanged, this, &TranscriptProxyModel::onCurrentRowChanged, Qt::UniqueConnection);
     connect(m_transcriptModel, &TranscriptModel::parsingFinished, this, &TranscriptProxyModel::onParsingFinished, Qt::UniqueConnection);
 
     Q_EMIT transcriptModelChanged();
 }
 
-int TranscriptProxyModel::mapCurrentRow(int row)
-{
-    auto modelIndex = m_transcriptModel->index(row, 0);
-    if (!modelIndex.isValid()) {
-        return -1;
-    }
-
-    auto proxyIndex = mapFromSource(modelIndex);
-    if (!proxyIndex.isValid()) {
-        return -1;
-    }
-
-    return proxyIndex.row();
-}
-
 void TranscriptProxyModel::onParsingFinished(int sourceRow)
 {
     if (!m_transcriptModel || rowCount() < 0) {
-        Q_EMIT parsingFinished(0);
+        Q_EMIT parsingFinished(QPersistentModelIndex(index(0, 0)));
         return;
     }
 
-    int row = mapCurrentRow(sourceRow);
-
-    if (row == -1) {
+    auto modelIndex = mapFromSource(m_transcriptModel->index(sourceRow, 0));
+    if (!modelIndex.isValid()) {
         // If sourceRow is hidden in the proxy, we should jump the view to the upcoming subtitle.
-        // Check all proxy indexes with another binary search
-        std::vector<int> proxyIndexes(rowCount());
-        std::iota(proxyIndexes.begin(), proxyIndexes.end(), 0);
+        // Check all proxy rows with another binary search
+        std::vector<int> proxyRows(rowCount());
+        std::iota(proxyRows.begin(), proxyRows.end(), 0);
 
-        auto it = std::lower_bound(proxyIndexes.begin(), proxyIndexes.end(), sourceRow, [this](const int &pIndex, const int &pSourceRow) {
-            return mapToSource(index(pIndex, 0)).row() < pSourceRow;
+        auto it = std::lower_bound(proxyRows.begin(), proxyRows.end(), modelIndex, [this](const int &row, const QModelIndex &modelIndex) {
+            return index(row, 0) < modelIndex;
         });
 
-        if (it != proxyIndexes.end()) {
-            row = *it;
+        if (it != proxyRows.end()) {
+            modelIndex = index(*it, 0);
         }
     }
 
-    Q_EMIT parsingFinished(row);
+    Q_EMIT parsingFinished(QPersistentModelIndex(modelIndex));
+}
+
+void TranscriptProxyModel::onCurrentRowChanged()
+{
+    if (!m_transcriptModel) {
+        return;
+    }
+
+    auto sourceModelIndex = m_transcriptModel->index(m_transcriptModel->currentRow(), 0);
+    m_currentIndex = QPersistentModelIndex(mapFromSource(sourceModelIndex));
+
+    Q_EMIT currentIndexChanged();
 }
 
 #include "moc_transcriptproxymodel.cpp"

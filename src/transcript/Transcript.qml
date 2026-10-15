@@ -26,11 +26,11 @@ ResizeablePage {
         transcriptModel: root.transcriptModel
     }
     property KItemModels.KSortFilterProxyModel transcriptStylesProxyModel: KItemModels.KSortFilterProxyModel {
+        property int currentRow: mapFromSource(root.transcriptProxyModel.currentIndex).row
+
         sourceModel: root.transcriptProxyModel
         filterRoleName: "style"
         filterCaseSensitivity: Qt.CaseInsensitive
-        sortRoleName: "style"
-        sortOrder: Qt.AscendingOrder
     }
     property int selectedTrackId: -1
 
@@ -112,7 +112,8 @@ ResizeablePage {
     Connections {
         target: root.transcriptProxyModel
         function onParsingFinished(lastIndex) {
-            Qt.callLater(transcriptView.positionViewAtIndex, lastIndex, ListView.Beginning)
+            const row = root.transcriptStylesProxyModel.mapFromSource(lastIndex).row
+            Qt.callLater(transcriptView.positionViewAtIndex, row, ListView.Beginning)
         }
     }
 
@@ -213,6 +214,8 @@ ResizeablePage {
                 onActivated: function(index) {
                     let filter = index === 0 ? "" : displayText
                     root.transcriptStylesProxyModel.filterString = filter
+                    root.transcriptProxyModel.currentIndexChanged()
+                    Qt.callLater(transcriptView.positionViewAtIndex, root.transcriptStylesProxyModel.currentRow, ListView.Beginning)
                 }
 
                 ToolTip{
@@ -250,8 +253,8 @@ ResizeablePage {
                 id: transcriptView
 
                 // buffer is required for animations. Jumping from N to N+1 animates, but N to -1 to N+1 breaks.
-                // transcriptProxyModel.currentRow is -1 when no subtitle is displayed
-                property int currentIndexBuffer: root.transcriptProxyModel.currentRow
+                // transcriptStylesProxyModel.currentRow is -1 when no subtitle is displayed
+                property int currentIndexBuffer: root.transcriptStylesProxyModel.currentRow
 
                 model: root.transcriptStylesProxyModel
                 reuseItems: true
