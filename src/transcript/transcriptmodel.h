@@ -49,6 +49,11 @@ public:
     QStringList styles() const;
     void setStyles(const QStringList &newStyles);
 
+    Q_PROPERTY(int stylesCount READ stylesCount WRITE setStylesCount NOTIFY stylesCountChanged FINAL)
+    Q_SIGNAL void stylesCountChanged();
+    int stylesCount() const;
+    void setStylesCount(int newStylesCount);
+
     int currentRow();
     bool isCurrentEndTime(int row) const;
     Q_INVOKABLE void loadSubtitle(QUrl filePath, int streamIndex, double position);
@@ -83,6 +88,7 @@ private:
     // abort worker threads if this value is true
     std::atomic<bool> m_cancelRequested{false};
     QStringList m_styles;
+    int m_stylesCount;
 };
 
 #endif // TRANSCRIPTMODEL_H

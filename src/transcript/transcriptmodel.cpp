@@ -92,7 +92,22 @@ void TranscriptModel::setStyles(const QStringList &newStyles)
         return;
     }
     m_styles = newStyles;
+    setStylesCount(m_styles.size());
     Q_EMIT stylesChanged();
+}
+
+int TranscriptModel::stylesCount() const
+{
+    return m_stylesCount;
+}
+
+void TranscriptModel::setStylesCount(int newStylesCount)
+{
+    if (m_stylesCount == newStylesCount) {
+        return;
+    }
+    m_stylesCount = newStylesCount;
+    Q_EMIT stylesCountChanged();
 }
 
 int TranscriptModel::currentRow()
