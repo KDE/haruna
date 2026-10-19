@@ -25,14 +25,16 @@ ResizeablePage {
     property TranscriptProxyModel transcriptProxyModel: TranscriptProxyModel {
         transcriptModel: root.transcriptModel
     }
-    property KItemModels.KSortFilterProxyModel transcriptStylesProxyModel: KItemModels.KSortFilterProxyModel {
+    property StylesFilterProxyModel transcriptStylesProxyModel: StylesFilterProxyModel {}
+    property int selectedTrackId: -1
+
+    component StylesFilterProxyModel: KItemModels.KSortFilterProxyModel {
         property int currentRow: mapFromSource(root.transcriptProxyModel.currentIndex).row
 
         sourceModel: root.transcriptProxyModel
         filterRoleName: "style"
         filterCaseSensitivity: Qt.CaseInsensitive
     }
-    property int selectedTrackId: -1
 
     edge: PlaylistSettings.position === "right" ? Qt.LeftEdge : Qt.RightEdge
     customWidth: 380
