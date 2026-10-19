@@ -199,17 +199,21 @@ ResizeablePage {
                 }
             }
 
-            ComboBox {
-                model: root.transcriptModel.styles
-                visible: count > 0
+            Loader {
+                active: root.transcriptModel.stylesCount > 0
+                asynchronous: true
+                sourceComponent: ComboBox {
+                    model: root.transcriptModel.styles
+                    visible: count > 0
 
-                onActivated: function(index) {
-                    let filter = index === 0 ? "" : displayText
-                    root.transcriptProxyModel.filterString = filter
-                }
+                    onActivated: function(index) {
+                        let filter = index === 0 ? "" : displayText
+                        root.transcriptProxyModel.filterString = filter
+                    }
 
-                ToolTip{
-                    text: KI18n.i18nc("@info:tooltip", "ASS subtitle styles")
+                    ToolTip{
+                        text: KI18n.i18nc("@info:tooltip", "ASS subtitle styles")
+                    }
                 }
             }
 
