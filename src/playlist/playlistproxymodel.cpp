@@ -230,7 +230,7 @@ void PlaylistProxyModel::onRowsAboutToBeRemoved(const QModelIndex &, int first, 
     // will be decreased by 3. (Indices 5,6,7... will become 2,3,4...) So our mappings to the old indices
     // must be updated accordingly by reducing the same amount from those indices
     uint deltaRow = last - first + 1;
-    for (unsigned int & itemRow : m_layout) {
+    for (unsigned int &itemRow : m_layout) {
         if (itemRow > static_cast<uint>(last)) {
             itemRow -= deltaRow;
         }

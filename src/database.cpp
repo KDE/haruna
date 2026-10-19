@@ -275,8 +275,7 @@ void Database::deletePlaybackPositions()
 void Database::deletePlaybackPosition(const QString &md5Hash)
 {
     QSqlQuery query(connection());
-    query.prepare(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE %
-                  u" WHERE md5_hash = :md5Hash"_s);
+    query.prepare(u"DELETE FROM "_s % PLAYBACK_POSITION_TABLE % u" WHERE md5_hash = :md5Hash"_s);
     query.bindValue(u":md5Hash"_s, md5Hash);
     query.exec();
 

@@ -64,7 +64,9 @@ private:
     AVFrame *m_filterFrame{nullptr};
     int m_lastWidth{-1};
     int m_lastHeight{-1};
-    enum AVPixelFormat m_lastPixfmt{AV_PIX_FMT_NONE};
+    enum AVPixelFormat m_lastPixfmt {
+        AV_PIX_FMT_NONE
+    };
 };
 
 #endif

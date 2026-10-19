@@ -18,7 +18,6 @@ using namespace Qt::StringLiterals;
 SystemUtils::SystemUtils(QObject *parent)
     : QObject{parent}
 {
-
 }
 
 QStringList SystemUtils::getFonts()

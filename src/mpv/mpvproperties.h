@@ -21,7 +21,8 @@ class MpvProperties : public QObject
 public:
     explicit MpvProperties(QObject *parent = nullptr)
         : QObject(parent)
-    {}
+    {
+    }
     static MpvProperties *self()
     {
         static MpvProperties p;
