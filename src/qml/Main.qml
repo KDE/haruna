@@ -25,11 +25,10 @@ ApplicationWindow {
     id: appWindow
 
     property bool containsMouse: false
-
     property int previousVisibility: Window.Windowed
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa", "text/x-microdvd"]
 
-    function initPlaylist() {
+    function initPlaylist() : void {
         if (!playlist.isReady || !mpv.isReady) {
             return
         }
@@ -37,6 +36,49 @@ ApplicationWindow {
         if (CommandLineOptions.startupUrls.length > 0) {
             Models.recentFilesModel.addRecentFile(CommandLineOptions.startupUrls[0], RecentFilesModel.OpenedFrom.ExternalApp)
         }
+    }
+
+    function openFile(path: string, openedFrom: int) : void {
+        mpv.stop()
+        Models.recentFilesModel.addRecentFile(path, openedFrom)
+        playlist.manager.defaultPlaylist.addItem(path, PlaylistModel.Clear)
+    }
+
+    function isFullScreen() : bool {
+        return appWindow.visibility === Window.FullScreen
+    }
+
+    function isMaximized() : bool {
+        return appWindow.visibility === Window.Maximized
+    }
+
+    function toggleFullScreen() : void {
+        if (!isFullScreen()) {
+            appWindow.showFullScreen()
+        } else {
+            exitFullscreen()
+        }
+    }
+
+    function exitFullscreen() : void {
+        if (appWindow.previousVisibility === Window.Maximized) {
+            appWindow.show()
+            appWindow.showMaximized()
+        } else {
+            appWindow.showNormal()
+        }
+    }
+
+    function resizeWindow() : void {
+        if (SystemUtils.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
+            return
+        }
+
+        appWindow.width = mpv.videoWidth
+        appWindow.height = mpv.videoHeight
+                + (footerItem.isFloating ? 0 : footerItem.height)
+                + (headerItem.visible ? headerItem.height : 0)
+                + (menuBar.visible ? menuBar.height : 0)
     }
 
     objectName: "HarunaMainWindow"
@@ -48,6 +90,18 @@ ApplicationWindow {
     minimumWidth: 400
     minimumHeight: 200
     color: Kirigami.Theme.backgroundColor
+
+    Component.onCompleted: {
+        HarunaApp.setupEventFilter(appWindow)
+        HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
+
+        const hasCommandLineFile = HarunaApp.url(0).toString() !== ""
+        const hasLastPlayedFile = GeneralSettings.lastPlayedFile !== ""
+        const hasFileToOpen = hasCommandLineFile || (PlaybackSettings.openLastPlayedFile && hasLastPlayedFile)
+        if (GeneralSettings.fullscreenOnStartUp && hasFileToOpen) {
+            toggleFullScreen()
+        }
+    }
 
     onVisibilityChanged: function(visibility) {
         if (PlaybackSettings.pauseWhileMinimized) {
@@ -94,107 +148,6 @@ ApplicationWindow {
 
         m_mpv: mpv
         m_settingsLoader: settingsLoader
-    }
-
-    Connections {
-        target: GeneralSettings
-        function onOsdFontSizeChanged() {
-            osd.message("Test osd font size")
-        }
-        function onMaxRecentFilesChanged() {
-            Models.recentFilesModel.getItems()
-        }
-        function onResizeWindowToVideoChanged() {
-            appWindow.resizeWindow()
-        }
-        function onColorSchemeChanged() {
-            HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
-        }
-    }
-    Connections {
-        target: AudioSettings
-        function onPreferredTrackChanged() {
-            mpv.audioId = AudioSettings.preferredTrack
-        }
-        function onPreferredLanguageChanged() {
-            mpv.setProperty(MpvProperties.AudioLanguage, AudioSettings.preferredLanguage.replace(/\s+/g, ''))
-        }
-        function onReplayGainChanged() {
-            mpv.setProperty(MpvProperties.ReplayGain, AudioSettings.replayGain)
-        }
-        function onReplayGainPreampChanged() {
-            mpv.setProperty(MpvProperties.ReplayGainPreamp, AudioSettings.replayGainPreamp)
-        }
-        function onReplayGainPreventClipChanged() {
-            mpv.setProperty(MpvProperties.ReplayGainClip, !AudioSettings.replayGainPreventClip)
-        }
-        function onReplayGainFallbackChanged() {
-            mpv.setProperty(MpvProperties.ReplayGainFallback, AudioSettings.replayGainFallback)
-        }
-    }
-    Connections {
-        target: PlaybackSettings
-        function onYtdlFormatChanged() {
-            mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
-        }
-        function onHWDecodingChanged() {
-            mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
-        }
-    }
-    Connections {
-        target: SubtitlesSettings
-        function onAutoSelectSubtitlesChanged() {
-            mpv.selectSubtitleTrack()
-        }
-        function onPreferredLanguageChanged() {
-            mpv.setProperty(MpvProperties.SubtitleLanguage, SubtitlesSettings.preferredLanguage.replace(/\s+/g, ''))
-        }
-        function onPreferredTrackChanged() {
-            mpv.subtitleId = SubtitlesSettings.preferredTrack
-        }
-        function onAllowOnBlackBordersChanged() {
-            mpv.setProperty(MpvProperties.SubtitleUseMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
-            mpv.setProperty(MpvProperties.SubtitleAssForceMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
-        }
-        function onFontFamilyChanged() {
-            mpv.setProperty(MpvProperties.SubtitleFont, SubtitlesSettings.fontFamily)
-        }
-        function onFontSizeChanged() {
-            mpv.setProperty(MpvProperties.SubtitleFontSize, SubtitlesSettings.fontSize)
-        }
-        function onIsBoldChanged() {
-            mpv.setProperty(MpvProperties.SubtitleBold, SubtitlesSettings.isBold)
-        }
-        function onIsItalicChanged() {
-            mpv.setProperty(MpvProperties.SubtitleItalic, SubtitlesSettings.isItalic)
-        }
-        function onFontColorChanged() {
-            mpv.setProperty(MpvProperties.SubtitleColor, SubtitlesSettings.fontColor)
-        }
-        function onShadowColorChanged() {
-            mpv.setProperty(MpvProperties.SubtitleShadowColor, SubtitlesSettings.shadowColor)
-        }
-        function onShadowOffsetChanged() {
-            mpv.setProperty(MpvProperties.SubtitleShadowOffset, SubtitlesSettings.shadowOffset)
-        }
-        function onBorderColorChanged() {
-            mpv.setProperty(MpvProperties.SubtitleBorderColor, SubtitlesSettings.borderColor)
-        }
-        function onBorderSizeChanged() {
-            mpv.setProperty(MpvProperties.SubtitleBorderSize, SubtitlesSettings.borderSize)
-        }
-        function onBorderStyleChanged() {
-            mpv.setProperty(MpvProperties.SubtitleBorderStyle, SubtitlesSettings.borderStyle)
-        }
-    }
-    Connections {
-        target: VideoSettings
-        function onScreenshotTemplateChanged() {
-            mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
-        }
-        function onScreenshotFormatChanged() {
-            mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
-        }
     }
 
     Loader {
@@ -386,18 +339,6 @@ ApplicationWindow {
         }
     }
 
-    Connections {
-        id: miscUtilsOnErrorConnection
-        target: MiscUtils
-        function onError(message) {
-            const item = messageBoxComponent.createObject(appWindow)
-            const messageBox = item as Kirigami.InlineMessage
-
-            messageBox.visible = true
-            messageBox.text = message
-        }
-    }
-
     MpvContextMenu {
         id: mpvContextMenuLoader
 
@@ -408,31 +349,6 @@ ApplicationWindow {
         id: settingsLoader
 
         m_mpv: mpv
-    }
-
-    Connections {
-        target: HarunaApp
-        function onQmlApplicationMouseLeave() {
-            appWindow.containsMouse = false
-        }
-        function onQmlApplicationMouseEnter() {
-            appWindow.containsMouse = true
-        }
-        function onOpenUrl(url) {
-            if (GeneralSettings.appendVideoToSingleInstance) {
-                let behavior = GeneralSettings.playNewFileInSingleInstance
-                    ? PlaylistModel.AppendAndPlay
-                    : PlaylistModel.Append
-
-                playlist.manager.defaultPlaylist.addItem(url.toString(), behavior)
-                return
-            }
-
-            appWindow.openFile(url, RecentFilesModel.OpenedFrom.ExternalApp)
-        }
-        function onOpenRecentFile(url) {
-            appWindow.openFile(url, RecentFilesModel.OpenedFrom.Other)
-        }
     }
 
     FileDialog {
@@ -498,58 +414,141 @@ ApplicationWindow {
         }
     }
 
-    Component.onCompleted: {
-        HarunaApp.setupEventFilter(appWindow)
-        HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
+    Connections {
+        id: miscUtilsOnErrorConnection
+        target: MiscUtils
+        function onError(message) {
+            const item = messageBoxComponent.createObject(appWindow)
+            const messageBox = item as Kirigami.InlineMessage
 
-        const hasCommandLineFile = HarunaApp.url(0).toString() !== ""
-        const hasLastPlayedFile = GeneralSettings.lastPlayedFile !== ""
-        const hasFileToOpen = hasCommandLineFile || (PlaybackSettings.openLastPlayedFile && hasLastPlayedFile)
-        if (GeneralSettings.fullscreenOnStartUp && hasFileToOpen) {
-            toggleFullScreen()
+            messageBox.visible = true
+            messageBox.text = message
         }
     }
 
-    function openFile(path: string, openedFrom: int) : void {
-        mpv.stop()
-        Models.recentFilesModel.addRecentFile(path, openedFrom)
-        playlist.manager.defaultPlaylist.addItem(path, PlaylistModel.Clear)
-    }
+    Connections {
+        target: HarunaApp
+        function onQmlApplicationMouseLeave() {
+            appWindow.containsMouse = false
+        }
+        function onQmlApplicationMouseEnter() {
+            appWindow.containsMouse = true
+        }
+        function onOpenUrl(url) {
+            if (GeneralSettings.appendVideoToSingleInstance) {
+                let behavior = GeneralSettings.playNewFileInSingleInstance
+                    ? PlaylistModel.AppendAndPlay
+                    : PlaylistModel.Append
 
-    function isFullScreen() : bool {
-        return appWindow.visibility === Window.FullScreen
-    }
+                playlist.manager.defaultPlaylist.addItem(url.toString(), behavior)
+                return
+            }
 
-    function isMaximized() : bool {
-        return appWindow.visibility === Window.Maximized
-    }
-
-    function toggleFullScreen() : void {
-        if (!isFullScreen()) {
-            appWindow.showFullScreen()
-        } else {
-            exitFullscreen()
+            appWindow.openFile(url, RecentFilesModel.OpenedFrom.ExternalApp)
+        }
+        function onOpenRecentFile(url) {
+            appWindow.openFile(url, RecentFilesModel.OpenedFrom.Other)
         }
     }
 
-    function exitFullscreen() : void {
-        if (appWindow.previousVisibility === Window.Maximized) {
-            appWindow.show()
-            appWindow.showMaximized()
-        } else {
-            appWindow.showNormal()
+    Connections {
+        target: GeneralSettings
+        function onOsdFontSizeChanged() {
+            osd.message("Test osd font size")
+        }
+        function onMaxRecentFilesChanged() {
+            Models.recentFilesModel.getItems()
+        }
+        function onResizeWindowToVideoChanged() {
+            appWindow.resizeWindow()
+        }
+        function onColorSchemeChanged() {
+            HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
         }
     }
-
-    function resizeWindow() : void {
-        if (SystemUtils.isPlatformWayland() || !GeneralSettings.resizeWindowToVideo || isFullScreen()) {
-            return
+    Connections {
+        target: AudioSettings
+        function onPreferredTrackChanged() {
+            mpv.audioId = AudioSettings.preferredTrack
         }
-
-        appWindow.width = mpv.videoWidth
-        appWindow.height = mpv.videoHeight
-                + (footerItem.isFloating ? 0 : footerItem.height)
-                + (headerItem.visible ? headerItem.height : 0)
-                + (menuBar.visible ? menuBar.height : 0)
+        function onPreferredLanguageChanged() {
+            mpv.setProperty(MpvProperties.AudioLanguage, AudioSettings.preferredLanguage.replace(/\s+/g, ''))
+        }
+        function onReplayGainChanged() {
+            mpv.setProperty(MpvProperties.ReplayGain, AudioSettings.replayGain)
+        }
+        function onReplayGainPreampChanged() {
+            mpv.setProperty(MpvProperties.ReplayGainPreamp, AudioSettings.replayGainPreamp)
+        }
+        function onReplayGainPreventClipChanged() {
+            mpv.setProperty(MpvProperties.ReplayGainClip, !AudioSettings.replayGainPreventClip)
+        }
+        function onReplayGainFallbackChanged() {
+            mpv.setProperty(MpvProperties.ReplayGainFallback, AudioSettings.replayGainFallback)
+        }
+    }
+    Connections {
+        target: PlaybackSettings
+        function onYtdlFormatChanged() {
+            mpv.setProperty(MpvProperties.YtdlFormat, PlaybackSettings.ytdlFormat)
+        }
+        function onHWDecodingChanged() {
+            mpv.setProperty(MpvProperties.HardwareDecoding, PlaybackSettings.hWDecoding)
+        }
+    }
+    Connections {
+        target: SubtitlesSettings
+        function onAutoSelectSubtitlesChanged() {
+            mpv.selectSubtitleTrack()
+        }
+        function onPreferredLanguageChanged() {
+            mpv.setProperty(MpvProperties.SubtitleLanguage, SubtitlesSettings.preferredLanguage.replace(/\s+/g, ''))
+        }
+        function onPreferredTrackChanged() {
+            mpv.subtitleId = SubtitlesSettings.preferredTrack
+        }
+        function onAllowOnBlackBordersChanged() {
+            mpv.setProperty(MpvProperties.SubtitleUseMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
+            mpv.setProperty(MpvProperties.SubtitleAssForceMargins, SubtitlesSettings.allowOnBlackBorders ? "yes" : "no")
+        }
+        function onFontFamilyChanged() {
+            mpv.setProperty(MpvProperties.SubtitleFont, SubtitlesSettings.fontFamily)
+        }
+        function onFontSizeChanged() {
+            mpv.setProperty(MpvProperties.SubtitleFontSize, SubtitlesSettings.fontSize)
+        }
+        function onIsBoldChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBold, SubtitlesSettings.isBold)
+        }
+        function onIsItalicChanged() {
+            mpv.setProperty(MpvProperties.SubtitleItalic, SubtitlesSettings.isItalic)
+        }
+        function onFontColorChanged() {
+            mpv.setProperty(MpvProperties.SubtitleColor, SubtitlesSettings.fontColor)
+        }
+        function onShadowColorChanged() {
+            mpv.setProperty(MpvProperties.SubtitleShadowColor, SubtitlesSettings.shadowColor)
+        }
+        function onShadowOffsetChanged() {
+            mpv.setProperty(MpvProperties.SubtitleShadowOffset, SubtitlesSettings.shadowOffset)
+        }
+        function onBorderColorChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBorderColor, SubtitlesSettings.borderColor)
+        }
+        function onBorderSizeChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBorderSize, SubtitlesSettings.borderSize)
+        }
+        function onBorderStyleChanged() {
+            mpv.setProperty(MpvProperties.SubtitleBorderStyle, SubtitlesSettings.borderStyle)
+        }
+    }
+    Connections {
+        target: VideoSettings
+        function onScreenshotTemplateChanged() {
+            mpv.setProperty(MpvProperties.ScreenshotTemplate, VideoSettings.screenshotTemplate)
+        }
+        function onScreenshotFormatChanged() {
+            mpv.setProperty(MpvProperties.ScreenshotFormat, VideoSettings.screenshotFormat)
+        }
     }
 }
