@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:46+0000\n"
-"PO-Revision-Date: 2026-10-13 08:36+0200\n"
+"POT-Creation-Date: 2026-10-20 00:52+0000\n"
+"PO-Revision-Date: 2026-10-15 20:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -899,7 +899,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Afig"
 
-#: src/playlist/Playlist.qml:446 src/qml/Main.qml:491
+#: src/playlist/Playlist.qml:446 src/qml/Main.qml:407
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1655,22 +1655,22 @@ msgstr ""
 "Omet automàticament els capítols que contenen certes paraules/caràcters.\n"
 "Per a més detalls, comproveu les opcions de configuració de «Reproduïu»."
 
-#: src/qml/Main.qml:45
+#: src/qml/Main.qml:87
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:441
+#: src/qml/Main.qml:357
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Trieu un fitxer"
 
-#: src/qml/Main.qml:461
+#: src/qml/Main.qml:377
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Trieu un fitxer de subtítols"
 
-#: src/qml/Main.qml:488
+#: src/qml/Main.qml:404
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Obri"
@@ -2085,7 +2085,7 @@ msgstr ""
 "strong>, <strong>add</strong>, <strong>cycle</strong>.<br><strong>set</"
 "strong>: definix el valor d'una propietat <strong>set volume-max 150</"
 "strong>.<br><strong>add</strong>: augmenta/disminuïx el valor d'una "
-"propietat<strong>add volume 15</strong>, augmenta el volum en 15. Per a "
+"propietat <strong>add volume 15</strong>, augmenta el volum en 15. Per a "
 "disminuir el valor utilitzeu <strong>add volume -15</strong>."
 "<br><strong>cycle</strong>: circula a través dels valors d'una propietat "
 "<strong>cycle aid up</strong>."
@@ -3209,7 +3209,7 @@ msgstr ""
 "li><li><strong>%ws</strong> segons totals (inclou hores i minuts)</"
 "li><li><strong>%wf</strong> com %ws, però com a flotant</li><li><strong>%wT</"
 "strong> mil·lisegons (000–999)</li><li><strong>%%</strong> Substituïx el "
-"propi caràcter %.</li></ul><br>"
+"caràcter % mateix.</li></ul><br>"
 
 #: src/qml/Settings/VideoSettings.qml:200
 msgctxt "@title"
@@ -3248,17 +3248,17 @@ msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
 msgid "All"
 msgstr "Tots"
 
-#: src/transcript/Transcript.qml:146
+#: src/transcript/Transcript.qml:148
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "Tria el subtítol"
 
-#: src/transcript/Transcript.qml:207
+#: src/transcript/Transcript.qml:209
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
 msgstr "Seguix el subtítol actiu"
 
-#: src/transcript/Transcript.qml:231
+#: src/transcript/Transcript.qml:233
 msgctxt "@info:tooltip"
 msgid "ASS subtitle styles"
 msgstr "Estils de subtítols ASS"
