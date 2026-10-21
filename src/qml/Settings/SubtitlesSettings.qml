@@ -4,11 +4,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.ki18n
+import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 
 import org.kde.haruna
@@ -17,6 +20,71 @@ import org.kde.haruna.settings
 
 SettingsBasePage {
     id: root
+
+    Kirigami.SearchDialog {
+        id: fontDialog
+
+        property string initialFontFamily
+        property string defaultFamily: "Sans Serif"
+
+        width: Math.min(400, root.width - 50)
+        height: Math.min(500, root.height - 50)
+        model: KItemModels.KSortFilterProxyModel {
+            id: filterModel
+
+            filterRole: FontsModel.Roles.FontNameRole
+            filterCaseSensitivity: Qt.CaseInsensitive
+            sourceModel: FontsModel {
+                Component.onCompleted: {
+                    setStringList(SystemUtils.getFonts())
+                }
+            }
+        }
+        delegate: FontDelegate {}
+
+        onTextChanged: {
+            filterModel.filterString = text
+        }
+
+        onCurrentItemChanged: {
+            if (!visible) {
+                return
+            }
+
+            const item = currentItem as FontDelegate
+            SubtitlesSettings.fontFamily = item.fontName
+        }
+
+        onOpened: {
+            initialFontFamily = SubtitlesSettings.fontFamily
+        }
+
+        onAccepted: {
+            SubtitlesSettings.save()
+        }
+
+        onRejected: {
+            SubtitlesSettings.fontFamily = initialFontFamily
+            SubtitlesSettings.save()
+        }
+
+        component FontDelegate: ItemDelegate {
+            required property string fontName
+
+            text: fontName
+            width: ListView.view.width
+            onClicked: {
+                SubtitlesSettings.fontFamily = fontName
+            }
+            onDoubleClicked: {
+                SubtitlesSettings.fontFamily = fontName
+
+                fontDialog.accept()
+            }
+            Keys.onReturnPressed: fontDialog.accept()
+            Keys.onEnterPressed: fontDialog.accept()
+        }
+    }
 
     GridLayout {
         id: content
@@ -37,7 +105,7 @@ SettingsBasePage {
 
             text: KI18n.i18nc("@label:check", "Auto select track")
             checked: SubtitlesSettings.autoSelectSubtitles
-            
+
             onClicked: {
                 SubtitlesSettings.autoSelectSubtitles = checked
                 SubtitlesSettings.save()
@@ -150,22 +218,19 @@ SettingsBasePage {
         RowLayout {
             Layout.fillWidth: true
 
-            ComboBox {
+            Button {
                 id: subtitleFont
 
-                property string defaultFamily: "Sans Serif"
-
-                model: SystemUtils.getFonts()
-                onActivated: function(index) {
-                    setFontFamily()
+                text: SubtitlesSettings.fontFamily
+                icon.name: "font-select-symbolic"
+                onClicked: {
+                    fontDialog.open()
                 }
-
-                Component.onCompleted: currentIndex = indexOfValue(SubtitlesSettings.fontFamily)
-                Layout.fillWidth: true
-
-                function setFontFamily() {
-                    SubtitlesSettings.fontFamily = currentText
-                    SubtitlesSettings.save()
+                ToolTip {
+                    text: KI18n.i18nc("@info:tooltip", "Click to change font")
+                    delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                    visible: subtitleFont.hovered
+                             && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
                 }
             }
 
@@ -174,9 +239,8 @@ SettingsBasePage {
 
                 icon.name: "edit-reset"
                 onClicked: {
-                    const index = subtitleFont.find(subtitleFont.defaultFamily)
-                    subtitleFont.currentIndex = index
-                    subtitleFont.setFontFamily()
+                    SubtitlesSettings.fontFamily = fontDialog.defaultFamily
+                    SubtitlesSettings.save()
                 }
 
                 ToolTip {
