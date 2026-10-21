@@ -36,11 +36,7 @@ ResizeablePage {
     width: limitWidth(customWidth * fsScale)
 
     function limitWidth(pWidth) {
-        if (PlaylistSettings.style === "compact") {
-            return 380
-        } else {
-            return Math.min(Math.max(pWidth, 260), mainWindowWidth - 50)
-        }
+        return Math.min(Math.max(pWidth, 260), mainWindowWidth - 50)
     }
 
     onResize: function (delta) {
@@ -526,8 +522,8 @@ ResizeablePage {
                         return playlistItemSimple
                     case "withThumbnails":
                         return playlistItemWithThumbnail
-                    case "compact":
-                        return playlistItemCompact
+                    default:
+                        return playlistItemSimple
                     }
                 }
 
@@ -594,14 +590,6 @@ ResizeablePage {
         Component {
             id: playlistItemSimple
             PlaylistItem {
-                m_mpv: root.m_mpv
-                playlistsManager: root.manager
-            }
-        },
-
-        Component {
-            id: playlistItemCompact
-            PlaylistItemCompact {
                 m_mpv: root.m_mpv
                 playlistsManager: root.manager
             }

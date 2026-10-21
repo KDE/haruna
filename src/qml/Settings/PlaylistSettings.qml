@@ -79,13 +79,8 @@ SettingsBasePage {
                 }
                 styleModel.append(thumbnail)
 
-                const compact = {
-                    text: KI18n.i18nc("@item:listbox the style of the playlist", "Compact"),
-                    value: "compact"
-                }
-                styleModel.append(compact)
-
-                currentIndex = indexOfValue(PlaylistSettings.style)
+                const index = indexOfValue(PlaylistSettings.style)
+                currentIndex = index === -1 ? 0 : index
             }
             onActivated: function(index) {
                 PlaylistSettings.style = model.get(index).value
@@ -241,7 +236,6 @@ SettingsBasePage {
         CheckBox {
             text: KI18n.i18nc("@option:check", "Increase font size when fullscreen")
             checked: PlaylistSettings.bigFontFullscreen
-            enabled: PlaylistSettings.style === "compact" ? false : true
             onClicked: {
                 PlaylistSettings.bigFontFullscreen = checked
                 PlaylistSettings.save()
