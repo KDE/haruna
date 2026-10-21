@@ -89,6 +89,12 @@ Labs.Menu {
         }
     }
 
+    Labs.MenuItem {
+        text: HarunaApp.actions.toggleTranscriptAction.text
+        enabled: root.m_mpv.playbackState !== MpvItem.PlaybackState.Stopped
+        onTriggered: HarunaApp.actions.toggleTranscriptAction.trigger()
+    }
+
     Labs.MenuSeparator {}
 
     Labs.MenuItem {

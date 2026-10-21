@@ -31,6 +31,11 @@ Menu {
         title: KI18n.i18nc("@title:menu", "Secondary Subtitle")
     }
 
+    MenuItem {
+        action: HarunaApp.actions.toggleTranscriptAction
+        enabled: root.m_mpv.playbackState !== MpvItem.PlaybackState.Stopped
+    }
+
     MenuSeparator {}
 
     MenuItem {
