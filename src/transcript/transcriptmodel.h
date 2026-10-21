@@ -49,7 +49,7 @@ public:
     QStringList styles() const;
     void setStyles(const QStringList &newStyles);
 
-    int currentRow() const;
+    int currentRow();
     bool isCurrentEndTime(int row) const;
     Q_INVOKABLE void loadSubtitle(QUrl filePath, int streamIndex, double position);
     Q_INVOKABLE void clearSubtitle();
@@ -58,7 +58,7 @@ public:
 
 Q_SIGNALS:
     void currentRowChanged();
-    void parsingFinished(int row);
+    void parsingFinished();
 
 private:
     void addItem(const SubtitleLine &item, const int transcriptModelVersion);
@@ -70,7 +70,7 @@ private:
 
     // Row numbers for currently displayed subtitle lines in the m_transcript.
     QList<EndTime> m_currentEndTimes;
-    int m_lastRow{0};
+    int m_currentRow{-1};
     double m_lastTimePosition{-1.0};
     // Index for subtitle stream in the list of loaded subtitles
     int m_streamIndex{-1};

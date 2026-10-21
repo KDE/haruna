@@ -13,7 +13,6 @@ import QtQuick.Layouts
 
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
-import org.kde.kitemmodels as KItemModels
 
 import org.kde.haruna
 import org.kde.haruna.settings
@@ -25,16 +24,7 @@ ResizeablePage {
     property TranscriptProxyModel transcriptProxyModel: TranscriptProxyModel {
         transcriptModel: root.transcriptModel
     }
-    property StylesFilterProxyModel transcriptStylesProxyModel: StylesFilterProxyModel {}
     property int selectedTrackId: -1
-
-    component StylesFilterProxyModel: KItemModels.KSortFilterProxyModel {
-        property int currentRow: mapFromSource(root.transcriptProxyModel.currentIndex).row
-
-        sourceModel: root.transcriptProxyModel
-        filterRoleName: "style"
-        filterCaseSensitivity: Qt.CaseInsensitive
-    }
 
     edge: PlaylistSettings.position === "right" ? Qt.LeftEdge : Qt.RightEdge
     customWidth: 380
@@ -110,15 +100,6 @@ ResizeablePage {
             root.m_mpv.forceActiveFocus()
         }
     }
-
-    Connections {
-        target: root.transcriptProxyModel
-        function onParsingFinished(lastIndex) {
-            const row = root.transcriptStylesProxyModel.mapFromSource(lastIndex).row
-            Qt.callLater(transcriptView.positionViewAtIndex, row, ListView.Beginning)
-        }
-    }
-
 
     Connections {
         target: root.m_mpv
@@ -224,9 +205,7 @@ ResizeablePage {
 
                 onActivated: function(index) {
                     let filter = index === 0 ? "" : displayText
-                    root.transcriptStylesProxyModel.filterString = filter
-                    root.transcriptProxyModel.currentIndexChanged()
-                    Qt.callLater(transcriptView.positionViewAtIndex, root.transcriptStylesProxyModel.currentRow, ListView.Beginning)
+                    root.transcriptProxyModel.filterString = filter
                 }
 
                 ToolTip{
@@ -239,7 +218,6 @@ ResizeablePage {
 
                 onTextChanged: {
                     root.transcriptProxyModel.searchText = text
-                    transcriptView.positionViewAtIndex(transcriptView.currentIndex, ListView.Beginning)
                 }
 
                 Layout.fillWidth: true
@@ -264,10 +242,10 @@ ResizeablePage {
                 id: transcriptView
 
                 // buffer is required for animations. Jumping from N to N+1 animates, but N to -1 to N+1 breaks.
-                // transcriptStylesProxyModel.currentRow is -1 when no subtitle is displayed
-                property int currentIndexBuffer: root.transcriptStylesProxyModel.currentRow
+                // transcriptProxyModel.currentRow is -1 when no subtitle is displayed
+                property int currentIndexBuffer: root.transcriptProxyModel.currentRow
 
-                model: root.transcriptStylesProxyModel
+                model: root.transcriptProxyModel
                 reuseItems: true
                 spacing: 1
                 highlightFollowsCurrentItem: SubtitlesSettings.transcriptFollowCurrentSubtitle
