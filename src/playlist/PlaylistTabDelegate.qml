@@ -183,7 +183,7 @@ TabButton {
                 width: Kirigami.Units.iconSizes.small
                 height: Kirigami.Units.iconSizes.small
 
-                source: "tab-close"
+                source: "dialog-close"
                 color: rightItemHover.hovered ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
             }
 
