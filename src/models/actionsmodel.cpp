@@ -230,7 +230,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekForwardSmallAction"_s;
     action.text = i18nc("@action", "Seek Small Step Forward");
-    action.iconName = u"media-seek-forward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::Key_Right;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -238,7 +238,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekBackwardSmallAction"_s;
     action.text = i18nc("@action", "Seek Small Step Backward");
-    action.iconName = u"media-seek-backward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::Key_Left;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -246,7 +246,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekForwardMediumAction"_s;
     action.text = i18nc("@action", "Seek Medium Step Forward");
-    action.iconName = u"media-seek-forward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::SHIFT | Qt::Key_Right;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -254,7 +254,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekBackwardMediumAction"_s;
     action.text = i18nc("@action", "Seek Medium Step Backward");
-    action.iconName = u"media-seek-backward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::SHIFT | Qt::Key_Left;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -262,7 +262,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekForwardBigAction"_s;
     action.text = i18nc("@action", "Seek Big Step Forward");
-    action.iconName = u"media-seek-forward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::Key_Up;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -270,7 +270,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekBackwardBigAction"_s;
     action.text = i18nc("@action", "Seek Big Step Backward");
-    action.iconName = u"media-seek-backward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::Key_Down;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -278,7 +278,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekNextChapterAction"_s;
     action.text = i18nc("@action", "Seek To Next Chapter");
-    action.iconName = u"media-seek-forward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::Key_PageUp;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -286,7 +286,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekPreviousChapterAction"_s;
     action.text = i18nc("@action", "Seek To Previous Chapter");
-    action.iconName = u"media-seek-backward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::Key_PageDown;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -294,7 +294,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekNextSubtitleAction"_s;
     action.text = i18nc("@action", "Seek To Next Subtitle");
-    action.iconName = u"media-seek-forward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::CTRL | Qt::Key_Right;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
@@ -302,7 +302,7 @@ ActionsModel::ActionsModel(QObject *parent)
 
     action.name = u"seekPreviousSubtitleAction"_s;
     action.text = i18nc("@action", "Seek To Previous Subtitle");
-    action.iconName = u"media-seek-backward"_s;
+    action.iconName = u""_s;
     action.defaultShortcut = Qt::CTRL | Qt::Key_Left;
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
