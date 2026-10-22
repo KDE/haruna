@@ -158,6 +158,7 @@ qt_add_qml_module(haruna
         qml/Settings/EditCustomCommand.qml
         qml/Settings/DebugSettings.qml
         qml/Settings/SettingsWindow.qml
+        qml/Settings/OsdSettings.qml
 
     DEPENDENCIES
         org.kde.haruna.playlist

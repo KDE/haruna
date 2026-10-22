@@ -23,25 +23,6 @@ SettingsBasePage {
 
         columns: 2
 
-        // OSD Font Size
-        Label {
-            text: KI18n.i18nc("@label:spinbox", "OSD font size")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        SpinBox {
-            id: osdFontSize
-
-            editable: true
-            from: 0
-            to: 100
-            value: GeneralSettings.osdFontSize
-            onValueModified: {
-                GeneralSettings.osdFontSize = osdFontSize.value
-                GeneralSettings.save()
-            }
-        }
-
         Label {
             text: KI18n.i18nc("@label:spinbox", "Maximum recent files")
             Layout.alignment: Qt.AlignRight

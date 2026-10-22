@@ -18,6 +18,8 @@ qt_add_qml_module(utilities
         systemutils.cpp
         commandlineoptions.h
         commandlineoptions.cpp
+        osdutils.h
+        osdutils.cpp
 )
 
 target_link_libraries(utilities PRIVATE
@@ -25,8 +27,11 @@ target_link_libraries(utilities PRIVATE
     Qt6::Gui
 
     KF6::ConfigCore
+    KF6::ConfigGui
     KF6::FileMetaData
     KF6::I18n
     KF6::KIOWidgets
     KF6::WindowSystem
+
+    settingsplugin
 )

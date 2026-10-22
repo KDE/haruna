@@ -76,6 +76,22 @@ kconfig_target_kcfg_file(settings
 )
 
 # -----------------------------------
+# OsdSettings
+# -----------------------------------
+kconfig_target_kcfg_file(settings
+    FILE osdsettings.kcfg
+    CLASS_NAME OsdSettings
+
+    MUTATORS
+    SINGLETON
+    GENERATE_MOC
+    DEFAULT_VALUE_GETTERS
+    GENERATE_PROPERTIES
+    PARENT_IN_CONSTRUCTOR
+    QML_REGISTRATION
+)
+
+# -----------------------------------
 # PlaybackSettings
 # -----------------------------------
 kconfig_target_kcfg_file(settings

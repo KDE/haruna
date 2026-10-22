@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ SPDX-FileCopyrightText: 2026 George Florea Bănuș <georgefb899@gmail.com>
+
+ SPDX-License-Identifier: BSD-3-Clause
+ -->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+<kcfgfile name="haruna/haruna.conf" />
+    <group name="Osd">
+        <entry name="OsdFontSize" type="Int">
+            <default>25</default>
+        </entry>
+        <entry name="MpvABLoop" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvChapter" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvDeinterlace" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvImageAdjustments" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvLoadFile" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvPlaybackSpeed" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvScreenshot" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvSubtitleDelay" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvSubtitleScale" type="Bool">
+            <default>true</default>
+        </entry>z
+        <entry name="MpvSubtitleToggle" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvTrack" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="MpvVolume" type="Bool">
+            <default>true</default>
+        </entry>
+    </group>
+</kcfg>

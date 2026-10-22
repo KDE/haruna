@@ -24,6 +24,7 @@ Loader {
 
     enum Page {
         General = 0,
+        Osd,
         Playback,
         Video,
         Audio,
@@ -89,6 +90,15 @@ Loader {
                             root.activePage = SettingsWindow.Page.General
                             settingsWindow.pageStack.removePage(1)
                             settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/GeneralSettings.qml`)
+                        }
+                    },
+                    Kirigami.Action {
+                        text: KI18n.i18nc("@action", "Osd")
+                        icon.name: "dialog-messages"
+                        onTriggered: {
+                            root.activePage = SettingsWindow.Page.Osd
+                            settingsWindow.pageStack.removePage(1)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/OsdSettings.qml`)
                         }
                     },
                     Kirigami.Action {
