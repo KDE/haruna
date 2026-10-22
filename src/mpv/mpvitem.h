@@ -222,7 +222,6 @@ Q_SIGNALS:
     void playbackSpeedChanged();
     void savePositionToDB(const QString &md5Hash, const QString &path, double position);
     void eofPlayNext();
-    void osdMessage(const QString &text);
     void isLocalFileChanged();
     void isVideoChanged();
 

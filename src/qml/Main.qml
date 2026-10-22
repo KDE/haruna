@@ -201,10 +201,6 @@ ApplicationWindow {
             Models.recentFilesModel.addRecentFile(playlist.manager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
         }
 
-        onOsdMessage: function(text) {
-            osd.message(text);
-        }
-
         onIsReadyChanged: {
             osd.active = true
             appWindow.initPlaylist()
@@ -310,7 +306,6 @@ ApplicationWindow {
         m_mpv: mpv
         playlistsManager: playlist.manager
         m_mpvContextMenuLoader: mpvContextMenuLoader
-        m_osd: osd
         m_footer: footerItem
         m_settingsLoader: settingsLoader
         m_openUrlPopup: openUrlPopup
@@ -427,6 +422,13 @@ ApplicationWindow {
     }
 
     Connections {
+        target: OsdUtils
+        function onMessageReceived(message, context) {
+            osd.message(message)
+        }
+    }
+
+    Connections {
         target: HarunaApp
         function onQmlApplicationMouseLeave() {
             appWindow.containsMouse = false
@@ -453,9 +455,6 @@ ApplicationWindow {
 
     Connections {
         target: GeneralSettings
-        function onOsdFontSizeChanged() {
-            osd.message("Test osd font size")
-        }
         function onMaxRecentFilesChanged() {
             Models.recentFilesModel.getItems()
         }
@@ -464,6 +463,12 @@ ApplicationWindow {
         }
         function onColorSchemeChanged() {
             HarunaApp.activateColorScheme(GeneralSettings.colorScheme)
+        }
+    }
+    Connections {
+        target: OsdSettings
+        function onOsdFontSizeChanged() {
+            OsdUtils.message("Test osd font size", OsdUtils.Context.None)
         }
     }
     Connections {
