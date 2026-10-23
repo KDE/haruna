@@ -59,4 +59,21 @@ void ChaptersModel::setChapters(QList<Chapter> &_chapters)
     Q_EMIT rowCountChanged();
 }
 
+void ChaptersModel::setStartTimeToTitleMap(const QMap<double, QString> &newStartTimeToTitleMap)
+{
+    m_startTimeToTitleMap = newStartTimeToTitleMap;
+}
+
+QString ChaptersModel::titleAtPosition(double position)
+{
+    auto it = m_startTimeToTitleMap.upperBound(position);
+    if (it != m_startTimeToTitleMap.cbegin()) {
+        --it;
+
+        QString title = it.value();
+        return title;
+    }
+    return {};
+}
+
 #include "moc_chaptersmodel.cpp"

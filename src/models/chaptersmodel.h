@@ -34,12 +34,16 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     void setChapters(QList<Chapter> &_chapters);
+    void setStartTimeToTitleMap(const QMap<double, QString> &newStartTimeToTitleMap);
+
+    Q_INVOKABLE QString titleAtPosition(double position);
 
 Q_SIGNALS:
     void rowCountChanged();
 
 private:
     QList<Chapter> m_chapters;
+    QMap<double, QString> m_startTimeToTitleMap;
 };
 
 #endif // CHAPTERSMODEL_H
