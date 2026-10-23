@@ -249,19 +249,16 @@ RowLayout {
         // create markers for the chapters
         Repeater {
             id: chaptersInstantiator
+
             model: root.showChapterMarkers
                    ? root.m_mpv.chaptersModel
                    : 0
             delegate: Rectangle {
-                id: chapterMarkerShape
-
-                required property int index
-                required property string title
                 required property double startTime
-                property real position: slider.mirrored
-                                       ? progressBarBG.width - (startTime / root.m_mpv.duration * progressBarBG.width)
-                                       : startTime / root.m_mpv.duration * progressBarBG.width
-                x: position
+
+                x: slider.mirrored
+                   ? progressBarBG.width - (startTime / root.m_mpv.duration * progressBarBG.width)
+                   : startTime / root.m_mpv.duration * progressBarBG.width
                 y: 0
                 height: slider.height
                 width: 2
