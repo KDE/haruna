@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:49+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -429,7 +429,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Baskuligi kaplinion"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:132
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:142
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -691,17 +691,17 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:82
 #, kde-format
 msgid "Command line video player"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:89
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:323
+#: src/mpv/mpvitem.cpp:324
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -709,13 +709,13 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Ne eblis ludi: %1"
 
-#: src/mpv/mpvitem.cpp:429
+#: src/mpv/mpvitem.cpp:430
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Laŭteco: %1"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:463
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -723,44 +723,44 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Subtitola tempumado: %1 sekundoj"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Subtitola tempumado: %1 sekundoj"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:514
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:545
+#: src/mpv/mpvitem.cpp:546
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:558
+#: src/mpv/mpvitem.cpp:559
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Neniu"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:618
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Ekrankopio malsukcesis"
 
-#: src/mpv/mpvitem.cpp:622
+#: src/mpv/mpvitem.cpp:623
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Ekrankopio prenita"
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:625
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -768,7 +768,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Ekrankopio: %1"
 
-#: src/mpv/mpvitem.cpp:658
+#: src/mpv/mpvitem.cpp:659
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -778,13 +778,13 @@ msgstr ""
 "Neniu videotrako detektita, plej verŝajne la videotrako ne povas esti "
 "malkodita/ludata pro mankantaj kodekoj"
 
-#: src/mpv/mpvitem.cpp:695
+#: src/mpv/mpvitem.cpp:696
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Saltita ĉapitro: %1"
 
-#: src/mpv/mpvitem.cpp:790
+#: src/mpv/mpvitem.cpp:791
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -794,7 +794,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Aŭdio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:801
+#: src/mpv/mpvitem.cpp:802
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -802,7 +802,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtitolo: Neniu"
 
-#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
+#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -812,7 +812,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtitolo: %1 %2"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:819
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -1017,7 +1017,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:407
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:402
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1604,7 +1604,7 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr ""
 
-#: src/qml/Actions.qml:144
+#: src/qml/Actions.qml:143
 #, fuzzy
 #| msgctxt ""
 #| "osd message when trying to open subtile selection dialog while no file is "
@@ -1616,7 +1616,7 @@ msgctxt ""
 msgid "Can’t load subtitle when no file is open"
 msgstr "Ne eblas ŝargi subtekston kiam neniu dosiero estas malfermata"
 
-#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Reprodukta rapideco: %1"
@@ -1629,7 +1629,7 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Buklokomenco: %1"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:284
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Loop: %1 - %2"
@@ -1637,77 +1637,77 @@ msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Buklo: %1 - %2"
 
-#: src/qml/Actions.qml:287
+#: src/qml/Actions.qml:292
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Buklo malbarita"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Subtekstoj malŝaltitaj"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Subtekstoj ŝaltitaj"
 
-#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
+#: src/qml/Actions.qml:329 src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Subtitola skalo: %1"
 
-#: src/qml/Actions.qml:343
+#: src/qml/Actions.qml:351
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Malinterplekti: %1"
 
-#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
+#: src/qml/Actions.qml:417 src/qml/Actions.qml:424
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zomi: %1"
 
-#: src/qml/Actions.qml:419
+#: src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zomo: 0"
 
-#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:444
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrasto: %1"
 
-#: src/qml/Actions.qml:436
+#: src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrasto: 0"
 
-#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
+#: src/qml/Actions.qml:457 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Brilo: %1"
 
-#: src/qml/Actions.qml:453
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Brilo: 0"
 
-#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
+#: src/qml/Actions.qml:477 src/qml/Actions.qml:484
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamo: %1"
 
-#: src/qml/Actions.qml:470
+#: src/qml/Actions.qml:490
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamo: 0"
 
-#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
+#: src/qml/Actions.qml:497 src/qml/Actions.qml:504
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturiĝo: %1"
 
-#: src/qml/Actions.qml:487
+#: src/qml/Actions.qml:510
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturiĝo: 0"
@@ -1910,7 +1910,7 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:357
+#: src/qml/Main.qml:352
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select file"
@@ -1918,7 +1918,7 @@ msgctxt "@title:window"
 msgid "Select File"
 msgstr "Elekti dosieron"
 
-#: src/qml/Main.qml:377
+#: src/qml/Main.qml:372
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Select subtitles file"
@@ -1926,7 +1926,7 @@ msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Elekti subtitolan dosieron"
 
-#: src/qml/Main.qml:404
+#: src/qml/Main.qml:399
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Malfermi"
@@ -2443,20 +2443,12 @@ msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "Kon&servi"
 
-#: src/qml/Settings/GeneralSettings.qml:28
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
-msgctxt "@label:spinbox"
-msgid "OSD font size"
-msgstr "Osd tipargrandeco"
-
-#: src/qml/Settings/GeneralSettings.qml:46
+#: src/qml/Settings/GeneralSettings.qml:27
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Maksimumaj lastatempaj dosieroj"
 
-#: src/qml/Settings/GeneralSettings.qml:64
+#: src/qml/Settings/GeneralSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -2465,12 +2457,12 @@ msgid ""
 "drop etc.)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:58
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Permesi nur unu kazon"
 
-#: src/qml/Settings/GeneralSettings.qml:86
+#: src/qml/Settings/GeneralSettings.qml:67
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2486,12 +2478,12 @@ msgstr ""
 "Provi malfermi alian dosieron kun Haruna malfermos la dosieron en la kuranta "
 "petskribo."
 
-#: src/qml/Settings/GeneralSettings.qml:97
+#: src/qml/Settings/GeneralSettings.qml:78
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Aldoni dosieron al ludlisto"
 
-#: src/qml/Settings/GeneralSettings.qml:107
+#: src/qml/Settings/GeneralSettings.qml:88
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "File will be added to the end of the playlist"
@@ -2499,7 +2491,7 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "Dosiero estos aldonita al la fino de la ludlisto"
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:97
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Play next file"
@@ -2507,17 +2499,17 @@ msgctxt "@option:check"
 msgid "Play new file"
 msgstr "Ludi sekvantan dosieron"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@title"
 msgid "Interface"
 msgstr "Interfaco"
 
-#: src/qml/Settings/GeneralSettings.qml:133
+#: src/qml/Settings/GeneralSettings.qml:114
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Piedlinia stilo"
 
-#: src/qml/Settings/GeneralSettings.qml:145
+#: src/qml/Settings/GeneralSettings.qml:126
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -2525,12 +2517,12 @@ msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "Defaŭlta kovrilo"
 
-#: src/qml/Settings/GeneralSettings.qml:151
+#: src/qml/Settings/GeneralSettings.qml:132
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:165
+#: src/qml/Settings/GeneralSettings.qml:146
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Show floating footer on"
@@ -2538,17 +2530,17 @@ msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Montri flosantan piedlinion je"
 
-#: src/qml/Settings/GeneralSettings.qml:180
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:186
+#: src/qml/Settings/GeneralSettings.qml:167
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:201
+#: src/qml/Settings/GeneralSettings.qml:182
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2565,52 +2557,52 @@ msgstr ""
 "super la filmeta areo<br><strong>Musmovado malsupre</strong> - movo de muso "
 "sur la fundo de la filmeta areo"
 
-#: src/qml/Settings/GeneralSettings.qml:209
+#: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Antaŭrigardi bildeton"
 
-#: src/qml/Settings/GeneralSettings.qml:214
+#: src/qml/Settings/GeneralSettings.qml:195
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Montri antaŭrigardan bildeton"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:202
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "Montras antaŭrigardpm dum ŝvebo de la serĉ-/progres-breto."
 
-#: src/qml/Settings/GeneralSettings.qml:230
+#: src/qml/Settings/GeneralSettings.qml:211
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Uzi precizan antaŭrigardon"
 
-#: src/qml/Settings/GeneralSettings.qml:240
+#: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Generado de preciza antaŭrigardo estas malrapida"
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Larĝeco de bildeto"
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:247
 msgctxt "@label"
 msgid "Window"
 msgstr "Fenestro"
 
-#: src/qml/Settings/GeneralSettings.qml:272
+#: src/qml/Settings/GeneralSettings.qml:253
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Aligrandigi por konveni filmeteon"
 
-#: src/qml/Settings/GeneralSettings.qml:283
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Nesubtenata en Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/qml/Settings/GeneralSettings.qml:265
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2625,12 +2617,12 @@ msgstr ""
 "La maksimuma grandeco ne estas limigita, ĉi tio estas lasita al la "
 "operaciumo."
 
-#: src/qml/Settings/GeneralSettings.qml:294
+#: src/qml/Settings/GeneralSettings.qml:275
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Komenci en plenekrana reĝimo"
 
-#: src/qml/Settings/GeneralSettings.qml:303
+#: src/qml/Settings/GeneralSettings.qml:284
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2646,12 +2638,12 @@ msgstr ""
 "Ĉi tio havas prioritaton super Aligrandigi por konveni videon, kaj Memori "
 "fenestrograndecon kaj pozicio-agordojn."
 
-#: src/qml/Settings/GeneralSettings.qml:314
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Memori fenestrograndecon kaj pozicion"
 
-#: src/qml/Settings/GeneralSettings.qml:327
+#: src/qml/Settings/GeneralSettings.qml:308
 #, fuzzy
 #| msgctxt ""
 #| "@info:tooltip extra wayland info for the \"Remember window size and "
@@ -2663,7 +2655,7 @@ msgctxt ""
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>Restaŭro de pozicio ne estas subtenata en Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:310
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2679,23 +2671,23 @@ msgstr ""
 "nove malfermataj fenestroj.<br><br>%1La agordo \"Aligrandigi por konveni "
 "filmeton\" havas prioritaton."
 
-#: src/qml/Settings/GeneralSettings.qml:341
+#: src/qml/Settings/GeneralSettings.qml:322
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Montri menubreton"
 
-#: src/qml/Settings/GeneralSettings.qml:352
+#: src/qml/Settings/GeneralSettings.qml:333
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Montri ilobreton"
 
-#: src/qml/Settings/GeneralSettings.qml:364
+#: src/qml/Settings/GeneralSettings.qml:345
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:354
 msgctxt "@info:tooltip"
 msgid ""
 "Only affects tooltips that explain how something works or what it does."
@@ -2704,27 +2696,27 @@ msgid ""
 "truncated text)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Montri ĉapitrajn markilojn"
 
-#: src/qml/Settings/GeneralSettings.qml:394
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:403
+#: src/qml/Settings/GeneralSettings.qml:384
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Kolorskemo"
 
-#: src/qml/Settings/GeneralSettings.qml:448
+#: src/qml/Settings/GeneralSettings.qml:429
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI-stilo"
 
-#: src/qml/Settings/GeneralSettings.qml:481
+#: src/qml/Settings/GeneralSettings.qml:462
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -2877,6 +2869,19 @@ msgstr "Neniu agaro"
 #: src/qml/Settings/MouseSettings.qml:367
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
+msgstr ""
+
+#: src/qml/Settings/OsdSettings.qml:25
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Osd font size"
+msgctxt "@label:spinbox"
+msgid "OSD font size"
+msgstr "Osd tipargrandeco"
+
+#: src/qml/Settings/OsdSettings.qml:44
+msgctxt "@title"
+msgid "Choose when to show osd"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:27
@@ -3338,47 +3343,52 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Malfermi erojn per sola klako"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:70
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Agordoj"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "General"
 msgstr "Ĝenerala"
 
-#: src/qml/Settings/SettingsWindow.qml:95
+#: src/qml/Settings/SettingsWindow.qml:96
+msgctxt "@action"
+msgid "Osd"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
 msgid "Playback"
 msgstr "Reproduktado"
 
-#: src/qml/Settings/SettingsWindow.qml:104
+#: src/qml/Settings/SettingsWindow.qml:114
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:124
 msgctxt "@action"
 msgid "Audio"
 msgstr "Aŭdio"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Subtekstoj"
 
-#: src/qml/Settings/SettingsWindow.qml:141
+#: src/qml/Settings/SettingsWindow.qml:151
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Muso"
 
-#: src/qml/Settings/SettingsWindow.qml:150
+#: src/qml/Settings/SettingsWindow.qml:160
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Ŝparvojoj"
 
-#: src/qml/Settings/SettingsWindow.qml:159
+#: src/qml/Settings/SettingsWindow.qml:169
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Custom Commands"
@@ -3386,17 +3396,17 @@ msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Propraj Komandoj"
 
-#: src/qml/Settings/SettingsWindow.qml:174
+#: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
 msgid "Database"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:183
+#: src/qml/Settings/SettingsWindow.qml:193
 msgctxt "@action"
 msgid "Debug"
 msgstr "Sencimigi"
 
-#: src/qml/Settings/SettingsWindow.qml:193
+#: src/qml/Settings/SettingsWindow.qml:203
 msgctxt "@action"
 msgid "About"
 msgstr "Pri"
@@ -3740,6 +3750,98 @@ msgstr ""
 "Permesas provizore anstataŭi la ytdl-formatan elekton. Estos anstataŭita se "
 "la agordo estas ŝanĝita per la GUI"
 
+#: src/utilities/osdutils.cpp:45
+#, kde-format
+msgctxt "@option:check"
+msgid "AB loop"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Skip chapters"
+msgctxt "@option:check"
+msgid "Skip chapter"
+msgstr "Preterlasi ĉapitrojn"
+
+#: src/utilities/osdutils.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Toggle Deinterlacing"
+msgctxt "@option:check"
+msgid "Toggle deinterlace"
+msgstr "Baskuligi Malinterplektadon"
+
+#: src/utilities/osdutils.cpp:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Image adjustments (contrast, brightness, gamma and saturation)"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:49
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Playing new file"
+msgstr "Ludi sekvantan dosieron"
+
+#: src/utilities/osdutils.cpp:50
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback Speed Increase"
+msgctxt "@option:check"
+msgid "Playback speed change"
+msgstr "Pliiĝo de la reprodukta rapido"
+
+#: src/utilities/osdutils.cpp:51
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@option:check"
+msgid "Taking screenshot"
+msgstr "Ekrankopio"
+
+#: src/utilities/osdutils.cpp:52
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle timing: %1 seconds"
+msgctxt "@option:check"
+msgid "Subtitle timing change"
+msgstr "Subtitola tempumado: %1 sekundoj"
+
+#: src/utilities/osdutils.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle scale: %1"
+msgctxt "@option:check"
+msgid "Subtitle scale change"
+msgstr "Subtitola skalo: %1"
+
+#: src/utilities/osdutils.cpp:54
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitles"
+msgctxt "@option:check"
+msgid "Toggle subtitle"
+msgstr "Subtekstoj"
+
+#: src/utilities/osdutils.cpp:55
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Save changes"
+msgctxt "@option:check"
+msgid "Track change"
+msgstr "Konservi ŝanĝojn"
+
+#: src/utilities/osdutils.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Volume Down"
+msgctxt "@option:check"
+msgid "Volume change"
+msgstr "Laŭteco Malsupren"
+
 #: src/youtube/youtube.cpp:80
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
@@ -3890,10 +3992,6 @@ msgstr ""
 #~ msgctxt "@action"
 #~ msgid "Audio Cycle Down"
 #~ msgstr "Aŭdio-Cikli Malsupren"
-
-#~ msgctxt "@action"
-#~ msgid "Playback Speed Increase"
-#~ msgstr "Pliiĝo de la reprodukta rapido"
 
 #~ msgctxt "@action"
 #~ msgid "Playback Speed Decrease"

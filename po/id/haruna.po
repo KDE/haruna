@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:49+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2025-05-04 09:31+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -425,7 +425,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Jungkit Tajuk"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:132
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:142
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -688,18 +688,18 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:82
 #, kde-format
 msgid "Command line video player"
 msgstr "Baris perintah pemutar video"
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:89
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 "Solusi lintas platform untuk rekam, konversi dan stream audio dan video"
 
-#: src/mpv/mpvitem.cpp:323
+#: src/mpv/mpvitem.cpp:324
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Could not play: %1"
@@ -707,13 +707,13 @@ msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Tidak bisa memutar: %1"
 
-#: src/mpv/mpvitem.cpp:429
+#: src/mpv/mpvitem.cpp:430
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "Volume: %1"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:463
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle timing: %1 seconds"
@@ -721,44 +721,44 @@ msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "Perwaktuan subtitel: %1 detik"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "Perwaktuan subtitel: %1 detik"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:514
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:545
+#: src/mpv/mpvitem.cpp:546
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:558
+#: src/mpv/mpvitem.cpp:559
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "Nihil"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:618
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "Gagal menjepret layar"
 
-#: src/mpv/mpvitem.cpp:622
+#: src/mpv/mpvitem.cpp:623
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "Pengambilan jepretan layar"
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:625
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip osd"
 #| msgid "Screenshot: %1"
@@ -766,7 +766,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Jepretan layar: %1"
 
-#: src/mpv/mpvitem.cpp:658
+#: src/mpv/mpvitem.cpp:659
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -776,13 +776,13 @@ msgstr ""
 "Tidak ada trek video yang terdeteksi, sepertinya trek video tidak bisa "
 "didekode/diputar karena codec yang hilang"
 
-#: src/mpv/mpvitem.cpp:695
+#: src/mpv/mpvitem.cpp:696
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Chapter yang dilewati: %1"
 
-#: src/mpv/mpvitem.cpp:790
+#: src/mpv/mpvitem.cpp:791
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Audio: %1 %2"
@@ -792,7 +792,7 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Audio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:801
+#: src/mpv/mpvitem.cpp:802
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: None"
@@ -800,7 +800,7 @@ msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Subtitel: Nihil"
 
-#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
+#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle: %1 %2"
@@ -810,7 +810,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Subtitel: %1 %2"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:819
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Secondary Subtitle"
@@ -1015,7 +1015,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Tambah"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:407
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:402
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1586,7 +1586,7 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr ""
 
-#: src/qml/Actions.qml:144
+#: src/qml/Actions.qml:143
 #, fuzzy
 #| msgctxt ""
 #| "osd message when trying to open subtile selection dialog while no file is "
@@ -1598,7 +1598,7 @@ msgctxt ""
 msgid "Can’t load subtitle when no file is open"
 msgstr "Tidak bisa memuat subtitel ketika tidak ada file yang dibuka"
 
-#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Kecepatan pemutaran: %1"
@@ -1611,82 +1611,82 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Awal putaran: %1"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Pengulangan: %1–%2"
 
-#: src/qml/Actions.qml:287
+#: src/qml/Actions.qml:292
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Putaran dibersihkan"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Subtitel off"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Subtitel nyala"
 
-#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
+#: src/qml/Actions.qml:329 src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Skala subtitel: %1"
 
-#: src/qml/Actions.qml:343
+#: src/qml/Actions.qml:351
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Deinterlace: %1"
 
-#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
+#: src/qml/Actions.qml:417 src/qml/Actions.qml:424
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Zoom: %1"
 
-#: src/qml/Actions.qml:419
+#: src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Zoom: 0"
 
-#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:444
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontras: %1"
 
-#: src/qml/Actions.qml:436
+#: src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontras: 0"
 
-#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
+#: src/qml/Actions.qml:457 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Kecerahan: %1"
 
-#: src/qml/Actions.qml:453
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Kecerahan: 0"
 
-#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
+#: src/qml/Actions.qml:477 src/qml/Actions.qml:484
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gamma: %1"
 
-#: src/qml/Actions.qml:470
+#: src/qml/Actions.qml:490
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gamma: 0"
 
-#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
+#: src/qml/Actions.qml:497 src/qml/Actions.qml:504
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Saturasi: %1"
 
-#: src/qml/Actions.qml:487
+#: src/qml/Actions.qml:510
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Saturasi: 0"
@@ -1869,17 +1869,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:357
+#: src/qml/Main.qml:352
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Pilih File"
 
-#: src/qml/Main.qml:377
+#: src/qml/Main.qml:372
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Pilih File Subtitel"
 
-#: src/qml/Main.qml:404
+#: src/qml/Main.qml:399
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Buka"
@@ -2394,20 +2394,12 @@ msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "&Simpan"
 
-#: src/qml/Settings/GeneralSettings.qml:28
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Osd font size"
-msgctxt "@label:spinbox"
-msgid "OSD font size"
-msgstr "Ukuran font osd"
-
-#: src/qml/Settings/GeneralSettings.qml:46
+#: src/qml/Settings/GeneralSettings.qml:27
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "Maksimum file terkini"
 
-#: src/qml/Settings/GeneralSettings.qml:64
+#: src/qml/Settings/GeneralSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -2416,12 +2408,12 @@ msgid ""
 "drop etc.)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:58
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "Izinkan hanya satu instansi"
 
-#: src/qml/Settings/GeneralSettings.qml:86
+#: src/qml/Settings/GeneralSettings.qml:67
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2437,12 +2429,12 @@ msgstr ""
 "Mencoba membuka file lainnya dengan Haruna akan membuka file dalam instansi "
 "yang berjalan."
 
-#: src/qml/Settings/GeneralSettings.qml:97
+#: src/qml/Settings/GeneralSettings.qml:78
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "Tambahkan ke playlist"
 
-#: src/qml/Settings/GeneralSettings.qml:107
+#: src/qml/Settings/GeneralSettings.qml:88
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "File will be added to the end of the playlist"
@@ -2450,7 +2442,7 @@ msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "File akan ditambahkan ke akhir playlist"
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:97
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Play next file"
@@ -2458,17 +2450,17 @@ msgctxt "@option:check"
 msgid "Play new file"
 msgstr "Putar file selanjutnya"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@title"
 msgid "Interface"
 msgstr "Antarmuka"
 
-#: src/qml/Settings/GeneralSettings.qml:133
+#: src/qml/Settings/GeneralSettings.qml:114
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "Gaya footer"
 
-#: src/qml/Settings/GeneralSettings.qml:145
+#: src/qml/Settings/GeneralSettings.qml:126
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -2476,12 +2468,12 @@ msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "Sampul baku"
 
-#: src/qml/Settings/GeneralSettings.qml:151
+#: src/qml/Settings/GeneralSettings.qml:132
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:165
+#: src/qml/Settings/GeneralSettings.qml:146
 #, fuzzy
 #| msgctxt "@label:spinbox"
 #| msgid "Show floating footer on"
@@ -2489,17 +2481,17 @@ msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Tampilkan footer mengambang saat"
 
-#: src/qml/Settings/GeneralSettings.qml:180
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:186
+#: src/qml/Settings/GeneralSettings.qml:167
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:201
+#: src/qml/Settings/GeneralSettings.qml:182
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -2511,52 +2503,52 @@ msgstr ""
 "mouse di bagian bawah</strong> — pergerakan mouse di bagian bawah di area "
 "video"
 
-#: src/qml/Settings/GeneralSettings.qml:209
+#: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "Pratinjau thumbnail"
 
-#: src/qml/Settings/GeneralSettings.qml:214
+#: src/qml/Settings/GeneralSettings.qml:195
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "Tampilkan pratinjau thumbnail"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:202
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "Tampilkan pratinjau selagi melintasi bilah progres/jangka."
 
-#: src/qml/Settings/GeneralSettings.qml:230
+#: src/qml/Settings/GeneralSettings.qml:211
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "Gunakan pratinjau yang akurat"
 
-#: src/qml/Settings/GeneralSettings.qml:240
+#: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "Menghasilkan sebuah pratinjau yang akurat namun pelan"
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "Luas thumbnail"
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:247
 msgctxt "@label"
 msgid "Window"
 msgstr "Jendela"
 
-#: src/qml/Settings/GeneralSettings.qml:272
+#: src/qml/Settings/GeneralSettings.qml:253
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "Ubah ukuran ke pas video"
 
-#: src/qml/Settings/GeneralSettings.qml:283
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Tidak didukung di Wayland."
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/qml/Settings/GeneralSettings.qml:265
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2570,12 +2562,12 @@ msgstr ""
 "Jendela diubah ukurannya sesuai resolusi video.\n"
 "Ukuran maksimum tidaklah dibatasi, ini diserahkan kepada sistem operasi."
 
-#: src/qml/Settings/GeneralSettings.qml:294
+#: src/qml/Settings/GeneralSettings.qml:275
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "Mulai dalam mode layar penuh"
 
-#: src/qml/Settings/GeneralSettings.qml:303
+#: src/qml/Settings/GeneralSettings.qml:284
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -2591,19 +2583,19 @@ msgstr ""
 "Ini lebih diutamakan daripada Mengubah ukuran untuk mengepaskan video, dan "
 "Mengingat ukuran jendela dan pengaturan posisi."
 
-#: src/qml/Settings/GeneralSettings.qml:314
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "Ingat posisi dan ukuran jendela"
 
-#: src/qml/Settings/GeneralSettings.qml:327
+#: src/qml/Settings/GeneralSettings.qml:308
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b>Pengembalian posisi tidak didukung di Wayland.</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:310
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -2613,23 +2605,23 @@ msgstr ""
 "jendela-jendela yang baru dibuka.<br><br>%1Pengaturan \"Ubah ukuran ke pas "
 "video\" akan didahulukan."
 
-#: src/qml/Settings/GeneralSettings.qml:341
+#: src/qml/Settings/GeneralSettings.qml:322
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "Tampilkan bilah menu"
 
-#: src/qml/Settings/GeneralSettings.qml:352
+#: src/qml/Settings/GeneralSettings.qml:333
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "Tampilkan bilah alat"
 
-#: src/qml/Settings/GeneralSettings.qml:364
+#: src/qml/Settings/GeneralSettings.qml:345
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:354
 msgctxt "@info:tooltip"
 msgid ""
 "Only affects tooltips that explain how something works or what it does."
@@ -2638,27 +2630,27 @@ msgid ""
 "truncated text)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "Tampilkan penandaan bab"
 
-#: src/qml/Settings/GeneralSettings.qml:394
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:403
+#: src/qml/Settings/GeneralSettings.qml:384
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "Skema warna"
 
-#: src/qml/Settings/GeneralSettings.qml:448
+#: src/qml/Settings/GeneralSettings.qml:429
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "Gaya GUI"
 
-#: src/qml/Settings/GeneralSettings.qml:481
+#: src/qml/Settings/GeneralSettings.qml:462
 #, fuzzy
 #| msgctxt "@label:listbox"
 #| msgid "Default cover"
@@ -2813,6 +2805,19 @@ msgstr "Tidak ada tindakan yang ditentukan"
 #: src/qml/Settings/MouseSettings.qml:367
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
+msgstr ""
+
+#: src/qml/Settings/OsdSettings.qml:25
+#, fuzzy
+#| msgctxt "@label:spinbox"
+#| msgid "Osd font size"
+msgctxt "@label:spinbox"
+msgid "OSD font size"
+msgstr "Ukuran font osd"
+
+#: src/qml/Settings/OsdSettings.qml:44
+msgctxt "@title"
+msgid "Choose when to show osd"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:27
@@ -3256,62 +3261,67 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "Buka item dengan klik tunggal"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:70
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Pengaturan"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "General"
 msgstr "Umum"
 
-#: src/qml/Settings/SettingsWindow.qml:95
+#: src/qml/Settings/SettingsWindow.qml:96
+msgctxt "@action"
+msgid "Osd"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
 msgid "Playback"
 msgstr "Pemutaran"
 
-#: src/qml/Settings/SettingsWindow.qml:104
+#: src/qml/Settings/SettingsWindow.qml:114
 msgctxt "@action"
 msgid "Video"
 msgstr "Video"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:124
 msgctxt "@action"
 msgid "Audio"
 msgstr "Audio"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "Subtitel"
 
-#: src/qml/Settings/SettingsWindow.qml:141
+#: src/qml/Settings/SettingsWindow.qml:151
 msgctxt "@action"
 msgid "Mouse"
 msgstr "Mouse"
 
-#: src/qml/Settings/SettingsWindow.qml:150
+#: src/qml/Settings/SettingsWindow.qml:160
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "Pintasan"
 
-#: src/qml/Settings/SettingsWindow.qml:159
+#: src/qml/Settings/SettingsWindow.qml:169
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "Perintah Kustom"
 
-#: src/qml/Settings/SettingsWindow.qml:174
+#: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
 msgid "Database"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:183
+#: src/qml/Settings/SettingsWindow.qml:193
 msgctxt "@action"
 msgid "Debug"
 msgstr "Debug"
 
-#: src/qml/Settings/SettingsWindow.qml:193
+#: src/qml/Settings/SettingsWindow.qml:203
 msgctxt "@action"
 msgid "About"
 msgstr "Tentang"
@@ -3617,6 +3627,98 @@ msgstr ""
 "Izinkan penimpaan secara sementara pengaturan pemilihan format ytdl. Akan "
 "menimpa jika pengaturan telah diubah melalui GUI"
 
+#: src/utilities/osdutils.cpp:45
+#, kde-format
+msgctxt "@option:check"
+msgid "AB loop"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Skip chapters"
+msgctxt "@option:check"
+msgid "Skip chapter"
+msgstr "Lewati bab-bab"
+
+#: src/utilities/osdutils.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Toggle Deinterlacing"
+msgctxt "@option:check"
+msgid "Toggle deinterlace"
+msgstr "Jungkit Deinterlacing"
+
+#: src/utilities/osdutils.cpp:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Image adjustments (contrast, brightness, gamma and saturation)"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:49
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Playing new file"
+msgstr "Putar file selanjutnya"
+
+#: src/utilities/osdutils.cpp:50
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Playback Speed Increase"
+msgctxt "@option:check"
+msgid "Playback speed change"
+msgstr "Tambahi Kecepatan Pemutaran"
+
+#: src/utilities/osdutils.cpp:51
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@option:check"
+msgid "Taking screenshot"
+msgstr "Jepretan layar"
+
+#: src/utilities/osdutils.cpp:52
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle timing: %1 seconds"
+msgctxt "@option:check"
+msgid "Subtitle timing change"
+msgstr "Perwaktuan subtitel: %1 detik"
+
+#: src/utilities/osdutils.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle scale: %1"
+msgctxt "@option:check"
+msgid "Subtitle scale change"
+msgstr "Skala subtitel: %1"
+
+#: src/utilities/osdutils.cpp:54
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Subtitles"
+msgctxt "@option:check"
+msgid "Toggle subtitle"
+msgstr "Subtitel"
+
+#: src/utilities/osdutils.cpp:55
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Save changes"
+msgctxt "@option:check"
+msgid "Track change"
+msgstr "Simpan perubahan"
+
+#: src/utilities/osdutils.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Volume Down"
+msgctxt "@option:check"
+msgid "Volume change"
+msgstr "Turunkan Volume"
+
 #: src/youtube/youtube.cpp:80
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
@@ -3759,10 +3861,6 @@ msgstr ""
 #~ msgctxt "@action"
 #~ msgid "Audio Cycle Down"
 #~ msgstr "Siklus Audio Turun"
-
-#~ msgctxt "@action"
-#~ msgid "Playback Speed Increase"
-#~ msgstr "Tambahi Kecepatan Pemutaran"
 
 #~ msgctxt "@action"
 #~ msgid "Playback Speed Decrease"

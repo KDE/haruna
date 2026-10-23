@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:49+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -429,7 +429,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "शीर्षक टॉगल करें"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:132
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:142
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgctxt "@action"
@@ -678,85 +678,85 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:82
 #, kde-format
 msgid "Command line video player"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:89
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:323
+#: src/mpv/mpvitem.cpp:324
 #, fuzzy, kde-format
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/mpv/mpvitem.cpp:429
+#: src/mpv/mpvitem.cpp:430
 #, fuzzy, kde-format
 #| msgid "Volume: %1"
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "आवाज़ : %1"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:463
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:465
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:514
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:545
+#: src/mpv/mpvitem.cpp:546
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:558
+#: src/mpv/mpvitem.cpp:559
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:618
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:622
+#: src/mpv/mpvitem.cpp:623
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:625
 #, fuzzy, kde-format
 #| msgid "Screenshot"
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "स्क्रीनशॉट"
 
-#: src/mpv/mpvitem.cpp:658
+#: src/mpv/mpvitem.cpp:659
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -764,14 +764,14 @@ msgid ""
 "due to missing codecs"
 msgstr ""
 
-#: src/mpv/mpvitem.cpp:695
+#: src/mpv/mpvitem.cpp:696
 #, fuzzy, kde-format
 #| msgid "Skip chapters"
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "अध्याय छोड़ें"
 
-#: src/mpv/mpvitem.cpp:790
+#: src/mpv/mpvitem.cpp:791
 #, fuzzy, kde-format
 #| msgid "Audio: %1 %2"
 msgctxt ""
@@ -780,14 +780,14 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "ऑडियो: %1 %2"
 
-#: src/mpv/mpvitem.cpp:801
+#: src/mpv/mpvitem.cpp:802
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "उपशीर्षक चालू"
 
-#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
+#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
 #, fuzzy, kde-format
 #| msgid "Subtitle: %1 %2"
 msgctxt ""
@@ -796,7 +796,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "उपशीर्षक: %1 %2"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:819
 #, fuzzy, kde-format
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip; osd message when no sub is selected"
@@ -987,7 +987,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "जोड़ें (&A)"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:407
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:402
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1538,14 +1538,14 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr ""
 
-#: src/qml/Actions.qml:144
+#: src/qml/Actions.qml:143
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr ""
 
-#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@info:tooltip"
@@ -1559,108 +1559,108 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "लूप आरंभ : %1"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:284
 #, fuzzy
 #| msgid "Loop: %1 - %2"
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "लूप : %1 - %2"
 
-#: src/qml/Actions.qml:287
+#: src/qml/Actions.qml:292
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr ""
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "उपशीर्षक बंद"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 #, fuzzy
 #| msgid "Subtitles off"
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "उपशीर्षक बंद"
 
-#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
+#: src/qml/Actions.qml:329 src/qml/Actions.qml:336
 #, fuzzy
 #| msgid "Subtitles on"
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "उपशीर्षक चालू"
 
-#: src/qml/Actions.qml:343
+#: src/qml/Actions.qml:351
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr ""
 
-#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
+#: src/qml/Actions.qml:417 src/qml/Actions.qml:424
 #, fuzzy
 #| msgid "Zoom: %1"
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "ज़ूम : %1"
 
-#: src/qml/Actions.qml:419
+#: src/qml/Actions.qml:430
 #, fuzzy
 #| msgid "Zoom: 0"
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "ज़ूम : 0"
 
-#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:444
 #, fuzzy
 #| msgid "Contrast: %1"
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "व्यतिरेक: %1"
 
-#: src/qml/Actions.qml:436
+#: src/qml/Actions.qml:450
 #, fuzzy
 #| msgid "Contrast: 0"
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "व्यतिरेक : 0"
 
-#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
+#: src/qml/Actions.qml:457 src/qml/Actions.qml:464
 #, fuzzy
 #| msgid "Brightness: %1"
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "चमकीलापन: %1"
 
-#: src/qml/Actions.qml:453
+#: src/qml/Actions.qml:470
 #, fuzzy
 #| msgid "Brightness: 0"
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "चमकीलापन: 0"
 
-#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
+#: src/qml/Actions.qml:477 src/qml/Actions.qml:484
 #, fuzzy
 #| msgid "Gamma: %1"
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "गामा : %1"
 
-#: src/qml/Actions.qml:470
+#: src/qml/Actions.qml:490
 #, fuzzy
 #| msgid "Gamma: 0"
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "गामा : 0"
 
-#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
+#: src/qml/Actions.qml:497 src/qml/Actions.qml:504
 #, fuzzy
 #| msgid "Saturation: %1"
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "संतृप्ति: %1"
 
-#: src/qml/Actions.qml:487
+#: src/qml/Actions.qml:510
 #, fuzzy
 #| msgid "Saturation: 0"
 msgctxt "@info:tooltip"
@@ -1866,21 +1866,21 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "हारुना"
 
-#: src/qml/Main.qml:357
+#: src/qml/Main.qml:352
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:377
+#: src/qml/Main.qml:372
 #, fuzzy
 #| msgid "Select file"
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "फ़ाइल चुनें"
 
-#: src/qml/Main.qml:404
+#: src/qml/Main.qml:399
 #, fuzzy
 #| msgid "Open"
 msgctxt "@action:button"
@@ -2433,21 +2433,14 @@ msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "सहेजें (&S)"
 
-#: src/qml/Settings/GeneralSettings.qml:28
-#, fuzzy
-#| msgid "Osd font size"
-msgctxt "@label:spinbox"
-msgid "OSD font size"
-msgstr "ओएसडी फ़ॉन्ट आकार"
-
-#: src/qml/Settings/GeneralSettings.qml:46
+#: src/qml/Settings/GeneralSettings.qml:27
 #, fuzzy
 #| msgid "Recent Files"
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "हाल हीं के फाइल"
 
-#: src/qml/Settings/GeneralSettings.qml:64
+#: src/qml/Settings/GeneralSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -2456,77 +2449,77 @@ msgid ""
 "drop etc.)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:58
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:86
+#: src/qml/Settings/GeneralSettings.qml:67
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
 "another file with Haruna will open the file in the running instance."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:97
+#: src/qml/Settings/GeneralSettings.qml:78
 #, fuzzy
 #| msgid "Playlist"
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "वीडियो-सूची"
 
-#: src/qml/Settings/GeneralSettings.qml:107
+#: src/qml/Settings/GeneralSettings.qml:88
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:97
 #, fuzzy
 #| msgid "Play next file"
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "अगला फ़ाइल चलाएँ"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:108
 #, fuzzy
 #| msgid "Interface"
 msgctxt "@title"
 msgid "Interface"
 msgstr "इंटरफेस"
 
-#: src/qml/Settings/GeneralSettings.qml:133
+#: src/qml/Settings/GeneralSettings.qml:114
 #, fuzzy
 #| msgid "Osd font size"
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "ओएसडी फ़ॉन्ट आकार"
 
-#: src/qml/Settings/GeneralSettings.qml:145
+#: src/qml/Settings/GeneralSettings.qml:126
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:151
+#: src/qml/Settings/GeneralSettings.qml:132
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:165
+#: src/qml/Settings/GeneralSettings.qml:146
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:180
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:186
+#: src/qml/Settings/GeneralSettings.qml:167
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:201
+#: src/qml/Settings/GeneralSettings.qml:182
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -2534,97 +2527,97 @@ msgid ""
 "strong> — mouse movement on the bottom of the video area"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:209
+#: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:214
+#: src/qml/Settings/GeneralSettings.qml:195
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:202
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:230
+#: src/qml/Settings/GeneralSettings.qml:211
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:240
+#: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:247
 msgctxt "@label"
 msgid "Window"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:272
+#: src/qml/Settings/GeneralSettings.qml:253
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:283
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/qml/Settings/GeneralSettings.qml:265
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:294
+#: src/qml/Settings/GeneralSettings.qml:275
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:303
+#: src/qml/Settings/GeneralSettings.qml:284
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
 "over Resize to fit video, and Remember window size and position settings."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:314
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:327
+#: src/qml/Settings/GeneralSettings.qml:308
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:310
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
 "opened windows.<br><br>%1The “Resize to fit video” setting takes precedence."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:341
+#: src/qml/Settings/GeneralSettings.qml:322
 #, fuzzy
 #| msgid "Show Menubar"
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "मेन्यू पट्टी दिखाएँ"
 
-#: src/qml/Settings/GeneralSettings.qml:352
+#: src/qml/Settings/GeneralSettings.qml:333
 #: src/qml/Settings/PlaylistSettings.qml:169
 #, fuzzy
 #| msgid "Show Toolbar"
@@ -2632,12 +2625,12 @@ msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "औज़ार पट्टी दिखाएँ"
 
-#: src/qml/Settings/GeneralSettings.qml:364
+#: src/qml/Settings/GeneralSettings.qml:345
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:354
 msgctxt "@info:tooltip"
 msgid ""
 "Only affects tooltips that explain how something works or what it does."
@@ -2646,33 +2639,33 @@ msgid ""
 "truncated text)."
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:364
 #, fuzzy
 #| msgid "Skip chapters"
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "अध्याय छोड़ें"
 
-#: src/qml/Settings/GeneralSettings.qml:394
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
 msgstr ""
 
-#: src/qml/Settings/GeneralSettings.qml:403
+#: src/qml/Settings/GeneralSettings.qml:384
 #, fuzzy
 #| msgid "Color scheme"
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "रंग योजना"
 
-#: src/qml/Settings/GeneralSettings.qml:448
+#: src/qml/Settings/GeneralSettings.qml:429
 #, fuzzy
 #| msgid "GUI Style"
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "जीयूआइ शैली"
 
-#: src/qml/Settings/GeneralSettings.qml:481
+#: src/qml/Settings/GeneralSettings.qml:462
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr ""
@@ -2817,6 +2810,18 @@ msgstr "संतृप्ति रिसेट करें"
 #: src/qml/Settings/MouseSettings.qml:367
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
+msgstr ""
+
+#: src/qml/Settings/OsdSettings.qml:25
+#, fuzzy
+#| msgid "Osd font size"
+msgctxt "@label:spinbox"
+msgid "OSD font size"
+msgstr "ओएसडी फ़ॉन्ट आकार"
+
+#: src/qml/Settings/OsdSettings.qml:44
+msgctxt "@title"
+msgid "Choose when to show osd"
 msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:27
@@ -3202,80 +3207,85 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:70
 #, fuzzy
 #| msgid "Settings"
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "विन्यास"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 #, fuzzy
 #| msgid "General"
 msgctxt "@action"
 msgid "General"
 msgstr "साधारण"
 
-#: src/qml/Settings/SettingsWindow.qml:95
+#: src/qml/Settings/SettingsWindow.qml:96
+msgctxt "@action"
+msgid "Osd"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:105
 #, fuzzy
 #| msgid "Playback"
 msgctxt "@action"
 msgid "Playback"
 msgstr "प्लेबैक"
 
-#: src/qml/Settings/SettingsWindow.qml:104
+#: src/qml/Settings/SettingsWindow.qml:114
 #, fuzzy
 #| msgid "Video"
 msgctxt "@action"
 msgid "Video"
 msgstr "वीडियो"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:124
 #, fuzzy
 #| msgid "Audio"
 msgctxt "@action"
 msgid "Audio"
 msgstr "ऑडियो"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:133
 #, fuzzy
 #| msgid "Subtitles"
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/qml/Settings/SettingsWindow.qml:141
+#: src/qml/Settings/SettingsWindow.qml:151
 #, fuzzy
 #| msgid "Mouse"
 msgctxt "@action"
 msgid "Mouse"
 msgstr "माउस"
 
-#: src/qml/Settings/SettingsWindow.qml:150
+#: src/qml/Settings/SettingsWindow.qml:160
 #, fuzzy
 #| msgid "Shortcut"
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: src/qml/Settings/SettingsWindow.qml:159
+#: src/qml/Settings/SettingsWindow.qml:169
 #, fuzzy
 #| msgid "Custom commands"
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "तदनुकूल समादेश"
 
-#: src/qml/Settings/SettingsWindow.qml:174
+#: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
 msgid "Database"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:183
+#: src/qml/Settings/SettingsWindow.qml:193
 msgctxt "@action"
 msgid "Debug"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:193
+#: src/qml/Settings/SettingsWindow.qml:203
 #, fuzzy
 #| msgid "About"
 msgctxt "@action"
@@ -3561,6 +3571,88 @@ msgid ""
 "overwritten if the setting is changed through the GUI"
 msgstr ""
 
+#: src/utilities/osdutils.cpp:45
+#, kde-format
+msgctxt "@option:check"
+msgid "AB loop"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:46
+#, fuzzy, kde-format
+#| msgid "Skip chapters"
+msgctxt "@option:check"
+msgid "Skip chapter"
+msgstr "अध्याय छोड़ें"
+
+#: src/utilities/osdutils.cpp:47
+#, fuzzy, kde-format
+#| msgid "Toggle Header"
+msgctxt "@option:check"
+msgid "Toggle deinterlace"
+msgstr "शीर्षक टॉगल करें"
+
+#: src/utilities/osdutils.cpp:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Image adjustments (contrast, brightness, gamma and saturation)"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:49
+#, fuzzy, kde-format
+#| msgid "Play next file"
+msgctxt "@option:check"
+msgid "Playing new file"
+msgstr "अगला फ़ाइल चलाएँ"
+
+#: src/utilities/osdutils.cpp:50
+#, fuzzy, kde-format
+#| msgid "Playback"
+msgctxt "@option:check"
+msgid "Playback speed change"
+msgstr "प्लेबैक"
+
+#: src/utilities/osdutils.cpp:51
+#, fuzzy, kde-format
+#| msgid "Screenshot"
+msgctxt "@option:check"
+msgid "Taking screenshot"
+msgstr "स्क्रीनशॉट"
+
+#: src/utilities/osdutils.cpp:52
+#, fuzzy, kde-format
+#| msgid "Subtitle: %1 %2"
+msgctxt "@option:check"
+msgid "Subtitle timing change"
+msgstr "उपशीर्षक: %1 %2"
+
+#: src/utilities/osdutils.cpp:53
+#, fuzzy, kde-format
+#| msgid "Subtitles on"
+msgctxt "@option:check"
+msgid "Subtitle scale change"
+msgstr "उपशीर्षक चालू"
+
+#: src/utilities/osdutils.cpp:54
+#, fuzzy, kde-format
+#| msgid "Subtitles"
+msgctxt "@option:check"
+msgid "Toggle subtitle"
+msgstr "उपशीर्षक"
+
+#: src/utilities/osdutils.cpp:55
+#, fuzzy, kde-format
+#| msgid "Save changes"
+msgctxt "@option:check"
+msgid "Track change"
+msgstr "परिवर्तन सहेजें"
+
+#: src/utilities/osdutils.cpp:56
+#, fuzzy, kde-format
+#| msgid "Volume Down"
+msgctxt "@option:check"
+msgid "Volume change"
+msgstr "आवाज़ घटाएँ"
+
 #: src/youtube/youtube.cpp:80
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
@@ -3635,12 +3727,6 @@ msgstr ""
 #~ msgctxt "@action"
 #~ msgid "Audio Cycle Down"
 #~ msgstr "उपशीर्षक चालू"
-
-#, fuzzy
-#~| msgid "Playback"
-#~ msgctxt "@action"
-#~ msgid "Playback Speed Increase"
-#~ msgstr "प्लेबैक"
 
 #, fuzzy
 #~| msgid "Playback"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:49+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -388,7 +388,7 @@ msgctxt "@action"
 msgid "Toggle Header"
 msgstr "显示/隐藏标题"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:132
+#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:142
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
@@ -619,78 +619,78 @@ msgctxt "@label meta modifier key"
 msgid "Meta"
 msgstr "Meta 键"
 
-#: src/mpv/mpvitem.cpp:81
+#: src/mpv/mpvitem.cpp:82
 #, kde-format
 msgid "Command line video player"
 msgstr "命令行视频播放器"
 
-#: src/mpv/mpvitem.cpp:88
+#: src/mpv/mpvitem.cpp:89
 #, kde-format
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "用于对音频和视频进行录制、转换和推流的跨平台解决方案"
 
-#: src/mpv/mpvitem.cpp:323
+#: src/mpv/mpvitem.cpp:324
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "无法播放：%1"
 
-#: src/mpv/mpvitem.cpp:429
+#: src/mpv/mpvitem.cpp:430
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "音量：%1"
 
-#: src/mpv/mpvitem.cpp:462
+#: src/mpv/mpvitem.cpp:463
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "字幕偏移：+%1 秒"
 
-#: src/mpv/mpvitem.cpp:464
+#: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "字幕偏移：%1 秒"
 
-#: src/mpv/mpvitem.cpp:513
+#: src/mpv/mpvitem.cpp:514
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "文件不存在：%1"
 
-#: src/mpv/mpvitem.cpp:545
+#: src/mpv/mpvitem.cpp:546
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:558
+#: src/mpv/mpvitem.cpp:559
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "无"
 
-#: src/mpv/mpvitem.cpp:617
+#: src/mpv/mpvitem.cpp:618
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "截图失败"
 
-#: src/mpv/mpvitem.cpp:622
+#: src/mpv/mpvitem.cpp:623
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "截图已保存"
 
-#: src/mpv/mpvitem.cpp:624
+#: src/mpv/mpvitem.cpp:625
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "截图：%1"
 
-#: src/mpv/mpvitem.cpp:658
+#: src/mpv/mpvitem.cpp:659
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -699,13 +699,13 @@ msgid ""
 msgstr ""
 "没有检测到视频轨道。这大概率是因为缺少编解码器而导致视频轨道无法被解码/播放。"
 
-#: src/mpv/mpvitem.cpp:695
+#: src/mpv/mpvitem.cpp:696
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "跳过的章节：%1"
 
-#: src/mpv/mpvitem.cpp:790
+#: src/mpv/mpvitem.cpp:791
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -713,13 +713,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "音频：%1 %2"
 
-#: src/mpv/mpvitem.cpp:801
+#: src/mpv/mpvitem.cpp:802
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "字幕：无"
 
-#: src/mpv/mpvitem.cpp:806 src/mpv/mpvitem.cpp:822
+#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -727,7 +727,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/mpv/mpvitem.cpp:817
+#: src/mpv/mpvitem.cpp:819
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -891,7 +891,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "添加"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:407
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:402
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1383,14 +1383,14 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "单击并按住"
 
-#: src/qml/Actions.qml:144
+#: src/qml/Actions.qml:143
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "没有打开文件时无法加载字幕"
 
-#: src/qml/Actions.qml:163 src/qml/Actions.qml:169 src/qml/Actions.qml:174
+#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "播放速度：%1"
@@ -1400,82 +1400,82 @@ msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "循环起点：%1"
 
-#: src/qml/Actions.qml:281
+#: src/qml/Actions.qml:284
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "循环：%1–%2"
 
-#: src/qml/Actions.qml:287
+#: src/qml/Actions.qml:292
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "循环已清除"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "字幕关闭"
 
-#: src/qml/Actions.qml:307
+#: src/qml/Actions.qml:313
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "字幕开启"
 
-#: src/qml/Actions.qml:323 src/qml/Actions.qml:329
+#: src/qml/Actions.qml:329 src/qml/Actions.qml:336
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "字幕缩放：%1"
 
-#: src/qml/Actions.qml:343
+#: src/qml/Actions.qml:351
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "反交错：%1"
 
-#: src/qml/Actions.qml:408 src/qml/Actions.qml:414
+#: src/qml/Actions.qml:417 src/qml/Actions.qml:424
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "缩放：%1"
 
-#: src/qml/Actions.qml:419
+#: src/qml/Actions.qml:430
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "缩放：0"
 
-#: src/qml/Actions.qml:425 src/qml/Actions.qml:431
+#: src/qml/Actions.qml:437 src/qml/Actions.qml:444
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "对比度：%1"
 
-#: src/qml/Actions.qml:436
+#: src/qml/Actions.qml:450
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "对比度：0"
 
-#: src/qml/Actions.qml:442 src/qml/Actions.qml:448
+#: src/qml/Actions.qml:457 src/qml/Actions.qml:464
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "亮度：%1"
 
-#: src/qml/Actions.qml:453
+#: src/qml/Actions.qml:470
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "亮度：0"
 
-#: src/qml/Actions.qml:459 src/qml/Actions.qml:465
+#: src/qml/Actions.qml:477 src/qml/Actions.qml:484
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "伽马：%1"
 
-#: src/qml/Actions.qml:470
+#: src/qml/Actions.qml:490
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "伽马：0"
 
-#: src/qml/Actions.qml:476 src/qml/Actions.qml:482
+#: src/qml/Actions.qml:497 src/qml/Actions.qml:504
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "饱和度：%1"
 
-#: src/qml/Actions.qml:487
+#: src/qml/Actions.qml:510
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "饱和度：0"
@@ -1644,17 +1644,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:357
+#: src/qml/Main.qml:352
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "选择文件"
 
-#: src/qml/Main.qml:377
+#: src/qml/Main.qml:372
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "选择字幕文件"
 
-#: src/qml/Main.qml:404
+#: src/qml/Main.qml:399
 msgctxt "@action:button"
 msgid "Open"
 msgstr "打开"
@@ -2127,17 +2127,12 @@ msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "保存(&S)"
 
-#: src/qml/Settings/GeneralSettings.qml:28
-msgctxt "@label:spinbox"
-msgid "OSD font size"
-msgstr "屏显字体大小"
-
-#: src/qml/Settings/GeneralSettings.qml:46
+#: src/qml/Settings/GeneralSettings.qml:27
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "最近文件数目"
 
-#: src/qml/Settings/GeneralSettings.qml:64
+#: src/qml/Settings/GeneralSettings.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -2149,12 +2144,12 @@ msgstr ""
 "加粗的项目是从“打开文件/ URL”操作以及从外部应用程序 (命令行、文件管理器、拖放"
 "等) 打开的文件。"
 
-#: src/qml/Settings/GeneralSettings.qml:77
+#: src/qml/Settings/GeneralSettings.qml:58
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "仅运行一个实例"
 
-#: src/qml/Settings/GeneralSettings.qml:86
+#: src/qml/Settings/GeneralSettings.qml:67
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
@@ -2163,57 +2158,57 @@ msgstr ""
 "尝试打开另一个 Haruna 实例时将不会发生任何事情。<br>尝试用 Haruna 打开另一个"
 "文件时将用正在运行的实例打开。"
 
-#: src/qml/Settings/GeneralSettings.qml:97
+#: src/qml/Settings/GeneralSettings.qml:78
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "添加文件至播放列表"
 
-#: src/qml/Settings/GeneralSettings.qml:107
+#: src/qml/Settings/GeneralSettings.qml:88
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "文件将被添加到播放列表末尾。"
 
-#: src/qml/Settings/GeneralSettings.qml:116
+#: src/qml/Settings/GeneralSettings.qml:97
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "播放新文件"
 
-#: src/qml/Settings/GeneralSettings.qml:127
+#: src/qml/Settings/GeneralSettings.qml:108
 msgctxt "@title"
 msgid "Interface"
 msgstr "界面"
 
-#: src/qml/Settings/GeneralSettings.qml:133
+#: src/qml/Settings/GeneralSettings.qml:114
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "页脚样式"
 
-#: src/qml/Settings/GeneralSettings.qml:145
+#: src/qml/Settings/GeneralSettings.qml:126
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "默认"
 
-#: src/qml/Settings/GeneralSettings.qml:151
+#: src/qml/Settings/GeneralSettings.qml:132
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr "悬浮"
 
-#: src/qml/Settings/GeneralSettings.qml:165
+#: src/qml/Settings/GeneralSettings.qml:146
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "显示悬浮页脚的条件"
 
-#: src/qml/Settings/GeneralSettings.qml:180
+#: src/qml/Settings/GeneralSettings.qml:161
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr "所有鼠标移动"
 
-#: src/qml/Settings/GeneralSettings.qml:186
+#: src/qml/Settings/GeneralSettings.qml:167
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr "底部鼠标移动"
 
-#: src/qml/Settings/GeneralSettings.qml:201
+#: src/qml/Settings/GeneralSettings.qml:182
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -2223,64 +2218,64 @@ msgstr ""
 "用于显示页脚的操作<br><strong>Every mouse movement</strong> — 在视频区域之上"
 "移动鼠标<br><strong>在画面底部移动鼠标</strong> - 在视频底部区域移动鼠标"
 
-#: src/qml/Settings/GeneralSettings.qml:209
+#: src/qml/Settings/GeneralSettings.qml:190
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:214
+#: src/qml/Settings/GeneralSettings.qml:195
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "显示预览缩略图"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/qml/Settings/GeneralSettings.qml:202
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "光标悬停在播放进度条上时显示预览"
 
-#: src/qml/Settings/GeneralSettings.qml:230
+#: src/qml/Settings/GeneralSettings.qml:211
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "使用精确预览图"
 
-#: src/qml/Settings/GeneralSettings.qml:240
+#: src/qml/Settings/GeneralSettings.qml:221
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "精确预览图的生成速度较慢"
 
-#: src/qml/Settings/GeneralSettings.qml:248
+#: src/qml/Settings/GeneralSettings.qml:229
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "缩略图宽度"
 
-#: src/qml/Settings/GeneralSettings.qml:266
+#: src/qml/Settings/GeneralSettings.qml:247
 msgctxt "@label"
 msgid "Window"
 msgstr "窗口"
 
-#: src/qml/Settings/GeneralSettings.qml:272
+#: src/qml/Settings/GeneralSettings.qml:253
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "调整窗口大小以适应视频"
 
-#: src/qml/Settings/GeneralSettings.qml:283
+#: src/qml/Settings/GeneralSettings.qml:264
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "在 Wayland 环境中不支持。"
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/qml/Settings/GeneralSettings.qml:265
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
 "is not constrained, this is left to the operating system."
 msgstr " 窗口将根据视频分辨率调整大小。<br>最大尺寸没有限制，由操作系统控制。"
 
-#: src/qml/Settings/GeneralSettings.qml:294
+#: src/qml/Settings/GeneralSettings.qml:275
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "启动为全屏模式"
 
-#: src/qml/Settings/GeneralSettings.qml:303
+#: src/qml/Settings/GeneralSettings.qml:284
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
@@ -2289,19 +2284,19 @@ msgstr ""
 "应用程序启动时进入全屏模式。<br>此选项的优先级高于“调整窗口大小以适应视"
 "频”和“记住窗口大小和位置”。"
 
-#: src/qml/Settings/GeneralSettings.qml:314
+#: src/qml/Settings/GeneralSettings.qml:295
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "记住窗口大小和位置"
 
-#: src/qml/Settings/GeneralSettings.qml:327
+#: src/qml/Settings/GeneralSettings.qml:308
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "<b> 在 Wayland 环境中不支持恢复位置。</b><br><br>"
 
-#: src/qml/Settings/GeneralSettings.qml:329
+#: src/qml/Settings/GeneralSettings.qml:310
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -2310,23 +2305,23 @@ msgstr ""
 "窗口的大小和位置的更改将被保存并用于新打开的窗口。<br><br>%1“调整窗口大小以适"
 "应视频”选项的优先级更高。"
 
-#: src/qml/Settings/GeneralSettings.qml:341
+#: src/qml/Settings/GeneralSettings.qml:322
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "显示菜单栏"
 
-#: src/qml/Settings/GeneralSettings.qml:352
+#: src/qml/Settings/GeneralSettings.qml:333
 #: src/qml/Settings/PlaylistSettings.qml:169
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "显示工具栏"
 
-#: src/qml/Settings/GeneralSettings.qml:364
+#: src/qml/Settings/GeneralSettings.qml:345
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
 msgstr "显示说明性悬停提示"
 
-#: src/qml/Settings/GeneralSettings.qml:373
+#: src/qml/Settings/GeneralSettings.qml:354
 msgctxt "@info:tooltip"
 msgid ""
 "Only affects tooltips that explain how something works or what it does."
@@ -2338,27 +2333,27 @@ msgstr ""
 "提示不会被禁用 (例如，进度条上悬停时显示鼠标位置的时间戳，以及被截断文本的悬"
 "停提示)。"
 
-#: src/qml/Settings/GeneralSettings.qml:383
+#: src/qml/Settings/GeneralSettings.qml:364
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "显示章节标记"
 
-#: src/qml/Settings/GeneralSettings.qml:394
+#: src/qml/Settings/GeneralSettings.qml:375
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
 msgstr "在任务栏图标上显示进度"
 
-#: src/qml/Settings/GeneralSettings.qml:403
+#: src/qml/Settings/GeneralSettings.qml:384
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "配色方案"
 
-#: src/qml/Settings/GeneralSettings.qml:448
+#: src/qml/Settings/GeneralSettings.qml:429
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "界面样式"
 
-#: src/qml/Settings/GeneralSettings.qml:481
+#: src/qml/Settings/GeneralSettings.qml:462
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "默认"
@@ -2488,6 +2483,16 @@ msgstr "没有选择操作"
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "鼠标按键组合已分配给“%1”"
+
+#: src/qml/Settings/OsdSettings.qml:25
+msgctxt "@label:spinbox"
+msgid "OSD font size"
+msgstr "屏显字体大小"
+
+#: src/qml/Settings/OsdSettings.qml:44
+msgctxt "@title"
+msgid "Choose when to show osd"
+msgstr ""
 
 #: src/qml/Settings/PlaybackSettings.qml:27
 msgctxt "@label:spinbox"
@@ -2861,62 +2866,67 @@ msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "单击打开项目"
 
-#: src/qml/Settings/SettingsWindow.qml:69
+#: src/qml/Settings/SettingsWindow.qml:70
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "设置"
 
-#: src/qml/Settings/SettingsWindow.qml:86
+#: src/qml/Settings/SettingsWindow.qml:87
 msgctxt "@action"
 msgid "General"
 msgstr "常规"
 
-#: src/qml/Settings/SettingsWindow.qml:95
+#: src/qml/Settings/SettingsWindow.qml:96
+msgctxt "@action"
+msgid "Osd"
+msgstr ""
+
+#: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
 msgid "Playback"
 msgstr "播放"
 
-#: src/qml/Settings/SettingsWindow.qml:104
+#: src/qml/Settings/SettingsWindow.qml:114
 msgctxt "@action"
 msgid "Video"
 msgstr "视频"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/qml/Settings/SettingsWindow.qml:124
 msgctxt "@action"
 msgid "Audio"
 msgstr "音频"
 
-#: src/qml/Settings/SettingsWindow.qml:123
+#: src/qml/Settings/SettingsWindow.qml:133
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "字幕"
 
-#: src/qml/Settings/SettingsWindow.qml:141
+#: src/qml/Settings/SettingsWindow.qml:151
 msgctxt "@action"
 msgid "Mouse"
 msgstr "鼠标"
 
-#: src/qml/Settings/SettingsWindow.qml:150
+#: src/qml/Settings/SettingsWindow.qml:160
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: src/qml/Settings/SettingsWindow.qml:159
+#: src/qml/Settings/SettingsWindow.qml:169
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "自定义命令"
 
-#: src/qml/Settings/SettingsWindow.qml:174
+#: src/qml/Settings/SettingsWindow.qml:184
 msgctxt "@action"
 msgid "Database"
 msgstr "数据库"
 
-#: src/qml/Settings/SettingsWindow.qml:183
+#: src/qml/Settings/SettingsWindow.qml:193
 msgctxt "@action"
 msgid "Debug"
 msgstr "调试"
 
-#: src/qml/Settings/SettingsWindow.qml:193
+#: src/qml/Settings/SettingsWindow.qml:203
 msgctxt "@action"
 msgid "About"
 msgstr "关于"
@@ -3201,6 +3211,98 @@ msgid ""
 msgstr ""
 "允许暂时覆盖 yt-dlp 格式选择设置。如果是通过图形界面更改了该设置，则原有设置"
 "将被实际覆盖"
+
+#: src/utilities/osdutils.cpp:45
+#, kde-format
+msgctxt "@option:check"
+msgid "AB loop"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Skip chapters"
+msgctxt "@option:check"
+msgid "Skip chapter"
+msgstr "跳过章节"
+
+#: src/utilities/osdutils.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Toggle Deinterlacing"
+msgctxt "@option:check"
+msgid "Toggle deinterlace"
+msgstr "启用/禁用反交错"
+
+#: src/utilities/osdutils.cpp:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Image adjustments (contrast, brightness, gamma and saturation)"
+msgstr ""
+
+#: src/utilities/osdutils.cpp:49
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Play new file"
+msgctxt "@option:check"
+msgid "Playing new file"
+msgstr "播放新文件"
+
+#: src/utilities/osdutils.cpp:50
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Playback speed: %1"
+msgctxt "@option:check"
+msgid "Playback speed change"
+msgstr "播放速度：%1"
+
+#: src/utilities/osdutils.cpp:51
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@option:check"
+msgid "Taking screenshot"
+msgstr "截图"
+
+#: src/utilities/osdutils.cpp:52
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle timing: %1 seconds"
+msgctxt "@option:check"
+msgid "Subtitle timing change"
+msgstr "字幕偏移：%1 秒"
+
+#: src/utilities/osdutils.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle scale: %1"
+msgctxt "@option:check"
+msgid "Subtitle scale change"
+msgstr "字幕缩放：%1"
+
+#: src/utilities/osdutils.cpp:54
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Toggle Subtitles"
+msgctxt "@option:check"
+msgid "Toggle subtitle"
+msgstr "打开/关闭字幕"
+
+#: src/utilities/osdutils.cpp:55
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Save changes"
+msgctxt "@option:check"
+msgid "Track change"
+msgstr "保存更改"
+
+#: src/utilities/osdutils.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Volume Down"
+msgctxt "@option:check"
+msgid "Volume change"
+msgstr "降低音量"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format
