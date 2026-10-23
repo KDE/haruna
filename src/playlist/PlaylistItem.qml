@@ -15,7 +15,7 @@ import org.kde.haruna.settings
 PlaylistItemDelegate {
     id: root
 
-    property real dragHandleWidth: Math.max(rowNumber.implicitWidth, dragHandle.implicitWidth)
+    property real dragHandleWidth: Math.max(rowNumberItem.implicitWidth, dragHandle.implicitWidth)
 
     implicitHeight: (getFontSize() * 3)
 
@@ -35,7 +35,7 @@ PlaylistItemDelegate {
                 Layout.topMargin: Kirigami.Units.largeSpacing
 
                 Layout.preferredWidth: {
-                    if (rowNumber.visible || root.hovered) {
+                    if (rowNumberItem.visible || root.hovered) {
                         return root.dragHandleWidth
                     }
                     return 0
@@ -81,9 +81,9 @@ PlaylistItemDelegate {
                     }
 
                     Label {
-                        id: rowNumber
+                        id: rowNumberItem
 
-                        text: root.padRowNumberAsString()
+                        text: root.rowNumber
                         color: root.getLabelColor()
                         visible: PlaylistSettings.showRowNumber
                         font.pointSize: root.getFontSize()

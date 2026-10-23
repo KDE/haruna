@@ -16,6 +16,7 @@ Item {
     id: root
 
     required property int index
+    required property string rowNumber
     required property string title
     required property string name
     required property double duration
@@ -236,17 +237,6 @@ Item {
 
     HoverHandler {
         id: hoverHandler
-    }
-
-    function pad(number: string, length: int) : string {
-        while (number.length < length) {
-            number = "0" + number
-        }
-        return number
-    }
-
-    function padRowNumberAsString() {
-        return pad((root.index + 1).toString(), root.ListView.view.count.toString().length)
     }
 
     function getLabelColor() {
