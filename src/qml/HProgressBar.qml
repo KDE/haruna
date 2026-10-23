@@ -276,46 +276,23 @@ RowLayout {
             y: -height - slider.height
             z: 20
             width: Math.min(itemBiggestWidth, maxWidth)
-            height: Math.min(root.m_mpv.height - Kirigami.Units.gridUnit * 2,
-                             listViewPage.contentHeight + listViewPage.footer.height)
+            height: Math.min(root.m_mpv.height, listViewContainer.contentHeight)
             modal: true
             padding: 0
             onOpened: {
                 listView.positionViewAtIndex(root.m_mpv.chapter, ListView.Beginning)
             }
 
-            Kirigami.ScrollablePage {
-                id: listViewPage
-
-                padding: 0
+            ScrollView {
+                id: listViewContainer
 
                 anchors.fill: parent
-                footer: ToolBar {
-                    z: 100
-                    width: parent.width
-                    CheckBox {
-                        id: skipChaptersCheckBox
-
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: KI18n.i18nc("@action:inmenu", "Skip Chapters")
-                        checked: PlaybackSettings.skipChapters
-                        onCheckedChanged: {
-                            PlaybackSettings.skipChapters = checked
-                            PlaybackSettings.save()
-                        }
-
-                        ToolTip {
-                            text: KI18n.i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
-                            delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
-                            visible: skipChaptersCheckBox.hovered
-                                     && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
-                        }
-                    }
-                }
 
                 ListView {
                     id: listView
 
+                    clip: true
+                    footerPositioning: ListView.OverlayFooter
                     model: root.m_mpv.chaptersModel
                     reuseItems: true
                     delegate: RadioDelegate {
@@ -325,19 +302,40 @@ RowLayout {
                         required property string title
                         required property double startTime
 
-                        property int scrollBarWidth: listView.ScrollBar.vertical?.width ?? 0
-
                         text: `${MiscUtils.formatTime(menuitem.startTime)} - ${menuitem.title}`
                         checked: menuitem.index === root.m_mpv.chapter
-                        width: listViewPage.width - scrollBarWidth
+                        width: ListView.view.width
                         onClicked: {
                             chaptersPopup.close()
                             root.m_mpv.chapter = menuitem.index
                         }
                         onImplicitWidthChanged: {
                             let popup = chaptersPopup
-                            popup.itemBiggestWidth = Math.max(implicitWidth + scrollBarWidth, popup.width)
+                            popup.itemBiggestWidth = Math.max(implicitWidth + 50, popup.width)
                             popup.itemHeight = height
+                        }
+                    }
+                    footer: ToolBar {
+                        z: 100
+                        width: parent.width
+                        height: 26
+                        CheckBox {
+                            id: skipChaptersCheckBox
+
+                            anchors.verticalCenter: parent.verticalCenter
+                            text: KI18n.i18nc("@action:inmenu", "Skip Chapters")
+                            checked: PlaybackSettings.skipChapters
+                            onCheckedChanged: {
+                                PlaybackSettings.skipChapters = checked
+                                PlaybackSettings.save()
+                            }
+
+                            ToolTip {
+                                text: KI18n.i18nc("@info:tooltip", "Automatically skips chapters containing certain words/characters.\nCheck “Playback” settings for more details.")
+                                delay: HarunaApp.isAltKeyPressed ? 0 : Kirigami.Units.toolTipDelay
+                                visible: skipChaptersCheckBox.hovered
+                                         && (GeneralSettings.showExplanatoryToolTips || HarunaApp.isAltKeyPressed)
+                            }
                         }
                     }
                 }
