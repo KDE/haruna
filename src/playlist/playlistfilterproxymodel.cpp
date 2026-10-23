@@ -54,6 +54,9 @@ QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) cons
     if (role == PlaylistModel::IsSelectedRole) {
         return {m_selectionModel.isSelected(index)};
     }
+    if (role == PlaylistModel::RowNumberRole) {
+        return playlistModel()->padNumberWithZeros(index.row() + 1, rowCount());
+    }
     return sourceModel()->data(mapToSource(index), role);
 }
 
@@ -80,7 +83,7 @@ void PlaylistFilterProxyModel::setSearchText(const QString &text)
     setFilterRegularExpression(text);
     endFilterChange();
 
-    Q_EMIT searchTextChanged();
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {PlaylistModel::RowNumberRole});
 }
 
 Sort PlaylistFilterProxyModel::sortPreset()

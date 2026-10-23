@@ -49,6 +49,7 @@ public:
 
     enum Roles {
         NameRole = Qt::UserRole,
+        RowNumberRole,
         // General
         DurationRole,
         FormattedDurationRole,
@@ -118,6 +119,7 @@ public:
     void setPlaylistName(const QString &newPlaylistName);
 
     void updateMetadata();
+    QString padNumberWithZeros(int number, int length) const;
 
     // shuffling
     // when shuffling is on, instead of using an m_playlist index to determine

@@ -87,6 +87,8 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case NameRole:
         return item.filename;
+    case RowNumberRole:
+        return padNumberWithZeros(index.row() + 1, rowCount());
     case PathRole:
         return item.url;
     case DurationRole:
@@ -270,6 +272,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
     // clang-format off
     static QHash<int, QByteArray> roles = {
         {NameRole,              QByteArrayLiteral("name")},
+        {RowNumberRole,         QByteArrayLiteral("rowNumber")},
         {TitleRole,             QByteArrayLiteral("title")},
         {PathRole,              QByteArrayLiteral("path")},
         {FolderPathRole,        QByteArrayLiteral("folderPath")},
@@ -799,6 +802,12 @@ void PlaylistModel::updateMetadata()
         }
         Q_EMIT metadataUpdateFinished();
     });
+}
+
+QString PlaylistModel::padNumberWithZeros(int number, int length) const
+{
+    const int width = QString::number(length).length();
+    return QString::number(number).rightJustified(width, u'0');
 }
 
 bool PlaylistModel::isPlaying() const
