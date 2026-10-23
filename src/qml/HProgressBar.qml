@@ -253,52 +253,20 @@ RowLayout {
             model: root.showChapterMarkers
                    ? root.m_mpv.chaptersModel
                    : 0
-            delegate: Shape {
+            delegate: Rectangle {
                 id: chapterMarkerShape
 
                 required property int index
                 required property string title
                 required property double startTime
-
-                // where the chapter marker should be positioned on the progress bar
-                property int position: slider.mirrored
-                                       ? progressBarBG.width - (chapterMarkerShape.startTime / root.m_mpv.duration * progressBarBG.width)
-                                       : chapterMarkerShape.startTime / root.m_mpv.duration * progressBarBG.width
-
-                antialiasing: true
-                ShapePath {
-                    id: shape
-                    strokeWidth: 1
-                    strokeColor: Kirigami.Theme.textColor
-                    startX: chapterMarkerShape.position
-                    startY: slider.height
-                    fillColor: Kirigami.Theme.textColor
-                    PathLine { x: shape.startX; y: -1 }
-                    PathLine { x: shape.startX + 6; y: -7 }
-                    PathLine { x: shape.startX - 7; y: -7 }
-                    PathLine { x: shape.startX - 1; y: -1 }
-                }
-                Rectangle {
-                    x: chapterMarkerShape.position - 8
-                    y: -11
-                    width: 15
-                    height: 11
-                    color: "transparent"
-                    ToolTip {
-                        id: chapterTitleToolTip
-                        text: chapterMarkerShape.title
-                        visible: false
-                        delay: 0
-                        timeout: 10000
-                    }
-                    MouseArea {
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onEntered: chapterTitleToolTip.visible = true
-                        onExited: chapterTitleToolTip.visible = false
-                        onClicked: root.m_mpv.chapter = chapterMarkerShape.index
-                    }
-                }
+                property real position: slider.mirrored
+                                       ? progressBarBG.width - (startTime / root.m_mpv.duration * progressBarBG.width)
+                                       : startTime / root.m_mpv.duration * progressBarBG.width
+                x: position
+                y: 0
+                height: slider.height
+                width: 2
+                color: Kirigami.Theme.textColor
             }
         }
 
