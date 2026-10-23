@@ -79,6 +79,11 @@ OsdUtils::OsdUtils(QObject *parent)
 
 void OsdUtils::message(const QString &message, Context context)
 {
+    if (context == OsdUtils::Context::None) {
+        Q_EMIT messageReceived(message, context);
+        return;
+    }
+
     const auto f = functions();
     if (auto it = f.constFind(context); it != f.cend()) {
         if (it.value()()) {

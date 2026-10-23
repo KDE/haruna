@@ -32,7 +32,7 @@ Item {
             radius: Kirigami.Units.cornerRadius
         }
         padding: Kirigami.Units.largeSpacing
-        font.pointSize: parseInt(GeneralSettings.osdFontSize)
+        font.pointSize: parseInt(OsdSettings.osdFontSize)
         maximumLineCount: 5
         wrapMode: Text.WrapAnywhere
 
@@ -64,7 +64,7 @@ Item {
             return
         }
 
-        const osdFontSize = parseInt(GeneralSettings.osdFontSize)
+        const osdFontSize = parseInt(OsdSettings.osdFontSize)
         if (osdFontSize === 0) {
             return;
         }
