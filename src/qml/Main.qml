@@ -233,13 +233,6 @@ ApplicationWindow {
         height: mpv.height
         mainWindowWidth: appWindow.width
         fsScale: appWindow.isFullScreen() && PlaylistSettings.bigFontFullscreen ? 1.36 : 1
-
-        Connections {
-            target: actions
-            function onToggleTranscript() {
-                transcript.toggle()
-            }
-        }
     }
 
     Playlist {
@@ -255,36 +248,6 @@ ApplicationWindow {
         Component.onCompleted: {
             isReady = true
             appWindow.initPlaylist()
-        }
-
-        Connections {
-            target: actions
-            function onTogglePlaylist() {
-                if (playlist.state === "visible") {
-                    playlist.state = "hidden"
-                } else {
-                    playlist.state = "visible"
-                }
-            }
-        }
-
-        Connections {
-            target: HarunaApp
-            function onQmlApplicationMouseLeave() {
-                if (PlaylistSettings.canToggleWithMouse && (appWindow.isFullScreen() || appWindow.isMaximized())) {
-                    playlist.state = "hidden"
-                }
-            }
-        }
-
-        Connections {
-            target: mpv
-            function onOpenPlaylist() {
-                playlist.state = "visible"
-            }
-            function onClosePlaylist() {
-                playlist.state = "hidden"
-            }
         }
     }
 
@@ -410,6 +373,30 @@ ApplicationWindow {
     }
 
     Connections {
+        target: actions
+        function onTogglePlaylist() {
+            if (playlist.state === "visible") {
+                playlist.state = "hidden"
+            } else {
+                playlist.state = "visible"
+            }
+        }
+        function onToggleTranscript() {
+            transcript.toggle()
+        }
+    }
+
+    Connections {
+        target: mpv
+        function onOpenPlaylist() {
+            playlist.state = "visible"
+        }
+        function onClosePlaylist() {
+            playlist.state = "hidden"
+        }
+    }
+
+    Connections {
         id: miscUtilsOnErrorConnection
         target: MiscUtils
         function onError(message) {
@@ -431,6 +418,9 @@ ApplicationWindow {
     Connections {
         target: HarunaApp
         function onQmlApplicationMouseLeave() {
+            if (PlaylistSettings.canToggleWithMouse && (appWindow.isFullScreen() || appWindow.isMaximized())) {
+                playlist.state = "hidden"
+            }
             appWindow.containsMouse = false
         }
         function onQmlApplicationMouseEnter() {
