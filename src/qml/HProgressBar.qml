@@ -54,7 +54,8 @@ RowLayout {
             slider.mouseX = progressBarMouseArea.mouseX
             const time = progressBarMouseArea.mouseX / progressBarBG.width * slider.to
             previewMpvLoader.position = time
-            progressBarToolTip.text = MiscUtils.formatTime(time)
+            const chapterTitle = root.m_mpv.chaptersModel.titleAtPosition(time)
+            timePositionLabel.text = `${MiscUtils.formatTime(time)} - ${chapterTitle}`
         }
 
         from: 0
@@ -111,7 +112,6 @@ RowLayout {
             Rectangle {
                 id: progressBarToolTip
 
-                property string text
                 property int margin: Kirigami.Units.smallSpacing
 
                 x: {
@@ -125,12 +125,8 @@ RowLayout {
                 }
                 y: -height - Kirigami.Units.largeSpacing
                 z: 10
-                width: previewMpvLoader.visible
-                       ? GeneralSettings.previewThumbnailWidth + (margin * 2)
-                       : timePositionLabel.implicitWidth + (margin * 2)
-                height: previewMpvLoader.visible
-                        ? Math.ceil(width / previewMpvLoader.aspectRatio) + (margin * 3) + timePositionLabel.height
-                        : timePositionLabel.height + (margin * 2)
+                width: layout.width + (margin * 2)
+                height: layout.height + (margin * 2)
                 visible: progressBarMouseArea.containsMouse && root.m_mpv.duration > 0
 
                 color: Kirigami.Theme.backgroundColor
@@ -139,6 +135,8 @@ RowLayout {
                 border.color: Qt.darker(Kirigami.Theme.backgroundColor, 1.2)
 
                 ColumnLayout {
+                    id: layout
+
                     anchors.centerIn: parent
                     width: GeneralSettings.previewThumbnailWidth
 
@@ -173,9 +171,10 @@ RowLayout {
                     Label {
                         id: timePositionLabel
 
-                        text: progressBarToolTip.text
+                        elide: Text.ElideRight
                         Kirigami.Theme.colorSet: Kirigami.Theme.Tooltip
                         Layout.alignment: Qt.AlignCenter
+                        Layout.maximumWidth: progressBarToolTip.width -  Kirigami.Units.smallSpacing * 2
                     }
                 }
             }
@@ -229,7 +228,8 @@ RowLayout {
             }
 
             root.m_mpv.commandAsync(["seek", slider.value, "absolute"])
-            progressBarToolTip.text = MiscUtils.formatTime(slider.value)
+            const chapterTitle = root.m_mpv.chaptersModel.titleAtPosition(slider.value)
+            timePositionLabel.text = `${MiscUtils.formatTime(slider.value)} - ${chapterTitle}`
 
             const previewItem = previewMpvLoader.item as MpvPreview
             if (previewItem === null || !root.m_mpv.isLocalFile) {
