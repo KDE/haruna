@@ -146,9 +146,14 @@ ApplicationWindow {
     menuBar: MenuBarLoader {
         id: menuBarLoader
 
+        state: !appWindow.isFullScreen() && GeneralSettings.showMenuBar
+               ? "visible"
+               : "hidden"
         m_mpv: mpv
         m_settingsLoader: settingsLoader
+        onVisibleChanged: appWindow.resizeWindow()
     }
+
 
     Loader {
         active: false
