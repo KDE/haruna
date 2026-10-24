@@ -94,7 +94,7 @@ MprisItem::MprisItem(QObject *parent)
 
     d_ptr->mprisController.setShuffle(PlaylistSettings::randomPlayback());
     d_ptr->mprisController.setMinimumRate(0.0);
-    d_ptr->mprisController.setMinimumRate(10.0);
+    d_ptr->mprisController.setMaximumRate(10.0);
     d_ptr->mprisController.setCanControl(true);
 
     auto setLoopStatus = [this]() {
