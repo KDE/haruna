@@ -25,7 +25,7 @@ class M3uParser
 public:
     explicit M3uParser();
     void read(const std::filesystem::path &path);
-    void write(const PlaylistFilterProxyModel *playlistModel, const std::filesystem::path &savePath);
+    void write(const PlaylistFilterProxyModel *playlistProxyModel, const std::filesystem::path &savePath);
 
     QList<MetaData> data() const;
 

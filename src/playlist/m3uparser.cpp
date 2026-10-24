@@ -45,7 +45,7 @@ void M3uParser::read(const std::filesystem::path &path)
     file.close();
 }
 
-void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::filesystem::path &savePath)
+void M3uParser::write(const PlaylistFilterProxyModel *playlistProxyModel, const std::filesystem::path &savePath)
 {
     QFileInfo fileInfo(savePath);
     QDir dir = fileInfo.dir();
@@ -66,6 +66,7 @@ void M3uParser::write(const PlaylistFilterProxyModel *playlistModel, const std::
     out.setEncoding(QStringConverter::Utf8);
 
     out << "#EXTM3U\n";
+    const auto playlistModel = playlistProxyModel->playlistProxyModel();
     for (int i{0}; i < playlistModel->rowCount(); ++i) {
         const auto itemPath = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::PathRole).toString();
         const auto title = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::TitleRole).toString();
