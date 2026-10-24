@@ -54,7 +54,10 @@ RowLayout {
             const time = progressBarMouseArea.mouseX / progressBarBG.width * slider.to
             previewMpvLoader.position = time
             const chapterTitle = root.m_mpv.chaptersModel.titleAtPosition(time)
-            timePositionLabel.text = `${MiscUtils.formatTime(time)} - ${chapterTitle}`
+            const formattedTime = MiscUtils.formatTime(time)
+            timePositionLabel.text = chapterTitle === ""
+                    ? formattedTime
+                    :`${formattedTime} - ${chapterTitle}`
         }
 
         from: 0
@@ -137,7 +140,6 @@ RowLayout {
                     id: layout
 
                     anchors.centerIn: parent
-                    width: GeneralSettings.previewThumbnailWidth
 
                     Loader {
                         id: previewMpvLoader
@@ -173,7 +175,6 @@ RowLayout {
                         elide: Text.ElideRight
                         Kirigami.Theme.colorSet: Kirigami.Theme.Tooltip
                         Layout.alignment: Qt.AlignCenter
-                        Layout.maximumWidth: progressBarToolTip.width -  Kirigami.Units.smallSpacing * 2
                     }
                 }
             }
@@ -228,7 +229,10 @@ RowLayout {
 
             root.m_mpv.commandAsync(["seek", slider.value, "absolute"])
             const chapterTitle = root.m_mpv.chaptersModel.titleAtPosition(slider.value)
-            timePositionLabel.text = `${MiscUtils.formatTime(slider.value)} - ${chapterTitle}`
+            const formattedTime = MiscUtils.formatTime(slider.value)
+            timePositionLabel.text = chapterTitle === ""
+                    ? formattedTime
+                    :`${formattedTime} - ${chapterTitle}`
 
             const previewItem = previewMpvLoader.item as MpvPreview
             if (previewItem === null || !root.m_mpv.isLocalFile) {
