@@ -362,6 +362,8 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
         return;
     }
 
+    beginFilterChange();
+
     QModelIndexList selection = selectedRows();
 
     // Check whether the drag move is top-down or bottom-up. Qt::beginMoveRows always put the items on top of
@@ -473,6 +475,8 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
         updatedSelection.select(index(row, 0), index(row, 0));
     }
     m_selectionModel.select(updatedSelection, QItemSelectionModel::SelectionFlag::Select | QItemSelectionModel::SelectionFlag::Clear);
+
+    endFilterChange();
 
     Q_EMIT itemsMoved();
 }
