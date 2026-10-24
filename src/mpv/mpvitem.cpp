@@ -695,9 +695,8 @@ void MpvItem::onChapterChanged()
         const auto _word = word.simplified();
         if (title.contains(_word, Qt::CaseInsensitive)) {
             command({u"add"_s, u"chapter"_s, u"1"_s});
-            if (PlaybackSettings::showOsdOnSkipChapters()) {
-                OsdUtils::instance().message(i18nc("@info:tooltip osd", "Skipped chapter: %1", title), OsdUtils::Context::MpvChapter);
-            }
+            const auto msg = i18nc("@info:tooltip osd", "Skipped chapter: %1", title);
+            OsdUtils::instance().message(msg, OsdUtils::Context::MpvChapter);
             return;
         }
     }

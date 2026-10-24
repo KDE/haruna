@@ -352,23 +352,6 @@ SettingsBasePage {
             ToolTip.delay: 700
         }
 
-        Item { Layout.preferredWidth: 1 }
-
-        CheckBox {
-            text: KI18n.i18nc("@option:check", "Show OSD message on skip")
-            enabled: skipChaptersCheckBox.checked
-            checked: PlaybackSettings.showOsdOnSkipChapters
-            onClicked: {
-                PlaybackSettings.showOsdOnSkipChapters = checked
-                PlaybackSettings.save()
-            }
-
-            ToolTip.text: KI18n.i18nc("@info:tooltip show OSD message on skip setting",
-                                "When skipping chapters an osd message will show the title of the skipped chapter.")
-            ToolTip.visible: hovered
-            ToolTip.delay: 700
-        }
-
         Label {
             text: KI18n.i18nc("@label:textbox", "Keywords")
             enabled: skipChaptersCheckBox.checked
