@@ -360,16 +360,17 @@ void MprisItem::getAudioThumbnail(const QUrl &url)
 
 QString MprisItem::findAudioThumbnail(const QString &filePath)
 {
-    static const QStringList coverNames = {u"cover"_s, u"front"_s, u"folder"_s};
-    static const QStringList extensions = {u"png"_s, u"jpeg"_s, u"jpg"_s, u"webp"_s};
+    static const std::vector<std::string> coverNames = {"cover", "front", "folder"};
+    static const std::vector<std::string> extensions = {".png", ".jpeg", ".jpg", ".webp"};
+    const auto directory = std::filesystem::path(filePath.toStdString());
 
     for (const auto &name : coverNames) {
         for (const auto &ext : extensions) {
-            const auto path = std::filesystem::path(filePath.toStdString());
-            const auto filePath = path / QString(name % u"."_s % ext).toStdString();
+            const auto filePath = directory / (name + ext);
 
-            if (QFileInfo::exists(QString::fromStdString(filePath))) {
-                return QString::fromStdString(filePath);
+            const auto path = QString::fromStdString(filePath);
+            if (QFileInfo::exists(path)) {
+                return path;
             }
         }
     }
