@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:47+0000\n"
-"PO-Revision-Date: 2026-10-22 12:21+0200\n"
+"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"PO-Revision-Date: 2026-10-23 12:12+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -697,7 +697,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Snímek obrazovky: %1"
 
-#: src/mpv/mpvitem.cpp:659
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -707,13 +707,13 @@ msgstr ""
 "Nebyla zjištěna žádná video stopa; s největší pravděpodobností nelze video "
 "stopu dekódovat/přehrát kvůli chybějícím kodekům"
 
-#: src/mpv/mpvitem.cpp:696
+#: src/mpv/mpvitem.cpp:699
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Přeskočena kapitola: %1"
 
-#: src/mpv/mpvitem.cpp:791
+#: src/mpv/mpvitem.cpp:794
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -721,13 +721,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Zvuk: %1 %2"
 
-#: src/mpv/mpvitem.cpp:802
+#: src/mpv/mpvitem.cpp:805
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Titulky: žádné"
 
-#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
+#: src/mpv/mpvitem.cpp:811 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -735,7 +735,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Titulky: %1 %2"
 
-#: src/mpv/mpvitem.cpp:819
+#: src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -1639,12 +1639,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Zvuk"
 
-#: src/qml/HProgressBar.qml:336
+#: src/qml/HProgressBar.qml:304
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Přeskakovat kapitoly"
 
-#: src/qml/HProgressBar.qml:344
+#: src/qml/HProgressBar.qml:312
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2521,7 +2521,7 @@ msgstr "Velikost písma OSD"
 #: src/qml/Settings/OsdSettings.qml:44
 msgctxt "@title"
 msgid "Choose when to show osd"
-msgstr ""
+msgstr "Vyberte, kdy se má zobrazit OSD"
 
 #: src/qml/Settings/PlaybackSettings.qml:27
 msgctxt "@label:spinbox"
@@ -2939,7 +2939,7 @@ msgstr "Obecné"
 #: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "OSD"
 
 #: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
@@ -3281,93 +3281,73 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "AB smyčka"
 
 #: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
-msgstr "Přeskakovat kapitoly"
+msgstr "Přeskočit kapitolu"
 
 #: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
-msgstr "Přepnout zrušení prokladu"
+msgstr "Přepnout odstranění prokládání"
 
 #: src/utilities/osdutils.cpp:48
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "Úpravy snímků (kontrast, jas, gama a sytost)"
 
 #: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
 msgstr "Přehrát nový soubor"
 
 #: src/utilities/osdutils.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Playback speed: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "Rychlost přehrávání: %1"
+msgstr "Změna rychlosti přehrávání"
 
 #: src/utilities/osdutils.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
-msgstr "Snímek obrazovky"
+msgstr "Pořízení snímku obrazovky"
 
 #: src/utilities/osdutils.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "Časování titulků: %1 sekund"
+msgstr "Změna časování titulků"
 
 #: src/utilities/osdutils.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "Měřítko titulků: %1"
+msgstr "Změna měřítka titulků"
 
 #: src/utilities/osdutils.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
 msgstr "Přepnout titulky"
 
 #: src/utilities/osdutils.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "Uložit změny"
+msgstr "Změna stopy"
 
 #: src/utilities/osdutils.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "Snížit hlasitost"
+msgstr "Změna hlasitosti"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format

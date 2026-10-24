@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:47+0000\n"
-"PO-Revision-Date: 2026-10-22 07:27+0200\n"
+"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"PO-Revision-Date: 2026-10-23 07:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -694,7 +694,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Posnetek zaslona: %1"
 
-#: src/mpv/mpvitem.cpp:659
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -704,13 +704,13 @@ msgstr ""
 "Ni bilo zaznanega video posnetka, najverjetneje video posnetka ni mogoče "
 "dekodirati/predvajati zaradi manjkajočih kodirnikov"
 
-#: src/mpv/mpvitem.cpp:696
+#: src/mpv/mpvitem.cpp:699
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Preskočeno poglavje: %1"
 
-#: src/mpv/mpvitem.cpp:791
+#: src/mpv/mpvitem.cpp:794
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -718,13 +718,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Zvok: %1 %2"
 
-#: src/mpv/mpvitem.cpp:802
+#: src/mpv/mpvitem.cpp:805
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Podnapis: brez"
 
-#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
+#: src/mpv/mpvitem.cpp:811 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -732,7 +732,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Podnapis: %1 %2"
 
-#: src/mpv/mpvitem.cpp:819
+#: src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -1631,12 +1631,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Zvok"
 
-#: src/qml/HProgressBar.qml:336
+#: src/qml/HProgressBar.qml:304
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Preskoči poglavja"
 
-#: src/qml/HProgressBar.qml:344
+#: src/qml/HProgressBar.qml:312
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2516,7 +2516,7 @@ msgstr "Velikost pisave OSD"
 #: src/qml/Settings/OsdSettings.qml:44
 msgctxt "@title"
 msgid "Choose when to show osd"
-msgstr ""
+msgstr "Izberite, kdaj prikazati OSD"
 
 #: src/qml/Settings/PlaybackSettings.qml:27
 msgctxt "@label:spinbox"
@@ -2939,7 +2939,7 @@ msgstr "Splošno"
 #: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "Osd"
 
 #: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
@@ -3278,20 +3278,16 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "AB zanka"
 
 #: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
-msgstr "Preskoči poglavja"
+msgstr "Preskoči poglavje"
 
 #: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
 msgstr "Preklopi razpletanje"
@@ -3300,71 +3296,55 @@ msgstr "Preklopi razpletanje"
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "Prilagoditve slike (kontrast, svetlost, gama in nasičenje)"
 
 #: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
-msgstr "Predvajaj novo datoteko"
+msgstr "Predvajanje nove datoteke"
 
 #: src/utilities/osdutils.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback Speed Increase"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "Pospeši predvajanje playbacka"
+msgstr "Spremeni hitrost predvajanje playbacka"
 
 #: src/utilities/osdutils.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
-msgstr "Posnetek zaslona"
+msgstr "Zajemanje zaslona"
 
 #: src/utilities/osdutils.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "Čas podnapisa: %1 sekund"
+msgstr "Sprememba časa podnapisa"
 
 #: src/utilities/osdutils.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "Merilo podnapisa: %1"
+msgstr "Sprememba merila podnapisa"
 
 #: src/utilities/osdutils.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
-msgstr "Preklopi podnapise"
+msgstr "Preklopi podnapis"
 
 #: src/utilities/osdutils.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "Shrani spremembe"
+msgstr "Sprememba sledi"
 
 #: src/utilities/osdutils.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "Tišje"
+msgstr "Sprememba glasnosti"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format

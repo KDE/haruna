@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:47+0000\n"
-"PO-Revision-Date: 2026-10-22 05:42+0200\n"
+"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"PO-Revision-Date: 2026-10-23 07:47+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -698,7 +698,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Снимок экрана: %1"
 
-#: src/mpv/mpvitem.cpp:659
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -708,13 +708,13 @@ msgstr ""
 "Видеодорожка не обнаружена, возможно, по причине того, что для декодирования "
 "или воспроизведения не хватает кодеков"
 
-#: src/mpv/mpvitem.cpp:696
+#: src/mpv/mpvitem.cpp:699
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Пропущенный раздел: %1"
 
-#: src/mpv/mpvitem.cpp:791
+#: src/mpv/mpvitem.cpp:794
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -722,13 +722,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Аудио: %1 %2"
 
-#: src/mpv/mpvitem.cpp:802
+#: src/mpv/mpvitem.cpp:805
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Субтитры: нет"
 
-#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
+#: src/mpv/mpvitem.cpp:811 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -736,7 +736,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Субтитры: %1 %2"
 
-#: src/mpv/mpvitem.cpp:819
+#: src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -1637,12 +1637,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Аудио"
 
-#: src/qml/HProgressBar.qml:336
+#: src/qml/HProgressBar.qml:304
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Пропустить разделы"
 
-#: src/qml/HProgressBar.qml:344
+#: src/qml/HProgressBar.qml:312
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2533,7 +2533,7 @@ msgstr "Размер шрифта экранного уведомления"
 #: src/qml/Settings/OsdSettings.qml:44
 msgctxt "@title"
 msgid "Choose when to show osd"
-msgstr ""
+msgstr "Когда показывать экранные уведомления"
 
 #: src/qml/Settings/PlaybackSettings.qml:27
 msgctxt "@label:spinbox"
@@ -2962,7 +2962,7 @@ msgstr "Общие"
 #: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "Экранные уведомления"
 
 #: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
@@ -3307,93 +3307,73 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "Повтор фрагмента A–B"
 
 #: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
-msgstr "Пропускать разделы"
+msgstr "Пропуск раздела"
 
 #: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
-msgstr "Устранение чересстрочности"
+msgstr "Включение и отключение устранения чересстрочности"
 
 #: src/utilities/osdutils.cpp:48
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "Настройка изображения (контрастность, яркость, гамма и насыщенность)"
 
 #: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
-msgstr "Воспроизвести новый файл"
+msgstr "Воспроизведение нового файла"
 
 #: src/utilities/osdutils.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback Speed Increase"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "Увеличить скорость воспроизведения"
+msgstr "Изменение скорости воспроизведения"
 
 #: src/utilities/osdutils.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
 msgstr "Снимок экрана"
 
 #: src/utilities/osdutils.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "Время субтитров: %1 сек."
+msgstr "Изменение времени субтитров"
 
 #: src/utilities/osdutils.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "Масштаб субтитров: %1"
+msgstr "Изменение масштаба субтитров"
 
 #: src/utilities/osdutils.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
-msgstr "Включить или отключить субтитры"
+msgstr "Включение и отключение субтитров"
 
 #: src/utilities/osdutils.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "Сохранить изменения"
+msgstr "Смена дорожки"
 
 #: src/utilities/osdutils.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "Уменьшить громкость"
+msgstr "Изменение громкости"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format

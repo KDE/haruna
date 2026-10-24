@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:47+0000\n"
-"PO-Revision-Date: 2026-10-22 09:41-0300\n"
+"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"PO-Revision-Date: 2026-10-23 06:44-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -651,13 +651,13 @@ msgstr "Volume: %1"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
-msgstr "Ritmo da legenda: +%1 segundos"
+msgstr "Tempo da legenda: +%1 segundos"
 
 #: src/mpv/mpvitem.cpp:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
-msgstr "Ritmo da legenda: %1 segundos"
+msgstr "Tempo da legenda: %1 segundos"
 
 #: src/mpv/mpvitem.cpp:514
 #, kde-format
@@ -696,7 +696,7 @@ msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de tela: %1"
 
-#: src/mpv/mpvitem.cpp:659
+#: src/mpv/mpvitem.cpp:662
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -706,13 +706,13 @@ msgstr ""
 "Nenhuma faixa de vídeo detectada, provavelmente a faixa de vídeo não pode "
 "ser decodificada/reproduzida devido à ausência de codecs"
 
-#: src/mpv/mpvitem.cpp:696
+#: src/mpv/mpvitem.cpp:699
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "Ignorar capítulo: %1"
 
-#: src/mpv/mpvitem.cpp:791
+#: src/mpv/mpvitem.cpp:794
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -720,13 +720,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "Áudio: %1 %2"
 
-#: src/mpv/mpvitem.cpp:802
+#: src/mpv/mpvitem.cpp:805
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "Legenda: nenhuma"
 
-#: src/mpv/mpvitem.cpp:808 src/mpv/mpvitem.cpp:825
+#: src/mpv/mpvitem.cpp:811 src/mpv/mpvitem.cpp:828
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -734,7 +734,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "Legenda: %1 %2"
 
-#: src/mpv/mpvitem.cpp:819
+#: src/mpv/mpvitem.cpp:822
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -1639,12 +1639,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "Áudio"
 
-#: src/qml/HProgressBar.qml:336
+#: src/qml/HProgressBar.qml:304
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "Pular capítulos"
 
-#: src/qml/HProgressBar.qml:344
+#: src/qml/HProgressBar.qml:312
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -2527,7 +2527,7 @@ msgstr "Tamanho da fonte OSD"
 #: src/qml/Settings/OsdSettings.qml:44
 msgctxt "@title"
 msgid "Choose when to show osd"
-msgstr ""
+msgstr "Escolha quando exibir o OSD"
 
 #: src/qml/Settings/PlaybackSettings.qml:27
 msgctxt "@label:spinbox"
@@ -2940,7 +2940,7 @@ msgstr "Geral"
 #: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "OSD"
 
 #: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
@@ -3284,20 +3284,16 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "Loop AB"
 
 #: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
-msgstr "Pular capítulos"
+msgstr "Pular capítulo"
 
 #: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
 msgstr "Alternar desentrelaçamento"
@@ -3306,71 +3302,55 @@ msgstr "Alternar desentrelaçamento"
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "Ajustes de imagem (contraste, brilho, gama e saturação)"
 
 #: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
-msgstr "Reproduzir novo arquivo"
+msgstr "Reproduzindo novo arquivo"
 
 #: src/utilities/osdutils.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback Speed Increase"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "Aumentar velocidade da reprodução"
+msgstr "Alterar velocidade da reprodução"
 
 #: src/utilities/osdutils.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
-msgstr "Captura de tela"
+msgstr "Capturando tela"
 
 #: src/utilities/osdutils.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "Ritmo da legenda: %1 segundos"
+msgstr "Alterar tempo da legenda"
 
 #: src/utilities/osdutils.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "Escala da legenda: %1"
+msgstr "Alterar escala da legenda"
 
 #: src/utilities/osdutils.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
-msgstr "Alternar legendas"
+msgstr "Alternar legenda"
 
 #: src/utilities/osdutils.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "Salvar alterações"
+msgstr "Alterar faixa"
 
 #: src/utilities/osdutils.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "Diminuir volume"
+msgstr "Alterar volume"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format
