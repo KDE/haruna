@@ -704,6 +704,7 @@ void PlaylistModel::getMetaData(uint i, const QString &path)
     const auto duration = metadata.properties.value(KFileMetaData::Property::Duration).toInt();
     if (duration > 0) {
         onMetaDataReady(i, url, metadata.properties);
+        Q_EMIT metaDataReady(i, url, metadata.properties);
         return;
     }
 

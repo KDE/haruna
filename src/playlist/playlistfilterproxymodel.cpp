@@ -47,6 +47,17 @@ PlaylistFilterProxyModel::PlaylistFilterProxyModel(QObject *parent)
     connect(playlistModel(), &PlaylistModel::metadataUpdateFinished, this, [this]() {
         setIsUpdatingMetadata(false);
     });
+
+    // sorting and grouping needs to run after metadata is available
+    // use a timer since metaDataReady is emitted for every item
+    static QTimer timer;
+    timer.setInterval(200);
+    timer.setSingleShot(true);
+    connect(&timer, &QTimer::timeout, this, [this]() {
+        m_playlistSortProxyModel->sortItems();
+        m_playlistSortProxyModel->recreateSections();
+    });
+    connect(playlistModel(), &PlaylistModel::metaDataReady, &timer, qOverload<>(&QTimer::start));
 }
 
 QVariant PlaylistFilterProxyModel::data(const QModelIndex &index, int role) const
