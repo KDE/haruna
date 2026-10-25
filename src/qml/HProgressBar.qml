@@ -101,7 +101,7 @@ RowLayout {
                     z: 200
                     width: end / root.m_mpv.duration * progressBarBG.width - x
                     height: 2
-                    color: Kirigami.Theme.textColor
+                    color: Qt.darker(Kirigami.Theme.highlightColor, 1.5)
                 }
             }
 
