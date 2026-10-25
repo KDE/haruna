@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"POT-Creation-Date: 2026-10-25 00:49+0000\n"
 "PO-Revision-Date: 2026-10-05 22:28+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -700,13 +700,13 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:699
+#: src/mpv/mpvitem.cpp:698
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
-#: src/mpv/mpvitem.cpp:794
+#: src/mpv/mpvitem.cpp:793
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -714,13 +714,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
-#: src/mpv/mpvitem.cpp:805
+#: src/mpv/mpvitem.cpp:804
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "자막: 없음"
 
-#: src/mpv/mpvitem.cpp:811 src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:810 src/mpv/mpvitem.cpp:827
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -728,7 +728,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "자막: %1 %2"
 
-#: src/mpv/mpvitem.cpp:822
+#: src/mpv/mpvitem.cpp:821
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -892,7 +892,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "추가"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:402
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:370
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1627,12 +1627,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:304
+#: src/qml/HProgressBar.qml:330
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:312
+#: src/qml/HProgressBar.qml:338
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1646,17 +1646,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:352
+#: src/qml/Main.qml:320
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
-#: src/qml/Main.qml:372
+#: src/qml/Main.qml:340
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
 
-#: src/qml/Main.qml:399
+#: src/qml/Main.qml:367
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
@@ -2698,29 +2698,17 @@ msgid ""
 msgstr ""
 "이 옵션을 사용하면 지정한 단어나 문자를 포함한 챕터를 자동으로 건너뜁니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:358
-msgctxt "@option:check"
-msgid "Show OSD message on skip"
-msgstr "건너뛸 때 OSD 메시지 표시"
-
-#: src/qml/Settings/PlaybackSettings.qml:367
-msgctxt "@info:tooltip show OSD message on skip setting"
-msgid ""
-"When skipping chapters an osd message will show the title of the skipped "
-"chapter."
-msgstr "챕터를 건너뛸 때 건너뛴 챕터 제목을 OSD 메시지로 표시합니다."
-
-#: src/qml/Settings/PlaybackSettings.qml:373
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "키워드"
 
-#: src/qml/Settings/PlaybackSettings.qml:382
+#: src/qml/Settings/PlaybackSettings.qml:365
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 챕터 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:388
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2731,27 +2719,27 @@ msgstr ""
 "어 기반이 아닙니다. 예를 들어 <strong>오</strong>를 입력하면 <strong><u>오</"
 "u>프닝</strong>과 같은 단어에도 일치합니다.JK"
 
-#: src/qml/Settings/PlaybackSettings.qml:412
+#: src/qml/Settings/PlaybackSettings.qml:395
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:418
+#: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@label"
 msgid "Format selection"
 msgstr "형식 선택"
 
-#: src/qml/Settings/PlaybackSettings.qml:443
+#: src/qml/Settings/PlaybackSettings.qml:426
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "사용자 정의"
 
-#: src/qml/Settings/PlaybackSettings.qml:449
+#: src/qml/Settings/PlaybackSettings.qml:432
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "기본값"
 
-#: src/qml/Settings/PlaybackSettings.qml:464
+#: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "선택한 형식에 가장 가까운 동영상 원본을 선택합니다."
@@ -3338,6 +3326,16 @@ msgstr ""
 "ID가 %1인 재생 목록을 가져올 수 없음\n"
 "\n"
 "%2"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show OSD message on skip"
+#~ msgstr "건너뛸 때 OSD 메시지 표시"
+
+#~ msgctxt "@info:tooltip show OSD message on skip setting"
+#~ msgid ""
+#~ "When skipping chapters an osd message will show the title of the skipped "
+#~ "chapter."
+#~ msgstr "챕터를 건너뛸 때 건너뛴 챕터 제목을 OSD 메시지로 표시합니다."
 
 #~ msgctxt "@item:listbox the style of the playlist"
 #~ msgid "Compact"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"POT-Creation-Date: 2026-10-25 00:49+0000\n"
 "PO-Revision-Date: 2026-09-21 23:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -700,13 +700,13 @@ msgid ""
 "due to missing codecs"
 msgstr "未偵測到視訊軌，這大概是因為缺乏解碼器而無法解碼/播放視訊軌"
 
-#: src/mpv/mpvitem.cpp:699
+#: src/mpv/mpvitem.cpp:698
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "已跳過章節：%1"
 
-#: src/mpv/mpvitem.cpp:794
+#: src/mpv/mpvitem.cpp:793
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -714,13 +714,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "音訊：%1 %2"
 
-#: src/mpv/mpvitem.cpp:805
+#: src/mpv/mpvitem.cpp:804
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "字幕：無"
 
-#: src/mpv/mpvitem.cpp:811 src/mpv/mpvitem.cpp:828
+#: src/mpv/mpvitem.cpp:810 src/mpv/mpvitem.cpp:827
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -728,7 +728,7 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "字幕：%1 %2"
 
-#: src/mpv/mpvitem.cpp:822
+#: src/mpv/mpvitem.cpp:821
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
@@ -892,7 +892,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "新增"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:402
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:370
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1626,12 +1626,12 @@ msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "音效"
 
-#: src/qml/HProgressBar.qml:304
+#: src/qml/HProgressBar.qml:330
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "跳過章節"
 
-#: src/qml/HProgressBar.qml:312
+#: src/qml/HProgressBar.qml:338
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1645,17 +1645,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:352
+#: src/qml/Main.qml:320
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "選擇檔案"
 
-#: src/qml/Main.qml:372
+#: src/qml/Main.qml:340
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "選擇字幕檔案"
 
-#: src/qml/Main.qml:399
+#: src/qml/Main.qml:367
 msgctxt "@action:button"
 msgid "Open"
 msgstr "開啟"
@@ -2684,29 +2684,17 @@ msgid ""
 "characters."
 msgstr "啟用時自動跳過包含某些單詞/字元的章節。"
 
-#: src/qml/Settings/PlaybackSettings.qml:358
-msgctxt "@option:check"
-msgid "Show OSD message on skip"
-msgstr "跳過時在螢幕顯示 OSD 訊息"
-
-#: src/qml/Settings/PlaybackSettings.qml:367
-msgctxt "@info:tooltip show OSD message on skip setting"
-msgid ""
-"When skipping chapters an osd message will show the title of the skipped "
-"chapter."
-msgstr "跳過章節時跳出螢幕顯示訊息，來顯示跳過的章節的標題。"
-
-#: src/qml/Settings/PlaybackSettings.qml:373
+#: src/qml/Settings/PlaybackSettings.qml:356
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "關鍵字"
 
-#: src/qml/Settings/PlaybackSettings.qml:382
+#: src/qml/Settings/PlaybackSettings.qml:365
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, chapter 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:388
+#: src/qml/Settings/PlaybackSettings.qml:371
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2717,27 +2705,27 @@ msgstr ""
 "對到，例如 <strong>op</strong> 會比對到包含它的單詞，像是 <strong><u>op</"
 "u>ening</strong>。"
 
-#: src/qml/Settings/PlaybackSettings.qml:412
+#: src/qml/Settings/PlaybackSettings.qml:395
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:418
+#: src/qml/Settings/PlaybackSettings.qml:401
 msgctxt "@label"
 msgid "Format selection"
 msgstr "格式選取"
 
-#: src/qml/Settings/PlaybackSettings.qml:443
+#: src/qml/Settings/PlaybackSettings.qml:426
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "自訂"
 
-#: src/qml/Settings/PlaybackSettings.qml:449
+#: src/qml/Settings/PlaybackSettings.qml:432
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "預設"
 
-#: src/qml/Settings/PlaybackSettings.qml:464
+#: src/qml/Settings/PlaybackSettings.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "選擇最接近所選格式的影片來源。"
@@ -3322,6 +3310,16 @@ msgstr ""
 "無法取得此 ID 的播放清單：%1\n"
 "\n"
 "%2"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show OSD message on skip"
+#~ msgstr "跳過時在螢幕顯示 OSD 訊息"
+
+#~ msgctxt "@info:tooltip show OSD message on skip setting"
+#~ msgid ""
+#~ "When skipping chapters an osd message will show the title of the skipped "
+#~ "chapter."
+#~ msgstr "跳過章節時跳出螢幕顯示訊息，來顯示跳過的章節的標題。"
 
 #~ msgctxt "@item:listbox the style of the playlist"
 #~ msgid "Compact"
