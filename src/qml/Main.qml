@@ -26,6 +26,7 @@ ApplicationWindow {
 
     property bool containsMouse: false
     property int previousVisibility: Window.Windowed
+    property Kirigami.InlineMessage errorBox: null
     property var acceptedSubtitleTypes: ["application/x-subrip", "text/x-ssa", "text/x-microdvd"]
 
     function initPlaylist() : void {
@@ -405,11 +406,11 @@ ApplicationWindow {
         id: miscUtilsOnErrorConnection
         target: MiscUtils
         function onError(message) {
-            const item = messageBoxComponent.createObject(appWindow)
-            const messageBox = item as Kirigami.InlineMessage
-
-            messageBox.visible = true
-            messageBox.text = message
+            if (appWindow.errorBox === null) {
+                appWindow.errorBox = messageBoxComponent.createObject(appWindow)
+            }
+            appWindow.errorBox.visible = true
+            appWindow.errorBox.text = message
         }
     }
 
