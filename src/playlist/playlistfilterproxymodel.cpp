@@ -489,6 +489,14 @@ void PlaylistFilterProxyModel::moveItems(uint row, uint destinationRow)
 
     endFilterChange();
 
+    if (!selection.isEmpty()) {
+        const auto firstSelectionRow = static_cast<uint>(selection.first().row());
+        const auto lastSelectionRow = static_cast<uint>(selection.last().row());
+        const auto firstRow = std::min({firstSelectionRow, lastSelectionRow, destinationRow});
+        const auto lastRow = std::max({firstSelectionRow, lastSelectionRow, destinationRow});
+
+        Q_EMIT dataChanged(index(firstRow, 0), index(lastRow, 0), {PlaylistModel::RowNumberRole});
+    }
     Q_EMIT itemsMoved();
 }
 
