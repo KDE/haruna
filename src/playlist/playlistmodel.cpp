@@ -61,6 +61,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
                 setData(index(row, 0), value.duration, DurationRole);
             }
         }
+        Q_EMIT youtubeMetaDataReady();
     });
 }
 

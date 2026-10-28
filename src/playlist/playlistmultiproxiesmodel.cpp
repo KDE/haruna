@@ -242,6 +242,7 @@ void PlaylistMultiProxiesModel::initPlaylist(uint row, bool addItemsToPlaylist)
     connect(item.playlist.get(), &PlaylistFilterProxyModel::itemsInserted, this, savePlaylistTimer);
     connect(item.playlist->playlistSortProxyModel(), &PlaylistSortProxyModel::groupingChanged, this, savePlaylistTimer);
     connect(item.playlist->playlistModel(), &PlaylistModel::metaDataReady, this, savePlaylistTimerSlow);
+    connect(item.playlist->playlistModel(), &PlaylistModel::youtubeMetaDataReady, this, savePlaylistTimer);
     connect(item.playlist->playlistModel(), &PlaylistModel::siblingsPlaylistFinished, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
     connect(item.playlist->playlistModel(), &PlaylistModel::youtubePlaylistFinished, this, &PlaylistMultiProxiesModel::saveVisiblePlaylist);
 

@@ -153,6 +153,7 @@ Q_SIGNALS:
     void itemAdded(uint index, const QString &path, QString playlistName);
     void playingItemChanged(QString playlistName);
     void metaDataReady(uint index, const QUrl &url, KFileMetaData::PropertyMultiMap metadata);
+    void youtubeMetaDataReady();
     void youtubePlaylistFinished();
     void siblingsPlaylistFinished();
     void metadataUpdateFinished();
