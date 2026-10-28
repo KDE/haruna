@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-25 00:49+0000\n"
-"PO-Revision-Date: 2026-10-09 15:55+0200\n"
+"POT-Creation-Date: 2026-10-28 01:00+0000\n"
+"PO-Revision-Date: 2026-10-27 12:39+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -379,7 +379,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
-msgstr ""
+msgstr "Commuta Barra de Menu"
 
 #: src/models/actionsmodel.cpp:432
 #, kde-format
@@ -884,7 +884,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Adde"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:370
+#: src/playlist/Playlist.qml:442 src/qml/Main.qml:371
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -1619,22 +1619,22 @@ msgid ""
 "Check “Playback” settings for more details."
 msgstr ""
 
-#: src/qml/Main.qml:87
+#: src/qml/Main.qml:88
 msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:320
+#: src/qml/Main.qml:321
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Selige File"
 
-#: src/qml/Main.qml:340
+#: src/qml/Main.qml:341
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Selige File de Subtitulos"
 
-#: src/qml/Main.qml:367
+#: src/qml/Main.qml:368
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Aperi"
@@ -2744,7 +2744,7 @@ msgstr ""
 #: src/qml/Settings/PlaylistSettings.qml:218
 msgctxt "@option:check"
 msgid "Show row number"
-msgstr ""
+msgstr "Monstra numero de rango"
 
 #: src/qml/Settings/PlaylistSettings.qml:228
 msgctxt "@option:check"
@@ -2786,7 +2786,7 @@ msgstr "General"
 #: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "Osd"
 
 #: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
@@ -2945,17 +2945,17 @@ msgstr ""
 #: src/qml/Settings/SubtitlesSettings.qml:545
 msgctxt "@item:listbox border style"
 msgid "Opaque Box"
-msgstr ""
+msgstr "Cassa opaque"
 
 #: src/qml/Settings/SubtitlesSettings.qml:551
 msgctxt "@item:listbox border style"
 msgid "Background Box"
-msgstr ""
+msgstr "Cassa de fundo"
 
 #: src/qml/Settings/VideoSettings.qml:30
 msgctxt "@label:listbox"
 msgid "Default cover"
-msgstr ""
+msgstr "Copertura predefinite"
 
 #: src/qml/Settings/VideoSettings.qml:39
 msgctxt "placeholder text"
@@ -3050,9 +3050,7 @@ msgid "Middle click on the sliders to reset them"
 msgstr ""
 
 #: src/transcript/subtitleparser.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu all"
-#| msgid "All"
+#, kde-format
 msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
 msgid "All"
 msgstr "Omne"
@@ -3068,12 +3066,9 @@ msgid "Follow active subtitle"
 msgstr "Seque subtitulo active"
 
 #: src/transcript/Transcript.qml:215
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Subtitles"
 msgctxt "@info:tooltip"
 msgid "ASS subtitle styles"
-msgstr "Subtitulos"
+msgstr "Stilos de Subtitulos de ASS"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3093,93 +3088,73 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "Anello de AB"
 
 #: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
-msgstr "Salta capitulos"
+msgstr "Salta capitulo"
 
 #: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
-msgstr "Commuta Subtitulos"
+msgstr "Commutr disinterlaciamento"
 
 #: src/utilities/osdutils.cpp:48
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "Adjustamentos de imagine (contrasto, luminositate, gamma e saturation)"
 
 #: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
 msgstr "Reproduce nove file"
 
 #: src/utilities/osdutils.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Playback speed: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "Velocitate de Reproducer: %1"
+msgstr "Cambio del velocitate de reproduction"
 
 #: src/utilities/osdutils.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
-msgstr "Instantanee de schermo"
+msgstr "Prendente Instantanee de schermo"
 
 #: src/utilities/osdutils.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "Tempore de subtitulo: %1 secundas"
+msgstr "Cambio de synchronisation de subtitulos"
 
 #: src/utilities/osdutils.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "Subtitulos on (activate)"
+msgstr "CAmbio de scala de subtitulo"
 
 #: src/utilities/osdutils.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
-msgstr "Commuta Subtitulos"
+msgstr "Commuta Subtitulo"
 
 #: src/utilities/osdutils.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "Salveguarda modificationes"
+msgstr "Cambiamento de tracia"
 
 #: src/utilities/osdutils.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "Bassa volumine"
+msgstr "Cmbiamento de volumine"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format
