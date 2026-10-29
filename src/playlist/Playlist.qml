@@ -152,6 +152,14 @@ ResizeablePage {
                         icon.width: root.buttonSize
                         icon.height: root.buttonSize
                         Kirigami.Action {
+                            text: KI18n.i18nc("@action:button", "Folder")
+                            onTriggered: {
+                                const item = folderDialogComponent.createObject(root)
+                                const folderDialog = item as FolderDialog
+                                folderDialog.open()
+                            }
+                        }
+                        Kirigami.Action {
                             text: KI18n.i18nc("@action:button", "Files")
                             onTriggered: {
                                 fileDialog.fileType = "video"
@@ -678,6 +686,26 @@ ResizeablePage {
         onRejected: root.m_mpv.focus = true
         onVisibleChanged: {
             HarunaApp.actionsEnabled = !visible
+        }
+    }
+
+    Component {
+        id: folderDialogComponent
+
+        FolderDialog {
+            id: folderDialog
+
+            currentFolder: GeneralSettings.fileDialogLastLocation
+            onRejected: {
+                root.m_mpv.focus = true
+                destroy()
+            }
+            onAccepted: {
+                root.manager.visiblePlaylist.addFilesAndFolders([folderDialog.selectedFolder], PlaylistModel.Append)
+                GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(folderDialog.selectedFolder)
+                GeneralSettings.save()
+                destroy()
+            }
         }
     }
 }
