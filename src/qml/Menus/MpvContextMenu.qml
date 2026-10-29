@@ -54,6 +54,7 @@ Loader {
         MenuSeparator {}
 
         MenuItem { action: HarunaApp.actions.openFileAction }
+        MenuItem { action: HarunaApp.actions.openFolderAction }
         MenuItem { action: HarunaApp.actions.openUrlAction }
 
         MenuSeparator {}

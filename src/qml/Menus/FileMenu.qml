@@ -20,6 +20,7 @@ Menu {
     title: KI18n.i18nc("@title:menu", "&File")
 
     MenuItem { action: HarunaApp.actions.openFileAction }
+    MenuItem { action: HarunaApp.actions.openFolderAction }
     MenuItem { action: HarunaApp.actions.openUrlAction }
     MenuItem {
         action: HarunaApp.actions.loadLastPlayedFileAction

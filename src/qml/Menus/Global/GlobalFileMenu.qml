@@ -25,6 +25,12 @@ Labs.Menu {
     }
 
     Labs.MenuItem {
+        icon.name: HarunaApp.actions.openFolderAction.icon.name
+        text: HarunaApp.actions.openFolderAction.text
+        onTriggered: HarunaApp.actions.openFolderAction.trigger()
+    }
+
+    Labs.MenuItem {
         icon.name: HarunaApp.actions.openUrlAction.icon.name
         text: HarunaApp.actions.openUrlAction.text
         onTriggered: HarunaApp.actions.openUrlAction.trigger()

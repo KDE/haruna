@@ -58,6 +58,9 @@ ToolButton {
                 visible: root.position === HamburgerMenu.Position.Footer
             }
             MenuItem {
+                action: HarunaApp.actions.openFolderAction
+            }
+            MenuItem {
                 action: HarunaApp.actions.openUrlAction
                 visible: root.position === HamburgerMenu.Position.Footer
             }
