@@ -296,6 +296,42 @@ ApplicationWindow {
         }
     }
 
+    MpvContextMenu {
+        id: mpvContextMenuLoader
+
+        m_mpv: mpv
+    }
+
+    SettingsWindow {
+        id: settingsLoader
+
+        m_mpv: mpv
+    }
+
+    YouTube {
+        id: youtube
+    }
+
+    InputPopup {
+        id: openUrlPopup
+
+        x: 10
+        y: 10
+        width: Math.min(appWindow.width * 0.9, 600)
+        lastText: GeneralSettings.lastUrl
+        buttonText: KI18n.i18nc("@action:button", "Open")
+        warningText: youtube.hasYoutubeDl()
+                     ? ""
+                     : KI18n.i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
+
+        onSubmitted: function(url) {
+            appWindow.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
+
+            GeneralSettings.lastUrl = url
+            GeneralSettings.save()
+        }
+    }
+
     Component {
         id: messageBoxComponent
 
@@ -314,18 +350,6 @@ ApplicationWindow {
                 }
             }
         }
-    }
-
-    MpvContextMenu {
-        id: mpvContextMenuLoader
-
-        m_mpv: mpv
-    }
-
-    SettingsWindow {
-        id: settingsLoader
-
-        m_mpv: mpv
     }
 
     Component {
@@ -397,30 +421,6 @@ ApplicationWindow {
             onVisibleChanged: {
                 HarunaApp.actionsEnabled = !visible
             }
-        }
-    }
-
-    YouTube {
-        id: youtube
-    }
-
-    InputPopup {
-        id: openUrlPopup
-
-        x: 10
-        y: 10
-        width: Math.min(appWindow.width * 0.9, 600)
-        lastText: GeneralSettings.lastUrl
-        buttonText: KI18n.i18nc("@action:button", "Open")
-        warningText: youtube.hasYoutubeDl()
-                     ? ""
-                     : KI18n.i18nc("@info", "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a> was found.")
-
-        onSubmitted: function(url) {
-            appWindow.openFile(youtube.normalizeUrl(url), RecentFilesModel.OpenedFrom.OpenAction)
-
-            GeneralSettings.lastUrl = url
-            GeneralSettings.save()
         }
     }
 
