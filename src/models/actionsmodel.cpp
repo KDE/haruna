@@ -140,6 +140,14 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
+    action.name = u"openFolderAction"_s;
+    action.text = i18nc("@action", "Open Folder");
+    action.iconName = u"folder"_s;
+    action.defaultShortcut = Qt::CTRL | Qt::ALT | Qt::Key_O;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
     action.name = u"addExternalSubtitleAction"_s;
     action.text = i18nc("@action", "Add External Subtitle…");
     action.iconName = u"add-subtitle"_s;

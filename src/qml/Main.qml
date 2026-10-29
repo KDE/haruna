@@ -280,6 +280,11 @@ ApplicationWindow {
         m_openUrlPopup: openUrlPopup
 
         onOpenFileDialog: fileDialog.open()
+        onOpenFolderDialog: {
+            const item = folderDialogComponent.createObject(appWindow)
+            const folderDialog = item as FolderDialog
+            folderDialog.open()
+        }
         onOpenSubtitleDialog: subtitlesFileDialog.open()
     }
 
@@ -351,6 +356,27 @@ ApplicationWindow {
         onRejected: mpv.focus = true
         onVisibleChanged: {
             HarunaApp.actionsEnabled = !visible
+        }
+    }
+
+    Component {
+        id: folderDialogComponent
+
+        FolderDialog {
+            id: folderDialog
+
+            currentFolder: GeneralSettings.fileDialogLastLocation
+            onRejected: {
+                mpv.focus = true
+                destroy()
+            }
+
+            onAccepted: {
+                playlist.manager.visiblePlaylist.addFilesAndFolders([folderDialog.selectedFolder], PlaylistModel.Clear)
+                GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(folderDialog.selectedFolder)
+                GeneralSettings.save()
+                destroy()
+            }
         }
     }
 

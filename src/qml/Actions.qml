@@ -27,6 +27,7 @@ Item {
     required property InputPopup m_openUrlPopup
 
     signal openFileDialog()
+    signal openFolderDialog()
     signal openSubtitleDialog()
     signal togglePlaylist()
     signal toggleTranscript()
@@ -135,6 +136,10 @@ Item {
 
         function onOpenFileAction() {
             root.openFileDialog()
+        }
+
+        function onOpenFolderAction() {
+            root.openFolderDialog()
         }
 
         function onAddExternalSubtitleAction() {
