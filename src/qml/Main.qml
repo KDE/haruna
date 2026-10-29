@@ -279,13 +279,21 @@ ApplicationWindow {
         m_settingsLoader: settingsLoader
         m_openUrlPopup: openUrlPopup
 
-        onOpenFileDialog: fileDialog.open()
+        onOpenFileDialog: {
+            const item = fileDialogComponent.createObject(appWindow)
+            const fileDialog = item as FileDialog
+            fileDialog.open()
+        }
         onOpenFolderDialog: {
             const item = folderDialogComponent.createObject(appWindow)
             const folderDialog = item as FolderDialog
             folderDialog.open()
         }
-        onOpenSubtitleDialog: subtitlesFileDialog.open()
+        onOpenSubtitleDialog: {
+            const item = subtitlesFileDialogComponent.createObject(appWindow)
+            const subtitlesFileDialog = item as FileDialog
+            subtitlesFileDialog.open()
+        }
     }
 
     Component {
@@ -320,42 +328,54 @@ ApplicationWindow {
         m_mpv: mpv
     }
 
-    FileDialog {
-        id: fileDialog
+    Component {
+        id: fileDialogComponent
 
-        title: KI18n.i18nc("@title:window", "Select File")
-        currentFolder: GeneralSettings.fileDialogLastLocation
-        fileMode: FileDialog.OpenFile
+        FileDialog {
+            title: KI18n.i18nc("@title:window", "Select File")
+            currentFolder: GeneralSettings.fileDialogLastLocation
+            fileMode: FileDialog.OpenFile
 
-        onAccepted: {
-            appWindow.openFile(fileDialog.selectedFile, RecentFilesModel.OpenedFrom.OpenAction)
-            mpv.focus = true
+            onAccepted: {
+                appWindow.openFile(selectedFile, RecentFilesModel.OpenedFrom.OpenAction)
+                mpv.focus = true
 
-            GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(fileDialog.selectedFile)
-            GeneralSettings.save()
-        }
-        onRejected: mpv.focus = true
-        onVisibleChanged: {
-            HarunaApp.actionsEnabled = !visible
+                GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(selectedFile)
+                GeneralSettings.save()
+                destroy()
+            }
+            onRejected: {
+                mpv.focus = true
+                destroy()
+            }
+            onVisibleChanged: {
+                HarunaApp.actionsEnabled = !visible
+            }
         }
     }
 
-    FileDialog {
-        id: subtitlesFileDialog
+    Component {
+        id: subtitlesFileDialogComponent
 
-        title: KI18n.i18nc("@title:window", "Select Subtitles File")
-        currentFolder: PathUtils.parentUrl(mpv.currentUrl)
-        fileMode: FileDialog.OpenFile
-        nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
+        FileDialog {
+            title: KI18n.i18nc("@title:window", "Select Subtitles File")
+            currentFolder: PathUtils.parentUrl(mpv.currentUrl)
+            fileMode: FileDialog.OpenFile
+            nameFilters: ["Subtitles (*.srt *.ssa *.ass *.sub)"]
 
-        onAccepted: {
-            if (appWindow.acceptedSubtitleTypes.includes(MiscUtils.mimeType(subtitlesFileDialog.selectedFile))) {
-                mpv.addSubtitles(subtitlesFileDialog.selectedFile)
+            onAccepted: {
+                if (appWindow.acceptedSubtitleTypes.includes(MiscUtils.mimeType(selectedFile))) {
+                    mpv.addSubtitles(selectedFile)
+                }
+                destroy()
             }
-        }
-        onRejected: mpv.focus = true
-        onVisibleChanged: {
-            HarunaApp.actionsEnabled = !visible
+            onRejected: {
+                mpv.focus = true
+                destroy()
+            }
+            onVisibleChanged: {
+                HarunaApp.actionsEnabled = !visible
+            }
         }
     }
 
@@ -363,19 +383,19 @@ ApplicationWindow {
         id: folderDialogComponent
 
         FolderDialog {
-            id: folderDialog
-
             currentFolder: GeneralSettings.fileDialogLastLocation
+            onAccepted: {
+                playlist.manager.visiblePlaylist.addFilesAndFolders([selectedFolder], PlaylistModel.Clear)
+                GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(selectedFolder)
+                GeneralSettings.save()
+                destroy()
+            }
             onRejected: {
                 mpv.focus = true
                 destroy()
             }
-
-            onAccepted: {
-                playlist.manager.visiblePlaylist.addFilesAndFolders([folderDialog.selectedFolder], PlaylistModel.Clear)
-                GeneralSettings.fileDialogLastLocation = PathUtils.parentUrl(folderDialog.selectedFolder)
-                GeneralSettings.save()
-                destroy()
+            onVisibleChanged: {
+                HarunaApp.actionsEnabled = !visible
             }
         }
     }
