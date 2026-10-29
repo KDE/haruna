@@ -18,6 +18,7 @@ class QJSEngine;
 
 struct YTVideoInfo {
     QUrl url;
+    QString videoId;
     QString mediaTitle;
     double duration{0.0};
 };
@@ -62,6 +63,7 @@ Q_SIGNALS:
 
 private:
     void startNextYtDlpProcess(YTRequestPayload payload);
+    std::optional<YTVideoInfo> stringToYTVideoInfo(const QString &string);
     QQueue<QStringList> m_pendingYoutubeBatches;
     QList<std::shared_ptr<QProcess>> m_runningYtDlpProcesses;
     static constexpr int MaxConcurrentProcesses = 5;
