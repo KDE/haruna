@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 01:00+0000\n"
+"POT-Creation-Date: 2026-10-30 00:53+0000\n"
 "PO-Revision-Date: 2026-10-15 17:22+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -167,378 +167,386 @@ msgid "Open File"
 msgstr "פתיחת קובץ"
 
 #: src/models/actionsmodel.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Open File"
+msgctxt "@action"
+msgid "Open Folder"
+msgstr "פתיחת קובץ"
+
+#: src/models/actionsmodel.cpp:152
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "הוספת כתוביות חיצוניות…"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "פתיחת כתובת"
 
-#: src/models/actionsmodel.cpp:160
+#: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "האצת מהירות נגינה"
 
-#: src/models/actionsmodel.cpp:168
+#: src/models/actionsmodel.cpp:176
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "האטת מהירות נגינה"
 
-#: src/models/actionsmodel.cpp:176
+#: src/models/actionsmodel.cpp:184
 #, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "איפוס מהירות נגינה"
 
-#: src/models/actionsmodel.cpp:184
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "נגינה/השהיה"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
 msgstr "עצירה"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "לנגן את הבא"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "לנגן את הקודם"
 
-#: src/models/actionsmodel.cpp:216
+#: src/models/actionsmodel.cpp:224
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "יציאה"
 
-#: src/models/actionsmodel.cpp:224
+#: src/models/actionsmodel.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "השמעה מההתחלה"
 
-#: src/models/actionsmodel.cpp:232
+#: src/models/actionsmodel.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "דילוג צעד קטן קדימה"
 
-#: src/models/actionsmodel.cpp:240
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "דילוג צעד קטן אחורה"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "דילוג צעד בינוני קדימה"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "דילוג צעד בינוני אחורה"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "דילוג צעד גדול קדימה"
 
-#: src/models/actionsmodel.cpp:272
+#: src/models/actionsmodel.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "דילוג צעד גדול אחורה"
 
-#: src/models/actionsmodel.cpp:280
+#: src/models/actionsmodel.cpp:288
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "חתירה לפרק הבא"
 
-#: src/models/actionsmodel.cpp:288
+#: src/models/actionsmodel.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "חתירה לפרק הקודם"
 
-#: src/models/actionsmodel.cpp:296
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "חתירה לכתובית הבאה"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "חתירה לכתובית הקודמת"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "חתירה למקום של ‚צפייה בהמשך’"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "הגדרת לולאה"
 
-#: src/models/actionsmodel.cpp:328
+#: src/models/actionsmodel.cpp:336
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "צילום מסך"
 
-#: src/models/actionsmodel.cpp:336
+#: src/models/actionsmodel.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "הצגת/הסתרת כתוביות"
 
-#: src/models/actionsmodel.cpp:344
+#: src/models/actionsmodel.cpp:352
 #, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "הגדלת כתב כתוביות"
 
-#: src/models/actionsmodel.cpp:352
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "הקטנת כתב כתוביות"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:368
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "הגבהת כתוביות"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "הנמכת כתוביות"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:384
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "הקדמת כתוביות"
 
-#: src/models/actionsmodel.cpp:384
+#: src/models/actionsmodel.cpp:392
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "איחור כתוביות"
 
-#: src/models/actionsmodel.cpp:392
+#: src/models/actionsmodel.cpp:400
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "החלפה לכתוביות הבאות"
 
-#: src/models/actionsmodel.cpp:400
+#: src/models/actionsmodel.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "החלפה לכתוביות הקודמות"
 
-#: src/models/actionsmodel.cpp:408
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "החלפת מצב שזירה"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:424
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "החלפת מצב מילוי מסך"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:432
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "הצגת/הסתרת שורת תפריטים"
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:440
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "הצגת/הסתרת כותרת"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:142
+#: src/models/actionsmodel.cpp:448 src/qml/Settings/SettingsWindow.qml:142
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "רשימת נגינה"
 
-#: src/models/actionsmodel.cpp:448
+#: src/models/actionsmodel.cpp:456
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Transcript Panel"
 msgstr "הצגת/הסתרת לוח תמלול"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:464
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "הזזת סרטון שמאלה"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "הזזת סרטון ימינה"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "הגבהת סרטון"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "הנמכת סרטון"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "סיבוב עם כיוון השעון"
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "סיבוב עם כיוון השעון"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "הגברת עוצמת שמע"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "הנמכת עוצמת שמע"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "התקרבות"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "התרחקות"
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr "איפוס רמת תקריב"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "הגדלת ניגודיות"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "הפחתת ניגודיות"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "איפוס ניגודיות"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "הגברת בהירות"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "הפחתת בהירות"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "איפוס בהירות"
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr "הגברת גאמה"
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr "הפחתת גאמה"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "איפוס גאמה"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "הגברת רוויה"
 
-#: src/models/actionsmodel.cpp:624
+#: src/models/actionsmodel.cpp:632
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "הפחתת רוויה"
 
-#: src/models/actionsmodel.cpp:632
+#: src/models/actionsmodel.cpp:640
 #, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "איפוס רוויה"
 
-#: src/models/actionsmodel.cpp:783
+#: src/models/actionsmodel.cpp:791
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -547,7 +555,7 @@ msgid ""
 msgstr ""
 "הקיצור שנבחר סותר את הקיצור לפעולה <b>%1</b>.<br><br> להקצות את הקיצור מחדש?"
 
-#: src/models/actionsmodel.cpp:789
+#: src/models/actionsmodel.cpp:797
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -748,131 +756,139 @@ msgid "Add…"
 msgstr "הוספה…"
 
 #: src/playlist/Playlist.qml:155
+#, fuzzy
+#| msgctxt "@label:button folder"
+#| msgid "Folder"
+msgctxt "@action:button"
+msgid "Folder"
+msgstr "תיקייה"
+
+#: src/playlist/Playlist.qml:163
 msgctxt "@action:button"
 msgid "Files"
 msgstr "קבצים"
 
-#: src/playlist/Playlist.qml:163
+#: src/playlist/Playlist.qml:171
 msgctxt "@action:button"
 msgid "URL"
 msgstr "כתובת"
 
-#: src/playlist/Playlist.qml:173
+#: src/playlist/Playlist.qml:181
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "רשימת נגינה"
 
-#: src/playlist/Playlist.qml:182
+#: src/playlist/Playlist.qml:190
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "מיון"
 
-#: src/playlist/Playlist.qml:191
+#: src/playlist/Playlist.qml:199
 msgctxt "@action:button"
 msgid "Ascending"
 msgstr "עולה"
 
-#: src/playlist/Playlist.qml:208
+#: src/playlist/Playlist.qml:216
 msgctxt "@action:button"
 msgid "Descending"
 msgstr "יורד"
 
-#: src/playlist/Playlist.qml:231
+#: src/playlist/Playlist.qml:239
 msgctxt "@action:button"
 msgid "None"
 msgstr "אין"
 
-#: src/playlist/Playlist.qml:241
+#: src/playlist/Playlist.qml:249
 msgctxt "@action:button"
 msgid "File Name"
 msgstr "שם קובץ"
 
-#: src/playlist/Playlist.qml:251
+#: src/playlist/Playlist.qml:259
 msgctxt "@action:button"
 msgid "Title"
 msgstr "כותרת"
 
-#: src/playlist/Playlist.qml:261
+#: src/playlist/Playlist.qml:269
 msgctxt "@action:button"
 msgid "Duration"
 msgstr "משך"
 
-#: src/playlist/Playlist.qml:271
+#: src/playlist/Playlist.qml:279
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr "מועד עריכה"
 
-#: src/playlist/Playlist.qml:281
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "File Size"
 msgstr "גודל קובץ"
 
-#: src/playlist/Playlist.qml:291
+#: src/playlist/Playlist.qml:299
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "מס׳ רצועה"
 
-#: src/playlist/Playlist.qml:301
+#: src/playlist/Playlist.qml:309
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr "קצב דגימה"
 
-#: src/playlist/Playlist.qml:311
+#: src/playlist/Playlist.qml:319
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "קצב סיביות"
 
-#: src/playlist/Playlist.qml:326
+#: src/playlist/Playlist.qml:334
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "התאמה אישית…"
 
-#: src/playlist/Playlist.qml:337
+#: src/playlist/Playlist.qml:345
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "נגינה"
 
-#: src/playlist/Playlist.qml:343
+#: src/playlist/Playlist.qml:351
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "חזרה על רשימת נגינה"
 
-#: src/playlist/Playlist.qml:354
+#: src/playlist/Playlist.qml:362
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "לעצור אחרי הפריט האחרון"
 
-#: src/playlist/Playlist.qml:364
+#: src/playlist/Playlist.qml:372
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "חזרה על פריט"
 
-#: src/playlist/Playlist.qml:375
+#: src/playlist/Playlist.qml:383
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "לעצור אחרי פריט"
 
-#: src/playlist/Playlist.qml:385
+#: src/playlist/Playlist.qml:393
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "נגינה אקראית"
 
-#: src/playlist/Playlist.qml:397
+#: src/playlist/Playlist.qml:405
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "פינוי"
 
-#: src/playlist/Playlist.qml:405
+#: src/playlist/Playlist.qml:413
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "שמירה בשם"
 
-#: src/playlist/Playlist.qml:415
+#: src/playlist/Playlist.qml:423
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
 msgstr "עדכון כל נתוני העל"
 
-#: src/playlist/Playlist.qml:423
+#: src/playlist/Playlist.qml:431
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -885,12 +901,12 @@ msgstr ""
 "לעדכן נתוני על במסד הנתונים עם נתוני על בתוך הקובץ.\n"
 "נתוני העל מאוחסנים במסד הנתונים כדי להאיץ את המשיכה שלהם."
 
-#: src/playlist/Playlist.qml:439 src/playlist/Playlist.qml:460
+#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:468
 msgctxt "@action:button"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:371
+#: src/playlist/Playlist.qml:450 src/qml/Main.qml:325
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -899,32 +915,32 @@ msgstr ""
 "לא נמצאו <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> או <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
-#: src/playlist/Playlist.qml:459
+#: src/playlist/Playlist.qml:467
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "שם רשימת נגינה"
 
-#: src/playlist/Playlist.qml:547 src/playlist/PlaylistItemContextMenu.qml:116
+#: src/playlist/Playlist.qml:555 src/playlist/PlaylistItemContextMenu.qml:116
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "בחירה בהכול"
 
-#: src/playlist/Playlist.qml:552 src/playlist/PlaylistItemContextMenu.qml:121
+#: src/playlist/Playlist.qml:560 src/playlist/PlaylistItemContextMenu.qml:121
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "ביטול בחירה"
 
-#: src/playlist/Playlist.qml:557 src/playlist/PlaylistItemContextMenu.qml:126
+#: src/playlist/Playlist.qml:565 src/playlist/PlaylistItemContextMenu.qml:126
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "היפוך בחירה"
 
-#: src/playlist/Playlist.qml:564 src/playlist/PlaylistItemContextMenu.qml:154
+#: src/playlist/Playlist.qml:572 src/playlist/PlaylistItemContextMenu.qml:154
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "יש לגלול כדי לנגן פריט"
 
-#: src/playlist/Playlist.qml:650 src/qml/Settings/VideoSettings.qml:74
+#: src/playlist/Playlist.qml:658 src/qml/Settings/VideoSettings.qml:74
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "בחירת קובץ"
@@ -1382,99 +1398,99 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "ללחוץ ולהחזיק"
 
-#: src/qml/Actions.qml:143
+#: src/qml/Actions.qml:148
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "לא ניתן לטעון כתוביות כשאף קובץ לא פתוח"
 
-#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
+#: src/qml/Actions.qml:167 src/qml/Actions.qml:173 src/qml/Actions.qml:178
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "מהירות נגינה: %1"
 
-#: src/qml/Actions.qml:275
+#: src/qml/Actions.qml:280
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "תחילת לולאה: %1"
 
-#: src/qml/Actions.qml:284
+#: src/qml/Actions.qml:289
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "לולאה: %1–%2"
 
-#: src/qml/Actions.qml:292
+#: src/qml/Actions.qml:297
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "הלולאה נקטעה"
 
-#: src/qml/Actions.qml:313
+#: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "כתוביות כבויות"
 
-#: src/qml/Actions.qml:313
+#: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "כתוביות פעילות"
 
-#: src/qml/Actions.qml:329 src/qml/Actions.qml:336
+#: src/qml/Actions.qml:334 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "קנה מידה של כתוביות: %1"
 
-#: src/qml/Actions.qml:351
+#: src/qml/Actions.qml:356
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "ביטול שזירה: %1"
 
-#: src/qml/Actions.qml:417 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:422 src/qml/Actions.qml:429
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "תקריב: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "תקריב: 0"
 
-#: src/qml/Actions.qml:437 src/qml/Actions.qml:444
+#: src/qml/Actions.qml:442 src/qml/Actions.qml:449
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "ניגודיות: %1"
 
-#: src/qml/Actions.qml:450
+#: src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "ניגודיות: 0"
 
-#: src/qml/Actions.qml:457 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:462 src/qml/Actions.qml:469
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "בהירות: %1"
 
-#: src/qml/Actions.qml:470
+#: src/qml/Actions.qml:475
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "בהירות: 0"
 
-#: src/qml/Actions.qml:477 src/qml/Actions.qml:484
+#: src/qml/Actions.qml:482 src/qml/Actions.qml:489
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "גאמה: %1"
 
-#: src/qml/Actions.qml:490
+#: src/qml/Actions.qml:495
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "גאמה: 0"
 
-#: src/qml/Actions.qml:497 src/qml/Actions.qml:504
+#: src/qml/Actions.qml:502 src/qml/Actions.qml:509
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "רוויה: %1"
 
-#: src/qml/Actions.qml:510
+#: src/qml/Actions.qml:515
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "רוויה: 0"
@@ -1519,32 +1535,32 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "בחירת צבע"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:66 src/qml/Menus/FileMenu.qml:32
-#: src/qml/Menus/Global/GlobalFileMenu.qml:42
+#: src/qml/Haruna/Components/HamburgerMenu.qml:69 src/qml/Menus/FileMenu.qml:33
+#: src/qml/Menus/Global/GlobalFileMenu.qml:48
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "קבצים אחרונים"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:95
+#: src/qml/Haruna/Components/HamburgerMenu.qml:98
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:27
 #: src/qml/Menus/SubtitlesMenu.qml:25
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "כתובית עיקרית"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:101
+#: src/qml/Haruna/Components/HamburgerMenu.qml:104
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:61
 #: src/qml/Menus/SubtitlesMenu.qml:31
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "כתובית משנית"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:110
+#: src/qml/Haruna/Components/HamburgerMenu.qml:113
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "רצועת שמע"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:133
+#: src/qml/Haruna/Components/HamburgerMenu.qml:136
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&עוד"
@@ -1643,20 +1659,20 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:321
+#: src/qml/Main.qml:322
+msgctxt "@action:button"
+msgid "Open"
+msgstr "פתיחה"
+
+#: src/qml/Main.qml:359
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "בחירת קובץ"
 
-#: src/qml/Main.qml:341
+#: src/qml/Main.qml:385
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "בחירת קובץ כתוביות"
-
-#: src/qml/Main.qml:368
-msgctxt "@action:button"
-msgid "Open"
-msgstr "פתיחה"
 
 #: src/qml/Menus/AudioMenu.qml:20 src/qml/Menus/Global/GlobalAudioMenu.qml:22
 msgctxt "@title:menu"
@@ -1673,7 +1689,7 @@ msgctxt "@title:menu"
 msgid "&File"
 msgstr "&קובץ"
 
-#: src/qml/Menus/FileMenu.qml:67 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:68 src/qml/Menus/Global/GlobalFileMenu.qml:77
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "פינוי הרשימה"

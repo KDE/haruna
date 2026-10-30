@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 01:00+0000\n"
+"POT-Creation-Date: 2026-10-30 00:53+0000\n"
 "PO-Revision-Date: 2026-08-17 13:53+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -168,378 +168,386 @@ msgid "Open File"
 msgstr "Atverti failą"
 
 #: src/models/actionsmodel.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Open File"
+msgctxt "@action"
+msgid "Open Folder"
+msgstr "Atverti failą"
+
+#: src/models/actionsmodel.cpp:152
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "Pridėti išorinius subtitrus…"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "Atverti URL"
 
-#: src/models/actionsmodel.cpp:160
+#: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "Padidinti atkūrimo greitį"
 
-#: src/models/actionsmodel.cpp:168
+#: src/models/actionsmodel.cpp:176
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "Sumažinti atkūrimo greitį"
 
-#: src/models/actionsmodel.cpp:176
+#: src/models/actionsmodel.cpp:184
 #, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "Atstatyti atkūrimo greitį"
 
-#: src/models/actionsmodel.cpp:184
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "Atkurti/Pristabdyti"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
 msgstr "Stabdyti"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "Atkurti kitą"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "Atkurti ankstesnį"
 
-#: src/models/actionsmodel.cpp:216
+#: src/models/actionsmodel.cpp:224
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "Išjungti"
 
-#: src/models/actionsmodel.cpp:224
+#: src/models/actionsmodel.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "Paleisti atkūrimą iš naujo"
 
-#: src/models/actionsmodel.cpp:232
+#: src/models/actionsmodel.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "Persukti mažu žingsniu pirmyn"
 
-#: src/models/actionsmodel.cpp:240
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "Atsukti mažu žingsniu atgal"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "Persukti vidutiniu žingsniu pirmyn"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "Atsukti vidutiniu žingsniu atgal"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "Persukti dideliu žingsniu pirmyn"
 
-#: src/models/actionsmodel.cpp:272
+#: src/models/actionsmodel.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "Atsukti dideliu žingsniu atgal"
 
-#: src/models/actionsmodel.cpp:280
+#: src/models/actionsmodel.cpp:288
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "Persukti į kitą skyrių"
 
-#: src/models/actionsmodel.cpp:288
+#: src/models/actionsmodel.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "Atsukti į ankstesnį skyrių"
 
-#: src/models/actionsmodel.cpp:296
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "Persukti į kitus subtitrus"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "Atsukti į ankstesnius subtitrus"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "Persukti į žiūrėjimo vėliau poziciją"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "Nustatyti kartojimo iš naujo ciklą"
 
-#: src/models/actionsmodel.cpp:328
+#: src/models/actionsmodel.cpp:336
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "Ekrano kopija"
 
-#: src/models/actionsmodel.cpp:336
+#: src/models/actionsmodel.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "Perjungti subtitrus"
 
-#: src/models/actionsmodel.cpp:344
+#: src/models/actionsmodel.cpp:352
 #, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "Padidinti subtitrų šrifto dydį"
 
-#: src/models/actionsmodel.cpp:352
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "Sumažinti subtitrų šrifto dydį"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:368
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "Pakelti subtitrus"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "Nuleisti subtitrus"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:384
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "Rodyti subtitrus anksčiau"
 
-#: src/models/actionsmodel.cpp:384
+#: src/models/actionsmodel.cpp:392
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "Rodyti subtitrus vėliau"
 
-#: src/models/actionsmodel.cpp:392
+#: src/models/actionsmodel.cpp:400
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "Perjunginėti subtitrus pirmyn"
 
-#: src/models/actionsmodel.cpp:400
+#: src/models/actionsmodel.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "Perjunginėti titrus atgal"
 
-#: src/models/actionsmodel.cpp:408
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "Perjungti kaitaliojimo panaikinimą"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:424
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "Perjungti viso ekrano veikseną"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:432
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "Perjungti meniu juostą"
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:440
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "Perjungti antraštę"
 
-#: src/models/actionsmodel.cpp:440 src/qml/Settings/SettingsWindow.qml:142
+#: src/models/actionsmodel.cpp:448 src/qml/Settings/SettingsWindow.qml:142
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "Grojaraštis"
 
-#: src/models/actionsmodel.cpp:448
+#: src/models/actionsmodel.cpp:456
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Transcript Panel"
 msgstr "Perjungti nuorašo skydelį"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:464
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "Perkelti vaizdą kairėn"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "Perkelti vaizdą dešinėn"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "Pakelti vaizdą"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "Nuleisti vaizdą"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "Pasukti pagal laikrodžio rodyklę"
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "Pasukti prieš laikrodžio rodyklę"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "Pagarsinti"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "Tildyti"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "Didinti"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:536
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "Mažinti"
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr "Atstatyti mastelį"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:552
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "Padidinti kontrastą"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:560
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "Sumažinti kontrastą"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:568
 #, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "Atstatyti kontrastą"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "Padidinti ryškumą"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "Sumažinti ryškumą"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "Atstatyti ryškumą"
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr "Padidinti gamą"
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:608
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr "Sumažinti gamą"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:616
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "Atstatyti gamą"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:624
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "Padidinti grynį"
 
-#: src/models/actionsmodel.cpp:624
+#: src/models/actionsmodel.cpp:632
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "Sumažinti grynį"
 
-#: src/models/actionsmodel.cpp:632
+#: src/models/actionsmodel.cpp:640
 #, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "Atstatyti grynį"
 
-#: src/models/actionsmodel.cpp:783
+#: src/models/actionsmodel.cpp:791
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -549,7 +557,7 @@ msgstr ""
 "Pasirinktas spartusis klavišas konfliktuoja su veiksmo <b>%1</b> sparčiuoju "
 "klavišu.<br><br>Ar norite iš naujo priskirti spartųjį klavišą?"
 
-#: src/models/actionsmodel.cpp:789
+#: src/models/actionsmodel.cpp:797
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -754,131 +762,139 @@ msgid "Add…"
 msgstr "Pridėti…"
 
 #: src/playlist/Playlist.qml:155
+#, fuzzy
+#| msgctxt "@label:button folder"
+#| msgid "Folder"
+msgctxt "@action:button"
+msgid "Folder"
+msgstr "Aplankas"
+
+#: src/playlist/Playlist.qml:163
 msgctxt "@action:button"
 msgid "Files"
 msgstr "Failai"
 
-#: src/playlist/Playlist.qml:163
+#: src/playlist/Playlist.qml:171
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/playlist/Playlist.qml:173
+#: src/playlist/Playlist.qml:181
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "Grojaraštis"
 
-#: src/playlist/Playlist.qml:182
+#: src/playlist/Playlist.qml:190
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "Rikiuoti"
 
-#: src/playlist/Playlist.qml:191
+#: src/playlist/Playlist.qml:199
 msgctxt "@action:button"
 msgid "Ascending"
 msgstr "Didėjančiai"
 
-#: src/playlist/Playlist.qml:208
+#: src/playlist/Playlist.qml:216
 msgctxt "@action:button"
 msgid "Descending"
 msgstr "Mažėjančiai"
 
-#: src/playlist/Playlist.qml:231
+#: src/playlist/Playlist.qml:239
 msgctxt "@action:button"
 msgid "None"
 msgstr "Nėra"
 
-#: src/playlist/Playlist.qml:241
+#: src/playlist/Playlist.qml:249
 msgctxt "@action:button"
 msgid "File Name"
 msgstr "Failo pavadinimas"
 
-#: src/playlist/Playlist.qml:251
+#: src/playlist/Playlist.qml:259
 msgctxt "@action:button"
 msgid "Title"
 msgstr "Pavadinimas"
 
-#: src/playlist/Playlist.qml:261
+#: src/playlist/Playlist.qml:269
 msgctxt "@action:button"
 msgid "Duration"
 msgstr "Trukmė"
 
-#: src/playlist/Playlist.qml:271
+#: src/playlist/Playlist.qml:279
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr "Modifikavimo data"
 
-#: src/playlist/Playlist.qml:281
+#: src/playlist/Playlist.qml:289
 msgctxt "@action:button"
 msgid "File Size"
 msgstr "Failo dydis"
 
-#: src/playlist/Playlist.qml:291
+#: src/playlist/Playlist.qml:299
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "Takelio nr."
 
-#: src/playlist/Playlist.qml:301
+#: src/playlist/Playlist.qml:309
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr "Skaitmeninimo dažnis"
 
-#: src/playlist/Playlist.qml:311
+#: src/playlist/Playlist.qml:319
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "Pralaidumas"
 
-#: src/playlist/Playlist.qml:326
+#: src/playlist/Playlist.qml:334
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "Tinkintas…"
 
-#: src/playlist/Playlist.qml:337
+#: src/playlist/Playlist.qml:345
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "Atkūrimas"
 
-#: src/playlist/Playlist.qml:343
+#: src/playlist/Playlist.qml:351
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "Kartoti grojaraštį"
 
-#: src/playlist/Playlist.qml:354
+#: src/playlist/Playlist.qml:362
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "Stabdyti po paskutinio elemento"
 
-#: src/playlist/Playlist.qml:364
+#: src/playlist/Playlist.qml:372
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "Kartoti elementą"
 
-#: src/playlist/Playlist.qml:375
+#: src/playlist/Playlist.qml:383
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "Stabdyti po elemento"
 
-#: src/playlist/Playlist.qml:385
+#: src/playlist/Playlist.qml:393
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "Atsitiktinis atkūrimas"
 
-#: src/playlist/Playlist.qml:397
+#: src/playlist/Playlist.qml:405
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Išvalyti"
 
-#: src/playlist/Playlist.qml:405
+#: src/playlist/Playlist.qml:413
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "Įrašyti kaip"
 
-#: src/playlist/Playlist.qml:415
+#: src/playlist/Playlist.qml:423
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
 msgstr "Atnaujinti visus metaduomenis"
 
-#: src/playlist/Playlist.qml:423
+#: src/playlist/Playlist.qml:431
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -892,12 +908,12 @@ msgstr ""
 "viduje.\n"
 "Greitesnei prieigai metaduomenys yra saugomi duomenų bazėje."
 
-#: src/playlist/Playlist.qml:439 src/playlist/Playlist.qml:460
+#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:468
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/playlist/Playlist.qml:442 src/qml/Main.qml:371
+#: src/playlist/Playlist.qml:450 src/qml/Main.qml:325
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -906,32 +922,32 @@ msgstr ""
 "Nerasta nei <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a>, nei <a "
 "href=\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>."
 
-#: src/playlist/Playlist.qml:459
+#: src/playlist/Playlist.qml:467
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "grojaraščio pavadinimas"
 
-#: src/playlist/Playlist.qml:547 src/playlist/PlaylistItemContextMenu.qml:116
+#: src/playlist/Playlist.qml:555 src/playlist/PlaylistItemContextMenu.qml:116
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Žymėti visus"
 
-#: src/playlist/Playlist.qml:552 src/playlist/PlaylistItemContextMenu.qml:121
+#: src/playlist/Playlist.qml:560 src/playlist/PlaylistItemContextMenu.qml:121
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "Nuimti žymėjimą nuo visų"
 
-#: src/playlist/Playlist.qml:557 src/playlist/PlaylistItemContextMenu.qml:126
+#: src/playlist/Playlist.qml:565 src/playlist/PlaylistItemContextMenu.qml:126
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "Invertuoti žymėjimą"
 
-#: src/playlist/Playlist.qml:564 src/playlist/PlaylistItemContextMenu.qml:154
+#: src/playlist/Playlist.qml:572 src/playlist/PlaylistItemContextMenu.qml:154
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "Peršokti prie atkuriamo elemento"
 
-#: src/playlist/Playlist.qml:650 src/qml/Settings/VideoSettings.qml:74
+#: src/playlist/Playlist.qml:658 src/qml/Settings/VideoSettings.qml:74
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "Pasirinkite failą"
@@ -1391,99 +1407,99 @@ msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "Spustelėkite ir laikykite"
 
-#: src/qml/Actions.qml:143
+#: src/qml/Actions.qml:148
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "Nepavyksta įkelti subtitrų, kai neatvertas joks failas"
 
-#: src/qml/Actions.qml:162 src/qml/Actions.qml:168 src/qml/Actions.qml:173
+#: src/qml/Actions.qml:167 src/qml/Actions.qml:173 src/qml/Actions.qml:178
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "Atkūrimo greitis: %1"
 
-#: src/qml/Actions.qml:275
+#: src/qml/Actions.qml:280
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Kartojimo iš naujo ciklo pradžia: %1"
 
-#: src/qml/Actions.qml:284
+#: src/qml/Actions.qml:289
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "Kartojimo iš naujo ciklas: %1–%2"
 
-#: src/qml/Actions.qml:292
+#: src/qml/Actions.qml:297
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "Kartojimo iš naujo ciklas išvalytas"
 
-#: src/qml/Actions.qml:313
+#: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "Subtitrai išjungti"
 
-#: src/qml/Actions.qml:313
+#: src/qml/Actions.qml:318
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "Subtitrai įjungti"
 
-#: src/qml/Actions.qml:329 src/qml/Actions.qml:336
+#: src/qml/Actions.qml:334 src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "Subtitrų mastelis: %1"
 
-#: src/qml/Actions.qml:351
+#: src/qml/Actions.qml:356
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "Kaitaliojimo panaikinimas: %1"
 
-#: src/qml/Actions.qml:417 src/qml/Actions.qml:424
+#: src/qml/Actions.qml:422 src/qml/Actions.qml:429
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "Mastelis: %1"
 
-#: src/qml/Actions.qml:430
+#: src/qml/Actions.qml:435
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "Mastelis: 0"
 
-#: src/qml/Actions.qml:437 src/qml/Actions.qml:444
+#: src/qml/Actions.qml:442 src/qml/Actions.qml:449
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "Kontrastas: %1"
 
-#: src/qml/Actions.qml:450
+#: src/qml/Actions.qml:455
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "Kontrastas: 0"
 
-#: src/qml/Actions.qml:457 src/qml/Actions.qml:464
+#: src/qml/Actions.qml:462 src/qml/Actions.qml:469
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "Ryškumas: %1"
 
-#: src/qml/Actions.qml:470
+#: src/qml/Actions.qml:475
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "Ryškumas: 0"
 
-#: src/qml/Actions.qml:477 src/qml/Actions.qml:484
+#: src/qml/Actions.qml:482 src/qml/Actions.qml:489
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "Gama: %1"
 
-#: src/qml/Actions.qml:490
+#: src/qml/Actions.qml:495
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "Gama: 0"
 
-#: src/qml/Actions.qml:497 src/qml/Actions.qml:504
+#: src/qml/Actions.qml:502 src/qml/Actions.qml:509
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "Grynis: %1"
 
-#: src/qml/Actions.qml:510
+#: src/qml/Actions.qml:515
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "Grynis: 0"
@@ -1528,32 +1544,32 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "Pasirinkite spalvą"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:66 src/qml/Menus/FileMenu.qml:32
-#: src/qml/Menus/Global/GlobalFileMenu.qml:42
+#: src/qml/Haruna/Components/HamburgerMenu.qml:69 src/qml/Menus/FileMenu.qml:33
+#: src/qml/Menus/Global/GlobalFileMenu.qml:48
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "Paskiausiai naudoti failai"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:95
+#: src/qml/Haruna/Components/HamburgerMenu.qml:98
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:27
 #: src/qml/Menus/SubtitlesMenu.qml:25
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "Pirminiai subtitrai"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:101
+#: src/qml/Haruna/Components/HamburgerMenu.qml:104
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:61
 #: src/qml/Menus/SubtitlesMenu.qml:31
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "Antriniai subtitrai"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:110
+#: src/qml/Haruna/Components/HamburgerMenu.qml:113
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "Garso įrašo takelis"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:133
+#: src/qml/Haruna/Components/HamburgerMenu.qml:136
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Daugiau"
@@ -1653,20 +1669,20 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:321
+#: src/qml/Main.qml:322
+msgctxt "@action:button"
+msgid "Open"
+msgstr "Atverti"
+
+#: src/qml/Main.qml:359
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "Pasirinkite failą"
 
-#: src/qml/Main.qml:341
+#: src/qml/Main.qml:385
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "Pasirinkite subtitrų failą"
-
-#: src/qml/Main.qml:368
-msgctxt "@action:button"
-msgid "Open"
-msgstr "Atverti"
 
 #: src/qml/Menus/AudioMenu.qml:20 src/qml/Menus/Global/GlobalAudioMenu.qml:22
 msgctxt "@title:menu"
@@ -1683,7 +1699,7 @@ msgctxt "@title:menu"
 msgid "&File"
 msgstr "&Failas"
 
-#: src/qml/Menus/FileMenu.qml:67 src/qml/Menus/Global/GlobalFileMenu.qml:71
+#: src/qml/Menus/FileMenu.qml:68 src/qml/Menus/Global/GlobalFileMenu.qml:77
 msgctxt "@action:inmenu"
 msgid "Clear List"
 msgstr "Išvalyti sąrašą"
