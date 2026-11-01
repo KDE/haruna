@@ -5,11 +5,9 @@
 #
 
 qt_add_library(framedecoder STATIC)
-qt_add_qml_module(framedecoder
-    URI org.kde.haruna.framedecoder
-    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/framedecoder
-    IMPORT_PATH ${CMAKE_BINARY_DIR}
-    SOURCES
+add_library(Haruna::FrameDecoder ALIAS framedecoder)
+target_sources(framedecoder
+    PRIVATE
         framedecoder.h
         framedecoder.cpp
 )
