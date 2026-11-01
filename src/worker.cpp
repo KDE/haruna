@@ -170,18 +170,7 @@ void Worker::findRecursiveSubtitles(const QUrl &playingUrl)
 
 void Worker::savePositionToDB(const QString &md5Hash, const QString &path, double position)
 {
-    Database::instance()->addPlaybackPosition(md5Hash, path, position, getDBConnection());
+    Database::instance()->addPlaybackPosition(md5Hash, path, position);
 }
 
-QSqlDatabase Worker::getDBConnection()
-{
-    static const auto dbFile{PathUtils::instance()->configFilePath(PathUtils::ConfigFile::Database)};
-    static auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"worker_connection"_s);
-    if (!db.isOpen()) {
-        db.setDatabaseName(dbFile);
-        db.open();
-    }
-
-    return db;
-}
 #include "moc_worker.cpp"

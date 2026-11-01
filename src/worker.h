@@ -41,8 +41,6 @@ private:
     Worker &operator=(const Worker &) = delete;
     Worker(Worker &&) = delete;
     Worker &operator=(Worker &&) = delete;
-
-    QSqlDatabase getDBConnection();
 };
 
 #endif // WORKER_H

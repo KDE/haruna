@@ -247,10 +247,9 @@ double Database::playbackPosition(const QString &md5Hash)
     return 0.0;
 }
 
-void Database::addPlaybackPosition(const QString &md5Hash, const QString &path, double position, QSqlDatabase dbConnection)
+void Database::addPlaybackPosition(const QString &md5Hash, const QString &path, double position)
 {
-    QSqlDatabase database = dbConnection.isValid() ? dbConnection : connection();
-    QSqlQuery query(database);
+    QSqlQuery query(connection());
     query.prepare(u"INSERT INTO "_s % PLAYBACK_POSITION_TABLE %
                   u" (md5_hash, path, position) "
                   "VALUES (:md5Hash, :path, :position) "
