@@ -11,8 +11,25 @@
 #include <QQmlEngine>
 
 #include <KIO/OpenFileManagerWindowJob>
+#include <KSharedConfig>
 
 using namespace Qt::StringLiterals;
+
+class PathUtilsPrivate
+{
+    Q_DISABLE_COPY(PathUtilsPrivate);
+
+public:
+    PathUtilsPrivate()
+        : m_config(KSharedConfig::openConfig(u"haruna/haruna.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
+        , m_ccConfig(KSharedConfig::openConfig(u"haruna/custom-commands.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
+        , m_shortcutsConfig(KSharedConfig::openConfig(u"haruna/shortcuts.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
+    {
+    }
+    KSharedConfig::Ptr m_config;
+    KSharedConfig::Ptr m_ccConfig;
+    KSharedConfig::Ptr m_shortcutsConfig;
+};
 
 PathUtils *PathUtils::instance()
 {
@@ -27,9 +44,7 @@ PathUtils *PathUtils::create(QQmlEngine *, QJSEngine *)
 }
 
 PathUtils::PathUtils()
-    : m_config(KSharedConfig::openConfig(u"haruna/haruna.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
-    , m_ccConfig(KSharedConfig::openConfig(u"haruna/custom-commands.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
-    , m_shortcutsConfig(KSharedConfig::openConfig(u"haruna/shortcuts.conf"_s, KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation))
+    : d_ptr{std::make_unique<PathUtilsPrivate>()}
 {
 }
 
@@ -37,21 +52,21 @@ QString PathUtils::configFileParentPath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
-        auto path = QStandardPaths::writableLocation(m_config->locationType()).append(u"/haruna"_s);
+        auto path = QStandardPaths::writableLocation(d_ptr->m_config->locationType()).append(u"/haruna"_s);
         if (QFileInfo::exists(path)) {
             return path;
         }
         break;
     }
     case ConfigFile::CustomCommands: {
-        auto path = QStandardPaths::writableLocation(m_ccConfig->locationType()).append(u"/haruna"_s);
+        auto path = QStandardPaths::writableLocation(d_ptr->m_ccConfig->locationType()).append(u"/haruna"_s);
         if (QFileInfo::exists(path)) {
             return path;
         }
         break;
     }
     case ConfigFile::Shortcuts: {
-        auto path = QStandardPaths::writableLocation(m_shortcutsConfig->locationType()).append(u"/haruna"_s);
+        auto path = QStandardPaths::writableLocation(d_ptr->m_shortcutsConfig->locationType()).append(u"/haruna"_s);
         if (QFileInfo::exists(path)) {
             return path;
         }
@@ -75,16 +90,16 @@ QString PathUtils::configFilePath(ConfigFile configFile)
 {
     switch (configFile) {
     case ConfigFile::Main: {
-        auto path = QStandardPaths::writableLocation(m_config->locationType()).append(u"/"_s);
-        return path.append(m_config->name());
+        auto path = QStandardPaths::writableLocation(d_ptr->m_config->locationType()).append(u"/"_s);
+        return path.append(d_ptr->m_config->name());
     }
     case ConfigFile::CustomCommands: {
-        auto path = QStandardPaths::writableLocation(m_ccConfig->locationType()).append(u"/"_s);
-        return path.append(m_ccConfig->name());
+        auto path = QStandardPaths::writableLocation(d_ptr->m_ccConfig->locationType()).append(u"/"_s);
+        return path.append(d_ptr->m_ccConfig->name());
     }
     case ConfigFile::Shortcuts: {
-        auto path = QStandardPaths::writableLocation(m_shortcutsConfig->locationType()).append(u"/"_s);
-        return path.append(m_shortcutsConfig->name());
+        auto path = QStandardPaths::writableLocation(d_ptr->m_shortcutsConfig->locationType()).append(u"/"_s);
+        return path.append(d_ptr->m_shortcutsConfig->name());
     }
     case ConfigFile::Database: {
         auto path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append(u"/haruna/"_s);

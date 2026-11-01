@@ -8,13 +8,14 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+#include <QObject>
 #include <QStandardPaths>
 #include <QtQml/qqmlregistration.h>
 
-#include <KSharedConfig>
-
 class QQmlEngine;
 class QJSEngine;
+
+class PathUtilsPrivate;
 
 class PathUtils : public QObject
 {
@@ -60,9 +61,7 @@ private:
     PathUtils(PathUtils &&) = delete;
     PathUtils &operator=(PathUtils &&) = delete;
 
-    KSharedConfig::Ptr m_config;
-    KSharedConfig::Ptr m_ccConfig;
-    KSharedConfig::Ptr m_shortcutsConfig;
+    std::unique_ptr<PathUtilsPrivate> d_ptr;
 };
 
 #endif // GLOBALS_H
