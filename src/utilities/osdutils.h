@@ -37,6 +37,7 @@ public:
         MpvSubtitleToggle,
         MpvVolume,
         MpvTrack,
+        MpvZoom,
     };
     Q_ENUM(Context)
 
