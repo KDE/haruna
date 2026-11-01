@@ -175,6 +175,7 @@ RowLayout {
                         elide: Text.ElideRight
                         Kirigami.Theme.colorSet: Kirigami.Theme.Tooltip
                         Layout.alignment: Qt.AlignCenter
+                        Layout.maximumWidth: GeneralSettings.previewThumbnailWidth
                     }
                 }
             }
