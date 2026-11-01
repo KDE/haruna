@@ -87,12 +87,12 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     )
 endif()
 
-add_subdirectory(framedecoder)
-add_subdirectory(playlist)
-add_subdirectory(transcript)
-add_subdirectory(utilities)
+add_subdirectory(Playlist)
 add_subdirectory(Settings)
-add_subdirectory(youtube)
+add_subdirectory(Transcript)
+add_subdirectory(Utilities)
+add_subdirectory(YouTube)
+add_subdirectory(framedecoder)
 
 set_source_files_properties(qml/Models.qml
     PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
