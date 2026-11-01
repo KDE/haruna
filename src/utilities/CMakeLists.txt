@@ -5,6 +5,7 @@
 #
 
 qt_add_library(utilities STATIC)
+add_library(Haruna::Utilities ALIAS utilities)
 qt_add_qml_module(utilities
     URI org.kde.haruna.utilities
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/utilities
@@ -33,5 +34,5 @@ target_link_libraries(utilities PRIVATE
     KF6::KIOWidgets
     KF6::WindowSystem
 
-    settingsplugin
+    Haruna::Settings
 )

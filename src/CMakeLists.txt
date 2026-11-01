@@ -191,9 +191,8 @@ target_link_libraries(haruna PRIVATE
     Haruna::Playlist
     Haruna::Settings
     Haruna::Transcript
+    Haruna::Utilities
     Haruna::YouTube
-
-    utilitiesplugin
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
