@@ -15,6 +15,7 @@
 #include <QThread>
 
 #include <KFileMetaData/Properties>
+#include <KLocalizedString>
 
 #include "logging/_database.h"
 #include "migrationmanager.h"
@@ -94,6 +95,32 @@ QSqlDatabase Database::connection()
 
     if (!db.open()) {
         qWarning() << "Failed to open DB in thread" << QThread::currentThread() << db.lastError();
+    }
+
+    QSqlQuery versionQuery(db);
+    if (!versionQuery.exec(u"PRAGMA user_version;"_s) || !versionQuery.next()) {
+        qWarning() << "Failed to read DB version:" << versionQuery.lastError();
+    }
+    const auto dbFileVersion = versionQuery.value(0).toInt();
+    const auto dbAppVersion = MigrationManager::databaseVersion();
+    if (dbAppVersion < dbFileVersion) {
+        // TODO: show warning to user
+        const auto msg = i18n(
+            "Using memory database since database version (%1) of the application "
+            "is lower than the version of the database file (%2). "
+            "Changes are not persisted. "
+            "Either update to the latest version of delete/rename the database file (%3).",
+            MigrationManager::databaseVersion(),
+            dbFileVersion,
+            dbFile);
+        qCWarning(HarunaDatabase) << msg;
+
+        db.close();
+        db.setDatabaseName(u":memory:"_s);
+
+        if (!db.open()) {
+            qWarning() << "Failed to open DB in thread" << QThread::currentThread() << db.lastError();
+        }
     }
 
     QSqlQuery query(db);

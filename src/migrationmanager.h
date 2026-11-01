@@ -19,6 +19,8 @@ public:
 
     void migrate(QSqlDatabase &db);
 
+    static int databaseVersion();
+
 private:
     void migrateToV2(QSqlDatabase &db);
     void runMigrations(QSqlDatabase &db, const QStringList &migrations, int version);

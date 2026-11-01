@@ -15,6 +15,8 @@
 
 using namespace Qt::StringLiterals;
 
+static const int DATABASE_VERSION = 2;
+
 MigrationManager::MigrationManager(QObject *parent)
     : QObject{parent}
 {
@@ -23,6 +25,11 @@ MigrationManager::MigrationManager(QObject *parent)
 void MigrationManager::migrate(QSqlDatabase &db)
 {
     migrateToV2(db);
+}
+
+int MigrationManager::databaseVersion()
+{
+    return DATABASE_VERSION;
 }
 
 void MigrationManager::migrateToV2(QSqlDatabase &db)
