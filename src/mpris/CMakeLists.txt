@@ -5,6 +5,7 @@
 #
 
 qt_add_library(mpris STATIC)
+add_library(Haruna::Mpris ALIAS mpris)
 target_sources(mpris
     PRIVATE
         mpriscontroller.h mpriscontroller.cpp

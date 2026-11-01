@@ -198,8 +198,8 @@ target_link_libraries(haruna PRIVATE
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     add_subdirectory(mpris)
     target_link_libraries(haruna
-        PUBLIC
-            mpris
+        PRIVATE
+            Haruna::Mpris
     )
 endif()
 install(TARGETS haruna DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
