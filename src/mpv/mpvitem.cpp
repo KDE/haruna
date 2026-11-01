@@ -632,8 +632,10 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         const QVariant preferredAudioTrack = AudioSettings::preferredTrack();
         setAudioId(preferredAudioTrack.toInt());
 
-        const QVariant preferredSubTrack = SubtitlesSettings::preferredTrack();
-        setSubtitleId(preferredSubTrack.toInt());
+        const int preferredSubTrack = SubtitlesSettings::preferredTrack();
+        if (SubtitlesSettings::autoSelectSubtitles() && preferredSubTrack > 0) {
+            setSubtitleId(preferredSubTrack);
+        }
         break;
     }
     case AsyncIds::ChapterList: {
@@ -758,9 +760,11 @@ void MpvItem::userCommand(const QString &commandString)
 
 void MpvItem::selectSubtitleTrack()
 {
-    setProperty(MpvProperties::self()->SubtitleId, u"no"_s);
     if (SubtitlesSettings::autoSelectSubtitles()) {
+        setPropertyBlocking(MpvProperties::self()->SubtitleId, u"auto"_s);
         setProperty(MpvProperties::self()->SubtitleLanguage, SubtitlesSettings::preferredLanguage().remove(u" "_s));
+    } else {
+        setProperty(MpvProperties::self()->SubtitleId, u"no"_s);
     }
 }
 
@@ -1054,9 +1058,15 @@ void MpvItem::setSubtitleId(int value)
     if (value == subtitleId()) {
         return;
     }
-    if (value == -1) {
+    if (value < 0) {
         // value is -1 when unchecking the selected track in the GUI
         setProperty(MpvProperties::self()->SubtitleId, u"no"_s);
+        return;
+    }
+
+    if (value == 0) {
+        // value is 0 when selecting 0 for preferred track in the settings
+        setProperty(MpvProperties::self()->SubtitleId, u"auto"_s);
         return;
     }
 
