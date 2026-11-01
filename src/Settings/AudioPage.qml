@@ -11,7 +11,6 @@ import QtQuick.Controls
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
-import org.kde.haruna
 import org.kde.haruna.settings
 
 SettingsBasePage {
@@ -105,7 +104,7 @@ SettingsBasePage {
 
         // Replay Gain
         // See: https://mpv.io/manual/stable/#options-replaygain
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Replay gain")
             Layout.columnSpan: 2
             Layout.fillWidth: true

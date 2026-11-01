@@ -5,10 +5,27 @@
 #
 
 qt_add_library(settings STATIC)
+add_library(Haruna::Settings ALIAS settings)
 qt_add_qml_module(settings
     URI org.kde.haruna.settings
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/settings
     VERSION 1.0
+    QML_FILES
+        SettingsBasePage.qml
+        DatabasePage.qml
+        GeneralPage.qml
+        PlaybackPage.qml
+        VideoPage.qml
+        AudioPage.qml
+        SubtitlesPage.qml
+        PlaylistPage.qml
+        MousePage.qml
+        ShortcutsPage.qml
+        CustomCommandsPage.qml
+        EditCustomCommand.qml
+        DebugPage.qml
+        SettingsWindow.qml
+        OsdPage.qml
 )
 
 # -----------------------------------

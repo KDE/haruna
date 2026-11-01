@@ -9,7 +9,7 @@ import Qt.labs.platform as Labs
 
 import org.kde.ki18n
 
-import org.kde.haruna
+import org.kde.haruna.settings
 
 Labs.Menu {
     id: root

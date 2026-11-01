@@ -9,7 +9,7 @@ import QtQuick.Controls
 
 import org.kde.ki18n
 
-import org.kde.haruna
+import org.kde.haruna.settings
 
 Menu {
     id: root

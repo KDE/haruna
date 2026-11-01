@@ -5,7 +5,6 @@
  */
 
 import QtQuick
-import QtQml
 
 import org.kde.kirigami as Kirigami
 
@@ -17,5 +16,4 @@ Kirigami.ScrollablePage {
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
 
     Component.onDestruction: save()
-
 }

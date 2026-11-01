@@ -9,10 +9,9 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.ki18n
+import org.kde.kirigami as Kirigami
 
-import org.kde.haruna
 import org.kde.haruna.utilities
-import org.kde.haruna.settings
 
 SettingsBasePage {
     id: root
@@ -40,7 +39,7 @@ SettingsBasePage {
             }
         }
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Choose when to show osd")
             Layout.columnSpan: 2
             Layout.fillWidth: true

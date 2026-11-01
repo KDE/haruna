@@ -84,7 +84,7 @@ SettingsBasePage {
             }
         }
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Screenshots")
             Layout.columnSpan: 2
             Layout.fillWidth: true
@@ -196,7 +196,7 @@ SettingsBasePage {
             }
         }
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Image adjustments")
             Layout.columnSpan: 2
             Layout.fillWidth: true

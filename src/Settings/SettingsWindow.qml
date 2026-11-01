@@ -61,7 +61,7 @@ Loader {
     sourceComponent: Kirigami.ApplicationWindow {
         id: settingsWindow
 
-        property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
+        property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
 
         width: 800
         height: 600
@@ -89,7 +89,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.General
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/GeneralSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/GeneralPage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -98,7 +98,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Osd
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/OsdSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/OsdPage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -107,7 +107,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Playback
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/PlaybackSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/PlaybackPage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -116,7 +116,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Video
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/VideoSettings.qml`,
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/VideoPage.qml`,
                                                                {m_mpv: root.m_mpv})
                         }
                     },
@@ -126,7 +126,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Audio
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/AudioSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/AudioPage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -135,7 +135,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Subtitles
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/SubtitlesSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/SubtitlesPage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -144,7 +144,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Playlist
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/PlaylistSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/PlaylistPage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -153,7 +153,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Mouse
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/MouseSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/MousePage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -162,7 +162,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Shortcuts
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/ShortcutsSettings.qml`,)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/ShortcutsPage.qml`,)
                         }
                     },
                     Kirigami.Action {
@@ -176,7 +176,7 @@ Loader {
 
                             root.activePage = SettingsWindow.Page.CustomCommands
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/CustomCommandsSettings.qml`,
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/CustomCommandsPage.qml`,
                                                           props)
                         }
                     },
@@ -186,7 +186,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Database
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DatabaseSettings.qml`)
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DatabasePage.qml`)
                         }
                     },
                     Kirigami.Action {
@@ -195,7 +195,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Debug
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DebugSettings.qml`,
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DebugPage.qml`,
                                                                {m_mpv: root.m_mpv})
                         }
                     },

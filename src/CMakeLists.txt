@@ -91,7 +91,7 @@ add_subdirectory(framedecoder)
 add_subdirectory(playlist)
 add_subdirectory(transcript)
 add_subdirectory(utilities)
-add_subdirectory(settings)
+add_subdirectory(Settings)
 add_subdirectory(youtube)
 
 set_source_files_properties(qml/Models.qml
@@ -121,8 +121,6 @@ qt_add_qml_module(haruna
         qml/Haruna/Components/ResizeablePage.qml
         qml/Haruna/Components/ResizeHandler.qml
         qml/Haruna/Components/SelectActionPopup.qml
-        qml/Haruna/Components/SettingsBasePage.qml
-        qml/Haruna/Components/SettingsHeader.qml
         qml/Haruna/Components/SubtitlesFolders.qml
         qml/Haruna/Components/SubtitleTracksMenu.qml
         qml/Haruna/Components/ToolTipButton.qml
@@ -145,20 +143,6 @@ qt_add_qml_module(haruna
         qml/Menus/Global/GlobalVideoMenu.qml
         qml/Menus/Global/GlobalViewMenu.qml
 
-        qml/Settings/DatabaseSettings.qml
-        qml/Settings/GeneralSettings.qml
-        qml/Settings/PlaybackSettings.qml
-        qml/Settings/VideoSettings.qml
-        qml/Settings/AudioSettings.qml
-        qml/Settings/SubtitlesSettings.qml
-        qml/Settings/PlaylistSettings.qml
-        qml/Settings/MouseSettings.qml
-        qml/Settings/ShortcutsSettings.qml
-        qml/Settings/CustomCommandsSettings.qml
-        qml/Settings/EditCustomCommand.qml
-        qml/Settings/DebugSettings.qml
-        qml/Settings/SettingsWindow.qml
-        qml/Settings/OsdSettings.qml
 
     DEPENDENCIES
         org.kde.haruna.playlist
@@ -203,11 +187,12 @@ target_link_libraries(haruna PRIVATE
 
     MpvQt::MpvQt
 
+    Haruna::Settings
+
     framedecoderplugin
     playlistplugin
     transcriptplugin
     utilitiesplugin
-    settingsplugin
     youtubeplugin
 )
 

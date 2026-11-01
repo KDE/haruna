@@ -13,6 +13,7 @@ import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 import org.kde.haruna
+import org.kde.haruna.settings
 
 ToolButton {
     id: root

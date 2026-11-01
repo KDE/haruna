@@ -211,7 +211,7 @@ SettingsBasePage {
         // Playback position
         // ------------------------------------
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Playback position")
             Layout.columnSpan: 2
             Layout.fillWidth: true
@@ -329,7 +329,7 @@ SettingsBasePage {
         // Chapters
         // ------------------------------------
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Chapters")
             Layout.columnSpan: 2
             Layout.fillWidth: true
@@ -391,7 +391,7 @@ SettingsBasePage {
         // Youtube-dl format settings
         // ------------------------------------
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Youtube-dl")
             Layout.columnSpan: 2
             Layout.fillWidth: true

@@ -11,12 +11,12 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.ki18n
-import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
 import org.kde.haruna
-import org.kde.haruna.utilities
 import org.kde.haruna.settings
+import org.kde.haruna.utilities
 
 SettingsBasePage {
     id: root
@@ -204,7 +204,7 @@ SettingsBasePage {
             }
         }
 
-        SettingsHeader {
+        Kirigami.ListSectionHeader {
             text: KI18n.i18nc("@title", "Styling")
             Layout.columnSpan: 2
             Layout.fillWidth: true
