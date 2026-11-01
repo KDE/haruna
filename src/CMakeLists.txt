@@ -14,8 +14,6 @@ qt_add_executable(haruna)
 target_sources(haruna
     PRIVATE
     application.h application.cpp
-    database.h database.cpp
-    migrationmanager.h migrationmanager.cpp
     lockmanager.h lockmanager.cpp
     main.cpp
     models/actionsmodel.h models/actionsmodel.cpp
@@ -41,24 +39,6 @@ ecm_qt_declare_logging_category(haruna
     IDENTIFIER "HarunaGeneral"
     CATEGORY_NAME "org.kde.haruna.general"
     DEFAULT_SEVERITY Info
-)
-
-ecm_qt_declare_logging_category(haruna
-    HEADER "logging/_database.h"
-    IDENTIFIER "HarunaDatabase"
-    CATEGORY_NAME "org.kde.haruna.database"
-    DEFAULT_SEVERITY Info
-)
-
-qt_add_resources(haruna sql_files
-    FILES
-        sql/v1/create-metadata_cache-table.sql
-        sql/v1/create-recent_files-table.sql
-        sql/v1/create-playback_position-table.sql
-
-        sql/v2/create-metadata_cache-table.sql
-        sql/v2/create-recent_files-table.sql
-        sql/v2/create-urls-table.sql
 )
 
 qt_add_resources(haruna animations
@@ -87,6 +67,7 @@ if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
     )
 endif()
 
+add_subdirectory(Database)
 add_subdirectory(Playlist)
 add_subdirectory(Settings)
 add_subdirectory(Transcript)
@@ -168,7 +149,6 @@ target_link_libraries(haruna PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
     Qt6::ShaderTools
-    Qt6::Sql
 
     KF6::ColorScheme
     KF6::ConfigCore
@@ -187,6 +167,7 @@ target_link_libraries(haruna PRIVATE
 
     MpvQt::MpvQt
 
+    Haruna::Database
     Haruna::FrameDecoder
     Haruna::Playlist
     Haruna::Settings

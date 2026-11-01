@@ -10,6 +10,7 @@ import QtQuick.Controls
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.database
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 

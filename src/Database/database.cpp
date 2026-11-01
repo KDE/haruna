@@ -19,6 +19,7 @@
 
 #include "logging/_database.h"
 #include "migrationmanager.h"
+#include "miscutils.h"
 #include "pathutils.h"
 #include "recentfile.h"
 
@@ -54,34 +55,7 @@ QString getLastExecutedQuery(const QSqlQuery &query)
     return str;
 }
 
-Database *Database::instance()
-{
-    static Database db;
-    return &db;
-}
-
-Database *Database::create(QQmlEngine *, QJSEngine *)
-{
-    QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
-    return instance();
-}
-
-Database::Database(QObject *parent)
-    : QObject(parent)
-{
-    auto conn = connection();
-    if (conn.open()) {
-        createTables();
-
-        MigrationManager manager;
-        manager.migrate(conn);
-
-    } else {
-        qCDebug(HarunaDatabase) << "Could not open database:" << connection().lastError();
-    }
-}
-
-QSqlDatabase Database::connection()
+QSqlDatabase connection()
 {
     const QString connName = u"thread_connection_%1"_s.arg((quintptr)QThread::currentThreadId());
 
@@ -132,6 +106,33 @@ QSqlDatabase Database::connection()
     }
 
     return db;
+}
+
+Database *Database::instance()
+{
+    static Database db;
+    return &db;
+}
+
+Database *Database::create(QQmlEngine *, QJSEngine *)
+{
+    QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+    return instance();
+}
+
+Database::Database(QObject *parent)
+    : QObject(parent)
+{
+    auto conn = connection();
+    if (conn.open()) {
+        createTables();
+
+        MigrationManager manager;
+        manager.migrate(conn);
+
+    } else {
+        qCDebug(HarunaDatabase) << "Could not open database:" << connection().lastError();
+    }
 }
 
 void Database::createTables()

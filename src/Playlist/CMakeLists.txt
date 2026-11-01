@@ -62,6 +62,7 @@ target_link_libraries(playlist PRIVATE
     KF6::I18n
     KF6::KIOWidgets
 
+    Haruna::Database
     Haruna::Settings
     Haruna::Utilities
     Haruna::YouTube

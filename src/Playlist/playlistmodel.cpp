@@ -18,7 +18,7 @@
 
 #include <random>
 
-#include "../database.h"
+#include "database.h"
 #include "generalsettings.h"
 #include "logging/_playlist.h"
 #include "m3uparser.h"

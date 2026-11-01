@@ -8,10 +8,11 @@
 #define DATABASE_H
 
 #include <QObject>
-#include <QSqlDatabase>
 #include <QtQml/qqmlregistration.h>
 
-#include "miscutils.h"
+#include <KFileMetaData/Properties>
+
+struct Metadata;
 
 class QQmlEngine;
 class QJSEngine;
@@ -27,8 +28,6 @@ class Database : public QObject
 public:
     static Database *instance();
     static Database *create(QQmlEngine *, QJSEngine *);
-
-    QSqlDatabase connection();
 
     QList<RecentFile> recentFiles(uint limit);
     void addRecentFile(const QUrl &url, const QString &filename, const QString &openedFrom, qint64 timestamp);

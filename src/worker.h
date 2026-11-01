@@ -8,7 +8,6 @@
 #define WORKER_H
 
 #include <QObject>
-#include <QSqlDatabase>
 
 class KConfig;
 class QImage;
