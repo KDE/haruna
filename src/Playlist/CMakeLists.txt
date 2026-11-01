@@ -63,7 +63,6 @@ target_link_libraries(playlist PRIVATE
     KF6::KIOWidgets
 
     Haruna::Settings
+    Haruna::Utilities
     Haruna::YouTube
-
-    utilitiesplugin
 )
