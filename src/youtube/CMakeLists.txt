@@ -5,6 +5,7 @@
 #
 
 qt_add_library(youtube STATIC)
+add_library(Haruna::YouTube ALIAS youtube)
 qt_add_qml_module(youtube
     URI org.kde.haruna.youtube
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/youtube

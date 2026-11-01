@@ -187,13 +187,13 @@ target_link_libraries(haruna PRIVATE
 
     MpvQt::MpvQt
 
-    Haruna::Settings
     Haruna::FrameDecoder
+    Haruna::Settings
+    Haruna::YouTube
 
     playlistplugin
     transcriptplugin
     utilitiesplugin
-    youtubeplugin
 )
 
 if (CMAKE_SYSTEM_NAME IN_LIST DBUS_PLATFORMS)
