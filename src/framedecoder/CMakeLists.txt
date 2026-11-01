@@ -21,18 +21,13 @@ ecm_qt_declare_logging_category(framedecoder
     DEFAULT_SEVERITY Info
 )
 
-target_include_directories(framedecoder
-    PRIVATE
-        ${FFMPEG_INCLUDE_DIRS}
-)
-
 target_link_libraries(framedecoder PRIVATE
     Qt6::Core
     Qt6::Gui
 
-    ${AVUTIL_LIBRARIES}
-    ${AVFILTER_LIBRARIES}
-    ${AVFORMAT_LIBRARIES}
-    ${AVCODEC_LIBRARIES}
-    ${SWSCALE_LIBRARIES}
+    FFmpeg::AVFORMAT
+    FFmpeg::AVCODEC
+    FFmpeg::AVUTIL
+    FFmpeg::AVFILTER
+    FFmpeg::SWSCALE
 )
