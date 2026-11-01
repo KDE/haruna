@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the haruna package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022-2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-30 00:53+0000\n"
-"PO-Revision-Date: 2026-08-17 20:07+0400\n"
+"PO-Revision-Date: 2026-10-31 19:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -167,12 +167,10 @@ msgid "Open File"
 msgstr "افتح ملفًّا"
 
 #: src/models/actionsmodel.cpp:144
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr "افتح ملفًّا"
+msgstr "افتح المجلد"
 
 #: src/models/actionsmodel.cpp:152
 #, kde-format
@@ -759,12 +757,9 @@ msgid "Add…"
 msgstr "أضف…"
 
 #: src/playlist/Playlist.qml:155
-#, fuzzy
-#| msgctxt "@label:button folder"
-#| msgid "Folder"
 msgctxt "@action:button"
 msgid "Folder"
-msgstr "المجلّد"
+msgstr "مجلد"
 
 #: src/playlist/Playlist.qml:163
 msgctxt "@action:button"
@@ -2518,7 +2513,7 @@ msgstr "حجم خط رسالة الشاشة"
 #: src/qml/Settings/OsdSettings.qml:44
 msgctxt "@title"
 msgid "Choose when to show osd"
-msgstr ""
+msgstr "اختر متى تُظهر العرض على الشاشة"
 
 #: src/qml/Settings/PlaybackSettings.qml:27
 msgctxt "@label:spinbox"
@@ -2934,7 +2929,7 @@ msgstr "عامّ"
 #: src/qml/Settings/SettingsWindow.qml:96
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "العرض على الشاشة"
 
 #: src/qml/Settings/SettingsWindow.qml:105
 msgctxt "@action"
@@ -3029,7 +3024,7 @@ msgstr "عائلة الخطوط"
 #: src/qml/Settings/SubtitlesSettings.qml:230
 msgctxt "@info:tooltip"
 msgid "Click to change font"
-msgstr ""
+msgstr "انقر لتغيير الخط"
 
 #: src/qml/Settings/SubtitlesSettings.qml:256
 msgctxt "@label:spinbox"
@@ -3229,9 +3224,7 @@ msgid "Middle click on the sliders to reset them"
 msgstr "نقرة زر الفأرة الأوسط على أشرطة التمرير تصفرها"
 
 #: src/transcript/subtitleparser.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu all"
-#| msgid "All"
+#, kde-format
 msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
 msgid "All"
 msgstr "الكلّ"
@@ -3242,20 +3235,14 @@ msgid "Select subtitle"
 msgstr "اختر الترجمة"
 
 #: src/transcript/Transcript.qml:190
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Load subtitles from"
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
-msgstr "حمّل الترجمة من"
+msgstr "اتبع الترجمة النشطة"
 
 #: src/transcript/Transcript.qml:215
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Subtitle Cycle Up"
 msgctxt "@info:tooltip"
 msgid "ASS subtitle styles"
-msgstr "الترجمة دائرة للأعلى"
+msgstr "أنماط ترجمة ASS"
 
 #: src/utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3277,93 +3264,73 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "تكرار AB"
 
 #: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
-msgstr "تخط فصول"
+msgstr "تخطي الفصل"
 
 #: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
-msgstr "بدل فك التشبيك"
+msgstr "بدّل إزالة التشابك"
 
 #: src/utilities/osdutils.cpp:48
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "تعديلات الصورة (التباين والسطوع وغاما والتشبع)"
 
 #: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
-msgstr "شغّل ملفًا جديدًا"
+msgstr "تشغيل ملف جديد"
 
 #: src/utilities/osdutils.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback Speed Increase"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "زيادة سرعة التشغيل"
+msgstr "تغيير سرعة التشغيل"
 
 #: src/utilities/osdutils.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
-msgstr "لقطة شاشة"
+msgstr "أخذ لقطة شاشة"
 
 #: src/utilities/osdutils.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "توقيت الترجمة:  : %1ث"
+msgstr "تغيير توقيت الترجمة"
 
 #: src/utilities/osdutils.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "تكبير الترجمة: %1"
+msgstr "تغيير مقياس الترجمة"
 
 #: src/utilities/osdutils.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
-msgstr "اعرض/أخف الترجمة"
+msgstr "بدّل الترجمة"
 
 #: src/utilities/osdutils.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "احفظ التغيرات"
+msgstr "تغيير المقطع"
 
 #: src/utilities/osdutils.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "اخفِض الصوت"
+msgstr "تغيير مستوى الصوت"
 
 #: src/youtube/youtube.cpp:80
 #, kde-format
