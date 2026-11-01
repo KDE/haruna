@@ -188,10 +188,10 @@ target_link_libraries(haruna PRIVATE
     MpvQt::MpvQt
 
     Haruna::FrameDecoder
+    Haruna::Playlist
     Haruna::Settings
     Haruna::YouTube
 
-    playlistplugin
     transcriptplugin
     utilitiesplugin
 )

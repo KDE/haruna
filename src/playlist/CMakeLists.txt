@@ -5,6 +5,7 @@
 #
 
 qt_add_library(playlist STATIC)
+add_library(Haruna::Playlist ALIAS playlist)
 qt_add_qml_module(playlist
     URI org.kde.haruna.playlist
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/playlist
