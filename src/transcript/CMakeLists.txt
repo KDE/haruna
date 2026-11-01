@@ -6,6 +6,7 @@
 #
 
 qt_add_library(transcript STATIC)
+add_library(Haruna::Transcript ALIAS transcript)
 qt_add_qml_module(transcript
     URI org.kde.haruna.transcript
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/haruna/transcript

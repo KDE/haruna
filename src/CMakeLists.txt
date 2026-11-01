@@ -190,9 +190,9 @@ target_link_libraries(haruna PRIVATE
     Haruna::FrameDecoder
     Haruna::Playlist
     Haruna::Settings
+    Haruna::Transcript
     Haruna::YouTube
 
-    transcriptplugin
     utilitiesplugin
 )
 
