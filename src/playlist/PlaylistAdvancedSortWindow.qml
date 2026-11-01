@@ -15,6 +15,7 @@ import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
 import org.kde.haruna.playlist
+import org.kde.haruna.settings
 
 Loader {
     id: root
@@ -62,19 +63,16 @@ Loader {
             anchors.fill: parent
             anchors.margins: Kirigami.Units.largeSpacing
 
-            SettingsHeader {
-                Layout.columnSpan: 2
-                headingLevel: 1
+            Kirigami.Heading {
                 text: KI18n.i18nc("@label which playlist is affected, %1 is the playlist name",
                                   "Playlist: %1", root.playlistsManager.visiblePlaylist.playlistName())
-                topMargin: Kirigami.Units.smallSpacing
+                Layout.columnSpan: 2
             }
 
-            SettingsHeader {
-                Layout.columnSpan: 2
-                headingLevel: 2
+            Kirigami.ListSectionHeader {
                 text: KI18n.i18nc("@label sort", "Sorting")
-                topMargin: Kirigami.Units.smallSpacing
+                Layout.columnSpan: 2
+                Layout.fillWidth: true
             }
 
 
@@ -332,11 +330,10 @@ Loader {
                 Layout.topMargin: Kirigami.Units.largeSpacing
             }
 
-            SettingsHeader {
-                Layout.columnSpan: 2
-                headingLevel: 2
+            Kirigami.ListSectionHeader {
                 text: KI18n.i18nc("@label group", "Grouping")
-                topMargin: Kirigami.Units.smallSpacing
+                Layout.columnSpan: 2
+                Layout.fillWidth: true
             }
 
             Kirigami.SearchField {
