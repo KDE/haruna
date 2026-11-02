@@ -33,8 +33,6 @@ qt_add_qml_module(playlist
         playlistproxymodel.cpp
         playlistfilterproxymodel.h
         playlistfilterproxymodel.cpp
-        playlistmultiproxiesmodel.h
-        playlistmultiproxiesmodel.cpp
         playlistrenamevalidator.h
         playlistrenamevalidator.cpp
         playlistmetadata.h

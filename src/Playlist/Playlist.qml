@@ -90,7 +90,7 @@ ResizeablePage {
                     Layout.fillWidth: true
 
                     Repeater {
-                        model: root.manager.playlists
+                        model: root.manager
                         delegate: PlaylistTabDelegate {
                             playlistsManager: root.manager
                         }
@@ -469,7 +469,7 @@ ResizeablePage {
         buttonText: KI18n.i18nc("@action:button", "Add")
 
         onSubmitted: function(plName) {
-            root.manager.playlists.createNewPlaylist(plName)
+            root.manager.createNewPlaylist(plName)
         }
     }
 

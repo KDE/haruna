@@ -301,11 +301,11 @@ TabButton {
     }
 
     function movePlaylist(from, to) {
-        root.playlistsManager.playlists.movePlaylist(from, to)
+        root.playlistsManager.movePlaylist(from, to)
     }
 
     function removePlaylist() {
-        root.playlistsManager.playlists.removePlaylist(root.index)
+        root.playlistsManager.removePlaylist(root.index)
     }
 
     function calculateHotSpot() {

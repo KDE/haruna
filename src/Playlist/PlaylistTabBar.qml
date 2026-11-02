@@ -42,9 +42,9 @@ TabBar {
 
     clip: true
 
-    currentIndex: root.playlistsManager.playlists.visibleIndex
+    currentIndex: root.playlistsManager.visibleIndex
     onCurrentIndexChanged: {
-        root.playlistsManager.playlists.visibleIndex = currentIndex
+        root.playlistsManager.visibleIndex = currentIndex
     }
 
     Loader {
@@ -61,13 +61,13 @@ TabBar {
                 text: KI18n.i18nc("@action:inmenu", "Rename")
                 icon.name: "edit-rename"
                 visible: tabMenuLoader.row > 0
-                onClicked: root.playlistsManager.playlists.renamePlaylist(tabMenuLoader.row)
+                onClicked: root.playlistsManager.renamePlaylist(tabMenuLoader.row)
             }
             MenuItem {
                 text: KI18n.i18nc("@action:inmenu", "Remove")
                 icon.name: "remove"
                 visible: tabMenuLoader.row > 0
-                onClicked: root.playlistsManager.playlists.removePlaylist(tabMenuLoader.row)
+                onClicked: root.playlistsManager.removePlaylist(tabMenuLoader.row)
             }
 
             MenuSeparator {
@@ -76,7 +76,7 @@ TabBar {
 
             // Playlists
             Instantiator {
-                model: root.playlistsManager.playlists
+                model: root.playlistsManager
                 delegate: MenuItem {
                     required property int index
                     required property string name
