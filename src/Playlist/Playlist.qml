@@ -25,6 +25,7 @@ import org.kde.haruna.youtube
 ResizeablePage {
     id: root
 
+    required property MpvVideo m_mpv
     property alias advancedSortWindow: advancedSortWindow
     property alias scrollPositionTimer: scrollPositionTimer
     property alias playlistView: playlistView

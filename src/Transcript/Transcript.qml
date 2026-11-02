@@ -20,6 +20,7 @@ import org.kde.haruna.settings
 ResizeablePage {
     id: root
 
+    required property MpvVideo m_mpv
     property TranscriptModel transcriptModel: TranscriptModel {}
     property TranscriptProxyModel transcriptProxyModel: TranscriptProxyModel {
         transcriptModel: root.transcriptModel

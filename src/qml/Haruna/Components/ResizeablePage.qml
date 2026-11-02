@@ -5,18 +5,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-pragma ComponentBehavior: Bound
-
 import QtQuick
 import QtQuick.Controls
 
 import org.kde.kirigami as Kirigami
-import org.kde.haruna
 
 Page {
     id: root
 
-    required property MpvVideo m_mpv
     required property real fsScale
     required property int mainWindowWidth
 
