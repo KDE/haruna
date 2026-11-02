@@ -13,13 +13,11 @@ import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 import org.kde.haruna
-import org.kde.haruna.settings
 
 ToolButton {
     id: root
 
     required property MpvVideo m_mpv
-    required property SettingsWindow m_settingsLoader
     required property MenuBarLoader m_menuBarLoader
 
     property int position: HamburgerMenu.Position.Header
@@ -146,9 +144,7 @@ ToolButton {
                 AudioMenu {
                     m_mpv: root.m_mpv
                 }
-                SettingsMenu {
-                    m_settingsLoader: root.m_settingsLoader
-                }
+                SettingsMenu {}
                 HelpMenu {}
             }
         }

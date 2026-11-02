@@ -9,80 +9,57 @@ import QtQuick.Controls
 
 import org.kde.ki18n
 
-import org.kde.haruna.settings
-
 Menu {
     id: root
-
-    required property SettingsWindow m_settingsLoader
 
     title: KI18n.i18nc("@title:menu", "&Settings")
 
     MenuItem {
+        action: HarunaApp.actions.configureGeneralAction
         text: KI18n.i18nc("@action:inmenu", "General")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.General)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureOsdAction
+        text: KI18n.i18nc("@action:inmenu", "Osd")
+    }
+    MenuItem {
+        action: HarunaApp.actions.configurePlaybackAction
         text: KI18n.i18nc("@action:inmenu", "Playback")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Playback)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureVideoAction
         text: KI18n.i18nc("@action:inmenu", "Video")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Video)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureAudioAction
         text: KI18n.i18nc("@action:inmenu", "Audio")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Audio)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureSubtitlesAction
         text: KI18n.i18nc("@action:inmenu", "Subtitles")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Subtitles)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configurePlaylistAction
         text: KI18n.i18nc("@action:inmenu", "Playlist")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Playlist)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureMouseAction
         text: KI18n.i18nc("@action:inmenu", "Mouse")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Mouse)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureShortcutsAction
         text: KI18n.i18nc("@action:inmenu", "Shortcuts")
-        icon.name: "configure-shortcuts"
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Shortcuts)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureCustomCommandsAction
         text: KI18n.i18nc("@action:inmenu", "Custom Commands")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.CustomCommands)
-        }
     }
     MenuItem {
+        action: HarunaApp.actions.configureDatabaseAction
+        text: KI18n.i18nc("@action:inmenu", "Database")
+    }
+    MenuItem {
+        action: HarunaApp.actions.configureDebugAction
         text: KI18n.i18nc("@action:inmenu", "Debug")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Debug)
-        }
-    }
-    MenuItem {
-        text: KI18n.i18nc("@action:inmenu", "About")
-        onTriggered: {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.About)
-        }
     }
 }

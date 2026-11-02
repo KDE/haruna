@@ -20,7 +20,6 @@ ToolBar {
 
     required property MpvVideo m_mpv
     required property MenuBarLoader m_menuBarLoader
-    required property SettingsWindow m_settingsLoader
 
     property bool isSmallSize: width < 600
     property int buttonSize: isSmallSize ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
@@ -47,7 +46,6 @@ ToolBar {
 
         HamburgerMenu {
             m_mpv: root.m_mpv
-            m_settingsLoader: root.m_settingsLoader
             m_menuBarLoader: root.m_menuBarLoader
 
             position: HamburgerMenu.Position.Header

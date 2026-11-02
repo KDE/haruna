@@ -20,7 +20,6 @@ Loader {
     id: root
 
     required property MpvVideo m_mpv
-    required property SettingsWindow m_settingsLoader
 
     property bool isShowAnimationRunning: false
     property bool showGlobalMenu: SystemUtils.platformName() !== "windows"
@@ -48,9 +47,7 @@ Loader {
             AudioMenu {
                 m_mpv: root.m_mpv
             }
-            SettingsMenu {
-                m_settingsLoader: root.m_settingsLoader
-            }
+            SettingsMenu {}
             HelpMenu {}
         }
     }
@@ -69,9 +66,7 @@ Loader {
             GlobalAudioMenu {
                 m_mpv: root.m_mpv
             }
-            GlobalSettingsMenu {
-                m_settingsLoader: root.m_settingsLoader
-            }
+            GlobalSettingsMenu {}
             GlobalHelpMenu {}
         }
     }

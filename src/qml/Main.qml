@@ -141,7 +141,6 @@ ApplicationWindow {
 
         m_mpv: mpv
         m_menuBarLoader: menuBarLoader
-        m_settingsLoader: settingsLoader
     }
 
     menuBar: MenuBarLoader {
@@ -151,7 +150,6 @@ ApplicationWindow {
                ? "visible"
                : "hidden"
         m_mpv: mpv
-        m_settingsLoader: settingsLoader
         onVisibleChanged: appWindow.resizeWindow()
     }
 
@@ -266,7 +264,6 @@ ApplicationWindow {
         playlistsManager: playlist.manager
         m_menuBarLoader: menuBarLoader
         m_header: headerItem
-        m_settingsLoader: settingsLoader
     }
 
     Actions {

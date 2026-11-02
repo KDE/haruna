@@ -24,7 +24,6 @@ Item {
     required property PlaylistsManager playlistsManager
     required property MenuBarLoader m_menuBarLoader
     required property Header m_header
-    required property SettingsWindow m_settingsLoader
 
     property alias progressBar: progressBar
     property string footerState: isFloating ? "hidden" : "visible"
@@ -118,7 +117,6 @@ Item {
                     id: hamburgerMenu
 
                     m_mpv: root.m_mpv
-                    m_settingsLoader: root.m_settingsLoader
                     m_menuBarLoader: root.m_menuBarLoader
 
                     position: HamburgerMenu.Position.Footer
