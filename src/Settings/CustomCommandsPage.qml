@@ -21,15 +21,11 @@ import org.kde.haruna.utilities
 SettingsBasePage {
     id: root
 
-    required property Kirigami.ApplicationWindow m_settingsWindow
-
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
 
     function loadEditCustomCommandPage() : void {
-        const props = {
-            m_settingsWindow: root.m_settingsWindow,
-        }
-        root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, props)
+        const appWindow = ApplicationWindow.window as Kirigami.ApplicationWindow
+        appWindow.pageStack.layers.push(`${root.settingsPath}/EditCustomCommand.qml`)
     }
 
     ListView {
@@ -160,7 +156,6 @@ SettingsBasePage {
                         Layout.rightMargin: Kirigami.Units.largeSpacing
                         onClicked: {
                             const properties = {
-                                m_settingsWindow: root.m_settingsWindow,
                                 command: delegate.command,
                                 osdMessage: delegate.osdMessage,
                                 type: delegate.type,
@@ -168,7 +163,8 @@ SettingsBasePage {
                                 index: delegate.index,
                                 mode: EditCustomCommand.Mode.Edit
                             }
-                            root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, properties)
+                            const appWindow = ApplicationWindow.window as Kirigami.ApplicationWindow
+                            appWindow.pageStack.layers.push(`${root.settingsPath}/EditCustomCommand.qml`, properties)
                         }
                     }
                 }

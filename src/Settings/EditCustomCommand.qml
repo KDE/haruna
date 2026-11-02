@@ -16,8 +16,6 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
-    required property Kirigami.ApplicationWindow m_settingsWindow
-
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
     property string command: ""
     property string osdMessage: ""
@@ -32,10 +30,8 @@ SettingsBasePage {
     }
 
     function loadCustomCommandsPage() : void {
-        const props = {
-            m_settingsWindow: root.m_settingsWindow
-        }
-        root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/CustomCommandsPage.qml`, props)
+        const appWindow = ApplicationWindow.window as Kirigami.ApplicationWindow
+        appWindow.pageStack.goBack()
     }
 
     Action {
