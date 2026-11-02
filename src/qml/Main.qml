@@ -467,6 +467,13 @@ ApplicationWindow {
     }
 
     Connections {
+        target: Models.customCommandsModel
+        function onRunCommandRequested(command) {
+            mpv.userCommand(command)
+        }
+    }
+
+    Connections {
         target: HarunaApp
         function onQmlApplicationMouseLeave() {
             if (PlaylistSettings.canToggleWithMouse && (appWindow.isFullScreen() || appWindow.isMaximized())) {

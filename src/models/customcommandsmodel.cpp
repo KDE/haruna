@@ -182,6 +182,8 @@ void CustomCommandsModel::saveCustomCommand(const QString &command, const QStrin
         action.shortcut = appActionsModel()->getShortcut(action.name, QString());
         action.type = u"CustomAction"_s;
         appActionsModel()->appendCustomAction(action);
+    } else {
+        Q_EMIT runCommandRequested(c.command);
     }
 }
 
@@ -201,6 +203,8 @@ void CustomCommandsModel::editCustomCommand(int row, const QString &command, con
     Q_EMIT dataChanged(index(row, 0), index(row, 0));
     if (c.type == u"shortcut"_s) {
         appActionsModel()->editCustomAction(c.commandId, c.command, c.osdMessage);
+    } else {
+        Q_EMIT runCommandRequested(c.command);
     }
 }
 

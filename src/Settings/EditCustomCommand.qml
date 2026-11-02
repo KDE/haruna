@@ -16,7 +16,6 @@ import org.kde.haruna
 SettingsBasePage {
     id: root
 
-    required property MpvVideo m_mpv
     required property Kirigami.ApplicationWindow m_settingsWindow
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
@@ -34,7 +33,6 @@ SettingsBasePage {
 
     function loadCustomCommandsPage() : void {
         const props = {
-            m_mpv: root.m_mpv,
             m_settingsWindow: root.m_settingsWindow
         }
         root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/CustomCommandsPage.qml`, props)
@@ -186,10 +184,6 @@ SettingsBasePage {
                     }
                     const button = typeGroup.checkedButton as CommandRadioButton
                     const optionName = button.optionName
-                    if (optionName === "startup") {
-                        // execute the user command
-                        root.m_mpv.userCommand(commandTextField.text)
-                    }
                     switch (root.mode) {
                     case EditCustomCommand.Mode.Create:
                         // save new command to config file

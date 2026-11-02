@@ -62,6 +62,7 @@ public:
     void setAppActionsModel(ActionsModel *_appActionsModel);
 
 Q_SIGNALS:
+    void runCommandRequested(const QString &command);
     void appActionsModelChanged();
 
 private:

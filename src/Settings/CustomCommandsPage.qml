@@ -21,14 +21,12 @@ import org.kde.haruna.utilities
 SettingsBasePage {
     id: root
 
-    required property MpvVideo m_mpv
     required property Kirigami.ApplicationWindow m_settingsWindow
 
     property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
 
     function loadEditCustomCommandPage() : void {
         const props = {
-            m_mpv: root.m_mpv,
             m_settingsWindow: root.m_settingsWindow,
         }
         root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/EditCustomCommand.qml`, props)
@@ -162,7 +160,6 @@ SettingsBasePage {
                         Layout.rightMargin: Kirigami.Units.largeSpacing
                         onClicked: {
                             const properties = {
-                                m_mpv: root.m_mpv,
                                 m_settingsWindow: root.m_settingsWindow,
                                 command: delegate.command,
                                 osdMessage: delegate.osdMessage,
