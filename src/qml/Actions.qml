@@ -22,10 +22,10 @@ Item {
     required property MpvItem m_mpv
     required property PlaylistsManager playlistsManager
     required property MpvContextMenu m_mpvContextMenuLoader
-    required property SettingsWindow m_settingsLoader
     required property Footer m_footer
     required property InputPopup m_openUrlPopup
 
+    signal openSettingsWindow(int page)
     signal openFileDialog()
     signal openFolderDialog()
     signal openSubtitleDialog()
@@ -73,7 +73,7 @@ Item {
         }
 
         function onAboutHarunaAction() {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.About)
+            root.openSettingsWindow(SettingsWindow.Page.About)
         }
 
         function onReportBugAction() {
@@ -93,11 +93,55 @@ Item {
         }
 
         function onConfigureAction() {
-            root.m_settingsLoader.openSettingPage(root.m_settingsLoader.activePage)
+            root.openSettingsWindow(SettingsWindow.Page.None)
+        }
+
+        function onConfigureGeneralAction() {
+            root.openSettingsWindow(SettingsWindow.Page.General)
+        }
+
+        function onConfigureOsdAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Osd)
+        }
+
+        function onConfigurePlaybackAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Playback)
+        }
+
+        function onConfigureVideoAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Video)
+        }
+
+        function onConfigureAudioAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Audio)
+        }
+
+        function onConfigureSubtitlesAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Subtitles)
+        }
+
+        function onConfigurePlaylistAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Playlist)
+        }
+
+        function onConfigureMouseAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Mouse)
         }
 
         function onConfigureShortcutsAction() {
-            root.m_settingsLoader.openSettingPage(SettingsWindow.Page.Shortcuts)
+            root.openSettingsWindow(SettingsWindow.Page.Shortcuts)
+        }
+
+        function onConfigureCustomCommandsAction() {
+            root.openSettingsWindow(SettingsWindow.Page.CustomCommands)
+        }
+
+        function onConfigureDatabaseAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Database)
+        }
+
+        function onConfigureDebugAction() {
+            root.openSettingsWindow(SettingsWindow.Page.Debug)
         }
 
         function onExitFullscreenAction() {

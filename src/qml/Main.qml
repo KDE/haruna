@@ -276,7 +276,6 @@ ApplicationWindow {
         playlistsManager: playlist.manager
         m_mpvContextMenuLoader: mpvContextMenuLoader
         m_footer: footerItem
-        m_settingsLoader: settingsLoader
         m_openUrlPopup: openUrlPopup
 
         onOpenFileDialog: {
@@ -435,6 +434,9 @@ ApplicationWindow {
         }
         function onToggleTranscript() {
             transcript.toggle()
+        }
+        function onOpenSettingsWindow(page) {
+            settingsLoader.openSettingPage(page)
         }
     }
 

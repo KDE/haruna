@@ -86,7 +86,18 @@ Q_SIGNALS:
     void audioCycleUpAction();
     void audioCycleDownAction();
     void configureAction();
+    void configureGeneralAction();
+    void configureOsdAction();
+    void configurePlaybackAction();
+    void configureVideoAction();
+    void configureAudioAction();
+    void configureSubtitlesAction();
+    void configurePlaylistAction();
+    void configureMouseAction();
     void configureShortcutsAction();
+    void configureCustomCommandsAction();
+    void configureDatabaseAction();
+    void configureDebugAction();
     void exitFullscreenAction();
     void frameStepForwardAction();
     void frameStepBackwardAction();

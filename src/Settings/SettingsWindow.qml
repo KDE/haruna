@@ -35,7 +35,8 @@ Loader {
         CustomCommands,
         Database,
         Debug,
-        About
+        About,
+        None
     }
 
     function openSettingPage(page: int) : void {

@@ -76,10 +76,98 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
+    action.name = u"configureGeneralAction"_s;
+    action.text = i18nc("@action", "Open General Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureOsdAction"_s;
+    action.text = i18nc("@action", "Open Osd Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configurePlaybackAction"_s;
+    action.text = i18nc("@action", "Open Playback Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureVideoAction"_s;
+    action.text = i18nc("@action", "Open Video Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureAudioAction"_s;
+    action.text = i18nc("@action", "Open Audio Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureSubtitlesAction"_s;
+    action.text = i18nc("@action", "Open Subtitles Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configurePlaylistAction"_s;
+    action.text = i18nc("@action", "Open Playlist Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureMouseAction"_s;
+    action.text = i18nc("@action", "Open Mouse Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
     action.name = u"configureShortcutsAction"_s;
     action.text = i18nc("@action", "Configure Keyboard Shortcuts");
     action.iconName = u"configure-shortcuts"_s;
     action.defaultShortcut = Qt::CTRL | Qt::ALT | Qt::Key_Comma;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureCustomCommandsAction"_s;
+    action.text = i18nc("@action", "Open Custom Commands Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureDatabaseAction"_s;
+    action.text = i18nc("@action", "Open Database Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
+    action.name = u"configureDebugAction"_s;
+    action.text = i18nc("@action", "Open Debug Settings");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
     action.shortcut = getShortcut(action.name, action.defaultShortcut);
     action.description = QString{};
     m_actions << action;
