@@ -24,7 +24,7 @@ SettingsBasePage {
     required property MpvVideo m_mpv
     required property Kirigami.ApplicationWindow m_settingsWindow
 
-    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
+    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
 
     function loadEditCustomCommandPage() : void {
         const props = {

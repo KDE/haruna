@@ -19,7 +19,7 @@ SettingsBasePage {
     required property MpvVideo m_mpv
     required property Kirigami.ApplicationWindow m_settingsWindow
 
-    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/qml/Settings"
+    property string settingsPath: "qrc:/qt/qml/org/kde/haruna/settings"
     property string command: ""
     property string osdMessage: ""
     property string type: "shortcut"
@@ -37,7 +37,7 @@ SettingsBasePage {
             m_mpv: root.m_mpv,
             m_settingsWindow: root.m_settingsWindow
         }
-        root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/CustomCommandsSettings.qml`, props)
+        root.m_settingsWindow.pageStack.replace(`${root.settingsPath}/CustomCommandsPage.qml`, props)
     }
 
     Action {
