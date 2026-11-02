@@ -196,8 +196,7 @@ Loader {
                         onTriggered: {
                             root.activePage = SettingsWindow.Page.Debug
                             settingsWindow.pageStack.removePage(1)
-                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DebugPage.qml`,
-                                                               {m_mpv: root.m_mpv})
+                            settingsWindow.pageStack.push(`${settingsWindow.settingsPath}/DebugPage.qml`)
                         }
                     },
                     Kirigami.Action {

@@ -19,8 +19,6 @@ import org.kde.haruna.utilities
 SettingsBasePage {
     id: root
 
-    required property MpvVideo m_mpv
-
     ColumnLayout {
         id: content
 
@@ -85,7 +83,6 @@ SettingsBasePage {
             checked: InformationSettings.mpvLogging
             visible: false
             onClicked: {
-                root.m_mpv.setProperty(MpvProperties.Terminal, checked)
                 InformationSettings.mpvLogging = checked
                 InformationSettings.save()
             }
