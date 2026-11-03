@@ -49,7 +49,9 @@ Loader {
         }
 
         const settingsWindow = root.item as Kirigami.ApplicationWindow
-        root.activePage = page
+        if (page !== SettingsWindow.Page.None) {
+            root.activePage = page
+        }
         if (settingsWindow.visible) {
             settingsWindow.raise()
         } else {
