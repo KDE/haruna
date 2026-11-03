@@ -10,6 +10,7 @@ import Qt.labs.platform as Labs
 import org.kde.ki18n
 
 import org.kde.haruna
+import org.kde.haruna.settings
 
 Labs.Menu {
     id: root
@@ -25,8 +26,7 @@ Labs.Menu {
     Labs.MenuItem {
         icon.name: HarunaApp.actions.toggleMenuBarAction.icon.name
         text: {
-            const mainWindow = Window.window as Main
-            if (mainWindow?.menuBar.visible) {
+            if (GeneralSettings.showMenuBar) {
                 return KI18n.i18nc("@action:inmenu", "Hide Menubar")
             } else {
                 return KI18n.i18nc("@action:inmenu", "Show Menubar")
@@ -38,8 +38,7 @@ Labs.Menu {
     Labs.MenuItem {
         icon.name: HarunaApp.actions.toggleHeaderAction.icon.name
         text: {
-            const mainWindow = Window.window as Main
-            if (mainWindow?.header.visible) {
+            if (GeneralSettings.showHeader) {
                 return KI18n.i18nc("@action:inmenu", "Hide Toolbar")
             } else {
                 return KI18n.i18nc("@action:inmenu", "Show Toolbar")
