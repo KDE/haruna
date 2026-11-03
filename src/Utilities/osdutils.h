@@ -13,6 +13,17 @@
 class QJSEngine;
 class QQmlEngine;
 
+struct OsdOption {
+    Q_GADGET
+    QML_VALUE_TYPE(osd_option)
+
+public:
+    Q_PROPERTY(QString key MEMBER key)
+    QString key;
+    Q_PROPERTY(QString label MEMBER label)
+    QString label;
+};
+
 class OsdUtils : public QObject
 {
     Q_OBJECT
@@ -42,8 +53,7 @@ public:
     Q_ENUM(Context)
 
     Q_INVOKABLE void message(const QString &message, Context context);
-    Q_INVOKABLE QString label(const QString &name);
-    Q_INVOKABLE QStringList options();
+    Q_INVOKABLE QList<OsdOption> options();
 
 Q_SIGNALS:
     void messageReceived(const QString &message, OsdUtils::Context context);

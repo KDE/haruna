@@ -48,12 +48,12 @@ SettingsBasePage {
         Repeater {
             model: OsdUtils.options()
             delegate: CheckBox {
-                required property string modelData
+                required property osd_option modelData
 
-                text: OsdUtils.label(modelData)
-                checked: OsdSettings[modelData]
+                text: modelData.label
+                checked: OsdSettings[modelData.key]
                 onClicked: {
-                    OsdSettings[modelData] = checked
+                    OsdSettings[modelData.key] = checked
                     OsdSettings.save()
                 }
             }

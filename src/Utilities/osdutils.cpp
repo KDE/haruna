@@ -39,27 +39,6 @@ QHash<OsdUtils::Context, Function> functions()
     return _functions;
 }
 
-QHash<QString, QString> labels()
-{
-    static const QHash<QString, QString> _labels = {
-        { u"mpvABLoop"_s,           i18nc("@option:check", "AB loop") },
-        { u"mpvChapter"_s,          i18nc("@option:check", "Skip chapter") },
-        { u"mpvDeinterlace"_s,      i18nc("@option:check", "Toggle deinterlace") },
-        { u"mpvImageAdjustments"_s, i18nc("@option:check", "Image adjustments (contrast, brightness, gamma and saturation)") },
-        { u"mpvLoadFile"_s,         i18nc("@option:check", "Playing new file") },
-        { u"mpvPlaybackSpeed"_s,    i18nc("@option:check", "Playback speed change") },
-        { u"mpvScreenshot"_s,       i18nc("@option:check", "Taking screenshot") },
-        { u"mpvSubtitleDelay"_s,    i18nc("@option:check", "Subtitle timing change") },
-        { u"mpvSubtitleScale"_s,    i18nc("@option:check", "Subtitle scale change") },
-        { u"mpvSubtitleToggle"_s,   i18nc("@option:check", "Toggle subtitle") },
-        { u"mpvTrack"_s,            i18nc("@option:check", "Track change") },
-        { u"mpvVolume"_s,           i18nc("@option:check", "Volume change") },
-    };
-
-    return _labels;
-}
-// clang-format on
-
 OsdUtils &OsdUtils::instance()
 {
     static OsdUtils i;
@@ -92,19 +71,24 @@ void OsdUtils::message(const QString &message, Context context)
     }
 }
 
-QString OsdUtils::label(const QString &key)
+QList<OsdOption> OsdUtils::options()
 {
-    return labels().value(key);
-}
+    static const QList<OsdOption> options = {
+        { u"mpvABLoop"_s,           i18nc("@option:check", "AB loop") },
+        { u"mpvImageAdjustments"_s, i18nc("@option:check", "Image adjustments (contrast, brightness, gamma and saturation)") },
+        { u"mpvPlaybackSpeed"_s,    i18nc("@option:check", "Playback speed change") },
+        { u"mpvLoadFile"_s,         i18nc("@option:check", "Playing new file") },
+        { u"mpvChapter"_s,          i18nc("@option:check", "Skip chapter") },
+        { u"mpvSubtitleScale"_s,    i18nc("@option:check", "Subtitle scale change") },
+        { u"mpvSubtitleDelay"_s,    i18nc("@option:check", "Subtitle timing change") },
+        { u"mpvScreenshot"_s,       i18nc("@option:check", "Taking screenshot") },
+        { u"mpvDeinterlace"_s,      i18nc("@option:check", "Toggle deinterlace") },
+        { u"mpvSubtitleToggle"_s,   i18nc("@option:check", "Toggle subtitle") },
+        { u"mpvTrack"_s,            i18nc("@option:check", "Track change") },
+        { u"mpvVolume"_s,           i18nc("@option:check", "Volume change") },
+    };
 
-QStringList OsdUtils::options()
-{
-    static QStringList keys;
-    if (keys.isEmpty()) {
-        keys = labels().keys();
-        keys.sort();
-    }
-    return keys;
+    return options;
 }
 
 #include "moc_osdutils.cpp"
