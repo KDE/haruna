@@ -67,9 +67,7 @@ msgstr ""
 "Descargador de son e vídeo da liña de ordes con moitas funcionalidades."
 
 #: src/lockmanager.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@info reason for blocking sleep and screen slocking"
-#| msgid "Playing media file"
+#, kde-format
 msgctxt "@info reason for blocking sleep and screen locking"
 msgid "Playing media file"
 msgstr "Reproducindo un ficheiro multimedia"
@@ -710,9 +708,7 @@ msgstr ""
 "Unha solución multiplataforma para gravar, converter e emitir son e vídeo."
 
 #: src/mpv/mpvitem.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Could not play: %1"
+#, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "Non foi posíbel reproducir: %1"
@@ -769,9 +765,7 @@ msgid "Screenshot taken"
 msgstr "Capturouse a pantalla."
 
 #: src/mpv/mpvitem.cpp:625
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "Captura de pantalla: %1"
@@ -793,9 +787,7 @@ msgid "Skipped chapter: %1"
 msgstr "Saltouse o capítulo: %1"
 
 #: src/mpv/mpvitem.cpp:797
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Audio: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -811,9 +803,7 @@ msgid "Subtitle: none"
 msgstr "Subtítulos: ningún"
 
 #: src/mpv/mpvitem.cpp:814 src/mpv/mpvitem.cpp:831
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle: %1 %2"
+#, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
 "title track.language track.codec`"
@@ -1127,9 +1117,6 @@ msgstr ""
 
 #: src/playlist/PlaylistAdvancedSortWindow.qml:138
 #: src/playlist/PlaylistAdvancedSortWindow.qml:399
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "File"
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "Ficheiro"
@@ -1638,9 +1625,6 @@ msgid "Playback speed: %1"
 msgstr "Velocidade de reprodución: %1"
 
 #: src/qml/Actions.qml:280
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Loop start: %1"
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "Inicio do bucle: %1"
@@ -1804,9 +1788,6 @@ msgid "Audio Track"
 msgstr "Pista de son"
 
 #: src/qml/Haruna/Components/HamburgerMenu.qml:136
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "&More"
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "&Máis"
@@ -1820,9 +1801,6 @@ msgid "No action found."
 msgstr "Non hai ningunha acción definida."
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:33
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Load subtitles from"
 msgctxt "@label; Below is a list of folders containing subtitles"
 msgid "Load subtitles from"
 msgstr "Cargar os subtítulos de"
@@ -1866,9 +1844,6 @@ msgid "Add New Folder"
 msgstr "Engadir un novo cartafol"
 
 #: src/qml/Haruna/Components/SubtitlesFolders.qml:189
-#, fuzzy
-#| msgctxt "@info:tooltip add new sutbtitle folder setting"
-#| msgid "Add a folder in which to look for subtitles."
 msgctxt "@info:tooltip add new subtitle folder setting"
 msgid "Add a folder in which to look for subtitles."
 msgstr "Engadir un cartafol no que buscar subtítulos."
@@ -2166,9 +2141,6 @@ msgid "Mode"
 msgstr ""
 
 #: src/qml/Settings/AudioSettings.qml:127
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Disabled"
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "Desactivado."
@@ -2359,9 +2331,6 @@ msgid "Open file"
 msgstr "Abrir un ficheiro"
 
 #: src/qml/Settings/DebugSettings.qml:116
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Open containing folder"
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "Abrir o cartafol contedor"
@@ -2543,9 +2512,6 @@ msgid "Floating"
 msgstr ""
 
 #: src/qml/Settings/GeneralSettings.qml:146
-#, fuzzy
-#| msgctxt "@label:spinbox"
-#| msgid "Show floating footer on"
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "Amosar un pé flotante en"
@@ -3170,8 +3136,6 @@ msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
 #: src/qml/Settings/PlaybackSettings.qml:401
-#, fuzzy
-#| msgid "Format selection"
 msgctxt "@label"
 msgid "Format selection"
 msgstr "Selección de formato"
