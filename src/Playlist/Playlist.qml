@@ -85,7 +85,12 @@ ResizeablePage {
                 PlaylistTabBar {
                     id: playlistTabView
 
-                    playlistsManager: root.manager
+                    clip: true
+                    currentIndex: root.manager.visibleIndex
+
+                    onCurrentIndexChanged: {
+                        root.manager.visibleIndex = currentIndex
+                    }
                     Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
                     Layout.fillWidth: true
 

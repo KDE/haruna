@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -40,7 +42,7 @@ TabButton {
     contentItem: RowLayout {
 
         TapHandler {
-            acceptedButtons: Qt.MiddleButton | Qt.LeftButton | Qt.RightButton
+            acceptedButtons: Qt.MiddleButton | Qt.LeftButton
             acceptedModifiers: Qt.NoModifier
             gesturePolicy: TapHandler.WithinBounds
 
@@ -51,9 +53,6 @@ TabButton {
                     break
                 case Qt.MiddleButton:
                     root.removePlaylist()
-                    break
-                case Qt.RightButton:
-                    root.playlistTabBar.openContextMenu(root)
                     break
                 }
             }
@@ -260,7 +259,6 @@ TabButton {
                 sourceItem.dragCenter += root.width
             }
 
-            root.playlistTabBar.movePlaylistItem(from, to)
             root.movePlaylist(from, to)
         }
     }
@@ -298,6 +296,46 @@ TabButton {
         }
 
         width: Math.min(progressTimer.progress * root.width, root.width)
+    }
+
+    ContextMenu.menu: tabContextMenu
+    Menu {
+        id: tabContextMenu
+
+        MenuItem {
+            text: KI18n.i18nc("@action:inmenu", "Rename")
+            icon.name: "edit-rename"
+            visible: root.index > 0
+            onClicked: root.playlistsManager.renamePlaylist(root.index)
+        }
+        MenuItem {
+            text: KI18n.i18nc("@action:inmenu", "Remove")
+            icon.name: "remove"
+            visible: root.index > 0
+            onClicked: root.playlistsManager.removePlaylist(root.index)
+        }
+
+        MenuSeparator {
+            visible: root.index > 0
+        }
+
+        // Playlists
+        Instantiator {
+            active: tabContextMenu.visible
+            model: root.playlistsManager
+            delegate: MenuItem {
+                required property int index
+                required property string name
+                required property bool isVisible
+                required property bool isActive
+
+                text: name
+                icon.name: isVisible ? "draw-circle" : ""
+                onClicked: root.playlistTabBar.setCurrentIndex(index)
+            }
+            onObjectAdded: (index, object) => tabContextMenu.insertItem(index + 3, object)
+            onObjectRemoved: (index, object) => tabContextMenu.removeItem(object)
+        }
     }
 
     function movePlaylist(from, to) {
