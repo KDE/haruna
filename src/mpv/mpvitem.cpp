@@ -432,6 +432,7 @@ void MpvItem::onPropertyChanged(const QString &property, const QVariant &value)
     } else if (property == MpvProperties::self()->VolumeMax) {
         m_volumeMax = value.toInt();
         Q_EMIT volumeMaxChanged();
+        Q_EMIT volumeChanged();
 
     } else if (property == MpvProperties::self()->Mute) {
         m_mute = value.toBool();
