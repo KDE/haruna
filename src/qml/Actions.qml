@@ -245,31 +245,31 @@ Item {
         }
 
         function onRestartPlaybackAction() {
-            root.m_mpv.command(["seek", 0, "absolute"])
+            root.m_mpv.seek(0, MpvItem.SeekMode.Absolute)
         }
 
         function onSeekForwardSmallAction() {
-            root.m_mpv.command(["seek", PlaybackSettings.seekSmallStep, "exact"])
+            root.m_mpv.seek(PlaybackSettings.seekSmallStep, MpvItem.SeekMode.Exact)
         }
 
         function onSeekBackwardSmallAction() {
-            root.m_mpv.command(["seek", -PlaybackSettings.seekSmallStep, "exact"])
+            root.m_mpv.seek(-PlaybackSettings.seekSmallStep, MpvItem.SeekMode.Exact)
         }
 
         function onSeekForwardMediumAction() {
-            root.m_mpv.command(["seek", PlaybackSettings.seekMediumStep, "exact"])
+            root.m_mpv.seek(PlaybackSettings.seekMediumStep, MpvItem.SeekMode.Exact)
         }
 
         function onSeekBackwardMediumAction() {
-            root.m_mpv.command(["seek", -PlaybackSettings.seekMediumStep, "exact"])
+            root.m_mpv.seek(-PlaybackSettings.seekMediumStep, MpvItem.SeekMode.Exact)
         }
 
         function onSeekForwardBigAction() {
-            root.m_mpv.command(["seek", PlaybackSettings.seekBigStep, "exact"])
+            root.m_mpv.seek(PlaybackSettings.seekBigStep, MpvItem.SeekMode.Exact)
         }
 
         function onSeekBackwardBigAction() {
-            root.m_mpv.command(["seek", -PlaybackSettings.seekBigStep, "exact"])
+            root.m_mpv.seek(-PlaybackSettings.seekBigStep, MpvItem.SeekMode.Exact)
         }
 
         function onSeekNextChapterAction() {
@@ -307,7 +307,7 @@ Item {
             if (root.m_mpv.watchLaterPosition === 0) {
                 return
             }
-            root.m_mpv.command(["seek", root.m_mpv.watchLaterPosition, "absolute"])
+            root.m_mpv.seek(root.m_mpv.watchLaterPosition, MpvItem.SeekMode.Absolute)
         }
 
         function onSetLoopAction() {

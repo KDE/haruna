@@ -52,6 +52,13 @@ public:
     };
     Q_ENUM(TrackType)
 
+    enum class SeekMode {
+        Absolute,
+        Keyframes,
+        Exact,
+    };
+    Q_ENUM(SeekMode)
+
     enum class EndOfFileAction {
         PlayNext,
         Replay,
@@ -183,6 +190,8 @@ public:
     Q_INVOKABLE void selectSubtitleTrack();
     Q_INVOKABLE void addSubtitles(const QString &subtitlesFile);
     Q_INVOKABLE void stop();
+
+    Q_INVOKABLE void seek(int seconds, SeekMode seekMode);
 
     Q_INVOKABLE void setTrack(int row, TrackType type);
     Q_INVOKABLE void setNextTrack(TrackType type);
