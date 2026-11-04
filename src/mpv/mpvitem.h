@@ -289,6 +289,7 @@ private:
     PlaylistsManager *m_playlistsManager = nullptr;
     bool m_isLocalFile;
     bool m_isVideo;
+    bool m_showOsdOnSeek{false};
     std::unique_ptr<SeekableRangesModel> m_seekableRangesModel;
 };
 
